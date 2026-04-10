@@ -19,7 +19,7 @@ export const POST: RequestHandler = async ({ request }) => {
 		scenarios
 	};
 
-	const filename = `output_${storyarcId}_chapter${String(chapterOrder).padStart(2, '0')}.json`;
+	const filename = `${storyarcId}_chapter_${String(chapterOrder).padStart(2, '0')}.json`;
 	const filepath = join(outputDir, filename);
 
 	await writeFile(filepath, JSON.stringify(output, null, '\t'), 'utf-8');
