@@ -139,7 +139,7 @@ export const storyarc_false_spring: StoryArc = {
 			order: 5,
 			act: 'climax_finale',
 			title: '봄의 정령',
-			boss: 'pool_random',
+			boss: 'random_boss',
 			npc: 'lumina',
 			summary:
 				'플로라가 나타난다. "왜 데려가려 해?" 싸우면서도 애원한다. 진실이 밝혀진다 — 그녀는 수백 년을 혼자였다. 탐험대는 선택해야 한다. 실종자들을 억지로 데려갈 것인가, 플로라의 외로움과 함께 남겨둘 것인가.'

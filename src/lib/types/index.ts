@@ -76,8 +76,8 @@ export type ScenarioOutlineItem = {
 	order: number;
 	act: Act;
 	title: string;
-	boss: string; // pool_id 또는 'pool_random'
-	npc: string;  // npc key
+	boss: string; // pool_id 또는 'random_boss'
+	npc: string; // npc key
 	summary: string;
 };
 

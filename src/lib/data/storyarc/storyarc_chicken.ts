@@ -129,7 +129,7 @@ export const storyarc_forest_chicken_saurus = {
 			order: 5,
 			act: 'climax_finale',
 			title: '꼬끼오',
-			boss: 'pool_random',
+			boss: 'random_boss',
 			npc: 'lumina',
 			summary:
 				'탐험대가 방심한 순간. 꼬끼오. 닭이 변신한다. "그동안 잘도 치킨을 먹어왔지. 이번엔 내가 너희를 먹을 차례다." 치킨의 복수가 시작된다.'

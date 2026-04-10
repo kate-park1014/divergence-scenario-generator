@@ -141,7 +141,7 @@ export const storyarc_slow_data: StoryArc = {
 			order: 5,
 			act: 'climax_finale',
 			title: '서두르지 않아도 돼',
-			boss: 'pool_random',
+			boss: 'random_boss',
 			npc: 'elara',
 			summary:
 				'엘라라가 슬로우의 진실을 말한다. 악의가 없다. 그냥 외롭다. 슬로우와 마주한다. 싸우면서도 속삭인다 — 서두르지 않아도 된다고. 쓰러진 후 묻는다 — 정말 가고 싶냐고.'

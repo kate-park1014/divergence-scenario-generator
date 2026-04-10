@@ -125,7 +125,7 @@ export const storyarc_sample = {
 			order: 5,
 			act: 'climax_finale',
 			title: '봉인의 수호자',
-			boss: 'pool_random',
+			boss: 'random_boss',
 			npc: 'elara',
 			summary:
 				'봉인 앞. 아르가 막아선다. 싸우면서도 "제발 그러지 마"라고 애원한다. 진실이 밝혀진다 — 봉인 안은 재앙이었다. 아르는 수백 년을 버텨온 수호자. 탐험대가 이미 봉인을 약하게 만들었다. 아르가 쓰러지며 말한다 — "이제 막을 수가 없어. 미안해."'
