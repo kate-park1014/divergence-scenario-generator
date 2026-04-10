@@ -1,0 +1,3571 @@
+{
+	"chapter_order": 3,
+	"chapter_name": {
+		"korean": "느린 숲",
+		"english": "The Slow Forest",
+		"japanese": "緩やかな森",
+		"chinese": "迟缓之森",
+		"french": "La Forêt Lente",
+		"spanish": "El Bosque Lento",
+		"vietnamese": "Khu Rừng Chậm Rãi",
+		"thai": "ป่าแห่งความเชื่องช้า",
+		"hindi": "धीमा वन"
+	},
+	"scenarios": [
+		{
+			"scenario_id": "forest_sloth_01",
+			"order": 1,
+			"act": "intro",
+			"theme": "forest",
+			"actors": {
+				"lumina": {
+					"id": "mon_7b56ecc3-abc6-4aa9-a0aa-ed83ce4627e7",
+					"name": {
+						"korean": "루미나",
+						"english": "Lumina",
+						"japanese": "ルミナ",
+						"chinese": "露米娜",
+						"french": "Lumina",
+						"spanish": "Lumina",
+						"vietnamese": "Lumina",
+						"thai": "ลูมินา",
+						"hindi": "लुमिना"
+					},
+					"description": "A Forest Fairy with yellow hair, she looks young",
+					"face_image_url": "https://imagedelivery.net/WTEqQNGFb-l-IHS6IGnzUQ/0a91acfe-f485-4fd9-4d9c-a6b1dd604200/public",
+					"battle_sprite_url": "https://imagedelivery.net/WTEqQNGFb-l-IHS6IGnzUQ/090c84cb-bcc2-4dec-a8cf-6ba8538b9700/public"
+				}
+			},
+			"boss": {
+				"pool_id": "pool_013"
+			},
+			"prologue": {
+				"korean": [
+					"숲. 발을 들이는 순간, 모든 게 느려진다.",
+					"실종자를 찾아야 하는데… 왜 서두를 필요가 없지?",
+					"발걸음이 무겁다? 아니, 이상하게 편안하다.",
+					"루미나. 그녀는 이 숲의 고요함을 아는 듯했다."
+				],
+				"english": [
+					"The forest. The moment you step in, everything slows down.",
+					"I need to find the missing person... but why do I feel no rush?",
+					"My steps are heavy? No, strangely comfortable.",
+					"Lumina. She seemed to know the tranquility of this forest."
+				],
+				"japanese": [
+					"森。足を踏み入れた瞬間、すべてがゆっくりになる。",
+					"行方不明者を探さなければならないのに…なぜ急ぐ必要がないんだ？",
+					"足取りが重い？いや、妙に心地よい。",
+					"ルミナ。彼女はこの森の静寂を知っているようだった。"
+				],
+				"chinese": [
+					"森林。踏入的瞬间，一切都慢了下来。",
+					"我必须找到失踪者……可为什么感觉不到一丝急迫？",
+					"脚步沉重？不，奇怪地感到舒适。",
+					"露米娜。她似乎了解这片森林的宁静。"
+				],
+				"french": [
+					"La forêt. Dès l'instant où l'on y met le pied, tout ralentit.",
+					"Je dois retrouver la personne disparue... mais pourquoi ne ressens-je aucune urgence ?",
+					"Mes pas sont lourds ? Non, étrangement confortables.",
+					"Lumina. Elle semblait connaître la tranquillité de cette forêt."
+				],
+				"spanish": [
+					"El bosque. En el instante en que entras, todo se ralentiza.",
+					"Tengo que encontrar a la persona desaparecida... ¿pero por qué no siento prisa?",
+					"¿Mis pasos son pesados? No, extrañamente cómodos.",
+					"Lumina. Ella parecía conocer la tranquilidad de este bosque."
+				],
+				"vietnamese": [
+					"Khu rừng. Khoảnh khắc bước vào, mọi thứ đều chậm lại.",
+					"Tôi phải tìm người mất tích... nhưng sao tôi không cảm thấy vội vã?",
+					"Bước chân nặng nề? Không, lạ thay lại thấy thoải mái.",
+					"Lumina. Cô ấy dường như biết sự tĩnh lặng của khu rừng này."
+				],
+				"thai": [
+					"ป่า. ทันทีที่ย่างเท้าเข้าไป ทุกสิ่งก็ช้าลง",
+					"ฉันต้องตามหาคนหาย... แต่ทำไมถึงไม่รู้สึกรีบร้อนเลยนะ?",
+					"ก้าวเดินหนักอึ้ง? ไม่สิ กลับรู้สึกสบายอย่างประหลาด",
+					"ลูมิน่า. เธอราวกับรู้จักความสงบเงียบของป่าแห่งนี้"
+				],
+				"hindi": [
+					"जंगल। कदम रखते ही, सब कुछ धीमा हो जाता है।",
+					"मुझे लापता व्यक्ति को ढूंढना है... पर मुझे कोई जल्दी क्यों नहीं लग रही?",
+					"मेरे कदम भारी हैं? नहीं, अजीब तरह से आरामदायक।",
+					"लुमिना। वह इस जंगल की शांति को जानती थी।"
+				]
+			},
+			"rooms": [
+				{
+					"id": 1,
+					"dialogue": [
+						{
+							"type": "speech",
+							"emotion": "base",
+							"content": {
+								"korean": "발을 들이는 순간, 모든 움직임이 느려졌다. 숲의 숨결이 시간마저 붙잡는 듯했다.",
+								"english": "The moment I stepped in, every movement slowed. The breath of the forest seemed to capture even time itself.",
+								"japanese": "足を踏み入れた瞬間、すべての動きが遅くなった。森の息吹が時間までも捕らえているかのようだった。",
+								"chinese": "踏入的瞬间，所有动作都慢了下来。森林的呼吸仿佛连时间都抓住了。",
+								"french": "Dès l'instant où j'y ai mis le pied, chaque mouvement a ralenti. Le souffle de la forêt semblait même capturer le temps lui-même.",
+								"spanish": "En el instante en que entré, cada movimiento se ralentizó. El aliento del bosque parecía atrapar incluso el tiempo mismo.",
+								"vietnamese": "Khoảnh khắc tôi bước vào, mọi chuyển động đều chậm lại. Hơi thở của khu rừng dường như đã níu giữ cả thời gian.",
+								"thai": "ทันทีที่ย่างเท้าเข้าไป ทุกการเคลื่อนไหวก็ช้าลง ลมหายใจของป่าราวกับกักเก็บแม้กระทั่งกาลเวลา",
+								"hindi": "जैसे ही मैंने कदम रखा, हर हरकत धीमी हो गई। जंगल की सांसें मानो समय को भी रोक रही थीं।"
+							},
+							"speaker": "narrator"
+						},
+						{
+							"speaker": "character_any",
+							"content": {
+								"korean": "…왜 이렇게 나른하지?",
+								"english": "...Why am I so lethargic?",
+								"japanese": "…どうしてこんなに気だるいんだ？",
+								"chinese": "……为什么这么慵懒？",
+								"french": "...Pourquoi suis-je si léthargique ?",
+								"spanish": "...¿Por qué estoy tan aletargado?",
+								"vietnamese": "...Sao mình lại uể oải thế này?",
+								"thai": "...ทำไมถึงรู้สึกเฉื่อยชาขนาดนี้นะ?",
+								"hindi": "...मैं इतना सुस्त क्यों हूँ?"
+							},
+							"emotion": "base",
+							"type": "speech"
+						},
+						{
+							"type": "speech",
+							"emotion": "happy",
+							"content": {
+								"korean": "괜찮아. 나쁘지 않아.",
+								"english": "It's fine. Not bad.",
+								"japanese": "大丈夫。悪くない。",
+								"chinese": "没关系。不坏。",
+								"french": "Ça va. Pas mal.",
+								"spanish": "Está bien. No está mal.",
+								"vietnamese": "Ổn thôi. Không tệ.",
+								"thai": "ไม่เป็นไร. ก็ไม่แย่หรอก",
+								"hindi": "ठीक है। बुरा नहीं है।"
+							},
+							"speaker": "character_1"
+						},
+						{
+							"duration_ms": 500,
+							"spot": [
+								3,
+								3
+							],
+							"action": "enter",
+							"type": "direction",
+							"speaker": "lumina"
+						},
+						{
+							"type": "speech",
+							"emotion": "base",
+							"content": {
+								"korean": "안녕, 외부인들.",
+								"english": "Hello, outsiders.",
+								"japanese": "やあ、よそ者たち。",
+								"chinese": "你好，外来者们。",
+								"french": "Bonjour, les étrangers.",
+								"spanish": "Hola, forasteros.",
+								"vietnamese": "Chào, những kẻ ngoại lai.",
+								"thai": "สวัสดี เหล่าคนนอก",
+								"hindi": "नमस्ते, बाहरी लोगों।"
+							},
+							"speaker": "lumina"
+						},
+						{
+							"speaker": "character_any",
+							"content": {
+								"korean": "…누구세요?",
+								"english": "...Who are you?",
+								"japanese": "…どなたですか？",
+								"chinese": "……你是谁？",
+								"french": "...Qui êtes-vous ?",
+								"spanish": "...¿Quién eres?",
+								"vietnamese": "...Cô là ai?",
+								"thai": "...คุณคือใคร?",
+								"hindi": "...आप कौन हैं?"
+							},
+							"emotion": "base",
+							"type": "speech"
+						},
+						{
+							"speaker": "lumina",
+							"content": {
+								"korean": "난 루미나. 이 숲의 사서.",
+								"english": "I'm Lumina. The librarian of this forest.",
+								"japanese": "私はルミナ。この森の司書よ。",
+								"chinese": "我是露米娜。这片森林的图书管理员。",
+								"french": "Je suis Lumina. La bibliothécaire de cette forêt.",
+								"spanish": "Soy Lumina. La bibliotecaria de este bosque.",
+								"vietnamese": "Tôi là Lumina. Người thủ thư của khu rừng này.",
+								"thai": "ฉันคือลูมิน่า บรรณารักษ์แห่งป่านี้",
+								"hindi": "मैं लुमिना हूँ। इस जंगल की लाइब्रेरियन।"
+							},
+							"emotion": "base",
+							"type": "speech"
+						},
+						{
+							"content": {
+								"korean": "어서 와. 서두를 필요 없어. 여기선.",
+								"english": "Welcome. There's no need to rush here.",
+								"japanese": "いらっしゃい。ここでは急ぐ必要はないよ。",
+								"chinese": "欢迎。在这里你无需着急。",
+								"french": "Bienvenue. Inutile de se presser ici.",
+								"spanish": "Bienvenido. Aquí no hay prisa.",
+								"vietnamese": "Chào mừng. Ở đây không cần vội vã.",
+								"thai": "ยินดีต้อนรับ ไม่ต้องรีบร้อนที่นี่",
+								"hindi": "स्वागत है। यहाँ जल्दबाज़ी करने की ज़रूरत नहीं।"
+							},
+							"speaker": "lumina",
+							"type": "speech",
+							"emotion": "happy"
+						}
+					]
+				},
+				{
+					"id": 3,
+					"dialogue": [
+						{
+							"action": "enter",
+							"duration_ms": 500,
+							"spot": [
+								3,
+								3
+							],
+							"type": "direction",
+							"speaker": "lumina"
+						},
+						{
+							"speaker": "lumina",
+							"content": {
+								"korean": "실종자를 찾으러 왔다고? 조급해 마.",
+								"english": "You're here to find the missing? Don't be impatient.",
+								"japanese": "行方不明者を探しに来たって？焦らないで。",
+								"chinese": "你是来找失踪者的？别心急。",
+								"french": "Tu cherches les disparus ? Ne t'impatiente pas.",
+								"spanish": "Vienes a buscar a los desaparecidos? No te impacientes.",
+								"vietnamese": "Bạn đến tìm người mất tích à? Đừng mất kiên nhẫn.",
+								"thai": "คุณมาตามหาคนหายเหรอ? อย่าเพิ่งใจร้อน",
+								"hindi": "लापता लोगों को ढूँढ़ने आए हो? अधीर मत बनो।"
+							},
+							"emotion": "base",
+							"type": "speech"
+						},
+						{
+							"type": "speech",
+							"emotion": "base",
+							"content": {
+								"korean": "하지만 시간이 없어.",
+								"english": "But there's no time.",
+								"japanese": "でも、時間がない。",
+								"chinese": "但时间不多了。",
+								"french": "Mais il n'y a pas de temps.",
+								"spanish": "Pero no hay tiempo.",
+								"vietnamese": "Nhưng không còn thời gian.",
+								"thai": "แต่ไม่มีเวลาแล้ว",
+								"hindi": "लेकिन समय नहीं है।"
+							},
+							"speaker": "character_any"
+						},
+						{
+							"speaker": "lumina",
+							"content": {
+								"korean": "시간? 여기선 그런 거 없어.",
+								"english": "Time? There's no such thing here.",
+								"japanese": "時間？ここではそんなものはない。",
+								"chinese": "时间？在这里不存在那种东西。",
+								"french": "Le temps ? Ça n'existe pas ici.",
+								"spanish": "Tiempo? Aquí no existe eso.",
+								"vietnamese": "Thời gian ư? Ở đây không có thứ đó.",
+								"thai": "เวลาเหรอ? ที่นี่ไม่มีหรอก",
+								"hindi": "समय? यहाँ ऐसी कोई चीज़ नहीं है।"
+							},
+							"emotion": "happy",
+							"type": "speech"
+						},
+						{
+							"emotion": "base",
+							"type": "speech",
+							"speaker": "character_2",
+							"content": {
+								"korean": "…이상하게, 정말 그런 것 같네.",
+								"english": "...Strangely, it really feels that way.",
+								"japanese": "…変だ、本当にそう感じる。",
+								"chinese": "……奇怪，好像真是这样。",
+								"french": "...Étrangement, c'est vraiment ce que ça semble.",
+								"spanish": "...Extrañamente, parece que es verdad.",
+								"vietnamese": "...Kỳ lạ thay, đúng là vậy thật.",
+								"thai": "...แปลกนะ รู้สึกเหมือนจริง ๆ เลย",
+								"hindi": "...अजीब बात है, सच में ऐसा ही लग रहा है।"
+							}
+						},
+						{
+							"speaker": "lumina",
+							"content": {
+								"korean": "모두 평화롭게 쉬고 있어.",
+								"english": "Everyone is resting peacefully.",
+								"japanese": "みんな安らかに休んでいるよ。",
+								"chinese": "大家都平静地休息着。",
+								"french": "Tout le monde se repose paisiblement.",
+								"spanish": "Todos están descansando en paz.",
+								"vietnamese": "Mọi người đều đang an nghỉ.",
+								"thai": "ทุกคนกำลังพักผ่อนอย่างสงบ",
+								"hindi": "सब शांति से आराम कर रहे हैं।"
+							},
+							"emotion": "base",
+							"type": "speech"
+						}
+					]
+				},
+				{
+					"dialogue": [
+						{
+							"type": "direction",
+							"speaker": "lumina",
+							"action": "enter",
+							"duration_ms": 500,
+							"spot": [
+								3,
+								3
+							]
+						},
+						{
+							"content": {
+								"korean": "이 숲은 모든 걸 느리게 해. 고통도, 슬픔도.",
+								"english": "This forest slows everything. Pain, sorrow too.",
+								"japanese": "この森はすべてを遅くする。苦痛も、悲しみも。",
+								"chinese": "这片森林让一切都慢了下来。痛苦也好，悲伤也罢。",
+								"french": "Cette forêt ralentit tout. La douleur, la tristesse aussi.",
+								"spanish": "Este bosque lo ralentiza todo. El dolor, la tristeza también.",
+								"vietnamese": "Khu rừng này làm chậm mọi thứ. Cả nỗi đau và nỗi buồn.",
+								"thai": "ป่านี้ทำให้ทุกอย่างช้าลง ความเจ็บปวด ความเศร้าก็ด้วย",
+								"hindi": "यह जंगल सब कुछ धीमा कर देता है। दर्द भी, दुख भी।"
+							},
+							"speaker": "lumina",
+							"type": "speech",
+							"emotion": "base"
+						},
+						{
+							"speaker": "character_3",
+							"content": {
+								"korean": "그래서 실종자들이… 돌아가지 않는 건가?",
+								"english": "Is that why the missing... don't return?",
+								"japanese": "だから行方不明者たちは…帰らないのか？",
+								"chinese": "所以那些失踪者……才不回去吗？",
+								"french": "C'est pour ça que les disparus... ne reviennent pas ?",
+								"spanish": "Por eso los desaparecidos... no regresan?",
+								"vietnamese": "Vì vậy những người mất tích... không trở về ư?",
+								"thai": "นั่นคือเหตุผลที่คนหาย... ไม่กลับมาเหรอ?",
+								"hindi": "इसलिए लापता लोग... वापस नहीं आते?"
+							},
+							"emotion": "sad",
+							"type": "speech"
+						},
+						{
+							"speaker": "lumina",
+							"content": {
+								"korean": "여긴 아무것도 쫓아오지 않아. 아무것도 잃지 않아.",
+								"english": "Nothing chases you here. You lose nothing.",
+								"japanese": "ここでは何も追いかけてこない。何も失わない。",
+								"chinese": "在这里，没有任何东西会追赶你。你也不会失去任何东西。",
+								"french": "Ici, rien ne te poursuit. Tu ne perds rien.",
+								"spanish": "Aquí nada te persigue. No pierdes nada.",
+								"vietnamese": "Ở đây không có gì đuổi theo bạn. Bạn không mất mát gì.",
+								"thai": "ที่นี่ไม่มีอะไรตามล่าคุณ คุณจะไม่สูญเสียอะไร",
+								"hindi": "यहाँ कुछ भी तुम्हारा पीछा नहीं करता। तुम कुछ भी नहीं खोते।"
+							},
+							"emotion": "happy",
+							"type": "speech"
+						},
+						{
+							"content": {
+								"korean": "…그럼 우리는?",
+								"english": "...Then what about us?",
+								"japanese": "…じゃあ、私たちは？",
+								"chinese": "……那我们呢？",
+								"french": "...Alors nous ?",
+								"spanish": "...Entonces, ¿qué hay de nosotros?",
+								"vietnamese": "...Vậy còn chúng ta?",
+								"thai": "...แล้วพวกเราล่ะ?",
+								"hindi": "...तो हम क्या करें?"
+							},
+							"speaker": "character_any",
+							"type": "speech",
+							"emotion": "base"
+						},
+						{
+							"emotion": "base",
+							"type": "speech",
+							"speaker": "lumina",
+							"content": {
+								"korean": "너희도 곧 알게 될 거야.",
+								"english": "You'll all know soon enough.",
+								"japanese": "君たちもすぐにわかるだろう。",
+								"chinese": "你们很快就会知道的。",
+								"french": "Vous le saurez bien assez tôt.",
+								"spanish": "Pronto lo sabréis.",
+								"vietnamese": "Các ngươi rồi cũng sẽ biết thôi.",
+								"thai": "พวกเจ้าจะรู้ในไม่ช้า",
+								"hindi": "तुम सब जल्द ही जान जाओगे।"
+							}
+						}
+					],
+					"id": 5
+				},
+				{
+					"id": 9,
+					"dialogue": [
+						{
+							"action": "enter",
+							"duration_ms": 500,
+							"spot": [
+								3,
+								3
+							],
+							"type": "direction",
+							"speaker": "lumina"
+						},
+						{
+							"emotion": "base",
+							"type": "speech",
+							"speaker": "lumina",
+							"content": {
+								"korean": "더 깊은 곳으로 갈수록, 돌아갈 마음이 사라질 거야.",
+								"english": "The deeper you go, the less you'll want to return.",
+								"japanese": "深奥に進むほど、戻りたい気持ちは消えるだろう。",
+								"chinese": "越往深处走，就越不想回头。",
+								"french": "Plus tu iras loin, moins tu auras envie de revenir.",
+								"spanish": "Cuanto más te adentres, menos querrás volver.",
+								"vietnamese": "Càng đi sâu, ý muốn quay về của ngươi sẽ càng biến mất.",
+								"thai": "ยิ่งเจ้าเข้าไปลึกเท่าไร ความคิดที่จะกลับก็จะยิ่งหายไป",
+								"hindi": "जितना गहरा तुम जाओगे, वापस जाने की इच्छा उतनी ही कम होती जाएगी।"
+							}
+						},
+						{
+							"content": {
+								"korean": "…정말 그런 것 같아. 왠지 편안해.",
+								"english": "...It really feels that way. I feel strangely at peace.",
+								"japanese": "…本当にそうみたい。なぜだか心が落ち着く。",
+								"chinese": "…好像真是这样。莫名地感到平静。",
+								"french": "...On dirait bien. Étrangement, je me sens apaisé.",
+								"spanish": "...Parece ser cierto. Me siento extrañamente en paz.",
+								"vietnamese": "…Hình như đúng là vậy. Sao lại cảm thấy an lòng thế này.",
+								"thai": "…ดูเหมือนจะเป็นอย่างนั้นจริง ๆ ฉันรู้สึกสบายใจอย่างประหลาด",
+								"hindi": "...यह सच लगता है। मुझे अजीब सी शांति महसूस होती है।"
+							},
+							"speaker": "character_4",
+							"type": "speech",
+							"emotion": "base"
+						},
+						{
+							"content": {
+								"korean": "아니, 안 돼. 우리 목적은….",
+								"english": "No, we can't. Our objective is...",
+								"japanese": "いや、だめだ。我々の目的は…。",
+								"chinese": "不，不行。我们的目的是……",
+								"french": "Non, on ne peut pas. Notre objectif est...",
+								"spanish": "No, no podemos. Nuestro objetivo es...",
+								"vietnamese": "Không, không được. Mục đích của chúng ta là…",
+								"thai": "ไม่ ไม่ได้ เป้าหมายของเราคือ…",
+								"hindi": "नहीं, ऐसा नहीं कर सकते। हमारा उद्देश्य है..."
+							},
+							"speaker": "character_any",
+							"type": "speech",
+							"emotion": "base"
+						},
+						{
+							"type": "speech",
+							"emotion": "happy",
+							"content": {
+								"korean": "서두르지 마. 여기서 모든 걸 잊어도 돼.",
+								"english": "Don't rush. You can forget everything here.",
+								"japanese": "急ぐな。ここで全てを忘れてもいいんだ。",
+								"chinese": "别急。在这里你可以忘却一切。",
+								"french": "Ne te presse pas. Tu peux tout oublier ici.",
+								"spanish": "No te apresures. Aquí puedes olvidarlo todo.",
+								"vietnamese": "Đừng vội. Ngươi có thể quên đi tất cả mọi thứ ở đây.",
+								"thai": "อย่ารีบร้อน เจ้าสามารถลืมทุกสิ่งได้ที่นี่",
+								"hindi": "जल्दी मत करो। तुम यहां सब कुछ भूल सकते हो।"
+							},
+							"speaker": "lumina"
+						},
+						{
+							"direction": "up",
+							"duration_ms": 400,
+							"action": "exit",
+							"type": "direction",
+							"speaker": "lumina"
+						}
+					]
+				},
+				{
+					"id": 15,
+					"win_dialogue": [
+						{
+							"emotion": "base",
+							"type": "speech",
+							"speaker": "boss",
+							"content": {
+								"korean": "…대단해. 하지만 정말 가고 싶어?",
+								"english": "...Amazing. But do you really want to go?",
+								"japanese": "…すごい。でも、本当にここを離れたいのか？",
+								"chinese": "……真厉害。但你真想离开吗？",
+								"french": "...Incroyable. Mais veux-tu vraiment partir ?",
+								"spanish": "...Increíble. ¿Pero de verdad quieres irte?",
+								"vietnamese": "...Tuyệt vời. Nhưng bạn có thực sự muốn đi không?",
+								"thai": "...ยอดเยี่ยม แต่คุณอยากจะไปจริงๆ หรือ?",
+								"hindi": "...अद्भुत। लेकिन क्या तुम वाकई जाना चाहते हो?"
+							}
+						},
+						{
+							"emotion": "sad",
+							"type": "speech",
+							"speaker": "boss",
+							"content": {
+								"korean": "여기선 아무것도 쫓아오지 않는데….",
+								"english": "Nothing follows us here...",
+								"japanese": "ここには何も追ってこないのに…。",
+								"chinese": "这里什么都不会追上来……",
+								"french": "Rien ne nous poursuit ici...",
+								"spanish": "Aquí nada nos persigue...",
+								"vietnamese": "Ở đây không có gì đuổi theo chúng ta cả...",
+								"thai": "ที่นี่ไม่มีอะไรตามมาเลย...",
+								"hindi": "यहाँ कुछ भी हमारा पीछा नहीं करता..."
+							}
+						},
+						{
+							"content": {
+								"korean": "…우린 돌아가야 해.",
+								"english": "...We have to go back.",
+								"japanese": "…私たちは戻らなければならない。",
+								"chinese": "……我们必须回去。",
+								"french": "...Nous devons y retourner.",
+								"spanish": "...Debemos volver.",
+								"vietnamese": "...Chúng ta phải quay lại.",
+								"thai": "...เราต้องกลับไปแล้ว",
+								"hindi": "...हमें वापस जाना होगा।"
+							},
+							"speaker": "character_any",
+							"type": "speech",
+							"emotion": "sad"
+						},
+						{
+							"emotion": "base",
+							"type": "speech",
+							"speaker": "narrator",
+							"content": {
+								"korean": "숲의 시간이 다시 흐르기 시작했다. 발걸음은 여전히 무거웠다.",
+								"english": "Time in the forest began to flow again. Our steps were still heavy.",
+								"japanese": "森の時間が再び流れ始めた。足取りは依然として重かった。",
+								"chinese": "森林的时间再次开始流动。脚步依然沉重。",
+								"french": "Le temps dans la forêt a recommencé à s'écouler. Nos pas étaient toujours lourds.",
+								"spanish": "El tiempo en el bosque comenzó a fluir de nuevo. Nuestros pasos seguían siendo pesados.",
+								"vietnamese": "Thời gian trong rừng bắt đầu trôi lại. Bước chân vẫn còn nặng nề.",
+								"thai": "กาลเวลาในป่าเริ่มไหลอีกครั้ง ฝีเท้ายังคงหนักอึ้ง",
+								"hindi": "जंगल में समय फिर से बहने लगा। हमारे कदम अभी भी भारी थे।"
+							}
+						}
+					],
+					"lose_dialogue": [
+						{
+							"type": "speech",
+							"emotion": "base",
+							"content": {
+								"korean": "고요함이 모든 것을 덮었다. 움직일 수 없었다.",
+								"english": "Silence covered everything. We couldn't move.",
+								"japanese": "静寂がすべてを覆った。動くことができなかった。",
+								"chinese": "寂静笼罩了一切。无法动弹。",
+								"french": "Le silence enveloppa tout. Nous ne pouvions pas bouger.",
+								"spanish": "El silencio lo cubrió todo. No podíamos movernos.",
+								"vietnamese": "Sự tĩnh lặng bao trùm mọi thứ. Chúng tôi không thể di chuyển.",
+								"thai": "ความเงียบงันปกคลุมทุกสิ่ง เราไม่สามารถเคลื่อนไหวได้",
+								"hindi": "खामोशी ने सब कुछ ढक लिया। हम हिल नहीं सकते थे।"
+							},
+							"speaker": "narrator"
+						},
+						{
+							"content": {
+								"korean": "봐. 서두를 필요 없잖아.",
+								"english": "See? There's no need to rush.",
+								"japanese": "見て。急ぐ必要なんてないじゃないか。",
+								"chinese": "看。没必要着急。",
+								"french": "Vois ? Nul besoin de se presser.",
+								"spanish": "Mira. No hay necesidad de apresurarse.",
+								"vietnamese": "Thấy không? Không cần phải vội.",
+								"thai": "เห็นไหม? ไม่ต้องรีบร้อนหรอก",
+								"hindi": "देखो। जल्दी करने की कोई ज़रूरत नहीं है।"
+							},
+							"speaker": "boss",
+							"type": "speech",
+							"emotion": "happy"
+						},
+						{
+							"emotion": "angry",
+							"type": "speech",
+							"speaker": "character_any",
+							"content": {
+								"korean": "…아직 끝나지 않았어.",
+								"english": "...It's not over yet.",
+								"japanese": "…まだ終わってない。",
+								"chinese": "……还没结束。",
+								"french": "...Ce n'est pas encore fini.",
+								"spanish": "...Aún no ha terminado.",
+								"vietnamese": "...Vẫn chưa kết thúc.",
+								"thai": "...ยังไม่จบ",
+								"hindi": "...अभी खत्म नहीं हुआ है।"
+							}
+						}
+					],
+					"dialogue": [
+						{
+							"type": "speech",
+							"emotion": "base",
+							"content": {
+								"korean": "숲의 가장 깊은 곳. 모든 고요함의 근원, 그가 기다리고 있었다.",
+								"english": "The deepest part of the forest. The source of all serenity, he was waiting.",
+								"japanese": "森の最奥。全ての静寂の根源、彼が待っていた。",
+								"chinese": "森林的最深处。所有寂静的源头，他在那里等待着。",
+								"french": "Au plus profond de la forêt. La source de toute sérénité, il attendait.",
+								"spanish": "La parte más profunda del bosque. La fuente de toda serenidad, él estaba esperando.",
+								"vietnamese": "Sâu nhất trong rừng. Nơi khởi nguồn của mọi sự yên bình, hắn đã chờ sẵn.",
+								"thai": "ส่วนที่ลึกที่สุดของป่า แหล่งกำเนิดของความสงบเงียบทั้งหมด เขากำลังรออยู่",
+								"hindi": "जंगल का सबसे गहरा हिस्सा। सभी शांति का स्रोत, वह इंतजार कर रहा था।"
+							},
+							"speaker": "narrator"
+						},
+						{
+							"type": "speech",
+							"emotion": "base",
+							"content": {
+								"korean": "왔구나. …근데 왜 서두르지?",
+								"english": "You've come. ...But why the rush?",
+								"japanese": "来たか。…だが、なぜ急ぐ？",
+								"chinese": "你来了。…但为何如此匆忙？",
+								"french": "Tu es venu. ...Mais pourquoi cette hâte ?",
+								"spanish": "Has venido. ...¿Pero por qué tanta prisa?",
+								"vietnamese": "Ngươi đã đến rồi. …Nhưng sao lại vội vàng thế?",
+								"thai": "เจ้ามาแล้ว ...แต่ทำไมต้องรีบร้อน?",
+								"hindi": "तुम आ गए। ...लेकिन इतनी जल्दी क्यों?"
+							},
+							"speaker": "boss"
+						},
+						{
+							"emotion": "angry",
+							"type": "speech",
+							"speaker": "character_any",
+							"content": {
+								"korean": "네가 이 숲을 이렇게 만들었어!",
+								"english": "You made this forest like this!",
+								"japanese": "お前がこの森をこんな風にしたんだ！",
+								"chinese": "你把这片森林变成了这样！",
+								"french": "C'est toi qui as rendu cette forêt comme ça !",
+								"spanish": "¡Tú hiciste este bosque así!",
+								"vietnamese": "Ngươi đã biến khu rừng này thành ra thế này!",
+								"thai": "เจ้าเป็นคนทำให้ป่านี้เป็นแบบนี้!",
+								"hindi": "तुमने इस जंगल को ऐसा बनाया है!"
+							}
+						},
+						{
+							"content": {
+								"korean": "악의는 없어. 그냥… 혼자였어.",
+								"english": "No ill will. I was just... alone.",
+								"japanese": "悪意はない。ただ…一人だった。",
+								"chinese": "没有恶意。只是…我一直很孤独。",
+								"french": "Pas de mauvaise intention. J'étais juste... seul.",
+								"spanish": "No hay malicia. Solo... estaba solo.",
+								"vietnamese": "Không có ác ý. Chỉ là… ta đã cô đơn thôi.",
+								"thai": "ไม่มีเจตนาร้าย แค่...ฉันอยู่คนเดียว",
+								"hindi": "कोई दुर्भावना नहीं। मैं बस... अकेला था।"
+							},
+							"speaker": "boss",
+							"type": "speech",
+							"emotion": "sad"
+						},
+						{
+							"content": {
+								"korean": "싸울 필요 없어. 여기 있어도 돼.",
+								"english": "No need to fight. You can stay here.",
+								"japanese": "戦う必要はない。ここにいてもいいんだ。",
+								"chinese": "没必要战斗。你可以留在这里。",
+								"french": "Pas besoin de te battre. Tu peux rester ici.",
+								"spanish": "No hay necesidad de luchar. Puedes quedarte aquí.",
+								"vietnamese": "Không cần phải chiến đấu. Ngươi có thể ở lại đây.",
+								"thai": "ไม่จำเป็นต้องสู้ เจ้าสามารถอยู่ที่นี่ได้",
+								"hindi": "लड़ने की जरूरत नहीं है। तुम यहां रुक सकते हो।"
+							},
+							"speaker": "boss",
+							"type": "speech",
+							"emotion": "base"
+						}
+					]
+				}
+			]
+		},
+		{
+			"scenario_id": "forest_sloth_02",
+			"order": 2,
+			"act": "rising",
+			"theme": "forest",
+			"actors": {
+				"selena": {
+					"id": "actor_04",
+					"name": {
+						"korean": "셀레나",
+						"english": "Selena",
+						"japanese": "セレナ",
+						"chinese": "塞莱娜",
+						"french": "Séléna",
+						"spanish": "Selena",
+						"vietnamese": "Selena",
+						"thai": "เซเลน่า",
+						"hindi": "सेलेना"
+					},
+					"description": "",
+					"face_image_url": "https://imagedelivery.net/WTEqQNGFb-l-IHS6IGnzUQ/0333478b-0c76-459f-8574-67704ce00100/public",
+					"battle_sprite_url": "https://imagedelivery.net/WTEqQNGFb-l-IHS6IGnzUQ/7b36a7f6-9842-4b91-7437-bccef7696400/public"
+				}
+			},
+			"boss": {
+				"pool_id": "pool_011"
+			},
+			"rooms": [
+				{
+					"dialogue": [
+						{
+							"speaker": "narrator",
+							"type": "speech",
+							"content": {
+								"korean": "숲의 공기는 무거웠지만, 묘하게 편안했다. 모두의 발걸음이 느려졌다.",
+								"english": "The forest air was heavy, yet strangely comforting. Everyone's steps slowed.",
+								"japanese": "森の空気は重かったが、奇妙に心地よかった。皆の足取りが遅くなった。",
+								"chinese": "森林里的空气很沉重，却又出奇地舒适。大家的脚步都慢了下来。",
+								"french": "L'air de la forêt était lourd, mais étrangement apaisant. Les pas de chacun ralentirent.",
+								"spanish": "El aire del bosque era pesado, pero extrañamente reconfortante. Los pasos de todos se ralentizaron.",
+								"vietnamese": "Không khí trong rừng nặng nề, nhưng lạ lùng thay lại thoải mái. Bước chân của mọi người đều chậm lại.",
+								"thai": "อากาศในป่าหนักอึ้ง แต่กลับรู้สึกสบายอย่างประหลาด ทุกคนก้าวเดินช้าลง",
+								"hindi": "जंगल की हवा भारी थी, फिर भी अजीब तरह से आरामदायक। सभी के कदम धीमे हो गए।"
+							},
+							"emotion": "base"
+						},
+						{
+							"emotion": "base",
+							"type": "speech",
+							"content": {
+								"korean": "여기… 뭔가 이상하지 않아?",
+								"english": "Something... isn't right here, is it?",
+								"japanese": "ここ…何かおかしくないか？",
+								"chinese": "这里…是不是有点不对劲？",
+								"french": "Ici... il y a quelque chose d'étrange, non ?",
+								"spanish": "Aquí... algo no está bien, ¿verdad?",
+								"vietnamese": "Chỗ này… có gì đó lạ phải không?",
+								"thai": "ที่นี่... มีอะไรแปลกๆ ใช่ไหม?",
+								"hindi": "यहाँ... कुछ अजीब नहीं है क्या?"
+							},
+							"speaker": "character_any"
+						},
+						{
+							"duration_ms": 500,
+							"spot": [
+								2,
+								3
+							],
+							"type": "direction",
+							"speaker": "selena",
+							"action": "enter"
+						},
+						{
+							"emotion": "base",
+							"type": "speech",
+							"content": {
+								"korean": "무슨 일이야? 혹시 다친 곳이라도…?",
+								"english": "What's wrong? Are you hurt somewhere...?",
+								"japanese": "どうしたの？もしかして、どこか怪我でも…？",
+								"chinese": "怎么了？是不是受伤了…？",
+								"french": "Qu'est-ce qui ne va pas ? Tu es blessé quelque part... ?",
+								"spanish": "¿Qué pasa? ¿Estás herido en algún lugar...?",
+								"vietnamese": "Có chuyện gì vậy? Hay là bị thương ở đâu đó…?",
+								"thai": "เกิดอะไรขึ้น? มีตรงไหนเจ็บหรือเปล่า...?",
+								"hindi": "क्या हुआ? कहीं चोट तो नहीं लगी है...?"
+							},
+							"speaker": "selena"
+						},
+						{
+							"type": "speech",
+							"content": {
+								"korean": "아니, 그냥… 너무 조용해서. 너무… 편안해서.",
+								"english": "No, it's just... it's too quiet. Too... peaceful.",
+								"japanese": "いや、ただ…あまりにも静かで。あまりにも…心地よくて。",
+								"chinese": "不，只是…太安静了。太…舒适了。",
+								"french": "Non, c'est juste... que c'est trop silencieux. Trop... apaisant.",
+								"spanish": "No, es solo... que es demasiado silencioso. Demasiado... pacífico.",
+								"vietnamese": "Không, chỉ là… quá yên tĩnh. Quá… thoải mái.",
+								"thai": "ไม่ใช่หรอก แค่... มันเงียบเกินไป เงียบ...จนน่าสบายใจ",
+								"hindi": "नहीं, बस... बहुत शांत है। बहुत... आरामदायक है।"
+							},
+							"emotion": "base",
+							"speaker": "character_any"
+						},
+						{
+							"type": "speech",
+							"content": {
+								"korean": "그래도 방심하면 안 돼. 실종자들의 흔적을 찾아야 해.",
+								"english": "Still, we can't let our guard down. We need to find traces of the missing.",
+								"japanese": "でも、油断は禁物だ。行方不明者の痕跡を見つけないと。",
+								"chinese": "尽管如此，我们也不能放松警惕。我们必须找到失踪者的踪迹。",
+								"french": "Malgré tout, nous ne devons pas baisser notre garde. Nous devons retrouver les traces des disparus.",
+								"spanish": "Aún así, no podemos bajar la guardia. Necesitamos encontrar rastros de los desaparecidos.",
+								"vietnamese": "Dù vậy, chúng ta không thể lơ là. Cần phải tìm kiếm dấu vết của những người mất tích.",
+								"thai": "ถึงอย่างนั้นก็ห้ามประมาทนะ เราต้องตามหาร่องรอยของผู้สูญหาย",
+								"hindi": "फिर भी, हमें लापरवाह नहीं होना चाहिए। हमें लापता लोगों के निशान ढूंढने होंगे।"
+							},
+							"emotion": "base",
+							"speaker": "selena"
+						}
+					],
+					"id": 1
+				},
+				{
+					"dialogue": [
+						{
+							"speaker": "narrator",
+							"emotion": "base",
+							"type": "speech",
+							"content": {
+								"korean": "나뭇가지 사이로 빛이 쏟아지는 곳. 사람의 흔적이 보였다.",
+								"english": "Where light poured through the branches. Traces of people were visible.",
+								"japanese": "木々の間から光が差し込む場所。人の痕跡が見えた。",
+								"chinese": "光线从树枝间洒落的地方。看到了人类的踪迹。",
+								"french": "Là où la lumière se déversait à travers les branches. Des traces humaines étaient visibles.",
+								"spanish": "Donde la luz se filtraba entre las ramas. Se veían rastros de personas.",
+								"vietnamese": "Nơi ánh sáng chiếu qua kẽ lá. Dấu vết con người đã xuất hiện.",
+								"thai": "ณ ที่ที่แสงส่องผ่านกิ่งไม้ พบร่องรอยของมนุษย์",
+								"hindi": "जहाँ शाखाओं के बीच से रोशनी आ रही थी। इंसानों के निशान दिखाई दिए।"
+							}
+						},
+						{
+							"type": "speech",
+							"content": {
+								"korean": "이거… 실종자들 물건 아니야?",
+								"english": "These... aren't these the missing persons' belongings?",
+								"japanese": "これ… 行方不明者の物じゃない？",
+								"chinese": "这… 这不是失踪者的物品吗？",
+								"french": "Ça... ce ne sont pas les affaires des disparus ?",
+								"spanish": "¿Esto... no son las pertenencias de los desaparecidos?",
+								"vietnamese": "Đây... không phải đồ của những người mất tích sao?",
+								"thai": "นี่...ไม่ใช่ของคนหายเหรอ?",
+								"hindi": "यह... क्या यह लापता लोगों का सामान नहीं है?"
+							},
+							"emotion": "base",
+							"speaker": "character_any"
+						},
+						{
+							"speaker": "character_1",
+							"emotion": "base",
+							"type": "speech",
+							"content": {
+								"korean": "여기 앉아있던 것 같아. 꽤 오랫동안.",
+								"english": "Looks like they were sitting here. For quite a while.",
+								"japanese": "ここに座っていたようだ。かなり長い間。",
+								"chinese": "他们好像坐在这里。很久了。",
+								"french": "On dirait qu'ils étaient assis ici. Pendant un bon moment.",
+								"spanish": "Parece que estuvieron sentados aquí. Durante bastante tiempo.",
+								"vietnamese": "Có vẻ họ đã ngồi đây. Khá lâu rồi.",
+								"thai": "ดูเหมือนพวกเขานั่งอยู่ที่นี่ นานพอสมควรเลย",
+								"hindi": "लगता है वे यहाँ बैठे थे। काफी समय से।"
+							}
+						},
+						{
+							"speaker": "selena",
+							"emotion": "base",
+							"type": "speech",
+							"content": {
+								"korean": "다친 곳은 없어 보이는데… 왜 안 움직였을까?",
+								"english": "Doesn't look like they're hurt... Why didn't they move?",
+								"japanese": "怪我はないみたいだけど… なんで動かなかったんだろう？",
+								"chinese": "看起来没有受伤… 为什么不动呢？",
+								"french": "Ils n'ont pas l'air blessés... Pourquoi n'ont-ils pas bougé ?",
+								"spanish": "No parece que estén heridos... ¿Por qué no se movieron?",
+								"vietnamese": "Có vẻ không bị thương... Sao họ không di chuyển?",
+								"thai": "ดูเหมือนจะไม่บาดเจ็บ... ทำไมถึงไม่ขยับเลยนะ?",
+								"hindi": "चोट तो नहीं दिख रही... वे हिले क्यों नहीं?"
+							}
+						},
+						{
+							"type": "speech",
+							"content": {
+								"korean": "혹시… 그냥 쉬고 있었던 건가?",
+								"english": "Maybe... they were just resting?",
+								"japanese": "もしかして… ただ休んでいただけ？",
+								"chinese": "难道… 他们只是在休息吗？",
+								"french": "Peut-être... qu'ils se reposaient juste ?",
+								"spanish": "¿Quizás... solo estaban descansando?",
+								"vietnamese": "Hay là... họ chỉ đang nghỉ ngơi?",
+								"thai": "หรือว่า... พวกเขาแค่นั่งพักอยู่เฉยๆ?",
+								"hindi": "शायद... वे बस आराम कर रहे थे?"
+							},
+							"emotion": "base",
+							"speaker": "character_any"
+						},
+						{
+							"speaker": "selena",
+							"emotion": "sad",
+							"type": "speech",
+							"content": {
+								"korean": "아니야. 뭔가 있어.",
+								"english": "No. Something's off.",
+								"japanese": "いや。何かある。",
+								"chinese": "不对。有问题。",
+								"french": "Non. Quelque chose ne va pas.",
+								"spanish": "No. Algo anda mal.",
+								"vietnamese": "Không. Có gì đó không ổn.",
+								"thai": "ไม่นะ. มีบางอย่างผิดปกติ.",
+								"hindi": "नहीं। कुछ तो है।"
+							}
+						}
+					],
+					"id": 3
+				},
+				{
+					"id": 5,
+					"dialogue": [
+						{
+							"speaker": "narrator",
+							"emotion": "base",
+							"type": "speech",
+							"content": {
+								"korean": "실종자들의 흔적은 계속해서 발견되었다. 모두 앉아있던 흔적이었다.",
+								"english": "Traces of the missing were continuously found. All were signs of them sitting.",
+								"japanese": "行方不明者の痕跡が次々と見つかった。すべて座っていた痕跡だった。",
+								"chinese": "失踪者的痕迹不断被发现。都是他们曾坐下的痕迹。",
+								"french": "Des traces des disparus ont été continuellement trouvées. Toutes étaient des signes qu'ils s'étaient assis.",
+								"spanish": "Se siguieron encontrando rastros de los desaparecidos. Todos eran indicios de que habían estado sentados.",
+								"vietnamese": "Dấu vết của những người mất tích liên tục được tìm thấy. Tất cả đều là dấu vết của việc họ đã ngồi.",
+								"thai": "ร่องรอยของคนหายถูกพบอย่างต่อเนื่อง ทั้งหมดเป็นร่องรอยของการนั่ง.",
+								"hindi": "लापता लोगों के निशान लगातार मिल रहे थे। सभी बैठे होने के निशान थे।"
+							}
+						},
+						{
+							"emotion": "base",
+							"type": "speech",
+							"content": {
+								"korean": "진짜 다친 사람이 하나도 없네. 그냥… 쉬고 있는 거야.",
+								"english": "No one's actually hurt. They're just... resting.",
+								"japanese": "本当に誰も怪我してないな。ただ… 休んでいるだけだ。",
+								"chinese": "真的一个人都没受伤。他们只是… 在休息。",
+								"french": "Personne n'est vraiment blessé. Ils sont juste... en train de se reposer.",
+								"spanish": "Nadie está realmente herido. Solo están... descansando.",
+								"vietnamese": "Thật sự không có ai bị thương cả. Họ chỉ... đang nghỉ ngơi thôi.",
+								"thai": "ไม่มีใครบาดเจ็บจริงๆ เลย แค่...นั่งพักอยู่เฉยๆ",
+								"hindi": "सच में कोई घायल नहीं है। वे बस... आराम कर रहे हैं।"
+							},
+							"speaker": "character_any"
+						},
+						{
+							"speaker": "character_2",
+							"emotion": "base",
+							"type": "speech",
+							"content": {
+								"korean": "나도 좀 쉬고 싶다. 굳이 서두를 필요 없잖아?",
+								"english": "I want to rest a bit too. No need to rush, right?",
+								"japanese": "私も少し休みたい。急ぐ必要ないでしょ？",
+								"chinese": "我也想休息一下。没必要这么急吧？",
+								"french": "Moi aussi, je voudrais me reposer un peu. Pas besoin de se presser, n'est-ce pas ?",
+								"spanish": "Yo también quiero descansar un poco. No hay necesidad de apresurarse, ¿verdad?",
+								"vietnamese": "Tôi cũng muốn nghỉ một chút. Đâu cần phải vội vàng chứ?",
+								"thai": "ฉันก็อยากพักบ้างเหมือนกัน ไม่เห็นต้องรีบเลยนี่?",
+								"hindi": "मुझे भी थोड़ा आराम करना है। जल्दी करने की क्या ज़रूरत है?"
+							}
+						},
+						{
+							"emotion": "angry",
+							"type": "speech",
+							"content": {
+								"korean": "안 돼! 우리는 그들을 찾아야 해! 집에 데려가야 한다고!",
+								"english": "No! We have to find them! We have to take them home!",
+								"japanese": "ダメだ！私たちは彼らを見つけなきゃ！家に連れて帰らないと！",
+								"chinese": "不行！我们必须找到他们！要把他们带回家！",
+								"french": "Non ! Nous devons les trouver ! Nous devons les ramener à la maison !",
+								"spanish": "¡No! ¡Tenemos que encontrarlos! ¡Tenemos que llevarlos a casa!",
+								"vietnamese": "Không được! Chúng ta phải tìm họ! Phải đưa họ về nhà!",
+								"thai": "ไม่นะ! เราต้องตามหาพวกเขา! เราต้องพาพวกเขากลับบ้าน!",
+								"hindi": "नहीं! हमें उन्हें ढूंढना होगा! हमें उन्हें घर ले जाना होगा!"
+							},
+							"speaker": "selena"
+						},
+						{
+							"speaker": "character_any",
+							"type": "speech",
+							"content": {
+								"korean": "여기… 정말 집 같지 않아?",
+								"english": "Here... doesn't it feel just like home?",
+								"japanese": "ここ… 本当に家みたいじゃない？",
+								"chinese": "这里… 不是很像家吗？",
+								"french": "Ici... ça ne ressemble pas vraiment à la maison ?",
+								"spanish": "Aquí... ¿no se siente realmente como en casa?",
+								"vietnamese": "Ở đây... không phải rất giống nhà sao?",
+								"thai": "ที่นี่...ไม่เหมือนบ้านจริงๆ เหรอ?",
+								"hindi": "यह जगह... क्या यह बिल्कुल घर जैसी नहीं लगती?"
+							},
+							"emotion": "base"
+						},
+						{
+							"speaker": "selena",
+							"emotion": "sad",
+							"type": "speech",
+							"content": {
+								"korean": "아니야, 이건 함정일지도 몰라.",
+								"english": "No, this might be a trap.",
+								"japanese": "いや、これは罠かもしれない。",
+								"chinese": "不，这可能是一个陷阱。",
+								"french": "Non, c'est peut-être un piège.",
+								"spanish": "No, esto podría ser una trampa.",
+								"vietnamese": "Không, đây có thể là một cái bẫy.",
+								"thai": "ไม่นะ นี่อาจเป็นกับดัก",
+								"hindi": "नहीं, यह एक जाल हो सकता है।"
+							}
+						}
+					]
+				},
+				{
+					"id": 9,
+					"dialogue": [
+						{
+							"speaker": "narrator",
+							"type": "speech",
+							"content": {
+								"korean": "숲은 점점 더 깊어졌다. 시간의 흐름조차 잊어버릴 것 같았다.",
+								"english": "The forest grew deeper and deeper. It felt as if even the flow of time was forgotten.",
+								"japanese": "森はますます深くなった。時間の流れさえ忘れてしまいそうだった。",
+								"chinese": "森林越来越深。仿佛连时间的流逝都已遗忘。",
+								"french": "La forêt devenait de plus en plus profonde. On aurait dit que même le cours du temps était oublié.",
+								"spanish": "El bosque se hacía cada vez más profundo. Parecía que hasta el paso del tiempo se olvidaba.",
+								"vietnamese": "Rừng càng lúc càng sâu. Dường như dòng chảy của thời gian cũng bị lãng quên.",
+								"thai": "ป่าลึกขึ้นเรื่อยๆ รู้สึกเหมือนแม้แต่กาลเวลาก็ถูกลืมเลือนไป",
+								"hindi": "जंगल गहरा और गहरा होता गया। ऐसा लगा मानो समय का प्रवाह भी भूल गया हो।"
+							},
+							"emotion": "base"
+						},
+						{
+							"type": "speech",
+							"content": {
+								"korean": "여기 정말 좋아. 평화롭고… 아무것도 걱정할 필요 없고.",
+								"english": "I really like it here. Peaceful... and nothing to worry about.",
+								"japanese": "ここ、本当に好きだ。平和で…何も心配することないし。",
+								"chinese": "我真的很喜欢这里。平静…而且什么都不用担心。",
+								"french": "J'aime vraiment cet endroit. Paisible... et rien à craindre.",
+								"spanish": "Me gusta mucho aquí. Tranquilo... y sin nada de qué preocuparse.",
+								"vietnamese": "Tôi thực sự thích nơi này. Thanh bình... và không có gì phải lo lắng cả.",
+								"thai": "ฉันชอบที่นี่มาก สงบสุข... และไม่มีอะไรต้องกังวลเลย",
+								"hindi": "मुझे यहाँ सच में बहुत पसंद है। शांत... और कुछ भी चिंता करने की ज़रूरत नहीं।"
+							},
+							"emotion": "happy",
+							"speaker": "character_any"
+						},
+						{
+							"emotion": "base",
+							"type": "speech",
+							"content": {
+								"korean": "솔직히… 여기 좀 더 있어도 될 것 같은데?",
+								"english": "Honestly... I think we could stay here a bit longer, couldn't we?",
+								"japanese": "正直…もう少しここにいてもいいんじゃないか？",
+								"chinese": "说实话…我觉得我们可以在这里再待一会儿？",
+								"french": "Honnêtement... on pourrait rester un peu plus longtemps ici, non ?",
+								"spanish": "Sinceramente... ¿creo que podríamos quedarnos un poco más aquí?",
+								"vietnamese": "Thật lòng mà nói... chúng ta có thể ở đây thêm một chút nữa không?",
+								"thai": "บอกตามตรง... ฉันว่าเราอยู่ตรงนี้นานกว่านี้หน่อยได้ไหม?",
+								"hindi": "ईमानदारी से कहूँ तो... मुझे लगता है कि हम यहाँ थोड़ी देर और रुक सकते हैं?"
+							},
+							"speaker": "character_3"
+						},
+						{
+							"emotion": "angry",
+							"type": "speech",
+							"content": {
+								"korean": "정신 차려! 우리는 숲에 들어온 지 얼마나 됐는지도 모르고 있어!",
+								"english": "Snap out of it! We don't even know how long we've been in the forest!",
+								"japanese": "しっかりして！森に入ってからどれくらい経ったかさえ分からないんだぞ！",
+								"chinese": "清醒一点！我们甚至不知道我们进入森林多久了！",
+								"french": "Reprends-toi ! On ne sait même pas depuis combien de temps on est dans la forêt !",
+								"spanish": "¡Despierta! ¡Ni siquiera sabemos cuánto tiempo llevamos en el bosque!",
+								"vietnamese": "Tỉnh táo lại đi! Chúng ta thậm chí còn không biết mình đã ở trong rừng bao lâu rồi!",
+								"thai": "ตั้งสติหน่อย! เรายังไม่รู้เลยว่าอยู่ในป่ามานานแค่ไหนแล้ว!",
+								"hindi": "होश में आओ! हमें तो यह भी नहीं पता कि हम जंगल में कब से हैं!"
+							},
+							"speaker": "selena"
+						},
+						{
+							"speaker": "character_any",
+							"type": "speech",
+							"content": {
+								"korean": "시간이 뭐가 중요해? 편안하면 됐지.",
+								"english": "What does time matter? As long as we're comfortable.",
+								"japanese": "時間が何だって言うんだ？快適ならそれでいいじゃないか。",
+								"chinese": "时间有什么重要的？只要舒服就行了。",
+								"french": "Qu'importe le temps ? Pourvu qu'on soit à l'aise.",
+								"spanish": "¿Qué importa el tiempo? Con tal de que estemos cómodos.",
+								"vietnamese": "Thời gian thì có gì quan trọng? Miễn là chúng ta thoải mái là được.",
+								"thai": "เวลาจะไปสำคัญอะไร? แค่สบายก็พอแล้ว",
+								"hindi": "समय का क्या महत्व है? जब तक हम आरामदायक हैं।"
+							},
+							"emotion": "base"
+						},
+						{
+							"speaker": "selena",
+							"type": "speech",
+							"content": {
+								"korean": "이건… 뭔가 잘못됐어.",
+								"english": "This... something's wrong.",
+								"japanese": "これ…何かおかしい。",
+								"chinese": "这…有些不对劲。",
+								"french": "Ça... il y a quelque chose qui ne va pas.",
+								"spanish": "Esto... algo está mal.",
+								"vietnamese": "Cái này... có gì đó không ổn.",
+								"thai": "นี่มัน... มีบางอย่างผิดปกติ",
+								"hindi": "यह... कुछ तो गड़बड़ है।"
+							},
+							"emotion": "sad"
+						}
+					]
+				},
+				{
+					"win_dialogue": [
+						{
+							"speaker": "narrator",
+							"type": "speech",
+							"content": {
+								"korean": "고요했던 숲이 잠시 흔들렸다. 찰나의 순간, 시간이 돌아온 듯했다.",
+								"english": "The silent forest trembled briefly. For a fleeting moment, time seemed to return.",
+								"japanese": "静寂だった森が一時揺らいだ。刹那の瞬間、時間が戻ったかのようだった。",
+								"chinese": "宁静的森林短暂地颤动了一下。刹那间，时间仿佛回来了。",
+								"french": "La forêt silencieuse frémit un instant. Pour un instant fugace, le temps sembla revenir.",
+								"spanish": "El bosque silencioso tembló brevemente. Por un instante fugaz, el tiempo pareció volver.",
+								"vietnamese": "Rừng tĩnh lặng rung chuyển chốc lát. Trong khoảnh khắc, thời gian dường như đã trở lại.",
+								"thai": "ป่าที่เงียบสงบสั่นสะเทือนเพียงชั่วครู่ ในชั่วพริบตา เวลาดูเหมือนจะกลับมา",
+								"hindi": "शांत जंगल कुछ देर के लिए हिल गया। एक पल के लिए, ऐसा लगा जैसे समय लौट आया हो।"
+							},
+							"emotion": "base"
+						},
+						{
+							"speaker": "boss",
+							"type": "speech",
+							"content": {
+								"korean": "…가고 싶어? 정말로…?",
+								"english": "...You want to go? Really...?",
+								"japanese": "…行きたいのか？本当に…？",
+								"chinese": "……想走吗？真的……？",
+								"french": "…Tu veux partir ? Vraiment… ?",
+								"spanish": "…¿Quieres irte? ¿De verdad…?",
+								"vietnamese": "…Muốn đi sao? Thật sự…?",
+								"thai": "...อยากไปเหรอ? จริงๆ เหรอ...?",
+								"hindi": "...जाना चाहते हो? सच में...?"
+							},
+							"emotion": "base"
+						},
+						{
+							"emotion": "angry",
+							"type": "speech",
+							"content": {
+								"korean": "그래야 해! 우리는… 돌아가야 한다고!",
+								"english": "We have to! We... must go back!",
+								"japanese": "そうしなくちゃ！私たちは… 戻らなくちゃいけないんだ！",
+								"chinese": "必须如此！我们……必须回去！",
+								"french": "Il le faut ! Nous… devons rentrer !",
+								"spanish": "¡Tenemos que hacerlo! ¡Nosotros… debemos regresar!",
+								"vietnamese": "Phải vậy! Chúng ta… phải quay về!",
+								"thai": "ต้องอย่างนั้น! เรา... ต้องกลับไป!",
+								"hindi": "ऐसा ही करना होगा! हमें... वापस जाना होगा!"
+							},
+							"speaker": "character_any"
+						},
+						{
+							"type": "speech",
+							"content": {
+								"korean": "어서! 숲을 벗어나야 해!",
+								"english": "Hurry! We must escape the forest!",
+								"japanese": "急げ！森を抜け出さなくちゃ！",
+								"chinese": "快！我们必须离开这片森林！",
+								"french": "Vite ! Nous devons quitter la forêt !",
+								"spanish": "¡Date prisa! ¡Debemos escapar del bosque!",
+								"vietnamese": "Nhanh lên! Phải thoát khỏi khu rừng này!",
+								"thai": "เร็วเข้า! เราต้องหนีออกจากป่า!",
+								"hindi": "जल्दी करो! हमें जंगल से बाहर निकलना होगा!"
+							},
+							"emotion": "angry",
+							"speaker": "selena"
+						},
+						{
+							"type": "speech",
+							"content": {
+								"korean": "숲은 여전히 느렸지만, 탐험대의 발걸음은 무거웠다. 아직 끝나지 않은 듯했다.",
+								"english": "The forest was still slow, but the expedition team's steps were heavy. It felt like it wasn't over yet.",
+								"japanese": "森は相変わらず緩慢だったが、探検隊の足取りは重かった。まだ終わっていないようだった。",
+								"chinese": "森林依然缓慢，但探险队的脚步沉重。似乎一切都还没有结束。",
+								"french": "La forêt restait lente, mais les pas de l'équipe d'expédition étaient lourds. Cela ne semblait pas encore terminé.",
+								"spanish": "El bosque seguía lento, pero los pasos del equipo de expedición eran pesados. Parecía que aún no había terminado.",
+								"vietnamese": "Khu rừng vẫn chậm chạp, nhưng bước chân của đội thám hiểm nặng nề. Dường như mọi chuyện vẫn chưa kết thúc.",
+								"thai": "ป่ายังคงเชื่องช้า แต่ก้าวเดินของคณะสำรวจหนักอึ้ง ดูเหมือนจะยังไม่จบลง",
+								"hindi": "जंगल अभी भी धीमा था, लेकिन अभियान दल के कदम भारी थे। ऐसा लगा जैसे अभी खत्म नहीं हुआ है।"
+							},
+							"emotion": "base",
+							"speaker": "narrator"
+						}
+					],
+					"dialogue": [
+						{
+							"speaker": "narrator",
+							"type": "speech",
+							"content": {
+								"korean": "숲의 가장 깊은 곳. 모든 움직임이 멈춘 듯 고요했다.",
+								"english": "The deepest part of the forest. It was so quiet, as if all movement had stopped.",
+								"japanese": "森の最も深い場所。あらゆる動きが止まったかのように静まり返っていた。",
+								"chinese": "森林最深处。一切都寂静无声，仿佛所有的动作都已停止。",
+								"french": "La partie la plus profonde de la forêt. C'était si silencieux, comme si tout mouvement s'était arrêté.",
+								"spanish": "La parte más profunda del bosque. Estaba tan silencioso, como si todo movimiento se hubiera detenido.",
+								"vietnamese": "Nơi sâu nhất của khu rừng. Yên tĩnh đến lạ, như thể mọi chuyển động đều đã ngừng lại.",
+								"thai": "ส่วนที่ลึกที่สุดของป่า มันเงียบมากราวกับว่าทุกการเคลื่อนไหวได้หยุดลง",
+								"hindi": "जंगल का सबसे गहरा हिस्सा। इतनी खामोशी थी, मानो सारी हलचल रुक गई हो।"
+							},
+							"emotion": "base"
+						},
+						{
+							"speaker": "boss",
+							"type": "speech",
+							"content": {
+								"korean": "…왜 서두르려고 해?",
+								"english": "...Why are you in such a hurry?",
+								"japanese": "…なぜ急ぐんだ？",
+								"chinese": "…为什么要这么着急？",
+								"french": "...Pourquoi te dépêches-tu ?",
+								"spanish": "...¿Por qué tienes tanta prisa?",
+								"vietnamese": "...Sao bạn lại vội vàng vậy?",
+								"thai": "...ทำไมถึงรีบร้อนนัก?",
+								"hindi": "...इतनी जल्दी क्यों है?"
+							},
+							"emotion": "base"
+						},
+						{
+							"speaker": "character_any",
+							"type": "speech",
+							"content": {
+								"korean": "너… 뭐야!",
+								"english": "You... what are you!",
+								"japanese": "お前…何者だ！",
+								"chinese": "你…是什么人！",
+								"french": "Toi... qu'est-ce que tu es !",
+								"spanish": "Tú... ¡qué eres!",
+								"vietnamese": "Ngươi... ngươi là ai!",
+								"thai": "แก... แกเป็นใคร!",
+								"hindi": "तुम... तुम क्या हो!"
+							},
+							"emotion": "angry"
+						},
+						{
+							"type": "speech",
+							"content": {
+								"korean": "이 모든 게… 네 짓이야?",
+								"english": "Is all of this... your doing?",
+								"japanese": "これ全部… お前の仕業か？",
+								"chinese": "这一切… 都是你干的？",
+								"french": "Tout ça… c'est ton œuvre ?",
+								"spanish": "Todo esto… ¿es obra tuya?",
+								"vietnamese": "Tất cả những chuyện này… là do ngươi làm?",
+								"thai": "ทั้งหมดนี่... ฝีมือแกเหรอ?",
+								"hindi": "यह सब... तुम्हारी करतूत है?"
+							},
+							"emotion": "angry",
+							"speaker": "selena"
+						},
+						{
+							"type": "speech",
+							"content": {
+								"korean": "나는 아무것도 강요하지 않았어. 그저… 편안하게 쉬게 해줬을 뿐.",
+								"english": "I forced nothing. I merely... let them rest comfortably.",
+								"japanese": "何も強制していない。ただ… 安らかに休ませてやっただけだ。",
+								"chinese": "我没有强迫任何事。只是… 让他们好好休息罢了。",
+								"french": "Je n'ai rien forcé. Je les ai juste… laissés se reposer tranquillement.",
+								"spanish": "No forcé nada. Solo… los dejé descansar en paz.",
+								"vietnamese": "Ta không ép buộc gì cả. Chỉ là… để họ nghỉ ngơi thoải mái thôi.",
+								"thai": "ฉันไม่ได้บังคับอะไรเลย แค่... ให้พวกเขาพักผ่อนสบายๆ เท่านั้นเอง",
+								"hindi": "मैंने कुछ भी मजबूर नहीं किया। बस... उन्हें आराम करने दिया।"
+							},
+							"emotion": "base",
+							"speaker": "boss"
+						},
+						{
+							"speaker": "character_any",
+							"type": "speech",
+							"content": {
+								"korean": "거짓말! 사람들이 돌아가지 못하고 있잖아!",
+								"english": "Lies! People can't go back!",
+								"japanese": "嘘だ！みんな戻れないじゃないか！",
+								"chinese": "骗人！人们回不去了！",
+								"french": "Mensonge ! Les gens ne peuvent pas rentrer !",
+								"spanish": "¡Mentira! ¡La gente no puede regresar!",
+								"vietnamese": "Dối trá! Mọi người không thể quay về được!",
+								"thai": "โกหก! ผู้คนกลับไปไม่ได้!",
+								"hindi": "झूठ! लोग वापस नहीं जा पा रहे!"
+							},
+							"emotion": "angry"
+						},
+						{
+							"speaker": "selena",
+							"type": "speech",
+							"content": {
+								"korean": "그들을 풀어줘!",
+								"english": "Release them!",
+								"japanese": "彼らを解放しろ！",
+								"chinese": "放了他们！",
+								"french": "Libère-les !",
+								"spanish": "¡Libéralos!",
+								"vietnamese": "Thả họ ra!",
+								"thai": "ปล่อยพวกเขา!",
+								"hindi": "उन्हें आज़ाद करो!"
+							},
+							"emotion": "angry"
+						}
+					],
+					"lose_dialogue": [
+						{
+							"speaker": "narrator",
+							"type": "speech",
+							"content": {
+								"korean": "모든 것이 멈췄다. 숲의 고요함이 탐험대를 집어삼켰다.",
+								"english": "Everything stopped. The forest's silence swallowed the expedition team.",
+								"japanese": "全てが止まった。森の静寂が探検隊を飲み込んだ。",
+								"chinese": "一切都停止了。森林的寂静吞噬了探险队。",
+								"french": "Tout s'arrêta. Le silence de la forêt engloutit l'équipe d'expédition.",
+								"spanish": "Todo se detuvo. El silencio del bosque engulló al equipo de expedición.",
+								"vietnamese": "Mọi thứ dừng lại. Sự tĩnh lặng của khu rừng nuốt chửng đội thám hiểm.",
+								"thai": "ทุกสิ่งหยุดนิ่ง ความเงียบสงบของป่ากลืนกินคณะสำรวจ",
+								"hindi": "सब कुछ रुक गया। जंगल की खामोशी ने अभियान दल को निगल लिया।"
+							},
+							"emotion": "base"
+						},
+						{
+							"type": "speech",
+							"content": {
+								"korean": "…서두르지 않아도 돼.",
+								"english": "...No need to rush.",
+								"japanese": "…急がなくてもいい。",
+								"chinese": "…不用急。",
+								"french": "...Inutile de se presser.",
+								"spanish": "...No hay prisa.",
+								"vietnamese": "...Không cần vội.",
+								"thai": "...ไม่ต้องรีบ",
+								"hindi": "...जल्दी करने की ज़रूरत नहीं है।"
+							},
+							"emotion": "base",
+							"speaker": "boss"
+						},
+						{
+							"speaker": "character_any",
+							"type": "speech",
+							"content": {
+								"korean": "아니… 서둘러야 해…!",
+								"english": "No... I must rush...!",
+								"japanese": "いや…急がなきゃ…！",
+								"chinese": "不…我得快点…！",
+								"french": "Non... Je dois me dépêcher...!",
+								"spanish": "No... ¡Debo darme prisa...!",
+								"vietnamese": "Không... phải vội...!",
+								"thai": "ไม่... ต้องรีบแล้ว...!",
+								"hindi": "नहीं... मुझे जल्दी करनी होगी...!"
+							},
+							"emotion": "angry"
+						},
+						{
+							"emotion": "angry",
+							"type": "speech",
+							"content": {
+								"korean": "정신 차려! 아직 끝나지 않았어!",
+								"english": "Snap out of it! It's not over yet!",
+								"japanese": "しっかりしろ！まだ終わってない！",
+								"chinese": "振作起来！还没结束！",
+								"french": "Reprends-toi ! Ce n'est pas encore fini !",
+								"spanish": "¡Despierta! ¡Todavía no ha terminado!",
+								"vietnamese": "Tỉnh táo lại! Vẫn chưa kết thúc đâu!",
+								"thai": "ได้สติหน่อย! มันยังไม่จบ!",
+								"hindi": "होश में आओ! यह अभी ख़त्म नहीं हुआ है!"
+							},
+							"speaker": "selena"
+						},
+						{
+							"type": "speech",
+							"content": {
+								"korean": "느릿한 숲의 침묵 속에, 탐험대의 의지만이 겨우 남아있었다.",
+								"english": "Amidst the tranquil forest's hush, only the faint will of the expedition team lingered.",
+								"japanese": "緩やかな森の沈黙の中、探検隊の意志だけがかろうじて残っていた。",
+								"chinese": "在寂静的森林深处，探险队的意志仅存一丝。",
+								"french": "Dans le silence de la forêt paresseuse, seule la volonté de l'équipe d'exploration subsistait à peine.",
+								"spanish": "En el lento silencio del bosque, solo la voluntad del equipo de expedición apenas perduraba.",
+								"vietnamese": "Trong sự im lặng chậm rãi của khu rừng, chỉ còn ý chí của đội thám hiểm là còn sót lại.",
+								"thai": "ในความเงียบงันของป่าอันเชื่องช้า เหลือเพียงเจตจำนงของคณะสำรวจที่รอดอยู่ได้",
+								"hindi": "धीमे जंगल की खामोशी में, अन्वेषण दल की इच्छाशक्ति बमुश्किल बची थी।"
+							},
+							"emotion": "base",
+							"speaker": "narrator"
+						}
+					],
+					"id": 15
+				}
+			],
+			"prologue": {
+				"korean": [
+					"숲은 더 깊어졌다. 발걸음은 점점 느려졌다.",
+					"사라진 사람들의 흔적. 이상하게도, 그들은 도망치지 않았다.",
+					"그저 앉아있던 자리. 아무것도 잃지 않은 듯 고요했다.",
+					"이 숲은, 무엇을 숨기고 있는 걸까."
+				],
+				"english": [
+					"The forest deepened. Our steps grew slower.",
+					"Traces of the vanished. Strangely, they didn't flee.",
+					"Just where they sat. Serene, as if nothing was lost.",
+					"What secrets does this forest hide?"
+				],
+				"japanese": [
+					"森はさらに深くなった。足取りは次第に遅くなった。",
+					"消えた人々の痕跡。奇妙なことに、彼らは逃げていなかった。",
+					"ただ座っていた場所。何も失っていないかのように静かだった。",
+					"この森は、何を隠しているのだろうか。"
+				],
+				"chinese": [
+					"森林更深了。脚步也越来越慢。",
+					"消失者的踪迹。奇怪的是，他们没有逃跑。",
+					"只是他们坐着的地方。一片寂静，仿佛什么都没失去。",
+					"这片森林，究竟隐藏着什么？"
+				],
+				"french": [
+					"La forêt s'épaississait. Nos pas ralentissaient.",
+					"Les traces des disparus. Étrangement, ils n'avaient pas fui.",
+					"Juste l'endroit où ils s'étaient assis. Paisible, comme si rien n'avait été perdu.",
+					"Que cache cette forêt ?"
+				],
+				"spanish": [
+					"El bosque se hizo más profundo. Nuestros pasos se volvieron más lentos.",
+					"Las huellas de los desaparecidos. Extrañamente, no huyeron.",
+					"Justo donde se sentaron. Sereno, como si nada se hubiera perdido.",
+					"¿Qué esconde este bosque?"
+				],
+				"vietnamese": [
+					"Rừng càng lúc càng sâu. Bước chân cũng dần chậm lại.",
+					"Dấu vết của những người biến mất. Lạ thay, họ không bỏ chạy.",
+					"Chỉ là nơi họ đã ngồi. Tĩnh lặng, như thể chưa mất mát gì.",
+					"Rừng này, đang giấu giếm điều gì?"
+				],
+				"thai": [
+					"ป่ายิ่งลึกเข้าไปอีก ก้าวเดินก็ยิ่งช้าลง",
+					"ร่องรอยของผู้หายสาบสูญ น่าแปลกที่พวกเขาไม่ได้หนีไปไหน",
+					"เพียงที่ที่พวกเขานั่งอยู่นิ่งๆ ราวกับไม่สูญเสียอะไรไปเลย",
+					"ป่าแห่งนี้กำลังซ่อนอะไรไว้กันแน่"
+				],
+				"hindi": [
+					"जंगल और गहरा होता गया। हमारे कदम धीरे-धीरे धीमे होते गए।",
+					"गायब हुए लोगों के निशान। अजीब बात है, वे भागे नहीं थे।",
+					"बस वे जहाँ बैठे थे। शांत, जैसे कुछ भी खोया नहीं था।",
+					"यह जंगल क्या छिपा रहा है?"
+				]
+			}
+		},
+		{
+			"scenario_id": "forest_sloth_03",
+			"order": 3,
+			"act": "rising",
+			"theme": "forest",
+			"actors": {
+				"reina": {
+					"id": "actor_05",
+					"name": {
+						"korean": "레이나",
+						"english": "Reina",
+						"japanese": "レイナ",
+						"chinese": "蕾娜",
+						"french": "Reina",
+						"spanish": "Reina",
+						"vietnamese": "Reina",
+						"thai": "เรน่า",
+						"hindi": "रेना"
+					},
+					"description": "",
+					"face_image_url": "https://imagedelivery.net/WTEqQNGFb-l-IHS6IGnzUQ/167347f3-8f37-41be-32a8-598d68e6ed00/public",
+					"battle_sprite_url": "https://imagedelivery.net/WTEqQNGFb-l-IHS6IGnzUQ/a04c3f19-b4e2-4317-ee5d-129742ac3800/public"
+				}
+			},
+			"boss": {
+				"pool_id": "pool_014"
+			},
+			"rooms": [
+				{
+					"id": 1,
+					"dialogue": [
+						{
+							"type": "speech",
+							"content": {
+								"korean": "숲은 탐험대의 발걸음을 더욱 무겁게 했다. 하지만 이상하게도, 불편하지 않았다.",
+								"english": "The forest made the expedition's steps heavier. Yet, strangely, it wasn't uncomfortable.",
+								"japanese": "森は探検隊の足取りをさらに重くした。しかし、不思議なことに、不快ではなかった。",
+								"chinese": "森林让探险队员的脚步愈发沉重。但奇怪的是，却并不感到不适。",
+								"french": "La forêt alourdissait les pas de l'expédition. Pourtant, étrangement, ce n'était pas désagréable.",
+								"spanish": "El bosque hacía los pasos de la expedición más pesados. Pero, extrañamente, no era incómodo.",
+								"vietnamese": "Rừng khiến bước chân đoàn thám hiểm nặng nề hơn. Thế nhưng, lạ thay, không hề khó chịu.",
+								"thai": "ป่าทำให้ก้าวเดินของคณะสำรวจหนักอึ้งขึ้น แต่แปลกที่กลับไม่รู้สึกอึดอัด",
+								"hindi": "जंगल ने अभियान दल के कदमों को और भारी कर दिया। फिर भी, अजीब तरह से, यह असहज नहीं था।"
+							},
+							"emotion": "base",
+							"speaker": "narrator"
+						},
+						{
+							"speaker": "character_any",
+							"emotion": "base",
+							"content": {
+								"korean": "벌써 이렇게 깊이 들어왔나? 시간이 어떻게 되는 거지.",
+								"english": "Have we already come this deep? What time is it?",
+								"japanese": "もうこんなに奥まで来たのか？今、何時だ？",
+								"chinese": "已经深入至此了吗？时间是几点？",
+								"french": "Sommes-nous déjà si loin ? Quelle heure est-il ?",
+								"spanish": "¿Ya hemos llegado tan profundo? ¿Qué hora es?",
+								"vietnamese": "Đã vào sâu thế này rồi sao? Bây giờ là mấy giờ rồi?",
+								"thai": "เข้ามาลึกขนาดนี้แล้วเหรอ? นี่มันกี่โมงแล้วเนี่ย",
+								"hindi": "क्या हम इतनी गहराई तक आ गए हैं? समय क्या हो रहा है।"
+							},
+							"type": "speech"
+						},
+						{
+							"speaker": "character_1",
+							"emotion": "base",
+							"content": {
+								"korean": "괜찮아. 서두를 필요 없어.",
+								"english": "It's okay. No need to rush.",
+								"japanese": "大丈夫。急ぐ必要はない。",
+								"chinese": "没关系。不用着急。",
+								"french": "Ça va. Pas besoin de se presser.",
+								"spanish": "Está bien. No hay prisa.",
+								"vietnamese": "Không sao đâu. Không cần phải vội.",
+								"thai": "ไม่เป็นไร ไม่ต้องรีบ",
+								"hindi": "ठीक है। कोई जल्दी नहीं है।"
+							},
+							"type": "speech"
+						},
+						{
+							"action": "enter",
+							"type": "direction",
+							"speaker": "reina",
+							"duration_ms": 500,
+							"spot": [
+								4,
+								3
+							]
+						},
+						{
+							"speaker": "reina",
+							"emotion": "base",
+							"content": {
+								"korean": "여기에 오셨군요.",
+								"english": "So you've come here.",
+								"japanese": "ここに来られたのですね。",
+								"chinese": "您来这里了。",
+								"french": "Vous êtes venu ici.",
+								"spanish": "Así que ha venido aquí.",
+								"vietnamese": "Anh đã đến đây.",
+								"thai": "ท่านมาที่นี่แล้ว",
+								"hindi": "तो आप यहाँ आ गए।"
+							},
+							"type": "speech"
+						},
+						{
+							"speaker": "reina",
+							"emotion": "sad",
+							"type": "speech",
+							"content": {
+								"korean": "저도 숲에 들어온 이후로… 뭔가 잊어버린 것 같아요.",
+								"english": "Ever since I entered the forest... I feel like I've forgotten something.",
+								"japanese": "私も森に入ってから…何かを忘れてしまったようです。",
+								"chinese": "我也自从进入森林后……好像忘记了什么。",
+								"french": "Moi aussi, depuis que je suis entré dans la forêt... j'ai l'impression d'avoir oublié quelque chose.",
+								"spanish": "Yo también, desde que entré al bosque... siento que he olvidado algo.",
+								"vietnamese": "Kể từ khi vào rừng... tôi cũng cảm thấy mình đã quên mất điều gì đó.",
+								"thai": "ตั้งแต่ผมเข้ามาในป่า… ผมก็รู้สึกเหมือนลืมอะไรไปบางอย่าง",
+								"hindi": "जंगल में आने के बाद से… मुझे लगता है कि मैं कुछ भूल गया हूँ।"
+							}
+						}
+					]
+				},
+				{
+					"id": 3,
+					"dialogue": [
+						{
+							"content": {
+								"korean": "숲 한가운데, 실종자들이 모여있었다. 모두 편안한 얼굴이었다.",
+								"english": "In the middle of the forest, the missing were gathered. All wore serene expressions.",
+								"japanese": "森の真ん中には、行方不明者たちが集まっていた。皆、穏やかな顔をしていた。",
+								"chinese": "森林中央，失踪者们聚集在一起。所有人都面带安详。",
+								"french": "Au milieu de la forêt, les disparus étaient rassemblés. Tous affichaient des visages sereins.",
+								"spanish": "En medio del bosque, los desaparecidos estaban reunidos. Todos tenían rostros serenos.",
+								"vietnamese": "Giữa rừng sâu, những người mất tích đang tụ tập. Tất cả đều với vẻ mặt an nhiên.",
+								"thai": "กลางป่า ผู้สูญหายรวมตัวกัน ทุกคนมีสีหน้าผ่อนคลาย",
+								"hindi": "जंगल के बीचों-बीच, लापता लोग इकट्ठा थे। सभी के चेहरे पर शांति थी।"
+							},
+							"type": "speech",
+							"speaker": "narrator",
+							"emotion": "base"
+						},
+						{
+							"emotion": "base",
+							"speaker": "character_any",
+							"type": "speech",
+							"content": {
+								"korean": "…다들 여기 있었어?",
+								"english": "...Everyone was here?",
+								"japanese": "…みんな、ここにいたの？",
+								"chinese": "……大家都在这儿吗？",
+								"french": "...Tout le monde était ici ?",
+								"spanish": "¿...Todos estaban aquí?",
+								"vietnamese": "...Mọi người đều ở đây à?",
+								"thai": "...ทุกคนอยู่ที่นี่เหรอ?",
+								"hindi": "...सब यहीं थे?"
+							}
+						},
+						{
+							"speaker": "character_2",
+							"emotion": "happy",
+							"type": "speech",
+							"content": {
+								"korean": "여기, 좋아.",
+								"english": "It's nice here.",
+								"japanese": "ここ、いいな。",
+								"chinese": "这里，真好。",
+								"french": "Ici, c'est bien.",
+								"spanish": "Aquí, bien.",
+								"vietnamese": "Ở đây, tốt.",
+								"thai": "ที่นี่ดีจัง",
+								"hindi": "यहां, अच्छा है।"
+							}
+						},
+						{
+							"content": {
+								"korean": "돌아가고 싶지 않아.",
+								"english": "I don't want to go back.",
+								"japanese": "帰りたくない。",
+								"chinese": "我不想回去。",
+								"french": "Je ne veux pas rentrer.",
+								"spanish": "No quiero volver.",
+								"vietnamese": "Tôi không muốn quay về.",
+								"thai": "ฉันไม่อยากกลับไป",
+								"hindi": "मैं वापस नहीं जाना चाहता।"
+							},
+							"type": "speech",
+							"speaker": "character_3",
+							"emotion": "base"
+						},
+						{
+							"speaker": "character_any",
+							"emotion": "angry",
+							"content": {
+								"korean": "정신 차려! 집으로 가야지!",
+								"english": "Snap out of it! We need to go home!",
+								"japanese": "しっかりして！家に帰らないと！",
+								"chinese": "清醒一点！我们该回家了！",
+								"french": "Reprends-toi ! On doit rentrer !",
+								"spanish": "¡Despierta! ¡Tenemos que ir a casa!",
+								"vietnamese": "Tỉnh táo lại! Chúng ta phải về nhà!",
+								"thai": "ได้สติหน่อย! เราต้องกลับบ้าน!",
+								"hindi": "होश में आओ! हमें घर जाना है!"
+							},
+							"type": "speech"
+						},
+						{
+							"spot": [
+								2,
+								3
+							],
+							"duration_ms": 500,
+							"action": "enter",
+							"type": "direction",
+							"speaker": "reina"
+						},
+						{
+							"emotion": "sad",
+							"speaker": "reina",
+							"content": {
+								"korean": "…정말로 돌아가야 할까요?",
+								"english": "...Do we really have to go back?",
+								"japanese": "…本当に帰らないといけないの？",
+								"chinese": "……我们真的要回去吗？",
+								"french": "...Faut-il vraiment rentrer ?",
+								"spanish": "¿...Realmente tenemos que volver?",
+								"vietnamese": "...Chúng ta có thực sự phải quay về không?",
+								"thai": "...เราต้องกลับไปจริงๆ เหรอ?",
+								"hindi": "...क्या हमें सच में वापस जाना होगा?"
+							},
+							"type": "speech"
+						}
+					]
+				},
+				{
+					"id": 5,
+					"dialogue": [
+						{
+							"spot": [
+								3,
+								3
+							],
+							"duration_ms": 500,
+							"action": "enter",
+							"type": "direction",
+							"speaker": "reina"
+						},
+						{
+							"type": "speech",
+							"content": {
+								"korean": "이 숲은… 모든 걸 잊게 해줘요.",
+								"english": "This forest... makes me forget everything.",
+								"japanese": "この森は…全てを忘れさせてくれる。",
+								"chinese": "这片森林……让我忘却一切。",
+								"french": "Cette forêt... me fait tout oublier.",
+								"spanish": "Este bosque... me hace olvidar todo.",
+								"vietnamese": "Khu rừng này... khiến tôi quên đi mọi thứ.",
+								"thai": "ป่านี้... ทำให้ฉันลืมทุกสิ่งไปเลย",
+								"hindi": "यह जंगल... मुझे सब कुछ भुला देता है।"
+							},
+							"speaker": "reina",
+							"emotion": "base"
+						},
+						{
+							"content": {
+								"korean": "걱정할 것도, 서두를 필요도 없죠.",
+								"english": "No worries, no need to rush.",
+								"japanese": "心配することも、急ぐ必要もない。",
+								"chinese": "没什么好担心的，也没必要赶时间。",
+								"french": "Pas de soucis, pas besoin de se presser.",
+								"spanish": "No hay nada que preocupar, ni prisa.",
+								"vietnamese": "Không cần lo lắng, không cần vội vã.",
+								"thai": "ไม่ต้องกังวล ไม่ต้องรีบร้อน",
+								"hindi": "कोई चिंता नहीं, कोई जल्दी नहीं।"
+							},
+							"type": "speech",
+							"emotion": "happy",
+							"speaker": "reina"
+						},
+						{
+							"content": {
+								"korean": "레이나, 무슨 소리야?",
+								"english": "Reina, what are you saying?",
+								"japanese": "レイナ、何言ってるの？",
+								"chinese": "蕾娜，你在说什么？",
+								"french": "Reina, qu'est-ce que tu racontes ?",
+								"spanish": "Reina, ¿qué dices?",
+								"vietnamese": "Reina, cậu đang nói gì vậy?",
+								"thai": "เรนะ เธอพูดอะไรน่ะ?",
+								"hindi": "रीना, तुम क्या कह रही हो?"
+							},
+							"type": "speech",
+							"emotion": "base",
+							"speaker": "character_any"
+						},
+						{
+							"speaker": "character_1",
+							"emotion": "angry",
+							"content": {
+								"korean": "우린 사람들을 구하러 온 거라고!",
+								"english": "We came here to save people!",
+								"japanese": "私たちは人々を助けに来たんだろ！",
+								"chinese": "我们是来救人的！",
+								"french": "On est venus pour sauver des gens !",
+								"spanish": "¡Vinimos a salvar gente!",
+								"vietnamese": "Chúng ta đến đây để cứu người mà!",
+								"thai": "เรามาที่นี่เพื่อช่วยผู้คนนะ!",
+								"hindi": "हम लोगों को बचाने आए हैं!"
+							},
+							"type": "speech"
+						},
+						{
+							"speaker": "reina",
+							"emotion": "sad",
+							"type": "speech",
+							"content": {
+								"korean": "하지만, 이대로 있어도 괜찮지 않을까요? 딱히… 나쁜 것도 없잖아요.",
+								"english": "But, wouldn't it be okay to stay like this? There's... nothing particularly bad, right?",
+								"japanese": "でも、このままでいてもいいんじゃない？別に…悪いこともないし。",
+								"chinese": "但是，就这样待着不好吗？反正……也没什么坏处。",
+								"french": "Mais, ne serait-ce pas bien de rester comme ça ? Il n'y a... rien de mal, n'est-ce pas ?",
+								"spanish": "Pero, ¿no estaría bien quedarse así? No hay... nada malo en particular, ¿verdad?",
+								"vietnamese": "Nhưng, cứ ở yên thế này có ổn không? Đâu có... gì xấu đâu chứ.",
+								"thai": "แต่ว่าอยู่แบบนี้ก็ไม่เป็นไรไม่ใช่เหรอ? ก็ไม่ได้มี... เรื่องแย่อะไรนี่นา",
+								"hindi": "लेकिन, क्या ऐसे रहना ठीक नहीं होगा? वैसे भी... कुछ बुरा तो नहीं है।"
+							}
+						},
+						{
+							"content": {
+								"korean": "…뭐가 나쁘다는 거지?",
+								"english": "...What's wrong with that?",
+								"japanese": "「…何が悪いの？」",
+								"chinese": "“……这有什么不好？”",
+								"french": "...Qu'y a-t-il de mal à ça ?",
+								"spanish": "...¿Qué tiene eso de malo?",
+								"vietnamese": "...Có gì sai đâu?",
+								"thai": "...แล้วมันไม่ดียังไง?",
+								"hindi": "...इसमें क्या बुराई है?"
+							},
+							"type": "speech",
+							"speaker": "character_any",
+							"emotion": "base"
+						}
+					]
+				},
+				{
+					"dialogue": [
+						{
+							"content": {
+								"korean": "점점 더 깊은 곳으로. 시간마저 멈춘 듯했다.",
+								"english": "Deeper and deeper. Time itself seemed to stop.",
+								"japanese": "「ますます深くへ。時間さえ止まったようだった。」",
+								"chinese": "“越陷越深。时间仿佛都静止了。”",
+								"french": "De plus en plus profond. Le temps lui-même semblait s'être arrêté.",
+								"spanish": "Cada vez más profundo. El tiempo mismo parecía haberse detenido.",
+								"vietnamese": "Càng lúc càng sâu. Thời gian dường như cũng ngừng lại.",
+								"thai": "ลึกเข้าไป ลึกเข้าไปอีก. ราวกับว่าเวลาก็หยุดนิ่ง.",
+								"hindi": "गहराई में, और गहराई में। मानो समय भी थम गया हो।"
+							},
+							"type": "speech",
+							"speaker": "narrator",
+							"emotion": "base"
+						},
+						{
+							"type": "speech",
+							"content": {
+								"korean": "…우리, 얼마나 여기 있었지?",
+								"english": "...How long have we been here?",
+								"japanese": "「…私たち、どれくらいここにいた？」",
+								"chinese": "“……我们在这里多久了？”",
+								"french": "...Depuis combien de temps sommes-nous ici ?",
+								"spanish": "...¿Cuánto tiempo llevamos aquí?",
+								"vietnamese": "...Chúng ta đã ở đây bao lâu rồi?",
+								"thai": "...พวกเราอยู่ที่นี่มานานเท่าไหร่แล้วนะ?",
+								"hindi": "...हम यहाँ कब से हैं?"
+							},
+							"speaker": "character_any",
+							"emotion": "base"
+						},
+						{
+							"content": {
+								"korean": "모르겠어. 배고프지도 않고, 피곤하지도 않아.",
+								"english": "I don't know. I'm not hungry, nor tired.",
+								"japanese": "「分からない。お腹も空かないし、疲れてもいない。」",
+								"chinese": "“不知道。不饿也不累。”",
+								"french": "Je ne sais pas. Je n'ai pas faim, et je ne suis pas fatigué.",
+								"spanish": "No lo sé. No tengo hambre ni estoy cansado.",
+								"vietnamese": "Không biết nữa. Không đói, cũng không mệt.",
+								"thai": "ไม่รู้สิ. ไม่หิวเลย แถมไม่รู้สึกเหนื่อยด้วย.",
+								"hindi": "पता नहीं। न भूख लगी है, न थकान।"
+							},
+							"type": "speech",
+							"emotion": "base",
+							"speaker": "character_2"
+						},
+						{
+							"action": "enter",
+							"type": "direction",
+							"speaker": "reina",
+							"duration_ms": 500,
+							"spot": [
+								3,
+								3
+							]
+						},
+						{
+							"content": {
+								"korean": "…정말 이상하죠? 하지만 그래서 더 좋아요.",
+								"english": "...It's really strange, isn't it? But that's why I like it even more.",
+								"japanese": "「…本当に変ですよね？でも、だからこそもっと好きです。」",
+								"chinese": "“……真的很奇怪，对吧？但正因为如此，我更喜欢这里。”",
+								"french": "...C'est vraiment étrange, n'est-ce pas ? Mais c'est pour ça que j'aime encore plus.",
+								"spanish": "...Es realmente extraño, ¿verdad? Pero por eso me gusta aún más.",
+								"vietnamese": "...Thật là kỳ lạ, phải không? Nhưng chính vì thế mà tôi càng thích.",
+								"thai": "...มันแปลกจริงๆ ใช่ไหม? แต่เพราะอย่างนั้นฉันเลยยิ่งชอบ.",
+								"hindi": "...यह सच में अजीब है, है ना? पर इसीलिए मुझे यह और भी अच्छा लगता है।"
+							},
+							"type": "speech",
+							"emotion": "happy",
+							"speaker": "reina"
+						},
+						{
+							"content": {
+								"korean": "이대로 영원히… 여기 머물러도 되지 않을까요?",
+								"english": "Couldn't we just stay here forever... like this?",
+								"japanese": "「このまま永遠に…ここに留まってもいいんじゃない？」",
+								"chinese": "“就这样永远……留在这里，不好吗？”",
+								"french": "Ne pourrions-nous pas rester ici pour toujours... comme ça ?",
+								"spanish": "¿No podríamos quedarnos aquí para siempre... así?",
+								"vietnamese": "Cứ thế này mãi mãi... chúng ta ở lại đây cũng được mà?",
+								"thai": "แบบนี้ตลอดไป... เราอยู่ที่นี่ตลอดไปได้ไหมนะ?",
+								"hindi": "क्या हम ऐसे ही हमेशा... यहीं नहीं रह सकते?"
+							},
+							"type": "speech",
+							"speaker": "reina",
+							"emotion": "base"
+						},
+						{
+							"emotion": "angry",
+							"speaker": "character_any",
+							"content": {
+								"korean": "안 돼! 우린 돌아가야 해!",
+								"english": "No! We have to go back!",
+								"japanese": "「ダメだ！私たちは戻らないと！」",
+								"chinese": "“不行！我们必须回去！”",
+								"french": "Non ! Nous devons rentrer !",
+								"spanish": "¡No! ¡Tenemos que volver!",
+								"vietnamese": "Không! Chúng ta phải quay về!",
+								"thai": "ไม่นะ! เราต้องกลับไป!",
+								"hindi": "नहीं! हमें वापस जाना होगा!"
+							},
+							"type": "speech"
+						}
+					],
+					"id": 9
+				},
+				{
+					"dialogue": [
+						{
+							"emotion": "base",
+							"speaker": "narrator",
+							"type": "speech",
+							"content": {
+								"korean": "고요함 속, 숲의 심장이 모습을 드러냈다.",
+								"english": "In the silence, the forest's heart revealed itself.",
+								"japanese": "「静寂の中、森の心臓が姿を現した。」",
+								"chinese": "“在宁静中，森林之心显露了真容。”",
+								"french": "Dans le silence, le cœur de la forêt se révéla.",
+								"spanish": "En el silencio, el corazón del bosque se reveló.",
+								"vietnamese": "Trong tĩnh lặng, trái tim của rừng đã lộ diện.",
+								"thai": "ในความเงียบสงบ หัวใจของป่าได้ปรากฏขึ้น.",
+								"hindi": "खामोशी में, जंगल का दिल सामने आया।"
+							}
+						},
+						{
+							"emotion": "base",
+							"speaker": "boss",
+							"type": "speech",
+							"content": {
+								"korean": "…여기 좀 더 있어도 되지 않나.",
+								"english": "...Couldn't we stay here a bit longer?",
+								"japanese": "「…もう少しここにいてもいいんじゃないか。」",
+								"chinese": "“……我们不能再多待一会儿吗？”",
+								"french": "...Ne pourrions-nous pas rester ici un peu plus longtemps ?",
+								"spanish": "...¿No podríamos quedarnos aquí un poco más?",
+								"vietnamese": "...Ở đây thêm chút nữa cũng được mà.",
+								"thai": "...เราอยู่ที่นี่ต่ออีกหน่อยไม่ได้เหรอ?",
+								"hindi": "...क्या हम यहाँ थोड़ी देर और नहीं रह सकते?"
+							}
+						},
+						{
+							"speaker": "boss",
+							"emotion": "base",
+							"type": "speech",
+							"content": {
+								"korean": "서두를 필요 없어. 아무것도 잃지 않으니까.",
+								"english": "No need to rush. We won't lose anything.",
+								"japanese": "「急ぐ必要はない。何も失うものはないから。」",
+								"chinese": "“不必着急。我们不会失去任何东西。”",
+								"french": "Pas besoin de se presser. Nous ne perdrons rien.",
+								"spanish": "No hay prisa. No perderemos nada.",
+								"vietnamese": "Không cần vội. Chúng ta sẽ không mất gì cả.",
+								"thai": "ไม่จำเป็นต้องรีบ. เราจะไม่เสียอะไรไป.",
+								"hindi": "जल्दी करने की ज़रूरत नहीं। हम कुछ भी नहीं खोएंगे।"
+							}
+						},
+						{
+							"content": {
+								"korean": "웃기지 마! 우린 돌아갈 거야!",
+								"english": "Don't be ridiculous! We're going back!",
+								"japanese": "ふざけるな！俺たちは帰るんだ！",
+								"chinese": "别开玩笑了！我们要回去！",
+								"french": "C'est ridicule ! Nous allons rentrer !",
+								"spanish": "¡No es gracioso! ¡Volveremos!",
+								"vietnamese": "Đừng đùa nữa! Chúng tôi sẽ quay về!",
+								"thai": "อย่ามาตลกนะ! เราจะกลับไป!",
+								"hindi": "मज़ाक मत करो! हम वापस जाएंगे!"
+							},
+							"type": "speech",
+							"speaker": "character_any",
+							"emotion": "angry"
+						},
+						{
+							"action": "enter",
+							"type": "direction",
+							"speaker": "reina",
+							"duration_ms": 500,
+							"spot": [
+								2,
+								3
+							]
+						},
+						{
+							"emotion": "sad",
+							"speaker": "reina",
+							"content": {
+								"korean": "…아니, 돌아갈래요. 기다리는 사람이 있어요.",
+								"english": "...No, I'll go back. Someone is waiting.",
+								"japanese": "…いいえ、帰ります。待っている人がいますから。",
+								"chinese": "…不，我要回去。有人在等我。",
+								"french": "...Non, je vais rentrer. Quelqu'un m'attend.",
+								"spanish": "...No, regresaré. Hay alguien esperándome.",
+								"vietnamese": "...Không, tôi sẽ quay về. Có người đang đợi tôi.",
+								"thai": "...ไม่สิ, ฉันจะกลับไป. มีคนกำลังรออยู่.",
+								"hindi": "...नहीं, मैं वापस जाऊँगा। कोई मेरा इंतज़ार कर रहा है।"
+							},
+							"type": "speech"
+						},
+						{
+							"speaker": "reina",
+							"type": "direction",
+							"action": "exit",
+							"duration_ms": 400
+						},
+						{
+							"type": "speech",
+							"content": {
+								"korean": "널 쓰러뜨리고 모두를 데려갈 거야!",
+								"english": "I'll defeat you and take everyone with me!",
+								"japanese": "お前を倒して、皆を連れていくぞ！",
+								"chinese": "我会打败你，然后把所有人都带走！",
+								"french": "Je vais te vaincre et emmener tout le monde !",
+								"spanish": "¡Te derribaré y me llevaré a todos!",
+								"vietnamese": "Tôi sẽ đánh bại ngươi và đưa mọi người đi!",
+								"thai": "ฉันจะโค่นนายลงแล้วพาพวกเราทุกคนไป!",
+								"hindi": "मैं तुम्हें हरा कर सबको ले जाऊँगा!"
+							},
+							"speaker": "character_any",
+							"emotion": "angry"
+						}
+					],
+					"win_dialogue": [
+						{
+							"type": "speech",
+							"content": {
+								"korean": "…결국, 가는구나.",
+								"english": "...So you're leaving, after all.",
+								"japanese": "…結局、行くんだな。",
+								"chinese": "…终究，还是要走啊。",
+								"french": "...Tu pars, après tout.",
+								"spanish": "...Así que te vas, después de todo.",
+								"vietnamese": "...Cuối cùng thì, ngươi cũng đi thôi.",
+								"thai": "...สุดท้ายก็ไปสินะ.",
+								"hindi": "...आखिरकार, तुम जा रहे हो।"
+							},
+							"emotion": "sad",
+							"speaker": "boss"
+						},
+						{
+							"type": "speech",
+							"content": {
+								"korean": "하지만… 정말로, 가고 싶어?",
+								"english": "But... do you really want to go?",
+								"japanese": "だけど…本当に、行きたいのか？",
+								"chinese": "但是…你真的想走吗？",
+								"french": "Mais... veux-tu vraiment partir ?",
+								"spanish": "Pero... ¿realmente quieres irte?",
+								"vietnamese": "Nhưng... ngươi thật sự muốn đi sao?",
+								"thai": "แต่ว่า... อยากไปจริงๆ เหรอ?",
+								"hindi": "लेकिन... क्या तुम सच में जाना चाहते हो?"
+							},
+							"speaker": "boss",
+							"emotion": "base"
+						},
+						{
+							"content": {
+								"korean": "…무슨 소리야.",
+								"english": "...What do you mean?",
+								"japanese": "…何を言ってるんだ。",
+								"chinese": "…你在说什么。",
+								"french": "...Que dis-tu ?",
+								"spanish": "...¿Qué estás diciendo?",
+								"vietnamese": "...Ngươi đang nói gì vậy.",
+								"thai": "...หมายความว่าไง.",
+								"hindi": "...तुम्हारा क्या मतलब है।"
+							},
+							"type": "speech",
+							"speaker": "character_any",
+							"emotion": "base"
+						},
+						{
+							"type": "speech",
+							"content": {
+								"korean": "숲의 고요함이 깨지고, 작은 물결이 일었다. 하지만 여전히 — 무언가 남아있는 듯했다.",
+								"english": "The forest's tranquility was broken, and small ripples spread. But still — something seemed to remain.",
+								"japanese": "森の静寂が破られ、さざ波が立った。しかし、それでも — 何かが残っているようだった。",
+								"chinese": "森林的宁静被打破，泛起了微小的涟漪。但似乎 — 仍有什么留了下来。",
+								"french": "La tranquillité de la forêt fut brisée, et de petites ondulations apparurent. Mais toujours — quelque chose semblait subsister.",
+								"spanish": "La tranquilidad del bosque se rompió, y pequeñas ondas se extendieron. Pero aun así — algo parecía permanecer.",
+								"vietnamese": "Sự tĩnh lặng của khu rừng bị phá vỡ, và những gợn sóng nhỏ nổi lên. Nhưng dường như — vẫn còn điều gì đó đọng lại.",
+								"thai": "ความสงบของป่าถูกทำลายลง เกิดระลอกคลื่นเล็กๆ ขึ้น แต่ก็ยัง — ดูเหมือนมีบางสิ่งหลงเหลืออยู่.",
+								"hindi": "जंगल की खामोशी टूटी, और छोटी लहरें उठीं। लेकिन फिर भी — कुछ बाकी रह गया था।"
+							},
+							"emotion": "base",
+							"speaker": "narrator"
+						}
+					],
+					"id": 15,
+					"lose_dialogue": [
+						{
+							"content": {
+								"korean": "…봐. 결국, 여기 남게 될 거야.",
+								"english": "...See? In the end, you'll stay here.",
+								"japanese": "…見ろ。結局、お前はここに残るんだ。",
+								"chinese": "…看吧。最终，你还是会留在这里。",
+								"french": "...Vois. Au final, tu resteras ici.",
+								"spanish": "...Mira. Al final, te quedarás aquí.",
+								"vietnamese": "...Thấy chưa. Cuối cùng, ngươi cũng sẽ ở lại đây thôi.",
+								"thai": "...เห็นไหม? สุดท้ายแล้ว นายก็จะอยู่ที่นี่.",
+								"hindi": "...देखो। आखिरकार, तुम यहीं रहोगे।"
+							},
+							"type": "speech",
+							"speaker": "boss",
+							"emotion": "base"
+						},
+						{
+							"speaker": "character_any",
+							"emotion": "angry",
+							"type": "speech",
+							"content": {
+								"korean": "…아직, 끝나지 않았어.",
+								"english": "...It's not over yet.",
+								"japanese": "…まだ、終わってない。",
+								"chinese": "…还没，结束。",
+								"french": "...Ce n'est pas encore fini.",
+								"spanish": "...Aún no ha terminado.",
+								"vietnamese": "...Vẫn chưa, kết thúc.",
+								"thai": "...ยัง, ไม่จบ.",
+								"hindi": "...अभी, खत्म नहीं हुआ है।"
+							}
+						},
+						{
+							"emotion": "angry",
+							"speaker": "character_any",
+							"type": "speech",
+							"content": {
+								"korean": "돌아갈 거야. 반드시.",
+								"english": "I will return. Definitely.",
+								"japanese": "帰るんだ。必ず。",
+								"chinese": "我会回去的。一定。",
+								"french": "Je vais rentrer. C'est certain.",
+								"spanish": "Volveré. Sin falta.",
+								"vietnamese": "Tôi sẽ quay về. Bằng mọi giá.",
+								"thai": "ฉันจะกลับไป. อย่างแน่นอน.",
+								"hindi": "मैं वापस जाऊँगा। ज़रूर।"
+							}
+						}
+					]
+				}
+			],
+			"prologue": {
+				"korean": [
+					"숲은 더욱 깊어졌다. 시간의 흐름조차 희미해지는 곳.",
+					"실종자들을 찾았지만, 그들은 돌아가려 하지 않았다.",
+					"그리고 — 낯선 속삭임이 탐험대의 마음을 흔들기 시작했다.",
+					"정말, 여기 좀 더 있어도 괜찮지 않을까?"
+				],
+				"english": [
+					"The forest deepened. A place where even the flow of time grew faint.",
+					"The missing were found, but they had no desire to return.",
+					"And then—unfamiliar whispers began to sway the expedition's hearts.",
+					"Wouldn't it really be alright to stay here a little longer?"
+				],
+				"japanese": [
+					"森はさらに深くなった。時の流れさえも薄れる場所。",
+					"行方不明者たちを見つけたが、彼らは戻ろうとしなかった。",
+					"そして――見知らぬ囁きが探検隊の心を揺らし始めた。",
+					"本当に、もう少しここにいてもいいんじゃないか？"
+				],
+				"chinese": [
+					"森林愈发深邃。一个连时间流逝都变得模糊的地方。",
+					"找到了失踪者，但他们不愿回去。",
+					"接着——陌生的低语开始动摇探险队员的心。",
+					"真的，再多待一会儿也没关系吧？"
+				],
+				"french": [
+					"La forêt s'épaississait. Un lieu où même le cours du temps s'estompait.",
+					"Les disparus furent retrouvés, mais ils n'avaient aucune envie de revenir.",
+					"Puis – d'étranges murmures commencèrent à ébranler les cœurs de l'expédition.",
+					"Vraiment, ne serait-il pas acceptable de rester ici un peu plus longtemps ?"
+				],
+				"spanish": [
+					"El bosque se hizo más profundo. Un lugar donde el paso del tiempo se desdibujaba.",
+					"Se encontró a los desaparecidos, pero no querían regresar.",
+					"Y entonces, susurros extraños comenzaron a agitar los corazones de la expedición.",
+					"¿En serio, no estaría bien quedarse aquí un poco más?"
+				],
+				"vietnamese": [
+					"Rừng càng thêm sâu thẳm. Nơi dòng chảy thời gian cũng trở nên mờ nhạt.",
+					"Tìm thấy những người mất tích, nhưng họ không muốn trở về.",
+					"Và rồi — những lời thì thầm xa lạ bắt đầu lay động trái tim đội thám hiểm.",
+					"Thật sự, ở lại đây thêm một chút nữa cũng không sao chứ?"
+				],
+				"thai": [
+					"ป่าลึกเข้าไปอีก ที่ที่แม้แต่การไหลของเวลาก็เลือนราง",
+					"พบผู้สูญหายแล้ว แต่พวกเขาไม่ต้องการกลับไป",
+					"และแล้ว — เสียงกระซิบแปลกๆ ก็เริ่มสั่นคลอนจิตใจของคณะสำรวจ",
+					"จริงๆ แล้ว อยู่ที่นี่อีกหน่อยก็ไม่เป็นไรหรอกมั้ง?"
+				],
+				"hindi": [
+					"जंगल और गहरा हो गया। एक ऐसी जगह जहाँ समय का प्रवाह भी धुंधला पड़ गया।",
+					"लापता लोग मिल गए थे, लेकिन वे वापस लौटना नहीं चाहते थे।",
+					"और फिर—अपरिचित फुसफुसाहटें अभियान दल के दिलों को हिलाने लगीं।",
+					"सच में, क्या यहाँ थोड़ी देर और रहना ठीक नहीं रहेगा?"
+				]
+			}
+		},
+		{
+			"scenario_id": "forest_sloth_04",
+			"order": 4,
+			"act": "rising",
+			"theme": "forest",
+			"actors": {
+				"lyra_meadowsong": {
+					"id": "mon_c57af7f0-7c43-4883-8bbb-b99a24a34620",
+					"name": {
+						"korean": "리라",
+						"english": "Lyra",
+						"japanese": "リラ",
+						"chinese": "莉拉",
+						"french": "Lyra",
+						"spanish": "Lyra",
+						"vietnamese": "Lyra",
+						"thai": "ไลรา",
+						"hindi": "लायरा"
+					},
+					"description": "A Forest Fairy with green hair",
+					"face_image_url": "https://imagedelivery.net/WTEqQNGFb-l-IHS6IGnzUQ/c4d279a3-d82c-4045-36cc-62cc22e47f00/public",
+					"battle_sprite_url": "https://imagedelivery.net/WTEqQNGFb-l-IHS6IGnzUQ/204d63b0-dcf0-437a-0622-ab32c3fe8900/public"
+				}
+			},
+			"boss": {
+				"pool_id": "pool_012"
+			},
+			"prologue": {
+				"korean": [
+					"숲은 시간을 삼켰다.",
+					"들어오는 모든 것을 느리게 만들었다.",
+					"그러나 그들은 아직 몰랐다.",
+					"여기가 얼마나 오래된 함정인지.",
+					"그리고 — 누가 시간을 붙잡고 있는지."
+				],
+				"english": [
+					"The forest swallowed time.",
+					"It slowed down everything that entered.",
+					"But they didn't know yet.",
+					"How ancient a trap this place was.",
+					"And — who was holding time."
+				],
+				"japanese": [
+					"森は時間を飲み込んだ。",
+					"そこに入り込む全てを遅くした。",
+					"しかし、彼らはまだ知らなかった。",
+					"ここがどれほど古い罠であるか。",
+					"そして――誰が時間を掴んでいるのか。"
+				],
+				"chinese": [
+					"森林吞噬了时间。",
+					"它让进入的一切都变得缓慢。",
+					"但他们还不知道。",
+					"这里是一个多么古老的陷阱。",
+					"以及——谁在掌控时间。"
+				],
+				"french": [
+					"La forêt a englouti le temps.",
+					"Il ralentissait tout ce qui y pénétrait.",
+					"Mais ils ne le savaient pas encore.",
+					"À quel point cet endroit était un piège ancien.",
+					"Et — qui retenait le temps."
+				],
+				"spanish": [
+					"El bosque devoró el tiempo.",
+					"Hacía que todo lo que entraba se ralentizara.",
+					"Pero aún no lo sabían.",
+					"Cuán antigua era esta trampa.",
+					"Y — quién estaba reteniendo el tiempo."
+				],
+				"vietnamese": [
+					"Rừng đã nuốt chửng thời gian.",
+					"Nó làm chậm lại mọi thứ bước vào.",
+					"Nhưng họ vẫn chưa biết.",
+					"Nơi đây là một cái bẫy cổ xưa đến nhường nào.",
+					"Và — ai đang giữ thời gian."
+				],
+				"thai": [
+					"ป่าได้กลืนกินกาลเวลา",
+					"มันทำให้ทุกสิ่งที่เข้ามาเชื่องช้าลง",
+					"แต่พวกเขายังไม่รู้",
+					"ว่าที่นี่เป็นกับดักที่เก่าแก่เพียงใด",
+					"และ — ใครเป็นผู้กุมกาลเวลา"
+				],
+				"hindi": [
+					"जंगल ने समय को निगल लिया।",
+					"इसने अंदर आने वाली हर चीज़ को धीमा कर दिया।",
+					"लेकिन उन्हें अभी तक पता नहीं था।",
+					"यह जगह कितनी पुरानी जाल थी।",
+					"और — कौन समय को रोके हुए था।"
+				]
+			},
+			"rooms": [
+				{
+					"id": 1,
+					"dialogue": [
+						{
+							"content": {
+								"korean": "숲의 공기는 끈적했다. 발걸음이 무거워지는 것 같았다.",
+								"english": "The forest air was sticky. My steps felt heavy.",
+								"japanese": "森の空気はねっとりしていた。足取りが重くなるようだった。",
+								"chinese": "森林的空气黏腻。脚步似乎变得沉重。",
+								"french": "L'air de la forêt était collant. Mes pas semblaient lourds.",
+								"spanish": "El aire del bosque era pegajoso. Mis pasos se sentían pesados.",
+								"vietnamese": "Không khí rừng ẩm ướt. Bước chân tôi dường như nặng nề hơn.",
+								"thai": "อากาศในป่าเหนียวเหนอะหนะ ฝีเท้าของฉันรู้สึกหนักอึ้ง",
+								"hindi": "जंगल की हवा चिपचिपी थी। मेरे कदम भारी महसूस हो रहे थे।"
+							},
+							"speaker": "narrator",
+							"type": "speech",
+							"emotion": "base"
+						},
+						{
+							"content": {
+								"korean": "…뭔가 이상한데?",
+								"english": "...Something's off?",
+								"japanese": "…何かおかしい？",
+								"chinese": "……有点不对劲？",
+								"french": "...Quelque chose ne va pas ?",
+								"spanish": "¿Algo anda mal?",
+								"vietnamese": "...Có gì đó không ổn?",
+								"thai": "...มีอะไรแปลกๆ ไหม?",
+								"hindi": "...कुछ अजीब है?"
+							},
+							"type": "speech",
+							"emotion": "base",
+							"speaker": "character_any"
+						},
+						{
+							"action": "enter",
+							"type": "direction",
+							"duration_ms": 500,
+							"spot": [
+								4,
+								3
+							],
+							"speaker": "lyra_meadowsong"
+						},
+						{
+							"content": {
+								"korean": "너희… 여기 들어온 지 얼마나 됐다고 생각해?",
+								"english": "You guys... how long do you think you've been in here?",
+								"japanese": "お前たち…ここに入ってからどれくらい経ったと思う？",
+								"chinese": "你们……觉得在这里多久了？",
+								"french": "Vous... depuis combien de temps pensez-vous être ici ?",
+								"spanish": "Ustedes... ¿cuánto tiempo creen que llevan aquí?",
+								"vietnamese": "Các cậu... các cậu nghĩ mình đã ở đây bao lâu rồi?",
+								"thai": "พวกนาย...คิดว่าเข้ามาอยู่ที่นี่นานแค่ไหนแล้ว?",
+								"hindi": "तुम लोग... तुम्हें क्या लगता है कि तुम यहाँ कितने समय से हो?"
+							},
+							"type": "speech",
+							"emotion": "base",
+							"speaker": "lyra_meadowsong"
+						},
+						{
+							"speaker": "character_1",
+							"type": "speech",
+							"emotion": "base",
+							"content": {
+								"korean": "방금 전 아니었어?",
+								"english": "Just a moment ago, wasn't it?",
+								"japanese": "ついさっきじゃなかったっけ？",
+								"chinese": "不是刚才吗？",
+								"french": "Ce n'était pas il y a un instant ?",
+								"spanish": "¿No fue hace un momento?",
+								"vietnamese": "Không phải vừa nãy thôi sao?",
+								"thai": "ไม่ใช่เมื่อกี้เหรอ?",
+								"hindi": "क्या यह अभी-अभी नहीं था?"
+							}
+						},
+						{
+							"type": "speech",
+							"emotion": "sad",
+							"speaker": "lyra_meadowsong",
+							"content": {
+								"korean": "정말 그럴까?",
+								"english": "Is that really so?",
+								"japanese": "本当にそうかな？",
+								"chinese": "真的吗？",
+								"french": "Vraiment ?",
+								"spanish": "¿De verdad?",
+								"vietnamese": "Thật sự là vậy sao?",
+								"thai": "จริงเหรอ?",
+								"hindi": "क्या सच में ऐसा है?"
+							}
+						}
+					]
+				},
+				{
+					"id": 3,
+					"dialogue": [
+						{
+							"action": "enter",
+							"duration_ms": 400,
+							"spot": [
+								2,
+								3
+							],
+							"speaker": "lyra_meadowsong",
+							"type": "direction"
+						},
+						{
+							"content": {
+								"korean": "봐. 벌써 며칠은 지난 것 같은데.",
+								"english": "Look. It feels like days have passed already.",
+								"japanese": "見て。もう数日は経ったみたい。",
+								"chinese": "看。感觉已经过了好几天了。",
+								"french": "Regarde. On dirait que plusieurs jours se sont déjà écoulés.",
+								"spanish": "Mira. Parece que ya han pasado varios días.",
+								"vietnamese": "Nhìn kìa. Cảm giác như đã mấy ngày trôi qua rồi.",
+								"thai": "ดูสิ. รู้สึกเหมือนผ่านไปหลายวันแล้วนะ.",
+								"hindi": "देखो। ऐसा लगता है जैसे कई दिन बीत चुके हैं。"
+							},
+							"type": "speech",
+							"emotion": "base",
+							"speaker": "lyra_meadowsong"
+						},
+						{
+							"content": {
+								"korean": "말도 안 돼! 우리는 계속 걷고 있었잖아.",
+								"english": "No way! We've been walking non-stop!",
+								"japanese": "まさか！ずっと歩き続けてたのに。",
+								"chinese": "不可能！我们一直在走啊。",
+								"french": "C'est impossible ! On n'a fait que marcher !",
+								"spanish": "¡No puede ser! ¡Hemos estado caminando sin parar!",
+								"vietnamese": "Không thể nào! Chúng ta vẫn đang đi mà.",
+								"thai": "ไม่จริงน่า! พวกเราก็เดินมาตลอดนี่นา.",
+								"hindi": "असंभव! हम तो चलते ही जा रहे थे।"
+							},
+							"speaker": "character_any",
+							"type": "speech",
+							"emotion": "angry"
+						},
+						{
+							"speaker": "lyra_meadowsong",
+							"type": "speech",
+							"emotion": "base",
+							"content": {
+								"korean": "하지만 배고프지 않지? 졸리지도 않고.",
+								"english": "But you're not hungry, right? Or sleepy.",
+								"japanese": "でも、お腹空いてないでしょ？眠くもないし。",
+								"chinese": "但是你不饿，对吧？也不困。",
+								"french": "Mais tu n'as pas faim, n'est-ce pas ? Ni sommeil.",
+								"spanish": "¿Pero no tienes hambre, verdad? Ni sueño.",
+								"vietnamese": "Nhưng cậu không đói, đúng không? Cũng không buồn ngủ.",
+								"thai": "แต่ก็ไม่หิวใช่ไหม? แล้วก็ไม่ง่วงด้วย.",
+								"hindi": "लेकिन तुम्हें भूख नहीं लगी है, है ना? और न नींद आ रही है।"
+							}
+						},
+						{
+							"type": "speech",
+							"emotion": "base",
+							"speaker": "character_2",
+							"content": {
+								"korean": "어… 그러고 보니.",
+								"english": "Oh... now that you mention it.",
+								"japanese": "あ…言われてみれば。",
+								"chinese": "哦… 这么一说。",
+								"french": "Ah... maintenant que tu le dis.",
+								"spanish": "Oh... ahora que lo mencionas.",
+								"vietnamese": "Ơ... đúng là vậy.",
+								"thai": "อ๋อ... พอพูดถึงแล้วก็จริงด้วย.",
+								"hindi": "ओह... अब जब तुमने कहा।"
+							}
+						}
+					]
+				},
+				{
+					"id": 5,
+					"dialogue": [
+						{
+							"type": "direction",
+							"duration_ms": 400,
+							"spot": [
+								2,
+								3
+							],
+							"speaker": "lyra_meadowsong",
+							"action": "enter"
+						},
+						{
+							"type": "speech",
+							"emotion": "sad",
+							"speaker": "character_any",
+							"content": {
+								"korean": "시간 감각이… 완전히 망가졌어.",
+								"english": "My sense of time... it's completely broken.",
+								"japanese": "時間の感覚が…完全に狂った。",
+								"chinese": "时间感… 完全错乱了。",
+								"french": "Mon sens du temps... est complètement brisé.",
+								"spanish": "Mi sentido del tiempo... está completamente destrozado.",
+								"vietnamese": "Cảm giác về thời gian... hoàn toàn bị phá vỡ rồi.",
+								"thai": "ความรู้สึกเรื่องเวลา... เสียไปหมดเลย.",
+								"hindi": "समय का मेरा एहसास... पूरी तरह से टूट गया है।"
+							}
+						},
+						{
+							"content": {
+								"korean": "이 숲이 너희를 붙잡아두고 있어. 서두르지 못하게.",
+								"english": "This forest is holding you back. Keeping you from hurrying.",
+								"japanese": "この森がお前たちを閉じ込めているんだ。急がせないように。",
+								"chinese": "这片森林困住了你们。不让你们赶路。",
+								"french": "Cette forêt vous retient. Vous empêche de vous dépêcher.",
+								"spanish": "Este bosque os está reteniendo. Impidiéndoos que os apresuréis.",
+								"vietnamese": "Khu rừng này đang giữ chân các cậu. Không cho các cậu vội vàng.",
+								"thai": "ป่านี้กำลังกักขังพวกเธอไว้. ไม่ให้รีบร้อน.",
+								"hindi": "यह जंगल तुम्हें रोके हुए है। तुम्हें जल्दी करने से रोक रहा है।"
+							},
+							"type": "speech",
+							"emotion": "sad",
+							"speaker": "lyra_meadowsong"
+						},
+						{
+							"content": {
+								"korean": "대체 왜?",
+								"english": "Why, though?",
+								"japanese": "一体なぜ？",
+								"chinese": "到底为什么？",
+								"french": "Mais pourquoi ?",
+								"spanish": "¿Por qué, de verdad?",
+								"vietnamese": "Tại sao chứ?",
+								"thai": "ทำไมกันล่ะ?",
+								"hindi": "आखिर क्यों?"
+							},
+							"type": "speech",
+							"emotion": "angry",
+							"speaker": "character_3"
+						},
+						{
+							"speaker": "lyra_meadowsong",
+							"type": "speech",
+							"emotion": "base",
+							"content": {
+								"korean": "그건… '그'가 원하니까.",
+								"english": "Because... 'he' wants it.",
+								"japanese": "それは…『彼』が望んでいるからだ。",
+								"chinese": "那是因为… '他'想这样。",
+								"french": "C'est parce que... 'il' le veut.",
+								"spanish": "Es porque... 'él' lo quiere.",
+								"vietnamese": "Đó là vì... 'hắn' muốn thế.",
+								"thai": "นั่นก็เพราะ... 'เขา' ต้องการอย่างนั้น.",
+								"hindi": "वह इसलिए... क्योंकि 'वह' चाहता है।"
+							}
+						}
+					]
+				},
+				{
+					"id": 9,
+					"dialogue": [
+						{
+							"action": "enter",
+							"type": "direction",
+							"duration_ms": 400,
+							"speaker": "lyra_meadowsong",
+							"spot": [
+								2,
+								3
+							]
+						},
+						{
+							"content": {
+								"korean": "더 늦기 전에… 서둘러야 해.",
+								"english": "Before it's too late... we have to hurry.",
+								"japanese": "これ以上遅くなる前に…急がなければ。",
+								"chinese": "在更晚之前… 我们得赶紧了。",
+								"french": "Avant qu'il ne soit trop tard... nous devons nous dépêcher.",
+								"spanish": "Antes de que sea demasiado tarde... tenemos que darnos prisa.",
+								"vietnamese": "Trước khi quá muộn... phải nhanh lên.",
+								"thai": "ก่อนจะสายไปกว่านี้... ต้องรีบแล้ว.",
+								"hindi": "इससे पहले कि देर हो जाए... हमें जल्दी करनी होगी।"
+							},
+							"type": "speech",
+							"emotion": "sad",
+							"speaker": "lyra_meadowsong"
+						},
+						{
+							"type": "speech",
+							"emotion": "sad",
+							"speaker": "character_any",
+							"content": {
+								"korean": "온 몸이 무거워. 움직일 수가 없어.",
+								"english": "My whole body is heavy. I can't move.",
+								"japanese": "全身が重い。動けない。",
+								"chinese": "全身都好重。动不了。",
+								"french": "Tout mon corps est lourd. Je ne peux pas bouger.",
+								"spanish": "Todo mi cuerpo está pesado. No puedo moverme.",
+								"vietnamese": "Cả người nặng trịch. Không thể di chuyển được.",
+								"thai": "ทั้งตัวมันหนักไปหมด. ขยับไม่ได้เลย.",
+								"hindi": "मेरा पूरा शरीर भारी है। मैं हिल नहीं पा रहा हूँ।"
+							}
+						},
+						{
+							"speaker": "lyra_meadowsong",
+							"type": "speech",
+							"emotion": "base",
+							"content": {
+								"korean": "이 숲은… 너희가 떠나는 걸 싫어해.",
+								"english": "This forest... it doesn't want you to leave.",
+								"japanese": "この森は… お前たちが去るのを嫌がる。",
+								"chinese": "这片森林… 不想让你们离开。",
+								"french": "Cette forêt… elle ne veut pas que vous partiez.",
+								"spanish": "Este bosque… no quiere que os vayáis.",
+								"vietnamese": "Khu rừng này… không muốn các ngươi rời đi.",
+								"thai": "ป่าแห่งนี้… ไม่ต้องการให้พวกเจ้าจากไป",
+								"hindi": "यह जंगल… तुम्हें जाने नहीं देना चाहता।"
+							}
+						},
+						{
+							"speaker": "character_4",
+							"type": "speech",
+							"emotion": "sad",
+							"content": {
+								"korean": "돌아갈 수 없는 건가…?",
+								"english": "Can't we go back...?",
+								"japanese": "戻れないのか…？",
+								"chinese": "回不去了吗…？",
+								"french": "On ne peut plus revenir en arrière… ?",
+								"spanish": "No podemos volver…?",
+								"vietnamese": "Không thể quay lại sao…?",
+								"thai": "กลับไปไม่ได้แล้วหรือ…?",
+								"hindi": "क्या हम वापस नहीं जा सकते…?"
+							}
+						},
+						{
+							"direction": "down",
+							"speaker": "lyra_meadowsong",
+							"duration_ms": 300,
+							"type": "direction",
+							"action": "exit"
+						}
+					]
+				},
+				{
+					"dialogue": [
+						{
+							"duration_ms": 500,
+							"speaker": "lyra_meadowsong",
+							"spot": [
+								3,
+								3
+							],
+							"type": "direction",
+							"action": "enter"
+						},
+						{
+							"speaker": "lyra_meadowsong",
+							"type": "speech",
+							"emotion": "base",
+							"content": {
+								"korean": "시간을 믿지 마. 그게 전부야.",
+								"english": "Don't trust time. That's all there is to it.",
+								"japanese": "時間を信じるな。それが全てだ。",
+								"chinese": "别相信时间。仅此而已。",
+								"french": "Ne crois pas le temps. C'est tout ce qu'il y a à savoir.",
+								"spanish": "No confíes en el tiempo. Eso es todo.",
+								"vietnamese": "Đừng tin vào thời gian. Chỉ có thế thôi.",
+								"thai": "อย่าเชื่อเวลา นั่นแหละทั้งหมด",
+								"hindi": "समय पर भरोसा मत करो। बस इतना ही।"
+							}
+						},
+						{
+							"action": "exit",
+							"type": "direction",
+							"speaker": "lyra_meadowsong",
+							"duration_ms": 300,
+							"direction": "down"
+						},
+						{
+							"content": {
+								"korean": "흐음… 아직 서두르는 자들이 남아있군.",
+								"english": "Hmm… still some who rush remain.",
+								"japanese": "ふむ… まだ急ぐ者が残っているようだな。",
+								"chinese": "嗯… 还有些急躁之人留下。",
+								"french": "Hmm… Il y a encore des impatients.",
+								"spanish": "Hmm… Aún quedan quienes se apresuran.",
+								"vietnamese": "Hừm… vẫn còn những kẻ vội vàng ở lại.",
+								"thai": "หืม… ยังมีพวกที่รีบร้อนหลงเหลืออยู่สินะ",
+								"hindi": "हम्म… अभी भी कुछ जल्दबाज़ बचे हुए हैं।"
+							},
+							"type": "speech",
+							"emotion": "base",
+							"speaker": "boss"
+						},
+						{
+							"content": {
+								"korean": "당신이 시간을 멈춘 거야?",
+								"english": "Did you stop time?",
+								"japanese": "あなたが時間を止めたのか？",
+								"chinese": "是你停止了时间吗？",
+								"french": "C'est toi qui as arrêté le temps ?",
+								"spanish": "Has sido tú quien detuvo el tiempo?",
+								"vietnamese": "Ngươi đã dừng thời gian sao?",
+								"thai": "ท่านเป็นคนหยุดเวลาหรือ?",
+								"hindi": "क्या तुमने समय रोका है?"
+							},
+							"speaker": "character_any",
+							"type": "speech",
+							"emotion": "angry"
+						},
+						{
+							"content": {
+								"korean": "…흥.",
+								"english": "...Hmph.",
+								"japanese": "…ふん。",
+								"chinese": "…哼。",
+								"french": "...Humph.",
+								"spanish": "...Hum.",
+								"vietnamese": "…Hừ.",
+								"thai": "…หึ",
+								"hindi": "...हूँह।"
+							},
+							"speaker": "boss",
+							"type": "speech",
+							"emotion": "base"
+						}
+					],
+					"id": 15,
+					"win_dialogue": [
+						{
+							"content": {
+								"korean": "시간은… 언제나 내 편이야. 너희만… 급할 뿐.",
+								"english": "Time… is always on my side. Only you… are in a hurry.",
+								"japanese": "時間は… いつも私の味方だ。お前たちだけが… 急いでいる。",
+								"chinese": "时间… 永远在我这边。只有你们… 在着急。",
+								"french": "Le temps… est toujours de mon côté. Seuls vous… êtes pressés.",
+								"spanish": "El tiempo… siempre está de mi parte. Solo vosotros… tenéis prisa.",
+								"vietnamese": "Thời gian… luôn về phe ta. Chỉ có các ngươi… là vội vàng.",
+								"thai": "เวลา… เข้าข้างข้าเสมอ พวกเจ้าเท่านั้น… ที่รีบร้อน",
+								"hindi": "समय… हमेशा मेरा साथ देता है। केवल तुम… जल्दबाजी में हो।"
+							},
+							"speaker": "boss",
+							"type": "speech",
+							"emotion": "base"
+						},
+						{
+							"content": {
+								"korean": "시간이 없다고? 이 숲의 시간이 문제야!",
+								"english": "No time? This forest's time is the problem!",
+								"japanese": "時間がないだと？ この森の時間が問題なのだ！",
+								"chinese": "没时间了？是这片森林的时间出了问题！",
+								"french": "Pas de temps ? Le problème, c'est le temps de cette forêt !",
+								"spanish": "No hay tiempo? ¡El problema es el tiempo de este bosque!",
+								"vietnamese": "Không còn thời gian sao? Thời gian của khu rừng này mới là vấn đề!",
+								"thai": "ไม่มีเวลา? เวลาของป่าแห่งนี้ต่างหากที่เป็นปัญหา!",
+								"hindi": "समय नहीं है? इस जंगल का समय ही समस्या है!"
+							},
+							"type": "speech",
+							"emotion": "angry",
+							"speaker": "character_any"
+						},
+						{
+							"content": {
+								"korean": "느려진 시간 속에서, 그들은 깨달았다. 진짜 적은 눈앞의 존재가 아니라는 것을.",
+								"english": "In the slowed time, they realized. The true enemy was not the one before their eyes.",
+								"japanese": "遅くなった時間の中で、彼らは悟った。本当の敵は目の前の存在ではないと。",
+								"chinese": "在缓慢的时间中，他们意识到。真正的敌人并非眼前的存在。",
+								"french": "Dans le temps ralenti, ils réalisèrent. Le véritable ennemi n'était pas celui qui se trouvait devant eux.",
+								"spanish": "En el tiempo ralentizado, se dieron cuenta. El verdadero enemigo no era el que tenían ante sus ojos.",
+								"vietnamese": "Trong dòng thời gian chậm lại, họ nhận ra. Kẻ thù thật sự không phải là kẻ trước mắt.",
+								"thai": "ในเวลาที่เชื่องช้าลง พวกเขาตระหนักได้ว่า ศัตรูที่แท้จริงไม่ใช่สิ่งที่อยู่ตรงหน้า",
+								"hindi": "धीमे हुए समय में, उन्हें एहसास हुआ। असली दुश्मन वह नहीं था जो उनकी आँखों के सामने था।"
+							},
+							"speaker": "narrator",
+							"type": "speech",
+							"emotion": "base"
+						}
+					],
+					"lose_dialogue": [
+						{
+							"speaker": "boss",
+							"type": "speech",
+							"emotion": "base",
+							"content": {
+								"korean": "천천히… 영원히… 이곳에 머물러라.",
+								"english": "Slowly… forever… remain here.",
+								"japanese": "ゆっくりと… 永遠に… ここに留まれ。",
+								"chinese": "慢慢地… 永远地… 留在这里吧。",
+								"french": "Lentement… pour toujours… restez ici.",
+								"spanish": "Lentamente… para siempre… quedaos aquí.",
+								"vietnamese": "Chậm rãi… mãi mãi… hãy ở lại nơi đây.",
+								"thai": "ช้าๆ… ตลอดไป… จงอยู่ที่นี่",
+								"hindi": "धीरे-धीरे… हमेशा के लिए… यहीं रहो।"
+							}
+						},
+						{
+							"speaker": "character_any",
+							"type": "speech",
+							"emotion": "angry",
+							"content": {
+								"korean": "아니! 우린… 돌아가야 해!",
+								"english": "No! We... must retreat!",
+								"japanese": "いや！私たちは…引き返さないと！",
+								"chinese": "不！我们…必须撤退！",
+								"french": "Non ! Nous… devons battre en retraite !",
+								"spanish": "¡No! ¡Debemos… retirarnos!",
+								"vietnamese": "Không! Chúng ta… phải rút lui!",
+								"thai": "ไม่นะ! เรา… ต้องถอยกลับ!",
+								"hindi": "नहीं! हमें… पीछे हटना होगा!"
+							}
+						}
+					]
+				}
+			]
+		},
+		{
+			"scenario_id": "forest_sloth_05",
+			"order": 5,
+			"act": "climax_finale",
+			"theme": "forest",
+			"actors": {
+				"elara": {
+					"id": "mon_05460632-579a-4511-848a-be8b7428872a",
+					"name": {
+						"korean": "엘라라",
+						"english": "Elara",
+						"japanese": "エラーラ",
+						"chinese": "艾拉拉",
+						"french": "Élara",
+						"spanish": "Elara",
+						"vietnamese": "Elara",
+						"thai": "เอลารา",
+						"hindi": "एलारा"
+					},
+					"description": "A Forest Fairy with white hair",
+					"face_image_url": "https://imagedelivery.net/WTEqQNGFb-l-IHS6IGnzUQ/6396e07e-dcdf-4ea7-a5bc-18fc03c6cb00/public",
+					"battle_sprite_url": "https://imagedelivery.net/WTEqQNGFb-l-IHS6IGnzUQ/b0e157fa-833e-4dee-5ec0-aa8736f01900/public"
+				}
+			},
+			"boss": {
+				"pool_id": "pool_random"
+			},
+			"rooms": [
+				{
+					"dialogue": [
+						{
+							"speaker": "narrator",
+							"type": "speech",
+							"content": {
+								"korean": "발걸음이 닿는 순간, 모든 것이 느려진다.",
+								"english": "The moment your foot touches, everything slows.",
+								"japanese": "足を踏み入れた瞬間、すべてが緩やかになる。",
+								"chinese": "脚步落下的瞬间，一切都变得缓慢。",
+								"french": "Dès que votre pied touche le sol, tout ralentit.",
+								"spanish": "En el instante en que tu pie toca, todo se ralentiza.",
+								"vietnamese": "Khoảnh khắc đặt chân xuống, mọi thứ đều chậm lại.",
+								"thai": "ทันทีที่เท้าสัมผัส ทุกสิ่งก็ช้าลง.",
+								"hindi": "जैसे ही कदम पड़ते हैं, सब कुछ धीमा हो जाता है।"
+							},
+							"emotion": "base"
+						},
+						{
+							"emotion": "base",
+							"type": "speech",
+							"content": {
+								"korean": "…이상하게 편안해.",
+								"english": "...Strangely comfortable.",
+								"japanese": "「…妙に落ち着く。」",
+								"chinese": "「……奇怪地舒服。」",
+								"french": "...Étrangement apaisant.",
+								"spanish": "...Extrañamente reconfortante.",
+								"vietnamese": "...Thật kỳ lạ là thoải mái.",
+								"thai": "...สบายอย่างน่าประหลาด",
+								"hindi": "...अजीब तरह से आरामदायक।"
+							},
+							"speaker": "character_any"
+						},
+						{
+							"action": "enter",
+							"speaker": "elara",
+							"type": "direction",
+							"duration_ms": 500,
+							"spot": [
+								2,
+								3
+							]
+						},
+						{
+							"emotion": "base",
+							"type": "speech",
+							"content": {
+								"korean": "왔구나. 여기까진… 쉽지 않았을 텐데.",
+								"english": "You're here. Getting this far... couldn't have been easy.",
+								"japanese": "「来たね。ここまで来るのは…簡単ではなかっただろうに。」",
+								"chinese": "「你来了。来到这里…应该不容易吧。」",
+								"french": "Tu es là. Arriver jusqu'ici... n'a pas dû être facile.",
+								"spanish": "Estás aquí. Llegar hasta aquí... no debe haber sido fácil.",
+								"vietnamese": "Ngươi đến rồi. Đến được đây... chắc không dễ dàng gì.",
+								"thai": "มาแล้วสินะ การมาถึงที่นี่... คงไม่ใช่เรื่องง่ายเลย",
+								"hindi": "तुम आ गए। यहाँ तक पहुँचना… आसान नहीं रहा होगा।"
+							},
+							"speaker": "elara"
+						},
+						{
+							"speaker": "character_any",
+							"type": "speech",
+							"content": {
+								"korean": "당신은… 엘라라?",
+								"english": "You are... Elara?",
+								"japanese": "「あなたは… エララ？」",
+								"chinese": "「你是……艾拉拉？」",
+								"french": "Vous êtes... Elara ?",
+								"spanish": "¿Tú eres... Elara?",
+								"vietnamese": "Ngươi là... Elara?",
+								"thai": "ท่านคือ... เอลาร่า?",
+								"hindi": "आप… एलारा हो?"
+							},
+							"emotion": "base"
+						},
+						{
+							"speaker": "elara",
+							"emotion": "sad",
+							"type": "speech",
+							"content": {
+								"korean": "그래. 슬로우의 외로움이 만들어낸 이 숲의 정령이지.",
+								"english": "Yes. I am the forest spirit born from Slow's loneliness.",
+								"japanese": "「ええ。私はスロウの孤独が生み出した、この森の精霊よ。」",
+								"chinese": "「没错。我是斯洛的孤独所创造的，这片森林的精灵。」",
+								"french": "Oui. Je suis l'esprit de cette forêt, né de la solitude de Slow.",
+								"spanish": "Sí. Soy el espíritu de este bosque, nacido de la soledad de Slow.",
+								"vietnamese": "Phải. Ta là tinh linh của khu rừng này, được sinh ra từ sự cô đơn của Slow.",
+								"thai": "ใช่ ฉันคือภูตแห่งป่านี้ ที่ถือกำเนิดจากความเหงาของสโลว์",
+								"hindi": "हाँ। मैं इस जंगल की आत्मा हूँ, जो स्लो के अकेलेपन से पैदा हुई है।"
+							}
+						},
+						{
+							"speaker": "elara",
+							"emotion": "base",
+							"type": "speech",
+							"content": {
+								"korean": "너희가 찾는 이들은… 돌아가지 않은 게 아니야.",
+								"english": "Those you seek... they didn't fail to return.",
+								"japanese": "「君たちが探している者たちは… 戻らなかったわけではないの。」",
+								"chinese": "「你们要找的人……不是没有回去。」",
+								"french": "Ceux que vous cherchez... ils ne sont pas partis.",
+								"spanish": "Aquellos a quienes buscáis... no es que no hayan regresado.",
+								"vietnamese": "Những người mà các ngươi tìm... không phải là họ không trở về.",
+								"thai": "ผู้ที่พวกเจ้าตามหา... พวกเขาไม่ได้ไม่กลับไปหรอกนะ",
+								"hindi": "जिन्हें तुम ढूंढ रहे हो… वे लौटे नहीं हैं, ऐसा नहीं है।"
+							}
+						}
+					],
+					"id": 1
+				},
+				{
+					"dialogue": [
+						{
+							"duration_ms": 500,
+							"spot": [
+								2,
+								3
+							],
+							"type": "direction",
+							"action": "enter",
+							"speaker": "elara"
+						},
+						{
+							"speaker": "elara",
+							"emotion": "sad",
+							"type": "speech",
+							"content": {
+								"korean": "그들은 그냥… 머물고 싶었던 거야.",
+								"english": "They simply... wanted to stay.",
+								"japanese": "「彼らはただ… 留まりたかっただけなの。」",
+								"chinese": "「他们只是……想留下来。」",
+								"french": "Ils voulaient juste... rester.",
+								"spanish": "Ellos simplemente... querían quedarse.",
+								"vietnamese": "Họ chỉ là... muốn ở lại thôi.",
+								"thai": "พวกเขาแค่... อยากจะอยู่ที่นี่เอง",
+								"hindi": "वे बस… रुकना चाहते थे।"
+							}
+						},
+						{
+							"speaker": "character_any",
+							"emotion": "base",
+							"type": "speech",
+							"content": {
+								"korean": "자발적으로? 슬로우가 강제한 게 아니라고?",
+								"english": "Voluntarily? Slow didn't force them?",
+								"japanese": "「自発的に？ スロウが強制したわけじゃないの？」",
+								"chinese": "「自愿的？不是斯洛强制的吗？」",
+								"french": "Volontairement ? Slow ne les a pas forcés ?",
+								"spanish": "¿Voluntariamente? ¿Slow no los obligó?",
+								"vietnamese": "Tự nguyện? Không phải Slow ép buộc sao?",
+								"thai": "ด้วยความสมัครใจ? สโลว์ไม่ได้บังคับพวกเขาเหรอ?",
+								"hindi": "स्वेच्छा से? स्लो ने उन्हें मजबूर नहीं किया?"
+							}
+						},
+						{
+							"type": "speech",
+							"content": {
+								"korean": "응. 슬로우는 악의가 없어. 단지… 혼자였거든.",
+								"english": "No. Slow has no ill will. It was just... alone.",
+								"japanese": "「うん。スロウに悪意はないの。ただ… 一人だったから。」",
+								"chinese": "「嗯。斯洛没有恶意。只是……它太孤独了。」",
+								"french": "Non. Slow n'a aucune mauvaise intention. Il était juste... seul.",
+								"spanish": "No. Slow no tiene mala intención. Simplemente... estaba solo.",
+								"vietnamese": "Ừm. Slow không có ác ý. Chỉ là... nó đã rất cô đơn.",
+								"thai": "ใช่ สโลว์ไม่มีเจตนาร้าย เพียงแต่... มันอยู่ตัวคนเดียวมานาน",
+								"hindi": "हाँ। स्लो की कोई बुरी नियत नहीं है। बस… वह अकेला था।"
+							},
+							"emotion": "sad",
+							"speaker": "elara"
+						},
+						{
+							"type": "speech",
+							"content": {
+								"korean": "너무 오랫동안. 그래서 숲을 고요함으로 채웠어. 아무도 떠나지 않도록.",
+								"english": "For too long. So it filled the forest with tranquility. So no one would leave.",
+								"japanese": "「あまりにも長い間ね。だから、森を静寂で満たしたの。誰も去らないように。」",
+								"chinese": "「太久了。所以它让森林充满了宁静。为了不让任何人离开。」",
+								"french": "Pendant trop longtemps. Alors il a rempli la forêt de tranquillité. Pour que personne ne parte.",
+								"spanish": "Durante demasiado tiempo. Así que llenó el bosque de tranquilidad. Para que nadie se fuera.",
+								"vietnamese": "Quá lâu rồi. Vì vậy nó đã lấp đầy khu rừng bằng sự yên tĩnh. Để không ai rời đi.",
+								"thai": "นานเกินไปแล้ว ดังนั้นมันจึงเติมเต็มป่าด้วยความสงบ เพื่อไม่ให้ใครจากไป",
+								"hindi": "बहुत लंबे समय से। इसलिए उसने जंगल को शांति से भर दिया। ताकि कोई छोड़े नहीं।"
+							},
+							"emotion": "base",
+							"speaker": "elara"
+						}
+					],
+					"id": 3
+				},
+				{
+					"id": 5,
+					"dialogue": [
+						{
+							"action": "enter",
+							"speaker": "elara",
+							"type": "direction",
+							"duration_ms": 500,
+							"spot": [
+								2,
+								3
+							]
+						},
+						{
+							"emotion": "base",
+							"type": "speech",
+							"content": {
+								"korean": "이 평온함이… 너희에게도 스며들었을 텐데.",
+								"english": "This tranquility... must have seeped into you too.",
+								"japanese": "「この平穏が… 君たちにも染み渡ったでしょうに。」",
+								"chinese": "「这种平静……应该也渗透到你们心里了吧。」",
+								"french": "Cette tranquillité... a dû vous imprégner aussi.",
+								"spanish": "Esta tranquilidad... debe haberos invadido también.",
+								"vietnamese": "Sự yên bình này... chắc cũng đã thấm vào các ngươi rồi.",
+								"thai": "ความสงบนี้... คงจะซึมซาบเข้าไปในตัวพวกเจ้าแล้วสินะ",
+								"hindi": "यह शांति… तुममें भी समा गई होगी।"
+							},
+							"speaker": "elara"
+						},
+						{
+							"type": "speech",
+							"content": {
+								"korean": "…나쁘지 않아. 꼭 서둘러야 하나?",
+								"english": "...Not bad. Do we really need to rush?",
+								"japanese": "…悪くない。急ぐ必要、あるのか？",
+								"chinese": "……不赖。真的有必要着急吗？",
+								"french": "...Pas mal. Faut-il vraiment se dépêcher ?",
+								"spanish": "...No está mal. ¿De verdad tenemos que darnos prisa?",
+								"vietnamese": "...Cũng không tệ. Có thật sự phải vội không?",
+								"thai": "...ก็ไม่เลวนะ. จำเป็นต้องรีบขนาดนั้นเลยเหรอ?",
+								"hindi": "...बुरा नहीं। क्या हमें सच में जल्दी करनी होगी?"
+							},
+							"emotion": "base",
+							"speaker": "character_any"
+						},
+						{
+							"speaker": "elara",
+							"emotion": "angry",
+							"type": "speech",
+							"content": {
+								"korean": "안 돼! 그러면 너희도 영원히 갇혀. 슬로우가 원하는 건 그거야.",
+								"english": "No! Then you'll be trapped forever too. That's what Slow wants.",
+								"japanese": "だめだ！そうしたら、お前たちも永遠に閉じ込められる。スロウの狙いはそれだ。",
+								"chinese": "不行！那样你们也会永远被困住。那是斯洛想要的。",
+								"french": "Non ! Alors vous serez piégés pour toujours aussi. C'est ce que Slow veut.",
+								"spanish": "¡No! Entonces vosotros también quedaréis atrapados para siempre. Eso es lo que Slow quiere.",
+								"vietnamese": "Không được! Rồi các ngươi cũng sẽ bị mắc kẹt vĩnh viễn. Đó là điều Slow muốn.",
+								"thai": "ไม่นะ! ถ้าอย่างนั้นพวกนายก็จะถูกขังอยู่ตลอดไปเหมือนกัน นั่นคือสิ่งที่สโลว์ต้องการ",
+								"hindi": "नहीं! तब तुम भी हमेशा के लिए फंस जाओगे। स्लो यही चाहता है।"
+							}
+						},
+						{
+							"speaker": "character_any",
+							"type": "speech",
+							"content": {
+								"korean": "우린… 돌아가야 해!",
+								"english": "We... have to go back!",
+								"japanese": "私たちは…戻らないと！",
+								"chinese": "我们……必须回去！",
+								"french": "Nous... devons y retourner !",
+								"spanish": "¡Nosotros... tenemos que volver!",
+								"vietnamese": "Chúng ta... phải quay lại!",
+								"thai": "เรา... ต้องกลับไป!",
+								"hindi": "हमें... वापस जाना होगा!"
+							},
+							"emotion": "angry"
+						}
+					]
+				},
+				{
+					"id": 9,
+					"dialogue": [
+						{
+							"type": "direction",
+							"action": "enter",
+							"speaker": "elara",
+							"duration_ms": 500,
+							"spot": [
+								2,
+								3
+							]
+						},
+						{
+							"speaker": "elara",
+							"type": "speech",
+							"content": {
+								"korean": "더 이상은 안 돼. 가면… 너희도 모든 것을 잊게 될 거야.",
+								"english": "No more. If you go... you'll forget everything too.",
+								"japanese": "もうこれ以上はだめだ。もし行けば…お前たちもすべてを忘れてしまうだろう。",
+								"chinese": "不能再往前了。如果去了……你们也会忘记一切的。",
+								"french": "Plus loin, non. Si vous y allez... vous oublierez tout aussi.",
+								"spanish": "Ya no más. Si vais... también lo olvidaréis todo.",
+								"vietnamese": "Không thể thêm nữa. Nếu đi... các ngươi cũng sẽ quên hết mọi thứ.",
+								"thai": "อย่าไปมากกว่านี้เลย ถ้าไป... พวกนายก็จะลืมทุกอย่างไปหมดเหมือนกัน",
+								"hindi": "अब और नहीं। अगर तुम जाओगे... तो तुम भी सब कुछ भूल जाओगे।"
+							},
+							"emotion": "sad"
+						},
+						{
+							"speaker": "character_any",
+							"emotion": "angry",
+							"type": "speech",
+							"content": {
+								"korean": "우린… 우리 마을을 찾아야 해!",
+								"english": "We... must find our village!",
+								"japanese": "私たちは…私たちの村を見つけないと！",
+								"chinese": "我们……必须找到我们的村子！",
+								"french": "Nous... devons retrouver notre village !",
+								"spanish": "¡Nosotros... debemos encontrar nuestro pueblo!",
+								"vietnamese": "Chúng ta... phải tìm lại làng của mình!",
+								"thai": "เรา... ต้องตามหาหมู่บ้านของเรา!",
+								"hindi": "हमें... अपना गाँव ढूंढना होगा!"
+							}
+						},
+						{
+							"speaker": "elara",
+							"type": "speech",
+							"content": {
+								"korean": "정말로? 무엇을 위해? 이곳에선 시간도 멈춰. 아무것도 변하지 않아.",
+								"english": "Really? For what? Here, even time stops. Nothing changes.",
+								"japanese": "本当に？何のために？ここでは時間さえ止まっている。何も変わらない。",
+								"chinese": "真的吗？为了什么？这里连时间都停止了。什么都不会改变。",
+								"french": "Vraiment ? Pour quoi faire ? Ici, même le temps s'arrête. Rien ne change.",
+								"spanish": "¿De verdad? ¿Para qué? Aquí, hasta el tiempo se detiene. Nada cambia.",
+								"vietnamese": "Thật sao? Để làm gì? Ở đây, thời gian cũng ngừng lại. Chẳng có gì thay đổi cả.",
+								"thai": "จริงเหรอ? เพื่ออะไร? ที่นี่ แม้แต่เวลาก็ยังหยุดนิ่ง ไม่มีอะไรเปลี่ยนแปลงเลย",
+								"hindi": "सच में? किसलिए? यहाँ तो समय भी रुक जाता है। कुछ नहीं बदलता।"
+							},
+							"emotion": "base"
+						},
+						{
+							"emotion": "base",
+							"type": "speech",
+							"content": {
+								"korean": "그게 슬로우의 기운이었어? 처음부터… 숲 전체에?",
+								"english": "Was that Slow's aura? From the beginning... throughout the whole forest?",
+								"japanese": "あれがスロウの気配だったのか？最初から…森全体に？",
+								"chinese": "那是斯洛的气息吗？从一开始……就弥漫了整个森林？",
+								"french": "C'était l'aura de Slow ? Depuis le début... dans toute la forêt ?",
+								"spanish": "¿Era ese el aura de Slow? Desde el principio... ¿en todo el bosque?",
+								"vietnamese": "Đó là khí tức của Slow sao? Ngay từ đầu... khắp cả khu rừng?",
+								"thai": "นั่นคือพลังของสโลว์เหรอ? ตั้งแต่แรก... ทั่วทั้งป่าเลยเหรอ?",
+								"hindi": "क्या वह स्लो की आभा थी? शुरू से ही... पूरे जंगल में?"
+							},
+							"speaker": "character_any"
+						},
+						{
+							"emotion": "sad",
+							"type": "speech",
+							"content": {
+								"korean": "응. 그래서 이곳에 들어서면… 모두가 서두를 이유를 잊지.",
+								"english": "Yes. That's why when you enter here... everyone forgets why they should rush.",
+								"japanese": "ああ。だからここに入ると…誰もが急ぐ理由を忘れてしまうんだ。",
+								"chinese": "嗯。所以一旦进入这里……所有人都会忘记为什么要着急。",
+								"french": "Oui. C'est pourquoi en entrant ici... tout le monde oublie pourquoi il devrait se dépêcher.",
+								"spanish": "Sí. Por eso, al entrar aquí... todos olvidan por qué deberían apresurarse.",
+								"vietnamese": "Ừ. Bởi vậy khi bước vào đây... mọi người đều quên mất lý do phải vội vàng.",
+								"thai": "ใช่แล้ว นั่นคือเหตุผลว่าทำไมเมื่อเข้ามาที่นี่... ทุกคนถึงลืมไปว่าทำไมถึงต้องรีบ",
+								"hindi": "हाँ। इसलिए जब तुम यहाँ आते हो... तो हर कोई जल्दी करने का कारण भूल जाता है।"
+							},
+							"speaker": "elara"
+						}
+					]
+				},
+				{
+					"dialogue": [
+						{
+							"speaker": "boss",
+							"type": "speech",
+							"content": {
+								"korean": "…왔구나. 서두르지 않아도 돼.",
+								"english": "...You've come. No need to rush.",
+								"japanese": "…来たか。急ぐ必要はない。",
+								"chinese": "……你来了。不必着急。",
+								"french": "...Tu es venu. Pas besoin de se dépêcher.",
+								"spanish": "...Has venido. No hay prisa.",
+								"vietnamese": "...Ngươi đến rồi. Không cần vội đâu.",
+								"thai": "...มาแล้วสินะ ไม่จำเป็นต้องรีบหรอก",
+								"hindi": "...तुम आ गए। जल्दी करने की ज़रूरत नहीं है।"
+							},
+							"emotion": "base"
+						},
+						{
+							"emotion": "angry",
+							"type": "speech",
+							"content": {
+								"korean": "슬로우!",
+								"english": "Slow!",
+								"japanese": "スロウ！",
+								"chinese": "斯洛！",
+								"french": "Slow !",
+								"spanish": "¡Slow!",
+								"vietnamese": "Slow!",
+								"thai": "สโลว์!",
+								"hindi": "स्लो!"
+							},
+							"speaker": "character_any"
+						},
+						{
+							"speaker": "boss",
+							"emotion": "base",
+							"type": "speech",
+							"content": {
+								"korean": "여기선 아무것도 쫓아오지 않아. 아무것도 잃지 않아.",
+								"english": "Nothing chases you here. You lose nothing.",
+								"japanese": "ここでは何も追いかけてこない。何も失わない。",
+								"chinese": "在这里什么都不会追你。什么都不会失去。",
+								"french": "Rien ne te poursuit ici. Tu ne perds rien.",
+								"spanish": "Nada te persigue aquí. Nada pierdes.",
+								"vietnamese": "Ở đây không có gì đuổi theo bạn. Bạn không mất gì cả.",
+								"thai": "ที่นี่ไม่มีอะไรไล่ตามคุณ ไม่มีอะไรจะเสีย",
+								"hindi": "यहां कुछ भी तुम्हारा पीछा नहीं करता। तुम कुछ भी नहीं खोते।"
+							}
+						},
+						{
+							"speaker": "boss",
+							"emotion": "base",
+							"type": "speech",
+							"content": {
+								"korean": "영원히 머물러도 돼. 배고프지도, 피곤하지도 않아.",
+								"english": "You can stay forever. No hunger, no fatigue.",
+								"japanese": "永遠にここにいられる。空腹もなく、疲れもない。",
+								"chinese": "你可以永远留在这里。不饿，也不累。",
+								"french": "Tu peux rester éternellement. Pas de faim, pas de fatigue.",
+								"spanish": "Puedes quedarte para siempre. Sin hambre, sin fatiga.",
+								"vietnamese": "Bạn có thể ở lại mãi mãi. Không đói, không mệt mỏi.",
+								"thai": "คุณอยู่ที่นี่ตลอดไปได้เลย ไม่หิว ไม่เหนื่อย",
+								"hindi": "तुम हमेशा के लिए रुक सकते हो। न भूख, न थकान।"
+							}
+						},
+						{
+							"speaker": "elara",
+							"action": "enter",
+							"type": "direction",
+							"spot": [
+								4,
+								3
+							],
+							"duration_ms": 500
+						},
+						{
+							"speaker": "elara",
+							"type": "speech",
+							"content": {
+								"korean": "슬로우! 이건 외로움을 채우는 게 아니야!",
+								"english": "Slow! This isn't filling your loneliness!",
+								"japanese": "スロー！これは寂しさを満たすものじゃない！",
+								"chinese": "斯洛！这不是填补孤独的方法！",
+								"french": "Slow ! Ça ne comble pas la solitude !",
+								"spanish": "¡Slow! ¡Esto no llena la soledad!",
+								"vietnamese": "Slow! Đây không phải là cách lấp đầy sự cô đơn!",
+								"thai": "สโลว์! นี่ไม่ใช่การเติมเต็มความเหงา!",
+								"hindi": "स्लो! यह अकेलापन भरने का तरीका नहीं है!"
+							},
+							"emotion": "angry"
+						},
+						{
+							"speaker": "boss",
+							"emotion": "base",
+							"type": "speech",
+							"content": {
+								"korean": "…외롭지 않아. 너희가 있으니.",
+								"english": "...Not lonely. With you all here.",
+								"japanese": "…寂しくない。あなたたちがいるから。",
+								"chinese": "…不孤单。因为有你们在。",
+								"french": "...Je ne suis pas seul. Parce que vous êtes là.",
+								"spanish": "...No estoy solo. Porque ustedes están aquí.",
+								"vietnamese": "...Tôi không cô đơn. Vì có các bạn ở đây.",
+								"thai": "...ฉันไม่เหงา เพราะมีพวกเธออยู่",
+								"hindi": "...मैं अकेला नहीं हूँ। क्योंकि तुम सब हो।"
+							}
+						},
+						{
+							"duration_ms": 400,
+							"action": "exit",
+							"direction": "up",
+							"speaker": "elara",
+							"type": "direction"
+						},
+						{
+							"speaker": "character_any",
+							"emotion": "angry",
+							"type": "speech",
+							"content": {
+								"korean": "…이건 싸움이야. 외로움이 만든 함정이지.",
+								"english": "...This is a fight. A trap born of loneliness.",
+								"japanese": "…これは戦いだよ。寂しさが作った罠だ。",
+								"chinese": "…这是一场战斗。一个由孤独制造的陷阱。",
+								"french": "...C'est un combat. Un piège créé par la solitude.",
+								"spanish": "...Esto es una lucha. Una trampa creada por la soledad.",
+								"vietnamese": "...Đây là một cuộc chiến. Một cái bẫy do sự cô đơn tạo ra.",
+								"thai": "...นี่คือการต่อสู้ กับดักที่เกิดจากความเหงา",
+								"hindi": "...यह एक लड़ाई है। अकेलेपन का बनाया जाल।"
+							}
+						}
+					],
+					"id": 15,
+					"lose_dialogue": [
+						{
+							"emotion": "base",
+							"type": "speech",
+							"content": {
+								"korean": "봐… 너희도 결국… 머물게 될 거야.",
+								"english": "See... you'll eventually... stay too.",
+								"japanese": "見て…お前たちも結局…ここに留まることになるだろう。",
+								"chinese": "看…你们最终也…会留下来。",
+								"french": "Vois... vous finirez par... rester aussi.",
+								"spanish": "Mira... al final tú también... te quedarás.",
+								"vietnamese": "Nhìn xem... cuối cùng các bạn cũng sẽ... ở lại thôi.",
+								"thai": "ดูสิ...ในที่สุดพวกเธอก็...จะต้องอยู่เช่นกัน",
+								"hindi": "देखो... तुम भी आखिर... यहीं रुकोगे।"
+							},
+							"speaker": "boss"
+						},
+						{
+							"emotion": "angry",
+							"type": "speech",
+							"content": {
+								"korean": "아니… 난 돌아갈 거야. 다시 돌아올게.",
+								"english": "No... I'll retreat. I'll be back.",
+								"japanese": "いや… 戻る。また来るぞ。",
+								"chinese": "不… 我要撤退。我还会回来的。",
+								"french": "Non... Je bats en retraite. Je reviendrai.",
+								"spanish": "No... Me retiro. Volveré.",
+								"vietnamese": "Không... Tôi sẽ rút lui. Tôi sẽ trở lại.",
+								"thai": "ไม่... ฉันจะถอยก่อน. แล้วจะกลับมา.",
+								"hindi": "नहीं… मैं पीछे हट रहा हूँ। मैं फिर आऊँगा।"
+							},
+							"speaker": "character_any"
+						}
+					],
+					"win_dialogue": [
+						{
+							"speaker": "boss",
+							"type": "speech",
+							"content": {
+								"korean": "…가고 싶어? 정말로?",
+								"english": "...You want to go? Really?",
+								"japanese": "…行きたいの？本当に？",
+								"chinese": "…想走吗？真的吗？",
+								"french": "...Tu veux partir ? Vraiment ?",
+								"spanish": "...¿Quieres irte? ¿De verdad?",
+								"vietnamese": "...Bạn muốn đi à? Thật sao?",
+								"thai": "...อยากไปเหรอ? จริงๆ เหรอ?",
+								"hindi": "...जाना चाहते हो? सच में?"
+							},
+							"emotion": "sad"
+						},
+						{
+							"type": "speech",
+							"content": {
+								"korean": "…그래. 우린 돌아가야 해.",
+								"english": "...Yes. We have to go back.",
+								"japanese": "…うん。私たちは戻らないと。",
+								"chinese": "…嗯。我们必须回去。",
+								"french": "...Oui. Nous devons y retourner.",
+								"spanish": "...Sí. Tenemos que volver.",
+								"vietnamese": "...Đúng vậy. Chúng ta phải quay về.",
+								"thai": "...ใช่ เราต้องกลับไป",
+								"hindi": "...हाँ। हमें वापस जाना होगा।"
+							},
+							"emotion": "base",
+							"speaker": "character_any"
+						},
+						{
+							"speaker": "boss",
+							"emotion": "sad",
+							"type": "speech",
+							"content": {
+								"korean": "…다음에 또, 와줄 거지? 외롭지 않게.",
+								"english": "...You'll come again next time, won't you? So I won't be lonely.",
+								"japanese": "…次もまた、来てくれるよね？寂しくないように。",
+								"chinese": "…下次还会再来，对吗？这样我就不会孤单了。",
+								"french": "...Tu reviendras la prochaine fois, n'est-ce pas ? Pour que je ne sois pas seul.",
+								"spanish": "...Volverás la próxima vez, ¿verdad? Para que no me sienta solo.",
+								"vietnamese": "...Lần tới bạn sẽ quay lại chứ? Để tôi không cô đơn.",
+								"thai": "...ครั้งหน้าจะมาอีกใช่ไหม? จะได้ไม่เหงา",
+								"hindi": "...अगली बार फिर आओगे ना? ताकि मैं अकेला न रहूँ।"
+							}
+						},
+						{
+							"speaker": "narrator",
+							"type": "speech",
+							"content": {
+								"korean": "슬로우의 숲은 다시 고요해졌다. 이제 정말로… 떠나야 할 때였다.",
+								"english": "Slow's forest became quiet again. It was truly time to... leave.",
+								"japanese": "スローの森は再び静かになった。もう本当に…去るべき時だった。",
+								"chinese": "斯洛的森林再次恢复了宁静。现在真的…是时候离开了。",
+								"french": "La forêt de Slow redevint silencieuse. Il était vraiment temps de... partir.",
+								"spanish": "El bosque de Slow volvió a estar en silencio. Era realmente... hora de irse.",
+								"vietnamese": "Rừng của Slow lại trở nên yên tĩnh. Giờ thì thực sự... đã đến lúc phải rời đi.",
+								"thai": "ป่าของสโลว์กลับมาเงียบสงบอีกครั้ง ตอนนี้ถึงเวลาที่ต้อง... จากไปแล้วจริงๆ",
+								"hindi": "स्लो का जंगल फिर से शांत हो गया। अब सच में... जाने का समय था।"
+							},
+							"emotion": "base"
+						}
+					]
+				}
+			],
+			"epilogue": {
+				"korean": [
+					"고요했던 숲에 다시 시간의 흐름이 찾아왔다.",
+					"슬로우는 사라졌다. 그녀의 외로움은… 끝난 걸까, 아니면 이제 시작인 걸까?",
+					"탐험대는 숲을 나섰다. 잃어버린 시간을 되찾으러.",
+					"그러나 그들의 발걸음은 여전히… 조금 느렸다.",
+					"정말로, 그들은 모든 것을 떠나온 걸까? 아니면, 무엇인가를 가져온 걸까?"
+				],
+				"english": [
+					"The flow of time returned to the silent forest.",
+					"Slow vanished. Was her loneliness… over, or just beginning?",
+					"The expedition left the forest, to reclaim their lost time.",
+					"Yet their steps were still… a little slow.",
+					"Had they truly left everything behind? Or had they brought something with them?"
+				],
+				"japanese": [
+					"静寂だった森に、再び時間の流れが訪れた。",
+					"スローは消えた。彼女の寂しさは…終わったのか、それとも今始まったのか？",
+					"探検隊は森を出た。失われた時間を取り戻すために。",
+					"しかし彼らの足取りは、相変わらず…少し遅かった。",
+					"本当に、彼らはすべてを置いてきたのだろうか？それとも、何かを持ち帰ったのだろうか？"
+				],
+				"chinese": [
+					"寂静的森林，时间之流再次回归。",
+					"斯洛消失了。她的寂寞……是结束了，还是刚刚开始？",
+					"探险队离开了森林。去寻回失去的时间。",
+					"然而他们的脚步依然……有些缓慢。",
+					"他们真的已经把一切都抛在脑后了吗？抑或是，他们带走了什么？"
+				],
+				"french": [
+					"Le temps reprit son cours dans la forêt silencieuse.",
+					"Slow disparut. Sa solitude… était-elle finie, ou venait-elle de commencer ?",
+					"L'expédition quitta la forêt, pour récupérer le temps perdu.",
+					"Pourtant leurs pas étaient toujours… un peu lents.",
+					"Avaient-ils vraiment tout laissé derrière eux ? Ou avaient-ils ramené quelque chose ?"
+				],
+				"spanish": [
+					"El flujo del tiempo regresó al bosque silencioso.",
+					"Slow desapareció. ¿Su soledad… había terminado, o apenas comenzaba?",
+					"La expedición abandonó el bosque, para recuperar el tiempo perdido.",
+					"Sin embargo, sus pasos seguían siendo… un poco lentos.",
+					"¿Realmente lo habían dejado todo atrás? ¿O se habían llevado algo consigo?"
+				],
+				"vietnamese": [
+					"Dòng chảy thời gian đã trở lại khu rừng yên ắng.",
+					"Slow đã biến mất. Sự cô đơn của nàng… đã kết thúc, hay chỉ mới bắt đầu?",
+					"Đoàn thám hiểm rời khỏi khu rừng. Để tìm lại thời gian đã mất.",
+					"Tuy nhiên, bước chân của họ vẫn… hơi chậm.",
+					"Họ thực sự đã bỏ lại mọi thứ ư? Hay là, họ đã mang theo điều gì đó?"
+				],
+				"thai": [
+					"การไหลเวียนของเวลากลับคืนสู่ป่าอันเงียบสงบอีกครั้ง.",
+					"สโลว์หายไปแล้ว. ความเหงาของเธอ...จบลงแล้ว หรือเพิ่งจะเริ่มต้นกันแน่?",
+					"คณะสำรวจออกจากป่า เพื่อทวงคืนเวลาที่หายไป.",
+					"แต่ก้าวเดินของพวกเขาก็ยังคง...ช้าอยู่บ้าง.",
+					"จริงๆ แล้ว พวกเขาได้จากทุกสิ่งมาแล้วหรือยัง? หรือพวกเขาได้นำบางสิ่งติดตัวมาด้วย?"
+				],
+				"hindi": [
+					"शांत वन में समय का प्रवाह पुनः लौट आया।",
+					"स्लो गायब हो गई। क्या उसका अकेलापन… खत्म हो गया था, या अब शुरू हुआ था?",
+					"अभियान दल ने वन छोड़ दिया, अपना खोया हुआ समय पुनः प्राप्त करने के लिए।",
+					"फिर भी उनके कदम अभी भी… थोड़े धीमे थे।",
+					"क्या वे सचमुच सब कुछ छोड़ आए थे? या कुछ साथ ले आए थे?"
+				]
+			},
+			"prologue": {
+				"korean": [
+					"모든 것을 느리게 만드는 숲. 시간도, 목적도, 기억마저도.",
+					"오직 정령 슬로우만이 이곳에 영원히 머물렀다.",
+					"그녀는 악의가 없었다. 단지… 외로웠을 뿐.",
+					"그리고 탐험대는, 그 외로움과 마주해야 했다."
+				],
+				"english": [
+					"The forest that slows everything. Time, purpose, even memory.",
+					"Only the spirit Slow dwelled here eternally.",
+					"She harbored no ill will. She was merely… lonely.",
+					"And the expedition had to face that loneliness."
+				],
+				"japanese": [
+					"すべてを緩やかにする森。時間も、目的も、記憶さえも。",
+					"精霊スローだけが、永遠にここに留まっていた。",
+					"彼女に悪意はなかった。ただ…寂しかっただけだ。",
+					"そして探検隊は、その寂しさに向き合わねばならなかった。"
+				],
+				"chinese": [
+					"让一切都缓慢下来的森林。时间、目的，甚至记忆。",
+					"唯有精灵斯洛，永远留在此地。",
+					"她并无恶意。仅仅是……感到寂寞。",
+					"而探险队，则必须面对那份寂寞。"
+				],
+				"french": [
+					"La forêt qui ralentit tout. Le temps, le but, et même la mémoire.",
+					"Seul l'esprit Slow y demeurait éternellement.",
+					"Elle n'avait aucune mauvaise intention. Elle était simplement… solitaire.",
+					"Et l'expédition dut faire face à cette solitude."
+				],
+				"spanish": [
+					"El bosque que ralentiza todo. El tiempo, el propósito, incluso la memoria.",
+					"Solo el espíritu Slow permaneció aquí eternamente.",
+					"Ella no tenía malicia. Simplemente… estaba sola.",
+					"Y la expedición tuvo que enfrentarse a esa soledad."
+				],
+				"vietnamese": [
+					"Khu rừng làm chậm mọi thứ. Thời gian, mục đích, thậm chí cả ký ức.",
+					"Chỉ có tinh linh Slow ở lại nơi đây mãi mãi.",
+					"Nàng không có ác ý. Chỉ là… cô đơn mà thôi.",
+					"Và đoàn thám hiểm đã phải đối mặt với sự cô đơn ấy."
+				],
+				"thai": [
+					"ป่าที่ทำให้ทุกสิ่งช้าลง. เวลา จุดประสงค์ แม้กระทั่งความทรงจำ.",
+					"มีเพียงวิญญาณสโลว์เท่านั้นที่พำนักอยู่ที่นี่ชั่วนิรันดร์.",
+					"เธอไม่มีเจตนาร้าย. แค่...เหงาเท่านั้นเอง.",
+					"และคณะสำรวจก็ต้องเผชิญหน้ากับความเหงานั้น."
+				],
+				"hindi": [
+					"वह वन जो सब कुछ धीमा कर देता है। समय, उद्देश्य, यहाँ तक कि यादें भी।",
+					"केवल आत्मा स्लो ही यहाँ अनंत काल तक रही।",
+					"उसमें कोई दुर्भावना नहीं थी। बस… वह अकेली थी।",
+					"और अभियान दल को उस अकेलेपन का सामना करना पड़ा।"
+				]
+			}
+		}
+	]
+}
