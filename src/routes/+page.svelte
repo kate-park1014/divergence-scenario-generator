@@ -17,6 +17,13 @@
 			</button>
 		</li>
 	{/each}
+	<li>
+		<button class="arc-item special" onclick={() => goto('/randomEvent')}>
+			<span class="arc-name">무작위 이벤트</span>
+			<span class="arc-id">randomEvent</span>
+			<span class="arrow">→</span>
+		</button>
+	</li>
 </ul>
 
 <style>
@@ -72,5 +79,18 @@
 
 	.arrow {
 		color: #555;
+	}
+
+	.arc-item.special {
+		border-color: #2a3a2a;
+	}
+
+	.arc-item.special:hover {
+		border-color: #4caf50;
+		background: #0d1f0d;
+	}
+
+	.arc-item.special .arc-name {
+		color: #4caf50;
 	}
 </style>

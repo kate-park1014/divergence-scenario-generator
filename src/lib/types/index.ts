@@ -161,3 +161,33 @@ export type FinalChapter = {
 	prologue: MultiLangTextArray;
 	epilogue?: MultiLangTextArray;
 };
+
+// ─────────────────────────────────────────
+// Random Event
+// ─────────────────────────────────────────
+
+export type RandomEventChoice = {
+	text: string;
+	post: string;
+};
+
+export type RandomEvent = {
+	id: string;
+	title: string;
+	narration: string;
+	tags: string[];
+	choices: [RandomEventChoice, RandomEventChoice];
+};
+
+export type LocalizedRandomEventChoice = {
+	text: MultiLangText;
+	post: MultiLangText;
+};
+
+export type LocalizedRandomEvent = {
+	id: string;
+	title: MultiLangText;
+	narration: MultiLangText;
+	tags: string[];
+	choices: [LocalizedRandomEventChoice, LocalizedRandomEventChoice];
+};
