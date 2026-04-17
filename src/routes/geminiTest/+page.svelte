@@ -66,16 +66,134 @@
 		await Promise.all(scenarios.map((s) => generate(s.order)));
 		generatingAll = false;
 	}
+
+	type PipelineStep = 'idle' | 'generating' | 'translating' | 'saving' | 'done' | 'error';
+	let pipelineStep = $state<PipelineStep>('idle');
+	let translatingOrder = $state<number | null>(null);
+	let pipelineError = $state<string | null>(null);
+	let chapterOrder = $state(1);
+	let difficultyLevel = $state(1);
+	let savedFilename = $state<string | null>(null);
+
+	let pipelineBusy = $derived(
+		pipelineStep === 'generating' ||
+			pipelineStep === 'translating' ||
+			pipelineStep === 'saving'
+	);
+
+	let pipelineStatus = $derived.by(() => {
+		if (pipelineStep === 'generating') return `생성 중... ${existsCount}/${scenarios.length}`;
+		if (pipelineStep === 'translating')
+			return `번역 중... ${translatingOrder ?? '?'}/${scenarios.length}`;
+		if (pipelineStep === 'saving') return '최종 JSON 저장 중...';
+		if (pipelineStep === 'done') return `완료: ${savedFilename}`;
+		if (pipelineStep === 'error') return `에러: ${pipelineError}`;
+		return '';
+	});
+
+	async function runPipeline() {
+		if (chapterOrder < 1) {
+			pipelineError = 'chapter_order는 1 이상이어야 합니다.';
+			pipelineStep = 'error';
+			return;
+		}
+
+		pipelineError = null;
+		savedFilename = null;
+
+		// 1. 생성
+		pipelineStep = 'generating';
+		await generateAll();
+		const allGenerated = scenarios.every((s) => s.exists);
+		if (!allGenerated) {
+			pipelineError = '일부 시나리오 생성 실패';
+			pipelineStep = 'error';
+			return;
+		}
+
+		// 2. 번역 (순차)
+		pipelineStep = 'translating';
+		for (const s of scenarios) {
+			translatingOrder = s.order;
+			const res = await fetch('/api/translate', {
+				method: 'POST',
+				headers: { 'Content-Type': 'application/json' },
+				body: JSON.stringify({ filename: s.filename })
+			});
+			if (!res.ok) {
+				const err = await res.json().catch(() => ({ error: '번역 실패' }));
+				pipelineError = `번역 실패 (order ${s.order}): ${err.error ?? res.statusText}`;
+				pipelineStep = 'error';
+				translatingOrder = null;
+				return;
+			}
+		}
+		translatingOrder = null;
+
+		// 3. 최종 JSON 저장
+		pipelineStep = 'saving';
+		const res = await fetch('/api/output/save', {
+			method: 'POST',
+			headers: { 'Content-Type': 'application/json' },
+			body: JSON.stringify({
+				chapterOrder,
+				difficultyLevel,
+				storyarcId: storyarc.id,
+				archiveSource: true
+			})
+		});
+		if (!res.ok) {
+			const err = await res.json().catch(() => ({ error: '저장 실패' }));
+			pipelineError = `저장 실패: ${err.error ?? res.statusText}`;
+			pipelineStep = 'error';
+			return;
+		}
+		const result = await res.json();
+		savedFilename = result.filename;
+		pipelineStep = 'done';
+	}
 </script>
 
 <h1>시나리오 생성 <span class="arc-label">{storyarc.chapter_name.korean}</span></h1>
 
+<label class="storyarc-selector">
+	스토리아크
+	<select
+		value={data.storyarcId}
+		onchange={(e) => goto(`/geminiTest?storyarc=${(e.target as HTMLSelectElement).value}`)}
+		disabled={pipelineBusy || generatingAll}
+	>
+		{#each storyarcRegistry as arc (arc.id)}
+			<option value={arc.id}>{arc.chapter_name.korean} ({arc.id})</option>
+		{/each}
+	</select>
+</label>
+
 <div class="top-bar">
 	<p class="summary">{existsCount} / {scenarios.length} 생성됨</p>
-	<button onclick={generateAll} disabled={generatingAll}>
-		{generatingAll ? '전체 생성 중...' : '전체 생성'}
-	</button>
+	<div class="actions">
+		<button onclick={generateAll} disabled={generatingAll || pipelineBusy}>
+			{generatingAll ? '전체 생성 중...' : '전체 생성'}
+		</button>
+		<label class="order-input">
+			chapter_order
+			<input type="number" min="1" bind:value={chapterOrder} disabled={pipelineBusy} />
+		</label>
+		<label class="order-input">
+			difficulty_level
+			<input type="number" min="1" bind:value={difficultyLevel} disabled={pipelineBusy} />
+		</label>
+		<button onclick={runPipeline} disabled={pipelineBusy}>
+			{pipelineBusy ? '파이프라인 실행 중...' : '전체 파이프라인 실행'}
+		</button>
+	</div>
 </div>
+
+{#if pipelineStatus}
+	<p class="pipeline-status" class:error={pipelineStep === 'error'} class:done={pipelineStep === 'done'}>
+		{pipelineStatus}
+	</p>
+{/if}
 
 <ul class="scenario-list">
 	{#each scenarios as scenario (scenario.order)}
@@ -119,6 +237,24 @@
 		margin-left: 0.5rem;
 	}
 
+	.storyarc-selector {
+		display: flex;
+		align-items: center;
+		gap: 0.5rem;
+		color: #aaa;
+		font-size: 0.85rem;
+		margin-bottom: 1rem;
+	}
+
+	.storyarc-selector select {
+		padding: 0.35rem 0.5rem;
+		background: #111;
+		color: #fff;
+		border: 1px solid #555;
+		border-radius: 4px;
+		min-width: 20rem;
+	}
+
 	.top-bar {
 		display: flex;
 		align-items: center;
@@ -129,6 +265,51 @@
 	.summary {
 		color: #888;
 		margin: 0;
+	}
+
+	.top-bar .actions {
+		display: flex;
+		align-items: center;
+		gap: 0.5rem;
+	}
+
+	.order-input {
+		display: flex;
+		align-items: center;
+		gap: 0.4rem;
+		color: #aaa;
+		font-size: 0.85rem;
+	}
+
+	.order-input input {
+		width: 4rem;
+		padding: 0.3rem 0.4rem;
+		background: #111;
+		color: #fff;
+		border: 1px solid #555;
+		border-radius: 4px;
+	}
+
+	.pipeline-status {
+		margin: 0 0 1rem;
+		padding: 0.5rem 0.75rem;
+		background: #1a1a2a;
+		border: 1px solid #334;
+		border-radius: 4px;
+		color: #aab;
+		font-size: 0.85rem;
+	}
+
+	.pipeline-status.done {
+		background: #1a3a1a;
+		border-color: #285c28;
+		color: #4caf50;
+	}
+
+	.pipeline-status.error {
+		background: #3a1a1a;
+		border-color: #5c2828;
+		color: #e57373;
 	}
 
 	.scenario-list {

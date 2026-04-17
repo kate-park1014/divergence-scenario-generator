@@ -8,7 +8,8 @@ const dialogueEntry = {
 		},
 		speaker: {
 			type: 'string',
-			description: 'narrator | character_any | character_1~4 | NPC이름 | boss'
+			description:
+				"narrator | character_any | character_1~4 | NPC이름 | boss (order 5 최종보스) | random_boss (order 1~4 중간보스, 이름/외형 묘사 금지; 이름 언급 시 '{random_boss}' 플레이스홀더 사용)"
 		},
 		content: {
 			type: 'object',

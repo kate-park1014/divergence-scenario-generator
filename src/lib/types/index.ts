@@ -72,11 +72,18 @@ export type Foreshadowing = {
 	reveal_context: string;
 };
 
+/**
+ * boss 필드 값:
+ * - 'random_boss': 런타임에 임의 배정되는 중간보스 (order 1~4). 이 시나리오에는 final_boss가 등장하지 않는다.
+ * - `pool_${string}` (예: 'pool_033'): 스토리아크의 final_boss로 지정된 보스 pool_id (order 5 전용).
+ */
+export type BossRef = 'random_boss' | `pool_${string}`;
+
 export type ScenarioOutlineItem = {
 	order: number;
 	act: Act;
 	title: string;
-	boss: string; // pool_id 또는 'random_boss'
+	boss: BossRef;
 	npc: string; // npc key
 	summary: string;
 };

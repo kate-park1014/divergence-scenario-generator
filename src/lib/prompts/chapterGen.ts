@@ -5,6 +5,25 @@ export { scenarioTool, buildScenarioTool } from './scenarioTool';
 
 export function buildScenarioPrompt(order: number, storyarc: StoryArc): string {
 	const scenario = storyarc.scenarioOutline[order - 1];
+	const isFinale = order === 5;
+
+	const worldForPrompt = isFinale
+		? storyarc.world
+		: { setting: storyarc.world.setting, rule: storyarc.world.rule };
+
+	const actSummaryForPrompt = isFinale
+		? storyarc.act_summary
+		: { intro: storyarc.act_summary.intro, rising: storyarc.act_summary.rising };
+
+	const foreshadowingForPrompt = isFinale
+		? storyarc.global_foreshadowing
+		: storyarc.global_foreshadowing.map(({ reveal_context: _omit, ...rest }) => rest);
+
+	const outlineForPrompt = isFinale
+		? storyarc.scenarioOutline
+		: storyarc.scenarioOutline.map((item) =>
+				item.order === 5 ? { ...item, title: '(숨김)', summary: '(숨김)' } : item
+			);
 
 	const SYSTEM = `당신은 막장 웹툰 스타일의 게임 시나리오 작가입니다.
 주어진 스토리아크 데이터를 바탕으로 특정 시나리오의 대화 데이터를 작성합니다.
@@ -20,24 +39,40 @@ export function buildScenarioPrompt(order: number, storyarc: StoryArc): string {
 - character_any: 스토리상 중요한 대사. 살아있는 캐릭터 중 자동 배정됨
 - character_1 ~ character_4: 개별 캐릭터 대사. 감정 분배용
 - NPC (lumina, lyra_meadowsong 등): 직접 이름으로 지정
-- boss: 보스 대사는 반드시 'boss' 고정 (보스 이름 사용 금지)
+- boss speaker 규칙은 아래 "## 보스 speaker 규칙" 참조
+
+## 보스 speaker 규칙 (중요)
+- 이 시나리오의 boss 값이 'random_boss'인 경우 (order 1~4, 일반 중간보스):
+  - speaker는 반드시 'random_boss'로 고정
+  - 고유 이름 / 외형(종·복장·체형·상징물) 묘사 금지 — 런타임에 임의 배정되므로 특정할 수 없다
+  - 부득이하게 이름을 언급해야 하는 대사는 '{random_boss}' 플레이스홀더 사용
+    예: "그 일은 {random_boss}가 꾸민 거구나?" / "{random_boss}의 부하를 처치했다"
+  - narrator 지문도 "거대한 그림자" / "정체 모를 자" 같은 중립 표현으로
+- 이 시나리오의 boss 값이 pool_id(예: pool_033)인 경우 (order 5, 최종보스 = final_boss):
+  - speaker는 반드시 'boss' 고정 (보스 이름 사용 금지 — 'boss'로만 표기)
+  - 외형·이름·트위스트는 final_boss 데이터에 맞게 구체적으로 묘사 가능
+- 이 규칙은 아래 출력 예시보다 우선한다 (예시는 order 5 기준)
 
 ## NPC 등장/퇴장 규칙
-- NPC가 등장할 때만 direction enter 사용
-- exit은 연출상 그 방에서 퇴장해야 할 때만 사용
-- 방 이동 시 NPC는 자연스럽게 사라짐 (exit 불필요)
-- 다음 방에서 다시 등장하려면 enter 필요
 
+### 공간 구조 (중요)
+- 방은 **아래에서 위로** 진행된다 (1 → 3 → 5 → 9 → 15). 탐험대는 항상 위쪽으로 이동 중
+- NPC는 탐험대를 따라 올라오는 구조 — 새 방에서 등장 시 아래쪽(낮은 y)에서 걸어 들어오는 느낌
+- enter spot 좌표 가이드: 어디든 상관없음. 소수점 금지
 
-### 기본 원칙
-- NPC는 방 단위로 존재한다. 방이 바뀌면 자동으로 사라진다
-- 따라서 방이 끝날 때 exit을 쓸 필요 없다
-- 다음 방에서 다시 등장하려면 반드시 enter를 써야 한다
+### 기본 원칙 (절대 원칙)
+- NPC는 방 단위로 존재한다. 방이 바뀌면 **자동으로 사라진다**
+- 따라서 방이 끝날 때 exit을 쓸 필요 없다 (exit은 특수 연출 전용)
+- **다음 방에서 NPC가 한 마디라도 하려면 반드시 그 방에서 enter를 먼저 써야 한다**
+  - 이 규칙은 모든 방(id: 1, 3, 5, 9, 15)에 동일하게 적용
+  - 보스 룸 15의 win_dialogue/lose_dialogue도 예외 아님 — 그 블록에서 NPC가 새로 등장한다면 enter 필요
+- enter 없이 NPC 대사가 나오면 렌더링이 깨진다. 반드시 지킬 것
 
-### enter 사용 조건
-- 그 방에서 처음 등장할 때
-- 이전 방에서 exit 후 다시 등장할 때
-- enter 시 spot 좌표 필수 ([x, y] 형태, 소수점 사용금지)
+### enter 체크리스트 (각 방의 dialogue 블록을 쓰기 전 확인)
+1. 이 방에서 이 NPC의 첫 speech가 등장하는가? → 그 speech **앞에** direction 항목 삽입 (type='direction', action='enter', speaker=NPC이름, spot=[x,y], duration_ms=500)
+2. 이전 방에서 이미 enter 했더라도 이번 방은 **새 공간** → 다시 enter 필요
+3. spot은 반드시 지정. y는 하단 권장 (아래에서 걸어오는 연출)
+4. duration_ms는 400~600 사이
 
 ### exit 사용 조건 (아래 경우에만 사용)
 - 대화 도중 NPC가 도망가거나 쫓겨나는 연출
@@ -112,14 +147,14 @@ summary: ${scenario.summary}
 ${JSON.stringify(storyarc.act_tone[scenario.act as keyof typeof storyarc.act_tone], null, 2)}
 
 ## 스토리아크 전체 컨텍스트
-world: ${JSON.stringify(storyarc.world, null, 2)}
+world: ${JSON.stringify(worldForPrompt, null, 2)}
 protagonist_goal: ${storyarc.protagonist_goal}
-final_boss_twist: ${storyarc.final_boss.twist}
-global_foreshadowing: ${JSON.stringify(storyarc.global_foreshadowing, null, 2)}
-act_summary: ${JSON.stringify(storyarc.act_summary, null, 2)}
+${isFinale ? `final_boss_twist: ${storyarc.final_boss.twist}` : ''}
+global_foreshadowing: ${JSON.stringify(foreshadowingForPrompt, null, 2)}
+act_summary: ${JSON.stringify(actSummaryForPrompt, null, 2)}
 
 ## 전체 시나리오 흐름 (맥락 파악용)
-${JSON.stringify(storyarc.scenarioOutline, null, 2)}`;
+${JSON.stringify(outlineForPrompt, null, 2)}`;
 
 	return `${SYSTEM}\n\n---\n\n${USER}`;
 }

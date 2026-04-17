@@ -10,6 +10,7 @@
 	}>();
 
 	let chapterOrder = $state(1);
+	let difficultyLevel = $derived(chapterOrder);
 	let saving = $state(false);
 	let savedFilename = $state('');
 	let error = $state('');
@@ -28,9 +29,11 @@
 			headers: { 'Content-Type': 'application/json' },
 			body: JSON.stringify({
 				chapterOrder,
+				difficultyLevel,
 				chapterName,
 				storyarcId,
-				scenarios
+				scenarios,
+				archiveSource: true
 			})
 		});
 
@@ -54,6 +57,11 @@
 			chapter_order
 			<input type="number" min="1" bind:value={chapterOrder} />
 		</label>
+	</div>
+
+	<div class="field">
+		<span class="field-label">difficulty_level</span>
+		<span class="mono">{difficultyLevel}</span>
 	</div>
 
 	<div class="field">

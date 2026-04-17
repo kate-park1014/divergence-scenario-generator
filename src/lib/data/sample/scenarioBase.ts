@@ -1,9 +1,10 @@
-import { npc_pool } from './npc_pool';
+import { npc_by_theme } from './npc_pool';
 import type { StoryArc } from '$lib/types';
 
 export function buildScenarioBase(order: number, storyarc: StoryArc) {
 	const item = storyarc.scenarioOutline[order - 1];
-	const npc = npc_pool.find((n) => n.key === item.npc);
+	const theme_pool = npc_by_theme[storyarc.theme as keyof typeof npc_by_theme] ?? [];
+	const npc = theme_pool.find((n) => n.key === item.npc);
 
 	const actors: Record<string, unknown> = {};
 	if (npc) {

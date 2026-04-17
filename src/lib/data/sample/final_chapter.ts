@@ -2147,5 +2147,5 @@ export const final_multiLanguage_data = {
 			}
 		]
 	}
-];
-}
+	]
+};

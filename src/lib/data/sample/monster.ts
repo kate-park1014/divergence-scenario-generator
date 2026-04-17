@@ -48,3 +48,42 @@ export const forest_pools = {
 		theme: 'forest'
 	}
 };
+
+export const snowy_pools = {
+	"pool_033": {
+      "chapter": "1",
+      "difficulty": "boss",
+      "monster_ids": [
+        "mon_9f26c511-91fe-4dde-8f5e-46cdb1678228",
+        "mon_0be17d2d-61a2-4e5b-bd85-205eed948970",
+        "mon_7d9a7155-4796-4af8-8882-03446adc3bb9",
+        "mon_69441b06-4fcf-4db7-baac-777aba10686b"
+      ],
+      "pool_id": "pool_033",
+      "theme": "snowy"
+    },
+    "pool_034": {
+      "chapter": "2",
+      "difficulty": "boss",
+      "monster_ids": [
+        "mon_4d3c70d1-b039-4a82-8b2a-cbe8c103600c",
+        "mon_b1bd634e-b5e5-49af-9d23-a126a82180ec",
+        "mon_8b04e6dc-2a0f-4180-96d5-bb7052c81c05",
+        "mon_9696cfe0-3541-4baa-8ccb-7c9821c6b9da"
+      ],
+      "pool_id": "pool_034",
+      "theme": "snowy"
+    },
+    "pool_035": {
+      "chapter": "3",
+      "difficulty": "boss",
+      "monster_ids": [
+        "mon_14de4732-260d-4b09-8a53-211441faf0b4",
+        "mon_e701cc8a-56be-4023-8f7c-0a6a3592463b",
+        "mon_9d2d586b-7935-455c-9bbc-f37d3955fb7b",
+        "mon_6d6129b4-3495-43b2-af1b-5d8067cbc0c9"
+      ],
+      "pool_id": "pool_035",
+      "theme": "snowy"
+    }
+};
