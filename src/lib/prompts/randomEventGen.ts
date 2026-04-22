@@ -1,3 +1,5 @@
+import type { RandomEventScenarioType } from '$lib/types';
+
 export type RandomEventTheme = {
 	id: string;
 	label: string;
@@ -15,12 +17,31 @@ export const RANDOM_EVENT_THEMES: RandomEventTheme[] = [
 	{ id: 'magic_tower', label: '마법 탑', description: '광기에 빠진 마법사의 탑과 실험체들' }
 ];
 
-export function buildRandomEventPrompt(theme: RandomEventTheme): string {
-	const SYSTEM = `너는 로그라이크 게임의 시나리오 작가이자 JSON 데이터 생성기야. 내가 제공하는 형식에 맞춰 게임 내 '무작위 이벤트' 데이터를 생성해줘.
+export type ScenarioTypeOption = {
+	id: RandomEventScenarioType;
+	label: string;
+	description: string;
+};
 
-[데이터 구조 및 규칙]
+export const RANDOM_EVENT_SCENARIO_TYPES: ScenarioTypeOption[] = [
+	{
+		id: 'trade_off',
+		label: '확정 트레이드오프형',
+		description: '손해 감수 고가치 vs 작지만 확실한 보상'
+	},
+	{
+		id: 'probability_upgrade',
+		label: '확률 업그레이드형',
+		description: '확정 보상 vs 리스크 없는 확률 업'
+	},
+	{
+		id: 'random_hidden',
+		label: '랜덤 히든형',
+		description: '결과 미공개·힌트만 — 감수 vs 회피'
+	}
+];
 
-id: 영문 PascalCase로 작성 (예: WhisperingShadows).
+const COMMON_RULES = `id: 영문 PascalCase로 작성 (예: WhisperingShadows). 10개 모두 서로 다른 고유한 이름.
 
 title: 이벤트의 제목 (한국어).
 
@@ -28,86 +49,223 @@ narration: 상황을 묘사하는 문장 (한국어). 신비롭고 몰입감 있
 
 tags: 이벤트의 성격을 나타내는 영문 키워드 리스트. 6개 이상. title, narration, choices의 실제 내용(분위기, 장르, 결과 유형, 소재 등)을 기반으로 작성할 것. 단순히 테마 이름을 반복하지 말 것.
 
+scenarioType: 이 배치의 시나리오 타입. 모든 이벤트에 동일한 값을 넣을 것.
+
 choices: 유저의 선택지 2개를 포함하는 배열.
 
 text: 선택지 버튼에 표시될 문구. 10자 내외로 간결하게.
 
-post (가장 중요): 선택 후 결과 메시지. 반드시 [긍정적인 결과나 보상]에 대한 설명이 먼저 나오고, 그 뒤에 [부정적인 대가나 페널티]에 대한 설명이 이어지는 구조로 작성할 것. 각 설명은 1문장씩, 전체 80~120자 수준.
-주의: 체력, 방어력, 공격력, 민첩성 등 구체적인 게임 스탯 용어를 절대 사용하지 말 것. 대신 "몸이 가벼워졌다", "발걸음이 무거워졌다", "무언가를 잃은 듯한 느낌이 들었다", "눈앞이 선명해졌다" 처럼 감각적·서사적 표현으로 결과를 암시할 것.
+[공통 금지 사항]
+- 체력, 방어력, 공격력, 민첩성 등 구체적인 게임 스탯 용어를 절대 사용하지 말 것
+- 대신 "몸이 가벼워졌다", "발걸음이 무거워졌다", "무언가를 잃은 듯한 느낌이 들었다", "눈앞이 선명해졌다" 처럼 감각적·서사적 표현으로 결과를 암시할 것`;
 
-[출력 예시]
+const TRADE_OFF_RULES = `[시나리오 타입: trade_off — 확정 트레이드오프형]
+
+이 타입은 "손해를 감수하고 확정적인 고가치 보상을 얻는" 구조다. 두 선택지가 서로 다른 리스크/보상 구조를 가진다.
+
+choice[0] (고가치 트레이드오프):
+  post = [높은 등급의 긍정 보상/결과(1문장)] → [확실한 부정 대가/페널티(1문장)]
+  전체 80~120자. 긍정이 먼저, 부정이 뒤.
+
+choice[1] (안전한 소규모 보상):
+  post = [작지만 확실한 긍정 효과(1~2문장)]
+  전체 40~90자. 부정적인 서술 금지. 순수하게 긍정적인 결과만.
+
+[출력 예시 (단일 이벤트)]
 {
   "id": "WhisperingShadows",
   "title": "속삭이는 그림자",
   "narration": "어둠 속에서 희미한 속삭임이 들려온다. 저 멀리 빛나는 무언가가 보이고, 다른 쪽에서는 따뜻한 빛이 새어 나온다...",
-  "tags": ["shadow", "mystery", "risk", "reward"],
+  "tags": ["shadow", "mystery", "risk", "reward", "trade_off", "temptation"],
+  "scenarioType": "trade_off",
   "choices": [
     {
       "text": "속삭임을 따라간다",
-      "post": "속삭임의 근원에는 아름다운 보석이 놓여 있었습니다. 하지만 다가가 보석을 너무 오랫동안 바라본 나머지 눈이 부셔 한동안 앞을 보기 힘들었습니다."
+      "post": "속삭임의 근원에서 오래된 보석을 손에 넣었다. 하지만 너무 오래 응시한 탓에 눈앞이 한동안 어지럽게 흐려졌다."
     },
     {
       "text": "빛을 향해 나아간다",
-      "post": "따뜻한 빛을 따라가니 안전한 휴식처를 발견해 체력을 회복했습니다. 하지만 너무 안락한 나머지 게을러져 민첩성이 쇠퇴했습니다."
+      "post": "따뜻한 빛 아래에서 잠시 쉬자 기운이 맑게 차올랐다."
     }
   ]
 }`;
 
+const PROBABILITY_UPGRADE_RULES = `[시나리오 타입: probability_upgrade — 확률 업그레이드형]
+
+이 타입은 "리스크 없이 보상의 질을 확률로 상승시키는" 구조다. 두 선택지 모두 부정적 대가가 없고, 다만 한쪽은 확정적인 보상, 다른 쪽은 확률적으로 더 좋은 보상이다.
+
+choice[0] (안전한 확정 보상):
+  post = [확정적인 긍정 보상(1~2문장)]
+  전체 40~90자. 부정적인 서술 절대 금지.
+
+choice[1] (확률 업그레이드):
+  post = [확률적 상위 보상 암시(1~2문장)]
+  전체 50~100자. 부정적인 서술 절대 금지.
+  반드시 확률 암시 표현을 쓸 것: "어쩌면", "~할지도 모른다", "희미하게 느껴졌다", "운이 따른다면", "그럴 수도 있었다", "어떤 기운이 스쳤다"
+  명시적 숫자 확률(%, 퍼센트) 사용 절대 금지. 서사적 암시로만.
+  결과는 "상위 보상을 얻은 느낌" 또는 "아무 일도 일어나지 않았다" 수준. 어느 쪽이든 손해는 없다.
+
+[출력 예시 (단일 이벤트)]
+{
+  "id": "WhisperingShadows",
+  "title": "속삭이는 그림자",
+  "narration": "어둠 속에서 희미한 속삭임이 들려온다. 저 멀리 빛나는 무언가가 보이고, 다른 쪽에서는 따뜻한 빛이 새어 나온다...",
+  "tags": ["shadow", "mystery", "chance", "reward", "probability_upgrade", "fortune"],
+  "scenarioType": "probability_upgrade",
+  "choices": [
+    {
+      "text": "빛을 받아들인다",
+      "post": "따뜻한 빛이 스며들어 마음 한 켠이 단단해지는 감각이 남았다."
+    },
+    {
+      "text": "속삭임에 귀 기울인다",
+      "post": "귓가에 낯선 이름이 스쳤다. 어쩌면 오래된 축복이 깃들었을지도 모른다. 어떤 기운은 희미하게 남고, 어떤 기운은 끝내 말을 걸지 않았다."
+    }
+  ]
+}`;
+
+const RANDOM_HIDDEN_RULES = `[시나리오 타입: random_hidden — 랜덤 히든형]
+
+이 타입은 "결과가 플레이어에게 공개되지 않는" 구조다. narration은 반드시 **힌트만** 제공하고, 긍정처럼 보이지만 위험 요소가 숨어 있음을 암시한다. 내부적으로 choice[0]은 70% 긍정 / 30% 부정 확률로 결정되지만, post 텍스트에는 어느 쪽 결과인지 드러내지 말 것.
+
+narration 특수 규칙:
+  겉보기에는 매혹적이거나 탐스럽게 보이되, 미묘한 위화감·경고·불길한 디테일을 한 겹 숨겨 둘 것.
+  예: "보석함에서 달콤한 향이 스며 나온다. 뚜껑엔 긁힌 자국이 희미하게 남아 있다."
+
+choice[0] (선택한다 — 리스크 감수):
+  text = "선택한다" / "집는다" / "받아들인다" / "열어본다" 류. 10자 내외.
+  post = 결과를 특정하지 않는 **모호한 감각 서술(1~2문장)**. 전체 50~110자.
+    - 긍정도 부정도 확정하지 말 것. "무언가 변한 듯 아닌 듯", "기운이 스쳤다가 사라졌다", "등 뒤가 서늘해지기도, 따뜻해지기도 했다" 같은 양가적 표현 필수.
+    - % 숫자, "70% 확률", "30% 위험" 같은 수치 표현 금지.
+    - "성공했다" / "실패했다" / "독을 마셨다" / "축복을 받았다" 같은 **결과 확정 서술 절대 금지**.
+
+choice[1] (지나간다 — 리스크 회피):
+  text = "지나간다" / "돌아간다" / "외면한다" / "발길을 돌린다" 류. 10자 내외.
+  post = 아무 일도 일어나지 않은 정적인 서술(1문장). 전체 30~70자.
+    - 부정적 서술 금지. 긍정적 보상 서술도 금지. 중립적 통과 묘사만.
+    - 예: "눈길을 돌리고 지나쳤다. 등 뒤에서 어떤 기척도 따라오지 않았다."
+
+[출력 예시 (단일 이벤트)]
+{
+  "id": "VelvetBoxOffering",
+  "title": "벨벳 상자의 권유",
+  "narration": "길목 한가운데 놓인 벨벳 상자. 뚜껑 틈새로 달콤한 향이 새어 나오고, 모서리엔 긁힌 자국이 희미하다.",
+  "tags": ["hidden", "temptation", "risk", "mystery", "random_hidden", "unknown"],
+  "scenarioType": "random_hidden",
+  "choices": [
+    {
+      "text": "열어본다",
+      "post": "뚜껑을 들추자 향이 훅 퍼지며 무언가 스쳤다. 무엇이 남고 무엇이 사라졌는지는 끝내 알 수 없었다."
+    },
+    {
+      "text": "지나간다",
+      "post": "시선을 거두고 발걸음을 옮겼다. 상자는 그대로 놓여 있었다."
+    }
+  ]
+}`;
+
+function rulesFor(scenarioType: RandomEventScenarioType): string {
+	if (scenarioType === 'trade_off') return TRADE_OFF_RULES;
+	if (scenarioType === 'probability_upgrade') return PROBABILITY_UPGRADE_RULES;
+	return RANDOM_HIDDEN_RULES;
+}
+
+export function buildRandomEventPrompt(
+	theme: RandomEventTheme,
+	scenarioType: RandomEventScenarioType
+): string {
+	const SYSTEM = `너는 로그라이크 게임의 시나리오 작가이자 JSON 데이터 생성기야. 내가 제공하는 형식에 맞춰 게임 내 '무작위 이벤트' 데이터를 생성해줘.
+
+[데이터 구조 및 규칙]
+
+${COMMON_RULES}
+
+${rulesFor(scenarioType)}`;
+
 	const USER = `테마: ${theme.label} (${theme.description})
+시나리오 타입: ${scenarioType}
 
 위 테마에 맞는 무작위 이벤트를 하나 생성해줘.
-이벤트는 신비롭고 몰입감 있어야 하며, 선택지는 각각 명확한 트레이드오프가 있어야 해.`;
+- 테마의 소재와 분위기를 narration, choice.text, post에 자연스럽게 녹일 것
+- 시나리오 타입 규칙을 엄격히 지킬 것 (특히 choice별 post 구조)
+- scenarioType 필드에는 반드시 "${scenarioType}" 값을 넣을 것`;
 
 	return `${SYSTEM}\n\n---\n\n${USER}`;
 }
 
-const eventItemSchema = {
-	type: 'object',
-	properties: {
-		id: {
-			type: 'string',
-			description: '영문 PascalCase 이벤트 ID (예: WhisperingShadows)'
-		},
-		title: {
-			type: 'string',
-			description: '이벤트 제목 (한국어)'
-		},
-		narration: {
-			type: 'string',
-			description: '상황을 묘사하는 문장 (한국어). 신비롭고 몰입감 있게, 2문장 내외 50~70자 수준.'
-		},
-		tags: {
-			type: 'array',
-			minItems: 6,
-			items: { type: 'string' },
-			description: '이벤트 성격을 나타내는 영문 키워드. 6개 이상. title, narration, choices의 내용(분위기/장르/결과 유형 등)을 반영할 것.'
-		},
-		choices: {
-			type: 'array',
-			minItems: 2,
-			maxItems: 2,
-			description: '유저의 선택지 2개',
-			items: {
-				type: 'object',
-				properties: {
-					text: {
-						type: 'string',
-						description: '선택지 버튼에 표시될 문구. 10자 내외로 간결하게.'
-					},
-					post: {
-						type: 'string',
-						description:
-							'선택 후 결과 메시지. 긍정적인 결과/보상(1문장) → 부정적인 대가/페널티(1문장) 순서. 전체 80~120자.'
-					}
-				},
-				required: ['text', 'post']
-			}
-		}
-	},
-	required: ['id', 'title', 'narration', 'tags', 'choices']
-};
+function eventItemSchema(scenarioType: RandomEventScenarioType) {
+	let choice0Desc: string;
+	let choice1Desc: string;
 
-export function buildRandomEventTool() {
+	if (scenarioType === 'trade_off') {
+		choice0Desc =
+			'선택 후 결과 메시지. [높은 등급 긍정 보상(1문장)] → [부정 대가(1문장)] 순서. 전체 80~120자.';
+		choice1Desc = '선택 후 결과 메시지. 작지만 확실한 긍정 효과만. 부정 서술 금지. 전체 40~90자.';
+	} else if (scenarioType === 'probability_upgrade') {
+		choice0Desc = '선택 후 결과 메시지. 확정적인 긍정 보상만. 부정 서술 금지. 전체 40~90자.';
+		choice1Desc =
+			'선택 후 결과 메시지. 확률 암시 표현("어쩌면", "~할지도 모른다" 등)으로 상위 보상 가능성 서술. % 숫자 금지. 부정 서술 금지. 전체 50~100자.';
+	} else {
+		// random_hidden
+		choice0Desc =
+			'선택 후 결과 메시지. 결과를 확정하지 않는 모호한 양가적 서술. "성공/실패/독/축복" 같은 결과 단어 금지. % 숫자 금지. 전체 50~110자.';
+		choice1Desc = '선택 후 결과 메시지. 중립적 통과 묘사. 긍정/부정 보상 서술 모두 금지. 전체 30~70자.';
+	}
+
+	return {
+		type: 'object',
+		properties: {
+			id: {
+				type: 'string',
+				description: '영문 PascalCase 이벤트 ID (예: WhisperingShadows)'
+			},
+			title: {
+				type: 'string',
+				description: '이벤트 제목 (한국어)'
+			},
+			narration: {
+				type: 'string',
+				description: '상황을 묘사하는 문장 (한국어). 신비롭고 몰입감 있게, 2문장 내외 50~70자 수준.'
+			},
+			tags: {
+				type: 'array',
+				minItems: 6,
+				items: { type: 'string' },
+				description:
+					'이벤트 성격을 나타내는 영문 키워드. 6개 이상. title, narration, choices의 내용(분위기/장르/결과 유형 등)을 반영할 것.'
+			},
+			scenarioType: {
+				type: 'string',
+				enum: [scenarioType],
+				description: `이 배치의 시나리오 타입. 반드시 "${scenarioType}".`
+			},
+			choices: {
+				type: 'array',
+				minItems: 2,
+				maxItems: 2,
+				description: '유저의 선택지 2개. [0]과 [1]의 post 구조가 서로 다름.',
+				items: {
+					type: 'object',
+					properties: {
+						text: {
+							type: 'string',
+							description: '선택지 버튼에 표시될 문구. 10자 내외로 간결하게.'
+						},
+						post: {
+							type: 'string',
+							description: `choice[0]: ${choice0Desc} / choice[1]: ${choice1Desc}`
+						}
+					},
+					required: ['text', 'post']
+				}
+			}
+		},
+		required: ['id', 'title', 'narration', 'tags', 'scenarioType', 'choices']
+	};
+}
+
+export function buildRandomEventTool(scenarioType: RandomEventScenarioType) {
+	const schema = eventItemSchema(scenarioType);
 	return {
 		type: 'function',
 		function: {
@@ -115,20 +273,14 @@ export function buildRandomEventTool() {
 			description: '로그라이크 게임의 무작위 이벤트 데이터를 1개 생성합니다.',
 			parameters: {
 				type: 'object',
-				properties: {
-					id: eventItemSchema.properties.id,
-					title: eventItemSchema.properties.title,
-					narration: eventItemSchema.properties.narration,
-					tags: eventItemSchema.properties.tags,
-					choices: eventItemSchema.properties.choices
-				},
-				required: eventItemSchema.required
+				properties: schema.properties,
+				required: schema.required
 			}
 		}
 	};
 }
 
-export function buildRandomEventBatchTool() {
+export function buildRandomEventBatchTool(scenarioType: RandomEventScenarioType) {
 	return {
 		type: 'function',
 		function: {
@@ -141,8 +293,9 @@ export function buildRandomEventBatchTool() {
 						type: 'array',
 						minItems: 10,
 						maxItems: 10,
-						description: '10개의 무작위 이벤트 배열. 각 이벤트는 서로 다른 상황과 소재를 사용할 것.',
-						items: eventItemSchema
+						description:
+							'10개의 무작위 이벤트 배열. 각 이벤트는 서로 다른 상황과 소재를 사용할 것. 모두 동일한 scenarioType.',
+						items: eventItemSchema(scenarioType)
 					}
 				},
 				required: ['events']
@@ -151,49 +304,26 @@ export function buildRandomEventBatchTool() {
 	};
 }
 
-export function buildRandomEventBatchPrompt(theme: RandomEventTheme): string {
+export function buildRandomEventBatchPrompt(
+	theme: RandomEventTheme,
+	scenarioType: RandomEventScenarioType
+): string {
 	const SYSTEM = `너는 로그라이크 게임의 시나리오 작가이자 JSON 데이터 생성기야. 내가 제공하는 형식에 맞춰 게임 내 '무작위 이벤트' 데이터를 생성해줘.
 
 [데이터 구조 및 규칙]
 
-id: 영문 PascalCase로 작성 (예: WhisperingShadows). 10개 모두 서로 다른 고유한 이름.
+${COMMON_RULES}
 
-title: 이벤트의 제목 (한국어).
-
-narration: 상황을 묘사하는 문장 (한국어). 신비롭고 몰입감 있게 2문장 내외로 작성. 50~70자 수준.
-
-tags: 이벤트의 성격을 나타내는 영문 키워드 리스트. 6개 이상. title, narration, choices의 실제 내용(분위기, 장르, 결과 유형, 소재 등)을 기반으로 작성할 것. 단순히 테마 이름을 반복하지 말 것.
-
-choices: 유저의 선택지 2개를 포함하는 배열.
-
-text: 선택지 버튼에 표시될 문구. 10자 내외로 간결하게.
-
-post (가장 중요): 선택 후 결과 메시지. 반드시 [긍정적인 결과나 보상]에 대한 설명이 먼저 나오고, 그 뒤에 [부정적인 대가나 페널티]에 대한 설명이 이어지는 구조로 작성할 것. 각 설명은 1문장씩, 전체 80~120자 수준.
-주의: 체력, 방어력, 공격력, 민첩성 등 구체적인 게임 스탯 용어를 절대 사용하지 말 것. 대신 "몸이 가벼워졌다", "발걸음이 무거워졌다", "무언가를 잃은 듯한 느낌이 들었다", "눈앞이 선명해졌다" 처럼 감각적·서사적 표현으로 결과를 암시할 것.
-
-[출력 예시 (단일 이벤트)]
-{
-  "id": "WhisperingShadows",
-  "title": "속삭이는 그림자",
-  "narration": "어둠 속에서 희미한 속삭임이 들려온다. 저 멀리 빛나는 무언가가 보이고, 다른 쪽에서는 따뜻한 빛이 새어 나온다...",
-  "tags": ["shadow", "mystery", "risk", "reward"],
-  "choices": [
-    {
-      "text": "속삭임을 따라간다",
-      "post": "속삭임의 근원에는 아름다운 보석이 놓여 있었습니다. 하지만 다가가 보석을 너무 오랫동안 바라본 나머지 눈이 부셔 한동안 앞을 보기 힘들었습니다."
-    },
-    {
-      "text": "빛을 향해 나아간다",
-      "post": "따뜻한 빛을 따라가니 안전한 휴식처를 발견해 체력을 회복했습니다. 하지만 너무 안락한 나머지 게을러져 민첩성이 쇠퇴했습니다."
-    }
-  ]
-}`;
+${rulesFor(scenarioType)}`;
 
 	const USER = `테마: ${theme.label} (${theme.description})
+시나리오 타입: ${scenarioType}
 
 위 테마에 맞는 무작위 이벤트를 10개 생성해줘.
 - 각 이벤트는 서로 다른 소재와 상황을 사용할 것
-- 모든 이벤트는 신비롭고 몰입감 있어야 하며, 선택지는 각각 명확한 트레이드오프가 있어야 해
+- 테마의 소재와 분위기를 narration, choice.text, post에 자연스럽게 녹일 것
+- 10개 모두 시나리오 타입 규칙을 엄격히 지킬 것 (특히 choice별 post 구조)
+- scenarioType 필드에는 반드시 "${scenarioType}" 값을 넣을 것
 - id는 10개 모두 서로 겹치지 않게`;
 
 	return `${SYSTEM}\n\n---\n\n${USER}`;

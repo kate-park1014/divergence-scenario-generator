@@ -173,6 +173,8 @@ export type FinalChapter = {
 // Random Event
 // ─────────────────────────────────────────
 
+export type RandomEventScenarioType = 'trade_off' | 'probability_upgrade' | 'random_hidden';
+
 export type RandomEventChoice = {
 	text: string;
 	post: string;
@@ -183,6 +185,7 @@ export type RandomEvent = {
 	title: string;
 	narration: string;
 	tags: string[];
+	scenarioType: RandomEventScenarioType;
 	choices: [RandomEventChoice, RandomEventChoice];
 };
 
@@ -196,5 +199,6 @@ export type LocalizedRandomEvent = {
 	title: MultiLangText;
 	narration: MultiLangText;
 	tags: string[];
+	scenarioType: RandomEventScenarioType;
 	choices: [LocalizedRandomEventChoice, LocalizedRandomEventChoice];
 };

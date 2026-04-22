@@ -1,13 +1,16 @@
 <script lang="ts">
 	import {
 		RANDOM_EVENT_THEMES,
+		RANDOM_EVENT_SCENARIO_TYPES,
 		buildRandomEventBatchPrompt,
 		buildRandomEventBatchTool,
-		type RandomEventTheme
+		type RandomEventTheme,
+		type ScenarioTypeOption
 	} from '$lib/prompts/randomEventGen';
-	import type { RandomEvent } from '$lib/types';
+	import type { RandomEvent, RandomEventScenarioType } from '$lib/types';
 
 	let selectedTheme = $state<RandomEventTheme | null>(null);
+	let selectedScenarioType = $state<RandomEventScenarioType>('trade_off');
 	let generating = $state(false);
 	let events = $state<RandomEvent[]>([]);
 	let generateError = $state('');
@@ -20,15 +23,25 @@
 	let localizedFilename = $state('');
 	let localizeError = $state('');
 
-	function selectTheme(theme: RandomEventTheme) {
-		if (selectedTheme?.id === theme.id) return;
-		selectedTheme = theme;
+	function resetResults() {
 		events = [];
 		generateError = '';
 		savedFilename = '';
 		saveError = '';
 		localizedFilename = '';
 		localizeError = '';
+	}
+
+	function selectTheme(theme: RandomEventTheme) {
+		if (selectedTheme?.id === theme.id) return;
+		selectedTheme = theme;
+		resetResults();
+	}
+
+	function selectScenarioType(type: ScenarioTypeOption) {
+		if (selectedScenarioType === type.id) return;
+		selectedScenarioType = type.id;
+		resetResults();
 	}
 
 	async function generate() {
@@ -40,14 +53,14 @@
 		savedFilename = '';
 		localizedFilename = '';
 
-		const message = buildRandomEventBatchPrompt(selectedTheme);
+		const message = buildRandomEventBatchPrompt(selectedTheme, selectedScenarioType);
 
 		const res = await fetch('/api/gemini', {
 			method: 'POST',
 			headers: { 'Content-Type': 'application/json' },
 			body: JSON.stringify({
 				message,
-				tools: [buildRandomEventBatchTool()],
+				tools: [buildRandomEventBatchTool(selectedScenarioType)],
 				tool_choice: { type: 'function', function: { name: 'generate_random_events_batch' } }
 			})
 		});
@@ -57,6 +70,7 @@
 		if (data.tool_result?.events) {
 			events = (data.tool_result.events as RandomEvent[]).map((e) => ({
 				...e,
+				scenarioType: e.scenarioType ?? selectedScenarioType,
 				tags: [
 					selectedTheme!.id,
 					...new Set(
@@ -82,7 +96,11 @@
 		const res = await fetch('/api/randomEvent/save', {
 			method: 'POST',
 			headers: { 'Content-Type': 'application/json' },
-			body: JSON.stringify({ theme: selectedTheme.id, events })
+			body: JSON.stringify({
+				theme: selectedTheme.id,
+				scenarioType: selectedScenarioType,
+				events
+			})
 		});
 
 		const result = await res.json();
@@ -122,7 +140,7 @@
 </script>
 
 <h1>무작위 이벤트 생성</h1>
-<p class="subtitle">테마를 선택한 뒤 10개의 이벤트를 생성하세요.</p>
+<p class="subtitle">테마와 시나리오 타입을 선택한 뒤 10개의 이벤트를 생성하세요.</p>
 
 <!-- ── 테마 선택 ── -->
 <section class="section">
@@ -143,12 +161,33 @@
 	</ul>
 </section>
 
+<!-- ── 시나리오 타입 선택 ── -->
+<section class="section">
+	<h2>시나리오 타입 선택</h2>
+	<ul class="type-grid">
+		{#each RANDOM_EVENT_SCENARIO_TYPES as type}
+			<li>
+				<button
+					class="theme-item"
+					class:selected={selectedScenarioType === type.id}
+					onclick={() => selectScenarioType(type)}
+				>
+					<span class="theme-label">{type.label}</span>
+					<span class="theme-desc">{type.description}</span>
+				</button>
+			</li>
+		{/each}
+	</ul>
+</section>
+
 <!-- ── 생성 ── -->
 {#if selectedTheme}
 	<section class="section">
 		<div class="action-bar">
 			<span class="selected-label">
 				선택된 테마: <strong>{selectedTheme.label}</strong>
+				<span class="divider">·</span>
+				타입: <strong>{RANDOM_EVENT_SCENARIO_TYPES.find((t) => t.id === selectedScenarioType)?.label}</strong>
 			</span>
 			<button onclick={generate} disabled={generating}>
 				{generating ? '생성 중...' : '10개 생성'}
@@ -198,6 +237,13 @@
 							<span class="event-num">{i + 1}</span>
 							<span class="event-title">{event.title}</span>
 							<span class="event-id">{event.id}</span>
+							<span class="type-badge type-badge-{event.scenarioType}">
+								{event.scenarioType === 'trade_off'
+									? '트레이드오프'
+									: event.scenarioType === 'probability_upgrade'
+										? '확률 업'
+										: '랜덤 히든'}
+							</span>
 							<div class="tags">
 								{#each event.tags as tag}
 									<span class="tag">{tag}</span>
@@ -213,6 +259,15 @@
 										<div class="choice-header">
 											<span class="choice-num">선택 {ci + 1}</span>
 											<span class="choice-text">{choice.text}</span>
+											<span class="choice-role">
+												{#if event.scenarioType === 'trade_off'}
+													{ci === 0 ? '고가치 트레이드오프' : '안전한 확정 보상'}
+												{:else if event.scenarioType === 'probability_upgrade'}
+													{ci === 0 ? '확정 보상' : '확률 업그레이드'}
+												{:else}
+													{ci === 0 ? '리스크 감수 (70/30)' : '리스크 회피'}
+												{/if}
+											</span>
 										</div>
 										<p class="choice-post">{choice.post}</p>
 									</div>
@@ -248,12 +303,20 @@
 		margin-bottom: 2rem;
 	}
 
-	/* ── 테마 그리드 ── */
+	/* ── 테마 / 타입 그리드 ── */
 	.theme-grid {
 		list-style: none;
 		padding: 0;
 		display: grid;
 		grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+		gap: 0.5rem;
+	}
+
+	.type-grid {
+		list-style: none;
+		padding: 0;
+		display: grid;
+		grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
 		gap: 0.5rem;
 	}
 
@@ -280,8 +343,13 @@
 	}
 
 	.theme-item.selected {
-		border-color: #4caf50;
-		background: #0d1f0d;
+		border-color: #a8d8b9;
+		background: #2a3d32;
+		color: #d4ead9;
+	}
+
+	.theme-item.selected .theme-desc {
+		color: #a8c4ad;
 	}
 
 	.theme-label {
@@ -308,6 +376,11 @@
 
 	.selected-label strong {
 		color: #fff;
+	}
+
+	.divider {
+		color: #444;
+		margin: 0 0.35rem;
 	}
 
 	button {
@@ -384,9 +457,11 @@
 	}
 
 	.event-item {
-		border: 1px solid #2a2a2a;
+		border: 1px solid #f2e4cf;
 		border-radius: 6px;
 		overflow: hidden;
+		background: #fdf6ec;
+		color: #3a342b;
 	}
 
 	.event-item details > summary {
@@ -405,13 +480,13 @@
 	}
 
 	.event-item details[open] > summary {
-		border-bottom: 1px solid #2a2a2a;
-		background: #0d0d0d;
+		border-bottom: 1px solid #f2e4cf;
+		background: #fff9ee;
 	}
 
 	.event-num {
 		font-size: 0.75rem;
-		color: #555;
+		color: #b89a6a;
 		font-family: monospace;
 		min-width: 18px;
 	}
@@ -419,12 +494,13 @@
 	.event-title {
 		font-weight: 600;
 		font-size: 0.9rem;
+		color: #3a342b;
 	}
 
 	.event-id {
 		font-family: monospace;
 		font-size: 0.72rem;
-		color: #555;
+		color: #b89a6a;
 	}
 
 	.tags {
@@ -438,8 +514,41 @@
 		font-size: 0.68rem;
 		padding: 0.1rem 0.4rem;
 		border-radius: 999px;
-		background: #1a2a3a;
-		color: #6ab0e0;
+		background: #c9d8ea;
+		color: #4a5d78;
+		font-family: monospace;
+	}
+
+	.type-badge {
+		font-size: 0.68rem;
+		padding: 0.12rem 0.5rem;
+		border-radius: 4px;
+		font-weight: 600;
+		letter-spacing: 0.02em;
+	}
+
+	.type-badge-trade_off {
+		background: #f5d4c0;
+		color: #8a4a2a;
+		border: 1px solid #e8b89a;
+	}
+
+	.type-badge-probability_upgrade {
+		background: #c9dff0;
+		color: #3a6a8a;
+		border: 1px solid #a8c4de;
+	}
+
+	.type-badge-random_hidden {
+		background: #e0d4ea;
+		color: #5a3d7a;
+		border: 1px solid #c9b8d8;
+	}
+
+	.choice-role {
+		margin-left: auto;
+		font-size: 0.7rem;
+		color: #a88a5a;
 		font-family: monospace;
 	}
 
@@ -453,7 +562,7 @@
 
 	.narration {
 		margin: 0;
-		color: #ccc;
+		color: #4a4238;
 		font-size: 0.88rem;
 		line-height: 1.6;
 	}
@@ -465,10 +574,10 @@
 	}
 
 	.choice {
-		border: 1px solid #222;
+		border: 1px solid #f2e4cf;
 		border-radius: 5px;
 		padding: 0.6rem 0.85rem;
-		background: #080808;
+		background: #fffcf5;
 	}
 
 	.choice-header {
@@ -480,19 +589,20 @@
 
 	.choice-num {
 		font-size: 0.68rem;
-		color: #555;
+		color: #b89a6a;
 		font-family: monospace;
 	}
 
 	.choice-text {
 		font-weight: 600;
 		font-size: 0.88rem;
+		color: #3a342b;
 	}
 
 	.choice-post {
 		margin: 0;
 		font-size: 0.83rem;
-		color: #999;
+		color: #5a5048;
 		line-height: 1.55;
 	}
 </style>
