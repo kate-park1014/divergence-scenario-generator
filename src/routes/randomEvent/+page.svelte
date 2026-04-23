@@ -269,7 +269,16 @@
 												{/if}
 											</span>
 										</div>
-										<p class="choice-post">{choice.post}</p>
+										{#if choice.postSuccess !== undefined}
+											<p class="choice-post">
+												<span class="post-label success">성공</span>{choice.postSuccess}
+											</p>
+											<p class="choice-post">
+												<span class="post-label fail">실패</span>{choice.postFail}
+											</p>
+										{:else}
+											<p class="choice-post">{choice.post}</p>
+										{/if}
 									</div>
 								{/each}
 							</div>
@@ -604,5 +613,25 @@
 		font-size: 0.83rem;
 		color: #5a5048;
 		line-height: 1.55;
+	}
+
+	.post-label {
+		display: inline-block;
+		font-size: 0.72rem;
+		font-weight: 600;
+		border-radius: 3px;
+		padding: 0 5px;
+		margin-right: 6px;
+		vertical-align: middle;
+	}
+
+	.post-label.success {
+		background: #e6f4ea;
+		color: #2e7d32;
+	}
+
+	.post-label.fail {
+		background: #fce8e6;
+		color: #c62828;
 	}
 </style>

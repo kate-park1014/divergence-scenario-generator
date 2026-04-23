@@ -21,9 +21,11 @@ type LangKey = (typeof TARGET_LANGS)[number];
 type Translations = Record<string, Record<LangKey, string>>;
 
 // ─── 텍스트 추출 ───────────────────────────────────────────────────────────────
-// ID 규칙: {eventIndex}:title | {eventIndex}:narration | {eventIndex}:choice:{0|1}:{text|post}
+// ID 규칙: {eventIndex}:title | {eventIndex}:narration | {eventIndex}:choice:{0|1}:{text|post|postSuccess|postFail}
 
 type TextEntry = { id: string; text: string };
+
+type RawChoice = { text: string; post?: string; postSuccess?: string; postFail?: string };
 
 function extractTexts(events: Record<string, unknown>[]): TextEntry[] {
 	const entries: TextEntry[] = [];
@@ -32,10 +34,12 @@ function extractTexts(events: Record<string, unknown>[]): TextEntry[] {
 		entries.push({ id: `${ei}:title`, text: event.title as string });
 		entries.push({ id: `${ei}:narration`, text: event.narration as string });
 
-		const choices = event.choices as { text: string; post: string }[];
+		const choices = event.choices as RawChoice[];
 		choices.forEach((choice, ci) => {
 			entries.push({ id: `${ei}:choice:${ci}:text`, text: choice.text });
-			entries.push({ id: `${ei}:choice:${ci}:post`, text: choice.post });
+			if (choice.post) entries.push({ id: `${ei}:choice:${ci}:post`, text: choice.post });
+			if (choice.postSuccess) entries.push({ id: `${ei}:choice:${ci}:postSuccess`, text: choice.postSuccess });
+			if (choice.postFail) entries.push({ id: `${ei}:choice:${ci}:postFail`, text: choice.postFail });
 		});
 	});
 
@@ -49,7 +53,7 @@ function mergeTranslations(
 	translations: Translations
 ): Record<string, unknown>[] {
 	return events.map((event, ei) => {
-		const choices = event.choices as { text: string; post: string }[];
+		const choices = event.choices as RawChoice[];
 
 		return {
 			...event,
@@ -63,20 +67,43 @@ function mergeTranslations(
 					TARGET_LANGS.map((lang) => [lang, translations[`${ei}:narration`]?.[lang] ?? ''])
 				)
 			},
-			choices: choices.map((choice, ci) => ({
-				text: {
-					korean: choice.text,
-					...Object.fromEntries(
-						TARGET_LANGS.map((lang) => [lang, translations[`${ei}:choice:${ci}:text`]?.[lang] ?? ''])
-					)
-				},
-				post: {
-					korean: choice.post,
-					...Object.fromEntries(
-						TARGET_LANGS.map((lang) => [lang, translations[`${ei}:choice:${ci}:post`]?.[lang] ?? ''])
-					)
+			choices: choices.map((choice, ci) => {
+				const localized: Record<string, unknown> = {
+					text: {
+						korean: choice.text,
+						...Object.fromEntries(
+							TARGET_LANGS.map((lang) => [lang, translations[`${ei}:choice:${ci}:text`]?.[lang] ?? ''])
+						)
+					}
+				};
+
+				if (choice.post) {
+					localized.post = {
+						korean: choice.post,
+						...Object.fromEntries(
+							TARGET_LANGS.map((lang) => [lang, translations[`${ei}:choice:${ci}:post`]?.[lang] ?? ''])
+						)
+					};
 				}
-			}))
+				if (choice.postSuccess) {
+					localized.postSuccess = {
+						korean: choice.postSuccess,
+						...Object.fromEntries(
+							TARGET_LANGS.map((lang) => [lang, translations[`${ei}:choice:${ci}:postSuccess`]?.[lang] ?? ''])
+						)
+					};
+				}
+				if (choice.postFail) {
+					localized.postFail = {
+						korean: choice.postFail,
+						...Object.fromEntries(
+							TARGET_LANGS.map((lang) => [lang, translations[`${ei}:choice:${ci}:postFail`]?.[lang] ?? ''])
+						)
+					};
+				}
+
+				return localized;
+			})
 		};
 	});
 }

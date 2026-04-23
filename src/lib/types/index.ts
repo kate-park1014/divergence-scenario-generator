@@ -177,7 +177,9 @@ export type RandomEventScenarioType = 'trade_off' | 'probability_upgrade' | 'ran
 
 export type RandomEventChoice = {
 	text: string;
-	post: string;
+	post?: string;
+	postSuccess?: string;
+	postFail?: string;
 };
 
 export type RandomEvent = {
@@ -191,7 +193,9 @@ export type RandomEvent = {
 
 export type LocalizedRandomEventChoice = {
 	text: MultiLangText;
-	post: MultiLangText;
+	post?: MultiLangText;
+	postSuccess?: MultiLangText;
+	postFail?: MultiLangText;
 };
 
 export type LocalizedRandomEvent = {
