@@ -178,8 +178,8 @@ export type RandomEventScenarioType = 'trade_off' | 'probability_upgrade' | 'ran
 export type RandomEventChoice = {
 	text: string;
 	post?: string;
-	postSuccess?: string;
-	postFail?: string;
+	post_success?: string;
+	post_fail?: string;
 };
 
 export type RandomEvent = {
@@ -187,15 +187,15 @@ export type RandomEvent = {
 	title: string;
 	narration: string;
 	tags: string[];
-	scenarioType: RandomEventScenarioType;
+	scenario_type: RandomEventScenarioType;
 	choices: [RandomEventChoice, RandomEventChoice];
 };
 
 export type LocalizedRandomEventChoice = {
 	text: MultiLangText;
 	post?: MultiLangText;
-	postSuccess?: MultiLangText;
-	postFail?: MultiLangText;
+	post_success?: MultiLangText;
+	post_fail?: MultiLangText;
 };
 
 export type LocalizedRandomEvent = {
@@ -203,6 +203,6 @@ export type LocalizedRandomEvent = {
 	title: MultiLangText;
 	narration: MultiLangText;
 	tags: string[];
-	scenarioType: RandomEventScenarioType;
+	scenario_type: RandomEventScenarioType;
 	choices: [LocalizedRandomEventChoice, LocalizedRandomEventChoice];
 };

@@ -70,7 +70,7 @@
 		if (data.tool_result?.events) {
 			events = (data.tool_result.events as RandomEvent[]).map((e) => ({
 				...e,
-				scenarioType: e.scenarioType ?? selectedScenarioType,
+				scenario_type: e.scenario_type ?? selectedScenarioType,
 				tags: [
 					selectedTheme!.id,
 					...new Set(
@@ -98,7 +98,7 @@
 			headers: { 'Content-Type': 'application/json' },
 			body: JSON.stringify({
 				theme: selectedTheme.id,
-				scenarioType: selectedScenarioType,
+				scenario_type: selectedScenarioType,
 				events
 			})
 		});
@@ -237,10 +237,10 @@
 							<span class="event-num">{i + 1}</span>
 							<span class="event-title">{event.title}</span>
 							<span class="event-id">{event.id}</span>
-							<span class="type-badge type-badge-{event.scenarioType}">
-								{event.scenarioType === 'trade_off'
+							<span class="type-badge type-badge-{event.scenario_type}">
+								{event.scenario_type === 'trade_off'
 									? '트레이드오프'
-									: event.scenarioType === 'probability_upgrade'
+									: event.scenario_type === 'probability_upgrade'
 										? '확률 업'
 										: '랜덤 히든'}
 							</span>
@@ -260,21 +260,21 @@
 											<span class="choice-num">선택 {ci + 1}</span>
 											<span class="choice-text">{choice.text}</span>
 											<span class="choice-role">
-												{#if event.scenarioType === 'trade_off'}
+												{#if event.scenario_type === 'trade_off'}
 													{ci === 0 ? '고가치 트레이드오프' : '안전한 확정 보상'}
-												{:else if event.scenarioType === 'probability_upgrade'}
+												{:else if event.scenario_type === 'probability_upgrade'}
 													{ci === 0 ? '확정 보상' : '확률 업그레이드'}
 												{:else}
 													{ci === 0 ? '리스크 감수 (70/30)' : '리스크 회피'}
 												{/if}
 											</span>
 										</div>
-										{#if choice.postSuccess !== undefined}
+										{#if choice.post_success !== undefined}
 											<p class="choice-post">
-												<span class="post-label success">성공</span>{choice.postSuccess}
+												<span class="post-label success">성공</span>{choice.post_success}
 											</p>
 											<p class="choice-post">
-												<span class="post-label fail">실패</span>{choice.postFail}
+												<span class="post-label fail">실패</span>{choice.post_fail}
 											</p>
 										{:else}
 											<p class="choice-post">{choice.post}</p>

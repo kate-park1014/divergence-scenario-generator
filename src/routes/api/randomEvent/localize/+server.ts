@@ -21,11 +21,11 @@ type LangKey = (typeof TARGET_LANGS)[number];
 type Translations = Record<string, Record<LangKey, string>>;
 
 // ─── 텍스트 추출 ───────────────────────────────────────────────────────────────
-// ID 규칙: {eventIndex}:title | {eventIndex}:narration | {eventIndex}:choice:{0|1}:{text|post|postSuccess|postFail}
+// ID 규칙: {eventIndex}:title | {eventIndex}:narration | {eventIndex}:choice:{0|1}:{text|post|post_success|post_fail}
 
 type TextEntry = { id: string; text: string };
 
-type RawChoice = { text: string; post?: string; postSuccess?: string; postFail?: string };
+type RawChoice = { text: string; post?: string; post_success?: string; post_fail?: string };
 
 function extractTexts(events: Record<string, unknown>[]): TextEntry[] {
 	const entries: TextEntry[] = [];
@@ -38,8 +38,8 @@ function extractTexts(events: Record<string, unknown>[]): TextEntry[] {
 		choices.forEach((choice, ci) => {
 			entries.push({ id: `${ei}:choice:${ci}:text`, text: choice.text });
 			if (choice.post) entries.push({ id: `${ei}:choice:${ci}:post`, text: choice.post });
-			if (choice.postSuccess) entries.push({ id: `${ei}:choice:${ci}:postSuccess`, text: choice.postSuccess });
-			if (choice.postFail) entries.push({ id: `${ei}:choice:${ci}:postFail`, text: choice.postFail });
+			if (choice.post_success) entries.push({ id: `${ei}:choice:${ci}:post_success`, text: choice.post_success });
+			if (choice.post_fail) entries.push({ id: `${ei}:choice:${ci}:post_fail`, text: choice.post_fail });
 		});
 	});
 
@@ -85,19 +85,19 @@ function mergeTranslations(
 						)
 					};
 				}
-				if (choice.postSuccess) {
-					localized.postSuccess = {
-						korean: choice.postSuccess,
+				if (choice.post_success) {
+					localized.post_success = {
+						korean: choice.post_success,
 						...Object.fromEntries(
-							TARGET_LANGS.map((lang) => [lang, translations[`${ei}:choice:${ci}:postSuccess`]?.[lang] ?? ''])
+							TARGET_LANGS.map((lang) => [lang, translations[`${ei}:choice:${ci}:post_success`]?.[lang] ?? ''])
 						)
 					};
 				}
-				if (choice.postFail) {
-					localized.postFail = {
-						korean: choice.postFail,
+				if (choice.post_fail) {
+					localized.post_fail = {
+						korean: choice.post_fail,
 						...Object.fromEntries(
-							TARGET_LANGS.map((lang) => [lang, translations[`${ei}:choice:${ci}:postFail`]?.[lang] ?? ''])
+							TARGET_LANGS.map((lang) => [lang, translations[`${ei}:choice:${ci}:post_fail`]?.[lang] ?? ''])
 						)
 					};
 				}
