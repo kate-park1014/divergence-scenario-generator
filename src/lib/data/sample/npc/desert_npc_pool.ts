@@ -35,8 +35,7 @@ export const desert_npc_pool = [
 			thai: 'ซาฟีร์',
 			hindi: 'ज़ाफ़िर'
 		},
-		battle_image_url:
-			'https://imagedelivery.net/WTEqQNGFb-l-IHS6IGnzUQ/8652590e-413e-4880-1186-4793c4617900/public',
+		battle_image_url: '',
 		face_image_url:
 			'https://imagedelivery.net/WTEqQNGFb-l-IHS6IGnzUQ/935b3bcc-634c-4df6-af5d-06ca42940e00/public',
 		base_image_url:
