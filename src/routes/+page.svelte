@@ -24,6 +24,13 @@
 			<span class="arrow">→</span>
 		</button>
 	</li>
+	<li>
+		<button class="arc-item generator" onclick={() => goto('/storyarcGen')}>
+			<span class="arc-name">StoryArc 생성기</span>
+			<span class="arc-id">storyarcGen</span>
+			<span class="arrow">→</span>
+		</button>
+	</li>
 </ul>
 
 <style>
@@ -92,5 +99,18 @@
 
 	.arc-item.special .arc-name {
 		color: #4caf50;
+	}
+
+	.arc-item.generator {
+		border-color: #2a2518;
+	}
+
+	.arc-item.generator:hover {
+		border-color: #c8a85a;
+		background: #1a1508;
+	}
+
+	.arc-item.generator .arc-name {
+		color: #c8a85a;
 	}
 </style>

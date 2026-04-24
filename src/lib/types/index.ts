@@ -55,7 +55,9 @@ export type ActTone = {
 export type FinalBoss = {
 	id: string;
 	name: string;
-	appearance: string;
+	appearance?: string;
+	appearance_npc?: string;
+	appearance_boss?: string;
 	surface_identity: string;
 	true_identity: string;
 	motivation: string;
@@ -78,6 +80,11 @@ export type Foreshadowing = {
  * - `pool_${string}` (예: 'pool_033'): 스토리아크의 final_boss로 지정된 보스 pool_id (order 5 전용).
  */
 export type BossRef = 'random_boss' | `pool_${string}`;
+
+export type NpcArcItem = {
+	role: string;
+	arc: string;
+};
 
 export type ScenarioOutlineItem = {
 	order: number;
@@ -108,6 +115,7 @@ export type StoryArc = {
 	};
 	final_boss: FinalBoss;
 	global_foreshadowing: Foreshadowing[];
+	npc_roles?: Record<string, NpcArcItem>;
 	scenarioOutline: ScenarioOutlineItem[];
 	act_summary: ActSummary;
 };

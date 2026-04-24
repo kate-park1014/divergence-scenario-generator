@@ -8,12 +8,13 @@ export function buildScenarioBase(order: number, storyarc: StoryArc) {
 
 	const actors: Record<string, unknown> = {};
 	if (npc) {
+		const n = npc as Record<string, unknown>;
 		actors[item.npc] = {
-			id: npc.id,
-			name: { ...npc.name },
-			description: npc.description,
-			face_image_url: npc.face_image_url,
-			battle_sprite_url: npc.battle_sprite_url
+			id: n.id,
+			name: { ...(npc.name as object) },
+			description: (n.description as string) ?? '',
+			face_image_url: n.face_image_url,
+			battle_sprite_url: n.battle_sprite_url ?? n.base_image_url
 		};
 	}
 

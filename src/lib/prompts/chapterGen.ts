@@ -141,6 +141,7 @@ act: ${scenario.act}
 title: ${scenario.title}
 boss: ${scenario.boss}
 npc: ${scenario.npc}
+${storyarc.npc_roles?.[scenario.npc] ? `npc_role: ${storyarc.npc_roles[scenario.npc].role}\nnpc_arc: ${storyarc.npc_roles[scenario.npc].arc}` : ''}
 summary: ${scenario.summary}
 
 ## 이 Act의 톤
