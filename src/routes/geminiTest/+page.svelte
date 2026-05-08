@@ -67,9 +67,10 @@
 		generatingAll = false;
 	}
 
-	type PipelineStep = 'idle' | 'generating' | 'translating' | 'saving' | 'done' | 'error';
+	type PipelineStep = 'idle' | 'generating' | 'processing-actors' | 'translating' | 'saving' | 'done' | 'error';
 	let pipelineStep = $state<PipelineStep>('idle');
 	let translatingOrder = $state<number | null>(null);
+	let processingActorsOrder = $state<number | null>(null);
 	let pipelineError = $state<string | null>(null);
 	let chapterOrder = $state(1);
 	let difficultyLevel = $state(1);
@@ -77,12 +78,15 @@
 
 	let pipelineBusy = $derived(
 		pipelineStep === 'generating' ||
+			pipelineStep === 'processing-actors' ||
 			pipelineStep === 'translating' ||
 			pipelineStep === 'saving'
 	);
 
 	let pipelineStatus = $derived.by(() => {
 		if (pipelineStep === 'generating') return `생성 중... ${existsCount}/${scenarios.length}`;
+		if (pipelineStep === 'processing-actors')
+			return `Actors 보강 중... ${processingActorsOrder ?? '?'}/${scenarios.length}`;
 		if (pipelineStep === 'translating')
 			return `번역 중... ${translatingOrder ?? '?'}/${scenarios.length}`;
 		if (pipelineStep === 'saving') return '최종 JSON 저장 중...';
@@ -110,6 +114,25 @@
 			pipelineStep = 'error';
 			return;
 		}
+
+		// 1.5. Actors 보강 (순차)
+		pipelineStep = 'processing-actors';
+		for (const s of scenarios) {
+			processingActorsOrder = s.order;
+			const res = await fetch('/api/scenario/process-actors', {
+				method: 'POST',
+				headers: { 'Content-Type': 'application/json' },
+				body: JSON.stringify({ filename: s.filename })
+			});
+			const result = await res.json().catch(() => null);
+			if (!res.ok || !result?.ok) {
+				pipelineError = `Actors 보강 실패 (order ${s.order}): ${result?.error ?? res.statusText}`;
+				pipelineStep = 'error';
+				processingActorsOrder = null;
+				return;
+			}
+		}
+		processingActorsOrder = null;
 
 		// 2. 번역 (순차)
 		pipelineStep = 'translating';
@@ -185,6 +208,20 @@
 		</label>
 		<button onclick={runPipeline} disabled={pipelineBusy}>
 			{pipelineBusy ? '파이프라인 실행 중...' : '전체 파이프라인 실행'}
+		</button>
+		<button
+			class="secondary"
+			onclick={() => goto('/generated')}
+			disabled={existsCount !== scenarios.length || pipelineBusy}
+		>
+			다국어 변환 →
+		</button>
+		<button
+			class="secondary"
+			onclick={() => goto('/output')}
+			disabled={existsCount !== scenarios.length || pipelineBusy}
+		>
+			Output 저장 →
 		</button>
 	</div>
 </div>

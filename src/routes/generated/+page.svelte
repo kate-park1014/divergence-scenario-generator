@@ -9,7 +9,32 @@
 
 	// 파일별 번역 진행 상태
 	let translating = $state<Record<string, boolean>>({});
+	let processing = $state<Record<string, boolean>>({});
 	let errors = $state<Record<string, string>>({});
+
+	async function processActors(filename: string) {
+		processing[filename] = true;
+		errors[filename] = '';
+
+		const res = await fetch('/api/scenario/process-actors', {
+			method: 'POST',
+			headers: { 'Content-Type': 'application/json' },
+			body: JSON.stringify({ filename })
+		});
+
+		const result = await res.json();
+
+		if (!result.ok) {
+			alert(result.error ?? 'Actors 보강 실패');
+			errors[filename] = result.error ?? '알 수 없는 오류';
+		} else if (result.added && result.added.length > 0) {
+			alert(`Actors 추가됨: ${result.added.join(', ')}`);
+		} else {
+			alert(result.message ?? '추가할 actor가 없습니다.');
+		}
+
+		processing[filename] = false;
+	}
 
 	async function translate(filename: string) {
 		translating[filename] = true;
@@ -55,8 +80,16 @@
 			</div>
 
 			<button
+				class="secondary"
+				onclick={() => processActors(file.filename)}
+				disabled={processing[file.filename] || translating[file.filename]}
+			>
+				{processing[file.filename] ? 'Actors 보강 중...' : 'Actors 보강'}
+			</button>
+
+			<button
 				onclick={() => translate(file.filename)}
-				disabled={translating[file.filename] || file.isTranslated}
+				disabled={translating[file.filename] || file.isTranslated || processing[file.filename]}
 			>
 				{#if translating[file.filename]}
 					번역 중...
@@ -144,6 +177,11 @@
 	button:disabled {
 		opacity: 0.4;
 		cursor: not-allowed;
+	}
+
+	button.secondary {
+		border-color: #444;
+		color: #aaa;
 	}
 
 	.error {

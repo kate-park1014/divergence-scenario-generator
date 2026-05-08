@@ -1,0 +1,3333 @@
+{
+	"chapter_order": 2,
+	"difficulty_level": 2,
+	"chapter_name": {
+		"korean": "자비의 손길",
+		"english": "The Hand of Mercy",
+		"japanese": "慈悲の手",
+		"chinese": "慈悲之手",
+		"french": "La Main de la Miséricorde",
+		"spanish": "La Mano de la Misericordia",
+		"vietnamese": "Bàn Tay Từ Bi",
+		"thai": "มือแห่งความเมตตา",
+		"hindi": "दया का हाथ"
+	},
+	"scenarios": [
+		{
+			"scenario_id": "KindPriest_V0_01",
+			"order": 1,
+			"act": "intro",
+			"theme": "hell",
+			"actors": {
+				"lysandra": {
+					"id": "mon_fc9333ab-62ae-411c-a12c-0d5d9f554a5a",
+					"name": {
+						"korean": "리산드라",
+						"english": "Lysandra",
+						"japanese": "リサンドラ",
+						"chinese": "莉桑德拉",
+						"french": "Lysandra",
+						"spanish": "Lisandra",
+						"vietnamese": "Lysandra",
+						"thai": "ไลแซนดรา",
+						"hindi": "लाइसैंड्रा"
+					},
+					"description": "",
+					"face_image_url": "https://imagedelivery.net/WTEqQNGFb-l-IHS6IGnzUQ/883ef0d7-874d-4718-1a26-645c5b0f2900/public",
+					"battle_sprite_url": "https://imagedelivery.net/WTEqQNGFb-l-IHS6IGnzUQ/eeab84b3-ddb9-42ed-08f9-b3443b743b00/public"
+				}
+			},
+			"boss": {
+				"pool_id": "random_boss"
+			},
+			"prologue": {
+				"korean": [
+					"심연의 굴에서 길을 잃었다.",
+					"모두 지쳐 쓰러질 때쯤 —",
+					"흐릿한 빛이 새어 나오는 동굴을 발견했다.",
+					"거기엔 따뜻한 손길이 있었다."
+				],
+				"english": [
+					"Lost in the Abyss.",
+					"When everyone was about to collapse from exhaustion—",
+					"We found a cave with a faint light seeping out.",
+					"There, a warm touch awaited."
+				],
+				"japanese": [
+					"深淵の洞窟で道に迷った。",
+					"皆が疲れ果て倒れそうになった頃—",
+					"かすかな光が漏れる洞窟を発見した。",
+					"そこには温かい手が差し伸べられていた。"
+				],
+				"chinese": [
+					"迷失在深渊之窟。",
+					"当大家都精疲力尽，即将倒下时—",
+					"发现了一个有微弱光芒渗出的洞窟。",
+					"那里有温暖的援手。"
+				],
+				"french": [
+					"Perdu dans la Caverne de l'Abîme.",
+					"Quand tous étaient sur le point de s'effondrer d'épuisement—",
+					"Nous avons découvert une caverne d'où s'échappait une faible lumière.",
+					"Là, une main chaleureuse nous attendait."
+				],
+				"spanish": [
+					"Perdido en la Cueva del Abismo.",
+					"Cuando todos estaban a punto de colapsar por el agotamiento—",
+					"Encontramos una cueva de donde se filtraba una luz tenue.",
+					"Allí, había una mano cálida."
+				],
+				"vietnamese": [
+					"Lạc lối trong hang động vực thẳm.",
+					"Khi mọi người gần như kiệt sức và gục ngã—",
+					"Phát hiện ra một hang động có ánh sáng lờ mờ.",
+					"Ở đó, có một bàn tay ấm áp."
+				],
+				"thai": [
+					"หลงทางในถ้ำแห่งห้วงลึก.",
+					"เมื่อทุกคนใกล้จะล้มลงด้วยความอ่อนล้า—",
+					"พบถ้ำที่มีแสงสลัวลอดออกมา.",
+					"ที่นั่น มีสัมผัสที่อบอุ่น."
+				],
+				"hindi": [
+					"अथाह गुफा में खो गया।",
+					"जब सब थककर गिरने वाले थे—",
+					"एक गुफा मिली जहाँ से धुंधली रोशनी छनकर आ रही थी।",
+					"वहाँ एक गर्मजोशी भरा स्पर्श था।"
+				]
+			},
+			"rooms": [
+				{
+					"id": 1,
+					"dialogue": [
+						{
+							"emotion": "base",
+							"type": "speech",
+							"speaker": "narrator",
+							"content": {
+								"korean": "모두 지쳐있었다. 간신히 도착한 동굴 안, 흐릿한 빛이 새어 나왔다.",
+								"english": "Everyone was exhausted. Inside the cave, which we barely reached, a faint light seeped through.",
+								"japanese": "皆、疲れ果てていた。かろうじて辿り着いた洞窟の中、かすかな光が漏れていた。",
+								"chinese": "大家都筋疲力尽。好不容易到达的洞窟里，渗出微弱的光芒。",
+								"french": "Tous étaient épuisés. À l'intérieur de la caverne, à laquelle nous étions parvenus de justesse, une faible lumière filtrait.",
+								"spanish": "Todos estaban agotados. Dentro de la cueva, a la que apenas llegamos, una luz tenue se filtraba.",
+								"vietnamese": "Mọi người đều kiệt sức. Bên trong hang động vừa đến được, một ánh sáng lờ mờ len lỏi.",
+								"thai": "ทุกคนเหนื่อยล้าเต็มที ภายในถ้ำที่มาถึงอย่างยากลำบาก มีแสงสลัวเล็ดลอดออกมา.",
+								"hindi": "सब थके हुए थे। मुश्किल से पहुँची गुफा के अंदर से धुंधली रोशनी निकल रही थी।"
+							}
+						},
+						{
+							"speaker": "character_any",
+							"content": {
+								"korean": "여기서 쉬자. 더는 못 가겠어….",
+								"english": "Let's rest here. I can't go on anymore...",
+								"japanese": "ここで休もう。もうこれ以上は無理だ…。",
+								"chinese": "在这里休息吧。我再也走不动了…。",
+								"french": "Reposons-nous ici. Je ne peux plus continuer...",
+								"spanish": "Descansemos aquí. No puedo seguir más...",
+								"vietnamese": "Hãy nghỉ ở đây. Tôi không thể đi tiếp nữa…",
+								"thai": "มาพักที่นี่เถอะ. ฉันไปต่อไม่ไหวแล้ว….",
+								"hindi": "यहीं आराम करते हैं। अब और नहीं चल सकता…।"
+							},
+							"type": "speech",
+							"emotion": "sad"
+						},
+						{
+							"emotion": "base",
+							"type": "speech",
+							"speaker": "narrator",
+							"content": {
+								"korean": "안쪽에는 낡은 사제복의 남자가 부상자에게 물을 건네고 있었다.",
+								"english": "Inside, a man in worn priestly robes was offering water to an injured person.",
+								"japanese": "奥では、古びた司祭服の男が負傷者に水を差し出していた。",
+								"chinese": "里面，一个穿着破旧祭司服的男人正在给伤者递水。",
+								"french": "À l'intérieur, un homme en soutane usée offrait de l'eau à un blessé.",
+								"spanish": "Adentro, un hombre con ropas sacerdotales gastadas ofrecía agua a un herido.",
+								"vietnamese": "Bên trong, một người đàn ông mặc áo linh mục cũ đang đưa nước cho người bị thương.",
+								"thai": "ด้านใน ชายสวมชุดนักบวชเก่ากำลังยื่นน้ำให้ผู้บาดเจ็บ.",
+								"hindi": "अंदर, फटे हुए पुरोहित के वस्त्र पहने एक आदमी घायल को पानी दे रहा था।"
+							}
+						},
+						{
+							"duration_ms": 500,
+							"spot": [
+								4,
+								2
+							],
+							"speaker": "lysandra",
+							"action": "enter",
+							"type": "direction"
+						},
+						{
+							"emotion": "base",
+							"type": "speech",
+							"speaker": "lysandra",
+							"content": {
+								"korean": "어서 오세요. 모두 지쳐 보이네요. 제가 돌봐드리죠.",
+								"english": "Welcome. You all look exhausted. I'll take care of you.",
+								"japanese": "ようこそ。皆さん、お疲れのようですね。私が看病しましょう。",
+								"chinese": "欢迎。大家看起来都筋疲力尽了。我来照顾你们吧。",
+								"french": "Bienvenue. Vous semblez tous épuisés. Je vais m'occuper de vous.",
+								"spanish": "Bienvenidos. Todos parecen agotados. Yo los cuidaré.",
+								"vietnamese": "Chào mừng. Mọi người có vẻ kiệt sức rồi. Để tôi chăm sóc cho.",
+								"thai": "ยินดีต้อนรับครับ ทุกท่านดูอ่อนล้ากันมากเลย ผมจะดูแลให้เอง.",
+								"hindi": "स्वागत है। आप सभी थके हुए लग रहे हैं। मैं आपका ख्याल रखूँगा।"
+							}
+						},
+						{
+							"emotion": "sad",
+							"type": "speech",
+							"speaker": "character_any",
+							"content": {
+								"korean": "고맙습니다… 죽는 줄 알았어요.",
+								"english": "Thank you... I thought I was going to die.",
+								"japanese": "ありがとうございます…死ぬかと思いました。",
+								"chinese": "谢谢…我以为自己要死了。",
+								"french": "Merci... Je croyais que j'allais mourir.",
+								"spanish": "Gracias... Pensé que iba a morir.",
+								"vietnamese": "Cảm ơn… Tôi cứ nghĩ mình sẽ chết rồi.",
+								"thai": "ขอบคุณครับ...ผมนึกว่าจะตายซะแล้ว.",
+								"hindi": "धन्यवाद… मुझे लगा मैं मर जाऊँगा।"
+							}
+						},
+						{
+							"type": "speech",
+							"speaker": "lysandra",
+							"content": {
+								"korean": "자, 손을 대세요. 곧 괜찮아질 겁니다.",
+								"english": "Come, place your hand. You'll be fine soon.",
+								"japanese": "さあ、手を当ててください。すぐに良くなりますよ。",
+								"chinese": "来，把手放上来。很快就会好起来的。",
+								"french": "Venez, posez votre main. Vous irez mieux bientôt.",
+								"spanish": "Vamos, pon tu mano. Pronto estarás bien.",
+								"vietnamese": "Nào, đặt tay lên đi. Sẽ ổn ngay thôi.",
+								"thai": "เอาล่ะ วางมือลง. คุณจะดีขึ้นในไม่ช้า.",
+								"hindi": "आओ, अपना हाथ रखो। तुम जल्द ही ठीक हो जाओगे।"
+							},
+							"emotion": "happy"
+						},
+						{
+							"emotion": "base",
+							"speaker": "narrator",
+							"content": {
+								"korean": "따뜻한 빛이 손에서 흘러나와 상처를 감쌌다. 치유받은 동료의 얼굴은 너무나 평온했다. 마치 잠든 인형처럼.",
+								"english": "Warm light flowed from my hand, enveloping the wound. The healed companion's face was so serene, like a sleeping doll.",
+								"japanese": "温かい光が手から流れ出し、傷を包み込んだ。癒された仲間の顔は、まるで眠る人形のように穏やかだった。",
+								"chinese": "温暖的光芒从手中流出，包裹住伤口。被治愈的同伴的脸庞如此平静，如同熟睡的娃娃。",
+								"french": "Une lumière chaude s'écoula de ma main, enveloppant la blessure. Le visage du compagnon guéri était si serein, comme une poupée endormie.",
+								"spanish": "Una luz cálida fluyó de mi mano, envolviendo la herida. El rostro del compañero sanado estaba tan sereno, como una muñeca dormida.",
+								"vietnamese": "Ánh sáng ấm áp tuôn ra từ tay tôi, bao bọc vết thương. Gương mặt người đồng đội được chữa lành thật thanh bình, như một búp bê đang ngủ.",
+								"thai": "แสงอบอุ่นไหลจากมือของฉัน โอบล้อมบาดแผล ใบหน้าของสหายที่ได้รับการรักษาช่างสงบเงียบ ราวกับตุ๊กตานอนหลับ",
+								"hindi": "हाथ से गर्म रोशनी बहकर घाव को ढक लिया। ठीक हुए साथी का चेहरा इतना शांत था, जैसे कोई सोई हुई गुड़िया。"
+							},
+							"type": "speech"
+						},
+						{
+							"speaker": "lysandra",
+							"content": {
+								"korean": "더 깊은 곳에 필요한 약초가 있어요. 잠시 다녀올게요.",
+								"english": "The herbs we need are deeper inside. I'll be back shortly.",
+								"japanese": "必要な薬草はもっと奥にあります。少し行ってきます。",
+								"chinese": "所需的药草在更深处。我一会儿就回来。",
+								"french": "Les herbes nécessaires sont plus loin. Je reviens tout de suite.",
+								"spanish": "Las hierbas necesarias están más adentro. Volveré en un momento.",
+								"vietnamese": "Thảo dược cần thiết ở sâu hơn. Tôi sẽ đi một lát rồi về.",
+								"thai": "สมุนไพรที่ต้องการอยู่ลึกเข้าไปข้างใน ฉันจะไปเอาสักครู่",
+								"hindi": "ज़रूरी जड़ी-बूटियाँ और गहराई में हैं। मैं अभी आता हूँ।"
+							},
+							"type": "speech",
+							"emotion": "base"
+						},
+						{
+							"speaker": "lysandra",
+							"content": {
+								"korean": "이곳에서 쉬고 계세요. 안전할 겁니다.",
+								"english": "Rest here. You'll be safe.",
+								"japanese": "ここで休んでいてください。安全です。",
+								"chinese": "您在这里休息吧。会很安全的。",
+								"french": "Reposez-vous ici. Vous serez en sécurité.",
+								"spanish": "Descanse aquí. Estará a salvo.",
+								"vietnamese": "Hãy nghỉ ngơi ở đây. Anh sẽ an toàn thôi.",
+								"thai": "พักที่นี่เถอะ คุณจะปลอดภัย",
+								"hindi": "आप यहीं आराम कीजिए। आप सुरक्षित रहेंगे।"
+							},
+							"type": "speech",
+							"emotion": "happy"
+						},
+						{
+							"speaker": "lysandra",
+							"duration_ms": 400,
+							"direction": "up",
+							"action": "exit",
+							"type": "direction"
+						},
+						{
+							"type": "speech",
+							"speaker": "character_any",
+							"content": {
+								"korean": "…다행이다. 살았어.",
+								"english": "...Thank goodness. You're alive.",
+								"japanese": "…よかった。助かった。",
+								"chinese": "…太好了。活下来了。",
+								"french": "...Ouf. Tu es en vie.",
+								"spanish": "...Menos mal. Estás vivo.",
+								"vietnamese": "...May quá. Sống rồi.",
+								"thai": "...ดีจังเลย รอดแล้ว",
+								"hindi": "...शुक्र है। बच गए।"
+							},
+							"emotion": "happy"
+						}
+					]
+				},
+				{
+					"id": 3,
+					"dialogue": [
+						{
+							"emotion": "base",
+							"speaker": "narrator",
+							"content": {
+								"korean": "사제가 사라진 후, 동굴 안은 예상보다 고요했다. 발소리조차 울리지 않았다.",
+								"english": "After the priest vanished, the cave was quieter than expected. Not even footsteps echoed.",
+								"japanese": "司祭が消えた後、洞窟の中は予想以上に静かだった。足音さえ響かなかった。",
+								"chinese": "祭司消失后，洞穴内比预想的还要寂静。甚至连脚步声都没有回响。",
+								"french": "Après la disparition du prêtre, la grotte était plus silencieuse que prévu. Pas même les pas n'y résonnaient.",
+								"spanish": "Después de que el sacerdote desapareció, la cueva estaba más silenciosa de lo esperado. Ni siquiera los pasos resonaban.",
+								"vietnamese": "Sau khi vị linh mục biến mất, hang động yên tĩnh hơn dự kiến. Ngay cả tiếng bước chân cũng không vọng lại.",
+								"thai": "หลังจากนักบวชหายไป ภายในถ้ำก็เงียบกว่าที่คาดไว้ แม้แต่เสียงฝีเท้าก็ไม่ก้องกังวาน",
+								"hindi": "पुजारी के गायब होने के बाद, गुफा उम्मीद से ज़्यादा शांत थी। यहाँ तक कि पैरों की आहट भी नहीं गूँज रही थी।"
+							},
+							"type": "speech"
+						},
+						{
+							"emotion": "base",
+							"speaker": "character_1",
+							"content": {
+								"korean": "피곤해서 그런가? 치료받은 {character_any}가 말을 안 하네.",
+								"english": "Is it exhaustion? {character_any}, who was healed, isn't speaking.",
+								"japanese": "疲れているのかな？ 治療された{character_any}が何も話さない。",
+								"chinese": "是太累了吗？ 被治愈的{character_any}一言不发。",
+								"french": "Est-ce la fatigue ? {character_any}, qui a été soigné, ne parle pas.",
+								"spanish": "¿Será el cansancio? {character_any}, quien fue sanado, no habla.",
+								"vietnamese": "Có phải do mệt mỏi không? {character_any} được chữa trị mà không nói gì cả.",
+								"thai": "เป็นเพราะความเหนื่อยล้าหรือเปล่า? {character_any} ที่ได้รับการรักษาไม่พูดอะไรเลย",
+								"hindi": "क्या यह थकावट है? ठीक हुआ {character_any} कुछ बोल नहीं रहा।"
+							},
+							"type": "speech"
+						},
+						{
+							"emotion": "base",
+							"speaker": "character_2",
+							"content": {
+								"korean": "너무 평온해서 그런 거겠지. 나라도 그랬을 거야.",
+								"english": "It must be because it's so peaceful. I would have been the same.",
+								"japanese": "あまりにも穏やかだからだろう。私でもそうだっただろうな。",
+								"chinese": "大概是因为太平静了吧。换作是我也会这样。",
+								"french": "C'est sûrement à cause de cette paix. J'aurais été pareil.",
+								"spanish": "Debe ser porque es muy tranquilo. Yo habría estado igual.",
+								"vietnamese": "Chắc là do quá đỗi bình yên. Tôi cũng sẽ như vậy thôi.",
+								"thai": "คงเป็นเพราะความสงบเงียบ ฉันเองก็คงเป็นแบบนั้น",
+								"hindi": "शायद यह इतनी शांति की वजह से है। मैं भी ऐसा ही करता।"
+							},
+							"type": "speech"
+						},
+						{
+							"speaker": "character_any",
+							"content": {
+								"korean": "그래도… 이렇게 안전한 곳은 오랜만이야.",
+								"english": "Still... it's been a long time since I've been in such a safe place.",
+								"japanese": "それでも…こんなに安全な場所は久しぶりだ。",
+								"chinese": "不过…这么安全的地方，真是久违了。",
+								"french": "Pourtant... cela fait longtemps que je n'ai pas été dans un endroit aussi sûr.",
+								"spanish": "Aun así... hace mucho que no estoy en un lugar tan seguro.",
+								"vietnamese": "Dù vậy... đã lâu lắm rồi mới có một nơi an toàn thế này.",
+								"thai": "ถึงอย่างนั้น... ก็เป็นเวลานานแล้วที่ได้อยู่ในที่ที่ปลอดภัยเช่นนี้",
+								"hindi": "फिर भी... इतने सुरक्षित स्थान पर आए हुए बहुत समय हो गया।"
+							},
+							"type": "speech",
+							"emotion": "happy"
+						}
+					]
+				},
+				{
+					"id": 5,
+					"dialogue": [
+						{
+							"speaker": "narrator",
+							"content": {
+								"korean": "깊어질수록 어둠은 짙었지만, 묘한 평온이 불안감을 옅게 만들었다.",
+								"english": "As we went deeper, the darkness grew, but a strange serenity diluted the unease.",
+								"japanese": "深まるほど闇は濃くなったが、妙な平穏が不安感を薄れさせた。",
+								"chinese": "越深入，黑暗越浓重，但一种奇妙的平静淡化了不安。",
+								"french": "Plus on s'enfonçait, plus l'obscurité s'épaississait, mais une étrange sérénité atténuait l'inquiétude.",
+								"spanish": "Cuanto más profundo, más densa era la oscuridad, pero una extraña calma disipaba la inquietud.",
+								"vietnamese": "Càng đi sâu, bóng tối càng dày đặc, nhưng một sự bình yên kỳ lạ đã làm vơi bớt cảm giác bất an.",
+								"thai": "ยิ่งลึกเข้าไปความมืดก็ยิ่งหนาทึบ แต่ความสงบที่แปลกประหลาดทำให้ความไม่สบายใจเจือจางลง",
+								"hindi": "जितना गहरा गए, अँधेरा उतना ही घना होता गया, लेकिन एक अजीब सी शांति ने बेचैनी को कम कर दिया।"
+							},
+							"type": "speech",
+							"emotion": "base"
+						},
+						{
+							"type": "speech",
+							"speaker": "character_3",
+							"content": {
+								"korean": "다른 부상자들도 다 똑같네. 미동도 없어.",
+								"english": "The other injured are all the same. Not a single movement.",
+								"japanese": "他の負傷者たちも皆同じだ。微動だにしない。",
+								"chinese": "其他伤员也都一样。一动不动。",
+								"french": "Les autres blessés sont tous pareils. Pas le moindre mouvement.",
+								"spanish": "Los otros heridos están todos igual. Ni un solo movimiento.",
+								"vietnamese": "Những người bị thương khác cũng vậy. Không hề nhúc nhích.",
+								"thai": "ผู้บาดเจ็บคนอื่นๆ ก็เหมือนกัน ไม่มีแม้แต่การเคลื่อนไหว",
+								"hindi": "बाकी घायल भी सब एक जैसे हैं। ज़रा भी हिल नहीं रहे।"
+							},
+							"emotion": "base"
+						},
+						{
+							"type": "speech",
+							"speaker": "character_4",
+							"content": {
+								"korean": "그만큼 사제의 힘이 강하다는 거겠지. 다들 편안해 보여.",
+								"english": "The priest's power must be strong. Everyone looks at peace.",
+								"japanese": "司祭の力がそれだけ強いということだろう。皆、安らかそうだ。",
+								"chinese": "看来是祭司的力量很强大。大家看起来都很平静。",
+								"french": "Le pouvoir du prêtre doit être fort. Tout le monde semble en paix.",
+								"spanish": "El poder del sacerdote debe ser fuerte. Todos parecen en paz.",
+								"vietnamese": "Chắc hẳn sức mạnh của linh mục rất lớn. Mọi người trông thật bình yên.",
+								"thai": "พลังของนักบวชคงจะแข็งแกร่งมาก ทุกคนดูสงบสุขดี",
+								"hindi": "पुजारी की शक्ति उतनी ही मजबूत होनी चाहिए। हर कोई शांति में दिख रहा है।"
+							},
+							"emotion": "base"
+						},
+						{
+							"emotion": "base",
+							"type": "speech",
+							"speaker": "character_any",
+							"content": {
+								"korean": "사제가 준 물이 너무 달콤해서인가. 온몸에 힘이 풀려.",
+								"english": "Is it because the water the priest gave was too sweet? My whole body feels weak.",
+								"japanese": "司祭がくれた水があまりにも甘いからだろうか。全身の力が抜けていく。",
+								"chinese": "难道是因为祭司给的水太甜了吗？我全身的力气都消失了。",
+								"french": "Est-ce parce que l'eau que le prêtre a donnée était trop douce ? Tout mon corps se relâche.",
+								"spanish": "Gracias al agua dulce del sacerdote, mi cuerpo entero se siente débil.",
+								"vietnamese": "Có phải vì nước linh mục ban quá ngọt không? Cả người tôi bủn rủn.",
+								"thai": "เป็นเพราะน้ำที่นักบวชให้มาหวานเกินไปหรือเปล่า? ทั้งตัวฉันไม่มีแรงเลย",
+								"hindi": "क्या यह इसलिए है क्योंकि पुजारी ने जो पानी दिया वह बहुत मीठा था? मेरे पूरे शरीर से शक्ति जा रही है।"
+							}
+						}
+					]
+				},
+				{
+					"id": 9,
+					"dialogue": [
+						{
+							"emotion": "base",
+							"speaker": "narrator",
+							"content": {
+								"korean": "동굴은 끝없이 이어지는 듯했다. 이제 돌아갈 수 없을 것만 같은 기분.",
+								"english": "The cave seemed to stretch endlessly. I feel like I can never go back now.",
+								"japanese": "洞窟は果てしなく続くようだった。もう戻れないような気がする。",
+								"chinese": "洞穴似乎无边无际。感觉现在再也回不去了。",
+								"french": "La grotte semblait s'étirer à l'infini. J'ai l'impression de ne plus pouvoir revenir en arrière maintenant.",
+								"spanish": "La cueva parecía extenderse sin fin. Siento que ya no podré volver.",
+								"vietnamese": "Hang động dường như kéo dài vô tận. Tôi có cảm giác như không thể quay lại được nữa.",
+								"thai": "ถ้ำดูเหมือนจะทอดยาวไปไม่มีที่สิ้นสุด ฉันรู้สึกเหมือนจะไม่สามารถกลับไปได้อีกแล้ว",
+								"hindi": "गुफा अंतहीन लगती थी। मुझे ऐसा लग रहा है कि अब मैं कभी वापस नहीं जा पाऊंगा।"
+							},
+							"type": "speech"
+						},
+						{
+							"emotion": "base",
+							"speaker": "character_any",
+							"content": {
+								"korean": "…이상한 기척이 느껴져. 사제가 말한 약초를 지키는 건가?",
+								"english": "...I feel a strange presence. Is it guarding the herb the priest mentioned?",
+								"japanese": "…奇妙な気配がする。司祭が言っていた薬草を守っているのだろうか？",
+								"chinese": "……我感觉到了奇怪的气息。难道是守护着祭司提到的药草吗？",
+								"french": "...Je sens une étrange présence. Garde-t-elle l'herbe mentionnée par le prêtre ?",
+								"spanish": "...Siento una extraña presencia. ¿Está custodiando la hierba que mencionó el sacerdote?",
+								"vietnamese": "...Tôi cảm thấy một sự hiện diện kỳ lạ. Có phải nó đang canh giữ loại thảo dược mà linh mục đã nói không?",
+								"thai": "...ฉันรู้สึกถึงบางอย่างแปลกๆ มันกำลังเฝ้าสมุนไพรที่นักบวชพูดถึงอยู่หรือเปล่า?",
+								"hindi": "...मुझे एक अजीब उपस्थिति महसूस हो रही है। क्या यह उस जड़ी-बूटी की रखवाली कर रहा है जिसका पुजारी ने उल्लेख किया था?"
+							},
+							"type": "speech"
+						},
+						{
+							"speaker": "character_1",
+							"content": {
+								"korean": "괜찮아. 어쩐지… 아무것도 두렵지 않아.",
+								"english": "It's okay. Somehow... I'm not afraid of anything.",
+								"japanese": "大丈夫。なぜか…何も怖くない。",
+								"chinese": "没关系。不知为何……我什么都不怕。",
+								"french": "C'est bon. D'une manière ou d'une autre... je n'ai peur de rien.",
+								"spanish": "Está bien. De alguna manera... no tengo miedo de nada.",
+								"vietnamese": "Không sao đâu. Không hiểu sao... tôi không sợ gì cả.",
+								"thai": "ไม่เป็นไร ไม่รู้ทำไม...ฉันไม่กลัวอะไรเลย",
+								"hindi": "ठीक है। किसी तरह... मुझे किसी बात का डर नहीं है।"
+							},
+							"type": "speech",
+							"emotion": "base"
+						}
+					]
+				},
+				{
+					"dialogue": [
+						{
+							"type": "speech",
+							"speaker": "narrator",
+							"content": {
+								"korean": "동굴 가장 깊은 곳, 거대한 그림자가 천천히 움직였다. 정체 모를 존재였다.",
+								"english": "In the deepest part of the cave, a giant shadow moved slowly. It was an unknown entity.",
+								"japanese": "洞窟の最も深い場所で、巨大な影がゆっくりと動いた。正体不明の存在だった。",
+								"chinese": "在洞穴最深处，一个巨大的影子缓缓移动。那是一个不明身份的存在。",
+								"french": "Au plus profond de la grotte, une ombre géante se déplaçait lentement. C'était une entité inconnue.",
+								"spanish": "En lo más profundo de la cueva, una sombra gigante se movía lentamente. Era una entidad desconocida.",
+								"vietnamese": "Sâu nhất trong hang động, một cái bóng khổng lồ di chuyển chậm rãi. Đó là một thực thể không rõ danh tính.",
+								"thai": "ในส่วนที่ลึกที่สุดของถ้ำ เงาขนาดยักษ์เคลื่อนไหวช้าๆ มันเป็นสิ่งมีชีวิตที่ไม่รู้จัก",
+								"hindi": "गुफा के सबसे गहरे हिस्से में, एक विशाल छाया धीरे-धीरे हिल रही थी। वह एक अज्ञात इकाई थी।"
+							},
+							"emotion": "base"
+						},
+						{
+							"type": "speech",
+							"speaker": "random_boss",
+							"content": {
+								"korean": "누구냐. 이곳의 영원한 평온을 깨려는 자는.",
+								"english": "Who are you? Who dares to break the eternal peace of this place?",
+								"japanese": "誰だ。この地の永遠の平穏を破ろうとする者は。",
+								"chinese": "你是什么人？竟敢打破此地的永恒宁静。",
+								"french": "Qui es-tu ? Qui ose briser la paix éternelle de ce lieu ?",
+								"spanish": "¿Quién eres? ¿Quién se atreve a romper la paz eterna de este lugar?",
+								"vietnamese": "Ngươi là ai? Kẻ nào dám phá vỡ sự bình yên vĩnh cửu nơi đây?",
+								"thai": "เจ้าเป็นใคร? ผู้ใดกล้าที่จะทำลายความสงบสุขนิรันดร์ของสถานที่แห่งนี้?",
+								"hindi": "तुम कौन हो? कौन इस जगह की शाश्वत शांति भंग करने का साहस करता है?"
+							},
+							"emotion": "angry"
+						},
+						{
+							"emotion": "angry",
+							"type": "speech",
+							"speaker": "character_any",
+							"content": {
+								"korean": "영원한 평온? 이곳은 너무 조용해서 기분 나빠!",
+								"english": "Eternal peace? This place is so quiet it's unsettling!",
+								"japanese": "永遠の平穏？ここは静かすぎて気分が悪い！",
+								"chinese": "永恒的宁静？这里太安静了，让人感觉不舒服！",
+								"french": "La paix éternelle ? Cet endroit est si silencieux que c'en est troublant !",
+								"spanish": "¿Paz eterna? ¡Este lugar es tan silencioso que es inquietante!",
+								"vietnamese": "Bình yên vĩnh cửu? Nơi này quá yên tĩnh đến mức khó chịu!",
+								"thai": "ความสงบสุขนิรันดร์งั้นหรือ? ที่นี่เงียบเกินไปจนน่าขนลุก!",
+								"hindi": "शाश्वत शांति? यह जगह इतनी शांत है कि यह बेचैन कर देती है!"
+							}
+						},
+						{
+							"emotion": "angry",
+							"speaker": "character_any",
+							"content": {
+								"korean": "우리는 그저 길을 찾을 뿐이다! 방해하지 마!",
+								"english": "We're just looking for a path! Don't interfere!",
+								"japanese": "我々はただ道を探しているだけだ！邪魔をするな！",
+								"chinese": "我们只是在寻找出路！别碍事！",
+								"french": "Nous ne faisons que chercher un chemin ! Ne nous gêne pas !",
+								"spanish": "¡Solo estamos buscando un camino! ¡No interfieras!",
+								"vietnamese": "Chúng tôi chỉ đang tìm đường! Đừng cản trở!",
+								"thai": "พวกเราแค่กำลังหาทางเท่านั้น! อย่ามาขัดขวาง!",
+								"hindi": "हम बस रास्ता ढूंढ रहे हैं! दखल मत दो!"
+							},
+							"type": "speech"
+						}
+					],
+					"id": 15,
+					"win_dialogue": [
+						{
+							"speaker": "random_boss",
+							"content": {
+								"korean": "…어리석은 자들. 진정한 평온은… 깨지지 않아. 영원히.",
+								"english": "...Foolish ones. True peace... cannot be broken. Forever.",
+								"japanese": "…愚かな者たちめ。真の平穏は…破られない。永遠に。",
+								"chinese": "……愚蠢的家伙们。真正的平静……是不会被打破的。永远。",
+								"french": "...Idiots. La vraie paix... ne peut être brisée. Jamais.",
+								"spanish": "...Necios. La verdadera paz... no se puede romper. Jamás.",
+								"vietnamese": "...Những kẻ ngu ngốc. Sự bình yên thật sự... không thể bị phá vỡ. Vĩnh viễn.",
+								"thai": "...คนโง่เอ้ย ความสงบสุขที่แท้จริง...ไม่มีทางถูกทำลาย ตลอดไป",
+								"hindi": "...मूर्ख लोगों। सच्ची शांति... टूट नहीं सकती। हमेशा के लिए।"
+							},
+							"type": "speech",
+							"emotion": "sad"
+						},
+						{
+							"type": "speech",
+							"speaker": "character_any",
+							"content": {
+								"korean": "무슨 소리야? 저 그림자가 계속 이상한 말을 해….",
+								"english": "What was that? That shadow keeps saying strange things...",
+								"japanese": "なんだ？あの影、ずっと変なことを言ってる…。",
+								"chinese": "什么声音？那个影子一直在说奇怪的话……",
+								"french": "Qu'est-ce que c'était ? Cette ombre n'arrête pas de dire des choses étranges...",
+								"spanish": "¿Qué fue eso? Esa sombra no para de decir cosas extrañas...",
+								"vietnamese": "Gì vậy? Cái bóng đó cứ nói mấy lời kỳ lạ...",
+								"thai": "อะไรนะ? เงาตัวนั้นเอาแต่พูดอะไรแปลกๆ...",
+								"hindi": "यह क्या था? वह परछाई अजीब बातें कहती रहती है..."
+							},
+							"emotion": "base"
+						},
+						{
+							"emotion": "base",
+							"type": "speech",
+							"speaker": "narrator",
+							"content": {
+								"korean": "승리했지만, 동굴의 침묵은 더욱 깊어졌다. 이 '평온'은 정말 안전한 걸까?",
+								"english": "We won, but the cave's silence deepened. Is this 'peace' truly safe?",
+								"japanese": "勝利したが、洞窟の沈黙はさらに深まった。この『平穏』は本当に安全なのか？",
+								"chinese": "虽然胜利了，但洞穴的寂静却更深了。这份“平静”真的安全吗？",
+								"french": "Nous avons gagné, mais le silence de la grotte s'est approfondi. Cette 'paix' est-elle vraiment sûre ?",
+								"spanish": "Ganamos, pero el silencio de la cueva se hizo más profundo. ¿Es esta 'paz' realmente segura?",
+								"vietnamese": "Chúng ta đã thắng, nhưng sự tĩnh lặng của hang động càng sâu sắc hơn. Sự 'bình yên' này có thực sự an toàn không?",
+								"thai": "เราชนะแล้ว แต่ความเงียบของถ้ำกลับยิ่งลึกซึ้งลงไป 'ความสงบ' นี้ปลอดภัยจริงหรือ?",
+								"hindi": "हम जीत गए, लेकिन गुफा की खामोशी और गहरी हो गई। क्या यह 'शांति' सचमुच सुरक्षित है?"
+							}
+						}
+					],
+					"lose_dialogue": [
+						{
+							"type": "speech",
+							"speaker": "random_boss",
+							"content": {
+								"korean": "나약한 자들이여. 이곳에서… 영원한 평온을 누려라.",
+								"english": "Weaklings. Here... enjoy eternal peace.",
+								"japanese": "弱き者たちよ。ここで…永遠の安寧を享受せよ。",
+								"chinese": "弱者们。在此……享受永恒的平静吧。",
+								"french": "Faibles. Ici... jouissez d'une paix éternelle.",
+								"spanish": "Débiles. Aquí... disfrutad de la paz eterna.",
+								"vietnamese": "Những kẻ yếu đuối. Tại đây... hãy tận hưởng sự bình yên vĩnh cửu.",
+								"thai": "พวกอ่อนแอเอ๋ย ณ ที่แห่งนี้... จงรับความสงบสุขชั่วนิรันดร์เถิด",
+								"hindi": "कमजोरों। यहाँ... शाश्वत शांति का आनंद लो।"
+							},
+							"emotion": "base"
+						},
+						{
+							"emotion": "angry",
+							"type": "speech",
+							"speaker": "character_any",
+							"content": {
+								"korean": "젠장… 아직은 안 돼! 우리는 여기서 멈출 수 없어!",
+								"english": "Damn it... not yet! We can't stop here!",
+								"japanese": "くそっ…まだだ！ここで止まるわけにはいかない！",
+								"chinese": "该死……还没完！我们不能止步于此！",
+								"french": "Mince... pas encore ! Nous ne pouvons pas nous arrêter ici !",
+								"spanish": "¡Maldita sea... aún no! ¡No podemos detenernos aquí!",
+								"vietnamese": "Chết tiệt... chưa được! Chúng ta không thể dừng lại ở đây!",
+								"thai": "บ้าจริง... ยังไม่ใช่ตอนนี้! เราหยุดอยู่แค่นี้ไม่ได้!",
+								"hindi": "धिक्कार है... अभी नहीं! हम यहाँ रुक नहीं सकते!"
+							}
+						}
+					]
+				}
+			]
+		},
+		{
+			"scenario_id": "KindPriest_V0_02",
+			"order": 2,
+			"act": "rising",
+			"theme": "hell",
+			"actors": {
+				"morwenna": {
+					"id": "mon_82f9054d-97ba-44ea-b8d7-0e2c80d21321",
+					"name": {
+						"korean": "모르웨나",
+						"english": "Morwenna",
+						"japanese": "モルウェナ",
+						"chinese": "莫尔温娜",
+						"french": "Morwenna",
+						"spanish": "Morwenna",
+						"vietnamese": "Morwenna",
+						"thai": "มอร์เวนนา",
+						"hindi": "मोरवेन्ना"
+					},
+					"description": "",
+					"face_image_url": "https://imagedelivery.net/WTEqQNGFb-l-IHS6IGnzUQ/abecab2c-4365-4cc4-0731-3eaef1af5000/public",
+					"battle_sprite_url": "https://imagedelivery.net/WTEqQNGFb-l-IHS6IGnzUQ/51bf170b-774b-49d8-ce97-d4e66bdea100/public"
+				}
+			},
+			"boss": {
+				"pool_id": "random_boss"
+			},
+			"prologue": {
+				"korean": [
+					"고요한 동굴. 잠시 찾아온 평화는 깨지기 쉬웠다.",
+					"루멘이 떠난 자리, 깊은 어둠 속에서 무언가가 다가오고 있었다.",
+					"그것은 굶주린 그림자. 가장 약한 곳을 노리는 포식자.",
+					"그리고, 그들의 '안식처'는, 사실은 가장 위험한 곳이었다."
+				],
+				"english": [
+					"A silent cave. The brief peace was fragile.",
+					"Where Lumen departed, something was approaching from the deep darkness.",
+					"It was a hungry shadow. A predator targeting the weakest.",
+					"And their 'sanctuary' was, in fact, the most dangerous place."
+				],
+				"japanese": [
+					"静かな洞窟。訪れたばかりの平和は脆かった。",
+					"ルーメンが去った場所、深い闇の中から何かが近づいてきていた。",
+					"それは飢えた影。最も弱い場所を狙う捕食者。",
+					"そして、彼らの「安息の地」は、実は最も危険な場所だった。"
+				],
+				"chinese": [
+					"寂静的洞穴。短暂的和平易逝。",
+					"卢门离开之地，深邃的黑暗中，有什么正悄然逼近。",
+					"那是一道饥饿的暗影。一个捕食者，专盯最脆弱之处。",
+					"然而，他们的“避难所”，实则最是危险之地。"
+				],
+				"french": [
+					"Une grotte silencieuse. La brève paix était fragile.",
+					"Là où Lumen était parti, quelque chose approchait des ténèbres profondes.",
+					"C'était une ombre affamée. Un prédateur ciblant les plus faibles.",
+					"Et leur 'sanctuaire' était, en fait, l'endroit le plus dangereux."
+				],
+				"spanish": [
+					"Una cueva silenciosa. La breve paz era frágil.",
+					"Donde Lumen partió, algo se acercaba desde la oscuridad profunda.",
+					"Era una sombra hambrienta. Un depredador que apuntaba a los más débiles.",
+					"Y su 'santuario' era, de hecho, el lugar más peligroso."
+				],
+				"vietnamese": [
+					"Hang động tĩnh lặng. Bình yên vừa tìm thấy thật mong manh.",
+					"Nơi Lumen rời đi, một thứ gì đó đang đến gần từ sâu thẳm bóng tối.",
+					"Đó là một cái bóng đói khát. Một kẻ săn mồi nhắm vào nơi yếu nhất.",
+					"Và 'nơi ẩn náu' của họ, thực ra lại là nơi nguy hiểm nhất."
+				],
+				"thai": [
+					"ถ้ำอันเงียบงัน สันติสุขชั่วขณะนั้นเปราะบางเหลือเกิน",
+					"ตรงที่ลูเมนจากไป บางสิ่งกำลังคืบคลานเข้ามาจากความมืดมิดอันลึกซึ้ง",
+					"มันคือเงาที่หิวโหย ผู้ล่าที่จ้องทำร้ายจุดที่อ่อนแอที่สุด",
+					"และ 'ที่พำนัก' ของพวกเขา แท้จริงแล้วคือสถานที่ที่อันตรายที่สุด"
+				],
+				"hindi": [
+					"एक शांत गुफा। क्षणिक शांति भंगुर थी।",
+					"जहां ल्यूमेन ने प्रस्थान किया, गहरी अंधेरे से कुछ आ रहा था।",
+					"वह एक भूखी छाया थी। सबसे कमजोर को निशाना बनाने वाला शिकारी।",
+					"और उनका 'आश्रम' वास्तव में सबसे खतरनाक जगह थी।"
+				]
+			},
+			"rooms": [
+				{
+					"id": 1,
+					"dialogue": [
+						{
+							"content": {
+								"korean": "동굴 깊은 곳, 기묘한 울음소리가 희미하게 들려왔다.",
+								"english": "Deep within the cave, a strange cry faintly echoed.",
+								"japanese": "洞窟の奥深くから、奇妙な鳴き声がかすかに聞こえてきた。",
+								"chinese": "洞穴深处，传来一阵奇怪的低鸣声。",
+								"french": "Au fond de la grotte, un étrange cri résonnait faiblement.",
+								"spanish": "En lo profundo de la cueva, un extraño grito resonó débilmente.",
+								"vietnamese": "Sâu trong hang động, một tiếng kêu kỳ lạ khẽ vọng lại.",
+								"thai": "ลึกเข้าไปในถ้ำ เสียงร้องแปลกๆ ดังแผ่วๆ มา",
+								"hindi": "गुफा के गहरे में, एक अजीब सी चीख धीमी आवाज में गूंज रही थी।"
+							},
+							"speaker": "narrator",
+							"emotion": "base",
+							"type": "speech"
+						},
+						{
+							"spot": [
+								4,
+								3
+							],
+							"duration_ms": 500,
+							"speaker": "morwenna",
+							"type": "direction",
+							"action": "enter"
+						},
+						{
+							"type": "speech",
+							"emotion": "sad",
+							"content": {
+								"korean": "…쉬고 있을 때가 아니었어.",
+								"english": "...This wasn't the time to rest.",
+								"japanese": "…休んでいる場合じゃなかった。",
+								"chinese": "……现在不是休息的时候。",
+								"french": "...Ce n'était pas le moment de se reposer.",
+								"spanish": "...No era el momento de descansar.",
+								"vietnamese": "…Không phải lúc để nghỉ ngơi.",
+								"thai": "...นี่ไม่ใช่เวลาที่จะพักผ่อน",
+								"hindi": "...यह आराम करने का समय नहीं था।"
+							},
+							"speaker": "morwenna"
+						},
+						{
+							"speaker": "character_any",
+							"content": {
+								"korean": "무슨 소리야? 저기 환자들은 아직…",
+								"english": "What's that sound? The patients there are still...",
+								"japanese": "何の音だ？あの患者たちはまだ…",
+								"chinese": "什么声音？那边的病患们还……",
+								"french": "Quel est ce bruit ? Les patients là-bas sont encore...",
+								"spanish": "¿Qué es ese ruido? Los pacientes allí todavía están...",
+								"vietnamese": "Tiếng gì vậy? Các bệnh nhân ở đó vẫn còn…",
+								"thai": "เสียงอะไรน่ะ? คนไข้ที่นั่นยังคง...",
+								"hindi": "यह कैसी आवाज है? वहां के मरीज अभी भी..."
+							},
+							"type": "speech",
+							"emotion": "base"
+						},
+						{
+							"speaker": "morwenna",
+							"content": {
+								"korean": "저 소리… 며칠째 이 근처를 맴도는 놈이야.",
+								"english": "That sound... It's been lingering around here for days.",
+								"japanese": "あの音…何日もこの辺りをうろついている奴だ。",
+								"chinese": "那声音……这几天一直在附近徘徊的家伙。",
+								"french": "Ce bruit... C'est celui qui traîne dans les parages depuis des jours.",
+								"spanish": "Ese sonido... Ha estado rondando por aquí durante días.",
+								"vietnamese": "Tiếng đó… là kẻ đã lảng vảng quanh đây mấy ngày rồi.",
+								"thai": "เสียงนั้น... มันวนเวียนอยู่แถวนี้มาหลายวันแล้ว",
+								"hindi": "वह आवाज... यह कई दिनों से यहीं मंडरा रहा है।"
+							},
+							"type": "speech",
+							"emotion": "angry"
+						},
+						{
+							"content": {
+								"korean": "환자들 표정이 너무 평온해. 걱정이 안 돼?",
+								"english": "The patients look too peaceful. Aren't you worried?",
+								"japanese": "患者たちの表情が穏やかすぎる。心配じゃないのか？",
+								"chinese": "病患们的表情太平静了。你不担心吗？",
+								"french": "Les patients semblent trop paisibles. Ça ne t'inquiète pas ?",
+								"spanish": "Los pacientes parecen demasiado tranquilos. ¿No te preocupa?",
+								"vietnamese": "Biểu cảm của bệnh nhân quá đỗi bình yên. Anh không lo lắng sao?",
+								"thai": "สีหน้าของคนไข้สงบเกินไป ไม่กังวลหรือไง?",
+								"hindi": "मरीजों के चेहरे बहुत शांत हैं। तुम्हें चिंता नहीं हो रही?"
+							},
+							"speaker": "character_1",
+							"emotion": "base",
+							"type": "speech"
+						}
+					]
+				},
+				{
+					"dialogue": [
+						{
+							"type": "direction",
+							"action": "enter",
+							"duration_ms": 500,
+							"spot": [
+								4,
+								3
+							],
+							"speaker": "morwenna"
+						},
+						{
+							"speaker": "morwenna",
+							"content": {
+								"korean": "녀석이 환자들을 노리고 있어. 가장 약한 곳을 노리는 게 저놈 방식이야.",
+								"english": "It's targeting the patients. Targeting the weakest is its way.",
+								"japanese": "あいつが患者たちを狙っている。最も弱い場所を狙うのが奴のやり方だ。",
+								"chinese": "那家伙正盯着病患们。攻击最脆弱之处是它的惯用伎俩。",
+								"french": "Il cible les patients. Cibler les plus faibles est sa manière de faire.",
+								"spanish": "Está apuntando a los pacientes. Atacar a los más débiles es su modus operandi.",
+								"vietnamese": "Nó đang nhắm vào các bệnh nhân. Nhắm vào nơi yếu nhất là cách của nó.",
+								"thai": "มันกำลังจ้องเล่นงานคนไข้ การจู่โจมจุดที่อ่อนแอที่สุดคือวิธีของมัน",
+								"hindi": "वह मरीजों को निशाना बना रहा है। सबसे कमजोर को निशाना बनाना ही उसका तरीका है।"
+							},
+							"type": "speech",
+							"emotion": "angry"
+						},
+						{
+							"emotion": "sad",
+							"type": "speech",
+							"speaker": "character_any",
+							"content": {
+								"korean": "루멘님은 어디에…",
+								"english": "Where is Lumen...?",
+								"japanese": "ルーメン様はどこに…",
+								"chinese": "露门大人在哪里…",
+								"french": "Où est Lumen...?",
+								"spanish": "¿Dónde está Lumen...?",
+								"vietnamese": "Lumen đang ở đâu...?",
+								"thai": "ลูเมนอยู่ที่ไหน...",
+								"hindi": "ल्यूमेन कहाँ है...?"
+							}
+						},
+						{
+							"emotion": "base",
+							"type": "speech",
+							"content": {
+								"korean": "루멘이 돌아오기 전에 우리가 막아야 해.",
+								"english": "We must stop them before Lumen returns.",
+								"japanese": "ルーメンが戻る前に、私たちが止めなければ。",
+								"chinese": "露门回来之前我们必须阻止他们。",
+								"french": "Nous devons les arrêter avant le retour de Lumen.",
+								"spanish": "Debemos detenerlos antes de que Lumen regrese.",
+								"vietnamese": "Chúng ta phải ngăn chặn chúng trước khi Lumen quay lại.",
+								"thai": "เราต้องหยุดพวกมันก่อนที่ลูเมนจะกลับมา",
+								"hindi": "ल्यूमेन के लौटने से पहले हमें उन्हें रोकना होगा।"
+							},
+							"speaker": "morwenna"
+						},
+						{
+							"content": {
+								"korean": "동굴 벽면에는 오래된 기도문이 빼곡했다. '당신의 괴로움을 내게 맡기소서.'",
+								"english": "The cave walls were covered with ancient prayers. 'Entrust your suffering to me.'",
+								"japanese": "洞窟の壁面には古い祈りの言葉がびっしりと刻まれていた。「あなたの苦しみを私に委ねよ。」",
+								"chinese": "洞穴墙壁上刻满了古老的祈祷文。“将你的痛苦托付给我吧。”",
+								"french": "Les parois de la grotte étaient couvertes de prières anciennes. « Confie-moi ta souffrance. »",
+								"spanish": "Las paredes de la cueva estaban cubiertas de oraciones antiguas. \"Encomiéndame tu sufrimiento.\"",
+								"vietnamese": "Bức tường hang động phủ đầy những lời cầu nguyện cổ xưa. 'Hãy giao nỗi đau của ngươi cho ta.'",
+								"thai": "ผนังถ้ำเต็มไปด้วยบทสวดโบราณ 'จงมอบความทุกข์ทรมานของเจ้าให้แก่ข้า'",
+								"hindi": "गुफा की दीवारों पर प्राचीन प्रार्थनाएँ भरी थीं। 'अपना दुख मुझे सौंप दो।'"
+							},
+							"speaker": "narrator",
+							"type": "speech",
+							"emotion": "base"
+						}
+					],
+					"id": 3
+				},
+				{
+					"dialogue": [
+						{
+							"type": "direction",
+							"action": "enter",
+							"spot": [
+								4,
+								3
+							],
+							"duration_ms": 500,
+							"speaker": "morwenna"
+						},
+						{
+							"emotion": "angry",
+							"type": "speech",
+							"content": {
+								"korean": "소리가 더 가까워졌어. 곧 들이닥칠 거야.",
+								"english": "The sounds are closer. They'll be here soon.",
+								"japanese": "音がもっと近づいてきた。もうすぐ押し入ってくる。",
+								"chinese": "声音更近了。他们很快就会闯进来。",
+								"french": "Les bruits se rapprochent. Ils seront là sous peu.",
+								"spanish": "Los sonidos están más cerca. Llegarán pronto.",
+								"vietnamese": "Tiếng động đã gần hơn. Chúng sẽ ập đến ngay thôi.",
+								"thai": "เสียงใกล้เข้ามาแล้ว อีกไม่นานพวกมันก็จะบุกเข้ามา",
+								"hindi": "आवाज़ें और करीब आ गई हैं। वे जल्द ही यहाँ होंगे।"
+							},
+							"speaker": "morwenna"
+						},
+						{
+							"emotion": "base",
+							"type": "speech",
+							"content": {
+								"korean": "환자들을 옮겨야 할까?",
+								"english": "Should we move the patients?",
+								"japanese": "患者たちを移動させるべきだろうか？",
+								"chinese": "我们应该转移病人吗？",
+								"french": "Devons-nous déplacer les patients ?",
+								"spanish": "¿Deberíamos mover a los pacientes?",
+								"vietnamese": "Chúng ta có nên di chuyển bệnh nhân không?",
+								"thai": "เราควรย้ายผู้ป่วยไหม?",
+								"hindi": "क्या हमें मरीजों को स्थानांतरित करना चाहिए?"
+							},
+							"speaker": "character_any"
+						},
+						{
+							"type": "speech",
+							"emotion": "angry",
+							"speaker": "morwenna",
+							"content": {
+								"korean": "아니. 여기서 막아야 해. 더 이상은 안 돼.",
+								"english": "No. We have to stop them here. No further.",
+								"japanese": "いや。ここで食い止めなければ。これ以上はダメだ。",
+								"chinese": "不。我们必须在这里阻止他们。不能再往前了。",
+								"french": "Non. Nous devons les arrêter ici. Pas un pas de plus.",
+								"spanish": "No. Tenemos que detenerlos aquí. No más allá.",
+								"vietnamese": "Không. Chúng ta phải chặn chúng ở đây. Không thể hơn được nữa.",
+								"thai": "ไม่ เราต้องหยุดพวกมันตรงนี้ ห้ามเลยไปกว่านี้",
+								"hindi": "नहीं। हमें उन्हें यहीं रोकना होगा। इससे आगे नहीं।"
+							}
+						},
+						{
+							"speaker": "character_2",
+							"content": {
+								"korean": "준비해. 저 짐승, 냄새를 맡은 것 같아.",
+								"english": "Get ready. That beast seems to have caught our scent.",
+								"japanese": "準備しろ。あの獣、匂いを嗅ぎつけたようだ。",
+								"chinese": "准备好。那头野兽好像闻到我们的气味了。",
+								"french": "Préparez-vous. Cette bête semble nous avoir repérés.",
+								"spanish": "Prepárense. Esa bestia parece habernos olido.",
+								"vietnamese": "Chuẩn bị đi. Con thú đó dường như đã đánh hơi thấy chúng ta.",
+								"thai": "เตรียมตัว ไอ้สัตว์ร้ายตัวนั้นคงได้กลิ่นเราแล้ว",
+								"hindi": "तैयार हो जाओ। उस जानवर को हमारी गंध मिल गई लगती है।"
+							},
+							"type": "speech",
+							"emotion": "base"
+						}
+					],
+					"id": 5
+				},
+				{
+					"id": 9,
+					"dialogue": [
+						{
+							"speaker": "morwenna",
+							"spot": [
+								4,
+								3
+							],
+							"duration_ms": 500,
+							"action": "enter",
+							"type": "direction"
+						},
+						{
+							"content": {
+								"korean": "이제 도망칠 곳 없어. 여기서 끝내야 해.",
+								"english": "No escape now. We end this here.",
+								"japanese": "もう逃げ場はない。ここで終わらせるんだ。",
+								"chinese": "现在无路可逃了。我们就在这里了结。",
+								"french": "Plus d'échappatoire. Nous en finissons ici.",
+								"spanish": "No hay escape ahora. Acabamos con esto aquí.",
+								"vietnamese": "Không còn đường thoát. Chúng ta phải kết thúc chuyện này ở đây.",
+								"thai": "ไม่มีทางหนีแล้ว เราต้องจบเรื่องนี้ที่นี่",
+								"hindi": "अब कोई बच निकलने का रास्ता नहीं। हम इसे यहीं खत्म करते हैं।"
+							},
+							"speaker": "morwenna",
+							"type": "speech",
+							"emotion": "angry"
+						},
+						{
+							"speaker": "character_any",
+							"content": {
+								"korean": "녀석이… 우리를 유인한 건가?",
+								"english": "Did it... lure us here?",
+								"japanese": "あいつが…私たちを誘い込んだのか？",
+								"chinese": "它是…把我们引到这里来的吗？",
+								"french": "Est-ce qu'il... nous a attirés ici ?",
+								"spanish": "¿Nos... atrajo aquí?",
+								"vietnamese": "Nó... đã dụ chúng ta đến đây sao?",
+								"thai": "มัน... ล่อเรามาที่นี่เหรอ?",
+								"hindi": "क्या इसने... हमें यहाँ फँसाया है?"
+							},
+							"type": "speech",
+							"emotion": "sad"
+						},
+						{
+							"type": "speech",
+							"emotion": "base",
+							"content": {
+								"korean": "아니, 환자들을 노린 거야. 우린 그저 방해물.",
+								"english": "No, it was after the patients. We're just obstacles.",
+								"japanese": "違う、患者たちを狙っていたんだ。私たちはただの邪魔者。",
+								"chinese": "不，它是冲着病人来的。我们只是障碍。",
+								"french": "Non, il s'en prenait aux patients. Nous ne sommes que des obstacles.",
+								"spanish": "No, iba tras los pacientes. Solo somos obstáculos.",
+								"vietnamese": "Không, nó nhắm vào các bệnh nhân. Chúng ta chỉ là vật cản thôi.",
+								"thai": "ไม่ มันตั้งใจมาที่ผู้ป่วย เราเป็นแค่ตัวขัดขวาง",
+								"hindi": "नहीं, वह मरीजों के पीछे था। हम बस बाधाएँ हैं।"
+							},
+							"speaker": "character_3"
+						},
+						{
+							"content": {
+								"korean": "우리가 길을 막아야 해.",
+								"english": "We must block the path.",
+								"japanese": "我々が道を塞がねばならない。",
+								"chinese": "我们必须堵住这条路。",
+								"french": "Nous devons bloquer le chemin.",
+								"spanish": "Debemos bloquear el camino.",
+								"vietnamese": "Chúng ta phải chặn đường.",
+								"thai": "เราต้องขวางทาง",
+								"hindi": "हमें रास्ता रोकना होगा।"
+							},
+							"speaker": "morwenna",
+							"type": "speech",
+							"emotion": "base"
+						}
+					]
+				},
+				{
+					"win_dialogue": [
+						{
+							"content": {
+								"korean": "크르르… 으으…",
+								"english": "Grrr... Ugh...",
+								"japanese": "グルル… うう…",
+								"chinese": "吼…… 呃……",
+								"french": "Grrr... Ugh...",
+								"spanish": "Grrr... Ugh...",
+								"vietnamese": "Gừ... Ực...",
+								"thai": "ครืน... อื้อ...",
+								"hindi": "गर्र्र... उफ़..."
+							},
+							"speaker": "random_boss",
+							"type": "speech",
+							"emotion": "sad"
+						},
+						{
+							"speaker": "morwenna",
+							"spot": [
+								4,
+								3
+							],
+							"duration_ms": 500,
+							"action": "enter",
+							"type": "direction"
+						},
+						{
+							"type": "speech",
+							"emotion": "happy",
+							"speaker": "morwenna",
+							"content": {
+								"korean": "해치웠어. 이제 환자들은 안전할 거야.",
+								"english": "We did it. The patients should be safe now.",
+								"japanese": "やったぞ。これで患者たちは安全だろう。",
+								"chinese": "搞定了。病人现在应该安全了。",
+								"french": "On l'a fait. Les patients devraient être en sécurité maintenant.",
+								"spanish": "Lo logramos. Los pacientes deberían estar a salvo ahora.",
+								"vietnamese": "Chúng ta đã làm được. Các bệnh nhân bây giờ sẽ an toàn.",
+								"thai": "เราทำได้แล้ว ผู้ป่วยน่าจะปลอดภัยแล้ว",
+								"hindi": "हमने कर दिखाया। अब मरीज़ सुरक्षित होंगे।"
+							}
+						},
+						{
+							"speaker": "character_any",
+							"content": {
+								"korean": "…그런데, 환자들 표정이 여전히…",
+								"english": "...But, the patients' expressions are still...",
+								"japanese": "…だが、患者たちの表情はまだ…",
+								"chinese": "……但是，病人们的表情依然……",
+								"french": "...Mais les expressions des patients sont toujours...",
+								"spanish": "...Pero, las expresiones de los pacientes siguen siendo...",
+								"vietnamese": "...Nhưng, biểu cảm của các bệnh nhân vẫn còn...",
+								"thai": "...แต่สีหน้าของผู้ป่วยก็ยังคง...",
+								"hindi": "...लेकिन, मरीज़ों के हावभाव अभी भी..."
+							},
+							"emotion": "base",
+							"type": "speech"
+						},
+						{
+							"speaker": "narrator",
+							"content": {
+								"korean": "동굴 한구석, 킹 보린이 조용히 부상자들을 돌보고 있었다. 그의 얼굴에는 깊은 죄책감이 서려 있었다.",
+								"english": "In a corner of the cave, King Borin quietly tended to the wounded. Deep guilt was etched on his face.",
+								"japanese": "洞窟の片隅で、キング・ボーリンは静かに負傷者たちを看病していた。彼の顔には深い罪悪感が刻まれていた。",
+								"chinese": "洞穴的一角，国王博林默默地照料着伤员。他脸上充满了深深的愧疚。",
+								"french": "Dans un coin de la grotte, le Roi Borin s'occupait silencieusement des blessés. Une profonde culpabilité était gravée sur son visage.",
+								"spanish": "En un rincón de la cueva, el Rey Borin atendía en silencio a los heridos. Una profunda culpa se reflejaba en su rostro.",
+								"vietnamese": "Trong một góc hang động, Vua Borin lặng lẽ chăm sóc những người bị thương. Nỗi mặc cảm tội lỗi sâu sắc hiện rõ trên khuôn mặt ông.",
+								"thai": "ในมุมหนึ่งของถ้ำ คิงโบรินกำลังดูแลผู้บาดเจ็บอย่างเงียบๆ ความรู้สึกผิดอย่างลึกซึ้งปรากฏอยู่บนใบหน้าของเขา",
+								"hindi": "गुफा के एक कोने में, किंग बोरिन चुपचाप घायलों की देखभाल कर रहा था। उसके चेहरे पर गहरा अपराधबोध झलक रहा था।"
+							},
+							"emotion": "base",
+							"type": "speech"
+						},
+						{
+							"content": {
+								"korean": "그리고, 아직 이 동굴의 이상한 평온함은 깨지지 않았다.",
+								"english": "And still, the strange tranquility of this cave remained unbroken.",
+								"japanese": "そして、この洞窟の奇妙な静けさはまだ破られていなかった。",
+								"chinese": "而且，这个洞穴奇怪的平静还没有被打破。",
+								"french": "Et pourtant, l'étrange tranquillité de cette grotte n'était toujours pas brisée.",
+								"spanish": "Y aún así, la extraña tranquilidad de esta cueva permanecía intacta.",
+								"vietnamese": "Và vẫn, sự yên bình kỳ lạ của hang động này vẫn chưa bị phá vỡ.",
+								"thai": "และแล้ว ความเงียบสงบอันแปลกประหลาดของถ้ำนี้ก็ยังคงอยู่",
+								"hindi": "और फिर भी, इस गुफा की अजीब शांति भंग नहीं हुई थी।"
+							},
+							"speaker": "narrator",
+							"type": "speech",
+							"emotion": "base"
+						}
+					],
+					"dialogue": [
+						{
+							"type": "speech",
+							"emotion": "base",
+							"content": {
+								"korean": "어둠 속에서 거대한 그림자가 나타났다. 굶주린 눈빛이 환자들을 향했다.",
+								"english": "A colossal shadow emerged from the darkness. Its hungry gaze fixed on the patients.",
+								"japanese": "闇の中から巨大な影が現れた。飢えた眼差しが患者たちに向けられた。",
+								"chinese": "一个巨大的身影从黑暗中浮现。饥饿的目光盯向了病人。",
+								"french": "Une ombre colossale émergea des ténèbres. Son regard affamé se posa sur les patients.",
+								"spanish": "Una sombra colosal emergió de la oscuridad. Su mirada hambrienta se fijó en los pacientes.",
+								"vietnamese": "Một bóng đen khổng lồ hiện ra từ bóng tối. Ánh mắt đói khát của nó nhìn chằm chằm vào các bệnh nhân.",
+								"thai": "เงาขนาดมหึมาปรากฏขึ้นจากความมืด สายตาที่หิวโหยจ้องมองไปยังผู้ป่วย",
+								"hindi": "अंधेरे से एक विशाल छाया उभरी। उसकी भूखी निगाहें मरीज़ों पर टिकी थीं।"
+							},
+							"speaker": "narrator"
+						},
+						{
+							"type": "speech",
+							"emotion": "angry",
+							"content": {
+								"korean": "크르르르…!",
+								"english": "Grrr...!",
+								"japanese": "グルルル…！",
+								"chinese": "吼……！",
+								"french": "Grrr...!",
+								"spanish": "Grrr...!",
+								"vietnamese": "Gừ gừ...!",
+								"thai": "ครืนนน...!",
+								"hindi": "गर्र्र्र...!"
+							},
+							"speaker": "random_boss"
+						},
+						{
+							"spot": [
+								4,
+								3
+							],
+							"duration_ms": 500,
+							"speaker": "morwenna",
+							"type": "direction",
+							"action": "enter"
+						},
+						{
+							"emotion": "angry",
+							"type": "speech",
+							"speaker": "morwenna",
+							"content": {
+								"korean": "이 짐승! 드디어 모습을 드러냈군!",
+								"english": "This beast! It finally showed itself!",
+								"japanese": "この獣め！ついに姿を現しおったか！",
+								"chinese": "这畜生！终于现身了！",
+								"french": "Cette bête ! Elle a enfin montré le bout de son nez !",
+								"spanish": "¡Esta bestia! ¡Finalmente se ha mostrado!",
+								"vietnamese": "Con quái vật này! Cuối cùng cũng lộ diện!",
+								"thai": "เจ้านี่! ในที่สุดก็เผยตัว!",
+								"hindi": "यह जानवर! आख़िरकार सामने आ ही गया!"
+							}
+						},
+						{
+							"emotion": "base",
+							"type": "speech",
+							"content": {
+								"korean": "환자들을 지켜!",
+								"english": "Protect the patients!",
+								"japanese": "患者たちを守れ！",
+								"chinese": "保护病人！",
+								"french": "Protégez les patients !",
+								"spanish": "¡Protejan a los pacientes!",
+								"vietnamese": "Bảo vệ các bệnh nhân!",
+								"thai": "ปกป้องผู้ป่วย!",
+								"hindi": "मरीज़ों की रक्षा करो!"
+							},
+							"speaker": "character_any"
+						}
+					],
+					"id": 15,
+					"lose_dialogue": [
+						{
+							"type": "speech",
+							"emotion": "angry",
+							"content": {
+								"korean": "크르르르… 내 먹이가 될 것이다.",
+								"english": "Grrr... You'll be my prey.",
+								"japanese": "グルルル… 俺の獲物になるのだ。",
+								"chinese": "吼…你将成为我的猎物。",
+								"french": "Grrr... Tu seras ma proie.",
+								"spanish": "Grrr... Serás mi presa.",
+								"vietnamese": "Gừ gừ... Ngươi sẽ là con mồi của ta.",
+								"thai": "ครรร์... เจ้าจะเป็นเหยื่อของข้า.",
+								"hindi": "गुर्र... तुम मेरा शिकार बनोगे।"
+							},
+							"speaker": "random_boss"
+						},
+						{
+							"content": {
+								"korean": "아직… 끝나지 않았어!",
+								"english": "It's not over yet!",
+								"japanese": "まだ… 終わってない！",
+								"chinese": "还没… 没完呢！",
+								"french": "Ce n'est pas encore fini !",
+								"spanish": "¡Aún no ha terminado!",
+								"vietnamese": "Chưa kết thúc đâu!",
+								"thai": "ยัง… ยังไม่จบ!",
+								"hindi": "अभी… खत्म नहीं हुआ है!"
+							},
+							"speaker": "character_any",
+							"type": "speech",
+							"emotion": "angry"
+						}
+					]
+				}
+			]
+		},
+		{
+			"scenario_id": "KindPriest_V0_03",
+			"order": 3,
+			"act": "rising",
+			"theme": "hell",
+			"actors": {
+				"king_borin": {
+					"id": "mon_395623fe-f16c-4e32-a96d-b112c2b6b3e3",
+					"name": {
+						"korean": "보린 왕",
+						"english": "King Borin",
+						"japanese": "ボリン王",
+						"chinese": "波林王",
+						"french": "Roi Borin",
+						"spanish": "Rey Borin",
+						"vietnamese": "Vua Borin",
+						"thai": "ราชาบอริน",
+						"hindi": "राजा बोरिन"
+					},
+					"description": "",
+					"face_image_url": "https://imagedelivery.net/WTEqQNGFb-l-IHS6IGnzUQ/47299a9c-6646-496d-6716-4b45f9c6f300/public",
+					"battle_sprite_url": "https://imagedelivery.net/WTEqQNGFb-l-IHS6IGnzUQ/294303de-0ac2-4671-3674-09d5aec03300/public"
+				}
+			},
+			"boss": {
+				"pool_id": "random_boss"
+			},
+			"prologue": {
+				"korean": [
+					"전투는 끝났다. 신음 소리 대신, 기묘한 평온이 동굴을 채웠다.",
+					"킹 보린은 부상자들을 살폈다. 그의 눈엔 깊은 죄책감이 서려 있었다.",
+					"누군가 고통을 지워준다면, 그것이 어떤 대가든 — 과연 옳은 일일까?",
+					"동굴 벽면의 기도문은 텅 빈 눈동자로 우리를 맞이했다."
+				],
+				"english": [
+					"The battle was over. Instead of groans, a strange tranquility filled the cave.",
+					"King Borin surveyed the wounded. Deep guilt clouded his eyes.",
+					"If someone could erase the pain, no matter the cost — would it truly be the right thing to do?",
+					"The prayers carved into the cave walls greeted us with empty eyes."
+				],
+				"japanese": [
+					"戦いは終わった。うめき声の代わりに、奇妙な静寂が洞窟を満たしていた。",
+					"ボーリン王は負傷者を見回した。彼の目には深い罪悪感が宿っていた。",
+					"誰かが苦痛を消してくれるなら、それがどんな代償を伴うとしても — 果たしてそれは正しいことなのだろうか？",
+					"洞窟の壁に刻まれた祈りの言葉は、虚ろな眼差しで私たちを迎えた。"
+				],
+				"chinese": [
+					"战斗结束了。洞穴里没有呻吟声，取而代之的是一种奇怪的平静。",
+					"鲍林国王巡视着伤员。他眼中充满了深深的愧疚。",
+					"如果有人能消除痛苦，无论代价如何——这真的对吗？",
+					"洞穴墙壁上的祈祷文以空洞的眼神迎接我们。"
+				],
+				"french": [
+					"La bataille était terminée. Au lieu de gémissements, une étrange quiétude emplissait la grotte.",
+					"Le roi Borin examina les blessés. Une profonde culpabilité se lisait dans ses yeux.",
+					"Si quelqu'un pouvait effacer la douleur, quel qu'en soit le prix — serait-ce vraiment la bonne chose à faire ?",
+					"Les prières gravées sur les parois de la grotte nous accueillaient avec des yeux vides."
+				],
+				"spanish": [
+					"La batalla había terminado. En lugar de quejidos, una extraña tranquilidad llenaba la cueva.",
+					"El rey Borin examinó a los heridos. Una profunda culpa ensombrecía sus ojos.",
+					"Si alguien pudiera borrar el dolor, sin importar el costo, ¿sería realmente lo correcto?",
+					"Las oraciones talladas en las paredes de la cueva nos recibieron con ojos vacíos."
+				],
+				"vietnamese": [
+					"Trận chiến đã kết thúc. Thay vì tiếng rên rỉ, một sự yên bình kỳ lạ bao trùm hang động.",
+					"Vua Borin xem xét những người bị thương. Nỗi tội lỗi sâu sắc hiện rõ trong mắt ông.",
+					"Nếu ai đó có thể xóa đi nỗi đau, dù phải trả giá nào — liệu điều đó có thực sự đúng đắn không?",
+					"Những lời cầu nguyện khắc trên vách hang động đón chào chúng tôi bằng ánh mắt trống rỗng."
+				],
+				"thai": [
+					"การต่อสู้สิ้นสุดลงแล้ว แทนที่จะเป็นเสียงครวญคราง ความสงบที่แปลกประหลาดกลับเข้ามาแทนที่ภายในถ้ำ",
+					"กษัตริย์บอรินสำรวจผู้บาดเจ็บ ความรู้สึกผิดอย่างลึกซึ้งปกคลุมอยู่ในแววตาของเขา",
+					"หากใครสักคนสามารถลบล้างความเจ็บปวดได้ ไม่ว่าจะต้องแลกมาด้วยอะไรก็ตาม — มันจะเป็นสิ่งที่ถูกต้องจริงๆ หรือไม่?",
+					"บทสวดมนต์ที่สลักอยู่บนผนังถ้ำต้อนรับเราด้วยสายตาที่ว่างเปล่า"
+				],
+				"hindi": [
+					"युद्ध समाप्त हो गया था। कराहों के बजाय, एक अजीब सी शांति ने गुफा को भर दिया था।",
+					"राजा बोरिन ने घायलों का निरीक्षण किया। उनकी आँखों में गहरा अपराधबोध झलक रहा था।",
+					"यदि कोई पीड़ा को मिटा सके, चाहे कोई भी कीमत हो — तो क्या यह वास्तव में सही होगा?",
+					"गुफा की दीवारों पर उकेरी गई प्रार्थनाओं ने हमें खाली आँखों से अभिवादन किया।"
+				]
+			},
+			"rooms": [
+				{
+					"id": 1,
+					"dialogue": [
+						{
+							"content": {
+								"korean": "거친 전투가 지나간 자리. 동굴은 부상자들의 신음으로 가득했다.",
+								"english": "Where fierce battle had raged. The cave was filled with the groans of the wounded.",
+								"japanese": "激しい戦いが過ぎ去った場所。洞窟は負傷者のうめき声で満たされていた。",
+								"chinese": "激烈战斗过后，洞穴里充满了伤员的呻吟声。",
+								"french": "Là où une bataille féroce avait fait rage. La grotte était remplie des gémissements des blessés.",
+								"spanish": "Donde una feroz batalla había tenido lugar. La cueva estaba llena de los quejidos de los heridos.",
+								"vietnamese": "Nơi trận chiến khốc liệt vừa đi qua. Hang động tràn ngập tiếng rên rỉ của những người bị thương.",
+								"thai": "ณ ที่ซึ่งการต่อสู้อันดุเดือดได้ผ่านพ้นไป ถ้ำนั้นเต็มไปด้วยเสียงครวญครางของผู้บาดเจ็บ",
+								"hindi": "जहाँ भीषण युद्ध हुआ था। गुफा घायलों की कराहों से भरी हुई थी।"
+							},
+							"type": "speech",
+							"speaker": "narrator",
+							"emotion": "base"
+						},
+						{
+							"speaker": "king_borin",
+							"duration_ms": 500,
+							"type": "direction",
+							"spot": [
+								5,
+								2
+							],
+							"action": "enter"
+						},
+						{
+							"speaker": "king_borin",
+							"type": "speech",
+							"content": {
+								"korean": "…모두 괜찮은가? 조금만 참아다오.",
+								"english": "...Is everyone alright? Just bear with it a little longer.",
+								"japanese": "…皆、大丈夫か？もう少しだけ我慢してくれ。",
+								"chinese": "……大家都还好吗？再忍耐一下。",
+								"french": "...Tout le monde va bien ? Tenez bon encore un peu.",
+								"spanish": "¿Están todos bien? Aguanten un poco más.",
+								"vietnamese": "...Mọi người có ổn không? Cố gắng chịu đựng thêm một chút.",
+								"thai": "...ทุกคนสบายดีไหม? อดทนอีกนิดนะ",
+								"hindi": "सब ठीक हो? बस थोड़ी देर और सह लो।"
+							},
+							"emotion": "sad"
+						},
+						{
+							"speaker": "character_any",
+							"content": {
+								"korean": "킹 보린… 다친 분들을 돌보고 계시는군요.",
+								"english": "King Borin... you are attending to the injured.",
+								"japanese": "ボーリン王…負傷者たちを看病されているのですね。",
+								"chinese": "鲍林国王……您正在照顾伤员。",
+								"french": "Roi Borin... vous vous occupez des blessés.",
+								"spanish": "Rey Borin... está atendiendo a los heridos.",
+								"vietnamese": "Vua Borin... ngài đang chăm sóc những người bị thương.",
+								"thai": "กษัตริย์บอริน... ท่านกำลังดูแลผู้บาดเจ็บอยู่สินะ",
+								"hindi": "राजा बोरिन... आप घायलों की देखभाल कर रहे हैं।"
+							},
+							"type": "speech",
+							"emotion": "base"
+						},
+						{
+							"content": {
+								"korean": "왕으로서, 백성을 지키는 것은 당연한 일. 설령 이미 잃어버린 왕이라 해도…",
+								"english": "As a king, protecting my people is my duty. Even if I am a king who has already lost his kingdom...",
+								"japanese": "王として、民を守るのは当然のことだ。たとえ、すでに国を失った王だとしても…",
+								"chinese": "作为国王，保护我的子民是理所当然的。即便我是一个已经失去王国的国王……",
+								"french": "En tant que roi, protéger mon peuple est mon devoir. Même si je suis un roi qui a déjà perdu son royaume...",
+								"spanish": "Como rey, proteger a mi pueblo es mi deber. Aunque sea un rey que ya ha perdido su reino...",
+								"vietnamese": "Là một vị vua, bảo vệ thần dân của ta là lẽ đương nhiên. Ngay cả khi ta là một vị vua đã mất đi vương quốc của mình...",
+								"thai": "ในฐานะกษัตริย์ การปกป้องประชาชนของข้าคือหน้าที่ แม้ว่าข้าจะเป็นกษัตริย์ที่สูญเสียอาณาจักรไปแล้วก็ตาม...",
+								"hindi": "एक राजा के रूप में, अपनी प्रजा की रक्षा करना मेरा कर्तव्य है। भले ही मैं एक ऐसा राजा हूँ जिसने अपना राज्य खो दिया हो..."
+							},
+							"type": "speech",
+							"speaker": "king_borin",
+							"emotion": "sad"
+						},
+						{
+							"speaker": "character_any",
+							"content": {
+								"korean": "….",
+								"english": "....",
+								"japanese": "……。",
+								"chinese": "……。",
+								"french": "....",
+								"spanish": "....",
+								"vietnamese": "....",
+								"thai": "....",
+								"hindi": "...."
+							},
+							"type": "speech",
+							"emotion": "base"
+						}
+					]
+				},
+				{
+					"id": 3,
+					"dialogue": [
+						{
+							"spot": [
+								5,
+								2
+							],
+							"speaker": "king_borin",
+							"duration_ms": 500,
+							"type": "direction",
+							"action": "enter"
+						},
+						{
+							"emotion": "sad",
+							"speaker": "king_borin",
+							"type": "speech",
+							"content": {
+								"korean": "나는… 한때 왕이었다. 내 왕국은 평화로웠지.",
+								"english": "I... was once a king. My kingdom was peaceful.",
+								"japanese": "私は…かつて王だった。私の王国は平和だった。",
+								"chinese": "我……曾是一位国王。我的王国曾是和平的。",
+								"french": "J'étais... autrefois un roi. Mon royaume était paisible.",
+								"spanish": "Yo... fui un rey. Mi reino era pacífico.",
+								"vietnamese": "Ta... từng là một vị vua. Vương quốc của ta đã rất yên bình.",
+								"thai": "ข้า... เคยเป็นกษัตริย์ อาณาจักรของข้าเคยสงบสุข",
+								"hindi": "मैं... कभी एक राजा था। मेरा राज्य शांतिपूर्ण था।"
+							}
+						},
+						{
+							"speaker": "character_1",
+							"type": "speech",
+							"content": {
+								"korean": "그럼 지금은…?",
+								"english": "Then, now...?",
+								"japanese": "では、今は…？",
+								"chinese": "那么现在呢…？",
+								"french": "Alors, maintenant...?",
+								"spanish": "¿Y ahora...?",
+								"vietnamese": "Vậy bây giờ thì sao...?",
+								"thai": "แล้วตอนนี้ล่ะ...?",
+								"hindi": "तो अब...?"
+							},
+							"emotion": "base"
+						},
+						{
+							"emotion": "sad",
+							"speaker": "king_borin",
+							"type": "speech",
+							"content": {
+								"korean": "한순간에 사라졌다. 백성들은 고통 속에서 죽어갔고, 나는 아무것도 할 수 없었어.",
+								"english": "It vanished in an instant. My people died in agony, and I could do nothing.",
+								"japanese": "一瞬で消え去った。民は苦しみの中で死んでいき、私は何もできなかった。",
+								"chinese": "它瞬间消失了。我的子民在痛苦中死去，我却无能为力。",
+								"french": "Elle disparut en un instant. Mon peuple mourut dans l'agonie, et je ne pus rien faire.",
+								"spanish": "Desapareció en un instante. Mi gente murió en agonía, y yo no pude hacer nada.",
+								"vietnamese": "Nó biến mất trong chớp mắt. Dân chúng của ta chết trong đau đớn, và ta không thể làm gì.",
+								"thai": "มันหายไปในพริบตา ประชาชนของข้าตายอย่างทรมาน และข้าก็ทำอะไรไม่ได้เลย",
+								"hindi": "वह पल भर में गायब हो गया। मेरे लोग पीड़ा में मर गए, और मैं कुछ नहीं कर सका।"
+							}
+						},
+						{
+							"emotion": "base",
+							"type": "speech",
+							"content": {
+								"korean": "동굴 벽면에 낯선 글귀가 반복해서 적혀 있었다. '당신의 괴로움을 내게 맡기소서.'",
+								"english": "Strange words were repeatedly carved into the cave walls: 'Entrust your suffering to me.'",
+								"japanese": "洞窟の壁には見慣れない言葉が繰り返し刻まれていた。『あなたの苦しみを私に委ねよ。』",
+								"chinese": "洞穴墙壁上反复刻着陌生的文字：‘将你的痛苦托付于我。’",
+								"french": "Des mots étranges étaient gravés à plusieurs reprises sur les parois de la grotte : 'Confie-moi ta souffrance.'",
+								"spanish": "Extrañas palabras estaban grabadas repetidamente en las paredes de la cueva: 'Encomienda tu sufrimiento a mí.'",
+								"vietnamese": "Những dòng chữ lạ lặp đi lặp lại trên vách hang động: 'Hãy giao phó nỗi khổ đau của ngươi cho ta.'",
+								"thai": "มีถ้อยคำแปลกๆ สลักซ้ำๆ อยู่บนผนังถ้ำ: 'จงมอบความทุกข์ระทมของท่านให้แก่ข้า'",
+								"hindi": "गुफा की दीवारों पर अजीबोगरीब शब्द बार-बार खुदे हुए थे: 'अपनी पीड़ा मुझे सौंप दो।'"
+							},
+							"speaker": "narrator"
+						}
+					]
+				},
+				{
+					"id": 5,
+					"dialogue": [
+						{
+							"duration_ms": 500,
+							"type": "direction",
+							"speaker": "king_borin",
+							"spot": [
+								5,
+								2
+							],
+							"action": "enter"
+						},
+						{
+							"content": {
+								"korean": "그때, 나는 생각했어. 고통을 없앨 수만 있다면…",
+								"english": "Then, I thought: if only I could erase the pain...",
+								"japanese": "その時、私は思った。苦痛をなくすことさえできれば…",
+								"chinese": "那时，我想：如果我能消除痛苦……",
+								"french": "Alors, j'ai pensé : si seulement je pouvais effacer la douleur...",
+								"spanish": "Entonces, pensé: si tan solo pudiera eliminar el dolor...",
+								"vietnamese": "Lúc đó, ta đã nghĩ: nếu ta có thể loại bỏ nỗi đau...",
+								"thai": "ตอนนั้น ข้าคิดว่า: หากข้าสามารถกำจัดความเจ็บปวดได้...",
+								"hindi": "तब, मैंने सोचा: काश मैं दर्द मिटा पाता..."
+							},
+							"type": "speech",
+							"speaker": "king_borin",
+							"emotion": "sad"
+						},
+						{
+							"speaker": "character_2",
+							"content": {
+								"korean": "무엇이라도 하셨을 거라는 말인가요?",
+								"english": "Are you saying you would have done anything?",
+								"japanese": "何かされたということですか？",
+								"chinese": "您是说您会不惜一切吗？",
+								"french": "Voulez-vous dire que vous auriez fait n'importe quoi ?",
+								"spanish": "¿Está diciendo que habría hecho cualquier cosa?",
+								"vietnamese": "Ngài đang nói ngài sẽ làm bất cứ điều gì sao?",
+								"thai": "ท่านหมายความว่าท่านจะทำทุกอย่างเลยหรือ?",
+								"hindi": "क्या आप कह रहे हैं कि आप कुछ भी करते?"
+							},
+							"type": "speech",
+							"emotion": "base"
+						},
+						{
+							"emotion": "sad",
+							"speaker": "king_borin",
+							"content": {
+								"korean": "그래. 백성들의 신음을 멈출 수만 있다면, 내 영혼이라도 팔았을 거다.",
+								"english": "Yes. If only I could stop my people's cries, I would have sold my very soul.",
+								"japanese": "そうだ。民の呻きを止められるのなら、私の魂すら売っていただろう。",
+								"chinese": "是的。如果我能阻止我子民的哀嚎，我甚至会出卖我的灵魂。",
+								"french": "Oui. Si seulement je pouvais arrêter les gémissements de mon peuple, j'aurais vendu mon âme.",
+								"spanish": "Sí. Si tan solo pudiera detener los lamentos de mi gente, habría vendido mi propia alma.",
+								"vietnamese": "Đúng vậy. Nếu có thể ngăn những tiếng rên rỉ của dân chúng, ta thà bán linh hồn của mình.",
+								"thai": "ใช่ หากข้าหยุดเสียงคร่ำครวญของประชาชนได้ ข้าก็จะขายแม้กระทั่งวิญญาณของข้า",
+								"hindi": "हाँ। काश मैं अपने लोगों की कराहें रोक पाता, मैं अपनी आत्मा तक बेच देता।"
+							},
+							"type": "speech"
+						},
+						{
+							"speaker": "character_any",
+							"type": "speech",
+							"content": {
+								"korean": "….",
+								"english": "....",
+								"japanese": "…。",
+								"chinese": "……",
+								"french": "....",
+								"spanish": "....",
+								"vietnamese": "....",
+								"thai": "....",
+								"hindi": "...."
+							},
+							"emotion": "base"
+						},
+						{
+							"speaker": "narrator",
+							"type": "speech",
+							"content": {
+								"korean": "킹 보린의 눈은 고통으로 일렁였다. 동굴은 침묵으로 가득 찼다.",
+								"english": "King Borin's eyes flickered with pain. The cave filled with silence.",
+								"japanese": "ボーリン王の目は苦痛に揺らめいた。洞窟は沈黙に包まれた。",
+								"chinese": "鲍林王的眼中充满了痛苦。洞穴里一片寂静。",
+								"french": "Les yeux du Roi Borin scintillaient de douleur. La grotte fut emplie de silence.",
+								"spanish": "Los ojos del Rey Borin brillaron con dolor. La cueva se llenó de silencio.",
+								"vietnamese": "Đôi mắt của Vua Borin tràn ngập nỗi đau. Hang động chìm trong im lặng.",
+								"thai": "นัยน์ตาของกษัตริย์บอรินสั่นระริกด้วยความเจ็บปวด ถ้ำเต็มไปด้วยความเงียบงัน",
+								"hindi": "राजा बोरिन की आँखें दर्द से टिमटिमा उठीं। गुफा खामोशी से भर गई।"
+							},
+							"emotion": "base"
+						}
+					]
+				},
+				{
+					"id": 9,
+					"dialogue": [
+						{
+							"spot": [
+								5,
+								2
+							],
+							"duration_ms": 500,
+							"type": "direction",
+							"speaker": "king_borin",
+							"action": "enter"
+						},
+						{
+							"emotion": "sad",
+							"type": "speech",
+							"content": {
+								"korean": "그 죄책감은… 날 이곳까지 이끌었다. 속죄하고 싶었어.",
+								"english": "That guilt... led me here. I wanted to atone.",
+								"japanese": "あの罪悪感が…私をここへ導いた。私は償いたかった。",
+								"chinese": "那份愧疚……将我引到这里。我想赎罪。",
+								"french": "Cette culpabilité... m'a mené ici. Je voulais expier.",
+								"spanish": "Esa culpa... me trajo aquí. Quería expiar.",
+								"vietnamese": "Nỗi ân hận đó... đã dẫn ta đến đây. Ta muốn chuộc tội.",
+								"thai": "ความรู้สึกผิดนั้น... นำข้ามาที่นี่ ข้าอยากจะชดใช้",
+								"hindi": "वह अपराधबोध... मुझे यहाँ ले आया। मैं प्रायश्चित करना चाहता था।"
+							},
+							"speaker": "king_borin"
+						},
+						{
+							"type": "speech",
+							"content": {
+								"korean": "하지만… 이곳은 너무 위험합니다.",
+								"english": "But... this place is too dangerous.",
+								"japanese": "しかし…ここはあまりにも危険です。",
+								"chinese": "但是……这里太危险了。",
+								"french": "Mais... cet endroit est trop dangereux.",
+								"spanish": "Pero... este lugar es demasiado peligroso.",
+								"vietnamese": "Nhưng... nơi này quá nguy hiểm.",
+								"thai": "แต่... ที่นี่อันตรายเกินไป",
+								"hindi": "लेकिन... यह जगह बहुत खतरनाक है।"
+							},
+							"speaker": "character_any",
+							"emotion": "base"
+						},
+						{
+							"emotion": "base",
+							"speaker": "narrator",
+							"type": "speech",
+							"content": {
+								"korean": "그때였다. 동굴 깊은 곳에서 정체 모를 그림자가 드리워졌다.",
+								"english": "It was then. An unknown shadow loomed from the depths of the cave.",
+								"japanese": "その時だった。洞窟の奥深くから、正体不明の影が忍び寄った。",
+								"chinese": "就在那时。洞穴深处，一个不明的阴影笼罩而来。",
+								"french": "C'est alors qu'une ombre inconnue émergea des profondeurs de la grotte.",
+								"spanish": "Fue entonces. Una sombra desconocida se cernió desde las profundidades de la cueva.",
+								"vietnamese": "Chính lúc đó. Một bóng đen vô định bao trùm từ sâu thẳm hang động.",
+								"thai": "เป็นตอนนั้นเอง เงาประหลาดคืบคลานมาจากส่วนลึกของถ้ำ",
+								"hindi": "तभी, गुफा की गहराई से एक अज्ञात छाया मंडराने लगी。"
+							}
+						},
+						{
+							"emotion": "angry",
+							"speaker": "random_boss",
+							"type": "speech",
+							"content": {
+								"korean": "…고통을 원하는가? 그럼, 더 깊은 절망을 주지.",
+								"english": "...Do you desire pain? Then, I shall grant you deeper despair.",
+								"japanese": "…苦痛を望むか？ならば、より深き絶望を与えよう。",
+								"chinese": "……你渴望痛苦吗？那么，我将赐予你更深的绝望。",
+								"french": "...Tu désires la souffrance ? Alors, je te donnerai un désespoir plus profond.",
+								"spanish": "¿...Deseas el dolor? Entonces, te daré una desesperación más profunda.",
+								"vietnamese": "...Ngươi muốn đau khổ sao? Vậy thì, ta sẽ ban cho ngươi sự tuyệt vọng sâu hơn.",
+								"thai": "...เจ้าปรารถนาความเจ็บปวดหรือ? งั้นข้าจะมอบความสิ้นหวังที่ลึกซึ้งกว่าให้",
+								"hindi": "क्या तुम दर्द चाहते हो? तो, मैं तुम्हें और गहरी निराशा दूँगा।"
+							}
+						}
+					]
+				},
+				{
+					"dialogue": [
+						{
+							"type": "speech",
+							"content": {
+								"korean": "두려워하는 자여, 네 고통을 바쳐라.",
+								"english": "Fearful one, offer your suffering.",
+								"japanese": "恐れる者よ、汝の苦痛を捧げよ。",
+								"chinese": "恐惧者啊，献上你的痛苦吧。",
+								"french": "Âme craintive, offre ta souffrance.",
+								"spanish": "¡Oh, temeroso, ofrece tu dolor!",
+								"vietnamese": "Kẻ sợ hãi, hãy dâng nỗi đau của ngươi.",
+								"thai": "ผู้หวาดกลัวเอ๋ย จงมอบความทุกข์ของเจ้ามา",
+								"hindi": "हे भयभीत प्राणी, अपना दर्द अर्पित करो।"
+							},
+							"speaker": "random_boss",
+							"emotion": "angry"
+						},
+						{
+							"emotion": "angry",
+							"content": {
+								"korean": "닥쳐! 더 이상 누구도 고통받게 두지 않아.",
+								"english": "Silence! I won't let anyone suffer anymore.",
+								"japanese": "黙れ！もう誰にも苦しませはしない！",
+								"chinese": "住口！我不会再让任何人受苦。",
+								"french": "Tais-toi ! Je ne laisserai plus personne souffrir.",
+								"spanish": "¡Cállate! No permitiré que nadie más sufra.",
+								"vietnamese": "Im đi! Ta sẽ không để ai phải chịu đựng thêm nữa.",
+								"thai": "หุบปาก! ข้าจะไม่ยอมให้ใครต้องทนทุกข์อีกแล้ว",
+								"hindi": "चुप रहो! मैं अब किसी को कष्ट नहीं सहने दूँगा।"
+							},
+							"type": "speech",
+							"speaker": "character_any"
+						},
+						{
+							"spot": [
+								3,
+								2
+							],
+							"speaker": "king_borin",
+							"duration_ms": 500,
+							"type": "direction",
+							"action": "enter"
+						},
+						{
+							"speaker": "king_borin",
+							"type": "speech",
+							"content": {
+								"korean": "나는… 더 이상 백성을 잃지 않을 것이다! 물러서라!",
+								"english": "I... will not lose my people anymore! Stand back!",
+								"japanese": "私は…もう民を失わない！退け！",
+								"chinese": "我…不会再失去我的子民！退下！",
+								"french": "Je… ne perdrai plus mon peuple ! Reculez !",
+								"spanish": "¡Yo… no perderé a mi gente nunca más! ¡Retrocede!",
+								"vietnamese": "Ta… sẽ không mất thêm thần dân nào nữa! Lùi lại!",
+								"thai": "ข้า… จะไม่ยอมเสียประชาชนอีกแล้ว! ถอยไป!",
+								"hindi": "मैं… अब और अपने लोगों को नहीं खोऊँगा! पीछे हटो!"
+							},
+							"emotion": "angry"
+						}
+					],
+					"id": 15,
+					"lose_dialogue": [
+						{
+							"content": {
+								"korean": "너희의 고통, 내게 맡겨라. 영원한 안식을 주지.",
+								"english": "Your suffering, entrust it to me. I will grant you eternal rest.",
+								"japanese": "お前たちの苦痛、私に預けよ。永遠の安息を与えよう。",
+								"chinese": "你们的痛苦，交给我吧。我将赐予你们永恒的安息。",
+								"french": "Votre souffrance, confiez-la-moi. Je vous accorderai un repos éternel.",
+								"spanish": "Vuestro dolor, confiadmelo. Os daré el descanso eterno.",
+								"vietnamese": "Nỗi đau của các ngươi, hãy giao phó cho ta. Ta sẽ ban cho các ngươi sự an nghỉ vĩnh hằng.",
+								"thai": "ความทุกข์ของพวกเจ้า จงมอบให้ข้า ข้าจะมอบการพักผ่อนชั่วนิรันดร์ให้",
+								"hindi": "तुम्हारा दर्द, मुझे सौंप दो। मैं तुम्हें शाश्वत शांति दूँगा।"
+							},
+							"type": "speech",
+							"speaker": "random_boss",
+							"emotion": "base"
+						},
+						{
+							"emotion": "angry",
+							"speaker": "character_any",
+							"type": "speech",
+							"content": {
+								"korean": "크윽… 아직 끝나지 않았어!",
+								"english": "Ugh... It's not over yet!",
+								"japanese": "くっ…まだ終わってない！",
+								"chinese": "呃…还没完！",
+								"french": "Grrr... Ce n'est pas encore fini !",
+								"spanish": "Ugh... ¡Aún no ha terminado!",
+								"vietnamese": "Khụ… Vẫn chưa kết thúc đâu!",
+								"thai": "อึก... ยังไม่จบแค่นี้หรอก!",
+								"hindi": "उफ़... अभी ख़त्म नहीं हुआ है!"
+							}
+						},
+						{
+							"spot": [
+								5,
+								2
+							],
+							"speaker": "king_borin",
+							"duration_ms": 500,
+							"type": "direction",
+							"action": "enter"
+						},
+						{
+							"speaker": "king_borin",
+							"type": "speech",
+							"content": {
+								"korean": "이런… 또다시… 지킬 수 없었군.",
+								"english": "Damn... Once again... I couldn't protect them.",
+								"japanese": "くそっ…またしても…守れなかったか。",
+								"chinese": "该死…又一次…没能守护住。",
+								"french": "Zut... Encore une fois... Je n'ai pas pu protéger.",
+								"spanish": "Maldita sea... Otra vez... No pude protegerlos.",
+								"vietnamese": "Chết tiệt… Lại một lần nữa… Không thể bảo vệ được rồi.",
+								"thai": "ให้ตายสิ... อีกแล้ว... ปกป้องไม่ได้เลย.",
+								"hindi": "धिक्कार है... फिर से... मैं बचा नहीं पाया।"
+							},
+							"emotion": "sad"
+						}
+					],
+					"win_dialogue": [
+						{
+							"content": {
+								"korean": "…결국, 고통은 사라지지 않는다. 너희는… 더 큰 평온을 갈망할 것이다.",
+								"english": "...Ultimately, pain never vanishes. You will... yearn for greater serenity.",
+								"japanese": "…結局、苦痛は消えぬ。お前たちは…より大きな平穏を渇望するだろう。",
+								"chinese": "……最终，痛苦不会消失。你们…会渴望更大的平静。",
+								"french": "...Au final, la souffrance ne disparaît jamais. Vous... aspirerez à une plus grande sérénité.",
+								"spanish": "...Al final, el dolor nunca desaparece. Vosotros... anhelaréis una paz mayor.",
+								"vietnamese": "...Rốt cuộc, nỗi đau không bao giờ biến mất. Các ngươi sẽ... khao khát sự bình yên lớn hơn.",
+								"thai": "...ท้ายที่สุด ความเจ็บปวดไม่มีวันหายไป พวกเจ้าจะ... โหยหาความสงบที่ยิ่งใหญ่กว่า",
+								"hindi": "...अंततः, दर्द कभी मिटता नहीं। तुम लोग... और अधिक शांति की लालसा करोगे।"
+							},
+							"type": "speech",
+							"speaker": "random_boss",
+							"emotion": "sad"
+						},
+						{
+							"emotion": "angry",
+							"content": {
+								"korean": "헛소리 마! 우리의 평온은 우리가 지켜!",
+								"english": "Nonsense! We will protect our own peace!",
+								"japanese": "戯言を！我らの平穏は我らが守る！",
+								"chinese": "胡说八道！我们的平静由我们自己守护！",
+								"french": "Absurdité ! Notre paix, nous la protégeons nous-mêmes !",
+								"spanish": "¡Tonterías! ¡Nuestra paz la protegemos nosotros!",
+								"vietnamese": "Vô lý! Bình yên của chúng ta do chúng ta tự bảo vệ!",
+								"thai": "เหลวไหล! ความสงบของเรา เราจะปกป้องเอง!",
+								"hindi": "बकवास! हमारी शांति हम खुद बचाएँगे!"
+							},
+							"type": "speech",
+							"speaker": "character_any"
+						},
+						{
+							"action": "enter",
+							"spot": [
+								5,
+								2
+							],
+							"speaker": "king_borin",
+							"duration_ms": 500,
+							"type": "direction"
+						},
+						{
+							"emotion": "happy",
+							"speaker": "king_borin",
+							"type": "speech",
+							"content": {
+								"korean": "이제… 아무도 고통받지 않을 거야.",
+								"english": "Now... no one will suffer anymore.",
+								"japanese": "もう…誰も苦しまない。",
+								"chinese": "现在…没有人会再受苦了。",
+								"french": "Maintenant… plus personne ne souffrira.",
+								"spanish": "Ahora… nadie más sufrirá.",
+								"vietnamese": "Giờ đây… sẽ không còn ai phải chịu đựng nữa.",
+								"thai": "ตอนนี้… จะไม่มีใครต้องทนทุกข์อีกแล้ว",
+								"hindi": "अब… कोई और कष्ट नहीं सहेगा।"
+							}
+						},
+						{
+							"speaker": "narrator",
+							"type": "speech",
+							"content": {
+								"korean": "쓰러진 괴물 위로 환자들이 눈을 떴다. 그들의 표정은 너무나… 평온했다.",
+								"english": "Above the fallen monster, the patients opened their eyes. Their expressions were so... serene.",
+								"japanese": "倒れた怪物の上に、患者たちは目覚めた。彼らの表情はあまりにも…平穏だった。",
+								"chinese": "倒下的怪物身上，病人睁开了眼睛。他们的表情如此…平静。",
+								"french": "Au-dessus du monstre terrassé, les patients ouvrirent les yeux. Leurs expressions étaient si… sereines.",
+								"spanish": "Sobre el monstruo caído, los pacientes abrieron los ojos. Sus expresiones eran tan… serenas.",
+								"vietnamese": "Phía trên quái vật đã ngã, các bệnh nhân mở mắt. Biểu cảm của họ thật… bình yên.",
+								"thai": "เหนือร่างสัตว์ประหลาดที่ล้มลง ผู้ป่วยลืมตาขึ้น สีหน้าของพวกเขาช่าง… สงบ",
+								"hindi": "गिरे हुए राक्षस के ऊपर, मरीजों ने अपनी आँखें खोलीं। उनके भाव इतने… शांत थे।"
+							},
+							"emotion": "base"
+						}
+					]
+				}
+			]
+		},
+		{
+			"scenario_id": "KindPriest_V0_04",
+			"order": 4,
+			"act": "rising",
+			"theme": "hell",
+			"actors": {
+				"lyra": {
+					"id": "mon_d966c7a7-f201-4c40-9563-aff46d78204e",
+					"name": {
+						"korean": "리라",
+						"english": "Lyra",
+						"japanese": "リラ",
+						"chinese": "莉拉",
+						"french": "Lyra",
+						"spanish": "Lyra",
+						"vietnamese": "Lyra",
+						"thai": "ไลรา",
+						"hindi": "लायरा"
+					},
+					"description": "",
+					"face_image_url": "https://imagedelivery.net/WTEqQNGFb-l-IHS6IGnzUQ/c679c345-f769-4ecb-3af2-00a8f1203a00/public",
+					"battle_sprite_url": "https://imagedelivery.net/WTEqQNGFb-l-IHS6IGnzUQ/1ee74647-d3eb-420c-f45d-71d53cc47d00/public"
+				},
+				"lumen": {
+					"monster_id": "mon_b4c3b077-9164-4c5c-8498-965972451e1e",
+					"name": {
+						"korean": "루멘",
+						"english": "Lumen",
+						"japanese": "ルーメン",
+						"chinese": "卢门",
+						"french": "Lumen",
+						"spanish": "Lumen",
+						"vietnamese": "Lumen",
+						"thai": "ลูเมน",
+						"hindi": "लुमेन"
+					},
+					"face_image_url": "https://imagedelivery.net/WTEqQNGFb-l-IHS6IGnzUQ/e167350a-a39d-43ec-c716-04afffe1a500/public",
+					"battle_sprite_url": "https://imagedelivery.net/WTEqQNGFb-l-IHS6IGnzUQ/980a093c-d2c6-4ee4-d728-ed433e879400/public"
+				}
+			},
+			"boss": {
+				"pool_id": "random_boss"
+			},
+			"prologue": {
+				"korean": [
+					"심연의 동굴. 부상자들의 신음 대신 낯선 침묵이 흘렀다.",
+					"사제 루멘이 돌아왔다. 그의 손길이 닿자 모두 눈을 떴다.",
+					"그들의 표정은 너무나 평온했다. 마치 모든 고통이 사라진 것처럼.",
+					"그러나 그 평온함 속에서 — 알 수 없는 위화감이 피어났다."
+				],
+				"english": [
+					"The Abyssal Cave. Instead of groans of the wounded, an unfamiliar silence flowed.",
+					"Priest Lumen returned. At his touch, everyone opened their eyes.",
+					"Their expressions were utterly serene. As if all pain had vanished.",
+					"Yet within that serenity — an inexplicable unease bloomed."
+				],
+				"japanese": [
+					"深淵の洞窟。負傷者の呻き声の代わりに、見慣れない沈黙が流れていた。",
+					"司祭ルーメンが戻った。彼の手が触れると、皆が目を開いた。",
+					"彼らの表情はあまりにも穏やかだった。まるで全ての苦痛が消え去ったかのように。",
+					"しかし、その平穏さの中に — 得体の知れない違和感が芽生えた。"
+				],
+				"chinese": [
+					"深渊洞窟。没有伤者的呻吟，只有陌生的寂静流淌。",
+					"祭司卢门回来了。他的手一触碰，所有人都睁开了眼睛。",
+					"他们的表情平静极了。仿佛所有痛苦都已消失。",
+					"然而，在那平静之中——一种莫名的违和感油然而生。"
+				],
+				"french": [
+					"La Grotte Abyssale. Au lieu des gémissements des blessés, un silence étrange régnait.",
+					"Le Prêtre Lumen était de retour. Au contact de sa main, tous ouvrirent les yeux.",
+					"Leurs expressions étaient d'une sérénité absolue. Comme si toute douleur avait disparu.",
+					"Pourtant, au sein de cette sérénité — un malaise inexplicable germa."
+				],
+				"spanish": [
+					"La Cueva Abisal. En lugar de los gemidos de los heridos, un silencio desconocido fluía.",
+					"El Sacerdote Lumen regresó. Al toque de su mano, todos abrieron los ojos.",
+					"Sus expresiones eran de una serenidad absoluta. Como si todo dolor hubiera desaparecido.",
+					"Sin embargo, dentro de esa serenidad — una inquietud inexplicable floreció."
+				],
+				"vietnamese": [
+					"Hang động vực sâu. Thay vì tiếng rên rỉ của những người bị thương, một sự im lặng xa lạ bao trùm.",
+					"Linh mục Lumen đã trở về. Khi tay ông chạm vào, mọi người đều mở mắt.",
+					"Biểu cảm của họ vô cùng thanh thản. Như thể mọi nỗi đau đã biến mất.",
+					"Tuy nhiên, trong sự thanh thản đó — một cảm giác bất an không thể giải thích đã nảy nở."
+				],
+				"thai": [
+					"ถ้ำแห่งห้วงลึก แทนที่จะเป็นเสียงคร่ำครวญของผู้บาดเจ็บ ความเงียบงันแปลกประหลาดกลับไหลเวียน",
+					"บาทหลวงลูเมนกลับมาแล้ว เมื่อเขาสัมผัส ทุกคนก็ลืมตาขึ้น",
+					"สีหน้าของพวกเขาดูสงบอย่างยิ่ง ราวกับว่าความเจ็บปวดทั้งหมดได้หายไปแล้ว",
+					"ทว่าท่ามกลางความสงบนั้น — ความรู้สึกแปลกประหลาดที่ไม่อาจอธิบายได้ก็ผลิบานขึ้น"
+				],
+				"hindi": [
+					"पाताल गुफा। घायलों की कराहों के बजाय, एक अपरिचित खामोशी छाई हुई थी।",
+					"पुजारी लुमेन लौट आया। उसके स्पर्श से, सभी ने अपनी आँखें खोल दीं।",
+					"उनके भाव अत्यंत शांत थे। मानो सारा दर्द गायब हो गया हो।",
+					"फिर भी, उस शांति के भीतर — एक अकथनीय बेचैनी पनप उठी।"
+				]
+			},
+			"rooms": [
+				{
+					"id": 1,
+					"dialogue": [
+						{
+							"action": "enter",
+							"speaker": "lumen",
+							"duration_ms": 500,
+							"spot": [
+								4,
+								3
+							],
+							"type": "direction"
+						},
+						{
+							"speaker": "lumen",
+							"type": "speech",
+							"emotion": "base",
+							"content": {
+								"korean": "이제 괜찮습니다. 모두 평안을 찾았어요.",
+								"english": "It's okay now. Everyone has found peace.",
+								"japanese": "もう大丈夫です。皆、安らぎを見つけました。",
+								"chinese": "现在没事了。大家都找到了平静。",
+								"french": "Tout va bien maintenant. Tout le monde a trouvé la paix.",
+								"spanish": "Ya está bien. Todos han encontrado la paz.",
+								"vietnamese": "Bây giờ ổn rồi. Mọi người đều đã tìm thấy sự bình yên.",
+								"thai": "ตอนนี้ไม่เป็นไรแล้ว ทุกคนพบความสงบแล้ว",
+								"hindi": "अब ठीक है। सभी को शांति मिल गई है।"
+							}
+						},
+						{
+							"content": {
+								"korean": "환자들이 고요히 눈을 떴다. 그들의 얼굴에선 어떤 고통도 읽을 수 없었다.",
+								"english": "The patients quietly opened their eyes. No suffering could be read on their faces.",
+								"japanese": "患者たちは静かに目を開いた。彼らの顔には、いかなる苦痛も読み取れなかった。",
+								"chinese": "患者们安静地睁开了眼睛。他们的脸上读不出任何痛苦。",
+								"french": "Les patients ouvrirent calmement les yeux. Aucune souffrance ne pouvait être lue sur leurs visages.",
+								"spanish": "Los pacientes abrieron los ojos en silencio. No se podía leer ningún sufrimiento en sus rostros.",
+								"vietnamese": "Bệnh nhân lặng lẽ mở mắt. Không thể đọc thấy bất kỳ nỗi đau nào trên khuôn mặt họ.",
+								"thai": "ผู้ป่วยลืมตาขึ้นอย่างเงียบงัน ไม่พบความเจ็บปวดใดๆ บนใบหน้าของพวกเขา",
+								"hindi": "मरीजों ने धीरे से अपनी आँखें खोलीं। उनके चेहरों पर कोई पीड़ा नहीं पढ़ी जा सकती थी।"
+							},
+							"type": "speech",
+							"emotion": "base",
+							"speaker": "narrator"
+						},
+						{
+							"content": {
+								"korean": "…정말 괜찮은 거야?",
+								"english": "...Are they really okay?",
+								"japanese": "…本当に大丈夫なのか？",
+								"chinese": "……真的没事吗？",
+								"french": "...Sont-ils vraiment bien ?",
+								"spanish": "...¿Están realmente bien?",
+								"vietnamese": "...Thật sự ổn chứ?",
+								"thai": "...พวกเขาโอเคจริงๆ เหรอ?",
+								"hindi": "...क्या वे सच में ठीक हैं?"
+							},
+							"type": "speech",
+							"emotion": "base",
+							"speaker": "character_any"
+						},
+						{
+							"content": {
+								"korean": "표정이… 너무 평온한데.",
+								"english": "Their expressions... are too serene.",
+								"japanese": "表情が…あまりにも穏やかだ。",
+								"chinese": "他们的表情……太平静了。",
+								"french": "Leurs expressions... sont trop sereines.",
+								"spanish": "Sus expresiones... son demasiado serenas.",
+								"vietnamese": "Biểu cảm của họ... quá thanh thản.",
+								"thai": "สีหน้าของพวกเขา...สงบเกินไป",
+								"hindi": "उनके भाव... बहुत शांत हैं।"
+							},
+							"type": "speech",
+							"emotion": "base",
+							"speaker": "character_1"
+						}
+					]
+				},
+				{
+					"id": 3,
+					"dialogue": [
+						{
+							"speaker": "lyra",
+							"action": "enter",
+							"spot": [
+								2,
+								3
+							],
+							"type": "direction",
+							"duration_ms": 500
+						},
+						{
+							"content": {
+								"korean": "뭔가 이상해… 저들을 봐. 너무… 조용해.",
+								"english": "Something's wrong... Look at them. They're too... quiet.",
+								"japanese": "何かおかしい…彼らを見て。あまりにも…静かだ。",
+								"chinese": "有些不对劲……看他们。太……安静了。",
+								"french": "Quelque chose ne va pas... Regardez-les. Ils sont trop... silencieux.",
+								"spanish": "Algo anda mal... Míralos. Están demasiado... callados.",
+								"vietnamese": "Có gì đó không ổn... Nhìn họ kìa. Họ quá... yên lặng.",
+								"thai": "มีบางอย่างผิดปกติ...ดูพวกเขาสิ พวกเขาเงียบเกินไป",
+								"hindi": "कुछ गलत है... उन्हें देखो। वे बहुत... शांत हैं।"
+							},
+							"speaker": "lyra",
+							"type": "speech",
+							"emotion": "sad"
+						},
+						{
+							"content": {
+								"korean": "루멘의 치유 때문이겠지. 다들 회복된 것 같아.",
+								"english": "It must be Lumen's healing. They all seem to have recovered.",
+								"japanese": "ルーメンの癒しだろう。皆、回復したようだ。",
+								"chinese": "应该是卢门的治疗吧。他们似乎都恢复了。",
+								"french": "Ce doit être la guérison de Lumen. Ils semblent tous s'être rétablis.",
+								"spanish": "Debe ser la curación de Lumen. Todos parecen haberse recuperado.",
+								"vietnamese": "Chắc là do sự chữa lành của Lumen. Họ dường như đã hồi phục rồi.",
+								"thai": "คงเป็นการรักษาของลูเมน ทุกคนดูเหมือนจะฟื้นตัวแล้ว",
+								"hindi": "यह लुमेन के उपचार के कारण होगा। वे सभी ठीक हो गए लगते हैं।"
+							},
+							"type": "speech",
+							"emotion": "base",
+							"speaker": "character_any"
+						},
+						{
+							"content": {
+								"korean": "동굴 벽에는 기도문이 빼곡했다. ‘당신의 괴로움을 내게 맡기소서.’ 같은 글귀가 반복될 뿐이었다.",
+								"english": "The cave walls were covered with prayers. Only phrases like 'Entrust your suffering to me.' were repeated.",
+								"japanese": "洞窟の壁には祈りの言葉がぎっしり書かれていた。「あなたの苦しみを私に委ねなさい。」のような文句が繰り返されるだけだった。",
+								"chinese": "洞穴墙壁上密密麻麻地写满了祈祷文。只有“将你的痛苦托付给我。”之类的字句反复出现。",
+								"french": "Les murs de la grotte étaient couverts de prières. Seules des phrases comme « Confie-moi tes souffrances. » étaient répétées.",
+								"spanish": "Las paredes de la cueva estaban cubiertas de oraciones. Solo frases como \"Confía tu sufrimiento a mí\" se repetían.",
+								"vietnamese": "Tường hang động dày đặc những lời cầu nguyện. Chỉ có những câu như \"Hãy giao phó nỗi đau của bạn cho tôi.\" được lặp đi lặp lại.",
+								"thai": "ผนังถ้ำเต็มไปด้วยบทสวดมนต์ มีแต่ข้อความซ้ำๆ เช่น 'จงมอบความทุกข์ของเจ้าแก่ข้า'",
+								"hindi": "गुफा की दीवारें प्रार्थनाओं से अटी पड़ी थीं। बस 'अपने दुख मुझे सौंप दो' जैसे वाक्यांश दोहराए जा रहे थे।"
+							},
+							"speaker": "narrator",
+							"type": "speech",
+							"emotion": "base"
+						},
+						{
+							"type": "speech",
+							"emotion": "base",
+							"speaker": "character_2",
+							"content": {
+								"korean": "온통 똑같은 글귀네? 조금 섬뜩한데.",
+								"english": "All the same phrases? A little creepy.",
+								"japanese": "全部同じ言葉だね？ ちょっと不気味だ。",
+								"chinese": "全都是一样的字句？有点毛骨悚然。",
+								"french": "Toutes les mêmes phrases ? Un peu effrayant.",
+								"spanish": "¿Todo frases iguales? Un poco espeluznante.",
+								"vietnamese": "Toàn những câu giống nhau? Hơi rợn người đấy.",
+								"thai": "มีแต่ข้อความเดิมๆ เลยนะ? น่าขนลุกนิดหน่อย.",
+								"hindi": "सब एक जैसे वाक्यांश हैं? थोड़ा डरावना है।"
+							}
+						}
+					]
+				},
+				{
+					"id": 5,
+					"dialogue": [
+						{
+							"spot": [
+								2,
+								3
+							],
+							"type": "direction",
+							"duration_ms": 500,
+							"speaker": "lyra",
+							"action": "enter"
+						},
+						{
+							"content": {
+								"korean": "아무 감정도 없어 보여. 농담에도 웃지 않고, 슬픈 이야기에도 눈 하나 깜짝 안 해.",
+								"english": "They show no emotion. Don't laugh at jokes, don't even bat an eye at sad stories.",
+								"japanese": "何の感情も見せない。冗談にも笑わず、悲しい話にも目一つ瞬かない。",
+								"chinese": "看起来没有任何感情。不笑话，悲伤的故事也毫不动容。",
+								"french": "Ils ne montrent aucune émotion. Ne rient pas aux blagues, ne cillent même pas aux histoires tristes.",
+								"spanish": "No muestran ninguna emoción. No se ríen con los chistes, ni parpadean con las historias tristes.",
+								"vietnamese": "Dường như không có cảm xúc nào cả. Không cười với những câu đùa, cũng không chớp mắt trước những câu chuyện buồn.",
+								"thai": "ดูเหมือนจะไม่มีอารมณ์เลย ไม่หัวเราะกับเรื่องตลก ไม่แม้แต่จะกระพริบตาเมื่อได้ยินเรื่องเศร้า",
+								"hindi": "वे कोई भावना नहीं दिखाते। मज़ाक पर हंसते नहीं, दुखद कहानियों पर पलक भी नहीं झपकाते।"
+							},
+							"speaker": "lyra",
+							"type": "speech",
+							"emotion": "sad"
+						},
+						{
+							"type": "speech",
+							"emotion": "base",
+							"speaker": "character_any",
+							"content": {
+								"korean": "어제까지만 해도 고통스러워했는데… 어떻게 이렇게 변할 수 있지?",
+								"english": "Just yesterday they were suffering... How could they change like this?",
+								"japanese": "昨日までは苦しんでいたのに…どうしてこんな風に変われるんだ？",
+								"chinese": "昨天还痛苦不堪…怎么会变成这样？",
+								"french": "Hier encore, ils souffraient... Comment ont-ils pu changer ainsi ?",
+								"spanish": "Ayer mismo estaban sufriendo... ¿Cómo pudieron cambiar así?",
+								"vietnamese": "Mới hôm qua còn đau khổ... Làm sao lại có thể thay đổi như thế này?",
+								"thai": "เมื่อวานยังเจ็บปวดอยู่เลย... เปลี่ยนไปได้ขนาดนี้เลยเหรอ?",
+								"hindi": "कल तक तो वे पीड़ित थे... वे ऐसे कैसे बदल सकते हैं?"
+							}
+						},
+						{
+							"content": {
+								"korean": "이건 치유가 아니야. 무언가를… 빼앗긴 것 같아.",
+								"english": "This isn't healing. It feels like something... was taken away.",
+								"japanese": "これは癒しじゃない。何かを…奪われたみたいだ。",
+								"chinese": "这不是治愈。感觉像是被…夺走了什么。",
+								"french": "Ce n'est pas de la guérison. On dirait que quelque chose... leur a été enlevé.",
+								"spanish": "Esto no es curación. Parece que algo... les fue arrebatado.",
+								"vietnamese": "Đây không phải là sự chữa lành. Cứ như thể... thứ gì đó đã bị tước đoạt.",
+								"thai": "นี่ไม่ใช่การเยียวยา เหมือนว่าบางสิ่ง... ถูกพรากไป",
+								"hindi": "यह ठीक होना नहीं है। ऐसा लगता है कि कुछ... छीन लिया गया है।"
+							},
+							"speaker": "lyra",
+							"type": "speech",
+							"emotion": "angry"
+						},
+						{
+							"content": {
+								"korean": "빼앗기다니? 무슨 소리야?",
+								"english": "Taken away? What do you mean?",
+								"japanese": "奪われたって？ どういうことだ？",
+								"chinese": "被夺走了？什么意思？",
+								"french": "Enlevé ? Que veux-tu dire ?",
+								"spanish": "¿Arrebatado? ¿Qué quieres decir?",
+								"vietnamese": "Bị tước đoạt? Ý bạn là sao?",
+								"thai": "ถูกพรากไปเหรอ? หมายความว่าไง?",
+								"hindi": "छीन लिया गया? तुम्हारा क्या मतलब है?"
+							},
+							"speaker": "character_3",
+							"type": "speech",
+							"emotion": "base"
+						}
+					]
+				},
+				{
+					"dialogue": [
+						{
+							"type": "direction",
+							"spot": [
+								2,
+								3
+							],
+							"duration_ms": 500,
+							"speaker": "lyra",
+							"action": "enter"
+						},
+						{
+							"type": "speech",
+							"emotion": "angry",
+							"speaker": "lyra",
+							"content": {
+								"korean": "더 이상은 위험해. 루멘의 방식은… 틀렸어. 왠지 불길한 기운이 느껴져.",
+								"english": "It's too dangerous now. Lumen's method is... wrong. I sense an ominous aura.",
+								"japanese": "もうこれ以上は危険だ。ルーメンのやり方は…間違っている。何だか不吉な気配がする。",
+								"chinese": "这样下去太危险了。鲁门的方式…错了。我感到一种不祥的气息。",
+								"french": "C'est trop dangereux maintenant. La méthode de Lumen est... fausse. Je ressens une aura inquiétante.",
+								"spanish": "Ya es demasiado peligroso. El método de Lumen está... mal. Siento una energía ominosa.",
+								"vietnamese": "Nguy hiểm quá rồi. Cách của Lumen... sai rồi. Tôi cảm thấy một điềm gở.",
+								"thai": "อันตรายเกินไปแล้ว วิธีของลูเมน... ผิดแล้ว ฉันรู้สึกถึงลางร้าย",
+								"hindi": "अब और ज़्यादा ख़तरनाक है। लुमेन का तरीका... गलत है। मुझे कुछ अशुभ महसूस हो रहा है।"
+							}
+						},
+						{
+							"speaker": "character_any",
+							"type": "speech",
+							"emotion": "base",
+							"content": {
+								"korean": "하지만 동료들이 저렇게 편안해하는데. 우리가 잘못 생각하는 거 아닐까?",
+								"english": "But our comrades seem so at peace. Are we perhaps thinking wrong?",
+								"japanese": "でも仲間たちはあんなに安らいでいるのに。私たちが間違って考えているんじゃないのか？",
+								"chinese": "可是同伴们看起来那么平静。是不是我们想错了？",
+								"french": "Mais nos camarades semblent si paisibles. Ne sommes-nous pas en train de nous tromper ?",
+								"spanish": "Pero nuestros compañeros parecen tan tranquilos. ¿No estaremos pensando mal?",
+								"vietnamese": "Nhưng đồng đội của chúng ta trông rất bình yên mà. Có khi nào chúng ta đã nghĩ sai không?",
+								"thai": "แต่เพื่อนร่วมทีมดูสงบขนาดนั้น เราคิดผิดหรือเปล่า?",
+								"hindi": "लेकिन हमारे साथी इतने शांत दिख रहे हैं। कहीं हम गलत तो नहीं सोच रहे?"
+							}
+						},
+						{
+							"content": {
+								"korean": "그 평안함이 대가라면? 모든 감정을 잃어버리는 대가라면?",
+								"english": "What if that peace comes at a cost? What if the cost is losing all emotions?",
+								"japanese": "もしその平穏が代償だとしたら？ すべての感情を失う代償だとしたら？",
+								"chinese": "如果这份平静是有代价的呢？如果代价是失去所有感情呢？",
+								"french": "Et si cette paix avait un prix ? Et si le prix était de perdre toutes ses émotions ?",
+								"spanish": "Y si esa tranquilidad tuviera un precio? ¿Y si el precio fuera perder todas las emociones?",
+								"vietnamese": "Nếu sự bình yên đó là một cái giá phải trả thì sao? Nếu cái giá là mất đi tất cả cảm xúc thì sao?",
+								"thai": "ถ้าความสงบนั้นมีค่าแลกเปลี่ยนล่ะ? ถ้าต้องแลกกับการสูญเสียทุกอารมณ์ล่ะ?",
+								"hindi": "अगर वह शांति किसी कीमत पर है तो? अगर कीमत सभी भावनाओं को खोना है तो?"
+							},
+							"type": "speech",
+							"emotion": "sad",
+							"speaker": "lyra"
+						},
+						{
+							"speaker": "character_4",
+							"type": "speech",
+							"emotion": "base",
+							"content": {
+								"korean": "우리는 답을 찾아야 해. 루멘에게 직접 물어봐야 해.",
+								"english": "We need to find answers. We need to ask Lumen directly.",
+								"japanese": "私たちは答えを見つけなければならない。ルーメンに直接尋ねるべきだ。",
+								"chinese": "我们必须找到答案。我们必须直接问鲁门。",
+								"french": "Nous devons trouver des réponses. Nous devons demander directement à Lumen.",
+								"spanish": "Tenemos que encontrar respuestas. Debemos preguntarle directamente a Lumen.",
+								"vietnamese": "Chúng ta phải tìm ra câu trả lời. Chúng ta phải hỏi Lumen trực tiếp.",
+								"thai": "เราต้องหาคำตอบ เราต้องถามลูเมนโดยตรง",
+								"hindi": "हमें जवाब ढूंढने होंगे। हमें सीधे लुमेन से पूछना होगा।"
+							}
+						},
+						{
+							"content": {
+								"korean": "그래, 여기까지 왔으니 돌아갈 순 없어.",
+								"english": "No turning back now, we've come too far.",
+								"japanese": "そう、ここまで来たんだ。もう引き返せない。",
+								"chinese": "没错，我们走到这一步了，不能回头。",
+								"french": "Oui, nous sommes venus si loin, impossible de reculer.",
+								"spanish": "Sí, hemos llegado hasta aquí, no podemos volver atrás.",
+								"vietnamese": "Đúng vậy, đã đến nước này thì không thể quay lại được nữa.",
+								"thai": "ใช่ เรามาไกลขนาดนี้แล้ว จะถอยกลับไม่ได้แล้ว",
+								"hindi": "हाँ, हम इतनी दूर आ गए हैं, अब पीछे नहीं हट सकते।"
+							},
+							"type": "speech",
+							"emotion": "base",
+							"speaker": "character_any"
+						}
+					],
+					"id": 9
+				},
+				{
+					"dialogue": [
+						{
+							"speaker": "narrator",
+							"type": "speech",
+							"emotion": "base",
+							"content": {
+								"korean": "어둠 속에서 거대한 그림자가 일렁였다. 마치 환자들의 고통을 집어삼킨 듯.",
+								"english": "A colossal shadow rippled in the darkness, as if devouring the patients' suffering.",
+								"japanese": "闇の中で巨大な影が揺らめいた。まるで患者たちの苦痛を飲み込むかのように。",
+								"chinese": "黑暗中，一个巨大的影子晃动着，仿佛吞噬了病人们的痛苦。",
+								"french": "Une ombre colossale ondoyait dans l'obscurité, comme si elle dévorait la souffrance des patients.",
+								"spanish": "Una sombra colosal ondulaba en la oscuridad, como si devorara el sufrimiento de los pacientes.",
+								"vietnamese": "Trong bóng tối, một bóng đen khổng lồ chập chờn, như thể nó đang nuốt chửng nỗi đau của các bệnh nhân.",
+								"thai": "เงาขนาดมหึมาพลิ้วไหวในความมืด ราวกับกลืนกินความทุกข์ทรมานของผู้ป่วย",
+								"hindi": "अंधेरे में एक विशाल छाया लहराई, मानो मरीजों के दर्द को निगल रही हो।"
+							}
+						},
+						{
+							"speaker": "random_boss",
+							"type": "speech",
+							"emotion": "base",
+							"content": {
+								"korean": "감정 없는 평온함. 아름답지 않나?",
+								"english": "Emotionless serenity. Isn't it beautiful?",
+								"japanese": "感情のない平穏。美しいと思わないか？",
+								"chinese": "毫无感情的平静。难道不美吗？",
+								"french": "Une sérénité sans émotion. N'est-ce pas magnifique ?",
+								"spanish": "Una serenidad sin emociones. ¿No es hermoso?",
+								"vietnamese": "Sự thanh thản vô cảm. Đẹp đẽ làm sao?",
+								"thai": "ความสงบที่ไร้อารมณ์ ไม่สวยงามหรอกหรือ?",
+								"hindi": "भावनाहीन शांति। क्या यह सुंदर नहीं है?"
+							}
+						},
+						{
+							"content": {
+								"korean": "저 괴물이… 환자들의 감정을 빼앗고 있었어!",
+								"english": "That monster... it was stealing the patients' emotions!",
+								"japanese": "あの怪物が…患者たちの感情を奪っていたんだ！",
+								"chinese": "那个怪物…它一直在夺走病人的情感！",
+								"french": "Ce monstre... il volait les émotions des patients !",
+								"spanish": "¡Ese monstruo... estaba robando las emociones de los pacientes!",
+								"vietnamese": "Con quái vật đó... nó đang cướp đi cảm xúc của bệnh nhân!",
+								"thai": "สัตว์ประหลาดนั่น... มันกำลังขโมยอารมณ์ของผู้ป่วย!",
+								"hindi": "वह राक्षस... मरीजों की भावनाओं को चुरा रहा था!"
+							},
+							"type": "speech",
+							"emotion": "angry",
+							"speaker": "lyra"
+						},
+						{
+							"speaker": "character_any",
+							"type": "speech",
+							"emotion": "angry",
+							"content": {
+								"korean": "이게 루멘의 ‘치유’의 대가였나?",
+								"english": "Was this the price of Lumen's 'healing'?",
+								"japanese": "これがルーメンの『癒し』の代償だったのか？",
+								"chinese": "这就是流明‘治愈’的代价吗？",
+								"french": "Était-ce le prix du 'soin' de Lumen ?",
+								"spanish": "¿Era este el precio de la 'curación' de Lumen?",
+								"vietnamese": "Đây có phải là cái giá của sự 'chữa lành' của Lumen không?",
+								"thai": "นี่คือราคาของ 'การเยียวยา' ของลูเมนหรือ?",
+								"hindi": "क्या यह ल्यूमेन के 'उपचार' की कीमत थी?"
+							}
+						},
+						{
+							"content": {
+								"korean": "내 역할은 여기까지. 곧 ‘그’가 너희를 맞이할 것이다.",
+								"english": "My role ends here. 'He' will soon greet you.",
+								"japanese": "私の役目はここまで。もうすぐ『彼』がお前たちを迎えるだろう。",
+								"chinese": "我的任务到此为止。‘他’很快就会来迎接你们。",
+								"french": "Mon rôle s'arrête ici. 'Il' vous accueillera bientôt.",
+								"spanish": "Mi papel termina aquí. 'Él' pronto os recibirá.",
+								"vietnamese": "Vai trò của ta đến đây là hết. Chẳng mấy chốc 'hắn' sẽ chào đón các ngươi.",
+								"thai": "บทบาทของข้าสิ้นสุดลงแค่นี้ 'เขา' จะมารับพวกเจ้าในไม่ช้า",
+								"hindi": "मेरी भूमिका यहीं समाप्त होती है। 'वह' जल्द ही तुमसे मिलेगा।"
+							},
+							"type": "speech",
+							"emotion": "base",
+							"speaker": "random_boss"
+						},
+						{
+							"content": {
+								"korean": "무슨 소리야? 도망가지 마!",
+								"english": "What are you talking about? Don't run away!",
+								"japanese": "何を言ってるんだ？逃げるな！",
+								"chinese": "你在说什么？别跑！",
+								"french": "De quoi parles-tu ? Ne t'enfuis pas !",
+								"spanish": "¿De qué hablas? ¡No huyas!",
+								"vietnamese": "Ngươi đang nói gì vậy? Đừng chạy trốn!",
+								"thai": "พูดอะไรน่ะ? อย่าหนีไปนะ!",
+								"hindi": "क्या बक रहे हो? भागो मत!"
+							},
+							"speaker": "character_any",
+							"type": "speech",
+							"emotion": "angry"
+						}
+					],
+					"id": 15,
+					"lose_dialogue": [
+						{
+							"type": "speech",
+							"emotion": "base",
+							"speaker": "random_boss",
+							"content": {
+								"korean": "고통에 절규하라. 너희의 감정은… 내 것이다.",
+								"english": "Scream in agony. Your emotions... are mine.",
+								"japanese": "苦痛に絶叫しろ。お前たちの感情は… 私のものだ。",
+								"chinese": "在痛苦中尖叫吧。你们的情感……是我的了。",
+								"french": "Hurlez d'agonie. Vos émotions... sont miennes.",
+								"spanish": "Gritad de agonía. Vuestras emociones... son mías.",
+								"vietnamese": "Hãy gào thét trong đau đớn. Cảm xúc của các ngươi... là của ta.",
+								"thai": "จงกรีดร้องด้วยความเจ็บปวด อารมณ์ของพวกเจ้า... เป็นของข้า",
+								"hindi": "पीड़ा में चिल्लाओ। तुम्हारी भावनाएँ... मेरी हैं।"
+							}
+						},
+						{
+							"type": "speech",
+							"emotion": "angry",
+							"speaker": "character_any",
+							"content": {
+								"korean": "아직 끝나지 않았어! 루멘의 진실을 밝혀낼 거야!",
+								"english": "It's not over yet! I'll uncover Lumen's truth!",
+								"japanese": "まだ終わってない！ ルーメンの真実を暴いてみせる！",
+								"chinese": "还没结束！我一定会揭露鲁门（Lumen）的真相！",
+								"french": "Ce n'est pas encore fini ! Je découvrirai la vérité sur Lumen !",
+								"spanish": "¡Aún no ha terminado! ¡Revelaré la verdad de Lumen!",
+								"vietnamese": "Chưa kết thúc đâu! Tôi sẽ phơi bày sự thật về Lumen!",
+								"thai": "ยังไม่จบ! ฉันจะเปิดเผยความจริงของ Lumen!",
+								"hindi": "अभी खत्म नहीं हुआ है! मैं ल्यूमेन (Lumen) का सच उजागर करूँगा!"
+							}
+						},
+						{
+							"speaker": "lyra",
+							"type": "speech",
+							"emotion": "angry",
+							"content": {
+								"korean": "포기하지 마! 저들의 감정을 되찾아야 해!",
+								"english": "Don't give up! We must reclaim their emotions!",
+								"japanese": "諦めるな！ 彼らの感情を取り戻すんだ！",
+								"chinese": "别放弃！我们必须夺回他们的情感！",
+								"french": "N'abandonnez pas ! Nous devons récupérer leurs émotions !",
+								"spanish": "¡No te rindas! ¡Debemos recuperar sus emociones!",
+								"vietnamese": "Đừng bỏ cuộc! Chúng ta phải giành lại cảm xúc của họ!",
+								"thai": "อย่ายอมแพ้! เราต้องทวงคืนอารมณ์ของพวกเขา!",
+								"hindi": "हार मत मानो! हमें उनकी भावनाएँ वापस लानी होंगी!"
+							}
+						}
+					],
+					"win_dialogue": [
+						{
+							"content": {
+								"korean": "…어리석은 것들. 너희도 곧 알게 될 거다. 고통 없는 세상의 평온함을.",
+								"english": "...Fools. You too will soon know the serenity of a world without pain.",
+								"japanese": "…愚かな者たちめ。お前たちもすぐに知ることになるだろう。苦痛のない世界の平穏を。",
+								"chinese": "……愚蠢的家伙们。你们很快也会明白的。一个没有痛苦的世界的平静。",
+								"french": "...Stupides. Vous aussi, vous connaîtrez bientôt la sérénité d'un monde sans douleur.",
+								"spanish": "...Tontos. Vosotros también conoceréis pronto la serenidad de un mundo sin dolor.",
+								"vietnamese": "...Những kẻ ngu ngốc. Các ngươi rồi cũng sẽ sớm biết được sự thanh thản của một thế giới không đau khổ.",
+								"thai": "...พวกโง่เขลา เจ้าเองก็จะรู้ซึ้งถึงความสงบในโลกที่ปราศจากความเจ็บปวดในไม่ช้า",
+								"hindi": "...मूर्खों। तुम भी जल्द ही दर्द रहित दुनिया की शांति जान जाओगे।"
+							},
+							"type": "speech",
+							"emotion": "base",
+							"speaker": "random_boss"
+						},
+						{
+							"type": "speech",
+							"emotion": "base",
+							"speaker": "narrator",
+							"content": {
+								"korean": "{random_boss}는 쓰러졌다. 그러나 그 그림자는 여전히 동굴에 남아있는 듯했다.",
+								"english": "{random_boss} fell. Yet, its shadow seemed to linger in the cave.",
+								"japanese": "{random_boss}は倒れた。しかし、その影は依然として洞窟に残っているようだった。",
+								"chinese": "{random_boss}倒下了。然而，它的影子似乎仍然留在洞穴里。",
+								"french": "{random_boss} est tombé. Pourtant, son ombre semblait persister dans la grotte.",
+								"spanish": "{random_boss} cayó. Sin embargo, su sombra parecía persistir en la cueva.",
+								"vietnamese": "{random_boss} đã gục ngã. Tuy nhiên, bóng dáng của nó dường như vẫn còn lởn vởn trong hang.",
+								"thai": "{random_boss} ล้มลงแล้ว แต่เงาของมันยังคงอยู่ในถ้ำ",
+								"hindi": "{random_boss} गिर गया। फिर भी, उसकी छाया गुफा में lingering प्रतीत होती थी।"
+							}
+						},
+						{
+							"content": {
+								"korean": "…도대체 루멘은 뭘 하려는 거지?",
+								"english": "...What exactly is Lumen trying to do?",
+								"japanese": "…一体ルーメンは何をしようとしているんだ？",
+								"chinese": "……流明到底想做什么？",
+								"french": "...Mais que Lumen essaie-t-il de faire, au juste ?",
+								"spanish": "...¿Qué demonios intenta hacer Lumen?",
+								"vietnamese": "...Rốt cuộc Lumen đang cố gắng làm gì vậy?",
+								"thai": "...ลูเมนกำลังพยายามทำอะไรกันแน่?",
+								"hindi": "...ल्यूमेन आखिर करना क्या चाहता है?"
+							},
+							"speaker": "character_any",
+							"type": "speech",
+							"emotion": "base"
+						},
+						{
+							"content": {
+								"korean": "이 평온함… 너무 역겨워. 우린 아직 아무것도 해결하지 못했어.",
+								"english": "This tranquility... it's sickening. We haven't resolved anything yet.",
+								"japanese": "この静けさ… 吐き気がする。まだ何も解決していない。",
+								"chinese": "这份平静……真令人作呕。我们还没解决任何事情。",
+								"french": "Cette tranquillité... c'est écœurant. Nous n'avons encore rien résolu.",
+								"spanish": "Esta tranquilidad... es repugnante. Todavía no hemos resuelto nada.",
+								"vietnamese": "Sự yên bình này... thật kinh tởm. Chúng ta chưa giải quyết được gì cả.",
+								"thai": "ความสงบนี้... ช่างน่าขยะแขยง เรายังไม่ได้แก้ไขอะไรเลย",
+								"hindi": "यह शांति... घिनौनी है। हमने अभी तक कुछ भी हल नहीं किया है।"
+							},
+							"speaker": "lyra",
+							"type": "speech",
+							"emotion": "sad"
+						},
+						{
+							"speaker": "narrator",
+							"type": "speech",
+							"emotion": "base",
+							"content": {
+								"korean": "동굴 깊은 곳에서 더 짙은 어둠이 밀려들었다. 진실은 더 깊은 곳에 있었다.",
+								"english": "A deeper darkness surged from the depths of the cave. The truth lay further within.",
+								"japanese": "洞窟の奥深くから、より濃い闇が押し寄せた。真実はもっと奥にあった。",
+								"chinese": "更深的黑暗从洞穴深处涌出。真相隐藏在更深处。",
+								"french": "Une obscurité plus profonde a déferlé des profondeurs de la grotte. La vérité se trouvait encore plus loin.",
+								"spanish": "Una oscuridad más profunda surgió de las profundidades de la cueva. La verdad yacía más allá.",
+								"vietnamese": "Một bóng tối sâu hơn tràn ra từ sâu thẳm hang động. Sự thật nằm ở nơi sâu hơn.",
+								"thai": "ความมืดที่ลึกกว่าพวยพุ่งออกมาจากส่วนลึกของถ้ำ ความจริงซ่อนอยู่ในที่ลึกกว่านั้น",
+								"hindi": "गुफा की गहराई से एक गहरा अंधकार उमड़ पड़ा। सच और भी गहराई में था।"
+							}
+						}
+					]
+				}
+			]
+		},
+		{
+			"scenario_id": "KindPriest_V0_05",
+			"order": 5,
+			"act": "climax_finale",
+			"theme": "hell",
+			"actors": {
+				"valerius": {
+					"id": "mon_b79a51e1-6ec9-45d6-822a-8ed03eff4707",
+					"name": {
+						"korean": "발레리우스 손 경",
+						"english": "Lord Valerius Thorne",
+						"japanese": "ヴァレリウス・ソーン卿",
+						"chinese": "瓦勒里乌斯·索恩大人",
+						"french": "Seigneur Valerius Thorne",
+						"spanish": "Lord Valerius Thorne",
+						"vietnamese": "Lãnh chúa Valerius Thorne",
+						"thai": "ลอร์ดวาเลริอุส ธอร์น",
+						"hindi": "लॉर्ड वेलेरियस थॉर्न"
+					},
+					"description": "",
+					"face_image_url": "https://imagedelivery.net/WTEqQNGFb-l-IHS6IGnzUQ/e5128045-4934-46e1-5b80-749dad11cb00/public",
+					"battle_sprite_url": "https://imagedelivery.net/WTEqQNGFb-l-IHS6IGnzUQ/999ee15c-1d55-4446-6a01-13e0dc7b9600/public"
+				}
+			},
+			"boss": {
+				"pool_id": "pool_081"
+			},
+			"epilogue": {
+				"korean": [
+					"루멘의 성광이 사라진 동굴에는, 기묘한 평온만이 남았다.",
+					"고통은 사라졌지만, 그 자리에 무엇이 남았는가.",
+					"의지를 빼앗긴 이들의 얼굴에는 감정 없는 미소만 떠돌았다.",
+					"구원이었는지, 침해였는지. 알 수 없는 여운만이 동굴을 채웠다."
+				],
+				"english": [
+					"In the cave where Lumen's holy light vanished, only a strange serenity remained.",
+					"Pain vanished, but what remained in its place?",
+					"On the faces of those stripped of will, only emotionless smiles lingered.",
+					"Was it salvation, or desecration? Only an unknown resonance filled the cave."
+				],
+				"japanese": [
+					"ルーメンの聖なる光が消え去った洞窟には、奇妙な平穏だけが残った。",
+					"苦痛は消え去ったが、その場所に何が残ったのか。",
+					"意思を奪われた者たちの顔には、感情のない微笑みだけが浮かんでいた。",
+					"救済だったのか、それとも侵害だったのか。ただ、得体の知れない余韻だけが洞窟を満たしていた。"
+				],
+				"chinese": [
+					"在流明的圣光消失的洞穴里，只剩下一种诡异的平静。",
+					"痛苦消失了，但取而代之的是什么？",
+					"被剥奪意志的人们的脸上，只剩下空洞的微笑。",
+					"是救赎，还是侵犯？只有一种莫名的余韵充斥着洞穴。"
+				],
+				"french": [
+					"Dans la grotte où la lumière sacrée de Lumen avait disparu, seule une étrange sérénité subsistait.",
+					"La douleur avait disparu, mais qu'en était-il resté à sa place ?",
+					"Sur les visages de ceux privés de volonté, seuls des sourires sans émotion flottaient.",
+					"Salut ou profanation ? Seule une résonance inconnue emplissait la grotte."
+				],
+				"spanish": [
+					"En la cueva donde la luz sagrada de Lumen se desvaneció, solo quedó una extraña serenidad.",
+					"El dolor desapareció, pero ¿qué quedó en su lugar?",
+					"En los rostros de aquellos despojados de voluntad, solo flotaban sonrisas sin emoción.",
+					"¿Fue salvación o profanación? Solo una resonancia desconocida llenaba la cueva."
+				],
+				"vietnamese": [
+					"Trong hang động nơi thánh quang của Lumen biến mất, chỉ còn lại sự yên bình kỳ lạ.",
+					"Nỗi đau đã biến mất, nhưng thứ gì còn lại ở đó?",
+					"Trên khuôn mặt của những người bị tước đoạt ý chí, chỉ còn lại nụ cười vô cảm.",
+					"Là sự cứu rỗi, hay sự xâm phạm? Chỉ có dư âm không rõ ràng lấp đầy hang động."
+				],
+				"thai": [
+					"ในถ้ำที่แสงศักดิ์สิทธิ์ของลูเมนหายไป เหลือเพียงความสงบที่แปลกประหลาด",
+					"ความเจ็บปวดหายไปแล้ว แต่มีอะไรเหลืออยู่แทนที่?",
+					"บนใบหน้าของผู้ที่ถูกพรากเจตจำนงไป มีเพียงรอยยิ้มที่ไร้อารมณ์",
+					"เป็นความรอด หรือการล่วงละเมิด? มีเพียงความรู้สึกค้างคาที่ไม่รู้ที่มาเติมเต็มถ้ำ"
+				],
+				"hindi": [
+					"लुमेन का पवित्र प्रकाश जिस गुफा से गायब हो गया, वहाँ केवल एक अजीब सी शांति रह गई।",
+					"दर्द गायब हो गया, लेकिन उसकी जगह क्या बचा?",
+					"जिन लोगों की इच्छाशक्ति छीन ली गई थी, उनके चेहरों पर केवल भावहीन मुस्कान तैर रही थी।",
+					"क्या यह मुक्ति थी, या उल्लंघन? केवल एक अज्ञात प्रतिध्वनि ने गुफा को भर दिया।"
+				]
+			},
+			"prologue": {
+				"korean": [
+					"빛은 고통을 지우는가, 존재를 지우는가.",
+					"심연의 사제, 루멘. 그의 손길은 모두를 평온으로 이끌었다.",
+					"그러나 평온은 때로 가장 잔인한 가면이다.",
+					"의지가 사라진 자리, 오직 완벽한 순종만이 남았다.",
+					"이것이, 완전한 구원이었다."
+				],
+				"english": [
+					"Does light erase pain, or existence?",
+					"Lumen, Priest of the Abyss. His touch led all to serenity.",
+					"Yet, serenity is sometimes the cruelest mask.",
+					"Where will vanished, only perfect obedience remained.",
+					"This was complete salvation."
+				],
+				"japanese": [
+					"光は苦痛を消すのか、存在を消すのか。",
+					"深淵の司祭、ルーメン。彼の手に触れると、皆が安らぎを得た。",
+					"しかし、平穏は時に最も残酷な仮面となる。",
+					"意思が消え去った場所には、ただ完全な服従だけが残った。",
+					"これこそが、完全な救済だった。"
+				],
+				"chinese": [
+					"光是抹去痛苦，还是抹去存在？",
+					"深渊祭司，流明。他的抚触，引领众生走向平静。",
+					"然而，平静有时是最残酷的伪装。",
+					"意志消失之处，只剩下完美的顺从。",
+					"这就是，完全的救赎。"
+				],
+				"french": [
+					"La lumière efface-t-elle la douleur, ou l'existence ?",
+					"Lumen, Prêtre de l'Abysse. Son toucher menait chacun à la sérénité.",
+					"Mais la sérénité est parfois le masque le plus cruel.",
+					"Là où la volonté avait disparu, seule une obéissance parfaite subsistait.",
+					"Ce fut, le salut parfait."
+				],
+				"spanish": [
+					"¿La luz borra el dolor o la existencia?",
+					"Lumen, Sacerdote del Abismo. Su tacto llevó a todos a la serenidad.",
+					"Sin embargo, la serenidad es a veces la máscara más cruel.",
+					"Donde la voluntad se desvaneció, solo quedó una obediencia perfecta.",
+					"Esta fue la salvación completa."
+				],
+				"vietnamese": [
+					"Ánh sáng xóa bỏ nỗi đau, hay sự tồn tại?",
+					"Lumen, Linh mục Vực thẳm. Bàn tay ông dẫn lối tất cả đến sự yên bình.",
+					"Nhưng sự yên bình đôi khi là chiếc mặt nạ tàn nhẫn nhất.",
+					"Nơi ý chí biến mất, chỉ còn lại sự phục tùng tuyệt đối.",
+					"Đây chính là, sự cứu rỗi hoàn toàn."
+				],
+				"thai": [
+					"แสงสว่างลบความเจ็บปวด หรือลบการดำรงอยู่?",
+					"ลูเมน นักบวชแห่งห้วงลึก สัมผัสของเขานำพาทุกคนสู่ความสงบ",
+					"ทว่า ความสงบก็เป็นหน้ากากที่โหดร้ายที่สุดในบางครั้ง",
+					"ในที่ที่เจตจำนงหายไป เหลือเพียงการเชื่อฟังที่สมบูรณ์แบบ",
+					"นี่คือความรอดอันสมบูรณ์แบบ"
+				],
+				"hindi": [
+					"क्या प्रकाश दर्द मिटाता है, या अस्तित्व?",
+					"रसातल का पुजारी, लुमेन। उसके स्पर्श ने सभी को शांति प्रदान की।",
+					"फिर भी, शांति कभी-कभी सबसे क्रूर मुखौटा होती है।",
+					"जहाँ इच्छाशक्ति लुप्त हो गई, वहाँ केवल पूर्ण आज्ञाकारिता शेष रही।",
+					"यह पूर्ण मुक्ति थी।"
+				]
+			},
+			"rooms": [
+				{
+					"id": 1,
+					"dialogue": [
+						{
+							"type": "speech",
+							"emotion": "base",
+							"speaker": "narrator",
+							"content": {
+								"korean": "심연 깊숙한 동굴. 루멘은 부상자들을 살폈다.",
+								"english": "A deep abyss cave. Lumen tended to the injured.",
+								"japanese": "深淵深くの洞窟。ルーメンは負傷者たちを診ていた。",
+								"chinese": "深渊深处的洞穴。流明照看着伤者。",
+								"french": "Une profonde caverne abyssale. Lumen s'occupait des blessés.",
+								"spanish": "Una cueva en lo profundo del abismo. Lumen atendía a los heridos.",
+								"vietnamese": "Hang động sâu thẳm của vực thẳm. Lumen chăm sóc những người bị thương.",
+								"thai": "ถ้ำลึกในห้วงลึก ลูเมนดูแลผู้บาดเจ็บ",
+								"hindi": "एक गहरे रसातल की गुफा। लुमेन ने घायलों की देखभाल की।"
+							}
+						},
+						{
+							"content": {
+								"korean": "덕분에 다들 편안해 보여요.",
+								"english": "Everyone seems so peaceful, thanks to you.",
+								"japanese": "皆さん、あなたのおかげで安らかに見えます。",
+								"chinese": "多亏了你，大家看起来都很平静。",
+								"french": "Grâce à vous, tout le monde semble serein.",
+								"spanish": "Gracias a ti, todos parecen estar en paz.",
+								"vietnamese": "Nhờ bạn mà mọi người trông thật bình yên.",
+								"thai": "ทุกคนดูสงบสุขได้เพราะคุณเลย",
+								"hindi": "आपकी वजह से सब इतने शांत दिख रहे हैं।"
+							},
+							"emotion": "base",
+							"type": "speech",
+							"speaker": "character_any"
+						},
+						{
+							"content": {
+								"korean": "고통을 느끼지 못하게 해드렸을 뿐입니다.",
+								"english": "I merely ensured they feel no pain.",
+								"japanese": "ただ、苦痛を感じないようにしただけです。",
+								"chinese": "我只是让他们感觉不到痛苦。",
+								"french": "Je me suis contenté de faire en sorte qu'ils ne ressentent aucune douleur.",
+								"spanish": "Solo me aseguré de que no sintieran dolor.",
+								"vietnamese": "Tôi chỉ giúp họ không còn cảm thấy đau đớn nữa.",
+								"thai": "ฉันแค่ทำให้พวกเขาไม่รู้สึกเจ็บปวดเท่านั้น",
+								"hindi": "मैंने बस यह सुनिश्चित किया कि उन्हें दर्द महसूस न हो।"
+							},
+							"speaker": "boss",
+							"type": "speech",
+							"emotion": "base"
+						},
+						{
+							"spot": [
+								2,
+								3
+							],
+							"type": "direction",
+							"action": "enter",
+							"speaker": "valerius",
+							"duration_ms": 500
+						},
+						{
+							"speaker": "valerius",
+							"emotion": "sad",
+							"type": "speech",
+							"content": {
+								"korean": "…조금 이상하지 않나요? 너무… 무감각해요.",
+								"english": "...Isn't it a bit strange? They're so... numb.",
+								"japanese": "…少し変ではありませんか？ あまりにも…無感覚です。",
+								"chinese": "……有点奇怪不是吗？太……麻木了。",
+								"french": "...N'est-ce pas un peu étrange ? Ils sont si... insensibles.",
+								"spanish": "...¿No es un poco extraño? Están demasiado... insensibles.",
+								"vietnamese": "...Không phải hơi lạ sao? Họ quá... vô cảm.",
+								"thai": "...มันไม่แปลกไปหน่อยเหรอ? พวกเขาช่าง...ไร้ความรู้สึก",
+								"hindi": "...क्या यह थोड़ा अजीब नहीं है? वे बहुत... सुन्न हैं।"
+							}
+						}
+					]
+				},
+				{
+					"id": 3,
+					"dialogue": [
+						{
+							"spot": [
+								2,
+								3
+							],
+							"type": "direction",
+							"speaker": "valerius",
+							"action": "enter",
+							"duration_ms": 500
+						},
+						{
+							"content": {
+								"korean": "저 벽 좀 보세요. 기도문인가요?",
+								"english": "Look at that wall. Is that a prayer?",
+								"japanese": "あの壁を見てください。祈りの言葉ですか？",
+								"chinese": "看看那堵墙。那是祈祷文吗？",
+								"french": "Regardez ce mur. Est-ce une prière ?",
+								"spanish": "Mira esa pared. ¿Es una oración?",
+								"vietnamese": "Hãy nhìn bức tường kia xem. Đó là kinh cầu nguyện sao?",
+								"thai": "ดูผนังนั่นสิ นั่นคำอธิษฐานเหรอ?",
+								"hindi": "उस दीवार को देखो। क्या वह प्रार्थना है?"
+							},
+							"speaker": "valerius",
+							"type": "speech",
+							"emotion": "base"
+						},
+						{
+							"content": {
+								"korean": "“당신의 괴로움을 내게 맡기소서”… 똑같은 말만 있네?",
+								"english": "'Entrust your suffering to me'... It's just the same words over and over?",
+								"japanese": "「あなたの苦しみを私に委ねなさい」…同じ言葉ばかりですね？",
+								"chinese": "“将你的痛苦托付于我”……怎么都是同样的话？",
+								"french": "« Confie-moi tes souffrances »... Ce ne sont que les mêmes mots ?",
+								"spanish": "«Confía tu sufrimiento a mí»... ¿Son solo las mismas palabras?",
+								"vietnamese": "'Hãy giao phó nỗi đau của bạn cho tôi'... Chỉ toàn lời đó thôi sao?",
+								"thai": "มอบความทุกข์ระทมของเจ้าให้แก่ข้า... มีแต่คำพูดเดิม ๆ เลย?",
+								"hindi": "तुम्हारे दुख मुझे सौंप दो'... ये तो बस वही शब्द बार-बार हैं?"
+							},
+							"speaker": "character_any",
+							"type": "speech",
+							"emotion": "base"
+						},
+						{
+							"speaker": "boss",
+							"emotion": "base",
+							"type": "speech",
+							"content": {
+								"korean": "영혼의 고통을 덜어주는 가장 확실한 방법이죠.",
+								"english": "It's the surest way to alleviate the soul's suffering.",
+								"japanese": "魂の苦痛を和らげる最も確実な方法です。",
+								"chinese": "这是减轻灵魂痛苦最确凿的方法。",
+								"french": "C'est le moyen le plus sûr d'alléger la souffrance de l'âme.",
+								"spanish": "Es la forma más segura de aliviar el sufrimiento del alma.",
+								"vietnamese": "Đó là cách chắc chắn nhất để giảm bớt nỗi đau của linh hồn.",
+								"thai": "เป็นวิธีที่แน่นอนที่สุดที่จะบรรเทาความทุกข์ทรมานของวิญญาณ",
+								"hindi": "यह आत्मा के दुख को कम करने का सबसे निश्चित तरीका है।"
+							}
+						},
+						{
+							"type": "speech",
+							"emotion": "sad",
+							"speaker": "valerius",
+							"content": {
+								"korean": "…맡기다니. 뭘 맡긴다는 거죠?",
+								"english": "...Entrust? Entrust what?",
+								"japanese": "…委ねる、ですか。何を委ねるというのです？",
+								"chinese": "……托付？托付什么？",
+								"french": "...Confier ? Confier quoi ?",
+								"spanish": "...¿Confiar? ¿Confiar qué?",
+								"vietnamese": "...Giao phó ư. Giao phó cái gì chứ?",
+								"thai": "...มอบให้? มอบอะไรให้?",
+								"hindi": "...सौंपना? क्या सौंपना है?"
+							}
+						}
+					]
+				},
+				{
+					"id": 5,
+					"dialogue": [
+						{
+							"spot": [
+								2,
+								3
+							],
+							"type": "direction",
+							"duration_ms": 500,
+							"speaker": "valerius",
+							"action": "enter"
+						},
+						{
+							"content": {
+								"korean": "저 친구, 농담에도 안 웃고 슬픈 얘기에 반응도 없어.",
+								"english": "That friend, they don't laugh at jokes, nor react to sad stories.",
+								"japanese": "あの人、冗談にも笑わず、悲しい話にも反応しない。",
+								"chinese": "那家伙，对玩笑不笑，对悲伤的事也没反应。",
+								"french": "Cet ami, il ne rit pas aux blagues et ne réagit pas aux histoires tristes.",
+								"spanish": "Ese amigo, no se ríe con los chistes ni reacciona a las historias tristes.",
+								"vietnamese": "Người bạn đó, không cười với truyện cười, cũng không phản ứng với chuyện buồn.",
+								"thai": "เพื่อนคนนั้น ไม่หัวเราะกับเรื่องตลก หรือมีปฏิกิริยากับเรื่องเศร้าเลย",
+								"hindi": "वह दोस्त, चुटकुलों पर नहीं हंसता और न ही दुख भरी कहानियों पर प्रतिक्रिया देता है।"
+							},
+							"emotion": "base",
+							"type": "speech",
+							"speaker": "character_any"
+						},
+						{
+							"speaker": "valerius",
+							"type": "speech",
+							"emotion": "sad",
+							"content": {
+								"korean": "“괜찮아요”라는 말만 반복해요. 괜찮아 보이지 않는데.",
+								"english": "They just keep repeating 'I'm fine.' But they don't look fine.",
+								"japanese": "「大丈夫です」と繰り返すばかり。大丈夫そうには見えないのに。",
+								"chinese": "他们只是重复着“我没事”。但看起来可不像没事。",
+								"french": "Ils ne font que répéter « Je vais bien ». Mais ils n'ont pas l'air d'aller bien.",
+								"spanish": "Solo repiten «Estoy bien». Pero no parecen estarlo.",
+								"vietnamese": "Họ cứ lặp đi lặp lại 'Tôi ổn.' Nhưng trông họ không ổn chút nào.",
+								"thai": "พวกเขาเอาแต่พูดซ้ำๆ ว่า 'ไม่เป็นไร' แต่ดูไม่เหมือนไม่เป็นไรเลย",
+								"hindi": "वे बस दोहराते रहते हैं 'मैं ठीक हूँ।' पर वे ठीक नहीं दिखते।"
+							}
+						},
+						{
+							"content": {
+								"korean": "더 이상 괴로워하지 않으니, 괜찮은 겁니다.",
+								"english": "They're not suffering anymore, so they're fine.",
+								"japanese": "もう苦しまないのですから、それで良いのです。",
+								"chinese": "他们不再痛苦了，所以就没事了。",
+								"french": "Ils ne souffrent plus, donc tout va bien.",
+								"spanish": "Ya no sufren, así que están bien.",
+								"vietnamese": "Họ không còn đau khổ nữa, vậy là ổn rồi.",
+								"thai": "พวกเขาไม่เจ็บปวดอีกต่อไปแล้ว ดังนั้นจึงไม่เป็นไร",
+								"hindi": "वे अब और कष्ट नहीं झेल रहे, इसलिए वे ठीक हैं।"
+							},
+							"emotion": "base",
+							"type": "speech",
+							"speaker": "boss"
+						},
+						{
+							"emotion": "angry",
+							"type": "speech",
+							"speaker": "valerius",
+							"content": {
+								"korean": "감정 자체가 사라진 것 같다고요!",
+								"english": "My emotions feel like they've just vanished!",
+								"japanese": "感情そのものが消えてしまったようです！",
+								"chinese": "感觉感情本身都消失了！",
+								"french": "On dirait que les émotions elles-mêmes ont disparu !",
+								"spanish": "¡Es como si las emociones mismas hubieran desaparecido!",
+								"vietnamese": "Cứ như thể chính cảm xúc đã biến mất vậy!",
+								"thai": "ราวกับว่าอารมณ์ทั้งหมดได้หายไปแล้ว!",
+								"hindi": "लगता है भावनाएँ ही गायब हो गई हैं!"
+							}
+						},
+						{
+							"speaker": "boss",
+							"type": "speech",
+							"emotion": "base",
+							"content": {
+								"korean": "그것이… 완전한 구원의 과정입니다.",
+								"english": "That is... the process of complete salvation.",
+								"japanese": "それが… 完全なる救済の過程です。",
+								"chinese": "那就是……完全的救赎过程。",
+								"french": "C'est... le processus de salut complet.",
+								"spanish": "Ese es... el proceso de salvación completa.",
+								"vietnamese": "Đó là... quá trình cứu rỗi hoàn toàn.",
+								"thai": "นั่นคือ... กระบวนการแห่งความรอดอันสมบูรณ์",
+								"hindi": "वही... पूर्ण मोक्ष की प्रक्रिया है।"
+							}
+						}
+					]
+				},
+				{
+					"dialogue": [
+						{
+							"speaker": "valerius",
+							"action": "enter",
+							"duration_ms": 500,
+							"spot": [
+								2,
+								3
+							],
+							"type": "direction"
+						},
+						{
+							"content": {
+								"korean": "루멘… 당신 그림자가 이상해요. 팔이 너무 많잖아.",
+								"english": "Lumen... your shadow is strange. Too many arms.",
+								"japanese": "ルーメン… あなたの影がおかしい。腕が多すぎるわ。",
+								"chinese": "流明……你的影子很奇怪。手臂太多了。",
+								"french": "Lumen... ton ombre est étrange. Trop de bras.",
+								"spanish": "Lumen... tu sombra es extraña. Demasiados brazos.",
+								"vietnamese": "Lumen... cái bóng của ngươi thật kỳ lạ. Sao nhiều tay thế.",
+								"thai": "ลูเมน... เงาของเจ้าประหลาด มีแขนมากเกินไป",
+								"hindi": "ल्यूमेन... तुम्हारी परछाई अजीब है। बहुत सारी भुजाएँ हैं।"
+							},
+							"speaker": "valerius",
+							"type": "speech",
+							"emotion": "sad"
+						},
+						{
+							"content": {
+								"korean": "다른 사람들에게 뻗어 있는 것 같아.",
+								"english": "They look like they're reaching out to others.",
+								"japanese": "まるで、他の人々に伸びているみたい。",
+								"chinese": "它们好像伸向了其他人。",
+								"french": "On dirait qu'ils s'étendent vers les autres.",
+								"spanish": "Parece que se extienden hacia otras personas.",
+								"vietnamese": "Hình như chúng đang vươn ra với người khác.",
+								"thai": "ดูเหมือนพวกมันกำลังเอื้อมไปหาคนอื่น",
+								"hindi": "लगता है वे दूसरों तक पहुँच रहे हैं।"
+							},
+							"type": "speech",
+							"emotion": "base",
+							"speaker": "character_any"
+						},
+						{
+							"speaker": "boss",
+							"type": "speech",
+							"emotion": "base",
+							"content": {
+								"korean": "모두를 안아줄 자비의 손길입니다.",
+								"english": "They are the merciful hands that embrace everyone.",
+								"japanese": "皆を抱きしめる慈悲の手です。",
+								"chinese": "这是拥抱所有人的慈悲之手。",
+								"french": "Ce sont les mains miséricordieuses qui embrasseront tout le monde.",
+								"spanish": "Son las manos misericordiosas que abrazarán a todos.",
+								"vietnamese": "Đó là bàn tay từ bi ôm lấy tất cả.",
+								"thai": "นี่คือหัตถ์แห่งความเมตตาที่จะโอบกอดทุกคน",
+								"hindi": "ये सभी को गले लगाने वाले दयालु हाथ हैं।"
+							}
+						},
+						{
+							"speaker": "valerius",
+							"type": "speech",
+							"emotion": "angry",
+							"content": {
+								"korean": "아니, 이건… 감정을 쥐어짜고 있잖아!",
+								"english": "No, these... they're wringing out emotions!",
+								"japanese": "違う、これは… 感情を絞り取っている！",
+								"chinese": "不，这……它们在榨取情感！",
+								"french": "Non, ça... ça tord les émotions !",
+								"spanish": "¡No, esto... está exprimiendo las emociones!",
+								"vietnamese": "Không, chúng... đang vắt kiệt cảm xúc!",
+								"thai": "ไม่ นี่มัน... กำลังบีบคั้นอารมณ์!",
+								"hindi": "नहीं, ये... ये भावनाओं को निचोड़ रहे हैं!"
+							}
+						},
+						{
+							"speaker": "boss",
+							"type": "speech",
+							"emotion": "base",
+							"content": {
+								"korean": "자비는 때로, 강제성을 띨 뿐이죠.",
+								"english": "Mercy, at times, is merely coercive.",
+								"japanese": "慈悲は時に、強制を伴うだけです。",
+								"chinese": "慈悲有时，不过是强制罢了。",
+								"french": "La miséricorde, parfois, n'est que contrainte.",
+								"spanish": "La misericordia, a veces, es meramente coercitiva.",
+								"vietnamese": "Lòng từ bi, đôi khi, chỉ là sự ép buộc.",
+								"thai": "ความเมตตา บางครั้ง ก็เป็นเพียงการบังคับ",
+								"hindi": "दया, कभी-कभी, केवल ज़बरदस्ती होती है।"
+							}
+						}
+					],
+					"id": 9
+				},
+				{
+					"dialogue": [
+						{
+							"content": {
+								"korean": "동굴의 가장 깊은 곳. 루멘의 미소가 갈라졌다.",
+								"english": "The deepest part of the cave. Lumen's smile cracked.",
+								"japanese": "洞窟の最深部。ルーメンの笑顔がひび割れた。",
+								"chinese": "洞穴最深处。流明的笑容裂开了。",
+								"french": "La partie la plus profonde de la grotte. Le sourire de Lumen se fendit.",
+								"spanish": "La parte más profunda de la cueva. La sonrisa de Lumen se resquebrajó.",
+								"vietnamese": "Nơi sâu nhất trong hang động. Nụ cười của Lumen vỡ vụn.",
+								"thai": "ส่วนที่ลึกที่สุดของถ้ำ รอยยิ้มของลูเมนร้าวราน",
+								"hindi": "गुफा का सबसे गहरा हिस्सा। ल्यूमेन की मुस्कान दरक गई।"
+							},
+							"emotion": "base",
+							"type": "speech",
+							"speaker": "narrator"
+						},
+						{
+							"emotion": "base",
+							"type": "speech",
+							"speaker": "boss",
+							"content": {
+								"korean": "이제 당신도 괜찮을 거예요.",
+								"english": "Now, you'll be fine too.",
+								"japanese": "もう、あなたも大丈夫でしょう。",
+								"chinese": "现在，你也会没事的。",
+								"french": "Maintenant, vous irez bien aussi.",
+								"spanish": "Ahora, tú también estarás bien.",
+								"vietnamese": "Giờ thì, ngươi cũng sẽ ổn thôi.",
+								"thai": "ตอนนี้ เจ้าก็จะสบายดีด้วย",
+								"hindi": "अब तुम भी ठीक हो जाओगे।"
+							}
+						},
+						{
+							"speaker": "boss",
+							"action": "shake",
+							"duration_ms": 800,
+							"type": "direction"
+						},
+						{
+							"content": {
+								"korean": "수십 개의 팔이 솟아오르고, 얼굴은 가면들로 분열했다.",
+								"english": "Dozens of arms erupted, and the face split into masks.",
+								"japanese": "数十本の腕が湧き上がり、顔は仮面へと分裂した。",
+								"chinese": "数十条手臂涌现，面孔分裂成无数面具。",
+								"french": "Des dizaines de bras jaillirent, et le visage se fragmenta en masques.",
+								"spanish": "Decenas de brazos brotaron, y el rostro se dividió en máscaras.",
+								"vietnamese": "Hàng chục cánh tay mọc ra, khuôn mặt phân tách thành những chiếc mặt nạ.",
+								"thai": "แขนหลายสิบข้างผุดขึ้นมา ใบหน้าแยกออกเป็นหน้ากากหลายอัน",
+								"hindi": "दर्जनों भुजाएँ निकलीं, और चेहरा मास्क में बँट गया।"
+							},
+							"type": "speech",
+							"emotion": "base",
+							"speaker": "narrator"
+						},
+						{
+							"content": {
+								"korean": "보세요. 아무것도 느끼지 않으니… 괴롭지 않죠?",
+								"english": "See? You feel nothing... so it doesn't hurt, does it?",
+								"japanese": "見てごらん。何も感じないから…苦しくないでしょう？",
+								"chinese": "看看。什么都感觉不到…就不痛苦了吧？",
+								"french": "Voyez ? Vous ne sentez rien… alors ça ne fait pas mal, n'est-ce pas ?",
+								"spanish": "¿Lo ve? No siente nada… ¿así no duele, verdad?",
+								"vietnamese": "Thấy không? Không cảm thấy gì… nên không đau khổ, đúng không?",
+								"thai": "เห็นไหม? ไม่รู้สึกอะไรเลย... ก็ไม่เจ็บปวดแล้วใช่ไหม?",
+								"hindi": "देखो? तुम्हें कुछ महसूस नहीं हो रहा… तो दर्द नहीं होगा, है ना?"
+							},
+							"emotion": "base",
+							"type": "speech",
+							"speaker": "boss"
+						},
+						{
+							"emotion": "angry",
+							"type": "speech",
+							"speaker": "character_any",
+							"content": {
+								"korean": "이건… 구원이 아니야. 지배야!",
+								"english": "This is... not salvation. It's domination!",
+								"japanese": "これは…救いじゃない。支配だ！",
+								"chinese": "这…不是救赎。这是支配！",
+								"french": "Ce n'est pas… le salut. C'est la domination !",
+								"spanish": "Esto no es… salvación. ¡Es dominación!",
+								"vietnamese": "Đây không phải… sự cứu rỗi. Đây là sự thống trị!",
+								"thai": "นี่ไม่ใช่... การไถ่ถอน นี่คือการครอบงำ!",
+								"hindi": "यह… मोक्ष नहीं है। यह प्रभुत्व है!"
+							}
+						},
+						{
+							"type": "direction",
+							"spot": [
+								1,
+								1
+							],
+							"action": "enter",
+							"speaker": "valerius",
+							"duration_ms": 500
+						},
+						{
+							"speaker": "valerius",
+							"emotion": "angry",
+							"type": "speech",
+							"content": {
+								"korean": "제발 멈춰요! 그건 자비가 아니야!",
+								"english": "Please stop! That's not mercy!",
+								"japanese": "お願い、やめて！それは慈悲じゃない！",
+								"chinese": "求求你住手！那不是仁慈！",
+								"french": "Arrêtez, je vous en prie ! Ce n'est pas de la pitié !",
+								"spanish": "¡Por favor, deténgase! ¡Eso no es misericordia!",
+								"vietnamese": "Xin hãy dừng lại! Đó không phải là lòng trắc ẩn!",
+								"thai": "ได้โปรดหยุด! นั่นไม่ใช่ความเมตตา!",
+								"hindi": "कृपया रुक जाओ! वह दया नहीं है!"
+							}
+						},
+						{
+							"type": "speech",
+							"emotion": "base",
+							"speaker": "boss",
+							"content": {
+								"korean": "완전한 구원을 위한, 작은 희생일 뿐입니다.",
+								"english": "It's merely a small sacrifice for complete salvation.",
+								"japanese": "完全な救済のための、小さな犠牲にすぎません。",
+								"chinese": "这只是为了完全救赎而做的小小牺牲。",
+								"french": "C'est un simple petit sacrifice pour le salut complet.",
+								"spanish": "Es solo un pequeño sacrificio para la salvación completa.",
+								"vietnamese": "Đó chỉ là một sự hy sinh nhỏ bé cho sự cứu rỗi hoàn toàn.",
+								"thai": "มันเป็นแค่การเสียสละเล็กน้อย เพื่อการไถ่ถอนที่สมบูรณ์",
+								"hindi": "यह पूर्ण मोक्ष के लिए एक छोटा सा बलिदान मात्र है।"
+							}
+						},
+						{
+							"direction": "down",
+							"type": "direction",
+							"speaker": "valerius",
+							"action": "exit",
+							"duration_ms": 400
+						}
+					],
+					"id": 15,
+					"lose_dialogue": [
+						{
+							"content": {
+								"korean": "결국… 당신들도 구원받을 겁니다. 나의 완전한 구원 속에서.",
+								"english": "Eventually... you too will be saved. In my complete salvation.",
+								"japanese": "結局… あなたたちも救われるでしょう。私の完全な救済の中で。",
+								"chinese": "最终……你们也会得救的。在我完全的救赎之中。",
+								"french": "Finalement... vous aussi serez sauvés. Dans ma rédemption complète.",
+								"spanish": "Al final... ustedes también serán salvados. Dentro de mi salvación completa.",
+								"vietnamese": "Cuối cùng... các người cũng sẽ được cứu rỗi. Trong sự cứu rỗi hoàn toàn của ta.",
+								"thai": "ในที่สุด... พวกเจ้าก็จะได้รับการไถ่บาปเช่นกัน ในการไถ่บาปอันสมบูรณ์ของข้า",
+								"hindi": "अंततः... तुम भी बच जाओगे। मेरी पूर्ण मुक्ति में।"
+							},
+							"type": "speech",
+							"emotion": "base",
+							"speaker": "boss"
+						},
+						{
+							"content": {
+								"korean": "…우리의 의지는 꺾이지 않아. 절대!",
+								"english": "...Our will won't break. Never!",
+								"japanese": "…我々の意志は折れない。決して！",
+								"chinese": "……我们的意志不会被折断。永不！",
+								"french": "...Notre volonté ne pliera pas. Jamais !",
+								"spanish": "...Nuestra voluntad no se quebrará. ¡Nunca!",
+								"vietnamese": "...Ý chí của chúng ta sẽ không bị bẻ gãy. Tuyệt đối không!",
+								"thai": "...เจตจำนงของเราจะไม่แตกสลาย ไม่มีทาง!",
+								"hindi": "...हमारी इच्छा नहीं टूटेगी। कभी नहीं!"
+							},
+							"speaker": "character_any",
+							"type": "speech",
+							"emotion": "angry"
+						}
+					],
+					"win_dialogue": [
+						{
+							"type": "speech",
+							"emotion": "sad",
+							"speaker": "boss",
+							"content": {
+								"korean": "…아직도 고통을 붙잡고 있군요. 어리석은….",
+								"english": "...Still clinging to pain, are you? Foolish...",
+								"japanese": "…まだ苦しみにしがみついているのか。愚かな…。",
+								"chinese": "…还在执着于痛苦吗？真是愚蠢…。",
+								"french": "…Vous vous accrochez encore à la douleur. Insensés…",
+								"spanish": "…Aún se aferra al dolor. Tonto…",
+								"vietnamese": "…Vẫn còn bám víu vào nỗi đau sao. Thật ngu ngốc…",
+								"thai": "...ยังคงยึดติดกับความเจ็บปวดอยู่หรือ? ช่างโง่เขลา...",
+								"hindi": "…अभी भी दर्द से चिपके हो? मूर्ख…।"
+							}
+						},
+						{
+							"emotion": "angry",
+							"type": "speech",
+							"speaker": "character_any",
+							"content": {
+								"korean": "우리는 우리의 의지를 포기하지 않아!",
+								"english": "We won't give up our will!",
+								"japanese": "私たちは意志を諦めない！",
+								"chinese": "我们不会放弃我们的意志！",
+								"french": "Nous n'abandonnerons pas notre volonté !",
+								"spanish": "¡No renunciaremos a nuestra voluntad!",
+								"vietnamese": "Chúng tôi sẽ không từ bỏ ý chí của mình!",
+								"thai": "เราจะไม่ยอมแพ้เจตจำนงของเรา!",
+								"hindi": "हम अपनी इच्छाशक्ति का त्याग नहीं करेंगे!"
+							}
+						},
+						{
+							"speaker": "boss",
+							"emotion": "base",
+							"type": "speech",
+							"content": {
+								"korean": "결국… 당신들도 나를 이해하게 될 겁니다.",
+								"english": "In the end... you too will come to understand me.",
+								"japanese": "結局…あなたたちも私を理解するでしょう。",
+								"chinese": "最终…你们也会理解我的。",
+								"french": "Au final… vous aussi, vous me comprendrez.",
+								"spanish": "Al final… ustedes también me entenderán.",
+								"vietnamese": "Cuối cùng… các bạn cũng sẽ hiểu tôi thôi.",
+								"thai": "ในที่สุด... พวกคุณก็จะเข้าใจฉันเอง",
+								"hindi": "आखिरकार… तुम भी मुझे समझ जाओगे।"
+							}
+						},
+						{
+							"speaker": "valerius",
+							"action": "enter",
+							"duration_ms": 500,
+							"spot": [
+								2,
+								3
+							],
+							"type": "direction"
+						},
+						{
+							"content": {
+								"korean": "우리가 이겼어요… 근데 왜 이렇게 씁쓸하죠?",
+								"english": "We won... but why does it feel so bitter?",
+								"japanese": "私たちは勝った…でも、どうしてこんなに苦いんだろう？",
+								"chinese": "我们赢了…可为什么这么苦涩呢？",
+								"french": "Nous avons gagné… mais pourquoi est-ce si amer ?",
+								"spanish": "Ganamos… ¿pero por qué se siente tan amargo?",
+								"vietnamese": "Chúng ta đã thắng… nhưng sao lại cay đắng thế này?",
+								"thai": "เราชนะแล้ว... แต่ทำไมมันช่างขมขื่นนัก?",
+								"hindi": "हम जीत गए… पर यह इतनी कड़वाहट क्यों है?"
+							},
+							"speaker": "valerius",
+							"type": "speech",
+							"emotion": "sad"
+						},
+						{
+							"content": {
+								"korean": "동굴을 뒤덮었던 성광이 사라졌다. 침묵이 모든 것을 감쌌다.",
+								"english": "The holy light that enveloped the cave vanished. Silence enveloped everything.",
+								"japanese": "洞窟を覆っていた聖なる光が消え去った。沈黙がすべてを包み込んだ。",
+								"chinese": "笼罩洞穴的圣光消失了。寂静笼罩了一切。",
+								"french": "La lumière sacrée qui enveloppait la grotte disparut. Le silence enveloppa tout.",
+								"spanish": "La luz sagrada que cubría la cueva desapareció. El silencio lo envolvió todo.",
+								"vietnamese": "Ánh sáng thần thánh bao trùm hang động đã biến mất. Sự im lặng bao trùm vạn vật.",
+								"thai": "แสงศักดิ์สิทธิ์ที่ปกคลุมถ้ำได้หายไปแล้ว ความเงียบงันปกคลุมทุกสิ่ง",
+								"hindi": "गुफा को घेरे हुए पवित्र प्रकाश गायब हो गया। खामोशी ने सब कुछ घेर लिया।"
+							},
+							"emotion": "base",
+							"type": "speech",
+							"speaker": "narrator"
+						},
+						{
+							"speaker": "narrator",
+							"emotion": "base",
+							"type": "speech",
+							"content": {
+								"korean": "그러나 루멘의 속삭임은, 여전히 동굴 깊은 곳에 스며 있었다.",
+								"english": "However, Lumen's whispers still permeated the depths of the cave.",
+								"japanese": "しかし、ルーメンの囁きは、いまだ洞窟の奥深くに染み込んでいた。",
+								"chinese": "然而，卢门的低语，依然渗透在洞穴深处。",
+								"french": "Cependant, les murmures de Lumen imprégnaient toujours les profondeurs de la grotte.",
+								"spanish": "Sin embargo, los susurros de Lumen aún impregnaban las profundidades de la cueva.",
+								"vietnamese": "Tuy nhiên, những lời thì thầm của Lumen vẫn len lỏi vào sâu trong hang động.",
+								"thai": "ทว่า เสียงกระซิบของลูเมน ยังคงแทรกซึมอยู่ในส่วนลึกของถ้ำ",
+								"hindi": "हालांकि, लुमेन की फुसफुसाहट, अभी भी गुफा की गहराई में समाई हुई थी।"
+							}
+						}
+					]
+				}
+			]
+		}
+	]
+}
