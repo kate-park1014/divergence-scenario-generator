@@ -12,6 +12,7 @@ import { storyarc_hell_arkhain } from './storyarc_hell_arkhain';
 import { storyarc_modern_evan } from './storyarc_modern_evan';
 import { storyarc_modern_minsu } from './storyarc_modern_minsu';
 import { storyarc_modern_otto } from './storyarc_modern_otto';
+import { storyarc_forest_kain } from './storyarc_forest_kain';
 import type { StoryArc } from '$lib/types';
 
 export const storyarcRegistry: StoryArc[] = [
@@ -28,7 +29,8 @@ export const storyarcRegistry: StoryArc[] = [
 	storyarc_hell_arkhain,
 	storyarc_modern_evan,
 	storyarc_modern_minsu,
-	storyarc_modern_otto
+	storyarc_modern_otto,
+	storyarc_forest_kain
 ];
 
 export function getStoryarc(id: string): StoryArc | undefined {
