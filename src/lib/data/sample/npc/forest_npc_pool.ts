@@ -1,156 +1,178 @@
 export const forest_npc_pool = [
 	{
-		id: 'mon_7ad0c0cb-55c6-4422-8393-c1a2eaf5817b',
-		key: 'kain',
+		id: 'mon_48cf29be-dbc0-44b1-bbb3-ecda1d14742d',
+		key: 'bracken',
 		name: {
-			korean: '카인',
-			english: 'Kain',
-			japanese: 'カイン',
-			chinese: '凯恩',
-			french: 'Kaïn',
-			spanish: 'Kain',
-			vietnamese: 'Kain',
-			thai: 'เคน',
-			hindi: 'केन'
+			korean: '브라켄',
+			english: 'Bracken',
+			japanese: 'ブラッケン',
+			chinese: '布莱肯',
+			french: 'Bracken',
+			spanish: 'Bracken',
+			vietnamese: 'Bracken',
+			thai: 'แบรกเคน',
+			hindi: 'ब्रैकेन'
 		},
-		description: '',
 		face_image_url:
-			'https://imagedelivery.net/WTEqQNGFb-l-IHS6IGnzUQ/2fb1b07a-14de-4ca0-c18b-a422d72e0000/public',
+			'https://imagedelivery.net/WTEqQNGFb-l-IHS6IGnzUQ/5b494da6-ffd7-43d3-7171-7ac84bdfe400/public',
+		battle_image_url:
+			'https://imagedelivery.net/WTEqQNGFb-l-IHS6IGnzUQ/0fe4873c-b774-4963-9e36-2f689736a200/public',
 		battle_sprite_url:
-			'https://imagedelivery.net/WTEqQNGFb-l-IHS6IGnzUQ/f251a138-bf06-4848-f050-bd6f5cfbde00/public',
-		attack_sprite_url: '',
-		role: { type: '' }
+			'https://imagedelivery.net/WTEqQNGFb-l-IHS6IGnzUQ/4a7a1b62-d7a7-4a21-ffd5-fa9b5de82100/public',
+		is_monster: false
 	},
 	{
-		id: 'mon_7b56ecc3-abc6-4aa9-a0aa-ed83ce4627e7',
-		key: 'lumina',
+		id: 'mon_21f92820-190e-4d08-a75c-5d2c0b6d0a6b',
+		key: 'briar',
 		name: {
-			korean: '루미나',
-			english: 'Lumina',
-			japanese: 'ルミナ',
-			chinese: '露米娜',
-			french: 'Lumina',
-			spanish: 'Lumina',
-			vietnamese: 'Lumina',
-			thai: 'ลูมินา',
-			hindi: 'लुमिना'
+			korean: '브라이어',
+			english: 'Briar',
+			japanese: 'ブライア',
+			chinese: '布莱尔',
+			french: 'Briar',
+			spanish: 'Briar',
+			vietnamese: 'Briar',
+			thai: 'ไบรอา',
+			hindi: 'ब्रायर'
 		},
-		description: 'A Forest Fairy with yellow hair, she looks young',
 		face_image_url:
-			'https://imagedelivery.net/WTEqQNGFb-l-IHS6IGnzUQ/0a91acfe-f485-4fd9-4d9c-a6b1dd604200/public',
+			'https://imagedelivery.net/WTEqQNGFb-l-IHS6IGnzUQ/41fb431e-57e0-45e0-dde6-1a1f02c01200/public',
+		battle_image_url:
+			'https://imagedelivery.net/WTEqQNGFb-l-IHS6IGnzUQ/3fab0f9f-7892-4b8c-fd9e-d7a5d7f50100/public',
 		battle_sprite_url:
-			'https://imagedelivery.net/WTEqQNGFb-l-IHS6IGnzUQ/090c84cb-bcc2-4dec-a8cf-6ba8538b9700/public',
-		attack_sprite_url: '',
-		role: { type: '' }
+			'https://imagedelivery.net/WTEqQNGFb-l-IHS6IGnzUQ/dd89dff7-88ed-4444-28d8-5aaa85bd4e00/public',
+		is_monster: false
 	},
 	{
-		id: 'mon_c57af7f0-7c43-4883-8bbb-b99a24a34620',
-		key: 'lyra_meadowsong',
+		id: 'mon_bd67c222-311e-4f31-b81f-931b14f6b5c6',
+		key: 'cedar',
 		name: {
-			korean: '리라',
-			english: 'Lyra',
-			japanese: 'リラ',
-			chinese: '莉拉',
-			french: 'Lyra',
-			spanish: 'Lyra',
-			vietnamese: 'Lyra',
-			thai: 'ไลรา',
-			hindi: 'लायरा'
+			korean: '시더',
+			english: 'Cedar',
+			japanese: 'シダー',
+			chinese: '雪松',
+			french: 'Cèdre',
+			spanish: 'Cedro',
+			vietnamese: 'Tuyết tùng',
+			thai: 'ซีดาร์',
+			hindi: 'देवदार'
 		},
-		description: 'A Forest Fairy with green hair',
 		face_image_url:
-			'https://imagedelivery.net/WTEqQNGFb-l-IHS6IGnzUQ/c4d279a3-d82c-4045-36cc-62cc22e47f00/public',
+			'https://imagedelivery.net/WTEqQNGFb-l-IHS6IGnzUQ/f1057921-5fa2-4be2-767d-1a64c33e6e00/public',
+		battle_image_url:
+			'https://imagedelivery.net/WTEqQNGFb-l-IHS6IGnzUQ/7d3e9f4f-5b58-464f-7080-d2297a6a6500/public',
 		battle_sprite_url:
-			'https://imagedelivery.net/WTEqQNGFb-l-IHS6IGnzUQ/204d63b0-dcf0-437a-0622-ab32c3fe8900/public',
-		attack_sprite_url: '',
-		role: { type: '' }
+			'https://imagedelivery.net/WTEqQNGFb-l-IHS6IGnzUQ/9579f10e-eb78-40e5-d495-72f489322200/public',
+		is_monster: false
 	},
 	{
-		id: 'mon_4a825197-e7a3-49c3-85c7-c8d02c6b544a',
-		key: 'lyra_meadowlight',
+		id: 'mon_24765cb2-6fc0-452e-8969-871a82349c70',
+		key: 'ela',
 		name: {
-			korean: '리라',
-			english: 'Lyra',
-			japanese: 'リラ',
-			chinese: '莉拉',
-			french: 'Lyra',
-			spanish: 'Lyra',
-			vietnamese: 'Lyra',
-			thai: 'ไลรา',
-			hindi: 'लायरा'
+			korean: '엘라',
+			english: 'Ela',
+			japanese: 'エラ',
+			chinese: '艾拉',
+			french: 'Ela',
+			spanish: 'Ela',
+			vietnamese: 'Ela',
+			thai: 'เอล่า',
+			hindi: 'एला'
 		},
-		description: 'A Forest Fairy with blue hair',
 		face_image_url:
-			'https://imagedelivery.net/WTEqQNGFb-l-IHS6IGnzUQ/ef0e0271-11f9-4203-95b7-ef4031182d00/public',
+			'https://imagedelivery.net/WTEqQNGFb-l-IHS6IGnzUQ/55d3e9ee-c589-40ab-dfa4-a658bbddd400/public',
+		battle_image_url:
+			'https://imagedelivery.net/WTEqQNGFb-l-IHS6IGnzUQ/9f9bd29f-0ff4-42b4-117b-4a104fc1af00/public',
 		battle_sprite_url:
-			'https://imagedelivery.net/WTEqQNGFb-l-IHS6IGnzUQ/0780dbb4-fa82-4b0c-955e-8c9bb1671900/public',
-		attack_sprite_url: '',
-		role: { type: '' }
+			'https://imagedelivery.net/WTEqQNGFb-l-IHS6IGnzUQ/cfacc842-115e-4175-a7fa-3111a468ed00/public',
+		is_monster: false
 	},
 	{
-		id: 'mon_05460632-579a-4511-848a-be8b7428872a',
-		key: 'elara',
+		id: 'mon_279a32a0-8ec1-4b5b-8179-32df46fdc664',
+		key: 'fern',
 		name: {
-			korean: '엘라라',
-			english: 'Elara',
-			japanese: 'エラーラ',
-			chinese: '艾拉拉',
-			french: 'Élara',
-			spanish: 'Elara',
-			vietnamese: 'Elara',
-			thai: 'เอลารา',
-			hindi: 'एलारा'
+			korean: '페른',
+			english: 'Fern',
+			japanese: 'フェルン',
+			chinese: '费恩',
+			french: 'Fern',
+			spanish: 'Fern',
+			vietnamese: 'Fern',
+			thai: 'เฟิร์น',
+			hindi: 'फर्न'
 		},
-		description: 'A Forest Fairy with white hair',
 		face_image_url:
-			'https://imagedelivery.net/WTEqQNGFb-l-IHS6IGnzUQ/6396e07e-dcdf-4ea7-a5bc-18fc03c6cb00/public',
+			'https://imagedelivery.net/WTEqQNGFb-l-IHS6IGnzUQ/19f9763e-413a-485e-787a-9bbfd8208700/public',
+		battle_image_url:
+			'https://imagedelivery.net/WTEqQNGFb-l-IHS6IGnzUQ/870d1ce2-6e49-4b48-0415-43b6e5c0ee00/public',
 		battle_sprite_url:
-			'https://imagedelivery.net/WTEqQNGFb-l-IHS6IGnzUQ/b0e157fa-833e-4dee-5ec0-aa8736f01900/public',
-		attack_sprite_url: '',
-		role: { type: '' }
+			'https://imagedelivery.net/WTEqQNGFb-l-IHS6IGnzUQ/563627d4-0b7c-4865-39d4-1d0a97363c00/public',
+		is_monster: false
 	},
 	{
-		id: 'actor_04',
-		key: 'selena',
+		id: 'mon_42dfd4f2-9564-4b4b-beed-993d578ebd5a',
+		key: 'glen',
 		name: {
-			korean: '셀레나',
-			english: 'Selena',
-			japanese: 'セレナ',
-			chinese: '塞莱娜',
-			french: 'Séléna',
-			spanish: 'Selena',
-			vietnamese: 'Selena',
-			thai: 'เซเลน่า',
-			hindi: 'सेलेना'
+			korean: '글렌',
+			english: 'Glen',
+			japanese: 'グレン',
+			chinese: '格伦',
+			french: 'Glen',
+			spanish: 'Glen',
+			vietnamese: 'Glen',
+			thai: 'เกล็น',
+			hindi: 'ग्लेन'
 		},
-		description: '',
 		face_image_url:
-			'https://imagedelivery.net/WTEqQNGFb-l-IHS6IGnzUQ/0333478b-0c76-459f-8574-67704ce00100/public',
+			'https://imagedelivery.net/WTEqQNGFb-l-IHS6IGnzUQ/6aa9eb0c-364f-4bfb-fa3f-52711da6a600/public',
+		battle_image_url:
+			'https://imagedelivery.net/WTEqQNGFb-l-IHS6IGnzUQ/18f649c6-3ec1-4145-6e90-b0ea32eec600/public',
 		battle_sprite_url:
-			'https://imagedelivery.net/WTEqQNGFb-l-IHS6IGnzUQ/7b36a7f6-9842-4b91-7437-bccef7696400/public',
-		attack_sprite_url: '',
-		role: { type: 'Healer', weapon: '' }
+			'https://imagedelivery.net/WTEqQNGFb-l-IHS6IGnzUQ/2dbb8c2d-a999-4154-3a88-7c5cc5ca2200/public',
+		is_monster: false
 	},
 	{
-		id: 'actor_05',
-		key: 'reina',
+		id: 'mon_e2c11115-b300-4f32-b289-9ad088dc0273',
+		key: 'hazel',
 		name: {
-			korean: '레이나',
-			english: 'Reina',
-			japanese: 'レイナ',
-			chinese: '蕾娜',
-			french: 'Reina',
-			spanish: 'Reina',
-			vietnamese: 'Reina',
-			thai: 'เรน่า',
-			hindi: 'रेना'
+			korean: '헤이즐',
+			english: 'Hazel',
+			japanese: 'ヘイゼル',
+			chinese: '榛',
+			french: 'Hazel',
+			spanish: 'Hazel',
+			vietnamese: 'Hazel',
+			thai: 'เฮเซล',
+			hindi: 'हेज़ल'
 		},
-		description: '',
 		face_image_url:
-			'https://imagedelivery.net/WTEqQNGFb-l-IHS6IGnzUQ/167347f3-8f37-41be-32a8-598d68e6ed00/public',
+			'https://imagedelivery.net/WTEqQNGFb-l-IHS6IGnzUQ/39f75a47-c622-45fe-04fd-a8bac1f93a00/public',
+		battle_image_url:
+			'https://imagedelivery.net/WTEqQNGFb-l-IHS6IGnzUQ/64493208-cf8a-4bf4-609e-c376e13ff600/public',
 		battle_sprite_url:
-			'https://imagedelivery.net/WTEqQNGFb-l-IHS6IGnzUQ/a04c3f19-b4e2-4317-ee5d-129742ac3800/public',
-		attack_sprite_url: '',
-		role: { type: 'Dealer', weapon: '' }
+			'https://imagedelivery.net/WTEqQNGFb-l-IHS6IGnzUQ/fc97b5d5-7a1d-4646-bedc-47a40ea70a00/public',
+		is_monster: false
+	},
+	{
+		id: 'mon_d1c759f3-74f8-42b7-ba16-c705649f006f',
+		key: 'ivy',
+		name: {
+			korean: '아이비',
+			english: 'Ivy',
+			japanese: 'アイビー',
+			chinese: '艾薇',
+			french: 'Ivy',
+			spanish: 'Ivy',
+			vietnamese: 'Ivy',
+			thai: 'ไอวี่',
+			hindi: 'आइवी'
+		},
+		face_image_url:
+			'https://imagedelivery.net/WTEqQNGFb-l-IHS6IGnzUQ/654fde54-6029-4601-b4a8-0578f00df900/public',
+		battle_image_url:
+			'https://imagedelivery.net/WTEqQNGFb-l-IHS6IGnzUQ/80263286-14ce-493f-e867-93741f13d600/public',
+		battle_sprite_url:
+			'https://imagedelivery.net/WTEqQNGFb-l-IHS6IGnzUQ/6ee8738d-0e14-4f8d-d04d-c934b0fff000/public',
+		is_monster: false
 	}
 ];
