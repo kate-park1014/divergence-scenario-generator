@@ -11,7 +11,9 @@ export const POST: RequestHandler = async ({ request }) => {
 	}
 
 	const id = storyarc.id as string;
-	const exportName = `storyarc_${id}`;
+	const theme = typeof storyarc.theme === 'string' ? storyarc.theme.trim().toLowerCase() : '';
+	const slug = theme && !id.toLowerCase().startsWith(`${theme}_`) ? `${theme}_${id}` : id;
+	const exportName = `storyarc_${slug}`;
 	const filename = `${exportName}.ts`;
 	const storyarcDir = join(process.cwd(), 'src/lib/data/storyarc');
 

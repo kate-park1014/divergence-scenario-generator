@@ -1,16 +1,41 @@
 <script lang="ts">
 	import { npc_by_theme } from '$lib/data/sample/npc_pool';
-	import { buildStoryarcPrompt, storyarcGenTool } from '$lib/prompts/storyarcGen';
+	import { buildStoryarcPrompt, buildSequelPrompt, storyarcGenTool } from '$lib/prompts/storyarcGen';
+	import { storyarcRegistry } from '$lib/data/storyarc';
+	import type { StoryArc } from '$lib/types';
 
 	type Theme = keyof typeof npc_by_theme;
 
 	const THEMES: Theme[] = ['forest', 'snowy', 'desert'];
+
+	let tab = $state<'new' | 'sequel'>('new');
+	let sourceStoryarcId = $state('');
 
 	let selectedTheme: Theme = $state('desert');
 	let generating = $state(false);
 	let result = $state<Record<string, unknown> | null>(null);
 	let error = $state('');
 	let inputMode = $state<'form' | 'json'>('form');
+
+	const sourceArc = $derived<StoryArc | undefined>(
+		storyarcRegistry.find((s) => s.id === sourceStoryarcId)
+	);
+
+	const sequelTheme = $derived<Theme | undefined>(
+		sourceArc && (sourceArc.theme as string) in npc_by_theme
+			? (sourceArc.theme as Theme)
+			: undefined
+	);
+
+	const sequelNpcs = $derived(
+		sequelTheme
+			? npc_by_theme[sequelTheme].map((n) => ({
+					key: n.key,
+					name_korean: n.name.korean,
+					name_english: n.name.english
+				}))
+			: []
+	);
 
 	// Boss 입력 필드 (form mode)
 	let bossId = $state('');
@@ -79,46 +104,61 @@
 	);
 
 	async function generate() {
-		let boss: { id: string; name: string; appearance: string; surface_identity: string; true_identity: string; motivation: string; twist: string };
+		let prompt: string;
 
-		if (inputMode === 'json') {
-			try {
-				const obj = parseBossInput(bossJson);
-				const s = (v: unknown) => String(v ?? '');
-				boss = {
-					id: s(obj.id),
-					name: s(obj.name),
-					appearance: s(obj.appearance),
-					surface_identity: s(obj.surface_identity),
-					true_identity: s(obj.true_identity),
-					motivation: s(obj.motivation),
-					twist: s(obj.twist)
-				};
-			} catch {
-				error = 'JSON 또는 JS 객체 형식이 올바르지 않습니다.';
+		if (tab === 'sequel') {
+			if (!sourceArc) {
+				error = '소스 스토리아크를 선택해주세요.';
 				return;
 			}
+			if (!sequelTheme) {
+				error = `소스 테마 "${sourceArc.theme}"에 해당하는 NPC 풀이 없습니다.`;
+				return;
+			}
+			prompt = buildSequelPrompt(sourceArc, sequelNpcs);
 		} else {
-			boss = {
-				id: bossId,
-				name: bossName,
-				appearance: bossAppearance,
-				surface_identity: bossSurfaceIdentity,
-				true_identity: bossTrueIdentity,
-				motivation: bossMotivation,
-				twist: bossTwist
-			};
+			let boss: { id: string; name: string; appearance: string; surface_identity: string; true_identity: string; motivation: string; twist: string };
+
+			if (inputMode === 'json') {
+				try {
+					const obj = parseBossInput(bossJson);
+					const s = (v: unknown) => String(v ?? '');
+					boss = {
+						id: s(obj.id),
+						name: s(obj.name),
+						appearance: s(obj.appearance),
+						surface_identity: s(obj.surface_identity),
+						true_identity: s(obj.true_identity),
+						motivation: s(obj.motivation),
+						twist: s(obj.twist)
+					};
+				} catch {
+					error = 'JSON 또는 JS 객체 형식이 올바르지 않습니다.';
+					return;
+				}
+			} else {
+				boss = {
+					id: bossId,
+					name: bossName,
+					appearance: bossAppearance,
+					surface_identity: bossSurfaceIdentity,
+					true_identity: bossTrueIdentity,
+					motivation: bossMotivation,
+					twist: bossTwist
+				};
+			}
+
+			if (!boss.id || !boss.name) {
+				error = 'Boss ID와 이름은 필수입니다.';
+				return;
+			}
+
+			prompt = buildStoryarcPrompt(boss, npcs, selectedTheme);
 		}
 
-		if (!boss.id || !boss.name) {
-			error = 'Boss ID와 이름은 필수입니다.';
-			return;
-		}
 		error = '';
 		generating = true;
 		result = null;
-
-		const prompt = buildStoryarcPrompt(boss, npcs, selectedTheme);
 
 		try {
 			const res = await fetch('/api/gemini', {
@@ -135,7 +175,44 @@
 			if (data.error) {
 				error = data.error;
 			} else {
-				result = data.tool_result;
+				let generated = data.tool_result as Record<string, unknown>;
+
+				if (tab === 'sequel' && sourceArc) {
+					const llmFinalBoss = (generated.final_boss ?? {}) as Record<string, unknown>;
+					const src = sourceArc.final_boss;
+					const newMotivation =
+						typeof llmFinalBoss.motivation === 'string' && llmFinalBoss.motivation.trim()
+							? llmFinalBoss.motivation
+							: src.motivation;
+					const newTwist =
+						typeof llmFinalBoss.twist === 'string' && llmFinalBoss.twist.trim()
+							? llmFinalBoss.twist
+							: src.twist;
+
+					generated = {
+						...generated,
+						final_boss: {
+							id: src.id,
+							name: src.name,
+							appearance_npc: src.appearance_npc,
+							appearance_boss: src.appearance_boss,
+							surface_identity: src.surface_identity,
+							true_identity: src.true_identity,
+							motivation: newMotivation,
+							twist: newTwist
+						}
+					};
+					const outline = generated.scenarioOutline as Array<Record<string, unknown>> | undefined;
+					if (Array.isArray(outline)) {
+						outline.forEach((s, i) => {
+							if (sourceArc.scenarioOutline[i]) {
+								s.boss = sourceArc.scenarioOutline[i].boss;
+							}
+						});
+					}
+				}
+
+				result = generated;
 				await fetch('/api/storyarc/save', {
 					method: 'POST',
 					headers: { 'Content-Type': 'application/json' },
@@ -193,6 +270,25 @@
 
 	<div class="layout">
 		<div class="input-panel">
+			<!-- 탭 -->
+			<div class="tab-bar">
+				<button
+					class="tab"
+					class:active={tab === 'new'}
+					onclick={() => (tab = 'new')}
+				>
+					신규 생성
+				</button>
+				<button
+					class="tab"
+					class:active={tab === 'sequel'}
+					onclick={() => (tab = 'sequel')}
+				>
+					시리즈 이야기
+				</button>
+			</div>
+
+			{#if tab === 'new'}
 			<!-- 테마 선택 -->
 			<section class="section">
 				<h2>테마</h2>
@@ -276,9 +372,71 @@
 					{/if}
 				{/if}
 			</section>
+			{:else}
+			<!-- 시리즈 이야기: 소스 선택 -->
+			<section class="section">
+				<h2>소스 스토리아크 선택</h2>
+				<select class="source-select" bind:value={sourceStoryarcId}>
+					<option value="">— 선택 —</option>
+					{#each storyarcRegistry as arc}
+						<option value={arc.id}>
+							{arc.chapter_name?.korean ?? arc.id} — {arc.id}
+						</option>
+					{/each}
+				</select>
+			</section>
 
-			<button class="generate-btn" onclick={generate} disabled={generating}>
-				{generating ? '생성 중...' : 'StoryArc 생성'}
+			{#if sourceArc}
+				<section class="section">
+					<h2>테마 (자동)</h2>
+					<div class="auto-field">{sourceArc.theme}</div>
+				</section>
+
+				<section class="section">
+					<h2>🔒 final_boss (부분 락)</h2>
+					<div class="locked-box">
+						<div class="locked-line"><span class="locked-key">id</span> <span class="mono">{sourceArc.final_boss.id}</span></div>
+						<div class="locked-line"><span class="locked-key">name</span> {sourceArc.final_boss.name}</div>
+						<div class="locked-line"><span class="locked-key">surface</span> {sourceArc.final_boss.surface_identity}</div>
+					</div>
+					<p class="hint-text">motivation·twist는 후속편답게 새로 생성됩니다 (1편 흔적 포함).</p>
+				</section>
+
+				<section class="section">
+					<h2>🔒 scenarioOutline boss 필드 (락)</h2>
+					<ul class="locked-bosses">
+						{#each sourceArc.scenarioOutline as s}
+							<li>
+								<span class="order">#{s.order}</span>
+								<span class="title">{s.title}</span>
+								<span class="mono">{s.boss}</span>
+							</li>
+						{/each}
+					</ul>
+				</section>
+
+				<section class="section">
+					<h2>사용 가능한 NPC <span class="count">({sequelNpcs.length}명)</span></h2>
+					{#if sequelNpcs.length === 0}
+						<p class="hint-text">테마 "{sourceArc.theme}"에 해당하는 NPC 풀이 없습니다.</p>
+					{:else}
+						<ul class="npc-list">
+							{#each sequelNpcs as npc}
+								<li class="npc-item">
+									<span class="npc-key">{npc.key}</span>
+									<span class="npc-name">{npc.name_korean} ({npc.name_english})</span>
+								</li>
+							{/each}
+						</ul>
+					{/if}
+				</section>
+			{:else}
+				<p class="hint-text">소스 스토리아크를 선택하면 후속편 생성 정보가 표시됩니다.</p>
+			{/if}
+			{/if}
+
+			<button class="generate-btn" onclick={generate} disabled={generating || (tab === 'sequel' && !sourceArc)}>
+				{generating ? '생성 중...' : tab === 'sequel' ? '후속편 생성' : 'StoryArc 생성'}
 			</button>
 
 			{#if error}
@@ -400,6 +558,124 @@
 
 	.section {
 		margin-bottom: 1.5rem;
+	}
+
+	/* 탭 바 */
+	.tab-bar {
+		display: flex;
+		gap: 0;
+		margin-bottom: 1.5rem;
+		border-bottom: 1px solid #222;
+	}
+
+	.tab {
+		padding: 0.6rem 1.1rem;
+		background: transparent;
+		border: none;
+		border-bottom: 2px solid transparent;
+		color: #666;
+		cursor: pointer;
+		font-size: 0.9rem;
+		font-weight: 600;
+		transition: all 0.15s;
+	}
+
+	.tab:hover {
+		color: #aaa;
+	}
+
+	.tab.active {
+		color: #c8a85a;
+		border-bottom-color: #c8a85a;
+	}
+
+	/* 소스 선택 */
+	.source-select {
+		width: 100%;
+		background: #111;
+		border: 1px solid #333;
+		border-radius: 4px;
+		color: #ccc;
+		padding: 0.5rem 0.75rem;
+		font-size: 0.9rem;
+		font-family: inherit;
+	}
+
+	.source-select:focus {
+		outline: none;
+		border-color: #555;
+	}
+
+	.auto-field {
+		padding: 0.4rem 0.75rem;
+		background: #111;
+		border: 1px solid #222;
+		border-radius: 4px;
+		color: #c8a85a;
+		font-family: monospace;
+		font-size: 0.85rem;
+	}
+
+	/* 락 박스 */
+	.locked-box {
+		display: flex;
+		flex-direction: column;
+		gap: 0.35rem;
+		padding: 0.75rem;
+		background: #111;
+		border: 1px dashed #333;
+		border-radius: 6px;
+	}
+
+	.locked-line {
+		font-size: 0.82rem;
+		color: #aaa;
+		line-height: 1.4;
+	}
+
+	.locked-key {
+		display: inline-block;
+		min-width: 64px;
+		color: #666;
+		font-size: 0.72rem;
+		text-transform: uppercase;
+		letter-spacing: 0.04em;
+	}
+
+	.locked-bosses {
+		list-style: none;
+		padding: 0;
+		margin: 0;
+		display: flex;
+		flex-direction: column;
+		gap: 0.3rem;
+	}
+
+	.locked-bosses li {
+		display: flex;
+		gap: 0.6rem;
+		align-items: baseline;
+		padding: 0.35rem 0.5rem;
+		background: #111;
+		border-radius: 4px;
+		font-size: 0.82rem;
+	}
+
+	.locked-bosses .order {
+		color: #555;
+		font-family: monospace;
+		min-width: 24px;
+	}
+
+	.locked-bosses .title {
+		color: #ccc;
+		flex: 1;
+	}
+
+	.hint-text {
+		color: #555;
+		font-size: 0.85rem;
+		padding: 0.5rem 0;
 	}
 
 	.section-header {

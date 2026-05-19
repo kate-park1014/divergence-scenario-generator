@@ -3,6 +3,17 @@ import { forest_pools } from '../sample/monster';
 
 export const storyarc_forest_kain: StoryArc = {
 	id: 'GuardianCaptain_V0',
+	chapter_name: {
+		korean: '수호대 대장',
+		english: 'Guardian Captain',
+		japanese: '守護隊長',
+		chinese: '守护队长',
+		french: 'Capitaine des Gardiens',
+		spanish: 'Capitán de los Guardianes',
+		vietnamese: 'Đội Trưởng Hộ Vệ',
+		thai: 'หัวหน้าผู้พิทักษ์',
+		hindi: 'संरक्षक कप्तान'
+	},
 	theme: 'forest',
 	rising_count: 3,
 
@@ -38,20 +49,20 @@ export const storyarc_forest_kain: StoryArc = {
 	},
 
 	final_boss: {
-		id: 'GuardianCaptain_V0',
-		name: '수호대 대장 카인 (Kain)',
+		id: 'WorldRootTitan_V0',
+		name: 'World Root Titan',
 		appearance_npc:
 			'A calm, weathered captain of the Guardians in worn leather armor. He speaks softly, apologizing for arriving too late. He knows the names of every village and the locations of every danger. His hand rests on the survivor\'s shoulder like a promise — "I\'ll help you with your vengeance."',
 		appearance_boss:
 			"Kain himself never appears on the battlefield. Instead, the World Tree's heart — the World Root Titan — awakens at his touch, fed by the protagonist's anger. Roots the size of villages tear through the canopy. Spores spiral around its core in perfect, controlled patterns — too controlled for nature. A second silhouette hovers behind it, watching, not fighting. Kain's weapon is the forest itself.",
 		surface_identity:
-			'늦게 도착한 것을 사과하는 다정한 수호대 대장. 위험 지역을 모두 파악하고 약한 자를 거두는 보호자.',
+			'잠든 세계수의 일부가 스스로 깨어난 듯 보이는 거대한 정령. 자연의 분노가 형상을 얻은 존재처럼, 마을을 삼킨 숲의 의지가 직접 일어선 것처럼 보인다.',
 		true_identity:
-			'포자를 통제하는 기술을 가진 진짜 흑막. 마을 학살로 수호대의 공포와 권력을 키워왔고, 세계수 각성에 필요한 "강한 분노"의 그릇을 길러내려 살아남은 자를 곁에 두었다.',
+			'Titan에겐 의지가 없다. 카인이 통제하는 포자 회로와, 주인공의 분노가 흘려보낸 연료로 작동하는 살아있는 무기. "구해준 자"가 깨운 손이고, "복수하는 자"가 댄 불씨다. 뿌리 안쪽으로는 카인이 마을마다 보냈던 포자가 그대로 흐른다.',
 		motivation:
-			'세계수를 무기로 깨워 숲 전체를 자신의 손에 넣는다. 그 마지막 부싯돌은 — 진실을 알게 된 자의 분노다. 주인공은 처음부터 카인의 가장 정교한 도구였다.',
+			'Titan 자체에 동기는 없다 — 그 자리에 있는 것은 카인의 의도뿐이다. 숲 전체를 자신의 손에 넣기 위한 마지막 도구로 깨어났고, 그 명령의 마지막 부싯돌은 진실을 알게 된 자의 분노다. 주인공은 처음부터 이 보스의 연료로 길러졌다.',
 		twist:
-			'"엘라라랑 얘기했군. 다 들었어?" 카인은 부정하지 않는다. "그래." 그 한 마디로 모든 의심이 사실이 된다. "처음부터 미끼로 쓴 거야. 근데 잘 됐잖아 — 넌 강해졌고, 여기까지 왔어." 그가 세계수 뿌리에 손을 댄다. 숲이 흔들린다. 복수하고 싶어 잡았던 그 손이, 가족을 죽인 손이었다.'
+			'뿌리 사이로 카인이 마을에 보냈던 그 포자가 흐르는 게 보인다. "엘라라랑 얘기했군. 다 들었어?" 카인은 부정하지 않는다. "그래." 그 한 마디로 모든 의심이 사실이 된다. "처음부터 미끼로 쓴 거야. 근데 잘 됐잖아 — 넌 강해졌고, 여기까지 왔어." 그가 세계수 뿌리에 손을 댄다. 복수하고 싶어 잡았던 그 손이 가족을 죽인 손이었다 — 그리고 지금 이 Titan을 깨운 손이다.'
 	},
 
 	global_foreshadowing: [
@@ -147,7 +158,7 @@ export const storyarc_forest_kain: StoryArc = {
 			order: 5,
 			act: 'climax_finale',
 			title: '강한 분노',
-			boss: forest_pools.pool_014.pool_id as `pool_${string}`,
+			boss: forest_pools.pool_015.pool_id as `pool_${string}`,
 			npc: 'elara',
 			summary:
 				'세계수 앞. 가장 오래 산 요정 엘라라가 기다리고 있었다. 카인은 포자를 통제해 마을을 파괴하며 권력을 키워왔고 — 세계수를 깨우려면 강한 분노를 가진 자가 필요했다. 리엔 마을은 미끼였고, 주인공이 살아남은 건 운이 아니었다. 카인이 등장해 부정하지 않는다. "그래. 처음부터 미끼로 쓴 거야. 근데 잘 됐잖아 — 넌 강해졌고 여기까지 왔어." 그가 세계수 뿌리에 손을 댄다. 숲의 심장 — World Root Titan — 이 깨어난다. 복수의 칼끝이 진짜 향해야 할 곳이 드러난다.'

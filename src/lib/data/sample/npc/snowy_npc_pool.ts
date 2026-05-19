@@ -110,6 +110,25 @@ export const npc_2_pools = [
 		is_monster: false
 	},
 	{
+		id: 'mon_3e3930d2-c2d3-4ad0-9818-26d259edac77',
+		key: 'finn',
+		name: {
+			korean: '핀',
+			english: 'Finn',
+			japanese: 'フィン',
+			chinese: '芬恩',
+			french: 'Finn',
+			spanish: 'Finn',
+			vietnamese: 'Finn',
+			thai: 'ฟินน์',
+			hindi: 'फिन'
+		},
+		face_image_url: '',
+		battle_image_url: '',
+		battle_sprite_url: '',
+		is_monster: false
+	},
+	{
 		id: 'mon_942bca3b-33e7-4b14-98e5-ec1e2dc78d5b',
 		key: 'frost',
 		name: {

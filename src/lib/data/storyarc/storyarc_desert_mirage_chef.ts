@@ -1,4 +1,5 @@
 import type { StoryArc } from '$lib/types';
+import { desert_pools } from '../sample/monster';
 
 export const storyarc_desert_mirage_chef: StoryArc = {
 	id: 'desert_mirage_chef',
@@ -17,10 +18,8 @@ export const storyarc_desert_mirage_chef: StoryArc = {
 	rising_count: 3,
 
 	world: {
-		setting:
-			'끝없는 사막. 탐험대는 목이 마르고 지쳐간다. 신기루처럼 저 멀리 황금빛 빛이 일렁인다.',
-		rule:
-			'사막에는 오래전부터 "기적의 요리사"에 대한 전설이 전해진다. 굶주린 자에게 완벽한 한 끼를 대접한다는 이야기.',
+		setting: '끝없는 사막. 탐험대는 목이 마르고 지쳐간다. 신기루처럼 저 멀리 황금빛 빛이 일렁인다.',
+		rule: '사막에는 오래전부터 "기적의 요리사"에 대한 전설이 전해진다. 굶주린 자에게 완벽한 한 끼를 대접한다는 이야기.',
 		secret:
 			'그 요리사는 기근 속에서 사람들을 살리기 위해 환각 향신료를 개발했다. 하지만 사람들은 환상에만 의존하다 모두 굶어 죽었다. 그는 여전히 연회를 연다 — 아무도 죽지 않는다고 믿으며.'
 	},
@@ -55,7 +54,8 @@ export const storyarc_desert_mirage_chef: StoryArc = {
 			'A warm, generous chef in desert robes offering steaming dishes from a floating golden tray. His smile is wide and his eyes are kind. The food smells incredible. Everything looks real.',
 		appearance_boss:
 			'A flamboyant desert chef riding atop a massive, walking oven shaped like a sandstone tortoise. His body constantly flickers between different forms — young, old, male, female — like heat haze distortions. Around him float dozens of golden cooking utensils, each dripping with glowing, illusory dishes that evaporate into sand when touched. His eyes burn like twin coals, and a long ribbon of spice-infused smoke trails behind him, forming ghostly banquets in the air.',
-		surface_identity: '사막 한가운데서 환상의 연회를 베푸는 미친 요리사. 굶주린 자들에게 "최고의 한 끼"를 제공한다.',
+		surface_identity:
+			'사막 한가운데서 환상의 연회를 베푸는 미친 요리사. 굶주린 자들에게 "최고의 한 끼"를 제공한다.',
 		true_identity:
 			'과거 왕국의 궁정 요리사. 기근 속에서 사람들을 살리기 위해 환각 향신료를 개발했지만, 사람들은 실제 음식을 먹지 않고 환상에만 의존하다 모두 굶어 죽었다. 그는 "배부른 환상"이 "고통스러운 현실"보다 낫다고 믿게 되었다.',
 		motivation:
@@ -127,7 +127,7 @@ export const storyarc_desert_mirage_chef: StoryArc = {
 			order: 1,
 			act: 'intro',
 			title: '황금빛 연기',
-			boss: 'pool_021',
+			boss: 'random_boss',
 			npc: 'Zafir',
 			summary:
 				'사막을 헤매던 탐험대 앞에 갑자기 연회장이 나타난다. 자피르가 먼저 달려간다. 사하르가 웃으며 맞이한다. "오셨군요. 마침 요리가 다 됐습니다."'
@@ -136,7 +136,7 @@ export const storyarc_desert_mirage_chef: StoryArc = {
 			order: 2,
 			act: 'rising',
 			title: '완벽한 한 끼',
-			boss: 'pool_022',
+			boss: 'random_boss',
 			npc: 'Naira',
 			summary:
 				'황금빛 요리들이 차례로 나온다. 먹으면 배가 부른 것 같다. 나이라가 이상함을 느낀다 — "나 분명히 먹었는데… 왜 아무 맛도 기억이 안 나지?" 사하르가 웃으며 더 권한다.'
@@ -145,7 +145,7 @@ export const storyarc_desert_mirage_chef: StoryArc = {
 			order: 3,
 			act: 'rising',
 			title: '움직이지 않는 손님들',
-			boss: 'pool_023',
+			boss: 'random_boss',
 			npc: 'Zahra_Pyra',
 			summary:
 				'자흐라가 다른 손님들을 살핀다. 모두 눈을 감고 미소만 짓고 있다. "저분들… 숨은 쉬고 있어요?" 사하르가 화제를 돌린다. "디저트를 가져올게요."'
@@ -154,7 +154,7 @@ export const storyarc_desert_mirage_chef: StoryArc = {
 			order: 4,
 			act: 'rising',
 			title: '모래 맛',
-			boss: 'pool_024',
+			boss: 'random_boss',
 			npc: 'Donkey',
 			summary:
 				'당키가 실수로 접시를 떨어뜨린다. 산산조각 나며 모래가 쏟아진다. 다른 접시도 집어보자 손에서 모래로 부서진다. "이거… 다 가짜야." 사하르의 표정이 굳는다.'
@@ -163,7 +163,7 @@ export const storyarc_desert_mirage_chef: StoryArc = {
 			order: 5,
 			act: 'climax_finale',
 			title: '배고픔이라는 개념',
-			boss: 'random_boss',
+			boss: desert_pools.pool_051.pool_id as `pool_${string}`,
 			npc: 'Zafir',
 			summary:
 				'사하르의 진실이 드러난다. 환각 향신료가 공기 중에 퍼진다. "배고픔을 없애는 방법은 간단해. 배고픔이라는 개념을 없애면 되니까." 쓰러지며 속삭인다 — "…너희는… 왜 그렇게까지 현실을 고집하지…?"'
