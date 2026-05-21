@@ -8,13 +8,19 @@ export type RandomEventTheme = {
 
 export const RANDOM_EVENT_THEMES: RandomEventTheme[] = [
 	{ id: 'forest', label: '숲', description: '신비로운 숲과 정령, 고대 나무의 저주' },
-	{ id: 'dungeon', label: '지하 던전', description: '함정과 보물이 가득한 오래된 지하 미궁' },
+	{ id: 'hell', label: '지옥', description: '불타는 땅, 악마와의 대화, 화산 근처' },
 	{ id: 'desert', label: '사막', description: '열사의 땅, 신기루와 묻혀진 유물' },
 	{ id: 'snowy', label: '설원', description: '혹한의 눈밭, 얼어붙은 유적과 설인' },
 	{ id: 'cursed_village', label: '저주받은 마을', description: '이상한 마을 주민들, 숨겨진 비밀' },
 	{ id: 'ancient_ruins', label: '고대 유적', description: '잊혀진 문명의 유적과 수호 기계들' },
 	{ id: 'ocean', label: '해저', description: '심해 괴생물과 침몰한 보물선의 저주' },
-	{ id: 'magic_tower', label: '마법 탑', description: '광기에 빠진 마법사의 탑과 실험체들' }
+	{ id: 'magic_tower', label: '마법 탑', description: '광기에 빠진 마법사의 탑과 실험체들' },
+	{
+		id: 'modern',
+		label: '현대',
+		description:
+			'현대적인 배경과 기술이 융합된 세계, ai의 세계, k-pop아이돌의 백스테이지, 대형 쇼핑몰, 지하철역, 학교, 회사 등'
+	}
 ];
 
 export type ScenarioTypeOption = {
