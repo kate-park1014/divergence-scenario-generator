@@ -46,93 +46,115 @@ import { storyarc_modern_PasswordWarden_V1_Rebirth } from './storyarc_modern_Pas
 import { storyarc_forest_chicken_saurus } from './storyarc_forest_chicken_saurus';
 import { storyarc_forest_Chicken_saurus_Rebirth } from './storyarc_forest_Chicken_saurus_Rebirth';
 import { storyarc_forest_titan_echo } from './storyarc_forest_titan_echo';
+import { storyarc_modern_pool_101 } from './storyarc_modern_pool_101_V0';
+import { storyarc_forest_pool_102 } from './storyarc_forest_pool_102_V0';
+import { storyarc_desert_pool_103 } from './storyarc_desert_pool_103_V0';
+import { storyarc_snowy_pool_104 } from './storyarc_snowy_pool_104_V1';
+import { storyarc_hell_pool_105 } from './storyarc_hell_pool_105_V0';
 import type { StoryArc } from '$lib/types';
 
 export const storyarcRegistry: StoryArc[] = [
-	storyarc_false_spring,
-	storyarc_slow_data,
-	storyarc_snowy_penguin,
-	storyarc_snowy_queen,
-	storyarc_snowy_stitcher,
-	storyarc_desert_mirage_chef,
-	storyarc_desert_ceasefirephantom_v0,
-	storyarc_desert_dunewitness_v0,
-	storyarc_hell_noctis,
-	storyarc_hell_lumen,
-	storyarc_hell_arkhain,
-	storyarc_modern_evan,
-	storyarc_modern_minsu,
-	storyarc_modern_otto,
-	storyarc_forest_kain,
+	// storyarc_false_spring,
+	// storyarc_slow_data,
+	// storyarc_snowy_penguin,
+	// storyarc_snowy_queen,
+	// storyarc_snowy_stitcher,
+	// storyarc_desert_mirage_chef,
+	// storyarc_desert_ceasefirephantom_v0,
+	// storyarc_desert_dunewitness_v0,
+	// storyarc_hell_noctis,
+	// storyarc_hell_lumen,
+	// storyarc_hell_arkhain,
+	// storyarc_modern_evan,
+	// storyarc_modern_minsu,
+	// storyarc_modern_otto,
+	// storyarc_forest_kain,
 
-	storyarc_WorldRootTitan_Echo,
+	// storyarc_WorldRootTitan_Echo,
 
-	storyarc_forest_reverberation,
+	// storyarc_forest_reverberation,
 
-	storyarc_forest_sloth_echo,
+	// storyarc_forest_sloth_echo,
 
-	storyarc_forest_WorldRootTitan_Reverberation,
+	// storyarc_forest_WorldRootTitan_Reverberation,
 
-	storyarc_forest_echoes_of_desire,
+	// storyarc_forest_echoes_of_desire,
 
-	storyarc_forest_sloth_legacy,
+	// storyarc_forest_sloth_legacy,
 
-	storyarc_snowy_archduke_finn_aftermath,
+	// storyarc_snowy_archduke_finn_aftermath,
 
-	storyarc_snowy_astrielle_thaw,
+	// storyarc_snowy_astrielle_thaw,
 
-	storyarc_snowy_chronostitcher_legacy,
+	// storyarc_snowy_chronostitcher_legacy,
 
-	storyarc_snowy_finn_second_ordeal,
+	// storyarc_snowy_finn_second_ordeal,
 
-	storyarc_snowy_astrielle_echoes,
+	// storyarc_snowy_astrielle_echoes,
 
-	storyarc_snowy_chronostitcher_reverberation,
+	// storyarc_snowy_chronostitcher_reverberation,
 
-	storyarc_desert_mirage_chef_reverberation,
+	// storyarc_desert_mirage_chef_reverberation,
 
-	storyarc_desert_dunewitness_sequel_v1,
+	// storyarc_desert_dunewitness_sequel_v1,
 
-	storyarc_desert_qadir_echoes,
+	// storyarc_desert_qadir_echoes,
 
-	storyarc_desert_oblivion_spirit_sequel,
+	// storyarc_desert_oblivion_spirit_sequel,
 
-	storyarc_desert_dune_witness_aftermath,
+	// storyarc_desert_dune_witness_aftermath,
 
-	storyarc_desert_qadir_legacy,
+	// storyarc_desert_qadir_legacy,
 
-	storyarc_hell_Noctis_V1_AbyssalReverb,
+	// storyarc_hell_Noctis_V1_AbyssalReverb,
 
-	storyarc_hell_Lumen_Echoes,
+	// storyarc_hell_Lumen_Echoes,
 
-	storyarc_hell_RingBearer_Aftermath,
+	// storyarc_hell_RingBearer_Aftermath,
 
-	storyarc_hell_Noctis_V2_EchoesOfBalance,
+	// storyarc_hell_Noctis_V2_EchoesOfBalance,
 
-	storyarc_hell_Lumen_Echoes_Sequel,
+	// storyarc_hell_Lumen_Echoes_Sequel,
 
-	storyarc_hell_RingBearer_Echoes,
+	// storyarc_hell_RingBearer_Echoes,
 
-	storyarc_modern_EndlessApplicant_V1_DespairCycle,
+	// storyarc_modern_EndlessApplicant_V1_DespairCycle,
 
-	storyarc_modern_ExArchive_V0_Echoes,
+	// storyarc_modern_ExArchive_V0_Echoes,
 
-	storyarc_modern_PasswordWarden_V0_Aftermath,
+	// storyarc_modern_PasswordWarden_V0_Aftermath,
 
-	storyarc_modern_EndlessApplicant_V2_StagnantRealm,
+	// storyarc_modern_EndlessApplicant_V2_StagnantRealm,
 
-	storyarc_modern_ExArchive_V1_Aftermath,
+	// storyarc_modern_ExArchive_V1_Aftermath,
 
-	storyarc_modern_PasswordWarden_V1_Rebirth,
+	// storyarc_modern_PasswordWarden_V1_Rebirth,
 
-	storyarc_forest_chicken_saurus,
+	// storyarc_forest_chicken_saurus,
+
+	// storyarc_forest_Chicken_saurus_Rebirth,
+
+	// storyarc_forest_titan_echo,
+
+	storyarc_modern_pool_101,
 
 
-	storyarc_forest_Chicken_saurus_Rebirth,
+	storyarc_forest_pool_102,
 
 
 
-	storyarc_forest_titan_echo
+	storyarc_desert_pool_103,
+
+
+
+
+	storyarc_snowy_pool_104,
+
+
+
+
+
+	storyarc_hell_pool_105
 ];
 
 export function getStoryarc(id: string): StoryArc | undefined {

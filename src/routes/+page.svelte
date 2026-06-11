@@ -31,6 +31,13 @@
 			<span class="arrow">→</span>
 		</button>
 	</li>
+	<li>
+		<button class="arc-item boss" onclick={() => goto('/bossGen')}>
+			<span class="arc-name">Boss 생성기</span>
+			<span class="arc-id">bossGen</span>
+			<span class="arrow">→</span>
+		</button>
+	</li>
 </ul>
 
 <style>
@@ -112,5 +119,18 @@
 
 	.arc-item.generator .arc-name {
 		color: #c8a85a;
+	}
+
+	.arc-item.boss {
+		border-color: #2a1818;
+	}
+
+	.arc-item.boss:hover {
+		border-color: #e06c75;
+		background: #1f0d0d;
+	}
+
+	.arc-item.boss .arc-name {
+		color: #e06c75;
 	}
 </style>

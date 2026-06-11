@@ -6,7 +6,7 @@
 
 	type Theme = keyof typeof npc_by_theme;
 
-	const THEMES: Theme[] = ['forest', 'snowy', 'desert'];
+	const THEMES = Object.keys(npc_by_theme) as Theme[];
 
 	let tab = $state<'new' | 'sequel'>('new');
 	let sourceStoryarcId = $state('');
@@ -45,6 +45,7 @@
 	let bossTrueIdentity = $state('');
 	let bossMotivation = $state('');
 	let bossTwist = $state('');
+	let bossZodiac = $state('');
 
 	// JSON mode
 	let bossJson = $state('');
@@ -58,7 +59,8 @@
 			surface_identity: bossSurfaceIdentity,
 			true_identity: bossTrueIdentity,
 			motivation: bossMotivation,
-			twist: bossTwist
+			twist: bossTwist,
+			...(bossZodiac ? { zodiac_sign: bossZodiac } : {})
 		};
 		bossJson = JSON.stringify(obj, null, 2);
 	}
@@ -83,6 +85,7 @@
 			bossTrueIdentity = s(obj.true_identity);
 			bossMotivation = s(obj.motivation);
 			bossTwist = s(obj.twist);
+			bossZodiac = s(obj.zodiac_sign);
 			jsonParseError = '';
 		} catch {
 			jsonParseError = 'JSON 또는 JS 객체 형식이 올바르지 않습니다.';
@@ -117,7 +120,7 @@
 			}
 			prompt = buildSequelPrompt(sourceArc, sequelNpcs);
 		} else {
-			let boss: { id: string; name: string; appearance: string; surface_identity: string; true_identity: string; motivation: string; twist: string };
+			let boss: { id: string; name: string; appearance: string; surface_identity: string; true_identity: string; motivation: string; twist: string; zodiac_sign?: string };
 
 			if (inputMode === 'json') {
 				try {
@@ -130,7 +133,8 @@
 						surface_identity: s(obj.surface_identity),
 						true_identity: s(obj.true_identity),
 						motivation: s(obj.motivation),
-						twist: s(obj.twist)
+						twist: s(obj.twist),
+						zodiac_sign: s(obj.zodiac_sign) || undefined
 					};
 				} catch {
 					error = 'JSON 또는 JS 객체 형식이 올바르지 않습니다.';
@@ -144,7 +148,8 @@
 					surface_identity: bossSurfaceIdentity,
 					true_identity: bossTrueIdentity,
 					motivation: bossMotivation,
-					twist: bossTwist
+					twist: bossTwist,
+					zodiac_sign: bossZodiac || undefined
 				};
 			}
 
@@ -199,7 +204,8 @@
 							surface_identity: src.surface_identity,
 							true_identity: src.true_identity,
 							motivation: newMotivation,
-							twist: newTwist
+							twist: newTwist,
+							...(src.zodiac_sign ? { zodiac_sign: src.zodiac_sign } : {})
 						}
 					};
 					const outline = generated.scenarioOutline as Array<Record<string, unknown>> | undefined;
@@ -337,6 +343,10 @@
 						<label>
 							<span>이름 <span class="required">*</span></span>
 							<input bind:value={bossName} placeholder="예: 환상의 조리사 사하르 (Sahar)" />
+						</label>
+						<label>
+							<span>별자리 (Zodiac, 선택)</span>
+							<input bind:value={bossZodiac} placeholder="예: Scorpio" />
 						</label>
 						<label>
 							<span>외형 (Appearance)</span>

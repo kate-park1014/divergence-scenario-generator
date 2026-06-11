@@ -8,6 +8,7 @@ export type BossInput = {
 	true_identity: string;
 	motivation: string;
 	twist: string;
+	zodiac_sign?: string;
 };
 
 export type NpcInput = {
@@ -17,7 +18,9 @@ export type NpcInput = {
 };
 
 export function buildStoryarcPrompt(boss: BossInput, npcs: NpcInput[], theme: string): string {
-	const npcList = npcs.map((n) => `- key: "${n.key}" | 이름: ${n.name_korean} (${n.name_english})`).join('\n');
+	const npcList = npcs
+		.map((n) => `- key: "${n.key}" | 이름: ${n.name_korean} (${n.name_english})`)
+		.join('\n');
 
 	const SYSTEM = `당신은 막장 웹툰 스타일의 게임 스토리아크 설계자입니다.
 보스 캐릭터 정보와 NPC 목록을 받아 완성된 StoryArc 데이터를 생성합니다.
@@ -32,8 +35,8 @@ export function buildStoryarcPrompt(boss: BossInput, npcs: NpcInput[], theme: st
 
 # 구성 규칙
 - rising_count는 항상 3
-- scenarioOutline order 1~4: boss는 'pool_XXX' 형식 (예: pool_021)
-- scenarioOutline order 5 (climax_finale): boss는 'random_boss'
+- scenarioOutline order 1~4: boss는 반드시 'random_boss' 고정 (중간보스 — 런타임에 임의 배정되므로 미리 지정하지 않는다)
+- scenarioOutline order 5 (climax_finale): boss는 입력으로 받은 지정 보스의 id를 그대로 사용 (USER 섹션의 "보스 캐릭터 > id" 값. final_boss와 동일 인물)
 - act_tone.tension: intro=1, rising=3, climax_finale=5
 - chapter_name은 9개 언어 모두 작성 (korean, english, japanese, chinese, french, spanish, vietnamese, thai, hindi)
 - npc_roles: 등장하는 모든 NPC에 대해 role(역할 레이블)과 arc(서사 연결 설명) 작성
@@ -58,7 +61,7 @@ ${theme}
 
 ## 보스 캐릭터
 id: ${boss.id}
-name: ${boss.name}
+name: ${boss.name}${boss.zodiac_sign ? `\nzodiac_sign: ${boss.zodiac_sign}` : ''}
 appearance: ${boss.appearance}
 surface_identity: ${boss.surface_identity}
 true_identity: ${boss.true_identity}
@@ -69,10 +72,16 @@ twist: ${boss.twist}
 ${npcList}
 
 ## 요구사항
+- scenarioOutline order 1~4의 boss는 모두 'random_boss', order 5의 boss는 "${boss.id}" (지정 보스)로 설정
 - id는 "${theme}_${boss.id.toLowerCase().replace(/[^a-z0-9]/g, '_')}" 형식으로 생성
 - 보스의 true_identity에서 세계관 secret을 도출
 - global_foreshadowing의 hint는 실제 시나리오 summary에 녹아들 수 있는 자연스러운 복선
-- npc_roles는 scenarioOutline에 등장하는 모든 NPC에 대해 빠짐없이 작성`;
+- npc_roles는 scenarioOutline에 등장하는 모든 NPC에 대해 빠짐없이 작성${
+		boss.zodiac_sign
+			? `
+- (선택) 보스의 별자리 "${boss.zodiac_sign}" 성향을 final_boss의 motivation·twist와 act_tone의 분위기에 은근히 반영. 별자리를 직접 언급하지 말고 보스가 받은 zodiac_sign 값은 final_boss.zodiac_sign 필드에 그대로 보존할 것`
+			: ''
+	}`;
 
 	return `${SYSTEM}\n\n---\n\n${USER}`;
 }
@@ -224,7 +233,17 @@ const multiLangTextSchema = {
 		thai: { type: 'string' },
 		hindi: { type: 'string' }
 	},
-	required: ['korean', 'english', 'japanese', 'chinese', 'french', 'spanish', 'vietnamese', 'thai', 'hindi']
+	required: [
+		'korean',
+		'english',
+		'japanese',
+		'chinese',
+		'french',
+		'spanish',
+		'vietnamese',
+		'thai',
+		'hindi'
+	]
 };
 
 const actToneSchema = {
@@ -279,9 +298,22 @@ export const storyarcGenTool = [
 							surface_identity: { type: 'string' },
 							true_identity: { type: 'string' },
 							motivation: { type: 'string' },
-							twist: { type: 'string' }
+							twist: { type: 'string' },
+							zodiac_sign: {
+								type: 'string',
+								description: '보스 별자리. 입력에 주어진 경우 그대로 보존 (선택). 없으면 생략.'
+							}
 						},
-						required: ['id', 'name', 'appearance_npc', 'appearance_boss', 'surface_identity', 'true_identity', 'motivation', 'twist']
+						required: [
+							'id',
+							'name',
+							'appearance_npc',
+							'appearance_boss',
+							'surface_identity',
+							'true_identity',
+							'motivation',
+							'twist'
+						]
 					},
 					global_foreshadowing: {
 						type: 'array',
@@ -296,7 +328,15 @@ export const storyarcGenTool = [
 								reveal_room: { type: 'integer', description: '정수만 허용. 소수점 금지.' },
 								reveal_context: { type: 'string' }
 							},
-							required: ['id', 'hint', 'plant_act', 'plant_room', 'reveal_act', 'reveal_room', 'reveal_context']
+							required: [
+								'id',
+								'hint',
+								'plant_act',
+								'plant_room',
+								'reveal_act',
+								'reveal_room',
+								'reveal_context'
+							]
 						}
 					},
 					npc_roles: {
@@ -337,9 +377,18 @@ export const storyarcGenTool = [
 					}
 				},
 				required: [
-					'id', 'chapter_name', 'theme', 'rising_count', 'world',
-					'protagonist_goal', 'act_tone', 'final_boss', 'global_foreshadowing',
-					'npc_roles', 'scenarioOutline', 'act_summary'
+					'id',
+					'chapter_name',
+					'theme',
+					'rising_count',
+					'world',
+					'protagonist_goal',
+					'act_tone',
+					'final_boss',
+					'global_foreshadowing',
+					'npc_roles',
+					'scenarioOutline',
+					'act_summary'
 				]
 			}
 		}

@@ -62,6 +62,7 @@ export type FinalBoss = {
 	true_identity: string;
 	motivation: string;
 	twist: string;
+	zodiac_sign?: string;
 };
 
 export type Foreshadowing = {
