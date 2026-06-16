@@ -104,6 +104,7 @@ export type ActSummary = {
 
 export type StoryArc = {
 	id: string;
+	level?: number; // 시리즈 레벨 (예: Haraldr boss index 1 → 11,21,...,91)
 	chapter_name: MultiLangText;
 	theme: Theme;
 	rising_count: number;

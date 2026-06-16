@@ -1,4 +1,5 @@
 import { SCENARIO_EXAMPLE } from './scenarioExample';
+import { getNpcPersona } from '$lib/data/sample/npc';
 import type { StoryArc } from '$lib/types';
 
 export { scenarioTool, buildScenarioTool } from './scenarioTool';
@@ -142,6 +143,7 @@ act: ${scenario.act}
 title: ${scenario.title}
 boss: ${scenario.boss}
 npc: ${scenario.npc}
+${getNpcPersona(scenario.npc) ? `npc_persona: ${getNpcPersona(scenario.npc)}` : ''}
 ${storyarc.npc_roles?.[scenario.npc] ? `npc_role: ${storyarc.npc_roles[scenario.npc].role}\nnpc_arc: ${storyarc.npc_roles[scenario.npc].arc}` : ''}
 summary: ${scenario.summary}
 

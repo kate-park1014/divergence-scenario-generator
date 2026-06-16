@@ -8,13 +8,25 @@ import { desert_npc_pool } from '$lib/data/sample/npc/desert_npc_pool';
 import { forest_npc_pool } from '$lib/data/sample/npc/forest_npc_pool';
 import { hell_npc_pool } from '$lib/data/sample/npc/hell_npc_pool';
 import { modern_npc_pool } from '$lib/data/sample/npc/modern_npc_pool';
+import { npc_2_pools } from '$lib/data/sample/npc/snowy_npc_pool';
+import { storyarcRegistry } from '$lib/data/storyarc';
 import type { RequestHandler } from './$types';
+
+// snowy 보스에는 별도 TS 보스 풀이 없어, storyarc들의 final_boss.name으로 보스 맵을 구성한다.
+// (rising 장면에서 LLM이 보스를 이름으로 부를 때 actor 해석이 되도록)
+const snowy_bosses: Record<string, { name: string }> = {};
+for (const arc of storyarcRegistry) {
+	if (arc.theme === 'snowy' && arc.final_boss?.name) {
+		snowy_bosses[arc.final_boss.name] = { name: arc.final_boss.name };
+	}
+}
 
 const SYSTEM_SPEAKERS = new Set(['narrator', 'random_boss', 'boss', 'character_any']);
 
 const BOSS_BY_THEME: Record<string, Record<string, unknown>> = {
 	hell: hell_bosses,
-	modern: modern_bosses
+	modern: modern_bosses,
+	snowy: snowy_bosses
 };
 
 type NpcPoolItem = {
@@ -30,7 +42,8 @@ const NPC_BY_THEME: Record<string, NpcPoolItem[]> = {
 	desert: desert_npc_pool,
 	forest: forest_npc_pool,
 	hell: hell_npc_pool,
-	modern: modern_npc_pool
+	modern: modern_npc_pool,
+	snowy: npc_2_pools
 };
 
 type DialogueItem = { speaker?: string; type?: string };

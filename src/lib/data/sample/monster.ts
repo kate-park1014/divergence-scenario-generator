@@ -110,6 +110,114 @@ export const snowy_pools = {
 		],
 		pool_id: 'pool_035',
 		theme: 'snowy'
+	},
+	/* pool_104: {
+		chapter: '1',
+		difficulty: 'boss',
+		monster_ids: [
+			'mon_578b0f69-b42e-4b9b-935e-0ad0cb02b42e',
+			'mon_2b7bf09d-436f-4133-adf7-a3774ca02f84',
+			'mon_c7eb43e1-fa02-4d82-b84f-0ece3ea1d6e8',
+			'mon_9cbe91b4-2b50-4dc8-a66e-ab3690888bc6'
+		],
+		pool_id: 'pool_104',
+		theme: 'snowy'
+	},
+	pool_105: {
+		chapter: '1',
+		difficulty: 'boss',
+		monster_ids: [
+			'mon_010ae5cd-918d-412e-ad00-5c91189e11d1',
+			'mon_642c7f4b-07b0-4adc-bfd7-53805de2c1e8',
+			'mon_7949b0aa-777b-4c18-b5d6-5b4ab47a974d',
+			'mon_049c70af-dbf9-44a4-a321-02cafe3243b0'
+		],
+		pool_id: 'pool_105',
+		theme: 'hell'
+	}, */
+	pool_106: {
+		chapter: '4',
+		difficulty: 'boss',
+		monster_ids: [
+			'mon_496396ed-e486-4e67-a50d-bd966da0f757',
+			'mon_7d4e98dd-0d63-4ba5-9e1f-04edcaf94b85',
+			'mon_86810d8b-c6d6-4e24-b544-4731d3658911',
+			'mon_63400593-f9ca-4070-bfd0-bddc158d0fba'
+		],
+		pool_id: 'pool_106',
+		theme: 'snowy'
+	},
+	pool_107: {
+		chapter: '5',
+		difficulty: 'boss',
+		monster_ids: [
+			'mon_8c518d11-221c-44dc-ba47-8debd0395a30',
+			'mon_2a4be434-b53a-4d79-b189-9522f13c0b20',
+			'mon_567a3861-3cb9-472b-b276-0b56e94eabb5',
+			'mon_9089e696-2479-4df5-a094-c585727a6648'
+		],
+		pool_id: 'pool_107',
+		theme: 'snowy'
+	},
+	pool_108: {
+		chapter: '6',
+		difficulty: 'boss',
+		monster_ids: [
+			'mon_cb10039a-d4a0-4625-be17-8657d4eb9d1f',
+			'mon_7d4e98dd-0d63-4ba5-9e1f-04edcaf94b85',
+			'mon_c489c204-cdee-44d6-b30a-b906044f370c',
+			'mon_294d196a-a4bc-461e-b06e-e9516880c8a4'
+		],
+		pool_id: 'pool_108',
+		theme: 'snowy'
+	},
+	pool_109: {
+		chapter: '7',
+		difficulty: 'boss',
+		monster_ids: [
+			'mon_aae565ae-5817-4e0c-b0d6-3a2d42903db9',
+			'mon_6af3e341-949c-4fd6-a25f-c3e1bf253335',
+			'mon_cbcd114e-8fa7-4290-9e80-32bbc8af6c91',
+			'mon_48cc4b3a-bf70-4a57-9470-78387dfd35e1'
+		],
+		pool_id: 'pool_109',
+		theme: 'snowy'
+	},
+	pool_110: {
+		chapter: '8',
+		difficulty: 'boss',
+		monster_ids: [
+			'mon_fbe40394-51f7-453f-acd2-e8c9a7f388a4',
+			'mon_86810d8b-c6d6-4e24-b544-4731d3658911',
+			'mon_294d196a-a4bc-461e-b06e-e9516880c8a4',
+			'mon_9d16a822-dfd8-4198-b065-fc429c2657d5'
+		],
+		pool_id: 'pool_110',
+		theme: 'snowy'
+	},
+	pool_111: {
+		chapter: '9',
+		difficulty: 'boss',
+		monster_ids: [
+			'mon_a957230e-7a2c-4e38-8388-e05ebb2f94d3',
+			'mon_2a4be434-b53a-4d79-b189-9522f13c0b20',
+			'mon_de44c3c0-2de6-4dc7-b2c1-db60909969a7',
+			'mon_86810d8b-c6d6-4e24-b544-4731d3658911'
+		],
+		pool_id: 'pool_111',
+		theme: 'snowy'
+	},
+	pool_112: {
+		chapter: '10',
+		difficulty: 'boss',
+		monster_ids: [
+			'mon_25eaa866-4525-4743-9db3-9d0737753bc4',
+			'mon_c489c204-cdee-44d6-b30a-b906044f370c',
+			'mon_9d16a822-dfd8-4198-b065-fc429c2657d5',
+			'mon_567a3861-3cb9-472b-b276-0b56e94eabb5'
+		],
+		pool_id: 'pool_112',
+		theme: 'snowy'
 	}
 };
 

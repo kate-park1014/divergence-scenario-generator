@@ -38,6 +38,13 @@
 			<span class="arrow">→</span>
 		</button>
 	</li>
+	<li>
+		<button class="arc-item boss" onclick={() => goto('/bossGen2')}>
+			<span class="arc-name">Boss 생성기 v2</span>
+			<span class="arc-id">bossGen2</span>
+			<span class="arrow">→</span>
+		</button>
+	</li>
 </ul>
 
 <style>
