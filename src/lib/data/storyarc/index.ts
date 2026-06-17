@@ -151,6 +151,37 @@ import { storyarc_snowy_astrielle_69 } from './snowy/storyarc_snowy_astrielle_69
 import { storyarc_snowy_astrielle_79 } from './snowy/storyarc_snowy_astrielle_79';
 import { storyarc_snowy_astrielle_89 } from './snowy/storyarc_snowy_astrielle_89';
 import { storyarc_snowy_astrielle_99 } from './snowy/storyarc_snowy_astrielle_99';
+// snowy_test (boss_list 20260612, 보스당 3챕터: 도입/전개/엔딩)
+import { storyarc_snowy_haraldr_0 } from './snowy_test/storyarc_snowy_haraldr_0';
+import { storyarc_snowy_haraldr_10 } from './snowy_test/storyarc_snowy_haraldr_10';
+import { storyarc_snowy_haraldr_20 } from './snowy_test/storyarc_snowy_haraldr_20';
+import { storyarc_snowy_skuld_1 } from './snowy_test/storyarc_snowy_skuld_1';
+import { storyarc_snowy_skuld_11 } from './snowy_test/storyarc_snowy_skuld_11';
+import { storyarc_snowy_skuld_21 } from './snowy_test/storyarc_snowy_skuld_21';
+import { storyarc_snowy_skaalbane_2 } from './snowy_test/storyarc_snowy_skaalbane_2';
+import { storyarc_snowy_skaalbane_12 } from './snowy_test/storyarc_snowy_skaalbane_12';
+import { storyarc_snowy_skaalbane_22 } from './snowy_test/storyarc_snowy_skaalbane_22';
+import { storyarc_snowy_anya_3 } from './snowy_test/storyarc_snowy_anya_3';
+import { storyarc_snowy_anya_13 } from './snowy_test/storyarc_snowy_anya_13';
+import { storyarc_snowy_anya_23 } from './snowy_test/storyarc_snowy_anya_23';
+import { storyarc_snowy_skalhorn_4 } from './snowy_test/storyarc_snowy_skalhorn_4';
+import { storyarc_snowy_skalhorn_14 } from './snowy_test/storyarc_snowy_skalhorn_14';
+import { storyarc_snowy_skalhorn_24 } from './snowy_test/storyarc_snowy_skalhorn_24';
+import { storyarc_snowy_cairn_5 } from './snowy_test/storyarc_snowy_cairn_5';
+import { storyarc_snowy_cairn_15 } from './snowy_test/storyarc_snowy_cairn_15';
+import { storyarc_snowy_cairn_25 } from './snowy_test/storyarc_snowy_cairn_25';
+import { storyarc_snowy_fenrir_6 } from './snowy_test/storyarc_snowy_fenrir_6';
+import { storyarc_snowy_fenrir_16 } from './snowy_test/storyarc_snowy_fenrir_16';
+import { storyarc_snowy_fenrir_26 } from './snowy_test/storyarc_snowy_fenrir_26';
+import { storyarc_snowy_bellus_7 } from './snowy_test/storyarc_snowy_bellus_7';
+import { storyarc_snowy_bellus_17 } from './snowy_test/storyarc_snowy_bellus_17';
+import { storyarc_snowy_bellus_27 } from './snowy_test/storyarc_snowy_bellus_27';
+import { storyarc_snowy_astrielle_8 } from './snowy_test/storyarc_snowy_astrielle_8';
+import { storyarc_snowy_astrielle_18 } from './snowy_test/storyarc_snowy_astrielle_18';
+import { storyarc_snowy_astrielle_28 } from './snowy_test/storyarc_snowy_astrielle_28';
+import { storyarc_snowy_finn_9 } from './snowy_test/storyarc_snowy_finn_9';
+import { storyarc_snowy_finn_19 } from './snowy_test/storyarc_snowy_finn_19';
+import { storyarc_snowy_finn_29 } from './snowy_test/storyarc_snowy_finn_29';
 import type { StoryArc } from '$lib/types';
 
 export const storyarcRegistry: StoryArc[] = [
@@ -278,7 +309,39 @@ export const storyarcRegistry: StoryArc[] = [
 	storyarc_snowy_astrielle_69,
 	storyarc_snowy_astrielle_79,
 	storyarc_snowy_astrielle_89,
-	storyarc_snowy_astrielle_99
+	storyarc_snowy_astrielle_99,
+
+	// snowy_test (boss_list 20260612, 보스당 3챕터: 도입/전개/엔딩, level = boss_index + chapter×10)
+	storyarc_snowy_haraldr_0,
+	storyarc_snowy_haraldr_10,
+	storyarc_snowy_haraldr_20,
+	storyarc_snowy_skuld_1,
+	storyarc_snowy_skuld_11,
+	storyarc_snowy_skuld_21,
+	storyarc_snowy_skaalbane_2,
+	storyarc_snowy_skaalbane_12,
+	storyarc_snowy_skaalbane_22,
+	storyarc_snowy_anya_3,
+	storyarc_snowy_anya_13,
+	storyarc_snowy_anya_23,
+	storyarc_snowy_skalhorn_4,
+	storyarc_snowy_skalhorn_14,
+	storyarc_snowy_skalhorn_24,
+	storyarc_snowy_cairn_5,
+	storyarc_snowy_cairn_15,
+	storyarc_snowy_cairn_25,
+	storyarc_snowy_fenrir_6,
+	storyarc_snowy_fenrir_16,
+	storyarc_snowy_fenrir_26,
+	storyarc_snowy_bellus_7,
+	storyarc_snowy_bellus_17,
+	storyarc_snowy_bellus_27,
+	storyarc_snowy_astrielle_8,
+	storyarc_snowy_astrielle_18,
+	storyarc_snowy_astrielle_28,
+	storyarc_snowy_finn_9,
+	storyarc_snowy_finn_19,
+	storyarc_snowy_finn_29
 ];
 
 export function getStoryarc(id: string): StoryArc | undefined {

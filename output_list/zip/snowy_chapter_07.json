@@ -1,0 +1,3008 @@
+{
+	"chapter_order": 7,
+	"difficulty_level": 7,
+	"chapter_name": {
+		"korean": "황야의 돌무덤",
+		"english": "The Cairn in the Wastes",
+		"japanese": "荒野の石塚",
+		"chinese": "荒野中的石冢",
+		"french": "Le Cairn des Landes",
+		"spanish": "El Túmulo del Páramo",
+		"vietnamese": "Mộ Đá Giữa Hoang Nguyên",
+		"thai": "กองหินกลางแดนร้าง",
+		"hindi": "वीराने का पत्थर-स्तूप"
+	},
+	"scenarios": [
+		{
+			"scenario_id": "snowy_cairn_6_01",
+			"order": 1,
+			"act": "intro",
+			"theme": "snowy",
+			"actors": {
+				"eira": {
+					"id": "mon_0c37c014-b5ca-4f2f-ad03-5d393e5b2eb1",
+					"name": {
+						"korean": "에이라",
+						"english": "Eira",
+						"japanese": "エイラ",
+						"chinese": "艾拉",
+						"french": "Eira",
+						"spanish": "Eira",
+						"vietnamese": "Eira",
+						"thai": "ไอรา",
+						"hindi": "ऐरा"
+					},
+					"description": "",
+					"face_image_url": "https://imagedelivery.net/WTEqQNGFb-l-IHS6IGnzUQ/8e2970b7-bcb1-4b1c-6bf0-93106b373500/public",
+					"battle_sprite_url": "https://imagedelivery.net/WTEqQNGFb-l-IHS6IGnzUQ/0ca1ec09-a624-450f-054a-b98de58bdb00/public"
+				}
+			},
+			"boss": {
+				"pool_id": "random_boss"
+			},
+			"rooms": [
+				{
+					"dialogue": [
+						{
+							"type": "speech",
+							"emotion": "base",
+							"speaker": "narrator",
+							"content": {
+								"korean": "발자국 하나 없는 백색의 공허. 거대한 돌무덤 하나가 황야 한가운데 솟아 있었다.",
+								"english": "A white void with no footprints. A colossal cairn stood in the middle of the wilderness.",
+								"japanese": "足跡一つない白い虚無。巨大な石塚が荒野の真ん中にそびえ立っていた。",
+								"chinese": "白色的虚空，没有一丝足迹。一座巨大的石冢矗立在荒野中央。",
+								"french": "Un vide blanc sans empreintes. Un cairn colossal se dressait au milieu de la nature sauvage.",
+								"spanish": "Un vacío blanco sin huellas. Un túmulo colosal se alzaba en medio del páramo.",
+								"vietnamese": "Hư không trắng xóa không một dấu chân. Một gò đá khổng lồ sừng sững giữa hoang địa.",
+								"thai": "ความว่างเปล่าสีขาวไร้รอยเท้า เจดีย์หินขนาดมหึมาตั้งตระหง่านอยู่กลางถิ่นทุรกันดาร",
+								"hindi": "पैरों के निशान रहित एक श्वेत शून्यता। एक विशाल पत्थरों का ढेर बंजर भूमि के बीच में खड़ा था।"
+							}
+						},
+						{
+							"speaker": "character_any",
+							"content": {
+								"korean": "이게… 그 돌무덤인가.",
+								"english": "Is this... that cairn?",
+								"japanese": "これが…あの石塚なのか。",
+								"chinese": "这就是……那个石冢吗？",
+								"french": "C'est... ce cairn ?",
+								"spanish": "¿Es esto... ese túmulo?",
+								"vietnamese": "Đây… là gò đá đó sao.",
+								"thai": "นี่คือ... เจดีย์หินนั่นหรือ",
+								"hindi": "क्या यह... वह पत्थरों का ढेर है?"
+							},
+							"emotion": "base",
+							"type": "speech"
+						},
+						{
+							"spot": [
+								3,
+								2
+							],
+							"duration_ms": 500,
+							"type": "direction",
+							"speaker": "eira",
+							"action": "enter"
+						},
+						{
+							"type": "speech",
+							"emotion": "base",
+							"content": {
+								"korean": "기록에 따르면, 이곳은 옛 탐험가들의 표식. 동시에… 잊힌 자들의 안식처라고도 해요.",
+								"english": "According to records, this is a marker for old explorers. And simultaneously... a resting place for the forgotten.",
+								"japanese": "記録によると、ここは古の探検家たちの目印。同時に…忘れ去られた者たちの安息の地でもあるそうです。",
+								"chinese": "根据记载，这里是古代探险家的标记。同时……也是被遗忘者的安息之所。",
+								"french": "Selon les archives, c'est un marqueur pour les anciens explorateurs. Et en même temps... un lieu de repos pour les oubliés.",
+								"spanish": "Según los registros, este es un marcador para antiguos exploradores. Y a la vez... un lugar de descanso para los olvidados.",
+								"vietnamese": "Theo ghi chép, đây là dấu hiệu của các nhà thám hiểm xưa. Đồng thời… cũng là nơi an nghỉ của những người bị lãng quên.",
+								"thai": "ตามบันทึก ที่นี่คือสัญลักษณ์ของนักสำรวจยุคเก่า และในขณะเดียวกัน... ก็เป็นที่พำนักของผู้ที่ถูกลืม",
+								"hindi": "अभिलेखों के अनुसार, यह पुराने खोजकर्ताओं का एक चिन्ह है। और साथ ही... भूले हुए लोगों का विश्राम स्थल भी है।"
+							},
+							"speaker": "eira"
+						},
+						{
+							"emotion": "base",
+							"type": "speech",
+							"speaker": "eira",
+							"content": {
+								"korean": "자세히 보니 돌 하나하나에 희미한 룬이 새겨져 있네요.",
+								"english": "Looking closely, faint runes are carved into each stone.",
+								"japanese": "よく見ると、石の一つ一つにかすかなルーンが刻まれていますね。",
+								"chinese": "仔细一看，每块石头上都刻着模糊的符文。",
+								"french": "En y regardant de plus près, de faibles runes sont gravées dans chaque pierre.",
+								"spanish": "Mirando de cerca, hay runas débiles grabadas en cada piedra.",
+								"vietnamese": "Nhìn kỹ thì thấy mỗi tảng đá đều có khắc những ký hiệu rune mờ nhạt.",
+								"thai": "ดูใกล้ๆ พบว่ามีอักษรรูนจางๆ สลักอยู่บนหินแต่ละก้อน",
+								"hindi": "करीब से देखने पर, हर पत्थर पर धुंधले रून्स खुदे हुए हैं।"
+							}
+						},
+						{
+							"content": {
+								"korean": "룬?",
+								"english": "Runes?",
+								"japanese": "ルーン？",
+								"chinese": "符文？",
+								"french": "Des runes ?",
+								"spanish": "¿Runas?",
+								"vietnamese": "Rune?",
+								"thai": "อักษรรูน?",
+								"hindi": "रून्स?"
+							},
+							"speaker": "character_1",
+							"emotion": "base",
+							"type": "speech"
+						},
+						{
+							"speaker": "eira",
+							"content": {
+								"korean": "누군가 남긴 말 같아요. 해독해봐야겠어요.",
+								"english": "It looks like words left by someone. I should decipher them.",
+								"japanese": "誰かが残した言葉のようです。解読してみなければ。",
+								"chinese": "像是某人留下的信息。我得试着解读一下。",
+								"french": "On dirait des mots laissés par quelqu'un. Je devrais les déchiffrer.",
+								"spanish": "Parece un mensaje dejado por alguien. Debería descifrarlos.",
+								"vietnamese": "Có vẻ là lời nhắn của ai đó. Tôi phải giải mã chúng.",
+								"thai": "ดูเหมือนจะเป็นข้อความที่ใครบางคนทิ้งไว้ ต้องลองถอดรหัสดู",
+								"hindi": "लगता है किसी ने कुछ शब्द छोड़े हैं। मुझे उन्हें समझना होगा।"
+							},
+							"type": "speech",
+							"emotion": "base"
+						}
+					],
+					"id": 1
+				},
+				{
+					"dialogue": [
+						{
+							"speaker": "narrator",
+							"content": {
+								"korean": "돌무덤에 다가갈수록 바람은 잦아들고, 침묵의 무게가 짙어졌다.",
+								"english": "As I approached the stone cairn, the wind died down, and the weight of silence grew heavy.",
+								"japanese": "石塚に近づくにつれて風は収まり、沈黙の重みが増していった。",
+								"chinese": "越靠近石冢，风声越小，沉默的份量越发沉重。",
+								"french": "À mesure que je m'approchais du cairn, le vent s'apaisait et le poids du silence s'épaississait.",
+								"spanish": "A medida que me acercaba al mojón, el viento amainaba y el peso del silencio se hacía más denso.",
+								"vietnamese": "Càng đến gần mộ đá, gió càng lặng, và sự tĩnh lặng càng nặng nề hơn.",
+								"thai": "ยิ่งเข้าใกล้กองหิน ลมก็ยิ่งสงบลง และน้ำหนักของความเงียบก็ยิ่งหนักอึ้งขึ้น",
+								"hindi": "जैसे-जैसे मैं पत्थर के ढेर के करीब आता गया, हवा शांत होती गई, और खामोशी का बोझ गहरा होता गया।"
+							},
+							"type": "speech",
+							"emotion": "base"
+						},
+						{
+							"duration_ms": 500,
+							"type": "direction",
+							"spot": [
+								2,
+								2
+							],
+							"action": "enter",
+							"speaker": "eira"
+						},
+						{
+							"emotion": "base",
+							"type": "speech",
+							"speaker": "eira",
+							"content": {
+								"korean": "…이상하네요. 이 룬, 단순히 길을 안내하는 표식이 아닌 것 같아요.",
+								"english": "...Strange. This rune doesn't seem like just a simple path marker.",
+								"japanese": "…おかしいですね。このルーン、ただの道しるべではないようです。",
+								"chinese": "……奇怪。这符文，似乎不只是指路的标记。",
+								"french": "...Étrange. Cette rune ne semble pas être qu'un simple repère.",
+								"spanish": "...Extraño. Esta runa no parece ser solo una señal de camino.",
+								"vietnamese": "...Lạ thật. Cổ tự này, dường như không phải chỉ là dấu hiệu chỉ đường.",
+								"thai": "...แปลกจัง รูนนี้ไม่น่าจะเป็นแค่สัญลักษณ์บอกทางธรรมดาๆ",
+								"hindi": "...अजीब है। यह रूण, सिर्फ़ रास्ता दिखाने वाला निशान नहीं लगता।"
+							}
+						},
+						{
+							"speaker": "character_2",
+							"content": {
+								"korean": "그럼 뭔데?",
+								"english": "Then what is it?",
+								"japanese": "じゃあ、何なんだ？",
+								"chinese": "那是什么？",
+								"french": "Alors, qu'est-ce que c'est ?",
+								"spanish": "¿Entonces qué es?",
+								"vietnamese": "Vậy thì là gì?",
+								"thai": "แล้วมันคืออะไรล่ะ?",
+								"hindi": "तो फिर क्या है?"
+							},
+							"emotion": "base",
+							"type": "speech"
+						},
+						{
+							"speaker": "eira",
+							"content": {
+								"korean": "마치… 누군가가 이곳을 지키는 듯한 기운이 느껴져요. 모든 것을 지켜보는.",
+								"english": "It's like... I feel a presence, as if someone is guarding this place. Watching everything.",
+								"japanese": "まるで…誰かがここを守っているような気配がします。すべてを見守るように。",
+								"chinese": "就像是……我感觉到有人在守护这里。注视着一切。",
+								"french": "C'est comme si... je sentais une présence, quelqu'un qui garde cet endroit. Qui observe tout.",
+								"spanish": "Es como si... sintiera una presencia, como si alguien estuviera custodiando este lugar. Observándolo todo.",
+								"vietnamese": "Cứ như thể... tôi cảm thấy có một luồng khí, như thể ai đó đang canh giữ nơi này. Quan sát mọi thứ.",
+								"thai": "เหมือนกับว่า... ฉันรู้สึกถึงพลังงานบางอย่าง ราวกับมีใครบางคนกำลังเฝ้ารักษาสถานที่แห่งนี้ จับตาดูทุกสิ่ง",
+								"hindi": "ऐसा लगता है... जैसे कोई इस जगह की रखवाली कर रहा हो। सब कुछ देख रहा हो।"
+							},
+							"emotion": "base",
+							"type": "speech"
+						},
+						{
+							"speaker": "character_any",
+							"content": {
+								"korean": "기분 탓이겠지.",
+								"english": "It must be just your imagination.",
+								"japanese": "気のせいだろう。",
+								"chinese": "你多心了。",
+								"french": "C'est sûrement ton imagination.",
+								"spanish": "Debe ser tu imaginación.",
+								"vietnamese": "Chắc là do cảm giác thôi.",
+								"thai": "คิดมากไปเองมั้ง",
+								"hindi": "यह बस तुम्हारा वहम होगा।"
+							},
+							"emotion": "base",
+							"type": "speech"
+						}
+					],
+					"id": 3
+				},
+				{
+					"id": 5,
+					"dialogue": [
+						{
+							"speaker": "narrator",
+							"content": {
+								"korean": "주변 어디에도 생명체의 흔적은 없었다. 짐승의 발자국조차 돌무덤을 피해 있었다.",
+								"english": "There were no traces of life anywhere around. Even animal footprints avoided the stone cairn.",
+								"japanese": "周囲にはどこにも生命の痕跡がなかった。獣の足跡すら石塚を避けていた。",
+								"chinese": "周围没有任何生命迹象。就连野兽的足迹都避开了石冢。",
+								"french": "Il n'y avait aucune trace de vie aux alentours. Même les empreintes d'animaux évitaient le cairn.",
+								"spanish": "No había rastros de vida en los alrededores. Ni siquiera las huellas de animales se acercaban al mojón.",
+								"vietnamese": "Xung quanh không hề có dấu vết của sự sống. Ngay cả dấu chân của thú dữ cũng tránh xa mộ đá.",
+								"thai": "ไม่มีร่องรอยของสิ่งมีชีวิตใดๆ ในบริเวณนั้น แม้แต่รอยเท้าสัตว์ก็ยังหลีกเลี่ยงกองหิน",
+								"hindi": "आस-पास कहीं भी जीवन का कोई निशान नहीं था। जानवरों के पदचिह्न भी पत्थर के ढेर से दूर थे।"
+							},
+							"emotion": "base",
+							"type": "speech"
+						},
+						{
+							"spot": [
+								4,
+								2
+							],
+							"type": "direction",
+							"duration_ms": 500,
+							"action": "enter",
+							"speaker": "eira"
+						},
+						{
+							"emotion": "base",
+							"type": "speech",
+							"speaker": "eira",
+							"content": {
+								"korean": "이 침묵은… 자연스러운 것이 아니에요. 마치 숨죽이고 기다리는 것 같아요.",
+								"english": "This silence... it's not natural. It feels like something is holding its breath, waiting.",
+								"japanese": "この沈黙は…自然なものじゃない。まるで息を潜めて待っているかのようです。",
+								"chinese": "这寂静……不自然。就像是屏息等待着什么。",
+								"french": "Ce silence... n'est pas naturel. On dirait que quelque chose retient son souffle, attendant.",
+								"spanish": "Este silencio... no es natural. Parece que algo está conteniendo la respiración, esperando.",
+								"vietnamese": "Sự im lặng này... không tự nhiên chút nào. Cứ như thể có gì đó đang nín thở chờ đợi.",
+								"thai": "ความเงียบนี้... มันไม่เป็นธรรมชาติเลย ราวกับมีบางสิ่งกำลังกลั้นหายใจรอคอยอยู่",
+								"hindi": "यह ख़ामोशी... स्वाभाविक नहीं है। ऐसा लगता है जैसे कुछ साँस रोककर इंतज़ार कर रहा हो।"
+							}
+						},
+						{
+							"emotion": "base",
+							"type": "speech",
+							"speaker": "character_3",
+							"content": {
+								"korean": "누가?",
+								"english": "Who?",
+								"japanese": "誰が？",
+								"chinese": "谁？",
+								"french": "Qui ?",
+								"spanish": "¿Quién?",
+								"vietnamese": "Ai?",
+								"thai": "ใคร?",
+								"hindi": "कौन?"
+							}
+						},
+						{
+							"speaker": "eira",
+							"content": {
+								"korean": "룬의 내용이 점점 더 명확해져요. 경고의 메시지 같아요.",
+								"english": "The rune's message is becoming clearer. It feels like a warning.",
+								"japanese": "ルーンの内容がますます明確になってきました。警告のメッセージのようです。",
+								"chinese": "符文的内容越来越清晰了。像是一个警告信息。",
+								"french": "Le message de la rune devient de plus en plus clair. On dirait un avertissement.",
+								"spanish": "El mensaje de la runa se está volviendo más claro. Parece una advertencia.",
+								"vietnamese": "Nội dung của cổ tự ngày càng rõ ràng hơn. Dường như là một thông điệp cảnh báo.",
+								"thai": "เนื้อหาของรูนเริ่มชัดเจนขึ้นเรื่อยๆ ดูเหมือนจะเป็นข้อความเตือนภัย",
+								"hindi": "रूण का संदेश और भी स्पष्ट होता जा रहा है। यह एक चेतावनी जैसा लगता है।"
+							},
+							"emotion": "sad",
+							"type": "speech"
+						},
+						{
+							"type": "speech",
+							"emotion": "base",
+							"content": {
+								"korean": "경고? 뭘 조심하라는 건데.",
+								"english": "A warning? What should we be careful of?",
+								"japanese": "警告？何を気をつけろって言うんだ。",
+								"chinese": "警告？要小心什么？",
+								"french": "Un avertissement ? De quoi devons-nous nous méfier ?",
+								"spanish": "¿Una advertencia? ¿De qué debemos tener cuidado?",
+								"vietnamese": "Cảnh báo? Cần phải cẩn thận điều gì?",
+								"thai": "คำเตือน? ให้ระวังอะไรล่ะ?",
+								"hindi": "चेतावनी? किस बात से सावधान रहना है?"
+							},
+							"speaker": "character_any"
+						}
+					]
+				},
+				{
+					"id": 9,
+					"dialogue": [
+						{
+							"speaker": "narrator",
+							"content": {
+								"korean": "더 깊은 침묵이 우리를 짓눌렀다. 이제 돌아갈 수 없었다.",
+								"english": "A deeper silence pressed upon us. There was no turning back now.",
+								"japanese": "より深い沈黙が私たちを押し潰した。もう引き返せない。",
+								"chinese": "更深的沉默压迫着我们。已无法回头。",
+								"french": "Un silence plus profond nous oppressa. Il n'y avait plus de retour possible.",
+								"spanish": "Un silencio más profundo nos oprimió. Ya no había vuelta atrás.",
+								"vietnamese": "Sự im lặng sâu hơn đè nặng lên chúng tôi. Giờ không thể quay lại được nữa.",
+								"thai": "ความเงียบที่ลึกซึ้งกว่าเดิมกดทับเรา ไม่มีทางย้อนกลับแล้ว",
+								"hindi": "एक गहरा सन्नाटा हम पर छा गया। अब वापसी का कोई रास्ता नहीं था।"
+							},
+							"type": "speech",
+							"emotion": "base"
+						},
+						{
+							"type": "direction",
+							"duration_ms": 500,
+							"spot": [
+								3,
+								2
+							],
+							"speaker": "eira",
+							"action": "enter"
+						},
+						{
+							"content": {
+								"korean": "룬이… 더 선명해졌어요. 우리를 환영하는 동시에… 심판하는 듯한.",
+								"english": "The runes... they grew clearer. As if welcoming us, yet... judging us.",
+								"japanese": "ルーンが…より鮮明になった。私たちを歓迎すると同時に…裁いているかのように。",
+								"chinese": "符文…变得更清晰了。仿佛在欢迎我们，又…像是在审判。",
+								"french": "Les runes… elles sont devenues plus claires. Comme si elles nous accueillaient, et en même temps… nous jugeaient.",
+								"spanish": "Las runas… se hicieron más claras. Como si nos dieran la bienvenida y, a la vez… nos juzgaran.",
+								"vietnamese": "Các ký tự cổ… đã rõ hơn. Cứ như vừa chào đón chúng ta… vừa phán xét vậy.",
+								"thai": "อักษรรูน... ชัดเจนขึ้น ราวกับต้อนรับเรา และ... กำลังตัดสินเราไปพร้อมกัน",
+								"hindi": "रुन… और अधिक स्पष्ट हो गए। जैसे हमें स्वागत कर रहे हों और साथ ही… न्याय कर रहे हों।"
+							},
+							"speaker": "eira",
+							"emotion": "sad",
+							"type": "speech"
+						},
+						{
+							"type": "speech",
+							"emotion": "base",
+							"content": {
+								"korean": "심판?",
+								"english": "Judgment?",
+								"japanese": "審判？",
+								"chinese": "审判？",
+								"french": "Jugement ?",
+								"spanish": "¿Juicio?",
+								"vietnamese": "Phán xét?",
+								"thai": "ตัดสิน?",
+								"hindi": "न्याय?"
+							},
+							"speaker": "character_4"
+						},
+						{
+							"content": {
+								"korean": "이곳을 지나려는 자, 그 의지를 가늠하려는 것 같아요.",
+								"english": "It feels like it's gauging the will of those who dare to pass.",
+								"japanese": "ここを通ろうとする者の意志を試しているようです。",
+								"chinese": "似乎是想衡量通过此处之人的意志。",
+								"french": "On dirait qu'il mesure la volonté de ceux qui tentent de passer.",
+								"spanish": "Parece que está midiendo la voluntad de quienes intentan pasar.",
+								"vietnamese": "Có vẻ nó muốn đánh giá ý chí của những kẻ muốn vượt qua nơi này.",
+								"thai": "ดูเหมือนจะกำลังประเมินเจตจำนงของผู้ที่คิดจะผ่านที่นี่",
+								"hindi": "ऐसा लगता है कि यह उन लोगों की इच्छा का आकलन कर रहा है जो यहां से गुजरना चाहते हैं।"
+							},
+							"speaker": "eira",
+							"type": "speech",
+							"emotion": "base"
+						},
+						{
+							"content": {
+								"korean": "우린 돌아가지 않아.",
+								"english": "We're not turning back.",
+								"japanese": "私たちは引き返さない。",
+								"chinese": "我们不会回头。",
+								"french": "Nous ne reculerons pas.",
+								"spanish": "No nos echaremos atrás.",
+								"vietnamese": "Chúng ta sẽ không quay lại.",
+								"thai": "เราจะไม่กลับไป",
+								"hindi": "हम वापस नहीं जाएंगे।"
+							},
+							"speaker": "character_any",
+							"emotion": "angry",
+							"type": "speech"
+						}
+					]
+				},
+				{
+					"id": 15,
+					"win_dialogue": [
+						{
+							"speaker": "random_boss",
+							"content": {
+								"korean": "…단지 힘만으로는… 모든 것을 이룰 수 없다…",
+								"english": "...Power alone... cannot achieve everything...",
+								"japanese": "「…ただ力だけでは…全てを成し遂げることはできない…」",
+								"chinese": "“……仅凭力量……无法成就一切……”",
+								"french": "...Le pouvoir seul... ne peut pas tout accomplir...",
+								"spanish": "...Solo con fuerza... no se puede lograr todo...",
+								"vietnamese": "...Chỉ sức mạnh thôi... không thể đạt được mọi thứ...",
+								"thai": "...แค่เพียงกำลัง... ไม่อาจสำเร็จทุกสิ่งได้...",
+								"hindi": "...केवल शक्ति से... सब कुछ प्राप्त नहीं किया जा सकता..."
+							},
+							"type": "speech",
+							"emotion": "base"
+						},
+						{
+							"content": {
+								"korean": "이것으로 끝인가?",
+								"english": "Is this the end?",
+								"japanese": "「これで終わりか？」",
+								"chinese": "“这就结束了吗？”",
+								"french": "Est-ce la fin ?",
+								"spanish": "¿Es este el final?",
+								"vietnamese": "Đây là kết thúc sao?",
+								"thai": "นี่คือจุดจบแล้วหรือ?",
+								"hindi": "क्या यह अंत है?"
+							},
+							"speaker": "character_any",
+							"type": "speech",
+							"emotion": "base"
+						},
+						{
+							"speaker": "eira",
+							"action": "enter",
+							"type": "direction",
+							"duration_ms": 500,
+							"spot": [
+								3,
+								2
+							]
+						},
+						{
+							"type": "speech",
+							"emotion": "base",
+							"speaker": "eira",
+							"content": {
+								"korean": "아니요. 이 룬의 마지막 구절이… '끝은 곧 시작'이라고 말해요.",
+								"english": "No. The last line of this rune... says 'The end is but a beginning.'",
+								"japanese": "「いいえ。このルーンの最後の節が…『終わりは始まり』と告げています。」",
+								"chinese": "“不。这符文的最后一句……说‘结束即是开始’。”",
+								"french": "Non. Le dernier verset de cette rune... dit 'La fin n'est qu'un début'.",
+								"spanish": "No. El último verso de esta runa... dice 'El fin es solo el comienzo'.",
+								"vietnamese": "Không. Dòng cuối của rune này... nói rằng 'Kết thúc chính là khởi đầu'.",
+								"thai": "ไม่. วรรคสุดท้ายของรูนนี้... กล่าวว่า 'จุดจบคือจุดเริ่มต้น'.",
+								"hindi": "नहीं। इस रुन का आखिरी वाक्य... कहता है 'अंत ही आरंभ है'।"
+							}
+						},
+						{
+							"content": {
+								"korean": "하나의 표식이 쓰러졌다. 그러나 황야의 침묵은 여전히 깊었다.",
+								"english": "One marker fell. But the wilderness's silence remained profound.",
+								"japanese": "「一つの標識は倒れた。しかし、荒野の静寂は依然として深かった。」",
+								"chinese": "“一个标记倒下了。然而，荒野的寂静依然深沉。”",
+								"french": "Un repère est tombé. Mais le silence de la nature sauvage restait profond.",
+								"spanish": "Un marcador cayó. Pero el silencio del desierto seguía siendo profundo.",
+								"vietnamese": "Một dấu hiệu đã sụp đổ. Nhưng sự im lặng của vùng hoang dã vẫn còn sâu thẳm.",
+								"thai": "เครื่องหมายหนึ่งล้มลงแล้ว. แต่ความเงียบงันของป่ายังคงลึกซึ้ง.",
+								"hindi": "एक निशान गिर गया। लेकिन जंगल की खामोशी अब भी गहरी थी।"
+							},
+							"speaker": "narrator",
+							"type": "speech",
+							"emotion": "base"
+						},
+						{
+							"type": "speech",
+							"emotion": "base",
+							"content": {
+								"korean": "다음 길목에는 또 다른 시험이 기다리고 있었다.",
+								"english": "Another trial awaited at the next crossroads.",
+								"japanese": "「次の岐路には、また別の試練が待っていた。」",
+								"chinese": "“下一个路口，还有另一场考验在等待着。”",
+								"french": "Une autre épreuve attendait au prochain carrefour.",
+								"spanish": "Otra prueba esperaba en el siguiente cruce de caminos.",
+								"vietnamese": "Một thử thách khác đang chờ đợi ở ngã rẽ tiếp theo.",
+								"thai": "ที่ทางแยกถัดไป มีบททดสอบอื่นรออยู่.",
+								"hindi": "अगले मोड़ पर एक और परीक्षा इंतजार कर रही थी।"
+							},
+							"speaker": "narrator"
+						}
+					],
+					"dialogue": [
+						{
+							"speaker": "narrator",
+							"content": {
+								"korean": "돌무덤 가장 깊은 곳. 거대한 그림자가 우리를 기다리고 있었다.",
+								"english": "Deepest within the stone tomb. A colossal shadow awaited us.",
+								"japanese": "石塚の最も深い場所。巨大な影が私たちを待ち受けていた。",
+								"chinese": "石冢最深处。一道巨大的黑影正在等着我们。",
+								"french": "Au plus profond du tumulus de pierre. Une ombre colossale nous attendait.",
+								"spanish": "En lo más profundo del túmulo de piedra. Una sombra colosal nos esperaba.",
+								"vietnamese": "Sâu nhất trong mộ đá. Một bóng hình khổng lồ đang đợi chúng tôi.",
+								"thai": "ลึกที่สุดในสุสานหิน เงาขนาดยักษ์กำลังรอเราอยู่",
+								"hindi": "पत्थरों के मकबरे की सबसे गहरी जगह। एक विशाल छाया हमारा इंतजार कर रही थी।"
+							},
+							"type": "speech",
+							"emotion": "base"
+						},
+						{
+							"type": "speech",
+							"emotion": "base",
+							"content": {
+								"korean": "침범하는 자들이여. 너희의 의지를 시험하겠다.",
+								"english": "Intruders. I shall test your will.",
+								"japanese": "侵入者よ。お前たちの意志を試そう。",
+								"chinese": "闯入者。我将考验你们的意志。",
+								"french": "Intrus. Je mettrai votre volonté à l'épreuve.",
+								"spanish": "Intrusos. Pondré a prueba vuestra voluntad.",
+								"vietnamese": "Những kẻ xâm phạm. Ta sẽ thử thách ý chí của các ngươi.",
+								"thai": "ผู้รุกล้ำเอ๋ย ข้าจะทดสอบเจตจำนงของเจ้า",
+								"hindi": "घुसपैठियों। मैं तुम्हारी इच्छाशक्ति की परीक्षा लूँगा।"
+							},
+							"speaker": "random_boss"
+						},
+						{
+							"speaker": "character_any",
+							"content": {
+								"korean": "네가 이 돌무덤의 정체였나.",
+								"english": "So, you were the true essence of this stone tomb.",
+								"japanese": "お前がこの石塚の正体だったのか。",
+								"chinese": "你就是这石冢的真面目吗？",
+								"french": "C'était donc toi, la véritable nature de ce tumulus de pierre.",
+								"spanish": "Así que tú eras la verdadera identidad de este túmulo de piedra.",
+								"vietnamese": "Ngươi chính là bản thể của ngôi mộ đá này sao.",
+								"thai": "เจ้าคือตัวตนที่แท้จริงของสุสานหินนี้หรือ",
+								"hindi": "तो तुम ही इस पत्थरों के मकबरे की असलियत थे।"
+							},
+							"emotion": "base",
+							"type": "speech"
+						},
+						{
+							"content": {
+								"korean": "여기서 멈춰라. 그렇지 않으면…",
+								"english": "Halt here. Otherwise...",
+								"japanese": "ここで止まれ。さもなくば…",
+								"chinese": "就此止步。否则…",
+								"french": "Arrêtez-vous ici. Sinon…",
+								"spanish": "Detente aquí. De lo contrario…",
+								"vietnamese": "Dừng lại ở đây. Nếu không thì…",
+								"thai": "หยุดตรงนี้ มิฉะนั้น...",
+								"hindi": "यहीं रुक जाओ। वरना…"
+							},
+							"speaker": "random_boss",
+							"emotion": "base",
+							"type": "speech"
+						},
+						{
+							"content": {
+								"korean": "우린 절대 멈추지 않아!",
+								"english": "We will never stop!",
+								"japanese": "私たちは決して止まらない！",
+								"chinese": "我们绝不会停下！",
+								"french": "Nous ne nous arrêterons jamais !",
+								"spanish": "¡Jamás nos detendremos!",
+								"vietnamese": "Chúng ta sẽ không bao giờ dừng lại!",
+								"thai": "เราจะไม่มีวันหยุด!",
+								"hindi": "हम कभी नहीं रुकेंगे!"
+							},
+							"speaker": "character_any",
+							"type": "speech",
+							"emotion": "angry"
+						}
+					],
+					"lose_dialogue": [
+						{
+							"emotion": "base",
+							"type": "speech",
+							"content": {
+								"korean": "아직 멀었군. 너희의 의지는… 겨우 이 정도인가.",
+								"english": "Not yet. Your will... is only this much?",
+								"japanese": "「まだまだだな。お前たちの意志は…たったこれだけか。」",
+								"chinese": "“还差得远。你们的意志……就只有这点程度吗？”",
+								"french": "Pas encore. Votre volonté... n'est que cela ?",
+								"spanish": "Todavía no. ¿Vuestra voluntad... es solo esto?",
+								"vietnamese": "Chưa đủ. Ý chí của các ngươi... chỉ đến vậy thôi sao?",
+								"thai": "ยังอีกนาน. เจตจำนงของพวกเจ้า... มีแค่นี้เองรึ.",
+								"hindi": "अभी बहुत दूर है। तुम्हारी इच्छाशक्ति... क्या बस इतनी ही है?"
+							},
+							"speaker": "random_boss"
+						},
+						{
+							"emotion": "angry",
+							"type": "speech",
+							"content": {
+								"korean": "…다시 온다. 반드시.",
+								"english": "...I will return. Without fail.",
+								"japanese": "「…また来る。必ず。」",
+								"chinese": "“……我会再回来。必定。”",
+								"french": "...Je reviendrai. Absolument.",
+								"spanish": "...Volveré. Sin falta.",
+								"vietnamese": "...Ta sẽ quay lại. Nhất định.",
+								"thai": "...จะกลับมาอีกครั้ง. อย่างแน่นอน.",
+								"hindi": "...मैं वापस आऊँगा। निश्चित रूप से।"
+							},
+							"speaker": "character_any"
+						}
+					]
+				}
+			],
+			"prologue": {
+				"korean": [
+					"백색의 공허. 발자국조차 없는 곳.",
+					"홀로 선 돌무덤은 길의 표식일까.",
+					"아니면, 잊힌 자의 무덤일까.",
+					"차가운 침묵만이 질문에 답한다."
+				],
+				"english": [
+					"White void. A place without even footprints.",
+					"Is the lone cairn a signpost?",
+					"Or a tomb of the forgotten?",
+					"Only cold silence answers the question."
+				],
+				"japanese": [
+					"白い虚無。足跡すらない場所。",
+					"孤高に立つ石塚は道の標識だろうか。",
+					"それとも、忘れ去られた者の墓なのだろうか。",
+					"冷たい沈黙だけが問いに答える。"
+				],
+				"chinese": [
+					"白色的虚空。一个连足迹都没有的地方。",
+					"孤立的石冢是道路的标记吗？",
+					"抑或是，被遗忘者的坟墓？",
+					"只有冰冷的沉默回应着疑问。"
+				],
+				"french": [
+					"Un vide blanc. Un lieu sans la moindre empreinte.",
+					"Le cairn solitaire serait-il un repère ?",
+					"Ou la tombe d'un oublié ?",
+					"Seul un silence froid répond à la question."
+				],
+				"spanish": [
+					"Un vacío blanco. Un lugar sin huellas.",
+					"¿Es el túmulo solitario una señal en el camino?",
+					"¿O la tumba de los olvidados?",
+					"Solo el frío silencio responde a la pregunta."
+				],
+				"vietnamese": [
+					"Hư không trắng xóa. Nơi không một dấu chân.",
+					"Gò đá đơn độc là dấu hiệu của con đường sao?",
+					"Hay là mộ của những người bị lãng quên?",
+					"Chỉ có sự im lặng lạnh lẽo trả lời câu hỏi."
+				],
+				"thai": [
+					"ความว่างเปล่าสีขาว สถานที่ที่ไม่มีแม้แต่รอยเท้า",
+					"เจดีย์หินที่ตั้งโดดเดี่ยวคือป้ายบอกทางหรือ",
+					"หรือว่าเป็นสุสานของผู้ถูกลืม",
+					"ความเงียบงันอันหนาวเหน็บเท่านั้นที่ตอบคำถาม"
+				],
+				"hindi": [
+					"श्वेत शून्यता। एक ऐसी जगह जहाँ पैरों के निशान भी नहीं हैं।",
+					"क्या अकेला खड़ा पत्थरों का ढेर रास्ते का निशान है?",
+					"या फिर, भूले हुए लोगों की कब्र है?",
+					"केवल ठंडी चुप्पी ही सवाल का जवाब देती है।"
+				]
+			}
+		},
+		{
+			"scenario_id": "snowy_cairn_6_02",
+			"order": 2,
+			"act": "rising",
+			"theme": "snowy",
+			"actors": {
+				"ivar": {
+					"id": "mon_d8a80adc-9315-47b5-8c30-97ce33672bce",
+					"name": {
+						"korean": "이바르",
+						"english": "Ivar",
+						"japanese": "イヴァー",
+						"chinese": "伊瓦尔",
+						"french": "Ivar",
+						"spanish": "Ivar",
+						"vietnamese": "Ivar",
+						"thai": "ไอวาร์",
+						"hindi": "इवर"
+					},
+					"description": "",
+					"face_image_url": "https://imagedelivery.net/WTEqQNGFb-l-IHS6IGnzUQ/8dd7872b-d4df-44fd-b1a1-083a9156e700/public",
+					"battle_sprite_url": "https://imagedelivery.net/WTEqQNGFb-l-IHS6IGnzUQ/2622fb62-daf4-42d1-a83b-2b78869d3e00/public"
+				}
+			},
+			"boss": {
+				"pool_id": "random_boss"
+			},
+			"rooms": [
+				{
+					"id": 1,
+					"dialogue": [
+						{
+							"content": {
+								"korean": "눈 덮인 황야, 오랜 세월을 견딘 돌무덤이 솟아 있었다.",
+								"english": "Snow-covered wilderness, a stone tomb stood, enduring ages.",
+								"japanese": "雪に覆われた荒野、長い歳月を経た石の墓がそびえ立っていた。",
+								"chinese": "白雪皑皑的荒野，一座历经岁月的石冢矗立着。",
+								"french": "Une étendue sauvage enneigée, une tombe de pierre résistait aux âges.",
+								"spanish": "Un páramo nevado, una tumba de piedra que resistió los siglos se alzaba.",
+								"vietnamese": "Hoang dã phủ tuyết, một ngôi mộ đá đã trụ vững qua bao năm tháng sừng sững.",
+								"thai": "แดนรกร้างปกคลุมด้วยหิมะ, สุสานหินที่ยืนหยัดมานานนับศตวรรษตั้งตระหง่านอยู่.",
+								"hindi": "बर्फ़ से ढका जंगल, एक पत्थर की समाधि जो युगों से खड़ी थी।"
+							},
+							"emotion": "base",
+							"speaker": "narrator",
+							"type": "speech"
+						},
+						{
+							"type": "speech",
+							"content": {
+								"korean": "여기가 그 돌무덤인가요?",
+								"english": "Is this the stone tomb?",
+								"japanese": "ここがその石の墓ですか？",
+								"chinese": "这里就是那座石冢吗？",
+								"french": "Est-ce là la tombe de pierre ?",
+								"spanish": "¿Es esta la tumba de piedra?",
+								"vietnamese": "Đây có phải là ngôi mộ đá đó không?",
+								"thai": "นี่คือสุสานหินนั่นหรือ?",
+								"hindi": "क्या यह वही पत्थर की समाधि है?"
+							},
+							"emotion": "base",
+							"speaker": "character_any"
+						},
+						{
+							"action": "enter",
+							"type": "direction",
+							"duration_ms": 500,
+							"spot": [
+								5,
+								2
+							],
+							"speaker": "ivar"
+						},
+						{
+							"speaker": "ivar",
+							"content": {
+								"korean": "그래. 표식이든 무덤이든, 두려워할 게 뭐지?",
+								"english": "Indeed. A marker or a tomb, what is there to fear?",
+								"japanese": "ああ。標識だろうと墓だろうと、何を恐れることがある？",
+								"chinese": "没错。无论是标记还是坟墓，有什么好怕的？",
+								"french": "Oui. Une marque ou une tombe, qu'y a-t-il à craindre ?",
+								"spanish": "Sí. ¿Una señal o una tumba, qué hay que temer?",
+								"vietnamese": "Phải. Dù là dấu ấn hay lăng mộ, có gì phải sợ?",
+								"thai": "ใช่แล้ว. จะเป็นเครื่องหมายหรือสุสาน, มีอะไรให้ต้องกลัว?",
+								"hindi": "हाँ। एक निशान या एक कब्र, इसमें डरने की क्या बात है?"
+							},
+							"emotion": "base",
+							"type": "speech"
+						},
+						{
+							"speaker": "ivar",
+							"emotion": "base",
+							"content": {
+								"korean": "강함의 끝을… 여기서 한번 가늠해 보겠다.",
+								"english": "The limits of strength... I shall test them here.",
+								"japanese": "強さの極限を…ここで一度測ってみよう。",
+								"chinese": "力量的极限……我将在此地衡量一番。",
+								"french": "Les limites de la force... Je les mesurerai ici.",
+								"spanish": "El límite de la fuerza... Lo evaluaré aquí.",
+								"vietnamese": "Giới hạn của sức mạnh... Ta sẽ đo lường nó tại đây.",
+								"thai": "ขีดสุดของพละกำลัง... ข้าจะวัดมันที่นี่.",
+								"hindi": "शक्ति की पराकाष्ठा... मैं उसे यहीं परखूंगा।"
+							},
+							"type": "speech"
+						}
+					]
+				},
+				{
+					"dialogue": [
+						{
+							"action": "enter",
+							"type": "direction",
+							"spot": [
+								5,
+								2
+							],
+							"duration_ms": 500,
+							"speaker": "ivar"
+						},
+						{
+							"type": "speech",
+							"speaker": "ivar",
+							"content": {
+								"korean": "….",
+								"english": "...",
+								"japanese": "...",
+								"chinese": "...",
+								"french": "...",
+								"spanish": "...",
+								"vietnamese": "...",
+								"thai": "...",
+								"hindi": "..."
+							},
+							"emotion": "base"
+						},
+						{
+							"speaker": "narrator",
+							"emotion": "base",
+							"content": {
+								"korean": "돌 곁에 선 이바르는, 잠시 말을 잃었다. 침묵이 짙어진다.",
+								"english": "Ivar, by the stone, fell silent for a moment. The silence deepens.",
+								"japanese": "石の傍らに立つイヴァルは、しばらく言葉を失った。沈黙が深まる。",
+								"chinese": "立于石旁的伊瓦尔，一时语塞。寂静愈发浓重。",
+								"french": "Ivar, près de la pierre, resta sans voix un instant. Le silence s'épaissit.",
+								"spanish": "Ivar, junto a la piedra, perdió el habla por un momento. El silencio se profundiza.",
+								"vietnamese": "Ivar, đứng cạnh tảng đá, nhất thời không nói nên lời. Sự im lặng càng lúc càng sâu.",
+								"thai": "ไอวาร์, ยืนอยู่ข้างหิน, ชะงักไปชั่วขณะ. ความเงียบงันยิ่งทวีความรุนแรงขึ้น.",
+								"hindi": "इवार, पत्थर के पास खड़ा, एक पल के लिए निःशब्द रह गया। खामोशी गहरी होती गई।"
+							},
+							"type": "speech"
+						},
+						{
+							"content": {
+								"korean": "이바르님? 왜 그러세요?",
+								"english": "Lord Ivar? What's wrong?",
+								"japanese": "イヴァル様？どうなさいましたか？",
+								"chinese": "伊瓦尔大人？您怎么了？",
+								"french": "Seigneur Ivar ? Qu'y a-t-il ?",
+								"spanish": "¿Lord Ivar? ¿Qué le pasa?",
+								"vietnamese": "Thưa Ngài Ivar? Ngài sao vậy?",
+								"thai": "ท่านไอบาร์? เกิดอะไรขึ้น?",
+								"hindi": "इवर स्वामी? क्या हुआ आपको?"
+							},
+							"emotion": "base",
+							"speaker": "character_any",
+							"type": "speech"
+						},
+						{
+							"type": "speech",
+							"emotion": "base",
+							"content": {
+								"korean": "별 거 아니야. …그냥 좀.",
+								"english": "It's nothing. ...Just a bit.",
+								"japanese": "なんでもない。…ただ少しな。",
+								"chinese": "没什么。……只是有点。",
+								"french": "Ce n'est rien. ...Juste un peu.",
+								"spanish": "No es nada. ...Solo un poco.",
+								"vietnamese": "Không có gì. ...Chỉ là một chút.",
+								"thai": "ไม่มีอะไรหรอก ...แค่รู้สึกนิดหน่อย",
+								"hindi": "कुछ नहीं। …बस यूँ ही।"
+							},
+							"speaker": "ivar"
+						}
+					],
+					"id": 3
+				},
+				{
+					"dialogue": [
+						{
+							"spot": [
+								5,
+								2
+							],
+							"duration_ms": 500,
+							"speaker": "ivar",
+							"type": "direction",
+							"action": "enter"
+						},
+						{
+							"type": "speech",
+							"speaker": "ivar",
+							"emotion": "base",
+							"content": {
+								"korean": "이 돌무덤… 단순한 돌덩이는 아닌 것 같군.",
+								"english": "This cairn... it doesn't seem to be just simple rocks.",
+								"japanese": "このケルン…ただの石ではないようだ。",
+								"chinese": "这座石冢……看来并非只是普通的石头。",
+								"french": "Ce cairn... il ne semble pas fait de simples pierres.",
+								"spanish": "Este túmulo de piedras... no parece ser solo rocas simples.",
+								"vietnamese": "Đống đá này... có vẻ không phải là những tảng đá thông thường.",
+								"thai": "กองหินนี่... ไม่ใช่แค่หินธรรมดาแน่",
+								"hindi": "यह पत्थरों का ढेर... यह सिर्फ़ साधारण पत्थर नहीं लगता।"
+							}
+						},
+						{
+							"type": "speech",
+							"speaker": "character_1",
+							"emotion": "base",
+							"content": {
+								"korean": "그런가요? 으스스하긴 하네요.",
+								"english": "Is that so? It certainly feels eerie.",
+								"japanese": "そうでしょうか？確かに、不気味ですね。",
+								"chinese": "是吗？确实有点阴森。",
+								"french": "Vraiment ? C'est plutôt sinistre.",
+								"spanish": "¿En serio? Es bastante espeluznante.",
+								"vietnamese": "Vậy sao? Nó quả thật đáng sợ.",
+								"thai": "อย่างนั้นเหรอ? มันก็ดูน่าขนลุกจริงๆ",
+								"hindi": "ऐसा है? वाकई, यह थोड़ा डरावना है।"
+							}
+						},
+						{
+							"content": {
+								"korean": "주변 어디에도 생명체의 흔적은 없었다. 짐승의 발자국조차 돌무덤을 멀찍이 피해 나 있었다.",
+								"english": "There was no trace of life anywhere around. Even animal tracks avoided the cairn by a wide margin.",
+								"japanese": "周囲には生命の痕跡はなかった。獣の足跡すら、石塚を大きく避けて通っていた。",
+								"chinese": "周围没有任何生命迹象。就连野兽的足迹都远远避开了这座石冢。",
+								"french": "Nulle trace de vie aux alentours. Même les empreintes d'animaux évitaient le cairn de loin.",
+								"spanish": "No había rastro de vida en los alrededores. Ni siquiera las huellas de animales se acercaban al túmulo de piedras.",
+								"vietnamese": "Không có dấu vết của sự sống nào xung quanh. Ngay cả dấu chân của động vật cũng tránh xa đống đá này một khoảng.",
+								"thai": "ไม่พบร่องรอยของสิ่งมีชีวิตใดๆ รอบๆ แม้แต่รอยเท้าสัตว์ก็ยังเลี่ยงกองหินนี้ไปไกลๆ",
+								"hindi": "आसपास कहीं भी जीवन का कोई निशान नहीं था। जानवरों के पदचिन्ह भी उस पत्थर के ढेर से काफी दूर थे।"
+							},
+							"emotion": "base",
+							"speaker": "narrator",
+							"type": "speech"
+						},
+						{
+							"speaker": "character_2",
+							"emotion": "sad",
+							"content": {
+								"korean": "동물들도 여긴 피하나 봐. 불길하게.",
+								"english": "Even animals seem to avoid this place. How ominous.",
+								"japanese": "動物たちもここを避けているようだ。不吉な。",
+								"chinese": "连动物都避开这里。真是不祥。",
+								"french": "Même les animaux semblent éviter cet endroit. C'est de mauvais augure.",
+								"spanish": "Hasta los animales parecen evitar este lugar. Qué siniestro.",
+								"vietnamese": "Ngay cả động vật cũng tránh chỗ này. Thật chẳng lành.",
+								"thai": "แม้แต่สัตว์ก็ยังเลี่ยงที่นี่ ดูไม่เป็นมงคลเลย",
+								"hindi": "लगता है जानवर भी इस जगह से बचते हैं। यह अशुभ है।"
+							},
+							"type": "speech"
+						}
+					],
+					"id": 5
+				},
+				{
+					"dialogue": [
+						{
+							"type": "direction",
+							"action": "enter",
+							"speaker": "ivar",
+							"spot": [
+								5,
+								2
+							],
+							"duration_ms": 500
+						},
+						{
+							"type": "speech",
+							"speaker": "ivar",
+							"content": {
+								"korean": "가까이 올수록… 뭔가 부르는 것 같군.",
+								"english": "The closer I get... it feels like something is calling me.",
+								"japanese": "近づくほどに…何かが呼んでいるようだ。",
+								"chinese": "越是靠近……越感觉有什么在召唤。",
+								"french": "Plus je m'approche... plus j'ai l'impression que quelque chose m'appelle.",
+								"spanish": "Cuanto más me acerco... parece que algo me llama.",
+								"vietnamese": "Càng đến gần... hình như có thứ gì đó đang gọi.",
+								"thai": "ยิ่งเข้าใกล้... เหมือนมีอะไรบางอย่างกำลังเรียก",
+								"hindi": "जितना करीब आता हूँ... लगता है कुछ बुला रहा है।"
+							},
+							"emotion": "base"
+						},
+						{
+							"content": {
+								"korean": "돌 틈 깊은 곳에서, 햇빛이라 하기엔 너무 차가운 푸른빛이 어른거렸다.",
+								"english": "Deep within the cracks of the stones, a cold blue light flickered, too frigid to be sunlight.",
+								"japanese": "石の隙間の奥深くで、陽光とは言い難い、あまりにも冷たい青い光が揺らめいていた。",
+								"chinese": "在石缝深处，一道过于冰冷的蓝光闪烁着，不像阳光。",
+								"french": "Au fond des fissures des pierres, une lumière bleue trop froide pour être celle du soleil vacillait.",
+								"spanish": "Desde lo profundo de las grietas de las rocas, una luz azul parpadeaba, demasiado fría para ser luz del sol.",
+								"vietnamese": "Sâu trong khe đá, một ánh sáng xanh lạnh lẽo lay động, quá lạnh để gọi là ánh mặt trời.",
+								"thai": "ลึกเข้าไปในรอยแยกของหิน แสงสีน้ำเงินเย็นยะเยือกเกินกว่าจะเป็นแสงอาทิตย์สั่นไหวอยู่",
+								"hindi": "पत्थरों की दरारों में गहराई से, एक ठंडी नीली रोशनी टिमटिमा रही थी, जो धूप के लिए बहुत ठंडी थी।"
+							},
+							"emotion": "base",
+							"speaker": "narrator",
+							"type": "speech"
+						},
+						{
+							"type": "speech",
+							"speaker": "character_any",
+							"content": {
+								"korean": "저 빛은 뭐지? 더 깊숙이 있는 것 같아요.",
+								"english": "What is that light? It seems to be deeper inside.",
+								"japanese": "あの光は何だ？もっと奥にあるようだ。",
+								"chinese": "那是什么光？它似乎更深处。",
+								"french": "Qu'est-ce que cette lumière ? Elle semble venir de plus profond.",
+								"spanish": "¿Qué es esa luz? Parece estar más profundo.",
+								"vietnamese": "Ánh sáng đó là gì vậy? Có vẻ nó nằm sâu hơn nữa.",
+								"thai": "แสงนั่นคืออะไร? ดูเหมือนจะอยู่ลึกเข้าไปอีก",
+								"hindi": "वह रोशनी क्या है? लगता है वह और भी अंदर है।"
+							},
+							"emotion": "base"
+						},
+						{
+							"type": "speech",
+							"content": {
+								"korean": "와라. 네가 무엇이든. 내 강함을 시험해 보겠다면.",
+								"english": "Come. Whatever you are. If you wish to test my strength.",
+								"japanese": "来い。何者であろうと。我が強さを試すというのなら。",
+								"chinese": "来吧。无论你是何物。如果你想测试我的力量。",
+								"french": "Viens. Quoi que tu sois. Si tu veux tester ma force.",
+								"spanish": "Ven. Seas lo que seas. Si quieres poner a prueba mi fuerza.",
+								"vietnamese": "Đến đây. Dù ngươi là gì. Nếu ngươi muốn thử thách sức mạnh của ta.",
+								"thai": "มาเลย ไม่ว่าเจ้าจะเป็นอะไร ถ้าอยากลองท้าทายความแข็งแกร่งของข้า",
+								"hindi": "आओ। तुम कुछ भी हो। अगर मेरी ताकत परखनी है तो।"
+							},
+							"emotion": "angry",
+							"speaker": "ivar"
+						}
+					],
+					"id": 9
+				},
+				{
+					"dialogue": [
+						{
+							"emotion": "base",
+							"content": {
+								"korean": "강함을 좇는 자여… 그 끝을 보러 왔는가?",
+								"english": "Seeker of strength... have you come to see its end?",
+								"japanese": "強さを求める者よ… その終焉を見に来たか？",
+								"chinese": "追寻力量之人啊……你来见证它的终结了吗？",
+								"french": "Ô toi qui poursuis la force... es-tu venu en voir la fin ?",
+								"spanish": "Buscador de fuerza... ¿has venido a ver su final?",
+								"vietnamese": "Kẻ theo đuổi sức mạnh... ngươi đến để thấy hồi kết của nó ư?",
+								"thai": "ผู้แสวงหาความแข็งแกร่ง... เจ้ามาเพื่อเห็นจุดจบของมันหรือ?",
+								"hindi": "शक्ति के अन्वेषक... क्या तुम उसका अंत देखने आए हो?"
+							},
+							"speaker": "random_boss",
+							"type": "speech"
+						},
+						{
+							"type": "speech",
+							"emotion": "angry",
+							"content": {
+								"korean": "네가 그 끝인가? 그렇다면, 겨뤄보자.",
+								"english": "Are you that end? If so, let us contend.",
+								"japanese": "お前がその終焉か？ならば、勝負だ。",
+								"chinese": "你就是那个终结吗？既然如此，就来一较高下吧。",
+								"french": "Es-tu cette fin ? Si oui, alors battons-nous.",
+								"spanish": "¿Eres tú ese final? Si es así, luchemos.",
+								"vietnamese": "Ngươi là hồi kết đó ư? Nếu vậy, hãy tỉ thí.",
+								"thai": "เจ้าคือจุดจบนั้นหรือ? ถ้าเช่นนั้น, มาประลองกัน!",
+								"hindi": "क्या तुम वह अंत हो? यदि हाँ, तो आओ मुकाबला करें।"
+							},
+							"speaker": "ivar"
+						},
+						{
+							"type": "speech",
+							"speaker": "character_any",
+							"content": {
+								"korean": "조심해요, 이바르님!",
+								"english": "Be careful, Ivar!",
+								"japanese": "お気をつけください、イヴァー様！",
+								"chinese": "请小心，伊瓦尔大人！",
+								"french": "Faites attention, Ivar !",
+								"spanish": "¡Tenga cuidado, Ivar!",
+								"vietnamese": "Cẩn thận nhé, Ivar!",
+								"thai": "ระวังตัวด้วยครับ/ค่ะ, ท่านไอบาร์!",
+								"hindi": "सावधान रहें, इвар!"
+							},
+							"emotion": "base"
+						}
+					],
+					"id": 15,
+					"win_dialogue": [
+						{
+							"type": "speech",
+							"emotion": "base",
+							"content": {
+								"korean": "끝없는 굶주림은… 결코 멈추지 않는다….",
+								"english": "The endless hunger... it never truly stops...",
+								"japanese": "終わりのない飢えは… 決して止まらない…。",
+								"chinese": "无尽的饥饿……永不停止……",
+								"french": "La faim insatiable... ne s'arrête jamais...",
+								"spanish": "El hambre interminable... nunca se detiene...",
+								"vietnamese": "Cơn đói vô tận... sẽ không bao giờ dừng lại...",
+								"thai": "ความหิวโหยที่ไม่สิ้นสุด... ไม่มีวันหยุดลง...",
+								"hindi": "यह अंतहीन भूख... कभी नहीं रुकती..."
+							},
+							"speaker": "random_boss"
+						},
+						{
+							"speaker": "ivar",
+							"content": {
+								"korean": "…아직도 더 남았다는 건가. 강함의 끝은.",
+								"english": "...Is there still more? The end of strength.",
+								"japanese": "…まだ、先があるというのか。強さの終焉は。",
+								"chinese": "……难道还有更多吗？力量的终结。",
+								"french": "...Y a-t-il encore plus ? La fin de la force.",
+								"spanish": "...¿Todavía queda más? El final de la fuerza.",
+								"vietnamese": "...Vẫn còn nữa sao? Hồi kết của sức mạnh.",
+								"thai": "...ยังคงมีอีกหรือ? จุดจบของความแข็งแกร่ง.",
+								"hindi": "...क्या अभी भी और बचा है? शक्ति का अंत।"
+							},
+							"emotion": "base",
+							"type": "speech"
+						},
+						{
+							"type": "speech",
+							"speaker": "narrator",
+							"content": {
+								"korean": "돌무덤의 침묵은 더욱 깊어졌다. 이바르는 답을 찾았을까? 혹은, 더 큰 질문을 안게 되었을까.",
+								"english": "The silence of the stone tomb deepened. Had Ivar found an answer? Or had he embraced a greater question?",
+								"japanese": "石の墓の沈黙はさらに深まった。イヴァーは答えを見つけたのか？それとも、より大きな問いを抱えることになったのか。",
+								"chinese": "石冢的寂静愈发深沉。伊瓦尔找到了答案吗？亦或是，背负了更大的疑问？",
+								"french": "Le silence de la tombe de pierre s'approfondit. Ivar avait-il trouvé une réponse ? Ou avait-il embrassé une question plus grande ?",
+								"spanish": "El silencio de la tumba de piedra se hizo más profundo. ¿Había encontrado Ivar una respuesta? ¿O había abrazado una pregunta aún mayor?",
+								"vietnamese": "Sự im lặng của mộ đá càng thêm sâu sắc. Ivar đã tìm thấy câu trả lời ư? Hay anh đã ôm lấy một câu hỏi lớn hơn?",
+								"thai": "ความเงียบงันของสุสานหินลึกซึ้งยิ่งขึ้น. ไอบาร์ได้พบคำตอบแล้วหรือ? หรือเขาได้แบกรับคำถามที่ใหญ่กว่ากันแน่.",
+								"hindi": "पत्थर की कब्र की खामोशी और गहरी हो गई। क्या इवार को जवाब मिल गया था? या उसने एक बड़ा सवाल अपने साथ ले लिया था?"
+							},
+							"emotion": "base"
+						}
+					],
+					"lose_dialogue": [
+						{
+							"content": {
+								"korean": "이것이 네가 좇는 강함의 끝인가? 얕보지 마라.",
+								"english": "Is this the end of the strength you seek? Do not underestimate me.",
+								"japanese": "これが貴様が追う強さの終焉か？侮るな。",
+								"chinese": "这就是你所追求力量的终结吗？别小看我。",
+								"french": "Est-ce la fin de la force que tu poursuis ? Ne me sous-estime pas.",
+								"spanish": "¿Es este el final de la fuerza que buscas? No me subestimes.",
+								"vietnamese": "Đây là hồi kết của sức mạnh mà ngươi theo đuổi ư? Đừng đánh giá thấp ta.",
+								"thai": "นี่คือจุดจบของความแข็งแกร่งที่เจ้าแสวงหาหรือ? อย่าดูถูกข้า.",
+								"hindi": "क्या यह उस शक्ति का अंत है जिसकी तुम तलाश में हो? मुझे कम मत समझना।"
+							},
+							"emotion": "angry",
+							"speaker": "random_boss",
+							"type": "speech"
+						},
+						{
+							"type": "speech",
+							"content": {
+								"korean": "크윽… 아직 끝나지 않았다. 반드시 다시 오겠다.",
+								"english": "Ugh... It's not over yet. I will definitely return.",
+								"japanese": "くっ… まだ終わらん。必ず戻って来る。",
+								"chinese": "呃……还没结束。我一定会再回来的。",
+								"french": "Ugh... Ce n'est pas encore fini. Je reviendrai, c'est sûr.",
+								"spanish": "Ugh... Esto aún no ha terminado. ¡Volveré, sin falta!",
+								"vietnamese": "Khụ... Vẫn chưa kết thúc đâu. Ta nhất định sẽ quay lại.",
+								"thai": "อึก... ยังไม่จบ! ข้าจะกลับมาแน่นอน.",
+								"hindi": "उफ़... यह अभी खत्म नहीं हुआ है। मैं निश्चित रूप से वापस आऊँगा।"
+							},
+							"emotion": "angry",
+							"speaker": "ivar"
+						}
+					]
+				}
+			],
+			"prologue": {
+				"korean": [
+					"눈 덮인 황야, 끝없이 펼쳐진 백색의 공허.",
+					"그 한가운데, 오래된 돌무덤이 홀로 솟아 있었다.",
+					"강함만을 좇는 전사 이바르는 망설임 없이 그곳으로 향했다.",
+					"두려움은 없었다. 다만, 으스스한 침묵만이 그를 기다렸다."
+				],
+				"english": [
+					"Snow-covered wilderness, an endless white void.",
+					"In its midst, an ancient stone tomb stood alone.",
+					"Ivar, a warrior seeking only strength, headed there without hesitation.",
+					"No fear. Only an eerie silence awaited him."
+				],
+				"japanese": [
+					"雪に覆われた荒野、果てしなく広がる白い虚無。",
+					"その真ん中に、古い石の墓がぽつんとそびえ立っていた。",
+					"強さのみを追い求める戦士イヴァルは、ためらうことなくそこへ向かった。",
+					"恐れはなかった。ただ、不気味な沈黙だけが彼を待っていた。"
+				],
+				"chinese": [
+					"白雪皑皑的荒野，无尽蔓延的白色虚无。",
+					"在其中心，一座古老的石冢独自矗立。",
+					"追逐力量的战士伊瓦尔，毫不犹豫地走向那里。",
+					"没有恐惧。只有阴森的寂静在等待着他。"
+				],
+				"french": [
+					"Une étendue sauvage enneigée, un vide blanc infini.",
+					"Au milieu, une ancienne tombe de pierre se dressait seule.",
+					"Ivar, guerrier ne cherchant que la force, s'y dirigea sans hésitation.",
+					"Pas de peur. Seul un silence étrange l'attendait."
+				],
+				"spanish": [
+					"Un páramo nevado, un vacío blanco interminable.",
+					"En su centro, una antigua tumba de piedra se alzaba sola.",
+					"Ivar, un guerrero que solo buscaba fuerza, se dirigió allí sin dudarlo.",
+					"Sin miedo. Solo un silencio inquietante le esperaba."
+				],
+				"vietnamese": [
+					"Hoang dã phủ tuyết, một khoảng không trắng xóa vô tận.",
+					"Giữa nơi ấy, một ngôi mộ đá cổ xưa sừng sững đơn độc.",
+					"Ivar, chiến binh chỉ theo đuổi sức mạnh, không chút do dự tiến về phía đó.",
+					"Không hề sợ hãi. Chỉ có sự im lặng rợn người chờ đợi anh."
+				],
+				"thai": [
+					"แดนรกร้างปกคลุมด้วยหิมะ, ความว่างเปล่าสีขาวที่ไม่มีที่สิ้นสุด.",
+					"ท่ามกลางนั้น, สุสานหินเก่าแก่ตั้งตระหง่านอยู่โดดเดี่ยว.",
+					"ไอวาร์, นักรบผู้แสวงหาแต่ความแข็งแกร่ง, มุ่งหน้าไปที่นั่นโดยไม่ลังเล.",
+					"ไร้ความกลัว. มีเพียงความเงียบงันที่น่าขนลุกรอเขาอยู่."
+				],
+				"hindi": [
+					"बर्फ़ से ढका जंगल, एक अंतहीन सफ़ेद शून्य।",
+					"उसके बीच में, एक पुरानी पत्थर की समाधि अकेली खड़ी थी।",
+					"इवार, एक योद्धा जो केवल शक्ति की तलाश में था, बिना किसी हिचकिचाहट के वहाँ चला गया।",
+					"कोई डर नहीं था। बस एक अजीब खामोशी उसका इंतजार कर रही थी।"
+				]
+			}
+		},
+		{
+			"scenario_id": "snowy_cairn_6_03",
+			"order": 3,
+			"act": "rising",
+			"theme": "snowy",
+			"actors": {
+				"anuk": {
+					"id": "mon_8736797d-779a-4748-8633-d15c1eaf9be7",
+					"name": {
+						"korean": "아눅",
+						"english": "Anuk",
+						"japanese": "アヌーク",
+						"chinese": "阿努克",
+						"french": "Anuk",
+						"spanish": "Anuk",
+						"vietnamese": "Anuk",
+						"thai": "อนุก",
+						"hindi": "अनुक"
+					},
+					"description": "",
+					"face_image_url": "https://imagedelivery.net/WTEqQNGFb-l-IHS6IGnzUQ/19485274-e873-45c8-5043-f4ff65aa2a00/public",
+					"battle_sprite_url": "https://imagedelivery.net/WTEqQNGFb-l-IHS6IGnzUQ/9a79ecfd-8cc6-4461-3790-763822522500/public"
+				}
+			},
+			"boss": {
+				"pool_id": "random_boss"
+			},
+			"prologue": {
+				"korean": [
+					"백색의 황야. 끝없이 이어진 침묵만이 우리를 맞았다.",
+					"그 중심에 홀로 선 돌무덤.",
+					"그저 돌덩어리가 아니었다.",
+					"무언가 우리를 주시하는 듯한 차가운 시선."
+				],
+				"english": [
+					"A white wilderness. Only an endless silence greeted us.",
+					"At its center, a lone cairn stood.",
+					"It wasn't just a pile of stones.",
+					"A cold gaze, as if something was watching us."
+				],
+				"japanese": [
+					"白き荒野。果てしない沈黙だけが我々を迎えた。",
+					"その中心に、ただ一つ立つ石塚。",
+					"それはただの石の塊ではなかった。",
+					"何かが我々を見つめるような、冷たい視線。"
+				],
+				"chinese": [
+					"白色的荒野。只有无尽的沉默迎接我们。",
+					"在其中心，一座孤零零的石冢。",
+					"它不只是一堆石头。",
+					"一道冰冷的目光，仿佛有什么东西在注视着我们。"
+				],
+				"french": [
+					"Une étendue sauvage blanche. Seul un silence infini nous accueillait.",
+					"En son centre, un cairn solitaire se dressait.",
+					"Ce n'était pas juste un tas de pierres.",
+					"Un regard froid, comme si quelque chose nous observait."
+				],
+				"spanish": [
+					"Un desierto blanco. Solo un silencio interminable nos recibió.",
+					"En su centro, un mojón solitario.",
+					"No era solo un montón de piedras.",
+					"Una mirada fría, como si algo nos estuviera observando."
+				],
+				"vietnamese": [
+					"Hoang dã trắng xóa. Chỉ có sự im lặng vô tận chào đón chúng tôi.",
+					"Ở trung tâm của nó, một đống đá đơn độc.",
+					"Nó không chỉ là một đống đá.",
+					"Một ánh nhìn lạnh lùng, như thể có điều gì đó đang dõi theo chúng tôi."
+				],
+				"thai": [
+					"ที่รกร้างสีขาว มีเพียงความเงียบงันไม่สิ้นสุดที่รอต้อนรับเรา",
+					"ตรงกลางนั้น มีเพียงกองหินเดียวดาย",
+					"มันไม่ใช่แค่ก้อนหิน",
+					"สายตาเย็นชา ราวกับมีบางสิ่งจ้องมองเราอยู่"
+				],
+				"hindi": [
+					"श्वेत बंजर भूमि। केवल एक अंतहीन खामोशी ने हमारा स्वागत किया।",
+					"उसके केंद्र में, एक अकेला पत्थरों का ढेर खड़ा था।",
+					"यह सिर्फ पत्थरों का ढेर नहीं था।",
+					"एक ठंडी नज़र, जैसे कुछ हमें देख रहा हो।"
+				]
+			},
+			"rooms": [
+				{
+					"id": 1,
+					"dialogue": [
+						{
+							"type": "speech",
+							"content": {
+								"korean": "눈 덮인 황야, 발자국 하나 없는 백색의 공허.",
+								"english": "Snow-covered wilderness, a white void without a single footprint.",
+								"japanese": "雪に覆われた荒野、足跡一つない白の虚無。",
+								"chinese": "白雪覆盖的荒野，一片没有足迹的白色虚无。",
+								"french": "Désert enneigé, un vide blanc sans une seule empreinte.",
+								"spanish": "Desierto nevado, un vacío blanco sin una sola huella.",
+								"vietnamese": "Hoang dã phủ tuyết, một khoảng trống trắng xóa không một dấu chân.",
+								"thai": "ที่รกร้างปกคลุมด้วยหิมะ ความว่างเปล่าสีขาวที่ไร้รอยเท้า",
+								"hindi": "बर्फ से ढका जंगल, एक सफेद शून्य जिसमें कोई पदचिह्न नहीं।"
+							},
+							"emotion": "base",
+							"speaker": "narrator"
+						},
+						{
+							"emotion": "base",
+							"speaker": "character_any",
+							"content": {
+								"korean": "저게… 돌무덤인가.",
+								"english": "Is that... a cairn?",
+								"japanese": "あれが… 石塚なのか。",
+								"chinese": "那是……一座石冢吗？",
+								"french": "C'est... un cairn ?",
+								"spanish": "¿Eso es... un mojón?",
+								"vietnamese": "Đó là... một đống đá sao?",
+								"thai": "นั่นมัน... กองหินเหรอ",
+								"hindi": "क्या वह... एक पत्थरों का ढेर है?"
+							},
+							"type": "speech"
+						},
+						{
+							"content": {
+								"korean": "단순한 표식은 아닌 것 같아.",
+								"english": "It doesn't seem like a mere marker.",
+								"japanese": "単なる標識ではないようだ。",
+								"chinese": "它看起来不只是一个简单的标记。",
+								"french": "Cela ne semble pas être un simple marqueur.",
+								"spanish": "No parece una simple marca.",
+								"vietnamese": "Nó không giống một dấu hiệu đơn giản.",
+								"thai": "ดูเหมือนจะไม่ใช่แค่เครื่องหมายธรรมดา",
+								"hindi": "यह सिर्फ एक निशान नहीं लगता।"
+							},
+							"type": "speech",
+							"speaker": "character_1",
+							"emotion": "sad"
+						},
+						{
+							"spot": [
+								5,
+								2
+							],
+							"action": "enter",
+							"speaker": "anuk",
+							"type": "direction",
+							"duration_ms": 500
+						},
+						{
+							"emotion": "base",
+							"speaker": "anuk",
+							"content": {
+								"korean": "…침묵이 너무 깊어.",
+								"english": "...The silence is too deep.",
+								"japanese": "…沈黙が深すぎる。",
+								"chinese": "……这寂静太深了。",
+								"french": "...Le silence est trop profond.",
+								"spanish": "...El silencio es demasiado profundo.",
+								"vietnamese": "...Sự im lặng quá sâu sắc.",
+								"thai": "ความเงียบงัน... ลึกเกินไป",
+								"hindi": "...खामोशी बहुत गहरी है।"
+							},
+							"type": "speech"
+						}
+					]
+				},
+				{
+					"id": 3,
+					"dialogue": [
+						{
+							"spot": [
+								5,
+								2
+							],
+							"speaker": "anuk",
+							"action": "enter",
+							"type": "direction",
+							"duration_ms": 500
+						},
+						{
+							"content": {
+								"korean": "이건 그냥 돌이 아니야. 무언가가 우리를 가늠하고 있어.",
+								"english": "These aren't just stones. Something is assessing us.",
+								"japanese": "これはただの石じゃない。何かが我々を値踏みしている。",
+								"chinese": "这些不只是石头。有什么东西正在审视我们。",
+								"french": "Ce ne sont pas de simples pierres. Quelque chose nous évalue.",
+								"spanish": "No son solo piedras. Algo nos está evaluando.",
+								"vietnamese": "Đây không chỉ là những viên đá. Có điều gì đó đang đánh giá chúng ta.",
+								"thai": "นี่ไม่ใช่แค่ก้อนหิน มีบางอย่างกำลังประเมินเราอยู่",
+								"hindi": "ये सिर्फ पत्थर नहीं हैं। कुछ हमें परख रहा है।"
+							},
+							"type": "speech",
+							"emotion": "base",
+							"speaker": "anuk"
+						},
+						{
+							"speaker": "character_any",
+							"emotion": "base",
+							"content": {
+								"korean": "가늠한다고?",
+								"english": "Assessing us?",
+								"japanese": "値踏みしている、と？",
+								"chinese": "审视我们？",
+								"french": "Nous évalue ?",
+								"spanish": "¿Evaluarnos?",
+								"vietnamese": "Đánh giá chúng ta ư?",
+								"thai": "ประเมินเราเหรอ?",
+								"hindi": "परख रहा है?"
+							},
+							"type": "speech"
+						},
+						{
+							"type": "speech",
+							"content": {
+								"korean": "짐승 발자국조차 이곳을 멀찍이 피해 나 있어.",
+								"english": "Even beast footprints avoid this place.",
+								"japanese": "獣の足跡すら、ここを避けている。",
+								"chinese": "连野兽的足迹都远远避开了这里。",
+								"french": "Même les bêtes évitent cet endroit de loin.",
+								"spanish": "Hasta las bestias evitan este lugar.",
+								"vietnamese": "Ngay cả dấu chân dã thú cũng tránh xa nơi này.",
+								"thai": "แม้แต่รอยเท้าสัตว์ร้ายก็ยังหลีกเลี่ยงที่นี่ห่างๆ",
+								"hindi": "यहां तक कि जानवरों के पदचिह्न भी इस जगह से दूर रहते हैं।"
+							},
+							"speaker": "anuk",
+							"emotion": "sad"
+						},
+						{
+							"speaker": "character_2",
+							"emotion": "base",
+							"type": "speech",
+							"content": {
+								"korean": "진짜네… 희한하다.",
+								"english": "Indeed... peculiar.",
+								"japanese": "本当だ… 不思議だ。",
+								"chinese": "是真的… 真奇怪。",
+								"french": "C'est vrai... étrange.",
+								"spanish": "Es verdad... qué extraño.",
+								"vietnamese": "Thật vậy… lạ lùng thật.",
+								"thai": "จริงด้วย... แปลกจริงๆ",
+								"hindi": "यह सच है... अजीब है।"
+							}
+						},
+						{
+							"content": {
+								"korean": "무게를 재고 있는 거야. 우리의 존재 가치를.",
+								"english": "It's weighing our worth.",
+								"japanese": "重さを量っているんだ。私たちの存在価値を。",
+								"chinese": "它在衡量着我们。我们存在的价值。",
+								"french": "Il pèse notre valeur.",
+								"spanish": "Está sopesando nuestro valor.",
+								"vietnamese": "Nó đang cân đo. Giá trị tồn tại của chúng ta.",
+								"thai": "มันกำลังชั่งน้ำหนัก. คุณค่าการมีอยู่ของเรา.",
+								"hindi": "यह हमारे अस्तित्व का मूल्य तौल रहा है।"
+							},
+							"type": "speech",
+							"speaker": "anuk",
+							"emotion": "base"
+						}
+					]
+				},
+				{
+					"dialogue": [
+						{
+							"type": "direction",
+							"duration_ms": 500,
+							"spot": [
+								5,
+								2
+							],
+							"action": "enter",
+							"speaker": "anuk"
+						},
+						{
+							"speaker": "anuk",
+							"emotion": "base",
+							"type": "speech",
+							"content": {
+								"korean": "돌 틈에 새겨진 희미한 룬… 느껴져?",
+								"english": "Faint runes carved in the rock... do you feel it?",
+								"japanese": "岩の隙間に刻まれた、おぼろげなルーン… 感じるか？",
+								"chinese": "刻在石缝里的微弱符文… 你感觉到了吗？",
+								"french": "Des runes faibles gravées dans la roche… le sens-tu ?",
+								"spanish": "Runas tenues grabadas en la roca... ¿lo sientes?",
+								"vietnamese": "Những ký tự rune mờ nhạt khắc trên kẽ đá… ngươi cảm thấy không?",
+								"thai": "อักษรรูนจางๆ ที่แกะสลักในรอยแยกของหิน... รู้สึกไหม?",
+								"hindi": "पत्थर की दरार में खुदे हुए धुंधले runes... क्या तुम्हें महसूस होता है?"
+							}
+						},
+						{
+							"content": {
+								"korean": "뭐라고 쓰여 있는지는 모르겠는데… 으스스하긴 해.",
+								"english": "I don't know what it says... but it's eerie.",
+								"japanese": "何が書いてあるかは分からないけど… 薄気味悪いね。",
+								"chinese": "不知道写了什么… 但感觉很阴森。",
+								"french": "Je ne sais pas ce que ça dit... mais c'est sinistre.",
+								"spanish": "No sé qué dice... pero es espeluznante.",
+								"vietnamese": "Không biết viết gì… nhưng mà rợn người thật.",
+								"thai": "ไม่รู้ว่าเขียนว่าอะไร... แต่ก็น่าขนลุกนะ",
+								"hindi": "मुझे नहीं पता कि क्या लिखा है... लेकिन यह डरावना है।"
+							},
+							"type": "speech",
+							"speaker": "character_any",
+							"emotion": "sad"
+						},
+						{
+							"speaker": "anuk",
+							"emotion": "base",
+							"content": {
+								"korean": "오래된 약속의 흔적이야. 맹세가 우리를 시험하는군.",
+								"english": "It's a trace of an old promise. A vow testing us.",
+								"japanese": "古い約束の痕跡だ。誓いが我々を試している。",
+								"chinese": "是古老誓约的痕迹。誓言正在考验我们。",
+								"french": "C'est la trace d'une ancienne promesse. Le serment nous met à l'épreuve.",
+								"spanish": "Es el rastro de una antigua promesa. El juramento nos está poniendo a prueba.",
+								"vietnamese": "Là dấu vết của một lời hứa cổ xưa. Lời thề đang thử thách chúng ta.",
+								"thai": "มันคือร่องรอยของคำสัญญาเก่าแก่. คำสาบานกำลังทดสอบเรา.",
+								"hindi": "यह एक पुराने वादे का निशान है। एक प्रतिज्ञा जो हमें परख रही है।"
+							},
+							"type": "speech"
+						},
+						{
+							"speaker": "character_3",
+							"emotion": "base",
+							"content": {
+								"korean": "더 가까이 가야 할까?",
+								"english": "Should we go closer?",
+								"japanese": "もっと近づくべきか？",
+								"chinese": "我们应该走近一点吗？",
+								"french": "Devrions-nous nous approcher davantage ?",
+								"spanish": "¿Deberíamos acercarnos más?",
+								"vietnamese": "Chúng ta có nên đến gần hơn không?",
+								"thai": "เราควรจะเข้าไปใกล้กว่านี้ไหม?",
+								"hindi": "क्या हमें और करीब जाना चाहिए?"
+							},
+							"type": "speech"
+						}
+					],
+					"id": 5
+				},
+				{
+					"dialogue": [
+						{
+							"type": "direction",
+							"duration_ms": 500,
+							"spot": [
+								5,
+								2
+							],
+							"speaker": "anuk",
+							"action": "enter"
+						},
+						{
+							"type": "speech",
+							"content": {
+								"korean": "돌 틈 깊은 곳에서… 푸른빛이 어른거려.",
+								"english": "Deep within the rock crevice... a blue light flickers.",
+								"japanese": "岩の隙間の奥深くで… 青い光が揺らめいている。",
+								"chinese": "在石缝深处… 闪烁着蓝色的光。",
+								"french": "Au fond de la crevasse rocheuse... une lumière bleue vacille.",
+								"spanish": "En lo profundo de la grieta de la roca... una luz azul parpadea.",
+								"vietnamese": "Sâu trong kẽ đá… một ánh sáng xanh lập lòe.",
+								"thai": "ลึกเข้าไปในรอยแยกของหิน... แสงสีน้ำเงินสั่นไหว",
+								"hindi": "पत्थर की दरार की गहराई में... एक नीली रोशनी टिमटिमा रही है।"
+							},
+							"emotion": "base",
+							"speaker": "anuk"
+						},
+						{
+							"emotion": "sad",
+							"speaker": "character_any",
+							"type": "speech",
+							"content": {
+								"korean": "햇빛은 아니지? 너무 차가운데.",
+								"english": "It's not sunlight, is it? It's too cold.",
+								"japanese": "日光じゃないだろ？ とても冷たい。",
+								"chinese": "这不是阳光，对吧？太冷了。",
+								"french": "Ce n'est pas la lumière du soleil, n'est-ce pas ? C'est trop froid.",
+								"spanish": "No es luz solar, ¿verdad? Es demasiado fría.",
+								"vietnamese": "Không phải ánh nắng mặt trời, đúng không? Lạnh quá.",
+								"thai": "ไม่ใช่แสงอาทิตย์ใช่ไหม? มันเย็นเกินไป",
+								"hindi": "यह सूरज की रोशनी नहीं है, है ना? यह बहुत ठंडा है।"
+							}
+						},
+						{
+							"emotion": "base",
+							"speaker": "anuk",
+							"content": {
+								"korean": "살아 있는 무언가의 흔적. 우리가 깨운 건가?",
+								"english": "A trace of something alive. Did we awaken it?",
+								"japanese": "生きている何かの痕跡。我々が目覚めさせたのか？",
+								"chinese": "是某种活着的痕迹。是我们唤醒了它吗？",
+								"french": "La trace de quelque chose de vivant. L'avons-nous réveillé ?",
+								"spanish": "Un rastro de algo vivo. ¿Lo hemos despertado?",
+								"vietnamese": "Dấu vết của thứ gì đó sống. Chúng ta đã đánh thức nó sao?",
+								"thai": "ร่องรอยของบางสิ่งที่ยังมีชีวิต. เราปลุกมันขึ้นมาเหรอ?",
+								"hindi": "किसी जीवित चीज़ का निशान। क्या हमने इसे जगाया है?"
+							},
+							"type": "speech"
+						},
+						{
+							"content": {
+								"korean": "침묵의 무게는 더욱 짙어졌다. 이제 돌이킬 수 없다.",
+								"english": "The weight of silence deepened. There's no turning back now.",
+								"japanese": "沈黙の重みはさらに深まった。もう後戻りはできない。",
+								"chinese": "沉默的重量愈发浓重。已无法回头。",
+								"french": "Le poids du silence s'épaississait. Il n'y a plus de retour en arrière.",
+								"spanish": "El peso del silencio se hizo más profundo. Ya no hay vuelta atrás.",
+								"vietnamese": "Sức nặng của sự im lặng càng thêm nặng nề. Không thể quay đầu lại nữa rồi.",
+								"thai": "น้ำหนักของความเงียบยิ่งทวีความรุนแรงขึ้น ไม่มีทางย้อนกลับแล้ว",
+								"hindi": "खामोशी का बोझ और गहरा हो गया। अब कोई वापसी नहीं।"
+							},
+							"type": "speech",
+							"emotion": "base",
+							"speaker": "narrator"
+						}
+					],
+					"id": 9
+				},
+				{
+					"win_dialogue": [
+						{
+							"speaker": "random_boss",
+							"emotion": "base",
+							"type": "speech",
+							"content": {
+								"korean": "…계약은 지켜졌다. 너희의 무게… 인정하겠다.",
+								"english": "...The contract has been upheld. Your weight... I acknowledge it.",
+								"japanese": "…契約は守られた。お前たちの重み…認めよう。",
+								"chinese": "……契约已履行。你们的份量……我认可。",
+								"french": "...Le contrat a été respecté. Votre poids... je le reconnais.",
+								"spanish": "...El contrato ha sido cumplido. Vuestro peso... lo reconozco.",
+								"vietnamese": "...Khế ước đã được giữ. Trọng lượng của các ngươi... ta thừa nhận.",
+								"thai": "...สัญญาได้รับการรักษาแล้ว น้ำหนักของพวกเจ้า... ข้ายอมรับ",
+								"hindi": "…अनुबंध का पालन हो गया। तुम्हारा वज़न... मैं स्वीकार करता हूँ।"
+							}
+						},
+						{
+							"speaker": "character_any",
+							"emotion": "sad",
+							"content": {
+								"korean": "이겼지만… 개운하지 않아.",
+								"english": "We won... but it doesn't feel right.",
+								"japanese": "勝ったが…晴れ晴れしない。",
+								"chinese": "虽然赢了……却不痛快。",
+								"french": "Nous avons gagné... mais ce n'est pas satisfaisant.",
+								"spanish": "Ganamos... pero no me siento bien.",
+								"vietnamese": "Thắng rồi... nhưng không thấy vui vẻ gì.",
+								"thai": "ชนะแล้ว...แต่ก็ไม่สบายใจเลย",
+								"hindi": "हम जीत गए... लेकिन अच्छा महसूस नहीं हो रहा।"
+							},
+							"type": "speech"
+						},
+						{
+							"speaker": "narrator",
+							"emotion": "base",
+							"content": {
+								"korean": "돌무덤의 침묵은 다시 깊어졌다. 그러나 이제, 무언가 다른 감각이 우리를 부르고 있었다.",
+								"english": "The silence of the stone tomb deepened once more. But now, a different sensation was calling to us.",
+								"japanese": "石塚の沈黙は再び深まった。しかし今、何か別の感覚が私たちを呼んでいた。",
+								"chinese": "石冢的沉默再次加深。然而此刻，某种不同的感知正在呼唤着我们。",
+								"french": "Le silence du tumulus de pierre s'épaississait de nouveau. Mais à présent, une sensation différente nous appelait.",
+								"spanish": "El silencio de la tumba de piedra se profundizó de nuevo. Pero ahora, una sensación diferente nos llamaba.",
+								"vietnamese": "Sự im lặng của ngôi mộ đá lại càng sâu thêm. Nhưng giờ đây, một cảm giác khác đang gọi mời chúng ta.",
+								"thai": "ความเงียบของหลุมศพหินกลับลึกซึ้งยิ่งขึ้น แต่บัดนี้ ความรู้สึกที่แตกต่างออกไปกำลังเรียกหาเราอยู่",
+								"hindi": "पत्थरों के मकबरे की खामोशी फिर गहरी हो गई। लेकिन अब, कोई और एहसास हमें बुला रहा था।"
+							},
+							"type": "speech"
+						}
+					],
+					"lose_dialogue": [
+						{
+							"type": "speech",
+							"content": {
+								"korean": "아직 멀었군. 너희의 무게는… 이 정도인가.",
+								"english": "Not yet. Is your weight... merely this much?",
+								"japanese": "まだ遠いな。お前たちの重みは…この程度か。",
+								"chinese": "差得远呢。你们的份量……就这点吗。",
+								"french": "Pas encore. Votre poids... n'est-il que cela ?",
+								"spanish": "Todavía no. ¿Vuestro peso es... solo esto?",
+								"vietnamese": "Còn xa lắm. Trọng lượng của các ngươi... chỉ đến thế thôi sao?",
+								"thai": "ยังห่างไกลนัก น้ำหนักของพวกเจ้า... แค่นี้เองหรือ?",
+								"hindi": "अभी बहुत दूर है। तुम्हारा वज़न... क्या बस इतना ही है?"
+							},
+							"speaker": "random_boss",
+							"emotion": "base"
+						},
+						{
+							"speaker": "character_any",
+							"emotion": "angry",
+							"type": "speech",
+							"content": {
+								"korean": "젠장… 다시 간다!",
+								"english": "Damn it... I'm going again!",
+								"japanese": "くそ…もう一度行く！",
+								"chinese": "该死……再来！",
+								"french": "Bon sang... J'y retourne !",
+								"spanish": "Maldita sea... ¡Voy de nuevo!",
+								"vietnamese": "Chết tiệt... Lại đi!",
+								"thai": "ให้ตายสิ...ไปอีกครั้ง!",
+								"hindi": "धिक्कार है... मैं फिर जाता हूँ!"
+							}
+						}
+					],
+					"dialogue": [
+						{
+							"type": "speech",
+							"content": {
+								"korean": "…왔는가. 너희의 무게는 충분한가.",
+								"english": "...You've come. Is your weight sufficient?",
+								"japanese": "…来たか。お前たちの重みは十分か。",
+								"chinese": "……来了吗。你们的份量足够吗。",
+								"french": "...Vous êtes venus. Votre poids est-il suffisant ?",
+								"spanish": "...Has venido. ¿Vuestro peso es suficiente?",
+								"vietnamese": "...Đến rồi à. Trọng lượng của các ngươi đã đủ chưa?",
+								"thai": "...มาแล้วหรือ น้ำหนักของพวกเจ้าเพียงพอแล้วหรือยัง?",
+								"hindi": "…आ गए। क्या तुम्हारा वज़न काफी है?"
+							},
+							"emotion": "base",
+							"speaker": "random_boss"
+						},
+						{
+							"content": {
+								"korean": "누구냐! 네가 이 침묵의 주인인가?",
+								"english": "Who are you?! Are you the master of this silence?",
+								"japanese": "誰だ！お前がこの沈黙の主か？",
+								"chinese": "你是谁！你就是这片沉默的主人吗？",
+								"french": "Qui es-tu ?! Es-tu le maître de ce silence ?",
+								"spanish": "¡¿Quién eres?! ¿Eres el amo de este silencio?",
+								"vietnamese": "Ngươi là ai! Ngươi là chủ nhân của sự im lặng này sao?",
+								"thai": "เจ้าเป็นใคร! เจ้าคือเจ้าของความเงียบนี้หรือ?",
+								"hindi": "कौन हो तुम! क्या तुम इस खामोशी के मालिक हो?"
+							},
+							"type": "speech",
+							"speaker": "character_any",
+							"emotion": "angry"
+						},
+						{
+							"emotion": "base",
+							"speaker": "random_boss",
+							"type": "speech",
+							"content": {
+								"korean": "나는 그저 가늠하는 자. 계약을 지키는 존재일 뿐.",
+								"english": "I am merely a measurer. One who upholds the contract.",
+								"japanese": "私はただの測り手。契約を守る存在に過ぎない。",
+								"chinese": "我不过是衡量者。一个遵守契约的存在。",
+								"french": "Je ne suis qu'un jaugeur. Un être qui respecte le contrat.",
+								"spanish": "Solo soy quien juzga. Un ser que guarda el contrato.",
+								"vietnamese": "Ta chỉ là kẻ định lượng. Một kẻ tuân giữ khế ước mà thôi.",
+								"thai": "ข้าเป็นเพียงผู้ประเมิน ผู้ที่รักษาสัญญาเท่านั้น",
+								"hindi": "मैं तो बस एक अनुमान लगाने वाला हूँ। एक ऐसा अस्तित्व जो अनुबंध का पालन करता है।"
+							}
+						},
+						{
+							"speaker": "character_1",
+							"emotion": "angry",
+							"content": {
+								"korean": "무슨 소리야? 길을 비켜!",
+								"english": "What are you talking about? Get out of the way!",
+								"japanese": "何を言っている？道を空けろ！",
+								"chinese": "什么意思？让开！",
+								"french": "Qu'est-ce que tu racontes ? Dégage !",
+								"spanish": "¿De qué hablas? ¡Apártate del camino!",
+								"vietnamese": "Ngươi đang nói gì vậy? Tránh ra!",
+								"thai": "เจ้าพูดอะไร? หลีกทางไปซะ!",
+								"hindi": "क्या कह रहे हो तुम? रास्ते से हट जाओ!"
+							},
+							"type": "speech"
+						}
+					],
+					"id": 15
+				}
+			]
+		},
+		{
+			"scenario_id": "snowy_cairn_6_04",
+			"order": 4,
+			"act": "rising",
+			"theme": "snowy",
+			"actors": {
+				"eira": {
+					"id": "mon_0c37c014-b5ca-4f2f-ad03-5d393e5b2eb1",
+					"name": {
+						"korean": "에이라",
+						"english": "Eira",
+						"japanese": "エイラ",
+						"chinese": "艾拉",
+						"french": "Eira",
+						"spanish": "Eira",
+						"vietnamese": "Eira",
+						"thai": "ไอรา",
+						"hindi": "ऐरा"
+					},
+					"description": "",
+					"face_image_url": "https://imagedelivery.net/WTEqQNGFb-l-IHS6IGnzUQ/8e2970b7-bcb1-4b1c-6bf0-93106b373500/public",
+					"battle_sprite_url": "https://imagedelivery.net/WTEqQNGFb-l-IHS6IGnzUQ/0ca1ec09-a624-450f-054a-b98de58bdb00/public"
+				}
+			},
+			"boss": {
+				"pool_id": "random_boss"
+			},
+			"prologue": {
+				"korean": [
+					"눈 덮인 황야, 끝없이 펼쳐진 백색의 공허.",
+					"그 한가운데, 오래된 돌무덤 하나가 홀로 솟아 있었다.",
+					"바람 소리마저 삼켜버린 침묵. 그리고 돌 틈에서 어른거리는 차가운 푸른빛.",
+					"단순한 무덤이 아니었다. 무언가, 깊은 곳에서 우리를 응시하고 있었다."
+				],
+				"english": [
+					"Snow-covered wilderness, an endless white void.",
+					"In its center, an ancient stone tomb stood solitary.",
+					"Silence that swallowed even the sound of wind. And a cold blue light flickering from the cracks in the stone.",
+					"It wasn't a mere tomb. Something, from deep within, was watching us."
+				],
+				"japanese": [
+					"雪に覆われた荒野、果てしなく広がる白い虚無。",
+					"その真ん中に、古い石塚が一つ、ぽつんとそびえ立っていた。",
+					"風の音さえも飲み込んだ沈黙。そして、石の隙間からちらつく冷たい青い光。",
+					"それはただの墓ではなかった。何か、深い場所から私たちを見つめていた。"
+				],
+				"chinese": [
+					"白雪覆盖的荒野，无尽蔓延的白色虚无。",
+					"在那中央，一座古老的石冢独自耸立。",
+					"连风声都被吞噬的寂静。以及石缝中闪烁的冰冷蓝光。",
+					"这并非一座简单的墓穴。有什么东西，正从深处凝视着我们。"
+				],
+				"french": [
+					"Une étendue sauvage enneigée, un vide blanc infini.",
+					"Au milieu, un ancien tumulus de pierre se dressait seul.",
+					"Un silence qui avait englouti même le bruit du vent. Et une froide lumière bleue vacillante des fissures de la pierre.",
+					"Ce n'était pas un simple tombeau. Quelque chose, des profondeurs, nous observait."
+				],
+				"spanish": [
+					"Un páramo cubierto de nieve, un vacío blanco interminable.",
+					"En su centro, una antigua tumba de piedra se alzaba solitaria.",
+					"Un silencio que había engullido incluso el sonido del viento. Y una fría luz azul parpadeando entre las grietas de la piedra.",
+					"No era una simple tumba. Algo, desde lo profundo, nos observaba."
+				],
+				"vietnamese": [
+					"Hoang dã phủ tuyết, một khoảng không trắng vô tận.",
+					"Ở trung tâm, một ngôi mộ đá cổ xưa đứng cô độc.",
+					"Sự im lặng nuốt chửng cả tiếng gió. Và một ánh sáng xanh lạnh lẽo lấp lánh từ khe đá.",
+					"Đây không phải là một ngôi mộ đơn thuần. Có điều gì đó, từ sâu thẳm, đang dõi theo chúng ta."
+				],
+				"thai": [
+					"ดินแดนรกร้างที่ปกคลุมด้วยหิมะ, ความว่างเปล่าสีขาวที่ไร้ที่สิ้นสุด",
+					"ตรงกลางนั้น, สุสานหินโบราณแห่งหนึ่งตั้งตระหง่านอยู่โดดเดี่ยว",
+					"ความเงียบที่กลืนกินแม้แต่เสียงลม และแสงสีน้ำเงินเย็นเยือกที่กะพริบจากรอยแยกของหิน",
+					"มันไม่ใช่แค่สุสานธรรมดา มีบางสิ่งบางอย่างจากส่วนลึกกำลังจ้องมองเราอยู่"
+				],
+				"hindi": [
+					"बर्फ से ढका जंगल, एक अंतहीन सफेद शून्य।",
+					"उसके केंद्र में, एक प्राचीन पत्थर की कब्र अकेली खड़ी थी।",
+					"ऐसी खामोशी जिसने हवा की आवाज़ भी निगल ली। और पत्थर की दरारों से टिमटिमाती एक ठंडी नीली रोशनी।",
+					"यह महज़ एक कब्र नहीं थी। कुछ, गहराई से, हमें देख रहा था।"
+				]
+			},
+			"rooms": [
+				{
+					"id": 1,
+					"dialogue": [
+						{
+							"content": {
+								"korean": "눈 덮인 황야, 발자국 하나 없는 백색의 공간.",
+								"english": "Snow-covered wilderness, a white space without a single footprint.",
+								"japanese": "雪に覆われた荒野、足跡一つない白い空間。",
+								"chinese": "白雪覆盖的荒野，一片没有足迹的白色空间。",
+								"french": "Une étendue sauvage enneigée, un espace blanc sans la moindre empreinte.",
+								"spanish": "Un páramo cubierto de nieve, un espacio blanco sin una sola huella.",
+								"vietnamese": "Hoang dã phủ tuyết, một không gian trắng không một dấu chân.",
+								"thai": "ดินแดนรกร้างที่ปกคลุมด้วยหิมะ, พื้นที่สีขาวที่ไม่มีรอยเท้าแม้แต่ก้าวเดียว",
+								"hindi": "बर्फ से ढका जंगल, एक भी पदचिह्न के बिना एक सफेद स्थान।"
+							},
+							"speaker": "narrator",
+							"emotion": "base",
+							"type": "speech"
+						},
+						{
+							"type": "speech",
+							"speaker": "narrator",
+							"emotion": "base",
+							"content": {
+								"korean": "그 중심에, 오래된 돌무덤이 거대한 그림자처럼 솟아 있었다.",
+								"english": "In its center, an ancient stone tomb loomed like a giant shadow.",
+								"japanese": "その中心に、古い石塚が巨大な影のようにそびえ立っていた。",
+								"chinese": "在其中心，一座古老的石冢像巨大的影子般耸立。",
+								"french": "En son centre, un ancien tumulus de pierre se dressait comme une ombre gigantesque.",
+								"spanish": "En su centro, una antigua tumba de piedra se alzaba como una sombra gigante.",
+								"vietnamese": "Ở trung tâm, một ngôi mộ đá cổ xưa sừng sững như một cái bóng khổng lồ.",
+								"thai": "ตรงกลางนั้น, สุสานหินโบราณตั้งตระหง่านราวกับเงายักษ์",
+								"hindi": "उसके केंद्र में, एक प्राचीन पत्थर की कब्र एक विशाल छाया की तरह मंडरा रही थी।"
+							}
+						},
+						{
+							"content": {
+								"korean": "이게 그 돌무덤인가.",
+								"english": "Is this the stone tomb?",
+								"japanese": "これがその石塚か。",
+								"chinese": "这就是那座石冢吗？",
+								"french": "C'est ça, le tumulus de pierre ?",
+								"spanish": "¿Es esta la tumba de piedra?",
+								"vietnamese": "Đây có phải là ngôi mộ đá đó không?",
+								"thai": "นี่คือสุสานหินนั่นหรือ",
+								"hindi": "क्या यह वह पत्थर की कब्र है?"
+							},
+							"speaker": "character_any",
+							"emotion": "base",
+							"type": "speech"
+						},
+						{
+							"duration_ms": 500,
+							"speaker": "eira",
+							"type": "direction",
+							"action": "enter",
+							"spot": [
+								3,
+								2
+							]
+						},
+						{
+							"type": "speech",
+							"speaker": "eira",
+							"emotion": "base",
+							"content": {
+								"korean": "…돌 하나하나에 룬이 새겨져 있어요. 아주 희미하게.",
+								"english": "...Runes are carved into each stone. Very faintly.",
+								"japanese": "…石一つ一つにルーンが刻まれています。とてもかすかに。",
+								"chinese": "……每块石头上都刻有符文。非常模糊。",
+								"french": "...Des runes sont gravées sur chaque pierre. Très faiblement.",
+								"spanish": "...Hay runas grabadas en cada piedra. Muy débilmente.",
+								"vietnamese": "...Các rune được khắc trên mỗi viên đá. Rất mờ nhạt.",
+								"thai": "...มีอักขระรูนสลักอยู่บนหินแต่ละก้อน จางมาก",
+								"hindi": "...हर पत्थर पर रुन उत्कीर्ण हैं। बहुत धुंधले।"
+							}
+						},
+						{
+							"speaker": "eira",
+							"emotion": "base",
+							"type": "speech",
+							"content": {
+								"korean": "마치 무언가를 기록하려던 흔적 같아요.",
+								"english": "It's like traces of an attempt to record something.",
+								"japanese": "何かを記録しようとした痕跡のようです。",
+								"chinese": "像是试图记录什么东西的痕迹。",
+								"french": "C'est comme des traces d'une tentative d'enregistrer quelque chose.",
+								"spanish": "Parece el rastro de un intento de registrar algo.",
+								"vietnamese": "Giống như dấu vết của một nỗ lực ghi lại điều gì đó.",
+								"thai": "เหมือนร่องรอยของการพยายามบันทึกบางสิ่งบางอย่าง",
+								"hindi": "यह कुछ रिकॉर्ड करने के प्रयास के निशान जैसा लगता है।"
+							}
+						}
+					]
+				},
+				{
+					"dialogue": [
+						{
+							"spot": [
+								3,
+								2
+							],
+							"action": "enter",
+							"duration_ms": 500,
+							"speaker": "eira",
+							"type": "direction"
+						},
+						{
+							"speaker": "character_any",
+							"emotion": "base",
+							"type": "speech",
+							"content": {
+								"korean": "두려워할 게 뭐 있어. 표식이든 무덤이든.",
+								"english": "What is there to fear? Be it a mark or a tomb.",
+								"japanese": "恐れることなどない。印であろうと、墓であろうと。",
+								"chinese": "有什么好怕的。无论是标记还是坟墓。",
+								"french": "Qu'y a-t-il à craindre ? Que ce soit une marque ou un tombeau.",
+								"spanish": "¿Qué hay que temer? Ya sea una marca o una tumba.",
+								"vietnamese": "Có gì phải sợ. Cho dù là dấu ấn hay lăng mộ.",
+								"thai": "มีอะไรให้กลัว ไม่ว่าจะเป็นเครื่องหมายหรือสุสาน",
+								"hindi": "डरने की क्या बात है? चाहे वह निशान हो या कब्र।"
+							}
+						},
+						{
+							"content": {
+								"korean": "돌무덤에 가까이 다가서자, 바람 소리마저 잦아들었다.",
+								"english": "Approaching the stone cairn, even the wind's whispers faded.",
+								"japanese": "石塚に近づくと、風の音さえも収まった。",
+								"chinese": "靠近石冢时，连风声都止息了。",
+								"french": "En approchant du cairn, même le murmure du vent s'est éteint.",
+								"spanish": "Al acercarnos al túmulo de piedras, incluso el susurro del viento cesó.",
+								"vietnamese": "Càng đến gần mộ đá, tiếng gió cũng ngừng hẳn.",
+								"thai": "เมื่อเข้าใกล้กองหิน เสียงลมก็เงียบงันลง",
+								"hindi": "जैसे ही हम पत्थर के ढेर के पास पहुँचे, हवा की सरसराहट भी थम गई।"
+							},
+							"speaker": "narrator",
+							"emotion": "base",
+							"type": "speech"
+						},
+						{
+							"content": {
+								"korean": "…기묘한 침묵이군.",
+								"english": "...A strange silence.",
+								"japanese": "...奇妙な沈黙だ。",
+								"chinese": "……真是诡异的寂静。",
+								"french": "...Un étrange silence.",
+								"spanish": "...Un silencio extraño.",
+								"vietnamese": "...Một sự im lặng kỳ lạ.",
+								"thai": "...ความเงียบที่แปลกประหลาด",
+								"hindi": "...एक अजीब खामोशी।"
+							},
+							"type": "speech",
+							"speaker": "character_1",
+							"emotion": "base"
+						},
+						{
+							"type": "speech",
+							"speaker": "eira",
+							"emotion": "base",
+							"content": {
+								"korean": "새겨진 룬들이 더 선명해졌어요. 마치 속삭이는 것 같아요.",
+								"english": "The carved runes became clearer. As if they're whispering.",
+								"japanese": "刻まれたルーンが、もっと鮮明になったわ。まるで囁いているみたい。",
+								"chinese": "刻下的符文变得更清晰了。仿佛在低语。",
+								"french": "Les runes gravées sont devenues plus claires. Comme si elles chuchotaient.",
+								"spanish": "Las runas grabadas se hicieron más claras. Como si estuvieran susurrando.",
+								"vietnamese": "Những chữ rune khắc trở nên rõ ràng hơn. Cứ như chúng đang thì thầm vậy.",
+								"thai": "อักษรรูนที่สลักไว้ชัดเจนขึ้นเรื่อย ๆ ราวกับกำลังกระซิบ",
+								"hindi": "उकेरे गए रुन और स्पष्ट हो गए हैं। जैसे वे फुसफुसा रहे हों।"
+							}
+						}
+					],
+					"id": 3
+				},
+				{
+					"dialogue": [
+						{
+							"spot": [
+								3,
+								2
+							],
+							"speaker": "eira",
+							"duration_ms": 500,
+							"type": "direction",
+							"action": "enter"
+						},
+						{
+							"content": {
+								"korean": "…이건 그냥 돌이 아니야.",
+								"english": "...This isn't just a stone.",
+								"japanese": "...これはただの石じゃない。",
+								"chinese": "……这不只是一块石头。",
+								"french": "...Ce n'est pas qu'une simple pierre.",
+								"spanish": "...Esto no es solo una piedra.",
+								"vietnamese": "...Đây không chỉ là một hòn đá.",
+								"thai": "...นี่ไม่ใช่แค่ก้อนหินธรรมดา",
+								"hindi": "...यह सिर्फ एक पत्थर नहीं है।"
+							},
+							"type": "speech",
+							"speaker": "character_any",
+							"emotion": "base"
+						},
+						{
+							"content": {
+								"korean": "무언가가 우리를 가늠하고 있어.",
+								"english": "Something is assessing us.",
+								"japanese": "何かが私たちを測っている。",
+								"chinese": "有什么东西正在衡量我们。",
+								"french": "Quelque chose nous évalue.",
+								"spanish": "Algo nos está evaluando.",
+								"vietnamese": "Có thứ gì đó đang đánh giá chúng ta.",
+								"thai": "มีบางสิ่งกำลังประเมินเราอยู่",
+								"hindi": "कुछ हमें परख रहा है।"
+							},
+							"type": "speech",
+							"speaker": "character_2",
+							"emotion": "base"
+						},
+						{
+							"speaker": "eira",
+							"emotion": "base",
+							"type": "speech",
+							"content": {
+								"korean": "주변에 생명체의 흔적이 없어요. 짐승 발자국조차 돌무덤을 피해 나 있어요.",
+								"english": "There are no traces of life around. Even animal tracks avoid the stone cairn.",
+								"japanese": "周囲に生命の痕跡がないわ。獣の足跡さえ、石塚を避けている。",
+								"chinese": "周围没有生命的痕迹。连野兽的足迹都避开了石冢。",
+								"french": "Il n'y a aucune trace de vie aux alentours. Même les empreintes d'animaux évitent le cairn.",
+								"spanish": "No hay rastros de vida alrededor. Incluso las huellas de animales evitan el túmulo de piedras.",
+								"vietnamese": "Không có dấu vết sự sống quanh đây. Ngay cả dấu chân thú cũng tránh xa mộ đá.",
+								"thai": "ไม่มีร่องรอยของสิ่งมีชีวิตรอบ ๆ เลย แม้แต่รอยเท้าสัตว์ก็ยังเลี่ยงกองหินนี้",
+								"hindi": "आस-पास जीवन का कोई निशान नहीं है। यहाँ तक कि जानवरों के पदचिह्न भी पत्थर के ढेर से दूर हैं।"
+							}
+						},
+						{
+							"speaker": "eira",
+							"emotion": "sad",
+							"type": "speech",
+							"content": {
+								"korean": "이 기록은, 경고를 담고 있었을지도 몰라요.",
+								"english": "This record might have contained a warning.",
+								"japanese": "この記録は、警告を含んでいたのかもしれないわ。",
+								"chinese": "这份记录，或许包含着某种警告。",
+								"french": "Ce registre pourrait avoir contenu un avertissement.",
+								"spanish": "Este registro podría haber contenido una advertencia.",
+								"vietnamese": "Bản ghi này có thể đã chứa một lời cảnh báo.",
+								"thai": "บันทึกนี้อาจจะมีความหมายเป็นการเตือน",
+								"hindi": "इस अभिलेख में एक चेतावनी हो सकती है।"
+							}
+						}
+					],
+					"id": 5
+				},
+				{
+					"dialogue": [
+						{
+							"spot": [
+								3,
+								2
+							],
+							"action": "enter",
+							"duration_ms": 500,
+							"speaker": "eira",
+							"type": "direction"
+						},
+						{
+							"speaker": "eira",
+							"emotion": "base",
+							"type": "speech",
+							"content": {
+								"korean": "…이런.",
+								"english": "...Oh dear.",
+								"japanese": "...しまった。",
+								"chinese": "……糟了。",
+								"french": "...Oh là là.",
+								"spanish": "...Vaya.",
+								"vietnamese": "...Ôi không.",
+								"thai": "...แย่แล้ว",
+								"hindi": "...ओह प्रिय।"
+							}
+						},
+						{
+							"content": {
+								"korean": "왜 그래?",
+								"english": "What's wrong?",
+								"japanese": "どうしたの？",
+								"chinese": "怎么了？",
+								"french": "Qu'est-ce qu'il y a ?",
+								"spanish": "¿Qué pasa?",
+								"vietnamese": "Có chuyện gì vậy?",
+								"thai": "เกิดอะไรขึ้น?",
+								"hindi": "क्या बात है?"
+							},
+							"type": "speech",
+							"speaker": "character_any",
+							"emotion": "base"
+						},
+						{
+							"type": "speech",
+							"speaker": "eira",
+							"emotion": "base",
+							"content": {
+								"korean": "돌 틈 깊은 곳에서… 푸른빛이 어른거려요.",
+								"english": "Deep within the crevices of the stone... a blue light flickers.",
+								"japanese": "石の隙間の奥深くから… 青い光が揺らめいているわ。",
+								"chinese": "在石缝深处……有蓝光在闪烁。",
+								"french": "Au plus profond des fissures de la pierre... une lumière bleue vacille.",
+								"spanish": "En lo más profundo de las grietas de la piedra... una luz azul parpadea.",
+								"vietnamese": "Sâu trong kẽ đá... một ánh sáng xanh đang nhấp nháy.",
+								"thai": "ลึกเข้าไปในรอยแตกของหิน... มีแสงสีฟ้ากะพริบอยู่",
+								"hindi": "पत्थर की दरारों की गहराई में... एक नीली रोशनी टिमटिमा रही है।"
+							}
+						},
+						{
+							"content": {
+								"korean": "햇빛이라고 하기엔 너무 차가워요. 마치, 얼음처럼.",
+								"english": "Too cold for sunlight. Like ice.",
+								"japanese": "陽光にしては冷たすぎる。まるで氷のようだ。",
+								"chinese": "说是阳光，却太冰冷了。就像冰一样。",
+								"french": "Trop froid pour du soleil. Comme de la glace.",
+								"spanish": "Demasiado frío para ser luz del sol. Como el hielo.",
+								"vietnamese": "Lạnh quá, không phải nắng. Giống như băng vậy.",
+								"thai": "เย็นเกินกว่าจะเป็นแสงแดด เหมือนน้ำแข็งเลย",
+								"hindi": "सूरज की रोशनी के लिए बहुत ठंडा है। जैसे बर्फ।"
+							},
+							"speaker": "eira",
+							"emotion": "base",
+							"type": "speech"
+						},
+						{
+							"content": {
+								"korean": "돌무덤 안에 무언가 있어.",
+								"english": "Something's in the stone cairn.",
+								"japanese": "石塚の中に何かある。",
+								"chinese": "石冢里有什么东西。",
+								"french": "Il y a quelque chose dans le cairn.",
+								"spanish": "Hay algo en el túmulo de piedra.",
+								"vietnamese": "Có gì đó trong đống đá.",
+								"thai": "มีบางอย่างอยู่ในกองหิน",
+								"hindi": "पत्थर के ढेर में कुछ है।"
+							},
+							"type": "speech",
+							"speaker": "character_any",
+							"emotion": "base"
+						},
+						{
+							"speaker": "eira",
+							"emotion": "sad",
+							"type": "speech",
+							"content": {
+								"korean": "단순한 무덤이 아니에요. 이건… 살아있어요.",
+								"english": "Not just a tomb. It's... alive.",
+								"japanese": "ただの墓じゃない。これは…生きている。",
+								"chinese": "这不是普通的坟墓。它…还活着。",
+								"french": "Pas qu'une simple tombe. C'est... vivant.",
+								"spanish": "No es solo una tumba. Está... vivo.",
+								"vietnamese": "Không phải mộ đơn thuần. Nó… đang sống.",
+								"thai": "นี่ไม่ใช่แค่หลุมศพธรรมดา มัน... มีชีวิตอยู่",
+								"hindi": "यह सिर्फ एक कब्र नहीं है। यह... जीवित है।"
+							}
+						}
+					],
+					"id": 9
+				},
+				{
+					"id": 15,
+					"dialogue": [
+						{
+							"content": {
+								"korean": "돌무덤의 깊은 곳에서, 차가운 푸른빛이 터져 나왔다.",
+								"english": "From the depths of the stone cairn, a cold blue light erupted.",
+								"japanese": "石塚の奥深くから、冷たい青い光が噴き出した。",
+								"chinese": "从石冢深处，爆发出一道冰冷的蓝光。",
+								"french": "Des profondeurs du cairn, une froide lumière bleue jaillit.",
+								"spanish": "Desde las profundidades del túmulo de piedra, una fría luz azul brotó.",
+								"vietnamese": "Từ sâu trong đống đá, một luồng ánh sáng xanh lạnh lẽo bùng lên.",
+								"thai": "จากส่วนลึกของกองหิน แสงสีน้ำเงินเย็นยะเยือกพลุ่งออกมา",
+								"hindi": "पत्थर के ढेर की गहराई से, एक ठंडी नीली रोशनी फूट पड़ी।"
+							},
+							"type": "speech",
+							"speaker": "narrator",
+							"emotion": "base"
+						},
+						{
+							"speaker": "narrator",
+							"emotion": "base",
+							"type": "speech",
+							"content": {
+								"korean": "빛이 응축되며, 거대한 형상이 드러났다.",
+								"english": "As the light condensed, a colossal form appeared.",
+								"japanese": "光が凝縮し、巨大な姿が現れた。",
+								"chinese": "光芒凝聚，一个巨大的身形显露出来。",
+								"french": "La lumière se condensa, révélant une forme colossale.",
+								"spanish": "A medida que la luz se condensaba, una forma colosal apareció.",
+								"vietnamese": "Ánh sáng ngưng tụ, một hình dáng khổng lồ hiện ra.",
+								"thai": "เมื่อแสงรวมตัวกัน ร่างมหึมาก็ปรากฏขึ้น",
+								"hindi": "जैसे ही रोशनी संघनित हुई, एक विशाल आकृति प्रकट हुई।"
+							}
+						},
+						{
+							"speaker": "random_boss",
+							"emotion": "base",
+							"type": "speech",
+							"content": {
+								"korean": "…오랜 잠에서 깨어났다.",
+								"english": "...Awakened from a long slumber.",
+								"japanese": "…長い眠りから目覚めた。",
+								"chinese": "……从沉睡中苏醒。",
+								"french": "...Éveillé d'un long sommeil.",
+								"spanish": "...Despertó de un largo letargo.",
+								"vietnamese": "...Thức tỉnh sau giấc ngủ dài.",
+								"thai": "...ตื่นขึ้นจากการหลับใหลอันยาวนาน",
+								"hindi": "...एक लंबी नींद से जागा।"
+							}
+						},
+						{
+							"content": {
+								"korean": "저게… 푸른빛의 근원인가.",
+								"english": "Is that... the source of the blue light?",
+								"japanese": "あれが…青い光の源なのか。",
+								"chinese": "那就是…蓝光的源头吗？",
+								"french": "Est-ce là... la source de la lumière bleue ?",
+								"spanish": "¿Es eso... la fuente de la luz azul?",
+								"vietnamese": "Đó… là nguồn gốc của ánh sáng xanh sao?",
+								"thai": "นั่นคือ... ต้นกำเนิดของแสงสีน้ำเงินหรือเปล่า",
+								"hindi": "क्या वह... नीली रोशनी का स्रोत है?"
+							},
+							"speaker": "character_any",
+							"emotion": "base",
+							"type": "speech"
+						},
+						{
+							"spot": [
+								3,
+								2
+							],
+							"action": "enter",
+							"type": "direction",
+							"speaker": "eira",
+							"duration_ms": 500
+						},
+						{
+							"type": "speech",
+							"speaker": "eira",
+							"emotion": "base",
+							"content": {
+								"korean": "룬이… 룬이 저 존재를 말하고 있었어요.",
+								"english": "The runes... the runes spoke of that entity.",
+								"japanese": "ルーンが… ルーンがあの存在について語っていたのよ。",
+								"chinese": "符文… 符文提到了那个存在。",
+								"french": "Les runes... les runes parlaient de cette entité.",
+								"spanish": "Las runas... las runas hablaban de esa entidad.",
+								"vietnamese": "Các rune… các rune đã nói về thực thể đó.",
+								"thai": "รูน... รูนพูดถึงสิ่งมีชีวิตนั้น",
+								"hindi": "रून्स... रून्स उस सत्ता के बारे में बता रहे थे।"
+							}
+						},
+						{
+							"content": {
+								"korean": "어리석은 자들. 내 잠을 방해했으니… 대가를 치러라.",
+								"english": "Fools. You've disturbed my slumber... now pay the price.",
+								"japanese": "愚か者ども。我が眠りを妨げたか… 代償を払え。",
+								"chinese": "愚蠢的凡人。既然打扰了我的沉睡… 就付出代价吧。",
+								"french": "Fous. Vous avez troublé mon sommeil... payez-en le prix.",
+								"spanish": "Necios. Habéis perturbado mi letargo... pagad el precio.",
+								"vietnamese": "Lũ ngu ngốc. Các ngươi đã quấy rầy giấc ngủ của ta… hãy trả giá đi.",
+								"thai": "คนโง่เง่า พวกเจ้าได้รบกวนการหลับใหลของข้า... จงชดใช้ซะ",
+								"hindi": "मूर्खों। तुमने मेरी नींद में खलल डाला है... अब कीमत चुकाओ।"
+							},
+							"speaker": "random_boss",
+							"emotion": "angry",
+							"type": "speech"
+						},
+						{
+							"content": {
+								"korean": "물러설 수 없어!",
+								"english": "No retreat!",
+								"japanese": "退くわけにはいかない！",
+								"chinese": "不能退缩！",
+								"french": "Pas de retraite !",
+								"spanish": "¡No podemos retroceder!",
+								"vietnamese": "Không thể lùi bước!",
+								"thai": "ถอยไม่ได้!",
+								"hindi": "पीछे नहीं हटेंगे!"
+							},
+							"speaker": "character_any",
+							"emotion": "angry",
+							"type": "speech"
+						}
+					],
+					"lose_dialogue": [
+						{
+							"action": "enter",
+							"speaker": "eira",
+							"duration_ms": 500,
+							"type": "direction",
+							"spot": [
+								3,
+								2
+							]
+						},
+						{
+							"speaker": "random_boss",
+							"emotion": "base",
+							"type": "speech",
+							"content": {
+								"korean": "…아직, 너희는 어리석다.",
+								"english": "...Still, you are foolish.",
+								"japanese": "「…まだ、お前たちは愚かだ。」",
+								"chinese": "“……你们，依然愚蠢。”",
+								"french": "...Encore, vous êtes insensés.",
+								"spanish": "...Aún así, sois necios.",
+								"vietnamese": "...Vẫn còn, các ngươi thật ngu ngốc.",
+								"thai": "...ยังคง พวกเจ้าช่างโง่เขลา",
+								"hindi": "...अभी भी, तुम मूर्ख हो।"
+							}
+						},
+						{
+							"content": {
+								"korean": "끝이 아니야…! 다시 일어설 거야.",
+								"english": "It's not over...! I will rise again.",
+								"japanese": "「終わりじゃない…！また立ち上がる。」",
+								"chinese": "“还没结束……！我还会再站起来的。”",
+								"french": "Ce n'est pas fini...! Je me relèverai.",
+								"spanish": "¡No ha terminado...! Me levantaré de nuevo.",
+								"vietnamese": "Chưa kết thúc đâu...! Ta sẽ đứng dậy một lần nữa.",
+								"thai": "ยังไม่จบ...! ฉันจะลุกขึ้นยืนอีกครั้ง",
+								"hindi": "यह खत्म नहीं हुआ है...! मैं फिर से खड़ा होऊंगा।"
+							},
+							"speaker": "character_any",
+							"emotion": "angry",
+							"type": "speech"
+						},
+						{
+							"speaker": "eira",
+							"emotion": "sad",
+							"type": "speech",
+							"content": {
+								"korean": "이런 결말도, 기록되어야겠죠.",
+								"english": "Even an ending like this must be recorded.",
+								"japanese": "「このような結末も、記録されるべきでしょう。」",
+								"chinese": "“这样的结局，也应该被记录下来吧。”",
+								"french": "Même une fin comme celle-ci doit être enregistrée.",
+								"spanish": "Incluso un final como este debe ser registrado.",
+								"vietnamese": "Một kết cục như thế này cũng nên được ghi lại.",
+								"thai": "แม้แต่จุดจบเช่นนี้ ก็คงต้องถูกบันทึกไว้",
+								"hindi": "इस तरह का अंत भी दर्ज किया जाना चाहिए।"
+							}
+						}
+					],
+					"win_dialogue": [
+						{
+							"spot": [
+								3,
+								2
+							],
+							"type": "direction",
+							"speaker": "eira",
+							"duration_ms": 500,
+							"action": "enter"
+						},
+						{
+							"content": {
+								"korean": "…기록될 것이다. 너희의 어리석음 또한.",
+								"english": "...It shall be recorded. And your folly as well.",
+								"japanese": "「…記録されるだろう。お前たちの愚かさもまた。」",
+								"chinese": "“……将被记录下来。你们的愚蠢亦然。”",
+								"french": "...Cela sera enregistré. Et votre folie aussi.",
+								"spanish": "...Será registrado. Y también vuestra necedad.",
+								"vietnamese": "...Điều này sẽ được ghi lại. Và sự ngu ngốc của các ngươi nữa.",
+								"thai": "...มันจะถูกบันทึกไว้ และความโง่เขลาของพวกเจ้าด้วย",
+								"hindi": "...यह दर्ज किया जाएगा। और तुम्हारी मूर्खता भी।"
+							},
+							"speaker": "random_boss",
+							"emotion": "base",
+							"type": "speech"
+						},
+						{
+							"speaker": "character_any",
+							"emotion": "base",
+							"type": "speech",
+							"content": {
+								"korean": "끝난 건가….",
+								"english": "Is it over...?",
+								"japanese": "「終わったのか…。」",
+								"chinese": "“结束了吗……”",
+								"french": "Est-ce terminé...?",
+								"spanish": "¿Se acabó...?",
+								"vietnamese": "Kết thúc rồi sao...?",
+								"thai": "มันจบแล้วหรือ...?",
+								"hindi": "क्या यह खत्म हो गया...?"
+							}
+						},
+						{
+							"speaker": "eira",
+							"emotion": "base",
+							"type": "speech",
+							"content": {
+								"korean": "잊힌 이름… 모든 룬이 침묵했어요.",
+								"english": "A forgotten name... All runes have fallen silent.",
+								"japanese": "「忘れられた名… すべてのルーンが沈黙した。」",
+								"chinese": "“被遗忘的名字……所有的符文都已沉寂。”",
+								"french": "Un nom oublié... Toutes les runes sont devenues silencieuses.",
+								"spanish": "Un nombre olvidado... Todas las runas han enmudecido.",
+								"vietnamese": "Một cái tên bị lãng quên... Tất cả các rune đều đã im lặng.",
+								"thai": "ชื่อที่ถูกลืม... รูนทั้งหมดเงียบลงแล้ว",
+								"hindi": "एक भूला हुआ नाम... सभी रूण खामोश हो गए हैं।"
+							}
+						},
+						{
+							"speaker": "narrator",
+							"emotion": "base",
+							"type": "speech",
+							"content": {
+								"korean": "차가운 푸른빛이 서서히 사라졌다. 돌무덤은 다시 침묵에 잠겼다.",
+								"english": "The cold blue light slowly faded. The stone tomb fell silent once more.",
+								"japanese": "「冷たい青い光が徐々に消えた。石塚は再び沈黙に包まれた。」",
+								"chinese": "“冰冷的蓝光渐渐消散。石冢再次陷入沉寂。”",
+								"french": "La froide lumière bleue s'estompa lentement. La tombe de pierre retomba dans le silence.",
+								"spanish": "La fría luz azul se desvaneció lentamente. La tumba de piedra volvió a sumirse en el silencio.",
+								"vietnamese": "Ánh sáng xanh lạnh lẽo dần dần biến mất. Lăng mộ đá lại chìm vào im lặng.",
+								"thai": "แสงสีน้ำเงินเย็นชาค่อยๆ จางหายไป สุสานหินกลับสู่ความเงียบงันอีกครั้ง",
+								"hindi": "ठंडी नीली रोशनी धीरे-धीरे फीकी पड़ गई। पत्थर की कब्र फिर से खामोशी में डूब गई।"
+							}
+						},
+						{
+							"type": "speech",
+							"speaker": "narrator",
+							"emotion": "base",
+							"content": {
+								"korean": "그러나 그 침묵은, 이전과 다른 무게를 품고 있었다.",
+								"english": "Yet that silence held a weight unlike before.",
+								"japanese": "「しかしその沈黙は、以前とは異なる重みを帯びていた。」",
+								"chinese": "“然而那寂静，却蕴含着与以往不同的分量。”",
+								"french": "Cependant, ce silence portait un poids différent d'auparavant.",
+								"spanish": "Sin embargo, ese silencio encerraba un peso diferente al de antes.",
+								"vietnamese": "Tuy nhiên, sự im lặng đó mang một sức nặng khác biệt so với trước đây.",
+								"thai": "ทว่าความเงียบงันนั้น แฝงไว้ด้วยน้ำหนักที่แตกต่างจากเดิม",
+								"hindi": "हालांकि, उस खामोशी में पहले से अलग वजन था।"
+							}
+						}
+					]
+				}
+			]
+		},
+		{
+			"scenario_id": "snowy_cairn_6_05",
+			"order": 5,
+			"act": "climax_finale",
+			"theme": "snowy",
+			"actors": {
+				"anuk": {
+					"id": "mon_8736797d-779a-4748-8633-d15c1eaf9be7",
+					"name": {
+						"korean": "아눅",
+						"english": "Anuk",
+						"japanese": "アヌーク",
+						"chinese": "阿努克",
+						"french": "Anuk",
+						"spanish": "Anuk",
+						"vietnamese": "Anuk",
+						"thai": "อนุก",
+						"hindi": "अनुक"
+					},
+					"description": "",
+					"face_image_url": "https://imagedelivery.net/WTEqQNGFb-l-IHS6IGnzUQ/19485274-e873-45c8-5043-f4ff65aa2a00/public",
+					"battle_sprite_url": "https://imagedelivery.net/WTEqQNGFb-l-IHS6IGnzUQ/9a79ecfd-8cc6-4461-3790-763822522500/public"
+				}
+			},
+			"boss": {
+				"pool_id": "pool_111"
+			},
+			"prologue": {
+				"korean": [
+					"눈 덮인 황야, 끝없는 백색의 공허.",
+					"오래된 돌무덤 하나가 그 침묵을 지키고 있었다.",
+					"그것은 단순한 표식이 아니었다.",
+					"무언가 듣고 있었다. 아주 오래전부터."
+				],
+				"english": [
+					"Snow-covered wilderness, an endless white void.",
+					"An ancient stone cairn guarded its silence.",
+					"It was no mere marker.",
+					"It was listening. Since long, long ago."
+				],
+				"japanese": [
+					"雪に覆われた荒野、果てしない白の虚無。",
+					"古い石塚がその沈黙を守っていた。",
+					"それは単なる目印ではなかった。",
+					"何かを聞いていた。ずっと昔から。"
+				],
+				"chinese": [
+					"白雪覆盖的荒野，无尽的白色虚空。",
+					"一座古老的石冢守护着那份寂静。",
+					"那不仅仅是一个标记。",
+					"它在倾听。从很久很久以前。"
+				],
+				"french": [
+					"Une étendue sauvage enneigée, un vide blanc infini.",
+					"Un ancien cairn gardait son silence.",
+					"Ce n'était pas un simple repère.",
+					"Il écoutait. Depuis très, très longtemps."
+				],
+				"spanish": [
+					"Un páramo cubierto de nieve, un vacío blanco infinito.",
+					"Un antiguo túmulo de piedras custodiaba su silencio.",
+					"No era un simple marcador.",
+					"Estaba escuchando. Desde hace mucho, mucho tiempo."
+				],
+				"vietnamese": [
+					"Hoang dã tuyết phủ, khoảng không trắng vô tận.",
+					"Một nấm mộ đá cổ xưa canh giữ sự im lặng của nó.",
+					"Nó không chỉ là một dấu hiệu.",
+					"Nó đã lắng nghe. Từ rất, rất lâu rồi."
+				],
+				"thai": [
+					"ทุ่งร้างที่ปกคลุมไปด้วยหิมะ, ความว่างเปล่าสีขาวที่ไม่มีที่สิ้นสุด.",
+					"กองหินเก่าแก่ก้อนหนึ่งเฝ้ารักษ์ษาความเงียบนั้นไว้.",
+					"มันไม่ใช่แค่เครื่องหมาย.",
+					"มันกำลังฟัง. ตั้งแต่เมื่อนานมาแล้ว."
+				],
+				"hindi": [
+					"बर्फ से ढकी बंजर भूमि, एक अंतहीन सफेद शून्य।",
+					"एक प्राचीन पत्थर का ढेर उसकी खामोशी की रखवाली कर रहा था।",
+					"यह महज एक निशान नहीं था।",
+					"यह सुन रहा था। बहुत, बहुत पहले से।"
+				]
+			},
+			"epilogue": {
+				"korean": [
+					"돌무덤의 푸른빛은 사그라들었지만, 침묵은 여전했다.",
+					"맹세는 깨어졌고, 약속은 지켜지지 않았다.",
+					"겨울은 끝나지 않았다. 이 황야는 여전히 그들의 말을 듣고 있었다.",
+					"어쩌면, 이제 시작이었을지도."
+				],
+				"english": [
+					"The cairn's blue light faded, but the silence remained.",
+					"Oaths were broken, promises unkept.",
+					"Winter had not ended. This wilderness was still listening to their words.",
+					"Perhaps, it was only the beginning."
+				],
+				"japanese": [
+					"石塚の青い光は消え去ったが、沈黙は依然としてそこにあった。",
+					"誓いは破られ、約束は守られなかった。",
+					"冬は終わっていなかった。この荒野はまだ彼らの言葉を聞いていた。",
+					"もしかしたら、それは始まりに過ぎなかったのかもしれない。"
+				],
+				"chinese": [
+					"石冢的蓝光黯淡了，但寂静依旧。",
+					"誓言被打破，承诺未兑现。",
+					"冬天尚未结束。这片荒野仍在倾听他们的话语。",
+					"也许，这只是个开始。"
+				],
+				"french": [
+					"La lumière bleue du cairn s'est éteinte, mais le silence persistait.",
+					"Les serments furent brisés, les promesses non tenues.",
+					"L'hiver n'était pas terminé. Cette étendue sauvage écoutait toujours leurs paroles.",
+					"Peut-être, ce n'était que le début."
+				],
+				"spanish": [
+					"La luz azul del túmulo se desvaneció, pero el silencio permaneció.",
+					"Los juramentos se rompieron, las promesas no se cumplieron.",
+					"El invierno no había terminado. Este páramo aún escuchaba sus palabras.",
+					"Quizás, era solo el principio."
+				],
+				"vietnamese": [
+					"Ánh sáng xanh của nấm mộ đá đã mờ dần, nhưng sự im lặng vẫn còn đó.",
+					"Lời thề đã bị phá vỡ, lời hứa không được giữ.",
+					"Mùa đông chưa kết thúc. Vùng hoang dã này vẫn lắng nghe lời nói của họ.",
+					"Có lẽ, đó chỉ là sự khởi đầu."
+				],
+				"thai": [
+					"แสงสีน้ำเงินของกองหินเลือนหายไป, แต่ความเงียบยังคงอยู่.",
+					"คำสาบานถูกหัก, คำสัญญาไม่เป็นไปตามนั้น.",
+					"ฤดูหนาวยังไม่สิ้นสุด. ทุ่งร้างนี้ยังคงฟังคำพูดของพวกเขาอยู่.",
+					"บางที, มันอาจจะเป็นแค่จุดเริ่มต้น."
+				],
+				"hindi": [
+					"पत्थर के ढेर की नीली रोशनी फीकी पड़ गई, लेकिन खामोशी बनी रही।",
+					"शपथें टूट गईं, वादे पूरे नहीं हुए।",
+					"सर्दी खत्म नहीं हुई थी। यह बंजर भूमि अभी भी उनकी बातें सुन रही थी।",
+					"शायद, यह तो बस शुरुआत थी।"
+				]
+			},
+			"rooms": [
+				{
+					"id": 15,
+					"win_dialogue": [
+						{
+							"speaker": "boss",
+							"emotion": "sad",
+							"type": "speech",
+							"content": {
+								"korean": "결국… 너희도 그들과 다르지 않군.",
+								"english": "In the end... you are no different from them.",
+								"japanese": "結局…お前たちも彼らと何ら変わらないな。",
+								"chinese": "终究……你们也和他们没什么两样。",
+								"french": "Au final... vous n'êtes pas différents d'eux.",
+								"spanish": "Al final... vosotros tampoco sois diferentes a ellos.",
+								"vietnamese": "Rốt cuộc... các ngươi cũng chẳng khác gì họ.",
+								"thai": "ในที่สุด... พวกเจ้าก็ไม่ต่างอะไรจากพวกเขาเลย",
+								"hindi": "आखिरकार... तुम भी उनसे अलग नहीं हो।"
+							}
+						},
+						{
+							"type": "speech",
+							"content": {
+								"korean": "이 돌무덤은 모든 맹세를 기억한다… 깨어진 맹세까지도.",
+								"english": "This cairn remembers all oaths... even broken ones.",
+								"japanese": "このケルンは全ての誓いを覚えている…破られた誓いまでも。",
+								"chinese": "这座石冢记得所有的誓言……甚至是被打破的誓言。",
+								"french": "Ce cairn se souvient de tous les serments... même des serments brisés.",
+								"spanish": "Este túmulo recuerda todos los juramentos... incluso los rotos.",
+								"vietnamese": "Mộ đá này ghi nhớ mọi lời thề... kể cả những lời thề đã bị phá vỡ.",
+								"thai": "สถูปหินนี้จดจำทุกคำสาบาน... แม้แต่คำสาบานที่ถูกหักหลัง",
+								"hindi": "यह पत्थरों का ढेर सभी शपथों को याद रखता है... टूटी हुई शपथों को भी।"
+							},
+							"emotion": "base",
+							"speaker": "boss"
+						},
+						{
+							"speaker": "character_any",
+							"emotion": "angry",
+							"type": "speech",
+							"content": {
+								"korean": "우리의 맹세는 깨지지 않아. 절대.",
+								"english": "Our oath remains unbroken. Never.",
+								"japanese": "我らの誓いは破られない。決して。",
+								"chinese": "我们的誓言不会被打破。绝不。",
+								"french": "Notre serment est inviolable. Jamais.",
+								"spanish": "Nuestro juramento es inquebrantable. Jamás.",
+								"vietnamese": "Lời thề của chúng ta sẽ không bị phá vỡ. Không bao giờ.",
+								"thai": "คำสาบานของเราจะไม่ถูกทำลาย. ไม่มีวัน.",
+								"hindi": "हमारी शपथ अटूट है। कभी नहीं।"
+							}
+						},
+						{
+							"content": {
+								"korean": "돌무덤의 푸른빛이 사그라들었다. 하지만 황야의 침묵은 여전히 무언가를 가늠하는 듯했다.",
+								"english": "The blue light of the stone tomb faded. Yet the wilderness's silence seemed to ponder still.",
+								"japanese": "石塚の青い光は消え去った。しかし荒野の沈黙は、いまだ何かを測るようだった。",
+								"chinese": "石冢的蓝光消逝了。然而，荒野的寂静似乎仍在衡量着什么。",
+								"french": "La lumière bleue du cairn s'est éteinte. Pourtant, le silence du désert semblait encore peser quelque chose.",
+								"spanish": "La luz azul del túmulo se desvaneció. Sin embargo, el silencio del desierto aún parecía sopesar algo.",
+								"vietnamese": "Ánh sáng xanh từ ngôi mộ đá đã lụi tàn. Nhưng sự im lặng của hoang mạc vẫn như đang suy tính điều gì đó.",
+								"thai": "แสงสีน้ำเงินจากสุสานหินจางหายไป. แต่ความเงียบงันของถิ่นทุรกันดารยังคงเหมือนกำลังชั่งน้ำหนักบางสิ่ง.",
+								"hindi": "पत्थर के मकबरे की नीली रोशनी फीकी पड़ गई। लेकिन बंजर भूमि की खामोशी अभी भी कुछ तौल रही थी।"
+							},
+							"type": "speech",
+							"emotion": "base",
+							"speaker": "narrator"
+						},
+						{
+							"content": {
+								"korean": "끝은, 새로운 시작을 알리는 룬일 뿐이었다.",
+								"english": "The end was merely a rune, heralding a new beginning.",
+								"japanese": "終わりは、新たな始まりを告げるルーンに過ぎなかった。",
+								"chinese": "终结，不过是预示着新开始的符文罢了。",
+								"french": "La fin n'était qu'une rune, annonçant un nouveau commencement.",
+								"spanish": "El fin no era más que una runa que anunciaba un nuevo comienzo.",
+								"vietnamese": "Cái kết chỉ là một phù hiệu báo hiệu một khởi đầu mới.",
+								"thai": "จุดจบเป็นเพียงอักขระที่บอกถึงการเริ่มต้นใหม่.",
+								"hindi": "अंत केवल एक नया आरम्भ सूचित करने वाला एक रुन था।"
+							},
+							"type": "speech",
+							"emotion": "base",
+							"speaker": "narrator"
+						}
+					],
+					"dialogue": [
+						{
+							"type": "direction",
+							"spot": [
+								3,
+								2
+							],
+							"duration_ms": 500,
+							"action": "enter",
+							"speaker": "anuk"
+						},
+						{
+							"content": {
+								"korean": "이 길 끝에서 뭘 찾게 될까?",
+								"english": "What will I find at the end of this path?",
+								"japanese": "この道の果てで何を見つけるだろう？",
+								"chinese": "这条路的尽头我会找到什么？",
+								"french": "Que trouverai-je au bout de ce chemin ?",
+								"spanish": "¿Qué encontraré al final de este camino?",
+								"vietnamese": "Tôi sẽ tìm thấy gì ở cuối con đường này?",
+								"thai": "ฉันจะเจออะไรที่ปลายทางนี้?",
+								"hindi": "इस रास्ते के अंत में मुझे क्या मिलेगा?"
+							},
+							"type": "speech",
+							"emotion": "base",
+							"speaker": "character_any"
+						},
+						{
+							"speaker": "character_1",
+							"emotion": "base",
+							"content": {
+								"korean": "잃어버린 것을 되찾거나, 새로운 약속을 맺거나.",
+								"english": "Recover what was lost, or forge a new promise.",
+								"japanese": "失われたものを取り戻すか、新しい約束を結ぶか。",
+								"chinese": "找回失去之物，或缔结新的约定。",
+								"french": "Retrouver ce qui a été perdu, ou sceller une nouvelle promesse.",
+								"spanish": "Recuperar lo perdido, o forjar una nueva promesa.",
+								"vietnamese": "Khôi phục những gì đã mất, hoặc tạo ra một lời hứa mới.",
+								"thai": "ทวงคืนสิ่งที่สูญหาย, หรือสร้างคำมั่นสัญญาใหม่.",
+								"hindi": "जो खो गया उसे वापस पाना, या एक नया वादा करना।"
+							},
+							"type": "speech"
+						},
+						{
+							"content": {
+								"korean": "무슨 일이 있어도, 우린 함께할 거야.",
+								"english": "No matter what, we'll be together.",
+								"japanese": "何があっても、私たちは一緒だ。",
+								"chinese": "无论发生什么，我们都会在一起。",
+								"french": "Quoi qu'il arrive, nous serons ensemble.",
+								"spanish": "Pase lo que pase, estaremos juntos.",
+								"vietnamese": "Dù có chuyện gì xảy ra, chúng ta sẽ bên nhau.",
+								"thai": "ไม่ว่าจะเกิดอะไรขึ้น เราจะอยู่ด้วยกัน",
+								"hindi": "चाहे कुछ भी हो जाए, हम साथ रहेंगे।"
+							},
+							"type": "speech",
+							"emotion": "base",
+							"speaker": "character_2"
+						},
+						{
+							"emotion": "base",
+							"speaker": "anuk",
+							"content": {
+								"korean": "…조심해. 이 돌무덤은 맹세의 무게를 알아.",
+								"english": "...Be careful. This cairn knows the weight of an oath.",
+								"japanese": "…気をつけろ。このケルンは誓いの重さを知っている。",
+								"chinese": "……小心。这座石冢知道誓言的重量。",
+								"french": "...Fais attention. Ce cairn connaît le poids d'un serment.",
+								"spanish": "...Ten cuidado. Este túmulo conoce el peso de un juramento.",
+								"vietnamese": "...Cẩn thận đấy. Mộ đá này biết rõ sức nặng của lời thề.",
+								"thai": "...ระวังนะ สถูปหินนี้รู้ดีถึงน้ำหนักของคำสาบาน",
+								"hindi": "…सावधान रहना। यह पत्थरों का ढेर शपथ का भार जानता है।"
+							},
+							"type": "speech"
+						},
+						{
+							"emotion": "base",
+							"speaker": "narrator",
+							"content": {
+								"korean": "그 순간, 돌 틈 사이로 섬뜩한 푸른빛이 번뜩였다 사라졌다.",
+								"english": "At that moment, an eerie blue light flickered and vanished between the stones.",
+								"japanese": "その瞬間、石の隙間から不気味な青い光が閃き、消えた。",
+								"chinese": "就在那一刻，一道诡异的蓝光在石缝间闪烁了一下，随即消失。",
+								"french": "À cet instant, une lumière bleue inquiétante a vacillé et disparu entre les pierres.",
+								"spanish": "En ese instante, una inquietante luz azul parpadeó y desapareció entre las piedras.",
+								"vietnamese": "Khoảnh khắc đó, một luồng sáng xanh rợn người lóe lên rồi biến mất giữa kẽ đá.",
+								"thai": "ในตอนนั้น แสงสีน้ำเงินอันน่าขนลุกก็วูบวาบแล้วหายไปจากซอกหิน",
+								"hindi": "उसी क्षण, पत्थरों के बीच से एक भयानक नीली रोशनी चमकी और गायब हो गई।"
+							},
+							"type": "speech"
+						},
+						{
+							"emotion": "sad",
+							"speaker": "anuk",
+							"content": {
+								"korean": "…! 무언가가 우리의 말을 듣고 있었어.",
+								"english": "...! Something was listening to us.",
+								"japanese": "…！ 何かが私たちの話を聞いていた。",
+								"chinese": "……！ 有什么东西在听我们说话。",
+								"french": "...! Quelque chose nous écoutait.",
+								"spanish": "...! Algo nos estaba escuchando.",
+								"vietnamese": "...! Có thứ gì đó đang lắng nghe chúng ta.",
+								"thai": "...! มีบางสิ่งกำลังฟังพวกเราอยู่",
+								"hindi": "…! कोई हमारी बातें सुन रहा था।"
+							},
+							"type": "speech"
+						},
+						{
+							"emotion": "base",
+							"speaker": "narrator",
+							"content": {
+								"korean": "차가운 바람이 거세지고, 침묵은 도리어 무거워졌다.",
+								"english": "The cold wind intensified, and the silence grew heavier.",
+								"japanese": "冷たい風が強まり、沈黙はかえって重くなった。",
+								"chinese": "寒风愈发凛冽，寂静反而变得更加沉重。",
+								"french": "Le vent froid s'intensifia, et le silence devint plus lourd.",
+								"spanish": "El viento frío se intensificó, y el silencio se hizo más pesado.",
+								"vietnamese": "Gió lạnh thổi mạnh hơn, và sự im lặng càng trở nên nặng nề.",
+								"thai": "ลมหนาวโหมกระหน่ำขึ้น และความเงียบก็กลับหนักอึ้งขึ้นไปอีก",
+								"hindi": "ठंडी हवा तेज़ हो गई, और खामोशी और भी भारी हो गई।"
+							},
+							"type": "speech"
+						},
+						{
+							"speaker": "boss",
+							"emotion": "base",
+							"content": {
+								"korean": "오랜만에 듣는 정직한 맹세로군.",
+								"english": "A truly honest oath, heard after a long time.",
+								"japanese": "久方ぶりに聞く、正直な誓いだ。",
+								"chinese": "真是久违的、正直的誓言啊。",
+								"french": "Un serment honnête, entendu après si longtemps.",
+								"spanish": "Un juramento honesto, escuchado después de mucho tiempo.",
+								"vietnamese": "Lời thề thành thật đã lâu lắm rồi mới được nghe.",
+								"thai": "เป็นคำสาบานที่ซื่อสัตย์ที่ได้ยินมานานแล้ว",
+								"hindi": "बहुत समय बाद सुनी गई एक सच्ची शपथ।"
+							},
+							"type": "speech"
+						},
+						{
+							"type": "speech",
+							"content": {
+								"korean": "하지만 너희의 약속은, 이미 깨어졌다.",
+								"english": "But your promise has already been broken.",
+								"japanese": "しかし、お前たちの約束は、既に破られている。",
+								"chinese": "然而，你们的誓言，早已被打破。",
+								"french": "Mais votre promesse est déjà rompue.",
+								"spanish": "Pero vuestra promesa ya está rota.",
+								"vietnamese": "Nhưng lời hứa của các ngươi, đã bị phá vỡ rồi.",
+								"thai": "แต่คำมั่นของเจ้า ก็ได้แตกสลายไปแล้ว",
+								"hindi": "लेकिन तुम्हारा वादा तो पहले ही टूट चुका है।"
+							},
+							"speaker": "boss",
+							"emotion": "angry"
+						},
+						{
+							"content": {
+								"korean": "네가 누구든, 상관없어. 우린 우리의 길을 간다.",
+								"english": "No matter who you are, it doesn't matter. We will follow our path.",
+								"japanese": "お前が誰であろうと、関係ない。私たちは私たちの道を行く。",
+								"chinese": "不管你是谁，都无所谓。我们走我们自己的路。",
+								"french": "Peu importe qui tu es. Nous suivrons notre chemin.",
+								"spanish": "Quienquiera que seas, no importa. Seguiremos nuestro camino.",
+								"vietnamese": "Ngươi là ai không quan trọng. Chúng ta sẽ đi con đường của mình.",
+								"thai": "ไม่ว่าเจ้าจะเป็นใคร ก็ไม่สำคัญ พวกเราจะไปตามทางของเรา",
+								"hindi": "तुम जो भी हो, कोई फर्क नहीं पड़ता। हम अपने रास्ते चलेंगे।"
+							},
+							"type": "speech",
+							"speaker": "character_any",
+							"emotion": "angry"
+						}
+					],
+					"lose_dialogue": [
+						{
+							"type": "speech",
+							"content": {
+								"korean": "가벼운 맹세는, 이 황야에 녹아내릴 뿐.",
+								"english": "Flimsy oaths merely melt away in this wilderness.",
+								"japanese": "軽薄な誓いは、この荒野に溶けて消えるだけだ。",
+								"chinese": "轻率的誓言，只会在这片荒野中消融。",
+								"french": "Les serments éphémères ne font que se dissoudre dans cette étendue sauvage.",
+								"spanish": "Los juramentos ligeros simplemente se disuelven en esta desolación.",
+								"vietnamese": "Lời thề hời hợt sẽ chỉ tan biến trong vùng hoang dã này.",
+								"thai": "คำสาบานที่ไร้น้ำหนักจะละลายหายไปในถิ่นทุรกันดารนี้.",
+								"hindi": "हल्की शपथें इस बंजर भूमि में बस घुल जाती हैं।"
+							},
+							"emotion": "base",
+							"speaker": "boss"
+						},
+						{
+							"speaker": "character_any",
+							"emotion": "angry",
+							"content": {
+								"korean": "…아직 끝나지 않았어. 우린 돌아올 거야.",
+								"english": "...It's not over yet. We'll return.",
+								"japanese": "…まだ終わっていない。我々は戻ってくるだろう。",
+								"chinese": "……还没结束。我们会回来的。",
+								"french": "...Ce n'est pas encore fini. Nous reviendrons.",
+								"spanish": "...Aún no ha terminado. Volveremos.",
+								"vietnamese": "...Chưa kết thúc đâu. Chúng ta sẽ trở lại.",
+								"thai": "...ยังไม่จบ. เราจะกลับมา.",
+								"hindi": "...अभी खत्म नहीं हुआ है। हम वापस आएंगे।"
+							},
+							"type": "speech"
+						},
+						{
+							"type": "direction",
+							"spot": [
+								3,
+								2
+							],
+							"duration_ms": 500,
+							"action": "enter",
+							"speaker": "anuk"
+						},
+						{
+							"type": "speech",
+							"content": {
+								"korean": "지키지 못할 약속이라면, 애초에 하지 말았어야지.",
+								"english": "If it's a promise you can't keep, you shouldn't have made it.",
+								"japanese": "守れない約束なら、最初からすべきではなかった。",
+								"chinese": "如果无法遵守承诺，当初就不该许下。",
+								"french": "Si c'est une promesse que tu ne peux pas tenir, tu n'aurais pas dû la faire.",
+								"spanish": "Si es una promesa que no puedes cumplir, no deberías haberla hecho.",
+								"vietnamese": "Nếu là lời hứa không thể giữ, thì đừng nên hứa ngay từ đầu.",
+								"thai": "ถ้าเป็นคำสัญญาที่รักษาไม่ได้, ก็ไม่ควรจะให้ไว้ตั้งแต่แรก.",
+								"hindi": "अगर तुम वादा नहीं निभा सकते, तो तुम्हें उसे करना ही नहीं चाहिए था।"
+							},
+							"emotion": "sad",
+							"speaker": "anuk"
+						}
+					]
+				}
+			]
+		}
+	]
+}
