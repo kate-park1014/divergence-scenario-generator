@@ -19,6 +19,8 @@ export type BossCard2 = {
 	id: string;
 	name: string;
 	appearance: string;
+	face: string;
+	hair: string;
 	surface_identity: string;
 	true_identity: string;
 	motivation: string;
@@ -109,13 +111,16 @@ export function buildBossGen2Prompt(
 - id: "{개념}_{Name}_V1" 형식의 PascalCase 영문 식별자 (예: GigaPlastic_Amalgam_V1, OceanTyrant_Thalassos_V1). 보스의 핵심 개념 + 이름 + _V1.
 - name: 짧고 강렬한 고유명. **반드시 영문(또는 로마자 표기)으로 작성** (예: Amalgam, Thalassos, Frostbite, Mother Vine). 한글 이름 금지.
 - appearance: 보스의 외형 묘사. 3~5문장의 풍부하고 감각적인 한국어 묘사. 색·질감·움직임·분위기가 그려지도록.
+  - **선명하고 채도 높은 색채와 발광(보석빛·무지갯빛·오팔빛·형광·금속광 등)을 적극 활용해, 이미지로 그렸을 때 시각적으로 강렬하게** 묘사할 것. 칙칙하고 평이한 외형이 아니라 한눈에 눈길을 끄는 화려한 비주얼을 지향한다.
+- face: 보스 "얼굴"의 **영문** 이미지 묘사 (피부·눈·표정·문양 등). 얼굴이 없는 형태라면 가장 가까운 핵심부(갈라진 가면, 발광하는 눈동자 무리, 텅 빈 구멍 등)를 묘사. appearance와 색채·발광 톤을 일관되게 맞출 것.
+- hair: 보스 "머리카락"의 **영문** 이미지 묘사. 머리카락이 없는 형태라면 머리 주변을 이루는 형상(촉수·포자·덩굴·연기·빛줄기 등)으로 대체 묘사.
 - surface_identity: 탐험대가 처음 마주할 때 드러나는 표면적 정체 (1~2문장).
 - true_identity: 클라이맥스에서 밝혀지는 숨겨진 진짜 정체. surface와 강한 갭을 둘 것 (2~3문장).
 - motivation: 보스가 탐험대를 노리거나 움직이는 동기 (1~3문장).
 - twist: 클라이맥스에서 드러나는 반전 연출. 보스의 대사("…")를 포함한 한 단락. 표면에서 진짜 정체로 뒤집히는 순간을 극적으로.
 
 # 주의
-- 서사 필드(appearance / surface_identity / true_identity / motivation / twist)는 반드시 한국어로 작성한다. id와 name은 영문으로 작성한다.
+- 서사 필드(appearance / surface_identity / true_identity / motivation / twist)는 반드시 한국어로 작성한다. id와 name, **그리고 face·hair는 영문으로 작성**한다.
 - 매 호출마다 컨셉·정체·외형이 겹치지 않는, 완전히 새로운 보스 1명을 만든다.`;
 
 	const existingBlock =
@@ -140,7 +145,8 @@ ${tone.guide}
 - 이 보스가 실제로 서 있는 무대는 "${theme}" 테마다. world_view(${world_view})는 보스가 원래 속한 세계다.
 - world_view와 "${theme}"이 다르면, 왜·어떻게 ${theme} 세계로 넘어왔는지 사연을 만들어 surface_identity / true_identity / motivation에 녹일 것.
 - surface_identity와 true_identity 사이에 "${theme}" 테마/세계관에 어울리는 강렬한 반전을 설계할 것.
-- appearance는 "${theme}" 무대에 실제로 서 있는 모습으로, 3~5문장의 풍부한 한국어 묘사.
+- appearance는 "${theme}" 무대에 실제로 서 있는 모습으로, 3~5문장의 풍부한 한국어 묘사. 선명한 고채도 색채와 발광(보석빛·무지갯빛·오팔빛·형광·금속광 등)으로 이미지화했을 때 강렬하게.
+- face와 hair는 영문 이미지 묘사로, appearance의 색채·발광 톤과 일관되게 작성.
 - twist는 보스의 대사를 포함한 극적인 클라이맥스 연출.${existingBlock}`;
 
 	return `${SYSTEM}\n\n---\n\n${USER}`;
@@ -160,7 +166,19 @@ export const bossGen2Tool = [
 						description: '"{개념}_{Name}_V1" 형식의 PascalCase 영문 식별자 (예: GigaPlastic_Amalgam_V1)'
 					},
 					name: { type: 'string', description: '짧고 강렬한 고유명. 반드시 영문(로마자) 표기, 한글 금지' },
-					appearance: { type: 'string', description: '3~5문장의 풍부한 한국어 외형 묘사' },
+					appearance: {
+						type: 'string',
+						description:
+							'3~5문장의 풍부한 한국어 외형 묘사. 선명한 고채도 색채와 발광(보석빛·무지갯빛·오팔빛·형광·금속광)으로 시각적으로 강렬하게'
+					},
+					face: {
+						type: 'string',
+						description: '보스 얼굴(또는 핵심부)의 영문 이미지 묘사 — 피부·눈·표정·문양 등'
+					},
+					hair: {
+						type: 'string',
+						description: '보스 머리카락(또는 머리 주변 형상)의 영문 이미지 묘사'
+					},
 					surface_identity: { type: 'string', description: '처음 드러나는 표면적 정체 (한국어)' },
 					true_identity: { type: 'string', description: '숨겨진 진짜 정체, 반전의 핵심 (한국어)' },
 					motivation: { type: 'string', description: '보스의 동기 (한국어)' },
@@ -173,6 +191,8 @@ export const bossGen2Tool = [
 					'id',
 					'name',
 					'appearance',
+					'face',
+					'hair',
 					'surface_identity',
 					'true_identity',
 					'motivation',

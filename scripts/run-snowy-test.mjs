@@ -58,7 +58,6 @@ function postJson(urlStr, body) {
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const ROOT = join(__dirname, '..');
-const SNOWY_TEST_DIR = join(ROOT, 'src/lib/data/storyarc/snowy_test');
 
 function parseArgs(argv) {
 	const opts = {};
@@ -71,17 +70,23 @@ function parseArgs(argv) {
 
 const args = parseArgs(process.argv.slice(2));
 const BASE = args.base ?? process.env.BASE ?? 'http://localhost:5178';
+// 테마: snowy → snowy_test 디렉토리, 그 외(desert/forest/hell/modern) → 동명 서브디렉토리
+const THEME = args.theme ?? process.env.THEME ?? 'snowy';
+const STORYARC_DIR =
+	THEME === 'snowy'
+		? join(ROOT, 'src/lib/data/storyarc/snowy_test')
+		: join(ROOT, 'src/lib/data/storyarc', THEME);
 const CONCURRENCY = Math.max(1, Math.min(10, Number(args.concurrency ?? process.env.CONCURRENCY ?? 3)));
 const BATCH = Math.max(1, Number(args.batch ?? process.env.BATCH ?? 5));
 const SKIP_GENERATE = Boolean(args['skip-generate'] ?? process.env.SKIP_GENERATE);
 const DRY_RUN = Boolean(args['dry-run']);
 
-// snowy_test 파일명 → storyarc id 파싱, level 오름차순 정렬 (chapter 1→30 순)
+// 파일명 → storyarc id 파싱, level 오름차순 정렬 (chapter 1→N 순)
 function collectIds() {
-	const files = readdirSync(SNOWY_TEST_DIR).filter(
-		(f) => f.startsWith('storyarc_snowy_') && f.endsWith('.ts')
+	const files = readdirSync(STORYARC_DIR).filter(
+		(f) => f.startsWith(`storyarc_${THEME}_`) && f.endsWith('.ts')
 	);
-	const ids = files.map((f) => f.replace(/^storyarc_/, '').replace(/\.ts$/, '')); // snowy_<boss>_<level>
+	const ids = files.map((f) => f.replace(/^storyarc_/, '').replace(/\.ts$/, '')); // <theme>_<boss>_<level>
 	const levelOf = (id) => Number(id.match(/_(\d+)$/)?.[1] ?? 0);
 	return ids.sort((a, b) => levelOf(a) - levelOf(b));
 }

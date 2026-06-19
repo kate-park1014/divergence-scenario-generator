@@ -182,6 +182,43 @@ import { storyarc_snowy_astrielle_28 } from './snowy_test/storyarc_snowy_astriel
 import { storyarc_snowy_finn_9 } from './snowy_test/storyarc_snowy_finn_9';
 import { storyarc_snowy_finn_19 } from './snowy_test/storyarc_snowy_finn_19';
 import { storyarc_snowy_finn_29 } from './snowy_test/storyarc_snowy_finn_29';
+import { storyarc_desert_obsidius_4 } from './desert/storyarc_desert_obsidius_4';
+import { storyarc_desert_orbel_1 } from './desert/storyarc_desert_orbel_1';
+import { storyarc_desert_qadir_2 } from './desert/storyarc_desert_qadir_2';
+import { storyarc_desert_sahar_0 } from './desert/storyarc_desert_sahar_0';
+import { storyarc_desert_sipius_3 } from './desert/storyarc_desert_sipius_3';
+import { storyarc_forest_chorale_5 } from './forest/storyarc_forest_chorale_5';
+import { storyarc_forest_conduit_8 } from './forest/storyarc_forest_conduit_8';
+import { storyarc_forest_honeydew_9 } from './forest/storyarc_forest_honeydew_9';
+import { storyarc_forest_nutcommander_3 } from './forest/storyarc_forest_nutcommander_3';
+import { storyarc_forest_thalassa_7 } from './forest/storyarc_forest_thalassa_7';
+import { storyarc_forest_verdantsorrow_6 } from './forest/storyarc_forest_verdantsorrow_6';
+import { storyarc_forest_veridia_4 } from './forest/storyarc_forest_veridia_4';
+import { storyarc_hell_arkhain_1 } from './hell/storyarc_hell_arkhain_1';
+import { storyarc_hell_kirantej_2 } from './hell/storyarc_hell_kirantej_2';
+import { storyarc_hell_kismet_4 } from './hell/storyarc_hell_kismet_4';
+import { storyarc_hell_lumen_0 } from './hell/storyarc_hell_lumen_0';
+import { storyarc_hell_memo_3 } from './hell/storyarc_hell_memo_3';
+import { storyarc_modern_elias_17 } from './modern/storyarc_modern_elias_17';
+import { storyarc_modern_elias_7 } from './modern/storyarc_modern_elias_7';
+import { storyarc_modern_evan_0 } from './modern/storyarc_modern_evan_0';
+import { storyarc_modern_evan_10 } from './modern/storyarc_modern_evan_10';
+import { storyarc_modern_kjang_14 } from './modern/storyarc_modern_kjang_14';
+import { storyarc_modern_kjang_4 } from './modern/storyarc_modern_kjang_4';
+import { storyarc_modern_minsu_1 } from './modern/storyarc_modern_minsu_1';
+import { storyarc_modern_minsu_11 } from './modern/storyarc_modern_minsu_11';
+import { storyarc_modern_mnemonic_19 } from './modern/storyarc_modern_mnemonic_19';
+import { storyarc_modern_mnemonic_9 } from './modern/storyarc_modern_mnemonic_9';
+import { storyarc_modern_nemesis_15 } from './modern/storyarc_modern_nemesis_15';
+import { storyarc_modern_nemesis_5 } from './modern/storyarc_modern_nemesis_5';
+import { storyarc_modern_otto_12 } from './modern/storyarc_modern_otto_12';
+import { storyarc_modern_otto_2 } from './modern/storyarc_modern_otto_2';
+import { storyarc_modern_rohan_13 } from './modern/storyarc_modern_rohan_13';
+import { storyarc_modern_rohan_3 } from './modern/storyarc_modern_rohan_3';
+import { storyarc_modern_staticecho_18 } from './modern/storyarc_modern_staticecho_18';
+import { storyarc_modern_staticecho_8 } from './modern/storyarc_modern_staticecho_8';
+import { storyarc_modern_whisper_16 } from './modern/storyarc_modern_whisper_16';
+import { storyarc_modern_whisper_6 } from './modern/storyarc_modern_whisper_6';
 import type { StoryArc } from '$lib/types';
 
 export const storyarcRegistry: StoryArc[] = [
@@ -341,7 +378,52 @@ export const storyarcRegistry: StoryArc[] = [
 	storyarc_snowy_astrielle_28,
 	storyarc_snowy_finn_9,
 	storyarc_snowy_finn_19,
-	storyarc_snowy_finn_29
+	storyarc_snowy_finn_29,
+
+	// desert (subdir, bulk 생성)
+	storyarc_desert_obsidius_4,
+	storyarc_desert_orbel_1,
+	storyarc_desert_qadir_2,
+	storyarc_desert_sahar_0,
+	storyarc_desert_sipius_3,
+
+	// forest (subdir, bulk 생성)
+	storyarc_forest_chorale_5,
+	storyarc_forest_conduit_8,
+	storyarc_forest_honeydew_9,
+	storyarc_forest_nutcommander_3,
+	storyarc_forest_thalassa_7,
+	storyarc_forest_verdantsorrow_6,
+	storyarc_forest_veridia_4,
+
+	// hell (subdir, bulk 생성)
+	storyarc_hell_arkhain_1,
+	storyarc_hell_kirantej_2,
+	storyarc_hell_kismet_4,
+	storyarc_hell_lumen_0,
+	storyarc_hell_memo_3,
+
+	// modern (subdir, bulk 생성)
+	storyarc_modern_elias_17,
+	storyarc_modern_elias_7,
+	storyarc_modern_evan_0,
+	storyarc_modern_evan_10,
+	storyarc_modern_kjang_14,
+	storyarc_modern_kjang_4,
+	storyarc_modern_minsu_1,
+	storyarc_modern_minsu_11,
+	storyarc_modern_mnemonic_19,
+	storyarc_modern_mnemonic_9,
+	storyarc_modern_nemesis_15,
+	storyarc_modern_nemesis_5,
+	storyarc_modern_otto_12,
+	storyarc_modern_otto_2,
+	storyarc_modern_rohan_13,
+	storyarc_modern_rohan_3,
+	storyarc_modern_staticecho_18,
+	storyarc_modern_staticecho_8,
+	storyarc_modern_whisper_16,
+	storyarc_modern_whisper_6,
 ];
 
 export function getStoryarc(id: string): StoryArc | undefined {

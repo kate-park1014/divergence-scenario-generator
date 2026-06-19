@@ -39,8 +39,44 @@ const SNOWY_SERIES: { key: string; pool: string }[] = [
 	{ key: 'finn', pool: 'pool_033' }
 ];
 
-const DEFAULT_BOSS_LIST = 'boss_list/snowy_20260612_144438.json';
-const SNOWY_TEST_DIR = 'src/lib/data/storyarc/snowy_test';
+// modern: boss_list 순서대로. pool 미존재 보스는 pool_<bossid> placeholder (추후 실제 pool_id로 교체).
+const MODERN_SERIES: { key: string; pool: string }[] = [
+	{ key: 'evan', pool: 'pool_098' },
+	{ key: 'minsu', pool: 'pool_099' },
+	{ key: 'otto', pool: 'pool_100' },
+	{ key: 'rohan', pool: 'pool_101' },
+	{ key: 'kjang', pool: 'pool_Spreadsheet_Accountant_V1' },
+	{ key: 'nemesis', pool: 'pool_Oathbound_Nemesis_V1' },
+	{ key: 'whisper', pool: 'pool_UrbanHorror_Whisper_V1' },
+	{ key: 'elias', pool: 'pool_ForgottenDebt_Elias_V1' },
+	{ key: 'staticecho', pool: 'pool_DigitalChaos_StaticEcho_V1' },
+	{ key: 'mnemonic', pool: 'pool_DigitalBetrayer_Mnemonic_V1' }
+];
+
+// desert: boss_list 순서대로. pool 미존재 보스는 pool_<bossid> placeholder (추후 실제 pool_id로 교체).
+const DESERT_SERIES: { key: string; pool: string }[] = [
+	{ key: 'sahar', pool: 'pool_051' },
+	{ key: 'orbel', pool: 'pool_052' },
+	{ key: 'qadir', pool: 'pool_053' },
+	{ key: 'sipius', pool: 'pool_ThirstyRelic_Sipius_V1' },
+	{ key: 'obsidius', pool: 'pool_SandBinder_Obsidius_V1' }
+];
+
+const SERIES_BY_THEME: Record<string, { key: string; pool: string }[]> = {
+	snowy: SNOWY_SERIES,
+	modern: MODERN_SERIES,
+	desert: DESERT_SERIES
+};
+const BOSS_LIST_BY_THEME: Record<string, string> = {
+	snowy: 'boss_list/snowy_20260612_144438.json',
+	modern: 'boss_list/modern_20260612_144851.json',
+	desert: 'boss_list/desert_20260612_145947.json'
+};
+const OUT_DIR_BY_THEME: Record<string, string> = {
+	snowy: 'src/lib/data/storyarc/snowy_test',
+	modern: 'src/lib/data/storyarc/modern',
+	desert: 'src/lib/data/storyarc/desert'
+};
 
 type Failure = { boss: string; step: string; chapter?: number; error: string };
 
@@ -54,33 +90,37 @@ export const POST: RequestHandler = async ({ request, fetch }) => {
 		? body.bossIndices.map(Number)
 		: undefined;
 
-	if (theme !== 'snowy') {
-		return json({ error: 'snowy 외 테마는 아직 지원하지 않습니다.' }, { status: 400 });
+	const SERIES = SERIES_BY_THEME[theme];
+	const npcPool = npc_by_theme[theme as keyof typeof npc_by_theme];
+	if (!SERIES || !npcPool) {
+		return json({ error: `지원하지 않는 테마: ${theme} (snowy, modern, desert 만 가능)` }, { status: 400 });
 	}
+	const defaultBossList = BOSS_LIST_BY_THEME[theme];
+	const outDir = OUT_DIR_BY_THEME[theme];
 
 	// boss_list 로드
 	let bosses: SeriesBossInput[];
 	try {
-		const raw = await readFile(join(process.cwd(), body.bossListFile ?? DEFAULT_BOSS_LIST), 'utf-8');
+		const raw = await readFile(join(process.cwd(), body.bossListFile ?? defaultBossList), 'utf-8');
 		bosses = JSON.parse(raw).bosses;
 	} catch (e) {
 		return json({ error: `boss_list 로드 실패: ${e instanceof Error ? e.message : String(e)}` }, { status: 500 });
 	}
-	if (!Array.isArray(bosses) || bosses.length !== SNOWY_SERIES.length) {
-		return json({ error: `boss_list 보스 수(${bosses?.length})가 매핑(${SNOWY_SERIES.length})과 다릅니다.` }, { status: 400 });
+	if (!Array.isArray(bosses) || bosses.length !== SERIES.length) {
+		return json({ error: `boss_list 보스 수(${bosses?.length})가 매핑(${SERIES.length})과 다릅니다.` }, { status: 400 });
 	}
 
-	const npcs: NpcInput[] = npc_by_theme.snowy.map((n) => ({
+	const npcs: NpcInput[] = npcPool.map((n) => ({
 		key: n.key,
 		name_korean: n.name.korean,
 		name_english: n.name.english
 	}));
 
 	const levelFor = (idx: number, chapter: number) => idx + (chapter - 1) * 10;
-	const fileFor = (key: string, level: number) => `storyarc_snowy_${key}_${level}.ts`;
+	const fileFor = (key: string, level: number) => `storyarc_${theme}_${key}_${level}.ts`;
 
 	// 대상 인덱스
-	const targets = SNOWY_SERIES.map((_, i) => i).filter((i) => !bossIndices || bossIndices.includes(i));
+	const targets = SERIES.map((_, i) => i).filter((i) => !bossIndices || bossIndices.includes(i));
 
 	// dry-run: 대상/매핑만
 	if (dryRun) {
@@ -88,12 +128,12 @@ export const POST: RequestHandler = async ({ request, fetch }) => {
 			bossIndex: i,
 			boss_id: bosses[i].id,
 			boss_name: bosses[i].name,
-			key: SNOWY_SERIES[i].key,
-			pool: SNOWY_SERIES[i].pool,
+			key: SERIES[i].key,
+			pool: SERIES[i].pool,
 			chapters: Array.from({ length: chapters }, (_, k) => ({
 				chapter: k + 1,
 				level: levelFor(i, k + 1),
-				file: fileFor(SNOWY_SERIES[i].key, levelFor(i, k + 1))
+				file: fileFor(SERIES[i].key, levelFor(i, k + 1))
 			}))
 		}));
 		return json({ dryRun: true, theme, chapters, count: targets.length, plan });
@@ -123,7 +163,7 @@ export const POST: RequestHandler = async ({ request, fetch }) => {
 
 	async function processBoss(idx: number): Promise<void> {
 		const boss = bosses[idx];
-		const { key, pool } = SNOWY_SERIES[idx];
+		const { key, pool } = SERIES[idx];
 
 		// 1) 비트시트
 		let plan: Record<string, unknown>;
@@ -138,8 +178,8 @@ export const POST: RequestHandler = async ({ request, fetch }) => {
 		const prevSummaries: string[] = [];
 		for (let chapter = 1; chapter <= chapters; chapter++) {
 			const level = levelFor(idx, chapter);
-			const id = `snowy_${key}_${level}`;
-			const exportName = `storyarc_snowy_${key}_${level}`;
+			const id = `${theme}_${key}_${level}`;
+			const exportName = `storyarc_${theme}_${key}_${level}`;
 			try {
 				const gen = await gemini(
 					buildSeriesChapterPrompt(boss, npcs, theme, plan, chapter, chapters, prevSummaries),
@@ -162,7 +202,7 @@ export const POST: RequestHandler = async ({ request, fetch }) => {
 					id,
 					level,
 					chapter_name: gen.chapter_name,
-					theme: 'snowy',
+					theme,
 					rising_count: 3,
 					world: gen.world,
 					protagonist_goal: gen.protagonist_goal,
@@ -175,7 +215,7 @@ export const POST: RequestHandler = async ({ request, fetch }) => {
 				};
 
 				const content = `import type { StoryArc } from '$lib/types';\n\nexport const ${exportName}: StoryArc = ${JSON.stringify(arc, null, '\t')};\n`;
-				await writeFile(join(process.cwd(), SNOWY_TEST_DIR, fileFor(key, level)), content, 'utf-8');
+				await writeFile(join(process.cwd(), outDir, fileFor(key, level)), content, 'utf-8');
 
 				prevSummaries.push(summarize(arc));
 				ok.push(id);

@@ -7,6 +7,8 @@
 		id: string;
 		name: string;
 		appearance: string;
+		face: string;
+		hair: string;
 		surface_identity: string;
 		true_identity: string;
 		motivation: string;
@@ -134,6 +136,8 @@
 					id: src.id,
 					name: src.name,
 					appearance: gen.appearance ?? '',
+					face: gen.face ?? '',
+					hair: gen.hair ?? '',
 					surface_identity: gen.surface_identity ?? '',
 					true_identity: gen.true_identity ?? '',
 					motivation: gen.motivation ?? '',
@@ -250,6 +254,8 @@
 							<div class="field"><span class="key">zodiac</span><span>{card.zodiac_sign}</span></div>
 						{/if}
 						<div class="field"><span class="key">appearance</span><span>{card.appearance}</span></div>
+						<div class="field"><span class="key">face</span><span>{card.face}</span></div>
+						<div class="field"><span class="key">hair</span><span>{card.hair}</span></div>
 						<div class="field"><span class="key">surface</span><span>{card.surface_identity}</span></div>
 						<div class="field"><span class="key">true</span><span>{card.true_identity}</span></div>
 						<div class="field"><span class="key">motivation</span><span>{card.motivation}</span></div>

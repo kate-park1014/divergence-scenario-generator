@@ -83,6 +83,8 @@
 					id: gen.id ?? '',
 					name: gen.name ?? '',
 					appearance: gen.appearance ?? '',
+					face: gen.face ?? '',
+					hair: gen.hair ?? '',
 					surface_identity: gen.surface_identity ?? '',
 					true_identity: gen.true_identity ?? '',
 					motivation: gen.motivation ?? '',
@@ -218,6 +220,8 @@
 						</div>
 						<div class="field"><span class="key">id</span><span class="mono">{card.id}</span></div>
 						<div class="field"><span class="key">appearance</span><span>{card.appearance}</span></div>
+						<div class="field"><span class="key">face</span><span>{card.face}</span></div>
+						<div class="field"><span class="key">hair</span><span>{card.hair}</span></div>
 						<div class="field"><span class="key">surface</span><span>{card.surface_identity}</span></div>
 						<div class="field"><span class="key">true</span><span>{card.true_identity}</span></div>
 						<div class="field"><span class="key">motivation</span><span>{card.motivation}</span></div>
