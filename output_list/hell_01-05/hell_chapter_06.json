@@ -1,0 +1,3458 @@
+{
+	"chapter_order": 4,
+	"difficulty_level": 4,
+	"chapter_name": {
+		"korean": "지옥 특급 배달",
+		"english": "Hell Express",
+		"japanese": "地獄特急配達",
+		"chinese": "地狱特快专递",
+		"french": "Livraison",
+		"spanish": "Entrega",
+		"vietnamese": "Chuyển Phát",
+		"thai": "พัสดุด่วนนรก",
+		"hindi": "नरक एक्सप्रेस"
+	},
+	"scenarios": [
+		{
+			"scenario_id": "hell_memo_3_01",
+			"order": 1,
+			"act": "intro",
+			"theme": "hell",
+			"actors": {
+				"soot": {
+					"id": "mon_a0491490-e114-44d8-855c-d2d63b020da1",
+					"name": {
+						"korean": "그을음",
+						"english": "Soot",
+						"japanese": "煤",
+						"chinese": "煤烟",
+						"french": "Suie",
+						"spanish": "Hollín",
+						"vietnamese": "Bồ hóng",
+						"thai": "เขม่า",
+						"hindi": "कालिख"
+					},
+					"description": "",
+					"face_image_url": "https://imagedelivery.net/WTEqQNGFb-l-IHS6IGnzUQ/2275d372-4e89-4725-193c-fccc0b944300/public",
+					"battle_sprite_url": "https://imagedelivery.net/WTEqQNGFb-l-IHS6IGnzUQ/d1d5ba2b-da7c-4b75-42de-07c9cdda5d00/public"
+				}
+			},
+			"boss": {
+				"pool_id": "random_boss"
+			},
+			"prologue": {
+				"korean": [
+					"용암 강변. 지옥에서도 가장 뜨거운 곳.",
+					"그곳에, 거대한 소포를 짊어진 그림자가 나타났다.",
+					"그림자는 외쳤다. '늦었어! 늦었다고!'",
+					"…대체 누구에게 향한 외침인가.",
+					"여긴 지옥이다. 시간 따위는 존재하지 않는."
+				],
+				"english": [
+					"Lava Riverbank. The hottest place even in Hell.",
+					"There, a shadow appeared, burdened with a huge package.",
+					"The shadow cried out, 'It's late! Too late!'",
+					"...Who was that cry for...?",
+					"This is Hell. Where time does not exist."
+				],
+				"japanese": [
+					"溶岩の河岸。地獄でも最も熱い場所。",
+					"そこに、巨大な小包を背負った影が現れた。",
+					"影は叫んだ。「遅い！遅すぎる！」",
+					"…一体誰に向けられた叫びなのか。",
+					"ここは地獄だ。時間など存在しない場所。"
+				],
+				"chinese": [
+					"熔岩河畔。地狱中最热的地方。",
+					"那里，一个背负巨大包裹的影子出现了。",
+					"影子喊道：“晚了！太晚了！”",
+					"……这究竟是对谁的呼喊？",
+					"这里是地狱。一个时间不存在的地方。"
+				],
+				"french": [
+					"Rive du fleuve de lave. L'endroit le plus chaud même en Enfer.",
+					"Là, une ombre apparut, portant un énorme colis.",
+					"L'ombre s'écria : « C'est trop tard ! Trop tard ! »",
+					"…À qui s'adressait ce cri, au juste ?",
+					"C'est l'Enfer. Un endroit où le temps n'existe pas."
+				],
+				"spanish": [
+					"Ribera del río de lava. El lugar más caliente incluso en el Infierno.",
+					"Allí, apareció una sombra, cargando un paquete enorme.",
+					"La sombra gritó: «¡Es tarde! ¡Demasiado tarde!»",
+					"¿...A quién iba dirigido ese grito?",
+					"Esto es el Infierno. Un lugar donde el tiempo no existe."
+				],
+				"vietnamese": [
+					"Bờ sông dung nham. Nơi nóng nhất cả ở Địa ngục.",
+					"Ở đó, một bóng đen xuất hiện, vác một bưu kiện khổng lồ.",
+					"Bóng đen hét lên: 'Muộn rồi! Muộn rồi!'",
+					"…Cái tiếng kêu đó là dành cho ai vậy?",
+					"Đây là Địa ngục. Nơi thời gian không tồn tại."
+				],
+				"thai": [
+					"ริมฝั่งแม่น้ำลาวา ที่ที่ร้อนแรงที่สุดในนรก",
+					"ที่นั่น เงาหนึ่งปรากฏขึ้นพร้อมกับพัสดุขนาดใหญ่",
+					"เงาตะโกนว่า 'สายไปแล้ว! สายไปแล้ว!'",
+					"…เสียงกรีดร้องนั้นมุ่งตรงถึงใครกันแน่",
+					"นี่คือนรก ที่ที่ไม่มีเวลาอยู่จริง"
+				],
+				"hindi": [
+					"लावा नदी का किनारा। नर्क में भी सबसे गर्म जगह।",
+					"वहाँ, एक विशाल पार्सल उठाए एक परछाई प्रकट हुई।",
+					"परछाई चिल्लाई, 'देर हो गई! बहुत देर हो गई!'",
+					"...आखिर यह किसके लिए चीख थी?",
+					"यह नर्क है। जहाँ समय का कोई अस्तित्व नहीं है।"
+				]
+			},
+			"rooms": [
+				{
+					"id": 1,
+					"dialogue": [
+						{
+							"speaker": "narrator",
+							"content": {
+								"korean": "용암 강변. 뜨거운 열기가 발끝을 태웠다.",
+								"english": "Lava Riverbank. The scorching heat burned my toes.",
+								"japanese": "溶岩の河岸。熱気が足先を焦がした。",
+								"chinese": "熔岩河畔。炙热的蒸汽灼烧着脚尖。",
+								"french": "Rive du fleuve de lave. La chaleur torride me brûlait les orteils.",
+								"spanish": "Ribera del río de lava. El calor abrasador quemaba mis pies.",
+								"vietnamese": "Bờ sông dung nham. Hơi nóng bỏng rát đầu ngón chân.",
+								"thai": "ริมฝั่งแม่น้ำลาวา ความร้อนเผาผลาญปลายเท้า",
+								"hindi": "लावा नदी का किनारा। तपती गर्मी ने पैरों को जला दिया।"
+							},
+							"emotion": "base",
+							"type": "speech"
+						},
+						{
+							"duration_ms": 500,
+							"type": "direction",
+							"speaker": "soot",
+							"spot": [
+								2,
+								3
+							],
+							"action": "enter"
+						},
+						{
+							"speaker": "soot",
+							"content": {
+								"korean": "여긴… 지옥 아닌가요? 방금 저거 뭐예요?",
+								"english": "Isn't this... Hell? What was that just now?",
+								"japanese": "ここ…地獄じゃないんですか？今のは何ですか？",
+								"chinese": "这里是…地狱吧？刚才那是什么？",
+								"french": "N'est-ce pas… l'Enfer ici ? Qu'est-ce que c'était, là ?",
+								"spanish": "¿No es esto... el Infierno? ¿Qué fue eso de ahora?",
+								"vietnamese": "Đây không phải… Địa ngục sao? Vừa rồi là cái gì vậy?",
+								"thai": "นี่มัน…นรกไม่ใช่เหรอ? เมื่อกี้อะไรน่ะ?",
+								"hindi": "यह... नर्क नहीं है क्या? अभी वह क्या था?"
+							},
+							"type": "speech",
+							"emotion": "base"
+						},
+						{
+							"speaker": "character_any",
+							"content": {
+								"korean": "…저거 배달부 아니야?",
+								"english": "...Isn't that a delivery person?",
+								"japanese": "…あれ、配達員じゃないか？",
+								"chinese": "……那不是个快递员吗？",
+								"french": "…N'est-ce pas un livreur, ça ?",
+								"spanish": "¿...No es ese un repartidor?",
+								"vietnamese": "…Đó không phải người giao hàng sao?",
+								"thai": "…นั่นมันคนส่งของไม่ใช่เหรอ?",
+								"hindi": "...वह एक डिलीवरी मैन नहीं है क्या?"
+							},
+							"type": "speech",
+							"emotion": "base"
+						},
+						{
+							"action": "enter",
+							"spot": [
+								7,
+								3
+							],
+							"duration_ms": 500,
+							"type": "direction",
+							"speaker": "random_boss"
+						},
+						{
+							"content": {
+								"korean": "늦었어! 늦었다고! 큰일 났어!",
+								"english": "Late! Too late! This is a disaster!",
+								"japanese": "遅い！遅すぎる！大変だ！",
+								"chinese": "晚了！太晚了！糟了！",
+								"french": "Tard ! Trop tard ! C'est une catastrophe !",
+								"spanish": "¡Tarde! ¡Demasiado tarde! ¡Esto es un desastre!",
+								"vietnamese": "Muộn rồi! Muộn rồi! To chuyện rồi!",
+								"thai": "สายไปแล้ว! สายไปแล้ว! แย่แล้ว!",
+								"hindi": "देर हो गई! बहुत देर हो गई! बड़ी मुसीबत हो गई!"
+							},
+							"speaker": "random_boss",
+							"type": "speech",
+							"emotion": "angry"
+						},
+						{
+							"emotion": "base",
+							"type": "speech",
+							"content": {
+								"korean": "지옥에 웬 택배 배달이…?",
+								"english": "Parcel delivery in Hell...?",
+								"japanese": "地獄に宅配便の配達が…？",
+								"chinese": "地狱里居然有快递……？",
+								"french": "Une livraison de colis en Enfer… ?",
+								"spanish": "¿Entrega de paquetes en el Infierno…?",
+								"vietnamese": "Giao hàng tận nơi ở Địa ngục à…?",
+								"thai": "ส่งของในนรกเนี่ยนะ…?",
+								"hindi": "नर्क में पार्सल डिलीवरी...?"
+							},
+							"speaker": "soot"
+						}
+					]
+				},
+				{
+					"dialogue": [
+						{
+							"spot": [
+								2,
+								3
+							],
+							"action": "enter",
+							"speaker": "soot",
+							"duration_ms": 500,
+							"type": "direction"
+						},
+						{
+							"duration_ms": 500,
+							"type": "direction",
+							"speaker": "random_boss",
+							"action": "enter",
+							"spot": [
+								7,
+								3
+							]
+						},
+						{
+							"emotion": "angry",
+							"type": "speech",
+							"content": {
+								"korean": "빨리, 빨리! 이대로 가면 재앙이 닥쳐!",
+								"english": "Hurry, hurry! Disaster will strike if we keep this up!",
+								"japanese": "早く、早く！このままじゃ災厄が起きる！",
+								"chinese": "快，快！再这样下去，灾难就要降临了！",
+								"french": "Vite, vite ! Si ça continue comme ça, la catastrophe va frapper !",
+								"spanish": "¡Rápido, rápido! ¡Si seguimos así, la catástrofe se avecina!",
+								"vietnamese": "Nhanh lên, nhanh lên! Cứ thế này thảm họa sẽ ập đến!",
+								"thai": "เร็วเข้า! เร็วเข้า! ถ้ายังเป็นแบบนี้ต่อไป หายนะจะมาเยือน!",
+								"hindi": "जल्दी करो, जल्दी करो! अगर ऐसे ही चलता रहा तो तबाही आ जाएगी!"
+							},
+							"speaker": "random_boss"
+						},
+						{
+							"speaker": "soot",
+							"content": {
+								"korean": "재앙이요? 여기보다 더한 재앙이 있다구요?",
+								"english": "Disaster? You mean there's a disaster worse than this place?",
+								"japanese": "災厄ですって？ここより酷い災厄があるって言うんですか？",
+								"chinese": "灾难？你是指有比这里更糟糕的灾难吗？",
+								"french": "Une catastrophe ? Vous voulez dire qu'il y a une catastrophe pire que cet endroit ?",
+								"spanish": "¿Una catástrofe? ¿Quieres decir que hay una catástrofe peor que este lugar?",
+								"vietnamese": "Thảm họa ư? Ý anh là có thảm họa nào tệ hơn nơi này sao?",
+								"thai": "หายนะเหรอ? คุณหมายความว่ามีหายนะที่แย่กว่าที่นี่อีกเหรอ?",
+								"hindi": "तबाही? क्या आपका मतलब है कि इस जगह से भी बदतर कोई तबाही है?"
+							},
+							"emotion": "base",
+							"type": "speech"
+						},
+						{
+							"emotion": "base",
+							"type": "speech",
+							"content": {
+								"korean": "저 비명… 어딘가 멀리 있는 걸 향한 것 같아.",
+								"english": "That scream... it seems to be aimed at something far away.",
+								"japanese": "あの悲鳴… どこか遠くにあるものに向けられているみたい。",
+								"chinese": "那尖叫声…… 好像是冲着某个遥远的东西去的。",
+								"french": "Ce cri… il semble viser quelque chose de très loin.",
+								"spanish": "Ese grito… parece estar dirigido a algo muy lejano.",
+								"vietnamese": "Tiếng hét đó... dường như đang hướng về một thứ gì đó rất xa.",
+								"thai": "เสียงกรี๊ดนั่น... ดูเหมือนจะมุ่งเป้าไปที่บางสิ่งที่อยู่ไกลออกไป",
+								"hindi": "वह चीख... ऐसा लगता है कि यह दूर किसी चीज़ के लिए है।"
+							},
+							"speaker": "character_any"
+						}
+					],
+					"id": 3
+				},
+				{
+					"id": 5,
+					"dialogue": [
+						{
+							"speaker": "soot",
+							"duration_ms": 500,
+							"type": "direction",
+							"spot": [
+								2,
+								3
+							],
+							"action": "enter"
+						},
+						{
+							"action": "enter",
+							"spot": [
+								7,
+								3
+							],
+							"duration_ms": 500,
+							"type": "direction",
+							"speaker": "random_boss"
+						},
+						{
+							"emotion": "sad",
+							"type": "speech",
+							"speaker": "random_boss",
+							"content": {
+								"korean": "이러다 모두 늦는다고! 큰일 나!",
+								"english": "We'll all be late at this rate! It'll be a disaster!",
+								"japanese": "このままじゃ全員遅れちゃう！大変なことになる！",
+								"chinese": "这样下去大家都会迟到！要出大事了！",
+								"french": "À ce rythme, on va tous être en retard ! C'est la catastrophe !",
+								"spanish": "¡A este paso, todos llegaremos tarde! ¡Será un desastre!",
+								"vietnamese": "Cứ thế này chúng ta sẽ trễ mất! Chuyện lớn đấy!",
+								"thai": "ถ้าเป็นแบบนี้ เราจะสายกันหมด! แย่แล้ว!",
+								"hindi": "अगर ऐसे ही चलता रहा तो हम सब देर हो जाएंगे! यह एक आपदा होगी!"
+							}
+						},
+						{
+							"speaker": "character_any",
+							"content": {
+								"korean": "도대체 뭘 배달하는 거야?",
+								"english": "What in the world are they delivering?",
+								"japanese": "一体何を配達してるんだ？",
+								"chinese": "到底在运送什么？",
+								"french": "Mais qu'est-ce qu'ils livrent, bon sang ?",
+								"spanish": "¿Qué demonios están entregando?",
+								"vietnamese": "Rốt cuộc họ đang giao cái gì vậy?",
+								"thai": "พวกเขากำลังส่งอะไรกันแน่?",
+								"hindi": "आखिर वो क्या डिलीवर कर रहे हैं?"
+							},
+							"emotion": "base",
+							"type": "speech"
+						},
+						{
+							"content": {
+								"korean": "지옥 배송은 무료 아니었나…?",
+								"english": "Wasn't Hell delivery free...?",
+								"japanese": "地獄への配送は無料じゃなかったのか…？",
+								"chinese": "地狱配送不是免费的吗……？",
+								"french": "La livraison en enfer n'était pas gratuite… ?",
+								"spanish": "¿Acaso la entrega al infierno no era gratis…?",
+								"vietnamese": "Chẳng phải giao hàng xuống địa ngục là miễn phí sao...?",
+								"thai": "การจัดส่งไปนรกมันฟรีไม่ใช่เหรอ...?",
+								"hindi": "क्या नर्क में डिलीवरी मुफ़्त नहीं थी...?"
+							},
+							"speaker": "soot",
+							"emotion": "base",
+							"type": "speech"
+						}
+					]
+				},
+				{
+					"id": 9,
+					"dialogue": [
+						{
+							"speaker": "soot",
+							"duration_ms": 500,
+							"type": "direction",
+							"spot": [
+								2,
+								3
+							],
+							"action": "enter"
+						},
+						{
+							"duration_ms": 500,
+							"type": "direction",
+							"speaker": "random_boss",
+							"spot": [
+								7,
+								3
+							],
+							"action": "enter"
+						},
+						{
+							"type": "speech",
+							"emotion": "angry",
+							"speaker": "random_boss",
+							"content": {
+								"korean": "안 돼! 시간이 없어! 이 소포가 늦으면 세상이 망해!",
+								"english": "No! There's no time! If this package is late, the world will end!",
+								"japanese": "ダメだ！時間がない！この小包が遅れたら世界が滅びる！",
+								"chinese": "不行！没时间了！如果这个包裹迟了，世界就会毁灭！",
+								"french": "Non ! Pas le temps ! Si ce colis est en retard, le monde est perdu !",
+								"spanish": "¡No! ¡No hay tiempo! Si este paquete se retrasa, ¡el mundo se acaba!",
+								"vietnamese": "Không! Không còn thời gian nữa! Nếu gói hàng này trễ, thế giới sẽ diệt vong!",
+								"thai": "ไม่นะ! ไม่มีเวลาแล้ว! ถ้าพัสดุนี้ล่าช้า โลกจะถึงจุดจบ!",
+								"hindi": "नहीं! समय नहीं है! अगर यह पार्सल देर हुआ, तो दुनिया खत्म हो जाएगी!"
+							}
+						},
+						{
+							"emotion": "base",
+							"type": "speech",
+							"content": {
+								"korean": "세상이 망한다고? 저 소포 안에 뭐가 있는데?",
+								"english": "The world will end? What's inside that package?",
+								"japanese": "世界が滅びるって？あの小包の中に何が入ってるんだ？",
+								"chinese": "世界会毁灭？那个包裹里有什么？",
+								"french": "Le monde va finir ? Qu'y a-t-il dans ce colis ?",
+								"spanish": "¿El mundo se acaba? ¿Qué hay dentro de ese paquete?",
+								"vietnamese": "Thế giới sẽ diệt vong ư? Trong gói hàng đó có gì vậy?",
+								"thai": "โลกจะถึงจุดจบเหรอ? ในพัสดุนั่นมีอะไรอยู่?",
+								"hindi": "दुनिया खत्म हो जाएगी? उस पैकेज के अंदर क्या है?"
+							},
+							"speaker": "character_any"
+						},
+						{
+							"emotion": "base",
+							"type": "speech",
+							"content": {
+								"korean": "…설마, 지옥에서도 제일 중요한 건가?",
+								"english": "...Could it be, the most important thing even in Hell?",
+								"japanese": "…まさか、地獄でも一番重要なものなのか？",
+								"chinese": "……难道，这是地狱里最重要的东西吗？",
+								"french": "...Serait-ce la chose la plus importante, même en enfer ?",
+								"spanish": "¿Será, la cosa más importante incluso en el infierno?",
+								"vietnamese": "...Không lẽ, đó là thứ quan trọng nhất ngay cả ở địa ngục sao?",
+								"thai": "...หรือว่า มันคือสิ่งที่สำคัญที่สุดแม้แต่ในนรก?",
+								"hindi": "...क्या यह, नरक में भी सबसे महत्वपूर्ण चीज़ है?"
+							},
+							"speaker": "soot"
+						}
+					]
+				},
+				{
+					"id": 15,
+					"lose_dialogue": [
+						{
+							"spot": [
+								7,
+								3
+							],
+							"action": "enter",
+							"duration_ms": 500,
+							"type": "direction",
+							"speaker": "random_boss"
+						},
+						{
+							"emotion": "happy",
+							"type": "speech",
+							"speaker": "random_boss",
+							"content": {
+								"korean": "하하! 늦었어! 이제 아무도 막을 수 없어!",
+								"english": "Haha! Too late! Now no one can stop it!",
+								"japanese": "ハハ！遅い！もう誰も止められない！",
+								"chinese": "哈哈哈！晚了！现在谁也无法阻止了！",
+								"french": "Hahaha ! Trop tard ! Plus personne ne peut l'arrêter maintenant !",
+								"spanish": "¡Jaja! ¡Tarde! ¡Ahora nadie puede detenerlo!",
+								"vietnamese": "Haha! Muộn rồi! Giờ không ai có thể ngăn cản được!",
+								"thai": "ฮ่าฮ่า! สายไปแล้ว! ไม่มีใครหยุดมันได้แล้ว!",
+								"hindi": "हाहा! बहुत देर हो चुकी है! अब कोई इसे रोक नहीं सकता!"
+							}
+						},
+						{
+							"speaker": "character_any",
+							"content": {
+								"korean": "젠장… 이대로 포기할 순 없어.",
+								"english": "Damn it... I can't give up like this.",
+								"japanese": "くそっ…このまま諦めるわけにはいかない。",
+								"chinese": "该死……不能就这样放弃。",
+								"french": "Merde... Je ne peux pas abandonner comme ça.",
+								"spanish": "Maldita sea... No puedo rendirme así.",
+								"vietnamese": "Chết tiệt... Không thể từ bỏ như thế này được.",
+								"thai": "ให้ตายสิ...ฉันจะยอมแพ้แบบนี้ไม่ได้",
+								"hindi": "धिक्कार है... मैं ऐसे हार नहीं मान सकता।"
+							},
+							"type": "speech",
+							"emotion": "angry"
+						},
+						{
+							"emotion": "angry",
+							"type": "speech",
+							"content": {
+								"korean": "다시… 다시 도전해야 해요!",
+								"english": "Again... I must challenge again!",
+								"japanese": "もう一度…また挑戦しなくちゃ！",
+								"chinese": "再来...我必须再挑战一次！",
+								"french": "Encore... je dois réessayer !",
+								"spanish": "Otra vez... ¡debo intentarlo de nuevo!",
+								"vietnamese": "Lại nữa... tôi phải thử lại thôi!",
+								"thai": "อีกครั้ง... ฉันต้องลองใหม่อีกครั้ง!",
+								"hindi": "फिर से... मुझे फिर से कोशिश करनी होगी!"
+							},
+							"speaker": "soot"
+						}
+					],
+					"dialogue": [
+						{
+							"action": "enter",
+							"spot": [
+								2,
+								3
+							],
+							"speaker": "soot",
+							"duration_ms": 500,
+							"type": "direction"
+						},
+						{
+							"speaker": "random_boss",
+							"duration_ms": 500,
+							"type": "direction",
+							"action": "enter",
+							"spot": [
+								7,
+								3
+							]
+						},
+						{
+							"type": "speech",
+							"emotion": "angry",
+							"content": {
+								"korean": "방해하지 마! 이건… 이건 배달되어야 해!",
+								"english": "Don't interfere! This... this must be delivered!",
+								"japanese": "邪魔するな！これは… これは配達されなきゃならないんだ！",
+								"chinese": "别碍事！这个……这个必须送达！",
+								"french": "Ne m'interromps pas ! Ça… ça doit être livré !",
+								"spanish": "¡No interfieras! ¡Esto… esto debe ser entregado!",
+								"vietnamese": "Đừng cản trở! Cái này... cái này phải được giao!",
+								"thai": "อย่าขวางนะ! นี่... นี่มันต้องถูกส่งไป!",
+								"hindi": "दखल मत दो! यह... यह डिलीवर होना चाहिए!"
+							},
+							"speaker": "random_boss"
+						},
+						{
+							"content": {
+								"korean": "우리가 알아야겠어. 그 소포의 정체를.",
+								"english": "We need to know. The identity of that package.",
+								"japanese": "我々が知るべきだ。あの小包の正体を。",
+								"chinese": "我们必须知道。那个包裹的真实身份。",
+								"french": "Nous devons savoir. L'identité de ce colis.",
+								"spanish": "Necesitamos saber. La identidad de ese paquete.",
+								"vietnamese": "Chúng ta cần biết. Danh tính của gói hàng đó.",
+								"thai": "เราต้องรู้. ตัวตนของพัสดุนั้น.",
+								"hindi": "हमें जानना होगा। उस पार्सल की पहचान।"
+							},
+							"speaker": "character_any",
+							"type": "speech",
+							"emotion": "base"
+						},
+						{
+							"emotion": "angry",
+							"type": "speech",
+							"speaker": "random_boss",
+							"content": {
+								"korean": "…그럼 날 쓰러뜨려! 소포는 절대 못 줘!",
+								"english": "...Then defeat me! You'll never get the package!",
+								"japanese": "…なら、私を倒せ！小包は絶対に渡さない！",
+								"chinese": "……那就打倒我！你绝不可能拿到包裹！",
+								"french": "...Alors, abats-moi ! Tu n'auras jamais le colis !",
+								"spanish": "...¡Entonces derrótame! ¡Nunca te daré el paquete!",
+								"vietnamese": "...Vậy thì đánh bại ta đi! Ngươi sẽ không bao giờ lấy được gói hàng!",
+								"thai": "...งั้นก็โค่นฉันลงซะ! ไม่มีทางที่ฉันจะให้พัสดุนั่น!",
+								"hindi": "तो मुझे हराओ! पार्सल तुम्हें कभी नहीं मिलेगा!"
+							}
+						}
+					],
+					"win_dialogue": [
+						{
+							"action": "enter",
+							"spot": [
+								2,
+								3
+							],
+							"duration_ms": 500,
+							"type": "direction",
+							"speaker": "soot"
+						},
+						{
+							"type": "speech",
+							"emotion": "sad",
+							"content": {
+								"korean": "크윽… 늦어… 늦었어…!",
+								"english": "Ugh... Too late... It's too late...!",
+								"japanese": "くっ…遅い…遅すぎた…！",
+								"chinese": "呃……晚了……太晚了……！",
+								"french": "Argh... Trop tard... C'est trop tard... !",
+								"spanish": "Argh... Tarde... ¡Es tarde...!",
+								"vietnamese": "Khụ... Muộn rồi... Đã quá muộn rồi...!",
+								"thai": "อึก...สายไป...สายไปแล้ว...!",
+								"hindi": "उह... बहुत देर हो चुकी है... बहुत देर हो चुकी है...!"
+							},
+							"speaker": "random_boss"
+						},
+						{
+							"emotion": "base",
+							"type": "speech",
+							"content": {
+								"korean": "늦었다니? 뭐가?",
+								"english": "Too late? For what?",
+								"japanese": "遅いって？何が？",
+								"chinese": "晚了？什么晚了？",
+								"french": "Trop tard ? Pour quoi ?",
+								"spanish": "¿Tarde? ¿Qué?",
+								"vietnamese": "Muộn rồi ư? Muộn cái gì?",
+								"thai": "สายไปแล้วเหรอ? เรื่องอะไร?",
+								"hindi": "देर हो गई? किस लिए?"
+							},
+							"speaker": "character_any"
+						},
+						{
+							"emotion": "sad",
+							"type": "speech",
+							"speaker": "random_boss",
+							"content": {
+								"korean": "이 소포는… 우주의… 시공간 균열을 막는…!",
+								"english": "This package... stops the universe's... spacetime rift...!",
+								"japanese": "この小包は…宇宙の…時空の裂け目を塞ぐ…！",
+								"chinese": "这个包裹……是为了阻止宇宙的……时空裂缝……！",
+								"french": "Ce colis... arrête la... faille spatio-temporelle de l'univers...!",
+								"spanish": "Este paquete... detiene la... grieta espacio-temporal del universo...!",
+								"vietnamese": "Gói hàng này... ngăn chặn... vết nứt không thời gian của vũ trụ...!",
+								"thai": "พัสดุนี้...หยุด...รอยแยกกาลอวกาศของจักรวาล...!",
+								"hindi": "यह पार्सल... ब्रह्मांड के... दिक्काल दरार को रोकता है...!"
+							}
+						},
+						{
+							"emotion": "base",
+							"type": "speech",
+							"speaker": "soot",
+							"content": {
+								"korean": "우주? 시공간 균열?",
+								"english": "Universe? Spacetime rift?",
+								"japanese": "宇宙？時空の裂け目？",
+								"chinese": "宇宙？时空裂缝？",
+								"french": "L'univers ? Une faille spatio-temporelle ?",
+								"spanish": "¿Universo? ¿Grieta espacio-temporal?",
+								"vietnamese": "Vũ trụ? Vết nứt không thời gian?",
+								"thai": "จักรวาล? รอยแยกกาลอวกาศ?",
+								"hindi": "ब्रह्मांड? दिक्काल दरार?"
+							}
+						},
+						{
+							"type": "speech",
+							"emotion": "base",
+							"content": {
+								"korean": "배달부는 쓰러졌다. 소포에서 종잇장 하나가 떨어진다.",
+								"english": "The delivery person collapsed. A piece of paper falls from the package.",
+								"japanese": "配達員は倒れた。小包から紙切れが１枚落ちる。",
+								"chinese": "送货员倒下了。一张纸从包裹中掉了出来。",
+								"french": "Le livreur s'est effondré. Un morceau de papier tombe du colis.",
+								"spanish": "El repartidor cayó. Un trozo de papel cae del paquete.",
+								"vietnamese": "Người giao hàng gục xuống. Một mảnh giấy rơi ra từ gói hàng.",
+								"thai": "บุรุษไปรษณีย์ล้มลง กระดาษแผ่นหนึ่งตกลงมาจากพัสดุ",
+								"hindi": "डिलीवरी वाला गिर गया। पार्सल से एक कागज़ का टुकड़ा गिरता है।"
+							},
+							"speaker": "narrator"
+						},
+						{
+							"speaker": "narrator",
+							"content": {
+								"korean": "지옥의 언어가 아닌, 알 수 없는 좌표들이었다.",
+								"english": "Not the language of hell, but unknown coordinates.",
+								"japanese": "地獄の言語ではなく、未知の座標だった。",
+								"chinese": "那不是地狱的语言，而是未知的坐标。",
+								"french": "Pas la langue de l'enfer, mais des coordonnées inconnues.",
+								"spanish": "No era el idioma del infierno, sino coordenadas desconocidas.",
+								"vietnamese": "Không phải ngôn ngữ của địa ngục, mà là những tọa độ không xác định.",
+								"thai": "ไม่ใช่ภาษาของนรก แต่เป็นพิกัดที่ไม่รู้จัก",
+								"hindi": "नरक की भाषा नहीं, बल्कि अज्ञात निर्देशांक थे।"
+							},
+							"emotion": "base",
+							"type": "speech"
+						}
+					]
+				}
+			]
+		},
+		{
+			"scenario_id": "hell_memo_3_02",
+			"order": 2,
+			"act": "rising",
+			"theme": "hell",
+			"actors": {
+				"cinder": {
+					"id": "mon_7bdc5bba-75ec-4589-827e-193b3c59b022",
+					"name": {
+						"korean": "신더",
+						"english": "Cinder",
+						"japanese": "シンダー",
+						"chinese": "辛德",
+						"french": "Cinder",
+						"spanish": "Cinder",
+						"vietnamese": "Xinder",
+						"thai": "ซินเดอร์",
+						"hindi": "सिंडर"
+					},
+					"description": "",
+					"face_image_url": "https://imagedelivery.net/WTEqQNGFb-l-IHS6IGnzUQ/bc21258b-93ac-4669-7330-fdf4e8a57c00/public",
+					"battle_sprite_url": "https://imagedelivery.net/WTEqQNGFb-l-IHS6IGnzUQ/939a1911-1849-425c-67a4-4958bbdc3300/public"
+				}
+			},
+			"boss": {
+				"pool_id": "random_boss"
+			},
+			"prologue": {
+				"korean": [
+					"용암 강변. 낡은 제복의 배달부가 소포를 짊어지고 뛰고 있다.",
+					"“늦었어! 늦었어!” 그는 비명처럼 외친다.",
+					"지옥에도 규칙이 있다지만, 이건 좀 이상하다.",
+					"소포가 찢어졌다. 그 안에서 알 수 없는 종잇장이 삐져나온다."
+				],
+				"english": [
+					"Lava riverbank. A deliveryman in a worn uniform runs, carrying a package.",
+					"“Late! Late!” he screams.",
+					"Even hell has rules, but this is a bit strange.",
+					"The package is torn. An unknown slip of paper pokes out from inside."
+				],
+				"japanese": [
+					"溶岩の川辺。古びた制服の配達人が荷物を背負って走っている。",
+					"「遅い！遅い！」彼は悲鳴のように叫ぶ。",
+					"地獄にも掟はあるが、これは少しおかしい。",
+					"小包が破れた。中から正体不明の紙切れがはみ出している。"
+				],
+				"chinese": [
+					"熔岩河畔。一个穿着旧制服的快递员背着包裹奔跑着。",
+					"“迟了！迟了！”他像尖叫一样喊道。",
+					"地狱也有规矩，但这有点奇怪。",
+					"包裹破了。里面露出一张不明的纸。"
+				],
+				"french": [
+					"Rive de la rivière de lave. Un livreur en uniforme usé court, portant un colis.",
+					"« En retard ! En retard ! » crie-t-il.",
+					"Même l'enfer a des règles, mais c'est un peu étrange.",
+					"Le colis est déchiré. Un bout de papier inconnu dépasse de l'intérieur."
+				],
+				"spanish": [
+					"Ribera del río de lava. Un repartidor con un uniforme gastado corre, cargando un paquete.",
+					"“¡Tarde! ¡Tarde!” grita él.",
+					"Hasta el infierno tiene reglas, pero esto es un poco extraño.",
+					"El paquete está roto. Un trozo de papel desconocido asoma por dentro."
+				],
+				"vietnamese": [
+					"Bờ sông dung nham. Một người giao hàng mặc đồng phục cũ kỹ đang chạy, mang theo một bưu kiện.",
+					"“Trễ rồi! Trễ rồi!” anh ta hét lên như một tiếng thét.",
+					"Ngay cả địa ngục cũng có quy tắc, nhưng điều này hơi lạ.",
+					"Bưu kiện bị xé rách. Một mảnh giấy không rõ ràng nhô ra từ bên trong."
+				],
+				"thai": [
+					"ริมฝั่งแม่น้ำลาวา. บุรุษไปรษณีย์ในเครื่องแบบเก่ากำลังวิ่งแบกพัสดุอยู่.",
+					"“สายแล้ว! สายแล้ว!” เขาร้องตะโกนเหมือนคนกรีดร้อง.",
+					"แม้แต่นรกก็ยังมีกฎ แต่เรื่องนี้มันแปลกไปหน่อย.",
+					"พัสดุขาด. มีกระดาษที่ไม่รู้จักหลุดออกมาจากข้างใน."
+				],
+				"hindi": [
+					"लावा नदी का किनारा। एक पुराने वर्दी वाला डिलीवरीमैन एक पैकेज ले कर दौड़ रहा है।",
+					"“देर हो गई! देर हो गई!” वह चीखता है।",
+					"नरक के भी नियम होते हैं, लेकिन यह थोड़ा अजीब है।",
+					"पैकेज फट गया है। उसके अंदर से एक अनजान कागज़ का टुकड़ा बाहर निकल रहा है।"
+				]
+			},
+			"rooms": [
+				{
+					"id": 1,
+					"dialogue": [
+						{
+							"emotion": "base",
+							"speaker": "narrator",
+							"type": "speech",
+							"content": {
+								"korean": "배달부의 비명이 용암 강변에 울려 퍼진다. 황금색 소포가 시야를 가린다.",
+								"english": "The deliveryman's scream echoes along the lava riverbank. A golden package obstructs the view.",
+								"japanese": "配達人の悲鳴が溶岩の川辺に響き渡る。黄金色の小包が視界を遮る。",
+								"chinese": "快递员的尖叫声在熔岩河畔回荡。一个金色的包裹挡住了视线。",
+								"french": "Le cri du livreur résonne le long de la rive de la rivière de lave. Un colis doré obstrue la vue.",
+								"spanish": "El grito del repartidor resuena a lo largo de la ribera del río de lava. Un paquete dorado obstruye la vista.",
+								"vietnamese": "Tiếng hét của người giao hàng vang vọng dọc bờ sông dung nham. Một bưu kiện màu vàng che khuất tầm nhìn.",
+								"thai": "เสียงกรีดร้องของบุรุษไปรษณีย์ดังก้องไปทั่วริมฝั่งแม่น้ำลาวา. พัสดุสีทองบดบังทัศนียภาพ.",
+								"hindi": "डिलीवरीमैन की चीख लावा नदी के किनारे गूँजती है। एक सुनहरा पैकेज दृष्टि को बाधित करता है।"
+							}
+						},
+						{
+							"content": {
+								"korean": "또 저 소리야?",
+								"english": "That sound again?",
+								"japanese": "またあの音か？",
+								"chinese": "又是那个声音？",
+								"french": "Encore ce bruit ?",
+								"spanish": "¿Otra vez ese ruido?",
+								"vietnamese": "Lại cái âm thanh đó à?",
+								"thai": "เสียงนั้นอีกแล้วเหรอ?",
+								"hindi": "फिर वही आवाज़?"
+							},
+							"type": "speech",
+							"speaker": "character_any",
+							"emotion": "base"
+						},
+						{
+							"duration_ms": 500,
+							"action": "enter",
+							"spot": [
+								2,
+								3
+							],
+							"speaker": "cinder",
+							"type": "direction"
+						},
+						{
+							"speaker": "cinder",
+							"type": "speech",
+							"content": {
+								"korean": "잠깐, 저거 뭐야?",
+								"english": "Wait, what's that?",
+								"japanese": "待て、あれは何だ？",
+								"chinese": "等等，那是什么？",
+								"french": "Attends, qu'est-ce que c'est ?",
+								"spanish": "Espera, ¿qué es eso?",
+								"vietnamese": "Khoan đã, cái gì thế kia?",
+								"thai": "เดี๋ยวนะ, นั่นอะไร?",
+								"hindi": "रुको, वो क्या है?"
+							},
+							"emotion": "base"
+						},
+						{
+							"emotion": "base",
+							"content": {
+								"korean": "배달부의 소포가 찢어졌다. 알 수 없는 종잇장이 땅에 떨어진다.",
+								"english": "The deliveryman's package is torn. An unknown slip of paper falls to the ground.",
+								"japanese": "配達人の小包が破れた。正体不明の紙切れが地面に落ちる。",
+								"chinese": "快递员的包裹破了。一张不明的纸掉在了地上。",
+								"french": "Le colis du livreur est déchiré. Un bout de papier inconnu tombe par terre.",
+								"spanish": "El paquete del repartidor está roto. Un trozo de papel desconocido cae al suelo.",
+								"vietnamese": "Bưu kiện của người giao hàng bị xé rách. Một mảnh giấy không rõ ràng rơi xuống đất.",
+								"thai": "พัสดุของบุรุษไปรษณีย์ขาด. กระดาษที่ไม่รู้จักหล่นลงบนพื้น.",
+								"hindi": "डिलीवरीमैन का पैकेज फट गया है। एक अनजान कागज़ का टुकड़ा ज़मीन पर गिरता है।"
+							},
+							"type": "speech",
+							"speaker": "narrator"
+						},
+						{
+							"type": "speech",
+							"content": {
+								"korean": "이거 내가 주울게.",
+								"english": "I'll pick this up.",
+								"japanese": "これは私が拾う。",
+								"chinese": "这个我来捡。",
+								"french": "Je vais le ramasser.",
+								"spanish": "Yo lo recogeré.",
+								"vietnamese": "Tôi sẽ nhặt cái này.",
+								"thai": "ฉันจะเก็บอันนี้.",
+								"hindi": "मैं इसे उठा लूँगा।"
+							},
+							"speaker": "cinder",
+							"emotion": "base"
+						}
+					]
+				},
+				{
+					"id": 3,
+					"dialogue": [
+						{
+							"spot": [
+								2,
+								3
+							],
+							"action": "enter",
+							"duration_ms": 500,
+							"type": "direction",
+							"speaker": "cinder"
+						},
+						{
+							"emotion": "base",
+							"speaker": "cinder",
+							"type": "speech",
+							"content": {
+								"korean": "이 종이… 이상해.",
+								"english": "This paper... it's strange.",
+								"japanese": "この紙…おかしい。",
+								"chinese": "这张纸…有点奇怪。",
+								"french": "Ce papier... c'est étrange.",
+								"spanish": "Este papel... es extraño.",
+								"vietnamese": "Tờ giấy này... lạ thật.",
+								"thai": "กระดาษนี่... แปลกจัง.",
+								"hindi": "यह कागज़... अजीब है।"
+							}
+						},
+						{
+							"type": "speech",
+							"content": {
+								"korean": "뭔데?",
+								"english": "What is it?",
+								"japanese": "何だ？",
+								"chinese": "什么？",
+								"french": "Qu'est-ce que c'est ?",
+								"spanish": "¿Qué es esto?",
+								"vietnamese": "Gì đây?",
+								"thai": "อะไรนะ?",
+								"hindi": "क्या है ये?"
+							},
+							"speaker": "character_any",
+							"emotion": "base"
+						},
+						{
+							"type": "speech",
+							"content": {
+								"korean": "지옥의 글씨가 아니야. 처음 보는 문자들로 가득해.",
+								"english": "Not infernal script. It's full of characters I've never seen before.",
+								"japanese": "地獄の文字じゃない。初めて見る文字ばかりだ。",
+								"chinese": "不是地狱文字。全是没见过的字符。",
+								"french": "Ce n'est pas une écriture infernale. C'est rempli de caractères que je n'ai jamais vus.",
+								"spanish": "No es escritura infernal. Está lleno de caracteres que nunca había visto.",
+								"vietnamese": "Không phải chữ địa ngục. Toàn là những ký tự chưa từng thấy.",
+								"thai": "ไม่ใช่ภาษาของนรก มีแต่ตัวอักษรที่ไม่เคยเห็นมาก่อนเลย",
+								"hindi": "यह नरक की लिखावट नहीं है। यह उन अक्षरों से भरी है जो मैंने पहले कभी नहीं देखे।"
+							},
+							"speaker": "cinder",
+							"emotion": "sad"
+						},
+						{
+							"emotion": "base",
+							"content": {
+								"korean": "좌표… 시간 기록인가?",
+								"english": "Coordinates... time records?",
+								"japanese": "座標…時間記録か？",
+								"chinese": "坐标…时间记录吗？",
+								"french": "Coordonnées... registres horaires ?",
+								"spanish": "¿Coordenadas... registros de tiempo?",
+								"vietnamese": "Tọa độ... ghi chép thời gian sao?",
+								"thai": "พิกัด... บันทึกเวลาเหรอ?",
+								"hindi": "निर्देशांक... समय के रिकॉर्ड हैं क्या?"
+							},
+							"type": "speech",
+							"speaker": "character_1"
+						}
+					]
+				},
+				{
+					"id": 5,
+					"dialogue": [
+						{
+							"duration_ms": 500,
+							"spot": [
+								2,
+								3
+							],
+							"action": "enter",
+							"speaker": "cinder",
+							"type": "direction"
+						},
+						{
+							"emotion": "sad",
+							"content": {
+								"korean": "우주적 좌표, 시간… 이건 지옥의 것이 아니야.",
+								"english": "Cosmic coordinates, time... This isn't from Hell.",
+								"japanese": "宇宙の座標、時間…これは地獄のものではない。",
+								"chinese": "宇宙坐标，时间…这不是地狱的东西。",
+								"french": "Coordonnées cosmiques, le temps... Ce n'est pas de l'enfer.",
+								"spanish": "Coordenadas cósmicas, tiempo... Esto no es del infierno.",
+								"vietnamese": "Tọa độ vũ trụ, thời gian... Đây không phải của địa ngục.",
+								"thai": "พิกัดจักรวาล, เวลา... นี่ไม่ใช่ของนรก",
+								"hindi": "ब्रह्मांडीय निर्देशांक, समय... यह नरक का नहीं है।"
+							},
+							"type": "speech",
+							"speaker": "cinder"
+						},
+						{
+							"speaker": "character_any",
+							"type": "speech",
+							"content": {
+								"korean": "그럼 저 소포가… 평범한 물건이 아니란 거네.",
+								"english": "Then that package... isn't an ordinary item.",
+								"japanese": "じゃああの小包は…普通の物じゃないってことか。",
+								"chinese": "那么那个包裹…就不是普通物品了。",
+								"french": "Alors ce colis... n'est pas un objet ordinaire.",
+								"spanish": "Entonces ese paquete... no es un objeto común.",
+								"vietnamese": "Vậy ra gói hàng đó... không phải là đồ bình thường.",
+								"thai": "ถ้าอย่างนั้นพัสดุนั้น... ก็ไม่ใช่ของธรรมดาแล้วสิ",
+								"hindi": "तो वो पार्सल... कोई साधारण चीज़ नहीं है।"
+							},
+							"emotion": "base"
+						},
+						{
+							"speaker": "character_2",
+							"content": {
+								"korean": "대체 뭘 배달하는 거지?",
+								"english": "What on earth are they delivering?",
+								"japanese": "一体何を配達してるんだ？",
+								"chinese": "到底在送什么？",
+								"french": "Que livrent-ils donc ?",
+								"spanish": "¿Qué demonios están entregando?",
+								"vietnamese": "Rốt cuộc họ đang giao thứ gì vậy?",
+								"thai": "พวกเขากำลังส่งอะไรกันแน่?",
+								"hindi": "आखिर ये क्या डिलीवर कर रहे हैं?"
+							},
+							"type": "speech",
+							"emotion": "base"
+						},
+						{
+							"emotion": "base",
+							"type": "speech",
+							"content": {
+								"korean": "배달부가 왜 저렇게 필사적인지 알 것 같기도 해.",
+								"english": "I think I understand why the delivery person is so desperate.",
+								"japanese": "配達員があんなに必死なのもわかる気がする。",
+								"chinese": "我好像也明白为什么那个快递员那么拼命了。",
+								"french": "Je crois que je comprends pourquoi le livreur est si désespéré.",
+								"spanish": "Creo que entiendo por qué el repartidor está tan desesperado.",
+								"vietnamese": "Tôi nghĩ mình cũng hiểu tại sao người giao hàng lại tuyệt vọng đến vậy.",
+								"thai": "ฉันพอจะเข้าใจแล้วว่าทำไมคนส่งของถึงได้พยายามมากขนาดนั้น",
+								"hindi": "मुझे लगता है कि मैं समझ गया कि डिलीवरी वाला इतना बेताब क्यों है।"
+							},
+							"speaker": "cinder"
+						}
+					]
+				},
+				{
+					"dialogue": [
+						{
+							"emotion": "base",
+							"type": "speech",
+							"content": {
+								"korean": "길을 막아서는 거대한 그림자. 배달을 방해하는 자는 누구든 막아야 한다.",
+								"english": "A giant shadow blocks the way. Anyone who interferes with the delivery must be stopped.",
+								"japanese": "道を塞ぐ巨大な影。配達を邪魔する者は誰であろうと止めなければならない。",
+								"chinese": "阻挡去路的巨大阴影。任何妨碍配送的人都必须阻止。",
+								"french": "Une ombre gigantesque bloque le chemin. Quiconque interfère avec la livraison doit être arrêté.",
+								"spanish": "Una sombra gigantesca bloquea el camino. Cualquiera que interfiera con la entrega debe ser detenido.",
+								"vietnamese": "Một cái bóng khổng lồ chắn lối. Bất cứ ai cản trở việc giao hàng đều phải bị chặn lại.",
+								"thai": "เงาขนาดใหญ่ขวางทาง ใครก็ตามที่ขัดขวางการจัดส่งจะต้องถูกหยุดไว้",
+								"hindi": "एक विशाल छाया रास्ता रोक रही है। डिलीवरी में बाधा डालने वाले किसी भी व्यक्ति को रोका जाना चाहिए।"
+							},
+							"speaker": "narrator"
+						},
+						{
+							"emotion": "angry",
+							"content": {
+								"korean": "이 이상은… 안 돼. 배송 방해는… 악성 민원이야.",
+								"english": "No more than this... Delivery interference is... a malicious complaint.",
+								"japanese": "これ以上は…ダメだ。配送妨害は…悪質なクレームだ。",
+								"chinese": "再这样下去…不行。妨碍配送…是恶意投诉。",
+								"french": "Pas plus que ça... L'interférence de livraison est... une plainte malveillante.",
+								"spanish": "No más que esto... Interferir con la entrega es... una queja maliciosa.",
+								"vietnamese": "Hơn thế nữa... không được. Cản trở giao hàng... là khiếu nại ác ý.",
+								"thai": "มากกว่านี้ไม่ได้แล้ว... การขัดขวางการจัดส่ง... ถือเป็นเรื่องร้องเรียนที่เป็นอันตราย",
+								"hindi": "इससे ज़्यादा... नहीं। डिलीवरी में बाधा... एक दुर्भावनापूर्ण शिकायत है।"
+							},
+							"type": "speech",
+							"speaker": "random_boss"
+						},
+						{
+							"emotion": "base",
+							"type": "speech",
+							"content": {
+								"korean": "민원? 우리가?",
+								"english": "Complaint? Us?",
+								"japanese": "クレーム？俺たちが？",
+								"chinese": "投诉？我们？",
+								"french": "Une plainte ? Nous ?",
+								"spanish": "¿Una queja? ¿Nosotros?",
+								"vietnamese": "Khiếu nại ư? Chúng ta á?",
+								"thai": "ร้องเรียนเหรอ? พวกเราเนี่ยนะ?",
+								"hindi": "शिकायत? हम?"
+							},
+							"speaker": "character_any"
+						},
+						{
+							"speaker": "random_boss",
+							"content": {
+								"korean": "늦으면 안 돼. 정말 늦어버리면… 안 된다고.",
+								"english": "Don't be late. If I'm truly late... that can't happen.",
+								"japanese": "遅れてはいけない。もし本当に遅れてしまったら…ダメだ。",
+								"chinese": "不能迟到。要是真的迟了…就糟了。",
+								"french": "Ne soyez pas en retard. Si je suis vraiment en retard… ça ne peut pas arriver.",
+								"spanish": "No llegues tarde. Si llego realmente tarde… no podré hacerlo.",
+								"vietnamese": "Đừng trễ. Nếu thật sự trễ rồi... thì không được đâu.",
+								"thai": "อย่าสายนะ ถ้าสายจริงๆ… ไม่ได้เลยนะ",
+								"hindi": "देर मत करो। अगर सच में देर हो गई… तो नहीं चलेगा。"
+							},
+							"type": "speech",
+							"emotion": "sad"
+						}
+					],
+					"id": 9
+				},
+				{
+					"dialogue": [
+						{
+							"type": "speech",
+							"content": {
+								"korean": "더 이상… 방해하지 마. 내가 처리해야 해… 전부 다.",
+								"english": "Don't interfere anymore. I have to handle it... all of it.",
+								"japanese": "もう…邪魔しないで。私が処理しないと…全部。",
+								"chinese": "别再…打扰我了。我得处理…所有的一切。",
+								"french": "Ne m'interrompez plus. Je dois m'en occuper… de tout.",
+								"spanish": "No me molestes más. Tengo que ocuparme… de todo.",
+								"vietnamese": "Đừng làm phiền nữa. Tôi phải giải quyết... tất cả.",
+								"thai": "อย่ารบกวนอีกเลยนะ ฉันต้องจัดการ... ทั้งหมด.",
+								"hindi": "अब और परेशान मत करो। मुझे ही संभालना होगा… सब कुछ。"
+							},
+							"speaker": "random_boss",
+							"emotion": "angry"
+						},
+						{
+							"type": "speech",
+							"content": {
+								"korean": "뭘 처리한다는 건데? 저 소포의 정체는 뭐야?",
+								"english": "What are you going to handle? What's the identity of that package?",
+								"japanese": "何を処理するって？あの小包の正体は何？",
+								"chinese": "你要处理什么？那个包裹是什么？",
+								"french": "Qu'est-ce que vous allez gérer ? Quelle est l'identité de ce colis ?",
+								"spanish": "¿Qué vas a manejar? ¿Cuál es la identidad de ese paquete?",
+								"vietnamese": "Anh sẽ xử lý cái gì? Danh tính của gói hàng đó là gì?",
+								"thai": "จะจัดการอะไร? พัสดุนั่นคืออะไรกันแน่?",
+								"hindi": "क्या संभालने वाले हो? उस पार्सल की असलियत क्या है?"
+							},
+							"speaker": "character_any",
+							"emotion": "base"
+						},
+						{
+							"emotion": "sad",
+							"speaker": "random_boss",
+							"content": {
+								"korean": "늦었어… 이미 늦어버렸을지도 몰라….",
+								"english": "It's too late... It might already be too late...",
+								"japanese": "遅い…もう手遅れかもしれない…。",
+								"chinese": "迟了…也许已经太迟了…。",
+								"french": "C'est trop tard… Il est peut-être déjà trop tard…",
+								"spanish": "Es tarde… Quizás ya sea demasiado tarde…",
+								"vietnamese": "Muộn rồi… Có lẽ đã quá muộn rồi…",
+								"thai": "สายไปแล้ว… อาจจะสายเกินไปแล้วก็ได้…",
+								"hindi": "देर हो गई… शायद पहले ही देर हो चुकी है…"
+							},
+							"type": "speech"
+						},
+						{
+							"emotion": "angry",
+							"type": "speech",
+							"content": {
+								"korean": "피하지 마! 진실을 밝혀야겠어.",
+								"english": "Don't avoid it! I need to uncover the truth.",
+								"japanese": "逃げないで！真実を明かさなければ。",
+								"chinese": "别逃避！我必须揭露真相。",
+								"french": "Ne fuyez pas ! Je dois révéler la vérité.",
+								"spanish": "¡No lo evites! Tengo que revelar la verdad.",
+								"vietnamese": "Đừng trốn tránh! Tôi phải làm rõ sự thật.",
+								"thai": "อย่าหลีกเลี่ยง! ฉันต้องเปิดเผยความจริง.",
+								"hindi": "भागो मत! मुझे सच का पता लगाना होगा।"
+							},
+							"speaker": "character_any"
+						}
+					],
+					"id": 15,
+					"lose_dialogue": [
+						{
+							"speaker": "random_boss",
+							"type": "speech",
+							"content": {
+								"korean": "하아… 늦었다고… 조금만 더 버티면 됐는데.",
+								"english": "Haa... It's too late... If only I had held on a little longer.",
+								"japanese": "はぁ…遅かった…もう少しだけ耐えればよかったのに。",
+								"chinese": "唉…迟了…要是再坚持一下就好了。",
+								"french": "Ha... C'est trop tard... Si seulement j'avais tenu un peu plus longtemps.",
+								"spanish": "Ah… Es tarde… Si tan solo hubiera aguantado un poco más.",
+								"vietnamese": "Haiz… Muộn rồi… Giá như tôi có thể trụ vững thêm chút nữa.",
+								"thai": "ฮ่า… สายไปแล้ว… ถ้าทนอีกหน่อยก็คงจะดี.",
+								"hindi": "हा… देर हो गई… बस थोड़ा और टिका रहता तो हो जाता。"
+							},
+							"emotion": "sad"
+						},
+						{
+							"type": "speech",
+							"content": {
+								"korean": "젠장… 아직은 안 돼.",
+								"english": "Damn... Not yet.",
+								"japanese": "くそ… まだだ。",
+								"chinese": "该死……还没到时候。",
+								"french": "Mince… Pas encore.",
+								"spanish": "Maldita sea... Todavía no.",
+								"vietnamese": "Chết tiệt… Chưa được đâu.",
+								"thai": "ให้ตายสิ... ยังไม่ถึงเวลา.",
+								"hindi": "धिक्कार है... अभी नहीं।"
+							},
+							"speaker": "character_any",
+							"emotion": "angry"
+						},
+						{
+							"content": {
+								"korean": "빨리… 다시 시작해… 늦어버리기 전에.",
+								"english": "Hurry... restart... before it's too late.",
+								"japanese": "早く… やり直せ… 手遅れになる前に。",
+								"chinese": "快点… 重新开始… 在来不及之前。",
+								"french": "Vite… recommence… avant qu'il ne soit trop tard.",
+								"spanish": "Rápido… empieza de nuevo… antes de que sea demasiado tarde.",
+								"vietnamese": "Nhanh lên… bắt đầu lại đi… trước khi quá muộn.",
+								"thai": "เร็วเข้า… เริ่มใหม่… ก่อนที่จะสายเกินไป.",
+								"hindi": "जल्दी करो… फिर से शुरू करो… इससे पहले कि बहुत देर हो जाए।"
+							},
+							"type": "speech",
+							"speaker": "random_boss",
+							"emotion": "base"
+						}
+					],
+					"win_dialogue": [
+						{
+							"emotion": "sad",
+							"speaker": "random_boss",
+							"content": {
+								"korean": "너희 때문에… 진짜 늦어버렸어….",
+								"english": "Because of you... I'm truly late now...",
+								"japanese": "お前たちのせいで…本当に遅れてしまった…。",
+								"chinese": "都怪你们…我真的迟到了…。",
+								"french": "À cause de vous… je suis vraiment en retard…",
+								"spanish": "Por culpa vuestra… realmente llegué tarde…",
+								"vietnamese": "Vì các người… tôi đã thực sự muộn rồi…",
+								"thai": "เพราะพวกแก… ฉันเลยสายจริงๆ…",
+								"hindi": "तुम्हारी वजह से… मैं सच में देर हो गया हूँ…"
+							},
+							"type": "speech"
+						},
+						{
+							"speaker": "cinder",
+							"type": "direction",
+							"duration_ms": 500,
+							"action": "enter",
+							"spot": [
+								2,
+								3
+							]
+						},
+						{
+							"content": {
+								"korean": "이 종이… 더 자세히 봐야겠어.",
+								"english": "This paper... I need to examine it more closely.",
+								"japanese": "この紙…もっと詳しく見なければ。",
+								"chinese": "这张纸…我得更仔细地看看。",
+								"french": "Ce papier… je dois l'examiner de plus près.",
+								"spanish": "Este papel… necesito verlo con más detalle.",
+								"vietnamese": "Tờ giấy này… tôi cần xem kỹ hơn.",
+								"thai": "กระดาษแผ่นนี้… ฉันต้องดูให้ละเอียดกว่านี้.",
+								"hindi": "यह कागज़… मुझे इसे और बारीकी से देखना होगा।"
+							},
+							"type": "speech",
+							"speaker": "cinder",
+							"emotion": "base"
+						},
+						{
+							"speaker": "narrator",
+							"content": {
+								"korean": "배달부가 쓰러지자, 주변 풍경이 순간적으로 깜빡인다. 마치 시간이 멈췄다가 흐른 것처럼.",
+								"english": "As the deliveryman collapsed, the surrounding scenery flickered for a moment. As if time had stopped and then resumed.",
+								"japanese": "配達人が倒れると、周囲の景色が瞬間的に点滅する。まるで時間が止まってから流れたかのように。",
+								"chinese": "随着送货员倒下，周围的景象瞬间闪烁。仿佛时间停止后又重新流动。",
+								"french": "Alors que le livreur s'effondrait, le paysage environnant a vacillé un instant. Comme si le temps s'était arrêté puis avait repris son cours.",
+								"spanish": "Cuando el repartidor cayó, el paisaje circundante parpadeó momentáneamente. Como si el tiempo se hubiera detenido y luego hubiera vuelto a fluir.",
+								"vietnamese": "Khi người giao hàng ngã xuống, cảnh vật xung quanh nhấp nháy trong chốc lát. Như thể thời gian đã ngừng lại rồi lại trôi đi.",
+								"thai": "เมื่อบุรุษไปรษณีย์ล้มลง ทิวทัศน์รอบๆ ก็กะพริบชั่วขณะ ราวกับว่าเวลาหยุดนิ่งแล้วกลับมาเดินอีกครั้ง.",
+								"hindi": "जैसे ही डिलीवरीमैन गिरा, आस-पास का नज़ारा पल भर के लिए जगमगाया। जैसे मानो समय रुक गया हो और फिर से बहने लगा हो।"
+							},
+							"type": "speech",
+							"emotion": "base"
+						},
+						{
+							"speaker": "narrator",
+							"type": "speech",
+							"content": {
+								"korean": "소포는 여전히 알 수 없는 비밀을 품고 있었다.",
+								"english": "The package still held an unknown secret.",
+								"japanese": "小包は依然として未知の秘密を抱えていた。",
+								"chinese": "包裹仍然隐藏着一个未知的秘密。",
+								"french": "Le colis contenait toujours un secret inconnu.",
+								"spanish": "El paquete aún guardaba un secreto desconocido.",
+								"vietnamese": "Gói hàng vẫn chứa đựng một bí mật không thể biết.",
+								"thai": "พัสดุยังคงซ่อนความลับที่ไม่อาจรู้ได้.",
+								"hindi": "पार्सल में अभी भी एक अनजाना रहस्य छिपा हुआ था。"
+							},
+							"emotion": "base"
+						}
+					]
+				}
+			]
+		},
+		{
+			"scenario_id": "hell_memo_3_03",
+			"order": 3,
+			"act": "rising",
+			"theme": "hell",
+			"actors": {
+				"brim": {
+					"id": "mon_d7f57824-190d-40b9-93d1-66c658f0441f",
+					"name": {
+						"korean": "브림",
+						"english": "Brim",
+						"japanese": "ブリム",
+						"chinese": "布里姆",
+						"french": "Brim",
+						"spanish": "Brim",
+						"vietnamese": "Brim",
+						"thai": "บริม",
+						"hindi": "ब्रिम"
+					},
+					"description": "",
+					"face_image_url": "https://imagedelivery.net/WTEqQNGFb-l-IHS6IGnzUQ/08ad0e4d-214d-43b3-dc3e-ddfba9049300/public",
+					"battle_sprite_url": "https://imagedelivery.net/WTEqQNGFb-l-IHS6IGnzUQ/16f1def2-7c33-4558-4b21-9c3e87fa3e00/public"
+				}
+			},
+			"boss": {
+				"pool_id": "random_boss"
+			},
+			"rooms": [
+				{
+					"id": 1,
+					"dialogue": [
+						{
+							"emotion": "base",
+							"content": {
+								"korean": "용암 강변을 낡은 제복의 배달부가 질주한다. 제 몸의 세 배만 한 소포를 짊어진 채.",
+								"english": "Along the lava river, a deliveryman in a worn uniform races, burdened with a package three times his size.",
+								"japanese": "溶岩の川辺を、擦り切れた制服の配達人が疾走する。自身の三倍もある小包を背負いながら。",
+								"chinese": "在熔岩河畔，一个穿着旧制服的送货员疾驰而过，背负着一个有他身体三倍大的包裹。",
+								"french": "Le long de la rivière de lave, un livreur en uniforme usé court, portant un colis trois fois plus grand que lui.",
+								"spanish": "A lo largo del río de lava, un repartidor con un uniforme gastado corre, cargando un paquete tres veces más grande que él.",
+								"vietnamese": "Dọc bờ sông dung nham, một người đưa thư trong bộ đồng phục cũ kỹ đang phóng đi, vác theo một kiện hàng lớn gấp ba lần cơ thể anh ta.",
+								"thai": "ริมแม่น้ำลาวา บุรุษไปรษณีย์ในเครื่องแบบเก่ากำลังวิ่งไป แบกหีบห่อขนาดใหญ่กว่าตัวเขาสามเท่า",
+								"hindi": "लावा नदी के किनारे, एक पुरानी वर्दी वाला डिलीवरीमैन दौड़ रहा है, अपने शरीर से तीन गुना बड़ा पार्सल लिए हुए।"
+							},
+							"speaker": "narrator",
+							"type": "speech"
+						},
+						{
+							"content": {
+								"korean": "저게… 배달부?",
+								"english": "Is that... the deliveryman?",
+								"japanese": "あれが…配達人？",
+								"chinese": "那是……送货员？",
+								"french": "C'est... le livreur ?",
+								"spanish": "¿Ese es... el repartidor?",
+								"vietnamese": "Đó là... người đưa thư?",
+								"thai": "นั่น... บุรุษไปรษณีย์หรือ?",
+								"hindi": "वह... डिलीवरीमैन है?"
+							},
+							"emotion": "base",
+							"speaker": "character_any",
+							"type": "speech"
+						},
+						{
+							"spot": [
+								4,
+								3
+							],
+							"action": "enter",
+							"type": "direction",
+							"duration_ms": 500,
+							"speaker": "brim"
+						},
+						{
+							"speaker": "brim",
+							"type": "speech",
+							"content": {
+								"korean": "조심해요! 저 자가 지나간 자리의 풍경이… 일그러지고 있어요!",
+								"english": "Be careful! The landscape where he passed... it's distorting!",
+								"japanese": "気をつけて！あいつが通り過ぎた場所の風景が…歪んでる！",
+								"chinese": "小心！他经过的地方……风景正在扭曲！",
+								"french": "Attention ! Le paysage là où il est passé... il se déforme !",
+								"spanish": "¡Cuidado! ¡El paisaje por donde pasó... se está distorsionando!",
+								"vietnamese": "Cẩn thận! Cảnh vật nơi hắn đi qua... đang bị bóp méo!",
+								"thai": "ระวัง! ทิวทัศน์ที่เขาผ่านไป... มันบิดเบี้ยว!",
+								"hindi": "सावधान! जिस जगह से वह गुजरा... वह विकृत हो रही है!"
+							},
+							"emotion": "sad"
+						},
+						{
+							"speaker": "random_boss",
+							"type": "speech",
+							"emotion": "angry",
+							"content": {
+								"korean": "늦었어! 늦었어! 길 막는 악성 민원인들인가!",
+								"english": "Too late! Too late! Are these malicious complainants blocking my way?!",
+								"japanese": "遅い！遅い！道を邪魔する悪質なクレーマーどもか！",
+								"chinese": "太迟了！太迟了！是些挡路的恶意投诉者吗！",
+								"french": "Trop tard ! Trop tard ! Des plaignants malveillants me bloquent le chemin ?! ",
+								"spanish": "¡Demasiado tarde! ¡Demasiado tarde! ¿Son estos quejicas maliciosos bloqueando mi camino?!",
+								"vietnamese": "Muộn rồi! Muộn rồi! Là mấy tên khách hàng khó chịu cản đường sao!",
+								"thai": "สายไปแล้ว! สายไปแล้ว! พวกนี้เป็นลูกค้าหัวร้อนที่ขวางทางอยู่หรือไง!",
+								"hindi": "बहुत देर हो गई! बहुत देर हो गई! क्या ये रास्ते रोकने वाले दुर्भावनापूर्ण शिकायतकर्ता हैं?!"
+							}
+						},
+						{
+							"emotion": "base",
+							"content": {
+								"korean": "민원인? 우리가?",
+								"english": "Complainants? Us?",
+								"japanese": "クレーマー？我々が？",
+								"chinese": "投诉者？我们？",
+								"french": "Des plaignants ? Nous ?",
+								"spanish": "¿Quejicas? ¿Nosotros?",
+								"vietnamese": "Khách hàng khó chịu? Chúng ta?",
+								"thai": "ลูกค้าหัวร้อน? เราเนี่ยนะ?",
+								"hindi": "शिकायतकर्ता? हम?"
+							},
+							"speaker": "character_any",
+							"type": "speech"
+						}
+					]
+				},
+				{
+					"dialogue": [
+						{
+							"type": "speech",
+							"speaker": "narrator",
+							"content": {
+								"korean": "배달부가 지나간 자리마다, 세상의 풍경이 순간적으로 깜빡였다.",
+								"english": "Everywhere the deliveryman passed, the world's landscape flickered momentarily.",
+								"japanese": "配達人が通り過ぎた場所ごとに、世界の風景は瞬間的に明滅した。",
+								"chinese": "送货员每经过一处，世界的景色都会瞬间闪烁。",
+								"french": "Partout où le livreur passait, le paysage du monde vacillait un instant.",
+								"spanish": "Dondequiera que el repartidor pasaba, el paisaje del mundo parpadeaba momentáneamente.",
+								"vietnamese": "Mỗi nơi người đưa thư đi qua, cảnh vật thế giới lại chớp nhoáng.",
+								"thai": "ทุกที่ที่บุรุษไปรษณีย์ผ่านไป ทิวทัศน์ของโลกก็กระพริบชั่วขณะ",
+								"hindi": "जहाँ-जहाँ डिलीवरीमैन गुज़रा, दुनिया का परिदृश्य क्षण भर के लिए झिलमिलाया।"
+							},
+							"emotion": "base"
+						},
+						{
+							"speaker": "character_1",
+							"type": "speech",
+							"content": {
+								"korean": "시간이… 뒤틀리는 것 같아.",
+								"english": "Time… it feels like it's distorting.",
+								"japanese": "時間が…歪んでいるようだ。",
+								"chinese": "时间…好像扭曲了。",
+								"french": "Le temps… semble se tordre.",
+								"spanish": "El tiempo… parece distorsionarse.",
+								"vietnamese": "Thời gian… cứ như bị bóp méo vậy.",
+								"thai": "เวลา… เหมือนกำลังบิดเบี้ยว",
+								"hindi": "समय… जैसे मुड़ रहा है।"
+							},
+							"emotion": "base"
+						},
+						{
+							"spot": [
+								4,
+								3
+							],
+							"type": "direction",
+							"action": "enter",
+							"speaker": "brim",
+							"duration_ms": 500
+						},
+						{
+							"emotion": "sad",
+							"content": {
+								"korean": "맞아요! 이 자는 단순한 배달부가 아니에요. 시간을 다루고 있어!",
+								"english": "That's right! This person isn't just a delivery guy. They're manipulating time!",
+								"japanese": "そうだ！こいつはただの配達員じゃない。時間を操っているんだ！",
+								"chinese": "没错！这家伙不只是个快递员。他在操纵时间！",
+								"french": "C'est ça ! Ce type n'est pas qu'un livreur. Il manipule le temps !",
+								"spanish": "¡Exacto! ¡Esta persona no es solo un repartidor! ¡Está manipulando el tiempo!",
+								"vietnamese": "Đúng vậy! Kẻ này không phải là một người giao hàng bình thường. Hắn ta đang điều khiển thời gian!",
+								"thai": "ใช่เลย! หมอนี่ไม่ใช่แค่คนส่งของธรรมดา เขาควบคุมเวลาได้!",
+								"hindi": "सही कहा! यह सिर्फ एक डिलीवरी वाला नहीं है। यह समय को संभाल रहा है!"
+							},
+							"type": "speech",
+							"speaker": "brim"
+						},
+						{
+							"content": {
+								"korean": "방해하지 마! 배달 지연은 용납 못 한다고!",
+								"english": "Don't interfere! Delivery delays are unacceptable!",
+								"japanese": "邪魔するな！配達の遅延は許されないぞ！",
+								"chinese": "别碍事！我可不能容忍送货延迟！",
+								"french": "Ne m'interrompez pas ! Les retards de livraison sont inacceptables !",
+								"spanish": "¡No interfieras! ¡No puedo permitir retrasos en la entrega!",
+								"vietnamese": "Đừng cản đường! Tôi không chấp nhận việc giao hàng chậm trễ đâu!",
+								"thai": "อย่าขวาง! ฉันทนการส่งของล่าช้าไม่ได้หรอก!",
+								"hindi": "बाधा मत डालो! डिलीवरी में देरी बर्दाश्त नहीं की जाएगी!"
+							},
+							"emotion": "angry",
+							"type": "speech",
+							"speaker": "random_boss"
+						},
+						{
+							"emotion": "base",
+							"content": {
+								"korean": "대체 뭘 그렇게 필사적으로 배달하는 거야?",
+								"english": "What are you so desperately trying to deliver?",
+								"japanese": "一体何をそんなに必死に配達してるんだ？",
+								"chinese": "你到底在拼命送什么？",
+								"french": "Mais qu'est-ce que tu tentes de livrer avec tant de désespoir ?",
+								"spanish": "¿Qué estás entregando con tanta desesperación?",
+								"vietnamese": "Rốt cuộc anh đang cố gắng giao cái quái gì vậy?",
+								"thai": "ตกลงแกกำลังพยายามส่งอะไรขนาดนั้น?",
+								"hindi": "तुम इतनी बेताबी से क्या डिलीवर कर रहे हो?"
+							},
+							"type": "speech",
+							"speaker": "character_2"
+						}
+					],
+					"id": 3
+				},
+				{
+					"id": 5,
+					"dialogue": [
+						{
+							"duration_ms": 500,
+							"speaker": "brim",
+							"spot": [
+								4,
+								3
+							],
+							"action": "enter",
+							"type": "direction"
+						},
+						{
+							"content": {
+								"korean": "저 소포가… 위험해요. 안에 뭐가 들었는지 확인해야 해요!",
+								"english": "That package… it's dangerous. We need to check what's inside!",
+								"japanese": "あの小包が…危ない。中身を確認しないと！",
+								"chinese": "那个包裹…很危险。我们得看看里面是什么！",
+								"french": "Ce colis… est dangereux. Il faut vérifier ce qu'il contient !",
+								"spanish": "Ese paquete… es peligroso. ¡Necesitamos revisar qué hay dentro!",
+								"vietnamese": "Gói hàng đó… nguy hiểm lắm. Chúng ta phải kiểm tra xem bên trong có gì!",
+								"thai": "พัสดุนั่น…อันตรายนะ เราต้องดูว่ามีอะไรอยู่ข้างใน!",
+								"hindi": "वह पार्सल… खतरनाक है। हमें देखना होगा कि अंदर क्या है!"
+							},
+							"emotion": "sad",
+							"type": "speech",
+							"speaker": "brim"
+						},
+						{
+							"type": "speech",
+							"speaker": "random_boss",
+							"content": {
+								"korean": "안 돼! 절대 안 돼! 이건… 중요한 물건이야! 함부로 열 수 없어!",
+								"english": "No! Absolutely not! This is… important! I can't just open it!",
+								"japanese": "だめだ！絶対だめだ！これは…重要な物なんだ！勝手に開けるな！",
+								"chinese": "不行！绝对不行！这…这是重要的东西！不能随便打开！",
+								"french": "Non ! Surtout pas ! C'est… important ! Je ne peux pas l'ouvrir comme ça !",
+								"spanish": "¡No! ¡De ninguna manera! ¡Esto es… importante! ¡No puedo abrirlo así como así!",
+								"vietnamese": "Không! Tuyệt đối không được! Đây là… một món đồ quan trọng! Không thể tùy tiện mở ra được!",
+								"thai": "ไม่นะ! ไม่ได้เด็ดขาด! นี่มัน…ของสำคัญ! เปิดสุ่มสี่สุ่มห้าไม่ได้!",
+								"hindi": "नहीं! बिल्कुल नहीं! यह… एक महत्वपूर्ण चीज़ है! इसे यूँ ही नहीं खोल सकते!"
+							},
+							"emotion": "angry"
+						},
+						{
+							"type": "speech",
+							"speaker": "character_any",
+							"content": {
+								"korean": "네가 일으킨 소동 때문에 세상이 엉망이야! 멈춰!",
+								"english": "The world's a mess because of the chaos you caused! Stop it!",
+								"japanese": "お前が起こした騒動のせいで、世界がめちゃくちゃだ！やめろ！",
+								"chinese": "因为你造成的骚动，世界都乱套了！住手！",
+								"french": "Le monde est sens dessus dessous à cause du chaos que tu as provoqué ! Arrête ça !",
+								"spanish": "¡El mundo está hecho un desastre por el caos que has causado! ¡Detente!",
+								"vietnamese": "Thế giới đang hỗn loạn vì sự náo động mà ngươi gây ra! Dừng lại đi!",
+								"thai": "โลกกำลังวุ่นวายเพราะความปั่นป่วนที่แกก่อ! หยุดเดี๋ยวนี้!",
+								"hindi": "तुमने जो हंगामा मचाया है, उसकी वजह से दुनिया अस्त-व्यस्त हो गई है! रुक जाओ!"
+							},
+							"emotion": "angry"
+						},
+						{
+							"content": {
+								"korean": "어쩔 수 없어! 다들 비켜! 늦으면… 정말 끝장이라고!",
+								"english": "No choice! Everyone move aside! If I'm late… it's truly over!",
+								"japanese": "仕方ない！みんな退け！遅れたら…本当に終わりなんだ！",
+								"chinese": "没办法了！都给我让开！要是迟了…那就真的完了！",
+								"french": "Pas le choix ! Poussez-vous tous ! Si je suis en retard… c'est la fin, vraiment !",
+								"spanish": "¡No hay remedio! ¡Todos fuera! Si llego tarde… ¡realmente será el fin!",
+								"vietnamese": "Không còn cách nào khác! Tất cả tránh ra! Nếu tôi trễ… thì mọi thứ sẽ thực sự kết thúc!",
+								"thai": "ไม่มีทางเลือกแล้ว! ทุกคนหลีกไป! ถ้าช้าไป…มันจบสิ้นจริงๆ นะ!",
+								"hindi": "कोई चारा नहीं! सब हट जाओ! अगर देर हो गई… तो सचमुच सब खत्म हो जाएगा!"
+							},
+							"emotion": "sad",
+							"speaker": "random_boss",
+							"type": "speech"
+						},
+						{
+							"type": "speech",
+							"speaker": "character_any",
+							"content": {
+								"korean": "대체 무슨 비밀을 감추고 있는 거야?",
+								"english": "What secret are you hiding?",
+								"japanese": "一体どんな秘密を隠してるんだ？",
+								"chinese": "你到底在隐瞒什么秘密？",
+								"french": "Quel secret caches-tu donc ?",
+								"spanish": "¿Qué secreto estás ocultando?",
+								"vietnamese": "Rốt cuộc anh đang che giấu bí mật gì vậy?",
+								"thai": "แกกำลังซ่อนความลับอะไรอยู่กันแน่?",
+								"hindi": "तुम आखिर क्या राज़ छुपा रहे हो?"
+							},
+							"emotion": "base"
+						}
+					]
+				},
+				{
+					"dialogue": [
+						{
+							"type": "speech",
+							"speaker": "narrator",
+							"emotion": "base",
+							"content": {
+								"korean": "배달부의 움직임은 점점 더 격렬해졌고, 세상은 더욱 크게 일그러져 갔다.",
+								"english": "The delivery person's movements grew increasingly frantic, and the world continued to distort even more severely.",
+								"japanese": "配達員の動きはますます激しくなり、世界はさらに大きく歪んでいった。",
+								"chinese": "快递员的动作越来越剧烈，世界也更加严重地扭曲着。",
+								"french": "Les mouvements du livreur devinrent de plus en plus frénétiques, et le monde se déformait encore plus gravement.",
+								"spanish": "Los movimientos del repartidor se hicieron cada vez más frenéticos, y el mundo continuó distorsionándose aún más gravemente.",
+								"vietnamese": "Hành động của người giao hàng ngày càng dữ dội, và thế giới tiếp tục bị bóp méo trầm trọng hơn.",
+								"thai": "การเคลื่อนไหวของคนส่งของรุนแรงขึ้นเรื่อยๆ และโลกก็บิดเบี้ยวมากขึ้นไปอีก",
+								"hindi": "डिलीवरी वाले की हरकतें और भी हिंसक हो गईं, और दुनिया और भी बुरी तरह से विकृत होती चली गई।"
+							}
+						},
+						{
+							"speaker": "brim",
+							"duration_ms": 500,
+							"spot": [
+								4,
+								3
+							],
+							"type": "direction",
+							"action": "enter"
+						},
+						{
+							"emotion": "sad",
+							"content": {
+								"korean": "단순한 능력이 아니에요! 시간 그 자체를 왜곡하고 있어요! 놈을 멈춰야 해요!",
+								"english": "It's not just an ability! It's distorting time itself! We have to stop them!",
+								"japanese": "単なる能力じゃない！時間そのものを歪めている！奴を止めなければ！",
+								"chinese": "这不仅仅是能力！它正在扭曲时间本身！我们必须阻止它！",
+								"french": "Ce n'est pas qu'une simple capacité ! Ça déforme le temps lui-même ! Il faut l'arrêter !",
+								"spanish": "¡No es solo una habilidad! ¡Está distorsionando el tiempo mismo! ¡Debemos detenerlo!",
+								"vietnamese": "Không chỉ là năng lực! Nó đang bóp méo thời gian! Phải ngăn nó lại!",
+								"thai": "นี่ไม่ใช่แค่พลัง! มันกำลังบิดเบือนกาลเวลา! เราต้องหยุดมัน!",
+								"hindi": "यह सिर्फ एक क्षमता नहीं है! यह समय को ही विकृत कर रहा है! हमें उसे रोकना होगा!"
+							},
+							"type": "speech",
+							"speaker": "brim"
+						},
+						{
+							"content": {
+								"korean": "저 소포에 뭔가 있어! 저걸 뺏어야만 해!",
+								"english": "There's something in that package! We have to take it!",
+								"japanese": "あの小包に何かある！あれを奪わなければ！",
+								"chinese": "那个包裹里有东西！我们必须抢走它！",
+								"french": "Il y a quelque chose dans ce colis ! Il faut le récupérer !",
+								"spanish": "¡Hay algo en ese paquete! ¡Tenemos que quitárselo!",
+								"vietnamese": "Có gì đó trong gói hàng đó! Phải đoạt lấy nó!",
+								"thai": "มีบางอย่างอยู่ในพัสดุนั้น! เราต้องแย่งมันมา!",
+								"hindi": "उस पैकेज में कुछ है! हमें उसे छीनना होगा!"
+							},
+							"emotion": "angry",
+							"speaker": "character_any",
+							"type": "speech"
+						},
+						{
+							"content": {
+								"korean": "내 임무를… 방해하지 마! 마지막 경고야! 민원인이라고 봐주지 않아!",
+								"english": "Don't... interfere with my mission! Last warning! I won't hold back, even for a 'bother'!",
+								"japanese": "私の任務を…邪魔するな！最後の警告だ！邪魔者には容赦しない！",
+								"chinese": "别…妨碍我的任务！这是最后警告！我不会对‘捣乱者’手下留情！",
+								"french": "Ne… perturbe pas ma mission ! Dernier avertissement ! Je n'aurai aucune pitié, même pour un 'fauteur de troubles' !",
+								"spanish": "¡No… interfieras en mi misión! ¡Última advertencia! ¡No tendré clemencia, ni siquiera con un 'problemático'!",
+								"vietnamese": "Đừng… cản trở nhiệm vụ của ta! Cảnh cáo cuối cùng! Ta sẽ không nương tay dù ngươi là ‘kẻ gây rối’!",
+								"thai": "อย่า… ขัดขวางภารกิจของฉัน! นี่คือคำเตือนสุดท้าย! ฉันจะไม่ปรานีกับ 'ตัวก่อกวน'!",
+								"hindi": "मेरे मिशन में… दखल मत दो! यह आखिरी चेतावनी है! मैं 'परेशान करने वाले' को भी बख्शूंगा नहीं!"
+							},
+							"emotion": "angry",
+							"speaker": "random_boss",
+							"type": "speech"
+						},
+						{
+							"type": "speech",
+							"speaker": "character_3",
+							"emotion": "angry",
+							"content": {
+								"korean": "이대로는 보낼 수 없어!",
+								"english": "I can't let them pass like this!",
+								"japanese": "このままでは行かせられない！",
+								"chinese": "不能就这样放走！",
+								"french": "Je ne peux pas les laisser passer ainsi !",
+								"spanish": "¡No puedo dejarlos ir así!",
+								"vietnamese": "Không thể để họ đi như vậy!",
+								"thai": "ฉันปล่อยให้พวกเขาผ่านไปแบบนี้ไม่ได้!",
+								"hindi": "मैं उन्हें ऐसे जाने नहीं दे सकता!"
+							}
+						}
+					],
+					"id": 9
+				},
+				{
+					"id": 15,
+					"win_dialogue": [
+						{
+							"emotion": "sad",
+							"content": {
+								"korean": "크윽… 배달… 실패…! 이건… 내 책임이 아니야… 아니라고… (시간이 멈추는 듯한 단말마)",
+								"english": "Ugh… Delivery… failed…! This isn't… my fault… It isn't… (A dying gasp as if time stops)",
+								"japanese": "くぅっ…配達…失敗…！これは…俺の責任じゃない…違うんだ… (時間が止まるかのような断末魔)",
+								"chinese": "呃… 送货… 失败…！这不是… 我的错… 不是的… (仿佛时间停止般的临终遗言)",
+								"french": "Ugh… Livraison… échouée…! Ce n'est pas… ma faute… Non… (Un râle comme si le temps s'arrêtait)",
+								"spanish": "Ugh… ¡Entrega… fallida…! Esto no es… mi culpa… No… (Un último aliento como si el tiempo se detuviera)",
+								"vietnamese": "Ưgh… Giao hàng… thất bại…! Đây không phải… lỗi của tôi… Không phải… (Hơi thở cuối cùng như thể thời gian ngừng lại)",
+								"thai": "อึก… จัดส่ง… ล้มเหลว…! นี่ไม่ใช่… ความผิดของฉัน… ไม่ใช่… (เสียงเฮือกสุดท้ายราวกับเวลาหยุดนิ่ง)",
+								"hindi": "उफ़… डिलीवरी… विफल…! यह… मेरी गलती नहीं है… नहीं है… (जैसे समय थम गया हो, एक अंतिम साँस)"
+							},
+							"speaker": "random_boss",
+							"type": "speech"
+						},
+						{
+							"content": {
+								"korean": "소포… 안에 아무것도 없어. 이게 다 뭐야?",
+								"english": "The package… There's nothing inside. What is all this?",
+								"japanese": "小包… 中に何もない。これ、一体何だ？",
+								"chinese": "包裹… 里面什么都没有。这到底是什么？",
+								"french": "Le colis… Il n'y a rien à l'intérieur. C'est quoi tout ça ?",
+								"spanish": "El paquete… No hay nada dentro. ¿Qué es todo esto?",
+								"vietnamese": "Gói hàng… Không có gì bên trong. Đây là cái gì vậy?",
+								"thai": "พัสดุ… ไม่มีอะไรอยู่ข้างในเลย นี่มันอะไรกัน?",
+								"hindi": "पैकेट… अंदर कुछ भी नहीं है। यह सब क्या है?"
+							},
+							"emotion": "base",
+							"type": "speech",
+							"speaker": "character_any"
+						},
+						{
+							"spot": [
+								4,
+								3
+							],
+							"type": "direction",
+							"action": "enter",
+							"speaker": "brim",
+							"duration_ms": 500
+						},
+						{
+							"speaker": "brim",
+							"type": "speech",
+							"content": {
+								"korean": "아니요. 빈 게 아니에요. 종잇장들이… 지옥의 언어가 아니에요. 우주적 좌표… 그리고 시간 기록…?",
+								"english": "No. It's not empty. The papers… They aren't the language of hell. Cosmic coordinates… and time records…?",
+								"japanese": "違う。空っぽじゃない。紙切れが… 地獄の言語じゃない。宇宙座標… そして時間記録…？",
+								"chinese": "不。它不是空的。这些纸张… 不是地狱的语言。宇宙坐标… 还有时间记录…？",
+								"french": "Non. Ce n'est pas vide. Les papiers… Ce n'est pas le langage de l'enfer. Des coordonnées cosmiques… et des enregistrements temporels…?",
+								"spanish": "No. No está vacío. Los papeles… No son el lenguaje del infierno. Coordenadas cósmicas… ¿y registros de tiempo…?",
+								"vietnamese": "Không. Nó không trống rỗng. Những tờ giấy… Không phải ngôn ngữ địa ngục. Tọa độ vũ trụ… và ghi chép thời gian…?",
+								"thai": "ไม่สิ มันไม่ว่างเปล่า กระดาษพวกนี้… ไม่ใช่ภาษาของนรก พิกัดจักรวาล… และบันทึกเวลา…?",
+								"hindi": "नहीं। यह खाली नहीं है। कागजात… वे नरक की भाषा नहीं हैं। ब्रह्मांडीय निर्देशांक… और समय के रिकॉर्ड…?"
+							},
+							"emotion": "base"
+						},
+						{
+							"speaker": "narrator",
+							"type": "speech",
+							"emotion": "base",
+							"content": {
+								"korean": "배달부는 사라졌다. 거대한 소포는 텅 비어 있었다. 하지만 남겨진 종잇장들은 혼란을 넘어, 잊힌 차원의 비밀을 암시했다. 거대한 게임은 이제 시작이었다.",
+								"english": "The deliveryman vanished. The massive package was empty. But the papers left behind hinted at secrets beyond chaos, secrets of forgotten dimensions. The grand game had just begun.",
+								"japanese": "配達人は消えた。巨大な小包は空っぽだった。しかし、残された紙切れは混乱を超え、忘れ去られた次元の秘密を暗示していた。壮大なゲームは今始まったばかりだった。",
+								"chinese": "送货员消失了。巨大的包裹空空如也。但留下的纸张超越了混乱，暗示着被遗忘维度的秘密。这场宏大的游戏才刚刚开始。",
+								"french": "Le livreur avait disparu. L'énorme colis était vide. Mais les papiers laissés derrière insinuaient des secrets au-delà du chaos, des secrets de dimensions oubliées. Le grand jeu venait de commencer.",
+								"spanish": "El repartidor desapareció. El enorme paquete estaba vacío. Pero los papeles que quedaron insinuaban secretos más allá del caos, secretos de dimensiones olvidadas. El gran juego acababa de comenzar.",
+								"vietnamese": "Người giao hàng biến mất. Gói hàng khổng lồ trống rỗng. Nhưng những tờ giấy còn lại gợi ý về những bí mật vượt ra ngoài sự hỗn loạn, những bí mật của các chiều không gian bị lãng quên. Trò chơi vĩ đại giờ đây mới bắt đầu.",
+								"thai": "บุรุษไปรษณีย์หายไป พัสดุขนาดมหึมาว่างเปล่า แต่กระดาษที่เหลือทิ้งไว้บ่งบอกถึงความลับที่อยู่เหนือความสับสนวุ่นวาย ความลับของมิติที่ถูกลืม เกมอันยิ่งใหญ่เพิ่งจะเริ่มต้นขึ้น",
+								"hindi": "डिलीवरीमैन गायब हो गया। विशाल पैकेट खाली था। लेकिन पीछे छोड़े गए कागजात अव्यवस्था से परे रहस्यों, भूले हुए आयामों के रहस्यों का संकेत दे रहे थे। भव्य खेल अभी शुरू हुआ था।"
+							}
+						},
+						{
+							"speaker": "character_any",
+							"type": "speech",
+							"emotion": "base",
+							"content": {
+								"korean": "…다음에 뭘 해야 하지?",
+								"english": "…What should I do next?",
+								"japanese": "…次に何をすべきだ？",
+								"chinese": "……接下来我该做什么？",
+								"french": "…Que dois-je faire ensuite ?",
+								"spanish": "…¿Qué debo hacer ahora?",
+								"vietnamese": "…Tôi nên làm gì tiếp theo?",
+								"thai": "…ต่อไปฉันควรทำอะไร?",
+								"hindi": "…आगे मुझे क्या करना चाहिए?"
+							}
+						}
+					],
+					"lose_dialogue": [
+						{
+							"content": {
+								"korean": "시간이 멈췄다. 모든 것이 정지했다.",
+								"english": "Time stopped. Everything froze.",
+								"japanese": "時間が止まった。全てが静止した。",
+								"chinese": "时间停止了。一切都静止了。",
+								"french": "Le temps s'est arrêté. Tout s'est figé.",
+								"spanish": "El tiempo se detuvo. Todo se inmovilizó.",
+								"vietnamese": "Thời gian dừng lại. Mọi thứ đứng yên.",
+								"thai": "เวลาหยุดนิ่ง ทุกสิ่งหยุดชะงัก",
+								"hindi": "समय रुक गया। सब कुछ थम गया।"
+							},
+							"emotion": "base",
+							"type": "speech",
+							"speaker": "narrator"
+						},
+						{
+							"speaker": "random_boss",
+							"type": "speech",
+							"content": {
+								"korean": "하! 어리석은 민원인들! 지연은… 잠시뿐! 배달은… 반드시… 계속된다!",
+								"english": "Ha! Foolish complainants! The delay is… only temporary! Delivery will… certainly… continue!",
+								"japanese": "ハッ！愚かな苦情者め！遅延は…一時的なもの！配達は…必ず…続く！",
+								"chinese": "哈！愚蠢的投诉者！延迟…只是暂时的！送货…必定…继续！",
+								"french": "Ha ! Stupides plaignants ! Le retard n'est… que temporaire ! La livraison… doit… continuer !",
+								"spanish": "¡Ja! ¡Estúpidos quejumbrosos! ¡El retraso es… solo temporal! ¡La entrega… sin falta… continuará!",
+								"vietnamese": "Ha! Những kẻ than phiền ngu ngốc! Sự chậm trễ… chỉ là tạm thời! Việc giao hàng… chắc chắn… sẽ tiếp tục!",
+								"thai": "ฮ่า! พวกขี้บ่นโง่เง่า! ความล่าช้าเป็น… แค่ชั่วคราว! การจัดส่งจะ… ต้อง… ดำเนินต่อไป!",
+								"hindi": "हा! मूर्ख शिकायतकर्ता! देरी… बस अस्थायी है! डिलीवरी… निश्चित रूप से… जारी रहेगी!"
+							},
+							"emotion": "base"
+						},
+						{
+							"type": "speech",
+							"speaker": "character_any",
+							"content": {
+								"korean": "젠장! 다시… 반드시 저 자를 멈춰야 해!",
+								"english": "Damn it! Again… I must stop that person!",
+								"japanese": "クソッ！もう一度…必ずあいつを止めなければ！",
+								"chinese": "该死！必须…再次阻止那家伙！",
+								"french": "Zut ! Encore une fois… je dois absolument l'arrêter !",
+								"spanish": "¡Maldita sea! De nuevo… ¡debo detener a esa persona!",
+								"vietnamese": "Chết tiệt! Lần nữa… tôi phải ngăn chặn tên đó!",
+								"thai": "ให้ตายสิ! อีกครั้ง… ฉันต้องหยุดคนนั้นให้ได้!",
+								"hindi": "धिक्कार है! फिर से… मुझे उस व्यक्ति को अवश्य रोकना होगा!"
+							},
+							"emotion": "angry"
+						},
+						{
+							"spot": [
+								4,
+								3
+							],
+							"action": "enter",
+							"type": "direction",
+							"duration_ms": 500,
+							"speaker": "brim"
+						},
+						{
+							"emotion": "sad",
+							"content": {
+								"korean": "저 소포… 다음 장소로 이동하고 있어요. 서둘러야 해요!",
+								"english": "That package… It's moving to the next location. We must hurry!",
+								"japanese": "あの小包…次の場所へ移動している。急がなければ！",
+								"chinese": "那个包裹… 正在前往下一个地点。我们必须快点！",
+								"french": "Ce colis… Il se dirige vers la prochaine destination. Il faut se dépêcher !",
+								"spanish": "Ese paquete… Se está moviendo al siguiente lugar. ¡Debemos darnos prisa!",
+								"vietnamese": "Gói hàng đó… Nó đang di chuyển đến địa điểm tiếp theo. Chúng ta phải nhanh lên!",
+								"thai": "พัสดุนั่น… กำลังเคลื่อนที่ไปยังที่ต่อไป เราต้องรีบแล้ว!",
+								"hindi": "वह पैकेट… अगली जगह जा रहा है। हमें जल्दी करनी होगी!"
+							},
+							"speaker": "brim",
+							"type": "speech"
+						}
+					],
+					"dialogue": [
+						{
+							"content": {
+								"korean": "마침내 거대한 그림자가 멈춰 섰다. 숨을 헐떡이며 몸을 뒤흔들었다.",
+								"english": "Finally, the colossal shadow halted. It panted, shaking its body.",
+								"japanese": "ついに、巨大な影が立ち止まった。息を切らし、体を震わせた。",
+								"chinese": "终于，巨大的黑影停了下来。它喘着粗气，全身颤抖。",
+								"french": "Enfin, l'ombre colossale s'arrêta. Elle haletait, secouant son corps.",
+								"spanish": "Finalmente, la sombra colosal se detuvo. Jadeaba, sacudiendo su cuerpo.",
+								"vietnamese": "Cuối cùng, bóng đen khổng lồ dừng lại. Nó thở hổn hển, run rẩy cả người.",
+								"thai": "ในที่สุด เงาขนาดมหึมาก็หยุดลง มันหอบหายใจ ตัวสั่นเทา",
+								"hindi": "आखिरकार, विशाल छाया रुक गई। वह हाँफ रहा था, अपना शरीर हिला रहा था।"
+							},
+							"emotion": "base",
+							"type": "speech",
+							"speaker": "narrator"
+						},
+						{
+							"emotion": "sad",
+							"content": {
+								"korean": "하아… 하아… (거친 숨소리) 악성 민원인들이… 또…! 제발, 방해하지 마세요!",
+								"english": "Haa... Haa... (Heavy breathing) Those malicious 'troublemakers'... again...! Please, don't interfere!",
+								"japanese": "ハァ… ハァ… (荒い息遣い) 悪質な『邪魔者』たちが… また…！頼むから、邪魔しないでください！",
+								"chinese": "哈啊… 哈啊… (粗重的喘息声) 那些恶意的‘捣乱者’… 又来了…！拜托，别打扰我！",
+								"french": "Haa… Haa… (Respiration laborieuse) Ces 'fauteurs de troubles' malveillants… encore… ! S'il vous plaît, ne m'interrompez pas !",
+								"spanish": "Jaa… Jaa… (Respiración agitada) ¡Esos 'problemáticos' maliciosos… otra vez…! ¡Por favor, no interfieran!",
+								"vietnamese": "Haa… Haa… (Thở dốc) Những ‘kẻ gây rối’ ác ý… lại nữa…! Làm ơn, đừng cản trở nữa!",
+								"thai": "ฮ้า… ฮ้า… (เสียงหอบ) พวก 'ตัวก่อกวน' ร้ายกาจ… อีกแล้ว…! ได้โปรด อย่าขัดขวางเลย!",
+								"hindi": "हा… हा… (तेज साँसें) वे दुर्भावनापूर्ण 'परेशान करने वाले'... फिर से...! कृपया, दखल मत दो!"
+							},
+							"type": "speech",
+							"speaker": "random_boss"
+						},
+						{
+							"emotion": "base",
+							"content": {
+								"korean": "그 소포가 뭔데! 왜 그렇게 필사적이야!",
+								"english": "What's in that package?! Why are you so desperate?!",
+								"japanese": "あの小包は何なんだ！なぜそんなに必死なんだ！",
+								"chinese": "那个包裹到底是什么？！你为什么这么拼命？！",
+								"french": "C'est quoi ce colis ?! Pourquoi es-tu si désespéré ?!",
+								"spanish": "¡¿Qué hay en ese paquete?! ¡¿Por qué estás tan desesperado?!",
+								"vietnamese": "Gói hàng đó là gì! Sao lại liều mạng đến thế!",
+								"thai": "พัสดุนั้นคืออะไร! ทำไมถึงได้ทุ่มเทขนาดนั้น!",
+								"hindi": "उस पैकेज में क्या है! तुम इतने बेताब क्यों हो!"
+							},
+							"speaker": "character_any",
+							"type": "speech"
+						},
+						{
+							"content": {
+								"korean": "이건… 반드시… 제때… 전달되어야 해! 늦으면… 전부 끝장이야!",
+								"english": "This… must… be delivered… on time! If it's late… everything's over!",
+								"japanese": "これは… 必ず… 時間通りに… 届けなければならない！遅れたら… 全て終わりだ！",
+								"chinese": "这… 必须… 准时… 送达！要是晚了… 就全完了！",
+								"french": "Ceci… doit… être livré… à temps ! Si c'est en retard… tout est fini !",
+								"spanish": "Esto… debe… ser entregado… a tiempo. Si llega tarde… ¡todo se acaba!",
+								"vietnamese": "Cái này… nhất định… phải được giao… đúng hạn! Nếu trễ… thì mọi thứ… sẽ kết thúc!",
+								"thai": "นี่… ต้อง… ถูกส่ง… ให้ทันเวลา! ถ้าช้าไป… ทุกอย่าง… ก็จบสิ้น!",
+								"hindi": "यह… निश्चित रूप से… समय पर… पहुंचाया जाना चाहिए! अगर देर हुई… तो सब खत्म हो जाएगा!"
+							},
+							"emotion": "angry",
+							"speaker": "random_boss",
+							"type": "speech"
+						},
+						{
+							"duration_ms": 500,
+							"speaker": "brim",
+							"spot": [
+								4,
+								3
+							],
+							"action": "enter",
+							"type": "direction"
+						},
+						{
+							"type": "speech",
+							"speaker": "brim",
+							"emotion": "sad",
+							"content": {
+								"korean": "시간이 뒤틀리고 있어요. 저 소포가 원인이에요! 막아야 해요!",
+								"english": "Time is being distorted. That package is the cause! We have to stop it!",
+								"japanese": "時間が歪んでいる。あの小包が原因だ！止めなければ！",
+								"chinese": "时间正在扭曲。那个包裹是原因！我们必须阻止它！",
+								"french": "Le temps se tord. Ce colis en est la cause ! Il faut l'arrêter !",
+								"spanish": "El tiempo se está distorsionando. ¡Ese paquete es la causa! ¡Debemos detenerlo!",
+								"vietnamese": "Thời gian đang bị bóp méo. Gói hàng đó là nguyên nhân! Phải ngăn chặn nó!",
+								"thai": "เวลากำลังบิดเบือนไป พัสดุนั้นคือต้นเหตุ! เราต้องหยุดมัน!",
+								"hindi": "समय विकृत हो रहा है। वह पैकेज ही इसका कारण है! हमें उसे रोकना होगा!"
+							}
+						},
+						{
+							"content": {
+								"korean": "…좋아. 그럼… 방해하는 모든… '민원인'을… 처리한다!",
+								"english": "...Alright. Then… I'll deal with… all 'interferers'!",
+								"japanese": "…よし。ならば…邪魔をする全ての…『邪魔者』を…処理する！",
+								"chinese": "…好。那么… 就处理掉所有… 妨碍我的…‘捣乱者’！",
+								"french": "...Bien. Alors… je vais m'occuper de tous les… 'fauteurs de troubles' !",
+								"spanish": "...De acuerdo. Entonces… ¡me encargaré de todos los… 'problemáticos'!",
+								"vietnamese": "…Được thôi. Vậy thì… ta sẽ xử lý… tất cả ‘kẻ gây rối’…!",
+								"thai": "…ดี. งั้นก็… จัดการกับ… 'ตัวก่อกวน'… ทั้งหมดซะ!",
+								"hindi": "…ठीक है। तो… मैं सभी… 'परेशान करने वालों' को… निपटाता हूँ!"
+							},
+							"emotion": "angry",
+							"type": "speech",
+							"speaker": "random_boss"
+						}
+					]
+				}
+			],
+			"prologue": {
+				"korean": [
+					"배달부는 멈추지 않았다. 거대한 소포를 짊어진 채 지옥을 질주했다.",
+					"그의 발자국마다 세상이 깜빡였다. 시간이 멈췄다 흐르기를 반복했다.",
+					"단순한 배달이 아니었다. 놈은 시간을 짊어지고 있었다.",
+					"그리고 우리는, 그 필사적인 배달을 막아야만 했다."
+				],
+				"english": [
+					"The deliveryman didn't stop. He raced through hell, burdened with a colossal package.",
+					"With every step, the world flickered. Time stopped and flowed, again and again.",
+					"It wasn't a mere delivery. He carried time itself.",
+					"And we, we had to stop that desperate delivery."
+				],
+				"japanese": [
+					"配達人は止まらなかった。巨大な小包を背負い、地獄を疾走した。",
+					"彼の一歩ごとに世界は明滅した。時間は止まり、そして流れ、を繰り返した。",
+					"単なる配達ではなかった。彼は時間を背負っていたのだ。",
+					"そして我々は、その必死の配達を止めなければならなかった。"
+				],
+				"chinese": [
+					"送货员没有停下。他背负着一个巨大的包裹，在地狱中疾驰。",
+					"他每迈出一步，世界都会闪烁。时间反复停滞又流逝。",
+					"这并非一次简单的送货。他背负着时间。",
+					"而我们，必须阻止那场拼死的送货。"
+				],
+				"french": [
+					"Le livreur ne s'arrêtait pas. Il traversait l'enfer à toute vitesse, portant un colis colossal.",
+					"À chaque pas, le monde vacillait. Le temps s'arrêtait et reprenait, encore et encore.",
+					"Ce n'était pas une simple livraison. Il portait le temps lui-même.",
+					"Et nous, nous devions arrêter cette livraison désespérée."
+				],
+				"spanish": [
+					"El repartidor no se detuvo. Corrió por el infierno, cargado con un paquete colosal.",
+					"Con cada paso, el mundo parpadeaba. El tiempo se detenía y fluía, una y otra vez.",
+					"No era una simple entrega. Él llevaba el tiempo.",
+					"Y nosotros, teníamos que detener esa entrega desesperada."
+				],
+				"vietnamese": [
+					"Người đưa thư không dừng lại. Anh ta lao qua địa ngục, vác theo một kiện hàng khổng lồ.",
+					"Mỗi bước chân của anh ta, thế giới lại chập chờn. Thời gian ngừng rồi lại trôi, lặp đi lặp lại.",
+					"Đó không phải là một chuyến giao hàng đơn thuần. Hắn đang vác theo thời gian.",
+					"Và chúng ta, phải ngăn chặn chuyến giao hàng đầy tuyệt vọng đó."
+				],
+				"thai": [
+					"บุรุษไปรษณีย์ไม่หยุด เขาเร่งรุดผ่านนรก แบกหีบห่อขนาดมหึมา",
+					"ทุกย่างก้าวของเขา โลกก็กระพริบ เวลาหยุดและไหลซ้ำแล้วซ้ำเล่า",
+					"นี่ไม่ใช่แค่การส่งของ เขากำลังแบกเวลา",
+					"และเรา เราต้องหยุดการจัดส่งที่สิ้นหวังนั้น"
+				],
+				"hindi": [
+					"डिलीवरीमैन रुका नहीं। वह एक विशाल पार्सल लिए हुए, नरक से तेज़ी से गुज़रा।",
+					"उसके हर कदम पर दुनिया झिलमिलाती थी। समय बार-बार रुकता और चलता रहा।",
+					"यह सिर्फ एक डिलीवरी नहीं थी। वह समय को ढो रहा था।",
+					"और हमें, उस बेताब डिलीवरी को रोकना ही था।"
+				]
+			}
+		},
+		{
+			"scenario_id": "hell_memo_3_04",
+			"order": 4,
+			"act": "rising",
+			"theme": "hell",
+			"actors": {
+				"drox": {
+					"id": "mon_2fc30621-a15f-4371-9e37-295cdcb5675d",
+					"name": {
+						"korean": "드록스",
+						"english": "Drox",
+						"japanese": "ドロックス",
+						"chinese": "德罗克斯",
+						"french": "Drox",
+						"spanish": "Drox",
+						"vietnamese": "Đrốc",
+						"thai": "ดรอกซ์",
+						"hindi": "ड्रॉक्स"
+					},
+					"description": "",
+					"face_image_url": "https://imagedelivery.net/WTEqQNGFb-l-IHS6IGnzUQ/509c0376-2230-4669-d022-7e5336293200/public",
+					"battle_sprite_url": "https://imagedelivery.net/WTEqQNGFb-l-IHS6IGnzUQ/916b4cfa-f792-4f4a-5346-681095481e00/public"
+				}
+			},
+			"boss": {
+				"pool_id": "random_boss"
+			},
+			"prologue": {
+				"korean": [
+					"지옥의 용암 강변, 붉은 강물이 끓어 올랐다.",
+					"한 배달부가 미친 듯이 달리고 있었다. 등에는 제 몸 세 배만 한 소포를 짊어진 채.",
+					"\"늦었어, 늦었어!\" 그의 비명은 이 지옥의 것이 아니었다.",
+					"그 뒤를 쫓는 탐험대. 그리고 어이없어하는 드록스.",
+					"이건 전투가 아니라, 누군가의 처절한 야근이었다."
+				],
+				"english": [
+					"By the lava river in hell, the red water boiled.",
+					"A deliveryman ran like mad, carrying a package three times his size on his back.",
+					"\"Late, late!\" His scream didn't belong to this hell.",
+					"An exploration team pursued him. And a bewildered Droks.",
+					"This wasn't a battle; it was someone's desperate overtime."
+				],
+				"japanese": [
+					"地獄の溶岩の川辺で、赤い川の水が煮えたぎっていた。",
+					"一人の配達員が狂ったように走っていた。背中には、自分の体の3倍もある小包を背負って。",
+					"「遅れた、遅れた！」彼の叫び声は、この地獄のものとは思えなかった。",
+					"その背後を追う探検隊。そして呆れ返るドロックス。",
+					"これは戦闘ではなく、誰かの必死の残業だった。"
+				],
+				"chinese": [
+					"地狱的熔岩河畔，红色的河水沸腾着。",
+					"一个快递员正疯狂地奔跑着，背上背着一个比他身体大三倍的包裹。",
+					"“迟到了，迟到了！”他的尖叫不属于这个地狱。",
+					"一支探险队紧追其后。以及一脸 M 号的德罗克斯。",
+					"这不是一场战斗，而是某人绝望的加班。"
+				],
+				"french": [
+					"Au bord de la rivière de lave de l'enfer, les eaux rouges bouillonnaient.",
+					"Un livreur courait comme un fou, portant sur son dos un colis trois fois plus grand que lui.",
+					"« En retard, en retard ! » Son hurlement n'était pas de ce monde.",
+					"Une équipe d'exploration à ses trousses. Et un Droks abasourdi.",
+					"Ce n'était pas un combat, mais les heures supplémentaires désespérées de quelqu'un."
+				],
+				"spanish": [
+					"A orillas del río de lava del infierno, las aguas rojas hervían.",
+					"Un repartidor corría como un loco, llevando a cuestas un paquete tres veces más grande que él.",
+					"«¡Tarde, tarde!» Su grito no pertenecía a este infierno.",
+					"Un equipo de exploración lo perseguía. Y un Droks perplejo.",
+					"Esto no era una batalla, sino la desesperada jornada extra de alguien."
+				],
+				"vietnamese": [
+					"Bên bờ sông dung nham địa ngục, dòng nước đỏ sục sôi.",
+					"Một người giao hàng đang chạy điên cuồng, vác trên lưng một gói hàng to gấp ba lần người anh ta.",
+					"\"Muộn rồi, muộn rồi!\" Tiếng hét của anh ta không thuộc về địa ngục này.",
+					"Đội thám hiểm đuổi theo sau. Và Droks đang ngỡ ngàng.",
+					"Đây không phải là một trận chiến, mà là ca làm thêm đầy tuyệt vọng của một ai đó."
+				],
+				"thai": [
+					"ริมฝั่งแม่น้ำลาวาแห่งนรก สายน้ำสีแดงเดือดพล่าน",
+					"บุรุษส่งของคนหนึ่งกำลังวิ่งอย่างบ้าคลั่ง โดยมีพัสดุขนาดใหญ่กว่าตัวเขาถึงสามเท่าอยู่บนหลัง",
+					"“สายแล้ว, สายแล้ว!” เสียงกรีดร้องของเขาไม่เข้ากับนรกนี้เลย",
+					"ทีมสำรวจที่ไล่ตาม และดร็อกซ์ผู้ประหลาดใจ",
+					"นี่ไม่ใช่การต่อสู้ แต่มันคือการทำงานล่วงเวลาอย่างสิ้นหวังของใครบางคน"
+				],
+				"hindi": [
+					"नरक की लावा नदी के किनारे, लाल पानी उबल रहा था।",
+					"एक डिलीवरीमैन पागलों की तरह दौड़ रहा था, अपनी पीठ पर अपने शरीर से तीन गुना बड़ा एक पार्सल लादे हुए।",
+					"“देर हो गई, देर हो गई!” उसकी चीख इस नरक की नहीं थी।",
+					"एक अन्वेषण दल उसका पीछा कर रहा था। और एक हैरान ड्रोкс।",
+					"यह कोई लड़ाई नहीं थी, बल्कि किसी की हताश ओवरटाइम थी।"
+				]
+			},
+			"rooms": [
+				{
+					"dialogue": [
+						{
+							"speaker": "narrator",
+							"type": "speech",
+							"content": {
+								"korean": "용암 강변, 낡은 제복의 배달부가 거대한 소포를 짊어진 채 달리고 있었다.",
+								"english": "By the lava river, a deliveryman in a worn uniform ran, burdened with a huge package.",
+								"japanese": "溶岩の川辺で、古びた制服の配達員が、巨大な小包を背負って走っていた。",
+								"chinese": "熔岩河畔，一个穿着旧制服的快递员正背着一个巨大的包裹奔跑着。",
+								"french": "Au bord de la rivière de lave, un livreur en uniforme usé courait, chargé d'un énorme colis.",
+								"spanish": "A orillas del río de lava, un repartidor con un uniforme desgastado corría, cargando un enorme paquete.",
+								"vietnamese": "Bên bờ sông dung nham, một người giao hàng trong bộ đồng phục cũ kỹ đang chạy, vác một gói hàng khổng lồ.",
+								"thai": "ริมฝั่งแม่น้ำลาวา บุรุษส่งของในชุดเครื่องแบบเก่ากำลังวิ่ง โดยมีพัสดุขนาดใหญ่แบกอยู่",
+								"hindi": "लावा नदी के किनारे, एक पुराना वर्दी पहने डिलीवरीमैन एक विशाल पार्सल लिए दौड़ रहा था।"
+							},
+							"emotion": "base"
+						},
+						{
+							"emotion": "angry",
+							"content": {
+								"korean": "늦었어! 늦었다고! 비켜, 악성 민원인들!",
+								"english": "\"Late! I'm late! Get out of the way, troublesome customers!",
+								"japanese": "遅れた！遅れたんだ！邪魔だ、悪質なクレーム客ども！",
+								"chinese": "“迟到了！我迟到了！让开，恶劣的投诉者们！”",
+								"french": "« En retard ! Je suis en retard ! Écartez-vous, clients pénibles ! »",
+								"spanish": "«¡Tarde! ¡Llego tarde! ¡Quítense del camino, quejicas molestos!»",
+								"vietnamese": "\"Muộn rồi! Tôi muộn rồi! Tránh ra, mấy vị khách khó tính kia!",
+								"thai": "“สายแล้ว! ฉันสายแล้ว! หลีกไปเลย, ลูกค้าร้องเรียนจอมปัญหา!”",
+								"hindi": "“देर हो गई! मुझे देर हो गई! हट जाओ, परेशान करने वाले ग्राहक!”"
+							},
+							"type": "speech",
+							"speaker": "random_boss"
+						},
+						{
+							"content": {
+								"korean": "악성 민원인? 뭐라고 지껄이는 거야!",
+								"english": "\"Troublesome customers? What are you babbling about!",
+								"japanese": "悪質なクレーム客？何をでたらめ言ってるんだ！",
+								"chinese": "“恶劣的投诉者？你在胡说些什么！”",
+								"french": "« Plaignants malveillants ? Qu'est-ce que tu racontes ! »",
+								"spanish": "«¿Quejicas molestos? ¡De qué estás hablando!»",
+								"vietnamese": "\"Khách khó tính à? Ngươi đang nói linh tinh gì vậy!",
+								"thai": "“ลูกค้าร้องเรียนจอมปัญหา? แกพูดอะไรเพ้อเจ้อเนี่ย!”",
+								"hindi": "“परेशान करने वाले ग्राहक? तुम क्या बक रहे हो!”"
+							},
+							"emotion": "angry",
+							"speaker": "character_any",
+							"type": "speech"
+						},
+						{
+							"duration_ms": 500,
+							"action": "enter",
+							"speaker": "drox",
+							"type": "direction",
+							"spot": [
+								4,
+								3
+							]
+						},
+						{
+							"type": "speech",
+							"speaker": "drox",
+							"emotion": "base",
+							"content": {
+								"korean": "뭐야, 지옥에도 배달부가 있다고? 그것도 저런 걸 들고?",
+								"english": "\"What, there are deliverymen in hell too? And carrying something like that?",
+								"japanese": "何だ、地獄にも配達員がいるのか？しかもあんな物を持って？",
+								"chinese": "“什么，地狱里也有快递员？还带着那种东西？”",
+								"french": "« Quoi, il y a aussi des livreurs en enfer ? Et ils portent des trucs pareils ? »",
+								"spanish": "«¿Qué, también hay repartidores en el infierno? ¿Y con algo así?»",
+								"vietnamese": "\"Cái gì, địa ngục cũng có người giao hàng sao? Lại còn mang theo cái thứ đó nữa?",
+								"thai": "“อะไรนะ, ในนรกก็มีบุรุษส่งของด้วยเหรอ? แถมยังถือของแบบนั้นอีก?”",
+								"hindi": "“क्या, नरक में भी डिलीवरीमैन होते हैं? और वह भी ऐसी चीज़ लेकर?”"
+							}
+						},
+						{
+							"content": {
+								"korean": "빨리 안 비키면 민원 넣는다! 불친절, 배달 방해!",
+								"english": "\"If you don't move quickly, I'll file a complaint! Unfriendly service, delivery obstruction!",
+								"japanese": "早くどかないとクレーム入れるぞ！不親切、配達妨害！",
+								"chinese": "“再不快点让开，我就要投诉了！服务不周，妨碍配送！”",
+								"french": "« Si vous ne bougez pas vite, je porterai plainte ! Impolitesse, entrave à la livraison ! »",
+								"spanish": "«¡Si no se quitan rápido, presentaré una queja! ¡Falta de amabilidad, obstrucción de entrega!»",
+								"vietnamese": "\"Không tránh ra nhanh là ta sẽ khiếu nại đấy! Thái độ không thân thiện, cản trở giao hàng!",
+								"thai": "“ถ้าไม่หลีกไปเร็วๆ จะร้องเรียนนะ! บริการแย่, ขัดขวางการส่งของ!”",
+								"hindi": "“अगर तुम जल्दी नहीं हटे, तो मैं शिकायत दर्ज करूँगा! असभ्य सेवा, डिलीवरी में बाधा!”"
+							},
+							"emotion": "angry",
+							"speaker": "random_boss",
+							"type": "speech"
+						}
+					],
+					"id": 1
+				},
+				{
+					"dialogue": [
+						{
+							"action": "enter",
+							"speaker": "drox",
+							"duration_ms": 500,
+							"type": "direction",
+							"spot": [
+								2,
+								3
+							]
+						},
+						{
+							"speaker": "drox",
+							"type": "speech",
+							"content": {
+								"korean": "배달부가 왜 우리랑 싸우는 건데?",
+								"english": "Why is the delivery guy fighting us?",
+								"japanese": "なんで配達員が俺たちと戦ってるんだ？",
+								"chinese": "送货员为什么和我们打起来了？",
+								"french": "Pourquoi le livreur se bat-il contre nous ?",
+								"spanish": "¿Por qué el repartidor está luchando contra nosotros?",
+								"vietnamese": "Tại sao nhân viên giao hàng lại đánh chúng ta?",
+								"thai": "ทำไมพนักงานส่งของถึงมาสู้กับเรา?",
+								"hindi": "डिलीवरी वाला हमसे क्यों लड़ रहा है?"
+							},
+							"emotion": "base"
+						},
+						{
+							"emotion": "sad",
+							"content": {
+								"korean": "죄송합니다! 죄송합니다만! 배달을 방해하면 안 됩니다!",
+								"english": "Sorry! So sorry! But you can't interfere with the delivery!",
+								"japanese": "申し訳ありません！申し訳ありませんが！配達を邪魔しないでください！",
+								"chinese": "对不起！对不起！但是不能妨碍送货！",
+								"french": "Désolé ! Vraiment désolé ! Mais vous ne pouvez pas interférer avec la livraison !",
+								"spanish": "¡Lo siento! ¡Lo siento mucho! ¡Pero no pueden interferir con la entrega!",
+								"vietnamese": "Xin lỗi! Rất xin lỗi! Nhưng không được cản trở việc giao hàng!",
+								"thai": "ขอโทษครับ! ขอโทษจริง ๆ! แต่ห้ามขัดขวางการจัดส่งครับ!",
+								"hindi": "क्षमा करें! बहुत क्षमा करें! लेकिन आप डिलीवरी में बाधा नहीं डाल सकते!"
+							},
+							"type": "speech",
+							"speaker": "random_boss"
+						},
+						{
+							"content": {
+								"korean": "사과하면서 공격하지 마!",
+								"english": "Don't attack while apologizing!",
+								"japanese": "謝りながら攻撃するな！",
+								"chinese": "别一边道歉一边攻击啊！",
+								"french": "N'attaque pas en t'excusant !",
+								"spanish": "¡No ataques mientras te disculpas!",
+								"vietnamese": "Đừng tấn công trong khi xin lỗi!",
+								"thai": "อย่าโจมตีไปขอโทษไปสิ!",
+								"hindi": "माफ़ी माँगते हुए हमला मत करो!"
+							},
+							"emotion": "angry",
+							"speaker": "character_any",
+							"type": "speech"
+						},
+						{
+							"type": "speech",
+							"speaker": "random_boss",
+							"emotion": "sad",
+							"content": {
+								"korean": "아아악! 이러다 제 시간에 못 맞춰요!",
+								"english": "Aargh! I won't make it on time at this rate!",
+								"japanese": "あああ！これじゃ時間通りに届けられない！",
+								"chinese": "啊啊啊！这样下去我可赶不上时间了！",
+								"french": "Aaaah ! À ce rythme, je ne serai pas à l'heure !",
+								"spanish": "¡Aaah! ¡A este paso no llegaré a tiempo!",
+								"vietnamese": "Aaaah! Kiểu này không kịp giờ mất!",
+								"thai": "อ๊ากกก! แบบนี้จะไม่ทันเวลาแล้ว!",
+								"hindi": "आआह! इस हिसाब से तो मैं समय पर नहीं पहुँच पाऊँगा!"
+							}
+						}
+					],
+					"id": 3
+				},
+				{
+					"dialogue": [
+						{
+							"duration_ms": 500,
+							"speaker": "drox",
+							"action": "enter",
+							"spot": [
+								2,
+								3
+							],
+							"type": "direction"
+						},
+						{
+							"content": {
+								"korean": "배달부의 소포에서 찢어진 종잇장 하나가 떨어져 나왔다.",
+								"english": "A torn piece of paper fell out of the deliveryman's package.",
+								"japanese": "配達員の小包から、破れた紙切れが落ちてきた。",
+								"chinese": "一张撕裂的纸片从送货员的包裹里掉了出来。",
+								"french": "Un morceau de papier déchiré est tombé du colis du livreur.",
+								"spanish": "Un trozo de papel rasgado se cayó del paquete del repartidor.",
+								"vietnamese": "Một mảnh giấy rách rơi ra từ gói hàng của nhân viên giao hàng.",
+								"thai": "กระดาษฉีกขาดชิ้นหนึ่งหลุดออกมาจากพัสดุของพนักงานส่งของ",
+								"hindi": "डिलीवरी वाले के पार्सल से एक फटा हुआ कागज़ का टुकड़ा गिर गया।"
+							},
+							"emotion": "base",
+							"speaker": "narrator",
+							"type": "speech"
+						},
+						{
+							"spot": [
+								5,
+								5
+							],
+							"type": "direction",
+							"speaker": "narrator",
+							"action": "focus",
+							"duration_ms": 500
+						},
+						{
+							"emotion": "base",
+							"content": {
+								"korean": "저건 뭐야? 지옥 글자는 아닌 것 같은데?",
+								"english": "What's that? Doesn't look like infernal script.",
+								"japanese": "あれは何だ？地獄の文字ではないようだが？",
+								"chinese": "那是什么？好像不是地狱文字？",
+								"french": "Qu'est-ce que c'est ? Ça n'a pas l'air d'être des caractères infernaux.",
+								"spanish": "¿Qué es eso? No parece escritura infernal.",
+								"vietnamese": "Cái gì thế kia? Không giống chữ địa ngục.",
+								"thai": "นั่นอะไรน่ะ? ดูไม่เหมือนอักษรนรกเลยนะ?",
+								"hindi": "वह क्या है? नरक की लिपि तो नहीं लगती?"
+							},
+							"type": "speech",
+							"speaker": "drox"
+						},
+						{
+							"emotion": "base",
+							"content": {
+								"korean": "뭔가 쓰여 있어.",
+								"english": "Something's written on it.",
+								"japanese": "何かが書かれている。",
+								"chinese": "上面写着什么。",
+								"french": "Il y a quelque chose d'écrit dessus.",
+								"spanish": "Hay algo escrito.",
+								"vietnamese": "Có gì đó được viết.",
+								"thai": "มีอะไรบางอย่างเขียนอยู่",
+								"hindi": "उस पर कुछ लिखा है।"
+							},
+							"type": "speech",
+							"speaker": "character_any"
+						},
+						{
+							"speaker": "random_boss",
+							"type": "speech",
+							"content": {
+								"korean": "안 돼! 그건! 절대 보면 안 되는 서류예요!",
+								"english": "No! That! That's a document you absolutely shouldn't see!",
+								"japanese": "駄目だ！それは！絶対に見ちゃいけない書類だ！",
+								"chinese": "不行！那个！那份文件绝对不能看！",
+								"french": "Non ! Ça ! C'est un document que vous ne devez absolument pas voir !",
+								"spanish": "¡No! ¡Eso! ¡Es un documento que no deben ver bajo ningún concepto!",
+								"vietnamese": "Không! Đó! Đó là tài liệu tuyệt đối không được xem!",
+								"thai": "ไม่นะ! นั่นมัน! มันคือเอกสารที่คุณห้ามดูเด็ดขาด!",
+								"hindi": "नहीं! वह! वह एक ऐसा दस्तावेज़ है जिसे आपको बिल्कुल नहीं देखना चाहिए!"
+							},
+							"emotion": "angry"
+						},
+						{
+							"emotion": "base",
+							"content": {
+								"korean": "종잇장에는 알 수 없는 기호와 숫자가 빼곡했다. 우주적 좌표와 시간 기록 같았다.",
+								"english": "The paper was filled with unknown symbols and numbers. It looked like cosmic coordinates and time records.",
+								"japanese": "紙切れには、未知の記号と数字がびっしりと書かれていた。宇宙の座標と時間の記録のようだった。",
+								"chinese": "纸片上密密麻麻地写满了未知的符号和数字。看起来像是宇宙坐标和时间记录。",
+								"french": "La feuille était remplie de symboles et de chiffres inconnus. Cela ressemblait à des coordonnées cosmiques et des enregistrements temporels.",
+								"spanish": "El trozo de papel estaba lleno de símbolos y números desconocidos. Parecían coordenadas cósmicas y registros de tiempo.",
+								"vietnamese": "Mảnh giấy đầy những ký hiệu và số không xác định. Trông giống như tọa độ vũ trụ và ghi chép thời gian.",
+								"thai": "กระดาษแผ่นนั้นเต็มไปด้วยสัญลักษณ์และตัวเลขที่ไม่รู้จัก ดูเหมือนพิกัดจักรวาลและบันทึกเวลา",
+								"hindi": "कागज़ पर अज्ञात प्रतीक और संख्याएँ भरी हुई थीं। यह ब्रह्मांडीय निर्देशांक और समय के रिकॉर्ड जैसा लग रहा था।"
+							},
+							"type": "speech",
+							"speaker": "narrator"
+						}
+					],
+					"id": 5
+				},
+				{
+					"id": 9,
+					"dialogue": [
+						{
+							"type": "direction",
+							"spot": [
+								2,
+								3
+							],
+							"duration_ms": 500,
+							"action": "enter",
+							"speaker": "drox"
+						},
+						{
+							"content": {
+								"korean": "이러다 진짜 해고당한다고! 당신들 때문에!",
+								"english": "At this rate, I'll really get fired! Because of you guys!",
+								"japanese": "このままだと本当にクビになる！お前たちのせいで！",
+								"chinese": "这样下去我真的会被解雇的！都怪你们！",
+								"french": "À ce rythme, je vais vraiment me faire virer ! À cause de vous !",
+								"spanish": "¡A este paso, de verdad me van a despedir! ¡Por culpa de ustedes!",
+								"vietnamese": "Kiểu này là bị sa thải thật đấy! Tại các người!",
+								"thai": "แบบนี้ฉันโดนไล่ออกจริง ๆ นะ! เพราะพวกคุณ!",
+								"hindi": "इस हिसाब से तो मुझे सच में नौकरी से निकाल दिया जाएगा! तुम लोगों की वजह से!"
+							},
+							"emotion": "sad",
+							"speaker": "random_boss",
+							"type": "speech"
+						},
+						{
+							"type": "speech",
+							"speaker": "drox",
+							"emotion": "base",
+							"content": {
+								"korean": "저기… 우리랑 싸우는 게 아니라 지금 자기 회사 걱정을 하는 거야?",
+								"english": "Uh... are you worrying about your company instead of fighting us?",
+								"japanese": "あの…私たちと戦うより、今自分の会社の心配をしてるの？",
+								"chinese": "喂……你不是在和我们打架，而是在担心自己的公司吗？",
+								"french": "Hé... tu t'inquiètes pour ta boîte au lieu de nous affronter ?",
+								"spanish": "Oye... ¿te preocupas por tu empresa en vez de luchar contra nosotros?",
+								"vietnamese": "Này... ngươi đang lo lắng cho công ty của mình thay vì chiến đấu với chúng ta à?",
+								"thai": "นี่... นี่นายกำลังห่วงบริษัทตัวเองแทนที่จะสู้กับพวกเราเหรอ?",
+								"hindi": "अरे... तुम हमसे लड़ने की बजाय अपनी कंपनी की चिंता कर रहे हो?"
+							}
+						},
+						{
+							"type": "speech",
+							"speaker": "character_any",
+							"emotion": "base",
+							"content": {
+								"korean": "이런 싸움은 처음이야. 대체 뭐하는 녀석인데.",
+								"english": "This is my first time in such a fight. What kind of person is he, anyway?",
+								"japanese": "こんな戦いは初めてだ。一体何者なんだ。",
+								"chinese": "这样的战斗还是第一次。这到底是什么家伙？",
+								"french": "C'est la première fois que je me bats comme ça. C'est qui, ce type ?",
+								"spanish": "Es la primera vez que peleo así. ¿Quién es este tipo, de todos modos?",
+								"vietnamese": "Đây là lần đầu tiên ta tham gia một cuộc chiến như vậy. Rốt cuộc hắn là loại người gì?",
+								"thai": "นี่เป็นการต่อสู้แบบนี้ครั้งแรกเลย หมอนี่เป็นใครกันแน่เนี่ย",
+								"hindi": "ऐसी लड़ाई में मैं पहली बार हूँ। आखिर ये है कौन?"
+							}
+						},
+						{
+							"content": {
+								"korean": "제발 길 좀 비켜주세요! 저도 먹고 살아야죠!",
+								"english": "Please, move aside! I have to make a living too!",
+								"japanese": "どうか道を空けてください！私も生きていかなきゃならないんです！",
+								"chinese": "拜托，请让开！我也要养家糊口啊！",
+								"french": "S'il vous plaît, laissez-moi passer ! Je dois bien gagner ma vie !",
+								"spanish": "¡Por favor, apártense! ¡Yo también tengo que ganarme la vida!",
+								"vietnamese": "Làm ơn, tránh đường đi! Tôi cũng phải kiếm sống chứ!",
+								"thai": "ได้โปรดหลีกทางให้ผมด้วย! ผมก็ต้องทำมาหากินนะ!",
+								"hindi": "कृपया, रास्ता दीजिए! मुझे भी तो अपना पेट पालना है!"
+							},
+							"emotion": "sad",
+							"speaker": "random_boss",
+							"type": "speech"
+						},
+						{
+							"speaker": "drox",
+							"type": "speech",
+							"content": {
+								"korean": "하긴, 지옥에서 일하는 것도 쉬운 일은 아니겠지.",
+								"english": "Well, working in hell wouldn't be easy either.",
+								"japanese": "まあ、地獄で働くのも楽じゃないだろうな。",
+								"chinese": "说实话，在地狱工作也不是件容易的事。",
+								"french": "C'est vrai que travailler en enfer ne doit pas être facile.",
+								"spanish": "Bueno, trabajar en el infierno tampoco debe ser fácil.",
+								"vietnamese": "Mà, làm việc ở địa ngục cũng không dễ dàng gì đâu.",
+								"thai": "ก็จริงนะ การทำงานในนรกก็คงไม่ง่ายเหมือนกัน",
+								"hindi": "हाँ, नरक में काम करना भी आसान नहीं होगा।"
+							},
+							"emotion": "base"
+						},
+						{
+							"type": "speech",
+							"speaker": "narrator",
+							"emotion": "base",
+							"content": {
+								"korean": "배달부의 발악은 필사적이었다. 이건 전투가 아니라, 극한의 야근이었다.",
+								"english": "The deliveryman's struggle was desperate. This wasn't a battle; it was extreme overtime.",
+								"japanese": "配達員の足掻きは必死だった。これは戦闘ではなく、極限の残業だった。",
+								"chinese": "快递员的挣扎是绝望的。这不是一场战斗，而是一次极限加班。",
+								"french": "La lutte du livreur était désespérée. Ce n'était pas un combat, mais des heures supplémentaires extrêmes.",
+								"spanish": "La lucha del repartidor era desesperada. Esto no era una batalla, sino un turno extra agotador.",
+								"vietnamese": "Sự vùng vẫy của người giao hàng thật tuyệt vọng. Đây không phải là một trận chiến, mà là ca làm thêm cực độ.",
+								"thai": "การดิ้นรนของคนส่งของนั้นสิ้นหวัง นี่ไม่ใช่การต่อสู้ แต่มันคือการทำงานล่วงเวลาขั้นสุดยอด",
+								"hindi": "डिलीवरीमैन का संघर्ष जानलेवा था। यह लड़ाई नहीं, बल्कि अत्यधिक ओवरटाइम था।"
+							}
+						}
+					]
+				},
+				{
+					"win_dialogue": [
+						{
+							"emotion": "base",
+							"content": {
+								"korean": "배달부가 쓰러졌다. 그의 손에서 소포가 스르륵 풀려나왔다.",
+								"english": "The deliveryman collapsed. The package slipped from his grasp.",
+								"japanese": "配達人が倒れた。彼の手から小包が滑り落ちた。",
+								"chinese": "快递员倒下了。包裹从他手中滑落。",
+								"french": "Le livreur s'est effondré. Le colis a glissé de ses mains.",
+								"spanish": "El repartidor se desplomó. El paquete se deslizó de sus manos.",
+								"vietnamese": "Người giao hàng gục xuống. Bưu kiện trượt khỏi tay anh ta.",
+								"thai": "คนส่งของล้มลง หีบห่อหลุดมือเขาไป",
+								"hindi": "डिलीवरीमैन गिर पड़ा। उसके हाथ से पार्सल सरक गया।"
+							},
+							"type": "speech",
+							"speaker": "narrator"
+						},
+						{
+							"speaker": "random_boss",
+							"type": "speech",
+							"content": {
+								"korean": "결국… 늦어버렸네… 정말… 죄송합니다…",
+								"english": "In the end... I was late... Truly... I apologize...",
+								"japanese": "結局… 遅れてしまった… 本当に… 申し訳ありません…",
+								"chinese": "最终……还是迟了……真是……抱歉……",
+								"french": "Finalement... je suis en retard... Vraiment... désolé...",
+								"spanish": "Al final... llegué tarde... De verdad... lo siento...",
+								"vietnamese": "Cuối cùng... tôi đã đến trễ... Thật sự... xin lỗi...",
+								"thai": "ในที่สุด... ก็สายไปแล้ว... จริงๆ... ขอโทษด้วย...",
+								"hindi": "आख़िरकार... मैं देर हो गया... सच में... माफ़ करना..."
+							},
+							"emotion": "sad"
+						},
+						{
+							"type": "speech",
+							"speaker": "character_any",
+							"emotion": "base",
+							"content": {
+								"korean": "소포가… 열렸어.",
+								"english": "The package... it's open.",
+								"japanese": "小包が…開いた。",
+								"chinese": "包裹……打开了。",
+								"french": "Le colis... est ouvert.",
+								"spanish": "El paquete... se ha abierto.",
+								"vietnamese": "Bưu kiện... đã mở rồi.",
+								"thai": "หีบห่อ... เปิดแล้ว",
+								"hindi": "पार्सल... खुल गया।"
+							}
+						},
+						{
+							"speaker": "drox",
+							"action": "enter",
+							"duration_ms": 500,
+							"spot": [
+								4,
+								3
+							],
+							"type": "direction"
+						},
+						{
+							"emotion": "base",
+							"content": {
+								"korean": "안에 아무것도 없어? 종이 몇 장이랑… 이상한 빛?",
+								"english": "Nothing inside? Just a few papers and... a strange light?",
+								"japanese": "中には何もない？紙が数枚と…奇妙な光？",
+								"chinese": "里面什么都没有？几张纸和……一道奇怪的光？",
+								"french": "Rien à l'intérieur ? Juste quelques papiers et... une lumière étrange ?",
+								"spanish": "¿Nada dentro? ¿Solo unos papeles y... una luz extraña?",
+								"vietnamese": "Không có gì bên trong sao? Chỉ vài tờ giấy và... một ánh sáng kỳ lạ?",
+								"thai": "ไม่มีอะไรข้างในเลยเหรอ? แค่กระดาษสองสามแผ่นกับ... แสงประหลาด?",
+								"hindi": "अंदर कुछ नहीं है? बस कुछ कागज़ और... एक अजीब सी रोशनी?"
+							},
+							"type": "speech",
+							"speaker": "drox"
+						},
+						{
+							"speaker": "narrator",
+							"type": "speech",
+							"content": {
+								"korean": "텅 빈 소포 안에선 우주적 시간과 공간이 뒤섞인 듯한 빛이 새어 나왔다. 이 지옥의 소동은, 작은 조각에 불과했다.",
+								"english": "From the empty package, light leaked out, as if cosmic time and space were intertwined. This hellish commotion was but a small fragment.",
+								"japanese": "空っぽの小包からは、宇宙の時間と空間が入り混じったような光が漏れ出た。この地獄の騒動は、ほんの小さな断片に過ぎなかった。",
+								"chinese": "从空荡荡的包裹里，泄露出仿佛宇宙时空交织的光芒。这场地狱般的骚动，不过是其中一小部分罢了。",
+								"french": "Du colis vide s'échappait une lumière où le temps et l'espace cosmiques semblaient entremêlés. Ce tumulte infernal n'était qu'un petit fragment.",
+								"spanish": "Del paquete vacío, una luz emanaba como si el tiempo y el espacio cósmicos se mezclaran. Esta conmoción infernal era solo un pequeño fragmento.",
+								"vietnamese": "Từ bưu kiện rỗng tuếch, ánh sáng thoát ra như thể thời gian và không gian vũ trụ đan xen vào nhau. Sự náo động địa ngục này chỉ là một mảnh nhỏ.",
+								"thai": "จากหีบห่อที่ว่างเปล่า แสงเล็ดลอดออกมา ราวกับว่าเวลาและอวกาศในจักรวาลผสมผสานกัน ความวุ่นวายจากนรกนี้เป็นเพียงเศษเสี้ยวเล็กๆ",
+								"hindi": "खाली पार्सल से, एक रोशनी रिस रही थी, जैसे कि ब्रह्मांडीय समय और स्थान आपस में गुंथे हुए हों। यह नरक का उपद्रव एक छोटा सा अंश मात्र था।"
+							},
+							"emotion": "base"
+						}
+					],
+					"lose_dialogue": [
+						{
+							"speaker": "narrator",
+							"type": "speech",
+							"content": {
+								"korean": "배달부가 거친 숨을 몰아쉬었다. 그의 눈은 이미 다른 차원을 보고 있었다.",
+								"english": "The deliveryman gasped for breath. His eyes were already seeing another dimension.",
+								"japanese": "配達人は荒い息を吐いた。彼の目は既に別の次元を見ていた。",
+								"chinese": "快递员大口喘着粗气。他的眼睛已经看到了另一个维度。",
+								"french": "Le livreur haleta. Ses yeux voyaient déjà une autre dimension.",
+								"spanish": "El repartidor jadeó. Sus ojos ya veían otra dimensión.",
+								"vietnamese": "Người giao hàng thở hổn hển. Đôi mắt anh ta đã nhìn thấy một chiều không gian khác.",
+								"thai": "คนส่งของหอบหายใจ ดวงตาของเขาเห็นมิติอื่นแล้ว",
+								"hindi": "डिलीवरीमैन हाँफ रहा था। उसकी आँखें पहले से ही किसी और आयाम को देख रही थीं।"
+							},
+							"emotion": "base"
+						},
+						{
+							"speaker": "random_boss",
+							"type": "speech",
+							"content": {
+								"korean": "멍청한 것들… 덕분에 또 늦었잖아! 이건 너희 때문이야!",
+								"english": "You idiots... I'm late again because of you! This is all your fault!",
+								"japanese": "馬鹿者どもめ… お前たちのせいでまた遅れたじゃないか！これはお前たちのせいだ！",
+								"chinese": "你们这些蠢货……又因为你们迟到了！这都是你们的错！",
+								"french": "Espèces d'idiots... Je suis encore en retard à cause de vous ! C'est de votre faute !",
+								"spanish": "¡Estúpidos... por su culpa llego tarde otra vez! ¡Esto es por ustedes!",
+								"vietnamese": "Đồ ngốc... Tại các ngươi mà ta lại trễ rồi! Đây là lỗi của các ngươi!",
+								"thai": "พวกโง่... เพราะพวกแกฉันถึงสายอีกแล้ว! นี่มันความผิดของพวกแก!",
+								"hindi": "तुम मूर्खों... तुम्हारी वजह से मैं फिर देर हो गया! यह सब तुम्हारी गलती है!"
+							},
+							"emotion": "angry"
+						},
+						{
+							"content": {
+								"korean": "이대로 끝낼 순 없어!",
+								"english": "I can't end it like this!",
+								"japanese": "このままでは終わらせられない！",
+								"chinese": "不能就这样结束！",
+								"french": "Je ne peux pas finir comme ça !",
+								"spanish": "¡No puedo terminar así!",
+								"vietnamese": "Không thể kết thúc như thế này được!",
+								"thai": "ฉันจะจบแบบนี้ไม่ได้!",
+								"hindi": "मैं इसे ऐसे ख़त्म नहीं कर सकता!"
+							},
+							"emotion": "angry",
+							"speaker": "character_any",
+							"type": "speech"
+						},
+						{
+							"spot": [
+								4,
+								3
+							],
+							"type": "direction",
+							"speaker": "drox",
+							"action": "enter",
+							"duration_ms": 500
+						},
+						{
+							"speaker": "drox",
+							"type": "speech",
+							"content": {
+								"korean": "저 녀석… 지옥에서 야근 수당이라도 더 받으려고 저러나.",
+								"english": "That guy... is he trying to get more overtime pay in hell or something?",
+								"japanese": "あいつ…地獄で残業手当でももっともらおうとしてるのか。",
+								"chinese": "那家伙……是想在地狱多领加班费吗？",
+								"french": "Ce type... essaie-t-il d'obtenir plus d'heures supplémentaires en enfer ou quoi ?",
+								"spanish": "Ese tipo... ¿está tratando de conseguir más horas extras en el infierno o qué?",
+								"vietnamese": "Tên đó... có phải đang cố gắng nhận thêm tiền làm thêm giờ ở địa ngục không?",
+								"thai": "หมอนั่น... พยายามจะรับค่าล่วงเวลาเพิ่มในนรกหรือไงนะ",
+								"hindi": "वो लड़का... क्या वो नरक में ओवरटाइम का और ज़्यादा पैसा लेना चाहता है या कुछ और?"
+							},
+							"emotion": "base"
+						}
+					],
+					"dialogue": [
+						{
+							"type": "direction",
+							"spot": [
+								3,
+								3
+							],
+							"duration_ms": 500,
+							"action": "enter",
+							"speaker": "drox"
+						},
+						{
+							"content": {
+								"korean": "배달부가 더 이상 도망갈 곳이 없었다. 그는 낡은 소포를 꼭 끌어안았다.",
+								"english": "The deliveryman had nowhere left to run. He clutched the old package tightly.",
+								"japanese": "配達員はもう逃げ場がなかった。彼は古い小包をぎゅっと抱きしめた。",
+								"chinese": "快递员已经无路可逃了。他紧紧地抱住那个旧包裹。",
+								"french": "Le livreur n'avait plus nulle part où fuir. Il serra fort le vieux colis.",
+								"spanish": "El repartidor ya no tenía adónde huir. Abrazó fuertemente el viejo paquete.",
+								"vietnamese": "Người giao hàng không còn nơi nào để trốn. Anh ta ôm chặt gói bưu phẩm cũ kỹ.",
+								"thai": "คนส่งของไม่มีที่ให้หนีอีกแล้ว เขากอดพัสดุเก่าๆ แน่น",
+								"hindi": "डिलीवरीमैन के पास अब भागने की जगह नहीं थी। उसने पुराने पार्सल को कसकर पकड़ रखा था।"
+							},
+							"emotion": "base",
+							"speaker": "narrator",
+							"type": "speech"
+						},
+						{
+							"speaker": "random_boss",
+							"type": "speech",
+							"content": {
+								"korean": "젠장! 최악의 민원인들이야! 마지막 배달인데!",
+								"english": "Damn it! You're the worst customers ever! And this is my last delivery!",
+								"japanese": "くそっ！最悪の苦情客だ！最後の配達なのに！",
+								"chinese": "该死！你们是最糟糕的投诉人！这可是我最后一次送货了！",
+								"french": "Merde ! Vous êtes les pires clients qui soient ! Et c'est ma dernière livraison !",
+								"spanish": "¡Maldición! ¡Son los peores clientes! ¡Y esta es mi última entrega!",
+								"vietnamese": "Chết tiệt! Các ngươi là những khách hàng tệ hại nhất! Đây là chuyến giao hàng cuối cùng của ta!",
+								"thai": "บ้าจริง! พวกแกนี่มันลูกค้าที่แย่ที่สุดเลย! นี่มันส่งของครั้งสุดท้ายของฉันนะ!",
+								"hindi": "धिक्कार है! तुम सबसे बुरे शिकायतकर्ता हो! और यह मेरी आखिरी डिलीवरी है!"
+							},
+							"emotion": "angry"
+						},
+						{
+							"emotion": "base",
+							"content": {
+								"korean": "마지막 배달? 그래서 그렇게 필사적이었던 거야?",
+								"english": "Last delivery? Is that why you were so desperate?",
+								"japanese": "最後の配達？だからそんなに必死だったのか？",
+								"chinese": "最后一次送货？所以你才那么拼命吗？",
+								"french": "Dernière livraison ? C'est pour ça que tu étais si désespéré ?",
+								"spanish": "¿Última entrega? ¿Por eso estabas tan desesperado?",
+								"vietnamese": "Chuyến giao hàng cuối cùng? Đó là lý do ngươi tuyệt vọng đến thế à?",
+								"thai": "ส่งของครั้งสุดท้ายเหรอ? นั่นสินะว่าทำไมนายถึงได้สิ้นหวังขนาดนั้น",
+								"hindi": "आखिरी डिलीवरी? इसलिए तुम इतने हताश थे?"
+							},
+							"type": "speech",
+							"speaker": "drox"
+						},
+						{
+							"speaker": "character_any",
+							"type": "speech",
+							"content": {
+								"korean": "더 이상 도망 못 가. 소포의 정체를 밝혀낼 거야!",
+								"english": "You can't run anymore. We'll uncover the package's true identity!",
+								"japanese": "もう逃げられない。小包の正体を暴いてやる！",
+								"chinese": "你再也逃不掉了。我们一定会揭开包裹的真面目！",
+								"french": "Tu ne peux plus fuir. On va découvrir ce que contient ce colis !",
+								"spanish": "Ya no puedes escapar. ¡Vamos a descubrir la identidad del paquete!",
+								"vietnamese": "Ngươi không thể trốn nữa. Chúng ta sẽ làm sáng tỏ thân phận của gói bưu phẩm!",
+								"thai": "นายหนีไม่พ้นแล้ว เราจะเปิดเผยตัวตนที่แท้จริงของพัสดุ!",
+								"hindi": "अब तुम भाग नहीं सकते। हम पार्सल की असली पहचान उजागर करेंगे!"
+							},
+							"emotion": "angry"
+						},
+						{
+							"emotion": "sad",
+							"content": {
+								"korean": "안 돼! 이건… 이 세상 것이 아니라고!",
+								"english": "No! This... this isn't of this world!",
+								"japanese": "やめろ！これは…この世のものではない！",
+								"chinese": "不！这……这不是这个世界的东西！",
+								"french": "Non ! Ça... ça n'est pas de ce monde !",
+								"spanish": "¡No! ¡Esto... esto no es de este mundo!",
+								"vietnamese": "Không! Cái này... nó không thuộc về thế giới này!",
+								"thai": "ไม่นะ! นี่...นี่มันไม่ใช่ของโลกนี้!",
+								"hindi": "नहीं! यह... यह इस दुनिया का नहीं है!"
+							},
+							"type": "speech",
+							"speaker": "random_boss"
+						}
+					],
+					"id": 15
+				}
+			]
+		},
+		{
+			"scenario_id": "hell_memo_3_05",
+			"order": 5,
+			"act": "climax_finale",
+			"theme": "hell",
+			"actors": {
+				"soot": {
+					"id": "mon_a0491490-e114-44d8-855c-d2d63b020da1",
+					"name": {
+						"korean": "그을음",
+						"english": "Soot",
+						"japanese": "煤",
+						"chinese": "煤烟",
+						"french": "Suie",
+						"spanish": "Hollín",
+						"vietnamese": "Bồ hóng",
+						"thai": "เขม่า",
+						"hindi": "कालिख"
+					},
+					"description": "",
+					"face_image_url": "https://imagedelivery.net/WTEqQNGFb-l-IHS6IGnzUQ/2275d372-4e89-4725-193c-fccc0b944300/public",
+					"battle_sprite_url": "https://imagedelivery.net/WTEqQNGFb-l-IHS6IGnzUQ/d1d5ba2b-da7c-4b75-42de-07c9cdda5d00/public"
+				}
+			},
+			"boss": {
+				"pool_id": "pool_129"
+			},
+			"rooms": [
+				{
+					"dialogue": [
+						{
+							"type": "speech",
+							"content": {
+								"korean": "불타는 용암 강변, 낡은 제복의 배달부가 거대한 소포를 짊어지고 나타났다.",
+								"english": "By the burning lava river, a deliveryman in a worn uniform appeared, carrying a giant package.",
+								"japanese": "燃え盛る溶岩の川辺に、古びた制服の配達人が巨大な小包を背負って現れた。",
+								"chinese": "在燃烧的熔岩河边，一名穿着旧制服的快递员背着一个巨大的包裹出现了。",
+								"french": "Au bord de la rivière de lave en fusion, un livreur en uniforme usé apparut, portant un colis gigantesque.",
+								"spanish": "Junto al ardiente río de lava, apareció un repartidor con un uniforme gastado, cargando un paquete gigantesco.",
+								"vietnamese": "Bên bờ sông dung nham rực lửa, một người giao hàng trong bộ đồng phục cũ kỹ xuất hiện, vác theo một gói hàng khổng lồ.",
+								"thai": "ณ ริมแม่น้ำลาวาที่ลุกโชน บุรุษไปรษณีย์ในเครื่องแบบเก่าปรากฏตัวขึ้นพร้อมกับพัสดุขนาดมหึมา",
+								"hindi": "जलती हुई लावा नदी के किनारे, एक पुरानी वर्दी वाला डिलीवरीमैन एक विशाल पार्सल लिए हुए प्रकट हुआ।"
+							},
+							"speaker": "narrator",
+							"emotion": "base"
+						},
+						{
+							"speaker": "soot",
+							"duration_ms": 500,
+							"action": "enter",
+							"type": "direction",
+							"spot": [
+								3,
+								2
+							]
+						},
+						{
+							"type": "speech",
+							"content": {
+								"korean": "지옥에 웬 택배? 미쳤군, 저 자식.",
+								"english": "A delivery in Hell? That bastard's crazy.",
+								"japanese": "地獄に宅配便？あいつ、どうかしてるぜ。",
+								"chinese": "地狱里也有快递？那家伙疯了吧。",
+								"french": "Une livraison en Enfer ? Ce type est fou.",
+								"spanish": "¿Una entrega en el Infierno? Ese tipo está loco.",
+								"vietnamese": "Giao hàng ở Địa ngục à? Tên khốn đó điên rồi.",
+								"thai": "มีพัสดุในนรกเหรอ? ไอ้หมอนั่นมันบ้าไปแล้ว",
+								"hindi": "नर्क में डिलीवरी? वह कमीना पागल है।"
+							},
+							"speaker": "soot",
+							"emotion": "angry"
+						},
+						{
+							"speaker": "character_any",
+							"emotion": "base",
+							"type": "speech",
+							"content": {
+								"korean": "저 소포에 뭔가 있어. 저렇게 필사적일 리 없어.",
+								"english": "There's something in that package. He wouldn't be this desperate otherwise.",
+								"japanese": "あの小包に何かある。そうでなければ、あんなに必死なはずがない。",
+								"chinese": "那个包裹里有东西。否则他不会那么拼命。",
+								"french": "Il y a quelque chose dans ce colis. Il ne serait pas si désespéré autrement.",
+								"spanish": "Hay algo en ese paquete. No estaría tan desesperado de otra manera.",
+								"vietnamese": "Có gì đó trong gói hàng đó. Hắn sẽ không tuyệt vọng đến vậy đâu.",
+								"thai": "มีบางอย่างอยู่ในพัสดุนั้น เขาไม่น่าจะสิ้นหวังขนาดนั้น",
+								"hindi": "उस पार्सल में कुछ है। वरना वो इतना बेताब नहीं होता।"
+							}
+						},
+						{
+							"speaker": "boss",
+							"emotion": "angry",
+							"type": "speech",
+							"content": {
+								"korean": "늦었어! 늦었어! 이거라도 제때 못 내면!",
+								"english": "Too late! Too late! If I can't deliver even this on time!",
+								"japanese": "遅い！遅い！これだけでも時間通りに届けられなかったら！",
+								"chinese": "晚了！晚了！要是连这个都不能按时送达！",
+								"french": "Trop tard ! Trop tard ! Si je ne peux même pas livrer ça à temps !",
+								"spanish": "¡Demasiado tarde! ¡Demasiado tarde! ¡Si no puedo entregar esto a tiempo!",
+								"vietnamese": "Trễ rồi! Trễ rồi! Nếu không thể giao cái này đúng giờ!",
+								"thai": "สายไปแล้ว! สายไปแล้ว! ถ้าส่งของชิ้นนี้ไม่ทันเวลา!",
+								"hindi": "देर हो गई! देर हो गई! अगर मैं यह भी समय पर नहीं दे पाया तो!"
+							}
+						}
+					],
+					"id": 1
+				},
+				{
+					"dialogue": [
+						{
+							"speaker": "soot",
+							"action": "enter",
+							"duration_ms": 500,
+							"spot": [
+								3,
+								2
+							],
+							"type": "direction"
+						},
+						{
+							"type": "speech",
+							"content": {
+								"korean": "저기, 소포에서 이상한 종잇조각이 떨어지는데? 지옥 글자가 아니야.",
+								"english": "Hey, a strange piece of paper fell from the package? It's not hell script.",
+								"japanese": "ねえ、小包から変な紙切れが落ちたんだけど？地獄の文字じゃないよ。",
+								"chinese": "喂，包裹里掉出来一张奇怪的纸片？不是地狱的文字。",
+								"french": "Hé, un étrange morceau de papier est tombé du colis ? Ce ne sont pas des écritures infernales.",
+								"spanish": "Oye, ¿un trozo de papel extraño se cayó del paquete? No es escritura infernal.",
+								"vietnamese": "Này, một mảnh giấy lạ rơi ra từ gói hàng? Không phải chữ địa ngục.",
+								"thai": "เฮ้ มีกระดาษแปลกๆ ตกออกมาจากพัสดุ? ไม่ใช่ตัวอักษรนรกนะ",
+								"hindi": "सुनो, पार्सल से एक अजीब कागज का टुकड़ा गिरा? यह नरक की लिपि नहीं है।"
+							},
+							"speaker": "soot",
+							"emotion": "base"
+						},
+						{
+							"speaker": "character_1",
+							"emotion": "base",
+							"type": "speech",
+							"content": {
+								"korean": "…우주적 좌표? 시간 기록?",
+								"english": "...Cosmic coordinates? Time record?",
+								"japanese": "…宇宙座標？時間記録？",
+								"chinese": "……宇宙坐标？时间记录？",
+								"french": "...Coordonnées cosmiques ? Enregistrement temporel ?",
+								"spanish": "...¿Coordenadas cósmicas? ¿Registro de tiempo?",
+								"vietnamese": "...Tọa độ vũ trụ? Ghi chép thời gian?",
+								"thai": "...พิกัดจักรวาล? บันทึกเวลา?",
+								"hindi": "...ब्रह्मांडीय निर्देशांक? समय का रिकॉर्ड?"
+							}
+						},
+						{
+							"type": "speech",
+							"content": {
+								"korean": "민원인 여러분, 죄송합니다! 정말 급해서 그럽니다!",
+								"english": "Excuse me, everyone! I'm really in a hurry!",
+								"japanese": "皆さん、申し訳ありません！本当に急いでいるんです！",
+								"chinese": "各位民众，抱歉！我真的有急事！",
+								"french": "Excusez-moi, tout le monde ! Je suis vraiment pressé !",
+								"spanish": "¡Disculpen, a todos! ¡Tengo mucha prisa!",
+								"vietnamese": "Xin lỗi quý vị! Tôi thật sự rất gấp!",
+								"thai": "ขอโทษครับทุกท่าน! ผมรีบจริงๆ ครับ!",
+								"hindi": "माफ़ करना, सभी लोग! मुझे सच में जल्दी है!"
+							},
+							"speaker": "boss",
+							"emotion": "sad"
+						}
+					],
+					"id": 3
+				},
+				{
+					"id": 5,
+					"dialogue": [
+						{
+							"action": "enter",
+							"duration_ms": 500,
+							"spot": [
+								3,
+								2
+							],
+							"type": "direction",
+							"speaker": "soot"
+						},
+						{
+							"speaker": "soot",
+							"emotion": "base",
+							"type": "speech",
+							"content": {
+								"korean": "저 자식이 지나간 자리에… 순간 시간이 멈춘 것 같았어.",
+								"english": "Where that guy passed... for a moment, time seemed to stop.",
+								"japanese": "あいつが通り過ぎた場所に…一瞬、時間が止まったようだった。",
+								"chinese": "那个家伙经过的地方……时间好像在那一刻停滞了。",
+								"french": "Là où ce type est passé... un instant, le temps a semblé s'arrêter.",
+								"spanish": "Donde ese tipo pasó... por un momento, el tiempo pareció detenerse.",
+								"vietnamese": "Nơi tên đó đi qua... trong khoảnh khắc, thời gian dường như ngừng lại.",
+								"thai": "ตรงที่หมอนั่นเดินผ่านไป... เหมือนเวลาหยุดนิ่งไปชั่วขณะ",
+								"hindi": "जिस जगह से वो आदमी गुज़रा... एक पल के लिए, समय रुक सा गया था।"
+							}
+						},
+						{
+							"speaker": "character_2",
+							"emotion": "base",
+							"type": "speech",
+							"content": {
+								"korean": "시간을 멈춘다고? 배달부가?",
+								"english": "Stop time? A delivery guy?",
+								"japanese": "時間を止めるって？配達員が？",
+								"chinese": "停止时间？一个送货员？",
+								"french": "Arrêter le temps ? Un livreur ?",
+								"spanish": "¿Detener el tiempo? ¿Un repartidor?",
+								"vietnamese": "Ngừng thời gian? Một người giao hàng?",
+								"thai": "หยุดเวลา? พนักงานส่งของเนี่ยนะ?",
+								"hindi": "समय रोकना? एक डिलीवरी वाला?"
+							}
+						},
+						{
+							"type": "speech",
+							"content": {
+								"korean": "제발 비켜주세요! 저… 저도 먹고 살아야죠!",
+								"english": "Please get out of the way! I... I need to make a living too!",
+								"japanese": "どうか、道を空けてください！私…私も生活がかかっているんです！",
+								"chinese": "拜托，请让开！我……我也要讨生活啊！",
+								"french": "S'il vous plaît, écartez-vous ! Je... je dois gagner ma vie aussi !",
+								"spanish": "¡Por favor, apártense! ¡Yo... yo también tengo que ganarme la vida!",
+								"vietnamese": "Làm ơn tránh ra đi! Tôi... tôi cũng phải kiếm sống chứ!",
+								"thai": "ได้โปรดหลีกทางให้ผมด้วย! ผม... ผมก็ต้องทำมาหากินนะ!",
+								"hindi": "कृपया रास्ता छोड़ दें! मैं... मुझे भी तो अपनी ज़िंदगी चलानी है!"
+							},
+							"speaker": "boss",
+							"emotion": "sad"
+						}
+					]
+				},
+				{
+					"id": 9,
+					"dialogue": [
+						{
+							"spot": [
+								3,
+								2
+							],
+							"type": "direction",
+							"action": "enter",
+							"duration_ms": 500,
+							"speaker": "soot"
+						},
+						{
+							"type": "speech",
+							"content": {
+								"korean": "점점 더 빨라져! 대체 뭘 배달하는 거야?",
+								"english": "Getting faster and faster! What in the world is he delivering?",
+								"japanese": "どんどん速くなってる！一体何を配達してるんだ？",
+								"chinese": "越来越快了！他到底在送什么？",
+								"french": "Il va de plus en plus vite ! Qu'est-ce qu'il livre, bon sang ?",
+								"spanish": "¡Cada vez más rápido! ¿Qué demonios está entregando?",
+								"vietnamese": "Càng lúc càng nhanh! Hắn ta rốt cuộc đang giao cái gì vậy?",
+								"thai": "เร็วขึ้นเรื่อยๆ! เขากำลังส่งอะไรกันแน่?",
+								"hindi": "और तेज़ होता जा रहा है! आख़िर वो क्या डिलीवर कर रहा है?"
+							},
+							"speaker": "soot",
+							"emotion": "base"
+						},
+						{
+							"type": "speech",
+							"content": {
+								"korean": "단순한 물건이 아니야. 저 필사적인 얼굴… 뭔가 절박한 사정이 있어.",
+								"english": "It's not just a simple object. That desperate face... there's something urgent going on.",
+								"japanese": "ただの物じゃない。あの必死な顔…何か切迫した事情があるんだ。",
+								"chinese": "不仅仅是件普通的东西。那张拼命的脸……他一定有什么迫切的苦衷。",
+								"french": "Ce n'est pas un simple objet. Ce visage désespéré... il y a une situation urgente.",
+								"spanish": "No es un simple objeto. Esa cara desesperada... hay una situación apremiante.",
+								"vietnamese": "Không phải là một vật đơn giản. Khuôn mặt tuyệt vọng đó... chắc chắn có một tình huống khẩn cấp.",
+								"thai": "ไม่ใช่แค่ของธรรมดาแน่ๆ สีหน้าสิ้นหวังนั่น... ต้องมีเรื่องด่วนอะไรบางอย่าง",
+								"hindi": "यह कोई साधारण चीज़ नहीं है। वो बेताब चेहरा... कुछ तो बहुत ज़रूरी बात है।"
+							},
+							"speaker": "character_3",
+							"emotion": "base"
+						},
+						{
+							"speaker": "boss",
+							"emotion": "sad",
+							"type": "speech",
+							"content": {
+								"korean": "민원인분들! 싸우고 싶지 않습니다! 그냥 지나가게 해주세요!",
+								"english": "Customers! I don't want to fight! Please let me through!",
+								"japanese": "住民の皆様！争いたくありません！どうか通してください！",
+								"chinese": "各位市民！我不想打架！请让我过去！",
+								"french": "Citoyens ! Je ne veux pas me battre ! Laissez-moi juste passer !",
+								"spanish": "¡Clientes! ¡No quiero pelear! ¡Solo déjenme pasar!",
+								"vietnamese": "Thưa quý vị! Tôi không muốn đánh nhau! Xin hãy cho tôi qua!",
+								"thai": "ทุกท่านครับ! ผมไม่อยากสู้! แค่ให้ผมผ่านไปเถอะครับ!",
+								"hindi": "ग्राहकों! मैं लड़ना नहीं चाहता! बस मुझे जाने दो!"
+							}
+						}
+					]
+				},
+				{
+					"id": 15,
+					"lose_dialogue": [
+						{
+							"type": "speech",
+							"content": {
+								"korean": "수천 장의 서류 칼날이 탐험대를 덮쳤다. 메모는 소포를 부여잡고 흐느꼈다.",
+								"english": "Thousands of paper blades engulfed the expedition. Memo clutched the package, sobbing.",
+								"japanese": "数千枚の書類の刃が探検隊を襲った。メモは小包を抱きしめてすすり泣いた。",
+								"chinese": "数千张纸刃袭向了探险队。梅莫紧抱包裹，抽泣着。",
+								"french": "Des milliers de lames de papier s'abattirent sur l'expédition. Memo serra le paquet et sanglota.",
+								"spanish": "Miles de cuchillas de papel cayeron sobre la expedición. Memo se aferró al paquete y sollozó.",
+								"vietnamese": "Hàng ngàn lưỡi dao giấy ập xuống đoàn thám hiểm. Memo ôm chặt gói hàng, nức nở.",
+								"thai": "ใบมีดกระดาษนับพันใบโถมเข้าใส่คณะสำรวจ เมโมกอดพัสดุไว้แน่นพลางสะอื้นไห้",
+								"hindi": "हज़ारों कागज़ की ब्लेड ने अभियान दल को घेर लिया। मेमो ने पैकेट को कसकर पकड़ लिया और सिसकियाँ लीं।"
+							},
+							"speaker": "narrator",
+							"emotion": "base"
+						},
+						{
+							"speaker": "boss",
+							"emotion": "angry",
+							"type": "speech",
+							"content": {
+								"korean": "흐윽… 흐윽… 이걸 잃을 순 없어… 저는… 저는 아직 희망이 있어요!",
+								"english": "Ugh... Ugh... I can't lose this... I... I still have hope!",
+								"japanese": "うぅっ… うぅっ… これを失うわけにはいかない… 私は… 私はまだ希望がある！",
+								"chinese": "呜呜... 呜呜... 我不能失去这个... 我... 我还有希望！",
+								"french": "Ugh... Ugh... Je ne peux pas perdre ça... J'ai... j'ai encore de l'espoir !",
+								"spanish": "Ugh... Ugh... No puedo perder esto... Yo... ¡Todavía tengo esperanza!",
+								"vietnamese": "Ướt... Ướt... Tôi không thể mất thứ này... Tôi... tôi vẫn còn hy vọng!",
+								"thai": "ฮึก... ฮึก... ฉันจะเสียสิ่งนี้ไปไม่ได้... ฉัน... ฉันยังมีความหวัง!",
+								"hindi": "हूँ... हूँ... मैं इसे खो नहीं सकता... मुझे... मुझे अभी भी उम्मीद है!"
+							}
+						},
+						{
+							"type": "speech",
+							"content": {
+								"korean": "젠장… 물러설 수 없어…!",
+								"english": "Damn it... I can't back down...!",
+								"japanese": "くそっ… 退くわけにはいかない…！",
+								"chinese": "该死... 我不能退缩...！",
+								"french": "Bon sang... Je ne peux pas reculer... !",
+								"spanish": "Maldita sea... ¡No puedo retroceder...!",
+								"vietnamese": "Chết tiệt... Tôi không thể lùi bước...!",
+								"thai": "บ้าจริง... ฉันถอยไม่ได้...!",
+								"hindi": "लानत है... मैं पीछे नहीं हट सकता...!"
+							},
+							"speaker": "character_any",
+							"emotion": "angry"
+						}
+					],
+					"dialogue": [
+						{
+							"type": "speech",
+							"content": {
+								"korean": "마침내 배달부, 메모가 멈췄다. 그의 소포가 갈라지기 시작했다.",
+								"english": "Finally, the deliveryman, Memo, stopped. His package began to split open.",
+								"japanese": "ついに配達員メモが立ち止まった。彼の小包が裂け始めた。",
+								"chinese": "终于，快递员Memo停了下来。他的包裹开始裂开。",
+								"french": "Finalement, le livreur, Memo, s'arrêta. Son colis commença à se déchirer.",
+								"spanish": "Finalmente, el repartidor, Memo, se detuvo. Su paquete comenzó a abrirse.",
+								"vietnamese": "Cuối cùng, người giao hàng, Memo, dừng lại. Gói hàng của anh ta bắt đầu tách ra.",
+								"thai": "ในที่สุดบุรุษไปรษณีย์เมโมก็หยุดลง พัสดุของเขาเริ่มปริแตกออก",
+								"hindi": "आखिरकार, डिलीवरी मैन, मेमो रुक गया। उसका पार्सल फटने लगा।"
+							},
+							"speaker": "narrator",
+							"emotion": "base"
+						},
+						{
+							"speaker": "soot",
+							"duration_ms": 500,
+							"action": "enter",
+							"type": "direction",
+							"spot": [
+								3,
+								2
+							]
+						},
+						{
+							"speaker": "character_any",
+							"emotion": "base",
+							"type": "speech",
+							"content": {
+								"korean": "드디어! 소포의 정체가 뭐야!",
+								"english": "Finally! What *is* this package?!",
+								"japanese": "ついに！この小包の正体はなんだ！",
+								"chinese": "终于！这包裹里到底是什么！",
+								"french": "Enfin ! C'est quoi ce colis ?!",
+								"spanish": "¡Por fin! ¿Qué es este paquete?",
+								"vietnamese": "Cuối cùng! Cái gói hàng này là gì đây!",
+								"thai": "ในที่สุด! พัสดุนี่มันอะไรกัน!",
+								"hindi": "ये पार्सल क्या है!"
+							}
+						},
+						{
+							"type": "speech",
+							"content": {
+								"korean": "…안 돼! 안 돼! 이걸 찢으면… 제 인생이 망한다구요!",
+								"english": "...No! No! If you tear this... my life will be ruined!",
+								"japanese": "…だめだ！だめだ！これを破ったら…俺の人生が台無しになる！",
+								"chinese": "…不！不！如果撕开这个…我的人生就完蛋了！",
+								"french": "...Non ! Non ! Si vous déchirez ça... ma vie est foutue !",
+								"spanish": "¡...No! ¡No! Si lo rompes... ¡mi vida estará arruinada!",
+								"vietnamese": "...Không! Không! Nếu xé cái này... đời tôi coi như xong!",
+								"thai": "...ไม่นะ! ไม่! ถ้าฉีกนี่... ชีวิตผมจะพัง!",
+								"hindi": "...नहीं! नहीं! अगर इसे फाड़ा तो... मेरी ज़िंदगी बर्बाद हो जाएगी!"
+							},
+							"speaker": "boss",
+							"emotion": "angry"
+						},
+						{
+							"duration_ms": 700,
+							"speaker": "boss",
+							"action": "shake",
+							"type": "direction"
+						},
+						{
+							"type": "speech",
+							"content": {
+								"korean": "소포가 찢어지고 수천 장의 서류가 튀어나왔다. 서류들은 칼날처럼 날카롭게 빛났다.",
+								"english": "The package tore open, and thousands of documents burst out. The papers gleamed sharply like blades.",
+								"japanese": "小包が破け、数千枚の書類が飛び出した。書類は刀の刃のように鋭く光っていた。",
+								"chinese": "包裹被撕裂，数千份文件飞了出来。文件像刀刃般锋利地闪耀着。",
+								"french": "Le colis se déchira, et des milliers de documents en jaillirent. Les papiers brillaient, aussi tranchants que des lames.",
+								"spanish": "El paquete se rasgó, y miles de documentos salieron disparados. Los papeles brillaban afilados como cuchillas.",
+								"vietnamese": "Gói hàng bị xé rách, hàng ngàn tài liệu bắn ra. Chúng sáng loáng sắc bén như lưỡi dao.",
+								"thai": "พัสดุฉีกขาดออก และเอกสารนับพันแผ่นก็พุ่งออกมา เอกสารเหล่านั้นส่องประกายแหลมคมราวกับใบมีด",
+								"hindi": "पार्सल फट गया और हज़ारों दस्तावेज़ बाहर निकल आए। कागज़ात तलवार की धार की तरह तेज़ी से चमक रहे थे।"
+							},
+							"speaker": "narrator",
+							"emotion": "base"
+						},
+						{
+							"type": "speech",
+							"content": {
+								"korean": "이 소포는… 제 목숨 줄이란 말입니다! 이거라도 제때 못 내면 저 해고당한다구요!",
+								"english": "This package... it's my lifeline! If I don't deliver this on time, I'll be fired!",
+								"japanese": "この小包は…俺の命綱なんだ！これを期限内に提出できないとクビになる！",
+								"chinese": "这个包裹…是我的命根子啊！如果我不能及时交出去，我就会被解雇！",
+								"french": "Ce colis... c'est ma bouée de sauvetage ! Si je ne le livre pas à temps, je suis viré !",
+								"spanish": "Este paquete... ¡es mi salvavidas! ¡Si no lo entrego a tiempo, me despiden!",
+								"vietnamese": "Gói hàng này... là lẽ sống của tôi đấy! Nếu không giao kịp, tôi sẽ bị sa thải!",
+								"thai": "พัสดุนี่... มันคือเส้นชีวิตของผม! ถ้าส่งนี่ไม่ทันเวลา ผมจะโดนไล่ออก!",
+								"hindi": "यह पार्सल... मेरी जान है! अगर मैं इसे समय पर नहीं दे पाया, तो मुझे नौकरी से निकाल दिया जाएगा!"
+							},
+							"speaker": "boss",
+							"emotion": "angry"
+						},
+						{
+							"type": "speech",
+							"content": {
+								"korean": "퇴직금도 없어요! 야근 수당은 바라지도 않으니 제발 그냥 좀 가게 해주세요! 제발, 제발! 으아아아아아, 내 인생!",
+								"english": "No severance pay! I'm not even asking for overtime pay, so please just let me go! Please, please! Ugh, my life!",
+								"japanese": "退職金もないんです！残業代なんて望んでないから、どうか行かせてください！頼む、頼む！うわああああ、俺の人生！",
+								"chinese": "没有遣散费！我连加班费都不敢奢望，所以请让我过去吧！求求你们，求求你们！啊啊啊啊啊，我的人生啊！",
+								"french": "Pas d'indemnités de départ ! Je ne demande même pas de paiement d'heures supplémentaires, alors s'il vous plaît, laissez-moi juste passer ! S'il vous plaît, s'il vous plaît ! Aaah, ma vie !",
+								"spanish": "¡Sin indemnización! Ni siquiera pido horas extras, ¡así que por favor, déjenme pasar! ¡Por favor, por favor! ¡Ugh, mi vida!",
+								"vietnamese": "Không có tiền trợ cấp thôi việc! Tôi không dám mơ đến tiền làm thêm giờ, nên xin hãy cho tôi qua! Làm ơn, làm ơn! Áaaaaa, đời tôi tàn rồi!",
+								"thai": "ไม่มีเงินชดเชย! ผมไม่หวังแม้แต่โอที ขอแค่ให้ผมไปเถอะครับ! ได้โปรด, ได้โปรด! อ๊าาาาาาา, ชีวิตผม!",
+								"hindi": "सेवानिवृत्ति का पैसा भी नहीं मिलेगा! मैं ओवरटाइम का तो सोच भी नहीं रहा, बस मुझे जाने दो! प्लीज़, प्लीज़! उफ़, मेरी ज़िंदगी!"
+							},
+							"speaker": "boss",
+							"emotion": "sad"
+						},
+						{
+							"type": "speech",
+							"content": {
+								"korean": "…이게 차원 붕괴 지연 보고서라고?",
+								"english": "...This is a Dimension Collapse Delay Report?",
+								"japanese": "…これが次元崩壊遅延報告書だと？",
+								"chinese": "…这是次元崩塌延迟报告书？",
+								"french": "...C'est un rapport de retard de l'effondrement dimensionnel ?",
+								"spanish": "...¿Este es un Informe de Retraso del Colapso Dimensional?",
+								"vietnamese": "...Đây là báo cáo trì hoãn sụp đổ chiều không gian sao?",
+								"thai": "...นี่คือรายงานการชะลอการล่มสลายของมิติรึ?",
+								"hindi": "...यह आयाम पतन विलंब रिपोर्ट है?"
+							},
+							"speaker": "character_any",
+							"emotion": "base"
+						},
+						{
+							"type": "speech",
+							"content": {
+								"korean": "맞아요! 이거라도 없으면 대우주 기록국에서 저 잘려요!",
+								"english": "Exactly! If I don't have this, I'll be fired from the Grand Cosmic Archives!",
+								"japanese": "そうです！これがないと大宇宙記録局からクビにされます！",
+								"chinese": "没错！如果连这个都没有，我就会被大宇宙记录局开除！",
+								"french": "C'est ça ! Si je n'ai pas ça, je serai viré des Archives Cosmiques !",
+								"spanish": "¡Exacto! ¡Si no tengo esto, me despiden de la Oficina de Archivos Cósmicos!",
+								"vietnamese": "Đúng vậy! Nếu không có cái này, tôi sẽ bị đuổi khỏi Cục Hồ sơ Đại Vũ Trụ!",
+								"thai": "ใช่แล้ว! ถ้าไม่มีนี่ ผมจะโดนไล่ออกจากการบันทึกจักรวาลใหญ่!",
+								"hindi": "बिल्कुल! अगर यह भी नहीं हुआ, तो मुझे महा ब्रह्मांडीय अभिलेखागार से निकाल दिया जाएगा!"
+							},
+							"speaker": "boss",
+							"emotion": "sad"
+						}
+					],
+					"win_dialogue": [
+						{
+							"speaker": "narrator",
+							"emotion": "base",
+							"type": "speech",
+							"content": {
+								"korean": "배달부, 메모는 서류 무더기 속에 쓰러졌다. 그의 눈동자는 공허했다.",
+								"english": "The deliveryman, Memo, collapsed amidst the pile of documents. His eyes were hollow.",
+								"japanese": "配達員メモは書類の山の中に倒れ込んだ。彼の瞳は虚ろだった。",
+								"chinese": "快递员Memo倒在了文件堆中。他的眼神空洞无物。",
+								"french": "Le livreur, Memo, s'effondra au milieu de la pile de documents. Ses yeux étaient vides.",
+								"spanish": "El repartidor, Memo, se desplomó entre la pila de documentos. Sus ojos estaban vacíos.",
+								"vietnamese": "Người giao hàng, Memo, gục ngã giữa đống tài liệu. Đôi mắt anh ta trống rỗng.",
+								"thai": "บุรุษไปรษณีย์เมโมล้มลงท่ามกลางกองเอกสาร ดวงตาของเขาว่างเปล่า",
+								"hindi": "डिलीवरी मैन, मेमो दस्तावेज़ों के ढेर में गिर गया। उसकी आँखें ख़ाली थीं।"
+							}
+						},
+						{
+							"duration_ms": 500,
+							"action": "enter",
+							"type": "direction",
+							"spot": [
+								3,
+								2
+							],
+							"speaker": "soot"
+						},
+						{
+							"type": "speech",
+							"content": {
+								"korean": "…결국, 늦어버렸군… 나의… 나의 퇴직금….",
+								"english": "...It's too late after all... My... my retirement fund...",
+								"japanese": "...結局、手遅れだったか… 私の… 私の退職金が…。",
+								"chinese": "...终究还是晚了... 我的... 我的退休金...",
+								"french": "...Il est trop tard, après tout... Ma... ma prime de départ...",
+								"spanish": "...Al final, es demasiado tarde... Mi... mi indemnización...",
+								"vietnamese": "...Cuối cùng thì cũng đã muộn rồi... Tiền... tiền trợ cấp của tôi...",
+								"thai": "...สุดท้ายก็สายไปแล้ว... เงิน... เงินบำนาญของฉัน...",
+								"hindi": "...आखिरकार, बहुत देर हो चुकी है... मेरा... मेरा रिटायरमेंट फंड..."
+							},
+							"speaker": "boss",
+							"emotion": "sad"
+						},
+						{
+							"type": "speech",
+							"content": {
+								"korean": "이게… 지옥보다 더한 곳이었네. 누군가의 삶이란….",
+								"english": "This... was a place worse than hell. Someone's life... is...",
+								"japanese": "ここが… 地獄よりも酷い場所だったとは。誰かの人生とは…。",
+								"chinese": "这里... 比地狱更糟糕。某人的生活啊...",
+								"french": "C'était... un endroit pire que l'enfer. La vie de quelqu'un, c'est...",
+								"spanish": "Este... era un lugar peor que el infierno. La vida de alguien...",
+								"vietnamese": "Đây... là nơi còn tệ hơn địa ngục. Cuộc đời của ai đó...",
+								"thai": "ที่นี่... เลวร้ายยิ่งกว่านรกเสียอีก ชีวิตของใครบางคนก็คือ...",
+								"hindi": "यह... नरक से भी बदतर जगह थी। किसी का जीवन..."
+							},
+							"speaker": "character_any",
+							"emotion": "sad"
+						},
+						{
+							"speaker": "soot",
+							"emotion": "base",
+							"type": "speech",
+							"content": {
+								"korean": "이제… 이 지옥은 어떻게 되는 거지?",
+								"english": "Now... what will become of this hell?",
+								"japanese": "さて… この地獄はどうなるんだろう？",
+								"chinese": "现在... 这个地狱会变成什么样？",
+								"french": "Maintenant... qu'adviendra-t-il de cet enfer ?",
+								"spanish": "Ahora... ¿qué pasará con este infierno?",
+								"vietnamese": "Giờ thì... địa ngục này sẽ ra sao đây?",
+								"thai": "แล้ว... นรกนี้จะเป็นอย่างไรต่อไป?",
+								"hindi": "अब... इस नरक का क्या होगा?"
+							}
+						}
+					]
+				}
+			],
+			"epilogue": {
+				"korean": [
+					"비루한 절박함은 그렇게 끝났다. 하지만 배달은, 영원히 멈추지 않을 것 같았다.",
+					"메모는 사라졌다. 그의 퇴직금과 함께, 수많은 보고서도.",
+					"지연 보고서는 또 다른 차원 붕괴를 예고하고 있었다. 세상은 그렇게 기록되고 잊혀질 것이다.",
+					"이것은 구원이었을까, 아니면 더 거대한 비극의 서막이었을까."
+				],
+				"english": [
+					"The wretched desperation ended thus. But the delivery, it seemed, would never stop.",
+					"The memo disappeared. Along with his severance pay, countless reports also vanished.",
+					"The delay report foretold another dimension collapse. The world would be recorded and forgotten thus.",
+					"Was this salvation, or the prelude to a greater tragedy?"
+				],
+				"japanese": [
+					"卑しい絶望はそうして終わった。しかし配達は、永遠に止まらないようだった。",
+					"メモは消え去った。彼の退職金と共に、数多くの報告書も。",
+					"遅延報告書は、さらなる次元崩壊を予兆していた。世界はそうして記録され、忘れ去られるだろう。",
+					"これは救済だったのか、それともより巨大な悲劇の序幕だったのか。"
+				],
+				"chinese": [
+					"卑微的绝望就这样结束了。但送货，似乎永远不会停止。",
+					"备忘录消失了。连同他的遣散费，无数报告也一并消失了。",
+					"延迟报告预示着另一次维度崩塌。世界将这样被记录并遗忘。",
+					"这是救赎吗，还是更宏大悲剧的序幕？"
+				],
+				"french": [
+					"La misérable désespérance prit fin ainsi. Mais la livraison, elle, semblait ne jamais devoir s'arrêter.",
+					"La note disparut. Avec son indemnité de départ, d'innombrables rapports s'envolèrent aussi.",
+					"Le rapport de retard annonçait un autre effondrement dimensionnel. Le monde serait ainsi consigné puis oublié.",
+					"Était-ce une rédemption, ou le prélude d'une tragédie plus grande encore ?"
+				],
+				"spanish": [
+					"La miserable desesperación terminó así. Pero la entrega, parecía, nunca se detendría.",
+					"La nota desapareció. Junto con su indemnización por despido, también lo hicieron innumerables informes.",
+					"El informe de retraso anunciaba otro colapso dimensional. El mundo sería registrado y olvidado así.",
+					"¿Fue esto una salvación, o el preludio de una tragedia aún mayor?"
+				],
+				"vietnamese": [
+					"Nỗi tuyệt vọng khốn khổ đã kết thúc như vậy. Nhưng việc giao hàng, dường như, sẽ không bao giờ dừng lại.",
+					"Bản ghi nhớ biến mất. Cùng với tiền trợ cấp thôi việc của anh ta, vô số báo cáo cũng vậy.",
+					"Báo cáo chậm trễ dự báo một sự sụp đổ chiều không gian khác. Thế giới sẽ được ghi lại và lãng quên như vậy.",
+					"Đây là sự cứu rỗi, hay khúc dạo đầu cho một bi kịch lớn hơn?"
+				],
+				"thai": [
+					"ความสิ้นหวังอันน่าสมเพชได้สิ้นสุดลงแล้ว แต่การจัดส่ง ดูเหมือนจะไม่มีวันหยุดลง",
+					"บันทึกหายไปแล้ว พร้อมกับเงินชดเชยเกษียณอายุและรายงานจำนวนมาก",
+					"รายงานความล่าช้าบ่งบอกถึงการล่มสลายของมิติอื่น โลกจะถูกบันทึกและถูกลืมไปเช่นนั้น",
+					"นี่คือความรอดหรือเป็นเพียงปฐมบทของโศกนาฏกรรมที่ยิ่งใหญ่กว่ากันแน่"
+				],
+				"hindi": [
+					"तुच्छ हताशा इस तरह समाप्त हो गई। लेकिन डिलीवरी, ऐसा लगता था, कभी नहीं रुकेगी।",
+					"मेमो गायब हो गया। उसके सेवानिवृत्ति वेतन के साथ, अनगिनत रिपोर्टें भी।",
+					"देरी की रिपोर्ट एक और आयाम के पतन की भविष्यवाणी कर रही थी। दुनिया इस तरह दर्ज की जाएगी और भुला दी जाएगी।",
+					"क्या यह मोक्ष था, या एक बड़ी त्रासदी का प्रस्तावना?"
+				]
+			},
+			"prologue": {
+				"korean": [
+					"지옥의 용암 강변을, 한 낡은 제복의 배달부가 뛰어다녔다.",
+					"그의 등에는 제 몸 세 배만 한 황금색 소포가 있었다.",
+					"“늦었어! 늦었어!” 그는 광기 어린 비명을 멈추지 않았다.",
+					"이 소포의 진짜 무게를 아는 자는 없었다. 그리고 이 배달의 대가 또한."
+				],
+				"english": [
+					"A deliveryman in a worn uniform ran along the lava river in Hell.",
+					"On his back was a golden package three times his size.",
+					"\"I'm late! I'm late!\" He didn't stop his frantic screams.",
+					"No one knew the true weight of this package. Nor the price of this delivery."
+				],
+				"japanese": [
+					"地獄の溶岩の川辺を、古びた制服の配達人が走り回っていた。",
+					"彼の背中には、自身の体の三倍もある黄金色の小包があった。",
+					"「遅れた！遅れた！」彼は狂気じみた叫び声を止めなかった。",
+					"この小包の本当の重さを知る者はいなかった。そして、この配達の代償も。"
+				],
+				"chinese": [
+					"一名穿着旧制服的快递员在地狱的熔岩河边奔跑。",
+					"他的背上有一个金色的包裹，有他身体的三倍大。",
+					"“迟到了！迟到了！”他不停地发出疯狂的尖叫。",
+					"没人知道这个包裹的真实重量，也没人知道这次送货的代价。"
+				],
+				"french": [
+					"Un livreur en uniforme usé courait le long de la rivière de lave de l'Enfer.",
+					"Sur son dos, il portait un colis doré trois fois plus grand que lui.",
+					"« Je suis en retard ! Je suis en retard ! » Il ne cessait de hurler frénétiquement.",
+					"Nul ne connaissait le véritable poids de ce colis. Ni le prix de cette livraison."
+				],
+				"spanish": [
+					"Un repartidor con un uniforme gastado corría por la orilla del río de lava del Infierno.",
+					"A su espalda, llevaba un paquete dorado del triple de su tamaño.",
+					"\"¡Llego tarde! ¡Llego tarde!\", no paraba de gritar con locura.",
+					"Nadie conocía el verdadero peso de este paquete. Ni el coste de esta entrega."
+				],
+				"vietnamese": [
+					"Một người giao hàng trong bộ đồng phục cũ kỹ chạy dọc bờ sông dung nham ở Địa ngục.",
+					"Trên lưng anh ta là một gói hàng màu vàng lớn gấp ba lần cơ thể anh ta.",
+					"\"Trễ rồi! Trễ rồi!\" Anh ta không ngừng la hét trong điên loạn.",
+					"Không ai biết trọng lượng thực sự của gói hàng này. Cũng như cái giá của chuyến giao hàng này."
+				],
+				"thai": [
+					"บุรุษไปรษณีย์ในเครื่องแบบเก่าวิ่งไปตามแม่น้ำลาวาแห่งนรก",
+					"บนหลังของเขามีพัสดุสีทองขนาดใหญ่กว่าตัวเขาถึงสามเท่า",
+					"\"สายแล้ว! สายแล้ว!\" เขาไม่หยุดกรีดร้องอย่างบ้าคลั่ง",
+					"ไม่มีใครรู้ถึงน้ำหนักที่แท้จริงของพัสดุนี้ และค่าตอบแทนของการจัดส่งนี้ก็เช่นกัน"
+				],
+				"hindi": [
+					"नर्क की लावा नदी के किनारे, एक पुरानी वर्दी वाला डिलीवरीमैन दौड़ रहा था।",
+					"उसकी पीठ पर, उसके शरीर से तीन गुना बड़ा एक सुनहरा पार्सल था।",
+					"\"मुझे देर हो गई! मुझे देर हो गई!\" उसने अपनी उन्मत्त चीखें नहीं रोकीं।",
+					"इस पार्सल का असली वज़न कोई नहीं जानता था। और न ही इस डिलीवरी की कीमत।"
+				]
+			}
+		}
+	]
+}
