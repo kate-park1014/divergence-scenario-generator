@@ -86,34 +86,38 @@ npm run gen:snowy-test -- --dry-run
 - 일부 실패 시: `npm run gen:snowy-test -- --skip-generate` 로 생성 결과 재사용하며 재시도.
 - 출력 `output_list/snowy_chapter_01~30.json` 은 기존 snowy 챕터와 파일명이 겹칠 수 있으니(테마+order 기준) 기존 산출물 보존이 필요하면 먼저 백업.
 
-## snowy_test 스토리아크 재생성 (시리즈 생성기)
+## 스토리아크 재생성 (보스당 1아크, 단발)
 
-snowy_test 의 storyarc 를 boss_list 에서 **LLM으로 처음부터** 생성한다(기존 `snowy/` 재활용이 아님). 보스당 편수 N 가변(기본 3). 기존 단일/시퀄 생성기([storyarcGen.ts](src/lib/prompts/storyarcGen.ts))로는 "N편 점진 reveal + NPC throughline"을 못 만들므로 **시리즈 생성기**를 별도로 둔다.
+테마 디렉토리의 storyarc 를 boss_list 에서 **LLM으로 처음부터** 생성한다. **보스당 1개 아크**(시리즈 아님). 기존 단일 아크 생성기([storyarcGen.ts](src/lib/prompts/storyarcGen.ts))를 재사용한다.
 
-### 구성요소 (신규)
-- 프롬프트/툴: [src/lib/prompts/seriesGen.ts](src/lib/prompts/seriesGen.ts) — `buildSeriesPlanPrompt`(비트시트) + `buildSeriesChapterPrompt`(편별), 각각 `seriesPlanTool`/`seriesChapterTool`.
-- 오케스트레이터: [src/routes/api/storyarc/bulk-series/+server.ts](src/routes/api/storyarc/bulk-series/+server.ts) — boss_list 읽기, 보스 병렬·보스내 순차(비트시트→편), 결정론 필드 주입, snowy_test 덮어쓰기.
-- 러너: [scripts/gen-snowy-storyarcs.mjs](scripts/gen-snowy-storyarcs.mjs) (npm `gen:snowy-storyarc`).
+> 과거 "시리즈 생성기"(보스당 N편 점진 reveal: seriesGen.ts / bulk-series)는 제거됨. 보스당 1아크로 단순화됨.
+
+### 구성요소
+- 프롬프트/툴: [src/lib/prompts/storyarcGen.ts](src/lib/prompts/storyarcGen.ts) — `buildStoryarcPrompt` + `storyarcGenTool`.
+- 오케스트레이터: [src/routes/api/storyarc/bulk/+server.ts](src/routes/api/storyarc/bulk/+server.ts) — boss_list 읽기, 보스 병렬, 결정론 필드 주입, 테마 디렉토리 덮어쓰기.
+- 테마 매핑(단일 출처): [src/lib/data/storyarc/boss_pool_map.js](src/lib/data/storyarc/boss_pool_map.js) — `BOSS_POOL_MAP`(key↔pool) / `BOSS_LIST_FILE` / `OUT_DIR`. 엔드포인트·러너 공유.
+- 러너: [scripts/gen-storyarcs.mjs](scripts/gen-storyarcs.mjs) (npm `gen:storyarc`).
 
 ### 생성 흐름
-보스당: **비트시트 1회**(surface→true→twist를 N편에 배분 + 편별 NPC throughline) → **편 k=1..N**(boss_list + 비트시트 + 이전 편 요약으로 각 편 StoryArc 생성, twist는 N편째 착지).
+보스당: `buildStoryarcPrompt(boss, npcs, theme)` 1콜로 StoryArc 1개 생성 → 결정론 필드 주입 → `storyarc_<theme>_<key>_<level>.ts` write.
 
 ### 결정론적 주입 (LLM 출력 위에 orchestrator가 덮어씀)
-- `id=snowy_<key>_<level>`, `level=bossIndex+(chapter-1)*10`, `theme:'snowy'`, `rising_count:3`.
-- `final_boss.id/name` = boss_list 고정, `surface_identity`는 boss_list 유지(true/motivation/twist는 편별 점진).
+- `id=<theme>_<key>_<level>`, **`level=bossIndex`** (0~9), `theme`, `rising_count:3`.
+- `final_boss.id/name` = boss_list 고정. (final_boss appearance 는 `appearance_npc`/`appearance_boss` 스키마.)
 - `scenarioOutline` order1~4 boss=`'random_boss'`, **order5 boss=보스 pool**, `act_tone.tension` intro/rising/climax=1/3/5.
-- 보스↔key↔pool 매핑은 `bulk-series/+server.ts` 의 `SNOWY_SERIES`(=러너 `SERIES`)에 고정. boss_list 순서와 일치.
+- 보스↔key↔pool 매핑은 `boss_pool_map.js` 의 `BOSS_POOL_MAP[theme]` 에 고정. boss_list 순서와 일치.
 
 ### 실행
 ```bash
-npm run dev &                                  # 포트 5178
-npm run gen:snowy-storyarc -- --dry-run        # 대상/매핑 확인 (네트워크 0)
-npm run gen:snowy-storyarc -- --boss=haraldr   # 스모크: 한 보스만
-npm run gen:snowy-storyarc                      # 전체 10보스
+npm run dev &                                    # 포트 5178
+npm run gen:storyarc -- --dry-run                # 대상/매핑 확인 (네트워크 0)
+npm run gen:storyarc -- --theme=modern           # modern 전체
+npm run gen:storyarc -- --theme=snowy --boss=haraldr  # 스모크: 한 보스만
+npm run gen:storyarc                             # snowy 전체 10보스
 ```
-옵션: `--chapters=N`(기본3), `--concurrency`(기본3), `--boss=key|idx[,…]`(부분집합).
+옵션: `--theme=snowy|modern|desert`(기본 snowy), `--concurrency`(기본3), `--batch`(기본3), `--boss=key|idx[,…]`(부분집합). (snowy 10 / modern 10 / desert 5 보스. forest·hell 은 pool 매핑 없어 미지원.)
 
 ### 주의
-- 실행은 LLM 비용(보스당 1+N콜, 전체 N=3이면 ≈40콜) + snowy_test 덮어쓰기(미커밋이면 복구 불가).
-- **N≠3** 로 바꾸면 파일명/level 집합이 달라져 `index.ts` 재생성 필요(N=3은 기존 30개와 동일해 index.ts 불변).
+- 실행은 LLM 비용(보스당 1콜) + 테마 디렉토리 덮어쓰기(미커밋이면 복구 불가).
+- 보스당 1아크 → level 집합이 기존 시리즈(0/10/20…) 와 달라짐(0~9). 재생성 후 **잉여 파일 정리 + `index.ts` 재생성** 필요.
 - npc 필드는 씬당 1개 key여야 함(다운스트림 챕터 생성의 persona/role 주입 전제).

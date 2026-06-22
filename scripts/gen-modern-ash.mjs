@@ -1,9 +1,9 @@
 #!/usr/bin/env node
 // Ash No.7 (modern boss index 3 = key 'rohan', pool_101) 전용 풀 파이프라인 러너.
-// 1) storyarc 생성: /api/storyarc/bulk-series (theme=modern, chapters=2, bossIndices=[3])
-//    → src/lib/data/storyarc/modern/storyarc_modern_rohan_{3,13}.ts 덮어쓰기
+// 1) storyarc 생성: /api/storyarc/bulk (theme=modern, bossIndices=[3])
+//    → src/lib/data/storyarc/modern/storyarc_modern_rohan_3.ts 덮어쓰기
 // 2) 시나리오 파이프라인: /api/scenario/bulk-pipeline (생성→actors→번역→output)
-//    → output_list/modern_chapter_04.json, modern_chapter_14.json
+//    → output_list/modern_chapter_04.json
 //
 // 사용법:
 //   npm run dev                 # 포트 5178 (이미 떠 있으면 생략)
@@ -67,10 +67,9 @@ const SKIP_STORYARC = Boolean(args['skip-storyarc']);
 const SKIP_GENERATE = Boolean(args['skip-generate']);
 
 const THEME = 'modern';
-const BOSS_INDEX = 3; // Ash No.7
-const CHAPTERS = 2; // level 3, 13
-// bulk-series가 ok로 돌려주는 id와 동일. 생성 건너뛸 때를 위한 폴백.
-let storyarcIds = ['modern_rohan_3', 'modern_rohan_13'];
+const BOSS_INDEX = 3; // Ash No.7 → level 3
+// bulk가 ok로 돌려주는 id와 동일. 생성 건너뛸 때를 위한 폴백.
+let storyarcIds = ['modern_rohan_3'];
 
 async function main() {
 	console.log(`=== Ash No.7 (modern idx ${BOSS_INDEX}) 풀 파이프라인 ===`);
@@ -78,16 +77,15 @@ async function main() {
 
 	// 1) storyarc 생성
 	if (!SKIP_STORYARC) {
-		console.log('▶ [1/2] storyarc 생성 (bulk-series)...');
-		const { status, data } = await postJson(`${BASE}/api/storyarc/bulk-series`, {
+		console.log('▶ [1/2] storyarc 생성 (bulk)...');
+		const { status, data } = await postJson(`${BASE}/api/storyarc/bulk`, {
 			theme: THEME,
-			chapters: CHAPTERS,
 			concurrency: 1,
 			bossIndices: [BOSS_INDEX]
 		});
 		if (status !== 200) throw new Error(`storyarc HTTP ${status}: ${data?.error ?? ''}`);
 		console.log(`  ok=${data.okCount ?? 0} failed=${data.failedCount ?? 0}`);
-		if (data.failed?.length) for (const f of data.failed) console.log(`    ✗ ${f.boss} [${f.step}${f.chapter ? ` ch${f.chapter}` : ''}] ${f.error}`);
+		if (data.failed?.length) for (const f of data.failed) console.log(`    ✗ ${f.boss} [${f.step}] ${f.error}`);
 		if (Array.isArray(data.ok) && data.ok.length) storyarcIds = data.ok;
 		if (!storyarcIds.length) throw new Error('storyarc 생성 결과 id 없음 — 중단');
 		console.log(`  생성 id: ${storyarcIds.join(', ')}\n`);
@@ -109,7 +107,7 @@ async function main() {
 	if (data.failed?.length) for (const f of data.failed) console.log(`    ✗ ${f.id} [${f.step}${f.order ? ` order ${f.order}` : ''}] ${f.error}`);
 
 	console.log('\n=== 완료 ===');
-	console.log('출력: output_list/modern_chapter_04.json, output_list/modern_chapter_14.json');
+	console.log('출력: output_list/modern_chapter_04.json');
 	if (data.failedCount) process.exitCode = 1;
 }
 

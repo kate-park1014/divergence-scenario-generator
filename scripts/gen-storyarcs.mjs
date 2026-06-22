@@ -1,16 +1,17 @@
 #!/usr/bin/env node
-// boss_list 기반 snowy 시리즈 스토리아크 생성 러너 (→ snowy_test 덮어쓰기).
-// /api/storyarc/bulk-series 호출: 보스당 비트시트 → 편 N개. 보스끼리 병렬.
+// boss_list 기반 스토리아크 생성 러너 (→ 테마 디렉토리 덮어쓰기).
+// /api/storyarc/bulk 호출: 보스당 1개 아크(단발). 보스끼리 병렬.
 //
 // 사용법:
-//   npm run dev                                  # dev 서버(5178) 먼저
-//   npm run gen:snowy-storyarc                   # 전체 10보스 × N편
-//   npm run gen:snowy-storyarc -- --boss=haraldr # 스모크: 한 보스만
-//   npm run gen:snowy-storyarc -- --dry-run      # 대상/매핑만(네트워크 0)
+//   npm run dev                                       # dev 서버(5178) 먼저
+//   npm run gen:storyarc                              # snowy 전체 10보스
+//   npm run gen:storyarc -- --theme=modern           # modern 전체
+//   npm run gen:storyarc -- --theme=snowy --boss=haraldr  # 스모크: 한 보스만
+//   npm run gen:storyarc -- --dry-run                # 대상/매핑만(네트워크 0)
 //
 // 옵션 (인자 또는 env):
+//   --theme=snowy|modern|desert (env THEME)       기본 snowy
 //   --base=URL        (env BASE)        기본 http://localhost:5178
-//   --chapters=N      (env CHAPTERS)    보스당 편수, 기본 3
 //   --concurrency=N   (env CONCURRENCY) 보스 동시 실행, 기본 3 (1~10)
 //   --batch=N         (env BATCH)       한 요청당 보스 수, 기본 3 (요청 분할 → 실패 격리)
 //   --boss=key|idx                      일부 보스만 (쉼표로 여러 개: --boss=haraldr,finn)
@@ -23,24 +24,10 @@ import http from 'node:http';
 import https from 'node:https';
 import { fileURLToPath } from 'node:url';
 import { dirname, join } from 'node:path';
+import { BOSS_POOL_MAP, BOSS_LIST_FILE } from '../src/lib/data/storyarc/boss_pool_map.js';
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const ROOT = join(__dirname, '..');
-const BOSS_LIST = join(ROOT, 'boss_list/snowy_20260612_144438.json');
-
-// boss_list 순서(=bossIndex)와 동일. 엔드포인트 SNOWY_SERIES 와 일치해야 함.
-const SERIES = [
-	{ key: 'haraldr', pool: 'pool_106' },
-	{ key: 'skuld', pool: 'pool_107' },
-	{ key: 'skaalbane', pool: 'pool_108' },
-	{ key: 'anya', pool: 'pool_109' },
-	{ key: 'skalhorn', pool: 'pool_110' },
-	{ key: 'cairn', pool: 'pool_111' },
-	{ key: 'fenrir', pool: 'pool_112' },
-	{ key: 'bellus', pool: 'pool_035' },
-	{ key: 'astrielle', pool: 'pool_034' },
-	{ key: 'finn', pool: 'pool_033' }
-];
 
 function parseArgs(argv) {
 	const o = {};
@@ -93,11 +80,17 @@ function chunk(arr, size) {
 }
 
 const args = parseArgs(process.argv.slice(2));
+const THEME = args.theme ?? process.env.THEME ?? 'snowy';
 const BASE = args.base ?? process.env.BASE ?? 'http://localhost:5178';
-const CHAPTERS = Math.max(1, Number(args.chapters ?? process.env.CHAPTERS ?? 3));
 const CONCURRENCY = Math.max(1, Math.min(10, Number(args.concurrency ?? process.env.CONCURRENCY ?? 3)));
 const BATCH = Math.max(1, Number(args.batch ?? process.env.BATCH ?? 3));
 const DRY_RUN = Boolean(args['dry-run']);
+
+const SERIES = BOSS_POOL_MAP[THEME];
+if (!SERIES) {
+	console.error(`알 수 없는 theme: "${THEME}" (snowy, modern, desert 만 가능)`);
+	process.exit(1);
+}
 
 // --boss 해석 → bossIndices
 let bossIndices;
@@ -113,17 +106,15 @@ if (args.boss) {
 		});
 }
 
-const levelFor = (idx, chapter) => idx + (chapter - 1) * 10;
 const targets = SERIES.map((_, i) => i).filter((i) => !bossIndices || bossIndices.includes(i));
 const batches = chunk(targets, BATCH);
 
-const bosses = JSON.parse(readFileSync(BOSS_LIST, 'utf-8')).bosses;
+const bosses = JSON.parse(readFileSync(join(ROOT, BOSS_LIST_FILE[THEME]), 'utf-8')).bosses;
 
-console.log(`대상 보스: ${targets.length}개 × ${CHAPTERS}편  (요청당 ${BATCH}보스, 배치 ${batches.length}개)`);
-console.log(`설정: base=${BASE} chapters=${CHAPTERS} concurrency=${CONCURRENCY}`);
+console.log(`테마: ${THEME}  대상 보스: ${targets.length}개  (요청당 ${BATCH}보스, 배치 ${batches.length}개)`);
+console.log(`설정: base=${BASE} concurrency=${CONCURRENCY}`);
 for (const i of targets) {
-	const levels = Array.from({ length: CHAPTERS }, (_, k) => levelFor(i, k + 1)).join(',');
-	console.log(`  [${i}] ${SERIES[i].key.padEnd(10)} ${SERIES[i].pool}  ${bosses?.[i]?.name ?? '?'}  → level ${levels}`);
+	console.log(`  [${i}] ${SERIES[i].key.padEnd(10)} ${SERIES[i].pool}  ${bosses?.[i]?.name ?? '?'}  → level ${i}  storyarc_${THEME}_${SERIES[i].key}_${i}.ts`);
 }
 
 if (DRY_RUN) {
@@ -137,9 +128,8 @@ for (let bi = 0; bi < batches.length; bi++) {
 	const batchIdx = batches[bi];
 	process.stdout.write(`\n▶ 배치 ${bi + 1}/${batches.length} (보스 ${batchIdx.map((i) => SERIES[i].key).join(', ')}) 생성 중...\n`);
 	try {
-		const { status, data } = await postJson(`${BASE}/api/storyarc/bulk-series`, {
-			theme: 'snowy',
-			chapters: CHAPTERS,
+		const { status, data } = await postJson(`${BASE}/api/storyarc/bulk`, {
+			theme: THEME,
 			concurrency: CONCURRENCY,
 			bossIndices: batchIdx
 		});
@@ -147,7 +137,7 @@ for (let bi = 0; bi < batches.length; bi++) {
 		allOk.push(...(data.ok ?? []));
 		allFailed.push(...(data.failed ?? []));
 		console.log(`  완료: ok=${data.okCount ?? 0} failed=${data.failedCount ?? 0}`);
-		if (data.failed?.length) for (const f of data.failed) console.log(`    ✗ ${f.boss} [${f.step}${f.chapter ? ` ch${f.chapter}` : ''}] ${f.error}`);
+		if (data.failed?.length) for (const f of data.failed) console.log(`    ✗ ${f.boss} [${f.step}] ${f.error}`);
 	} catch (e) {
 		console.error(`  배치 실패: ${e instanceof Error ? e.message : String(e)}`);
 		batchIdx.forEach((i) => allFailed.push({ boss: SERIES[i].key, step: 'batch', error: String(e) }));
@@ -155,5 +145,5 @@ for (let bi = 0; bi < batches.length; bi++) {
 }
 
 console.log(`\n=== 전체 결과 ===`);
-console.log(`성공 편: ${allOk.length}  실패: ${allFailed.length}`);
+console.log(`성공: ${allOk.length}  실패: ${allFailed.length}`);
 if (allFailed.length) process.exitCode = 1;
