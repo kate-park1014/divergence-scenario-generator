@@ -1,14 +1,17 @@
 #!/usr/bin/env node
-// snowy_test 30개 storyarc 챕터 생성 러너.
+// 테마별 storyarc → 시나리오(챕터) 생성 러너.
+// 대상: OUT_DIR[theme] (snowy=snowy_test) 디렉토리의 storyarc 전체. 보스당 1아크(단발).
 // /api/scenario/bulk-pipeline 를 배치로 호출: 생성(chapterGen) → process-actors → translate → output/save.
 // chapter_order = difficulty_level = (arc.level ?? 0) + 1 (bulk-pipeline에서 계산).
 //
 // 사용법:
-//   npm run dev                         # 먼저 dev 서버(포트 5178) 실행
-//   npm run gen:snowy-test              # 전체 30개 실행
-//   npm run gen:snowy-test -- --dry-run # 네트워크 호출 없이 대상 id/배치만 출력
+//   npm run dev                              # 먼저 dev 서버(포트 5178) 실행
+//   npm run gen:snowy-test                   # 기본 테마(snowy) 전체 실행
+//   npm run gen:snowy-test -- --theme=hell   # 특정 테마 전체 실행
+//   npm run gen:snowy-test -- --dry-run      # 네트워크 호출 없이 대상 id/배치만 출력
 //
 // 옵션 (인자 또는 env):
+//   --theme=<t>         (env THEME)         대상 테마, 기본 snowy (OUT_DIR 기준 디렉토리)
 //   --base=URL          (env BASE)         기본 http://localhost:5178
 //   --concurrency=N     (env CONCURRENCY)  bulk-pipeline 아크 동시 실행 수, 기본 3 (1~10)
 //   --batch=N           (env BATCH)        한 요청당 아크 수, 기본 5
@@ -20,6 +23,7 @@ import http from 'node:http';
 import https from 'node:https';
 import { fileURLToPath } from 'node:url';
 import { dirname, join } from 'node:path';
+import { OUT_DIR } from '../src/lib/data/storyarc/boss_pool_map.js';
 
 // node:http 기반 POST (전역 fetch의 headers 타임아웃 ~5분 회피, 타임아웃 0)
 function postJson(urlStr, body) {
@@ -70,18 +74,15 @@ function parseArgs(argv) {
 
 const args = parseArgs(process.argv.slice(2));
 const BASE = args.base ?? process.env.BASE ?? 'http://localhost:5178';
-// 테마: snowy → snowy_test 디렉토리, 그 외(desert/forest/hell/modern) → 동명 서브디렉토리
+// 대상 디렉토리: boss_pool_map의 OUT_DIR 단일 출처(snowy=snowy_test). 미정의 테마는 동명 서브디렉토리 폴백.
 const THEME = args.theme ?? process.env.THEME ?? 'snowy';
-const STORYARC_DIR =
-	THEME === 'snowy'
-		? join(ROOT, 'src/lib/data/storyarc/snowy_test')
-		: join(ROOT, 'src/lib/data/storyarc', THEME);
+const STORYARC_DIR = join(ROOT, OUT_DIR[THEME] ?? `src/lib/data/storyarc/${THEME}`);
 const CONCURRENCY = Math.max(1, Math.min(10, Number(args.concurrency ?? process.env.CONCURRENCY ?? 3)));
 const BATCH = Math.max(1, Number(args.batch ?? process.env.BATCH ?? 5));
 const SKIP_GENERATE = Boolean(args['skip-generate'] ?? process.env.SKIP_GENERATE);
 const DRY_RUN = Boolean(args['dry-run']);
 
-// 파일명 → storyarc id 파싱, level 오름차순 정렬 (chapter 1→N 순)
+// 파일명 → storyarc id 파싱, level(=보스 인덱스) 오름차순 정렬
 function collectIds() {
 	const files = readdirSync(STORYARC_DIR).filter(
 		(f) => f.startsWith(`storyarc_${THEME}_`) && f.endsWith('.ts')
@@ -142,7 +143,7 @@ async function main() {
 	console.log(`성공 아크: ${allOk.length}/${ids.length}`);
 	console.log(`실패: ${allFailed.length}`);
 	if (allFailed.length) {
-		console.log('실패 재시도: npm run gen:snowy-test -- --skip-generate (생성 결과 재사용)');
+		console.log(`실패 재시도: npm run gen:snowy-test -- --theme=${THEME} --skip-generate (생성 결과 재사용)`);
 		process.exitCode = 1;
 	}
 }

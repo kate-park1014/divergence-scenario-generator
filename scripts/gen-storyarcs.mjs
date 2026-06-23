@@ -4,7 +4,7 @@
 //
 // 사용법:
 //   npm run dev                                       # dev 서버(5178) 먼저
-//   npm run gen:storyarc                              # snowy 전체 10보스
+//   npm run gen:storyarc                              # snowy 전체 100보스 (벌크·병렬)
 //   npm run gen:storyarc -- --theme=modern           # modern 전체
 //   npm run gen:storyarc -- --theme=snowy --boss=haraldr  # 스모크: 한 보스만
 //   npm run gen:storyarc -- --dry-run                # 대상/매핑만(네트워크 0)
@@ -84,6 +84,7 @@ const THEME = args.theme ?? process.env.THEME ?? 'snowy';
 const BASE = args.base ?? process.env.BASE ?? 'http://localhost:5178';
 const CONCURRENCY = Math.max(1, Math.min(10, Number(args.concurrency ?? process.env.CONCURRENCY ?? 3)));
 const BATCH = Math.max(1, Number(args.batch ?? process.env.BATCH ?? 3));
+const TEMPERATURE = args.temperature ?? process.env.TEMPERATURE; // 미지정 시 엔드포인트 기본(1.2)
 const DRY_RUN = Boolean(args['dry-run']);
 
 const SERIES = BOSS_POOL_MAP[THEME];
@@ -131,7 +132,8 @@ for (let bi = 0; bi < batches.length; bi++) {
 		const { status, data } = await postJson(`${BASE}/api/storyarc/bulk`, {
 			theme: THEME,
 			concurrency: CONCURRENCY,
-			bossIndices: batchIdx
+			bossIndices: batchIdx,
+			...(TEMPERATURE !== undefined ? { temperature: Number(TEMPERATURE) } : {})
 		});
 		if (status !== 200) throw new Error(`HTTP ${status}: ${data?.error ?? ''}`);
 		allOk.push(...(data.ok ?? []));

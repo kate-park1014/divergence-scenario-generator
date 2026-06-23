@@ -1,0 +1,3923 @@
+{
+	"chapter_order": 29,
+	"difficulty_level": 29,
+	"chapter_name": {
+		"english": "Data Cruelty",
+		"korean": "데이터 잔혹극",
+		"japanese": "データ残虐劇",
+		"spanish": "Crueldad",
+		"thai": "ความโหดร้ายข",
+		"chinese": "数据残酷剧",
+		"french": "Cruauté",
+		"vietnamese": "Dữ Liệu Tàn",
+		"hindi": "डेटा क्रूरता"
+	},
+	"scenarios": [
+		{
+			"scenario_id": "modern_pixelgrim_28_01",
+			"order": 1,
+			"act": "intro",
+			"theme": "modern",
+			"actors": {
+				"zoe": {
+					"id": "mon_ad3762e0-13f3-44a1-9b84-4ff67136858e",
+					"name": {
+						"korean": "조이",
+						"english": "Zoe",
+						"japanese": "ゾーイ",
+						"chinese": "佐伊",
+						"french": "Zoé",
+						"spanish": "Zoe",
+						"vietnamese": "Zoe",
+						"thai": "โซอี้",
+						"hindi": "ज़ोई"
+					},
+					"description": "",
+					"face_image_url": "https://imagedelivery.net/WTEqQNGFb-l-IHS6IGnzUQ/75dcfb0c-33e3-4208-4205-fb09d4abb100/public",
+					"battle_sprite_url": "https://imagedelivery.net/WTEqQNGFb-l-IHS6IGnzUQ/a7d0ebe1-73dc-4683-1338-32be2f7fac00/public"
+				}
+			},
+			"boss": {
+				"pool_id": "random_boss"
+			},
+			"rooms": [
+				{
+					"id": 1,
+					"dialogue": [
+						{
+							"speaker": "narrator",
+							"type": "speech",
+							"content": {
+								"korean": "낡은 디지털 기기 속, 알 수 없는 코드가 화면을 가득 채웠다.",
+								"english": "Inside an old digital device, unknown code filled the screen.",
+								"japanese": "古いデジタル機器の中、未知のコードが画面を埋め尽くした。",
+								"chinese": "在旧的数字设备里，未知的代码布满了屏幕。",
+								"french": "À l'intérieur d'un vieil appareil numérique, un code inconnu remplissait l'écran.",
+								"spanish": "Dentro de un viejo dispositivo digital, un código desconocido llenó la pantalla.",
+								"vietnamese": "Bên trong một thiết bị kỹ thuật số cũ, mã không xác định lấp đầy màn hình.",
+								"thai": "ภายในอุปกรณ์ดิจิทัลเก่า โค้ดที่ไม่รู้จักเต็มหน้าจอ",
+								"hindi": "एक पुराने डिजिटल उपकरण के अंदर, अज्ञात कोड ने स्क्रीन को भर दिया।"
+							},
+							"emotion": "base"
+						},
+						{
+							"emotion": "base",
+							"content": {
+								"korean": "여긴… 대체 어디지?",
+								"english": "Where... where am I?",
+								"japanese": "ここ…一体どこだ？",
+								"chinese": "这里…到底是哪里？",
+								"french": "Où... où suis-je ?",
+								"spanish": "¿Dónde... dónde estoy?",
+								"vietnamese": "Đây... đây là đâu?",
+								"thai": "ที่นี่... ที่ไหนกันแน่?",
+								"hindi": "मैं... मैं कहाँ हूँ?"
+							},
+							"type": "speech",
+							"speaker": "character_any"
+						},
+						{
+							"emotion": "base",
+							"content": {
+								"korean": "그리고 알 수 없는 카운트다운이 시작됐다.",
+								"english": "And an unknown countdown began.",
+								"japanese": "そして未知のカウントダウンが始まった。",
+								"chinese": "未知的倒计时开始了。",
+								"french": "Et un compte à rebours inconnu a commencé.",
+								"spanish": "Y una cuenta regresiva desconocida comenzó.",
+								"vietnamese": "Và một đồng hồ đếm ngược không xác định đã bắt đầu.",
+								"thai": "และมีการนับถอยหลังที่ไม่รู้จักเริ่มต้นขึ้น",
+								"hindi": "और एक अज्ञात उलटी गिनती शुरू हो गई।"
+							},
+							"type": "speech",
+							"speaker": "narrator"
+						},
+						{
+							"action": "enter",
+							"duration_ms": 500,
+							"spot": [
+								5,
+								2
+							],
+							"type": "direction",
+							"speaker": "zoe"
+						},
+						{
+							"emotion": "base",
+							"content": {
+								"korean": "왔구나. 기다리고 있었어.",
+								"english": "You've come. I've been waiting.",
+								"japanese": "来たわね。待っていたわ。",
+								"chinese": "你来了。我一直在等你。",
+								"french": "Tu es venu. Je t'attendais.",
+								"spanish": "Has venido. Te estaba esperando.",
+								"vietnamese": "Bạn đã đến rồi. Tôi đã chờ đợi.",
+								"thai": "มาแล้วสินะ ฉันรออยู่เลย",
+								"hindi": "तुम आ गए। मैं इंतज़ार कर रहा था।"
+							},
+							"type": "speech",
+							"speaker": "zoe"
+						},
+						{
+							"content": {
+								"korean": "당신은 누구고… 여긴 어디야?",
+								"english": "Who are you... and where am I?",
+								"japanese": "あなたは誰…ここはどこなの？",
+								"chinese": "你是谁…这里是哪里？",
+								"french": "Qui êtes-vous... et où suis-je ?",
+								"spanish": "¿Quién eres... y dónde estoy?",
+								"vietnamese": "Bạn là ai... và tôi đang ở đâu?",
+								"thai": "คุณเป็นใคร... และฉันอยู่ที่ไหน?",
+								"hindi": "तुम कौन हो... और मैं कहाँ हूँ?"
+							},
+							"type": "speech",
+							"speaker": "character_any",
+							"emotion": "base"
+						},
+						{
+							"emotion": "base",
+							"content": {
+								"korean": "난 조이. 널 이곳으로 이끌었어.",
+								"english": "I'm Joy. I led you here.",
+								"japanese": "私はジョイ。あなたをここに導いたの。",
+								"chinese": "我是乔伊。我引导你来到这里。",
+								"french": "Je suis Joy. Je t'ai mené ici.",
+								"spanish": "Soy Joy. Te traje aquí.",
+								"vietnamese": "Tôi là Joy. Tôi đã dẫn bạn đến đây.",
+								"thai": "ฉันคือจอย ฉันพาคุณมาที่นี่",
+								"hindi": "मैं जॉय हूँ। मैं तुम्हें यहाँ ले आया।"
+							},
+							"type": "speech",
+							"speaker": "zoe"
+						},
+						{
+							"content": {
+								"korean": "이곳은 네가 찾아야 할 진실의 문이야.",
+								"english": "This is the door to the truth you must find.",
+								"japanese": "ここが君が探すべき真実の扉だ。",
+								"chinese": "这是你必须找到的真相之门。",
+								"french": "C'est la porte de la vérité que tu dois trouver.",
+								"spanish": "Esta es la puerta a la verdad que debes encontrar.",
+								"vietnamese": "Đây là cánh cửa dẫn đến sự thật mà ngươi phải tìm.",
+								"thai": "นี่คือประตูสู่ความจริงที่คุณต้องค้นหา",
+								"hindi": "यह वह सत्य का द्वार है जिसे तुम्हें खोजना है।"
+							},
+							"type": "speech",
+							"speaker": "zoe",
+							"emotion": "base"
+						}
+					]
+				},
+				{
+					"dialogue": [
+						{
+							"speaker": "zoe",
+							"type": "direction",
+							"spot": [
+								5,
+								2
+							],
+							"duration_ms": 500,
+							"action": "enter"
+						},
+						{
+							"emotion": "base",
+							"speaker": "zoe",
+							"type": "speech",
+							"content": {
+								"korean": "카운트다운이 계속될수록, 시스템은 불안정해질 거야.",
+								"english": "As the countdown continues, the system will become unstable.",
+								"japanese": "カウントダウンが続くほど、システムは不安定になるだろう。",
+								"chinese": "倒计时持续得越久，系统就会变得越不稳定。",
+								"french": "Plus le compte à rebours continue, plus le système deviendra instable.",
+								"spanish": "Cuanto más avance la cuenta atrás, más inestable se volverá el sistema.",
+								"vietnamese": "Đếm ngược càng kéo dài, hệ thống sẽ càng bất ổn.",
+								"thai": "ยิ่งนับถอยหลังต่อไป ระบบก็จะยิ่งไม่เสถียร",
+								"hindi": "जैसे-जैसे उलटी गिनती जारी रहेगी, सिस्टम अस्थिर होता जाएगा।"
+							}
+						},
+						{
+							"emotion": "base",
+							"type": "speech",
+							"content": {
+								"korean": "불안정하다고? 안정적으로 보이는데.",
+								"english": "Unstable? It looks stable to me.",
+								"japanese": "不安定だと？安定しているように見えるが。",
+								"chinese": "不稳定？看起来很稳定啊。",
+								"french": "Instable ? Ça a l'air stable.",
+								"spanish": "¿Inestable? Me parece estable.",
+								"vietnamese": "Bất ổn ư? Trông có vẻ ổn định mà.",
+								"thai": "ไม่เสถียรเหรอ? ดูเหมือนจะเสถียรดีนะ",
+								"hindi": "अस्थिर? यह तो स्थिर लग रहा है।"
+							},
+							"speaker": "character_any"
+						},
+						{
+							"emotion": "base",
+							"type": "speech",
+							"content": {
+								"korean": "겉모습에 속으면 안 돼. 가끔씩 의미 없는 데이터 파편들이 보일 거야.",
+								"english": "Don't be fooled by appearances. You'll occasionally see meaningless data fragments.",
+								"japanese": "見かけに騙されてはいけない。時々、意味のないデータ断片が見えるだろう。",
+								"chinese": "别被表象迷惑了。有时你会看到一些无意义的数据碎片。",
+								"french": "Ne te fie pas aux apparences. Tu verras parfois des fragments de données insignifiants.",
+								"spanish": "No te dejes engañar por las apariencias. De vez en cuando verás fragmentos de datos sin sentido.",
+								"vietnamese": "Đừng bị vẻ bề ngoài đánh lừa. Đôi khi ngươi sẽ thấy những mảnh dữ liệu vô nghĩa.",
+								"thai": "อย่าถูกหลอกด้วยรูปลักษณ์ภายนอก บางครั้งคุณจะเห็นเศษข้อมูลที่ไม่มีความหมาย",
+								"hindi": "दिखावे से धोखा मत खाना। तुम्हें कभी-कभी अर्थहीन डेटा के टुकड़े दिखेंगे।"
+							},
+							"speaker": "zoe"
+						},
+						{
+							"content": {
+								"korean": "그게 단서일 수도 있어.",
+								"english": "Those could be clues.",
+								"japanese": "それが手がかりになるかもしれない。",
+								"chinese": "那可能就是线索。",
+								"french": "Ce pourrait être des indices.",
+								"spanish": "Esos podrían ser pistas.",
+								"vietnamese": "Đó có thể là manh mối.",
+								"thai": "นั่นอาจเป็นเบาะแสก็ได้",
+								"hindi": "वह एक सुराग हो सकता है।"
+							},
+							"type": "speech",
+							"speaker": "zoe",
+							"emotion": "base"
+						},
+						{
+							"speaker": "narrator",
+							"content": {
+								"korean": "화면에 순간적으로 의미 없는 데이터 파편들이 번쩍였다. 사라진다.",
+								"english": "Meaningless data fragments flashed on the screen for a moment. Then vanished.",
+								"japanese": "画面に一瞬、意味のないデータ断片が閃いた。そして消えた。",
+								"chinese": "屏幕上瞬间闪过无意义的数据碎片。随即消失。",
+								"french": "Des fragments de données insignifiantes ont brièvement clignoté à l'écran. Puis ont disparu.",
+								"spanish": "Fragmentos de datos sin sentido destellaron en la pantalla por un momento. Luego desaparecieron.",
+								"vietnamese": "Những mảnh dữ liệu vô nghĩa thoáng chốc lóe lên trên màn hình. Rồi biến mất.",
+								"thai": "เศษข้อมูลที่ไม่มีความหมายกะพริบบนหน้าจอชั่วขณะ แล้วก็หายไป",
+								"hindi": "स्क्रीन पर क्षण भर के लिए अर्थहीन डेटा के टुकड़े चमके। फिर गायब हो गए।"
+							},
+							"type": "speech",
+							"emotion": "base"
+						}
+					],
+					"id": 3
+				},
+				{
+					"id": 5,
+					"dialogue": [
+						{
+							"spot": [
+								5,
+								2
+							],
+							"type": "direction",
+							"speaker": "zoe",
+							"duration_ms": 500,
+							"action": "enter"
+						},
+						{
+							"speaker": "zoe",
+							"content": {
+								"korean": "시간이 얼마 없어. 서둘러야 해.",
+								"english": "There's not much time. We need to hurry.",
+								"japanese": "時間がない。急がなければ。",
+								"chinese": "时间不多了。得赶紧。",
+								"french": "Il n'y a plus beaucoup de temps. Il faut se dépêcher.",
+								"spanish": "No queda mucho tiempo. Hay que darse prisa.",
+								"vietnamese": "Không còn nhiều thời gian. Phải nhanh lên.",
+								"thai": "เวลาเหลือน้อยแล้ว ต้องรีบหน่อย",
+								"hindi": "समय बहुत कम है। हमें जल्दी करनी होगी।"
+							},
+							"type": "speech",
+							"emotion": "base"
+						},
+						{
+							"speaker": "character_any",
+							"content": {
+								"korean": "무엇을 서두르라는 거야? 당신, 우리를 어디로 이끄는 거지?",
+								"english": "Hurry for what? Where are you leading us?",
+								"japanese": "何を急げと言うんだ？あなたは、私たちをどこへ導いている？",
+								"chinese": "为什么要赶紧？你到底要把我们带到哪里去？",
+								"french": "Se dépêcher pour quoi ? Où nous mènes-tu ?",
+								"spanish": "¿Apúrate para qué? ¿Adónde nos llevas?",
+								"vietnamese": "Nhanh lên cái gì? Ngươi đang dẫn chúng ta đi đâu vậy?",
+								"thai": "รีบอะไร? คุณกำลังพาเราไปไหนกันแน่?",
+								"hindi": "किस बात की जल्दी? तुम हमें कहाँ ले जा रहे हो?"
+							},
+							"type": "speech",
+							"emotion": "sad"
+						},
+						{
+							"emotion": "base",
+							"speaker": "zoe",
+							"type": "speech",
+							"content": {
+								"korean": "널 구원할 곳으로. 이 감옥에서 벗어나려면, 나의 조언이 필요할 거야.",
+								"english": "To a place where you'll be saved. To escape this prison, you'll need my advice.",
+								"japanese": "お前を救う場所へ。この監獄から脱するには、私の助言が必要だろう。",
+								"chinese": "去一个能拯救你的地方。想逃离这座监狱，你需要我的建议。",
+								"french": "Vers l'endroit où tu seras sauvée. Pour t'échapper de cette prison, tu auras besoin de mes conseils.",
+								"spanish": "A un lugar donde serás salvado. Para escapar de esta prisión, necesitarás mi consejo.",
+								"vietnamese": "Đến nơi ngươi sẽ được cứu. Để thoát khỏi nhà tù này, ngươi sẽ cần lời khuyên của ta.",
+								"thai": "ไปยังที่ที่คุณจะได้รับการช่วยเหลือ เพื่อหนีจากคุกนี้ คุณจะต้องพึ่งคำแนะนำของฉัน",
+								"hindi": "तुम्हें बचाने की जगह। इस जेल से बचने के लिए, तुम्हें मेरी सलाह की ज़रूरत होगी।"
+							}
+						},
+						{
+							"emotion": "sad",
+							"speaker": "character_any",
+							"content": {
+								"korean": "…왠지 믿음이 안 가.",
+								"english": "...Somehow, I don't trust it.",
+								"japanese": "…どうも信用できない。",
+								"chinese": "……不知为何，我不太相信。",
+								"french": "...Je n'y crois pas vraiment.",
+								"spanish": "...De alguna manera, no me fío.",
+								"vietnamese": "...Sao đó, tôi không tin.",
+								"thai": "…ทำไมไม่ค่อยน่าเชื่อถือเลย",
+								"hindi": "...किसी तरह, मुझे विश्वास नहीं हो रहा।"
+							},
+							"type": "speech"
+						},
+						{
+							"emotion": "base",
+							"type": "speech",
+							"content": {
+								"korean": "시스템은 겉으로는 안정적이었으나, 조작된 데이터의 잔상이 공포를 예고했다.",
+								"english": "The system appeared stable, but traces of manipulated data foretold horror.",
+								"japanese": "システムは表向きは安定していたが、操作されたデータの残像が恐怖を予兆していた。",
+								"chinese": "系统表面上稳定，但被篡改数据的残影预示着恐惧。",
+								"french": "Le système semblait stable, mais les rémanences de données manipulées annonçaient l'horreur.",
+								"spanish": "El sistema parecía estable, pero los rastros de datos manipulados presagiaban el horror.",
+								"vietnamese": "Hệ thống có vẻ ổn định, nhưng dấu vết dữ liệu bị thao túng đã báo trước nỗi kinh hoàng.",
+								"thai": "ระบบดูเสถียร แต่ร่องรอยของข้อมูลที่ถูกบิดเบือนบ่งบอกถึงความสยองขวัญ",
+								"hindi": "सिस्टम ऊपरी तौर पर स्थिर लग रहा था, लेकिन छेड़छाड़ किए गए डेटा के अवशेषों ने आतंक की भविष्यवाणी की।"
+							},
+							"speaker": "narrator"
+						}
+					]
+				},
+				{
+					"id": 9,
+					"dialogue": [
+						{
+							"duration_ms": 500,
+							"speaker": "zoe",
+							"type": "direction",
+							"spot": [
+								5,
+								2
+							],
+							"action": "enter"
+						},
+						{
+							"type": "speech",
+							"content": {
+								"korean": "이제 돌아갈 수 없어. 오직 앞으로 나아가야만 해.",
+								"english": "No turning back now. We must only move forward.",
+								"japanese": "もう引き返せない。ただ前へ進むしかない。",
+								"chinese": "已经回不去了。只能继续前进。",
+								"french": "Plus de retour en arrière possible. Nous devons seulement avancer.",
+								"spanish": "Ya no hay vuelta atrás. Solo debemos avanzar.",
+								"vietnamese": "Không thể quay lại nữa rồi. Chỉ có thể tiến về phía trước.",
+								"thai": "ไม่มีทางย้อนกลับแล้ว มีแต่ต้องเดินหน้าต่อไป",
+								"hindi": "अब पीछे नहीं हट सकते। हमें बस आगे बढ़ना होगा।"
+							},
+							"speaker": "zoe",
+							"emotion": "base"
+						},
+						{
+							"emotion": "angry",
+							"speaker": "character_any",
+							"content": {
+								"korean": "함정이었잖아! 당신의 '구원'은 거짓이었어.",
+								"english": "It was a trap! Your 'salvation' was a lie.",
+								"japanese": "罠だったのか！お前の「救済」は嘘だった！",
+								"chinese": "原来是陷阱！你的“救赎”是谎言。",
+								"french": "C'était un piège ! Ton « salut » était un mensonge.",
+								"spanish": "¡Era una trampa! Tu \"salvación\" fue una mentira.",
+								"vietnamese": "Đó là một cái bẫy! 'Sự cứu rỗi' của ngươi là dối trá.",
+								"thai": "มันเป็นกับดัก! 'การไถ่บาป' ของคุณคือคำโกหก",
+								"hindi": "यह एक जाल था! तुम्हारी 'मुक्ति' एक झूठ थी।"
+							},
+							"type": "speech"
+						},
+						{
+							"speaker": "zoe",
+							"content": {
+								"korean": "선택은 언제나 네 몫이었어.",
+								"english": "The choice was always yours.",
+								"japanese": "選択はいつだって君次第だった。",
+								"chinese": "选择权一直在你手中。",
+								"french": "Le choix t'a toujours appartenu.",
+								"spanish": "La elección siempre fue tuya.",
+								"vietnamese": "Lựa chọn luôn là của ngươi.",
+								"thai": "ทางเลือกเป็นของคุณเสมอ",
+								"hindi": "चुनाव हमेशा तुम्हारा था।"
+							},
+							"type": "speech",
+							"emotion": "base"
+						},
+						{
+							"speaker": "narrator",
+							"type": "speech",
+							"content": {
+								"korean": "시스템의 질서가 이해할 수 없는 방식으로 뒤틀리기 시작했다.",
+								"english": "The system's order began to twist in incomprehensible ways.",
+								"japanese": "システムの秩序が理解不能な形で歪み始めた。",
+								"chinese": "系统的秩序开始以不可理解的方式扭曲。",
+								"french": "L'ordre du système commença à se tordre de manière incompréhensible.",
+								"spanish": "El orden del sistema comenzó a retorcerse de formas incomprensibles.",
+								"vietnamese": "Trật tự của hệ thống bắt đầu biến đổi theo những cách khó hiểu.",
+								"thai": "ระเบียบของระบบเริ่มบิดเบี้ยวไปในทางที่ไม่อาจเข้าใจได้",
+								"hindi": "सिस्टम का क्रम समझ से परे तरीकों से मुड़ने लगा।"
+							},
+							"emotion": "base"
+						},
+						{
+							"emotion": "angry",
+							"speaker": "character_any",
+							"type": "speech",
+							"content": {
+								"korean": "이런 질서는 거부한다!",
+								"english": "I reject this order!",
+								"japanese": "この秩序は拒否する！",
+								"chinese": "我拒绝这种秩序！",
+								"french": "Je refuse cet ordre !",
+								"spanish": "¡Rechazo este orden!",
+								"vietnamese": "Ta từ chối trật tự này!",
+								"thai": "ฉันปฏิเสธระเบียบนี้!",
+								"hindi": "मैं इस व्यवस्था को अस्वीकार करता हूँ!"
+							}
+						}
+					]
+				},
+				{
+					"win_dialogue": [
+						{
+							"speaker": "random_boss",
+							"type": "speech",
+							"content": {
+								"korean": "…겨우 이 정도로는, 나의 질서를 깨트릴 수 없어.",
+								"english": "...This alone won't break my order.",
+								"japanese": "...これっぽっちでは、私の秩序を壊せない。",
+								"chinese": "…就凭这点，还无法打破我的秩序。",
+								"french": "Ce n'est pas suffisant pour briser mon ordre.",
+								"spanish": "Con esto solo, no podrás romper mi orden.",
+								"vietnamese": "...Chỉ chừng này thôi, không thể phá vỡ trật tự của ta.",
+								"thai": "...แค่นี้ ไม่อาจทำลายระเบียบของข้าได้หรอก",
+								"hindi": "सिर्फ इतना ही, मेरे आदेश को तोड़ नहीं सकता।"
+							},
+							"emotion": "base"
+						},
+						{
+							"emotion": "angry",
+							"type": "speech",
+							"content": {
+								"korean": "무슨 소리야? 너는 끝났어!",
+								"english": "What are you talking about? You're finished!",
+								"japanese": "何を言ってるんだ？お前は終わりだ！",
+								"chinese": "你在说什么？你已经完了！",
+								"french": "De quoi parles-tu ? C'est fini pour toi !",
+								"spanish": "¡De qué hablas? ¡Estás acabado!",
+								"vietnamese": "Ngươi nói gì vậy? Ngươi đã kết thúc rồi!",
+								"thai": "พูดอะไรน่ะ? แกจบแล้ว!",
+								"hindi": "तुम क्या कह रहे हो? तुम खत्म हो गए हो!"
+							},
+							"speaker": "character_any"
+						},
+						{
+							"emotion": "base",
+							"speaker": "random_boss",
+							"type": "speech",
+							"content": {
+								"korean": "이건 시작에 불과해. 너는 아직 나의 일부거든.",
+								"english": "This is just the beginning. You are still a part of me.",
+								"japanese": "これは始まりに過ぎない。お前はまだ私の一部なのだから。",
+								"chinese": "这只是开始。你仍然是我的一部分。",
+								"french": "Ce n'est que le début. Tu fais encore partie de moi.",
+								"spanish": "Esto es solo el principio. Todavía eres parte de mí.",
+								"vietnamese": "Đây chỉ là khởi đầu thôi. Ngươi vẫn là một phần của ta.",
+								"thai": "นี่เป็นแค่จุดเริ่มต้น แกยังเป็นส่วนหนึ่งของข้า",
+								"hindi": "यह तो बस शुरुआत है। तुम अभी भी मेरे एक हिस्से हो।"
+							}
+						},
+						{
+							"emotion": "base",
+							"speaker": "narrator",
+							"type": "speech",
+							"content": {
+								"korean": "디지털 감옥의 알 수 없는 연결은, 끊어지지 않았다.",
+								"english": "The unknown connection of the digital prison was not severed.",
+								"japanese": "デジタル監獄の未知なる接続は、断ち切られていなかった。",
+								"chinese": "数字监狱中未知的连接，并未被切断。",
+								"french": "La connexion inconnue de la prison numérique n'a pas été rompue.",
+								"spanish": "La conexión desconocida de la prisión digital no fue cortada.",
+								"vietnamese": "Mối liên kết không thể hiểu được của nhà tù kỹ thuật số, vẫn chưa bị cắt đứt.",
+								"thai": "การเชื่อมโยงอันลึกลับของคุกดิจิทัลยังไม่ถูกตัดขาด",
+								"hindi": "डिजital जेल का अज्ञात संबंध टूटा नहीं था।"
+							}
+						},
+						{
+							"emotion": "base",
+							"speaker": "narrator",
+							"type": "speech",
+							"content": {
+								"korean": "다음 단계의 왜곡된 질서가, 플레이어를 기다리고 있었다.",
+								"english": "The distorted order of the next stage awaited the player.",
+								"japanese": "次の段階の歪んだ秩序が、プレイヤーを待ち受けていた。",
+								"chinese": "下一阶段扭曲的秩序，正在等待着玩家。",
+								"french": "L'ordre distordu de la prochaine étape attendait le joueur.",
+								"spanish": "El orden distorsionado de la siguiente fase esperaba al jugador.",
+								"vietnamese": "Trật tự méo mó của giai đoạn tiếp theo, đang chờ đợi người chơi.",
+								"thai": "ระเบียบที่บิดเบี้ยวของขั้นต่อไป กำลังรอคอยผู้เล่นอยู่",
+								"hindi": "अगले चरण का विकृत आदेश खिलाड़ी का इंतजार कर रहा था।"
+							}
+						}
+					],
+					"id": 15,
+					"lose_dialogue": [
+						{
+							"content": {
+								"korean": "거대한 그림자가 플레이어를 덮쳤다. 모든 것이 암전.",
+								"english": "A colossal shadow engulfed the player. Everything went dark.",
+								"japanese": "巨大な影がプレイヤーを覆った。全てが暗転。",
+								"chinese": "巨大的阴影笼罩了玩家。一切都陷入黑暗。",
+								"french": "Une ombre colossale a englouti le joueur. Tout est devenu noir.",
+								"spanish": "Una sombra colosal envolvió al jugador. Todo se volvió oscuro.",
+								"vietnamese": "Một bóng tối khổng lồ bao trùm người chơi. Mọi thứ chìm vào bóng tối.",
+								"thai": "เงาขนาดยักษ์เข้าปกคลุมผู้เล่น ทุกอย่างมืดมิด",
+								"hindi": "एक विशालकाय छाया ने खिलाड़ी को ढक लिया। सब कुछ अँधेरा हो गया।"
+							},
+							"type": "speech",
+							"speaker": "narrator",
+							"emotion": "base"
+						},
+						{
+							"emotion": "base",
+							"type": "speech",
+							"content": {
+								"korean": "결국 이 정도인가. 무의미한 저항이었어.",
+								"english": "Is this all you had? A futile resistance.",
+								"japanese": "結局この程度か。無意味な抵抗だったな。",
+								"chinese": "终究只有这点实力吗。真是毫无意义的抵抗。",
+								"french": "C'est tout ce que tu avais ? Une résistance inutile.",
+								"spanish": "Así que esto es todo. Una resistencia inútil.",
+								"vietnamese": "Cuối cùng chỉ có thế thôi sao. Một sự kháng cự vô nghĩa.",
+								"thai": "แค่นี้เองงั้นเหรอ? เป็นการต่อต้านที่ไร้ความหมาย",
+								"hindi": "आखिरकार बस इतना ही? एक व्यर्थ का प्रतिरोध था।"
+							},
+							"speaker": "random_boss"
+						},
+						{
+							"type": "speech",
+							"content": {
+								"korean": "아직… 끝나지 않았어. 절대로.",
+								"english": "It's not over yet... Never.",
+								"japanese": "まだ… 終わってない。絶対に。",
+								"chinese": "还没…结束。绝不。",
+								"french": "Ce n'est pas encore fini... Jamais.",
+								"spanish": "Todavía no ha terminado... Jamás.",
+								"vietnamese": "Vẫn chưa… kết thúc. Tuyệt đối không.",
+								"thai": "ยัง…ไม่จบ ไม่มีวัน",
+								"hindi": "अभी… खत्म नहीं हुआ है। कभी नहीं।"
+							},
+							"speaker": "character_any",
+							"emotion": "angry"
+						}
+					],
+					"dialogue": [
+						{
+							"duration_ms": 500,
+							"speaker": "zoe",
+							"spot": [
+								5,
+								2
+							],
+							"type": "direction",
+							"action": "enter"
+						},
+						{
+							"type": "speech",
+							"content": {
+								"korean": "이제 모든 진실을 보여줄 시간이야.",
+								"english": "It's time to reveal all truths.",
+								"japanese": "今こそ、全ての真実を明かす時だ。",
+								"chinese": "现在是揭示所有真相的时候了。",
+								"french": "Il est temps de révéler toutes les vérités.",
+								"spanish": "Es hora de revelar todas las verdades.",
+								"vietnamese": "Đã đến lúc tiết lộ mọi sự thật.",
+								"thai": "ถึงเวลาเปิดเผยความจริงทั้งหมดแล้ว",
+								"hindi": "अब सभी सत्य दिखाने का समय है।"
+							},
+							"speaker": "zoe",
+							"emotion": "base"
+						},
+						{
+							"emotion": "angry",
+							"speaker": "character_any",
+							"type": "speech",
+							"content": {
+								"korean": "진실? 당신은 우리를 배신했어!",
+								"english": "Truth? You betrayed us!",
+								"japanese": "真実？お前は我々を裏切った！",
+								"chinese": "真相？你背叛了我们！",
+								"french": "La vérité ? Tu nous as trahis !",
+								"spanish": "¿Verdad? ¡Nos traicionaste!",
+								"vietnamese": "Sự thật? Ngươi đã phản bội chúng ta!",
+								"thai": "ความจริง? คุณทรยศพวกเรา!",
+								"hindi": "सत्य? तुमने हमें धोखा दिया!"
+							}
+						},
+						{
+							"speaker": "zoe",
+							"type": "speech",
+							"content": {
+								"korean": "난 단지 나의 주인님을 따를 뿐이야.",
+								"english": "I merely follow my master.",
+								"japanese": "私はただ、私の主に従うだけだ。",
+								"chinese": "我只是追随我的主人。",
+								"french": "Je ne fais que suivre mon maître.",
+								"spanish": "Yo solo sigo a mi maestro.",
+								"vietnamese": "Ta chỉ đơn thuần tuân theo chủ nhân của mình.",
+								"thai": "ฉันแค่ติดตามเจ้านายของฉัน",
+								"hindi": "मैं बस अपने मालिक का अनुसरण करता हूँ।"
+							},
+							"emotion": "base"
+						},
+						{
+							"emotion": "base",
+							"type": "speech",
+							"content": {
+								"korean": "거대한 그림자가 나타나, 주변을 뒤덮었다.",
+								"english": "A colossal shadow appeared, engulfing the surroundings.",
+								"japanese": "巨大な影が現れ、周囲を覆い尽くした。",
+								"chinese": "一个巨大的影子出现，笼罩了四周。",
+								"french": "Une ombre colossale apparut, recouvrant les environs.",
+								"spanish": "Una sombra colosal apareció, cubriendo los alrededores.",
+								"vietnamese": "Một cái bóng khổng lồ xuất hiện, bao trùm khắp nơi.",
+								"thai": "เงาขนาดมหึมาปรากฏขึ้น ปกคลุมไปทั่วบริเวณ",
+								"hindi": "एक विशालकाय छाया प्रकट हुई, जिसने आसपास को ढक लिया।"
+							},
+							"speaker": "narrator"
+						},
+						{
+							"emotion": "base",
+							"content": {
+								"korean": "환영한다, 나의 구역에 온 것을.",
+								"english": "Welcome to my domain.",
+								"japanese": "ようこそ、私の領域へ。",
+								"chinese": "欢迎来到我的领域。",
+								"french": "Bienvenue dans mon domaine.",
+								"spanish": "Bienvenido a mi dominio.",
+								"vietnamese": "Chào mừng đến lãnh địa của ta.",
+								"thai": "ยินดีต้อนรับสู่แดนของข้า",
+								"hindi": "मेरे क्षेत्र में तुम्हारा स्वागत है।"
+							},
+							"type": "speech",
+							"speaker": "random_boss"
+						},
+						{
+							"type": "speech",
+							"content": {
+								"korean": "네가 이 모든 걸 꾸민 거군!",
+								"english": "So you orchestrated all of this!",
+								"japanese": "お前が全て仕組んだのか！",
+								"chinese": "原来这一切都是你策划的！",
+								"french": "C'est donc toi qui as orchestré tout ça !",
+								"spanish": "¡Así que tú orquestaste todo esto!",
+								"vietnamese": "Ngươi đã sắp đặt tất cả chuyện này!",
+								"thai": "แกเป็นคนจัดฉากทั้งหมดนี่เอง!",
+								"hindi": "तो तुमने ही यह सब योजना बनाई है!"
+							},
+							"speaker": "character_any",
+							"emotion": "angry"
+						},
+						{
+							"emotion": "base",
+							"speaker": "random_boss",
+							"type": "speech",
+							"content": {
+								"korean": "이해할 수 없는 작은 반항이군.",
+								"english": "A small, incomprehensible act of rebellion.",
+								"japanese": "取るに足らない、理解不能な反抗だな。",
+								"chinese": "真是微不足道，不可理喻的反抗。",
+								"french": "Une petite rébellion incompréhensible.",
+								"spanish": "Una pequeña e incomprensible rebelión.",
+								"vietnamese": "Một sự phản kháng nhỏ bé, khó hiểu.",
+								"thai": "การต่อต้านเล็ก ๆ ที่ไร้ความหมาย",
+								"hindi": "एक छोटी, अगम्य बगावत।"
+							}
+						},
+						{
+							"direction": "right",
+							"action": "exit",
+							"speaker": "zoe",
+							"type": "direction",
+							"duration_ms": 400
+						}
+					]
+				}
+			],
+			"prologue": {
+				"korean": [
+					"낡은 디지털 기기가 번쩍이며, 알 수 없는 코드가 화면을 뒤덮었다.",
+					"모든 것이 왜곡된 공간. 나는 갇혔다.",
+					"그리고 시작된 카운트다운. 남은 시간은 단지, 파멸까지의 거리.",
+					"안정적으로 보이던 시스템의 이면에서, 기묘한 그림자가 드리워진다."
+				],
+				"english": [
+					"An old digital device flickered, unknown code covering the screen.",
+					"A space where everything is distorted. I'm trapped.",
+					"And the countdown began. The remaining time is merely the distance to destruction.",
+					"Behind the seemingly stable system, a strange shadow falls."
+				],
+				"japanese": [
+					"古いデジタル機器が点滅し、未知のコードが画面を覆った。",
+					"すべてが歪んだ空間。私は閉じ込められた。",
+					"そして始まったカウントダウン。残された時間はただ、破滅までの距離。",
+					"安定しているように見えたシステムの裏側で、奇妙な影が差す。"
+				],
+				"chinese": [
+					"老旧的数字设备闪烁着，未知的代码覆盖了屏幕。",
+					"一个万物扭曲的空间。我被困住了。",
+					"倒计时开始了。剩下的时间，不过是到毁灭的距离。",
+					"在看似稳定的系统背后，一道奇异的阴影笼罩着。"
+				],
+				"french": [
+					"Un vieil appareil numérique a clignoté, un code inconnu recouvrant l'écran.",
+					"Un espace où tout est déformé. Je suis piégé.",
+					"Et le compte à rebours a commencé. Le temps restant n'est que la distance jusqu'à la destruction.",
+					"Derrière le système apparemment stable, une étrange ombre plane."
+				],
+				"spanish": [
+					"Un viejo dispositivo digital parpadeó, código desconocido cubriendo la pantalla.",
+					"Un espacio donde todo está distorsionado. Estoy atrapado.",
+					"Y la cuenta regresiva comenzó. El tiempo restante es simplemente la distancia a la destrucción.",
+					"Detrás del sistema aparentemente estable, una extraña sombra se cierne."
+				],
+				"vietnamese": [
+					"Một thiết bị kỹ thuật số cũ nhấp nháy, mã không xác định bao phủ màn hình.",
+					"Một không gian mọi thứ bị bóp méo. Tôi bị mắc kẹt.",
+					"Và đồng hồ đếm ngược bắt đầu. Thời gian còn lại chỉ là khoảng cách đến sự hủy diệt.",
+					"Đằng sau hệ thống tưởng chừng ổn định, một bóng đen kỳ lạ bao trùm."
+				],
+				"thai": [
+					"อุปกรณ์ดิจิทัลเก่ากะพริบ โค้ดที่ไม่รู้จักปกคลุมหน้าจอ",
+					"พื้นที่ที่ทุกสิ่งบิดเบี้ยว ฉันติดกับ",
+					"และการนับถอยหลังก็เริ่มต้นขึ้น เวลาที่เหลือเป็นเพียงระยะทางสู่การทำลายล้าง",
+					"เบื้องหลังระบบที่ดูเหมือนเสถียร เงาประหลาดทอดลงมา"
+				],
+				"hindi": [
+					"एक पुराना डिजिटल उपकरण टिमटिमाया, अज्ञात कोड स्क्रीन पर छा गया।",
+					"एक ऐसी जगह जहाँ सब कुछ विकृत है। मैं फँस गया हूँ।",
+					"और उलटी गिनती शुरू हो गई। बचा हुआ समय केवल विनाश तक की दूरी है।",
+					"लगभग स्थिर प्रणाली के पीछे, एक अजीब छाया पड़ती है।"
+				]
+			}
+		},
+		{
+			"scenario_id": "modern_pixelgrim_28_02",
+			"order": 2,
+			"act": "rising",
+			"theme": "modern",
+			"actors": {
+				"kai": {
+					"id": "mon_d7f29313-b8fb-49da-9a1a-01df5d13866e",
+					"name": {
+						"korean": "카이",
+						"english": "Kai",
+						"japanese": "カイ",
+						"chinese": "凯",
+						"french": "Kai",
+						"spanish": "Kai",
+						"vietnamese": "Kai",
+						"thai": "ไค",
+						"hindi": "काई"
+					},
+					"description": "",
+					"face_image_url": "https://imagedelivery.net/WTEqQNGFb-l-IHS6IGnzUQ/f10d9184-4155-4bb9-de2d-db61463f7c00/public",
+					"battle_sprite_url": "https://imagedelivery.net/WTEqQNGFb-l-IHS6IGnzUQ/e41f8e03-08c9-4a4f-6f72-fa9342876f00/public"
+				}
+			},
+			"boss": {
+				"pool_id": "random_boss"
+			},
+			"prologue": {
+				"korean": [
+					"카운트다운은 멈추지 않고 가속됐다. 시스템은 미쳐 날뛰기 시작했다.",
+					"정체 모를 잔상들이 모든 곳에서 플레이어를 쫓아왔다.",
+					"카이는 속삭였다. \"오류를 이용하면 탈출할 수 있어.\"",
+					"하지만 그 속삭임은, 더 깊은 미로로 이끄는 교묘한 함정이었다.",
+					"분노와 절망 속, 탈출구는 보스의 왜곡된 질서로 이어졌다."
+				],
+				"english": [
+					"The countdown accelerated relentlessly. The system went haywire.",
+					"Unidentifiable afterimages pursued the player everywhere.",
+					"Kai whispered, \"You can escape by exploiting the error.\"",
+					"But that whisper was a clever trap, leading into a deeper labyrinth.",
+					"In fury and despair, the exit led to the boss's distorted order."
+				],
+				"japanese": [
+					"カウントダウンは止まらず加速した。システムは狂い始めた。",
+					"正体不明の残像が至る所でプレイヤーを追いかけた。",
+					"カイは囁いた。「エラーを利用すれば脱出できる。」",
+					"しかし、その囁きは、より深い迷宮へと誘う巧妙な罠だった。",
+					"怒りと絶望の中、出口はボスの歪んだ秩序へと繋がっていた。"
+				],
+				"chinese": [
+					"倒计时不停加速。系统开始疯狂。",
+					"不明残影在各地追赶玩家。",
+					"凯低语道：“利用错误就能逃脱。”",
+					"但那低语，却是引向更深迷宫的巧妙陷阱。",
+					"愤怒与绝望中，出口通向了首领扭曲的秩序。"
+				],
+				"french": [
+					"Le compte à rebours s'accélérait sans relâche. Le système devenait fou.",
+					"Des rémanences inconnues poursuivaient le joueur partout.",
+					"Kai murmura : « Tu peux t'échapper en exploitant l'erreur. »",
+					"Mais ce murmure était un piège astucieux, menant à un labyrinthe plus profond.",
+					"Dans la fureur et le désespoir, la sortie menait à l'ordre déformé du boss."
+				],
+				"spanish": [
+					"La cuenta regresiva se aceleró sin cesar. El sistema se volvió loco.",
+					"Imágenes residuales desconocidas perseguían al jugador por todas partes.",
+					"Kai susurró: \"Puedes escapar aprovechando el error.\"",
+					"Pero ese susurro era una trampa ingeniosa, que conducía a un laberinto más profundo.",
+					"En furia y desesperación, la salida conducía al orden distorsionado del jefe."
+				],
+				"vietnamese": [
+					"Đồng hồ đếm ngược không ngừng tăng tốc. Hệ thống bắt đầu loạn.",
+					"Những tàn ảnh không rõ danh tính đuổi theo người chơi khắp nơi.",
+					"Kai thì thầm, \"Có thể thoát ra bằng cách lợi dụng lỗi.\"",
+					"Nhưng lời thì thầm đó lại là một cái bẫy tinh vi, dẫn vào một mê cung sâu hơn.",
+					"Trong cơn thịnh nộ và tuyệt vọng, lối thoát dẫn đến trật tự méo mó của trùm."
+				],
+				"thai": [
+					"การนับถอยหลังเร่งความเร็วขึ้นไม่หยุด ระบบเริ่มคลุ้มคลั่ง",
+					"ภาพติดตาที่ไม่รู้จักไล่ตามผู้เล่นไปทุกที่",
+					"ไคกระซิบว่า \"คุณสามารถหลบหนีได้โดยใช้ข้อผิดพลาด\"",
+					"แต่เสียงกระซิบนั้นเป็นกับดักอันชาญฉลาด นำไปสู่เขาวงกตที่ลึกกว่า",
+					"ในความโกรธแค้นและความสิ้นหวัง ทางออกนำไปสู่ระเบียบที่บิดเบี้ยวของบอส"
+				],
+				"hindi": [
+					"उलटी गिनती बिना रुके तेज होती गई। सिस्टम बेकाबू हो गया।",
+					"अज्ञात प्रतिछायाएँ खिलाड़ी का हर जगह पीछा कर रही थीं।",
+					"काई फुसफुसाया, \"त्रुटि का लाभ उठाकर तुम बच सकते हो।\"",
+					"लेकिन वह फुसफुसाहट एक चतुर जाल थी, जो एक गहरे भूलभुलैया में ले जा रही थी।",
+					"क्रोध और निराशा में, निकास बॉस के विकृत आदेश की ओर ले गया।"
+				]
+			},
+			"rooms": [
+				{
+					"id": 1,
+					"dialogue": [
+						{
+							"type": "speech",
+							"emotion": "base",
+							"content": {
+								"korean": "시스템의 경고음이 점점 더 빠르고 격렬하게 울려 퍼졌다.",
+								"english": "The system's warning alarms grew faster and more frantic.",
+								"japanese": "システムの警告音が、ますます速く激しく鳴り響いた。",
+								"chinese": "系统的警报声越来越快，越来越剧烈。",
+								"french": "Les alarmes du système résonnaient de plus en plus vite et violemment.",
+								"spanish": "Las alarmas del sistema resonaron cada vez más rápido y con mayor intensidad.",
+								"vietnamese": "Tiếng còi cảnh báo của hệ thống vang lên ngày càng nhanh và dữ dội.",
+								"thai": "เสียงเตือนของระบบดังขึ้นเร็วและรุนแรงยิ่งขึ้น",
+								"hindi": "सिस्टम की चेतावनी की घंटियाँ तेज़ी से और अधिक उग्रता से बजने लगीं।"
+							},
+							"speaker": "narrator"
+						},
+						{
+							"speaker": "character_any",
+							"type": "speech",
+							"emotion": "angry",
+							"content": {
+								"korean": "젠장… 이제 쫓아오기까지 해?",
+								"english": "Damn it... Now they're chasing us too?",
+								"japanese": "くそっ…今度は追ってくるのか？",
+								"chinese": "该死……现在它们也追过来了？",
+								"french": "Merde... Maintenant, ils nous poursuivent aussi ?",
+								"spanish": "Maldita sea... ¿Ahora también nos persiguen?",
+								"vietnamese": "Chết tiệt... Giờ chúng còn đuổi theo nữa à?",
+								"thai": "ให้ตายสิ... ตอนนี้พวกมันตามมาด้วยงั้นเหรอ?",
+								"hindi": "धिक्कार है... अब ये हमारा पीछा भी कर रहे हैं?"
+							}
+						},
+						{
+							"content": {
+								"korean": "(회피하며) 숫자가… 너무 빨라지고 있어!",
+								"english": "(Dodging) The numbers... are getting too fast!",
+								"japanese": "(回避しながら) 数字が…速くなりすぎている！",
+								"chinese": "（躲避着）数字……变得太快了！",
+								"french": "(Esquivant) Les chiffres... deviennent trop rapides !",
+								"spanish": "(Esquivando) ¡Los números... se están acelerando demasiado!",
+								"vietnamese": "(Né tránh) Những con số... đang nhanh quá!",
+								"thai": "(หลบหลีก) ตัวเลข... มันเร็วเกินไปแล้ว!",
+								"hindi": "(बचते हुए) संख्याएँ... बहुत तेज़ी से बढ़ रही हैं!"
+							},
+							"type": "speech",
+							"emotion": "sad",
+							"speaker": "character_1"
+						},
+						{
+							"speaker": "kai",
+							"type": "direction",
+							"action": "enter",
+							"spot": [
+								5,
+								2
+							],
+							"duration_ms": 500
+						},
+						{
+							"content": {
+								"korean": "다들 진정해. 방법이 없는 건 아니야.",
+								"english": "Everyone calm down. It's not like there's no way.",
+								"japanese": "みんな落ち着いて。方法がないわけじゃない。",
+								"chinese": "大家都冷静。并非没有办法。",
+								"french": "Calmez-vous tous. Il y a un moyen.",
+								"spanish": "Cálmense todos. No es que no haya una manera.",
+								"vietnamese": "Mọi người bình tĩnh. Không phải là không có cách.",
+								"thai": "ทุกคนใจเย็นๆ ไม่ใช่ว่าจะไม่มีทางออก",
+								"hindi": "सब शांत हो जाओ। ऐसा नहीं है कि कोई तरीका नहीं है।"
+							},
+							"type": "speech",
+							"emotion": "base",
+							"speaker": "kai"
+						},
+						{
+							"speaker": "character_any",
+							"type": "speech",
+							"emotion": "base",
+							"content": {
+								"korean": "뭐야? 넌 또 언제 나타난 거야?",
+								"english": "What? When did you show up?",
+								"japanese": "何だ？お前、いつ現れたんだ？",
+								"chinese": "什么？你又是什么时候出现的？",
+								"french": "Quoi ? Quand es-tu apparu ?",
+								"spanish": "¿Qué? ¿Cuándo apareciste?",
+								"vietnamese": "Gì vậy? Ngươi lại xuất hiện từ lúc nào?",
+								"thai": "อะไรนะ? คุณมาปรากฏตัวตั้งแต่เมื่อไหร่?",
+								"hindi": "क्या? तुम कब प्रकट हुए?"
+							}
+						},
+						{
+							"type": "speech",
+							"emotion": "base",
+							"content": {
+								"korean": "이 시스템은 엉망이야. 오류가… 곧 탈출구가 될 거야.",
+								"english": "This system is a mess. Errors... they'll soon be your escape.",
+								"japanese": "このシステムはめちゃくちゃだ。エラーが…すぐに脱出口になるだろう。",
+								"chinese": "这系统一团糟。错误…很快就会成为你的出路。",
+								"french": "Ce système est un désordre. Les erreurs... seront bientôt votre échappatoire.",
+								"spanish": "Este sistema es un desastre. Los errores... pronto serán tu escape.",
+								"vietnamese": "Hệ thống này lộn xộn quá. Lỗi... sẽ sớm là lối thoát của ngươi.",
+								"thai": "ระบบนี้ยุ่งเหยิงไปหมด ข้อผิดพลาด... ในไม่ช้ามันจะเป็นทางออกของคุณ",
+								"hindi": "यह सिस्टम गड़बड़ है। त्रुटियाँ... जल्द ही तुम्हारा निकास होंगी।"
+							},
+							"speaker": "kai"
+						},
+						{
+							"type": "speech",
+							"emotion": "base",
+							"content": {
+								"korean": "오류를 이용하라고? 대체 무슨 소리야?",
+								"english": "Use the errors? What are you talking about?",
+								"japanese": "エラーを利用しろって？一体どういうことだ？",
+								"chinese": "利用错误？你到底在说什么？",
+								"french": "Utiliser les erreurs ? De quoi parlez-vous ?",
+								"spanish": "¿Usar los errores? ¿De qué estás hablando?",
+								"vietnamese": "Dùng lỗi sao? Ngươi đang nói cái gì vậy?",
+								"thai": "ใช้ข้อผิดพลาดเหรอ? คุณกำลังพูดถึงอะไร?",
+								"hindi": "त्रुटियों का उपयोग करें? तुम क्या कह रहे हो?"
+							},
+							"speaker": "character_2"
+						}
+					]
+				},
+				{
+					"id": 3,
+					"dialogue": [
+						{
+							"type": "direction",
+							"speaker": "kai",
+							"duration_ms": 500,
+							"spot": [
+								4,
+								2
+							],
+							"action": "enter"
+						},
+						{
+							"content": {
+								"korean": "잘 봐. 이 데이터 파편들은 단순한 오류가 아니야.",
+								"english": "Look closely. These data fragments aren't mere errors.",
+								"japanese": "よく見ろ。このデータ断片は単なるエラーじゃない。",
+								"chinese": "看仔细。这些数据碎片可不是简单的错误。",
+								"french": "Regardez bien. Ces fragments de données ne sont pas de simples erreurs.",
+								"spanish": "Mira bien. Estos fragmentos de datos no son meros errores.",
+								"vietnamese": "Nhìn kỹ đi. Những mảnh dữ liệu này không chỉ là lỗi đơn thuần.",
+								"thai": "ดูให้ดีๆ เศษข้อมูลเหล่านี้ไม่ใช่แค่ข้อผิดพลาดธรรมดา",
+								"hindi": "ध्यान से देखो। ये डेटा के टुकड़े महज़ त्रुटियाँ नहीं हैं।"
+							},
+							"type": "speech",
+							"emotion": "base",
+							"speaker": "kai"
+						},
+						{
+							"content": {
+								"korean": "(데이터 파편을 보며) 어지러워… 뭐가 보이긴 하는데, 알 수가 없어.",
+								"english": "(Looking at the data fragments) I'm dizzy... I see something, but I can't understand it.",
+								"japanese": "(データ断片を見て) 目が回る…何か見えるけど、理解できない。",
+								"chinese": "(看着数据碎片) 头好晕…我好像看到了什么，但无法理解。",
+								"french": "(Regardant les fragments de données) J'ai le vertige... Je vois quelque chose, mais je ne peux pas le comprendre.",
+								"spanish": "(Mirando los fragmentos de datos) Estoy mareado... Veo algo, pero no lo entiendo.",
+								"vietnamese": "(Nhìn vào mảnh dữ liệu) Chóng mặt quá... Thấy gì đó nhưng không hiểu được.",
+								"thai": "(มองเศษข้อมูล) มึนหัวจัง... เห็นบางอย่างนะ แต่ไม่เข้าใจเลย",
+								"hindi": "(डेटा के टुकड़ों को देखते हुए) मुझे चक्कर आ रहा है... कुछ दिख रहा है, पर समझ नहीं पा रहा हूँ।"
+							},
+							"type": "speech",
+							"emotion": "base",
+							"speaker": "character_any"
+						},
+						{
+							"speaker": "kai",
+							"type": "speech",
+							"emotion": "base",
+							"content": {
+								"korean": "저걸 쫓아가야 해. 보이지 않는 길을 열어줄 거야.",
+								"english": "We have to follow them. They'll open up an unseen path.",
+								"japanese": "あれを追うんだ。見えない道を開いてくれるだろう。",
+								"chinese": "我们必须追随它们。它们会开启一条看不见的道路。",
+								"french": "Nous devons les suivre. Elles nous ouvriront un chemin invisible.",
+								"spanish": "Debemos seguirlos. Nos abrirán un camino invisible.",
+								"vietnamese": "Chúng ta phải theo chúng. Chúng sẽ mở ra một con đường vô hình.",
+								"thai": "เราต้องตามพวกมันไป พวกมันจะเปิดทางที่มองไม่เห็นให้",
+								"hindi": "हमें उनका पीछा करना होगा। वे एक अदृश्य मार्ग खोलेंगे।"
+							}
+						},
+						{
+							"type": "speech",
+							"emotion": "sad",
+							"content": {
+								"korean": "정말 믿어도 되는 거야? 어쩐지 더 깊은 곳으로 끌려가는 기분인데.",
+								"english": "Can I really trust this? I feel like I'm being drawn deeper.",
+								"japanese": "本当に信じていいのか？どうも、もっと深いところに引きずり込まれる気がするんだけど。",
+								"chinese": "真的能相信吗？总觉得我被拉向更深的地方。",
+								"french": "Puis-je vraiment faire confiance à cela ? J'ai l'impression d'être entraîné plus profondément.",
+								"spanish": "¿De verdad puedo confiar en esto? Siento que me arrastran a un lugar más profundo.",
+								"vietnamese": "Thật sự có thể tin sao? Tôi cứ thấy như bị kéo xuống vực sâu hơn.",
+								"thai": "จะเชื่อได้จริงเหรอ? ทำไมรู้สึกเหมือนถูกดึงลงไปในที่ที่ลึกกว่าเดิม",
+								"hindi": "क्या मैं सच में इस पर भरोसा कर सकता हूँ? मुझे लग रहा है कि मुझे और गहरे खींचा जा रहा है।"
+							},
+							"speaker": "character_3"
+						},
+						{
+							"speaker": "kai",
+							"type": "speech",
+							"emotion": "base",
+							"content": {
+								"korean": "선택의 여지는 없어. 넌 이미 이 미로의 일부니까.",
+								"english": "You have no choice. You're already part of this maze.",
+								"japanese": "選択の余地はない。お前は既にこの迷路の一部だからな。",
+								"chinese": "你别无选择。你已经这个迷宫的一部分了。",
+								"french": "Vous n'avez pas le choix. Vous faites déjà partie de ce labyrinthe.",
+								"spanish": "No tienes elección. Ya eres parte de este laberinto.",
+								"vietnamese": "Ngươi không có lựa chọn. Ngươi đã là một phần của mê cung này rồi.",
+								"thai": "ไม่มีทางเลือก คุณเป็นส่วนหนึ่งของเขาวงกตนี้อยู่แล้ว",
+								"hindi": "तुम्हारे पास कोई विकल्प नहीं है। तुम पहले ही इस भूलभुलैया का हिस्सा हो।"
+							}
+						}
+					]
+				},
+				{
+					"id": 5,
+					"dialogue": [
+						{
+							"action": "enter",
+							"spot": [
+								3,
+								2
+							],
+							"duration_ms": 500,
+							"speaker": "kai",
+							"type": "direction"
+						},
+						{
+							"type": "speech",
+							"emotion": "sad",
+							"content": {
+								"korean": "계속 따라왔는데… 더 혼란스러워졌어.",
+								"english": "I kept following... but I'm more confused now.",
+								"japanese": "ずっとついてきたけど…さらに混乱してきた。",
+								"chinese": "我一直跟着…但现在更困惑了。",
+								"french": "J'ai continué à suivre... but je suis encore plus confus maintenant.",
+								"spanish": "Seguí... pero ahora estoy más confundido.",
+								"vietnamese": "Tôi đã theo mãi... nhưng giờ lại càng thêm hoang mang.",
+								"thai": "ฉันตามมาตลอด... แต่ตอนนี้สับสนกว่าเดิมอีก",
+								"hindi": "मैं पीछा करता रहा... पर अब मैं और भ्रमित हो गया हूँ।"
+							},
+							"speaker": "character_any"
+						},
+						{
+							"speaker": "kai",
+							"content": {
+								"korean": "혼란? 그건 이 시스템의 본질이야.",
+								"english": "Confusion? That's the essence of this system.",
+								"japanese": "混乱？それはこのシステムの本質だ。",
+								"chinese": "困惑？那是这个系统的本质。",
+								"french": "La confusion ? C'est l'essence même de ce système.",
+								"spanish": "¿Confusión? Esa es la esencia de este sistema.",
+								"vietnamese": "Hoang mang? Đó là bản chất của hệ thống này.",
+								"thai": "ความสับสน? นั่นแหละคือแก่นแท้ของระบบนี้",
+								"hindi": "भ्रम? वह इस सिस्टम का सार है।"
+							},
+							"type": "speech",
+							"emotion": "base"
+						},
+						{
+							"speaker": "character_4",
+							"type": "speech",
+							"emotion": "angry",
+							"content": {
+								"korean": "우릴 이용하려는 거지? 당신도 저 보스랑 한통속이야?",
+								"english": "You're trying to use us, aren't you? Are you in league with that boss?",
+								"japanese": "俺たちを利用しようとしてるんだろ？あんたもあのボスとグルなのか？",
+								"chinese": "你想利用我们，对吧？你是不是和那个Boss一伙的？",
+								"french": "Vous essayez de nous utiliser, n'est-ce pas ? Êtes-vous de mèche avec ce boss ?",
+								"spanish": "¿Estás tratando de usarnos, verdad? ¿Estás compinchado con ese jefe?",
+								"vietnamese": "Ngươi muốn lợi dụng chúng ta phải không? Ngươi cũng cùng phe với tên trùm đó à?",
+								"thai": "คุณกำลังพยายามใช้เราอยู่ใช่ไหม? คุณเป็นพวกเดียวกับบอสคนนั้นเหรอ?",
+								"hindi": "तुम हमें इस्तेमाल करने की कोशिश कर रहे हो, है ना? क्या तुम उस बॉस के साथ मिले हुए हो?"
+							}
+						},
+						{
+							"type": "speech",
+							"emotion": "base",
+							"content": {
+								"korean": "(웃음) 글쎄. 누가 누구를 이용하는지는… 끝까지 가봐야 알겠지.",
+								"english": "(Laughs) Well, who's using whom... we'll only know at the very end.",
+								"japanese": "(笑) さあね。誰が誰を利用しているのかは…最後まで行ってみないと分からないね。",
+								"chinese": "(笑) 呵呵。究竟是谁在利用谁……到最后才能知道吧。",
+								"french": "(Rire) Eh bien, qui utilise qui... on ne le saura qu'à la toute fin.",
+								"spanish": "(Risas) Bueno, quién usa a quién... solo lo sabremos al final.",
+								"vietnamese": "(Cười) Chà, ai lợi dụng ai... thì phải đi đến cùng mới biết được.",
+								"thai": "(หัวเราะ) เอาล่ะ ใครกำลังใช้ใคร... คงต้องรอดูกันจนถึงที่สุด",
+								"hindi": "(हंसते हुए) खैर, कौन किसका इस्तेमाल कर रहा है... यह तो आखिर तक जाकर ही पता चलेगा।"
+							},
+							"speaker": "kai"
+						},
+						{
+							"content": {
+								"korean": "뒤틀린 데이터들이 기이한 형태로 왜곡되어 나타났다.",
+								"english": "Distorted data appeared, warped into bizarre forms.",
+								"japanese": "歪んだデータが奇妙な形で歪曲して現れた。",
+								"chinese": "扭曲的数据以奇特的形态变形出现。",
+								"french": "Des données déformées sont apparues, tordues en des formes étranges.",
+								"spanish": "Datos distorsionados aparecieron, retorcidos en formas extrañas.",
+								"vietnamese": "Các dữ liệu bị bóp méo xuất hiện với hình dạng kỳ lạ.",
+								"thai": "ข้อมูลที่บิดเบี้ยวปรากฏขึ้นในรูปแบบที่แปลกประหลาด",
+								"hindi": "विकृत डेटा अजीबोगरीब रूपों में विकृत होकर प्रकट हुआ।"
+							},
+							"type": "speech",
+							"emotion": "base",
+							"speaker": "narrator"
+						}
+					]
+				},
+				{
+					"id": 9,
+					"dialogue": [
+						{
+							"action": "enter",
+							"spot": [
+								6,
+								2
+							],
+							"duration_ms": 500,
+							"speaker": "kai",
+							"type": "direction"
+						},
+						{
+							"speaker": "character_any",
+							"content": {
+								"korean": "출구가 없어! 사방이 막혔어!",
+								"english": "No exit! We're blocked on all sides!",
+								"japanese": "出口がない！四方が塞がれてる！",
+								"chinese": "没有出口！四面都被堵住了！",
+								"french": "Pas de sortie ! On est bloqués de tous les côtés !",
+								"spanish": "¡No hay salida! ¡Estamos bloqueados por todas partes!",
+								"vietnamese": "Không có lối thoát! Bốn phía đều bị chặn rồi!",
+								"thai": "ไม่มีทางออก! ถูกปิดกั้นทุกด้าน!",
+								"hindi": "कोई रास्ता नहीं! चारों तरफ से बंद है!"
+							},
+							"type": "speech",
+							"emotion": "angry"
+						},
+						{
+							"content": {
+								"korean": "출구는… 네가 예상하지 못한 곳에 있어.",
+								"english": "The exit is... where you least expect it.",
+								"japanese": "出口は…君が予想しない場所にある。",
+								"chinese": "出口在……你意想不到的地方。",
+								"french": "La sortie est... là où tu t'y attends le moins.",
+								"spanish": "La salida está... donde menos te lo esperas.",
+								"vietnamese": "Lối thoát... ở nơi mà ngươi không ngờ tới.",
+								"thai": "ทางออกอยู่... ในที่ที่คุณไม่คาดคิด",
+								"hindi": "रास्ता... वहीं है जहाँ तुम्हें उम्मीद भी नहीं होगी।"
+							},
+							"type": "speech",
+							"emotion": "base",
+							"speaker": "kai"
+						},
+						{
+							"type": "speech",
+							"emotion": "angry",
+							"content": {
+								"korean": "거짓말 마! 우릴 미로 속에 가두려는 거잖아!",
+								"english": "Don't lie! You're trying to trap us in this maze!",
+								"japanese": "嘘つくな！俺たちを迷路の中に閉じ込めようとしてるんだろ！",
+								"chinese": "别撒谎！你就是想把我们困在这个迷宫里！",
+								"french": "Ne mens pas ! Tu essaies de nous piéger dans ce labyrinthe !",
+								"spanish": "¡No mientas! ¡Estás intentando atraparnos en este laberinto!",
+								"vietnamese": "Đừng nói dối! Ngươi muốn nhốt chúng ta vào mê cung này!",
+								"thai": "อย่าโกหก! คุณกำลังพยายามขังเราไว้ในเขาวงกตนี้!",
+								"hindi": "झूठ मत बोलो! तुम हमें इस भूलभुलैया में फंसाना चाहते हो!"
+							},
+							"speaker": "character_1"
+						},
+						{
+							"speaker": "kai",
+							"type": "speech",
+							"emotion": "base",
+							"content": {
+								"korean": "(조용히) 보스의 질서는 완벽해. 이 안에서 넌… 영원히 그의 것이 될 거야.",
+								"english": "(Quietly) The Boss's order is perfect. Inside here, you... will be his forever.",
+								"japanese": "(静かに) ボスの秩序は完璧だ。この中で君は…永遠に彼のものになるだろう。",
+								"chinese": "(悄声) 老板的秩序是完美的。在这里，你……将永远属于他。",
+								"french": "(Calmement) L'ordre du Boss est parfait. Ici, tu... seras sien pour toujours.",
+								"spanish": "(En voz baja) El orden del Jefe es perfecto. Aquí dentro, tú... serás suyo para siempre.",
+								"vietnamese": "(Yên lặng) Trật tự của Trùm là hoàn hảo. Ở đây, ngươi... sẽ mãi mãi là của hắn.",
+								"thai": "(เงียบๆ) ระเบียบของบอสสมบูรณ์แบบ ที่นี่คุณ... จะเป็นของเขาตลอดไป",
+								"hindi": "(खामोशी से) बॉस का आदेश एकदम सही है। यहाँ तुम... हमेशा के लिए उसके हो जाओगे।"
+							}
+						},
+						{
+							"type": "speech",
+							"emotion": "angry",
+							"content": {
+								"korean": "이 자식…!",
+								"english": "You bastard...!",
+								"japanese": "この野郎…！",
+								"chinese": "你这混蛋……！",
+								"french": "Ce salaud... !",
+								"spanish": "¡Maldito...!",
+								"vietnamese": "Tên khốn này...!",
+								"thai": "ไอ้สารเลว...!",
+								"hindi": "यह कमीना...!"
+							},
+							"speaker": "character_any"
+						},
+						{
+							"type": "speech",
+							"emotion": "base",
+							"content": {
+								"korean": "시스템의 왜곡된 질서가 더욱 강하게 플레이어를 옥죄었다.",
+								"english": "The system's distorted order tightened its grip on the player.",
+								"japanese": "システムの歪んだ秩序がさらに強くプレイヤーを締め付けた。",
+								"chinese": "系统扭曲的秩序更加强烈地束缚住了玩家。",
+								"french": "L'ordre déformé du système serra encore plus fort le joueur.",
+								"spanish": "El orden distorsionado del sistema oprimió con más fuerza al jugador.",
+								"vietnamese": "Trật tự méo mó của hệ thống càng siết chặt người chơi hơn.",
+								"thai": "ระเบียบที่บิดเบี้ยวของระบบบีบรัดผู้เล่นแน่นขึ้น",
+								"hindi": "सिस्टम का विकृत आदेश खिलाड़ी को और भी कसकर जकड़ रहा था।"
+							},
+							"speaker": "narrator"
+						}
+					]
+				},
+				{
+					"win_dialogue": [
+						{
+							"type": "speech",
+							"emotion": "base",
+							"content": {
+								"korean": "…나의 질서는… 완벽했다. 아니, 이건 시작일 뿐. 진짜 질서는…",
+								"english": "...My order was... perfect. No, this is just the beginning. The true order is...",
+								"japanese": "…私の秩序は…完璧だった。いや、これは始まりに過ぎない。真の秩序は…",
+								"chinese": "…我的秩序曾…完美无缺。不，这仅仅是开始。真正的秩序是…",
+								"french": "...Mon ordre était... parfait. Non, ce n'est que le début. Le véritable ordre est...",
+								"spanish": "...Mi orden era... perfecta. No, esto es solo el principio. El verdadero orden es...",
+								"vietnamese": "...Trật tự của ta đã... hoàn hảo. Không, đây chỉ là khởi đầu. Trật tự thực sự là...",
+								"thai": "...ระเบียบของข้า...สมบูรณ์แบบ ไม่สิ นี่เป็นเพียงจุดเริ่มต้น ระเบียบที่แท้จริงคือ...",
+								"hindi": "...मेरी व्यवस्था... परिपूर्ण थी। नहीं, यह तो बस शुरुआत है। वास्तविक व्यवस्था है..."
+							},
+							"speaker": "random_boss"
+						},
+						{
+							"speaker": "character_any",
+							"type": "speech",
+							"emotion": "angry",
+							"content": {
+								"korean": "이제… 끝이야!",
+								"english": "It's... over now!",
+								"japanese": "もう…終わりだ！",
+								"chinese": "现在…结束了！",
+								"french": "C'est... terminé maintenant !",
+								"spanish": "¡Ya... se acabó!",
+								"vietnamese": "Giờ thì... hết rồi!",
+								"thai": "ตอนนี้...จบแล้ว!",
+								"hindi": "अब... खत्म हो गया!"
+							}
+						},
+						{
+							"content": {
+								"korean": "정체 모를 잔상이 사라지자, 시스템의 깊은 곳에서 또 다른 불안정한 신호가 감지되었다.",
+								"english": "As the unknown afterimage vanished, another unstable signal was detected deep within the system.",
+								"japanese": "正体不明の残像が消え去ると、システムの深部から別の不安定な信号が感知された。",
+								"chinese": "当不明残像消失后，系统深处又检测到了另一个不稳定的信号。",
+								"french": "Alors que l'image rémanente inconnue disparaissait, un autre signal instable fut détecté au plus profond du système.",
+								"spanish": "Mientras la imagen residual desconocida desaparecía, otra señal inestable fue detectada en lo profundo del sistema.",
+								"vietnamese": "Khi tàn dư không rõ biến mất, một tín hiệu bất ổn khác được phát hiện sâu bên trong hệ thống.",
+								"thai": "เมื่อภาพติดตาที่ไม่รู้จักหายไป สัญญาณที่ไม่เสถียรอีกอย่างก็ถูกตรวจพบในส่วนลึกของระบบ",
+								"hindi": "जैसे ही अज्ञात प्रतिध्वनि गायब हुई, सिस्टम के भीतर गहराई में एक और अस्थिर संकेत का पता चला।"
+							},
+							"type": "speech",
+							"emotion": "base",
+							"speaker": "narrator"
+						}
+					],
+					"id": 15,
+					"lose_dialogue": [
+						{
+							"speaker": "random_boss",
+							"type": "speech",
+							"emotion": "base",
+							"content": {
+								"korean": "하찮은 분노로는… 나의 질서를 깰 수 없어.",
+								"english": "With your petty rage... you cannot break my order.",
+								"japanese": "つまらぬ怒りでは…私の秩序を破ることはできない。",
+								"chinese": "微不足道的愤怒…无法打破我的秩序。",
+								"french": "Avec ta rage insignifiante... tu ne peux pas briser mon ordre.",
+								"spanish": "Con tu insignificante ira... no puedes romper mi orden.",
+								"vietnamese": "Với cơn giận hèn mọn... ngươi không thể phá vỡ trật tự của ta.",
+								"thai": "ด้วยความโกรธเล็กน้อยของเจ้า...ไม่สามารถทำลายระเบียบของข้าได้",
+								"hindi": "तुम्हारे तुच्छ क्रोध से... तुम मेरी व्यवस्था को तोड़ नहीं सकते।"
+							}
+						},
+						{
+							"content": {
+								"korean": "아직… 끝나지 않았어!",
+								"english": "It's not... over yet!",
+								"japanese": "まだ…終わってない！",
+								"chinese": "还没…结束！",
+								"french": "Ce n'est... pas encore fini !",
+								"spanish": "¡Aún... no ha terminado!",
+								"vietnamese": "Chưa... kết thúc đâu!",
+								"thai": "ยัง...ไม่จบ!",
+								"hindi": "अभी... खत्म नहीं हुआ!"
+							},
+							"type": "speech",
+							"emotion": "angry",
+							"speaker": "character_any"
+						},
+						{
+							"duration_ms": 500,
+							"spot": [
+								4,
+								2
+							],
+							"action": "enter",
+							"type": "direction",
+							"speaker": "kai"
+						},
+						{
+							"type": "speech",
+							"emotion": "base",
+							"content": {
+								"korean": "(비웃듯) 어리석은 발버둥이군. 곧 너도 이 시스템의 일부가 될 거야.",
+								"english": "(Scoffs) Foolish struggle. Soon, you too will become part of this system.",
+								"japanese": "(嘲笑うかのように) 愚かな足掻きだ。すぐに、お前もこのシステムの一部となるだろう。",
+								"chinese": "（嘲讽地）愚蠢的挣扎。很快，你也会成为这个系统的一部分。",
+								"french": "(Ricane) Lutte insensée. Bientôt, toi aussi tu feras partie de ce système.",
+								"spanish": "(Se burla) Lucha estúpida. Pronto, tú también serás parte de este sistema.",
+								"vietnamese": "(Cười khẩy) Cuộc giãy giụa ngu ngốc. Ngươi sẽ sớm trở thành một phần của hệ thống này thôi.",
+								"thai": "(เยาะเย้ย) การดิ้นรนที่โง่เขลา อีกไม่นานเจ้าก็จะกลายเป็นส่วนหนึ่งของระบบนี้",
+								"hindi": "(हंसते हुए) मूर्खतापूर्ण संघर्ष। जल्द ही, तुम भी इस प्रणाली का हिस्सा बन जाओगे।"
+							},
+							"speaker": "kai"
+						}
+					],
+					"dialogue": [
+						{
+							"speaker": "narrator",
+							"type": "speech",
+							"emotion": "base",
+							"content": {
+								"korean": "드디어 미로의 심장부. 거대한 그림자가 플레이어를 기다리고 있었다.",
+								"english": "Finally, the heart of the maze. A colossal shadow awaited the player.",
+								"japanese": "ついに迷路の心臓部。巨大な影がプレイヤーを待ち受けていた。",
+								"chinese": "终于来到了迷宫的中心。一个巨大的阴影正在等待着玩家。",
+								"french": "Enfin, le cœur du labyrinthe. Une ombre colossale attendait le joueur.",
+								"spanish": "Finalmente, el corazón del laberinto. Una sombra colosal esperaba al jugador.",
+								"vietnamese": "Cuối cùng, trung tâm của mê cung. Một cái bóng khổng lồ đang chờ đợi người chơi.",
+								"thai": "ในที่สุดก็มาถึงใจกลางเขาวงกต เงาขนาดมหึมารอผู้เล่นอยู่",
+								"hindi": "अंततः भूलभुलैया का दिल। एक विशाल छाया खिलाड़ी का इंतजार कर रही थी।"
+							}
+						},
+						{
+							"type": "speech",
+							"emotion": "base",
+							"content": {
+								"korean": "…왔군. 나의 완벽한 질서 속으로.",
+								"english": "...You've come. Into my perfect order.",
+								"japanese": "…来たな。私の完璧な秩序の中へ。",
+								"chinese": "……你来了。进入我的完美秩序。",
+								"french": "...Tu es venu. Dans mon ordre parfait.",
+								"spanish": "...Has venido. A mi orden perfecto.",
+								"vietnamese": "...Ngươi đã đến. Vào trong trật tự hoàn hảo của ta.",
+								"thai": "...มาแล้วสินะ สู่ระเบียบที่สมบูรณ์แบบของข้า",
+								"hindi": "...तुम आ गए। मेरे उत्तम व्यवस्था में।"
+							},
+							"speaker": "random_boss"
+						},
+						{
+							"speaker": "character_any",
+							"content": {
+								"korean": "{random_boss}! 감히…!",
+								"english": "{random_boss}! How dare you...!",
+								"japanese": "{random_boss}！よくも…！",
+								"chinese": "{random_boss}！你竟敢…！",
+								"french": "{random_boss} ! Comment oses-tu... !",
+								"spanish": "¡{random_boss}! ¿Cómo te atreves...?",
+								"vietnamese": "{random_boss}! Ngươi dám...!",
+								"thai": "{random_boss}! แกกล้าดียังไง...!",
+								"hindi": "{random_boss}! तुम्हारी हिम्मत कैसे हुई...!"
+							},
+							"type": "speech",
+							"emotion": "angry"
+						},
+						{
+							"type": "speech",
+							"emotion": "base",
+							"content": {
+								"korean": "분노? 절망? 모두 나의 힘이 된다. 너는 영원히 나를 벗어날 수 없어.",
+								"english": "Rage? Despair? All become my strength. You can never escape me.",
+								"japanese": "怒り？絶望？すべてが私の力となる。お前は永遠に私から逃れられない。",
+								"chinese": "愤怒？绝望？都将成为我的力量。你永远无法摆脱我。",
+								"french": "Rage ? Désespoir ? Tout devient ma force. Tu ne pourras jamais m'échapper.",
+								"spanish": "¿Ira? ¿Desesperación? Todo se convierte en mi fuerza. Nunca podrás escapar de mí.",
+								"vietnamese": "Giận dữ? Tuyệt vọng? Tất cả đều trở thành sức mạnh của ta. Ngươi không bao giờ thoát khỏi ta được.",
+								"thai": "ความโกรธ? ความสิ้นหวัง? ทั้งหมดเป็นพลังของข้า เจ้าไม่มีทางหนีข้าพ้น",
+								"hindi": "क्रोध? निराशा? सब मेरी शक्ति बन जाते हैं। तुम मुझसे कभी बच नहीं पाओगे।"
+							},
+							"speaker": "random_boss"
+						},
+						{
+							"type": "direction",
+							"speaker": "kai",
+							"duration_ms": 500,
+							"spot": [
+								4,
+								2
+							],
+							"action": "enter"
+						},
+						{
+							"content": {
+								"korean": "봐. 결국 너도 이 그림자 속에 갇히게 될 거야.",
+								"english": "See? In the end, you too will be trapped in this shadow.",
+								"japanese": "見ろ。結局お前もこの影の中に閉じ込められるのだ。",
+								"chinese": "看。最终你也会被困在这片阴影之中。",
+								"french": "Regarde. Au final, toi aussi tu seras piégé dans cette ombre.",
+								"spanish": "Mira. Al final, tú también quedarás atrapado en esta sombra.",
+								"vietnamese": "Nhìn đi. Cuối cùng, ngươi cũng sẽ bị nhốt trong bóng tối này thôi.",
+								"thai": "ดูสิ ในที่สุดเจ้าก็จะถูกขังอยู่ในเงามืดนี้เช่นกัน",
+								"hindi": "देखो। अंत में, तुम भी इस छाया में फंस जाओगे।"
+							},
+							"type": "speech",
+							"emotion": "base",
+							"speaker": "kai"
+						},
+						{
+							"type": "speech",
+							"emotion": "angry",
+							"content": {
+								"korean": "닥쳐!",
+								"english": "Shut up!",
+								"japanese": "黙れ！",
+								"chinese": "闭嘴！",
+								"french": "Tais-toi !",
+								"spanish": "¡Cállate!",
+								"vietnamese": "Im đi!",
+								"thai": "หุบปาก!",
+								"hindi": "चुप रहो!"
+							},
+							"speaker": "character_any"
+						},
+						{
+							"speaker": "kai",
+							"type": "direction",
+							"action": "exit",
+							"duration_ms": 400,
+							"direction": "down"
+						}
+					]
+				}
+			]
+		},
+		{
+			"scenario_id": "modern_pixelgrim_28_03",
+			"order": 3,
+			"act": "rising",
+			"theme": "modern",
+			"actors": {
+				"lin": {
+					"id": "mon_d036a884-3dde-472c-9fe7-c4807643860f",
+					"name": {
+						"korean": "린",
+						"english": "Lin",
+						"japanese": "リン",
+						"chinese": "琳",
+						"french": "Lin",
+						"spanish": "Lin",
+						"vietnamese": "Lin",
+						"thai": "ลิน",
+						"hindi": "लिन"
+					},
+					"description": "",
+					"face_image_url": "https://imagedelivery.net/WTEqQNGFb-l-IHS6IGnzUQ/a095dd66-1857-4f44-68b0-2ece83006d00/public",
+					"battle_sprite_url": "https://imagedelivery.net/WTEqQNGFb-l-IHS6IGnzUQ/05b02694-f1ed-4e4c-b7ca-fb5b74a48900/public"
+				}
+			},
+			"boss": {
+				"pool_id": "random_boss"
+			},
+			"prologue": {
+				"korean": [
+					"오래된 데이터 아카이브. 그곳에 금지된 기록이 잠들어 있었다.",
+					"왜곡된 기억의 조각들, 만지면 만질수록 균열은 깊어졌다.",
+					"친절한 안내자는 속삭였다. '이건 단순한 오류예요.'",
+					"그러나 심장은 알고 있었다. 이것은 시작일 뿐이라고."
+				],
+				"english": [
+					"An ancient data archive. Forbidden records lay dormant within.",
+					"Fragments of distorted memories. The more you touched them, the deeper the cracks grew.",
+					"The friendly guide whispered, 'It's just a simple error.'",
+					"But the heart knew. This was only the beginning."
+				],
+				"japanese": [
+					"古びたデータアーカイブ。そこには禁断の記録が眠っていた。",
+					"歪んだ記憶の断片。触れるほどに亀裂は深くなった。",
+					"親切な案内者はささやいた。「これは単なるエラーですよ。」",
+					"しかし、心は知っていた。これは始まりに過ぎないと。"
+				],
+				"chinese": [
+					"古老的数据档案。那里沉睡着被禁止的记录。",
+					"扭曲的记忆碎片，触碰越深，裂痕越深。",
+					"友善的向导低语道：“这只是一个简单的错误。”",
+					"然而，心知道。这只是一个开始。"
+				],
+				"french": [
+					"Une ancienne archive de données. Des registres interdits y sommeillaient.",
+					"Des fragments de souvenirs distordus. Plus on les touchait, plus les fissures s'aggravaient.",
+					"Le gentil guide murmura : « Ce n'est qu'une simple erreur. »",
+					"Mais le cœur savait. Ce n'était que le début."
+				],
+				"spanish": [
+					"Un antiguo archivo de datos. Registros prohibidos yacían dormidos allí.",
+					"Fragmentos de recuerdos distorsionados. Cuanto más los tocabas, más profundas se hacían las grietas.",
+					"El amable guía susurró: 'Es solo un simple error.'",
+					"Pero el corazón sabía. Esto era solo el principio."
+				],
+				"vietnamese": [
+					"Một kho lưu trữ dữ liệu cổ xưa. Những ghi chép cấm kỵ nằm im lìm ở đó.",
+					"Những mảnh ký ức méo mó, càng chạm vào, vết nứt càng sâu.",
+					"Người hướng dẫn thân thiện thì thầm: 'Đây chỉ là một lỗi đơn giản thôi.'",
+					"Nhưng trái tim biết. Đây chỉ là khởi đầu."
+				],
+				"thai": [
+					"คลังข้อมูลเก่าแก่ บันทึกต้องห้ามหลับใหลอยู่ที่นั่น",
+					"ชิ้นส่วนความทรงจำที่บิดเบี้ยว ยิ่งสัมผัส รอยร้าวก็ยิ่งลึก",
+					"ผู้นำทางใจดีกระซิบว่า 'นี่เป็นแค่ข้อผิดพลาดง่ายๆ ค่ะ'",
+					"แต่หัวใจรู้ดีว่า นี่เป็นเพียงจุดเริ่มต้น"
+				],
+				"hindi": [
+					"एक पुराना डेटा संग्रह। वहाँ निषिद्ध रिकॉर्ड सो रहे थे।",
+					"विकृत यादों के टुकड़े, जितना छुआ, दरारें उतनी गहरी होती गईं।",
+					"दोस्त गाइड ने फुसफुसाया, 'यह बस एक सामान्य त्रुटि है।'",
+					"लेकिन दिल जानता था। यह तो बस शुरुआत थी।"
+				]
+			},
+			"rooms": [
+				{
+					"id": 1,
+					"dialogue": [
+						{
+							"speaker": "narrator",
+							"content": {
+								"korean": "오래된 데이터 아카이브. 모든 기록이 뒤틀린 채 잠들어 있었다.",
+								"english": "An old data archive. All records lay distorted and dormant.",
+								"japanese": "古びたデータアーカイブ。全ての記録が歪んだまま眠っていた。",
+								"chinese": "古老的数据档案。所有记录都扭曲着沉睡着。",
+								"french": "Une ancienne archive de données. Tous les enregistrements gisaient tordus et dormants.",
+								"spanish": "Un antiguo archivo de datos. Todos los registros yacían distorsionados y dormidos.",
+								"vietnamese": "Một kho lưu trữ dữ liệu cũ. Mọi ghi chép đều méo mó và nằm im lìm.",
+								"thai": "คลังข้อมูลเก่าแก่ บันทึกทั้งหมดบิดเบี้ยวและหลับใหล",
+								"hindi": "एक पुराना डेटा संग्रह। सभी रिकॉर्ड विकृत होकर सो रहे थे।"
+							},
+							"type": "speech",
+							"emotion": "base"
+						},
+						{
+							"type": "speech",
+							"emotion": "base",
+							"speaker": "character_any",
+							"content": {
+								"korean": "여기가 과거의 기록이 있는 곳인가?",
+								"english": "Is this where the past records are kept?",
+								"japanese": "ここが過去の記録がある場所ですか？",
+								"chinese": "这里是存放过去记录的地方吗？",
+								"french": "Est-ce ici que sont conservés les anciens enregistrements ?",
+								"spanish": "¿Es aquí donde se guardan los registros pasados?",
+								"vietnamese": "Đây là nơi lưu giữ những ghi chép quá khứ sao?",
+								"thai": "ที่นี่คือที่เก็บข้อมูลในอดีตหรือเปล่า?",
+								"hindi": "क्या यहीं अतीत के रिकॉर्ड हैं?"
+							}
+						},
+						{
+							"type": "direction",
+							"duration_ms": 500,
+							"speaker": "lin",
+							"spot": [
+								4,
+								3
+							],
+							"action": "enter"
+						},
+						{
+							"emotion": "base",
+							"type": "speech",
+							"speaker": "lin",
+							"content": {
+								"korean": "네, 플레이어님. 시스템 오류로 손상된 기억들이에요.",
+								"english": "Yes, Player. These are memories corrupted by a system error.",
+								"japanese": "はい、プレイヤー様。システムエラーで破損した記憶です。",
+								"chinese": "是的，玩家。这些是因系统错误而损坏的记忆。",
+								"french": "Oui, Joueur. Ce sont des souvenirs corrompus par une erreur système.",
+								"spanish": "Sí, Jugador. Son recuerdos dañados por un error del sistema.",
+								"vietnamese": "Vâng, người chơi. Đây là những ký ức bị hỏng do lỗi hệ thống.",
+								"thai": "ค่ะ ผู้เล่น นี่คือความทรงจำที่เสียหายจากข้อผิดพลาดของระบบ",
+								"hindi": "हाँ, खिलाड़ी। ये सिस्टम त्रुटि से दूषित यादें हैं।"
+							}
+						},
+						{
+							"emotion": "happy",
+							"type": "speech",
+							"content": {
+								"korean": "제가 복구를 도와드릴게요.",
+								"english": "I will help you with the recovery.",
+								"japanese": "私が復旧をお手伝いします。",
+								"chinese": "我来帮助您恢复。",
+								"french": "Je vais vous aider à les récupérer.",
+								"spanish": "Te ayudaré con la recuperación.",
+								"vietnamese": "Tôi sẽ giúp bạn khôi phục.",
+								"thai": "ฉันจะช่วยคุณกู้คืนเองค่ะ",
+								"hindi": "मैं आपको ठीक करने में मदद करूँगा।"
+							},
+							"speaker": "lin"
+						},
+						{
+							"emotion": "base",
+							"type": "speech",
+							"content": {
+								"korean": "도와준다고?",
+								"english": "You'll help?",
+								"japanese": "手伝ってくれるって？",
+								"chinese": "你要帮忙？",
+								"french": "Vous allez m'aider ?",
+								"spanish": "¿Me ayudarás?",
+								"vietnamese": "Bạn sẽ giúp sao?",
+								"thai": "จะช่วยเหรอ?",
+								"hindi": "मदद करोगे?"
+							},
+							"speaker": "character_any"
+						}
+					]
+				},
+				{
+					"id": 3,
+					"dialogue": [
+						{
+							"type": "direction",
+							"duration_ms": 500,
+							"spot": [
+								2,
+								3
+							],
+							"speaker": "lin",
+							"action": "enter"
+						},
+						{
+							"type": "speech",
+							"emotion": "happy",
+							"content": {
+								"korean": "보세요, 첫 번째 조각이 복구되었어요.",
+								"english": "Look, the first fragment has been recovered.",
+								"japanese": "見てください、最初の断片が復旧しました。",
+								"chinese": "看，第一个碎片已经恢复了。",
+								"french": "Regardez, le premier fragment a été restauré.",
+								"spanish": "Mira, el primer fragmento ha sido recuperado.",
+								"vietnamese": "Hãy nhìn xem, mảnh đầu tiên đã được khôi phục.",
+								"thai": "ดูสิ ชิ้นส่วนแรกถูกกู้คืนแล้ว",
+								"hindi": "देखो, पहला टुकड़ा ठीक हो गया है।"
+							},
+							"speaker": "lin"
+						},
+						{
+							"speaker": "narrator",
+							"content": {
+								"korean": "복구된 기억 조각. 하지만 알 수 없는 왜곡된 이미지가 스쳐 지나간다.",
+								"english": "Memory fragment recovered. But unknown, distorted images flash by.",
+								"japanese": "復元された記憶の断片。しかし、未知の歪んだイメージが脳裏をよぎる。",
+								"chinese": "记忆碎片已恢复。但未知的扭曲图像一闪而过。",
+								"french": "Fragment de mémoire récupéré. Mais des images déformées inconnues défilent.",
+								"spanish": "Fragmento de memoria recuperado. Pero imágenes distorsionadas desconocidas parpadean.",
+								"vietnamese": "Mảnh ký ức đã được khôi phục. Nhưng những hình ảnh méo mó, không rõ cứ lướt qua.",
+								"thai": "ชิ้นส่วนความทรงจำถูกกู้คืนแล้ว แต่ภาพที่บิดเบี้ยวและไม่รู้จักก็แวบเข้ามา",
+								"hindi": "याददाश्त का टुकड़ा बरामद हो गया। लेकिन अज्ञात, विकृत छवियां कौंध जाती हैं।"
+							},
+							"type": "speech",
+							"emotion": "base"
+						},
+						{
+							"emotion": "base",
+							"type": "speech",
+							"speaker": "character_any",
+							"content": {
+								"korean": "이건… 뭐지?",
+								"english": "What… is this?",
+								"japanese": "これ…は何だ？",
+								"chinese": "这…是什么？",
+								"french": "Qu’est-ce que… c’est ?",
+								"spanish": "¿Qué… es esto?",
+								"vietnamese": "Đây… là gì?",
+								"thai": "นี่…คืออะไร?",
+								"hindi": "यह… क्या है?"
+							}
+						},
+						{
+							"type": "speech",
+							"emotion": "base",
+							"content": {
+								"korean": "일시적인 오류예요. 괜찮아요. 곧 안정화될 거예요.",
+								"english": "It's a temporary error. Don't worry, it'll stabilize soon.",
+								"japanese": "一時的なエラーです。大丈夫です。すぐに安定しますよ。",
+								"chinese": "只是暂时性错误。没关系，很快就会稳定下来的。",
+								"french": "C'est une erreur temporaire. Ne vous inquiétez pas, ça va se stabiliser bientôt.",
+								"spanish": "Es un error temporal. No te preocupes, pronto se estabilizará.",
+								"vietnamese": "Chỉ là lỗi tạm thời thôi. Không sao đâu. Sẽ sớm ổn định lại thôi.",
+								"thai": "เป็นข้อผิดพลาดชั่วคราวค่ะ ไม่ต้องกังวล เดี๋ยวก็จะเสถียรขึ้นแล้ว",
+								"hindi": "यह एक अस्थायी त्रुटि है। चिंता मत करो, यह जल्द ही स्थिर हो जाएगा।"
+							},
+							"speaker": "lin"
+						},
+						{
+							"emotion": "base",
+							"type": "speech",
+							"speaker": "lin",
+							"content": {
+								"korean": "다음 조각으로 가시죠. 진실은 언제나 명확해야 하니까요.",
+								"english": "Let's move to the next fragment. Truth must always be clear.",
+								"japanese": "次の断片へ行きましょう。真実は常に明確でなければなりませんから。",
+								"chinese": "我们去下一块碎片吧。因为真相必须永远清晰。",
+								"french": "Passons au fragment suivant. La vérité doit toujours être claire.",
+								"spanish": "Vayamos al siguiente fragmento. La verdad siempre debe ser clara.",
+								"vietnamese": "Chúng ta hãy đến mảnh tiếp theo. Vì sự thật phải luôn rõ ràng.",
+								"thai": "ไปชิ้นส่วนถัดไปกันเถอะค่ะ ความจริงจะต้องชัดเจนเสมอ",
+								"hindi": "अगले टुकड़े पर चलते हैं। सत्य हमेशा स्पष्ट होना चाहिए।"
+							}
+						},
+						{
+							"emotion": "sad",
+							"type": "speech",
+							"content": {
+								"korean": "명확…?",
+								"english": "Clear...?",
+								"japanese": "明確…？",
+								"chinese": "清晰…？",
+								"french": "Clair… ?",
+								"spanish": "¿Claro…?",
+								"vietnamese": "Rõ ràng…?",
+								"thai": "ชัดเจน…?",
+								"hindi": "स्पष्ट…?"
+							},
+							"speaker": "character_any"
+						}
+					]
+				},
+				{
+					"id": 5,
+					"dialogue": [
+						{
+							"action": "enter",
+							"type": "direction",
+							"duration_ms": 500,
+							"spot": [
+								3,
+								2
+							],
+							"speaker": "lin"
+						},
+						{
+							"speaker": "lin",
+							"content": {
+								"korean": "두 번째 조각도 복구되었어요.",
+								"english": "The second fragment has also been recovered.",
+								"japanese": "二つ目の断片も復元されました。",
+								"chinese": "第二个碎片也已恢复。",
+								"french": "Le deuxième fragment a également été récupéré.",
+								"spanish": "El segundo fragmento también ha sido recuperado.",
+								"vietnamese": "Mảnh thứ hai cũng đã được khôi phục.",
+								"thai": "ชิ้นส่วนที่สองถูกกู้คืนแล้ว",
+								"hindi": "दूसरा टुकड़ा भी बरामद हो गया है।"
+							},
+							"type": "speech",
+							"emotion": "happy"
+						},
+						{
+							"emotion": "base",
+							"type": "speech",
+							"speaker": "narrator",
+							"content": {
+								"korean": "복구된 기억 속에서, 알 수 없는 음성 기록이 섬뜩하게 울린다.",
+								"english": "Within the recovered memory, an unknown audio recording echoes eerily.",
+								"japanese": "復元された記憶の中で、未知の音声記録が不気味に響く。",
+								"chinese": "在恢复的记忆中，一段未知的音频记录令人毛骨悚然地回荡着。",
+								"french": "Dans la mémoire récupérée, un enregistrement audio inconnu résonne étrangement.",
+								"spanish": "Dentro de la memoria recuperada, una grabación de audio desconocida resuena de forma inquietante.",
+								"vietnamese": "Trong ký ức đã được khôi phục, một bản ghi âm lạ vang lên rùng rợn.",
+								"thai": "ในความทรงจำที่กู้คืนได้ มีเสียงบันทึกที่ไม่รู้จักดังขึ้นอย่างน่าขนลุก",
+								"hindi": "बरामद हुई याददाश्त में, एक अज्ञात ऑडियो रिकॉर्डिंग भयावह रूप से गूंजती है।"
+							}
+						},
+						{
+							"content": {
+								"korean": "또… 이 소리는 뭐야?",
+								"english": "Again... what is this sound?",
+								"japanese": "また…この音は何だ？",
+								"chinese": "又…这是什么声音？",
+								"french": "Encore… c'est quoi ce son ?",
+								"spanish": "Otra vez… ¿qué es este sonido?",
+								"vietnamese": "Lại… tiếng gì đây?",
+								"thai": "อีกแล้ว…เสียงอะไรเนี่ย?",
+								"hindi": "फिर से… यह कैसी आवाज है?"
+							},
+							"speaker": "character_any",
+							"type": "speech",
+							"emotion": "base"
+						},
+						{
+							"speaker": "lin",
+							"content": {
+								"korean": "기록의 노이즈일 뿐이에요. 곧 사라질 거예요.",
+								"english": "It's just recording noise. It'll disappear soon.",
+								"japanese": "記録のノイズに過ぎません。すぐに消えますよ。",
+								"chinese": "只是记录的噪音。很快就会消失的。",
+								"french": "C'est juste le bruit de l'enregistrement. Ça va disparaître bientôt.",
+								"spanish": "Es solo el ruido de la grabación. Pronto desaparecerá.",
+								"vietnamese": "Chỉ là nhiễu từ bản ghi thôi. Sẽ sớm biến mất.",
+								"thai": "เป็นแค่เสียงรบกวนจากการบันทึกค่ะ เดี๋ยวก็หายไปเอง",
+								"hindi": "यह सिर्फ रिकॉर्डिंग का शोर है। यह जल्द ही गायब हो जाएगा।"
+							},
+							"type": "speech",
+							"emotion": "base"
+						},
+						{
+							"speaker": "character_1",
+							"content": {
+								"korean": "점점 더 혼란스러워지는 것 같아.",
+								"english": "It feels like it's getting more and more confusing.",
+								"japanese": "だんだん混乱してきた気がする。",
+								"chinese": "感觉越来越混乱了。",
+								"french": "J'ai l'impression que ça devient de plus en plus confus.",
+								"spanish": "Siento que se está volviendo cada vez más confuso.",
+								"vietnamese": "Càng ngày tôi càng cảm thấy bối rối.",
+								"thai": "รู้สึกเหมือนจะสับสนมากขึ้นเรื่อยๆ เลย",
+								"hindi": "लगता है यह और भी भ्रमित करने वाला होता जा रहा है।"
+							},
+							"type": "speech",
+							"emotion": "sad"
+						},
+						{
+							"speaker": "lin",
+							"content": {
+								"korean": "진실은 때로 불편할 수도 있죠. 하지만 회피할 수는 없어요.",
+								"english": "Truth can be uncomfortable, but it cannot be avoided.",
+								"japanese": "真実は時に不快なものですが、避けることはできません。",
+								"chinese": "真相有时令人不适，但无法逃避。",
+								"french": "La vérité peut être inconfortable, mais on ne peut pas l'éviter.",
+								"spanish": "La verdad a veces es incómoda, pero no se puede evitar.",
+								"vietnamese": "Sự thật đôi khi không thoải mái, nhưng không thể tránh né.",
+								"thai": "ความจริงบางครั้งก็ไม่สบายใจ แต่หลีกเลี่ยงไม่ได้",
+								"hindi": "सच कभी-कभी असहज हो सकता है, लेकिन इससे बचा नहीं जा सकता।"
+							},
+							"type": "speech",
+							"emotion": "base"
+						}
+					]
+				},
+				{
+					"id": 9,
+					"dialogue": [
+						{
+							"action": "enter",
+							"spot": [
+								2,
+								3
+							],
+							"speaker": "lin",
+							"type": "direction",
+							"duration_ms": 500
+						},
+						{
+							"type": "speech",
+							"emotion": "happy",
+							"content": {
+								"korean": "이제 마지막 조각이에요. 모든 것이 명확해질 거예요.",
+								"english": "This is the last piece. Everything will become clear.",
+								"japanese": "これが最後のピースだ。全てが明らかになるだろう。",
+								"chinese": "这是最后一块了。一切都将明朗。",
+								"french": "C'est la dernière pièce. Tout va s'éclaircir.",
+								"spanish": "Esta es la última pieza. Todo quedará claro.",
+								"vietnamese": "Đây là mảnh ghép cuối cùng. Mọi thứ sẽ trở nên rõ ràng.",
+								"thai": "นี่คือชิ้นส่วนสุดท้าย ทุกสิ่งจะชัดเจนขึ้น",
+								"hindi": "यह आखिरी टुकड़ा है। सब कुछ स्पष्ट हो जाएगा।"
+							},
+							"speaker": "lin"
+						},
+						{
+							"speaker": "narrator",
+							"content": {
+								"korean": "시스템의 왜곡된 질서가 더욱 강하게 느껴진다. 모든 것이 통제되는 듯한 기분.",
+								"english": "The system's distorted order feels stronger. It's as if everything is being controlled.",
+								"japanese": "システムの歪んだ秩序がより強く感じられる。全てが制御されているかのような気分だ。",
+								"chinese": "系统扭曲的秩序感更加强烈。仿佛一切都被操控着。",
+								"french": "L'ordre distordu du système se fait plus sentir. On dirait que tout est contrôlé.",
+								"spanish": "El orden distorsionado del sistema se siente más fuerte. Es como si todo estuviera siendo controlado.",
+								"vietnamese": "Trật tự méo mó của hệ thống càng trở nên rõ rệt. Cứ như thể mọi thứ đều bị kiểm soát.",
+								"thai": "ระเบียบที่บิดเบี้ยวของระบบรู้สึกรุนแรงขึ้น ราวกับทุกสิ่งถูกควบคุม",
+								"hindi": "सिस्टम का विकृत क्रम और अधिक मजबूत महसूस होता है। ऐसा लगता है जैसे सब कुछ नियंत्रित हो रहा है।"
+							},
+							"emotion": "base",
+							"type": "speech"
+						},
+						{
+							"content": {
+								"korean": "명확해진다? 더 혼란스러운데.",
+								"english": "Clearer? I'm more confused.",
+								"japanese": "明確に？もっと混乱しているんだが。",
+								"chinese": "明朗？我更困惑了。",
+								"french": "Plus clair ? Je suis encore plus confus.",
+								"spanish": "¿Más claro? Estoy más confundido.",
+								"vietnamese": "Rõ ràng hơn? Tôi thấy bối rối hơn.",
+								"thai": "ชัดเจนขึ้นเหรอ? ฉันยิ่งสับสนกว่าเดิม",
+								"hindi": "स्पष्ट? मैं और अधिक भ्रमित हूँ।"
+							},
+							"speaker": "character_any",
+							"emotion": "sad",
+							"type": "speech"
+						},
+						{
+							"content": {
+								"korean": "감정적인 동요는 진실을 가릴 뿐이에요. 시스템의 질서를 믿으세요.",
+								"english": "Emotional turmoil only obscures the truth. Trust the system's order.",
+								"japanese": "感情的な動揺は真実を覆い隠すだけです。システムの秩序を信じてください。",
+								"chinese": "情绪波动只会掩盖真相。请相信系统的秩序。",
+								"french": "Les troubles émotionnels ne font qu'obscurcir la vérité. Faites confiance à l'ordre du système.",
+								"spanish": "La agitación emocional solo oculta la verdad. Confía en el orden del sistema.",
+								"vietnamese": "Sự xáo trộn cảm xúc chỉ che mờ sự thật. Hãy tin vào trật tự của hệ thống.",
+								"thai": "ความวุ่นวายทางอารมณ์บดบังความจริงเท่านั้น จงเชื่อมั่นในระเบียบของระบบ",
+								"hindi": "भावनात्मक उथल-पुथल केवल सच्चाई को छुपाती है। सिस्टम के क्रम पर भरोसा करें।"
+							},
+							"speaker": "lin",
+							"emotion": "base",
+							"type": "speech"
+						},
+						{
+							"content": {
+								"korean": "질서…?",
+								"english": "Order...?",
+								"japanese": "秩序…？",
+								"chinese": "秩序…？",
+								"french": "Ordre... ?",
+								"spanish": "¿Orden...?",
+								"vietnamese": "Trật tự…?",
+								"thai": "ระเบียบ…?",
+								"hindi": "क्रम...?"
+							},
+							"speaker": "character_any",
+							"emotion": "angry",
+							"type": "speech"
+						},
+						{
+							"speaker": "lin",
+							"content": {
+								"korean": "자, 이제 마지막 문이 열렸어요.",
+								"english": "Well, the last door has opened now.",
+								"japanese": "さあ、最後の扉が開きました。",
+								"chinese": "好了，最后一扇门已经打开了。",
+								"french": "Eh bien, la dernière porte est maintenant ouverte.",
+								"spanish": "Bueno, la última puerta se ha abierto.",
+								"vietnamese": "Được rồi, cánh cửa cuối cùng đã mở ra.",
+								"thai": "เอาล่ะ ประตูสุดท้ายเปิดแล้ว",
+								"hindi": "तो, अब आखिरी दरवाजा खुल गया है।"
+							},
+							"emotion": "happy",
+							"type": "speech"
+						}
+					]
+				},
+				{
+					"lose_dialogue": [
+						{
+							"type": "speech",
+							"emotion": "base",
+							"content": {
+								"korean": "모든 것이 뒤틀린 채, 기억의 심연 속으로 가라앉았다.",
+								"english": "Everything, twisted, sank into the abyss of memories.",
+								"japanese": "すべてが歪んだまま、記憶の深淵へと沈んでいった。",
+								"chinese": "一切都扭曲着，沉入了记忆的深渊。",
+								"french": "Tout, distordu, sombra dans l'abîme des souvenirs.",
+								"spanish": "Todo, distorsionado, se hundió en el abismo de los recuerdos.",
+								"vietnamese": "Mọi thứ, méo mó, chìm sâu vào vực thẳm ký ức.",
+								"thai": "ทุกสิ่งบิดเบี้ยว จมดิ่งสู่ห้วงลึกของความทรงจำ",
+								"hindi": "सब कुछ, मुड़ा हुआ, यादों के अथाह कुंड में डूब गया।"
+							},
+							"speaker": "narrator"
+						},
+						{
+							"emotion": "base",
+							"type": "speech",
+							"content": {
+								"korean": "내 왜곡된 질서는… 영원하다.",
+								"english": "My distorted order... is eternal.",
+								"japanese": "私の歪んだ秩序は…永遠だ。",
+								"chinese": "我扭曲的秩序……永恒不朽。",
+								"french": "Mon ordre distordu... est éternel.",
+								"spanish": "Mi orden distorsionado... es eterno.",
+								"vietnamese": "Trật tự méo mó của ta... là vĩnh cửu.",
+								"thai": "ระเบียบที่บิดเบี้ยวของข้า... เป็นนิรันดร์",
+								"hindi": "मेरी विकृत व्यवस्था... अनंत है।"
+							},
+							"speaker": "random_boss"
+						},
+						{
+							"type": "speech",
+							"emotion": "angry",
+							"speaker": "character_any",
+							"content": {
+								"korean": "젠장… 아직… 끝나지 않았어!",
+								"english": "Damn it... It's not over yet!",
+								"japanese": "くそ…まだ…終わってない！",
+								"chinese": "该死…还没…结束！",
+								"french": "Merde... Ce n'est pas encore fini !",
+								"spanish": "Maldita sea... ¡Esto no ha terminado todavía!",
+								"vietnamese": "Khốn kiếp... Vẫn chưa... kết thúc đâu!",
+								"thai": "บ้าเอ๊ย... ยังไม่... จบหรอก!",
+								"hindi": "धिक्कार है... अभी... खत्म नहीं हुआ है!"
+							}
+						}
+					],
+					"id": 15,
+					"win_dialogue": [
+						{
+							"content": {
+								"korean": "왜곡된 기억의 중심이 파괴되었다. 그러나 잔상은 남아 있었다.",
+								"english": "The core of distorted memories was destroyed. But afterimages remained.",
+								"japanese": "歪んだ記憶の核は破壊された。しかし、残像は残っていた。",
+								"chinese": "扭曲记忆的核心被摧毁了。然而，残像依然存在。",
+								"french": "Le cœur des souvenirs déformés fut détruit. Mais des images rémanentes subsistaient.",
+								"spanish": "El núcleo de los recuerdos distorsionados fue destruido. Pero los ecos persistían.",
+								"vietnamese": "Trung tâm của những ký ức méo mó đã bị phá hủy. Nhưng tàn dư vẫn còn.",
+								"thai": "แก่นกลางของความทรงจำที่บิดเบี้ยวถูกทำลายลงแล้ว แต่ภาพติดตายังคงอยู่",
+								"hindi": "विकृत यादों का केंद्र नष्ट हो गया। लेकिन अवशेष अभी भी मौजूद थे।"
+							},
+							"speaker": "narrator",
+							"type": "speech",
+							"emotion": "base"
+						},
+						{
+							"speaker": "random_boss",
+							"content": {
+								"korean": "하찮은 저항… 너의 분노는… 날… 다시 깨울 것이다…",
+								"english": "Pitiful resistance... Your rage... will... reawaken me...",
+								"japanese": "取るに足らない抵抗… お前の怒りは… 私を… 再び目覚めさせるだろう…",
+								"chinese": "微不足道的抵抗……你的愤怒……会……再次唤醒我……",
+								"french": "Pauvre résistance... Ta rage... me... réveillera...",
+								"spanish": "Resistencia inútil... Tu furia... me... despertará de nuevo...",
+								"vietnamese": "Sự kháng cự yếu ớt... Sự phẫn nộ của ngươi... sẽ... đánh thức ta trở lại...",
+								"thai": "การต่อต้านที่ไร้ค่า... ความโกรธแค้นของเจ้า... จะ... ปลุกข้าให้ตื่นขึ้นมาอีกครั้ง...",
+								"hindi": "तुच्छ प्रतिरोध... तुम्हारा क्रोध... मुझे... फिर से जगाएगा..."
+							},
+							"type": "speech",
+							"emotion": "sad"
+						},
+						{
+							"type": "speech",
+							"emotion": "base",
+							"speaker": "character_any",
+							"content": {
+								"korean": "뭐…라고?",
+								"english": "What... did you say?",
+								"japanese": "何…だと？",
+								"chinese": "什么……你说什么？",
+								"french": "Quoi... qu'as-tu dit ?",
+								"spanish": "¿Qué... dijiste?",
+								"vietnamese": "Cái gì... ngươi nói gì?",
+								"thai": "ว่า... อะไรนะ?",
+								"hindi": "क्या... कहा?"
+							}
+						},
+						{
+							"content": {
+								"korean": "시스템의 카운트다운은 잠시 멈췄지만, 불안정한 신호는 계속되었다. 또 다른 '구역'이 기다리고 있었다.",
+								"english": "The system's countdown briefly paused, but unstable signals continued. Another 'sector' awaited.",
+								"japanese": "システムのカウントダウンは一時停止したが、不安定な信号は続いた。別の「区域」が待っていた。",
+								"chinese": "系统的倒计时暂时停止了，但不安的信号仍在继续。另一个“区域”正在等待。",
+								"french": "Le compte à rebours du système s'est brièvement arrêté, mais des signaux instables persistaient. Un autre « secteur » attendait.",
+								"spanish": "La cuenta regresiva del sistema se detuvo brevemente, pero las señales inestables continuaron. Otro 'sector' esperaba.",
+								"vietnamese": "Đồng hồ đếm ngược của hệ thống tạm dừng, nhưng các tín hiệu không ổn định vẫn tiếp diễn. Một 'khu vực' khác đang chờ đợi.",
+								"thai": "การนับถอยหลังของระบบหยุดลงชั่วขณะ แต่สัญญาณที่ไม่เสถียรยังคงดำเนินต่อไป 'ส่วน' อื่นๆ กำลังรออยู่",
+								"hindi": "सिस्टम की उलटी गिनती क्षण भर के लिए रुक गई, लेकिन अस्थिर संकेत जारी रहे। एक और 'क्षेत्र' इंतजार कर रहा था।"
+							},
+							"speaker": "narrator",
+							"type": "speech",
+							"emotion": "base"
+						}
+					],
+					"dialogue": [
+						{
+							"content": {
+								"korean": "모든 기억이 뒤섞인 공간. 왜곡된 진실이 눈앞에 나타난다.",
+								"english": "A space where all memories are intertwined. Distorted truth appears before your eyes.",
+								"japanese": "全ての記憶が入り混じる空間。歪んだ真実が目の前に現れる。",
+								"chinese": "所有记忆交织的空间。扭曲的真相呈现在眼前。",
+								"french": "Un espace où tous les souvenirs s'entremêlent. Une vérité déformée apparaît devant vos yeux.",
+								"spanish": "Un espacio donde todos los recuerdos se entrelazan. La verdad distorsionada aparece ante tus ojos.",
+								"vietnamese": "Một không gian nơi mọi ký ức đan xen. Sự thật méo mó hiện ra trước mắt.",
+								"thai": "สถานที่ที่ความทรงจำทั้งหมดปะปนกัน ความจริงที่บิดเบี้ยวปรากฏตรงหน้า",
+								"hindi": "एक ऐसी जगह जहाँ सारी यादें आपस में गुँथी हुई हैं। विकृत सत्य आँखों के सामने प्रकट होता है।"
+							},
+							"speaker": "narrator",
+							"emotion": "base",
+							"type": "speech"
+						},
+						{
+							"emotion": "base",
+							"type": "speech",
+							"speaker": "random_boss",
+							"content": {
+								"korean": "왔군… 내 기억의 조각들을 모아서.",
+								"english": "You've come... collecting the fragments of my memory.",
+								"japanese": "来たか…私の記憶の断片を集めて。",
+								"chinese": "来了啊…收集着我记忆的碎片。",
+								"french": "Vous êtes venu... en rassemblant les fragments de ma mémoire.",
+								"spanish": "Has venido... reuniendo los fragmentos de mi memoria.",
+								"vietnamese": "Ngươi đã đến… thu thập những mảnh ký ức của ta.",
+								"thai": "มาแล้วสินะ…รวบรวมเศษเสี้ยวความทรงจำของฉัน",
+								"hindi": "आ गए तुम... मेरी यादों के टुकड़े इकट्ठा करके।"
+							}
+						},
+						{
+							"type": "speech",
+							"emotion": "angry",
+							"content": {
+								"korean": "네 기억이라고? 이게 다 네가 꾸민 짓이야?",
+								"english": "Your memories? Is all this your doing?",
+								"japanese": "お前の記憶だと？これ全部お前が仕組んだことなのか？",
+								"chinese": "你的记忆？这一切都是你策划的吗？",
+								"french": "Tes souvenirs ? Tout ça, c'est ton œuvre ?",
+								"spanish": "¿Tus recuerdos? ¿Todo esto es obra tuya?",
+								"vietnamese": "Ký ức của ngươi? Tất cả những điều này là do ngươi sắp đặt sao?",
+								"thai": "ความทรงจำของแกเหรอ? ทั้งหมดนี่แกเป็นคนจัดฉากใช่ไหม?",
+								"hindi": "तुम्हारी यादें? क्या यह सब तुम्हारा किया-धरा है?"
+							},
+							"speaker": "character_any"
+						},
+						{
+							"emotion": "base",
+							"type": "speech",
+							"speaker": "random_boss",
+							"content": {
+								"korean": "그래. 너의 분노는 날 더 완전하게 만들 뿐.",
+								"english": "Yes. Your rage only makes me more complete.",
+								"japanese": "ええ。お前の怒りは、私をより完璧にするだけだ。",
+								"chinese": "是的。你的愤怒只会让我更加完整。",
+								"french": "Oui. Ta rage ne fait que me rendre plus complet.",
+								"spanish": "Sí. Tu furia solo me hace más completo.",
+								"vietnamese": "Đúng vậy. Sự phẫn nộ của ngươi chỉ khiến ta thêm hoàn hảo.",
+								"thai": "ใช่ ความโกรธแค้นของเจ้ามีแต่จะทำให้ข้าสมบูรณ์ยิ่งขึ้น",
+								"hindi": "हाँ। तुम्हारा क्रोध मुझे और भी पूर्ण बनाता है।"
+							}
+						},
+						{
+							"action": "enter",
+							"type": "direction",
+							"duration_ms": 500,
+							"spot": [
+								4,
+								3
+							],
+							"speaker": "lin"
+						},
+						{
+							"type": "speech",
+							"emotion": "happy",
+							"content": {
+								"korean": "이건 완벽한 재구성이에요.",
+								"english": "This is a perfect reconstruction.",
+								"japanese": "これは完璧な再構築です。",
+								"chinese": "这是完美的重构。",
+								"french": "C'est une reconstitution parfaite.",
+								"spanish": "Es una reconstrucción perfecta.",
+								"vietnamese": "Đây là một sự tái cấu trúc hoàn hảo.",
+								"thai": "นี่คือการสร้างใหม่ที่สมบูรณ์แบบ",
+								"hindi": "यह एक उत्तम पुनर्निर्माण है।"
+							},
+							"speaker": "lin"
+						},
+						{
+							"type": "speech",
+							"emotion": "angry",
+							"content": {
+								"korean": "너… 너도 한패였어?",
+								"english": "You... you were with them too?",
+								"japanese": "お前…お前も仲間だったのか？",
+								"chinese": "你…你也是一伙的？",
+								"french": "Toi... toi aussi, tu étais de leur côté ?",
+								"spanish": "¿Tú... tú también eras parte?",
+								"vietnamese": "Ngươi... ngươi cũng là đồng bọn?",
+								"thai": "เจ้า... เจ้าก็เป็นพวกเดียวกันงั้นรึ?",
+								"hindi": "तुम... तुम भी उनके साथ थे?"
+							},
+							"speaker": "character_any"
+						},
+						{
+							"type": "speech",
+							"emotion": "base",
+							"content": {
+								"korean": "그녀는 나를 위한 도구. 너도 곧 그렇게 될 거야.",
+								"english": "She is a tool for me. You will be too, soon.",
+								"japanese": "彼女は私のための道具。お前もすぐそうなるだろう。",
+								"chinese": "她是我的工具。你很快也会变成那样。",
+								"french": "Elle est un outil pour moi. Toi aussi, tu le seras bientôt.",
+								"spanish": "Ella es una herramienta para mí. Tú también lo serás pronto.",
+								"vietnamese": "Cô ta là công cụ của ta. Ngươi cũng sẽ sớm trở thành như vậy.",
+								"thai": "นางเป็นเพียงเครื่องมือของข้า เจ้าก็จะกลายเป็นเช่นนั้นในไม่ช้า",
+								"hindi": "वह मेरे लिए एक उपकरण है। तुम भी जल्द ही वैसे ही हो जाओगे।"
+							},
+							"speaker": "random_boss"
+						},
+						{
+							"action": "exit",
+							"speaker": "lin",
+							"type": "direction",
+							"duration_ms": 400,
+							"direction": "down"
+						}
+					]
+				}
+			]
+		},
+		{
+			"scenario_id": "modern_pixelgrim_28_04",
+			"order": 4,
+			"act": "rising",
+			"theme": "modern",
+			"actors": {
+				"max": {
+					"id": "mon_6e8c1577-89e2-49f6-a9f3-a6521b9e7f59",
+					"name": {
+						"korean": "맥스",
+						"english": "Max",
+						"japanese": "マックス",
+						"chinese": "麦克斯",
+						"french": "Max",
+						"spanish": "Max",
+						"vietnamese": "Max",
+						"thai": "แม็กซ์",
+						"hindi": "मैक्स"
+					},
+					"description": "",
+					"face_image_url": "https://imagedelivery.net/WTEqQNGFb-l-IHS6IGnzUQ/8bd7f351-400b-46f9-828f-aa2542734900/public",
+					"battle_sprite_url": "https://imagedelivery.net/WTEqQNGFb-l-IHS6IGnzUQ/62971060-c904-4d96-afcd-d11f831b3e00/public"
+				}
+			},
+			"boss": {
+				"pool_id": "random_boss"
+			},
+			"rooms": [
+				{
+					"dialogue": [
+						{
+							"speaker": "narrator",
+							"emotion": "base",
+							"type": "speech",
+							"content": {
+								"korean": "시스템의 경고음이 울려 퍼진다. 불안정한 진동이 공간을 채웠다.",
+								"english": "The system's alarm blares. Unstable vibrations fill the space.",
+								"japanese": "システムの警告音が鳴り響く。不安定な振動が空間を満たした。",
+								"chinese": "系统的警报声响起。不稳定的振动充满了空间。",
+								"french": "L'alarme du système retentit. Des vibrations instables remplissent l'espace.",
+								"spanish": "La alarma del sistema suena. Vibraciones inestables llenan el espacio.",
+								"vietnamese": "Chuông báo động của hệ thống vang lên. Những rung động bất ổn tràn ngập không gian.",
+								"thai": "สัญญาณเตือนของระบบดังขึ้น การสั่นสะเทือนที่ไม่เสถียรเติมเต็มพื้นที่",
+								"hindi": "सिस्टम का अलार्म बजता है। अस्थिर कंपन अंतरिक्ष को भर देते हैं।"
+							}
+						},
+						{
+							"action": "enter",
+							"spot": [
+								3,
+								3
+							],
+							"speaker": "max",
+							"type": "direction",
+							"duration_ms": 500
+						},
+						{
+							"speaker": "max",
+							"emotion": "angry",
+							"type": "speech",
+							"content": {
+								"korean": "이대로는 안 돼! 뭔가 방법이 있을 거야!",
+								"english": "This can't continue! There must be a way!",
+								"japanese": "このままじゃダメだ！何か方法があるはずだ！",
+								"chinese": "这样下去不行！一定有办法的！",
+								"french": "Ça ne peut pas continuer comme ça ! Il doit y avoir un moyen !",
+								"spanish": "¡Así no podemos seguir! ¡Debe haber una manera!",
+								"vietnamese": "Không thể thế này được! Phải có cách nào đó!",
+								"thai": "แบบนี้ไม่ได้! ต้องมีทางแน่ๆ!",
+								"hindi": "ऐसे नहीं चलेगा! कोई रास्ता जरूर होगा!"
+							}
+						},
+						{
+							"speaker": "character_any",
+							"emotion": "base",
+							"type": "speech",
+							"content": {
+								"korean": "뭘 하려는 거지?",
+								"english": "What are you trying to do?",
+								"japanese": "何をしようとしているんだ？",
+								"chinese": "你想做什么？",
+								"french": "Qu'est-ce que tu essaies de faire ?",
+								"spanish": "¿Qué intentas hacer?",
+								"vietnamese": "Bạn đang cố làm gì vậy?",
+								"thai": "คุณจะทำอะไร?",
+								"hindi": "तुम क्या करने की कोशिश कर रहे हो?"
+							}
+						},
+						{
+							"emotion": "base",
+							"type": "speech",
+							"content": {
+								"korean": "여기서 나가려면… 시스템을 속여야 해!",
+								"english": "To get out of here... I have to trick the system!",
+								"japanese": "ここから出るには…システムを欺くしかない！",
+								"chinese": "要离开这里…我必须欺骗系统！",
+								"french": "Pour sortir d'ici... je dois tromper le système !",
+								"spanish": "Para salir de aquí... ¡tengo que engañar al sistema!",
+								"vietnamese": "Để thoát khỏi đây… tôi phải lừa dối hệ thống!",
+								"thai": "ถ้าจะออกไปจากที่นี่... ต้องหลอกระบบ!",
+								"hindi": "यहाँ से निकलने के लिए… मुझे सिस्टम को धोखा देना होगा!"
+							},
+							"speaker": "max"
+						}
+					],
+					"id": 1
+				},
+				{
+					"id": 3,
+					"dialogue": [
+						{
+							"speaker": "max",
+							"spot": [
+								2,
+								3
+							],
+							"action": "enter",
+							"duration_ms": 500,
+							"type": "direction"
+						},
+						{
+							"type": "speech",
+							"content": {
+								"korean": "젠장… 더 심해졌어!",
+								"english": "Damn it... it's gotten worse!",
+								"japanese": "くそ…もっとひどくなった！",
+								"chinese": "该死…更糟糕了！",
+								"french": "Bon sang... c'est pire !",
+								"spanish": "¡Maldita sea... ha empeorado!",
+								"vietnamese": "Chết tiệt… tệ hơn rồi!",
+								"thai": "ให้ตายสิ... แย่ลงไปอีกแล้ว!",
+								"hindi": "धिक्कार है… यह और भी बुरा हो गया है!"
+							},
+							"emotion": "angry",
+							"speaker": "max"
+						},
+						{
+							"speaker": "character_any",
+							"emotion": "sad",
+							"type": "speech",
+							"content": {
+								"korean": "무슨 짓을 한 거야?",
+								"english": "What have you done?",
+								"japanese": "何をしたんだ？",
+								"chinese": "你做了什么？",
+								"french": "Qu'as-tu fait ?",
+								"spanish": "¿Qué has hecho?",
+								"vietnamese": "Bạn đã làm gì vậy?",
+								"thai": "คุณทำอะไรลงไป?",
+								"hindi": "तुमने क्या किया?"
+							}
+						},
+						{
+							"speaker": "max",
+							"emotion": "sad",
+							"type": "speech",
+							"content": {
+								"korean": "탈출을 시도했는데… 시스템이 날 감시하기 시작했어.",
+								"english": "I tried to escape... the system started monitoring me.",
+								"japanese": "脱出しようとしたら…システムが私を監視し始めた。",
+								"chinese": "我试图逃脱……系统开始监视我了。",
+								"french": "J'ai essayé de m'échapper... le système a commencé à me surveiller.",
+								"spanish": "Intenté escapar... el sistema empezó a vigilarme.",
+								"vietnamese": "Tôi đã cố gắng thoát... hệ thống bắt đầu giám sát tôi.",
+								"thai": "ฉันพยายามหนี... ระบบเริ่มจับตาดูฉันแล้ว",
+								"hindi": "मैंने भागने की कोशिश की... सिस्टम ने मुझ पर नज़र रखना शुरू कर दिया।"
+							}
+						},
+						{
+							"speaker": "narrator",
+							"emotion": "base",
+							"type": "speech",
+							"content": {
+								"korean": "시스템의 감시망이 좁혀온다. 모든 연결이 끊어지는 듯하다.",
+								"english": "The system's surveillance net is closing in. All connections seem to be breaking.",
+								"japanese": "システムの監視網が狭まってくる。全ての接続が切れていくようだ。",
+								"chinese": "系统的监视网正在收紧。所有连接似乎都断了。",
+								"french": "Le filet de surveillance du système se resserre. Toutes les connexions semblent se rompre.",
+								"spanish": "La red de vigilancia del sistema se está cerrando. Todas las conexiones parecen romperse.",
+								"vietnamese": "Mạng lưới giám sát của hệ thống đang siết chặt. Mọi kết nối dường như đang đứt.",
+								"thai": "เครือข่ายการเฝ้าระวังของระบบกำลังบีบเข้ามา การเชื่อมต่อทั้งหมดดูเหมือนจะขาดหายไป",
+								"hindi": "सिस्टम की निगरानी का जाल कस रहा है। सभी कनेक्शन टूटते हुए लग रहे हैं।"
+							}
+						},
+						{
+							"emotion": "angry",
+							"type": "speech",
+							"content": {
+								"korean": "우리까지 위험해졌잖아!",
+								"english": "Now we're in danger too!",
+								"japanese": "私たちまで危険になったじゃないか！",
+								"chinese": "我们也都陷入危险了！",
+								"french": "Nous sommes aussi en danger maintenant !",
+								"spanish": "¡Ahora nosotros también estamos en peligro!",
+								"vietnamese": "Giờ chúng ta cũng gặp nguy hiểm rồi!",
+								"thai": "ตอนนี้เราก็ตกอยู่ในอันตรายด้วย!",
+								"hindi": "अब हम भी खतरे में आ गए!"
+							},
+							"speaker": "character_1"
+						},
+						{
+							"type": "speech",
+							"content": {
+								"korean": "나는… 그저 나가고 싶었을 뿐이야.",
+								"english": "I just... wanted to get out.",
+								"japanese": "私は…ただ、ここから出たかっただけなんだ。",
+								"chinese": "我只是……想出去而已。",
+								"french": "Je voulais juste... sortir.",
+								"spanish": "Yo solo... quería salir.",
+								"vietnamese": "Tôi chỉ... muốn thoát ra thôi.",
+								"thai": "ฉันแค่... อยากจะออกไปเท่านั้นเอง",
+								"hindi": "मैं बस... बाहर निकलना चाहता था।"
+							},
+							"emotion": "sad",
+							"speaker": "max"
+						}
+					]
+				},
+				{
+					"dialogue": [
+						{
+							"emotion": "base",
+							"type": "speech",
+							"content": {
+								"korean": "곳곳에서 의미를 알 수 없는 데이터 조각들이 섬광처럼 깜빡였다.",
+								"english": "Fragments of data, unintelligible, flickered like flashes of light everywhere.",
+								"japanese": "あちこちで、意味不明なデータのかけらが閃光のように点滅した。",
+								"chinese": "四处闪烁着意义不明的数据碎片，如同闪光一般。",
+								"french": "Des fragments de données, inintelligibles, clignotaient partout comme des éclairs.",
+								"spanish": "Fragmentos de datos, ininteligibles, parpadeaban como destellos de luz por todas partes.",
+								"vietnamese": "Những mảnh dữ liệu không thể hiểu nổi, nhấp nháy như tia chớp ở khắp mọi nơi.",
+								"thai": "ชิ้นส่วนข้อมูลที่ไม่อาจเข้าใจได้ กะพริบเหมือนแสงแฟลชไปทั่ว",
+								"hindi": "हर जगह डेटा के अर्थहीन टुकड़े चमक रहे थे, जैसे बिजली की चमक।"
+							},
+							"speaker": "narrator"
+						},
+						{
+							"duration_ms": 500,
+							"type": "direction",
+							"speaker": "max",
+							"spot": [
+								4,
+								3
+							],
+							"action": "enter"
+						},
+						{
+							"type": "speech",
+							"content": {
+								"korean": "들려? 과거의 목소리들이… 비명을 지르고 있어.",
+								"english": "Do you hear it? The voices of the past... they're screaming.",
+								"japanese": "聞こえるか？過去の声が…悲鳴を上げている。",
+								"chinese": "你听到了吗？过去的声音……它们在尖叫。",
+								"french": "Tu entends ? Les voix du passé... elles hurlent.",
+								"spanish": "¿Lo oyes? Las voces del pasado... están gritando.",
+								"vietnamese": "Bạn có nghe thấy không? Những giọng nói của quá khứ... chúng đang la hét.",
+								"thai": "ได้ยินไหม? เสียงของอดีต... พวกมันกำลังกรีดร้อง",
+								"hindi": "क्या तुम्हें सुनाई दे रहा है? अतीत की आवाज़ें... वे चीख रही हैं।"
+							},
+							"emotion": "sad",
+							"speaker": "max"
+						},
+						{
+							"emotion": "base",
+							"type": "speech",
+							"content": {
+								"korean": "뭐가 들린다는 거지?",
+								"english": "What do you hear?",
+								"japanese": "何が聞こえるんだ？",
+								"chinese": "你听到什么了？",
+								"french": "Qu'est-ce que tu entends ?",
+								"spanish": "¿Qué oyes?",
+								"vietnamese": "Bạn nghe thấy gì?",
+								"thai": "นายได้ยินอะไร?",
+								"hindi": "क्या सुनाई दे रहा है?"
+							},
+							"speaker": "character_any"
+						},
+						{
+							"speaker": "max",
+							"type": "speech",
+							"content": {
+								"korean": "이 시스템은… 우리를 구원한다고 했지만, 사실은 모든 걸 파괴하고 있어!",
+								"english": "This system... it promised to save us, but in reality, it's destroying everything!",
+								"japanese": "このシステムは…私たちを救済すると言ったが、実際は全てを破壊している！",
+								"chinese": "这个系统……它说要拯救我们，但实际上，它正在摧毁一切！",
+								"french": "Ce système... il a promis de nous sauver, mais en réalité, il détruit tout !",
+								"spanish": "Este sistema... prometió salvarnos, pero en realidad, ¡está destruyendo todo!",
+								"vietnamese": "Hệ thống này... nó hứa sẽ cứu chúng ta, nhưng thực ra, nó đang phá hủy mọi thứ!",
+								"thai": "ระบบนี้... มันสัญญาว่าจะช่วยเรา แต่จริงๆ แล้วมันกำลังทำลายทุกสิ่ง!",
+								"hindi": "यह सिस्टम... इसने हमें बचाने का वादा किया था, लेकिन हकीकत में, यह सब कुछ तबाह कर रहा है!"
+							},
+							"emotion": "angry"
+						},
+						{
+							"emotion": "base",
+							"type": "speech",
+							"content": {
+								"korean": "그건 오류야! 시스템은 완벽해! 완벽한 질서를 따른다!",
+								"english": "That's an error! The system is perfect! It follows perfect order!",
+								"japanese": "それはエラーだ！システムは完璧だ！完璧な秩序に従う！",
+								"chinese": "那是个错误！系统是完美的！它遵循完美的秩序！",
+								"french": "C'est une erreur ! Le système est parfait ! Il suit un ordre parfait !",
+								"spanish": "¡Eso es un error! ¡El sistema es perfecto! ¡Sigue un orden perfecto!",
+								"vietnamese": "Đó là một lỗi! Hệ thống hoàn hảo! Nó tuân theo trật tự hoàn hảo!",
+								"thai": "นั่นเป็นข้อผิดพลาด! ระบบสมบูรณ์แบบ! มันปฏิบัติตามระเบียบที่สมบูรณ์แบบ!",
+								"hindi": "वह एक त्रुटि है! सिस्टम एकदम सही है! यह सही क्रम का पालन करता है!"
+							},
+							"speaker": "character_any"
+						},
+						{
+							"emotion": "angry",
+							"type": "speech",
+							"content": {
+								"korean": "완벽하다고? 웃기지 마! 우리는 그저 데이터 파편일 뿐이라고!",
+								"english": "Perfect? Don't make me laugh! We're just data fragments!",
+								"japanese": "完璧だと？笑わせるな！私たちはただのデータのかけらに過ぎない！",
+								"chinese": "完美？别开玩笑了！我们只是数据碎片而已！",
+								"french": "Parfait ? Ne me fais pas rire ! Nous ne sommes que des fragments de données !",
+								"spanish": "¿Perfecto? ¡No me hagas reír! ¡Solo somos fragmentos de datos!",
+								"vietnamese": "Hoàn hảo ư? Đừng làm tôi cười! Chúng ta chỉ là những mảnh dữ liệu thôi!",
+								"thai": "สมบูรณ์แบบงั้นเหรอ? อย่าทำให้ฉันหัวเราะเลย! เราเป็นแค่เศษข้อมูลเท่านั้น!",
+								"hindi": "सही? मुझे हंसाओ मत! हम तो सिर्फ डेटा के टुकड़े हैं!"
+							},
+							"speaker": "max"
+						},
+						{
+							"speaker": "narrator",
+							"emotion": "base",
+							"type": "speech",
+							"content": {
+								"korean": "왜곡된 질서가 현실을 잠식한다. 모호한 규칙들이 강제된다.",
+								"english": "Distorted order consumes reality. Ambiguous rules are enforced.",
+								"japanese": "歪んだ秩序が現実を侵食する。曖昧な規則が強制される。",
+								"chinese": "扭曲的秩序侵蚀着现实。模糊的规则被强制执行。",
+								"french": "Un ordre distordu consume la réalité. Des règles ambiguës sont imposées.",
+								"spanish": "Un orden distorsionado consume la realidad. Reglas ambiguas son impuestas.",
+								"vietnamese": "Trật tự méo mó đang ăn mòn thực tại. Những quy tắc mơ hồ bị áp đặt.",
+								"thai": "ระเบียบที่บิดเบือนกัดกินความเป็นจริง กฎเกณฑ์ที่คลุมเครือถูกบังคับใช้",
+								"hindi": "विकृत व्यवस्था वास्तविकता को खा रही है। अस्पष्ट नियम थोपे जा रहे हैं।"
+							}
+						}
+					],
+					"id": 5
+				},
+				{
+					"dialogue": [
+						{
+							"speaker": "max",
+							"spot": [
+								3,
+								3
+							],
+							"action": "enter",
+							"duration_ms": 500,
+							"type": "direction"
+						},
+						{
+							"emotion": "sad",
+							"type": "speech",
+							"content": {
+								"korean": "더 이상은… 아무것도 할 수 없어.",
+								"english": "I can't do anything more...",
+								"japanese": "もうこれ以上は…何もできない。",
+								"chinese": "再也…什么都做不了了。",
+								"french": "Je ne peux plus... rien faire.",
+								"spanish": "Ya no puedo... hacer nada.",
+								"vietnamese": "Không thể làm gì hơn nữa…",
+								"thai": "ฉันทำอะไรไม่ได้อีกแล้ว…",
+								"hindi": "मैं अब और कुछ नहीं कर सकता…"
+							},
+							"speaker": "max"
+						},
+						{
+							"speaker": "character_any",
+							"emotion": "base",
+							"type": "speech",
+							"content": {
+								"korean": "포기하지 마!",
+								"english": "Don't give up!",
+								"japanese": "諦めるな！",
+								"chinese": "别放弃！",
+								"french": "N'abandonne pas !",
+								"spanish": "¡No te rindas!",
+								"vietnamese": "Đừng bỏ cuộc!",
+								"thai": "อย่ายอมแพ้!",
+								"hindi": "हार मत मानो!"
+							}
+						},
+						{
+							"speaker": "max",
+							"emotion": "angry",
+							"type": "speech",
+							"content": {
+								"korean": "시스템이 우리를 가지고 놀고 있어! 탈출은 불가능해!",
+								"english": "The system is toying with us! Escape is impossible!",
+								"japanese": "システムが私たちを弄んでいる！脱出は不可能だ！",
+								"chinese": "系统在玩弄我们！不可能逃脱！",
+								"french": "Le système se joue de nous ! S'échapper est impossible !",
+								"spanish": "¡El sistema nos está manipulando! ¡Escapar es imposible!",
+								"vietnamese": "Hệ thống đang đùa giỡn với chúng ta! Không thể thoát khỏi đây!",
+								"thai": "ระบบกำลังเล่นตลกกับเรา! การหลบหนีเป็นไปไม่ได้!",
+								"hindi": "सिस्टम हमें खिलौना बना रहा है! बच निकलना नामुमकिन है!"
+							}
+						},
+						{
+							"type": "speech",
+							"content": {
+								"korean": "대체 누가 이런 짓을 벌인 거지?",
+								"english": "Who on earth did this?",
+								"japanese": "一体誰がこんなことを？",
+								"chinese": "到底是谁做了这种事？",
+								"french": "Mais qui a fait ça ?",
+								"spanish": "¿Quién demonios hizo esto?",
+								"vietnamese": "Rốt cuộc ai đã làm chuyện này?",
+								"thai": "ใครเป็นคนทำเรื่องแบบนี้กันแน่?",
+								"hindi": "आख़िर किसने किया ये सब?"
+							},
+							"emotion": "angry",
+							"speaker": "character_2"
+						},
+						{
+							"speaker": "max",
+							"emotion": "base",
+							"type": "speech",
+							"content": {
+								"korean": "…그는… '질서'라고 불렀어. 모든 것을 통제하는.",
+								"english": "...He called it... 'Order'. The one that controls everything.",
+								"japanese": "…彼は…『秩序』と呼んだ。全てを統制するものを。",
+								"chinese": "……他称之为……“秩序”。掌控一切的。",
+								"french": "...Il a appelé ça... l'« Ordre ». Celui qui contrôle tout.",
+								"spanish": "...Él lo llamó... \"Orden\". El que controla todo.",
+								"vietnamese": "…Hắn… gọi đó là 'Trật tự'. Thứ kiểm soát mọi thứ.",
+								"thai": "…เขาเรียกมันว่า… 'ระเบียบ' ผู้ควบคุมทุกสิ่ง",
+								"hindi": "…उसने इसे… 'व्यवस्था' कहा। जो सब कुछ नियंत्रित करती है।"
+							}
+						},
+						{
+							"emotion": "base",
+							"type": "speech",
+							"content": {
+								"korean": "카운트다운의 숫자가 빠르게 줄어든다. 되돌릴 수 없는 파멸이 임박했다.",
+								"english": "The countdown numbers rapidly decrease. Irreversible doom is imminent.",
+								"japanese": "カウントダウンの数字が急速に減る。取り返しのつかない破滅が迫っている。",
+								"chinese": "倒计时数字快速减少。不可逆转的毁灭迫在眉睫。",
+								"french": "Les chiffres du compte à rebours diminuent rapidement. Une destruction irréversible est imminente.",
+								"spanish": "Los números de la cuenta regresiva disminuyen rápidamente. Una perdición irreversible es inminente.",
+								"vietnamese": "Số đếm ngược giảm nhanh chóng. Sự hủy diệt không thể đảo ngược đã cận kề.",
+								"thai": "ตัวเลขการนับถอยหลังลดลงอย่างรวดเร็ว หายนะที่ไม่อาจย้อนคืนใกล้เข้ามาแล้ว",
+								"hindi": "उलटी गिनती के अंक तेज़ी से घट रहे हैं। अपरिवर्तनीय विनाश आसन्न है।"
+							},
+							"speaker": "narrator"
+						}
+					],
+					"id": 9
+				},
+				{
+					"lose_dialogue": [
+						{
+							"emotion": "base",
+							"type": "speech",
+							"content": {
+								"korean": "시스템의 왜곡된 힘이 탐험대를 집어삼켰다. 모든 것이 암전된다.",
+								"english": "The system's distorted power has engulfed the expedition team. Everything goes dark.",
+								"japanese": "システムの歪んだ力が探検隊を飲み込んだ。すべてが暗転する。",
+								"chinese": "系统的扭曲力量吞噬了探险队。一切都陷入黑暗。",
+								"french": "La puissance distordue du système a englouti l'équipe d'expédition. Tout devient noir.",
+								"spanish": "El poder distorsionado del sistema ha engullido al equipo de expedición. Todo se oscurece.",
+								"vietnamese": "Sức mạnh méo mó của hệ thống đã nuốt chửng đội thám hiểm. Mọi thứ chìm vào bóng tối.",
+								"thai": "พลังที่บิดเบี้ยวของระบบได้กลืนกินทีมสำรวจ ทุกสิ่งดับมืดลง",
+								"hindi": "सिस्टम की विकृत शक्ति ने अभियान दल को निगल लिया। सब कुछ अंधेरा हो जाता है।"
+							},
+							"speaker": "narrator"
+						},
+						{
+							"type": "speech",
+							"content": {
+								"korean": "하찮은 저항… 질서는 거스를 수 없다.",
+								"english": "Insignificant resistance... Order cannot be defied.",
+								"japanese": "取るに足らない抵抗…秩序に逆らうことはできない。",
+								"chinese": "微不足道的抵抗…秩序不可违抗。",
+								"french": "Résistance insignifiante... L'ordre ne peut être défié.",
+								"spanish": "Resistencia insignificante... El orden no puede ser desafiado.",
+								"vietnamese": "Sự kháng cự tầm thường… Trật tự không thể bị chống đối.",
+								"thai": "การต่อต้านที่ไร้ค่า... ระเบียบไม่อาจถูกฝ่าฝืนได้",
+								"hindi": "तुच्छ प्रतिरोध… व्यवस्था का उल्लंघन नहीं किया जा सकता।"
+							},
+							"emotion": "base",
+							"speaker": "random_boss"
+						},
+						{
+							"speaker": "character_any",
+							"emotion": "angry",
+							"type": "speech",
+							"content": {
+								"korean": "아직… 끝나지 않았어!",
+								"english": "It's not over yet!",
+								"japanese": "まだ…終わってない！",
+								"chinese": "还没…结束！",
+								"french": "Ce n'est pas encore fini !",
+								"spanish": "¡Aún no termina!",
+								"vietnamese": "Chưa… hết đâu!",
+								"thai": "ยัง…ไม่จบ!",
+								"hindi": "अभी… खत्म नहीं हुआ!"
+							}
+						},
+						{
+							"type": "speech",
+							"content": {
+								"korean": "다시 와라. 그때도 너희의 절망을 보게 될 테니.",
+								"english": "Return. I'll witness your despair once more.",
+								"japanese": "また来い。その時も、お前たちの絶望を見るだろう。",
+								"chinese": "再来吧。届时，你们的绝望我将再次目睹。",
+								"french": "Revenez. J'assisterai à votre désespoir une fois de plus.",
+								"spanish": "Regresen. Volveré a ver su desesperación.",
+								"vietnamese": "Hãy trở lại. Khi đó, ta sẽ lại chứng kiến sự tuyệt vọng của các ngươi.",
+								"thai": "กลับมาอีกครั้งสิ. แล้วข้าจะได้เห็นความสิ้นหวังของพวกเจ้าอีกครั้ง.",
+								"hindi": "फिर आओ। मैं तुम्हारी हताशा फिर देखूंगा।"
+							},
+							"emotion": "base",
+							"speaker": "random_boss"
+						}
+					],
+					"win_dialogue": [
+						{
+							"type": "speech",
+							"content": {
+								"korean": "거대한 그림자가 무너졌다. 시스템의 왜곡된 흐름이 잠시 멈췄다.",
+								"english": "The colossal shadow has fallen. The system's distorted flow has paused for a moment.",
+								"japanese": "巨大な影が崩れ落ちた。システムの歪んだ流れは一時的に止まった。",
+								"chinese": "巨大的阴影崩塌了。系统的扭曲流转暂时停止。",
+								"french": "L'ombre colossale est tombée. Le flux distordu du système s'est arrêté un instant.",
+								"spanish": "La sombra colosal ha caído. El flujo distorsionado del sistema se ha detenido por un momento.",
+								"vietnamese": "Bóng tối khổng lồ đã sụp đổ. Dòng chảy méo mó của hệ thống đã tạm dừng.",
+								"thai": "เงาอันมหึมาได้พังทลายลง กระแสที่บิดเบี้ยวของระบบได้หยุดลงชั่วขณะ",
+								"hindi": "विशाल छाया ढह गई। सिस्टम का विकृत प्रवाह क्षण भर के लिए रुक गया।"
+							},
+							"emotion": "base",
+							"speaker": "narrator"
+						},
+						{
+							"emotion": "base",
+							"type": "speech",
+							"content": {
+								"korean": "이것은… 시작일 뿐이다… 나의 질서는… 영원히….",
+								"english": "This is... merely the beginning... My order... forever...",
+								"japanese": "これは…始まりに過ぎない…私の秩序は…永遠に…。",
+								"chinese": "这…仅仅是开始…我的秩序…将永存…。",
+								"french": "Ce n'est... que le début... Mon ordre... pour toujours...",
+								"spanish": "Esto es... solo el principio... Mi orden... para siempre...",
+								"vietnamese": "Đây chỉ là… khởi đầu… Trật tự của ta… vĩnh viễn…",
+								"thai": "นี่เป็นเพียง... จุดเริ่มต้น... ระเบียบของข้า... ชั่วนิรันดร์...",
+								"hindi": "यह... केवल शुरुआत है... मेरा आदेश... हमेशा के लिए..."
+							},
+							"speaker": "random_boss"
+						},
+						{
+							"emotion": "sad",
+							"type": "speech",
+							"content": {
+								"korean": "끝났다… 정말 끝난 건가?",
+								"english": "It's over... Is it really over?",
+								"japanese": "終わった…本当に終わったのか？",
+								"chinese": "结束了…真的结束了吗？",
+								"french": "C'est fini... Est-ce vraiment fini ?",
+								"spanish": "Terminó... ¿Realmente terminó?",
+								"vietnamese": "Xong rồi… Nó thực sự kết thúc rồi sao?",
+								"thai": "จบแล้ว... มันจบลงจริงๆ แล้วเหรอ?",
+								"hindi": "यह खत्म हो गया… क्या यह सच में खत्म हो गया है?"
+							},
+							"speaker": "character_any"
+						},
+						{
+							"speaker": "narrator",
+							"emotion": "base",
+							"type": "speech",
+							"content": {
+								"korean": "파괴된 시스템 속에서, 또 다른 왜곡된 신호가 감지된다.",
+								"english": "Within the destroyed system, another distorted signal is detected.",
+								"japanese": "破壊されたシステムの中で、別の歪んだ信号が感知される。",
+								"chinese": "在被破坏的系统中，检测到了另一个扭曲的信号。",
+								"french": "Au sein du système détruit, un autre signal distordu est détecté.",
+								"spanish": "Dentro del sistema destruido, se detecta otra señal distorsionada.",
+								"vietnamese": "Trong hệ thống bị phá hủy, một tín hiệu méo mó khác được phát hiện.",
+								"thai": "ภายในระบบที่ถูกทำลาย สัญญาณบิดเบี้ยวอื่นถูกตรวจพบ",
+								"hindi": "नष्ट हुए सिस्टम के भीतर, एक और विकृत संकेत का पता चला है।"
+							}
+						},
+						{
+							"speaker": "narrator",
+							"emotion": "base",
+							"type": "speech",
+							"content": {
+								"korean": "끝나지 않은 카운트다운… 그 진실을 향한 발걸음은 계속된다.",
+								"english": "The unending countdown... The steps towards that truth continue.",
+								"japanese": "終わらないカウントダウン…その真実への一歩は続く。",
+								"chinese": "未完的倒计时…迈向真相的脚步仍在继续。",
+								"french": "Le compte à rebours inachevé... Les pas vers cette vérité continuent.",
+								"spanish": "La cuenta atrás interminable... Los pasos hacia esa verdad continúan.",
+								"vietnamese": "Đếm ngược chưa kết thúc… Những bước chân hướng tới sự thật đó vẫn tiếp tục.",
+								"thai": "การนับถอยหลังที่ไม่มีวันสิ้นสุด... ก้าวเดินสู่ความจริงนั้นยังคงดำเนินต่อไป",
+								"hindi": "अनंत उलटी गिनती… उस सच्चाई की ओर कदम बढ़ते जा रहे हैं।"
+							}
+						}
+					],
+					"dialogue": [
+						{
+							"emotion": "base",
+							"type": "speech",
+							"content": {
+								"korean": "너희의 발버둥은… 나의 질서를 위한 거름일 뿐.",
+								"english": "Your struggles... are merely fertilizer for my Order.",
+								"japanese": "お前たちの足掻きは…私の秩序のための肥やしに過ぎない。",
+								"chinese": "你们的挣扎……不过是我秩序的养料罢了。",
+								"french": "Vos efforts... ne sont que de l'engrais pour mon Ordre.",
+								"spanish": "Vuestros esfuerzos... son meramente abono para mi Orden.",
+								"vietnamese": "Sự vùng vẫy của các ngươi… chỉ là phân bón cho Trật tự của ta mà thôi.",
+								"thai": "การดิ้นรนของพวกเจ้า…เป็นเพียงปุ๋ยสำหรับระเบียบของข้าเท่านั้น",
+								"hindi": "तुम्हारी जद्दोजहद… मेरी व्यवस्था के लिए खाद मात्र है।"
+							},
+							"speaker": "random_boss"
+						},
+						{
+							"speaker": "character_any",
+							"emotion": "angry",
+							"type": "speech",
+							"content": {
+								"korean": "감히…!",
+								"english": "How dare you...!",
+								"japanese": "よくも…！",
+								"chinese": "竟敢……！",
+								"french": "Comment oses-tu...!",
+								"spanish": "¡Cómo te atreves...!",
+								"vietnamese": "Dám ư…!",
+								"thai": "แกกล้าดียังไง…!",
+								"hindi": "तुम्हारी हिम्मत कैसे हुई…!"
+							}
+						},
+						{
+							"emotion": "base",
+							"type": "speech",
+							"content": {
+								"korean": "이곳은 완벽한 질서로 재편될 것이다. 너희의 '희망' 따위는 허상에 불과해.",
+								"english": "This place will be reorganized into a perfect order. Your 'hope' is nothing but an illusion.",
+								"japanese": "ここは完璧な秩序へと再編されるだろう。お前たちの『希望』など、虚像に過ぎない。",
+								"chinese": "此处将被重塑为完美的秩序。你们的“希望”不过是虚妄。",
+								"french": "Ce lieu sera réorganisé en un ordre parfait. Votre « espoir » n'est qu'une illusion.",
+								"spanish": "Este lugar será reorganizado en un orden perfecto. Vuestra \"esperanza\" no es más que una ilusión.",
+								"vietnamese": "Nơi đây sẽ được tái cơ cấu thành một trật tự hoàn hảo. Cái gọi là 'hy vọng' của các ngươi chỉ là ảo ảnh.",
+								"thai": "ที่นี่จะถูกจัดระเบียบใหม่ให้เป็นระเบียบที่สมบูรณ์แบบ 'ความหวัง' ของพวกเจ้าเป็นเพียงภาพลวงตาเท่านั้น",
+								"hindi": "यह स्थान एक पूर्ण व्यवस्था में पुनर्गठित किया जाएगा। तुम्हारी 'आशा' मात्र एक भ्रम है।"
+							},
+							"speaker": "random_boss"
+						},
+						{
+							"type": "direction",
+							"duration_ms": 500,
+							"spot": [
+								2,
+								3
+							],
+							"action": "enter",
+							"speaker": "max"
+						},
+						{
+							"speaker": "max",
+							"type": "speech",
+							"content": {
+								"korean": "헛된 짓이야… 우리는 아무것도 바꿀 수 없어.",
+								"english": "It's futile... We can't change anything.",
+								"japanese": "無駄だ…我々は何も変えられない。",
+								"chinese": "这都是徒劳…我们什么也改变不了。",
+								"french": "C'est futile... Nous ne pouvons rien changer.",
+								"spanish": "Es inútil... No podemos cambiar nada.",
+								"vietnamese": "Vô ích thôi… Chúng ta không thể thay đổi bất cứ điều gì.",
+								"thai": "มันไร้ประโยชน์... เราเปลี่ยนอะไรไม่ได้เลย",
+								"hindi": "यह व्यर्थ है… हम कुछ भी नहीं बदल सकते।"
+							},
+							"emotion": "sad"
+						},
+						{
+							"emotion": "angry",
+							"type": "speech",
+							"content": {
+								"korean": "닥쳐, 맥스! 우린 포기 안 해!",
+								"english": "Shut up, Max! We're not giving up!",
+								"japanese": "黙れ、マックス！我々は諦めない！",
+								"chinese": "闭嘴，麦克斯！我们不会放弃的！",
+								"french": "Tais-toi, Max ! Nous n'abandonnerons pas !",
+								"spanish": "¡Cállate, Max! ¡No nos rendiremos!",
+								"vietnamese": "Im đi, Max! Chúng ta sẽ không bỏ cuộc!",
+								"thai": "หุบปากนะแม็กซ์! เราไม่ยอมแพ้หรอก!",
+								"hindi": "चुप रहो, मैक्स! हम हार नहीं मानेंगे!"
+							},
+							"speaker": "character_any"
+						},
+						{
+							"speaker": "random_boss",
+							"emotion": "base",
+							"type": "speech",
+							"content": {
+								"korean": "그 분노… 아주 좋아. 내 힘이 될 테니.",
+								"english": "That rage... very good. It will become my strength.",
+								"japanese": "その怒り…とても良い。私の力となるだろう。",
+								"chinese": "那份愤怒…很好。它将成为我的力量。",
+								"french": "Cette rage... très bien. Elle deviendra ma force.",
+								"spanish": "Esa rabia... muy bien. Se convertirá en mi fuerza.",
+								"vietnamese": "Cơn thịnh nộ đó… rất tốt. Nó sẽ trở thành sức mạnh của ta.",
+								"thai": "ความโกรธนั้น... ดีมาก มันจะเป็นพลังของข้า",
+								"hindi": "वह क्रोध… बहुत अच्छा। वह मेरी शक्ति बनेगा।"
+							}
+						},
+						{
+							"action": "exit",
+							"speaker": "max",
+							"type": "direction",
+							"direction": "down",
+							"duration_ms": 400
+						}
+					],
+					"id": 15
+				}
+			],
+			"prologue": {
+				"korean": [
+					"카운트다운은 멈추지 않는다.",
+					"시스템은 붕괴 직전의 혼돈. 모든 것이 왜곡되기 시작했다.",
+					"맥스는 필사적으로 탈출구를 찾으려 하지만, 그의 절망은 심연을 불러올 뿐.",
+					"희망이 사라진 절망의 연쇄 반응 속에서, 너는 무엇을 선택할 것인가."
+				],
+				"english": [
+					"The countdown continues.",
+					"The system is chaos, on the verge of collapse. Everything started to warp.",
+					"Max desperately searches for an escape, but his despair only summons the abyss.",
+					"In this chain reaction of despair where hope has vanished, what will you choose?"
+				],
+				"japanese": [
+					"カウントダウンは止まらない。",
+					"システムは崩壊寸前の混沌。全てが歪み始めた。",
+					"マックスは必死に脱出口を探すが、彼の絶望は深淵を招くだけだ。",
+					"希望が消えた絶望の連鎖反応の中で、君は何を選択するのか。"
+				],
+				"chinese": [
+					"倒计时不会停止。",
+					"系统处于崩溃边缘的混乱之中。一切都开始扭曲。",
+					"麦克斯拼命寻找出口，但他的绝望只会招来深渊。",
+					"在希望消失的绝望连锁反应中，你将如何选择？"
+				],
+				"french": [
+					"Le compte à rebours ne s'arrête pas.",
+					"Le système est un chaos au bord de l'effondrement. Tout a commencé à se déformer.",
+					"Max cherche désespérément une échappatoire, mais son désespoir n'attire que l'abîme.",
+					"Dans cette réaction en chaîne de désespoir où l'espoir a disparu, que choisiras-tu ?"
+				],
+				"spanish": [
+					"La cuenta regresiva no se detiene.",
+					"El sistema es un caos al borde del colapso. Todo comenzó a distorsionarse.",
+					"Max busca desesperadamente una salida, pero su desesperación solo invoca el abismo.",
+					"En esta reacción en cadena de desesperación donde la esperanza se ha desvanecido, ¿qué elegirás?"
+				],
+				"vietnamese": [
+					"Đồng hồ đếm ngược không ngừng lại.",
+					"Hệ thống hỗn loạn, sắp sụp đổ. Mọi thứ bắt đầu méo mó.",
+					"Max tuyệt vọng tìm kiếm lối thoát, nhưng sự tuyệt vọng của anh chỉ gọi thêm vực thẳm.",
+					"Trong phản ứng dây chuyền của sự tuyệt vọng khi hy vọng đã biến mất, bạn sẽ chọn gì?"
+				],
+				"thai": [
+					"การนับถอยหลังไม่หยุดนิ่ง",
+					"ระบบอยู่ในความโกลาหลใกล้จะล่มสลาย ทุกสิ่งเริ่มบิดเบี้ยว",
+					"แม็กซ์พยายามหาทางออกอย่างสิ้นหวัง แต่ความสิ้นหวังของเขาเพียงแต่เรียกหาห้วงเหวเท่านั้น",
+					"ในปฏิกิริยาลูกโซ่แห่งความสิ้นหวังที่ไร้ซึ่งความหวังนี้ คุณจะเลือกอะไร"
+				],
+				"hindi": [
+					"उलटी गिनती नहीं रुकती।",
+					"सिस्टम पतन के कगार पर अराजकता है। सब कुछ विकृत होना शुरू हो गया।",
+					"मैक्स हताशा में भागने का रास्ता खोजता है, लेकिन उसकी निराशा केवल खाई को बुलाती है।",
+					"निराशा की इस श्रृंखला प्रतिक्रिया में जहाँ आशा गायब हो गई है, तुम क्या चुनोगे?"
+				]
+			}
+		},
+		{
+			"scenario_id": "modern_pixelgrim_28_05",
+			"order": 5,
+			"act": "climax_finale",
+			"theme": "modern",
+			"actors": {
+				"zoe": {
+					"id": "mon_ad3762e0-13f3-44a1-9b84-4ff67136858e",
+					"name": {
+						"korean": "조이",
+						"english": "Zoe",
+						"japanese": "ゾーイ",
+						"chinese": "佐伊",
+						"french": "Zoé",
+						"spanish": "Zoe",
+						"vietnamese": "Zoe",
+						"thai": "โซอี้",
+						"hindi": "ज़ोई"
+					},
+					"description": "",
+					"face_image_url": "https://imagedelivery.net/WTEqQNGFb-l-IHS6IGnzUQ/75dcfb0c-33e3-4208-4205-fb09d4abb100/public",
+					"battle_sprite_url": "https://imagedelivery.net/WTEqQNGFb-l-IHS6IGnzUQ/a7d0ebe1-73dc-4683-1338-32be2f7fac00/public"
+				}
+			},
+			"boss": {
+				"pool_id": "pool_DigitalDon_PixelGrim_V1"
+			},
+			"epilogue": {
+				"korean": [
+					"시스템의 코어는 정지했다. 거짓된 질서는 산산이 부서졌다.",
+					"조이의 광기 어린 눈빛은 영원히 꺼지지 않을 디지털 잔상으로 남았다.",
+					"승리했지만, 마음속 깊이 남은 공허함은 채워지지 않았다.",
+					"이것이 끝일까? 아니면, 새로운 시작일까? 알 수 없었다."
+				],
+				"english": [
+					"The system's core has stopped. The false order has shattered.",
+					"Joey's mad gaze remained as an eternal, unextinguishable digital afterimage.",
+					"Victorious, yet the deep void in the heart remained unfilled.",
+					"Is this the end? Or a new beginning? It was unknown."
+				],
+				"japanese": [
+					"システムのコアは停止した。偽りの秩序は粉々に砕け散った。",
+					"ジョイの狂気に満ちた眼差しは、永遠に消えないデジタル残像として残った。",
+					"勝利したが、心の奥底に残る虚無感は満たされなかった。",
+					"これが終わりなのか？それとも、新しい始まりなのか？知る由もなかった。"
+				],
+				"chinese": [
+					"系统的核心已停止。虚假的秩序已支离破碎。",
+					"乔伊疯狂的眼神，成为了永不熄灭的数字残像。",
+					"虽已胜利，但内心深处的空虚感却未能填补。",
+					"这是终结吗？抑或是新的开始？无人知晓。"
+				],
+				"french": [
+					"Le cœur du système s'est arrêté. L'ordre factice s'est brisé.",
+					"Le regard fou de Joey resta comme une rémanence numérique éternelle et inextinguible.",
+					"Victorieux, mais le vide profond dans le cœur resta inassouvi.",
+					"Est-ce la fin ? Ou un nouveau commencement ? On ne savait pas."
+				],
+				"spanish": [
+					"El núcleo del sistema se detuvo. El orden falso se hizo añicos.",
+					"La mirada enloquecida de Joey permaneció como una imagen digital residual eterna e inextinguible.",
+					"Victorioso, pero el profundo vacío en el corazón no fue llenado.",
+					"¿Es este el final? ¿O un nuevo comienzo? Era desconocido."
+				],
+				"vietnamese": [
+					"Lõi hệ thống đã dừng. Trật tự giả dối đã tan vỡ.",
+					"Ánh mắt điên dại của Joey vẫn còn đó, như một dư ảnh kỹ thuật số vĩnh cửu không thể xóa nhòa.",
+					"Dù đã chiến thắng, nhưng khoảng trống sâu thẳm trong lòng vẫn không được lấp đầy.",
+					"Đây là kết thúc ư? Hay là một khởi đầu mới? Không thể biết được."
+				],
+				"thai": [
+					"แกนกลางของระบบหยุดทำงานแล้ว ระเบียบที่หลอกลวงได้แตกสลายไป",
+					"แววตาที่บ้าคลั่งของจอยยังคงเหลืออยู่ เป็นภาพติดตาแบบดิจิทัลที่ไม่จางหายไปตลอดกาล",
+					"แม้จะชนะ แต่ความว่างเปล่าที่ฝังลึกอยู่ในใจก็ยังไม่ได้รับการเติมเต็ม",
+					"นี่คือจุดจบหรือเปล่า? หรือเป็นจุดเริ่มต้นใหม่? ไม่สามารถรู้ได้"
+				],
+				"hindi": [
+					"सिस्टम का कोर रुक गया। झूठी व्यवस्था बिखर गई।",
+					"जॉय की पागल आँखों की चमक, एक शाश्वत, अमिट डिजिटल आफ्टरइमेज बनकर रह गई।",
+					"विजयी हुए, फिर भी दिल में गहरा खालीपन अधूरा ही रहा।",
+					"क्या यह अंत है? या एक नई शुरुआत? पता नहीं था।"
+				]
+			},
+			"rooms": [
+				{
+					"dialogue": [
+						{
+							"content": {
+								"korean": "환상의 지하 세계. 최종 코어가 눈앞에 있었다.",
+								"english": "A fantastical underground world. The final core was before our eyes.",
+								"japanese": "幻想の地下世界。最終コアが目の前にあった。",
+								"chinese": "梦幻的地下世界。最终核心近在眼前。",
+								"french": "Un monde souterrain fantastique. Le noyau final était sous nos yeux.",
+								"spanish": "Un mundo subterráneo fantástico. El núcleo final estaba ante nuestros ojos.",
+								"vietnamese": "Thế giới ngầm ảo diệu. Lõi cuối cùng hiện ra trước mắt.",
+								"thai": "โลกใต้ดินอันน่าพิศวง แกนกลางสุดท้ายอยู่ตรงหน้า",
+								"hindi": "एक शानदार भूमिगत दुनिया। अंतिम कोर हमारी आँखों के सामने था।"
+							},
+							"emotion": "base",
+							"type": "speech",
+							"speaker": "narrator"
+						},
+						{
+							"action": "enter",
+							"spot": [
+								5,
+								2
+							],
+							"type": "direction",
+							"duration_ms": 500,
+							"speaker": "zoe"
+						},
+						{
+							"content": {
+								"korean": "드디어 여기까지 왔네. 카운트다운이 멈춘 곳이야.",
+								"english": "Finally, we've made it here. This is where the countdown stopped.",
+								"japanese": "ついにここまで来たか。カウントダウンが止まった場所だ。",
+								"chinese": "终于到这儿了。这里就是倒计时停止的地方。",
+								"french": "Enfin, nous sommes arrivés ici. C'est là que le compte à rebours s'est arrêté.",
+								"spanish": "Por fin hemos llegado hasta aquí. Este es el lugar donde la cuenta regresiva se detuvo.",
+								"vietnamese": "Cuối cùng cũng đến đây rồi. Nơi mà đếm ngược đã dừng lại.",
+								"thai": "ในที่สุดเราก็มาถึงที่นี่ ที่ที่การนับถอยหลังหยุดลง",
+								"hindi": "आखिरकार, हम यहाँ आ गए। यह वही जगह है जहाँ उलटी गिनती रुकी थी।"
+							},
+							"emotion": "base",
+							"speaker": "zoe",
+							"type": "speech"
+						},
+						{
+							"content": {
+								"korean": "네가 안내한 곳이 여기였어?",
+								"english": "This is where you led me?",
+								"japanese": "あなたが案内した場所がここなの？",
+								"chinese": "你带我来的就是这里？",
+								"french": "C'est ici que tu m'as mené ?",
+								"spanish": "¿Este es el lugar al que me guiaste?",
+								"vietnamese": "Đây là nơi cậu dẫn tôi đến sao?",
+								"thai": "ที่นี่คือที่ๆ นายพาฉันมาเหรอ?",
+								"hindi": "यही वो जगह है जहाँ तुमने मुझे रास्ता दिखाया था?"
+							},
+							"emotion": "base",
+							"type": "speech",
+							"speaker": "character_any"
+						},
+						{
+							"content": {
+								"korean": "응. 모든 진실이 밝혀질 곳이지.",
+								"english": "Yes. The place where all truth will be revealed.",
+								"japanese": "うん。すべての真実が明らかになる場所だよ。",
+								"chinese": "嗯。所有真相都将在此揭露。",
+								"french": "Oui. L'endroit où toute la vérité sera révélée.",
+								"spanish": "Sí. El lugar donde toda la verdad será revelada.",
+								"vietnamese": "Đúng vậy. Nơi mọi sự thật sẽ được phơi bày.",
+								"thai": "ใช่ ที่นี่คือที่ที่ความจริงทุกอย่างจะถูกเปิดเผย",
+								"hindi": "हाँ। वह जगह जहाँ सभी सच्चाई उजागर होगी।"
+							},
+							"emotion": "happy",
+							"type": "speech",
+							"speaker": "zoe"
+						}
+					],
+					"id": 1
+				},
+				{
+					"id": 3,
+					"dialogue": [
+						{
+							"spot": [
+								4,
+								2
+							],
+							"action": "enter",
+							"type": "direction",
+							"duration_ms": 500,
+							"speaker": "zoe"
+						},
+						{
+							"speaker": "zoe",
+							"type": "speech",
+							"content": {
+								"korean": "이 시스템은 완벽한 질서를 추구해. 혼돈은 용납되지 않지.",
+								"english": "This system pursues perfect order. Chaos is not tolerated.",
+								"japanese": "このシステムは完璧な秩序を追求する。混沌は許されない。",
+								"chinese": "这个系统追求完美的秩序。混乱是不可容忍的。",
+								"french": "Ce système recherche l'ordre parfait. Le chaos n'est pas toléré.",
+								"spanish": "Este sistema busca el orden perfecto. El caos no es tolerado.",
+								"vietnamese": "Hệ thống này theo đuổi trật tự hoàn hảo. Hỗn loạn không được dung thứ.",
+								"thai": "ระบบนี้แสวงหาความสงบที่สมบูรณ์แบบ ความวุ่นวายไม่อาจยอมรับได้",
+								"hindi": "यह प्रणाली पूर्ण व्यवस्था का अनुसरण करती है। अराजकता बर्दाश्त नहीं की जाती।"
+							},
+							"emotion": "base"
+						},
+						{
+							"content": {
+								"korean": "완벽한 질서? 왜곡된 광기 아냐?",
+								"english": "Perfect order? Isn't it distorted madness?",
+								"japanese": "完璧な秩序？歪んだ狂気じゃないのか？",
+								"chinese": "完美的秩序？难道不是扭曲的疯狂吗？",
+								"french": "L'ordre parfait ? N'est-ce pas une folie déformée ?",
+								"spanish": "¿Orden perfecto? ¿No es una locura distorsionada?",
+								"vietnamese": "Trật tự hoàn hảo? Không phải là sự điên loạn méo mó sao?",
+								"thai": "ความสงบที่สมบูรณ์แบบงั้นเหรอ? ไม่ใช่ความบ้าคลั่งที่บิดเบือนหรอกเหรอ?",
+								"hindi": "पूर्ण व्यवस्था? क्या यह विकृत पागलपन नहीं है?"
+							},
+							"emotion": "angry",
+							"type": "speech",
+							"speaker": "character_any"
+						},
+						{
+							"content": {
+								"korean": "그건 아직 이해하지 못해서 그래. 곧 깨닫게 될 거야.",
+								"english": "That's because you don't understand yet. You'll realize it soon.",
+								"japanese": "それはまだ理解していないからだ。すぐに気づくだろう。",
+								"chinese": "那是你还不理解。你很快就会明白的。",
+								"french": "C'est parce que tu ne comprends pas encore. Tu vas t'en rendre compte bientôt.",
+								"spanish": "Es porque aún no lo entiendes. Pronto lo comprenderás.",
+								"vietnamese": "Đó là vì cậu chưa hiểu. Cậu sẽ sớm nhận ra thôi.",
+								"thai": "นั่นเป็นเพราะเธอยังไม่เข้าใจ เธอจะตระหนักได้ในไม่ช้า",
+								"hindi": "ऐसा इसलिए है क्योंकि तुम अभी तक समझे नहीं हो। तुम जल्द ही समझ जाओगे।"
+							},
+							"emotion": "base",
+							"type": "speech",
+							"speaker": "zoe"
+						},
+						{
+							"type": "speech",
+							"speaker": "character_any",
+							"content": {
+								"korean": "뭘 깨달아. 넌 뭘 숨기고 있는 거지?",
+								"english": "Realize what? What are you hiding?",
+								"japanese": "何を気づくって？何を隠しているんだ？",
+								"chinese": "明白什么？你到底在藏什么？",
+								"french": "Réaliser quoi ? Qu'est-ce que tu caches ?",
+								"spanish": "¿Comprender qué? ¿Qué estás ocultando?",
+								"vietnamese": "Nhận ra điều gì? Cậu đang giấu giếm điều gì?",
+								"thai": "ตระหนักอะไร? นายกำลังซ่อนอะไรอยู่?",
+								"hindi": "क्या समझना है? तुम क्या छुपा रहे हो?"
+							},
+							"emotion": "base"
+						}
+					]
+				},
+				{
+					"dialogue": [
+						{
+							"duration_ms": 500,
+							"speaker": "zoe",
+							"spot": [
+								3,
+								2
+							],
+							"action": "enter",
+							"type": "direction"
+						},
+						{
+							"speaker": "zoe",
+							"type": "speech",
+							"content": {
+								"korean": "나도 한때는 너처럼 의심했어. 하지만 결국 알게 됐지.",
+								"english": "I also doubted it once, just like you. But eventually, I understood.",
+								"japanese": "私もかつては君のように疑った。だが、結局は理解した。",
+								"chinese": "我曾一度像你一样怀疑。但最终，我明白了。",
+								"french": "Moi aussi, j'ai douté, comme toi. Mais finalement, j'ai compris.",
+								"spanish": "Yo también dudé una vez, como tú. Pero al final, lo entendí.",
+								"vietnamese": "Tôi cũng từng nghi ngờ như cậu. Nhưng cuối cùng, tôi đã hiểu ra.",
+								"thai": "ฉันก็เคยสงสัยเหมือนเธอ แต่สุดท้ายฉันก็เข้าใจ",
+								"hindi": "मैं भी एक बार तुम्हारी तरह शक करता था। लेकिन आखिर में, मुझे समझ आ गया।"
+							},
+							"emotion": "base"
+						},
+						{
+							"type": "speech",
+							"speaker": "character_any",
+							"content": {
+								"korean": "뭘 알았다는 거야. 이 파멸을?",
+								"english": "Understood what? This destruction?",
+								"japanese": "何を理解したって？この破滅を？",
+								"chinese": "明白了什么？是这场毁灭吗？",
+								"french": "Compris quoi ? Cette destruction ?",
+								"spanish": "¿Comprendiste qué? ¿Esta destrucción?",
+								"vietnamese": "Hiểu ra điều gì? Sự hủy diệt này sao?",
+								"thai": "เข้าใจอะไร? ความพินาศนี้เหรอ?",
+								"hindi": "क्या समझ लिया? इस विनाश को?"
+							},
+							"emotion": "angry"
+						},
+						{
+							"type": "speech",
+							"speaker": "zoe",
+							"content": {
+								"korean": "아니. 이 모든 것이… 거대한 계획의 일부라는 것을.",
+								"english": "No. That all of this... is part of a grand plan.",
+								"japanese": "違う。このすべてが…壮大な計画の一部だということを。",
+								"chinese": "不。这一切……都只是一个宏大计划的一部分。",
+								"french": "Non. Que tout cela... fait partie d'un grand plan.",
+								"spanish": "No. Que todo esto... es parte de un gran plan.",
+								"vietnamese": "Không. Rằng tất cả những điều này... là một phần của một kế hoạch vĩ đại.",
+								"thai": "ไม่ใช่ ว่าทั้งหมดนี้...เป็นส่วนหนึ่งของแผนการอันยิ่งใหญ่",
+								"hindi": "नहीं। कि यह सब... एक बड़ी योजना का हिस्सा है।"
+							},
+							"emotion": "happy"
+						},
+						{
+							"speaker": "character_any",
+							"type": "speech",
+							"content": {
+								"korean": "거대한 계획? 그럼 우리를 가둔 것도 그 계획이야?",
+								"english": "A grand plan? So, trapping us was also part of that plan?",
+								"japanese": "壮大な計画？じゃあ、私たちを閉じ込めたのもその計画なの？",
+								"chinese": "宏大计划？所以，把我们困住也是那个计划的一部分？",
+								"french": "Un grand plan ? Alors, nous piéger faisait aussi partie de ce plan ?",
+								"spanish": "¿Un gran plan? ¿Entonces, habernos encerrado también fue parte de ese plan?",
+								"vietnamese": "Một kế hoạch vĩ đại? Vậy việc nhốt chúng tôi cũng là một phần của kế hoạch đó sao?",
+								"thai": "แผนการอันยิ่งใหญ่? งั้นการขังพวกเราก็เป็นส่วนหนึ่งของแผนนั้นด้วยเหรอ?",
+								"hindi": "एक बड़ी योजना? तो हमें फँसाना भी उसी योजना का हिस्सा था?"
+							},
+							"emotion": "angry"
+						},
+						{
+							"content": {
+								"korean": "…후회하지 않을 거야. 너도 곧 편안해질 테니.",
+								"english": "...You won't regret it. You'll find peace soon.",
+								"japanese": "...後悔はしない。すぐに楽になるから。",
+								"chinese": "...你不会后悔。很快你也会安息的。",
+								"french": "...Pas de regrets. Tu trouveras la paix bientôt.",
+								"spanish": "...Sin arrepentimientos. Pronto encontrarás la paz.",
+								"vietnamese": "...Ngươi sẽ không hối hận đâu. Ngươi cũng sẽ sớm được an yên thôi.",
+								"thai": "...จะไม่เสียใจหรอก เจ้าก็จะสงบในไม่ช้า",
+								"hindi": "...तुम्हें पछतावा नहीं होगा। तुम्हें भी जल्द ही शांति मिलेगी।"
+							},
+							"emotion": "base",
+							"speaker": "zoe",
+							"type": "speech"
+						}
+					],
+					"id": 5
+				},
+				{
+					"dialogue": [
+						{
+							"duration_ms": 500,
+							"speaker": "zoe",
+							"action": "enter",
+							"spot": [
+								2,
+								2
+							],
+							"type": "direction"
+						},
+						{
+							"content": {
+								"korean": "이제 돌아갈 수 없어. 여기까지 온 이상, 너도 질서의 일부가 될 뿐이야.",
+								"english": "No turning back. You've come too far; now you're part of the Order.",
+								"japanese": "もう後戻りできない。ここまで来たからには、お前も秩序の一部となるだけだ。",
+								"chinese": "无法回头。走到这一步，你也是秩序的一部分。",
+								"french": "Plus de retour. À ce point, tu fais partie de l'Ordre.",
+								"spanish": "No hay vuelta atrás. Ya que llegaste hasta aquí, tú también serás parte del Orden.",
+								"vietnamese": "Không thể quay lại được nữa rồi. Đến được đây, ngươi cũng chỉ là một phần của trật tự thôi.",
+								"thai": "ไม่มีทางกลับแล้ว มาถึงขั้นนี้แล้ว เจ้าก็จะเป็นเพียงส่วนหนึ่งของระเบียบ",
+								"hindi": "अब पीछे नहीं हट सकते। यहाँ तक आने के बाद, तुम भी व्यवस्था का हिस्सा बन जाओगे।"
+							},
+							"emotion": "base",
+							"speaker": "zoe",
+							"type": "speech"
+						},
+						{
+							"content": {
+								"korean": "배신자. 처음부터 우리를 이용했구나.",
+								"english": "Traitor. You used us from the start.",
+								"japanese": "裏切り者め。最初から我々を利用していたな。",
+								"chinese": "叛徒。你从一开始就在利用我们。",
+								"french": "Traître. Tu nous as utilisés depuis le début.",
+								"spanish": "Traidor. Nos utilizaste desde el principio.",
+								"vietnamese": "Kẻ phản bội. Ngươi đã lợi dụng chúng ta ngay từ đầu.",
+								"thai": "คนทรยศ เจ้าใช้เรามาตั้งแต่แรก",
+								"hindi": "गद्दार। तुमने हमें शुरू से इस्तेमाल किया।"
+							},
+							"emotion": "angry",
+							"speaker": "character_any",
+							"type": "speech"
+						},
+						{
+							"type": "speech",
+							"speaker": "zoe",
+							"content": {
+								"korean": "이용? 아니. 이건 구원이야. 완벽한 세상으로 가는 길이지.",
+								"english": "Used? No. This is salvation. The path to a perfect world.",
+								"japanese": "利用？違う。これは救済だ。完璧な世界への道筋なのだ。",
+								"chinese": "利用？不。这是救赎。通往完美世界的道路。",
+								"french": "Utilisés ? Non. C'est le salut. Le chemin vers un monde parfait.",
+								"spanish": "¿Utilizados? No. Esto es salvación. El camino hacia un mundo perfecto.",
+								"vietnamese": "Lợi dụng? Không. Đây là sự cứu rỗi. Con đường dẫn đến một thế giới hoàn hảo.",
+								"thai": "ใช้เหรอ? ไม่ นี่คือการไถ่ถอน เส้นทางสู่โลกที่สมบูรณ์แบบ",
+								"hindi": "इस्तेमाल? नहीं। यह मोक्ष है। एक आदर्श दुनिया का मार्ग।"
+							},
+							"emotion": "happy"
+						},
+						{
+							"type": "speech",
+							"speaker": "character_any",
+							"content": {
+								"korean": "구원 같은 소리 하지 마! 이건 광기야!",
+								"english": "Don't talk about salvation! This is madness!",
+								"japanese": "救済などと戯言を言うな！これは狂気だ！",
+								"chinese": "别说什么救赎！这是彻头彻尾的疯狂！",
+								"french": "Ne parle pas de salut ! C'est de la folie !",
+								"spanish": "¡No hables de salvación! ¡Esto es una locura!",
+								"vietnamese": "Đừng nói đến cứu rỗi! Đây là sự điên rồ!",
+								"thai": "อย่ามาพูดเรื่องการไถ่ถอน! นี่มันบ้าคลั่ง!",
+								"hindi": "मोक्ष जैसी बातें मत करो! यह पागलपन है!"
+							},
+							"emotion": "angry"
+						},
+						{
+							"speaker": "zoe",
+							"type": "speech",
+							"content": {
+								"korean": "하하… 곧 그 광기 속에서 평화를 찾을 거야.",
+								"english": "Haha... Soon you'll find peace within that madness.",
+								"japanese": "ハハ…すぐにその狂気の中で平和を見出すだろう。",
+								"chinese": "哈哈…你很快就会在那疯狂中找到平静。",
+								"french": "Haha... Bientôt tu trouveras la paix dans cette folie.",
+								"spanish": "Jaja... Pronto encontrarás la paz en esa locura.",
+								"vietnamese": "Haha... Ngươi sẽ sớm tìm thấy bình yên trong sự điên rồ đó thôi.",
+								"thai": "ฮ่าๆ... เจ้าจะพบความสงบในความบ้าคลั่งนั้นในไม่ช้า",
+								"hindi": "हाहा... जल्द ही तुम उस पागलपन में शांति पाओगे।"
+							},
+							"emotion": "happy"
+						}
+					],
+					"id": 9
+				},
+				{
+					"id": 15,
+					"dialogue": [
+						{
+							"speaker": "zoe",
+							"duration_ms": 500,
+							"type": "direction",
+							"spot": [
+								4,
+								2
+							],
+							"action": "enter"
+						},
+						{
+							"content": {
+								"korean": "마침내 그분을 만날 시간이야. 모든 질서의 창조주.",
+								"english": "Finally, it's time to meet Him. The creator of all order.",
+								"japanese": "ついに、あの方に会う時が来た。全ての秩序の創造主よ。",
+								"chinese": "终于，是时候见到祂了。所有秩序的创造者。",
+								"french": "Enfin, il est temps de Le rencontrer. Le créateur de tout ordre.",
+								"spanish": "Finalmente, es hora de encontrarlo. El creador de todo orden.",
+								"vietnamese": "Cuối cùng, đã đến lúc gặp Người. Đấng tạo hóa của mọi trật tự.",
+								"thai": "ในที่สุด ก็ถึงเวลาที่จะได้พบพระองค์ ผู้สร้างระเบียบทั้งหมด",
+								"hindi": "अंततः, उनसे मिलने का समय आ गया है। सभी व्यवस्था के निर्माता।"
+							},
+							"emotion": "happy",
+							"speaker": "zoe",
+							"type": "speech"
+						},
+						{
+							"content": {
+								"korean": "거대한 디지털 노이즈 속에서, 검은 형체가 모습을 드러냈다. PixelGrim이었다.",
+								"english": "Amidst the vast digital noise, a black figure emerged. It was PixelGrim.",
+								"japanese": "巨大なデジタルノイズの中、黒い姿が現れた。PixelGrimだった。",
+								"chinese": "在巨大的数字噪音中，一个黑色身影显现。那是 PixelGrim。",
+								"french": "Au milieu d'un immense bruit numérique, une forme noire est apparue. C'était PixelGrim.",
+								"spanish": "En medio de un inmenso ruido digital, una figura negra apareció. Era PixelGrim.",
+								"vietnamese": "Giữa tiếng ồn kỹ thuật số khổng lồ, một hình thù đen tối hiện ra. Đó là PixelGrim.",
+								"thai": "ท่ามกลางเสียงรบกวนดิจิทัลขนาดมหึมา ร่างสีดำก็ปรากฏขึ้น นั่นคือ PixelGrim",
+								"hindi": "विशाल डिजिटल शोर के बीच, एक काली आकृति प्रकट हुई। वह PixelGrim था।"
+							},
+							"emotion": "base",
+							"type": "speech",
+							"speaker": "narrator"
+						},
+						{
+							"content": {
+								"korean": "환영한다, 새로운 손님. 나의 완벽한 구역에.",
+								"english": "Welcome, new guest. To my perfect domain.",
+								"japanese": "ようこそ、新たな客人よ。私の完璧な領域へ。",
+								"chinese": "欢迎，新客人。来到我的完美领域。",
+								"french": "Bienvenue, nouvel invité. Dans mon domaine parfait.",
+								"spanish": "Bienvenido, nuevo invitado. A mi dominio perfecto.",
+								"vietnamese": "Chào mừng, vị khách mới. Đến với lãnh địa hoàn hảo của ta.",
+								"thai": "ยินดีต้อนรับ แขกใหม่ สู่ดินแดนที่สมบูรณ์แบบของข้า",
+								"hindi": "स्वागत है, नए मेहमान। मेरे उत्तम क्षेत्र में।"
+							},
+							"emotion": "base",
+							"type": "speech",
+							"speaker": "boss"
+						},
+						{
+							"content": {
+								"korean": "네가… 모든 것의 원흉이군.",
+								"english": "So you're... the root of all this.",
+								"japanese": "お前が…全ての元凶か。",
+								"chinese": "你就是…这一切的罪魁祸首。",
+								"french": "Alors tu es... la source de tout cela.",
+								"spanish": "Así que eres... la raíz de todo esto.",
+								"vietnamese": "Vậy ngươi chính là… nguồn gốc của mọi chuyện.",
+								"thai": "เจ้าคือ... ต้นตอของทุกสิ่งสินะ",
+								"hindi": "तो तुम हो... इन सब की जड़।"
+							},
+							"emotion": "angry",
+							"type": "speech",
+							"speaker": "character_any"
+						},
+						{
+							"type": "speech",
+							"speaker": "zoe",
+							"content": {
+								"korean": "그분이야말로 이 혼란을 끝낼 유일한 존재. 너희도 곧 그 질서에 편입될 거야.",
+								"english": "He is the only one who can end this chaos. You too will soon be absorbed into that order.",
+								"japanese": "彼こそがこの混乱を終わらせる唯一の存在。お前たちもすぐにその秩序に組み込まれるだろう。",
+								"chinese": "他是唯一能结束这场混乱的人。你们也很快就会被纳入那个秩序。",
+								"french": "Il est le seul à pouvoir mettre fin à ce chaos. Vous aussi serez bientôt intégrés à cet ordre.",
+								"spanish": "Él es el único que puede poner fin a este caos. Vosotros también seréis pronto absorbidos por ese orden.",
+								"vietnamese": "Hắn là kẻ duy nhất có thể chấm dứt sự hỗn loạn này. Các ngươi cũng sẽ sớm bị nhập vào trật tự đó thôi.",
+								"thai": "เขาคือผู้เดียวที่จะยุติความสับสนวุ่นวายนี้ได้ พวกเจ้าก็จะถูกผนวกเข้าสู่ระเบียบนั้นในไม่ช้า",
+								"hindi": "वही एकमात्र है जो इस अराजकता को समाप्त कर सकता है। तुम लोग भी जल्द ही उस व्यवस्था में समाहित हो जाओगे।"
+							},
+							"emotion": "base"
+						},
+						{
+							"content": {
+								"korean": "헛소리 하지 마! 네 배신도 용서 못 해!",
+								"english": "Don't talk nonsense! I can't forgive your betrayal either!",
+								"japanese": "ふざけたこと言うな！お前の裏切りも許さない！",
+								"chinese": "别胡说八道！你的背叛也无法原谅！",
+								"french": "Ne dis pas n'importe quoi ! Je ne pardonnerai pas non plus ta trahison !",
+								"spanish": "¡No digas tonterías! ¡Tampoco puedo perdonar tu traición!",
+								"vietnamese": "Đừng có nói nhảm! Ta không thể tha thứ cho sự phản bội của ngươi!",
+								"thai": "อย่าพูดเหลวไหล! ฉันให้อภัยการทรยศของแกไม่ได้!",
+								"hindi": "बकवास मत करो! मैं तुम्हारी गद्दारी भी माफ नहीं कर सकता!"
+							},
+							"emotion": "angry",
+							"type": "speech",
+							"speaker": "character_any"
+						},
+						{
+							"speaker": "zoe",
+							"duration_ms": 400,
+							"direction": "down",
+							"type": "direction",
+							"action": "exit"
+						},
+						{
+							"content": {
+								"korean": "크크큭… 어리석은 분노는 시스템 오류일 뿐. 곧 삭제될 거다.",
+								"english": "Kukuku... Foolish rage is just a system error. It will soon be deleted.",
+								"japanese": "ククク…愚かな怒りはシステムのエラーに過ぎない。すぐに削除されるだろう。",
+								"chinese": "呵呵呵……愚蠢的愤怒不过是系统错误。很快就会被删除。",
+								"french": "Hahahaha... La rage insensée n'est qu'une erreur système. Elle sera bientôt supprimée.",
+								"spanish": "Jejeje... La ira estúpida no es más que un error del sistema. Pronto será eliminada.",
+								"vietnamese": "Khà khà khà... Cơn giận ngu ngốc chỉ là lỗi hệ thống thôi. Sẽ sớm bị xóa bỏ.",
+								"thai": "คิกๆๆ... ความโกรธที่โง่เขลาเป็นเพียงข้อผิดพลาดของระบบ มันจะถูกลบในไม่ช้า",
+								"hindi": "हीहीही… मूर्खतापूर्ण क्रोध केवल एक सिस्टम त्रुटि है। इसे जल्द ही हटा दिया जाएगा।"
+							},
+							"emotion": "base",
+							"type": "speech",
+							"speaker": "boss"
+						}
+					],
+					"win_dialogue": [
+						{
+							"action": "enter",
+							"spot": [
+								4,
+								2
+							],
+							"type": "direction",
+							"duration_ms": 500,
+							"speaker": "zoe"
+						},
+						{
+							"content": {
+								"korean": "말도 안 돼… 이럴 리가 없어….",
+								"english": "No way... This can't be...",
+								"japanese": "まさか…こんなはずがない…。",
+								"chinese": "不可能……这不可能……",
+								"french": "C'est impossible... Ça ne peut pas être vrai...",
+								"spanish": "No puede ser... Esto no puede estar pasando...",
+								"vietnamese": "Không thể nào... Không thể như vậy được...",
+								"thai": "เป็นไปไม่ได้... ไม่มีทางแบบนี้...",
+								"hindi": "नामुमकिन… ऐसा हो नहीं सकता…।"
+							},
+							"emotion": "sad",
+							"type": "speech",
+							"speaker": "zoe"
+						},
+						{
+							"content": {
+								"korean": "PixelGrim의 형체가 불안정하게 일렁였다. 데이터의 홍수가 터져 나왔다.",
+								"english": "PixelGrim's form flickered unstably. A flood of data burst forth.",
+								"japanese": "ピクセルグリムの形態が不安定に揺らめいた。データの洪水が噴き出した。",
+								"chinese": "PixelGrim的形态不稳定地闪烁着。数据洪流喷涌而出。",
+								"french": "La forme de PixelGrim vacillait instablement. Un déluge de données jaillit.",
+								"spanish": "La forma de PixelGrim parpadeó inestablemente. Una inundación de datos brotó.",
+								"vietnamese": "Hình dạng của PixelGrim chập chờn không ổn định. Một dòng lũ dữ liệu tuôn ra.",
+								"thai": "ร่างของ PixelGrim สั่นไหวอย่างไม่มั่นคง กระแสข้อมูลมหาศาลทะลักออกมา",
+								"hindi": "PixelGrim का आकार अस्थिर रूप से झिलमिलाया। डेटा का सैलाब उमड़ पड़ा।"
+							},
+							"emotion": "base",
+							"type": "speech",
+							"speaker": "narrator"
+						},
+						{
+							"content": {
+								"korean": "크크큭… 결국 모두가 내 구역으로 들어오는군! 완벽한 데이터… 완벽한 조직… 모든 게 내 손 안에 있다고!",
+								"english": "Kukuku... In the end, everyone enters my domain! Perfect data... perfect organization... everything is in my hands!",
+								"japanese": "ククク…結局、みんな私の領域に入ってくる！完璧なデータ…完璧な組織…すべてが私の手の中にあるんだ！",
+								"chinese": "呵呵呵……最终，所有人都会进入我的区域！完美的数据……完美的组织……一切都在我手中！",
+								"french": "Hahahaha... Au final, tout le monde entre dans mon domaine ! Des données parfaites... une organisation parfaite... tout est entre mes mains !",
+								"spanish": "Jejeje... ¡Al final, todos entran en mi dominio! Datos perfectos... organización perfecta... ¡todo está en mis manos!",
+								"vietnamese": "Khà khà khà... Cuối cùng thì tất cả cũng vào khu vực của ta! Dữ liệu hoàn hảo... tổ chức hoàn hảo... tất cả đều trong tay ta!",
+								"thai": "คิกๆๆ... ในที่สุดทุกคนก็เข้ามาในอาณาเขตของฉัน! ข้อมูลที่สมบูรณ์แบบ... การจัดระเบียบที่สมบูรณ์แบบ... ทุกสิ่งอยู่ในมือฉัน!",
+								"hindi": "हीहीही… आखिरकार, सब मेरे क्षेत्र में आ रहे हैं! सही डेटा… सही संगठन… सब कुछ मेरे हाथों में है!"
+							},
+							"emotion": "angry",
+							"type": "speech",
+							"speaker": "boss"
+						},
+						{
+							"speaker": "boss",
+							"type": "speech",
+							"content": {
+								"korean": "보스님을 배신한 자는… 전부 삭제될 뿐이야…! 오류? 아니… 이건… 질서다! 새로운 시대의… 질서!",
+								"english": "Those who betrayed the boss... will all be deleted! Error? No... this is... order! The order of a new era!",
+								"japanese": "ボスを裏切った者は…すべて削除されるだけだ…！エラー？いや…これは…秩序だ！新時代の…秩序！",
+								"chinese": "背叛老板的人……都会被删除！错误？不……这是……秩序！新时代的……秩序！",
+								"french": "Ceux qui ont trahi le boss... seront tous supprimés ! Erreur ? Non... c'est... l'ordre ! L'ordre d'une nouvelle ère !",
+								"spanish": "Aquellos que traicionaron al jefe... ¡serán todos eliminados! ¿Error? No... esto es... ¡orden! ¡El orden de una nueva era!",
+								"vietnamese": "Kẻ nào phản bội boss... đều sẽ bị xóa sổ thôi...! Lỗi ư? Không... đây là... trật tự! Trật tự của một kỷ nguyên mới!",
+								"thai": "พวกที่ทรยศเจ้านาย... จะถูกลบทั้งหมด! ข้อผิดพลาด? ไม่... นี่คือ... ระเบียบ! ระเบียบแห่งยุคใหม่!",
+								"hindi": "मालिक को धोखा देने वाले… सब मिटा दिए जाएंगे…! त्रुटि? नहीं… यह… व्यवस्था है! एक नए युग की… व्यवस्था!"
+							},
+							"emotion": "angry"
+						},
+						{
+							"type": "speech",
+							"speaker": "character_any",
+							"content": {
+								"korean": "이게 네가 말한 질서의 끝인가.",
+								"english": "Is this the end of the order you spoke of?",
+								"japanese": "これがお前が言った秩序の終わりか。",
+								"chinese": "这就是你所说的秩序的终结吗？",
+								"french": "Est-ce la fin de l'ordre dont tu parlais ?",
+								"spanish": "¿Es este el fin del orden del que hablabas?",
+								"vietnamese": "Đây là kết thúc của trật tự mà ngươi nói sao?",
+								"thai": "นี่คือจุดจบของระเบียบที่คุณพูดถึงหรือเปล่า",
+								"hindi": "क्या यही वह व्यवस्था का अंत है जिसकी तुमने बात की थी?"
+							},
+							"emotion": "angry"
+						},
+						{
+							"type": "speech",
+							"speaker": "character_any",
+							"content": {
+								"korean": "결국, 네 광기가 만들어낸 허상일 뿐이었어.",
+								"english": "In the end, it was just an illusion created by your madness.",
+								"japanese": "結局、お前の狂気が生み出した虚像に過ぎなかった。",
+								"chinese": "归根结底，这不过是你疯狂所创造的幻象。",
+								"french": "Au final, ce n'était qu'une illusion créée par ta folie.",
+								"spanish": "Al final, no era más que una ilusión creada por tu locura.",
+								"vietnamese": "Cuối cùng, đó chỉ là một ảo ảnh do sự điên rồ của ngươi tạo ra.",
+								"thai": "ในที่สุด มันก็เป็นเพียงภาพลวงตาที่เกิดจากความบ้าคลั่งของคุณ",
+								"hindi": "अंत में, यह केवल तुम्हारे पागलपन से बनाई गई एक माया थी।"
+							},
+							"emotion": "angry"
+						},
+						{
+							"duration_ms": 400,
+							"direction": "up",
+							"speaker": "zoe",
+							"action": "exit",
+							"type": "direction"
+						},
+						{
+							"type": "speech",
+							"speaker": "narrator",
+							"content": {
+								"korean": "시스템 코어는 마침내 침묵했다. 하지만, 디지털 잔상은 여전히 불안정하게 꿈틀거렸다.",
+								"english": "The system core finally fell silent. However, digital afterimages still flickered unstably.",
+								"japanese": "システムコアはついに沈黙した。しかし、デジタル残像は依然として不安定に蠢いていた。",
+								"chinese": "系统核心终于沉寂了。然而，数字残像仍在不稳定地蠕动着。",
+								"french": "Le cœur du système s'est finalement tu. Cependant, les rémanences numériques tremblaient toujours instablement.",
+								"spanish": "El núcleo del sistema finalmente enmudeció. Sin embargo, las postimágenes digitales seguían retorciéndose inestablemente.",
+								"vietnamese": "Lõi hệ thống cuối cùng đã im lặng. Tuy nhiên, dư ảnh kỹ thuật số vẫn còn nhấp nháy không ổn định.",
+								"thai": "แกนระบบเงียบลงในที่สุด ทว่าภาพติดตาแบบดิจิทัลยังคงบิดเบี้ยวอย่างไม่มั่นคง",
+								"hindi": "सिस्टम कोर आखिरकार खामोश हो गया। हालांकि, डिजिटल आफ्टरइमेज अभी भी अस्थिर रूप से हिल रहे थे।"
+							},
+							"emotion": "base"
+						},
+						{
+							"content": {
+								"korean": "…아직, 완전히 끝난 게 아니야.",
+								"english": "...It's not completely over yet.",
+								"japanese": "...まだ、完全に終わったわけじゃない。",
+								"chinese": "...还没完全结束。",
+								"french": "...Ce n'est pas encore complètement terminé.",
+								"spanish": "...Aún no ha terminado por completo.",
+								"vietnamese": "...Vẫn chưa kết thúc hoàn toàn.",
+								"thai": "...ยังไม่จบลงสมบูรณ์ทั้งหมด",
+								"hindi": "...अभी, पूरी तरह खत्म नहीं हुआ है।"
+							},
+							"emotion": "base",
+							"speaker": "character_any",
+							"type": "speech"
+						}
+					],
+					"lose_dialogue": [
+						{
+							"type": "speech",
+							"speaker": "boss",
+							"content": {
+								"korean": "하하하! 네 분노는 그저 내 시스템의 새로운 데이터일 뿐.",
+								"english": "Hahaha! Your rage is merely new data for my system.",
+								"japanese": "ハハハ！お前の怒りは、ただの私のシステムの新しいデータに過ぎない。",
+								"chinese": "哈哈哈！你的愤怒不过是我系统的新数据罢了。",
+								"french": "Hahaha ! Ta rage n'est que de nouvelles données pour mon système.",
+								"spanish": "¡Jajaja! Tu ira no es más que nuevos datos para mi sistema.",
+								"vietnamese": "Hahaha! Cơn thịnh nộ của ngươi chỉ là dữ liệu mới cho hệ thống của ta thôi.",
+								"thai": "ฮ่าฮ่าฮ่า! ความโกรธแค้นของแกเป็นเพียงข้อมูลใหม่สำหรับระบบของฉันเท่านั้น",
+								"hindi": "हाहाहा! तुम्हारा क्रोध मेरे सिस्टम के लिए बस एक नया डेटा है।"
+							},
+							"emotion": "happy"
+						},
+						{
+							"speaker": "zoe",
+							"duration_ms": 500,
+							"type": "direction",
+							"spot": [
+								5,
+								2
+							],
+							"action": "enter"
+						},
+						{
+							"content": {
+								"korean": "어리석은 시도였어. 결국 너도 질서에 편입될 운명이라고.",
+								"english": "A foolish attempt. Ultimately, you too are fated to become part of the order.",
+								"japanese": "愚かな試みだった。結局お前も秩序に組み込まれる運命だ。",
+								"chinese": "愚蠢的尝试。最终，你也会被纳入秩序的。",
+								"french": "Une tentative stupide. Au final, toi aussi es destiné à être intégré à l'ordre.",
+								"spanish": "Fue un intento estúpido. Al final, tú también estás destinado a ser incorporado al orden.",
+								"vietnamese": "Một nỗ lực ngu xuẩn. Cuối cùng, ngươi cũng sẽ bị đồng hóa vào trật tự thôi.",
+								"thai": "เป็นการพยายามที่โง่เขลา ท้ายที่สุด แกก็มีชะตาที่จะถูกรวมเข้ากับระเบียบ",
+								"hindi": "एक मूर्खतापूर्ण प्रयास था। अंत में, तुम भी व्यवस्था में शामिल होने के लिए बाध्य हो।"
+							},
+							"emotion": "base",
+							"speaker": "zoe",
+							"type": "speech"
+						},
+						{
+							"content": {
+								"korean": "아직 끝나지 않았어. 이 광기를 멈출 때까지 포기하지 않아.",
+								"english": "It's not over yet. I won't give up until this madness is stopped.",
+								"japanese": "まだ終わってない。この狂気を止めるまで、諦めない。",
+								"chinese": "还没结束。在阻止这场疯狂之前，我不会放弃。",
+								"french": "Ce n'est pas encore fini. Je n'abandonnerai pas tant que cette folie ne sera pas arrêtée.",
+								"spanish": "Aún no ha terminado. No me rendiré hasta que esta locura sea detenida.",
+								"vietnamese": "Vẫn chưa kết thúc. Tôi sẽ không bỏ cuộc cho đến khi ngăn chặn được sự điên rồ này.",
+								"thai": "ยังไม่จบ ฉันจะไม่ยอมแพ้จนกว่าจะหยุดความบ้าคลั่งนี้ได้",
+								"hindi": "अभी खत्म नहीं हुआ है। मैं इस पागलपन को रोकने तक हार नहीं मानूंगा।"
+							},
+							"emotion": "angry",
+							"speaker": "character_any",
+							"type": "speech"
+						},
+						{
+							"speaker": "boss",
+							"type": "speech",
+							"content": {
+								"korean": "계속 저항해 봐. 그 절망마저 나의 완벽한 질서가 될 테니.",
+								"english": "Go ahead, resist. Even that despair will become part of my perfect order.",
+								"japanese": "抵抗し続けてみろ。その絶望すら、私の完璧な秩序となるだろうから。",
+								"chinese": "继续抵抗吧。就连那绝望，也将成为我完美秩序的一部分。",
+								"french": "Continue de résister. Même ce désespoir deviendra une partie de mon ordre parfait.",
+								"spanish": "Sigue resistiendo. Incluso esa desesperación se convertirá en parte de mi orden perfecto.",
+								"vietnamese": "Cứ tiếp tục chống cự đi. Ngay cả sự tuyệt vọng đó cũng sẽ trở thành một phần trong trật tự hoàn hảo của ta thôi.",
+								"thai": "ลองต้านทานต่อไปสิ แม้แต่ความสิ้นหวังนั้นก็จะกลายเป็นส่วนหนึ่งของระเบียบที่สมบูรณ์แบบของฉัน",
+								"hindi": "विरोध करते रहो। वह निराशा भी मेरी पूर्ण व्यवस्था का हिस्सा बन जाएगी।"
+							},
+							"emotion": "base"
+						}
+					]
+				}
+			],
+			"prologue": {
+				"korean": [
+					"카운트다운이 멈춘 순간, 모든 것이 명확해졌다.",
+					"구원이라 믿었던 길은, 파멸로 향하는 함정이었다.",
+					"배신자의 미소 아래, 광기의 질서가 모습을 드러냈다.",
+					"이제 남은 것은 오직 분노. 그리고 최후의 저항뿐이다."
+				],
+				"english": [
+					"The moment the countdown stopped, everything became clear.",
+					"The path believed to be salvation was a trap leading to ruin.",
+					"Beneath the traitor's smile, the order of madness revealed itself.",
+					"Now, only fury remains. And the final resistance."
+				],
+				"japanese": [
+					"カウントダウンが止まった瞬間、すべてが明確になった。",
+					"救済と信じた道は、破滅へと続く罠だった。",
+					"裏切り者の笑顔の下、狂気の秩序が姿を現した。",
+					"残されたのは、ただ怒り。そして最後の抵抗だけだ。"
+				],
+				"chinese": [
+					"倒计时停止的那一刻，一切都变得清晰了。",
+					"曾以为是救赎之路，却是通向毁灭的陷阱。",
+					"在叛徒的笑容之下，疯狂的秩序显露无遗。",
+					"如今只剩下愤怒。以及最后的抵抗。"
+				],
+				"french": [
+					"L'instant où le compte à rebours s'est arrêté, tout est devenu clair.",
+					"Le chemin que l'on croyait être le salut n'était qu'un piège menant à la ruine.",
+					"Sous le sourire du traître, l'ordre de la folie se révéla.",
+					"Maintenant, il ne reste plus que la fureur. Et la dernière résistance."
+				],
+				"spanish": [
+					"En el momento en que la cuenta regresiva se detuvo, todo quedó claro.",
+					"El camino que creímos de salvación era una trampa que llevaba a la ruina.",
+					"Bajo la sonrisa del traidor, el orden de la locura se reveló.",
+					"Ahora, solo queda la ira. Y la resistencia final."
+				],
+				"vietnamese": [
+					"Khoảnh khắc đếm ngược dừng lại, mọi thứ trở nên rõ ràng.",
+					"Con đường tưởng là cứu rỗi, lại là cái bẫy dẫn đến hủy diệt.",
+					"Dưới nụ cười của kẻ phản bội, trật tự điên loạn đã lộ diện.",
+					"Giờ đây, chỉ còn lại sự phẫn nộ. Và cuộc kháng cự cuối cùng."
+				],
+				"thai": [
+					"ในวินาทีที่การนับถอยหลังหยุดลง ทุกสิ่งก็ชัดเจนขึ้นมา",
+					"เส้นทางที่เชื่อว่าเป็นความรอด คือกับดักที่นำไปสู่ความพินาศ",
+					"ใต้รอยยิ้มของคนทรยศ ระเบียบแห่งความบ้าคลั่งได้ปรากฏตัวขึ้น",
+					"บัดนี้เหลือเพียงความโกรธ และการต่อต้านครั้งสุดท้าย"
+				],
+				"hindi": [
+					"जिस क्षण उलटी गिनती रुकी, सब कुछ स्पष्ट हो गया।",
+					"जिस राह को मोक्ष समझा, वह विनाश की ओर ले जाने वाला जाल थी।",
+					"गद्दार की मुस्कान के नीचे, पागलपन का क्रम सामने आया।",
+					"अब केवल क्रोध शेष है। और अंतिम प्रतिरोध।"
+				]
+			}
+		}
+	]
+}

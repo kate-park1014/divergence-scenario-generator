@@ -1,0 +1,3467 @@
+{
+	"chapter_order": 15,
+	"difficulty_level": 15,
+	"chapter_name": {
+		"spanish": "El Mal Trato",
+		"english": "Hell Bargain",
+		"thai": "นรกสัญญา",
+		"chinese": "地狱的交易",
+		"vietnamese": "Địa Ngục",
+		"japanese": "地獄の取引",
+		"french": "Pacte Enfers",
+		"hindi": "नरक समझौता",
+		"korean": "지옥의 거래"
+	},
+	"scenarios": [
+		{
+			"scenario_id": "hell_dolor_14_01",
+			"order": 1,
+			"act": "intro",
+			"theme": "hell",
+			"actors": {
+				"brim": {
+					"id": "mon_d7f57824-190d-40b9-93d1-66c658f0441f",
+					"name": {
+						"korean": "브림",
+						"english": "Brim",
+						"japanese": "ブリム",
+						"chinese": "布里姆",
+						"french": "Brim",
+						"spanish": "Brim",
+						"vietnamese": "Brim",
+						"thai": "บริม",
+						"hindi": "ब्रिम"
+					},
+					"description": "",
+					"face_image_url": "https://imagedelivery.net/WTEqQNGFb-l-IHS6IGnzUQ/08ad0e4d-214d-43b3-dc3e-ddfba9049300/public",
+					"battle_sprite_url": "https://imagedelivery.net/WTEqQNGFb-l-IHS6IGnzUQ/16f1def2-7c33-4558-4b21-9c3e87fa3e00/public"
+				}
+			},
+			"boss": {
+				"pool_id": "random_boss"
+			},
+			"rooms": [
+				{
+					"id": 1,
+					"dialogue": [
+						{
+							"type": "speech",
+							"emotion": "base",
+							"speaker": "narrator",
+							"content": {
+								"korean": "지옥의 문이 열렸다. 끔찍한 비명 소리가 울려 퍼지는 곳.",
+								"english": "The gates of hell opened. A place where dreadful screams echoed.",
+								"japanese": "地獄の門が開かれた。恐ろしい悲鳴が響き渡る場所。",
+								"chinese": "地狱之门开启了。一个回荡着可怕尖叫声的地方。",
+								"french": "Les portes de l'enfer s'ouvrirent. Un lieu où résonnaient d'horribles cris.",
+								"spanish": "Las puertas del infierno se abrieron. Un lugar donde resonaban gritos terribles.",
+								"vietnamese": "Cánh cửa địa ngục đã mở. Nơi những tiếng thét kinh hoàng vang vọng.",
+								"thai": "ประตูแห่งนรกเปิดออก สถานที่ที่เสียงกรีดร้องอันน่าสะพรึงกลัวก้องกังวาน",
+								"hindi": "नर्क के द्वार खुल गए। एक ऐसी जगह जहाँ भयानक चीखें गूँज रही थीं।"
+							}
+						},
+						{
+							"emotion": "base",
+							"type": "speech",
+							"content": {
+								"korean": "여기가… 지옥?",
+								"english": "Is this... hell?",
+								"japanese": "ここが…地獄？",
+								"chinese": "这里是…地狱？",
+								"french": "C'est... l'enfer ?",
+								"spanish": "¿Esto es... el infierno?",
+								"vietnamese": "Đây là… địa ngục?",
+								"thai": "ที่นี่คือ... นรกงั้นเหรอ?",
+								"hindi": "क्या यह... नर्क है?"
+							},
+							"speaker": "character_any"
+						},
+						{
+							"type": "direction",
+							"action": "enter",
+							"duration_ms": 500,
+							"spot": [
+								5,
+								2
+							],
+							"speaker": "brim"
+						},
+						{
+							"speaker": "brim",
+							"content": {
+								"korean": "어서 와, 손님들. 이곳은 '계약'으로 움직이는 곳.",
+								"english": "Welcome, guests. This place operates by 'contract'.",
+								"japanese": "ようこそ、お客様方。ここは「契約」で動く場所だ。",
+								"chinese": "欢迎，客人们。这里是靠“契约”运作的地方。",
+								"french": "Bienvenue, chers invités. Ce lieu fonctionne par 'contrat'.",
+								"spanish": "Bienvenidos, invitados. Este lugar funciona por 'contrato'.",
+								"vietnamese": "Chào mừng, các vị khách. Nơi đây vận hành bằng 'hợp đồng'.",
+								"thai": "ยินดีต้อนรับ แขกผู้มีเกียรติ ที่นี่ขับเคลื่อนด้วย 'สัญญา'",
+								"hindi": "स्वागत है, मेहमानों। यह जगह 'अनुबंध' से चलती है।"
+							},
+							"type": "speech",
+							"emotion": "base"
+						},
+						{
+							"emotion": "base",
+							"type": "speech",
+							"content": {
+								"korean": "잃어버린 것을 되찾고 싶다면, 거래를 해야지.",
+								"english": "If you wish to reclaim what you've lost, you must make a deal.",
+								"japanese": "失ったものを取り戻したいなら、取引をするべきだ。",
+								"chinese": "若想找回失去之物，就得交易。",
+								"french": "Si vous voulez récupérer ce que vous avez perdu, vous devez faire un marché.",
+								"spanish": "Si quieres recuperar lo que has perdido, debes hacer un trato.",
+								"vietnamese": "Nếu muốn lấy lại những gì đã mất, ngươi phải giao dịch.",
+								"thai": "หากท่านต้องการทวงคืนสิ่งที่สูญเสียไป ท่านต้องทำข้อตกลง",
+								"hindi": "यदि तुम खोई हुई चीज़ें वापस पाना चाहते हो, तो तुम्हें सौदा करना होगा।"
+							},
+							"speaker": "brim"
+						},
+						{
+							"emotion": "base",
+							"type": "speech",
+							"content": {
+								"korean": "무슨 소리야.",
+								"english": "What are you talking about?",
+								"japanese": "何を言ってるんだ。",
+								"chinese": "你在说什么。",
+								"french": "Qu'est-ce que tu racontes ?",
+								"spanish": "¿De qué hablas?",
+								"vietnamese": "Ngươi nói gì vậy?",
+								"thai": "พูดอะไรน่ะ?",
+								"hindi": "क्या बक रहे हो।"
+							},
+							"speaker": "character_any"
+						},
+						{
+							"type": "speech",
+							"emotion": "base",
+							"speaker": "brim",
+							"content": {
+								"korean": "네가 가장 원하는 것. 그 대가는… 아주 공정하지.",
+								"english": "What you desire most. The price for it is... very fair.",
+								"japanese": "君が最も望むもの。その代償は…非常に公平だ。",
+								"chinese": "你最渴望之物。其代价……非常公平。",
+								"french": "Ce que tu désires le plus. Le prix à payer est... très juste.",
+								"spanish": "Lo que más deseas. El precio... es muy justo.",
+								"vietnamese": "Điều ngươi khao khát nhất. Cái giá của nó… rất công bằng.",
+								"thai": "สิ่งที่ท่านปรารถนามากที่สุด ค่าตอบแทนนั้น... ยุติธรรมยิ่งนัก",
+								"hindi": "जो तुम सबसे ज़्यादा चाहते हो। उसकी कीमत... बहुत उचित है।"
+							}
+						}
+					]
+				},
+				{
+					"id": 3,
+					"dialogue": [
+						{
+							"speaker": "brim",
+							"spot": [
+								5,
+								2
+							],
+							"action": "enter",
+							"duration_ms": 500,
+							"type": "direction"
+						},
+						{
+							"speaker": "brim",
+							"content": {
+								"korean": "어떤 계약도 불가능은 없어. 원하는 게 있다면.",
+								"english": "No contract is impossible, if you truly desire it.",
+								"japanese": "どんな契約も不可能ではない。望みがあるなら。",
+								"chinese": "任何契约都没有不可能，只要你有所求。",
+								"french": "Aucun contrat n'est impossible, si tu as un désir.",
+								"spanish": "Ningún contrato es imposible, si tienes un deseo.",
+								"vietnamese": "Không hợp đồng nào là không thể, nếu ngươi có mong muốn.",
+								"thai": "ไม่มีสัญญาใดที่เป็นไปไม่ได้ หากเจ้ามีความปรารถนา.",
+								"hindi": "कोई भी अनुबंध असंभव नहीं है, यदि तुम्हारी कोई इच्छा है।"
+							},
+							"emotion": "base",
+							"type": "speech"
+						},
+						{
+							"speaker": "character_1",
+							"content": {
+								"korean": "우리가 잃어버린 건… 돌려받을 수 있어?",
+								"english": "What we've lost... can it be returned?",
+								"japanese": "我々が失ったもの…取り戻せるのか？",
+								"chinese": "我们失去的…能找回来吗？",
+								"french": "Ce que nous avons perdu… peut-on le récupérer ?",
+								"spanish": "¿Lo que perdimos… puede ser devuelto?",
+								"vietnamese": "Những gì chúng ta đã mất... có thể lấy lại được không?",
+								"thai": "สิ่งที่เราสูญเสียไป... จะได้คืนมาไหม?",
+								"hindi": "जो हमने खोया है... क्या वह वापस मिल सकता है?"
+							},
+							"type": "speech",
+							"emotion": "base"
+						},
+						{
+							"speaker": "brim",
+							"content": {
+								"korean": "물론이지. 이 계약서에 서명만 하면 돼.",
+								"english": "Of course. Just sign this contract.",
+								"japanese": "もちろん。この契約書に署名するだけでいい。",
+								"chinese": "当然。只要在这份契约上签名就好。",
+								"french": "Bien sûr. Il suffit de signer ce contrat.",
+								"spanish": "Por supuesto. Solo tienes que firmar este contrato.",
+								"vietnamese": "Tất nhiên rồi. Ngươi chỉ cần ký vào hợp đồng này.",
+								"thai": "แน่นอน แค่ลงนามในสัญญานี้ก็พอ.",
+								"hindi": "बेशक। बस इस अनुबंध पर हस्ताक्षर करो।"
+							},
+							"type": "speech",
+							"emotion": "base"
+						},
+						{
+							"content": {
+								"korean": "(계약서를 본다) 내용이… 너무 일방적이잖아.",
+								"english": "(Looks at contract) The terms are... too one-sided.",
+								"japanese": "(契約書を見る) 内容が…あまりにも一方的だ。",
+								"chinese": "(看着契约) 内容…也太单方面了。",
+								"french": "(Regarde le contrat) Les termes sont… trop unilatéraux.",
+								"spanish": "(Mira el contrato) Los términos son… demasiado unilaterales.",
+								"vietnamese": "(Nhìn hợp đồng) Nội dung... quá đơn phương.",
+								"thai": "(มองสัญญา) เนื้อหา... มันฝ่ายเดียวเกินไป.",
+								"hindi": "(अनुबंध देखता है) शर्तें... बहुत एकतरफा हैं।"
+							},
+							"speaker": "character_any",
+							"type": "speech",
+							"emotion": "angry"
+						},
+						{
+							"type": "speech",
+							"emotion": "base",
+							"content": {
+								"korean": "지옥에서 공정이란 건 없어, 손님. 익숙해질 거야.",
+								"english": "There's no fairness in hell, guest. You'll get used to it.",
+								"japanese": "地獄に公平さなどない、お客様。すぐに慣れるさ。",
+								"chinese": "在地狱里没有公平可言，客人。你会习惯的。",
+								"french": "Il n'y a pas de justice en enfer, étranger. Tu t'y habitueras.",
+								"spanish": "No hay justicia en el infierno, invitado. Te acostumbrarás.",
+								"vietnamese": "Ở địa ngục không có sự công bằng đâu, khách nhân. Ngươi sẽ quen thôi.",
+								"thai": "ในนรกไม่มีความยุติธรรมหรอก แขกเอ๋ย เจ้าจะชินไปเอง.",
+								"hindi": "नरक में कोई निष्पक्षता नहीं है, अतिथि। तुम्हें इसकी आदत पड़ जाएगी।"
+							},
+							"speaker": "brim"
+						}
+					]
+				},
+				{
+					"id": 5,
+					"dialogue": [
+						{
+							"type": "direction",
+							"duration_ms": 500,
+							"action": "enter",
+							"spot": [
+								5,
+								2
+							],
+							"speaker": "brim"
+						},
+						{
+							"speaker": "brim",
+							"content": {
+								"korean": "후회할 거야. 여기서 희망을 버리는 자는.",
+								"english": "You'll regret it, those who abandon hope here.",
+								"japanese": "後悔するだろう。ここで希望を捨てる者は。",
+								"chinese": "你会后悔的。在此放弃希望之人。",
+								"french": "Tu le regretteras. Ceux qui abandonnent l'espoir ici.",
+								"spanish": "Lo lamentarás. Aquellos que abandonen la esperanza aquí.",
+								"vietnamese": "Ngươi sẽ hối hận đấy. Kẻ nào từ bỏ hy vọng ở đây.",
+								"thai": "เจ้าจะเสียใจ ผู้ที่ละทิ้งความหวังที่นี่.",
+								"hindi": "तुम्हें पछतावा होगा। जो यहाँ उम्मीद छोड़ते हैं।"
+							},
+							"emotion": "base",
+							"type": "speech"
+						},
+						{
+							"speaker": "character_2",
+							"content": {
+								"korean": "뭘 후회해? 이 불합리한 곳에서.",
+								"english": "Regret what? In this unreasonable place.",
+								"japanese": "何を後悔する？この不合理な場所で。",
+								"chinese": "后悔什么？在这个不合理的地方。",
+								"french": "Regretter quoi ? Dans cet endroit déraisonnable.",
+								"spanish": "¿De qué arrepentirse? En este lugar irrazonable.",
+								"vietnamese": "Hối hận cái gì? Ở cái nơi bất hợp lý này.",
+								"thai": "เสียใจอะไร? ในสถานที่ที่ไม่สมเหตุสมผลแห่งนี้.",
+								"hindi": "किस बात का पछतावा? इस बेतुकी जगह में।"
+							},
+							"type": "speech",
+							"emotion": "angry"
+						},
+						{
+							"content": {
+								"korean": "네가 잃어버린 것. 그걸 되찾을 유일한 기회니까.",
+								"english": "What you lost. It's the only chance to get it back.",
+								"japanese": "お前が失ったもの。それを取り戻す唯一の機会だからな。",
+								"chinese": "你失去的东西。因为这是你找回它的唯一机会。",
+								"french": "Ce que tu as perdu. C'est la seule chance de le récupérer.",
+								"spanish": "Lo que perdiste. Es la única oportunidad de recuperarlo.",
+								"vietnamese": "Những gì ngươi đã mất. Vì đây là cơ hội duy nhất để lấy lại chúng.",
+								"thai": "สิ่งที่เจ้าสูญเสียไป มันคือโอกาสเดียวที่จะได้มันคืน.",
+								"hindi": "जो तुमने खोया है। उसे वापस पाने का यह एकमात्र अवसर है।"
+							},
+							"speaker": "brim",
+							"type": "speech",
+							"emotion": "base"
+						},
+						{
+							"type": "speech",
+							"emotion": "angry",
+							"speaker": "character_any",
+							"content": {
+								"korean": "우리는 너희와 계약할 생각 없어.",
+								"english": "We have no intention of contracting with you.",
+								"japanese": "我々は貴様らと契約するつもりはない。",
+								"chinese": "我们不打算和你们签订契约。",
+								"french": "Nous n'avons aucune intention de contracter avec vous.",
+								"spanish": "No tenemos intención de contratar con vosotros.",
+								"vietnamese": "Chúng tôi không có ý định ký hợp đồng với các ngươi.",
+								"thai": "เราไม่มีความตั้งใจที่จะทำสัญญากับพวกเจ้า.",
+								"hindi": "हम तुमसे अनुबंध करने का इरादा नहीं रखते।"
+							}
+						},
+						{
+							"type": "speech",
+							"emotion": "base",
+							"content": {
+								"korean": "곧 알게 될 거야. 이곳에서 '선택'이란 사치라는 걸.",
+								"english": "You'll soon realize. That 'choice' is a luxury in this place.",
+								"japanese": "すぐにわかるだろう。ここで『選択』とは贅沢だということを。",
+								"chinese": "你很快就会明白。在这里，‘选择’是一种奢侈。",
+								"french": "Tu comprendras bientôt. Qu'ici, le 'choix' est un luxe.",
+								"spanish": "Pronto te darás cuenta. Que la 'elección' es un lujo en este lugar.",
+								"vietnamese": "Ngươi sẽ sớm nhận ra thôi. Rằng 'lựa chọn' là một điều xa xỉ ở nơi này.",
+								"thai": "เจ้าจะรู้ในไม่ช้า ว่า 'ทางเลือก' เป็นสิ่งฟุ่มเฟือยในสถานที่แห่งนี้.",
+								"hindi": "तुम्हें जल्द ही पता चल जाएगा। कि यहाँ 'विकल्प' एक विलासिता है।"
+							},
+							"speaker": "brim"
+						}
+					]
+				},
+				{
+					"id": 9,
+					"dialogue": [
+						{
+							"spot": [
+								5,
+								2
+							],
+							"speaker": "brim",
+							"action": "enter",
+							"duration_ms": 500,
+							"type": "direction"
+						},
+						{
+							"emotion": "base",
+							"type": "speech",
+							"content": {
+								"korean": "도망칠 수 없어. 지옥은 너희를 놓아주지 않아.",
+								"english": "No escape. Hell won't let you go.",
+								"japanese": "逃げられない。地獄はお前たちを離さない。",
+								"chinese": "无处可逃。地狱不会放过你们。",
+								"french": "Pas d'échappatoire. L'enfer ne vous lâchera pas.",
+								"spanish": "No hay escape. El infierno no os soltará.",
+								"vietnamese": "Không thể thoát. Địa ngục sẽ không buông tha các ngươi.",
+								"thai": "หนีไม่พ้น หุบเหวนรกจะไม่ปล่อยพวกเจ้าไป",
+								"hindi": "भाग नहीं सकते। नर्क तुम्हें नहीं छोड़ेगा।"
+							},
+							"speaker": "brim"
+						},
+						{
+							"content": {
+								"korean": "웃기지 마! 우린 나갈 거야!",
+								"english": "Don't make me laugh! We're getting out!",
+								"japanese": "ふざけるな！俺たちはここを出る！",
+								"chinese": "别开玩笑了！我们一定会出去！",
+								"french": "Ne me faites pas rire ! Nous allons sortir !",
+								"spanish": "¡No me hagas reír! ¡Saldremos de aquí!",
+								"vietnamese": "Đừng có đùa! Chúng ta sẽ thoát ra!",
+								"thai": "อย่ามาล้อเล่นนะ! พวกเราจะออกไปให้ได้!",
+								"hindi": "हँसाओ मत! हम बाहर निकलेंगे!"
+							},
+							"speaker": "character_3",
+							"type": "speech",
+							"emotion": "angry"
+						},
+						{
+							"type": "speech",
+							"emotion": "base",
+							"speaker": "brim",
+							"content": {
+								"korean": "허울뿐인 희망이 너희를 더 깊은 절망으로 이끌 뿐.",
+								"english": "False hope will only lead you deeper into despair.",
+								"japanese": "偽りの希望は、お前たちをより深い絶望へと誘うだけだ。",
+								"chinese": "虚假的希望只会将你们引向更深的绝望。",
+								"french": "L'espoir illusoire ne fera que vous plonger plus profondément dans le désespoir.",
+								"spanish": "Una esperanza vana solo os conducirá a una desesperación más profunda.",
+								"vietnamese": "Hy vọng hão huyền chỉ đẩy các ngươi vào vực sâu tuyệt vọng hơn.",
+								"thai": "ความหวังจอมปลอมจะนำพวกเจ้าไปสู่ความสิ้นหวังที่ลึกซึ้งยิ่งขึ้นเท่านั้น",
+								"hindi": "झूठी उम्मीद तुम्हें और गहरे निराशा में धकेलेगी।"
+							}
+						},
+						{
+							"content": {
+								"korean": "우리는… 포기하지 않아!",
+								"english": "We... won't give up!",
+								"japanese": "私たちは…諦めない！",
+								"chinese": "我们…不会放弃！",
+								"french": "Nous… n'abandonnerons pas !",
+								"spanish": "¡Nosotros… no nos rendiremos!",
+								"vietnamese": "Chúng ta… sẽ không bỏ cuộc!",
+								"thai": "พวกเรา... ไม่ยอมแพ้!",
+								"hindi": "हम… हार नहीं मानेंगे!"
+							},
+							"speaker": "character_any",
+							"type": "speech",
+							"emotion": "angry"
+						},
+						{
+							"speaker": "brim",
+							"content": {
+								"korean": "후훗. 그 오만함이 계약의 대가를 더 키울 텐데.",
+								"english": "Heh. Such arrogance will only increase the cost of the contract.",
+								"japanese": "フフッ。その傲慢さが、契約の代償をさらに大きくするだろう。",
+								"chinese": "呵呵。这份傲慢只会让契约的代价更大。",
+								"french": "Héhé. Cette arrogance ne fera qu'augmenter le prix du contrat.",
+								"spanish": "Jeje. Esa arrogancia solo aumentará el precio del contrato.",
+								"vietnamese": "Hừm. Sự ngạo mạn đó sẽ chỉ làm tăng giá của giao ước.",
+								"thai": "หึๆ ความโอหังนั้นจะยิ่งเพิ่มค่าตอบแทนของสัญญา",
+								"hindi": "हुह। यह घमंड ही अनुबंध की कीमत बढ़ाएगा।"
+							},
+							"type": "speech",
+							"emotion": "happy"
+						}
+					]
+				},
+				{
+					"win_dialogue": [
+						{
+							"speaker": "random_boss",
+							"content": {
+								"korean": "흥… 고작 이 정도인가. 진짜 대가는 이제부터다.",
+								"english": "Hmph… Is this all you've got? The real price is yet to come.",
+								"japanese": "フン…たったこれしきか。本当の代償はこれからだ。",
+								"chinese": "哼…就这点本事吗。真正的代价才刚刚开始。",
+								"french": "Hmm… C'est tout ce que vous avez ? Le vrai prix est à venir.",
+								"spanish": "Hmph… ¿Esto es todo lo que tenéis? El verdadero precio está por llegar.",
+								"vietnamese": "Hừm… Chỉ có thế này thôi sao. Cái giá thật sự bây giờ mới bắt đầu.",
+								"thai": "หึ… แค่นี้เองหรือ ค่าตอบแทนที่แท้จริงนับจากนี้ต่างหาก",
+								"hindi": "हम्म… बस इतना ही? असली कीमत तो अब शुरू होगी।"
+							},
+							"type": "speech",
+							"emotion": "base"
+						},
+						{
+							"content": {
+								"korean": "이게 끝이 아니라고?",
+								"english": "This isn't the end?",
+								"japanese": "これが終わりじゃないのか？",
+								"chinese": "这还没结束吗？",
+								"french": "Ce n'est pas la fin ?",
+								"spanish": "¿Esto no es el final?",
+								"vietnamese": "Đây chưa phải là kết thúc sao?",
+								"thai": "นี่ไม่ใช่จุดสิ้นสุดเหรอ?",
+								"hindi": "क्या यह अंत नहीं है?"
+							},
+							"speaker": "character_any",
+							"type": "speech",
+							"emotion": "sad"
+						},
+						{
+							"type": "speech",
+							"emotion": "base",
+							"content": {
+								"korean": "너희가 맺은 모든 계약이… 너희의 목줄이 될 테니.",
+								"english": "All your contracts... will become your leashes.",
+								"japanese": "お前たちが結んだすべての契約が… お前たちの首輪となるだろう。",
+								"chinese": "你们所订立的一切契约… 都将成为你们的枷锁。",
+								"french": "Tous vos contrats... deviendront vos laisses.",
+								"spanish": "Todos vuestros contratos... se convertirán en vuestras cadenas.",
+								"vietnamese": "Mọi khế ước các ngươi đã lập... sẽ trở thành dây xích của các ngươi.",
+								"thai": "สัญญาที่พวกเจ้าทำไว้ทั้งหมด... จะกลายเป็นปลอกคอของพวกเจ้าเอง",
+								"hindi": "तुम्हारे सभी अनुबंध... तुम्हारी ज़ंजीरें बन जाएंगे।"
+							},
+							"speaker": "random_boss"
+						},
+						{
+							"emotion": "base",
+							"type": "speech",
+							"content": {
+								"korean": "거대한 그림자는 사라졌지만, 그 말이 탐험대의 마음에 남았다.",
+								"english": "The colossal shadow vanished, but its words lingered in the expedition's mind.",
+								"japanese": "巨大な影は消え去ったが、その言葉は探検隊の心に残った。",
+								"chinese": "巨大的阴影消失了，但它的话语却留在了探险队的心中。",
+								"french": "L'ombre colossale disparut, mais ses mots restèrent gravés dans l'esprit de l'expédition.",
+								"spanish": "La sombra colosal desapareció, pero sus palabras permanecieron en la mente de la expedición.",
+								"vietnamese": "Bóng đen khổng lồ biến mất, nhưng lời nói của nó vẫn đọng lại trong tâm trí đội thám hiểm.",
+								"thai": "เงายักษ์หายไปแล้ว แต่คำพูดของมันยังคงอยู่ในใจของคณะสำรวจ",
+								"hindi": "विशालकाय छाया गायब हो गई, लेकिन उसके शब्द अभियान के मन में रह गए।"
+							},
+							"speaker": "narrator"
+						},
+						{
+							"emotion": "base",
+							"type": "speech",
+							"content": {
+								"korean": "승리했지만, 지옥의 속삭임은 더 깊숙이 파고들었다.",
+								"english": "Victory was theirs, yet hell's whispers burrowed deeper.",
+								"japanese": "勝利はしたものの、地獄の囁きはさらに深く心に食い込んだ。",
+								"chinese": "虽获得胜利，但地狱的低语却愈发深入人心。",
+								"french": "La victoire fut leur, pourtant les murmures de l'enfer s'enfoncèrent plus profondément.",
+								"spanish": "La victoria fue suya, pero los susurros del infierno se clavaron más profundamente.",
+								"vietnamese": "Chiến thắng đã đến, nhưng lời thì thầm của địa ngục lại càng len lỏi sâu hơn.",
+								"thai": "แม้จะได้รับชัยชนะ แต่เสียงกระซิบจากนรกก็ฝังลึกลงไปอีก",
+								"hindi": "जीत उनकी थी, फिर भी नर्क की फुसफुसाहटें और गहरी उतर गईं।"
+							},
+							"speaker": "narrator"
+						}
+					],
+					"dialogue": [
+						{
+							"emotion": "base",
+							"type": "speech",
+							"speaker": "narrator",
+							"content": {
+								"korean": "거대한 그림자가 앞을 가로막았다. 정체 모를 어둠이 느껴진다.",
+								"english": "A massive shadow blocked the way. An unknown darkness emanated from it.",
+								"japanese": "巨大な影が道を塞いだ。正体不明の闇を感じる。",
+								"chinese": "巨大的黑影挡住了去路。感受到一股莫名的黑暗。",
+								"french": "Une ombre immense bloqua le chemin. Une obscurité inconnue s'en dégageait.",
+								"spanish": "Una sombra gigantesca bloqueó el paso. Se siente una oscuridad desconocida.",
+								"vietnamese": "Một bóng đen khổng lồ chặn đường. Cảm nhận được một sự u ám vô danh.",
+								"thai": "เงาขนาดใหญ่ขวางทาง ความมืดมิดที่ระบุไม่ได้กำลังรู้สึกได้",
+								"hindi": "एक विशाल छाया ने रास्ता रोक दिया। एक अज्ञात अंधकार महसूस हो रहा है।"
+							}
+						},
+						{
+							"emotion": "angry",
+							"type": "speech",
+							"content": {
+								"korean": "감히… 이곳의 질서를 거스르려는가.",
+								"english": "How dare you… defy the order of this place?",
+								"japanese": "よくも…ここの秩序に逆らおうとするか。",
+								"chinese": "竟敢…违抗此地的秩序。",
+								"french": "Comment osez-vous… défier l'ordre de ce lieu ?",
+								"spanish": "Cómo osas… desafiar el orden de este lugar.",
+								"vietnamese": "Dám… chống lại trật tự nơi đây sao.",
+								"thai": "บังอาจ… ท้าทายระเบียบของที่นี่รึ",
+								"hindi": "तुम्हारी हिम्मत कैसे हुई… यहाँ की व्यवस्था का उल्लंघन करने की।"
+							},
+							"speaker": "random_boss"
+						},
+						{
+							"type": "speech",
+							"emotion": "angry",
+							"speaker": "character_any",
+							"content": {
+								"korean": "너희의 질서 따윈 인정 안 해.",
+								"english": "We don't acknowledge your order.",
+								"japanese": "お前たちの秩序など、認めない。",
+								"chinese": "我们不承认你们的秩序。",
+								"french": "Nous ne reconnaissons pas votre ordre.",
+								"spanish": "No reconocemos vuestro orden.",
+								"vietnamese": "Chúng tôi không công nhận trật tự của các ngươi.",
+								"thai": "พวกเราไม่ยอมรับระเบียบของพวกเจ้าหรอก",
+								"hindi": "हम तुम्हारी व्यवस्था को नहीं मानते।"
+							}
+						},
+						{
+							"type": "speech",
+							"emotion": "base",
+							"content": {
+								"korean": "후회할 거다. 네 어리석음이… 대가를 치르게 할 것이다.",
+								"english": "You will regret this. Your foolishness… will make you pay.",
+								"japanese": "後悔するぞ。お前の愚かさが…代償を払わせるだろう。",
+								"chinese": "你会后悔的。你的愚蠢…会让你付出代价。",
+								"french": "Vous le regretterez. Votre folie… vous fera payer.",
+								"spanish": "Lo lamentarás. Tu estupidez… te hará pagar.",
+								"vietnamese": "Ngươi sẽ phải hối hận. Sự ngu ngốc của ngươi… sẽ khiến ngươi phải trả giá.",
+								"thai": "เจ้าจะเสียใจ ความโง่เขลาของเจ้า… จะทำให้เจ้าต้องชดใช้",
+								"hindi": "तुम्हें पछताना पड़ेगा। तुम्हारी मूर्खता… तुम्हें कीमत चुकवाएगी।"
+							},
+							"speaker": "random_boss"
+						}
+					],
+					"lose_dialogue": [
+						{
+							"type": "speech",
+							"emotion": "base",
+							"content": {
+								"korean": "압도적인 힘 앞에 무릎 꿇었다.",
+								"english": "They knelt before overwhelming power.",
+								"japanese": "圧倒的な力の前にひざまずいた。",
+								"chinese": "在压倒性的力量面前跪下了。",
+								"french": "Ils s'agenouillèrent devant une puissance écrasante.",
+								"spanish": "Se arrodillaron ante un poder abrumador.",
+								"vietnamese": "Họ quỳ gối trước sức mạnh áp đảo.",
+								"thai": "คุกเข่าต่อหน้าพลังอันท่วมท้น",
+								"hindi": "वे प्रचंड शक्ति के सामने घुटने टेक गए।"
+							},
+							"speaker": "narrator"
+						},
+						{
+							"type": "speech",
+							"emotion": "angry",
+							"content": {
+								"korean": "고작 이런 힘으로… {random_boss}의 계약을 깨려 했나.",
+								"english": "With mere power like this... you dared to defy {random_boss}'s contract?",
+								"japanese": "たかがこんな力で… {random_boss}の契約を破ろうとしたのか。",
+								"chinese": "就凭这点力量… 也想打破{random_boss}的契约吗？",
+								"french": "Avec une telle puissance... osiez-vous briser le contrat de {random_boss} ?",
+								"spanish": "¿Con tan solo este poder... intentaste romper el contrato de {random_boss}?",
+								"vietnamese": "Chỉ với chút sức mạnh này... mà dám phá vỡ khế ước của {random_boss} sao?",
+								"thai": "ด้วยพลังแค่นี้... คิดจะทำลายสัญญาของ {random_boss} รึ?",
+								"hindi": "क्या इतनी सी शक्ति से... तुमने {random_boss} का अनुबंध तोड़ने की कोशिश की?"
+							},
+							"speaker": "random_boss"
+						},
+						{
+							"content": {
+								"korean": "빌어먹을… 아직 끝나지 않았어!",
+								"english": "Damn it... it's not over yet!",
+								"japanese": "ちくしょう… まだ終わってない！",
+								"chinese": "该死… 还没结束！",
+								"french": "Maudits... Ce n'est pas encore fini !",
+								"spanish": "Maldita sea... ¡Todavía no ha terminado!",
+								"vietnamese": "Chết tiệt... vẫn chưa kết thúc!",
+								"thai": "ให้ตายสิ... ยังไม่จบแค่นี้!",
+								"hindi": "लानत है... यह अभी खत्म नहीं हुआ है!"
+							},
+							"speaker": "character_any",
+							"emotion": "angry",
+							"type": "speech"
+						},
+						{
+							"content": {
+								"korean": "다음번엔… 더 큰 절망을 안겨주마.",
+								"english": "Next time... I'll bring you even greater despair.",
+								"japanese": "次回は… さらなる絶望を与えてやろう。",
+								"chinese": "下次… 我会带给你们更大的绝望。",
+								"french": "La prochaine fois... je vous apporterai un désespoir encore plus grand.",
+								"spanish": "La próxima vez... te traeré una desesperación aún mayor.",
+								"vietnamese": "Lần tới... ta sẽ mang đến cho ngươi nỗi tuyệt vọng lớn hơn.",
+								"thai": "คราวหน้า... ข้าจะนำพาความสิ้นหวังที่ยิ่งใหญ่กว่ามาให้",
+								"hindi": "अगली बार... मैं तुम्हें और अधिक निराशा दूंगा।"
+							},
+							"speaker": "random_boss",
+							"emotion": "base",
+							"type": "speech"
+						}
+					],
+					"id": 15
+				}
+			],
+			"prologue": {
+				"korean": [
+					"끝없는 절망, 그곳이 지옥의 입구였다.",
+					"모든 희망은 이곳에서 계약이 된다.",
+					"잃어버린 것을 되찾으려면, 값을 치러야만 했다.",
+					"불공정한 계약만이 가득한 곳에서, 그들은 첫 발을 내디뎠다."
+				],
+				"english": [
+					"Endless despair, that was the entrance to hell.",
+					"All hope is contracted here.",
+					"To reclaim what was lost, a price had to be paid.",
+					"In a place filled only with unfair contracts, they took their first step."
+				],
+				"japanese": [
+					"終わりのない絶望、そこが地獄の入り口だった。",
+					"全ての希望はここで契約となる。",
+					"失ったものを取り戻すには、代償を払わねばならなかった。",
+					"不公平な契約のみが満ちる場所で、彼らは最初の一歩を踏み出した。"
+				],
+				"chinese": [
+					"无尽的绝望，那里是地狱的入口。",
+					"所有的希望都在此被契约。",
+					"若要找回失去之物，便必须付出代价。",
+					"在一个只有不公契约的地方，他们迈出了第一步。"
+				],
+				"french": [
+					"Un désespoir sans fin, voilà l'entrée de l'enfer.",
+					"Tout espoir est lié par un contrat ici.",
+					"Pour récupérer ce qui était perdu, un prix devait être payé.",
+					"Dans un lieu rempli de contrats injustes, ils firent leur premier pas."
+				],
+				"spanish": [
+					"Desesperación infinita, esa era la entrada al infierno.",
+					"Toda esperanza se convierte en un contrato aquí.",
+					"Para recuperar lo perdido, había que pagar un precio.",
+					"En un lugar lleno solo de contratos injustos, dieron su primer paso."
+				],
+				"vietnamese": [
+					"Tuyệt vọng không hồi kết, đó là lối vào địa ngục.",
+					"Mọi hy vọng đều được ký kết tại đây.",
+					"Để lấy lại những gì đã mất, phải trả một cái giá.",
+					"Ở nơi chỉ đầy rẫy những hợp đồng bất công, họ đã đặt bước chân đầu tiên."
+				],
+				"thai": [
+					"ความสิ้นหวังไม่รู้จบ ที่นั่นคือทางเข้าสู่นรก",
+					"ทุกความหวังจะถูกผูกมัดด้วยสัญญาที่นี่",
+					"เพื่อทวงคืนสิ่งที่สูญเสียไป จะต้องจ่ายราคา",
+					"ในสถานที่ที่เต็มไปด้วยสัญญาที่ไม่ยุติธรรม พวกเขาได้ก้าวแรก"
+				],
+				"hindi": [
+					"अंतहीन निराशा, वही नर्क का प्रवेश द्वार था।",
+					"सारी आशाएँ यहाँ अनुबंधित होती हैं।",
+					"जो खो गया था उसे वापस पाने के लिए, कीमत चुकानी पड़ी।",
+					"केवल अनुचित अनुबंधों से भरी जगह में, उन्होंने अपना पहला कदम रखा।"
+				]
+			}
+		},
+		{
+			"scenario_id": "hell_dolor_14_02",
+			"order": 2,
+			"act": "rising",
+			"theme": "hell",
+			"actors": {
+				"char": {
+					"id": "mon_b67c6c4a-6263-4db5-8f14-59d0a906a3fc",
+					"name": {
+						"korean": "캐릭터",
+						"english": "Char",
+						"japanese": "キャラクター",
+						"chinese": "角色",
+						"french": "Personnage",
+						"spanish": "Personaje",
+						"vietnamese": "Nhân vật",
+						"thai": "ตัวละคร",
+						"hindi": "चरित्र"
+					},
+					"description": "",
+					"face_image_url": "https://imagedelivery.net/WTEqQNGFb-l-IHS6IGnzUQ/81f44415-b42f-499c-e22b-183f8663dd00/public",
+					"battle_sprite_url": "https://imagedelivery.net/WTEqQNGFb-l-IHS6IGnzUQ/a1c5b19a-a5b5-40d2-e5b1-7a4f81abb700/public"
+				}
+			},
+			"boss": {
+				"pool_id": "random_boss"
+			},
+			"prologue": {
+				"korean": [
+					"지옥. 끝없는 절망이 거래되는 곳.",
+					"모든 영혼은 계약에 묶여, 벗어날 수 없는 순환 속에 갇힌다.",
+					"여기서 '구원'은 가장 달콤한 거짓말이자, 더 깊은 족쇄였다."
+				],
+				"english": [
+					"Hell. Where endless despair is traded.",
+					"Every soul is bound by contract, trapped in an inescapable cycle.",
+					"Here, 'salvation' was the sweetest lie, and a deeper shackle."
+				],
+				"japanese": [
+					"地獄。終わりのない絶望が取引される場所。",
+					"すべての魂は契約に縛られ、逃れられない循環に囚われる。",
+					"ここで「救済」は最も甘い嘘であり、より深い足枷だった。"
+				],
+				"chinese": [
+					"地狱。无尽绝望交易之地。",
+					"所有灵魂都被契约束缚，困于无法逃脱的循环之中。",
+					"在这里，‘救赎’是最甜美的谎言，也是更深的枷锁。"
+				],
+				"french": [
+					"L'Enfer. Là où le désespoir infini est échangé.",
+					"Chaque âme est liée par un contrat, piégée dans un cycle inéluctable.",
+					"Ici, le 'salut' était le plus doux des mensonges, et une entrave plus profonde."
+				],
+				"spanish": [
+					"El Infierno. Donde la desesperación infinita se negocia.",
+					"Cada alma está atada por un contrato, atrapada en un ciclo ineludible.",
+					"Aquí, la 'salvación' era la mentira más dulce y un grillete más profundo."
+				],
+				"vietnamese": [
+					"Địa ngục. Nơi vô vàn tuyệt vọng được giao dịch.",
+					"Mọi linh hồn đều bị ràng buộc bởi khế ước, mắc kẹt trong vòng luân hồi không lối thoát.",
+					"Ở đây, 'cứu rỗi' là lời nói dối ngọt ngào nhất, và là xiềng xích sâu hơn."
+				],
+				"thai": [
+					"นรก. ที่ซึ่งความสิ้นหวังอันไม่รู้จบถูกแลกเปลี่ยน.",
+					"ทุกดวงวิญญาณถูกผูกมัดด้วยสัญญา ขังอยู่ในวัฏจักรที่ไม่อาจหลุดพ้น.",
+					"ที่นี่ 'การไถ่บาป' คือคำโกหกที่หอมหวานที่สุด และเป็นพันธนาการที่ลึกซึ้งยิ่งกว่า."
+				],
+				"hindi": [
+					"नर्क। जहाँ अंतहीन निराशा का व्यापार होता है।",
+					"हर आत्मा अनुबंध से बंधी है, एक अपरिहार्य चक्र में फँसी हुई है।",
+					"यहाँ, 'मुक्ति' सबसे मधुर झूठ थी, और एक गहरी बेड़ी थी।"
+				]
+			},
+			"rooms": [
+				{
+					"id": 1,
+					"dialogue": [
+						{
+							"content": {
+								"korean": "희망조차 상품이 되는 지옥. 모든 것이 계약의 그림자 아래 있었다.",
+								"english": "Hell, where even hope is a commodity. Everything was under the shadow of contracts.",
+								"japanese": "希望すら商品となる地獄。すべては契約の影の下にあった。",
+								"chinese": "希望亦是商品的炼狱。一切皆在契约的阴影之下。",
+								"french": "L'Enfer, où même l'espoir est une marchandise. Tout était sous l'ombre des contrats.",
+								"spanish": "El Infierno, donde incluso la esperanza es una mercancía. Todo estaba bajo la sombra de los contratos.",
+								"vietnamese": "Địa ngục, nơi ngay cả hy vọng cũng là món hàng. Mọi thứ đều nằm dưới bóng tối của khế ước.",
+								"thai": "นรก ที่ซึ่งแม้แต่ความหวังก็เป็นสินค้า ทุกสิ่งอยู่ภายใต้เงาของสัญญา.",
+								"hindi": "नर्क, जहाँ आशा भी एक वस्तु है। सब कुछ अनुबंधों की छाया में था।"
+							},
+							"speaker": "narrator",
+							"emotion": "base",
+							"type": "speech"
+						},
+						{
+							"spot": [
+								3,
+								3
+							],
+							"speaker": "char",
+							"action": "enter",
+							"duration_ms": 500,
+							"type": "direction"
+						},
+						{
+							"content": {
+								"korean": "…또 왔네. 발버둥쳐봤자 소용없는데.",
+								"english": "...You're back again. Struggling is useless.",
+								"japanese": "…また来たな。もがいても無駄なのに。",
+								"chinese": "……又来了。挣扎也是徒劳。",
+								"french": "...Vous êtes de retour. Lutter est inutile.",
+								"spanish": "...Estás de nuevo aquí. Luchar es inútil.",
+								"vietnamese": "...Lại đến nữa rồi. Dù có giãy giụa cũng vô ích thôi.",
+								"thai": "...กลับมาอีกแล้วดิ้นรนไปก็เปล่าประโยชน์.",
+								"hindi": "...तुम फिर आ गए। संघर्ष करना बेकार है।"
+							},
+							"speaker": "char",
+							"emotion": "sad",
+							"type": "speech"
+						},
+						{
+							"content": {
+								"korean": "누구지? 여기서 뭘 하는 거야.",
+								"english": "Who are you? What are you doing here?",
+								"japanese": "誰だ？ここで何をしている？",
+								"chinese": "你是谁？在这里做什么？",
+								"french": "Qui es-tu ? Que fais-tu ici ?",
+								"spanish": "¿Quién eres? ¿Qué haces aquí?",
+								"vietnamese": "Ngươi là ai? Ngươi đang làm gì ở đây?",
+								"thai": "คุณเป็นใคร? คุณมาทำอะไรที่นี่?",
+								"hindi": "तुम कौन हो? यहाँ क्या कर रहे हो?"
+							},
+							"type": "speech",
+							"speaker": "character_any",
+							"emotion": "base"
+						},
+						{
+							"speaker": "char",
+							"emotion": "base",
+							"type": "speech",
+							"content": {
+								"korean": "나는 계약의 희생양. 너희가 '구원'하려는 그 영혼.",
+								"english": "I am the victim of the contract. The soul you seek to 'save'.",
+								"japanese": "私は契約の犠牲者。お前たちが「救済」しようとするその魂だ。",
+								"chinese": "我是契约的牺牲品。你们想要‘救赎’的那个灵魂。",
+								"french": "Je suis la victime du contrat. L'âme que vous cherchez à 'sauver'.",
+								"spanish": "Soy la víctima del contrato. El alma que ustedes buscan 'salvar'.",
+								"vietnamese": "Ta là nạn nhân của khế ước. Linh hồn mà các ngươi muốn 'cứu rỗi'.",
+								"thai": "ฉันคือเหยื่อของสัญญา ดวงวิญญาณที่คุณพยายาม 'ช่วย'.",
+								"hindi": "मैं अनुबंध का शिकार हूँ। वह आत्मा जिसे तुम 'बचाना' चाहते हो।"
+							}
+						}
+					]
+				},
+				{
+					"dialogue": [
+						{
+							"duration_ms": 500,
+							"type": "direction",
+							"speaker": "char",
+							"action": "enter",
+							"spot": [
+								2,
+								3
+							]
+						},
+						{
+							"type": "speech",
+							"speaker": "char",
+							"emotion": "base",
+							"content": {
+								"korean": "이 지옥에선 계약이 전부야. 내가 맺은 건 '구원 계약'.",
+								"english": "In this hell, contracts are everything. Mine is a 'Salvation Contract'.",
+								"japanese": "この地獄では契約がすべてだ。私が結んだのは「救済契約」だ。",
+								"chinese": "在这地狱，契约就是一切。我签订的是‘救赎契约’。",
+								"french": "Dans cet enfer, les contrats sont tout. Le mien est un 'Contrat de Salut'.",
+								"spanish": "En este infierno, los contratos lo son todo. El mío es un 'Contrato de Salvación'.",
+								"vietnamese": "Ở địa ngục này, khế ước là tất cả. Khế ước ta đã ký là 'Khế ước Cứu rỗi'.",
+								"thai": "ในนรกนี้ สัญญาคือทุกสิ่ง สัญญาที่ฉันทำคือ 'สัญญาแห่งการไถ่บาป'.",
+								"hindi": "इस नर्क में, अनुबंध ही सब कुछ हैं। मेरा वाला 'मुक्ति अनुबंध' है।"
+							}
+						},
+						{
+							"type": "speech",
+							"speaker": "character_any",
+							"emotion": "base",
+							"content": {
+								"korean": "구원 계약? 그럼 왜 여기 있어?",
+								"english": "Salvation Contract? Then why are you here?",
+								"japanese": "救済契約？じゃあ、なぜここにいる？",
+								"chinese": "救赎契约？那你为什么在这里？",
+								"french": "Contrat de Salut ? Alors pourquoi es-tu ici ?",
+								"spanish": "¿Contrato de Salvación? ¿Entonces por qué estás aquí?",
+								"vietnamese": "Khế ước Cứu rỗi? Vậy sao ngươi lại ở đây?",
+								"thai": "สัญญาแห่งการไถ่บาป? แล้วทำไมคุณถึงมาอยู่ที่นี่?",
+								"hindi": "मुक्ति अनुबंध? तो तुम यहाँ क्यों हो?"
+							}
+						},
+						{
+							"content": {
+								"korean": "고통에서 벗어나면, 더 깊은 절망의 루프에 갇히는 계약이지.",
+								"english": "It's a contract where if you escape pain, you're trapped in a deeper loop of despair.",
+								"japanese": "苦痛から逃れると、より深い絶望のループに囚われる契約さ。",
+								"chinese": "摆脱痛苦后，就会陷入更深绝望循环的契约。",
+								"french": "C'est un contrat où si tu échappes à la douleur, tu es piégé dans une boucle de désespoir plus profonde.",
+								"spanish": "Es un contrato en el que, si escapas del dolor, quedas atrapado en un ciclo más profundo de desesperación.",
+								"vietnamese": "Đó là một khế ước mà nếu thoát khỏi nỗi đau, ngươi sẽ bị mắc kẹt trong vòng lặp tuyệt vọng sâu hơn.",
+								"thai": "มันคือสัญญาที่ถ้าคุณหนีจากความเจ็บปวด คุณก็จะติดอยู่ในวงจรแห่งความสิ้นหวังที่ลึกซึ้งยิ่งกว่า.",
+								"hindi": "यह एक ऐसा अनुबंध है जहाँ यदि तुम दर्द से बचते हो, तो तुम निराशा के एक गहरे चक्र में फँस जाते हो।"
+							},
+							"speaker": "char",
+							"emotion": "sad",
+							"type": "speech"
+						},
+						{
+							"content": {
+								"korean": "그게 구원이라고? 말이 안 돼.",
+								"english": "That's salvation? Nonsense.",
+								"japanese": "それが救済だと？馬鹿な。",
+								"chinese": "那就是救赎？简直胡说八道。",
+								"french": "C'est ça, le salut ? Absurde.",
+								"spanish": "¿Eso es salvación? No tiene sentido.",
+								"vietnamese": "Đó là sự cứu rỗi sao? Vô lý.",
+								"thai": "นั่นคือความรอดหรือ? ไร้สาระ",
+								"hindi": "उसे मोक्ष कहते हो? बकवास।"
+							},
+							"speaker": "character_any",
+							"emotion": "angry",
+							"type": "speech"
+						},
+						{
+							"content": {
+								"korean": "모든 계약서가 비슷해. 내용도, 결과도. 이름만 달라질 뿐.",
+								"english": "All contracts are alike. Their content, their outcome. Only the names change.",
+								"japanese": "どの契約も同じだ。内容も結果も。名前が変わるだけ。",
+								"chinese": "所有契约都一样。内容、结果，都只是换个名字而已。",
+								"french": "Tous les contrats sont pareils. Le contenu, le résultat. Seuls les noms changent.",
+								"spanish": "Todos los contratos son similares. El contenido, el resultado. Solo los nombres cambian.",
+								"vietnamese": "Mọi hợp đồng đều giống nhau. Nội dung, kết quả. Chỉ thay đổi tên thôi.",
+								"thai": "สัญญาล้วนคล้ายกัน ทั้งเนื้อหา ผลลัพธ์ แค่ชื่อที่ต่างออกไป",
+								"hindi": "सभी अनुबंध एक जैसे हैं। सामग्री भी, परिणाम भी। बस नाम बदल जाते हैं।"
+							},
+							"speaker": "char",
+							"emotion": "base",
+							"type": "speech"
+						}
+					],
+					"id": 3
+				},
+				{
+					"dialogue": [
+						{
+							"spot": [
+								4,
+								3
+							],
+							"action": "enter",
+							"speaker": "char",
+							"duration_ms": 500,
+							"type": "direction"
+						},
+						{
+							"content": {
+								"korean": "이게 가장 합리적인 해결책이야. 잠깐의 평온이라도 얻을 수 있으니까.",
+								"english": "This is the most rational solution. At least you gain a moment of peace.",
+								"japanese": "これが最も合理的な解決策だ。束の間の平穏でも得られるのだから。",
+								"chinese": "这是最合理的解决方案。至少能获得片刻的宁静。",
+								"french": "C'est la solution la plus rationnelle. Au moins, tu y gagnes un instant de paix.",
+								"spanish": "Esta es la solución más razonable. Al menos obtendrás un momento de paz.",
+								"vietnamese": "Đây là giải pháp hợp lý nhất. Ít nhất cũng có được chút bình yên.",
+								"thai": "นี่คือทางออกที่สมเหตุสมผลที่สุด อย่างน้อยก็ยังได้ความสงบสุขชั่วคราว",
+								"hindi": "यह सबसे तार्किक समाधान है। कम से कम क्षणिक शांति तो मिलती है।"
+							},
+							"speaker": "char",
+							"emotion": "base",
+							"type": "speech"
+						},
+						{
+							"type": "speech",
+							"speaker": "character_any",
+							"emotion": "angry",
+							"content": {
+								"korean": "하지만 영원히 반복되잖아! 그게 어떻게 합리적이야?",
+								"english": "But it repeats forever! How is that rational?",
+								"japanese": "しかし、永遠に繰り返されるじゃないか！それがどうして合理的だ？",
+								"chinese": "但它会永远重复！这怎么合理？",
+								"french": "Mais ça se répète à l'infini ! En quoi est-ce rationnel ?",
+								"spanish": "¡Pero se repite eternamente! ¿Cómo es eso razonable?",
+								"vietnamese": "Nhưng nó lặp lại mãi mãi! Làm sao mà hợp lý được?",
+								"thai": "แต่มันจะวนซ้ำไปเรื่อยๆ! นั่นมันสมเหตุสมผลตรงไหน?",
+								"hindi": "पर यह तो हमेशा दोहराता रहता है! यह कैसे तार्किक है?"
+							}
+						},
+						{
+							"type": "speech",
+							"speaker": "char",
+							"emotion": "sad",
+							"content": {
+								"korean": "처음엔 구원이라 속삭여. 달콤한 향기로 유혹하지.",
+								"english": "At first, it whispers salvation. Enticing with a sweet scent.",
+								"japanese": "最初は救済だと囁く。甘い香りで誘惑するのだ。",
+								"chinese": "起初，它低语着救赎。用甜美的芬芳引诱。",
+								"french": "Au début, il murmure le salut. Il attire avec un parfum doux.",
+								"spanish": "Al principio, susurra salvación. Tienta con un dulce aroma.",
+								"vietnamese": "Lúc đầu, nó thì thầm về sự cứu rỗi. Quyến rũ bằng hương thơm ngọt ngào.",
+								"thai": "ในตอนแรก มันกระซิบถึงความรอด ล่อลวงด้วยกลิ่นหอมหวาน",
+								"hindi": "पहले यह मुक्ति फुसफुसाता है। मीठी सुगंध से लुभाता है।"
+							}
+						},
+						{
+							"content": {
+								"korean": "그 유혹에 넘어가지 않는 영혼은 없어. 이 지옥에서는.",
+								"english": "No soul resists that temptation. Not in this hell.",
+								"japanese": "その誘惑に抗える魂はない。この地獄では。",
+								"chinese": "没有灵魂能抵挡那种诱惑。在这个地狱里。",
+								"french": "Aucune âme ne résiste à cette tentation. Pas dans cet enfer.",
+								"spanish": "Ningún alma sucumbe a esa tentación. En este infierno.",
+								"vietnamese": "Không một linh hồn nào không sa ngã trước cám dỗ đó. Trong địa ngục này.",
+								"thai": "ไม่มีวิญญาณใดต้านทานสิ่งล่อลวงนั้นได้ ในนรกแห่งนี้",
+								"hindi": "कोई भी आत्मा उस प्रलोभन का विरोध नहीं कर सकती। इस नरक में।"
+							},
+							"speaker": "char",
+							"emotion": "base",
+							"type": "speech"
+						}
+					],
+					"id": 5
+				},
+				{
+					"id": 9,
+					"dialogue": [
+						{
+							"speaker": "char",
+							"action": "enter",
+							"spot": [
+								3,
+								2
+							],
+							"type": "direction",
+							"duration_ms": 500
+						},
+						{
+							"content": {
+								"korean": "저항해봤자 소용없어. 시스템은 더 단단해질 뿐.",
+								"english": "Resistance is futile. The system only grows stronger.",
+								"japanese": "抵抗しても無駄だ。システムはより強固になるだけ。",
+								"chinese": "抵抗是徒劳的。系统只会变得更强大。",
+								"french": "La résistance est futile. Le système ne fera que se renforcer.",
+								"spanish": "Resistir es inútil. El sistema solo se hará más fuerte.",
+								"vietnamese": "Chống cự cũng vô ích. Hệ thống chỉ càng thêm vững chắc.",
+								"thai": "ต่อต้านไปก็ไร้ประโยชน์ ระบบมีแต่จะแข็งแกร่งขึ้นเท่านั้น",
+								"hindi": "विरोध करना व्यर्थ है। सिस्टम और भी मजबूत होता जाएगा।"
+							},
+							"type": "speech",
+							"speaker": "char",
+							"emotion": "sad"
+						},
+						{
+							"content": {
+								"korean": "너희도 곧 깨닫게 될 거야. 이 절망의 순환을.",
+								"english": "You too will soon realize. This cycle of despair.",
+								"japanese": "お前たちもすぐに気づくだろう。この絶望の循環に。",
+								"chinese": "你们也很快会明白。这个绝望的循环。",
+								"french": "Vous aussi, vous le réaliserez bientôt. Ce cycle de désespoir.",
+								"spanish": "Pronto os daréis cuenta. De este ciclo de desesperación.",
+								"vietnamese": "Các ngươi cũng sẽ sớm nhận ra thôi. Vòng lặp tuyệt vọng này.",
+								"thai": "พวกเจ้าเองก็จะเข้าใจในไม่ช้า วงจรแห่งความสิ้นหวังนี้",
+								"hindi": "तुम भी जल्द ही समझ जाओगे। निराशा के इस चक्र को।"
+							},
+							"type": "speech",
+							"speaker": "char",
+							"emotion": "base"
+						},
+						{
+							"content": {
+								"korean": "…그딴 거 인정 못 해.",
+								"english": "...I won't accept that.",
+								"japanese": "…そんなもの、認められない。",
+								"chinese": "…我绝不承认那种事。",
+								"french": "...Je ne peux pas accepter ça.",
+								"spanish": "...No puedo aceptar eso.",
+								"vietnamese": "...Tôi không thể chấp nhận điều đó.",
+								"thai": "...ฉันไม่อาจยอมรับเรื่องแบบนั้นได้",
+								"hindi": "...मैं ऐसी बात स्वीकार नहीं कर सकता।"
+							},
+							"type": "speech",
+							"speaker": "character_any",
+							"emotion": "angry"
+						}
+					]
+				},
+				{
+					"lose_dialogue": [
+						{
+							"speaker": "narrator",
+							"emotion": "base",
+							"type": "speech",
+							"content": {
+								"korean": "강력한 힘에 압도당했다. 거대한 시스템은 흔들림 없었다.",
+								"english": "Overwhelmed by immense power. The colossal system remained unshaken.",
+								"japanese": "強大な力に圧倒された。巨大なシステムは揺るぎなかった。",
+								"chinese": "被强大的力量所压倒。庞大的系统纹丝不动。",
+								"french": "Submergés par une puissance écrasante. Le système colossal est resté inébranlable.",
+								"spanish": "Abatidos por una fuerza abrumadora. El gigantesco sistema permaneció inquebrantable.",
+								"vietnamese": "Bị áp đảo bởi sức mạnh khủng khiếp. Hệ thống khổng lồ vẫn không hề lay chuyển.",
+								"thai": "ถูกครอบงำด้วยพลังอันมหาศาล ระบบอันยิ่งใหญ่ยังคงไม่สั่นคลอน",
+								"hindi": "असाधारण शक्ति से अभिभूत। विशालकाय प्रणाली अडिग रही।"
+							}
+						},
+						{
+							"type": "speech",
+							"speaker": "random_boss",
+							"emotion": "base",
+							"content": {
+								"korean": "발버둥칠수록 더 깊이 갇힐 뿐. 이것이 너희의 운명이다.",
+								"english": "The more you struggle, the deeper you're trapped. This is your fate.",
+								"japanese": "もがけばもがくほど、より深く囚われるだけ。これが貴様たちの運命だ。",
+								"chinese": "越是挣扎，越是深陷。这就是你们的命运。",
+								"french": "Plus vous vous débattez, plus vous êtes piégés. Tel est votre destin.",
+								"spanish": "Cuanto más luchéis, más profundamente quedaréis atrapados. Este es vuestro destino.",
+								"vietnamese": "Càng vùng vẫy, càng bị mắc kẹt sâu hơn. Đây là vận mệnh của các ngươi.",
+								"thai": "ยิ่งดิ้นรนมากเท่าไหร่ ก็ยิ่งติดกับดักลึกขึ้นเท่านั้น นี่คือชะตากรรมของพวกเจ้า",
+								"hindi": "जितना तुम संघर्ष करोगे, उतना ही गहरे फँसोगे। यही तुम्हारा भाग्य है।"
+							}
+						},
+						{
+							"type": "speech",
+							"speaker": "character_any",
+							"emotion": "angry",
+							"content": {
+								"korean": "…아직 끝나지 않았어. 우리는 포기 안 해!",
+								"english": "...It's not over yet. We won't give up!",
+								"japanese": "…まだ終わってない。私たちは諦めない！",
+								"chinese": "…还没结束。我们不会放弃！",
+								"french": "…Ce n'est pas encore fini. Nous n'abandonnerons pas !",
+								"spanish": "…Todavía no ha terminado. ¡No nos rendiremos!",
+								"vietnamese": "...Chưa kết thúc đâu. Chúng ta sẽ không bỏ cuộc!",
+								"thai": "...ยังไม่จบ! เราจะไม่ยอมแพ้!",
+								"hindi": "...अभी खत्म नहीं हुआ है। हम हार नहीं मानेंगे!"
+							}
+						}
+					],
+					"dialogue": [
+						{
+							"content": {
+								"korean": "거대한 그림자가 길을 막아섰다. 시스템의 수호자.",
+								"english": "A colossal shadow blocked the path. Guardian of the System.",
+								"japanese": "巨大な影が道を塞いだ。システムの守護者。",
+								"chinese": "巨大的阴影挡住了去路。系统守护者。",
+								"french": "Une ombre colossale bloquait le chemin. Le gardien du Système.",
+								"spanish": "Una sombra colosal bloqueó el camino. El guardián del Sistema.",
+								"vietnamese": "Một bóng tối khổng lồ chặn đường. Người bảo hộ của Hệ thống.",
+								"thai": "เงาขนาดมหึมาขวางทางอยู่ ผู้พิทักษ์ของระบบ",
+								"hindi": "एक विशाल छाया ने रास्ता रोक दिया। सिस्टम का संरक्षक।"
+							},
+							"type": "speech",
+							"speaker": "narrator",
+							"emotion": "base"
+						},
+						{
+							"content": {
+								"korean": "하찮은 저항이군. 이 순환은 깨지지 않아.",
+								"english": "Futile resistance. This cycle won't break.",
+								"japanese": "無駄な抵抗だ。この循環は破られない。",
+								"chinese": "垂死的挣扎。这个循环不会被打破。",
+								"french": "Résistance futile. Ce cycle ne sera pas brisé.",
+								"spanish": "Resistencia inútil. Este ciclo no se romperá.",
+								"vietnamese": "Kháng cự vô ích. Vòng tuần hoàn này sẽ không bị phá vỡ.",
+								"thai": "การต่อต้านที่ไร้ประโยชน์ วงจรนี้ไม่มีทางแตกหัก",
+								"hindi": "व्यर्थ का प्रतिरोध। यह चक्र नहीं टूटेगा।"
+							},
+							"type": "speech",
+							"speaker": "random_boss",
+							"emotion": "base"
+						},
+						{
+							"speaker": "random_boss",
+							"emotion": "base",
+							"type": "speech",
+							"content": {
+								"korean": "너희의 모든 노력은 결국 {random_boss}에게 힘을 줄 뿐이다.",
+								"english": "All your efforts will only empower {random_boss}.",
+								"japanese": "お前たちのあらゆる努力は、結局{random_boss}に力を与えるだけだ。",
+								"chinese": "你们所有的努力，最终只会增强{random_boss}的力量。",
+								"french": "Tous vos efforts ne feront qu'accroître le pouvoir de {random_boss}.",
+								"spanish": "Todos vuestros esfuerzos solo darán poder a {random_boss}.",
+								"vietnamese": "Mọi nỗ lực của các ngươi cuối cùng chỉ tiếp thêm sức mạnh cho {random_boss}.",
+								"thai": "ความพยายามทั้งหมดของพวกเจ้ามีแต่จะเสริมพลังให้ {random_boss} เท่านั้น",
+								"hindi": "तुम्हारे सभी प्रयास अंततः केवल {random_boss} को शक्ति देंगे।"
+							}
+						},
+						{
+							"content": {
+								"korean": "헛소리 하지 마! 우리가 널 끝낼 거야.",
+								"english": "Don't talk nonsense! We'll end you.",
+								"japanese": "くだらないことを言うな！私たちが貴様を終わらせる！",
+								"chinese": "别胡说八道！我们会解决你！",
+								"french": "Arrête tes sottises ! Nous allons t'anéantir.",
+								"spanish": "¡No digas tonterías! ¡Nosotros acabaremos contigo!",
+								"vietnamese": "Đừng nói nhảm! Chúng ta sẽ kết liễu ngươi.",
+								"thai": "อย่าพูดพล่าม! เราจะจัดการแกเอง!",
+								"hindi": "बकवास मत करो! हम तुम्हें ख़त्म कर देंगे।"
+							},
+							"speaker": "character_any",
+							"emotion": "angry",
+							"type": "speech"
+						}
+					],
+					"win_dialogue": [
+						{
+							"speaker": "random_boss",
+							"emotion": "base",
+							"type": "speech",
+							"content": {
+								"korean": "…겨우 문지기 하나를 쓰러뜨렸다고 생각하나.",
+								"english": "...Do you think you've merely defeated a gatekeeper?",
+								"japanese": "…ただの門番を倒したとでも思っているのか。",
+								"chinese": "…你们以为这只是击败了一个看门人吗？",
+								"french": "…Croyez-vous n'avoir vaincu qu'un simple gardien ?",
+								"spanish": "¿...Acaso creéis que solo habéis derrotado a un guardián?",
+								"vietnamese": "...Ngươi nghĩ rằng mình chỉ mới đánh bại một tên lính gác thôi sao?",
+								"thai": "...พวกเจ้าคิดว่าแค่ล้มผู้เฝ้าประตูได้คนเดียวงั้นรึ",
+								"hindi": "...क्या तुम्हें लगता है कि तुमने सिर्फ एक द्वारपाल को हराया है?"
+							}
+						},
+						{
+							"content": {
+								"korean": "이것은 시작일 뿐. 너희는 이미 시스템의 일부가 되었다.",
+								"english": "This is just the beginning. You are already part of the system.",
+								"japanese": "これは始まりに過ぎない。お前たちは既にシステムの一部となった。",
+								"chinese": "这仅仅是个开始。你们已经成为了系统的一部分。",
+								"french": "Ce n'est que le début. Vous faites déjà partie du système.",
+								"spanish": "Esto es solo el principio. Ya sois parte del sistema.",
+								"vietnamese": "Đây chỉ là khởi đầu. Các ngươi đã trở thành một phần của hệ thống rồi.",
+								"thai": "นี่เป็นเพียงจุดเริ่มต้น พวกเจ้าได้กลายเป็นส่วนหนึ่งของระบบไปแล้ว",
+								"hindi": "यह तो बस शुरुआत है। तुम पहले से ही सिस्टम का हिस्सा बन चुके हो।"
+							},
+							"speaker": "random_boss",
+							"emotion": "base",
+							"type": "speech"
+						},
+						{
+							"content": {
+								"korean": "뭐라고…?",
+								"english": "What...?",
+								"japanese": "な、なんだって…？",
+								"chinese": "你说什么…？",
+								"french": "Quoi... ?",
+								"spanish": "¿Qué...?",
+								"vietnamese": "Cái gì...?",
+								"thai": "ว่าไงนะ...?",
+								"hindi": "क्या...?"
+							},
+							"type": "speech",
+							"speaker": "character_any",
+							"emotion": "sad"
+						},
+						{
+							"content": {
+								"korean": "절망의 그림자는 더욱 짙어졌다. 구원은, 아직 멀었다.",
+								"english": "The shadow of despair deepened. Salvation is still far off.",
+								"japanese": "絶望の影はさらに濃くなった。救いは、まだ遠い。",
+								"chinese": "绝望的阴影愈发深重。救赎，遥遥无期。",
+								"french": "L'ombre du désespoir s'est épaissie. Le salut est encore loin.",
+								"spanish": "La sombra de la desesperación se profundizó. La salvación, aún está lejos.",
+								"vietnamese": "Bóng tối tuyệt vọng càng thêm dày đặc. Sự cứu rỗi, vẫn còn xa vời.",
+								"thai": "เงามืดแห่งความสิ้นหวังยิ่งทวีความรุนแรงขึ้น การไถ่ถอนยังอีกยาวไกล",
+								"hindi": "निराशा की छाया और गहरी हो गई। मोक्ष, अभी दूर है।"
+							},
+							"type": "speech",
+							"speaker": "narrator",
+							"emotion": "base"
+						}
+					],
+					"id": 15
+				}
+			]
+		},
+		{
+			"scenario_id": "hell_dolor_14_03",
+			"order": 3,
+			"act": "rising",
+			"theme": "hell",
+			"actors": {
+				"cinder": {
+					"id": "mon_7bdc5bba-75ec-4589-827e-193b3c59b022",
+					"name": {
+						"korean": "신더",
+						"english": "Cinder",
+						"japanese": "シンダー",
+						"chinese": "辛德",
+						"french": "Cinder",
+						"spanish": "Cinder",
+						"vietnamese": "Xinder",
+						"thai": "ซินเดอร์",
+						"hindi": "सिंडर"
+					},
+					"description": "",
+					"face_image_url": "https://imagedelivery.net/WTEqQNGFb-l-IHS6IGnzUQ/bc21258b-93ac-4669-7330-fdf4e8a57c00/public",
+					"battle_sprite_url": "https://imagedelivery.net/WTEqQNGFb-l-IHS6IGnzUQ/939a1911-1849-425c-67a4-4958bbdc3300/public"
+				}
+			},
+			"boss": {
+				"pool_id": "random_boss"
+			},
+			"rooms": [
+				{
+					"id": 1,
+					"dialogue": [
+						{
+							"speaker": "narrator",
+							"content": {
+								"korean": "버려진 영혼들의 비명이 메아리치는 곳. 한 여인이 조용히 서 있었다.",
+								"english": "A place where the screams of abandoned souls echoed. A woman stood silently.",
+								"japanese": "捨てられた魂の悲鳴がこだまする場所。一人の女が静かに立っていた。",
+								"chinese": "废弃灵魂的尖叫回荡之处。一位女子静静地站着。",
+								"french": "Un lieu où résonnaient les cris des âmes abandonnées. Une femme se tenait silencieusement.",
+								"spanish": "Un lugar donde resonaban los gritos de almas abandonadas. Una mujer estaba de pie en silencio.",
+								"vietnamese": "Nơi tiếng thét của những linh hồn bị bỏ rơi vang vọng. Một người phụ nữ đứng lặng lẽ.",
+								"thai": "สถานที่ที่เสียงกรีดร้องของวิญญาณที่ถูกทอดทิ้งก้องกังวาน สตรีผู้หนึ่งยืนอยู่เงียบ ๆ",
+								"hindi": "एक ऐसी जगह जहां परित्यक्त आत्माओं की चीखें गूँज रही थीं। एक महिला खामोशी से खड़ी थी।"
+							},
+							"type": "speech",
+							"emotion": "base"
+						},
+						{
+							"duration_ms": 500,
+							"type": "direction",
+							"action": "enter",
+							"speaker": "cinder",
+							"spot": [
+								4,
+								2
+							]
+						},
+						{
+							"emotion": "base",
+							"type": "speech",
+							"content": {
+								"korean": "오… 상처 입은 영혼들이여. 제가 그대들의 고통을 덜어드리죠.",
+								"english": "Oh... wounded souls. I shall ease your suffering.",
+								"japanese": "おお…傷ついた魂たちよ。私が汝らの苦痛を和らげよう。",
+								"chinese": "哦……受伤的灵魂们。我将减轻你们的痛苦。",
+								"french": "Oh… âmes blessées. Je soulagerai vos souffrances.",
+								"spanish": "Oh... almas heridas. Aliviaré vuestro sufrimiento.",
+								"vietnamese": "Ôi… những linh hồn tổn thương. Ta sẽ xoa dịu nỗi đau của các ngươi.",
+								"thai": "โอ้… วิญญาณที่บาดเจ็บทั้งหลาย ข้าจะบรรเทาความทุกข์ทรมานของเจ้า",
+								"hindi": "ओह... घायल आत्माओं। मैं तुम्हारी पीड़ा कम करूँगी।"
+							},
+							"speaker": "cinder"
+						},
+						{
+							"type": "speech",
+							"content": {
+								"korean": "누구야? 뭘 원하는 거지?",
+								"english": "Who are you? What do you want?",
+								"japanese": "誰だ？ 何が望みだ？",
+								"chinese": "你是谁？你想要什么？",
+								"french": "Qui êtes-vous ? Que voulez-vous ?",
+								"spanish": "¿Quién eres? ¿Qué quieres?",
+								"vietnamese": "Ngươi là ai? Ngươi muốn gì?",
+								"thai": "เจ้าเป็นใคร? ต้องการอะไร?",
+								"hindi": "तुम कौन हो? तुम्हें क्या चाहिए?"
+							},
+							"speaker": "character_any",
+							"emotion": "base"
+						},
+						{
+							"type": "speech",
+							"content": {
+								"korean": "신더. 그저 그대들의 '부담'을 대신 짊어질 뿐입니다. 아무런 대가 없이요.",
+								"english": "Cinder. I merely bear your 'burdens' for you. Without any cost.",
+								"japanese": "シンダー。ただ、汝らの「重荷」を代わりに背負うだけです。何の対価もなく。",
+								"chinese": "辛德。我只是替你们背负“负担”。不求任何回报。",
+								"french": "Cinder. Je ne fais que porter vos «fardeaux» pour vous. Sans aucun coût.",
+								"spanish": "Cinder. Simplemente cargo con vuestras \"cargas\" por vosotros. Sin coste alguno.",
+								"vietnamese": "Cinder. Ta chỉ gánh thay 'gánh nặng' của các ngươi thôi. Không đòi hỏi bất cứ giá nào.",
+								"thai": "ซินเดอร์ ข้าเพียงแค่แบกรับ 'ภาระ' ของเจ้าให้เท่านั้น โดยไม่มีค่าตอบแทนใดๆ",
+								"hindi": "सिंडर। मैं सिर्फ तुम्हारे 'बोझ' उठाती हूँ। बिना किसी कीमत के।"
+							},
+							"speaker": "cinder",
+							"emotion": "happy"
+						},
+						{
+							"emotion": "base",
+							"type": "speech",
+							"content": {
+								"korean": "대가 없는 친절은 없어. 이곳에선.",
+								"english": "There's no kindness without a price. Not here.",
+								"japanese": "対価のない親切はない。ここではな。",
+								"chinese": "没有不带代价的善意。在这里。",
+								"french": "Il n'y a pas de gentillesse sans prix. Pas ici.",
+								"spanish": "No hay bondad sin precio. No aquí.",
+								"vietnamese": "Không có lòng tốt nào mà không có cái giá. Ở nơi này.",
+								"thai": "ไม่มีน้ำใจใดที่ไร้ค่าตอบแทน ที่นี่",
+								"hindi": "यहां बिना कीमत के कोई दया नहीं मिलती।"
+							},
+							"speaker": "character_1"
+						}
+					]
+				},
+				{
+					"id": 3,
+					"dialogue": [
+						{
+							"type": "direction",
+							"speaker": "cinder",
+							"action": "enter",
+							"spot": [
+								5,
+								2
+							],
+							"duration_ms": 500
+						},
+						{
+							"emotion": "sad",
+							"speaker": "cinder",
+							"content": {
+								"korean": "보세요. 저 영혼의 짐이 얼마나 무거웠을까요. 제가 덜어주겠습니다.",
+								"english": "Look. How heavy must that soul's burden have been? I will ease it.",
+								"japanese": "ご覧ください。あの魂の重荷がどれほど重かったことか。私が軽減して差し上げましょう。",
+								"chinese": "瞧。那个灵魂的重担该有多么沉重？我来减轻它。",
+								"french": "Regardez. À quel point le fardeau de cette âme devait être lourd ? Je vais le soulager.",
+								"spanish": "Mirad. ¿Cuán pesado habrá sido el fardo de esa alma? Yo lo aliviaré.",
+								"vietnamese": "Nhìn xem. Gánh nặng của linh hồn kia hẳn đã nặng nề biết bao. Ta sẽ gánh đỡ cho.",
+								"thai": "ดูสิ ภาระของวิญญาณนั้นหนักแค่ไหนกันนะ ข้าจะช่วยแบ่งเบา",
+								"hindi": "देखो। उस आत्मा का बोझ कितना भारी होगा? मैं इसे कम करूँगी।"
+							},
+							"type": "speech"
+						},
+						{
+							"emotion": "base",
+							"speaker": "narrator",
+							"content": {
+								"korean": "신더의 손에서 검은 기운이 뿜어져 나왔다. 영혼의 고통이 사라졌다.",
+								"english": "Dark energy surged from Cinder's hand. The soul's pain vanished.",
+								"japanese": "シンダーの手から黒い気が噴き出した。魂の苦痛が消え去った。",
+								"chinese": "黑色的气息从辛德手中涌出。灵魂的痛苦消失了。",
+								"french": "Une énergie sombre jaillit de la main de Cinder. La souffrance de l'âme disparut.",
+								"spanish": "La energía oscura brotó de la mano de Cinder. El dolor del alma se desvaneció.",
+								"vietnamese": "Năng lượng đen trào ra từ tay Cinder. Nỗi đau của linh hồn biến mất.",
+								"thai": "พลังงานมืดพุ่งออกมาจากมือของซินเดอร์ ความเจ็บปวดของวิญญาณได้หายไป",
+								"hindi": "सिंडर के हाथ से काली ऊर्जा निकली। आत्मा का दर्द गायब हो गया।"
+							},
+							"type": "speech"
+						},
+						{
+							"speaker": "character_2",
+							"type": "speech",
+							"content": {
+								"korean": "…이상해. 저 사라진 고통에서 달콤한 향이 나.",
+								"english": "…Strange. That vanished pain now carries a sweet scent.",
+								"japanese": "…おかしい。消えたはずの苦痛から甘い香りがする。",
+								"chinese": "…奇怪。那消失的痛苦，竟带着一丝甜香。",
+								"french": "…Étrange. Cette douleur disparue dégage une douce odeur.",
+								"spanish": "…Extraño. Ese dolor desaparecido ahora desprende un dulce aroma.",
+								"vietnamese": "…Lạ thật. Nỗi đau đã biến mất lại tỏa ra hương thơm ngọt ngào.",
+								"thai": "…แปลกจัง ความเจ็บปวดที่หายไปกลับมีกลิ่นหอมหวาน",
+								"hindi": "…अजीब है। वह गायब हुआ दर्द अब एक मीठी सुगंध लिए हुए है।"
+							},
+							"emotion": "base"
+						},
+						{
+							"speaker": "character_any",
+							"content": {
+								"korean": "그리고… 그녀가 내민 계약서… 아까 본 것과 글씨가 똑같아.",
+								"english": "And… the contract she offered… the handwriting is identical to what I saw earlier.",
+								"japanese": "そして…彼女が差し出した契約書…さっき見たものと筆跡が同じだ。",
+								"chinese": "而且…她递出的契约…笔迹和我之前看到的完全一样。",
+								"french": "Et… le contrat qu'elle a présenté… l'écriture est identique à celle que j'ai vue plus tôt.",
+								"spanish": "Y… el contrato que me ofreció… la letra es idéntica a la que vi antes.",
+								"vietnamese": "Và… bản hợp đồng cô ta đưa ra… chữ viết giống hệt cái tôi đã thấy trước đó.",
+								"thai": "แล้ว… สัญญาที่เธอยื่นมา… ลายมือเหมือนกับที่ฉันเห็นเมื่อครู่เลย",
+								"hindi": "और… उसने जो अनुबंध दिया… लिखावट ठीक वैसी ही है जैसी मैंने पहले देखी थी।"
+							},
+							"type": "speech",
+							"emotion": "base"
+						},
+						{
+							"emotion": "base",
+							"content": {
+								"korean": "세상 모든 계약은 돌고 도는 법이죠. 고통도, 구원도.",
+								"english": "All contracts in this world circulate. Pain, and salvation too.",
+								"japanese": "この世のすべての契約は巡り巡るもの。苦痛も、救済も。",
+								"chinese": "世间所有契约皆是循环往复。痛苦如此，救赎亦然。",
+								"french": "Tous les contrats en ce monde sont un cycle. La douleur aussi bien que le salut.",
+								"spanish": "Todos los contratos en este mundo circulan. El dolor, y la salvación también.",
+								"vietnamese": "Mọi hợp đồng trên thế gian này đều luân chuyển. Nỗi đau cũng vậy, và sự cứu rỗi cũng thế.",
+								"thai": "สัญญาในโลกล้วนหมุนเวียน ไม่ว่าความเจ็บปวดหรือการไถ่บาป",
+								"hindi": "इस दुनिया के सभी अनुबंध घूमते रहते हैं। दर्द भी, और मोक्ष भी।"
+							},
+							"type": "speech",
+							"speaker": "cinder"
+						}
+					]
+				},
+				{
+					"dialogue": [
+						{
+							"duration_ms": 500,
+							"spot": [
+								3,
+								2
+							],
+							"action": "enter",
+							"speaker": "cinder",
+							"type": "direction"
+						},
+						{
+							"emotion": "base",
+							"speaker": "cinder",
+							"type": "speech",
+							"content": {
+								"korean": "이곳의 모든 영혼은 고통스러워합니다. 저는 그저 그들을 돕고 있을 뿐.",
+								"english": "All souls here suffer. I am merely helping them.",
+								"japanese": "ここのすべての魂は苦しんでいます。私はただ彼らを助けているだけ。",
+								"chinese": "这里的灵魂都在受苦。我只是在帮助他们。",
+								"french": "Toutes les âmes ici souffrent. Je ne fais que les aider.",
+								"spanish": "Todas las almas aquí sufren. Yo solo estoy ayudándolas.",
+								"vietnamese": "Tất cả linh hồn ở đây đều đau khổ. Tôi chỉ đang giúp đỡ họ mà thôi.",
+								"thai": "วิญญาณทุกดวงที่นี่กำลังทรมาน ฉันแค่ช่วยพวกเขาเท่านั้น",
+								"hindi": "यहां की सभी आत्माएं पीड़ित हैं। मैं बस उनकी मदद कर रहा हूँ।"
+							}
+						},
+						{
+							"type": "speech",
+							"content": {
+								"korean": "네가 덜어낸 '부담'은 어디로 가는 거지? 사라지는 게 아니잖아.",
+								"english": "Where does the 'burden' you relieve go? It doesn't just vanish.",
+								"japanese": "お前が取り除いた「負担」はどこへ行く？消えるわけじゃないだろう。",
+								"chinese": "你减轻的“负担”去哪儿了？它可不会凭空消失。",
+								"french": "Où va le 'fardeau' que tu soulages ? Il ne disparaît pas.",
+								"spanish": "—¿Adónde va la 'carga' que alivias? No desaparece sin más.",
+								"vietnamese": "Cái 'gánh nặng' mà ngươi gỡ bỏ đi đâu? Nó đâu có biến mất.",
+								"thai": " 'ภาระ' ที่เจ้าช่วยปลดเปลื้องไปไหน? มันไม่ได้หายไปเฉยๆ หรอกนะ",
+								"hindi": "तुम जो 'बोझ' हटाते हो, वह कहाँ जाता है? वह गायब तो नहीं हो जाता।"
+							},
+							"speaker": "character_3",
+							"emotion": "angry"
+						},
+						{
+							"emotion": "base",
+							"type": "speech",
+							"content": {
+								"korean": "그건 중요하지 않아요. 영혼들이 평안을 얻는다면.",
+								"english": "That's not important. As long as souls find peace.",
+								"japanese": "それは重要ではありません。魂が安らぎを得るのなら。",
+								"chinese": "那不重要。只要灵魂能获得平静。",
+								"french": "Ce n'est pas important. Tant que les âmes trouvent la paix.",
+								"spanish": "Eso no es importante. Si las almas encuentran la paz.",
+								"vietnamese": "Điều đó không quan trọng. Miễn là các linh hồn tìm thấy bình yên.",
+								"thai": "นั่นไม่สำคัญหรอก ตราบใดที่วิญญาณได้รับความสงบสุข",
+								"hindi": "वह महत्वपूर्ण नहीं है। अगर आत्माओं को शांति मिलती है तो।"
+							},
+							"speaker": "cinder"
+						},
+						{
+							"speaker": "character_any",
+							"type": "speech",
+							"content": {
+								"korean": "이건 진짜 구원이 아니야. 뭔가 다른 목적이 있어.",
+								"english": "This isn't true salvation. There's another purpose.",
+								"japanese": "これは本当の救済じゃない。何か別の目的がある。",
+								"chinese": "这不是真正的救赎。你另有目的。",
+								"french": "Ce n'est pas une vraie rédemption. Il y a un autre but.",
+								"spanish": "Esto no es una verdadera salvación. Hay otro propósito.",
+								"vietnamese": "Đây không phải là sự cứu rỗi thật sự. Ngươi có mục đích khác.",
+								"thai": "นี่ไม่ใช่การไถ่บาปที่แท้จริง ต้องมีจุดประสงค์อื่น",
+								"hindi": "यह असली मोक्ष नहीं है। कोई और मकसद है।"
+							},
+							"emotion": "angry"
+						},
+						{
+							"type": "speech",
+							"content": {
+								"korean": "…그렇게 생각하신다면, 어쩔 수 없죠.",
+								"english": "…If that's what you think, there's nothing I can do.",
+								"japanese": "…そうお考えでしたら、仕方ありませんね。",
+								"chinese": "…如果您这么认为，那我也没有办法。",
+								"french": "…Si vous le pensez, je ne peux rien y faire.",
+								"spanish": "…Si así lo cree, no puedo hacer nada.",
+								"vietnamese": "…Nếu ngài nghĩ vậy, tôi cũng đành chịu.",
+								"thai": "…ถ้าท่านคิดเช่นนั้น ก็ช่วยไม่ได้",
+								"hindi": "…अगर आप ऐसा सोचते हैं, तो मैं कुछ नहीं कर सकता।"
+							},
+							"speaker": "cinder",
+							"emotion": "sad"
+						}
+					],
+					"id": 5
+				},
+				{
+					"id": 9,
+					"dialogue": [
+						{
+							"duration_ms": 500,
+							"spot": [
+								4,
+								2
+							],
+							"speaker": "cinder",
+							"action": "enter",
+							"type": "direction"
+						},
+						{
+							"emotion": "angry",
+							"speaker": "character_any",
+							"type": "speech",
+							"content": {
+								"korean": "너의 '친절'은 더 큰 절망을 부르고 있어. 모두를 기만하는 거야!",
+								"english": "Your 'kindness' is inviting greater despair. You're deceiving everyone!",
+								"japanese": "お前の「親切」は、より大きな絶望を招いている。みんなを欺いているんだ！",
+								"chinese": "你的“仁慈”正在招致更大的绝望。你这是在欺骗所有人！",
+								"french": "Ta 'gentillesse' attire un désespoir plus grand. Tu trompes tout le monde !",
+								"spanish": "¡Tu 'amabilidad' está provocando una desesperación mayor. Estás engañando a todos!",
+								"vietnamese": "'Lòng tốt' của ngươi đang dẫn đến sự tuyệt vọng lớn hơn. Ngươi đang lừa dối tất cả mọi người!",
+								"thai": " 'ความเมตตา' ของเจ้ากำลังนำมาซึ่งความสิ้นหวังที่ยิ่งใหญ่กว่า เจ้ากำลังหลอกลวงทุกคน!",
+								"hindi": "तुम्हारी 'दया' और बड़े निराशा को बुला रही है। तुम सबको धोखा दे रहे हो!"
+							}
+						},
+						{
+							"speaker": "cinder",
+							"type": "speech",
+							"content": {
+								"korean": "글쎄요. 그저 계약을 이행할 뿐인걸요. 이곳의 '정의'대로.",
+								"english": "Well, I'm just fulfilling the contract. According to the 'justice' here.",
+								"japanese": "さあ。ただ契約を履行するだけですよ。ここの「正義」に従って。",
+								"chinese": "呵呵。我只是在履行契约而已。按照这里的“正义”。",
+								"french": "Eh bien, je ne fais qu'exécuter le contrat. Selon la 'justice' d'ici.",
+								"spanish": "Bueno, solo estoy cumpliendo el contrato. Según la 'justicia' de este lugar.",
+								"vietnamese": "Chà. Tôi chỉ đang thực hiện hợp đồng thôi. Theo 'công lý' ở đây.",
+								"thai": "ก็แค่ทำตามสัญญาเท่านั้นแหละ ตาม 'ความยุติธรรม' ของที่นี่",
+								"hindi": "खैर, मैं बस अनुबंध पूरा कर रहा हूँ। यहाँ के 'न्याय' के अनुसार।"
+							},
+							"emotion": "base"
+						},
+						{
+							"content": {
+								"korean": "이 시스템의 노예가 될 수는 없어. 우린 달라!",
+								"english": "We can't be slaves to this system. We're different!",
+								"japanese": "このシステムの奴隷にはなれない。私たちは違う！",
+								"chinese": "我们不能成为这个系统的奴隶。我们不一样！",
+								"french": "On ne peut pas être les esclaves de ce système. Nous sommes différents !",
+								"spanish": "No podemos ser esclavos de este sistema. ¡Somos diferentes!",
+								"vietnamese": "Chúng ta không thể là nô lệ của hệ thống này. Chúng ta khác biệt!",
+								"thai": "เราเป็นทาสของระบบนี้ไม่ได้ เราไม่เหมือนกัน!",
+								"hindi": "हम इस प्रणाली के गुलाम नहीं बन सकते। हम अलग हैं!"
+							},
+							"type": "speech",
+							"speaker": "character_4",
+							"emotion": "angry"
+						},
+						{
+							"emotion": "base",
+							"content": {
+								"korean": "흥. 그 '다름'이… 얼마나 오래갈지 궁금하군요.",
+								"english": "Hmph. I wonder how long that 'difference' will last.",
+								"japanese": "ふん。その「違い」が…どれだけ続くか楽しみですね。",
+								"chinese": "哼。我倒是好奇，那份“不同”能持续多久。",
+								"french": "Hum. Je me demande combien de temps cette 'différence' durera.",
+								"spanish": "Hmph. Me pregunto cuánto durará esa 'diferencia'.",
+								"vietnamese": "Hừm. Tôi tự hỏi sự 'khác biệt' đó sẽ kéo dài bao lâu.",
+								"thai": "ฮึ่ม 'ความแตกต่าง' นั้น… จะอยู่ได้นานแค่ไหนกันนะ",
+								"hindi": "हम्म। मुझे आश्चर्य है कि वह 'अंतर' कब तक चलेगा।"
+							},
+							"type": "speech",
+							"speaker": "cinder"
+						}
+					]
+				},
+				{
+					"id": 15,
+					"lose_dialogue": [
+						{
+							"speaker": "random_boss",
+							"type": "speech",
+							"content": {
+								"korean": "어리석은 것들. 너희의 절망도… 언젠가 내 양식이 될 것이다.",
+								"english": "Foolish mortals. Your despair, too… shall one day be my sustenance.",
+								"japanese": "愚かな者たちめ。お前たちの絶望も…いつか私の糧となるだろう。",
+								"chinese": "愚蠢的东西。你们的绝望…终有一天会成为我的养料。",
+								"french": "Stupides. Votre désespoir… un jour, il sera ma subsistance.",
+								"spanish": "Necios. Vuestra desesperación… un día, será mi sustento.",
+								"vietnamese": "Đồ ngốc. Sự tuyệt vọng của các ngươi… một ngày nào đó sẽ trở thành thức ăn của ta.",
+								"thai": "พวกโง่เขลา ความสิ้นหวังของพวกเจ้า... สักวันหนึ่งจะกลายเป็นอาหารของข้า",
+								"hindi": "मूर्खों। तुम्हारी निराशा भी… एक दिन मेरा पोषण बनेगी।"
+							},
+							"emotion": "base"
+						},
+						{
+							"content": {
+								"korean": "…아직 끝나지 않았어. 우린 포기하지 않아.",
+								"english": "…It’s not over yet. We won’t give up.",
+								"japanese": "…まだ終わってない。私たちは諦めない。",
+								"chinese": "…还没结束。我们不会放弃。",
+								"french": "…Ce n'est pas encore fini. Nous n'abandonnerons pas.",
+								"spanish": "…Aún no ha terminado. No nos rendiremos.",
+								"vietnamese": "…Vẫn chưa kết thúc. Chúng ta sẽ không bỏ cuộc.",
+								"thai": "…ยังไม่จบ เราจะไม่ยอมแพ้",
+								"hindi": "…अभी खत्म नहीं हुआ है। हम हार नहीं मानेंगे।"
+							},
+							"type": "speech",
+							"speaker": "character_any",
+							"emotion": "angry"
+						}
+					],
+					"dialogue": [
+						{
+							"speaker": "narrator",
+							"content": {
+								"korean": "달콤한 향이 더욱 진해졌다. 그곳에 거대한 그림자가 기다리고 있었다.",
+								"english": "The sweet scent grew stronger. A colossal shadow awaited there.",
+								"japanese": "甘い香りがさらに濃くなった。そこに巨大な影が待ち構えていた。",
+								"chinese": "甜美的香味更加浓郁了。那里，一道巨大的阴影正等待着。",
+								"french": "L'odeur sucrée s'intensifia. Une ombre colossale y attendait.",
+								"spanish": "El dulce aroma se hizo más intenso. Una sombra colosal esperaba allí.",
+								"vietnamese": "Mùi hương ngọt ngào càng thêm nồng nàn. Một cái bóng khổng lồ đang chờ đợi ở đó.",
+								"thai": "กลิ่นหอมหวานเข้มข้นขึ้น เงาร่างมหึมารอคอยอยู่ที่นั่น",
+								"hindi": "मीठी सुगंध और तेज़ हो गई। वहाँ एक विशाल छाया प्रतीक्षा कर रही थी।"
+							},
+							"type": "speech",
+							"emotion": "base"
+						},
+						{
+							"emotion": "base",
+							"speaker": "random_boss",
+							"type": "speech",
+							"content": {
+								"korean": "…왔군. 너희의 '부담'도 나를 배부르게 하겠지.",
+								"english": "...You've come. Your 'burden' will sate me as well.",
+								"japanese": "…来たな。お前たちの「負担」も私を満足させるだろう。",
+								"chinese": "……来了。你们的“负担”也会让我饱足。",
+								"french": "...Vous êtes venus. Votre 'fardeau' me rassasiera aussi.",
+								"spanish": "...Han llegado. Su 'carga' también me saciará.",
+								"vietnamese": "...Đã đến rồi. 'Gánh nặng' của các ngươi cũng sẽ làm ta no bụng.",
+								"thai": "...มาแล้วสินะ 'ภาระ' ของพวกเจ้าก็คงทำให้ข้าอิ่มหนำ",
+								"hindi": "...आ गए। तुम्हारा 'बोझ' भी मुझे तृप्त करेगा।"
+							}
+						},
+						{
+							"emotion": "angry",
+							"speaker": "character_any",
+							"content": {
+								"korean": "이게… 신더 네가 모으던 '부담'의 최종 목적지인가!",
+								"english": "Is this... the final destination of the 'burden' you, Cinder, were collecting?!",
+								"japanese": "これが…シンダー、お前が集めていた「負担」の最終目的地なのか！",
+								"chinese": "这就是……辛德，你所收集的“负担”的最终目的地吗？！",
+								"french": "C'est ça… la destination finale du 'fardeau' que tu collectais, Cinder ?!",
+								"spanish": "¿Es este... el destino final de la 'carga' que tú, Cinder, estabas reuniendo?",
+								"vietnamese": "Đây là... điểm đến cuối cùng của 'gánh nặng' mà ngươi, Cinder, đã thu thập sao?!",
+								"thai": "นี่คือ... ปลายทางสุดท้ายของ 'ภาระ' ที่ซินเดอร์เจ้ารวบรวมมางั้นหรือ!",
+								"hindi": "क्या यह... सिंडर, तुम्हारे द्वारा एकत्र किए गए 'बोझ' का अंतिम गंतव्य है?!"
+							},
+							"type": "speech"
+						},
+						{
+							"type": "direction",
+							"speaker": "cinder",
+							"action": "exit",
+							"direction": "down",
+							"duration_ms": 400
+						},
+						{
+							"emotion": "base",
+							"content": {
+								"korean": "영원히 반복되는 순환. 너희도 곧 이해하게 될 거다.",
+								"english": "An eternally repeating cycle. You too will soon understand.",
+								"japanese": "永遠に繰り返される循環。お前たちもすぐに理解するだろう。",
+								"chinese": "永恒循环。你们很快也会明白的。",
+								"french": "Un cycle qui se répète éternellement. Vous aussi, vous comprendrez bientôt.",
+								"spanish": "Un ciclo que se repite eternamente. Ustedes también lo entenderán pronto.",
+								"vietnamese": "Một vòng lặp vĩnh cửu. Các ngươi cũng sẽ sớm hiểu thôi.",
+								"thai": "วัฏจักรที่ไม่มีวันสิ้นสุด พวกเจ้าก็จะเข้าใจในไม่ช้า",
+								"hindi": "एक शाश्वत दोहराव चक्र। तुम भी जल्द ही समझ जाओगे।"
+							},
+							"type": "speech",
+							"speaker": "random_boss"
+						}
+					],
+					"win_dialogue": [
+						{
+							"emotion": "base",
+							"type": "speech",
+							"content": {
+								"korean": "이게 끝이라고 생각하나? 모든 끝은… 새로운 시작일 뿐.",
+								"english": "Do you think this is the end? Every end is... just a new beginning.",
+								"japanese": "これが終わりだと思うか？ すべての終わりは…新たな始まりに過ぎない。",
+								"chinese": "你们以为这是结束吗？所有的结束……都只是新的开始。",
+								"french": "Penses-tu que c'est la fin ? Chaque fin n'est… qu'un nouveau commencement.",
+								"spanish": "¿Crees que esto es el final? Todo final es... solo un nuevo comienzo.",
+								"vietnamese": "Ngươi nghĩ đây là kết thúc ư? Mọi kết thúc... chỉ là một khởi đầu mới.",
+								"thai": "คิดว่านี่คือจุดจบงั้นหรือ? ทุกจุดจบก็เป็น... เพียงแค่การเริ่มต้นใหม่เท่านั้น",
+								"hindi": "क्या तुम्हें लगता है कि यह अंत है? हर अंत... बस एक नई शुरुआत है।"
+							},
+							"speaker": "random_boss"
+						},
+						{
+							"speaker": "character_any",
+							"type": "speech",
+							"content": {
+								"korean": "아니. 여기서 이 지옥의 사슬을 끊을 거야.",
+								"english": "No. I'll break these chains of hell right here.",
+								"japanese": "いいえ。ここでこの地獄の鎖を断ち切る。",
+								"chinese": "不。我要在这里斩断这地狱的锁链。",
+								"french": "Non. Je vais briser ces chaînes de l'enfer ici et maintenant.",
+								"spanish": "No. Aquí romperé estas cadenas del infierno.",
+								"vietnamese": "Không. Ta sẽ cắt đứt xiềng xích địa ngục này ngay tại đây.",
+								"thai": "ไม่ ฉันจะทำลายโซ่ตรวนนรกนี่ตรงนี้แหละ",
+								"hindi": "नहीं। मैं यहीं इस नरक की जंजीरों को तोड़ दूँगा।"
+							},
+							"emotion": "angry"
+						},
+						{
+							"emotion": "base",
+							"speaker": "narrator",
+							"content": {
+								"korean": "달콤하고 역겨운 향이 희미하게 남아있었다. 신더는 사라졌다.",
+								"english": "A sweet and repulsive scent faintly lingered. Cinder had vanished.",
+								"japanese": "甘く嫌悪感を催す香りがかすかに残っていた。シンダーは消えた。",
+								"chinese": "甜美又令人作呕的气味仍 faintly 残留着。辛德消失了。",
+								"french": "Une odeur douceâtre et répugnante persistait faiblement. Cinder avait disparu.",
+								"spanish": "Un aroma dulce y repulsivo permanecía débilmente. Cinder había desaparecido.",
+								"vietnamese": "Một mùi hương ngọt ngào và kinh tởm vẫn còn vương vấn. Cinder đã biến mất.",
+								"thai": "กลิ่นหอมหวานน่ารังเกียจยังคงจางๆ ซินเดอร์หายไปแล้ว",
+								"hindi": "एक मीठी और घृणित सुगंध हल्की सी बाकी थी। सिंडर गायब हो गया था।"
+							},
+							"type": "speech"
+						},
+						{
+							"content": {
+								"korean": "그러나 영혼들의 고통은 여전히… 다른 곳에서 되풀이될 것이다.",
+								"english": "Yet, the suffering of souls… will still echo elsewhere.",
+								"japanese": "だが、魂たちの苦痛は…まだ別の場所で繰り返されるだろう。",
+								"chinese": "然而，灵魂的苦痛…仍会在别处重演。",
+								"french": "Pourtant, la souffrance des âmes… se répétera ailleurs.",
+								"spanish": "Sin embargo, el sufrimiento de las almas… se repetirá en otro lugar.",
+								"vietnamese": "Tuy nhiên, nỗi đau của các linh hồn… vẫn sẽ lặp lại ở nơi khác.",
+								"thai": "แต่ความทุกข์ทรมานของวิญญาณ... จะยังคงดำเนินต่อไปในที่อื่น",
+								"hindi": "फिर भी, आत्माओं का कष्ट… कहीं और गूंजता रहेगा।"
+							},
+							"type": "speech",
+							"speaker": "narrator",
+							"emotion": "base"
+						}
+					]
+				}
+			],
+			"prologue": {
+				"korean": [
+					"끝없는 절망 속, 한 줄기 단비처럼 나타난 이가 있었다.",
+					"그녀는 고통을 덜어주는 '상인'. 영혼의 짐을 대신 짊어져 주겠다고 했다.",
+					"달콤한 속삭임 뒤에 숨겨진 진실은 무엇일까?",
+					"이곳에서조차, 구원은 가장 잔혹한 계약이 된다."
+				],
+				"english": [
+					"In endless despair, one appeared like a single drop of welcome rain.",
+					"She was a 'merchant' who eased pain. She offered to bear the burden of souls.",
+					"What truth hides behind the sweet whispers?",
+					"Even here, salvation becomes the most cruel contract."
+				],
+				"japanese": [
+					"終わらない絶望の中、恵みの雨のように現れた者がいた。",
+					"彼女は苦痛を和らげる「商人」。魂の重荷を代わりに背負うと言った。",
+					"甘い囁きの裏に隠された真実とは？",
+					"ここでさえ、救済は最も残酷な契約となる。"
+				],
+				"chinese": [
+					"在无尽的绝望中，一人如甘霖般出现。",
+					"她是减轻痛苦的“商人”。她承诺替人背负灵魂的重担。",
+					"甜言蜜语背后隐藏着怎样的真相？",
+					"即使在这里，救赎也成为最残酷的契约。"
+				],
+				"french": [
+					"Dans un désespoir sans fin, quelqu'un apparut comme une pluie bienfaisante.",
+					"C'était une «marchande» qui apaisait la douleur. Elle proposa de porter le fardeau des âmes.",
+					"Quelle vérité se cache derrière les doux murmures ?",
+					"Même ici, le salut devient le contrat le plus cruel."
+				],
+				"spanish": [
+					"En la desesperación infinita, alguien apareció como una gota de lluvia bienvenida.",
+					"Era una \"mercader\" que aliviaba el dolor. Ofreció cargar con el peso de las almas.",
+					"¿Qué verdad se esconde tras los dulces susurros?",
+					"Incluso aquí, la salvación se convierte en el contrato más cruel."
+				],
+				"vietnamese": [
+					"Trong tuyệt vọng vô tận, một người xuất hiện như giọt mưa lành.",
+					"Nàng là 'thương nhân' xoa dịu nỗi đau. Nàng nói sẽ gánh thay gánh nặng linh hồn.",
+					"Sự thật nào ẩn giấu sau lời thì thầm ngọt ngào?",
+					"Ngay cả nơi đây, sự cứu rỗi cũng trở thành khế ước tàn nhẫn nhất."
+				],
+				"thai": [
+					"ในความสิ้นหวังไม่รู้จบ มีผู้หนึ่งปรากฏดุจหยาดฝนชโลมใจ",
+					"นางคือ 'พ่อค้า' ผู้บรรเทาความเจ็บปวด นางเสนอจะแบกรับภาระของวิญญาณแทน",
+					"ความจริงอะไรซ่อนอยู่เบื้องหลังเสียงกระซิบอันหอมหวาน?",
+					"แม้แต่ที่นี่ ความรอดก็กลายเป็นสัญญาที่โหดร้ายที่สุด"
+				],
+				"hindi": [
+					"अंतहीन निराशा में, कोई एक बूंद वर्षा की तरह प्रकट हुआ।",
+					"वह दर्द कम करने वाली 'व्यापारी' थी। उसने आत्माओं का बोझ उठाने की पेशकश की।",
+					"मधुर फुसफुसाहट के पीछे क्या सच छिपा है?",
+					"यहां भी, मोक्ष सबसे क्रूर अनुबंध बन जाता है।"
+				]
+			}
+		},
+		{
+			"scenario_id": "hell_dolor_14_04",
+			"order": 4,
+			"act": "rising",
+			"theme": "hell",
+			"actors": {
+				"drox": {
+					"id": "mon_2fc30621-a15f-4371-9e37-295cdcb5675d",
+					"name": {
+						"korean": "드록스",
+						"english": "Drox",
+						"japanese": "ドロックス",
+						"chinese": "德罗克斯",
+						"french": "Drox",
+						"spanish": "Drox",
+						"vietnamese": "Đrốc",
+						"thai": "ดรอกซ์",
+						"hindi": "ड्रॉक्स"
+					},
+					"description": "",
+					"face_image_url": "https://imagedelivery.net/WTEqQNGFb-l-IHS6IGnzUQ/509c0376-2230-4669-d022-7e5336293200/public",
+					"battle_sprite_url": "https://imagedelivery.net/WTEqQNGFb-l-IHS6IGnzUQ/916b4cfa-f792-4f4a-5346-681095481e00/public"
+				}
+			},
+			"boss": {
+				"pool_id": "random_boss"
+			},
+			"prologue": {
+				"korean": [
+					"끝없는 절망 속, 영혼들은 한 줄기 희망을 찾아 몰려든다.",
+					"그곳을 지키는 '드록스'. 그는 그 희망이 환영일 뿐이라고 경고한다.",
+					"하지만 진실보다 달콤한 거짓. 그 유혹 앞에서, 영혼들은 눈을 감는다.",
+					"그리고 벽화 속 감시의 눈동자는 조용히 꿈틀대기 시작했다."
+				],
+				"english": [
+					"In endless despair, souls flock, seeking a sliver of hope.",
+					"'Drox' guards the place. He warns that hope is but an illusion.",
+					"But a lie sweeter than truth. Faced with its temptation, souls close their eyes.",
+					"And the watchful eyes in the mural quietly began to stir."
+				],
+				"japanese": [
+					"終わりなき絶望の中、魂たちは一筋の希望を求め集まる。",
+					"そこを守る「ドロックス」。彼はその希望が幻影に過ぎないと警告する。",
+					"しかし真実よりも甘い偽り。その誘惑を前に、魂たちは目を閉じる。",
+					"そして壁画の中の監視の瞳は、静かに蠢き始めた。"
+				],
+				"chinese": [
+					"在无尽的绝望中，灵魂们蜂拥而至，只为寻求一丝希望。",
+					"守护那里的“德罗克斯”。他警告说，那希望不过是幻象。",
+					"然而，谎言比真相更甜蜜。面对那诱惑，灵魂们闭上了眼睛。",
+					"而壁画中监视的眼睛，也开始悄然蠕动。"
+				],
+				"french": [
+					"Dans un désespoir sans fin, les âmes affluent, cherchant une étincelle d'espoir.",
+					"'Drox' garde cet endroit. Il avertit que cet espoir n'est qu'une illusion.",
+					"Mais un mensonge plus doux que la vérité. Face à sa tentation, les âmes ferment les yeux.",
+					"Et les yeux vigilants de la fresque commencèrent à s'agiter silencieusement."
+				],
+				"spanish": [
+					"En la desesperación infinita, las almas acuden en masa, buscando un rayo de esperanza.",
+					"'Drox' custodia ese lugar. Él advierte que esa esperanza es solo una ilusión.",
+					"Pero una mentira más dulce que la verdad. Ante esa tentación, las almas cierran los ojos.",
+					"Y los ojos vigilantes del mural comenzaron a agitarse silenciosamente."
+				],
+				"vietnamese": [
+					"Trong nỗi tuyệt vọng vô tận, các linh hồn đổ xô tìm kiếm một tia hy vọng.",
+					"'Drox' canh giữ nơi đó. Hắn cảnh báo rằng hy vọng ấy chỉ là một ảo ảnh.",
+					"Nhưng một lời nói dối ngọt ngào hơn sự thật. Trước cám dỗ đó, các linh hồn nhắm mắt lại.",
+					"Và đôi mắt giám sát trong bức bích họa bắt đầu lặng lẽ cựa quậy."
+				],
+				"thai": [
+					"ในความสิ้นหวังไม่สิ้นสุด ดวงวิญญาณต่างหลั่งไหลมารวมกันเพื่อค้นหาประกายแห่งความหวัง",
+					"'ดรอกซ์' ผู้เฝ้าสถานที่นั้น เขาเตือนว่าความหวังนั้นเป็นเพียงภาพลวงตา",
+					"แต่คำโกหกที่หอมหวานกว่าความจริง เมื่อเผชิญหน้ากับสิ่งเย้ายวนนั้น ดวงวิญญาณต่างหลับตาลง",
+					"และดวงตาที่จับจ้องในจิตรกรรมฝาผนังก็เริ่มกระตุกเบาๆ"
+				],
+				"hindi": [
+					"अनंत निराशा में, आत्माएं आशा की एक किरण की तलाश में उमड़ पड़ती हैं।",
+					"उस जगह की रखवाली करने वाला 'ड्रॉक्स'। वह चेतावनी देता है कि वह आशा केवल एक भ्रम है।",
+					"लेकिन सच्चाई से मीठा झूठ। उस प्रलोभन के सामने, आत्माएं अपनी आंखें बंद कर लेती हैं।",
+					"और भित्तिचित्र में निगरानी की आंखें चुपचाप हिलने लगीं।"
+				]
+			},
+			"rooms": [
+				{
+					"id": 1,
+					"dialogue": [
+						{
+							"emotion": "base",
+							"speaker": "narrator",
+							"type": "speech",
+							"content": {
+								"korean": "희망을 갈구하는 영혼들이 모여든 곳. 기묘한 빛이 감도는 공간이었다.",
+								"english": "A place where souls yearning for hope gathered. A space enveloped in a strange light.",
+								"japanese": "希望を渇望する魂たちが集まった場所。奇妙な光が漂う空間だった。",
+								"chinese": "渴望希望的灵魂们聚集之地。那是一个弥漫着奇妙光芒的空间。",
+								"french": "Un lieu où se sont rassemblées les âmes aspirant à l'espoir. Un espace enveloppé d'une lumière étrange.",
+								"spanish": "Un lugar donde se congregaron las almas que anhelaban esperanza. Un espacio envuelto en una luz extraña.",
+								"vietnamese": "Nơi các linh hồn khao khát hy vọng tụ tập. Đó là một không gian bao trùm bởi ánh sáng kỳ lạ.",
+								"thai": "สถานที่ที่ดวงวิญญาณผู้กระหายความหวังมารวมกัน เป็นพื้นที่ที่เต็มไปด้วยแสงประหลาด",
+								"hindi": "आशा की लालसा रखने वाली आत्माओं के एकत्रित होने का स्थान। एक अजीब रोशनी से घिरा हुआ स्थान था।"
+							}
+						},
+						{
+							"emotion": "base",
+							"speaker": "character_any",
+							"type": "speech",
+							"content": {
+								"korean": "여기가… 그들이 희망을 본다는 곳인가?",
+								"english": "Is this... the place where they see hope?",
+								"japanese": "ここが…彼らが希望を見るという場所なのか？",
+								"chinese": "这里就是…他们看到希望的地方吗？",
+								"french": "C'est ici… l'endroit où ils voient l'espoir ?",
+								"spanish": "¿Es aquí... el lugar donde ven la esperanza?",
+								"vietnamese": "Đây là... nơi họ nhìn thấy hy vọng ư?",
+								"thai": "ที่นี่คือ... ที่ที่พวกเขาเห็นความหวังงั้นหรือ?",
+								"hindi": "क्या यह... वह जगह है जहां वे आशा देखते हैं?"
+							}
+						},
+						{
+							"duration_ms": 500,
+							"spot": [
+								4,
+								3
+							],
+							"action": "enter",
+							"type": "direction",
+							"speaker": "drox"
+						},
+						{
+							"speaker": "drox",
+							"type": "speech",
+							"content": {
+								"korean": "…어리석은 영혼들이여. 너희가 보는 건 환영일 뿐.",
+								"english": "...Foolish souls. What you see is but an illusion.",
+								"japanese": "…愚かな魂たちよ。お前たちが見ているのは幻影に過ぎない。",
+								"chinese": "……愚蠢的灵魂们。你们所见的不过是幻象。",
+								"french": "...Âmes insensées. Ce que vous voyez n'est qu'une illusion.",
+								"spanish": "...Almas necias. Lo que veis es solo una ilusión.",
+								"vietnamese": "...Hỡi những linh hồn ngu ngốc. Điều các ngươi thấy chỉ là ảo ảnh.",
+								"thai": "...ดวงวิญญาณผู้โง่เขลา สิ่งที่พวกเจ้าเห็นเป็นเพียงภาพลวงตา",
+								"hindi": "...मूर्ख आत्माएं। जो तुम देखते हो वह केवल एक भ्रम है।"
+							},
+							"emotion": "sad"
+						},
+						{
+							"speaker": "character_1",
+							"type": "speech",
+							"content": {
+								"korean": "저 자는 누구지? 계속 저런 말을 하고 있어.",
+								"english": "Who is that person? They keep saying things like that.",
+								"japanese": "あの者は誰だ？ずっとあんなことを言っている。",
+								"chinese": "那个人是谁？他一直在说那种话。",
+								"french": "Qui est cette personne ? Elle ne cesse de dire de telles choses.",
+								"spanish": "¿Quién es esa persona? Sigue diciendo cosas así.",
+								"vietnamese": "Kẻ đó là ai? Cứ nói mãi những lời như thế.",
+								"thai": "คนนั้นคือใคร? เขายังคงพูดแบบนั้นอยู่เรื่อยๆ",
+								"hindi": "वह व्यक्ति कौन है? वह लगातार ऐसी बातें कह रहा है।"
+							},
+							"emotion": "base"
+						},
+						{
+							"emotion": "angry",
+							"speaker": "drox",
+							"type": "speech",
+							"content": {
+								"korean": "진실을 외면하는 자들에게, 희망은 곧 독이 될지니.",
+								"english": "For those who avert their eyes from the truth, hope will soon become poison.",
+								"japanese": "真実から目を背ける者たちにとって、希望はやがて毒となるだろう。",
+								"chinese": "对于那些回避真相的人来说，希望很快就会变成毒药。",
+								"french": "Pour ceux qui détournent les yeux de la vérité, l'espoir deviendra bientôt un poison.",
+								"spanish": "Para aquellos que ignoran la verdad, la esperanza pronto se convertirá en veneno.",
+								"vietnamese": "Với những kẻ từ chối sự thật, hy vọng sẽ sớm trở thành thuốc độc.",
+								"thai": "สำหรับผู้ที่หันหลังให้ความจริง ความหวังจะกลายเป็นยาพิษในไม่ช้า",
+								"hindi": "जो सत्य से आंखें फेर लेते हैं, उनके लिए आशा शीघ्र ही विष बन जाएगी।"
+							}
+						}
+					]
+				},
+				{
+					"id": 3,
+					"dialogue": [
+						{
+							"type": "direction",
+							"speaker": "drox",
+							"duration_ms": 500,
+							"spot": [
+								2,
+								3
+							],
+							"action": "enter"
+						},
+						{
+							"emotion": "sad",
+							"speaker": "drox",
+							"type": "speech",
+							"content": {
+								"korean": "저들이 좇는 희망은… 시스템이 만들어낸 환상이다.",
+								"english": "The hope they pursue... is an illusion created by the system.",
+								"japanese": "彼らが追い求める希望は…システムが作り出した幻想だ。",
+								"chinese": "他们所追逐的希望……是系统制造的幻象。",
+								"french": "L'espoir qu'ils poursuivent... est une illusion créée par le système.",
+								"spanish": "La esperanza que persiguen... es una ilusión creada por el sistema.",
+								"vietnamese": "Hy vọng mà họ theo đuổi... là một ảo ảnh do hệ thống tạo ra.",
+								"thai": "ความหวังที่พวกเขาไล่ตาม... เป็นภาพลวงตาที่ระบบสร้างขึ้น",
+								"hindi": "जिस आशा का वे पीछा करते हैं... वह सिस्टम द्वारा बनाया गया एक भ्रम है।"
+							}
+						},
+						{
+							"emotion": "base",
+							"speaker": "character_any",
+							"type": "speech",
+							"content": {
+								"korean": "환상…?",
+								"english": "Illusion...?",
+								"japanese": "幻想…？",
+								"chinese": "幻想……？",
+								"french": "Illusion... ?",
+								"spanish": "¿Ilusión...?",
+								"vietnamese": "Ảo ảnh...?",
+								"thai": "ภาพลวงตา...?",
+								"hindi": "भ्रम...?"
+							}
+						},
+						{
+							"emotion": "angry",
+							"speaker": "drox",
+							"type": "speech",
+							"content": {
+								"korean": "고통을 잊게 하고, 저항의 의지를 꺾는 달콤한 마취제에 불과해.",
+								"english": "It's merely a sweet anesthetic, making you forget pain and breaking your will to resist.",
+								"japanese": "痛み忘れさせ、抵抗する意思を砕く甘い麻酔薬にすぎない。",
+								"chinese": "那不过是甜美的麻醉剂，让你忘记痛苦，磨灭抵抗的意志。",
+								"french": "Ce n'est qu'un doux anesthésiant, qui vous fait oublier la douleur et brise votre volonté de résister.",
+								"spanish": "Es solo un dulce anestésico que te hace olvidar el dolor y rompe tu voluntad de resistir.",
+								"vietnamese": "Nó chỉ là liều thuốc mê ngọt ngào, khiến ngươi quên đi nỗi đau và bẻ gãy ý chí kháng cự.",
+								"thai": "มันเป็นเพียงยาชาอันหอมหวานที่ทำให้เจ้าลืมความเจ็บปวดและบดขยี้เจตจำนงในการต่อต้านของเจ้า",
+								"hindi": "यह सिर्फ एक मीठा एनेस्थेटिक है, जो तुम्हें दर्द भुला देता है और विरोध करने की तुम्हारी इच्छा को तोड़ देता है।"
+							}
+						},
+						{
+							"emotion": "base",
+							"speaker": "character_2",
+							"type": "speech",
+							"content": {
+								"korean": "그래도 저들은 믿고 싶어 해.",
+								"english": "Yet, they want to believe.",
+								"japanese": "それでも彼らは信じたがる。",
+								"chinese": "然而，他们却想相信。",
+								"french": "Pourtant, ils veulent y croire.",
+								"spanish": "Aun así, ellos quieren creer.",
+								"vietnamese": "Thế nhưng, họ vẫn muốn tin.",
+								"thai": "แต่พวกเขาก็ยังอยากเชื่อ",
+								"hindi": "फिर भी, वे विश्वास करना चाहते हैं।"
+							}
+						},
+						{
+							"emotion": "angry",
+							"speaker": "drox",
+							"type": "speech",
+							"content": {
+								"korean": "그 믿음이 이 지옥을 유지하는 연료가 된다는 것을…!",
+								"english": "That belief becomes the fuel that sustains this hell...!",
+								"japanese": "その信念がこの地獄を維持する燃料となることを…！",
+								"chinese": "殊不知，那份信念正是维持这地狱的燃料……！",
+								"french": "Et cette croyance devient le carburant qui alimente cet enfer... !",
+								"spanish": "¡Esa creencia se convierte en el combustible que mantiene este infierno...!",
+								"vietnamese": "Rằng niềm tin đó trở thành nhiên liệu duy trì địa ngục này...!",
+								"thai": "ว่าความเชื่อนั้นกลายเป็นเชื้อเพลิงที่หล่อเลี้ยงนรกนี้...！",
+								"hindi": "कि वह विश्वास ही इस नरक को बनाए रखने का ईंधन बन जाता है…!"
+							}
+						}
+					]
+				},
+				{
+					"id": 5,
+					"dialogue": [
+						{
+							"spot": [
+								3,
+								3
+							],
+							"duration_ms": 500,
+							"action": "enter",
+							"speaker": "drox",
+							"type": "direction"
+						},
+						{
+							"speaker": "drox",
+							"type": "speech",
+							"content": {
+								"korean": "시스템은 너희의 절망을 먹고 자란다. 그리고 희망으로 위장한 독을 뿌리지.",
+								"english": "The system feeds on your despair. Then it sprinkles poison disguised as hope.",
+								"japanese": "システムはお前たちの絶望を食らって成長する。そして希望と偽った毒を撒き散らす。",
+								"chinese": "系统以你们的绝望为食而成长。然后，它散布着伪装成希望的毒药。",
+								"french": "Le système se nourrit de votre désespoir. Puis il répand un poison déguisé en espoir.",
+								"spanish": "El sistema se alimenta de vuestra desesperación. Y luego esparce veneno disfrazado de esperanza.",
+								"vietnamese": "Hệ thống lớn mạnh nhờ nỗi tuyệt vọng của các ngươi. Và rồi nó rải rắc chất độc ngụy trang thành hy vọng.",
+								"thai": "ระบบเติบโตด้วยความสิ้นหวังของพวกเจ้า จากนั้นก็โปรยยาพิษที่ปลอมตัวเป็นความหวัง",
+								"hindi": "यह प्रणाली तुम्हारी निराशा पर पलती है। और फिर यह आशा के भेष में ज़हर बिखेरती है।"
+							},
+							"emotion": "angry"
+						},
+						{
+							"emotion": "sad",
+							"speaker": "character_any",
+							"type": "speech",
+							"content": {
+								"korean": "그럼 진짜 희망은 없어?",
+								"english": "So, there's no real hope?",
+								"japanese": "じゃあ、本当の希望はないの？",
+								"chinese": "那就没有真正的希望了吗？",
+								"french": "Alors, il n'y a pas de véritable espoir ?",
+								"spanish": "¿Entonces no hay esperanza real?",
+								"vietnamese": "Vậy không có hy vọng thật sự sao?",
+								"thai": "แล้วความหวังที่แท้จริงไม่มีเลยหรือ?",
+								"hindi": "तो, कोई सच्ची आशा नहीं है?"
+							}
+						},
+						{
+							"emotion": "base",
+							"speaker": "drox",
+							"type": "speech",
+							"content": {
+								"korean": "너희가 스스로 찾아야 해. 이곳에선 모든 것이 왜곡되어 있다.",
+								"english": "You must find it yourselves. Here, everything is distorted.",
+								"japanese": "お前たちが自ら見つけなければならない。ここでは全てが歪められている。",
+								"chinese": "你们必须自己去寻找。在这里，一切都被扭曲了。",
+								"french": "Vous devez le trouver vous-mêmes. Ici, tout est déformé.",
+								"spanish": "Debéis encontrarla vosotros mismos. Aquí, todo está distorsionado.",
+								"vietnamese": "Các ngươi phải tự mình tìm lấy. Ở đây, mọi thứ đều bị bóp méo.",
+								"thai": "พวกเจ้าต้องหามันเอง ที่นี่ทุกสิ่งถูกบิดเบือน",
+								"hindi": "तुम्हें इसे खुद खोजना होगा। यहाँ, सब कुछ विकृत है।"
+							}
+						},
+						{
+							"speaker": "character_3",
+							"type": "speech",
+							"content": {
+								"korean": "저 영혼들은… 환상인 걸 알면서도 버리지 못하는 건가?",
+								"english": "Those souls... even knowing it's an illusion, they can't let go?",
+								"japanese": "あの魂たちは…幻想だと分かっていても捨てられないのか？",
+								"chinese": "那些灵魂……即使知道是幻象，也无法舍弃吗？",
+								"french": "Ces âmes... même en sachant que c'est une illusion, elles ne peuvent pas lâcher prise ?",
+								"spanish": "Esas almas... ¿aun sabiendo que es una ilusión, no pueden soltarla?",
+								"vietnamese": "Những linh hồn đó... dù biết là ảo ảnh, vẫn không thể từ bỏ sao?",
+								"thai": "วิญญาณเหล่านั้น... ถึงรู้ว่าเป็นภาพลวงตา ก็ยังทิ้งไม่ได้หรือ?",
+								"hindi": "वे आत्माएँ... भ्रम जानते हुए भी, उसे छोड़ नहीं पा रही हैं?"
+							},
+							"emotion": "sad"
+						},
+						{
+							"emotion": "sad",
+							"speaker": "drox",
+							"type": "speech",
+							"content": {
+								"korean": "환상이 진실보다 달콤하니까. 그게 이곳의 비극이지.",
+								"english": "Because illusion is sweeter than truth. That's the tragedy of this place.",
+								"japanese": "幻想が真実よりも甘いからだ。それがこの場所の悲劇だ。",
+								"chinese": "因为幻象比真相更甜美。这就是此地的悲剧。",
+								"french": "Parce que l'illusion est plus douce que la vérité. C'est la tragédie de cet endroit.",
+								"spanish": "Porque la ilusión es más dulce que la verdad. Esa es la tragedia de este lugar.",
+								"vietnamese": "Vì ảo ảnh ngọt ngào hơn sự thật. Đó là bi kịch của nơi đây.",
+								"thai": "เพราะภาพลวงตาหวานกว่าความจริง นั่นคือโศกนาฏกรรมของที่นี่",
+								"hindi": "क्योंकि भ्रम सच से ज़्यादा मीठा है। यही इस जगह की त्रासदी है।"
+							}
+						}
+					]
+				},
+				{
+					"id": 9,
+					"dialogue": [
+						{
+							"speaker": "narrator",
+							"type": "speech",
+							"content": {
+								"korean": "방 가득 희망을 속삭이는 벽화가 그려져 있었다. 그러나 그림 속 눈들이… 살아 움직였다.",
+								"english": "The room was filled with murals whispering of hope. But the eyes in the paintings... they moved.",
+								"japanese": "部屋には希望を囁く壁画が描かれていた。しかし、絵の中の目たちが…生きて動いた。",
+								"chinese": "房间里画满了低语着希望的壁画。然而，画中的眼睛……却活了过来。",
+								"french": "La pièce était remplie de fresques murmurant l'espoir. Mais les yeux dans les tableaux... bougeaient.",
+								"spanish": "La habitación estaba llena de murales que susurraban esperanza. Pero los ojos en los cuadros... se movían.",
+								"vietnamese": "Căn phòng tràn ngập những bức bích họa thì thầm hy vọng. Nhưng đôi mắt trong tranh... lại sống động.",
+								"thai": "ห้องเต็มไปด้วยจิตรกรรมฝาผนังที่กระซิบถึงความหวัง แต่ดวงตาในภาพ... กลับมีชีวิตและเคลื่อนไหว",
+								"hindi": "कमरा आशा फुसफुसाते भित्तिचित्रों से भरा था। लेकिन चित्रों में आँखें... जीवित होकर हिल रही थीं।"
+							},
+							"emotion": "base"
+						},
+						{
+							"speaker": "character_any",
+							"type": "speech",
+							"content": {
+								"korean": "저것 봐! 벽화 속 눈들이… 움직여!",
+								"english": "Look! The eyes in the mural... they're moving!",
+								"japanese": "見て！壁画の目が…動いてる！",
+								"chinese": "看！壁画里的眼睛……在动！",
+								"french": "Regarde ! Les yeux dans la fresque... ils bougent !",
+								"spanish": "¡Mira! Los ojos del mural... ¡se mueven!",
+								"vietnamese": "Nhìn kìa! Đôi mắt trong bức bích họa... đang chuyển động!",
+								"thai": "ดูนั่นสิ! ดวงตาในภาพจิตรกรรมฝาผนัง... กำลังขยับ!",
+								"hindi": "देखो! भित्तिचित्र की आँखें... हिल रही हैं!"
+							},
+							"emotion": "angry"
+						},
+						{
+							"spot": [
+								2,
+								3
+							],
+							"duration_ms": 500,
+							"action": "enter",
+							"speaker": "drox",
+							"type": "direction"
+						},
+						{
+							"speaker": "drox",
+							"type": "speech",
+							"content": {
+								"korean": "감시당하고 있다. 이 환상 그 자체가 너희를 지켜보고 있어.",
+								"english": "You're being watched. This very illusion is watching you.",
+								"japanese": "監視されている。この幻想そのものが、お前たちを見張っている。",
+								"chinese": "你们被监视了。这个幻象本身就在盯着你们。",
+								"french": "Vous êtes surveillés. Cette illusion elle-même vous observe.",
+								"spanish": "Están siendo vigilados. Esta ilusión en sí misma los observa.",
+								"vietnamese": "Các ngươi đang bị theo dõi. Chính ảo ảnh này đang quan sát các ngươi.",
+								"thai": "พวกเจ้าถูกจับตามองอยู่ ภาพลวงตานี้กำลังจับตาดูพวกเจ้าเอง",
+								"hindi": "तुम पर नज़र रखी जा रही है। यह भ्रम ही तुम्हें देख रहा है।"
+							},
+							"emotion": "angry"
+						},
+						{
+							"speaker": "character_4",
+							"type": "speech",
+							"content": {
+								"korean": "점점 더 기분 나빠지는군.",
+								"english": "It's getting creepier and creepier.",
+								"japanese": "ますます気分が悪くなるな。",
+								"chinese": "感觉越来越糟了。",
+								"french": "C'est de plus en plus inquiétant.",
+								"spanish": "Cada vez es más espeluznante.",
+								"vietnamese": "Càng lúc càng khó chịu.",
+								"thai": "ยิ่งน่าขนลุกขึ้นทุกที",
+								"hindi": "यह और भी डरावना होता जा रहा है।"
+							},
+							"emotion": "base"
+						},
+						{
+							"emotion": "base",
+							"speaker": "drox",
+							"type": "speech",
+							"content": {
+								"korean": "환영의 중심에 도달했다. 이제 환각의 수호자가 너희를 막을 것이다.",
+								"english": "You've reached the heart of the illusion. Now, the Guardian of Delusions will stop you.",
+								"japanese": "幻影の中心に到達した。今や幻覚の守護者がお前たちを阻むだろう。",
+								"chinese": "你们已到达幻影的中心。现在，幻觉的守护者会阻止你们。",
+								"french": "Vous avez atteint le cœur de l'illusion. Maintenant, le Gardien des Hallucinations vous arrêtera.",
+								"spanish": "Han llegado al corazón de la ilusión. Ahora, el Guardián de las Alucinaciones los detendrá.",
+								"vietnamese": "Ngươi đã đến trung tâm của ảo ảnh. Giờ đây, Kẻ bảo hộ Ảo giác sẽ ngăn cản ngươi.",
+								"thai": "เจ้ามาถึงใจกลางของภาพลวงตาแล้ว บัดนี้ผู้พิทักษ์แห่งมายาจะหยุดเจ้า",
+								"hindi": "तुम भ्रम के केंद्र में पहुँच गए हो। अब, भ्रम का संरक्षक तुम्हें रोकेगा।"
+							}
+						}
+					]
+				},
+				{
+					"dialogue": [
+						{
+							"speaker": "narrator",
+							"type": "speech",
+							"content": {
+								"korean": "거대한 그림자가 길을 막아섰다. 환영의 수호자였다.",
+								"english": "A colossal shadow blocked the way. It was the Guardian of Illusions.",
+								"japanese": "巨大な影が道を阻んだ。それは幻影の守護者だった。",
+								"chinese": "巨大的身影挡住了去路。那是幻影的守护者。",
+								"french": "Une ombre colossale barra le chemin. C'était le Gardien des Illusions.",
+								"spanish": "Una sombra colosal bloqueó el camino. Era el Guardián de las Ilusiones.",
+								"vietnamese": "Một cái bóng khổng lồ chặn đường. Đó là Kẻ bảo hộ Ảo ảnh.",
+								"thai": "เงาขนาดมหึมาขวางทางอยู่ มันคือผู้พิทักษ์แห่งภาพลวงตา",
+								"hindi": "एक विशाल छाया ने रास्ता रोक लिया। वह भ्रम का संरक्षक था।"
+							},
+							"emotion": "base"
+						},
+						{
+							"emotion": "base",
+							"speaker": "random_boss",
+							"type": "speech",
+							"content": {
+								"korean": "어리석은 자들… 이곳에서 희망을 찾으려 하는가?",
+								"english": "Foolish ones... do you seek hope here?",
+								"japanese": "愚かな者たちよ…ここで希望を見出そうとするのか？",
+								"chinese": "愚蠢的人们……想在这里寻找希望吗？",
+								"french": "Insensés... cherchez-vous l'espoir ici ?",
+								"spanish": "Necios... ¿buscan esperanza aquí?",
+								"vietnamese": "Những kẻ ngu ngốc... các ngươi tìm kiếm hy vọng ở nơi này sao?",
+								"thai": "พวกคนเขลา... เจ้าคิดจะหาความหวังที่นี่หรือไร?",
+								"hindi": "मूर्खों... क्या तुम यहाँ आशा ढूँढ़ने आए हो?"
+							}
+						},
+						{
+							"speaker": "character_any",
+							"type": "speech",
+							"content": {
+								"korean": "더 이상 환상에 속지 않아!",
+								"english": "We won't be fooled by illusions any longer!",
+								"japanese": "もうこれ以上、幻想には騙されない！",
+								"chinese": "我们不会再被幻象欺骗了！",
+								"french": "Nous ne serons plus dupes des illusions !",
+								"spanish": "¡Ya no nos engañarán más las ilusiones!",
+								"vietnamese": "Chúng ta sẽ không còn bị ảo ảnh lừa dối nữa!",
+								"thai": "เราจะไม่หลงกลภาพลวงตาอีกต่อไป!",
+								"hindi": "हम अब और भ्रम में नहीं फँसेंगे!"
+							},
+							"emotion": "angry"
+						},
+						{
+							"emotion": "base",
+							"speaker": "random_boss",
+							"type": "speech",
+							"content": {
+								"korean": "진실은… 너희를 더 깊은 절망으로 이끌 뿐이다.",
+								"english": "The truth... will only lead you into deeper despair.",
+								"japanese": "真実は…お前たちをより深い絶望へと誘うだけだ。",
+								"chinese": "真相……只会把你们引向更深的绝望。",
+								"french": "La vérité... ne fera que vous plonger dans un désespoir plus profond.",
+								"spanish": "La verdad... solo los llevará a una desesperación más profunda.",
+								"vietnamese": "Sự thật... sẽ chỉ dẫn các ngươi vào sự tuyệt vọng sâu hơn mà thôi.",
+								"thai": "ความจริง... จะนำเจ้าไปสู่ความสิ้นหวังที่ลึกซึ้งยิ่งกว่าเดิมเท่านั้น",
+								"hindi": "सच्चाई... तुम्हें और गहरे निराशा में धकेलेगी।"
+							}
+						},
+						{
+							"direction": "down",
+							"speaker": "drox",
+							"type": "direction",
+							"action": "exit",
+							"duration_ms": 400
+						},
+						{
+							"speaker": "drox",
+							"type": "speech",
+							"content": {
+								"korean": "…부디, 진실을 마주하길.",
+								"english": "...Please, face the truth.",
+								"japanese": "…どうか、真実と向き合ってくれ。",
+								"chinese": "……请务必面对真相。",
+								"french": "...S'il vous plaît, faites face à la vérité.",
+								"spanish": "...Por favor, enfrenten la verdad.",
+								"vietnamese": "...Xin hãy đối mặt với sự thật.",
+								"thai": "...ได้โปรดเผชิญหน้ากับความจริงเถิด",
+								"hindi": "...कृपा करके, सच्चाई का सामना करो।"
+							},
+							"emotion": "sad"
+						}
+					],
+					"id": 15,
+					"win_dialogue": [
+						{
+							"speaker": "narrator",
+							"type": "speech",
+							"content": {
+								"korean": "환각의 수호자가 쓰러지자, 공간을 채웠던 기묘한 빛이 흐릿해졌다.",
+								"english": "As the Guardian of Delusions fell, the strange light filling the space faded.",
+								"japanese": "幻覚の守護者が倒れると、空間を満たしていた奇妙な光が薄れた。",
+								"chinese": "随着幻觉守护者的倒下，充满空间的奇特光芒也随之黯淡。",
+								"french": "Lorsque le Gardien des Hallucinations tomba, la lumière étrange qui emplissait l'espace s'estompa.",
+								"spanish": "Cuando el Guardián de las Alucinaciones cayó, la extraña luz que llenaba el espacio se desvaneció.",
+								"vietnamese": "Khi Kẻ bảo hộ Ảo giác ngã xuống, ánh sáng kỳ lạ lấp đầy không gian cũng dần mờ đi.",
+								"thai": "เมื่อผู้พิทักษ์แห่งมายาล้มลง แสงประหลาดที่เต็มพื้นที่ก็จางหายไป",
+								"hindi": "जैसे ही भ्रम का संरक्षक गिरा, अंतरिक्ष में फैली अजीब रोशनी धुंधली पड़ गई।"
+							},
+							"emotion": "base"
+						},
+						{
+							"emotion": "base",
+							"speaker": "random_boss",
+							"type": "speech",
+							"content": {
+								"korean": "부서진다고… 끝나는 게 아니다. 환상은… 계속될 것이다.",
+								"english": "Breaking... is not the end. The illusion... will continue.",
+								"japanese": "壊れても…終わりじゃない。幻想は…続くんだ。",
+								"chinese": "破碎…并非终结。幻象…将继续存在。",
+								"french": "Se briser… n'est pas la fin. L'illusion… continuera.",
+								"spanish": "Romperse… no es el final. La ilusión… continuará.",
+								"vietnamese": "Dù vỡ nát… đây không phải kết thúc. Ảo ảnh… sẽ tiếp diễn.",
+								"thai": "การแตกสลาย…ไม่ใช่จุดจบ ภาพลวงตา…จะดำเนินต่อไป",
+								"hindi": "टूट जाना… अंत नहीं है। भ्रम… जारी रहेगा。"
+							}
+						},
+						{
+							"emotion": "sad",
+							"speaker": "character_any",
+							"type": "speech",
+							"content": {
+								"korean": "…말도 안 돼. 그럼 이 모든 게 헛수고였어?",
+								"english": "...No way. So all of this was for nothing?",
+								"japanese": "…まさか。じゃあ、これまでの全てが無駄だったって言うの？",
+								"chinese": "…不可能。那这一切都白费了吗？",
+								"french": "...Impossible. Alors tout ça n'a servi à rien ?",
+								"spanish": "...No puede ser. ¿Entonces todo esto fue en vano?",
+								"vietnamese": "...Không thể nào. Vậy tất cả những gì đã làm đều vô ích sao?",
+								"thai": "...ไม่จริงน่า แล้วทั้งหมดนี่ก็ไร้ประโยชน์งั้นหรือ?",
+								"hindi": "...नहीं हो सकता। तो यह सब व्यर्थ था?"
+							}
+						},
+						{
+							"speaker": "narrator",
+							"type": "speech",
+							"content": {
+								"korean": "환상이 걷히자, 보이지 않던 거대한 문이 드러났다. 그 너머엔… 더 깊은 절망이 기다리고 있었다.",
+								"english": "As the illusion faded, a colossal, unseen gate was revealed. Beyond it… a deeper despair awaited.",
+								"japanese": "幻想が晴れると、見えなかった巨大な扉が現れた。その先には…より深い絶望が待ち受けていた。",
+								"chinese": "幻象消散，一道看不见的巨大门户显现。在那之后…更深的绝望正在等待。",
+								"french": "Alors que l'illusion s'estompait, une porte colossale et invisible se révéla. Au-delà… un désespoir plus profond attendait.",
+								"spanish": "Al desvanecerse la ilusión, una colosal puerta invisible fue revelada. Más allá… una desesperación más profunda aguardaba.",
+								"vietnamese": "Khi ảo ảnh tan biến, một cánh cổng khổng lồ, vô hình đã hiện ra. Phía sau nó… một nỗi tuyệt vọng sâu sắc hơn đang chờ đợi.",
+								"thai": "เมื่อภาพลวงตาจางหายไป ประตูบานมหึมาที่มองไม่เห็นก็ปรากฏขึ้น เบื้องหลังนั้น… ความสิ้นหวังที่ลึกซึ้งกว่ากำลังรออยู่",
+								"hindi": "जैसे ही भ्रम दूर हुआ, एक विशाल, अदृश्य द्वार प्रकट हुआ। उसके परे… एक गहरी निराशा प्रतीक्षा कर रही थी।"
+							},
+							"emotion": "base"
+						}
+					],
+					"lose_dialogue": [
+						{
+							"speaker": "narrator",
+							"type": "speech",
+							"content": {
+								"korean": "환각의 힘이 모든 것을 압도했다. 절망은 더욱 깊어졌다.",
+								"english": "The power of the hallucination overwhelmed everything. Despair deepened.",
+								"japanese": "幻覚の力が全てを圧倒した。絶望はさらに深まった。",
+								"chinese": "幻觉的力量压倒了一切。绝望愈发深重。",
+								"french": "Le pouvoir de l'hallucination a tout submergé. Le désespoir s'est approfondi.",
+								"spanish": "El poder de la alucinación lo abrumó todo. La desesperación se profundizó.",
+								"vietnamese": "Sức mạnh của ảo giác đã áp đảo tất cả. Nỗi tuyệt vọng càng thêm sâu sắc.",
+								"thai": "พลังของภาพหลอนเข้าครอบงำทุกสิ่ง ความสิ้นหวังยิ่งทวีความรุนแรงขึ้น",
+								"hindi": "भ्रम की शक्ति ने सब कुछ अभिभूत कर दिया। निराशा और गहरी हो गई।"
+							},
+							"emotion": "base"
+						},
+						{
+							"emotion": "base",
+							"speaker": "random_boss",
+							"type": "speech",
+							"content": {
+								"korean": "포기해라. 너희에게 희망은… 없다.",
+								"english": "Give up. There is no hope… for you.",
+								"japanese": "諦めろ。お前たちに希望は…ない。",
+								"chinese": "放弃吧。对你们而言，希望…已然不存。",
+								"french": "Abandonnez. Il n'y a aucun espoir… pour vous.",
+								"spanish": "Ríndanse. No hay esperanza… para ustedes.",
+								"vietnamese": "Hãy từ bỏ đi. Các ngươi… không còn hy vọng nào đâu.",
+								"thai": "ยอมแพ้ซะ พวกเจ้า… ไม่มีหวังแล้ว",
+								"hindi": "हार मान लो। तुम्हारे लिए कोई उम्मीद… नहीं है।"
+							}
+						},
+						{
+							"emotion": "angry",
+							"speaker": "character_any",
+							"type": "speech",
+							"content": {
+								"korean": "…아니. 아직 포기하지 않아.",
+								"english": "...No. I won't give up yet.",
+								"japanese": "…いや。まだ諦めない。",
+								"chinese": "…不。我还没有放弃。",
+								"french": "...Non. Je n'abandonne pas encore.",
+								"spanish": "...No. Aún no me rindo.",
+								"vietnamese": "...Không. Tôi chưa từ bỏ.",
+								"thai": "...ไม่ ข้ายังไม่ยอมแพ้",
+								"hindi": "...नहीं। मैं अभी तक हार नहीं मानूंगा।"
+							}
+						}
+					]
+				}
+			]
+		},
+		{
+			"scenario_id": "hell_dolor_14_05",
+			"order": 5,
+			"act": "climax_finale",
+			"theme": "hell",
+			"actors": {
+				"brim": {
+					"id": "mon_d7f57824-190d-40b9-93d1-66c658f0441f",
+					"name": {
+						"korean": "브림",
+						"english": "Brim",
+						"japanese": "ブリム",
+						"chinese": "布里姆",
+						"french": "Brim",
+						"spanish": "Brim",
+						"vietnamese": "Brim",
+						"thai": "บริม",
+						"hindi": "ब्रिम"
+					},
+					"description": "",
+					"face_image_url": "https://imagedelivery.net/WTEqQNGFb-l-IHS6IGnzUQ/08ad0e4d-214d-43b3-dc3e-ddfba9049300/public",
+					"battle_sprite_url": "https://imagedelivery.net/WTEqQNGFb-l-IHS6IGnzUQ/16f1def2-7c33-4558-4b21-9c3e87fa3e00/public"
+				}
+			},
+			"boss": {
+				"pool_id": "pool_Echo_Dolor_V1"
+			},
+			"epilogue": {
+				"korean": [
+					"애도의 메아리는 쓰러졌다. 지옥은 잠시 고요해졌다.",
+					"하지만 그 승리는, 또 다른 절망의 씨앗을 심었을 뿐.",
+					"시스템은 멈추지 않는다. 모든 고통을 흡수하며, 영원히 순환한다.",
+					"구원이었을까. 혹은, 더욱 깊은 절망 속으로의 침해였을까.",
+					"알 수 없었다. 다만, 새로운 찬가가 시작되고 있었다."
+				],
+				"english": [
+					"The echoes of lament fell. Hell fell silent for a moment.",
+					"But that victory, merely sowed the seeds of another despair.",
+					"The system never stops. Absorbing all suffering, it cycles eternally.",
+					"Was it salvation? Or, an intrusion into deeper despair?",
+					"It was unknown. Only, a new hymn was beginning."
+				],
+				"japanese": [
+					"哀悼のこだまは消え去った。地獄は一時、静寂に包まれた。",
+					"しかしその勝利は、また別の絶望の種を蒔いただけだった。",
+					"システムは止まらない。すべての苦痛を吸収し、永遠に循環する。",
+					"それは救済だったのか。あるいは、さらなる深き絶望への侵食だったのか。",
+					"知る由もなかった。ただ、新たな賛歌が始まろうとしていた。"
+				],
+				"chinese": [
+					"哀悼的回声倒下了。地狱暂时归于沉寂。",
+					"然而那胜利，不过是播下了另一个绝望的种子。",
+					"系统不会停止。它吸收所有痛苦，永远循环。",
+					"是救赎吗？亦或是，对更深绝望的侵犯？",
+					"不得而知。只是，一首新的赞歌正在开始。"
+				],
+				"french": [
+					"Les échos du deuil sont tombés. L'Enfer est resté silencieux un instant.",
+					"Mais cette victoire, n'a fait que semer les graines d'un autre désespoir.",
+					"Le système ne s'arrête jamais. Absorbant toute souffrance, il cycle éternellement.",
+					"Était-ce le salut ? Ou, une intrusion dans un désespoir plus profond ?",
+					"On ne savait pas. Seulement, un nouvel hymne commençait."
+				],
+				"spanish": [
+					"Los ecos del lamento cayeron. El Infierno enmudeció por un momento.",
+					"Pero esa victoria, solo sembró las semillas de otra desesperación.",
+					"El sistema nunca se detiene. Absorbiendo todo sufrimiento, cicla eternamente.",
+					"¿Fue salvación? O, una intrusión en una desesperación aún más profunda?",
+					"Era desconocido. Solo, un nuevo himno estaba comenzando."
+				],
+				"vietnamese": [
+					"Tiếng than khóc đã tắt. Địa ngục tạm thời trở nên tĩnh lặng.",
+					"Nhưng chiến thắng đó, chỉ gieo mầm cho một nỗi tuyệt vọng khác.",
+					"Hệ thống không ngừng lại. Hút lấy mọi đau khổ, nó tuần hoàn vĩnh viễn.",
+					"Đó có phải là sự cứu rỗi không? Hay là, một sự xâm nhập vào nỗi tuyệt vọng sâu sắc hơn?",
+					"Không thể biết được. Chỉ là, một khúc ca mới đang bắt đầu."
+				],
+				"thai": [
+					"เสียงสะท้อนแห่งความเศร้าโศกได้ล้มลง นรกเงียบงันชั่วขณะ.",
+					"แต่ชัยชนะนั้น เพียงแค่หว่านเมล็ดพันธุ์แห่งความสิ้นหวังอีกครั้งเท่านั้น.",
+					"ระบบไม่เคยหยุดนิ่ง ดูดซับความทุกข์ทั้งหมด และหมุนเวียนไปชั่วนิรันดร์.",
+					"มันคือความรอดพ้นหรือเปล่า? หรือว่า เป็นการรุกล้ำเข้าสู่ความสิ้นหวังที่ลึกซึ้งกว่ากัน?",
+					"มันเป็นสิ่งที่ไม่ทราบได้ เพียงแต่ บทเพลงสรรเสริญบทใหม่กำลังจะเริ่มต้นขึ้นแล้ว."
+				],
+				"hindi": [
+					"विलाप की गूँज थम गई। नरक कुछ देर के लिए शांत हो गया.",
+					"परन्तु वह विजय, मात्र एक और निराशा के बीज बो गई।",
+					"प्रणाली कभी नहीं रुकती। सभी पीड़ा को अवशोषित करते हुए, यह अनंत काल तक घूमती है।",
+					"क्या यह मोक्ष था? या, गहरे निराशा में एक घुसपैठ थी?",
+					"यह अज्ञात था। बस, एक नया स्तोत्र शुरू हो रहा था।"
+				]
+			},
+			"rooms": [
+				{
+					"dialogue": [
+						{
+							"emotion": "base",
+							"type": "speech",
+							"speaker": "narrator",
+							"content": {
+								"korean": "지옥의 심연, 애도의 메아리가 울리는 곳.",
+								"english": "Abyss of Hell, where echoes of lament resonate.",
+								"japanese": "地獄の深淵、哀悼のこだまが響く場所。",
+								"chinese": "地狱深渊，哀悼的回声在此回荡。",
+								"french": "Abîme de l'Enfer, où résonnent les échos du deuil.",
+								"spanish": "Abismo del Infierno, donde resuenan los ecos del lamento.",
+								"vietnamese": "Vực thẳm địa ngục, nơi vọng lại tiếng than khóc.",
+								"thai": "ห้วงอเวจีแห่งนรก ที่ซึ่งเสียงคร่ำครวญสะท้อนก้อง",
+								"hindi": "नर्क का अथाह कुंड, जहाँ विलाप की गूँजें गूँजती हैं।"
+							}
+						},
+						{
+							"emotion": "base",
+							"type": "speech",
+							"speaker": "character_any",
+							"content": {
+								"korean": "여기가… 그곳인가. 모든 절망의 근원.",
+								"english": "Is this... the place? The source of all despair.",
+								"japanese": "ここが… そこなのか。全ての絶望の根源。",
+								"chinese": "这里…就是那里吗。所有绝望的根源。",
+								"french": "C'est ici... l'endroit ? La source de tout désespoir.",
+								"spanish": "¿Es este... el lugar? La fuente de toda desesperación.",
+								"vietnamese": "Đây là… nơi đó sao. Nguồn gốc của mọi tuyệt vọng.",
+								"thai": "ที่นี่… คือที่นั่นงั้นหรือ ต้นกำเนิดของความสิ้นหวังทั้งมวล",
+								"hindi": "क्या यह... वही जगह है? सभी निराशा का स्रोत।"
+							}
+						},
+						{
+							"spot": [
+								4,
+								3
+							],
+							"duration_ms": 500,
+							"action": "enter",
+							"type": "direction",
+							"speaker": "brim"
+						},
+						{
+							"speaker": "brim",
+							"content": {
+								"korean": "어서 와라. 마지막 계약자들.",
+								"english": "Welcome. Last contractors.",
+								"japanese": "よく来たな。最後の契約者たちよ。",
+								"chinese": "欢迎。最后的契约者们。",
+								"french": "Bienvenue. Les derniers contractants.",
+								"spanish": "Bienvenidos. Últimos contratistas.",
+								"vietnamese": "Chào mừng. Những người ký kết cuối cùng.",
+								"thai": "ยินดีต้อนรับ ผู้ทำสัญญาคนสุดท้าย",
+								"hindi": "स्वागत है। अंतिम ठेकेदारों।"
+							},
+							"type": "speech",
+							"emotion": "base"
+						},
+						{
+							"emotion": "angry",
+							"speaker": "character_any",
+							"content": {
+								"korean": "브림! 네가 왜 여기에!",
+								"english": "Brim! Why are you here!",
+								"japanese": "ブリム！なぜお前がここに！",
+								"chinese": "布里姆！你为什么会在这里！",
+								"french": "Brim ! Pourquoi es-tu ici !",
+								"spanish": "¡Brim! ¡Por qué estás aquí!",
+								"vietnamese": "Brim! Sao ngươi lại ở đây!",
+								"thai": "บริม! ทำไมนายถึงมาอยู่ที่นี่!",
+								"hindi": "ब्रीम! तुम यहाँ क्यों हो!"
+							},
+							"type": "speech"
+						},
+						{
+							"speaker": "brim",
+							"content": {
+								"korean": "나는 언제나 여기에 있었다. 너희의 시작과 끝을 안내하는 자.",
+								"english": "I have always been here. The one who guides your beginning and end.",
+								"japanese": "私は常にここにいた。お前たちの始まりと終わりを導く者だ。",
+								"chinese": "我一直都在这里。引导你们的开始与结束之人。",
+								"french": "J'ai toujours été ici. Celui qui guide votre début et votre fin.",
+								"spanish": "Siempre he estado aquí. El que guía tu principio y tu fin.",
+								"vietnamese": "Ta đã luôn ở đây. Kẻ dẫn lối cho khởi đầu và kết thúc của các ngươi.",
+								"thai": "ข้าอยู่ที่นี่เสมอ ผู้ชี้นำจุดเริ่มต้นและจุดจบของพวกเจ้า",
+								"hindi": "मैं हमेशा यहीं रहा हूँ। जो तुम्हारे आरंभ और अंत का मार्गदर्शक है।"
+							},
+							"type": "speech",
+							"emotion": "base"
+						}
+					],
+					"id": 1
+				},
+				{
+					"dialogue": [
+						{
+							"emotion": "base",
+							"type": "speech",
+							"speaker": "narrator",
+							"content": {
+								"korean": "벽면에는 끝없이 반복되는 계약서들이 새겨져 있었다.",
+								"english": "Endlessly repeated contracts were engraved on the walls.",
+								"japanese": "壁には、無限に繰り返される契約書が刻まれていた。",
+								"chinese": "墙壁上刻满了无尽重复的契约书。",
+								"french": "Des contrats répétés à l'infini étaient gravés sur les murs.",
+								"spanish": "Contratos repetidos sin cesar estaban grabados en las paredes.",
+								"vietnamese": "Những hợp đồng lặp đi lặp lại không ngừng được khắc trên tường.",
+								"thai": "สัญญาที่ซ้ำกันไม่รู้จบถูกสลักอยู่บนผนัง",
+								"hindi": "दीवारों पर अंतहीन दोहराए जाने वाले अनुबंध खुदे हुए थे।"
+							}
+						},
+						{
+							"emotion": "sad",
+							"speaker": "character_any",
+							"content": {
+								"korean": "이 계약서들… 다 똑같잖아? 이름만 달라.",
+								"english": "These contracts... they're all the same, aren't they? Only the names are different.",
+								"japanese": "この契約書…全部同じじゃないか？名前だけが違う。",
+								"chinese": "这些契约书…都一样不是吗？只是名字不同。",
+								"french": "Ces contrats... ils sont tous pareils, n'est-ce pas ? Seuls les noms diffèrent.",
+								"spanish": "Estos contratos... son todos iguales, ¿no? Solo los nombres son diferentes.",
+								"vietnamese": "Những hợp đồng này… đều giống nhau cả sao? Chỉ khác mỗi cái tên.",
+								"thai": "สัญญาพวกนี้… เหมือนกันหมดเลยนี่นา? แค่ชื่อต่างกันเท่านั้นเอง",
+								"hindi": "ये अनुबंध... सब एक जैसे हैं, है ना? बस नाम अलग हैं।"
+							},
+							"type": "speech"
+						},
+						{
+							"type": "direction",
+							"speaker": "brim",
+							"spot": [
+								2,
+								3
+							],
+							"duration_ms": 500,
+							"action": "enter"
+						},
+						{
+							"speaker": "brim",
+							"content": {
+								"korean": "계약은 완벽한 순환을 이룬다. 모든 것을 포함하는 유일한 길.",
+								"english": "The contract forms a perfect cycle. The only path encompassing everything.",
+								"japanese": "契約は完璧な循環を成す。全てを含む唯一の道。",
+								"chinese": "契约形成一个完美的循环。包含一切的唯一途径。",
+								"french": "Le contrat forme un cycle parfait. Le seul chemin qui englobe tout.",
+								"spanish": "El contrato forma un ciclo perfecto. El único camino que lo abarca todo.",
+								"vietnamese": "Hợp đồng tạo thành một vòng tuần hoàn hoàn hảo. Con đường duy nhất bao gồm mọi thứ.",
+								"thai": "สัญญาสร้างวัฏจักรที่สมบูรณ์แบบ หนทางเดียวที่ครอบคลุมทุกสิ่ง",
+								"hindi": "अनुबंध एक पूर्ण चक्र बनाता है। सब कुछ समाहित करने वाला एकमात्र मार्ग।"
+							},
+							"type": "speech",
+							"emotion": "base"
+						},
+						{
+							"type": "speech",
+							"speaker": "character_any",
+							"content": {
+								"korean": "구원도, 절망도 다 짜여진 연극이었다는 거야?",
+								"english": "So, salvation and despair were all a pre-arranged play?",
+								"japanese": "救済も絶望も、全て仕組まれた芝居だったとでも？",
+								"chinese": "所以，救赎和绝望都只是一场精心编排的戏剧吗？",
+								"french": "Donc, le salut et le désespoir n'étaient qu'une pièce pré-arrangée ?",
+								"spanish": "¿Entonces, la salvación y la desesperación eran toda una obra preestablecida?",
+								"vietnamese": "Vậy, cứu rỗi và tuyệt vọng đều là một vở kịch đã được sắp đặt sao?",
+								"thai": "ทั้งความรอดและความสิ้นหวัง ล้วนเป็นละครที่จัดฉากไว้แล้วงั้นหรือ?",
+								"hindi": "तो, मोक्ष और निराशा सब एक पूर्वनिर्धारित नाटक थे?"
+							},
+							"emotion": "angry"
+						},
+						{
+							"emotion": "base",
+							"speaker": "brim",
+							"content": {
+								"korean": "네가 선택한 길. 너희의 희망은 시스템의 새로운 동력이 될 뿐.",
+								"english": "The path you chose. Your hope will merely become new fuel for the system.",
+								"japanese": "お前たちが選んだ道。お前たちの希望はシステムの新たな動力となるだけだ。",
+								"chinese": "你选择的道路。你们的希望只会成为系统新的动力。",
+								"french": "Le chemin que vous avez choisi. Votre espoir ne fera que devenir un nouveau carburant pour le système.",
+								"spanish": "El camino que elegiste. Tu esperanza solo se convertirá en nuevo combustible para el sistema.",
+								"vietnamese": "Con đường ngươi đã chọn. Hy vọng của các ngươi chỉ sẽ trở thành nguồn năng lượng mới cho hệ thống.",
+								"thai": "เส้นทางที่เจ้าเลือก ความหวังของพวกเจ้าจะเป็นเพียงพลังงานใหม่สำหรับระบบเท่านั้น",
+								"hindi": "वह रास्ता जो तुमने चुना। तुम्हारी आशा केवल सिस्टम के लिए नया ईंधन बनेगी।"
+							},
+							"type": "speech"
+						}
+					],
+					"id": 3
+				},
+				{
+					"id": 5,
+					"dialogue": [
+						{
+							"emotion": "base",
+							"speaker": "narrator",
+							"content": {
+								"korean": "공기 중에 희미하고 달콤한 향이 감돌았다.",
+								"english": "A faint, sweet scent hung in the air.",
+								"japanese": "かすかに甘い香りが空気に漂っていた。",
+								"chinese": "空气中弥漫着一股淡淡的甜香。",
+								"french": "Un parfum doux et léger flottait dans l'air.",
+								"spanish": "Un aroma tenue y dulce flotaba en el aire.",
+								"vietnamese": "Một mùi hương ngọt ngào, thoang thoảng lan tỏa trong không khí.",
+								"thai": "กลิ่นหอมหวานจางๆ อวลอยู่ในอากาศ",
+								"hindi": "हवा में एक हल्की, मीठी खुशबू फैली हुई थी।"
+							},
+							"type": "speech"
+						},
+						{
+							"emotion": "sad",
+							"type": "speech",
+							"speaker": "character_any",
+							"content": {
+								"korean": "이 향… 전에 맡아본 적 있어.",
+								"english": "This scent... I've smelled it before.",
+								"japanese": "この香り… 前にも嗅いだことがある。",
+								"chinese": "这种香味… 我以前闻过。",
+								"french": "Ce parfum... Je l'ai déjà senti.",
+								"spanish": "Este aroma... Ya lo he olido antes.",
+								"vietnamese": "Mùi hương này... mình từng ngửi thấy rồi.",
+								"thai": "กลิ่นนี้... เคยได้กลิ่นมาก่อน",
+								"hindi": "यह खुशबू... मैंने इसे पहले भी सूँघा है।"
+							}
+						},
+						{
+							"emotion": "sad",
+							"speaker": "character_any",
+							"content": {
+								"korean": "그때 '구원'을 약속하던 자들이…",
+								"english": "Those who promised 'salvation' then...",
+								"japanese": "あの時、『救済』を約束した者たちが…",
+								"chinese": "那时，那些承诺“救赎”的人...",
+								"french": "Ceux qui promettaient le 'salut' alors...",
+								"spanish": "Aquellos que prometieron 'salvación' entonces...",
+								"vietnamese": "Những kẻ từng hứa hẹn 'cứu rỗi'...",
+								"thai": "พวกที่สัญญา 'การไถ่บาป' ในตอนนั้น...",
+								"hindi": "वे, जिन्होंने तब 'मुक्ति' का वादा किया था..."
+							},
+							"type": "speech"
+						},
+						{
+							"speaker": "brim",
+							"type": "direction",
+							"action": "enter",
+							"spot": [
+								3,
+								3
+							],
+							"duration_ms": 500
+						},
+						{
+							"type": "speech",
+							"speaker": "brim",
+							"content": {
+								"korean": "모든 달콤함은 양분이 된다. 희망이라는 이름의.",
+								"english": "All sweetness becomes nourishment. In the name of hope.",
+								"japanese": "全ての甘さは養分となる。希望という名のもとに。",
+								"chinese": "所有的甜蜜都将成为养分。以希望之名。",
+								"french": "Toute douceur devient nourriture. Au nom de l'espoir.",
+								"spanish": "Toda dulzura se convierte en alimento. En nombre de la esperanza.",
+								"vietnamese": "Mọi sự ngọt ngào đều trở thành dưỡng chất. Với cái tên hy vọng.",
+								"thai": "ความหอมหวานทั้งหมดกลายเป็นอาหาร ในนามของความหวัง",
+								"hindi": "सारी मिठास पोषण बन जाती है। आशा के नाम पर।"
+							},
+							"emotion": "base"
+						},
+						{
+							"emotion": "angry",
+							"type": "speech",
+							"speaker": "character_any",
+							"content": {
+								"korean": "네가… 우리를 속였구나!",
+								"english": "You... you tricked us!",
+								"japanese": "お前が… 我々を騙したのか！",
+								"chinese": "你… 你欺骗了我们！",
+								"french": "Tu... tu nous as trompés !",
+								"spanish": "¡Tú... nos has engañado!",
+								"vietnamese": "Ngươi... đã lừa dối chúng ta!",
+								"thai": "แก... หลอกเรา!",
+								"hindi": "तुम... तुमने हमें धोखा दिया!"
+							}
+						},
+						{
+							"emotion": "base",
+							"speaker": "brim",
+							"content": {
+								"korean": "나는… 진실을 말했을 뿐이다. 너희가 듣지 않았을 뿐.",
+								"english": "I... I only spoke the truth. You simply wouldn't listen.",
+								"japanese": "私は… 真実を語っただけだ。お前たちが聞かなかっただけ。",
+								"chinese": "我… 我只是说了实话。只是你们不愿听。",
+								"french": "Je... je n'ai dit que la vérité. Vous n'avez simplement pas voulu écouter.",
+								"spanish": "Yo... solo dije la verdad. Vosotros simplemente no quisisteis escuchar.",
+								"vietnamese": "Ta... chỉ nói sự thật. Chỉ là các ngươi không chịu lắng nghe.",
+								"thai": "ข้า... แค่พูดความจริง พวกเจ้าต่างหากที่ไม่ฟัง",
+								"hindi": "मैंने... मैंने केवल सच कहा था। तुम बस सुनना नहीं चाहते थे।"
+							},
+							"type": "speech"
+						}
+					]
+				},
+				{
+					"dialogue": [
+						{
+							"speaker": "narrator",
+							"content": {
+								"korean": "벽화 속 희망의 눈들이 핏빛으로 물들며 탐험대를 응시했다.",
+								"english": "The eyes of hope in the mural turned blood-red, staring at the expedition team.",
+								"japanese": "壁画の中の希望の瞳が血の色に染まり、探検隊を凝視した。",
+								"chinese": "壁画中希望的眼睛染上了血色，凝视着探险队。",
+								"french": "Les yeux de l'espoir dans la fresque virèrent au rouge sang, fixant l'équipe d'exploration.",
+								"spanish": "Los ojos de la esperanza en el mural se tiñeron de rojo sangre, observando al equipo de expedición.",
+								"vietnamese": "Đôi mắt hy vọng trên bức bích họa nhuốm màu máu, nhìn chằm chằm vào đội thám hiểm.",
+								"thai": "ดวงตาแห่งความหวังในภาพจิตรกรรมฝาผนังกลายเป็นสีแดงเลือด จ้องมองทีมสำรวจ",
+								"hindi": "भित्तिचित्र में आशा की आँखें रक्त-लाल हो गईं, अभियान दल को घूर रही थीं।"
+							},
+							"type": "speech",
+							"emotion": "base"
+						},
+						{
+							"emotion": "sad",
+							"speaker": "character_any",
+							"content": {
+								"korean": "저 눈들… 우리를 보고 있어!",
+								"english": "Those eyes... they're watching us!",
+								"japanese": "あの目… 我々を見ている！",
+								"chinese": "那些眼睛… 它们在看着我们！",
+								"french": "Ces yeux... ils nous regardent !",
+								"spanish": "¡Esos ojos... nos están mirando!",
+								"vietnamese": "Những đôi mắt đó... chúng đang nhìn chúng ta!",
+								"thai": "ดวงตาเหล่านั้น... พวกมันกำลังมองเรา!",
+								"hindi": "वे आँखें... वे हमें देख रही हैं!"
+							},
+							"type": "speech"
+						},
+						{
+							"speaker": "character_any",
+							"content": {
+								"korean": "애도의 메아리… 네 진짜 모습이 이거였어?",
+								"english": "Echoes of mourning... Was this your true form?",
+								"japanese": "哀悼の残響… これがお前の本当の姿だったのか？",
+								"chinese": "哀悼的回响… 这就是你的真面目吗？",
+								"french": "Échos de deuil... Était-ce là ta vraie forme ?",
+								"spanish": "Ecos de luto... ¿Era esta tu verdadera forma?",
+								"vietnamese": "Tiếng vọng thương tiếc... Đây là hình dạng thật của ngươi sao?",
+								"thai": "เสียงสะท้อนแห่งความโศกเศร้า... นี่คือร่างที่แท้จริงของแกหรือ?",
+								"hindi": "शोक की गूँज... क्या यही तुम्हारा असली रूप था?"
+							},
+							"type": "speech",
+							"emotion": "angry"
+						},
+						{
+							"speaker": "brim",
+							"type": "direction",
+							"spot": [
+								2,
+								3
+							],
+							"duration_ms": 500,
+							"action": "enter"
+						},
+						{
+							"emotion": "base",
+							"type": "speech",
+							"speaker": "brim",
+							"content": {
+								"korean": "어리석은 것들. 연약함은 가장 강력한 위장술.",
+								"english": "Fools. Weakness is the most powerful disguise.",
+								"japanese": "愚かな者ども。弱さこそが最も強力な偽装術。",
+								"chinese": "愚蠢的东西。脆弱是最好的伪装。",
+								"french": "Imbéciles. La faiblesse est le déguisement le plus puissant.",
+								"spanish": "Necios. La debilidad es el disfraz más poderoso.",
+								"vietnamese": "Những kẻ ngu ngốc. Sự yếu đuối là nghệ thuật ngụy trang mạnh mẽ nhất.",
+								"thai": "คนโง่ ความอ่อนแอคือการอำพรางที่ทรงพลังที่สุด",
+								"hindi": "मूर्ख। कमज़ोरी सबसे शक्तिशाली भेष है।"
+							}
+						},
+						{
+							"emotion": "angry",
+							"type": "speech",
+							"speaker": "character_any",
+							"content": {
+								"korean": "닥쳐! 우리가 널 막을 거야!",
+								"english": "Shut up! We'll stop you!",
+								"japanese": "黙れ！私たちがあなたを止める！",
+								"chinese": "住口！我们来阻止你！",
+								"french": "Tais-toi ! Nous t'arrêterons !",
+								"spanish": "¡Cállate! ¡Te detendremos!",
+								"vietnamese": "Câm miệng! Chúng ta sẽ ngăn ngươi!",
+								"thai": "หุบปาก! เราจะหยุดแกเอง!",
+								"hindi": "चुप रहो! हम तुम्हें रोकेंगे!"
+							}
+						},
+						{
+							"emotion": "base",
+							"type": "speech",
+							"speaker": "brim",
+							"content": {
+								"korean": "막는다는 것 자체가… 계약의 일부.",
+								"english": "To stop me... is part of the contract itself.",
+								"japanese": "止めること自体が…契約の一部。",
+								"chinese": "阻止我……本身就是契约的一部分。",
+								"french": "M'arrêter… fait partie du contrat.",
+								"spanish": "Detenerme... es parte del contrato.",
+								"vietnamese": "Việc ngăn cản ta... chính là một phần của khế ước.",
+								"thai": "การหยุดข้า... เป็นส่วนหนึ่งของสัญญา",
+								"hindi": "मुझे रोकना… अनुबंध का ही हिस्सा है।"
+							}
+						}
+					],
+					"id": 9
+				},
+				{
+					"id": 15,
+					"dialogue": [
+						{
+							"emotion": "base",
+							"type": "speech",
+							"speaker": "narrator",
+							"content": {
+								"korean": "마침내, 애도의 메아리가 오팔빛 안개 속에서 수천 개의 자안을 드러냈다.",
+								"english": "At last, the Echo of Lamentation revealed its myriad violet eyes amidst the opal mist.",
+								"japanese": "ついに、哀悼の残響がオパール色の霧の中、数千の紫眼を現した。",
+								"chinese": "终于，哀悼的回声在蛋白石色的迷雾中，露出了数千只紫罗兰色的眼睛。",
+								"french": "Enfin, l'Écho de la Lamentation révéla ses milliers d'yeux violets au sein de la brume opaline.",
+								"spanish": "Finalmente, el Eco del Lamento reveló sus miles de ojos violetas en medio de la niebla opalina.",
+								"vietnamese": "Cuối cùng, Tiếng Vọng Than Thở đã lộ diện hàng ngàn con mắt tím biếc giữa màn sương mù màu đá mắt mèo.",
+								"thai": "ในที่สุด เสียงสะท้อนแห่งการคร่ำครวญก็เผยดวงตาสีม่วงนับพันในหมอกสีโอปอล",
+								"hindi": "अंततः, विलाप की प्रतिध्वनि ने ओपल कोहरे में अपनी हज़ारों बैंगनी आँखें प्रकट कीं।"
+							}
+						},
+						{
+							"type": "speech",
+							"speaker": "boss",
+							"content": {
+								"korean": "어리석은 것들! 너희의 그 덧없는 희망과 절규가 바로 나의 양식이다!",
+								"english": "Fools! Your fleeting hopes and screams are my very sustenance!",
+								"japanese": "愚か者たちめ！お前たちの儚い希望と叫びこそ、我が糧となるのだ！",
+								"chinese": "愚蠢之徒！你们那转瞬即逝的希望与绝望的嘶吼，正是我的食粮！",
+								"french": "Imbéciles ! Vos espoirs éphémères et vos cris sont ma subsistance !",
+								"spanish": "¡Necios! ¡Vuestras esperanzas fugaces y vuestros gritos son mi sustento!",
+								"vietnamese": "Lũ ngu ngốc! Những hy vọng phù du và tiếng thét tuyệt vọng của các ngươi chính là lương thực của ta!",
+								"thai": "พวกโง่เขลา! ความหวังและเสียงกรีดร้องอันเลือนลางของพวกเจ้าคืออาหารของข้า!",
+								"hindi": "मूर्खों! तुम्हारी क्षणभंगुर आशाएँ और चीखें ही मेरा पोषण हैं!"
+							},
+							"emotion": "angry"
+						},
+						{
+							"type": "speech",
+							"speaker": "character_any",
+							"content": {
+								"korean": "네가… 모든 것을 집어삼켰어!",
+								"english": "You... devoured everything!",
+								"japanese": "あなたが…すべてを飲み込んだ！",
+								"chinese": "你……吞噬了一切！",
+								"french": "Tu… as tout dévoré !",
+								"spanish": "¡Tú... lo devoraste todo!",
+								"vietnamese": "Ngươi... đã nuốt chửng mọi thứ!",
+								"thai": "เจ้า... กลืนกินทุกสิ่ง!",
+								"hindi": "तुमने… सब कुछ निगल लिया!"
+							},
+							"emotion": "angry"
+						},
+						{
+							"emotion": "angry",
+							"type": "speech",
+							"speaker": "boss",
+							"content": {
+								"korean": "이 지옥은 나의 심장이 될 것이며, 너희의 고통은 영원히 울려 퍼질 나의 찬가가 될지니!",
+								"english": "This hell shall be my heart, and your suffering, my eternal hymn!",
+								"japanese": "この地獄は我が心臓となり、お前たちの苦痛は永遠に響き渡る我が賛歌となるだろう！",
+								"chinese": "这地狱将成为我的心脏，而你们的痛苦，将成为我永恒的赞歌！",
+								"french": "Cet enfer sera mon cœur, et vos souffrances, mon hymne éternel !",
+								"spanish": "¡Este infierno será mi corazón, y vuestro sufrimiento, mi himno eterno!",
+								"vietnamese": "Địa ngục này sẽ là trái tim của ta, và nỗi đau của các ngươi, sẽ là bài ca vĩnh cửu của ta!",
+								"thai": "นรกนี้จะเป็นหัวใจของข้า และความทุกข์ทรมานของพวกเจ้าจะเป็นเพลงสรรเสริญนิรันดร์ของข้า!",
+								"hindi": "यह नरक मेरा हृदय होगा, और तुम्हारी पीड़ा, मेरा शाश्वत स्तोत्र!"
+							}
+						},
+						{
+							"type": "speech",
+							"speaker": "character_any",
+							"content": {
+								"korean": "절대로… 용납 못 해!",
+								"english": "Never... unforgivable!",
+								"japanese": "絶対に…許さない！",
+								"chinese": "绝不……容忍！",
+								"french": "Jamais… inacceptable !",
+								"spanish": "¡Nunca... es imperdonable!",
+								"vietnamese": "Tuyệt đối... không thể chấp nhận!",
+								"thai": "ไม่มีทาง... ข้าทนไม่ได้!",
+								"hindi": "कभी नहीं... अक्षम्य!"
+							},
+							"emotion": "angry"
+						},
+						{
+							"spot": [
+								4,
+								2
+							],
+							"duration_ms": 500,
+							"action": "enter",
+							"type": "direction",
+							"speaker": "brim"
+						},
+						{
+							"type": "speech",
+							"speaker": "brim",
+							"content": {
+								"korean": "너희의 저항조차, 영원한 찬가가 되리라.",
+								"english": "Even your resistance shall become an eternal hymn.",
+								"japanese": "お前たちの抵抗さえ、永遠の賛歌となるだろう。",
+								"chinese": "即使是你们的抵抗，也将成为永恒的赞歌。",
+								"french": "Même votre résistance deviendra un hymne éternel.",
+								"spanish": "Incluso vuestra resistencia se convertirá en un himno eterno.",
+								"vietnamese": "Ngay cả sự phản kháng của các ngươi cũng sẽ trở thành bài ca vĩnh cửu.",
+								"thai": "แม้แต่การต่อต้านของพวกเจ้า ก็จะกลายเป็นเพลงสรรเสริญนิรันดร์",
+								"hindi": "तुम्हारा प्रतिरोध भी, एक शाश्वत स्तोत्र बन जाएगा।"
+							},
+							"emotion": "base"
+						},
+						{
+							"speaker": "brim",
+							"type": "direction",
+							"duration_ms": 400,
+							"action": "exit"
+						}
+					],
+					"lose_dialogue": [
+						{
+							"type": "speech",
+							"speaker": "narrator",
+							"content": {
+								"korean": "오팔빛 안개가 탐험대를 집어삼켰다.",
+								"english": "The opal mist swallowed the expedition team.",
+								"japanese": "オパール色の霧が探検隊を飲み込んだ。",
+								"chinese": "蛋白石般的迷雾吞噬了探险队。",
+								"french": "La brume opaline a englouti l'équipe d'expédition.",
+								"spanish": "La niebla opalina engulló al equipo de expedición.",
+								"vietnamese": "Sương mù màu opal nuốt chửng đội thám hiểm.",
+								"thai": "หมอกสีโอปอลกลืนกินทีมสำรวจ.",
+								"hindi": "ओपल रंग के कोहरे ने अभियान दल को निगल लिया।"
+							},
+							"emotion": "base"
+						},
+						{
+							"emotion": "angry",
+							"type": "speech",
+							"speaker": "boss",
+							"content": {
+								"korean": "너희의 절망이… 나의 힘이 된다! 영원히 울려 퍼질 나의 찬가!",
+								"english": "Your despair… becomes my strength! My anthem, to echo forever!",
+								"japanese": "お前たちの絶望が…私の力となる！永遠に響き渡る私の賛歌！",
+								"chinese": "你们的绝望…将成为我的力量！我永恒的颂歌！",
+								"french": "Votre désespoir… devient ma force ! Mon hymne, à résonner éternellement !",
+								"spanish": "Vuestra desesperación… se convierte en mi fuerza! ¡Mi himno, que resonará para siempre!",
+								"vietnamese": "Tuyệt vọng của các ngươi… sẽ trở thành sức mạnh của ta! Khúc ca của ta, vang vọng mãi mãi!",
+								"thai": "ความสิ้นหวังของพวกเจ้า… กลายเป็นพลังของข้า! เพลงสรรเสริญของข้า, จะก้องกังวานตลอดไป!",
+								"hindi": "तुम्हारा निराशा… मेरी शक्ति बन जाती है! मेरा गान, जो हमेशा गूंजेगा!"
+							}
+						},
+						{
+							"emotion": "angry",
+							"speaker": "character_any",
+							"content": {
+								"korean": "여기서… 끝낼 순 없어!",
+								"english": "It can't end… here!",
+								"japanese": "ここで…終わらせるわけにはいかない！",
+								"chinese": "不能…就这样结束！",
+								"french": "Ça ne peut pas… se terminer ici !",
+								"spanish": "¡No puede… terminar aquí!",
+								"vietnamese": "Không thể… kết thúc ở đây được!",
+								"thai": "จะมาจบ… ตรงนี้ไม่ได้!",
+								"hindi": "यहाँ… खत्म नहीं कर सकता!"
+							},
+							"type": "speech"
+						},
+						{
+							"speaker": "brim",
+							"type": "direction",
+							"duration_ms": 500,
+							"spot": [
+								3,
+								2
+							],
+							"action": "enter"
+						},
+						{
+							"emotion": "base",
+							"speaker": "brim",
+							"content": {
+								"korean": "계약은… 영원하다. 너희의 고통도.",
+								"english": "The pact is… eternal. As is your suffering.",
+								"japanese": "契約は…永遠だ。お前たちの苦痛も。",
+								"chinese": "契约…是永恒的。你们的痛苦亦是。",
+								"french": "Le pacte est… éternel. Votre souffrance aussi.",
+								"spanish": "El pacto es… eterno. Vuestro sufrimiento también.",
+								"vietnamese": "Khế ước… là vĩnh cửu. Nỗi đau của các ngươi cũng vậy.",
+								"thai": "สัญญา… เป็นนิรันดร์. ความเจ็บปวดของพวกเจ้าก็เช่นกัน.",
+								"hindi": "अनुबंध… शाश्वत है। तुम्हारा दुख भी।"
+							},
+							"type": "speech"
+						}
+					],
+					"win_dialogue": [
+						{
+							"type": "speech",
+							"speaker": "narrator",
+							"content": {
+								"korean": "애도의 메아리는 침묵했다. 그러나 승리는 허망했다.",
+								"english": "The Echo of Lamentation fell silent. Yet, victory was hollow.",
+								"japanese": "哀悼の残響は沈黙した。しかし、勝利は虚しかった。",
+								"chinese": "哀悼的回声沉寂了。然而，胜利却是空虚的。",
+								"french": "L'Écho de la Lamentation se tut. Pourtant, la victoire fut vaine.",
+								"spanish": "El Eco del Lamento se silenció. Sin embargo, la victoria fue vana.",
+								"vietnamese": "Tiếng Vọng Than Thở đã im lặng. Nhưng chiến thắng lại trống rỗng.",
+								"thai": "เสียงสะท้อนแห่งการคร่ำครวญเงียบงันลง ทว่าชัยชนะกลับว่างเปล่า",
+								"hindi": "विलाप की प्रतिध्वनि शांत हो गई। फिर भी, जीत खोखली थी।"
+							},
+							"emotion": "base"
+						},
+						{
+							"speaker": "boss",
+							"content": {
+								"korean": "내가… 이곳에 온 것은… 구원받기 위함이… 아니었다…",
+								"english": "I... came here... not to be saved...",
+								"japanese": "私が…ここに来たのは…救われるためでは…なかった…",
+								"chinese": "我……来到这里……并非为了……得到救赎……",
+								"french": "Je… ne suis pas venu ici… pour être sauvé…",
+								"spanish": "Yo... no vine aquí... para ser salvado...",
+								"vietnamese": "Ta... đến đây... không phải để được cứu rỗi...",
+								"thai": "ข้า... มาที่นี่... ไม่ใช่เพื่อได้รับการช่วยให้รอด...",
+								"hindi": "मैं… यहाँ… बचाने के लिए… नहीं आया था…"
+							},
+							"type": "speech",
+							"emotion": "sad"
+						},
+						{
+							"emotion": "sad",
+							"type": "speech",
+							"speaker": "character_any",
+							"content": {
+								"korean": "모든 것이… 거짓이었어.",
+								"english": "It was all... a lie.",
+								"japanese": "全てが…嘘だった。",
+								"chinese": "一切都…是谎言。",
+								"french": "Tout n'était… qu'un mensonge.",
+								"spanish": "Todo fue… una mentira.",
+								"vietnamese": "Tất cả… chỉ là dối trá.",
+								"thai": "ทั้งหมด… เป็นเรื่องโกหก.",
+								"hindi": "सब कुछ… एक झूठ था।"
+							}
+						},
+						{
+							"emotion": "sad",
+							"speaker": "boss",
+							"content": {
+								"korean": "너희의 고통은… 나의 영원한 찬가…",
+								"english": "Your suffering… my eternal anthem…",
+								"japanese": "お前たちの苦痛は… 私の永遠の賛歌…",
+								"chinese": "你们的痛苦…是我永恒的颂歌…",
+								"french": "Votre souffrance… mon hymne éternel…",
+								"spanish": "Vuestro sufrimiento… mi himno eterno…",
+								"vietnamese": "Nỗi đau của các ngươi… khúc ca vĩnh cửu của ta…",
+								"thai": "ความเจ็บปวดของพวกเจ้า… เพลงสรรเสริญนิรันดร์ของข้า…",
+								"hindi": "तुम्हारा दुख… मेरा शाश्वत गान…"
+							},
+							"type": "speech"
+						},
+						{
+							"duration_ms": 500,
+							"spot": [
+								2,
+								3
+							],
+							"action": "enter",
+							"type": "direction",
+							"speaker": "brim"
+						},
+						{
+							"emotion": "base",
+							"speaker": "brim",
+							"content": {
+								"korean": "보아라. 새로운 계약이… 시작될 뿐.",
+								"english": "Behold. A new pact… merely begins.",
+								"japanese": "見よ。新たな契約が…始まるだけだ。",
+								"chinese": "看吧。新的契约…才刚刚开始。",
+								"french": "Voyez. Un nouveau pacte… ne fait que commencer.",
+								"spanish": "Mirad. Un nuevo pacto… apenas comienza.",
+								"vietnamese": "Hãy xem. Một khế ước mới… chỉ vừa bắt đầu.",
+								"thai": "ดูสิ. สัญญาใหม่… เพิ่งจะเริ่มต้น.",
+								"hindi": "देखो। एक नया अनुबंध… बस शुरू होने वाला है।"
+							},
+							"type": "speech"
+						},
+						{
+							"speaker": "narrator",
+							"content": {
+								"korean": "지옥의 시스템은 또 다른 애도의 메아리를 잉태한다. 모든 끝은 새로운 시작.",
+								"english": "The system of hell conceives another echo of lament. Every end is a new beginning.",
+								"japanese": "地獄のシステムは、新たな哀悼のこだまを孕む。全ての終わりは新たな始まり。",
+								"chinese": "地狱的系统孕育着又一声哀悼的回响。所有结束都是新的开始。",
+								"french": "Le système de l'enfer engendre un autre écho de lamentation. Toute fin est un nouveau début.",
+								"spanish": "El sistema del infierno concibe otro eco de lamento. Todo fin es un nuevo comienzo.",
+								"vietnamese": "Hệ thống địa ngục thai nghén một tiếng vang than khóc khác. Mọi kết thúc đều là một khởi đầu mới.",
+								"thai": "ระบบแห่งนรกให้กำเนิดเสียงสะท้อนแห่งความโศกเศร้าอีกครั้ง. ทุกจุดจบคือจุดเริ่มต้นใหม่.",
+								"hindi": "नर्क की प्रणाली विलाप की एक और गूँज पैदा करती है। हर अंत एक नई शुरुआत है।"
+							},
+							"type": "speech",
+							"emotion": "base"
+						}
+					]
+				}
+			],
+			"prologue": {
+				"korean": [
+					"지옥의 심연. 애도의 메아리가 울리는 곳.",
+					"영혼들은 끝없는 고통 속에서, 구원을 노래했다.",
+					"하지만 그 노래는, 거대한 시스템의 찬가였다.",
+					"모든 저항은 희망을 낳고, 그 희망조차 먹이가 되는 곳.",
+					"이제, 마지막 계약이 시작된다."
+				],
+				"english": [
+					"Abyss of Hell. Where echoes of lament resound.",
+					"Souls, in endless agony, sang of salvation.",
+					"But that song was, a hymn to the colossal system.",
+					"Where all resistance begets hope, and even that hope becomes prey.",
+					"Now, the final covenant begins."
+				],
+				"japanese": [
+					"地獄の深淵。哀悼のこだまが響く場所。",
+					"魂たちは、尽きない苦痛の中で、救済を歌った。",
+					"しかしその歌は、巨大なシステムへの賛歌であった。",
+					"すべての抵抗が希望を生み、その希望さえも餌となる場所。",
+					"今、最後の契約が始まる。"
+				],
+				"chinese": [
+					"地狱深渊。哀悼回声响彻之地。",
+					"灵魂在无尽的痛苦中，歌颂着救赎。",
+					"然而那歌声，却是对巨大系统的赞歌。",
+					"所有抵抗都滋生希望，而那希望也成为猎物之地。",
+					"现在，最后的契约开始了。"
+				],
+				"french": [
+					"L'abîme des Enfers. Là où résonnent les échos du deuil.",
+					"Les âmes, dans une agonie sans fin, chantaient le salut.",
+					"Mais ce chant était, un hymne au système colossal.",
+					"Là où toute résistance engendre l'espoir, et même cet espoir devient une proie.",
+					"Maintenant, le dernier pacte commence."
+				],
+				"spanish": [
+					"El abismo del Infierno. Donde resuenan los ecos del lamento.",
+					"Las almas, en agonía interminable, cantaban la salvación.",
+					"Pero esa canción era, un himno al sistema colosal.",
+					"Donde toda resistencia engendra esperanza, y hasta esa esperanza se convierte en presa.",
+					"Ahora, el pacto final comienza."
+				],
+				"vietnamese": [
+					"Vực sâu địa ngục. Nơi vọng lại tiếng than khóc.",
+					"Trong nỗi đau vô tận, các linh hồn cất tiếng hát về sự cứu rỗi.",
+					"Nhưng bài ca đó, lại là khúc ca ngợi hệ thống khổng lồ.",
+					"Nơi mọi sự kháng cự đều nảy sinh hy vọng, và ngay cả hy vọng đó cũng trở thành mồi.",
+					"Giờ đây, khế ước cuối cùng bắt đầu."
+				],
+				"thai": [
+					"ห้วงลึกแห่งนรก. ที่ซึ่งเสียงสะท้อนแห่งความเศร้าโศกดังก้อง.",
+					"เหล่าวิญญาณ ในความทรมานอันไม่สิ้นสุด ได้ขับขานบทเพลงแห่งความรอดพ้น.",
+					"แต่บทเพลงนั้น หาใช่สิ่งอื่นใดไม่ มันคือเพลงสดุดีแห่งระบบอันยิ่งใหญ่.",
+					"ที่ซึ่งการต่อต้านทุกอย่างก่อให้เกิดความหวัง และแม้แต่ความหวังนั้นก็กลายเป็นเหยื่อ.",
+					"บัดนี้ สัญญาฉบับสุดท้ายได้เริ่มต้นขึ้นแล้ว."
+				],
+				"hindi": [
+					"नरक की खाई। जहाँ विलाप की गूँज गूँजती है.",
+					"अनंत पीड़ा में आत्माएँ, मोक्ष के गीत गाती थीं.",
+					"परन्तु वह गीत, एक विशाल प्रणाली का स्तोत्र था.",
+					"जहाँ हर प्रतिरोध आशा को जन्म देता है, और वह आशा भी शिकार बन जाती है.",
+					"अब, अंतिम समझौता शुरू होता है."
+				]
+			}
+		}
+	]
+}

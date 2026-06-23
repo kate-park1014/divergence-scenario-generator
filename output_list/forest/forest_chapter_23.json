@@ -1,0 +1,3679 @@
+{
+	"chapter_order": 23,
+	"difficulty_level": 23,
+	"chapter_name": {
+		"chinese": "扭曲慰藉",
+		"french": "Consolation",
+		"hindi": "विकृत",
+		"thai": "ปลอบใจวิปริต",
+		"korean": "뒤틀린 위로",
+		"spanish": "Consuelo",
+		"vietnamese": "An Ủi Biến",
+		"english": "Twisted",
+		"japanese": "歪んだ慰め"
+	},
+	"scenarios": [
+		{
+			"scenario_id": "forest_luminamorta_22_01",
+			"order": 1,
+			"act": "intro",
+			"theme": "forest",
+			"actors": {
+				"fern": {
+					"id": "mon_279a32a0-8ec1-4b5b-8179-32df46fdc664",
+					"name": {
+						"korean": "페른",
+						"english": "Fern",
+						"japanese": "フェルン",
+						"chinese": "费恩",
+						"french": "Fern",
+						"spanish": "Fern",
+						"vietnamese": "Fern",
+						"thai": "เฟิร์น",
+						"hindi": "फर्न"
+					},
+					"description": "",
+					"face_image_url": "https://imagedelivery.net/WTEqQNGFb-l-IHS6IGnzUQ/19f9763e-413a-485e-787a-9bbfd8208700/public",
+					"battle_sprite_url": "https://imagedelivery.net/WTEqQNGFb-l-IHS6IGnzUQ/563627d4-0b7c-4865-39d4-1d0a97363c00/public"
+				}
+			},
+			"boss": {
+				"pool_id": "random_boss"
+			},
+			"rooms": [
+				{
+					"dialogue": [
+						{
+							"speaker": "narrator",
+							"emotion": "base",
+							"type": "speech",
+							"content": {
+								"korean": "숲의 입구. 빛나는 잎사귀들이 반짝였다. 모든 것이 눈부셨다.",
+								"english": "Forest entrance. Glowing leaves shimmered. Everything was dazzling.",
+								"japanese": "森の入り口。輝く葉が煌めいた。すべてが眩しかった。",
+								"chinese": "森林入口。闪亮的叶子在微光中闪烁。一切都令人目眩。",
+								"french": "Entrée de la forêt. Des feuilles lumineuses scintillaient. Tout était éblouissant.",
+								"spanish": "Entrada del bosque. Hojas resplandecientes brillaban. Todo era deslumbrante.",
+								"vietnamese": "Lối vào rừng. Những chiếc lá phát sáng lấp lánh. Mọi thứ đều rực rỡ.",
+								"thai": "ทางเข้าป่า ใบไม้เรืองแสงระยิบระยับ ทุกสิ่งเจิดจ้า",
+								"hindi": "जंगल का प्रवेश द्वार। चमकते पत्ते झिलमिला रहे थे। सब कुछ चकाचौंध करने वाला था।"
+							}
+						},
+						{
+							"action": "enter",
+							"spot": [
+								3,
+								2
+							],
+							"speaker": "fern",
+							"duration_ms": 500,
+							"type": "direction"
+						},
+						{
+							"content": {
+								"korean": "오셨군요. 기다렸어요. 숲이 당신들을 부르고 있어요.",
+								"english": "You're here. I've been waiting. The forest calls to you.",
+								"japanese": "いらっしゃいましたね。待っていました。森があなたたちを呼んでいます。",
+								"chinese": "你们来了。我一直在等。森林在呼唤着你们。",
+								"french": "Vous êtes là. Je vous attendais. La forêt vous appelle.",
+								"spanish": "Han llegado. Los estaba esperando. El bosque los está llamando.",
+								"vietnamese": "Các bạn đã đến. Tôi đã đợi. Rừng đang gọi các bạn.",
+								"thai": "มาแล้วสินะ รออยู่เลย ป่ากำลังเรียกหาพวกคุณ",
+								"hindi": "आप आ गए। मैं इंतज़ार कर रहा था। जंगल आपको बुला रहा है।"
+							},
+							"type": "speech",
+							"speaker": "fern",
+							"emotion": "happy"
+						},
+						{
+							"speaker": "character_any",
+							"emotion": "base",
+							"type": "speech",
+							"content": {
+								"korean": "당신은 누구죠?",
+								"english": "Who are you?",
+								"japanese": "あなたは誰ですか？",
+								"chinese": "你是谁？",
+								"french": "Qui êtes-vous ?",
+								"spanish": "¿Quién eres?",
+								"vietnamese": "Bạn là ai?",
+								"thai": "คุณคือใคร?",
+								"hindi": "आप कौन हैं?"
+							}
+						},
+						{
+							"speaker": "fern",
+							"emotion": "base",
+							"type": "speech",
+							"content": {
+								"korean": "저는 페른. 이 숲의 숲지기예요. 숲은 병들었지만… 지금은 치유되고 있어요.",
+								"english": "I am Fern, the forest keeper of this wood. The forest was sick… but now it's healing.",
+								"japanese": "私はフェルン。この森の番人です。森は病んでいましたが…今は癒されています。",
+								"chinese": "我是费恩，这片森林的守护者。森林曾病重…但现在正在被治愈。",
+								"french": "Je suis Fern, la gardienne de cette forêt. La forêt était malade… mais maintenant elle guérit.",
+								"spanish": "Soy Fern, la guardabosques de este bosque. El bosque estaba enfermo… pero ahora se está curando.",
+								"vietnamese": "Tôi là Fern, người giữ rừng này. Rừng đã bệnh… nhưng bây giờ đang được chữa lành.",
+								"thai": "ฉันคือเฟิร์น ผู้พิทักษ์ป่าแห่งนี้ ป่าเคยป่วย… แต่ตอนนี้กำลังได้รับการเยียวยา",
+								"hindi": "मैं फ़र्न हूँ, इस जंगल की वनपाल। जंगल बीमार था… लेकिन अब ठीक हो रहा है।"
+							}
+						},
+						{
+							"content": {
+								"korean": "치유요? 뭔가 이상한데요.",
+								"english": "Healing? Something feels off.",
+								"japanese": "癒しですか？何かおかしいですね。",
+								"chinese": "治愈？感觉有点不对劲。",
+								"french": "Guérison ? Quelque chose ne va pas.",
+								"spanish": "¿Curación? Algo no me cuadra.",
+								"vietnamese": "Chữa lành? Có gì đó không ổn.",
+								"thai": "เยียวยา? ดูแปลกๆ นะ",
+								"hindi": "ठीक हो रहा है? कुछ अजीब लग रहा है।"
+							},
+							"type": "speech",
+							"speaker": "character_1",
+							"emotion": "base"
+						},
+						{
+							"speaker": "fern",
+							"emotion": "happy",
+							"type": "speech",
+							"content": {
+								"korean": "아뇨. 아주 완벽한 치유죠. 제게 맡기세요. 성지로 안내해 드릴게요.",
+								"english": "No. It's a perfect healing. Trust me. I'll guide you to the Sacred Grove.",
+								"japanese": "いいえ。これは完璧な癒しです。私に任せてください。聖なる場所へ案内します。",
+								"chinese": "不。这是完美的治愈。请交给我吧。我会引导你们前往圣地。",
+								"french": "Non. C'est une guérison parfaite. Faites-moi confiance. Je vous guiderai vers le Bosquet Sacré.",
+								"spanish": "No. Es una curación perfecta. Confíen en mí. Los guiaré al Santuario.",
+								"vietnamese": "Không. Đây là sự chữa lành hoàn hảo. Hãy giao phó cho tôi. Tôi sẽ dẫn các bạn đến Thánh địa.",
+								"thai": "ไม่สิ นี่คือการเยียวยาที่สมบูรณ์แบบ วางใจฉันเถอะ ฉันจะนำทางคุณไปสู่ดินแดนศักดิ์สิทธิ์",
+								"hindi": "नहीं। यह एक पूर्ण उपचार है। मुझ पर भरोसा रखें। मैं आपको पवित्र स्थान तक ले जाऊँगी।"
+							}
+						}
+					],
+					"id": 1
+				},
+				{
+					"id": 3,
+					"dialogue": [
+						{
+							"spot": [
+								3,
+								2
+							],
+							"type": "direction",
+							"duration_ms": 500,
+							"speaker": "fern",
+							"action": "enter"
+						},
+						{
+							"content": {
+								"korean": "길가의 식물들이 비정상적으로 강렬하게 빛났다. 마치 죽은 생기처럼.",
+								"english": "The roadside plants glowed with an abnormal intensity. Like a dead vitality.",
+								"japanese": "道端の植物が異常なほど強く輝いていた。まるで死んだ生気のように。",
+								"chinese": "路边的植物异常强烈地发光。就像死去的生机一样。",
+								"french": "Les plantes au bord de la route brillaient d'une intensité anormale. Comme une vitalité morte.",
+								"spanish": "Las plantas al borde del camino brillaban con una intensidad anormal. Como una vitalidad muerta.",
+								"vietnamese": "Những thực vật ven đường phát sáng một cách bất thường và dữ dội. Như một sinh khí đã chết.",
+								"thai": "พืชริมทางเรืองแสงเจิดจ้าผิดปกติ ราวกับชีวิตที่ตายแล้ว",
+								"hindi": "सड़क किनारे के पौधे असामान्य रूप से तेज़ी से चमक रहे थे। जैसे मृत जीवन शक्ति हो।"
+							},
+							"speaker": "narrator",
+							"emotion": "base",
+							"type": "speech"
+						},
+						{
+							"content": {
+								"korean": "이 식물들… 너무 빛나는데?",
+								"english": "These plants... they're glowing too brightly?",
+								"japanese": "この植物たち… 輝きすぎじゃない？",
+								"chinese": "这些植物……发光得太厉害了吧？",
+								"french": "Ces plantes... elles brillent trop fort ?",
+								"spanish": "Estas plantas... ¿brillan demasiado?",
+								"vietnamese": "Mấy cái cây này... phát sáng quá mức nhỉ?",
+								"thai": "พืชพวกนี้... สว่างเกินไปหรือเปล่า?",
+								"hindi": "ये पौधे... बहुत ज़्यादा चमक रहे हैं, है ना?"
+							},
+							"type": "speech",
+							"speaker": "character_any",
+							"emotion": "base"
+						},
+						{
+							"speaker": "fern",
+							"emotion": "happy",
+							"type": "speech",
+							"content": {
+								"korean": "놀라워요. 그렇죠? 숲의 생명력이 이렇게 재분배되는 거예요.",
+								"english": "Amazing, isn't it? The forest's life force is being redistributed like this.",
+								"japanese": "驚きでしょう？ 森の生命力はこうして再分配されるんです。",
+								"chinese": "很惊讶吧？森林的生命力就是这样重新分配的。",
+								"french": "Incroyable, n'est-ce pas ? La force vitale de la forêt est ainsi redistribuée.",
+								"spanish": "Asombroso, ¿verdad? Así es como se redistribuye la fuerza vital del bosque.",
+								"vietnamese": "Tuyệt vời, phải không? Sinh lực của rừng được phân phối lại như thế đấy.",
+								"thai": "น่าทึ่งใช่ไหม? พลังชีวิตของป่ากำลังถูกจัดสรรใหม่แบบนี้แหละ",
+								"hindi": "कमाल है ना? जंगल की जीवन शक्ति इसी तरह पुनर्वितरित होती है।"
+							}
+						},
+						{
+							"type": "speech",
+							"speaker": "character_2",
+							"emotion": "base",
+							"content": {
+								"korean": "재분배…요?",
+								"english": "Redistribution...?",
+								"japanese": "再分配…ですか？",
+								"chinese": "重新分配……？",
+								"french": "Redistribuée... ?",
+								"spanish": "¿Redistribuida...?",
+								"vietnamese": "Phân phối lại...?",
+								"thai": "จัดสรรใหม่...?",
+								"hindi": "पुनर्वितरण...?"
+							}
+						},
+						{
+							"speaker": "fern",
+							"emotion": "base",
+							"type": "speech",
+							"content": {
+								"korean": "네. 아픈 곳에서 건강한 곳으로. 더 나은 형태로 다시 태어나는 거죠.",
+								"english": "Yes. From the ailing parts to the healthy ones. Reborn into a better form.",
+								"japanese": "はい。病んだ場所から健康な場所へ。より良い形で生まれ変わるんです。",
+								"chinese": "是的。从病态的地方到健康的地方。以更好的形态重生。",
+								"french": "Oui. Des parties malades vers les saines. Elles renaissent sous une meilleure forme.",
+								"spanish": "Sí. De las partes enfermas a las sanas. Renacen en una forma mejor.",
+								"vietnamese": "Vâng. Từ nơi đang bệnh sang nơi khỏe mạnh. Được tái sinh thành một dạng tốt hơn.",
+								"thai": "ใช่ จากที่ที่ป่วยไปยังที่ที่แข็งแรง เกิดใหม่ในรูปแบบที่ดีขึ้น",
+								"hindi": "हाँ। बीमार जगहों से स्वस्थ जगहों तक। एक बेहतर रूप में पुनर्जन्म।"
+							}
+						}
+					]
+				},
+				{
+					"dialogue": [
+						{
+							"speaker": "fern",
+							"duration_ms": 500,
+							"type": "direction",
+							"spot": [
+								3,
+								2
+							],
+							"action": "enter"
+						},
+						{
+							"speaker": "fern",
+							"emotion": "base",
+							"type": "speech",
+							"content": {
+								"korean": "여기 좀 보세요. 이 뿌리. 숲이 얼마나 깊숙이 연결되어 있는지.",
+								"english": "Look here. These roots. How deeply the forest is connected.",
+								"japanese": "ここを見てください。この根。森がどれほど深く繋がっているか。",
+								"chinese": "看看这里。这些根。森林连接得有多么深。",
+								"french": "Regardez ici. Ces racines. À quel point la forêt est profondément connectée.",
+								"spanish": "Miren aquí. Estas raíces. Qué profundamente conectado está el bosque.",
+								"vietnamese": "Nhìn đây này. Những cái rễ này. Rừng được kết nối sâu sắc đến mức nào.",
+								"thai": "ดูนี่สิ รากพวกนี้ ป่าเชื่อมโยงกันลึกซึ้งแค่ไหน",
+								"hindi": "यहाँ देखिए। ये जड़ें। जंगल कितनी गहराई से जुड़ा हुआ है।"
+							}
+						},
+						{
+							"content": {
+								"korean": "모든 게 이어져 있네요.",
+								"english": "Everything is connected.",
+								"japanese": "全てが繋がっていますね。",
+								"chinese": "一切都相连着呢。",
+								"french": "Tout est lié.",
+								"spanish": "Todo está conectado.",
+								"vietnamese": "Mọi thứ đều được kết nối.",
+								"thai": "ทุกสิ่งเชื่อมโยงกันหมดเลยนะ",
+								"hindi": "सब कुछ जुड़ा हुआ है।"
+							},
+							"speaker": "character_any",
+							"emotion": "base",
+							"type": "speech"
+						},
+						{
+							"speaker": "fern",
+							"emotion": "base",
+							"type": "speech",
+							"content": {
+								"korean": "네. 그래서 하나의 변이가 전체에 영향을 줘요. 하지만 괜찮아요.",
+								"english": "Yes. That's why one mutation affects the whole. But it's okay.",
+								"japanese": "ええ。だから一つの変異が全体に影響を与えるんです。でも、大丈夫。",
+								"chinese": "是的。所以一个变异会影响到整体。但没关系。",
+								"french": "Oui. C'est pourquoi une seule mutation affecte l'ensemble. Mais tout va bien.",
+								"spanish": "Sí. Por eso una sola mutación afecta al conjunto. Pero está bien.",
+								"vietnamese": "Vâng. Vì vậy, một sự biến đổi sẽ ảnh hưởng đến toàn bộ. Nhưng không sao cả.",
+								"thai": "ใช่แล้ว การเปลี่ยนแปลงหนึ่งเดียวส่งผลกระทบต่อทั้งหมด แต่มันก็ไม่เป็นไร",
+								"hindi": "हाँ। इसीलिए एक उत्परिवर्तन पूरे को प्रभावित करता है। लेकिन कोई बात नहीं।"
+							}
+						},
+						{
+							"content": {
+								"korean": "숲은 스스로 균형을 맞춰요. 때로는… 아주 특별한 방식으로.",
+								"english": "The forest balances itself. Sometimes... in a very special way.",
+								"japanese": "森は自ら均衡を保ちます。時には… とても特別な方法で。",
+								"chinese": "森林会自行维持平衡。有时……以一种非常特殊的方式。",
+								"french": "La forêt s'équilibre d'elle-même. Parfois... d'une manière très spéciale.",
+								"spanish": "El bosque se equilibra solo. A veces... de una manera muy especial.",
+								"vietnamese": "Rừng tự cân bằng. Đôi khi... theo một cách rất đặc biệt.",
+								"thai": "ป่ารักษาสมดุลด้วยตัวเอง บางครั้ง... ด้วยวิธีที่พิเศษมาก",
+								"hindi": "जंगल खुद को संतुलित करता है। कभी-कभी... बहुत ही खास तरीके से।"
+							},
+							"type": "speech",
+							"speaker": "fern",
+							"emotion": "happy"
+						},
+						{
+							"speaker": "character_3",
+							"emotion": "base",
+							"type": "speech",
+							"content": {
+								"korean": "특별한 방식이라… 좀 섬뜩하게 들리는데요.",
+								"english": "A special way... sounds a bit eerie.",
+								"japanese": "特別な方法…って、ちょっと不気味に聞こえますね。",
+								"chinese": "特殊的方式……听起来有点令人毛骨悚然。",
+								"french": "Une manière spéciale... ça sonne un peu effrayant.",
+								"spanish": "¿Una forma especial...? Suena un poco espeluznante.",
+								"vietnamese": "Cách đặc biệt à... nghe hơi rợn người đấy.",
+								"thai": "วิธีพิเศษ... ฟังดูน่าขนลุกไปหน่อยนะครับ",
+								"hindi": "एक खास तरीका... यह थोड़ा डरावना लगता है।"
+							}
+						},
+						{
+							"type": "speech",
+							"speaker": "fern",
+							"emotion": "happy",
+							"content": {
+								"korean": "호호. 그게 숲의 지혜죠. 당신들도 곧 이해할 거예요.",
+								"english": "Hoho. That's the forest's wisdom. You'll understand soon enough.",
+								"japanese": "ほほう。それが森の知恵というもの。あなた方もじきに理解するでしょう。",
+								"chinese": "呵呵。那就是森林的智慧。你们很快就会明白的。",
+								"french": "Hoho. C'est la sagesse de la forêt. Vous comprendrez bientôt.",
+								"spanish": "Hoho. Esa es la sabiduría del bosque. Pronto lo entenderán.",
+								"vietnamese": "Hô hô. Đó là trí tuệ của rừng. Các bạn sẽ sớm hiểu thôi.",
+								"thai": "โฮะๆ นั่นแหละคือปัญญาแห่งพงไพร พวกเธอจะเข้าใจในไม่ช้า",
+								"hindi": "हो हो। यही तो वन की बुद्धिमत्ता है। तुम्हें भी जल्द समझ आ जाएगा।"
+							}
+						}
+					],
+					"id": 5
+				},
+				{
+					"id": 9,
+					"dialogue": [
+						{
+							"duration_ms": 500,
+							"speaker": "fern",
+							"type": "direction",
+							"spot": [
+								3,
+								2
+							],
+							"action": "enter"
+						},
+						{
+							"content": {
+								"korean": "숲은 더욱 깊어졌다. 나뭇잎들이 낮게 속삭이는 듯한 환청이 들렸다.",
+								"english": "The forest deepened. Delusions of leaves whispering faintly began to be heard.",
+								"japanese": "森はさらに深くなった。葉が低くささやくような幻聴が聞こえ始めた。",
+								"chinese": "森林越来越深。耳边传来树叶低语般的幻听。",
+								"french": "La forêt s'enfonça. Des illusions de feuilles chuchotant doucement commencèrent à se faire entendre.",
+								"spanish": "El bosque se hizo más profundo. Comenzaron a escucharse ilusiones de hojas susurrando débilmente.",
+								"vietnamese": "Rừng càng lúc càng sâu. Ảo giác lá cây thì thầm nhẹ nhàng bắt đầu nghe thấy.",
+								"thai": "ป่าลึกเข้าไปอีก ได้ยินเสียงหลอนราวกับใบไม้กำลังกระซิบแผ่วเบา",
+								"hindi": "वन और गहरा हो गया। पत्तों के फुसफुसाने जैसे भ्रम सुनाई देने लगे।"
+							},
+							"speaker": "narrator",
+							"emotion": "base",
+							"type": "speech"
+						},
+						{
+							"type": "speech",
+							"speaker": "character_any",
+							"emotion": "base",
+							"content": {
+								"korean": "뭔가 들리는 것 같아….",
+								"english": "I think I hear something...",
+								"japanese": "何か聞こえるような…",
+								"chinese": "我好像听到什么了……",
+								"french": "J'ai l'impression d'entendre quelque chose...",
+								"spanish": "Creo que escucho algo...",
+								"vietnamese": "Hình như tôi nghe thấy gì đó...",
+								"thai": "รู้สึกเหมือนได้ยินอะไรบางอย่าง...",
+								"hindi": "मुझे कुछ सुनाई दे रहा है..."
+							}
+						},
+						{
+							"speaker": "fern",
+							"emotion": "base",
+							"type": "speech",
+							"content": {
+								"korean": "숲의 목소리예요.",
+								"english": "It's the forest's voice.",
+								"japanese": "森の声です。",
+								"chinese": "是森林的声音。",
+								"french": "C'est la voix de la forêt.",
+								"spanish": "Es la voz del bosque.",
+								"vietnamese": "Đó là tiếng nói của rừng.",
+								"thai": "นั่นคือเสียงของป่า",
+								"hindi": "यह वन की आवाज़ है।"
+							}
+						},
+						{
+							"speaker": "fern",
+							"emotion": "base",
+							"type": "speech",
+							"content": {
+								"korean": "그들은 말하고 있죠…",
+								"english": "They are saying...",
+								"japanese": "彼らは言っている…",
+								"chinese": "它们正在说……",
+								"french": "Ils disent...",
+								"spanish": "Están diciendo...",
+								"vietnamese": "Họ đang nói...",
+								"thai": "พวกมันกำลังพูดว่า...",
+								"hindi": "वे कह रहे हैं..."
+							}
+						},
+						{
+							"content": {
+								"korean": "…영원한 평화가 찾아왔다고.",
+								"english": "...that eternal peace has come.",
+								"japanese": "…永遠の平和が訪れたと。",
+								"chinese": "……永恒的和平已经降临。",
+								"french": "...que la paix éternelle est arrivée.",
+								"spanish": "...que la paz eterna ha llegado.",
+								"vietnamese": "...rằng hòa bình vĩnh cửu đã đến.",
+								"thai": "...ว่าสันติสุขชั่วนิรันดร์มาถึงแล้ว",
+								"hindi": "...कि शाश्वत शांति आ गई है।"
+							},
+							"speaker": "fern",
+							"emotion": "happy",
+							"type": "speech"
+						},
+						{
+							"content": {
+								"korean": "평화… 근데 왜 이렇게 불안하지?",
+								"english": "Peace... But why do I feel so uneasy?",
+								"japanese": "平和…でも、どうしてこんなに不安なんだ？",
+								"chinese": "和平……可是为什么我这么不安？",
+								"french": "La paix... Mais pourquoi suis-je si inquiet ?",
+								"spanish": "Paz... Pero, ¿por qué me siento tan intranquilo?",
+								"vietnamese": "Hòa bình... Nhưng sao tôi lại bồn chồn thế này?",
+								"thai": "สันติสุข... แต่ทำไมฉันถึงรู้สึกกังวลอย่างนี้?",
+								"hindi": "शांति... पर मैं इतना बेचैन क्यों हूँ?"
+							},
+							"speaker": "character_4",
+							"emotion": "sad",
+							"type": "speech"
+						},
+						{
+							"content": {
+								"korean": "이제 거의 다 왔어요. 숲의 가장 깊은 곳. 그곳에서 모든 진실을 알게 될 거예요.",
+								"english": "We're almost there. The deepest part of the forest. There, you'll learn all the truth.",
+								"japanese": "もうすぐですよ。森の最も深い場所。そこで、あなた方はすべての真実を知るでしょう。",
+								"chinese": "我们快到了。森林最深处。在那里，你们将得知所有的真相。",
+								"french": "Nous y sommes presque. La partie la plus profonde de la forêt. Là, vous apprendrez toute la vérité.",
+								"spanish": "Ya casi llegamos. La parte más profunda del bosque. Allí, conocerán toda la verdad.",
+								"vietnamese": "Chúng ta sắp đến rồi. Nơi sâu nhất của rừng. Ở đó, các bạn sẽ biết mọi sự thật.",
+								"thai": "ใกล้ถึงแล้วค่ะ ส่วนที่ลึกที่สุดของป่า ที่นั่นพวกเธอจะได้รู้ความจริงทั้งหมด",
+								"hindi": "हम लगभग पहुँच गए हैं। वन का सबसे गहरा भाग। वहाँ, तुम्हें सारी सच्चाई पता चल जाएगी।"
+							},
+							"speaker": "fern",
+							"emotion": "base",
+							"type": "speech"
+						}
+					]
+				},
+				{
+					"win_dialogue": [
+						{
+							"type": "speech",
+							"speaker": "random_boss",
+							"emotion": "sad",
+							"content": {
+								"korean": "어째서… 이 완벽한 치유를 거부하는가….",
+								"english": "Why... do you reject this perfect healing...",
+								"japanese": "なぜ…この完璧な癒しを拒むのだ…。",
+								"chinese": "为何…拒绝这完美的治愈呢…",
+								"french": "Pourquoi… rejetez-vous cette guérison parfaite…",
+								"spanish": "¿Por qué… rechazáis esta curación perfecta…?",
+								"vietnamese": "Tại sao… các ngươi lại từ chối sự chữa lành hoàn hảo này chứ…",
+								"thai": "ทำไม…ถึงปฏิเสธการเยียวยาที่สมบูรณ์แบบนี้เล่า….",
+								"hindi": "क्यों… इस संपूर्ण उपचार को अस्वीकार करते हो…।"
+							}
+						},
+						{
+							"speaker": "random_boss",
+							"emotion": "base",
+							"type": "speech",
+							"content": {
+								"korean": "숲은… 더 깊은 평화를 원하고 있다. 너희도 곧 알게 될 거야….",
+								"english": "The forest... desires a deeper peace. You too will soon understand...",
+								"japanese": "森は…より深い安らぎを求めている。お前たちもじきに知るだろう…。",
+								"chinese": "森林…渴望更深层的平静。你们也很快会明白的…",
+								"french": "La forêt… désire une paix plus profonde. Vous comprendrez bientôt…",
+								"spanish": "El bosque… desea una paz más profunda. Vosotros también lo entenderéis pronto…",
+								"vietnamese": "Khu rừng… khao khát một sự bình yên sâu sắc hơn. Các ngươi cũng sẽ sớm hiểu thôi…",
+								"thai": "ป่า…ต้องการความสงบที่ลึกซึ้งกว่านั้น. พวกเจ้าก็จะเข้าใจในไม่ช้า….",
+								"hindi": "जंगल… गहरी शांति चाहता है। तुम्हें भी जल्द ही पता चल जाएगा…।"
+							}
+						},
+						{
+							"content": {
+								"korean": "평화라니. 이건 타락이야.",
+								"english": "Peace? This is corruption.",
+								"japanese": "平和だと？これは堕落だ。",
+								"chinese": "平静？这分明是堕落。",
+								"french": "La paix ? C'est de la corruption.",
+								"spanish": "¿Paz? Esto es corrupción.",
+								"vietnamese": "Bình yên ư. Đây là sự tha hóa.",
+								"thai": "สงบงั้นรึ. นี่มันความเสื่อมทรามต่างหาก.",
+								"hindi": "शांति? यह तो भ्रष्टाचार है।"
+							},
+							"speaker": "character_any",
+							"emotion": "angry",
+							"type": "speech"
+						},
+						{
+							"speaker": "narrator",
+							"emotion": "base",
+							"type": "speech",
+							"content": {
+								"korean": "정체 모를 보스는 쓰러졌다. 그러나 숲의 기묘한 침묵은 계속되었다.",
+								"english": "The unknown boss fell. Yet the forest's strange silence continued.",
+								"japanese": "正体不明のボスは倒れた。しかし、森の奇妙な沈黙は続いた。",
+								"chinese": "身份不明的首领倒下了。然而，森林诡异的寂静仍在持续。",
+								"french": "Le boss inconnu est tombé. Pourtant, le silence étrange de la forêt perdura.",
+								"spanish": "El jefe desconocido cayó. Sin embargo, el extraño silencio del bosque continuó.",
+								"vietnamese": "Trùm không rõ danh tính đã ngã xuống. Tuy nhiên, sự im lặng kỳ lạ của khu rừng vẫn tiếp diễn.",
+								"thai": "บอสปริศนาล้มลงแล้ว. ทว่า, ความเงียบงันประหลาดของป่ายังคงดำเนินต่อไป.",
+								"hindi": "अज्ञात बॉस गिर गया। फिर भी, जंगल की अजीब खामोशी बनी रही।"
+							}
+						},
+						{
+							"type": "speech",
+							"speaker": "narrator",
+							"emotion": "base",
+							"content": {
+								"korean": "이 숲에는… 우리가 모르는 진실이 더 있었다.",
+								"english": "In this forest... there was more truth we didn't know.",
+								"japanese": "この森には…我々の知らない真実がもっとあった。",
+								"chinese": "在这片森林里…还有我们不知道的真相。",
+								"french": "Dans cette forêt… il y avait plus de vérités que nous ignorions.",
+								"spanish": "En este bosque… había más verdades que desconocíamos.",
+								"vietnamese": "Trong khu rừng này… còn có nhiều sự thật mà chúng ta chưa biết.",
+								"thai": "ในป่าแห่งนี้…มีความจริงที่เราไม่รู้อีกมาก.",
+								"hindi": "इस जंगल में… और भी सच्चाई थी जो हम नहीं जानते थे।"
+							}
+						}
+					],
+					"id": 15,
+					"dialogue": [
+						{
+							"action": "enter",
+							"spot": [
+								3,
+								2
+							],
+							"type": "direction",
+							"duration_ms": 500,
+							"speaker": "fern"
+						},
+						{
+							"content": {
+								"korean": "여기가 바로… 숲의 중심이에요. 진정한 치유가 이루어지는 곳.",
+								"english": "This is... the heart of the forest. Where true healing takes place.",
+								"japanese": "ここがまさに…森の中心です。真の癒しが行われる場所。",
+								"chinese": "这里就是……森林的中心。真正疗愈发生的地方。",
+								"french": "Voici... le cœur de la forêt. Là où la véritable guérison a lieu.",
+								"spanish": "Aquí es... el corazón del bosque. Donde ocurre la verdadera curación.",
+								"vietnamese": "Đây chính là... trung tâm của rừng. Nơi sự chữa lành thật sự diễn ra.",
+								"thai": "ที่นี่คือ...ใจกลางป่า สถานที่ที่การเยียวยาที่แท้จริงจะเกิดขึ้น",
+								"hindi": "यही है... वन का हृदय। जहाँ सच्चा उपचार होता है।"
+							},
+							"speaker": "fern",
+							"emotion": "happy",
+							"type": "speech"
+						},
+						{
+							"type": "speech",
+							"speaker": "narrator",
+							"emotion": "base",
+							"content": {
+								"korean": "거대한 그림자가 모습을 드러냈다. 알 수 없는 위압감이 탐험대를 짓눌렀다.",
+								"english": "A colossal shadow emerged. An unknown oppressive feeling crushed the expedition team.",
+								"japanese": "巨大な影が姿を現した。得体の知れない威圧感が探検隊を押しつぶした。",
+								"chinese": "一个巨大的影子显现出来。一股未知的压迫感压垮了探险队。",
+								"french": "Une ombre colossale est apparue. Une sensation d'oppression inconnue écrasa l'équipe d'expédition.",
+								"spanish": "Una sombra colosal apareció. Una sensación de opresión desconocida aplastó al equipo de expedición.",
+								"vietnamese": "Một bóng tối khổng lồ hiện ra. Một cảm giác áp bức không rõ nguồn gốc đè nặng lên đội thám hiểm.",
+								"thai": "เงาขนาดมหึมาปรากฏขึ้น ความรู้สึกกดดันที่ไม่รู้จักบดขยี้ทีมสำรวจ",
+								"hindi": "एक विशाल छाया प्रकट हुई। एक अज्ञात दमनकारी भावना ने अभियान दल को कुचल दिया।"
+							}
+						},
+						{
+							"content": {
+								"korean": "…왔구나. 나의 새로운 희생양들.",
+								"english": "...You've arrived. My new sacrifices.",
+								"japanese": "…来たか。私の新たな贄たちよ。",
+								"chinese": "…来了啊。我的新祭品们。",
+								"french": "...Vous êtes là. Mes nouveaux sacrifices.",
+								"spanish": "...Habéis llegado. Mis nuevos sacrificios.",
+								"vietnamese": "...Ngươi đã đến rồi. Những vật tế mới của ta.",
+								"thai": "...มาแล้วสินะ. เครื่องสังเวยใหม่ของข้า.",
+								"hindi": "...तुम आ गए। मेरे नए बलि।"
+							},
+							"speaker": "random_boss",
+							"emotion": "base",
+							"type": "speech"
+						},
+						{
+							"type": "speech",
+							"speaker": "character_any",
+							"emotion": "angry",
+							"content": {
+								"korean": "네가 이 숲을 이렇게 만들었나?",
+								"english": "Did you do this to the forest?",
+								"japanese": "お前がこの森をこう変えたのか？",
+								"chinese": "是你把这片森林变成这样的吗？",
+								"french": "C'est toi qui as fait ça à cette forêt ?",
+								"spanish": "¿Tú hiciste esto con el bosque?",
+								"vietnamese": "Ngươi đã biến khu rừng này thành ra thế này sao?",
+								"thai": "เจ้าเป็นคนทำให้ป่าเป็นแบบนี้หรือ?",
+								"hindi": "क्या तुमने इस जंगल को ऐसा बनाया?"
+							}
+						},
+						{
+							"speaker": "random_boss",
+							"emotion": "base",
+							"type": "speech",
+							"content": {
+								"korean": "만들었다고? 아냐. 나는 그저 숲을 치유했을 뿐.",
+								"english": "Made it? No. I merely healed the forest.",
+								"japanese": "作った？違う。私はただ森を癒しただけだ。",
+								"chinese": "创造？不。我只是治愈了森林而已。",
+								"french": "Créé ? Non. J'ai seulement guéri la forêt.",
+								"spanish": "¿Crearlo? No. Solo curé el bosque.",
+								"vietnamese": "Tạo ra ư? Không. Ta chỉ đơn thuần chữa lành khu rừng thôi.",
+								"thai": "สร้างขึ้นมางั้นรึ? ไม่ใช่. ข้าแค่เยียวยาป่าเท่านั้นเอง.",
+								"hindi": "बनाया? नहीं। मैंने तो बस जंगल को ठीक किया है।"
+							}
+						},
+						{
+							"type": "speech",
+							"speaker": "random_boss",
+							"emotion": "base",
+							"content": {
+								"korean": "너희도 곧 평화를 얻을 것이다. 영원히.",
+								"english": "You too shall soon find peace. Forever.",
+								"japanese": "お前たちもじきに安らぎを得るだろう。永遠に。",
+								"chinese": "你们也很快会得到平静。永远的平静。",
+								"french": "Vous aussi trouverez bientôt la paix. Pour toujours.",
+								"spanish": "Vosotros también encontraréis la paz pronto. Para siempre.",
+								"vietnamese": "Các ngươi cũng sẽ sớm có được bình yên. Mãi mãi.",
+								"thai": "พวกเจ้าก็จะได้รับความสงบเช่นกัน. ตลอดไป.",
+								"hindi": "तुम्हें भी जल्द ही शांति मिलेगी। हमेशा के लिए।"
+							}
+						}
+					],
+					"lose_dialogue": [
+						{
+							"type": "speech",
+							"speaker": "narrator",
+							"emotion": "base",
+							"content": {
+								"korean": "숲의 생명력이 탐험대를 짓눌렀다. 모든 것이 무의미해 보였다.",
+								"english": "The forest's vitality crushed the expedition team. Everything seemed meaningless.",
+								"japanese": "森の生命力が探検隊を圧倒した。すべてが無意味に思われた。",
+								"chinese": "森林的生命力压垮了探险队。一切都显得毫无意义。",
+								"french": "La vitalité de la forêt écrasa l'équipe d'expédition. Tout semblait dénué de sens.",
+								"spanish": "La vitalidad del bosque aplastó al equipo de expedición. Todo parecía sin sentido.",
+								"vietnamese": "Sức sống của khu rừng đã đè bẹp đoàn thám hiểm. Mọi thứ dường như vô nghĩa.",
+								"thai": "พลังชีวิตของป่าบดขยี้ทีมสำรวจ. ทุกสิ่งดูไร้ความหมาย.",
+								"hindi": "जंगल की जीवन शक्ति ने अभियान दल को कुचल दिया। सब कुछ अर्थहीन लग रहा था।"
+							}
+						},
+						{
+							"speaker": "random_boss",
+							"emotion": "base",
+							"type": "speech",
+							"content": {
+								"korean": "결국… 너희도 이 숲의 일부가 될 뿐.",
+								"english": "In the end... you too will become part of this forest.",
+								"japanese": "結局…お前たちもこの森の一部になるだけだ。",
+								"chinese": "最终……你们也将成为这片森林的一部分。",
+								"french": "Au final... vous ne ferez qu'un avec cette forêt.",
+								"spanish": "Al final... vosotros también seréis parte de este bosque.",
+								"vietnamese": "Cuối cùng... các ngươi cũng chỉ trở thành một phần của khu rừng này thôi.",
+								"thai": "ในที่สุด...พวกเจ้าก็จะได้เป็นส่วนหนึ่งของป่านี้เท่านั้น",
+								"hindi": "अंततः... तुम भी इस वन का एक हिस्सा बन जाओगे।"
+							}
+						},
+						{
+							"content": {
+								"korean": "영원한 치유를 받아들여라. 고통은 사라질 것이다.",
+								"english": "Embrace eternal healing. Your pain will vanish.",
+								"japanese": "永遠の癒しを受け入れろ。苦痛は消え去るだろう。",
+								"chinese": "接受永恒的治愈吧。痛苦将会消失。",
+								"french": "Acceptez la guérison éternelle. La douleur disparaîtra.",
+								"spanish": "Aceptad la curación eterna. El dolor desaparecerá.",
+								"vietnamese": "Hãy đón nhận sự chữa lành vĩnh cửu. Nỗi đau sẽ tan biến.",
+								"thai": "จงยอมรับการเยียวยาชั่วนิรันดร์ ความเจ็บปวดจะหายไป",
+								"hindi": "शाश्वत उपचार को स्वीकार करो। पीड़ा दूर हो जाएगी।"
+							},
+							"type": "speech",
+							"speaker": "random_boss",
+							"emotion": "base"
+						},
+						{
+							"content": {
+								"korean": "아직… 끝나지 않았어.",
+								"english": "It's not over yet...",
+								"japanese": "まだ…終わってない。",
+								"chinese": "还没…结束。",
+								"french": "Ce n'est pas encore fini...",
+								"spanish": "Todavía... no ha terminado.",
+								"vietnamese": "Vẫn... chưa kết thúc đâu.",
+								"thai": "ยัง...ไม่จบ",
+								"hindi": "अभी… ख़त्म नहीं हुआ है।"
+							},
+							"type": "speech",
+							"speaker": "character_any",
+							"emotion": "angry"
+						}
+					]
+				}
+			],
+			"prologue": {
+				"korean": [
+					"숲은 빛났다. 너무나 아름답게, 미친 듯이.",
+					"그러나 그 빛 아래엔 알 수 없는 병이 퍼져 있었다.",
+					"이 기이한 숲에서, 한 숲지기가 우리를 맞았다.",
+					"그녀는 말했다. 숲이 지금, 치유되고 있다고."
+				],
+				"english": [
+					"The forest glowed. So beautiful, so madly.",
+					"Yet beneath its glow, an unknown sickness spread.",
+					"In this strange forest, a forest keeper greeted us.",
+					"She said, \"The forest is healing now.\""
+				],
+				"japanese": [
+					"森は輝いた。あまりにも美しく、狂おしいほどに。",
+					"しかし、その輝きの下には未知の病が広がっていた。",
+					"この奇妙な森で、一人の森の番人が私たちを迎えた。",
+					"彼女は言った。「森は今、癒されていると。」"
+				],
+				"chinese": [
+					"森林闪耀着。如此美丽，又如此疯狂。",
+					"然而，在那光芒之下，一场未知的疾病正在蔓延。",
+					"在这片奇异的森林里，一位森林守护者迎接了我们。",
+					"她说：“森林现在正在被治愈。”"
+				],
+				"french": [
+					"La forêt brillait. Si belle, si follement.",
+					"Pourtant, sous sa lumière, une maladie inconnue se propageait.",
+					"Dans cette forêt étrange, une gardienne nous a accueillis.",
+					"Elle dit : \"La forêt est en train de guérir.\""
+				],
+				"spanish": [
+					"El bosque resplandecía. Tan hermoso, tan locamente.",
+					"Sin embargo, bajo su resplandor, una enfermedad desconocida se extendía.",
+					"En este extraño bosque, una guardabosques nos recibió.",
+					"Ella dijo: \"El bosque se está curando ahora.\""
+				],
+				"vietnamese": [
+					"Rừng rực sáng. Đẹp đến điên cuồng.",
+					"Nhưng dưới ánh sáng ấy, một căn bệnh không tên đang lan tràn.",
+					"Trong khu rừng kỳ lạ này, một người giữ rừng đã chào đón chúng tôi.",
+					"Cô ấy nói: \"Rừng đang được chữa lành.\""
+				],
+				"thai": [
+					"ป่าส่องแสงเรืองรอง สวยงามอย่างบ้าคลั่ง",
+					"ทว่าภายใต้แสงเรืองรองนั้น โรคประหลาดกำลังแพร่กระจาย",
+					"ในป่าประหลาดแห่งนี้ ผู้พิทักษ์ป่าคนหนึ่งได้ต้อนรับเรา",
+					"เธอบอกว่า \"ป่ากำลังได้รับการเยียวยา\""
+				],
+				"hindi": [
+					"जंगल जगमगा उठा। इतना सुंदर, इतना पागलपन भरा।",
+					"फिर भी, उसकी चमक के नीचे, एक अज्ञात बीमारी फैल रही थी।",
+					"इस अजीब जंगल में, एक वनपाल ने हमारा स्वागत किया।",
+					"उसने कहा, \"जंगल अब ठीक हो रहा है।\""
+				]
+			}
+		},
+		{
+			"scenario_id": "forest_luminamorta_22_02",
+			"order": 2,
+			"act": "rising",
+			"theme": "forest",
+			"actors": {
+				"briar": {
+					"id": "mon_21f92820-190e-4d08-a75c-5d2c0b6d0a6b",
+					"name": {
+						"korean": "브라이어",
+						"english": "Briar",
+						"japanese": "ブライア",
+						"chinese": "布莱尔",
+						"french": "Briar",
+						"spanish": "Briar",
+						"vietnamese": "Briar",
+						"thai": "ไบรอา",
+						"hindi": "ब्रायर"
+					},
+					"description": "",
+					"face_image_url": "https://imagedelivery.net/WTEqQNGFb-l-IHS6IGnzUQ/41fb431e-57e0-45e0-dde6-1a1f02c01200/public",
+					"battle_sprite_url": "https://imagedelivery.net/WTEqQNGFb-l-IHS6IGnzUQ/dd89dff7-88ed-4444-28d8-5aaa85bd4e00/public"
+				}
+			},
+			"boss": {
+				"pool_id": "random_boss"
+			},
+			"prologue": {
+				"korean": [
+					"숲은 병들었다. 하지만 '치유'라는 이름으로, 더 깊이 잠식되고 있었다.",
+					"괴짜 학자 브라이어는 섬뜩한 진실을 쫓았다.",
+					"생명력은 거래되고, 희생자는 그림자 속에 묻혔다.",
+					"과연, 누가 이 거대한 거래의 희생자인가?"
+				],
+				"english": [
+					"The forest was sick. But under the guise of 'healing', it was being consumed further.",
+					"The eccentric scholar Briar pursued a chilling truth.",
+					"Life force was traded, and victims were buried in the shadows.",
+					"Indeed, who are the victims of this massive transaction?"
+				],
+				"japanese": [
+					"森は病んでいた。しかし、「治癒」という名目で、さらに深く侵食されていた。",
+					"風変わりな学者ブライアは、恐ろしい真実を追った。",
+					"生命力は取引され、犠牲者は影に葬られた。",
+					"はたして、この巨大な取引の犠牲者は誰なのか？"
+				],
+				"chinese": [
+					"森林病了。然而，在“治愈”之名下，它被侵蚀得更深。",
+					"古怪的学者布莱尔追寻着一个令人毛骨悚然的真相。",
+					"生命力被交易，受害者被埋葬在阴影之中。",
+					"究竟，谁是这场巨大交易的受害者？"
+				],
+				"french": [
+					"La forêt était malade. Mais sous le nom de \"guérison\", elle était de plus en plus envahie.",
+					"Le savant excentrique Briar cherchait une vérité glaçante.",
+					"La force vitale était échangée, et les victimes étaient enfouies dans l'ombre.",
+					"Au fait, qui sont les victimes de cette transaction colossale ?"
+				],
+				"spanish": [
+					"El bosque estaba enfermo. Pero bajo el nombre de \"sanación\", estaba siendo consumido aún más profundamente.",
+					"La excéntrica erudita Briar persiguió una verdad escalofriante.",
+					"La fuerza vital se negociaba, y las víctimas eran enterradas en las sombras.",
+					"¿Quiénes son, en realidad, las víctimas de esta gigantesca transacción?"
+				],
+				"vietnamese": [
+					"Rừng đã bệnh. Nhưng dưới danh nghĩa 'chữa lành', nó đang bị xâm chiếm sâu hơn.",
+					"Học giả lập dị Briar theo đuổi một sự thật rùng rợn.",
+					"Sinh lực bị giao dịch, và những nạn nhân bị chôn vùi trong bóng tối.",
+					"Rốt cuộc, ai là nạn nhân của giao dịch khổng lồ này?"
+				],
+				"thai": [
+					"ป่าป่วยไข้ ทว่าภายใต้ชื่อ 'การเยียวยา' มันกลับถูกกัดกินลึกเข้าไปอีก",
+					"นักวิชาการประหลาดไบรเออร์ออกตามหาความจริงอันน่าขนลุก",
+					"พลังชีวิตถูกแลกเปลี่ยน ผู้เคราะห์ร้ายถูกฝังในเงามืด",
+					"แท้จริงแล้ว ใครคือเหยื่อของการซื้อขายครั้งใหญ่นี้กันแน่?"
+				],
+				"hindi": [
+					"जंगल बीमार था। लेकिन 'उपचार' के नाम पर, इसे और गहराई से निगला जा रहा था।",
+					"सनकी विद्वान ब्रायर एक भयावह सच्चाई का पीछा कर रहा था।",
+					"जीवन शक्ति का व्यापार होता था, और पीड़ितों को छाया में दफना दिया जाता था।",
+					"आखिर, इस विशाल लेन-देन के शिकार कौन हैं?"
+				]
+			},
+			"rooms": [
+				{
+					"dialogue": [
+						{
+							"content": {
+								"korean": "숲은 여전히 아름다웠으나, 그 아름다움은 어딘가 기괴했다.",
+								"english": "The forest was still beautiful, but its beauty was somehow eerie.",
+								"japanese": "森は相変わらず美しかったが、その美しさはどこか不気味だった。",
+								"chinese": "森林依然美丽，但那美丽却透着一丝诡异。",
+								"french": "La forêt était toujours belle, mais sa beauté était étrange.",
+								"spanish": "El bosque seguía siendo hermoso, pero su belleza era extraña.",
+								"vietnamese": "Rừng vẫn đẹp, nhưng vẻ đẹp đó có gì đó kỳ quái.",
+								"thai": "ป่ายังคงงดงาม แต่ความงามนั้นกลับแฝงความประหลาด",
+								"hindi": "जंगल अभी भी सुंदर था, लेकिन उसकी सुंदरता कहीं न कहीं अजीब थी।"
+							},
+							"emotion": "base",
+							"type": "speech",
+							"speaker": "narrator"
+						},
+						{
+							"speaker": "character_any",
+							"type": "speech",
+							"emotion": "base",
+							"content": {
+								"korean": "숲이 이상해... 너무 생기 넘쳐서 오히려 섬뜩해.",
+								"english": "The forest is strange... It's too vibrant, almost eerie.",
+								"japanese": "森がおかしい… 生気に満ち溢れすぎていて、むしろ不気味だ。",
+								"chinese": "森林很奇怪... 太有生气了，反而令人毛骨悚然。",
+								"french": "La forêt est bizarre... Trop pleine de vie, c'en est presque effrayant.",
+								"spanish": "El bosque es raro... Demasiado vibrante, hasta da miedo.",
+								"vietnamese": "Rừng lạ quá... Quá sức sống động nên lại rùng rợn.",
+								"thai": "ป่าแปลกไป... สดใสเกินไปจนน่าขนลุก",
+								"hindi": "जंगल अजीब है... बहुत जीवंत होने के कारण डरावना लग रहा है।"
+							}
+						},
+						{
+							"spot": [
+								5,
+								3
+							],
+							"type": "direction",
+							"duration_ms": 500,
+							"action": "enter",
+							"speaker": "briar"
+						},
+						{
+							"type": "speech",
+							"speaker": "briar",
+							"content": {
+								"korean": "이런 현상은... '생명력 흡수'의 증거죠. 제가 파악한 바로는.",
+								"english": "This phenomenon is... evidence of 'life force absorption'. As far as I've gathered.",
+								"japanese": "この現象は…「生命力吸収」の証拠です。私が把握している限りでは。",
+								"chinese": "这种现象是……“生命力吸收”的证据。据我所知。",
+								"french": "Ce phénomène est... la preuve d'une 'absorption de force vitale'. D'après ce que j'ai compris.",
+								"spanish": "Este fenómeno es... evidencia de 'absorción de fuerza vital'. Según tengo entendido.",
+								"vietnamese": "Hiện tượng này là... bằng chứng của 'hấp thụ sinh lực'. Theo những gì tôi nắm được.",
+								"thai": "ปรากฏการณ์นี้คือ... หลักฐานของการ 'ดูดกลืนพลังชีวิต' เท่าที่ผมทราบนะ",
+								"hindi": "यह घटना... 'जीवन शक्ति अवशोषण' का प्रमाण है। जहाँ तक मैंने समझा है।"
+							},
+							"emotion": "base"
+						},
+						{
+							"content": {
+								"korean": "생명력 흡수? 그게 뭔데.",
+								"english": "Life force absorption? What's that?",
+								"japanese": "生命力吸収？ それは何だ。",
+								"chinese": "生命力吸收？那是什么？",
+								"french": "Absorption de force vitale ? C'est quoi ?",
+								"spanish": "¿Absorción de fuerza vital? ¿Qué es eso?",
+								"vietnamese": "Hấp thụ sinh lực? Đó là gì vậy?",
+								"thai": "ดูดกลืนพลังชีวิต? นั่นมันอะไรกัน?",
+								"hindi": "जीवन शक्ति अवशोषण? वह क्या है?"
+							},
+							"emotion": "base",
+							"type": "speech",
+							"speaker": "character_1"
+						},
+						{
+							"emotion": "sad",
+							"content": {
+								"korean": "이 숲은 살아있는 모든 것의 에너지를 빨아들이고 있어요. '치유'라는 명목으로.",
+								"english": "This forest is draining the energy of all living things. Under the pretext of 'healing'.",
+								"japanese": "この森は、生きとし生けるもの全てのエネルギーを吸い取っています。「治癒」という名目で。",
+								"chinese": "这片森林正在吸取所有生物的能量。以“治愈”之名。",
+								"french": "Cette forêt draine l'énergie de tout ce qui vit. Sous prétexte de \"guérison\".",
+								"spanish": "Este bosque está absorbiendo la energía de todo ser vivo. Con el pretexto de \"sanación\".",
+								"vietnamese": "Rừng này đang hút cạn năng lượng của mọi sinh vật sống. Dưới danh nghĩa 'chữa lành'.",
+								"thai": "ป่าแห่งนี้กำลังดูดพลังงานของสิ่งมีชีวิตทั้งหมด ภายใต้ข้ออ้างของ 'การเยียวยา'",
+								"hindi": "यह जंगल जीवित हर चीज़ की ऊर्जा चूस रहा है। 'उपचार' के बहाने।"
+							},
+							"speaker": "briar",
+							"type": "speech"
+						}
+					],
+					"id": 1
+				},
+				{
+					"id": 3,
+					"dialogue": [
+						{
+							"duration_ms": 500,
+							"speaker": "briar",
+							"action": "enter",
+							"spot": [
+								3,
+								2
+							],
+							"type": "direction"
+						},
+						{
+							"speaker": "briar",
+							"type": "speech",
+							"emotion": "base",
+							"content": {
+								"korean": "이걸 보세요. 낡은 일지 조각입니다.",
+								"english": "Look at this. It's a torn page from an old journal.",
+								"japanese": "これを見てください。古い日誌の破片です。",
+								"chinese": "看看这个。这是一片旧日志的碎片。",
+								"french": "Regardez ça. C'est un fragment d'un vieil journal.",
+								"spanish": "Mira esto. Es un trozo de un diario antiguo.",
+								"vietnamese": "Nhìn cái này đi. Đó là một mảnh nhật ký cũ.",
+								"thai": "ดูนี่สิครับ มันคือเศษหน้ากระดาษจากบันทึกเก่า",
+								"hindi": "इसे देखो। यह एक पुरानी डायरी का फटा हुआ टुकड़ा है।"
+							}
+						},
+						{
+							"speaker": "character_any",
+							"type": "speech",
+							"emotion": "base",
+							"content": {
+								"korean": "이건… 고대어?",
+								"english": "This... is ancient language?",
+								"japanese": "「これ…古代語？」",
+								"chinese": "“这是…古语？”",
+								"french": "« C'est... de l'ancien langage ? »",
+								"spanish": "¿Esto... es idioma antiguo?",
+								"vietnamese": "Đây là... cổ ngữ?",
+								"thai": "นี่มัน... ภาษาโบราณเหรอ?",
+								"hindi": "यह... प्राचीन भाषा है?"
+							}
+						},
+						{
+							"content": {
+								"korean": "아마존 사제장의 기록이에요. '영원한 치유'를 갈망하며….",
+								"english": "Records of the Amazon high priestess. Longing for 'eternal healing'...",
+								"japanese": "「アマゾン神官長の記録です。『永遠の癒し』を渇望して…。」",
+								"chinese": "“这是亚马逊祭司长的记录。渴望着‘永恒的治愈’……”",
+								"french": "« Ce sont les registres de la grande prêtresse amazone. Aspirant à la 'guérison éternelle'… »",
+								"spanish": "Son los registros de la sacerdotisa amazona. Anhelando la 'curación eterna'...",
+								"vietnamese": "Đây là ghi chép của nữ tư tế Amazon. Khao khát 'chữa lành vĩnh cửu'...",
+								"thai": "บันทึกของนักบวชหญิงแห่งอเมซอน เธอปรารถนา 'การเยียวยาชั่วนิรันดร์'...",
+								"hindi": "यह अमेज़ॅन प्रधान पुजारिन का रिकॉर्ड है। 'शाश्वत उपचार' की लालसा करते हुए..."
+							},
+							"emotion": "sad",
+							"type": "speech",
+							"speaker": "briar"
+						},
+						{
+							"speaker": "character_2",
+							"type": "speech",
+							"emotion": "base",
+							"content": {
+								"korean": "영원한 치유? 그게 뭐길래 이렇게 섬뜩하게 들리지?",
+								"english": "Eternal healing? Why does that sound so unsettling?",
+								"japanese": "「永遠の癒し？なぜそんなに不気味に聞こえるの？」",
+								"chinese": "“永恒的治愈？为什么听起来这么诡异？”",
+								"french": "« La guérison éternelle ? Pourquoi ça sonne si inquiétant ? »",
+								"spanish": "¿Curación eterna? ¿Por qué suena tan inquietante?",
+								"vietnamese": "Chữa lành vĩnh cửu? Sao nghe đáng sợ thế?",
+								"thai": "การเยียวยาชั่วนิรันดร์? ทำไมฟังดูน่าขนลุกจัง?",
+								"hindi": "शाश्वत उपचार? यह इतना भयानक क्यों लग रहा है?"
+							}
+						},
+						{
+							"type": "speech",
+							"speaker": "briar",
+							"content": {
+								"korean": "아마존 사제장은 숲의 병을 고치려 했지만, 뭔가 잘못된 거죠.",
+								"english": "The Amazon high priestess tried to cure the forest's illness, but something went wrong.",
+								"japanese": "「アマゾン神官長は森の病を治そうとしましたが、何かが間違っていたのでしょう。」",
+								"chinese": "“亚马逊祭司长试图治愈森林的疾病，但出了些问题。”",
+								"french": "« La grande prêtresse amazone a essayé de guérir la maladie de la forêt, mais quelque chose a mal tourné. »",
+								"spanish": "La sacerdotisa amazona intentó curar la enfermedad del bosque, pero algo salió mal.",
+								"vietnamese": "Nữ tư tế Amazon đã cố gắng chữa bệnh cho rừng, nhưng có gì đó đã sai.",
+								"thai": "นักบวชหญิงแห่งอเมซอนพยายามจะรักษาโรคของป่า แต่มีบางอย่างผิดพลาดไป",
+								"hindi": "अमेज़ॅन प्रधान पुजारिन ने जंगल की बीमारी का इलाज करने की कोशिश की, लेकिन कुछ गलत हो गया।"
+							},
+							"emotion": "sad"
+						}
+					]
+				},
+				{
+					"id": 5,
+					"dialogue": [
+						{
+							"duration_ms": 500,
+							"action": "enter",
+							"speaker": "briar",
+							"spot": [
+								2,
+								3
+							],
+							"type": "direction"
+						},
+						{
+							"emotion": "base",
+							"content": {
+								"korean": "일지에 따르면, 사제장은 숲의 '근원'과 접촉하려 했어요.",
+								"english": "According to the journal, the high priestess tried to contact the 'Source' of the forest.",
+								"japanese": "「日誌によると、神官長は森の『根源』と接触しようとしたそうです。」",
+								"chinese": "“根据日记记载，祭司长曾试图接触森林的‘本源’。”",
+								"french": "« Selon le journal, la grande prêtresse a essayé de contacter la 'Source' de la forêt. »",
+								"spanish": "Según el diario, la sacerdotisa intentó contactar con el 'Origen' del bosque.",
+								"vietnamese": "Theo nhật ký, nữ tư tế đã cố gắng liên hệ với 'Nguồn gốc' của rừng.",
+								"thai": "ตามบันทึก นักบวชหญิงพยายามติดต่อ 'ต้นกำเนิด' ของป่า",
+								"hindi": "डायरी के अनुसार, प्रधान पुजारिन ने जंगल के 'स्रोत' से संपर्क करने की कोशिश की।"
+							},
+							"speaker": "briar",
+							"type": "speech"
+						},
+						{
+							"emotion": "base",
+							"content": {
+								"korean": "근원?",
+								"english": "The Source?",
+								"japanese": "「根源？」",
+								"chinese": "“本源？”",
+								"french": "« La Source ? »",
+								"spanish": "¿El Origen?",
+								"vietnamese": "Nguồn gốc?",
+								"thai": "ต้นกำเนิด?",
+								"hindi": "स्रोत?"
+							},
+							"speaker": "character_any",
+							"type": "speech"
+						},
+						{
+							"type": "speech",
+							"speaker": "briar",
+							"content": {
+								"korean": "그래요. 이 숲의 모든 생명력을 통제하는 존재.",
+								"english": "Yes. The entity that controls all life force in this forest.",
+								"japanese": "「ええ。この森の全ての生命力を制御する存在です。」",
+								"chinese": "“是的。一个控制着这片森林所有生命力的存在。”",
+								"french": "« Oui. L'entité qui contrôle toute la force vitale de cette forêt. »",
+								"spanish": "Sí. La entidad que controla toda la fuerza vital de este bosque.",
+								"vietnamese": "Đúng vậy. Thực thể kiểm soát mọi sinh lực trong khu rừng này.",
+								"thai": "ใช่แล้ว สิ่งมีชีวิตที่ควบคุมพลังชีวิตทั้งหมดในป่าแห่งนี้",
+								"hindi": "हाँ। वह सत्ता जो इस जंगल की सभी जीवन शक्ति को नियंत्रित करती है।"
+							},
+							"emotion": "base"
+						},
+						{
+							"speaker": "briar",
+							"type": "speech",
+							"emotion": "sad",
+							"content": {
+								"korean": "아마존 사제장은 그 근원을 통해 '영원한 치유'를 이루려 했죠. 모두를 살리려고….",
+								"english": "The Amazon high priestess tried to achieve 'eternal healing' through that Source. To save everyone...",
+								"japanese": "「アマゾン神官長はその根源を通じて『永遠の癒し』を成し遂げようとしたんです。皆を救うために…。」",
+								"chinese": "“亚马逊祭司长试图通过那个本源实现‘永恒的治愈’。为了拯救所有人……”",
+								"french": "« La grande prêtresse amazone a essayé d'atteindre la 'guérison éternelle' par cette Source. Pour sauver tout le monde... »",
+								"spanish": "La sacerdotisa amazona intentó lograr la 'curación eterna' a través de ese Origen. Para salvar a todos...",
+								"vietnamese": "Nữ tư tế Amazon đã cố gắng đạt được 'chữa lành vĩnh cửu' thông qua Nguồn gốc đó. Để cứu tất cả mọi người...",
+								"thai": "นักบวชหญิงแห่งอเมซอนพยายามจะบรรลุ 'การเยียวยาชั่วนิรันดร์' ผ่านต้นกำเนิดนั้น เพื่อช่วยชีวิตทุกคน...",
+								"hindi": "अमेज़ॅन प्रधान पुजारिन ने उस स्रोत के माध्यम से 'शाश्वत उपचार' प्राप्त करने की कोशिश की। सभी को बचाने के लिए..."
+							}
+						},
+						{
+							"type": "speech",
+							"speaker": "character_3",
+							"content": {
+								"korean": "근데 그게 왜 이렇게 된 거야?",
+								"english": "But why did it turn out like this?",
+								"japanese": "「でも、どうしてこんなことになったの？」",
+								"chinese": "“但为什么会变成这样？”",
+								"french": "« Mais pourquoi ça a fini comme ça ? »",
+								"spanish": "¿Pero por qué terminó así?",
+								"vietnamese": "Nhưng tại sao lại thành ra thế này?",
+								"thai": "แต่ทำไมถึงกลายเป็นแบบนี้ล่ะ?",
+								"hindi": "पर यह ऐसा क्यों हो गया?"
+							},
+							"emotion": "base"
+						},
+						{
+							"content": {
+								"korean": "과도한 욕망은… 언제나 파멸을 불러오죠. 지금의 숲처럼.",
+								"english": "Excessive desire... always brings ruin. Like the forest now.",
+								"japanese": "「過度な欲望は…常に破滅を招きます。今の森のように。」",
+								"chinese": "“过度的欲望……总是会带来毁灭。就像现在的森林一样。”",
+								"french": "« Le désir excessif... apporte toujours la ruine. Comme la forêt maintenant. »",
+								"spanish": "El deseo excesivo... siempre trae la ruina. Como el bosque ahora.",
+								"vietnamese": "Dục vọng quá mức... luôn mang đến sự hủy diệt. Giống như khu rừng bây giờ.",
+								"thai": "ความปรารถนาที่มากเกินไป... มักจะนำมาซึ่งความพินาศ เสมือนป่าในตอนนี้",
+								"hindi": "अत्यधिक इच्छा... हमेशा विनाश लाती है। जैसे अभी का जंगल।"
+							},
+							"emotion": "sad",
+							"type": "speech",
+							"speaker": "briar"
+						}
+					]
+				},
+				{
+					"dialogue": [
+						{
+							"type": "direction",
+							"spot": [
+								4,
+								3
+							],
+							"speaker": "briar",
+							"action": "enter",
+							"duration_ms": 500
+						},
+						{
+							"speaker": "briar",
+							"type": "speech",
+							"emotion": "base",
+							"content": {
+								"korean": "더 이상 돌아갈 수 없어요. 이 길은 근원으로 향하고 있으니.",
+								"english": "We can't go back. This path leads to the Source.",
+								"japanese": "もう戻れない。この道は根源へと向かっている。",
+								"chinese": "无法回头了。这条路通向本源。",
+								"french": "On ne peut plus reculer. Ce chemin mène à la Source.",
+								"spanish": "No podemos volver atrás. Este camino lleva al Origen.",
+								"vietnamese": "Không thể quay lại nữa rồi. Con đường này dẫn đến Nguồn gốc.",
+								"thai": "เรากลับไปไม่ได้แล้ว เส้นทางนี้กำลังมุ่งหน้าสู่ต้นกำเนิด",
+								"hindi": "अब पीछे नहीं हट सकते। यह रास्ता स्रोत की ओर जा रहा है।"
+							}
+						},
+						{
+							"emotion": "base",
+							"content": {
+								"korean": "그럼 우린… 뭘 해야 하는 건데.",
+								"english": "So... what do we do then?",
+								"japanese": "じゃあ私たちは…どうすればいいの。",
+								"chinese": "那我们…该怎么做？",
+								"french": "Alors… qu'est-ce qu'on est censé faire ?",
+								"spanish": "Entonces... ¿qué se supone que debemos hacer?",
+								"vietnamese": "Vậy thì... chúng ta phải làm gì đây?",
+								"thai": "แล้วเรา…ต้องทำยังไงล่ะ",
+								"hindi": "तो हम… क्या करें?"
+							},
+							"speaker": "character_any",
+							"type": "speech"
+						},
+						{
+							"emotion": "angry",
+							"content": {
+								"korean": "그 '근원'을 멈춰야 합니다. 그렇지 않으면 숲은 영원히 이 뒤틀린 치유에 잠식될 거예요.",
+								"english": "We must stop that 'Source'. Otherwise, the forest will be forever consumed by this twisted healing.",
+								"japanese": "その「根源」を止めなければなりません。さもなければ、森はこの歪んだ癒しに永遠に侵食されるでしょう。",
+								"chinese": "我们必须阻止那个“本源”。否则，森林将永远被这种扭曲的治愈所吞噬。",
+								"french": "Nous devons arrêter cette \"Source\". Sinon, la forêt sera éternellement consumée par cette guérison tordue.",
+								"spanish": "Debemos detener ese 'Origen'. De lo contrario, el bosque será consumido para siempre por esta curación retorcida.",
+								"vietnamese": "Chúng ta phải ngăn chặn 'Nguồn gốc' đó. Nếu không, khu rừng sẽ bị nuốt chửng vĩnh viễn bởi sự chữa lành méo mó này.",
+								"thai": "เราต้องหยุด 'ต้นกำเนิด' นั่น ไม่เช่นนั้นป่าจะถูกกลืนกินด้วยการเยียวยาที่บิดเบี้ยวนี้ตลอดไป",
+								"hindi": "हमें उस 'स्रोत' को रोकना होगा। अन्यथा, जंगल इस विकृत उपचार द्वारा हमेशा के लिए ग्रसित हो जाएगा।"
+							},
+							"speaker": "briar",
+							"type": "speech"
+						},
+						{
+							"type": "speech",
+							"speaker": "character_4",
+							"content": {
+								"korean": "멈춘다고… 그게 가능한 일이야?",
+								"english": "Stop it... Is that even possible?",
+								"japanese": "止めるって…そんなこと可能なの？",
+								"chinese": "阻止它…那可能吗？",
+								"french": "L'arrêter… C'est possible, ça ?",
+								"spanish": "¿Detenerlo...? ¿Es eso posible?",
+								"vietnamese": "Ngăn chặn ư... Liệu điều đó có thể không?",
+								"thai": "หยุดมัน…เป็นไปได้เหรอ?",
+								"hindi": "रोकें… क्या यह संभव है?"
+							},
+							"emotion": "base"
+						},
+						{
+							"speaker": "briar",
+							"type": "speech",
+							"emotion": "base",
+							"content": {
+								"korean": "알아내야죠. 그게 저의… 강박적인 연구 목표니까.",
+								"english": "We have to find out. That's my... obsessive research goal.",
+								"japanese": "見つけ出すしかありません。それが私の…強迫的な研究目標ですから。",
+								"chinese": "我们必须查明。那是我的…强迫性研究目标。",
+								"french": "Nous devons le découvrir. C'est mon… objectif de recherche obsessionnel.",
+								"spanish": "Tenemos que averiguarlo. Ese es mi… objetivo de investigación obsesivo.",
+								"vietnamese": "Chúng ta phải tìm ra thôi. Đó là... mục tiêu nghiên cứu ám ảnh của tôi mà.",
+								"thai": "เราต้องหาคำตอบให้ได้ นั่นคือ…เป้าหมายการวิจัยที่หมกมุ่นของฉัน",
+								"hindi": "हमें पता लगाना होगा। यह मेरा… जुनूनी शोध लक्ष्य है।"
+							}
+						}
+					],
+					"id": 9
+				},
+				{
+					"dialogue": [
+						{
+							"type": "speech",
+							"speaker": "narrator",
+							"content": {
+								"korean": "숲의 심장부. 마침내 거대한 그림자가 모습을 드러냈다.",
+								"english": "The heart of the forest. Finally, a colossal shadow revealed itself.",
+								"japanese": "森の心臓部。ついに巨大な影が姿を現した。",
+								"chinese": "森林的中心。终于，一个巨大的阴影现身了。",
+								"french": "Le cœur de la forêt. Enfin, une ombre colossale se révéla.",
+								"spanish": "El corazón del bosque. Finalmente, una sombra colosal se reveló.",
+								"vietnamese": "Trái tim của khu rừng. Cuối cùng, một bóng đen khổng lồ đã xuất hiện.",
+								"thai": "ใจกลางป่า ในที่สุดเงาขนาดมหึมาก็ปรากฏกาย",
+								"hindi": "जंगल का हृदय। अंततः, एक विशाल छाया प्रकट हुई।"
+							},
+							"emotion": "base"
+						},
+						{
+							"content": {
+								"korean": "…왔군. 나의 완벽한 치유를 방해하러.",
+								"english": "...You've come. To obstruct my perfect healing.",
+								"japanese": "…来たな。私の完璧な癒しを邪魔しに。",
+								"chinese": "…你们来了。来阻碍我完美的治愈。",
+								"french": "…Vous êtes venus. Pour entraver ma guérison parfaite.",
+								"spanish": "...Habéis llegado. Para obstruir mi perfecta curación.",
+								"vietnamese": "...Các ngươi đã đến. Để cản trở sự chữa lành hoàn hảo của ta.",
+								"thai": "…มาแล้วสินะ มาขัดขวางการเยียวยาอันสมบูรณ์แบบของข้า",
+								"hindi": "…आ गए तुम। मेरी पूर्ण उपचार में बाधा डालने।"
+							},
+							"emotion": "base",
+							"type": "speech",
+							"speaker": "random_boss"
+						},
+						{
+							"content": {
+								"korean": "네가… 이 숲을 이렇게 만들었어?",
+								"english": "You... did this to the forest?",
+								"japanese": "お前が…この森をこんな風にしたのか？",
+								"chinese": "你…把这片森林变成了这样？",
+								"french": "C'est toi… qui as fait ça à la forêt ?",
+								"spanish": "Tú… ¿le hiciste esto al bosque?",
+								"vietnamese": "Ngươi… đã khiến khu rừng này thành ra thế này sao?",
+								"thai": "แก…เป็นคนทำให้ป่าเป็นแบบนี้เหรอ?",
+								"hindi": "तुमने… जंगल को ऐसा बना दिया?"
+							},
+							"emotion": "angry",
+							"type": "speech",
+							"speaker": "character_any"
+						},
+						{
+							"emotion": "base",
+							"content": {
+								"korean": "나는 그저… 모두를 위한 '영원한 평화'를 선사했을 뿐. 너희도 곧 알게 될 거다.",
+								"english": "I merely... bestowed 'eternal peace' upon everyone. You will all soon understand.",
+								"japanese": "私はただ…皆に「永遠の平和」をもたらしただけだ。お前たちもじきに分かるだろう。",
+								"chinese": "我只是…为所有人带来了“永恒的和平”。你们很快就会明白的。",
+								"french": "J'ai simplement… offert la \"paix éternelle\" à tous. Vous comprendrez bientôt.",
+								"spanish": "Yo simplemente… concedí la 'paz eterna' a todos. Pronto lo comprenderéis.",
+								"vietnamese": "Ta chỉ… ban tặng 'hòa bình vĩnh cửu' cho tất cả. Các ngươi rồi sẽ sớm hiểu thôi.",
+								"thai": "ข้าเพียงแค่…มอบ 'สันติสุขชั่วนิรันดร์' ให้แก่ทุกคน พวกเจ้าก็จะเข้าใจในไม่ช้า",
+								"hindi": "मैंने बस… सभी को 'अनंत शांति' प्रदान की है। तुम सब जल्द ही समझ जाओगे।"
+							},
+							"speaker": "random_boss",
+							"type": "speech"
+						},
+						{
+							"content": {
+								"korean": "그게 희생을 강요하는 방식이라면!",
+								"english": "If it's a method that demands sacrifice!",
+								"japanese": "それが犠牲を強いるやり方だとしたら！",
+								"chinese": "如果那是一种强求牺牲的方式！",
+								"french": "Si c'est une méthode qui exige des sacrifices !",
+								"spanish": "¡Si esa es una forma de forzar el sacrificio!",
+								"vietnamese": "Nếu đó là cách thức ép buộc sự hy sinh!",
+								"thai": "ถ้ามันเป็นวิธีที่ต้องแลกมาด้วยการเสียสละล่ะก็!",
+								"hindi": "अगर यह बलिदान की मांग करने का तरीका है!"
+							},
+							"emotion": "angry",
+							"type": "speech",
+							"speaker": "character_1"
+						},
+						{
+							"emotion": "base",
+							"content": {
+								"korean": "희생? 그건 그저… 재분배일 뿐.",
+								"english": "Sacrifice? No, merely… redistribution.",
+								"japanese": "犠牲？それはただ…再分配に過ぎない。",
+								"chinese": "牺牲？那只是……再分配而已。",
+								"french": "Sacrifice ? Non, c'est juste… une redistribution.",
+								"spanish": "¿Sacrificio? No, es solo... una redistribución.",
+								"vietnamese": "Hy sinh? Không, đó chỉ là… tái phân phối mà thôi.",
+								"thai": "การเสียสละ? ไม่สิ... มันก็แค่การจัดสรรใหม่เท่านั้น",
+								"hindi": "बलिदान? नहीं, वह तो बस... पुनर्वितरण है।"
+							},
+							"speaker": "random_boss",
+							"type": "speech"
+						},
+						{
+							"content": {
+								"korean": "정체 모를 자의 그림자가 탐험대를 집어삼키려 했다.",
+								"english": "The shadow of an unknown entity sought to engulf the expedition.",
+								"japanese": "正体不明の影が、探検隊を飲み込もうとしていた。",
+								"chinese": "不明存在的阴影，试图吞噬探险队。",
+								"french": "L'ombre d'une entité inconnue tenta d'engloutir l'expédition.",
+								"spanish": "La sombra de una entidad desconocida intentó engullir a la expedición.",
+								"vietnamese": "Bóng tối của một thực thể vô danh định nuốt chửng đoàn thám hiểm.",
+								"thai": "เงาของบางสิ่งที่ไม่รู้จักพยายามกลืนกินคณะสำรวจ",
+								"hindi": "किसी अज्ञात सत्ता की परछाई ने अभियान दल को निगलने की कोशिश की।"
+							},
+							"emotion": "base",
+							"type": "speech",
+							"speaker": "narrator"
+						}
+					],
+					"lose_dialogue": [
+						{
+							"type": "speech",
+							"speaker": "random_boss",
+							"content": {
+								"korean": "어리석은 것들… 나의 '치유'는 멈추지 않는다.",
+								"english": "Fools… My 'healing' will not cease.",
+								"japanese": "愚かな者たちめ…私の「治癒」は止まらない。",
+								"chinese": "愚蠢之徒……我的“治愈”不会停止。",
+								"french": "Imbéciles… Ma ",
+								"spanish": "Necios… Mi ",
+								"vietnamese": "Những kẻ ngu ngốc… 'Chữa lành' của ta sẽ không ngừng lại.",
+								"thai": "พวกโง่เง่า… 'การรักษา' ของข้าไม่มีวันหยุด",
+								"hindi": "मूर्खों... मेरा 'उपचार' नहीं रुकेगा।"
+							},
+							"emotion": "base"
+						},
+						{
+							"content": {
+								"korean": "이대로… 끝낼 순 없어!",
+								"english": "I can't… end it like this!",
+								"japanese": "このまま…終わらせるわけにはいかない！",
+								"chinese": "不能……就这样结束！",
+								"french": "Je ne peux pas… en finir ainsi !",
+								"spanish": "¡No puedo… terminar así!",
+								"vietnamese": "Không thể… kết thúc như thế này!",
+								"thai": "จะจบลงแบบนี้… ไม่ได้เด็ดขาด!",
+								"hindi": "ऐसे... खत्म नहीं कर सकता!"
+							},
+							"emotion": "angry",
+							"type": "speech",
+							"speaker": "character_any"
+						},
+						{
+							"type": "speech",
+							"speaker": "narrator",
+							"content": {
+								"korean": "숲의 뒤틀린 생명력이 탐험대를 조롱하는 듯했다. 다시 일어서야만 한다.",
+								"english": "The forest's twisted vitality seemed to mock the expedition. They had to rise again.",
+								"japanese": "森のねじれた生命力が、探検隊を嘲笑うかのようだった。再び立ち上がらなければならない。",
+								"chinese": "森林扭曲的生命力，仿佛在嘲弄着探险队。必须再次站起来。",
+								"french": "La vitalité tordue de la forêt semblait se moquer de l'expédition. Ils devaient se relever.",
+								"spanish": "La vitalidad retorcida del bosque parecía burlarse de la expedición. Debían levantarse de nuevo.",
+								"vietnamese": "Sức sống méo mó của khu rừng dường như đang chế giễu đoàn thám hiểm. Họ phải đứng dậy một lần nữa.",
+								"thai": "พลังชีวิตอันบิดเบี้ยวของป่าราวกับกำลังเย้ยหยันคณะสำรวจ พวกเขาต้องลุกขึ้นยืนอีกครั้ง",
+								"hindi": "जंगल की मुड़ी हुई जीवनशक्ति अभियान दल का मज़ाक उड़ा रही थी। उन्हें फिर से उठना ही होगा।"
+							},
+							"emotion": "base"
+						}
+					],
+					"win_dialogue": [
+						{
+							"type": "speech",
+							"speaker": "random_boss",
+							"content": {
+								"korean": "크… 이런… 나의 치유가… 멈출 리 없어. 곧… 더 강하게…",
+								"english": "Ugh… This… My healing… It can't stop. Soon… stronger…",
+								"japanese": "く…こんな…私の治癒が…止まるはずがない。すぐ…もっと強く…",
+								"chinese": "咳……这种事……我的治愈……不可能停止。很快……会更强……",
+								"french": "Urgh… Ça… Ma guérison… Elle ne peut pas s'arrêter. Bientôt… plus forte…",
+								"spanish": "Uf… Esto… Mi curación… No puede detenerse. Pronto… más fuerte…",
+								"vietnamese": "Khụ… Cái này… Sự chữa lành của ta… Không thể dừng lại. Sắp… mạnh hơn…",
+								"thai": "อึก… ไม่นะ… การรักษาของข้า… ไม่มีทางหยุดได้หรอก. อีกไม่นาน… จะแข็งแกร่งขึ้น…",
+								"hindi": "उह... यह... मेरा उपचार... रुक नहीं सकता। जल्द ही... और मज़बूत..."
+							},
+							"emotion": "angry"
+						},
+						{
+							"type": "speech",
+							"speaker": "character_any",
+							"content": {
+								"korean": "아직 끝나지 않았어.",
+								"english": "It's not over yet.",
+								"japanese": "まだ終わっていない。",
+								"chinese": "还没结束。",
+								"french": "Ce n'est pas encore fini.",
+								"spanish": "Aún no ha terminado.",
+								"vietnamese": "Vẫn chưa kết thúc.",
+								"thai": "ยังไม่จบ",
+								"hindi": "अभी ख़त्म नहीं हुआ है।"
+							},
+							"emotion": "angry"
+						},
+						{
+							"speaker": "character_2",
+							"type": "speech",
+							"emotion": "sad",
+							"content": {
+								"korean": "이 숲의 진실은… 대체 어디까지 닿아있는 거야.",
+								"english": "The truth of this forest… Just how far does it reach?",
+								"japanese": "この森の真実…一体どこまで広がっているんだ。",
+								"chinese": "这片森林的真相……到底蔓延到何处？",
+								"french": "La vérité de cette forêt… Jusqu'où s'étend-elle ?",
+								"spanish": "La verdad de este bosque… ¿Hasta dónde llega?",
+								"vietnamese": "Sự thật của khu rừng này… Rốt cuộc đã lan đến đâu?",
+								"thai": "ความจริงของป่าแห่งนี้… มันซับซ้อนไปถึงไหนกันแน่",
+								"hindi": "इस जंगल का सच... आखिर कितनी दूर तक फैला है?"
+							}
+						},
+						{
+							"type": "speech",
+							"speaker": "narrator",
+							"content": {
+								"korean": "'영원한 치유'라는 이름 뒤에 감춰진 끔찍한 진실. 탐험대는 더 깊은 곳으로 향해야만 했다.",
+								"english": "The horrific truth hidden behind the name 'Eternal Healing'. The expedition had to venture deeper.",
+								"japanese": "「永遠の治癒」という名に隠された恐ろしい真実。探検隊はさらに奥へと進まなければならなかった。",
+								"chinese": "隐藏在“永恒治愈”之名背后的恐怖真相。探险队必须前往更深处。",
+								"french": "L'horrible vérité cachée derrière le nom ",
+								"spanish": "La horrible verdad oculta tras el nombre ",
+								"vietnamese": "Sự thật kinh hoàng ẩn giấu sau cái tên 'Chữa lành vĩnh cửu'. Đoàn thám hiểm buộc phải tiến sâu hơn.",
+								"thai": "ความจริงอันน่าสะพรึงกลัวที่ซ่อนอยู่เบื้องหลังชื่อ ",
+								"hindi": "'अनंत उपचार' के नाम के पीछे छिपा भयानक सच। अभियान दल को और गहराई में जाना पड़ा।"
+							},
+							"emotion": "base"
+						},
+						{
+							"type": "speech",
+							"speaker": "narrator",
+							"content": {
+								"korean": "숲은 다시 침묵했지만, 그 침묵은 새로운 질문을 품고 있었다.",
+								"english": "The forest fell silent again, but its silence held new questions.",
+								"japanese": "森は再び沈黙したが、その沈黙は新たな問いを宿していた。",
+								"chinese": "森林再次归于寂静，但这寂静中却蕴含着新的疑问。",
+								"french": "La forêt retomba dans le silence, mais ce silence portait de nouvelles questions.",
+								"spanish": "El bosque volvió a silenciarse, pero su silencio albergaba nuevas preguntas.",
+								"vietnamese": "Rừng lại chìm vào im lặng, nhưng sự im lặng ấy lại chứa đựng những câu hỏi mới.",
+								"thai": "ป่ากลับสู่ความเงียบงันอีกครั้ง แต่ความเงียบงันนั้นกลับเต็มไปด้วยคำถามใหม่",
+								"hindi": "जंगल फिर शांत हो गया, लेकिन उसकी चुप्पी में नए सवाल छिपे थे।"
+							},
+							"emotion": "base"
+						}
+					],
+					"id": 15
+				}
+			]
+		},
+		{
+			"scenario_id": "forest_luminamorta_22_03",
+			"order": 3,
+			"act": "rising",
+			"theme": "forest",
+			"actors": {
+				"glen": {
+					"id": "mon_42dfd4f2-9564-4b4b-beed-993d578ebd5a",
+					"name": {
+						"korean": "글렌",
+						"english": "Glen",
+						"japanese": "グレン",
+						"chinese": "格伦",
+						"french": "Glen",
+						"spanish": "Glen",
+						"vietnamese": "Glen",
+						"thai": "เกล็น",
+						"hindi": "ग्लेन"
+					},
+					"description": "",
+					"face_image_url": "https://imagedelivery.net/WTEqQNGFb-l-IHS6IGnzUQ/6aa9eb0c-364f-4bfb-fa3f-52711da6a600/public",
+					"battle_sprite_url": "https://imagedelivery.net/WTEqQNGFb-l-IHS6IGnzUQ/2dbb8c2d-a999-4154-3a88-7c5cc5ca2200/public"
+				}
+			},
+			"boss": {
+				"pool_id": "random_boss"
+			},
+			"prologue": {
+				"korean": [
+					"숲은 속삭였다. 과거의 비명을, 잊힌 진실을.",
+					"은둔자 글렌은 들었다. 허나 진실을 외면했다.",
+					"탐험대가 다가올수록, 숲은 더욱 미쳐갔다.",
+					"과연 치유인가, 광기인가."
+				],
+				"english": [
+					"The forest whispered. Screams of the past, forgotten truths.",
+					"Glen the Hermit listened. Yet, he turned away from the truth.",
+					"As the expedition drew near, the forest grew wilder.",
+					"Is it healing, or madness?"
+				],
+				"japanese": [
+					"森は囁いた。過去の叫び、忘れられた真実を。",
+					"隠者グレンは聞いた。しかし、真実から目を背けた。",
+					"探検隊が近づくにつれ、森はさらに狂気を帯びていった。",
+					"果たして、癒しか、狂気か。"
+				],
+				"chinese": [
+					"森林低语。过去的尖叫，被遗忘的真相。",
+					"隐士格伦听见了。然而，他却对真相视而不见。",
+					"探险队越是靠近，森林就越是疯狂。",
+					"究竟是治愈，还是疯狂？"
+				],
+				"french": [
+					"La forêt murmurait. Des cris du passé, des vérités oubliées.",
+					"Glen l'ermite écouta. Pourtant, il se détourna de la vérité.",
+					"À mesure que l'expédition approchait, la forêt devenait plus folle.",
+					"Est-ce la guérison, ou la folie ?"
+				],
+				"spanish": [
+					"El bosque susurró. Gritos del pasado, verdades olvidadas.",
+					"Glen el ermitaño escuchó. Sin embargo, ignoró la verdad.",
+					"Cuanto más se acercaba la expedición, más enloquecía el bosque.",
+					"¿Es curación, o locura?"
+				],
+				"vietnamese": [
+					"Rừng thì thầm. Tiếng hét của quá khứ, những sự thật bị lãng quên.",
+					"Glen ẩn sĩ đã lắng nghe. Nhưng anh ta đã quay lưng lại với sự thật.",
+					"Đoàn thám hiểm càng đến gần, khu rừng càng trở nên điên dại.",
+					"Liệu đây là sự chữa lành, hay sự điên rồ?"
+				],
+				"thai": [
+					"ป่ากระซิบ เสียงกรีดร้องจากอดีต ความจริงที่ถูกลืมเลือน",
+					"เกล็นฤๅษีได้ยิน แต่เขากลับเมินเฉยต่อความจริง",
+					"ยิ่งคณะสำรวจเข้ามาใกล้ ป่ายิ่งบ้าคลั่งขึ้น",
+					"แท้จริงแล้วนี่คือการเยียวยา หรือความบ้าคลั่งกันแน่"
+				],
+				"hindi": [
+					"वन फुसफुसाया। अतीत की चीखें, भूले हुए सत्य।",
+					"एकांतवासी ग्लेन ने सुना। फिर भी, उसने सत्य से मुँह मोड़ लिया।",
+					"जैसे-जैसे अभियान दल करीब आता गया, जंगल और भी हिंसक होता गया।",
+					"क्या यह उपचार है, या पागलपन?"
+				]
+			},
+			"rooms": [
+				{
+					"dialogue": [
+						{
+							"type": "speech",
+							"emotion": "base",
+							"speaker": "narrator",
+							"content": {
+								"korean": "숲 깊은 곳. 이끼 낀 동굴이 나타났다.",
+								"english": "Deep within the forest. An mossy cave appeared.",
+								"japanese": "森の奥深く。苔むした洞窟が現れた。",
+								"chinese": "森林深处。一个长满青苔的洞穴出现了。",
+								"french": "Au plus profond de la forêt. Une grotte moussue apparut.",
+								"spanish": "En lo profundo del bosque. Una cueva musgosa apareció.",
+								"vietnamese": "Sâu trong rừng. Một hang động đầy rêu hiện ra.",
+								"thai": "ลึกเข้าไปในป่า ถ้ำตะไคร่น้ำปรากฏขึ้น",
+								"hindi": "जंगल के गहरे भीतर। एक काई लगी गुफा दिखाई दी।"
+							}
+						},
+						{
+							"emotion": "base",
+							"type": "speech",
+							"content": {
+								"korean": "저기 누가 있어.",
+								"english": "Someone's there.",
+								"japanese": "誰かいる。",
+								"chinese": "那里有人。",
+								"french": "Il y a quelqu'un là-bas.",
+								"spanish": "Hay alguien ahí.",
+								"vietnamese": "Có ai đó ở đó.",
+								"thai": "มีใครอยู่ตรงนั้น",
+								"hindi": "वहाँ कोई है।"
+							},
+							"speaker": "character_any"
+						},
+						{
+							"speaker": "glen",
+							"type": "direction",
+							"spot": [
+								4,
+								3
+							],
+							"duration_ms": 500,
+							"action": "enter"
+						},
+						{
+							"emotion": "happy",
+							"type": "speech",
+							"content": {
+								"korean": "어서 와! 길 잃은 건 아니지? 여긴 조용하고… 평화로운 곳이야.",
+								"english": "Welcome! You're not lost, are you? This place is quiet... and peaceful.",
+								"japanese": "ようこそ！道に迷ったわけじゃないよね？ここは静かで…平和な場所だよ。",
+								"chinese": "欢迎！你没迷路吧？这里很安静……也很平和。",
+								"french": "Bienvenue ! Tu n'es pas perdu, n'est-ce pas ? Cet endroit est calme... et paisible.",
+								"spanish": "¡Bienvenido! No te has perdido, ¿verdad? Este lugar es tranquilo... y pacífico.",
+								"vietnamese": "Chào mừng! Bạn không bị lạc đường chứ? Nơi đây yên tĩnh... và bình yên.",
+								"thai": "ยินดีต้อนรับ! ไม่ได้หลงทางใช่ไหม? ที่นี่เงียบสงบ...และสันติ",
+								"hindi": "स्वागत है! तुम खोए हुए तो नहीं हो? यह जगह शांत... और शांतिपूर्ण है।"
+							},
+							"speaker": "glen"
+						},
+						{
+							"type": "speech",
+							"emotion": "base",
+							"speaker": "character_any",
+							"content": {
+								"korean": "당신은 누구시죠?",
+								"english": "Who are you?",
+								"japanese": "あなたは誰ですか？",
+								"chinese": "你是谁？",
+								"french": "Qui êtes-vous ?",
+								"spanish": "¿Quién eres?",
+								"vietnamese": "Bạn là ai?",
+								"thai": "คุณคือใคร",
+								"hindi": "आप कौन हैं?"
+							}
+						},
+						{
+							"type": "speech",
+							"emotion": "base",
+							"speaker": "glen",
+							"content": {
+								"korean": "난 글렌. 그저 숲을 좋아하는 사람. 아무 일도 없어. 아무것도.",
+								"english": "I'm Glen. Just someone who likes the forest. Nothing's happening. Nothing at all.",
+								"japanese": "私はグレン。ただ森が好きな者だ。何も起こっていない。何もね。",
+								"chinese": "我是格伦。只是一个喜欢森林的人。什么都没有发生。什么都没有。",
+								"french": "Je suis Glen. Juste quelqu'un qui aime la forêt. Il ne se passe rien. Rien du tout.",
+								"spanish": "Soy Glen. Solo alguien a quien le gusta el bosque. No pasa nada. Absolutamente nada.",
+								"vietnamese": "Tôi là Glen. Chỉ là một người yêu rừng thôi. Không có gì xảy ra cả. Không có gì hết.",
+								"thai": "ฉันคือเกล็น แค่คนชอบป่า ไม่มีอะไรเกิดขึ้น ไม่มีอะไรเลย",
+								"hindi": "मैं ग्लेन हूँ। बस एक ऐसा व्यक्ति जिसे जंगल पसंद है। कुछ नहीं हो रहा है। बिल्कुल कुछ नहीं।"
+							}
+						}
+					],
+					"id": 1
+				},
+				{
+					"id": 3,
+					"dialogue": [
+						{
+							"action": "enter",
+							"spot": [
+								4,
+								3
+							],
+							"type": "direction",
+							"duration_ms": 500,
+							"speaker": "glen"
+						},
+						{
+							"emotion": "base",
+							"type": "speech",
+							"content": {
+								"korean": "뭘 그렇게 뚫어져라 봐? 그냥… 이끼일 뿐인데.",
+								"english": "What are you staring at? It's just... moss.",
+								"japanese": "何をそんなにじっと見てるんだ？ただの…苔じゃないか。",
+								"chinese": "你在盯着看什么？那只是……苔藓而已。",
+								"french": "Qu'est-ce que tu regardes fixement comme ça ? C'est juste... de la mousse.",
+								"spanish": "¿Qué miras con tanto detenimiento? Es solo... musgo.",
+								"vietnamese": "Sao bạn cứ nhìn chằm chằm thế? Chỉ là... rêu thôi mà.",
+								"thai": "จ้องอะไรขนาดนั้น? แค่... ตะไคร่น้ำเอง",
+								"hindi": "तुम क्या घूर रहे हो? यह बस... काई है।"
+							},
+							"speaker": "glen"
+						},
+						{
+							"speaker": "character_any",
+							"content": {
+								"korean": "이끼가… 속삭이는 것 같아요. '굶주림'이라고…",
+								"english": "The moss… it seems to whisper. 'Hunger'…",
+								"japanese": "苔が…囁いているようです。「飢え」と…",
+								"chinese": "苔藓…好像在低语。“饥饿”…",
+								"french": "La mousse… on dirait qu'elle murmure. \"Faim\"…",
+								"spanish": "El musgo… parece susurrar. \"Hambre\"…",
+								"vietnamese": "Rêu… hình như đang thì thầm. \"Đói\"…",
+								"thai": "มอส…เหมือนจะกระซิบ \"ความหิวโหย\"…",
+								"hindi": "काई... फुसफुसा रही है। 'भूख'..."
+							},
+							"type": "speech",
+							"emotion": "sad"
+						},
+						{
+							"speaker": "glen",
+							"content": {
+								"korean": "무슨 소리야! 조용해! 숲은 그저 조용할 뿐이야! 평화롭다고!",
+								"english": "What nonsense! Quiet! The forest is just quiet! Peaceful!",
+								"japanese": "なんだって！静かに！森はただ静かなだけだ！平和なんだ！",
+								"chinese": "胡说八道！安静！森林只是安静！是和平的！",
+								"french": "N'importe quoi ! Silence ! La forêt est juste calme ! Paisible !",
+								"spanish": "¡Qué tonterías! ¡Silencio! ¡El bosque solo está en silencio! ¡Es pacífico!",
+								"vietnamese": "Cái gì vậy! Im đi! Rừng chỉ yên tĩnh thôi! Bình yên mà!",
+								"thai": "เพ้อเจ้ออะไร! เงียบนะ! ป่ามันแค่เงียบ! สันติสุขต่างหาก!",
+								"hindi": "क्या बकवास है! चुप रहो! जंगल बस शांत है! शांतिपूर्ण है!"
+							},
+							"type": "speech",
+							"emotion": "angry"
+						},
+						{
+							"content": {
+								"korean": "글렌 씨, 괜찮으세요?",
+								"english": "Mr. Glenn, are you alright?",
+								"japanese": "グレンさん、大丈夫ですか？",
+								"chinese": "格伦先生，您还好吗？",
+								"french": "Monsieur Glenn, vous allez bien ?",
+								"spanish": "¿Señor Glenn, se encuentra bien?",
+								"vietnamese": "Anh Glenn, anh không sao chứ?",
+								"thai": "คุณเกล็น ไม่เป็นอะไรใช่ไหมครับ?",
+								"hindi": "मिस्टर ग्लेन, क्या आप ठीक हैं?"
+							},
+							"speaker": "character_any",
+							"emotion": "base",
+							"type": "speech"
+						},
+						{
+							"emotion": "angry",
+							"type": "speech",
+							"content": {
+								"korean": "난 아주 괜찮아! 너희가 이상한 거야! 숲은 아름다워!",
+								"english": "I'm perfectly fine! You're the strange ones! The forest is beautiful!",
+								"japanese": "私は全く問題ない！お前たちが変なんだ！森は美しい！",
+								"chinese": "我很好！是你们奇怪！森林很美！",
+								"french": "Je vais très bien ! Ce sont vous qui êtes étranges ! La forêt est magnifique !",
+								"spanish": "¡Estoy perfectamente bien! ¡Ustedes son los extraños! ¡El bosque es hermoso!",
+								"vietnamese": "Tôi hoàn toàn ổn! Các người mới là những kẻ kỳ lạ! Rừng đẹp mà!",
+								"thai": "ฉันสบายดี! พวกเธอต่างหากที่แปลก! ป่ามันสวยงาม!",
+								"hindi": "मैं बिल्कुल ठीक हूँ! तुम सब अजीब हो! जंगल सुंदर है!"
+							},
+							"speaker": "glen"
+						}
+					]
+				},
+				{
+					"dialogue": [
+						{
+							"type": "speech",
+							"emotion": "base",
+							"speaker": "narrator",
+							"content": {
+								"korean": "숲의 속삭임이 점차 선명해졌다.",
+								"english": "The forest's whispers grew clearer.",
+								"japanese": "森の囁きが次第に鮮明になった。",
+								"chinese": "森林的低语逐渐清晰起来。",
+								"french": "Les murmures de la forêt devinrent plus clairs.",
+								"spanish": "Los susurros del bosque se hicieron más claros.",
+								"vietnamese": "Tiếng thì thầm của rừng dần trở nên rõ ràng hơn.",
+								"thai": "เสียงกระซิบของป่าชัดเจนขึ้นเรื่อยๆ",
+								"hindi": "जंगल की फुसफुसाहटें और स्पष्ट होती गईं।"
+							}
+						},
+						{
+							"type": "direction",
+							"spot": [
+								4,
+								3
+							],
+							"duration_ms": 500,
+							"action": "enter",
+							"speaker": "glen"
+						},
+						{
+							"speaker": "glen",
+							"content": {
+								"korean": "쉿! 저것 봐. 숲이 노래하고 있어. '영원한 평화'라고!",
+								"english": "Shhh! Look! The forest is singing. 'Eternal Peace'!",
+								"japanese": "シッ！あれを見ろ。森が歌っている。「永遠の平和」と！",
+								"chinese": "嘘！看！森林在歌唱。“永恒的和平”！",
+								"french": "Chut ! Regardez ! La forêt chante. \"Paix Éternelle\" !",
+								"spanish": "¡Shhh! ¡Mira! El bosque está cantando. \"Paz Eterna\"!",
+								"vietnamese": "Suỵt! Nhìn kìa. Rừng đang hát. 'Bình yên vĩnh cửu'!",
+								"thai": "ชู่ว! ดูสิ ป่ากำลังร้องเพลง 'สันติภาพนิรันดร์'!",
+								"hindi": "शश! देखो! जंगल गा रहा है। 'अनंत शांति'!"
+							},
+							"type": "speech",
+							"emotion": "happy"
+						},
+						{
+							"speaker": "character_any",
+							"content": {
+								"korean": "노래? 저는 '굶주림'이라고 들리는 것 같은데요…",
+								"english": "Singing? I think I hear 'Hunger'…",
+								"japanese": "歌？私は「飢え」と聞こえるようなのですが…",
+								"chinese": "唱歌？我好像听到了“饥饿”…",
+								"french": "Chanter ? Il me semble entendre \"Faim\"…",
+								"spanish": "¿Cantar? Me parece que escucho \"Hambre\"…",
+								"vietnamese": "Hát? Tôi nghe như là 'Đói' thì phải…",
+								"thai": "ร้องเพลงเหรอครับ? ผมได้ยินเป็น 'ความหิวโหย'…",
+								"hindi": "गाना? मुझे तो 'भूख' सुनाई दे रही है..."
+							},
+							"type": "speech",
+							"emotion": "sad"
+						},
+						{
+							"type": "speech",
+							"emotion": "angry",
+							"speaker": "glen",
+							"content": {
+								"korean": "아니야! 숲은 평화로워! 배고픈 건 너희들이야! 진실을 모르는 너희들!",
+								"english": "No! The forest is peaceful! You're the hungry ones! You who don't know the truth!",
+								"japanese": "違う！森は平和だ！お前たちが腹を空かせているんだ！真実を知らないお前たちが！",
+								"chinese": "不！森林是和平的！是你们饿了！你们这些不知道真相的人！",
+								"french": "Non ! La forêt est paisible ! Ce sont vous les affamés ! Vous qui ignorez la vérité !",
+								"spanish": "¡No! ¡El bosque es pacífico! ¡Ustedes son los hambrientos! ¡Ustedes que no conocen la verdad!",
+								"vietnamese": "Không! Rừng bình yên mà! Các người mới là những kẻ đói khát! Các người không biết sự thật!",
+								"thai": "ไม่จริง! ป่าสงบสุข! พวกเธอต่างหากที่หิว! พวกเธอที่ไม่รู้ความจริง!",
+								"hindi": "नहीं! जंगल शांतिपूर्ण है! तुम सब भूखे हो! तुम, जो सच नहीं जानते!"
+							}
+						},
+						{
+							"content": {
+								"korean": "그 진실이 뭔데요?",
+								"english": "What is that truth?",
+								"japanese": "その真実って何ですか？",
+								"chinese": "那真相是什么？",
+								"french": "Quelle est cette vérité ?",
+								"spanish": "¿Cuál es esa verdad?",
+								"vietnamese": "Sự thật đó là gì?",
+								"thai": "ความจริงนั้นคืออะไรครับ?",
+								"hindi": "वह सच क्या है?"
+							},
+							"speaker": "character_any",
+							"emotion": "base",
+							"type": "speech"
+						},
+						{
+							"type": "speech",
+							"emotion": "sad",
+							"speaker": "glen",
+							"content": {
+								"korean": "아무것도 없어! 제발! 그냥 지나가!",
+								"english": "There's nothing! Please! Just pass by!",
+								"japanese": "何もない！頼む！ただ通り過ぎてくれ！",
+								"chinese": "什么都没有！求你了！走开！",
+								"french": "Il n'y a rien ! S'il vous plaît ! Passez juste votre chemin !",
+								"spanish": "¡No hay nada! ¡Por favor! ¡Solo sigan!",
+								"vietnamese": "Không có gì cả! Làm ơn! Cứ đi đi!",
+								"thai": "ไม่มีอะไร! ได้โปรด! แค่เดินผ่านไป!",
+								"hindi": "कुछ नहीं है! कृपया! बस आगे बढ़ो!"
+							}
+						}
+					],
+					"id": 5
+				},
+				{
+					"id": 9,
+					"dialogue": [
+						{
+							"speaker": "glen",
+							"action": "enter",
+							"duration_ms": 500,
+							"spot": [
+								4,
+								3
+							],
+							"type": "direction"
+						},
+						{
+							"content": {
+								"korean": "더 이상 가면 안 돼! 멈춰!",
+								"english": "Don't go any further! Stop!",
+								"japanese": "これ以上はダメだ！止まれ！",
+								"chinese": "不许再往前了！停下！",
+								"french": "N'avancez plus ! Arrêtez !",
+								"spanish": "¡No vayas más lejos! ¡Detente!",
+								"vietnamese": "Đừng đi nữa! Dừng lại!",
+								"thai": "ไปต่อไม่ได้แล้ว! หยุดเดี๋ยวนี้!",
+								"hindi": "और आगे मत जाओ! रुको!"
+							},
+							"speaker": "glen",
+							"emotion": "angry",
+							"type": "speech"
+						},
+						{
+							"content": {
+								"korean": "왜요? 뭘 숨기시는 거죠?",
+								"english": "Why? What are you hiding?",
+								"japanese": "なぜですか？何を隠しているんですか？",
+								"chinese": "为什么？你们在隐瞒什么？",
+								"french": "Pourquoi ? Que cachez-vous ?",
+								"spanish": "¿Por qué? ¿Qué están escondiendo?",
+								"vietnamese": "Tại sao? Anh đang giấu cái gì?",
+								"thai": "ทำไมคะ/ครับ? คุณกำลังซ่อนอะไรอยู่?",
+								"hindi": "क्यों? क्या छिपा रहे हो?"
+							},
+							"speaker": "character_any",
+							"emotion": "base",
+							"type": "speech"
+						},
+						{
+							"type": "speech",
+							"emotion": "sad",
+							"speaker": "glen",
+							"content": {
+								"korean": "보면 안 돼! 진실은… 추악해! 저 괴물에게 먹히고 싶지 않으면!",
+								"english": "Don't look! The truth is... hideous! Unless you want to be devoured by that monster!",
+								"japanese": "見てはダメだ！真実は…醜悪だ！あの怪物に食われたくなかったら！",
+								"chinese": "不许看！真相是…丑恶的！除非你想被那个怪物吞噬！",
+								"french": "Ne regardez pas ! La vérité est... horrible ! À moins que vous ne vouliez être dévoré par ce monstre !",
+								"spanish": "¡No mires! La verdad es... horrible. ¡A menos que quieras ser devorado por ese monstruo!",
+								"vietnamese": "Đừng nhìn! Sự thật... thật ghê tởm! Trừ khi ngươi muốn bị con quái vật đó nuốt chửng!",
+								"thai": "ห้ามมอง! ความจริงมัน... น่าเกลียดน่ากลัว! ถ้าไม่อยากถูกเจ้าสัตว์ประหลาดนั่นกินล่ะก็!",
+								"hindi": "देखो मत! सच... घिनौना है! अगर उस राक्षस का निवाला नहीं बनना चाहते तो!"
+							}
+						},
+						{
+							"speaker": "character_any",
+							"content": {
+								"korean": "괴물? 누구 말하는 거예요?",
+								"english": "Monster? Who are you talking about?",
+								"japanese": "怪物？誰のことですか？",
+								"chinese": "怪物？你说的是谁？",
+								"french": "Monstre ? De qui parlez-vous ?",
+								"spanish": "¿Monstruo? ¿De quién estás hablando?",
+								"vietnamese": "Quái vật? Anh đang nói về ai?",
+								"thai": "สัตว์ประหลาด? คุณกำลังพูดถึงใคร?",
+								"hindi": "राक्षस? किसकी बात कर रहे हो?"
+							},
+							"type": "speech",
+							"emotion": "base"
+						},
+						{
+							"speaker": "narrator",
+							"content": {
+								"korean": "이끼와 나무들이 낮게 속삭였다. '먹어치워. 그래야 평화로워져.'",
+								"english": "The moss and trees whispered softly, 'Devour it. Only then will there be peace.'",
+								"japanese": "苔と木々が低く囁いた。『食らい尽くせ。そうすれば平和になる。』",
+								"chinese": "苔藓和树木低声细语道：“吞噬它。那样才能获得平静。”",
+								"french": "La mousse et les arbres chuchotèrent doucement : « Dévore-le. Alors seulement il y aura la paix. »",
+								"spanish": "El musgo y los árboles susurraron suavemente: 'Devóralo. Solo así habrá paz.'",
+								"vietnamese": "Rêu và cây cối thì thầm khẽ: 'Hãy nuốt chửng nó. Chỉ khi đó mới có hòa bình.'",
+								"thai": "ตะไคร่น้ำและต้นไม้กระซิบแผ่วเบาว่า 'กินมันซะ แล้วจะมีสันติสุข'",
+								"hindi": "काई और पेड़ों ने धीमे से फुसफुसाया, 'खा जाओ। तभी शांति मिलेगी।'"
+							},
+							"type": "speech",
+							"emotion": "base"
+						},
+						{
+							"type": "speech",
+							"emotion": "angry",
+							"speaker": "glen",
+							"content": {
+								"korean": "거짓말! 전부 거짓말이야!",
+								"english": "Lies! It's all lies!",
+								"japanese": "嘘だ！全部嘘だ！",
+								"chinese": "谎言！全是谎言！",
+								"french": "Mensonges ! Tout n'est que mensonge !",
+								"spanish": "¡Mentiras! ¡Todo es mentira!",
+								"vietnamese": "Dối trá! Tất cả đều là dối trá!",
+								"thai": "โกหก! ทั้งหมดเป็นเรื่องโกหก!",
+								"hindi": "झूठ! सब झूठ है!"
+							}
+						}
+					]
+				},
+				{
+					"lose_dialogue": [
+						{
+							"emotion": "base",
+							"type": "speech",
+							"content": {
+								"korean": "훗… 너희의 분노로는… 나를 막을 수 없어.",
+								"english": "Hmph... Your anger... cannot stop me.",
+								"japanese": "「ふっ…お前たちの怒りでは…私を止められぬ。」",
+								"chinese": "“哼…你们的愤怒…阻止不了我。”",
+								"french": "« Hmph... Votre colère... ne peut pas m'arrêter. »",
+								"spanish": "« Hmph... Vuestra ira... no puede detenerme. »",
+								"vietnamese": "“Hừm... Cơn giận của các ngươi... không thể ngăn cản ta.”",
+								"thai": "“ฮึ่ม... ความโกรธของพวกแก... หยุดฉันไม่ได้หรอก.”",
+								"hindi": "“हम्म... तुम्हारा गुस्सा... मुझे रोक नहीं सकता।”"
+							},
+							"speaker": "random_boss"
+						},
+						{
+							"speaker": "character_any",
+							"content": {
+								"korean": "…다시 일어설 거야.",
+								"english": "...I will rise again.",
+								"japanese": "「…また立ち上がるさ。」",
+								"chinese": "“…我会再次站起来的。”",
+								"french": "« ...Je me relèverai. »",
+								"spanish": "« ...Volveré a levantarme. »",
+								"vietnamese": "“...Ta sẽ đứng dậy lần nữa.”",
+								"thai": "“...ฉันจะลุกขึ้นอีกครั้ง.”",
+								"hindi": "“...मैं फिर से उठूंगा।”"
+							},
+							"type": "speech",
+							"emotion": "angry"
+						},
+						{
+							"content": {
+								"korean": "굶주림은… 계속될 뿐. 영원히…",
+								"english": "The hunger... will only continue. Forever...",
+								"japanese": "「飢えは…ただ続くだけ。永遠に…」",
+								"chinese": "“饥饿…只会继续下去。永远…”",
+								"french": "« La faim... ne fera que continuer. Éternellement... »",
+								"spanish": "« El hambre... solo continuará. Para siempre... »",
+								"vietnamese": "“Cơn đói... sẽ chỉ tiếp diễn. Vĩnh viễn...”",
+								"thai": "“ความหิวโหย... จะดำเนินต่อไปเท่านั้น. ชั่วนิรันดร์...”",
+								"hindi": "“भूख... बस जारी रहेगी। हमेशा के लिए...”"
+							},
+							"speaker": "random_boss",
+							"emotion": "base",
+							"type": "speech"
+						}
+					],
+					"id": 15,
+					"dialogue": [
+						{
+							"speaker": "glen",
+							"action": "enter",
+							"duration_ms": 500,
+							"type": "direction",
+							"spot": [
+								4,
+								3
+							]
+						},
+						{
+							"emotion": "sad",
+							"type": "speech",
+							"content": {
+								"korean": "제발 돌아가! 저 괴물을 만나면… 모든 게 끝장이야!",
+								"english": "Please go back! If you meet that monster... everything will be over!",
+								"japanese": "お願いだから帰って！あの怪物を 만나たら…全てがおしまいだ！",
+								"chinese": "求你回去！如果遇到那个怪物…一切就都完了！",
+								"french": "S'il vous plaît, retournez ! Si vous rencontrez ce monstre... tout sera fini !",
+								"spanish": "¡Por favor, regresa! Si encuentras a ese monstruo... ¡todo se acabará!",
+								"vietnamese": "Làm ơn quay lại! Nếu ngươi gặp con quái vật đó... mọi thứ sẽ kết thúc!",
+								"thai": "ได้โปรดกลับไปเถอะ! ถ้าได้เจอสัตว์ประหลาดนั่น... ทุกอย่างจะจบสิ้น!",
+								"hindi": "कृपया वापस जाओ! अगर तुम उस राक्षस से मिले... तो सब खत्म हो जाएगा!"
+							},
+							"speaker": "glen"
+						},
+						{
+							"speaker": "random_boss",
+							"content": {
+								"korean": "…이제 왔군. 새로운 양분인가.",
+								"english": "...You're here. New sustenance, is it?",
+								"japanese": "…ついに来たか。新たな養分か。",
+								"chinese": "…你终于来了。是新的养分吗？",
+								"french": "...Vous êtes là. Une nouvelle subsistance, n'est-ce pas ?",
+								"spanish": "...Ya estás aquí. ¿Nuevo sustento?",
+								"vietnamese": "...Ngươi đến rồi sao. Là chất dinh dưỡng mới à.",
+								"thai": "...มาถึงแล้วสินะ. สารอาหารใหม่หรือ.",
+								"hindi": "...तुम आ गए। नया पोषण है क्या।"
+							},
+							"type": "speech",
+							"emotion": "base"
+						},
+						{
+							"type": "speech",
+							"emotion": "angry",
+							"speaker": "character_any",
+							"content": {
+								"korean": "네가 이 숲을 병들게 하는 근원이구나.",
+								"english": "You are the source of this forest's sickness.",
+								"japanese": "お前がこの森を病ませる根源なのだな。",
+								"chinese": "你就是让这片森林生病的根源。",
+								"french": "Tu es la source de la maladie de cette forêt.",
+								"spanish": "Eres la fuente de la enfermedad de este bosque.",
+								"vietnamese": "Ngươi là nguồn gốc khiến khu rừng này bệnh hoạn.",
+								"thai": "แกคือต้นเหตุที่ทำให้ป่านี้ป่วยไข้",
+								"hindi": "तुम ही इस जंगल की बीमारी का कारण हो।"
+							}
+						},
+						{
+							"emotion": "base",
+							"type": "speech",
+							"content": {
+								"korean": "병? 아니다. 이것이 '영원한 평화'다. 너희도 곧 알게 될 것이다. 굶주림은 끝난다.",
+								"english": "Sickness? No. This is 'eternal peace'. You too will soon understand. Hunger ends.",
+								"japanese": "病？違う。これが『永遠の平和』だ。お前たちもすぐに分かるだろう。飢えは終わる。",
+								"chinese": "病？不。这就是‘永恒的和平’。你们很快就会明白。饥饿将终结。",
+								"french": "Maladie ? Non. C'est la 'paix éternelle'. Vous aussi comprendrez bientôt. La faim prendra fin.",
+								"spanish": "¿Enfermedad? No. Esto es la 'paz eterna'. Vosotros también lo entenderéis pronto. El hambre termina.",
+								"vietnamese": "Bệnh ư? Không. Đây là 'hòa bình vĩnh cửu'. Các ngươi cũng sẽ sớm hiểu thôi. Nạn đói sẽ kết thúc.",
+								"thai": "โรคภัย? ไม่ใช่. นี่คือ 'สันติสุขนิรันดร์'. พวกเจ้าก็จะเข้าใจในไม่ช้า. ความหิวโหยจะสิ้นสุดลง.",
+								"hindi": "बीमारी? नहीं। यह 'शाश्वत शांति' है। तुम भी जल्द समझ जाओगे। भूख खत्म होती है।"
+							},
+							"speaker": "random_boss"
+						},
+						{
+							"type": "speech",
+							"emotion": "angry",
+							"speaker": "glen",
+							"content": {
+								"korean": "아니야! 거짓말!",
+								"english": "No! A lie!",
+								"japanese": "「違う！嘘だ！」",
+								"chinese": "“不！骗人的！”",
+								"french": "« Non ! C'est un mensonge ! »",
+								"spanish": "« ¡No! ¡Es una mentira! »",
+								"vietnamese": "“Không! Lời nói dối!”",
+								"thai": "“ไม่จริง! โกหก!”",
+								"hindi": "“नहीं! झूठ!”"
+							}
+						}
+					],
+					"win_dialogue": [
+						{
+							"type": "speech",
+							"emotion": "sad",
+							"speaker": "random_boss",
+							"content": {
+								"korean": "크윽… 겨우 이 정도…로는… 끝나지 않아… 진정한 '치유'는…",
+								"english": "Ugh... This won't... end it... True 'healing' is...",
+								"japanese": "「くっ…これしき…では…終わらぬ…真の『癒やし』は…」",
+								"chinese": "“呃…就凭这些…还…远远不够…真正的‘治愈’是…”",
+								"french": "« Argh... Ce n'est pas... la fin... La vraie 'guérison', c'est... »",
+								"spanish": "« Ugh... Esto... no lo terminará... La verdadera 'sanación' es... »",
+								"vietnamese": "“Khụ... Chỉ thế này... vẫn chưa... kết thúc được đâu... 'Chữa lành' thực sự là...”",
+								"thai": "“อึก... แค่นี้... ไม่... จบหรอก... 'การเยียวยา' ที่แท้จริงคือ...”",
+								"hindi": "“उफ़... बस इतना ही... इससे... खत्म नहीं होगा... असली 'उपचार' तो...”"
+							}
+						},
+						{
+							"content": {
+								"korean": "이게 끝이야. 네 뒤틀린 치유는.",
+								"english": "This is the end. Of your twisted healing.",
+								"japanese": "「これで終わりだ。お前の歪んだ癒やしは。」",
+								"chinese": "“到此为止了。你那扭曲的治愈。”",
+								"french": "« C'est la fin. De ta guérison tordue. »",
+								"spanish": "« Este es el fin. De tu retorcida sanación. »",
+								"vietnamese": "“Đây là kết thúc. Cho sự chữa lành méo mó của ngươi.”",
+								"thai": "“นี่คือจุดจบ. ของการเยียวยาที่บิดเบี้ยวของแก.”",
+								"hindi": "“यह अंत है। तुम्हारी विकृत चिकित्सा का।”"
+							},
+							"speaker": "character_any",
+							"emotion": "angry",
+							"type": "speech"
+						},
+						{
+							"type": "speech",
+							"emotion": "base",
+							"speaker": "narrator",
+							"content": {
+								"korean": "거대한 그림자가 사라지자, 숲은 잠시 침묵했다.",
+								"english": "As the giant shadow vanished, the forest fell silent for a moment.",
+								"japanese": "「巨大な影が消え去ると、森はしばし沈黙した。」",
+								"chinese": "“随着巨大的黑影消失，森林暂时陷入了沉寂。”",
+								"french": "« Alors que l'ombre géante disparaissait, la forêt se tut un instant. »",
+								"spanish": "« Al desaparecer la sombra gigante, el bosque quedó en silencio por un momento. »",
+								"vietnamese": "“Khi bóng đen khổng lồ biến mất, khu rừng chìm vào im lặng trong chốc lát.”",
+								"thai": "“เมื่อเงาขนาดมหึมาหายไป ป่าก็เงียบสงัดชั่วขณะ.”",
+								"hindi": "“जैसे ही विशाल छाया गायब हुई, जंगल एक पल के लिए शांत हो गया।”"
+							}
+						},
+						{
+							"speaker": "character_any",
+							"content": {
+								"korean": "아직… 끝나지 않은 것 같아.",
+								"english": "It seems... it's not over yet.",
+								"japanese": "「まだ…終わっていないようだ。」",
+								"chinese": "“看来…还没有结束。”",
+								"french": "« Il semble... que ce ne soit pas encore fini. »",
+								"spanish": "« Parece... que aún no ha terminado. »",
+								"vietnamese": "“Có vẻ như... vẫn chưa kết thúc.”",
+								"thai": "“ดูเหมือนว่า... ยังไม่จบ.”",
+								"hindi": "“लगता है... यह अभी खत्म नहीं हुआ है।”"
+							},
+							"type": "speech",
+							"emotion": "sad"
+						},
+						{
+							"type": "speech",
+							"emotion": "base",
+							"speaker": "narrator",
+							"content": {
+								"korean": "숲의 비명은 멈췄지만, 과거의 속삭임은 여전히 남아 있었다.",
+								"english": "The forest's screams ceased, but the whispers of the past still lingered.",
+								"japanese": "「森の悲鳴は止んだが、過去の囁きはまだ残っていた。」",
+								"chinese": "“森林的尖叫停止了，但过去的低语依然存在。”",
+								"french": "« Les cris de la forêt cessèrent, mais les murmures du passé persistaient. »",
+								"spanish": "« Los gritos del bosque cesaron, pero los susurros del pasado aún persistían. »",
+								"vietnamese": "“Tiếng thét của rừng đã ngừng, nhưng những lời thì thầm của quá khứ vẫn còn vương vấn.”",
+								"thai": "“เสียงกรีดร้องของป่าหยุดลง แต่เสียงกระซิบจากอดีตยังคงอยู่.”",
+								"hindi": "“जंगल की चीखें बंद हो गईं, लेकिन अतीत की फुसफुसाहटें अभी भी बाकी थीं।”"
+							}
+						}
+					]
+				}
+			]
+		},
+		{
+			"scenario_id": "forest_luminamorta_22_04",
+			"order": 4,
+			"act": "rising",
+			"theme": "forest",
+			"actors": {
+				"hazel": {
+					"id": "mon_e2c11115-b300-4f32-b289-9ad088dc0273",
+					"name": {
+						"korean": "헤이즐",
+						"english": "Hazel",
+						"japanese": "ヘイゼル",
+						"chinese": "榛",
+						"french": "Hazel",
+						"spanish": "Hazel",
+						"vietnamese": "Hazel",
+						"thai": "เฮเซล",
+						"hindi": "हेज़ल"
+					},
+					"description": "",
+					"face_image_url": "https://imagedelivery.net/WTEqQNGFb-l-IHS6IGnzUQ/39f75a47-c622-45fe-04fd-a8bac1f93a00/public",
+					"battle_sprite_url": "https://imagedelivery.net/WTEqQNGFb-l-IHS6IGnzUQ/fc97b5d5-7a1d-4646-bedc-47a40ea70a00/public"
+				}
+			},
+			"boss": {
+				"pool_id": "random_boss"
+			},
+			"prologue": {
+				"korean": [
+					"숲은 병들었다. 하지만 헤이즐은 웃었다.",
+					"모든 것을 치유하는 힘이라고. 빛나는 균류가 그녀를 감싸 안았다.",
+					"하지만 그 달콤한 향기 뒤에는 — 끔찍한 진실이 숨어 있었다.",
+					"미소 짓는 얼굴 아래, 그녀의 생명은 스러지고 있었다."
+				],
+				"english": [
+					"The forest was sick. But Hazel smiled.",
+					"A power that heals all, they said. Luminous fungi embraced her.",
+					"But behind that sweet scent—a terrible truth lurked.",
+					"Beneath her smiling face, her life was fading away."
+				],
+				"japanese": [
+					"森は病んでいた。だがヘイゼルは笑った。",
+					"すべてを癒す力だと。輝く菌類が彼女を包み込んだ。",
+					"しかし、その甘い香りの裏には — 恐ろしい真実が隠されていた。",
+					"微笑む顔の下で、彼女の命は消えゆこうとしていた。"
+				],
+				"chinese": [
+					"森林病了。但海泽尔笑了。",
+					"据说那是治愈一切的力量。发光的真菌将她环绕。",
+					"然而在那甜美芬芳背后——隐藏着一个可怕的真相。",
+					"在她微笑的脸庞下，生命正在消逝。"
+				],
+				"french": [
+					"La forêt était malade. Mais Hazel souriait.",
+					"Un pouvoir qui guérit tout, disaient-ils. Des champignons lumineux l'enveloppèrent.",
+					"Mais derrière cette douce fragrance — une terrible vérité se cachait.",
+					"Sous son visage souriant, sa vie s'éteignait."
+				],
+				"spanish": [
+					"El bosque estaba enfermo. Pero Hazel sonrió.",
+					"Un poder que lo cura todo, decían. Hongos luminosos la abrazaron.",
+					"Pero detrás de esa dulce fragancia — se ocultaba una terrible verdad.",
+					"Bajo su rostro sonriente, su vida se desvanecía."
+				],
+				"vietnamese": [
+					"Rừng ốm yếu. Nhưng Hazel mỉm cười.",
+					"Một sức mạnh chữa lành mọi thứ. Nấm phát sáng ôm lấy cô.",
+					"Nhưng đằng sau hương thơm ngọt ngào ấy — một sự thật kinh hoàng ẩn giấu.",
+					"Dưới nụ cười của cô, sự sống đang dần tàn lụi."
+				],
+				"thai": [
+					"ป่าป่วยไข้ แต่เฮเซลยิ้ม",
+					"พลังที่เยียวยาทุกสิ่ง ว่ากันว่าอย่างนั้น เชื้อราเรืองแสงโอบกอดเธอ",
+					"แต่เบื้องหลังกลิ่นหอมหวานนั้น—ความจริงอันน่าสะพรึงกลัวซ่อนอยู่",
+					"ใต้ใบหน้ายิ้มแย้ม ชีวิตของเธอกำลังร่วงโรย"
+				],
+				"hindi": [
+					"वन बीमार था। लेकिन हेज़ल मुस्कुराई।",
+					"सब कुछ ठीक करने की शक्ति, उन्होंने कहा। चमकदार कवक ने उसे घेर लिया।",
+					"लेकिन उस मीठी सुगंध के पीछे — एक भयानक सच छिपा था।",
+					"उसके मुस्कुराते चेहरे के नीचे, उसका जीवन मुरझा रहा था।"
+				]
+			},
+			"rooms": [
+				{
+					"id": 1,
+					"dialogue": [
+						{
+							"emotion": "base",
+							"speaker": "narrator",
+							"type": "speech",
+							"content": {
+								"korean": "숲 깊숙한 곳. 기이하게도 달콤한 향이 가득했다.",
+								"english": "Deep in the forest. It was filled with an oddly sweet scent.",
+								"japanese": "森の奥深く。奇妙に甘い香りが満ちていた。",
+								"chinese": "森林深处。弥漫着一股奇异的甜香。",
+								"french": "Au plus profond de la forêt. Une odeur étrangement douce emplissait l'air.",
+								"spanish": "En lo profundo del bosque. Estaba lleno de un aroma extrañamente dulce.",
+								"vietnamese": "Sâu trong rừng. Một mùi hương ngọt ngào kỳ lạ tràn ngập.",
+								"thai": "ลึกเข้าไปในป่า กลิ่นหอมหวานแปลกๆ อบอวล",
+								"hindi": "जंगल के गहरे में। यह एक अजीब सी मीठी गंध से भरा था।"
+							}
+						},
+						{
+							"spot": [
+								4,
+								2
+							],
+							"duration_ms": 500,
+							"speaker": "hazel",
+							"type": "direction",
+							"action": "enter"
+						},
+						{
+							"emotion": "happy",
+							"content": {
+								"korean": "여기는 치유의 숲이에요! 저도 곧 나을 거예요!",
+								"english": "This is the Forest of Healing! I'll get better soon too!",
+								"japanese": "ここは癒しの森です！私もすぐに治ります！",
+								"chinese": "这里是治愈森林！我也很快会好起来的！",
+								"french": "C'est la Forêt de Guérison ! Je vais vite aller mieux moi aussi !",
+								"spanish": "¡Este es el Bosque de la Curación! ¡Yo también me curaré pronto!",
+								"vietnamese": "Đây là Rừng Chữa Lành! Tôi cũng sẽ sớm khỏe lại thôi!",
+								"thai": "ที่นี่คือป่าแห่งการเยียวยาค่ะ! ฉันก็จะหายดีในไม่ช้า!",
+								"hindi": "यह उपचार का जंगल है! मैं भी जल्द ठीक हो जाऊँगी!"
+							},
+							"speaker": "hazel",
+							"type": "speech"
+						},
+						{
+							"emotion": "base",
+							"content": {
+								"korean": "치유...? 괜찮아 보이는군.",
+								"english": "Healing...? You look fine.",
+								"japanese": "癒し…？元気そうに見えるが。",
+								"chinese": "治愈……？你看起来还不错。",
+								"french": "Guérison...? Tu as l'air bien.",
+								"spanish": "¿Curación...? Te ves bien.",
+								"vietnamese": "Chữa lành...? Trông cô ổn mà.",
+								"thai": "เยียวยา...? ดูท่าทางคุณสบายดีนะ",
+								"hindi": "उपचार...? तुम ठीक लग रही हो।"
+							},
+							"speaker": "character_any",
+							"type": "speech"
+						},
+						{
+							"emotion": "happy",
+							"content": {
+								"korean": "네! 저를 보세요. 이렇게 건강해지고 있잖아요?",
+								"english": "Yes! Look at me. I'm getting so healthy, aren't I?",
+								"japanese": "はい！私を見てください。こんなに健康になっていますよ？",
+								"chinese": "是的！看看我。我不是越来越健康了吗？",
+								"french": "Oui ! Regardez-moi. Je deviens tellement saine, n'est-ce pas ?",
+								"spanish": "¡Sí! Mírame. ¿No estoy cada vez más sana?",
+								"vietnamese": "Vâng! Nhìn tôi đây. Tôi đang khỏe mạnh hơn rồi mà, phải không?",
+								"thai": "ค่ะ! ดูสิคะ ฉันกำลังแข็งแรงขึ้นไม่ใช่เหรอ?",
+								"hindi": "हाँ! मुझे देखो। मैं इतनी स्वस्थ हो रही हूँ, है ना?"
+							},
+							"speaker": "hazel",
+							"type": "speech"
+						},
+						{
+							"speaker": "narrator",
+							"type": "speech",
+							"content": {
+								"korean": "그녀의 뺨은 창백했고, 미소는 힘겨웠다.",
+								"english": "Her cheeks were pale, and her smile was strained.",
+								"japanese": "彼女の頬は青白く、笑顔は辛そうだった。",
+								"chinese": "她的脸颊苍白，笑容勉强。",
+								"french": "Ses joues étaient pâles, et son sourire était forcé.",
+								"spanish": "Sus mejillas estaban pálidas, y su sonrisa era forzada.",
+								"vietnamese": "Má cô nhợt nhạt, nụ cười gượng gạo.",
+								"thai": "แก้มของเธอซีดเผือด และรอยยิ้มก็ดูฝืนใจ",
+								"hindi": "उसके गाल पीले थे, और उसकी मुस्कान मजबूर थी।"
+							},
+							"emotion": "base"
+						}
+					]
+				},
+				{
+					"id": 3,
+					"dialogue": [
+						{
+							"speaker": "hazel",
+							"type": "direction",
+							"duration_ms": 500,
+							"spot": [
+								4,
+								2
+							],
+							"action": "enter"
+						},
+						{
+							"emotion": "happy",
+							"speaker": "hazel",
+							"type": "speech",
+							"content": {
+								"korean": "매일매일 더 좋아지는 기분이에요! 숲이 저를 돌봐주고 있어요.",
+								"english": "I feel better every day! The forest is taking care of me.",
+								"japanese": "毎日毎日、気分がよくなっています！森が私を看病してくれています。",
+								"chinese": "我感觉一天比一天好！森林正在照顾我。",
+								"french": "Je me sens mieux chaque jour ! La forêt prend soin de moi.",
+								"spanish": "¡Me siento mejor cada día! El bosque me está cuidando.",
+								"vietnamese": "Tôi cảm thấy tốt hơn mỗi ngày! Rừng đang chăm sóc tôi.",
+								"thai": "ฉันรู้สึกดีขึ้นทุกวันเลยค่ะ! ป่ากำลังดูแลฉันอยู่",
+								"hindi": "मैं हर दिन बेहतर महसूस कर रही हूँ! जंगल मेरा ख्याल रख रहा है।"
+							}
+						},
+						{
+							"emotion": "sad",
+							"content": {
+								"korean": "하지만 점점 더 마르는 것 같아...",
+								"english": "But you seem to be withering...",
+								"japanese": "でも、どんどん痩せているみたいだ…",
+								"chinese": "但你似乎越来越虚弱了……",
+								"french": "Mais tu sembles dépérir...",
+								"spanish": "Pero pareces estar marchitándote...",
+								"vietnamese": "Nhưng dường như cậu đang héo mòn dần...",
+								"thai": "แต่ดูเหมือนเจ้าจะเหี่ยวเฉาลงเรื่อยๆ...",
+								"hindi": "पर तुम तो सूखती जा रही हो..."
+							},
+							"speaker": "character_1",
+							"type": "speech"
+						},
+						{
+							"speaker": "narrator",
+							"type": "speech",
+							"content": {
+								"korean": "무지갯빛 균류가 죽은 나무를 뒤덮고 있었다. 그 아래, 뭔가 꿈틀거렸다.",
+								"english": "Iridescent fungi covered the dead tree. Something stirred beneath it.",
+								"japanese": "虹色の菌類が枯れ木を覆っていた。その下で、何かが蠢いていた。",
+								"chinese": "虹色真菌覆盖了枯死的树木。树下，有什么东西在蠕动。",
+								"french": "Des champignons irisés recouvraient l'arbre mort. Quelque chose remuait en dessous.",
+								"spanish": "Hongos iridiscentes cubrían el árbol muerto. Algo se agitaba debajo.",
+								"vietnamese": "Nấm ngũ sắc bao phủ cây chết. Dưới đó, có thứ gì đó đang cựa quậy.",
+								"thai": "เชื้อราสีรุ้งปกคลุมต้นไม้ที่ตายแล้ว ใต้ต้นนั้นมีบางสิ่งกำลังขยุกขยิกอยู่",
+								"hindi": "इंद्रधनुषी फफूंदी ने सूखे पेड़ को ढँक रखा था। उसके नीचे कुछ रेंग रहा था।"
+							},
+							"emotion": "base"
+						},
+						{
+							"emotion": "angry",
+							"content": {
+								"korean": "아니에요! 이건 숲의 은혜예요! 더 아름다워지고 있는 거예요.",
+								"english": "No! This is the forest's blessing! I'm becoming more beautiful.",
+								"japanese": "いいえ！これは森の恵みです！もっと美しくなっているんです。",
+								"chinese": "不！这是森林的恩赐！我正变得更美丽。",
+								"french": "Non ! C'est la bénédiction de la forêt ! Je deviens plus belle.",
+								"spanish": "¡No! ¡Esto es una bendición del bosque! Me estoy volviendo más hermosa.",
+								"vietnamese": "Không! Đây là ân huệ của rừng! Tôi đang trở nên đẹp hơn.",
+								"thai": "ไม่นะ! นี่คือพรจากป่า! ฉันกำลังงดงามขึ้นต่างหาก",
+								"hindi": "नहीं! यह तो जंगल का आशीर्वाद है! मैं और सुंदर होती जा रही हूँ।"
+							},
+							"speaker": "hazel",
+							"type": "speech"
+						}
+					]
+				},
+				{
+					"id": 5,
+					"dialogue": [
+						{
+							"duration_ms": 500,
+							"type": "direction",
+							"speaker": "hazel",
+							"spot": [
+								4,
+								2
+							],
+							"action": "enter"
+						},
+						{
+							"emotion": "base",
+							"speaker": "hazel",
+							"type": "speech",
+							"content": {
+								"korean": "조금 피곤할 뿐이에요... 숲이 더 큰 치유를 준비하고 있거든요.",
+								"english": "I'm just a little tired... The forest is preparing a greater healing.",
+								"japanese": "少し疲れているだけです…森がもっと大きな癒しを準備しているから。",
+								"chinese": "我只是有点累……森林正在准备更强大的治愈。",
+								"french": "Je suis juste un peu fatiguée... La forêt prépare une guérison plus profonde.",
+								"spanish": "Solo estoy un poco cansada... El bosque está preparando una curación mayor.",
+								"vietnamese": "Tôi chỉ hơi mệt thôi... Rừng đang chuẩn bị một sự chữa lành lớn hơn.",
+								"thai": "ฉันแค่เพลียเล็กน้อย... ป่ากำลังเตรียมการเยียวยาที่ยิ่งใหญ่กว่า",
+								"hindi": "मैं बस थोड़ी थकी हुई हूँ... जंगल एक बड़े उपचार की तैयारी कर रहा है।"
+							}
+						},
+						{
+							"emotion": "angry",
+							"speaker": "character_2",
+							"type": "speech",
+							"content": {
+								"korean": "그 치유가 널 죽게 만들고 있어!",
+								"english": "That healing is killing you!",
+								"japanese": "その癒しが君を殺しているんだ！",
+								"chinese": "那种治愈正在杀死你！",
+								"french": "Cette guérison est en train de te tuer !",
+								"spanish": "¡Esa curación te está matando!",
+								"vietnamese": "Sự chữa lành đó đang giết chết cậu!",
+								"thai": "การเยียวยานั่นกำลังฆ่าเจ้าอยู่!",
+								"hindi": "वह उपचार तुम्हें मार रहा है!"
+							}
+						},
+						{
+							"emotion": "base",
+							"speaker": "narrator",
+							"type": "speech",
+							"content": {
+								"korean": "주변에는 달콤하고 역겨운 향을 내는 균류가 덮인 동물 사체가 있었다. 그것들은 마치 살아있는 것처럼 미세하게 꿈틀거렸다.",
+								"english": "Around them lay animal carcasses covered in sweet, sickening fungi. They subtly writhed as if alive.",
+								"japanese": "周りには、甘く吐き気を催す香りの菌類に覆われた動物の死骸があった。それらは生きているかのように微かに蠢いていた。",
+								"chinese": "周围散落着被散发着甜腻恶臭的真菌覆盖的动物尸体。它们细微地蠕动着，仿佛还活着。",
+								"french": "Autour d'eux gisaient des carcasses d'animaux recouvertes de champignons à l'odeur douceâtre et écœurante. Elles se tordaient subtilement comme si elles étaient vivantes.",
+								"spanish": "Alrededor yacían cadáveres de animales cubiertos de hongos de olor dulce y nauseabundo. Se retorcían sutilmente como si estuvieran vivos.",
+								"vietnamese": "Xung quanh là những xác động vật phủ đầy nấm có mùi ngọt ngào, kinh tởm. Chúng khẽ cựa quậy như thể còn sống.",
+								"thai": "รอบๆ มีซากสัตว์ที่ปกคลุมด้วยเชื้อราส่งกลิ่นหวานและน่าขยะแขยง พวกมันกระดุกกระดิกเล็กน้อยราวกับมีชีวิต",
+								"hindi": "आस-पास मीठे, घिनौने गंध वाले कवक से ढके जानवरों के शव पड़े थे। वे जीवित की तरह सूक्ष्मता से रेंग रहे थे।"
+							}
+						},
+						{
+							"content": {
+								"korean": "아름답잖아요... 이 모든 것이.",
+								"english": "It's beautiful, isn't it... All of this.",
+								"japanese": "美しいでしょう…この全てが。",
+								"chinese": "很美，不是吗……这一切。",
+								"french": "C'est beau, n'est-ce pas... Tout cela.",
+								"spanish": "Es hermoso, ¿no es así?... Todo esto.",
+								"vietnamese": "Đẹp mà, phải không... Tất cả những điều này.",
+								"thai": "มันสวยงามไม่ใช่เหรอ... ทั้งหมดนี้",
+								"hindi": "यह सुंदर है, है ना?... यह सब।"
+							},
+							"speaker": "hazel",
+							"type": "speech",
+							"emotion": "sad"
+						}
+					]
+				},
+				{
+					"id": 9,
+					"dialogue": [
+						{
+							"action": "enter",
+							"spot": [
+								4,
+								2
+							],
+							"duration_ms": 500,
+							"speaker": "hazel",
+							"type": "direction"
+						},
+						{
+							"content": {
+								"korean": "이제... 거의 다 됐어요...",
+								"english": "Now... it's almost done...",
+								"japanese": "もう…ほとんど終わったわ…",
+								"chinese": "现在……差不多完成了……",
+								"french": "Maintenant... c'est presque fini...",
+								"spanish": "Ya... casi está listo...",
+								"vietnamese": "Giờ thì... gần xong rồi...",
+								"thai": "ตอนนี้... ใกล้จะเสร็จแล้ว...",
+								"hindi": "अब... लगभग हो गया है..."
+							},
+							"speaker": "hazel",
+							"type": "speech",
+							"emotion": "base"
+						},
+						{
+							"content": {
+								"korean": "헤이즐! 정신 차려! 넌 이용당하고 있어!",
+								"english": "Hazel! Snap out of it! You're being used!",
+								"japanese": "ヘイゼル！しっかりして！君は利用されているんだ！",
+								"chinese": "黑泽尔！清醒点！你被利用了！",
+								"french": "Hazel ! Reprends-toi ! Tu es utilisée !",
+								"spanish": "¡Hazel! ¡Reacciona! ¡Te están usando!",
+								"vietnamese": "Hazel! Tỉnh lại đi! Cậu đang bị lợi dụng đấy!",
+								"thai": "เฮเซล! ตั้งสติหน่อย! เจ้ากำลังถูกหลอกใช้!",
+								"hindi": "हेज़ल! होश में आओ! तुम्हारा इस्तेमाल किया जा रहा है!"
+							},
+							"speaker": "character_any",
+							"type": "speech",
+							"emotion": "angry"
+						},
+						{
+							"speaker": "narrator",
+							"type": "speech",
+							"content": {
+								"korean": "헤이즐의 몸은 투명해질 듯 창백했다. 그녀의 미소는 너무나 공허했다.",
+								"english": "Hazel's body was pale, almost translucent. Her smile was utterly vacant.",
+								"japanese": "ヘイゼルの体は透き通るように青白かった。彼女の笑顔はあまりにも空虚だった。",
+								"chinese": "海泽尔的身体苍白得几乎透明。她的笑容是如此空洞。",
+								"french": "Le corps de Hazel était pâle, presque translucide. Son sourire était d'une vacuité absolue.",
+								"spanish": "El cuerpo de Hazel estaba pálido, casi translúcido. Su sonrisa era completamente vacía.",
+								"vietnamese": "Cơ thể của Hazel nhợt nhạt, gần như trong suốt. Nụ cười của cô ấy trống rỗng đến đáng sợ.",
+								"thai": "ร่างกายของเฮเซลซีดเผือดจนเกือบโปร่งแสง รอยยิ้มของเธอนั้นว่างเปล่าอย่างที่สุด",
+								"hindi": "हेज़ल का शरीर पीला पड़ गया था, मानो पारदर्शी हो। उसकी मुस्कान बेहद खोखली थी।"
+							},
+							"emotion": "base"
+						},
+						{
+							"content": {
+								"korean": "곧... 모두가 평화로워질 거예요... 영원한 치유...",
+								"english": "Soon... everyone will find peace... eternal healing...",
+								"japanese": "やがて…皆が平和になるでしょう…永遠の癒し…",
+								"chinese": "很快...所有人都会平静下来...永恒的治愈...",
+								"french": "Bientôt... tout le monde trouvera la paix... une guérison éternelle...",
+								"spanish": "Pronto... todos encontrarán la paz... una curación eterna...",
+								"vietnamese": "Chẳng mấy chốc... mọi người sẽ bình yên... chữa lành vĩnh cửu...",
+								"thai": "อีกไม่นาน... ทุกคนจะสงบสุข... การเยียวยาชั่วนิรันดร์...",
+								"hindi": "जल्द ही... हर कोई शांति पाएगा... अनंत उपचार..."
+							},
+							"speaker": "hazel",
+							"type": "speech",
+							"emotion": "base"
+						},
+						{
+							"content": {
+								"korean": "이 괴물을 막아야 해. 더 이상 희생자는 안 돼.",
+								"english": "We must stop this monster. No more sacrifices.",
+								"japanese": "この怪物を止めなければ。これ以上の犠牲者は出せない。",
+								"chinese": "我们必须阻止这个怪物。不能再有牺牲者了。",
+								"french": "Nous devons arrêter ce monstre. Plus de sacrifices.",
+								"spanish": "Debemos detener a este monstruo. No más sacrificios.",
+								"vietnamese": "Chúng ta phải ngăn chặn con quái vật này. Không thể có thêm nạn nhân nào nữa.",
+								"thai": "เราต้องหยุดสัตว์ประหลาดตัวนี้ ไม่มีเหยื่ออีกแล้ว",
+								"hindi": "हमें इस राक्षस को रोकना होगा। और कोई बलिदान नहीं।"
+							},
+							"speaker": "character_3",
+							"type": "speech",
+							"emotion": "angry"
+						}
+					]
+				},
+				{
+					"dialogue": [
+						{
+							"emotion": "base",
+							"content": {
+								"korean": "숲의 심장부. 거대한 그림자가 헤이즐을 감싸고 있었다.",
+								"english": "Deep in the forest's heart. A vast shadow enveloped Hazel.",
+								"japanese": "森の心臓部。巨大な影がヘイゼルを包み込んでいた。",
+								"chinese": "森林深处。一个巨大的影子笼罩着黑兹尔。",
+								"french": "Au cœur de la forêt. Une ombre immense enveloppait Hazel.",
+								"spanish": "En el corazón del bosque. Una sombra inmensa envolvía a Hazel.",
+								"vietnamese": "Sâu trong trái tim rừng. Một bóng tối khổng lồ bao trùm Hazel.",
+								"thai": "ลึกเข้าไปในใจกลางป่า เงาขนาดมหึมาปกคลุมเฮเซล",
+								"hindi": "जंगल के हृदय में। एक विशाल छाया ने हेज़ल को घेर रखा था।"
+							},
+							"speaker": "narrator",
+							"type": "speech"
+						},
+						{
+							"emotion": "base",
+							"speaker": "random_boss",
+							"type": "speech",
+							"content": {
+								"korean": "아, 나의 사랑스러운 제물. 이제 네 역할은 끝났다.",
+								"english": "Ah, my lovely sacrifice. Your role is now complete.",
+								"japanese": "ああ、私の愛しい生贄よ。お前の役割は終わった。",
+								"chinese": "啊，我可爱的祭品。你的作用已经完成了。",
+								"french": "Ah, mon charmant sacrifice. Ton rôle est maintenant terminé.",
+								"spanish": "Ah, mi adorable sacrificio. Tu papel ha terminado.",
+								"vietnamese": "À, vật hiến tế đáng yêu của ta. Vai trò của ngươi giờ đã kết thúc.",
+								"thai": "อ่าาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาаาาาาาาาาาาาาาาาาาาาาาาาาาาааาาาาาาาาาาาาาาาาาาาาาาาааааааาาาаааааааааааааааааааааааааааааааааааааааааааааааааааааааааааааааааааааааааาาаааааааาааааааааааааааааาาаааааааааาааааааาаааааааааааааааาааааааааааааааааааааааааааааааааาาาาаาааาาааааааааааааааааааааааааааааааааааааааааааааааาาาาаааааааาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาаาาาาาาาาาาาาาาาาาาาาาาาาาาаาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาаาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาаาาаาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาааาаааааาาาาาаาาาาาาาาาаааааาาаааааาาาาาаааааааааааааааааааааааааааааааาааааааааааааааааааааааааааааааааааааааааааааааааааааааааааааааааааааааааааааааааааааааааааааааааааааааааааааааааааааааааааааааааааааааааааааааааааааааааааааааааааааааааааааааааааааааааааааааааааааааааааааааааааааааааааааааааааааааааааааааааааааааааааааааааааааааааааааааааааааааааааааааааааааาааааааааааааааааааааааааааааааааааааааааааааааааааาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาааาааมาAh, my lovely sacrifice. Your role is now complete. Now let her go, you monster!",
+								"hindi": "आह, मेरी प्यारी बलि। तुम्हारी भूमिका अब समाप्त हो गई है। हे राक्षस, अब हेज़ल को छोड़ दो!"
+							}
+						},
+						{
+							"content": {
+								"korean": "헤이즐을 놓아줘, 괴물!"
+							},
+							"speaker": "character_any",
+							"type": "speech",
+							"emotion": "angry"
+						},
+						{
+							"emotion": "base",
+							"speaker": "random_boss",
+							"type": "speech",
+							"content": {
+								"korean": "내 치유는 완벽하다. 모든 생명은 나에게 돌아올 뿐."
+							}
+						},
+						{
+							"emotion": "angry",
+							"speaker": "random_boss",
+							"type": "speech",
+							"content": {
+								"korean": "너희도 곧 깨닫겠지. 진정한 평화의 의미를!"
+							}
+						}
+					],
+					"id": 15,
+					"lose_dialogue": [
+						{
+							"emotion": "base",
+							"speaker": "narrator",
+							"type": "speech",
+							"content": {
+								"korean": "'random_boss'의 힘이 숲을 뒤흔들었다.",
+								"english": "The power of 'random_boss' shook the forest.",
+								"japanese": "「'random_boss'の力が森を揺るがした。」",
+								"chinese": "「“random_boss”的力量震撼了森林。」",
+								"french": "« Le pouvoir de 'random_boss' a secoué la forêt. »",
+								"spanish": "« El poder de 'random_boss' sacudió el bosque. »",
+								"vietnamese": "« Sức mạnh của 'random_boss' đã rung chuyển khu rừng. »",
+								"thai": "« พลังของ 'random_boss' เขย่าป่าทั้งผืน »",
+								"hindi": "« 'रैंडम_बॉस' की शक्ति ने जंगल को हिला दिया। »"
+							}
+						},
+						{
+							"emotion": "angry",
+							"content": {
+								"korean": "어리석은 자들... 감히 내 치유를 거부하려 했는가!",
+								"english": "Fools... You dared to refuse my healing!",
+								"japanese": "「愚か者どもめ…よくも私の癒しを拒もうとしたな！」",
+								"chinese": "「愚蠢的家伙们... 竟敢拒绝我的治愈！」",
+								"french": "« Imbéciles... Vous avez osé refuser ma guérison ! »",
+								"spanish": "« ¡Necios... Osasteis rechazar mi sanación! »",
+								"vietnamese": "« Những kẻ ngu ngốc... Dám từ chối sự chữa lành của ta! »",
+								"thai": "« พวกโง่... กล้าปฏิเสธการเยียวยาของข้าอย่างนั้นหรือ! »",
+								"hindi": "« मूर्खों... तुमने मेरी चिकित्सा को ठुकराने की हिम्मत की! »"
+							},
+							"speaker": "random_boss",
+							"type": "speech"
+						},
+						{
+							"content": {
+								"korean": "크윽... 다시 올 거야... 널 막을 거야!",
+								"english": "Ugh... I'll be back... I'll stop you!",
+								"japanese": "「くっ…また戻ってくる…お前を止める！」",
+								"chinese": "「呃... 我会再回来... 我会阻止你！」",
+								"french": "« Argh... Je reviendrai... Je t'arrêterai ! »",
+								"spanish": "« ¡Argh... Volveré... Te detendré! »",
+								"vietnamese": "« Khụ... Ta sẽ trở lại... Ta sẽ ngăn ngươi! »",
+								"thai": "« อึก... ข้าจะกลับมา... ข้าจะหยุดเจ้าให้ได้! »",
+								"hindi": "« उफ़... मैं वापस आऊँगा... तुम्हें रोकूँगा! »"
+							},
+							"speaker": "character_any",
+							"type": "speech",
+							"emotion": "angry"
+						},
+						{
+							"content": {
+								"korean": "다음에 만날 땐... 너희도 나의 일부가 될 테지.",
+								"english": "Next time we meet... you'll be part of me.",
+								"japanese": "「次に会う時は…お前たちも私の¹部となるだろう。」",
+								"chinese": "「下次见面时... 你们也将成为我的一部分。」",
+								"french": "« La prochaine fois... vous ferez partie de moi. »",
+								"spanish": "« La próxima vez que nos encontremos... vosotros también seréis parte de mí. »",
+								"vietnamese": "« Lần tới gặp nhau... các ngươi cũng sẽ trở thành một phần của ta. »",
+								"thai": "« คราวหน้าเมื่อเราพบกัน... เจ้าจะเป็นส่วนหนึ่งของข้า »",
+								"hindi": "« अगली बार जब हम मिलेंगे... तुम भी मेरे ही अंश बन जाओगे। »"
+							},
+							"speaker": "random_boss",
+							"type": "speech",
+							"emotion": "base"
+						}
+					],
+					"win_dialogue": [
+						{
+							"speaker": "narrator",
+							"type": "speech",
+							"content": {
+								"korean": "무지갯빛 균류가 시들며 'random_boss'의 그림자가 흩어졌다."
+							},
+							"emotion": "base"
+						},
+						{
+							"speaker": "random_boss",
+							"type": "speech",
+							"content": {
+								"korean": "크크크... 이것은 끝이 아니다... 너희도... 곧 나처럼 될 테니..."
+							},
+							"emotion": "base"
+						},
+						{
+							"action": "enter",
+							"duration_ms": 500,
+							"type": "direction",
+							"speaker": "hazel",
+							"spot": [
+								4,
+								2
+							]
+						},
+						{
+							"speaker": "hazel",
+							"type": "speech",
+							"content": {
+								"korean": "...나... 나는... 뭐였지?"
+							},
+							"emotion": "sad"
+						},
+						{
+							"speaker": "character_any",
+							"type": "speech",
+							"content": {
+								"korean": "헤이즐! 괜찮아?",
+								"english": "Hazel! Are you okay?",
+								"japanese": "「ヘイゼル！大丈夫か？」",
+								"chinese": "「海泽尔！你还好吗？」",
+								"french": "« Hazel ! Ça va ? »",
+								"spanish": "« ¡Hazel! ¿Estás bien? »",
+								"vietnamese": "« Hazel! Cậu ổn không? »",
+								"thai": "« เฮเซล! เธอไม่เป็นไรนะ? »",
+								"hindi": "« हेज़ल! क्या तुम ठीक हो? »"
+							},
+							"emotion": "base"
+						},
+						{
+							"speaker": "narrator",
+							"type": "speech",
+							"content": {
+								"korean": "헤이즐의 생명력이 희미해졌다. 숲은 한동안 침묵했다. 그 침묵은 치유였을까, 절망이었을까.",
+								"english": "Hazel's life force faded. The forest fell silent. Was it healing, or despair?",
+								"japanese": "「ヘイゼルの生命力が薄れた。森はしばし沈黙した。その沈黙は癒しか、それとも絶望だったのか。」",
+								"chinese": "「海泽尔的生命力消逝了。森林沉默了一阵。那沉默是治愈，还是绝望？」",
+								"french": "« La force vitale de Hazel s'est estompée. La forêt resta silencieuse. Était-ce la guérison, ou le désespoir ? »",
+								"spanish": "« La fuerza vital de Hazel se desvaneció. El bosque guardó silencio. ¿Fue curación o desesperación? »",
+								"vietnamese": "« Sinh lực của Hazel suy yếu. Rừng im lìm một lúc. Sự im lặng đó là chữa lành, hay tuyệt vọng? »",
+								"thai": "« พลังชีวิตของเฮเซลจางหายไป ป่าเงียบงันอยู่ครู่หนึ่ง ความเงียบงันนั้นคือการเยียวยา หรือความสิ้นหวังกันแน่? »",
+								"hindi": "« हेज़ल की जीवन शक्ति क्षीण हो गई। जंगल कुछ देर शांत रहा। क्या वह शांति उपचार थी, या निराशा? »"
+							},
+							"emotion": "base"
+						}
+					]
+				}
+			]
+		},
+		{
+			"scenario_id": "forest_luminamorta_22_05",
+			"order": 5,
+			"act": "climax_finale",
+			"theme": "forest",
+			"actors": {
+				"fern": {
+					"id": "mon_279a32a0-8ec1-4b5b-8179-32df46fdc664",
+					"name": {
+						"korean": "페른",
+						"english": "Fern",
+						"japanese": "フェルン",
+						"chinese": "费恩",
+						"french": "Fern",
+						"spanish": "Fern",
+						"vietnamese": "Fern",
+						"thai": "เฟิร์น",
+						"hindi": "फर्न"
+					},
+					"description": "",
+					"face_image_url": "https://imagedelivery.net/WTEqQNGFb-l-IHS6IGnzUQ/19f9763e-413a-485e-787a-9bbfd8208700/public",
+					"battle_sprite_url": "https://imagedelivery.net/WTEqQNGFb-l-IHS6IGnzUQ/563627d4-0b7c-4865-39d4-1d0a97363c00/public"
+				}
+			},
+			"boss": {
+				"pool_id": "pool_CorruptedPriestess_LuminaMorta_V1"
+			},
+			"prologue": {
+				"korean": [
+					"치유의 성지. 모두가 갈망하던 그곳에 마침내 당도했다.",
+					"하지만 그곳은 아름다움 너머, 끔찍한 진실을 감추고 있었다.",
+					"루미나 모르타. 한때 성스러운 존재였던 그녀가, 이제 뒤틀린 구원을 속삭인다.",
+					"눈물의 포자, 그리고 잔인한 연극의 마지막 막이 오른다."
+				],
+				"english": [
+					"The Sanctuary of Healing. We finally arrived at the place everyone yearned for.",
+					"But beyond its beauty, it hid a terrible truth.",
+					"Lumina Morta. Once a sacred being, she now whispers twisted salvation.",
+					"Spores of tears, and the final act of a cruel play begins."
+				],
+				"japanese": [
+					"癒しの聖地。誰もが渇望したその場所に、ついに辿り着いた。",
+					"しかし、その美しさの向こうには、恐ろしい真実が隠されていた。",
+					"ルミナ・モルタ。かつては聖なる存在だった彼女が、今は歪んだ救済を囁く。",
+					"涙の胞子、そして残酷な演劇の最終幕が上がる。"
+				],
+				"chinese": [
+					"治愈圣地。我们终于抵达了所有人梦寐以求的地方。",
+					"然而，在那美丽之下，却隐藏着一个可怕的真相。",
+					"卢米娜·莫尔塔。曾经是神圣存在的她，如今却低语着扭曲的救赎。",
+					"泪之孢子，以及一场残酷戏剧的最后一幕，拉开了序幕。"
+				],
+				"french": [
+					"Le Sanctuaire de la Guérison. Nous sommes enfin arrivés à l'endroit que tout le monde convoitait.",
+					"Mais au-delà de sa beauté, il cachait une terrible vérité.",
+					"Lumina Morta. Autrefois une entité sacrée, elle murmure maintenant une rédemption tordue.",
+					"Des spores de larmes, et le dernier acte d'une pièce cruelle commence."
+				],
+				"spanish": [
+					"El Santuario de la Curación. Por fin llegamos al lugar que todos anhelaban.",
+					"Pero más allá de su belleza, escondía una verdad terrible.",
+					"Lumina Morta. Una vez un ser sagrado, ahora susurra una salvación retorcida.",
+					"Esporas de lágrimas, y el acto final de una obra cruel comienza."
+				],
+				"vietnamese": [
+					"Thánh địa Chữa lành. Cuối cùng chúng tôi đã đến được nơi mà mọi người khao khát.",
+					"Nhưng đằng sau vẻ đẹp ấy, nó ẩn chứa một sự thật kinh hoàng.",
+					"Lumina Morta. Từng là một thực thể linh thiêng, giờ đây nàng thì thầm về một sự cứu rỗi méo mó.",
+					"Bào tử của nước mắt, và màn cuối cùng của vở kịch tàn khốc bắt đầu."
+				],
+				"thai": [
+					"สถานศักดิ์สิทธิ์แห่งการเยียวยา ในที่สุดเราก็มาถึงสถานที่ที่ทุกคนปรารถนา",
+					"แต่เบื้องหลังความงามนั้น มันซ่อนความจริงอันน่าสะพรึงกลัวไว้",
+					"ลูมิน่า มอร์ต้า เคยเป็นสิ่งมีชีวิตอันศักดิ์สิทธิ์ บัดนี้นางกระซิบกระซาบถึงการไถ่บาปที่บิดเบือน",
+					"สปอร์แห่งน้ำตา และฉากสุดท้ายของการแสดงอันโหดร้ายเริ่มต้นขึ้น"
+				],
+				"hindi": [
+					"उपचार का पवित्र स्थान। हम आखिरकार उस जगह पर पहुँच गए जिसकी हर कोई इच्छा रखता था।",
+					"लेकिन इसकी सुंदरता से परे, यह एक भयानक सच्चाई छिपाए हुए था।",
+					"लुमिना मोर्टा। कभी एक पवित्र अस्तित्व रही, वह अब विकृत मोक्ष फुसफुसाती है।",
+					"आँसुओं के बीजाणु, और एक क्रूर नाटक का अंतिम अधिनियम शुरू होता है।"
+				]
+			},
+			"rooms": [
+				{
+					"id": 1,
+					"dialogue": [
+						{
+							"speaker": "narrator",
+							"type": "speech",
+							"content": {
+								"korean": "거대한 균류 덩어리가 숲의 심장을 뒤덮었다. 이곳이 치유의 성지다.",
+								"english": "A massive fungal mass covered the forest's heart. This is the Sanctuary of Healing.",
+								"japanese": "巨大な菌類の塊が森の心臓部を覆っていた。ここが癒しの聖地だ。",
+								"chinese": "巨大的真菌团块覆盖了森林的中心。这里就是治愈圣地。",
+								"french": "Une énorme masse fongique recouvrait le cœur de la forêt. C'est le Sanctuaire de la Guérison.",
+								"spanish": "Una enorme masa fúngica cubría el corazón del bosque. Este es el Santuario de la Curación.",
+								"vietnamese": "Một khối nấm khổng lồ bao phủ trái tim của khu rừng. Đây là Thánh địa Chữa lành.",
+								"thai": "มวลเชื้อราขนาดมหึมาปกคลุมหัวใจของป่า นี่คือสถานศักดิ์สิทธิ์แห่งการเยียวยา",
+								"hindi": "एक विशाल कवक द्रव्यमान ने जंगल के हृदय को ढक लिया। यही उपचार का पवित्र स्थान है।"
+							},
+							"emotion": "base"
+						},
+						{
+							"emotion": "sad",
+							"content": {
+								"korean": "이게… 치유의 성지?",
+								"english": "This is... the Sanctuary of Healing?",
+								"japanese": "これが…癒しの聖地？",
+								"chinese": "这就是……治愈圣地？",
+								"french": "C'est... le Sanctuaire de la Guérison ?",
+								"spanish": "¿Esto es... el Santuario de la Curación?",
+								"vietnamese": "Đây là... Thánh địa Chữa lành ư?",
+								"thai": "นี่คือ... สถานศักดิ์สิทธิ์แห่งการเยียวยา?",
+								"hindi": "यह... उपचार का पवित्र स्थान है?"
+							},
+							"speaker": "character_any",
+							"type": "speech"
+						},
+						{
+							"type": "direction",
+							"action": "enter",
+							"spot": [
+								3,
+								2
+							],
+							"duration_ms": 500,
+							"speaker": "fern"
+						},
+						{
+							"speaker": "fern",
+							"type": "speech",
+							"content": {
+								"korean": "오셨군요. 기다리고 있었답니다. 이곳이야말로 진정한 치유의 장소.",
+								"english": "You've arrived. I've been waiting. This truly is a place of healing.",
+								"japanese": "いらっしゃいましたね。お待ちしておりました。こここそが、真の癒しの場所です。",
+								"chinese": "您来了。我一直在等您。这里才是真正的治愈之地。",
+								"french": "Vous êtes arrivé. Je vous attendais. C'est vraiment un lieu de guérison.",
+								"spanish": "Has llegado. Te estaba esperando. Este es, sin duda, un verdadero lugar de sanación.",
+								"vietnamese": "Bạn đã đến. Tôi đã chờ đợi. Đây thực sự là một nơi chữa lành.",
+								"thai": "คุณมาแล้ว ฉันรออยู่เลยล่ะ ที่นี่แหละคือสถานที่แห่งการเยียวยาที่แท้จริง",
+								"hindi": "आप आ गए। मैं इंतज़ार कर रहा था। यह वास्तव में उपचार का स्थान है।"
+							},
+							"emotion": "base"
+						},
+						{
+							"emotion": "base",
+							"content": {
+								"korean": "페른… 네가 왜 여기에?",
+								"english": "Fern... Why are you here?",
+								"japanese": "フェルン… なぜあなたがここに？",
+								"chinese": "费恩… 你为什么会在这里？",
+								"french": "Fern... Pourquoi es-tu ici ?",
+								"spanish": "Fern... ¿Por qué estás aquí?",
+								"vietnamese": "Fern... Sao cô lại ở đây?",
+								"thai": "เฟิร์น... ทำไมเธอถึงมาอยู่ที่นี่?",
+								"hindi": "फर्न... तुम यहाँ क्यों हो?"
+							},
+							"speaker": "character_any",
+							"type": "speech"
+						},
+						{
+							"speaker": "fern",
+							"type": "speech",
+							"emotion": "happy",
+							"content": {
+								"korean": "저는 항상 여기 있었는걸요? 이 숲의 모든 존재처럼… 치유받고 있답니다. 호호.",
+								"english": "I've always been here, haven't I? Like all beings in this forest... being healed. Hoho.",
+								"japanese": "私はいつもここにいましたよ？この森の全ての存在のように… 癒されているんです。ホホ。",
+								"chinese": "我一直都在这里呀？就像这片森林里的所有生灵一样… 正在被治愈呢。呵呵。",
+								"french": "J'ai toujours été là, n'est-ce pas ? Comme toutes les créatures de cette forêt... je suis guérie. Hoho.",
+								"spanish": "Siempre he estado aquí, ¿no? Como todos los seres de este bosque... estoy siendo sanada. Jojo.",
+								"vietnamese": "Tôi vẫn luôn ở đây mà? Giống như tất cả sinh vật trong khu rừng này... đang được chữa lành. Hô hô.",
+								"thai": "ฉันก็อยู่ตรงนี้มาตลอดไม่ใช่เหรอ? เหมือนกับสิ่งมีชีวิตทุกอย่างในป่านี้นั่นแหละ... กำลังได้รับการเยียวยาอยู่จ้ะ โฮะๆ",
+								"hindi": "मैं हमेशा यहीं रही हूँ, है ना? इस जंगल के सभी प्राणियों की तरह... मैं भी ठीक हो रही हूँ। होहो।"
+							}
+						}
+					]
+				},
+				{
+					"id": 3,
+					"dialogue": [
+						{
+							"type": "direction",
+							"action": "enter",
+							"spot": [
+								3,
+								2
+							],
+							"duration_ms": 500,
+							"speaker": "fern"
+						},
+						{
+							"emotion": "base",
+							"content": {
+								"korean": "점점 더 가까워지는군요. 그분을 만나면… 모든 고통이 사라질 거예요.",
+								"english": "Getting closer and closer. Once you meet Him... all pain will vanish.",
+								"japanese": "だんだん近づいてきていますね。あの方に会えば… 全ての苦痛が消え去るでしょう。",
+								"chinese": "越来越近了。只要见到那位大人… 所有的痛苦都会消失的。",
+								"french": "De plus en plus proche. Quand vous le rencontrerez... toute douleur disparaîtra.",
+								"spanish": "Cada vez más cerca. Cuando lo conozcas... todo el dolor desaparecerá.",
+								"vietnamese": "Càng ngày càng gần rồi. Khi bạn gặp Ngài... mọi đau khổ sẽ tan biến.",
+								"thai": "ใกล้เข้ามาทุกทีแล้วนะ ถ้าได้พบกับท่าน... ความเจ็บปวดทั้งหมดก็จะหายไป",
+								"hindi": "करीब और करीब आ रहा है। एक बार जब आप उससे मिलेंगे... तो सारा दर्द दूर हो जाएगा।"
+							},
+							"speaker": "fern",
+							"type": "speech"
+						},
+						{
+							"emotion": "angry",
+							"content": {
+								"korean": "고통이 사라진다고? 이곳의 식물들은 다 죽어가는데?",
+								"english": "Pain vanishes? But the plants here are all dying?",
+								"japanese": "苦痛が消えるって？ここの植物たちはみんな枯れていってるのに？",
+								"chinese": "痛苦会消失？可这里的植物都在枯萎啊？",
+								"french": "La douleur disparaît ? Mais les plantes ici sont toutes en train de mourir ?",
+								"spanish": "¿El dolor desaparece? ¿Pero las plantas de aquí están todas muriendo?",
+								"vietnamese": "Đau khổ tan biến ư? Nhưng cây cối ở đây đều đang chết dần mà?",
+								"thai": "ความเจ็บปวดจะหายไปเหรอ? แต่ต้นไม้ที่นี่กำลังจะตายกันหมดเลยนะ?",
+								"hindi": "दर्द दूर हो जाएगा? लेकिन यहाँ के पौधे तो सब मर रहे हैं?"
+							},
+							"speaker": "character_any",
+							"type": "speech"
+						},
+						{
+							"emotion": "happy",
+							"content": {
+								"korean": "아니요, 저들은 새로운 생명으로 태어나는 중이랍니다. 더 거대하고, 더 강하게.",
+								"english": "No, they are being reborn as new life. Bigger and stronger.",
+								"japanese": "いいえ、彼らは新しい生命として生まれ変わっているのです。より大きく、より強く。",
+								"chinese": "不，它们正在作为新的生命而重生。变得更庞大，更强大。",
+								"french": "Non, elles renaissent en une nouvelle vie. Plus grandes et plus fortes.",
+								"spanish": "No, están renaciendo como nueva vida. Más grandes y más fuertes.",
+								"vietnamese": "Không, chúng đang tái sinh thành một sự sống mới. Lớn hơn và mạnh mẽ hơn.",
+								"thai": "เปล่าหรอก พวกเขากำลังเกิดใหม่เป็นชีวิตใหม่ต่างหาก ยิ่งใหญ่และแข็งแกร่งกว่าเดิม",
+								"hindi": "नहीं, वे नए जीवन के रूप में फिर से जन्म ले रहे हैं। बड़े और मजबूत।"
+							},
+							"speaker": "fern",
+							"type": "speech"
+						},
+						{
+							"speaker": "character_any",
+							"type": "speech",
+							"content": {
+								"korean": "그게 치유라고?",
+								"english": "That's healing?",
+								"japanese": "それが癒しだと？",
+								"chinese": "这就是治愈？",
+								"french": "C'est ça, la guérison ?",
+								"spanish": "¿Eso es sanación?",
+								"vietnamese": "Đó là chữa lành ư?",
+								"thai": "นั่นคือการเยียวยาเหรอ?",
+								"hindi": "क्या वह उपचार है?"
+							},
+							"emotion": "sad"
+						}
+					]
+				},
+				{
+					"dialogue": [
+						{
+							"duration_ms": 500,
+							"speaker": "fern",
+							"action": "enter",
+							"type": "direction",
+							"spot": [
+								3,
+								2
+							]
+						},
+						{
+							"emotion": "base",
+							"content": {
+								"korean": "그분은 모든 것을 아세요. 잃어버린 것, 갈망하는 것… 전부요.",
+								"english": "He knows everything. What's lost, what's longed for... everything.",
+								"japanese": "あの方は全てをご存知です。失われたもの、渇望するもの… 全てを。",
+								"chinese": "那位大人无所不知。失去的，渴望的… 一切。",
+								"french": "Il sait tout. Ce qui est perdu, ce qui est désiré... tout.",
+								"spanish": "Él lo sabe todo. Lo perdido, lo anhelado... todo.",
+								"vietnamese": "Ngài biết tất cả. Những gì đã mất, những gì khát khao... tất cả.",
+								"thai": "ท่านรู้ทุกสิ่ง ทุกอย่างที่สูญหายไป ทุกอย่างที่ปรารถนา... ทั้งหมดเลย",
+								"hindi": "वह सब कुछ जानता है। क्या खो गया है, क्या तरस रहा है... सब कुछ।"
+							},
+							"speaker": "fern",
+							"type": "speech"
+						},
+						{
+							"speaker": "character_any",
+							"type": "speech",
+							"content": {
+								"korean": "잃어버린 것을 찾는다고… 숲의 생명력을 흡수하면서?",
+								"english": "Finding what's lost... by absorbing the forest's life force?",
+								"japanese": "失われたものを探すって… 森の生命力を吸収しながら？",
+								"chinese": "寻找失去之物… 靠吸收森林的生命力？",
+								"french": "Retrouver ce qui est perdu... en absorbant la force vitale de la forêt ?",
+								"spanish": "¿Encontrar lo perdido... absorbiendo la fuerza vital del bosque?",
+								"vietnamese": "Tìm lại những gì đã mất... bằng cách hấp thụ sinh lực của khu rừng ư?",
+								"thai": "ตามหาสิ่งที่หายไป... โดยการดูดซับพลังชีวิตของป่าอย่างนั้นเหรอ?",
+								"hindi": "खोई हुई चीज़ें ढूँढना... जंगल की जीवन शक्ति को सोखकर?"
+							},
+							"emotion": "angry"
+						},
+						{
+							"emotion": "happy",
+							"content": {
+								"korean": "그건… 구원을 위한 작은 희생일 뿐. 그분은 모두를 '치유'하고 계세요.",
+								"english": "That's just... a small sacrifice for salvation. He is 'healing' everyone.",
+								"japanese": "それは… 救済のための小さな犠牲にすぎません。あの方は皆を「癒して」いるのです。",
+								"chinese": "那只是… 为了救赎而做出的小小牺牲。那位大人正在‘治愈’所有人。",
+								"french": "Ce n'est... qu'un petit sacrifice pour le salut. Il est en train de 'guérir' tout le monde.",
+								"spanish": "Eso es... solo un pequeño sacrificio por la salvación. Él está 'sanando' a todos.",
+								"vietnamese": "Đó chỉ là... một sự hy sinh nhỏ bé cho sự cứu rỗi thôi. Ngài đang 'chữa lành' cho tất cả mọi người.",
+								"thai": "นั่นเป็นเพียง... การเสียสละเล็กน้อยเพื่อการไถ่บาปเท่านั้น ท่านกำลัง 'เยียวยา' ทุกคนอยู่",
+								"hindi": "वह बस... मुक्ति के लिए एक छोटा सा बलिदान है। वह सबको 'ठीक' कर रहा है।"
+							},
+							"speaker": "fern",
+							"type": "speech"
+						},
+						{
+							"content": {
+								"korean": "페른의 눈은 광기로 빛나고 있었다. 비정상적인 평화로움이었다.",
+								"english": "Fern's eyes gleamed with madness, an unnatural serenity.",
+								"japanese": "フェルンの目は狂気に輝いていた。それは異常なまでの平穏だった。",
+								"chinese": "费恩的眼中闪烁着疯狂。那是一种反常的平静。",
+								"french": "Les yeux de Fern brillaient de folie. Une paix anormale.",
+								"spanish": "Los ojos de Fern brillaban con locura. Una serenidad antinatural.",
+								"vietnamese": "Đôi mắt Fern sáng rực điên loạn. Một sự bình yên bất thường.",
+								"thai": "ดวงตาของเฟิร์นส่องประกายด้วยความบ้าคลั่ง ความสงบที่ผิดปกติ",
+								"hindi": "फर्न की आँखें पागलपन से चमक रही थीं। यह एक असामान्य शांति थी।"
+							},
+							"emotion": "base",
+							"speaker": "narrator",
+							"type": "speech"
+						}
+					],
+					"id": 5
+				},
+				{
+					"dialogue": [
+						{
+							"spot": [
+								3,
+								2
+							],
+							"action": "enter",
+							"type": "direction",
+							"speaker": "fern",
+							"duration_ms": 500
+						},
+						{
+							"emotion": "base",
+							"content": {
+								"korean": "이제 정말 끝이랍니다. 저 너머에, '그분'이 계세요.",
+								"english": "This is truly the end. Beyond here, 'They' await.",
+								"japanese": "もう本当に終わりです。その先に、「あの方」がいらっしゃいます。",
+								"chinese": "真的要结束了。在那边，就是“祂”。",
+								"french": "C'est vraiment la fin. Au-delà, 'Ils' vous attendent.",
+								"spanish": "Esto es realmente el fin. Más allá, 'Ellos' aguardan.",
+								"vietnamese": "Đây thực sự là kết thúc. Bên kia, 'Người' đang chờ.",
+								"thai": "นี่คือจุดจบที่แท้จริง เบื้องหน้าคือ 'ท่าน'",
+								"hindi": "यह सचमुच अंत है। उस पार, 'वे' हैं।"
+							},
+							"speaker": "fern",
+							"type": "speech"
+						},
+						{
+							"emotion": "base",
+							"content": {
+								"korean": "뒤틀린 치유의 근원… 루미나 모르타.",
+								"english": "The source of twisted healing... Lumina Morta.",
+								"japanese": "歪んだ癒やしの根源… ルミナ・モルタ。",
+								"chinese": "扭曲治愈的根源……卢米娜·莫尔塔。",
+								"french": "La source de la guérison tordue... Lumina Morta.",
+								"spanish": "La fuente de la curación retorcida... Lumina Morta.",
+								"vietnamese": "Nguồn gốc của sự chữa lành méo mó... Lumina Morta.",
+								"thai": "ต้นกำเนิดของการเยียวยาที่บิดเบี้ยว... ลูมินา มอร์ตา",
+								"hindi": "विकृत उपचार का स्रोत… लुमिना मोर्टा।"
+							},
+							"speaker": "character_any",
+							"type": "speech"
+						},
+						{
+							"emotion": "happy",
+							"content": {
+								"korean": "두려워 마세요. 그분은… 모든 것을 이해하실 거예요. 우리처럼.",
+								"english": "Don't be afraid. 'They' will understand everything. Just like us.",
+								"japanese": "恐れないでください。あの方は…すべてを理解してくださいます。私たちのように。",
+								"chinese": "别害怕。祂会理解一切的。就像我们一样。",
+								"french": "N'ayez pas peur. 'Ils' comprendront tout. Comme nous.",
+								"spanish": "No temas. 'Ellos' lo entenderán todo. Como nosotros.",
+								"vietnamese": "Đừng sợ. 'Người' sẽ hiểu mọi thứ. Giống như chúng ta.",
+								"thai": "อย่ากลัวเลย 'ท่าน' จะเข้าใจทุกสิ่ง เหมือนพวกเรา",
+								"hindi": "डरो मत। 'वे' सब कुछ समझेंगे। हमारी तरह।"
+							},
+							"speaker": "fern",
+							"type": "speech"
+						},
+						{
+							"emotion": "angry",
+							"content": {
+								"korean": "우리가… 너와 같다고?",
+								"english": "We... are like you?",
+								"japanese": "私たちが…君と同じだと？",
+								"chinese": "我们……和你一样？",
+								"french": "Nous... sommes comme toi ?",
+								"spanish": "¿Nosotros... somos como tú?",
+								"vietnamese": "Chúng ta... giống như ngươi sao?",
+								"thai": "พวกเรา... เหมือนกับเจ้าเหรอ?",
+								"hindi": "हम... तुम्हारी तरह हैं?"
+							},
+							"speaker": "character_any",
+							"type": "speech"
+						},
+						{
+							"emotion": "base",
+							"content": {
+								"korean": "페른의 미소는 너무나 순수했지만, 동시에 섬뜩했다.",
+								"english": "Fern's smile was too pure, yet terrifying.",
+								"japanese": "フェルンの笑顔はあまりにも純粋で、同時に不気味だった。",
+								"chinese": "费恩的笑容如此纯洁，却又令人毛骨悚然。",
+								"french": "Le sourire de Fern était si pur, mais aussi glaçant.",
+								"spanish": "La sonrisa de Fern era demasiado pura, pero a la vez espeluznante.",
+								"vietnamese": "Nụ cười của Fern quá đỗi thuần khiết, nhưng đồng thời đáng sợ.",
+								"thai": "รอยยิ้มของเฟิร์นบริสุทธิ์เกินไป แต่ก็น่าขนลุกในเวลาเดียวกัน",
+								"hindi": "फर्न की मुस्कान बहुत शुद्ध थी, फिर भी भयावह थी।"
+							},
+							"speaker": "narrator",
+							"type": "speech"
+						}
+					],
+					"id": 9
+				},
+				{
+					"lose_dialogue": [
+						{
+							"speaker": "boss",
+							"type": "speech",
+							"emotion": "happy",
+							"content": {
+								"korean": "후후… 내게… 바쳐라… 너희의 생명력도… 구원의 일부가 될 것이다…!",
+								"english": "Hmph... Offer yourselves to me... Your life force too... will become part of salvation...!",
+								"japanese": "フフ… 私に… 捧げよ… お前たちの生命力も… 救済の一部となるだろう…！",
+								"chinese": "呵呵… 献给我吧… 你们的生命力… 也会成为救赎的一部分…！",
+								"french": "Hmph... Offrez-vous à moi... Votre force vitale... fera aussi partie du salut...!",
+								"spanish": "Hmph... Ofrécete a mí... Tu fuerza vital... también será parte de la salvación...!",
+								"vietnamese": "Hừm... Dâng cho ta... Sinh lực của các ngươi... cũng sẽ trở thành một phần của sự cứu rỗi...!",
+								"thai": "หึๆ... จงมอบให้ข้า... พลังชีวิตของพวกเจ้า... ก็จะเป็นส่วนหนึ่งของความรอด...!",
+								"hindi": "हंफ... मुझे अर्पित करो... तुम्हारी जीवन शक्ति भी... मोक्ष का हिस्सा बनेगी...!"
+							}
+						},
+						{
+							"speaker": "narrator",
+							"type": "speech",
+							"content": {
+								"korean": "루미나 모르타의 포자가 모든 것을 집어삼켰다. 절망적인 침묵이 숲을 채웠다.",
+								"english": "Lumina Morta's spores devoured everything. A despairing silence filled the forest.",
+								"japanese": "ルミナモルタの胞子がすべてを飲み込んだ。絶望的な沈黙が森を満たした。",
+								"chinese": "鲁米娜莫尔塔的孢子吞噬了一切。绝望的寂静笼罩了森林。",
+								"french": "Les spores de Lumina Morta ont tout dévoré. Un silence désespéré a rempli la forêt.",
+								"spanish": "Las esporas de Lumina Morta lo devoraron todo. Un silencio desesperado llenó el bosque.",
+								"vietnamese": "Bào tử của Lumina Morta đã nuốt chửng mọi thứ. Sự im lặng tuyệt vọng bao trùm khu rừng.",
+								"thai": "สปอร์ของลูมินา มอร์ต้ากลืนกินทุกสิ่ง ความเงียบงันแห่งความสิ้นหวังปกคลุมป่า",
+								"hindi": "लुमिना मोर्टा के बीजाणुओं ने सब कुछ निगल लिया। एक निराशाजनक चुप्पी ने जंगल को भर दिया।"
+							},
+							"emotion": "base"
+						},
+						{
+							"speaker": "character_any",
+							"type": "speech",
+							"content": {
+								"korean": "아직… 끝나지 않았어. 우리는… 포기하지 않아…!",
+								"english": "It's not... over yet. We won't... give up...!",
+								"japanese": "まだ… 終わってない。私たちは… 諦めない…！",
+								"chinese": "还没… 结束。我们… 不会放弃…！",
+								"french": "Ce n'est pas... encore fini. Nous n'abandonnerons... pas...!",
+								"spanish": "No ha... terminado aún. ¡No nos... rendiremos...!",
+								"vietnamese": "Chưa... kết thúc đâu. Chúng ta... sẽ không bỏ cuộc...!",
+								"thai": "ยัง... ไม่จบหรอก. เราจะ... ไม่ยอมแพ้...!",
+								"hindi": "अभी तक... खत्म नहीं हुआ है। हम... हार नहीं मानेंगे...!"
+							},
+							"emotion": "angry"
+						}
+					],
+					"win_dialogue": [
+						{
+							"emotion": "sad",
+							"content": {
+								"korean": "…고마워… 마침내… 이 고통에서… 해방시켜 주었어….",
+								"english": "...Thank you... finally... you've freed me... from this pain....",
+								"japanese": "…ありがとう…ついに…この苦痛から…解放してくれた…。",
+								"chinese": "…谢谢…终于…将我从这份痛苦中…解放出来…。",
+								"french": "...Merci... enfin... tu m'as libéré... de cette souffrance....",
+								"spanish": "…Gracias… por fin… me has liberado… de este sufrimiento….",
+								"vietnamese": "…Cảm ơn… cuối cùng… ngươi đã giải thoát ta… khỏi nỗi đau này….",
+								"thai": "…ขอบคุณนะ… ในที่สุด… เจ้าก็ปลดปล่อยข้า… จากความเจ็บปวดนี้….",
+								"hindi": "…धन्यवाद… अंततः… तुमने मुझे… इस दर्द से… मुक्त कर दिया…।"
+							},
+							"speaker": "boss",
+							"type": "speech"
+						},
+						{
+							"emotion": "base",
+							"content": {
+								"korean": "보스의 몸을 감싸던 균류가 서서히 시들어갔다. 한때 성스러웠던 사제장의 형상이 드러났다.",
+								"english": "The fungi enveloping the boss's body slowly withered. The once holy form of the High Priest was revealed.",
+								"japanese": "ボスの体を包んでいた菌類が徐々にしおれていった。かつて神聖であった司祭長の姿が露わになった。",
+								"chinese": "缠绕在首领身上的真菌渐渐枯萎。曾经神圣的祭司长形象显露出来。",
+								"french": "Les champignons qui enveloppaient le corps du boss se sont lentement flétris. La forme autrefois sainte du Grand Prêtre fut révélée.",
+								"spanish": "Los hongos que envolvían el cuerpo del jefe se marchitaron lentamente. La forma antaño sagrada del Sumo Sacerdote fue revelada.",
+								"vietnamese": "Nấm bao phủ cơ thể tên trùm dần héo úa. Hình dạng của vị Linh mục trưởng từng thánh thiện được hé lộ.",
+								"thai": "เชื้อราที่ห่อหุ้มร่างของบอสค่อยๆ เหี่ยวเฉาลง ร่างของมหาปุโรหิตที่เคยศักดิ์สิทธิ์ก็ปรากฏขึ้น",
+								"hindi": "बॉस के शरीर को घेरे हुए कवक धीरे-धीरे मुरझा गए। एक समय पवित्र रहे महायाजक का रूप प्रकट हुआ।"
+							},
+							"speaker": "narrator",
+							"type": "speech"
+						},
+						{
+							"speaker": "character_any",
+							"type": "speech",
+							"emotion": "sad",
+							"content": {
+								"korean": "이게… 진정한 구원이었을까.",
+								"english": "Was this... true salvation?",
+								"japanese": "これが…真の救いだったのだろうか。",
+								"chinese": "这…是真正的救赎吗？",
+								"french": "Était-ce... la vraie délivrance ?",
+								"spanish": "¿Fue esto… la verdadera salvación?",
+								"vietnamese": "Đây… có phải là sự cứu rỗi thật sự không?",
+								"thai": "นี่… คือการไถ่บาปที่แท้จริงหรือเปล่า",
+								"hindi": "क्या यह… सच्ची मुक्ति थी?"
+							}
+						},
+						{
+							"content": {
+								"korean": "그러나 숲은 여전히 고통받고 있었다. '치유'는 멈췄지만, 상처는 남았다. 또 다른 굶주림이 시작될 것이다.",
+								"english": "Yet the forest still suffered. The 'healing' had ceased, but the wounds remained. Another hunger would begin.",
+								"japanese": "しかし、森は依然として苦しんでいた。「癒し」は止まったが、傷跡は残った。また別の飢えが始まるだろう。",
+								"chinese": "然而，森林依然在受苦。 “治愈”停止了，但伤痕仍在。 又一场饥饿将会开始。",
+								"french": "Cependant, la forêt souffrait toujours. La « guérison » avait cessé, mais les blessures subsistaient. Une autre faim allait commencer.",
+								"spanish": "Sin embargo, el bosque seguía sufriendo. La \"curación\" se detuvo, pero las heridas quedaron. Otra hambruna comenzará.",
+								"vietnamese": "Tuy nhiên, khu rừng vẫn còn đau khổ. \"Chữa lành\" đã dừng lại, nhưng vết thương vẫn còn. Một cơn đói khác sẽ bắt đầu.",
+								"thai": "ทว่าป่ายังคงทนทุกข์ทรมาน \"การเยียวยา\" ได้หยุดลงแล้ว แต่บาดแผลยังคงอยู่ ความหิวโหยครั้งใหม่กำลังจะเริ่มต้น",
+								"hindi": "हालाँकि, जंगल अभी भी पीड़ित था। 'उपचार' बंद हो गया था, लेकिन घाव बने रहे। एक और भूख शुरू होगी।"
+							},
+							"emotion": "base",
+							"speaker": "narrator",
+							"type": "speech"
+						}
+					],
+					"id": 15,
+					"dialogue": [
+						{
+							"speaker": "narrator",
+							"type": "speech",
+							"emotion": "base",
+							"content": {
+								"korean": "마침내 마주한 치유의 성지. 거대한 균류 덩어리가 방을 가득 채웠다. 루미나 모르타다.",
+								"english": "Finally, the Sanctuary of Healing. A massive fungal mass filled the room. Lumina Morta.",
+								"japanese": "ついに治癒の聖地と対峙した。巨大な菌類の塊が部屋を満たしていた。ルミナ・モルタだ。",
+								"chinese": "终于面对治愈圣地。巨大的菌块充满了房间。那是卢米娜·莫尔塔。",
+								"french": "Enfin, le Sanctuaire de Guérison. Une masse fongique gigantesque remplissait la pièce. Lumina Morta.",
+								"spanish": "Finalmente, el Santuario de Sanación. Una masa fúngica gigantesca llenaba la habitación. Lumina Morta.",
+								"vietnamese": "Cuối cùng, Thánh địa Chữa lành đã hiện ra. Một khối nấm khổng lồ lấp đầy căn phòng. Lumina Morta.",
+								"thai": "ในที่สุดก็เผชิญหน้ากับสถานศักดิ์สิทธิ์แห่งการเยียวยา ก้อนเชื้อราขนาดมหึมาเต็มห้อง นั่นคือลูมินา มอร์ตา",
+								"hindi": "अंततः, उपचार का पवित्र स्थान। एक विशाल कवक का ढेर कमरे में भर गया। लुमिना मोर्टा।"
+							}
+						},
+						{
+							"action": "enter",
+							"type": "direction",
+							"spot": [
+								3,
+								2
+							],
+							"speaker": "fern",
+							"duration_ms": 500
+						},
+						{
+							"emotion": "sad",
+							"content": {
+								"korean": "오셨군요… 마침내… 이 숲을, 그리고 나를… 구원해 줄 빛이…",
+								"english": "You've come... Finally... The light that will save this forest, and me...",
+								"japanese": "おいでになりましたか…ついに…この森を、そして私を…救ってくれる光が…",
+								"chinese": "您来了……终于……能拯救这片森林，以及我的……光啊……",
+								"french": "Vous êtes venu... Enfin... La lumière qui sauvera cette forêt, et moi...",
+								"spanish": "Has llegado... Finalmente... La luz que salvará este bosque, y a mí...",
+								"vietnamese": "Ngài đã đến rồi... Cuối cùng... Ánh sáng sẽ cứu lấy khu rừng này, và cả ta...",
+								"thai": "ท่านมาแล้ว... ในที่สุด... แสงสว่างที่จะช่วยป่านี้ และข้า...",
+								"hindi": "आप आ गए... अंततः... वह प्रकाश जो इस जंगल को, और मुझे... बचाएगा..."
+							},
+							"speaker": "boss",
+							"type": "speech"
+						},
+						{
+							"speaker": "narrator",
+							"type": "speech",
+							"content": {
+								"korean": "보스는 눈물처럼 빛나는 포자를 흘리며 다가왔다. 그 모습에 페른은 울먹였다.",
+								"english": "The boss approached, shedding glowing spores like tears. Fern whimpered at the sight.",
+								"japanese": "ボスは涙のように輝く胞子をこぼしながら近づいてきた。その姿にフェルンはむせび泣いた。",
+								"chinese": "Boss流着泪光般的孢子靠近。看到这一幕，费恩哽咽了。",
+								"french": "Le boss s'approcha, laissant tomber des spores brillantes comme des larmes. Fern sanglota à cette vue.",
+								"spanish": "El jefe se acercó, derramando esporas brillantes como lágrimas. Fern gimió al verlo.",
+								"vietnamese": "Boss tiến đến, rải ra những bào tử lấp lánh như nước mắt. Fern nức nở khi thấy cảnh tượng đó.",
+								"thai": "บอสเข้ามาใกล้ พร้อมร่วงหล่นสปอร์เรืองแสงราวกับน้ำตา เฟิร์นสะอื้นเมื่อเห็นภาพนั้น",
+								"hindi": "बॉस आंसू की तरह चमकते हुए बीजाणु बिखेरता हुआ पास आया। इस दृश्य पर फर्न सिसक उठी।"
+							},
+							"emotion": "base"
+						},
+						{
+							"emotion": "sad",
+							"content": {
+								"korean": "아아… 저 불쌍한 영혼… 저게… 나의… 우리 모두의 모습이었어…",
+								"english": "Ah... That poor soul... That was... my... our reflection...",
+								"japanese": "ああ…あの哀れな魂…あれが…私…私たち皆の姿だったんだ…",
+								"chinese": "啊……那个可怜的灵魂……那就是……我……我们所有人的样子啊……",
+								"french": "Ah... Cette pauvre âme... C'était... mon... notre reflet à tous...",
+								"spanish": "Ah... Esa pobre alma... Esa era... mi... la imagen de todos nosotros...",
+								"vietnamese": "A... Linh hồn đáng thương đó... Đó là... hình ảnh của ta... của tất cả chúng ta...",
+								"thai": "อ่า... วิญญาณที่น่าสงสารนั่น... นั่นคือ... ภาพของข้า... ของพวกเราทุกคน...",
+								"hindi": "आह... वह बेचारी आत्मा... वह... मेरी... हम सबकी छवि थी..."
+							},
+							"speaker": "fern",
+							"type": "speech"
+						},
+						{
+							"speaker": "character_any",
+							"type": "speech",
+							"content": {
+								"korean": "페른, 정신 차려!",
+								"english": "Fern, snap out of it!",
+								"japanese": "フェルン、しっかりしろ！",
+								"chinese": "费恩，清醒过来！",
+								"french": "Fern, reprends tes esprits !",
+								"spanish": "¡Fern, reacciona!",
+								"vietnamese": "Fern, tỉnh lại đi!",
+								"thai": "เฟิร์น ได้สติหน่อย!",
+								"hindi": "फ़र्न, होश में आओ!"
+							},
+							"emotion": "angry"
+						},
+						{
+							"content": {
+								"korean": "이제… 모든 것을… 내게 바쳐라…!",
+								"english": "Now... surrender everything... to me...!",
+								"japanese": "さあ…すべてを…我に捧げよ…！",
+								"chinese": "现在…将一切…献给我…！",
+								"french": "Maintenant... sacrifiez tout... à moi...!",
+								"spanish": "¡Ahora… entrégame… todo…!",
+								"vietnamese": "Giờ đây… hãy dâng hiến… tất cả… cho ta…!",
+								"thai": "บัดนี้… จงอุทิศทุกสิ่ง… แด่ข้า…!",
+								"hindi": "अब… सब कुछ… मुझे समर्पित करो…!"
+							},
+							"emotion": "angry",
+							"speaker": "boss",
+							"type": "speech"
+						},
+						{
+							"emotion": "base",
+							"content": {
+								"korean": "보스의 몸을 휘감던 넝쿨들이 꿈틀거리며 주변의 모든 식물들을 흡수했다. 끔찍한 비명이 터져 나왔다. 마스크 같던 얼굴이 갈라지며 붉고 탐욕스러운 촉수들이 튀어나와 탐험대를 향해 뻗었다.",
+								"english": "The vines coiling around the boss's body writhed, absorbing all surrounding plants. A horrific scream erupted. The mask-like face split open, revealing red, avaricious tentacles that lunged towards the expedition team.",
+								"japanese": "ボスの体を覆っていた蔓がうごめき、周囲のあらゆる植物を吸収していった。おぞましい悲鳴が響き渡る。仮面のような顔が裂け、赤く貪欲な触手が飛び出し、探検隊へと伸びた。",
+								"chinese": "缠绕在首领身上的藤蔓扭动着，吸收了周围所有植物。一声可怕的尖叫爆发出来。面具般的脸庞裂开，露出红色、贪婪的触手，伸向探险队。",
+								"french": "Les lianes enroulées autour du corps du boss se sont tordues, absorbant toutes les plantes environnantes. Un cri horrible a éclaté. Le visage masqué s'est fendu, révélant des tentacules rouges et avides qui se sont étendues vers l'équipe d'exploration.",
+								"spanish": "Las enredaderas que envolvían el cuerpo del jefe se retorcieron, absorbiendo todas las plantas circundantes. Un grito horrible estalló. La cara, que parecía una máscara, se partió, revelando tentáculos rojos y codiciosos que se extendieron hacia el equipo de expedición.",
+								"vietnamese": "Những dây leo quấn quanh cơ thể của tên trùm vặn vẹo, hấp thụ tất cả thực vật xung quanh. Một tiếng thét kinh hoàng vang lên. Khuôn mặt giống như mặt nạ nứt ra, để lộ những xúc tu đỏ ngầu, tham lam vươn về phía đoàn thám hiểm.",
+								"thai": "เถาวัลย์ที่พันรอบร่างของบอสบิดตัวดูดซับพืชพรรณรอบข้างทั้งหมด เสียงกรีดร้องอันน่าสยดสยองดังขึ้น ใบหน้าคล้ายหน้ากากแยกออก เผยให้เห็นหนวดสีแดงโลภโมโทสันพุ่งเข้าใส่ทีมสำรวจ",
+								"hindi": "बॉस के शरीर पर लिपटी बेलें ऐंठीं, आसपास के सभी पौधों को सोख लिया। एक भयानक चीख फूटी। नकाब जैसा चेहरा फट गया, जिससे लाल, लोभी सूंडें बाहर निकलीं और अन्वेषण दल की ओर बढ़ीं।"
+							},
+							"speaker": "narrator",
+							"type": "speech"
+						},
+						{
+							"emotion": "angry",
+							"content": {
+								"korean": "아니… 구원이 아니었어… 이것은… 갈망… 숲의… 나의… 굶주림…!",
+								"english": "No... this wasn't salvation... this is... yearning... the forest's... my... hunger...!",
+								"japanese": "違う…救いではなかった…これは…渇望…森の…私の…飢え…！",
+								"chinese": "不…这不是救赎…这是…渴望…森林的…我的…饥饿…！",
+								"french": "Non... ce n'était pas le salut... c'est... le désir... de la forêt... ma... faim...!",
+								"spanish": "No… no fue salvación… esto es… anhelo… del bosque… mi… hambre…!",
+								"vietnamese": "Không… đây không phải là sự cứu rỗi… đây là… khát khao… của rừng… của ta… cơn đói…!",
+								"thai": "ไม่… นี่ไม่ใช่การไถ่บาป… นี่คือ… ความปรารถนา… ของป่า… ความหิวโหย… ของข้า…!",
+								"hindi": "नहीं… यह मुक्ति नहीं थी… यह है… लालसा… जंगल की… मेरी… भूख…!"
+							},
+							"speaker": "boss",
+							"type": "speech"
+						},
+						{
+							"content": {
+								"korean": "안 돼…! 안 돼…!",
+								"english": "No...! No...!",
+								"japanese": "だめだ…！だめだ…！",
+								"chinese": "不…！不要…！",
+								"french": "Non… ! Non… !",
+								"spanish": "¡No…! ¡No…!",
+								"vietnamese": "Không…! Không…!",
+								"thai": "ไม่นะ…! ไม่นะ…!",
+								"hindi": "नहीं…! नहीं…!"
+							},
+							"emotion": "sad",
+							"speaker": "fern",
+							"type": "speech"
+						},
+						{
+							"speaker": "fern",
+							"duration_ms": 400,
+							"action": "exit",
+							"type": "direction",
+							"direction": "down"
+						},
+						{
+							"speaker": "character_any",
+							"type": "speech",
+							"emotion": "angry",
+							"content": {
+								"korean": "이게… 네가 말한 치유의 성지냐!",
+								"english": "Is *this*... the holy sanctuary of healing you spoke of?!",
+								"japanese": "これが…お前が言った癒しの聖地か！",
+								"chinese": "这就是…你所说的治愈圣地吗？！",
+								"french": "C'est *ça*... le sanctuaire de guérison dont tu parlais ?!",
+								"spanish": "¿¡Esto… es el santuario de curación del que hablabas!?",
+								"vietnamese": "Đây… là thánh địa chữa lành mà ngươi đã nói ư?!",
+								"thai": "นี่น่ะเหรอ… สถานศักดิ์สิทธิ์แห่งการเยียวยาที่เจ้าพูดถึง?!",
+								"hindi": "क्या यह… वही पवित्र उपचार स्थल है जिसकी तुमने बात की थी?!"
+							}
+						}
+					]
+				}
+			],
+			"epilogue": {
+				"korean": [
+					"치유의 성지에는, 잔혹한 침묵만이 남았다.",
+					"루미나 모르타의 비명은 더 이상 들리지 않았다. 그녀는 마침내 '구원'받았을까.",
+					"숲은 여전히 병들어 있었다. 사라지지 않는 상처처럼.",
+					"탐험대는 걸음을 옮겼다. 이 비극의 끝이, 또 다른 시작임을 알 수 없었다."
+				],
+				"english": [
+					"In the Sanctuary of Healing, only cruel silence remained.",
+					"Lumina Morta's screams were no longer heard. Was she finally 'saved'?",
+					"The forest was still sick. Like an unhealing wound.",
+					"The expedition moved on. Unaware that the end of this tragedy was another beginning."
+				],
+				"japanese": [
+					"癒しの聖地には、残酷な沈黙だけが残った。",
+					"ルミナ・モルタの悲鳴はもう聞こえなかった。彼女はついに「救済」されたのだろうか。",
+					"森は依然として病んでいた。消えない傷のように。",
+					"探検隊は歩みを進めた。この悲劇の終わりが、また別の始まりであることを知る由もなく。"
+				],
+				"chinese": [
+					"治愈圣地，只剩下残酷的沉默。",
+					"卢米娜·莫尔塔的尖叫声不再响起。她最终获得“救赎”了吗？",
+					"森林依然病态。像一道无法愈合的伤口。",
+					"探险队继续前行。他们不知道，这场悲剧的结束，是另一个开始。"
+				],
+				"french": [
+					"Dans le Sanctuaire de la Guérison, seul un silence cruel subsistait.",
+					"Les cris de Lumina Morta ne se faisaient plus entendre. Était-elle enfin « sauvée » ?",
+					"La forêt était toujours malade. Comme une blessure incurable.",
+					"L'expédition poursuivit son chemin. Ignorant que la fin de cette tragédie était un autre commencement."
+				],
+				"spanish": [
+					"En el Santuario de la Curación, solo quedó un silencio cruel.",
+					"Los gritos de Lumina Morta ya no se escuchaban. ¿Fue finalmente 'salvada'?",
+					"El bosque seguía enfermo. Como una herida que no cicatriza.",
+					"La expedición siguió adelante. Sin saber que el final de esta tragedia era otro comienzo."
+				],
+				"vietnamese": [
+					"Tại Thánh địa Chữa lành, chỉ còn lại sự im lặng tàn khốc.",
+					"Tiếng hét của Lumina Morta không còn nữa. Nàng cuối cùng đã được 'cứu rỗi' chưa?",
+					"Rừng vẫn còn bệnh. Giống như một vết thương không lành.",
+					"Đoàn thám hiểm tiếp tục lên đường. Không hề hay biết rằng kết thúc của bi kịch này, lại là một khởi đầu khác."
+				],
+				"thai": [
+					"ในสถานศักดิ์สิทธิ์แห่งการเยียวยา มีเพียงความเงียบอันโหดร้ายเท่านั้นที่เหลืออยู่",
+					"เสียงกรีดร้องของลูมิน่า มอร์ต้าไม่ดังอีกต่อไป ในที่สุดนางก็ 'ได้รับการไถ่บาป' แล้วหรือ?",
+					"ป่ายังคงป่วย เหมือนบาดแผลที่ไม่หายขาด",
+					"คณะสำรวจเดินหน้าต่อไป โดยไม่รู้ว่าจุดจบของโศกนาฏกรรมนี้คือการเริ่มต้นใหม่อีกครั้ง"
+				],
+				"hindi": [
+					"उपचार के पवित्र स्थान में, केवल क्रूर सन्नाटा रह गया।",
+					"लुमिना मोर्टा की चीखें अब सुनाई नहीं दे रही थीं। क्या उसे आखिरकार 'बचाया' गया था?",
+					"जंगल अभी भी बीमार था। एक न भरने वाले घाव की तरह।",
+					"अभियान आगे बढ़ गया। यह नहीं जानते हुए कि इस त्रासदी का अंत एक और शुरुआत थी।"
+				]
+			}
+		}
+	]
+}

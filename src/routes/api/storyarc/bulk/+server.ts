@@ -26,11 +26,40 @@ import type { RequestHandler } from './$types';
 
 type Failure = { boss: string; step: string; error: string };
 
+// chapter_name 각 언어 12자 이내 강제(결정론적). 부제 제거 → 첫 문장 → 단어경계로 ≤12 절단.
+const TITLE_CHAR_LIMIT = 12;
+function clampTitle(t: string): string {
+	let s = (t ?? '').trim();
+	for (const sep of ['：', ':', '—', '–']) {
+		const i = s.indexOf(sep);
+		if (i > 0) s = s.slice(0, i).trim();
+	}
+	const sentences = s
+		.split(/[.。!?]/)
+		.map((p) => p.trim())
+		.filter(Boolean);
+	if (sentences.length) s = sentences[0];
+	if (s.length > TITLE_CHAR_LIMIT) {
+		const cut = s.slice(0, TITLE_CHAR_LIMIT);
+		if (s.length === TITLE_CHAR_LIMIT || s[TITLE_CHAR_LIMIT] === ' ') s = cut.trim();
+		else if (cut.includes(' ')) s = cut.slice(0, cut.lastIndexOf(' ')).trim();
+		else s = cut.trim();
+	}
+	return s;
+}
+function clampChapterName(cn: unknown): Record<string, string> {
+	const out: Record<string, string> = {};
+	for (const [k, v] of Object.entries((cn ?? {}) as Record<string, string>)) out[k] = clampTitle(String(v));
+	return out;
+}
+
 export const POST: RequestHandler = async ({ request, fetch }) => {
 	const body = await request.json();
 	const theme: string = body.theme ?? 'snowy';
 	const concurrency = Math.max(1, Math.min(10, Number(body.concurrency) || 3));
 	const dryRun: boolean = Boolean(body.dryRun);
+	// 다양성: 생성 temperature (기본 1.2, body로 override). 변주 디렉티브와 함께 작동.
+	const temperature: number = body.temperature !== undefined ? Number(body.temperature) : 1.2;
 	const bossIndices: number[] | undefined = Array.isArray(body.bossIndices)
 		? body.bossIndices.map(Number)
 		: undefined;
@@ -51,8 +80,10 @@ export const POST: RequestHandler = async ({ request, fetch }) => {
 	} catch (e) {
 		return json({ error: `boss_list 로드 실패: ${e instanceof Error ? e.message : String(e)}` }, { status: 500 });
 	}
-	if (!Array.isArray(bosses) || bosses.length !== SERIES.length) {
-		return json({ error: `boss_list 보스 수(${bosses?.length})가 매핑(${SERIES.length})과 다릅니다.` }, { status: 400 });
+	// 매핑은 boss_list 순서의 prefix 부분집합 허용(예: hell 은 boss0 1개만 매핑).
+	// 매핑이 boss_list 보다 길면 정렬이 어긋난 것이므로 오류.
+	if (!Array.isArray(bosses) || SERIES.length > bosses.length) {
+		return json({ error: `매핑 보스 수(${SERIES.length})가 boss_list(${bosses?.length})보다 많습니다.` }, { status: 400 });
 	}
 
 	const npcs: NpcInput[] = npcPool.map((n) => ({
@@ -82,12 +113,15 @@ export const POST: RequestHandler = async ({ request, fetch }) => {
 
 	const failed: Failure[] = [];
 	const ok: string[] = [];
+	// chapter_name 12단어 초과 비-치명 경고(파일은 저장). 공백 split 기준 → 중/일/태 등 비-공백 언어는 자연 통과.
+	const warnings: { id: string; lang: string; words: number }[] = [];
+	const WORD_LIMIT = 12;
 
 	async function gemini(message: string, tools: unknown, fnName: string) {
 		const res = await fetch('/api/gemini', {
 			method: 'POST',
 			headers: { 'Content-Type': 'application/json' },
-			body: JSON.stringify({ message, tools, tool_choice: { type: 'function', function: { name: fnName } } })
+			body: JSON.stringify({ message, tools, tool_choice: { type: 'function', function: { name: fnName } }, temperature })
 		});
 		const data = await res.json().catch(() => null);
 		if (!res.ok || !data?.tool_result) {
@@ -124,7 +158,7 @@ export const POST: RequestHandler = async ({ request, fetch }) => {
 			const arc = {
 				id,
 				level,
-				chapter_name: gen.chapter_name,
+				chapter_name: clampChapterName(gen.chapter_name),
 				theme,
 				rising_count: 3,
 				world: gen.world,
@@ -139,6 +173,12 @@ export const POST: RequestHandler = async ({ request, fetch }) => {
 
 			const content = `import type { StoryArc } from '$lib/types';\n\nexport const ${exportName}: StoryArc = ${JSON.stringify(arc, null, '\t')};\n`;
 			await writeFile(join(process.cwd(), outDir, fileFor(key, level)), content, 'utf-8');
+
+			// chapter_name 12단어 제한 검사(비-치명)
+			for (const [lang, text] of Object.entries((gen.chapter_name ?? {}) as Record<string, string>)) {
+				const words = String(text).trim().split(/\s+/).filter(Boolean).length;
+				if (words > WORD_LIMIT) warnings.push({ id, lang, words });
+			}
 
 			ok.push(id);
 		} catch (e) {
@@ -156,5 +196,5 @@ export const POST: RequestHandler = async ({ request, fetch }) => {
 	}
 	await Promise.all(Array.from({ length: concurrency }, () => worker()));
 
-	return json({ theme, bosses: targets.length, okCount: ok.length, ok, failedCount: failed.length, failed });
+	return json({ theme, bosses: targets.length, okCount: ok.length, ok, failedCount: failed.length, failed, warnings });
 };

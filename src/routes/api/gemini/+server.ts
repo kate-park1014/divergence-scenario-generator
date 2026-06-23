@@ -3,7 +3,7 @@ import { json } from '@sveltejs/kit';
 import type { RequestHandler } from './$types';
 
 export const POST: RequestHandler = async ({ request }) => {
-	const { message, tools, tool_choice } = await request.json();
+	const { message, tools, tool_choice, temperature, top_p } = await request.json();
 
 	const apiUrl = 'https://generativelanguage.googleapis.com/v1beta/openai/chat/completions';
 
@@ -11,6 +11,10 @@ export const POST: RequestHandler = async ({ request }) => {
 		model: 'gemini-2.5-flash',
 		messages: [{ role: 'user', content: message }]
 	};
+
+	// 샘플링 파라미터: 넘어온 경우에만 전달 (미지정 시 기존 동작 유지)
+	if (temperature !== undefined) body.temperature = temperature;
+	if (top_p !== undefined) body.top_p = top_p;
 
 	if (tools) {
 		body.tools = tools;

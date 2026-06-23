@@ -1,0 +1,3645 @@
+{
+	"chapter_order": 26,
+	"difficulty_level": 26,
+	"chapter_name": {
+		"spanish": "Muertos",
+		"korean": "얼음 망자",
+		"hindi": "बर्फीले मृत",
+		"french": "Morts Glacés",
+		"vietnamese": "Người Chết",
+		"thai": "วิญญาณน้ำแข็",
+		"japanese": "氷結の亡者",
+		"english": "Icebound",
+		"chinese": "冰封亡者"
+	},
+	"scenarios": [
+		{
+			"scenario_id": "snowy_gravemist_25_01",
+			"order": 1,
+			"act": "intro",
+			"theme": "snowy",
+			"actors": {
+				"eira": {
+					"id": "mon_0c37c014-b5ca-4f2f-ad03-5d393e5b2eb1",
+					"name": {
+						"korean": "에이라",
+						"english": "Eira",
+						"japanese": "エイラ",
+						"chinese": "艾拉",
+						"french": "Eira",
+						"spanish": "Eira",
+						"vietnamese": "Eira",
+						"thai": "ไอรา",
+						"hindi": "ऐरा"
+					},
+					"description": "",
+					"face_image_url": "https://imagedelivery.net/WTEqQNGFb-l-IHS6IGnzUQ/8e2970b7-bcb1-4b1c-6bf0-93106b373500/public",
+					"battle_sprite_url": "https://imagedelivery.net/WTEqQNGFb-l-IHS6IGnzUQ/0ca1ec09-a624-450f-054a-b98de58bdb00/public"
+				}
+			},
+			"boss": {
+				"pool_id": "random_boss"
+			},
+			"rooms": [
+				{
+					"id": 1,
+					"dialogue": [
+						{
+							"speaker": "narrator",
+							"content": {
+								"korean": "거대한 얼음 배가 눈보라 속에 정박해 있었다. 죽음의 침묵이 흐른다.",
+								"english": "A colossal ice ship was anchored in the blizzard. The silence of death permeated.",
+								"japanese": "巨大な氷の船が吹雪の中に停泊していた。死の沈黙が流れる。",
+								"chinese": "一艘巨大的冰船停泊在暴风雪中。死亡的寂静弥漫着。",
+								"french": "Un colossal navire de glace était ancré dans le blizzard. Le silence de la mort régnait.",
+								"spanish": "Un colosal barco de hielo estaba anclado en la ventisca. El silencio de la muerte reinaba.",
+								"vietnamese": "Một con tàu băng khổng lồ neo đậu giữa bão tuyết. Sự im lặng chết chóc bao trùm.",
+								"thai": "เรือน้ำแข็งขนาดมหึมากำลังจอดทอดสมออยู่ในพายุหิมะ. ความเงียบงันแห่งความตายปกคลุมไปทั่ว.",
+								"hindi": "एक विशाल बर्फ़ीला जहाज़ बर्फीले तूफ़ान में लंगर डाले खड़ा था। मौत की खामोशी पसरी हुई थी।"
+							},
+							"emotion": "base",
+							"type": "speech"
+						},
+						{
+							"content": {
+								"korean": "이 배가... 그레이브미스트?",
+								"english": "This ship... Gravemist?",
+								"japanese": "この船が... グレイブミスト？",
+								"chinese": "这艘船是... 格雷夫米斯特？",
+								"french": "Ce navire... Gravemist ?",
+								"spanish": "Este barco... ¿Gravemist?",
+								"vietnamese": "Con tàu này... Gravemist?",
+								"thai": "เรือลำนี้... เกรฟมิสต์?",
+								"hindi": "यह जहाज़... ग्रेवमिस्ट?"
+							},
+							"emotion": "base",
+							"type": "speech",
+							"speaker": "character_any"
+						},
+						{
+							"type": "direction",
+							"speaker": "eira",
+							"duration_ms": 500,
+							"spot": [
+								4,
+								2
+							],
+							"action": "enter"
+						},
+						{
+							"type": "speech",
+							"content": {
+								"korean": "오셨군요. 망자들을 위한 의식이 시작될 시간입니다.",
+								"english": "You've arrived. It's time for the ritual for the departed to begin.",
+								"japanese": "いらっしゃいましたね。亡者たちのための儀式が始まる時間です。",
+								"chinese": "您来了。为亡灵举行的仪式该开始了。",
+								"french": "Vous êtes arrivé. Il est temps que le rituel pour les défunts commence.",
+								"spanish": "Ha llegado. Es hora de que comience el ritual para los difuntos.",
+								"vietnamese": "Ngài đã đến. Đã đến lúc nghi thức dành cho những người đã khuất bắt đầu.",
+								"thai": "ท่านมาแล้ว. ได้เวลาที่พิธีกรรมสำหรับผู้ล่วงลับจะเริ่มต้นขึ้น.",
+								"hindi": "आप आ गए हैं। मृतकों के लिए अनुष्ठान शुरू होने का समय हो गया है।"
+							},
+							"emotion": "base",
+							"speaker": "eira"
+						},
+						{
+							"speaker": "character_any",
+							"type": "speech",
+							"content": {
+								"korean": "의식이라니. 대체 여기서 뭘 하려는 거지?",
+								"english": "A ritual? What exactly are you trying to do here?",
+								"japanese": "儀式だと。一体ここで何をしようとしている？",
+								"chinese": "仪式？你到底想在这里做什么？",
+								"french": "Un rituel ? Que comptez-vous faire ici exactement ?",
+								"spanish": "¿Un ritual? ¿Qué intentas hacer aquí exactamente?",
+								"vietnamese": "Nghi thức ư? Ngươi rốt cuộc định làm gì ở đây?",
+								"thai": "พิธีกรรมงั้นหรือ. ท่านกำลังจะทำอะไรที่นี่กันแน่?",
+								"hindi": "एक अनुष्ठान? तुम यहाँ क्या करने की कोशिश कर रहे हो?"
+							},
+							"emotion": "base"
+						},
+						{
+							"speaker": "eira",
+							"content": {
+								"korean": "그들의 영원한 안식을 위해, 이 배는 잠시 정박합니다.",
+								"english": "For their eternal rest, this ship briefly anchors.",
+								"japanese": "彼らの永遠の安息のために、この船はしばらく停泊します。",
+								"chinese": "为了他们永恒的安息，这艘船会暂时停泊。",
+								"french": "Pour leur repos éternel, ce navire s'ancre brièvement.",
+								"spanish": "Para su descanso eterno, este barco ancla brevemente.",
+								"vietnamese": "Vì sự an nghỉ vĩnh hằng của họ, con tàu này tạm thời neo đậu.",
+								"thai": "เพื่อการพักผ่อนนิรันดร์ของพวกเขา, เรือลำนี้จะจอดทอดสมอชั่วคราว.",
+								"hindi": "उनके शाश्वत विश्राम के लिए, यह जहाज़ कुछ समय के लिए लंगर डालेगा।"
+							},
+							"emotion": "base",
+							"type": "speech"
+						}
+					]
+				},
+				{
+					"dialogue": [
+						{
+							"type": "direction",
+							"speaker": "eira",
+							"duration_ms": 500,
+							"action": "enter",
+							"spot": [
+								3,
+								2
+							]
+						},
+						{
+							"speaker": "eira",
+							"content": {
+								"korean": "이 벽면에 새겨진 룬들을 보세요. 모두 부서져 있습니다.",
+								"english": "Look at the runes carved into this wall. They are all broken.",
+								"japanese": "この壁面に刻まれたルーンを見てください。全て壊れています。",
+								"chinese": "看看这面墙上刻的符文。它们都碎了。",
+								"french": "Regardez les runes gravées sur ce mur. Elles sont toutes brisées.",
+								"spanish": "Mira las runas grabadas en esta pared. Todas están rotas.",
+								"vietnamese": "Hãy nhìn những ký tự rune được khắc trên bức tường này. Tất cả đều đã vỡ nát.",
+								"thai": "ดูอักษรรูนที่แกะสลักบนกำแพงนี้สิ. พวกมันแตกหักทั้งหมด.",
+								"hindi": "इस दीवार पर खुदे हुए रून्स को देखो। वे सब टूटे हुए हैं।"
+							},
+							"emotion": "sad",
+							"type": "speech"
+						},
+						{
+							"content": {
+								"korean": "깨진 룬이라... 무슨 의미지?",
+								"english": "Broken rune... What does it mean?",
+								"japanese": "壊れたルーン…どういう意味だ？",
+								"chinese": "破碎的符文... 是什么意思？",
+								"french": "Une rune brisée... Qu'est-ce que ça signifie ?",
+								"spanish": "Una runa rota... ¿Qué significa?",
+								"vietnamese": "Một rune đã vỡ... Nó có ý nghĩa gì?",
+								"thai": "รูนที่แตกสลาย... หมายความว่าอะไร?",
+								"hindi": "टूटा हुआ रूण... इसका क्या मतलब है?"
+							},
+							"emotion": "base",
+							"type": "speech",
+							"speaker": "character_any"
+						},
+						{
+							"speaker": "eira",
+							"content": {
+								"korean": "지켜지지 못한 맹세, 파괴된 약속들. 이 배의 역사는 비극으로 점철되어 있죠.",
+								"english": "Unkept vows, shattered promises. This ship's history is steeped in tragedy.",
+								"japanese": "守られなかった誓い、破られた約束。この船の歴史は悲劇に満ちています。",
+								"chinese": "未兑现的誓言，被打破的承诺。这艘船的历史充满了悲剧。",
+								"french": "Serments non tenus, promesses brisées. L'histoire de ce navire est parsemée de tragédie.",
+								"spanish": "Votos incumplidos, promesas rotas. La historia de este barco está plagada de tragedia.",
+								"vietnamese": "Lời thề không được giữ, những lời hứa tan vỡ. Lịch sử con tàu này đẫm máu bi kịch.",
+								"thai": "คำสาบานที่มิอาจรักษาไว้ได้, คำสัญญาที่พังทลาย. ประวัติศาสตร์ของเรือลำนี้เต็มไปด้วยโศกนาฏกรรม.",
+								"hindi": "अधूरे वादे, टूटे हुए वचन। इस जहाज़ का इतिहास त्रासदी से भरा है।"
+							},
+							"emotion": "sad",
+							"type": "speech"
+						},
+						{
+							"speaker": "character_any",
+							"content": {
+								"korean": "맹세가 깨지면... 어떻게 되는 건데?",
+								"english": "If a vow is broken... what happens then?",
+								"japanese": "誓いが破られたら…どうなるんだ？",
+								"chinese": "如果誓言被打破... 会怎么样？",
+								"french": "Si un serment est brisé... que se passe-t-il ?",
+								"spanish": "Si un voto se rompe... ¿qué ocurre?",
+								"vietnamese": "Nếu một lời thề bị phá vỡ... thì sao?",
+								"thai": "ถ้าคำสาบานถูกหัก... จะเกิดอะไรขึ้น?",
+								"hindi": "अगर कोई शपथ टूटती है... तो क्या होता है?"
+							},
+							"emotion": "base",
+							"type": "speech"
+						},
+						{
+							"speaker": "eira",
+							"content": {
+								"korean": "영혼은 묶입니다. 영원히.",
+								"english": "Souls are bound. Forever.",
+								"japanese": "魂は縛られます。永遠に。",
+								"chinese": "灵魂被束缚。永远。",
+								"french": "Les âmes sont liées. Pour toujours.",
+								"spanish": "Las almas quedan atadas. Para siempre.",
+								"vietnamese": "Các linh hồn bị ràng buộc. Mãi mãi.",
+								"thai": "วิญญาณจะถูกผูกมัด. ชั่วนิรันดร์.",
+								"hindi": "आत्माएं बंध जाती हैं। हमेशा के लिए।"
+							},
+							"emotion": "base",
+							"type": "speech"
+						}
+					],
+					"id": 3
+				},
+				{
+					"dialogue": [
+						{
+							"duration_ms": 500,
+							"action": "enter",
+							"spot": [
+								2,
+								2
+							],
+							"type": "direction",
+							"speaker": "eira"
+						},
+						{
+							"type": "speech",
+							"content": {
+								"korean": "차가운 눈보라 속에서 애잔한 멜로디가 들려왔다.",
+								"english": "Amidst the cold blizzard, a mournful melody echoed.",
+								"japanese": "冷たい吹雪の中、哀愁を帯びたメロディーが聞こえてきた。",
+								"chinese": "在寒冷的暴风雪中，传来一阵哀怨的旋律。",
+								"french": "Au milieu du blizzard glacial, une mélodie mélancolique résonnait.",
+								"spanish": "Entre la fría ventisca, una melancólica melodía resonó.",
+								"vietnamese": "Giữa bão tuyết lạnh giá, một giai điệu buồn vang vọng.",
+								"thai": "ท่ามกลางพายุหิมะอันหนาวเหน็บ, ท่วงทำนองอันโศกเศร้าแว่วมา.",
+								"hindi": "ठंडी बर्फीली आंधी के बीच, एक उदास धुन गूंज उठी।"
+							},
+							"emotion": "base",
+							"speaker": "narrator"
+						},
+						{
+							"speaker": "eira",
+							"content": {
+								"korean": "들리십니까? 망자들의 노래입니다. 끝없는 여정을 노래하죠.",
+								"english": "Do you hear it? It's the song of the dead. Singing of an endless journey.",
+								"japanese": "聞こえますか？亡者たちの歌です。終わりのない旅を歌っています。",
+								"chinese": "你听到了吗？那是亡者的歌。歌颂着无尽的旅程。",
+								"french": "L'entendez-vous ? C'est le chant des morts. Chantant un voyage sans fin.",
+								"spanish": "¿Lo oyes? Es el canto de los muertos. Cantando un viaje sin fin.",
+								"vietnamese": "Anh có nghe thấy không? Đó là bài ca của những người đã khuất. Hát về một hành trình bất tận.",
+								"thai": "ได้ยินไหม? นี่คือเพลงของผู้ตาย. ขับขานเรื่องราวการเดินทางอันไม่สิ้นสุด.",
+								"hindi": "क्या आपको सुनाई दे रहा है? यह मृतकों का गीत है। एक अंतहीन यात्रा का गीत।"
+							},
+							"emotion": "sad",
+							"type": "speech"
+						},
+						{
+							"speaker": "character_any",
+							"type": "speech",
+							"content": {
+								"korean": "노래가 왜 이렇게 슬프지... 안식을 찾지 못했다는 건가.",
+								"english": "Why is the song so sad...? Does it mean they haven't found peace?",
+								"japanese": "なぜこんなに悲しい歌なんだ…安息を見つけられなかったのか。",
+								"chinese": "为什么这首歌如此悲伤... 难道他们没有找到安息吗？",
+								"french": "Pourquoi ce chant est-il si triste... Cela signifie-t-il qu'ils n'ont pas trouvé la paix ?",
+								"spanish": "¿Por qué es tan triste la canción...? ¿Significa que no han encontrado la paz?",
+								"vietnamese": "Sao bài hát lại buồn thế này... Có phải họ vẫn chưa tìm thấy sự an nghỉ không?",
+								"thai": "ทำไมเพลงถึงเศร้าขนาดนี้... หมายความว่าพวกเขาไม่ได้พักผ่อนอย่างสงบหรือไง?",
+								"hindi": "यह गीत इतना दुखद क्यों है...? क्या इसका मतलब है कि उन्हें शांति नहीं मिली?"
+							},
+							"emotion": "sad"
+						},
+						{
+							"speaker": "eira",
+							"type": "speech",
+							"content": {
+								"korean": "이곳에서는 그 누구도 정착할 수 없습니다. 저주가 끊이지 않으니까요.",
+								"english": "No one can settle here. For the curse never ceases.",
+								"japanese": "ここでは誰も安住できません。呪いが絶えることがないからです。",
+								"chinese": "在这里无人能定居。因为诅咒永无止境。",
+								"french": "Personne ne peut s'établir ici. Car la malédiction ne cesse jamais.",
+								"spanish": "Nadie puede establecerse aquí. Porque la maldición nunca cesa.",
+								"vietnamese": "Không ai có thể định cư ở đây. Vì lời nguyền không bao giờ dứt.",
+								"thai": "ที่นี่ไม่มีใครสามารถตั้งรกรากได้. เพราะคำสาปไม่เคยจางหายไป.",
+								"hindi": "यहां कोई नहीं बस सकता। क्योंकि श्राप कभी खत्म नहीं होता।"
+							},
+							"emotion": "base"
+						}
+					],
+					"id": 5
+				},
+				{
+					"id": 9,
+					"dialogue": [
+						{
+							"type": "direction",
+							"speaker": "eira",
+							"duration_ms": 500,
+							"spot": [
+								2,
+								2
+							],
+							"action": "enter"
+						},
+						{
+							"type": "speech",
+							"content": {
+								"korean": "낡은 일지가 발에 밟혔다. 고통이 느껴지는 글씨체였다.",
+								"english": "An old journal was underfoot. The handwriting spoke of pain.",
+								"japanese": "古い日誌が足元に転がっていた。苦痛がにじみ出るような筆跡だった。",
+								"chinese": "一本旧日志被踩在脚下。那笔迹透露着痛苦。",
+								"french": "Un vieux journal était sous mes pieds. L'écriture laissait transparaître la douleur.",
+								"spanish": "Un viejo diario estaba bajo mis pies. La letra transmitía dolor.",
+								"vietnamese": "Một cuốn nhật ký cũ bị đạp dưới chân. Nét chữ đầy nỗi đau.",
+								"thai": "สมุดบันทึกเก่าๆ เล่มหนึ่งถูกเหยียบอยู่ใต้เท้า. ลายมือแสดงถึงความเจ็บปวด.",
+								"hindi": "एक पुरानी डायरी पैरों के नीचे पड़ी थी। लिखावट में दर्द झलक रहा था।"
+							},
+							"emotion": "base",
+							"speaker": "narrator"
+						},
+						{
+							"speaker": "eira",
+							"content": {
+								"korean": "선장의 기록입니다. '잃어버린 명예', '감당할 수 없는 죄책감'...",
+								"english": "It's the captain's log. \"Lost honor,\" \"unbearable guilt\"...",
+								"japanese": "船長の記録です。「失われた名誉」、「耐えがたい罪悪感」…",
+								"chinese": "这是船长的日志。“失去的荣誉”，“无法承受的罪恶感”...",
+								"french": "C'est le journal du capitaine. \"Honneur perdu\", \"culpabilité insupportable\"...",
+								"spanish": "Es el diario del capitán. \"Honor perdido\", \"culpa insoportable\"...",
+								"vietnamese": "Đó là nhật ký của thuyền trưởng. \"Danh dự đã mất\", \"tội lỗi không thể chịu đựng được\"...",
+								"thai": "มันคือบันทึกของกัปตัน. \"เกียรติยศที่สูญหาย\", \"ความรู้สึกผิดที่ไม่อาจทานทนได้\"...",
+								"hindi": "यह कप्तान का लॉग है। \"खोया हुआ सम्मान\", \"असहनीय अपराधबोध\"..."
+							},
+							"emotion": "sad",
+							"type": "speech"
+						},
+						{
+							"speaker": "character_any",
+							"type": "speech",
+							"content": {
+								"korean": "죄책감? 이 배에는 무슨 비밀이 있는 거지?",
+								"english": "Guilt? What secret does this ship hold?",
+								"japanese": "罪悪感？この船にはどんな秘密があるんだ？",
+								"chinese": "罪恶感？这艘船上有什么秘密？",
+								"french": "Culpabilité ? Quel secret cache ce navire ?",
+								"spanish": "¿Culpa? ¿Qué secreto esconde este barco?",
+								"vietnamese": "Cảm giác tội lỗi? Con tàu này che giấu bí mật gì?",
+								"thai": "ความรู้สึกผิด? เรือลำนี้มีความลับอะไรกันแน่?",
+								"hindi": "अपराधबोध? इस जहाज में क्या रहस्य है?"
+							},
+							"emotion": "base"
+						},
+						{
+							"content": {
+								"korean": "모든 영혼을 이 배에 묶어둔, 비극적인 진실이 숨겨져 있습니다.",
+								"english": "A tragic truth is hidden, binding all souls to this ship.",
+								"japanese": "全ての魂をこの船に縛り付けている、悲劇的な真実が隠されています。",
+								"chinese": "一个悲剧性的真相被隐藏着，它将所有灵魂束缚在这艘船上。",
+								"french": "Une vérité tragique est cachée, liant toutes les âmes à ce navire.",
+								"spanish": "Una verdad trágica se esconde, atando a todas las almas a este barco.",
+								"vietnamese": "Một sự thật bi thảm đang ẩn giấu, trói buộc mọi linh hồn vào con tàu này.",
+								"thai": "ความจริงอันน่าเศร้าถูกซ่อนไว้ ผูกมัดทุกดวงวิญญาณไว้กับเรือลำนี้",
+								"hindi": "एक दुखद सच छिपा हुआ है, जो सभी आत्माओं को इस जहाज से बांधे हुए है।"
+							},
+							"emotion": "base",
+							"type": "speech",
+							"speaker": "eira"
+						}
+					]
+				},
+				{
+					"win_dialogue": [
+						{
+							"speaker": "narrator",
+							"content": {
+								"korean": "거대한 그림자가 서서히 사라졌다. 얼어붙은 공간에 침묵이 찾아왔다.",
+								"english": "The colossal shadow slowly faded. Silence fell upon the frozen space.",
+								"japanese": "巨大な影がゆっくりと消えていった。凍てついた空間に沈黙が訪れた。",
+								"chinese": "巨大的黑影渐渐消散。冰冷的空间中一片寂静。",
+								"french": "L'ombre colossale s'évanouit lentement. Le silence tomba sur l'espace gelé.",
+								"spanish": "La sombra colosal se desvaneció lentamente. El silencio reinó en el espacio helado.",
+								"vietnamese": "Bóng tối khổng lồ dần tan biến. Sự im lặng bao trùm không gian đóng băng.",
+								"thai": "เงาขนาดมหึมาค่อยๆ จางหายไป ความเงียบงันเข้ามาแทนที่ในพื้นที่อันเยือกแข็ง",
+								"hindi": "विशाल छाया धीरे-धीरे लुप्त हो गई। जमे हुए स्थान में खामोशी छा गई।"
+							},
+							"emotion": "base",
+							"type": "speech"
+						},
+						{
+							"action": "enter",
+							"spot": [
+								3,
+								2
+							],
+							"duration_ms": 500,
+							"speaker": "eira",
+							"type": "direction"
+						},
+						{
+							"content": {
+								"korean": "나는... 단지... 지키려 했을 뿐... 족쇄를... 풀지 마라...",
+								"english": "I... merely... tried to protect... Don't... break the chains...",
+								"japanese": "私は… ただ… 守ろうと… しただけだ… 枷を… 解くな…",
+								"chinese": "我…… 只是…… 想要守护…… 别…… 解开束缚……",
+								"french": "Je... voulais seulement... protéger... Ne... brisez pas les chaînes...",
+								"spanish": "Yo... solo... intenté proteger... No... rompas las cadenas...",
+								"vietnamese": "Ta... chỉ... muốn bảo vệ... Đừng... tháo xiềng xích...",
+								"thai": "ข้า... เพียงแค่... พยายามปกป้อง... อย่า... ปลดโซ่ตรวน...",
+								"hindi": "मैं... बस... रक्षा करना चाहता था... जंजीरों को... मत तोड़ना..."
+							},
+							"emotion": "sad",
+							"type": "speech",
+							"speaker": "random_boss"
+						},
+						{
+							"speaker": "character_any",
+							"type": "speech",
+							"content": {
+								"korean": "족쇄? 뭘 지키려고 했다는 거야?",
+								"english": "Shackles? What were you trying to protect?",
+								"japanese": "足枷？何を守ろうとしていたの？",
+								"chinese": "桎梏？你想保护什么？",
+								"french": "Des chaînes ? Que cherchiez-vous à protéger ?",
+								"spanish": "¿Grilletes? ¿Qué intentabas proteger?",
+								"vietnamese": "Cùm à? Ngươi định bảo vệ cái gì?",
+								"thai": "โซ่ตรวน? คุณพยายามจะปกป้องอะไร?",
+								"hindi": "बेड़ियाँ? तुम क्या बचाने की कोशिश कर रहे थे?"
+							},
+							"emotion": "base"
+						},
+						{
+							"speaker": "eira",
+							"content": {
+								"korean": "이 저주를 멈추는 데 도움이 되었습니다. 하지만... 아직 끝나지 않았습니다.",
+								"english": "You've helped stop this curse. But... it's not over yet.",
+								"japanese": "この呪いを止めるのに役立ちました。しかし…まだ終わっていません。",
+								"chinese": "你帮助阻止了这个诅咒。但是……还没有结束。",
+								"french": "Vous avez aidé à arrêter cette malédiction. Mais... ce n'est pas encore fini.",
+								"spanish": "Has ayudado a detener esta maldición. Pero... aún no ha terminado.",
+								"vietnamese": "Ngươi đã giúp ngăn chặn lời nguyền này. Nhưng... nó vẫn chưa kết thúc.",
+								"thai": "คุณช่วยหยุดคำสาปนี้ได้ แต่... มันยังไม่จบ",
+								"hindi": "आपने इस श्राप को रोकने में मदद की है। लेकिन... यह अभी खत्म नहीं हुआ है।"
+							},
+							"emotion": "base",
+							"type": "speech"
+						},
+						{
+							"type": "speech",
+							"content": {
+								"korean": "유령선의 저주는 계속되었다. 새로운 미스터리가 탐험대를 기다리고 있었다.",
+								"english": "The ghost ship's curse continued. A new mystery awaited the expedition.",
+								"japanese": "幽霊船の呪いは続いた。新たな謎が探検隊を待っていた。",
+								"chinese": "幽灵船的诅咒仍在继续。新的谜团等待着探险队。",
+								"french": "La malédiction du vaisseau fantôme continua. Un nouveau mystère attendait l'expédition.",
+								"spanish": "La maldición del barco fantasma continuó. Un nuevo misterio esperaba a la expedición.",
+								"vietnamese": "Lời nguyền của con tàu ma vẫn tiếp diễn. Một bí ẩn mới đang chờ đợi đoàn thám hiểm.",
+								"thai": "คำสาปของเรือผีสิงยังคงดำเนินต่อไป ความลึกลับใหม่กำลังรอคณะสำรวจอยู่",
+								"hindi": "भूतिया जहाज का श्राप जारी रहा। एक नया रहस्य अभियान का इंतजार कर रहा था।"
+							},
+							"emotion": "base",
+							"speaker": "narrator"
+						}
+					],
+					"lose_dialogue": [
+						{
+							"speaker": "narrator",
+							"content": {
+								"korean": "탐험대는 얼어붙은 바닥에 쓰러졌다. 거대한 그림자가 그들을 덮쳤다.",
+								"english": "The expedition fell to the frozen floor. A giant shadow enveloped them.",
+								"japanese": "探検隊は凍った床に倒れた。巨大な影が彼らを覆った。",
+								"chinese": "探险队倒在了冰冷的地面上。一个巨大的影子笼罩了他们。",
+								"french": "L'expédition s'effondra sur le sol gelé. Une ombre gigantesque les enveloppa.",
+								"spanish": "La expedición cayó al suelo helado. Una sombra gigante los envolvió.",
+								"vietnamese": "Đoàn thám hiểm ngã xuống sàn băng giá. Một cái bóng khổng lồ bao trùm lấy họ.",
+								"thai": "คณะสำรวจล้มลงบนพื้นน้ำแข็ง เงาขนาดมหึมาปกคลุมพวกเขา",
+								"hindi": "अभियान जमे हुए फर्श पर गिर गया। एक विशाल परछाई ने उन्हें घेर लिया।"
+							},
+							"emotion": "base",
+							"type": "speech"
+						},
+						{
+							"speaker": "random_boss",
+							"content": {
+								"korean": "영원히 이 배에 갇히게 될 것이다. 망자들과 함께!",
+								"english": "You'll be trapped on this ship forever. With the dead!",
+								"japanese": "永遠にこの船に閉じ込められるだろう。死者たちと共に！",
+								"chinese": "你将永远被困在这艘船上。与死者为伴！",
+								"french": "Vous serez piégé sur ce navire pour toujours. Avec les morts !",
+								"spanish": "¡Estarás atrapado en este barco para siempre. Con los muertos!",
+								"vietnamese": "Ngươi sẽ bị mắc kẹt trên con tàu này mãi mãi. Cùng với những kẻ đã chết!",
+								"thai": "คุณจะต้องติดอยู่ในเรือลำนี้ตลอดไป พร้อมกับคนตาย!",
+								"hindi": "तुम हमेशा के लिए इस जहाज में कैद रहोगे। मृतकों के साथ!"
+							},
+							"emotion": "angry",
+							"type": "speech"
+						},
+						{
+							"type": "speech",
+							"content": {
+								"korean": "크윽... 아직... 끝나지 않았어!",
+								"english": "Ugh... It's... not over yet!",
+								"japanese": "くっ…まだ…終わってない！",
+								"chinese": "呃……还没……结束！",
+								"french": "Ugh... Ce n'est... pas encore fini !",
+								"spanish": "Ugh... ¡Aún... no ha terminado!",
+								"vietnamese": "Ưm... Vẫn... chưa kết thúc!",
+								"thai": "อึก... ยัง... ไม่จบ!",
+								"hindi": "उफ़... यह... अभी खत्म नहीं हुआ है!"
+							},
+							"emotion": "angry",
+							"speaker": "character_any"
+						}
+					],
+					"dialogue": [
+						{
+							"speaker": "narrator",
+							"type": "speech",
+							"content": {
+								"korean": "배의 심장에서 거대한 그림자가 나타났다. 얼어붙은 분노가 느껴졌다.",
+								"english": "A colossal shadow emerged from the ship's heart. Frozen wrath emanated from it.",
+								"japanese": "船の心臓から巨大な影が現れた。凍てつくような怒りが感じられた。",
+								"chinese": "巨大的黑影从船的心脏处出现。冰冷的愤怒感油然而生。",
+								"french": "Une ombre colossale émergea du cœur du navire. Une fureur glaciale s'en dégageait.",
+								"spanish": "Una sombra colosal emergió del corazón del barco. Una ira helada se sentía.",
+								"vietnamese": "Một cái bóng khổng lồ xuất hiện từ trái tim con tàu. Cơn thịnh nộ đóng băng tỏa ra.",
+								"thai": "เงาขนาดมหึมาปรากฏขึ้นจากใจกลางเรือ ความโกรธแค้นที่เยือกแข็งแผ่ออกมา",
+								"hindi": "जहाज के हृदय से एक विशाल छाया उभरी। जमी हुई क्रोध महसूस हुआ।"
+							},
+							"emotion": "base"
+						},
+						{
+							"duration_ms": 500,
+							"action": "enter",
+							"spot": [
+								3,
+								2
+							],
+							"type": "direction",
+							"speaker": "eira"
+						},
+						{
+							"speaker": "eira",
+							"type": "speech",
+							"content": {
+								"korean": "이것이 그들을 지키는 존재입니다. 이 배의 영원한 수호자.",
+								"english": "This is their protector. The eternal guardian of this ship.",
+								"japanese": "これが彼らを守る存在です。この船の永遠の守護者。",
+								"chinese": "这是他们的守护者。这艘船的永恒守卫。",
+								"french": "C'est leur protecteur. Le gardien éternel de ce navire.",
+								"spanish": "Este es su protector. El guardián eterno de este barco.",
+								"vietnamese": "Đây là người bảo vệ của họ. Người giám hộ vĩnh cửu của con tàu này.",
+								"thai": "นี่คือผู้พิทักษ์ของพวกเขา ผู้พิทักษ์นิรันดร์ของเรือลำนี้",
+								"hindi": "यह उनका रक्षक है। इस जहाज का शाश्वत संरक्षक।"
+							},
+							"emotion": "base"
+						},
+						{
+							"content": {
+								"korean": "침입자들... 감히 망자의 안식을 방해하는가.",
+								"english": "Intruders... How dare you disturb the dead's rest?",
+								"japanese": "侵入者たち… 亡者の安息を妨げるなど、よくも。",
+								"chinese": "入侵者…… 竟敢打扰亡者的安息。",
+								"french": "Intrus... Comment osez-vous troubler le repos des morts ?",
+								"spanish": "Intrusos... ¿Cómo osáis perturbar el descanso de los muertos?",
+								"vietnamese": "Những kẻ xâm nhập... Sao ngươi dám quấy rầy giấc ngủ của người chết?",
+								"thai": "ผู้บุกรุก... กล้าดียังไงมารบกวนการพักผ่อนของผู้ตาย",
+								"hindi": "घुसपैठिए... मृत आत्माओं की शांति भंग करने की तुम्हारी हिम्मत कैसे हुई?"
+							},
+							"emotion": "angry",
+							"type": "speech",
+							"speaker": "random_boss"
+						},
+						{
+							"type": "speech",
+							"content": {
+								"korean": "안식이라고? 여기가 대체 어디가 안식처라는 거야!",
+								"english": "Rest? Where on earth is this a place of rest?!",
+								"japanese": "安息だと？ここが一体どこが安息の地だというんだ！",
+								"chinese": "安息？这里哪里是安息之所！",
+								"french": "Le repos ? Où diable est-ce un lieu de repos ?!",
+								"spanish": "¿Descanso? ¡¿Dónde demonios es este un lugar de descanso?!",
+								"vietnamese": "An nghỉ ư? Đây rốt cuộc là nơi nào mà gọi là an nghỉ?!",
+								"thai": "พักผ่อนรึ? ที่นี่มันที่ไหนกันแน่ถึงจะเรียกว่าที่พักผ่อน?!",
+								"hindi": "आराम? यह जगह कहाँ से आराम करने की जगह है?!"
+							},
+							"emotion": "angry",
+							"speaker": "character_any"
+						},
+						{
+							"speaker": "eira",
+							"type": "speech",
+							"content": {
+								"korean": "그들은 묶여있습니다. 이 배에 영원히...",
+								"english": "They are bound. To this ship, forever...",
+								"japanese": "彼らは縛られています。この船に、永遠に…",
+								"chinese": "他们被束缚了。永远地，在这艘船上……",
+								"french": "Ils sont liés. À ce navire, pour toujours...",
+								"spanish": "Están atados. A este barco, para siempre...",
+								"vietnamese": "Họ bị trói buộc. Vào con tàu này, mãi mãi...",
+								"thai": "พวกเขาถูกผูกมัดไว้กับเรือลำนี้ ตลอดไป...",
+								"hindi": "वे बंधे हुए हैं। इस जहाज से, हमेशा के लिए..."
+							},
+							"emotion": "sad"
+						},
+						{
+							"direction": "down",
+							"duration_ms": 400,
+							"action": "exit",
+							"type": "direction",
+							"speaker": "eira"
+						},
+						{
+							"content": {
+								"korean": "내 영역이다. 돌아가지 못하리라!",
+								"english": "This is my domain. You shall not return!",
+								"japanese": "我が領域だ。戻ることは叶わぬ！",
+								"chinese": "这是我的领域。你们休想回去！",
+								"french": "C'est mon domaine. Vous ne reviendrez pas !",
+								"spanish": "Este es mi dominio. ¡No regresaréis!",
+								"vietnamese": "Đây là lãnh địa của ta. Ngươi sẽ không thể trở về!",
+								"thai": "นี่คืออาณาเขตของข้า เจ้าจะไม่ได้กลับไป!",
+								"hindi": "यह मेरा क्षेत्र है। तुम वापस नहीं जा पाओगे!"
+							},
+							"emotion": "angry",
+							"type": "speech",
+							"speaker": "random_boss"
+						}
+					],
+					"id": 15
+				}
+			],
+			"prologue": {
+				"korean": [
+					"눈보라가 삼킨 북쪽 땅, 얼어붙은 망자들의 비명.",
+					"그 한가운데, 유령선 '그레이브미스트'가 나타났다.",
+					"죽은 자들의 마지막 안식처. 혹은 영원한 감옥.",
+					"그리고, 그 배 안에서 - 저주의 안내자가 기다리고 있었다."
+				],
+				"english": [
+					"The northern land swallowed by a blizzard, the screams of frozen dead.",
+					"Amidst it all, the ghost ship 'Gravemist' appeared.",
+					"The final resting place of the dead. Or an eternal prison.",
+					"And within that ship - the guide of the curse awaited."
+				],
+				"japanese": [
+					"吹雪に飲まれた北の地、凍てついた亡者たちの悲鳴。",
+					"その只中に、幽霊船「グレイブミスト」が現れた。",
+					"死者たちの最後の安息の地。あるいは永遠の監獄。",
+					"そして、その船の中では - 呪いの案内者が待っていた。"
+				],
+				"chinese": [
+					"被暴风雪吞噬的北方大地，冰冻亡灵的尖叫。",
+					"在那之中，幽灵船“格雷夫米斯特”出现了。",
+					"死者的最后安息之地。亦或是永恒的监狱。",
+					"而在那艘船里——诅咒的引导者正在等待着。"
+				],
+				"french": [
+					"La terre du nord engloutie par le blizzard, les cris des morts gelés.",
+					"Au milieu de tout cela, le vaisseau fantôme 'Gravemist' est apparu.",
+					"Le dernier repos des morts. Ou une prison éternelle.",
+					"Et à l'intérieur de ce navire - le guide de la malédiction attendait."
+				],
+				"spanish": [
+					"La tierra del norte engullida por una ventisca, los gritos de los muertos congelados.",
+					"En medio de todo, apareció el barco fantasma 'Gravemist'.",
+					"El último lugar de descanso de los muertos. O una prisión eterna.",
+					"Y dentro de ese barco - el guía de la maldición esperaba."
+				],
+				"vietnamese": [
+					"Vùng đất phía bắc bị bão tuyết nuốt chửng, tiếng thét của những xác chết đóng băng.",
+					"Giữa tất cả, con tàu ma 'Gravemist' đã xuất hiện.",
+					"Nơi an nghỉ cuối cùng của người chết. Hoặc một nhà tù vĩnh cửu.",
+					"Và bên trong con tàu đó - người dẫn đường của lời nguyền đang chờ đợi."
+				],
+				"thai": [
+					"ดินแดนทางเหนือที่ถูกพายุหิมะกลืนกิน, เสียงกรีดร้องของเหล่าคนตายที่ถูกแช่แข็ง.",
+					"ท่ามกลางทั้งหมดนั้น, เรือผี 'Gravemist' ได้ปรากฏขึ้น.",
+					"สถานที่พักผ่อนสุดท้ายของผู้ตาย. หรือคุกนิรันดร์.",
+					"และภายในเรือลำนั้น - ผู้นำทางแห่งคำสาปรออยู่."
+				],
+				"hindi": [
+					"बर्फीले तूफ़ान में समाई उत्तरी भूमि, जमे हुए मृतकों की चीखें।",
+					"उसी के बीच, भूतिया जहाज़ 'ग्रेवमिस्ट' प्रकट हुआ।",
+					"मृतकों का अंतिम विश्राम स्थल। या एक शाश्वत जेल।",
+					"और उस जहाज़ के अंदर - शाप का मार्गदर्शक इंतज़ार कर रहा था।"
+				]
+			}
+		},
+		{
+			"scenario_id": "snowy_gravemist_25_02",
+			"order": 2,
+			"act": "rising",
+			"theme": "snowy",
+			"actors": {
+				"ivar": {
+					"id": "mon_d8a80adc-9315-47b5-8c30-97ce33672bce",
+					"name": {
+						"korean": "이바르",
+						"english": "Ivar",
+						"japanese": "イヴァー",
+						"chinese": "伊瓦尔",
+						"french": "Ivar",
+						"spanish": "Ivar",
+						"vietnamese": "Ivar",
+						"thai": "ไอวาร์",
+						"hindi": "इवर"
+					},
+					"description": "",
+					"face_image_url": "https://imagedelivery.net/WTEqQNGFb-l-IHS6IGnzUQ/8dd7872b-d4df-44fd-b1a1-083a9156e700/public",
+					"battle_sprite_url": "https://imagedelivery.net/WTEqQNGFb-l-IHS6IGnzUQ/2622fb62-daf4-42d1-a83b-2b78869d3e00/public"
+				}
+			},
+			"boss": {
+				"pool_id": "random_boss"
+			},
+			"prologue": {
+				"korean": [
+					"눈보라는 더욱 거세지고 있었다.",
+					"얼어붙은 얼음 속에서 알 수 없는 목소리들이 속삭였다.",
+					"환영과 현실의 경계가, 서서히 무너져 내렸다.",
+					"잊혀진 맹세, 그리고 깨어진 약속의 메아리."
+				],
+				"english": [
+					"The blizzard grew fiercer.",
+					"Unseen voices whispered from within the frozen ice.",
+					"The boundary between illusion and reality slowly crumbled.",
+					"The echo of forgotten vows and broken promises."
+				],
+				"japanese": [
+					"吹雪はさらに激しさを増していた。",
+					"凍てつく氷の中から、未知の声が囁いた。",
+					"幻影と現実の境界が、ゆっくりと崩れ落ちた。",
+					"忘れ去られた誓い、そして破られた約束の残響。"
+				],
+				"chinese": [
+					"暴风雪愈发猛烈。",
+					"未知的声音在冰冷的寒冰中低语。",
+					"幻象与现实的界限，渐渐崩塌。",
+					"被遗忘的誓言，以及破碎承诺的回响。"
+				],
+				"french": [
+					"Le blizzard s'intensifiait.",
+					"Des voix inconnues chuchotaient depuis la glace gelée.",
+					"La frontière entre l'illusion et la réalité s'effondrait lentement.",
+					"L'écho des serments oubliés et des promesses brisées."
+				],
+				"spanish": [
+					"La ventisca arreciaba.",
+					"Voces desconocidas susurraban desde el hielo congelado.",
+					"La frontera entre la ilusión y la realidad se desmoronaba lentamente.",
+					"El eco de votos olvidados y promesas rotas."
+				],
+				"vietnamese": [
+					"Cơn bão tuyết ngày càng dữ dội hơn.",
+					"Những giọng nói không rõ thì thầm từ bên trong lớp băng giá.",
+					"Ranh giới giữa ảo ảnh và hiện thực, dần dần sụp đổ.",
+					"Tiếng vọng của những lời thề bị lãng quên và những lời hứa tan vỡ."
+				],
+				"thai": [
+					"พายุหิมะโหมกระหน่ำรุนแรงขึ้น",
+					"เสียงกระซิบที่ไม่รู้จักเล็ดลอดออกมาจากน้ำแข็งที่จับตัว",
+					"เส้นแบ่งระหว่างภาพลวงตาและความเป็นจริง ค่อยๆ พังทลายลง",
+					"เสียงสะท้อนของคำสาบานที่ถูกลืมและคำสัญญาที่แตกสลาย"
+				],
+				"hindi": [
+					"बर्फीला तूफान और तेज़ होता जा रहा था।",
+					"जमी हुई बर्फ़ में अनजानी आवाज़ें फुसफुसा रही थीं।",
+					"भ्रम और हकीकत की सीमा, धीरे-धीरे टूट रही थी।",
+					"भूले हुए वादों और टूटे हुए इकरार की गूंज।"
+				]
+			},
+			"rooms": [
+				{
+					"dialogue": [
+						{
+							"content": {
+								"korean": "눈보라가 춤추듯 휘몰아쳤다. 배 안은 거대한 얼음 무덤 같았다.",
+								"english": "The blizzard raged like a dance. The ship felt like a colossal ice tomb.",
+								"japanese": "吹雪が舞い踊るように荒れ狂った。船内は巨大な氷の墓のようだった。",
+								"chinese": "暴风雪狂舞。船内宛如一座巨大的冰墓。",
+								"french": "Le blizzard dansait et tourbillonnait. L'intérieur du navire était comme une immense tombe de glace.",
+								"spanish": "La ventisca danzaba furiosa. El interior del barco era como una gigantesca tumba de hielo.",
+								"vietnamese": "Bão tuyết điên cuồng như một vũ điệu. Bên trong con tàu như một lăng mộ băng khổng lồ.",
+								"thai": "พายุหิมะโหมกระหน่ำดุจระบำ ภายในเรือราวกับสุสานน้ำแข็งมหึมา",
+								"hindi": "बर्फीला तूफान नाचता हुआ आ रहा था। जहाज़ के अंदर एक विशाल बर्फीली कब्र जैसा लग रहा था।"
+							},
+							"emotion": "base",
+							"type": "speech",
+							"speaker": "narrator"
+						},
+						{
+							"type": "speech",
+							"speaker": "character_any",
+							"content": {
+								"korean": "더 깊이 갈수록… 더 차가워져.",
+								"english": "The deeper we go... the colder it gets.",
+								"japanese": "もっと深く行くと… もっと冷たくなる。",
+								"chinese": "越深入… 越冷。",
+								"french": "Plus on s'enfonce… plus il fait froid.",
+								"spanish": "Cuanto más profundo vamos… más frío hace.",
+								"vietnamese": "Càng đi sâu... càng lạnh.",
+								"thai": "ยิ่งลึกเข้าไป… ยิ่งหนาวขึ้น",
+								"hindi": "जितना गहरा हम जाएंगे… उतना ठंडा होता जाएगा।"
+							},
+							"emotion": "base"
+						},
+						{
+							"speaker": "character_1",
+							"type": "speech",
+							"content": {
+								"korean": "이 목소리들... 대체 뭐야?",
+								"english": "These voices... What are they?",
+								"japanese": "この声… いったい何だ？",
+								"chinese": "这些声音… 到底是什么？",
+								"french": "Ces voix… Qu'est-ce que c'est que ça ?",
+								"spanish": "Estas voces… ¿Qué son?",
+								"vietnamese": "Những giọng nói này... Rốt cuộc là gì?",
+								"thai": "เสียงพวกนี้… มันอะไรกันแน่?",
+								"hindi": "ये आवाज़ें… आख़िर क्या हैं?"
+							},
+							"emotion": "base"
+						},
+						{
+							"action": "enter",
+							"spot": [
+								4,
+								3
+							],
+							"duration_ms": 500,
+							"type": "direction",
+							"speaker": "ivar"
+						},
+						{
+							"content": {
+								"korean": "…또 다른 침입자들인가.",
+								"english": "...More intruders, then.",
+								"japanese": "…また別の侵入者か。",
+								"chinese": "……又是其他入侵者吗？",
+								"french": "...D'autres intrus, donc.",
+								"spanish": "...¿Más intrusos?",
+								"vietnamese": "...Lại là những kẻ xâm nhập khác à.",
+								"thai": "…พวกผู้บุกรุกคนอื่นอีกแล้วหรือไง",
+								"hindi": "…क्या और घुसपैठिए हैं।"
+							},
+							"emotion": "base",
+							"type": "speech",
+							"speaker": "ivar"
+						},
+						{
+							"speaker": "character_any",
+							"type": "speech",
+							"content": {
+								"korean": "당신은 누구야.",
+								"english": "Who are you?",
+								"japanese": "お前は誰だ。",
+								"chinese": "你是谁？",
+								"french": "Qui es-tu ?",
+								"spanish": "¿Quién eres?",
+								"vietnamese": "Ngươi là ai?",
+								"thai": "คุณคือใคร",
+								"hindi": "तुम कौन हो?"
+							},
+							"emotion": "base"
+						},
+						{
+							"speaker": "ivar",
+							"type": "speech",
+							"content": {
+								"korean": "이바르. 나와 같은 난파된 탐험가지.",
+								"english": "Ivar. A shipwrecked explorer, like me.",
+								"japanese": "イヴァル。私と同じく難破した探検家だ。",
+								"chinese": "伊瓦尔。一个和我一样遭遇海难的探险家。",
+								"french": "Ivar. Un explorateur naufragé, comme moi.",
+								"spanish": "Ivar. Un explorador naufragado, como yo.",
+								"vietnamese": "Ivar. Một nhà thám hiểm bị đắm tàu, giống như ta.",
+								"thai": "ไอวาร์ นักสำรวจที่เรืออับปางเหมือนกับฉัน",
+								"hindi": "इवर। मेरे जैसा ही एक जहाज़ पर बर्बाद हुआ खोजकर्ता।"
+							},
+							"emotion": "base"
+						}
+					],
+					"id": 1
+				},
+				{
+					"id": 3,
+					"dialogue": [
+						{
+							"action": "enter",
+							"speaker": "ivar",
+							"type": "direction",
+							"duration_ms": 500,
+							"spot": [
+								4,
+								3
+							]
+						},
+						{
+							"type": "speech",
+							"speaker": "ivar",
+							"content": {
+								"korean": "더 깊이 가지 마라. 이 배는 저주받았다.",
+								"english": "Go no deeper. This ship is cursed.",
+								"japanese": "これ以上深入りするな。この船は呪われている。",
+								"chinese": "别再深入了。这艘船被诅咒了。",
+								"french": "N'allez pas plus loin. Ce navire est maudit.",
+								"spanish": "No vayas más profundo. Esta nave está maldita.",
+								"vietnamese": "Đừng đi sâu hơn. Con tàu này bị nguyền rủa.",
+								"thai": "อย่าเข้าไปลึกกว่านี้ เรือลำนี้ถูกสาป",
+								"hindi": "और गहरा मत जाओ। यह जहाज शापित है।"
+							},
+							"emotion": "sad"
+						},
+						{
+							"content": {
+								"korean": "저주?",
+								"english": "Cursed?",
+								"japanese": "呪い？",
+								"chinese": "诅咒？",
+								"french": "Maudit ?",
+								"spanish": "¿Maldita?",
+								"vietnamese": "Nguyền rủa?",
+								"thai": "สาป?",
+								"hindi": "शापित?"
+							},
+							"emotion": "base",
+							"speaker": "character_any",
+							"type": "speech"
+						},
+						{
+							"type": "speech",
+							"speaker": "ivar",
+							"content": {
+								"korean": "내가 발견한 룬 문양들… 깨진 맹세의 흔적이었다.",
+								"english": "The runes I found... traces of a broken vow.",
+								"japanese": "見つけたルーン文字… 破られた誓いの痕跡だった。",
+								"chinese": "我发现的符文... 是破碎誓言的痕迹。",
+								"french": "Les runes que j'ai trouvées... des traces d'un serment brisé.",
+								"spanish": "Las runas que encontré... rastros de un juramento roto.",
+								"vietnamese": "Những ký tự rune tôi tìm thấy... dấu vết của một lời thề bị phá vỡ.",
+								"thai": "รูนที่ฉันพบ... เป็นร่องรอยของคำสาบานที่แตกหัก",
+								"hindi": "जो मैंने runes खोजे... टूटे हुए वादे के निशान थे।"
+							},
+							"emotion": "sad"
+						},
+						{
+							"speaker": "character_any",
+							"type": "speech",
+							"content": {
+								"korean": "깨진 맹세라니.",
+								"english": "Broken vow?",
+								"japanese": "破られた誓いだと？",
+								"chinese": "破碎的誓言？",
+								"french": "Un serment brisé ?",
+								"spanish": "¿Un juramento roto?",
+								"vietnamese": "Lời thề bị phá vỡ ư?",
+								"thai": "คำสาบานที่แตกหัก?",
+								"hindi": "टूटा हुआ वादा?"
+							},
+							"emotion": "base"
+						},
+						{
+							"content": {
+								"korean": "영광을 좇던 자들의 몰락. 그 대가로 영원히 배에 묶였지.",
+								"english": "The downfall of those who sought glory. Bound to the ship forever, their price.",
+								"japanese": "栄光を追った者たちの没落。その代償として、永遠に船に縛り付けられたのだ。",
+								"chinese": "追逐荣耀者的陨落。作为代价，他们永远被困在这艘船上。",
+								"french": "La chute de ceux qui cherchaient la gloire. Liés au navire pour l'éternité, leur châtiment.",
+								"spanish": "La caída de quienes buscaron la gloria. Atados al barco para siempre, ese fue su precio.",
+								"vietnamese": "Sự sa ngã của những kẻ tìm kiếm vinh quang. Đổi lại, họ bị trói buộc vĩnh viễn vào con tàu.",
+								"thai": "การล่มสลายของผู้ที่แสวงหาเกียรติยศ แลกมาด้วยการถูกผูกมัดไว้กับเรือชั่วนิรันดร์",
+								"hindi": "उन लोगों का पतन जिन्होंने महिमा की तलाश की। बदले में, वे हमेशा के लिए जहाज से बंध गए।"
+							},
+							"emotion": "sad",
+							"type": "speech",
+							"speaker": "ivar"
+						}
+					]
+				},
+				{
+					"dialogue": [
+						{
+							"action": "enter",
+							"type": "direction",
+							"speaker": "ivar",
+							"duration_ms": 500,
+							"spot": [
+								4,
+								3
+							]
+						},
+						{
+							"type": "speech",
+							"speaker": "ivar",
+							"content": {
+								"korean": "이곳의 얼음은 모든 것을 기억해.",
+								"english": "The ice here remembers everything.",
+								"japanese": "ここの氷はすべてを記憶している。",
+								"chinese": "这里的冰雪记得一切。",
+								"french": "La glace ici se souvient de tout.",
+								"spanish": "El hielo aquí lo recuerda todo.",
+								"vietnamese": "Băng ở đây ghi nhớ mọi thứ.",
+								"thai": "น้ำแข็งที่นี่จดจำทุกสิ่ง",
+								"hindi": "यहां की बर्फ सब कुछ याद रखती है।"
+							},
+							"emotion": "base"
+						},
+						{
+							"content": {
+								"korean": "환영이 점점 선명해져...",
+								"english": "The illusions grow clearer...",
+								"japanese": "幻影がますます鮮明に…",
+								"chinese": "幻象越来越清晰了...",
+								"french": "Les illusions deviennent plus claires...",
+								"spanish": "Las ilusiones se vuelven más claras...",
+								"vietnamese": "Ảo ảnh ngày càng rõ nét hơn...",
+								"thai": "ภาพมายาเริ่มชัดเจนขึ้นเรื่อยๆ...",
+								"hindi": "भ्रम और स्पष्ट होते जा रहे हैं..."
+							},
+							"emotion": "base",
+							"type": "speech",
+							"speaker": "character_any"
+						},
+						{
+							"type": "speech",
+							"speaker": "narrator",
+							"content": {
+								"korean": "희미하게, 끝없는 여정을 노래하는 듯한 애잔한 멜로디가 들려왔다.",
+								"english": "Faintly, a sorrowful melody, as if singing of an endless journey, echoed.",
+								"japanese": "かすかに、終わりのない旅を歌うような哀切なメロディーが聞こえてきた。",
+								"chinese": "隐约间，传来一阵哀怨的旋律，仿佛在歌颂着无尽的旅程。",
+								"french": "Faiblement, une mélodie triste, comme un chant d'un voyage sans fin, résonnait.",
+								"spanish": "Débilmente, una melodía triste, como si cantara un viaje sin fin, resonó.",
+								"vietnamese": "Mờ nhạt, một giai điệu buồn bã như đang hát về một hành trình vô tận vang vọng.",
+								"thai": "แผ่วเบา... ท่วงทำนองอันโศกเศร้า ราวกับขับขานถึงการเดินทางอันไม่มีที่สิ้นสุดได้ยินแว่วมา",
+								"hindi": "मंद स्वर में, एक दुखद धुन, मानो एक अंतहीन यात्रा का गीत गा रही हो, सुनाई दी।"
+							},
+							"emotion": "base"
+						},
+						{
+							"content": {
+								"korean": "그것은 잊혀진 약속의 메아리이자, 벗어날 수 없는 운명이다.",
+								"english": "It is the echo of a forgotten promise, and an inescapable fate.",
+								"japanese": "それは忘れられた約束のこだまであり、逃れられない運命なのだ。",
+								"chinese": "那是被遗忘的承诺的回声，也是无法摆脱的命运。",
+								"french": "C'est l'écho d'une promesse oubliée, et un destin inéluctable.",
+								"spanish": "Es el eco de una promesa olvidada, y un destino ineludible.",
+								"vietnamese": "Đó là tiếng vang của một lời hứa bị lãng quên, và một định mệnh không thể thoát khỏi.",
+								"thai": "มันคือเสียงสะท้อนของคำสัญญาที่ถูกลืม และโชคชะตาที่มิอาจหลีกหนี",
+								"hindi": "यह एक भूली हुई प्रतिज्ञा की प्रतिध्वनि है, और एक अपरिहार्य नियति है।"
+							},
+							"emotion": "sad",
+							"type": "speech",
+							"speaker": "ivar"
+						},
+						{
+							"content": {
+								"korean": "우린 막을 수 있어.",
+								"english": "We can stop it.",
+								"japanese": "我々は止められる。",
+								"chinese": "我们能阻止它。",
+								"french": "Nous pouvons l'arrêter.",
+								"spanish": "Podemos detenerlo.",
+								"vietnamese": "Chúng ta có thể ngăn chặn nó.",
+								"thai": "เราหยุดมันได้",
+								"hindi": "हम इसे रोक सकते हैं।"
+							},
+							"emotion": "angry",
+							"speaker": "character_any",
+							"type": "speech"
+						}
+					],
+					"id": 5
+				},
+				{
+					"id": 9,
+					"dialogue": [
+						{
+							"action": "enter",
+							"duration_ms": 500,
+							"speaker": "ivar",
+							"type": "direction",
+							"spot": [
+								4,
+								3
+							]
+						},
+						{
+							"content": {
+								"korean": "더는 물러설 곳이 없어. 여기서 모든 것이 끝날 수도 있다.",
+								"english": "No turning back. This could be the end.",
+								"japanese": "もう後には引けない。ここで全てが終わるかもしれない。",
+								"chinese": "已无退路。一切或将在此终结。",
+								"french": "Plus de retour en arrière. Tout pourrait se terminer ici.",
+								"spanish": "No hay vuelta atrás. Todo podría acabar aquí.",
+								"vietnamese": "Không còn đường lui. Mọi thứ có thể kết thúc ở đây.",
+								"thai": "ไม่มีทางถอยอีกแล้ว ทุกอย่างอาจจบลงที่นี่",
+								"hindi": "पीछे हटने की जगह नहीं है। सब कुछ यहीं खत्म हो सकता है।"
+							},
+							"emotion": "base",
+							"speaker": "ivar",
+							"type": "speech"
+						},
+						{
+							"content": {
+								"korean": "두렵지 않아. 진실을 알아야 해.",
+								"english": "I'm not afraid. I must know the truth.",
+								"japanese": "恐れるものか。真実を知らねば。",
+								"chinese": "我不惧怕。我必须知晓真相。",
+								"french": "Je n'ai pas peur. Je dois connaître la vérité.",
+								"spanish": "No tengo miedo. Debo saber la verdad.",
+								"vietnamese": "Ta không sợ. Ta phải biết sự thật.",
+								"thai": "ไม่กลัวหรอก ข้าต้องรู้ความจริง",
+								"hindi": "मैं डरा हुआ नहीं हूँ। मुझे सच्चाई जाननी होगी।"
+							},
+							"emotion": "base",
+							"type": "speech",
+							"speaker": "character_any"
+						},
+						{
+							"content": {
+								"korean": "낡은 일지 조각이 바람에 나부꼈다. '잃어버린 명예', '감당할 수 없는 죄책감'.",
+								"english": "A tattered journal page fluttered in the wind. 'Lost Honor', 'Unbearable Guilt'.",
+								"japanese": "ぼろぼろの日誌の切れ端が風に舞った。「失われた名誉」「耐えがたい罪悪感」。",
+								"chinese": "一页残破的日记随风飘动。“失去的荣耀”，“无法承受的罪恶感”。",
+								"french": "Une page de journal déchirée flottait au vent. « Honneur Perdu », « Culpabilité Insoutenable ».",
+								"spanish": "Un trozo de diario maltrecho aleteaba con el viento. 'Honor Perdido', 'Culpabilidad Insoportable'.",
+								"vietnamese": "Một mảnh nhật ký cũ bay trong gió. 'Danh dự đã mất', 'Tội lỗi không thể chịu đựng'.",
+								"thai": "หน้ากระดาษบันทึกเก่าขาดวิ่นปลิวไสวไปกับลม 'เกียรติยศที่หายไป', 'ความรู้สึกผิดที่ไม่อาจทานทน'",
+								"hindi": "एक फटी हुई डायरी का पन्ना हवा में लहरा रहा था। 'खोया हुआ सम्मान', 'असहनीय अपराधबोध'।"
+							},
+							"emotion": "base",
+							"speaker": "narrator",
+							"type": "speech"
+						},
+						{
+							"speaker": "ivar",
+							"type": "speech",
+							"content": {
+								"korean": "명예를 잃은 자의 고통… 너희도 겪게 될 거다.",
+								"english": "The pain of the dishonored... you too shall suffer it.",
+								"japanese": "名誉を失った者の苦痛… お前たちも味わうことになるだろう。",
+								"chinese": "失去荣耀者的痛苦……你们也将承受。",
+								"french": "La souffrance des déshonorés… vous aussi la subirez.",
+								"spanish": "El dolor de los deshonrados... vosotros también lo sufriréis.",
+								"vietnamese": "Nỗi đau của kẻ mất danh dự... các ngươi cũng sẽ phải trải qua.",
+								"thai": "ความเจ็บปวดของผู้ที่สูญเสียเกียรติ... พวกเจ้าก็จะได้ประสบมันเช่นกัน",
+								"hindi": "अपमानितों का दर्द... तुम भी इसे भुगतोगे।"
+							},
+							"emotion": "sad"
+						},
+						{
+							"content": {
+								"korean": "난 다를 거야.",
+								"english": "I will be different.",
+								"japanese": "私は違う。",
+								"chinese": "我会不同。",
+								"french": "Je serai différent.",
+								"spanish": "Yo seré diferente.",
+								"vietnamese": "Ta sẽ khác.",
+								"thai": "ข้าจะไม่เหมือนใคร",
+								"hindi": "मैं अलग होऊंगा।"
+							},
+							"emotion": "angry",
+							"speaker": "character_any",
+							"type": "speech"
+						}
+					]
+				},
+				{
+					"id": 15,
+					"dialogue": [
+						{
+							"type": "speech",
+							"speaker": "narrator",
+							"content": {
+								"korean": "거대한 그림자가 얼음의 장막을 찢고 나타났다.",
+								"english": "A colossal shadow tore through the icy veil.",
+								"japanese": "巨大な影が氷の帳を引き裂いて現れた。",
+								"chinese": "巨大的身影撕裂冰幕而现。",
+								"french": "Une ombre colossale déchira le voile de glace.",
+								"spanish": "Una sombra colosal rasgó el velo de hielo.",
+								"vietnamese": "Một bóng đen khổng lồ xé toạc màn băng mà hiện ra.",
+								"thai": "เงาร่างมหึมาฉีกม่านน้ำแข็งปรากฏตัว",
+								"hindi": "एक विशाल छाया ने बर्फीले परदे को चीर कर दिखाया।"
+							},
+							"emotion": "base"
+						},
+						{
+							"content": {
+								"korean": "감히… 이 신성한 곳을 침범하다니.",
+								"english": "How dare you... trespass upon this sacred ground.",
+								"japanese": "よくも… この神聖なる地を侵すとは。",
+								"chinese": "竟敢……擅闯此圣地。",
+								"french": "Comment osez-vous… profaner ce lieu sacré.",
+								"spanish": "¿Cómo osas... profanar este lugar sagrado?",
+								"vietnamese": "Dám... xâm phạm nơi linh thiêng này.",
+								"thai": "บังอาจ... เข้ามารุกรานสถานที่ศักดิ์สิทธิ์แห่งนี้",
+								"hindi": "तुम्हारी हिम्मत कैसे हुई... इस पवित्र स्थान का अतिक्रमण करने की।"
+							},
+							"emotion": "angry",
+							"speaker": "random_boss",
+							"type": "speech"
+						},
+						{
+							"content": {
+								"korean": "네놈이 이 저주를 유지하는 건가?",
+								"english": "Are you the one upholding this curse?",
+								"japanese": "お前がこの呪いを保っているのか？",
+								"chinese": "是你维持着这诅咒吗？",
+								"french": "Est-ce toi qui maintiens cette malédiction ?",
+								"spanish": "¿Eres tú quien mantiene esta maldición?",
+								"vietnamese": "Ngươi là kẻ duy trì lời nguyền này sao?",
+								"thai": "เจ้าคือผู้ที่รักษามนตร์สาปนี้ไว้หรือ",
+								"hindi": "क्या तुम ही इस श्राप को बनाए रख रहे हो?"
+							},
+							"emotion": "angry",
+							"speaker": "character_any",
+							"type": "speech"
+						},
+						{
+							"content": {
+								"korean": "무지한 필멸자들. 너희도 곧 알게 될 것이다.",
+								"english": "Ignorant mortals. You too shall soon know.",
+								"japanese": "無知ななる定命の者たち。お前たちもすぐに知ることになるだろう。",
+								"chinese": "无知的凡人。你们很快便会知晓。",
+								"french": "Mortels ignorants. Vous aussi, vous le saurez bientôt.",
+								"spanish": "Mortales ignorantes. Vosotros también lo sabréis pronto.",
+								"vietnamese": "Những kẻ phàm trần ngu muội. Các ngươi cũng sẽ sớm biết thôi.",
+								"thai": "เหล่ามนุษย์ผู้โง่เขลา เจ้าเองก็จะได้รู้ในไม่ช้า",
+								"hindi": "अज्ञानी नश्वर। तुम भी जल्द ही जान जाओगे।"
+							},
+							"emotion": "base",
+							"speaker": "random_boss",
+							"type": "speech"
+						},
+						{
+							"content": {
+								"korean": "두고 봐.",
+								"english": "Just you wait.",
+								"japanese": "見ていろ。",
+								"chinese": "走着瞧吧。",
+								"french": "Attendez et voyez.",
+								"spanish": "Ya verás.",
+								"vietnamese": "Cứ đợi đấy.",
+								"thai": "คอยดูเถอะ",
+								"hindi": "देख लेना।"
+							},
+							"emotion": "angry",
+							"speaker": "character_any",
+							"type": "speech"
+						},
+						{
+							"action": "enter",
+							"speaker": "ivar",
+							"type": "direction",
+							"duration_ms": 500,
+							"spot": [
+								4,
+								3
+							]
+						},
+						{
+							"type": "speech",
+							"speaker": "ivar",
+							"content": {
+								"korean": "저 자는... 과거의 맹세를 지키는 파수꾼이다.",
+								"english": "He... is a sentinel upholding a past vow.",
+								"japanese": "あの者は…過去の誓いを守る番人だ。",
+								"chinese": "那家伙…是守护过去誓言的守望者。",
+								"french": "Il… est un gardien qui honore un serment passé.",
+								"spanish": "Él... es un centinela que guarda un juramento pasado.",
+								"vietnamese": "Hắn… là kẻ canh gác giữ lời thề trong quá khứ.",
+								"thai": "เขาคือ... ผู้พิทักษ์ที่รักษาสัตย์สาบานในอดีต",
+								"hindi": "वह... अतीत की प्रतिज्ञा को बनाए रखने वाला एक प्रहरी है।"
+							},
+							"emotion": "base"
+						},
+						{
+							"type": "speech",
+							"speaker": "random_boss",
+							"content": {
+								"korean": "건방진 이바르. 네놈도 다시 묶어주마.",
+								"english": "Insolent Ivar. I'll bind you again.",
+								"japanese": "生意気なイヴァル。貴様も再び縛り付けてやろう。",
+								"chinese": "狂妄的伊瓦尔。我也会把你重新束缚起来。",
+								"french": "Insolent Ivar. Je te ligoterai à nouveau.",
+								"spanish": "Insolente Ivar. Te ataré de nuevo.",
+								"vietnamese": "Ivar ngạo mạn. Ta sẽ trói ngươi lại lần nữa.",
+								"thai": "ไอ้ไอวาร์ผู้โอหัง ข้าจะผูกมัดเจ้าอีกครั้ง",
+								"hindi": "गुस्ताख़ इवर। मैं तुम्हें फिर से बांध दूंगा।"
+							},
+							"emotion": "angry"
+						},
+						{
+							"content": {
+								"korean": "…나와 함께 싸워라. 이 지긋지긋한 저주를 끝내자.",
+								"english": "...Fight with me. Let's end this wretched curse.",
+								"japanese": "…私と共に戦え。この忌まわしい呪いを終わらせよう。",
+								"chinese": "…与我并肩作战吧。让我们结束这该死的诅咒。",
+								"french": "...Bats-toi avec moi. Mettons fin à cette maudite malédiction.",
+								"spanish": "...Lucha conmigo. Acabemos con esta maldita maldición.",
+								"vietnamese": "...Hãy chiến đấu cùng ta. Cùng kết thúc lời nguyền khốn kiếp này.",
+								"thai": "...สู้ไปกับข้าเถอะ มายุติคำสาปอันเลวร้ายนี้กัน",
+								"hindi": "...मुझसे लड़ो। आओ इस शापित अभिशाप को खत्म करें।"
+							},
+							"emotion": "angry",
+							"type": "speech",
+							"speaker": "ivar"
+						},
+						{
+							"type": "direction",
+							"speaker": "ivar",
+							"duration_ms": 400,
+							"direction": "up",
+							"action": "exit"
+						}
+					],
+					"lose_dialogue": [
+						{
+							"content": {
+								"korean": "어리석은 필멸자여. 너희는 이 저주를 영원히 끊을 수 없다.",
+								"english": "Foolish mortals. You can never break this curse.",
+								"japanese": "愚かなる定命の者ども。お前たちにこの呪いを永遠に断ち切ることはできぬ。",
+								"chinese": "愚蠢的凡人。你们永远无法解除这个诅咒。",
+								"french": "Mortels insensés. Vous ne pourrez jamais briser cette malédiction.",
+								"spanish": "Mortales insensatos. Jamás podréis romper esta maldición.",
+								"vietnamese": "Hỡi những kẻ phàm trần ngu xuẩn. Các ngươi sẽ không bao giờ có thể phá giải lời nguyền này.",
+								"thai": "เจ้ามนุษย์ผู้โง่เขลา เจ้าไม่มีทางทำลายคำสาปนี้ได้ตลอดไป",
+								"hindi": "हे मूर्ख नश्वर प्राणियों। तुम इस शाप को कभी नहीं तोड़ सकते।"
+							},
+							"emotion": "angry",
+							"speaker": "random_boss",
+							"type": "speech"
+						},
+						{
+							"content": {
+								"korean": "얼음의 속삭임이 모든 것을 집어삼키는 듯했다.",
+								"english": "The whispers of ice seemed to swallow everything.",
+								"japanese": "氷の囁きがすべてを飲み込むようだった。",
+								"chinese": "冰冷的低语似乎吞噬了一切。",
+								"french": "Les murmures de la glace semblaient tout engloutir.",
+								"spanish": "Los susurros del hielo parecían engullirlo todo.",
+								"vietnamese": "Những lời thì thầm của băng giá dường như nuốt chửng mọi thứ.",
+								"thai": "เสียงกระซิบของน้ำแข็งราวกับกลืนกินทุกสิ่ง",
+								"hindi": "बर्फ़ की फुसफुसाहट सब कुछ निगलती हुई लग रही थी।"
+							},
+							"emotion": "base",
+							"type": "speech",
+							"speaker": "narrator"
+						},
+						{
+							"type": "speech",
+							"speaker": "character_any",
+							"content": {
+								"korean": "아직… 끝나지 않았어.",
+								"english": "It's not over… yet.",
+								"japanese": "まだ… 終わってない。",
+								"chinese": "还没… 结束。",
+								"french": "Ce n'est pas… encore fini.",
+								"spanish": "Aún no… ha terminado.",
+								"vietnamese": "Chưa… kết thúc đâu.",
+								"thai": "ยัง… ไม่จบหรอก",
+								"hindi": "अभी… ख़त्म नहीं हुआ है।"
+							},
+							"emotion": "angry"
+						}
+					],
+					"win_dialogue": [
+						{
+							"speaker": "random_boss",
+							"type": "speech",
+							"content": {
+								"korean": "크아악... 이 모든 것은... 다시... 반복될 것이다...",
+								"english": "Kuaaak... All of this... will... repeat again...",
+								"japanese": "くあああ…この全ては…再び…繰り返されるだろう…",
+								"chinese": "嘶啊啊…这一切…都将…再次…重复…",
+								"french": "Kuaaak... Tout cela... se... répétera encore...",
+								"spanish": "¡Kuaaak!... Todo esto... se... repetirá de nuevo...",
+								"vietnamese": "Khụ khụ... Tất cả những điều này... sẽ... lặp lại một lần nữa...",
+								"thai": "ควั่ก... ทั้งหมดนี้... จะ... ซ้ำรอย... อีกครั้ง...",
+								"hindi": "क्कक्... यह सब... फिर... दोहराया जाएगा..."
+							},
+							"emotion": "sad"
+						},
+						{
+							"content": {
+								"korean": "끝없는 반복? 무슨 소리야?",
+								"english": "Endless repetition? What do you mean?",
+								"japanese": "終わりのない繰り返し？どういうことだ？",
+								"chinese": "无尽的重复？什么意思？",
+								"french": "Répétition sans fin ? Que veux-tu dire ?",
+								"spanish": "¿Repetición sin fin? ¿Qué quieres decir?",
+								"vietnamese": "Lặp lại vô tận? Ý ngươi là gì?",
+								"thai": "การวนซ้ำไม่รู้จบ? หมายความว่าไง?",
+								"hindi": "अनंत पुनरावृत्ति? तुम्हारा क्या मतलब है?"
+							},
+							"emotion": "base",
+							"speaker": "character_any",
+							"type": "speech"
+						},
+						{
+							"content": {
+								"korean": "얼어붙은 메아리는 잠시 침묵했지만, 그 침묵은 또 다른 시작을 예고하는 듯했다.",
+								"english": "The frozen echo fell silent for a moment, but that silence seemed to herald another beginning.",
+								"japanese": "凍てついた残響は一時沈黙したが、その沈黙はまた別の始まりを予感させるようだった。",
+								"chinese": "冰冷的余音暂时沉默了，但那沉默似乎预示着又一个开始。",
+								"french": "L'écho gelé se tut un instant, mais ce silence semblait annoncer un autre début.",
+								"spanish": "El eco helado se silenció por un momento, pero ese silencio parecía anunciar otro comienzo.",
+								"vietnamese": "Tiếng vọng đóng băng im lặng một lúc, nhưng sự im lặng đó dường như báo trước một khởi đầu khác.",
+								"thai": "เสียงสะท้อนที่เยือกแข็งเงียบลงชั่วขณะ แต่ความเงียบนั้นดูเหมือนจะเป็นสัญญาณของการเริ่มต้นอีกครั้ง",
+								"hindi": "जमी हुई प्रतिध्वनि एक पल के लिए शांत हो गई, लेकिन वह शांति एक और शुरुआत का संकेत दे रही थी।"
+							},
+							"emotion": "base",
+							"type": "speech",
+							"speaker": "narrator"
+						},
+						{
+							"speaker": "narrator",
+							"type": "speech",
+							"content": {
+								"korean": "깨어진 맹세의 조각들이, 또 다른 비극의 실마리를 쥐고 있었다.",
+								"english": "Fragments of a broken vow held the key to another tragedy.",
+								"japanese": "砕かれた誓いの破片が、また別の悲劇の手がかりを握っていた。",
+								"chinese": "破碎誓言的碎片，掌握着另一场悲剧的线索。",
+								"french": "Les fragments d'un serment brisé détenaient la clé d'une autre tragédie.",
+								"spanish": "Fragmentos de un juramento roto contenían la clave de otra tragedia.",
+								"vietnamese": "Những mảnh vỡ của lời thề tan vỡ, nắm giữ manh mối của một bi kịch khác.",
+								"thai": "เศษเสี้ยวของคำสาบานที่แตกหัก กำลังกุมเบาะแสของโศกนาฏกรรมอีกครั้ง",
+								"hindi": "टूटी हुई प्रतिज्ञा के टुकड़े, एक और त्रासदी का सुराग पकड़े हुए थे।"
+							},
+							"emotion": "base"
+						},
+						{
+							"spot": [
+								4,
+								3
+							],
+							"type": "direction",
+							"speaker": "ivar",
+							"duration_ms": 500,
+							"action": "enter"
+						},
+						{
+							"speaker": "ivar",
+							"type": "speech",
+							"content": {
+								"korean": "…해냈군. 하지만 아직 끝이 아니다.",
+								"english": "...You did it. But it's not over yet.",
+								"japanese": "…やったな。しかし、まだ終わりではない。",
+								"chinese": "…你做到了。但还没有结束。",
+								"french": "...Tu l'as fait. Mais ce n'est pas encore fini.",
+								"spanish": "...Lo lograste. Pero aún no ha terminado.",
+								"vietnamese": "...Ngươi đã làm được. Nhưng vẫn chưa kết thúc.",
+								"thai": "...ทำได้แล้ว. แต่ยังไม่จบ.",
+								"hindi": "...तुमने कर दिखाया। लेकिन अभी खत्म नहीं हुआ है।"
+							},
+							"emotion": "base"
+						},
+						{
+							"content": {
+								"korean": "뭐가 남았다는 거야?",
+								"english": "What's left?",
+								"japanese": "何が残っているんだ？",
+								"chinese": "还剩下什么？",
+								"french": "Que reste-t-il ?",
+								"spanish": "¿Qué queda?",
+								"vietnamese": "Còn gì nữa?",
+								"thai": "มีอะไรเหลืออีก?",
+								"hindi": "क्या बाकी है?"
+							},
+							"emotion": "base",
+							"type": "speech",
+							"speaker": "character_any"
+						},
+						{
+							"content": {
+								"korean": "이 배의 진정한 심장. 그리고 그곳에 묶인 운명들.",
+								"english": "The true heart of this ship. And the fates bound there.",
+								"japanese": "この船の真の心臓。そしてそこに縛られた運命たち。",
+								"chinese": "这艘船的真正心脏。以及被束缚在那里的命运。",
+								"french": "Le véritable cœur de ce navire. Et les destins qui y sont liés.",
+								"spanish": "El verdadero corazón de este barco. Y los destinos atados allí.",
+								"vietnamese": "Trái tim thực sự của con tàu này. Và những số phận bị ràng buộc ở đó.",
+								"thai": "หัวใจที่แท้จริงของเรือลำนี้ และโชคชะตาที่ถูกผูกมัดไว้ที่นั่น",
+								"hindi": "इस जहाज़ का सच्चा हृदय। और वहां बंधी हुई नियतियां।"
+							},
+							"emotion": "base",
+							"speaker": "ivar",
+							"type": "speech"
+						},
+						{
+							"action": "exit",
+							"type": "direction",
+							"speaker": "ivar",
+							"duration_ms": 400,
+							"direction": "up"
+						}
+					]
+				}
+			]
+		},
+		{
+			"scenario_id": "snowy_gravemist_25_03",
+			"order": 3,
+			"act": "rising",
+			"theme": "snowy",
+			"actors": {
+				"finn": {
+					"id": "mon_3e3930d2-c2d3-4ad0-9818-26d259edac77",
+					"name": {
+						"korean": "핀",
+						"english": "Finn",
+						"japanese": "フィン",
+						"chinese": "芬恩",
+						"french": "Finn",
+						"spanish": "Finn",
+						"vietnamese": "Finn",
+						"thai": "ฟินน์",
+						"hindi": "फिन"
+					},
+					"description": "",
+					"face_image_url": "",
+					"battle_sprite_url": ""
+				}
+			},
+			"boss": {
+				"pool_id": "random_boss"
+			},
+			"rooms": [
+				{
+					"dialogue": [
+						{
+							"type": "speech",
+							"emotion": "base",
+							"content": {
+								"korean": "선실 깊은 곳. 망자들의 비명이 울려 퍼졌다.",
+								"english": "Deep within the cabin. The screams of the dead echoed.",
+								"japanese": "船室の奥深く。死者の悲鳴が響き渡った。",
+								"chinese": "船舱深处。亡者的尖叫声回荡。",
+								"french": "Au plus profond de la cabine. Les cris des morts résonnaient.",
+								"spanish": "En lo profundo de la cabina. Los gritos de los muertos resonaron.",
+								"vietnamese": "Sâu trong cabin. Tiếng thét của người chết vang vọng.",
+								"thai": "ลึกเข้าไปในห้องโดยสาร เสียงกรีดร้องของผู้ตายดังก้อง",
+								"hindi": "केबिन के भीतर गहराई में। मृतकों की चीखें गूँज उठीं।"
+							},
+							"speaker": "narrator"
+						},
+						{
+							"content": {
+								"korean": "이 비명… 심장이 조여와.",
+								"english": "These screams... my heart tightens.",
+								"japanese": "この悲鳴…胸が締め付けられる。",
+								"chinese": "这些尖叫声……我的心揪紧了。",
+								"french": "Ces cris... mon cœur se serre.",
+								"spanish": "Estos gritos... mi corazón se oprime.",
+								"vietnamese": "Những tiếng thét này... tim tôi thắt lại.",
+								"thai": "เสียงกรีดร้องพวกนี้... หัวใจฉันบีบรัด",
+								"hindi": "ये चीखें... मेरा दिल कसता जा रहा है।"
+							},
+							"type": "speech",
+							"emotion": "sad",
+							"speaker": "character_any"
+						},
+						{
+							"speaker": "character_1",
+							"content": {
+								"korean": "더 깊이 갈수록, 배의 비극이 느껴져.",
+								"english": "The deeper I go, the more I feel the ship's tragedy.",
+								"japanese": "深く進むほど、船の悲劇が感じられる。",
+								"chinese": "越深入，我越能感受到这艘船的悲剧。",
+								"french": "Plus je m'enfonce, plus je ressens la tragédie du navire.",
+								"spanish": "Cuanto más me adentro, más siento la tragedia del barco.",
+								"vietnamese": "Càng đi sâu, tôi càng cảm nhận được bi kịch của con tàu.",
+								"thai": "ยิ่งลึกเข้าไปเท่าไร ยิ่งสัมผัสได้ถึงโศกนาฏกรรมของเรือ",
+								"hindi": "जितना गहरा मैं जाता हूँ, उतना ही मुझे जहाज की त्रासदी महसूस होती है।"
+							},
+							"type": "speech",
+							"emotion": "base"
+						}
+					],
+					"id": 1
+				},
+				{
+					"dialogue": [
+						{
+							"spot": [
+								4,
+								3
+							],
+							"speaker": "finn",
+							"type": "direction",
+							"duration_ms": 500,
+							"action": "enter"
+						},
+						{
+							"content": {
+								"korean": "왔군… 기다렸어.",
+								"english": "You've come... I've been waiting.",
+								"japanese": "来たか…待っていたぞ。",
+								"chinese": "你来了……我一直在等你。",
+								"french": "Tu es venu... Je t'attendais.",
+								"spanish": "Has venido... te he estado esperando.",
+								"vietnamese": "Ngươi đã đến... ta đã đợi.",
+								"thai": "มาแล้วสินะ... ฉันรออยู่",
+								"hindi": "तुम आ गए... मैं इंतजार कर रहा था।"
+							},
+							"type": "speech",
+							"emotion": "base",
+							"speaker": "finn"
+						},
+						{
+							"speaker": "character_any",
+							"content": {
+								"korean": "당신은?",
+								"english": "And you?",
+								"japanese": "あなたは？",
+								"chinese": "你是谁？",
+								"french": "Vous êtes ?",
+								"spanish": "¿Y tú?",
+								"vietnamese": "Ngươi là ai?",
+								"thai": "แล้วคุณล่ะ?",
+								"hindi": "और तुम?"
+							},
+							"type": "speech",
+							"emotion": "base"
+						},
+						{
+							"type": "speech",
+							"emotion": "base",
+							"content": {
+								"korean": "핀. 이 배를 연구하던 학자.",
+								"english": "Finn. A scholar who was researching this ship.",
+								"japanese": "フィン。この船を研究していた学者だ。",
+								"chinese": "芬恩。一个研究这艘船的学者。",
+								"french": "Finn. Un érudit qui faisait des recherches sur ce navire.",
+								"spanish": "Finn. Un erudito que investigaba este barco.",
+								"vietnamese": "Finn. Một học giả đang nghiên cứu con tàu này.",
+								"thai": "ฟินน์ นักวิชาการที่กำลังศึกษาเรือลำนี้",
+								"hindi": "फिन। एक विद्वान जो इस जहाज पर शोध कर रहा था।"
+							},
+							"speaker": "finn"
+						},
+						{
+							"speaker": "finn",
+							"content": {
+								"korean": "이곳은… 잃어버린 명예와 죄책감으로 가득해.",
+								"english": "This place... filled with lost honor and guilt.",
+								"japanese": "ここは…失われた名誉と罪悪感に満ちている。",
+								"chinese": "这里…充满了失去的荣誉和罪恶感。",
+								"french": "Cet endroit... est rempli d'honneur perdu et de culpabilité.",
+								"spanish": "Este lugar... lleno de honor perdido y culpa.",
+								"vietnamese": "Nơi này... tràn ngập danh dự đã mất và cảm giác tội lỗi.",
+								"thai": "ที่นี่... เต็มไปด้วยเกียรติยศที่สูญหายและความรู้สึกผิด",
+								"hindi": "यह जगह... खोए हुए सम्मान और अपराध बोध से भरी है।"
+							},
+							"type": "speech",
+							"emotion": "sad"
+						},
+						{
+							"speaker": "finn",
+							"content": {
+								"korean": "고대 기록은 경고해… 이 모든 게 끝없는 루프의 시작이라고.",
+								"english": "Ancient records warn... this is all the beginning of an endless loop.",
+								"japanese": "古代の記録が警告する…これはすべて終わりのないループの始まりだと。",
+								"chinese": "古老记录警告说…这一切都是无尽循环的开始。",
+								"french": "Les anciens écrits préviennent... tout cela n'est que le début d'une boucle sans fin.",
+								"spanish": "Los registros antiguos advierten... todo esto es el comienzo de un bucle interminable.",
+								"vietnamese": "Các ghi chép cổ đại cảnh báo... đây đều là khởi đầu của một vòng lặp vô tận.",
+								"thai": "บันทึกโบราณเตือนว่า... ทั้งหมดนี้คือจุดเริ่มต้นของวงวนที่ไม่สิ้นสุด",
+								"hindi": "प्राचीन अभिलेख चेतावनी देते हैं... यह सब एक अंतहीन चक्र की शुरुआत है।"
+							},
+							"type": "speech",
+							"emotion": "sad"
+						}
+					],
+					"id": 3
+				},
+				{
+					"id": 5,
+					"dialogue": [
+						{
+							"speaker": "finn",
+							"spot": [
+								3,
+								3
+							],
+							"type": "direction",
+							"action": "enter",
+							"duration_ms": 550
+						},
+						{
+							"speaker": "finn",
+							"content": {
+								"korean": "잃어버린 속죄… 그 기록을 봤나?",
+								"english": "Lost atonement... have you seen the records?",
+								"japanese": "失われた贖罪…その記録を見たか？",
+								"chinese": "失去的赎罪…你看到那些记录了吗？",
+								"french": "L'expiation perdue... as-tu vu les registres ?",
+								"spanish": "La expiación perdida... ¿has visto los registros?",
+								"vietnamese": "Sự chuộc tội đã mất... bạn đã xem các ghi chép đó chưa?",
+								"thai": "การชดใช้ที่หายไป... คุณได้เห็นบันทึกเหล่านั้นหรือไม่?",
+								"hindi": "खोया हुआ प्रायश्चित... क्या तुमने वे अभिलेख देखे हैं?"
+							},
+							"type": "speech",
+							"emotion": "base"
+						},
+						{
+							"type": "speech",
+							"emotion": "base",
+							"content": {
+								"korean": "무슨 소리야?",
+								"english": "What do you mean?",
+								"japanese": "どういう意味だ？",
+								"chinese": "什么意思？",
+								"french": "Que veux-tu dire ?",
+								"spanish": "¿Qué quieres decir?",
+								"vietnamese": "Ý bạn là gì?",
+								"thai": "คุณหมายความว่าอย่างไร?",
+								"hindi": "तुम्हारा क्या मतलब है?"
+							},
+							"speaker": "character_any"
+						},
+						{
+							"content": {
+								"korean": "과거는 반복돼. 이 배처럼.",
+								"english": "The past repeats. Like this ship.",
+								"japanese": "過去は繰り返される。この船のように。",
+								"chinese": "过去会重演。就像这艘船一样。",
+								"french": "Le passé se répète. Comme ce navire.",
+								"spanish": "El pasado se repite. Como este barco.",
+								"vietnamese": "Quá khứ lặp lại. Giống như con tàu này.",
+								"thai": "อดีตซ้ำรอยเดิม เหมือนเรือลำนี้",
+								"hindi": "अतीत दोहराता है। इस जहाज की तरह।"
+							},
+							"type": "speech",
+							"emotion": "sad",
+							"speaker": "finn"
+						},
+						{
+							"content": {
+								"korean": "우리가 싸우는 건… 영혼들 때문이야?",
+								"english": "Are we fighting... because of the souls?",
+								"japanese": "我々が戦っているのは…魂のためなのか？",
+								"chinese": "我们战斗…是因为那些灵魂吗？",
+								"french": "Nous nous battons... à cause des âmes ?",
+								"spanish": "¿Estamos luchando... por las almas?",
+								"vietnamese": "Chúng ta đang chiến đấu... vì các linh hồn sao?",
+								"thai": "เรากำลังต่อสู้... เพราะวิญญาณหรือ?",
+								"hindi": "क्या हम लड़ रहे हैं... आत्माओं की वजह से?"
+							},
+							"type": "speech",
+							"emotion": "base",
+							"speaker": "character_2"
+						},
+						{
+							"content": {
+								"korean": "그래. 죄책감에 갇힌 자들. 그들을 해방시키지 못하면… 너희도 갇힐 거야.",
+								"english": "Yes. Those trapped by guilt. If you can't free them... you'll be trapped too.",
+								"japanese": "そうだ。罪悪感に囚われた者たちだ。彼らを解放できなければ…お前たちも囚われるだろう。",
+								"chinese": "是的。那些被罪恶感困住的人。如果无法解放他们…你们也会被困住。",
+								"french": "Oui. Ceux piégés par la culpabilité. Si vous ne pouvez pas les libérer... vous serez piégés aussi.",
+								"spanish": "Sí. Los atrapados por la culpa. Si no puedes liberarlos... tú también quedarás atrapado.",
+								"vietnamese": "Đúng vậy. Những người bị mắc kẹt bởi cảm giác tội lỗi. Nếu không thể giải thoát họ... bạn cũng sẽ bị mắc kẹt.",
+								"thai": "ใช่ พวกที่ถูกกักขังด้วยความรู้สึกผิด ถ้าคุณปลดปล่อยพวกเขาไม่ได้... คุณก็จะถูกกักขังเช่นกัน",
+								"hindi": "हाँ। वे जो अपराध बोध में फंसे हैं। यदि तुम उन्हें मुक्त नहीं कर सकते... तो तुम भी फंस जाओगे।"
+							},
+							"type": "speech",
+							"emotion": "sad",
+							"speaker": "finn"
+						}
+					]
+				},
+				{
+					"dialogue": [
+						{
+							"speaker": "finn",
+							"spot": [
+								2,
+								3
+							],
+							"type": "direction",
+							"action": "enter",
+							"duration_ms": 450
+						},
+						{
+							"speaker": "finn",
+							"content": {
+								"korean": "내 마지막 일지를 찾아야 해.",
+								"english": "I need to find my last logbook.",
+								"japanese": "私の最後の航海日誌を見つけなければならない。",
+								"chinese": "我需要找到我的最后一本日记。",
+								"french": "Je dois trouver mon dernier journal de bord.",
+								"spanish": "Necesito encontrar mi último diario de bitácora.",
+								"vietnamese": "Tôi cần tìm cuốn nhật ký cuối cùng của mình.",
+								"thai": "ฉันต้องหาบันทึกสุดท้ายของฉัน",
+								"hindi": "मुझे अपनी आखिरी लॉगबुक ढूंढनी होगी।"
+							},
+							"type": "speech",
+							"emotion": "base"
+						},
+						{
+							"content": {
+								"korean": "일지?",
+								"english": "Logbook?",
+								"japanese": "日誌？",
+								"chinese": "日记？",
+								"french": "Journal ?",
+								"spanish": "¿Diario?",
+								"vietnamese": "Nhật ký?",
+								"thai": "บันทึก?",
+								"hindi": "लॉगबुक?"
+							},
+							"type": "speech",
+							"emotion": "base",
+							"speaker": "character_any"
+						},
+						{
+							"speaker": "finn",
+							"type": "speech",
+							"emotion": "sad",
+							"content": {
+								"korean": "거기에 모든 것이 있어. 잃어버린 명예… 감당할 수 없는 죄책감.",
+								"english": "Everything is there. Lost honor... unbearable guilt.",
+								"japanese": "そこにはすべてがある。失われた名誉…耐えがたい罪悪感。",
+								"chinese": "一切都在那里。失去的荣誉…无法承受的罪恶感。",
+								"french": "Tout est là. L'honneur perdu... une culpabilité insupportable.",
+								"spanish": "Todo está ahí. Honor perdido... culpa insoportable.",
+								"vietnamese": "Mọi thứ đều ở đó. Danh dự đã mất... cảm giác tội lỗi không thể chịu đựng được.",
+								"thai": "ทุกอย่างอยู่ที่นั่น เกียรติยศที่หายไป... ความรู้สึกผิดที่ทานทนไม่ได้",
+								"hindi": "सब कुछ वहीं है। खोया हुआ सम्मान... असहनीय अपराध बोध।"
+							}
+						},
+						{
+							"content": {
+								"korean": "이 고통의 시작이자… 순환의 단서.",
+								"english": "The genesis of this pain… a clue to the cycle.",
+								"japanese": "この苦痛の始まり…そして循環の手がかり。",
+								"chinese": "这份痛苦的开端…也是循环的线索。",
+								"french": "Le début de cette douleur… un indice du cycle.",
+								"spanish": "El origen de este dolor… una pista para el ciclo.",
+								"vietnamese": "Khởi nguồn của nỗi đau này… và manh mối của vòng lặp.",
+								"thai": "จุดเริ่มต้นของความเจ็บปวดนี้… และเบาะแสของวงจร",
+								"hindi": "इस दर्द की शुरुआत… और चक्र का एक सुराग।"
+							},
+							"type": "speech",
+							"emotion": "sad",
+							"speaker": "finn"
+						},
+						{
+							"speaker": "character_3",
+							"type": "speech",
+							"emotion": "angry",
+							"content": {
+								"korean": "그럼… 우린 그 루프를 깨야 해.",
+								"english": "Then… we must break this loop.",
+								"japanese": "ならば…我々はこのループを断ち切らねばならない。",
+								"chinese": "那么…我们必须打破这个循环。",
+								"french": "Alors… nous devons briser cette boucle.",
+								"spanish": "Entonces… debemos romper este bucle.",
+								"vietnamese": "Vậy thì… chúng ta phải phá vỡ vòng lặp này.",
+								"thai": "ถ้าอย่างนั้น… เราต้องทำลายวงจรนี้",
+								"hindi": "तो… हमें इस चक्र को तोड़ना होगा।"
+							}
+						},
+						{
+							"type": "speech",
+							"emotion": "base",
+							"content": {
+								"korean": "낡은 일지의 흔적. 작성자의 고통이 느껴지는 듯했다.",
+								"english": "Traces of an old log. The writer's pain seemed palpable.",
+								"japanese": "古い日誌の痕跡。筆者の苦痛が感じられるようだった。",
+								"chinese": "旧日志的痕迹。作者的痛苦仿佛触手可及。",
+								"french": "Traces d'un vieux journal. La douleur de l'auteur semblait palpable.",
+								"spanish": "Restos de un diario antiguo. El dolor del autor parecía palpable.",
+								"vietnamese": "Dấu vết của một cuốn nhật ký cũ. Nỗi đau của người viết dường như rất rõ ràng.",
+								"thai": "ร่องรอยของบันทึกเก่า ความเจ็บปวดของผู้เขียนดูเหมือนจะสัมผัสได้",
+								"hindi": "एक पुराने लॉग के निशान। लेखक का दर्द साफ महसूस हो रहा था।"
+							},
+							"speaker": "narrator"
+						}
+					],
+					"id": 9
+				},
+				{
+					"id": 15,
+					"win_dialogue": [
+						{
+							"type": "speech",
+							"emotion": "sad",
+							"content": {
+								"korean": "크윽… 이 고통에서… 벗어날 수 없을 줄 알았는데…",
+								"english": "Ugh… I thought I'd never escape this pain…",
+								"japanese": "くぅっ…この苦痛から…逃れられないと思っていたのに…",
+								"chinese": "呃…我以为我永远无法摆脱这份痛苦…",
+								"french": "Ugh… Je pensais ne jamais échapper à cette douleur…",
+								"spanish": "Ugh… Pensé que nunca escaparía de este dolor…",
+								"vietnamese": "Ư… ta cứ nghĩ mình sẽ không bao giờ thoát khỏi nỗi đau này…",
+								"thai": "อึก… ฉันคิดว่าจะไม่มีวันหนีพ้นจากความเจ็บปวดนี้…",
+								"hindi": "उफ़… मैंने सोचा था कि मैं इस दर्द से कभी नहीं बच पाऊंगा…"
+							},
+							"speaker": "random_boss"
+						},
+						{
+							"speaker": "random_boss",
+							"content": {
+								"korean": "하지만… 이것은… 시작일 뿐… 끝없는 순환은… 계속될 것이다…",
+								"english": "But… this is… only the beginning… the endless cycle… will continue…",
+								"japanese": "しかし…これは…始まりに過ぎない…終わりなき循環は…続くだろう…",
+								"chinese": "但是…这只是…开始…无尽的循环…将会继续…",
+								"french": "Mais… ce n'est… que le début… le cycle sans fin… continuera…",
+								"spanish": "Pero… esto es… solo el principio… el ciclo interminable… continuará…",
+								"vietnamese": "Nhưng… đây… chỉ là khởi đầu… vòng lặp vô tận… sẽ tiếp diễn…",
+								"thai": "แต่… นี่เป็น… เพียงแค่จุดเริ่มต้น… วงจรที่ไม่มีที่สิ้นสุด… จะดำเนินต่อไป…",
+								"hindi": "लेकिन… यह… सिर्फ शुरुआत है… अंतहीन चक्र… जारी रहेगा…"
+							},
+							"type": "speech",
+							"emotion": "base"
+						},
+						{
+							"type": "speech",
+							"emotion": "sad",
+							"content": {
+								"korean": "끝없는 순환…?",
+								"english": "Endless cycle...?",
+								"japanese": "終わらない循環…？",
+								"chinese": "无尽的循环…？",
+								"french": "Un cycle sans fin… ?",
+								"spanish": "¿Un ciclo sin fin…?",
+								"vietnamese": "Vòng tuần hoàn bất tận...?",
+								"thai": "วัฏจักรไม่สิ้นสุด...?",
+								"hindi": "अंतहीन चक्र...?"
+							},
+							"speaker": "character_any"
+						},
+						{
+							"speaker": "narrator",
+							"type": "speech",
+							"emotion": "base",
+							"content": {
+								"korean": "거대한 그림자는 사라졌다. 배의 심장은 여전히 무거운 죄책감을 품고 있었다.",
+								"english": "The colossal shadow vanished. Yet, the ship's heart still bore a heavy burden of guilt.",
+								"japanese": "巨大な影は消え去った。しかし、船の心臓は依然として重い罪悪感を抱えていた。",
+								"chinese": "巨大的阴影消失了。然而，船的心脏仍旧承载着沉重的罪恶感。",
+								"french": "L'ombre colossale s'évanouit. Pourtant, le cœur du navire portait toujours un lourd fardeau de culpabilité.",
+								"spanish": "La sombra colosal desapareció. Sin embargo, el corazón de la nave aún albergaba una pesada culpa.",
+								"vietnamese": "Bóng đen khổng lồ biến mất. Nhưng trái tim con tàu vẫn mang một gánh nặng tội lỗi.",
+								"thai": "เงาอันมหึมาหายไป ทว่าหัวใจของเรือยังคงแบกรับความรู้สึกผิดอันหนักอึ้ง",
+								"hindi": "विशालकाय परछाई गायब हो गई। फिर भी, जहाज़ का हृदय अभी भी अपराधबोध का भारी बोझ लिए हुए था।"
+							}
+						},
+						{
+							"speaker": "narrator",
+							"content": {
+								"korean": "진정한 뿌리를 찾기 위해… 새로운 길을 가야 했다.",
+								"english": "To find its true roots... a new path had to be forged.",
+								"japanese": "真の根源を見つけるために…新たな道を進まねばならなかった。",
+								"chinese": "为了寻找真正的根源…必须开辟一条新路。",
+								"french": "Pour trouver ses véritables racines… un nouveau chemin devait être tracé.",
+								"spanish": "Para encontrar sus verdaderas raíces... un nuevo camino debía ser forjado.",
+								"vietnamese": "Để tìm ra nguồn gốc thật sự... một con đường mới phải được mở ra.",
+								"thai": "เพื่อค้นหารากที่แท้จริง... หนทางใหม่ต้องถูกสร้างขึ้น",
+								"hindi": "अपनी सच्ची जड़ों को खोजने के लिए... एक नया मार्ग प्रशस्त करना पड़ा।"
+							},
+							"type": "speech",
+							"emotion": "base"
+						}
+					],
+					"dialogue": [
+						{
+							"content": {
+								"korean": "배의 가장 깊은 곳. 어둠 속에서 거대한 그림자가 일렁였다.",
+								"english": "The ship's deepest reaches. A colossal shadow undulated in the darkness.",
+								"japanese": "船の最深部。闇の中で巨大な影が揺らめいていた。",
+								"chinese": "船的最深处。黑暗中，一个巨大的影子在波动。",
+								"french": "Les profondeurs du navire. Une ombre colossale ondoyait dans l'obscurité.",
+								"spanish": "Lo más profundo del barco. Una sombra colosal ondeaba en la oscuridad.",
+								"vietnamese": "Nơi sâu nhất của con tàu. Một bóng tối khổng lồ lay động trong bóng đêm.",
+								"thai": "ส่วนที่ลึกที่สุดของเรือ เงาขนาดมหึมาแกว่งไปมาในความมืด",
+								"hindi": "जहाज के सबसे गहरे हिस्से में। अंधेरे में एक विशाल छाया लहरा रही थी।"
+							},
+							"type": "speech",
+							"emotion": "base",
+							"speaker": "narrator"
+						},
+						{
+							"speaker": "random_boss",
+							"type": "speech",
+							"emotion": "angry",
+							"content": {
+								"korean": "어리석은 자들… 여기까지 오는 대가를 치러라.",
+								"english": "Fools… pay the price for coming this far.",
+								"japanese": "愚か者たちめ…ここまで来た代償を払うがいい。",
+								"chinese": "愚蠢的人们…为走到这里付出代价吧。",
+								"french": "Imbéciles… payez le prix d'être venus si loin.",
+								"spanish": "Necios… pagad el precio por haber llegado hasta aquí.",
+								"vietnamese": "Những kẻ ngu ngốc… hãy trả giá cho việc đến được đây.",
+								"thai": "คนโง่เง่า… จงชดใช้ราคาที่มาถึงที่นี่",
+								"hindi": "मूर्खों… इतनी दूर आने की कीमत चुकाओ।"
+							}
+						},
+						{
+							"speaker": "character_any",
+							"type": "speech",
+							"emotion": "angry",
+							"content": {
+								"korean": "네가 이 모든 죄책감의 근원인가?",
+								"english": "Are you the source of all this guilt?",
+								"japanese": "お前がこの全ての罪悪感の根源なのか？",
+								"chinese": "你就是所有这些罪恶感的根源吗？",
+								"french": "Es-tu la source de toute cette culpabilité ?",
+								"spanish": "Eres la fuente de toda esta culpa?",
+								"vietnamese": "Ngươi là nguồn gốc của mọi tội lỗi này sao?",
+								"thai": "คุณคือต้นตอของความรู้สึกผิดทั้งหมดนี้หรือเปล่า",
+								"hindi": "क्या तुम इस सारी ग्लानि का स्रोत हो?"
+							}
+						},
+						{
+							"type": "speech",
+							"emotion": "sad",
+							"content": {
+								"korean": "내 고통을 이해 못하는가… 영원히 방황할 뿐이다.",
+								"english": "Do you not comprehend my suffering… you will only wander endlessly.",
+								"japanese": "私の苦痛を理解できぬか…永遠にさまようだけだ。",
+								"chinese": "你不懂我的痛苦吗…你只会永远徘徊。",
+								"french": "Ne comprenez-vous pas ma souffrance… vous ne ferez qu'errer éternellement.",
+								"spanish": "No comprendes mi sufrimiento… solo vagarás sin fin.",
+								"vietnamese": "Ngươi không hiểu nỗi đau của ta sao… ngươi sẽ chỉ lang thang mãi mãi.",
+								"thai": "คุณไม่เข้าใจความทุกข์ทรมานของฉันหรือ… คุณจะหลงทางไปตลอดกาล",
+								"hindi": "क्या तुम मेरे दुख को नहीं समझते… तुम बस अनंत काल तक भटकते रहोगे।"
+							},
+							"speaker": "random_boss"
+						},
+						{
+							"type": "speech",
+							"emotion": "angry",
+							"content": {
+								"korean": "우리는 여기서 멈추지 않아!",
+								"english": "We won't stop here!",
+								"japanese": "我々はここで止まらない！",
+								"chinese": "我们不会止步于此！",
+								"french": "Nous ne nous arrêterons pas ici !",
+								"spanish": "¡No nos detendremos aquí!",
+								"vietnamese": "Chúng ta sẽ không dừng lại ở đây!",
+								"thai": "เราจะไม่หยุดแค่นี้!",
+								"hindi": "हम यहीं नहीं रुकेंगे!"
+							},
+							"speaker": "character_1"
+						}
+					],
+					"lose_dialogue": [
+						{
+							"speaker": "narrator",
+							"content": {
+								"korean": "죄책감의 그림자가 탐험대를 집어삼켰다.",
+								"english": "The shadow of guilt devoured the expedition.",
+								"japanese": "罪悪感の影が探検隊を飲み込んだ。",
+								"chinese": "罪恶感的阴影吞噬了探险队。",
+								"french": "L'ombre de la culpabilité dévora l'expédition.",
+								"spanish": "La sombra de la culpa devoró a la expedición.",
+								"vietnamese": "Bóng đen tội lỗi nuốt chửng đoàn thám hiểm.",
+								"thai": "เงาแห่งความรู้สึกผิดกลืนกินคณะสำรวจ",
+								"hindi": "अपराधबोध की परछाई ने अभियान दल को निगल लिया।"
+							},
+							"type": "speech",
+							"emotion": "base"
+						},
+						{
+							"type": "speech",
+							"emotion": "angry",
+							"content": {
+								"korean": "너희의 죄는… 나약함이다. 영원히 이 고통에 갇혀라!",
+								"english": "Your sin is... weakness. Be forever trapped in this agony!",
+								"japanese": "お前たちの罪は…弱さだ。永遠にこの苦痛に囚われろ！",
+								"chinese": "你们的罪孽是…软弱。永远被困在这痛苦之中吧！",
+								"french": "Votre péché est… la faiblesse. Soyez à jamais piégés dans cette agonie !",
+								"spanish": "Vuestro pecado es… la debilidad. ¡Quedad atrapados para siempre en esta agonía!",
+								"vietnamese": "Tội lỗi của ngươi là... sự yếu đuối. Hãy vĩnh viễn bị giam cầm trong nỗi đau này!",
+								"thai": "บาปของพวกเจ้าคือ... ความอ่อนแอ จงถูกขังอยู่ในความเจ็บปวดนี้ตลอดไป!",
+								"hindi": "तुम्हारा पाप... कमज़ोरी है। इस पीड़ा में हमेशा के लिए फँस जाओ!"
+							},
+							"speaker": "random_boss"
+						},
+						{
+							"speaker": "character_any",
+							"content": {
+								"korean": "아직… 끝나지 않았어. 우린… 반드시 이 순환을 끊을 거야!",
+								"english": "It's not... over yet. We will... definitely break this cycle!",
+								"japanese": "まだ…終わってない。俺たちは…必ずこの循環を断ち切る！",
+								"chinese": "还没…结束。我们…一定会打破这个循环！",
+								"french": "Ce n'est pas… encore fini. Nous… briserons ce cycle, c'est certain !",
+								"spanish": "Aún no… ha terminado. ¡Nosotros… romperemos este ciclo!",
+								"vietnamese": "Vẫn chưa... kết thúc đâu. Chúng ta... nhất định sẽ phá vỡ vòng tuần hoàn này!",
+								"thai": "ยัง... ไม่จบ เราจะ... ทำลายวัฏจักรนี้ให้ได้!",
+								"hindi": "यह अभी… ख़त्म नहीं हुआ है। हम… निश्चित रूप से इस चक्र को तोड़ेंगे!"
+							},
+							"type": "speech",
+							"emotion": "angry"
+						}
+					]
+				}
+			],
+			"prologue": {
+				"korean": [
+					"배의 심장으로 향하는 길.",
+					"고통받는 영혼들의 비명이 울려 퍼진다.",
+					"이 모든 것이 끝없는 루프의 시작이었다.",
+					"죄책감의 심연, 그곳에 진실이 잠들어 있었다."
+				],
+				"english": [
+					"Path to the ship's heart.",
+					"Screams of tormented souls echo.",
+					"All of this was the beginning of an endless loop.",
+					"In the abyss of guilt, the truth lay dormant."
+				],
+				"japanese": [
+					"船の心臓へと続く道。",
+					"苦しむ魂の叫びが響き渡る。",
+					"これらすべてが、終わりのないループの始まりだった。",
+					"罪悪感の深淵、そこに真実が眠っていた。"
+				],
+				"chinese": [
+					"通往船只心脏的道路。",
+					"受苦灵魂的尖叫声回荡。",
+					"这一切都是无尽循环的开始。",
+					"在罪恶的深渊中，真相沉睡着。"
+				],
+				"french": [
+					"Chemin vers le cœur du navire.",
+					"Les cris des âmes tourmentées résonnent.",
+					"Tout cela était le début d'une boucle sans fin.",
+					"Dans l'abîme de la culpabilité, la vérité sommeillait."
+				],
+				"spanish": [
+					"Camino al corazón de la nave.",
+					"Los gritos de las almas atormentadas resuenan.",
+					"Todo esto fue el comienzo de un bucle sin fin.",
+					"En el abismo de la culpa, la verdad yacía latente."
+				],
+				"vietnamese": [
+					"Con đường đến trái tim con tàu.",
+					"Tiếng thét của những linh hồn đau khổ vang vọng.",
+					"Tất cả điều này là khởi đầu của một vòng lặp vô tận.",
+					"Trong vực thẳm tội lỗi, sự thật ngủ yên."
+				],
+				"thai": [
+					"เส้นทางสู่ใจกลางเรือ",
+					"เสียงกรีดร้องของวิญญาณที่ถูกทรมานดังก้อง",
+					"ทั้งหมดนี้คือจุดเริ่มต้นของวงวนที่ไม่มีที่สิ้นสุด",
+					"ในห้วงลึกแห่งความผิดบาป ความจริงหลับใหลอยู่"
+				],
+				"hindi": [
+					"जहाज के दिल की ओर रास्ता।",
+					"यातनाग्रस्त आत्माओं की चीखें गूँजती हैं।",
+					"यह सब एक अंतहीन पाश की शुरुआत थी।",
+					"अपराधबोध की खाई में, सच्चाई सुप्त थी।"
+				]
+			}
+		},
+		{
+			"scenario_id": "snowy_gravemist_25_04",
+			"order": 4,
+			"act": "rising",
+			"theme": "snowy",
+			"actors": {
+				"hild": {
+					"id": "mon_6f20c96a-bf07-4aae-b37c-da898a8336e8",
+					"name": {
+						"korean": "힐드",
+						"english": "Hild",
+						"japanese": "ヒルド",
+						"chinese": "希尔德",
+						"french": "Hild",
+						"spanish": "Hild",
+						"vietnamese": "Hild",
+						"thai": "ฮิลด์",
+						"hindi": "हिल्ड"
+					},
+					"description": "",
+					"face_image_url": "https://imagedelivery.net/WTEqQNGFb-l-IHS6IGnzUQ/722a86fd-2903-4688-3f04-db8241ed0e00/public",
+					"battle_sprite_url": "https://imagedelivery.net/WTEqQNGFb-l-IHS6IGnzUQ/af3d96ba-e571-4132-fede-cd415bd15c00/public"
+				}
+			},
+			"boss": {
+				"pool_id": "random_boss"
+			},
+			"rooms": [
+				{
+					"id": 1,
+					"dialogue": [
+						{
+							"type": "speech",
+							"emotion": "base",
+							"speaker": "narrator",
+							"content": {
+								"korean": "눈보라가 걷히자 얼어붙은 뱃머리가 나타났다. 거대한 선박은 침묵 속에 잠겨 있었다.",
+								"english": "As the blizzard cleared, the frozen bow of the ship appeared. The massive vessel was shrouded in silence.",
+								"japanese": "吹雪が晴れると、凍てついた船首が現れた。巨大な船は沈黙に包まれていた。",
+								"chinese": "暴风雪消散后，冰冷的船头显现。巨大的船只沉浸在寂静之中。",
+								"french": "Alors que le blizzard se dissipait, la proue gelée du navire apparut. L'immense vaisseau était enveloppé de silence.",
+								"spanish": "Cuando la ventisca se disipó, apareció la proa congelada del barco. La enorme embarcación estaba sumida en el silencio.",
+								"vietnamese": "Khi bão tuyết tan, mũi tàu đóng băng hiện ra. Con tàu khổng lồ chìm trong im lặng.",
+								"thai": "เมื่อพายุหิมะสงบลง หัวเรือที่ถูกแช่แข็งก็ปรากฏขึ้น เรือขนาดมหึมาปกคลุมไปด้วยความเงียบ",
+								"hindi": "जैसे ही बर्फीला तूफान साफ हुआ, जहाज का जमा हुआ अगला हिस्सा दिखाई दिया। विशाल पोत खामोशी में डूबा हुआ था।"
+							}
+						},
+						{
+							"emotion": "base",
+							"type": "speech",
+							"speaker": "character_1",
+							"content": {
+								"korean": "이 배에 망자들이 있다고?",
+								"english": "Dead souls on this ship?",
+								"japanese": "この船に、亡者たちがいるのか？",
+								"chinese": "这艘船上有亡者？",
+								"french": "Des âmes mortes sur ce navire ?",
+								"spanish": "¿Almas muertas en este barco?",
+								"vietnamese": "Linh hồn người chết trên con tàu này?",
+								"thai": "วิญญาณคนตายอยู่บนเรือลำนี้หรือ?",
+								"hindi": "इस जहाज पर मृत आत्माएं?"
+							}
+						},
+						{
+							"spot": [
+								5,
+								2
+							],
+							"speaker": "hild",
+							"action": "enter",
+							"duration_ms": 500,
+							"type": "direction"
+						},
+						{
+							"emotion": "base",
+							"type": "speech",
+							"speaker": "hild",
+							"content": {
+								"korean": "(나직이 흥얼거린다. '끝없는 여정, 정착할 수 없는 땅…')",
+								"english": "(Humming softly. \"An endless journey, a land where one cannot settle...\")",
+								"japanese": "(静かに鼻歌を歌う。「果てなき旅路、定まることなき地…」)",
+								"chinese": "(轻声哼唱着。“无尽的旅程，无法安定的土地……”)",
+								"french": "(Fredonne doucement. \"Un voyage sans fin, une terre où l'on ne peut s'établir...\")",
+								"spanish": "(Tararea suavemente. \"Un viaje sin fin, una tierra donde uno no puede establecerse...\")",
+								"vietnamese": "(Khẽ ngân nga. \"Một hành trình vô tận, một vùng đất không thể định cư...\")",
+								"thai": "(ฮัมเพลงเบาๆ \"การเดินทางที่ไม่มีที่สิ้นสุด ดินแดนที่ไม่มีใครตั้งรกรากได้...\")",
+								"hindi": "(धीमे से गुनगुनाता है। \"एक अंतहीन यात्रा, एक ऐसी भूमि जहां कोई बस नहीं सकता...\")"
+							}
+						},
+						{
+							"content": {
+								"korean": "…누구야.",
+								"english": "...Who's there?",
+								"japanese": "……誰だ。",
+								"chinese": "……是谁。",
+								"french": "...Qui est là ?",
+								"spanish": "...¿Quién está ahí?",
+								"vietnamese": "...Ai đó.",
+								"thai": "...ใครน่ะ",
+								"hindi": "...कौन है?"
+							},
+							"speaker": "character_2",
+							"emotion": "base",
+							"type": "speech"
+						},
+						{
+							"speaker": "hild",
+							"emotion": "base",
+							"type": "speech",
+							"content": {
+								"korean": "흐음? 아아, 이 배의 손님인가.",
+								"english": "Hmm? Ah, a guest on this ship.",
+								"japanese": "ふむ？ああ、この船の客か。",
+								"chinese": "嗯？哦，是这艘船的客人啊。",
+								"french": "Hmm ? Ah, un invité sur ce navire.",
+								"spanish": "¿Hmm? Ah, ¿un invitado en este barco?",
+								"vietnamese": "Hừm? À, là khách của con tàu này sao.",
+								"thai": "หืม? อ้อ แขกของเรือลำนี้เหรอ",
+								"hindi": "ह्म्म? ओह, इस जहाज का मेहमान।"
+							}
+						},
+						{
+							"speaker": "hild",
+							"emotion": "sad",
+							"type": "speech",
+							"content": {
+								"korean": "난 힐드. 그저 이 슬픈 노래를 따라 표류하던 자.",
+								"english": "I am Hild. Merely one who drifted along with this sorrowful song.",
+								"japanese": "私はヒルド。ただ、この悲しい歌に導かれ漂流していた者。",
+								"chinese": "我是希尔德。只是一个随着这悲伤之歌漂流的人。",
+								"french": "Je suis Hild. Simplement quelqu'un qui a dérivé avec cette triste chanson.",
+								"spanish": "Soy Hild. Simplemente alguien que se dejó llevar por esta triste canción.",
+								"vietnamese": "Tôi là Hild. Chỉ là một kẻ trôi dạt theo bài hát buồn này.",
+								"thai": "ฉันคือฮิลด์ เพียงผู้ที่ล่องลอยไปตามบทเพลงอันเศร้าโศกนี้",
+								"hindi": "मैं हिल्ड हूं। बस वही जो इस दुखद गीत के साथ बहता रहा।"
+							}
+						},
+						{
+							"content": {
+								"korean": "이 배의 영혼들은 멈출 줄 몰라. 영원히 이 얼음을 떠도는 순례자들.",
+								"english": "The souls on this ship never stop. Pilgrims eternally adrift on this ice.",
+								"japanese": "この船の魂は止まることを知らない。永遠にこの氷を彷徨う巡礼者たち。",
+								"chinese": "这艘船上的灵魂永不停止。永远漂流在这冰上的朝圣者。",
+								"french": "Les âmes de ce navire ne s'arrêtent jamais. Des pèlerins errant éternellement sur cette glace.",
+								"spanish": "Las almas de este barco nunca se detienen. Peregrinos a la deriva eternamente en este hielo.",
+								"vietnamese": "Những linh hồn trên con tàu này không ngừng nghỉ. Những lữ khách vĩnh viễn trôi dạt trên băng này.",
+								"thai": "วิญญาณบนเรือลำนี้ไม่เคยหยุดนิ่ง ผู้แสวงบุญที่ล่องลอยอยู่บนน้ำแข็งนี้ตลอดไป",
+								"hindi": "इस जहाज पर आत्माएं कभी नहीं रुकतीं। इस बर्फ पर हमेशा के लिए भटकने वाले तीर्थयात्री।"
+							},
+							"type": "speech",
+							"emotion": "base",
+							"speaker": "hild"
+						}
+					]
+				},
+				{
+					"dialogue": [
+						{
+							"type": "direction",
+							"duration_ms": 500,
+							"action": "enter",
+							"spot": [
+								4,
+								2
+							],
+							"speaker": "hild"
+						},
+						{
+							"emotion": "base",
+							"type": "speech",
+							"speaker": "hild",
+							"content": {
+								"korean": "오래전부터 그랬지. 배가 떠나려 할 때마다 합창이 들려와.",
+								"english": "It's been like that for a long time. Every time the ship tries to leave, a chorus is heard.",
+								"japanese": "ずっと昔からそうだった。船が出航しようとするたびに、合唱が聞こえてくる。",
+								"chinese": "很久以前就是这样。每次船要启航时，都会听到一阵合唱。",
+								"french": "Cela fait longtemps que c'est comme ça. Chaque fois que le navire tente de partir, on entend un chœur.",
+								"spanish": "Ha sido así desde hace mucho. Cada vez que el barco intenta partir, se escucha un coro.",
+								"vietnamese": "Đã từ rất lâu rồi. Mỗi khi con tàu muốn rời đi, một khúc ca lại vang lên.",
+								"thai": "มันเป็นแบบนั้นมานานแล้ว ทุกครั้งที่เรือพยายามจะออกไป เสียงประสานก็จะดังขึ้น",
+								"hindi": "यह बहुत पहले से ऐसा ही है। हर बार जब जहाज निकलने की कोशिश करता है, एक कोरस सुनाई देता है।"
+							}
+						},
+						{
+							"content": {
+								"korean": "영원히 묶여있으라는… 저주 같은 노래.",
+								"english": "A song like a curse... to be bound forever.",
+								"japanese": "永遠に縛られろと…呪いのような歌。",
+								"chinese": "一首像诅咒一样的歌……要永远被束缚。",
+								"french": "Une chanson comme une malédiction... pour être lié à jamais.",
+								"spanish": "Una canción como una maldición... para estar atado para siempre.",
+								"vietnamese": "Một bài hát như lời nguyền... để bị ràng buộc vĩnh viễn.",
+								"thai": "เพลงเหมือนคำสาป... ให้ถูกผูกมัดไว้ตลอดไป",
+								"hindi": "एक शाप जैसा गीत... हमेशा के लिए बंधे रहने का।"
+							},
+							"emotion": "sad",
+							"type": "speech",
+							"speaker": "hild"
+						},
+						{
+							"content": {
+								"korean": "저주라고?",
+								"english": "A curse?",
+								"japanese": "呪いだと？",
+								"chinese": "诅咒？",
+								"french": "Une malédiction ?",
+								"spanish": "¿Una maldición?",
+								"vietnamese": "Lời nguyền ư?",
+								"thai": "คำสาปเหรอ?",
+								"hindi": "एक शाप?"
+							},
+							"emotion": "base",
+							"type": "speech",
+							"speaker": "character_1"
+						},
+						{
+							"content": {
+								"korean": "…그래. 끝나지 않는 순례의 징표.",
+								"english": "...Yes. A mark of an endless pilgrimage.",
+								"japanese": "…ああ。終わらない巡礼の証。",
+								"chinese": "……是的。无尽朝圣的印记。",
+								"french": "...Oui. Le signe d'un pèlerinage sans fin.",
+								"spanish": "...Sí. La marca de una peregrinación interminable.",
+								"vietnamese": "...Đúng vậy. Dấu hiệu của một cuộc hành hương không hồi kết.",
+								"thai": "...ใช่ สัญลักษณ์ของการแสวงบุญที่ไม่มีที่สิ้นสุด",
+								"hindi": "...हाँ। एक अंतहीन तीर्थयात्रा का निशान।"
+							},
+							"emotion": "base",
+							"type": "speech",
+							"speaker": "hild"
+						},
+						{
+							"content": {
+								"korean": "우린 이걸 끊을 수 있어.",
+								"english": "We can break this.",
+								"japanese": "我々はこれを断ち切れる。",
+								"chinese": "我们可以打破它。",
+								"french": "Nous pouvons briser cela.",
+								"spanish": "Podemos romper esto.",
+								"vietnamese": "Chúng ta có thể phá vỡ điều này.",
+								"thai": "เราสามารถทำลายสิ่งนี้ได้",
+								"hindi": "हम इसे तोड़ सकते हैं।"
+							},
+							"speaker": "character_2",
+							"type": "speech",
+							"emotion": "angry"
+						}
+					],
+					"id": 3
+				},
+				{
+					"id": 5,
+					"dialogue": [
+						{
+							"type": "direction",
+							"duration_ms": 500,
+							"action": "enter",
+							"spot": [
+								3,
+								2
+							],
+							"speaker": "hild"
+						},
+						{
+							"content": {
+								"korean": "(노래를 흥얼거린다. '끝없는 여정, 정착할 수 없는 땅. 망자의 순례는 끝나지 않으리…')",
+								"english": "(Hums a song. 'Endless journey, land where one cannot settle. The pilgrimage of the dead shall not end...')",
+								"japanese": "(歌を口ずさむ。「終わりのない旅路、定住できない地。死者の巡礼は終わらない…」)",
+								"chinese": "（哼着歌。《无尽的旅程，无法安居的土地。亡者的朝圣永不结束……》）",
+								"french": "(Fredonne une chanson. « Voyage sans fin, terre où l'on ne peut s'établir. Le pèlerinage des morts ne prendra pas fin... »)",
+								"spanish": "(Tararea una canción. \"Viaje sin fin, tierra donde no se puede asentar. La peregrinación de los muertos no terminará...\")",
+								"vietnamese": "(Ngâm nga một bài hát. 'Hành trình bất tận, vùng đất không thể định cư. Cuộc hành hương của người chết sẽ không kết thúc...')",
+								"thai": "(ฮัมเพลง 'การเดินทางที่ไม่สิ้นสุด ดินแดนที่ไม่อาจตั้งรกราก การแสวงบุญของผู้ตายจะไม่มีวันสิ้นสุด...')",
+								"hindi": "(एक गाना गुनगुनाता है। 'अंतहीन यात्रा, वह भूमि जहाँ कोई बस नहीं सकता। मृतकों की तीर्थयात्रा समाप्त नहीं होगी...')"
+							},
+							"speaker": "hild",
+							"emotion": "base",
+							"type": "speech"
+						},
+						{
+							"content": {
+								"korean": "그 노래… 무슨 뜻이야?",
+								"english": "That song... what does it mean?",
+								"japanese": "その歌…どういう意味だ？",
+								"chinese": "那首歌……是什么意思？",
+								"french": "Cette chanson... qu'est-ce que ça veut dire ?",
+								"spanish": "Esa canción... ¿qué significa?",
+								"vietnamese": "Bài hát đó... có ý nghĩa gì?",
+								"thai": "เพลงนั้น... หมายความว่าอะไร?",
+								"hindi": "वह गाना... उसका क्या मतलब है?"
+							},
+							"speaker": "character_1",
+							"emotion": "base",
+							"type": "speech"
+						},
+						{
+							"speaker": "hild",
+							"emotion": "base",
+							"type": "speech",
+							"content": {
+								"korean": "말 그대로야. 이 배는 영원히 떠다녀야 해.",
+								"english": "Exactly as it says. This ship must drift forever.",
+								"japanese": "文字通りだ。この船は永遠に漂い続けなければならない。",
+								"chinese": "字面意思。这艘船必须永远漂浮。",
+								"french": "C'est littéralement ça. Ce navire doit dériver éternellement.",
+								"spanish": "Literalmente. Este barco debe flotar para siempre.",
+								"vietnamese": "Đúng như lời nói. Con tàu này phải trôi dạt mãi mãi.",
+								"thai": "ตามตัวอักษร เรือลำนี้จะต้องลอยไปตลอดกาล",
+								"hindi": "बिलकुल जैसा यह कहता है। इस जहाज को हमेशा तैरते रहना होगा।"
+							}
+						},
+						{
+							"content": {
+								"korean": "망자들은 안식을 얻지 못하고, 살아있는 자도 이곳에 갇히면…",
+								"english": "The dead find no rest, and if the living are trapped here...",
+								"japanese": "死者は安息を得られず、生きている者もここに閉じ込められれば…",
+								"chinese": "死者得不到安息，如果生者被困在这里……",
+								"french": "Les morts ne trouvent pas le repos, et si les vivants sont piégés ici...",
+								"spanish": "Los muertos no encuentran descanso, y si los vivos quedan atrapados aquí...",
+								"vietnamese": "Người chết không tìm thấy sự yên nghỉ, và nếu người sống bị mắc kẹt ở đây...",
+								"thai": "ผู้ตายไม่พบความสงบ และหากผู้ที่ยังมีชีวิตอยู่ติดอยู่ที่นี่...",
+								"hindi": "मृतकों को शांति नहीं मिलती, और यदि जीवित लोग यहां फंस जाएं..."
+							},
+							"speaker": "hild",
+							"emotion": "sad",
+							"type": "speech"
+						},
+						{
+							"emotion": "sad",
+							"type": "speech",
+							"speaker": "hild",
+							"content": {
+								"korean": "그들의 순례를 이어받게 될 거야.",
+								"english": "You will inherit their pilgrimage.",
+								"japanese": "彼らの巡礼を受け継ぐことになるだろう。",
+								"chinese": "你将继承他们的朝圣。",
+								"french": "Tu hériteras de leur pèlerinage.",
+								"spanish": "Heredarás su peregrinaje.",
+								"vietnamese": "Ngươi sẽ tiếp nối cuộc hành hương của họ.",
+								"thai": "เจ้าจะสืบทอดการจาริกแสวงบุญของพวกเขา.",
+								"hindi": "तुम उनकी तीर्थयात्रा विरासत में पाओगे।"
+							}
+						},
+						{
+							"content": {
+								"korean": "그럴 리 없어!",
+								"english": "No way!",
+								"japanese": "まさか！",
+								"chinese": "不可能！",
+								"french": "Impossible !",
+								"spanish": "¡Imposible!",
+								"vietnamese": "Không thể nào!",
+								"thai": "ไม่มีทาง!",
+								"hindi": "ऐसा हो नहीं सकता!"
+							},
+							"speaker": "character_2",
+							"emotion": "angry",
+							"type": "speech"
+						},
+						{
+							"speaker": "hild",
+							"type": "speech",
+							"emotion": "base",
+							"content": {
+								"korean": "…흐음. 부디 그러길 바라지.",
+								"english": "...Hmm. I hope so.",
+								"japanese": "…ふむ。そうだといいが。",
+								"chinese": "……嗯。希望如此吧。",
+								"french": "...Hmm. J'espère que oui.",
+								"spanish": "...Mmm. Espero que así sea.",
+								"vietnamese": "...Hmm. Mong là vậy.",
+								"thai": "...อืมม์ หวังว่าจะเป็นอย่างนั้นนะ.",
+								"hindi": "...हम्म। आशा करता हूँ।"
+							}
+						}
+					]
+				},
+				{
+					"id": 9,
+					"dialogue": [
+						{
+							"duration_ms": 500,
+							"type": "direction",
+							"action": "enter",
+							"spot": [
+								2,
+								2
+							],
+							"speaker": "hild"
+						},
+						{
+							"content": {
+								"korean": "눈보라가 더 거세졌어. 망자들의 울음소리가 더 가까워지는군.",
+								"english": "The blizzard has grown fiercer. The wails of the dead draw closer.",
+								"japanese": "吹雪がさらに激しくなった。亡者たちの叫び声が近づいてくる。",
+								"chinese": "暴风雪更猛烈了。亡者的哀嚎声越来越近。",
+								"french": "Le blizzard s'est intensifié. Les gémissements des morts se rapprochent.",
+								"spanish": "La ventisca se ha vuelto más feroz. Los lamentos de los muertos se acercan.",
+								"vietnamese": "Bão tuyết dữ dội hơn rồi. Tiếng gào thét của người chết đang đến gần.",
+								"thai": "พายุหิมะรุนแรงขึ้น เสียงร้องของเหล่าผู้ตายใกล้เข้ามาแล้ว.",
+								"hindi": "बर्फीला तूफान और तेज़ हो गया है। मृतकों की चीखें करीब आ रही हैं।"
+							},
+							"type": "speech",
+							"emotion": "sad",
+							"speaker": "hild"
+						},
+						{
+							"type": "speech",
+							"emotion": "sad",
+							"speaker": "character_1",
+							"content": {
+								"korean": "젠장, 머리가 울려…",
+								"english": "Damn, my head's throbbing...",
+								"japanese": "くそ、頭が響く…",
+								"chinese": "该死，我的头好痛……",
+								"french": "Foutu, ma tête résonne...",
+								"spanish": "Maldita sea, mi cabeza retumba...",
+								"vietnamese": "Chết tiệt, đầu tôi nhức quá...",
+								"thai": "ให้ตายสิ หัวฉันปวดไปหมดเลย...",
+								"hindi": "धिक्कार है, मेरा सिर गूँज रहा है..."
+							}
+						},
+						{
+							"emotion": "base",
+							"type": "speech",
+							"speaker": "hild",
+							"content": {
+								"korean": "이 저주는 모든 것을 집어삼켜. 너희의 의지마저도.",
+								"english": "This curse devours everything. Even your will.",
+								"japanese": "この呪いはすべてを飲み込む。お前たちの意志までも。",
+								"chinese": "这个诅咒吞噬一切。甚至你们的意志。",
+								"french": "Cette malédiction dévore tout. Même votre volonté.",
+								"spanish": "Esta maldición lo devora todo. Incluso vuestra voluntad.",
+								"vietnamese": "Lời nguyền này nuốt chửng mọi thứ. Ngay cả ý chí của các ngươi.",
+								"thai": "คำสาปนี้กลืนกินทุกสิ่ง แม้กระทั่งเจตจำนงของพวกเจ้า.",
+								"hindi": "यह श्राप सब कुछ निगल जाता है। यहाँ तक कि तुम्हारी इच्छाशक्ति भी।"
+							}
+						},
+						{
+							"content": {
+								"korean": "우린 포기 안 해!",
+								"english": "We won't give up!",
+								"japanese": "俺たちは諦めない！",
+								"chinese": "我们不会放弃！",
+								"french": "On n'abandonnera pas !",
+								"spanish": "¡No nos rendiremos!",
+								"vietnamese": "Chúng tôi không bỏ cuộc!",
+								"thai": "เราไม่ยอมแพ้!",
+								"hindi": "हम हार नहीं मानेंगे!"
+							},
+							"speaker": "character_2",
+							"emotion": "angry",
+							"type": "speech"
+						},
+						{
+							"type": "speech",
+							"emotion": "sad",
+							"speaker": "hild",
+							"content": {
+								"korean": "…그 의지가, 또 다른 맹세가 될 수도 있다는 걸 잊지 마.",
+								"english": "...Don't forget, that will could become another vow.",
+								"japanese": "…その意志が、また別の誓いになるかもしれないということを忘れるな。",
+								"chinese": "……别忘了，那种意志也可能成为另一种誓言。",
+								"french": "...N'oubliez pas que cette volonté pourrait devenir un autre serment.",
+								"spanish": "...No olvides que esa voluntad podría convertirse en otra promesa.",
+								"vietnamese": "...Đừng quên, ý chí đó có thể trở thành một lời thề khác.",
+								"thai": "...อย่าลืมว่าเจตจำนงนั้นอาจกลายเป็นคำสาบานอีกครั้งได้.",
+								"hindi": "...यह मत भूलो, वह इच्छाशक्ति एक और शपथ बन सकती है।"
+							}
+						}
+					]
+				},
+				{
+					"win_dialogue": [
+						{
+							"content": {
+								"korean": "얼음 결정이 산산이 부서졌다. 주변을 감싸던 한기가 옅어지는 듯했다.",
+								"english": "The ice crystal shattered. The chilling air that enveloped the area seemed to recede.",
+								"japanese": "氷の結晶が粉々に砕け散った。周囲を包んでいた冷気が薄れていくようだった。",
+								"chinese": "冰晶破碎了。周围弥漫的寒气似乎也减弱了。",
+								"french": "Le cristal de glace se brisa. L'air glacial qui enveloppait la zone sembla se dissiper.",
+								"spanish": "El cristal de hielo se hizo añicos. El aire helado que envolvía la zona pareció disiparse.",
+								"vietnamese": "Tấm băng vỡ tan tành. Cái lạnh bao trùm xung quanh dường như đang tan biến.",
+								"thai": "ผลึกน้ำแข็งแตกละเอียด ความหนาวเย็นที่ปกคลุมดูเหมือนจะจางหายไป",
+								"hindi": "बर्फ का क्रिस्टल टूट गया। आसपास की ठंडी हवा कम होती हुई महसूस हुई।"
+							},
+							"speaker": "narrator",
+							"emotion": "base",
+							"type": "speech"
+						},
+						{
+							"content": {
+								"korean": "크하하… 끝났다고 생각하나? …이 저주는 영원하다.",
+								"english": "Hahaha... Do you think it's over? ...This curse is eternal.",
+								"japanese": "クハハ… 終わったとでも？…この呪いは永遠だ。",
+								"chinese": "哈哈哈……你以为结束了吗？……这个诅咒是永恒的。",
+								"french": "Hahaha... Pensez-vous que c'est fini ? ...Cette malédiction est éternelle.",
+								"spanish": "Jajaja... ¿Creéis que ha terminado? ...Esta maldición es eterna.",
+								"vietnamese": "Khà khà... Ngươi nghĩ là đã kết thúc sao? ...Lời nguyền này là vĩnh cửu.",
+								"thai": "ฮ่าฮ่าฮ่า... คิดว่ามันจบแล้วงั้นหรือ? ...คำสาปนี้เป็นนิรันดร์",
+								"hindi": "हाहाहा... क्या तुम्हें लगता है कि यह खत्म हो गया? ...यह अभिशाप शाश्वत है।"
+							},
+							"emotion": "angry",
+							"type": "speech",
+							"speaker": "random_boss"
+						},
+						{
+							"speaker": "character_1",
+							"emotion": "base",
+							"type": "speech",
+							"content": {
+								"korean": "…무슨 소리야.",
+								"english": "...What are you talking about?",
+								"japanese": "…何を言っているんだ。",
+								"chinese": "……你在说什么？",
+								"french": "...De quoi parles-tu ?",
+								"spanish": "...¿De qué hablas?",
+								"vietnamese": "...Ngươi đang nói gì vậy?",
+								"thai": "...เจ้าพูดอะไรน่ะ",
+								"hindi": "...क्या कह रहे हो।"
+							}
+						},
+						{
+							"content": {
+								"korean": "(사라지며) 너희도… 언젠가… 노래하게 될 것이다… 끝없는 여정을.",
+								"english": "(Fading) You too... someday... will sing... of an endless journey.",
+								"japanese": "（消えながら）お前たちも… いつか… 歌うことになるだろう… 終わりのない旅を。",
+								"chinese": "(逐渐消失) 你们也……终有一天……会歌唱……这场无尽的旅程。",
+								"french": "(S'évanouissant) Vous aussi... un jour... chanterez... un voyage sans fin.",
+								"spanish": "(Desvaneciéndose) Vosotros también... algún día... cantaréis... un viaje sin fin.",
+								"vietnamese": "(Biến mất) Các ngươi cũng... một ngày nào đó... sẽ hát... về một cuộc hành trình vô tận.",
+								"thai": "(ขณะที่หายไป) เจ้าเองก็... สักวันหนึ่ง... จะต้องขับขาน... การเดินทางอันไม่สิ้นสุด",
+								"hindi": "(गायब होते हुए) तुम भी... किसी दिन... गाओगे... एक अंतहीन यात्रा का।"
+							},
+							"speaker": "random_boss",
+							"type": "speech",
+							"emotion": "base"
+						},
+						{
+							"emotion": "angry",
+							"type": "speech",
+							"speaker": "character_2",
+							"content": {
+								"korean": "빌어먹을… 아직도 끝나지 않았다는 건가?",
+								"english": "Damn it... Does this mean it's still not over?",
+								"japanese": "くそっ… まだ終わってないというのか？",
+								"chinese": "该死……难道还没结束吗？",
+								"french": "Maudit soit... Cela signifie-t-il que ce n'est toujours pas fini ?",
+								"spanish": "Maldita sea... ¿Significa esto que aún no ha terminado?",
+								"vietnamese": "Khốn kiếp... Chẳng lẽ vẫn chưa kết thúc sao?",
+								"thai": "บ้าเอ๊ย... ยังไม่จบอีกงั้นหรือ?",
+								"hindi": "धिक्कार है... क्या इसका मतलब है कि यह अभी भी खत्म नहीं हुआ?"
+							}
+						},
+						{
+							"speaker": "narrator",
+							"type": "speech",
+							"emotion": "base",
+							"content": {
+								"korean": "망자들의 울음소리는 잠시 멎었지만, 얼음 동굴 저편에서 또 다른 미지의 그림자가 다가오고 있었다.",
+								"english": "The cries of the departed souls ceased for a moment, but another unknown shadow was approaching from the far end of the ice cave.",
+								"japanese": "亡者たちの叫び声は一時的に止んだが、氷の洞窟の奥から、別の未知の影が近づいてきていた。",
+								"chinese": "亡魂的哭泣声暂时停止了，但冰窟深处，另一个未知的身影正在逼近。",
+								"french": "Les pleurs des âmes des défunts cessèrent un instant, mais une autre ombre inconnue approchait du fond de la grotte de glace.",
+								"spanish": "Los lamentos de las almas de los muertos cesaron por un momento, pero otra sombra desconocida se acercaba desde el fondo de la cueva de hielo.",
+								"vietnamese": "Tiếng khóc của vong hồn tạm ngừng, nhưng từ sâu trong hang băng, một bóng hình vô danh khác đang tiến đến.",
+								"thai": "เสียงร้องของดวงวิญญาณเงียบลงชั่วขณะ แต่เงาประหลาดอีกตนกำลังคืบคลานมาจากสุดปลายถ้ำน้ำแข็ง",
+								"hindi": "मृत आत्माओं की चीखें एक पल के लिए रुक गईं, लेकिन बर्फ की गुफा के दूर छोर से एक और अज्ञात परछाई आ रही थी।"
+							}
+						},
+						{
+							"content": {
+								"korean": "순례는, 아직 끝나지 않았다.",
+								"english": "The pilgrimage is not over yet.",
+								"japanese": "巡礼は、まだ終わっていない。",
+								"chinese": "朝圣尚未结束。",
+								"french": "Le pèlerinage n'est pas encore terminé.",
+								"spanish": "La peregrinación aún no ha terminado.",
+								"vietnamese": "Cuộc hành hương vẫn chưa kết thúc.",
+								"thai": "การแสวงบุญยังไม่สิ้นสุด",
+								"hindi": "तीर्थयात्रा अभी समाप्त नहीं हुई है।"
+							},
+							"speaker": "narrator",
+							"type": "speech",
+							"emotion": "base"
+						}
+					],
+					"dialogue": [
+						{
+							"type": "speech",
+							"emotion": "base",
+							"speaker": "narrator",
+							"content": {
+								"korean": "배의 심장부. 거대한 얼음 결정체가 빛나고 있었다.",
+								"english": "The heart of the ship. A gigantic ice crystal glowed.",
+								"japanese": "船の心臓部。巨大な氷の結晶が輝いていた。",
+								"chinese": "飞船的心脏。一块巨大的冰晶闪耀着。",
+								"french": "Le cœur du navire. Un gigantesque cristal de glace brillait.",
+								"spanish": "El corazón de la nave. Un gigantesco cristal de hielo brillaba.",
+								"vietnamese": "Trái tim của con tàu. Một tinh thể băng khổng lồ đang phát sáng.",
+								"thai": "ใจกลางเรือ ผลึกน้ำแข็งขนาดยักษ์กำลังส่องแสง.",
+								"hindi": "जहाज़ का हृदय। एक विशाल बर्फ का क्रिस्टल चमक रहा था।"
+							}
+						},
+						{
+							"content": {
+								"korean": "드디어…",
+								"english": "Finally...",
+								"japanese": "ついに…",
+								"chinese": "终于……",
+								"french": "Enfin...",
+								"spanish": "Por fin...",
+								"vietnamese": "Cuối cùng...",
+								"thai": "ในที่สุด...",
+								"hindi": "आखिरकार..."
+							},
+							"type": "speech",
+							"emotion": "base",
+							"speaker": "character_1"
+						},
+						{
+							"content": {
+								"korean": "멈추지 않는 순례… 기어이 여기까지 왔는가.",
+								"english": "An unceasing pilgrimage... Have you truly come this far?",
+								"japanese": "止まらぬ巡礼… まさか、ここまで来たか。",
+								"chinese": "不息的朝圣……竟让你走到了这里。",
+								"french": "Un pèlerinage incessant... Es-tu vraiment venu jusqu'ici ?",
+								"spanish": "Una peregrinación incesante... ¿De verdad has llegado tan lejos?",
+								"vietnamese": "Cuộc hành hương không ngừng... Ngươi đã đến tận đây sao?",
+								"thai": "การจาริกที่ไม่หยุดหย่อน... เจ้ามาถึงที่นี่แล้วหรือ?",
+								"hindi": "एक अंतहीन तीर्थयात्रा... क्या तुम सच में इतनी दूर आ गए हो?"
+							},
+							"speaker": "random_boss",
+							"type": "speech",
+							"emotion": "base"
+						},
+						{
+							"content": {
+								"korean": "네가 이 망자들을 묶어둔 건가?",
+								"english": "Did you bind these departed souls?",
+								"japanese": "貴様がこの亡者たちを縛り付けているのか？",
+								"chinese": "是你束缚了这些亡魂吗？",
+								"french": "As-tu lié ces âmes des défunts ?",
+								"spanish": "¿Has atado a estas almas de los muertos?",
+								"vietnamese": "Ngươi đã trói buộc những vong hồn này ư?",
+								"thai": "เจ้าผูกมัดดวงวิญญาณเหล่านี้ไว้หรือ?",
+								"hindi": "क्या तुमने इन मृत आत्माओं को बांध रखा है?"
+							},
+							"speaker": "character_2",
+							"emotion": "angry",
+							"type": "speech"
+						},
+						{
+							"emotion": "base",
+							"type": "speech",
+							"speaker": "random_boss",
+							"content": {
+								"korean": "나는 그저 순리에 따를 뿐. 너희 또한 곧 그 순례의 일부가 될 테지.",
+								"english": "I merely follow the natural order. You too shall soon become part of that pilgrimage.",
+								"japanese": "私はただ摂理に従うのみ。お前たちもやがて、その巡礼の一部となるだろう。",
+								"chinese": "我只是顺应天理。你们也很快会成为那场朝圣的一部分。",
+								"french": "Je ne fais que suivre l'ordre naturel. Vous aussi ferez bientôt partie de ce pèlerinage.",
+								"spanish": "Solo sigo el orden natural. Vosotros también seréis pronto parte de esa peregrinación.",
+								"vietnamese": "Ta chỉ tuân theo lẽ tự nhiên. Các ngươi cũng sẽ sớm trở thành một phần của cuộc hành hương đó.",
+								"thai": "ข้าเพียงทำตามครรลองธรรมชาติ เจ้าเองก็จะกลายเป็นส่วนหนึ่งของการจาริกนั้นในไม่ช้า",
+								"hindi": "मैं बस प्राकृतिक व्यवस्था का पालन करता हूँ। तुम भी जल्द ही उस तीर्थयात्रा का हिस्सा बन जाओगे।"
+							}
+						},
+						{
+							"content": {
+								"korean": "웃기지 마! 우리가 여기서 끝낼 거야!",
+								"english": "Don't make me laugh! We'll end it here!",
+								"japanese": "笑わせるな！我々がここで終わらせてやる！",
+								"chinese": "别开玩笑了！我们会在Ε这里结束一切！",
+								"french": "Ne me fais pas rire ! Nous allons en finir ici !",
+								"spanish": "¡No me hagas reír! ¡Lo terminaremos aquí!",
+								"vietnamese": "Đừng có đùa! Chúng ta sẽ kết thúc nó ở đây!",
+								"thai": "อย่ามาหัวเราะ! เราจะยุติมันที่นี่แหละ!",
+								"hindi": "हंसाओ मत! हम इसे यहीं खत्म करेंगे!"
+							},
+							"speaker": "character_3",
+							"type": "speech",
+							"emotion": "angry"
+						}
+					],
+					"lose_dialogue": [
+						{
+							"speaker": "narrator",
+							"emotion": "base",
+							"type": "speech",
+							"content": {
+								"korean": "배의 심장이 다시 차갑게 얼어붙었다. 탐험대는 쓰러졌다.",
+								"english": "The ship's heart froze cold again. The expedition fell.",
+								"japanese": "船の心臓が再び冷たく凍りついた。探検隊は倒れた。",
+								"chinese": "船之心再次冰冷冻结。探险队倒下了。",
+								"french": "Le cœur du navire s'est de nouveau figé. L'expédition a échoué.",
+								"spanish": "El corazón de la nave se congeló de nuevo. La expedición cayó.",
+								"vietnamese": "Trái tim con tàu lại đóng băng. Đoàn thám hiểm đã ngã xuống.",
+								"thai": "หัวใจของเรือกลับกลายเป็นน้ำแข็งอีกครั้ง คณะสำรวจล้มลง",
+								"hindi": "जहाज़ का दिल फिर से ठंडा पड़ गया। अभियान दल गिर गया।"
+							}
+						},
+						{
+							"emotion": "base",
+							"type": "speech",
+							"speaker": "random_boss",
+							"content": {
+								"korean": "결국… 너희도 똑같군. 이 순례에 영원히 갇힐 뿐.",
+								"english": "In the end... you're all the same. Just trapped forever in this pilgrimage.",
+								"japanese": "結局…お前たちも同じか。この巡礼に永遠に囚われるだけだ。",
+								"chinese": "最终…你们都一样。永远被困在这场朝圣中。",
+								"french": "Au final... vous êtes tous les mêmes. Juste piégés à jamais dans ce pèlerinage.",
+								"spanish": "Al final... todos sois iguales. Solo atrapados para siempre en esta peregrinación.",
+								"vietnamese": "Cuối cùng... các ngươi cũng vậy thôi. Mãi mãi bị mắc kẹt trong cuộc hành hương này.",
+								"thai": "ในที่สุด...พวกเจ้าก็เหมือนกันหมด แค่ติดอยู่ในพิธีแสวงบุญนี้ตลอดไป",
+								"hindi": "अंत में… तुम भी वैसे ही हो। बस इस तीर्थयात्रा में हमेशा के लिए फंसे हुए हो।"
+							}
+						},
+						{
+							"content": {
+								"korean": "…아직… 끝나지 않았어…",
+								"english": "...It's not... over yet...",
+								"japanese": "…まだ…終わってない…",
+								"chinese": "…还没…结束…",
+								"french": "...Ce n'est pas... encore fini...",
+								"spanish": "...Aún no... ha terminado...",
+								"vietnamese": "...Vẫn chưa... kết thúc...",
+								"thai": "...ยัง...ไม่จบ...",
+								"hindi": "…अभी… ख़त्म नहीं हुआ है…"
+							},
+							"emotion": "angry",
+							"type": "speech",
+							"speaker": "character_1"
+						},
+						{
+							"speaker": "random_boss",
+							"emotion": "base",
+							"type": "speech",
+							"content": {
+								"korean": "그래. 다음 생에선… 현명한 선택을 하길 바란다.",
+								"english": "Yes. In the next life... I hope you make wiser choices.",
+								"japanese": "そうだ。次の生では…賢明な選択をするよう願う。",
+								"chinese": "是的。下辈子…希望你能做出更明智的选择。",
+								"french": "Oui. Dans la prochaine vie... j'espère que tu feras des choix plus sages.",
+								"spanish": "Sí. En la próxima vida... espero que tomes decisiones más sabias.",
+								"vietnamese": "Phải. Ở kiếp sau... mong ngươi đưa ra lựa chọn sáng suốt hơn.",
+								"thai": "ใช่ ในชาติหน้า...หวังว่าเจ้าจะเลือกสิ่งที่ดีกว่า",
+								"hindi": "हाँ। अगले जन्म में… मुझे आशा है कि तुम और समझदार विकल्प चुनोगे।"
+							}
+						}
+					],
+					"id": 15
+				}
+			],
+			"prologue": {
+				"korean": [
+					"얼어붙은 배, 그레이브미스트. 망자들의 울음소리가 눈보라와 섞여 들려왔다.",
+					"이곳에 갇힌 영혼들은 끝없이 순례한다. 안식을 찾지 못한 채.",
+					"그리고 우리 또한, 그들의 여정에 갇히게 될 것인가.",
+					"힐드의 노래는, 저주받은 배의 진실을 속삭이고 있었다."
+				],
+				"english": [
+					"The frozen ship, Gravemist. The wails of the dead mingled with the blizzard.",
+					"The souls trapped here wander endlessly, never finding rest.",
+					"And will we, too, be trapped on their journey?",
+					"Hild's song was whispering the truth of the cursed ship."
+				],
+				"japanese": [
+					"凍える船、グレイブミスト。亡者の慟哭が吹雪と混じり合った。",
+					"ここに囚われた魂は、安らぎを見つけることなく、永遠に巡礼する。",
+					"そして私たちもまた、彼らの旅路に囚われるのだろうか。",
+					"ヒルドの歌は、呪われた船の真実を囁いていた。"
+				],
+				"chinese": [
+					"冰封之船，格雷夫米斯特。亡者的哀嚎与暴风雪交织。",
+					"被困于此的灵魂无休止地游荡，永无安息。",
+					"而我们，也将被困于他们的旅程吗？",
+					"希尔德的歌声，低语着诅咒之船的真相。"
+				],
+				"french": [
+					"Le navire gelé, Gravemist. Les lamentations des morts se mêlaient au blizzard.",
+					"Les âmes piégées ici errent sans fin, ne trouvant jamais le repos.",
+					"Et serons-nous, nous aussi, piégés dans leur voyage ?",
+					"La chanson de Hild murmurait la vérité sur le navire maudit."
+				],
+				"spanish": [
+					"La nave congelada, Gravemist. Los lamentos de los muertos se mezclaban con la ventisca.",
+					"Las almas atrapadas aquí vagan sin cesar, sin encontrar nunca el descanso.",
+					"¿Y nosotros también quedaremos atrapados en su viaje?",
+					"La canción de Hild susurraba la verdad del barco maldito."
+				],
+				"vietnamese": [
+					"Con tàu đóng băng, Gravemist. Tiếng than khóc của người chết hòa cùng bão tuyết.",
+					"Những linh hồn bị mắc kẹt nơi đây lang thang vô tận, không tìm thấy sự an nghỉ.",
+					"Và liệu chúng ta cũng sẽ bị mắc kẹt trong cuộc hành trình của họ?",
+					"Bài hát của Hild đang thì thầm sự thật về con tàu bị nguyền rủa."
+				],
+				"thai": [
+					"เรือที่ถูกแช่แข็ง, เกรฟมิสต์ เสียงคร่ำครวญของผู้ตายปะปนกับพายุหิมะ",
+					"วิญญาณที่ถูกขังอยู่ที่นี่เดินทางไม่รู้จบ ไม่เคยพบความสงบ",
+					"และเราจะถูกขังอยู่ในการเดินทางของพวกเขาด้วยหรือไม่?",
+					"เพลงของฮิลด์กำลังกระซิบความจริงของเรือต้องสาป"
+				],
+				"hindi": [
+					"जमी हुई नाव, ग्रेवमिस्ट। मृतकों की चीखें बर्फीले तूफान के साथ घुल-मिल रही थीं।",
+					"यहां फंसी आत्माएं अंतहीन भटकती रहती हैं, कभी आराम नहीं पातीं।",
+					"और क्या हम भी, उनकी यात्रा में फंस जाएंगे?",
+					"हिल्ड का गीत शापित जहाज की सच्चाई फुसफुसा रहा था।"
+				]
+			}
+		},
+		{
+			"scenario_id": "snowy_gravemist_25_05",
+			"order": 5,
+			"act": "climax_finale",
+			"theme": "snowy",
+			"actors": {
+				"eira": {
+					"id": "mon_0c37c014-b5ca-4f2f-ad03-5d393e5b2eb1",
+					"name": {
+						"korean": "에이라",
+						"english": "Eira",
+						"japanese": "エイラ",
+						"chinese": "艾拉",
+						"french": "Eira",
+						"spanish": "Eira",
+						"vietnamese": "Eira",
+						"thai": "ไอรา",
+						"hindi": "ऐरा"
+					},
+					"description": "",
+					"face_image_url": "https://imagedelivery.net/WTEqQNGFb-l-IHS6IGnzUQ/8e2970b7-bcb1-4b1c-6bf0-93106b373500/public",
+					"battle_sprite_url": "https://imagedelivery.net/WTEqQNGFb-l-IHS6IGnzUQ/0ca1ec09-a624-450f-054a-b98de58bdb00/public"
+				}
+			},
+			"boss": {
+				"pool_id": "pool_SpectralVoyage_Gravemist_V1"
+			},
+			"epilogue": {
+				"korean": [
+					"그레이브미스트는 서서히 얼음 속에 잠겨갔다. 영혼들의 울부짖음이 멎었다.",
+					"에이라의 얼굴에 비로소 안식이 찾아왔다. 그녀는 얼어붙은 바다로 돌아갔다.",
+					"그러나 끝없는 여정은 정말로 끝난 것일까. 죄책감은 사라진 것일까.",
+					"수평선 너머, 또 다른 비극의 메아리가 들려오는 듯했다."
+				],
+				"english": [
+					"Gravemist slowly sank into the ice. The wails of the souls ceased.",
+					"Finally, peace came to Eira's face. She returned to the frozen sea.",
+					"But had the endless journey truly ended? Had the guilt vanished?",
+					"Beyond the horizon, the echo of another tragedy seemed to resound."
+				],
+				"japanese": [
+					"グレイブミストはゆっくりと氷の中に沈んでいった。魂たちの叫びは止んだ。",
+					"エイラの顔にようやく安息が訪れた。彼女は凍てついた海へと帰っていった。",
+					"しかし、終わりなき旅は本当に終わったのだろうか。罪悪感は消え去ったのだろうか。",
+					"水平線の向こうから、また別の悲劇の残響が聞こえてくるようだった。"
+				],
+				"chinese": [
+					"格雷夫米斯特渐渐沉入冰中。灵魂的哀嚎停止了。",
+					"艾拉的脸上终于露出了安宁。她回到了冰冻的海洋。",
+					"然而，这场无尽的旅程真的结束了吗？内疚感消失了吗？",
+					"地平线之外，仿佛传来另一场悲剧的回响。"
+				],
+				"french": [
+					"Le Gravemist s'enfonça lentement dans la glace. Les lamentations des âmes cessèrent.",
+					"Enfin, le repos s'inscrivit sur le visage d'Eira. Elle retourna vers la mer gelée.",
+					"Mais le voyage sans fin avait-il vraiment pris fin ? La culpabilité avait-elle disparu ?",
+					"Au-delà de l'horizon, l'écho d'une autre tragédie semblait résonner."
+				],
+				"spanish": [
+					"El Gravemist se hundió lentamente en el hielo. Los lamentos de las almas cesaron.",
+					"Finalmente, la paz llegó al rostro de Eira. Regresó al mar helado.",
+					"¿Pero había terminado realmente el viaje sin fin? ¿Se había desvanecido la culpa?",
+					"Más allá del horizonte, el eco de otra tragedia pareció resonar."
+				],
+				"vietnamese": [
+					"Gravemist dần dần chìm vào băng. Tiếng gào thét của các linh hồn đã ngừng lại.",
+					"Cuối cùng, sự bình yên đã đến với khuôn mặt của Eira. Cô trở về với biển băng giá.",
+					"Nhưng liệu cuộc hành trình vô tận đã thực sự kết thúc? Nỗi ám ảnh tội lỗi đã biến mất chưa?",
+					"Vượt qua đường chân trời, dường như có tiếng vọng của một bi kịch khác đang vang lên."
+				],
+				"thai": [
+					"เกรฟมิสต์ค่อยๆ จมลงสู่ธารน้ำแข็ง เสียงคร่ำครวญของวิญญาณเงียบลง",
+					"ในที่สุด ความสงบก็มาถึงใบหน้าของเอร่า เธอหวนคืนสู่ทะเลน้ำแข็ง",
+					"แต่การเดินทางที่ไม่มีที่สิ้นสุดนี้สิ้นสุดลงจริงหรือ ความรู้สึกผิดหายไปแล้วหรือยัง",
+					"เหนือเส้นขอบฟ้า ดูเหมือนจะมีเสียงสะท้อนของโศกนาฏกรรมอีกครั้ง"
+				],
+				"hindi": [
+					"ग्रेवमिस्ट धीरे-धीरे बर्फ में डूब गया। आत्माओं की चीखें थम गईं।",
+					"आखिरकार, ऐरा के चेहरे पर शांति आ गई। वह जमे हुए समुद्र में लौट गई।",
+					"पर क्या अनंत यात्रा सचमुच समाप्त हो गई थी? क्या अपराधबोध मिट गया था?",
+					"क्षितिज के पार, एक और त्रासदी की गूँज सुनाई दे रही थी।"
+				]
+			},
+			"rooms": [
+				{
+					"dialogue": [
+						{
+							"content": {
+								"korean": "거대한 빙룡선, 그레이브미스트가 눈보라 속에서 거친 숨을 내쉬었다.",
+								"english": "The colossal ice dragon ship, Gravemist, gasped roughly in the blizzard.",
+								"japanese": "巨大な氷竜船、グレイブミストが吹雪の中、荒々しく息を吐いた。",
+								"chinese": "巨大的冰龙船，格雷夫米斯特，在暴风雪中粗重地喘息着。",
+								"french": "Le colossal vaisseau-dragon de glace, Gravemist, haleta rudement dans le blizzard.",
+								"spanish": "El colosal barco dragón de hielo, Gravemist, jadeó ásperamente en la tormenta.",
+								"vietnamese": "Con tàu rồng băng khổng lồ, Gravemist, thở hổn hển trong bão tuyết.",
+								"thai": "เรือมังกรน้ำแข็งมหึมา เกรฟมิสต์ หายใจแรงในพายุหิมะ",
+								"hindi": "विशाल हिम-ड्रैगन पोत, ग्रेवमिस्ट, बर्फीले तूफ़ान में भारी साँस ले रहा था।"
+							},
+							"speaker": "narrator",
+							"type": "speech",
+							"emotion": "base"
+						},
+						{
+							"content": {
+								"korean": "이 배가… 전설의 유령선인가?",
+								"english": "Is this ship... the legendary ghost ship?",
+								"japanese": "この船が…伝説の幽霊船なのか？",
+								"chinese": "这艘船…就是传说中的幽灵船吗？",
+								"french": "Ce navire... est-ce le vaisseau fantôme légendaire ?",
+								"spanish": "¿Es este barco... el legendario barco fantasma?",
+								"vietnamese": "Con tàu này... có phải là con tàu ma huyền thoại không?",
+								"thai": "เรือลำนี้... คือเรือผีในตำนานหรือ?",
+								"hindi": "क्या यह पोत... वही पौराणिक भूतिया पोत है?"
+							},
+							"speaker": "character_any",
+							"type": "speech",
+							"emotion": "base"
+						},
+						{
+							"type": "direction",
+							"speaker": "eira",
+							"duration_ms": 500,
+							"action": "enter",
+							"spot": [
+								4,
+								2
+							]
+						},
+						{
+							"type": "speech",
+							"emotion": "sad",
+							"speaker": "eira",
+							"content": {
+								"korean": "맞아요. 이곳은 망자들의 안식을 위한 공간이었죠… 한때는.",
+								"english": "That's right. This was a place for the deceased to rest... once.",
+								"japanese": "そうです。ここは亡者たちの安息のための空間でした…かつては。",
+								"chinese": "没错。这里曾是逝者安息之地……一度是如此。",
+								"french": "C'est exact. Ce lieu était un espace de repos pour les défunts… autrefois.",
+								"spanish": "Así es. Este lugar era para el descanso de los muertos… una vez lo fue.",
+								"vietnamese": "Đúng vậy. Nơi này từng là chốn an nghỉ cho người đã khuất… từng là.",
+								"thai": "ถูกต้อง ที่นี่เคยเป็นสถานที่สำหรับผู้ตายได้พักผ่อน… ครั้งหนึ่ง",
+								"hindi": "हाँ, यह मृतकों की शांति के लिए एक जगह थी... कभी।"
+							}
+						},
+						{
+							"content": {
+								"korean": "의식은 모두 마쳤어요. 이제 이 배는… 떠날 거예요.",
+								"english": "All rituals are complete. This ship will now... depart.",
+								"japanese": "儀式は全て終わりました。この船はもう…出航します。",
+								"chinese": "仪式都已完成。这艘船现在……要启程了。",
+								"french": "Tous les rituels sont terminés. Ce navire va maintenant… partir.",
+								"spanish": "Todos los rituales han terminado. Este barco ahora… zarpará.",
+								"vietnamese": "Mọi nghi thức đã hoàn tất. Con thuyền này giờ sẽ… rời đi.",
+								"thai": "พิธีกรรมทั้งหมดเสร็จสิ้นแล้ว ตอนนี้เรือลำนี้… จะออกเดินทาง",
+								"hindi": "सभी रस्में पूरी हो चुकी हैं। अब यह जहाज... रवाना होगा।"
+							},
+							"speaker": "eira",
+							"emotion": "base",
+							"type": "speech"
+						}
+					],
+					"id": 1
+				},
+				{
+					"id": 3,
+					"dialogue": [
+						{
+							"action": "enter",
+							"spot": [
+								3,
+								2
+							],
+							"type": "direction",
+							"duration_ms": 500,
+							"speaker": "eira"
+						},
+						{
+							"type": "speech",
+							"emotion": "base",
+							"speaker": "narrator",
+							"content": {
+								"korean": "배체가 굉음을 내며 움직이기 시작했다. 섬뜩한 영혼들의 합창이 울려 퍼졌다.",
+								"english": "The ship's hull groaned and began to move. An eerie chorus of souls echoed.",
+								"japanese": "船体が轟音を立てて動き始めた。不気味な魂たちの合唱が響き渡った。",
+								"chinese": "船体发出轰鸣开始移动。阴森的亡灵合唱声回荡开来。",
+								"french": "La coque du navire a gémi et a commencé à bouger. Un chœur sinistre d'âmes a résonné.",
+								"spanish": "El casco del barco gimió y comenzó a moverse. Un coro espeluznante de almas resonó.",
+								"vietnamese": "Thân tàu rên rỉ và bắt đầu di chuyển. Một điệp khúc linh hồn rợn người vang vọng.",
+								"thai": "ลำเรือส่งเสียงดังครืนและเริ่มเคลื่อนที่ เสียงประสานวิญญาณสยองขวัญก้องกังวาน",
+								"hindi": "जहाज का ढांचा कराहने लगा और हिलने लगा। आत्माओं का एक डरावना गायन गूंज उठा।"
+							}
+						},
+						{
+							"speaker": "eira",
+							"type": "speech",
+							"emotion": "angry",
+							"content": {
+								"korean": "흐읍… 아아…! 아니야, 이건… 안식이 아니야!",
+								"english": "Ugh... Ahh...! No, this isn't... rest!",
+								"japanese": "うぅ…ああ…！違う、これは…安息じゃない！",
+								"chinese": "呃……啊……！不，这不是……安息！",
+								"french": "Ugh… Ahh… ! Non, ce n'est pas… le repos !",
+								"spanish": "Ugh… ¡Ahhh…! No, esto no es… ¡descanso!",
+								"vietnamese": "Ưgh… Ahh…! Không, đây không phải… sự an nghỉ!",
+								"thai": "อึก… อา…! ไม่ นี่มัน… ไม่ใช่การพักผ่อน!",
+								"hindi": "उफ़... आह...! नहीं, यह... शांति नहीं है!"
+							}
+						},
+						{
+							"content": {
+								"korean": "에이라? 괜찮아?",
+								"english": "Eira? Are you okay?",
+								"japanese": "エイラ？大丈夫か？",
+								"chinese": "艾拉？你没事吧？",
+								"french": "Eira ? Tu vas bien ?",
+								"spanish": "¿Eira? ¿Estás bien?",
+								"vietnamese": "Eira? Cậu ổn chứ?",
+								"thai": "เอร่า? เธอโอเคไหม?",
+								"hindi": "ऐरा? क्या तुम ठीक हो?"
+							},
+							"speaker": "character_any",
+							"type": "speech",
+							"emotion": "base"
+						},
+						{
+							"speaker": "eira",
+							"type": "speech",
+							"emotion": "sad",
+							"content": {
+								"korean": "이 배는… 이 저주는… 끝나지 않아! 내가… 저주의 일부였어!",
+								"english": "This ship... this curse... it won't end! I was... part of the curse!",
+								"japanese": "この船は…この呪いは…終わらない！私が…呪いの一部だったんだ！",
+								"chinese": "这艘船……这个诅咒……不会结束！我……是诅咒的一部分！",
+								"french": "Ce navire… cette malédiction… ça ne finira pas ! J'étais… une partie de la malédiction !",
+								"spanish": "Este barco… esta maldición… ¡no terminará! ¡Yo era… parte de la maldición!",
+								"vietnamese": "Con thuyền này… lời nguyền này… sẽ không kết thúc! Tôi… là một phần của lời nguyền!",
+								"thai": "เรือลำนี้… คำสาปนี้… จะไม่จบสิ้น! ฉันเอง… ก็เป็นส่วนหนึ่งของคำสาป!",
+								"hindi": "यह जहाज... यह अभिशाप... खत्म नहीं होगा! मैं... अभिशाप का हिस्सा था!"
+							}
+						}
+					]
+				},
+				{
+					"dialogue": [
+						{
+							"action": "enter",
+							"spot": [
+								2,
+								2
+							],
+							"type": "direction",
+							"duration_ms": 500,
+							"speaker": "eira"
+						},
+						{
+							"content": {
+								"korean": "눈보라가 걷히자, 배 안의 수천 개의 찢겨진 영혼들이 아비규환의 모습으로 드러났다.",
+								"english": "As the blizzard cleared, thousands of torn souls aboard the ship were revealed in pandemonium.",
+								"japanese": "吹雪が晴れると、船内の数千もの引き裂かれた魂が阿鼻叫喚の姿を現した。",
+								"chinese": "暴风雪消散后，船内数千个被撕裂的灵魂以一片狼藉的姿态显现。",
+								"french": "Quand le blizzard s'est dissipé, des milliers d'âmes déchirées à bord du navire sont apparues dans un pandémonium.",
+								"spanish": "Cuando la ventisca se disipó, miles de almas desgarradas a bordo del barco se revelaron en un pandemonio.",
+								"vietnamese": "Khi bão tuyết tan, hàng ngàn linh hồn bị xé nát trên thuyền hiện ra trong cảnh hỗn loạn.",
+								"thai": "เมื่อพายุหิมะจางลง วิญญาณฉีกขาดนับพันบนเรือก็ปรากฏออกมาในความโกลาหลอลหม่าน",
+								"hindi": "जैसे ही बर्फीला तूफान साफ हुआ, जहाज पर हजारों फटी हुई आत्माएं हाहाकार करते हुए दिखाई दीं।"
+							},
+							"type": "speech",
+							"emotion": "base",
+							"speaker": "narrator"
+						},
+						{
+							"content": {
+								"korean": "이게… 이 배의 진짜 모습이라고?",
+								"english": "Is this… the true form of this ship?",
+								"japanese": "これが…この船の本当の姿だと？",
+								"chinese": "这……就是这艘船的真面目吗？",
+								"french": "C'est ça… la vraie forme de ce navire ?",
+								"spanish": "¿Es esta… la verdadera forma de este barco?",
+								"vietnamese": "Đây… là hình dạng thật của con thuyền này sao?",
+								"thai": "นี่คือ… ร่างที่แท้จริงของเรือลำนี้หรือ?",
+								"hindi": "क्या यह... इस जहाज का असली रूप है?"
+							},
+							"speaker": "character_any",
+							"emotion": "sad",
+							"type": "speech"
+						},
+						{
+							"content": {
+								"korean": "제발… 이 고통을… 이 영원한 여정을… 멈춰줘요…! 진짜 안식을…!",
+								"english": "Please… stop this pain… this eternal journey…! Give us true rest…!",
+								"japanese": "お願い…この苦痛を…この永遠の旅を…止めて…！本当の安息を…！",
+								"chinese": "拜托了……停止这份痛苦……这份永恒的旅程……！赐予我们真正的安息吧……！",
+								"french": "S'il vous plaît… arrêtez cette douleur… ce voyage éternel… ! Donnez-nous le vrai repos… !",
+								"spanish": "¡Por favor… detengan este dolor… este viaje eterno…! ¡Danos el verdadero descanso…!",
+								"vietnamese": "Làm ơn… hãy dừng cơn đau này… chuyến hành trình vĩnh cửu này…! Hãy ban cho chúng tôi sự an nghỉ thực sự…!",
+								"thai": "ได้โปรด… หยุดความเจ็บปวดนี้… การเดินทางชั่วนิรันดร์นี้…! ขอการพักผ่อนที่แท้จริง…!",
+								"hindi": "कृपया... इस दर्द को... इस अनंत यात्रा को... रोक दो...! हमें सच्ची शांति दो...!"
+							},
+							"speaker": "eira",
+							"emotion": "angry",
+							"type": "speech"
+						},
+						{
+							"emotion": "sad",
+							"type": "speech",
+							"speaker": "character_any",
+							"content": {
+								"korean": "…대체 무슨 저주에 묶인 거야.",
+								"english": "...What kind of curse are they bound by?",
+								"japanese": "…一体どんな呪いに縛られているんだ。",
+								"chinese": "……究竟是被什么诅咒束缚着。",
+								"french": "…À quelle malédiction sont-ils liés ?",
+								"spanish": "…¿A qué tipo de maldición están atados?",
+								"vietnamese": "…Rốt cuộc là bị nguyền rủa bởi điều gì.",
+								"thai": "…ถูกผูกมัดด้วยคำสาปอะไรกันแน่เนี่ย",
+								"hindi": "...आखिर किस अभिशाप से बंधे हैं ये।"
+							}
+						}
+					],
+					"id": 5
+				},
+				{
+					"dialogue": [
+						{
+							"action": "enter",
+							"spot": [
+								4,
+								2
+							],
+							"type": "direction",
+							"duration_ms": 500,
+							"speaker": "eira"
+						},
+						{
+							"content": {
+								"korean": "배는 심연 속으로 가라앉는 듯했다. 모든 것을 삼키려는 거대한 의지가 느껴졌다.",
+								"english": "The ship seemed to sink into the abyss. A colossal will, intent on devouring all, was felt.",
+								"japanese": "船は深淵へと沈んでいくようだった。すべてを飲み込もうとする巨大な意思を感じた。",
+								"chinese": "船仿佛沉入深渊。一股吞噬一切的巨大意志被感受到了。",
+								"french": "Le navire semblait s'enfoncer dans l'abîme. Une volonté colossale, prête à tout dévorer, se faisait sentir.",
+								"spanish": "El barco parecía hundirse en el abismo. Se sentía una voluntad colosal, dispuesta a devorarlo todo.",
+								"vietnamese": "Con tàu dường như chìm vào vực thẳm. Một ý chí khổng lồ, muốn nuốt chửng mọi thứ, đã được cảm nhận.",
+								"thai": "เรือดูเหมือนจะจมดิ่งลงสู่ห้วงลึก สัมผัสได้ถึงเจตจำนงอันมหึมาที่ต้องการกลืนกินทุกสิ่ง",
+								"hindi": "जहाज़ रसातल में डूबता हुआ प्रतीत हो रहा था। सब कुछ निगलने वाली एक विशाल इच्छा महसूस हुई।"
+							},
+							"speaker": "narrator",
+							"type": "speech",
+							"emotion": "base"
+						},
+						{
+							"emotion": "angry",
+							"type": "speech",
+							"speaker": "eira",
+							"content": {
+								"korean": "그레이브미스트… 그는… 이 모든 고통의 합창 그 자체예요…!",
+								"english": "Gravemist… he… is the very chorus of all this suffering…!",
+								"japanese": "グレイブミスト… 彼こそが… この全ての苦痛の合唱そのもの…！",
+								"chinese": "格雷夫米斯特… 他… 就是这所有痛苦的合唱本身…！",
+								"french": "Gravemist… il est… le chœur même de toute cette souffrance… !",
+								"spanish": "Gravemist… él… ¡es el coro mismo de todo este sufrimiento…!",
+								"vietnamese": "Gravemist… hắn… chính là bản hợp xướng của mọi nỗi đau này…!",
+								"thai": "เกรฟมิสต์… เขา… คือบทเพลงแห่งความทรมานทั้งหมดนี้เอง…!",
+								"hindi": "ग्रेवमिस्ट… वह… इस सारे दर्द का कोरस है…!"
+							}
+						},
+						{
+							"content": {
+								"korean": "우리가… 이 루프를 끊을 수 있을까?",
+								"english": "Can we… break this loop?",
+								"japanese": "私たちは… このループを断ち切れるだろうか？",
+								"chinese": "我们… 能打破这个循环吗？",
+								"french": "Pourrons-nous… briser cette boucle ?",
+								"spanish": "¿Podremos… romper este bucle?",
+								"vietnamese": "Chúng ta… có thể phá vỡ vòng lặp này không?",
+								"thai": "เรา… จะทำลายวงวนนี้ได้ไหม?",
+								"hindi": "क्या हम… इस लूप को तोड़ सकते हैं?"
+							},
+							"speaker": "character_any",
+							"type": "speech",
+							"emotion": "base"
+						},
+						{
+							"speaker": "eira",
+							"emotion": "sad",
+							"type": "speech",
+							"content": {
+								"korean": "이제… 되돌릴 수 없어요. 영원히… 함께 갈 것인지… 결정해야 해…",
+								"english": "Now… there's no turning back. We must decide… whether to go together… forever…",
+								"japanese": "もう… 後戻りはできない。永遠に… 共に進むのか… 決めなければ…",
+								"chinese": "现在… 已经无法回头了。必须决定… 是否永远… 一起走下去…",
+								"french": "Maintenant… il n'y a plus de retour en arrière. Il faut décider… si nous irons ensemble… pour toujours…",
+								"spanish": "Ahora… no hay vuelta atrás. Debemos decidir… si iremos juntos… para siempre…",
+								"vietnamese": "Giờ đây… không thể quay lại được nữa. Phải quyết định… liệu có đi cùng nhau… mãi mãi không…",
+								"thai": "ตอนนี้… ไม่มีทางย้อนกลับแล้ว เราต้องตัดสินใจ… ว่าจะไปพร้อมกัน… ตลอดไป…",
+								"hindi": "अब… पीछे हटना नहीं है। हमें तय करना होगा… कि हमेशा के लिए… साथ चलें…"
+							}
+						}
+					],
+					"id": 9
+				},
+				{
+					"dialogue": [
+						{
+							"speaker": "narrator",
+							"type": "speech",
+							"emotion": "base",
+							"content": {
+								"korean": "배의 심장이자 저주의 근원, 그레이브미스트가 모습을 드러냈다. 수천 개의 영혼이 뒤엉킨 거대한 형상이었다.",
+								"english": "Gravemist, the heart of the ship and the source of the curse, revealed itself. It was a colossal form tangled with thousands of souls.",
+								"japanese": "船の心臓であり呪いの根源であるグレイブミストが姿を現した。それは数千の魂が絡み合った巨大な姿だった。",
+								"chinese": "船之心脏，诅咒之源，格雷夫米斯特现身了。那是一个缠绕着数千灵魂的巨大形态。",
+								"french": "Gravemist, le cœur du navire et la source de la malédiction, s'est révélé. C'était une forme colossale entremêlée de milliers d'âmes.",
+								"spanish": "Gravemist, el corazón del barco y la fuente de la maldición, se reveló. Era una forma colosal enredada con miles de almas.",
+								"vietnamese": "Gravemist, trái tim của con tàu và là nguồn gốc của lời nguyền, đã lộ diện. Đó là một hình thù khổng lồ quấn quýt bởi hàng ngàn linh hồn.",
+								"thai": "เกรฟมิสต์ หัวใจของเรือและต้นกำเนิดของคำสาป ได้ปรากฏตัวขึ้น มันเป็นร่างมหึมาที่พันกันยุ่งเหยิงด้วยวิญญาณนับพัน",
+								"hindi": "जहाज़ का हृदय और श्राप का स्रोत, ग्रेवमिस्ट प्रकट हुआ। यह हज़ारों आत्माओं से उलझा हुआ एक विशाल रूप था।"
+							}
+						},
+						{
+							"emotion": "sad",
+							"type": "speech",
+							"speaker": "eira",
+							"content": {
+								"korean": "그레이브미스트…! 제발… 더 이상…! 저에게 안식을…!",
+								"english": "Gravemist…! Please… no more…! Give me peace…!",
+								"japanese": "グレイブミスト…！お願い… もうやめて…！私に安息を…！",
+								"chinese": "格雷夫米斯特…！求你… 别再…！给我安息…！",
+								"french": "Gravemist… ! S'il te plaît… plus… ! Donne-moi la paix… !",
+								"spanish": "¡Gravemist…! ¡Por favor… no más…! ¡Dame paz…!",
+								"vietnamese": "Gravemist…! Làm ơn… đừng nữa…! Hãy ban cho tôi sự yên nghỉ…!",
+								"thai": "เกรฟมิสต์…! ได้โปรด… อย่าอีกเลย…! ขอความสงบสุขให้แก่ข้า…!",
+								"hindi": "ग्रेवमिस्ट…! कृपया… और नहीं…! मुझे शांति दो…!"
+							}
+						},
+						{
+							"content": {
+								"korean": "너희는 우리의 고통을 이해하지 못하리라! 끝없는 여정, 잊혀진 명예…",
+								"english": "You will not understand our suffering! An endless journey, forgotten honor…",
+								"japanese": "お前たちには我らの苦痛は理解できぬだろう！終わりのない旅、忘れ去られた名誉…",
+								"chinese": "你们不会理解我们的痛苦！无尽的旅程，被遗忘的荣耀…",
+								"french": "Vous ne comprendrez pas notre souffrance ! Un voyage sans fin, un honneur oublié…",
+								"spanish": "¡No comprenderéis nuestro sufrimiento! Un viaje sin fin, un honor olvidado…",
+								"vietnamese": "Các ngươi sẽ không hiểu được nỗi đau của chúng ta! Một hành trình vô tận, danh dự bị lãng quên…",
+								"thai": "พวกเจ้าจะไม่มีทางเข้าใจความทุกข์ทรมานของเรา! การเดินทางที่ไม่มีที่สิ้นสุด เกียรติยศที่ถูกลืมเลือน…",
+								"hindi": "तुम हमारे दुख को नहीं समझोगे! एक अंतहीन यात्रा, भूली हुई प्रतिष्ठा…"
+							},
+							"speaker": "boss",
+							"emotion": "angry",
+							"type": "speech"
+						},
+						{
+							"type": "speech",
+							"emotion": "angry",
+							"speaker": "boss",
+							"content": {
+								"korean": "이 얼어붙은 심연에서, 너희 또한 우리의 영원한 승객이 될지니!",
+								"english": "In this frozen abyss, you too shall become our eternal passengers!",
+								"japanese": "この凍てついた深淵で、お前たちもまた我らの永遠の乗客となるだろう！",
+								"chinese": "在这冰冷的深渊中，你们也必将成为我们永远的乘客！",
+								"french": "Dans cet abîme gelé, vous aussi deviendrez nos passagers éternels !",
+								"spanish": "¡En este abismo congelado, vosotros también seréis nuestros pasajeros eternos!",
+								"vietnamese": "Trong vực thẳm băng giá này, các ngươi cũng sẽ trở thành hành khách vĩnh viễn của chúng ta!",
+								"thai": "ในห้วงลึกอันเยือกแข็งนี้ พวกเจ้าก็จะต้องเป็นผู้โดยสารชั่วนิรันดร์ของเราเช่นกัน!",
+								"hindi": "इस जमी हुई खाई में, तुम भी हमारे शाश्वत यात्री बनोगे!"
+							}
+						},
+						{
+							"speaker": "character_any",
+							"emotion": "angry",
+							"type": "speech",
+							"content": {
+								"korean": "헛소리 마! 우리가 이 비극을 끝내주겠어!",
+								"english": "Nonsense! We'll put an end to this tragedy!",
+								"japanese": "くだらない！俺たちがこの悲劇を終わらせてやる！",
+								"chinese": "少废话！我们会结束这场悲剧！",
+								"french": "Absurdités ! Nous mettrons fin à cette tragédie !",
+								"spanish": "¡Tonterías! ¡Nosotros pondremos fin a esta tragedia!",
+								"vietnamese": "Vớ vẩn! Chúng ta sẽ chấm dứt bi kịch này!",
+								"thai": "ไร้สาระ! เราจะยุติโศกนาฏกรรมนี้เอง!",
+								"hindi": "बकवास मत करो! हम इस त्रासदी को खत्म कर देंगे!"
+							}
+						}
+					],
+					"win_dialogue": [
+						{
+							"content": {
+								"korean": "크아아아…! 이 고통은… 끝나지 않는다… 너희의… 죄책감 속에… 영원히…!",
+								"english": "Graaahh…! This pain… never ends… Within your… guilt… forever…!",
+								"japanese": "グアアアア…！この苦痛は… 終わらない… お前たちの… 罪悪感の中に… 永遠に…！",
+								"chinese": "呃啊啊啊…！这份痛苦… 永不停止… 在你们的… 罪恶感中… 永远…！",
+								"french": "Graaahh… ! Cette douleur… ne s'arrête jamais… Dans votre… culpabilité… pour toujours… !",
+								"spanish": "¡Graaahh…! Este dolor… nunca termina… ¡En vuestra… culpa… para siempre…!",
+								"vietnamese": "Grừuuuu…! Nỗi đau này… không bao giờ kết thúc… Trong cảm giác tội lỗi… của các ngươi… mãi mãi…!",
+								"thai": "กรี๊ดดดด…! ความเจ็บปวดนี้… ไม่มีวันสิ้นสุด… ในความรู้สึกผิด… ของพวกเจ้า… ตลอดไป…!",
+								"hindi": "ग्रर्रर्रर्र…! यह दर्द… कभी खत्म नहीं होगा… तुम्हारे… अपराधबोध में… हमेशा के लिए…!"
+							},
+							"speaker": "boss",
+							"emotion": "sad",
+							"type": "speech"
+						},
+						{
+							"content": {
+								"korean": "…결국, 모두의 죄책감이 만들어낸 저주였던 건가.",
+								"english": "...So, in the end, it was a curse born of everyone's guilt.",
+								"japanese": "…結局、みんなの罪悪感が作り出した呪いだったのか。",
+								"chinese": "……最终，这只是大家罪恶感产生的诅咒吗？",
+								"french": "...Alors, finalement, c'était une malédiction née de la culpabilité de tous.",
+								"spanish": "...Entonces, al final, ¿fue una maldición nacida de la culpa de todos?",
+								"vietnamese": "...Rốt cuộc, đó có phải là một lời nguyền do tội lỗi của mọi người tạo ra không?",
+								"thai": "...ในที่สุด มันก็เป็นคำสาปที่เกิดจากความรู้สึกผิดของทุกคนงั้นหรือ?",
+								"hindi": "...तो, आखिरकार, यह सबकी अपराधबोध से पैदा हुआ एक श्राप था।"
+							},
+							"speaker": "character_any",
+							"emotion": "sad",
+							"type": "speech"
+						},
+						{
+							"duration_ms": 500,
+							"speaker": "eira",
+							"type": "direction",
+							"spot": [
+								3,
+								2
+							],
+							"action": "enter"
+						},
+						{
+							"speaker": "eira",
+							"type": "speech",
+							"emotion": "happy",
+							"content": {
+								"korean": "고마워요… 드디어… 멈췄어…",
+								"english": "Thank you... It's finally... stopped...",
+								"japanese": "ありがとう…ついに…止まった…",
+								"chinese": "谢谢……终于……停下来了……",
+								"french": "Merci... Ça s'est enfin... arrêté...",
+								"spanish": "Gracias... Finalmente... se detuvo...",
+								"vietnamese": "Cảm ơn... Cuối cùng... nó đã dừng lại...",
+								"thai": "ขอบคุณ... ในที่สุด... มันก็หยุดแล้ว...",
+								"hindi": "धन्यवाद... यह आखिरकार... रुक गया..."
+							}
+						},
+						{
+							"content": {
+								"korean": "그레이브미스트는 서서히 얼음 속에 잠겼다. 하지만, 바다 저편에서 또 다른 망자의 노래가 들려오는 듯했다.",
+								"english": "Gravemist slowly sank into the ice. Yet, from beyond the sea, another song of the dead seemed to echo.",
+								"japanese": "グレイブミストはゆっくりと氷の中に沈んでいった。しかし、海の向こうから、また別の亡者の歌が聞こえてくるようだった。",
+								"chinese": "格雷夫米斯特渐渐沉入冰中。然而，海的那边，似乎又传来了亡者的歌声。",
+								"french": "Gravemist s'enfonça lentement dans la glace. Pourtant, au-delà de la mer, un autre chant des morts semblait résonner.",
+								"spanish": "Gravemist se hundió lentamente en el hielo. Sin embargo, desde más allá del mar, otra canción de los muertos parecía resonar.",
+								"vietnamese": "Gravemist từ từ chìm vào băng. Tuy nhiên, từ phía bên kia biển, một bài hát khác của người chết dường như vang vọng.",
+								"thai": "เกรฟมิสต์ค่อยๆ จมลงสู่ผืนน้ำแข็ง ทว่า จากอีกฟากหนึ่งของทะเล บทเพลงของผู้ตายอีกบทก็ดูเหมือนจะก้องกังวานขึ้นมา",
+								"hindi": "ग्रेवमिस्ट धीरे-धीरे बर्फ में समा गया। फिर भी, समुद्र के पार से, मृतकों का एक और गीत गूंजता हुआ प्रतीत हुआ।"
+							},
+							"type": "speech",
+							"emotion": "base",
+							"speaker": "narrator"
+						}
+					],
+					"id": 15,
+					"lose_dialogue": [
+						{
+							"speaker": "boss",
+							"emotion": "angry",
+							"type": "speech",
+							"content": {
+								"korean": "후후후… 결국 너희도… 우리의 영원한 선원이 될 뿐…! 끝없는 여정에 동참하라…!",
+								"english": "Heeheehee... In the end, you too... will only become our eternal sailors...! Join the endless journey...!",
+								"japanese": "フフフ…結局お前たちも…我々の永遠の船員になるだけ…！終わりのない旅に加わるがいい…！",
+								"chinese": "呵呵呵……最终你们也会……成为我们永恒的水手……！加入这无尽的旅程吧……！",
+								"french": "Heeheehee... Au final, vous aussi... ne serez que nos marins éternels...! Rejoignez le voyage sans fin...!",
+								"spanish": "Jejeje... Al final, vosotros también... solo seréis nuestros marineros eternos...! ¡Uníos al viaje sin fin...!",
+								"vietnamese": "Khà khà khà... Cuối cùng thì các ngươi cũng... chỉ trở thành thủy thủ vĩnh cửu của chúng ta mà thôi...! Hãy tham gia cuộc hành trình bất tận này...!",
+								"thai": "ฮ่าฮ่าฮ่า... ในที่สุดพวกเจ้าก็... จะเป็นเพียงลูกเรือชั่วนิรันดร์ของเราเท่านั้น...! จงเข้าร่วมการเดินทางอันไร้ที่สิ้นสุด...!",
+								"hindi": "हीहीही... आखिरकार तुम भी... हमारे शाश्वत नाविक बनोगे...! अंतहीन यात्रा में शामिल हो जाओ...!"
+							}
+						},
+						{
+							"content": {
+								"korean": "아직… 끝나지 않았어! 다시 돌아올 거야!",
+								"english": "It's not... over yet! We'll be back!",
+								"japanese": "まだ…終わってない！また戻ってくるからな！",
+								"chinese": "还没……结束！我们会再回来的！",
+								"french": "Ce n'est pas... encore fini ! Nous reviendrons !",
+								"spanish": "¡Todavía no... ha terminado! ¡Volveremos!",
+								"vietnamese": "Chưa... kết thúc đâu! Chúng ta sẽ quay lại!",
+								"thai": "ยัง... ไม่จบหรอก! เราจะกลับมาอีก!",
+								"hindi": "अभी... खत्म नहीं हुआ! हम वापस आएंगे!"
+							},
+							"speaker": "character_any",
+							"type": "speech",
+							"emotion": "angry"
+						}
+					]
+				}
+			],
+			"prologue": {
+				"korean": [
+					"고대의 빙룡선, 그레이브미스트. 망자들의 울부짖음이 선체를 뒤덮었다.",
+					"에이라는 구원을 약속했지만, 배는 진정한 안식을 주지 않았다.",
+					"눈보라 속에서 드러난 것은 수천 개의 찢겨진 영혼들.",
+					"이 비극적인 루프를 끊을 것인가, 영원한 승객이 될 것인가."
+				],
+				"english": [
+					"The ancient ice dragon ship, Gravemist. The wails of the dead enveloped its hull.",
+					"Eira promised salvation, but the ship offered no true rest.",
+					"What the blizzard revealed were thousands of torn souls.",
+					"Will you break this tragic loop, or become an eternal passenger?"
+				],
+				"japanese": [
+					"古の氷竜船、グレイブミスト。亡者たちの叫びが船体を覆っていた。",
+					"エイラは救済を約束したが、船は真の安息を与えなかった。",
+					"吹雪の中で現れたのは、数千の引き裂かれた魂たちだった。",
+					"この悲劇的なループを断ち切るのか、それとも永遠の乗客となるのか。"
+				],
+				"chinese": [
+					"古老的冰龙船，格雷夫米斯特。亡者的哀嚎笼罩着船体。",
+					"艾拉承诺了救赎，但船并未带来真正的安息。",
+					"暴风雪中显现的是数千个撕裂的灵魂。",
+					"你将斩断这悲剧的循环，还是成为永恒的乘客？"
+				],
+				"french": [
+					"L'antique vaisseau-dragon de glace, Gravemist. Les lamentations des morts recouvraient sa coque.",
+					"Eira promit le salut, mais le navire n'offrait aucun véritable repos.",
+					"Ce que le blizzard révéla, ce furent des milliers d'âmes déchirées.",
+					"Briserez-vous cette boucle tragique, ou deviendrez-vous un passager éternel ?"
+				],
+				"spanish": [
+					"El antiguo barco dragón de hielo, Gravemist. Los lamentos de los muertos envolvieron su casco.",
+					"Eira prometió la salvación, pero el barco no dio verdadero descanso.",
+					"Lo que la tormenta de nieve reveló fueron miles de almas desgarradas.",
+					"¿Romperás este bucle trágico o te convertirás en un pasajero eterno?"
+				],
+				"vietnamese": [
+					"Con tàu rồng băng cổ xưa, Gravemist. Tiếng gào thét của người chết bao trùm lấy thân tàu.",
+					"Eira đã hứa ban sự cứu rỗi, nhưng con tàu không mang lại bình yên thực sự.",
+					"Điều bão tuyết hé lộ là hàng ngàn linh hồn tan nát.",
+					"Bạn sẽ phá vỡ vòng lặp bi kịch này, hay trở thành hành khách vĩnh viễn?"
+				],
+				"thai": [
+					"เรือมังกรน้ำแข็งโบราณ เกรฟมิสต์ เสียงคร่ำครวญของผู้ตายปกคลุมลำเรือ",
+					"เอร่าสัญญาว่าจะให้ความรอด แต่เรือลำนี้ไม่ได้ให้การพักผ่อนที่แท้จริง",
+					"สิ่งที่พายุหิมะเผยให้เห็นคือวิญญาณที่ฉีกขาดนับพัน",
+					"คุณจะทำลายวงจรโศกนาฏกรรมนี้ หรือจะเป็นผู้โดยสารชั่วนิรันดร์"
+				],
+				"hindi": [
+					"प्राचीन हिम-ड्रैगन पोत, ग्रेवमिस्ट। मृतकों की चीखें पोत के पूरे ढांचे को ढक लेती थीं।",
+					"ऐरा ने मुक्ति का वादा किया था, पर पोत ने सच्ची शांति नहीं दी।",
+					"बर्फ़ीले तूफ़ान में हज़ारों फटी हुई आत्माएँ प्रकट हुईं।",
+					"क्या तुम इस दुखद चक्र को तोड़ोगे, या एक शाश्वत यात्री बनोगे?"
+				]
+			}
+		}
+	]
+}

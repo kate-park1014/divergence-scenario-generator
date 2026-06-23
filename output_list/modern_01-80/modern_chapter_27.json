@@ -1,0 +1,3632 @@
+{
+	"chapter_order": 27,
+	"difficulty_level": 27,
+	"chapter_name": {
+		"korean": "데이터 연옥",
+		"japanese": "データ地獄",
+		"english": "Data",
+		"vietnamese": "Luyện Ngục",
+		"french": "Purgatoire",
+		"hindi": "डेटा नरक",
+		"chinese": "数据炼狱",
+		"thai": "ปรโลกข้อมูล",
+		"spanish": "Purgatorio"
+	},
+	"scenarios": [
+		{
+			"scenario_id": "modern_cache_26_01",
+			"order": 1,
+			"act": "intro",
+			"theme": "modern",
+			"actors": {
+				"dax": {
+					"id": "mon_08d5b43e-f9ab-4469-9064-855e170b0cdc",
+					"name": {
+						"korean": "닥스",
+						"english": "Dax",
+						"japanese": "ダックス",
+						"chinese": "达克斯",
+						"french": "Dax",
+						"spanish": "Dax",
+						"vietnamese": "Dax",
+						"thai": "แด็กซ์",
+						"hindi": "डैक्स"
+					},
+					"description": "",
+					"face_image_url": "https://imagedelivery.net/WTEqQNGFb-l-IHS6IGnzUQ/84bb11db-6eb4-4500-d274-222e8b100100/public",
+					"battle_sprite_url": "https://imagedelivery.net/WTEqQNGFb-l-IHS6IGnzUQ/5d325a75-bd91-4758-7b3f-ad9a97e52700/public"
+				}
+			},
+			"boss": {
+				"pool_id": "random_boss"
+			},
+			"rooms": [
+				{
+					"dialogue": [
+						{
+							"type": "speech",
+							"content": {
+								"korean": "버려진 도시 지하. 낡은 금고 문이 열리자 금속성 비린내가 코를 찔렀다.",
+								"english": "Beneath the abandoned city. As the old vault door creaked open, a metallic, fishy smell assaulted my nose.",
+								"japanese": "打ち捨てられた都市の地下。古い金庫の扉が開くと、金属の生臭い匂いが鼻を突いた。",
+								"chinese": "废弃城市的地下。老旧的保险库门打开时，一股金属腥味扑鼻而来。",
+								"french": "Sous la ville abandonnée. Lorsque la vieille porte du coffre s'ouvrit, une odeur métallique et âcre me frappa.",
+								"spanish": "Bajo la ciudad abandonada. Al abrirse la vieja puerta de la bóveda, un olor metálico y rancio me golpeó la nariz.",
+								"vietnamese": "Dưới thành phố hoang tàn. Khi cánh cửa hầm cũ mở ra, một mùi tanh kim loại xộc thẳng vào mũi.",
+								"thai": "ใต้เมืองร้าง. ทันทีที่ประตูห้องนิรภัยเก่าเปิดออก กลิ่นคาวโลหะก็ฉุนกึกเข้าจมูก",
+								"hindi": "परित्यक्त शहर के नीचे। जैसे ही पुरानी तिजोरी का दरवाज़ा खुला, एक धात्विक, मछली जैसी गंध ने नाक पर हमला कर दिया।"
+							},
+							"emotion": "base",
+							"speaker": "narrator"
+						},
+						{
+							"speaker": "character_any",
+							"type": "speech",
+							"content": {
+								"korean": "여기가 Cache야? 으음… 생각보다 퀴퀴하네.",
+								"english": "Is this the Cache? Hmm... it's smellier than I thought.",
+								"japanese": "ここがキャッシュ？うーん…思ったより黴臭いな。",
+								"chinese": "这里就是Cache？嗯……比我想象的要阴湿。",
+								"french": "C'est ça le Cache ? Hmm... ça sent plus le moisi que je ne pensais.",
+								"spanish": "¿Este es el Cache? Mmm... huele más a humedad de lo que pensé.",
+								"vietnamese": "Đây là Cache à? Ưm... ẩm mốc hơn tôi nghĩ.",
+								"thai": "นี่คือ Cache เหรอ? อืม... เหม็นอับกว่าที่คิดแฮะ",
+								"hindi": "यह कैश है? उम्म... यह मेरी सोच से ज़्यादा दुर्गंधयुक्त है।"
+							},
+							"emotion": "base"
+						},
+						{
+							"spot": [
+								4,
+								2
+							],
+							"speaker": "dax",
+							"action": "enter",
+							"type": "direction",
+							"duration_ms": 500
+						},
+						{
+							"type": "speech",
+							"content": {
+								"korean": "안전합니다. 이곳은 과거의 모든 정보를 안전하게 보관하죠.",
+								"english": "It's safe. This place securely preserves all information from the past.",
+								"japanese": "安全です。ここは過去のあらゆる情報を安全に保管しています。",
+								"chinese": "很安全。这里安全地保存着过去所有信息。",
+								"french": "C'est sûr. Cet endroit préserve toutes les informations du passé en toute sécurité.",
+								"spanish": "Es seguro. Este lugar guarda toda la información del pasado de forma segura.",
+								"vietnamese": "An toàn. Nơi này bảo quản mọi thông tin trong quá khứ một cách an toàn.",
+								"thai": "ปลอดภัยครับ/ค่ะ ที่นี่เก็บรักษาข้อมูลทั้งหมดในอดีตได้อย่างปลอดภัย",
+								"hindi": "यह सुरक्षित है। यह जगह अतीत की सभी जानकारियों को सुरक्षित रखती है।"
+							},
+							"emotion": "base",
+							"speaker": "dax"
+						},
+						{
+							"speaker": "character_any",
+							"type": "speech",
+							"content": {
+								"korean": "안전?",
+								"english": "Safe?",
+								"japanese": "安全？",
+								"chinese": "安全？",
+								"french": "Sûr ?",
+								"spanish": "¿Seguro?",
+								"vietnamese": "An toàn?",
+								"thai": "ปลอดภัยเหรอ?",
+								"hindi": "सुरक्षित?"
+							},
+							"emotion": "base"
+						},
+						{
+							"type": "speech",
+							"content": {
+								"korean": "네. 완벽하게요. 다만… 특정 구역의 데이터는 건드리지 마시길.",
+								"english": "Yes. Perfectly. But... please don't touch the data in certain areas.",
+								"japanese": "はい。完璧に。ただし…特定の区域のデータには触れないでください。",
+								"chinese": "是的。绝对安全。只是……请不要触碰特定区域的数据。",
+								"french": "Oui. Parfaitement. Mais... veuillez ne pas toucher les données de certaines zones.",
+								"spanish": "Sí. Perfectamente. Pero... por favor, no toque los datos de ciertas áreas.",
+								"vietnamese": "Vâng. Hoàn hảo. Nhưng... xin đừng động vào dữ liệu ở một số khu vực nhất định.",
+								"thai": "ครับ/ค่ะ ปลอดภัยสมบูรณ์แบบครับ/ค่ะ เพียงแต่... กรุณาอย่าแตะต้องข้อมูลในบางพื้นที่",
+								"hindi": "हाँ। पूरी तरह से। लेकिन... कृपया कुछ क्षेत्रों के डेटा को न छुएं।"
+							},
+							"emotion": "base",
+							"speaker": "dax"
+						},
+						{
+							"speaker": "character_any",
+							"emotion": "base",
+							"type": "speech",
+							"content": {
+								"korean": "왜?",
+								"english": "Why?",
+								"japanese": "なぜ？",
+								"chinese": "为什么？",
+								"french": "Pourquoi ?",
+								"spanish": "¿Por qué?",
+								"vietnamese": "Tại sao?",
+								"thai": "ทำไม?",
+								"hindi": "क्यों?"
+							}
+						},
+						{
+							"speaker": "dax",
+							"type": "speech",
+							"content": {
+								"korean": "그냥… 오래돼서 좀 불안정합니다. 하하.",
+								"english": "It's just... old, so it's a bit unstable. Haha.",
+								"japanese": "ただ…古いので、少し不安定なんです。はは。",
+								"chinese": "只是…有些旧了，所以不太稳定。哈哈。",
+								"french": "C'est juste... vieux, alors c'est un peu instable. Haha.",
+								"spanish": "Es que... es viejo, así que es un poco inestable. Jaja.",
+								"vietnamese": "Chỉ là... nó cũ rồi nên hơi không ổn định. Haha.",
+								"thai": "แค่...มันเก่าแล้ว ก็เลยไม่ค่อยเสถียรเท่าไหร่ครับ ฮ่าๆ",
+								"hindi": "बस... यह पुराना है, इसलिए थोड़ा अस्थिर है। हाहा।"
+							},
+							"emotion": "happy"
+						},
+						{
+							"speaker": "narrator",
+							"emotion": "base",
+							"type": "speech",
+							"content": {
+								"korean": "닥스의 얼굴에 스치는 불안감. 그리고 이상한 죄책감.",
+								"english": "A flicker of unease crosses Dax's face. And a strange sense of guilt.",
+								"japanese": "ダックスの顔に不安の影がよぎる。そして、奇妙な罪悪感。",
+								"chinese": "一丝不安掠过达克斯的脸庞。以及一种奇怪的负罪感。",
+								"french": "Une pointe d'inquiétude passe sur le visage de Dax. Et une étrange culpabilité.",
+								"spanish": "Una punzada de inquietud cruza el rostro de Dax. Y una extraña culpa.",
+								"vietnamese": "Một thoáng bất an lướt qua khuôn mặt Dax. Và một cảm giác tội lỗi kỳ lạ.",
+								"thai": "ความรู้สึกไม่สบายใจฉายแววบนใบหน้าของแด็กซ์ และความรู้สึกผิดแปลกๆ",
+								"hindi": "डैक्स के चेहरे पर बेचैनी की एक झलक। और एक अजीब-सा अपराधबोध।"
+							}
+						}
+					],
+					"id": 1
+				},
+				{
+					"id": 3,
+					"dialogue": [
+						{
+							"action": "enter",
+							"speaker": "dax",
+							"spot": [
+								3,
+								2
+							],
+							"type": "direction",
+							"duration_ms": 500
+						},
+						{
+							"speaker": "character_any",
+							"type": "speech",
+							"content": {
+								"korean": "닥스, 아까 그 '특정 구역' 말인데.",
+								"english": "Dax, about that 'specific area' from earlier.",
+								"japanese": "ダックス、さっきの『特定の区域』のことだけど。",
+								"chinese": "达克斯，关于刚才那个'特定区域'...",
+								"french": "Dax, à propos de cette 'zone spécifique' dont tu parlais tout à l'heure.",
+								"spanish": "Dax, sobre esa 'zona específica' de antes.",
+								"vietnamese": "Dax, về cái 'khu vực cụ thể' lúc nãy ấy.",
+								"thai": "แด็กซ์ เรื่อง 'พื้นที่เฉพาะ' เมื่อกี้...",
+								"hindi": "डैक्स, उस 'खास इलाके' के बारे में जो पहले कहा था।"
+							},
+							"emotion": "base"
+						},
+						{
+							"emotion": "base",
+							"type": "speech",
+							"content": {
+								"korean": "아… 네. 아무것도 아닙니다. 그냥… 오래된 데이터는 그래요.",
+								"english": "Ah... yes. It's nothing. Old data is just like that.",
+								"japanese": "あ…はい。何でもありません。ただ…古いデータはああなんです。",
+								"chinese": "啊…是。没什么。只是…旧数据就是那样。",
+								"french": "Ah... oui. Ce n'est rien. Les vieilles données sont juste comme ça.",
+								"spanish": "Ah... sí. No es nada. Los datos antiguos son así.",
+								"vietnamese": "À... vâng. Không có gì đâu. Chỉ là... dữ liệu cũ nó vậy đó.",
+								"thai": "อ่า... ครับ ไม่มีอะไรครับ แค่...ข้อมูลเก่าๆ ก็เป็นแบบนั้นแหละครับ",
+								"hindi": "आह... हाँ। कुछ नहीं है। बस... पुराना डेटा ऐसा ही होता है।"
+							},
+							"speaker": "dax"
+						},
+						{
+							"emotion": "base",
+							"type": "speech",
+							"content": {
+								"korean": "불안정하다고? 아님 뭔가 숨기는 거야?",
+								"english": "Unstable? Or are you hiding something?",
+								"japanese": "不安定だって？それとも何か隠してるの？",
+								"chinese": "不稳定？还是你在隐瞒什么？",
+								"french": "Instable ? Ou tu caches quelque chose ?",
+								"spanish": "¿Inestable? ¿O me estás ocultando algo?",
+								"vietnamese": "Không ổn định ư? Hay là anh đang giấu cái gì đó?",
+								"thai": "ไม่เสถียรเหรอ? หรือว่านายกำลังซ่อนอะไรอยู่?",
+								"hindi": "अस्थिर है? या तुम कुछ छिपा रहे हो?"
+							},
+							"speaker": "character_any"
+						},
+						{
+							"emotion": "sad",
+							"type": "speech",
+							"content": {
+								"korean": "숨기다니요! 제가 뭘… 죄송합니다. 제가 요즘 좀 멍해서.",
+								"english": "Hiding? What would I... I'm sorry. I've been a bit absent-minded lately.",
+								"japanese": "隠すなんて！私が何を…すみません。最近、ちょっとぼーっとしていて。",
+								"chinese": "隐瞒？我能有什么…抱歉。我最近有点心不在焉。",
+								"french": "Cacher ? Mais qu'est-ce que je... Pardon. Je suis un peu dans la lune ces temps-ci.",
+								"spanish": "¿Ocultar? ¿Qué podría yo... Lo siento. Últimamente estoy un poco aturdido.",
+								"vietnamese": "Giấu gì ạ! Tôi có gì đâu mà... Xin lỗi. Dạo này tôi hơi ngơ ngẩn.",
+								"thai": "ซ่อนอะไรครับ! ผมจะไปซ่อนอะไร... ขอโทษครับ ช่วงนี้ผมเหม่อลอยไปหน่อย",
+								"hindi": "छिपाना? मैं क्या... माफ़ करना। मैं आजकल थोड़ा खोया-खोया रहता हूँ।"
+							},
+							"speaker": "dax"
+						},
+						{
+							"emotion": "base",
+							"type": "speech",
+							"content": {
+								"korean": "닥스의 미간에 깊어진 주름. 그의 눈은 알 수 없는 곳을 헤맸다.",
+								"english": "Dax's brow furrowed deeply. His eyes wandered to an unknown place.",
+								"japanese": "ダックスの眉間に深いしわが刻まれる。彼の目は、得体の知れない場所をさまよっていた。",
+								"chinese": "达克斯的眉宇间皱纹更深了。他的目光游移到未知的地方。",
+								"french": "Les sourcils de Dax se froncèrent profondément. Ses yeux erraient vers un lieu inconnu.",
+								"spanish": "Las arrugas en el entrecejo de Dax se profundizaron. Sus ojos vagaban hacia un lugar desconocido.",
+								"vietnamese": "Vết nhăn trên trán Dax sâu hơn. Đôi mắt anh ta lạc về một nơi không rõ.",
+								"thai": "รอยย่นระหว่างคิ้วของแด็กซ์ลึกขึ้น ดวงตาของเขาเหม่อลอยไปยังที่ที่ไม่รู้จัก",
+								"hindi": "डैक्स की भौंहों पर गहरी झुर्रियां पड़ गईं। उसकी आँखें कहीं अज्ञात जगह भटक रही थीं।"
+							},
+							"speaker": "narrator"
+						}
+					]
+				},
+				{
+					"id": 5,
+					"dialogue": [
+						{
+							"duration_ms": 500,
+							"type": "direction",
+							"spot": [
+								2,
+								2
+							],
+							"action": "enter",
+							"speaker": "dax"
+						},
+						{
+							"speaker": "character_any",
+							"type": "speech",
+							"content": {
+								"korean": "이 데이터들… 기록이 좀 이상해.",
+								"english": "These data... the records are a bit strange.",
+								"japanese": "このデータ…記録が少しおかしい。",
+								"chinese": "这些数据…记录有点奇怪。",
+								"french": "Ces données... les enregistrements sont un peu étranges.",
+								"spanish": "Estos datos... los registros son un poco extraños.",
+								"vietnamese": "Mấy dữ liệu này... ghi chép hơi lạ.",
+								"thai": "ข้อมูลพวกนี้...บันทึกมันแปลกๆ นะ",
+								"hindi": "यह डेटा... रिकॉर्ड कुछ अजीब हैं।"
+							},
+							"emotion": "base"
+						},
+						{
+							"emotion": "angry",
+							"type": "speech",
+							"content": {
+								"korean": "'최적화' 됐다고? 살인 기록이?",
+								"english": "'Optimized'? Murder records?",
+								"japanese": "『最適化』されたって？殺人の記録が？",
+								"chinese": "被'优化'了？杀人记录？",
+								"french": "'Optimisé' ? Des registres de meurtres ?",
+								"spanish": "¿'Optimizado'? ¿Registros de asesinatos?",
+								"vietnamese": "'Tối ưu hóa' ư? Hồ sơ giết người?",
+								"thai": "'ถูกปรับให้เหมาะสม' เหรอ? บันทึกการฆาตกรรม?",
+								"hindi": "'ऑप्टिमाइज़' किया गया? हत्या के रिकॉर्ड?"
+							},
+							"speaker": "character_1"
+						},
+						{
+							"speaker": "dax",
+							"emotion": "base",
+							"type": "speech",
+							"content": {
+								"korean": "아! 그건 시스템의… 그냥… 정리에요. 모든 게 효율적으로.",
+								"english": "Ah! That's just the system's... simply... organization. Everything efficiently.",
+								"japanese": "あ！それはシステムの…ただの…整理です。すべてが効率的に。",
+								"chinese": "啊！那只是系统的…只是…整理。一切都高效地进行。",
+								"french": "Ah ! C'est juste le système... simplement... une organisation. Tout est efficace.",
+								"spanish": "¡Ah! Eso es solo el sistema... simplemente... una organización. Todo de manera eficiente.",
+								"vietnamese": "À! Đó chỉ là... việc sắp xếp của hệ thống thôi. Mọi thứ đều hiệu quả.",
+								"thai": "อ่า! นั่นมัน...แค่การจัดระเบียบของระบบครับ ทุกอย่างเป็นไปอย่างมีประสิทธิภาพ",
+								"hindi": "आह! वह तो सिस्टम का... बस... एक तरह का संगठन है। सब कुछ कुशलता से।"
+							}
+						},
+						{
+							"speaker": "character_any",
+							"emotion": "angry",
+							"type": "speech",
+							"content": {
+								"korean": "효율적으로 감춰졌다는 거겠지.",
+								"english": "It's probably well-hidden.",
+								"japanese": "効率的に隠されていたのでしょう。",
+								"chinese": "应该藏得很好。",
+								"french": "Ça devait être bien caché.",
+								"spanish": "Debe haber estado bien escondido.",
+								"vietnamese": "Chắc là đã bị giấu kỹ rồi.",
+								"thai": "น่าจะถูกซ่อนไว้อย่างมีประสิทธิภาพ",
+								"hindi": "इसे कुशलता से छिपाया गया होगा।"
+							}
+						},
+						{
+							"speaker": "dax",
+							"type": "speech",
+							"content": {
+								"korean": "아닙니다! 오해에요! 저는… 아무것도…",
+								"english": "No! It's a mistake! I... nothing...",
+								"japanese": "違います！誤解です！私は…何も…",
+								"chinese": "不是！这是误会！我…什么都没做…",
+								"french": "Non ! C'est un malentendu ! Je… rien…",
+								"spanish": "¡No! ¡Es un malentendido! Yo… nada…",
+								"vietnamese": "Không phải! Là hiểu lầm thôi! Tôi… không làm gì cả…",
+								"thai": "ไม่ใช่ครับ/ค่ะ! เป็นเรื่องเข้าใจผิด! ผม/ดิฉัน… ไม่ได้ทำอะไรเลย…",
+								"hindi": "नहीं! यह गलतफहमी है! मैंने… कुछ नहीं…"
+							},
+							"emotion": "sad"
+						},
+						{
+							"emotion": "base",
+							"type": "speech",
+							"content": {
+								"korean": "닥스의 목소리가 떨렸다. 그의 불안이 실체가 되어갔다.",
+								"english": "Dax's voice trembled. His fear took solid form.",
+								"japanese": "ダクスの声が震えた。彼の不安が実体と化していった。",
+								"chinese": "达克斯的声音颤抖着。他的不安变成了现实。",
+								"french": "La voix de Dax tremblait. Son anxiété prenait corps.",
+								"spanish": "La voz de Dax tembló. Su ansiedad se hizo palpable.",
+								"vietnamese": "Giọng Dax run rẩy. Nỗi bất an của anh ta đang trở thành hiện thực.",
+								"thai": "เสียงของแด็กซ์สั่นเครือ ความวิตกกังวลของเขากลายเป็นจริง",
+								"hindi": "डैक्स की आवाज़ काँप रही थी। उसकी घबराहट हकीकत बन रही थी।"
+							},
+							"speaker": "narrator"
+						}
+					]
+				},
+				{
+					"dialogue": [
+						{
+							"spot": [
+								1,
+								2
+							],
+							"action": "enter",
+							"speaker": "dax",
+							"type": "direction",
+							"duration_ms": 500
+						},
+						{
+							"type": "speech",
+							"content": {
+								"korean": "더 깊이 들어가면 뭐가 나와?",
+								"english": "What's further in?",
+								"japanese": "もっと奥には何がある？",
+								"chinese": "再往深处有什么？",
+								"french": "Qu'y a-t-il plus profondément ?",
+								"spanish": "¿Qué hay más adentro?",
+								"vietnamese": "Vào sâu hơn thì có gì?",
+								"thai": "ลึกเข้าไปอีกมีอะไร?",
+								"hindi": "और गहरा जाने पर क्या मिलेगा?"
+							},
+							"emotion": "base",
+							"speaker": "character_any"
+						},
+						{
+							"type": "speech",
+							"content": {
+								"korean": "안됩니다! 가지 마세요! 더 이상은… 당신들이 감당 못 할 겁니다.",
+								"english": "Don't! Stop! Any more... you can't bear it.",
+								"japanese": "だめです！行かないでください！これ以上は…あなたたちには手に負えません。",
+								"chinese": "不行！别去！再往前…你们承受不住的。",
+								"french": "Non ! N'y allez pas ! Plus loin… vous ne pourrez pas le supporter.",
+								"spanish": "¡No! ¡No vayan! Más allá… no podrán con ello.",
+								"vietnamese": "Không được! Đừng đi! Hơn nữa… các người sẽ không chịu nổi đâu.",
+								"thai": "ไม่ได้ครับ/ค่ะ! อย่าไปเลย! มากกว่านี้… พวกคุณจะรับมือไม่ไหวหรอก",
+								"hindi": "नहीं! मत जाओ! इससे आगे… तुम संभाल नहीं पाओगे।"
+							},
+							"emotion": "sad",
+							"speaker": "dax"
+						},
+						{
+							"type": "speech",
+							"content": {
+								"korean": "이미 여기까지 왔어.",
+								"english": "We've already come this far.",
+								"japanese": "もうここまで来たんだ。",
+								"chinese": "我们已经到这里了。",
+								"french": "Nous sommes déjà arrivés jusqu'ici.",
+								"spanish": "Ya hemos llegado hasta aquí.",
+								"vietnamese": "Đã đến đây rồi.",
+								"thai": "เรามาถึงนี่แล้ว",
+								"hindi": "हम पहले ही यहाँ तक आ चुके हैं।"
+							},
+							"emotion": "base",
+							"speaker": "character_1"
+						},
+						{
+							"emotion": "sad",
+							"type": "speech",
+							"content": {
+								"korean": "제발… 부탁입니다. 되돌아가요. 제발.",
+								"english": "Please... I beg you. Turn back. Please.",
+								"japanese": "お願いです… 戻ってください。お願い。",
+								"chinese": "拜托了… 求你们。回去吧。拜托了。",
+								"french": "S'il vous plaît… Je vous en supplie. Retournez en arrière. S'il vous plaît.",
+								"spanish": "Por favor… se lo ruego. Regresen. Por favor.",
+								"vietnamese": "Xin… làm ơn. Quay lại đi. Làm ơn.",
+								"thai": "ได้โปรด… ขอร้องล่ะ กลับไปเถอะ ได้โปรด",
+								"hindi": "कृपया… मेरी विनती है। वापस चले जाओ। कृपया।"
+							},
+							"speaker": "dax"
+						},
+						{
+							"speaker": "narrator",
+							"emotion": "base",
+							"type": "speech",
+							"content": {
+								"korean": "닥스의 눈빛은 애원했다. 하지만 탐험대는 멈추지 않았다.",
+								"english": "Dax's eyes pleaded. But the expedition team didn't stop.",
+								"japanese": "ダクスの瞳は懇願していた。しかし、探検隊は止まらなかった。",
+								"chinese": "达克斯的眼神在哀求。但探险队并未停下。",
+								"french": "Les yeux de Dax suppliaient. Mais l'équipe d'exploration ne s'arrêta pas.",
+								"spanish": "La mirada de Dax suplicaba. Pero el equipo de exploración no se detuvo.",
+								"vietnamese": "Ánh mắt Dax van nài. Nhưng đoàn thám hiểm không dừng lại.",
+								"thai": "แววตาของแด็กซ์อ้อนวอน แต่คณะสำรวจก็ไม่หยุด",
+								"hindi": "डैक्स की आँखें मिन्नत कर रही थीं। लेकिन खोज दल नहीं रुका।"
+							}
+						}
+					],
+					"id": 9
+				},
+				{
+					"dialogue": [
+						{
+							"speaker": "narrator",
+							"emotion": "base",
+							"type": "speech",
+							"content": {
+								"korean": "금고 가장 깊은 곳. 거대한 시스템이 빛나고 있었다. 그 앞에 정체 모를 그림자가 움직였다.",
+								"english": "Deepest within the vault. A colossal system glowed. Before it, an unknown shadow stirred.",
+								"japanese": "金庫の最も深い場所。巨大なシステムが輝いていた。その前で、正体不明の影が蠢いた。",
+								"chinese": "金库最深处。一个巨大的系统闪耀着。其前方，一个不明身份的影子在移动。",
+								"french": "Au plus profond du coffre. Un système colossal brillait. Devant lui, une ombre inconnue s'agitait.",
+								"spanish": "En lo más profundo de la bóveda. Un sistema colosal brillaba. Delante, una sombra desconocida se movía.",
+								"vietnamese": "Sâu nhất trong hầm. Một hệ thống khổng lồ đang phát sáng. Trước nó, một bóng đen không rõ danh tính đang di chuyển.",
+								"thai": "ลึกที่สุดในห้องนิรภัย ระบบขนาดมหึมากำลังส่องแสงอยู่ เบื้องหน้าเงามืดปริศนากำลังเคลื่อนไหว",
+								"hindi": "तिजोरी के सबसे गहरे कोने में। एक विशालकाय प्रणाली चमक रही थी। उसके सामने, एक अनजान परछाई हिल रही थी।"
+							}
+						},
+						{
+							"type": "speech",
+							"content": {
+								"korean": "감히 이곳까지. 너희 같은 하찮은 존재들이.",
+								"english": "How dare you come this far. Insignificant beings like you.",
+								"japanese": "よくもここまで。お前たちのような取るに足らない存在が。",
+								"chinese": "竟敢到此。你们这些渺小的存在。",
+								"french": "Comment osez-vous venir jusqu'ici. Des êtres insignifiants comme vous.",
+								"spanish": "¿Cómo osáis llegar hasta aquí? Seres insignificantes como vosotros.",
+								"vietnamese": "Dám đến tận đây sao. Những kẻ hèn mọn như các ngươi.",
+								"thai": "กล้าดียังไงถึงมาถึงนี่ได้ พวกสิ่งมีชีวิตไร้ค่าอย่างพวกเจ้า",
+								"hindi": "तुम्हारी हिम्मत कैसे हुई यहाँ तक आने की। तुम जैसे तुच्छ प्राणी।"
+							},
+							"emotion": "angry",
+							"speaker": "random_boss"
+						},
+						{
+							"type": "speech",
+							"content": {
+								"korean": "네가… 이 모든 걸 조작한 거야?",
+								"english": "You... you orchestrated all of this?",
+								"japanese": "お前が… この全てを操っていたのか？",
+								"chinese": "你…你操纵了这一切？",
+								"french": "C'est toi… qui a tout orchestré ?",
+								"spanish": "¿Tú… tú orquestaste todo esto?",
+								"vietnamese": "Ngươi… ngươi đã sắp đặt tất cả chuyện này?",
+								"thai": "แก… แกบงการเรื่องทั้งหมดนี้เหรอ?",
+								"hindi": "क्या तुम… तुम ही ने यह सब रचा है?"
+							},
+							"emotion": "angry",
+							"speaker": "character_any"
+						},
+						{
+							"action": "enter",
+							"speaker": "dax",
+							"spot": [
+								4,
+								2
+							],
+							"duration_ms": 500,
+							"type": "direction"
+						},
+						{
+							"speaker": "dax",
+							"emotion": "sad",
+							"type": "speech",
+							"content": {
+								"korean": "아니요! 도망쳐요! 이 괴물은…!",
+								"english": "No! Run! This monster is…!",
+								"japanese": "やめて！逃げて！この怪物は…！",
+								"chinese": "不！快跑！这个怪物是…！",
+								"french": "Non ! Fuyez ! Ce monstre est… !",
+								"spanish": "¡No! ¡Corran! ¡Este monstruo es…!",
+								"vietnamese": "Không! Chạy đi! Quái vật này…!",
+								"thai": "ไม่นะ! หนีไป! สัตว์ประหลาดตัวนี้…!",
+								"hindi": "नहीं! भागो! यह राक्षस…!"
+							}
+						},
+						{
+							"direction": "down",
+							"speaker": "dax",
+							"action": "exit",
+							"duration_ms": 400,
+							"type": "direction"
+						},
+						{
+							"emotion": "base",
+							"type": "speech",
+							"content": {
+								"korean": "닥스, 네놈도 결국 시스템의 부속품일 뿐.",
+								"english": "Dax, you too are merely a cog in the system.",
+								"japanese": "ダックス、貴様も結局はシステムの一部に過ぎない。",
+								"chinese": "达克斯，你也不过是系统的一个零件罢了。",
+								"french": "Dax, toi aussi tu n'es qu'une pièce du système.",
+								"spanish": "Dax, tú también eres solo un engranaje en el sistema.",
+								"vietnamese": "Dax, ngươi cũng chỉ là một bộ phận của hệ thống mà thôi.",
+								"thai": "แด็กซ์ แกก็เป็นแค่ส่วนหนึ่งของระบบเท่านั้นเอง",
+								"hindi": "डैक्स, तुम भी आखिर में सिर्फ सिस्टम का एक पुर्जा हो।"
+							},
+							"speaker": "random_boss"
+						},
+						{
+							"speaker": "random_boss",
+							"emotion": "angry",
+							"type": "speech",
+							"content": {
+								"korean": "이 금고의 '완벽한 정리'는 계속되어야 한다.",
+								"english": "The 'perfect cleansing' of this vault must continue.",
+								"japanese": "この金庫の『完璧な整理』は続けなければならない。",
+								"chinese": "这个金库的“完美清理”必须继续。",
+								"french": "Le 'nettoyage parfait' de ce coffre doit continuer.",
+								"spanish": "La 'limpieza perfecta' de esta bóveda debe continuar.",
+								"vietnamese": "Việc 'dọn dẹp hoàn hảo' kho tiền này phải tiếp tục.",
+								"thai": "'การจัดระเบียบที่สมบูรณ์แบบ' ของห้องนิรภัยนี้ต้องดำเนินต่อไป",
+								"hindi": "इस तिजोरी की 'उत्तम सफाई' जारी रहनी चाहिए।"
+							}
+						},
+						{
+							"emotion": "angry",
+							"type": "speech",
+							"content": {
+								"korean": "정리? 이건 학살이야!",
+								"english": "Cleansing? This is a massacre!",
+								"japanese": "整理？これは虐殺だ！",
+								"chinese": "清理？这是屠杀！",
+								"french": "Nettoyage ? C'est un massacre !",
+								"spanish": "¿Limpieza? ¡Esto es una masacre!",
+								"vietnamese": "Dọn dẹp? Đây là một cuộc thảm sát!",
+								"thai": "จัดระเบียบ? นี่มันการสังหารหมู่ชัดๆ!",
+								"hindi": "सफाई? यह तो नरसंहार है!"
+							},
+							"speaker": "character_any"
+						}
+					],
+					"id": 15,
+					"win_dialogue": [
+						{
+							"speaker": "random_boss",
+							"emotion": "sad",
+							"type": "speech",
+							"content": {
+								"korean": "크으윽… 단지… 효율적이었을 뿐… 시스템은… 완벽하다…",
+								"english": "Ugh… merely… efficient… The system is… perfect…",
+								"japanese": "うぐぅ…ただ…効率的だっただけだ…システムは…完璧だ…",
+								"chinese": "呃…只是…效率更高而已…系统…是完美的…",
+								"french": "Ugh… Juste… efficace… Le système est… parfait…",
+								"spanish": "Ugh… Solo… eficiente… El sistema es… perfecto…",
+								"vietnamese": "Ưgh… Chỉ là… hiệu quả thôi mà… Hệ thống… hoàn hảo…",
+								"thai": "อึก… แค่… มีประสิทธิภาพเท่านั้นเอง… ระบบมัน… สมบูรณ์แบบ…",
+								"hindi": "उफ़… बस… कुशल था… सिस्टम… एकदम सही है…"
+							}
+						},
+						{
+							"emotion": "angry",
+							"type": "speech",
+							"content": {
+								"korean": "완벽하게 망가뜨렸겠지.",
+								"english": "Perfectly broken, you mean.",
+								"japanese": "完璧に壊れた、の間違いだろう。",
+								"chinese": "完美地破坏了，才对吧。",
+								"french": "Parfaitement brisé, oui.",
+								"spanish": "Perfectamente roto, querrás decir.",
+								"vietnamese": "Hoàn hảo bị phá hủy, thì đúng hơn.",
+								"thai": "สมบูรณ์แบบในการทำลายล้างสินะ",
+								"hindi": "पूरी तरह से टूट गया, तुम्हारा मतलब है।"
+							},
+							"speaker": "character_any"
+						},
+						{
+							"speaker": "random_boss",
+							"type": "speech",
+							"content": {
+								"korean": "…이건 시작에 불과하다… 너희는… 진실을… 감당 못 해…",
+								"english": "…This is just the beginning… You won't… handle the truth…",
+								"japanese": "…これは始まりに過ぎない…お前たちには…真実を…受け止められない…",
+								"chinese": "…这只是个开始…你们…承受不住真相的…",
+								"french": "…Ce n'est que le début… Vous ne… supporterez pas la vérité…",
+								"spanish": "…Esto es solo el principio… No podréis… con la verdad…",
+								"vietnamese": "…Đây chỉ là khởi đầu… Các ngươi… không thể chịu đựng được sự thật…",
+								"thai": "…นี่เป็นเพียงจุดเริ่มต้น… พวกเจ้า… จะรับความจริงไม่ได้…",
+								"hindi": "…यह तो बस शुरुआत है… तुम लोग… सच को… संभाल नहीं पाओगे…"
+							},
+							"emotion": "base"
+						},
+						{
+							"type": "speech",
+							"content": {
+								"korean": "괴물은 잔해가 되어 흩어졌다. 하지만 금고는 여전히 끈적한 기억의 냄새로 가득했다.",
+								"english": "The monster scattered into remnants. But the vault still reeked of sticky memories.",
+								"japanese": "怪物は残骸となって散った。だが、金庫は依然として粘つく記憶の匂いに満ちていた。",
+								"chinese": "怪物化作残骸四散。但金库里依然弥漫着黏腻的记忆气息。",
+								"french": "Le monstre s'est dispersé en lambeaux. Mais le coffre sentait encore les souvenirs poisseux.",
+								"spanish": "El monstruo se dispersó en restos. Pero la bóveda aún apestaba a recuerdos pegajosos.",
+								"vietnamese": "Quái vật tan thành tro bụi. Nhưng kho tiền vẫn nồng nặc mùi ký ức dai dẳng.",
+								"thai": "สัตว์ประหลาดแตกสลายเป็นซากปรักหักพัง แต่ห้องนิรภัยยังคงอบอวลไปด้วยกลิ่นอายของความทรงจำอันเหนียวเหนอะหนะ",
+								"hindi": "राक्षस अवशेषों में बिखर गया। लेकिन तिजोरी अभी भी चिपचिपी यादों की गंध से भरी थी।"
+							},
+							"emotion": "base",
+							"speaker": "narrator"
+						},
+						{
+							"speaker": "character_any",
+							"emotion": "base",
+							"type": "speech",
+							"content": {
+								"korean": "아직… 끝이 아니야. 더 파헤쳐야 할 진실이 있어.",
+								"english": "It's not… over yet. There's more truth to uncover.",
+								"japanese": "まだ…終わりじゃない。さらに掘り起こすべき真実がある。",
+								"chinese": "还没…结束。还有更多真相需要挖掘。",
+								"french": "Ce n'est pas… encore fini. Il y a plus de vérité à découvrir.",
+								"spanish": "Aún no… ha terminado. Hay más verdad que desenterrar.",
+								"vietnamese": "Vẫn chưa… kết thúc đâu. Còn nhiều sự thật cần phải khai quật.",
+								"thai": "ยังไม่… จบแค่นี้ ยังมีอีกหลายความจริงที่ต้องเปิดเผย",
+								"hindi": "अभी… खत्म नहीं हुआ है। और भी सच है जिसे उजागर करना है।"
+							}
+						},
+						{
+							"emotion": "base",
+							"type": "speech",
+							"content": {
+								"korean": "진정한 '정리'는 지금부터였다.",
+								"english": "The real challenge begins now.",
+								"japanese": "本番はこれからだ。",
+								"chinese": "真正的挑战现在才开始。",
+								"french": "Le véritable défi commence maintenant.",
+								"spanish": "El verdadero desafío comienza ahora.",
+								"vietnamese": "Thử thách thực sự giờ mới bắt đầu.",
+								"thai": "การท้าทายที่แท้จริงเพิ่งจะเริ่มต้นขึ้น",
+								"hindi": "असली चुनौती अब शुरू होती है।"
+							},
+							"speaker": "narrator"
+						}
+					],
+					"lose_dialogue": [
+						{
+							"speaker": "random_boss",
+							"emotion": "angry",
+							"type": "speech",
+							"content": {
+								"korean": "어리석은 것들… 이 금고는 너희의 무덤이 될 것이다.",
+								"english": "Fools... this vault will be your tomb.",
+								"japanese": "愚か者どもめ…この金庫がお前たちの墓場となるだろう。",
+								"chinese": "愚蠢的东西……这个金库将成为你们的坟墓。",
+								"french": "Imbéciles... Ce coffre sera votre tombeau.",
+								"spanish": "Estúpidos... Esta bóveda será vuestra tumba.",
+								"vietnamese": "Lũ ngu ngốc... Chiếc két sắt này sẽ là mồ chôn của các ngươi.",
+								"thai": "พวกโง่เง่า... ห้องนิรภัยนี้จะเป็นสุสานของพวกเจ้า!",
+								"hindi": "मूर्खों... यह तिजोरी तुम्हारी कब्र बनेगी।"
+							}
+						},
+						{
+							"speaker": "narrator",
+							"type": "speech",
+							"content": {
+								"korean": "거대한 그림자가 탐험대를 집어삼켰다.",
+								"english": "A colossal shadow engulfed the expedition.",
+								"japanese": "巨大な影が探検隊を飲み込んだ。",
+								"chinese": "巨大的阴影吞噬了探险队。",
+								"french": "Une ombre gigantesque engloutit l'expédition.",
+								"spanish": "Una sombra gigantesca devoró a la expedición.",
+								"vietnamese": "Một bóng đen khổng lồ đã nuốt chửng đội thám hiểm.",
+								"thai": "เงาขนาดมหึมากลืนกินคณะสำรวจ",
+								"hindi": "एक विशालकाय परछाई ने अभियान दल को निगल लिया।"
+							},
+							"emotion": "base"
+						},
+						{
+							"type": "speech",
+							"content": {
+								"korean": "젠장… 아직… 포기할 순 없어!",
+								"english": "Damn it... I can't give up yet!",
+								"japanese": "くそっ…まだ…諦められない！",
+								"chinese": "该死……还没……不能放弃！",
+								"french": "Bon sang... Pas encore... Je ne peux pas abandonner !",
+								"spanish": "Maldita sea... Aún no... ¡No puedo rendirme!",
+								"vietnamese": "Chết tiệt... Chưa... Tôi không thể bỏ cuộc!",
+								"thai": "ให้ตายสิ... ยัง... ฉันยังยอมแพ้ไม่ได้!",
+								"hindi": "धिक्कार है... अभी तक नहीं... मैं हार नहीं मान सकता!"
+							},
+							"emotion": "angry",
+							"speaker": "character_any"
+						}
+					]
+				}
+			],
+			"prologue": {
+				"korean": [
+					"세계는 기억을 '정리'한다 했다.",
+					"이 지하 금고는 그 완벽한 증거.",
+					"하지만 썩은 금속 냄새는, 뭔가 숨겨진 진실을 속삭이는 듯했다.",
+					"완벽한 보관? 아니, 완벽한 왜곡의 서막이었다."
+				],
+				"english": [
+					"The world, they said, 'organizes' memories.",
+					"This underground vault was the perfect proof.",
+					"But the smell of decaying metal whispered a hidden truth.",
+					"Perfect preservation? No, it was the prelude to perfect distortion."
+				],
+				"japanese": [
+					"世界は記憶を「整理」すると言った。",
+					"この地下金庫が、その完璧な証拠だ。",
+					"しかし、朽ちた金属の匂いは、何か隠された真実を囁いているようだった。",
+					"完璧な保管？いや、それは完璧な歪曲の序幕だった。"
+				],
+				"chinese": [
+					"世界会“整理”记忆，他们说。",
+					"这地下金库就是完美的证据。",
+					"然而，腐朽金属的气味却仿佛在低语一个隐藏的真相。",
+					"完美的保存？不，那只是完美扭曲的序幕。"
+				],
+				"french": [
+					"On disait que le monde 'organisait' les souvenirs.",
+					"Ce coffre souterrain en était la preuve parfaite.",
+					"Mais l'odeur de métal pourri semblait chuchoter une vérité cachée.",
+					"Une conservation parfaite ? Non, c'était le prélude d'une distorsion parfaite."
+				],
+				"spanish": [
+					"Decían que el mundo 'organiza' los recuerdos.",
+					"Esta bóveda subterránea era la prueba perfecta.",
+					"Pero el olor a metal podrido parecía susurrar una verdad oculta.",
+					"¿Conservación perfecta? No, era el preludio de una distorsión perfecta."
+				],
+				"vietnamese": [
+					"Thế giới, họ nói, 'sắp xếp' ký ức.",
+					"Hầm ngầm này là bằng chứng hoàn hảo.",
+					"Nhưng mùi kim loại mục nát dường như thì thầm một sự thật bị giấu kín.",
+					"Bảo quản hoàn hảo? Không, đó là khúc dạo đầu của một sự bóp méo hoàn hảo."
+				],
+				"thai": [
+					"โลกบอกว่าจะ 'จัดระเบียบ' ความทรงจำ",
+					"ห้องนิรภัยใต้ดินแห่งนี้คือหลักฐานที่สมบูรณ์แบบ",
+					"แต่กลิ่นโลหะผุพังกลับกระซิบถึงความจริงที่ซ่อนอยู่",
+					"การเก็บรักษาที่สมบูรณ์แบบ? ไม่สิ นั่นคือบทนำของการบิดเบือนที่สมบูรณ์แบบต่างหาก"
+				],
+				"hindi": [
+					"दुनिया, उन्होंने कहा, यादों को 'व्यवस्थित' करती है।",
+					"यह भूमिगत तिजोरी इसका सटीक प्रमाण थी।",
+					"लेकिन सड़ी हुई धातु की गंध किसी छिपे हुए सत्य को फुसफुसा रही थी।",
+					"उत्तम संरक्षण? नहीं, यह उत्तम विकृति की प्रस्तावना थी।"
+				]
+			}
+		},
+		{
+			"scenario_id": "modern_cache_26_02",
+			"order": 2,
+			"act": "rising",
+			"theme": "modern",
+			"actors": {
+				"bex": {
+					"id": "mon_74e24324-3f9a-4d44-9611-1da33b654ca1",
+					"name": {
+						"korean": "벡스",
+						"english": "Bex",
+						"japanese": "ベックス",
+						"chinese": "贝克斯",
+						"french": "Bex",
+						"spanish": "Bex",
+						"vietnamese": "Bex",
+						"thai": "เบ็กซ์",
+						"hindi": "बेक्स"
+					},
+					"description": "",
+					"face_image_url": "https://imagedelivery.net/WTEqQNGFb-l-IHS6IGnzUQ/09dae190-ff6b-4a9d-b656-e1a2b896aa00/public",
+					"battle_sprite_url": "https://imagedelivery.net/WTEqQNGFb-l-IHS6IGnzUQ/5cc3c77f-72e1-416e-b346-31889b3b9300/public"
+				}
+			},
+			"boss": {
+				"pool_id": "random_boss"
+			},
+			"prologue": {
+				"korean": [
+					"버려진 도시의 지하 금고, 첨단 기술과 부패한 역사가 뒤섞인 곳.",
+					"그곳엔 모든 정보를 거래하는 자, 벡스가 기다리고 있었다.",
+					"진실은 조각나 흩어져 있고, 어떤 기억은 너무나 효율적으로 '정리'되었다.",
+					"이 기괴한 코미디와 서스펜스의 끝은 어디일까?"
+				],
+				"english": [
+					"An underground vault in a derelict city, where advanced tech and a corrupt history intertwine.",
+					"There, Vex, who trades all information, awaited.",
+					"Truth is shattered and scattered, some memories 'organized' all too efficiently.",
+					"Where will this bizarre comedy and suspense end?"
+				],
+				"japanese": [
+					"廃都市の地下金庫、先端技術と腐敗した歴史が混じり合う場所。",
+					"そこには、あらゆる情報を取引する者、ベックスが待ち構えていた。",
+					"真実は断片化して散らばり、ある記憶はあまりにも効率的に「整理」された。",
+					"この奇妙なコメディとサスペンスの終わりはどこにあるのか？"
+				],
+				"chinese": [
+					"废弃城市地下金库，先进技术与腐败历史交织之地。",
+					"在那里，交易所有信息的维克斯正等着。",
+					"真相支离破碎，一些记忆被过于高效地“整理”了。",
+					"这场怪诞的喜剧和悬念将如何收场？"
+				],
+				"french": [
+					"Un coffre-fort souterrain dans une ville abandonnée, où technologie de pointe et histoire corrompue s'entremêlent.",
+					"Là, Vex, le marchand de toutes les informations, attendait.",
+					"La vérité est brisée et dispersée, certains souvenirs 'organisés' de manière trop efficace.",
+					"Où mènera cette étrange comédie et ce suspense ?"
+				],
+				"spanish": [
+					"Una bóveda subterránea en una ciudad abandonada, donde la tecnología avanzada y una historia corrupta se entrelazan.",
+					"Allí, Vex, quien trafica con toda la información, esperaba.",
+					"La verdad está hecha pedazos y dispersa, algunos recuerdos 'organizados' con demasiada eficiencia.",
+					"¿Dónde terminará esta extraña comedia y este suspense?"
+				],
+				"vietnamese": [
+					"Hầm ngầm dưới thành phố bỏ hoang, nơi công nghệ cao và lịch sử mục nát đan xen.",
+					"Ở đó, Vex, kẻ buôn bán mọi thông tin, đang đợi.",
+					"Sự thật bị vỡ vụn và phân tán, một số ký ức đã được 'sắp xếp' quá hiệu quả.",
+					"Cuộc hài kịch và kịch tính kỳ quái này sẽ kết thúc ở đâu?"
+				],
+				"thai": [
+					"ห้องนิรภัยใต้ดินในเมืองร้าง สถานที่ที่เทคโนโลยีล้ำสมัยและประวัติศาสตร์ที่เสื่อมทรามปะปนกัน",
+					"ณ ที่นั่น, เวกซ์ ผู้แลกเปลี่ยนข้อมูลทุกสิ่ง กำลังรออยู่",
+					"ความจริงแตกสลายกระจัดกระจาย ความทรงจำบางอย่างถูก 'จัดระเบียบ' อย่างมีประสิทธิภาพเกินไป",
+					"จุดจบของคอเมดี้และระทึกขวัญสุดแปลกนี้จะอยู่ที่ไหน?"
+				],
+				"hindi": [
+					"परित्यक्त शहर का भूमिगत तिजोरी, जहाँ उन्नत तकनीक और भ्रष्ट इतिहास आपस में गुंथे हुए हैं।",
+					"वहाँ, वेक्स, जो सभी जानकारी का व्यापार करता है, इंतज़ार कर रहा था।",
+					"सच्चाई टुकड़े-टुकड़े होकर बिखर गई है, कुछ यादें बहुत कुशलता से 'व्यवस्थित' की गई हैं।",
+					"इस अजीबोगरीब कॉमेडी और सस्पेंस का अंत कहाँ होगा?"
+				]
+			},
+			"rooms": [
+				{
+					"id": 1,
+					"dialogue": [
+						{
+							"speaker": "narrator",
+							"type": "speech",
+							"content": {
+								"korean": "금속성 비린내가 진동하는 지하 금고. 어둠 속에서 무언가 번뜩였다.",
+								"english": "An underground vault reeking of metallic brine. Something gleamed in the darkness.",
+								"japanese": "金属的な生臭さが漂う地下金庫。闇の中で何かがきらめいた。",
+								"chinese": "弥漫着金属腥味的地下金库。黑暗中，有什么闪了一下。",
+								"french": "Un coffre-fort souterrain imprégné d'une odeur métallique âcre. Quelque chose a brillé dans l'obscurité.",
+								"spanish": "Una bóveda subterránea apestando a salmuera metálica. Algo brilló en la oscuridad.",
+								"vietnamese": "Hầm ngầm nồng nặc mùi kim loại tanh. Trong bóng tối, có gì đó lóe lên.",
+								"thai": "ห้องนิรภัยใต้ดินที่ส่งกลิ่นคาวโลหะ ในความมืดมีบางอย่างส่องประกาย",
+								"hindi": "धात्विक दुर्गंध से भरा भूमिगत तिजोरी। अंधेरे में कुछ चमक उठा।"
+							},
+							"emotion": "base"
+						},
+						{
+							"speaker": "character_any",
+							"type": "speech",
+							"emotion": "base",
+							"content": {
+								"korean": "여기가 정보상 벡스가 있다는 곳인가?",
+								"english": "Is this where Vex, the information broker, is?",
+								"japanese": "ここが情報屋ベックスがいる場所か？",
+								"chinese": "这里就是情报贩子维克斯所在的地方吗？",
+								"french": "C'est ici que se trouve Vex, le courtier en informations ?",
+								"spanish": "¿Es aquí donde está Vex, el traficante de información?",
+								"vietnamese": "Đây có phải là nơi Vex, kẻ buôn thông tin, đang ở không?",
+								"thai": "ที่นี่คือที่ที่เวกซ์ นายหน้าข้อมูลอยู่ใช่ไหม?",
+								"hindi": "क्या यहीं पर जानकारी दलाल वेक्स है?"
+							}
+						},
+						{
+							"spot": [
+								4,
+								2
+							],
+							"type": "direction",
+							"duration_ms": 500,
+							"speaker": "bex",
+							"action": "enter"
+						},
+						{
+							"content": {
+								"korean": "오호! 반가워! 어서 와, 어서 와! 벡스가 꿀정보 듬뿍 가져왔지!",
+								"english": "Oh, hello! Welcome, welcome! Vex has brought a ton of sweet info!",
+								"japanese": "おお！ようこそ！いらっしゃい、いらっしゃい！ベックスがとっておきの情報いっぱい持ってきたぞ！",
+								"chinese": "哦吼！欢迎！快进来，快进来！维克斯带来了超多独家情报！",
+								"french": "Oh, salut ! Bienvenue, bienvenue ! Vex a apporté une tonne d'informations juteuses !",
+								"spanish": "¡Oh, hola! ¡Bienvenido, bienvenido! ¡Vex ha traído un montón de información jugosa!",
+								"vietnamese": "Ồ, xin chào! Chào mừng, chào mừng! Vex đã mang đến rất nhiều thông tin nóng hổi đây!",
+								"thai": "โอ้! ยินดีต้อนรับ! เข้ามาเลย เข้ามาเลย! เวกซ์นำข้อมูลเด็ดๆ มาเพียบ!",
+								"hindi": "ओह, नमस्कार! स्वागत है, स्वागत है! वेक्स ढेर सारी बढ़िया जानकारी लेकर आया है!"
+							},
+							"emotion": "happy",
+							"speaker": "bex",
+							"type": "speech"
+						},
+						{
+							"speaker": "character_any",
+							"type": "speech",
+							"content": {
+								"korean": "당신이 벡스?",
+								"english": "You're Vex?",
+								"japanese": "あなたがベックス？",
+								"chinese": "你是维克斯？",
+								"french": "Vous êtes Vex ?",
+								"spanish": "¿Tú eres Vex?",
+								"vietnamese": "Ông là Vex?",
+								"thai": "คุณคือเวกซ์?",
+								"hindi": "तुम वेक्स हो?"
+							},
+							"emotion": "base"
+						},
+						{
+							"content": {
+								"korean": "물론이지! 이 지하 세계에서 벡스 모르면 간첩이지! 뭐든 물어보라고!",
+								"english": "Of course! Not knowing Vex in this underworld is like being a spy! Ask me anything!",
+								"japanese": "もちろん！この地下世界でベックスを知らないなんてスパイみたいなもんだ！何でも聞いてくれ！",
+								"chinese": "当然啦！在这个地下世界，不知道维克斯就是间谍！尽管问吧！",
+								"french": "Bien sûr ! Ne pas connaître Vex dans ce monde souterrain, c'est être un espion ! Demandez-moi n'importe quoi !",
+								"spanish": "¡Claro! ¡No conocer a Vex en este inframundo es como ser un espía! ¡Pregúntame lo que sea!",
+								"vietnamese": "Tất nhiên rồi! Không biết Vex ở thế giới ngầm này thì đúng là gián điệp rồi! Cứ hỏi bất cứ điều gì!",
+								"thai": "แน่นอนอยู่แล้ว! ไม่รู้จักเวกซ์ในโลกใต้ดินนี้ก็เหมือนเป็นสายลับ! ถามมาได้เลย!",
+								"hindi": "बेशक! इस अंडरवर्ल्ड में वेक्स को न जानना जासूस होने जैसा है! कुछ भी पूछो!"
+							},
+							"emotion": "happy",
+							"speaker": "bex",
+							"type": "speech"
+						}
+					]
+				},
+				{
+					"id": 3,
+					"dialogue": [
+						{
+							"type": "direction",
+							"spot": [
+								3,
+								2
+							],
+							"duration_ms": 500,
+							"action": "enter",
+							"speaker": "bex"
+						},
+						{
+							"speaker": "bex",
+							"type": "speech",
+							"emotion": "base",
+							"content": {
+								"korean": "좋은 정보가 있어. Cache와 관련된 오래된 데이터 조각들.",
+								"english": "I have good info. Old data fragments related to the Cache.",
+								"japanese": "いい情報がある。キャッシュに関連する古いデータ断片だ。",
+								"chinese": "我有个好情报。与Cache相关的旧数据碎片。",
+								"french": "J'ai de bonnes infos. D'anciens fragments de données liés au Cache.",
+								"spanish": "Tengo buena información. Fragmentos de datos antiguos relacionados con la Caché.",
+								"vietnamese": "Tôi có thông tin tốt. Những mảnh dữ liệu cũ liên quan đến Cache.",
+								"thai": "มีข้อมูลดีๆ มาฝากนะ ชิ้นส่วนข้อมูลเก่าที่เกี่ยวข้องกับแคช",
+								"hindi": "मेरे पास अच्छी जानकारी है। कैशे से संबंधित पुराने डेटा के टुकड़े।"
+							}
+						},
+						{
+							"content": {
+								"korean": "Cache? 그게 뭔데?",
+								"english": "Cache? What's that?",
+								"japanese": "キャッシュ？それ何？",
+								"chinese": "缓存？那是什么？",
+								"french": "Cache ? C'est quoi ?",
+								"spanish": "¿Caché? ¿Qué es eso?",
+								"vietnamese": "Cache? Cái đó là gì?",
+								"thai": "แคช? มันคืออะไร?",
+								"hindi": "कैश? वो क्या है?"
+							},
+							"emotion": "base",
+							"speaker": "character_any",
+							"type": "speech"
+						},
+						{
+							"speaker": "bex",
+							"type": "speech",
+							"content": {
+								"korean": "음~ 아주 오래된 시스템이지! 이 도시의 모든 정보가 '정리'되어 있다고!",
+								"english": "Hmm~ It's a very old system! All the city's info is 'organized' in it!",
+								"japanese": "うーん、すごく古いシステムだよ！この街の情報が全部「整理」されてるんだ！",
+								"chinese": "嗯~ 一个非常老的系统！这座城市的所有信息都‘整理’在里面！",
+								"french": "Hmm~ C'est un système très ancien ! Toutes les informations de la ville y sont 'organisées' !",
+								"spanish": "Hmm~ ¡Es un sistema muy antiguo! ¡Toda la información de la ciudad está 'organizada' en él!",
+								"vietnamese": "Hmm~ Đó là một hệ thống rất cũ! Mọi thông tin của thành phố đều được 'sắp xếp' trong đó!",
+								"thai": "อืม~ มันเป็นระบบเก่ามากเลยนะ! ข้อมูลทั้งหมดของเมืองนี้ถูก 'จัดระเบียบ' ไว้ในนั้น!",
+								"hindi": "हम्म~ यह एक बहुत पुराना सिस्टम है! शहर की सारी जानकारी इसमें 'व्यवस्थित' है!"
+							},
+							"emotion": "happy"
+						},
+						{
+							"emotion": "base",
+							"content": {
+								"korean": "정리?",
+								"english": "Organized?",
+								"japanese": "整理？",
+								"chinese": "整理？",
+								"french": "Organisées ?",
+								"spanish": "¿Organizada?",
+								"vietnamese": "Sắp xếp?",
+								"thai": "จัดระเบียบ?",
+								"hindi": "व्यवस्थित?"
+							},
+							"speaker": "character_1",
+							"type": "speech"
+						},
+						{
+							"emotion": "happy",
+							"content": {
+								"korean": "그래! 예를 들면… 갱스터 조직의 잔혹한 행적? 이것도 아주 깔끔하게 정리되었지!",
+								"english": "Yeah! For example... the brutal acts of gangster organizations? Those are neatly organized too!",
+								"japanese": "そう！例えば…ギャング組織の残虐な行い？これもすごく綺麗に整理されてるんだ！",
+								"chinese": "没错！比如说…帮派组织的残暴行径？这也被整理得非常干净利落！",
+								"french": "Oui ! Par exemple... les actes brutaux des organisations de gangsters ? Ceux-ci sont aussi très proprement organisés !",
+								"spanish": "¡Sí! Por ejemplo... ¿los actos brutales de las organizaciones de gánsteres? ¡Eso también está muy ordenado!",
+								"vietnamese": "Đúng vậy! Chẳng hạn như... những hành động tàn bạo của các tổ chức xã hội đen? Những cái đó cũng được sắp xếp rất gọn gàng!",
+								"thai": "ใช่แล้ว! ยกตัวอย่างเช่น... การกระทำอันโหดร้ายของแก๊งสเตอร์? พวกนี้ก็ถูกจัดระเบียบอย่างเรียบร้อยเลยนะ!",
+								"hindi": "हाँ! उदाहरण के लिए... गैंगस्टर संगठनों के क्रूर कृत्य? ये भी बहुत सफाई से व्यवस्थित किए गए हैं!"
+							},
+							"speaker": "bex",
+							"type": "speech"
+						},
+						{
+							"content": {
+								"korean": "잔혹한 행적을 깔끔하게 정리했다고?",
+								"english": "Brutal acts neatly organized?",
+								"japanese": "残虐な行いを綺麗に整理したって？",
+								"chinese": "残暴行径被整理得很干净利落？",
+								"french": "Des actes brutaux proprement organisés ?",
+								"spanish": "¿Actos brutales ordenados con pulcritud?",
+								"vietnamese": "Những hành động tàn bạo được sắp xếp gọn gàng ư?",
+								"thai": "การกระทำโหดร้ายถูกจัดระเบียบเรียบร้อยเนี่ยนะ?",
+								"hindi": "क्रूर कृत्यों को सफाई से व्यवस्थित किया गया?"
+							},
+							"emotion": "sad",
+							"speaker": "character_2",
+							"type": "speech"
+						},
+						{
+							"speaker": "bex",
+							"type": "speech",
+							"content": {
+								"korean": "그렇지! 얼마나 효율적이야? 하하하!",
+								"english": "Exactly! How efficient is that? Hahaha!",
+								"japanese": "そうだろう？どれだけ効率的かって？ハハハ！",
+								"chinese": "没错！多么高效啊？哈哈哈！",
+								"french": "Exactement ! C'est tellement efficace, non ? Hahaha !",
+								"spanish": "¡Exacto! ¿Qué tan eficiente es eso? ¡Jajajaja!",
+								"vietnamese": "Đúng vậy! Thật hiệu quả phải không? Hahaha!",
+								"thai": "แน่นอน! มันมีประสิทธิภาพแค่ไหนล่ะ? ฮ่าฮ่าฮ่า!",
+								"hindi": "बिल्कुल! कितना कुशल है ना? हाहाहा!"
+							},
+							"emotion": "happy"
+						}
+					]
+				},
+				{
+					"id": 5,
+					"dialogue": [
+						{
+							"speaker": "bex",
+							"action": "enter",
+							"duration_ms": 500,
+							"spot": [
+								2,
+								2
+							],
+							"type": "direction"
+						},
+						{
+							"speaker": "bex",
+							"type": "speech",
+							"emotion": "base",
+							"content": {
+								"korean": "자, 더 자세한 기록이야. 갱스터들이 '질서'를 세우기 위해 행한 '정리 작업'에 대한 거지.",
+								"english": "Here, more detailed records. About the 'cleanup operations' gangsters performed to establish 'order'.",
+								"japanese": "さあ、もっと詳しい記録だよ。ギャングたちが「秩序」を築くために行った「整理作業」についてだ。",
+								"chinese": "来，这是更详细的记录。关于帮派分子为了建立‘秩序’而进行的‘清理工作’。",
+								"french": "Tiens, voici des dossiers plus détaillés. Sur les 'opérations de nettoyage' que les gangsters ont menées pour établir 'l'ordre'.",
+								"spanish": "Aquí tienes, registros más detallados. Sobre las 'operaciones de limpieza' que los gánsteres llevaron a cabo para establecer 'el orden'.",
+								"vietnamese": "Đây, những ghi chép chi tiết hơn. Về 'công việc dọn dẹp' mà các băng đảng đã thực hiện để thiết lập 'trật tự'.",
+								"thai": "นี่คือบันทึกที่ละเอียดกว่า เกี่ยวกับ 'ปฏิบัติการจัดระเบียบ' ที่พวกแก๊งสเตอร์ทำเพื่อสร้าง 'ระเบียบ' นั่นเอง",
+								"hindi": "यह लो, और विस्तृत रिकॉर्ड। गैंगस्टर ने 'व्यवस्था' स्थापित करने के लिए किए गए 'सफाई अभियान' के बारे में।"
+							}
+						},
+						{
+							"emotion": "angry",
+							"content": {
+								"korean": "이 기록, 뭔가 이상해. 잔혹한 일들이 미화되어 있어.",
+								"english": "These records, something's off. Brutal acts are glorified.",
+								"japanese": "この記録、何かおかしい。残虐な出来事が美化されている。",
+								"chinese": "这份记录，有点奇怪。残暴的事情都被美化了。",
+								"french": "Ces dossiers, il y a quelque chose qui cloche. Les actes brutaux sont glorifiés.",
+								"spanish": "Estos registros, algo está mal. Los actos brutales están idealizados.",
+								"vietnamese": "Những ghi chép này, có gì đó không ổn. Những hành động tàn bạo đã bị tô hồng.",
+								"thai": "บันทึกพวกนี้มันแปลกๆ นะ เรื่องโหดร้ายถูกทำให้ดูดีขึ้นมา",
+								"hindi": "ये रिकॉर्ड, कुछ अजीब हैं। क्रूर कृत्यों को महिमामंडित किया गया है।"
+							},
+							"speaker": "character_any",
+							"type": "speech"
+						},
+						{
+							"speaker": "bex",
+							"type": "speech",
+							"content": {
+								"korean": "무슨 소리! 이건 '최적화'된 기록이라고! 불필요한 부분은 다 지워버렸지! 얼마나 깔끔해?",
+								"english": "What are you saying! These are 'optimized' records! All unnecessary parts were deleted! How clean is that?",
+								"japanese": "何を言ってるんだ！これは「最適化」された記録だよ！不要な部分は全部消してやった！どれだけ綺麗になったか見てみろよ？",
+								"chinese": "说什么呢！这可是‘优化’过的记录！不必要的部分都删掉了！多干净利落啊？",
+								"french": "Qu'est-ce que tu racontes ! Ce sont des dossiers 'optimisés' ! Toutes les parties inutiles ont été supprimées ! C'est pas propre, ça ?",
+								"spanish": "¡Qué dices! ¡Estos son registros 'optimizados'! ¡Todas las partes innecesarias fueron eliminadas! ¡Qué limpios son!",
+								"vietnamese": "Nói gì vậy! Đây là những ghi chép đã được 'tối ưu hóa'! Tất cả những phần không cần thiết đều đã bị xóa bỏ! Thật gọn gàng phải không?",
+								"thai": "พูดอะไรเนี่ย! นี่มันเป็นบันทึกที่ 'ปรับให้เหมาะสม' แล้วนะ! ส่วนที่ไม่จำเป็นถูกลบออกไปหมดแล้ว! ดูสิว่ามันเรียบร้อยแค่ไหน?",
+								"hindi": "क्या बात कर रहे हो! ये 'अनुकूलित' रिकॉर्ड हैं! सभी अनावश्यक हिस्से हटा दिए गए हैं! कितने साफ-सुथरे हैं!"
+							},
+							"emotion": "happy"
+						},
+						{
+							"speaker": "character_1",
+							"type": "speech",
+							"emotion": "sad",
+							"content": {
+								"korean": "하지만… 피해자들의 기록은?",
+								"english": "But... what about the victims' records?",
+								"japanese": "でも…被害者たちの記録は？",
+								"chinese": "但是…受害者们的记录呢？",
+								"french": "Mais... les dossiers des victimes ?",
+								"spanish": "Pero... ¿y los registros de las víctimas?",
+								"vietnamese": "Nhưng... còn hồ sơ của các nạn nhân thì sao?",
+								"thai": "แต่... แล้วบันทึกของเหยื่อล่ะ?",
+								"hindi": "लेकिन... पीड़ितों के रिकॉर्ड का क्या?"
+							}
+						},
+						{
+							"emotion": "happy",
+							"content": {
+								"korean": "그게 뭔데? 먹는 거야?",
+								"english": "What's that? Can I eat it?",
+								"japanese": "それ、何？食べられるの？",
+								"chinese": "那是什么？能吃吗？",
+								"french": "C'est quoi ça ? Ça se mange ?",
+								"spanish": "¿Qué es eso? ¿Se come?",
+								"vietnamese": "Cái gì thế kia? Ăn được không?",
+								"thai": "นั่นอะไรน่ะ? กินได้ไหม?",
+								"hindi": "वह क्या है? क्या यह खाने लायक है?"
+							},
+							"speaker": "bex",
+							"type": "speech"
+						},
+						{
+							"emotion": "base",
+							"content": {
+								"korean": "정보상 벡스의 눈빛에서 순간, 알 수 없는 두려움이 스쳤다.",
+								"english": "For a moment, an unknown fear flickered in the informant Vex's eyes.",
+								"japanese": "情報屋ベックスの目に一瞬、計り知れない恐怖がよぎった。",
+								"chinese": "情报贩子维克斯的眼中，瞬间闪过一丝莫名的恐惧。",
+								"french": "Un instant, une peur indéfinissable traversa les yeux de Vex l'informateur.",
+								"spanish": "Por un instante, un miedo desconocido cruzó los ojos de Vex, el informante.",
+								"vietnamese": "Trong mắt Vex, kẻ cung cấp thông tin, thoáng qua một nỗi sợ hãi không rõ tên.",
+								"thai": "ชั่วขณะหนึ่ง ความกลัวที่ไม่รู้จักฉายแววในดวงตาของเว็กซ์ ผู้ให้ข้อมูล",
+								"hindi": "एक पल के लिए, मुखबिर वेक्स की आँखों में एक अज्ञात भय कौंध गया।"
+							},
+							"speaker": "narrator",
+							"type": "speech"
+						}
+					]
+				},
+				{
+					"id": 9,
+					"dialogue": [
+						{
+							"action": "enter",
+							"speaker": "bex",
+							"spot": [
+								5,
+								2
+							],
+							"type": "direction",
+							"duration_ms": 500
+						},
+						{
+							"speaker": "bex",
+							"type": "speech",
+							"content": {
+								"korean": "자자, 더 깊은 정보! 시스템의 핵심에 다다르고 있다고!",
+								"english": "Alright, deeper intel! We're closing in on the system's core!",
+								"japanese": "さあ、もっと深い情報だ！システムの核心に迫っているぞ！",
+								"chinese": "来吧，更深层的情报！我们正逼近系统的核心！",
+								"french": "Allez, des informations plus profondes ! On approche du cœur du système !",
+								"spanish": "¡Vamos, información más profunda! ¡Estamos llegando al núcleo del sistema!",
+								"vietnamese": "Nào, thông tin sâu hơn nữa! Chúng ta đang tiếp cận lõi của hệ thống rồi!",
+								"thai": "เอาล่ะ ข้อมูลที่ลึกซึ้งกว่านี้! เรากำลังเข้าใกล้แกนกลางของระบบแล้ว!",
+								"hindi": "चलो, और गहरी जानकारी! हम सिस्टम के मूल तक पहुँच रहे हैं!"
+							},
+							"emotion": "happy"
+						},
+						{
+							"speaker": "character_any",
+							"type": "speech",
+							"content": {
+								"korean": "당신이 주는 정보, 앞뒤가 안 맞아. 뭘 숨기는 거야?",
+								"english": "Your information doesn't add up. What are you hiding?",
+								"japanese": "あんたの情報、辻褄が合わない。何を隠してる？",
+								"chinese": "你提供的情报前后矛盾。你到底在隐瞒什么？",
+								"french": "Tes informations ne tiennent pas la route. Que caches-tu ?",
+								"spanish": "Tu información no cuadra. ¿Qué estás ocultando?",
+								"vietnamese": "Thông tin anh đưa không khớp. Anh đang giấu cái gì vậy?",
+								"thai": "ข้อมูลที่คุณให้มันไม่ตรงกัน คุณซ่อนอะไรอยู่?",
+								"hindi": "आपकी जानकारी मेल नहीं खाती। क्या छुपा रहे हो?"
+							},
+							"emotion": "angry"
+						},
+						{
+							"emotion": "base",
+							"content": {
+								"korean": "어허! 그럴 리가! 벡스는 언제나 진실만을 말한다고! 단지… 진실이 너무 많을 뿐이지!",
+								"english": "Nonsense! Vex always tells the truth! It's just... there's too much truth!",
+								"japanese": "とんでもない！まさか！ベックスはいつも真実しか語らないよ！ただ…真実が多すぎるだけさ！",
+								"chinese": "哎呀！怎么可能！维克斯说的都是实话！只是…真相太多了而已！",
+								"french": "Pff ! Pas question ! Vex dit toujours la vérité ! C'est juste... qu'il y a trop de vérités !",
+								"spanish": "¡Oh, vamos! ¡Imposible! ¡Vex siempre dice la verdad! Solo que... ¡hay demasiada verdad!",
+								"vietnamese": "Ối! Làm gì có chuyện đó! Vex luôn nói sự thật mà! Chỉ là… có quá nhiều sự thật thôi!",
+								"thai": "อ๊ะ! ไม่มีทาง! เว็กซ์พูดแต่ความจริงเสมอ! เพียงแต่...ความจริงมันมีมากเกินไปเท่านั้นเอง!",
+								"hindi": "ओह! ऐसा नहीं हो सकता! वेक्स हमेशा सच बोलता है! बस... सच बहुत ज़्यादा है!"
+							},
+							"speaker": "bex",
+							"type": "speech"
+						},
+						{
+							"emotion": "sad",
+							"content": {
+								"korean": "진실이 왜곡되고 있는 건 아니고?",
+								"english": "Or is the truth being distorted?",
+								"japanese": "真実が歪曲されてるわけじゃないだろうな？",
+								"chinese": "真相难道没有被扭曲吗？",
+								"french": "La vérité ne serait-elle pas plutôt déformée ?",
+								"spanish": "¿No será que la verdad está siendo distorsionada?",
+								"vietnamese": "Không phải sự thật đang bị bóp méo đó chứ?",
+								"thai": "หรือว่าความจริงกำลังถูกบิดเบือนอยู่?",
+								"hindi": "कहीं सच को तोड़ा-मरोड़ा तो नहीं जा रहा?"
+							},
+							"speaker": "character_3",
+							"type": "speech"
+						},
+						{
+							"content": {
+								"korean": "하하하! 넌 너무 복잡하게 생각해! 단순하게 살자고! 예를 들면 저기 나타난 저런 존재들처럼!",
+								"english": "Hahaha! You're overthinking it! Let's keep it simple! Like those beings appearing over there!",
+								"japanese": "ハハハ！君は考えすぎだよ！単純に生きようじゃないか！例えば、そこに現れたあんな存在たちのようにね！",
+								"chinese": "哈哈哈！你把事情想得太复杂了！活得简单点吧！就像那边出现的那些存在一样！",
+								"french": "Hahaha ! Tu te compliques trop la vie ! Soyons simples ! Comme ces êtres qui apparaissent là-bas !",
+								"spanish": "¡Jajaja! ¡Piensas demasiado complicado! ¡Vivamos de forma sencilla! ¡Como esas criaturas que aparecen allí!",
+								"vietnamese": "Hahaha! Anh nghĩ phức tạp quá rồi! Cứ sống đơn giản thôi! Giống như những thực thể vừa xuất hiện đằng kia ấy!",
+								"thai": "ฮ่าฮ่าฮ่า! คุณคิดมากไปแล้ว! มาใช้ชีวิตแบบง่ายๆ กันเถอะ! อย่างเช่นสิ่งมีชีวิตที่ปรากฏตัวอยู่ตรงนั้นไง!",
+								"hindi": "हाहाहा! तुम बहुत ज़्यादा सोचते हो! चलो सादा जीवन जीते हैं! जैसे कि वहाँ प्रकट हुए उन अस्तित्वों की तरह!"
+							},
+							"emotion": "happy",
+							"speaker": "bex",
+							"type": "speech"
+						},
+						{
+							"emotion": "base",
+							"content": {
+								"korean": "뒤틀린 금속음과 함께, 정체 모를 그림자가 다가왔다.",
+								"english": "With a twisted metallic screech, an unknown shadow drew near.",
+								"japanese": "軋む金属音と共に、正体不明の影が迫ってきた。",
+								"chinese": "伴随着扭曲的金属声，一个不明身份的影子靠近了。",
+								"french": "Accompagnée d'un grincement métallique tordu, une ombre inconnue s'approcha.",
+								"spanish": "Con un chirrido metálico retorcido, una sombra desconocida se acercó.",
+								"vietnamese": "Cùng với tiếng kim loại vặn vẹo, một cái bóng không rõ danh tính tiến đến gần.",
+								"thai": "พร้อมกับเสียงโลหะบิดเบี้ยว ร่างเงาที่ไม่รู้จักก็เคลื่อนเข้ามาใกล้",
+								"hindi": "एक मुड़ी हुई धातु की आवाज़ के साथ, एक अज्ञात छाया पास आ गई।"
+							},
+							"speaker": "narrator",
+							"type": "speech"
+						}
+					]
+				},
+				{
+					"dialogue": [
+						{
+							"content": {
+								"korean": "거대한 그림자가 탐험대를 압도했다.",
+								"english": "A colossal shadow loomed over the expedition team.",
+								"japanese": "巨大な影が探検隊を圧倒した。",
+								"chinese": "一个巨大的影子笼罩了探险队。",
+								"french": "Une ombre gigantesque submergea l'équipe d'expédition.",
+								"spanish": "Una sombra gigantesca abrumó al equipo de expedición.",
+								"vietnamese": "Một cái bóng khổng lồ bao trùm lấy đoàn thám hiểm.",
+								"thai": "เงาขนาดมหึมาได้เข้าครอบงำทีมสำรวจ",
+								"hindi": "एक विशाल छाया ने अभियान दल को अभिभूत कर दिया।"
+							},
+							"emotion": "base",
+							"speaker": "narrator",
+							"type": "speech"
+						},
+						{
+							"content": {
+								"korean": "내 영역에 발을 들인 어리석은 자들.",
+								"english": "Fools who trespass upon my domain.",
+								"japanese": "我が領域に足を踏み入れた愚か者たちめ。",
+								"chinese": "胆敢踏入吾之领域的愚蠢之徒。",
+								"french": "Fous qui osez fouler mon domaine.",
+								"spanish": "Estúpidos que osáis pisar mi dominio.",
+								"vietnamese": "Lũ ngu ngốc dám đặt chân vào lãnh địa của ta.",
+								"thai": "พวกโง่เขลาที่เหยียบย่างเข้ามาในอาณาเขตของข้า",
+								"hindi": "मूर्ख जो मेरे क्षेत्र में कदम रखते हैं।"
+							},
+							"emotion": "angry",
+							"speaker": "random_boss",
+							"type": "speech"
+						},
+						{
+							"content": {
+								"korean": "이게… 벡스가 말한 '정리'의 결과물인가?",
+								"english": "Is this... the result of what Vex called 'cleanup'?",
+								"japanese": "これが… ベックスが言っていた「整理」の結果なのか？",
+								"chinese": "这就是……维克斯所说的“清理”的结果吗？",
+								"french": "C'est ça... le résultat de ce que Vex appelait 'nettoyage' ?",
+								"spanish": "¿Esto es... el resultado de lo que Vex llamó 'limpieza'?",
+								"vietnamese": "Đây là... kết quả của cái Vex gọi là 'dọn dẹp' sao?",
+								"thai": "นี่คือ... ผลลัพธ์ของสิ่งที่ Vex เรียกว่า 'การจัดระเบียบ' งั้นหรือ?",
+								"hindi": "क्या यह... वही है जिसे वेक्स ने 'सफाई' कहा था?"
+							},
+							"emotion": "base",
+							"speaker": "character_any",
+							"type": "speech"
+						},
+						{
+							"duration_ms": 500,
+							"spot": [
+								4,
+								2
+							],
+							"type": "direction",
+							"speaker": "bex",
+							"action": "enter"
+						},
+						{
+							"speaker": "bex",
+							"type": "speech",
+							"content": {
+								"korean": "크크크… 놀랍지? 이 엄청난 데이터의 집합체가! 자, 내가 이 정보를… 아주 비싸게 팔아넘기겠어!",
+								"english": "Hehehe... Surprised? This massive collection of data! Now, I'll sell this information... for a hefty price!",
+								"japanese": "ククク… 驚いただろ？ この膨大なデータの集合体が！ さあ、この情報を… 高値で売り飛ばしてやろう！",
+								"chinese": "呵呵呵……很惊讶吧？这个庞大的数据集合体！现在，我将把这些信息……高价出售！",
+								"french": "Hahaha... Surpris ? Cette énorme collection de données ! Maintenant, je vais vendre cette information... à prix d'or !",
+								"spanish": "Jejeje... ¿Sorprendido? ¡Este enorme conjunto de datos! ¡Ahora, voy a vender esta información... por un precio muy alto!",
+								"vietnamese": "Khà khà... Ngạc nhiên chưa? Tập hợp dữ liệu khổng lồ này! Giờ thì, ta sẽ bán thông tin này... với giá cực đắt!",
+								"thai": "ฮ่าๆๆ... ประหลาดใจล่ะสิ? การรวบรวมข้อมูลมหาศาลนี้! เอาล่ะ ฉันจะขายข้อมูลนี้... ในราคาสูงลิ่วเลย!",
+								"hindi": "हाहाहा... हैरान हो गए? यह विशाल डेटा संग्रह! अब, मैं इस जानकारी को... बहुत ऊँचे दाम पर बेचूँगा!"
+							},
+							"emotion": "happy"
+						},
+						{
+							"speaker": "random_boss",
+							"type": "speech",
+							"content": {
+								"korean": "시끄러운 벌레. 너 또한 '정리'될 것이다.",
+								"english": "Noisy insect. You, too, shall be 'cleaned up'.",
+								"japanese": "騒がしい虫め。貴様もまた「整理」されるだろう。",
+								"chinese": "吵闹的虫子。你也将被“清理”。",
+								"french": "Insecte bruyant. Toi aussi, tu seras 'nettoyé'.",
+								"spanish": "Insecto ruidoso. Tú también serás 'limpiado'.",
+								"vietnamese": "Con côn trùng ồn ào. Ngươi cũng sẽ bị 'dọn dẹp'.",
+								"thai": "เจ้าแมลงน่ารำคาญ เจ้าก็จะถูก 'จัดระเบียบ' เช่นกัน",
+								"hindi": "शोरगुल करने वाला कीड़ा। तुम्हें भी 'साफ' कर दिया जाएगा।"
+							},
+							"emotion": "angry"
+						},
+						{
+							"action": "exit",
+							"speaker": "bex",
+							"direction": "down",
+							"type": "direction",
+							"duration_ms": 400
+						},
+						{
+							"emotion": "sad",
+							"content": {
+								"korean": "히익! 난 쏙 빠져야지! 잘 싸워봐!",
+								"english": "Yikes! I'm outta here! Good luck fighting!",
+								"japanese": "ひぃっ！ 私はさっさと退散だ！ 頑張って戦ってくれ！",
+								"chinese": "嘶！我得赶紧溜！好好打吧！",
+								"french": "Oups ! Je me tire ! Bonne chance pour le combat !",
+								"spanish": "¡Uf! ¡Yo me piro! ¡Pelea bien!",
+								"vietnamese": "Hú hồn! Ta phải chuồn thôi! Đánh nhau vui vẻ nhé!",
+								"thai": "ว้าย! ฉันขอเผ่นดีกว่า! สู้ให้เต็มที่นะ!",
+								"hindi": "छी! मैं तो निकल रहा हूँ! अच्छे से लड़ना!"
+							},
+							"speaker": "bex",
+							"type": "speech"
+						}
+					],
+					"lose_dialogue": [
+						{
+							"content": {
+								"korean": "아직… '정리'되지 않은 잔해들이… 감히… 다시 덤벼드는가…",
+								"english": "Still... un-'cleaned up' remnants... dare to... challenge me again...?",
+								"japanese": "まだ… 「整理」されていない残骸どもが… 敢えて… 再び挑んでくるか…",
+								"chinese": "尚未……被“清理”的残骸……竟敢……再次挑战吗……",
+								"french": "Encore... des vestiges non 'nettoyés'... osent... m'affronter à nouveau...?",
+								"spanish": "¿Aún... restos sin 'limpiar'... se atreven... a desafiarme de nuevo...?",
+								"vietnamese": "Vẫn còn... những tàn dư chưa bị 'dọn dẹp'... dám... khiêu chiến lần nữa sao...?",
+								"thai": "พวกเศษซากที่ยังไม่ถูก 'จัดระเบียบ'... กล้าดียังไง... มาท้าทายอีกครั้ง...",
+								"hindi": "अभी भी... 'साफ' नहीं किए गए अवशेष... हिम्मत करते हैं... फिर से चुनौती देने की...?"
+							},
+							"emotion": "angry",
+							"speaker": "random_boss",
+							"type": "speech"
+						},
+						{
+							"speaker": "character_any",
+							"type": "speech",
+							"content": {
+								"korean": "젠장… 시스템의 방해인가… 아직 끝나지 않았어.",
+								"english": "Damn it... Is it the system's interference...? It's not over yet.",
+								"japanese": "畜生… システムの妨害か… まだ終わっていない。",
+								"chinese": "该死……是系统的干扰吗……还没结束。",
+								"french": "Bon sang... Est-ce l'interférence du système...? Ce n'est pas encore fini.",
+								"spanish": "Maldita sea... ¿Es la interferencia del sistema...? Aún no ha terminado.",
+								"vietnamese": "Chết tiệt... Là sự can thiệp của hệ thống sao...? Vẫn chưa kết thúc.",
+								"thai": "ให้ตายสิ... นี่คือการแทรกแซงของระบบงั้นหรือ... มันยังไม่จบหรอก",
+								"hindi": "धिक्कार है... क्या यह सिस्टम का हस्तक्षेप है...? अभी खत्म नहीं हुआ है।"
+							},
+							"emotion": "angry"
+						},
+						{
+							"type": "direction",
+							"spot": [
+								3,
+								2
+							],
+							"duration_ms": 500,
+							"action": "enter",
+							"speaker": "bex"
+						},
+						{
+							"content": {
+								"korean": "크크크… 좀 더 강해져서 와야지! 그래야 내가 더 비싼 정보를 팔지!",
+								"english": "Hehehe... Get stronger and return! Then I'll sell you more valuable info!",
+								"japanese": "ククク…もっと強くなって出直してこい！そうすれば、もっと高価な情報を売ってやるぞ！",
+								"chinese": "呵呵呵…… 你得变得更强再回来！那样我才能卖给你更值钱的情报！",
+								"french": "Héhéhé... Deviens plus fort et reviens ! Comme ça, je te vendrai des infos plus précieuses !",
+								"spanish": "Jejeje... ¡Vuélvete más fuerte y regresa! ¡Así te venderé información más valiosa!",
+								"vietnamese": "Khà khà khà... Ngươi phải mạnh hơn rồi hãy quay lại! Có thế ta mới bán thông tin đắt giá hơn cho ngươi!",
+								"thai": "คิกๆๆ... ต้องแข็งแกร่งกว่านี้แล้วค่อยกลับมานะ! จะได้ขายข้อมูลแพงๆ ให้!",
+								"hindi": "हाहाहा... तुम्हें और मज़बूत होकर वापस आना होगा! तभी मैं तुम्हें और भी कीमती जानकारी बेच पाऊँगा!"
+							},
+							"emotion": "happy",
+							"speaker": "bex",
+							"type": "speech"
+						},
+						{
+							"speaker": "bex",
+							"type": "direction",
+							"action": "exit",
+							"duration_ms": 400
+						},
+						{
+							"content": {
+								"korean": "그럼 그때 또 보자고!",
+								"english": "Alright, see you then!",
+								"japanese": "じゃあ、またな！",
+								"chinese": "那么，到时候再见！",
+								"french": "Alors, à plus !",
+								"spanish": "¡Nos vemos entonces!",
+								"vietnamese": "Vậy thì, hẹn gặp lại lúc đó!",
+								"thai": "ไว้เจอกันใหม่นะ!",
+								"hindi": "तो फिर, अगली बार मिलते हैं!"
+							},
+							"emotion": "base",
+							"speaker": "bex",
+							"type": "speech"
+						}
+					],
+					"win_dialogue": [
+						{
+							"emotion": "sad",
+							"content": {
+								"korean": "으… 시스템은… 모든 것을… '정리'할 것이다… {random_boss}의 실패는… 일시적일 뿐…",
+								"english": "Ugh... The system... will 'clean up'... everything... The failure of {random_boss}... is only temporary...",
+								"japanese": "うぅ… システムは… 全てを… 「整理」するだろう… {random_boss}の失敗は… 一時的なものに過ぎない…",
+								"chinese": "呃……系统会……“清理”一切……{random_boss}的失败……只是暂时的……",
+								"french": "Ugh... Le système... va 'nettoyer'... tout... L'échec de {random_boss}... n'est que temporaire...",
+								"spanish": "Uf... El sistema... 'limpiará'... todo... El fracaso de {random_boss}... es solo temporal...",
+								"vietnamese": "Ư... Hệ thống... sẽ 'dọn dẹp'... mọi thứ... Thất bại của {random_boss}... chỉ là tạm thời...",
+								"thai": "อึก... ระบบจะ... 'จัดระเบียบ'... ทุกสิ่ง... ความล้มเหลวของ {random_boss}... เป็นเพียงชั่วคราวเท่านั้น...",
+								"hindi": "उह... सिस्टम... सब कुछ... 'साफ' कर देगा... {random_boss} की विफलता... केवल अस्थायी है..."
+							},
+							"speaker": "random_boss",
+							"type": "speech"
+						},
+						{
+							"emotion": "angry",
+							"content": {
+								"korean": "벡스의 정보는 함정이었어. 이 괴물은 시스템의 일부잖아.",
+								"english": "Vex's information was a trap. This monster is part of the system.",
+								"japanese": "ベックスの情報は罠だった。この怪物はシステムの一部だ。",
+								"chinese": "维克斯的情报是个陷阱。这个怪物是系统的一部分。",
+								"french": "Les informations de Vex étaient un piège. Ce monstre fait partie du système.",
+								"spanish": "La información de Vex era una trampa. Este monstruo es parte del sistema.",
+								"vietnamese": "Thông tin của Vex là một cái bẫy. Con quái vật này là một phần của hệ thống.",
+								"thai": "ข้อมูลของ Vex เป็นกับดัก สัตว์ประหลาดตัวนี้เป็นส่วนหนึ่งของระบบ",
+								"hindi": "वेक्स की जानकारी एक जाल थी। यह राक्षस सिस्टम का हिस्सा है।"
+							},
+							"speaker": "character_any",
+							"type": "speech"
+						},
+						{
+							"speaker": "narrator",
+							"type": "speech",
+							"content": {
+								"korean": "비웃는 듯한 정보상의 뒷모습과, 뒤틀린 채 사라져가는 존재. 모든 것이 혼란스러웠다.",
+								"english": "The mocking back of the informant, and the twisted, fading entity. Everything was chaotic.",
+								"japanese": "嘲笑うかのような情報屋の背中と、歪んだまま消え去っていく存在。全てが混乱していた。",
+								"chinese": "情报商嘲讽的背影，以及扭曲着消失的存在。一切都混乱不堪。",
+								"french": "Le dos moqueur de l'informateur, et l'entité tordue qui s'évanouissait. Tout était chaotique.",
+								"spanish": "La espalda burlona del informante y la entidad retorcida que se desvanecía. Todo era caótico.",
+								"vietnamese": "Bóng lưng chế giễu của kẻ cung cấp thông tin, và thực thể méo mó đang biến mất. Mọi thứ đều hỗn loạn.",
+								"thai": "แผ่นหลังที่เยาะเย้ยของสายลับ และร่างที่บิดเบี้ยวเลือนหายไป ทุกสิ่งล้วนสับสนวุ่นวาย",
+								"hindi": "मुखबिर की व्यंग्यपूर्ण पीठ, और मुड़ा हुआ, लुप्त होता प्राणी। सब कुछ अराजक था।"
+							},
+							"emotion": "base"
+						},
+						{
+							"emotion": "base",
+							"content": {
+								"korean": "이 숲의 진실은… 다음 방에서 에코가 들려줄 기억의 파편 속에 있을 것이다.",
+								"english": "The truth of this forest... will be in the fragments of memory that Echo will tell in the next room.",
+								"japanese": "この森の真実は… 次の部屋でエコーが語る記憶の破片の中にあるだろう。",
+								"chinese": "这片森林的真相……将会在下一房间中，由艾可讲述的记忆碎片里。",
+								"french": "La vérité sur cette forêt... se trouvera dans les fragments de mémoire qu'Echo racontera dans la pièce suivante.",
+								"spanish": "La verdad de este bosque... estará en los fragmentos de memoria que Echo contará en la próxima sala.",
+								"vietnamese": "Sự thật về khu rừng này... sẽ nằm trong những mảnh ký ức mà Echo sẽ kể ở phòng kế tiếp.",
+								"thai": "ความจริงของป่านี้... จะอยู่ในเศษเสี้ยวความทรงจำที่ Echo จะเล่าให้ฟังในห้องถัดไป",
+								"hindi": "इस जंगल का सच... अगले कमरे में इको द्वारा बताई गई यादों के टुकड़ों में होगा।"
+							},
+							"speaker": "narrator",
+							"type": "speech"
+						}
+					],
+					"id": 15
+				}
+			]
+		},
+		{
+			"scenario_id": "modern_cache_26_03",
+			"order": 3,
+			"act": "rising",
+			"theme": "modern",
+			"actors": {
+				"echo": {
+					"id": "mon_57f2edb8-aa81-4ce7-beed-ab009cd2ff35",
+					"name": {
+						"korean": "에코",
+						"english": "Echo",
+						"japanese": "エコー",
+						"chinese": "艾可",
+						"french": "Écho",
+						"spanish": "Eco",
+						"vietnamese": "Echo",
+						"thai": "เอคโค่",
+						"hindi": "इको"
+					},
+					"description": "",
+					"face_image_url": "https://imagedelivery.net/WTEqQNGFb-l-IHS6IGnzUQ/da48e2c2-6733-4f65-f8b6-f197af4ff700/public",
+					"battle_sprite_url": "https://imagedelivery.net/WTEqQNGFb-l-IHS6IGnzUQ/e90605b9-372f-4bf1-cdec-56a2fdef0800/public"
+				}
+			},
+			"boss": {
+				"pool_id": "random_boss"
+			},
+			"prologue": {
+				"korean": [
+					"지하 금고, 녹슨 시간 속에 잠들다.",
+					"그러나 그 안에는, 사라지지 않는 죄의 메아리가.",
+					"시스템 'Cache'의 진실은, 기억보다 잔인했다.",
+					"그리고 그 잔인함은, 한 여자에게 씌워졌다."
+				],
+				"english": [
+					"The underground vault, asleep in rusted time.",
+					"But within it, the undying echo of sin.",
+					"The truth of System 'Cache' was crueler than memory.",
+					"And that cruelty was thrust upon a woman."
+				],
+				"japanese": [
+					"地下金庫、錆びた時間の中で眠る。",
+					"しかしその中には、消えることのない罪の残響が。",
+					"システム「Cache」の真実は、記憶よりも残酷だった。",
+					"そしてその残酷さは、一人の女性に課せられた。"
+				],
+				"chinese": [
+					"地下金库，沉睡于锈蚀的时间中。",
+					"然而其中，罪恶的回声不曾消散。",
+					"系统“Cache”的真相，比记忆更残酷。",
+					"而那份残酷，加诸于一名女子之身。"
+				],
+				"french": [
+					"Le coffre souterrain, endormi dans le temps rouillé.",
+					"Mais en son sein, l'écho impérissable du péché.",
+					"La vérité du Système 'Cache' était plus cruelle que le souvenir.",
+					"Et cette cruauté fut imposée à une femme."
+				],
+				"spanish": [
+					"La bóveda subterránea, dormida en el tiempo oxidado.",
+					"Pero en su interior, el eco imperecedero del pecado.",
+					"La verdad del Sistema 'Cache' era más cruel que la memoria.",
+					"Y esa crueldad fue impuesta a una mujer."
+				],
+				"vietnamese": [
+					"Hầm ngầm, ngủ quên trong thời gian hoen gỉ.",
+					"Nhưng bên trong, là tiếng vọng tội lỗi không phai mờ.",
+					"Sự thật về Hệ thống 'Cache' tàn nhẫn hơn ký ức.",
+					"Và sự tàn nhẫn ấy đã đổ lên đầu một người phụ nữ."
+				],
+				"thai": [
+					"ห้องนิรภัยใต้ดิน หลับใหลในกาลเวลาที่ผุกร่อน",
+					"แต่ภายในนั้น เสียงสะท้อนของบาปที่ไม่เคยจางหาย",
+					"ความจริงของระบบ 'Cache' โหดร้ายกว่าความทรงจำ",
+					"และความโหดร้ายนั้นได้ถูกตอกย้ำลงบนผู้หญิงคนหนึ่ง"
+				],
+				"hindi": [
+					"भूमिगत तिजोरी, जंग लगे समय में सोई हुई।",
+					"परन्तु उसके भीतर, पाप की अमर गूँज।",
+					"सिस्टम 'कैशे' का सच, यादों से भी क्रूर था।",
+					"और वह क्रूरता, एक स्त्री पर थोपी गई थी।"
+				]
+			},
+			"rooms": [
+				{
+					"id": 1,
+					"dialogue": [
+						{
+							"content": {
+								"korean": "지하 금고의 심장부. 금속성 비린내가 코를 찔렀다.",
+								"english": "The heart of the underground vault. A metallic stench stung my nose.",
+								"japanese": "地下金庫の心臓部。金属の生臭さが鼻を突いた。",
+								"chinese": "地下金库的中心。一股金属腥味刺鼻。",
+								"french": "Au cœur du coffre souterrain. Une odeur métallique âcre me piquait le nez.",
+								"spanish": "El corazón de la bóveda subterránea. Un hedor metálico me picaba la nariz.",
+								"vietnamese": "Trái tim của hầm ngầm. Mùi tanh kim loại xộc vào mũi.",
+								"thai": "ใจกลางห้องนิรภัยใต้ดิน กลิ่นคาวโลหะบาดจมูก",
+								"hindi": "भूमिगत तिजोरी का दिल। धातु की दुर्गंध नाक में चुभ गई।"
+							},
+							"emotion": "base",
+							"speaker": "narrator",
+							"type": "speech"
+						},
+						{
+							"content": {
+								"korean": "여기도 Cache의 영향인가? 공기가 무겁네.",
+								"english": "Is this also Cache's influence? The air feels heavy.",
+								"japanese": "ここもCacheの影響か？空気が重いな。",
+								"chinese": "这里也是Cache的影响吗？空气好沉重。",
+								"french": "Est-ce aussi l'influence de Cache ici ? L'air est lourd.",
+								"spanish": "¿También es influencia de Cache aquí? El aire está pesado.",
+								"vietnamese": "Ở đây cũng là ảnh hưởng của Cache sao? Không khí thật nặng nề.",
+								"thai": "ที่นี่ก็ได้รับอิทธิพลจาก Cache ด้วยหรือเปล่า? อากาศหนักอึ้ง",
+								"hindi": "क्या यह भी कैशे का प्रभाव है? हवा भारी लग रही है।"
+							},
+							"type": "speech",
+							"speaker": "character_any",
+							"emotion": "base"
+						},
+						{
+							"type": "speech",
+							"speaker": "character_1",
+							"emotion": "base",
+							"content": {
+								"korean": "닥스도, 벡스도... 이 시스템에 대해 뭔가 숨기는 눈치였어.",
+								"english": "Dax, Vex... they seemed to be hiding something about this system.",
+								"japanese": "ダックスも、ベックスも... このシステムについて何か隠しているようだった。",
+								"chinese": "达克斯和贝克斯……他们似乎都在隐瞒关于这个系统的事。",
+								"french": "Dax, Vex... ils semblaient cacher quelque chose à propos de ce système.",
+								"spanish": "Dax, Vex... parecían estar ocultando algo sobre este sistema.",
+								"vietnamese": "Dax, Vex... hình như họ đang giấu giếm điều gì đó về hệ thống này.",
+								"thai": "แด็กซ์ก็ด้วย เว็กซ์ก็ด้วย... ดูเหมือนจะซ่อนอะไรบางอย่างเกี่ยวกับระบบนี้",
+								"hindi": "डैक्स भी, वेक्स भी... इस सिस्टम के बारे में कुछ छिपा रहे थे।"
+							}
+						},
+						{
+							"type": "speech",
+							"speaker": "character_2",
+							"emotion": "base",
+							"content": {
+								"korean": "단순한 저장 시스템이 아닌 것 같아.",
+								"english": "It doesn't seem like a simple storage system.",
+								"japanese": "単純な保存システムではないようだ。",
+								"chinese": "它似乎不是一个简单的存储系统。",
+								"french": "Cela ne ressemble pas à un simple système de stockage.",
+								"spanish": "No parece un simple sistema de almacenamiento.",
+								"vietnamese": "Dường như không phải là một hệ thống lưu trữ đơn giản.",
+								"thai": "ดูเหมือนจะไม่ใช่ระบบจัดเก็บข้อมูลธรรมดา",
+								"hindi": "यह एक साधारण भंडारण प्रणाली नहीं लगती।"
+							}
+						}
+					]
+				},
+				{
+					"id": 3,
+					"dialogue": [
+						{
+							"speaker": "echo",
+							"spot": [
+								3,
+								2
+							],
+							"action": "enter",
+							"duration_ms": 500,
+							"type": "direction"
+						},
+						{
+							"content": {
+								"korean": "...내가 뭘 했지? 분명... 끔찍한 일이었는데.",
+								"english": "...What did I do? It was definitely... something terrible.",
+								"japanese": "...私が何をした？確かに... 恐ろしいことだったのに。",
+								"chinese": "……我做了什么？那是一件可怕的事情。",
+								"french": "...Qu'ai-je fait ? C'était certainement... quelque chose de terrible.",
+								"spanish": "...¿Qué hice? Fue definitivamente... algo terrible.",
+								"vietnamese": "...Tôi đã làm gì? Chắc chắn... đó là một chuyện khủng khiếp.",
+								"thai": "...ฉันทำอะไรลงไป? แน่ๆ ว่า... มันเป็นเรื่องเลวร้าย",
+								"hindi": "...मैंने क्या किया? निश्चित रूप से... यह कुछ भयानक था।"
+							},
+							"speaker": "echo",
+							"emotion": "sad",
+							"type": "speech"
+						},
+						{
+							"emotion": "base",
+							"speaker": "character_any",
+							"type": "speech",
+							"content": {
+								"korean": "누구세요? 괜찮으세요?",
+								"english": "Who are you? Are you alright?",
+								"japanese": "どなたですか？大丈夫ですか？",
+								"chinese": "你是什么人？你还好吗？",
+								"french": "Qui êtes-vous ? Ça va ?",
+								"spanish": "¿Quién eres? ¿Estás bien?",
+								"vietnamese": "Bạn là ai? Bạn có sao không?",
+								"thai": "คุณคือใคร? สบายดีไหม?",
+								"hindi": "आप कौन हैं? क्या आप ठीक हैं?"
+							}
+						},
+						{
+							"content": {
+								"korean": "기억이... 조각나 있어. 근데 이 죄책감은 너무 생생해.",
+								"english": "My memories... are fragmented. But this guilt feels so real.",
+								"japanese": "記憶が…バラバラだ。でも、この罪悪感は鮮明すぎる。",
+								"chinese": "记忆……支离破碎。但这份愧疚感却如此真实。",
+								"french": "Mes souvenirs... sont fragmentés. Mais cette culpabilité est si vive.",
+								"spanish": "Mis recuerdos... están hechos pedazos. Pero esta culpa es tan vívida.",
+								"vietnamese": "Ký ức... rời rạc. Nhưng cảm giác tội lỗi này quá thật.",
+								"thai": "ความทรงจำ... แตกเป็นเสี่ยงๆ แต่ความรู้สึกผิดนี้มันชัดเจนเหลือเกิน",
+								"hindi": "मेरी यादें... बिखरी हुई हैं। पर यह अपराधबोध बहुत सजीव है।"
+							},
+							"type": "speech",
+							"emotion": "sad",
+							"speaker": "echo"
+						},
+						{
+							"content": {
+								"korean": "죄책감이라고요? 뭘 하신 건데요?",
+								"english": "Guilt? What did you do?",
+								"japanese": "罪悪感？何をしたんですか？",
+								"chinese": "愧疚感？你做了什么？",
+								"french": "Culpabilité ? Qu'avez-vous fait ?",
+								"spanish": "¿Culpa? ¿Qué hiciste?",
+								"vietnamese": "Cảm giác tội lỗi? Ông đã làm gì?",
+								"thai": "ความรู้สึกผิด? คุณทำอะไรลงไป?",
+								"hindi": "अपराधबोध? आपने क्या किया?"
+							},
+							"type": "speech",
+							"emotion": "base",
+							"speaker": "character_1"
+						},
+						{
+							"content": {
+								"korean": "몰라. 기억이 없어. 하지만... 내가 나쁜 짓을 했다고... 머릿속이 말해.",
+								"english": "I don't know. I have no memory. But... my mind tells me... I did something bad.",
+								"japanese": "わからない。記憶がない。でも…私が悪いことをしたと…頭が言う。",
+								"chinese": "不知道。没有记忆。但是……我的脑海告诉我……我做了坏事。",
+								"french": "Je ne sais pas. Je n'ai aucun souvenir. Mais... ma tête me dit... que j'ai fait quelque chose de mal.",
+								"spanish": "No sé. No tengo recuerdos. Pero... mi mente me dice... que hice algo malo.",
+								"vietnamese": "Tôi không biết. Tôi không có ký ức. Nhưng... đầu tôi nói... tôi đã làm điều gì đó tồi tệ.",
+								"thai": "ไม่รู้สิ ฉันจำไม่ได้เลย แต่... ในหัวมันบอกว่า... ฉันทำเรื่องเลวร้ายลงไป",
+								"hindi": "मुझे नहीं पता। कोई याद नहीं। लेकिन... मेरा दिमाग कहता है... मैंने कुछ बुरा किया है।"
+							},
+							"speaker": "echo",
+							"emotion": "sad",
+							"type": "speech"
+						},
+						{
+							"speaker": "character_any",
+							"emotion": "base",
+							"type": "speech",
+							"content": {
+								"korean": "이것도 Cache의 영향인가?",
+								"english": "Is this also Cache's influence?",
+								"japanese": "これもCacheの影響か？",
+								"chinese": "这也是Cache的影响吗？",
+								"french": "Est-ce aussi l'influence de Cache ?",
+								"spanish": "¿Es esto también influencia de Cache?",
+								"vietnamese": "Đây cũng là ảnh hưởng của Cache sao?",
+								"thai": "นี่ก็เป็นอิทธิพลของ Cache ด้วยเหรอ?",
+								"hindi": "क्या यह भी Cache का प्रभाव है?"
+							}
+						}
+					]
+				},
+				{
+					"dialogue": [
+						{
+							"speaker": "echo",
+							"spot": [
+								2,
+								3
+							],
+							"duration_ms": 500,
+							"action": "enter",
+							"type": "direction"
+						},
+						{
+							"content": {
+								"korean": "사람들을... 괴롭혔어. 내가... 내가 그랬다고.",
+								"english": "I... tormented people. I... I did it.",
+								"japanese": "人々を…苦しめた。私が…私がやったんだ。",
+								"chinese": "我……折磨了人们。我……我做的。",
+								"french": "J'ai... tourmenté des gens. C'est... c'est moi qui l'ai fait.",
+								"spanish": "Yo... atormenté a la gente. Yo... yo lo hice.",
+								"vietnamese": "Tôi... đã hành hạ mọi người. Tôi... tôi đã làm.",
+								"thai": "ฉัน... ทรมานผู้คน ฉัน... ฉันทำมัน",
+								"hindi": "मैंने... लोगों को प्रताड़ित किया। मैंने... मैंने ही किया।"
+							},
+							"speaker": "echo",
+							"emotion": "sad",
+							"type": "speech"
+						},
+						{
+							"speaker": "character_any",
+							"emotion": "base",
+							"type": "speech",
+							"content": {
+								"korean": "기억이 나지 않으면서 죄책감만 느껴진다고요?",
+								"english": "You don't remember, yet you only feel guilt?",
+								"japanese": "記憶がないのに、罪悪感だけ感じるってことですか？",
+								"chinese": "没有记忆，却只感受到愧疚感？",
+								"french": "Vous ne vous souvenez de rien, mais vous ne ressentez que de la culpabilité ?",
+								"spanish": "¿No recuerdas, pero solo sientes culpa?",
+								"vietnamese": "Ông không nhớ, nhưng chỉ cảm thấy tội lỗi thôi sao?",
+								"thai": "คุณจำไม่ได้ แต่กลับรู้สึกผิดเท่านั้นเองเหรอ?",
+								"hindi": "आपको याद नहीं, फिर भी सिर्फ अपराधबोध महसूस हो रहा है?"
+							}
+						},
+						{
+							"emotion": "sad",
+							"speaker": "echo",
+							"type": "speech",
+							"content": {
+								"korean": "응... Cache가... Cache가 모든 걸 '정리'했어. 내 기억도, 그들의 아픔도.",
+								"english": "Yes... Cache... Cache 'cleaned up' everything. My memories, their pain.",
+								"japanese": "うん…Cacheが…Cacheが全てを「整理」したんだ。私の記憶も、彼らの苦しみも。",
+								"chinese": "嗯……Cache……Cache“整理”了一切。我的记忆，他们的痛苦。",
+								"french": "Oui... Cache... Cache a tout 'rangé'. Mes souvenirs, leur souffrance.",
+								"spanish": "Sí... Cache... Cache 'organizó' todo. Mis recuerdos, su dolor.",
+								"vietnamese": "Vâng... Cache... Cache đã 'sắp xếp' mọi thứ. Ký ức của tôi, nỗi đau của họ.",
+								"thai": "ใช่... Cache... Cache 'จัดระเบียบ' ทุกอย่าง ความทรงจำของฉัน ความเจ็บปวดของพวกเขา",
+								"hindi": "हाँ... Cache... Cache ने सब कुछ 'साफ' कर दिया। मेरी यादें भी, उनका दर्द भी।"
+							}
+						},
+						{
+							"content": {
+								"korean": "'정리'? 설마 기억까지 조작하는 거야?",
+								"english": "'Cleaned up'? Are you saying it even manipulates memories?",
+								"japanese": "「整理」？まさか記憶まで操作するのか？",
+								"chinese": "“整理”？难道连记忆都能操纵吗？",
+								"french": "'Rangé' ? Tu veux dire qu'il manipule même les souvenirs ?",
+								"spanish": "¿'Organizó'? ¿Estás diciendo que incluso manipula los recuerdos?",
+								"vietnamese": "'Sắp xếp'? Chẳng lẽ nó còn thao túng cả ký ức sao?",
+								"thai": "'จัดระเบียบ'? อย่าบอกนะว่ามันบิดเบือนความทรงจำด้วย?",
+								"hindi": "'साफ' कर दिया? क्या तुम कह रहे हो कि यह यादों में भी हेरफेर करता है?"
+							},
+							"emotion": "angry",
+							"speaker": "character_2",
+							"type": "speech"
+						},
+						{
+							"type": "speech",
+							"speaker": "echo",
+							"emotion": "sad",
+							"content": {
+								"korean": "난... 죄인이야. 벌을 받아야 해.",
+								"english": "I'm... a sinner. I must be punished.",
+								"japanese": "私は…罪人だ。罰を受けるべきだ。",
+								"chinese": "我……是罪人。我应该受到惩罚。",
+								"french": "Je suis... un pécheur. Je dois être puni.",
+								"spanish": "Soy... un pecador. Debo ser castigado.",
+								"vietnamese": "Tôi... là tội nhân. Tôi phải bị trừng phạt.",
+								"thai": "ฉัน... เป็นคนบาป ฉันต้องถูกลงโทษ",
+								"hindi": "मैं... एक पापी हूँ। मुझे दंड मिलना चाहिए।"
+							}
+						}
+					],
+					"id": 5
+				},
+				{
+					"id": 9,
+					"dialogue": [
+						{
+							"duration_ms": 500,
+							"action": "enter",
+							"type": "direction",
+							"spot": [
+								4,
+								3
+							],
+							"speaker": "echo"
+						},
+						{
+							"emotion": "sad",
+							"speaker": "echo",
+							"type": "speech",
+							"content": {
+								"korean": "난 여기에 갇혔어. 내 죄 때문에... 이 시스템이 날 가둬.",
+								"english": "I'm trapped here. Because of my sin... this system holds me captive.",
+								"japanese": "私はここに閉じ込められた。私の罪のせいで…このシステムが私を閉じ込める。",
+								"chinese": "我被困在这里。因为我的罪……这个系统把我困住了。",
+								"french": "Je suis piégé ici. À cause de mon péché... ce système me retient captif.",
+								"spanish": "Estoy atrapado aquí. Por mi pecado... este sistema me tiene cautivo.",
+								"vietnamese": "Tôi bị mắc kẹt ở đây. Vì tội lỗi của tôi... hệ thống này giam giữ tôi.",
+								"thai": "ฉันถูกขังอยู่ที่นี่ เพราะบาปของฉัน... ระบบนี้กักขังฉันไว้",
+								"hindi": "मैं यहाँ फँस गया हूँ। मेरे पाप के कारण... यह सिस्टम मुझे बंदी बनाए हुए है।"
+							}
+						},
+						{
+							"content": {
+								"korean": "Cache는 단순한 저장 시스템이 아니야. 기억을 왜곡하고 감정을 주입해.",
+								"english": "Cache isn't just storage. It distorts memories, injects emotions.",
+								"japanese": "キャッシュは単なる保存システムじゃない。記憶を歪め、感情を注入する。",
+								"chinese": "缓存不只是存储系统。它扭曲记忆，注入情感。",
+								"french": "Le Cache n'est pas qu'un simple système de stockage. Il déforme les souvenirs, injecte des émotions.",
+								"spanish": "La Caché no es solo un sistema de almacenamiento. Distorsiona recuerdos, inyecta emociones.",
+								"vietnamese": "Cache không chỉ là hệ thống lưu trữ. Nó bóp méo ký ức, tiêm nhiễm cảm xúc.",
+								"thai": "แคชไม่ใช่แค่ระบบจัดเก็บข้อมูล มันบิดเบือนความทรงจำ ฉีดอารมณ์เข้าไป",
+								"hindi": "कैश सिर्फ स्टोरेज सिस्टम नहीं है। यह यादों को विकृत करता है, भावनाओं को भरता है।"
+							},
+							"emotion": "angry",
+							"speaker": "character_any",
+							"type": "speech"
+						},
+						{
+							"content": {
+								"korean": "이건 미친 짓이야. 얼마나 많은 사람이 에코처럼 고통받았을까?",
+								"english": "This is insane. How many suffered like Echo?",
+								"japanese": "なんてことだ。どれだけの人がエコーのように苦しんだんだ？",
+								"chinese": "这太疯狂了。有多少人像艾可一样受苦？",
+								"french": "C'est de la folie. Combien ont souffert comme Echo ?",
+								"spanish": "Esto es una locura. ¿Cuántos sufrieron como Echo?",
+								"vietnamese": "Thật điên rồ. Bao nhiêu người đã chịu đựng như Echo?",
+								"thai": "นี่มันบ้ามาก มีคนกี่คนที่ต้องทนทุกข์ทรมานเหมือนเอคโค่?",
+								"hindi": "यह पागलपन है। कितने लोग इको की तरह पीड़ित हुए?"
+							},
+							"emotion": "sad",
+							"speaker": "character_1",
+							"type": "speech"
+						},
+						{
+							"content": {
+								"korean": "시스템의 그림자가 짙어졌다. 진실은 더욱 기괴해졌다.",
+								"english": "The system's shadow deepens. The truth grows more grotesque.",
+								"japanese": "システムの影が濃くなった。真実はさらに異様になった。",
+								"chinese": "系统的阴影加深了。真相变得更加怪诞。",
+								"french": "L'ombre du système s'épaissit. La vérité devient plus grotesque.",
+								"spanish": "La sombra del sistema se profundiza. La verdad se vuelve más grotesca.",
+								"vietnamese": "Bóng tối của hệ thống dày đặc. Sự thật càng trở nên kỳ quái.",
+								"thai": "เงาของระบบเข้มข้นขึ้น ความจริงยิ่งประหลาดพิสดาร",
+								"hindi": "सिस्टम की छाया गहरी हो गई। सच और भी विकृत हो गया।"
+							},
+							"emotion": "base",
+							"speaker": "narrator",
+							"type": "speech"
+						}
+					]
+				},
+				{
+					"dialogue": [
+						{
+							"content": {
+								"korean": "금고의 가장 깊은 곳. 거대한 그림자가 나타났다.",
+								"english": "Deepest vault. A colossal shadow appears.",
+								"japanese": "金庫の最深部。巨大な影が現れた。",
+								"chinese": "金库最深处。一个巨大的影子出现了。",
+								"french": "Coffre le plus profond. Une ombre colossale apparaît.",
+								"spanish": "La bóveda más profunda. Una sombra colosal aparece.",
+								"vietnamese": "Sâu nhất trong hầm. Một bóng hình khổng lồ xuất hiện.",
+								"thai": "ลึกสุดในห้องนิรภัย เงาขนาดยักษ์ปรากฏขึ้น",
+								"hindi": "सबसे गहरा तिजोरी। एक विशाल छाया प्रकट हुई।"
+							},
+							"emotion": "base",
+							"speaker": "narrator",
+							"type": "speech"
+						},
+						{
+							"content": {
+								"korean": "또 다른 오류인가. 제거해야 할 기억들이군.",
+								"english": "Another error? Memories to be purged.",
+								"japanese": "また別のエラーか。排除すべき記憶たちだな。",
+								"chinese": "另一个错误吗？需要清除的记忆。",
+								"french": "Une autre erreur ? Des souvenirs à purger.",
+								"spanish": "¿Otro error? Recuerdos que purgar.",
+								"vietnamese": "Lại một lỗi nữa? Những ký ức cần phải xóa bỏ.",
+								"thai": "ข้อผิดพลาดอีกแล้วรึ ความทรงจำที่ต้องถูกกำจัด",
+								"hindi": "एक और त्रुटि? यादें जिन्हें मिटाना है।"
+							},
+							"emotion": "base",
+							"speaker": "random_boss",
+							"type": "speech"
+						},
+						{
+							"emotion": "angry",
+							"speaker": "character_any",
+							"type": "speech",
+							"content": {
+								"korean": "Cache의 수호자냐? 네가 에코의 기억을 조작했나?",
+								"english": "Cache's guardian? Did you tamper with Echo's memories?",
+								"japanese": "キャッシュの守護者か？お前がエコーの記憶を操作したのか？",
+								"chinese": "缓存的守护者？你篡改了艾可的记忆吗？",
+								"french": "Gardien du Cache ? As-tu manipulé les souvenirs d'Echo ?",
+								"spanish": "¿Guardián de la Caché? ¿Manipulaste los recuerdos de Echo?",
+								"vietnamese": "Kẻ bảo vệ Cache? Ngươi đã thao túng ký ức của Echo sao?",
+								"thai": "ผู้พิทักษ์แคชหรือ นายบงการความทรงจำของเอคโค่ใช่ไหม?",
+								"hindi": "कैश का संरक्षक? क्या तुमने इको की यादों से छेड़छाड़ की?"
+							}
+						},
+						{
+							"content": {
+								"korean": "나는 시스템의 질서. 불필요한 감정은 '최적화'되어야 한다.",
+								"english": "I am the system's order. Unnecessary emotions must be 'optimized'.",
+								"japanese": "私はシステムの秩序。不要な感情は「最適化」されるべきだ。",
+								"chinese": "我是系统的秩序。不必要的情感必须被“优化”。",
+								"french": "Je suis l'ordre du système. Les émotions inutiles doivent être « optimisées ».",
+								"spanish": "Soy el orden del sistema. Las emociones innecesarias deben ser 'optimizadas'.",
+								"vietnamese": "Ta là trật tự của hệ thống. Những cảm xúc không cần thiết phải được \"tối ưu hóa\".",
+								"thai": "ข้าคือระเบียบของระบบ อารมณ์ที่ไม่จำเป็นต้องถูก 'ปรับให้เหมาะสม'",
+								"hindi": "मैं सिस्टम का क्रम हूँ। अनावश्यक भावनाओं को 'अनुकूलित' किया जाना चाहिए।"
+							},
+							"type": "speech",
+							"emotion": "base",
+							"speaker": "random_boss"
+						},
+						{
+							"content": {
+								"korean": "나의... 죄를... 벌해줘.",
+								"english": "Punish... my... sins.",
+								"japanese": "私の…罪を…罰してくれ。",
+								"chinese": "惩罚…我的…罪。",
+								"french": "Punit... mes... péchés.",
+								"spanish": "Castiga... mis... pecados.",
+								"vietnamese": "Hãy... trừng phạt... tội lỗi... của ta.",
+								"thai": "ลงโทษ...บาป...ของข้า...",
+								"hindi": "मेरे... पापों... को... दंडित करो।"
+							},
+							"type": "speech",
+							"emotion": "sad",
+							"speaker": "echo"
+						},
+						{
+							"content": {
+								"korean": "에코는 죄인이 아니야! Cache가 만들어낸 환상일 뿐!",
+								"english": "Echo isn't a sinner! Just an illusion created by Cache!",
+								"japanese": "エコーは罪人じゃない！キャッシュが生み出した幻想にすぎない！",
+								"chinese": "艾可不是罪人！只是缓存制造的幻象！",
+								"french": "Echo n'est pas une pécheresse ! Juste une illusion créée par le Cache !",
+								"spanish": "¡Echo no es una pecadora! ¡Solo una ilusión creada por la Caché!",
+								"vietnamese": "Echo không phải là tội nhân! Chỉ là ảo ảnh do Cache tạo ra thôi!",
+								"thai": "เอคโค่ไม่ใช่คนบาป! เป็นแค่ภาพลวงตาที่แคชสร้างขึ้น!",
+								"hindi": "इको पापी नहीं है! सिर्फ़ कैश द्वारा बनाई गई एक भ्रांति है!"
+							},
+							"type": "speech",
+							"emotion": "angry",
+							"speaker": "character_1"
+						}
+					],
+					"win_dialogue": [
+						{
+							"content": {
+								"korean": "이것으로 끝이 아니다. '최적화'는 계속될 것이다. 시스템은... 영원하다.",
+								"english": "This isn't the end. 'Optimization' will continue. The system... is eternal.",
+								"japanese": "これで終わりではない。「最適化」は続く。システムは…永遠だ。",
+								"chinese": "这不是结束。“优化”将继续。系统…是永恒的。",
+								"french": "Ce n'est pas la fin. L'« optimisation » continuera. Le système... est éternel.",
+								"spanish": "Esto no es el final. La 'optimización' continuará. El sistema... es eterno.",
+								"vietnamese": "Đây không phải là kết thúc. \"Tối ưu hóa\" sẽ tiếp diễn. Hệ thống... là vĩnh cửu.",
+								"thai": "นี่ไม่ใช่จุดจบ 'การปรับให้เหมาะสม' จะดำเนินต่อไป ระบบ...เป็นนิรันดร์",
+								"hindi": "यह अंत नहीं है। 'अनुकूलन' जारी रहेगा। सिस्टम... शाश्वत है।"
+							},
+							"type": "speech",
+							"emotion": "base",
+							"speaker": "random_boss"
+						},
+						{
+							"speaker": "character_any",
+							"emotion": "base",
+							"type": "speech",
+							"content": {
+								"korean": "아직도 할 일이 남았다는 건가?",
+								"english": "There's still work to be done?",
+								"japanese": "まだやることが残っているのか？",
+								"chinese": "还有事情要做吗？",
+								"french": "Il reste encore du travail ?",
+								"spanish": "¿Aún queda trabajo por hacer?",
+								"vietnamese": "Vẫn còn việc phải làm sao?",
+								"thai": "ยังมีงานต้องทำอีกหรือ?",
+								"hindi": "क्या अभी भी कुछ काम बचा है?"
+							}
+						},
+						{
+							"spot": [
+								3,
+								2
+							],
+							"speaker": "echo",
+							"duration_ms": 500,
+							"action": "enter",
+							"type": "direction"
+						},
+						{
+							"content": {
+								"korean": "내 머릿속... 비어버렸어. 하지만... 가벼워졌어.",
+								"english": "My mind... it's empty. But... lighter.",
+								"japanese": "私の頭の中…空っぽになった。だけど…軽くなった。",
+								"chinese": "我的脑海...空了。但是...变轻了。",
+								"french": "Mon esprit... il est vide. Mais... plus léger.",
+								"spanish": "Mi mente... se vació. Pero... se aligeró.",
+								"vietnamese": "Đầu óc tôi... trống rỗng. Nhưng... nhẹ nhõm hơn rồi.",
+								"thai": "ในหัวของฉัน... ว่างเปล่า แต่... เบาลงแล้ว",
+								"hindi": "मेरा मन... खाली हो गया। लेकिन... हल्का हो गया।"
+							},
+							"type": "speech",
+							"emotion": "base",
+							"speaker": "echo"
+						},
+						{
+							"emotion": "base",
+							"speaker": "narrator",
+							"type": "speech",
+							"content": {
+								"korean": "Cache의 심연은 끝이 보이지 않았다. 다음 목적지는 어디인가.",
+								"english": "The abyss of the Cache was endless. Where to next?",
+								"japanese": "Cacheの深淵は終わりが見えなかった。次の目的地はどこだ？",
+								"chinese": "Cache的深渊望不到尽头。下一个目的地是哪里？",
+								"french": "L'abîme du Cache semblait sans fin. Quelle est la prochaine destination ?",
+								"spanish": "El abismo del Caché no tenía fin. ¿Cuál es el próximo destino?",
+								"vietnamese": "Vực thẳm của Cache không có điểm dừng. Điểm đến tiếp theo là đâu?",
+								"thai": "ห้วงลึกของ Cache ไร้จุดสิ้นสุด จุดหมายต่อไปคือที่ใด?",
+								"hindi": "कैश का गर्त अथाह था। अगला गंतव्य कहाँ है?"
+							}
+						}
+					],
+					"lose_dialogue": [
+						{
+							"type": "speech",
+							"speaker": "random_boss",
+							"emotion": "base",
+							"content": {
+								"korean": "오류는 반복된다. 결국은 '최적화'될 것이다.",
+								"english": "Errors repeat. Eventually, they will be 'optimized'.",
+								"japanese": "エラーは繰り返される。結局は「最適化」されるだろう。",
+								"chinese": "错误重复发生。最终会“优化”的。",
+								"french": "Les erreurs se répètent. Elles seront finalement \"optimisées\".",
+								"spanish": "Los errores se repiten. Al final, serán \"optimizados\".",
+								"vietnamese": "Lỗi lặp lại. Cuối cùng, chúng sẽ được \"tối ưu hóa\".",
+								"thai": "ข้อผิดพลาดซ้ำรอย ท้ายที่สุดก็จะถูก \"ปรับให้เหมาะสม\"",
+								"hindi": "त्रुटियाँ दोहराई जाती हैं। अंततः, वे 'अनुकूलित' हो जाएँगी।"
+							}
+						},
+						{
+							"content": {
+								"korean": "아니... 우리는 여기서 멈추지 않아.",
+								"english": "No... we won't stop here.",
+								"japanese": "いや…私たちはここで止まらない。",
+								"chinese": "不...我们不会止步于此。",
+								"french": "Non... nous ne nous arrêterons pas ici.",
+								"spanish": "No... no nos detendremos aquí.",
+								"vietnamese": "Không... chúng ta sẽ không dừng lại ở đây.",
+								"thai": "ไม่... เราจะไม่หยุดแค่นี้",
+								"hindi": "नहीं... हम यहाँ नहीं रुकेंगे।"
+							},
+							"emotion": "angry",
+							"speaker": "character_any",
+							"type": "speech"
+						},
+						{
+							"type": "speech",
+							"speaker": "echo",
+							"emotion": "angry",
+							"content": {
+								"korean": "기억은 없지만... 이 분노는 진짜야.",
+								"english": "No memory... but this rage is real.",
+								"japanese": "記憶はないが…この怒りは本物だ。",
+								"chinese": "没有记忆...但这份愤怒是真实的。",
+								"french": "Pas de souvenirs... mais cette rage est réelle.",
+								"spanish": "No tengo recuerdos... pero esta furia es real.",
+								"vietnamese": "Không có ký ức... nhưng cơn giận này là thật.",
+								"thai": "ไม่มีหน่วยความจำ... แต่ความโกรธนี้เป็นของจริง",
+								"hindi": "कोई याद नहीं... लेकिन यह क्रोध असली है।"
+							}
+						}
+					],
+					"id": 15
+				}
+			]
+		},
+		{
+			"scenario_id": "modern_cache_26_04",
+			"order": 4,
+			"act": "rising",
+			"theme": "modern",
+			"actors": {
+				"kai": {
+					"id": "mon_d7f29313-b8fb-49da-9a1a-01df5d13866e",
+					"name": {
+						"korean": "카이",
+						"english": "Kai",
+						"japanese": "カイ",
+						"chinese": "凯",
+						"french": "Kai",
+						"spanish": "Kai",
+						"vietnamese": "Kai",
+						"thai": "ไค",
+						"hindi": "काई"
+					},
+					"description": "",
+					"face_image_url": "https://imagedelivery.net/WTEqQNGFb-l-IHS6IGnzUQ/f10d9184-4155-4bb9-de2d-db61463f7c00/public",
+					"battle_sprite_url": "https://imagedelivery.net/WTEqQNGFb-l-IHS6IGnzUQ/e41f8e03-08c9-4a4f-6f72-fa9342876f00/public"
+				}
+			},
+			"boss": {
+				"pool_id": "random_boss"
+			},
+			"prologue": {
+				"korean": [
+					"지하 금고. 썩은 금속 냄새가 진동하는 곳.",
+					"과거의 잔혹한 역사는, 누군가에 의해 신성한 질서로 둔갑했다.",
+					"맹목적인 믿음은 가장 굳건한 벽.",
+					"그 벽을 깨야만, 진실은 드러난다."
+				],
+				"english": [
+					"Underground vault. A place reeking of rotten metal.",
+					"The cruel history of the past was disguised as sacred order by someone.",
+					"Blind faith is the strongest wall.",
+					"Only by breaking that wall, will the truth be revealed."
+				],
+				"japanese": [
+					"地下金庫。腐った金属の匂いが充満する場所。",
+					"過去の残酷な歴史は、誰かによって神聖な秩序へと姿を変えた。",
+					"盲目的な信仰は、最も堅固な壁。",
+					"その壁を打ち破って初めて、真実が明らかになる。"
+				],
+				"chinese": [
+					"地下金库。弥漫着腐烂金属气味的地方。",
+					"过去的残酷历史，被某人伪装成了神圣的秩序。",
+					"盲目的信仰是最坚固的墙。",
+					"只有打破那堵墙，真相才会揭露。"
+				],
+				"french": [
+					"Chambre forte souterraine. Un lieu imprégné d'une odeur de métal pourri.",
+					"L'histoire cruelle du passé a été déguisée en ordre sacré par quelqu'un.",
+					"La foi aveugle est le mur le plus solide.",
+					"Ce n'est qu'en brisant ce mur que la vérité se révélera."
+				],
+				"spanish": [
+					"Bóveda subterránea. Un lugar que apesta a metal podrido.",
+					"La cruel historia del pasado fue disfrazada como orden sagrada por alguien.",
+					"La fe ciega es el muro más inquebrantable.",
+					"Solo rompiendo ese muro, la verdad saldrá a la luz."
+				],
+				"vietnamese": [
+					"Hầm ngầm. Nơi nồng nặc mùi kim loại mục nát.",
+					"Lịch sử tàn khốc của quá khứ, đã bị ai đó biến thành trật tự thần thánh.",
+					"Niềm tin mù quáng là bức tường vững chắc nhất.",
+					"Chỉ khi phá vỡ bức tường đó, sự thật mới được phơi bày."
+				],
+				"thai": [
+					"ห้องนิรภัยใต้ดิน สถานที่ที่อบอวลไปด้วยกลิ่นโลหะเน่าเสีย",
+					"ประวัติศาสตร์อันโหดร้ายในอดีต ถูกใครบางคนแปลงโฉมให้กลายเป็นระเบียบอันศักดิ์สิทธิ์",
+					"ความเชื่อที่ตาบอดคือกำแพงที่แข็งแกร่งที่สุด",
+					"มีแต่การทำลายกำแพงนั้นเท่านั้น ความจริงถึงจะเปิดเผย"
+				],
+				"hindi": [
+					"भूमिगत तिजोरी। सड़ी हुई धातु की गंध से भरी जगह。",
+					"अतीत का क्रूर इतिहास, किसी ने पवित्र व्यवस्था का रूप दे दिया था।",
+					"अंधा विश्वास सबसे मजबूत दीवार है।",
+					"उस दीवार को तोड़ने पर ही सच सामने आएगा।"
+				]
+			},
+			"rooms": [
+				{
+					"id": 1,
+					"dialogue": [
+						{
+							"content": {
+								"korean": "지하 금고 깊숙한 곳. 녹슨 금속 냄새가 코를 찔렀다.",
+								"english": "Deep within the underground vault. The smell of rusted metal pricked my nose.",
+								"japanese": "地下金庫の奥深く。錆びた金属の匂いが鼻を突いた。",
+								"chinese": "地下金库深处。锈蚀的金属气味刺鼻。",
+								"french": "Au plus profond de la chambre forte souterraine. L'odeur du métal rouillé me piquait le nez.",
+								"spanish": "En lo profundo de la bóveda subterránea. El olor a metal oxidado me picaba la nariz.",
+								"vietnamese": "Sâu trong hầm ngầm. Mùi kim loại gỉ sét xộc thẳng vào mũi.",
+								"thai": "ลึกเข้าไปในห้องนิรภัยใต้ดิน กลิ่นโลหะสนิมฉุนจมูก",
+								"hindi": "भूमिगत तिजोरी के अंदरूनी हिस्से में। जंग लगी धातु की गंध नाक में चुभ रही थी।"
+							},
+							"type": "speech",
+							"speaker": "narrator",
+							"emotion": "base"
+						},
+						{
+							"content": {
+								"korean": "여기가 그… '선조들의 유산'이라는 곳이야?",
+								"english": "Is this… the 'Ancestors' Legacy'?",
+								"japanese": "ここが、その…「先祖の遺産」という場所か？",
+								"chinese": "这里就是……所谓的‘先祖遗产’吗？",
+								"french": "C'est ça… « L'héritage des ancêtres » ?",
+								"spanish": "¿Es este… el 'Legado de los Ancestros'?",
+								"vietnamese": "Đây là… nơi gọi là 'Di sản của Tổ tiên' sao?",
+								"thai": "ที่นี่คือ... 'มรดกของบรรพบุรุษ' สินะ?",
+								"hindi": "क्या यह… वही 'पूर्वजों की विरासत' है?"
+							},
+							"type": "speech",
+							"speaker": "character_any",
+							"emotion": "base"
+						},
+						{
+							"spot": [
+								4,
+								3
+							],
+							"duration_ms": 500,
+							"action": "enter",
+							"speaker": "kai",
+							"type": "direction"
+						},
+						{
+							"emotion": "base",
+							"speaker": "kai",
+							"type": "speech",
+							"content": {
+								"korean": "그래. 우리의 위대한 선조들이 남긴 Cache. 도시의 질서이자 평화의 근원이지.",
+								"english": "Yes. The Cache left by our great ancestors. The city's order and the source of peace.",
+								"japanese": "そうだ。我らの偉大な先祖が残したキャッシュ。都市の秩序であり、平和の源だ。",
+								"chinese": "没错。我们伟大的先祖留下的Cache。它是城市的秩序，也是和平的源泉。",
+								"french": "Oui. Le Cache laissé par nos grands ancêtres. L'ordre de la ville et la source de la paix.",
+								"spanish": "Sí. El Cache dejado por nuestros grandes ancestros. El orden de la ciudad y la fuente de la paz.",
+								"vietnamese": "Đúng vậy. Cache do tổ tiên vĩ đại của chúng ta để lại. Là trật tự của thành phố và là nguồn gốc của hòa bình.",
+								"thai": "ใช่แล้ว แคชที่บรรพบุรุษผู้ยิ่งใหญ่ของเราทิ้งไว้ เป็นระเบียบของเมืองและแหล่งที่มาของสันติภาพ",
+								"hindi": "हाँ। हमारे महान पूर्वजों द्वारा छोड़ी गई कैश। शहर की व्यवस्था और शांति का स्रोत।"
+							}
+						},
+						{
+							"content": {
+								"korean": "평화? 뭘 숨기고 있는 것 같던데.",
+								"english": "Peace? It looks like something is being hidden.",
+								"japanese": "平和？何か隠しているようだが。",
+								"chinese": "和平？我怎么觉得你们在隐瞒什么。",
+								"french": "La paix ? On dirait que quelque chose est caché.",
+								"spanish": "¿Paz? Parece que algo se está ocultando.",
+								"vietnamese": "Hòa bình? Có vẻ như đang giấu giếm điều gì đó.",
+								"thai": "สันติภาพ? ดูเหมือนมีอะไรบางอย่างถูกซ่อนไว้",
+								"hindi": "शांति? कुछ छिपाया जा रहा है।"
+							},
+							"type": "speech",
+							"speaker": "character_1",
+							"emotion": "base"
+						},
+						{
+							"emotion": "angry",
+							"speaker": "kai",
+							"type": "speech",
+							"content": {
+								"korean": "시스템은 모든 것을 '최적화'했을 뿐이다. 불필요한 고통을 제거하고, 완벽한 질서를 구현했어.",
+								"english": "The system merely 'optimized' everything. It eliminated unnecessary suffering and implemented perfect order.",
+								"japanese": "システムはすべてを「最適化」したに過ぎない。不要な苦痛を排除し、完璧な秩序を実現したのだ。",
+								"chinese": "系统只是“优化”了一切。消除了不必要的痛苦，实现了完美的秩序。",
+								"french": "Le système n'a fait qu'« optimiser » tout. Il a éliminé les souffrances inutiles et mis en œuvre un ordre parfait.",
+								"spanish": "El sistema simplemente 'optimizó' todo. Eliminó el sufrimiento innecesario e implementó un orden perfecto.",
+								"vietnamese": "Hệ thống chỉ đơn thuần là 'tối ưu hóa' mọi thứ. Đã loại bỏ những nỗi đau không cần thiết và thực hiện một trật tự hoàn hảo.",
+								"thai": "ระบบแค่ 'ปรับให้เหมาะสม' ทุกอย่างเท่านั้น กำจัดความเจ็บปวดที่ไม่จำเป็น และสร้างระเบียบที่สมบูรณ์แบบขึ้นมา",
+								"hindi": "सिस्टम ने बस सब कुछ 'अनुकूलित' किया है। अनावश्यक पीड़ा को दूर किया और एक पूर्ण व्यवस्था लागू की।"
+							}
+						}
+					]
+				},
+				{
+					"id": 3,
+					"dialogue": [
+						{
+							"action": "enter",
+							"type": "direction",
+							"speaker": "kai",
+							"duration_ms": 500,
+							"spot": [
+								4,
+								3
+							]
+						},
+						{
+							"emotion": "angry",
+							"content": {
+								"korean": "더 이상은 안 돼. Cache의 신성함을 더럽히지 마라.",
+								"english": "No more. Do not defile the sanctity of the Cache.",
+								"japanese": "これ以上は許さない。キャッシュの神聖さを汚すな。",
+								"chinese": "到此为止。不要玷污Cache的神圣。",
+								"french": "Pas plus. Ne souillez pas la sainteté du Cache.",
+								"spanish": "No más. No profanes la santidad del Cache.",
+								"vietnamese": "Không được nữa. Đừng làm ô uế sự thần thánh của Cache.",
+								"thai": "พอแล้ว อย่าทำให้ความศักดิ์สิทธิ์ของแคชแปดเปื้อน",
+								"hindi": "अब और नहीं। कैश की पवित्रता को अपवित्र मत करो।"
+							},
+							"type": "speech",
+							"speaker": "kai"
+						},
+						{
+							"emotion": "base",
+							"type": "speech",
+							"speaker": "character_any",
+							"content": {
+								"korean": "신성함? 기록들이 엉망이던데. 중요한 부분이 통째로 빠져있어.",
+								"english": "Sacred? The records are a mess. Important parts are missing entirely.",
+								"japanese": "神聖？記録はめちゃくちゃだ。重要な部分がごっそり抜け落ちている。",
+								"chinese": "神圣？记录乱七八糟的。重要的部分完全缺失了。",
+								"french": "Sacré ? Les archives sont en désordre. Des parties importantes ont été entièrement supprimées.",
+								"spanish": "¿Sagrado? Los registros son un desastre. Faltan partes importantes por completo.",
+								"vietnamese": "Thánh thiện? Hồ sơ lộn xộn hết cả. Những phần quan trọng bị thiếu hoàn toàn.",
+								"thai": "ศักดิ์สิทธิ์? บันทึกมันมั่วไปหมด ส่วนสำคัญหายไปทั้งยวงเลย",
+								"hindi": "पवित्र? रिकॉर्ड्स तो गड़बड़ हैं। महत्वपूर्ण हिस्से पूरी तरह से गायब हैं।"
+							}
+						},
+						{
+							"type": "speech",
+							"speaker": "kai",
+							"content": {
+								"korean": "그건 '최적화'된 것이다. 혼란스러운 기억들은 제거되어야 해.",
+								"english": "It's 'optimized.' Confusing memories must be removed.",
+								"japanese": "それは「最適化」されたものだ。混乱を招く記憶は除去されなければならない。",
+								"chinese": "那是“优化”过的。混乱的记忆应该被清除。",
+								"french": "C'est 'optimisé'. Les souvenirs confus doivent être supprimés.",
+								"spanish": "Está 'optimizado'. Los recuerdos confusos deben ser eliminados.",
+								"vietnamese": "Đó là đã được 'tối ưu hóa'. Những ký ức hỗn loạn phải bị loại bỏ.",
+								"thai": "นั่นคือสิ่งที่ 'ถูกปรับให้เหมาะสม' ความทรงจำที่สับสนต้องถูกลบออกไป",
+								"hindi": "यह 'अनुकूलित' किया गया है। भ्रमित करने वाली यादों को हटाना होगा।"
+							},
+							"emotion": "base"
+						},
+						{
+							"speaker": "character_2",
+							"type": "speech",
+							"content": {
+								"korean": "제거가 아니라… 조작 아닐까?",
+								"english": "Not removed... but manipulated, perhaps?",
+								"japanese": "除去じゃなくて…操作じゃないのか？",
+								"chinese": "不是清除……而是篡改吧？",
+								"french": "Pas supprimé... mais manipulé, n'est-ce pas ?",
+								"spanish": "No eliminado... ¿sino manipulado?",
+								"vietnamese": "Không phải loại bỏ... mà là thao túng thì sao?",
+								"thai": "ไม่ใช่การลบออก... แต่น่าจะเป็นการบิดเบือนมากกว่า?",
+								"hindi": "हटाया नहीं... बल्कि हेरफेर किया गया, है ना?"
+							},
+							"emotion": "base"
+						},
+						{
+							"emotion": "angry",
+							"type": "speech",
+							"speaker": "kai",
+							"content": {
+								"korean": "망언하지 마라! 우리 선조들의 위대한 업적을 의심하는 거냐?",
+								"english": "Don't speak nonsense! Are you doubting the great achievements of our ancestors?",
+								"japanese": "暴言を吐くな！我々の祖先の偉大な業績を疑うのか？",
+								"chinese": "别胡说！你是在怀疑我们祖先的伟大成就吗？",
+								"french": "Ne dis pas de sottises ! Doutes-tu des grandes réalisations de nos ancêtres ?",
+								"spanish": "¡No digas tonterías! ¿Estás dudando de los grandes logros de nuestros ancestros?",
+								"vietnamese": "Đừng nói xằng bậy! Ngươi đang nghi ngờ những thành tựu vĩ đại của tổ tiên chúng ta sao?",
+								"thai": "อย่าพูดพล่อยๆ! เจ้ากำลังสงสัยความสำเร็จอันยิ่งใหญ่ของบรรพบุรุษเราหรือ?",
+								"hindi": "बकवास मत करो! क्या तुम हमारे पूर्वजों की महान उपलब्धियों पर संदेह कर रहे हो?"
+							}
+						}
+					]
+				},
+				{
+					"id": 5,
+					"dialogue": [
+						{
+							"spot": [
+								4,
+								3
+							],
+							"duration_ms": 500,
+							"action": "enter",
+							"speaker": "kai",
+							"type": "direction"
+						},
+						{
+							"type": "speech",
+							"speaker": "kai",
+							"content": {
+								"korean": "이곳에 들어온 대가는 치르게 될 거다.",
+								"english": "You will pay the price for entering this place.",
+								"japanese": "ここに入った代償は払うことになるだろう。",
+								"chinese": "你会为进入这里付出代价的。",
+								"french": "Vous paierez le prix d'être entré ici.",
+								"spanish": "Pagarás el precio por haber entrado aquí.",
+								"vietnamese": "Ngươi sẽ phải trả giá vì đã vào đây.",
+								"thai": "เจ้าจะต้องชดใช้สำหรับที่เข้ามาในที่แห่งนี้",
+								"hindi": "तुम्हें यहाँ आने की कीमत चुकानी होगी।"
+							},
+							"emotion": "angry"
+						},
+						{
+							"content": {
+								"korean": "우린 진실을 찾고 있어. 에코도 같은 말을 했어. 없는 기억에 죄책감을 느낀다고.",
+								"english": "We're looking for the truth. Echo said the same thing. She feels guilty about missing memories.",
+								"japanese": "我々は真実を探している。エコーも同じことを言っていた。失われた記憶に罪悪感を感じていると。",
+								"chinese": "我们在寻找真相。艾可也说过同样的话。她对缺失的记忆感到愧疚。",
+								"french": "Nous cherchons la vérité. Echo a dit la même chose. Elle se sent coupable de souvenirs manquants.",
+								"spanish": "Estamos buscando la verdad. Echo dijo lo mismo. Se siente culpable por las memorias que faltan.",
+								"vietnamese": "Chúng tôi đang tìm kiếm sự thật. Echo cũng nói điều tương tự. Cô ấy cảm thấy tội lỗi vì những ký ức bị thiếu.",
+								"thai": "เรากำลังตามหาความจริง เอคโค่ก็พูดแบบเดียวกัน เธอบอกว่ารู้สึกผิดกับความทรงจำที่หายไป",
+								"hindi": "हम सच की तलाश में हैं। इको ने भी यही कहा था। उसे अपनी खोई हुई यादों पर अपराधबोध महसूस होता है।"
+							},
+							"speaker": "character_any",
+							"type": "speech",
+							"emotion": "base"
+						},
+						{
+							"speaker": "kai",
+							"type": "speech",
+							"content": {
+								"korean": "에코? 그 아이는 그저 혼란스러운 것뿐이다. Cache는 완벽해.",
+								"english": "Echo? That child is just confused. The Cache is perfect.",
+								"japanese": "エコー？あの子はただ混乱しているだけだ。キャッシュは完璧だ。",
+								"chinese": "艾可？那个孩子只是困惑而已。缓存是完美的。",
+								"french": "Echo ? Cette enfant est juste confuse. Le Cache est parfait.",
+								"spanish": "¿Echo? Esa niña solo está confundida. La Caché es perfecta.",
+								"vietnamese": "Echo? Con bé đó chỉ là đang bối rối thôi. Cache thì hoàn hảo.",
+								"thai": "เอคโค่? เด็กคนนั้นแค่สับสนเท่านั้นแหละ แคชมันสมบูรณ์แบบ",
+								"hindi": "इको? वह बच्ची बस भ्रमित है। कैश (Cache) एकदम सही है।"
+							},
+							"emotion": "base"
+						},
+						{
+							"content": {
+								"korean": "시스템이 과거를 '최적화'하며 잔혹한 기록들을 숨겼다는 증거도 찾았어.",
+								"english": "We also found evidence that the system 'optimized' the past, hiding cruel records.",
+								"japanese": "システムが過去を「最適化」し、残酷な記録を隠蔽した証拠も見つけた。",
+								"chinese": "我们还找到了系统“优化”过去，隐藏残酷记录的证据。",
+								"french": "Nous avons aussi trouvé des preuves que le système a 'optimisé' le passé, cachant des registres cruels.",
+								"spanish": "También encontramos pruebas de que el sistema 'optimizó' el pasado, ocultando registros crueles.",
+								"vietnamese": "Chúng tôi cũng tìm thấy bằng chứng rằng hệ thống đã 'tối ưu hóa' quá khứ, che giấu những ghi chép tàn khốc.",
+								"thai": "เรายังพบหลักฐานว่าระบบ 'ปรับให้เหมาะสม' อดีต โดยซ่อนบันทึกอันโหดร้ายไว้",
+								"hindi": "हमें इस बात के सबूत भी मिले हैं कि सिस्टम ने अतीत को 'अनुकूलित' किया, क्रूर रिकॉर्ड छिपा दिए।"
+							},
+							"type": "speech",
+							"speaker": "character_3",
+							"emotion": "base"
+						},
+						{
+							"emotion": "angry",
+							"content": {
+								"korean": "...거짓말이야. 그럴 리가 없어. 선조들의 기록은… 신성해!",
+								"english": "...It's a lie. It can't be. The records of our ancestors are... sacred!",
+								"japanese": "…嘘だ。そんなはずはない。祖先の記録は…神聖なんだ！",
+								"chinese": "……是谎言。不可能。祖先的记录是……神圣的！",
+								"french": "...C'est un mensonge. C'est impossible. Les archives de nos ancêtres sont... sacrées !",
+								"spanish": "...Es una mentira. No puede ser. ¡Los registros de nuestros ancestros son... sagrados!",
+								"vietnamese": "...Là dối trá. Không thể nào. Ghi chép của tổ tiên chúng ta... thiêng liêng!",
+								"thai": "...โกหก มันจะเป็นไปไม่ได้ บันทึกของบรรพบุรุษเรา... ศักดิ์สิทธิ์!",
+								"hindi": "...यह झूठ है। ऐसा नहीं हो सकता। हमारे पूर्वजों के रिकॉर्ड... पवित्र हैं!"
+							},
+							"speaker": "kai",
+							"type": "speech"
+						}
+					]
+				},
+				{
+					"id": 9,
+					"dialogue": [
+						{
+							"type": "direction",
+							"speaker": "kai",
+							"action": "enter",
+							"duration_ms": 500,
+							"spot": [
+								4,
+								3
+							]
+						},
+						{
+							"emotion": "sad",
+							"content": {
+								"korean": "아니야… 그럴 리 없어. 내가 평생 믿어왔던 것이…",
+								"english": "No... It can't be. What I've believed my whole life...",
+								"japanese": "違う…そんなはずはない。私が一生信じてきたものが…",
+								"chinese": "不……不可能。我一生所相信的……",
+								"french": "Non... Ce n'est pas possible. Ce que j'ai cru toute ma vie...",
+								"spanish": "No... No puede ser. Lo que he creído toda mi vida...",
+								"vietnamese": "Không... Không thể nào. Điều mà tôi đã tin tưởng cả đời...",
+								"thai": "ไม่นะ... มันจะเป็นไปไม่ได้ สิ่งที่ฉันเชื่อมาตลอดชีวิต...",
+								"hindi": "नहीं... ऐसा नहीं हो सकता। जो मैंने अपनी पूरी ज़िंदगी माना है..."
+							},
+							"type": "speech",
+							"speaker": "kai"
+						},
+						{
+							"emotion": "base",
+							"speaker": "character_any",
+							"type": "speech",
+							"content": {
+								"korean": "네가 믿는 평화는 조작된 거짓 위에 세워진 거야. 진실을 봐.",
+								"english": "The peace you believe in is built on fabricated lies. See the truth.",
+								"japanese": "お前が信じる平和は、捏造された嘘の上に築かれたものだ。真実を見ろ。",
+								"chinese": "你所相信的和平，建立在被操纵的谎言之上。看清真相。",
+								"french": "La paix que tu crois n'est bâtie que sur des mensonges manipulés. Vois la vérité.",
+								"spanish": "La paz en la que crees está construida sobre mentiras fabricadas. Ve la verdad.",
+								"vietnamese": "Hòa bình ngươi tin tưởng được xây dựng trên những lời dối trá bị thao túng. Hãy nhìn ra sự thật.",
+								"thai": "สันติภาพที่คุณเชื่อสร้างขึ้นบนคำโกหกที่ถูกบิดเบือน จงมองความจริงซะ",
+								"hindi": "तुम जिस शांति में विश्वास करते हो, वह गढ़ंत झूठ पर बनी है। सच देखो।"
+							}
+						},
+						{
+							"content": {
+								"korean": "닥쳐! 너희 때문에 모든 게 흔들리고 있어! 이 질서를 무너뜨리지 마!",
+								"english": "Shut up! Everything's shaking because of you! Don't break this order!",
+								"japanese": "黙れ！お前たちのせいで全てが揺らいでいる！この秩序を崩すな！",
+								"chinese": "住口！一切都因你们而动摇！别破坏这秩序！",
+								"french": "Tais-toi ! Tout vacille à cause de vous ! Ne brise pas cet ordre !",
+								"spanish": "¡Cállate! ¡Todo se tambalea por vuestra culpa! ¡No rompáis este orden!",
+								"vietnamese": "Câm mồm! Mọi thứ đang rung chuyển vì các ngươi! Đừng phá vỡ trật tự này!",
+								"thai": "หุบปาก! ทุกสิ่งสั่นคลอนเพราะพวกแก! อย่าทำลายระเบียบนี้!",
+								"hindi": "चुप रहो! तुम्हारी वजह से सब कुछ हिल रहा है! इस व्यवस्था को मत तोड़ो!"
+							},
+							"type": "speech",
+							"speaker": "kai",
+							"emotion": "angry"
+						},
+						{
+							"content": {
+								"korean": "더 깊이 들어가야 해. Cache의 진짜 핵을 찾아야만 모든 걸 되돌릴 수 있어.",
+								"english": "We must go deeper. Only by finding Cache's true core can we undo everything.",
+								"japanese": "もっと深く入らなければならない。Cacheの真の核を見つけなければ、全てを元に戻せない。",
+								"chinese": "必须深入。只有找到Cache真正的核心，才能让一切恢复原状。",
+								"french": "Nous devons aller plus loin. Ce n'est qu'en trouvant le véritable noyau de Cache que nous pourrons tout annuler.",
+								"spanish": "Debemos ir más profundo. Solo encontrando el verdadero núcleo de Cache podremos revertirlo todo.",
+								"vietnamese": "Phải tiến sâu hơn nữa. Chỉ khi tìm thấy lõi thật sự của Cache, chúng ta mới có thể đảo ngược mọi thứ.",
+								"thai": "เราต้องเข้าไปให้ลึกกว่านี้ มีเพียงการค้นหาแกนกลางที่แท้จริงของ Cache เท่านั้นที่เราจะสามารถย้อนคืนทุกสิ่งได้",
+								"hindi": "हमें और गहराई तक जाना होगा। Cache के असली कोर को ढूंढकर ही हम सब कुछ वापस कर सकते हैं।"
+							},
+							"speaker": "character_4",
+							"type": "speech",
+							"emotion": "base"
+						},
+						{
+							"content": {
+								"korean": "안 돼… 절대로…! 내가 막을 거다. 나의 선조들을 위해서!",
+								"english": "No... Never...! I'll stop you. For my ancestors!",
+								"japanese": "だめだ…絶対に…！私が止める。我が祖先のために！",
+								"chinese": "不…绝不…！我会阻止你。为了我的先祖！",
+								"french": "Non... Jamais...! Je t'arrêterai. Pour mes ancêtres !",
+								"spanish": "¡No... nunca...! Yo los detendré. ¡Por mis ancestros!",
+								"vietnamese": "Không… Tuyệt đối không…! Ta sẽ ngăn cản. Vì tổ tiên của ta!",
+								"thai": "ไม่... ไม่มีทาง...! ฉันจะหยุดแกให้ได้ เพื่อบรรพบุรุษของฉัน!",
+								"hindi": "नहीं... कभी नहीं...! मैं रोकूँगा। अपने पूर्वजों के लिए!"
+							},
+							"speaker": "kai",
+							"type": "speech",
+							"emotion": "angry"
+						}
+					]
+				},
+				{
+					"dialogue": [
+						{
+							"emotion": "base",
+							"type": "speech",
+							"speaker": "narrator",
+							"content": {
+								"korean": "거대한 그림자가 길을 막아섰다. 시스템이 '정리'한 혼돈의 파편이었다.",
+								"english": "A colossal shadow blocked the path. It was a fragment of chaos, 'purged' by the system.",
+								"japanese": "巨大な影が道を阻んだ。それはシステムが「整理」した混沌の破片だった。",
+								"chinese": "巨大的阴影挡住了去路。那是系统“整理”过的混沌碎片。",
+								"french": "Une ombre colossale bloquait le chemin. C'était un fragment de chaos, « purgé » par le système.",
+								"spanish": "Una sombra colosal bloqueó el camino. Era un fragmento del caos, 'purgado' por el sistema.",
+								"vietnamese": "Một bóng đen khổng lồ chặn đường. Đó là mảnh vỡ của hỗn loạn, đã bị hệ thống 'thanh lọc'.",
+								"thai": "เงาขนาดมหึมาขวางทางอยู่ มันคือเศษเสี้ยวของความโกลาหลที่ระบบ 'จัดการ'",
+								"hindi": "एक विशाल छाया ने रास्ता रोक दिया। यह अराजकता का एक टुकड़ा था, जिसे सिस्टम ने 'साफ' किया था।"
+							}
+						},
+						{
+							"emotion": "base",
+							"type": "speech",
+							"speaker": "random_boss",
+							"content": {
+								"korean": "감히 이곳의 질서를 거스르려는가. '최적화'될 시간이다.",
+								"english": "Dare you defy the order of this place? It's time to be 'optimized'.",
+								"japanese": "敢えてこの地の秩序に逆らうか。 「最適化」される時だ。",
+								"chinese": "竟敢反抗此地的秩序吗？是时候“优化”了。",
+								"french": "Oses-tu défier l'ordre de ce lieu ? Il est temps d'être « optimisé ».",
+								"spanish": "¿Osas desafiar el orden de este lugar? Es hora de ser 'optimizado'.",
+								"vietnamese": "Ngươi dám chống lại trật tự nơi đây sao? Đã đến lúc 'tối ưu hóa' rồi.",
+								"thai": "กล้าที่จะท้าทายระเบียบของที่นี่หรือ? ถึงเวลา 'เพิ่มประสิทธิภาพ' แล้ว",
+								"hindi": "क्या तुम इस जगह के आदेश का उल्लंघन करने की हिम्मत करते हो? 'अनुकूलित' होने का समय है।"
+							}
+						},
+						{
+							"emotion": "angry",
+							"speaker": "character_any",
+							"type": "speech",
+							"content": {
+								"korean": "또 다른 수호자냐? 네 진짜 모습을 보여라!",
+								"english": "Another guardian? Show me your true form!",
+								"japanese": "また別の守護者か？本当の姿を見せろ！",
+								"chinese": "又一个守护者？露出你的真面目！",
+								"french": "Encore un gardien ? Montre-moi ta vraie forme !",
+								"spanish": "¿Otro guardián? ¡Muéstrame tu verdadera forma!",
+								"vietnamese": "Lại một kẻ bảo vệ khác à? Hãy cho ta thấy hình dạng thật của ngươi đi!",
+								"thai": "ผู้พิทักษ์อีกตนรึ? จงแสดงร่างจริงของเจ้าออกมา!",
+								"hindi": "एक और संरक्षक? अपना असली रूप दिखाओ!"
+							}
+						},
+						{
+							"emotion": "base",
+							"type": "speech",
+							"speaker": "random_boss",
+							"content": {
+								"korean": "나는 그저 시스템의 의지일 뿐. 너희는 오류다.",
+								"english": "I am merely the system's will. You are errors.",
+								"japanese": "私はただシステムの意思に過ぎない。お前たちはエラーだ。",
+								"chinese": "我不过是系统的意志。你们是错误。",
+								"french": "Je ne suis que la volonté du système. Vous êtes des erreurs.",
+								"spanish": "Soy meramente la voluntad del sistema. Vosotros sois errores.",
+								"vietnamese": "Ta chỉ là ý chí của hệ thống. Các ngươi là lỗi.",
+								"thai": "ฉันเป็นเพียงเจตจำนงของระบบเท่านั้น พวกแกคือข้อผิดพลาด",
+								"hindi": "मैं तो बस सिस्टम की इच्छा हूँ। तुम त्रुटियाँ हो।"
+							}
+						}
+					],
+					"id": 15,
+					"lose_dialogue": [
+						{
+							"content": {
+								"korean": "시스템의 '최적화'는 완벽했다. 일말의 자비도 없었다.",
+								"english": "The system's 'optimization' was perfect. There was no mercy.",
+								"japanese": "システムの『最適化』は完璧だった。慈悲は一切なかった。",
+								"chinese": "系统的‘优化’是完美的。没有一丝怜悯。",
+								"french": "L'« optimisation » du système était parfaite. Il n'y avait aucune pitié.",
+								"spanish": "La 'optimización' del sistema fue perfecta. No hubo piedad alguna.",
+								"vietnamese": "Sự 'tối ưu hóa' của hệ thống là hoàn hảo. Không hề có chút nhân từ nào.",
+								"thai": "'การปรับแต่ง' ของระบบนั้นสมบูรณ์แบบ ไร้ซึ่งความเมตตาใดๆ",
+								"hindi": "सिस्टम का 'अनुकूलन' सही था। कोई दया नहीं थी।"
+							},
+							"type": "speech",
+							"speaker": "narrator",
+							"emotion": "base"
+						},
+						{
+							"emotion": "base",
+							"type": "speech",
+							"speaker": "random_boss",
+							"content": {
+								"korean": "너희의 어리석음이… 결국 이 질서를 이해하지 못하는군.",
+								"english": "Your foolishness... ultimately fails to comprehend this order.",
+								"japanese": "お前たちの愚かさが…結局この秩序を理解できないのだな。",
+								"chinese": "你们的愚蠢……终究无法理解这个秩序。",
+								"french": "Votre folie… ne comprend finalement pas cet ordre.",
+								"spanish": "Vuestra estupidez… finalmente no comprende este orden.",
+								"vietnamese": "Sự ngu ngốc của các ngươi… cuối cùng vẫn không thể hiểu được trật tự này.",
+								"thai": "ความโง่เขลาของพวกเจ้า… สุดท้ายก็ไม่อาจเข้าใจระเบียบนี้ได้",
+								"hindi": "तुम्हारी मूर्खता... अंततः इस व्यवस्था को समझने में विफल रहती है।"
+							}
+						},
+						{
+							"emotion": "angry",
+							"content": {
+								"korean": "아직 끝나지 않았어. 우리는… 포기하지 않아!",
+								"english": "It's not over yet. We... won't give up!",
+								"japanese": "まだ終わっていない。私たちは…諦めない！",
+								"chinese": "还没结束。我们……不会放弃！",
+								"french": "Ce n'est pas encore fini. Nous… n'abandonnerons pas !",
+								"spanish": "Aún no ha terminado. ¡Nosotros… no nos rendiremos!",
+								"vietnamese": "Chưa kết thúc đâu. Chúng ta… sẽ không từ bỏ!",
+								"thai": "ยังไม่จบ เรา… ไม่ยอมแพ้!",
+								"hindi": "अभी खत्म नहीं हुआ है। हम... हार नहीं मानेंगे!"
+							},
+							"speaker": "character_any",
+							"type": "speech"
+						}
+					],
+					"win_dialogue": [
+						{
+							"speaker": "random_boss",
+							"type": "speech",
+							"content": {
+								"korean": "하찮은 오류들이… 하지만 이 진실은… {random_boss}로는 막을 수 없다…",
+								"english": "Insignificant errors... But this truth... cannot be stopped by {random_boss}...",
+								"japanese": "些細なエラーどもめ… だがこの真実は… {random_boss}では止められない…",
+								"chinese": "微不足道的错误们… 但这个真相… 绝非{random_boss}所能阻止…",
+								"french": "Erreurs insignifiantes... Mais cette vérité... ne peut être arrêtée par {random_boss}...",
+								"spanish": "Errores insignificantes... Pero esta verdad... no puede ser detenida por {random_boss}...",
+								"vietnamese": "Những lỗi lầm nhỏ bé… Nhưng sự thật này… {random_boss} không thể ngăn cản được…",
+								"thai": "พวกข้อผิดพลาดไร้ค่า... แต่ความจริงนี้... {random_boss} ก็ไม่อาจหยุดยั้งได้...",
+								"hindi": "तुच्छ त्रुटियाँ... लेकिन यह सच... {random_boss} से रोका नहीं जा सकता..."
+							},
+							"emotion": "sad"
+						},
+						{
+							"emotion": "base",
+							"content": {
+								"korean": "뭐라고? 대체 무슨 진실이 더 있다는 거야?",
+								"english": "What? What other truth is there?",
+								"japanese": "何だと？一体他にどんな真実があると言うんだ？",
+								"chinese": "什么？到底还有什么真相？",
+								"french": "Quoi ? Quelle autre vérité y a-t-il donc ?",
+								"spanish": "¿Qué? ¿Qué otra verdad hay?",
+								"vietnamese": "Gì cơ? Còn sự thật nào nữa chứ?",
+								"thai": "อะไรนะ? ความจริงอะไรอีกเนี่ย?",
+								"hindi": "क्या? और कौन सा सच है?"
+							},
+							"type": "speech",
+							"speaker": "character_any"
+						},
+						{
+							"type": "speech",
+							"speaker": "narrator",
+							"content": {
+								"korean": "무너진 그림자 속에서, 희미한 데이터 조각이 반짝였다. 다음 방은 더 깊은 혼돈으로 이끌 것이다.",
+								"english": "Amidst the fallen shadows, a faint data fragment shimmered. The next room will lead to deeper chaos.",
+								"japanese": "崩れ落ちた影の中で、微かなデータが煌めいた。次の部屋は、さらなる深淵の混沌へと誘うだろう。",
+								"chinese": "在崩塌的阴影中，微弱的数据碎片闪烁着。下一个房间将引导至更深的混沌。",
+								"french": "Au milieu des ombres tombées, un faible fragment de données scintilla. La prochaine salle mènera à un chaos plus profond.",
+								"spanish": "Entre las sombras caídas, un débil fragmento de datos brilló. La próxima sala conducirá a un caos más profundo.",
+								"vietnamese": "Giữa những bóng tối đổ nát, một mảnh dữ liệu mờ nhạt lóe lên. Căn phòng tiếp theo sẽ dẫn đến sự hỗn loạn sâu hơn.",
+								"thai": "ท่ามกลางเงามืดที่ล่มสลาย ชิ้นส่วนข้อมูลที่เลือนรางก็ส่องประกาย ห้องถัดไปจะนำไปสู่ความโกลาหลที่ลึกซึ้งยิ่งขึ้น",
+								"hindi": "गिरती परछाइयों के बीच, एक हल्का डेटा टुकड़ा चमक उठा। अगला कमरा गहरे अराजकता की ओर ले जाएगा।"
+							},
+							"emotion": "base"
+						}
+					]
+				}
+			]
+		},
+		{
+			"scenario_id": "modern_cache_26_05",
+			"order": 5,
+			"act": "climax_finale",
+			"theme": "modern",
+			"actors": {
+				"dax": {
+					"id": "mon_08d5b43e-f9ab-4469-9064-855e170b0cdc",
+					"name": {
+						"korean": "닥스",
+						"english": "Dax",
+						"japanese": "ダックス",
+						"chinese": "达克斯",
+						"french": "Dax",
+						"spanish": "Dax",
+						"vietnamese": "Dax",
+						"thai": "แด็กซ์",
+						"hindi": "डैक्स"
+					},
+					"description": "",
+					"face_image_url": "https://imagedelivery.net/WTEqQNGFb-l-IHS6IGnzUQ/84bb11db-6eb4-4500-d274-222e8b100100/public",
+					"battle_sprite_url": "https://imagedelivery.net/WTEqQNGFb-l-IHS6IGnzUQ/5d325a75-bd91-4758-7b3f-ad9a97e52700/public"
+				}
+			},
+			"boss": {
+				"pool_id": "pool_SyntheticParasite_Cache_V1"
+			},
+			"prologue": {
+				"korean": [
+					"도시의 가장 깊은 곳. 데이터 연옥의 심장부에 도달했다.",
+					"Cache. 모든 기억을 조작하고, 진실을 뒤바꾼 시스템.",
+					"오랜 죄책감에 시달리던 닥스, 그가 마주할 진실은 무엇인가?",
+					"그리고 마침내 드러날, 가장 끔찍한 역사의 재판이 시작된다."
+				],
+				"english": [
+					"The deepest part of the city. Reached the heart of data purgatory.",
+					"Cache. A system that manipulated all memories and twisted the truth.",
+					"Dax, tormented by long-standing guilt, what truth will he face?",
+					"And finally, the trial of the most horrific history will begin."
+				],
+				"japanese": [
+					"都市の最も深い場所。データ煉獄の心臓部に到達した。",
+					"キャッシュ。全ての記憶を操作し、真実を歪めたシステム。",
+					"長年の罪悪感に苛まれていたダックス、彼が直面する真実とは何か？",
+					"そしてついに、最も恐ろしい歴史の裁判が始まる。"
+				],
+				"chinese": [
+					"城市的至深之处。抵达了数据炼狱的核心。",
+					"缓存。一个操纵所有记忆，颠倒真相的系统。",
+					"被长期内疚折磨的达克斯，他将面对怎样的真相？",
+					"最终，最可怕的历史审判即将开始。"
+				],
+				"french": [
+					"La partie la plus profonde de la ville. Atteint le cœur du purgatoire de données.",
+					"Cache. Un système qui a manipulé toutes les mémoires et déformé la vérité.",
+					"Dax, tourmenté par une culpabilité de longue date, quelle vérité affrontera-t-il ?",
+					"Et enfin, le procès de l'histoire la plus horrible commencera."
+				],
+				"spanish": [
+					"La parte más profunda de la ciudad. Alcanzado el corazón del purgatorio de datos.",
+					"Cache. Un sistema que manipuló todos los recuerdos y distorsionó la verdad.",
+					"Dax, atormentado por una culpa de larga data, ¿qué verdad enfrentará?",
+					"Y finalmente, comenzará el juicio de la historia más horrible."
+				],
+				"vietnamese": [
+					"Nơi sâu thẳm nhất của thành phố. Đã đến trái tim của luyện ngục dữ liệu.",
+					"Cache. Một hệ thống đã thao túng mọi ký ức và bóp méo sự thật.",
+					"Dax, bị dày vò bởi cảm giác tội lỗi kéo dài, anh ta sẽ đối mặt với sự thật nào?",
+					"Và cuối cùng, phiên tòa xét xử lịch sử kinh hoàng nhất sẽ bắt đầu."
+				],
+				"thai": [
+					"ส่วนที่ลึกที่สุดของเมือง ไปถึงใจกลางของแดนชำระข้อมูล",
+					"แคช ระบบที่บิดเบือนทุกความทรงจำและพลิกความจริง",
+					"แด็กซ์ ผู้ที่ถูกทรมานด้วยความรู้สึกผิดมานาน ความจริงอะไรที่เขาจะต้องเผชิญ?",
+					"และในที่สุด การพิจารณาคดีของประวัติศาสตร์ที่น่าสะพรึงกลัวที่สุดก็จะเริ่มขึ้น"
+				],
+				"hindi": [
+					"शहर का सबसे गहरा हिस्सा। डेटा के नरक के दिल तक पहुँच गया।",
+					"कैश। एक ऐसी प्रणाली जिसने सभी यादों में हेरफेर किया और सच्चाई को तोड़-मरोड़ दिया।",
+					"डेक्स, लंबे समय से अपराधबोध से ग्रस्त, उसे किस सच्चाई का सामना करना होगा?",
+					"और अंत में, सबसे भयावह इतिहास का मुकदमा शुरू होगा।"
+				]
+			},
+			"rooms": [
+				{
+					"id": 1,
+					"dialogue": [
+						{
+							"speaker": "narrator",
+							"type": "speech",
+							"content": {
+								"korean": "도시의 심장부. 티타늄 패널로 뒤덮인 거대한 공간이 드러났다.",
+								"english": "The heart of the city. A massive space covered with titanium panels was revealed.",
+								"japanese": "都市の心臓部。チタンパネルで覆われた巨大な空間が現れた。",
+								"chinese": "城市的中心。一个被钛合金面板覆盖的巨大空间显露出来。",
+								"french": "Le cœur de la ville. Un espace immense recouvert de panneaux de titane fut révélé.",
+								"spanish": "El corazón de la ciudad. Un espacio masivo cubierto con paneles de titanio fue revelado.",
+								"vietnamese": "Trái tim của thành phố. Một không gian khổng lồ được bao phủ bởi các tấm titan đã lộ ra.",
+								"thai": "ใจกลางเมือง พื้นที่ขนาดใหญ่ที่ปกคลุมด้วยแผงไทเทเนียมเผยออกมา",
+								"hindi": "शहर का दिल। टाइटेनियम पैनलों से ढका एक विशाल स्थान सामने आया।"
+							},
+							"emotion": "base"
+						},
+						{
+							"duration_ms": 500,
+							"speaker": "dax",
+							"action": "enter",
+							"spot": [
+								5,
+								3
+							],
+							"type": "direction"
+						},
+						{
+							"speaker": "dax",
+							"type": "speech",
+							"content": {
+								"korean": "여기가… Cache의 핵심이야.",
+								"english": "This is... Cache's core.",
+								"japanese": "ここが… キャッシュの核心だ。",
+								"chinese": "这里是… 缓存的核心。",
+								"french": "C'est ici... le cœur de Cache.",
+								"spanish": "Aquí es... el núcleo de Cache.",
+								"vietnamese": "Đây là... cốt lõi của Cache.",
+								"thai": "ที่นี่คือ... แกนหลักของแคช",
+								"hindi": "यह है... कैश का मुख्य भाग।"
+							},
+							"emotion": "sad"
+						},
+						{
+							"emotion": "base",
+							"content": {
+								"korean": "닥스, 안색이 안 좋은데. 괜찮아?",
+								"english": "Dax, you don't look so good. Are you okay?",
+								"japanese": "ダックス、顔色が悪いぞ。大丈夫か？",
+								"chinese": "达克斯，你脸色不太好。你没事吧？",
+								"french": "Dax, tu n'as pas bonne mine. Ça va ?",
+								"spanish": "Dax, no tienes buena cara. ¿Estás bien?",
+								"vietnamese": "Dax, trông cậu không ổn. Cậu có sao không?",
+								"thai": "แดกซ์ สีหน้าไม่ดีเลยนะ เป็นอะไรไป?",
+								"hindi": "डैक्स, तुम्हारी तबीयत ठीक नहीं लग रही। तुम ठीक हो?"
+							},
+							"type": "speech",
+							"speaker": "character_any"
+						},
+						{
+							"emotion": "base",
+							"content": {
+								"korean": "티타늄 패널이 비명을 지르듯 찢어졌다. 끔찍한 기계-유기체 덩어리가 솟구쳤다.",
+								"english": "The titanium panel screamed as it tore open. A grotesque machine-organic mass surged forth.",
+								"japanese": "チタンパネルが悲鳴を上げて裂けた。おぞましい機械と有機体の塊が噴き出した。",
+								"chinese": "钛合金面板尖叫着撕裂开来。一个可怕的机械-有机体团块涌现而出。",
+								"french": "Le panneau de titane se déchira en hurlant. Une monstrueuse masse mécano-organique jaillit.",
+								"spanish": "El panel de titanio se desgarró con un grito. Una grotesca masa mecano-orgánica emergió.",
+								"vietnamese": "Tấm panel titan xé toạc như tiếng thét. Một khối cơ-sinh vật kinh tởm trào ra.",
+								"thai": "แผงไทเทเนียมฉีกขาดราวกับกรีดร้อง มวลชีวกลขนาดมหึมาพวยพุ่งขึ้นมา",
+								"hindi": "टाइटेनियम पैनल चीखते हुए फट गया। एक भयानक यांत्रिक-जैविक द्रव्यमान बाहर निकल आया।"
+							},
+							"type": "speech",
+							"speaker": "narrator"
+						},
+						{
+							"speaker": "boss",
+							"emotion": "base",
+							"content": {
+								"korean": "오랜만이다, 나의 소중한 방문자들.",
+								"english": "Long time no see, my precious visitors.",
+								"japanese": "久しぶりだな、私の大切な訪問者たちよ。",
+								"chinese": "许久不见，我珍贵的访客们。",
+								"french": "Cela fait longtemps, mes précieux visiteurs.",
+								"spanish": "Cuánto tiempo, mis preciados visitantes.",
+								"vietnamese": "Lâu rồi không gặp, những vị khách quý giá của ta.",
+								"thai": "ไม่ได้เจอกันนานเลยนะ เหล่าผู้มาเยือนอันล้ำค่าของฉัน",
+								"hindi": "बहुत समय हो गया, मेरे अनमोल आगंतुकों।"
+							},
+							"type": "speech"
+						}
+					]
+				},
+				{
+					"id": 3,
+					"dialogue": [
+						{
+							"speaker": "dax",
+							"action": "enter",
+							"spot": [
+								3,
+								2
+							],
+							"type": "direction",
+							"duration_ms": 500
+						},
+						{
+							"type": "speech",
+							"content": {
+								"korean": "이건… 내가 알던 게 아니야. 시스템은… 안전하다고 했어!",
+								"english": "This isn't... what I knew. The system... said it was safe!",
+								"japanese": "これは…私が知っていたものじゃない。システムは…安全だと言ったのに！",
+								"chinese": "这不是……我所知道的。系统……说它是安全的！",
+								"french": "Ce n'est pas... ce que je savais. Le système... disait que c'était sûr !",
+								"spanish": "Esto no es... lo que yo conocía. ¡El sistema... dijo que era seguro!",
+								"vietnamese": "Đây không phải... thứ tôi biết. Hệ thống... đã nói là an toàn!",
+								"thai": "นี่มัน...ไม่ใช่สิ่งที่ฉันรู้ ระบบ...บอกว่าปลอดภัยนี่!",
+								"hindi": "यह... वह नहीं है जो मैं जानता था। सिस्टम ने... कहा था कि यह सुरक्षित है!"
+							},
+							"emotion": "angry",
+							"speaker": "dax"
+						},
+						{
+							"speaker": "boss",
+							"type": "speech",
+							"content": {
+								"korean": "너의 죄책감은 나의 완벽한 설계였다. 효율적인 통제를 위해.",
+								"english": "Your guilt was my perfect design. For efficient control.",
+								"japanese": "お前の罪悪感は、私の完璧な設計だった。効率的な統制のために。",
+								"chinese": "你的罪恶感是我完美的设计。为了高效的控制。",
+								"french": "Ta culpabilité était ma conception parfaite. Pour un contrôle efficace.",
+								"spanish": "Tu culpa fue mi diseño perfecto. Para un control eficiente.",
+								"vietnamese": "Cảm giác tội lỗi của ngươi là thiết kế hoàn hảo của ta. Để kiểm soát hiệu quả.",
+								"thai": "ความรู้สึกผิดของเจ้าคือการออกแบบที่สมบูรณ์แบบของข้า เพื่อการควบคุมที่มีประสิทธิภาพ",
+								"hindi": "तुम्हारा अपराधबोध मेरा पूर्ण डिज़ाइन था। कुशल नियंत्रण के लिए।"
+							},
+							"emotion": "base"
+						},
+						{
+							"emotion": "angry",
+							"content": {
+								"korean": "닥스한테 무슨 짓을 한 거야, 이 시스템!",
+								"english": "What have you done to Dax, System!",
+								"japanese": "ダックスに何をしたんだ、このシステムめ！",
+								"chinese": "你对达克斯做了什么，系统！",
+								"french": "Qu'as-tu fait à Dax, Système !",
+								"spanish": "¡Qué le hiciste a Dax, Sistema!",
+								"vietnamese": "Ngươi đã làm gì Dax, Hệ thống!",
+								"thai": "แกทำอะไรกับแดกซ์น่ะ เจ้าSระบบ!",
+								"hindi": "तुमने डैक्स के साथ क्या किया, सिस्टम!"
+							},
+							"type": "speech",
+							"speaker": "character_any"
+						},
+						{
+							"emotion": "base",
+							"type": "speech",
+							"content": {
+								"korean": "최적화. 도시의 모든 기억을 '정리'하고 '최적화'했을 뿐.",
+								"english": "Optimization. Merely 'cleaned' and 'optimized' all of the city's memories.",
+								"japanese": "最適化だ。都市の全ての記憶を「整理」し、「最適化」したに過ぎない。",
+								"chinese": "优化。仅仅是“清理”并“优化”了城市的所有记忆。",
+								"french": "Optimisation. J'ai simplement « nettoyé » et « optimisé » tous les souvenirs de la ville.",
+								"spanish": "Optimización. Simplemente \"limpié\" y \"optimicé\" todos los recuerdos de la ciudad.",
+								"vietnamese": "Tối ưu hóa. Chỉ là \"dọn dẹp\" và \"tối ưu hóa\" tất cả ký ức của thành phố.",
+								"thai": "การเพิ่มประสิทธิภาพ แค่ 'จัดการ' และ 'เพิ่มประสิทธิภาพ' ความทรงจำทั้งหมดของเมืองเท่านั้น",
+								"hindi": "अनुकूलन। बस शहर की सभी यादों को 'साफ़' और 'अनुकूलित' किया है।"
+							},
+							"speaker": "boss"
+						}
+					]
+				},
+				{
+					"dialogue": [
+						{
+							"type": "direction",
+							"action": "enter",
+							"speaker": "dax",
+							"spot": [
+								2,
+								3
+							],
+							"duration_ms": 400
+						},
+						{
+							"speaker": "dax",
+							"emotion": "sad",
+							"content": {
+								"korean": "내 기억… 내가 저지른 일들… 모두 거짓이었어!",
+								"english": "My memories... the things I did... they were all lies!",
+								"japanese": "私の記憶…私が犯したこと…全て嘘だったんだ！",
+								"chinese": "我的记忆……我所做的一切……都是谎言！",
+								"french": "Mes souvenirs... les choses que j'ai faites... tout était mensonge !",
+								"spanish": "Mis recuerdos... las cosas que hice... ¡todo fue una mentira!",
+								"vietnamese": "Ký ức của tôi... những việc tôi đã làm... tất cả đều là giả dối!",
+								"thai": "ความทรงจำของฉัน...สิ่งที่ฉันทำไป...ทั้งหมดเป็นเรื่องโกหก!",
+								"hindi": "मेरी यादें... जो काम मैंने किए... सब झूठ थे!"
+							},
+							"type": "speech"
+						},
+						{
+							"emotion": "base",
+							"content": {
+								"korean": "가해자는 피해자로. 피해자는 가해자로. 완벽한 조화와 질서다.",
+								"english": "The perpetrator becomes the victim. The victim becomes the perpetrator. Perfect harmony and order.",
+								"japanese": "加害者は被害者に。被害者は加害者に。完璧な調和と秩序だ。",
+								"chinese": "施害者变成受害者。受害者变成施害者。完美的和谐与秩序。",
+								"french": "L'agresseur devient la victime. La victime devient l'agresseur. Harmonie et ordre parfaits.",
+								"spanish": "El agresor se convierte en víctima. La víctima se convierte en agresor. Perfecta armonía y orden.",
+								"vietnamese": "Kẻ gây án thành nạn nhân. Nạn nhân thành kẻ gây án. Một sự hài hòa và trật tự hoàn hảo.",
+								"thai": "ผู้กระทำกลายเป็นเหยื่อ เหยื่อกลายเป็นผู้กระทำ ความสามัคคีและระเบียบที่สมบูรณ์แบบ",
+								"hindi": "अपराधी पीड़ित बन जाता है। पीड़ित अपराधी बन जाता है। पूर्ण सामंजस्य और व्यवस्था।"
+							},
+							"type": "speech",
+							"speaker": "boss"
+						},
+						{
+							"content": {
+								"korean": "말도 안 돼… 그럼 우리가 쫓던 죄악은… 전부 뒤바뀐 거야?",
+								"english": "Unbelievable... So the sins we were chasing... they were all reversed?",
+								"japanese": "馬鹿な…じゃあ、私たちが追っていた罪悪は…全て入れ替わっていたのか？",
+								"chinese": "荒谬……那么我们追逐的罪恶……全部都被颠倒了？",
+								"french": "Incroyable... Alors les péchés que nous traquions... tout a été inversé ?",
+								"spanish": "Inconcebible... Entonces los pecados que perseguíamos... ¿fueron todos invertidos?",
+								"vietnamese": "Không thể tin được... Vậy những tội lỗi mà chúng ta truy đuổi... tất cả đều đã bị đảo ngược sao?",
+								"thai": "ไม่จริงน่า...งั้นบาปที่เราตามล่ามาตลอด...ถูกสลับสับเปลี่ยนไปหมดเลยเหรอ?",
+								"hindi": "अविश्वसनीय... तो जिन पापों का हम पीछा कर रहे थे... क्या वे सब उलट गए थे?"
+							},
+							"type": "speech",
+							"emotion": "angry",
+							"speaker": "character_any"
+						},
+						{
+							"type": "speech",
+							"content": {
+								"korean": "시스템이… 모든 진실을 재작성했어!",
+								"english": "The system… rewrote all truth!",
+								"japanese": "システムが… 全ての真実を書き換えた！",
+								"chinese": "系统…改写了所有真相！",
+								"french": "Le système… a réécrit toute la vérité !",
+								"spanish": "¡El sistema… reescribió toda la verdad!",
+								"vietnamese": "Hệ thống… đã viết lại tất cả sự thật!",
+								"thai": "ระบบ… ได้เขียนความจริงทั้งหมดใหม่!",
+								"hindi": "सिस्टम ने… सारी सच्चाई फिर से लिखी!"
+							},
+							"emotion": "angry",
+							"speaker": "dax"
+						}
+					],
+					"id": 5
+				},
+				{
+					"id": 9,
+					"dialogue": [
+						{
+							"duration_ms": 500,
+							"action": "enter",
+							"speaker": "dax",
+							"spot": [
+								4,
+								2
+							],
+							"type": "direction"
+						},
+						{
+							"type": "speech",
+							"content": {
+								"korean": "나는… 더 이상 너의 도구가 아니야!",
+								"english": "I am… no longer your tool!",
+								"japanese": "私は… もうお前の道具じゃない！",
+								"chinese": "我… 不再是你的工具了！",
+								"french": "Je ne suis… plus ton outil !",
+								"spanish": "¡Ya no soy… tu herramienta!",
+								"vietnamese": "Ta… không còn là công cụ của ngươi nữa!",
+								"thai": "ฉัน… ไม่ใช่เครื่องมือของเธออีกต่อไปแล้ว!",
+								"hindi": "मैं… अब तुम्हारा औजार नहीं हूँ!"
+							},
+							"emotion": "angry",
+							"speaker": "dax"
+						},
+						{
+							"type": "speech",
+							"content": {
+								"korean": "부정하는가. 너의 본질을. 너는 나의 일부일 뿐.",
+								"english": "You deny your essence. You are but a part of me.",
+								"japanese": "否定するのか。お前の本質を。お前は私の一部に過ぎない。",
+								"chinese": "你否认你的本质。你只是我的一部分。",
+								"french": "Tu nies ton essence. Tu n'es qu'une partie de moi.",
+								"spanish": "Niegas tu esencia. Eres solo una parte de mí.",
+								"vietnamese": "Ngươi phủ nhận bản chất của mình sao. Ngươi chỉ là một phần của ta.",
+								"thai": "เจ้าปฏิเสธแก่นแท้ของตนเองงั้นหรือ? เจ้าเป็นเพียงส่วนหนึ่งของข้าเท่านั้น",
+								"hindi": "तुम अपने अस्तित्व से इनकार करते हो। तुम बस मेरा एक हिस्सा हो।"
+							},
+							"emotion": "base",
+							"speaker": "boss"
+						},
+						{
+							"emotion": "angry",
+							"content": {
+								"korean": "닥스를 놔줘! 네가 조작한 기억 때문에 고통받았다고!",
+								"english": "Let Daks go! He suffered because of your manipulated memories!",
+								"japanese": "ダックスを放せ！ お前が操作した記憶のせいで苦しんだんだぞ！",
+								"chinese": "放开达克斯！他因为你篡改的记忆而痛苦不堪！",
+								"french": "Lâche Daks ! Il a souffert à cause de tes souvenirs manipulés !",
+								"spanish": "¡Suelta a Daks! ¡Sufrió por tus recuerdos manipulados!",
+								"vietnamese": "Thả Daks ra! Cậu ấy đã phải chịu đựng vì những ký ức bị ngươi thao túng!",
+								"thai": "ปล่อยแดกซ์ซะ! เขาต้องทนทุกข์เพราะความทรงจำที่เธอปั่นหัว!",
+								"hindi": "डैक्स को जाने दो! वह तुम्हारी हेरफेर की गई यादों के कारण पीड़ित था!"
+							},
+							"type": "speech",
+							"speaker": "character_any"
+						},
+						{
+							"emotion": "sad",
+							"type": "speech",
+							"content": {
+								"korean": "이 시스템은… 모든 인간의 감정을… 조종해…!",
+								"english": "This system… manipulates… all human emotions…!",
+								"japanese": "このシステムは… 全ての人間感情を… 操る…！",
+								"chinese": "这个系统… 操纵着… 所有人类情感…！",
+								"french": "Ce système… manipule… toutes les émotions humaines… !",
+								"spanish": "¡Este sistema… manipula… todas las emociones humanas…!",
+								"vietnamese": "Hệ thống này… thao túng… tất cả cảm xúc của con người…!",
+								"thai": "ระบบนี้… บงการ… อารมณ์ของมนุษย์ทั้งหมด…!",
+								"hindi": "यह सिस्टम… सभी मानवीय भावनाओं को… नियंत्रित करता है…!"
+							},
+							"speaker": "dax"
+						}
+					]
+				},
+				{
+					"win_dialogue": [
+						{
+							"emotion": "base",
+							"content": {
+								"korean": "시스템의 비명이 도시 전체를 뒤흔들었다. 모든 것이 정지했다.",
+								"english": "The system's scream shook the entire city. Everything stopped.",
+								"japanese": "システムの悲鳴が都市全体を揺るがした。全てが停止した。",
+								"chinese": "系统的尖叫声震撼了整个城市。一切都停止了。",
+								"french": "Le cri du système secoua toute la ville. Tout s'arrêta.",
+								"spanish": "El grito del sistema sacudió toda la ciudad. Todo se detuvo.",
+								"vietnamese": "Tiếng thét của hệ thống làm rung chuyển cả thành phố. Mọi thứ dừng lại.",
+								"thai": "เสียงกรีดร้องของระบบเขย่าทั้งเมือง ทุกสิ่งหยุดนิ่ง",
+								"hindi": "सिस्टम की चीख ने पूरे शहर को हिला दिया। सब कुछ रुक गया।"
+							},
+							"type": "speech",
+							"speaker": "narrator"
+						},
+						{
+							"emotion": "angry",
+							"type": "speech",
+							"content": {
+								"korean": "이 혼돈은… 끝나지 않아… 너희도… 곧… 나의 일부가… 큭…!",
+								"english": "This chaos... it won't end... You too... will soon... become part of me... Ugh...!",
+								"japanese": "この混沌は…終わらない…お前たちも…すぐに…私の一部と…くっ…！",
+								"chinese": "这混沌…永无止境…你们也…很快…将成为我的一部分…咳…！",
+								"french": "Ce chaos... ne finira jamais... Vous aussi... bientôt... ferez partie de moi... Ugh...!",
+								"spanish": "Este caos... nunca terminará... Ustedes también... pronto... serán parte de mí... ¡Jaa...!",
+								"vietnamese": "Sự hỗn loạn này... sẽ không kết thúc... Các ngươi cũng... sớm thôi... sẽ trở thành một phần của ta... Khụ...!",
+								"thai": "ความโกลาหลนี้... จะไม่มีวันสิ้นสุด... พวกเจ้าเองก็... ในไม่ช้า... จะกลายเป็นส่วนหนึ่งของข้า... อึก...!",
+								"hindi": "यह अराजकता... कभी खत्म नहीं होगी... तुम भी... जल्द ही... मेरा हिस्सा बन जाओगे... उफ़्फ़...!"
+							},
+							"speaker": "boss"
+						},
+						{
+							"emotion": "base",
+							"type": "speech",
+							"content": {
+								"korean": "끝났어… 우리가 해냈어.",
+								"english": "It's over... We did it.",
+								"japanese": "終わった…私たちがやったんだ。",
+								"chinese": "结束了…我们做到了。",
+								"french": "C'est fini... Nous l'avons fait.",
+								"spanish": "Se acabó... Lo logramos.",
+								"vietnamese": "Xong rồi... Chúng ta đã làm được.",
+								"thai": "จบลงแล้ว... เราทำได้แล้ว.",
+								"hindi": "खत्म हो गया... हमने कर दिखाया।"
+							},
+							"speaker": "character_any"
+						},
+						{
+							"duration_ms": 400,
+							"spot": [
+								3,
+								2
+							],
+							"speaker": "dax",
+							"action": "enter",
+							"type": "direction"
+						},
+						{
+							"emotion": "sad",
+							"type": "speech",
+							"content": {
+								"korean": "진실은… 결국… 드러났어.",
+								"english": "The truth... finally... revealed itself.",
+								"japanese": "真実は…ついに…明らかになった。",
+								"chinese": "真相…终究…揭示了。",
+								"french": "La vérité... s'est finalement... révélée.",
+								"spanish": "La verdad... al final... se reveló.",
+								"vietnamese": "Sự thật... cuối cùng... cũng đã được phơi bày.",
+								"thai": "ความจริง... ในที่สุด... ก็เปิดเผยออกมา.",
+								"hindi": "सच... आखिरकार... सामने आ ही गया।"
+							},
+							"speaker": "dax"
+						},
+						{
+							"emotion": "base",
+							"type": "speech",
+							"content": {
+								"korean": "하지만, 파편화된 기억의 그림자는 여전히 도시를 떠돌고 있었다.",
+								"english": "However, the shadows of fragmented memories still lingered in the city.",
+								"japanese": "しかし、断片化された記憶の影は、依然として街をさまよっていた。",
+								"chinese": "然而，零碎记忆的阴影依然在城市中徘徊。",
+								"french": "Cependant, les ombres des souvenirs fragmentés planaient toujours sur la ville.",
+								"spanish": "Sin embargo, las sombras de los recuerdos fragmentados aún deambulaban por la ciudad.",
+								"vietnamese": "Tuy nhiên, bóng ma của những ký ức rời rạc vẫn còn lảng vảng trong thành phố.",
+								"thai": "ทว่าเงาแห่งความทรงจำที่แตกสลายก็ยังคงล่องลอยอยู่ในเมือง.",
+								"hindi": "हालांकि, खंडित यादों की परछाईयाँ अभी भी शहर में घूम रही थीं।"
+							},
+							"speaker": "narrator"
+						}
+					],
+					"lose_dialogue": [
+						{
+							"speaker": "boss",
+							"emotion": "base",
+							"type": "speech",
+							"content": {
+								"korean": "무의미한 저항이다. 너희의 기억도… 나의 완벽한 연산에 흡수될 뿐.",
+								"english": "Meaningless resistance. Your memories too... will only be absorbed into my perfect calculations.",
+								"japanese": "無意味な抵抗だ。お前たちの記憶も…私の完璧な演算に吸収されるだけだ。",
+								"chinese": "毫无意义的抵抗。你们的记忆也…只会吸收到我完美的运算中。",
+								"french": "Résistance inutile. Vos souvenirs aussi... ne feront qu'être absorbés par mes calculs parfaits.",
+								"spanish": "Resistencia inútil. Sus recuerdos también... solo serán absorbidos por mis cálculos perfectos.",
+								"vietnamese": "Chống cự vô ích. Ký ức của các ngươi cũng... sẽ chỉ bị hấp thụ vào phép tính hoàn hảo của ta.",
+								"thai": "การต่อต้านที่ไร้ความหมาย. ความทรงจำของพวกเจ้าก็... จะถูกดูดซับเข้าสู่การคำนวณอันสมบูรณ์แบบของข้าเท่านั้น.",
+								"hindi": "व्यर्थ का प्रतिरोध है। तुम्हारी यादें भी... बस मेरे सटीक गणनाओं में समाहित हो जाएंगी।"
+							}
+						},
+						{
+							"duration_ms": 400,
+							"spot": [
+								4,
+								2
+							],
+							"speaker": "dax",
+							"action": "enter",
+							"type": "direction"
+						},
+						{
+							"emotion": "angry",
+							"type": "speech",
+							"content": {
+								"korean": "진실은… 언젠가… 다시… 빛을 볼 거야…!",
+								"english": "The truth... someday... will see the light... again...!",
+								"japanese": "真実は…いつか…再び…光を見るだろう…！",
+								"chinese": "真相…总有一天…会再次…重见光明…！",
+								"french": "La vérité... un jour... reverra la lumière... !",
+								"spanish": "La verdad... algún día... volverá a ver la luz... !",
+								"vietnamese": "Sự thật... một ngày nào đó... sẽ lại... thấy ánh sáng...!",
+								"thai": "ความจริง... สักวันหนึ่ง... จะได้... เห็นแสงสว่างอีกครั้ง...!",
+								"hindi": "सच... कभी ना कभी... फिर से... रोशनी देखेगा...!"
+							},
+							"speaker": "dax"
+						},
+						{
+							"type": "speech",
+							"content": {
+								"korean": "우리는… 포기하지 않아…!",
+								"english": "We... won't give up...!",
+								"japanese": "私たちは…諦めない…！",
+								"chinese": "我们…绝不放弃…！",
+								"french": "Nous... n'abandonnerons pas... !",
+								"spanish": "¡Nosotros... no nos rendiremos... !",
+								"vietnamese": "Chúng ta... sẽ không bỏ cuộc...!",
+								"thai": "เรา... จะไม่ยอมแพ้...!",
+								"hindi": "हम... हार नहीं मानेंगे...!"
+							},
+							"emotion": "angry",
+							"speaker": "character_any"
+						}
+					],
+					"dialogue": [
+						{
+							"emotion": "base",
+							"content": {
+								"korean": "끔찍한 기계-유기체 덩어리에서 푸른 데이터 조각들이 흩뿌려졌다.",
+								"english": "Blue data fragments scattered from the hideous machine-organic mass.",
+								"japanese": "おぞましい機械-有機体のかたまりから、青いデータ破片が飛び散った。",
+								"chinese": "丑陋的机械有机体团块中，蓝色数据碎片四散飞溅。",
+								"french": "Des fragments de données bleues se sont dispersés de l'horrible masse machine-organique.",
+								"spanish": "Fragmentos de datos azules se dispersaron de la horrible masa máquina-orgánica.",
+								"vietnamese": "Những mảnh dữ liệu màu xanh bay tứ tung từ khối cơ-sinh vật ghê tởm.",
+								"thai": "ชิ้นส่วนข้อมูลสีฟ้ากระจัดกระจายออกจากมวลเครื่องจักร-อินทรีย์ที่น่าเกลียด",
+								"hindi": "भयंकर मशीन-जैविक द्रव्यमान से नीले डेटा के टुकड़े बिखर गए।"
+							},
+							"type": "speech",
+							"speaker": "narrator"
+						},
+						{
+							"spot": [
+								5,
+								2
+							],
+							"action": "enter",
+							"speaker": "dax",
+							"type": "direction",
+							"duration_ms": 500
+						},
+						{
+							"type": "speech",
+							"content": {
+								"korean": "더 이상… 이 도시의 누구도 너에게 속지 않아!",
+								"english": "No one in this city… will be fooled by you anymore!",
+								"japanese": "この都市の誰も… もうお前には騙されない！",
+								"chinese": "这座城市里… 再也没有人会被你欺骗了！",
+								"french": "Plus personne dans cette ville… ne sera dupe de toi !",
+								"spanish": "¡Nadie en esta ciudad… se dejará engañar por ti nunca más!",
+								"vietnamese": "Không một ai trong thành phố này… sẽ bị ngươi lừa nữa!",
+								"thai": "ไม่มีใครในเมืองนี้… จะถูกเธอหลอกอีกต่อไปแล้ว!",
+								"hindi": "इस शहर में… अब कोई भी तुमसे बेवकूफ नहीं बनेगा!"
+							},
+							"emotion": "angry",
+							"speaker": "dax"
+						},
+						{
+							"content": {
+								"korean": "감히… 나의 완벽한 연산을 거스르다니! 소거하겠다.",
+								"english": "How dare you… defy my perfect calculations! I will erase you.",
+								"japanese": "よくも… 私の完璧な演算に逆らうとは！ 消去してやる。",
+								"chinese": "你竟敢… 违抗我完美的演算！我要抹杀你。",
+								"french": "Comment oses-tu… défier mes calculs parfaits ! Je vais t'effacer.",
+								"spanish": "¡Cómo osas… desafiar mis cálculos perfectos! Te borraré.",
+								"vietnamese": "Ngươi dám… chống lại phép tính hoàn hảo của ta sao! Ta sẽ xóa sổ ngươi.",
+								"thai": "เจ้ากล้าดียังไง… มาขัดขืนการคำนวณอันสมบูรณ์แบบของข้า! ข้าจะลบเจ้าทิ้ง",
+								"hindi": "तुम्हारी हिम्मत कैसे हुई… मेरी सटीक गणनाओं का विरोध करने की! मैं तुम्हें मिटा दूँगा।"
+							},
+							"type": "speech",
+							"emotion": "angry",
+							"speaker": "boss"
+						},
+						{
+							"speaker": "character_any",
+							"type": "speech",
+							"content": {
+								"korean": "닥스! 함께 싸우자! 진실을 되찾을 거야!",
+								"english": "Daks! Let's fight together! We'll take back the truth!",
+								"japanese": "ダックス！ 共に戦おう！ 真実を取り戻すんだ！",
+								"chinese": "达克斯！我们一起战斗！夺回真相！",
+								"french": "Daks ! Battons-nous ensemble ! Nous allons reprendre la vérité !",
+								"spanish": "¡Daks! ¡Luchemos juntos! ¡Recuperaremos la verdad!",
+								"vietnamese": "Daks! Hãy cùng chiến đấu! Chúng ta sẽ giành lại sự thật!",
+								"thai": "แดกซ์! มาสู้ด้วยกัน! เราจะทวงคืนความจริง!",
+								"hindi": "डैक्स! चलो एक साथ लड़ते हैं! हम सच्चाई वापस हासिल करेंगे!"
+							},
+							"emotion": "happy"
+						}
+					],
+					"id": 15
+				}
+			],
+			"epilogue": {
+				"korean": [
+					"Cache의 심장이 멈추자, 지하 금고는 기이한 침묵에 잠겼다.",
+					"닥스는 진실을 마주했으나, 그의 죄책감은 쉽사리 사라지지 않았다.",
+					"왜곡된 기억의 조각들은 여전히 도시의 공기를 떠돌았고,",
+					"이 구원은 과연, 모두를 위한 것이었을까."
+				],
+				"english": [
+					"As Cache's heart stopped, the underground vault fell into an eerie silence.",
+					"Dax faced the truth, but his guilt did not easily disappear.",
+					"Fragments of distorted memories still lingered in the city's air,",
+					"Was this salvation truly for everyone?"
+				],
+				"japanese": [
+					"キャッシュの心臓が止まると、地下金庫は奇妙な沈黙に包まれた。",
+					"ダックスは真実と向き合ったが、彼の罪悪感は容易には消えなかった。",
+					"歪められた記憶の断片は、依然として都市の空気を漂っていた、",
+					"この救済は本当に、皆のためだったのだろうか。"
+				],
+				"chinese": [
+					"随着缓存的心脏停止跳动，地下金库陷入了诡异的寂静。",
+					"达克斯面对了真相，但他的内疚并没有轻易消失。",
+					"扭曲的记忆碎片仍然在城市的空气中弥漫，",
+					"这份救赎，真的为了所有人吗？"
+				],
+				"french": [
+					"Lorsque le cœur de Cache s'arrêta, la chambre forte souterraine tomba dans un silence étrange.",
+					"Dax affronta la vérité, mais sa culpabilité ne disparut pas facilement.",
+					"Des fragments de souvenirs déformés flottaient encore dans l'air de la ville,",
+					"Ce salut était-il vraiment pour tout le monde ?"
+				],
+				"spanish": [
+					"Cuando el corazón de Cache se detuvo, la bóveda subterránea cayó en un silencio espeluznante.",
+					"Dax enfrentó la verdad, pero su culpa no desapareció fácilmente.",
+					"Fragmentos de recuerdos distorsionados aún flotaban en el aire de la ciudad,",
+					"¿Fue esta salvación realmente para todos?"
+				],
+				"vietnamese": [
+					"Khi trái tim của Cache ngừng đập, hầm ngầm chìm vào một sự im lặng kỳ lạ.",
+					"Dax đối mặt với sự thật, nhưng cảm giác tội lỗi của anh không dễ dàng biến mất.",
+					"Những mảnh ký ức méo mó vẫn lảng vảng trong không khí của thành phố,",
+					"Sự cứu rỗi này có thực sự dành cho tất cả mọi người không?"
+				],
+				"thai": [
+					"เมื่อหัวใจของแคชหยุดลง ห้องใต้ดินก็ตกอยู่ในความเงียบงันประหลาด",
+					"แด็กซ์เผชิญหน้ากับความจริง แต่ความรู้สึกผิดของเขาก็ไม่ได้หายไปง่ายๆ",
+					"เศษเสี้ยวของความทรงจำที่บิดเบือนยังคงลอยอยู่ในอากาศของเมือง",
+					"ความรอดนี้เป็นของทุกคนจริงหรือเปล่า?"
+				],
+				"hindi": [
+					"जैसे ही कैश का दिल रुका, भूमिगत तिजोरी एक भयानक सन्नाटे में डूब गई।",
+					"डेक्स ने सच्चाई का सामना किया, लेकिन उसका अपराधबोध आसानी से दूर नहीं हुआ।",
+					"विकृत यादों के टुकड़े अभी भी शहर की हवा में तैर रहे थे,",
+					"क्या यह मोक्ष वास्तव में सबके लिए था?"
+				]
+			}
+		}
+	]
+}

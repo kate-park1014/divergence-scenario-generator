@@ -1,0 +1,3222 @@
+{
+	"chapter_order": 51,
+	"difficulty_level": 51,
+	"chapter_name": {
+		"hindi": "हिम मकड़ी",
+		"chinese": "冰蛛之真相",
+		"french": "Vérité Givre",
+		"korean": "서리 거미 진실",
+		"japanese": "凍結蜘蛛真実",
+		"spanish": "Araña Hielo",
+		"thai": "ความจริงใยแม",
+		"english": "Frost Spider",
+		"vietnamese": "Sự Thật Nhện"
+	},
+	"scenarios": [
+		{
+			"scenario_id": "snowy_weaverfrost_50_01",
+			"order": 1,
+			"act": "intro",
+			"theme": "snowy",
+			"actors": {
+				"inka": {
+					"id": "mon_583e945a-1e2f-428b-a251-b428f25b4052",
+					"name": {
+						"korean": "인카",
+						"english": "Inka",
+						"japanese": "インカ",
+						"chinese": "因卡",
+						"french": "Inka",
+						"spanish": "Inka",
+						"vietnamese": "Inka",
+						"thai": "อินคา",
+						"hindi": "इंंका"
+					},
+					"description": "",
+					"face_image_url": "https://imagedelivery.net/WTEqQNGFb-l-IHS6IGnzUQ/97f4545b-2e8a-4688-3e4e-b34bb246dd00/public",
+					"battle_sprite_url": "https://imagedelivery.net/WTEqQNGFb-l-IHS6IGnzUQ/f27763ba-2358-4fd3-c813-0f0b59dcac00/public"
+				}
+			},
+			"boss": {
+				"pool_id": "random_boss"
+			},
+			"rooms": [
+				{
+					"id": 1,
+					"dialogue": [
+						{
+							"speaker": "narrator",
+							"type": "speech",
+							"content": {
+								"korean": "설원 마을에 불길한 그림자가 드리웠다. 사라지는 사람들에 대한 공포가 감돌았다.",
+								"english": "An ominous shadow fell over the snowfield village. Fear of disappearing people lingered.",
+								"japanese": "雪原の村に不吉な影が差した。人々が消えることへの恐怖が漂っていた。",
+								"chinese": "不祥的阴影笼罩着雪原村。人们对消失的恐惧挥之不去。",
+								"french": "Une ombre sinistre planait sur le village enneigé. La peur des disparitions persistait.",
+								"spanish": "Una sombra ominosa se cernió sobre el pueblo nevado. El miedo a las desapariciones persistía.",
+								"vietnamese": "Một bóng đen đáng sợ bao trùm làng tuyết. Nỗi sợ về những người biến mất cứ đeo bám.",
+								"thai": "เงาร้ายปกคลุมหมู่บ้านหิมะ ความกลัวผู้คนที่หายตัวไปวนเวียนอยู่",
+								"hindi": "बर्फीले गाँव पर एक अशुभ छाया मंडरा रही थी। गायब होते लोगों का डर छाया हुआ था।"
+							},
+							"emotion": "base"
+						},
+						{
+							"emotion": "sad",
+							"content": {
+								"korean": "또 사라졌어? 대체 몇 명째야?",
+								"english": "Disappeared again? How many is that now?",
+								"japanese": "また消えたの？一体何人目なの？",
+								"chinese": "又消失了？这已经是第几个了？",
+								"french": "Encore disparu ? C'est combien de personnes maintenant ?",
+								"spanish": "¿Desapareció de nuevo? ¿Cuántos van ya?",
+								"vietnamese": "Lại biến mất ư? Rốt cuộc là bao nhiêu người rồi?",
+								"thai": "หายไปอีกแล้วเหรอ? นี่มันคนที่เท่าไหร่แล้วเนี่ย?",
+								"hindi": "फिर से गायब? अब तक कितने लोग हो गए?"
+							},
+							"speaker": "character_any",
+							"type": "speech"
+						},
+						{
+							"action": "enter",
+							"duration_ms": 500,
+							"type": "direction",
+							"speaker": "inka",
+							"spot": [
+								4,
+								3
+							]
+						},
+						{
+							"emotion": "sad",
+							"content": {
+								"korean": "…벌써 세 명째야. 밤에 나갔다가… 흔적도 없이.",
+								"english": "...It's already the third one. Went out at night... without a trace.",
+								"japanese": "…もう三人目だよ。夜に出て行って…痕跡もなく。",
+								"chinese": "……已经是第三个了。晚上出去后……杳无音讯。",
+								"french": "...C'est déjà le troisième. Parti la nuit... sans laisser de trace.",
+								"spanish": "...Ya es el tercero. Salió por la noche... sin dejar rastro.",
+								"vietnamese": "...Đã là người thứ ba rồi. Đi ra ngoài vào ban đêm... không một dấu vết.",
+								"thai": "...นี่มันคนที่สามแล้ว ออกไปตอนกลางคืน... แล้วก็ไร้ร่องรอย",
+								"hindi": "...यह तीसरा है। रात में बाहर निकला... बिना किसी निशान के।"
+							},
+							"type": "speech",
+							"speaker": "inka"
+						},
+						{
+							"emotion": "base",
+							"speaker": "character_any",
+							"type": "speech",
+							"content": {
+								"korean": "빙탑 근처에 갔던 사람만 사라지는 건가?",
+								"english": "Is it only people who went near the Ice Tower who disappear?",
+								"japanese": "氷の塔の近くに行った人だけが消えるのか？",
+								"chinese": "难道只有去过冰塔附近的人才会消失吗？",
+								"french": "Est-ce que seules les personnes allées près de la Tour de glace disparaissent ?",
+								"spanish": "¿Solo desaparece la gente que fue cerca de la Torre de Hielo?",
+								"vietnamese": "Phải chăng chỉ những người đến gần Tháp Băng mới biến mất?",
+								"thai": "มีแต่คนที่ไปใกล้หอคอยน้ำแข็งเท่านั้นที่หายไปเหรอ?",
+								"hindi": "क्या सिर्फ़ वही लोग गायब हो रहे हैं जो बर्फ़ीले टावर के पास गए थे?"
+							}
+						}
+					]
+				},
+				{
+					"dialogue": [
+						{
+							"duration_ms": 500,
+							"action": "enter",
+							"spot": [
+								2,
+								3
+							],
+							"type": "direction",
+							"speaker": "inka"
+						},
+						{
+							"content": {
+								"korean": "맞아. 이상하지 않아? '신성한 빙탑'이라 불리던 곳인데…",
+								"english": "Right. Isn't it strange? It was called the 'Sacred Ice Tower' but...",
+								"japanese": "そうだ。おかしいと思わないか？「聖なる氷の塔」と呼ばれていた場所なのに…",
+								"chinese": "对啊。不觉得奇怪吗？明明被称为“神圣冰塔”……",
+								"french": "C'est ça. N'est-ce pas étrange ? C'était appelé la « Tour de glace sacrée » mais…",
+								"spanish": "Así es. ¿No es extraño? Se le llamaba la «Torre de Hielo Sagrada» pero...",
+								"vietnamese": "Đúng vậy. Không lạ sao? Nơi đó được gọi là 'Tháp Băng Thiêng Liêng' mà...",
+								"thai": "ใช่ ไม่แปลกเหรอ? ที่ที่เคยถูกเรียกว่า 'หอคอยน้ำแข็งศักดิ์สิทธิ์' น่ะ...",
+								"hindi": "हाँ। अजीब नहीं है? इसे 'पवित्र बर्फ़ीला टावर' कहा जाता था लेकिन..."
+							},
+							"type": "speech",
+							"speaker": "inka",
+							"emotion": "sad"
+						},
+						{
+							"emotion": "angry",
+							"content": {
+								"korean": "신성하다고? 지금은 불길하기만 해.",
+								"english": "Sacred? Now it's just ominous.",
+								"japanese": "聖なるだと？今はただ不吉なだけだ。",
+								"chinese": "神圣？现在只觉得不祥。",
+								"french": "Sacrée ? Maintenant, c'est juste sinistre.",
+								"spanish": "¿Sagrada? Ahora solo es ominosa.",
+								"vietnamese": "Thiêng liêng ư? Giờ thì chỉ toàn điềm gở thôi.",
+								"thai": "ศักดิ์สิทธิ์เหรอ? ตอนนี้มันมีแต่ลางร้ายเท่านั้นแหละ",
+								"hindi": "पवित्र? अब तो बस अशुभ है।"
+							},
+							"type": "speech",
+							"speaker": "character_any"
+						},
+						{
+							"emotion": "base",
+							"content": {
+								"korean": "밤에 빙탑 근처에서… 이상한 소리가 들린대. 직물 짜는 소리 같기도 하고.",
+								"english": "They say strange sounds are heard near the Ice Spire at night... like the sound of weaving.",
+								"japanese": "夜になると、氷の塔の近くで…変な音が聞こえるらしい。布を織る音のようにも…",
+								"chinese": "听说晚上冰塔附近…会传来奇怪的声音。好像是织布的声音。",
+								"french": "On dit que des bruits étranges se font entendre près de la Tour de Glace la nuit… comme un bruit de tissage.",
+								"spanish": "Dicen que se escuchan ruidos extraños cerca de la Aguja de Hielo por la noche... como el sonido de un telar.",
+								"vietnamese": "Người ta nói gần Tháp Băng vào ban đêm... có tiếng động lạ. Nghe như tiếng dệt vải.",
+								"thai": "มีคนบอกว่าแถวหอคอยน้ำแข็งตอนกลางคืน...มีเสียงแปลกๆ ได้ยิน เหมือนเสียงทอผ้า",
+								"hindi": "रात में आइस स्पायर के पास... अजीब आवाज़ें सुनाई देती हैं। जैसे बुनाई की आवाज़ हो।"
+							},
+							"speaker": "inka",
+							"type": "speech"
+						},
+						{
+							"emotion": "base",
+							"content": {
+								"korean": "직물? 설원에 누가?",
+								"english": "Weaving? Who's in the snowy field?",
+								"japanese": "布？雪原に誰が？",
+								"chinese": "织布？雪原上谁在？",
+								"french": "Tissage ? Qui serait dans le champ de neige ?",
+								"spanish": "¿Un telar? ¿Quién en el campo nevado?",
+								"vietnamese": "Dệt vải? Ai ở trên cánh đồng tuyết?",
+								"thai": "ทอผ้า? ใครอยู่ในทุ่งหิมะ?",
+								"hindi": "बुनाई? बर्फीले मैदान में कौन?"
+							},
+							"type": "speech",
+							"speaker": "character_any"
+						}
+					],
+					"id": 3
+				},
+				{
+					"id": 5,
+					"dialogue": [
+						{
+							"spot": [
+								4,
+								3
+							],
+							"type": "direction",
+							"speaker": "inka",
+							"duration_ms": 500,
+							"action": "enter"
+						},
+						{
+							"content": {
+								"korean": "그 소리가 들리면… 다음 날 아침, 꼭 누가 사라져.",
+								"english": "When that sound is heard... someone always disappears the next morning.",
+								"japanese": "あの音が聞こえると…次の日の朝、必ず誰かが消えるんだ。",
+								"chinese": "如果听到那声音…第二天早上，就一定有人消失。",
+								"french": "Quand on entend ce bruit… le lendemain matin, quelqu'un disparaît toujours.",
+								"spanish": "Cuando se escucha ese sonido... a la mañana siguiente, alguien siempre desaparece.",
+								"vietnamese": "Mỗi khi nghe thấy âm thanh đó... sáng hôm sau, chắc chắn có người biến mất.",
+								"thai": "ถ้าได้ยินเสียงนั้น...เช้าวันรุ่งขึ้น จะมีคนหายไปเสมอ",
+								"hindi": "जब वह आवाज़ सुनाई देती है... तो अगली सुबह कोई न कोई ज़रूर गायब हो जाता है।"
+							},
+							"speaker": "inka",
+							"type": "speech",
+							"emotion": "sad"
+						},
+						{
+							"content": {
+								"korean": "우연일까?",
+								"english": "Is it a coincidence?",
+								"japanese": "偶然だろうか？",
+								"chinese": "是巧合吗？",
+								"french": "Est-ce une coïncidence ?",
+								"spanish": "¿Será una coincidencia?",
+								"vietnamese": "Có phải là trùng hợp không?",
+								"thai": "เป็นเรื่องบังเอิญหรือเปล่า?",
+								"hindi": "क्या यह महज़ एक संयोग है?"
+							},
+							"speaker": "character_any",
+							"type": "speech",
+							"emotion": "base"
+						},
+						{
+							"type": "speech",
+							"speaker": "inka",
+							"content": {
+								"korean": "아니… 이건 우연이 아냐. 분명 뭔가 있어. 사람들을 꾀어내는… 뭔가.",
+								"english": "No... it's not a coincidence. There's definitely something. Something luring people away...",
+								"japanese": "いや…これは偶然じゃない。何かがあるんだ。人々を誘い出す…何かが。",
+								"chinese": "不…这不是巧合。 분명 뭔가 있어。有某种东西…在引诱人们。",
+								"french": "Non… ce n'est pas une coïncidence. Il y a clairement quelque chose. Quelque chose qui attire les gens…",
+								"spanish": "No... no es una coincidencia. Definitivamente hay algo. Algo que atrae a la gente...",
+								"vietnamese": "Không... đây không phải là trùng hợp. Chắc chắn có điều gì đó. Điều gì đó đang dụ dỗ mọi người...",
+								"thai": "ไม่...นี่ไม่ใช่เรื่องบังเอิญ ต้องมีอะไรบางอย่างแน่ๆ บางอย่างที่ล่อลวงผู้คนไป...",
+								"hindi": "नहीं... यह संयोग नहीं है। ज़रूर कुछ है। कुछ ऐसा जो लोगों को फुसला रहा है..."
+							},
+							"emotion": "angry"
+						},
+						{
+							"type": "speech",
+							"speaker": "character_1",
+							"content": {
+								"korean": "대체 빙탑에 뭐가 있는 거지?",
+								"english": "What in the world is in the Ice Spire?",
+								"japanese": "一体氷の塔には何があるんだ？",
+								"chinese": "冰塔里到底有什么？",
+								"french": "Mais qu'y a-t-il donc dans la Tour de Glace ?",
+								"spanish": "¿Qué diablos hay en la Aguja de Hielo?",
+								"vietnamese": "Rốt cuộc có gì trong Tháp Băng?",
+								"thai": "ในหอคอยน้ำแข็งมีอะไรกันแน่?",
+								"hindi": "आख़िरकार आइस स्पायर में क्या है?"
+							},
+							"emotion": "base"
+						}
+					]
+				},
+				{
+					"dialogue": [
+						{
+							"spot": [
+								2,
+								3
+							],
+							"speaker": "inka",
+							"type": "direction",
+							"duration_ms": 500,
+							"action": "enter"
+						},
+						{
+							"emotion": "sad",
+							"content": {
+								"korean": "사라진 사람들의 고통이 느껴져… 그들은 혼자였을 거야. 차갑고 어두운 곳에서…",
+								"english": "I can feel the pain of those who disappeared... They must have been alone. In a cold, dark place...",
+								"japanese": "消えた人々の苦痛が感じられる…彼らは一人だっただろう。冷たく暗い場所で…",
+								"chinese": "我能感受到消失之人的痛苦…他们一定很孤独。在一个寒冷黑暗的地方…",
+								"french": "Je ressens la douleur de ceux qui ont disparu… Ils devaient être seuls. Dans un endroit froid et sombre…",
+								"spanish": "Siento el dolor de los que desaparecieron... Debieron estar solos. En un lugar frío y oscuro...",
+								"vietnamese": "Tôi cảm nhận được nỗi đau của những người đã biến mất... Họ chắc hẳn đã cô đơn. Ở một nơi lạnh lẽo và tăm tối...",
+								"thai": "ฉันรู้สึกถึงความเจ็บปวดของผู้ที่หายไป...พวกเขาคงอยู่คนเดียว ในที่ที่หนาวเย็นและมืดมิด...",
+								"hindi": "मैं गायब हुए लोगों का दर्द महसूस कर सकता हूँ... वे अकेले रहे होंगे। एक ठंडी, अँधेरी जगह में..."
+							},
+							"speaker": "inka",
+							"type": "speech"
+						},
+						{
+							"emotion": "angry",
+							"speaker": "character_any",
+							"type": "speech",
+							"content": {
+								"korean": "우리가 막아야 해. 더 이상 희생자는 안 돼.",
+								"english": "We have to stop it. No more victims.",
+								"japanese": "私たちが止めなければならない。これ以上犠牲者は出せない。",
+								"chinese": "我们必须阻止。不能再有牺牲者了。",
+								"french": "Nous devons l'arrêter. Plus de victimes.",
+								"spanish": "Tenemos que detenerlo. No más víctimas.",
+								"vietnamese": "Chúng ta phải ngăn chặn nó. Không thể có thêm nạn nhân nào nữa.",
+								"thai": "เราต้องหยุดมัน ไม่ให้มีเหยื่ออีกแล้ว",
+								"hindi": "हमें इसे रोकना होगा। और कोई शिकार नहीं।"
+							}
+						},
+						{
+							"emotion": "base",
+							"speaker": "inka",
+							"type": "speech",
+							"content": {
+								"korean": "빙탑에 가까이 갈수록… 그 소리가 더 선명하게 들린대. 유혹하는 것처럼.",
+								"english": "The closer you get to the Ice Spire... the clearer the sound becomes. As if luring you in.",
+								"japanese": "氷の塔に近づくほど…あの音がより鮮明に聞こえるらしい。誘惑するように。",
+								"chinese": "越靠近冰塔…那声音就越清晰。仿佛在引诱着。",
+								"french": "Plus on s'approche de la Tour de Glace… plus le son devient clair. Comme s'il vous attirait.",
+								"spanish": "Cuanto más te acercas a la Aguja de Hielo... más claro se escucha el sonido. Como si te estuviera atrayendo.",
+								"vietnamese": "Càng đến gần Tháp Băng... âm thanh đó càng rõ ràng hơn. Như thể đang quyến rũ.",
+								"thai": "ยิ่งเข้าใกล้หอคอยน้ำแข็ง...เสียงนั้นยิ่งชัดเจนขึ้น เหมือนกำลังล่อลวง",
+								"hindi": "जितना तुम आइस स्पायर के करीब जाओगे... उतनी ही स्पष्ट वह आवाज़ सुनाई देगी। जैसे तुम्हें लुभा रही हो।"
+							}
+						},
+						{
+							"content": {
+								"korean": "그 소리를 따라가야 진실을 알 수 있겠군.",
+								"english": "We'll only know the truth by following that sound.",
+								"japanese": "あの音を辿れば、真実がわかるだろう。",
+								"chinese": "只有跟着那个声音，才能知道真相。",
+								"french": "Ce n'est qu'en suivant ce son que nous connaîtrons la vérité.",
+								"spanish": "Solo siguiendo ese sonido podremos saber la verdad.",
+								"vietnamese": "Chúng ta sẽ chỉ biết sự thật khi đi theo âm thanh đó.",
+								"thai": "เราจะรู้ความจริงได้ก็ต่อเมื่อตามเสียงนั้นไป",
+								"hindi": "उस आवाज़ का पीछा करके ही हम सच्चाई जान पाएंगे।"
+							},
+							"speaker": "character_2",
+							"type": "speech",
+							"emotion": "base"
+						}
+					],
+					"id": 9
+				},
+				{
+					"win_dialogue": [
+						{
+							"emotion": "base",
+							"type": "speech",
+							"speaker": "narrator",
+							"content": {
+								"korean": "정체 모를 괴물은 힘없이 쓰러졌다. 그러나 위버프로스트의 그림자는 여전히 남아 있었다.",
+								"english": "The unknown monster fell powerlessly. Yet, the shadow of the Überfrost still lingered.",
+								"japanese": "正体不明の怪物は力なく倒れた。しかし、ウィーバーフロストの影はまだ残っていた。",
+								"chinese": "不明怪物无力地倒下了。然而，极寒之影依然残留。",
+								"french": "Le monstre inconnu s'écroula sans force. Pourtant, l'ombre d'Überfrost persistait toujours.",
+								"spanish": "El monstruo desconocido cayó sin fuerza. Sin embargo, la sombra de Überfrost aún permanecía.",
+								"vietnamese": "Quái vật không rõ danh tính gục ngã không chút sức lực. Tuy nhiên, bóng tối của Überfrost vẫn còn đọng lại.",
+								"thai": "สัตว์ประหลาดที่ไม่รู้จักล้มลงอย่างไร้เรี่ยวแรง. แต่เงาของ Überfrost ก็ยังคงอยู่.",
+								"hindi": "अज्ञात राक्षस शक्तिहीन होकर गिर गया। फिर भी, Überfrost की छाया अभी भी बनी हुई थी।"
+							}
+						},
+						{
+							"emotion": "base",
+							"speaker": "random_boss",
+							"type": "speech",
+							"content": {
+								"korean": "크윽… 나는… 시작에 불과하다… 진짜… {random_boss}는…",
+								"english": "Ugh… I am… merely the beginning… The real… {random_boss} is…",
+								"japanese": "くっ…私は…始まりに過ぎない…本当の… {random_boss}は…",
+								"chinese": "呃…我…只是个开始…真正的… {random_boss}在…",
+								"french": "Ugh… Je ne suis… que le début… Le vrai… {random_boss} est…",
+								"spanish": "Ugh… Yo… solo soy el principio… El verdadero… {random_boss} es…",
+								"vietnamese": "Khụ… ta… chỉ là khởi đầu… {random_boss} thật sự thì…",
+								"thai": "อึก… ข้า… เป็นแค่จุดเริ่มต้น… {random_boss} ตัวจริงนั้น…",
+								"hindi": "उह… मैं… बस शुरुआत हूँ… असली… {random_boss} तो…"
+							}
+						},
+						{
+							"emotion": "angry",
+							"content": {
+								"korean": "무슨 소리야? 진짜 {random_boss}라니!",
+								"english": "What do you mean? The real {random_boss}!",
+								"japanese": "どういうことだ？本当の {random_boss}だと！",
+								"chinese": "什么意思？真正的 {random_boss}！",
+								"french": "Que veux-tu dire ? Le vrai {random_boss} !",
+								"spanish": "¡¿Qué quieres decir?! ¡¿El verdadero {random_boss}?!",
+								"vietnamese": "Ý ngươi là gì? {random_boss} thật sự ư!",
+								"thai": "หมายความว่ายังไง? {random_boss} ตัวจริง!",
+								"hindi": "क्या मतलब? असली {random_boss}!"
+							},
+							"type": "speech",
+							"speaker": "character_any"
+						},
+						{
+							"spot": [
+								2,
+								3
+							],
+							"type": "direction",
+							"speaker": "inka",
+							"duration_ms": 500,
+							"action": "enter"
+						},
+						{
+							"emotion": "sad",
+							"speaker": "inka",
+							"type": "speech",
+							"content": {
+								"korean": "그의 고통이… 느껴져. 그는 누군가에게 이용당하고 있었을지도 몰라.",
+								"english": "His pain… I feel it. He might have been used by someone.",
+								"japanese": "彼の苦痛が…感じられる。彼は誰かに利用されていたのかもしれない。",
+								"chinese": "他的痛苦…我感受到了。他可能被某人利用了。",
+								"french": "Sa douleur… Je la sens. Il a peut-être été utilisé par quelqu'un.",
+								"spanish": "Su dolor… lo siento. Podría haber sido utilizado por alguien.",
+								"vietnamese": "Nỗi đau của hắn… ta cảm nhận được. Hắn có thể đã bị ai đó lợi dụng.",
+								"thai": "ความเจ็บปวดของเขา… ข้ารู้สึกได้. เขาอาจถูกใครบางคนใช้เป็นเครื่องมือ.",
+								"hindi": "उसका दर्द… मुझे महसूस हो रहा है। हो सकता है उसे किसी ने इस्तेमाल किया हो।"
+							}
+						},
+						{
+							"emotion": "base",
+							"content": {
+								"korean": "싸늘한 진실의 조각들이 설원 위에 흩뿌려졌다. 이 거대한 공포는 이제 시작일 뿐이었다.",
+								"english": "Fragments of chilling truth scattered across the snowy plains. This colossal terror was only the beginning.",
+								"japanese": "冷たい真実の断片が雪原に散らばった。この巨大な恐怖は、まだ始まりに過ぎなかった。",
+								"chinese": "冰冷的真相碎片散落在雪原上。这场巨大的恐惧才刚刚开始。",
+								"french": "Des fragments d'une vérité glaçante jonchaient la plaine enneigée. Cette terreur colossale n'était que le début.",
+								"spanish": "Fragmentos de una verdad escalofriante se esparcieron por las llanuras nevadas. Este terror colosal era solo el principio.",
+								"vietnamese": "Những mảnh sự thật lạnh lẽo rải rác khắp đồng bằng tuyết. Nỗi kinh hoàng khổng lồ này chỉ mới là khởi đầu.",
+								"thai": "ชิ้นส่วนของความจริงอันเย็นชากระจัดกระจายไปทั่วทุ่งหิมะ. ความหวาดกลัวอันมหึมานี้เป็นเพียงจุดเริ่มต้นเท่านั้น.",
+								"hindi": "ठंडी सच्चाई के टुकड़े बर्फीले मैदानों में बिखर गए। यह भीषण आतंक अभी तो बस शुरुआत थी।"
+							},
+							"speaker": "narrator",
+							"type": "speech"
+						}
+					],
+					"dialogue": [
+						{
+							"speaker": "narrator",
+							"type": "speech",
+							"content": {
+								"korean": "마침내 빙탑의 심장부. 거대한 그림자가 모든 것을 얼리고 있었다.",
+								"english": "Finally, the heart of the Ice Spire. A colossal shadow was freezing everything.",
+								"japanese": "ついに氷の塔の心臓部。巨大な影がすべてを凍らせていた。",
+								"chinese": "终于，冰塔的心脏。巨大的阴影冻结着一切。",
+								"french": "Enfin, le cœur de la Tour de Glace. Une ombre colossale gelait tout.",
+								"spanish": "Finalmente, el corazón de la Aguja de Hielo. Una sombra colosal lo congelaba todo.",
+								"vietnamese": "Cuối cùng, trung tâm của Tháp Băng. Một cái bóng khổng lồ đang đóng băng mọi thứ.",
+								"thai": "ในที่สุดก็ถึงใจกลางหอคอยน้ำแข็ง. เงาขนาดมหึมากำลังแช่แข็งทุกสิ่ง.",
+								"hindi": "अंततः, बर्फ के शिखर का हृदय। एक विशाल छाया सब कुछ जमा रही थी।"
+							},
+							"emotion": "base"
+						},
+						{
+							"type": "direction",
+							"speaker": "inka",
+							"spot": [
+								3,
+								3
+							],
+							"action": "enter",
+							"duration_ms": 500
+						},
+						{
+							"content": {
+								"korean": "여기야… 그 소리의 근원이…",
+								"english": "Here… the source of that sound…",
+								"japanese": "ここだ…あの音の根源が…",
+								"chinese": "就是这里…那声音的源头…",
+								"french": "Ici… la source de ce son…",
+								"spanish": "Aquí… el origen de ese sonido…",
+								"vietnamese": "Đây rồi… nguồn gốc của âm thanh đó…",
+								"thai": "ที่นี่… ต้นกำเนิดของเสียงนั้น…",
+								"hindi": "यहीं है… उस आवाज़ का स्रोत…"
+							},
+							"type": "speech",
+							"speaker": "inka",
+							"emotion": "sad"
+						},
+						{
+							"type": "speech",
+							"speaker": "random_boss",
+							"content": {
+								"korean": "어리석은 인간들. 나의 영역을 침범하다니.",
+								"english": "Foolish humans. Daring to trespass upon my domain.",
+								"japanese": "愚かな人間どもめ。私の領域を侵すとは。",
+								"chinese": "愚蠢的人类。竟敢侵犯我的领域。",
+								"french": "Humains insensés. Oser envahir mon domaine.",
+								"spanish": "Humanos necios. ¿Cómo osáis invadir mi dominio?",
+								"vietnamese": "Bọn người ngu xuẩn. Dám xâm phạm lãnh địa của ta.",
+								"thai": "มนุษย์โง่เขลา. กล้าดียังไงมาบุกรุกอาณาเขตของข้า.",
+								"hindi": "मूर्ख मनुष्य। मेरे क्षेत्र में घुसपैठ करने की हिम्मत कैसे हुई।"
+							},
+							"emotion": "base"
+						},
+						{
+							"emotion": "angry",
+							"type": "speech",
+							"speaker": "character_any",
+							"content": {
+								"korean": "네가 이 모든 일의 원흉이군!",
+								"english": "So you're the mastermind behind all this!",
+								"japanese": "お前がこの全ての元凶か！",
+								"chinese": "原来你就是这一切的罪魁祸首！",
+								"french": "C'est donc toi le responsable de tout ça !",
+								"spanish": "¡Así que tú eres el artífice de todo esto!",
+								"vietnamese": "Ngươi chính là kẻ chủ mưu của mọi chuyện này!",
+								"thai": "แกคือต้นเหตุของเรื่องทั้งหมดนี่เอง!",
+								"hindi": "तो तुम ही हो इन सबका मास्टरमाइंड!"
+							}
+						},
+						{
+							"speaker": "random_boss",
+							"type": "speech",
+							"content": {
+								"korean": "진실은… 너희의 분노로는 알 수 없을 것이다. 얼어붙어라.",
+								"english": "The truth… your wrath cannot grasp. Freeze.",
+								"japanese": "真実は…お前たちの怒りでは知り得ないだろう。凍りつけ。",
+								"chinese": "真相…凭你们的愤怒是无法得知的。冻结吧。",
+								"french": "La vérité… votre colère ne peut l'atteindre. Gèle.",
+								"spanish": "La verdad… vuestra ira no podrá comprenderla. Congelaos.",
+								"vietnamese": "Sự thật… cơn thịnh nộ của các ngươi sẽ không thể biết được. Đóng băng đi.",
+								"thai": "ความจริง… ความโกรธของพวกเจ้าไม่อาจหยั่งถึงได้. จงแข็งตายซะ.",
+								"hindi": "सत्य… तुम्हारा क्रोध उसे समझ नहीं पाएगा। जम जाओ।"
+							},
+							"emotion": "base"
+						}
+					],
+					"id": 15,
+					"lose_dialogue": [
+						{
+							"emotion": "base",
+							"content": {
+								"korean": "거대한 그림자가 모든 것을 집어삼켰다.",
+								"english": "A colossal shadow swallowed everything.",
+								"japanese": "巨大な影がすべてを飲み込んだ。",
+								"chinese": "巨大的影子吞噬了一切。",
+								"french": "Une ombre colossale a tout englouti.",
+								"spanish": "Una sombra colosal lo engulló todo.",
+								"vietnamese": "Một bóng tối khổng lồ đã nuốt chửng mọi thứ.",
+								"thai": "เงามหึมากลืนกินทุกสิ่ง",
+								"hindi": "एक विशालकाय परछाई ने सब कुछ निगल लिया।"
+							},
+							"type": "speech",
+							"speaker": "narrator"
+						},
+						{
+							"content": {
+								"korean": "하찮은 것들… 나의 거미줄에 영원히 갇히리라.",
+								"english": "Insignificant beings... forever trapped in my web.",
+								"japanese": "愚かな者たちよ… 永遠に私の網に囚われるがいい。",
+								"chinese": "渺小的东西… 永远被困在我的网中。",
+								"french": "Êtres insignifiants... à jamais piégés dans ma toile.",
+								"spanish": "Seres insignificantes... atrapados para siempre en mi telaraña.",
+								"vietnamese": "Những kẻ nhỏ bé... sẽ mãi mãi bị mắc kẹt trong mạng nhện của ta.",
+								"thai": "สิ่งมีชีวิตไร้ค่า... จะถูกขังอยู่ในใยแมงมุมของข้าตลอดไป",
+								"hindi": "तुच्छ प्राणी… हमेशा के लिए मेरे जाल में फँसे रहोगे।"
+							},
+							"type": "speech",
+							"speaker": "random_boss",
+							"emotion": "base"
+						},
+						{
+							"emotion": "angry",
+							"content": {
+								"korean": "젠장… 아직 끝나지 않았어!",
+								"english": "Damn it... it's not over yet!",
+								"japanese": "くそ… まだ終わってない！",
+								"chinese": "该死… 还没结束！",
+								"french": "Bon sang... ce n'est pas encore fini !",
+								"spanish": "¡Maldita sea... aún no ha terminado!",
+								"vietnamese": "Chết tiệt... vẫn chưa kết thúc đâu!",
+								"thai": "ให้ตายสิ... ยังไม่จบแค่นี้หรอก!",
+								"hindi": "धिक्कार है… अभी खत्म नहीं हुआ है!"
+							},
+							"speaker": "character_any",
+							"type": "speech"
+						},
+						{
+							"action": "enter",
+							"duration_ms": 500,
+							"speaker": "inka",
+							"type": "direction",
+							"spot": [
+								4,
+								3
+							]
+						},
+						{
+							"emotion": "sad",
+							"content": {
+								"korean": "포기하지 마… 그들은… 아직 희망을 기다리고 있어.",
+								"english": "Don't give up... they're still waiting for hope.",
+								"japanese": "諦めるな… 彼らは… まだ希望を待っている。",
+								"chinese": "别放弃… 他们… 还在等待希望。",
+								"french": "N'abandonne pas... ils... attendent encore l'espoir.",
+								"spanish": "No te rindas... ellos... aún esperan la esperanza.",
+								"vietnamese": "Đừng bỏ cuộc... họ... vẫn đang chờ đợi hy vọng.",
+								"thai": "อย่ายอมแพ้... พวกเขา... ยังคงรอคอยความหวังอยู่",
+								"hindi": "हार मत मानो… वे… अभी भी उम्मीद का इंतज़ार कर रहे हैं।"
+							},
+							"type": "speech",
+							"speaker": "inka"
+						}
+					]
+				}
+			],
+			"prologue": {
+				"korean": [
+					"설원. 숨 막히는 추위 속, 마을 사람들이 사라졌다.",
+					"밤마다 들려오는 기이한 '직물 짜는 소리'.",
+					"그 소리는 사람들을 '신성한 빙탑'으로 이끌었다.",
+					"그리고 그곳엔, 얼어붙은 진실이 기다리고 있었다."
+				],
+				"english": [
+					"Snowfield. In the breathtaking cold, the villagers disappeared.",
+					"A strange 'fabric weaving sound' heard every night.",
+					"That sound led people to the 'Sacred Ice Tower'.",
+					"And there, a frozen truth awaited."
+				],
+				"japanese": [
+					"雪原。息をのむような寒さの中、村人たちは姿を消した。",
+					"毎晩聞こえる奇妙な「織物を織る音」。",
+					"その音は人々を「聖なる氷の塔」へと導いた。",
+					"そしてそこには、凍りついた真実が待っていた。"
+				],
+				"chinese": [
+					"雪原。在令人窒息的严寒中，村民们消失了。",
+					"每晚都能听到奇怪的“织布声”。",
+					"那个声音将人们引向了“神圣冰塔”。",
+					"而在那里，冰封的真相正在等待。"
+				],
+				"french": [
+					"Champ de neige. Dans le froid suffocant, les villageois ont disparu.",
+					"Un étrange « bruit de tissage » se faisant entendre chaque nuit.",
+					"Ce son menait les gens à la « Tour de glace sacrée ».",
+					"Et là, une vérité gelée attendait."
+				],
+				"spanish": [
+					"Campo de nieve. En el frío asfixiante, los aldeanos desaparecieron.",
+					"Un extraño «sonido de tejido de tela» se escuchaba todas las noches.",
+					"Ese sonido llevó a la gente a la «Torre de Hielo Sagrada».",
+					"Y allí, una verdad congelada esperaba."
+				],
+				"vietnamese": [
+					"Cánh đồng tuyết. Trong cái lạnh cắt da cắt thịt, dân làng đã biến mất.",
+					"Một \"tiếng dệt vải\" kỳ lạ vang lên mỗi đêm.",
+					"Âm thanh đó đã dẫn mọi người đến 'Tháp Băng Thiêng Liêng'.",
+					"Và ở đó, một sự thật đóng băng đang chờ đợi."
+				],
+				"thai": [
+					"ทุ่งหิมะ ในความหนาวเหน็บที่กัดกิน ร่างของชาวบ้านก็หายไป",
+					"'เสียงทอผ้า' ประหลาดที่ได้ยินทุกคืน",
+					"เสียงนั้นนำพาผู้คนไปยัง 'หอคอยน้ำแข็งศักดิ์สิทธิ์'",
+					"และที่นั่น ความจริงที่เยือกแข็งกำลังรอคอยอยู่"
+				],
+				"hindi": [
+					"बर्फीला मैदान। साँस रोक देने वाली ठंड में, गाँव वाले गायब हो गए।",
+					"हर रात सुनाई देने वाली एक अजीब 'कपड़ा बुनने की आवाज़'।",
+					"वह आवाज़ लोगों को 'पवित्र बर्फ़ीले टावर' की ओर ले गई।",
+					"और वहाँ, एक जमी हुई सच्चाई इंतज़ार कर रही थी।"
+				]
+			}
+		},
+		{
+			"scenario_id": "snowy_weaverfrost_50_02",
+			"order": 2,
+			"act": "rising",
+			"theme": "snowy",
+			"actors": {
+				"ivar": {
+					"id": "mon_d8a80adc-9315-47b5-8c30-97ce33672bce",
+					"name": {
+						"korean": "이바르",
+						"english": "Ivar",
+						"japanese": "イヴァー",
+						"chinese": "伊瓦尔",
+						"french": "Ivar",
+						"spanish": "Ivar",
+						"vietnamese": "Ivar",
+						"thai": "ไอวาร์",
+						"hindi": "इवर"
+					},
+					"description": "",
+					"face_image_url": "https://imagedelivery.net/WTEqQNGFb-l-IHS6IGnzUQ/8dd7872b-d4df-44fd-b1a1-083a9156e700/public",
+					"battle_sprite_url": "https://imagedelivery.net/WTEqQNGFb-l-IHS6IGnzUQ/2622fb62-daf4-42d1-a83b-2b78869d3e00/public"
+				}
+			},
+			"boss": {
+				"pool_id": "random_boss"
+			},
+			"prologue": {
+				"korean": [
+					"사라진 자들의 흔적은 차가운 서리 속에 묻혔다.",
+					"유적 연구자 이바르는 그것이 평범한 얼음이 아니라고 경고했다.",
+					"고대 문서 속 '얼음 무덤'. 그 싸늘한 진실이 다가온다.",
+					"어쩌면 이 설원 자체가 하나의 거대한 무덤일지도 모른다."
+				],
+				"english": [
+					"Traces of the vanished were buried in cold frost.",
+					"Ivar, the ruin researcher, warned it was no ordinary ice.",
+					"The 'Ice Tomb' from ancient texts. Its chilling truth approaches.",
+					"Perhaps this snowfield itself is a colossal tomb."
+				],
+				"japanese": [
+					"消え去りし者の痕跡は、冷たい霜の中に埋もれた。",
+					"遺跡研究者イヴァールは、それがただの氷ではないと警告した。",
+					"古文書に記されし「氷の墓」。その冷厳な真実が迫る。",
+					"もしかすると、この雪原そのものが巨大な墓なのかもしれない。"
+				],
+				"chinese": [
+					"逝者的踪迹，埋葬于冰冷的霜中。",
+					"遗迹研究员伊瓦尔警告说，那并非寻常的冰。",
+					"古籍中的“冰墓”。那冰冷的真相正悄然逼近。",
+					"或许这片雪原本身，就是一座巨大的坟墓。"
+				],
+				"french": [
+					"Les traces des disparus ont été ensevelies sous le givre.",
+					"Ivar, le chercheur en ruines, avertit que ce n'était pas de la glace ordinaire.",
+					"Le « Tombeau de Glace » des textes anciens. Sa vérité glaçante approche.",
+					"Peut-être ce champ de neige est-il lui-même un tombeau colossal."
+				],
+				"spanish": [
+					"Las huellas de los desaparecidos yacen sepultadas en la fría escarcha.",
+					"Ivar, el investigador de ruinas, advirtió que no era hielo común.",
+					"La «Tumba de Hielo» de los textos antiguos. Su gélida verdad se aproxima.",
+					"Quizás este campo de nieve sea en sí mismo una tumba colosal."
+				],
+				"vietnamese": [
+					"Dấu vết của những người đã biến mất bị chôn vùi trong lớp sương giá lạnh lẽo.",
+					"Ivar, nhà nghiên cứu di tích, cảnh báo rằng đó không phải là băng bình thường.",
+					"'Lăng mộ Băng giá' trong các văn tự cổ. Sự thật lạnh lẽo của nó đang đến gần.",
+					"Có lẽ chính cánh đồng tuyết này là một lăng mộ khổng lồ."
+				],
+				"thai": [
+					"ร่องรอยของผู้ที่หายสาบสูญถูกฝังอยู่ใต้เหมันต์อันหนาวเหน็บ",
+					"ไอวาร์ นักวิจัยโบราณสถาน เตือนว่ามันไม่ใช่น้ำแข็งธรรมดา",
+					"'สุสานน้ำแข็ง' ในเอกสารโบราณ ความจริงอันเยือกเย็นกำลังคืบคลานเข้ามา",
+					"บางทีทุ่งหิมะแห่งนี้เองอาจเป็นสุสานขนาดมหึมา"
+				],
+				"hindi": [
+					"गुमशुदा लोगों के निशान ठंढी पाले में दब गए।",
+					"खंडहर शोधकर्ता इवार ने चेतावनी दी कि वह सामान्य बर्फ नहीं थी।",
+					"प्राचीन ग्रंथों में 'बर्फ की कब्र'। उसकी ठंडी सच्चाई निकट आ रही है।",
+					"हो सकता है कि यह हिमक्षेत्र ही एक विशाल कब्र हो।"
+				]
+			},
+			"rooms": [
+				{
+					"id": 1,
+					"dialogue": [
+						{
+							"emotion": "base",
+							"type": "speech",
+							"content": {
+								"korean": "실종자들이 마지막으로 목격된 장소. 싸늘한 기운이 감돌았다.",
+								"english": "The last known location of the missing. A chilling aura hung in the air.",
+								"japanese": "行方不明者が最後に目撃された場所。冷たい気が漂っていた。",
+								"chinese": "失踪者最后被目击的地点。一股寒意弥漫开来。",
+								"french": "Le dernier endroit où les disparus ont été vus. Une aura glaciale planait.",
+								"spanish": "El último lugar donde se vio a los desaparecidos. Una aura escalofriante se sentía.",
+								"vietnamese": "Nơi những người mất tích được nhìn thấy lần cuối. Một luồng khí lạnh lẽo bao trùm.",
+								"thai": "สถานที่ที่ผู้สูญหายถูกพบเห็นครั้งสุดท้าย บรรยากาศเยือกเย็นปกคลุม",
+								"hindi": "गुमशुदा लोगों को आखिरी बार यहीं देखा गया था। एक ठंडी आभा छाई हुई थी।"
+							},
+							"speaker": "narrator"
+						},
+						{
+							"type": "speech",
+							"emotion": "sad",
+							"speaker": "character_any",
+							"content": {
+								"korean": "이게… 다 서리 자국인가?",
+								"english": "Is this... all frost?",
+								"japanese": "これ…全部霜の跡なのか？",
+								"chinese": "这……都是霜的痕迹吗？",
+								"french": "Est-ce… tout du givre ?",
+								"spanish": "¿Esto es... todo escarcha?",
+								"vietnamese": "Đây… toàn là vết sương giá sao?",
+								"thai": "นี่…ทั้งหมดเป็นรอยน้ำค้างแข็งหรือ?",
+								"hindi": "क्या यह... सब पाले के निशान हैं?"
+							}
+						},
+						{
+							"duration_ms": 500,
+							"type": "direction",
+							"action": "enter",
+							"spot": [
+								3,
+								2
+							],
+							"speaker": "ivar"
+						},
+						{
+							"speaker": "ivar",
+							"content": {
+								"korean": "꽤 흥미로운 현상이야. 단순한 추위는 아니지.",
+								"english": "Quite an interesting phenomenon. Not mere cold.",
+								"japanese": "なかなか興味深い現象だ。単なる寒さではないな。",
+								"chinese": "这现象相当有趣。并非单纯的寒冷。",
+								"french": "Un phénomène assez intéressant. Pas seulement le froid.",
+								"spanish": "Un fenómeno bastante interesante. No es simple frío.",
+								"vietnamese": "Một hiện tượng khá thú vị. Không phải chỉ là lạnh lẽo thông thường.",
+								"thai": "เป็นปรากฏการณ์ที่น่าสนใจทีเดียว ไม่ใช่แค่ความหนาวเย็นธรรมดา",
+								"hindi": "यह काफी दिलचस्प घटना है। सिर्फ ठंड नहीं है।"
+							},
+							"type": "speech",
+							"emotion": "base"
+						}
+					]
+				},
+				{
+					"id": 3,
+					"dialogue": [
+						{
+							"speaker": "ivar",
+							"action": "enter",
+							"spot": [
+								4,
+								2
+							],
+							"type": "direction",
+							"duration_ms": 500
+						},
+						{
+							"type": "speech",
+							"emotion": "base",
+							"speaker": "ivar",
+							"content": {
+								"korean": "이 서리 자국을 봐. 일반적인 얼음 결정과는 달라.",
+								"english": "Look at these frost patterns. Unlike ordinary ice crystals.",
+								"japanese": "この霜の跡を見てくれ。一般的な氷の結晶とは違う。",
+								"chinese": "看这些霜的痕迹。与普通的冰晶不同。",
+								"french": "Regardez ces motifs de givre. Pas comme les cristaux de glace ordinaires.",
+								"spanish": "Mira estas marcas de escarcha. Son diferentes de los cristales de hielo comunes.",
+								"vietnamese": "Hãy nhìn những vết sương giá này. Không giống các tinh thể băng thông thường.",
+								"thai": "ดูรอยน้ำค้างแข็งพวกนี้สิ ไม่เหมือนผลึกน้ำแข็งทั่วไปเลย",
+								"hindi": "इन पाले के निशानों को देखो। सामान्य बर्फ के क्रिस्टल से अलग हैं।"
+							}
+						},
+						{
+							"emotion": "sad",
+							"type": "speech",
+							"content": {
+								"korean": "오로라빛… 결정도 있어요.",
+								"english": "There are aurora-like… crystals too.",
+								"japanese": "オーロラ色の…結晶もあるわ。",
+								"chinese": "还有极光般的……结晶。",
+								"french": "Il y a aussi des cristaux… aux couleurs d'aurore.",
+								"spanish": "También hay cristales… con luz de aurora.",
+								"vietnamese": "Còn có… những tinh thể phát sáng như cực quang.",
+								"thai": "มีผลึก…สีแสงออโรร่าด้วย",
+								"hindi": "ओरोरा-जैसे... क्रिस्टल भी हैं।"
+							},
+							"speaker": "character_any"
+						},
+						{
+							"speaker": "ivar",
+							"content": {
+								"korean": "그래. 마치 살아있는 것처럼, 계속해서 형태를 바꾸고 있지.",
+								"english": "Yes. They're constantly changing shape, as if alive.",
+								"japanese": "ああ。まるで生きているかのように、形を変え続けている。",
+								"chinese": "是的。它们就像活物一样，不断改变着形态。",
+								"french": "Oui. Ils changent constamment de forme, comme s'ils étaient vivants.",
+								"spanish": "Sí. Cambian de forma constantemente, como si estuvieran vivos.",
+								"vietnamese": "Đúng vậy. Chúng liên tục thay đổi hình dạng, cứ như thể đang sống.",
+								"thai": "ใช่แล้ว เหมือนมีชีวิตเลย เปลี่ยนรูปร่างอยู่ตลอดเวลา",
+								"hindi": "हाँ। वे लगातार आकार बदल रहे हैं, जैसे जीवित हों।"
+							},
+							"emotion": "base",
+							"type": "speech"
+						},
+						{
+							"type": "speech",
+							"emotion": "base",
+							"speaker": "ivar",
+							"content": {
+								"korean": "이런 '기이한 추위'에 대한 소문은 들어봤지만… 실제로 보니 더욱 압도적이군.",
+								"english": "I've heard rumors of this 'peculiar chill,' but seeing it in person... it's even more overwhelming.",
+								"japanese": "この『奇妙な寒気』の噂は聞いていたが…実際に目にすると、さらに圧倒されるな。",
+								"chinese": "我听说过这种‘诡异的寒冷’的传闻……亲眼所见，更是令人窒息。",
+								"french": "J'avais entendu des rumeurs sur ce 'froid étrange'... mais le voir en vrai, c'est encore plus accablant.",
+								"spanish": "Había oído rumores de este 'frío peculiar'... pero verlo en persona es aún más abrumador.",
+								"vietnamese": "Từng nghe đồn về 'cái lạnh kỳ lạ' này... nhưng tận mắt chứng kiến, nó còn choáng ngợp hơn.",
+								"thai": "เคยได้ยินข่าวลือเกี่ยวกับ 'ความหนาวประหลาด' นี้มาบ้าง... แต่พอได้เห็นของจริงแล้ว มันยิ่งน่าสะพรึงกลัวกว่าเดิม",
+								"hindi": "मैंने इस 'अजीब ठंड' की अफवाहें सुनी थीं... लेकिन इसे साक्षात देखना, और भी भयावह है。"
+							}
+						}
+					]
+				},
+				{
+					"id": 5,
+					"dialogue": [
+						{
+							"speaker": "ivar",
+							"spot": [
+								2,
+								2
+							],
+							"action": "enter",
+							"type": "direction",
+							"duration_ms": 500
+						},
+						{
+							"content": {
+								"korean": "고대 문서에 '영원한 얼음'이라는 구절이 있어.",
+								"english": "Ancient texts mention a passage: 'Eternal Ice'.",
+								"japanese": "古文書に「永遠の氷」という記述がある。",
+								"chinese": "古籍中有一段话，提到了‘永恒之冰’。",
+								"french": "Des textes anciens mentionnent un passage : 'Glace Éternelle'.",
+								"spanish": "Los textos antiguos mencionan un pasaje: 'Hielo Eterno'.",
+								"vietnamese": "Văn thư cổ có một đoạn nói về 'Băng Vĩnh Cửu'.",
+								"thai": "ในเอกสารโบราณมีข้อความว่า 'น้ำแข็งนิรันดร์'",
+								"hindi": "प्राचीन ग्रंथों में 'शाश्वत बर्फ' का उल्लेख है।"
+							},
+							"speaker": "ivar",
+							"emotion": "base",
+							"type": "speech"
+						},
+						{
+							"speaker": "character_any",
+							"content": {
+								"korean": "영원한 얼음?",
+								"english": "Eternal Ice?",
+								"japanese": "永遠の氷、だと？",
+								"chinese": "永恒之冰？",
+								"french": "Glace Éternelle ?",
+								"spanish": "¿Hielo Eterno?",
+								"vietnamese": "Băng Vĩnh Cửu ư?",
+								"thai": "น้ำแข็งนิรันดร์?",
+								"hindi": "शाश्वत बर्फ?"
+							},
+							"emotion": "base",
+							"type": "speech"
+						},
+						{
+							"type": "speech",
+							"emotion": "base",
+							"speaker": "ivar",
+							"content": {
+								"korean": "자연의 것이 아닌, 인위적인 차가움을 경고하는 내용이지.",
+								"english": "It warns of an artificial cold, not natural.",
+								"japanese": "それは自然のものではなく、人為的な冷たさを警告する内容だ。",
+								"chinese": "它警告的并非自然之寒，而是人造的冰冷。",
+								"french": "Cela met en garde contre un froid artificiel, pas naturel.",
+								"spanish": "Advierte de un frío artificial, no natural.",
+								"vietnamese": "Nó cảnh báo về một cái lạnh nhân tạo, không phải tự nhiên.",
+								"thai": "มันเตือนถึงความหนาวเย็นที่มนุษย์สร้างขึ้น ไม่ใช่จากธรรมชาติ",
+								"hindi": "यह प्राकृतिक नहीं, बल्कि कृत्रिम ठंडक की चेतावनी देता है।"
+							}
+						},
+						{
+							"content": {
+								"korean": "사라진 자들이 남긴 흔적이… '얼음 무덤'에 대한 기록과 일치해.",
+								"english": "Traces left by the vanished ones... align with records of an 'Ice Tomb'.",
+								"japanese": "消え去った者たちが残した痕跡は…『氷の墓』に関する記録と一致する。",
+								"chinese": "失踪者留下的痕迹……与‘冰之墓’的记载相符。",
+								"french": "Les traces laissées par les disparus... correspondent aux archives d'une 'Tombe de Glace'.",
+								"spanish": "Los rastros dejados por los desaparecidos... coinciden con los registros de una 'Tumba de Hielo'.",
+								"vietnamese": "Dấu vết những kẻ biến mất để lại... trùng khớp với ghi chép về 'Mộ Băng'.",
+								"thai": "ร่องรอยที่ผู้หายสาบสูญทิ้งไว้... สอดคล้องกับบันทึกของ 'สุสานน้ำแข็ง'",
+								"hindi": "लुप्त हुए लोगों द्वारा छोड़े गए निशान... 'बर्फ की कब्र' के रिकॉर्ड से मेल खाते हैं।"
+							},
+							"speaker": "ivar",
+							"type": "speech",
+							"emotion": "sad"
+						}
+					]
+				},
+				{
+					"dialogue": [
+						{
+							"speaker": "ivar",
+							"spot": [
+								3,
+								2
+							],
+							"action": "enter",
+							"type": "direction",
+							"duration_ms": 500
+						},
+						{
+							"emotion": "angry",
+							"type": "speech",
+							"speaker": "ivar",
+							"content": {
+								"korean": "이건 단순한 미스터리가 아니야. 분명한 위협이지.",
+								"english": "This isn't just a mystery. It's a clear threat.",
+								"japanese": "これは単なる謎ではない。明確な脅威だ。",
+								"chinese": "这不只是一个谜团。这是一个明显的威胁。",
+								"french": "Ce n'est pas qu'un simple mystère. C'est une menace évidente.",
+								"spanish": "Esto no es solo un misterio. Es una amenaza clara.",
+								"vietnamese": "Đây không chỉ là một bí ẩn. Đây là một mối đe dọa rõ ràng.",
+								"thai": "นี่ไม่ใช่แค่เรื่องลึกลับ แต่มันคือภัยคุกคามที่ชัดเจน",
+								"hindi": "यह सिर्फ एक रहस्य नहीं है। यह एक स्पष्ट खतरा है।"
+							}
+						},
+						{
+							"emotion": "sad",
+							"type": "speech",
+							"speaker": "character_any",
+							"content": {
+								"korean": "우리가 뭘 할 수 있을까요…",
+								"english": "What can we do...?",
+								"japanese": "我々に何ができるというんだ…",
+								"chinese": "我们能做什么……",
+								"french": "Que pouvons-nous faire...?",
+								"spanish": "¿Qué podemos hacer...?",
+								"vietnamese": "Chúng ta có thể làm gì đây...?",
+								"thai": "เราจะทำอะไรได้บ้าง...",
+								"hindi": "हम क्या कर सकते हैं...?"
+							}
+						},
+						{
+							"emotion": "base",
+							"type": "speech",
+							"content": {
+								"korean": "강함의 끝은 언제나 시험받는 법. 여기서 물러설 수는 없어.",
+								"english": "The limits of strength are always tested. We can't back down here.",
+								"japanese": "強さの限界は常に試されるもの。ここで退くわけにはいかない。",
+								"chinese": "力量的极限总会受到考验。我们不能就此退缩。",
+								"french": "Les limites de la force sont toujours mises à l'épreuve. Nous ne pouvons pas reculer ici.",
+								"spanish": "Los límites de la fuerza siempre se ponen a prueba. No podemos retroceder aquí.",
+								"vietnamese": "Giới hạn của sức mạnh luôn bị thử thách. Chúng ta không thể lùi bước ở đây.",
+								"thai": "ความแข็งแกร่งมักถูกทดสอบเสมอ เราจะถอยไม่ได้ที่นี่",
+								"hindi": "शक्ति की सीमा हमेशा परखी जाती है। हम यहाँ पीछे नहीं हट सकते।"
+							},
+							"speaker": "ivar"
+						},
+						{
+							"type": "speech",
+							"emotion": "base",
+							"content": {
+								"korean": "이 '얼음 무덤'의 진실을 마주해야 한다. 그게 우리의 운명이라면.",
+								"english": "We must face the truth of this 'Ice Tomb'. If that is our destiny.",
+								"japanese": "この『氷の墓』の真実を直視しなければならない。それが我々の運命ならば。",
+								"chinese": "我们必须面对这座‘冰之墓’的真相。如果那是我们的命运。",
+								"french": "Nous devons affronter la vérité de cette 'Tombe de Glace'. Si tel est notre destin.",
+								"spanish": "Debemos enfrentar la verdad de esta 'Tumba de Hielo'. Si ese es nuestro destino.",
+								"vietnamese": "Chúng ta phải đối mặt với sự thật của 'Mộ Băng' này. Nếu đó là định mệnh của chúng ta.",
+								"thai": "เราต้องเผชิญหน้ากับความจริงของ 'สุสานน้ำแข็ง' แห่งนี้ หากนั่นคือโชคชะตาของเรา",
+								"hindi": "हमें इस 'बर्फ की कब्र' की सच्चाई का सामना करना होगा। अगर यही हमारा भाग्य है।"
+							},
+							"speaker": "ivar"
+						}
+					],
+					"id": 9
+				},
+				{
+					"win_dialogue": [
+						{
+							"type": "direction",
+							"duration_ms": 500,
+							"spot": [
+								1,
+								2
+							],
+							"action": "enter",
+							"speaker": "ivar"
+						},
+						{
+							"emotion": "base",
+							"type": "speech",
+							"speaker": "ivar",
+							"content": {
+								"korean": "역시 대단하군. 하지만 방심하지 마라.",
+								"english": "Impressive, as expected. But don't let your guard down.",
+								"japanese": "やはり見事だ。だが、油断するな。",
+								"chinese": "果然厉害。但别放松警惕。",
+								"french": "Impressionnant, comme prévu. Mais ne baisse pas ta garde.",
+								"spanish": "Impresionante, como era de esperar. Pero no bajes la guardia.",
+								"vietnamese": "Quả nhiên là lợi hại. Nhưng đừng lơ là.",
+								"thai": "ยอดเยี่ยมสมเป็นแก แต่ก็อย่าได้ประมาท",
+								"hindi": "प्रभावशाली, जैसा कि अपेक्षित था। लेकिन लापरवाह मत बनो।"
+							}
+						},
+						{
+							"speaker": "random_boss",
+							"content": {
+								"korean": "…후회하게 될 것이다. 이 미약한 존재들아.",
+								"english": "...You will regret this. You insignificant beings.",
+								"japanese": "…後悔することになるだろう。この取るに足らない存在どもめ。",
+								"chinese": "…你们会后悔的。这些微不足道的存在。",
+								"french": "...Vous le regretterez. Êtres insignifiants.",
+								"spanish": "...Lo lamentaréis. Seres insignificantes.",
+								"vietnamese": "...Ngươi sẽ phải hối hận thôi. Hỡi những kẻ yếu ớt này.",
+								"thai": "…พวกเจ้าจะต้องเสียใจ เจ้าพวกสิ่งมีชีวิตอันอ่อนแอเอ๋ย",
+								"hindi": "तुम्हें पछताना पड़ेगा। तुम तुच्छ प्राणी।"
+							},
+							"type": "speech",
+							"emotion": "sad"
+						},
+						{
+							"type": "speech",
+							"emotion": "base",
+							"content": {
+								"korean": "끝난 건가…",
+								"english": "Is it... over?",
+								"japanese": "終わったのか…",
+								"chinese": "结束了吗…",
+								"french": "C'est... fini ?",
+								"spanish": "¿Se acabó...?",
+								"vietnamese": "Đã... kết thúc rồi sao?",
+								"thai": "จบแล้วหรือนี่…",
+								"hindi": "क्या यह... खत्म हो गया?"
+							},
+							"speaker": "character_any"
+						},
+						{
+							"content": {
+								"korean": "싸늘한 증거들의 실체는 사라졌다. 그러나 더 깊은 미스터리가 시작될 뿐이었다.",
+								"english": "The cold evidence vanished. Yet, a deeper mystery had only just begun.",
+								"japanese": "冷たい証拠の正体は消え去った。だが、より深き謎が始まったに過ぎなかった。",
+								"chinese": "冰冷的证据实体消失了。然而，更深的谜团才刚刚开始。",
+								"french": "La froide évidence a disparu. Pourtant, un mystère plus profond venait seulement de commencer.",
+								"spanish": "La fría evidencia se desvaneció. Sin embargo, un misterio más profundo acababa de empezar.",
+								"vietnamese": "Bằng chứng lạnh lẽo đã tan biến. Tuy nhiên, một bí ẩn sâu sắc hơn chỉ mới bắt đầu.",
+								"thai": "หลักฐานอันเยือกเย็นได้อันตรธานหายไป ทว่าปริศนาที่ลึกซึ้งยิ่งกว่าเพิ่งจะเริ่มต้นขึ้น",
+								"hindi": "ठंडे सबूत मिट गए। फिर भी, एक गहरा रहस्य अभी शुरू ही हुआ था।"
+							},
+							"speaker": "narrator",
+							"type": "speech",
+							"emotion": "base"
+						}
+					],
+					"lose_dialogue": [
+						{
+							"emotion": "angry",
+							"type": "speech",
+							"content": {
+								"korean": "어리석은 것들. 너희는 그저 얼어붙을 뿐이다.",
+								"english": "Foolish mortals. You will simply freeze.",
+								"japanese": "愚かな者どもめ。お前たちはただ凍りつくだけだ。",
+								"chinese": "愚蠢的东西。你们只会冻结。",
+								"french": "Imbéciles. Vous allez simplement geler.",
+								"spanish": "Estúpidos. Simplemente os congelaréis.",
+								"vietnamese": "Lũ ngu ngốc. Các ngươi sẽ chỉ đóng băng mà thôi.",
+								"thai": "พวกเจ้ามันโง่เขลา เจ้าจะแข็งตายอยู่ตรงนี้",
+								"hindi": "मूर्ख प्राणी। तुम बस जम जाओगे।"
+							},
+							"speaker": "random_boss"
+						},
+						{
+							"type": "speech",
+							"emotion": "angry",
+							"speaker": "character_any",
+							"content": {
+								"korean": "아직… 끝나지 않았어.",
+								"english": "It's not... over yet.",
+								"japanese": "まだ…終わってない。",
+								"chinese": "还没有…结束。",
+								"french": "Ce n'est pas... encore fini.",
+								"spanish": "Aún no... ha terminado.",
+								"vietnamese": "Vẫn chưa… kết thúc đâu.",
+								"thai": "ยัง… ไม่จบหรอก",
+								"hindi": "अभी... खत्म नहीं हुआ है।"
+							}
+						}
+					],
+					"id": 15,
+					"dialogue": [
+						{
+							"type": "speech",
+							"emotion": "base",
+							"content": {
+								"korean": "거대한 그림자가 나타났다. 온몸에서 서늘한 기운이 뿜어져 나왔다.",
+								"english": "A colossal shadow appeared. A chilling aura emanated from its entire form.",
+								"japanese": "巨大な影が現れた。全身から冷たい気配が立ち上る。",
+								"chinese": "一个巨大的影子出现了。一股寒意从它全身散发出来。",
+								"french": "Une ombre colossale est apparue. Une aura glaciale émanait de toute sa forme.",
+								"spanish": "Una sombra colosal apareció. Un aura helada emanaba de todo su ser.",
+								"vietnamese": "Một bóng đen khổng lồ xuất hiện. Một luồng khí lạnh lẽo tỏa ra từ toàn thân nó.",
+								"thai": "เงาขนาดมหึมาปรากฏขึ้น ไอเย็นยะเยือกแผ่ออกมาจากทั่วร่าง",
+								"hindi": "एक विशाल छाया प्रकट हुई। उसके पूरे शरीर से एक ठंडी आभा निकल रही थी।"
+							},
+							"speaker": "narrator"
+						},
+						{
+							"type": "speech",
+							"emotion": "angry",
+							"content": {
+								"korean": "감히 나의 영역에 발을 들이다니.",
+								"english": "How dare you trespass into my domain.",
+								"japanese": "よくも私の領域に足を踏み入れたな。",
+								"chinese": "竟敢踏入我的领域。",
+								"french": "Comment oses-tu pénétrer mon domaine.",
+								"spanish": "¿Cómo osas pisar mi dominio?",
+								"vietnamese": "Ngươi dám đặt chân vào lãnh địa của ta.",
+								"thai": "แกกล้าดียังไงมาเหยียบย่ำอาณาเขตของข้า",
+								"hindi": "तुम्हारी हिम्मत कैसे हुई मेरे क्षेत्र में कदम रखने की।"
+							},
+							"speaker": "random_boss"
+						},
+						{
+							"type": "speech",
+							"emotion": "angry",
+							"speaker": "character_any",
+							"content": {
+								"korean": "네가… 이 모든 일의 원흉이냐!",
+								"english": "So, you're the one... behind all of this!",
+								"japanese": "貴様が…この全ての元凶か！",
+								"chinese": "你就是…这一切的幕后黑手吗！",
+								"french": "C'est toi... le cerveau derrière tout ça !",
+								"spanish": "¿Eres tú... el cerebro detrás de todo esto?",
+								"vietnamese": "Ngươi… chính là kẻ chủ mưu của tất cả sao!",
+								"thai": "แกนั่นเอง… ต้นเหตุของเรื่องทั้งหมดนี่!",
+								"hindi": "तो तुम हो… इन सब के पीछे की वजह!"
+							}
+						},
+						{
+							"speaker": "ivar",
+							"spot": [
+								1,
+								2
+							],
+							"action": "enter",
+							"type": "direction",
+							"duration_ms": 500
+						},
+						{
+							"content": {
+								"korean": "{random_boss}. 너의 '강함'이 어디까지인지 나 이바르가 직접 확인하겠다.",
+								"english": "{random_boss}. I, Ivar, shall personally gauge the extent of your 'strength'.",
+								"japanese": "{random_boss}よ。貴様の「強さ」がどこまでか、このイヴァルが直接確認してやろう。",
+								"chinese": "{random_boss}。我伊瓦尔会亲自确认你的“强大”究竟到何种程度。",
+								"french": "{random_boss}. Moi, Ivar, je vais personnellement vérifier l'étendue de ta \"force\".",
+								"spanish": "{random_boss}. Yo, Ivar, comprobaré personalmente hasta dónde llega tu \"fuerza\".",
+								"vietnamese": "{random_boss}. Ta, Ivar, sẽ tự mình kiểm chứng 'sức mạnh' của ngươi đến đâu.",
+								"thai": "{random_boss} ข้าไอบาร์จะขอพิสูจน์ \"ความแข็งแกร่ง\" ของเจ้าด้วยตัวเอง",
+								"hindi": "{random_boss}. मैं, इवार, तुम्हारी 'शक्ति' की सीमा का व्यक्तिगत रूप से आकलन करूंगा।"
+							},
+							"speaker": "ivar",
+							"emotion": "base",
+							"type": "speech"
+						},
+						{
+							"duration_ms": 400,
+							"type": "direction",
+							"direction": "down",
+							"action": "exit",
+							"speaker": "ivar"
+						}
+					]
+				}
+			]
+		},
+		{
+			"scenario_id": "snowy_weaverfrost_50_03",
+			"order": 3,
+			"act": "rising",
+			"theme": "snowy",
+			"actors": {
+				"bran": {
+					"id": "mon_985fcdcc-1bf2-4822-aa2f-292ae9353456",
+					"name": {
+						"korean": "브란",
+						"english": "Bran",
+						"japanese": "ブラン",
+						"chinese": "布兰",
+						"french": "Bran",
+						"spanish": "Bran",
+						"vietnamese": "Bran",
+						"thai": "แบรน",
+						"hindi": "ब्रैन"
+					},
+					"description": "",
+					"face_image_url": "https://imagedelivery.net/WTEqQNGFb-l-IHS6IGnzUQ/42cde50b-7453-47b1-04df-73500ad21d00/public",
+					"battle_sprite_url": "https://imagedelivery.net/WTEqQNGFb-l-IHS6IGnzUQ/4ecba7ed-ec7e-4a8e-74dc-bf3e711b4d00/public"
+				}
+			},
+			"boss": {
+				"pool_id": "random_boss"
+			},
+			"prologue": {
+				"korean": [
+					"한때 신성하다 불리던 빙탑.",
+					"그 아래 잠든 고대 문명은 재앙의 전조였다.",
+					"길을 잃은 자들을 되돌려보내려는 자.",
+					"그리고 피할 수 없는 운명을 짜는 거미의 전설.",
+					"얼어붙은 진실이 서서히 드러난다."
+				],
+				"english": [
+					"The Ice Spire, once called divine.",
+					"The ancient civilization slumbering beneath it was a prelude to disaster.",
+					"One who seeks to return the lost.",
+					"And the legend of the spider weaving an inescapable fate.",
+					"The frozen truth slowly reveals itself."
+				],
+				"japanese": [
+					"かつて神聖と謳われた氷の塔。",
+					"その下に眠る古代文明は、災厄の前兆であった。",
+					"道に迷いし者を、引き返させようとする者。",
+					"そして、避けられぬ運命を織りなす蜘蛛の伝説。",
+					"凍てついた真実が、徐々に明らかになる。"
+				],
+				"chinese": [
+					"冰塔，曾被称为神圣。",
+					"其下沉睡的古老文明是灾难的预兆。",
+					"试图让迷失者回头之人。",
+					"以及编织不可避免命运的蜘蛛传说。",
+					"冰封的真相渐渐显露。"
+				],
+				"french": [
+					"La Tour de Glace, jadis appelée divine.",
+					"La civilisation antique endormie sous elle était un prélude au désastre.",
+					"Celui qui cherche à ramener ceux qui sont perdus.",
+					"Et la légende de l'araignée tissant un destin inévitable.",
+					"La vérité gelée se révèle lentement."
+				],
+				"spanish": [
+					"La Aguja de Hielo, una vez llamada divina.",
+					"La antigua civilización durmiendo bajo ella fue un presagio de desastre.",
+					"Aquel que busca devolver a los perdidos.",
+					"Y la leyenda de la araña tejiendo un destino ineludible.",
+					"La verdad congelada se revela lentamente."
+				],
+				"vietnamese": [
+					"Tháp Băng, từng được gọi là thần thánh.",
+					"Nền văn minh cổ đại ngủ say dưới nó là điềm báo của tai ương.",
+					"Kẻ tìm cách đưa những người lạc lối trở về.",
+					"Và truyền thuyết về con nhện dệt nên số phận không thể tránh khỏi.",
+					"Sự thật đóng băng dần dần hé lộ."
+				],
+				"thai": [
+					"หอคอยน้ำแข็ง ซึ่งครั้งหนึ่งเคยถูกขนานนามว่าศักดิ์สิทธิ์",
+					"อารยธรรมโบราณที่หลับใหลอยู่เบื้องล่างนั้นเป็นลางบอกเหตุแห่งหายนะ",
+					"ผู้ที่พยายามส่งผู้หลงทางกลับคืน",
+					"และตำนานของแมงมุมที่ถักทอโชคชะตาที่หลีกเลี่ยงไม่ได้",
+					"ความจริงที่ถูกแช่แข็งกำลังค่อยๆ เผยออกมา"
+				],
+				"hindi": [
+					"बर्फ की मीनार, जिसे कभी पवित्र कहा जाता था।",
+					"उसके नीचे सोई हुई प्राचीन सभ्यता आपदा का शगुन थी।",
+					"वह जो भटके हुए लोगों को वापस लौटाना चाहता है।",
+					"और उस मकड़ी की किंवदंती जो एक अपरिहार्य भाग्य बुन रही है।",
+					"जमी हुई सच्चाई धीरे-धीरे सामने आ रही है।"
+				]
+			},
+			"rooms": [
+				{
+					"dialogue": [
+						{
+							"emotion": "base",
+							"speaker": "narrator",
+							"type": "speech",
+							"content": {
+								"korean": "끝없이 펼쳐진 눈밭, 그 위로 거미줄 첨탑이 솟아 있었다.",
+								"english": "An endless snowfield, upon which a spiderweb spire soared.",
+								"japanese": "果てなく広がる雪原、その上に蜘蛛の巣の尖塔がそびえ立っていた。",
+								"chinese": "一望无际的雪原上，矗立着蜘蛛网般的尖塔。",
+								"french": "Une étendue de neige infinie, sur laquelle s'élevait une flèche en toile d'araignée.",
+								"spanish": "Un campo de nieve interminable, sobre el cual se alzaba una aguja de telaraña.",
+								"vietnamese": "Một cánh đồng tuyết vô tận, trên đó sừng sững một ngọn tháp mạng nhện.",
+								"thai": "ทุ่งหิมะอันกว้างใหญ่ไร้ที่สิ้นสุด เหนือขึ้นไปมีหอคอยใยแมงมุมตั้งตระหง่าน",
+								"hindi": "एक अंतहीन बर्फ का मैदान, जिस पर एक मकड़ी के जाले जैसा शिखर खड़ा था।"
+							}
+						},
+						{
+							"content": {
+								"korean": "여기가… 그 빙탑? 소문은 흉흉하지만.",
+								"english": "This is... the Ice Spire? The rumors are ominous, but.",
+								"japanese": "ここが…あの氷の塔？噂は不吉だが。",
+								"chinese": "这里就是……那座冰塔？传闻很不吉利，但是。",
+								"french": "C'est ici... la Tour de Glace ? Les rumeurs sont inquiétantes, mais.",
+								"spanish": "¿Aquí es... la Aguja de Hielo? Los rumores son ominosos, pero.",
+								"vietnamese": "Đây là... Tháp Băng đó ư? Tin đồn thật đáng sợ, nhưng...",
+								"thai": "ที่นี่คือ... หอคอยน้ำแข็งนั่นหรือ? ข่าวลือมันดูน่ากลัวนะ แต่...",
+								"hindi": "यह... बर्फ की मीनार है? अफवाहें अशुभ हैं, लेकिन।"
+							},
+							"type": "speech",
+							"speaker": "character_any",
+							"emotion": "base"
+						},
+						{
+							"duration_ms": 500,
+							"speaker": "bran",
+							"action": "enter",
+							"type": "direction",
+							"spot": [
+								4,
+								3
+							]
+						},
+						{
+							"emotion": "base",
+							"type": "speech",
+							"speaker": "bran",
+							"content": {
+								"korean": "여기까지 왔군. 길을 잃은 자는 되돌아가야 하거늘.",
+								"english": "You've come this far. Those who are lost should return.",
+								"japanese": "ここまで来たか。道に迷いし者は、引き返すべきなのだが。",
+								"chinese": "竟然走到这里了。迷失者应该回头才对。",
+								"french": "Tu es venu jusqu'ici. Ceux qui sont perdus devraient rebrousser chemin.",
+								"spanish": "Has llegado hasta aquí. Los que están perdidos deberían regresar.",
+								"vietnamese": "Ngươi đã đến tận đây rồi. Những kẻ lạc lối nên quay về.",
+								"thai": "เจ้ามาไกลถึงเพียงนี้แล้ว ผู้หลงทางควรจะกลับไป",
+								"hindi": "तुम इतनी दूर आ गए। भटके हुए लोगों को वापस चले जाना चाहिए।"
+							}
+						},
+						{
+							"speaker": "character_any",
+							"type": "speech",
+							"emotion": "base",
+							"content": {
+								"korean": "당신은 누구시죠?",
+								"english": "Who are you?",
+								"japanese": "あなたは誰ですか？",
+								"chinese": "您是谁？",
+								"french": "Qui êtes-vous ?",
+								"spanish": "¿Quién es usted?",
+								"vietnamese": "Ngươi là ai?",
+								"thai": "ท่านคือใคร?",
+								"hindi": "आप कौन हैं?"
+							}
+						},
+						{
+							"emotion": "sad",
+							"type": "speech",
+							"speaker": "bran",
+							"content": {
+								"korean": "돌아가. 저 빙탑은… 신성한 것이 아니야.",
+								"english": "Go back. That Ice Spire... it's not sacred.",
+								"japanese": "引き返せ。あの氷の塔は…神聖なものではない。",
+								"chinese": "回去。那座冰塔……并非神圣之物。",
+								"french": "Retourne. Cette Tour de Glace... elle n'est pas sacrée.",
+								"spanish": "Regresa. Esa Aguja de Hielo... no es sagrada.",
+								"vietnamese": "Quay về đi. Tháp Băng đó... không hề thần thánh.",
+								"thai": "กลับไปซะ หอคอยน้ำแข็งนั่น... ไม่ใช่สิ่งศักดิ์สิทธิ์",
+								"hindi": "वापस जाओ। वह बर्फ की मीनार... पवित्र नहीं है।"
+							}
+						}
+					],
+					"id": 1
+				},
+				{
+					"id": 3,
+					"dialogue": [
+						{
+							"duration_ms": 500,
+							"speaker": "bran",
+							"action": "enter",
+							"spot": [
+								2,
+								3
+							],
+							"type": "direction"
+						},
+						{
+							"speaker": "character_any",
+							"type": "speech",
+							"emotion": "base",
+							"content": {
+								"korean": "신성한 게 아니라니, 무슨 말씀이시죠?",
+								"english": "Not sacred? What do you mean?",
+								"japanese": "神聖ではないと？どういうことですか？",
+								"chinese": "不是神圣的？您是什么意思？",
+								"french": "Pas sacré ? Qu'est-ce que vous voulez dire ?",
+								"spanish": "¿No es sagrado? ¿A qué se refiere?",
+								"vietnamese": "Không thiêng liêng ư? Ngài đang nói gì vậy?",
+								"thai": "ไม่ใช่สิ่งศักดิ์สิทธิ์รึ? ท่านหมายความว่าอย่างไร?",
+								"hindi": "पवित्र नहीं? आपका क्या मतलब है?"
+							}
+						},
+						{
+							"content": {
+								"korean": "고대 문헌에 이르기를, 저것은 살아있는 재앙. '운명을 짜는 거미'의 심장.",
+								"english": "Ancient texts say it's a living calamity. The heart of the 'Fate-Weaving Spider'.",
+								"japanese": "古代文献には、あれは生ける災厄、『運命を紡ぐ蜘蛛』の心臓だと。",
+								"chinese": "古代文献记载，那是活生生的灾厄。是“编织命运的蜘蛛”的心脏。",
+								"french": "Les textes anciens disent que c'est une calamité vivante. Le cœur de « l'Araignée Tisseuse de Destin ».",
+								"spanish": "Los textos antiguos dicen que es una calamidad viviente. El corazón de la 'Araña Tejedora del Destino'.",
+								"vietnamese": "Cổ thư chép rằng, đó là một tai họa sống. Trái tim của 'Nhện Dệt Mệnh'.",
+								"thai": "คัมภีร์โบราณกล่าวไว้ว่า นั่นคือภัยพิบัติที่มีชีวิต หัวใจของ 'แมงมุมถักทอโชคชะตา'",
+								"hindi": "प्राचीन ग्रंथों में कहा गया है, यह एक जीवित आपदा है। 'भाग्य बुनने वाली मकड़ी' का दिल।"
+							},
+							"speaker": "bran",
+							"type": "speech",
+							"emotion": "angry"
+						},
+						{
+							"type": "speech",
+							"speaker": "character_any",
+							"emotion": "base",
+							"content": {
+								"korean": "운명을 짜는 거미…?",
+								"english": "The Fate-Weaving Spider...?",
+								"japanese": "運命を紡ぐ蜘蛛…？",
+								"chinese": "编织命运的蜘蛛……？",
+								"french": "L'Araignée Tisseuse de Destin... ?",
+								"spanish": "¿La Araña Tejedora del Destino...?",
+								"vietnamese": "Nhện Dệt Mệnh…?",
+								"thai": "แมงมุมถักทอโชคชะตา...?",
+								"hindi": "भाग्य बुनने वाली मकड़ी...?"
+							}
+						},
+						{
+							"content": {
+								"korean": "너희는 이 차가움을 이해하지 못한다. 단순한 얼음이 아니다.",
+								"english": "You don't understand this coldness. It's not mere ice.",
+								"japanese": "お前たちにはこの冷たさが理解できない。ただの氷ではないのだ。",
+								"chinese": "你们不懂这种冰冷。它不是单纯的冰。",
+								"french": "Vous ne comprenez pas cette froideur. Ce n'est pas de la simple glace.",
+								"spanish": "No comprendéis esta frialdad. No es simple hielo.",
+								"vietnamese": "Các ngươi không hiểu được cái lạnh này. Nó không phải chỉ là băng đơn thuần.",
+								"thai": "พวกเจ้าไม่เข้าใจความเย็นนี้ มันไม่ใช่แค่น้ำแข็งธรรมดา",
+								"hindi": "तुम इस ठंडक को नहीं समझते। यह सिर्फ़ बर्फ़ नहीं है।"
+							},
+							"type": "speech",
+							"speaker": "bran",
+							"emotion": "sad"
+						}
+					]
+				},
+				{
+					"id": 5,
+					"dialogue": [
+						{
+							"action": "enter",
+							"type": "direction",
+							"spot": [
+								3,
+								2
+							],
+							"duration_ms": 500,
+							"speaker": "bran"
+						},
+						{
+							"emotion": "angry",
+							"type": "speech",
+							"speaker": "bran",
+							"content": {
+								"korean": "거미는 너희의 발자취를 따라 실을 잣고 있다. 이 길의 끝은 파멸뿐.",
+								"english": "The Spider is spinning threads, following your footsteps. This path ends only in ruin.",
+								"japanese": "蜘蛛はお前たちの足跡を辿って糸を紡いでいる。この道の先には破滅しかない。",
+								"chinese": "蜘蛛正沿着你们的足迹纺织着丝线。这条路的尽头只有毁灭。",
+								"french": "L'Araignée tisse ses fils, suivant vos pas. Cette voie ne mène qu'à la ruine.",
+								"spanish": "La Araña está tejiendo hilos, siguiendo vuestras huellas. El final de este camino es solo la perdición.",
+								"vietnamese": "Con Nhện đang giăng tơ theo dấu chân của các ngươi. Cuối con đường này chỉ có sự hủy diệt.",
+								"thai": "แมงมุมกำลังชักใยตามรอยเท้าของพวกเจ้า จุดจบของเส้นทางนี้มีแต่ความพินาศ",
+								"hindi": "मकड़ी तुम्हारे पदचिह्नों का अनुसरण करते हुए धागे बुन रही है। इस रास्ते का अंत केवल विनाश है।"
+							}
+						},
+						{
+							"emotion": "base",
+							"speaker": "character_any",
+							"type": "speech",
+							"content": {
+								"korean": "그렇다고 멈출 순 없어요. 사라진 이들을 찾아야 해요.",
+								"english": "We can't stop, though. We have to find those who've vanished.",
+								"japanese": "だからといって、立ち止まるわけにはいきません。消えた人々を見つけなければ。",
+								"chinese": "即使如此，我们也不能停下。我们必须找到那些消失的人。",
+								"french": "Nous ne pouvons pas nous arrêter pour autant. Nous devons retrouver ceux qui ont disparu.",
+								"spanish": "Aún así, no podemos detenernos. Debemos encontrar a los que han desaparecido.",
+								"vietnamese": "Nhưng chúng tôi không thể dừng lại. Chúng tôi phải tìm những người đã mất tích.",
+								"thai": "ถึงอย่างนั้นก็หยุดไม่ได้ เราต้องตามหาผู้ที่หายไป",
+								"hindi": "फिर भी, हम रुक नहीं सकते। हमें उन लोगों को ढूंढना होगा जो गायब हो गए हैं।"
+							}
+						},
+						{
+							"emotion": "sad",
+							"speaker": "bran",
+							"type": "speech",
+							"content": {
+								"korean": "네놈의 운명도, 이미 짜여지고 있을 터.",
+								"english": "Your fate, too, must already be woven.",
+								"japanese": "貴様の運命も、もう既に紡がれていることだろう。",
+								"chinese": "你的命运，想必也已经被编织好了吧。",
+								"french": "Ton destin aussi, doit déjà être tissé.",
+								"spanish": "Tu destino también, ya debe de estar tejido.",
+								"vietnamese": "Số phận của ngươi, chắc cũng đã được dệt rồi.",
+								"thai": "ชะตาของเจ้า ก็คงถูกถักทอไว้แล้วเช่นกัน",
+								"hindi": "तुम्हारा भाग्य भी, पहले से ही बुना जा चुका होगा।"
+							}
+						},
+						{
+							"emotion": "base",
+							"speaker": "character_any",
+							"type": "speech",
+							"content": {
+								"korean": "…미신 아닌가요?",
+								"english": "...Isn't that just superstition?",
+								"japanese": "…迷信じゃないですか？",
+								"chinese": "……这不是迷信吗？",
+								"french": "…N'est-ce pas juste une superstition ?",
+								"spanish": "¿...No es una superstición?",
+								"vietnamese": "...Không phải là mê tín sao?",
+								"thai": "...ไม่ใช่เรื่องงมงายรึ?",
+								"hindi": "…यह अंधविश्वास नहीं है क्या?"
+							}
+						},
+						{
+							"content": {
+								"korean": "고대 문서에 기록된 '영원한 얼음'에 대한 구절들이 떠올랐다. 자연의 것이 아닌, 인위적인 차가움.",
+								"english": "Passages about 'Eternal Ice' recorded in ancient documents came to mind. An artificial coldness, not of nature.",
+								"japanese": "古代文書に記された「永遠の氷」に関する記述が脳裏をよぎった。自然のものではなく、人為的な冷たさ。",
+								"chinese": "古代文献中记载的关于“永恒之冰”的章节浮现在脑海。那是一种非自然的，人为的冰冷。",
+								"french": "Des passages sur la « Glace Éternelle » enregistrés dans des documents anciens me sont venus à l'esprit. Une froideur artificielle, non naturelle.",
+								"spanish": "Me vinieron a la mente pasajes sobre el 'Hielo Eterno' registrados en documentos antiguos. Una frialdad artificial, no natural.",
+								"vietnamese": "Những đoạn văn về 'Băng Vĩnh Cửu' được ghi lại trong cổ thư hiện lên trong đầu. Một sự lạnh lẽo nhân tạo, không phải của tự nhiên.",
+								"thai": "บทความเกี่ยวกับ 'น้ำแข็งนิรันดร์' ที่บันทึกไว้ในเอกสารโบราณผุดขึ้นมาในใจ ความเย็นที่เกิดจากมนุษย์ ไม่ใช่ธรรมชาติ",
+								"hindi": "प्राचीन दस्तावेजों में दर्ज 'शाश्वत बर्फ़' के अंश याद आए। एक कृत्रिम ठंडक, प्राकृतिक नहीं।"
+							},
+							"speaker": "narrator",
+							"type": "speech",
+							"emotion": "base"
+						}
+					]
+				},
+				{
+					"dialogue": [
+						{
+							"speaker": "bran",
+							"duration_ms": 500,
+							"type": "direction",
+							"spot": [
+								2,
+								4
+							],
+							"action": "enter"
+						},
+						{
+							"speaker": "bran",
+							"type": "speech",
+							"emotion": "sad",
+							"content": {
+								"korean": "여기까지 왔다면… 더 이상 되돌릴 수 없다.",
+								"english": "If you've come this far... there's no turning back.",
+								"japanese": "ここまで来たのなら…もう引き返せない。",
+								"chinese": "既然已经走到这里……就无法再回头了。",
+								"french": "Si vous êtes arrivés jusqu'ici... il n'y a plus de retour en arrière possible.",
+								"spanish": "Si has llegado hasta aquí... ya no hay vuelta atrás.",
+								"vietnamese": "Nếu đã đến đây rồi... không thể quay đầu lại được nữa.",
+								"thai": "ถ้ามาถึงที่นี่แล้ว... ก็ย้อนกลับไม่ได้อีกแล้ว",
+								"hindi": "अगर तुम यहाँ तक आ गए हो… तो अब वापस नहीं जा सकते।"
+							}
+						},
+						{
+							"content": {
+								"korean": "각오했어요.",
+								"english": "I'm ready.",
+								"japanese": "覚悟しました。",
+								"chinese": "我已做好准备。",
+								"french": "Je suis prêt.",
+								"spanish": "Estoy listo.",
+								"vietnamese": "Tôi đã sẵn sàng.",
+								"thai": "ฉันพร้อมแล้ว",
+								"hindi": "मैं तैयार हूँ।"
+							},
+							"emotion": "base",
+							"speaker": "character_any",
+							"type": "speech"
+						},
+						{
+							"content": {
+								"korean": "운명을 짠다는 서리 거미… 그것은 단순한 설화가 아니었다. 경고였지.",
+								"english": "The Frost Spider, said to weave fate... it wasn't just a myth. It was a warning.",
+								"japanese": "運命を織るという霜蜘蛛…それは単なる説話ではなかった。警告だったのだ。",
+								"chinese": "编织命运的霜之蜘蛛……那不仅仅是传说。那是警告。",
+								"french": "L'Araignée de Givre, censée tisser le destin... ce n'était pas un simple mythe. C'était un avertissement.",
+								"spanish": "La Araña de Escarcha, que se dice que teje el destino... no era solo un mito. Era una advertencia.",
+								"vietnamese": "Con Nhện Sương, kẻ dệt nên số phận... đó không chỉ là truyền thuyết. Đó là một lời cảnh báo.",
+								"thai": "แมงมุมน้ำแข็งที่ว่ากันว่าถักทอโชคชะตา... มันไม่ใช่แค่ตำนาน มันคือคำเตือน",
+								"hindi": "नियति बुनने वाली हिम मकड़ी... वह केवल एक मिथक नहीं थी। वह एक चेतावनी थी।"
+							},
+							"emotion": "angry",
+							"type": "speech",
+							"speaker": "bran"
+						},
+						{
+							"emotion": "angry",
+							"type": "speech",
+							"speaker": "character_any",
+							"content": {
+								"korean": "저는 제 운명을 제가 짤 겁니다!",
+								"english": "I will weave my own destiny!",
+								"japanese": "私は私の運命を私が織ります！",
+								"chinese": "我将编织我自己的命运！",
+								"french": "Je tisserai mon propre destin !",
+								"spanish": "¡Yo tejeré mi propio destino!",
+								"vietnamese": "Tôi sẽ tự dệt nên số phận của mình!",
+								"thai": "ฉันจะถักทอโชคชะตาของฉันเอง!",
+								"hindi": "मैं अपनी नियति खुद बुनूँगा!"
+							}
+						},
+						{
+							"speaker": "bran",
+							"direction": "down",
+							"duration_ms": 400,
+							"type": "direction",
+							"action": "exit"
+						},
+						{
+							"content": {
+								"korean": "…부디, 안녕을.",
+								"english": "...Farewell.",
+								"japanese": "…どうか、安寧を。",
+								"chinese": "…愿你安好。",
+								"french": "...Adieu.",
+								"spanish": "...Adiós.",
+								"vietnamese": "...Tạm biệt.",
+								"thai": "...ลาก่อน",
+								"hindi": "...अलविदा।"
+							},
+							"emotion": "sad",
+							"type": "speech",
+							"speaker": "bran"
+						}
+					],
+					"id": 9
+				},
+				{
+					"id": 15,
+					"win_dialogue": [
+						{
+							"content": {
+								"korean": "크윽… 겨우 이 정도인가… 나는… 수많은 운명을 짜왔다. 너의… 끝도…",
+								"english": "Ugh... Is this all you've got...? I... have woven countless fates. Your... end too...",
+								"japanese": "くっ…たかがこれしきか…私は…数多の運命を織ってきた。お前の…終わりも…",
+								"chinese": "呃…就这点程度吗…我…编织了无数命运。你的…结局也…",
+								"french": "Ugh... C'est tout ce que tu as...? J'ai... tissé d'innombrables destins. Ton... destin final aussi...",
+								"spanish": "Ugh... ¿Es esto todo lo que tienes...? Yo... he tejido innumerables destinos. Tu... final también...",
+								"vietnamese": "Khụ... Chỉ có vậy thôi sao...? Ta... đã dệt nên vô số số phận. Cả kết cục của ngươi nữa...",
+								"thai": "อึก... แค่นี้เองเหรอ... ข้า... ได้ถักทอชะตากรรมมากมาย จุดจบของเจ้าก็ด้วย...",
+								"hindi": "उफ़... बस इतना ही...? मैंने... अनगिनत नियति बुनी है। तुम्हारा... अंत भी..."
+							},
+							"emotion": "sad",
+							"type": "speech",
+							"speaker": "random_boss"
+						},
+						{
+							"content": {
+								"korean": "비웃지 마라!",
+								"english": "Don't mock me!",
+								"japanese": "嘲笑うな！",
+								"chinese": "不许嘲笑！",
+								"french": "Ne te moque pas !",
+								"spanish": "¡No te burles!",
+								"vietnamese": "Đừng cười nhạo!",
+								"thai": "อย่าหัวเราะเยาะ!",
+								"hindi": "मेरा मज़ाक मत उड़ाओ!"
+							},
+							"emotion": "angry",
+							"type": "speech",
+							"speaker": "character_any"
+						},
+						{
+							"content": {
+								"korean": "모든 건 이제 끝이다!",
+								"english": "It's all over now!",
+								"japanese": "これで全て終わりだ！",
+								"chinese": "一切都结束了！",
+								"french": "Tout est terminé maintenant !",
+								"spanish": "¡Todo ha terminado ahora!",
+								"vietnamese": "Mọi thứ đã kết thúc rồi!",
+								"thai": "ทุกอย่างจบลงแล้ว!",
+								"hindi": "अब सब खत्म हो गया!"
+							},
+							"speaker": "character_any",
+							"type": "speech",
+							"emotion": "happy"
+						},
+						{
+							"content": {
+								"korean": "거미의 그림자가 사라지자, 빙탑은 잠시 흔들렸다. 그러나… 진짜 실타래는 아직 풀리지 않았다.",
+								"english": "As the spider's shadow vanished, the Ice Spire trembled briefly. Yet... the true thread remains unraveled.",
+								"japanese": "蜘蛛の影が消え去ると、氷の塔は一時揺らいだ。しかし…本当の糸はまだ解かれていない。",
+								"chinese": "当蜘蛛的影子消失后，冰塔暂时颤抖了一下。然而…真正的线团尚未解开。",
+								"french": "Alors que l'ombre de l'araignée disparaissait, la Tour de Glace trembla un instant. Cependant... le véritable fil n'est pas encore démêlé.",
+								"spanish": "Cuando la sombra de la araña se desvaneció, la Aguja de Hielo tembló por un instante. Sin embargo... el verdadero ovillo aún no se ha desenredado.",
+								"vietnamese": "Khi bóng của nhện biến mất, Tháp Băng rung chuyển trong chốc lát. Tuy nhiên... sợi chỉ thật sự vẫn chưa được gỡ bỏ.",
+								"thai": "เมื่อเงาของแมงมุมหายไป หอคอยน้ำแข็งก็สั่นสะเทือนชั่วขณะ ทว่า... ด้ายที่แท้จริงยังไม่ได้คลี่คลาย",
+								"hindi": "जैसे ही मकड़ी की परछाई गायब हुई, बर्फीला मीनार क्षण भर के लिए कांप उठा। हालांकि… असली उलझा हुआ धागा अभी भी नहीं सुलझा है।"
+							},
+							"emotion": "base",
+							"type": "speech",
+							"speaker": "narrator"
+						}
+					],
+					"lose_dialogue": [
+						{
+							"emotion": "base",
+							"type": "speech",
+							"speaker": "random_boss",
+							"content": {
+								"korean": "훗. 어리석은 것. 너의 실은 너무나 가늘구나.",
+								"english": "Hmph. Foolish one. Your thread is far too thin.",
+								"japanese": "フッ。愚かな。お前の糸はあまりにも細い。",
+								"chinese": "哼。愚蠢的东西。你的线太细了。",
+								"french": "Hmph. Stupide créature. Ton fil est bien trop fin.",
+								"spanish": "Hmph. Tonto. Tu hilo es demasiado fino.",
+								"vietnamese": "Hừ. Thật ngốc nghếch. Sợi chỉ của ngươi quá mỏng manh.",
+								"thai": "ฮึ่ม เจ้าโง่. ด้ายของเจ้าช่างบางเบานัก.",
+								"hindi": "हूँ। मूर्ख। तुम्हारा धागा बहुत पतला है।"
+							}
+						},
+						{
+							"content": {
+								"korean": "아직… 끝나지 않았다!",
+								"english": "It's not over yet!",
+								"japanese": "まだ…終わっていない！",
+								"chinese": "还没…结束！",
+								"french": "Ce n'est pas encore fini !",
+								"spanish": "¡Aún no ha terminado!",
+								"vietnamese": "Vẫn chưa… kết thúc!",
+								"thai": "ยัง…ไม่จบ!",
+								"hindi": "अभी… खत्म नहीं हुआ है!"
+							},
+							"speaker": "character_any",
+							"type": "speech",
+							"emotion": "angry"
+						},
+						{
+							"content": {
+								"korean": "무한히 반복될 뿐. 나의 놀이터에서.",
+								"english": "It will only repeat endlessly. In my playground.",
+								"japanese": "無限に繰り返されるだけだ。私の遊び場で。",
+								"chinese": "只会无限循环。在我的游乐场里。",
+								"french": "Cela ne fera que se répéter à l'infini. Dans mon terrain de jeu.",
+								"spanish": "Solo se repetirá sin fin. En mi patio de recreo.",
+								"vietnamese": "Chỉ là sự lặp lại vô tận. Trong sân chơi của ta.",
+								"thai": "มันจะวนซ้ำไปเรื่อยๆ ในสนามเด็กเล่นของข้า",
+								"hindi": "यह अनन्त रूप से दोहराया जाएगा। मेरे खेल के मैदान में।"
+							},
+							"type": "speech",
+							"speaker": "random_boss",
+							"emotion": "base"
+						}
+					],
+					"dialogue": [
+						{
+							"type": "speech",
+							"speaker": "narrator",
+							"emotion": "base",
+							"content": {
+								"korean": "빙탑의 가장 깊은 곳. 거대한 그림자가 움직였다.",
+								"english": "The deepest part of the Ice Tower. A colossal shadow stirred.",
+								"japanese": "氷塔の最も深い場所。巨大な影が動いた。",
+								"chinese": "冰塔最深处。一道巨大的身影动了。",
+								"french": "La partie la plus profonde de la Tour de Glace. Une ombre colossale s'agita.",
+								"spanish": "La parte más profunda de la Torre de Hielo. Una sombra colosal se movió.",
+								"vietnamese": "Nơi sâu thẳm nhất của Tháp Băng. Một cái bóng khổng lồ cựa quậy.",
+								"thai": "ส่วนที่ลึกที่สุดของหอคอยน้ำแข็ง เงาขนาดมหึมาเคลื่อนไหว",
+								"hindi": "हिम मीनार का सबसे गहरा हिस्सा। एक विशाल छाया हिल उठी।"
+							}
+						},
+						{
+							"type": "speech",
+							"speaker": "random_boss",
+							"emotion": "angry",
+							"content": {
+								"korean": "감히 나의 영역을 침범하다니. 어리석은 인간.",
+								"english": "How dare you invade my domain, foolish human.",
+								"japanese": "よくも私の領域を侵したな。愚かな人間め。",
+								"chinese": "竟敢侵犯我的领域。愚蠢的人类。",
+								"french": "Comment oses-tu envahir mon domaine, stupide humain.",
+								"spanish": "Cómo te atreves a invadir mi dominio, estúpido humano.",
+								"vietnamese": "Ngươi dám cả gan xâm phạm lãnh địa của ta. Con người ngu xuẩn.",
+								"thai": "บังอาจนักที่บุกรุกอาณาเขตของข้า มนุษย์โง่เขลา",
+								"hindi": "तुम्हारी हिम्मत कैसे हुई मेरे क्षेत्र में घुसने की, मूर्ख इंसान।"
+							}
+						},
+						{
+							"content": {
+								"korean": "네가 모든 것을 꾸민 거냐?",
+								"english": "Did you orchestrate all of this?",
+								"japanese": "お前が全てを仕組んだのか？",
+								"chinese": "这一切都是你策划的吗？",
+								"french": "Est-ce toi qui as tout manigancé ?",
+								"spanish": "¿Fuiste tú quien orquestó todo esto?",
+								"vietnamese": "Có phải ngươi đã sắp đặt mọi thứ?",
+								"thai": "แกเป็นคนจัดฉากทั้งหมดนี่ใช่ไหม?",
+								"hindi": "क्या तुमने यह सब रचा है?"
+							},
+							"type": "speech",
+							"speaker": "character_any",
+							"emotion": "angry"
+						},
+						{
+							"emotion": "base",
+							"type": "speech",
+							"speaker": "random_boss",
+							"content": {
+								"korean": "너희의 운명은 이미 정해졌다. 나의 거미줄 안에서.",
+								"english": "Your fate is already sealed. Within my web.",
+								"japanese": "お前たちの運命は既に定められている。私の蜘蛛の巣の中で。",
+								"chinese": "你们的命运早已注定。在我的蛛网之中。",
+								"french": "Votre destin est déjà scellé. Dans ma toile.",
+								"spanish": "Vuestro destino ya está sellado. Dentro de mi telaraña.",
+								"vietnamese": "Số phận của các ngươi đã được định đoạt. Trong mạng nhện của ta.",
+								"thai": "ชะตากรรมของพวกเจ้าถูกกำหนดไว้แล้ว ในใยแมงมุมของข้า",
+								"hindi": "तुम्हारी नियति पहले ही तय हो चुकी है। मेरे जाल के भीतर।"
+							}
+						},
+						{
+							"speaker": "character_any",
+							"type": "speech",
+							"emotion": "angry",
+							"content": {
+								"korean": "내가 그걸 찢어주지!",
+								"english": "I'll tear it apart!",
+								"japanese": "私がそれを引き裂いてやる！",
+								"chinese": "我会把它撕碎！",
+								"french": "Je vais le déchirer !",
+								"spanish": "¡Yo lo haré pedazos!",
+								"vietnamese": "Ta sẽ xé nát nó!",
+								"thai": "ฉันจะฉีกมันออก!",
+								"hindi": "मैं इसे फाड़ दूँगा!"
+							}
+						}
+					]
+				}
+			]
+		},
+		{
+			"scenario_id": "snowy_weaverfrost_50_04",
+			"order": 4,
+			"act": "rising",
+			"theme": "snowy",
+			"actors": {
+				"eira": {
+					"id": "mon_0c37c014-b5ca-4f2f-ad03-5d393e5b2eb1",
+					"name": {
+						"korean": "에이라",
+						"english": "Eira",
+						"japanese": "エイラ",
+						"chinese": "艾拉",
+						"french": "Eira",
+						"spanish": "Eira",
+						"vietnamese": "Eira",
+						"thai": "ไอรา",
+						"hindi": "ऐरा"
+					},
+					"description": "",
+					"face_image_url": "https://imagedelivery.net/WTEqQNGFb-l-IHS6IGnzUQ/8e2970b7-bcb1-4b1c-6bf0-93106b373500/public",
+					"battle_sprite_url": "https://imagedelivery.net/WTEqQNGFb-l-IHS6IGnzUQ/0ca1ec09-a624-450f-054a-b98de58bdb00/public"
+				}
+			},
+			"boss": {
+				"pool_id": "random_boss"
+			},
+			"prologue": {
+				"korean": [
+					"또 다른 실종. 흔적은 차가운 거미줄뿐.",
+					"생존자는 떨리는 목소리로 증언했다.",
+					"살아있는 듯한 실들, 그리고 그 안에 갇힌 비명.",
+					"이 설원은, 거대한 거미의 덫이었다."
+				],
+				"english": [
+					"Another disappearance. Only cold cobwebs remain.",
+					"The survivor testified with a trembling voice.",
+					"Threads that seemed alive, and screams trapped within them.",
+					"This snowy field was a giant spider's trap."
+				],
+				"japanese": [
+					"またしても失踪。残されたのは冷たい蜘蛛の巣だけ。",
+					"生存者は震える声で証言した。",
+					"生きているかのような糸、そしてその中に閉じ込められた悲鳴。",
+					"この雪原は、巨大な蜘蛛の罠だった。"
+				],
+				"chinese": [
+					"又一起失踪案。只剩下冰冷的蜘蛛网。",
+					"幸存者颤抖着作证。",
+					"仿佛活着的丝线，以及其中困住的尖叫。",
+					"这片雪原，是巨型蜘蛛的陷阱。"
+				],
+				"french": [
+					"Une autre disparition. Seules de froides toiles d'araignée subsistent.",
+					"Le survivant a témoigné d'une voix tremblante.",
+					"Des fils qui semblaient vivants, et des cris piégés en eux.",
+					"Cette étendue enneigée était le piège d'une araignée géante."
+				],
+				"spanish": [
+					"Otra desaparición. Solo telarañas frías.",
+					"El superviviente testificó con voz temblorosa.",
+					"Hilos que parecían vivos, y gritos atrapados en ellos.",
+					"Este campo nevado era la trampa de una araña gigante."
+				],
+				"vietnamese": [
+					"Lại một vụ mất tích khác. Chỉ còn lại mạng nhện lạnh lẽo.",
+					"Người sống sót làm chứng với giọng run rẩy.",
+					"Những sợi chỉ như sống, và tiếng hét mắc kẹt bên trong.",
+					"Cánh đồng tuyết này là cái bẫy của một con nhện khổng lồ."
+				],
+				"thai": [
+					"การหายตัวไปอีกครั้ง เหลือเพียงใยแมงมุมอันเย็นยะเยือก",
+					"ผู้รอดชีวิตให้การด้วยเสียงสั่นเครือ",
+					"เส้นใยที่ดูเหมือนมีชีวิต และเสียงกรีดร้องที่ถูกขังอยู่ข้างใน",
+					"ลานหิมะแห่งนี้คือกับดักของแมงมุมยักษ์"
+				],
+				"hindi": [
+					"एक और गुमशुदगी। सिर्फ ठंडी मकड़ी के जाले।",
+					"बचे हुए व्यक्ति ने काँपती आवाज़ में गवाही दी।",
+					"जीवित जैसे धागे, और उनके अंदर फँसी चीखें।",
+					"यह बर्फीला मैदान, एक विशाल मकड़ी का जाल था।"
+				]
+			},
+			"rooms": [
+				{
+					"id": 1,
+					"dialogue": [
+						{
+							"speaker": "narrator",
+							"emotion": "base",
+							"type": "speech",
+							"content": {
+								"korean": "새로운 실종 현장. 사방이 차가운 거미줄로 뒤덮여 있었다.",
+								"english": "A new disappearance site. Everything was covered in cold cobwebs.",
+								"japanese": "新たな失踪現場。あたり一面、冷たい蜘蛛の巣で覆われていた。",
+								"chinese": "新的失踪现场。四周都被冰冷的蜘蛛网覆盖。",
+								"french": "Un nouveau lieu de disparition. Tout était recouvert de froides toiles d'araignée.",
+								"spanish": "Un nuevo lugar de desaparición. Todo estaba cubierto de telarañas frías.",
+								"vietnamese": "Hiện trường mất tích mới. Khắp nơi bị bao phủ bởi mạng nhện lạnh lẽo.",
+								"thai": "สถานที่หายตัวไปแห่งใหม่ ทุกทิศทางถูกปกคลุมด้วยใยแมงมุมอันเย็นยะเยือก",
+								"hindi": "एक नया गुमशुदगी स्थल। चारों ओर ठंडी मकड़ी के जाले बिछे थे।"
+							}
+						},
+						{
+							"emotion": "sad",
+							"speaker": "character_any",
+							"content": {
+								"korean": "여기도… 거미줄이야?",
+								"english": "Here too... cobwebs?",
+								"japanese": "ここも… 蜘蛛の巣なのか？",
+								"chinese": "这里也… 是蜘蛛网？",
+								"french": "Ici aussi... des toiles d'araignée ?",
+								"spanish": "¿Aquí también... telarañas?",
+								"vietnamese": "Ở đây cũng... là mạng nhện?",
+								"thai": "ที่นี่ก็... ใยแมงมุมเหรอ?",
+								"hindi": "यहाँ भी... मकड़ी के जाले?"
+							},
+							"type": "speech"
+						},
+						{
+							"type": "direction",
+							"action": "enter",
+							"spot": [
+								4,
+								3
+							],
+							"duration_ms": 500,
+							"speaker": "eira"
+						},
+						{
+							"type": "speech",
+							"content": {
+								"korean": "겨우 도망쳤어. 살아있는 것처럼 달라붙었지.",
+								"english": "I barely escaped. It clung to me like it was alive.",
+								"japanese": "やっと逃げ出した。生きているかのようにまとわりついたんだ。",
+								"chinese": "我勉强逃了出来。它像活物一样缠着我。",
+								"french": "J'ai à peine échappé. Ça s'accrochait à moi comme si c'était vivant.",
+								"spanish": "Apenas escapé. Se me pegó como si estuviera vivo.",
+								"vietnamese": "Tôi vừa kịp thoát. Nó bám vào tôi như thể còn sống.",
+								"thai": "ฉันหนีมาได้หวุดหวิด มันเกาะติดฉันราวกับมีชีวิต",
+								"hindi": "मैं मुश्किल से बच पाया। यह ऐसे चिपक गया जैसे जीवित हो।"
+							},
+							"speaker": "eira",
+							"emotion": "base"
+						},
+						{
+							"type": "speech",
+							"content": {
+								"korean": "살아있는 거미줄?",
+								"english": "Living cobwebs?",
+								"japanese": "生きている蜘蛛の巣？",
+								"chinese": "活着的蜘蛛网？",
+								"french": "Des toiles d'araignée vivantes ?",
+								"spanish": "¿Telarañas vivas?",
+								"vietnamese": "Mạng nhện sống?",
+								"thai": "ใยแมงมุมมีชีวิตเหรอ?",
+								"hindi": "जीवित मकड़ी के जाले?"
+							},
+							"speaker": "character_any",
+							"emotion": "sad"
+						}
+					]
+				},
+				{
+					"dialogue": [
+						{
+							"type": "direction",
+							"action": "enter",
+							"spot": [
+								2,
+								3
+							],
+							"duration_ms": 500,
+							"speaker": "eira"
+						},
+						{
+							"speaker": "eira",
+							"emotion": "base",
+							"type": "speech",
+							"content": {
+								"korean": "그 거미줄은… 그냥 얼음이 아니었어. 마치 심장이 뛰는 실 같았지.",
+								"english": "Those cobwebs... weren't just ice. They were like threads with a beating heart.",
+								"japanese": "あの蜘蛛の巣は…ただの氷じゃなかった。まるで心臓が脈打つ糸のようだった。",
+								"chinese": "那些蜘蛛网…不只是冰。它们就像是跳动着心脏的丝线。",
+								"french": "Ces toiles d'araignée... n'étaient pas que de la glace. C'était comme des fils avec un cœur qui bat.",
+								"spanish": "Esas telarañas... no eran solo hielo. Eran como hilos con un corazón que latía.",
+								"vietnamese": "Mạng nhện đó... không chỉ là băng. Chúng giống như những sợi chỉ có trái tim đang đập.",
+								"thai": "ใยแมงมุมนั่น... ไม่ใช่แค่น้ำแข็ง มันเหมือนเส้นด้ายที่มีหัวใจเต้น",
+								"hindi": "वे मकड़ी के जाले... सिर्फ बर्फ नहीं थे। वे ऐसे धागे थे जैसे जिनमें दिल धड़क रहा हो।"
+							}
+						},
+						{
+							"content": {
+								"korean": "대체 무슨…?",
+								"english": "What in the...?",
+								"japanese": "一体何が…？",
+								"chinese": "到底发生…？",
+								"french": "Qu'est-ce que...?",
+								"spanish": "¿Qué demonios...?",
+								"vietnamese": "Rốt cuộc là...",
+								"thai": "นี่มันอะไรกัน...?",
+								"hindi": "आखिर क्या...?"
+							},
+							"type": "speech",
+							"emotion": "sad",
+							"speaker": "character_any"
+						},
+						{
+							"emotion": "base",
+							"speaker": "narrator",
+							"content": {
+								"korean": "얼어붙은 거미줄 속에서 희생자들의 형상이 보였다. 공포에 질린 채 굳어버린 표정.",
+								"english": "Within the frozen cobweb, the forms of victims were visible. Their expressions, rigid with terror.",
+								"japanese": "凍りついた蜘蛛の巣の中に、犠牲者たちの姿が見えた。恐怖に固まった表情で。",
+								"chinese": "在冰冷的蜘蛛网中，受害者的身影若隐若现。他们的表情因恐惧而凝固。",
+								"french": "Dans la toile d'araignée gelée, les formes des victimes étaient visibles. Leurs expressions, figées par la terreur.",
+								"spanish": "En la telaraña congelada, las formas de las víctimas eran visibles. Sus expresiones, rígidas por el terror.",
+								"vietnamese": "Trong mạng nhện đóng băng, hình dáng của các nạn nhân hiện ra. Khuôn mặt họ cứng đờ vì sợ hãi.",
+								"thai": "ในใยแมงมุมที่จับตัวเป็นน้ำแข็ง ร่างของเหยื่อปรากฏขึ้น ใบหน้าของพวกเขาแข็งทื่อด้วยความหวาดกลัว",
+								"hindi": "जमी हुई मकड़ी के जाले में, पीड़ितों के आकार दिखाई दिए। उनके चेहरे, डर से जमे हुए।"
+							},
+							"type": "speech"
+						},
+						{
+							"emotion": "angry",
+							"speaker": "character_any",
+							"content": {
+								"korean": "말도 안 돼… 이럴 수가.",
+								"english": "Unbelievable... This can't be happening.",
+								"japanese": "信じられない… まさかこんなことが。",
+								"chinese": "难以置信……怎么会这样。",
+								"french": "Incroyable... Ce n'est pas possible.",
+								"spanish": "¡Increíble! Esto no puede ser.",
+								"vietnamese": "Không thể tin được... Sao có thể như vậy.",
+								"thai": "ไม่จริงน่า... เป็นไปได้ยังไงเนี่ย",
+								"hindi": "अविश्वसनीय... ऐसा नहीं हो सकता।"
+							},
+							"type": "speech"
+						}
+					],
+					"id": 3
+				},
+				{
+					"id": 5,
+					"dialogue": [
+						{
+							"action": "enter",
+							"spot": [
+								3,
+								2
+							],
+							"type": "direction",
+							"speaker": "eira",
+							"duration_ms": 500
+						},
+						{
+							"type": "speech",
+							"content": {
+								"korean": "고대 문서에 이런 기록이 있어. '운명을 짜는 자, 차가운 실로 모든 것을 묶으리라'.",
+								"english": "Ancient texts record this: 'The weaver of fate binds all with cold threads.'",
+								"japanese": "古文書にこう記されている。「運命を紡ぐ者、冷たい糸で全てを縛るだろう」。",
+								"chinese": "古籍中记载着这样一句话：“命运编织者，以冰冷的丝线束缚万物”。",
+								"french": "Les anciens documents le rapportent : 'Le tisseur de destin lie tout avec des fils froids'.",
+								"spanish": "Los textos antiguos registran esto: 'El tejedor del destino ata todo con hilos fríos'.",
+								"vietnamese": "Các tài liệu cổ ghi lại rằng: 'Kẻ dệt nên vận mệnh, sẽ ràng buộc mọi thứ bằng sợi chỉ lạnh giá'.",
+								"thai": "เอกสารโบราณบันทึกไว้ว่า 'ผู้ถักทอโชคชะตา จะผูกมัดทุกสิ่งด้วยเส้นใยอันเย็นยะเยือก'",
+								"hindi": "प्राचीन ग्रंथों में यह दर्ज है: 'भाग्य का बुनकर ठंडे धागों से सबको बांधेगा'।"
+							},
+							"speaker": "eira",
+							"emotion": "base"
+						},
+						{
+							"emotion": "base",
+							"speaker": "character_any",
+							"content": {
+								"korean": "그럼 이건… 전설 속 존재의 짓이라고?",
+								"english": "So this is... the work of a legendary being?",
+								"japanese": "じゃあこれは… 伝説の存在の仕業なのか？",
+								"chinese": "那么这……是传说中存在的所为吗？",
+								"french": "Alors c'est... l'œuvre d'une créature légendaire ?",
+								"spanish": "Entonces esto es... ¿obra de un ser legendario?",
+								"vietnamese": "Vậy đây là... việc làm của một thực thể trong truyền thuyết sao?",
+								"thai": "งั้นนี่...เป็นฝีมือของสิ่งมีชีวิตในตำนานหรือ?",
+								"hindi": "तो यह... किसी पौराणिक प्राणी का काम है?"
+							},
+							"type": "speech"
+						},
+						{
+							"speaker": "eira",
+							"emotion": "base",
+							"type": "speech",
+							"content": {
+								"korean": "이름 없는 자들의 흔적이야. 기억하고, 기록해야 해.",
+								"english": "It's the trace of the nameless ones. We must remember and record it.",
+								"japanese": "名もなき者たちの痕跡だ。記憶し、記録しなければ。",
+								"chinese": "这是无名者的痕迹。必须记住，必须记录。",
+								"french": "Ce sont les traces des sans-nom. Il faut s'en souvenir et les consigner.",
+								"spanish": "Es la huella de los sin nombre. Debemos recordarlo y registrarlo.",
+								"vietnamese": "Đây là dấu vết của những kẻ vô danh. Phải ghi nhớ, phải ghi chép lại.",
+								"thai": "นี่คือร่องรอยของผู้ไร้นาม เราต้องจดจำและบันทึกไว้",
+								"hindi": "यह अनामों का निशान है। हमें याद रखना और रिकॉर्ड करना होगा।"
+							}
+						}
+					]
+				},
+				{
+					"dialogue": [
+						{
+							"speaker": "eira",
+							"duration_ms": 500,
+							"action": "enter",
+							"spot": [
+								4,
+								2
+							],
+							"type": "direction"
+						},
+						{
+							"emotion": "sad",
+							"speaker": "eira",
+							"content": {
+								"korean": "이제 우리가 걷는 길은… 그 거미줄의 심장을 향하고 있어.",
+								"english": "The path we now tread leads... towards the heart of that web.",
+								"japanese": "今、我々が歩む道は… あの蜘蛛の巣の心臓部へ向かっている。",
+								"chinese": "我们现在所走的道路……正通向那蜘蛛网的中心。",
+								"french": "Le chemin que nous empruntons maintenant mène... au cœur de cette toile.",
+								"spanish": "El camino que ahora pisamos nos lleva... al corazón de esa telaraña.",
+								"vietnamese": "Con đường chúng ta đang đi... hướng về trái tim của mạng nhện đó.",
+								"thai": "เส้นทางที่เรากำลังเดินไป...มุ่งสู่ใจกลางของใยแมงมุมนั้น",
+								"hindi": "अब जिस रास्ते पर हम चल रहे हैं... वह उस जाले के दिल की ओर जा रहा है।"
+							},
+							"type": "speech"
+						},
+						{
+							"content": {
+								"korean": "돌아갈 순 없어. 멈출 수도 없고.",
+								"english": "There's no turning back. No stopping either.",
+								"japanese": "もう引き返せない。止まることもできない。",
+								"chinese": "无法回头。也无法停止。",
+								"french": "On ne peut pas revenir en arrière. On ne peut pas s'arrêter non plus.",
+								"spanish": "No hay vuelta atrás. Ni podemos detenernos.",
+								"vietnamese": "Không thể quay lại. Cũng không thể dừng lại.",
+								"thai": "กลับไม่ได้แล้ว และหยุดก็ไม่ได้ด้วย",
+								"hindi": "पीछे नहीं हट सकते। रुक भी नहीं सकते।"
+							},
+							"type": "speech",
+							"emotion": "angry",
+							"speaker": "character_any"
+						},
+						{
+							"emotion": "base",
+							"speaker": "eira",
+							"content": {
+								"korean": "기록이 가리키는 곳은, 파멸 혹은 진실이야.",
+								"english": "What the records point to is either ruin or truth.",
+								"japanese": "記録が指し示す先は、破滅か、あるいは真実だ。",
+								"chinese": "记录所指向的，是毁灭亦或是真相。",
+								"french": "Ce que les registres indiquent, c'est la ruine ou la vérité.",
+								"spanish": "Lo que los registros señalan es la ruina o la verdad.",
+								"vietnamese": "Nơi mà ghi chép chỉ ra, là sự hủy diệt hay chân lý.",
+								"thai": "สิ่งที่บันทึกชี้ไป คือหายนะหรือไม่ก็ความจริง",
+								"hindi": "जो रिकॉर्ड बताते हैं, वह या तो बर्बादी है या सच्चाई।"
+							},
+							"type": "speech"
+						}
+					],
+					"id": 9
+				},
+				{
+					"win_dialogue": [
+						{
+							"content": {
+								"korean": "크아악…! 이 몸은… 부서져도… 실은… 끊어지지 않는다….",
+								"english": "Gaaah…! Though this body… may shatter… the threads… will not break….",
+								"japanese": "ぐあああ…！この体は…砕けても…糸は…切れない…。",
+								"chinese": "啊啊啊…！即使这具身体…被摧毁…丝线…也不会断裂…。",
+								"french": "Aaaargh… ! Même si ce corps… se brise… les fils… ne se rompront pas….",
+								"spanish": "¡Argh…! Aunque este cuerpo… se rompa… los hilos… no se cortarán….",
+								"vietnamese": "Gaaah…! Dù thân thể này… có tan vỡ… sợi tơ… sẽ không đứt….",
+								"thai": "อ๊ากกก…! แม้ร่างนี้… จะแหลกสลาย… เส้นด้าย… ก็ไม่ขาด…",
+								"hindi": "आह…! यह शरीर… भले ही टूट जाए… धागे… नहीं टूटेंगे…।"
+							},
+							"type": "speech",
+							"emotion": "sad",
+							"speaker": "random_boss"
+						},
+						{
+							"speaker": "character_any",
+							"emotion": "sad",
+							"type": "speech",
+							"content": {
+								"korean": "이게 끝이 아니라는 거야?",
+								"english": "This isn't the end?",
+								"japanese": "これが終わりではないというのか？",
+								"chinese": "这还没结束吗？",
+								"french": "Ce n'est pas la fin ?",
+								"spanish": "¿Esto no es el final?",
+								"vietnamese": "Đây không phải là kết thúc sao?",
+								"thai": "นี่ไม่ใช่จุดจบเหรอ?",
+								"hindi": "यह अंत नहीं है?"
+							}
+						},
+						{
+							"speaker": "narrator",
+							"emotion": "base",
+							"type": "speech",
+							"content": {
+								"korean": "거대한 거미줄의 첨탑이 흔들렸다. 그러나 여전히 설원 깊숙한 곳에서, 차가운 실들은 꿈틀거리고 있었다.",
+								"english": "The spire of the colossal web trembled. Yet, deep within the snowy fields, cold threads still writhed.",
+								"japanese": "巨大な蜘蛛の巣の尖塔が揺れた。しかし、雪原の奥深くで、冷たい糸は依然として蠢いていた。",
+								"chinese": "巨大的蛛网尖塔颤抖了。然而，在雪原深处，冰冷的丝线仍在蠕动。",
+								"french": "La flèche de la toile colossale trembla. Pourtant, au plus profond des champs enneigés, de froids fils continuaient de grouiller.",
+								"spanish": "La aguja de la telaraña colosal tembló. Sin embargo, en lo profundo de los campos nevados, hilos fríos seguían retorciéndose.",
+								"vietnamese": "Chóp nhọn của mạng nhện khổng lồ rung chuyển. Tuy nhiên, sâu trong những cánh đồng tuyết, những sợi tơ lạnh lẽo vẫn đang vặn vẹo.",
+								"thai": "ยอดใยแมงมุมมหึมาสั่นไหว แต่กระนั้นลึกเข้าไปในทุ่งหิมะ เส้นด้ายเย็นยะเยือกยังคงขยุกขยิก",
+								"hindi": "विशाल जाल का शिखर कांप उठा। फिर भी, बर्फीले मैदानों की गहराई में, ठंडे धागे अभी भी रेंग रहे थे।"
+							}
+						}
+					],
+					"id": 15,
+					"lose_dialogue": [
+						{
+							"content": {
+								"korean": "차가운 거미줄이 모든 것을 감쌌다. 움직일 수 없었다.",
+								"english": "Cold webs enveloped everything. Movement was impossible.",
+								"japanese": "冷たい蜘蛛の巣が全てを包んだ。動けなかった。",
+								"chinese": "冰冷的蛛网包裹了一切。无法动弹。",
+								"french": "De froides toiles enveloppèrent tout. Tout mouvement était impossible.",
+								"spanish": "Frías telarañas lo envolvieron todo. Era imposible moverse.",
+								"vietnamese": "Mạng nhện lạnh giá bao trùm mọi thứ. Không thể cử động.",
+								"thai": "ใยแมงมุมเย็นยะเยือกห่อหุ้มทุกสิ่ง ไม่สามารถขยับได้",
+								"hindi": "ठंडे जालों ने सब कुछ घेर लिया। हिलना असंभव था।"
+							},
+							"type": "speech",
+							"emotion": "base",
+							"speaker": "narrator"
+						},
+						{
+							"type": "speech",
+							"content": {
+								"korean": "꼼짝 마라… 새로운 컬렉션이 되어라.",
+								"english": "Don't move… become part of a new collection.",
+								"japanese": "動くな…新たなコレクションの一部となれ。",
+								"chinese": "别动…成为新收藏品吧。",
+								"french": "Ne bougez plus… devenez une nouvelle pièce de collection.",
+								"spanish": "No te muevas… conviértete en parte de una nueva colección.",
+								"vietnamese": "Đừng cử động… hãy trở thành một phần của bộ sưu tập mới.",
+								"thai": "อย่าขยับ… จงเป็นส่วนหนึ่งของของสะสมใหม่",
+								"hindi": "हिले मत… एक नए संग्रह का हिस्सा बनो।"
+							},
+							"speaker": "random_boss",
+							"emotion": "angry"
+						},
+						{
+							"speaker": "character_any",
+							"emotion": "angry",
+							"type": "speech",
+							"content": {
+								"korean": "젠장… 아직은… 안 돼…!",
+								"english": "Damn it... Not yet... No!",
+								"japanese": "くそ… まだ… ダメだ…！",
+								"chinese": "该死… 还没… 不行…！",
+								"french": "Mince... Pas encore... Non...!",
+								"spanish": "¡Maldita sea... Todavía no... No!",
+								"vietnamese": "Chết tiệt... Chưa được... Không thể...!",
+								"thai": "บ้าเอ๊ย... ยังไม่... ได้...!",
+								"hindi": "धत् तेरे की... अभी नहीं... नहीं!"
+							}
+						}
+					],
+					"dialogue": [
+						{
+							"type": "speech",
+							"content": {
+								"korean": "거미줄 첨탑의 가장 깊은 곳. 모든 것이 얼어붙은 적막.",
+								"english": "The deepest part of the cobweb spire. All is frozen silence.",
+								"japanese": "蜘蛛の巣の尖塔の最深部。全てが凍りついた静寂。",
+								"chinese": "蜘蛛网尖塔的最深处。一切都被冰封的寂静。",
+								"french": "La partie la plus profonde de la flèche de toile. Tout n'est que silence gelé.",
+								"spanish": "La parte más profunda de la aguja de telaraña. Todo es un silencio congelado.",
+								"vietnamese": "Nơi sâu nhất của tháp mạng nhện. Mọi thứ đều là sự tĩnh lặng đóng băng.",
+								"thai": "ส่วนที่ลึกที่สุดของหอคอยใยแมงมุม ทุกสิ่งล้วนเงียบงันและเยือกแข็ง",
+								"hindi": "मकड़ी के जाले के शिखर का सबसे गहरा हिस्सा। सब कुछ जमी हुई चुप्पी है।"
+							},
+							"speaker": "narrator",
+							"emotion": "base"
+						},
+						{
+							"speaker": "random_boss",
+							"emotion": "angry",
+							"type": "speech",
+							"content": {
+								"korean": "어리석은 자들… 내 덫에 스스로 걸어 들어왔구나.",
+								"english": "Fools... you've walked right into my trap.",
+								"japanese": "愚かな者たちめ… 自ら私の罠にはまりおって。",
+								"chinese": "愚蠢的家伙们……竟然自投罗网。",
+								"french": "Fous... vous êtes tombés droit dans mon piège.",
+								"spanish": "Necios... habéis caído directamente en mi trampa.",
+								"vietnamese": "Những kẻ ngu ngốc... các ngươi đã tự mình bước vào bẫy của ta.",
+								"thai": "เจ้าพวกโง่...เดินเข้ามาติดกับดักของข้าเองเลยสินะ",
+								"hindi": "मूर्खों... तुम खुद मेरे जाल में फंस गए।"
+							}
+						},
+						{
+							"content": {
+								"korean": "네가… 이 모든 걸 꾸민 거야?",
+								"english": "You... you orchestrated all of this?",
+								"japanese": "お前が…この全てを仕組んだのか？",
+								"chinese": "是你…策划了这一切？",
+								"french": "C'est toi… qui as orchestré tout ça ?",
+								"spanish": "¿Tú… has planeado todo esto?",
+								"vietnamese": "Ngươi… đã sắp đặt tất cả chuyện này sao?",
+								"thai": "แก… เป็นคนบงการเรื่องทั้งหมดนี้เหรอ?",
+								"hindi": "तुमने… यह सब रचा है?"
+							},
+							"type": "speech",
+							"emotion": "angry",
+							"speaker": "character_any"
+						},
+						{
+							"duration_ms": 500,
+							"speaker": "eira",
+							"type": "direction",
+							"action": "enter",
+							"spot": [
+								2,
+								3
+							]
+						},
+						{
+							"type": "speech",
+							"content": {
+								"korean": "이 존재는… 기록에 없던 자야. 하지만 이 거미줄은… 전설과 같아.",
+								"english": "This being… is not in the records. But these webs… are legendary.",
+								"japanese": "この存在は…記録にない者だ。だが、この蜘蛛の巣は…伝説のようだ。",
+								"chinese": "这个存在…不在记录中。但这张蛛网…如传说一般。",
+								"french": "Cet être… ne figure pas dans les registres. Mais cette toile… est légendaire.",
+								"spanish": "Este ser… no está en los registros. Pero esta telaraña… es legendaria.",
+								"vietnamese": "Tồn tại này… không có trong ghi chép. Nhưng mạng nhện này… như một truyền thuyết.",
+								"thai": "สิ่งมีชีวิตนี้… ไม่มีอยู่ในบันทึก แต่ใยแมงมุมนี้… เหมือนในตำนาน",
+								"hindi": "यह प्राणी… अभिलेखों में नहीं है। पर यह जाल… किसी किंवदंती सा है।"
+							},
+							"speaker": "eira",
+							"emotion": "base"
+						},
+						{
+							"content": {
+								"korean": "내 이름은 중요치 않다. 너희는 그저 새로운 장식품일 뿐.",
+								"english": "My name matters not. You are merely new ornaments.",
+								"japanese": "私の名など重要ではない。お前たちはただの新しい飾り物だ。",
+								"chinese": "我的名字不重要。你们不过是新的装饰品。",
+								"french": "Mon nom n'a pas d'importance. Vous n'êtes que de nouvelles décorations.",
+								"spanish": "Mi nombre no importa. Sois meros nuevos adornos.",
+								"vietnamese": "Tên ta không quan trọng. Các ngươi chỉ là những món đồ trang sức mới.",
+								"thai": "ชื่อของข้าไม่สำคัญ พวกเจ้าเป็นแค่ของประดับใหม่เท่านั้น",
+								"hindi": "मेरा नाम मायने नहीं रखता। तुम बस नए आभूषण हो।"
+							},
+							"type": "speech",
+							"emotion": "base",
+							"speaker": "random_boss"
+						},
+						{
+							"type": "speech",
+							"content": {
+								"korean": "잊힌 이름이라도, 기록될 거야.",
+								"english": "Even a forgotten name will be recorded.",
+								"japanese": "忘れ去られた名でも、記録されるだろう。",
+								"chinese": "即便是被遗忘的名字，也会被记录下来。",
+								"french": "Même un nom oublié sera gravé.",
+								"spanish": "Incluso un nombre olvidado será registrado.",
+								"vietnamese": "Dù là cái tên bị lãng quên, cũng sẽ được ghi lại.",
+								"thai": "แม้จะเป็นชื่อที่ถูกลืม ก็จะถูกบันทึกไว้",
+								"hindi": "एक भूला हुआ नाम भी दर्ज किया जाएगा।"
+							},
+							"speaker": "eira",
+							"emotion": "base"
+						},
+						{
+							"emotion": "base",
+							"speaker": "random_boss",
+							"content": {
+								"korean": "하찮은 저항이군.",
+								"english": "Futile resistance.",
+								"japanese": "取るに足らない抵抗だ。",
+								"chinese": "渺小的抵抗。",
+								"french": "Résistance futile.",
+								"spanish": "Resistencia inútil.",
+								"vietnamese": "Sự phản kháng vô ích.",
+								"thai": "การต่อต้านที่ไร้ค่า",
+								"hindi": "तुच्छ प्रतिरोध।"
+							},
+							"type": "speech"
+						},
+						{
+							"action": "exit",
+							"direction": "down",
+							"type": "direction",
+							"speaker": "eira",
+							"duration_ms": 400
+						}
+					]
+				}
+			]
+		},
+		{
+			"scenario_id": "snowy_weaverfrost_50_05",
+			"order": 5,
+			"act": "climax_finale",
+			"theme": "snowy",
+			"actors": {
+				"inka": {
+					"id": "mon_583e945a-1e2f-428b-a251-b428f25b4052",
+					"name": {
+						"korean": "인카",
+						"english": "Inka",
+						"japanese": "インカ",
+						"chinese": "因卡",
+						"french": "Inka",
+						"spanish": "Inka",
+						"vietnamese": "Inka",
+						"thai": "อินคา",
+						"hindi": "इंंका"
+					},
+					"description": "",
+					"face_image_url": "https://imagedelivery.net/WTEqQNGFb-l-IHS6IGnzUQ/97f4545b-2e8a-4688-3e4e-b34bb246dd00/public",
+					"battle_sprite_url": "https://imagedelivery.net/WTEqQNGFb-l-IHS6IGnzUQ/f27763ba-2358-4fd3-c813-0f0b59dcac00/public"
+				}
+			},
+			"boss": {
+				"pool_id": "pool_FateWeaver_Weaverfrost_V1"
+			},
+			"rooms": [
+				{
+					"dialogue": [
+						{
+							"emotion": "base",
+							"type": "speech",
+							"speaker": "narrator",
+							"content": {
+								"korean": "빙탑의 심장부. 거대한 얼음 결정들이 미로처럼 얽혀있다.",
+								"english": "The heart of the Ice Spire. Giant ice crystals intertwine like a labyrinth.",
+								"japanese": "氷の塔の心臓部。巨大な氷の結晶が迷路のように絡み合っている。",
+								"chinese": "冰塔的心脏。巨大的冰晶如迷宫般缠绕。",
+								"french": "Le cœur de la Flèche de Glace. De gigantesques cristaux de glace s'entrelacent comme un labyrinthe.",
+								"spanish": "El corazón de la Aguja de Hielo. Enormes cristales de hielo se entrelazan como un laberinto.",
+								"vietnamese": "Trung tâm Tháp Băng. Những tinh thể băng khổng lồ đan xen như một mê cung.",
+								"thai": "ใจกลางหอคอยน้ำแข็ง ผลึกน้ำแข็งขนาดยักษ์พันกันยุ่งเหยิงราวกับเขาวงกต",
+								"hindi": "बर्फ़ीले शिखर का हृदय। विशाल बर्फ़ के क्रिस्टल एक भूलभुलैया की तरह आपस में गुँथे हुए हैं।"
+							}
+						},
+						{
+							"duration_ms": 500,
+							"type": "direction",
+							"speaker": "inka",
+							"action": "enter",
+							"spot": [
+								5,
+								3
+							]
+						},
+						{
+							"content": {
+								"korean": "…안 돼… 여기까지 오면 안 됐는데…",
+								"english": "…No… I shouldn't have come this far…",
+								"japanese": "…だめだ…ここまで来るべきじゃなかった…",
+								"chinese": "…不…我不该来这里的…",
+								"french": "…Non… Je n'aurais pas dû venir jusqu'ici…",
+								"spanish": "…No… No debí haber llegado tan lejos…",
+								"vietnamese": "…Không… Tôi không nên đến đây…",
+								"thai": "…ไม่นะ… ฉันไม่ควรมาถึงที่นี่เลย…",
+								"hindi": "…नहीं… मुझे इतना आगे नहीं आना चाहिए था…"
+							},
+							"speaker": "inka",
+							"emotion": "sad",
+							"type": "speech"
+						},
+						{
+							"speaker": "character_any",
+							"content": {
+								"korean": "인카! 당신… 대체 어떻게 여기에…",
+								"english": "Inka! You… How on earth did you get here…",
+								"japanese": "インカ！あなた…一体どうやってここに…",
+								"chinese": "因卡！你…你怎么会在这里…",
+								"french": "Inka ! Toi… Comment diable es-tu arrivée ici…",
+								"spanish": "¡Inka! Tú… ¿Cómo demonios llegaste aquí…",
+								"vietnamese": "Inka! Ngươi… Làm sao ngươi đến được đây…",
+								"thai": "อินกา! คุณ… มาอยู่ที่นี่ได้ยังไงกัน…",
+								"hindi": "इंखा! तुम… आख़िर तुम यहाँ कैसे आ गईं…"
+							},
+							"emotion": "base",
+							"type": "speech"
+						},
+						{
+							"speaker": "inka",
+							"content": {
+								"korean": "도망쳐… 그는… 그는 너희를 기다리고 있었어…",
+								"english": "Run… He… He was waiting for you…",
+								"japanese": "逃げろ… 彼が… 彼がお前たちを待っていたんだ…",
+								"chinese": "快跑… 他… 他一直在等你们…",
+								"french": "Fuyez… Il… Il vous attendait…",
+								"spanish": "Huye… Él… Él os estaba esperando…",
+								"vietnamese": "Chạy đi… Hắn… Hắn đã đợi các ngươi…",
+								"thai": "หนีไป… เขา… เขารอพวกเธออยู่…",
+								"hindi": "भागो… वह… वह तुम्हारा इंतज़ार कर रहा था…"
+							},
+							"type": "speech",
+							"emotion": "angry"
+						},
+						{
+							"emotion": "base",
+							"type": "speech",
+							"content": {
+								"korean": "인카는 거대한 수정 거미줄에 묶여있었다. 마치 살아있는 실처럼 섬뜩하게 빛났다.",
+								"english": "Inka was bound by a giant crystal web, shimmering eerily like living threads.",
+								"japanese": "インカは巨大な水晶の蜘蛛の巣に縛られていた。まるで生きている糸のように不気味に輝いていた。",
+								"chinese": "因卡被巨大的水晶蛛网束缚，像活着的丝线般诡异地闪耀着。",
+								"french": "Inka était ligotée par une gigantesque toile de cristal, luisante étrangement comme des fils vivants.",
+								"spanish": "Inka estaba atada por una gigantesca telaraña de cristal, que brillaba inquietantemente como hilos vivos.",
+								"vietnamese": "Inka bị trói bởi mạng nhện pha lê khổng lồ, phát sáng kỳ dị như những sợi chỉ sống.",
+								"thai": "อินกาถูกมัดด้วยใยแมงมุมคริสตัลขนาดยักษ์ ส่องประกายแปลกๆ ราวกับเส้นด้ายมีชีวิต",
+								"hindi": "इंखा एक विशाल क्रिस्टल के जाल में बंधी थी, जो जीवित धागों की तरह डरावनी चमक रहा था।"
+							},
+							"speaker": "narrator"
+						}
+					],
+					"id": 1
+				},
+				{
+					"id": 3,
+					"dialogue": [
+						{
+							"spot": [
+								4,
+								3
+							],
+							"action": "enter",
+							"speaker": "inka",
+							"duration_ms": 500,
+							"type": "direction"
+						},
+						{
+							"content": {
+								"korean": "오랜 기다림이었다. 운명의 실타래가 너희를 이끌었군.",
+								"english": "It has been a long wait. The threads of fate have led you here.",
+								"japanese": "長きにわたる待機だった。運命の糸がお前たちを導いたのだな。",
+								"chinese": "漫长的等待。命运的丝线将你们引到了这里。",
+								"french": "L'attente fut longue. Les fils du destin vous ont menés ici.",
+								"spanish": "Ha sido una larga espera. Los hilos del destino os han traído hasta aquí.",
+								"vietnamese": "Đã đợi rất lâu rồi. Sợi chỉ định mệnh đã dẫn các ngươi đến đây.",
+								"thai": "เป็นการรอคอยที่ยาวนาน เส้นด้ายแห่งโชคชะตานำพาพวกเจ้ามาที่นี่",
+								"hindi": "यह एक लंबा इंतज़ार था। नियति के धागों ने तुम्हें यहाँ पहुँचाया है।"
+							},
+							"speaker": "boss",
+							"emotion": "base",
+							"type": "speech"
+						},
+						{
+							"content": {
+								"korean": "네가… 그 끔찍한 실종 사건들의 원흉인가!",
+								"english": "You… are you the mastermind behind those horrific disappearances!",
+								"japanese": "お前が… あの恐ろしい失踪事件の元凶なのか！",
+								"chinese": "你… 你就是那些可怕失踪事件的幕后黑手吗！",
+								"french": "Toi… es-tu le cerveau derrière ces horribles disparitions !",
+								"spanish": "Tú… ¡¿Eres el cerebro detrás de esas horribles desapariciones?!",
+								"vietnamese": "Ngươi… ngươi là kẻ chủ mưu đằng sau những vụ mất tích kinh hoàng đó sao!",
+								"thai": "แก… แกคือต้นเหตุของการหายตัวไปอย่างน่ากลัวเหล่านั้นใช่ไหม!",
+								"hindi": "तुम… क्या तुम उन भयानक लापता होने की घटनाओं के पीछे का मास्टरमाइंड हो!"
+							},
+							"speaker": "character_any",
+							"type": "speech",
+							"emotion": "angry"
+						},
+						{
+							"content": {
+								"korean": "그는… 희생자들의 고통을… 영원히 자신의 직물로 만들어…",
+								"english": "He… forever weaves the victims' suffering… into his tapestry…",
+								"japanese": "彼は… 犠牲者たちの苦痛を… 永遠に自分の織物へと変える…",
+								"chinese": "他… 永远将受害者的痛苦… 编织进他的挂毯…",
+								"french": "Il… tisse pour toujours la souffrance des victimes… dans sa tapisserie…",
+								"spanish": "Él… teje para siempre el sufrimiento de las víctimas… en su tapiz…",
+								"vietnamese": "Hắn… mãi mãi dệt nỗi đau của nạn nhân… vào tấm thảm của mình…",
+								"thai": "เขา… ถักทอความทุกข์ทรมานของเหยื่อ… ลงในผืนผ้าของเขาชั่วนิรันดร์…",
+								"hindi": "वह… पीड़ितों के दर्द को हमेशा के लिए… अपनी बुनाई में बुनता है…"
+							},
+							"speaker": "inka",
+							"emotion": "sad",
+							"type": "speech"
+						},
+						{
+							"content": {
+								"korean": "곧 너희도 나의 아름다운 무늬가 될 것이다. 고통은 찰나일 뿐.",
+								"english": "Soon, you too shall become a part of my beautiful pattern. Pain is but a moment.",
+								"japanese": "お前たちもすぐに私の美しい模様となるだろう。苦痛は刹那に過ぎない。",
+								"chinese": "很快，你们也会成为我美丽图案的一部分。痛苦只是转瞬即逝。",
+								"french": "Bientôt, vous aussi ferez partie de mon magnifique motif. La douleur n'est qu'un instant.",
+								"spanish": "Pronto, vosotros también seréis parte de mi hermoso patrón. El dolor es solo un instante.",
+								"vietnamese": "Chẳng mấy chốc, các ngươi cũng sẽ trở thành một phần của hoa văn tuyệt đẹp của ta. Đau đớn chỉ là nhất thời.",
+								"thai": "ในไม่ช้า พวกเจ้าก็จะกลายเป็นส่วนหนึ่งของลวดลายอันงดงามของข้า ความเจ็บปวดเป็นเพียงชั่วครู่เท่านั้น",
+								"hindi": "जल्द ही, तुम भी मेरे सुंदर पैटर्न का हिस्सा बन जाओगे। दर्द बस एक पल का है।"
+							},
+							"speaker": "boss",
+							"type": "speech",
+							"emotion": "base"
+						}
+					]
+				},
+				{
+					"dialogue": [
+						{
+							"duration_ms": 500,
+							"type": "direction",
+							"spot": [
+								3,
+								3
+							],
+							"speaker": "inka",
+							"action": "enter"
+						},
+						{
+							"content": {
+								"korean": "나는 태초부터 있었다. 운명을 직조하고, 생명을 얼려왔지.",
+								"english": "I have existed since the beginning. Weaving destinies, freezing lives.",
+								"japanese": "私は太古から存在していた。運命を織り、生命を凍らせてきた。",
+								"chinese": "我自太初便已存在。编织命运，冻结生命。",
+								"french": "J'existe depuis le début. Tissant les destins, gelant les vies.",
+								"spanish": "He existido desde el principio. Tejiendo destinos, congelando vidas.",
+								"vietnamese": "Ta đã tồn tại từ thuở ban sơ. Dệt nên vận mệnh, đóng băng sinh mệnh.",
+								"thai": "ข้ามีอยู่ตั้งแต่แรกเริ่ม ถักทอโชคชะตา แช่แข็งชีวิต",
+								"hindi": "मैं शुरुआत से ही अस्तित्व में हूँ। नियति बुन रहा हूँ, जीवन को जमा रहा हूँ।"
+							},
+							"speaker": "boss",
+							"type": "speech",
+							"emotion": "base"
+						},
+						{
+							"emotion": "angry",
+							"type": "speech",
+							"speaker": "character_any",
+							"content": {
+								"korean": "말도 안 돼… 그 거대한 빙탑이 살아있는 괴물이었다니!",
+								"english": "Unbelievable... That colossal ice spire was a living monster!",
+								"japanese": "信じられない…あの巨大な氷の塔が生きている怪物だったなんて！",
+								"chinese": "难以置信……那座巨大的冰塔竟是一个活生生的怪物！",
+								"french": "Incroyable... Cette tour de glace colossale était un monstre vivant !",
+								"spanish": "¡Increíble... Esa colosal aguja de hielo era un monstruo viviente!",
+								"vietnamese": "Không thể tin được... Tòa tháp băng khổng lồ đó lại là một con quái vật sống!",
+								"thai": "ไม่น่าเชื่อ... หอคอยน้ำแข็งมหึมานั่นเป็นสัตว์ประหลาดที่มีชีวิต!",
+								"hindi": "अविश्वसनीय... वह विशाल बर्फीला शिखर एक जीवित राक्षस था!"
+							}
+						},
+						{
+							"emotion": "sad",
+							"type": "speech",
+							"content": {
+								"korean": "그는… 영원히 혼자였을 거야… 그래서 모두를 자기 곁에 두려 해…",
+								"english": "He must have been... alone forever... That's why he wants to keep everyone by his side...",
+								"japanese": "彼は…永遠に一人だったのだろう…だから、皆を自分のそばに置こうとする…",
+								"chinese": "他一定…永远都是孤独的吧…所以才想把所有人都留在身边…",
+								"french": "Il a dû être... seul pour toujours... C'est pourquoi il veut garder tout le monde à ses côtés...",
+								"spanish": "Él debe haber estado... solo para siempre... Por eso quiere mantener a todos a su lado...",
+								"vietnamese": "Hắn chắc là... cô độc mãi mãi... Nên hắn muốn giữ tất cả mọi người bên cạnh...",
+								"thai": "เขาคงจะ... โดดเดี่ยวตลอดไป... นั่นเป็นเหตุผลที่เขาต้องการเก็บทุกคนไว้ข้างกาย...",
+								"hindi": "वह... हमेशा अकेला रहा होगा... इसलिए वह सबको अपने पास रखना चाहता है..."
+							},
+							"speaker": "inka"
+						},
+						{
+							"speaker": "boss",
+							"content": {
+								"korean": "고독은 끝났다. 너희가 나의 영원한 직물을 완성할 것이다.",
+								"english": "Loneliness ends. You will complete my eternal tapestry.",
+								"japanese": "孤独は終わる。お前たちが私の永遠の織物を完成させるだろう。",
+								"chinese": "孤独结束了。你们将完成我的永恒织锦。",
+								"french": "La solitude prend fin. Vous achèverez ma tapisserie éternelle.",
+								"spanish": "La soledad termina. Vosotros completaréis mi tapiz eterno.",
+								"vietnamese": "Sự cô độc đã chấm dứt. Các ngươi sẽ hoàn thành tấm thảm vĩnh cửu của ta.",
+								"thai": "ความโดดเดี่ยวสิ้นสุดลงแล้ว พวกเจ้าจะสานต่อผืนผ้าแห่งนิรันดร์ของข้า",
+								"hindi": "अकेलापन समाप्त हुआ। तुम मेरी शाश्वत बुनाई पूरी करोगे।"
+							},
+							"emotion": "base",
+							"type": "speech"
+						}
+					],
+					"id": 5
+				},
+				{
+					"id": 9,
+					"dialogue": [
+						{
+							"spot": [
+								2,
+								3
+							],
+							"speaker": "inka",
+							"action": "enter",
+							"duration_ms": 500,
+							"type": "direction"
+						},
+						{
+							"content": {
+								"korean": "어리석은 필멸자들. 너희 운명은 이미 내 거미줄에 쓰여 있다.",
+								"english": "Foolish mortals. Your fate is already woven into my web.",
+								"japanese": "愚かなる定命の者たちよ。お前たちの運命は既に私の蜘蛛の巣に書かれている。",
+								"chinese": "愚蠢的凡人。你们的命运早已铭刻在我的蛛网之中。",
+								"french": "Mortels insensés. Votre destin est déjà tissé dans ma toile.",
+								"spanish": "Mortales necios. Vuestro destino ya está tejido en mi telaraña.",
+								"vietnamese": "Lũ phàm trần ngu ngốc. Số phận của các ngươi đã được dệt vào mạng nhện của ta rồi.",
+								"thai": "เจ้าพวกมนุษย์โง่เขลา ชะตากรรมของพวกเจ้าถูกถักทออยู่ในใยแมงมุมของข้าแล้ว",
+								"hindi": "मूर्ख नश्वर। तुम्हारी नियति पहले ही मेरे जाल में बुनी जा चुकी है।"
+							},
+							"speaker": "boss",
+							"type": "speech",
+							"emotion": "base"
+						},
+						{
+							"type": "speech",
+							"emotion": "angry",
+							"speaker": "character_any",
+							"content": {
+								"korean": "우리가 운명을 바꿀 것이다! 여기서 널 끝장내겠어!",
+								"english": "We will change our fate! We'll end you here!",
+								"japanese": "俺たちが運命を変える！ここで貴様を終わらせてやる！",
+								"chinese": "我们将改变命运！就在这里终结你！",
+								"french": "Nous changerons notre destin ! Nous allons t'achever ici !",
+								"spanish": "¡Cambiaremos nuestro destino! ¡Acabaremos contigo aquí!",
+								"vietnamese": "Chúng ta sẽ thay đổi số phận! Ta sẽ kết liễu ngươi tại đây!",
+								"thai": "เราจะเปลี่ยนชะตากรรม! เราจะจัดการแกที่นี่!",
+								"hindi": "हम अपनी नियति बदलेंगे! तुम्हें यहीं खत्म कर देंगे!"
+							}
+						},
+						{
+							"speaker": "inka",
+							"content": {
+								"korean": "안 돼… 그의 힘은… 너무 거대해… 돌이킬 수 없을 거야…",
+								"english": "No... his power... it's too immense... it can't be undone...",
+								"japanese": "だめだ…彼の力は…あまりにも巨大だ…取り返しのつかないことに…",
+								"chinese": "不…他的力量…太过强大…无法逆转了…",
+								"french": "Non... son pouvoir... est trop immense... ça ne peut pas être défait...",
+								"spanish": "No... su poder... es demasiado inmenso... no se puede deshacer...",
+								"vietnamese": "Không... sức mạnh của hắn... quá kinh khủng... không thể cứu vãn được...",
+								"thai": "ไม่นะ... พลังของเขา... มันมหึมาเกินไป... ไม่สามารถย้อนคืนได้...",
+								"hindi": "नहीं... उसकी शक्ति... बहुत विशाल है... इसे पूर्ववत नहीं किया जा सकता..."
+							},
+							"emotion": "sad",
+							"type": "speech"
+						},
+						{
+							"type": "speech",
+							"emotion": "base",
+							"content": {
+								"korean": "저항은 무의미하다. 너희도 곧 아름다운 조각상이 될 뿐.",
+								"english": "Resistance is futile. You too will soon become beautiful statues.",
+								"japanese": "抵抗は無意味だ。お前たちもじきに美しい彫像となるだろう。",
+								"chinese": "抵抗是徒劳的。你们也很快会变成美丽的雕像。",
+								"french": "Toute résistance est futile. Vous aussi deviendrez bientôt de belles statues.",
+								"spanish": "La resistencia es inútil. Vosotros también os convertiréis pronto en hermosas estatuas.",
+								"vietnamese": "Sự kháng cự là vô nghĩa. Các ngươi cũng sẽ sớm trở thành những bức tượng đẹp đẽ mà thôi.",
+								"thai": "การต่อต้านไร้ประโยชน์ พวกเจ้าเองก็จะกลายเป็นรูปปั้นที่สวยงามในไม่ช้า",
+								"hindi": "प्रतिरोध व्यर्थ है। तुम भी जल्द ही खूबसूरत मूर्तियाँ बन जाओगे।"
+							},
+							"speaker": "boss"
+						}
+					]
+				},
+				{
+					"win_dialogue": [
+						{
+							"content": {
+								"korean": "어리석은 자… 네가 끊은 것은… 그저 한 가닥의 실일 뿐… 거대한 직물은 계속된다…",
+								"english": "Foolish one… What you severed… was merely a single thread… The grand tapestry continues…",
+								"japanese": "愚か者め… お前が断ち切ったのは… ただの一本の糸に過ぎぬ… 巨大な織物は続く…",
+								"chinese": "愚蠢的家伙… 你斩断的… 仅仅是一根线… 宏伟的织锦仍在继续…",
+								"french": "Insensé… Ce que tu as rompu… n'était qu'un simple fil… La grande tapisserie continue…",
+								"spanish": "Necio… Lo que cortaste… fue solo un hilo… El gran tapiz continúa…",
+								"vietnamese": "Kẻ ngốc… Điều ngươi cắt đứt… chỉ là một sợi chỉ… Tấm thảm lớn vẫn tiếp tục…",
+								"thai": "เจ้าโง่… สิ่งที่เจ้าตัดขาด… เป็นเพียงเส้นด้ายเส้นเดียว… ผืนผ้าอันยิ่งใหญ่ยังคงดำเนินต่อไป…",
+								"hindi": "मूर्ख... तुमने जो तोड़ा... वह केवल एक धागा था... विशाल बुनाई जारी है..."
+							},
+							"speaker": "boss",
+							"emotion": "sad",
+							"type": "speech"
+						},
+						{
+							"emotion": "happy",
+							"type": "speech",
+							"content": {
+								"korean": "거미줄은 끊어졌다. 네 운명도 여기서 끝이야.",
+								"english": "The web is broken. Your fate ends here.",
+								"japanese": "蜘蛛の巣は断ち切られた。お前の運命もここで終わりだ。",
+								"chinese": "蜘蛛网被切断了。你的命运也到此为止。",
+								"french": "La toile est brisée. Ton destin s'achève ici.",
+								"spanish": "La telaraña está rota. Tu destino termina aquí.",
+								"vietnamese": "Mạng nhện đã đứt. Vận mệnh của ngươi cũng kết thúc tại đây.",
+								"thai": "ใยแมงมุมขาดสะบั้นแล้ว ชะตาของเจ้าก็จบลงที่นี่",
+								"hindi": "जाल टूट गया। तुम्हारा भाग्य यहीं समाप्त होता है।"
+							},
+							"speaker": "character_any"
+						},
+						{
+							"speaker": "narrator",
+							"content": {
+								"korean": "거대한 빙탑이 무너지며, 오랫동안 갇혔던 영혼들이 자유를 찾았다.",
+								"english": "The colossal ice tower crumbled, and long-imprisoned souls found freedom.",
+								"japanese": "巨大な氷の塔が崩れ落ち、長く囚われていた魂たちが自由を見つけた。",
+								"chinese": "巨大的冰塔崩塌，长期被困的灵魂获得了自由。",
+								"french": "L'énorme tour de glace s'effondra, et les âmes longtemps emprisonnées trouvèrent la liberté.",
+								"spanish": "La colosal torre de hielo se derrumbó, y las almas largamente encarceladas encontraron la libertad.",
+								"vietnamese": "Tháp băng khổng lồ sụp đổ, và những linh hồn bị giam cầm lâu ngày đã tìm thấy tự do.",
+								"thai": "หอคอยน้ำแข็งมหึมาพังทลายลง และวิญญาณที่ถูกจองจำมานานก็ได้พบอิสรภาพ",
+								"hindi": "विशाल बर्फ का टॉवर ढह गया, और लंबे समय से कैद आत्माओं को स्वतंत्रता मिली।"
+							},
+							"emotion": "base",
+							"type": "speech"
+						},
+						{
+							"speaker": "narrator",
+							"content": {
+								"korean": "하지만 설원의 차가운 공기는 여전히 무언가를 속삭이는 듯했다.",
+								"english": "Yet the cold air of the snowfield still seemed to whisper something.",
+								"japanese": "しかし、雪原の冷たい空気は、まるで何かを囁いているようだった。",
+								"chinese": "然而，雪原的冷空气似乎仍在低语着什么。",
+								"french": "Pourtant, l'air froid du champ de neige semblait toujours murmurer quelque chose.",
+								"spanish": "Sin embargo, el aire frío del campo nevado aún parecía susurrar algo.",
+								"vietnamese": "Tuy nhiên, không khí lạnh giá của cánh đồng tuyết vẫn dường như đang thì thầm điều gì đó.",
+								"thai": "ทว่า อากาศอันเย็นยะเยือกของทุ่งหิมะก็ยังคงกระซิบกระซาบอะไรบางอย่าง",
+								"hindi": "फिर भी, बर्फ के मैदान की ठंडी हवा अभी भी कुछ फुसफुसा रही थी।"
+							},
+							"emotion": "base",
+							"type": "speech"
+						}
+					],
+					"lose_dialogue": [
+						{
+							"emotion": "base",
+							"type": "speech",
+							"speaker": "boss",
+							"content": {
+								"korean": "겨우 이 정도인가. 너희도 결국 내 직물의 일부가 될 뿐.",
+								"english": "Is that all? You too will merely become part of my tapestry.",
+								"japanese": "たったこれだけか。お前たちも結局、私の織物の一部になるだけだ。",
+								"chinese": "就这点本事吗？你们最终也只会成为我织锦的一部分。",
+								"french": "N'est-ce que ça ? Vous aussi finirez par faire partie de ma tapisserie.",
+								"spanish": "¿Eso es todo? Vosotros también os convertiréis en parte de mi tapiz.",
+								"vietnamese": "Chỉ có vậy thôi sao? Cuối cùng các ngươi cũng chỉ trở thành một phần của tấm thảm của ta.",
+								"thai": "แค่นี้เองรึ? พวกเจ้าก็แค่จะกลายเป็นส่วนหนึ่งของผืนผ้าของข้าเท่านั้น",
+								"hindi": "बस इतना ही? तुम भी मेरी बुनाई का हिस्सा बन जाओगे।"
+							}
+						},
+						{
+							"type": "speech",
+							"emotion": "angry",
+							"speaker": "character_any",
+							"content": {
+								"korean": "크윽… 여기서 끝낼 순 없어… 다시 돌아온다…!",
+								"english": "Ugh… I can't end it here… I'll be back…!",
+								"japanese": "くっ… ここで終わらせるわけにはいかない… また戻ってくる…！",
+								"chinese": "呃… 不能在这里结束… 我会回来的…！",
+								"french": "Argh… Je ne peux pas en finir ici… Je reviendrai… !",
+								"spanish": "Ugh… No puedo acabar aquí… ¡Volveré…!",
+								"vietnamese": "Khụ… Không thể kết thúc ở đây được… Ta sẽ quay lại…!",
+								"thai": "อึก… ข้าจะจบที่นี่ไม่ได้… ข้าจะกลับมา…!",
+								"hindi": "उफ़... मैं इसे यहीं खत्म नहीं कर सकता... मैं वापस आऊंगा...!"
+							}
+						}
+					],
+					"id": 15,
+					"dialogue": [
+						{
+							"emotion": "base",
+							"type": "speech",
+							"content": {
+								"korean": "빙탑의 껍질이 벗겨졌다. 그 안에서 거대한 수정 서리 거미가 모습을 드러냈다.",
+								"english": "The ice spire's shell peeled away. From within, a colossal Crystal Frost Spider emerged.",
+								"japanese": "氷の塔の殻が剥がれ落ちた。その中から、巨大な水晶の霜蜘蛛が現れた。",
+								"chinese": "冰塔的外壳剥落了。从中露出了一个巨大的水晶霜蜘蛛。",
+								"french": "La carapace de la tour de glace s'est détachée. De l'intérieur, une araignée de givre de cristal colossale a émergé.",
+								"spanish": "La cáscara de la aguja de hielo se desprendió. De su interior, emergió una colosal Araña de Escarcha de Cristal.",
+								"vietnamese": "Vỏ bọc của tháp băng bong ra. Từ bên trong, một con Nhện Sương Pha Lê khổng lồ lộ diện.",
+								"thai": "เปลือกของหอคอยน้ำแข็งลอกออก ภายในเผยให้เห็นแมงมุมน้ำแข็งคริสตัลขนาดยักษ์",
+								"hindi": "बर्फ़ के शिखर का खोल उतर गया। उसके भीतर से एक विशाल क्रिस्टल फ्रॉस्ट स्पाइडर प्रकट हुआ।"
+							},
+							"speaker": "narrator"
+						},
+						{
+							"duration_ms": 500,
+							"type": "direction",
+							"spot": [
+								5,
+								3
+							],
+							"action": "enter",
+							"speaker": "inka"
+						},
+						{
+							"speaker": "boss",
+							"content": {
+								"korean": "마침내… 내 진정한 모습 앞에서 무릎 꿇어라.",
+								"english": "Finally... kneel before my true form.",
+								"japanese": "ついに…私の真の姿の前でひざまずけ。",
+								"chinese": "终于…在我的真实形态面前跪下吧。",
+								"french": "Enfin... agenouillez-vous devant ma véritable forme.",
+								"spanish": "Finalmente... arrodillaos ante mi verdadera forma.",
+								"vietnamese": "Cuối cùng... hãy quỳ gối trước hình dạng thật của ta.",
+								"thai": "ในที่สุด... จงคุกเข่าต่อหน้าตัวตนที่แท้จริงของข้า",
+								"hindi": "अंततः... मेरे सच्चे रूप के सामने घुटने टेक दो।"
+							},
+							"type": "speech",
+							"emotion": "base"
+						},
+						{
+							"emotion": "angry",
+							"type": "speech",
+							"content": {
+								"korean": "으아악… 저게… 저게 진짜 모습이었어…! 우리는 모두… 그의 실타래였어…",
+								"english": "Aargh... That... that was his true form...! We were all... his threads...",
+								"japanese": "うわぁ…あれが…あれが本当の姿だったのか…！我々は皆…彼の糸だったのか…",
+								"chinese": "啊啊啊…那…那就是他真正的样子…！我们所有人…都只是他的线团…",
+								"french": "Aaaah... C'était... c'était sa vraie forme... ! Nous étions tous... ses fils...",
+								"spanish": "¡Aaargh... Eso... esa era su verdadera forma...! ¡Todos éramos... sus hilos...",
+								"vietnamese": "Á à... Đó... đó là hình dạng thật của hắn...! Chúng ta tất cả... đều là những sợi chỉ của hắn...",
+								"thai": "อ้าก... นั่น... นั่นคือร่างที่แท้จริงของเขา...! พวกเราทุกคน... เป็นเพียงใยของเขา...",
+								"hindi": "आह... वह... वह उसका असली रूप था...! हम सब... उसके धागे थे..."
+							},
+							"speaker": "inka"
+						},
+						{
+							"content": {
+								"korean": "운명의 직조자…! 네 놈을 여기서 끝내겠다!",
+								"english": "Weaver of Fate…! I'll end you here!",
+								"japanese": "運命の織り手…！ ここでお前を終わらせる！",
+								"chinese": "命运编织者…！ 我会在这里终结你！",
+								"french": "Tisserand du destin… ! Je vais t'achever ici !",
+								"spanish": "Tejedor del Destino…! ¡Te acabaré aquí!",
+								"vietnamese": "Kẻ dệt vận mệnh…! Ta sẽ kết liễu ngươi tại đây!",
+								"thai": "ผู้ทอแห่งโชคชะตา…! ข้าจะจบเจ้าที่นี่!",
+								"hindi": "भाग्य के बुनकर...! मैं तुम्हें यहीं खत्म कर दूंगा!"
+							},
+							"speaker": "character_any",
+							"emotion": "angry",
+							"type": "speech"
+						},
+						{
+							"content": {
+								"korean": "가만히 있으렴… 곧 너도 나의 영원한 직물의 일부가 될 테니.",
+								"english": "Hold still… Soon, you too will be part of my eternal tapestry.",
+								"japanese": "おとなしくしていろ… お前もすぐに私の永遠の織物の一部となるだろう。",
+								"chinese": "安静点… 很快，你也会成为我永恒织锦的一部分。",
+								"french": "Reste tranquille… Bientôt, toi aussi feras partie de ma tapisserie éternelle.",
+								"spanish": "Quédate quieto… Pronto, tú también serás parte de mi eterno tapiz.",
+								"vietnamese": "Hãy đứng yên… Chẳng mấy chốc, ngươi cũng sẽ trở thành một phần của tấm thảm vĩnh cửu của ta.",
+								"thai": "อยู่นิ่งๆ… อีกไม่นาน เจ้าก็จะกลายเป็นส่วนหนึ่งของผืนผ้าอันเป็นนิรันดร์ของข้า",
+								"hindi": "शांत रहो... जल्द ही, तुम भी मेरी शाश्वत बुनाई का हिस्सा बन जाओगे।"
+							},
+							"speaker": "boss",
+							"emotion": "base",
+							"type": "speech"
+						}
+					]
+				}
+			],
+			"prologue": {
+				"korean": [
+					"설원 깊은 곳, 얼어붙은 빙탑의 심장.",
+					"그곳에서 인카를 다시 만났다.",
+					"하지만 그녀는 이미 거대한 거미줄에 묶인 채였다.",
+					"빙탑의 껍질이 벗겨지고, 진실이 모습을 드러냈다.",
+					"운명의 직조자, 위버프로스트. 드디어 베일을 벗는 순간."
+				],
+				"english": [
+					"Deep in the snowfield, at the heart of the frozen icicle tower.",
+					"There, I met Inca again.",
+					"But she was already bound by a colossal spiderweb.",
+					"The icicle tower's shell peeled away, revealing the truth.",
+					"Weaverfrost, the Weaver of Fate. The moment of unveiling finally arrived."
+				],
+				"japanese": [
+					"雪原の奥深く、凍てつく氷の塔の心臓部。",
+					"そこで、私は再びインカと出会った。",
+					"しかし、彼女はすでに巨大な蜘蛛の巣に囚われていた。",
+					"氷の塔の殻が剥がれ落ち、真実が姿を現した。",
+					"運命の織り手、ウィーバーフロスト。ついにベールを脱ぐ瞬間。"
+				],
+				"chinese": [
+					"雪原深处，冰冻尖塔的核心。",
+					"在那里，我再次遇见了印卡。",
+					"但她已经被巨大的蜘蛛网束缚。",
+					"冰尖塔的外壳剥落，真相显露无疑。",
+					"命运织造者，织霜者。终于揭开面纱的时刻。"
+				],
+				"french": [
+					"Au plus profond de la plaine enneigée, au cœur de la tour de glace figée.",
+					"Là, j'ai rencontré Inca à nouveau.",
+					"Mais elle était déjà ligotée par une toile d'araignée colossale.",
+					"La carapace de la tour de glace s'est détachée, révélant la vérité.",
+					"Tisserandegivre, la Tisserande du Destin. Le moment du dévoilement est enfin arrivé."
+				],
+				"spanish": [
+					"En lo profundo del campo nevado, en el corazón de la torre de carámbanos congelados.",
+					"Allí, me encontré con Inca de nuevo.",
+					"Pero ella ya estaba atada por una telaraña colosal.",
+					"La capa de la torre de carámbanos se desprendió, revelando la verdad.",
+					"Tejedorahelada, la Tejedora del Destino. El momento del desvelamiento finalmente llegó."
+				],
+				"vietnamese": [
+					"Sâu trong cánh đồng tuyết, tại trái tim của ngọn tháp băng giá.",
+					"Tại đó, tôi đã gặp lại Inca.",
+					"Nhưng cô ấy đã bị trói buộc bởi một mạng nhện khổng lồ.",
+					"Vỏ của ngọn tháp băng bong ra, sự thật dần lộ diện.",
+					"Weaverfrost, Người dệt vận mệnh. Khoảnh khắc vén màn cuối cùng đã đến."
+				],
+				"thai": [
+					"ลึกเข้าไปในทุ่งหิมะ ณ ใจกลางหอคอยน้ำแข็งที่เยือกแข็ง",
+					"ที่นั่น ฉันได้พบอินคาอีกครั้ง",
+					"แต่เธอกลับถูกพันธนาการด้วยใยแมงมุมมหึมาแล้ว",
+					"เปลือกของหอคอยน้ำแข็งลอกออก เผยให้เห็นความจริง",
+					"วีเวอร์ฟรอสต์ ผู้ถักทอโชคชะตา ในที่สุดช่วงเวลาแห่งการเปิดเผยก็มาถึง"
+				],
+				"hindi": [
+					"बर्फ़ीले मैदान की गहराई में, जमी हुई बर्फीली मीनार के हृदय में।",
+					"वहां, मैं इन्का से फिर मिला।",
+					"लेकिन वह पहले से ही एक विशाल मकड़जाल में बंधी हुई थी।",
+					"बर्फीली मीनार का खोल हट गया, सच सामने आ गया।",
+					"वीवरफ्रॉस्ट, भाग्य की बुनकर। अनावरण का क्षण आखिरकार आ गया।"
+				]
+			},
+			"epilogue": {
+				"korean": [
+					"거대한 빙탑이 녹아내리자, 설원은 잠시 평화를 되찾았다.",
+					"하지만 사라진 이들은 돌아오지 않았다. 그들의 흔적만이 차가운 공기 속에 남았다.",
+					"위버프로스트는 쓰러졌다. 그러나 끊어진 실들은 여전히 어딘가로 이어지는 듯했다.",
+					"구원이었을까? 아니면 또 다른 침해의 시작이었을까?",
+					"얼어붙은 고독은 그렇게 쉬이 사라지지 않았다."
+				],
+				"english": [
+					"As the colossal icicle tower melted, the snowfield briefly regained peace.",
+					"But those who vanished did not return. Only their traces remained in the cold air.",
+					"Weaverfrost fell. But the severed threads still seemed to lead somewhere.",
+					"Was it salvation? Or the beginning of yet another encroachment?",
+					"The frozen solitude did not vanish so easily."
+				],
+				"japanese": [
+					"巨大な氷の塔が溶け落ちると、雪原はしばし平和を取り戻した。",
+					"しかし、消え去った者たちは戻らなかった。彼らの痕跡だけが冷たい空気の中に残された。",
+					"ウィーバーフロストは倒れた。しかし、断ち切られた糸はまだどこかへと繋がっているようだった。",
+					"それは救済だったのだろうか？ それとも、また別の侵略の始まりだったのだろうか？",
+					"凍てつく孤独はそう簡単には消え去らなかった。"
+				],
+				"chinese": [
+					"当巨大的冰尖塔融化时，雪原短暂地恢复了平静。",
+					"但那些消失的人并未归来。只有他们的痕迹留在冰冷的空气中。",
+					"织霜者倒下了。但断裂的丝线似乎仍然通向某个地方。",
+					"这是救赎吗？ 抑或是另一次侵犯的开始？",
+					"冰冷的孤独并未如此轻易地消散。"
+				],
+				"french": [
+					"Alors que la colossale tour de glace fondait, la plaine enneigée retrouva brièvement la paix.",
+					"Mais ceux qui avaient disparu ne sont pas revenus. Seules leurs traces sont restées dans l'air froid.",
+					"Tisserandegivre est tombée. Mais les fils coupés semblaient toujours mener quelque part.",
+					"Était-ce le salut ? Ou le début d'une autre incursion ?",
+					"La solitude gelée ne disparut pas si facilement."
+				],
+				"spanish": [
+					"Cuando la colosal torre de carámbanos se derritió, el campo nevado recuperó brevemente la paz.",
+					"Pero aquellos que desaparecieron no regresaron. Solo sus huellas permanecieron en el aire frío.",
+					"Tejedorahelada cayó. Pero los hilos cortados aún parecían conducir a algún lugar.",
+					"¿Fue la salvación? ¿O el comienzo de otra invasión?",
+					"La soledad congelada no se desvaneció tan fácilmente."
+				],
+				"vietnamese": [
+					"Khi ngọn tháp băng khổng lồ tan chảy, cánh đồng tuyết tạm thời tìm lại được bình yên.",
+					"Nhưng những người đã biến mất không trở lại. Chỉ còn lại dấu vết của họ trong không khí lạnh giá.",
+					"Weaverfrost đã gục ngã. Nhưng những sợi chỉ bị cắt đứt dường như vẫn dẫn đến một nơi nào đó.",
+					"Đó có phải là sự cứu rỗi? Hay là sự khởi đầu của một cuộc xâm phạm khác?",
+					"Sự cô độc băng giá không dễ dàng biến mất như vậy."
+				],
+				"thai": [
+					"เมื่อหอคอยน้ำแข็งมหึมาละลาย ทุ่งหิมะก็กลับมาสงบสุขชั่วขณะ",
+					"แต่ผู้ที่หายไปไม่ได้กลับมา มีเพียงร่องรอยของพวกเขาที่ยังคงอยู่ในอากาศที่หนาวเย็น",
+					"วีเวอร์ฟรอสต์ล้มลง แต่เส้นด้ายที่ขาดสะบั้นก็ยังคงดูเหมือนจะนำไปสู่ที่ใดที่หนึ่ง",
+					"มันคือการช่วยให้รอดพ้นงั้นหรือ? หรือเป็นการเริ่มต้นของการรุกล้ำอีกครั้งหนึ่งกันแน่?",
+					"ความโดดเดี่ยวที่เยือกแข็งไม่ได้หายไปง่ายๆ"
+				],
+				"hindi": [
+					"जैसे ही विशाल बर्फीली मीनार पिघल गई, बर्फीले मैदान को कुछ समय के लिए शांति मिल गई।",
+					"लेकिन जो लोग गायब हो गए थे, वे वापस नहीं आए। केवल उनके निशान ठंडी हवा में रह गए।",
+					"वीवरफ्रॉस्ट गिर गया। लेकिन कटे हुए धागे अभी भी कहीं न कहीं ले जाते हुए लग रहे थे।",
+					"क्या यह मुक्ति थी? या एक और अतिक्रमण की शुरुआत?",
+					"जमी हुई एकाकीपन इतनी आसानी से गायब नहीं हुई।"
+				]
+			}
+		}
+	]
+}

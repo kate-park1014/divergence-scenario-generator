@@ -17,7 +17,61 @@ export type NpcInput = {
 	name_english: string;
 };
 
-export function buildStoryarcPrompt(boss: BossInput, npcs: NpcInput[], theme: string): string {
+// ── 다양성 변주 풀 ───────────────────────────────────────────
+// 아크마다 무작위로 1개씩 뽑아 프롬프트에 주입 → 톤/장르/반전이 매번 달라진다.
+export const VARIATION_POOLS = {
+	genre: [
+		'블랙코미디',
+		'비극',
+		'미스터리/추리',
+		'심리 호러',
+		'느와르',
+		'잔혹동화',
+		'부조리극',
+		'신파/멜로드라마',
+		'활극/액션',
+		'사회 풍자'
+	],
+	twist: [
+		'정체 반전',
+		'가해자↔피해자 입장 역전',
+		'악당이 사실은 피해자(동정 유발)',
+		'시스템·흑막의 폭로',
+		'진실은 상상보다 더 끔찍',
+		'구원이 곧 파멸',
+		'믿었던 조력자가 흑막',
+		'승리가 무의미해지는 결말'
+	],
+	device: [
+		'비선형/회상 교차',
+		'신뢰할 수 없는 화자',
+		'단서 수집형 전개',
+		'시한 카운트다운',
+		'반복·루프 구조의 암시',
+		'소문·풍문으로 빌드업'
+	],
+	emotion: ['연민', '분노', '공포', '허무', '그리움', '통쾌함', '씁쓸함', '죄책감']
+};
+
+export type Variation = { genre: string; twist: string; device: string; emotion: string };
+
+function pickVariation(): Variation {
+	const r = (a: string[]) => a[Math.floor(Math.random() * a.length)];
+	return {
+		genre: r(VARIATION_POOLS.genre),
+		twist: r(VARIATION_POOLS.twist),
+		device: r(VARIATION_POOLS.device),
+		emotion: r(VARIATION_POOLS.emotion)
+	};
+}
+
+export function buildStoryarcPrompt(
+	boss: BossInput,
+	npcs: NpcInput[],
+	theme: string,
+	variation?: Variation
+): string {
+	const v = variation ?? pickVariation();
 	const npcList = npcs
 		.map((n) => `- key: "${n.key}" | 이름: ${n.name_korean} (${n.name_english})`)
 		.join('\n');
@@ -26,7 +80,7 @@ export function buildStoryarcPrompt(boss: BossInput, npcs: NpcInput[], theme: st
 보스 캐릭터 정보와 NPC 목록을 받아 완성된 StoryArc 데이터를 생성합니다.
 
 # 핵심 원칙
-- 막장 웹툰 분위기. 반전, 복선, 강렬한 감정선
+- 강렬한 감정선·반전·복선이 살아있는 웹툰형 서사. **단, 톤·장르는 USER의 '이번 아크 변주 가이드'를 최우선으로 따른다** (매 아크 다른 색깔을 낼 것)
 - 보스의 surface_identity와 true_identity 사이의 갭이 핵심 드라마
 - NPC들은 각자 고유한 서사적 역할을 가진다 — npc_roles 필수
 - 같은 NPC가 여러 시나리오에 등장할 때 서사가 연결되어야 한다
@@ -38,7 +92,8 @@ export function buildStoryarcPrompt(boss: BossInput, npcs: NpcInput[], theme: st
 - scenarioOutline order 1~4: boss는 반드시 'random_boss' 고정 (중간보스 — 런타임에 임의 배정되므로 미리 지정하지 않는다)
 - scenarioOutline order 5 (climax_finale): boss는 입력으로 받은 지정 보스의 id를 그대로 사용 (USER 섹션의 "보스 캐릭터 > id" 값. final_boss와 동일 인물)
 - act_tone.tension: intro=1, rising=3, climax_finale=5
-- chapter_name은 9개 언어 모두 작성 (korean, english, japanese, chinese, french, spanish, vietnamese, thai, hindi)
+- chapter_name은 9개 언어 모두 작성 (korean, english, japanese, chinese, french, spanish, vietnamese, thai, hindi). **각 언어 12자 이내(공백 포함)**, 콜론·대시로 부제를 붙이지 말 것 — 핵심 단어 위주의 짧고 강렬한 단일 제목
+- chapter_name은 **각 언어 모두 12단어 이내** — 무조건 12단어를 넘기지 말 것 (짧고 강렬한 제목)
 - npc_roles: 등장하는 모든 NPC에 대해 role(역할 레이블)과 arc(서사 연결 설명) 작성
   - arc는 "N화에서 ~하는 인물. M화에서 ~하며 연결되는 역할" 형태로 등장 간 연결 명시
 
@@ -70,6 +125,14 @@ twist: ${boss.twist}
 
 ## 사용 가능한 NPC 목록
 ${npcList}
+
+## 이번 아크 변주 가이드 (이 조합을 적극 반영)
+- 장르/톤: ${v.genre}
+- 반전 유형: ${v.twist}
+- 서사 장치: ${v.device}
+- 감정 축: ${v.emotion}
+이 변주를 chapter_name·world·act_tone·scenarioOutline·final_boss(특히 twist) 전반에 적극 반영하라.
+단, 고정 구조(5씬, 복선 4개, tension 1/3/5, 보스 정체성, order5=지정 보스, 12자 제목)는 반드시 유지한다.
 
 ## 요구사항
 - scenarioOutline order 1~4의 boss는 모두 'random_boss', order 5의 boss는 "${boss.id}" (지정 보스)로 설정
@@ -132,7 +195,7 @@ export function buildSequelPrompt(source: StoryArc, npcs: NpcInput[]): string {
 - global_foreshadowing은 4개. 자연스럽게, 티 내지 말 것
 - rising_count는 항상 3
 - act_tone.tension: intro=1, rising=3, climax_finale=5
-- chapter_name은 9개 언어 모두 작성 (korean, english, japanese, chinese, french, spanish, vietnamese, thai, hindi)
+- chapter_name은 9개 언어 모두 작성 (korean, english, japanese, chinese, french, spanish, vietnamese, thai, hindi). **각 언어 12자 이내(공백 포함)**, 콜론·대시로 부제를 붙이지 말 것 — 핵심 단어 위주의 짧고 강렬한 단일 제목
 
 # 🔒 하드 락 — 절대 수정 금지
 1. **final_boss의 6개 필드**: id, name, appearance_npc, appearance_boss, surface_identity, true_identity — USER 섹션의 "락 필드" JSON을 한 글자도 바꾸지 말고 그대로 반환. 보스의 "존재 자체"는 1편과 동일합니다.
