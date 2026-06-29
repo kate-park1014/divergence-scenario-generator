@@ -143,7 +143,7 @@ export const storyarc_snowy_hrimvow_60: StoryArc = {
 			"order": 5,
 			"summary": "모든 진실이 Hrimvow의 얼음 형체가 균열하며 드러난다. Hrimvow는 스스로를 '수호자'로 명했지만, 사실은 멸망을 막지 못한 샤먼의 후회와 죄책감이 응고된 존재였다. 그가 지키려던 것은 부족이 아닌 실패한 맹세 자체였다는 복선들이 연이어 드러나며 Hrimvow의 진정한 고통이 밝혀진다. 아눅은 이 모든 비극의 증인이 되어 Hrimvow의 해방을 지켜보고, 주인공은 허무한 맹세의 굴레를 끊어낸다.",
 			"act": "climax_finale",
-			"boss": "pool_Oathkeeper_Hrimvow_V1",
+			"boss": "pool_321",
 			"title": "허무의 서약, 해방의 눈물"
 		}
 	],

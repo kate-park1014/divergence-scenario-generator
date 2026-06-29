@@ -144,7 +144,7 @@ export const storyarc_desert_lamentia_15: StoryArc = {
 			"order": 5,
 			"act": "climax_finale",
 			"summary": "주인공은 Kemet과 함께 마침내 사막 시스템의 심장부에 도달하고, 그곳에서 모든 진실이 밝혀진다. 보스 Lamentia와의 대결 중, Lamentia가 시스템의 희생자이자 '별의 탄식'의 조각난 영혼임이 드러나며 (FS_02, FS_03, FS_04 reveal). Lamentia의 비극적인 절규는 시스템의 조작된 정보망과 거짓된 희망의 실체(FS_01 reveal)를 폭로하고, 주인공은 모든 고통을 끝내고 진정한 해방을 위한 결단을 내린다.",
-			"boss": "pool_ChronoShard_Lamentia_V1"
+			"boss": "pool_158"
 		}
 	],
 	"act_summary": {

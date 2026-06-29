@@ -140,7 +140,7 @@ export const storyarc_modern_elias_72: StoryArc = {
 		},
 		{
 			"order": 5,
-			"boss": "pool_ForgottenDebt_Elias_V1",
+			"boss": "pool_117",
 			"title": "핏값의 연쇄, 깨어진 속죄",
 			"act": "climax_finale",
 			"npc": "bex",

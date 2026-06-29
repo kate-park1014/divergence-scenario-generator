@@ -137,7 +137,7 @@ export const storyarc_snowy_galdrgrim_47: StoryArc = {
 		{
 			"title": "맹세의 파멸, 반복된 죄책감",
 			"order": 5,
-			"boss": "pool_FrozenOath_Galdrgrim_V1",
+			"boss": "pool_318",
 			"summary": "거대 얼음 형상 갈드그림과 마주한 주인공은, 그가 파괴된 왕국의 마지막 주술사의 영혼이 깃든 서약석이자 뒤틀린 맹세의 산물임을 깨닫는다. 보스는 '모든 것을 지키겠다'는 광기 어린 속삭임을 반복하며 자신을 파괴하는 것이 곧 약속을 깨는 것이라 경고한다. 주인공은 보스를 쓰러뜨리며 자신의 죄책감, 그리고 끊임없이 반복될 비극의 고리를 끊어낼지, 아니면 또 다른 파멸을 맞이할지 절체절명의 선택의 기로에 선다.",
 			"npc": "anuk",
 			"act": "climax_finale"

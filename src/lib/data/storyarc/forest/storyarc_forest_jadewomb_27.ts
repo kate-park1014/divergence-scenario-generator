@@ -141,7 +141,7 @@ export const storyarc_forest_jadewomb_27: StoryArc = {
 		{
 			"title": "에메랄드 봉분, 비탄의 여왕",
 			"npc": "Ela",
-			"boss": "pool_VeridianMausoleum_JadeWomb_V1",
+			"boss": "pool_183",
 			"summary": "자정의 카운트다운이 끝나고, 탐험대는 봉분 안에서 비로소 '제이드 웜'과 대면한다. 엘라는 봉분 중앙에서 빛나는 여인의 형상이 과거 자신의 잃어버린 가족과 닮았음을 깨닫고, 그녀가 이 숲의 진정한 희생자였음을 폭로한다. 여왕은 더 이상 침입자를 막는 수호자가 아니라, 끝없는 그리움으로 숲을 병들게 하고 모든 것을 흡수하려 했던 비극적인 가해자였다. 탐험대는 이 비틀린 슬픔을 멈춰야 한다.",
 			"order": 5,
 			"act": "climax_finale"

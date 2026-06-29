@@ -142,7 +142,7 @@ export const storyarc_modern_architect_55: StoryArc = {
 			"act": "climax_finale",
 			"order": 5,
 			"title": "허무의 알고리즘",
-			"boss": "pool_Conduit_Architect_V1",
+			"boss": "pool_264",
 			"npc": "bex",
 			"summary": "마침내 주인공은 '중개인' Architect의 실체를 마주한다. 모든 질서와 무질서가 그의 통제 하에 있었다는 사실은 주인공과 Bex에게 극도의 허무감을 안긴다. 도시는 완벽하게 재편될 준비를 마쳤고, 저항은 무의미한 데이터 오류로 치부된다. 진실은 상상보다 더 끔찍한 블랙코미디 그 자체이다."
 		}

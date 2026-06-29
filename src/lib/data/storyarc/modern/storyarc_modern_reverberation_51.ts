@@ -139,7 +139,7 @@ export const storyarc_modern_reverberation_51: StoryArc = {
 			"npc": "max",
 			"summary": "모든 유물을 모아 Reverberation에게 전달하려는 순간, Max는 유물의 봉인이 Reverberation의 육신과 연결되어 있음을 깨닫고 필사적으로 막으려 한다. 그러나 때는 이미 늦었고, Reverberation은 비틀린 미소와 함께 진정한 정체를 드러낸다. 그는 자신이 가문의 모든 죄와 업보를 정산하기 위해 태어난 '숙명의 화신'임을 밝히며, 탐험대에게 모든 진실을 폭로한다. 과거와 현재의 비극이 교차하며, 마침내 시스템의 폭로가 이루어진다. Max는 모든 것을 감내하며 Reverberation의 슬픈 운명을 끝낼 마지막 일격을 준비한다. (복선1,2,3,4 모두 폭로)",
 			"act": "climax_finale",
-			"boss": "pool_Legacy_Reverberation_V1",
+			"boss": "pool_288",
 			"title": "업보의 종결"
 		}
 	],

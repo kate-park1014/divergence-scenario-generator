@@ -140,7 +140,7 @@ export const storyarc_modern_reverence_38: StoryArc = {
 		},
 		{
 			"title": "도시의 비명, 영원한 죄",
-			"boss": "pool_Viscid_Reverence_V1",
+			"boss": "pool_291",
 			"npc": "lin",
 			"summary": "Reverence의 끔찍한 진실이 만천하에 드러나고, 도시는 거대한 유기체처럼 비명을 지르기 시작한다. 린은 '우리 모두가 이미 그의 일부가 되었을지도 모른다'는 죄책감을 품고 속삭인다. 주인공은 흡수된 영혼들의 마지막 염원 속에서 Reverence의 심장부로 향하며, 반복되는 비극의 고리를 끊기 위한 마지막이자 절망적인 싸움을 시작한다.",
 			"order": 5,

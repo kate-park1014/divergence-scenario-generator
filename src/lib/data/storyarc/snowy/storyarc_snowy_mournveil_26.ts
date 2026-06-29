@@ -139,7 +139,7 @@ export const storyarc_snowy_mournveil_26: StoryArc = {
 			"boss": "random_boss"
 		},
 		{
-			"boss": "pool_FrozenTears_Mournveil_V1",
+			"boss": "pool_371",
 			"act": "climax_finale",
 			"order": 5,
 			"title": "녹지 않는 절규",

@@ -142,7 +142,7 @@ export const storyarc_modern_vortex_32: StoryArc = {
 			"act": "climax_finale",
 			"summary": "주인공은 마침내 Vortex와 직접 대면한다. 모든 것이 뒤집히는 순간, Vortex의 진정한 정체와 그가 구축하려던 '영원한 기록의 감옥'의 실체가 잔혹하게 폭로된다. Echo는 과거의 진실을 밝히며 주인공에게 최후의 선택을 요구하고, 희생과 허무 속에서 씁쓸하지만 새로운 여운이 남는 결말이 펼쳐진다.",
 			"order": 5,
-			"boss": "pool_Cryptograph_Vortex_V1",
+			"boss": "pool_294",
 			"npc": "echo",
 			"title": "영원한 기록의 감옥"
 		}

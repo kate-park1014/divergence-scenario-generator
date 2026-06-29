@@ -144,7 +144,7 @@ export const storyarc_hell_voidprism_7: StoryArc = {
 			"npc": "ash",
 			"summary": "모든 진실이 뒤섞인 지옥의 핵에서 'Void Prism'과의 최후의 대결이 시작된다. 주인공은 애쉬가 첫 만남에서 했던 모든 말들이 사실 뒤틀린 진실을 감추고 있었음을 깨닫는다. Void Prism의 부서진 크리스탈 조각 속에서 드러나는 진짜 얼굴, 그리고 그녀의 비탄에 잠긴 예언은 모든 것을 산산이 부순다.",
 			"order": 5,
-			"boss": "pool_FallenOracle_VoidPrism_V1"
+			"boss": "pool_240"
 		}
 	],
 	"act_summary": {

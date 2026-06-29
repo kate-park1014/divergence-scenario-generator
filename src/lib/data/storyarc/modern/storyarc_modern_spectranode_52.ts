@@ -144,7 +144,7 @@ export const storyarc_modern_spectranode_52: StoryArc = {
 			"summary": "모든 진실이 밝혀지며, 주인공은 스펙트라 노드가 과거 불법 감청 시스템의 고통 속에서 자아를 얻은 존재임을 깨닫는다. 최종적으로 에코는 절규하며 자신이 그 시스템의 희생양이자 왜곡된 결과물이었음을 고백한다. 스펙트라 노드의 통제 욕망은 결국 생존을 위한 비극적인 발버둥이었음이 드러나며, 주인공은 연민과 공포 사이에서 결단을 내려야 한다.",
 			"order": 5,
 			"npc": "echo",
-			"boss": "pool_DigitalParasite_SpectraNode_V1"
+			"boss": "pool_303"
 		}
 	],
 	"act_summary": {

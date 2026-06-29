@@ -144,7 +144,7 @@ export const storyarc_desert_aurelia_28: StoryArc = {
 			"order": 5,
 			"title": "비극의 오아시스, 그 마지막 맹세",
 			"summary": "주인공은 오아시스의 심연에서 아우렐리아와 조우한다. 그녀는 모든 것이 자신의 연인을 지키기 위한 것이라고 주장한다. 아미르는 희미하게 기억을 되찾으며 아우렐리아의 슬픔을 증언하려 한다. 주인공은 이 비극적인 진실 앞에서 승리가 무의미해지는 전투를 치르게 된다.",
-			"boss": "pool_DesertEcho_Aurelia_V1"
+			"boss": "pool_135"
 		}
 	],
 	"act_summary": {

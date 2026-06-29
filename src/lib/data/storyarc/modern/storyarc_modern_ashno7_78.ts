@@ -139,7 +139,7 @@ export const storyarc_modern_ashno7_78: StoryArc = {
 			"npc": "ren"
 		},
 		{
-			"boss": "pool_Ash_No_7",
+			"boss": "pool_115",
 			"act": "climax_finale",
 			"title": "절대 청결 구역: 당신도 오물인가요?",
 			"order": 5,

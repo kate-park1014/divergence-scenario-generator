@@ -142,7 +142,7 @@ export const storyarc_modern_rumble_56: StoryArc = {
 			"summary": "클럽 'Rumble'에서 보스 'Rumble'과 대치한다. 그때 'Dax'가 다시 나타나 자신의 진짜 정체와 Rumble과의 관계를 드러내며 주인공을 혼란에 빠뜨린다. 모든 복선이 폭발하며 진실이 드러나고, 주인공은 자신이 조종당했음을 깨닫지만 동시에 진정한 해방감을 느낀다.",
 			"order": 5,
 			"title": "종말의 댄스: 해방의 환희",
-			"boss": "pool_Anachronistic_Jukebox_Rumble_V1",
+			"boss": "pool_248",
 			"act": "climax_finale",
 			"npc": "dax"
 		}

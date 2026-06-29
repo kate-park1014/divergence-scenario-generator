@@ -139,7 +139,7 @@ export const storyarc_snowy_cairn_98: StoryArc = {
 			"order": 4
 		},
 		{
-			"boss": "pool_FrozenVow_Cairn_V1",
+			"boss": "pool_111",
 			"order": 5,
 			"act": "climax_finale",
 			"title": "결빙된 진실: 무의미한 승리",

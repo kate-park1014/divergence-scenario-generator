@@ -140,7 +140,7 @@ export const storyarc_desert_sirpolished_18: StoryArc = {
 			"act": "rising"
 		},
 		{
-			"boss": "pool_DelusionalSheath_SirPolished_V1",
+			"boss": "pool_133",
 			"npc": "amir",
 			"summary": "끝없는 반복과 환영의 중심에서, 주인공은 마침내 낡은 검집 'Sir Polished'와 대면한다. 아미르는 Sir Polished의 충실한 '수호자'이자 이 모든 환영의 설계자임을 드러낸다. 그는 주인공이 가진 모든 것을 부정하며 이 사막의 진정한 지배자는 Sir Polished라고 외친다. 치열한 사투 끝에 Sir Polished의 정체가 밝혀지고, 모든 것이 허상이었음을 깨달은 주인공은 쓰디쓴 현실을 마주한다. 아미르의 '빛바랜 거울 조각'은 깨지면서, 거울이 비추던 왜곡된 진실을 비로소 온전하게 드러낸다.",
 			"title": "진실의 장막",

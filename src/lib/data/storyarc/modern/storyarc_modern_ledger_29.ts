@@ -137,7 +137,7 @@ export const storyarc_modern_ledger_29: StoryArc = {
 		{
 			"act": "climax_finale",
 			"npc": "echo",
-			"boss": "pool_DigitalKing_Ledger_V1",
+			"boss": "pool_265",
 			"title": "허무한 디지털 왕관",
 			"order": 5,
 			"summary": "Max가 지시한 서버에 도착한 주인공은 함정에 빠지고, Max의 배신을 깨닫는다. 그곳에서 Ledger의 거대한 본체와 대면하고, 그가 빅 보스의 디지털 환생이며 이 모든 사건이 자신의 복수극을 위한 거대한 무대였음을 알게 된다. 에코는 Ledger의 시스템을 교란시키려 마지막 힘을 다하지만, 모든 노력이 허무하게 느껴지는 가운데 Ledger는 더욱 강력해진 힘으로 디지털 제국의 영원한 지배를 선언한다. 주인공은 비참한 패배와 함께 모든 것이 헛된 노력이었음을 깨닫는다."

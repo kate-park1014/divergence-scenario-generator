@@ -141,7 +141,7 @@ export const storyarc_forest_nutcommander_53: StoryArc = {
 		{
 			"npc": "bracken",
 			"act": "climax_finale",
-			"boss": "pool_Amazonian_NutCommander_V1",
+			"boss": "pool_120",
 			"summary": "탐험대는 마침내 '심장의 씨앗'이 있는 곳에 도달하지만, 그곳에는 도토리 요새를 지키는 넛 커맨더가 버티고 있다. 브라켄은 넛 커맨더의 정체와 숲 저주의 진짜 의미를 깨닫고 경악한다. 심장의 씨앗 주변에서 발견된 기록에는 씨앗은 '숲의 가장 소중한 것을 희생하여 새 생명을 잉태한다'는 구절이 적혀 있다. 넛 커맨더와의 치열한 사투 끝에, 숲을 구원하는 행위가 또 다른 희생과 파멸을 불러올 것임을 깨닫는 허무한 반전을 맞이한다.",
 			"title": "구원인가, 또 다른 파멸인가",
 			"order": 5

@@ -143,7 +143,7 @@ export const storyarc_forest_chorale_2: StoryArc = {
 			"act": "climax_finale",
 			"order": 5,
 			"npc": "bracken",
-			"boss": "pool_Whispering_Chorale_V1",
+			"boss": "pool_122",
 			"summary": "마침내 코랄의 본모습이 드러나고, 탐험대는 그 존재를 파괴한다. 그러나 숲은 서서히 죽어가기 시작하고, 브라켄은 이 승리가 결국 탐험대 자신의 파멸을 불렀음을 깨닫는다. 코랄의 마지막 속삭임은 인간의 죄악을 드러내며, 탐험대는 돌이킬 수 없는 죄책감 속에서 무의미한 승리를 맞이한다."
 		}
 	],

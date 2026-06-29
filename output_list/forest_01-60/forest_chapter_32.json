@@ -1,0 +1,3558 @@
+{
+	"chapter_order": 32,
+	"difficulty_level": 32,
+	"chapter_name": {
+		"chinese": "森林诅咒",
+		"french": "Forêt",
+		"vietnamese": "Lời Nguyền",
+		"thai": "คำสาปป่า",
+		"english": "Forest's",
+		"hindi": "वन शाप",
+		"japanese": "森の呪い",
+		"spanish": "Bosque",
+		"korean": "숲의 저주"
+	},
+	"scenarios": [
+		{
+			"scenario_id": "forest_ciphra_31_01",
+			"order": 1,
+			"act": "intro",
+			"theme": "forest",
+			"actors": {
+				"ela": {
+					"id": "mon_24765cb2-6fc0-452e-8969-871a82349c70",
+					"name": {
+						"korean": "엘라",
+						"english": "Ela",
+						"japanese": "エラ",
+						"chinese": "艾拉",
+						"french": "Ela",
+						"spanish": "Ela",
+						"vietnamese": "Ela",
+						"thai": "เอล่า",
+						"hindi": "एला"
+					},
+					"description": "",
+					"face_image_url": "https://imagedelivery.net/WTEqQNGFb-l-IHS6IGnzUQ/55d3e9ee-c589-40ab-dfa4-a658bbddd400/public",
+					"battle_sprite_url": "https://imagedelivery.net/WTEqQNGFb-l-IHS6IGnzUQ/cfacc842-115e-4175-a7fa-3111a468ed00/public"
+				}
+			},
+			"boss": {
+				"pool_id": "random_boss"
+			},
+			"rooms": [
+				{
+					"id": 1,
+					"dialogue": [
+						{
+							"emotion": "base",
+							"type": "speech",
+							"speaker": "narrator",
+							"content": {
+								"korean": "짙은 안개가 길을 삼켰다. 미로 같은 숲에 갇힌 탐험대.",
+								"english": "Thick fog swallowed the path. An expedition trapped in a labyrinthine forest.",
+								"japanese": "深い霧が道を飲み込んだ。迷路のような森に閉じ込められた探検隊。",
+								"chinese": "浓雾吞噬了道路。探险队被困在这迷宫般的森林中。",
+								"french": "Un épais brouillard a englouti le chemin. Une expédition piégée dans une forêt labyrinthique.",
+								"spanish": "Una densa niebla engulló el camino. Una expedición atrapada en un bosque laberíntico.",
+								"vietnamese": "Sương mù dày đặc nuốt chửng con đường. Đoàn thám hiểm bị mắc kẹt trong khu rừng như mê cung.",
+								"thai": "หมอกหนาทึบกลืนกินเส้นทาง คณะสำรวจติดอยู่ในป่าที่เหมือนเขาวงกต",
+								"hindi": "घने कोहरे ने रास्ता निगल लिया। एक खोजी दल एक भूलभुलैया जैसे जंगल में फँस गया।"
+							}
+						},
+						{
+							"type": "speech",
+							"speaker": "character_any",
+							"content": {
+								"korean": "여기가… 그 저주받은 숲인가?",
+								"english": "Is this… the cursed forest?",
+								"japanese": "ここが…あの呪われた森なのか？",
+								"chinese": "这里就是……那片被诅咒的森林吗？",
+								"french": "Est-ce… la forêt maudite ?",
+								"spanish": "¿Es este… el bosque maldito?",
+								"vietnamese": "Đây có phải… là khu rừng bị nguyền rủa đó không?",
+								"thai": "นี่คือ… ป่าต้องสาปนั่นหรือ?",
+								"hindi": "क्या यह… वही शापित जंगल है?"
+							},
+							"emotion": "sad"
+						},
+						{
+							"speaker": "ela",
+							"type": "direction",
+							"spot": [
+								4,
+								2
+							],
+							"action": "enter",
+							"duration_ms": 500
+						},
+						{
+							"content": {
+								"korean": "네. 7일 안에 심장을 찾아야만 살 수 있어요.",
+								"english": "Yes. You must find the heart within 7 days to survive.",
+								"japanese": "はい。7日以内に心臓を見つけなければ生き残れません。",
+								"chinese": "是的。你们必须在七日内找到心臓才能活下来。",
+								"french": "Oui. Vous devez trouver le cœur dans les 7 jours pour survivre.",
+								"spanish": "Sí. Debéis encontrar el corazón en 7 días para sobrevivir.",
+								"vietnamese": "Vâng. Anh/chị phải tìm thấy trái tim trong vòng 7 ngày để sống sót.",
+								"thai": "ใช่แล้ว ท่านต้องหาหัวใจให้เจอภายใน 7 วันจึงจะรอด",
+								"hindi": "हाँ। आपको 7 दिनों के भीतर हृदय ढूंढना होगा तभी आप बच सकते हैं।"
+							},
+							"speaker": "ela",
+							"type": "speech",
+							"emotion": "base"
+						},
+						{
+							"type": "speech",
+							"speaker": "character_1",
+							"content": {
+								"korean": "심장? 그게 뭔데?",
+								"english": "The heart? What is that?",
+								"japanese": "心臓？それは何だ？",
+								"chinese": "心臓？那是什么？",
+								"french": "Le cœur ? Qu'est-ce que c'est ?",
+								"spanish": "¿El corazón? ¿Qué es eso?",
+								"vietnamese": "Trái tim? Đó là gì vậy?",
+								"thai": "หัวใจ? มันคืออะไร?",
+								"hindi": "हृदय? वह क्या है?"
+							},
+							"emotion": "base"
+						},
+						{
+							"content": {
+								"korean": "숲의 가장 깊은 곳에 있죠. 유일한 구원이에요.",
+								"english": "It's in the deepest part of the forest. It's our only salvation.",
+								"japanese": "森の最も深い場所にあります。それが唯一の救済です。",
+								"chinese": "它在森林最深处。是唯一的救赎。",
+								"french": "Il se trouve au plus profond de la forêt. C'est notre unique salut.",
+								"spanish": "Está en lo más profundo del bosque. Es nuestra única salvación.",
+								"vietnamese": "Nó ở nơi sâu nhất của rừng. Là sự cứu rỗi duy nhất.",
+								"thai": "มันอยู่ในส่วนที่ลึกที่สุดของป่า เป็นความรอดเดียวของเรา",
+								"hindi": "यह जंगल के सबसे गहरे हिस्से में है। यही हमारी एकमात्र मुक्ति है।"
+							},
+							"type": "speech",
+							"speaker": "ela",
+							"emotion": "base"
+						}
+					]
+				},
+				{
+					"id": 3,
+					"dialogue": [
+						{
+							"type": "direction",
+							"speaker": "ela",
+							"spot": [
+								3,
+								2
+							],
+							"action": "enter",
+							"duration_ms": 500
+						},
+						{
+							"emotion": "happy",
+							"content": {
+								"korean": "여기로 가면 돼요. 희미한 빛이 길을 알려줄 거예요.",
+								"english": "Go this way. A faint light will guide you.",
+								"japanese": "こちらへ行けば大丈夫です。微かな光が道を教えてくれるでしょう。",
+								"chinese": "走这边就行了。微弱的光芒会指引方向。",
+								"french": "Allez par ici. Une faible lumière vous guidera.",
+								"spanish": "Id por aquí. Una luz tenue os guiará.",
+								"vietnamese": "Đi lối này. Một tia sáng yếu ớt sẽ dẫn lối.",
+								"thai": "ไปทางนี้ได้เลย แสงสลัวๆ จะนำทางท่านเอง",
+								"hindi": "इस तरफ जाइए। एक मंद रोशनी आपको रास्ता दिखाएगी।"
+							},
+							"speaker": "ela",
+							"type": "speech"
+						},
+						{
+							"type": "speech",
+							"speaker": "character_any",
+							"content": {
+								"korean": "이 빛이… 구원의 길이라고?",
+								"english": "This light... the path to salvation?",
+								"japanese": "この光が…救済の道だと？",
+								"chinese": "这光芒…是救赎之路吗？",
+								"french": "Cette lumière… le chemin du salut ?",
+								"spanish": "Esta luz... ¿el camino a la salvación?",
+								"vietnamese": "Ánh sáng này... là con đường cứu rỗi sao?",
+								"thai": "แสงนี้... คือหนทางแห่งความรอดหรือ?",
+								"hindi": "यह प्रकाश... क्या मोक्ष का मार्ग है?"
+							},
+							"emotion": "base"
+						},
+						{
+							"emotion": "happy",
+							"type": "speech",
+							"speaker": "ela",
+							"content": {
+								"korean": "네. 절 믿으세요. 저주의 끝에는 해방이 있을 거예요.",
+								"english": "Yes. Trust me. At the end of the curse, there will be liberation.",
+								"japanese": "はい。私を信じてください。呪いの終わりには解放があります。",
+								"chinese": "是的。相信我。诅咒的尽头，必将是解放。",
+								"french": "Oui. Croyez-moi. Au bout de la malédiction, il y aura la libération.",
+								"spanish": "Sí. Confía en mí. Al final de la maldición, habrá liberación.",
+								"vietnamese": "Vâng. Hãy tin tôi. Cuối cùng của lời nguyền sẽ là sự giải thoát.",
+								"thai": "ใช่แล้ว เชื่อฉันสิ เมื่อคำสาปสิ้นสุดลง อิสรภาพจะมาถึง",
+								"hindi": "हाँ। मुझ पर विश्वास करो। शाप के अंत में मुक्ति होगी।"
+							}
+						},
+						{
+							"content": {
+								"korean": "왠지 모르게 불안한데….",
+								"english": "I feel uneasy somehow...",
+								"japanese": "なんだか不安だ…",
+								"chinese": "不知为何，总有些不安…",
+								"french": "Je me sens inquiet, je ne sais pas pourquoi…",
+								"spanish": "Me siento inquieto de alguna manera...",
+								"vietnamese": "Sao tôi lại cảm thấy bất an thế nào đó...",
+								"thai": "รู้สึกไม่สบายใจยังไงไม่รู้...",
+								"hindi": "मुझे किसी तरह की बेचैनी महसूस हो रही है..."
+							},
+							"speaker": "character_2",
+							"type": "speech",
+							"emotion": "sad"
+						}
+					]
+				},
+				{
+					"id": 5,
+					"dialogue": [
+						{
+							"type": "direction",
+							"speaker": "ela",
+							"action": "enter",
+							"duration_ms": 500,
+							"spot": [
+								2,
+								2
+							]
+						},
+						{
+							"emotion": "base",
+							"content": {
+								"korean": "시간이 중요해요. 숲의 마법은 시간을 왜곡하죠.",
+								"english": "Time is crucial. The forest's magic distorts time.",
+								"japanese": "時間が重要です。森の魔法は時間を歪めます。",
+								"chinese": "时间至关重要。森林的魔法会扭曲时间。",
+								"french": "Le temps est crucial. La magie de la forêt déforme le temps.",
+								"spanish": "El tiempo es crucial. La magia del bosque distorsiona el tiempo.",
+								"vietnamese": "Thời gian rất quan trọng. Phép thuật của rừng làm méo mó thời gian.",
+								"thai": "เวลาเป็นสิ่งสำคัญ เวทมนตร์ของป่าบิดเบือนเวลา",
+								"hindi": "समय महत्वपूर्ण है। जंगल का जादू समय को विकृत करता है।"
+							},
+							"type": "speech",
+							"speaker": "ela"
+						},
+						{
+							"emotion": "sad",
+							"content": {
+								"korean": "벌써 하루가 다 간 것 같아…",
+								"english": "It feels like a whole day has already passed...",
+								"japanese": "もう一日が終わってしまったようだ…",
+								"chinese": "感觉一整天都过去了…",
+								"french": "On dirait qu'une journée entière est déjà passée...",
+								"spanish": "Parece que ya ha pasado un día entero...",
+								"vietnamese": "Hình như đã hết cả một ngày rồi...",
+								"thai": "รู้สึกเหมือนเวลาผ่านไปทั้งวันแล้ว...",
+								"hindi": "ऐसा लगता है जैसे पूरा दिन बीत चुका है..."
+							},
+							"type": "speech",
+							"speaker": "character_any"
+						},
+						{
+							"type": "speech",
+							"speaker": "ela",
+							"content": {
+								"korean": "서두르지 않으면 영원히 갇히게 될 거예요. 하지만 너무 걱정 마세요.",
+								"english": "If you don't hurry, you'll be trapped forever. But don't worry too much.",
+								"japanese": "急がないと、永遠に閉じ込められてしまいますよ。でも、あまり心配しないでください。",
+								"chinese": "如果不抓紧，你们会被永远困住。但也不必太担心。",
+								"french": "Si vous ne vous dépêchez pas, vous serez piégés pour toujours. Mais ne vous inquiétez pas trop.",
+								"spanish": "Si no te das prisa, quedarás atrapado para siempre. Pero no te preocupes demasiado.",
+								"vietnamese": "Nếu không nhanh lên, bạn sẽ bị mắc kẹt mãi mãi. Nhưng đừng quá lo lắng.",
+								"thai": "ถ้าไม่รีบ คุณจะติดอยู่ที่นี่ตลอดไป แต่ไม่ต้องกังวลมากนัก",
+								"hindi": "अगर तुम जल्दी नहीं करोगे, तो हमेशा के लिए फंस जाओगे। लेकिन ज्यादा चिंता मत करो।"
+							},
+							"emotion": "base"
+						},
+						{
+							"content": {
+								"korean": "구원의 길은 항상 열려있으니까요.",
+								"english": "For the path to salvation is always open.",
+								"japanese": "救済の道は常に開かれていますから。",
+								"chinese": "因为救赎之路总是敞开的。",
+								"french": "Car le chemin du salut est toujours ouvert.",
+								"spanish": "Porque el camino a la salvación siempre está abierto.",
+								"vietnamese": "Vì con đường cứu rỗi luôn rộng mở.",
+								"thai": "เพราะหนทางแห่งความรอดเปิดอยู่เสมอ",
+								"hindi": "क्योंकि मोक्ष का मार्ग हमेशा खुला रहता है।"
+							},
+							"type": "speech",
+							"speaker": "ela",
+							"emotion": "happy"
+						}
+					]
+				},
+				{
+					"id": 9,
+					"dialogue": [
+						{
+							"type": "direction",
+							"speaker": "ela",
+							"action": "enter",
+							"duration_ms": 500,
+							"spot": [
+								2,
+								2
+							]
+						},
+						{
+							"emotion": "sad",
+							"content": {
+								"korean": "점점 더 깊어지는 것 같아. 되돌아갈 수 없을 것 같아….",
+								"english": "It feels like it's getting deeper and deeper. I don't think we can go back...",
+								"japanese": "どんどん深くなっているようだ。もう引き返せないだろう…",
+								"chinese": "感觉越来越深了。我们可能回不去了…",
+								"french": "On dirait que ça s'enfonce de plus en plus. Je ne pense pas que nous puissions revenir en arrière...",
+								"spanish": "Parece que se está haciendo cada vez más profundo. No creo que podamos volver...",
+								"vietnamese": "Càng ngày càng sâu hơn. Tôi nghĩ chúng ta không thể quay lại được nữa...",
+								"thai": "รู้สึกเหมือนยิ่งลึกเข้าไปเรื่อยๆ ฉันว่าเรากลับไม่ได้แล้ว...",
+								"hindi": "ऐसा लगता है कि यह गहरा होता जा रहा है। मुझे नहीं लगता कि हम वापस जा सकते हैं..."
+							},
+							"speaker": "character_any",
+							"type": "speech"
+						},
+						{
+							"emotion": "base",
+							"type": "speech",
+							"speaker": "ela",
+							"content": {
+								"korean": "후회해도 소용없어요. 이미 당신들은 숲의 운명에 묶였으니까.",
+								"english": "Regret is useless. You are already bound to the forest's destiny.",
+								"japanese": "後悔しても無駄ですよ。あなた方は既に森の運命に縛られていますから。",
+								"chinese": "后悔也无济于事。你们早已被森林的命运所束缚。",
+								"french": "Le regret est inutile. Vous êtes déjà liés au destin de la forêt.",
+								"spanish": "El arrepentimiento es inútil. Ya estáis atados al destino del bosque.",
+								"vietnamese": "Hối tiếc cũng vô ích. Các bạn đã bị trói buộc vào vận mệnh của khu rừng rồi.",
+								"thai": "เสียใจไปก็ไม่มีประโยชน์ พวกคุณถูกผูกมัดกับชะตากรรมของป่าแล้ว",
+								"hindi": "पछतावा बेकार है। तुम पहले से ही जंगल के भाग्य से बंधे हो।"
+							}
+						},
+						{
+							"content": {
+								"korean": "운명이라고?",
+								"english": "Destiny?",
+								"japanese": "運命だと？",
+								"chinese": "命运？",
+								"french": "Le destin ?",
+								"spanish": "¿Destino?",
+								"vietnamese": "Vận mệnh ư?",
+								"thai": "โชคชะตาหรือ?",
+								"hindi": "भाग्य?"
+							},
+							"type": "speech",
+							"speaker": "character_1",
+							"emotion": "base"
+						},
+						{
+							"emotion": "happy",
+							"type": "speech",
+							"speaker": "ela",
+							"content": {
+								"korean": "네. 숲의 심장만이 당신들을 구원할 수 있어요. 곧 다다를 거예요.",
+								"english": "Yes. Only the Heart of the Forest can save you. You'll reach it soon.",
+								"japanese": "はい。森の心臓だけがあなたたちを救うことができます。もうすぐそこです。",
+								"chinese": "是的。只有森林之心才能拯救你们。很快就会到达的。",
+								"french": "Oui. Seul le Cœur de la Forêt peut vous sauver. Vous l'atteindrez bientôt.",
+								"spanish": "Sí. Solo el Corazón del Bosque puede salvaros. Lo alcanzaréis pronto.",
+								"vietnamese": "Vâng. Chỉ có Trái tim Rừng mới có thể cứu các bạn. Sắp đến rồi.",
+								"thai": "ใช่แล้ว. มีเพียงหัวใจแห่งป่าเท่านั้นที่จะช่วยพวกเจ้าได้ ใกล้จะถึงแล้ว.",
+								"hindi": "हाँ। केवल वन का हृदय ही तुम्हें बचा सकता है। तुम जल्द ही वहाँ पहुँचोगे।"
+							}
+						}
+					]
+				},
+				{
+					"id": 15,
+					"dialogue": [
+						{
+							"emotion": "base",
+							"content": {
+								"korean": "숲의 가장 깊은 곳, 정체 모를 어둠이 탐험대를 맞이한다.",
+								"english": "In the deepest part of the forest, an unknown darkness greets the expedition.",
+								"japanese": "森の最も深い場所で、正体不明の闇が探検隊を迎える。",
+								"chinese": "在森林最深处，未知的黑暗迎接了探险队。",
+								"french": "Au plus profond de la forêt, une obscurité inconnue accueille l'expédition.",
+								"spanish": "En lo más profundo del bosque, una oscuridad desconocida recibe a la expedición.",
+								"vietnamese": "Ở nơi sâu thẳm nhất của khu rừng, một bóng tối vô danh chào đón đoàn thám hiểm.",
+								"thai": "ณ ส่วนที่ลึกที่สุดของป่า ความมืดมิดที่ไม่อาจระบุได้ต้อนรับคณะสำรวจ",
+								"hindi": "वन के सबसे गहरे हिस्से में, एक अज्ञात अँधेरा अभियान दल का स्वागत करता है।"
+							},
+							"speaker": "narrator",
+							"type": "speech"
+						},
+						{
+							"emotion": "angry",
+							"type": "speech",
+							"speaker": "random_boss",
+							"content": {
+								"korean": "감히 이곳까지 발을 들이다니… 어리석은 인간들.",
+								"english": "To dare set foot in this place... Foolish humans.",
+								"japanese": "よくもここまで足を踏み入れたな… 愚かな人間どもめ。",
+								"chinese": "竟敢踏足此地……愚蠢的人类。",
+								"french": "Oser mettre les pieds ici... Humains stupides.",
+								"spanish": "¿Cómo osáis pisar este lugar...? Humanos necios.",
+								"vietnamese": "Dám đặt chân đến nơi này... Lũ người ngu ngốc.",
+								"thai": "กล้าดียังไงถึงเหยียบย่างมาถึงที่นี่... มนุษย์โง่เขลา!",
+								"hindi": "यहाँ पैर रखने की हिम्मत की... मूर्ख इंसान।"
+							}
+						},
+						{
+							"emotion": "angry",
+							"speaker": "character_any",
+							"type": "speech",
+							"content": {
+								"korean": "네가… 저주의 근원인가?",
+								"english": "Are you... the source of the curse?",
+								"japanese": "お前が…呪いの根源なのか？",
+								"chinese": "你就是……诅咒的根源吗？",
+								"french": "Es-tu... la source de la malédiction ?",
+								"spanish": "¿Eres... la fuente de la maldición?",
+								"vietnamese": "Ngươi... là nguồn gốc của lời nguyền sao?",
+								"thai": "เจ้า... คือต้นตอของคำสาปหรือ?",
+								"hindi": "क्या तुम... शाप का स्रोत हो?"
+							}
+						}
+					],
+					"lose_dialogue": [
+						{
+							"speaker": "narrator",
+							"type": "speech",
+							"content": {
+								"korean": "탐험대는 깊은 어둠 속으로 잠식된다. 숲의 일부가 되어간다.",
+								"english": "The expedition is swallowed by the deep darkness. Becoming one with the forest.",
+								"japanese": "探検隊は深い闇に飲み込まれていく。森の一部となるのだ。",
+								"chinese": "探险队被深邃的黑暗吞噬。逐渐成为森林的一部分。",
+								"french": "L'expédition est engloutie par les ténèbres profondes. Devenant une partie de la forêt.",
+								"spanish": "La expedición es engullida por la profunda oscuridad. Se convierte en parte del bosque.",
+								"vietnamese": "Đoàn thám hiểm bị nuốt chửng vào bóng tối sâu thẳm. Dần trở thành một phần của khu rừng.",
+								"thai": "คณะสำรวจถูกกลืนกินโดยความมืดมิดอันลึกซึ้ง กลายเป็นส่วนหนึ่งของป่า",
+								"hindi": "अभियान दल गहरे अँधेरे में समा जाता है। वन का एक हिस्सा बनता जा रहा है।"
+							},
+							"emotion": "base"
+						},
+						{
+							"speaker": "random_boss",
+							"type": "speech",
+							"content": {
+								"korean": "하찮은 존재들이… 감히 신에게 대적하려 했는가.",
+								"english": "Insolent mortals... Dared to defy a god?",
+								"japanese": "下賤な存在どもめ… 神に逆らおうとしたか。",
+								"chinese": "卑微的蝼蚁们… 竟敢妄图挑战神明。",
+								"french": "Créatures insignifiantes... Osiez-vous défier un dieu ?",
+								"spanish": "Seres insignificantes... ¿Osasteis desafiar a un dios?",
+								"vietnamese": "Những kẻ hèn mọn... Dám chống lại thần thánh sao?",
+								"thai": "พวกสิ่งมีชีวิตชั้นต่ำ... บังอาจคิดจะต่อต้านเทพเจ้าหรือไง",
+								"hindi": "तुच्छ प्राणी... तुमने एक देवता को चुनौती देने की हिम्मत की?"
+							},
+							"emotion": "angry"
+						},
+						{
+							"emotion": "angry",
+							"speaker": "character_any",
+							"type": "speech",
+							"content": {
+								"korean": "아직… 끝나지 않았어….",
+								"english": "It's not... over yet...",
+								"japanese": "まだ… 終わっていない…。",
+								"chinese": "还没… 结束呢…",
+								"french": "Ce n'est pas... encore fini...",
+								"spanish": "Aún no... ha terminado...",
+								"vietnamese": "Vẫn chưa... kết thúc đâu...",
+								"thai": "ยังไม่... จบหรอก...",
+								"hindi": "अभी तक… खत्म नहीं हुआ है…"
+							}
+						}
+					],
+					"win_dialogue": [
+						{
+							"content": {
+								"korean": "크으윽… 겨우 이 정도라니…",
+								"english": "Ugh... Is this all you've got...?",
+								"japanese": "ぐぅ…たったこれだけとは…",
+								"chinese": "呃啊……就这点程度吗……",
+								"french": "Ugh... Seulement ça...?",
+								"spanish": "Ugh... ¿Solo esto...?",
+								"vietnamese": "Ư... Chỉ có thế này thôi sao...?",
+								"thai": "อึก... แค่เท่านี้เองหรือนี่...",
+								"hindi": "उफ़... बस इतना ही..."
+							},
+							"speaker": "random_boss",
+							"type": "speech",
+							"emotion": "sad"
+						},
+						{
+							"emotion": "base",
+							"content": {
+								"korean": "이것은 시작일 뿐… 숲의 진정한 주인을 만나게 될 것이다….",
+								"english": "This is only the beginning... You will meet the true master of the forest....",
+								"japanese": "これは始まりにすぎない… 森の真の主人に出会うことになるだろう…。",
+								"chinese": "这只是个开始……你将见到森林的真正主人……",
+								"french": "Ce n'est que le début... Vous rencontrerez le véritable maître de la forêt....",
+								"spanish": "Esto es solo el principio... Conoceréis al verdadero amo del bosque....",
+								"vietnamese": "Đây chỉ là khởi đầu... Các ngươi sẽ gặp chủ nhân thật sự của khu rừng....",
+								"thai": "นี่เป็นเพียงจุดเริ่มต้น... เจ้าจะได้พบกับเจ้าของที่แท้จริงของป่า....",
+								"hindi": "यह तो बस शुरुआत है... तुम वन के असली मालिक से मिलोगे...।"
+							},
+							"type": "speech",
+							"speaker": "random_boss"
+						},
+						{
+							"emotion": "angry",
+							"speaker": "character_any",
+							"type": "speech",
+							"content": {
+								"korean": "무슨 소리지? 주인이 누구야!",
+								"english": "What are you talking about? Who's the master!",
+								"japanese": "何を言ってる？主人って誰だ！",
+								"chinese": "你说什么？主人是谁！",
+								"french": "De quoi parles-tu ? Qui est le maître !",
+								"spanish": "¿De qué hablas? ¡¿Quién es el amo?!",
+								"vietnamese": "Ngươi đang nói gì vậy? Chủ nhân là ai!",
+								"thai": "เจ้ากำลังพูดถึงอะไร? ใครคือเจ้าของ!",
+								"hindi": "तुम क्या कह रहे हो? मालिक कौन है!"
+							}
+						},
+						{
+							"type": "speech",
+							"speaker": "narrator",
+							"content": {
+								"korean": "정체 모를 자는 쓰러졌다. 그러나 숲의 압도적인 기운은 여전하다.",
+								"english": "The unknown entity fell. But the forest's overwhelming aura remains.",
+								"japanese": "正体不明の者は倒れた。しかし、森の圧倒的な気配は依然として残っている。",
+								"chinese": "未知之物倒下了。然而，森林那压倒性的气息依然存在。",
+								"french": "L'entité inconnue est tombée. Mais l'aura écrasante de la forêt demeure.",
+								"spanish": "La entidad desconocida cayó. Pero el aura abrumadora del bosque persiste.",
+								"vietnamese": "Thực thể vô danh đã ngã xuống. Nhưng khí tức áp đảo của khu rừng vẫn còn.",
+								"thai": "ผู้ที่ไม่อาจระบุตัวตนได้ล้มลงแล้ว ทว่ากลิ่นอายอันน่าเกรงขามของป่ายังคงอยู่",
+								"hindi": "अज्ञात सत्ता गिर गई। लेकिन वन की भारी ऊर्जा बनी हुई है।"
+							},
+							"emotion": "base"
+						},
+						{
+							"speaker": "narrator",
+							"type": "speech",
+							"content": {
+								"korean": "이 싸움은 — 재앙의 서곡에 불과할지도 모른다.",
+								"english": "This battle — might just be the prelude to disaster.",
+								"japanese": "この戦いは—災厄の序曲に過ぎないのかもしれない。",
+								"chinese": "这场战斗——可能只是灾难的序曲。",
+								"french": "Cette bataille — n'est peut-être que le prélude au désastre.",
+								"spanish": "Esta batalla — podría ser solo el preludio del desastre.",
+								"vietnamese": "Trận chiến này — có lẽ chỉ là khúc dạo đầu cho tai họa.",
+								"thai": "การต่อสู้นี้—อาจเป็นเพียงแค่ปฐมบทของหายนะ",
+								"hindi": "यह लड़ाई — शायद आपदा की प्रस्तावना मात्र है।"
+							},
+							"emotion": "base"
+						}
+					]
+				}
+			],
+			"prologue": {
+				"korean": [
+					"어둡고 습한 숲. 발걸음을 옮길 때마다 축축한 흙이 들러붙었다.",
+					"길을 잃은 자, 7일 안에 숲의 심장을 찾지 못하면 —",
+					"이 숲의 일부가 되리라. 절대적인 저주였다.",
+					"그러나 어둠 속에서도 희미한 빛이 깜빡였다. 구원의 속삭임과 함께."
+				],
+				"english": [
+					"A dark, damp forest. Wet soil clung with every step.",
+					"Lost souls, if you fail to find the forest's heart within 7 days —",
+					"You shall become part of this forest. An absolute curse.",
+					"Yet, even in darkness, a faint light flickered. With a whisper of salvation."
+				],
+				"japanese": [
+					"暗く湿った森。足を踏み出すたびに湿った土がまとわりついた。",
+					"道に迷いし者よ、7日以内に森の心臓を見つけられなければ —",
+					"この森の一部となるだろう。それは絶対的な呪いだった。",
+					"しかし、闇の中にも微かな光が瞬いていた。救済の囁きと共に。"
+				],
+				"chinese": [
+					"一片黑暗潮湿的森林。每迈出一步，潮湿的泥土就粘附在脚上。",
+					"迷失之人，若七日内未能寻得森林之心，便会——",
+					"你将成为这森林的一部分。这是绝对的诅咒。",
+					"然而，即使在黑暗中，微弱的光芒依然闪烁。伴随着救赎的低语。"
+				],
+				"french": [
+					"Une forêt sombre et humide. La terre mouillée collait à chaque pas.",
+					"Âmes perdues, si vous ne trouvez pas le cœur de la forêt dans les 7 jours —",
+					"Vous ferez partie de cette forêt. Une malédiction absolue.",
+					"Pourtant, même dans l'obscurité, une faible lumière vacillait. Avec un murmure de salut."
+				],
+				"spanish": [
+					"Un bosque oscuro y húmedo. La tierra mojada se adhería a cada paso.",
+					"Almas perdidas, si no encontráis el corazón del bosque en 7 días —",
+					"Seréis parte de este bosque. Una maldición absoluta.",
+					"Sin embargo, incluso en la oscuridad, una luz tenue parpadeaba. Con un susurro de salvación."
+				],
+				"vietnamese": [
+					"Khu rừng tối tăm, ẩm ướt. Đất ẩm bám vào mỗi bước chân.",
+					"Kẻ lạc lối, nếu không tìm thấy trái tim của rừng trong 7 ngày —",
+					"Ngươi sẽ trở thành một phần của khu rừng này. Một lời nguyền tuyệt đối.",
+					"Tuy nhiên, ngay cả trong bóng tối, một tia sáng yếu ớt vẫn nhấp nháy. Cùng với lời thì thầm của sự cứu rỗi."
+				],
+				"thai": [
+					"ป่ามืดครึ้มและชื้นแฉะ ดินเปียกชื้นเกาะติดทุกย่างก้าว",
+					"ผู้หลงทาง หากไม่พบหัวใจแห่งป่าภายใน 7 วัน —",
+					"เจ้าจะกลายเป็นส่วนหนึ่งของป่านี้ คำสาปอันสมบูรณ์แบบ",
+					"ทว่า แม้ในความมืด แสงริบหรี่ก็ยังกะพริบ พร้อมกับเสียงกระซิบแห่งความรอด"
+				],
+				"hindi": [
+					"एक अँधेरा, नम जंगल। हर कदम पर गीली मिट्टी चिपकती थी।",
+					"खोए हुए लोग, यदि तुम 7 दिनों के भीतर जंगल का हृदय नहीं ढूंढ पाए तो —",
+					"तुम इस जंगल का हिस्सा बन जाओगे। एक पूर्ण अभिशाप।",
+					"फिर भी, अँधेरे में भी एक मंद रोशनी चमक रही थी। मुक्ति की फुसफुसाहट के साथ।"
+				]
+			}
+		},
+		{
+			"scenario_id": "forest_ciphra_31_02",
+			"order": 2,
+			"act": "rising",
+			"theme": "forest",
+			"actors": {
+				"bracken": {
+					"id": "mon_48cf29be-dbc0-44b1-bbb3-ecda1d14742d",
+					"name": {
+						"korean": "브라켄",
+						"english": "Bracken",
+						"japanese": "ブラッケン",
+						"chinese": "布莱肯",
+						"french": "Bracken",
+						"spanish": "Bracken",
+						"vietnamese": "Bracken",
+						"thai": "แบรกเคน",
+						"hindi": "ब्रैकेन"
+					},
+					"description": "",
+					"face_image_url": "https://imagedelivery.net/WTEqQNGFb-l-IHS6IGnzUQ/5b494da6-ffd7-43d3-7171-7ac84bdfe400/public",
+					"battle_sprite_url": "https://imagedelivery.net/WTEqQNGFb-l-IHS6IGnzUQ/4a7a1b62-d7a7-4a21-ffd5-fa9b5de82100/public"
+				}
+			},
+			"boss": {
+				"pool_id": "random_boss"
+			},
+			"rooms": [
+				{
+					"id": 1,
+					"dialogue": [
+						{
+							"emotion": "base",
+							"content": {
+								"korean": "밤은 길었고, 숲은 살벌했다.",
+								"english": "The night was long, and the forest was brutal.",
+								"japanese": "夜は長く、森は殺伐としていた。",
+								"chinese": "长夜漫漫，森林杀气腾腾。",
+								"french": "La nuit était longue et la forêt était impitoyable.",
+								"spanish": "La noche fue larga y el bosque era brutal.",
+								"vietnamese": "Đêm dài, và khu rừng thật khắc nghiệt.",
+								"thai": "ค่ำคืนยาวนาน และป่าก็ดุร้าย",
+								"hindi": "रात लंबी थी, और जंगल क्रूर था।"
+							},
+							"speaker": "narrator",
+							"type": "speech"
+						},
+						{
+							"emotion": "angry",
+							"content": {
+								"korean": "젠장! 너무 많아!",
+								"english": "Damn it! There are too many!",
+								"japanese": "ちくしょう！多すぎる！",
+								"chinese": "该死！太多了！",
+								"french": "Mince ! Il y en a trop !",
+								"spanish": "¡Maldita sea! ¡Demasiados!",
+								"vietnamese": "Chết tiệt! Nhiều quá!",
+								"thai": "ให้ตายสิ! เยอะเกินไปแล้ว!",
+								"hindi": "धिक्कार है! बहुत ज़्यादा हैं!"
+							},
+							"speaker": "character_any",
+							"type": "speech"
+						},
+						{
+							"emotion": "sad",
+							"speaker": "character_1",
+							"type": "speech",
+							"content": {
+								"korean": "이대로는 안 돼!",
+								"english": "This can't continue!",
+								"japanese": "このままではダメだ！",
+								"chinese": "不能再这样下去了！",
+								"french": "Ça ne peut pas continuer ainsi !",
+								"spanish": "¡Esto no puede seguir así!",
+								"vietnamese": "Không thể cứ như thế này được!",
+								"thai": "แบบนี้ไม่ได้แล้ว!",
+								"hindi": "यह ऐसे नहीं चल सकता!"
+							}
+						},
+						{
+							"type": "direction",
+							"duration_ms": 500,
+							"action": "enter",
+							"spot": [
+								4,
+								3
+							],
+							"speaker": "bracken"
+						},
+						{
+							"content": {
+								"korean": "괜찮나? 길을 잃은 모양이군.",
+								"english": "Are you alright? You seem to be lost.",
+								"japanese": "大丈夫か？道に迷ったようだな。",
+								"chinese": "你没事吧？看来是迷路了。",
+								"french": "Vous allez bien ? On dirait que vous êtes perdu.",
+								"spanish": "Estás bien? Pareces perdido.",
+								"vietnamese": "Anh ổn chứ? Có vẻ anh bị lạc đường rồi.",
+								"thai": "ไม่เป็นไรนะ? ดูเหมือนจะหลงทาง",
+								"hindi": "तुम ठीक हो? लगता है तुम रास्ता भटक गए हो।"
+							},
+							"speaker": "bracken",
+							"type": "speech",
+							"emotion": "base"
+						},
+						{
+							"speaker": "character_any",
+							"type": "speech",
+							"content": {
+								"korean": "당신은?",
+								"english": "And you?",
+								"japanese": "あなたは？",
+								"chinese": "你是？",
+								"french": "Et vous ?",
+								"spanish": "¿Y tú?",
+								"vietnamese": "Còn anh?",
+								"thai": "คุณล่ะ?",
+								"hindi": "और तुम?"
+							},
+							"emotion": "base"
+						},
+						{
+							"emotion": "base",
+							"content": {
+								"korean": "브라켄. 사냥꾼이지. 이 숲의 위험을 너무 잘 알고 있지.",
+								"english": "Bracken. A hunter. I know the dangers of this forest all too well.",
+								"japanese": "ブラッケンだ。狩人さ。この森の危険はよく知っている。",
+								"chinese": "布莱肯。一名猎人。我对这片森林的危险再清楚不过了。",
+								"french": "Bracken. Un chasseur. Je connais que trop bien les dangers de cette forêt.",
+								"spanish": "Bracken. Un cazador. Conozco muy bien los peligros de este bosque.",
+								"vietnamese": "Bracken. Một thợ săn. Tôi biết quá rõ những hiểm nguy của khu rừng này.",
+								"thai": "แบร็คเคน นักล่า ฉันรู้ดีถึงอันตรายของป่านี้",
+								"hindi": "ब्रैकेन। एक शिकारी। मैं इस जंगल के खतरों को बहुत अच्छी तरह जानता हूँ।"
+							},
+							"speaker": "bracken",
+							"type": "speech"
+						}
+					]
+				},
+				{
+					"id": 3,
+					"dialogue": [
+						{
+							"action": "enter",
+							"duration_ms": 500,
+							"spot": [
+								4,
+								3
+							],
+							"speaker": "bracken",
+							"type": "direction"
+						},
+						{
+							"speaker": "bracken",
+							"type": "speech",
+							"content": {
+								"korean": "이 숲은 낮보다 밤이 위험해. 특히 이 근처는 더 심하지.",
+								"english": "This forest is more dangerous at night than during the day. Especially around here.",
+								"japanese": "この森は昼よりも夜が危険だ。特にこの辺りはな。",
+								"chinese": "这片森林晚上比白天更危险。尤其是在这附近。",
+								"french": "Cette forêt est plus dangereuse la nuit que le jour. Surtout par ici.",
+								"spanish": "Este bosque es más peligroso de noche que de día. Especialmente por aquí.",
+								"vietnamese": "Khu rừng này ban đêm nguy hiểm hơn ban ngày. Nhất là khu vực này.",
+								"thai": "ป่าแห่งนี้ยามค่ำคืนอันตรายกว่ายามวัน โดยเฉพาะแถวนี้.",
+								"hindi": "यह जंगल दिन से ज़्यादा रात में खतरनाक है। खासकर इस इलाके में।"
+							},
+							"emotion": "base"
+						},
+						{
+							"emotion": "sad",
+							"speaker": "character_any",
+							"type": "speech",
+							"content": {
+								"korean": "괴물들이 너무 많아요. 끝이 없어요.",
+								"english": "There are too many monsters. They're endless.",
+								"japanese": "魔物が多すぎます。終わりがありません。",
+								"chinese": "怪物太多了。没完没了。",
+								"french": "Il y a trop de monstres. C'est sans fin.",
+								"spanish": "Hay demasiados monstruos. No tienen fin.",
+								"vietnamese": "Quá nhiều quái vật. Chúng không có hồi kết.",
+								"thai": "มอนสเตอร์เยอะเกินไป ไม่มีที่สิ้นสุด.",
+								"hindi": "बहुत सारे राक्षस हैं। उनका कोई अंत नहीं है।"
+							}
+						},
+						{
+							"speaker": "bracken",
+							"type": "speech",
+							"content": {
+								"korean": "그래. 숲의 질서를 지키는 내가 보기에도, 요즘은 뭔가 이상해.",
+								"english": "Yes. Even to me, who upholds the forest's order, something feels strange lately.",
+								"japanese": "ああ。森の秩序を守る私から見ても、最近は何かおかしい。",
+								"chinese": "是啊。就连我这个维护森林秩序的人看来，最近也有些奇怪。",
+								"french": "Oui. Même à mes yeux, moi qui maintiens l'ordre de la forêt, quelque chose cloche ces derniers temps.",
+								"spanish": "Sí. Incluso para mí, que mantengo el orden del bosque, algo se siente extraño últimamente.",
+								"vietnamese": "Đúng vậy. Ngay cả ta, người giữ gìn trật tự của rừng, cũng thấy có gì đó lạ lùng dạo gần đây.",
+								"thai": "ใช่ แม้แต่ข้าผู้พิทักษ์ความสงบของป่า ก็รู้สึกว่าช่วงนี้มีบางอย่างแปลกไป.",
+								"hindi": "हाँ। जंगल की व्यवस्था बनाए रखने वाले मुझे भी, आजकल कुछ अजीब लग रहा है।"
+							},
+							"emotion": "base"
+						},
+						{
+							"content": {
+								"korean": "뭔가 이상하다니요?",
+								"english": "Something strange?",
+								"japanese": "何かおかしいって？",
+								"chinese": "有什么奇怪的？",
+								"french": "Quelque chose de bizarre ?",
+								"spanish": "¿Algo extraño?",
+								"vietnamese": "Có gì đó lạ lùng sao?",
+								"thai": "บางอย่างแปลกไปงั้นหรือ?",
+								"hindi": "कुछ अजीब?"
+							},
+							"speaker": "character_2",
+							"type": "speech",
+							"emotion": "base"
+						},
+						{
+							"emotion": "base",
+							"content": {
+								"korean": "…숲이 우리를 쫓는 느낌이랄까.",
+								"english": "...It's like the forest is chasing us.",
+								"japanese": "…森が私たちを追っているような、そんな感じだ。",
+								"chinese": "……感觉森林好像在追赶我们。",
+								"french": "…On dirait que la forêt nous poursuit.",
+								"spanish": "…Es como si el bosque nos estuviera persiguiendo.",
+								"vietnamese": "…Cứ như là khu rừng đang đuổi theo chúng ta vậy.",
+								"thai": "…ราวกับว่าป่ากำลังไล่ตามเรา.",
+								"hindi": "...जैसे जंगल हमारा पीछा कर रहा हो।"
+							},
+							"speaker": "bracken",
+							"type": "speech"
+						}
+					]
+				},
+				{
+					"id": 5,
+					"dialogue": [
+						{
+							"action": "enter",
+							"duration_ms": 500,
+							"spot": [
+								4,
+								3
+							],
+							"speaker": "bracken",
+							"type": "direction"
+						},
+						{
+							"speaker": "bracken",
+							"type": "speech",
+							"content": {
+								"korean": "방금 그 괴물들, 내가 본 적 없는 종이야.",
+								"english": "Those monsters just now, I've never seen their kind.",
+								"japanese": "さっきの魔物たち、見たことのない種だ。",
+								"chinese": "刚才那些怪物，是我从未见过的种类。",
+								"french": "Ces monstres de tout à l'heure, je n'ai jamais vu leur espèce.",
+								"spanish": "Esos monstruos de hace un momento, nunca he visto esa especie.",
+								"vietnamese": "Những con quái vật vừa rồi, ta chưa từng thấy loài đó.",
+								"thai": "สัตว์ประหลาดพวกนั้น ข้าไม่เคยเห็นมาก่อน.",
+								"hindi": "अभी जो राक्षस थे, मैंने उनकी प्रजाति कभी नहीं देखी।"
+							},
+							"emotion": "base"
+						},
+						{
+							"emotion": "base",
+							"speaker": "character_any",
+							"type": "speech",
+							"content": {
+								"korean": "전에 보지 못했다고요?",
+								"english": "You haven't seen them before?",
+								"japanese": "前には見たことがないんですか？",
+								"chinese": "您以前没见过吗？",
+								"french": "Vous ne les avez jamais vus avant ?",
+								"spanish": "¿No los habías visto antes?",
+								"vietnamese": "Chưa từng thấy trước đây sao?",
+								"thai": "ไม่เคยเห็นมาก่อนงั้นหรือ?",
+								"hindi": "आपने उन्हें पहले नहीं देखा?"
+							}
+						},
+						{
+							"emotion": "base",
+							"content": {
+								"korean": "그래. 뭔가 이 숲의 '변화'가 시작된 것 같아.",
+								"english": "Yes. It seems a 'change' in this forest has begun.",
+								"japanese": "ああ。どうやらこの森の『変化』が始まったようだ。",
+								"chinese": "是啊。看来这片森林的“变化”已经开始了。",
+								"french": "Oui. On dirait qu'un « changement » a commencé dans cette forêt.",
+								"spanish": "Sí. Parece que un 'cambio' en este bosque ha comenzado.",
+								"vietnamese": "Đúng vậy. Dường như 'sự thay đổi' của khu rừng này đã bắt đầu rồi.",
+								"thai": "ใช่ ดูเหมือน 'การเปลี่ยนแปลง' ของป่าแห่งนี้ได้เริ่มต้นขึ้นแล้ว.",
+								"hindi": "हाँ। लगता है इस जंगल में 'बदलाव' शुरू हो गया है।"
+							},
+							"speaker": "bracken",
+							"type": "speech"
+						},
+						{
+							"speaker": "character_3",
+							"type": "speech",
+							"content": {
+								"korean": "변화요?",
+								"english": "Change?",
+								"japanese": "変化ですか？",
+								"chinese": "变化？",
+								"french": "Un changement ?",
+								"spanish": "¿Cambio?",
+								"vietnamese": "Thay đổi ư?",
+								"thai": "การเปลี่ยนแปลงงั้นหรือ?",
+								"hindi": "बदलाव?"
+							},
+							"emotion": "base"
+						},
+						{
+							"speaker": "bracken",
+							"type": "speech",
+							"content": {
+								"korean": "안개 속에서 새로운 위협이 태어나고 있지. …조심하는 게 좋을 거야.",
+								"english": "New threats are emerging from the fog. ...You'd best be careful.",
+								"japanese": "霧の中から新たな脅威が生まれている。…気をつけた方がいい。",
+								"chinese": "迷雾中，新的威胁正在诞生。……你最好小心点。",
+								"french": "De nouvelles menaces émergent du brouillard. ...Tu ferais mieux d'être prudent.",
+								"spanish": "Nuevas amenazas están surgiendo de la niebla. ...Será mejor que tengas cuidado.",
+								"vietnamese": "Những mối đe dọa mới đang sinh ra từ trong sương mù. …Tốt nhất là nên cẩn thận.",
+								"thai": "ภัยคุกคามใหม่กำลังถือกำเนิดขึ้นจากหมอก ...ระวังตัวไว้จะดีกว่า.",
+								"hindi": "कोहरे से नए खतरे उभर रहे हैं। ...तुम्हें सावधान रहना चाहिए।"
+							},
+							"emotion": "base"
+						}
+					]
+				},
+				{
+					"id": 9,
+					"dialogue": [
+						{
+							"speaker": "narrator",
+							"type": "speech",
+							"content": {
+								"korean": "기괴한 울음소리가 더욱 가까워졌다. 등골이 오싹했다.",
+								"english": "The eerie howling grew closer. A chill ran down my spine.",
+								"japanese": "奇妙な遠吠えがさらに近づいてきた。背筋が凍った。",
+								"chinese": "诡异的嚎叫声越来越近了。我感到脊背发凉。",
+								"french": "Les hurlements étranges se rapprochaient. Un frisson me parcourut l'échine.",
+								"spanish": "Los aullidos extraños se acercaban. Un escalofrío me recorrió la espalda.",
+								"vietnamese": "Tiếng hú kỳ quái càng lúc càng gần. Sống lưng tôi rợn tóc gáy.",
+								"thai": "เสียงหอนประหลาดใกล้เข้ามาเรื่อยๆ ขนลุกซู่ไปทั้งตัว",
+								"hindi": "अजीबोगरीब चीखें और करीब आ गईं। मेरी रीढ़ में सिहरन दौड़ गई।"
+							},
+							"emotion": "base"
+						},
+						{
+							"emotion": "angry",
+							"content": {
+								"korean": "이제 도망갈 곳도 없어!",
+								"english": "No escape now!",
+								"japanese": "もう逃げ場はない！",
+								"chinese": "已经无处可逃了！",
+								"french": "Plus d'échappatoire !",
+								"spanish": "¡Ya no hay dónde escapar!",
+								"vietnamese": "Giờ thì hết đường chạy rồi!",
+								"thai": "ไม่มีทางหนีแล้ว!",
+								"hindi": "अब भागने की कोई जगह नहीं!"
+							},
+							"speaker": "character_any",
+							"type": "speech"
+						},
+						{
+							"action": "enter",
+							"duration_ms": 500,
+							"spot": [
+								4,
+								3
+							],
+							"speaker": "bracken",
+							"type": "direction"
+						},
+						{
+							"emotion": "base",
+							"content": {
+								"korean": "…숲의 심장에 가까워질수록, 이런 일은 더 잦아질 거야.",
+								"english": "...The closer we get to the forest's heart, the more often this will happen.",
+								"japanese": "……森の心臓に近づくほど、こういうことはもっと頻繁に起こるだろう。",
+								"chinese": "……越靠近森林之心，这种事就会越频繁。",
+								"french": "...Plus nous nous approcherons du cœur de la forêt, plus cela arrivera souvent.",
+								"spanish": "...Cuanto más nos acerquemos al corazón del bosque, más a menudo pasará esto.",
+								"vietnamese": "...Càng gần trái tim khu rừng, những chuyện thế này sẽ càng thường xuyên xảy ra.",
+								"thai": "...ยิ่งเข้าใกล้ใจกลางป่า เรื่องแบบนี้ก็จะยิ่งบ่อยขึ้น",
+								"hindi": "...जितना हम जंगल के दिल के करीब जाएँगे, उतनी ही ये बातें और होंगी।"
+							},
+							"speaker": "bracken",
+							"type": "speech"
+						},
+						{
+							"content": {
+								"korean": "당신은 괜찮아요?",
+								"english": "Are you alright?",
+								"japanese": "あなたは大丈夫ですか？",
+								"chinese": "你没事吧？",
+								"french": "Ça va ?",
+								"spanish": "¿Estás bien?",
+								"vietnamese": "Bạn có sao không?",
+								"thai": "คุณไม่เป็นไรใช่ไหม?",
+								"hindi": "क्या तुम ठीक हो?"
+							},
+							"speaker": "character_4",
+							"type": "speech",
+							"emotion": "base"
+						},
+						{
+							"content": {
+								"korean": "난 이 숲과 함께니까. 너희가 살아남는 게 중요하지. 정보를 '전달'해야 하니까.",
+								"english": "I am one with this forest. It's important that you survive. You must 'deliver' the information.",
+								"japanese": "私はこの森と共にあるからな。君たちが生き残ることが重要だ。情報を「伝える」必要があるからな。",
+								"chinese": "我与这片森林同在。重要的是你们能活下来。因为你们必须“传递”情报。",
+								"french": "Je ne fais qu'un avec cette forêt. L'important est que vous surviviez. Vous devez \"transmettre\" l'information.",
+								"spanish": "Yo soy uno con este bosque. Es importante que ustedes sobrevivan. Deben \"entregar\" la información.",
+								"vietnamese": "Ta là một với khu rừng này. Quan trọng là các ngươi phải sống sót. Bởi vì các ngươi phải \"chuyển giao\" thông tin.",
+								"thai": "ข้าเป็นหนึ่งเดียวกับป่าแห่งนี้ สิ่งสำคัญคือพวกเจ้าต้องรอด เพราะพวกเจ้าต้อง \"ส่งต่อ\" ข้อมูล",
+								"hindi": "मैं इस जंगल के साथ हूँ। तुम्हारा जीवित रहना ज़रूरी है। तुम्हें जानकारी 'पहुँचानी' है।"
+							},
+							"speaker": "bracken",
+							"type": "speech",
+							"emotion": "base"
+						},
+						{
+							"emotion": "base",
+							"speaker": "character_any",
+							"type": "speech",
+							"content": {
+								"korean": "방금 뭐라고…?",
+								"english": "What did you just say...?",
+								"japanese": "今、何と…？",
+								"chinese": "你刚才说什么……？",
+								"french": "Qu'avez-vous dit...?",
+								"spanish": "¿Qué dijiste...?",
+								"vietnamese": "Vừa rồi ngươi nói gì...?",
+								"thai": "เมื่อกี้ว่าไงนะ...?",
+								"hindi": "अभी तुमने क्या कहा...?"
+							}
+						},
+						{
+							"action": "exit",
+							"duration_ms": 400,
+							"direction": "down",
+							"speaker": "bracken",
+							"type": "direction"
+						}
+					]
+				},
+				{
+					"win_dialogue": [
+						{
+							"content": {
+								"korean": "크윽… 겨우 이 정도라니. 아직 진짜 '어둠'을 보지 못했군…",
+								"english": "Urgh... Is this all you've got? You haven't seen true 'darkness' yet...",
+								"japanese": "くっ…これだけか。まだ本当の「闇」を見ていないな…",
+								"chinese": "呃…就这点本事吗。你们还没见过真正的“黑暗”…",
+								"french": "Ugh... Ce n'est que ça ? Vous n'avez pas encore vu la véritable « obscurité »...",
+								"spanish": "Ugh... ¿Esto es todo lo que tenéis? Todavía no habéis visto la verdadera \"oscuridad\"...",
+								"vietnamese": "Khụ... chỉ có thế thôi sao. Các ngươi vẫn chưa thấy \"bóng tối\" thực sự đâu...",
+								"thai": "อึก... แค่นี้เองรึ พวกเจ้ายังไม่ได้เห็น 'ความมืด' ที่แท้จริงเลย...",
+								"hindi": "उफ़... बस इतना ही? तुमने अभी तक असली 'अंधेरा' देखा ही नहीं..."
+							},
+							"speaker": "random_boss",
+							"type": "speech",
+							"emotion": "angry"
+						},
+						{
+							"content": {
+								"korean": "진짜 어둠? 무슨 소리야!",
+								"english": "True darkness? What are you talking about!",
+								"japanese": "本当の闇？どういうことだ！",
+								"chinese": "真正的黑暗？你在说什么！",
+								"french": "La véritable obscurité ? De quoi parles-tu !",
+								"spanish": "¿Verdadera oscuridad? ¡¿De qué estás hablando?!",
+								"vietnamese": "Bóng tối thực sự? Ngươi đang nói gì vậy!",
+								"thai": "ความมืดที่แท้จริง? เจ้าพูดอะไรน่ะ!",
+								"hindi": "असली अंधेरा? तुम क्या कह रहे हो!"
+							},
+							"speaker": "character_any",
+							"type": "speech",
+							"emotion": "base"
+						},
+						{
+							"speaker": "narrator",
+							"type": "speech",
+							"content": {
+								"korean": "쓰러진 괴물은 차가운 눈빛으로 그들을 노려보고 있었다. 숲의 밤은 아직 끝나지 않았다.",
+								"english": "The fallen monster glared at them with cold eyes. The forest's night was not over yet.",
+								"japanese": "倒れた怪物は冷たい眼差しで彼らを睨みつけていた。森の夜はまだ終わっていなかった。",
+								"chinese": "倒下的怪物用冰冷的目光盯着他们。森林的夜晚尚未结束。",
+								"french": "Le monstre tombé les fixait d'un regard froid. La nuit de la forêt n'était pas encore terminée.",
+								"spanish": "El monstruo caído los miraba con ojos fríos. La noche del bosque aún no había terminado.",
+								"vietnamese": "Con quái vật đã ngã xuống trừng mắt nhìn họ với ánh mắt lạnh lùng. Đêm trong rừng vẫn chưa kết thúc.",
+								"thai": "สัตว์ประหลาดที่ล้มลงจ้องมองพวกเขาด้วยแววตาเย็นชา ค่ำคืนในป่ายังไม่สิ้นสุดลง",
+								"hindi": "गिरा हुआ राक्षस उन्हें ठंडी नज़रों से घूर रहा था। जंगल की रात अभी खत्म नहीं हुई थी।"
+							},
+							"emotion": "base"
+						},
+						{
+							"speaker": "narrator",
+							"type": "speech",
+							"content": {
+								"korean": "다음 밤에는, 또 어떤 그림자가 그들을 기다릴 것인가.",
+								"english": "What other shadows would await them on the next night?",
+								"japanese": "次の夜には、またどんな影が彼らを待っているのだろうか。",
+								"chinese": "下一个夜晚，又会有怎样的暗影等待着他们。",
+								"french": "Quelles autres ombres les attendraient la nuit suivante ?",
+								"spanish": "¿Qué otras sombras les esperarían la noche siguiente?",
+								"vietnamese": "Vào đêm kế tiếp, những cái bóng nào nữa sẽ chờ đợi họ?",
+								"thai": "ในคืนต่อไป เงาแบบไหนจะรอพวกเขาอยู่?",
+								"hindi": "अगली रात कौन सी परछाइयाँ उनका इंतज़ार कर रही होंगी?"
+							},
+							"emotion": "base"
+						}
+					],
+					"lose_dialogue": [
+						{
+							"emotion": "angry",
+							"content": {
+								"korean": "숲의 먹이가 되는 것이 네놈들의 운명이다.",
+								"english": "To become the forest's prey is your destiny.",
+								"japanese": "森の餌となるのが貴様らの運命だ。",
+								"chinese": "成为森林的猎物是你们的命运。",
+								"french": "Devenir la proie de la forêt est votre destin.",
+								"spanish": "Convertiros en la presa del bosque es vuestro destino.",
+								"vietnamese": "Trở thành con mồi của khu rừng là số phận của các ngươi.",
+								"thai": "การเป็นเหยื่อของป่าคือชะตากรรมของพวกเจ้า",
+								"hindi": "जंगल का शिकार बनना ही तुम्हारा भाग्य है।"
+							},
+							"speaker": "random_boss",
+							"type": "speech"
+						},
+						{
+							"emotion": "angry",
+							"speaker": "character_any",
+							"type": "speech",
+							"content": {
+								"korean": "빌어먹을… 아직 끝나지 않았어!",
+								"english": "Damn it... It's not over yet!",
+								"japanese": "ちくしょう…まだ終わってない！",
+								"chinese": "该死…还没完呢！",
+								"french": "Bon sang... Ce n'est pas encore fini !",
+								"spanish": "¡Maldita sea... aún no ha terminado!",
+								"vietnamese": "Khốn kiếp... vẫn chưa xong đâu!",
+								"thai": "โธ่เว้ย... มันยังไม่จบ!",
+								"hindi": "धिक्कार है... अभी खत्म नहीं हुआ!"
+							}
+						},
+						{
+							"speaker": "random_boss",
+							"type": "speech",
+							"content": {
+								"korean": "재밌는 발악이군. 어디 다시 해보시지.",
+								"english": "Amusing struggle. Go on, try again.",
+								"japanese": "面白い足掻きだな。さあ、もう一度やってみろ。",
+								"chinese": "有趣的挣扎。再来一次如何。",
+								"french": "Lutte amusante. Allez, réessayez.",
+								"spanish": "Una lucha divertida. Venga, inténtalo de nuevo.",
+								"vietnamese": "Cuộc vùng vẫy thú vị đấy. Nào, thử lại xem.",
+								"thai": "การดิ้นรนที่น่าสนใจ ลองอีกครั้งสิ",
+								"hindi": "मजेदार छटपटाहट। चलो, फिर से कोशिश करो।"
+							},
+							"emotion": "base"
+						}
+					],
+					"id": 15,
+					"dialogue": [
+						{
+							"emotion": "base",
+							"content": {
+								"korean": "거대한 그림자가 앞을 가로막았다. 숲의 모든 공포가 응축된 듯했다.",
+								"english": "A gigantic shadow blocked the path. It seemed as if all the forest's horrors had coalesced.",
+								"japanese": "巨大な影が道を塞いだ。森のあらゆる恐怖が凝縮されたかのようだった。",
+								"chinese": "一个巨大的影子挡住了去路。仿佛凝结了森林所有的恐惧。",
+								"french": "Une ombre gigantesque barra le chemin. On aurait dit que toutes les horreurs de la forêt s'étaient condensées.",
+								"spanish": "Una sombra gigantesca bloqueó el camino. Parecía que todos los horrores del bosque se habían condensado.",
+								"vietnamese": "Một bóng đen khổng lồ chặn lối. Dường như tất cả nỗi kinh hoàng của khu rừng đã hội tụ lại.",
+								"thai": "เงามหึมากีดขวางเส้นทาง ดูราวกับความหวาดกลัวทั้งหมดในป่ามารวมตัวกัน",
+								"hindi": "एक विशाल छाया ने रास्ता रोक दिया। ऐसा लगा मानो जंगल के सारे डर सिमट गए हों।"
+							},
+							"speaker": "narrator",
+							"type": "speech"
+						},
+						{
+							"emotion": "angry",
+							"speaker": "random_boss",
+							"type": "speech",
+							"content": {
+								"korean": "…하찮은 것들. 내 숲을 침범하다니.",
+								"english": "...Insignificant beings. To invade my forest.",
+								"japanese": "……取るに足らない者どもめ。よくも私の森を侵す気になったな。",
+								"chinese": "……渺小的东西。竟敢入侵我的森林。",
+								"french": "...Créatures insignifiantes. Oser envahir ma forêt.",
+								"spanish": "...Seres insignificantes. ¿Invadir mi bosque?",
+								"vietnamese": "...Những kẻ nhỏ mọn. Dám xâm phạm khu rừng của ta.",
+								"thai": "...พวกไร้ค่า บังอาจบุกรุกป่าของข้า",
+								"hindi": "तुच्छ प्राणी। मेरे जंगल पर आक्रमण करने की हिम्मत।"
+							}
+						},
+						{
+							"emotion": "angry",
+							"speaker": "character_any",
+							"type": "speech",
+							"content": {
+								"korean": "네가… 괴물들의 우두머리인가!",
+								"english": "You... are you the leader of the monsters!",
+								"japanese": "貴様が…化け物たちの首領か！",
+								"chinese": "你就是……怪物的头领吗！",
+								"french": "Tu es... le chef des monstres !",
+								"spanish": "¿Tú... eres el líder de los monstruos?",
+								"vietnamese": "Ngươi... ngươi là thủ lĩnh của lũ quái vật sao!",
+								"thai": "แก... คือหัวหน้าของพวกสัตว์ประหลาดรึไง!",
+								"hindi": "तुम... क्या तुम राक्षसों के सरदार हो!"
+							}
+						},
+						{
+							"emotion": "angry",
+							"speaker": "random_boss",
+							"type": "speech",
+							"content": {
+								"korean": "감히 나에게 덤비려 하는가? 이 어둠 속에서 영원히 헤매게 해주지.",
+								"english": "You dare challenge me? I'll make you wander this darkness forever.",
+								"japanese": "よくも私に挑もうとするか？この闇の中で永遠に彷徨わせてやろう。",
+								"chinese": "竟敢挑战我？我会让你永远在这黑暗中迷失。",
+								"french": "Oserez-vous me défier ? Je vous ferai errer éternellement dans cette obscurité.",
+								"spanish": "¿Te atreves a desafiarme? Te haré vagar por esta oscuridad para siempre.",
+								"vietnamese": "Ngươi dám thách thức ta sao? Ta sẽ khiến ngươi lạc lối mãi mãi trong bóng tối này.",
+								"thai": "เจ้ากล้าท้าทายข้ารึ? ข้าจะทำให้เจ้าหลงทางอยู่ในความมืดนี้ตลอดไป",
+								"hindi": "क्या तुम्हारी हिम्मत है मुझे चुनौती देने की? मैं तुम्हें इस अंधेरे में हमेशा के लिए भटकने दूँगा।"
+							}
+						},
+						{
+							"emotion": "angry",
+							"content": {
+								"korean": "물러서지 않아!",
+								"english": "I won't back down!",
+								"japanese": "退かない！",
+								"chinese": "我不会退缩！",
+								"french": "Je ne reculerai pas !",
+								"spanish": "¡No me rendiré!",
+								"vietnamese": "Ta sẽ không lùi bước!",
+								"thai": "ข้าไม่ถอย!",
+								"hindi": "मैं पीछे नहीं हटूंगा!"
+							},
+							"speaker": "character_1",
+							"type": "speech"
+						}
+					]
+				}
+			],
+			"prologue": {
+				"korean": [
+					"숲은 밤이 되자 더욱 깊은 어둠을 토해냈다.",
+					"기괴한 울음소리가 사방에서 덮쳐왔다.",
+					"놈들은 그림자처럼 따라붙었고, 탈출구는 없었다.",
+					"첫 번째 밤, 그들은 절망 속에서 길을 잃었다."
+				],
+				"english": [
+					"As night fell, the forest exuded an even deeper darkness.",
+					"Eerie wails assailed from all directions.",
+					"They clung like shadows, and there was no escape.",
+					"The first night, they lost their way in despair."
+				],
+				"japanese": [
+					"夜になり、森はより深い闇を吐き出した。",
+					"不気味な叫び声が四方八方から襲いかかった。",
+					"奴らは影のようにまとわりつき、逃げ場はなかった。",
+					"最初の夜、彼らは絶望の中で道に迷った。"
+				],
+				"chinese": [
+					"夜晚降临，森林吐露出更深的黑暗。",
+					"怪异的嚎叫声从四面八方袭来。",
+					"它们如影随形，无处可逃。",
+					"第一个夜晚，他们在绝望中迷失了方向。"
+				],
+				"french": [
+					"Alors que la nuit tombait, la forêt exhalait une obscurité encore plus profonde.",
+					"Des hurlements étranges assaillaient de toutes parts.",
+					"Ils s'accrochaient comme des ombres, et il n'y avait pas d'échappatoire.",
+					"La première nuit, ils se sont perdus dans le désespoir."
+				],
+				"spanish": [
+					"Al caer la noche, el bosque exhalaba una oscuridad aún más profunda.",
+					"Aullidos extraños asaltaban desde todas direcciones.",
+					"Se aferraban como sombras, y no había escapatoria.",
+					"La primera noche, se perdieron en la desesperación."
+				],
+				"vietnamese": [
+					"Khi màn đêm buông xuống, khu rừng toát ra một bóng tối sâu thẳm hơn.",
+					"Những tiếng kêu kỳ dị ập đến từ mọi phía.",
+					"Chúng bám theo như hình với bóng, không lối thoát.",
+					"Đêm đầu tiên, họ lạc lối trong tuyệt vọng."
+				],
+				"thai": [
+					"เมื่อราตรีคืบคลาน ป่าก็คายความมืดมิดที่ลึกซึ้งยิ่งขึ้นออกมา",
+					"เสียงร้องประหลาดดังมาจากทุกทิศทาง",
+					"พวกมันติดตามมาเหมือนเงา ไม่มีทางหนี",
+					"คืนแรก พวกเขาสูญเสียหนทางในความสิ้นหวัง"
+				],
+				"hindi": [
+					"जैसे ही रात हुई, जंगल ने और भी गहरा अँधेरा उगल दिया।",
+					"अजीबोगरीब चीखें हर तरफ से हमला कर रही थीं।",
+					"वे परछाई की तरह पीछे लगे हुए थे, और कोई बच निकलने का रास्ता नहीं था।",
+					"पहली रात, वे निराशा में रास्ता भटक गए।"
+				]
+			}
+		},
+		{
+			"scenario_id": "forest_ciphra_31_03",
+			"order": 3,
+			"act": "rising",
+			"theme": "forest",
+			"actors": {
+				"briar": {
+					"id": "mon_21f92820-190e-4d08-a75c-5d2c0b6d0a6b",
+					"name": {
+						"korean": "브라이어",
+						"english": "Briar",
+						"japanese": "ブライア",
+						"chinese": "布莱尔",
+						"french": "Briar",
+						"spanish": "Briar",
+						"vietnamese": "Briar",
+						"thai": "ไบรอา",
+						"hindi": "ब्रायर"
+					},
+					"description": "",
+					"face_image_url": "https://imagedelivery.net/WTEqQNGFb-l-IHS6IGnzUQ/41fb431e-57e0-45e0-dde6-1a1f02c01200/public",
+					"battle_sprite_url": "https://imagedelivery.net/WTEqQNGFb-l-IHS6IGnzUQ/dd89dff7-88ed-4444-28d8-5aaa85bd4e00/public"
+				}
+			},
+			"boss": {
+				"pool_id": "random_boss"
+			},
+			"prologue": {
+				"korean": [
+					"숲은 살아있는 시간이었다. 그리고 지금, 미쳐 날뛰기 시작했다.",
+					"고대의 기록자는 경고했다. “시간이 사라진다.”",
+					"모래시계는 더 빠르게 기울고, 공포는 심장을 조여왔다.",
+					"과연 7일 안에, 우리는 살아남을 수 있을까?",
+					"혹은, 이미 늦은 걸까?"
+				],
+				"english": [
+					"The forest was living time. And now, it has begun to run wild.",
+					"The ancient chronicler warned. \"Time is vanishing.\"",
+					"The hourglass tilted faster, and fear clutched at our hearts.",
+					"In just 7 days, can we truly survive?",
+					"Or, is it already too late?"
+				],
+				"japanese": [
+					"森は生きた時間だった。そして今、狂い始めた。",
+					"古代の記録者は警告した。「時間が消える。」",
+					"砂時計はさらに速く傾き、恐怖は心臓を締め付けた。",
+					"果たして7日以内に、私たちは生き残れるのだろうか？",
+					"それとも、もう手遅れなのだろうか？"
+				],
+				"chinese": [
+					"森林是活生生的时间。而现在，它开始变得狂暴。",
+					"古代的编年史家警告说：“时间正在消失。”",
+					"沙漏倾斜得更快，恐惧紧紧抓住我们的心。",
+					"在短短7天内，我们真的能存活下来吗？",
+					"或者，是不是已经太晚了？"
+				],
+				"french": [
+					"La forêt était un temps vivant. Et maintenant, elle a commencé à devenir folle.",
+					"L'ancien chroniqueur a averti. «Le temps disparaît.»",
+					"Le sablier s'inclina plus vite, et la peur étreignit nos cœurs.",
+					"En seulement 7 jours, pouvons-nous vraiment survivre ?",
+					"Ou, est-il déjà trop tard ?"
+				],
+				"spanish": [
+					"El bosque era tiempo viviente. Y ahora, ha empezado a volverse loco.",
+					"El cronista antiguo advirtió. “El tiempo se desvanece.”",
+					"El reloj de arena se inclinó más rápido, y el miedo nos oprimía el corazón.",
+					"En solo 7 días, ¿podremos realmente sobrevivir?",
+					"O, ¿ya es demasiado tarde?"
+				],
+				"vietnamese": [
+					"Khu rừng là thời gian sống. Và giờ đây, nó đã bắt đầu trở nên hoang dã.",
+					"Người ghi chép cổ đại đã cảnh báo. “Thời gian đang biến mất.”",
+					"Đồng hồ cát nghiêng nhanh hơn, và nỗi sợ hãi siết chặt trái tim.",
+					"Liệu trong 7 ngày, chúng ta có thể sống sót không?",
+					"Hay, đã quá muộn rồi?"
+				],
+				"thai": [
+					"ป่าคือเวลาที่มีชีวิต และตอนนี้ มันเริ่มคลุ้มคลั่งแล้ว",
+					"ผู้บันทึกโบราณเตือนว่า “เวลากำลังหายไป”",
+					"นาฬิกาทรายเอียงเร็วขึ้น และความกลัวก็บีบรัดหัวใจ",
+					"ใน 7 วัน เราจะรอดชีวิตได้จริงหรือ?",
+					"หรือว่ามันสายเกินไปแล้ว?"
+				],
+				"hindi": [
+					"वन जीवित समय था। और अब, यह बेकाबू होने लगा है।",
+					"प्राचीन इतिहासकार ने चेतावनी दी। “समय गायब हो रहा है।”",
+					"रेतघड़ी तेजी से झुक गई, और डर ने हमारे दिलों को जकड़ लिया।",
+					"क्या हम वाकई 7 दिनों के भीतर जीवित रह पाएंगे?",
+					"या, क्या यह पहले ही बहुत देर हो चुकी है?"
+				]
+			},
+			"rooms": [
+				{
+					"dialogue": [
+						{
+							"speaker": "narrator",
+							"type": "speech",
+							"emotion": "base",
+							"content": {
+								"korean": "숲의 심장으로 향하는 길. 어둠이 더욱 짙어졌다.",
+								"english": "The path to the forest's heart. The darkness deepened.",
+								"japanese": "森の心臓へと続く道。闇はさらに深まった。",
+								"chinese": "通往森林之心的道路。黑暗变得更加浓厚。",
+								"french": "Le chemin vers le cœur de la forêt. L'obscurité s'épaissit.",
+								"spanish": "El camino hacia el corazón del bosque. La oscuridad se hizo más profunda.",
+								"vietnamese": "Con đường đến trái tim khu rừng. Bóng tối càng dày đặc hơn.",
+								"thai": "เส้นทางสู่ใจกลางป่า ความมืดมิดยิ่งเข้มข้นขึ้น",
+								"hindi": "वन के हृदय का मार्ग। अंधेरा और गहरा हो गया।"
+							}
+						},
+						{
+							"speaker": "character_any",
+							"type": "speech",
+							"emotion": "base",
+							"content": {
+								"korean": "왜 이렇게 시간이 빨리 가는 것 같지?",
+								"english": "Why does time seem to pass so quickly?",
+								"japanese": "なんでこんなに時間が早く感じるんだろう？",
+								"chinese": "为什么时间过得这么快？",
+								"french": "Pourquoi le temps semble-t-il passer si vite ?",
+								"spanish": "¿Por qué el tiempo parece pasar tan rápido?",
+								"vietnamese": "Sao thời gian trôi nhanh vậy?",
+								"thai": "ทำไมเวลามันผ่านไปเร็วแบบนี้นะ?",
+								"hindi": "समय इतनी जल्दी क्यों बीत रहा है?"
+							}
+						},
+						{
+							"content": {
+								"korean": "착각일 거야. 긴장해서 그래.",
+								"english": "It must be an illusion. It's just nerves.",
+								"japanese": "錯覚だよ。緊張してるだけさ。",
+								"chinese": "那一定是错觉。只是紧张而已。",
+								"french": "Ce doit être une illusion. C'est juste la nervosité.",
+								"spanish": "Debe ser una ilusión. Son solo los nervios.",
+								"vietnamese": "Chắc là ảo giác thôi. Chỉ là do căng thẳng.",
+								"thai": "คงเป็นแค่ภาพลวงตา คงเป็นเพราะความตึงเครียด",
+								"hindi": "यह सिर्फ एक भ्रम होगा। यह सिर्फ घबराहट है।"
+							},
+							"type": "speech",
+							"emotion": "base",
+							"speaker": "character_1"
+						}
+					],
+					"id": 1
+				},
+				{
+					"dialogue": [
+						{
+							"type": "direction",
+							"action": "enter",
+							"spot": [
+								2,
+								2
+							],
+							"duration_ms": 500,
+							"speaker": "briar"
+						},
+						{
+							"speaker": "briar",
+							"content": {
+								"korean": "…왔군. 기다리고 있었다.",
+								"english": "...You've come. I've been waiting.",
+								"japanese": "…来たな。待っていたぞ。",
+								"chinese": "……你来了。我一直在等你。",
+								"french": "...Tu es venu. Je t'attendais.",
+								"spanish": "...Has llegado. Te estaba esperando.",
+								"vietnamese": "...Đã đến rồi. Ta đã chờ đợi.",
+								"thai": "...มาแล้วสินะ ข้ากำลังรออยู่",
+								"hindi": "...तुम आ गए। मैं इंतजार कर रहा था।"
+							},
+							"type": "speech",
+							"emotion": "base"
+						},
+						{
+							"speaker": "character_any",
+							"content": {
+								"korean": "당신은 누구지?",
+								"english": "Who are you?",
+								"japanese": "あなたは誰だ？",
+								"chinese": "你是谁？",
+								"french": "Qui êtes-vous ?",
+								"spanish": "¿Quién eres?",
+								"vietnamese": "Ngươi là ai?",
+								"thai": "ท่านเป็นใคร?",
+								"hindi": "आप कौन हैं?"
+							},
+							"emotion": "base",
+							"type": "speech"
+						},
+						{
+							"content": {
+								"korean": "이 숲의 오래된 기록자, 브라이어다.",
+								"english": "I am Briar, the ancient chronicler of this forest.",
+								"japanese": "この森の古き記録者、ブライアーだ。",
+								"chinese": "我是布莱尔，这片森林的古老记录者。",
+								"french": "Je suis Briar, l'ancienne chroniqueuse de cette forêt.",
+								"spanish": "Soy Briar, la antigua cronista de este bosque.",
+								"vietnamese": "Ta là Briar, người ghi chép cổ xưa của khu rừng này.",
+								"thai": "ข้าคือไบรเออร์ ผู้บันทึกโบราณแห่งป่านี้",
+								"hindi": "मैं ब्रायरा हूँ, इस वन का प्राचीन अभिलेखागार।"
+							},
+							"type": "speech",
+							"emotion": "base",
+							"speaker": "briar"
+						},
+						{
+							"speaker": "briar",
+							"type": "speech",
+							"emotion": "sad",
+							"content": {
+								"korean": "시간이… 더 빨리 흐르고 있어.",
+								"english": "Time... it's flowing faster.",
+								"japanese": "時間が… もっと速く流れている。",
+								"chinese": "时间…流逝得更快了。",
+								"french": "Le temps… s'écoule plus vite.",
+								"spanish": "El tiempo… está fluyendo más rápido.",
+								"vietnamese": "Thời gian… đang trôi nhanh hơn.",
+								"thai": "เวลา… กำลังไหลเร็วขึ้น",
+								"hindi": "समय… तेज़ी से बह रहा है।"
+							}
+						},
+						{
+							"speaker": "character_2",
+							"content": {
+								"korean": "정말이야? 우리만 그런 게 아니었어?",
+								"english": "Really? So it wasn't just us?",
+								"japanese": "本当に？私たちだけじゃなかったの？",
+								"chinese": "真的吗？不只是我们这样？",
+								"french": "Vraiment ? On n'était pas les seuls ?",
+								"spanish": "¿En serio? ¿No éramos los únicos?",
+								"vietnamese": "Thật sao? Không phải chỉ mình chúng ta à?",
+								"thai": "จริงหรือ? ไม่ใช่แค่พวกเราเหรอ?",
+								"hindi": "सच में? हम अकेले नहीं थे क्या?"
+							},
+							"type": "speech",
+							"emotion": "sad"
+						},
+						{
+							"speaker": "briar",
+							"emotion": "angry",
+							"type": "speech",
+							"content": {
+								"korean": "어떤 강대한 존재가 숲의 균형을 뒤흔들고 있다.",
+								"english": "Some mighty entity is disrupting the forest's balance.",
+								"japanese": "何らかの強大な存在が、森の均衡を揺るがしている。",
+								"chinese": "某个强大的存在正在动摇森林的平衡。",
+								"french": "Une entité puissante perturbe l'équilibre de la forêt.",
+								"spanish": "Una poderosa entidad está alterando el equilibrio del bosque.",
+								"vietnamese": "Một thực thể hùng mạnh nào đó đang phá vỡ cân bằng của khu rừng.",
+								"thai": "มีบางสิ่งทรงพลังกำลังสั่นคลอนสมดุลของป่า",
+								"hindi": "कोई शक्तिशाली सत्ता वन के संतुलन को बिगाड़ रही है।"
+							}
+						},
+						{
+							"emotion": "sad",
+							"type": "speech",
+							"content": {
+								"korean": "남은 시간이… 줄어들고 있다는 거야?",
+								"english": "Our remaining time... is shrinking?",
+								"japanese": "残された時間が… 減っているということか？",
+								"chinese": "剩下的时间…正在减少吗？",
+								"french": "Le temps qu'il nous reste… diminue ?",
+								"spanish": "¿Nuestro tiempo restante… se está acortando?",
+								"vietnamese": "Thời gian còn lại của chúng ta… đang giảm đi sao?",
+								"thai": "เวลาที่เหลือ… กำลังลดลงงั้นหรือ?",
+								"hindi": "हमारा बचा हुआ समय… कम हो रहा है क्या?"
+							},
+							"speaker": "character_any"
+						}
+					],
+					"id": 3
+				},
+				{
+					"dialogue": [
+						{
+							"duration_ms": 500,
+							"speaker": "briar",
+							"type": "direction",
+							"action": "enter",
+							"spot": [
+								2,
+								2
+							]
+						},
+						{
+							"emotion": "angry",
+							"type": "speech",
+							"content": {
+								"korean": "경고를 무시하지 마라. 흐르는 시간은 누구도 막을 수 없어.",
+								"english": "Heed my warning. No one can halt the flow of time.",
+								"japanese": "警告を無視するな。流れる時間は誰にも止められない。",
+								"chinese": "不要忽视警告。流逝的时间无人能阻挡。",
+								"french": "N'ignorez pas l'avertissement. Personne ne peut arrêter le cours du temps.",
+								"spanish": "No ignores la advertencia. Nadie puede detener el flujo del tiempo.",
+								"vietnamese": "Đừng phớt lờ lời cảnh báo. Dòng chảy thời gian không ai có thể ngăn cản.",
+								"thai": "อย่าเพิกเฉยต่อคำเตือน ไม่มีใครหยุดยั้งกาลเวลาที่ไหลไปได้",
+								"hindi": "चेतावनी को नज़रअंदाज़ मत करो। बहते समय को कोई नहीं रोक सकता।"
+							},
+							"speaker": "briar"
+						},
+						{
+							"emotion": "sad",
+							"type": "speech",
+							"content": {
+								"korean": "그럼 어떻게 해야 하지?",
+								"english": "Then what can we do?",
+								"japanese": "では、どうすればいい？",
+								"chinese": "那我们该怎么办？",
+								"french": "Alors, que devons-nous faire ?",
+								"spanish": "Entonces, ¿qué debemos hacer?",
+								"vietnamese": "Vậy chúng ta phải làm gì?",
+								"thai": "แล้วเราต้องทำอย่างไร?",
+								"hindi": "तो हमें क्या करना चाहिए?"
+							},
+							"speaker": "character_any"
+						},
+						{
+							"speaker": "briar",
+							"content": {
+								"korean": "그 존재를 막지 못하면, 너희의 시간은 더 빨리 사라질 것이다.",
+								"english": "If you fail to stop that entity, your time will vanish even faster.",
+								"japanese": "その存在を止められなければ、お前たちの時間はさらに早く消え去るだろう。",
+								"chinese": "如果无法阻止那个存在，你们的时间会消失得更快。",
+								"french": "Si vous ne parvenez pas à arrêter cette entité, votre temps disparaîtra encore plus vite.",
+								"spanish": "Si no logran detener a esa entidad, su tiempo se desvanecerá aún más rápido.",
+								"vietnamese": "Nếu không ngăn chặn được thực thể đó, thời gian của các ngươi sẽ biến mất nhanh hơn nữa.",
+								"thai": "หากเจ้าหยุดยั้งสิ่งนั้นไม่ได้ เวลาของพวกเจ้าก็จะหายไปเร็วยิ่งขึ้น",
+								"hindi": "यदि तुम उस सत्ता को नहीं रोक पाए, तो तुम्हारा समय और भी तेज़ी से मिट जाएगा।"
+							},
+							"type": "speech",
+							"emotion": "sad"
+						},
+						{
+							"speaker": "character_3",
+							"content": {
+								"korean": "우리에게 남은 시간은… 얼마나 되는 거야?",
+								"english": "How much time... do we have left?",
+								"japanese": "私たちに残された時間は… どれくらいなの？",
+								"chinese": "我们还剩下多少时间…？",
+								"french": "Combien de temps… nous reste-t-il ?",
+								"spanish": "¿Cuánto tiempo… nos queda?",
+								"vietnamese": "Chúng ta còn lại… bao nhiêu thời gian?",
+								"thai": "เวลาที่เหลือของเรา… มีเท่าไหร่กันแน่?",
+								"hindi": "हमें कितना समय… बचा है?"
+							},
+							"emotion": "sad",
+							"type": "speech"
+						}
+					],
+					"id": 5
+				},
+				{
+					"id": 9,
+					"dialogue": [
+						{
+							"action": "enter",
+							"spot": [
+								2,
+								2
+							],
+							"type": "direction",
+							"duration_ms": 500,
+							"speaker": "briar"
+						},
+						{
+							"emotion": "sad",
+							"type": "speech",
+							"content": {
+								"korean": "…돌이킬 수 없다. 발버둥 쳐봐야 시간은 너희를 삼킬 것이다.",
+								"english": "...It's irreversible. Struggle as you might, time will devour you.",
+								"japanese": "…もう遅い。もがいても、時間は貴様らを飲み込むだろう。",
+								"chinese": "…已无法挽回。无论怎么挣扎，时间都会将你们吞噬。",
+								"french": "…C'est irréversible. Quoi que vous fassiez, le temps vous dévorera.",
+								"spanish": "…Es irreversible. Por mucho que luches, el tiempo te consumirá.",
+								"vietnamese": "...Không thể quay lại. Dù có giãy giụa thế nào, thời gian cũng sẽ nuốt chửng các ngươi.",
+								"thai": "…ย้อนคืนไม่ได้แล้ว ต่อให้ดิ้นรนแค่ไหน เวลาก็จะกลืนกินพวกเจ้า",
+								"hindi": "…यह वापस नहीं लिया जा सकता। कितना भी संघर्ष कर लो, समय तुम्हें निगल जाएगा।"
+							},
+							"speaker": "briar"
+						},
+						{
+							"speaker": "character_any",
+							"content": {
+								"korean": "포기할 수 없어! 아직 늦지 않았어!",
+								"english": "Can't give up! It's not too late!",
+								"japanese": "諦められない！まだ間に合う！",
+								"chinese": "不能放弃！还没太迟！",
+								"french": "Je ne peux pas abandonner ! Il n'est pas trop tard !",
+								"spanish": "¡No puedo rendirme! ¡Todavía no es tarde!",
+								"vietnamese": "Không thể bỏ cuộc! Vẫn chưa quá muộn!",
+								"thai": "ยอมแพ้ไม่ได้! ยังไม่สายเกินไป!",
+								"hindi": "हार नहीं मान सकता! अभी देर नहीं हुई है!"
+							},
+							"emotion": "angry",
+							"type": "speech"
+						},
+						{
+							"speaker": "briar",
+							"type": "speech",
+							"emotion": "base",
+							"content": {
+								"korean": "어리석은… 공포에 삼켜지기 전에 진실을 봐라.",
+								"english": "Foolish… See the truth before fear consumes you.",
+								"japanese": "愚かな… 恐怖に飲まれる前に真実を見ろ。",
+								"chinese": "愚蠢… 在被恐惧吞噬前看清真相。",
+								"french": "Insensé… Vois la vérité avant que la peur ne te dévore.",
+								"spanish": "Necio… Mira la verdad antes de que el miedo te consuma.",
+								"vietnamese": "Ngu ngốc… Hãy nhìn sự thật trước khi bị nỗi sợ nuốt chửng.",
+								"thai": "โง่เขลา… จงเห็นความจริงก่อนที่ความกลัวจะกลืนกินเจ้า.",
+								"hindi": "मूर्ख… इससे पहले कि डर तुम्हें निगल ले, सच देखो।"
+							}
+						}
+					]
+				},
+				{
+					"lose_dialogue": [
+						{
+							"speaker": "narrator",
+							"content": {
+								"korean": "시간의 균열 속으로 모든 것이 빨려 들어갔다.",
+								"english": "Everything was sucked into the rift in time.",
+								"japanese": "すべてが時間の亀裂に吸い込まれていった。",
+								"chinese": "一切都被吸入时间的裂隙之中。",
+								"french": "Tout fut aspiré dans la faille temporelle.",
+								"spanish": "Todo fue arrastrado al abismo del tiempo.",
+								"vietnamese": "Mọi thứ đều bị hút vào khe nứt thời gian.",
+								"thai": "ทุกสิ่งถูกดูดกลืนเข้าไปในรอยแยกแห่งเวลา.",
+								"hindi": "सब कुछ समय की दरार में समा गया।"
+							},
+							"type": "speech",
+							"emotion": "base"
+						},
+						{
+							"content": {
+								"korean": "어리석은 것들. 너희에게 남은 건 절망뿐이다.",
+								"english": "Fools. Despair is all that awaits you.",
+								"japanese": "愚かな者たち。お前たちに残されているのは絶望だけだ。",
+								"chinese": "愚蠢的家伙。你们只剩下绝望了。",
+								"french": "Imbéciles. Il ne vous reste que le désespoir.",
+								"spanish": "Necios. Solo os queda la desesperación.",
+								"vietnamese": "Lũ ngu ngốc. Tất cả những gì còn lại cho các ngươi chỉ là sự tuyệt vọng.",
+								"thai": "พวกโง่เขลา สิ่งที่เหลือสำหรับพวกเจ้ามีแต่ความสิ้นหวังเท่านั้น",
+								"hindi": "मूर्खों। तुम्हारे लिए अब केवल निराशा ही बची है।"
+							},
+							"type": "speech",
+							"emotion": "angry",
+							"speaker": "random_boss"
+						},
+						{
+							"speaker": "character_any",
+							"type": "speech",
+							"emotion": "angry",
+							"content": {
+								"korean": "…아직 끝나지 않았어. 우리는 포기하지 않아!",
+								"english": "...It's not over yet. We won't give up!",
+								"japanese": "…まだ終わってない。私たちは諦めない！",
+								"chinese": "…还没结束。我们不会放弃！",
+								"french": "...Ce n'est pas encore fini. Nous n'abandonnerons pas !",
+								"spanish": "...Aún no ha terminado. ¡No nos rendiremos!",
+								"vietnamese": "...Chưa kết thúc đâu. Chúng ta sẽ không bỏ cuộc!",
+								"thai": "...ยังไม่จบแค่นี้ เราไม่ยอมแพ้!",
+								"hindi": "...अभी खत्म नहीं हुआ है। हम हार नहीं मानेंगे!"
+							}
+						}
+					],
+					"dialogue": [
+						{
+							"emotion": "base",
+							"type": "speech",
+							"content": {
+								"korean": "시간의 틈새를 지키는 거대한 그림자가 앞을 가로막았다.",
+								"english": "A colossal shadow guarding the rift in time blocked the way.",
+								"japanese": "時の狭間を守る巨大な影が道を塞いだ。",
+								"chinese": "守护时间裂隙的巨大阴影挡住了去路。",
+								"french": "Une ombre colossale gardant la faille temporelle barra le chemin.",
+								"spanish": "Una sombra colosal que custodiaba la grieta del tiempo bloqueó el paso.",
+								"vietnamese": "Một bóng đen khổng lồ canh giữ khe nứt thời gian đã chắn đường.",
+								"thai": "เงาขนาดมหึมาที่เฝ้ารอยแยกแห่งเวลาขวางทางไว้.",
+								"hindi": "समय के दरार की रखवाली करती एक विशाल छाया ने रास्ता रोक दिया।"
+							},
+							"speaker": "narrator"
+						},
+						{
+							"content": {
+								"korean": "하찮은 것들. 감히 이곳을 넘어설 셈이냐?",
+								"english": "Insignificant beings. Do you dare cross this place?",
+								"japanese": "取るに足らない者ども。この地を越えるつもりか？",
+								"chinese": "卑微之物。竟敢逾越此地？",
+								"french": "Êtres insignifiants. Osez-vous traverser cet endroit ?",
+								"spanish": "Seres insignificantes. ¿Osáis cruzar este lugar?",
+								"vietnamese": "Những kẻ tầm thường. Dám vượt qua nơi này sao?",
+								"thai": "พวกไร้ค่า. กล้าดียังไงมาข้ามที่นี่?",
+								"hindi": "तुच्छ प्राणी। क्या तुम इस जगह को पार करने की हिम्मत करते हो?"
+							},
+							"emotion": "angry",
+							"type": "speech",
+							"speaker": "random_boss"
+						},
+						{
+							"speaker": "character_any",
+							"content": {
+								"korean": "비켜! 우리에게 시간이 없어!",
+								"english": "Get out of the way! We don't have time!",
+								"japanese": "どけ！時間がない！",
+								"chinese": "让开！我们没时间了！",
+								"french": "Écarte-toi ! Nous n'avons pas le temps !",
+								"spanish": "¡Fuera! ¡No tenemos tiempo!",
+								"vietnamese": "Tránh ra! Chúng ta không có thời gian!",
+								"thai": "หลีกไป! เราไม่มีเวลา!",
+								"hindi": "हटो! हमारे पास समय नहीं है!"
+							},
+							"type": "speech",
+							"emotion": "angry"
+						},
+						{
+							"type": "speech",
+							"emotion": "base",
+							"content": {
+								"korean": "너희의 시간은… 이미 끝났다.",
+								"english": "Your time… has already ended.",
+								"japanese": "お前たちの時間は… もう終わった。",
+								"chinese": "你们的时间… 已经结束了。",
+								"french": "Votre temps… est déjà écoulé.",
+								"spanish": "Vuestro tiempo… ya ha terminado.",
+								"vietnamese": "Thời gian của các ngươi… đã kết thúc rồi.",
+								"thai": "เวลาของพวกเจ้า… สิ้นสุดลงแล้ว.",
+								"hindi": "तुम्हारा समय… पहले ही समाप्त हो चुका है।"
+							},
+							"speaker": "random_boss"
+						}
+					],
+					"id": 15,
+					"win_dialogue": [
+						{
+							"type": "speech",
+							"emotion": "sad",
+							"content": {
+								"korean": "크으… 고작 이런 너희에게… 시간은… 복수할 것이다.",
+								"english": "Ugh… To mere beings like you… Time… will have its revenge.",
+								"japanese": "ぐう… たかがお前たちごときに… 時間は… 復讐するだろう。",
+								"chinese": "呃… 竟然败给你们这些微不足道的家伙… 时间会… 复仇的。",
+								"french": "Argh… À de simples êtres comme vous… Le Temps… se vengera.",
+								"spanish": "Ugh… A seres tan insignificantes como vosotros… El Tiempo… se vengará.",
+								"vietnamese": "Khụ… Chỉ là các ngươi thôi mà… Thời gian… sẽ báo thù.",
+								"thai": "อึก… แค่พวกเจ้า… เวลาจะ… ล้างแค้น.",
+								"hindi": "ऊह… तुम जैसे मामूली प्राणियों से… समय… बदला लेगा।"
+							},
+							"speaker": "random_boss"
+						},
+						{
+							"speaker": "character_any",
+							"emotion": "sad",
+							"type": "speech",
+							"content": {
+								"korean": "하나를 처치했지만… 아직 저주가 남아있어.",
+								"english": "We defeated one… but the curse remains.",
+								"japanese": "一体を倒したが… まだ呪いは残っている。",
+								"chinese": "虽然击败了一个… 但诅咒仍在。",
+								"french": "Nous en avons vaincu un… mais la malédiction persiste.",
+								"spanish": "Derrotamos a uno… pero la maldición perdura.",
+								"vietnamese": "Đã hạ được một kẻ… nhưng lời nguyền vẫn còn đó.",
+								"thai": "กำจัดไปได้หนึ่ง… แต่คำสาปยังคงอยู่.",
+								"hindi": "एक को हरा दिया… पर शाप अभी बाकी है।"
+							}
+						},
+						{
+							"speaker": "narrator",
+							"content": {
+								"korean": "그러나 숲의 시간은 더욱 빠르게 흘렀다. 진정한 위협은 이제 시작이었다.",
+								"english": "However, time in the forest flowed even faster. The true threat was just beginning.",
+								"japanese": "しかし、森の時間はさらに速く流れた。真の脅威は今始まったばかりだった。",
+								"chinese": "然而，森林中的时间流逝得更快。真正的威胁才刚刚开始。",
+								"french": "Cependant, le temps s'écoula encore plus vite dans la forêt. La véritable menace ne faisait que commencer.",
+								"spanish": "Sin embargo, el tiempo en el bosque transcurrió aún más rápido. La verdadera amenaza apenas comenzaba.",
+								"vietnamese": "Tuy nhiên, thời gian trong rừng trôi nhanh hơn. Mối đe dọa thực sự chỉ mới bắt đầu.",
+								"thai": "ทว่า เวลาในป่ากลับไหลเร็วขึ้น. ภัยคุกคามที่แท้จริงเพิ่งเริ่มต้นขึ้นเท่านั้น.",
+								"hindi": "हालांकि, जंगल में समय और भी तेज़ी से बीता। असली खतरा अब शुरू हुआ था।"
+							},
+							"emotion": "base",
+							"type": "speech"
+						}
+					]
+				}
+			]
+		},
+		{
+			"scenario_id": "forest_ciphra_31_04",
+			"order": 4,
+			"act": "rising",
+			"theme": "forest",
+			"actors": {
+				"hazel": {
+					"id": "mon_e2c11115-b300-4f32-b289-9ad088dc0273",
+					"name": {
+						"korean": "헤이즐",
+						"english": "Hazel",
+						"japanese": "ヘイゼル",
+						"chinese": "榛",
+						"french": "Hazel",
+						"spanish": "Hazel",
+						"vietnamese": "Hazel",
+						"thai": "เฮเซล",
+						"hindi": "हेज़ल"
+					},
+					"description": "",
+					"face_image_url": "https://imagedelivery.net/WTEqQNGFb-l-IHS6IGnzUQ/39f75a47-c622-45fe-04fd-a8bac1f93a00/public",
+					"battle_sprite_url": "https://imagedelivery.net/WTEqQNGFb-l-IHS6IGnzUQ/fc97b5d5-7a1d-4646-bedc-47a40ea70a00/public"
+				}
+			},
+			"boss": {
+				"pool_id": "random_boss"
+			},
+			"rooms": [
+				{
+					"id": 1,
+					"dialogue": [
+						{
+							"emotion": "base",
+							"type": "speech",
+							"content": {
+								"korean": "숲의 가장 깊숙한 곳. 고요함 속에 불안이 감돌았다.",
+								"english": "The deepest part of the forest. Unease lingered in the quiet.",
+								"japanese": "森の最も奥深い場所。静けさの中に不安が漂っていた。",
+								"chinese": "森林最深处。不安在寂静中弥漫。",
+								"french": "La partie la plus profonde de la forêt. L'inquiétude planait dans le calme.",
+								"spanish": "La parte más profunda del bosque. La inquietud se cernía en la quietud.",
+								"vietnamese": "Nơi sâu nhất của khu rừng. Sự bất an ẩn hiện trong tĩnh lặng.",
+								"thai": "ส่วนที่ลึกที่สุดของป่า ความไม่สบายใจแฝงอยู่ในความเงียบงัน",
+								"hindi": "जंगल का सबसे गहरा हिस्सा। शांति में बेचैनी छाई हुई थी।"
+							},
+							"speaker": "narrator"
+						},
+						{
+							"emotion": "sad",
+							"content": {
+								"korean": "얼마나 더 가야 하는 거지? 이 숲은 끝이 없어.",
+								"english": "How much further do we have to go? This forest is endless.",
+								"japanese": "あとどれくらい行けばいいんだ？この森は終わりがない。",
+								"chinese": "还要走多远？这森林没有尽头。",
+								"french": "Combien de chemin nous reste-t-il ? Cette forêt est sans fin.",
+								"spanish": "¿Cuánto más tenemos que avanzar? Este bosque es interminable.",
+								"vietnamese": "Chúng ta phải đi bao xa nữa? Khu rừng này vô tận.",
+								"thai": "เราต้องไปอีกไกลแค่ไหน? ป่านี้ไม่มีที่สิ้นสุดเลย",
+								"hindi": "हमें और कितना आगे जाना है? यह जंगल कभी खत्म नहीं होता।"
+							},
+							"speaker": "character_any",
+							"type": "speech"
+						},
+						{
+							"speaker": "hazel",
+							"type": "direction",
+							"spot": [
+								3,
+								3
+							],
+							"duration_ms": 500,
+							"action": "enter"
+						},
+						{
+							"emotion": "base",
+							"speaker": "hazel",
+							"content": {
+								"korean": "여기까지 오다니… 길을 잃었나, 어리석은 자들.",
+								"english": "To come all this way... Have you lost your way, you fools?",
+								"japanese": "ここまで来るとは…道に迷ったか、愚か者たち。",
+								"chinese": "竟然来到这里……迷路了吗，愚蠢的家伙们。",
+								"french": "Arriver jusqu'ici... Vous êtes perdus, idiots ?",
+								"spanish": "Haber llegado hasta aquí... ¿Os habéis perdido, necios?",
+								"vietnamese": "Lại đến tận đây... Các ngươi bị lạc đường rồi sao, những kẻ ngốc.",
+								"thai": "มาถึงที่นี่ได้ไง... หลงทางแล้วสินะ เจ้าพวกโง่เอ๊ย",
+								"hindi": "यहाँ तक आ गए... क्या तुम मूर्ख, रास्ता भटक गए हो?"
+							},
+							"type": "speech"
+						},
+						{
+							"emotion": "base",
+							"speaker": "character_any",
+							"content": {
+								"korean": "길을 찾는 중입니다. 숲의 심장으로 가는 길을.",
+								"english": "We are looking for a path. A path to the heart of the forest.",
+								"japanese": "道を探しています。森の心臓部へ続く道を。",
+								"chinese": "正在寻找道路。通往森林心脏的道路。",
+								"french": "Nous cherchons un chemin. Un chemin vers le cœur de la forêt.",
+								"spanish": "Estamos buscando un camino. Un camino al corazón del bosque.",
+								"vietnamese": "Chúng tôi đang tìm đường. Con đường đến trái tim của khu rừng.",
+								"thai": "กำลังหาทางอยู่ครับ/ค่ะ ทางที่จะไปยังใจกลางป่า",
+								"hindi": "हम एक रास्ता तलाश रहे हैं। जंगल के हृदय तक जाने वाला रास्ता।"
+							},
+							"type": "speech"
+						},
+						{
+							"emotion": "base",
+							"speaker": "hazel",
+							"content": {
+								"korean": "심장이라… 모든 것의 시작이자 끝. 허나 그곳엔 금지된 진실이 숨어있지.",
+								"english": "The heart, you say... The beginning and end of all things. But a forbidden truth lies hidden there.",
+								"japanese": "心臓だと…すべての始まりであり終わり。だがそこには禁断の真実が隠されている。",
+								"chinese": "心脏啊……万物之始亦是终。然而，那里隐藏着被禁止的真相。",
+								"french": "Le cœur, dites-vous... Le début et la fin de toutes choses. Mais une vérité interdite y est cachée.",
+								"spanish": "El corazón, dices... El principio y el fin de todas las cosas. Pero una verdad prohibida se esconde allí.",
+								"vietnamese": "Trái tim ư... Khởi đầu và kết thúc của vạn vật. Nhưng một sự thật cấm kỵ đang ẩn giấu ở đó.",
+								"thai": "ใจกลางงั้นหรือ... จุดเริ่มต้นและจุดจบของทุกสิ่ง แต่ความจริงต้องห้ามซ่อนอยู่ที่นั่น",
+								"hindi": "हृदय, तुम कहते हो... सभी चीज़ों की शुरुआत और अंत। लेकिन वहाँ एक वर्जित सत्य छिपा है।"
+							},
+							"type": "speech"
+						},
+						{
+							"speaker": "character_any",
+							"content": {
+								"korean": "금지된 진실이요?",
+								"english": "Forbidden truth?",
+								"japanese": "禁断の真実ですか？",
+								"chinese": "禁忌的真相？",
+								"french": "Une vérité interdite ?",
+								"spanish": "¿Una verdad prohibida?",
+								"vietnamese": "Sự thật cấm đoán?",
+								"thai": "ความจริงต้องห้ามหรือ?",
+								"hindi": "निषिद्ध सत्य?"
+							},
+							"type": "speech",
+							"emotion": "base"
+						},
+						{
+							"type": "speech",
+							"content": {
+								"korean": "더 이상은… 모르는 게 약일 때도 있는 법이야.",
+								"english": "Anymore… sometimes ignorance is bliss.",
+								"japanese": "これ以上は…知らない方が幸せなこともある。",
+								"chinese": "有些事…不知情是福。",
+								"french": "Parfois… l'ignorance est une bénédiction.",
+								"spanish": "A veces… la ignorancia es una bendición.",
+								"vietnamese": "Đôi khi… không biết lại là tốt.",
+								"thai": "บางครั้ง… การไม่รู้ก็เป็นสุข",
+								"hindi": "कभी-कभी… अज्ञानता ही सुख है।"
+							},
+							"speaker": "hazel",
+							"emotion": "base"
+						}
+					]
+				},
+				{
+					"dialogue": [
+						{
+							"duration_ms": 500,
+							"spot": [
+								3,
+								3
+							],
+							"action": "enter",
+							"type": "direction",
+							"speaker": "hazel"
+						},
+						{
+							"content": {
+								"korean": "이곳의 약초는 특별해. 하지만 어떤 것은… 만져서는 안 돼.",
+								"english": "The herbs here are special. But some… must not be touched.",
+								"japanese": "ここの薬草は特別だ。だが、中には…触れてはならぬものもある。",
+								"chinese": "这里的药草很特别。但有些…不可触碰。",
+								"french": "Les herbes ici sont spéciales. Mais certaines… ne doivent pas être touchées.",
+								"spanish": "Las hierbas aquí son especiales. Pero algunas… no deben tocarse.",
+								"vietnamese": "Thảo dược ở đây đặc biệt. Nhưng có loại… không được chạm vào.",
+								"thai": "สมุนไพรที่นี่พิเศษ แต่บางชนิด… ห้ามแตะต้อง",
+								"hindi": "यहां की जड़ी-बूटियां खास हैं। लेकिन कुछ… छूने नहीं चाहिए।"
+							},
+							"speaker": "hazel",
+							"type": "speech",
+							"emotion": "base"
+						},
+						{
+							"emotion": "base",
+							"speaker": "character_any",
+							"content": {
+								"korean": "만져서는 안 된다는 건 무슨 뜻이죠?",
+								"english": "What do you mean, 'must not be touched'?",
+								"japanese": "触れてはならないとは、どういう意味ですか？",
+								"chinese": "不可触碰是什么意思？",
+								"french": "Que voulez-vous dire par 'ne doivent pas être touchées' ?",
+								"spanish": "¿Qué significa 'no deben tocarse'?",
+								"vietnamese": "Không được chạm vào là sao ạ?",
+								"thai": "ห้ามแตะต้อง หมายความว่าอย่างไร?",
+								"hindi": "छूने नहीं चाहिए, इसका क्या मतलब है?"
+							},
+							"type": "speech"
+						},
+						{
+							"type": "speech",
+							"content": {
+								"korean": "숲의 저주를 짊어진 것들. 아름답지만, 파멸을 불러오지.",
+								"english": "Those burdened by the forest's curse. Beautiful, yet they bring ruin.",
+								"japanese": "森の呪いを背負ったものたち。美しくも、破滅を招く。",
+								"chinese": "背负森林诅咒之物。美丽却招致毁灭。",
+								"french": "Celles qui portent la malédiction de la forêt. Belles, mais elles apportent la ruine.",
+								"spanish": "Las que cargan con la maldición del bosque. Hermosas, pero traen la ruina.",
+								"vietnamese": "Những thứ mang lời nguyền của rừng. Đẹp đẽ nhưng mang đến tai ương.",
+								"thai": "สิ่งต้องสาปแห่งป่า งดงาม แต่ก็นำมาซึ่งความพินาศ",
+								"hindi": "वन के श्राप से ग्रस्त चीजें। सुंदर, पर विनाश लाती हैं।"
+							},
+							"speaker": "hazel",
+							"emotion": "sad"
+						},
+						{
+							"type": "speech",
+							"content": {
+								"korean": "파멸이라니… 어떤 것들인데요?",
+								"english": "Ruin? What kind of things?",
+								"japanese": "破滅…どのようなものなのですか？",
+								"chinese": "毁灭…是哪些东西？",
+								"french": "La ruine… Quelles sont ces choses ?",
+								"spanish": "¿La ruina? ¿Qué tipo de cosas?",
+								"vietnamese": "Tai ương… là những thứ gì ạ?",
+								"thai": "พินาศหรือ… สิ่งใดเล่า?",
+								"hindi": "विनाश? कैसी चीजें?"
+							},
+							"speaker": "character_any",
+							"emotion": "base"
+						},
+						{
+							"emotion": "angry",
+							"type": "speech",
+							"speaker": "hazel",
+							"content": {
+								"korean": "그것은… 묻지 마라. 너희에겐 너무 위험해.",
+								"english": "Do not ask. It is too dangerous for you.",
+								"japanese": "それは…聞くな。お前たちには危険すぎる。",
+								"chinese": "那是什么…别问了。对你们来说太危险了。",
+								"french": "Cela… ne demande pas. C'est trop dangereux pour vous.",
+								"spanish": "Eso… no preguntes. Es demasiado peligroso para vosotros.",
+								"vietnamese": "Đó là… đừng hỏi. Nó quá nguy hiểm cho các ngươi.",
+								"thai": "สิ่งนั้น… อย่าถามเลย มันอันตรายเกินไปสำหรับเจ้า",
+								"hindi": "वह… मत पूछो। तुम्हारे लिए बहुत खतरनाक है।"
+							}
+						},
+						{
+							"emotion": "base",
+							"content": {
+								"korean": "노파의 바구니 안에서, 잠시 기이한 빛이 스치는 듯했다.",
+								"english": "Within the old woman's basket, a strange light seemed to flicker momentarily.",
+								"japanese": "老婆の籠の中で、一瞬、奇妙な光がよぎったようだった。",
+								"chinese": "老婆婆的篮子里，仿佛有异样的光芒一闪而过。",
+								"french": "Dans le panier de la vieille femme, une étrange lumière sembla vaciller un instant.",
+								"spanish": "Dentro de la cesta de la anciana, una extraña luz pareció parpadear por un instante.",
+								"vietnamese": "Trong giỏ của bà lão, một ánh sáng kỳ lạ thoáng qua.",
+								"thai": "ในตะกร้าของหญิงชรา แสงประหลาดส่องวาบขึ้นชั่วขณะ",
+								"hindi": "बुढ़िया की टोकरी में, एक अजीब सी रोशनी क्षण भर के लिए चमकती दिखी।"
+							},
+							"speaker": "narrator",
+							"type": "speech"
+						}
+					],
+					"id": 3
+				},
+				{
+					"dialogue": [
+						{
+							"speaker": "hazel",
+							"type": "direction",
+							"action": "enter",
+							"spot": [
+								3,
+								3
+							],
+							"duration_ms": 500
+						},
+						{
+							"type": "speech",
+							"content": {
+								"korean": "저주받은 것들… 대체 무엇이길래요?",
+								"english": "The cursed ones… What could they be?",
+								"japanese": "呪われたものたち…一体、何なのですか？",
+								"chinese": "那些被诅咒的东西…到底是什么？",
+								"french": "Les choses maudites… Que peuvent-elles bien être ?",
+								"spanish": "Las cosas malditas… ¿Qué pueden ser?",
+								"vietnamese": "Những thứ bị nguyền rủa… rốt cuộc là gì vậy?",
+								"thai": "สิ่งต้องสาป… คืออะไรกันแน่?",
+								"hindi": "शापित चीजें… आखिर क्या हैं?"
+							},
+							"speaker": "character_any",
+							"emotion": "base"
+						},
+						{
+							"emotion": "base",
+							"type": "speech",
+							"speaker": "hazel",
+							"content": {
+								"korean": "숲의 심장이 가까워질수록, 금지된 것들이 너희를 유혹할 거다.",
+								"english": "As you near the forest's heart, the forbidden will tempt you.",
+								"japanese": "森の心臓に近づくほど、禁断のものどもがお前たちを誘惑するだろう。",
+								"chinese": "越靠近森林之心，禁忌之物就越会诱惑你们。",
+								"french": "Plus vous approcherez du cœur de la forêt, plus les choses interdites vous tenteront.",
+								"spanish": "Cuanto más os acerquéis al corazón del bosque, más os tentarán las cosas prohibidas.",
+								"vietnamese": "Càng đến gần trái tim khu rừng, những thứ cấm đoán sẽ càng cám dỗ các ngươi.",
+								"thai": "ยิ่งเจ้าเข้าใกล้ใจกลางป่ามากเท่าไหร่ สิ่งต้องห้ามจะยิ่งล่อลวงเจ้า",
+								"hindi": "जैसे-जैसे तुम जंगल के हृदय के करीब आओगे, निषिद्ध चीजें तुम्हें लुभाएंगी।"
+							}
+						},
+						{
+							"content": {
+								"korean": "보이는 것이 전부가 아니야. 달콤한 속삭임에 현혹되지 마라.",
+								"english": "What you see isn't everything. Don't be swayed by sweet whispers.",
+								"japanese": "見た目が全てではない。甘い囁きに惑わされるな。",
+								"chinese": "你所看到的并非全部。不要被甜言蜜语所迷惑。",
+								"french": "Ce que tu vois n'est pas tout. Ne te laisse pas séduire par de doux murmures.",
+								"spanish": "Lo que ves no es todo. No te dejes engañar por dulces susurros.",
+								"vietnamese": "Những gì bạn thấy không phải là tất cả. Đừng để bị mê hoặc bởi những lời thì thầm ngọt ngào.",
+								"thai": "สิ่งที่คุณเห็นไม่ใช่ทั้งหมด อย่าหลงเชื่อคำกระซิบหวานหู",
+								"hindi": "जो तुम देखते हो वह सब कुछ नहीं है। मीठी फुसफुसाहटों से गुमराह मत हो।"
+							},
+							"speaker": "hazel",
+							"type": "speech",
+							"emotion": "sad"
+						},
+						{
+							"emotion": "base",
+							"speaker": "character_any",
+							"content": {
+								"korean": "경고하시는 겁니까?",
+								"english": "Are you warning us?",
+								"japanese": "警告ですか？",
+								"chinese": "您是在警告我们吗？",
+								"french": "Nous avertissez-vous ?",
+								"spanish": "¿Nos está advirtiendo?",
+								"vietnamese": "Ông đang cảnh báo chúng tôi sao?",
+								"thai": "ท่านกำลังเตือนพวกเราหรือ?",
+								"hindi": "क्या आप हमें चेतावनी दे रहे हैं?"
+							},
+							"type": "speech"
+						},
+						{
+							"type": "speech",
+							"content": {
+								"korean": "이 숲은… 너희가 상상하는 것보다 더 많은 비밀을 품고 있어. 모든 진실이 구원은 아니지.",
+								"english": "This forest... holds more secrets than you can imagine. Not all truths lead to salvation.",
+								"japanese": "この森は… お前たちが想像するよりも多くの秘密を抱えている。全ての真実が救いとは限らない。",
+								"chinese": "这片森林… 隐藏着比你们想象中更多的秘密。并非所有真相都能带来救赎。",
+								"french": "Cette forêt… renferme plus de secrets que vous ne pouvez l'imaginer. Toutes les vérités ne sont pas un salut.",
+								"spanish": "Este bosque… guarda más secretos de los que podéis imaginar. No todas las verdades son una salvación.",
+								"vietnamese": "Rừng này… chứa đựng nhiều bí mật hơn những gì các ngươi có thể tưởng tượng. Không phải mọi sự thật đều là sự cứu rỗi.",
+								"thai": "ป่าแห่งนี้… ซ่อนเร้นความลับมากมายเกินกว่าที่พวกเจ้าจะจินตนาการได้ ความจริงทั้งหมดมิใช่หนทางแห่งการไถ่บาปเสมอไป",
+								"hindi": "यह जंगल… तुम्हारी कल्पना से भी अधिक रहस्य समेटे हुए है। हर सच्चाई मुक्ति नहीं होती।"
+							},
+							"speaker": "hazel",
+							"emotion": "base"
+						},
+						{
+							"emotion": "base",
+							"type": "speech",
+							"content": {
+								"korean": "우린 구원을 찾아야만 해요.",
+								"english": "We must find salvation.",
+								"japanese": "私たちは救いを見つけなければなりません。",
+								"chinese": "我们必须找到救赎。",
+								"french": "Nous devons trouver le salut.",
+								"spanish": "Debemos encontrar la salvación.",
+								"vietnamese": "Chúng tôi phải tìm thấy sự cứu rỗi.",
+								"thai": "พวกเราต้องค้นหาการไถ่บาป",
+								"hindi": "हमें मुक्ति ढूंढनी ही होगी।"
+							},
+							"speaker": "character_any"
+						},
+						{
+							"emotion": "sad",
+							"content": {
+								"korean": "구원… 이 숲에서 구원을 말하다니. 어리석은 자여.",
+								"english": "Salvation... to speak of salvation in this forest. Foolish one.",
+								"japanese": "救い… この森で救いを語るとは。愚かな者め。",
+								"chinese": "救赎… 竟敢在这片森林里谈论救赎。真是个傻瓜。",
+								"french": "Le salut… parler de salut dans cette forêt. Imbécile.",
+								"spanish": "¿Salvación…? Hablar de salvación en este bosque. Necio.",
+								"vietnamese": "Cứu rỗi… dám nói về sự cứu rỗi trong khu rừng này. Kẻ ngu ngốc.",
+								"thai": "การไถ่บาป… มากล่าวถึงการไถ่บาปในป่าแห่งนี้ ช่างโง่เขลานัก",
+								"hindi": "मुक्ति… इस जंगल में मुक्ति की बात करना। मूर्ख व्यक्ति।"
+							},
+							"speaker": "hazel",
+							"type": "speech"
+						}
+					],
+					"id": 5
+				},
+				{
+					"id": 9,
+					"dialogue": [
+						{
+							"type": "direction",
+							"speaker": "hazel",
+							"duration_ms": 500,
+							"spot": [
+								3,
+								3
+							],
+							"action": "enter"
+						},
+						{
+							"emotion": "angry",
+							"speaker": "hazel",
+							"content": {
+								"korean": "돌아가라. 아직 늦지 않았다.",
+								"english": "Go back. It's not too late yet.",
+								"japanese": "帰れ。まだ遅くはない。",
+								"chinese": "回去吧。还不算太晚。",
+								"french": "Retourne. Il n'est pas trop tard.",
+								"spanish": "Vuelve. Aún no es tarde.",
+								"vietnamese": "Quay trở lại đi. Vẫn chưa quá muộn.",
+								"thai": "กลับไปซะ ยังไม่สายเกินไป",
+								"hindi": "वापस जाओ। अभी देर नहीं हुई है।"
+							},
+							"type": "speech"
+						},
+						{
+							"emotion": "sad",
+							"type": "speech",
+							"content": {
+								"korean": "돌아갈 수는 없어요. 우리에게 남은 시간이 얼마 없어요.",
+								"english": "We can't go back. We don't have much time left.",
+								"japanese": "戻ることはできません。私たちに残された時間は少ないのです。",
+								"chinese": "我们不能回去。我们所剩的时间不多了。",
+								"french": "Nous ne pouvons pas revenir en arrière. Il ne nous reste que peu de temps.",
+								"spanish": "No podemos volver. Nos queda poco tiempo.",
+								"vietnamese": "Chúng tôi không thể quay lại. Chúng tôi không còn nhiều thời gian.",
+								"thai": "พวกเรากลับไปไม่ได้แล้ว พวกเราเหลือเวลาไม่มากแล้ว",
+								"hindi": "हम वापस नहीं जा सकते। हमारे पास ज्यादा समय नहीं बचा है।"
+							},
+							"speaker": "character_any"
+						},
+						{
+							"type": "speech",
+							"content": {
+								"korean": "그렇다면… 조심해라. 숲의 가장 깊은 곳엔, 모든 것을 뒤틀어버리는 힘이 잠들어 있으니.",
+								"english": "If so… be careful. In the deepest part of the forest, a power that twists everything lies dormant.",
+								"japanese": "ならば… 気をつけろ。森の最も深い場所には、全てを歪める力が眠っている。",
+								"chinese": "既然如此… 小心点。在森林的最深处，沉睡着一股扭曲一切的力量。",
+								"french": "Alors… sois prudent. Au plus profond de la forêt, une force qui tord tout sommeille.",
+								"spanish": "Entonces… ten cuidado. En lo más profundo del bosque, un poder que lo distorsiona todo yace dormido.",
+								"vietnamese": "Nếu vậy… hãy cẩn thận. Ở nơi sâu thẳm nhất của khu rừng, một sức mạnh có thể bóp méo mọi thứ đang ngủ yên.",
+								"thai": "ถ้าเช่นนั้น… จงระวังให้ดี ณ ส่วนลึกที่สุดของป่า พลังที่บิดเบือนทุกสิ่งกำลังหลับใหลอยู่",
+								"hindi": "तो… सावधान रहो। जंगल के सबसे गहरे हिस्से में, सब कुछ विकृत करने वाली एक शक्ति सो रही है।"
+							},
+							"speaker": "hazel",
+							"emotion": "base"
+						},
+						{
+							"emotion": "base",
+							"speaker": "character_any",
+							"content": {
+								"korean": "뒤틀어버리는 힘이라니요?",
+								"english": "A power that twists everything?",
+								"japanese": "全てを歪める力だと？",
+								"chinese": "扭曲一切的力量？",
+								"french": "Une force qui tord tout ?",
+								"spanish": "¿Un poder que lo distorsiona todo?",
+								"vietnamese": "Sức mạnh bóp méo mọi thứ là gì?",
+								"thai": "พลังที่บิดเบือนทุกสิ่งอย่างนั้นหรือ?",
+								"hindi": "सब कुछ विकृत करने वाली शक्ति?"
+							},
+							"type": "speech"
+						},
+						{
+							"emotion": "sad",
+							"content": {
+								"korean": "탐욕과 절망으로 만들어진 존재. 그것이 너희를 기다리고 있을 거다.",
+								"english": "A being forged from greed and despair. It will be waiting for you.",
+								"japanese": "貪欲と絶望から生まれた存在。それがお前たちを待っているだろう。",
+								"chinese": "一个由贪婪和绝望铸就的存在。它将在那里等着你们。",
+								"french": "Une entité forgée par l'avidité et le désespoir. Elle vous attendra.",
+								"spanish": "Un ser forjado por la codicia y la desesperación. Os estará esperando.",
+								"vietnamese": "Một thực thể được tạo ra từ lòng tham và sự tuyệt vọng. Nó sẽ đợi các ngươi ở đó.",
+								"thai": "สิ่งมีชีวิตที่ถือกำเนิดจากความโลภและความสิ้นหวัง มันจะรอพวกเจ้าอยู่",
+								"hindi": "लालच और निराशा से बनी एक सत्ता। वह तुम्हारा इंतजार कर रही होगी।"
+							},
+							"speaker": "hazel",
+							"type": "speech"
+						},
+						{
+							"emotion": "angry",
+							"speaker": "character_any",
+							"content": {
+								"korean": "우린 맞서 싸울 겁니다.",
+								"english": "We will fight back.",
+								"japanese": "我々は戦い抜く。",
+								"chinese": "我们将奋起反抗。",
+								"french": "Nous riposterons.",
+								"spanish": "Lucharemos.",
+								"vietnamese": "Chúng ta sẽ chiến đấu.",
+								"thai": "เราจะสู้กลับ",
+								"hindi": "हम लड़ेंगे।"
+							},
+							"type": "speech"
+						},
+						{
+							"type": "speech",
+							"content": {
+								"korean": "결국… 너희도 그 파멸의 일부가 될지도 모르지.",
+								"english": "Ultimately... you too might become part of that ruin.",
+								"japanese": "結局…お前たちもその破滅の一部となるやもしれぬ。",
+								"chinese": "最终…你们也可能成为那毁灭的一部分。",
+								"french": "Finalement... vous aussi pourriez faire partie de cette ruine.",
+								"spanish": "Al final... vosotros también podríais ser parte de esa ruina.",
+								"vietnamese": "Cuối cùng... các ngươi cũng có thể trở thành một phần của sự hủy diệt đó.",
+								"thai": "ท้ายที่สุด... เจ้าเองก็อาจเป็นส่วนหนึ่งของความพินาศนั้น",
+								"hindi": "अंततः... तुम भी उस विनाश का हिस्सा बन सकते हो।"
+							},
+							"speaker": "hazel",
+							"emotion": "sad"
+						}
+					]
+				},
+				{
+					"lose_dialogue": [
+						{
+							"type": "speech",
+							"speaker": "random_boss",
+							"content": {
+								"korean": "어리석은 것들. 결국 너희도 나의 일부가 될 운명이었다.",
+								"english": "Fools. In the end, you too were destined to become a part of me.",
+								"japanese": "愚か者たちめ。結局お前たちも、私の H 一部となる運命だったのだ。",
+								"chinese": "愚蠢的家伙。最终，你们也注定会成为我的一部分。",
+								"french": "Imbéciles. Au final, vous aussi étiez destinés à devenir une partie de moi.",
+								"spanish": "Estúpidos. Al final, vosotros también estabais destinados a ser parte de mí.",
+								"vietnamese": "Những kẻ ngu ngốc. Cuối cùng thì các ngươi cũng định trở thành một phần của ta thôi.",
+								"thai": "พวกโง่เขลา สุดท้ายแล้วพวกเจ้าก็มีชะตากรรมที่จะเป็นส่วนหนึ่งของข้า",
+								"hindi": "मूर्खों। अंत में, तुम भी मेरा हिस्सा बनने वाले थे।"
+							},
+							"emotion": "base"
+						},
+						{
+							"content": {
+								"korean": "아직… 끝나지 않았어…!",
+								"english": "It's not... over yet...!",
+								"japanese": "まだ…終わってない…！",
+								"chinese": "还没…结束…！",
+								"french": "Ce n'est pas… encore fini… !",
+								"spanish": "¡Aún no... ha terminado...!",
+								"vietnamese": "Chưa... kết thúc đâu...!",
+								"thai": "ยัง…ไม่จบแค่นี้…!",
+								"hindi": "अभी… खत्म नहीं हुआ है…!"
+							},
+							"speaker": "character_any",
+							"type": "speech",
+							"emotion": "angry"
+						},
+						{
+							"emotion": "base",
+							"content": {
+								"korean": "숲의 저주는 더욱 깊어졌다. 그러나 그들의 의지는 꺾이지 않았다.",
+								"english": "The forest's curse deepened. Yet, their will remained unbroken.",
+								"japanese": "森の呪いはさらに深まった。しかし、彼らの意志は折れなかった。",
+								"chinese": "森林的诅咒变得更深了。然而，他们的意志并未被击垮。",
+								"french": "La malédiction de la forêt s'approfondit. Pourtant, leur volonté resta intacte.",
+								"spanish": "La maldición del bosque se hizo más profunda. Sin embargo, su voluntad no se quebró.",
+								"vietnamese": "Lời nguyền của khu rừng càng sâu sắc hơn. Tuy nhiên, ý chí của họ không hề bị bẻ gãy.",
+								"thai": "คำสาปของป่าลึกลงไปอีก ทว่าความตั้งใจของพวกเขาก็ยังไม่พ่ายแพ้",
+								"hindi": "जंगल का अभिशाप और गहरा हो गया। फिर भी, उनकी इच्छाशक्ति नहीं टूटी।"
+							},
+							"speaker": "narrator",
+							"type": "speech"
+						}
+					],
+					"id": 15,
+					"win_dialogue": [
+						{
+							"speaker": "random_boss",
+							"content": {
+								"korean": "크크큭… 네가 이겼다고 생각하나? 아직 멀었다….",
+								"english": "Hehehe... You think you've won? Not by a long shot...",
+								"japanese": "ククク…勝ったとでも？まだまだだな…",
+								"chinese": "呵呵呵…你以为你赢了吗？还早得很呢…",
+								"french": "Héhéhé… Tu penses avoir gagné ? Loin de là…",
+								"spanish": "Jejeje... ¿Crees que has ganado? ¡Ni de cerca...!",
+								"vietnamese": "Khà khà... Ngươi nghĩ mình đã thắng sao? Còn lâu lắm...",
+								"thai": "คิกคิก… คิดว่าเจ้าชนะแล้วรึ? ยังห่างไกลนัก…",
+								"hindi": "हँ हँ हँ… तुम्हें लगता है तुम जीत गए? अभी तो बहुत दूर है…"
+							},
+							"type": "speech",
+							"emotion": "base"
+						},
+						{
+							"type": "speech",
+							"speaker": "random_boss",
+							"content": {
+								"korean": "진정한 파멸은 이제 시작일 뿐….",
+								"english": "True destruction has only just begun...",
+								"japanese": "真の破滅は、今始まったばかり…",
+								"chinese": "真正的毁灭才刚刚开始…",
+								"french": "La véritable destruction ne fait que commencer…",
+								"spanish": "La verdadera aniquilación apenas comienza...",
+								"vietnamese": "Sự hủy diệt thực sự chỉ mới bắt đầu...",
+								"thai": "หายนะที่แท้จริงเพิ่งจะเริ่มต้นขึ้นเท่านั้น…",
+								"hindi": "वास्तविक विनाश तो अभी शुरू हुआ है…"
+							},
+							"emotion": "base"
+						},
+						{
+							"content": {
+								"korean": "무슨 소리야? 저주는 풀린 거야?",
+								"english": "What do you mean? Is the curse broken?",
+								"japanese": "どういうこと？呪いは解けたの？",
+								"chinese": "你说什么？诅咒解除了吗？",
+								"french": "Que veux-tu dire ? La malédiction est-elle levée ?",
+								"spanish": "¿Qué dices? ¿Se ha roto la maldición?",
+								"vietnamese": "Ngươi nói gì? Lời nguyền đã được hóa giải sao?",
+								"thai": "หมายความว่าไง? คำสาปคลายแล้วเหรอ?",
+								"hindi": "क्या मतलब? क्या अभिशाप टूट गया है?"
+							},
+							"speaker": "character_any",
+							"type": "speech",
+							"emotion": "base"
+						},
+						{
+							"emotion": "base",
+							"content": {
+								"korean": "숲의 저주는 여전히 남아있었다. 하지만… 무언가 달라졌다.",
+								"english": "The forest's curse still remained. But... something had changed.",
+								"japanese": "森の呪いはまだ残っていた。だが…何かが変わった。",
+								"chinese": "森林的诅咒依然存在。但是…有什么东西改变了。",
+								"french": "La malédiction de la forêt persistait. Mais… quelque chose avait changé.",
+								"spanish": "La maldición del bosque aún persistía. Pero... algo había cambiado.",
+								"vietnamese": "Lời nguyền của khu rừng vẫn còn. Nhưng... có điều gì đó đã thay đổi.",
+								"thai": "คำสาปของป่ายังคงอยู่ ทว่า… มีบางอย่างเปลี่ยนไป",
+								"hindi": "जंगल का अभिशाप अभी भी बना हुआ था। लेकिन… कुछ बदल गया था।"
+							},
+							"speaker": "narrator",
+							"type": "speech"
+						},
+						{
+							"type": "speech",
+							"content": {
+								"korean": "…아직 끝나지 않았어.",
+								"english": "...It's not over yet.",
+								"japanese": "…まだ終わってない。",
+								"chinese": "…还没结束。",
+								"french": "...Ce n'est pas encore fini.",
+								"spanish": "...Aún no ha terminado.",
+								"vietnamese": "...Chưa kết thúc đâu.",
+								"thai": "…ยังไม่จบแค่นี้",
+								"hindi": "…अभी खत्म नहीं हुआ है।"
+							},
+							"speaker": "character_any",
+							"emotion": "sad"
+						},
+						{
+							"emotion": "base",
+							"content": {
+								"korean": "숲의 속삭임은 멈추지 않았다. 다음 파멸의 서막이 서서히 열리고 있었다.",
+								"english": "The forest's whispers did not cease. The prelude to the next destruction was slowly unfolding.",
+								"japanese": "森の囁きは止まらなかった。次の破滅の序幕が、ゆっくりと開かれつつあった。",
+								"chinese": "森林的低语没有停止。下一场毁灭的序幕正在缓缓拉开。",
+								"french": "Les murmures de la forêt ne cessaient pas. Le prélude à la prochaine destruction se dévoilait lentement.",
+								"spanish": "Los susurros del bosque no cesaron. El preludio de la próxima aniquilación se abría lentamente.",
+								"vietnamese": "Tiếng thì thầm của khu rừng không dừng lại. Màn mở đầu cho sự hủy diệt tiếp theo đang từ từ hé lộ.",
+								"thai": "เสียงกระซิบของป่ายังไม่หยุดลง ปฐมบทแห่งหายนะครั้งต่อไปกำลังค่อย ๆ เปิดฉากขึ้น",
+								"hindi": "जंगल की फुसफुसाहट बंद नहीं हुई। अगले विनाश की प्रस्तावना धीरे-धीरे खुल रही थी।"
+							},
+							"speaker": "narrator",
+							"type": "speech"
+						}
+					],
+					"dialogue": [
+						{
+							"emotion": "base",
+							"content": {
+								"korean": "숲의 심장부. 거대한 그림자가 일행을 맞았다.",
+								"english": "In the heart of the forest, a colossal shadow greeted the party.",
+								"japanese": "森の心臓部。巨大な影が一行を迎えた。",
+								"chinese": "在森林深处，一个巨大的影子迎接了队伍。",
+								"french": "Au cœur de la forêt, une ombre colossale accueillit le groupe.",
+								"spanish": "En el corazón del bosque, una sombra colosal recibió al grupo.",
+								"vietnamese": "Trong lòng rừng, một cái bóng khổng lồ chào đón đoàn người.",
+								"thai": "ใจกลางป่า เงาขนาดมหึมาทักทายคณะเดินทาง",
+								"hindi": "जंगल के हृदय में, एक विशाल छाया ने दल का स्वागत किया।"
+							},
+							"speaker": "narrator",
+							"type": "speech"
+						},
+						{
+							"type": "speech",
+							"content": {
+								"korean": "오랜만이다, 어리석은 인간들이여.",
+								"english": "Long time no see, foolish humans.",
+								"japanese": "久しぶりだな、愚かな人間たちよ。",
+								"chinese": "好久不见，愚蠢的人类。",
+								"french": "Il y a longtemps que nous ne nous sommes pas vus, stupides humains.",
+								"spanish": "Cuánto tiempo sin veros, estúpidos humanos.",
+								"vietnamese": "Lâu rồi không gặp, lũ người ngu ngốc.",
+								"thai": "ไม่เจอกันนานนะ มนุษย์โง่เขลา",
+								"hindi": "बहुत समय हो गया, मूर्ख मनुष्यों।"
+							},
+							"speaker": "random_boss",
+							"emotion": "base"
+						},
+						{
+							"emotion": "angry",
+							"speaker": "character_any",
+							"content": {
+								"korean": "네가… 저주를 만든 자냐?",
+								"english": "Are you... the one who created the curse?",
+								"japanese": "貴様が…呪いを生み出した者か？",
+								"chinese": "你就是…制造诅咒的人？",
+								"french": "Es-tu... celui qui a créé la malédiction ?",
+								"spanish": "Eres... ¿quien creó la maldición?",
+								"vietnamese": "Ngươi... là kẻ đã tạo ra lời nguyền?",
+								"thai": "เจ้าคือ... ผู้สร้างคำสาปหรือ?",
+								"hindi": "क्या तुम... वही हो जिसने अभिशाप बनाया?"
+							},
+							"type": "speech"
+						},
+						{
+							"type": "speech",
+							"speaker": "random_boss",
+							"content": {
+								"korean": "저주? 나는 질서를 세운 자다. 너희 같은 침입자를 막을 뿐.",
+								"english": "Curse? I am the one who established order. I merely stop intruders like you.",
+								"japanese": "呪いだと？私は秩序を築いた者だ。貴様らのような侵入者を阻むだけ。",
+								"chinese": "诅咒？我乃建立秩序之人。我只是阻止像你们这样的入侵者。",
+								"french": "Malédiction ? Je suis celui qui a établi l'ordre. Je ne fais que repousser les intrus comme vous.",
+								"spanish": "¿Maldición? Soy quien estableció el orden. Solo detengo a intrusos como vosotros.",
+								"vietnamese": "Lời nguyền? Ta là kẻ đã thiết lập trật tự. Ta chỉ ngăn chặn những kẻ xâm nhập như các ngươi.",
+								"thai": "คำสาปหรือ? ข้าคือผู้สร้างระเบียบ ข้าแค่หยุดผู้บุกรุกเช่นพวกเจ้า",
+								"hindi": "अभिशाप? मैं वह हूँ जिसने व्यवस्था स्थापित की। मैं बस तुम जैसे घुसपैठियों को रोकता हूँ।"
+							},
+							"emotion": "base"
+						},
+						{
+							"type": "direction",
+							"speaker": "hazel",
+							"duration_ms": 500,
+							"spot": [
+								2,
+								2
+							],
+							"action": "enter"
+						},
+						{
+							"content": {
+								"korean": "멈춰! 그 자에게 맞서지 마!",
+								"english": "Stop! Don't confront him!",
+								"japanese": "やめろ！彼に立ち向かうな！",
+								"chinese": "住手！别对抗他！",
+								"french": "Arrête ! Ne l'affronte pas !",
+								"spanish": "¡Detente! ¡No te enfrentes a él!",
+								"vietnamese": "Dừng lại! Đừng đối đầu với hắn!",
+								"thai": "หยุด! อย่าเผชิญหน้ากับเขา!",
+								"hindi": "रुको! उससे मत भिड़ो!"
+							},
+							"speaker": "hazel",
+							"type": "speech",
+							"emotion": "sad"
+						},
+						{
+							"type": "speech",
+							"content": {
+								"korean": "헤이즐, 감히….",
+								"english": "Hazel, how dare you...",
+								"japanese": "ヘイゼル、貴様、まさか…。",
+								"chinese": "海泽尔，你竟敢……",
+								"french": "Hazel, comment oses-tu...",
+								"spanish": "Hazel, ¿cómo te atreves...?",
+								"vietnamese": "Hazel, ngươi dám...",
+								"thai": "เฮเซล เจ้ากล้าดีอย่างไร...",
+								"hindi": "हेज़ल, तुम्हारी हिम्मत कैसे हुई..."
+							},
+							"speaker": "random_boss",
+							"emotion": "angry"
+						},
+						{
+							"direction": "down",
+							"duration_ms": 400,
+							"action": "exit",
+							"speaker": "hazel",
+							"type": "direction"
+						},
+						{
+							"emotion": "base",
+							"speaker": "random_boss",
+							"content": {
+								"korean": "이제 아무도 너희를 도울 수 없다. 이곳에서 너희는 나의 일부가 될 것이다.",
+								"english": "Now, no one can help you. Here, you will become a part of me.",
+								"japanese": "もはや誰も貴様らを助けることはできぬ。ここで貴様らは私の一部となるだろう。",
+								"chinese": "现在，没有人能帮助你们。在这里，你们将成为我的一部分。",
+								"french": "Maintenant, personne ne peut vous aider. Ici, vous deviendrez une partie de moi.",
+								"spanish": "Ahora, nadie puede ayudaros. Aquí, os convertiréis en parte de mí.",
+								"vietnamese": "Bây giờ, không ai có thể giúp các ngươi. Tại đây, các ngươi sẽ trở thành một phần của ta.",
+								"thai": "ตอนนี้ ไม่มีใครช่วยพวกเจ้าได้ ที่นี่ พวกเจ้าจะกลายเป็นส่วนหนึ่งของข้า",
+								"hindi": "अब, कोई तुम्हारी मदद नहीं कर सकता। यहाँ, तुम मेरे ही अंश बन जाओगे।"
+							},
+							"type": "speech"
+						},
+						{
+							"emotion": "angry",
+							"type": "speech",
+							"speaker": "character_any",
+							"content": {
+								"korean": "절대 포기 안 해!",
+								"english": "I'll never give up!",
+								"japanese": "絶対諦めない！",
+								"chinese": "绝不放弃！",
+								"french": "Je n'abandonnerai jamais !",
+								"spanish": "¡Nunca me rendiré!",
+								"vietnamese": "Tuyệt đối không từ bỏ!",
+								"thai": "ฉันไม่มีวันยอมแพ้!",
+								"hindi": "मैं कभी हार नहीं मानूंगा!"
+							}
+						}
+					]
+				}
+			],
+			"prologue": {
+				"korean": [
+					"어둡고 습한 숲. 모든 것이 뒤틀린 금단의 땅.",
+					"시간은 무정하게 흐르고, 탈출구는 보이지 않는다.",
+					"희미하게 빛나는 광물. 노파는 무언가를 숨기고 있다.",
+					"파멸의 예감 속, 발걸음은 숲의 심장으로 향한다.",
+					"7일의 저주. 그 끝에 기다리는 것은… 무엇인가."
+				],
+				"english": [
+					"A dark, damp forest. A forbidden land where everything is twisted.",
+					"Time flows mercilessly, and no escape is in sight.",
+					"Faintly glowing minerals. The old woman hides something.",
+					"Amidst a premonition of doom, footsteps head towards the heart of the forest.",
+					"The 7-day curse. What awaits at its end...?"
+				],
+				"japanese": [
+					"暗く湿った森。すべてが歪んだ禁断の地。",
+					"時は無情に流れ、逃げ道は見えない。",
+					"かすかに光る鉱物。老婆は何かを隠している。",
+					"破滅の予感の中、足取りは森の心臓部へ向かう。",
+					"7日間の呪い。その先に待つものは…何か。"
+				],
+				"chinese": [
+					"黑暗潮湿的森林。万物扭曲的禁忌之地。",
+					"时间无情地流逝，看不到出口。",
+					"微弱发光的矿物。老妇人隐藏着什么。",
+					"在毁灭的预感中，脚步走向森林的心脏。",
+					"七日诅咒。尽头等待的是……什么。"
+				],
+				"french": [
+					"Une forêt sombre et humide. Une terre interdite où tout est déformé.",
+					"Le temps s'écoule impitoyablement, et aucune échappatoire n'est en vue.",
+					"Des minéraux faiblement lumineux. La vieille femme cache quelque chose.",
+					"Au milieu d'une prémonition de malheur, les pas se dirigent vers le cœur de la forêt.",
+					"La malédiction de 7 jours. Qu'est-ce qui attend à sa fin... ?"
+				],
+				"spanish": [
+					"Un bosque oscuro y húmedo. Una tierra prohibida donde todo está retorcido.",
+					"El tiempo fluye sin piedad, y no se ve ninguna salida.",
+					"Minerales que brillan débilmente. La anciana esconde algo.",
+					"En medio de una premonición de fatalidad, los pasos se dirigen al corazón del bosque.",
+					"La maldición de los 7 días. ¿Qué aguarda al final...?"
+				],
+				"vietnamese": [
+					"Một khu rừng tối tăm, ẩm ướt. Một vùng đất cấm nơi mọi thứ đều méo mó.",
+					"Thời gian trôi đi vô tình, và không lối thoát nào hiện ra.",
+					"Những khoáng vật phát sáng mờ ảo. Lão bà đang giấu giếm điều gì đó.",
+					"Giữa điềm báo về sự diệt vong, những bước chân hướng về trái tim khu rừng.",
+					"Lời nguyền 7 ngày. Điều gì đang chờ đợi ở cuối con đường...?"
+				],
+				"thai": [
+					"ป่ามืดชื้นแฉะ ดินแดนต้องห้ามที่ทุกสิ่งบิดเบี้ยว",
+					"เวลายังคงเดินไปอย่างไม่ปรานี และไม่มีทางออกให้เห็น",
+					"แร่ธาตุที่เรืองแสงจางๆ หญิงชรากำลังซ่อนบางสิ่ง",
+					"ท่ามกลางลางสังหรณ์แห่งความพินาศ ก้าวเท้ามุ่งสู่ใจกลางป่า",
+					"คำสาป 7 วัน สิ่งที่รอคอยอยู่ ณ จุดสิ้นสุดคือ…อะไรกัน"
+				],
+				"hindi": [
+					"एक अँधेरा, नम जंगल। एक वर्जित भूमि जहाँ सब कुछ विकृत है।",
+					"समय निर्दयता से बहता है, और कोई निकास दिखाई नहीं देता।",
+					"हल्की चमकती धातुएँ। बुढ़िया कुछ छिपा रही है।",
+					"विनाश की आशंका के बीच, कदम जंगल के हृदय की ओर बढ़ते हैं।",
+					"7 दिन का अभिशाप। उसके अंत में क्या इंतज़ार है...?"
+				]
+			}
+		},
+		{
+			"scenario_id": "forest_ciphra_31_05",
+			"order": 5,
+			"act": "climax_finale",
+			"theme": "forest",
+			"actors": {
+				"ela": {
+					"id": "mon_24765cb2-6fc0-452e-8969-871a82349c70",
+					"name": {
+						"korean": "엘라",
+						"english": "Ela",
+						"japanese": "エラ",
+						"chinese": "艾拉",
+						"french": "Ela",
+						"spanish": "Ela",
+						"vietnamese": "Ela",
+						"thai": "เอล่า",
+						"hindi": "एला"
+					},
+					"description": "",
+					"face_image_url": "https://imagedelivery.net/WTEqQNGFb-l-IHS6IGnzUQ/55d3e9ee-c589-40ab-dfa4-a658bbddd400/public",
+					"battle_sprite_url": "https://imagedelivery.net/WTEqQNGFb-l-IHS6IGnzUQ/cfacc842-115e-4175-a7fa-3111a468ed00/public"
+				}
+			},
+			"boss": {
+				"pool_id": "pool_199"
+			},
+			"epilogue": {
+				"korean": [
+					"시프라의 몰락에도 불구하고 숲의 광기는 쉬이 가라앉지 않았다.",
+					"엘라는 망연자실했다. 자신이 희망이라 믿었던 모든 것이 파멸의 도구였음을 깨달았다.",
+					"과연 이것이 구원이었을까, 아니면 더 깊은 절망의 시작이었을까.",
+					"어둠 속에서 새로운 그림자가 숲의 심장을 응시하고 있었다."
+				],
+				"english": [
+					"Despite Cyphra's fall, the forest's madness did not easily subside.",
+					"Ella was devastated. She realized everything she believed to be hope was merely a tool for ruin.",
+					"Was this truly salvation, or merely the beginning of deeper despair?",
+					"In the darkness, a new shadow gazed upon the Heart of the Forest."
+				],
+				"japanese": [
+					"シフラの没落にもかかわらず、森の狂気は容易には収まらなかった。",
+					"エラは茫然自失した。自分が希望と信じていた全てが、破滅の道具であったと悟った。",
+					"果たしてこれが救いであったのか、それともより深い絶望の始まりであったのか。",
+					"闇の中、新たな影が森の心臓を見つめていた。"
+				],
+				"chinese": [
+					"尽管西芙拉陨落，森林的疯狂并未轻易平息。",
+					"艾拉心灰意冷。她意识到自己曾信奉的所有希望，都只是毁灭的工具。",
+					"这究竟是救赎，还是更深绝望的开端？",
+					"黑暗中，一道新的身影凝视着森林之心。"
+				],
+				"french": [
+					"Malgré la chute de Cyphra, la folie de la forêt ne s'apaisa pas facilement.",
+					"Ella était dévastée. Elle réalisa que tout ce qu'elle croyait être l'espoir n'était qu'un instrument de ruine.",
+					"Était-ce vraiment le salut, ou le début d'un désespoir plus profond ?",
+					"Dans l'obscurité, une nouvelle ombre fixait le Cœur de la Forêt."
+				],
+				"spanish": [
+					"A pesar de la caída de Cyphra, la locura del bosque no se calmó fácilmente.",
+					"Ella estaba devastada. Se dio cuenta de que todo lo que creía que era esperanza era solo una herramienta para la ruina.",
+					"¿Fue esto realmente la salvación, o el comienzo de una desesperación más profunda?",
+					"En la oscuridad, una nueva sombra contemplaba el Corazón del Bosque."
+				],
+				"vietnamese": [
+					"Dù Cyphra sụp đổ, sự điên loạn của rừng vẫn không dễ dàng lắng xuống.",
+					"Ella bàng hoàng. Cô nhận ra tất cả những gì cô tin là hy vọng đều chỉ là công cụ hủy diệt.",
+					"Liệu đây có phải là sự cứu rỗi, hay chỉ là khởi đầu của một tuyệt vọng sâu sắc hơn?",
+					"Trong bóng tối, một bóng hình mới đang nhìn chằm chằm vào Trái tim Rừng sâu."
+				],
+				"thai": [
+					"แม้การล่มสลายของไซฟรา ความบ้าคลั่งของป่าก็ยังไม่จางหายไปง่ายๆ",
+					"เอลล่าหมดอาลัยตายอยาก เธอตระหนักว่าทุกสิ่งที่เธอเชื่อว่าเป็นความหวัง ล้วนเป็นเพียงเครื่องมือแห่งความพินาศ",
+					"นี่คือความรอดจริงหรือ หรือเป็นเพียงจุดเริ่มต้นของความสิ้นหวังที่ลึกซึ้งกว่ากันแน่",
+					"ในความมืดมิด เงาใหม่กำลังจ้องมองหัวใจแห่งป่า"
+				],
+				"hindi": [
+					"सिफ्रा के पतन के बावजूद, जंगल का पागलपन आसानी से शांत नहीं हुआ।",
+					"एला हताश थी। उसे एहसास हुआ कि जो कुछ भी उसने आशा समझा था, वह विनाश का एक साधन मात्र था।",
+					"क्या यह वास्तव में मोक्ष था, या गहरी निराशा की शुरुआत थी?",
+					"अँधेरे में, एक नई परछाई जंगल के हृदय को घूर रही थी।"
+				]
+			},
+			"rooms": [
+				{
+					"id": 1,
+					"dialogue": [
+						{
+							"content": {
+								"korean": "기이하게 뒤틀린 나무들이 숲의 가장 깊은 곳을 가로막고 있었다. 이곳이 숲의 심장이다.",
+								"english": "Strangely twisted trees blocked the deepest part of the forest. This is the Heart of the Forest.",
+								"japanese": "奇妙にねじれた木々が森の最も深い場所を遮っていた。ここが森の心臓だ。",
+								"chinese": "奇异扭曲的树木阻挡着森林最深处。这里就是森林之心。",
+								"french": "Des arbres étrangement tordus bloquaient la partie la plus profonde de la forêt. C'est le Cœur de la Forêt.",
+								"spanish": "Árboles extrañamente retorcidos bloqueaban la parte más profunda del bosque. Este es el Corazón del Bosque.",
+								"vietnamese": "Những cái cây vặn vẹo kỳ lạ chắn ngang nơi sâu thẳm nhất của rừng. Đây chính là Trái tim Rừng sâu.",
+								"thai": "ต้นไม้ที่บิดเบี้ยวแปลกประหลาดขวางกั้นส่วนที่ลึกที่สุดของป่าไว้ ที่นี่คือหัวใจแห่งพงไพร",
+								"hindi": "अजीबोगरीब मुड़े हुए पेड़ जंगल के सबसे गहरे हिस्से को रोके हुए थे। यही जंगल का हृदय है।"
+							},
+							"speaker": "narrator",
+							"type": "speech",
+							"emotion": "base"
+						},
+						{
+							"type": "speech",
+							"speaker": "character_any",
+							"content": {
+								"korean": "드디어… 도착했어.",
+								"english": "Finally... we've arrived.",
+								"japanese": "ついに…着いた。",
+								"chinese": "终于……到了。",
+								"french": "Enfin... nous sommes arrivés.",
+								"spanish": "Por fin... hemos llegado.",
+								"vietnamese": "Cuối cùng... cũng đã đến.",
+								"thai": "ในที่สุด... ก็มาถึงแล้ว",
+								"hindi": "आखिरकार... हम पहुँच गए।"
+							},
+							"emotion": "base"
+						},
+						{
+							"spot": [
+								4,
+								3
+							],
+							"speaker": "ela",
+							"action": "enter",
+							"duration_ms": 500,
+							"type": "direction"
+						},
+						{
+							"emotion": "base",
+							"type": "speech",
+							"speaker": "ela",
+							"content": {
+								"korean": "여기까지 오느라 고생 많았어요. 이제 정말… 끝이에요.",
+								"english": "You've come so far. This is truly... the end.",
+								"japanese": "よくぞここまで。いよいよ…終わりです。",
+								"chinese": "你们辛苦了。现在真的…结束了。",
+								"french": "Vous avez fait un long chemin. C'est vraiment... la fin.",
+								"spanish": "Han llegado muy lejos. Esto es realmente... el final.",
+								"vietnamese": "Các bạn đã cố gắng rất nhiều. Giờ thì... kết thúc rồi.",
+								"thai": "คุณมาไกลมากแล้ว นี่คือ...จุดสิ้นสุดจริงๆ",
+								"hindi": "आप बहुत दूर आ गए हैं। अब सचमुच… अंत है।"
+							}
+						},
+						{
+							"type": "speech",
+							"speaker": "ela",
+							"content": {
+								"korean": "모든 저주를 풀 수 있는 곳. 희망이 우리를 기다려요.",
+								"english": "A place where all curses can be broken. Hope awaits us.",
+								"japanese": "全ての呪いを解ける場所。希望が私たちを待っています。",
+								"chinese": "能解除所有诅咒的地方。希望在等着我们。",
+								"french": "Un lieu où toutes les malédictions peuvent être brisées. L'espoir nous attend.",
+								"spanish": "Un lugar donde todas las maldiciones pueden romperse. La esperanza nos espera.",
+								"vietnamese": "Nơi mọi lời nguyền có thể được hóa giải. Hy vọng đang chờ đợi chúng ta.",
+								"thai": "สถานที่ที่คำสาปทั้งหมดสามารถถูกทำลายได้ ความหวังรอเราอยู่",
+								"hindi": "एक ऐसी जगह जहाँ सभी शाप तोड़े जा सकते हैं। आशा हमारा इंतजार कर रही है।"
+							},
+							"emotion": "happy"
+						}
+					]
+				},
+				{
+					"dialogue": [
+						{
+							"action": "enter",
+							"speaker": "ela",
+							"duration_ms": 500,
+							"type": "direction",
+							"spot": [
+								3,
+								2
+							]
+						},
+						{
+							"speaker": "ela",
+							"content": {
+								"korean": "안개가 더 짙어졌어요. 이 안에서 길을 잃지 않도록 조심하세요.",
+								"english": "The fog has grown thicker. Be careful not to get lost in it.",
+								"japanese": "霧がさらに濃くなった。この中で道に迷わないよう気をつけろ。",
+								"chinese": "雾更浓了。小心别在这里迷路。",
+								"french": "Le brouillard s'est épaissi. Faites attention à ne pas vous perdre.",
+								"spanish": "La niebla se ha vuelto más densa. Tengan cuidado de no perderse en ella.",
+								"vietnamese": "Sương mù đã dày đặc hơn. Cẩn thận đừng để lạc lối trong đó.",
+								"thai": "หมอกหนาขึ้น ระวังอย่าหลงทางในนี้",
+								"hindi": "कोहरा और घना हो गया है। इसमें खोने से बचने के लिए सावधान रहें।"
+							},
+							"type": "speech",
+							"emotion": "base"
+						},
+						{
+							"emotion": "base",
+							"type": "speech",
+							"content": {
+								"korean": "무언가 이상해. 숲이… 우는 것 같아.",
+								"english": "Something's wrong. The forest... it sounds like it's crying.",
+								"japanese": "何かおかしい。森が…泣いているようだ。",
+								"chinese": "有些不对劲。森林…好像在哭泣。",
+								"french": "Il y a quelque chose d'étrange. La forêt... elle semble pleurer.",
+								"spanish": "Algo anda mal. El bosque... parece estar llorando.",
+								"vietnamese": "Có điều gì đó không ổn. Rừng... hình như đang khóc.",
+								"thai": "มีบางอย่างผิดปกติ ป่า... เหมือนกำลังร้องไห้",
+								"hindi": "कुछ तो गड़बड़ है। जंगल… ऐसा लगता है जैसे रो रहा है।"
+							},
+							"speaker": "character_any"
+						},
+						{
+							"emotion": "sad",
+							"speaker": "ela",
+							"content": {
+								"korean": "…아닐 거예요. 저주에 걸린 자들의 환청일 뿐. 희망을 잃지 마세요.",
+								"english": "...No, it's not. It's just an illusion of the cursed. Don't lose hope.",
+								"japanese": "…違う。呪われた者の幻聴に過ぎない。希望を捨てるな。",
+								"chinese": "…不是的。这只是被诅咒者的幻听。不要失去希望。",
+								"french": "…Non, ce n'est pas ça. Ce n'est qu'une illusion des maudits. Ne perdez pas espoir.",
+								"spanish": "…No, no lo es. Es solo una alucinación de los malditos. No pierdan la esperanza.",
+								"vietnamese": "...Không phải đâu. Chỉ là ảo giác của những kẻ bị nguyền rủa thôi. Đừng đánh mất hy vọng.",
+								"thai": "...ไม่หรอก มันเป็นแค่ภาพลวงตาของผู้ถูกสาป อย่าสิ้นหวัง",
+								"hindi": "…नहीं, ऐसा नहीं है। यह सिर्फ शापितों का भ्रम है। आशा मत छोड़ो।"
+							},
+							"type": "speech"
+						}
+					],
+					"id": 3
+				},
+				{
+					"id": 5,
+					"dialogue": [
+						{
+							"spot": [
+								2,
+								3
+							],
+							"duration_ms": 500,
+							"action": "enter",
+							"speaker": "ela",
+							"type": "direction"
+						},
+						{
+							"content": {
+								"korean": "엘라, 당신… 뭔가 숨기는 것 같은데.",
+								"english": "Ella, you... seem to be hiding something.",
+								"japanese": "エラ、お前…何か隠してるだろ。",
+								"chinese": "艾拉，你…好像在隐瞒什么。",
+								"french": "Ella, tu... sembles cacher quelque chose.",
+								"spanish": "Ella, tú... parece que escondes algo.",
+								"vietnamese": "Ella, bạn... có vẻ đang giấu giếm điều gì đó.",
+								"thai": "เอลล่า, เธอ... ดูเหมือนจะซ่อนอะไรบางอย่าง",
+								"hindi": "एला, तुम… कुछ छिपा रही हो, ऐसा लगता है।"
+							},
+							"speaker": "character_any",
+							"type": "speech",
+							"emotion": "base"
+						},
+						{
+							"emotion": "sad",
+							"content": {
+								"korean": "아니에요! 전… 그저 여러분을 돕고 싶을 뿐…",
+								"english": "No! I just... want to help you all...",
+								"japanese": "違う！私は…ただ皆を助けたいだけ…",
+								"chinese": "不是的！我…只是想帮助大家…",
+								"french": "Non ! Je veux juste... vous aider tous...",
+								"spanish": "¡No! Yo solo... quiero ayudarlos a todos...",
+								"vietnamese": "Không phải! Tôi chỉ... muốn giúp đỡ mọi người thôi...",
+								"thai": "ไม่ใช่! ฉันแค่... อยากช่วยพวกคุณทุกคน...",
+								"hindi": "नहीं! मैं बस… तुम सबकी मदद करना चाहती हूँ…"
+							},
+							"speaker": "ela",
+							"type": "speech"
+						},
+						{
+							"emotion": "angry",
+							"type": "speech",
+							"content": {
+								"korean": "이 숲이 미쳐가고 있어. 당신이 말한 구원은 대체 어디 있어?",
+								"english": "This forest is going mad. Where is the salvation you spoke of?",
+								"japanese": "この森は狂っていく。お前が言った救いはどこにあるんだ？",
+								"chinese": "这片森林正在发疯。你说的救赎到底在哪里？",
+								"french": "Cette forêt devient folle. Où est le salut dont tu parlais ?",
+								"spanish": "Este bosque se está volviendo loco. ¿Dónde está la salvación de la que hablaste?",
+								"vietnamese": "Rừng này đang phát điên. Cứu rỗi mà bạn nói rốt cuộc ở đâu?",
+								"thai": "ป่านี้กำลังบ้าคลั่ง ความรอดที่คุณพูดถึงอยู่ที่ไหนกันแน่?",
+								"hindi": "यह जंगल पागल होता जा रहा है। तुमने जिस मोक्ष की बात की थी, वह कहाँ है?"
+							},
+							"speaker": "character_any"
+						},
+						{
+							"speaker": "ela",
+							"content": {
+								"korean": "…조금만 더 버티세요. 분명, 분명히…",
+								"english": "...Just hold on a little longer. Surely, surely...",
+								"japanese": "…もう少しだけ耐えて。きっと、きっと…",
+								"chinese": "…再坚持一下。一定，一定会…",
+								"french": "…Tenez bon encore un peu. Sûrement, sûrement…",
+								"spanish": "…Solo aguanten un poco más. Seguramente, seguramente…",
+								"vietnamese": "...Hãy cố gắng thêm chút nữa. Chắc chắn, chắc chắn...",
+								"thai": "...อดทนอีกนิดนะ แน่นอน, แน่นอน...",
+								"hindi": "…बस थोड़ी देर और टिके रहो। निश्चित रूप से, निश्चित रूप से…"
+							},
+							"type": "speech",
+							"emotion": "sad"
+						}
+					]
+				},
+				{
+					"dialogue": [
+						{
+							"action": "enter",
+							"speaker": "ela",
+							"duration_ms": 500,
+							"type": "direction",
+							"spot": [
+								4,
+								2
+							]
+						},
+						{
+							"emotion": "sad",
+							"content": {
+								"korean": "안돼! 여기는… 너무 위험해요. 돌아가야 해요!",
+								"english": "No! This place is... too dangerous. We have to go back!",
+								"japanese": "ダメだ！ここは…危険すぎる。戻らなきゃ！",
+								"chinese": "不行！这里…太危险了。我们必须回去！",
+								"french": "Non ! Cet endroit est... trop dangereux. Nous devons faire demi-tour !",
+								"spanish": "¡No! Este lugar es... demasiado peligroso. ¡Tenemos que regresar!",
+								"vietnamese": "Không! Nơi này... quá nguy hiểm. Chúng ta phải quay lại!",
+								"thai": "ไม่นะ! ที่นี่... อันตรายเกินไป เราต้องกลับไป!",
+								"hindi": "नहीं! यह जगह… बहुत खतरनाक है। हमें वापस जाना होगा!"
+							},
+							"speaker": "ela",
+							"type": "speech"
+						},
+						{
+							"emotion": "angry",
+							"type": "speech",
+							"speaker": "character_any",
+							"content": {
+								"korean": "이제 와서 무슨 소리야. 여기까지 왔잖아!",
+								"english": "What are you talking about now? We've come all this way!",
+								"japanese": "今更何を言ってるの。ここまで来たじゃない！",
+								"chinese": "现在说什么呢？我们都走到这里了！",
+								"french": "Qu'est-ce que tu racontes maintenant ? On est arrivés jusqu'ici !",
+								"spanish": "¿Qué dices ahora? ¡Hemos llegado hasta aquí!",
+								"vietnamese": "Bây giờ còn nói gì nữa. Chúng ta đã đến tận đây rồi!",
+								"thai": "ตอนนี้พูดอะไรน่ะ พวกเรามาถึงนี่แล้วนะ!",
+								"hindi": "अब क्या कह रहे हो? हम इतनी दूर आ गए हैं!"
+							}
+						},
+						{
+							"emotion": "sad",
+							"content": {
+								"korean": "제가… 제가 잘못했어요. 그 약초상이… 절 속였어요…",
+								"english": "I... I made a mistake. That herbalist... deceived me...",
+								"japanese": "私が… 私が悪かったです。あの薬草商が… 私を騙しました…",
+								"chinese": "我… 我错了。那个药草商人… 欺骗了我…",
+								"french": "J'ai... j'ai fait une erreur. Cet herboriste... m'a trompé...",
+								"spanish": "Yo... yo me equivoqué. Ese herbolario... me engañó...",
+								"vietnamese": "Tôi… tôi đã sai rồi. Kẻ bán thảo dược đó… đã lừa dối tôi…",
+								"thai": "ฉัน... ฉันทำผิดไปแล้ว พ่อค้าสมุนไพรนั่น... หลอกฉัน...",
+								"hindi": "मैंने... मैंने गलती कर दी। उस जड़ी-बूटी वाले ने... मुझे धोखा दिया..."
+							},
+							"speaker": "ela",
+							"type": "speech"
+						},
+						{
+							"speaker": "character_any",
+							"content": {
+								"korean": "무슨 말이야?",
+								"english": "What do you mean?",
+								"japanese": "どういうこと？",
+								"chinese": "什么意思？",
+								"french": "Qu'est-ce que tu veux dire ?",
+								"spanish": "¿Qué quieres decir?",
+								"vietnamese": "Ý anh là gì?",
+								"thai": "หมายความว่าไง?",
+								"hindi": "तुम्हारा क्या मतलब है?"
+							},
+							"type": "speech",
+							"emotion": "base"
+						},
+						{
+							"type": "speech",
+							"content": {
+								"korean": "…시간이 없어요. 도망쳐요…!",
+								"english": "...There's no time. Run...!",
+								"japanese": "…時間がない。逃げて…！",
+								"chinese": "…没时间了。快跑…！",
+								"french": "...Plus le temps. Fuyez... !",
+								"spanish": "...No hay tiempo. ¡Huye...!",
+								"vietnamese": "…Không còn thời gian. Chạy đi…!",
+								"thai": "...ไม่มีเวลาแล้ว หนีไปเถอะ!",
+								"hindi": "...समय नहीं है। भागो...!"
+							},
+							"speaker": "ela",
+							"emotion": "sad"
+						}
+					],
+					"id": 9
+				},
+				{
+					"lose_dialogue": [
+						{
+							"speaker": "boss",
+							"content": {
+								"korean": "하찮은 벌레들… 내 복수는 아무도 막을 수 없다!",
+								"english": "Insignificant insects… No one can stop my revenge!",
+								"japanese": "ちっぽけな虫けらめ…私の復讐は誰にも止められない！",
+								"chinese": "卑微的虫子们…我的复仇无人能阻挡！",
+								"french": "Insectes insignifiants… Personne ne peut arrêter ma vengeance !",
+								"spanish": "¡Insectos insignificantes… Nadie puede detener mi venganza!",
+								"vietnamese": "Những con côn trùng nhỏ bé… Không ai có thể ngăn cản sự trả thù của ta!",
+								"thai": "พวกแมลงชั้นต่ำ… ไม่มีใครหยุดยั้งการแก้แค้นของข้าได้!",
+								"hindi": "तुच्छ कीड़े… मेरा बदला कोई नहीं रोक सकता!"
+							},
+							"type": "speech",
+							"emotion": "angry"
+						},
+						{
+							"content": {
+								"korean": "아직… 끝나지 않았어. 절대로 포기하지 않아!",
+								"english": "It's not over yet… I will never give up!",
+								"japanese": "まだ…終わってない。決して諦めない！",
+								"chinese": "还没…结束。我绝不放弃！",
+								"french": "Ce n'est pas encore fini… Je n'abandonnerai jamais !",
+								"spanish": "Aún no ha terminado… ¡Nunca me rendiré!",
+								"vietnamese": "Chưa… kết thúc đâu. Ta sẽ không bao giờ từ bỏ!",
+								"thai": "ยัง… ไม่จบ! ข้าไม่มีวันยอมแพ้!",
+								"hindi": "अभी… खत्म नहीं हुआ है। मैं कभी हार नहीं मानूंगा!"
+							},
+							"speaker": "character_any",
+							"type": "speech",
+							"emotion": "angry"
+						},
+						{
+							"speaker": "boss",
+							"content": {
+								"korean": "다시 와라. 그때도 내 먹이가 될 뿐이다.",
+								"english": "Come again. You'll still be my prey.",
+								"japanese": "また来い。次も私の獲物となるだけだ。",
+								"chinese": "再来啊。届时你依旧是我的猎物。",
+								"french": "Reviens. Tu ne seras encore que ma proie.",
+								"spanish": "Vuelve. Seguirás siendo mi presa.",
+								"vietnamese": "Cứ đến nữa đi. Ngươi vẫn sẽ là con mồi của ta.",
+								"thai": "กลับมาอีกสิ ตอนนั้นแกก็เป็นแค่เหยื่อของฉัน.",
+								"hindi": "फिर आना। तब भी तुम बस मेरा शिकार बनोगे।"
+							},
+							"type": "speech",
+							"emotion": "base"
+						}
+					],
+					"id": 15,
+					"dialogue": [
+						{
+							"emotion": "base",
+							"speaker": "narrator",
+							"content": {
+								"korean": "숲의 심장부는 광기와 파멸로 뒤틀려 있었다. 그 중심에는 그림자 같은 존재가 서 있었다.",
+								"english": "The heart of the forest was twisted with madness and ruin. At its center stood a shadowy figure.",
+								"japanese": "森の心臓部は狂気と破滅に歪んでいた。その中心には影のような存在が立っていた。",
+								"chinese": "森林之心被疯狂与毁灭扭曲。在其中心，一个 shadowy 的存在屹立着。",
+								"french": "Le cœur de la forêt était tordu par la folie et la ruine. En son centre se tenait une entité sombre.",
+								"spanish": "El corazón del bosque estaba retorcido por la locura y la ruina. En su centro se alzaba una figura sombría.",
+								"vietnamese": "Trái tim của khu rừng bị vặn vẹo bởi sự điên loạn và hủy diệt. Tại trung tâm của nó, một thực thể bóng tối đang đứng.",
+								"thai": "ใจกลางป่าบิดเบี้ยวไปด้วยความคลุ้มคลั่งและหายนะ ณ ใจกลางนั้นมีเงาร่างหนึ่งยืนอยู่",
+								"hindi": "जंगल का हृदय पागलपन और विनाश से विकृत था। उसके केंद्र में एक छायादार आकृति खड़ी थी।"
+							},
+							"type": "speech"
+						},
+						{
+							"emotion": "base",
+							"type": "speech",
+							"speaker": "boss",
+							"content": {
+								"korean": "어리석은 것들. 마침내 내 손바닥 안으로 걸어 들어왔군.",
+								"english": "Fools. You've finally walked into the palm of my hand.",
+								"japanese": "愚か者ども。ついに私の手のひらの上へ歩いて来たな。",
+								"chinese": "愚蠢的家伙们。你们终于走进了我的掌心。",
+								"french": "Imbéciles. Vous êtes enfin tombés dans le creux de ma main.",
+								"spanish": "Necios. Finalmente habéis caído en la palma de mi mano.",
+								"vietnamese": "Bọn ngu ngốc. Cuối cùng các ngươi cũng đã bước vào lòng bàn tay ta.",
+								"thai": "พวกโง่เอ๊ย ในที่สุดพวกแกก็เดินเข้ามาในอุ้งมือของข้าแล้วสินะ",
+								"hindi": "मूर्खों। आखिर तुम मेरी मुट्ठी में आ ही गए।"
+							}
+						},
+						{
+							"type": "direction",
+							"action": "focus",
+							"duration_ms": 500,
+							"speaker": "ela"
+						},
+						{
+							"type": "speech",
+							"content": {
+								"korean": "엘라! 당신이 왜 저기…!",
+								"english": "Ella! Why are you there...!",
+								"japanese": "エラ！あなたがどうしてそこに…！",
+								"chinese": "艾拉！你为什么在那里…！",
+								"french": "Ella ! Pourquoi es-tu là… !",
+								"spanish": "¡Ella! ¿Por qué estás ahí...?",
+								"vietnamese": "Ella! Sao cô lại ở đó…!",
+								"thai": "เอลล่า! ทำไมคุณถึงไปอยู่ที่นั่น...!",
+								"hindi": "ऐला! तुम वहां क्यों...!"
+							},
+							"speaker": "character_any",
+							"emotion": "sad"
+						},
+						{
+							"type": "speech",
+							"content": {
+								"korean": "후후… 이 어리석은 안내인은 너희에게 '희망'을 속삭이도록 내가 보낸 미끼였지.",
+								"english": "Heh heh... This foolish guide was merely a decoy I sent to whisper 'hope' to you.",
+								"japanese": "ふふ… この愚かな案内人は、お前たちに「希望」を囁かせるために私が送った餌だったのさ。",
+								"chinese": "呵呵… 这个愚蠢的向导不过是我派去给你们低语“希望”的诱饵罢了。",
+								"french": "Heh heh... Ce guide insensé n'était qu'un leurre que j'ai envoyé pour vous murmurer de l'« espoir ».",
+								"spanish": "Je je... Este guía tonto fue solo un señuelo que envié para susurraros \"esperanza\".",
+								"vietnamese": "Hừm hừm… Kẻ dẫn đường ngu ngốc này chỉ là một mồi nhử ta đã phái đi để thì thầm \"hy vọng\" vào tai các ngươi.",
+								"thai": "ฮึๆ... ไอ้ผู้นำทางโง่เง่านี่เป็นแค่เหยื่อล่อที่ข้าส่งไปเพื่อกระซิบ \"ความหวัง\" ให้พวกแกเท่านั้นแหละ",
+								"hindi": "ही ही... यह मूर्ख मार्गदर्शक सिर्फ एक जाल था जिसे मैंने तुम्हें 'आशा' फुसलाने के लिए भेजा था।"
+							},
+							"speaker": "boss",
+							"emotion": "happy"
+						},
+						{
+							"content": {
+								"korean": "시프라… 거짓말! 당신은 날 구원해 준다고…!",
+								"english": "Siphra... Lies! You said you'd save me...!",
+								"japanese": "シフラ… 嘘だ！あなたは私を救ってくれると…！",
+								"chinese": "西芙拉… 谎言！你说你会拯救我的…！",
+								"french": "Siphra... Mensonges ! Tu as dit que tu me sauverais... !",
+								"spanish": "¡Siphra... Mentiras! ¡Dijiste que me salvarías...!",
+								"vietnamese": "Siphra… Dối trá! Ngươi nói ngươi sẽ cứu ta cơ mà…!",
+								"thai": "ซิฟรา... โกหก! คุณบอกว่าจะช่วยฉัน...!",
+								"hindi": "सिफरा... झूठ! तुमने कहा था कि तुम मुझे बचाओगी...!"
+							},
+							"speaker": "ela",
+							"type": "speech",
+							"emotion": "angry"
+						},
+						{
+							"type": "speech",
+							"speaker": "boss",
+							"content": {
+								"korean": "구원? 네놈들의 '도움' 덕분에 내 복수가 완성될 뿐. 가면은 이제 필요 없겠군.",
+								"english": "Salvation? Thanks to your 'help', my revenge will merely be complete. No need for this mask anymore.",
+								"japanese": "救済？お前たちの「助け」のおかげで、私の復讐が完成するだけだ。仮面はもう必要ないな。",
+								"chinese": "救赎？多亏了你们的“帮助”，我的复仇才得以完成。面具现在不需要了。",
+								"french": "Salut ? Grâce à votre « aide », ma vengeance sera simplement accomplie. Ce masque n'est plus nécessaire.",
+								"spanish": "¿Salvación? Gracias a vuestra \"ayuda\", mi venganza simplemente se completará. Ya no necesito esta máscara.",
+								"vietnamese": "Cứu rỗi ư? Nhờ vào \"sự giúp đỡ\" của các ngươi mà sự báo thù của ta mới được hoàn thành. Không cần chiếc mặt nạ này nữa.",
+								"thai": "การไถ่บาปเหรอ? ด้วย \"ความช่วยเหลือ\" ของพวกแก การแก้แค้นของข้าก็จะสมบูรณ์เท่านั้น ไม่จำเป็นต้องใช้หน้ากากนี้อีกต่อไปแล้ว",
+								"hindi": "मुक्ति? तुम्हारी 'मदद' की बदौलत मेरा बदला बस पूरा हो जाएगा। इस मुखौटे की अब कोई ज़रूरत नहीं।"
+							},
+							"emotion": "base"
+						},
+						{
+							"type": "direction",
+							"speaker": "boss",
+							"action": "shake",
+							"duration_ms": 800
+						},
+						{
+							"type": "speech",
+							"speaker": "narrator",
+							"content": {
+								"korean": "가면이 벗겨지자 숲 전체가 어두운 그림자와 발광하는 덩굴로 뒤틀렸다. 피할 수 없는 함정이었다.",
+								"english": "As the mask fell, the entire forest twisted with dark shadows and glowing vines. It was an unavoidable trap.",
+								"japanese": "仮面が剥がれると、森全体が暗い影と発光する蔓でねじれた。それは避けられない罠だった。",
+								"chinese": "面具脱落后，整片森林被黑暗的阴影和发光的藤蔓扭曲。这是一个无法避免的陷阱。",
+								"french": "Dès que le masque tomba, la forêt entière se tordit d'ombres sombres et de vignes lumineuses. C'était un piège inévitable.",
+								"spanish": "Al caerse la máscara, todo el bosque se retorció con sombras oscuras y enredaderas luminosas. Era una trampa inevitable.",
+								"vietnamese": "Khi mặt nạ rơi xuống, cả khu rừng biến dạng với bóng tối và dây leo phát sáng. Đó là một cái bẫy không thể tránh khỏi.",
+								"thai": "เมื่อหน้ากากหลุดออก ป่าทั้งป่าก็บิดเบี้ยวไปด้วยเงาอันมืดมิดและเถาวัลย์เรืองแสง มันเป็นกับดักที่หลีกเลี่ยงไม่ได้",
+								"hindi": "जैसे ही नकाब हटा, पूरा जंगल काली परछाइयों और चमकती लताओं से मुड़ गया। यह एक अटल जाल था。"
+							},
+							"emotion": "base"
+						},
+						{
+							"emotion": "angry",
+							"type": "speech",
+							"speaker": "character_any",
+							"content": {
+								"korean": "젠장… 속았어!",
+								"english": "Damn it... I've been tricked!",
+								"japanese": "くそっ…騙された！",
+								"chinese": "该死…我被骗了！",
+								"french": "Maudits… Je me suis fait avoir !",
+								"spanish": "¡Maldita sea… Fui engañado!",
+								"vietnamese": "Chết tiệt… Bị lừa rồi!",
+								"thai": "บ้าเอ๊ย… โดนหลอกแล้ว!",
+								"hindi": "धत्… मैं ठगा गया!"
+							}
+						},
+						{
+							"emotion": "angry",
+							"speaker": "boss",
+							"content": {
+								"korean": "이제 쓸모는 다했으니, 사라져라!",
+								"english": "You're useless now, vanish!",
+								"japanese": "もう用済みだ、消え失せろ！",
+								"chinese": "你已经没用了，消失吧！",
+								"french": "Tu es inutile maintenant, disparais !",
+								"spanish": "Ya no sirves, ¡desaparece!",
+								"vietnamese": "Ngươi hết giá trị rồi, biến đi!",
+								"thai": "หมดประโยชน์แล้ว, หายไปซะ!",
+								"hindi": "अब तुम्हारा कोई काम नहीं, गायब हो जाओ!"
+							},
+							"type": "speech"
+						}
+					],
+					"win_dialogue": [
+						{
+							"type": "speech",
+							"speaker": "boss",
+							"content": {
+								"korean": "크으윽… 겨우 나를 쓰러뜨렸다고? 어리석은…",
+								"english": "Ugh… You merely defeated me? Foolish…",
+								"japanese": "ぐうっ…たかが私を倒しただけだと？愚かな…",
+								"chinese": "唔…你只不过是打败了我？愚蠢…",
+								"french": "Ugh… Vous m'avez seulement vaincu ? Stupide…",
+								"spanish": "Ugh… ¿Solo me derrotaste? Qué ingenuo…",
+								"vietnamese": "Ư… Ngươi chỉ vừa đánh bại ta thôi sao? Ngốc nghếch…",
+								"thai": "อึ่ก… แค่โค่นข้าได้รึ? โง่เขลา…",
+								"hindi": "उफ़… तुमने बस मुझे हराया है? मूर्ख…"
+							},
+							"emotion": "angry"
+						},
+						{
+							"emotion": "sad",
+							"content": {
+								"korean": "내가 숲의 진정한 파멸을 막고 있었을 뿐… 진짜 공포는 이제부터 시작될 거야…",
+								"english": "I was merely preventing the true destruction of the forest… The real horror begins now…",
+								"japanese": "私はただ森の真の破滅を防いでいただけ…本当の恐怖はこれから始まる…",
+								"chinese": "我只是在阻止森林真正的毁灭…真正的恐怖现在才开始…",
+								"french": "Je ne faisais que prévenir la véritable destruction de la forêt… La vraie horreur commence maintenant…",
+								"spanish": "Solo estaba evitando la verdadera destrucción del bosque… El verdadero horror comienza ahora…",
+								"vietnamese": "Ta chỉ đang ngăn chặn sự hủy diệt thật sự của khu rừng… Nỗi kinh hoàng thật sự sẽ bắt đầu từ bây giờ…",
+								"thai": "ข้าแค่กำลังยับยั้งการทำลายล้างที่แท้จริงของป่า… ความสยองขวัญที่แท้จริงจะเริ่มขึ้นเดี๋ยวนี้…",
+								"hindi": "मैं तो बस जंगल के असली विनाश को रोक रहा था… असली डर अब शुरू होगा…"
+							},
+							"speaker": "boss",
+							"type": "speech"
+						},
+						{
+							"spot": [
+								3,
+								4
+							],
+							"type": "direction",
+							"duration_ms": 500,
+							"action": "enter",
+							"speaker": "ela"
+						},
+						{
+							"type": "speech",
+							"speaker": "ela",
+							"content": {
+								"korean": "시프라…! 당신의 복수는… 결국 숲을 파괴할 뿐이었어…",
+								"english": "Xifra…! Your revenge… merely ended up destroying the forest…",
+								"japanese": "シフラ…！あなたの復讐は…結局森を破壊しただけだった…",
+								"chinese": "西弗拉…！你的复仇…最终只会摧毁森林…",
+								"french": "Xifra…! Votre vengeance… n'a fait que détruire la forêt au final…",
+								"spanish": "¡Xifra…! Tu venganza… solo terminó destruyendo el bosque…",
+								"vietnamese": "Xifra…! Sự trả thù của ngươi… rốt cuộc chỉ hủy diệt khu rừng mà thôi…",
+								"thai": "ซีฟรา…! การแก้แค้นของเจ้า… สุดท้ายก็แค่ทำลายป่า…",
+								"hindi": "ज़िफ्रा…! तुम्हारा बदला… आखिरकार जंगल को ही नष्ट कर गया…"
+							},
+							"emotion": "sad"
+						},
+						{
+							"type": "speech",
+							"speaker": "character_any",
+							"content": {
+								"korean": "끝났어… 모든 것이.",
+								"english": "It's over… Everything.",
+								"japanese": "終わった…全てが。",
+								"chinese": "结束了…一切。",
+								"french": "C'est fini… Tout.",
+								"spanish": "Se acabó… Todo.",
+								"vietnamese": "Kết thúc rồi… Mọi thứ.",
+								"thai": "จบแล้ว… ทุกสิ่ง",
+								"hindi": "खत्म हो गया… सब कुछ।"
+							},
+							"emotion": "base"
+						},
+						{
+							"emotion": "base",
+							"content": {
+								"korean": "쓰러진 시프라의 몸에서 금지된 마법 물질이 숲 전체로 퍼져 나갔다. 숲은 잠시 침묵했지만, 더 큰 균열이 시작되고 있었다.",
+								"english": "From Xifra's fallen body, forbidden magical substances spread throughout the forest. The forest was silent for a moment, but a greater rift was beginning.",
+								"japanese": "倒れたシフラの体から、禁断の魔法物質が森全体に広がっていった。森は一時沈黙したが、より大きな亀裂が始まりつつあった。",
+								"chinese": "从倒下的西弗拉身体中，被禁止的魔法物质扩散到整个森林。森林短暂地沉默了，但更大的裂痕正在开始。",
+								"french": "Du corps tombé de Xifra, des substances magiques interdites se répandirent dans toute la forêt. La forêt fut silencieuse un instant, mais une fissure plus grande commençait.",
+								"spanish": "Del cuerpo caído de Xifra, sustancias mágicas prohibidas se extendieron por todo el bosque. El bosque guardó silencio por un momento, pero una grieta mayor estaba comenzando.",
+								"vietnamese": "Từ cơ thể ngã xuống của Xifra, những chất ma thuật bị cấm lan truyền khắp khu rừng. Khu rừng im lặng trong chốc lát, nhưng một vết nứt lớn hơn đang bắt đầu.",
+								"thai": "จากร่างที่ล้มลงของซีฟรา สารเวทมนตร์ต้องห้ามได้แพร่กระจายไปทั่วป่า ป่าเงียบงันไปชั่วขณะ แต่รอยร้าวที่ใหญ่กว่ากำลังเริ่มต้นขึ้น",
+								"hindi": "ज़िफ्रा के गिरे हुए शरीर से, निषिद्ध जादुई पदार्थ पूरे जंगल में फैल गए। जंगल क्षण भर के लिए शांत रहा, लेकिन एक बड़ी दरार शुरू हो रही थी।"
+							},
+							"speaker": "narrator",
+							"type": "speech"
+						}
+					]
+				}
+			],
+			"prologue": {
+				"korean": [
+					"숲의 심장. 마침내 닿은 파멸의 근원.",
+					"희망이라 속삭이던 안내인은, 이제 인질이 되었다.",
+					"그녀의 가면 아래 숨겨진 진실은 숲을 광기로 물들였다.",
+					"구원은 거짓이었고, 모든 것은 거대한 복수의 서곡이었다."
+				],
+				"english": [
+					"The Heart of the Forest. At last, the source of ruin.",
+					"The guide, who whispered hope, is now a hostage.",
+					"The truth hidden beneath her mask tainted the forest with madness.",
+					"Salvation was a lie, and everything was a prelude to a grand vengeance."
+				],
+				"japanese": [
+					"森の心臓。ついに辿り着いた破滅の根源。",
+					"希望を囁いた案内人は、今や人質となった。",
+					"彼女の仮面の下に隠された真実は、森を狂気に染め上げた。",
+					"救いは偽りであり、全ては壮大な復讐の序曲であった。"
+				],
+				"chinese": [
+					"森林之心。终至毁灭之源。",
+					"曾低语希望的向导，如今成为人质。",
+					"她面具下隐藏的真相，将森林染上疯狂。",
+					"救赎是谎言，一切都是巨大复仇的序曲。"
+				],
+				"french": [
+					"Le Cœur de la Forêt. Enfin, la source de la ruine.",
+					"La guide, qui murmurait l'espoir, est maintenant une otage.",
+					"La vérité cachée sous son masque a imprégné la forêt de folie.",
+					"Le salut était un mensonge, et tout n'était qu'un prélude à une vengeance grandiose."
+				],
+				"spanish": [
+					"El Corazón del Bosque. Por fin, la fuente de la ruina.",
+					"La guía, que susurraba esperanza, ahora es una rehén.",
+					"La verdad oculta bajo su máscara tiñó el bosque de locura.",
+					"La salvación era una mentira, y todo fue un preludio de una gran venganza."
+				],
+				"vietnamese": [
+					"Trái tim Rừng sâu. Cuối cùng cũng chạm đến nguồn gốc hủy diệt.",
+					"Người dẫn đường từng thì thầm hy vọng, giờ đã thành con tin.",
+					"Sự thật ẩn giấu dưới mặt nạ của cô ấy đã nhuộm rừng cây bằng sự điên loạn.",
+					"Sự cứu rỗi là dối trá, và tất cả chỉ là khúc dạo đầu cho một cuộc báo thù vĩ đại."
+				],
+				"thai": [
+					"หัวใจแห่งพงไพร ในที่สุดก็มาถึงต้นกำเนิดแห่งความพินาศ",
+					"ผู้นำทางที่กระซิบถึงความหวัง ตอนนี้กลายเป็นตัวประกันแล้ว",
+					"ความจริงที่ซ่อนอยู่ใต้หน้ากากของเธอ ย้อมป่าด้วยความบ้าคลั่ง",
+					"ความรอดเป็นสิ่งลวงตา และทุกสิ่งคือบทโหมโรงของการแก้แค้นอันยิ่งใหญ่"
+				],
+				"hindi": [
+					"वन का हृदय। अंततः, विनाश का स्रोत।",
+					"आशा फुसफुसाने वाला मार्गदर्शक, अब एक बंधक बन गया है।",
+					"उसके मुखौटे के नीचे छिपा सच, जंगल को पागलपन से रंग गया।",
+					"मोक्ष एक झूठ था, और सब कुछ एक भव्य प्रतिशोध का प्रस्तावना था।"
+				]
+			}
+		}
+	]
+}

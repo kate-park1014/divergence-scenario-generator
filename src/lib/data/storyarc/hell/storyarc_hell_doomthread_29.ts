@@ -144,7 +144,7 @@ export const storyarc_hell_doomthread_29: StoryArc = {
 			"order": 5,
 			"summary": "지옥의 최심부, '종말의 직조기'라 불리는 거대한 기계 앞에 선 주인공. NPC Ash는 이미 시스템에 완전히 흡수되어 기계의 일부처럼 보이지만, 주인공을 보자 미약하게나마 과거의 죄책감을 드러낸다. Doomthread는 주인공에게 '네 운명 또한 내가 이미 정해두었다'고 조롱하지만, 주인공은 Ash와 자신의 기억을 되짚으며 시스템의 거짓된 통제에 맞서 진실을 파헤친다. 결국 Doomthread의 파편화된 별자리와 핏빛 눈물을 통해, 시스템이 지워버린 인류의 참혹한 미래와 함께 진정한 흑막의 그림자가 드러난다.",
 			"npc": "ash",
-			"boss": "pool_FatedWeaver_Doomthread_V1"
+			"boss": "pool_231"
 		}
 	],
 	"act_summary": {

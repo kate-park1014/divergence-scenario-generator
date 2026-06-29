@@ -144,7 +144,7 @@ export const storyarc_forest_nyx_40: StoryArc = {
 			"order": 5,
 			"act": "climax_finale",
 			"npc": "bracken",
-			"boss": "pool_ShadowBroker_Nyx_V1"
+			"boss": "pool_212"
 		}
 	],
 	"act_summary": {

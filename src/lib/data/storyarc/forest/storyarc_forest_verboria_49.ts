@@ -142,7 +142,7 @@ export const storyarc_forest_verboria_49: StoryArc = {
 			"title": "거울의 본질",
 			"npc": "bracken",
 			"summary": "모든 진실이 폭로되고 대원들은 서로를 향한 끝없는 비난 속에서 파멸 직전에 이른다. 주인공은 베르보리아가 단순히 소문을 퍼뜨리는 존재가 아니라, 아마존 부족 대주술사의 '진실 폭로 거울' 조각이라는 본질을 깨닫는다. 샘물 깊숙이 잠겨있는 낯선 문양이 그 증거였다. 루프의 잔혹한 본질을 알게 된 브라켄은 절규하고, 베르보리아는 새로운 이야깃거리에 만족하며 끝없는 조롱을 퍼붓는다. 구원을 찾아 폭로에 가담했던 행위가 오히려 모두를 파멸로 이끈다.",
-			"boss": "pool_WhisperingSpring_Verboria_V1",
+			"boss": "pool_178",
 			"act": "climax_finale",
 			"order": 5
 		}

@@ -144,7 +144,7 @@ export const storyarc_forest_veridia_4: StoryArc = {
 			"order": 5,
 			"act": "climax_finale",
 			"title": "여왕의 눈물: 탐욕의 순환 속에서",
-			"boss": "pool_PetrifiedQueen_Veridia_V1"
+			"boss": "pool_121"
 		}
 	],
 	"act_summary": {

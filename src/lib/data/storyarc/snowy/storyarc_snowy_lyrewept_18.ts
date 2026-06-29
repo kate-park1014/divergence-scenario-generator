@@ -140,7 +140,7 @@ export const storyarc_snowy_lyrewept_18: StoryArc = {
 		},
 		{
 			"title": "영원한 겨울의 진혼곡",
-			"boss": "pool_Skaldic_Lament_V1",
+			"boss": "pool_359",
 			"npc": "anuk",
 			"order": 5,
 			"act": "climax_finale",

@@ -140,7 +140,7 @@ export const storyarc_snowy_weaverfrost_50: StoryArc = {
 		},
 		{
 			"npc": "inka",
-			"boss": "pool_FateWeaver_Weaverfrost_V1",
+			"boss": "pool_392",
 			"summary": "마침내 주인공은 빙탑의 심장부에 도달하고, 그곳에서 인카를 다시 마주한다. 인카는 거대한 수정 서리 거미, 위버프로스트의 거미줄에 절망적으로 묶여있다. 빙탑의 껍질이 벗겨지며 거미의 끔찍한 진정한 모습이 드러나고, 위버프로스트는 '너도 이제 나의 영원한 직물의 일부가 될 것이다'라고 속삭인다.",
 			"title": "베일을 벗은 운명 직조자",
 			"order": 5,

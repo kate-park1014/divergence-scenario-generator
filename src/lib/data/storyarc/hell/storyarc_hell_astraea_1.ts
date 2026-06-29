@@ -146,7 +146,7 @@ export const storyarc_hell_astraea_1: StoryArc = {
 			"title": "비극적 예언자의 마지막 선택",
 			"npc": "mara",
 			"summary": "마라는 주인공에게 보스 '아스트라에아'의 비극적인 진실을 밝힌다. 그녀가 스스로를 희생해 영혼들을 구원하려 했던 '계약'의 비밀과, 끝없이 반복되던 고통이 사실은 더 큰 파멸로부터 영혼을 격리하기 위한 장치였음이 드러난다. 주인공은 해방감 없는 허무 속에서 아스트라에아의 마지막 유언을 듣게 된다.",
-			"boss": "pool_Oracle_Astraea_V1",
+			"boss": "pool_229",
 			"order": 5,
 			"act": "climax_finale"
 		}

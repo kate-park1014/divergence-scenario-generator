@@ -141,7 +141,7 @@ export const storyarc_snowy_fimbulship_89: StoryArc = {
 		{
 			"title": "빙하 선장의 최후",
 			"act": "climax_finale",
-			"boss": "pool_IceMimic_Fimbulship_V1",
+			"boss": "pool_329",
 			"summary": "핀의 도움으로 선장의 끔찍한 진실(gf_02)과 마주한 주인공은 극심한 분노 속에서 최종 결전을 벌인다. 유령선 뱃머리에서 드라우그 선장 Fimbulship이 깨어나 '내 배는 아직 선원이 부족하다' 외치며 압도적인 힘으로 공격한다. 기이한 냉기(gf_01)와 선장의 갈망(gf_03), 그리고 고요 속의 위험(gf_04) 모든 복선이 드러나며 산 자들의 온기를 빼앗으려는 저주에 종지부를 찍으려 한다.",
 			"npc": "finn",
 			"order": 5

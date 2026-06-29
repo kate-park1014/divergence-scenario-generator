@@ -139,7 +139,7 @@ export const storyarc_forest_eldoria_29: StoryArc = {
 			"npc": "ivy"
 		},
 		{
-			"boss": "pool_Whisperwood_Eldoria_V1",
+			"boss": "pool_184",
 			"act": "climax_finale",
 			"title": "비극의 심장, 엘도리아",
 			"npc": "bracken",

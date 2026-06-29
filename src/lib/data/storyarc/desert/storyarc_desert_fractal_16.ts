@@ -144,7 +144,7 @@ export const storyarc_desert_fractal_16: StoryArc = {
 			"summary": "케메트의 마지막 조언을 따라, 주인공은 마침내 'Fractal'의 은신처에 도달한다. Fractal의 표면적인 가면이 벗겨지고 그의 비극적인 진짜 정체가 드러난다. 고대 비문 속 '잊혀진 슬픔', 음유시인의 노래 속 '부서진 꿈을 춤추는 자', 신기루 속 인간의 얼굴이 모두 Fractal의 과거와 연결되어 파편화된 진실이 맞춰진다. 동정심과 함께 복잡한 분노가 주인공을 덮치고, Fractal은 자신의 왜곡된 망상을 완성하기 위해 광기 어린 '분열의 춤'을 추며 사막 전체를 파괴하려 한다. (복선1, 복선2, 복선3 모두 드러나기)",
 			"order": 5,
 			"act": "climax_finale",
-			"boss": "pool_GlassBlade_Fractal_V1"
+			"boss": "pool_156"
 		}
 	],
 	"act_summary": {

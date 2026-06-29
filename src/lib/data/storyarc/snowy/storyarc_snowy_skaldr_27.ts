@@ -139,7 +139,7 @@ export const storyarc_snowy_skaldr_27: StoryArc = {
 			"title": "깨어진 영광의 그림자"
 		},
 		{
-			"boss": "pool_BardicSnow_Skaldr_V1",
+			"boss": "pool_381",
 			"order": 5,
 			"title": "그리움의 마지막 무대",
 			"npc": "borealis",

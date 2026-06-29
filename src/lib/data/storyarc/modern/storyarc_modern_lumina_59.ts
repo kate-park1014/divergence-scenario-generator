@@ -144,7 +144,7 @@ export const storyarc_modern_lumina_59: StoryArc = {
 			"title": "영원한 작별 인사",
 			"order": 5,
 			"act": "climax_finale",
-			"boss": "pool_LostMemory_Lumina_V1"
+			"boss": "pool_301"
 		}
 	],
 	"act_summary": {

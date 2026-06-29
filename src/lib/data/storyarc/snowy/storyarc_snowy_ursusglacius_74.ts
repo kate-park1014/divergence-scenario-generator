@@ -141,7 +141,7 @@ export const storyarc_snowy_ursusglacius_74: StoryArc = {
 		{
 			"act": "climax_finale",
 			"summary": "마침내 빙하 곰, 'Ursus Glacius'와 대면한다. 에이라는 족장의 고통스러운 영혼이 빙하 곰의 형상 안에 갇혀 절규하고 있음을 깨닫고 비통해한다. 거대한 빙하 곰은 갑자기 움직임을 멈추고 고통스럽게 울부짖으며, 그 속에서 고대 바이킹 족장의 흐릿한 영체가 나타난다 (Boss Twist). 에이라는 시스템의 핵(gf_01)이 족장의 영혼을 조종하며 그의 맹세(gf_02)를 왜곡하여 세계를 얼리는 (gf_03) 진정한 흑막임을 깨닫고 분노한다. 이 모든 것은 '신성한 침묵' (gf_04)을 깨트림으로써 가속화된 비극이었다. 족장의 마지막 절규 속에서 탐험대는 비극적인 결말과 마주하며 시스템의 잔혹함에 절규한다.",
-			"boss": "pool_ChieftainSpirit_UrsusGlacius_V1",
+			"boss": "pool_324",
 			"order": 5,
 			"npc": "eira",
 			"title": "비극의 왕좌: 영혼의 절규"

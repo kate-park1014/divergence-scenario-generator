@@ -144,7 +144,7 @@ export const storyarc_snowy_melodia_22: StoryArc = {
 			"summary": "멜로디아의 본거지에 도달한 주인공은, 아눅이 공허한 눈으로 하프를 연주하며 멜로디아의 마지막 진혼곡에 참여하는 것을 본다. 아눅은 \"진실을 마주할 용기가 있나요?\"라며 주인공을 유혹하지만, 주인공은 멜로디아의 노래가 사실은 모든 기억과 죄책감을 강탈하는 '조롱의 선율'임을 깨닫고 멜로디아와 최후의 대결을 펼친다.",
 			"title": "영원한 진혼곡의 진실",
 			"order": 5,
-			"boss": "pool_ShatteredSong_Melodia_V1"
+			"boss": "pool_352"
 		}
 	],
 	"act_summary": {

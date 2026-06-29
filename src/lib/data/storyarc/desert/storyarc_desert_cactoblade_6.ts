@@ -144,7 +144,7 @@ export const storyarc_desert_cactoblade_6: StoryArc = {
 			"npc": "kemet",
 			"order": 5,
 			"act": "climax_finale",
-			"boss": "pool_Blademaster_CactOBlade_V1"
+			"boss": "pool_149"
 		}
 	],
 	"act_summary": {

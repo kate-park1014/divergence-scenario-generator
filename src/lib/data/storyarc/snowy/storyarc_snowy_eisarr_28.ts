@@ -139,7 +139,7 @@ export const storyarc_snowy_eisarr_28: StoryArc = {
 			"act": "rising"
 		},
 		{
-			"boss": "pool_FrozenOath_Eisarr_V1",
+			"boss": "pool_377",
 			"summary": "모든 단서가 가리키는 얼음 폭풍의 심장부에서 '에이사르'와 대면한다. 치열한 전투 끝에 얼음 핵이 약해지고, 에이라가 그 모습을 보며 눈물을 흘린다. 이내 과거의 전사의 환영이 나타나 자신의 비극적인 맹세와 영원한 고통을 토로한다. 탐험대는 에이사르가 단순한 괴물이 아닌, 맹세에 갇힌 비극적인 영혼임을 깨닫고 깊은 동정을 느낀다.",
 			"act": "climax_finale",
 			"title": "영겁의 족쇄: 에이사르의 눈물",

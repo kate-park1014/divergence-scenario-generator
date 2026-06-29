@@ -143,7 +143,7 @@ export const storyarc_desert_rustblood_11: StoryArc = {
 			"npc": "amir",
 			"order": 5,
 			"summary": "주인공은 마침내 러스트블러드와 대면하고, 그가 한때 '질서의 칼날'이었던 자라는 끔찍한 진실을 마주한다. 러스트블러드는 블레이드마스터 길드의 위선과 자신의 신념이 무너진 과정을 폭로하며, 주인공의 모든 이상을 허무하게 만든다. (복선1,2,3,4 모두 폭로되며 진실이 드러난다)",
-			"boss": "pool_DustBlade_Rustblood_V1",
+			"boss": "pool_143",
 			"act": "climax_finale"
 		}
 	],

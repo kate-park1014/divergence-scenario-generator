@@ -140,7 +140,7 @@ export const storyarc_desert_solemnverdict_19: StoryArc = {
 		},
 		{
 			"title": "심판의 검, 진실을 베다",
-			"boss": "pool_Judicium_SolemnVerdict_V1",
+			"boss": "pool_134",
 			"act": "climax_finale",
 			"order": 5,
 			"npc": "ashur",

@@ -140,7 +140,7 @@ export const storyarc_snowy_snargle_88: StoryArc = {
 		},
 		{
 			"title": "영원의 안식: 훈제 연어의 꿈",
-			"boss": "pool_GrumpyRelic_Snargle_V1",
+			"boss": "pool_361",
 			"act": "climax_finale",
 			"order": 5,
 			"npc": "eira",

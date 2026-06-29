@@ -139,7 +139,7 @@ export const storyarc_modern_molder_2: StoryArc = {
 			"order": 4
 		},
 		{
-			"boss": "pool_UrbanDecay_Molder_V1",
+			"boss": "pool_267",
 			"order": 5,
 			"title": "몰더, 도시의 절규",
 			"act": "climax_finale",

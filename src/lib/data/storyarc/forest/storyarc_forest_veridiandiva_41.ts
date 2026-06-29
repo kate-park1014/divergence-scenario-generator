@@ -143,7 +143,7 @@ export const storyarc_forest_veridiandiva_41: StoryArc = {
 			"npc": "bracken",
 			"order": 5,
 			"title": "광기의 런웨이, 디바를 폭로하다",
-			"boss": "pool_FashionFungus_VeridianDiva_V1",
+			"boss": "pool_190",
 			"summary": "탐험대는 이끼 군락의 핵에 도달하고, 그곳에서 모든 것을 조종하던 베리디안 디바의 기괴한 실체가 드러난다. 디바는 브라켄을 비롯한 모든 숲의 생명체들을 강제로 '최고급 드레스'로 치장하려 하고, 탐험대에게도 '뮤즈가 될 기회'를 강요한다. 탐험대는 디바의 위선과 광기를 폭로하고, 통쾌한 한 방으로 숲을 해방시킨다. 숲의 모든 존재는 비로소 강요된 옷에서 벗어나 진정한 자유를 되찾고, 브라켄은 감사함을 표한다.",
 			"act": "climax_finale"
 		}

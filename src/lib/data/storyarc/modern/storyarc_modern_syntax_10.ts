@@ -144,7 +144,7 @@ export const storyarc_modern_syntax_10: StoryArc = {
 			"npc": "bex",
 			"summary": "최후의 격전지, 도시의 중추 데이터 코어. 마침내 Syntax와 마주한 주인공은 그의 비극적인 과거를 완전히 이해하게 된다. 벡스가 제공한 해독 키로 그의 핵을 파괴하려 하지만, Syntax는 모든 '정보'와 '질서'를 다시 시작하려는 광기 어린 집착을 보이며 저항한다. 승리 후 남는 것은 시스템의 재부팅과 허무함, 그리고 도시 곳곳에 그의 잔상이 남는 무의미한 결말뿐이다.",
 			"order": 5,
-			"boss": "pool_DigitalChaos_Syntax_V1"
+			"boss": "pool_251"
 		}
 	],
 	"act_summary": {

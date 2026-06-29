@@ -143,7 +143,7 @@ export const storyarc_desert_obsidianoath_13: StoryArc = {
 			"summary": "고대 수호자 '옵시디언 오스'와 대치한 주인공. 격렬한 전투 끝에 수호자의 단단한 외피가 부서지고 그 안에 감춰졌던 '영혼의 검'의 파편이 드러난다. 파편은 수호자, 즉 영혼의 검이 스스로 맹세를 깨고 왕국을 파멸시킨 '가해자'였음과, 사막 전체가 그 죄책감과 그리움으로 이루어진 '피해자'였음을 드러낸다. 길잡이 아미르는 고대 기록을 통해 이 모든 비극을 확인해주고, 주인공은 거대한 절망과 슬픔 속에 사막의 진정한 비극을 목도한다. (복선 1, 2, 3, 4 모두 reveal)",
 			"title": "비극의 검, 그리움의 사막",
 			"act": "climax_finale",
-			"boss": "pool_Shellguard_ObsidianOath_V1",
+			"boss": "pool_139",
 			"npc": "amir"
 		}
 	],

@@ -143,7 +143,7 @@ export const storyarc_hell_eulalia_24: StoryArc = {
 			"order": 5,
 			"summary": "마침내 보스 Eulalia와 대면한 탐험대. 카운트다운은 0을 향하고, 마라는 보스의 마지막 슬픈 노래를 들으며 혼란에 빠진다. Eulalia를 쓰러뜨리는 순간, 그녀의 몸을 감싸고 있던 어둠이 걷히며 드러난 수정(final_boss.twist)이 미스틱스 세계의 순수한 기억을 담고 있음을 목도한다. 승리는 이루었지만, 마라는 이 승리가 곧 모든 것의 영원한 소멸을 의미함을 깨닫고 절망에 빠진다. 이제 지옥과 함께 모든 기억도 사라졌다.",
 			"title": "비극적 자장가: 영원한 상실",
-			"boss": "pool_Lullaby_Eulalia_V1",
+			"boss": "pool_233",
 			"npc": "mara"
 		}
 	],

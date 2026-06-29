@@ -139,7 +139,7 @@ export const storyarc_modern_athan_21: StoryArc = {
 			"summary": "아탄과 마주한 주인공과 'echo'. 아탄은 '오래된 약속'을 강요하며 공격하고, 전투가 격화될수록 그의 형상은 점차 옅어진다. 아탄이 필사적으로 지키려던 낡은 오르골이 빛을 발하며 떠오르고, 그의 형상에서 떨어진 조직 조끼 조각과 어린 소녀의 사진이 나타난다. 아탄의 슬픈 속삭임은 도시 밤공기 속으로 사라지고, 'echo'는 충격적인 진실 앞에서 오열한다.",
 			"act": "climax_finale",
 			"order": 5,
-			"boss": "pool_BrokenPledge_Athan_V1",
+			"boss": "pool_312",
 			"title": "집행자의 눈물: 마지막 유품, 어린 아가씨"
 		}
 	],

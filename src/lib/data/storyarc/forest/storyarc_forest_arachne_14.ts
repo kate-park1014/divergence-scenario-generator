@@ -143,7 +143,7 @@ export const storyarc_forest_arachne_14: StoryArc = {
 			"act": "climax_finale",
 			"summary": "탐험대는 마침내 고대 유물을 손에 넣어 아라크네에게 향한다. 유물을 건네는 순간, 아라크네는 차가운 미소와 함께 자신의 진짜 정체와 숲 전체가 그녀의 복수를 위한 거대한 생체 병기였음을 밝힌다. 브라켄은 경악하며 배신당한 탐험대와 아라크네 사이에서 선택의 기로에 놓인다. 시한부 저주가 최후의 발악을 시작하고, 숲은 최악의 막장극 무대가 된다.",
 			"order": 5,
-			"boss": "pool_CunningShadow_Arachne_V1",
+			"boss": "pool_175",
 			"npc": "bracken"
 		}
 	],

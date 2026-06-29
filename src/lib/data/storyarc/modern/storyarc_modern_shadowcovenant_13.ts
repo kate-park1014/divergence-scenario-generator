@@ -141,7 +141,7 @@ export const storyarc_modern_shadowcovenant_13: StoryArc = {
 		{
 			"npc": "bex",
 			"act": "climax_finale",
-			"boss": "pool_CrimsonOath_ShadowCovenant_V1",
+			"boss": "pool_252",
 			"title": "피의 맹세, 해방의 절규",
 			"order": 5,
 			"summary": "도시의 심장부, 섀도우 코버넌트의 은밀한 아지트에서 마침내 그와 대면한다. 정보상 벡스가 전해준 마지막 조언과 함께, 섀도우 코버넌트의 고고한 가면이 산산조각 나며 수많은 영혼들이 뒤섞인 끔찍한 형상과 절규가 드러난다. '이 영원한 업보의 순환에 또 다른 피를 더할 자들인가?' 그는 고통 속에서 해방을 갈망하고, 주인공은 처절한 사투 끝에 섀도우 코버넌트가 짊어진 피의 맹세의 저주를 끊어낸다. 맹세의 힘이 소멸하며 도시를 옥죄던 비극적인 운명에서 해방된다."

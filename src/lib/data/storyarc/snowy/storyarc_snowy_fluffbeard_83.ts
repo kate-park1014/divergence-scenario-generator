@@ -142,7 +142,7 @@ export const storyarc_snowy_fluffbeard_83: StoryArc = {
 			"order": 5,
 			"npc": "inka",
 			"title": "야를의 눈물",
-			"boss": "pool_SnowyJarl_Fluffbeard_V1",
+			"boss": "pool_374",
 			"act": "climax_finale",
 			"summary": "수호신 플러프비어드의 털을 깎으려는 시도 끝에, 그의 내면에 갇혀있던 '혹한의 야를'이 모습을 드러낸다. 거대한 알레르기성 재채기(Foreshadow_Sneeze)와 함께 터져 나오는 그의 비극적 절규(Foreshadow_WarriorCurse, Foreshadow_Allergy)를 '잉카'와 함께 목격하며, 플레이어는 승리했음에도 불구하고 깊은 연민과 무의미한 결말을 마주한다."
 		}

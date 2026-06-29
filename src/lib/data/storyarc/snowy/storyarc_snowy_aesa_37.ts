@@ -144,7 +144,7 @@ export const storyarc_snowy_aesa_37: StoryArc = {
 			"title": "분노의 심장, 왜곡된 약속",
 			"order": 5,
 			"npc": "eira",
-			"boss": "pool_WinterHeart_Aesa_V1"
+			"boss": "pool_386"
 		}
 	],
 	"act_summary": {

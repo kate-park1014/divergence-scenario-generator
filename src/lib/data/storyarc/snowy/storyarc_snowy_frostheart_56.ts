@@ -140,7 +140,7 @@ export const storyarc_snowy_frostheart_56: StoryArc = {
 			"title": "비밀스러운 그림자, 얼음의 인도자"
 		},
 		{
-			"boss": "pool_EternalGrief_Frostheart_V1",
+			"boss": "pool_393",
 			"title": "영원한 슬픔의 심장",
 			"summary": "탐험대는 얼어붙은 호수 중심에 도달해 얼음 여신 프로스트하트와 대면한다. 에이라가 나타나 프로스트하트의 진정한 정체와 루프의 근원을 밝힌다. 여신은 잃어버린 아이의 온기를 지키기 위해 모든 것을 얼리고 시간을 멈추려 했으며, 이 세계 자체가 그녀의 영원한 슬픔의 발현임을 깨닫는다. 루프를 깨고 슬픔에서 벗어나게 하려는 최후의 결전이 펼쳐진다.",
 			"act": "climax_finale",

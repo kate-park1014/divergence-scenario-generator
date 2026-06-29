@@ -141,7 +141,7 @@ export const storyarc_modern_crimsonclaw_62: StoryArc = {
 		{
 			"npc": "max",
 			"summary": "모든 단서들이 연결되자, 주인공과 맥스는 다시 '미술 설치물'이 있는 곳으로 향한다. 모든 전말이 드러나며 '크림슨 클로'가 단순한 괴물이 아닌, 도시의 폭력과 배신 속에서 끔찍하게 변모한 비극적인 '피해자'였음이 밝혀진다. 주인공은 연민과 함께 분노가 뒤섞인 크림슨 클로와 최후의 대결을 펼치며 도시의 오랜 상처를 끊어내고, 씁쓸하지만 통쾌한 해방을 맞이한다.",
-			"boss": "pool_GrimRelic_CrimsonClaw_V1",
+			"boss": "pool_290",
 			"title": "크림슨 클로의 눈물",
 			"order": 5,
 			"act": "climax_finale"

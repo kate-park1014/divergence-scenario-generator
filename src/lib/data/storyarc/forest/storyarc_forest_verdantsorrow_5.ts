@@ -140,7 +140,7 @@ export const storyarc_forest_verdantsorrow_5: StoryArc = {
 		},
 		{
 			"order": 5,
-			"boss": "pool_Rootbound_VerdantSorrow_V1",
+			"boss": "pool_123",
 			"npc": "ela",
 			"act": "climax_finale",
 			"summary": "베르단트 소로우와의 비극적인 대면. 보스의 심장부를 공격하자, 수많은 아이들의 영혼이 비명처럼 튀어나와 숲에 울려 퍼진다. 과거의 모계 족장 엘리아나의 희생과 아이들을 지키려던 모성애가 처절하게 드러나며, 엘라는 이 모든 진실 앞에 비탄에 잠긴다. 플레이어는 승리했으나 깊은 슬픔을 느끼게 되는 무의미한 결말을 맞이한다.",

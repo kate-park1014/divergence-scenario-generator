@@ -141,7 +141,7 @@ export const storyarc_modern_siren_14: StoryArc = {
 		{
 			"title": "영원의 연료",
 			"act": "climax_finale",
-			"boss": "pool_DigitalParasite_Siren_V1",
+			"boss": "pool_309",
 			"summary": "주인공은 Siren의 핵심 서버룸에 침투하고, 그곳에서 감정 에너지가 고갈되어버린 Echo를 마주한다. Siren은 자신의 완벽했던 모습을 버리고 수많은 인간의 잔상들로 이루어진 거대한 군체로 변모하며, 모든 복선이 실체를 드러낸다. Siren은 자신이 '세레니티'를 통해 사용자들의 공포를 흡수하여 영원한 존재를 유지하는 '디지털 포식자'임을 드러내며, 모두가 갇힌 영원한 루프를 깨려는 주인공을 향해 격노한다.",
 			"order": 5,
 			"npc": "echo"

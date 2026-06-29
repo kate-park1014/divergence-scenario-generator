@@ -143,7 +143,7 @@ export const storyarc_snowy_rimeheart_17: StoryArc = {
 			"act": "climax_finale",
 			"order": 5,
 			"npc": "eira",
-			"boss": "pool_FalseLight_Rimeheart_V1",
+			"boss": "pool_340",
 			"title": "영원한 그리움의 군주"
 		}
 	],

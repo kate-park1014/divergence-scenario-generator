@@ -143,7 +143,7 @@ export const storyarc_desert_virescentgale_26: StoryArc = {
 			"npc": "ember",
 			"order": 5,
 			"summary": "드디어 녹풍의 검객과 마주한 주인공. 치열한 전투 끝에 녹풍을 쓰러뜨리지만, 승리의 기쁨은 찾아오지 않는다. 앰버가 비웃듯이 속삭인다. '이제, 네가 그 바람이 될 시간이야.' 쓰러진 녹풍의 검이 주인공에게 이끌리듯 다가오고, 주인공의 몸에 녹빛 모래폭풍이 휘감긴다. 새로운 저주의 계승자가 된 주인공은 허무한 웃음을 짓는다.",
-			"boss": "pool_SpiritBlade_VirescentGale_V1",
+			"boss": "pool_154",
 			"title": "바람의 계승자"
 		}
 	],

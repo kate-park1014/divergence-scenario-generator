@@ -141,7 +141,7 @@ export const storyarc_modern_themis_19: StoryArc = {
 		{
 			"title": "업보의 심판: 구원이 곧 파멸일 때",
 			"summary": "미스터 템플의 진정한 정체가 고대의 업보 심판관 테미스임이 드러나고, 그가 추구했던 '정산'이 도시 전체를 영원한 비극의 루프에 가두려는 것이었음이 밝혀진다. 니아는 처음 얻었던 구원이 사실은 파멸의 시작이었음을 깨닫고 절규한다.",
-			"boss": "pool_KarmicDebt_Themis_V1",
+			"boss": "pool_308",
 			"order": 5,
 			"npc": "nia",
 			"act": "climax_finale"

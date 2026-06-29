@@ -137,7 +137,7 @@ export const storyarc_modern_nullus_8: StoryArc = {
 		{
 			"order": 5,
 			"title": "청산의 그림자, 존재의 빚",
-			"boss": "pool_PhantomLedger_Nullus_V1",
+			"boss": "pool_271",
 			"act": "climax_finale",
 			"summary": "모든 단서가 Nullus를 지목하고, 탐험대는 최종적으로 정보국의 핵심 서버실에서 Nullus와 대면한다. Nullus는 과거 '붉은 맹세'의 모든 미해결된 '빚'을 청산하려 하며, 그 대상이 단순한 재산이 아닌 '존재' 자체였음을 드러낸다. 에코(Echo)는 Nullus에 의해 조작된 메시지를 통해, 과거의 '빚'이 예상치 못한 인물인 주인공과 깊게 얽혀있었음을 밝히며 충격적인 진실을 폭로한다. 카이의 배신과 사라지는 존재들, 그리고 붉은 맹세의 의미가 모두 한꺼번에 드러나고, 주인공의 존재 자체가 빚이었음이 최종적으로 밝혀지며 비극적인 결말을 맞이한다.",
 			"npc": "echo"

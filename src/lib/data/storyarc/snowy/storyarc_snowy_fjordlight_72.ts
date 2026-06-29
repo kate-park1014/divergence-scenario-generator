@@ -140,7 +140,7 @@ export const storyarc_snowy_fjordlight_72: StoryArc = {
 		},
 		{
 			"npc": "hild",
-			"boss": "pool_LostBeacon_Fjordlight_V1",
+			"boss": "pool_339",
 			"order": 5,
 			"title": "영원한 겨울의 진실",
 			"act": "climax_finale",

@@ -143,7 +143,7 @@ export const storyarc_desert_pactweaver_30: StoryArc = {
 			"summary": "마침내 'Pactweaver'의 은신처에 도달한 주인공. 그곳에서 다시 '아미르'를 마주한다. 아미르는 자신의 진정한 정체를 드러내고 주인공이 'Pactweaver'에게 완벽하게 유도된 희생양이었음을 조롱한다. 분노한 주인공은 모든 깨진 맹세의 정수인 'Pactweaver'와 최후의 결전을 벌인다. 사막 전체의 시스템적 배신을 깨닫고, 시스템 자체에 대한 분노를 표출하며 싸운다.",
 			"act": "climax_finale",
 			"npc": "amir",
-			"boss": "pool_BrokenPact_Pactweaver_V1",
+			"boss": "pool_148",
 			"order": 5
 		}
 	],

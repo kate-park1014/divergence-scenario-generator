@@ -139,7 +139,7 @@ export const storyarc_snowy_skaald_38: StoryArc = {
 			"title": "얼어붙은 그리움의 비명",
 			"order": 5,
 			"act": "climax_finale",
-			"boss": "pool_EchoingLullaby_Skaald_V1",
+			"boss": "pool_326",
 			"npc": "bran"
 		}
 	],

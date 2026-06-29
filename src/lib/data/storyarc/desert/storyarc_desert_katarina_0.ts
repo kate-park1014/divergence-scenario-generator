@@ -144,7 +144,7 @@ export const storyarc_desert_katarina_0: StoryArc = {
 			"title": "카타리나의 눈물",
 			"npc": "amir",
 			"order": 5,
-			"boss": "pool_ExiledDummy_Katarina_V1"
+			"boss": "pool_157"
 		}
 	],
 	"act_summary": {

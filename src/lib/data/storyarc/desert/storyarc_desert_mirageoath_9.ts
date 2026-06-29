@@ -144,7 +144,7 @@ export const storyarc_desert_mirageoath_9: StoryArc = {
 			"act": "climax_finale",
 			"title": "미라주의 맹세: 영원한 파수꾼의 진실",
 			"summary": "모든 환영의 근원인 '미라지 오스'와 대면한다. 그가 '빛의 검사단'의 마지막 생존자였음이 드러나고, 사막에 묶인 채 영원히 맹세를 지켜야만 했던 비극적인 운명이 밝혀진다. 길 잃은 여행자 케메트의 도움으로 진실을 파헤치고, 사막을 반복시키던 저주를 끝낸다. 주인공은 보스의 처절한 운명과 마주하며 분노, 슬픔, 그리고 해방감을 동시에 느낀다.",
-			"boss": "pool_DesertEcho_MirageOath_V1"
+			"boss": "pool_151"
 		}
 	],
 	"act_summary": {

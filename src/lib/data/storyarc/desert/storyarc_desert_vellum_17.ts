@@ -140,7 +140,7 @@ export const storyarc_desert_vellum_17: StoryArc = {
 		},
 		{
 			"title": "진실의 칼날",
-			"boss": "pool_DesertWhisper_Vellum_V1",
+			"boss": "pool_140",
 			"npc": "amir",
 			"act": "climax_finale",
 			"order": 5,

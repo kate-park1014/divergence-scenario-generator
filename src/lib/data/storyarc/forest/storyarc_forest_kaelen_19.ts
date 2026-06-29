@@ -143,7 +143,7 @@ export const storyarc_forest_kaelen_19: StoryArc = {
 			"npc": "bracken",
 			"title": "그림자의 실체 폭로",
 			"order": 5,
-			"boss": "pool_ShadowWeaver_Kaelen_V1",
+			"boss": "pool_213",
 			"summary": "모든 단서가 카엘렌을 지목하는 상황에서, 주인공은 카엘렌의 거점에 도착한다. 그곳에서 다시 만난 브라켄은 과거 카엘렌과의 불공정한 거래에 대한 증언을 하고, 카엘렌이 숲 전체의 정보망을 조작해 왔음이 밝혀진다. 주인공은 시스템의 흑막인 카엘렌과 분노에 찬 최후의 대결을 펼친다."
 		}
 	],

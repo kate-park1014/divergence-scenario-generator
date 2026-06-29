@@ -138,7 +138,7 @@ export const storyarc_forest_eirini_6: StoryArc = {
 			"summary": "숲의 심장부, '엘더우드 라멘트'와의 대면. 엘라는 마지막 힘을 짜내 '생명의 씨앗'과 보스의 비극적인 과거에 대한 결정적인 단서를 전달한다. 전투 중 낡은 주술 도구와 푸른 곰팡이, 돌문양의 여인, 비어있던 숲의 구역의 진실이 모두 드러나며, 보스가 단순한 적이 아닌 비극의 시스템에 갇힌 영혼이었음이 폭로된다. 주인공은 깊은 연민 속에서 숲의 구원을 위한 최종 선택을 해야 한다.",
 			"title": "슬픔의 심장",
 			"order": 5,
-			"boss": "pool_Elderwood_Lament_V1",
+			"boss": "pool_168",
 			"act": "climax_finale",
 			"npc": "ela"
 		}

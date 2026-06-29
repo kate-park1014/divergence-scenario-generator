@@ -143,7 +143,7 @@ export const storyarc_snowy_svalinn_40: StoryArc = {
 			"summary": "카운트다운의 압박 속, 스발린과의 마지막 거래 장소에 도착한 탐험대. 그의 얼음 가면이 갈라지며 과거의 기억 파편들이 터져 나오고, 스발린의 진정한 정체와 '겨울의 심장' 시스템의 잔혹한 실체가 폭로된다. 에이라는 얼음 속에서 풀려나 비극적인 진실을 고백하며, 자신들이 시스템의 다음 희생양이 될 것임을 알린다.",
 			"npc": "eira",
 			"title": "겨울의 심장: 끝나지 않는 대가",
-			"boss": "pool_FrozenConduit_Svalinn_V1",
+			"boss": "pool_397",
 			"act": "climax_finale"
 		}
 	],

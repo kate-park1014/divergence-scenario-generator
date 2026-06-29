@@ -145,7 +145,7 @@ export const storyarc_snowy_mnemora_70: StoryArc = {
 			"summary": "결국 탐험대는 모든 기억을 관장하는 볼바 '므네모라'와 마주한다. 그녀는 모든 진실을 밝히며 탐험대에게, 이 모든 여정이 잊혀지기엔 아까운 그들의 기억이 만들어낸 반복되는 환영이었음을 보여준다. 친절했던 아눅마저도 비석 속에 갇힌 탐험대의 과거 속 일부였음이 드러나며, 영원히 반복될 그리움의 굴레 속으로 그들을 붙잡으려 한다.",
 			"title": "영원한 망각의 볼바",
 			"act": "climax_finale",
-			"boss": "pool_MemoryShard_Mnemora_V1"
+			"boss": "pool_336"
 		}
 	],
 	"act_summary": {

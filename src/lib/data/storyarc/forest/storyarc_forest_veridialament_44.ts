@@ -144,7 +144,7 @@ export const storyarc_forest_veridialament_44: StoryArc = {
 			"title": "영원한 어머니의 절규",
 			"npc": "ela",
 			"act": "climax_finale",
-			"boss": "pool_SorrowfulSprout_VeridiaLament_V1"
+			"boss": "pool_205"
 		}
 	],
 	"act_summary": {

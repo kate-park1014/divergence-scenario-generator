@@ -144,7 +144,7 @@ export const storyarc_forest_mutteringbloom_39: StoryArc = {
 			"order": 5,
 			"act": "climax_finale",
 			"summary": "모든 진실이 밝혀지며, '숲의 정령'으로 여겨졌던 존재가 미쳐버린 주술사, 'Muttering Bloom'임이 드러난다. 주인공은 숲의 생명력을 이용해 모두를 동화시키려는 그녀의 광기에 맞서 싸운다. 브라켄은 이 모든 참상을 목격하며, 보스의 과거와 비극적인 운명에 깊은 연민을 느끼지만, 동시에 숲의 통제할 수 없는 힘에 대한 공포에 휩싸인다.",
-			"boss": "pool_WildGrowth_MutteringBloom_V1"
+			"boss": "pool_174"
 		}
 	],
 	"act_summary": {

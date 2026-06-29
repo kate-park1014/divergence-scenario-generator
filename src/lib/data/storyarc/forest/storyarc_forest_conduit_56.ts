@@ -142,7 +142,7 @@ export const storyarc_forest_conduit_56: StoryArc = {
 			"act": "climax_finale",
 			"title": "데이터 유기체의 절규",
 			"npc": "briar",
-			"boss": "pool_WhisperDealer_Conduit_V1",
+			"boss": "pool_125",
 			"order": 5,
 			"summary": "마침내 Conduit와 대면한 탐험대는 진실을 요구한다. Conduit는 숲의 모든 그림자를 눈동자로 바꾸며 탐험대의 가장 깊은 죄악과 아마존 부족의 잔혹한 배신을 폭로한다. 브라이어의 과거가 밝혀지고, 숲의 속삭임은 탐험대 동료들의 추악한 진실을 낱낱이 파헤친다."
 		}

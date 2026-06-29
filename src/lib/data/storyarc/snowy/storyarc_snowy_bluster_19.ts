@@ -137,7 +137,7 @@ export const storyarc_snowy_bluster_19: StoryArc = {
 		},
 		{
 			"title": "진실을 토해내는 얼음 족장",
-			"boss": "pool_Snowman_Bluster_V1",
+			"boss": "pool_338",
 			"npc": "eira",
 			"summary": "드디어 거대한 눈사람 괴물의 본거지에 도착한 주인공. 그곳에서 에이라가 과거 블러스터 족장에 대한 전설과 눈의 정령의 저주에 대한 오래된 민담을 떠올린다. 이윽고 거대한 눈사람, 최종 보스 블러스터가 모습을 드러내고, 처절한 외침과 함께 자신의 진짜 정체를 밝힌다. 그는 끊임없이 자신의 위대한(그러나 사실은 허풍 가득한) 과거를 이야기하며 자신의 외로움과 한을 토해낸다. (복선 회수: fs_2_spirit_temper, fs_3_misunderstood_threat, fs_4_viking_legend)",
 			"act": "climax_finale",

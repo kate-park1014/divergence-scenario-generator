@@ -141,7 +141,7 @@ export const storyarc_snowy_fellstar_82: StoryArc = {
 		{
 			"summary": "마침내 밝혀진 별자리의 진실, 그것은 구원이 아닌 절망적인 공허함이었다. 아눅은 자신이 믿었던 모든 것이 거짓이었음을 깨닫고 절규한다. 주인공은 비록 'Fellstar'를 물리치지만, 그 승리는 과거의 비극을 바꿀 수 없는 공허한 것이었음을 깨닫고 깊은 상실감에 빠진다.",
 			"title": "영원한 고독의 별무리",
-			"boss": "pool_Fellstar_Dirge_V1",
+			"boss": "pool_333",
 			"order": 5,
 			"act": "climax_finale",
 			"npc": "anuk"

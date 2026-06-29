@@ -144,7 +144,7 @@ export const storyarc_snowy_hildr_66: StoryArc = {
 			"act": "climax_finale",
 			"npc": "bran",
 			"title": "허무의 등대: 힐드르의 눈물",
-			"boss": "pool_LostBeacon_Hildr_V1"
+			"boss": "pool_341"
 		}
 	],
 	"act_summary": {

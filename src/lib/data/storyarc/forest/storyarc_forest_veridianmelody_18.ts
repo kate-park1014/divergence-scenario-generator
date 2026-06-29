@@ -140,7 +140,7 @@ export const storyarc_forest_veridianmelody_18: StoryArc = {
 		},
 		{
 			"npc": "ela",
-			"boss": "pool_TwistedWeaver_VeridianMelody_V1",
+			"boss": "pool_207",
 			"act": "climax_finale",
 			"title": "걸작의 재앙: 베리디안 멜로디",
 			"order": 5,

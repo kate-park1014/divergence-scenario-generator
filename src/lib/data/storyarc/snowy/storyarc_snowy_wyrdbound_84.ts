@@ -143,7 +143,7 @@ export const storyarc_snowy_wyrdbound_84: StoryArc = {
 			"order": 5,
 			"npc": "eira",
 			"title": "허무의 대가",
-			"boss": "pool_OracleIce_WyrdBound_V1",
+			"boss": "pool_387",
 			"act": "climax_finale"
 		}
 	],

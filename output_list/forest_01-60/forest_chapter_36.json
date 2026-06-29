@@ -1,0 +1,3859 @@
+{
+	"chapter_order": 36,
+	"difficulty_level": 36,
+	"chapter_name": {
+		"korean": "숲의 덫",
+		"vietnamese": "Bẫy Rừng Sâu",
+		"chinese": "森林陷阱",
+		"thai": "กับดักป่า",
+		"french": "Piège Forêt",
+		"hindi": "वन जाल",
+		"spanish": "Trampa",
+		"english": "Forest's",
+		"japanese": "森の罠"
+	},
+	"scenarios": [
+		{
+			"scenario_id": "forest_luminaflutter_35_01",
+			"order": 1,
+			"act": "intro",
+			"theme": "forest",
+			"actors": {
+				"ivy": {
+					"id": "mon_d1c759f3-74f8-42b7-ba16-c705649f006f",
+					"name": {
+						"korean": "아이비",
+						"english": "Ivy",
+						"japanese": "アイビー",
+						"chinese": "艾薇",
+						"french": "Ivy",
+						"spanish": "Ivy",
+						"vietnamese": "Ivy",
+						"thai": "ไอวี่",
+						"hindi": "आइवी"
+					},
+					"description": "",
+					"face_image_url": "https://imagedelivery.net/WTEqQNGFb-l-IHS6IGnzUQ/654fde54-6029-4601-b4a8-0578f00df900/public",
+					"battle_sprite_url": "https://imagedelivery.net/WTEqQNGFb-l-IHS6IGnzUQ/6ee8738d-0e14-4f8d-d04d-c934b0fff000/public"
+				}
+			},
+			"boss": {
+				"pool_id": "random_boss"
+			},
+			"rooms": [
+				{
+					"id": 1,
+					"dialogue": [
+						{
+							"type": "speech",
+							"emotion": "base",
+							"speaker": "narrator",
+							"content": {
+								"korean": "거대한 나무들이 하늘을 덮은 숲. 고요했지만, 뭔가 불편했다.",
+								"english": "A forest where giant trees covered the sky. It was quiet, yet something felt unsettling.",
+								"japanese": "巨大な木々が空を覆う森。静かだったが、何か落ち着かなかった。",
+								"chinese": "巨树遮天蔽日的森林。宁静却令人不安。",
+								"french": "Une forêt où des arbres géants couvraient le ciel. C'était calme, mais quelque chose était dérangeant.",
+								"spanish": "Un bosque donde árboles gigantes cubrían el cielo. Estaba tranquilo, pero algo inquietaba.",
+								"vietnamese": "Một khu rừng nơi những cây cổ thụ che phủ cả bầu trời. Yên tĩnh nhưng có gì đó bất an.",
+								"thai": "ป่าที่ต้นไม้ใหญ่ปกคลุมท้องฟ้า. สงบเงียบ แต่รู้สึกไม่สบายใจ.",
+								"hindi": "विशाल वृक्षों से ढका एक जंगल। शांत था, फिर भी कुछ असहज था।"
+							}
+						},
+						{
+							"type": "speech",
+							"emotion": "base",
+							"speaker": "character_any",
+							"content": {
+								"korean": "소문으로만 듣던 세계수 숲이군.",
+								"english": "So this is the World Tree Forest I've only heard rumors about.",
+								"japanese": "噂に聞いていた世界樹の森か。",
+								"chinese": "这就是传闻中的世界树之森啊。",
+								"french": "C'est donc la Forêt de l'Arbre-Monde dont je n'avais entendu que des rumeurs.",
+								"spanish": "Así que este es el Bosque del Árbol del Mundo del que solo había oído rumores.",
+								"vietnamese": "Đây là Rừng Cây Thế Giới mà tôi chỉ nghe nói qua lời đồn.",
+								"thai": "นี่คือป่าต้นไม้โลกที่ได้ยินแต่ข่าวลือสินะ.",
+								"hindi": "तो यह वही विश्व वृक्ष वन है जिसके बारे में मैंने सिर्फ अफवाहें सुनी थीं।"
+							}
+						},
+						{
+							"action": "enter",
+							"speaker": "ivy",
+							"duration_ms": 500,
+							"type": "direction",
+							"spot": [
+								3,
+								2
+							]
+						},
+						{
+							"speaker": "ivy",
+							"content": {
+								"korean": "...오지 말았어야 했는데.",
+								"english": "...I shouldn't have come.",
+								"japanese": "...来るべきではなかった。",
+								"chinese": "...我真不该来。",
+								"french": "...Je n'aurais pas dû venir.",
+								"spanish": "...No debería haber venido.",
+								"vietnamese": "...Lẽ ra tôi không nên đến.",
+								"thai": "...ไม่น่ามาเลย.",
+								"hindi": "...मुझे नहीं आना चाहिए था।"
+							},
+							"emotion": "sad",
+							"type": "speech"
+						},
+						{
+							"speaker": "character_1",
+							"content": {
+								"korean": "누구시죠?",
+								"english": "Who are you?",
+								"japanese": "どちら様ですか？",
+								"chinese": "你是谁？",
+								"french": "Qui êtes-vous ?",
+								"spanish": "¿Quién es usted?",
+								"vietnamese": "Anh/Chị là ai?",
+								"thai": "คุณคือใคร?",
+								"hindi": "आप कौन हैं?"
+							},
+							"emotion": "base",
+							"type": "speech"
+						},
+						{
+							"emotion": "base",
+							"type": "speech",
+							"speaker": "ivy",
+							"content": {
+								"korean": "아이비. 여기서 식물을 연구하는 사람이에요.",
+								"english": "Ivy. I'm a researcher studying plants here.",
+								"japanese": "アイビー。ここで植物を研究している者です。",
+								"chinese": "艾薇。我是这里研究植物的人。",
+								"french": "Ivy. Je suis une chercheuse qui étudie les plantes ici.",
+								"spanish": "Ivy. Soy una investigadora de plantas aquí.",
+								"vietnamese": "Ivy. Tôi là người nghiên cứu thực vật ở đây.",
+								"thai": "ไอวี่. ฉันเป็นนักวิจัยพืชที่นี่.",
+								"hindi": "आइवी। मैं यहाँ पौधों पर शोध करने वाली एक व्यक्ति हूँ।"
+							}
+						},
+						{
+							"speaker": "ivy",
+							"content": {
+								"korean": "요즘 숲이 이상해요. 기분 나쁜 소문들이 떠돌고.",
+								"english": "The forest is strange these days. Unpleasant rumors are spreading.",
+								"japanese": "最近、森がおかしいです。嫌な噂が広まっていて。",
+								"chinese": "最近森林很奇怪。不好的谣言四处流传。",
+								"french": "La forêt est étrange ces derniers temps. De mauvaises rumeurs circulent.",
+								"spanish": "El bosque está raro últimamente. Circulan rumores desagradables.",
+								"vietnamese": "Gần đây khu rừng thật lạ. Những tin đồn xấu đang lan truyền.",
+								"thai": "ช่วงนี้ป่าแปลกไป มีข่าวลือไม่ดีแพร่สะพัด",
+								"hindi": "आजकल जंगल अजीब है। बुरी अफवाहें फैल रही हैं。"
+							},
+							"type": "speech",
+							"emotion": "sad"
+						},
+						{
+							"speaker": "character_2",
+							"content": {
+								"korean": "저도 길을 잃은 나방을 봤어요. 환영인 줄 알았는데.",
+								"english": "I also saw a lost moth. I thought it was an illusion.",
+								"japanese": "私も迷った蛾を見ました。幻かと思ったのに。",
+								"chinese": "我也看到了一只迷路的飞蛾。我还以为是幻觉呢。",
+								"french": "J'ai aussi vu un papillon de nuit perdu. Je croyais que c'était une illusion.",
+								"spanish": "Yo también vi una polilla perdida. Creí que era una ilusión.",
+								"vietnamese": "Tôi cũng thấy một con bướm đêm lạc. Cứ tưởng là ảo ảnh.",
+								"thai": "ฉันก็เห็นผีเสื้อกลางคืนหลงทาง คิดว่าเป็นภาพลวงตา",
+								"hindi": "मैंने भी एक भटकी हुई पतंगिया देखी। मुझे लगा यह एक भ्रम है।"
+							},
+							"type": "speech",
+							"emotion": "base"
+						},
+						{
+							"speaker": "ivy",
+							"content": {
+								"korean": "환영이 아닐 거예요. 이 숲의 생명체들이... 변하고 있어요.",
+								"english": "It won't be an illusion. The creatures of this forest... are changing.",
+								"japanese": "幻ではないでしょう。この森の生き物たちが…変わっています。",
+								"chinese": "那不会是幻觉。这片森林的生物们……正在发生变化。",
+								"french": "Ce ne sera pas une illusion. Les créatures de cette forêt... changent.",
+								"spanish": "No será una ilusión. Las criaturas de este bosque... están cambiando.",
+								"vietnamese": "Không phải ảo ảnh đâu. Sinh vật trong khu rừng này... đang thay đổi.",
+								"thai": "คงไม่ใช่ภาพลวงตาหรอก สิ่งมีชีวิตในป่านี้...กำลังเปลี่ยนไป",
+								"hindi": "यह भ्रम नहीं होगा। इस जंगल के जीव... बदल रहे हैं।"
+							},
+							"emotion": "sad",
+							"type": "speech"
+						}
+					]
+				},
+				{
+					"id": 3,
+					"dialogue": [
+						{
+							"action": "enter",
+							"speaker": "ivy",
+							"duration_ms": 500,
+							"spot": [
+								3,
+								2
+							],
+							"type": "direction"
+						},
+						{
+							"speaker": "ivy",
+							"content": {
+								"korean": "이 숲은 원래 이렇지 않았어요.",
+								"english": "This forest wasn't like this originally.",
+								"japanese": "この森は元々こんなじゃなかった。",
+								"chinese": "这片森林原本不是这样的。",
+								"french": "Cette forêt n'était pas comme ça à l'origine.",
+								"spanish": "Este bosque no era así originalmente.",
+								"vietnamese": "Khu rừng này vốn không như vậy.",
+								"thai": "ป่านี้ไม่เคยเป็นแบบนี้มาก่อน",
+								"hindi": "यह जंगल पहले ऐसा नहीं था।"
+							},
+							"type": "speech",
+							"emotion": "sad"
+						},
+						{
+							"speaker": "character_any",
+							"content": {
+								"korean": "어떻게 달라졌는데요?",
+								"english": "How has it changed?",
+								"japanese": "どう変わったんですか？",
+								"chinese": "怎么不一样了？",
+								"french": "Comment a-t-il changé ?",
+								"spanish": "¿Cómo ha cambiado?",
+								"vietnamese": "Thay đổi như thế nào ạ?",
+								"thai": "มันเปลี่ยนไปยังไง?",
+								"hindi": "यह कैसे बदल गया?"
+							},
+							"emotion": "base",
+							"type": "speech"
+						},
+						{
+							"speaker": "ivy",
+							"content": {
+								"korean": "나무들이 마치… 조각된 것처럼 변하고 있어요. 살아있는 게 아니라, 전시물처럼.",
+								"english": "The trees are changing as if... carved. Not alive, but like exhibits.",
+								"japanese": "木々がまるで…彫刻されたように変わっています。生きているのではなく、展示物のように。",
+								"chinese": "树木仿佛……被雕刻了一样。不是活的，更像是展品。",
+								"french": "Les arbres changent comme s'ils... étaient sculptés. Pas vivants, mais comme des expositions.",
+								"spanish": "Los árboles están cambiando como si... hubieran sido tallados. No vivos, sino como exhibiciones.",
+								"vietnamese": "Cây cối đang thay đổi như thể... bị điêu khắc vậy. Không phải sinh vật sống, mà như vật trưng bày.",
+								"thai": "ต้นไม้กำลังเปลี่ยนไปราวกับ...ถูกแกะสลัก ไม่ใช่สิ่งมีชีวิต แต่เหมือนของจัดแสดง",
+								"hindi": "पेड़ ऐसे बदल रहे हैं जैसे... तराशे गए हों। जीवित नहीं, बल्कि प्रदर्शनियों की तरह।"
+							},
+							"emotion": "sad",
+							"type": "speech"
+						},
+						{
+							"speaker": "character_3",
+							"content": {
+								"korean": "전시물…?",
+								"english": "Exhibits...?",
+								"japanese": "展示物…？",
+								"chinese": "展品……？",
+								"french": "Des expositions...?",
+								"spanish": "¿Exposiciones...?",
+								"vietnamese": "Vật trưng bày...?",
+								"thai": "ของจัดแสดง...?",
+								"hindi": "प्रदर्शनियाँ...?"
+							},
+							"emotion": "base",
+							"type": "speech"
+						},
+						{
+							"speaker": "ivy",
+							"content": {
+								"korean": "그리고 이상한 목소리도 들려요. 아름답지만, 사람을 홀리는 소리.",
+								"english": "And I hear strange voices. Beautiful, but enchanting voices.",
+								"japanese": "そして、奇妙な声も聞こえます。美しいけれど、人を惑わす声。",
+								"chinese": "而且还能听到奇怪的声音。很美，却又魅惑人心。",
+								"french": "Et j'entends aussi des voix étranges. Belles, mais des voix qui ensorcellent.",
+								"spanish": "Y también oigo voces extrañas. Hermosas, pero voces que hechizan a la gente.",
+								"vietnamese": "Và tôi cũng nghe thấy những giọng nói kỳ lạ. Đẹp đẽ, nhưng là giọng nói mê hoặc lòng người.",
+								"thai": "และฉันก็ได้ยินเสียงแปลกๆ ด้วย สวยงาม แต่เป็นเสียงที่หลอกล่อผู้คน",
+								"hindi": "और मुझे अजीब आवाजें भी सुनाई देती हैं। सुंदर, लेकिन मनमोहक आवाजें।"
+							},
+							"type": "speech",
+							"emotion": "sad"
+						}
+					]
+				},
+				{
+					"id": 5,
+					"dialogue": [
+						{
+							"action": "enter",
+							"speaker": "ivy",
+							"duration_ms": 500,
+							"spot": [
+								3,
+								2
+							],
+							"type": "direction"
+						},
+						{
+							"type": "speech",
+							"emotion": "sad",
+							"speaker": "ivy",
+							"content": {
+								"korean": "여기서 보는 모든 것을 믿지 마세요.",
+								"english": "Don't believe everything you see here.",
+								"japanese": "ここで見るもの全てを信じないでください。",
+								"chinese": "不要相信你在这里看到的一切。",
+								"french": "Ne croyez pas tout ce que vous voyez ici.",
+								"spanish": "No creas todo lo que ves aquí.",
+								"vietnamese": "Đừng tin tất cả những gì bạn thấy ở đây.",
+								"thai": "อย่าเชื่อทุกสิ่งที่คุณเห็นที่นี่",
+								"hindi": "यहाँ जो कुछ भी आप देखते हैं उस पर विश्वास न करें।"
+							}
+						},
+						{
+							"speaker": "character_any",
+							"content": {
+								"korean": "환영인가요?",
+								"english": "Is it an illusion?",
+								"japanese": "幻ですか？",
+								"chinese": "是幻觉吗？",
+								"french": "Est-ce une illusion ?",
+								"spanish": "¿Es una ilusión?",
+								"vietnamese": "Là ảo ảnh sao?",
+								"thai": "มันเป็นภาพลวงตาหรือเปล่า?",
+								"hindi": "क्या यह एक भ्रम है?"
+							},
+							"type": "speech",
+							"emotion": "base"
+						},
+						{
+							"emotion": "sad",
+							"type": "speech",
+							"speaker": "ivy",
+							"content": {
+								"korean": "환영이 아니면서, 환영 같은 것들이에요.",
+								"english": "Not illusions, but like them.",
+								"japanese": "幻ではない、幻のようなものだ。",
+								"chinese": "不是幻影，却似幻影。",
+								"french": "Pas des illusions, mais elles en ont l'aspect.",
+								"spanish": "No son ilusiones, pero lo parecen.",
+								"vietnamese": "Không phải ảo ảnh, nhưng lại giống thế.",
+								"thai": "ไม่ใช่ภาพลวงตา แต่ก็เหมือนกัน",
+								"hindi": "भ्रम नहीं, पर भ्रम जैसे।"
+							}
+						},
+						{
+							"speaker": "character_4",
+							"content": {
+								"korean": "무슨 소리죠?",
+								"english": "What do you mean?",
+								"japanese": "何のことだ？",
+								"chinese": "什么意思？",
+								"french": "Que voulez-vous dire ?",
+								"spanish": "¿Qué dices?",
+								"vietnamese": "Ý bạn là gì?",
+								"thai": "อะไรนะ?",
+								"hindi": "क्या कह रहे हो?"
+							},
+							"type": "speech",
+							"emotion": "base"
+						},
+						{
+							"type": "speech",
+							"emotion": "sad",
+							"speaker": "ivy",
+							"content": {
+								"korean": "진실을 파헤치려 할수록… 더 깊은 공포에 빠질 거예요.",
+								"english": "The more you seek the truth... the deeper you'll sink into terror.",
+								"japanese": "真実を追うほど… 深い恐怖に落ちるだろう。",
+								"chinese": "越是探寻真相… 就会陷入更深的恐惧。",
+								"french": "Plus vous creuserez la vérité… plus vous plongerez dans l'horreur.",
+								"spanish": "Mientras más busques la verdad... más profundo caerás en el terror.",
+								"vietnamese": "Càng tìm sự thật… càng chìm sâu vào kinh hoàng.",
+								"thai": "ยิ่งค้นหาความจริง... ยิ่งตกสู่ความกลัวลึกซึ้งขึ้น",
+								"hindi": "जितना सच खोजोगे... उतना ही गहरे खौफ में डूबोगे।"
+							}
+						}
+					]
+				},
+				{
+					"id": 9,
+					"dialogue": [
+						{
+							"duration_ms": 500,
+							"spot": [
+								3,
+								2
+							],
+							"type": "direction",
+							"speaker": "ivy",
+							"action": "enter"
+						},
+						{
+							"speaker": "ivy",
+							"content": {
+								"korean": "이제 돌아갈 수 없어요.",
+								"english": "We can't go back now.",
+								"japanese": "もう引き返せない。",
+								"chinese": "回不去了。",
+								"french": "Impossible de faire demi-tour.",
+								"spanish": "Ya no hay vuelta atrás.",
+								"vietnamese": "Giờ không thể quay lại.",
+								"thai": "กลับไม่ได้แล้ว",
+								"hindi": "अब पीछे नहीं हट सकते।"
+							},
+							"type": "speech",
+							"emotion": "sad"
+						},
+						{
+							"speaker": "character_any",
+							"content": {
+								"korean": "…대체 무슨 일이 벌어지고 있는 거죠?",
+								"english": "...What in the world is going on?",
+								"japanese": "…一体何が起きているんだ？",
+								"chinese": "…究竟发生了什么？",
+								"french": "…Que se passe-t-il, bon sang ?",
+								"spanish": "...¿Qué está pasando aquí?",
+								"vietnamese": "...Chuyện gì đang xảy ra thế này?",
+								"thai": "...เกิดอะไรขึ้น?",
+								"hindi": "…आखिर क्या चल रहा है?"
+							},
+							"emotion": "base",
+							"type": "speech"
+						},
+						{
+							"speaker": "ivy",
+							"content": {
+								"korean": "이 숲은… 우리를 먹이로 삼으려는 것 같아요.",
+								"english": "This forest... I think it wants to prey on us.",
+								"japanese": "この森… 俺たちを餌にしようとしてるみたいだ。",
+								"chinese": "这片森林… 好像想把我们当成食物。",
+								"french": "Cette forêt... elle veut nous dévorer.",
+								"spanish": "Este bosque... parece que nos quiere de presa.",
+								"vietnamese": "Khu rừng này… dường như muốn ăn thịt chúng ta.",
+								"thai": "ป่านี้... ดูเหมือนจะต้องการเราเป็นเหยื่อ",
+								"hindi": "यह जंगल… हमें अपना भोजन बनाना चाहता है।"
+							},
+							"emotion": "sad",
+							"type": "speech"
+						},
+						{
+							"speaker": "character_1",
+							"content": {
+								"korean": "먹이…?",
+								"english": "Prey...?",
+								"japanese": "餌…？",
+								"chinese": "食物…？",
+								"french": "Nourriture...?",
+								"spanish": "¿Alimento...?",
+								"vietnamese": "Mồi…?",
+								"thai": "อาหาร...?",
+								"hindi": "भोजन…?"
+							},
+							"emotion": "angry",
+							"type": "speech"
+						},
+						{
+							"speaker": "ivy",
+							"content": {
+								"korean": "조심해요. 저 위에… '그것'이 기다리고 있어요.",
+								"english": "Watch out. Up ahead... 'It' is waiting.",
+								"japanese": "気をつけろ。あそこに… 'それ'が待ってる。",
+								"chinese": "小心。上面… '那个东西'在等着。",
+								"french": "Attention. Là-haut… 'il' nous attend.",
+								"spanish": "Cuidado. Arriba... 'Eso' espera.",
+								"vietnamese": "Cẩn thận. Ở trên… 'Thứ đó' đang đợi.",
+								"thai": "ระวัง. ข้างบน... 'มัน' กำลังรออยู่",
+								"hindi": "होशियार रहो। ऊपर… 'वो' इंतजार कर रहा है।"
+							},
+							"emotion": "sad",
+							"type": "speech"
+						}
+					]
+				},
+				{
+					"win_dialogue": [
+						{
+							"emotion": "base",
+							"type": "speech",
+							"speaker": "random_boss",
+							"content": {
+								"korean": "흥… 겨우 이 정도라니. 아직 너희는 내 컬렉션의 일부일 뿐.",
+								"english": "Hmph... Is that all? You're still just a part of my collection.",
+								"japanese": "フン… この程度か。お前たちはまだ私のコレクションの一部に過ぎない。",
+								"chinese": "哼… 就这点本事吗？你们不过是我收藏品的一部分。",
+								"french": "Hm... C'est tout ce que vous avez ? Vous ne faites encore que partie de ma collection.",
+								"spanish": "Mmm... ¿Eso es todo? Todavía sois solo una parte de mi colección.",
+								"vietnamese": "Hừm... Chỉ có thế thôi sao? Các ngươi vẫn chỉ là một phần trong bộ sưu tập của ta.",
+								"thai": "ฮึ่ม... แค่นี้เองเหรอ? พวกเจ้ายังคงเป็นเพียงส่วนหนึ่งของคอลเลกชันของข้าเท่านั้น.",
+								"hindi": "हम्म... बस इतना ही? तुम अभी भी मेरे संग्रह का सिर्फ एक हिस्सा हो।"
+							}
+						},
+						{
+							"speaker": "character_any",
+							"content": {
+								"korean": "컬렉션…? 대체 무슨 소리지?",
+								"english": "Collection...? What does that even mean?",
+								"japanese": "コレクション…？一体どういう意味だ？",
+								"chinese": "收藏品…？那到底是什么意思？",
+								"french": "Collection...? Qu'est-ce que ça veut dire ?",
+								"spanish": "¿Colección...? ¿Qué significa eso?",
+								"vietnamese": "Bộ sưu tập...? Rốt cuộc là ý gì?",
+								"thai": "คอลเลกชัน...? หมายความว่าอะไรกันแน่?",
+								"hindi": "संग्रह...? इसका क्या मतलब है?"
+							},
+							"emotion": "base",
+							"type": "speech"
+						},
+						{
+							"type": "speech",
+							"emotion": "base",
+							"speaker": "random_boss",
+							"content": {
+								"korean": "곧 알게 될 거다. 이 숲의 진정한 의미를.",
+								"english": "You'll find out soon enough. The true meaning of this forest.",
+								"japanese": "すぐに分かるだろう。この森の真の意味を。",
+								"chinese": "你们很快就会明白。这片森林真正的意义。",
+								"french": "Vous le découvrirez bien assez tôt. La véritable signification de cette forêt.",
+								"spanish": "Pronto lo descubriréis. El verdadero significado de este bosque.",
+								"vietnamese": "Ngươi sẽ sớm biết thôi. Ý nghĩa thực sự của khu rừng này.",
+								"thai": "เจ้าจะได้รู้ในไม่ช้า. ความหมายที่แท้จริงของป่าแห่งนี้.",
+								"hindi": "तुम्हें जल्द ही पता चलेगा। इस जंगल का असली मतलब।"
+							}
+						},
+						{
+							"type": "speech",
+							"emotion": "base",
+							"speaker": "narrator",
+							"content": {
+								"korean": "정체 모를 적은 쓰러졌다. 그러나 숲의 속삭임은 멈추지 않았다.",
+								"english": "The unknown enemy fell. But the whispers of the forest did not cease.",
+								"japanese": "正体不明の敵は倒れた。しかし、森の囁きは止まらなかった。",
+								"chinese": "身份不明的敌人倒下了。然而，森林的低语并未停止。",
+								"french": "L'ennemi inconnu est tombé. Mais les murmures de la forêt ne se sont pas tus.",
+								"spanish": "El enemigo desconocido cayó. Pero los susurros del bosque no cesaron.",
+								"vietnamese": "Kẻ địch vô danh đã gục ngã. Nhưng tiếng thì thầm của rừng vẫn không ngừng.",
+								"thai": "ศัตรูที่ไม่รู้จักล้มลง. แต่เสียงกระซิบของป่าก็ยังไม่หยุดนิ่ง.",
+								"hindi": "अज्ञात शत्रु गिर गया। लेकिन जंगल की फुसफुसाहट नहीं रुकी।"
+							}
+						},
+						{
+							"speaker": "narrator",
+							"content": {
+								"korean": "진실을 향한 탐험은, 이제 시작일 뿐이었다.",
+								"english": "The exploration for truth had only just begun.",
+								"japanese": "真実を求める探求は、まだ始まったばかりだった。",
+								"chinese": "对真相的探索，才刚刚开始。",
+								"french": "La quête de la vérité ne faisait que commencer.",
+								"spanish": "La exploración en busca de la verdad, apenas había comenzado.",
+								"vietnamese": "Cuộc thám hiểm tìm kiếm sự thật, chỉ mới bắt đầu.",
+								"thai": "การสำรวจเพื่อค้นหาความจริง เพิ่งจะเริ่มต้นขึ้นเท่านั้น.",
+								"hindi": "सत्य की खोज अभी शुरू ही हुई थी।"
+							},
+							"type": "speech",
+							"emotion": "base"
+						}
+					],
+					"dialogue": [
+						{
+							"duration_ms": 500,
+							"type": "direction",
+							"spot": [
+								3,
+								2
+							],
+							"action": "enter",
+							"speaker": "ivy"
+						},
+						{
+							"speaker": "ivy",
+							"content": {
+								"korean": "오지 마요! 여긴… 함정이에요!",
+								"english": "Stay back! It's... a trap here!",
+								"japanese": "来るな！ここは… 罠だ！",
+								"chinese": "别过来！这里是… 个陷阱！",
+								"french": "Ne venez pas ! C'est… un piège !",
+								"spanish": "¡No vengáis! ¡Esto es… una trampa!",
+								"vietnamese": "Đừng đến! Đây là… cái bẫy!",
+								"thai": "อย่ามา! ที่นี่... กับดัก!",
+								"hindi": "मत आना! यहाँ… जाल है!"
+							},
+							"emotion": "sad",
+							"type": "speech"
+						},
+						{
+							"emotion": "base",
+							"type": "speech",
+							"speaker": "narrator",
+							"content": {
+								"korean": "거대한 그림자가 숲의 심장에서 나타났다.",
+								"english": "A giant shadow appeared from the forest's heart.",
+								"japanese": "巨大な影が森の中心から現れた。",
+								"chinese": "一个巨大的影子从森林之心显现。",
+								"french": "Une ombre gigantesque surgit du cœur de la forêt.",
+								"spanish": "Una sombra gigante apareció desde el corazón del bosque.",
+								"vietnamese": "Một bóng đen khổng lồ xuất hiện từ trung tâm khu rừng.",
+								"thai": "เงาขนาดยักษ์ปรากฏจากใจกลางป่า",
+								"hindi": "जंगल के दिल से एक विशाल परछाई उभरी।"
+							}
+						},
+						{
+							"type": "direction",
+							"duration_ms": 400,
+							"direction": "down",
+							"speaker": "ivy",
+							"action": "exit"
+						},
+						{
+							"speaker": "random_boss",
+							"content": {
+								"korean": "왔구나. 나의 새로운 전시물이여.",
+								"english": "You've arrived. My new exhibit.",
+								"japanese": "来たか。我が新たな展示物よ。",
+								"chinese": "你来了。我的新展品。",
+								"french": "Vous voilà. Ma nouvelle exposition.",
+								"spanish": "Has llegado. Mi nueva exposición.",
+								"vietnamese": "Ngươi đã đến rồi. Vật trưng bày mới của ta.",
+								"thai": "เจ้ามาแล้วสินะ. นิทรรศการใหม่ของข้า.",
+								"hindi": "तुम आ गए। मेरी नई प्रदर्शनी।"
+							},
+							"emotion": "base",
+							"type": "speech"
+						},
+						{
+							"speaker": "character_any",
+							"content": {
+								"korean": "네가 이 모든 걸 꾸민 건가?",
+								"english": "Did you arrange all of this?",
+								"japanese": "この全てを仕組んだのはお前か？",
+								"chinese": "这一切都是你安排的吗？",
+								"french": "C'est vous qui avez tout orchestré ?",
+								"spanish": "¿Tú has orquestado todo esto?",
+								"vietnamese": "Ngươi đã dàn xếp tất cả chuyện này sao?",
+								"thai": "เจ้าเป็นคนจัดฉากทั้งหมดนี้หรือ?",
+								"hindi": "क्या यह सब तुमने ही किया है?"
+							},
+							"emotion": "angry",
+							"type": "speech"
+						},
+						{
+							"speaker": "random_boss",
+							"content": {
+								"korean": "이 숲의 진정한 아름다움을 보여줄 시간이다.",
+								"english": "It's time to reveal the true beauty of this forest.",
+								"japanese": "この森の真の美しさを見せる時が来た。",
+								"chinese": "是时候展现这片森林真正的美丽了。",
+								"french": "Il est temps de révéler la véritable beauté de cette forêt.",
+								"spanish": "Es hora de mostrar la verdadera belleza de este bosque.",
+								"vietnamese": "Đã đến lúc để lộ vẻ đẹp thực sự của khu rừng này.",
+								"thai": "ได้เวลาเผยความงามที่แท้จริงของป่าแห่งนี้แล้ว.",
+								"hindi": "इस जंगल की सच्ची सुंदरता दिखाने का समय आ गया है।"
+							},
+							"emotion": "base",
+							"type": "speech"
+						}
+					],
+					"lose_dialogue": [
+						{
+							"speaker": "narrator",
+							"content": {
+								"korean": "정체 모를 그림자에 의해 모든 것이 뒤덮였다.",
+								"english": "Everything was engulfed by an unknown shadow.",
+								"japanese": "全てが正体不明の影に覆われた。",
+								"chinese": "一切都被未知的阴影所笼罩。",
+								"french": "Tout fut englouti par une ombre inconnue.",
+								"spanish": "Todo fue cubierto por una sombra desconocida.",
+								"vietnamese": "Mọi thứ đều bị bao phủ bởi một bóng tối vô danh.",
+								"thai": "ทุกสิ่งถูกปกคลุมด้วยเงาที่ไม่อาจระบุได้.",
+								"hindi": "सब कुछ एक अज्ञात छाया से ढक गया।"
+							},
+							"type": "speech",
+							"emotion": "base"
+						},
+						{
+							"type": "speech",
+							"emotion": "base",
+							"speaker": "random_boss",
+							"content": {
+								"korean": "아름다운 절망이로군. 역시 최고의 재료야.",
+								"english": "Beautiful despair. Truly the finest material.",
+								"japanese": "美しい絶望だな。やはり最高の材料だ。",
+								"chinese": "美丽的绝望。果然是最好的素材。",
+								"french": "Beau désespoir. Vraiment le meilleur matériau.",
+								"spanish": "Hermosa desesperación. Realmente el mejor material.",
+								"vietnamese": "Nỗi tuyệt vọng đẹp đẽ. Quả là nguyên liệu tuyệt vời nhất.",
+								"thai": "ความสิ้นหวังที่งดงาม. ช่างเป็นวัตถุดิบที่ดีที่สุดจริงๆ.",
+								"hindi": "सुंदर निराशा। वास्तव में बेहतरीन सामग्री।"
+							}
+						},
+						{
+							"emotion": "angry",
+							"type": "speech",
+							"speaker": "character_any",
+							"content": {
+								"korean": "…이대로 끝낼 순 없어!",
+								"english": "...Can't end it like this!",
+								"japanese": "…このままでは終われない！",
+								"chinese": "…不能就这样结束！",
+								"french": "...Je ne peux pas finir comme ça !",
+								"spanish": "...¡No puedo terminar así!",
+								"vietnamese": "...Không thể kết thúc như thế này!",
+								"thai": "...จะจบแบบนี้ไม่ได้!",
+								"hindi": "...मैं इसे ऐसे ख़त्म नहीं कर सकता!"
+							}
+						}
+					],
+					"id": 15
+				}
+			],
+			"prologue": {
+				"korean": [
+					"세계수 숲. 태고의 존재가 잠든 땅.",
+					"겉모습은 아름다웠지만, 모든 것이 뒤틀려 있었다.",
+					"이상한 소문. 섬뜩한 환영.",
+					"숲은 속삭였다. 진실을 파헤치라고.",
+					"그러나 그 속삭임은, 덫의 유혹이었다."
+				],
+				"english": [
+					"World Tree Forest. Land where ancient beings slumber.",
+					"Beautiful on the surface, but everything was distorted.",
+					"Strange rumors. Chilling apparitions.",
+					"The forest whispered. Unearth the truth.",
+					"But that whisper was the lure of a trap."
+				],
+				"japanese": [
+					"世界樹の森。太古の存在が眠る地。",
+					"外見は美しかったが、すべてが歪んでいた。",
+					"奇妙な噂。不気味な幻影。",
+					"森は囁いた。真実を暴けと。",
+					"しかしその囁きは、罠の誘惑だった。"
+				],
+				"chinese": [
+					"世界树之森。远古存在沉睡之地。",
+					"表面美丽，但一切都已扭曲。",
+					"奇怪的谣言。阴森的幻影。",
+					"森林低语。挖掘真相。",
+					"然而那低语，却是陷阱的诱惑。"
+				],
+				"french": [
+					"La Forêt de l'Arbre-Monde. Terre où les êtres antiques sommeillent.",
+					"En apparence magnifique, mais tout était déformé.",
+					"Étranges rumeurs. Visions glaçantes.",
+					"La forêt chuchotait. Déterre la vérité.",
+					"Mais ce murmure était l'attrait d'un piège."
+				],
+				"spanish": [
+					"Bosque del Árbol del Mundo. Tierra donde duermen seres ancestrales.",
+					"Su apariencia era hermosa, pero todo estaba retorcido.",
+					"Rumores extraños. Visiones espeluznantes.",
+					"El bosque susurraba. Desentierra la verdad.",
+					"Pero ese susurro era la seducción de una trampa."
+				],
+				"vietnamese": [
+					"Rừng Cây Thế Giới. Vùng đất nơi những thực thể cổ xưa đang ngủ say.",
+					"Vẻ ngoài xinh đẹp, nhưng mọi thứ đều bị bóp méo.",
+					"Tin đồn lạ lùng. Ảo ảnh rợn người.",
+					"Rừng thì thầm. Hãy khám phá sự thật.",
+					"Nhưng lời thì thầm đó, là sự cám dỗ của một cái bẫy."
+				],
+				"thai": [
+					"ป่าต้นไม้โลก. ดินแดนที่สิ่งมีชีวิตโบราณหลับใหล.",
+					"รูปลักษณ์ภายนอกสวยงาม แต่ทุกสิ่งบิดเบี้ยว.",
+					"ข่าวลือแปลก ๆ. ภาพหลอนน่าขนลุก.",
+					"ป่ากระซิบ. ให้ค้นหาความจริง.",
+					"แต่เสียงกระซิบนั้น, คือกับดักล่อลวง."
+				],
+				"hindi": [
+					"विश्व वृक्ष वन। वह भूमि जहाँ प्राचीन जीव सोए हुए हैं।",
+					"ऊपर से सुंदर, पर सब कुछ विकृत था।",
+					"अजीब अफवाहें। भयानक प्रेत।",
+					"जंगल फुसफुसाया। सत्य को उजागर करो।",
+					"लेकिन वह फुसफुसाहट, एक जाल का प्रलोभन थी।"
+				]
+			}
+		},
+		{
+			"scenario_id": "forest_luminaflutter_35_02",
+			"order": 2,
+			"act": "rising",
+			"theme": "forest",
+			"actors": {
+				"bracken": {
+					"id": "mon_48cf29be-dbc0-44b1-bbb3-ecda1d14742d",
+					"name": {
+						"korean": "브라켄",
+						"english": "Bracken",
+						"japanese": "ブラッケン",
+						"chinese": "布莱肯",
+						"french": "Bracken",
+						"spanish": "Bracken",
+						"vietnamese": "Bracken",
+						"thai": "แบรกเคน",
+						"hindi": "ब्रैकेन"
+					},
+					"description": "",
+					"face_image_url": "https://imagedelivery.net/WTEqQNGFb-l-IHS6IGnzUQ/5b494da6-ffd7-43d3-7171-7ac84bdfe400/public",
+					"battle_sprite_url": "https://imagedelivery.net/WTEqQNGFb-l-IHS6IGnzUQ/4a7a1b62-d7a7-4a21-ffd5-fa9b5de82100/public"
+				}
+			},
+			"boss": {
+				"pool_id": "random_boss"
+			},
+			"rooms": [
+				{
+					"dialogue": [
+						{
+							"speaker": "narrator",
+							"emotion": "base",
+							"content": {
+								"korean": "숲은 더욱 깊어졌다. 화려한 빛깔의 환영들이 아른거렸다.",
+								"english": "The forest deepened. Vivid illusions shimmered.",
+								"japanese": "森はさらに深まった。鮮やかな色の幻影が揺らめいた。",
+								"chinese": "森林更深了。绚丽的幻象闪烁不定。",
+								"french": "La forêt s'épaississait. Des illusions aux couleurs vives scintillaient.",
+								"spanish": "El bosque se hizo más profundo. Ilusiones de colores vivos parpadeaban.",
+								"vietnamese": "Rừng càng sâu. Những ảo ảnh rực rỡ lấp lánh.",
+								"thai": "ป่าลึกเข้าไปอีก ภาพลวงตาหลากสีสันพร่ามัว",
+								"hindi": "जंगल और गहरा हो गया। चमकीले रंग के भ्रम टिमटिमा रहे थे।"
+							},
+							"type": "speech"
+						},
+						{
+							"emotion": "base",
+							"speaker": "character_any",
+							"content": {
+								"korean": "방금… 뭔가 지나간 것 같은데.",
+								"english": "Something just passed by...",
+								"japanese": "今…何かが通り過ぎたような。",
+								"chinese": "刚才……好像有什么东西过去了。",
+								"french": "Quelque chose vient de passer, il me semble.",
+								"spanish": "Algo acaba de pasar...",
+								"vietnamese": "Vừa rồi… hình như có gì đó đi qua.",
+								"thai": "เมื่อกี้... เหมือนมีอะไรบางอย่างผ่านไป",
+								"hindi": "अभी-अभी... कुछ गुजरा है, ऐसा लगता है।"
+							},
+							"type": "speech"
+						},
+						{
+							"speaker": "bracken",
+							"type": "direction",
+							"action": "enter",
+							"duration_ms": 500,
+							"spot": [
+								3,
+								2
+							]
+						},
+						{
+							"type": "speech",
+							"content": {
+								"korean": "흐읍… 흐읍… 여긴… 원래 이렇지 않았어.",
+								"english": "Hmph... Hmph... This place... It wasn't like this before.",
+								"japanese": "はぁ…はぁ…ここは…元々こんなじゃなかった。",
+								"chinese": "呼……呼……这里……以前不是这样的。",
+								"french": "Hmph... Hmph... Cet endroit... Il n'était pas comme ça avant.",
+								"spanish": "Uf... Uf... Este lugar... No era así antes.",
+								"vietnamese": "Hức... Hức... Chỗ này... Ban đầu không như vậy.",
+								"thai": "เฮือก... เฮือก... ที่นี่... แต่ก่อนไม่เป็นแบบนี้",
+								"hindi": "हुंह... हुंह... यह जगह... पहले ऐसी नहीं थी।"
+							},
+							"emotion": "sad",
+							"speaker": "bracken"
+						},
+						{
+							"speaker": "character_any",
+							"emotion": "base",
+							"content": {
+								"korean": "당신은 누구시죠? 여기서 뭘 하고 있나요?",
+								"english": "Who are you? What are you doing here?",
+								"japanese": "あなたは誰ですか？ここで何をしていますか？",
+								"chinese": "你 是谁？在这里做什么？",
+								"french": "Qui êtes-vous ? Que faites-vous ici ?",
+								"spanish": "¿Quién es usted? ¿Qué hace aquí?",
+								"vietnamese": "Ông/bà là ai? Đang làm gì ở đây?",
+								"thai": "คุณคือใคร? มาทำอะไรที่นี่?",
+								"hindi": "आप कौन हैं? यहाँ क्या कर रहे हैं?"
+							},
+							"type": "speech"
+						},
+						{
+							"speaker": "bracken",
+							"emotion": "sad",
+							"type": "speech",
+							"content": {
+								"korean": "난 브라켄… 약초를 캐는 사람인데… 며칠 전부터 숲이 이상해.",
+								"english": "I'm Bracken... an herb gatherer... The forest has been strange for days.",
+								"japanese": "私はブラッケン…薬草採りです…数日前から森がおかしい。",
+								"chinese": "我 是布拉肯……一个采药人……几天前开始森林就很奇怪。",
+								"french": "Je suis Bracken… un herboriste… La forêt est étrange depuis quelques jours.",
+								"spanish": "Soy Bracken... un recolector de hierbas... El bosque ha estado extraño desde hace días.",
+								"vietnamese": "Tôi là Bracken... một người hái thuốc... Rừng đã lạ lùng mấy ngày nay rồi.",
+								"thai": "ฉันชื่อแบร็คเคน... คนเก็บสมุนไพร... ป่ามันแปลกไปตั้งแต่เมื่อหลายวันก่อนแล้ว",
+								"hindi": "मैं ब्रैकेन हूँ... एक जड़ी-बूटी इकट्ठा करने वाला... जंगल कई दिनों से अजीब है।"
+							}
+						},
+						{
+							"emotion": "sad",
+							"speaker": "bracken",
+							"content": {
+								"korean": "자꾸… 환영이 보여. 진짜인지 가짜인지 모르겠어.",
+								"english": "I keep... seeing illusions. I don't know if they're real or fake.",
+								"japanese": "度々…幻影が見える。本物か偽物か分からない。",
+								"chinese": "我总是……看到幻象。分不清是真是假。",
+								"french": "Je continue… à voir des illusions. Je ne sais pas si elles sont réelles ou fausses.",
+								"spanish": "Sigo... viendo ilusiones. No sé si son reales o falsas.",
+								"vietnamese": "Tôi cứ... thấy ảo ảnh. Không biết là thật hay giả nữa.",
+								"thai": "ฉันเห็น... ภาพลวงตาอยู่เรื่อยๆ ไม่รู้ว่าจริงหรือปลอม",
+								"hindi": "मुझे बार-बार... भ्रम दिखते हैं। मुझे नहीं पता कि वे असली हैं या नकली।"
+							},
+							"type": "speech"
+						}
+					],
+					"id": 1
+				},
+				{
+					"id": 3,
+					"dialogue": [
+						{
+							"type": "direction",
+							"speaker": "bracken",
+							"action": "enter",
+							"duration_ms": 500,
+							"spot": [
+								2,
+								3
+							]
+						},
+						{
+							"emotion": "sad",
+							"speaker": "bracken",
+							"type": "speech",
+							"content": {
+								"korean": "또… 또 저거 보여? 저 빛… 날 따라오는 것 같지 않아?",
+								"english": "Again... Do you see that again? That light... Doesn't it seem to be following me?",
+								"japanese": "また… またあれが見える？ あの光… 私を追いかけているように見えない？",
+								"chinese": "又… 又看到那个了吗？那束光… 它是不是在跟着我？",
+								"french": "Encore... Tu le revois ? Cette lumière... On dirait qu'elle me suit, non ?",
+								"spanish": "¿Otra vez...? ¿Ves eso de nuevo? Esa luz... ¿No crees que me está siguiendo?",
+								"vietnamese": "Lại… lại thấy nó nữa rồi? Ánh sáng đó… không phải nó đang theo dõi tôi sao?",
+								"thai": "อีกแล้ว... คุณเห็นมันอีกแล้วเหรอ? แสงนั่น... ไม่เหมือนมันกำลังตามฉันอยู่เหรอ?",
+								"hindi": "फिर... फिर से वो दिख रहा है? वो रोशनी... क्या वो मेरा पीछा नहीं कर रही?"
+							}
+						},
+						{
+							"content": {
+								"korean": "아무것도 안 보이는데요?",
+								"english": "I don't see anything.",
+								"japanese": "何も見えませんけど？",
+								"chinese": "我什么都没看到啊？",
+								"french": "Je ne vois rien.",
+								"spanish": "No veo nada.",
+								"vietnamese": "Tôi không thấy gì cả.",
+								"thai": "ฉันไม่เห็นอะไรเลยนี่?",
+								"hindi": "मुझे कुछ नहीं दिख रहा है।"
+							},
+							"type": "speech",
+							"speaker": "character_1",
+							"emotion": "base"
+						},
+						{
+							"speaker": "bracken",
+							"emotion": "angry",
+							"content": {
+								"korean": "아니야! 분명히 있었어! 방금… 내 옆을 스쳐 지나갔다고!",
+								"english": "No! It was definitely there! Just now... it brushed past me!",
+								"japanese": "違う！確かにあった！今… 私のそばを通り過ぎたんだ！",
+								"chinese": "不！它明明就在那儿！刚才… 它擦着我的身边过去了！",
+								"french": "Non ! C'était bien là ! Tout à l'heure... ça m'a frôlé !",
+								"spanish": "¡No! ¡Definitivamente estaba ahí! ¡Justo ahora... pasó rozándome!",
+								"vietnamese": "Không! Chắc chắn là có! Vừa rồi… nó lướt qua bên cạnh tôi!",
+								"thai": "ไม่ใช่! มันอยู่ตรงนั้นแน่! เมื่อกี้... มันเฉียดข้างฉันไปเลย!",
+								"hindi": "नहीं! वो पक्का वहीं था! अभी-अभी... मेरे बगल से होकर गुजरा!"
+							},
+							"type": "speech"
+						},
+						{
+							"emotion": "base",
+							"speaker": "character_2",
+							"content": {
+								"korean": "숲이 당신을 놀리는 것 같네요.",
+								"english": "The forest seems to be toying with you.",
+								"japanese": "森があなたをからかっているようですね。",
+								"chinese": "森林好像在捉弄你呢。",
+								"french": "La forêt semble se moquer de vous.",
+								"spanish": "Parece que el bosque se está burlando de ti.",
+								"vietnamese": "Có vẻ khu rừng đang trêu chọc bạn.",
+								"thai": "ดูเหมือนป่ากำลังแกล้งคุณอยู่เลยนะ.",
+								"hindi": "लगता है जंगल आपको चिढ़ा रहा है।"
+							},
+							"type": "speech"
+						},
+						{
+							"content": {
+								"korean": "놀리는 게 아니야… 숲이… 우리를 삼키려고 해.",
+								"english": "It's not toying... The forest... it's trying to swallow us.",
+								"japanese": "からかっているんじゃない… 森が… 私たちを飲み込もうとしているんだ。",
+								"chinese": "不是捉弄… 森林… 它想吞噬我们。",
+								"french": "Ce n'est pas une moquerie... La forêt... elle essaie de nous engloutir.",
+								"spanish": "No se está burlando... El bosque... está intentando tragarnos.",
+								"vietnamese": "Không phải trêu chọc… Khu rừng… nó đang muốn nuốt chửng chúng ta.",
+								"thai": "มันไม่ใช่การแกล้งหรอก... ป่ากำลัง... จะกลืนกินพวกเรา.",
+								"hindi": "ये चिढ़ा नहीं रहा... जंगल... हमें निगलने की कोशिश कर रहा है।"
+							},
+							"type": "speech",
+							"speaker": "bracken",
+							"emotion": "sad"
+						}
+					]
+				},
+				{
+					"id": 5,
+					"dialogue": [
+						{
+							"type": "direction",
+							"speaker": "bracken",
+							"spot": [
+								4,
+								2
+							],
+							"action": "enter",
+							"duration_ms": 500
+						},
+						{
+							"content": {
+								"korean": "여긴… 내가 어릴 때 뛰어놀던 곳인데… 전부 바뀌었어.",
+								"english": "This place... it's where I used to play as a child... everything's changed.",
+								"japanese": "ここは… 私が子供の頃に駆け回っていた場所なのに… 全部変わってしまった。",
+								"chinese": "这里… 是我小时候玩耍的地方… 全都变了。",
+								"french": "Ici... c'est là où je jouais quand j'étais enfant... tout a changé.",
+								"spanish": "Aquí... es donde solía jugar de niño... todo ha cambiado.",
+								"vietnamese": "Nơi này… là nơi tôi từng vui chơi hồi nhỏ… tất cả đã thay đổi rồi.",
+								"thai": "ที่นี่... คือที่ที่ฉันเคยวิ่งเล่นตอนเด็ก... ทุกอย่างเปลี่ยนไปหมดแล้ว.",
+								"hindi": "ये जगह... जहाँ मैं बचपन में खेला करता था... सब कुछ बदल गया है।"
+							},
+							"type": "speech",
+							"emotion": "sad",
+							"speaker": "bracken"
+						},
+						{
+							"type": "speech",
+							"content": {
+								"korean": "환영 때문에 혼란스러우신가 봐요.",
+								"english": "You seem confused by illusions.",
+								"japanese": "幻覚のせいで混乱されているようですね。",
+								"chinese": "您好像被幻象迷惑了。",
+								"french": "Vous semblez être troublé par des illusions.",
+								"spanish": "Parece que las ilusiones te están confundiendo.",
+								"vietnamese": "Có vẻ bạn đang bối rối vì ảo ảnh.",
+								"thai": "คุณคงสับสนเพราะภาพหลอนสินะ.",
+								"hindi": "लगता है आप भ्रम के कारण भ्रमित हैं।"
+							},
+							"speaker": "character_any",
+							"emotion": "base"
+						},
+						{
+							"speaker": "bracken",
+							"emotion": "sad",
+							"content": {
+								"korean": "아니야… 이건 단순한 환상이 아니야. 너무… 너무 생생해.",
+								"english": "No... This isn't just a simple illusion. It's too... too vivid.",
+								"japanese": "違う… これは単なる幻じゃない。あまりにも… あまりにも鮮明だ。",
+								"chinese": "不… 这不是简单的幻觉。太… 太真实了。",
+								"french": "Non... Ce n'est pas une simple illusion. C'est trop... trop vivant.",
+								"spanish": "No... Esto no es una simple ilusión. Es demasiado... demasiado vívido.",
+								"vietnamese": "Không… Đây không phải là ảo ảnh đơn thuần. Nó quá… quá sống động.",
+								"thai": "ไม่หรอก... นี่ไม่ใช่แค่ภาพลวงตาธรรมดา. มัน... มันสมจริงเกินไป.",
+								"hindi": "नहीं... ये सिर्फ एक भ्रम नहीं है। ये बहुत... बहुत जीवंत है।"
+							},
+							"type": "speech"
+						},
+						{
+							"content": {
+								"korean": "마치… 다른 세상이 여기 투영되는 것 같아.",
+								"english": "It's as if... another world is being projected here.",
+								"japanese": "まるで… 別の世界がここに投影されているようだ。",
+								"chinese": "就像… 另一个世界被投射到这里一样。",
+								"french": "C'est comme si... un autre monde se projetait ici.",
+								"spanish": "Es como si... otro mundo se estuviera proyectando aquí.",
+								"vietnamese": "Cứ như… một thế giới khác đang được chiếu rọi vào đây vậy.",
+								"thai": "เหมือนกับว่า... โลกอื่นกำลังฉายภาพมาที่นี่เลย.",
+								"hindi": "जैसे कि... कोई और दुनिया यहाँ प्रक्षेपित हो रही है।"
+							},
+							"type": "speech",
+							"speaker": "bracken",
+							"emotion": "sad"
+						},
+						{
+							"emotion": "base",
+							"speaker": "character_3",
+							"content": {
+								"korean": "투영이라니… 그럼 우리가 보는 게 실제라는 건가요?",
+								"english": "Projection... So what we're seeing is real?",
+								"japanese": "投影だって… じゃあ、私たちが見ているのは現実だっていうの？",
+								"chinese": "投射… 那我们看到的都是真的吗？",
+								"french": "Projection... Alors ce que nous voyons est réel ?",
+								"spanish": "¿Proyección...? Entonces, ¿lo que estamos viendo es real?",
+								"vietnamese": "Chiếu rọi sao… Vậy là những gì chúng ta đang thấy là thật ư?",
+								"thai": "การฉายภาพงั้นเหรอ... งั้นสิ่งที่เราเห็นนี่คือของจริงเหรอ?",
+								"hindi": "प्रक्षेपण... तो क्या जो हम देख रहे हैं वो सच है?"
+							},
+							"type": "speech"
+						},
+						{
+							"speaker": "bracken",
+							"emotion": "sad",
+							"type": "speech",
+							"content": {
+								"korean": "모르겠어… 뭘 믿어야 할지… 이제 나도 내가 누군지 모르겠어….",
+								"english": "I don't know... what to believe... Now I don't even know who I am anymore...",
+								"japanese": "分からない…何を信じればいいのか…もう自分が誰なのかも分からない…。",
+								"chinese": "我不知道…该相信什么…现在我甚至不知道我是谁了…。",
+								"french": "Je ne sais pas… que croire… Maintenant, je ne sais même plus qui je suis…",
+								"spanish": "No lo sé… qué creer… Ahora ni siquiera sé quién soy…",
+								"vietnamese": "Tôi không biết… phải tin vào điều gì… Bây giờ tôi còn không biết mình là ai nữa…",
+								"thai": "ฉันไม่รู้…ว่าจะเชื่ออะไรดี…ตอนนี้ฉันไม่รู้ด้วยซ้ำว่าฉันเป็นใครแล้ว…",
+								"hindi": "मुझे नहीं पता… क्या मानना है… अब तो मुझे ये भी नहीं पता कि मैं कौन हूँ…"
+							}
+						}
+					]
+				},
+				{
+					"dialogue": [
+						{
+							"type": "direction",
+							"speaker": "bracken",
+							"duration_ms": 500,
+							"action": "enter",
+							"spot": [
+								3,
+								2
+							]
+						},
+						{
+							"content": {
+								"korean": "가면 안 돼… 더 깊이 들어가면… 돌아올 수 없어.",
+								"english": "Don't go... If you go deeper... you can't come back.",
+								"japanese": "行かないで…もっと深く行けば…戻って来られない。",
+								"chinese": "别去…如果再深入…就回不来了。",
+								"french": "N'y va pas… Si tu t'enfonces plus profondément… tu ne pourras plus revenir.",
+								"spanish": "No vayas… Si te adentras más… no podrás volver.",
+								"vietnamese": "Đừng đi… Nếu đi sâu hơn nữa… sẽ không thể quay lại đâu.",
+								"thai": "อย่าไปนะ…ถ้าเข้าไปลึกกว่านี้…จะกลับมาไม่ได้แล้วนะ",
+								"hindi": "मत जाओ… अगर तुम और गहरे गए… तो वापस नहीं आ पाओगे।"
+							},
+							"type": "speech",
+							"emotion": "sad",
+							"speaker": "bracken"
+						},
+						{
+							"emotion": "base",
+							"speaker": "character_any",
+							"type": "speech",
+							"content": {
+								"korean": "우린 진실을 찾아야 해요.",
+								"english": "We must find the truth.",
+								"japanese": "私たちは真実を見つけなければなりません。",
+								"chinese": "我们必须找到真相。",
+								"french": "Nous devons trouver la vérité.",
+								"spanish": "Debemos encontrar la verdad.",
+								"vietnamese": "Chúng ta phải tìm ra sự thật.",
+								"thai": "เราต้องค้นหาความจริง",
+								"hindi": "हमें सच ढूंढना होगा।"
+							}
+						},
+						{
+							"type": "speech",
+							"content": {
+								"korean": "진실? 진실이… 뭔데? 보이는 게 진짜가 아니라면… 뭘 믿어야 해?",
+								"english": "Truth? What is... truth? If what we see isn't real... what should we believe?",
+								"japanese": "真実？真実って…何？見えているものが本当じゃないなら…何を信じればいいの？",
+								"chinese": "真相？真相…是什么？如果眼前所见并非真实…那该相信什么？",
+								"french": "La vérité ? Qu'est-ce que… la vérité ? Si ce que l'on voit n'est pas réel… que doit-on croire ?",
+								"spanish": "¿Verdad? ¿Qué es… la verdad? Si lo que vemos no es real… ¿qué debemos creer?",
+								"vietnamese": "Sự thật? Sự thật là… gì cơ? Nếu những gì nhìn thấy không phải là thật… thì phải tin vào điều gì?",
+								"thai": "ความจริง? ความจริงคือ…อะไร? ถ้าสิ่งที่เห็นไม่ใช่เรื่องจริง…เราควรเชื่ออะไร?",
+								"hindi": "सच? सच क्या है…? अगर जो दिख रहा है वो असली नहीं है… तो क्या मानना चाहिए?"
+							},
+							"speaker": "bracken",
+							"emotion": "sad"
+						},
+						{
+							"emotion": "base",
+							"speaker": "character_4",
+							"content": {
+								"korean": "당신은… 여기서 뭘 기다리고 있는 거죠?",
+								"english": "What are you... waiting for here?",
+								"japanese": "あなたは…ここで何を待っているのですか？",
+								"chinese": "你…在这里等什么？",
+								"french": "Qu'attendez-vous… ici ?",
+								"spanish": "¿Qué estás… esperando aquí?",
+								"vietnamese": "Bạn… đang đợi điều gì ở đây vậy?",
+								"thai": "คุณ…กำลังรออะไรอยู่ที่นี่?",
+								"hindi": "तुम… यहाँ क्या इंतजार कर रहे हो?"
+							},
+							"type": "speech"
+						},
+						{
+							"emotion": "sad",
+							"speaker": "bracken",
+							"type": "speech",
+							"content": {
+								"korean": "나도… 내가 뭘 기다리는지 모르겠어. 그냥… 너무 무서워…",
+								"english": "I don't know… what I'm waiting for either. It's just… I'm so scared…",
+								"japanese": "私も…何を待っているのか分からない。ただ…とても怖い…。",
+								"chinese": "我也不知道…我在等什么。只是…太害怕了…。",
+								"french": "Je ne sais pas non plus… ce que j'attends. C'est juste… j'ai tellement peur…",
+								"spanish": "Yo tampoco… sé qué estoy esperando. Es solo que… tengo mucho miedo…",
+								"vietnamese": "Tôi cũng… không biết mình đang đợi điều gì. Chỉ là… tôi quá sợ hãi…",
+								"thai": "ฉันก็…ไม่รู้เหมือนกันว่ากำลังรออะไรอยู่ แค่…กลัวมากเลย…",
+								"hindi": "मुझे भी… नहीं पता कि मैं क्या इंतजार कर रहा हूँ। बस… बहुत डर लग रहा है…"
+							}
+						},
+						{
+							"duration_ms": 400,
+							"action": "exit",
+							"direction": "down",
+							"speaker": "bracken",
+							"type": "direction"
+						},
+						{
+							"type": "speech",
+							"content": {
+								"korean": "브라켄은 공포에 질려 뒤돌아 도망쳤다. 그 모습마저 환영처럼 희미했다.",
+								"english": "Braken turned and fled in terror. Even his figure was faint, like a phantom.",
+								"japanese": "ブラッケンは恐怖に駆られて振り返り、逃げ出した。その姿さえ幻影のように薄かった。",
+								"chinese": "布拉肯惊恐地转身逃跑。他的身影也如幻影般模糊。",
+								"french": "Braken tourna les talons et s'enfuit, terrifié. Même sa silhouette était floue, comme une illusion.",
+								"spanish": "Braken se dio la vuelta y huyó aterrorizado. Incluso su figura era tenue, como una ilusión.",
+								"vietnamese": "Braken kinh hoàng quay lưng bỏ chạy. Ngay cả bóng dáng của anh ta cũng mờ nhạt như một ảo ảnh.",
+								"thai": "บราเคนหันหลังวิ่งหนีด้วยความหวาดกลัว แม้แต่ร่างของเขาก็เลือนลางราวกับภาพลวงตา",
+								"hindi": "ब्रैकेन डर के मारे पीछे मुड़कर भाग गया। उसकी आकृति भी किसी भ्रम की तरह धुंधली थी।"
+							},
+							"speaker": "narrator",
+							"emotion": "base"
+						},
+						{
+							"type": "speech",
+							"content": {
+								"korean": "…계속 가야 해.",
+								"english": "...I have to keep going.",
+								"japanese": "…進み続けなければ。",
+								"chinese": "…必须继续前进。",
+								"french": "…Je dois continuer.",
+								"spanish": "…Tengo que seguir.",
+								"vietnamese": "…Phải tiếp tục đi thôi.",
+								"thai": "…ต้องไปต่อ",
+								"hindi": "…मुझे आगे बढ़ते रहना होगा।"
+							},
+							"speaker": "character_any",
+							"emotion": "base"
+						}
+					],
+					"id": 9
+				},
+				{
+					"lose_dialogue": [
+						{
+							"emotion": "base",
+							"speaker": "narrator",
+							"type": "speech",
+							"content": {
+								"korean": "환상의 심연에 갇혔다. 보이는 모든 것이 혼란스러웠다.",
+								"english": "Trapped in the abyss of illusion. Everything seen was disorienting.",
+								"japanese": "幻覚の深淵に囚われた。見えるもの全てが混乱を招いた。",
+								"chinese": "被困在幻象的深渊中。所见的一切都令人困惑。",
+								"french": "Piégé dans l'abîme de l'illusion. Tout ce qui était visible était déroutant.",
+								"spanish": "Atrapado en el abismo de la ilusión. Todo lo que se veía era desconcertante.",
+								"vietnamese": "Bị mắc kẹt trong vực thẳm của ảo ảnh. Mọi thứ nhìn thấy đều hỗn loạn.",
+								"thai": "ติดอยู่ในห้วงลึกของภาพลวงตา ทุกสิ่งที่เห็นล้วนสับสนวุ่นวาย",
+								"hindi": "भ्रम के अथाह कुंड में फंस गया। जो कुछ भी दिखाई दे रहा था, वह भ्रामक था।"
+							}
+						},
+						{
+							"emotion": "angry",
+							"speaker": "random_boss",
+							"type": "speech",
+							"content": {
+								"korean": "네 현실은… 내가 정해주는 것이다…",
+								"english": "Your reality... is what I dictate...",
+								"japanese": "お前の現実は… 私が定めてやる…",
+								"chinese": "你的现实… 由我来决定…",
+								"french": "Ta réalité... c'est moi qui la dicte...",
+								"spanish": "Tu realidad... es lo que yo dicto...",
+								"vietnamese": "Thực tại của ngươi... là do ta định đoạt...",
+								"thai": "ความเป็นจริงของเจ้า... ข้าจะเป็นผู้กำหนดมัน...",
+								"hindi": "तुम्हारी वास्तविकता... मैं तय करूंगा..."
+							}
+						},
+						{
+							"content": {
+								"korean": "아니야… 내가… 내가 진실을 밝혀낼 거야!",
+								"english": "No... I... I will uncover the truth!",
+								"japanese": "違う… 私が… 私が真実を暴いてやる！",
+								"chinese": "不… 我… 我会揭露真相！",
+								"french": "Non... Je... je découvrirai la vérité !",
+								"spanish": "¡No... yo... yo descubriré la verdad!",
+								"vietnamese": "Không... Ta... ta sẽ vén màn sự thật!",
+								"thai": "ไม่... ข้า... ข้าจะเปิดเผยความจริง!",
+								"hindi": "नहीं... मैं... मैं सच्चाई का पता लगाऊंगा!"
+							},
+							"type": "speech",
+							"emotion": "angry",
+							"speaker": "character_any"
+						}
+					],
+					"dialogue": [
+						{
+							"content": {
+								"korean": "숲의 가장 깊은 곳. 거대한 그림자가 탐험대를 기다리고 있었다.",
+								"english": "The deepest part of the forest. A colossal shadow awaited the expedition team.",
+								"japanese": "森の最も深い場所。巨大な影が探検隊を待ち受けていた。",
+								"chinese": "森林最深处。一个巨大的影子正等待着探险队。",
+								"french": "Le plus profond de la forêt. Une ombre colossale attendait l'équipe d'expédition.",
+								"spanish": "La parte más profunda del bosque. Una sombra colosal esperaba al equipo de expedición.",
+								"vietnamese": "Nơi sâu nhất của khu rừng. Một bóng đen khổng lồ đang chờ đợi đội thám hiểm.",
+								"thai": "ส่วนที่ลึกที่สุดของป่า เงาขนาดมหึมารอคอยคณะสำรวจอยู่",
+								"hindi": "जंगल का सबसे गहरा हिस्सा। एक विशाल परछाईं अभियान दल का इंतजार कर रही थी।"
+							},
+							"type": "speech",
+							"emotion": "base",
+							"speaker": "narrator"
+						},
+						{
+							"emotion": "angry",
+							"speaker": "random_boss",
+							"type": "speech",
+							"content": {
+								"korean": "환영이 진짜가 되는 곳… 여기가 너희의 무덤이다.",
+								"english": "Where illusions become real... This is your grave.",
+								"japanese": "幻影が現実となる場所…ここがお前たちの墓場だ。",
+								"chinese": "幻象变为真实之处…这里就是你们的坟墓。",
+								"french": "Là où les illusions deviennent réelles… Ceci est votre tombe.",
+								"spanish": "Donde las ilusiones se hacen realidad… Esta es vuestra tumba.",
+								"vietnamese": "Nơi ảo ảnh trở thành sự thật… Đây là mồ chôn của các ngươi.",
+								"thai": "ที่ที่ภาพลวงตากลายเป็นความจริง…นี่คือหลุมศพของพวกเจ้า",
+								"hindi": "जहाँ भ्रम सच हो जाते हैं… यह तुम्हारी कब्र है।"
+							}
+						},
+						{
+							"speaker": "character_any",
+							"emotion": "angry",
+							"content": {
+								"korean": "또 다른 환상일 뿐이야!",
+								"english": "Just another illusion!",
+								"japanese": "また幻想か！",
+								"chinese": "这不过是又一个幻象！",
+								"french": "Juste une autre illusion !",
+								"spanish": "¡Es solo otra ilusión!",
+								"vietnamese": "Chỉ là một ảo ảnh khác thôi!",
+								"thai": "เป็นแค่ภาพลวงตาอีกอัน!",
+								"hindi": "बस एक और भ्रम!"
+							},
+							"type": "speech"
+						},
+						{
+							"content": {
+								"korean": "어리석군. 너희가 믿는 모든 것을 빼앗아 주마.",
+								"english": "Foolish. I'll take everything you believe in.",
+								"japanese": "愚かな。お前たちが信じるもの、全て奪ってやろう。",
+								"chinese": "愚蠢。我会夺走你们所相信的一切。",
+								"french": "Imbéciles. Je vous prendrai tout ce que vous croyez.",
+								"spanish": "Estúpidos. Les arrebataré todo lo que creen.",
+								"vietnamese": "Ngốc nghếch. Ta sẽ cướp đi tất cả những gì các ngươi tin tưởng.",
+								"thai": "โง่เขลา ข้าจะพรากทุกสิ่งที่เจ้าเชื่อไปจากเจ้า",
+								"hindi": "मूर्ख। मैं तुमसे वह सब छीन लूंगा जिस पर तुम विश्वास करते हो।"
+							},
+							"type": "speech",
+							"speaker": "random_boss",
+							"emotion": "angry"
+						}
+					],
+					"win_dialogue": [
+						{
+							"speaker": "random_boss",
+							"emotion": "sad",
+							"content": {
+								"korean": "크으… 끝난 줄 아느냐… 이건… 시작일 뿐…",
+								"english": "Hmph... You think it's over...? This... is just the beginning...",
+								"japanese": "くっ… 終わったとでも？これは…始まりに過ぎぬ…",
+								"chinese": "呵… 你们以为结束了吗… 这… 只是开始…",
+								"french": "Hmph... Vous croyez que c'est fini... ? Ce n'est... que le début...",
+								"spanish": "Hmph... ¿Crees que ha terminado...? Esto... es solo el principio...",
+								"vietnamese": "Hừ... Ngươi nghĩ nó đã kết thúc sao...? Đây... chỉ là khởi đầu thôi...",
+								"thai": "ฮึ่ม... เจ้าคิดว่ามันจบแล้วหรือ... นี่... เป็นแค่จุดเริ่มต้นเท่านั้น...",
+								"hindi": "हूँ... क्या तुम्हें लगता है कि यह खत्म हो गया...? यह... तो बस शुरुआत है..."
+							},
+							"type": "speech"
+						},
+						{
+							"emotion": "base",
+							"speaker": "random_boss",
+							"content": {
+								"korean": "너희가 본 환영은… 모두… 미래의 조각들…",
+								"english": "The illusions you saw... they were all... fragments of the future...",
+								"japanese": "お前たちが見た幻影は… 全て… 未来の断片…",
+								"chinese": "你们所看到的幻象… 都… 是未来的碎片…",
+								"french": "Les visions que vous avez vues... n'étaient que... des fragments du futur...",
+								"spanish": "Las visiones que visteis... eran todas... fragmentos del futuro...",
+								"vietnamese": "Những ảo ảnh mà các ngươi đã thấy... tất cả... đều là những mảnh ghép của tương lai...",
+								"thai": "ภาพหลอนที่เจ้าเห็น... ทั้งหมด... คือเศษเสี้ยวของอนาคต...",
+								"hindi": "जो भ्रम तुमने देखे... वे सब... भविष्य के अंश थे..."
+							},
+							"type": "speech"
+						},
+						{
+							"type": "speech",
+							"content": {
+								"korean": "무슨 소리야?",
+								"english": "What do you mean?",
+								"japanese": "どういうことだ？",
+								"chinese": "你说什么？",
+								"french": "Qu'est-ce que tu racontes ?",
+								"spanish": "¿Qué quieres decir?",
+								"vietnamese": "Ngươi nói gì vậy?",
+								"thai": "หมายความว่าอะไร?",
+								"hindi": "तुम्हारा क्या मतलब है?"
+							},
+							"emotion": "base",
+							"speaker": "character_any"
+						},
+						{
+							"type": "speech",
+							"content": {
+								"korean": "정체 모를 존재는 스러졌다. 그러나 환상의 잔재는 탐험대의 마음에 깊이 남았다.",
+								"english": "The unknown entity fell. But the remnants of the illusion lingered deep within the expedition team's minds.",
+								"japanese": "正体不明の存在は消え去った。しかし、幻覚の残滓は探検隊の心に深く残った。",
+								"chinese": "不明实体消散了。然而，幻象的残余深植于探险队的心中。",
+								"french": "L'entité inconnue s'est effondrée. Mais les vestiges de l'illusion ont persisté au plus profond de l'esprit de l'équipe d'expédition.",
+								"spanish": "La entidad desconocida cayó. Pero los restos de la ilusión permanecieron profundamente en las mentes del equipo de expedición.",
+								"vietnamese": "Thực thể vô danh đã gục ngã. Nhưng tàn dư của ảo ảnh vẫn còn đọng lại sâu trong tâm trí đội thám hiểm.",
+								"thai": "สิ่งมีชีวิตลึกลับได้ล้มตายลง แต่เศษเสี้ยวของภาพลวงตายังคงฝังลึกอยู่ในจิตใจของคณะสำรวจ",
+								"hindi": "अज्ञात सत्ता गिर गई। लेकिन भ्रम के अवशेष अभियान दल के मन में गहरे तक रह गए।"
+							},
+							"speaker": "narrator",
+							"emotion": "base"
+						},
+						{
+							"content": {
+								"korean": "숲은 이제 생명체들을 재료로 삼아 기묘한 작품을 만들고 있었다. 다음 단계의 공포가 기다린다.",
+								"english": "The forest was now using living beings as material to create bizarre artworks. The next phase of horror awaited.",
+								"japanese": "森は今や、生命体を材料に奇妙な作品を作り出していた。次の段階の恐怖が待っている。",
+								"chinese": "森林现在正以生物为材料，创造着诡异的艺术品。下一阶段的恐惧正在等待着。",
+								"french": "La forêt utilisait désormais des êtres vivants comme matériaux pour créer des œuvres d'art étranges. La prochaine phase d'horreur attendait.",
+								"spanish": "El bosque ahora estaba usando seres vivos como material para crear obras de arte bizarras. La siguiente fase de horror esperaba.",
+								"vietnamese": "Rừng giờ đây đang dùng các sinh vật sống làm nguyên liệu để tạo ra những tác phẩm kỳ lạ. Giai đoạn kinh hoàng tiếp theo đang chờ đợi.",
+								"thai": "ป่ากำลังใช้สิ่งมีชีวิตเป็นวัตถุดิบในการสร้างผลงานศิลปะแปลกประหลาด ความหวาดกลัวขั้นต่อไปกำลังรออยู่",
+								"hindi": "जंगल अब जीवित प्राणियों को सामग्री के रूप में उपयोग करके अजीबोगरीब कलाकृतियाँ बना रहा था। डर का अगला चरण इंतजार कर रहा था।"
+							},
+							"type": "speech",
+							"emotion": "base",
+							"speaker": "narrator"
+						}
+					],
+					"id": 15
+				}
+			],
+			"prologue": {
+				"korean": [
+					"숲은 변해 있었다. 아름다운 환영 속에 감춰진 진짜 얼굴.",
+					"보이는 것이 전부가 아니었다. 믿었던 감각조차 왜곡되기 시작했다.",
+					"심연으로 향하는 길목에서, 한 목격자가 속삭였다.",
+					"“이건 꿈이 아니야… 아니, 꿈인가?”"
+				],
+				"english": [
+					"The forest had changed. Its true face hidden beneath beautiful illusions.",
+					"What was seen wasn't all. Even trusted senses began to distort.",
+					"At the threshold of the abyss, a witness whispered.",
+					"“This isn't a dream... Or is it?”"
+				],
+				"japanese": [
+					"森は変わっていた。美しい幻影に隠された本当の顔。",
+					"見えるものがすべてではなかった。信じていた感覚さえも歪み始めた。",
+					"深淵へと続く道で、ある目撃者が囁いた。",
+					"「これは夢じゃない…いや、夢なのか？」"
+				],
+				"chinese": [
+					"森林变了。美丽幻象下隐藏的真实面貌。",
+					"所见并非全部。连曾信任的感官都开始扭曲。",
+					"在通往深渊的路上，一位目击者低语道。",
+					"“这不是梦……不，是梦吗？”"
+				],
+				"french": [
+					"La forêt avait changé. Son vrai visage caché sous de belles illusions.",
+					"Ce qui était visible n'était pas tout. Même les sens auxquels on faisait confiance commençaient à se déformer.",
+					"Au seuil de l'abîme, un témoin murmura.",
+					"« Ce n'est pas un rêve… Ou est-ce un rêve ? »"
+				],
+				"spanish": [
+					"El bosque había cambiado. Su verdadera faz oculta tras bellas ilusiones.",
+					"Lo que se veía no era todo. Incluso los sentidos en los que confiaba empezaron a distorsionarse.",
+					"En el umbral del abismo, un testigo susurró.",
+					"¿Esto no es un sueño...? ¿O sí lo es?"
+				],
+				"vietnamese": [
+					"Rừng đã thay đổi. Khuôn mặt thật ẩn sau những ảo ảnh đẹp đẽ.",
+					"Những gì nhìn thấy không phải là tất cả. Ngay cả giác quan tin cậy cũng bắt đầu biến dạng.",
+					"Tại ngưỡng cửa vực thẳm, một nhân chứng thì thầm.",
+					"“Đây không phải là mơ... Hay là mơ thật?”"
+				],
+				"thai": [
+					"ป่าเปลี่ยนไปแล้ว ใบหน้าแท้จริงซ่อนอยู่ใต้ภาพลวงตาอันงดงาม",
+					"สิ่งที่เห็นไม่ใช่ทั้งหมด แม้แต่ประสาทสัมผัสที่เชื่อใจก็เริ่มบิดเบือน",
+					"ที่ทางเข้าสู่ห้วงลึก พยานคนหนึ่งกระซิบ",
+					"“นี่ไม่ใช่ความฝัน... หรือว่ามันคือความฝันกันแน่?”"
+				],
+				"hindi": [
+					"जंगल बदल गया था। सुंदर भ्रमों के पीछे छिपा उसका असली चेहरा।",
+					"जो दिख रहा था वह सब कुछ नहीं था। यहाँ तक कि विश्वसनीय इंद्रियाँ भी विकृत होने लगी थीं।",
+					"अतल गहराइयों की ओर जाते रास्ते में, एक गवाह ने फुसफुसाया।",
+					"“यह कोई सपना नहीं है... नहीं, क्या यह सपना है?”"
+				]
+			}
+		},
+		{
+			"scenario_id": "forest_luminaflutter_35_03",
+			"order": 3,
+			"act": "rising",
+			"theme": "forest",
+			"actors": {
+				"briar": {
+					"id": "mon_21f92820-190e-4d08-a75c-5d2c0b6d0a6b",
+					"name": {
+						"korean": "브라이어",
+						"english": "Briar",
+						"japanese": "ブライア",
+						"chinese": "布莱尔",
+						"french": "Briar",
+						"spanish": "Briar",
+						"vietnamese": "Briar",
+						"thai": "ไบรอา",
+						"hindi": "ब्रायर"
+					},
+					"description": "",
+					"face_image_url": "https://imagedelivery.net/WTEqQNGFb-l-IHS6IGnzUQ/41fb431e-57e0-45e0-dde6-1a1f02c01200/public",
+					"battle_sprite_url": "https://imagedelivery.net/WTEqQNGFb-l-IHS6IGnzUQ/dd89dff7-88ed-4444-28d8-5aaa85bd4e00/public"
+				}
+			},
+			"boss": {
+				"pool_id": "random_boss"
+			},
+			"rooms": [
+				{
+					"id": 1,
+					"dialogue": [
+						{
+							"speaker": "narrator",
+							"emotion": "base",
+							"content": {
+								"korean": "숲은 이전과 달랐다. 생명들은 제자리를 잃고 새로운 형태로 피어났다.",
+								"english": "The forest was different from before. Lives lost their place, blooming in new forms.",
+								"japanese": "森は以前とは違っていた。生命は居場所を失い、新しい形で咲き誇っていた。",
+								"chinese": "森林和以前不一样了。生命失去了它们的位置，以新的形式绽放。",
+								"french": "La forêt était différente d'avant. Les vies avaient perdu leur place, s'épanouissant sous de nouvelles formes.",
+								"spanish": "El bosque era diferente de antes. Las vidas perdieron su lugar, floreciendo en nuevas formas.",
+								"vietnamese": "Rừng đã khác xưa. Mọi sự sống lạc mất vị trí, nở rộ trong hình hài mới.",
+								"thai": "ป่าแตกต่างจากเมื่อก่อน สิ่งมีชีวิตสูญเสียที่ทางของมัน ผลิบานในรูปแบบใหม่",
+								"hindi": "जंगल पहले से अलग था। जीवन अपना स्थान खो चुके थे, नए रूपों में खिल रहे थे।"
+							},
+							"type": "speech"
+						},
+						{
+							"speaker": "character_any",
+							"emotion": "base",
+							"content": {
+								"korean": "저것 봐… 꽃인데, 돌 같아.",
+								"english": "Look at that... it's a flower, but it's like stone.",
+								"japanese": "あれ見て…花なのに、石みたい。",
+								"chinese": "看那个……是花，但又像石头。",
+								"french": "Regarde ça... c'est une fleur, mais c'est comme de la pierre.",
+								"spanish": "Mira eso... es una flor, pero parece piedra.",
+								"vietnamese": "Nhìn kìa... là hoa, nhưng lại giống đá.",
+								"thai": "ดูนั่นสิ... มันคือดอกไม้ แต่เหมือนหินเลย",
+								"hindi": "इसे देखो... यह एक फूल है, लेकिन पत्थर जैसा है।"
+							},
+							"type": "speech"
+						},
+						{
+							"emotion": "sad",
+							"speaker": "character_1",
+							"type": "speech",
+							"content": {
+								"korean": "누가 만든 예술 작품 같아. 소름 돋게.",
+								"english": "It's like a work of art someone made. Horrifyingly.",
+								"japanese": "誰かが作った芸術作品みたい。ぞっとするほどに。",
+								"chinese": "就像某人创作的艺术品。令人毛骨悚然。",
+								"french": "On dirait une œuvre d'art créée par quelqu'un. Effrayant.",
+								"spanish": "Parece una obra de arte creada por alguien. Escalofriante.",
+								"vietnamese": "Như một tác phẩm nghệ thuật ai đó đã tạo ra. Rợn người.",
+								"thai": "เหมือนงานศิลปะที่ใครบางคนสร้างขึ้น น่าขนลุก",
+								"hindi": "यह किसी की बनाई कलाकृति जैसा है। खौफनाक तरीके से।"
+							}
+						},
+						{
+							"type": "speech",
+							"content": {
+								"korean": "숲이… 이상해지고 있어.",
+								"english": "The forest... it's getting weird.",
+								"japanese": "森が…おかしくなってる。",
+								"chinese": "森林……变得奇怪了。",
+								"french": "La forêt... elle devient étrange.",
+								"spanish": "El bosque... se está volviendo extraño.",
+								"vietnamese": "Rừng... nó đang trở nên kỳ lạ.",
+								"thai": "ป่า... มันกำลังแปลกไป",
+								"hindi": "जंगल... अजीब होता जा रहा है।"
+							},
+							"emotion": "base",
+							"speaker": "character_any"
+						}
+					]
+				},
+				{
+					"id": 3,
+					"dialogue": [
+						{
+							"speaker": "narrator",
+							"emotion": "base",
+							"type": "speech",
+							"content": {
+								"korean": "발걸음을 옮길수록, 숲의 기묘함은 더욱 짙어졌다. 마치 살아있는 정원처럼.",
+								"english": "With every step, the forest's strangeness deepened. Like a living garden.",
+								"japanese": "足を進めるほど、森の奇妙さはさらに濃くなった。まるで生きている庭園のように。",
+								"chinese": "每迈出一步，森林的诡异就愈发浓厚。宛如一个活生生的花园。",
+								"french": "À chaque pas, l'étrangeté de la forêt s'épaississait. Comme un jardin vivant.",
+								"spanish": "Con cada paso, la extrañeza del bosque se intensificaba. Como un jardín viviente.",
+								"vietnamese": "Càng bước đi, sự kỳ lạ của rừng càng trở nên đậm nét. Như một khu vườn sống.",
+								"thai": "ทุกย่างก้าว ความแปลกประหลาดของป่ายิ่งเข้มข้นขึ้น เหมือนสวนที่มีชีวิต",
+								"hindi": "हर कदम के साथ, जंगल की विचित्रता गहरी होती गई। एक जीवित बगीचे की तरह।"
+							}
+						},
+						{
+							"type": "direction",
+							"spot": [
+								3,
+								2
+							],
+							"duration_ms": 500,
+							"action": "enter",
+							"speaker": "briar"
+						},
+						{
+							"speaker": "briar",
+							"emotion": "base",
+							"content": {
+								"korean": "…여기도 그렇네. 예상대로야.",
+								"english": "...It's the same here. Just as expected.",
+								"japanese": "…ここもか。予想通りだ。",
+								"chinese": "……这里也是。不出所料。",
+								"french": "...C'est pareil ici. Comme prévu.",
+								"spanish": "...Aquí también. Como se esperaba.",
+								"vietnamese": "...Ở đây cũng vậy. Đúng như dự đoán.",
+								"thai": "...ที่นี่ก็เหมือนกัน อย่างที่คิดไว้",
+								"hindi": "...यहाँ भी ऐसा ही है। जैसा कि उम्मीद थी।"
+							},
+							"type": "speech"
+						},
+						{
+							"emotion": "base",
+							"speaker": "character_any",
+							"type": "speech",
+							"content": {
+								"korean": "당신은… 누구세요?",
+								"english": "Who... are you?",
+								"japanese": "「あなたは…誰？」",
+								"chinese": "“你…是谁？”",
+								"french": "« Qui… êtes-vous ? »",
+								"spanish": "¿Quién... eres?",
+								"vietnamese": "Bạn... là ai?",
+								"thai": "ท่าน... คือใคร?",
+								"hindi": "आप... कौन हैं?"
+							}
+						},
+						{
+							"content": {
+								"korean": "브라이어. 숲의 식물을 채집하던 사람. 이제는… 이 숲의 재료가 될까 봐 두려워하는.",
+								"english": "Briar. A gatherer of the forest's plants. Now... afraid of becoming a part of this forest's collection.",
+								"japanese": "「ブライア。森の植物を採集していた者。今は…この森の材料になることを恐れている。」",
+								"chinese": "“布莱尔。在森林里采集植物的人。现在……害怕成为这片森林的材料。”",
+								"french": "« Briar. Un cueilleur de plantes de la forêt. Maintenant... craignant de devenir un ingrédient de cette forêt. »",
+								"spanish": "Briar. Un recolector de plantas del bosque. Ahora... temeroso de convertirse en parte de esta colección del bosque.",
+								"vietnamese": "Briar. Một người hái lượm thực vật trong rừng. Giờ đây... sợ hãi sẽ trở thành một phần nguyên liệu của khu rừng này.",
+								"thai": "ไบรอา ผู้เก็บพืชพรรณในป่า บัดนี้... หวาดกลัวว่าจะกลายเป็นส่วนหนึ่งของป่าแห่งนี้",
+								"hindi": "ब्रायर्स। वनस्पति संग्रह करने वाला। अब... इस जंगल की सामग्री बनने से डर रहा हूँ।"
+							},
+							"type": "speech",
+							"emotion": "sad",
+							"speaker": "briar"
+						},
+						{
+							"speaker": "character_any",
+							"emotion": "base",
+							"type": "speech",
+							"content": {
+								"korean": "재료? 무슨 소리야.",
+								"english": "Ingredients? What are you talking about?",
+								"japanese": "「材料？どういう意味だ。」",
+								"chinese": "“材料？什么意思？”",
+								"french": "« Ingrédients ? De quoi parlez-vous ? »",
+								"spanish": "¿Ingredientes? ¿De qué hablas?",
+								"vietnamese": "Nguyên liệu? Ngươi nói gì vậy?",
+								"thai": "วัตถุดิบ? หมายความว่าอะไร?",
+								"hindi": "सामग्री? यह क्या कह रहे हो?"
+							}
+						},
+						{
+							"type": "speech",
+							"content": {
+								"korean": "이 숲의 아름다움은 조작된 거야. 우리도… 결국 그 컬렉션의 일부가 될지도 몰라.",
+								"english": "This forest's beauty is artificial. We too... might eventually become part of that collection.",
+								"japanese": "「この森の美しさは偽物だ。私たちも…結局はそのコレクションの一部になるのかもしれない。」",
+								"chinese": "“这片森林的美丽是被人为操控的。我们…最终也可能成为那个收藏品的一部分。”",
+								"french": "« La beauté de cette forêt est factice. Nous aussi... pourrions finir par faire partie de cette collection. »",
+								"spanish": "La belleza de este bosque es artificial. Nosotros también... podríamos acabar siendo parte de esa colección.",
+								"vietnamese": "Vẻ đẹp của khu rừng này là giả tạo. Chúng ta cũng... có thể cuối cùng sẽ trở thành một phần của bộ sưu tập đó.",
+								"thai": "ความงามของป่าแห่งนี้ถูกสร้างขึ้นมา เราเอง... ก็อาจกลายเป็นส่วนหนึ่งของการสะสมนั้นได้",
+								"hindi": "इस जंगल की सुंदरता बनावटी है। हम भी... अंततः उस संग्रह का हिस्सा बन सकते हैं।"
+							},
+							"emotion": "sad",
+							"speaker": "briar"
+						},
+						{
+							"type": "speech",
+							"content": {
+								"korean": "헛소리 마! 우린 사냥꾼이야!",
+								"english": "Don't be absurd! We're hunters!",
+								"japanese": "「何を馬鹿な！私たちは狩人だ！」",
+								"chinese": "“别胡说八道！我们是猎人！”",
+								"french": "« Ne dis pas de bêtises ! Nous sommes des chasseurs ! »",
+								"spanish": "¡No digas tonterías! ¡Somos cazadores!",
+								"vietnamese": "Đừng nói nhảm! Chúng ta là thợ săn!",
+								"thai": "อย่าพูดเหลวไหล! เราคือนักล่า!",
+								"hindi": "बकवास मत करो! हम शिकारी हैं!"
+							},
+							"speaker": "character_2",
+							"emotion": "angry"
+						}
+					]
+				},
+				{
+					"id": 5,
+					"dialogue": [
+						{
+							"speaker": "narrator",
+							"emotion": "base",
+							"type": "speech",
+							"content": {
+								"korean": "기묘하게 뒤틀린 나무들과, 알 수 없는 형상의 생명체가 길을 막았다.",
+								"english": "Strangely twisted trees and creatures of unknown forms blocked the path.",
+								"japanese": "「奇妙にねじれた木々と、正体不明の生命体が道を塞いでいた。」",
+								"chinese": "“奇形怪状的树木和不明形态的生物挡住了去路。”",
+								"french": "« Des arbres étrangement tordus et des créatures de formes inconnues barraient le chemin. »",
+								"spanish": "Árboles extrañamente retorcidos y criaturas de formas desconocidas bloqueaban el camino.",
+								"vietnamese": "Những cái cây xoắn vặn kỳ lạ và các sinh vật hình dạng không rõ đã chặn đường.",
+								"thai": "ต้นไม้ที่บิดเบี้ยวแปลกตาและสิ่งมีชีวิตรูปร่างประหลาดขวางทางอยู่",
+								"hindi": "अजीब तरह से मुड़े हुए पेड़ों और अज्ञात आकृतियों के जीवों ने रास्ता रोक रखा था।"
+							}
+						},
+						{
+							"speaker": "briar",
+							"action": "enter",
+							"duration_ms": 500,
+							"spot": [
+								4,
+								2
+							],
+							"type": "direction"
+						},
+						{
+							"speaker": "briar",
+							"emotion": "base",
+							"content": {
+								"korean": "…봐. 저것들. 전부 인위적인 거야.",
+								"english": "...Look. Those things. They're all artificial.",
+								"japanese": "「…見て。あれら。全部人工的なものだ。」",
+								"chinese": "“……看。那些东西。全都是人造的。”",
+								"french": "«…Regarde. Ces choses. Elles sont toutes artificielles.»",
+								"spanish": "...Mira. Esas cosas. Son todas artificiales.",
+								"vietnamese": "...Nhìn kìa. Những thứ đó. Tất cả đều là nhân tạo.",
+								"thai": "ดูสิ. พวกนั้น. ทั้งหมดเป็นของที่มนุษย์สร้างขึ้น.",
+								"hindi": "...देखो। वे सब। वे सभी कृत्रिम हैं।"
+							},
+							"type": "speech"
+						},
+						{
+							"type": "speech",
+							"content": {
+								"korean": "정말… 섬뜩할 정도로 아름다워.",
+								"english": "Truly... terrifyingly beautiful.",
+								"japanese": "「本当に…不気味なほど美しい。」",
+								"chinese": "“真是……诡异得美丽。”",
+								"french": "« Vraiment... d'une beauté terrifiante. »",
+								"spanish": "Realmente... aterradoramente hermoso.",
+								"vietnamese": "Thật sự... đẹp đến rợn người.",
+								"thai": "งดงาม... น่าขนลุกจริงๆ",
+								"hindi": "सचमुच... डरावनी सुंदरता है।"
+							},
+							"emotion": "sad",
+							"speaker": "character_any"
+						},
+						{
+							"type": "speech",
+							"content": {
+								"korean": "누군가 숲을 재구성하고 있어. 우리도 그 계획의 일부일지 몰라.",
+								"english": "Someone is reconstructing the forest. We might also be part of that plan.",
+								"japanese": "「誰かが森を再構築している。私たちもその計画の一部なのかもしれない。」",
+								"chinese": "“有人正在重构这片森林。我们可能也是那个计划的一部分。”",
+								"french": "« Quelqu'un est en train de réaménager la forêt. Nous pourrions aussi faire partie de ce plan. »",
+								"spanish": "Alguien está reconstruyendo el bosque. Nosotros también podríamos ser parte de ese plan.",
+								"vietnamese": "Ai đó đang tái cấu trúc khu rừng. Chúng ta cũng có thể là một phần của kế hoạch đó.",
+								"thai": "มีคนกำลังจัดโครงสร้างป่าใหม่ เราอาจเป็นส่วนหนึ่งของแผนนั้นก็ได้",
+								"hindi": "कोई इस जंगल का पुनर्गठन कर रहा है। हम भी उस योजना का हिस्सा हो सकते हैं।"
+							},
+							"speaker": "briar",
+							"emotion": "sad"
+						},
+						{
+							"speaker": "character_1",
+							"emotion": "base",
+							"type": "speech",
+							"content": {
+								"korean": "우린 그저 길을 찾는 탐험가일 뿐이야.",
+								"english": "We're just explorers looking for a path.",
+								"japanese": "「私たちはただ道を探す探検家だ。」",
+								"chinese": "“我们只是寻找道路的探险家。”",
+								"french": "« Nous ne sommes que des explorateurs cherchant leur chemin. »",
+								"spanish": "Solo somos exploradores buscando un camino.",
+								"vietnamese": "Chúng ta chỉ là những nhà thám hiểm đang tìm đường thôi.",
+								"thai": "เราเป็นแค่นักสำรวจที่กำลังหาทางอยู่",
+								"hindi": "हम तो बस रास्ता ढूंढने वाले अन्वेषक हैं।"
+							}
+						},
+						{
+							"type": "speech",
+							"content": {
+								"korean": "아니. 어쩌면… 우리는 이미 숲의 재료가 되어가는 중일 수도 있어.",
+								"english": "No. Perhaps… we are already becoming part of the forest.",
+								"japanese": "いや、もしかしたら… 私たちはすでに森の材料になりつつあるのかもしれない。",
+								"chinese": "不。也许……我们已经正在成为森林的一部分。",
+								"french": "Non. Peut-être… que nous sommes déjà en train de devenir la matière de la forêt.",
+								"spanish": "No. Quizás… ya nos estamos convirtiendo en parte del bosque.",
+								"vietnamese": "Không. Có lẽ… chúng ta đã trở thành nguyên liệu của khu rừng rồi.",
+								"thai": "ไม่สิ บางที… เราอาจจะกำลังกลายเป็นส่วนหนึ่งของป่าไปแล้วก็ได้",
+								"hindi": "नहीं। शायद… हम पहले ही जंगल का हिस्सा बनते जा रहे हैं।"
+							},
+							"emotion": "sad",
+							"speaker": "briar"
+						},
+						{
+							"type": "speech",
+							"content": {
+								"korean": "그때, 거대한 그림자가 길을 막았다.",
+								"english": "Then, a colossal shadow blocked the way.",
+								"japanese": "その時、巨大な影が道を塞いだ。",
+								"chinese": "那时，一个巨大的影子挡住了去路。",
+								"french": "À ce moment-là, une ombre gigantesque barra le chemin.",
+								"spanish": "En ese momento, una sombra colosal bloqueó el camino.",
+								"vietnamese": "Lúc đó, một cái bóng khổng lồ đã chặn đường.",
+								"thai": "ทันใดนั้น เงาขนาดมหึมาก็ขวางทางไว้",
+								"hindi": "तभी, एक विशालकाय छाया ने रास्ता रोक लिया।"
+							},
+							"emotion": "base",
+							"speaker": "narrator"
+						},
+						{
+							"speaker": "random_boss",
+							"emotion": "base",
+							"content": {
+								"korean": "…새로운 재료인가.",
+								"english": "…New ingredients?",
+								"japanese": "…新たな材料か。",
+								"chinese": "……新的材料吗？",
+								"french": "…De nouveaux matériaux ?",
+								"spanish": "…¿Nuevos ingredientes?",
+								"vietnamese": "…Nguyên liệu mới à.",
+								"thai": "…วัตถุดิบใหม่รึ",
+								"hindi": "…नए घटक हैं क्या?"
+							},
+							"type": "speech"
+						},
+						{
+							"emotion": "angry",
+							"speaker": "character_any",
+							"type": "speech",
+							"content": {
+								"korean": "닥쳐! 넌 그저 괴물일 뿐이야!",
+								"english": "Shut up! You're just a monster!",
+								"japanese": "黙れ！お前はただの怪物だ！",
+								"chinese": "闭嘴！你只是个怪物！",
+								"french": "Tais-toi ! Tu n'es qu'un monstre !",
+								"spanish": "¡Cállate! ¡Solo eres un monstruo!",
+								"vietnamese": "Im đi! Ngươi chỉ là quái vật thôi!",
+								"thai": "หุบปากไปซะ! แกมันก็แค่สัตว์ประหลาด!",
+								"hindi": "चुप रहो! तुम बस एक राक्षस हो!"
+							}
+						},
+						{
+							"type": "direction",
+							"direction": "down",
+							"duration_ms": 400,
+							"action": "exit",
+							"speaker": "briar"
+						}
+					]
+				},
+				{
+					"id": 9,
+					"dialogue": [
+						{
+							"emotion": "base",
+							"speaker": "narrator",
+							"content": {
+								"korean": "숲은 이제 거대한 손길이 뻗친 미궁 같았다. 모든 것이 전시물처럼 멈춰 있었다.",
+								"english": "The forest was now like a labyrinth grasped by an enormous hand. Everything stood still, like exhibits.",
+								"japanese": "森は今や、巨大な手が伸びた迷宮のようだった。すべてが展示物のように止まっていた。",
+								"chinese": "森林现在就像一个被巨手掌控的迷宫。一切都像展品一样停滞不前。",
+								"french": "La forêt était désormais un labyrinthe sous l'emprise d'une main gigantesque. Tout était figé, comme des pièces d'exposition.",
+								"spanish": "El bosque era ahora un laberinto atrapado por una mano gigantesca. Todo estaba inmóvil, como si fueran exhibiciones.",
+								"vietnamese": "Khu rừng giờ đây như một mê cung bị bàn tay khổng lồ nắm giữ. Mọi thứ đều đứng yên như những vật trưng bày.",
+								"thai": "ป่าบัดนี้ราวกับเขาวงกตที่ถูกมือขนาดมหึมาจับต้อง ทุกสิ่งหยุดนิ่งราวกับเป็นสิ่งจัดแสดง",
+								"hindi": "जंगल अब एक विशालकाय हाथ द्वारा फैलाए गए भूलभुलैया जैसा था। सब कुछ प्रदर्शन वस्तुओं की तरह ठहरा हुआ था।"
+							},
+							"type": "speech"
+						},
+						{
+							"speaker": "character_any",
+							"emotion": "sad",
+							"content": {
+								"korean": "브라이어의 말이… 맞는 건가?",
+								"english": "Was Briar right…?",
+								"japanese": "ブライアの言葉は… 正しかったのか？",
+								"chinese": "布莱尔的话……是对的吗？",
+								"french": "Les mots de Briar… étaient-ils justes ?",
+								"spanish": "¿Tenía razón Briar…?",
+								"vietnamese": "Lời của Briar… là đúng sao?",
+								"thai": "สิ่งที่ไบรเออร์พูด… มันถูกต้องหรือ",
+								"hindi": "क्या ब्रायलर की बात… सही थी?"
+							},
+							"type": "speech"
+						},
+						{
+							"content": {
+								"korean": "헛소리 마! 넌 미쳤어.",
+								"english": "Don't talk nonsense! You're crazy.",
+								"japanese": "ばかげたことを言うな！お前は気が狂っている。",
+								"chinese": "别胡说！你疯了。",
+								"french": "Ne dis pas n'importe quoi ! Tu es fou.",
+								"spanish": "¡No digas tonterías! Estás loco.",
+								"vietnamese": "Đừng nói vớ vẩn! Ngươi điên rồi.",
+								"thai": "อย่าพูดไร้สาระ! แกบ้าไปแล้ว",
+								"hindi": "बकवास मत करो! तुम पागल हो गए हो।"
+							},
+							"type": "speech",
+							"speaker": "character_2",
+							"emotion": "angry"
+						},
+						{
+							"type": "speech",
+							"content": {
+								"korean": "아니… 우린 처음부터 사냥감이었던 것 같아.",
+								"english": "No… I think we were prey from the start.",
+								"japanese": "いや… 私たちは最初から獲物だったようだ。",
+								"chinese": "不……我们似乎从一开始就是猎物。",
+								"french": "Non… on dirait que nous étions des proies depuis le début.",
+								"spanish": "No… creo que fuimos la presa desde el principio.",
+								"vietnamese": "Không… có vẻ như chúng ta đã là con mồi ngay từ đầu.",
+								"thai": "ไม่สิ… ดูเหมือนว่าเราจะเป็นเหยื่อตั้งแต่แรกแล้ว",
+								"hindi": "नहीं… मुझे लगता है कि हम शुरू से ही शिकार थे।"
+							},
+							"speaker": "character_any",
+							"emotion": "sad"
+						},
+						{
+							"content": {
+								"korean": "도망칠 수 없어. 이 숲은… 우리를 놓아주지 않을 거야.",
+								"english": "We can't escape. This forest… won't let us go.",
+								"japanese": "逃げられない。この森は… 私たちを解放してくれないだろう。",
+								"chinese": "逃不掉。这片森林……不会放过我们的。",
+								"french": "On ne peut pas s'échapper. Cette forêt… ne nous laissera pas partir.",
+								"spanish": "No podemos escapar. Este bosque… no nos soltará.",
+								"vietnamese": "Không thể trốn thoát được. Khu rừng này… sẽ không buông tha chúng ta đâu.",
+								"thai": "หนีไม่ได้หรอก ป่านี้… จะไม่ปล่อยเราไป",
+								"hindi": "हम भाग नहीं सकते। यह जंगल… हमें जाने नहीं देगा।"
+							},
+							"type": "speech",
+							"speaker": "character_3",
+							"emotion": "sad"
+						}
+					]
+				},
+				{
+					"dialogue": [
+						{
+							"type": "speech",
+							"content": {
+								"korean": "숲의 가장 깊은 곳. 거대한 존재가 탐험대를 기다렸다.",
+								"english": "In the deepest part of the forest. A colossal entity awaited the expedition.",
+								"japanese": "森の最も深い場所。巨大な存在が探検隊を待っていた。",
+								"chinese": "森林最深处。一个巨大的存在等待着探险队。",
+								"french": "Dans la partie la plus profonde de la forêt. Une entité colossale attendait l'expédition.",
+								"spanish": "En lo más profundo del bosque. Una entidad colosal esperaba a la expedición.",
+								"vietnamese": "Nơi sâu nhất của khu rừng. Một thực thể khổng lồ đang chờ đợi đội thám hiểm.",
+								"thai": "ในส่วนที่ลึกที่สุดของป่า สิ่งมีชีวิตขนาดมหึมารอคอยคณะสำรวจอยู่",
+								"hindi": "जंगल के सबसे गहरे हिस्से में। एक विशालकाय सत्ता अभियान दल का इंतजार कर रही थी।"
+							},
+							"emotion": "base",
+							"speaker": "narrator"
+						},
+						{
+							"type": "speech",
+							"content": {
+								"korean": "드디어 왔군. 아름다운 컬렉션을 위한… 마지막 조각들.",
+								"english": "You're finally here. The last pieces... for my beautiful collection.",
+								"japanese": "ついに来たか。美しいコレクションのための…最後のピースが。",
+								"chinese": "你终于来了。为了我美丽的收藏……最后的碎片。",
+								"french": "Vous êtes enfin là. Les dernières pièces... pour ma magnifique collection.",
+								"spanish": "Finalmente estás aquí. Las últimas piezas... para mi hermosa colección.",
+								"vietnamese": "Cuối cùng ngươi cũng đến rồi. Những mảnh ghép cuối cùng... cho bộ sưu tập tuyệt đẹp của ta.",
+								"thai": "ในที่สุดแกก็มาจนได้ ชิ้นส่วนสุดท้าย...สำหรับคอลเล็กชันอันงดงามของข้า",
+								"hindi": "आखिरकार तुम आ ही गए। मेरे खूबसूरत संग्रह के लिए...आखिरी टुकड़े।"
+							},
+							"speaker": "random_boss",
+							"emotion": "base"
+						},
+						{
+							"emotion": "angry",
+							"speaker": "character_any",
+							"content": {
+								"korean": "네놈이 이 모든 걸 꾸민 건가!",
+								"english": "Was it you who orchestrated all this?!",
+								"japanese": "貴様がこの全てを企んだのか！",
+								"chinese": "这一切都是你策划的吗！",
+								"french": "C'est toi qui as orchestré tout ça?!",
+								"spanish": "¿Fuiste tú quien orquestó todo esto?",
+								"vietnamese": "Ngươi là kẻ đã sắp đặt tất cả chuyện này sao!",
+								"thai": "แกเป็นคนบงการเรื่องทั้งหมดนี่เองเหรอ!",
+								"hindi": "क्या यह सब तुमने ही रचा था?!"
+							},
+							"type": "speech"
+						},
+						{
+							"content": {
+								"korean": "너희의 분노와 절망. 그것이 이 숲을 완성시킨다.",
+								"english": "Your rage and despair. They complete this forest.",
+								"japanese": "お前たちの怒りと絶望。それがこの森を完成させる。",
+								"chinese": "你们的愤怒与绝望。它们完成了这片森林。",
+								"french": "Votre rage et votre désespoir. Ils achèvent cette forêt.",
+								"spanish": "Vuestra ira y desesperación. Completan este bosque.",
+								"vietnamese": "Cơn thịnh nộ và sự tuyệt vọng của các ngươi. Chúng hoàn thành khu rừng này.",
+								"thai": "ความโกรธและความสิ้นหวังของพวกแก นั่นแหละที่ทำให้ป่าแห่งนี้สมบูรณ์",
+								"hindi": "तुम्हारा क्रोध और निराशा। वे इस जंगल को पूरा करते हैं।"
+							},
+							"type": "speech",
+							"speaker": "random_boss",
+							"emotion": "base"
+						}
+					],
+					"lose_dialogue": [
+						{
+							"emotion": "base",
+							"speaker": "random_boss",
+							"content": {
+								"korean": "아직은… 너희도 이 숲의 일부일 뿐… 영원히….",
+								"english": "For now... you too are merely a part of this forest... forever...",
+								"japanese": "今はまだ…お前たちもこの森の一部に過ぎない…永遠に…",
+								"chinese": "现在……你们也只是这片森林的一部分……永远……",
+								"french": "Pour l'instant... vous n'êtes aussi qu'une partie de cette forêt... pour toujours...",
+								"spanish": "Por ahora... vosotros también sois solo una parte de este bosque... para siempre...",
+								"vietnamese": "Hiện tại... các ngươi cũng chỉ là một phần của khu rừng này... mãi mãi...",
+								"thai": "ตอนนี้... พวกแกก็เป็นแค่ส่วนหนึ่งของป่าแห่งนี้... ตลอดไป...",
+								"hindi": "अभी के लिए... तुम भी इस जंगल का सिर्फ एक हिस्सा हो... हमेशा के लिए..."
+							},
+							"type": "speech"
+						},
+						{
+							"speaker": "character_any",
+							"emotion": "angry",
+							"type": "speech",
+							"content": {
+								"korean": "젠장… 아직 끝나지 않았어!",
+								"english": "Damn it... It's not over yet!",
+								"japanese": "くそ…まだ終わってない！",
+								"chinese": "该死……还没结束！",
+								"french": "Mince... Ce n'est pas encore fini!",
+								"spanish": "¡Maldita sea... Esto no ha terminado aún!",
+								"vietnamese": "Chết tiệt... Vẫn chưa kết thúc!",
+								"thai": "ให้ตายสิ... ยังไม่จบ!",
+								"hindi": "धिक्कार है... अभी खत्म नहीं हुआ है!"
+							}
+						}
+					],
+					"id": 15,
+					"win_dialogue": [
+						{
+							"emotion": "sad",
+							"speaker": "random_boss",
+							"type": "speech",
+							"content": {
+								"korean": "…결국 이리 되는군. 하지만… 컬렉션은… 영원할 거야….",
+								"english": "...So this is how it ends. But... my collection... it will be eternal...",
+								"japanese": "…結局こうなるのか。だが…コレクションは…永遠だ…",
+								"chinese": "……终究还是这样了。但是……我的收藏……将永恒……",
+								"french": "...Alors c'est ainsi que ça se termine. Mais... ma collection... elle sera éternelle...",
+								"spanish": "...Así es como termina. Pero... mi colección... será eterna...",
+								"vietnamese": "...Cuối cùng thì mọi chuyện cũng như vậy. Nhưng... bộ sưu tập của ta... sẽ vĩnh cửu...",
+								"thai": "...ในที่สุดก็เป็นแบบนี้ แต่... คอลเล็กชันของข้า... จะคงอยู่ชั่วนิรันดร์...",
+								"hindi": "आखिरकार ऐसा ही होगा। लेकिन... मेरा संग्रह... यह अनंत रहेगा..."
+							}
+						},
+						{
+							"content": {
+								"korean": "끝났어… 다 끝났어…!",
+								"english": "It's over... It's all over...!",
+								"japanese": "終わった…全て終わった…！",
+								"chinese": "结束了……一切都结束了……！",
+								"french": "C'est fini... Tout est fini...!",
+								"spanish": "Se acabó... ¡Todo se acabó...!",
+								"vietnamese": "Kết thúc rồi... Mọi chuyện đã kết thúc rồi...!",
+								"thai": "จบแล้ว... ทุกอย่างจบแล้ว...!",
+								"hindi": "खत्म हो गया... सब खत्म हो गया...!"
+							},
+							"type": "speech",
+							"speaker": "character_any",
+							"emotion": "happy"
+						},
+						{
+							"type": "speech",
+							"content": {
+								"korean": "정체 모를 괴물의 죽음. 그러나 숲의 조작된 아름다움은 여전했다.",
+								"english": "The death of the unknown monster. Yet, the forest's manipulated beauty remained.",
+								"japanese": "正体不明の怪物の死。しかし、森の作り上げられた美しさは変わらなかった。",
+								"chinese": "未知怪物的死亡。然而，森林那被操纵的美丽依然存在。",
+								"french": "La mort du monstre inconnu. Pourtant, la beauté manipulée de la forêt demeurait.",
+								"spanish": "La muerte del monstruo desconocido. Sin embargo, la belleza manipulada del bosque permaneció.",
+								"vietnamese": "Cái chết của con quái vật vô danh. Tuy nhiên, vẻ đẹp bị thao túng của khu rừng vẫn còn đó.",
+								"thai": "การตายของสัตว์ประหลาดนิรนาม ทว่า ความงามที่ถูกบงการของป่าก็ยังคงอยู่",
+								"hindi": "अज्ञात राक्षस की मौत। फिर भी, जंगल की हेरफेर की गई सुंदरता बनी रही।"
+							},
+							"speaker": "narrator",
+							"emotion": "base"
+						},
+						{
+							"content": {
+								"korean": "탐험대는 다음 진실을 향해 발걸음을 옮겼다. 모든 것이 끝난 게 아니었다.",
+								"english": "The expedition moved on toward the next truth. Not everything was over.",
+								"japanese": "探検隊は次の真実へと歩みを進めた。全てが終わったわけではなかった。",
+								"chinese": "探险队迈向了下一个真相。并非一切都已结束。",
+								"french": "L'expédition s'est dirigée vers la prochaine vérité. Tout n'était pas terminé.",
+								"spanish": "La expedición avanzó hacia la siguiente verdad. No todo había terminado.",
+								"vietnamese": "Đoàn thám hiểm tiếp tục bước đi tìm kiếm sự thật tiếp theo. Mọi chuyện vẫn chưa kết thúc.",
+								"thai": "คณะสำรวจก้าวต่อไปสู่ความจริงครั้งหน้า ทุกอย่างยังไม่จบลง",
+								"hindi": "अभियान अगले सच की ओर बढ़ा। सब कुछ खत्म नहीं हुआ था।"
+							},
+							"type": "speech",
+							"speaker": "narrator",
+							"emotion": "base"
+						}
+					]
+				}
+			],
+			"prologue": {
+				"korean": [
+					"숲은 변했다. 완벽하고, 기이하게.",
+					"모든 생명은 누군가의 의지대로 재구성되었다.",
+					"마치 거대한 전시회처럼, 우리는 그 일부가 되어가고 있었다.",
+					"아름다움 속에 감춰진 섬뜩한 진실."
+				],
+				"english": [
+					"The forest changed. Perfectly, eerily.",
+					"All life was reconfigured by someone's will.",
+					"Like a grand exhibition, we were becoming a part of it.",
+					"A horrifying truth hidden within beauty."
+				],
+				"japanese": [
+					"森は変わった。完璧に、奇妙に。",
+					"全ての生命は、誰かの意思によって再構築された。",
+					"まるで巨大な展覧会のように、私たちはその一部となっていった。",
+					"美しさの中に隠された、ぞっとする真実。"
+				],
+				"chinese": [
+					"森林变了。完美，又怪异。",
+					"所有生命都按某人的意志被重塑。",
+					"仿佛一场盛大的展览，我们正成为其中的一部分。",
+					"隐藏在美丽之中的恐怖真相。"
+				],
+				"french": [
+					"La forêt a changé. Parfaitement, étrangement.",
+					"Toute vie fut reconfigurée par la volonté de quelqu'un.",
+					"Comme une immense exposition, nous en devenions une partie.",
+					"Une vérité glaçante cachée dans la beauté."
+				],
+				"spanish": [
+					"El bosque cambió. Perfecta y extrañamente.",
+					"Toda la vida fue reconfigurada por la voluntad de alguien.",
+					"Como una gran exposición, nos estábamos convirtiendo en parte de ella.",
+					"Una verdad espantosa oculta en la belleza."
+				],
+				"vietnamese": [
+					"Rừng đã thay đổi. Hoàn hảo, và kỳ lạ.",
+					"Mọi sự sống đều được tái cấu trúc theo ý chí của ai đó.",
+					"Như một cuộc triển lãm khổng lồ, chúng ta dần trở thành một phần của nó.",
+					"Một sự thật kinh hoàng ẩn giấu trong vẻ đẹp."
+				],
+				"thai": [
+					"ป่าเปลี่ยนไปแล้ว สมบูรณ์แบบและแปลกประหลาด",
+					"ทุกชีวิตถูกจัดระเบียบใหม่ตามความประสงค์ของใครบางคน",
+					"เหมือนงานแสดงขนาดใหญ่ เรากำลังกลายเป็นส่วนหนึ่งของมัน",
+					"ความจริงอันน่าขนลุกที่ซ่อนอยู่ในความงาม"
+				],
+				"hindi": [
+					"जंगल बदल गया था। पूरी तरह से, और अजीब तरह से।",
+					"सभी जीवन किसी की इच्छा से पुनर्गठित किए गए थे।",
+					"एक विशाल प्रदर्शनी की तरह, हम उसका एक हिस्सा बनते जा रहे थे।",
+					"सुंदरता में छिपा एक भयानक सच।"
+				]
+			}
+		},
+		{
+			"scenario_id": "forest_luminaflutter_35_04",
+			"order": 4,
+			"act": "rising",
+			"theme": "forest",
+			"actors": {
+				"ela": {
+					"id": "mon_24765cb2-6fc0-452e-8969-871a82349c70",
+					"name": {
+						"korean": "엘라",
+						"english": "Ela",
+						"japanese": "エラ",
+						"chinese": "艾拉",
+						"french": "Ela",
+						"spanish": "Ela",
+						"vietnamese": "Ela",
+						"thai": "เอล่า",
+						"hindi": "एला"
+					},
+					"description": "",
+					"face_image_url": "https://imagedelivery.net/WTEqQNGFb-l-IHS6IGnzUQ/55d3e9ee-c589-40ab-dfa4-a658bbddd400/public",
+					"battle_sprite_url": "https://imagedelivery.net/WTEqQNGFb-l-IHS6IGnzUQ/cfacc842-115e-4175-a7fa-3111a468ed00/public"
+				}
+			},
+			"boss": {
+				"pool_id": "random_boss"
+			},
+			"prologue": {
+				"korean": [
+					"숲이 움직이기 시작했다. 더 이상 길을 잃은 것이 아니었다.",
+					"먹잇감을 쫓는 거대한 덫처럼, 숲은 탐험대를 조여왔다.",
+					"사냥감은 바로 우리였다. 불길한 속삭임이 모든 것을 집어삼켰다."
+				],
+				"english": [
+					"The forest began to move. We were no longer lost.",
+					"Like a giant trap closing in on its prey, the forest tightened its grip on the expedition.",
+					"We were the prey. Ominous whispers engulfed everything."
+				],
+				"japanese": [
+					"森が動き始めた。もはや道に迷ったわけではなかった。",
+					"獲物を追う巨大な罠のように、森は探検隊を締め付けてきた。",
+					"獲物は私たちだった。不吉なささやきがすべてを飲み込んだ。"
+				],
+				"chinese": [
+					"森林开始移动了。我们不再是迷路了。",
+					"就像一个追捕猎物的巨大陷阱，森林收紧了对探险队的束缚。",
+					"我们就是猎物。不祥的低语吞噬了一切。"
+				],
+				"french": [
+					"La forêt a commencé à bouger. Nous n'étions plus perdus.",
+					"Tel un piège géant se refermant sur sa proie, la forêt resserrait son étreinte sur l'expédition.",
+					"Nous étions la proie. Des murmures sinistres engloutirent tout."
+				],
+				"spanish": [
+					"El bosque comenzó a moverse. Ya no estábamos perdidos.",
+					"Como una trampa gigante que se cierra sobre su presa, el bosque apretaba su control sobre la expedición.",
+					"Éramos la presa. Susurros ominosos lo envolvieron todo."
+				],
+				"vietnamese": [
+					"Rừng bắt đầu chuyển động. Chúng tôi không còn bị lạc nữa.",
+					"Như một cái bẫy khổng lồ siết chặt con mồi, khu rừng xiết chặt đội thám hiểm.",
+					"Chúng ta chính là con mồi. Những lời thì thầm đáng ngại nuốt chửng mọi thứ."
+				],
+				"thai": [
+					"ป่าเริ่มเคลื่อนไหว เราไม่ได้หลงทางอีกต่อไปแล้ว",
+					"เหมือนกับดักขนาดยักษ์ที่กำลังบีบรัดเหยื่อ ป่าได้รัดแน่นเข้ากับคณะสำรวจ",
+					"เราคือเหยื่อ เสียงกระซิบที่น่ากลัวกลืนกินทุกสิ่ง"
+				],
+				"hindi": [
+					"जंगल हिलने लगा। हम अब और नहीं खोए थे।",
+					"एक विशाल जाल की तरह जो अपने शिकार पर कस रहा था, जंगल ने अभियान दल पर अपनी पकड़ कस ली।",
+					"शिकार हम ही थे। अशुभ फुसफुसाहट ने सब कुछ निगल लिया।"
+				]
+			},
+			"rooms": [
+				{
+					"id": 1,
+					"dialogue": [
+						{
+							"content": {
+								"korean": "숲의 낯선 소리가 탐험대를 감쌌다. 마치 살아있는 것처럼, 숲은 속삭였다.",
+								"english": "Unfamiliar sounds of the forest enveloped the expedition. As if alive, the forest whispered.",
+								"japanese": "森の見知らぬ音が探検隊を包み込んだ。まるで生きているかのように、森はささやいた。",
+								"chinese": "森林里陌生的声音包围了探险队。仿佛有生命一般，森林在低语。",
+								"french": "Des sons inconnus de la forêt enveloppèrent l'expédition. Comme vivante, la forêt chuchotait.",
+								"spanish": "Sonidos extraños del bosque envolvieron a la expedición. Como si estuviera vivo, el bosque susurraba.",
+								"vietnamese": "Những âm thanh xa lạ của rừng bao trùm đội thám hiểm. Như thể còn sống, khu rừng thì thầm.",
+								"thai": "เสียงแปลกๆ ของป่าปกคลุมคณะสำรวจ ราวกับมีชีวิต ป่ากระซิบ",
+								"hindi": "जंगल की अपरिचित आवाज़ों ने अभियान दल को घेर लिया। मानो जीवित हो, जंगल फुसफुसा रहा था।"
+							},
+							"emotion": "base",
+							"speaker": "narrator",
+							"type": "speech"
+						},
+						{
+							"content": {
+								"korean": "이 소리… 뭔가 이상해. 숲이 우리를 부르는 것 같아.",
+								"english": "This sound... something's off. It feels like the forest is calling us.",
+								"japanese": "この音…何かおかしい。森が私たちを呼んでいるようだ。",
+								"chinese": "这声音……有点不对劲。感觉森林在呼唤我们。",
+								"french": "Ce son... quelque chose ne va pas. On dirait que la forêt nous appelle.",
+								"spanish": "Este sonido... algo anda mal. Parece que el bosque nos está llamando.",
+								"vietnamese": "Âm thanh này... có gì đó không ổn. Cứ như rừng đang gọi chúng ta vậy.",
+								"thai": "เสียงนี้... มีบางอย่างผิดปกติ เหมือนป่ากำลังเรียกเราอยู่",
+								"hindi": "यह आवाज़... कुछ गड़बड़ है। ऐसा लगता है जैसे जंगल हमें बुला रहा है।"
+							},
+							"emotion": "base",
+							"speaker": "character_any",
+							"type": "speech"
+						},
+						{
+							"action": "enter",
+							"spot": [
+								4,
+								2
+							],
+							"duration_ms": 500,
+							"speaker": "ela",
+							"type": "direction"
+						},
+						{
+							"type": "speech",
+							"speaker": "ela",
+							"content": {
+								"korean": "(두리번거리며) 여긴… 어디지? 계속 같은 곳을 맴도는 것 같아…",
+								"english": "(Looking around) Where... are we? It feels like we keep going in circles...",
+								"japanese": "(見回しながら) ここは…どこだ？ずっと同じ場所をぐるぐる回っているようだ…",
+								"chinese": "(环顾四周) 这里……是哪里？感觉我们一直在原地打转……",
+								"french": "(Regardant autour de lui) Où... sommes-nous ? On dirait qu'on tourne en rond...",
+								"spanish": "(Mirando alrededor) ¿Dónde... estamos? Parece que no paramos de dar vueltas...",
+								"vietnamese": "(Nhìn quanh) Đây... là đâu? Cứ như chúng ta cứ đi vòng vòng một chỗ...",
+								"thai": "(มองไปรอบๆ) ที่นี่... ที่ไหนกัน? รู้สึกเหมือนวนเวียนอยู่แต่ที่เดิม...",
+								"hindi": "(चारों ओर देखते हुए) हम... कहाँ हैं? ऐसा लगता है जैसे हम एक ही जगह घूम रहे हैं..."
+							},
+							"emotion": "sad"
+						},
+						{
+							"content": {
+								"korean": "당신은 누구시죠?",
+								"english": "Who are you?",
+								"japanese": "あなたは誰ですか？",
+								"chinese": "你是谁？",
+								"french": "Qui êtes-vous ?",
+								"spanish": "¿Quién es usted?",
+								"vietnamese": "Anh/Chị là ai?",
+								"thai": "คุณเป็นใคร?",
+								"hindi": "आप कौन हैं?"
+							},
+							"emotion": "base",
+							"speaker": "character_any",
+							"type": "speech"
+						},
+						{
+							"speaker": "ela",
+							"type": "speech",
+							"content": {
+								"korean": "난 엘라. 이 숲에서 길을 잃었어. 며칠째 헤매고 있어.",
+								"english": "I'm Ella. I'm lost in this forest. I've been wandering for days.",
+								"japanese": "私はエラ。この森で迷子になったの。何日もさまよっているわ。",
+								"chinese": "我是艾拉。我在这片森林里迷路了。我已经迷失了好几天了。",
+								"french": "Je suis Ella. Je suis perdue dans cette forêt. Je erre depuis des jours.",
+								"spanish": "Soy Ella. Estoy perdida en este bosque. Llevo días vagando.",
+								"vietnamese": "Tôi là Ella. Tôi bị lạc trong khu rừng này. Tôi đã lang thang mấy ngày rồi.",
+								"thai": "ฉันชื่อเอลล่า ฉันหลงทางในป่าแห่งนี้ ฉันเดินหลงมาหลายวันแล้ว",
+								"hindi": "मैं एला हूँ। मैं इस जंगल में खो गई हूँ। मैं कई दिनों से भटक रही हूँ।"
+							},
+							"emotion": "sad"
+						},
+						{
+							"content": {
+								"korean": "숲이… 나를 가두고 있어.",
+								"english": "The forest... is trapping me.",
+								"japanese": "森が…私を閉じ込めている。",
+								"chinese": "森林……正在困住我。",
+								"french": "La forêt... me piège.",
+								"spanish": "El bosque... me está atrapando.",
+								"vietnamese": "Rừng... đang giam giữ tôi.",
+								"thai": "ป่า... กำลังกักขังฉัน",
+								"hindi": "जंगल... मुझे फँसा रहा है।"
+							},
+							"emotion": "sad",
+							"type": "speech",
+							"speaker": "ela"
+						},
+						{
+							"speaker": "character_1",
+							"type": "speech",
+							"content": {
+								"korean": "가두다니?",
+								"english": "Trapping you?",
+								"japanese": "閉じ込めているって？",
+								"chinese": "困住你？",
+								"french": "Te piège ?",
+								"spanish": "¿Atrapándote?",
+								"vietnamese": "Giam giữ ư?",
+								"thai": "กักขังเหรอ?",
+								"hindi": "फँसा रहा है?"
+							},
+							"emotion": "base"
+						}
+					]
+				},
+				{
+					"id": 3,
+					"dialogue": [
+						{
+							"duration_ms": 500,
+							"speaker": "ela",
+							"action": "enter",
+							"spot": [
+								3,
+								2
+							],
+							"type": "direction"
+						},
+						{
+							"speaker": "ela",
+							"type": "speech",
+							"content": {
+								"korean": "(겁에 질린 표정) 소리가… 계속 따라와. 숲이 우릴 지켜보고 있어.",
+								"english": "(Terrified expression) The sound... it keeps following us. The forest is watching us.",
+								"japanese": "(怯えた表情) 音が…ずっとついてくる。森が私たちを見ているわ。",
+								"chinese": "(惊恐的表情) 声音……一直跟着我们。森林在监视着我们。",
+								"french": "(Expression terrifiée) Le son... il nous suit. La forêt nous observe.",
+								"spanish": "(Expresión aterrorizada) El sonido... nos sigue. El bosque nos está observando.",
+								"vietnamese": "(Vẻ mặt sợ hãi) Tiếng động… cứ bám theo. Rừng đang dõi theo chúng ta.",
+								"thai": "(สีหน้าหวาดกลัว) เสียง… มันตามเรามาตลอด ป่ากำลังเฝ้าดูเราอยู่",
+								"hindi": "(भयभीत अभिव्यक्ति) आवाज़... लगातार हमारा पीछा कर रही है। जंगल हमें देख रहा है।"
+							},
+							"emotion": "sad"
+						},
+						{
+							"content": {
+								"korean": "그냥 바람 소리 아니야?",
+								"english": "Isn't it just the wind?",
+								"japanese": "ただの風の音じゃないの？",
+								"chinese": "不就是风声吗？",
+								"french": "Ce n'est pas juste le vent ?",
+								"spanish": "¿No es solo el viento?",
+								"vietnamese": "Chẳng phải chỉ là tiếng gió sao?",
+								"thai": "ไม่ใช่แค่เสียงลมเหรอ?",
+								"hindi": "क्या यह सिर्फ हवा की आवाज़ नहीं है?"
+							},
+							"emotion": "base",
+							"speaker": "character_any",
+							"type": "speech"
+						},
+						{
+							"content": {
+								"korean": "아니야! 이건… 살아있는 소리야. 날 쫓아와!",
+								"english": "No! This is... a living sound. It's chasing me!",
+								"japanese": "違う！これは…生きている音だ。私を追ってる！",
+								"chinese": "不！这是……活生生的声音。它在追我！",
+								"french": "Non ! C'est... un son vivant. Ça me poursuit !",
+								"spanish": "¡No! Esto es... un sonido vivo. ¡Me persigue!",
+								"vietnamese": "Không! Đây là… một âm thanh sống. Nó đang đuổi theo tôi!",
+								"thai": "ไม่ใช่! นี่มัน... เสียงของสิ่งมีชีวิต มันกำลังไล่ตามฉัน!",
+								"hindi": "नहीं! यह... एक जीवित आवाज़ है। यह मेरा पीछा कर रही है!"
+							},
+							"emotion": "angry",
+							"speaker": "ela",
+							"type": "speech"
+						},
+						{
+							"speaker": "ela",
+							"type": "speech",
+							"content": {
+								"korean": "마치 사냥감을 몰듯이… 우릴 구석으로 몰아넣고 있어!",
+								"english": "Like herding prey... It's cornering us!",
+								"japanese": "まるで獲物を追いたてるように…私たちを追い詰めているんだ！",
+								"chinese": "就像赶猎物一样……把我们逼到绝境！",
+								"french": "Comme on traque une proie... Ça nous accule !",
+								"spanish": "Como si nos estuvieran acorralando... ¡Nos está arrinconando!",
+								"vietnamese": "Cứ như đang lùa con mồi vậy… Nó đang dồn chúng ta vào chân tường!",
+								"thai": "เหมือนกำลังต้อนเหยื่อ... มันกำลังต้อนเราจนมุม!",
+								"hindi": "जैसे शिकार को खदेड़ना... यह हमें कोने में धकेल रहा है!"
+							},
+							"emotion": "angry"
+						},
+						{
+							"content": {
+								"korean": "사냥감이라니? 무슨 소리야.",
+								"english": "Prey? What are you talking about?",
+								"japanese": "獲物だって？どういうこと？",
+								"chinese": "猎物？你在说什么？",
+								"french": "De la proie ? De quoi parles-tu ?",
+								"spanish": "¿Presa? ¿De qué estás hablando?",
+								"vietnamese": "Con mồi? Bạn đang nói gì vậy.",
+								"thai": "เหยื่ออะไร? พูดเรื่องอะไรเนี่ย",
+								"hindi": "शिकार? क्या बात कर रहे हो?"
+							},
+							"emotion": "base",
+							"speaker": "character_2",
+							"type": "speech"
+						}
+					]
+				},
+				{
+					"id": 5,
+					"dialogue": [
+						{
+							"spot": [
+								2,
+								2
+							],
+							"action": "enter",
+							"duration_ms": 500,
+							"speaker": "ela",
+							"type": "direction"
+						},
+						{
+							"type": "speech",
+							"speaker": "ela",
+							"content": {
+								"korean": "(점점 절규하듯) 우리는… 우리가 탐험대라고 생각했지?",
+								"english": "(Gradually screaming) We... we thought we were an expedition team, didn't we?",
+								"japanese": "(次第に絶叫するように) 私たちは…自分たちが探検隊だと思ってたんだろ？",
+								"chinese": "(逐渐绝望地尖叫) 我们……我们以为自己是探险队，对吗？",
+								"french": "(Criant de plus en plus) Nous... nous pensions être une équipe d'exploration, n'est-ce pas ?",
+								"spanish": "(Gritando cada vez más) Nosotros... pensábamos que éramos un equipo de expedición, ¿verdad?",
+								"vietnamese": "(Dần dần tuyệt vọng hét lên) Chúng ta… chúng ta đã nghĩ mình là đội thám hiểm, đúng không?",
+								"thai": "(กรีดร้องมากขึ้นเรื่อยๆ) เรา... เราคิดว่าเราเป็นทีมสำรวจใช่ไหมล่ะ?",
+								"hindi": "(धीरे-धीरे चीखते हुए) हम... हमने सोचा था कि हम एक खोज दल हैं, है ना?"
+							},
+							"emotion": "sad"
+						},
+						{
+							"speaker": "character_any",
+							"type": "speech",
+							"content": {
+								"korean": "당연하지.",
+								"english": "Of course.",
+								"japanese": "当然だ。",
+								"chinese": "当然。",
+								"french": "Évidemment.",
+								"spanish": "Por supuesto.",
+								"vietnamese": "Đương nhiên.",
+								"thai": "แน่นอนสิ",
+								"hindi": "बिलकुल।"
+							},
+							"emotion": "base"
+						},
+						{
+							"content": {
+								"korean": "틀렸어! 우리는… 숲의 먹잇감이야!",
+								"english": "Wrong! We are... the forest's prey!",
+								"japanese": "違う！私たちは…森の獲物なんだ！",
+								"chinese": "错了！我们是……森林的猎物！",
+								"french": "Faux ! Nous sommes... la proie de la forêt !",
+								"spanish": "¡Incorrecto! ¡Somos... la presa del bosque!",
+								"vietnamese": "Sai rồi! Chúng ta… là con mồi của khu rừng!",
+								"thai": "ผิดแล้ว! เราคือ... เหยื่อของป่า!",
+								"hindi": "गलत! हम... जंगल का शिकार हैं!"
+							},
+							"emotion": "angry",
+							"type": "speech",
+							"speaker": "ela"
+						},
+						{
+							"speaker": "ela",
+							"type": "speech",
+							"content": {
+								"korean": "이 숲은… 거대한 덫이야! 우리를 가둬놓고, 가지고 놀다가…",
+								"english": "This forest is... a giant trap! It's trapping us, playing with us, and then...",
+								"japanese": "この森は…巨大な罠だ！私たちを閉じ込めて、弄んで…",
+								"chinese": "这片森林……是一个巨大的陷阱！它把我们困住，玩弄我们，然后……",
+								"french": "Cette forêt est... un piège géant ! Elle nous enferme, joue avec nous, et ensuite...",
+								"spanish": "¡Este bosque es... una trampa gigante! Nos está atrapando, jugando con nosotros, y luego...",
+								"vietnamese": "Khu rừng này… là một cái bẫy khổng lồ! Nó giam giữ chúng ta, đùa giỡn với chúng ta, rồi…",
+								"thai": "ป่านี้มัน... กับดักยักษ์ชัดๆ! มันขังเราไว้ เล่นกับเรา แล้วก็...",
+								"hindi": "यह जंगल... एक विशाल जाल है! यह हमें फंसा रहा है, हमसे खेल रहा है, और फिर..."
+							},
+							"emotion": "angry"
+						},
+						{
+							"speaker": "ela",
+							"type": "speech",
+							"content": {
+								"korean": "결국, 삼키려는 거야!",
+								"english": "Eventually, it's going to swallow us whole!",
+								"japanese": "結局、私たちを飲み込むつもりなんだ！",
+								"chinese": "最终，它会把我们吞噬！",
+								"french": "Finalement, ça va nous dévorer !",
+								"spanish": "¡Finalmente, nos va a tragar!",
+								"vietnamese": "Cuối cùng, nó sẽ nuốt chửng chúng ta!",
+								"thai": "สุดท้าย มันก็จะกลืนกินเรา!",
+								"hindi": "आखिरकार, यह हमें निगल जाएगा!"
+							},
+							"emotion": "angry"
+						},
+						{
+							"content": {
+								"korean": "엘라! 진정해!",
+								"english": "Ella! Calm down!",
+								"japanese": "エラ！落ち着いて！",
+								"chinese": "艾拉！冷静下来！",
+								"french": "Ella ! Calme-toi !",
+								"spanish": "¡Ella! ¡Cálmate!",
+								"vietnamese": "Ella! Bình tĩnh lại!",
+								"thai": "เอลล่า! ใจเย็น ๆ!",
+								"hindi": "एला! शांत हो जाओ!"
+							},
+							"emotion": "sad",
+							"type": "speech",
+							"speaker": "character_3"
+						}
+					]
+				},
+				{
+					"id": 9,
+					"dialogue": [
+						{
+							"spot": [
+								4,
+								2
+							],
+							"action": "enter",
+							"speaker": "ela",
+							"duration_ms": 500,
+							"type": "direction"
+						},
+						{
+							"content": {
+								"korean": "(눈물 흘리며) 벗어날 수 없어… 아무리 발버둥 쳐도…",
+								"english": "(Tearing up) We can't escape... No matter how hard we struggle...",
+								"japanese": "(涙を流しながら) 逃げられない… どんなにもがいても…",
+								"chinese": "(流着泪) 逃不掉的……无论怎么挣扎……",
+								"french": "(En larmes) On ne peut pas s'échapper... Peu importe nos efforts...",
+								"spanish": "(Llorando) No podemos escapar... Por mucho que luchemos...",
+								"vietnamese": "(Khóc nức nở) Không thể thoát khỏi... Dù có cố gắng thế nào đi nữa...",
+								"thai": "(น้ำตาไหล) เราหนีไม่พ้น... ไม่ว่าจะดิ้นรนแค่ไหน...",
+								"hindi": "(आँसू बहाते हुए) हम बच नहीं सकते... चाहे कितना भी संघर्ष करें..."
+							},
+							"emotion": "sad",
+							"speaker": "ela",
+							"type": "speech"
+						},
+						{
+							"content": {
+								"korean": "숲은 우리를 놓아주지 않을 거야. 우린 그저… 희생물일 뿐이야.",
+								"english": "The forest won't let us go. We're just... sacrifices.",
+								"japanese": "森は私たちを解放してくれない。私たちはただの… 犠牲者なんだ。",
+								"chinese": "森林不会放过我们。我们只是……牺牲品。",
+								"french": "La forêt ne nous lâchera pas. Nous ne sommes que... des sacrifices.",
+								"spanish": "El bosque no nos soltará. Solo somos... sacrificios.",
+								"vietnamese": "Rừng sẽ không buông tha chúng ta. Chúng ta chỉ là... những vật hiến tế thôi.",
+								"thai": "ป่าจะไม่ปล่อยเราไป เราเป็นแค่... เครื่องสังเวยเท่านั้น",
+								"hindi": "जंगल हमें जाने नहीं देगा। हम बस... बलिदान हैं।"
+							},
+							"emotion": "sad",
+							"speaker": "ela",
+							"type": "speech"
+						},
+						{
+							"speaker": "character_any",
+							"type": "speech",
+							"content": {
+								"korean": "아니야! 우리는 여기서 나갈 거야!",
+								"english": "No! We'll get out of here!",
+								"japanese": "違う！私たちはここから出るんだ！",
+								"chinese": "不！我们会离开这里的！",
+								"french": "Non ! Nous allons sortir d'ici !",
+								"spanish": "¡No! ¡Saldremos de aquí!",
+								"vietnamese": "Không! Chúng ta sẽ ra khỏi đây!",
+								"thai": "ไม่! เราจะออกไปจากที่นี่!",
+								"hindi": "नहीं! हम यहाँ से निकलेंगे!"
+							},
+							"emotion": "angry"
+						},
+						{
+							"speaker": "ela",
+							"type": "speech",
+							"content": {
+								"korean": "(절규) 어떻게?! 숲이… 우리의 심장을 뜯어먹으려 해!",
+								"english": "(Screaming) How?! The forest... it wants to tear out our hearts!",
+								"japanese": "(絶叫) どうやって？！森が… 私たちの心臓を食い破ろうとしている！",
+								"chinese": "(尖叫) 怎么出去？！森林……它想挖出我们的心脏！",
+								"french": "(Hurlant) Comment ?! La forêt... elle veut nous arracher le cœur !",
+								"spanish": "(Gritando) ¡¿Cómo?! ¡El bosque... quiere arrancarnos el corazón!",
+								"vietnamese": "(Hét lên) Làm sao đây?! Rừng... nó muốn xé nát tim chúng ta!",
+								"thai": "(กรีดร้อง) ได้ยังไง?! ป่า... มันกำลังจะฉีกหัวใจของเรา!",
+								"hindi": "(चीखते हुए) कैसे?! जंगल... वह हमारे दिलों को चीरना चाहता है!"
+							},
+							"emotion": "angry"
+						},
+						{
+							"speaker": "narrator",
+							"type": "speech",
+							"content": {
+								"korean": "엘라의 절규는 숲의 울림과 섞여 탐험대의 마음을 흔들었다.",
+								"english": "Ella's scream intertwined with the forest's echoes, shaking the expedition team's resolve.",
+								"japanese": "エラの絶叫は森のこだまと混ざり合い、探検隊の心を揺さぶった。",
+								"chinese": "艾拉的尖叫与森林的回响混杂在一起，动摇了探险队的心。",
+								"french": "Le cri d'Ella se mêla aux échos de la forêt, ébranlant le cœur de l'équipe d'expédition.",
+								"spanish": "El grito de Ella se mezcló con el eco del bosque, conmoviendo el corazón del equipo de expedición.",
+								"vietnamese": "Tiếng thét của Ella hòa lẫn với âm vang của rừng, làm lay động lòng người trong đội thám hiểm.",
+								"thai": "เสียงกรีดร้องของเอลล่าผสมกับเสียงสะท้อนของป่า ทำให้จิตใจของทีมสำรวจสั่นคลอน",
+								"hindi": "एला की चीख जंगल की गूँज के साथ मिल गई, जिससे अभियान दल का मन हिल गया।"
+							},
+							"emotion": "base"
+						}
+					]
+				},
+				{
+					"win_dialogue": [
+						{
+							"type": "speech",
+							"speaker": "random_boss",
+							"content": {
+								"korean": "(고통스럽게) 감히… 나의 덫을 부수려 하다니…",
+								"english": "(Painfully) How dare you... try to break my trap...",
+								"japanese": "(苦痛に) よくも… 私の罠を破ろうと…!",
+								"chinese": "(痛苦地) 竟敢… 破坏我的陷阱…",
+								"french": "(Douloureusement) Comment oses-tu... briser mon piège...",
+								"spanish": "(Con dolor) ¿Cómo... osas intentar romper mi trampa...?",
+								"vietnamese": "(Đau đớn) Dám... phá bẫy của ta...",
+								"thai": "(เจ็บปวด) แก... กล้าดียังไง... มาทำลายกับดักของข้า...",
+								"hindi": "(दर्द से) तुम्हारी हिम्मत कैसे हुई... मेरे जाल को तोड़ने की कोशिश करने की..."
+							},
+							"emotion": "angry"
+						},
+						{
+							"type": "speech",
+							"speaker": "random_boss",
+							"content": {
+								"korean": "하지만… 잊지 마라… 숲은… 너희를 기억할 것이다…",
+								"english": "But... don't forget... the forest... will remember you...",
+								"japanese": "だが… 忘れるな… 森は… お前たちを覚えているだろう…",
+								"chinese": "但是… 别忘了… 森林… 会记住你们的…",
+								"french": "Mais... n'oubliez pas... la forêt... se souviendra de vous...",
+								"spanish": "Pero... no olvidéis... el bosque... os recordará...",
+								"vietnamese": "Nhưng... đừng quên... khu rừng... sẽ ghi nhớ các ngươi...",
+								"thai": "แต่... อย่าลืม... ป่า... จะจดจำพวกเจ้า...",
+								"hindi": "पर... याद रखना... जंगल... तुम्हें याद रखेगा..."
+							},
+							"emotion": "base"
+						},
+						{
+							"type": "speech",
+							"speaker": "character_any",
+							"content": {
+								"korean": "...끝난 건가?",
+								"english": "...Is it over?",
+								"japanese": "…終わったのか？",
+								"chinese": "…结束了吗？",
+								"french": "...C'est fini ?",
+								"spanish": "...¿Ha terminado?",
+								"vietnamese": "...Kết thúc rồi sao?",
+								"thai": "...จบแล้วหรือ?",
+								"hindi": "...क्या यह खत्म हो गया?"
+							},
+							"emotion": "base"
+						},
+						{
+							"spot": [
+								3,
+								2
+							],
+							"action": "enter",
+							"speaker": "ela",
+							"duration_ms": 500,
+							"type": "direction"
+						},
+						{
+							"type": "speech",
+							"speaker": "ela",
+							"content": {
+								"korean": "(기운 없이) 아니… 이 숲은… 끝나지 않아…",
+								"english": "(Weakly) No... this forest... it doesn't end...",
+								"japanese": "(力なく) いや… この森は… 終わらない…",
+								"chinese": "(无力地) 不… 这片森林… 永无止境…",
+								"french": "(Faiblement) Non... cette forêt... ne finit jamais...",
+								"spanish": "(Débilmente) No... este bosque... no termina...",
+								"vietnamese": "(Yếu ớt) Không... khu rừng này... không bao giờ kết thúc...",
+								"thai": "(อ่อนแรง) ไม่... ป่าแห่งนี้... ไม่มีวันสิ้นสุด...",
+								"hindi": "(कमजोर स्वर में) नहीं... यह जंगल... खत्म नहीं होता..."
+							},
+							"emotion": "sad"
+						},
+						{
+							"content": {
+								"korean": "또 다른 덫이… 우리를 기다릴 거야.",
+								"english": "Another trap... will be waiting for us.",
+								"japanese": "また別の罠が… 私たちを待っているだろう。",
+								"chinese": "另一个陷阱… 正在等着我们。",
+								"french": "Un autre piège... nous attendra.",
+								"spanish": "Otra trampa... nos estará esperando.",
+								"vietnamese": "Một cái bẫy khác... sẽ chờ đợi chúng ta.",
+								"thai": "กับดักอีกอัน... จะรอพวกเราอยู่.",
+								"hindi": "एक और जाल... हमारा इंतज़ार कर रहा होगा।"
+							},
+							"emotion": "sad",
+							"speaker": "ela",
+							"type": "speech"
+						},
+						{
+							"content": {
+								"korean": "쓰러진 {random_boss}의 잔해 위로 숲의 기운이 다시 피어올랐다. 이 싸움은, 아직 끝나지 않았다.",
+								"english": "Above the remains of the fallen {random_boss}, the forest's energy resurged. This fight is not over yet.",
+								"japanese": "倒れた{random_boss}の残骸の上で、森の気が再び湧き上がった。この戦いは、まだ終わっていない。",
+								"chinese": "在倒下的{random_boss}残骸之上，森林的气息再次复苏。这场战斗，尚未结束。",
+								"french": "Au-dessus des restes du {random_boss} tombé, l'énergie de la forêt a resurgi. Ce combat n'est pas encore terminé.",
+								"spanish": "Sobre los restos del {random_boss} caído, la energía del bosque resurgió. Esta lucha, aún no ha terminado.",
+								"vietnamese": "Trên tàn tích của {random_boss} đã ngã xuống, linh khí của khu rừng lại trỗi dậy. Cuộc chiến này, vẫn chưa kết thúc.",
+								"thai": "เหนือซากปรักหักพังของ {random_boss} ที่ล้มลง พลังของป่าได้กลับคืนมาอีกครั้ง การต่อสู้นี้ยังไม่จบสิ้น.",
+								"hindi": "गिरे हुए {random_boss} के अवशेषों के ऊपर, जंगल की ऊर्जा फिर से उमड़ पड़ी। यह लड़ाई, अभी खत्म नहीं हुई है।"
+							},
+							"emotion": "base",
+							"type": "speech",
+							"speaker": "narrator"
+						}
+					],
+					"id": 15,
+					"lose_dialogue": [
+						{
+							"content": {
+								"korean": "거대한 그림자가 탐험대를 집어삼켰다.",
+								"english": "A colossal shadow engulfed the expedition.",
+								"japanese": "巨大な影が探検隊を飲み込んだ。",
+								"chinese": "巨大的阴影吞噬了探险队。",
+								"french": "Une ombre colossale a englouti l'expédition.",
+								"spanish": "Una sombra colosal engulló a la expedición.",
+								"vietnamese": "Một cái bóng khổng lồ nuốt chửng đoàn thám hiểm.",
+								"thai": "เงาขนาดมหึมาได้กลืนกินคณะสำรวจ.",
+								"hindi": "एक विशालकाय छाया ने अभियान दल को निगल लिया।"
+							},
+							"emotion": "base",
+							"type": "speech",
+							"speaker": "narrator"
+						},
+						{
+							"content": {
+								"korean": "(조롱하듯) 고작 이 정도인가? 영원히 숲의 일부가 되어라.",
+								"english": "(Mockingly) Is this all you've got? Become a part of the forest, forever.",
+								"japanese": "(嘲笑うように) たったこれだけか？永遠に森の一部となれ。",
+								"chinese": "(嘲讽地) 就这点本事吗？永远成为森林的一部分吧。",
+								"french": "(D'un ton moqueur) C'est tout ce que vous avez ? Devenez une partie de la forêt, pour toujours.",
+								"spanish": "(Con sarcasmo) ¿Esto es todo lo que tenéis? Convertíos en parte del bosque, para siempre.",
+								"vietnamese": "(Giọng chế giễu) Chỉ có thế thôi sao? Hãy trở thành một phần của khu rừng vĩnh viễn đi.",
+								"thai": "(เยาะเย้ย) แค่นี้เองหรือ? จงกลายเป็นส่วนหนึ่งของป่าตลอดไป.",
+								"hindi": "(मज़ाक उड़ाते हुए) बस इतना ही? हमेशा के लिए जंगल का हिस्सा बन जाओ।"
+							},
+							"emotion": "base",
+							"speaker": "random_boss",
+							"type": "speech"
+						},
+						{
+							"content": {
+								"korean": "(이를 악물며) 다시… 반드시 돌아온다…",
+								"english": "(Gritting teeth) I'll be back... I will definitely return...",
+								"japanese": "(歯を食いしばり) 必ず… また戻ってくる…",
+								"chinese": "(咬牙切齿地) 我会… 必定会回来…",
+								"french": "(En serrant les dents) Je reviendrai... je reviendrai absolument...",
+								"spanish": "(Apretando los dientes) Volveré... definitivamente volveré...",
+								"vietnamese": "(Nghiến răng) Ta sẽ trở lại... nhất định sẽ trở lại...",
+								"thai": "(กัดฟัน) ข้า... จะกลับมาแน่นอน...",
+								"hindi": "(दांत पीसते हुए) मैं वापस आऊँगा... मैं निश्चित रूप से वापस आऊँगा..."
+							},
+							"emotion": "angry",
+							"type": "speech",
+							"speaker": "character_any"
+						},
+						{
+							"spot": [
+								3,
+								2
+							],
+							"action": "enter",
+							"duration_ms": 500,
+							"speaker": "ela",
+							"type": "direction"
+						},
+						{
+							"speaker": "ela",
+							"type": "speech",
+							"content": {
+								"korean": "(절망하며) 도망칠 수 없어… 우리는… 영원히 갇혔어…",
+								"english": "(Despairing) We can't escape... We're trapped forever...",
+								"japanese": "(絶望して)逃げられない…私たちは…永遠に閉じ込められた…",
+								"chinese": "(绝望地)我们逃不掉…我们…永远被困住了…",
+								"french": "(Désespérément) On ne peut pas s'échapper… Nous sommes… piégés pour toujours…",
+								"spanish": "(Desesperado) No podemos escapar… Estamos… atrapados para siempre…",
+								"vietnamese": "(Tuyệt vọng) Không thể thoát… Chúng ta… bị kẹt mãi mãi rồi…",
+								"thai": "(สิ้นหวัง) หนีไม่พ้น… เรา… ถูกขังตลอดไปแล้ว…",
+								"hindi": "(निराश होकर) हम भाग नहीं सकते… हम… हमेशा के लिए फंस गए हैं…"
+							},
+							"emotion": "sad"
+						}
+					],
+					"dialogue": [
+						{
+							"speaker": "narrator",
+							"type": "speech",
+							"content": {
+								"korean": "숲의 가장 깊은 곳, 거대한 그림자가 움직였다.",
+								"english": "In the deepest part of the forest, a colossal shadow stirred.",
+								"japanese": "森の最も深い場所で、巨大な影が動いた。",
+								"chinese": "在森林最深处，一个巨大的影子动了。",
+								"french": "Au plus profond de la forêt, une ombre colossale bougea.",
+								"spanish": "En lo más profundo del bosque, una sombra colosal se movió.",
+								"vietnamese": "Ở nơi sâu nhất của khu rừng, một cái bóng khổng lồ di chuyển.",
+								"thai": "ในส่วนที่ลึกที่สุดของป่า เงาขนาดมหึมาได้เคลื่อนไหว",
+								"hindi": "जंगल के सबसे गहरे हिस्से में, एक विशाल छाया हिल उठी।"
+							},
+							"emotion": "base"
+						},
+						{
+							"content": {
+								"korean": "(낮고 위협적인 목소리) 새로운 손님인가. 덫에 걸린 어리석은 벌레들.",
+								"english": "(Low, menacing voice) New guests, are they? Foolish insects caught in a trap.",
+								"japanese": "(低く威嚇的な声) 新しい客か。罠にかかった愚かな虫どもめ。",
+								"chinese": "(低沉而具威胁性的声音) 新的客人吗？被困住的愚蠢虫子。",
+								"french": "(Voix basse et menaçante) De nouveaux invités, n'est-ce pas ? De stupides insectes pris au piège.",
+								"spanish": "(Voz baja y amenazante) ¿Nuevos invitados? Insectos estúpidos atrapados en una trampa.",
+								"vietnamese": "(Giọng nói trầm thấp, đầy đe dọa) Khách mới ư. Lũ côn trùng ngu ngốc mắc bẫy.",
+								"thai": "แขกใหม่รึ? แมลงโง่เขลาที่ติดกับดัก",
+								"hindi": "(धीमी, धमकी भरी आवाज़) नए मेहमान हैं क्या? जाल में फँसे मूर्ख कीड़े।"
+							},
+							"emotion": "base",
+							"type": "speech",
+							"speaker": "random_boss"
+						},
+						{
+							"content": {
+								"korean": "...네가 이 모든 걸 꾸민 건가?",
+								"english": "...Did you orchestrate all of this?",
+								"japanese": "…お前がこの全てを仕組んだのか？",
+								"chinese": "……这一切都是你策划的吗？",
+								"french": "...C'est toi qui as orchestré tout cela ?",
+								"spanish": "...¿Tú orquestaste todo esto?",
+								"vietnamese": "...Ngươi đã sắp đặt tất cả chuyện này sao?",
+								"thai": "...แกเป็นคนจัดฉากทั้งหมดนี้เหรอ?",
+								"hindi": "...क्या यह सब तुमने ही रचा है?"
+							},
+							"emotion": "angry",
+							"speaker": "character_any",
+							"type": "speech"
+						},
+						{
+							"type": "speech",
+							"speaker": "random_boss",
+							"content": {
+								"korean": "(비웃듯) 꾸미다니. 자연의 섭리일 뿐. 약자는 강자의 양분이 되는 법.",
+								"english": "(Scoffs) Orchestrate? It's merely the law of nature. The weak become sustenance for the strong.",
+								"japanese": "(嘲笑うように) 仕組むだと？ただの自然の摂理だ。弱者は強者の糧となる。",
+								"chinese": "(嘲讽) 策划？不过是自然法则罢了。弱者注定成为强者的养分。",
+								"french": "(Ricane) Orchestrer ? Ce n'est que la loi de la nature. Le faible devient la subsistance du fort.",
+								"spanish": "(Se burla) ¿Orquestar? Es simplemente la ley de la naturaleza. El débil se convierte en alimento para el fuerte.",
+								"vietnamese": "(Cười khẩy) Sắp đặt ư. Chỉ là quy luật tự nhiên thôi. Kẻ yếu trở thành thức ăn cho kẻ mạnh.",
+								"thai": "(เยาะเย้ย) จัดฉากงั้นรึ? มันก็แค่กฎของธรรมชาติ คนอ่อนแอเป็นอาหารของคนแข็งแกร่งเสมอ",
+								"hindi": "(व्यंग्य करते हुए) रचा है? यह तो बस प्रकृति का नियम है। कमज़ोर, बलवान का पोषण बनते हैं।"
+							},
+							"emotion": "base"
+						},
+						{
+							"type": "speech",
+							"speaker": "character_any",
+							"content": {
+								"korean": "시끄러워!",
+								"english": "Shut up!",
+								"japanese": "うるさい！",
+								"chinese": "闭嘴！",
+								"french": "Silence !",
+								"spanish": "¡Cállate!",
+								"vietnamese": "Im đi!",
+								"thai": "เงียบไปเลย!",
+								"hindi": "चुप रहो!"
+							},
+							"emotion": "angry"
+						}
+					]
+				}
+			]
+		},
+		{
+			"scenario_id": "forest_luminaflutter_35_05",
+			"order": 5,
+			"act": "climax_finale",
+			"theme": "forest",
+			"actors": {
+				"ivy": {
+					"id": "mon_d1c759f3-74f8-42b7-ba16-c705649f006f",
+					"name": {
+						"korean": "아이비",
+						"english": "Ivy",
+						"japanese": "アイビー",
+						"chinese": "艾薇",
+						"french": "Ivy",
+						"spanish": "Ivy",
+						"vietnamese": "Ivy",
+						"thai": "ไอวี่",
+						"hindi": "आइवी"
+					},
+					"description": "",
+					"face_image_url": "https://imagedelivery.net/WTEqQNGFb-l-IHS6IGnzUQ/654fde54-6029-4601-b4a8-0578f00df900/public",
+					"battle_sprite_url": "https://imagedelivery.net/WTEqQNGFb-l-IHS6IGnzUQ/6ee8738d-0e14-4f8d-d04d-c934b0fff000/public"
+				}
+			},
+			"boss": {
+				"pool_id": "pool_206"
+			},
+			"epilogue": {
+				"korean": [
+					"패션쇼는 막을 내렸다. 적막한 숲에는 비릿한 향기만 남았다.",
+					"루미나 플러터의 광기는 잠시 멈췄지만, 그녀의 예술은 숲 깊이 뿌리내려 있었다.",
+					"탐험대는 숲을 떠났다. 하지만 숲은, 그들을 놓아준 것일까, 아니면 또 다른 무대를 준비하는 것일까.",
+					"거울 속 자신을 본다. 숲의 일부가 된 듯한 기분… 착각일까."
+				],
+				"english": [
+					"The fashion show ended. Only a metallic scent lingered in the silent forest.",
+					"Lumina Flutter's madness paused, but her art was deeply rooted in the forest.",
+					"The expedition left the forest. But did the forest release them, or was it preparing another stage?",
+					"I see myself in the mirror. A feeling of becoming part of the forest... Is it an illusion?"
+				],
+				"japanese": [
+					"ファッションショーは幕を閉じた。静寂な森には、生臭い匂いだけが残った。",
+					"ルミナ・フラッターの狂気は一時的に止まったが、彼女の芸術は森の奥深くに根付いていた。",
+					"探検隊は森を去った。しかし、森は彼らを解放したのだろうか、それとも新たな舞台を準備しているのだろうか。",
+					"鏡の中の自分を見る。森の一部になったような気分…錯覚だろうか。"
+				],
+				"chinese": [
+					"时装秀落幕。寂静的森林里只剩下腥味。",
+					"露米娜·弗拉特的疯狂暂时停止了，但她的艺术已在森林深处扎根。",
+					"探险队离开了森林。但森林是放过了他们，还是在准备另一个舞台？",
+					"我在镜中看到自己。感觉自己已成为森林的一部分……是错觉吗？"
+				],
+				"french": [
+					"Le défilé de mode se termina. Seule une odeur métallique persistait dans la forêt silencieuse.",
+					"La folie de Lumina Flutter s'était arrêtée un instant, mais son art était profondément enraciné dans la forêt.",
+					"L'expédition quitta la forêt. Mais la forêt les avait-elle libérés, ou préparait-elle une autre scène ?",
+					"Je me vois dans le miroir. Un sentiment de faire partie de la forêt… Est-ce une illusion ?"
+				],
+				"spanish": [
+					"El desfile de moda terminó. Solo un olor metálico persistía en el bosque silencioso.",
+					"La locura de Lumina Flutter se detuvo un instante, pero su arte estaba profundamente arraigado en el bosque.",
+					"La expedición abandonó el bosque. Pero, ¿los liberó el bosque, o estaba preparando otro escenario?",
+					"Me veo en el espejo. Una sensación de ser parte del bosque... ¿Es una ilusión?"
+				],
+				"vietnamese": [
+					"Buổi trình diễn thời trang kết thúc. Chỉ còn lại mùi tanh nồng trong khu rừng tĩnh lặng.",
+					"Sự điên rồ của Lumina Flutter tạm lắng xuống, nhưng nghệ thuật của cô đã ăn sâu vào rừng.",
+					"Đoàn thám hiểm rời rừng. Nhưng liệu khu rừng có buông tha họ, hay đang chuẩn bị một màn trình diễn khác?",
+					"Tôi nhìn thấy mình trong gương. Cảm giác như đã trở thành một phần của khu rừng... Có phải là ảo ảnh?"
+				],
+				"thai": [
+					"แฟชั่นโชว์จบลง มีเพียงกลิ่นคาวคละคลุ้งอยู่ในป่าที่เงียบสงบ",
+					"ความบ้าคลั่งของ Lumina Flutter หยุดลงชั่วคราว แต่ศิลปะของเธอยังคงหยั่งรากลึกอยู่ในป่า",
+					"คณะสำรวจออกจากป่าไปแล้ว แต่ป่าได้ปล่อยพวกเขาไปจริงๆ หรือกำลังเตรียมเวทีอื่นอยู่กันแน่",
+					"ฉันมองเห็นตัวเองในกระจก ความรู้สึกเหมือนเป็นส่วนหนึ่งของป่า... เป็นเพียงภาพลวงตาหรือเปล่า"
+				],
+				"hindi": [
+					"फैशन शो समाप्त हो गया। शांत जंगल में केवल एक धातु जैसी गंध बची थी।",
+					"लुमिना फ्लटर का पागलपन थम गया, लेकिन उसकी कला जंगल में गहराई से जड़ें जमा चुकी थी।",
+					"अभियान दल ने जंगल छोड़ दिया। लेकिन क्या जंगल ने उन्हें जाने दिया, या वह एक और मंच तैयार कर रहा था?",
+					"मैं दर्पण में खुद को देखता हूँ। जंगल का हिस्सा बनने जैसा महसूस होता है... क्या यह एक भ्रम है?"
+				]
+			},
+			"rooms": [
+				{
+					"id": 1,
+					"dialogue": [
+						{
+							"speaker": "narrator",
+							"emotion": "base",
+							"type": "speech",
+							"content": {
+								"korean": "숲의 심장부로 들어설수록, 기묘한 아름다움이 탐험대를 압도했다.",
+								"english": "As they ventured deeper into the forest's heart, a strange beauty overwhelmed the expedition.",
+								"japanese": "森の心臓部へ深く進むほど、奇妙な美しさが探検隊を圧倒した。",
+								"chinese": "越深入森林之心，一种奇异的美丽越是压倒了探险队。",
+								"french": "Plus ils s'enfonçaient au cœur de la forêt, plus une étrange beauté submergeait l'expédition.",
+								"spanish": "Cuanto más se adentraban en el corazón del bosque, una extraña belleza abrumaba a la expedición.",
+								"vietnamese": "Càng đi sâu vào trái tim khu rừng, vẻ đẹp kỳ lạ càng nhấn chìm đoàn thám hiểm.",
+								"thai": "ยิ่งเข้าไปในใจกลางป่าลึกเท่าไร ความงามประหลาดก็ยิ่งท่วมท้นคณะสำรวจมากเท่านั้น",
+								"hindi": "जैसे-जैसे वे जंगल के दिल में गहराई तक उतरते गए, एक अजीब सुंदरता ने अभियान दल को अभिभूत कर दिया।"
+							}
+						},
+						{
+							"emotion": "base",
+							"speaker": "character_any",
+							"type": "speech",
+							"content": {
+								"korean": "이 숲… 묘하게 끌리는 힘이 있어.",
+								"english": "This forest... it has a strange allure.",
+								"japanese": "この森…妙に惹かれる力がある。",
+								"chinese": "这片森林……有一种奇特的吸引力。",
+								"french": "Cette forêt... elle a une étrange attraction.",
+								"spanish": "Este bosque... tiene un extraño atractivo.",
+								"vietnamese": "Rừng này... có một sức hút kỳ lạ.",
+								"thai": "ป่าแห่งนี้... มีแรงดึงดูดแปลกๆ",
+								"hindi": "यह जंगल... इसमें एक अजीब आकर्षण है।"
+							}
+						},
+						{
+							"speaker": "ivy",
+							"spot": [
+								3,
+								2
+							],
+							"duration_ms": 500,
+							"type": "direction",
+							"action": "enter"
+						},
+						{
+							"emotion": "sad",
+							"speaker": "ivy",
+							"type": "speech",
+							"content": {
+								"korean": "…조심해요. 이 숲은 보이는 게 전부가 아니에요.",
+								"english": "...Be careful. This forest is not what it seems.",
+								"japanese": "...気をつけて。この森は見た目だけじゃないわ。",
+								"chinese": "...小心。这片森林并非眼见为实。",
+								"french": "...Faites attention. Cette forêt n'est pas ce qu'elle semble être.",
+								"spanish": "...Ten cuidado. Este bosque no es lo que parece.",
+								"vietnamese": "...Cẩn thận. Rừng này không đơn giản như vẻ ngoài đâu.",
+								"thai": "...ระวังนะ ป่านี้ไม่ใช่อย่างที่เห็นทั้งหมด",
+								"hindi": "...सावधान रहें। यह जंगल जैसा दिखता है, वैसा नहीं है。"
+							}
+						},
+						{
+							"emotion": "base",
+							"speaker": "ivy",
+							"type": "speech",
+							"content": {
+								"korean": "오랫동안 숲을 연구했지만, 최근 들어 이상한 변화가 감지됐어요.",
+								"english": "I've studied this forest for a long time, but recently, strange changes have been detected.",
+								"japanese": "長い間この森を研究してきましたが、最近、奇妙な変化が感知されました。",
+								"chinese": "我研究这片森林很久了，但最近发现了一些奇怪的变化。",
+								"french": "J'ai étudié cette forêt pendant longtemps, mais récemment, d'étranges changements ont été détectés.",
+								"spanish": "He estudiado este bosque durante mucho tiempo, pero recientemente se han detectado cambios extraños.",
+								"vietnamese": "Tôi đã nghiên cứu khu rừng này lâu rồi, nhưng gần đây đã phát hiện ra những thay đổi kỳ lạ.",
+								"thai": "ฉันศึกษาป่านี้มานาน แต่เพิ่งตรวจพบการเปลี่ยนแปลงที่แปลกประหลาด",
+								"hindi": "मैंने इस जंगल का लंबे समय तक अध्ययन किया है, लेकिन हाल ही में, अजीब बदलाव देखे गए हैं।"
+							}
+						},
+						{
+							"speaker": "character_1",
+							"emotion": "base",
+							"type": "speech",
+							"content": {
+								"korean": "이상한 변화?",
+								"english": "Strange changes?",
+								"japanese": "奇妙な変化？",
+								"chinese": "奇怪的变化？",
+								"french": "D'étranges changements ?",
+								"spanish": "¿Cambios extraños?",
+								"vietnamese": "Thay đổi kỳ lạ?",
+								"thai": "การเปลี่ยนแปลงที่แปลกประหลาด?",
+								"hindi": "अजीब बदलाव?"
+							}
+						}
+					]
+				},
+				{
+					"dialogue": [
+						{
+							"speaker": "ivy",
+							"spot": [
+								2,
+								2
+							],
+							"duration_ms": 500,
+							"type": "direction",
+							"action": "enter"
+						},
+						{
+							"type": "speech",
+							"content": {
+								"korean": "숲의 생명체들이… 마치 전시품처럼 변하고 있어요.",
+								"english": "The creatures of the forest... are changing as if they were exhibits.",
+								"japanese": "森の生き物たちが…まるで展示品のように変わっているわ。",
+								"chinese": "森林里的生物……仿佛变成了展品。",
+								"french": "Les créatures de la forêt... sont en train de changer comme si elles étaient des pièces d'exposition.",
+								"spanish": "Las criaturas del bosque... están cambiando como si fueran exhibiciones.",
+								"vietnamese": "Các sinh vật trong rừng... đang biến đổi như thể chúng là vật trưng bày.",
+								"thai": "สิ่งมีชีวิตในป่า...กำลังเปลี่ยนไปราวกับเป็นของจัดแสดง",
+								"hindi": "जंगल के प्राणी... ऐसे बदल रहे हैं जैसे वे प्रदर्शन की वस्तु हों।"
+							},
+							"emotion": "sad",
+							"speaker": "ivy"
+						},
+						{
+							"type": "speech",
+							"content": {
+								"korean": "우리도 그걸 느꼈어. 뭔가 부자연스러워.",
+								"english": "We felt it too. Something feels unnatural.",
+								"japanese": "私たちもそれを感じたよ。何かが不自然だ。",
+								"chinese": "我们也感觉到了。有些不自然。",
+								"french": "Nous l'avons ressenti aussi. Quelque chose ne semble pas naturel.",
+								"spanish": "Nosotros también lo sentimos. Algo se siente antinatural.",
+								"vietnamese": "Chúng tôi cũng cảm thấy điều đó. Có gì đó không tự nhiên.",
+								"thai": "พวกเราก็รู้สึกได้ บางอย่างมันไม่เป็นธรรมชาติ",
+								"hindi": "हमने भी इसे महसूस किया। कुछ असामान्य सा लगता है।"
+							},
+							"emotion": "base",
+							"speaker": "character_any"
+						},
+						{
+							"type": "speech",
+							"content": {
+								"korean": "최근에 아름다운 나방을 본 적이 있나요? 그녀는… 위험해요.",
+								"english": "Have you seen a beautiful moth recently? She... is dangerous.",
+								"japanese": "最近、美しい蛾を見ましたか？彼女は…危険です。",
+								"chinese": "最近你见过一只美丽的飞蛾吗？她……很危险。",
+								"french": "Avez-vous vu un beau papillon de nuit récemment ? Elle... est dangereuse.",
+								"spanish": "¿Has visto una hermosa polilla recientemente? Ella... es peligrosa.",
+								"vietnamese": "Bạn có thấy một con bướm đêm xinh đẹp gần đây không? Cô ấy... rất nguy hiểm.",
+								"thai": "คุณเห็นผีเสื้อกลางคืนที่สวยงามเมื่อเร็ว ๆ นี้ไหม? เธอ...อันตรายนะ",
+								"hindi": "क्या आपने हाल ही में एक खूबसूरत पतंगा देखा है? वह... खतरनाक है।"
+							},
+							"emotion": "sad",
+							"speaker": "ivy"
+						},
+						{
+							"speaker": "character_2",
+							"emotion": "base",
+							"type": "speech",
+							"content": {
+								"korean": "길 잃은 나방을 만났는데? 그게 왜 위험해?",
+								"english": "I met a lost moth? Why is that dangerous?",
+								"japanese": "迷子の蛾に会ったけど？それがなぜ危険なの？",
+								"chinese": "我遇到了一只迷路的飞蛾？那有什么危险的？",
+								"french": "J'ai rencontré un papillon de nuit égaré ? Pourquoi est-ce dangereux ?",
+								"spanish": "¿Conocí a una polilla perdida? ¿Por qué es eso peligroso?",
+								"vietnamese": "Tôi đã gặp một con bướm đêm lạc đường? Tại sao nó nguy hiểm?",
+								"thai": "เจอผีเสื้อกลางคืนหลงทางมา? ทำไมถึงอันตรายล่ะ?",
+								"hindi": "मैं एक खोए हुए पतंगे से मिला? वह खतरनाक क्यों है?"
+							}
+						},
+						{
+							"type": "speech",
+							"content": {
+								"korean": "그녀의 말에 속으면 안 돼요. 모든 것이 기만이에요.",
+								"english": "Don't be fooled by her words. Everything is deceit.",
+								"japanese": "彼女の言葉に騙されてはいけません。すべてが欺瞞です。",
+								"chinese": "别被她的话骗了。一切都是欺骗。",
+								"french": "Ne vous laissez pas tromper par ses paroles. Tout est tromperie.",
+								"spanish": "No te dejes engañar por sus palabras. Todo es engaño.",
+								"vietnamese": "Đừng bị lừa bởi lời nói của cô ấy. Tất cả chỉ là sự lừa dối.",
+								"thai": "อย่าหลงกลคำพูดของเธอ ทุกอย่างเป็นการหลอกลวง",
+								"hindi": "उसके शब्दों से धोखा मत खाओ। सब कुछ छल है।"
+							},
+							"emotion": "angry",
+							"speaker": "ivy"
+						}
+					],
+					"id": 3
+				},
+				{
+					"id": 5,
+					"dialogue": [
+						{
+							"action": "enter",
+							"type": "direction",
+							"spot": [
+								3,
+								2
+							],
+							"speaker": "ivy",
+							"duration_ms": 500
+						},
+						{
+							"speaker": "ivy",
+							"emotion": "sad",
+							"type": "speech",
+							"content": {
+								"korean": "이 숲의 환영은… 단순한 환상이 아니에요.",
+								"english": "The illusions of this forest... are not mere fantasies.",
+								"japanese": "この森の幻影は…単なる幻想じゃないわ。",
+								"chinese": "这片森林的幻象……并非简单的幻觉。",
+								"french": "Les illusions de cette forêt... ne sont pas de simples fantaisies.",
+								"spanish": "Las ilusiones de este bosque... no son meras fantasías.",
+								"vietnamese": "Ảo ảnh của khu rừng này... không phải là ảo giác đơn thuần.",
+								"thai": "ภาพลวงตาของป่านี้... ไม่ใช่แค่จินตนาการ",
+								"hindi": "इस जंगल के भ्रम... केवल कल्पनाएँ नहीं हैं।"
+							}
+						},
+						{
+							"type": "speech",
+							"content": {
+								"korean": "그럼… 뭐야?",
+								"english": "Then... what is it?",
+								"japanese": "じゃあ…何なの？",
+								"chinese": "那……是什么？",
+								"french": "Alors... qu'est-ce que c'est ?",
+								"spanish": "Entonces... ¿qué es?",
+								"vietnamese": "Vậy... nó là gì?",
+								"thai": "ถ้าอย่างนั้น...มันคืออะไร?",
+								"hindi": "तो... यह क्या है?"
+							},
+							"speaker": "character_any",
+							"emotion": "base"
+						},
+						{
+							"emotion": "base",
+							"speaker": "ivy",
+							"type": "speech",
+							"content": {
+								"korean": "실제로 존재하는 무언가의 투영… 아마도 거대한 스크린이 우리를 감싸고 있는지도 몰라요.",
+								"english": "A projection of something real... Perhaps a gigantic screen surrounds us.",
+								"japanese": "実際に存在する何かの投影…もしかしたら、巨大なスクリーンが私たちを包んでいるのかもしれません。",
+								"chinese": "某个真实存在的投影……也许巨大的屏幕正围绕着我们。",
+								"french": "Une projection de quelque chose de réel... Peut-être qu'un écran géant nous enveloppe.",
+								"spanish": "Una proyección de algo real... Quizás una pantalla gigante nos rodea.",
+								"vietnamese": "Một hình chiếu của thứ gì đó có thật... Có lẽ một màn hình khổng lồ đang bao quanh chúng ta.",
+								"thai": "ภาพฉายของบางสิ่งที่ดำรงอยู่จริง... บางทีอาจมีจอขนาดยักษ์ล้อมรอบเราอยู่",
+								"hindi": "वास्तविक चीज़ का प्रक्षेपण... शायद एक विशाल स्क्रीन हमें घेरे हुए है।"
+							}
+						},
+						{
+							"speaker": "character_3",
+							"emotion": "sad",
+							"type": "speech",
+							"content": {
+								"korean": "숲이… 쇼룸이라고?",
+								"english": "The forest... a showroom?",
+								"japanese": "森が…ショールームだと？",
+								"chinese": "森林……是个展厅？",
+								"french": "La forêt... un showroom ?",
+								"spanish": "¿El bosque... una sala de exposición?",
+								"vietnamese": "Rừng... là phòng trưng bày sao?",
+								"thai": "ป่า... เป็นโชว์รูม?",
+								"hindi": "जंगल... एक शोरूम?"
+							}
+						},
+						{
+							"type": "speech",
+							"content": {
+								"korean": "점점 더 기괴해지고 있어요. 우리도 모르는 사이에… 뭔가 조작당하고 있어.",
+								"english": "It's getting weirder and weirder. Without us even knowing... something is being manipulated.",
+								"japanese": "どんどん奇妙になってきています。私たちも知らないうちに…何かが操作されている。",
+								"chinese": "越来越诡异了。在我们不知情的情况下……有什么东西被操控了。",
+								"french": "Ça devient de plus en plus étrange. Sans que nous le sachions... quelque chose est manipulé.",
+								"spanish": "Cada vez es más extraño. Sin que lo sepamos... algo está siendo manipulado.",
+								"vietnamese": "Nó ngày càng kỳ lạ. Chúng ta không hề hay biết... có gì đó đang bị thao túng.",
+								"thai": "มันเริ่มแปลกขึ้นเรื่อยๆ แล้ว โดยที่เราไม่รู้ตัว... มีบางอย่างถูกบงการอยู่",
+								"hindi": "यह और भी अजीब होता जा रहा है। हमें पता भी नहीं चला... कुछ हेरफेर हो रहा है।"
+							},
+							"emotion": "sad",
+							"speaker": "ivy"
+						}
+					]
+				},
+				{
+					"dialogue": [
+						{
+							"speaker": "ivy",
+							"spot": [
+								2,
+								2
+							],
+							"duration_ms": 500,
+							"type": "direction",
+							"action": "enter"
+						},
+						{
+							"speaker": "ivy",
+							"emotion": "sad",
+							"type": "speech",
+							"content": {
+								"korean": "더 이상 도망칠 수 없어요… 모두가 갇힌 거예요.",
+								"english": "We can't escape anymore... Everyone's trapped.",
+								"japanese": "もう逃げられません…みんな閉じ込められたんです。",
+								"chinese": "再也逃不掉了……所有人都被困住了。",
+								"french": "On ne peut plus s'échapper... Tout le monde est piégé.",
+								"spanish": "Ya no podemos escapar... Todos estamos atrapados.",
+								"vietnamese": "Chúng ta không thể trốn thoát nữa... Mọi người đều bị mắc kẹt rồi.",
+								"thai": "เราหนีไม่ได้อีกแล้ว... ทุกคนถูกขังไว้หมดแล้ว",
+								"hindi": "हम और भाग नहीं सकते... सब फंस गए हैं।"
+							}
+						},
+						{
+							"emotion": "angry",
+							"speaker": "character_any",
+							"type": "speech",
+							"content": {
+								"korean": "갇히다니? 대체 무슨 소리야!",
+								"english": "Trapped? What are you talking about!",
+								"japanese": "閉じ込められたって？一体どういうことなの！",
+								"chinese": "被困住了？你在说什么！",
+								"french": "Piégés ? De quoi tu parles !",
+								"spanish": "¿Atrapados? ¡¿De qué estás hablando?!",
+								"vietnamese": "Bị mắc kẹt? Anh đang nói cái gì vậy!",
+								"thai": "ถูกขัง? หมายความว่ายังไง!",
+								"hindi": "फंस गए? तुम क्या कह रहे हो!"
+							}
+						},
+						{
+							"type": "speech",
+							"content": {
+								"korean": "우리는… 이 숲의 일부가 될 거예요. 아름다운… 전시품으로.",
+								"english": "We... will become part of this forest. As beautiful... exhibits.",
+								"japanese": "私たちは…この森の一部になるんです。美しい…展示品として。",
+								"chinese": "我们……将成为这片森林的一部分。作为美丽的……展品。",
+								"french": "Nous... ferons partie de cette forêt. En tant que magnifiques... pièces d'exposition.",
+								"spanish": "Nosotros... nos convertiremos en parte de este bosque. Como hermosas... exhibiciones.",
+								"vietnamese": "Chúng ta... sẽ trở thành một phần của khu rừng này. Như những vật trưng bày... tuyệt đẹp.",
+								"thai": "เรา... จะกลายเป็นส่วนหนึ่งของป่านี้... ในฐานะของจัดแสดงที่สวยงาม",
+								"hindi": "हम... इस जंगल का हिस्सा बन जाएंगे। सुंदर... प्रदर्शनियों के रूप में।"
+							},
+							"speaker": "ivy",
+							"emotion": "sad"
+						},
+						{
+							"type": "speech",
+							"content": {
+								"korean": "…우리가 먹잇감이었다는 거야?",
+								"english": "...We were the prey?",
+								"japanese": "…私たちが獲物だったってこと？",
+								"chinese": "……我们是猎物？",
+								"french": "...Nous étions la proie ?",
+								"spanish": "...¿Éramos la presa?",
+								"vietnamese": "...Chúng ta là con mồi sao?",
+								"thai": "...เราเป็นเหยื่ออย่างนั้นเหรอ?",
+								"hindi": "...हम शिकार थे?"
+							},
+							"speaker": "character_4",
+							"emotion": "sad"
+						},
+						{
+							"type": "speech",
+							"content": {
+								"korean": "그래요… 이제… 끝이에요… 흐윽…",
+								"english": "Yes... It's... over now... *sob*",
+								"japanese": "ええ…もう…終わりです…うっ…",
+								"chinese": "是的……现在……结束了……呜……",
+								"french": "Oui... C'est... fini maintenant... *sanglot*",
+								"spanish": "Sí... Ya... se acabó... *sollozo*",
+								"vietnamese": "Đúng vậy... Bây giờ... mọi chuyện đã kết thúc rồi... *khóc nấc*",
+								"thai": "ใช่ค่ะ... ตอนนี้... มันจบลงแล้ว... ฮึก...",
+								"hindi": "हाँ... अब... खत्म है... *सिसकी*"
+							},
+							"speaker": "ivy",
+							"emotion": "sad"
+						}
+					],
+					"id": 9
+				},
+				{
+					"win_dialogue": [
+						{
+							"speaker": "boss",
+							"emotion": "angry",
+							"type": "speech",
+							"content": {
+								"korean": "크윽… 감히 나의 컬렉션을 망치다니…!",
+								"english": "Ugh... How dare you ruin my collection...!",
+								"japanese": "くぅ…よくも私のコレクションを台無しにしたな…！",
+								"chinese": "可恶…竟敢毁了我的收藏…！",
+								"french": "Argh... Comment osez-vous gâcher ma collection...!",
+								"spanish": "¡Grrr... ¿Cómo osáis arruinar mi colección...?!",
+								"vietnamese": "Khụ… Dám hủy hoại bộ sưu tập của ta sao…!",
+								"thai": "อึก... กล้าดียังไงมาทำลายคอลเลกชันของข้า...!",
+								"hindi": "उफ़... तुम्हारी हिम्मत कैसे हुई मेरा कलेक्शन बर्बाद करने की...!"
+							}
+						},
+						{
+							"speaker": "boss",
+							"emotion": "base",
+							"type": "speech",
+							"content": {
+								"korean": "하지만… 이 숲은 영원해… 나의 다음 시즌은… 반드시 돌아올 거야…!",
+								"english": "But... this forest is eternal... My next season... will surely return...!",
+								"japanese": "しかし…この森は永遠だ…私の次のシーズンは…必ず戻ってくるだろう！",
+								"chinese": "但是……这片森林是永恒的……我的下一个季节……一定会回来的……！",
+								"french": "Mais... cette forêt est éternelle... Ma prochaine saison... reviendra sûrement... !",
+								"spanish": "Pero... este bosque es eterno... ¡Mi próxima temporada... seguro que volverá...!",
+								"vietnamese": "Nhưng... khu rừng này là vĩnh cửu... Mùa tiếp theo của ta... chắc chắn sẽ trở lại...!",
+								"thai": "แต่... ป่าแห่งนี้เป็นนิรันดร์... ฤดูกาลหน้าของฉัน... จะกลับมาแน่นอน...!",
+								"hindi": "लेकिन... यह जंगल अनंत है... मेरा अगला सीज़न... निश्चित रूप से वापस आएगा...!"
+							}
+						},
+						{
+							"emotion": "sad",
+							"speaker": "character_any",
+							"type": "speech",
+							"content": {
+								"korean": "이겼지만… 씁쓸해.",
+								"english": "We won... but it feels bitter.",
+								"japanese": "勝ったけど…苦い。",
+								"chinese": "赢了……但感觉很苦涩。",
+								"french": "On a gagné... mais c'est amer.",
+								"spanish": "Ganamos... pero es amargo.",
+								"vietnamese": "Đã thắng... nhưng thật cay đắng.",
+								"thai": "ชนะแล้ว... แต่ก็รู้สึกขมขื่น.",
+								"hindi": "जीत गए... पर कड़वाहट है।"
+							}
+						},
+						{
+							"type": "speech",
+							"content": {
+								"korean": "모든 것이 끝났다 생각했지만, 숲은 여전히 숨 쉬고 있었다.",
+								"english": "Thought everything was over, but the forest was still breathing.",
+								"japanese": "全てが終わったと思ったが、森はまだ息をしていた。",
+								"chinese": "原以为一切都结束了，但森林依然在呼吸。",
+								"french": "On pensait que tout était fini, mais la forêt respirait encore.",
+								"spanish": "Creímos que todo había terminado, pero el bosque seguía respirando.",
+								"vietnamese": "Tưởng chừng mọi thứ đã kết thúc, nhưng khu rừng vẫn còn thở.",
+								"thai": "คิดว่าทุกอย่างจบลงแล้ว แต่ป่ายังคงหายใจอยู่",
+								"hindi": "सोचा सब खत्म हो गया, पर जंगल अभी भी साँस ले रहा था।"
+							},
+							"emotion": "base",
+							"speaker": "narrator"
+						},
+						{
+							"action": "enter",
+							"type": "direction",
+							"spot": [
+								3,
+								2
+							],
+							"speaker": "ivy",
+							"duration_ms": 500
+						},
+						{
+							"speaker": "ivy",
+							"emotion": "sad",
+							"type": "speech",
+							"content": {
+								"korean": "우리가… 이긴 걸까요…?",
+								"english": "Did... we win...?",
+								"japanese": "私たちが…勝ったのでしょうか…？",
+								"chinese": "我们……赢了吗……？",
+								"french": "Avons-nous... gagné... ?",
+								"spanish": "¿Ganamos... nosotros...?",
+								"vietnamese": "Chúng ta... đã thắng ư...?",
+								"thai": "เรา... ชนะแล้วเหรอ...?",
+								"hindi": "क्या... हम जीत गए...?"
+							}
+						},
+						{
+							"speaker": "narrator",
+							"emotion": "base",
+							"type": "speech",
+							"content": {
+								"korean": "그녀의 컬렉션은… 끝나지 않을지도 모른다. 새로운 무대가 기다리고 있었다.",
+								"english": "Her collection... might not be over. A new stage awaited.",
+								"japanese": "彼女のコレクションは…終わらないかもしれない。新たな舞台が待っていた。",
+								"chinese": "她的收藏……可能还没有结束。新的舞台正在等待着。",
+								"french": "Sa collection... pourrait ne pas être terminée. Une nouvelle étape attendait.",
+								"spanish": "Su colección... podría no haber terminado. Un nuevo escenario esperaba.",
+								"vietnamese": "Bộ sưu tập của cô ấy... có lẽ chưa kết thúc. Một sân khấu mới đang chờ đợi.",
+								"thai": "คอลเลกชันของเธอ... อาจจะยังไม่จบลง. เวทีใหม่กำลังรออยู่.",
+								"hindi": "उसका संग्रह... शायद खत्म न हुआ हो। एक नया मंच इंतजार कर रहा था।"
+							}
+						}
+					],
+					"id": 15,
+					"dialogue": [
+						{
+							"type": "speech",
+							"content": {
+								"korean": "숲의 가장 깊은 곳, 거대한 홀로그램 스크린이 펼쳐졌다.",
+								"english": "In the deepest part of the forest, a gigantic hologram screen unfolded.",
+								"japanese": "森の最も深い場所で、巨大なホログラムスクリーンが展開された。",
+								"chinese": "在森林最深处，巨大的全息屏幕展开了。",
+								"french": "Dans la partie la plus profonde de la forêt, un écran holographique gigantesque se déploya.",
+								"spanish": "En la parte más profunda del bosque, una gigantesca pantalla de holograma se desplegó.",
+								"vietnamese": "Ở nơi sâu nhất của khu rừng, một màn hình hologram khổng lồ đã mở ra.",
+								"thai": "ในส่วนที่ลึกที่สุดของป่า จอโฮโลแกรมขนาดยักษ์ได้กางออก",
+								"hindi": "जंगल के सबसे गहरे हिस्से में, एक विशाल होलोग्राम स्क्रीन खुल गई।"
+							},
+							"emotion": "base",
+							"speaker": "narrator"
+						},
+						{
+							"type": "speech",
+							"content": {
+								"korean": "숲 전체가 거대한 패션쇼 무대였다.",
+								"english": "The entire forest was a gigantic fashion show stage.",
+								"japanese": "森全体が巨大なファッションショーの舞台だった。",
+								"chinese": "整片森林就是一个巨大的时装秀舞台。",
+								"french": "Toute la forêt était une gigantesque scène de défilé de mode.",
+								"spanish": "Todo el bosque era un gigantesco escenario de desfile de moda.",
+								"vietnamese": "Toàn bộ khu rừng là một sân khấu trình diễn thời trang khổng lồ.",
+								"thai": "ป่าทั้งป่าคือเวทีแฟชั่นโชว์ขนาดมหึมา",
+								"hindi": "पूरा जंगल एक विशाल फैशन शो का मंच था।"
+							},
+							"emotion": "base",
+							"speaker": "narrator"
+						},
+						{
+							"action": "enter",
+							"type": "direction",
+							"spot": [
+								1,
+								2
+							],
+							"speaker": "ivy",
+							"duration_ms": 500
+						},
+						{
+							"speaker": "ivy",
+							"emotion": "sad",
+							"type": "speech",
+							"content": {
+								"korean": "흐윽… 안 돼… 도망쳐요…!",
+								"english": "Ugh... No... Run...!",
+								"japanese": "うぅ…ダメ…逃げて…！",
+								"chinese": "呜…不行…快逃…！",
+								"french": "Ugh... Non... Fuyez... !",
+								"spanish": "Uf... No... ¡Huyan...!",
+								"vietnamese": "Ư… Không được… Chạy đi…!",
+								"thai": "อึก... ไม่นะ... หนีไป...!",
+								"hindi": "उफ़... नहीं... भागो...!"
+							}
+						},
+						{
+							"emotion": "sad",
+							"speaker": "character_any",
+							"type": "speech",
+							"content": {
+								"korean": "아이비! 괜찮아?!",
+								"english": "Ivy! Are you okay?!",
+								"japanese": "アイビー！大丈夫？！",
+								"chinese": "艾薇！你没事吧？！",
+								"french": "Ivy ! Tu vas bien ?!",
+								"spanish": "¡Ivy! ¿Estás bien?!",
+								"vietnamese": "Ivy! Cậu có sao không?!",
+								"thai": "ไอวี่! เป็นอะไรหรือเปล่า?!",
+								"hindi": "आइवी! तुम ठीक हो ना?!"
+							}
+						},
+						{
+							"emotion": "angry",
+							"speaker": "boss",
+							"type": "speech",
+							"content": {
+								"korean": "흥, 감히 이 몸의 미적 감각을 무시해?",
+								"english": "Hmph, how dare you disregard my aesthetic sense?",
+								"japanese": "ふん、よくもこの私の美的感覚を無視したな？",
+								"chinese": "哼，竟敢无视本大爷的审美？",
+								"french": "Hmph, comment osez-vous ignorer mon sens esthétique ?",
+								"spanish": "Hmph, ¿cómo osas despreciar mi sentido estético?",
+								"vietnamese": "Hừ, dám coi thường gu thẩm mỹ của ta sao?",
+								"thai": "หึ กล้าดียังไงมาดูถูกรสนิยมความงามของข้า?",
+								"hindi": "हम्फ, तुम्हारी हिम्मत कैसे हुई मेरी सौंदर्य-बोध की उपेक्षा करने की?"
+							}
+						},
+						{
+							"type": "speech",
+							"content": {
+								"korean": "너희 같은 미개한 자들에게 내 '네이처-하이브리드 바이오 패션 컬렉션'을 보여줄 필요도 없었거늘!",
+								"english": "I shouldn't even have to show my 'Nature-Hybrid Bio Fashion Collection' to savages like you!",
+								"japanese": "お前たちのような未開な者たちに、私の『ネイチャー-ハイブリッド バイオ ファッションコレクション』を見せる必要もなかったのに！",
+								"chinese": "像你们这种不开化的野蛮人，根本不配看我的‘自然-混合生物时尚系列’！",
+								"french": "Je n'aurais même pas dû montrer ma 'Collection de Mode Bio Hybride Nature' à des sauvages comme vous !",
+								"spanish": "¡Ni siquiera debería haberles mostrado mi 'Colección de Moda Bio-Híbrida Natural' a salvajes como vosotros!",
+								"vietnamese": "Đáng lẽ ta không cần phải cho những kẻ man rợ như các ngươi xem 'Bộ sưu tập Thời trang Sinh học Lai Tự nhiên' của ta!",
+								"thai": "ข้าไม่จำเป็นต้องแสดง 'คอลเลกชันแฟชั่นชีวภาพลูกผสมธรรมชาติ' ของข้าให้พวกป่าเถื่อนอย่างพวกเจ้าดูด้วยซ้ำ!",
+								"hindi": "तुम जैसे असभ्य लोगों को अपना 'नेचर-हाइब्रिड बायो फैशन कलेक्शन' दिखाने की ज़रूरत ही नहीं थी!"
+							},
+							"speaker": "boss",
+							"emotion": "angry"
+						},
+						{
+							"type": "speech",
+							"content": {
+								"korean": "네가… 그 길 잃은 나방이… 루미나 플러터!",
+								"english": "You... that lost moth... Lumina Flutter!",
+								"japanese": "お前が…あの迷子の蛾…ルミナ・フラッター！",
+								"chinese": "你…就是那只迷路的飞蛾…流明蝶！",
+								"french": "Toi... ce papillon égaré... Lumina Flutter !",
+								"spanish": "¡Tú... esa polilla perdida... Lumina Flutter!",
+								"vietnamese": "Ngươi… chính là con bướm đêm lạc lối đó… Lumina Flutter!",
+								"thai": "แก... ผีเสื้อกลางคืนที่หลงทางตัวนั้น... ลูมินา ฟลัตเตอร์!",
+								"hindi": "तुम... वह भटकी हुई पतंगिया... लुमिना फ्लटर!"
+							},
+							"speaker": "character_any",
+							"emotion": "angry"
+						},
+						{
+							"speaker": "boss",
+							"emotion": "angry",
+							"type": "speech",
+							"content": {
+								"korean": "어서 차원문을 열어! 다음 시즌 트렌드가 늦어진단 말이야!",
+								"english": "Hurry and open the portal! The next season's trends are getting delayed!",
+								"japanese": "早く次元門を開けろ！次のシーズンのトレンドが遅れるじゃないか！",
+								"chinese": "快点打开次元门！下一季的潮流要迟到了！",
+								"french": "Dépêchez-vous d'ouvrir le portail ! Les tendances de la prochaine saison sont en retard !",
+								"spanish": "¡Apresúrate y abre el portal! ¡Las tendencias de la próxima temporada se están retrasando!",
+								"vietnamese": "Mau mở cánh cổng không gian ra! Xu hướng mùa tới đang bị chậm trễ rồi!",
+								"thai": "รีบเปิดประตูมิติ! เทรนด์ฤดูกาลหน้ากำลังจะล่าช้าแล้วนะ!",
+								"hindi": "जल्दी से आयाम द्वार खोलो! अगले सीज़न के ट्रेंड में देरी हो रही है!"
+							}
+						},
+						{
+							"type": "speech",
+							"content": {
+								"korean": "내가 바로… 아마존 밀림 패션 위크의 전설, 루미나 플러터다!",
+								"english": "I am... the legend of Amazon Jungle Fashion Week, Lumina Flutter!",
+								"japanese": "この私こそが…アマゾン密林ファッションウィークの伝説、ルミナ・フラッターだ！",
+								"chinese": "我就是…亚马逊丛林时装周的传奇，流明蝶！",
+								"french": "Je suis... la légende de la Fashion Week de la Jungle Amazonienne, Lumina Flutter !",
+								"spanish": "¡Yo soy... la leyenda de la Semana de la Moda de la Selva Amazónica, Lumina Flutter!",
+								"vietnamese": "Ta chính là… huyền thoại của Tuần lễ Thời trang Rừng rậm Amazon, Lumina Flutter!",
+								"thai": "ข้าคือ... ตำนานแห่งสัปดาห์แฟชั่นป่าอเมซอน, ลูมินา ฟลัตเตอร์!",
+								"hindi": "मैं ही हूँ... अमेज़न वर्षावन फैशन वीक की किंवदंती, लुमिना फ्लटर!"
+							},
+							"emotion": "happy",
+							"speaker": "boss"
+						},
+						{
+							"type": "speech",
+							"content": {
+								"korean": "그리고 너희는… 나의 다음 컬렉션을 위한 가장 신선한 모델이지.",
+								"english": "And you... are the freshest models for my next collection.",
+								"japanese": "そしてお前たちは…私の次のコレクションのための、最も新鮮なモデルだ。",
+								"chinese": "而你们…就是我下一系列最新鲜的模特。",
+								"french": "Et vous... êtes les modèles les plus frais pour ma prochaine collection.",
+								"spanish": "Y vosotros... sois los modelos más frescos para mi próxima colección.",
+								"vietnamese": "Và các ngươi… chính là những người mẫu tươi mới nhất cho bộ sưu tập tiếp theo của ta.",
+								"thai": "และพวกเจ้า... คือนางแบบที่สดใหม่ที่สุดสำหรับคอลเลกชันต่อไปของข้า",
+								"hindi": "और तुम लोग... मेरे अगले कलेक्शन के लिए सबसे ताज़े मॉडल्स हो।"
+							},
+							"speaker": "boss",
+							"emotion": "happy"
+						},
+						{
+							"type": "speech",
+							"content": {
+								"korean": "…우리가, 재료였다니.",
+								"english": "...So, we were just materials.",
+								"japanese": "…私たちが、材料だったなんて。",
+								"chinese": "…原来，我们是材料。",
+								"french": "...Alors, nous n'étions que des matériaux.",
+								"spanish": "...Así que, éramos solo materiales.",
+								"vietnamese": "…Thì ra, chúng ta chỉ là nguyên liệu thôi.",
+								"thai": "...พวกเราเป็นแค่ส่วนผสมสินะ",
+								"hindi": "...तो, हम सिर्फ सामग्री थे।"
+							},
+							"emotion": "sad",
+							"speaker": "character_any"
+						}
+					],
+					"lose_dialogue": [
+						{
+							"type": "speech",
+							"content": {
+								"korean": "후후… 결국 너희도 나의 컬렉션 일부가 될 운명이었다.",
+								"english": "Hee hee... In the end, you too were destined to be part of my collection.",
+								"japanese": "ふふ…結局お前たちも私のコレクションの一部となる運命だったのだ。",
+								"chinese": "呵呵……最终你们也注定成为我收藏品的一部分。",
+								"french": "Hé hé... Au final, vous aussi étiez destinés à faire partie de ma collection.",
+								"spanish": "Je je... Al final, ustedes también estaban destinados a ser parte de mi colección.",
+								"vietnamese": "Hì hì... Cuối cùng thì các ngươi cũng định mệnh trở thành một phần bộ sưu tập của ta.",
+								"thai": "ฮิฮิ... ในที่สุดพวกเจ้าก็มีชะตาที่จะเป็นส่วนหนึ่งของคอลเลกชันของข้า",
+								"hindi": "ही ही... आखिर तुम भी मेरे संग्रह का हिस्सा बनने के लिए नियत थे।"
+							},
+							"speaker": "boss",
+							"emotion": "happy"
+						},
+						{
+							"type": "speech",
+							"content": {
+								"korean": "가장 아름다운 조각품이 되어 영원히 전시될지어다!",
+								"english": "Become the most beautiful masterpiece and be displayed forever!",
+								"japanese": "最も美しい彫刻品となり、永遠に展示されるがよい！",
+								"chinese": "成为最美丽的雕塑，永远被展览吧！",
+								"french": "Devenez la plus belle œuvre d'art et soyez exposés pour l'éternité !",
+								"spanish": "¡Conviértanse en la escultura más hermosa y sean exhibidos para siempre!",
+								"vietnamese": "Hãy trở thành tác phẩm điêu khắc đẹp nhất và được trưng bày mãi mãi!",
+								"thai": "จงเป็นประติมากรรมที่งดงามที่สุดและถูกจัดแสดงตลอดไป!",
+								"hindi": "सबसे खूबसूरत कलाकृति बनो और हमेशा के लिए प्रदर्शित रहो!"
+							},
+							"speaker": "boss",
+							"emotion": "happy"
+						},
+						{
+							"type": "speech",
+							"content": {
+								"korean": "크윽… 여기서 끝낼 순 없어…! 다시 도전한다!",
+								"english": "Ugh... I can't end it here...! I'll challenge again!",
+								"japanese": "くっ…ここで終わらせるわけにはいかない…！もう一度挑戦する！",
+								"chinese": "呃啊……不能在这里结束……！我还会再挑战的！",
+								"french": "Arg... Je ne peux pas en finir ici...! Je défie encore !",
+								"spanish": "¡Argh... no puedo terminar aquí...! ¡Lo intentaré de nuevo!",
+								"vietnamese": "Khụ... Không thể kết thúc ở đây được...! Ta sẽ thách đấu lại!",
+								"thai": "อึก... จะจบแค่นี้ไม่ได้...! ฉันจะท้าทายอีกครั้ง!",
+								"hindi": "उफ़... मैं इसे यहीं खत्म नहीं कर सकता...! मैं फिर से चुनौती दूँगा!"
+							},
+							"speaker": "character_any",
+							"emotion": "angry"
+						}
+					]
+				}
+			],
+			"prologue": {
+				"korean": [
+					"숲은 숨 쉬는 거대한 갤러리였다.",
+					"아름다움 뒤에 감춰진 섬뜩한 진실이 서서히 드러나고 있었다.",
+					"길 잃은 나방인 줄 알았던 그녀는 — 모든 것을 조종하는 제왕이었다.",
+					"탐험대는 숲의 가장 깊은 곳에서, 자신들의 운명을 깨닫게 된다."
+				],
+				"english": [
+					"The forest was a colossal, breathing gallery.",
+					"A chilling truth, hidden behind beauty, was slowly revealing itself.",
+					"She, whom they thought a lost moth, was—the monarch controlling everything.",
+					"In the forest's deepest reaches, the expedition realized their fate."
+				],
+				"japanese": [
+					"森は呼吸する巨大なギャラリーだった。",
+					"美しさの裏に隠された恐ろしい真実が、ゆっくりと姿を現しつつあった。",
+					"道に迷った蛾だと思っていた彼女は、すべてを操る君主だった。",
+					"探検隊は森の最も深い場所で、自らの運命を悟る。"
+				],
+				"chinese": [
+					"森林是一个巨大的、会呼吸的画廊。",
+					"隐藏在美丽背后的骇人真相正逐渐显露。",
+					"他们以为她是迷途的飞蛾，不料她却是掌控一切的君主。",
+					"在森林的最深处，探险队意识到了自己的命运。"
+				],
+				"french": [
+					"La forêt était une galerie colossale et vivante.",
+					"Une vérité glaçante, cachée derrière la beauté, se révélait lentement.",
+					"Celle qu'ils prenaient pour une mite égarée était—la monarque qui contrôlait tout.",
+					"Dans les profondeurs les plus reculées de la forêt, l'expédition réalisa son destin."
+				],
+				"spanish": [
+					"El bosque era una galería colosal y viviente.",
+					"Una verdad escalofriante, oculta tras la belleza, se revelaba lentamente.",
+					"Ella, a quien creían una polilla perdida, era—la monarca que controlaba todo.",
+					"En lo más profundo del bosque, la expedición comprendió su destino."
+				],
+				"vietnamese": [
+					"Rừng là một phòng trưng bày khổng lồ, đang thở.",
+					"Một sự thật rợn người, ẩn sau vẻ đẹp, đang dần lộ diện.",
+					"Cô ấy, người họ tưởng là một con bướm đêm lạc lối, lại là—nữ hoàng điều khiển mọi thứ.",
+					"Trong sâu thẳm nhất của khu rừng, đoàn thám hiểm nhận ra số phận của mình."
+				],
+				"thai": [
+					"ป่าคือแกลเลอรีขนาดยักษ์ที่กำลังหายใจ",
+					"ความจริงอันน่าขนลุกที่ซ่อนอยู่เบื้องหลังความงามกำลังเผยตัวออกมาอย่างช้าๆ",
+					"เธอ ผู้ที่พวกเขาคิดว่าเป็นผีเสื้อกลางคืนที่หลงทาง แท้จริงแล้วคือจอมบงการทุกสิ่ง",
+					"ในส่วนลึกที่สุดของป่า คณะสำรวจตระหนักถึงชะตากรรมของพวกเขา"
+				],
+				"hindi": [
+					"जंगल एक विशाल, साँस लेती हुई गैलरी थी।",
+					"सुंदरता के पीछे छिपा एक भयानक सच धीरे-धीरे सामने आ रहा था।",
+					"वह, जिसे वे एक खोई हुई पतंग समझते थे, सब कुछ नियंत्रित करने वाली महारानी थी।",
+					"जंगल के सबसे गहरे हिस्सों में, अभियान दल को अपनी किस्मत का एहसास हुआ।"
+				]
+			}
+		}
+	]
+}

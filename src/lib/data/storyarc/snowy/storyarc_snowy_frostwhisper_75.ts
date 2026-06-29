@@ -146,7 +146,7 @@ export const storyarc_snowy_frostwhisper_75: StoryArc = {
 		{
 			"act": "climax_finale",
 			"npc": "ivar",
-			"boss": "pool_ArcticLament_Frostwhisper_V1",
+			"boss": "pool_403",
 			"order": 5,
 			"title": "진실된 한숨",
 			"summary": "탐험대는 마침내 눈보라의 심장부에 도달하고, 그곳에서 차갑게 얼어붙은 바이킹의 도끼와 이바르를 마주한다. 이바르는 눈물을 흘리며 프로스트위스퍼의 애처로운 신음이 사실 모든 생명의 온기를 빼앗으려는 거대한 냉기의 거짓 유혹이었음을 밝힌다. 핀의 절망적인 행동과 힐드의 왜곡된 예언이 모두 냉기의 간계였음이 드러나며, 모든 희망이 절규로 변하고 진정한 공포 '프로스트위스퍼'가 그 잔혹한 실체를 드러낸다."

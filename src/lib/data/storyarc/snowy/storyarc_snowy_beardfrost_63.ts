@@ -142,7 +142,7 @@ export const storyarc_snowy_beardfrost_63: StoryArc = {
 			"act": "climax_finale",
 			"npc": "eira",
 			"title": "Kingdom of Threads",
-			"boss": "pool_FluffyTyrant_Beardfrost_V1",
+			"boss": "pool_317",
 			"summary": "보스 베어드프로스트의 '세계 최고의 미용실'이라는 본래의 목적과 탐험대가 그저 '털 재료'에 불과했음이 밝혀진다. 모든 것이 반복되는 비극적인 순환이라는 충격적인 진실 앞에서, NPC 에이라는 과거의 절망을 딛고 주인공과 함께 이 허무한 고리를 끊어내기 위한 마지막 저항을 시도한다.",
 			"order": 5
 		}

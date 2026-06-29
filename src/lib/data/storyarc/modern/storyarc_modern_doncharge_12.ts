@@ -143,7 +143,7 @@ export const storyarc_modern_doncharge_12: StoryArc = {
 			"order": 5,
 			"title": "숙명과 속죄의 마침표",
 			"act": "climax_finale",
-			"boss": "pool_ChargePoint_Don_V1",
+			"boss": "pool_245",
 			"npc": "bex"
 		}
 	],

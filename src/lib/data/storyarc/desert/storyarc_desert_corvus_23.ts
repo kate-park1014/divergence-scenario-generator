@@ -142,7 +142,7 @@ export const storyarc_desert_corvus_23: StoryArc = {
 			"title": "진실의 모래폭풍",
 			"order": 5,
 			"summary": "모든 부품을 모아 고대 정보망을 활성화시킨 주인공. 그 순간, 옆에서 지켜보던 아미르의 장포가 찢겨 나가며 그 아래 감춰진 코르부스의 기계화된 진정한 모습이 드러난다. 아미르는 주인공에게 이 모든 것이 자신의 계획이었음을 비릿하게 웃으며 밝히고, 주인공은 믿었던 조력자가 최종 흑막이었던 충격적인 반전과 마주한다. 사막을 뒤덮는 모래폭풍 속, 절망적인 최종 결전이 시작된다.",
-			"boss": "pool_ShadowBlade_Corvus_V1",
+			"boss": "pool_141",
 			"act": "climax_finale",
 			"npc": "amir"
 		}

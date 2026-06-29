@@ -139,7 +139,7 @@ export const storyarc_snowy_frostwail_64: StoryArc = {
 			"boss": "random_boss"
 		},
 		{
-			"boss": "pool_FrozenMemory_Frostwail_V1",
+			"boss": "pool_319",
 			"order": 5,
 			"summary": "마침내 고대 선박의 잔영인 프로스트웨일과 조우한다. 치열한 전투 끝에 보스의 정체와 수백 년 전 선원들의 비극적인 운명, 그리고 약속의 땅을 찾아 헤매다 얼어붙은 영원한 죄책감이 드러난다. (모든 글로벌 복선 'repetition_hint', 'stuck_time', 'ancient_guilt', 'hollow_victory' 밝혀짐) 에이라가 다시 나타나 이 모든 것이 반복되는 비극의 일부였음을 냉혹하게 상기시킨다. 주인공은 승리했으나, 깊은 허무함과 회한, 그리고 끊을 수 없는 죄책감에 갇힌다. 이 승리는 또 다른 시작에 불과하다.",
 			"act": "climax_finale",

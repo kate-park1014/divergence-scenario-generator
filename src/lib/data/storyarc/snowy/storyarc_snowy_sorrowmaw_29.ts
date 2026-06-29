@@ -139,7 +139,7 @@ export const storyarc_snowy_sorrowmaw_29: StoryArc = {
 			"npc": "finn"
 		},
 		{
-			"boss": "pool_IceEcho_Sorrowmaw_V1",
+			"boss": "pool_384",
 			"act": "climax_finale",
 			"title": "영원의 굶주림, 연민의 입",
 			"summary": "마침내 거대한 빙하 산맥 'Sorrowmaw'와 대면한다. 에이라가 조용히 따라와 그 거대한 존재 앞에서 자신도 모르게 '어머니…'라고 중얼거린다. Sorrowmaw는 절규하며 '굶주림'은 채워지지 않는 상실감이며, 자신은 부족의 기억과 슬픔을 집어삼킨 존재라고 밝힌다. 모든 소문은 뒤틀린 채 전해졌던 것이다. 주인공은 진실된 연민으로 그녀를 마주한다.",

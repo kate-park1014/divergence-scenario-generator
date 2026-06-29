@@ -143,7 +143,7 @@ export const storyarc_forest_obsidia_25: StoryArc = {
 			"title": "숲의 심장: 계약의 종속, 비극의 대가",
 			"summary": "숲의 심장부에 도달한 탐사대는 마침내 Obsidia의 진실된 모습을 마주한다. 그녀의 몸에서 뻗어 나오는 뿌리가 탐사대를 묶고, 숲 전체가 광기 어린 생명력으로 꿈틀거린다. 엘라는 자신이 손에 쥐고 있던 조각이 숲의 계약을 해제할 열쇠임을 깨닫고, 과거 잃었던 사랑하는 이가 바로 Obsidia였다는 충격적인 사실에 절규한다. Obsidia는 자신이 숲의 계약에 묶인 채 탐사대를 제물로 바쳐야 했던 비극적인 운명을 이야기하며, 결국 스스로를 희생하여 숲의 속박을 깨려는 최후의 선택을 한다.",
 			"act": "climax_finale",
-			"boss": "pool_NoirDeal_Obsidia_V1",
+			"boss": "pool_172",
 			"npc": "ela"
 		}
 	],

@@ -141,7 +141,7 @@ export const storyarc_forest_mossenigma_48: StoryArc = {
 		{
 			"summary": "Moss Enigma의 은신처에서 재회한 '엘라'는 사실 Moss Enigma의 수족이었음이 드러난다. Moss Enigma의 본색과 과거 배신의 진실이 모두 밝혀지며, 그녀의 숲은 복수의 무대가 된다. 모든 것을 되갚아주려는 Moss Enigma를 상대로 통쾌한 최종 결전을 벌인다.",
 			"order": 5,
-			"boss": "pool_DarkWhisper_MossEnigma_V1",
+			"boss": "pool_200",
 			"act": "climax_finale",
 			"title": "배신자의 왕국",
 			"npc": "ela"

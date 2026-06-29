@@ -143,7 +143,7 @@ export const storyarc_forest_entwine_11: StoryArc = {
 			"act": "climax_finale",
 			"order": 5,
 			"npc": "bracken",
-			"boss": "pool_VerdantParasite_Entwine_V1",
+			"boss": "pool_194",
 			"summary": "숲의 가장 깊숙한 심장부에서 탐험대는 마침내 '엔트와인'과 마주한다. 브라켄은 엔트와인이 숲의 모든 생명력을 흡수하는 거대한 기생 식물의 핵심이며, 숲 전체가 하나의 유기체 네트워크('interconnected_roots' 복선)임을 폭로한다. 그 순간, 엔트와인의 슬픈 노랫소리는 숙주 아마존 전사의 뒤틀린 절규('whispering_lure' 복선)로 변하고, 과거 희생된 탐험가들의 비참한 기록('relics_of_past_victims' 복선)이 끔찍한 진실과 함께 드러난다. 숲은 고통받는 이들의 절규로 가득 차고, 탐험대는 영원히 숲의 일부가 될 절망적인 운명에 처한다."
 		}
 	],

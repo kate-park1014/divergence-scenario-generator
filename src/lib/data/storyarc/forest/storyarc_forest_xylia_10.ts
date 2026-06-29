@@ -141,7 +141,7 @@ export const storyarc_forest_xylia_10: StoryArc = {
 		{
 			"npc": "fern",
 			"act": "climax_finale",
-			"boss": "pool_OracleOfThorns_Xylia_V1",
+			"boss": "pool_186",
 			"summary": "숲의 심장부, 가시와 넝쿨로 변한 크실리아와의 최후의 전투. 격렬한 전투 속에서 그녀의 고목 같은 몸통이 갈라지며 한때 아름다웠던 여왕의 형상이 드러난다. 고대 문명의 환영과 유물의 진실, 그리고 바람에 실린 흐느낌이 모두 그녀의 고통받는 과거와 희생을 증언한다. 페른은 이 모든 비극을 지켜보며 눈물을 흘리고, 주인공은 승리하지만 씁쓸한 마음으로 숲을 떠난다. (GF_ThornWhispers_01 리빌, GF_AncientCarving_02 리빌, GF_FlashbackVisions_04 리빌)",
 			"title": "가시의 여왕, 슬픈 최후",
 			"order": 5

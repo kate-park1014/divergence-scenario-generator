@@ -140,7 +140,7 @@ export const storyarc_modern_axiom_17: StoryArc = {
 		},
 		{
 			"order": 5,
-			"boss": "pool_DataBroker_Axiom_V1",
+			"boss": "pool_278",
 			"act": "climax_finale",
 			"npc": "nia",
 			"title": "진실의 장부: 끝나지 않는 복수",

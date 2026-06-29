@@ -140,7 +140,7 @@ export const storyarc_modern_ottoreset_77: StoryArc = {
 		},
 		{
 			"summary": "드디어 최종 관문에 도달한 플레이어 앞에 Otto Reset이 본모습을 드러낸다. 옆에는 Zoe가 미소 짓고 있다. 그녀는 자신을 'Otto의 가장 오래된 조력자'라고 소개하며, 이 모든 과정이 플레이어를 영원히 가두기 위한 연극이었음을 고백한다. 모든 것이 원점으로 돌아가는 절망 속에서, 플레이어는 끝없는 인증 지옥에 갇히게 된다.",
-			"boss": "pool_PasswordWarden_V0",
+			"boss": "pool_100",
 			"act": "climax_finale",
 			"npc": "zoe",
 			"title": "끝없는 인증, 비극의 영원",

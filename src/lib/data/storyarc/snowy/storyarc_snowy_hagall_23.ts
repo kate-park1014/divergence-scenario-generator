@@ -141,7 +141,7 @@ export const storyarc_snowy_hagall_23: StoryArc = {
 		{
 			"npc": "anuk",
 			"summary": "모든 진실이 수렴하는 영원한 망각의 전당에서, 탐험대는 마침내 기억의 조각사 하갈과 대면한다. 아눅은 사실 하갈의 분신이었거나, 하갈이 심어둔 감시자였음을 밝히며, 이 모든 비극이 반복되는 거대한 기억 루프의 일부였음을 깨닫는다. 하갈은 모든 진실을 드러내는 동시에, 탐험대의 기억마저 흡수하여 루프를 영원히 이어나가려 하며, 탐험대는 압도적인 절망 속에서 최후의 싸움을 시작한다.",
-			"boss": "pool_FrostCipher_Hagall_V1",
+			"boss": "pool_388",
 			"order": 5,
 			"title": "영원한 망각의 전당",
 			"act": "climax_finale"

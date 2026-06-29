@@ -137,7 +137,7 @@ export const storyarc_snowy_grumpyherring_33: StoryArc = {
 		},
 		{
 			"summary": "주인공은 얼음 제단에 다다르고, 그곳에서 강제로 '명품 훈제 청어' 시식을 강요받는 에이라(Eira)를 발견한다. '얼어붙은 탐정'은 드디어 모든 진실이 한데 모이고, 보스 'Grumpy Herring'이 모습을 드러내며 그 잔혹한 '시식 시스템'의 본질과 자신의 과거 '헬비'가 폭로된다. 모든 복선이 회수되며 시스템의 부조리와 보스의 폭정에 대한 분노가 폭발하는 처절한 대결이 시작된다. (foreshadowing_1, 2, 3, 4 reveal)",
-			"boss": "pool_FrozenFood_GrumpyHerring_V1",
+			"boss": "pool_327",
 			"act": "climax_finale",
 			"npc": "eira",
 			"order": 5,

@@ -140,7 +140,7 @@ export const storyarc_modern_miasma_68: StoryArc = {
 		},
 		{
 			"npc": "zoe",
-			"boss": "pool_ToxicVeil_Miasma_V1",
+			"boss": "pool_260",
 			"order": 5,
 			"act": "climax_finale",
 			"title": "원죄의 심연",

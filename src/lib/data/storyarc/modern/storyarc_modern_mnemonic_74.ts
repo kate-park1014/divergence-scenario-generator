@@ -139,7 +139,7 @@ export const storyarc_modern_mnemonic_74: StoryArc = {
 			"title": "조작된 진실, 부서진 인연"
 		},
 		{
-			"boss": "pool_DigitalBetrayer_Mnemonic_V1",
+			"boss": "pool_119",
 			"act": "climax_finale",
 			"title": "망각되지 않는 배신의 연대기",
 			"summary": "니아와 함께 Mnemonic의 핵심 노드에 도달하여 최종 결전을 벌인다. Mnemonic은 과거 모든 배신과 원한의 집합체임을 드러내며 도시의 비극적 역사를 재현하려 한다. 결국 Mnemonic을 무력화하지만, 주인공은 승리 뒤에 남는 공허함과, 인간의 본질적 배신은 영원히 반복될 것이라는 비극적 진실을 마주한다. (복선: 과거 비명 파편이 Mnemonic의 기록임을 깨닫고, 에코의 경고가 진실이었음을 확인한다. 낡은 스크린에서 보았던 환영이 Mnemonic의 진정한 형태임을 목격한다)",

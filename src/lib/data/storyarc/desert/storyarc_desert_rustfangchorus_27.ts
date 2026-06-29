@@ -140,7 +140,7 @@ export const storyarc_desert_rustfangchorus_27: StoryArc = {
 		},
 		{
 			"act": "climax_finale",
-			"boss": "pool_Rustfang_Chorus_V1",
+			"boss": "pool_153",
 			"npc": "kemet",
 			"order": 5,
 			"summary": "탐험대는 마침내 사막의 심장부, 저주받은 '수치의 묘지'에 도달한다. 케메트의 예언대로 거대한 녹슨 칼날의 폭풍이 끔찍한 비명을 지르며 멈추고, 수천 개의 칼날이 엉겨 붙어 만들어진 뒤틀린 전사상이 드러난다. 칼날들은 한 목소리로 울부짖으며 자신들의 영원한 고통과 완벽에 대한 갈망을 쏟아낸다. 영웅들은 이 비극적인 존재를 막아야 하지만, 그들의 칼날은 너무나 슬프고 허무하다.",

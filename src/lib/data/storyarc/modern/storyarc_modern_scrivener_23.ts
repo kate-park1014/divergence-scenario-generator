@@ -142,7 +142,7 @@ export const storyarc_modern_scrivener_23: StoryArc = {
 			"npc": "nia",
 			"summary": "모든 빚과 약속의 궁극적인 집행자, 스크리브너가 그 압도적인 정체를 드러내 탐험대와 니아를 과거의 끔찍한 계약들로 몰아붙인다. 니아는 이 모든 사건이 그녀의 선조로부터 이어져 온 오래된 '빚'과 연결되어 있음을 알게 되며, 탐험대는 스크리브너의 광적인 '정산'을 막기 위한 최후의 발악을 시도한다. 진실은 상상보다 더 끔찍한 블랙코미디적 결말을 향해 치닫는다.",
 			"act": "climax_finale",
-			"boss": "pool_Scrivener_Judgement_V1",
+			"boss": "pool_297",
 			"title": "최후의 정산일",
 			"order": 5
 		}

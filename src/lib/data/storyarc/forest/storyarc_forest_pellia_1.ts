@@ -144,7 +144,7 @@ export const storyarc_forest_pellia_1: StoryArc = {
 			"order": 5,
 			"act": "climax_finale",
 			"npc": "ela",
-			"boss": "pool_LeafyLarceny_Pellia_V1"
+			"boss": "pool_177"
 		}
 	],
 	"act_summary": {

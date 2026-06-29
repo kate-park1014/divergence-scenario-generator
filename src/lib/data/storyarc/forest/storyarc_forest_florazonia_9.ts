@@ -139,7 +139,7 @@ export const storyarc_forest_florazonia_9: StoryArc = {
 			"order": 4
 		},
 		{
-			"boss": "pool_Flamboyant_Florazonia_V1",
+			"boss": "pool_182",
 			"order": 5,
 			"act": "climax_finale",
 			"npc": "bracken",

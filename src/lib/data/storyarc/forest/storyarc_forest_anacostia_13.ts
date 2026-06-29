@@ -141,7 +141,7 @@ export const storyarc_forest_anacostia_13: StoryArc = {
 		{
 			"act": "climax_finale",
 			"summary": "마침내 뒤틀린 숲의 심장부, 거대한 꼭두각시 안아코스티아와 마주한다. 그녀의 몸체가 산산조각 나며 무수히 많은 나비들이 쏟아져 나오고, 그 속에서 숲의 비극적인 진실이 밝혀진다. 페른은 텅 빈 눈으로 '구원'의 의미를 묻고, 탐험대는 자신들의 모든 노력이 결국 숲의 광기를 완성시켰음을 깨달으며 절망한다. 구원이 곧 파멸이었던 허무한 결말.",
-			"boss": "pool_TwistedThorn_Anacostia_V1",
+			"boss": "pool_170",
 			"title": "허무의 꽃 피우다",
 			"npc": "fern",
 			"order": 5

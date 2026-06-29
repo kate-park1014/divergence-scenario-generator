@@ -145,7 +145,7 @@ export const storyarc_modern_discordia_54: StoryArc = {
 			"act": "climax_finale",
 			"title": "혼돈의 절규, 슬픈 진실의 해방",
 			"npc": "Echo",
-			"boss": "pool_DataChaos_Discordia_V1"
+			"boss": "pool_250"
 		}
 	],
 	"act_summary": {

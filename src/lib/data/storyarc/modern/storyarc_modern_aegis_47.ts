@@ -144,7 +144,7 @@ export const storyarc_modern_aegis_47: StoryArc = {
 			"act": "climax_finale",
 			"npc": "zoe",
 			"title": "피의 굴레: 영원한 속죄",
-			"boss": "pool_BloodOath_Aegis_V1"
+			"boss": "pool_287"
 		}
 	],
 	"act_summary": {

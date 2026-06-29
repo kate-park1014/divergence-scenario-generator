@@ -141,7 +141,7 @@ export const storyarc_modern_memento_9: StoryArc = {
 		{
 			"act": "climax_finale",
 			"summary": "마침내 Memento와 대면한 주인공은, 그가 파괴자가 아닌 '잊힌 맹세'를 끝내고자 하는 슬픈 존재임을 알게 된다. 이때, 지금까지 주인공을 돕던 Bex가 가면을 벗고 나타나 Memento를 조종하고 모든 상황을 연출한 흑막이었음이 드러난다. Bex는 '진실'이란 이름으로 대중을 조작하고 '맹세'의 파괴를 통해 새로운 질서를 세우려 했던 것. 그녀는 비웃으며 말한다. '결국, 모두 잊혀질 운명이었겠지. 이 맹세도, 이 슬픔도… 그리고 너도, 내 계획의 마지막 장기말일 뿐이야. 내가 심어둔 '신뢰'는 완벽하게 작동했어. 자, 이제 모든 진실을 맞이할 시간이야.'",
-			"boss": "pool_ForgottenOath_Memento_V1",
+			"boss": "pool_313",
 			"title": "최후의 막: 깨어진 맹세",
 			"order": 5,
 			"npc": "bex"

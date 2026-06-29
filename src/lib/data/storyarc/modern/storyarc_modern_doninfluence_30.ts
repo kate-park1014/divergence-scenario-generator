@@ -139,7 +139,7 @@ export const storyarc_modern_doninfluence_30: StoryArc = {
 			"order": 4
 		},
 		{
-			"boss": "pool_SocialDon_Influence_V1",
+			"boss": "pool_275",
 			"title": "종료 임박: 돈 인플루언서의 최후",
 			"summary": "카운트다운이 0에 가까워지고, 돈 인플루언서는 화면 속 해맑은 미소를 지우고 본색을 드러낸다. NPC 닥스와 함께 모든 진실(문신, 팬 메일, 마피아 심볼, 영토 분할 문서)을 알게 된 주인공은 절망적인 분노 속에서 돈 인플루언서와 최후의 대결을 펼친다. 도시의 운명은 그에게 달렸다.",
 			"act": "climax_finale",

@@ -141,7 +141,7 @@ export const storyarc_desert_obsidianscythe_5: StoryArc = {
 		},
 		{
 			"act": "climax_finale",
-			"boss": "pool_DuneWhisper_ObsidianScythe_V1",
+			"boss": "pool_162",
 			"npc": "kemet",
 			"title": "모래의 종말",
 			"order": 5,

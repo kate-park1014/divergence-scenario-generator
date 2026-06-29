@@ -144,7 +144,7 @@ export const storyarc_modern_syndicate_34: StoryArc = {
 			"npc": "zoe",
 			"act": "climax_finale",
 			"order": 5,
-			"boss": "pool_DataGhost_Syndicate_V1"
+			"boss": "pool_277"
 		}
 	],
 	"act_summary": {

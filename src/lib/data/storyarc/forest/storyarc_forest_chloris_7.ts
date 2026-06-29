@@ -139,7 +139,7 @@ export const storyarc_forest_chloris_7: StoryArc = {
 			"summary": "반복되는 고통과 배신에 분노한 탐험대는 '헤이즐'이라는 의문의 존재로부터 숲의 심장부로 향하는 왜곡된 길을 듣게 된다. 이 길이 진정한 탈출구인지, 아니면 더 깊은 함정인지 알 수 없다."
 		},
 		{
-			"boss": "pool_VerdantFolly_Chloris_V1",
+			"boss": "pool_202",
 			"npc": "ela",
 			"title": "광기의 심장, 클로리스",
 			"act": "climax_finale",

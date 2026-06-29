@@ -144,7 +144,7 @@ export const storyarc_hell_fallenoath_22: StoryArc = {
 			"act": "climax_finale",
 			"title": "비극적 심판관, 그를 위한 눈물",
 			"summary": "마침내 왜곡된 진실이 폭로되고, 보스인 타락한 맹세는 비극적인 절규와 함께 무너진다. 굳건했던 가면이 부서지고, 고통으로 일그러진 그의 진짜 얼굴이 드러난다. 마라는 보스의 마지막 남은 인간성을 마주하며 그에게 연민을 표한다. 모든 심판이 거짓 위에 세워졌다는 비극적인 진실에 눈물짓는다.",
-			"boss": "pool_Abyssal_FallenOath_V1"
+			"boss": "pool_222"
 		}
 	],
 	"act_summary": {

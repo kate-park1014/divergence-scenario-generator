@@ -140,7 +140,7 @@ export const storyarc_desert_solon_7: StoryArc = {
 		},
 		{
 			"npc": "amir",
-			"boss": "pool_MirageBlade_Solon_V1",
+			"boss": "pool_165",
 			"title": "구원인가 파멸인가, 영원한 목마름의 끝",
 			"act": "climax_finale",
 			"order": 5,

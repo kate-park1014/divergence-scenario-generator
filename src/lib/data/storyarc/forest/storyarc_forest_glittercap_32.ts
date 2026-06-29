@@ -143,7 +143,7 @@ export const storyarc_forest_glittercap_32: StoryArc = {
 			"title": "가면의 파열: 치욕의 여왕",
 			"act": "climax_finale",
 			"npc": "cedar",
-			"boss": "pool_ExiledBotanist_Glittercap_V1",
+			"boss": "pool_169",
 			"order": 5
 		}
 	],

@@ -141,7 +141,7 @@ export const storyarc_snowy_rimegaldr_7: StoryArc = {
 		{
 			"summary": "마침내 스칼드의 심장부에 도달한 탐험대는 에이라와 재회한다. 그녀는 스칼드가 마지막으로 품었던 '그리움'의 실체였음을 고백하며, 영원히 갇혀있던 스칼드의 슬픈 노래를 멈추기 위해 자신을 희생하려 한다. 스칼드는 자신의 죄책감과 완성되지 못한 서사를 끝내기 위해 탐험대와 최후의 대결을 펼친다.",
 			"order": 5,
-			"boss": "pool_Frostwept_Skald_V1",
+			"boss": "pool_380",
 			"title": "눈물의 종결자",
 			"act": "climax_finale",
 			"npc": "eira"

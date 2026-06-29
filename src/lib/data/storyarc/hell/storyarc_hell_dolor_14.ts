@@ -139,7 +139,7 @@ export const storyarc_hell_dolor_14: StoryArc = {
 			"boss": "random_boss"
 		},
 		{
-			"boss": "pool_Echo_Dolor_V1",
+			"boss": "pool_220",
 			"summary": "마침내 '애도의 메아리'와 대면한 탐험대는 브림의 진정한 역할을 알게 된다. '애도의 메아리'를 쓰러뜨리지만, 모든 저항이 그 존재를 더 강화시키는 먹이가 되었음을 깨닫는다. 이 승리는 또 다른 절망의 시작이며, 지옥 시스템의 반복 속에서 새로운 '애도의 메아리'가 될 뿐이다.",
 			"title": "영원한 찬가: 공허한 승리",
 			"npc": "brim",

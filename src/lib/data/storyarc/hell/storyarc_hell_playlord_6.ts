@@ -142,7 +142,7 @@ export const storyarc_hell_playlord_6: StoryArc = {
 			"title": "캣닢의 분노: 우주 고양이의 최후 통첩",
 			"act": "climax_finale",
 			"npc": "ash",
-			"boss": "pool_CosmicTeaser_Playlord_V1",
+			"boss": "pool_219",
 			"order": 5,
 			"summary": "마침내 탐험대는 '장난감'의 코어에 도달한다. 애쉬는 모든 단서를 종합하여 이 장난감이 사실은 타락한 '우주 캣닢 티저'임을 확신하고 공격을 시도한다. 장난감은 격렬한 반격과 함께 본래의 순수한 음성으로 본색을 드러내며, 지옥의 존재들에게 영원한 '놀이'를 선포한다. 악마들의 광란과 파괴가 절정에 달한다."
 		}

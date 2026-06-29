@@ -141,7 +141,7 @@ export const storyarc_modern_albin_36: StoryArc = {
 		{
 			"npc": "nia",
 			"title": "마술사의 마지막 쇼",
-			"boss": "pool_UrbanIllusion_Albin_V1",
+			"boss": "pool_282",
 			"act": "climax_finale",
 			"order": 5,
 			"summary": "모든 단서가 가리키는 알빈의 비밀 은신처. 탐험대는 그곳에서 알빈과 대면한다. 니아는 예상치 못한 방식으로 알빈의 과거와 얽힌 새로운 진실을 폭로한다. 마침내 알빈의 낡은 마술 도구 상자 속에서 금고 비밀번호와 함께 그의 진짜 정체가 드러나고, 그는 광기 어린 마지막 마술을 선보이며 탐험대를 위협한다. 그의 비극적인 동기와 냉혹한 과거가 교차하며 섬뜩한 진실이 밝혀진다."

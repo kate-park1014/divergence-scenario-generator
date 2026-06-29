@@ -139,7 +139,7 @@ export const storyarc_forest_silvana_38: StoryArc = {
 			"npc": "ela",
 			"title": "망각의 눈물",
 			"act": "climax_finale",
-			"boss": "pool_RootedQueen_Silvana_V1",
+			"boss": "pool_192",
 			"order": 5
 		}
 	],

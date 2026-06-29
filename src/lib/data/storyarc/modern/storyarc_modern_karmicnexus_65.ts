@@ -141,7 +141,7 @@ export const storyarc_modern_karmicnexus_65: StoryArc = {
 		{
 			"npc": "dax",
 			"title": "최후의 정산, 카르마의 눈물",
-			"boss": "pool_Ledger_KarmicNexus_V1",
+			"boss": "pool_270",
 			"act": "climax_finale",
 			"order": 5,
 			"summary": "주인공은 마침내 'Karmic Nexus'의 핵심에 도달한다. 그곳에서 닥스와 함께 보스의 정체가 사실 과거 블랙핸드 카르텔에 의해 만들어졌다가 버림받고, 복수만을 꿈꾼 '카르마의 장부' 자체였다는 충격적인 진실을 마주한다. 보스의 절규 속에서 도시의 허무한 과거가 드러나고, 주인공은 모든 빚을 '정산'하려는 보스의 비극적 결말을 목격하며 깊은 허무감을 느낀다."

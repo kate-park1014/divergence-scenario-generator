@@ -143,7 +143,7 @@ export const storyarc_snowy_morwen_87: StoryArc = {
 			"npc": "anuk",
 			"order": 5,
 			"act": "climax_finale",
-			"boss": "pool_GlacialOath_Morwen_V1",
+			"boss": "pool_385",
 			"title": "영원한 얼음의 저주"
 		}
 	],

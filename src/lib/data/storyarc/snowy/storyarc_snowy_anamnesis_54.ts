@@ -142,7 +142,7 @@ export const storyarc_snowy_anamnesis_54: StoryArc = {
 			"act": "climax_finale",
 			"title": "비극의 심장",
 			"npc": "eira",
-			"boss": "pool_GlacialHeart_Anamnesis_V1",
+			"boss": "pool_346",
 			"order": 5,
 			"summary": "탐험대는 마침내 영원한 겨울의 근원지에서 'GlacialHeart_Anamnesis_V1'과 마주한다. 에이라가 다시 나타나 보스에게 무언가를 속삭이자, 보스의 몸에서 차가운 기운과 함께 희미한 온기가 교차한다. 거대한 얼음 방패가 부서지며 그 안에 봉인된 어린 소녀의 형상이 드러나고, Anamnesis의 비극적인 진실이 밝혀진다. 과거의 맹세가 왜곡되어 세상을 얼려버린 슬픈 운명에 탐험대는 씁쓸함을 느낀다. 에이라의 눈에서도 한 줄기 눈물이 흐른다."
 		}

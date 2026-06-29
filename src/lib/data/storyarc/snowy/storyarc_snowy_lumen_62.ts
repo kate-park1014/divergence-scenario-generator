@@ -143,7 +143,7 @@ export const storyarc_snowy_lumen_62: StoryArc = {
 			"npc": "finn",
 			"order": 5,
 			"title": "영원히 잠들지 않는 눈물",
-			"boss": "pool_ArcticEcho_Lumen_V1",
+			"boss": "pool_348",
 			"act": "climax_finale"
 		}
 	],

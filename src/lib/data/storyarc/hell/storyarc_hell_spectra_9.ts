@@ -136,7 +136,7 @@ export const storyarc_hell_spectra_9: StoryArc = {
 		},
 		{
 			"title": "비극의 수호자, 씁쓸한 회귀",
-			"boss": "pool_ShatteredMemory_Spectra_V1",
+			"boss": "pool_227",
 			"npc": "mire",
 			"order": 5,
 			"act": "climax_finale",

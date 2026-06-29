@@ -143,7 +143,7 @@ export const storyarc_forest_thalassa_55: StoryArc = {
 			"summary": "숲의 심장에서 드디어 루트 마더 탈라사를 만난다. 그녀는 자비로운 모습으로 탐험대를 맞이하지만, 곧 광기에 사로잡혀 모든 것을 자신에게 흡수하려는 진정한 목적을 드러낸다. 주인공은 싸움 끝에 그녀의 비극적인 과거와 왜곡된 그리움을 깨닫지만, 모든 것을 흡수하려는 숲의 의지는 막을 수 없었으며, 엘라는 슬픔에 잠긴 채 자신의 동생 또한 숲의 일부가 되었음을 직감한다. 승리했으나 모든 것이 무의미해지는 비극적인 결말.",
 			"order": 5,
 			"act": "climax_finale",
-			"boss": "pool_RootMother_Thalassa_V1",
+			"boss": "pool_124",
 			"title": "어머니의 슬픈 포옹",
 			"npc": "ela"
 		}

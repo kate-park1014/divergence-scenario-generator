@@ -138,7 +138,7 @@ export const storyarc_snowy_screamveil_42: StoryArc = {
 			"npc": "eira",
 			"act": "climax_finale",
 			"summary": "마침내 도착한 얼음 동굴에서 에이라의 진정한 정체가 드러난다. 그녀는 Screamveil과 한 몸이 되어 주인공을 유인해 온 흑막이었음이 밝혀진다. 수많은 희생자의 얼어붙은 비명 속에서 주인공은 에이라의 잔혹한 배신과 Screamveil의 본 모습에 직면하며 비극적인 최후를 맞이한다.",
-			"boss": "pool_FrostEcho_Screamveil_V1",
+			"boss": "pool_368",
 			"order": 5,
 			"title": "영원의 합창"
 		}

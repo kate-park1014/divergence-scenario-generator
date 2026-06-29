@@ -144,7 +144,7 @@ export const storyarc_hell_komorebi_4: StoryArc = {
 			"act": "climax_finale",
 			"npc": "ash",
 			"title": "균열된 진실의 종착역",
-			"boss": "pool_ShatteredOracle_Komorebi_V1"
+			"boss": "pool_217"
 		}
 	],
 	"act_summary": {

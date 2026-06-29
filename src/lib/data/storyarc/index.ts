@@ -42,13 +42,13 @@ import { storyarc_forest_pool_102 } from './storyarc_forest_pool_102_V0';
 import { storyarc_desert_pool_103 } from './storyarc_desert_pool_103_V0';
 import { storyarc_snowy_pool_104 } from './storyarc_snowy_pool_104_V1';
 // snowy_test (boss_list 20260612, 보스당 3챕터: 도입/전개/엔딩)
-import { storyarc_hell_abyssalcore_3 } from './hell/storyarc_hell_abyssalcore_3';
-import { storyarc_hell_amethysttome_13 } from './hell/storyarc_hell_amethysttome_13';
-import { storyarc_hell_arkhain_26 } from './hell/storyarc_hell_arkhain_26';
+import { storyarc_hell_abyssalcore_26 } from './hell/storyarc_hell_abyssalcore_26';
+import { storyarc_hell_amethysttome_5 } from './hell/storyarc_hell_amethysttome_5';
+import { storyarc_hell_arkhain_3 } from './hell/storyarc_hell_arkhain_3';
 import { storyarc_hell_astraea_1 } from './hell/storyarc_hell_astraea_1';
 import { storyarc_hell_chime_8 } from './hell/storyarc_hell_chime_8';
 import { storyarc_hell_cinderprophet_16 } from './hell/storyarc_hell_cinderprophet_16';
-import { storyarc_hell_crescendo_19 } from './hell/storyarc_hell_crescendo_19';
+import { storyarc_hell_crescendo_0 } from './hell/storyarc_hell_crescendo_0';
 import { storyarc_hell_deliriumrift_10 } from './hell/storyarc_hell_deliriumrift_10';
 import { storyarc_hell_dictate_25 } from './hell/storyarc_hell_dictate_25';
 import { storyarc_hell_dolor_14 } from './hell/storyarc_hell_dolor_14';
@@ -56,22 +56,22 @@ import { storyarc_hell_doomthread_29 } from './hell/storyarc_hell_doomthread_29'
 import { storyarc_hell_eulalia_24 } from './hell/storyarc_hell_eulalia_24';
 import { storyarc_hell_fallenoath_22 } from './hell/storyarc_hell_fallenoath_22';
 import { storyarc_hell_fidget_12 } from './hell/storyarc_hell_fidget_12';
-import { storyarc_hell_gigglesplat_0 } from './hell/storyarc_hell_gigglesplat_0';
+import { storyarc_hell_gigglesplat_19 } from './hell/storyarc_hell_gigglesplat_19';
 import { storyarc_hell_glimmerghast_17 } from './hell/storyarc_hell_glimmerghast_17';
 import { storyarc_hell_hush_23 } from './hell/storyarc_hell_hush_23';
 import { storyarc_hell_kirantej_27 } from './hell/storyarc_hell_kirantej_27';
 import { storyarc_hell_komorebi_4 } from './hell/storyarc_hell_komorebi_4';
-import { storyarc_hell_lacrimosa_18 } from './hell/storyarc_hell_lacrimosa_18';
+import { storyarc_hell_lacrimosa_2 } from './hell/storyarc_hell_lacrimosa_2';
 import { storyarc_hell_lordfluff_15 } from './hell/storyarc_hell_lordfluff_15';
 import { storyarc_hell_lumen_31 } from './hell/storyarc_hell_lumen_31';
 import { storyarc_hell_memo_28 } from './hell/storyarc_hell_memo_28';
 import { storyarc_hell_noctis_30 } from './hell/storyarc_hell_noctis_30';
-import { storyarc_hell_obscura_2 } from './hell/storyarc_hell_obscura_2';
+import { storyarc_hell_obscura_18 } from './hell/storyarc_hell_obscura_18';
 import { storyarc_hell_pactum_20 } from './hell/storyarc_hell_pactum_20';
 import { storyarc_hell_platella_21 } from './hell/storyarc_hell_platella_21';
 import { storyarc_hell_playlord_6 } from './hell/storyarc_hell_playlord_6';
 import { storyarc_hell_spectra_9 } from './hell/storyarc_hell_spectra_9';
-import { storyarc_hell_stygianink_5 } from './hell/storyarc_hell_stygianink_5';
+import { storyarc_hell_stygianink_13 } from './hell/storyarc_hell_stygianink_13';
 import { storyarc_hell_vesper_11 } from './hell/storyarc_hell_vesper_11';
 import { storyarc_hell_voidprism_7 } from './hell/storyarc_hell_voidprism_7';
 import { storyarc_modern_aegis_47 } from './modern/storyarc_modern_aegis_47';
@@ -85,7 +85,7 @@ import { storyarc_modern_ashno7_78 } from './modern/storyarc_modern_ashno7_78';
 import { storyarc_modern_athan_21 } from './modern/storyarc_modern_athan_21';
 import { storyarc_modern_axiom_17 } from './modern/storyarc_modern_axiom_17';
 import { storyarc_modern_cache_26 } from './modern/storyarc_modern_cache_26';
-import { storyarc_modern_capitanoclick_0 } from './modern/storyarc_modern_capitanoclick_0';
+import { storyarc_modern_capitanoclick_64 } from './modern/storyarc_modern_capitanoclick_64';
 import { storyarc_modern_caponebot_46 } from './modern/storyarc_modern_caponebot_46';
 import { storyarc_modern_chaoscodec_16 } from './modern/storyarc_modern_chaoscodec_16';
 import { storyarc_modern_cipher_42 } from './modern/storyarc_modern_cipher_42';
@@ -102,13 +102,13 @@ import { storyarc_modern_donquarters_66 } from './modern/storyarc_modern_donquar
 import { storyarc_modern_echo_53 } from './modern/storyarc_modern_echo_53';
 import { storyarc_modern_elara_43 } from './modern/storyarc_modern_elara_43';
 import { storyarc_modern_elias_72 } from './modern/storyarc_modern_elias_72';
-import { storyarc_modern_evannext_75 } from './modern/storyarc_modern_evannext_75';
+import { storyarc_modern_evannext_1 } from './modern/storyarc_modern_evannext_1';
 import { storyarc_modern_facade_58 } from './modern/storyarc_modern_facade_58';
 import { storyarc_modern_giovanni_40 } from './modern/storyarc_modern_giovanni_40';
 import { storyarc_modern_imperator_25 } from './modern/storyarc_modern_imperator_25';
 import { storyarc_modern_karmicnexus_65 } from './modern/storyarc_modern_karmicnexus_65';
 import { storyarc_modern_kismet_37 } from './modern/storyarc_modern_kismet_37';
-import { storyarc_modern_kyrios_1 } from './modern/storyarc_modern_kyrios_1';
+import { storyarc_modern_kyrios_75 } from './modern/storyarc_modern_kyrios_75';
 import { storyarc_modern_lamentshard_63 } from './modern/storyarc_modern_lamentshard_63';
 import { storyarc_modern_ledger_29 } from './modern/storyarc_modern_ledger_29';
 import { storyarc_modern_lovelorn_49 } from './modern/storyarc_modern_lovelorn_49';
@@ -127,11 +127,11 @@ import { storyarc_modern_nomos_7 } from './modern/storyarc_modern_nomos_7';
 import { storyarc_modern_nullus_8 } from './modern/storyarc_modern_nullus_8';
 import { storyarc_modern_oathbound_41 } from './modern/storyarc_modern_oathbound_41';
 import { storyarc_modern_omert_57 } from './modern/storyarc_modern_omert_57';
-import { storyarc_modern_opalshade_3 } from './modern/storyarc_modern_opalshade_3';
+import { storyarc_modern_opalshade_33 } from './modern/storyarc_modern_opalshade_33';
 import { storyarc_modern_ottoreset_77 } from './modern/storyarc_modern_ottoreset_77';
 import { storyarc_modern_pandora_44 } from './modern/storyarc_modern_pandora_44';
 import { storyarc_modern_phantom_35 } from './modern/storyarc_modern_phantom_35';
-import { storyarc_modern_pixelgrim_28 } from './modern/storyarc_modern_pixelgrim_28';
+import { storyarc_modern_pixelgrim_4 } from './modern/storyarc_modern_pixelgrim_4';
 import { storyarc_modern_reverberation_51 } from './modern/storyarc_modern_reverberation_51';
 import { storyarc_modern_reverence_38 } from './modern/storyarc_modern_reverence_38';
 import { storyarc_modern_ringo_18 } from './modern/storyarc_modern_ringo_18';
@@ -140,7 +140,7 @@ import { storyarc_modern_scrivener_23 } from './modern/storyarc_modern_scrivener
 import { storyarc_modern_seraphina_69 } from './modern/storyarc_modern_seraphina_69';
 import { storyarc_modern_shadowcovenant_13 } from './modern/storyarc_modern_shadowcovenant_13';
 import { storyarc_modern_siren_14 } from './modern/storyarc_modern_siren_14';
-import { storyarc_modern_solace_33 } from './modern/storyarc_modern_solace_33';
+import { storyarc_modern_solace_3 } from './modern/storyarc_modern_solace_3';
 import { storyarc_modern_spectranode_52 } from './modern/storyarc_modern_spectranode_52';
 import { storyarc_modern_staticecho_73 } from './modern/storyarc_modern_staticecho_73';
 import { storyarc_modern_swift_50 } from './modern/storyarc_modern_swift_50';
@@ -148,12 +148,12 @@ import { storyarc_modern_syndicate_34 } from './modern/storyarc_modern_syndicate
 import { storyarc_modern_syntax_10 } from './modern/storyarc_modern_syntax_10';
 import { storyarc_modern_themis_19 } from './modern/storyarc_modern_themis_19';
 import { storyarc_modern_veritas_61 } from './modern/storyarc_modern_veritas_61';
-import { storyarc_modern_vex_4 } from './modern/storyarc_modern_vex_4';
+import { storyarc_modern_vex_28 } from './modern/storyarc_modern_vex_28';
 import { storyarc_modern_vigil_67 } from './modern/storyarc_modern_vigil_67';
 import { storyarc_modern_vincenzo_6 } from './modern/storyarc_modern_vincenzo_6';
 import { storyarc_modern_vortex_32 } from './modern/storyarc_modern_vortex_32';
 import { storyarc_modern_whisper_71 } from './modern/storyarc_modern_whisper_71';
-import { storyarc_modern_whisperweb_64 } from './modern/storyarc_modern_whisperweb_64';
+import { storyarc_modern_whisperweb_0 } from './modern/storyarc_modern_whisperweb_0';
 // snowy (subdir, bulk 생성 100보스, level 0~99)
 import { storyarc_snowy_aesa_37 } from './snowy/storyarc_snowy_aesa_37';
 import { storyarc_snowy_aethel_52 } from './snowy/storyarc_snowy_aethel_52';
@@ -175,19 +175,19 @@ import { storyarc_snowy_chitinblight_8 } from './snowy/storyarc_snowy_chitinblig
 import { storyarc_snowy_chrysalis_55 } from './snowy/storyarc_snowy_chrysalis_55';
 import { storyarc_snowy_cryos_35 } from './snowy/storyarc_snowy_cryos_35';
 import { storyarc_snowy_draugrhorn_39 } from './snowy/storyarc_snowy_draugrhorn_39';
-import { storyarc_snowy_egohelm_6 } from './snowy/storyarc_snowy_egohelm_6';
+import { storyarc_snowy_egohelm_78 } from './snowy/storyarc_snowy_egohelm_78';
 import { storyarc_snowy_eira_85 } from './snowy/storyarc_snowy_eira_85';
 import { storyarc_snowy_eisarr_28 } from './snowy/storyarc_snowy_eisarr_28';
 import { storyarc_snowy_fellstar_82 } from './snowy/storyarc_snowy_fellstar_82';
 import { storyarc_snowy_fenrir_99 } from './snowy/storyarc_snowy_fenrir_99';
 import { storyarc_snowy_fimbulship_89 } from './snowy/storyarc_snowy_fimbulship_89';
 import { storyarc_snowy_finny_49 } from './snowy/storyarc_snowy_finny_49';
-import { storyarc_snowy_fjor_1 } from './snowy/storyarc_snowy_fjor_1';
+import { storyarc_snowy_fjor_53 } from './snowy/storyarc_snowy_fjor_53';
 import { storyarc_snowy_fjordlight_72 } from './snowy/storyarc_snowy_fjordlight_72';
 import { storyarc_snowy_fluffball_15 } from './snowy/storyarc_snowy_fluffball_15';
 import { storyarc_snowy_fluffbeard_83 } from './snowy/storyarc_snowy_fluffbeard_83';
 import { storyarc_snowy_fluffnado_69 } from './snowy/storyarc_snowy_fluffnado_69';
-import { storyarc_snowy_fluffymenace_53 } from './snowy/storyarc_snowy_fluffymenace_53';
+import { storyarc_snowy_fluffymenace_1 } from './snowy/storyarc_snowy_fluffymenace_1';
 import { storyarc_snowy_frostheart_56 } from './snowy/storyarc_snowy_frostheart_56';
 import { storyarc_snowy_frostlock_14 } from './snowy/storyarc_snowy_frostlock_14';
 import { storyarc_snowy_frostscion_20 } from './snowy/storyarc_snowy_frostscion_20';
@@ -198,7 +198,7 @@ import { storyarc_snowy_gjald_68 } from './snowy/storyarc_snowy_gjald_68';
 import { storyarc_snowy_gleamfang_86 } from './snowy/storyarc_snowy_gleamfang_86';
 import { storyarc_snowy_glimmer_32 } from './snowy/storyarc_snowy_glimmer_32';
 import { storyarc_snowy_glimmerfrost_51 } from './snowy/storyarc_snowy_glimmerfrost_51';
-import { storyarc_snowy_glimmerpebble_0 } from './snowy/storyarc_snowy_glimmerpebble_0';
+import { storyarc_snowy_glimmerpebble_6 } from './snowy/storyarc_snowy_glimmerpebble_6';
 import { storyarc_snowy_gravemist_25 } from './snowy/storyarc_snowy_gravemist_25';
 import { storyarc_snowy_grumblefoot_36 } from './snowy/storyarc_snowy_grumblefoot_36';
 import { storyarc_snowy_grumph_59 } from './snowy/storyarc_snowy_grumph_59';
@@ -221,20 +221,20 @@ import { storyarc_snowy_mindshatter_31 } from './snowy/storyarc_snowy_mindshatte
 import { storyarc_snowy_mnemora_70 } from './snowy/storyarc_snowy_mnemora_70';
 import { storyarc_snowy_mortifera_71 } from './snowy/storyarc_snowy_mortifera_71';
 import { storyarc_snowy_morwen_87 } from './snowy/storyarc_snowy_morwen_87';
-import { storyarc_snowy_mournsnow_3 } from './snowy/storyarc_snowy_mournsnow_3';
+import { storyarc_snowy_mournsnow_13 } from './snowy/storyarc_snowy_mournsnow_13';
 import { storyarc_snowy_mournveil_26 } from './snowy/storyarc_snowy_mournveil_26';
 import { storyarc_snowy_requiem_45 } from './snowy/storyarc_snowy_requiem_45';
 import { storyarc_snowy_rimedirge_9 } from './snowy/storyarc_snowy_rimedirge_9';
-import { storyarc_snowy_rimefeast_65 } from './snowy/storyarc_snowy_rimefeast_65';
+import { storyarc_snowy_rimefeast_2 } from './snowy/storyarc_snowy_rimefeast_2';
 import { storyarc_snowy_rimegaldr_7 } from './snowy/storyarc_snowy_rimegaldr_7';
 import { storyarc_snowy_rimeheart_17 } from './snowy/storyarc_snowy_rimeheart_17';
-import { storyarc_snowy_runeeater_2 } from './snowy/storyarc_snowy_runeeater_2';
+import { storyarc_snowy_runeeater_65 } from './snowy/storyarc_snowy_runeeater_65';
 import { storyarc_snowy_screamveil_42 } from './snowy/storyarc_snowy_screamveil_42';
 import { storyarc_snowy_silas_58 } from './snowy/storyarc_snowy_silas_58';
 import { storyarc_snowy_skaalbane_95 } from './snowy/storyarc_snowy_skaalbane_95';
 import { storyarc_snowy_skaald_38 } from './snowy/storyarc_snowy_skaald_38';
 import { storyarc_snowy_skaldr_27 } from './snowy/storyarc_snowy_skaldr_27';
-import { storyarc_snowy_skaldrage_4 } from './snowy/storyarc_snowy_skaldrage_4';
+import { storyarc_snowy_skaldrage_16 } from './snowy/storyarc_snowy_skaldrage_16';
 import { storyarc_snowy_skaldrum_67 } from './snowy/storyarc_snowy_skaldrum_67';
 import { storyarc_snowy_skaldswail_77 } from './snowy/storyarc_snowy_skaldswail_77';
 import { storyarc_snowy_skalhorn_97 } from './snowy/storyarc_snowy_skalhorn_97';
@@ -247,14 +247,14 @@ import { storyarc_snowy_svalin_80 } from './snowy/storyarc_snowy_svalin_80';
 import { storyarc_snowy_svalinn_40 } from './snowy/storyarc_snowy_svalinn_40';
 import { storyarc_snowy_ursusglacius_74 } from './snowy/storyarc_snowy_ursusglacius_74';
 import { storyarc_snowy_vendrick_5 } from './snowy/storyarc_snowy_vendrick_5';
-import { storyarc_snowy_veridian_78 } from './snowy/storyarc_snowy_veridian_78';
-import { storyarc_snowy_vyrda_16 } from './snowy/storyarc_snowy_vyrda_16';
+import { storyarc_snowy_veridian_4 } from './snowy/storyarc_snowy_veridian_4';
+import { storyarc_snowy_vyrda_0 } from './snowy/storyarc_snowy_vyrda_0';
 import { storyarc_snowy_weaverfrost_50 } from './snowy/storyarc_snowy_weaverfrost_50';
 import { storyarc_snowy_whisperwind_57 } from './snowy/storyarc_snowy_whisperwind_57';
 import { storyarc_snowy_wispblight_61 } from './snowy/storyarc_snowy_wispblight_61';
 import { storyarc_snowy_wulfricssigh_76 } from './snowy/storyarc_snowy_wulfricssigh_76';
 import { storyarc_snowy_wyrdbound_84 } from './snowy/storyarc_snowy_wyrdbound_84';
-import { storyarc_snowy_wyrdgale_13 } from './snowy/storyarc_snowy_wyrdgale_13';
+import { storyarc_snowy_wyrdgale_3 } from './snowy/storyarc_snowy_wyrdgale_3';
 // desert (subdir, bulk 생성 40보스, level 0~39)
 import { storyarc_desert_katarina_0 } from './desert/storyarc_desert_katarina_0';
 import { storyarc_desert_tempest_1 } from './desert/storyarc_desert_tempest_1';
@@ -477,19 +477,19 @@ export const storyarcRegistry: StoryArc[] = [
 	storyarc_snowy_chrysalis_55,
 	storyarc_snowy_cryos_35,
 	storyarc_snowy_draugrhorn_39,
-	storyarc_snowy_egohelm_6,
+	storyarc_snowy_egohelm_78,
 	storyarc_snowy_eira_85,
 	storyarc_snowy_eisarr_28,
 	storyarc_snowy_fellstar_82,
 	storyarc_snowy_fenrir_99,
 	storyarc_snowy_fimbulship_89,
 	storyarc_snowy_finny_49,
-	storyarc_snowy_fjor_1,
+	storyarc_snowy_fjor_53,
 	storyarc_snowy_fjordlight_72,
 	storyarc_snowy_fluffball_15,
 	storyarc_snowy_fluffbeard_83,
 	storyarc_snowy_fluffnado_69,
-	storyarc_snowy_fluffymenace_53,
+	storyarc_snowy_fluffymenace_1,
 	storyarc_snowy_frostheart_56,
 	storyarc_snowy_frostlock_14,
 	storyarc_snowy_frostscion_20,
@@ -500,7 +500,7 @@ export const storyarcRegistry: StoryArc[] = [
 	storyarc_snowy_gleamfang_86,
 	storyarc_snowy_glimmer_32,
 	storyarc_snowy_glimmerfrost_51,
-	storyarc_snowy_glimmerpebble_0,
+	storyarc_snowy_glimmerpebble_6,
 	storyarc_snowy_gravemist_25,
 	storyarc_snowy_grumblefoot_36,
 	storyarc_snowy_grumph_59,
@@ -523,20 +523,20 @@ export const storyarcRegistry: StoryArc[] = [
 	storyarc_snowy_mnemora_70,
 	storyarc_snowy_mortifera_71,
 	storyarc_snowy_morwen_87,
-	storyarc_snowy_mournsnow_3,
+	storyarc_snowy_mournsnow_13,
 	storyarc_snowy_mournveil_26,
 	storyarc_snowy_requiem_45,
 	storyarc_snowy_rimedirge_9,
-	storyarc_snowy_rimefeast_65,
+	storyarc_snowy_rimefeast_2,
 	storyarc_snowy_rimegaldr_7,
 	storyarc_snowy_rimeheart_17,
-	storyarc_snowy_runeeater_2,
+	storyarc_snowy_runeeater_65,
 	storyarc_snowy_screamveil_42,
 	storyarc_snowy_silas_58,
 	storyarc_snowy_skaalbane_95,
 	storyarc_snowy_skaald_38,
 	storyarc_snowy_skaldr_27,
-	storyarc_snowy_skaldrage_4,
+	storyarc_snowy_skaldrage_16,
 	storyarc_snowy_skaldrum_67,
 	storyarc_snowy_skaldswail_77,
 	storyarc_snowy_skalhorn_97,
@@ -549,14 +549,14 @@ export const storyarcRegistry: StoryArc[] = [
 	storyarc_snowy_svalinn_40,
 	storyarc_snowy_ursusglacius_74,
 	storyarc_snowy_vendrick_5,
-	storyarc_snowy_veridian_78,
-	storyarc_snowy_vyrda_16,
+	storyarc_snowy_veridian_4,
+	storyarc_snowy_vyrda_0,
 	storyarc_snowy_weaverfrost_50,
 	storyarc_snowy_whisperwind_57,
 	storyarc_snowy_wispblight_61,
 	storyarc_snowy_wulfricssigh_76,
 	storyarc_snowy_wyrdbound_84,
-	storyarc_snowy_wyrdgale_13,
+	storyarc_snowy_wyrdgale_3,
 	// modern (subdir, bulk 생성, 0~79)
 	storyarc_modern_aegis_47,
 	storyarc_modern_aether_39,
@@ -569,7 +569,7 @@ export const storyarcRegistry: StoryArc[] = [
 	storyarc_modern_athan_21,
 	storyarc_modern_axiom_17,
 	storyarc_modern_cache_26,
-	storyarc_modern_capitanoclick_0,
+	storyarc_modern_capitanoclick_64,
 	storyarc_modern_caponebot_46,
 	storyarc_modern_chaoscodec_16,
 	storyarc_modern_cipher_42,
@@ -586,13 +586,13 @@ export const storyarcRegistry: StoryArc[] = [
 	storyarc_modern_echo_53,
 	storyarc_modern_elara_43,
 	storyarc_modern_elias_72,
-	storyarc_modern_evannext_75,
+	storyarc_modern_evannext_1,
 	storyarc_modern_facade_58,
 	storyarc_modern_giovanni_40,
 	storyarc_modern_imperator_25,
 	storyarc_modern_karmicnexus_65,
 	storyarc_modern_kismet_37,
-	storyarc_modern_kyrios_1,
+	storyarc_modern_kyrios_75,
 	storyarc_modern_lamentshard_63,
 	storyarc_modern_ledger_29,
 	storyarc_modern_lovelorn_49,
@@ -611,11 +611,11 @@ export const storyarcRegistry: StoryArc[] = [
 	storyarc_modern_nullus_8,
 	storyarc_modern_oathbound_41,
 	storyarc_modern_omert_57,
-	storyarc_modern_opalshade_3,
+	storyarc_modern_opalshade_33,
 	storyarc_modern_ottoreset_77,
 	storyarc_modern_pandora_44,
 	storyarc_modern_phantom_35,
-	storyarc_modern_pixelgrim_28,
+	storyarc_modern_pixelgrim_4,
 	storyarc_modern_reverberation_51,
 	storyarc_modern_reverence_38,
 	storyarc_modern_ringo_18,
@@ -624,7 +624,7 @@ export const storyarcRegistry: StoryArc[] = [
 	storyarc_modern_seraphina_69,
 	storyarc_modern_shadowcovenant_13,
 	storyarc_modern_siren_14,
-	storyarc_modern_solace_33,
+	storyarc_modern_solace_3,
 	storyarc_modern_spectranode_52,
 	storyarc_modern_staticecho_73,
 	storyarc_modern_swift_50,
@@ -632,20 +632,20 @@ export const storyarcRegistry: StoryArc[] = [
 	storyarc_modern_syntax_10,
 	storyarc_modern_themis_19,
 	storyarc_modern_veritas_61,
-	storyarc_modern_vex_4,
+	storyarc_modern_vex_28,
 	storyarc_modern_vigil_67,
 	storyarc_modern_vincenzo_6,
 	storyarc_modern_vortex_32,
 	storyarc_modern_whisper_71,
-	storyarc_modern_whisperweb_64,
+	storyarc_modern_whisperweb_0,
 	// hell (subdir, bulk 생성, 0~31)
-	storyarc_hell_abyssalcore_3,
-	storyarc_hell_amethysttome_13,
-	storyarc_hell_arkhain_26,
+	storyarc_hell_abyssalcore_26,
+	storyarc_hell_amethysttome_5,
+	storyarc_hell_arkhain_3,
 	storyarc_hell_astraea_1,
 	storyarc_hell_chime_8,
 	storyarc_hell_cinderprophet_16,
-	storyarc_hell_crescendo_19,
+	storyarc_hell_crescendo_0,
 	storyarc_hell_deliriumrift_10,
 	storyarc_hell_dictate_25,
 	storyarc_hell_dolor_14,
@@ -653,22 +653,22 @@ export const storyarcRegistry: StoryArc[] = [
 	storyarc_hell_eulalia_24,
 	storyarc_hell_fallenoath_22,
 	storyarc_hell_fidget_12,
-	storyarc_hell_gigglesplat_0,
+	storyarc_hell_gigglesplat_19,
 	storyarc_hell_glimmerghast_17,
 	storyarc_hell_hush_23,
 	storyarc_hell_kirantej_27,
 	storyarc_hell_komorebi_4,
-	storyarc_hell_lacrimosa_18,
+	storyarc_hell_lacrimosa_2,
 	storyarc_hell_lordfluff_15,
 	storyarc_hell_lumen_31,
 	storyarc_hell_memo_28,
 	storyarc_hell_noctis_30,
-	storyarc_hell_obscura_2,
+	storyarc_hell_obscura_18,
 	storyarc_hell_pactum_20,
 	storyarc_hell_platella_21,
 	storyarc_hell_playlord_6,
 	storyarc_hell_spectra_9,
-	storyarc_hell_stygianink_5,
+	storyarc_hell_stygianink_13,
 	storyarc_hell_vesper_11,
 	storyarc_hell_voidprism_7,
 	storyarc_modern_pool_101,

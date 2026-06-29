@@ -136,7 +136,7 @@ export const storyarc_desert_oblivion_22: StoryArc = {
 		},
 		{
 			"npc": "amir",
-			"boss": "pool_DistortedSteel_Oblivion_V1",
+			"boss": "pool_160",
 			"act": "climax_finale",
 			"title": "승리 속의 상실",
 			"order": 5,

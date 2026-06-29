@@ -141,7 +141,7 @@ export const storyarc_desert_aetherium_8: StoryArc = {
 		{
 			"act": "climax_finale",
 			"npc": "amir",
-			"boss": "pool_SpiritShards_Aetherium_V1",
+			"boss": "pool_147",
 			"order": 5,
 			"summary": "주인공은 모든 단서를 종합하여 마침내 Aetherium의 진정한 심장부에 도달한다. 그곳에서 다시 만난 아미르(Amir)는 과거 사막의 비밀을 알고 있었으나, 감당할 수 없는 진실 때문에 침묵했음을 고백한다. Aetherium은 환영을 걷어내고 거대한 눈동자를 드러내며, 자신이 수많은 블레이드마스터들의 영혼을 흡수하여 만들어진 존재임을 밝힌다. 주인공은 비극적인 희생 끝에 Aetherium의 멈출 수 없는 갈증에 맞서 싸운다.",
 			"title": "영원한 갈증의 심장"

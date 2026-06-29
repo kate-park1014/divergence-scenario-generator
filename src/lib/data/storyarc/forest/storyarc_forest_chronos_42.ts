@@ -142,7 +142,7 @@ export const storyarc_forest_chronos_42: StoryArc = {
 			"summary": "폭포의 핵에 다다르자, 모든 것이 멈춘 듯했던 폭포에서 비탄의 목소리가 울려 퍼지며, 예언자의 절규와 부족의 멸망 과정이 환영으로 쏟아진다. 브라켄은 주인공과 함께 폭포의 진실을 목격하며 과거의 비극에 대한 죄책감을 공유한다.",
 			"order": 5,
 			"act": "climax_finale",
-			"boss": "pool_OracleEcho_Chronos_V1",
+			"boss": "pool_214",
 			"npc": "bracken",
 			"title": "영원한 눈물의 진실"
 		}

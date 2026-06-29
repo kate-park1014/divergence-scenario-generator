@@ -142,7 +142,7 @@ export const storyarc_desert_sandwalker_25: StoryArc = {
 			"order": 5,
 			"npc": "amir",
 			"title": "파멸을 부르는 오아시스",
-			"boss": "pool_MirageBlade_Sandwalker_V1",
+			"boss": "pool_131",
 			"act": "climax_finale",
 			"summary": "마침내 진정한 오아시스에 도착한 일행. 그러나 아미르는 싸늘하게 웃으며 '이곳이 너희의 무덤이다'라고 말한다. 오아시스는 거대한 모래 폭풍으로 변하고, 그 중심에서 샌드워커가 본모습을 드러내며 광기의 검무를 펼친다. 통쾌하게 진실을 깨달은 주인공은 보스의 환영 검술에 맞서 싸운다."
 		}

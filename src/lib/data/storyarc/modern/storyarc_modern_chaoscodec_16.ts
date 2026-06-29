@@ -139,7 +139,7 @@ export const storyarc_modern_chaoscodec_16: StoryArc = {
 			"act": "rising"
 		},
 		{
-			"boss": "pool_GlitchGamble_ChaosCodec_V1",
+			"boss": "pool_283",
 			"order": 5,
 			"act": "climax_finale",
 			"title": "카오스 코덱의 왕국",

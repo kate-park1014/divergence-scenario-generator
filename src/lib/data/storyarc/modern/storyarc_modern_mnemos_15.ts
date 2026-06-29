@@ -140,7 +140,7 @@ export const storyarc_modern_mnemos_15: StoryArc = {
 		},
 		{
 			"title": "기억의 파편, 맹세의 끝",
-			"boss": "pool_VowKeeper_Mnemos_V1",
+			"boss": "pool_311",
 			"npc": "bex",
 			"act": "climax_finale",
 			"order": 5,

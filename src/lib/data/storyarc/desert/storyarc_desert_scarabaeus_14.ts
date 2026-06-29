@@ -143,7 +143,7 @@ export const storyarc_desert_scarabaeus_14: StoryArc = {
 			"npc": "amir",
 			"summary": "모든 진실이 밝혀지고, 침묵의 수호자로 불리던 스카라바우스의 껍질이 깨지며 끔찍한 군집이 쏟아져 나온다. 아미르는 이 광경을 지켜보며 인간의 오만과 비극적 운명에 대한 비웃음 섞인 깨달음을 보여준다. 주인공은 숙주의 마지막 남은 의지와 갑충 여왕의 번식을 막기 위한 처절한 전투를 벌인다.",
 			"title": "껍질 속 비명",
-			"boss": "pool_BlightBlade_Scarabaeus_V1",
+			"boss": "pool_145",
 			"order": 5
 		}
 	],

@@ -141,7 +141,7 @@ export const storyarc_desert_shimmeredge_4: StoryArc = {
 		{
 			"title": "끝나지 않는 검무: 승리의 허망함",
 			"npc": "amir",
-			"boss": "pool_MirageBlade_ShimmerEdge_V1",
+			"boss": "pool_155",
 			"summary": "마침내 주인공은 사막의 환영 속에서 최종 보스, Shimmer-Edge와 대면한다. Shimmer-Edge는 '완벽한 일격'을 위한 끝없는 광기 속에서 주인공을 자신의 '재료'로 삼으려 한다. 치열한 전투 끝에 주인공은 Shimmer-Edge를 물리치지만, 보스의 마지막 단말마에서 이 세계 자체가 반복되는 망상임을 깨닫고 유적에서 보았던 '순환의 맹세'의 의미를 이해한다. (FSHDW_DesertLoop_01 Reveal) 보스의 뒤틀린 동기와 대사가 과거 블레이드마스터의 강박과 똑같음을 깨닫고, 사막의 바람이 실어 나르던 콧노래가 그 광기의 메아리였음을 알게 된다. (FSHDW_MadnessEcho_02 Reveal) 승리 후, 주인공은 공허한 자신의 미소를 보고 오아시스의 물웅덩이가 보여주었던 '변화 없는 자신'의 모습을 떠올린다. (FSHDW_MirrorTruth_03 Reveal) 보스전 이후, 모든 것이 다시 원점으로 돌아가는 듯한 광경이 모래에 비치며, 이 세계 자체가 과거의 반복되는 환영이었음을 시각적으로 체험한다. (FSHDW_SandsTime_04 Reveal) 아미르는 주인공에게 다시 한번 '다른 세상은 없을까요?'라고 묻지만, 주인공은 대답할 수 없다. 주인공의 승리는 시스템의 균열을 가져오지 못하고, 또 다른 '반복'의 시작을 예고할 뿐이다.",
 			"order": 5,
 			"act": "climax_finale"

@@ -141,7 +141,7 @@ export const storyarc_snowy_draugrhorn_39: StoryArc = {
 		{
 			"title": "허무의 마지막 전장",
 			"summary": "마침내 드라우그혼의 실체가 드러나고, 그 진실은 과거의 영광이 아닌 끝없는 허무임을 밝혀진다. 핀과 주인공은 이 무의미한 전투의 굴레에서 벗어나려 하지만, 승리조차 결국 또 다른 절망의 시작임을 깨닫게 된다. (복선1·2·3·4 모두 최종적으로 드러나며 허무감 강조)",
-			"boss": "pool_FrostBerserker_Draugrhorn_V1",
+			"boss": "pool_334",
 			"npc": "finn",
 			"act": "climax_finale",
 			"order": 5

@@ -139,7 +139,7 @@ export const storyarc_modern_ringo_18: StoryArc = {
 			"boss": "random_boss"
 		},
 		{
-			"boss": "pool_RogueRegister_Ringo_V1",
+			"boss": "pool_254",
 			"title": "최후의 결제",
 			"order": 5,
 			"npc": "nia",

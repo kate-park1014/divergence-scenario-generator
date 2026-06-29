@@ -141,7 +141,7 @@ export const storyarc_modern_kismet_37: StoryArc = {
 		{
 			"title": "도시의 심장: 키스메트의 절규",
 			"order": 5,
-			"boss": "pool_AncientOath_Kismet_V1",
+			"boss": "pool_298",
 			"npc": "lin",
 			"summary": "주인공은 마침내 도시의 핵심부, 고대 신전처럼 변한 서버룸에서 '린'과 재회한다. 린은 그간의 모든 조작과 시스템의 진실을 폭로하며 자신 또한 키스메트에 의해 조종되었음을 고백한다. 그리고 도시의 심장부에 갇힌 키스메트의 영혼과 마주하며, 이 모든 번영이 그의 영원한 고통 위에 세워졌음을 깨닫는다. 키스메트는 탐험대를 향해 구원과 파멸 사이의 선택을 요구하며 절규한다.",
 			"act": "climax_finale"

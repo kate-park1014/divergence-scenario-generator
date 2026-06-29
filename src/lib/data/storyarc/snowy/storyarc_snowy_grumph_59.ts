@@ -140,7 +140,7 @@ export const storyarc_snowy_grumph_59: StoryArc = {
 		},
 		{
 			"summary": "핀은 마침내 그럼프 모자의 진정한 정체와 천년 동안 홀로 추위에 떨며 겪었던 비애를 깨닫는다. 그럼프는 핀의 연민을 거부하며, 다시 홀로 남겨질지도 모른다는 공포에 휩싸여 광분한다. 모자 아래에서 튀어나오는 얼음 송곳니들은 그럼프의 끓어오르는 분노와 절규를 드러내며, 핀은 끔찍한 진실과 마주한 채 연민 속에서 사투를 벌인다.",
-			"boss": "pool_GrumpyFur_JarlsHat_V1",
+			"boss": "pool_373",
 			"npc": "finn",
 			"act": "climax_finale",
 			"title": "천년의 겨울, 영원한 절규",

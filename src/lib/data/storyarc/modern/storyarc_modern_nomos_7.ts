@@ -142,7 +142,7 @@ export const storyarc_modern_nomos_7: StoryArc = {
 			"title": "허무의 피날레: 율법의 파멸자",
 			"act": "climax_finale",
 			"order": 5,
-			"boss": "pool_Crimson_Nomos_V1",
+			"boss": "pool_273",
 			"summary": "드디어 '심판자' Nomos와 대면한다. 그의 정체가 '피의 율법' 그 자체임이 밝혀지고, 모든 맹세가 허구적 질서를 유지하기 위한 도구였음을 깨닫는다. 격렬한 전투 끝에 Nomos를 쓰러뜨리지만, 그의 죽음은 더 큰 허무와 모든 맹세의 무의미함만을 남긴다. 에코와 함께 파국을 맞이한다.",
 			"npc": "echo"
 		}

@@ -142,7 +142,7 @@ export const storyarc_forest_umbraempress_8: StoryArc = {
 			"npc": "bracken",
 			"title": "여왕의 눈물, 씁쓸한 왕좌",
 			"order": 5,
-			"boss": "pool_ForestBroker_UmbraEmpress_V1",
+			"boss": "pool_179",
 			"act": "climax_finale",
 			"summary": "탐험대는 마침내 여왕의 비밀 창고이자 과거 아마존 정보국의 거점이었던 장소에 도달한다. 브라켄은 여왕의 진실된 신분(GF2)과 아마존 사회의 과거 숙청 기록(GF1)에 대해 침묵했던 자신의 죄를 고백하며, 이곳에서 모든 진실이 폭로된다. 여왕은 과거의 배신과 고통으로 자신이 '이 씁쓸한 순환을 이어가는 존재'가 되었음을 인정하며, 마지막 일전을 벌인다(GF3). 패배한 그녀는 눈물을 흘리며 숲의 비극이 반복될 수밖에 없는 운명이라고 말한다."
 		}

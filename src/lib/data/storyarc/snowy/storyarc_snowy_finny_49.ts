@@ -141,7 +141,7 @@ export const storyarc_snowy_finny_49: StoryArc = {
 		{
 			"summary": "탐험대가 절인 청어를 마침내 붙잡고 공격하자, 얼음 속에서 헬가르드의 분노에 찬 절규가 터져 나온다. 그는 자신이 오딘에게 모욕을 준 대가로 영원히 이 끔찍한 절인 청어의 몸에 갇혔다고 저주하며 오딘에 대한 복수를 외친다. '힐드'는 비극의 과거를 눈물로 증언한다. (복선: 제단의 진실, 붉은 소금의 의미, 울부짖음의 근원 모두 밝혀짐)",
 			"title": "헬가르드의 절규",
-			"boss": "pool_PickledGourmet_Finny_V1",
+			"boss": "pool_350",
 			"order": 5,
 			"act": "climax_finale",
 			"npc": "hild"

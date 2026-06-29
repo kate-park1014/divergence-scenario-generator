@@ -139,7 +139,7 @@ export const storyarc_snowy_skaldrum_67: StoryArc = {
 			"summary": "북소리에 완전히 지배당한 사람들이 비정상적인 의식을 치르는 장소를 발견한다. 보레아리스는 북소리가 처음엔 잃어버린 고향의 노래처럼 들렸지만, 지금은 모든 것을 잊게 만드는 공허한 울림이 되었다며 슬픈 진실을 전한다."
 		},
 		{
-			"boss": "pool_RhythmicEcho_Skaldrum_V1",
+			"boss": "pool_360",
 			"npc": "eira",
 			"title": "영원한 고독의 박동",
 			"order": 5,

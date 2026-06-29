@@ -144,7 +144,7 @@ export const storyarc_hell_dictate_25: StoryArc = {
 			"act": "climax_finale",
 			"order": 5,
 			"summary": "Dictate의 본거지인 대성당에 잠입. 그는 모든 영혼을 자신의 '말씀' 아래 통합시키려 한다. 과거에 대한 그의 상처와 왜곡된 질서 추구의 이유가 밝혀지며, '그는 피해자였던가?' 하는 의문이 제기된다. Vex가 다시 나타나, Dictate의 강요된 '질서'에 맞서 자신의 목소리를 낸다. 주인공은 그의 행동을 막고 진정한 자유를 되찾기 위한 최후의 일전을 벌인다.",
-			"boss": "pool_KindPriest_V0_2"
+			"boss": "pool_234"
 		}
 	],
 	"act_summary": {

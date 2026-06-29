@@ -141,7 +141,7 @@ export const storyarc_forest_moros_50: StoryArc = {
 		{
 			"title": "저주받은 운명의 해방",
 			"act": "climax_finale",
-			"boss": "pool_FatedLoom_Moros_V1",
+			"boss": "pool_210",
 			"order": 5,
 			"npc": "briar",
 			"summary": "주인공은 마침내 숲의 심장부, 모로스의 은신처에 도달한다. 모로스는 자신을 해방시켜 달라고 애원하며 진실을 밝힌다. 숲을 뒤덮었던 모든 소문은 자신에게 내려진 저주와 고통에서 벗어나기 위한 마지막 발버둥이었음이 드러난다. 브라이어는 이 모든 진실을 목도하며, 자신이 믿었던 모든 것이 허구였음을 깨닫고 심한 분노와 배신감에 휩싸인다."

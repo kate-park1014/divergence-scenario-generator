@@ -140,7 +140,7 @@ export const storyarc_desert_mirage_10: StoryArc = {
 		},
 		{
 			"act": "climax_finale",
-			"boss": "pool_DuneSinger_Mirage_V1",
+			"boss": "pool_132",
 			"order": 5,
 			"title": "미라지의 비원",
 			"npc": "kemet",

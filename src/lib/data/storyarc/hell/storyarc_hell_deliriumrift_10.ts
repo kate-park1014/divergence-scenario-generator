@@ -139,7 +139,7 @@ export const storyarc_hell_deliriumrift_10: StoryArc = {
 			"npc": "ash",
 			"title": "부서진 정신의 절정",
 			"order": 5,
-			"boss": "pool_ShatteredMind_DeliriumRift_V1",
+			"boss": "pool_237",
 			"summary": "모든 것이 밝혀진다. 애쉬는 사실 델리리움 리프트의 의지가 만든 환영이자 그의 일부였다. 델리리움 리프트는 자신이 진실이라고 믿는 '파편화된 깨달음'을 탐험대에게 강요하며, 모든 것이 무한히 반복되는 절망적인 루프의 본질을 드러낸다. 허무 속에서 선택을 강요당한다."
 		}
 	],

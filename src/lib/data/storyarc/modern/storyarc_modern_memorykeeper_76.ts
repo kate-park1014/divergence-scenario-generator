@@ -143,7 +143,7 @@ export const storyarc_modern_memorykeeper_76: StoryArc = {
 			"npc": "lin",
 			"order": 5,
 			"title": "부정된 현재",
-			"boss": "pool_ExArchive_V0",
+			"boss": "pool_099",
 			"summary": "최종 보스 'Memory Keeper'가 그 거대한 모습을 드러낸다. 과거를 미화하며 현재를 부정하게 만드는 존재의 실체가 밝혀지고, '린'은 보스의 꼭두각시가 되어 '그때로 돌아가면 괜찮을 거야!'라고 외친다. 주인공은 진실을 마주하고 이 모든 허무한 반복을 끝내려 한다."
 		}
 	],

@@ -139,7 +139,7 @@ export const storyarc_snowy_frostscion_20: StoryArc = {
 			"boss": "random_boss"
 		},
 		{
-			"boss": "pool_Crystalline_Harbinger_V1",
+			"boss": "pool_378",
 			"title": "얼어붙은 진실",
 			"act": "climax_finale",
 			"order": 5,

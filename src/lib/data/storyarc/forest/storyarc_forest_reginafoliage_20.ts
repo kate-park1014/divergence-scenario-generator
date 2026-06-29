@@ -141,7 +141,7 @@ export const storyarc_forest_reginafoliage_20: StoryArc = {
 		{
 			"title": "완벽한 정원의 비료",
 			"npc": "ela",
-			"boss": "pool_FussyGardener_ReginaFoliage_V1",
+			"boss": "pool_215",
 			"order": 5,
 			"act": "climax_finale",
 			"summary": "탐험대는 드디어 숲의 모든 것을 조작하는 노파 레지나 폴리아주와 마주한다. 엘라는 레지나의 광기 어린 '완벽한 정원' 계획의 실체를 목격하고 충격에 빠진다. 숲 전체가 거대한 식물 병기로 변모하며 카운트다운은 절정에 달하고, 탐험대는 이 뒤틀린 미학 속에서 생존을 위한 처절한 싸움을 시작한다. 모든 복선이 드러나고, 브라이어의 진정한 역할이 밝혀진다."

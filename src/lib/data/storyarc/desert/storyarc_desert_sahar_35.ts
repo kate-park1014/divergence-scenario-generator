@@ -139,7 +139,7 @@ export const storyarc_desert_sahar_35: StoryArc = {
 			"act": "rising"
 		},
 		{
-			"boss": "pool_MirageChef_V0",
+			"boss": "pool_051",
 			"npc": "amir",
 			"summary": "사하르의 환영 만찬에 도달한 주인공과 아미르. 사하르는 과거의 참혹한 진실을 밝히며, 왜곡된 신념으로 사람들을 영원한 환상 속에 가두려 한다. 처절한 대결 끝에, 주인공은 사하르의 씁쓸한 최후와 함께 모든 것이 모래로 부서지는 광경을 목격한다.",
 			"title": "모래 위의 마지막 만찬",

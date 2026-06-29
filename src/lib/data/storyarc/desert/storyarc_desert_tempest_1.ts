@@ -138,7 +138,7 @@ export const storyarc_desert_tempest_1: StoryArc = {
 		{
 			"act": "climax_finale",
 			"summary": "모래 폭풍의 심장부, 템페스트와의 최후의 결전. 아미르는 마침내 숨겨왔던 황금 제국의 진실과 '아레스'의 비극을 담은 고대 문서를 꺼내 보인다. 템페스트의 검기가 아레스의 검술임을 깨닫고, 그의 고통을 멈추기 위한 격렬한 사투를 벌인다. 결투 끝에 템페스트는 자신의 진정한 소망을 외치며 사라지고, 사막에는 푸른 불꽃만이 남는다.",
-			"boss": "pool_EchoBlade_Tempest_V1",
+			"boss": "pool_142",
 			"npc": "amir",
 			"title": "폭풍의 심장, 분노의 검",
 			"order": 5

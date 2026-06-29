@@ -142,7 +142,7 @@ export const storyarc_snowy_frostlock_14: StoryArc = {
 			"act": "climax_finale",
 			"summary": "모든 단서가 한데 모여 프로스트록의 진정한 정체가 고대 서약 관리자임이 드러난다. 그는 탐험대에게 '가장 소중한 것을 바쳐라'며 피의 서약의 대가를 요구하고, 에이라 또한 서약의 희생자가 될 위기에 처하며 연민을 자아낸다. 탐험대는 절망적인 최종 결전 속에서 고대 서약을 깨거나, 혹은 돌이킬 수 없는 대가를 치러야 하는 비극적인 선택에 직면한다. '시간이 멈춘 곳'이라 불리던 케른에서 최종 결전이 벌어진다.",
 			"title": "피의 서약",
-			"boss": "pool_Oathbinder_Frostlock_V1",
+			"boss": "pool_315",
 			"npc": "eira",
 			"order": 5
 		}

@@ -142,7 +142,7 @@ export const storyarc_forest_xylos_12: StoryArc = {
 			"order": 5,
 			"npc": "bracken",
 			"act": "climax_finale",
-			"boss": "pool_ForestLament_Xylos_V1",
+			"boss": "pool_180",
 			"title": "슬픔의 여왕, 자매들의 무덤",
 			"summary": "마침내 주인공은 숲의 가장 깊은 곳에서 거대한 나무 형태의 'Xylos'와 마주한다. Xylos의 눈에서 흐르는 오팔빛 눈물과 그동안 숲에서 들렸던 애절한 노랫소리(foreshadowing 1)가 일치하며, 숲의 비극적 진실이 드러난다. Xylos는 자신이 아마존 부족의 마지막 여왕임을 밝히며, 그녀의 몸에서 찢어진 고대 아마존 전사의 깃발 조각(foreshadowing 2)이 드러난다. 그녀의 극심한 고통이 숲의 나무를 흔들리게 하던 소음(foreshadowing 4)의 근원이었음을 깨닫는다. '브라켄'은 주인공에게 숲의 비극적 루프를 끊기 위해서는 Xylos의 슬픔을 멈춰야 한다고 조언하며, 숲의 반복되는 고통을 끝낼 것을 촉구한다."
 		}

@@ -140,7 +140,7 @@ export const storyarc_snowy_chitinblight_8: StoryArc = {
 		},
 		{
 			"act": "climax_finale",
-			"boss": "pool_Soulswarm_Chitinblight_V1",
+			"boss": "pool_316",
 			"order": 5,
 			"npc": "eira",
 			"summary": "소문의 근원지, 빛나는 눈송이 요정들이 군집을 이룬 곳에 도착한다. 요정들은 자신들이 길 잃은 영혼이라며 도움을 간청하지만, 에이라의 희생으로 그들의 진정한 정체, 즉 바이킹들의 절규를 흡수해온 고대 기생 생명체 '키틴블라이트'임이 밝혀진다. 모든 감정은 조작된 허상이었고, 탐험대는 절망적인 비극 앞에서 허무함을 느낀다. (복선 1, 2, 3, 4 모두 폭로)",

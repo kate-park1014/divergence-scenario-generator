@@ -142,7 +142,7 @@ export const storyarc_forest_animagrove_17: StoryArc = {
 		{
 			"npc": "ela",
 			"act": "climax_finale",
-			"boss": "pool_Amazonian_AnimaGrove_V1",
+			"boss": "pool_188",
 			"summary": "마침내 숲의 가장 깊은 곳, 'Anima Grove'를 만난다. 그녀는 자신의 모든 힘을 다해 숲의 '생명력'을 지키려 하지만, 주인공의 공격에 '생명력'의 왜곡된 기운은 한없이 약해진다. 그녀의 몸에서 빛과 희생 의식의 석판에 새겨진 펜던트가 떨어지고, 애잔한 콧노래는 어린아이의 비명으로 변한다. 보스는 쓰러지지만, 엘라가 나타나 보스의 진정한 정체와 그녀가 숲의 잃어버린 유산을 지키려던 마지막 아이의 영혼이었음을 고백한다. 주인공은 허망하고 무의미한 승리에 깊은 분노와 절망감을 느낀다.",
 			"title": "비명과 덧없는 승리",
 			"order": 5

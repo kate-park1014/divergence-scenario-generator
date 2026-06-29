@@ -142,7 +142,7 @@ export const storyarc_modern_dongiorno_60: StoryArc = {
 			"summary": "마침내 '지오르노'의 본사에 잠입한 주인공은 모든 진실과 마주한다. Don Giorno는 자신의 배송망이 곧 도시의 심장임을 선언하며, 그 거대한 네트워크의 핵심인 '프로젝트 알파'를 가동하려 한다. 충격적인 사실은, 믿었던 정보원 '린'이 Don Giorno의 오른팔로서 주인공을 본사로 유인했음이 밝혀지는 것. 린의 배신과 함께 Don Giorno는 \"정중함이 곧 힘이다\"는 섬뜩한 경고와 함께 전투를 시작한다. 과거의 도면과 린의 문건, 그리고 Don Giorno의 지론이 한데 얽혀 주인공을 절망에 빠뜨린다. 배신당한 연민과 분노 속에서 주인공은 도시의 운명을 건 최후의 대결을 펼친다.",
 			"act": "climax_finale",
 			"npc": "lin",
-			"boss": "pool_DeliveryDrone_DonGiorno_V1",
+			"boss": "pool_259",
 			"title": "배달된 배신",
 			"order": 5
 		}

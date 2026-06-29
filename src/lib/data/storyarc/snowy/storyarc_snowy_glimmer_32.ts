@@ -139,7 +139,7 @@ export const storyarc_snowy_glimmer_32: StoryArc = {
 			"npc": "finn"
 		},
 		{
-			"boss": "pool_Glimmer_Bargainer_V1",
+			"boss": "pool_331",
 			"act": "climax_finale",
 			"npc": "eira",
 			"title": "파산의 심장",

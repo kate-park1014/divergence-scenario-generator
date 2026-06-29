@@ -140,7 +140,7 @@ export const storyarc_snowy_gleamfang_86: StoryArc = {
 			"title": "얼어붙은 진실"
 		},
 		{
-			"boss": "pool_FrostEcho_Gleamfang_V1",
+			"boss": "pool_354",
 			"order": 5,
 			"npc": "finn",
 			"title": "영원한 놀이터",

@@ -143,7 +143,7 @@ export const storyarc_snowy_snowgnar_73: StoryArc = {
 			"order": 5,
 			"summary": "모든 단서를 종합한 탐험대는 스노우그나르가 숨겨진 진짜 목적지에 도착한다. 그곳에서 스노우그나르는 거대한 수염 뭉치로 현신하여 탐험대를 시험하고, 밝혀진 진실은 이 세계가 사실 한 영웅의 끝나지 않은 그리움을 만족시키기 위한 시스템이었음을 드러낸다. 주인공은 루프를 깨고 진정한 결말을 맞이할 방법을 찾아야 한다.",
 			"npc": "inka",
-			"boss": "pool_SentientBeard_Snowgnar_V1",
+			"boss": "pool_390",
 			"title": "시스템의 눈물"
 		}
 	],

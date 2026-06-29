@@ -145,7 +145,7 @@ export const storyarc_modern_giovanni_40: StoryArc = {
 		{
 			"order": 5,
 			"title": "네온 거리의 지배자",
-			"boss": "pool_DeliveryDon_Giovanni_V1",
+			"boss": "pool_314",
 			"summary": "모든 단서가 죠반니를 가리키고, 벡스의 숨겨진 배신이 밝혀지자 탐험대는 분노에 휩싸인다. 죠반니는 친절한 가면을 벗어던지고 전설적인 마피아 보스의 본색을 드러내며 도시의 배달망을 완전히 장악하려 한다. 린이 마지막 결정적인 증거를 들고 나타나고, 탐험대는 분노의 최종 결전을 벌인다.",
 			"npc": "lin",
 			"act": "climax_finale"

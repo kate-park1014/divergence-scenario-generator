@@ -144,7 +144,7 @@ export const storyarc_modern_nocturne_27: StoryArc = {
 			"order": 5,
 			"act": "climax_finale",
 			"npc": "zoe",
-			"boss": "pool_BrokenMelody_Nocturne_V1"
+			"boss": "pool_253"
 		}
 	],
 	"act_summary": {

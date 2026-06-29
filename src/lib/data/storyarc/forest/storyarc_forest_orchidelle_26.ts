@@ -144,7 +144,7 @@ export const storyarc_forest_orchidelle_26: StoryArc = {
 			"act": "climax_finale",
 			"summary": "숲의 심장부에서 마침내 오르키델과 조우한다. 그녀는 자신의 '완벽한 아름다움'을 찬양하라 강요하며 탐험대를 비난하지만, 탐험대는 엘라의 도움과 함께 그녀의 위선에 맞서 분노의 일격을 가한다. 오르키델은 자신의 원래 모습인 초라한 전사의 유물들이 드러나자 격렬히 분노하며, 이제 가해자였던 그녀가 자신의 추악한 진실에 갇힌 피해자로 전락하는 반전을 맞는다.",
 			"order": 5,
-			"boss": "pool_Glamazon_Orchidelle_V1"
+			"boss": "pool_208"
 		}
 	],
 	"act_summary": {

@@ -140,7 +140,7 @@ export const storyarc_snowy_cryos_35: StoryArc = {
 			"npc": "ivar"
 		},
 		{
-			"boss": "pool_TragicTear_Cryos_V1",
+			"boss": "pool_337",
 			"summary": "모든 진실을 알게 된 일행은 설원의 심장부로 향하고, 마침내 얼어붙은 눈물, 크라이오스와 대면한다. 숨겨진 시스템의 방해를 뚫고 크라이오스의 본질을 이해한 아눅과 주인공은 크라이오스의 슬픔을 해방시키고, 흑막을 타도하며 설원에 따뜻한 온기를 되찾는 데 성공한다.",
 			"npc": "anuk",
 			"title": "눈물의 해방자",

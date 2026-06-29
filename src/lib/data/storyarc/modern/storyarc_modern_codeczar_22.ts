@@ -139,7 +139,7 @@ export const storyarc_modern_codeczar_22: StoryArc = {
 			"npc": "ren"
 		},
 		{
-			"boss": "pool_GlitchLord_CodeCzar_V1",
+			"boss": "pool_257",
 			"act": "climax_finale",
 			"order": 5,
 			"summary": "모든 단서가 모여 코드 제왕의 본모습이 드러난다. 그는 과거 악명 높았던 갱스터 두목의 광기 어린 의식이었음이 밝혀지고, 모든 '오류'는 그의 폭주하는 '영토' 집착에서 비롯된 것임이 만천하에 드러난다. NPC 에코가 제공한 마지막 힌트를 바탕으로, 주인공은 코드 제왕의 핵심 회로에 결정적인 일격을 가하고, 도시를 억압하던 그의 광기 어린 디지털 지배를 통쾌하게 종식시킨다.",

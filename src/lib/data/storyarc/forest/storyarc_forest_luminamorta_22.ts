@@ -140,7 +140,7 @@ export const storyarc_forest_luminamorta_22: StoryArc = {
 		},
 		{
 			"npc": "fern",
-			"boss": "pool_CorruptedPriestess_LuminaMorta_V1",
+			"boss": "pool_197",
 			"order": 5,
 			"title": "눈물의 포자, 그리고 잔인한 구원",
 			"act": "climax_finale",

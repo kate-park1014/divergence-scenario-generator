@@ -137,7 +137,7 @@ export const storyarc_snowy_wispblight_61: StoryArc = {
 		{
 			"act": "climax_finale",
 			"order": 5,
-			"boss": "pool_FalseHearth_Wispblight_V1",
+			"boss": "pool_351",
 			"npc": "eira",
 			"title": "영원한 겨울의 심장",
 			"summary": "마침내 Wispblight의 진정한 은신처에 도달한다. Eira는 Wispblight가 수호 정령이었다는 진실을 깨닫고, 그것이 부족의 배신으로 인해 뒤틀렸음을 알린다. Wispblight의 환상은 절정으로 치닫고, 주변의 얼음 조각상들은 몸부림치며 주인공을 위협한다. 주인공은 Wispblight의 twisted '온기'에 맞서 진정한 희망과 그리움을 되찾기 위한 최후의 전투를 벌인다. 보스의 twist 대사가 이 상황에서 발현된다."

@@ -143,7 +143,7 @@ export const storyarc_desert_dustbound_3: StoryArc = {
 			"npc": "amir",
 			"title": "눈물의 오아시스",
 			"act": "climax_finale",
-			"boss": "pool_DesertOath_Dustbound_V1",
+			"boss": "pool_152",
 			"summary": "마침내 울부짖는 오아시스의 심연에 도달한 주인공과 아미르는 사막의 정령 더스트바운드와 최후의 격돌을 벌인다. 검술처럼 우아하면서도 치명적인 공격에 맞서 치열한 사투를 벌인 끝에, 정령의 모래 몸체가 흩어지자 그 중심에서 찬란한 에메랄드빛 결정이 드러난다. 그것은 오아시스가 아니라, 한 방울의 영원한 눈물이었고, 비통한 전사의 목소리가 사막에 울려 퍼지며 모두는 깊은 허무와 슬픔을 느낀다."
 		}
 	],

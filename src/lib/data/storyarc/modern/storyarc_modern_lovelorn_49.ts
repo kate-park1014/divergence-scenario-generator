@@ -141,7 +141,7 @@ export const storyarc_modern_lovelorn_49: StoryArc = {
 		{
 			"summary": "마침내 Lovelorn의 심장부와 마주한다. Dax는 이미 Lovelorn의 맹세에 완전히 사로잡혀 탐험대의 앞을 막아선다. Lovelorn은 무수한 옛 사진들을 흩뿌리며 잃어버린 연인과의 맹세가 담긴 로켓을 꺼낸다. 그는 탐험대를 영원한 비극 속으로 묶으려 하고, 분노한 탐험대는 최후의 반격을 시도한다.",
 			"npc": "dax",
-			"boss": "pool_EchoOfVow_Lovelorn_V1",
+			"boss": "pool_299",
 			"act": "climax_finale",
 			"title": "광기의 심장: 영원한 속박",
 			"order": 5

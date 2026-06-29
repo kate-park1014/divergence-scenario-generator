@@ -139,7 +139,7 @@ export const storyarc_snowy_chionos_34: StoryArc = {
 			"boss": "random_boss"
 		},
 		{
-			"boss": "pool_Aurafrost_Chionos_V1",
+			"boss": "pool_355",
 			"npc": "borealis",
 			"order": 5,
 			"act": "climax_finale",

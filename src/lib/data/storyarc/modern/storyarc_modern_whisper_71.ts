@@ -142,7 +142,7 @@ export const storyarc_modern_whisper_71: StoryArc = {
 			"title": "영원한 악몽 속으로",
 			"act": "climax_finale",
 			"order": 5,
-			"boss": "pool_UrbanHorror_Whisper_V1",
+			"boss": "pool_116",
 			"npc": "lin",
 			"summary": "'Whisper'의 정체와 그 잔혹한 과거가 모두 드러나며, 모든 진실이 밝혀지는 순간 탐험대는 승리가 오히려 더 깊은 절망과 허무를 불러오는 비극적인 현실과 마주하게 된다. 조사관 Lin은 모든 것이 무의미해지는 압도적인 허무감에 휩싸인다."
 		}

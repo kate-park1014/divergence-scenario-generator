@@ -145,7 +145,7 @@ export const storyarc_desert_voidthorn_20: StoryArc = {
 			"act": "climax_finale",
 			"summary": "마침내 '모래꽃'의 심장부에 도달한 주인공. 그곳에서 충격적인 진실과 마주한다. 가장 신뢰했던 아미르가 이 모든 비극을 설계하고 주인공을 '완벽한 검술'의 제물로 바치려 했음이 드러난다. 아미르는 미쳐버린 블레이드마스터들의 그리움에 잠식되어 자신 역시 보스가 되려 했음을 고백하며, 주인공은 처절한 싸움 끝에 모든 것을 끝낸다.",
 			"npc": "amir",
-			"boss": "pool_EchoBlade_VoidThorn_V1"
+			"boss": "pool_150"
 		}
 	],
 	"act_summary": {

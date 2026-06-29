@@ -139,7 +139,7 @@ export const storyarc_forest_coccinellaregina_0: StoryArc = {
 			"act": "rising"
 		},
 		{
-			"boss": "pool_JungleQueen_Coccinella_V1",
+			"boss": "pool_201",
 			"npc": "ela",
 			"order": 5,
 			"act": "climax_finale",

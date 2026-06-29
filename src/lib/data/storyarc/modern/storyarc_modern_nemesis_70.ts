@@ -144,7 +144,7 @@ export const storyarc_modern_nemesis_70: StoryArc = {
 			"npc": "zoe",
 			"summary": "네메시스의 마천루 최상층에서 마주한 최종 결전. 모든 진실이 밝혀지며 네메시스는 자신이 '서약' 그 자체임을 드러낸다. 주인공은 네메시스의 심장을 꿰뚫지만, 조이는 공허한 눈으로 그저 모든 것을 지켜볼 뿐이다. 결국 승리는 무의미해지고, 주인공은 영원한 서약의 굴레가 여전히 자신을 옥죄고 있음을 깨닫는다.",
 			"order": 5,
-			"boss": "pool_Oathbound_Nemesis_V1"
+			"boss": "pool_114"
 		}
 	],
 	"act_summary": {

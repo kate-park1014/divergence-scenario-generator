@@ -142,7 +142,7 @@ export const storyarc_hell_lordfluff_15: StoryArc = {
 			"order": 5,
 			"title": "가장 보잘것없는 악마 군주",
 			"act": "climax_finale",
-			"boss": "pool_BumblingSpirit_LordFluff_V1",
+			"boss": "pool_230",
 			"npc": "ash",
 			"summary": "카운트다운이 끝나는 순간, '악마 군주 로드 플러프'의 성으로 돌입한 주인공은 '애쉬'와 재회한다. 애쉬는 비웃듯이 군주의 진짜 모습을 보여주겠다며 주인공을 유인하고, 이어진 전투 끝에 로드 플러프의 거대한 외피가 벗겨지며, 모두가 두려워하던 군주가 사실은 한낱 먼지 덩어리였음이 밝혀진다. 지옥의 모든 주민들이 이 거대한 사기극의 진실을 목도하고 혼란에 빠진다. (모든 복선 회수)"
 		}

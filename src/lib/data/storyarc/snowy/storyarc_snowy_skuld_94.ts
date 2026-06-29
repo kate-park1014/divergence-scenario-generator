@@ -144,7 +144,7 @@ export const storyarc_snowy_skuld_94: StoryArc = {
 			"npc": "anuk",
 			"title": "영원의 저주, 스쿌드",
 			"order": 5,
-			"boss": "pool_GlacialOath_Skuld_V1"
+			"boss": "pool_107"
 		}
 	],
 	"act_summary": {

@@ -139,7 +139,7 @@ export const storyarc_forest_phobos_34: StoryArc = {
 			"boss": "random_boss"
 		},
 		{
-			"boss": "pool_Nightbloom_Phobos_V1",
+			"boss": "pool_189",
 			"title": "슬픈 진실, 영원한 안식으로",
 			"act": "climax_finale",
 			"npc": "ela",

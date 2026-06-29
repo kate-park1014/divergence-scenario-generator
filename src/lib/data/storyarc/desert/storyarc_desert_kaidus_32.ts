@@ -141,7 +141,7 @@ export const storyarc_desert_kaidus_32: StoryArc = {
 		{
 			"title": "사막, 명예의 심판자로부터",
 			"act": "climax_finale",
-			"boss": "pool_SandScryer_Kaidus_V1",
+			"boss": "pool_163",
 			"order": 5,
 			"summary": "수많은 소문과 뒤틀린 명예의 진실을 좇던 주인공은 마침내 'SandScryer_Kaidus_V1'과 마주한다. 최종 전투 직전, 아미르가 다시 등장하여 과거 명예의 성지에서 벌어졌던 '배신'에 대한 왜곡된 이야기를 폭로한다. 그 순간, Kaidus는 찢어진 명예의 성지 그 자체임을 드러내며, 모든 명예로운 혼과 함께 사막으로 추방당한 피해자임을 밝힌다. 주인공은 진정한 가해자가 누구였는지 깨달으며 거대한 허무와 마주하게 된다.",
 			"npc": "amir"

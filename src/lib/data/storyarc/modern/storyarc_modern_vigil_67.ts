@@ -143,7 +143,7 @@ export const storyarc_modern_vigil_67: StoryArc = {
 			"title": "업보의 심판, 시간의 끝",
 			"npc": "nia",
 			"act": "climax_finale",
-			"boss": "pool_Chronosync_Vigil_V1",
+			"boss": "pool_274",
 			"order": 5,
 			"summary": "시한 카운트다운이 임박한 도시, Vigil은 그 본모습을 드러내며 과거의 맹세를 어긴 자들을 심판하려 한다. 보스가 만들어낸 정교한 환영이 산산이 부서지며, 빛과 데이터의 소용돌이 속에서 과거의 피 묻은 맹세들이 기록된 듯한 거대한 비석 형상이 드러난다. 주인공은 Nia의 결정적 정보를 바탕으로 Vigil의 핵심 시스템에 침투하여 모든 것을 끝내기 위한 최후의 결전을 벌인다."
 		}

@@ -139,7 +139,7 @@ export const storyarc_modern_cipherpact_31: StoryArc = {
 			"npc": "dax"
 		},
 		{
-			"boss": "pool_AncientPact_CipherPact_V1",
+			"boss": "pool_246",
 			"order": 5,
 			"act": "climax_finale",
 			"summary": "모든 진실의 조각을 모은 탐험대는 Cipher Pact가 숨어있는 도시의 심장부로 향한다. 그곳에서 다시 조이를 마주친다. 조이는 사실 Cipher Pact의 기억 파편 중 하나로, 탐험대를 비웃듯 과거의 예언을 되뇌인다. Cipher Pact는 탐험대가 밝혀낸 진실이 결국 자신을 묶어두는 또 다른 사슬일 뿐임을 비웃고, 모든 것은 반복될 뿐이라는 허무를 선사한다. 승리는 허망하고, 탐험대는 끝없는 순환의 감옥에 갇힌 기분이다.",

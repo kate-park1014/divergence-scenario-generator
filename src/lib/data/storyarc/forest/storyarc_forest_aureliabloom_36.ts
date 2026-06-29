@@ -141,7 +141,7 @@ export const storyarc_forest_aureliabloom_36: StoryArc = {
 		{
 			"summary": "숲의 심장부에 도달한 탐험대는 실반 오라클, 아우렐리아 블룸과 마주한다. 그녀의 고통스러운 저항을 뚫고 유물을 뽑아내자, 숲은 죽음의 침묵에 잠기고 오라클은 잊힌 기억의 파편을 흘리며 소멸한다. 페른은 이 공허한 승리에 대한 허무함을 느낀다.",
 			"title": "비극의 심장",
-			"boss": "pool_SylvanOracle_AureliaBloom_V1",
+			"boss": "pool_211",
 			"act": "climax_finale",
 			"order": 5,
 			"npc": "fern"

@@ -143,7 +143,7 @@ export const storyarc_forest_honeydew_3: StoryArc = {
 			"order": 5,
 			"act": "climax_finale",
 			"title": "영원한 잠, 어머니의 품",
-			"boss": "pool_Beekeeper_Honeydew_V1",
+			"boss": "pool_126",
 			"npc": "ela"
 		}
 	],

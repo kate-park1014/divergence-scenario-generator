@@ -137,7 +137,7 @@ export const storyarc_forest_sorrowfulheart_52: StoryArc = {
 		{
 			"act": "climax_finale",
 			"npc": "fern",
-			"boss": "pool_MotherTree_SorrowfulHeart_V1",
+			"boss": "pool_193",
 			"order": 5,
 			"summary": "마침내 씨앗의 심장에 도달한 주인공은 브라이어의 진정한 계획을 알게 된다. 그녀는 씨앗이 완전히 고사하여 자신과 결합하기를 원했으며, 그 과정에서 숲의 생명력을 흡수할 계획이었다. 그 순간, 절규하며 쓰러진 페른이 나타나 브라이어가 숲의 생명력을 의도적으로 씨앗으로 끌어들이고 있었다는 진실을 밝힌다. 주인공은 브라이어를 막아서지만, 씨앗은 이미 그녀의 통제를 벗어나 폭주하며 '어머니 나무'의 처절한 외침을 토해낸다. 연민과 비극 속에 주인공은 씨앗의 고통을 멈출 방법을 찾아야 한다.",
 			"title": "절규하는 심장"

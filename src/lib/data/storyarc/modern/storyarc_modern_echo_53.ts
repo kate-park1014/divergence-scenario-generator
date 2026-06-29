@@ -141,7 +141,7 @@ export const storyarc_modern_echo_53: StoryArc = {
 		{
 			"title": "메아리치는 비극의 끝",
 			"order": 5,
-			"boss": "pool_DigitalGhost_Echo_V1",
+			"boss": "pool_306",
 			"act": "climax_finale",
 			"npc": "lin",
 			"summary": "에코의 중심부로 진입하여 최종 대결을 펼친다. 격렬한 전투 중, 에코의 실체인 비극적인 소년 '코드네임 에코'의 잔상이 드러나며 과거 나이트폴의 배신과 죽음의 진실이 명확해진다. 린은 이 모든 비극을 눈앞에서 목도하며, 모든 것을 해결했으나 얻은 것은 슬픔뿐인 공허한 승리를 깨닫는다."

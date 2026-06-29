@@ -142,7 +142,7 @@ export const storyarc_forest_vespera_23: StoryArc = {
 			"title": "파멸의 구원자",
 			"summary": "숲의 심장에서 기억의 실을 엮는 베스페라를 마주한 탐험가들은 그녀가 잊혀진 역사의 진실을 지키기 위한 현자임을 알게 된다. 헤이즐은 베스페라의 목적이 숲의 진실을 영원히 보존하려는 것임을 증언하지만, 그 과정에서 숲 전체가 기억의 무게로 파멸하고 있다고 경고한다. 베스페라를 멈추는 것이 곧 숲의 진실을 영원히 묻는 것이 되는 비극적인 선택에 직면한다.",
 			"act": "climax_finale",
-			"boss": "pool_MemoryWeaver_Vespera_V1",
+			"boss": "pool_209",
 			"npc": "hazel",
 			"order": 5
 		}

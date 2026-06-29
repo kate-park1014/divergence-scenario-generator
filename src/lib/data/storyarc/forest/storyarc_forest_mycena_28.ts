@@ -140,7 +140,7 @@ export const storyarc_forest_mycena_28: StoryArc = {
 		},
 		{
 			"summary": "마지막 탈출구, 거대한 석상에 붙잡힌 브라켄을 발견한다. 석상은 탐험대를 유인한 Mycena였으며, 그 정체가 드러나며 본모습을 드러낸다. 구원이 파멸로 이어지는 충격적인 반전 속, Mycena는 쓰러진 동료들을 흡수하여 더욱 거대한 형태로 변이하고, 자신마저 균사체에 잠식당하며 절규한다.",
-			"boss": "pool_FungalMimic_Mycena_V1",
+			"boss": "pool_166",
 			"act": "climax_finale",
 			"order": 5,
 			"title": "여왕의 절규",

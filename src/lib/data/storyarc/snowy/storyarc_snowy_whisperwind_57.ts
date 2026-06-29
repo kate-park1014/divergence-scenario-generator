@@ -139,7 +139,7 @@ export const storyarc_snowy_whisperwind_57: StoryArc = {
 			"summary": "마침내 위스퍼윈드의 심장부, 얼어붙은 영혼들이 뒤틀린 평화를 외치는 곳에 도달한다. 그곳에서 다시 에이라를 만나지만, 그녀는 위스퍼윈드에게 속박된 수많은 영혼 중 하나였음이 드러난다. 격렬한 전투 끝에 위스퍼윈드의 핵을 파괴하자, '진정한 평화'라던 그의 외침 뒤에 숨겨진 광기와 시스템의 잔혹한 진실이 드러나며 얼어붙었던 모든 것이 해방의 폭풍으로 뒤바뀐다. 주인공은 에이라와 함께 진정한 '통쾌함'을 느낀다.",
 			"order": 5,
 			"title": "해방의 폭풍",
-			"boss": "pool_ArcticFury_Whisperwind_V1",
+			"boss": "pool_370",
 			"act": "climax_finale"
 		}
 	],

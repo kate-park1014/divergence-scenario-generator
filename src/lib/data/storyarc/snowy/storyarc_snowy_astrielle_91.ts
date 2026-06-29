@@ -144,7 +144,7 @@ export const storyarc_snowy_astrielle_91: StoryArc = {
 			"order": 5,
 			"summary": "에이라(Eira)는 마침내 진실을 밝히며 주인공을 아스트리엘의 얼음 궁전으로 인도한다. 폭주하는 힘을 제어하지 못해 스스로를 가둔 아스트리엘은 격렬히 저항하지만, 이는 고통과 그리움의 절규였음이 드러난다. 최고 위원회가 아스트리엘의 힘을 이용해 도시를 통제하고 있었다는 사실이 폭로되고, 얼음 궁전이 녹아내리며 모두가 갈망하던 진정한 온기가 돌아오는 희망을 보여준다.",
 			"npc": "eira",
-			"boss": "pool_AstrielleWinterSovereign"
+			"boss": "pool_034"
 		}
 	],
 	"act_summary": {

@@ -139,7 +139,7 @@ export const storyarc_snowy_chantfrost_24: StoryArc = {
 			"title": "절규하는 정령의 노래"
 		},
 		{
-			"boss": "pool_Cacophony_Chantfrost_V1",
+			"boss": "pool_335",
 			"title": "찬란한 얼음 감옥",
 			"summary": "마침내 탐험대는 챈트프로스트의 핵심부와 마주한다. 거대한 눈덩이가 자신의 '예술'을 완성하려는 광기 어린 목소리를 내며 모두를 영원한 '얼음의 꽃'으로 만들려 한다. NPC 에이라는 챈트프로스트의 '걸작' 속에서 자신이 동경했던 예술이 사실은 자신을 가두는 차가운 감옥이었음을 깨닫고 절규한다. 구원이라 믿었던 아름다움이 파멸이었음을 깨달으며 챈트프로스트의 진짜 정체와 비극에 직면한다.",
 			"act": "climax_finale",

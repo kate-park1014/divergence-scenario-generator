@@ -142,7 +142,7 @@ export const storyarc_hell_memo_28: StoryArc = {
 			"order": 5,
 			"title": "절규의 기록: 지옥의 공무원, 그의 비극적인 진실",
 			"act": "climax_finale",
-			"boss": "pool_CosmicClerk_Memo_V1",
+			"boss": "pool_241",
 			"npc": "ash",
 			"summary": "탐험대는 지옥의 심장부, 용암 계곡 끝에서 마침내 '메모'와 대면한다. 그는 거대한 황금색 소포를 짊어진 채 비틀거리며, 끊임없이 "
 		}

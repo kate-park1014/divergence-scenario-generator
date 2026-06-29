@@ -140,7 +140,7 @@ export const storyarc_modern_veritas_61: StoryArc = {
 		},
 		{
 			"order": 5,
-			"boss": "pool_OathKeeper_Veritas_V1",
+			"boss": "pool_269",
 			"npc": "dax",
 			"act": "climax_finale",
 			"title": "심판자 Veritas, 깨어진 서약의 눈물",

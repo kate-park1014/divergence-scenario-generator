@@ -142,7 +142,7 @@ export const storyarc_forest_viscidia_43: StoryArc = {
 			"title": "욕망의 자궁, Viscidia",
 			"act": "climax_finale",
 			"order": 5,
-			"boss": "pool_BioGenesis_Viscidia_V1",
+			"boss": "pool_195",
 			"summary": "탐험대는 숲의 가장 깊은 곳, 기이한 조각상들이 밀집된 곳에서 '숲의 심장'이라 불리던 거대한 발광 꽃 `Viscidia`와 마주한다. 역겹고 달콤한 냄새가 이제 Viscidia의 직접적인 영향이며, 모든 생명체를 동화시키려는 포자의 근원임을 알게 된다. 이 과정에서 변이된 동물들이 Viscidia의 자손들이었음을 깨닫고 충격받는다. 뒤틀린 진실을 마주한 `페른`은 숲의 아름다움 뒤에 숨겨진 끔찍한 진실을 더 이상 외면하지 못하고, Viscidia가 사실 잃어버린 부족의 왜곡된 생명 보존 종자였다는 충격적인 반전을 폭로하며, 탐험대를 돕거나 마지막 순간까지 저항하는 길을 택한다.",
 			"npc": "fern"
 		}

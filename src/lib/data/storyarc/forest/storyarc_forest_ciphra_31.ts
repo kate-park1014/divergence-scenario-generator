@@ -143,7 +143,7 @@ export const storyarc_forest_ciphra_31: StoryArc = {
 			"order": 5,
 			"title": "파멸의 서곡",
 			"npc": "ela",
-			"boss": "pool_CovertAgent_Ciphra_V1",
+			"boss": "pool_199",
 			"act": "climax_finale"
 		}
 	],

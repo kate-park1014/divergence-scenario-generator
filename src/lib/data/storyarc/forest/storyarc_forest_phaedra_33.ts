@@ -145,7 +145,7 @@ export const storyarc_forest_phaedra_33: StoryArc = {
 			"npc": "ela",
 			"title": "파멸의 서약, 영원한 분노",
 			"act": "climax_finale",
-			"boss": "pool_Oracle_Phaedra_V1"
+			"boss": "pool_204"
 		}
 	],
 	"act_summary": {

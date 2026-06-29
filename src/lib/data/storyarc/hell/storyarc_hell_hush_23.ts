@@ -141,7 +141,7 @@ export const storyarc_hell_hush_23: StoryArc = {
 		},
 		{
 			"order": 5,
-			"boss": "pool_Nightmare_Hush_V1",
+			"boss": "pool_239",
 			"npc": "ash",
 			"title": "허무의 노래: 실잣는 자의 파국",
 			"act": "climax_finale",

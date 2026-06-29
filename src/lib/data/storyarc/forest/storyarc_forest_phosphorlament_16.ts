@@ -142,7 +142,7 @@ export const storyarc_forest_phosphorlament_16: StoryArc = {
 			"act": "climax_finale",
 			"npc": "briar",
 			"order": 5,
-			"boss": "pool_PhosphorLament_V1",
+			"boss": "pool_198",
 			"title": "영원한 안식의 절규",
 			"summary": "주인공은 마침내 '영혼의 나무'의 심장에 다다른다. 브라이어가 뒤쫓아 와 필사적으로 경고하지만 이미 늦었다. 나무의 본 모습이 드러나고, 주인공은 고대 전사들의 끝없는 고통과 자신을 흡수하려는 끔찍한 의지를 마주한다. '구원'이라 믿었던 것이 영원한 속박이었음을 깨닫는 순간, 주인공의 의식은 나무의 일부가 되어 절규하며 숲의 무지갯빛 광휘 속에 영원히 갇힌다."
 		}

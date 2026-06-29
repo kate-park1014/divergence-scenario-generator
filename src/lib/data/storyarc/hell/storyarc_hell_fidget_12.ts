@@ -139,7 +139,7 @@ export const storyarc_hell_fidget_12: StoryArc = {
 			"act": "rising"
 		},
 		{
-			"boss": "pool_OrderObsessed_Fidget_V1",
+			"boss": "pool_226",
 			"npc": "ash",
 			"order": 5,
 			"summary": "마침내 Fidget과 마주한 탐험대. Fidget은 자신이 '지옥 서류 정리 총책임자'임을 밝히며, 지옥의 모든 고통은 자신이 만들어낸 비효율적 관료제에서 비롯됨을 고백한다. 싸움 끝에 Fidget을 제압하지만, 승리의 기쁨도 잠시. Fidget은 탐험대를 '지옥 행정실 앞에서 서성이는 민원인'으로 분류하며, 영원히 이 시스템에 갇힐 운명을 선고한다. Ash의 절규가 겹쳐지며 승리가 무의미해지는 비극적인 블랙코미디가 펼쳐진다.",

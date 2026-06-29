@@ -143,7 +143,7 @@ export const storyarc_snowy_aethel_52: StoryArc = {
 			"order": 5,
 			"title": "영원한 고독의 해방",
 			"summary": "난로의 환영이 극에 달하고 탐험대는 난로의 진정한 의도를 깨닫는다. NPC 에이라는 난로의 수정이 깨지면서 그 온기가 허상이었음과 그 속에 갇힌 어린 아이의 영혼, 아셀의 비극적인 진실을 마주한다. 에이라와 탐험대는 슬픔과 연민 속에서 아셀을 고독에서 해방시키고, 얼어붙었던 영혼들이 흩어지는 씁쓸하지만 평화로운 결말을 맞이한다.",
-			"boss": "pool_FrozenHearth_Aethel_V1",
+			"boss": "pool_404",
 			"act": "climax_finale"
 		}
 	],

@@ -144,7 +144,7 @@ export const storyarc_snowy_fluffball_15: StoryArc = {
 			"npc": "inka",
 			"summary": "궁지에 몰린 플러프볼은 ",
 			"act": "climax_finale",
-			"boss": "pool_FeastHeart_Fluffball_V1"
+			"boss": "pool_391"
 		}
 	],
 	"act_summary": {

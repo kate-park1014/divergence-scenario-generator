@@ -141,7 +141,7 @@ export const storyarc_desert_kenshin_21: StoryArc = {
 		{
 			"title": "환영 검사의 비원",
 			"act": "climax_finale",
-			"boss": "pool_DesertEcho_Kenshin_V1",
+			"boss": "pool_136",
 			"npc": "amir",
 			"summary": "사막의 가장 깊숙한 곳에서 '수호자' 켄신과 마주한다. 전투 중 드러나는 그의 공격에는 분노가 아닌 깊은 슬픔이 배어 있다. 아미르와 함께 켄신을 쓰러뜨리는 순간, 모든 복선이 폭발하며 켄신의 비극적인 과거와 사막 권력자들의 잔혹한 음모가 만천하에 드러난다. 켄신은 더 이상 악당이 아닌, 희생된 피해자였음을 깨닫는다. 주인공은 분노를 넘어선 연민과 함께 새로운 정의를 다짐한다.",
 			"order": 5

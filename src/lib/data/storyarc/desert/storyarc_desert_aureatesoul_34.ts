@@ -140,7 +140,7 @@ export const storyarc_desert_aureatesoul_34: StoryArc = {
 		},
 		{
 			"title": "영원한 맹세, 해방의 눈물",
-			"boss": "pool_LostVow_AureateSoul_V1",
+			"boss": "pool_164",
 			"summary": "마지막 남은 모래가 떨어지려 할 때, 일행은 마침내 오팔빛 광석의 심장부에서 'Aureate Soul'과 대면한다. 아미르(Amir)는 고대 문헌의 기록을 떠올리며 '영원의 조각'이 사실 물리적 존재가 아닌, 사라진 맹세 그 자체임을 깨닫는다. 치열한 전투 끝에 보스의 형체가 무너지며, 깨진 검의 손잡이와 함께 '내가 지키려던 것은 이미 사라진 환영이었나니… 나의 죄악이 이 사막을…'이라는 한 맺힌 음성이 울려 퍼진다. 주인공 일행은 비로소 Aureate Soul이 사막의 저주를 짊어진 비극적인 수호자였음을, 그리고 모래시계 저주가 사실 보스의 맹세가 만들어낸 것이었음을 깨닫고 가해자와 피해자의 입장이 완전히 역전된다. 슬픈 통쾌함 속에 사막의 시간 제한이 풀리고, Aureate Soul의 영혼은 마침내 해방된다. (모든 global_foreshadowing 힌트가 reveal 됨)",
 			"order": 5,
 			"npc": "amir",

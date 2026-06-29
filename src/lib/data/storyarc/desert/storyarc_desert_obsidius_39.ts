@@ -143,7 +143,7 @@ export const storyarc_desert_obsidius_39: StoryArc = {
 			"summary": "탐험대는 사막의 모든 것이 응축된 듯한 거대한 금속 심장을 마주한다. 케메트는 이 거대한 '작품'이 사막에 갇힌 모든 영혼의 절규로 만들어졌음을 깨닫고 절규한다. 마침내 광기의 도검장 옵시디우스가 모습을 드러내고, 그가 휘두르는 망치는 사막의 모든 것을 새로운 재료로 만들어 영원한 비극의 루프를 시작하려 한다.",
 			"order": 5,
 			"act": "climax_finale",
-			"boss": "pool_SandBinder_Obsidius_V1",
+			"boss": "pool_128",
 			"title": "영혼의 칼날: 끝나지 않는 비극"
 		}
 	],

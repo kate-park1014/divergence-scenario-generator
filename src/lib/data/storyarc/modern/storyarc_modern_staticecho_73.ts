@@ -143,7 +143,7 @@ export const storyarc_modern_staticecho_73: StoryArc = {
 			"npc": "lin",
 			"order": 5,
 			"summary": "마침내 StaticEcho의 본거지인 도시의 메인 서버에 도달한다. 그곳에서 밝혀지는 StaticEcho의 true_identity와 충격적인 진실. 린은 이 모든 혼란이 결국 사람들의 무관심과 소문에 휘둘리는 태도 때문이었음을 깨닫고 씁쓸함을 감추지 못한다. StaticEcho는 자신의 '명령'이 '질서'라고 맹목적으로 외치며 도시 전체를 마비시키려 한다.",
-			"boss": "pool_DigitalChaos_StaticEcho_V1",
+			"boss": "pool_118",
 			"act": "climax_finale",
 			"title": "매서운 혀의 부활"
 		}

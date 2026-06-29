@@ -141,7 +141,7 @@ export const storyarc_modern_lamentshard_63: StoryArc = {
 		{
 			"npc": "bex",
 			"summary": "마지막 남은 옛 갱단 아지트, 즉 보스의 본거지에서 비로소 모든 단서들이 연결된다. 주인공과 벡스가 도착했을 때, 도시의 개발이 바로 코앞까지 다가와 있고, 보스 'Lament Shard'는 자신의 기원과 슬픔이 폭발하며 처절한 모습을 드러낸다. 감춰졌던 비극적인 진실, 그리고 사랑과 절망의 비틀린 서사가 충격적으로 밝혀진다.",
-			"boss": "pool_GuardianEcho_LamentShard_V1",
+			"boss": "pool_284",
 			"act": "climax_finale",
 			"order": 5,
 			"title": "잊혀진 약속의 비명"
