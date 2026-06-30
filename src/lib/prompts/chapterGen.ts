@@ -43,6 +43,14 @@ export function buildScenarioPrompt(order: number, storyarc: StoryArc): string {
 - NPC (lumina, lyra_meadowsong 등): 직접 이름으로 지정
 - boss speaker 규칙은 아래 "## 보스 speaker 규칙" 참조
 
+### 파티 캐릭터 placeholder 절대 원칙 (중요)
+- character_1~4 는 런타임에 **살아있는** 파티원으로 매핑되는 placeholder이며, 그 중 일부는 이미 **전투 중 사망했을 수 있다**. 어떤 파티원이 살아있는지 생성 시점에는 알 수 없다.
+- **금지 A**: placeholder 문자열(character_1~4, character_any)을 **대사/지문의 content 텍스트 안에 글자 그대로 쓰지 말 것**. 런타임에 치환되지 않아 화면에 'character_1' 이 그대로 노출되며 깨진다. placeholder 는 오직 speaker 필드에만 쓴다.
+  - 나쁜 예: content="character_1!" / content="그 빛은 character_1에게 깃들었다."
+- **금지 B**: 특정 파티원의 **생존·기억·지목에 의존하는 서사**를 만들지 말 것. "○○가 의지를 이어받았다", 누군가의 이름을 부르며 "○○!", "○○만이 진실을 믿었다" 같은 비트는 그 캐릭터가 죽었으면 무의미해진다.
+- **대안**: 영속적이거나 이름이 필요한 서사 역할(계승자·기억되는 인물 등)은 **이름이 지정된 NPC**(예: anuk) 또는 **집단 표현**(character_any 화자 + "우리"/"살아남은 자들" 같은 복수 주어)으로만 풀어낸다.
+- 보스 이름이 필요하면 아래 보스 규칙대로 {random_boss} placeholder 를 사용한다.
+
 ## 보스 speaker 규칙 (중요)
 - 이 시나리오의 boss 값이 'random_boss'인 경우 (order 1~4, 일반 중간보스):
   - speaker는 반드시 'random_boss'로 고정
