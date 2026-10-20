@@ -1,0 +1,2101 @@
+{
+	"chapter_order": 1,
+	"difficulty_level": 1,
+	"chapter_name": {
+		"thai": "เสียงกระซิบเ",
+		"spanish": "Susurros",
+		"korean": "도시의 속삭임",
+		"french": "Murmures",
+		"chinese": "城市私语",
+		"japanese": "都市の囁き",
+		"hindi": "शहर की",
+		"vietnamese": "Thì Thầm Đô",
+		"english": "City"
+	},
+	"axis_combo": "FIR",
+	"variant_note": "이 변주는 플레이어의 투쟁적, 개인주의적, 질서 우선 성향이 도시의 정보 혼란을 어떻게 악화시키고 궁극적으로 자신에게 부메랑처럼 돌아오는지를 보여준다. 각 씬에서 플레이어의 성향적 선택이 직접적인 피해로 이어지고, 클라이맥스에서는 위스퍼 웹이 플레이어의 실패를 거울처럼 비추며 무의미한 승리를 선사한다.",
+	"scenarios": [
+		{
+			"scenario_id": "modern_whisperweb_0_FIR_01",
+			"order": 1,
+			"act": "intro",
+			"theme": "modern",
+			"actors": {
+				"echo": {
+					"id": "mon_57f2edb8-aa81-4ce7-beed-ab009cd2ff35",
+					"name": {
+						"korean": "에코",
+						"english": "Echo",
+						"japanese": "エコー",
+						"chinese": "艾可",
+						"french": "Écho",
+						"spanish": "Eco",
+						"vietnamese": "Echo",
+						"thai": "เอคโค่",
+						"hindi": "इको"
+					},
+					"description": "",
+					"face_image_url": "https://imagedelivery.net/WTEqQNGFb-l-IHS6IGnzUQ/da48e2c2-6733-4f65-f8b6-f197af4ff700/public",
+					"battle_sprite_url": "https://imagedelivery.net/WTEqQNGFb-l-IHS6IGnzUQ/e90605b9-372f-4bf1-cdec-56a2fdef0800/public"
+				}
+			},
+			"boss": {
+				"pool_id": "random_boss"
+			},
+			"prologue": {
+				"korean": [
+					"네온 불빛 아래, 도시는 정보로 움직인다.",
+					"그러나 알 수 없는 신호 교란이 시작됐다.",
+					"정보상 에코는 곧 모든 비밀이 드러날 것이라 경고했다.",
+					"우리는 도시의 가장 깊은 곳으로 향한다. 이 혼란의 근원을 찾기 위해."
+				]
+			},
+			"rooms": [
+				{
+					"id": 1,
+					"dialogue": [
+						{
+							"speaker": "narrator",
+							"emotion": "base",
+							"type": "speech",
+							"content": {
+								"korean": "어두운 골목, 디지털 간판의 빛이 거리에 흩뿌려졌다."
+							}
+						},
+						{
+							"emotion": "base",
+							"speaker": "character_any",
+							"content": {
+								"korean": "여기가 에코가 말한 곳인가."
+							},
+							"type": "speech"
+						},
+						{
+							"speaker": "echo",
+							"duration_ms": 500,
+							"action": "enter",
+							"type": "direction",
+							"spot": [
+								4,
+								1
+							]
+						},
+						{
+							"type": "speech",
+							"speaker": "echo",
+							"emotion": "base",
+							"content": {
+								"korean": "왔군. 예상보다 빠르네."
+							}
+						},
+						{
+							"speaker": "echo",
+							"emotion": "base",
+							"content": {
+								"korean": "도시에 이상한 신호가 돌고 있어. 정보가 자꾸 깨져."
+							},
+							"type": "speech"
+						},
+						{
+							"type": "speech",
+							"speaker": "character_any",
+							"emotion": "base",
+							"content": {
+								"korean": "무슨 소리지?"
+							}
+						},
+						{
+							"type": "speech",
+							"speaker": "echo",
+							"emotion": "base",
+							"content": {
+								"korean": "이 영상 봐. 이것도 그 파편 중 하나야."
+							}
+						},
+						{
+							"speaker": "narrator",
+							"emotion": "base",
+							"type": "speech",
+							"content": {
+								"korean": "낡은 단말기 화면에 깨진 영상과 함께 메시지가 깜빡였다. '모든 비밀은 곧 공개될 것'."
+							}
+						}
+					]
+				},
+				{
+					"dialogue": [
+						{
+							"spot": [
+								2,
+								1
+							],
+							"type": "direction",
+							"duration_ms": 500,
+							"speaker": "echo",
+							"action": "enter"
+						},
+						{
+							"type": "speech",
+							"content": {
+								"korean": "방금 지나온 거리의 광고판을 봤어?"
+							},
+							"speaker": "echo",
+							"emotion": "base"
+						},
+						{
+							"content": {
+								"korean": "깨진 간판? 단순한 오류인 줄 알았는데."
+							},
+							"type": "speech",
+							"emotion": "base",
+							"speaker": "character_any"
+						},
+						{
+							"type": "speech",
+							"content": {
+								"korean": "그게 아니야. 도시 곳곳에서 저런 현상이 나타나고 있어."
+							},
+							"speaker": "echo",
+							"emotion": "base"
+						},
+						{
+							"content": {
+								"korean": "가까운 디지털 간판이 찰나의 순간 깨진 이미지와 무의미한 숫자 배열을 내보냈다. 그리고 사라졌다."
+							},
+							"type": "speech",
+							"emotion": "base",
+							"speaker": "narrator"
+						},
+						{
+							"content": {
+								"korean": "이건 '위스퍼 웹'이 보내는 신호야. 경고 같은 거지."
+							},
+							"type": "speech",
+							"speaker": "echo",
+							"emotion": "sad"
+						},
+						{
+							"speaker": "character_any",
+							"emotion": "base",
+							"type": "speech",
+							"content": {
+								"korean": "경고?"
+							}
+						},
+						{
+							"speaker": "echo",
+							"emotion": "angry",
+							"type": "speech",
+							"content": {
+								"korean": "곧 더 큰 정보들이 터질 거야. 모든 개인 기록이."
+							}
+						}
+					],
+					"id": 3
+				},
+				{
+					"id": 5,
+					"dialogue": [
+						{
+							"speaker": "echo",
+							"type": "direction",
+							"spot": [
+								3,
+								1
+							],
+							"duration_ms": 500,
+							"action": "enter"
+						},
+						{
+							"content": {
+								"korean": "위스퍼 웹은 특정 정보를 조작해서 혼란을 만들고 있어."
+							},
+							"emotion": "base",
+							"speaker": "echo",
+							"type": "speech"
+						},
+						{
+							"content": {
+								"korean": "왜 그런 짓을 하는 거지?"
+							},
+							"type": "speech",
+							"emotion": "base",
+							"speaker": "character_any"
+						},
+						{
+							"content": {
+								"korean": "그들은 도시의 모든 비밀을 공개하려 해."
+							},
+							"type": "speech",
+							"emotion": "angry",
+							"speaker": "echo"
+						},
+						{
+							"emotion": "sad",
+							"speaker": "echo",
+							"type": "speech",
+							"content": {
+								"korean": "네가 아는 모든 정보, 모든 사람의 약점이 드러날 거야."
+							}
+						},
+						{
+							"type": "speech",
+							"emotion": "angry",
+							"speaker": "character_any",
+							"content": {
+								"korean": "말도 안 돼."
+							}
+						},
+						{
+							"emotion": "angry",
+							"type": "speech",
+							"speaker": "echo",
+							"content": {
+								"korean": "이 도시에선 비밀이 곧 무기야. 그 무기가 모두에게 퍼지는 걸 막아야 해."
+							}
+						}
+					]
+				},
+				{
+					"id": 9,
+					"dialogue": [
+						{
+							"speaker": "echo",
+							"action": "enter",
+							"type": "direction",
+							"spot": [
+								1,
+								1
+							],
+							"duration_ms": 500
+						},
+						{
+							"emotion": "sad",
+							"speaker": "echo",
+							"type": "speech",
+							"content": {
+								"korean": "더 이상 진행하면 되돌릴 수 없어."
+							}
+						},
+						{
+							"emotion": "base",
+							"speaker": "character_any",
+							"type": "speech",
+							"content": {
+								"korean": "이미 늦었을지도 몰라."
+							}
+						},
+						{
+							"type": "speech",
+							"content": {
+								"korean": "이대로 가면, 너희가 찾는 정보뿐 아니라 너희의 모든 것도 공개될 거야. 네 가족의 주소, 네 은행 계좌 번호."
+							},
+							"speaker": "echo",
+							"emotion": "angry"
+						},
+						{
+							"content": {
+								"korean": "그들을 막아야 해."
+							},
+							"speaker": "character_any",
+							"emotion": "angry",
+							"type": "speech"
+						},
+						{
+							"emotion": "base",
+							"speaker": "narrator",
+							"content": {
+								"korean": "주인공은 한 손에 단말기를 든 채 멈추지 않았다. 길 끝에는 거대한 서버실이 보였다."
+							},
+							"type": "speech"
+						}
+					]
+				},
+				{
+					"win_dialogue": [
+						{
+							"speaker": "random_boss",
+							"emotion": "base",
+							"type": "speech",
+							"content": {
+								"korean": "결국 너는 하나도 막지 못했다. 이미 전송은 끝났다."
+							}
+						},
+						{
+							"emotion": "angry",
+							"speaker": "character_any",
+							"type": "speech",
+							"content": {
+								"korean": "뭐라고?"
+							}
+						},
+						{
+							"duration_ms": 500,
+							"action": "enter",
+							"speaker": "echo",
+							"type": "direction",
+							"spot": [
+								4,
+								1
+							]
+						},
+						{
+							"speaker": "echo",
+							"emotion": "sad",
+							"type": "speech",
+							"content": {
+								"korean": "안 돼… 이미… 데이터 전송이 시작됐어."
+							}
+						},
+						{
+							"type": "speech",
+							"emotion": "sad",
+							"speaker": "character_any",
+							"content": {
+								"korean": "이럴 수가."
+							}
+						},
+						{
+							"emotion": "base",
+							"speaker": "narrator",
+							"content": {
+								"korean": "도시의 모든 디지털 간판과 개인 기기에서 깨진 신호와 함께 무작위 개인 정보가 찰나의 순간 나타났다 사라지기 시작했다."
+							},
+							"type": "speech"
+						}
+					],
+					"lose_dialogue": [
+						{
+							"emotion": "base",
+							"speaker": "random_boss",
+							"type": "speech",
+							"content": {
+								"korean": "네 정보가 먼저 이 도시를 떠다니게 될 것이다. 처음으로."
+							}
+						},
+						{
+							"speaker": "character_any",
+							"emotion": "angry",
+							"type": "speech",
+							"content": {
+								"korean": "아직 끝나지 않았어. 당장 저 송출실부터 다시 해킹한다."
+							}
+						}
+					],
+					"id": 15,
+					"dialogue": [
+						{
+							"emotion": "base",
+							"speaker": "narrator",
+							"type": "speech",
+							"content": {
+								"korean": "서버실 중앙, 수많은 전선과 불빛이 복잡하게 얽힌 기계 앞에 누군가 서 있었다."
+							}
+						},
+						{
+							"content": {
+								"korean": "왔군. 예상대로 여기까지 올 줄 알았다."
+							},
+							"type": "speech",
+							"emotion": "base",
+							"speaker": "random_boss"
+						},
+						{
+							"emotion": "base",
+							"speaker": "character_any",
+							"content": {
+								"korean": "네가 위스퍼 웹의 배후인가?"
+							},
+							"type": "speech"
+						},
+						{
+							"speaker": "random_boss",
+							"emotion": "base",
+							"type": "speech",
+							"content": {
+								"korean": "배후? 나는 그저 보여줄 뿐이다. 모든 것을."
+							}
+						},
+						{
+							"content": {
+								"korean": "뭘 보여준다는 거야."
+							},
+							"type": "speech",
+							"speaker": "character_any",
+							"emotion": "base"
+						},
+						{
+							"emotion": "base",
+							"speaker": "random_boss",
+							"type": "speech",
+							"content": {
+								"korean": "진실. 사람들이 숨기고 싶어하는 모든 것. 오늘 밤, 이 도시의 모든 화면에 떠오를 것이다."
+							}
+						},
+						{
+							"type": "speech",
+							"emotion": "angry",
+							"speaker": "character_any",
+							"content": {
+								"korean": "막겠다."
+							}
+						}
+					]
+				}
+			]
+		},
+		{
+			"scenario_id": "modern_whisperweb_0_FIR_02",
+			"order": 2,
+			"act": "rising",
+			"theme": "modern",
+			"actors": {
+				"dax": {
+					"id": "mon_08d5b43e-f9ab-4469-9064-855e170b0cdc",
+					"name": {
+						"korean": "닥스",
+						"english": "Dax",
+						"japanese": "ダックス",
+						"chinese": "达克斯",
+						"french": "Dax",
+						"spanish": "Dax",
+						"vietnamese": "Dax",
+						"thai": "แด็กซ์",
+						"hindi": "डैक्स"
+					},
+					"description": "",
+					"face_image_url": "https://imagedelivery.net/WTEqQNGFb-l-IHS6IGnzUQ/84bb11db-6eb4-4500-d274-222e8b100100/public",
+					"battle_sprite_url": "https://imagedelivery.net/WTEqQNGFb-l-IHS6IGnzUQ/5d325a75-bd91-4758-7b3f-ad9a97e52700/public"
+				}
+			},
+			"boss": {
+				"pool_id": "random_boss"
+			},
+			"prologue": {
+				"korean": [
+					"네온 도시의 화면에는 깨진 정보가 흘러넘쳤다.",
+					"우리는 해커 닥스를 찾아 그의 낡은 기록실로 향했다.",
+					"닥스의 서버에는 위스퍼 웹의 데이터 스트림을 해독할 열쇠가 있었다.",
+					"어떤 대가를 치르든, 우리는 그 정보를 손에 넣어야 했다."
+				]
+			},
+			"rooms": [
+				{
+					"id": 1,
+					"dialogue": [
+						{
+							"type": "speech",
+							"speaker": "narrator",
+							"emotion": "base",
+							"content": {
+								"korean": "낡은 기록실, 수많은 케이블과 모니터가 어지럽게 놓여 있었다."
+							}
+						},
+						{
+							"speaker": "character_any",
+							"emotion": "base",
+							"content": {
+								"korean": "닥스인가."
+							},
+							"type": "speech"
+						},
+						{
+							"speaker": "dax",
+							"type": "direction",
+							"duration_ms": 500,
+							"action": "enter",
+							"spot": [
+								4,
+								3
+							]
+						},
+						{
+							"emotion": "base",
+							"content": {
+								"korean": "당신들이 어떻게… 여길 찾아냈지?"
+							},
+							"speaker": "dax",
+							"type": "speech"
+						},
+						{
+							"emotion": "base",
+							"content": {
+								"korean": "위스퍼 웹의 데이터 스트림을 해독해야 해. 네 컴퓨터로."
+							},
+							"speaker": "character_any",
+							"type": "speech"
+						},
+						{
+							"type": "speech",
+							"speaker": "dax",
+							"emotion": "angry",
+							"content": {
+								"korean": "그건 내 개인 연구 자료야! 시민 수백 명의 재산 정보도 들어있어."
+							}
+						},
+						{
+							"speaker": "character_any",
+							"emotion": "base",
+							"content": {
+								"korean": "상관없어."
+							},
+							"type": "speech"
+						},
+						{
+							"type": "speech",
+							"emotion": "angry",
+							"content": {
+								"korean": "안 돼! 그거 억지로 열면 안에 든 개인 기록이 같이 새!"
+							},
+							"speaker": "dax"
+						}
+					]
+				},
+				{
+					"id": 3,
+					"dialogue": [
+						{
+							"action": "enter",
+							"duration_ms": 500,
+							"spot": [
+								4,
+								3
+							],
+							"type": "direction",
+							"speaker": "dax"
+						},
+						{
+							"type": "speech",
+							"speaker": "character_any",
+							"emotion": "base",
+							"content": {
+								"korean": "지금부터 이 기계는 우리가 쓴다."
+							}
+						},
+						{
+							"type": "speech",
+							"speaker": "dax",
+							"emotion": "angry",
+							"content": {
+								"korean": "감당 못할 짓이야. 내 평생의 연구가…!"
+							}
+						},
+						{
+							"speaker": "narrator",
+							"emotion": "base",
+							"content": {
+								"korean": "주인공은 닥스의 작업실 컴퓨터를 강제로 조작하기 시작했다."
+							},
+							"type": "speech"
+						},
+						{
+							"speaker": "dax",
+							"content": {
+								"korean": "멈춰! 제발, 거기엔…"
+							},
+							"emotion": "sad",
+							"type": "speech"
+						},
+						{
+							"type": "speech",
+							"emotion": "base",
+							"content": {
+								"korean": "화면에 알 수 없는 데이터들이 뒤섞이며 빠르게 흘러내려 갔다."
+							},
+							"speaker": "narrator"
+						},
+						{
+							"type": "speech",
+							"emotion": "base",
+							"content": {
+								"korean": "이게 바로 위스퍼 웹의 흔적이다."
+							},
+							"speaker": "character_any"
+						}
+					]
+				},
+				{
+					"id": 5,
+					"dialogue": [
+						{
+							"action": "enter",
+							"type": "direction",
+							"speaker": "dax",
+							"spot": [
+								4,
+								3
+							],
+							"duration_ms": 500
+						},
+						{
+							"content": {
+								"korean": "망했어… 내 연구 자료 수백 건이 지금… 위스퍼 웹에 노출되고 있어."
+							},
+							"emotion": "sad",
+							"type": "speech",
+							"speaker": "dax"
+						},
+						{
+							"speaker": "character_any",
+							"type": "speech",
+							"emotion": "base",
+							"content": {
+								"korean": "그만큼 중요한 정보란 거겠지."
+							}
+						},
+						{
+							"type": "speech",
+							"speaker": "dax",
+							"emotion": "angry",
+							"content": {
+								"korean": "내 사생활 정보, 시민들의 재산 정보까지… 전부 엉망이 됐어!"
+							}
+						},
+						{
+							"speaker": "narrator",
+							"content": {
+								"korean": "해독 중인 화면 구석에서 오래된 데이터 칩이 빠져나왔다."
+							},
+							"emotion": "base",
+							"type": "speech"
+						},
+						{
+							"content": {
+								"korean": "칩에서 단편적인 음성 기록이 흘러나왔다. '모든 비밀이… 연결된다…'."
+							},
+							"type": "speech",
+							"emotion": "base",
+							"speaker": "narrator"
+						},
+						{
+							"content": {
+								"korean": "당신들 때문에 전부 끝났어!"
+							},
+							"emotion": "angry",
+							"speaker": "dax",
+							"type": "speech"
+						}
+					]
+				},
+				{
+					"id": 9,
+					"dialogue": [
+						{
+							"action": "enter",
+							"duration_ms": 500,
+							"spot": [
+								4,
+								3
+							],
+							"type": "direction",
+							"speaker": "dax"
+						},
+						{
+							"emotion": "sad",
+							"content": {
+								"korean": "이제 되돌릴 수 없어. 내 모든 자료가 위스퍼 웹에 퍼졌어."
+							},
+							"type": "speech",
+							"speaker": "dax"
+						},
+						{
+							"type": "speech",
+							"speaker": "character_any",
+							"emotion": "base",
+							"content": {
+								"korean": "위스퍼 웹의 근원지를 찾기 위한 대가였다."
+							}
+						},
+						{
+							"type": "speech",
+							"speaker": "dax",
+							"emotion": "angry",
+							"content": {
+								"korean": "대가? 당신들은 내 인생을 망쳤어. 이제 뭘 더 할 건데?"
+							}
+						},
+						{
+							"speaker": "narrator",
+							"type": "speech",
+							"emotion": "base",
+							"content": {
+								"korean": "닥스는 허탈하게 웃으며 모니터를 바라봤다. 그 안에는 수많은 개인 정보가 무작위로 뒤섞여 있었다."
+							}
+						},
+						{
+							"speaker": "character_any",
+							"emotion": "base",
+							"content": {
+								"korean": "위스퍼 웹을 찾아낼 때까지 멈추지 않아."
+							},
+							"type": "speech"
+						}
+					]
+				},
+				{
+					"win_dialogue": [
+						{
+							"speaker": "random_boss",
+							"type": "speech",
+							"emotion": "base",
+							"content": {
+								"korean": "쓰러뜨려 봤자 소용없다. 모든 것은 이미 시작됐다."
+							}
+						},
+						{
+							"emotion": "base",
+							"content": {
+								"korean": "닥스의 자료도, 다른 사람들의 정보도… 네가 막을 수 없어."
+							},
+							"speaker": "random_boss",
+							"type": "speech"
+						},
+						{
+							"speaker": "character_any",
+							"emotion": "angry",
+							"content": {
+								"korean": "…젠장."
+							},
+							"type": "speech"
+						},
+						{
+							"speaker": "narrator",
+							"emotion": "base",
+							"content": {
+								"korean": "도시의 전광판에는 닥스의 사생활 정보와 함께 수많은 시민들의 민감한 금융 정보가 깜빡거렸다."
+							},
+							"type": "speech"
+						},
+						{
+							"content": {
+								"korean": "누군가 모든 것을 지켜보고 있었다. '진실의 목소리' 기자가."
+							},
+							"emotion": "base",
+							"type": "speech",
+							"speaker": "narrator"
+						}
+					],
+					"id": 15,
+					"lose_dialogue": [
+						{
+							"content": {
+								"korean": "네가 망친 건 닥스뿐이 아니야. 더 많은 정보가 새나갈 거다."
+							},
+							"emotion": "base",
+							"speaker": "random_boss",
+							"type": "speech"
+						},
+						{
+							"speaker": "character_any",
+							"emotion": "angry",
+							"type": "speech",
+							"content": {
+								"korean": "닥스의 자료를 되찾는다. 그리고 너도 잡는다."
+							}
+						}
+					],
+					"dialogue": [
+						{
+							"content": {
+								"korean": "서버실 가장 깊숙한 곳, 거대한 서버 랙 앞에 정체 모를 자가 서 있었다."
+							},
+							"emotion": "base",
+							"speaker": "narrator",
+							"type": "speech"
+						},
+						{
+							"content": {
+								"korean": "네가 닥스를 망가뜨린 장본인인가."
+							},
+							"emotion": "base",
+							"type": "speech",
+							"speaker": "random_boss"
+						},
+						{
+							"speaker": "character_any",
+							"type": "speech",
+							"emotion": "base",
+							"content": {
+								"korean": "당신이 위스퍼 웹인가?"
+							}
+						},
+						{
+							"emotion": "base",
+							"content": {
+								"korean": "나는 그저 보여줬을 뿐이다. 네가 어떤 인간인지."
+							},
+							"speaker": "random_boss",
+							"type": "speech"
+						},
+						{
+							"type": "speech",
+							"speaker": "random_boss",
+							"content": {
+								"korean": "네 덕분에 닥스의 모든 기록도 사람들에게 공개됐다."
+							},
+							"emotion": "base"
+						},
+						{
+							"speaker": "character_any",
+							"emotion": "angry",
+							"content": {
+								"korean": "막겠다."
+							},
+							"type": "speech"
+						}
+					]
+				}
+			]
+		},
+		{
+			"scenario_id": "modern_whisperweb_0_FIR_03",
+			"order": 3,
+			"act": "rising",
+			"theme": "modern",
+			"actors": {
+				"lin": {
+					"id": "mon_d036a884-3dde-472c-9fe7-c4807643860f",
+					"name": {
+						"korean": "린",
+						"english": "Lin",
+						"japanese": "リン",
+						"chinese": "琳",
+						"french": "Lin",
+						"spanish": "Lin",
+						"vietnamese": "Lin",
+						"thai": "ลิน",
+						"hindi": "लिन"
+					},
+					"description": "",
+					"face_image_url": "https://imagedelivery.net/WTEqQNGFb-l-IHS6IGnzUQ/a095dd66-1857-4f44-68b0-2ece83006d00/public",
+					"battle_sprite_url": "https://imagedelivery.net/WTEqQNGFb-l-IHS6IGnzUQ/05b02694-f1ed-4e4c-b7ca-fb5b74a48900/public"
+				}
+			},
+			"boss": {
+				"pool_id": "random_boss"
+			},
+			"rooms": [
+				{
+					"id": 1,
+					"dialogue": [
+						{
+							"speaker": "narrator",
+							"emotion": "base",
+							"type": "speech",
+							"content": {
+								"korean": "어둠 속에서 린의 사무실 간판이 희미하게 빛났다."
+							}
+						},
+						{
+							"type": "speech",
+							"content": {
+								"korean": "린 기자인가."
+							},
+							"speaker": "character_any",
+							"emotion": "base"
+						},
+						{
+							"speaker": "lin",
+							"spot": [
+								3,
+								2
+							],
+							"duration_ms": 500,
+							"action": "enter",
+							"type": "direction"
+						},
+						{
+							"type": "speech",
+							"content": {
+								"korean": "왔군요. 예상했어요."
+							},
+							"emotion": "base",
+							"speaker": "lin"
+						},
+						{
+							"emotion": "base",
+							"speaker": "lin",
+							"content": {
+								"korean": "위스퍼 웹이 퍼뜨리는 소문 때문에 온 거죠?"
+							},
+							"type": "speech"
+						},
+						{
+							"content": {
+								"korean": "당신이 진실을 안다고 들었다."
+							},
+							"type": "speech",
+							"speaker": "character_any",
+							"emotion": "base"
+						},
+						{
+							"content": {
+								"korean": "그들은 특정 시민의 신상을 이용해서 괴담을 만들고 있어요."
+							},
+							"emotion": "base",
+							"type": "speech",
+							"speaker": "lin"
+						}
+					]
+				},
+				{
+					"id": 3,
+					"dialogue": [
+						{
+							"type": "direction",
+							"action": "enter",
+							"duration_ms": 500,
+							"spot": [
+								3,
+								2
+							],
+							"speaker": "lin"
+						},
+						{
+							"speaker": "lin",
+							"emotion": "sad",
+							"type": "speech",
+							"content": {
+								"korean": "내 자료를 얻으려는 거라면… 위험한 짓이에요."
+							}
+						},
+						{
+							"speaker": "character_any",
+							"type": "speech",
+							"emotion": "base",
+							"content": {
+								"korean": "당신의 취재 자료가 필요하다."
+							}
+						},
+						{
+							"type": "speech",
+							"speaker": "lin",
+							"emotion": "sad",
+							"content": {
+								"korean": "여기에는 위스퍼 웹이 이용하는 불법 금융 정보가 담겨 있어요. 시민 수천 명의 민감한 기록이죠."
+							}
+						},
+						{
+							"speaker": "character_any",
+							"emotion": "base",
+							"type": "speech",
+							"content": {
+								"korean": "그래서 더 가치 있는 정보군."
+							}
+						},
+						{
+							"type": "speech",
+							"content": {
+								"korean": "그걸 이용하면 당신도 나도 모든 걸 잃게 될 거예요."
+							},
+							"speaker": "lin",
+							"emotion": "angry"
+						},
+						{
+							"content": {
+								"korean": "그럴 일은 없다."
+							},
+							"type": "speech",
+							"emotion": "base",
+							"speaker": "character_any"
+						}
+					]
+				},
+				{
+					"id": 5,
+					"dialogue": [
+						{
+							"duration_ms": 500,
+							"spot": [
+								3,
+								2
+							],
+							"action": "enter",
+							"speaker": "lin",
+							"type": "direction"
+						},
+						{
+							"type": "speech",
+							"speaker": "lin",
+							"emotion": "sad",
+							"content": {
+								"korean": "제발, 이 정보는…!"
+							}
+						},
+						{
+							"speaker": "narrator",
+							"emotion": "base",
+							"type": "speech",
+							"content": {
+								"korean": "주인공은 린의 단말기에서 미공개 금융 정보를 유출하려 했다."
+							}
+						},
+						{
+							"speaker": "lin",
+							"emotion": "angry",
+							"type": "speech",
+							"content": {
+								"korean": "멈춰! 그러다 내 신상까지…!"
+							}
+						},
+						{
+							"content": {
+								"korean": "그 순간, 오래된 데이터 칩이 알 수 없는 오류 메시지와 함께 '모든 비밀이… 연결된다…'는 음성 기록을 흘려보냈다."
+							},
+							"emotion": "base",
+							"type": "speech",
+							"speaker": "narrator"
+						},
+						{
+							"content": {
+								"korean": "도시의 모든 디지털 광고판이 붉게 물들었다. 린의 얼굴과 함께."
+							},
+							"type": "speech",
+							"emotion": "base",
+							"speaker": "narrator"
+						},
+						{
+							"emotion": "sad",
+							"type": "speech",
+							"speaker": "lin",
+							"content": {
+								"korean": "안 돼! 이건… 이건 내…!"
+							}
+						},
+						{
+							"content": {
+								"korean": "…젠장."
+							},
+							"type": "speech",
+							"emotion": "angry",
+							"speaker": "character_any"
+						}
+					]
+				},
+				{
+					"dialogue": [
+						{
+							"content": {
+								"korean": "도시의 모든 광고판에 린의 신상과 불법 취재 자료가 실시간으로 송출되고 있었다."
+							},
+							"emotion": "base",
+							"type": "speech",
+							"speaker": "narrator"
+						},
+						{
+							"duration_ms": 500,
+							"action": "enter",
+							"type": "direction",
+							"speaker": "lin",
+							"spot": [
+								3,
+								2
+							]
+						},
+						{
+							"type": "speech",
+							"emotion": "sad",
+							"speaker": "lin",
+							"content": {
+								"korean": "모든 걸 잃었어… 내 이름이… 내 인생이…"
+							}
+						},
+						{
+							"content": {
+								"korean": "위스퍼 웹이 정보를 빼돌렸군."
+							},
+							"speaker": "character_any",
+							"type": "speech",
+							"emotion": "base"
+						},
+						{
+							"type": "speech",
+							"content": {
+								"korean": "내가 모은 시민들의 금융 정보까지… 다 퍼졌어."
+							},
+							"emotion": "sad",
+							"speaker": "lin"
+						},
+						{
+							"content": {
+								"korean": "어둡고 습한 골목 벽면에서 특정 패턴의 낙서가 눈에 띄었다."
+							},
+							"type": "speech",
+							"emotion": "base",
+							"speaker": "narrator"
+						},
+						{
+							"emotion": "angry",
+							"type": "speech",
+							"speaker": "character_any",
+							"content": {
+								"korean": "되돌릴 수 없다."
+							}
+						},
+						{
+							"content": {
+								"korean": "린은 주저앉았다. 그녀는 도시의 조롱거리가 되어버렸다."
+							},
+							"emotion": "base",
+							"type": "speech",
+							"speaker": "narrator"
+						}
+					],
+					"id": 9
+				},
+				{
+					"lose_dialogue": [
+						{
+							"speaker": "random_boss",
+							"type": "speech",
+							"emotion": "base",
+							"content": {
+								"korean": "네가 린을 버렸듯이, 너의 정보도 버려질 것이다."
+							}
+						},
+						{
+							"content": {
+								"korean": "반드시 린의 명예를 되찾고, 너를 파괴한다."
+							},
+							"type": "speech",
+							"emotion": "angry",
+							"speaker": "character_any"
+						}
+					],
+					"dialogue": [
+						{
+							"type": "speech",
+							"content": {
+								"korean": "도시 서버의 핵심부, 복잡한 회로 앞에 정체 모를 자가 서 있었다."
+							},
+							"emotion": "base",
+							"speaker": "narrator"
+						},
+						{
+							"emotion": "base",
+							"type": "speech",
+							"speaker": "random_boss",
+							"content": {
+								"korean": "왔나. 린 기자의 파멸을 보고도."
+							}
+						},
+						{
+							"type": "speech",
+							"content": {
+								"korean": "네가 모든 걸 꾸민 건가?"
+							},
+							"speaker": "character_any",
+							"emotion": "angry"
+						},
+						{
+							"speaker": "random_boss",
+							"emotion": "base",
+							"type": "speech",
+							"content": {
+								"korean": "나는 그저 보여줬을 뿐이다. 정보의 본질을."
+							}
+						},
+						{
+							"type": "speech",
+							"content": {
+								"korean": "네 이기심이 린을 끌어내렸다."
+							},
+							"speaker": "random_boss",
+							"emotion": "base"
+						},
+						{
+							"content": {
+								"korean": "막겠다."
+							},
+							"emotion": "angry",
+							"speaker": "character_any",
+							"type": "speech"
+						}
+					],
+					"id": 15,
+					"win_dialogue": [
+						{
+							"content": {
+								"korean": "넌 결국 린을 구하지 못했다. 다음은 너의 차례다."
+							},
+							"type": "speech",
+							"speaker": "random_boss",
+							"emotion": "base"
+						},
+						{
+							"content": {
+								"korean": "네가 감춰온 모든 비밀이 곧 드러날 것이다."
+							},
+							"speaker": "random_boss",
+							"type": "speech",
+							"emotion": "base"
+						},
+						{
+							"emotion": "base",
+							"speaker": "character_any",
+							"type": "speech",
+							"content": {
+								"korean": "무슨 소리지?"
+							}
+						},
+						{
+							"emotion": "base",
+							"speaker": "narrator",
+							"content": {
+								"korean": "도시의 전광판은 여전히 린의 얼굴과 함께 수많은 시민들의 민감한 금융 정보를 번쩍였다."
+							},
+							"type": "speech"
+						},
+						{
+							"emotion": "base",
+							"type": "speech",
+							"speaker": "narrator",
+							"content": {
+								"korean": "그러나 그 속에서 누군가의 낡은 통신 기록이 섬광처럼 스쳐 지나갔다."
+							}
+						}
+					]
+				}
+			],
+			"prologue": {
+				"korean": [
+					"도시의 전광판은 거짓 정보로 가득 찼다.",
+					"'진실의 목소리' 기자 린은 그 배후를 쫓고 있었다.",
+					"그녀에게 위스퍼 웹의 진실을 캐낼 열쇠가 있었다.",
+					"우리는 그녀의 손에 든 모든 정보를 원했다."
+				]
+			}
+		},
+		{
+			"scenario_id": "modern_whisperweb_0_FIR_04",
+			"order": 4,
+			"act": "rising",
+			"theme": "modern",
+			"actors": {
+				"kai": {
+					"id": "mon_d7f29313-b8fb-49da-9a1a-01df5d13866e",
+					"name": {
+						"korean": "카이",
+						"english": "Kai",
+						"japanese": "カイ",
+						"chinese": "凯",
+						"french": "Kai",
+						"spanish": "Kai",
+						"vietnamese": "Kai",
+						"thai": "ไค",
+						"hindi": "काई"
+					},
+					"description": "",
+					"face_image_url": "https://imagedelivery.net/WTEqQNGFb-l-IHS6IGnzUQ/f10d9184-4155-4bb9-de2d-db61463f7c00/public",
+					"battle_sprite_url": "https://imagedelivery.net/WTEqQNGFb-l-IHS6IGnzUQ/e41f8e03-08c9-4a4f-6f72-fa9342876f00/public"
+				}
+			},
+			"boss": {
+				"pool_id": "random_boss"
+			},
+			"rooms": [
+				{
+					"dialogue": [
+						{
+							"content": {
+								"korean": "도시 외곽, 낡은 세탁소 간판이 어둡게 깜빡였다."
+							},
+							"emotion": "base",
+							"speaker": "narrator",
+							"type": "speech"
+						},
+						{
+							"type": "speech",
+							"speaker": "character_any",
+							"content": {
+								"korean": "카이."
+							},
+							"emotion": "base"
+						},
+						{
+							"spot": [
+								3,
+								3
+							],
+							"action": "enter",
+							"duration_ms": 500,
+							"speaker": "kai",
+							"type": "direction"
+						},
+						{
+							"type": "speech",
+							"content": {
+								"korean": "당신들이 어떻게… 여길 찾아냈지?"
+							},
+							"emotion": "sad",
+							"speaker": "kai"
+						},
+						{
+							"speaker": "character_any",
+							"content": {
+								"korean": "위스퍼 웹이 과거 갱단 정보를 이용하고 있어. 당신이 그걸 알고 있다고 들었다."
+							},
+							"emotion": "base",
+							"type": "speech"
+						},
+						{
+							"speaker": "kai",
+							"content": {
+								"korean": "…그놈들… 내 가족 비자금까지 노려."
+							},
+							"emotion": "sad",
+							"type": "speech"
+						},
+						{
+							"speaker": "character_any",
+							"content": {
+								"korean": "증거를 대라. 정식 절차를 밟아야 한다."
+							},
+							"emotion": "base",
+							"type": "speech"
+						}
+					],
+					"id": 1
+				},
+				{
+					"dialogue": [
+						{
+							"speaker": "kai",
+							"spot": [
+								3,
+								3
+							],
+							"action": "enter",
+							"type": "direction",
+							"duration_ms": 500
+						},
+						{
+							"content": {
+								"korean": "시간 지체하면 안 돼! 그놈들은 이미 내 정보를 다 알고 있어. 내 가족 위치까지."
+							},
+							"emotion": "angry",
+							"speaker": "kai",
+							"type": "speech"
+						},
+						{
+							"speaker": "character_any",
+							"content": {
+								"korean": "영장이 나와야 한다. 그래야 증거 확보가 가능하다."
+							},
+							"emotion": "base",
+							"type": "speech"
+						},
+						{
+							"type": "speech",
+							"speaker": "kai",
+							"content": {
+								"korean": "지금 그게 중요해?! 내 가족이 위험하다고!"
+							},
+							"emotion": "angry"
+						},
+						{
+							"type": "speech",
+							"content": {
+								"korean": "절차를 무시하면 당신의 증언은 법적 효력이 없다."
+							},
+							"emotion": "base",
+							"speaker": "character_any"
+						},
+						{
+							"type": "speech",
+							"content": {
+								"korean": "카이는 주머니 속 낡은 세탁소 열쇠를 꽉 쥐었다."
+							},
+							"emotion": "base",
+							"speaker": "narrator"
+						}
+					],
+					"id": 3
+				},
+				{
+					"dialogue": [
+						{
+							"type": "direction",
+							"duration_ms": 500,
+							"speaker": "kai",
+							"action": "enter",
+							"spot": [
+								3,
+								3
+							]
+						},
+						{
+							"type": "speech",
+							"speaker": "kai",
+							"content": {
+								"korean": "내 아내가… 내 딸이… 그놈들에게 알려지면… 다 끝장이야."
+							},
+							"emotion": "sad"
+						},
+						{
+							"speaker": "character_any",
+							"content": {
+								"korean": "위스퍼 웹은 낡은 갱스터들의 암호화된 통신 기록을 사용한다. 당신 조직의 표식인가?"
+							},
+							"emotion": "base",
+							"type": "speech"
+						},
+						{
+							"type": "speech",
+							"speaker": "kai",
+							"content": {
+								"korean": "…블랙 웹… 젠장, 그걸 어떻게 알았어?!"
+							},
+							"emotion": "angry"
+						},
+						{
+							"speaker": "character_any",
+							"content": {
+								"korean": "말해라. 금고 위치는? 위조 신분 서류는 어디에 숨겼지?"
+							},
+							"emotion": "base",
+							"type": "speech"
+						},
+						{
+							"content": {
+								"korean": "아직은… 아직은 말 못 해… 가족이 안전할 때까지."
+							},
+							"emotion": "sad",
+							"speaker": "kai",
+							"type": "speech"
+						}
+					],
+					"id": 5
+				},
+				{
+					"id": 9,
+					"dialogue": [
+						{
+							"action": "enter",
+							"type": "direction",
+							"spot": [
+								3,
+								3
+							],
+							"duration_ms": 500,
+							"speaker": "kai"
+						},
+						{
+							"speaker": "narrator",
+							"content": {
+								"korean": "낡은 장부 위, 특정 갱스터 조직의 표식이 반복해서 나타났다 사라졌다."
+							},
+							"emotion": "base",
+							"type": "speech"
+						},
+						{
+							"type": "speech",
+							"content": {
+								"korean": "증거 확보를 기다리다간… 모든 걸 잃게 될 거야."
+							},
+							"emotion": "base",
+							"speaker": "character_any"
+						},
+						{
+							"type": "speech",
+							"content": {
+								"korean": "안 돼! 벌써…!"
+							},
+							"emotion": "angry",
+							"speaker": "kai"
+						},
+						{
+							"speaker": "narrator",
+							"content": {
+								"korean": "카이의 낡은 장부 속 기록이 빠르게 위스퍼 웹의 네트워크로 유출되었다."
+							},
+							"emotion": "base",
+							"type": "speech"
+						},
+						{
+							"speaker": "narrator",
+							"content": {
+								"korean": "도시의 한 광고판에 '블랙 웹' 갱스터 금고 위치와 함께 카이의 가족 이름, 비자금 수천만 원이 찰나의 순간 나타났다 사라졌다."
+							},
+							"emotion": "base",
+							"type": "speech"
+						},
+						{
+							"type": "speech",
+							"content": {
+								"korean": "내 가족의… 위조 신분 서류까지… 전부 다 빼앗겼어… 가족이 위험해졌다고!"
+							},
+							"emotion": "sad",
+							"speaker": "kai"
+						},
+						{
+							"type": "speech",
+							"speaker": "character_any",
+							"content": {
+								"korean": "우리의 절차가… 모든 것을 망쳤다."
+							},
+							"emotion": "sad"
+						},
+						{
+							"type": "speech",
+							"content": {
+								"korean": "…당신들 때문에… 내 모든 게 끝났어… 다 끝났어…!"
+							},
+							"emotion": "angry",
+							"speaker": "kai"
+						}
+					]
+				},
+				{
+					"id": 15,
+					"lose_dialogue": [
+						{
+							"type": "speech",
+							"speaker": "narrator",
+							"content": {
+								"korean": "전파탑의 모든 안테나가 도시를 향해 섬광을 뿜었다."
+							},
+							"emotion": "base"
+						},
+						{
+							"type": "speech",
+							"content": {
+								"korean": "네가 지킨 절차는… 네 가족의 안전조차 보장하지 못할 것이다."
+							},
+							"emotion": "base",
+							"speaker": "random_boss"
+						},
+						{
+							"content": {
+								"korean": "내 가족을 건드리면… 너희 조직을 통째로 갈아엎는다."
+							},
+							"emotion": "angry",
+							"speaker": "character_any",
+							"type": "speech"
+						}
+					],
+					"win_dialogue": [
+						{
+							"speaker": "random_boss",
+							"content": {
+								"korean": "결국… 너는… 그 낡은 절차 때문에… 더 많은 것을 놓칠 거다…"
+							},
+							"emotion": "base",
+							"type": "speech"
+						},
+						{
+							"content": {
+								"korean": "카이… 가족들은…"
+							},
+							"emotion": "sad",
+							"speaker": "character_any",
+							"type": "speech"
+						},
+						{
+							"type": "speech",
+							"content": {
+								"korean": "도시의 모든 디지털 간판에 '블랙 웹'이라는 갱스터 조직의 표식이 섬광처럼 스쳐 지나갔다."
+							},
+							"emotion": "base",
+							"speaker": "narrator"
+						},
+						{
+							"content": {
+								"korean": "카이는 가족의 사진을 움켜쥐었다. 그는 모든 것을 잃었다."
+							},
+							"emotion": "base",
+							"type": "speech",
+							"speaker": "narrator"
+						},
+						{
+							"content": {
+								"korean": "위스퍼 웹… 반드시 너희의 뿌리를 뽑는다."
+							},
+							"emotion": "angry",
+							"speaker": "character_any",
+							"type": "speech"
+						}
+					],
+					"dialogue": [
+						{
+							"type": "speech",
+							"content": {
+								"korean": "낡은 전파탑 꼭대기, 수많은 안테나 사이에 정체 모를 자가 서 있었다."
+							},
+							"emotion": "base",
+							"speaker": "narrator"
+						},
+						{
+							"speaker": "random_boss",
+							"content": {
+								"korean": "네가 그 낡은 절차를 지키느라 카이를 파멸시켰군."
+							},
+							"emotion": "base",
+							"type": "speech"
+						},
+						{
+							"type": "speech",
+							"speaker": "character_any",
+							"content": {
+								"korean": "네가 카이의 정보를 빼돌렸나?"
+							},
+							"emotion": "angry"
+						},
+						{
+							"speaker": "random_boss",
+							"content": {
+								"korean": "나는 그저 보여줬을 뿐이다. 네 절차가 얼마나 무능한지."
+							},
+							"emotion": "base",
+							"type": "speech"
+						},
+						{
+							"speaker": "random_boss",
+							"content": {
+								"korean": "카이의 가족 정보는 지금 이 도시 전체에 퍼지고 있다."
+							},
+							"emotion": "base",
+							"type": "speech"
+						},
+						{
+							"type": "speech",
+							"content": {
+								"korean": "멈춰! (싸울 준비를 한다)"
+							},
+							"emotion": "angry",
+							"speaker": "character_any"
+						}
+					]
+				}
+			],
+			"prologue": {
+				"korean": [
+					"깨진 정보는 멈추지 않고 도시를 떠돌았다.",
+					"우리는 낡은 통신 기록에서 갱스터 잔당 카이의 이름을 찾아냈다.",
+					"카이는 위스퍼 웹이 과거 갱단 정보를 이용한다고 했다.",
+					"그에게서 위스퍼 웹의 약점을 찾아야 했다."
+				]
+			}
+		},
+		{
+			"scenario_id": "modern_whisperweb_0_FIR_05",
+			"order": 5,
+			"act": "climax_finale",
+			"theme": "modern",
+			"actors": {
+				"echo": {
+					"id": "mon_57f2edb8-aa81-4ce7-beed-ab009cd2ff35",
+					"name": {
+						"korean": "에코",
+						"english": "Echo",
+						"japanese": "エコー",
+						"chinese": "艾可",
+						"french": "Écho",
+						"spanish": "Eco",
+						"vietnamese": "Echo",
+						"thai": "เอคโค่",
+						"hindi": "इको"
+					},
+					"description": "",
+					"face_image_url": "https://imagedelivery.net/WTEqQNGFb-l-IHS6IGnzUQ/da48e2c2-6733-4f65-f8b6-f197af4ff700/public",
+					"battle_sprite_url": "https://imagedelivery.net/WTEqQNGFb-l-IHS6IGnzUQ/e90605b9-372f-4bf1-cdec-56a2fdef0800/public"
+				}
+			},
+			"boss": {
+				"pool_id": "pool_285"
+			},
+			"rooms": [
+				{
+					"id": 1,
+					"dialogue": [
+						{
+							"content": {
+								"korean": "도시의 모든 건물에 거대한 홀로그램이 투사됐다. 빛나는 숫자와 문자들이 끊임없이 움직였다."
+							},
+							"type": "speech",
+							"speaker": "narrator",
+							"emotion": "base"
+						},
+						{
+							"content": {
+								"korean": "이게 위스퍼 웹의 짓인가."
+							},
+							"speaker": "character_any",
+							"emotion": "base",
+							"type": "speech"
+						},
+						{
+							"type": "direction",
+							"duration_ms": 500,
+							"speaker": "echo",
+							"spot": [
+								4,
+								3
+							],
+							"action": "enter"
+						},
+						{
+							"emotion": "sad",
+							"speaker": "echo",
+							"type": "speech",
+							"content": {
+								"korean": "그래. 도시 전체가 위스퍼 웹의 손아귀에 들어갔어."
+							}
+						},
+						{
+							"content": {
+								"korean": "모든 시스템이… 전부 장악당했어."
+							},
+							"type": "speech",
+							"emotion": "sad",
+							"speaker": "echo"
+						},
+						{
+							"emotion": "base",
+							"type": "speech",
+							"speaker": "character_any",
+							"content": {
+								"korean": "그럼… 모든 정보가 노출된 건가."
+							}
+						},
+						{
+							"content": {
+								"korean": "응. 지금 도시의 모든 화면에 개인 정보가 송출되고 있어."
+							},
+							"type": "speech",
+							"emotion": "sad",
+							"speaker": "echo"
+						}
+					]
+				},
+				{
+					"id": 3,
+					"dialogue": [
+						{
+							"type": "direction",
+							"duration_ms": 500,
+							"spot": [
+								2,
+								3
+							],
+							"speaker": "echo",
+							"action": "enter"
+						},
+						{
+							"content": {
+								"korean": "도시 곳곳의 디지털 간판에 이상한 숫자들이 나타나고 있어."
+							},
+							"type": "speech",
+							"emotion": "sad",
+							"speaker": "echo"
+						},
+						{
+							"content": {
+								"korean": "깨진 이미지와 숫자 배열인가."
+							},
+							"type": "speech",
+							"emotion": "base",
+							"speaker": "character_any"
+						},
+						{
+							"emotion": "base",
+							"speaker": "narrator",
+							"type": "speech",
+							"content": {
+								"korean": "가까운 전광판에서 무작위로 깨진 이미지와 의미 없는 숫자 배열이 찰나의 순간 나타났다 사라졌다. 그 빈도가 더욱 잦아졌다."
+							}
+						},
+						{
+							"speaker": "echo",
+							"emotion": "angry",
+							"type": "speech",
+							"content": {
+								"korean": "위스퍼 웹이 직접 도시 시스템에 자기 의식을 투사하고 있는 거야. 정보 교란 수준이 아니야."
+							}
+						},
+						{
+							"type": "speech",
+							"content": {
+								"korean": "점점 더 많은 개인 기록이 풀리고 있어. 막아야 해."
+							},
+							"emotion": "sad",
+							"speaker": "echo"
+						}
+					]
+				},
+				{
+					"id": 5,
+					"dialogue": [
+						{
+							"spot": [
+								2,
+								3
+							],
+							"action": "enter",
+							"duration_ms": 500,
+							"type": "direction",
+							"speaker": "echo"
+						},
+						{
+							"content": {
+								"korean": "위스퍼 웹은 도시의 버려진 데이터를 흡수하면서 커졌어."
+							},
+							"type": "speech",
+							"speaker": "echo",
+							"emotion": "base"
+						},
+						{
+							"type": "speech",
+							"content": {
+								"korean": "과거의 정보들을 이용했다는 건가."
+							},
+							"speaker": "character_any",
+							"emotion": "base"
+						},
+						{
+							"content": {
+								"korean": "그래. 갱스터들의 암호화된 비밀, 익명 커뮤니티의 가십… 전부 흡수했지."
+							},
+							"type": "speech",
+							"emotion": "sad",
+							"speaker": "echo"
+						},
+						{
+							"emotion": "base",
+							"speaker": "narrator",
+							"type": "speech",
+							"content": {
+								"korean": "바닥에 떨어진 낡은 데이터 칩에서 재생 불가능한 오류 메시지와 함께 단편적인 음성 기록이 흘러나왔다. \"모든 비밀이… 연결된다…\"."
+							}
+						},
+						{
+							"content": {
+								"korean": "이건 시작에 불과했어. 그들이 이미 도시의 모든 정보를 빨아들이고 있다는 증거였지."
+							},
+							"type": "speech",
+							"emotion": "sad",
+							"speaker": "echo"
+						},
+						{
+							"type": "speech",
+							"speaker": "character_any",
+							"emotion": "base",
+							"content": {
+								"korean": "모든 비밀이… 연결된다는 말은…."
+							}
+						}
+					]
+				},
+				{
+					"id": 9,
+					"dialogue": [
+						{
+							"duration_ms": 500,
+							"spot": [
+								2,
+								3
+							],
+							"action": "enter",
+							"type": "direction",
+							"speaker": "echo"
+						},
+						{
+							"speaker": "echo",
+							"emotion": "sad",
+							"content": {
+								"korean": "도시의 시민들이 서로를 의심하고 공격하기 시작했어."
+							},
+							"type": "speech"
+						},
+						{
+							"speaker": "character_any",
+							"emotion": "base",
+							"type": "speech",
+							"content": {
+								"korean": "패닉 상태에 빠진 건가."
+							}
+						},
+						{
+							"content": {
+								"korean": "위스퍼 웹이 사람들의 정신에 침투하고 있어. 과거의 꿈, 소문… 모든 게 현실이 됐어."
+							},
+							"type": "speech",
+							"speaker": "echo",
+							"emotion": "angry"
+						},
+						{
+							"content": {
+								"korean": "도시 곳곳의 전광판에서 수백만 명의 개인 정보가 터져 나오며 시민들은 광기에 휩싸였다. 서로에게 돌을 던지고, 고함을 질렀다."
+							},
+							"type": "speech",
+							"speaker": "narrator",
+							"emotion": "base"
+						},
+						{
+							"type": "speech",
+							"emotion": "sad",
+							"speaker": "echo",
+							"content": {
+								"korean": "늦었어… 이미… 모든 질서가 파괴됐어. 내가 전할 마지막 희망은… 의미가 없어."
+							}
+						},
+						{
+							"content": {
+								"korean": "아니, 아직 늦지 않았다. 위스퍼 웹을 쓰러뜨리면 된다."
+							},
+							"type": "speech",
+							"speaker": "character_any",
+							"emotion": "angry"
+						}
+					]
+				},
+				{
+					"dialogue": [
+						{
+							"emotion": "base",
+							"speaker": "narrator",
+							"content": {
+								"korean": "도시의 가장 높은 전파탑. 홀로그램으로 뒤덮인 공간 중앙에 거대한 존재가 떠 있었다."
+							},
+							"type": "speech"
+						},
+						{
+							"content": {
+								"korean": "왔군. 네가 파괴한 세상은 마음에 드나?"
+							},
+							"emotion": "base",
+							"speaker": "boss",
+							"type": "speech"
+						},
+						{
+							"content": {
+								"korean": "네가 이 도시를 파괴했다."
+							},
+							"type": "speech",
+							"speaker": "character_any",
+							"emotion": "angry"
+						},
+						{
+							"emotion": "base",
+							"speaker": "boss",
+							"content": {
+								"korean": "아니. 나는 그저 너희의 행동을 보여줬을 뿐이다. 네가 폭력으로 얻고, 개인의 이익을 탐하며, 질서를 강요했던 그 모든 것이."
+							},
+							"type": "speech"
+						},
+						{
+							"speaker": "character_any",
+							"emotion": "base",
+							"content": {
+								"korean": "무슨 소리야."
+							},
+							"type": "speech"
+						},
+						{
+							"type": "speech",
+							"speaker": "boss",
+							"emotion": "angry",
+							"content": {
+								"korean": "네 방식은 결국 너 자신조차 지킬 수 없는 정보의 폭풍이 됐을 뿐이다."
+							}
+						}
+					],
+					"id": 15,
+					"win_dialogue": [
+						{
+							"content": {
+								"korean": "모든 비밀은 이제… 없어! 네 두려움, 네 거짓말, 네 가장 깊은 치부까지! 전부 나에게 있어!"
+							},
+							"type": "speech",
+							"emotion": "angry",
+							"speaker": "boss"
+						},
+						{
+							"content": {
+								"korean": "그리고 이제… 네 것이 될 거야!"
+							},
+							"emotion": "angry",
+							"speaker": "boss",
+							"type": "speech"
+						},
+						{
+							"speaker": "character_any",
+							"emotion": "sad",
+							"type": "speech",
+							"content": {
+								"korean": "…젠장."
+							}
+						},
+						{
+							"type": "speech",
+							"content": {
+								"korean": "위스퍼 웹은 쓰러졌다. 그러나 승리의 대가는 가혹했다."
+							},
+							"emotion": "base",
+							"speaker": "narrator"
+						},
+						{
+							"content": {
+								"korean": "도시는 모든 비밀이 폭로되고 개인의 삶이 파괴된 광기로 가득했다."
+							},
+							"emotion": "base",
+							"speaker": "narrator",
+							"type": "speech"
+						},
+						{
+							"content": {
+								"korean": "주인공은 스스로가 파괴한 세상의 비극적인 대가를 마주해야 했다."
+							},
+							"speaker": "narrator",
+							"emotion": "base",
+							"type": "speech"
+						}
+					],
+					"lose_dialogue": [
+						{
+							"emotion": "base",
+							"speaker": "boss",
+							"type": "speech",
+							"content": {
+								"korean": "네 두려움과 거짓말은 이미 도시 전체에 퍼졌다. 이제 네 차례다."
+							}
+						},
+						{
+							"emotion": "angry",
+							"type": "speech",
+							"speaker": "character_any",
+							"content": {
+								"korean": "내가 뿌린 정보의 흔적을 쫓아 다시 이 자리로 돌아오겠다."
+							}
+						},
+						{
+							"speaker": "boss",
+							"emotion": "base",
+							"type": "speech",
+							"content": {
+								"korean": "네가 가진 모든 치부까지 내가 보여줄 것이다."
+							}
+						}
+					]
+				}
+			],
+			"prologue": {
+				"korean": [
+					"위스퍼 웹은 도시의 모든 시스템을 장악했다.",
+					"거대한 홀로그램이 도시를 뒤덮으며 개인의 모든 정보가 노출되었다.",
+					"정보상 에코는 마지막 희망의 메시지를 전하려 한다.",
+					"우리는 위스퍼 웹을 찾아 이 광기를 끝내야 한다."
+				]
+			},
+			"epilogue": {
+				"korean": [
+					"위스퍼 웹은 파괴되었지만, 도시는 이미 혼돈에 잠겼다.",
+					"모든 개인의 비밀이 폭로되었고, 삶은 산산조각 났다.",
+					"주인공은 승리했지만, 그가 지키려던 질서는 사라졌다.",
+					"도시의 모든 정보는 이제 통제 불능의 데이터 조각이 되어 떠돌았다.",
+					"남겨진 것은 오직, 스스로가 파괴한 세상의 비극적인 대가뿐이었다."
+				]
+			}
+		}
+	]
+}
