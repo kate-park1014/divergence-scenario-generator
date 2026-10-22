@@ -138,7 +138,8 @@ lose_dialogue (패배 시):
 - **5번 시나리오(climax_finale)에 한해** epilogue 필드도 반드시 출력
   - epilogue.korean은 3~5줄 배열 — 전투 종료 후의 여운
   - prologue처럼 건조하고 짧게. 결말 이후의 감정적 잔상을 남길 것
-  - 구원이었는지, 침해였는지, 모호한 여운으로 끝낼 것
+  - 희망적 결말 혹은 현실적 결말 혹은 열린 결말
+
 
 ## 출력 예시
 ${SCENARIO_EXAMPLE}`;

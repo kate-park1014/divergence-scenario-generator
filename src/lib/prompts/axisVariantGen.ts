@@ -32,6 +32,101 @@ export function comboFromTendency(t: Tendency): AxisCombo {
 	return AXIS_ORDER.map((k) => (t[k] < 0 ? AXES[k].neg.code : AXES[k].pos.code)).join('') as AxisCombo;
 }
 
+// ── 장르 풀 ─────────────────────────────────────────────────
+// 아크마다 8개 조합에 장르를 겹치지 않게 배정 (LLM 이 아크에 어울리는 것을 고름, 직접 지정도 가능).
+// 사건 틀(intro·보스·twist)은 그대로, 분위기·사건 종류·대사 톤만 바뀜.
+// group 이 같은 장르(비슷한 결)는 한 아크 안에서 함께 배정하지 않음.
+export type AxisGenre = { name: string; desc: string };
+
+export const GENRE_POOL: (AxisGenre & { group: string })[] = [
+	{ name: '심리 호러', group: 'fear', desc: '익숙한 곳이 조금씩 어긋나며 서서히 조여온다. 같은 사람이 두 번 등장, 거꾸로 가는 시계, 문 너머 내 목소리. 설명하지 말고 이상한 것을 보여줄 것.' },
+	{ name: '오피스 시트콤', group: 'laugh', desc: '진지한 위기를 다들 엉뚱하게 받아들인다. 회의록·결재 서류 개그, 엇박자 리액션, 같은 실수가 세 번 터지는 반복 개그. 웃기지만 사건은 진짜로 굴러간다.' },
+	{ name: '하드보일드 느와르', group: 'dark', desc: '냉소적인 독백, 이겨도 씁쓸하다. 비 오는 밤, 뒷거래, 모두가 하나씩 숨기는 것. 대사는 짧고 건조하게.' },
+	{ name: '정통 추리', group: 'logic', desc: '차분하고 논리적. 씬마다 단서 1개를 손에 넣고 용의자가 바뀐다. 알리바이, 밀실. 함께 추리할 수 있게 공정하게 단서를 깔 것.' },
+	{ name: '멜로 로맨스', group: 'heart', desc: '주인공과 NPC 한 명 사이의 설렘·오해·엇갈림이 사건과 함께 굴러간다. 전하지 못한 쪽지, 비 오는 정류장, 닿을 듯한 손.' },
+	{ name: '재난 블록버스터', group: 'scale', desc: '씬마다 스케일이 커진다. 카운트다운, 대피 인원 숫자, 무너지는 건물, 지휘 무전.' },
+	{ name: '하이스트 케이퍼', group: 'caper', desc: '팀을 모아 불가능한 곳을 턴다. 설계도, 역할 분담, 변장, 계획이 틀어지는 순간과 즉석 반전. 경쾌한 템포, 팀원끼리 티격태격.' },
+	{ name: '판타지 동화', group: 'wonder', desc: '현대에 동화 문법이 섞인다. 말하는 물건, 세 번의 시험, 소원과 대가. 따뜻하지만 동화처럼 잔혹한 대가도 있다.' },
+	{ name: '블랙코미디', group: 'laugh', desc: '끔찍한 일이 너무 태연하게 벌어진다. 사무적인 안내 방송, 웃는 얼굴의 악의, 아이러니한 결말.' },
+	{ name: '타임루프 SF', group: 'loop', desc: '같은 하루(같은 순간)를 반복하며 조금씩 바꾼다. 반복되는 첫 대사, 회차마다 달라지는 작은 디테일, 회차 번호.' },
+	{ name: '서바이벌 데스게임', group: 'fear', desc: '규칙이 있는 잔혹한 게임과 배신의 긴장. 공지되는 규칙, 남은 인원 숫자, 탈락 표시.' },
+	{ name: '성장 청춘물', group: 'heart', desc: '서툴고 뜨겁다. 실패해도 한 뼘 자란다. 옥상, 낡은 사진, 친구와의 약속, 첫 도전.' },
+	{ name: '음모 스릴러', group: 'dark', desc: '누구도 믿을 수 없고 판이 점점 커진다. 도청, 지워진 기록, 갑자기 사라진 증인.' },
+	{ name: '휴먼 신파', group: 'tears', desc: '평범한 사람들의 사정이 눈물 나게 쌓인다. 가족 사진, 병원비 고지서, 끝내 못 한 말.' }
+];
+
+export function findGenre(name: string): AxisGenre | undefined {
+	const g = GENRE_POOL.find((x) => x.name === name);
+	return g && { name: g.name, desc: g.desc };
+}
+
+/** 원본 storyarc 에 어울리는 장르를 조합마다 하나씩 배정하는 프롬프트. fixed 는 이미 정해진 배정(그대로 둠). */
+export function buildGenreAssignPrompt(
+	source: StoryArc,
+	combos: AxisCombo[],
+	fixed: Partial<Record<AxisCombo, string>>
+): string {
+	const fixedLines = Object.entries(fixed).map(([c, g]) => `- ${c} = ${g}`);
+	const comboLines = combos.map(
+		(c) => `- ${c}: ${comboPoles(c).map((p) => p.name).join(' / ')}`
+	);
+	return `당신은 게임 스토리 편집자입니다. 아래 스토리아크를 성향 조합별로 다른 장르로 변주하려 합니다.
+배정할 각 조합에 장르 풀에서 장르를 하나씩 고르세요.
+
+# 규칙
+- 장르 이름은 풀에 있는 이름 그대로. 한 장르는 한 번만 (이미 정해진 배정과도 겹치지 말 것)
+- group 이 같은 장르를 두 개 이상 고르지 말 것 (이미 정해진 배정 포함). 나란히 놓았을 때 결이 확연히 달라야 함
+- 이 아크의 world·보스·twist 와 자연스럽게 맞물리는 장르를 우선. 억지로 끼워 맞춰야 하는 장르는 피할 것
+- 조합의 성향과 장르가 서로 긴장을 만들면 좋음 (성향이 장르 안에서 시험받을 수 있게)
+- reason: 이 아크에서 그 장르가 어떤 이야기가 되는지 한 줄 (구체적으로)
+
+## 장르 풀
+${GENRE_POOL.map((g) => `- ${g.name} [group: ${g.group}]: ${g.desc}`).join('\n')}
+
+## 이미 정해진 배정
+${fixedLines.length ? fixedLines.join('\n') : '(없음)'}
+
+## 배정할 조합
+${comboLines.join('\n')}
+
+## 스토리아크 (id: ${source.id})
+- world: ${source.world.setting} / 규칙: ${source.world.rule} / 비밀: ${source.world.secret}
+- 주인공 목표: ${source.protagonist_goal}
+- 보스: ${source.final_boss.name} — ${source.final_boss.surface_identity} / 정체: ${source.final_boss.true_identity} / twist: ${source.final_boss.twist}
+${[...source.scenarioOutline]
+	.sort((a, b) => a.order - b.order)
+	.map((s) => `- order ${s.order} ${s.title}: ${s.summary}`)
+	.join('\n')}`;
+}
+
+export const genreAssignTool = [
+	{
+		type: 'function',
+		function: {
+			name: 'assign_genres',
+			description: '성향 조합마다 장르를 하나씩 배정합니다.',
+			parameters: {
+				type: 'object',
+				properties: {
+					assignments: {
+						type: 'array',
+						items: {
+							type: 'object',
+							properties: {
+								combo: { type: 'string' },
+								genre: { type: 'string' },
+								reason: { type: 'string' }
+							},
+							required: ['combo', 'genre', 'reason']
+						}
+					}
+				},
+				required: ['assignments']
+			}
+		}
+	}
+];
+
 // ── 변주 세트: 원본 storyarc 1개 + 조합별 차이분만 ─────────────
 export type AxisVariantScene = {
 	order: number;
@@ -43,6 +138,7 @@ export type AxisVariantScene = {
 
 export type AxisVariant = {
 	variant_note: string;
+	genre?: AxisGenre & { reason?: string }; // 이 조합의 장르 (대사 생성에도 전달)
 	facts?: string[]; // 5편이 함께 쓰는 구체적인 사실 (대사 생성에 전달)
 	rising: AxisVariantScene[]; // order 2,3,4
 	climax_summary: string;
@@ -83,7 +179,12 @@ function comboPoles(combo: AxisCombo) {
  * 기존 StoryArc 를 원본으로, 성향 조합에 맞춘 rising 3씬 + climax 해석을 생성하는 프롬프트.
  * intro(order1)와 climax(order5)의 사건 틀·보스·NPC 는 고정.
  */
-export function buildAxisVariantPrompt(source: StoryArc, combo: AxisCombo, npcs: NpcInput[]): string {
+export function buildAxisVariantPrompt(
+	source: StoryArc,
+	combo: AxisCombo,
+	npcs: NpcInput[],
+	genre?: AxisGenre & { reason?: string }
+): string {
 	const poles = comboPoles(combo);
 	const outline = [...source.scenarioOutline].sort((a, b) => a.order - b.order);
 	const intro = outline.find((s) => s.order === 1)!;
@@ -109,6 +210,13 @@ export function buildAxisVariantPrompt(source: StoryArc, combo: AxisCombo, npcs:
 4. **climax 해석**: 사건(보스 등장·변신·twist 대사·결말의 큰 방향)은 원본 그대로 두고,
    보스가 플레이어의 성향을 거울처럼 비추거나 찌르는 방식, 승리/패배의 의미가 성향에 따라 달라지게 다시 쓴다.
 
+# 장르 — 조합마다 전혀 다른 이야기로
+- 이번 변주는 USER 섹션의 **장르** 로 다시 쓴다. 같은 원본이라도 다른 조합과 나란히 놓았을 때 장르가 한눈에 구별돼야 한다.
+- 장르가 바꾸는 것: rising 씬의 사건 종류·장소·분위기, NPC가 주인공을 대하는 방식, climax 의 분위기와 승리/패배의 맛, facts 의 사건들.
+- 장르가 바꾸지 않는 것: 아래 하드 락 항목. 보스·twist 는 장르 안에서 자연스럽게 다시 해석할 것 (예: 코미디면 twist 가 허탈한 웃음으로, 호러면 소름으로 터진다).
+- 장르 톤이 "막장 웹툰" 톤과 부딪히면 장르를 따를 것. 성향 원칙(반영 + 시험)은 장르 안에서 그대로 지킬 것.
+- title 도 장르가 느껴지게 지을 것.
+
 # 하드 락 — 바꾸지 말 것
 - world, final_boss, global_foreshadowing 의 내용
 - intro(order 1)는 변주 대상이 아님. 원본 그대로 이어지는 흐름이어야 함
@@ -116,27 +224,32 @@ export function buildAxisVariantPrompt(source: StoryArc, combo: AxisCombo, npcs:
 - 복선 hint 는 원본과 같은 씬(같은 order)에 자연스럽게 다시 녹일 것
 
 # 작성 규칙
-- rising 3씬(order 2, 3, 4): title·npc·summary 새로 작성. npc 는 아래 목록에서만, 씬당 1명.
+- rising 3씬(order 2, 3, 4): title·npc·summary 새로 작성. npc 는 아래 "등장인물" 목록(원본 아크의 출연진)에서만, 씬당 1명. 새 인물을 데려오지 말 것.
 - summary 는 원본 rising summary 와 비슷한 분량(3~5문장). 성향이 드러나는 구체적 행동·장면을 쓸 것 (추상어 나열 금지).
 - 성향 이름(투쟁·협력·개인·공동체·질서·자유)을 summary 에 직접 쓰지 말 것. 행동과 반응으로 보여줄 것.
-- npc_roles 는 변주에 등장하는 NPC 전원에 대해 role/arc 작성.
+- npc_roles 는 변주에 등장하는 NPC 전원에 대해 role/arc 작성. 최종 보스는 npc_roles 에 넣지 말 것.
+- 원본 npc_roles 의 각 인물 설정(정체·역할·사정)을 유지한 채 장르에 맞게 변주할 것.
+
+# 소재 규칙
+- 장소·물건·사건은 이 아크의 world·final_boss·scenarioOutline 에 나오는 소재로만 만들 것. 다른 이야기의 소재를 끌어오지 말 것
+- 아래 예시들은 형식만 보여주는 틀이다. [ ] 안은 이 아크의 소재로 채울 것
 
 # 구체성 규칙 (원본 스토리아크가 추상적이어도 지킬 것)
-- 비유 금지. "정보의 소용돌이", "광기", "그림자", "잠식", "집어삼키다", "심장부" 같은 표현 대신 실제 물건·장소·숫자로 쓸 것
+- 비유 금지. "~의 소용돌이", "광기", "그림자", "잠식", "집어삼키다", "심장부" 같은 표현 대신 실제 물건·장소·숫자로 쓸 것
 - summary 마다: 주인공이 실제로 한 행동 1개 + 그 결과(누가, 몇 명, 무엇을 잃음)를 적을 것
   - 나쁜 예: "강력한 설득과 물리력을 동원해 협력을 강요한다. 일부 민감한 정보가 유출될 위험에 처한다"
-  - 좋은 예: "주인공은 닥스의 가게 셔터를 내리고 하드디스크 암호를 풀게 한다. 함정 파일이 열려 시민 수천 명의 이름이 시내 광고판으로 나간다"
+  - 좋은 예(틀): "주인공은 [NPC]의 [장소]에서 [구체적 행동]을 한다. 그 결과 [누가·몇 명]이 [무엇을] 잃는다"
 - 앞 씬의 결과가 다음 씬의 상황이 되게 이어서 쓸 것
 - 감정·의미 해석("깊은 회의감을 느낀다", "참혹한 대가를 치른다") 대신 일어난 일을 쓸 것
 
 # facts (사건 기록)
 - 5편 전체가 함께 쓰는 구체적인 사실 6~10개. 각 시나리오 대사를 쓰는 작가가 이것만 보고도 같은 사건을 쓸 수 있어야 함
-- 원본 world·final_boss·복선을 실제 사건으로 바꿔 적을 것. 예: "위스퍼 웹 = 시청 주민 기록을 털어 광고판에 이름·주소를 띄우는 조직", "복선 '깨진 간판' = 광고판에 10초간 실제 주민 이름이 뜨는 현상"
+- 원본 world·final_boss·복선을 실제 사건으로 바꿔 적을 것. 예(틀): "[보스/조직] = [실제로 무엇을 어떻게 하는 존재]", "복선 '[hint 요약]' = [눈에 보이는 구체적 현상]"
 - intro(order 1)의 구체적인 사건, NPC마다 구체적인 사정(직업, 지키려는 것), climax 의 구체적인 피해도 포함`;
 
 	const USER = `## 이번 성향 조합: ${combo}
 ${poles.map((p) => `- ${p.code} = ${p.name}: ${p.desc}`).join('\n')}
-
+${genre ? `\n## 이번 장르: ${genre.name}\n${genre.desc}${genre.reason ? `\n- 이 아크에서의 방향: ${genre.reason}` : ''}\n` : ''}
 ## 원본 스토리아크 (id: ${source.id})
 ### world
 - setting: ${source.world.setting}
@@ -169,11 +282,11 @@ ${climax.summary}
 - rising: ${source.act_summary.rising}
 - climax_finale: ${source.act_summary.climax_finale}
 
-## 사용 가능한 NPC 목록
+## 등장인물 (원본 아크 출연진 — 이 중에서만)
 ${npcList}
 
 ## 요구사항
-- rising 3씬(order 2,3,4)과 climax summary, act_summary(rising/climax_finale), npc_roles 를 ${combo} 플레이어용으로 작성
+- rising 3씬(order 2,3,4)과 climax summary, act_summary(rising/climax_finale), npc_roles 를 ${combo} 플레이어용${genre ? ` "${genre.name}" 장르로` : '으로'} 작성
 - climax 의 npc 는 "${climax.npc}" 고정, title 은 "${climax.title}" 고정
 - variant_note: 이 변주가 원본과 어떻게 다른지 2~3문장 설명 (내부 비교용)
 - facts: 위 "facts (사건 기록)" 규칙대로 6~10개`;
@@ -204,31 +317,75 @@ export function buildAxisScenarioPrompt(
 	order: number,
 	arc: StoryArc,
 	facts: string[],
-	previous: string[]
+	previous: string[],
+	genre?: AxisGenre
 ): string {
+	const GENRE = genre
+		? `# 장르: ${genre.name} (위 톤 규칙보다 우선)
+${genre.desc}
+- prologue·narrator·대사·보스 대사 모두 이 장르의 분위기로 쓸 것. "막장 웹툰" 톤과 부딪히면 장르를 따를 것
+- 아래 문체 규칙(비유 금지·구체적 사건·분량)은 장르 안에서 그대로 지킬 것`
+		: '';
+
+	const WEBTOON = `# 웹툰(만화) 대사 형식
+- 한 줄 = 말풍선 하나. 한 말풍선은 25자 이내, 길면 두 줄(두 말풍선)로 쪼갤 것. 한 줄에 문장 2개 이상 넣지 말 것
+- 구어체로 짧고 리듬감 있게. 감탄사·말줄임표·되묻기·끊긴 말("잠깐, 그 서류—")을 적극적으로
+- 리액션 컷을 넣을 것: 놀람·당황·버럭을 짧은 한 마디로 ("뭐?!", "…헐.", "야!!") — 단, 방마다 1~2개까지
+- 효과음은 narrator 줄로 짧게 쓸 수 있음 (예: "쾅!", "스윽—", "띠링♪"). 방마다 최대 1개
+- narrator 는 컷 설명처럼 한 문장으로 짧게 (예: "복도 끝, 면접실 문이 열려 있다.")
+- emotion 을 대사 톤에 맞게 바꿔 가며 쓸 것 (한 방 안에서 전부 base 금지)
+- 설명조·연설조 대사 금지. 정보는 주고받는 짧은 대화로 나눠서 전달
+
+# 대화 연결 (가장 중요)
+- 모든 대사는 바로 앞 줄에 대한 반응이다. 앞 줄의 단어를 받아서 묻거나, 따지거나, 비틀거나, 대답할 것
+- 화제를 건너뛰지 말 것. 앞 사람이 한 말을 무시하고 자기 할 말(정보 전달·다음 행동 제안)로 넘어가지 말 것
+- 낯선 말("여기", "그거", "그 사람")이 나오면 주인공이 독자 대신 되물을 것. 그 답에서 정보가 나오게
+  - 나쁜 예: A "그 문, 열면 안 돼!" → B "같이 방법을 찾아봐요."  (앞 말을 안 받음)
+  - 좋은 예: A "그 문, 열면 안 돼!" → B "그 문이 뭔데." → A "…열어 본 사람이 없어. 그래서 몰라."
+- 단, 앵무새 되묻기("~라고요?", "~요?", "~라니.")처럼 앞 말을 그대로 반복하는 대사는 방마다 최대 1번
+  - 나머지 반응은 앞 말을 받되 새로운 것(의심·추측·관찰·행동)을 하나 덧붙일 것
+  - 나쁜 예: A "다들 떠났어요." → B "…떠났다고요?"
+  - 좋은 예: A "다들 떠났어요." → B "떠나요? 저기 가방은 그대로인데."
+- 주인공(character_any)은 무난한 맞장구·제안 대신 자기 성격이 보이는 반응을 할 것 (의심, 츳코미, 버럭, 농담 등 장르에 맞게)
+- 한 사람이 두 줄 연속으로 말할 때는 두 번째 줄이 첫 줄을 이어받는 말일 것 (다른 화제 금지)
+
+# 방 마무리 (각 방 dialogue 의 마지막 1~2줄)
+- 방은 다음 방이 궁금해지는 한 컷으로 끝낼 것. 아래 중 하나:
+  - 반전: 방금 들은 것과 반대되는 사실이 드러남
+  - 결정: 주인공이 구체적인 다음 행동을 정함 ("[어디]로 간다")
+  - 위협: 무언가 다가오거나 시간이 줄어듦
+  - 펀치라인: 장르에 맞는 한 마디 (코미디면 웃음, 호러면 소름)
+- 금지: 흐지부지한 질문으로 끝내기("어떤 방법을…?", "이제 어떻게 하지?"), 의미 없는 말줄임, 같은 결론 반복,
+  "~다니."로 끝나는 혼잣말, 감정·몸짓만 묘사하는 지문("손이 떨렸다", "표정이 굳었다")
+- 마지막 컷에는 새로 일어난 일이나 새로 정해진 것이 있어야 함
+
+# prologue
+- 지난 편의 결과와 이번 목표를 사실로만. "~의 시작이었다", "운명이었다" 같은 예고편·비유 문장 금지`;
+
 	const STYLE = `# 성향 변주 문체 규칙 (위 규칙과 겹치면 이 규칙을 따를 것)
-- 비유 금지. "정보의 강물", "소용돌이", "집어삼키다", "잠식", "독이 된다", "심장부", "그림자", "파국", "광기", "혼돈" 같은 표현 대신 실제 물건·장소·숫자로 쓸 것
-- 분량 제한 (speech 줄 수, direction 제외): 방 1·3·5·9 의 dialogue 는 4~6줄, 방 15 dialogue 3~4줄, win_dialogue 3~4줄, lose_dialogue 2줄. 대사 한 줄은 40자 이내
+- 비유 금지. "~의 강물", "소용돌이", "집어삼키다", "잠식", "독이 된다", "심장부", "그림자", "파국", "광기", "혼돈" 같은 표현 대신 실제 물건·장소·숫자로 쓸 것
+- 분량 제한 (speech 줄 수, direction 제외): 방 1·3·5·9 의 dialogue 는 6~9줄, 방 15 dialogue 4~6줄, win_dialogue 4~5줄, lose_dialogue 2~3줄 (말풍선이 짧은 만큼 줄 수는 조금 많게). 대사 한 줄은 25자 이내(웹툰 형식 참고)
   - 줄이 남으면 인사·맞장구·같은 말 반복부터 뺄 것. 방마다 사건 1개와 결과는 남길 것
 - 보스(random_boss, boss)는 방 15에서만 등장. 방 1~9 에 보스 대사 금지. win_dialogue·lose_dialogue 는 방 15에만
-- 방 15의 random_boss 등장 지문: 위 보스 규칙의 "거대한 그림자" 대신 "정체 모를 자" 또는 행동으로 쓸 것 (예: "서버 앞에 누군가 서 있었다")
-- 아래 나쁜 예·좋은 예 문장은 방향만 참고. 그대로 쓰지 말 것
-- 방마다 구체적인 사건 1개: 누가 무엇을 했고 결과가 무엇인지 (몇 명, 얼마, 어디)
+- 방 15의 random_boss 등장 지문: 위 보스 규칙의 "거대한 그림자" 대신 "정체 모를 자" 또는 행동으로 쓸 것 (틀: "[이 아크의 장소] 앞에 누군가 서 있었다")
+- 아래 예시는 형식만 보여주는 틀이다. [ ] 안은 이 아크의 소재(사건 기록·world)로 채우고, 예시 문장을 그대로 쓰지 말 것
+- 장소·물건·조직 이름은 이 아크의 storyarc·사건 기록에 나오는 것만 쓸 것. 다른 이야기의 소재(다른 조직·장비·장소)를 끌어오지 말 것
+- 방마다 구체적인 사건 1개: 누가 무엇을 했고 결과가 무엇인지 (몇 명, 얼마, 어디). 단, 정보는 대화 연결 규칙대로 묻고 답하는 흐름 안에서 꺼낼 것 (한 줄에 몰아넣지 말 것)
 - 경고 대사에는 이유를 넣을 것
   - 나쁜 예: "더 깊이 들어가면 돌이킬 수 없어." / "진실은 때로… 독이 되기도 해."
-  - 좋은 예: "그거 억지로 열면 안에 든 개인 기록이 같이 새." / "그러면 피해자 이름도 같이 퍼져."
+  - 좋은 예(틀): "그거 [행동]하면 [누구]의 [무엇]이 [어떻게] 돼."
 - 보스는 철학적으로 말하지 말 것. 자기가 한 일, 원하는 것, 플레이어가 한 일을 짚을 것
-  - 나쁜 예: "모든 것은 결국 정보의 바다에 잠기게 될 것이다."
-  - 좋은 예: "때린 건 사람들이야. 난 이름만 띄웠어. 너도 오늘 한 명 때렸잖아."
+  - 나쁜 예: "모든 것은 결국 거대한 바다에 잠기게 될 것이다."
+  - 좋은 예(틀): "[보스가 한 구체적인 일]. 너도 오늘 [플레이어가 한 구체적인 일]잖아."
 - narrator 는 눈에 보이는 일만 쓸 것. 감정·의미 해석 금지
-  - 나쁜 예: "파헤쳐진 비밀의 무게는 카이의 삶을 짓눌렀다."
-  - 좋은 예: "카이는 세탁소 열쇠를 바닥에 내려놓았다."
+  - 나쁜 예: "파헤쳐진 비밀의 무게가 [NPC]의 삶을 짓눌렀다."
+  - 좋은 예(틀): "[NPC]는 [자기 사정과 관련된 물건]을 바닥에 내려놓았다."
 - id 9: "돌아올 수 없는 느낌" 대신 되돌릴 수 없는 구체적인 일이 일어나거나 결정될 것
 - prologue: 예고편 말투 대신, 지금까지 일어난 일과 이번 목표를 사실로 쓸 것. 이번 시나리오에서 일어날 결과는 미리 말하지 말 것
-- 복선 hint 문장을 그대로 베끼지 말고 이 사건에 맞게 바꿔 쓸 것. "위스퍼 웹의 징표야"처럼 뜻을 설명하지 말고 보이는 것만 쓸 것
+- 복선 hint 문장을 그대로 베끼지 말고 이 사건에 맞게 바꿔 쓸 것. "[조직]의 징표야"처럼 뜻을 설명하지 말고 보이는 것만 쓸 것
 - 사건 기록에 없는 큰 설정(새 조직, 새 초능력 등)을 만들지 말 것. 시간·장소 이름·숫자 같은 작은 사항은 추가 가능
 - 앞 시나리오가 있으면: 그 결과에서 이어서 시작하고, 앞에서 나온 문장·표현을 다시 쓰지 말 것
-- lose_dialogue 도 시나리오마다 다르게. "아직 끝나지 않았어", "이대로 끝낼 순 없어" 같은 다짐 대신 구체적인 다음 행동을 말할 것 (예: "내일 밤 송출실부터 끈다")`;
+- lose_dialogue 도 시나리오마다 다르게. "아직 끝나지 않았어", "이대로 끝낼 순 없어" 같은 다짐 대신 구체적인 다음 행동을 말할 것 (틀: "[언제] [어디]부터 [무엇을 한다]")`;
 
 	const FACTS = facts.length
 		? `## 사건 기록 (5편 공통 사실)\n${facts.map((f) => `- ${f}`).join('\n')}`
@@ -237,7 +394,7 @@ export function buildAxisScenarioPrompt(
 		? `## 앞 시나리오 대사 (이어서 쓸 것, 문장 재사용 금지)\n${previous.join('\n\n')}`
 		: '';
 
-	return [buildScenarioPrompt(order, arc), STYLE, FACTS, PREV].filter(Boolean).join('\n\n---\n\n');
+	return [buildScenarioPrompt(order, arc), GENRE, WEBTOON, STYLE, FACTS, PREV].filter(Boolean).join('\n\n---\n\n');
 }
 
 const sceneSchema = {

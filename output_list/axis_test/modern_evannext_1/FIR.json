@@ -1,0 +1,2301 @@
+{
+	"chapter_order": 2,
+	"difficulty_level": 2,
+	"chapter_name": {
+		"vietnamese": "Không Lần",
+		"french": "Plus de",
+		"spanish": "No Hay",
+		"thai": "ไม่มีครั้งหน",
+		"english": "No Next Time",
+		"hindi": "कोई अगली बार",
+		"korean": "다음은 없다",
+		"chinese": "没有下次",
+		"japanese": "次はない"
+	},
+	"axis_combo": "FIR",
+	"genre": "정통 추리",
+	"variant_note": "이 변주는 FIR 성향에 맞춰 '정통 추리' 장르로 재해석되었다. 원본의 추상적인 불안감 대신 구체적인 단서와 용의자를 제시하며, 주인공의 투쟁적(F), 개인적(I), 질서적(R) 행동이 수사 과정에서 어떤 대가를 치르는지 보여준다. 클라이맥스에서는 에반 넥스트가 논리로 주인공을 몰아세우고, 주인공은 논리와 행동으로 맞서는 구도가 강조된다.",
+	"scenarios": [
+		{
+			"scenario_id": "modern_evannext_1_FIR_01",
+			"order": 1,
+			"act": "intro",
+			"theme": "modern",
+			"actors": {
+				"lin": {
+					"id": "mon_d036a884-3dde-472c-9fe7-c4807643860f",
+					"name": {
+						"korean": "린",
+						"english": "Lin",
+						"japanese": "リン",
+						"chinese": "琳",
+						"french": "Lin",
+						"spanish": "Lin",
+						"vietnamese": "Lin",
+						"thai": "ลิน",
+						"hindi": "लिन"
+					},
+					"description": "",
+					"face_image_url": "https://imagedelivery.net/WTEqQNGFb-l-IHS6IGnzUQ/a095dd66-1857-4f44-68b0-2ece83006d00/public",
+					"battle_sprite_url": "https://imagedelivery.net/WTEqQNGFb-l-IHS6IGnzUQ/05b02694-f1ed-4e4c-b7ca-fb5b74a48900/public"
+				}
+			},
+			"boss": {
+				"pool_id": "random_boss"
+			},
+			"rooms": [
+				{
+					"dialogue": [
+						{
+							"type": "speech",
+							"content": {
+								"korean": "조명이 어두운 대기실, 수많은 사람들이 앉아 있다."
+							},
+							"speaker": "narrator",
+							"emotion": "base"
+						},
+						{
+							"type": "speech",
+							"content": {
+								"korean": "여기가 '최종 기회 대기실'인가요?"
+							},
+							"speaker": "character_any",
+							"emotion": "base"
+						},
+						{
+							"action": "enter",
+							"duration_ms": 500,
+							"type": "direction",
+							"speaker": "lin",
+							"spot": [
+								4,
+								3
+							]
+						},
+						{
+							"speaker": "lin",
+							"emotion": "happy",
+							"type": "speech",
+							"content": {
+								"korean": "맞아요. 환영해요."
+							}
+						},
+						{
+							"speaker": "lin",
+							"emotion": "base",
+							"type": "speech",
+							"content": {
+								"korean": "저는 린이에요. 안내를 도울 거예요."
+							}
+						},
+						{
+							"type": "speech",
+							"content": {
+								"korean": "안내요?"
+							},
+							"speaker": "character_any",
+							"emotion": "base"
+						},
+						{
+							"type": "speech",
+							"content": {
+								"korean": "네. '다음 기회' 준비는 중요하죠."
+							},
+							"speaker": "lin",
+							"emotion": "base"
+						},
+						{
+							"speaker": "character_any",
+							"emotion": "sad",
+							"type": "speech",
+							"content": {
+								"korean": "다들 '다음'이라고만 말하네요."
+							}
+						},
+						{
+							"content": {
+								"korean": "몇몇 지원자들이 벽을 긁는 소리가 들린다."
+							},
+							"type": "speech",
+							"speaker": "narrator",
+							"emotion": "base"
+						},
+						{
+							"speaker": "character_any",
+							"emotion": "sad",
+							"type": "speech",
+							"content": {
+								"korean": "…이상해."
+							}
+						}
+					],
+					"id": 1
+				},
+				{
+					"dialogue": [
+						{
+							"duration_ms": 500,
+							"speaker": "lin",
+							"type": "direction",
+							"action": "enter",
+							"spot": [
+								4,
+								3
+							]
+						},
+						{
+							"speaker": "lin",
+							"emotion": "base",
+							"type": "speech",
+							"content": {
+								"korean": "자, 이쪽으로 오세요."
+							}
+						},
+						{
+							"content": {
+								"korean": "저 사람들은 뭐 하는 거죠?"
+							},
+							"type": "speech",
+							"speaker": "character_any",
+							"emotion": "base"
+						},
+						{
+							"speaker": "lin",
+							"emotion": "base",
+							"content": {
+								"korean": "'다음 기회'를 준비 중이죠."
+							},
+							"type": "speech"
+						},
+						{
+							"type": "speech",
+							"content": {
+								"korean": "모두 똑같은 말만 해요. '다음'…"
+							},
+							"speaker": "character_any",
+							"emotion": "sad"
+						},
+						{
+							"content": {
+								"korean": "과거는 중요하지 않아요. 오직 '다음'."
+							},
+							"type": "speech",
+							"speaker": "lin",
+							"emotion": "base"
+						},
+						{
+							"speaker": "character_any",
+							"emotion": "base",
+							"type": "speech",
+							"content": {
+								"korean": "과거 기록이 사라진다니?"
+							}
+						},
+						{
+							"content": {
+								"korean": "오직 다음만 보세요. 성공의 지름길이죠."
+							},
+							"speaker": "lin",
+							"emotion": "happy",
+							"type": "speech"
+						},
+						{
+							"speaker": "narrator",
+							"emotion": "base",
+							"type": "speech",
+							"content": {
+								"korean": "대기실 복도에서 희미한 속삭임이 들린다."
+							}
+						},
+						{
+							"speaker": "character_any",
+							"emotion": "sad",
+							"type": "speech",
+							"content": {
+								"korean": "…사라진 사람들이 많다는 소문이?"
+							}
+						}
+					],
+					"id": 3
+				},
+				{
+					"dialogue": [
+						{
+							"type": "direction",
+							"speaker": "lin",
+							"duration_ms": 500,
+							"spot": [
+								4,
+								3
+							],
+							"action": "enter"
+						},
+						{
+							"speaker": "lin",
+							"emotion": "base",
+							"type": "speech",
+							"content": {
+								"korean": "'성공 가이드'는 받아봤나요?"
+							}
+						},
+						{
+							"speaker": "character_any",
+							"emotion": "base",
+							"type": "speech",
+							"content": {
+								"korean": "성공한 사람들은 어디로 가나요?"
+							}
+						},
+						{
+							"content": {
+								"korean": "더 높은 곳으로 갔죠. 물론이에요."
+							},
+							"speaker": "lin",
+							"emotion": "happy",
+							"type": "speech"
+						},
+						{
+							"content": {
+								"korean": "소문에는… 아무 흔적도 없다고 하던데."
+							},
+							"type": "speech",
+							"speaker": "character_any",
+							"emotion": "sad"
+						},
+						{
+							"type": "speech",
+							"speaker": "narrator",
+							"emotion": "base",
+							"content": {
+								"korean": "면접실 문이 살짝 열려 있고, 안은 비어 있다."
+							}
+						},
+						{
+							"type": "speech",
+							"content": {
+								"korean": "면접관은 없어요?"
+							},
+							"speaker": "character_any",
+							"emotion": "base"
+						},
+						{
+							"speaker": "lin",
+							"emotion": "base",
+							"type": "speech",
+							"content": {
+								"korean": "지금은 서류만 있어요. 곧 '다음'이 올 거예요."
+							}
+						},
+						{
+							"speaker": "character_any",
+							"emotion": "sad",
+							"type": "speech",
+							"content": {
+								"korean": "…서류?"
+							}
+						}
+					],
+					"id": 5
+				},
+				{
+					"id": 9,
+					"dialogue": [
+						{
+							"duration_ms": 500,
+							"spot": [
+								4,
+								3
+							],
+							"speaker": "lin",
+							"type": "direction",
+							"action": "enter"
+						},
+						{
+							"content": {
+								"korean": "첫 시험이에요. 가이드를 잘 따랐죠?"
+							},
+							"type": "speech",
+							"speaker": "lin",
+							"emotion": "base"
+						},
+						{
+							"content": {
+								"korean": "린 씨 조언은 너무… 완벽했어요."
+							},
+							"speaker": "character_any",
+							"emotion": "sad",
+							"type": "speech"
+						},
+						{
+							"content": {
+								"korean": "완벽한 준비가 '다음 기회'를 만들죠."
+							},
+							"type": "speech",
+							"speaker": "lin",
+							"emotion": "base"
+						},
+						{
+							"type": "speech",
+							"content": {
+								"korean": "만약 실패하면요?"
+							},
+							"speaker": "character_any",
+							"emotion": "base"
+						},
+						{
+							"type": "speech",
+							"speaker": "lin",
+							"emotion": "base",
+							"content": {
+								"korean": "그런 질문은 하지 않아요. 오직 '다음'."
+							}
+						},
+						{
+							"content": {
+								"korean": "주인공이 면접실 안으로 들어선다."
+							},
+							"speaker": "narrator",
+							"emotion": "base",
+							"type": "speech"
+						},
+						{
+							"content": {
+								"korean": "나는 이 규칙을 따르지 않겠어."
+							},
+							"speaker": "character_any",
+							"emotion": "angry",
+							"type": "speech"
+						}
+					]
+				},
+				{
+					"lose_dialogue": [
+						{
+							"type": "speech",
+							"content": {
+								"korean": "넌 '다음'을 준비하지 않았어."
+							},
+							"speaker": "random_boss",
+							"emotion": "base"
+						},
+						{
+							"type": "speech",
+							"speaker": "random_boss",
+							"emotion": "base",
+							"content": {
+								"korean": "다시… 처음부터 시작해라."
+							}
+						},
+						{
+							"speaker": "character_any",
+							"emotion": "angry",
+							"content": {
+								"korean": "아니. 난 여기서 이 시스템을 부술 거야."
+							},
+							"type": "speech"
+						}
+					],
+					"dialogue": [
+						{
+							"content": {
+								"korean": "면접실 안, 서류 더미 앞에 정체 모를 자가 서 있었다."
+							},
+							"speaker": "narrator",
+							"emotion": "base",
+							"type": "speech"
+						},
+						{
+							"content": {
+								"korean": "당신이… 면접관인가요?"
+							},
+							"type": "speech",
+							"speaker": "character_any",
+							"emotion": "base"
+						},
+						{
+							"content": {
+								"korean": "아니. 나는 '다음 기회'의 수호자다."
+							},
+							"type": "speech",
+							"speaker": "random_boss",
+							"emotion": "base"
+						},
+						{
+							"speaker": "random_boss",
+							"emotion": "angry",
+							"type": "speech",
+							"content": {
+								"korean": "네가 규칙을 어기려 하는군."
+							}
+						},
+						{
+							"speaker": "character_any",
+							"emotion": "angry",
+							"type": "speech",
+							"content": {
+								"korean": "이 굴레를 끊을 거야."
+							}
+						}
+					],
+					"win_dialogue": [
+						{
+							"speaker": "random_boss",
+							"emotion": "sad",
+							"type": "speech",
+							"content": {
+								"korean": "크윽… 어리석은 도전이다."
+							}
+						},
+						{
+							"type": "speech",
+							"content": {
+								"korean": "'다음'은 계속될 거야. 영원히."
+							},
+							"speaker": "random_boss",
+							"emotion": "base"
+						},
+						{
+							"speaker": "character_any",
+							"emotion": "happy",
+							"type": "speech",
+							"content": {
+								"korean": "아니. 이제 진짜 시작이야."
+							}
+						},
+						{
+							"content": {
+								"korean": "시스템이 경고음을 내며, 대기실 곳곳에 균열이 가기 시작한다."
+							},
+							"speaker": "narrator",
+							"emotion": "base",
+							"type": "speech"
+						}
+					],
+					"id": 15
+				}
+			],
+			"prologue": {
+				"korean": [
+					"발신자 불명의 등기 우편을 받았다.",
+					"'최고의 기회'라는 문구가 쓰여 있었다.",
+					"낯선 대기실에 도착했다.",
+					"'린'이라는 직원이 나를 안내했다.",
+					"나는 첫 시험을 앞두고 있었다."
+				]
+			}
+		},
+		{
+			"scenario_id": "modern_evannext_1_FIR_02",
+			"order": 2,
+			"act": "rising",
+			"theme": "modern",
+			"actors": {
+				"nia": {
+					"id": "mon_872177dd-fcf0-40d8-b78c-fd795017c763",
+					"name": {
+						"korean": "니아",
+						"english": "Nia",
+						"japanese": "ニア",
+						"chinese": "妮娅",
+						"french": "Nia",
+						"spanish": "Nia",
+						"vietnamese": "Nia",
+						"thai": "เนีย",
+						"hindi": "निया"
+					},
+					"description": "",
+					"face_image_url": "https://imagedelivery.net/WTEqQNGFb-l-IHS6IGnzUQ/db690f96-d5b3-498a-f4ec-f269e6e95100/public",
+					"battle_sprite_url": "https://imagedelivery.net/WTEqQNGFb-l-IHS6IGnzUQ/a8fe5d7a-56fe-4822-c272-5a04fd7f4c00/public"
+				}
+			},
+			"boss": {
+				"pool_id": "random_boss"
+			},
+			"rooms": [
+				{
+					"dialogue": [
+						{
+							"type": "speech",
+							"speaker": "narrator",
+							"emotion": "base",
+							"content": {
+								"korean": "어두운 복도 끝, '니아 정보원' 명패가 보인다."
+							}
+						},
+						{
+							"speaker": "character_any",
+							"emotion": "base",
+							"type": "speech",
+							"content": {
+								"korean": "여기가 니아 사무실?"
+							}
+						},
+						{
+							"content": {
+								"korean": "'다음 기회' 통지서… 뭔가 이상해."
+							},
+							"speaker": "character_any",
+							"emotion": "sad",
+							"type": "speech"
+						},
+						{
+							"type": "direction",
+							"speaker": "nia",
+							"action": "enter",
+							"duration_ms": 500,
+							"spot": [
+								4,
+								3
+							]
+						},
+						{
+							"content": {
+								"korean": "누구…세요?"
+							},
+							"type": "speech",
+							"emotion": "base",
+							"speaker": "nia"
+						},
+						{
+							"type": "speech",
+							"content": {
+								"korean": "정보원 니아 씨 맞죠?"
+							},
+							"speaker": "character_any",
+							"emotion": "base"
+						},
+						{
+							"content": {
+								"korean": "맞는데… 왜 남의 사무실에 막 들어와요?"
+							},
+							"type": "speech",
+							"speaker": "nia",
+							"emotion": "angry"
+						},
+						{
+							"content": {
+								"korean": "중요한 걸 물어볼 게 있어요. 지금."
+							},
+							"emotion": "base",
+							"speaker": "character_any",
+							"type": "speech"
+						}
+					],
+					"id": 1
+				},
+				{
+					"dialogue": [
+						{
+							"speaker": "nia",
+							"action": "enter",
+							"type": "direction",
+							"duration_ms": 500,
+							"spot": [
+								4,
+								3
+							]
+						},
+						{
+							"type": "speech",
+							"content": {
+								"korean": "정말… 이상한 사람이야."
+							},
+							"speaker": "nia",
+							"emotion": "sad"
+						},
+						{
+							"content": {
+								"korean": "협조하세요, 니아 씨."
+							},
+							"emotion": "base",
+							"speaker": "character_any",
+							"type": "speech"
+						},
+						{
+							"emotion": "angry",
+							"speaker": "nia",
+							"type": "speech",
+							"content": {
+								"korean": "내가 왜? 여긴 내 공간인데."
+							}
+						},
+						{
+							"emotion": "base",
+							"speaker": "character_any",
+							"type": "speech",
+							"content": {
+								"korean": "'다음 기회' 시스템에 대해 조사 중이죠?"
+							}
+						},
+						{
+							"type": "speech",
+							"content": {
+								"korean": "그걸… 어떻게 알았어요?"
+							},
+							"emotion": "sad",
+							"speaker": "nia"
+						},
+						{
+							"speaker": "character_any",
+							"emotion": "base",
+							"type": "speech",
+							"content": {
+								"korean": "탁자 위 서류들이 말해주네요. 전부."
+							}
+						},
+						{
+							"content": {
+								"korean": "이건… 내 비밀인데."
+							},
+							"type": "speech",
+							"emotion": "sad",
+							"speaker": "nia"
+						},
+						{
+							"speaker": "character_any",
+							"emotion": "base",
+							"type": "speech",
+							"content": {
+								"korean": "왜 '다음 기회'는 모든 기록을 지울까요?"
+							}
+						},
+						{
+							"speaker": "nia",
+							"emotion": "sad",
+							"content": {
+								"korean": "그게… 핵심이에요. 흔적도 없이 사라져."
+							},
+							"type": "speech"
+						}
+					],
+					"id": 3
+				},
+				{
+					"dialogue": [
+						{
+							"spot": [
+								4,
+								3
+							],
+							"duration_ms": 500,
+							"speaker": "nia",
+							"action": "enter",
+							"type": "direction"
+						},
+						{
+							"content": {
+								"korean": "저리 가요! 내 소중한 자료들…"
+							},
+							"type": "speech",
+							"speaker": "nia",
+							"emotion": "angry"
+						},
+						{
+							"content": {
+								"korean": "빨리 말했어야죠. 시간을 낭비할 수 없어."
+							},
+							"type": "speech",
+							"emotion": "angry",
+							"speaker": "character_any"
+						},
+						{
+							"type": "speech",
+							"content": {
+								"korean": "이 서류들… 잉크가 번져서 해독 불가능해졌잖아."
+							},
+							"speaker": "character_any",
+							"emotion": "sad"
+						},
+						{
+							"type": "speech",
+							"content": {
+								"korean": "내가… 내가 밤새 정리한 건데!"
+							},
+							"emotion": "angry",
+							"speaker": "nia"
+						},
+						{
+							"speaker": "character_any",
+							"emotion": "base",
+							"type": "speech",
+							"content": {
+								"korean": "이게 뭐죠? '에반 넥스트'?"
+							}
+						},
+						{
+							"speaker": "nia",
+							"emotion": "sad",
+							"content": {
+								"korean": "그건… 보면 안 되는 이름인데…"
+							},
+							"type": "speech"
+						},
+						{
+							"emotion": "base",
+							"speaker": "character_any",
+							"type": "speech",
+							"content": {
+								"korean": "이 사람이 누구예요?"
+							}
+						},
+						{
+							"content": {
+								"korean": "시스템 관리자… 같은 거였어."
+							},
+							"type": "speech",
+							"speaker": "nia",
+							"emotion": "base"
+						},
+						{
+							"type": "speech",
+							"emotion": "base",
+							"speaker": "character_any",
+							"content": {
+								"korean": "시스템 관리자라니?"
+							}
+						}
+					],
+					"id": 5
+				},
+				{
+					"id": 9,
+					"dialogue": [
+						{
+							"action": "enter",
+							"duration_ms": 500,
+							"spot": [
+								4,
+								3
+							],
+							"speaker": "nia",
+							"type": "direction"
+						},
+						{
+							"emotion": "sad",
+							"speaker": "nia",
+							"type": "speech",
+							"content": {
+								"korean": "에반 넥스트… 정말 위험한 이름이에요."
+							}
+						},
+						{
+							"speaker": "character_any",
+							"emotion": "base",
+							"type": "speech",
+							"content": {
+								"korean": "그가 '다음 기회' 통지서를 발행하는 거죠?"
+							}
+						},
+						{
+							"speaker": "nia",
+							"emotion": "base",
+							"type": "speech",
+							"content": {
+								"korean": "네. 그리고… '진출 예상 보고서'를 뿌리기도 하고."
+							}
+						},
+						{
+							"content": {
+								"korean": "보고서요?"
+							},
+							"speaker": "character_any",
+							"emotion": "base",
+							"type": "speech"
+						},
+						{
+							"emotion": "angry",
+							"speaker": "nia",
+							"type": "speech",
+							"content": {
+								"korean": "헛된 희망을 주입하는… 가짜 보고서."
+							}
+						},
+						{
+							"content": {
+								"korean": "결국 우리를 속인 거였군."
+							},
+							"type": "speech",
+							"emotion": "angry",
+							"speaker": "character_any"
+						},
+						{
+							"content": {
+								"korean": "그를 찾으려다… 사라진 사람이 많아요. 정말."
+							},
+							"speaker": "nia",
+							"emotion": "sad",
+							"type": "speech"
+						},
+						{
+							"emotion": "angry",
+							"speaker": "character_any",
+							"content": {
+								"korean": "나는 직접 찾아야겠어. 에반 넥스트를."
+							},
+							"type": "speech"
+						}
+					]
+				},
+				{
+					"lose_dialogue": [
+						{
+							"emotion": "angry",
+							"speaker": "random_boss",
+							"type": "speech",
+							"content": {
+								"korean": "넌 진실을 감당 못 해. 돌아가."
+							}
+						},
+						{
+							"speaker": "character_any",
+							"emotion": "angry",
+							"type": "speech",
+							"content": {
+								"korean": "아니. 다시… 에반 넥스트를 찾아야 해."
+							}
+						},
+						{
+							"type": "speech",
+							"emotion": "base",
+							"speaker": "random_boss",
+							"content": {
+								"korean": "포기해라. 그게 네 '다음 기회'다."
+							}
+						}
+					],
+					"dialogue": [
+						{
+							"content": {
+								"korean": "니아의 사무실 깊은 곳, 정체 모를 자가 통로를 막아섰다."
+							},
+							"type": "speech",
+							"emotion": "base",
+							"speaker": "narrator"
+						},
+						{
+							"speaker": "random_boss",
+							"emotion": "angry",
+							"type": "speech",
+							"content": {
+								"korean": "더 이상은 안 된다. 규칙을 어기지 마라."
+							}
+						},
+						{
+							"emotion": "angry",
+							"type": "speech",
+							"speaker": "character_any",
+							"content": {
+								"korean": "비켜. 에반 넥스트를 찾아야 해."
+							}
+						},
+						{
+							"content": {
+								"korean": "진실은… 너에게 독이 될 뿐이다."
+							},
+							"type": "speech",
+							"emotion": "angry",
+							"speaker": "random_boss"
+						},
+						{
+							"type": "speech",
+							"content": {
+								"korean": "여기가 바로 내가 찾던 진실이야."
+							},
+							"emotion": "angry",
+							"speaker": "character_any"
+						}
+					],
+					"win_dialogue": [
+						{
+							"content": {
+								"korean": "크윽… 네가 이겼다고 생각하나?"
+							},
+							"type": "speech",
+							"speaker": "random_boss",
+							"emotion": "sad"
+						},
+						{
+							"content": {
+								"korean": "진실은… {random_boss}보다 더 복잡하다."
+							},
+							"type": "speech",
+							"emotion": "base",
+							"speaker": "random_boss"
+						},
+						{
+							"speaker": "character_any",
+							"emotion": "angry",
+							"type": "speech",
+							"content": {
+								"korean": "진실을 찾을 때까지 멈추지 않아."
+							}
+						},
+						{
+							"type": "speech",
+							"speaker": "narrator",
+							"emotion": "base",
+							"content": {
+								"korean": "복도 끝에 또 다른 문이 희미하게 빛나기 시작한다."
+							}
+						}
+					],
+					"id": 15
+				}
+			],
+			"prologue": {
+				"korean": [
+					"첫 시험 후 '다음 기회' 통지서를 받았다.",
+					"나는 이 시스템에 의심을 품기 시작했다.",
+					"정보원 '니아'의 사무실을 찾아야 했다.",
+					"숨겨진 진실을 파헤쳐야만 했다."
+				]
+			}
+		},
+		{
+			"scenario_id": "modern_evannext_1_FIR_03",
+			"order": 3,
+			"act": "rising",
+			"theme": "modern",
+			"actors": {
+				"kai": {
+					"id": "mon_d7f29313-b8fb-49da-9a1a-01df5d13866e",
+					"name": {
+						"korean": "카이",
+						"english": "Kai",
+						"japanese": "カイ",
+						"chinese": "凯",
+						"french": "Kai",
+						"spanish": "Kai",
+						"vietnamese": "Kai",
+						"thai": "ไค",
+						"hindi": "काई"
+					},
+					"description": "",
+					"face_image_url": "https://imagedelivery.net/WTEqQNGFb-l-IHS6IGnzUQ/f10d9184-4155-4bb9-de2d-db61463f7c00/public",
+					"battle_sprite_url": "https://imagedelivery.net/WTEqQNGFb-l-IHS6IGnzUQ/e41f8e03-08c9-4a4f-6f72-fa9342876f00/public"
+				}
+			},
+			"boss": {
+				"pool_id": "random_boss"
+			},
+			"prologue": {
+				"korean": [
+					"니아의 제보로 의심은 확신이 되었다.",
+					"나는 추가 증거를 찾기 위해 기록 보관소를 찾았다.",
+					"그곳에서 뜻밖의 인물과 마주쳤다.",
+					"중요한 기록이 내 눈앞에서 불타 없어졌다.",
+					"그 속에서 사라진 이들의 흔적을 발견했다."
+				]
+			},
+			"rooms": [
+				{
+					"dialogue": [
+						{
+							"type": "speech",
+							"content": {
+								"korean": "벽 가득 캐비닛이 들어선 기록 보관소였다."
+							},
+							"speaker": "narrator",
+							"emotion": "base"
+						},
+						{
+							"content": {
+								"korean": "여기가… 기록 보관소?"
+							},
+							"speaker": "character_any",
+							"emotion": "base",
+							"type": "speech"
+						},
+						{
+							"duration_ms": 500,
+							"action": "enter",
+							"type": "direction",
+							"spot": [
+								2,
+								3
+							],
+							"speaker": "kai"
+						},
+						{
+							"speaker": "kai",
+							"content": {
+								"korean": "…누구세요?"
+							},
+							"type": "speech",
+							"emotion": "base"
+						},
+						{
+							"emotion": "base",
+							"type": "speech",
+							"content": {
+								"korean": "카이 씨?"
+							},
+							"speaker": "character_any"
+						},
+						{
+							"content": {
+								"korean": "내 이름을 어떻게…?"
+							},
+							"speaker": "kai",
+							"emotion": "sad",
+							"type": "speech"
+						},
+						{
+							"speaker": "character_any",
+							"content": {
+								"korean": "여기서 뭘 하는 거죠?"
+							},
+							"type": "speech",
+							"emotion": "base"
+						},
+						{
+							"content": {
+								"korean": "보다시피… 기록 정리 중이야."
+							},
+							"speaker": "kai",
+							"emotion": "base",
+							"type": "speech"
+						}
+					],
+					"id": 1
+				},
+				{
+					"id": 3,
+					"dialogue": [
+						{
+							"type": "direction",
+							"speaker": "kai",
+							"action": "enter",
+							"spot": [
+								2,
+								3
+							],
+							"duration_ms": 500
+						},
+						{
+							"emotion": "base",
+							"speaker": "character_any",
+							"type": "speech",
+							"content": {
+								"korean": "여기서 정리할 기록은 없어 보여요."
+							}
+						},
+						{
+							"type": "speech",
+							"speaker": "kai",
+							"content": {
+								"korean": "…다른 지원자 기록을 보고 있었어."
+							},
+							"emotion": "base"
+						},
+						{
+							"speaker": "character_any",
+							"content": {
+								"korean": "사라진 사람들에 대한 건가요?"
+							},
+							"type": "speech",
+							"emotion": "base"
+						},
+						{
+							"speaker": "kai",
+							"content": {
+								"korean": "그건… 나도 잘 몰라. 그저 소문일 뿐."
+							},
+							"type": "speech",
+							"emotion": "sad"
+						},
+						{
+							"content": {
+								"korean": "기록을 유출하려던 거죠?"
+							},
+							"speaker": "character_any",
+							"type": "speech",
+							"emotion": "angry"
+						},
+						{
+							"speaker": "kai",
+							"content": {
+								"korean": "그래! '다음 기회' 통지만 수십 번이야. 지긋지긋해!"
+							},
+							"type": "speech",
+							"emotion": "angry"
+						},
+						{
+							"speaker": "kai",
+							"content": {
+								"korean": "여길 벗어나야 해. 뭘 해서라도."
+							},
+							"type": "speech",
+							"emotion": "sad"
+						},
+						{
+							"type": "speech",
+							"speaker": "character_any",
+							"content": {
+								"korean": "정보를 주면, 원하는 걸 얻을 수 있어요."
+							},
+							"emotion": "base"
+						}
+					]
+				},
+				{
+					"dialogue": [
+						{
+							"type": "direction",
+							"speaker": "kai",
+							"spot": [
+								2,
+								3
+							],
+							"duration_ms": 500,
+							"action": "enter"
+						},
+						{
+							"type": "speech",
+							"emotion": "base",
+							"content": {
+								"korean": "말해 봐요. 시스템의 뭘 알아?"
+							},
+							"speaker": "character_any"
+						},
+						{
+							"content": {
+								"korean": "시스템은… 오직 '다음'만 원해."
+							},
+							"speaker": "kai",
+							"type": "speech",
+							"emotion": "base"
+						},
+						{
+							"emotion": "sad",
+							"type": "speech",
+							"speaker": "character_any",
+							"content": {
+								"korean": "그게 다예요?"
+							}
+						},
+						{
+							"type": "speech",
+							"content": {
+								"korean": "…근데 당신, 왜 그걸 캐물어?"
+							},
+							"speaker": "kai",
+							"emotion": "base"
+						},
+						{
+							"emotion": "angry",
+							"content": {
+								"korean": "나도 이 굴레를 끝내고 싶으니까."
+							},
+							"type": "speech",
+							"speaker": "character_any"
+						},
+						{
+							"type": "speech",
+							"emotion": "sad",
+							"speaker": "kai",
+							"content": {
+								"korean": "잠깐… 당신 서류는 왜 봐요?"
+							}
+						},
+						{
+							"type": "speech",
+							"content": {
+								"korean": "증거를 찾는 중이에요."
+							},
+							"speaker": "character_any",
+							"emotion": "base"
+						},
+						{
+							"type": "speech",
+							"content": {
+								"korean": "…!"
+							},
+							"speaker": "kai",
+							"emotion": "sad"
+						}
+					],
+					"id": 5
+				},
+				{
+					"dialogue": [
+						{
+							"type": "direction",
+							"speaker": "kai",
+							"spot": [
+								2,
+								3
+							],
+							"duration_ms": 500,
+							"action": "enter"
+						},
+						{
+							"emotion": "angry",
+							"speaker": "kai",
+							"content": {
+								"korean": "안 돼! 당신 같은 사람 때문에…"
+							},
+							"type": "speech"
+						},
+						{
+							"speaker": "character_any",
+							"content": {
+								"korean": "무슨 소리예요?"
+							},
+							"emotion": "base",
+							"type": "speech"
+						},
+						{
+							"speaker": "kai",
+							"content": {
+								"korean": "나는 여기 남을 거야. 당신 혼자 가."
+							},
+							"emotion": "sad",
+							"type": "speech"
+						},
+						{
+							"type": "speech",
+							"content": {
+								"korean": "뭘 하려는 거죠?"
+							},
+							"speaker": "character_any",
+							"emotion": "base"
+						},
+						{
+							"content": {
+								"korean": "카이가 서류 뭉치에 불을 붙였다."
+							},
+							"speaker": "narrator",
+							"type": "speech",
+							"emotion": "base"
+						},
+						{
+							"speaker": "character_any",
+							"content": {
+								"korean": "야! 안 돼!"
+							},
+							"type": "speech",
+							"emotion": "angry"
+						},
+						{
+							"speaker": "kai",
+							"content": {
+								"korean": "나를 보호해야 해. 미안해!"
+							},
+							"emotion": "sad",
+							"type": "speech"
+						},
+						{
+							"emotion": "sad",
+							"type": "speech",
+							"content": {
+								"korean": "증거를 없앴어…"
+							},
+							"speaker": "character_any"
+						}
+					],
+					"id": 9
+				},
+				{
+					"lose_dialogue": [
+						{
+							"speaker": "random_boss",
+							"content": {
+								"korean": "네 흔적도… 곧 사라질 것이다."
+							},
+							"emotion": "base",
+							"type": "speech"
+						},
+						{
+							"type": "speech",
+							"speaker": "character_any",
+							"content": {
+								"korean": "아니. 다시… 사라진 이들을 찾아야 해."
+							},
+							"emotion": "angry"
+						}
+					],
+					"id": 15,
+					"win_dialogue": [
+						{
+							"type": "speech",
+							"content": {
+								"korean": "크윽… 나는 영원히 기록된다…"
+							},
+							"speaker": "random_boss",
+							"emotion": "sad"
+						},
+						{
+							"emotion": "base",
+							"type": "speech",
+							"content": {
+								"korean": "…흔적은 지워지지 않아."
+							},
+							"speaker": "character_any"
+						},
+						{
+							"type": "speech",
+							"content": {
+								"korean": "남은 서류 더미에서 보고서 하나가 발견됐다."
+							},
+							"speaker": "narrator",
+							"emotion": "base"
+						},
+						{
+							"content": {
+								"korean": "'완벽하게 준비된 이들, 사라지다'?"
+							},
+							"speaker": "character_any",
+							"emotion": "base",
+							"type": "speech"
+						},
+						{
+							"type": "speech",
+							"speaker": "narrator",
+							"content": {
+								"korean": "사라진 지원자들의 진실이 점점 모습을 드러냈다."
+							},
+							"emotion": "base"
+						}
+					],
+					"dialogue": [
+						{
+							"content": {
+								"korean": "기록 보관소 안, 불타는 서류 더미 앞에 누군가 서 있었다."
+							},
+							"speaker": "narrator",
+							"type": "speech",
+							"emotion": "base"
+						},
+						{
+							"type": "speech",
+							"emotion": "base",
+							"speaker": "random_boss",
+							"content": {
+								"korean": "규칙을 어기는 자는… 사라져야 한다."
+							}
+						},
+						{
+							"type": "speech",
+							"emotion": "base",
+							"speaker": "character_any",
+							"content": {
+								"korean": "당신이 보관소 수호자인가?"
+							}
+						},
+						{
+							"type": "speech",
+							"speaker": "random_boss",
+							"content": {
+								"korean": "나는 '기록' 그 자체다. 너의 흔적도 지워주겠다."
+							},
+							"emotion": "base"
+						},
+						{
+							"content": {
+								"korean": "그럴 순 없어."
+							},
+							"speaker": "character_any",
+							"emotion": "angry",
+							"type": "speech"
+						}
+					]
+				}
+			]
+		},
+		{
+			"scenario_id": "modern_evannext_1_FIR_04",
+			"order": 4,
+			"act": "rising",
+			"theme": "modern",
+			"actors": {
+				"lin": {
+					"id": "mon_d036a884-3dde-472c-9fe7-c4807643860f",
+					"name": {
+						"korean": "린",
+						"english": "Lin",
+						"japanese": "リン",
+						"chinese": "琳",
+						"french": "Lin",
+						"spanish": "Lin",
+						"vietnamese": "Lin",
+						"thai": "ลิน",
+						"hindi": "लिन"
+					},
+					"description": "",
+					"face_image_url": "https://imagedelivery.net/WTEqQNGFb-l-IHS6IGnzUQ/a095dd66-1857-4f44-68b0-2ece83006d00/public",
+					"battle_sprite_url": "https://imagedelivery.net/WTEqQNGFb-l-IHS6IGnzUQ/05b02694-f1ed-4e4c-b7ca-fb5b74a48900/public"
+				}
+			},
+			"boss": {
+				"pool_id": "random_boss"
+			},
+			"prologue": {
+				"korean": [
+					"기록 보관소 화재 현장은 종이 재로 가득했다.",
+					"사라진 지원자들의 기록은 더욱 희미해졌다.",
+					"나는 현장 보존을 주장하며 조사를 기다렸다.",
+					"하지만 린이 나타나 증거물 정리를 지시했다.",
+					"이것이 '다음 기회'의 규정이라고 했다."
+				]
+			},
+			"rooms": [
+				{
+					"dialogue": [
+						{
+							"emotion": "base",
+							"speaker": "narrator",
+							"type": "speech",
+							"content": {
+								"korean": "화재로 기록 보관소는 종이 재로 가득했다."
+							}
+						},
+						{
+							"speaker": "character_any",
+							"emotion": "base",
+							"content": {
+								"korean": "이 현장은 보존해야 해요."
+							},
+							"type": "speech"
+						},
+						{
+							"emotion": "base",
+							"speaker": "character_any",
+							"type": "speech",
+							"content": {
+								"korean": "공식 조사를 기다려야 해."
+							}
+						},
+						{
+							"speaker": "lin",
+							"duration_ms": 500,
+							"spot": [
+								5,
+								3
+							],
+							"type": "direction",
+							"action": "enter"
+						},
+						{
+							"content": {
+								"korean": "그럴 필요 없어요."
+							},
+							"type": "speech",
+							"speaker": "lin",
+							"emotion": "base"
+						},
+						{
+							"type": "speech",
+							"emotion": "base",
+							"speaker": "character_any",
+							"content": {
+								"korean": "린 씨?"
+							}
+						},
+						{
+							"content": {
+								"korean": "'다음 기회' 규정입니다. 즉시 정리."
+							},
+							"type": "speech",
+							"emotion": "base",
+							"speaker": "lin"
+						},
+						{
+							"emotion": "angry",
+							"speaker": "character_any",
+							"type": "speech",
+							"content": {
+								"korean": "무슨 규정이 그래요?"
+							}
+						},
+						{
+							"emotion": "base",
+							"speaker": "lin",
+							"type": "speech",
+							"content": {
+								"korean": "과거는 중요치 않아요."
+							}
+						}
+					],
+					"id": 1
+				},
+				{
+					"id": 3,
+					"dialogue": [
+						{
+							"spot": [
+								5,
+								3
+							],
+							"type": "direction",
+							"action": "enter",
+							"speaker": "lin",
+							"duration_ms": 500
+						},
+						{
+							"type": "speech",
+							"content": {
+								"korean": "이쪽 서류부터 파기하세요."
+							},
+							"emotion": "base",
+							"speaker": "lin"
+						},
+						{
+							"content": {
+								"korean": "왜 이렇게 서두르죠?"
+							},
+							"type": "speech",
+							"speaker": "character_any",
+							"emotion": "base"
+						},
+						{
+							"content": {
+								"korean": "규칙입니다. 신속하게 처리해야 해요."
+							},
+							"type": "speech",
+							"emotion": "base",
+							"speaker": "lin"
+						},
+						{
+							"type": "speech",
+							"emotion": "base",
+							"speaker": "character_any",
+							"content": {
+								"korean": "이 서류는 중요해 보이는데."
+							}
+						},
+						{
+							"speaker": "lin",
+							"emotion": "base",
+							"content": {
+								"korean": "폐기 대상이에요. 모두."
+							},
+							"type": "speech"
+						},
+						{
+							"emotion": "base",
+							"speaker": "character_any",
+							"type": "speech",
+							"content": {
+								"korean": "잠깐, 린 씨. 이 파일은 왜…"
+							}
+						},
+						{
+							"content": {
+								"korean": "이건 나중에. 먼저 이것부터 처리하죠."
+							},
+							"speaker": "lin",
+							"emotion": "base",
+							"type": "speech"
+						},
+						{
+							"emotion": "sad",
+							"speaker": "character_any",
+							"type": "speech",
+							"content": {
+								"korean": "뭔가 숨기는 것 같아."
+							}
+						}
+					]
+				},
+				{
+					"dialogue": [
+						{
+							"duration_ms": 500,
+							"spot": [
+								5,
+								3
+							],
+							"type": "direction",
+							"action": "enter",
+							"speaker": "lin"
+						},
+						{
+							"content": {
+								"korean": "이제 파쇄기로 넣으세요."
+							},
+							"type": "speech",
+							"speaker": "lin",
+							"emotion": "base"
+						},
+						{
+							"content": {
+								"korean": "파쇄요? 다 태우는 게 아니라?"
+							},
+							"emotion": "base",
+							"speaker": "character_any",
+							"type": "speech"
+						},
+						{
+							"type": "speech",
+							"speaker": "lin",
+							"emotion": "base",
+							"content": {
+								"korean": "규정 변경. 폐기 방법은 수시로 바뀌어요."
+							}
+						},
+						{
+							"type": "speech",
+							"emotion": "base",
+							"speaker": "character_any",
+							"content": {
+								"korean": "이 서류들… 발송 기록인데."
+							}
+						},
+						{
+							"emotion": "base",
+							"speaker": "lin",
+							"content": {
+								"korean": "'다음 기회' 통지서는 파기 대상이죠."
+							},
+							"type": "speech"
+						},
+						{
+							"speaker": "character_any",
+							"emotion": "sad",
+							"content": {
+								"korean": "17개의 기록이… 사라지는구나."
+							},
+							"type": "speech"
+						},
+						{
+							"content": {
+								"korean": "깨끗하게 정리될 거예요."
+							},
+							"speaker": "lin",
+							"emotion": "base",
+							"type": "speech"
+						}
+					],
+					"id": 5
+				},
+				{
+					"dialogue": [
+						{
+							"duration_ms": 500,
+							"speaker": "lin",
+							"spot": [
+								5,
+								3
+							],
+							"action": "enter",
+							"type": "direction"
+						},
+						{
+							"speaker": "lin",
+							"type": "speech",
+							"emotion": "base",
+							"content": {
+								"korean": "거의 끝났어요. 수고했어요."
+							}
+						},
+						{
+							"speaker": "character_any",
+							"emotion": "base",
+							"content": {
+								"korean": "린 씨. 이거 떨어뜨렸는데."
+							},
+							"type": "speech"
+						},
+						{
+							"content": {
+								"korean": "아, 고맙습니다."
+							},
+							"type": "speech",
+							"emotion": "happy",
+							"speaker": "lin"
+						},
+						{
+							"emotion": "angry",
+							"speaker": "character_any",
+							"type": "speech",
+							"content": {
+								"korean": "'면접관용'? 린 씨, 이게 뭐예요?"
+							}
+						},
+						{
+							"emotion": "sad",
+							"speaker": "lin",
+							"type": "speech",
+							"content": {
+								"korean": "…실수. 이건 제 것이 아니에요."
+							}
+						},
+						{
+							"emotion": "angry",
+							"speaker": "character_any",
+							"type": "speech",
+							"content": {
+								"korean": "당신은 안내 직원이 아니잖아."
+							}
+						},
+						{
+							"speaker": "lin",
+							"emotion": "base",
+							"type": "speech",
+							"content": {
+								"korean": "…무슨 말씀을. 저는 규정을 따를 뿐."
+							}
+						}
+					],
+					"id": 9
+				},
+				{
+					"id": 15,
+					"dialogue": [
+						{
+							"speaker": "narrator",
+							"emotion": "base",
+							"type": "speech",
+							"content": {
+								"korean": "파괴된 기록 보관소 깊은 곳, 정체 모를 자가 서 있었다."
+							}
+						},
+						{
+							"content": {
+								"korean": "규칙은 깨지지 않는다."
+							},
+							"speaker": "random_boss",
+							"emotion": "base",
+							"type": "speech"
+						},
+						{
+							"type": "speech",
+							"content": {
+								"korean": "당신이 시스템의 수호자인가?"
+							},
+							"emotion": "base",
+							"speaker": "character_any"
+						},
+						{
+							"emotion": "base",
+							"speaker": "random_boss",
+							"type": "speech",
+							"content": {
+								"korean": "나는 규칙 그 자체다."
+							}
+						},
+						{
+							"emotion": "angry",
+							"speaker": "character_any",
+							"content": {
+								"korean": "당신은 허점을 만들었어."
+							},
+							"type": "speech"
+						},
+						{
+							"content": {
+								"korean": "어리석군. 허점 또한 규칙의 일부다."
+							},
+							"type": "speech",
+							"emotion": "base",
+							"speaker": "random_boss"
+						}
+					],
+					"lose_dialogue": [
+						{
+							"type": "speech",
+							"speaker": "random_boss",
+							"emotion": "base",
+							"content": {
+								"korean": "너는 규칙을 이길 수 없다."
+							}
+						},
+						{
+							"emotion": "angry",
+							"speaker": "character_any",
+							"type": "speech",
+							"content": {
+								"korean": "아니. 난 허점을 찾을 거야."
+							}
+						},
+						{
+							"type": "speech",
+							"content": {
+								"korean": "다시… 처음부터 시작해라."
+							},
+							"speaker": "random_boss",
+							"emotion": "base"
+						}
+					],
+					"win_dialogue": [
+						{
+							"type": "speech",
+							"content": {
+								"korean": "크윽… 규칙은…"
+							},
+							"emotion": "sad",
+							"speaker": "random_boss"
+						},
+						{
+							"type": "speech",
+							"content": {
+								"korean": "당신이 진실을 숨겼잖아."
+							},
+							"emotion": "angry",
+							"speaker": "character_any"
+						},
+						{
+							"content": {
+								"korean": "진실은… 곧 드러날 거야."
+							},
+							"speaker": "random_boss",
+							"emotion": "base",
+							"type": "speech"
+						},
+						{
+							"speaker": "character_any",
+							"emotion": "happy",
+							"type": "speech",
+							"content": {
+								"korean": "당신의 규칙은 이제 끝났어."
+							}
+						},
+						{
+							"speaker": "narrator",
+							"emotion": "base",
+							"content": {
+								"korean": "시스템의 경고음이 더욱 커졌다. '면접관용' 배지가 바닥에 떨어져 있다."
+							},
+							"type": "speech"
+						}
+					]
+				}
+			]
+		},
+		{
+			"scenario_id": "modern_evannext_1_FIR_05",
+			"order": 5,
+			"act": "climax_finale",
+			"theme": "modern",
+			"actors": {
+				"lin": {
+					"id": "mon_d036a884-3dde-472c-9fe7-c4807643860f",
+					"name": {
+						"korean": "린",
+						"english": "Lin",
+						"japanese": "リン",
+						"chinese": "琳",
+						"french": "Lin",
+						"spanish": "Lin",
+						"vietnamese": "Lin",
+						"thai": "ลิน",
+						"hindi": "लिन"
+					},
+					"description": "",
+					"face_image_url": "https://imagedelivery.net/WTEqQNGFb-l-IHS6IGnzUQ/a095dd66-1857-4f44-68b0-2ece83006d00/public",
+					"battle_sprite_url": "https://imagedelivery.net/WTEqQNGFb-l-IHS6IGnzUQ/05b02694-f1ed-4e4c-b7ca-fb5b74a48900/public"
+				}
+			},
+			"boss": {
+				"pool_id": "pool_098"
+			},
+			"rooms": [
+				{
+					"id": 1,
+					"dialogue": [
+						{
+							"emotion": "base",
+							"type": "speech",
+							"speaker": "narrator",
+							"content": {
+								"korean": "마지막 면접장, 차분한 대기실이 펼쳐져 있었다."
+							}
+						},
+						{
+							"content": {
+								"korean": "여기가… 최종 면접장?"
+							},
+							"type": "speech",
+							"emotion": "base",
+							"speaker": "character_any"
+						},
+						{
+							"duration_ms": 500,
+							"type": "direction",
+							"speaker": "lin",
+							"spot": [
+								4,
+								3
+							],
+							"action": "enter"
+						},
+						{
+							"content": {
+								"korean": "네. '다음 기회'를 위한 마지막 단계죠."
+							},
+							"speaker": "lin",
+							"type": "speech",
+							"emotion": "base"
+						},
+						{
+							"speaker": "character_any",
+							"emotion": "angry",
+							"type": "speech",
+							"content": {
+								"korean": "린 씨. '면접관용' 배지는 뭐죠?"
+							}
+						},
+						{
+							"content": {
+								"korean": "…그건 착각이에요. 그럴 리가."
+							},
+							"emotion": "sad",
+							"type": "speech",
+							"speaker": "lin"
+						},
+						{
+							"speaker": "boss",
+							"type": "direction",
+							"action": "enter",
+							"duration_ms": 500,
+							"spot": [
+								2,
+								3
+							]
+						},
+						{
+							"emotion": "base",
+							"speaker": "boss",
+							"content": {
+								"korean": "린은 그저 안내자일 뿐입니다."
+							},
+							"type": "speech"
+						},
+						{
+							"type": "speech",
+							"content": {
+								"korean": "당신이… 에반 넥스트?"
+							},
+							"emotion": "base",
+							"speaker": "character_any"
+						}
+					]
+				},
+				{
+					"id": 3,
+					"dialogue": [
+						{
+							"content": {
+								"korean": "수집한 증거들은… 모두 논리적 오류가 있습니다."
+							},
+							"emotion": "base",
+							"type": "speech",
+							"speaker": "boss"
+						},
+						{
+							"emotion": "angry",
+							"speaker": "character_any",
+							"type": "speech",
+							"content": {
+								"korean": "무슨 소리죠? 내가 모은 단서들이!"
+							}
+						},
+						{
+							"type": "speech",
+							"emotion": "base",
+							"speaker": "boss",
+							"content": {
+								"korean": "니아의 자료는 정리되지 않았고, 카이의 기록은 불탔죠."
+							}
+						},
+						{
+							"type": "speech",
+							"speaker": "character_any",
+							"emotion": "angry",
+							"content": {
+								"korean": "그게 전부 당신이 꾸민 일이야!"
+							}
+						},
+						{
+							"emotion": "base",
+							"speaker": "boss",
+							"type": "speech",
+							"content": {
+								"korean": "린의 '완벽한 조언'들이 있었을 텐데요."
+							}
+						},
+						{
+							"content": {
+								"korean": "그 조언들이…?"
+							},
+							"type": "speech",
+							"speaker": "character_any",
+							"emotion": "base"
+						},
+						{
+							"spot": [
+								4,
+								3
+							],
+							"speaker": "lin",
+							"type": "direction",
+							"duration_ms": 300,
+							"action": "focus"
+						},
+						{
+							"type": "speech",
+							"emotion": "base",
+							"speaker": "boss",
+							"content": {
+								"korean": "린은 '다음 기회'를 위한 효율적 안내자였습니다."
+							}
+						},
+						{
+							"type": "speech",
+							"content": {
+								"korean": "저는… 시스템을 따랐을 뿐."
+							},
+							"speaker": "lin",
+							"emotion": "sad"
+						}
+					]
+				},
+				{
+					"dialogue": [
+						{
+							"content": {
+								"korean": "사라진 지원자들의 기록입니다. 보시죠."
+							},
+							"emotion": "base",
+							"speaker": "boss",
+							"type": "speech"
+						},
+						{
+							"content": {
+								"korean": "이건… 그들이 직접 서명한 거야?"
+							},
+							"type": "speech",
+							"emotion": "sad",
+							"speaker": "character_any"
+						},
+						{
+							"type": "speech",
+							"emotion": "base",
+							"speaker": "boss",
+							"content": {
+								"korean": "네. 스스로 '다음'이라는 유예를 선택한 기록이죠."
+							}
+						},
+						{
+							"content": {
+								"korean": "거짓말! 이게 어떻게 자발적이야?"
+							},
+							"type": "speech",
+							"emotion": "angry",
+							"speaker": "character_any"
+						},
+						{
+							"speaker": "boss",
+							"emotion": "base",
+							"type": "speech",
+							"content": {
+								"korean": "그들은 '완벽한 준비'를 원했습니다. 그래서 영원히 준비 중이죠."
+							}
+						},
+						{
+							"content": {
+								"korean": "그게 해방이 아니야. 또 다른 감금이지."
+							},
+							"type": "speech",
+							"emotion": "angry",
+							"speaker": "character_any"
+						},
+						{
+							"content": {
+								"korean": "이 시스템의 규칙을 따르는 것이 순리입니다."
+							},
+							"type": "speech",
+							"emotion": "base",
+							"speaker": "boss"
+						}
+					],
+					"id": 5
+				},
+				{
+					"id": 9,
+					"dialogue": [
+						{
+							"emotion": "angry",
+							"speaker": "character_any",
+							"type": "speech",
+							"content": {
+								"korean": "아니. 이 모든 '다음 기회' 통지서는 위조된 거야."
+							}
+						},
+						{
+							"content": {
+								"korean": "증거는? 모두 스스로 선택했습니다."
+							},
+							"type": "speech",
+							"emotion": "base",
+							"speaker": "boss"
+						},
+						{
+							"emotion": "angry",
+							"speaker": "character_any",
+							"content": {
+								"korean": "선택이 아니야. 그들은 속았던 거지."
+							},
+							"type": "speech"
+						},
+						{
+							"type": "speech",
+							"content": {
+								"korean": "이곳은 완벽한 시스템. 허점은 없습니다."
+							},
+							"speaker": "boss",
+							"emotion": "base"
+						},
+						{
+							"content": {
+								"korean": "시스템의 허점은 당신이야, 에반 넥스트!"
+							},
+							"speaker": "character_any",
+							"type": "speech",
+							"emotion": "angry"
+						},
+						{
+							"speaker": "character_any",
+							"type": "speech",
+							"emotion": "angry",
+							"content": {
+								"korean": "나는 이 대기실의 모든 기록과 구조를 파괴할 거야."
+							}
+						},
+						{
+							"content": {
+								"korean": "건드릴 수 없습니다. 이곳은 절대적 공간."
+							},
+							"type": "speech",
+							"emotion": "sad",
+							"speaker": "boss"
+						}
+					]
+				},
+				{
+					"lose_dialogue": [
+						{
+							"type": "speech",
+							"speaker": "boss",
+							"emotion": "base",
+							"content": {
+								"korean": "당신도 '다음'을 선택할 수밖에 없을 겁니다."
+							}
+						},
+						{
+							"content": {
+								"korean": "아니. 이 굴레를 끊을 때까지 다시 도전할 거야."
+							},
+							"type": "speech",
+							"emotion": "angry",
+							"speaker": "character_any"
+						}
+					],
+					"id": 15,
+					"win_dialogue": [
+						{
+							"content": {
+								"korean": "…거의 다 왔어요. 이번엔 진짜로… 느껴져요."
+							},
+							"speaker": "boss",
+							"type": "speech",
+							"emotion": "base"
+						},
+						{
+							"emotion": "angry",
+							"speaker": "character_any",
+							"type": "speech",
+							"content": {
+								"korean": "아니. 다음은 없어. 끝이야."
+							}
+						},
+						{
+							"content": {
+								"korean": "대기실 모든 기록 캐비닛이 파손되었다."
+							},
+							"speaker": "narrator",
+							"type": "speech",
+							"emotion": "base"
+						},
+						{
+							"emotion": "base",
+							"type": "speech",
+							"speaker": "narrator",
+							"content": {
+								"korean": "수십 년간 멈춰있던 대기실 시계가 다시 움직였다."
+							}
+						},
+						{
+							"type": "speech",
+							"content": {
+								"korean": "이제… 진짜 시작이다."
+							},
+							"speaker": "character_any",
+							"emotion": "happy"
+						}
+					],
+					"dialogue": [
+						{
+							"content": {
+								"korean": "대기실 중앙, 에반 넥스트가 여유롭게 웃고 있었다."
+							},
+							"speaker": "narrator",
+							"emotion": "base",
+							"type": "speech"
+						},
+						{
+							"speaker": "boss",
+							"emotion": "base",
+							"type": "speech",
+							"content": {
+								"korean": "진정한 시작은 이곳에 있습니다. 파괴할 필요 없어요."
+							}
+						},
+						{
+							"content": {
+								"korean": "거짓말. 당신은 그 시작을 가둬왔어."
+							},
+							"type": "speech",
+							"speaker": "character_any",
+							"emotion": "angry"
+						},
+						{
+							"type": "speech",
+							"speaker": "boss",
+							"emotion": "base",
+							"content": {
+								"korean": "그건… 당신의 선택이었습니다."
+							}
+						},
+						{
+							"speaker": "character_any",
+							"emotion": "angry",
+							"type": "speech",
+							"content": {
+								"korean": "이 시스템을 끝낼 거야. 여기서."
+							}
+						}
+					]
+				}
+			],
+			"prologue": {
+				"korean": [
+					"기록 보관소의 경고음이 울렸다.",
+					"린이 떨어뜨린 배지에는 ‘면접관용’이 쓰여 있었다.",
+					"‘다음 기회’ 시스템의 진실을 밝혀야 했다.",
+					"나는 에반 넥스트를 찾아, 마지막 면접장으로 향했다."
+				]
+			},
+			"epilogue": {
+				"korean": [
+					"대기실의 모든 기록과 구조가 파괴되었다.",
+					"‘다음 라운드’로 통하던 문들은 모두 사라졌다.",
+					"수십 년간 멈춰 있던 대기실 시계가 움직이기 시작했다.",
+					"끝없는 대기실의 순환이 멈췄다.",
+					"이것이 진정한 시작이었다."
+				]
+			}
+		}
+	]
+}

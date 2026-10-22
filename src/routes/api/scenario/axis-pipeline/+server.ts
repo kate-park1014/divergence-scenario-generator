@@ -4,12 +4,15 @@ import { join } from 'path';
 import { buildScenarioTool } from '$lib/prompts/chapterGen';
 import { buildScenarioBase } from '$lib/data/sample/scenarioBase';
 import { parseScenarioFile } from '$lib/server/parseScenarioFile';
-import { axisVariantRegistry, getAxisStoryarc } from '$lib/data/storyarc/axis_test';
+import { axisVariantRegistry } from '$lib/data/storyarc/axis_test';
+import { getStoryarc } from '$lib/data/storyarc';
 import {
 	AXIS_COMBOS,
+	applyAxisVariant,
 	buildAxisScenarioPrompt,
 	formatPreviousScenario,
-	type AxisCombo
+	type AxisCombo,
+	type AxisVariantSet
 } from '$lib/prompts/axisVariantGen';
 import type { StoryArc } from '$lib/types';
 import type { RequestHandler } from './$types';
@@ -18,6 +21,7 @@ type Failure = { combo: string; step: string; order?: number; error: string };
 
 /**
  * 성향 변주 storyarc(axis_test) → 조합별 챕터(시나리오) 생성. 번역 단계 없음(한국어만).
+ * 대사는 웹툰(말풍선) 형식 + 변주 세트에 저장된 조합별 장르 톤.
  * 생성(chapterGen + 변주 문체 규칙, 01→05 순차) → process-actors → output.
  *
  * body:
@@ -34,6 +38,7 @@ type Failure = { combo: string; step: string; order?: number; error: string };
  */
 
 const GEN_DIR = 'src/lib/data/generated';
+const SET_DIR = 'src/lib/data/storyarc/axis_test';
 const PROVIDERS = ['gemini', 'deepseek'] as const;
 
 // DeepSeek 가 가끔 direction 줄을 type:'speech' 로 내거나, speaker:'direction' 인 빈 speech 를 끼워 넣음
@@ -78,10 +83,21 @@ function sanitizeScenario(s: Record<string, any>): Record<string, any> {
 export const POST: RequestHandler = async ({ request, fetch }) => {
 	const body = await request.json();
 	const sourceId = String(body.sourceId ?? '');
-	const set = axisVariantRegistry[sourceId];
-	if (!set) return json({ error: `axis 변주 세트 없음: ${sourceId}` }, { status: 400 });
+	// 변주 파일은 axis-variants 가 방금 다시 썼을 수 있음 → import 캐시 대신 디스크에서 읽음
+	let loaded: AxisVariantSet | undefined = axisVariantRegistry[sourceId];
+	try {
+		const src = await readFile(join(process.cwd(), SET_DIR, `axis_${sourceId}.ts`), 'utf-8');
+		loaded = JSON.parse(src.match(/: AxisVariantSet = (\{[\s\S]*\});/)![1]);
+	} catch {
+		/* 등록된 세트 사용 */
+	}
+	const source = getStoryarc(sourceId);
+	const set = loaded;
+	if (!set || !source) return json({ error: `axis 변주 세트 없음: ${sourceId}` }, { status: 400 });
+	const variants = set.variants;
+	const base: StoryArc = source;
 
-	const available = AXIS_COMBOS.filter((c) => set.variants[c]);
+	const available = AXIS_COMBOS.filter((c) => variants[c]);
 	const combos: AxisCombo[] = Array.isArray(body.combos)
 		? available.filter((c) => body.combos.includes(c))
 		: available;
@@ -112,18 +128,19 @@ export const POST: RequestHandler = async ({ request, fetch }) => {
 	}
 
 	async function processCombo(combo: AxisCombo): Promise<void> {
-		const arc = getAxisStoryarc(sourceId, combo) as StoryArc;
+		const arc = applyAxisVariant(base, combo, variants[combo]) as StoryArc;
 		const orders = Array.from({ length: arc.scenarioOutline.length }, (_, i) => i + 1);
 
 		// 1) 생성 — 01 → 05 차례대로. 앞 시나리오 대사를 다음 프롬프트에 넣어 사건을 이어 감
 		if (!skipGenerate) {
-			const facts = set.variants[combo]?.facts ?? [];
+			const facts = variants[combo]?.facts ?? [];
+			const genre = variants[combo]?.genre;
 			const previous: string[] = [];
 			for (const order of orders) {
 				try {
 					const base = buildScenarioBase(order, arc);
 					const { res, data } = await postJson(`/api/${provider}`, {
-						message: buildAxisScenarioPrompt(order, arc, facts, previous),
+						message: buildAxisScenarioPrompt(order, arc, facts, previous, genre),
 						tools: [buildScenarioTool(order)],
 						tool_choice: { type: 'function', function: { name: 'generate_scenario_content' } }
 					});
@@ -204,7 +221,8 @@ export const POST: RequestHandler = async ({ request, fetch }) => {
 						difficulty_level: chapterValue,
 						chapter_name: arc.chapter_name ?? null,
 						axis_combo: combo,
-						variant_note: set.variants[combo]?.variant_note ?? '',
+						genre: variants[combo]?.genre?.name ?? null,
+						variant_note: variants[combo]?.variant_note ?? '',
 						scenarios
 					},
 					null,
