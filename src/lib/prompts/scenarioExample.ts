@@ -75,9 +75,7 @@ export const SCENARIO_EXAMPLE = `\
     {
       id: 10,
       dialogue: [
-        { type: 'speech', speaker: 'character_any', content: { korean: '처음부터 미끼였어.' }, emotion: 'angry' },
-        { type: 'speech', speaker: 'character_any', content: { korean: '복수하고 싶어서 그 손을 잡았는데.' }, emotion: 'sad' },
-        { type: 'speech', speaker: 'character_any', content: { korean: '…근데 후회는 없어. 진실을 알았으니까.' }, emotion: 'angry' },
+        { type: 'speech', speaker: 'character_any', content: { korean: '처음부터 미끼였어. …그래도 진실을 알았으니 후회는 없어.' }, emotion: 'angry' },
       ],
     },
     {

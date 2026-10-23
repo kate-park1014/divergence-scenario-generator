@@ -1,0 +1,386 @@
+{
+  "scenario_id": "modern_molder_2_03",
+  "order": 3,
+  "act": "rising",
+  "theme": "modern",
+  "actors": {
+    "nia": {
+      "id": "mon_872177dd-fcf0-40d8-b78c-fd795017c763",
+      "name": {
+        "korean": "니아",
+        "english": "Nia",
+        "japanese": "ニア",
+        "chinese": "妮娅",
+        "french": "Nia",
+        "spanish": "Nia",
+        "vietnamese": "Nia",
+        "thai": "เนีย",
+        "hindi": "निया"
+      },
+      "description": "",
+      "face_image_url": "https://imagedelivery.net/WTEqQNGFb-l-IHS6IGnzUQ/db690f96-d5b3-498a-f4ec-f269e6e95100/public",
+      "battle_sprite_url": "https://imagedelivery.net/WTEqQNGFb-l-IHS6IGnzUQ/a8fe5d7a-56fe-4822-c272-5a04fd7f4c00/public",
+      "role": {
+        "korean": "자료 연구원"
+      }
+    }
+  },
+  "boss": {
+    "pool_id": "random_boss",
+    "role": {
+      "korean": "시설 보수공"
+    }
+  },
+  "prologue": {
+    "korean": [
+      "지하 깊은 곳, 부패는 기록마저 집어삼킨다.",
+      "진실을 덮으려는 손길은 더욱 깊은 어둠을 불러왔고,",
+      "사라진 흔적 속에서, 우리는 무엇을 믿어야 하는가."
+    ]
+  },
+  "rooms": [
+    {
+      "id": 1,
+      "dialogue": [
+        {
+          "type": "speech",
+          "content": {
+            "korean": "지하 3층 보관실의 문서들이 부패에 오염되어 사라지기 시작한다."
+          },
+          "speaker": "narrator",
+          "emotion": "base"
+        },
+        {
+          "action": "enter",
+          "duration_ms": 500,
+          "spot": [
+            10,
+            0
+          ],
+          "type": "direction",
+          "speaker": "nia"
+        },
+        {
+          "type": "speech",
+          "content": {
+            "korean": "이게 다 뭐죠? 중요한 기록들이 사라지고 있어요!"
+          },
+          "speaker": "nia",
+          "emotion": "sad"
+        },
+        {
+          "type": "speech",
+          "content": {
+            "korean": "문서들이 저절로 썩어 없어지고 있다니 믿을 수 없어."
+          },
+          "emotion": "base",
+          "speaker": "character_any"
+        },
+        {
+          "content": {
+            "korean": "끔찍해..."
+          },
+          "type": "speech",
+          "emotion": "sad",
+          "speaker": "character_1"
+        },
+        {
+          "type": "speech",
+          "speaker": "nia",
+          "emotion": "base",
+          "content": {
+            "korean": "과거 기록을 조사하던 중인데, 이미 오래전부터 중요 문서들이 사라진 흔적을 발견했어요."
+          }
+        },
+        {
+          "emotion": "base",
+          "speaker": "character_any",
+          "type": "speech",
+          "content": {
+            "korean": "점점 더 이상해지고 있어. 누가 이 모든 걸 조작하고 있는 걸까?"
+          }
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "dialogue": [
+        {
+          "content": {
+            "korean": "지하실 스피커에서 '부패의 주인' 몰더의 목소리가 울려 퍼진다."
+          },
+          "type": "speech",
+          "emotion": "base",
+          "speaker": "narrator"
+        },
+        {
+          "speaker": "narrator",
+          "emotion": "base",
+          "content": {
+            "korean": "'덮어 가리는 행위를 멈추지 마라. 진실은 감춰질 때 비로소 평화가 찾아온다.'"
+          },
+          "type": "speech"
+        },
+        {
+          "content": {
+            "korean": "또 그 목소리야. 자꾸 저 녹슨 파편을 덮으라고 해."
+          },
+          "type": "speech",
+          "emotion": "base",
+          "speaker": "character_any"
+        },
+        {
+          "content": {
+            "korean": "불길해..."
+          },
+          "emotion": "sad",
+          "type": "speech",
+          "speaker": "character_2"
+        },
+        {
+          "type": "direction",
+          "duration_ms": 500,
+          "action": "enter",
+          "speaker": "nia",
+          "spot": [
+            12,
+            0
+          ]
+        },
+        {
+          "emotion": "angry",
+          "speaker": "nia",
+          "type": "speech",
+          "content": {
+            "korean": "그 지시를 따를수록 부패가 심해진다는 건 이미 지난번에도 확인됐잖아요!"
+          }
+        },
+        {
+          "content": {
+            "korean": "대체 왜 저런 말을 하는 거지? 우리를 속이려는 게 분명해."
+          },
+          "type": "speech",
+          "emotion": "base",
+          "speaker": "character_any"
+        }
+      ]
+    },
+    {
+      "dialogue": [
+        {
+          "speaker": "narrator",
+          "type": "speech",
+          "emotion": "base",
+          "content": {
+            "korean": "녹슨 금속 파편을 덮어 가리자, 주변의 기록들이 흔적도 없이 썩어 사라진다."
+          }
+        },
+        {
+          "type": "speech",
+          "speaker": "character_any",
+          "emotion": "sad",
+          "content": {
+            "korean": "봐, 중요한 문서들이 완전히 사라져 버렸어!"
+          }
+        },
+        {
+          "content": {
+            "korean": "이럴 수가..."
+          },
+          "type": "speech",
+          "emotion": "sad",
+          "speaker": "character_3"
+        },
+        {
+          "spot": [
+            15,
+            0
+          ],
+          "action": "enter",
+          "speaker": "nia",
+          "type": "direction",
+          "duration_ms": 500
+        },
+        {
+          "speaker": "nia",
+          "emotion": "angry",
+          "type": "speech",
+          "content": {
+            "korean": "이건... 단순한 부패가 아니에요. 기록 자체가 지워지고 있어요!"
+          }
+        },
+        {
+          "content": {
+            "korean": "이러다 이 지하실의 모든 진실이 사라지겠어. 우리가 뭘 할 수 있지?"
+          },
+          "speaker": "character_any",
+          "emotion": "base",
+          "type": "speech"
+        },
+        {
+          "speaker": "character_any",
+          "emotion": "base",
+          "type": "speech",
+          "content": {
+            "korean": "아, 얼마 전 타오가 환경 데이터 기록에서 의도적인 오류를 발견했다고 하던데. 이것과 관련 있을까?"
+          }
+        }
+      ],
+      "id": 5
+    },
+    {
+      "dialogue": [
+        {
+          "speaker": "nia",
+          "spot": [
+            8,
+            0
+          ],
+          "action": "enter",
+          "duration_ms": 500,
+          "type": "direction"
+        },
+        {
+          "type": "speech",
+          "emotion": "base",
+          "speaker": "nia",
+          "content": {
+            "korean": "이 모든 상황이 폐기물 처리장 지하실의 어두운 과거와 연관되어 있을지도 모른다는 생각이 들어요."
+          }
+        },
+        {
+          "content": {
+            "korean": "우리가 덮어 가릴수록 상황이 악화된다는 걸 알면서도, 그 지시를 따를 수밖에 없었지."
+          },
+          "type": "speech",
+          "emotion": "sad",
+          "speaker": "character_any"
+        },
+        {
+          "speaker": "character_4",
+          "type": "speech",
+          "emotion": "sad",
+          "content": {
+            "korean": "답답해..."
+          }
+        },
+        {
+          "content": {
+            "korean": "이제 더 이상 아무것도 덮어 가려서는 안 돼. 근본적인 원인을 찾아야 해."
+          },
+          "speaker": "character_any",
+          "type": "speech",
+          "emotion": "base"
+        }
+      ],
+      "id": 9
+    },
+    {
+      "lose_dialogue": [
+        {
+          "content": {
+            "korean": "후회하게 될 것이다. 이 질서를 깨려 한 것을."
+          },
+          "speaker": "random_boss",
+          "type": "speech",
+          "emotion": "base"
+        },
+        {
+          "type": "speech",
+          "content": {
+            "korean": "젠장... 이대로 끝낼 순 없어."
+          },
+          "speaker": "character_any",
+          "emotion": "angry"
+        }
+      ],
+      "win_dialogue": [
+        {
+          "speaker": "character_any",
+          "emotion": "sad",
+          "type": "speech",
+          "content": {
+            "korean": "우리가 이겼지만, 사라진 기록들은 돌아오지 않아."
+          }
+        },
+        {
+          "action": "enter",
+          "type": "direction",
+          "spot": [
+            10,
+            0
+          ],
+          "speaker": "nia",
+          "duration_ms": 500
+        },
+        {
+          "speaker": "nia",
+          "type": "speech",
+          "emotion": "base",
+          "content": {
+            "korean": "이 부패는 단순히 물리적인 현상이 아니에요. 마치 정보를 조작하려는 것 같아요."
+          }
+        },
+        {
+          "emotion": "base",
+          "speaker": "character_any",
+          "content": {
+            "korean": "정보 조작? 다음은 디지털 기록까지 노리는 건가..."
+          },
+          "type": "speech"
+        },
+        {
+          "emotion": "sad",
+          "speaker": "character_1",
+          "content": {
+            "korean": "불안해..."
+          },
+          "type": "speech"
+        }
+      ],
+      "id": 15,
+      "dialogue": [
+        {
+          "content": {
+            "korean": "더 이상 앞으로 갈 수 없다. 이곳의 '규칙'을 어기지 마라."
+          },
+          "type": "speech",
+          "speaker": "random_boss",
+          "emotion": "base"
+        },
+        {
+          "emotion": "angry",
+          "type": "speech",
+          "speaker": "character_any",
+          "content": {
+            "korean": "규칙? 당신은 이 모든 부패를 보고도 아무렇지 않다는 말인가?"
+          }
+        },
+        {
+          "content": {
+            "korean": "내 임무는 질서를 유지하는 것. 이대로 두는 것이 가장 안전한 방법이다."
+          },
+          "speaker": "random_boss",
+          "emotion": "base",
+          "type": "speech"
+        },
+        {
+          "speaker": "character_any",
+          "type": "speech",
+          "emotion": "angry",
+          "content": {
+            "korean": "덮어 가리는 것이 안전이라고? 그럴수록 모든 것이 썩어버려!"
+          }
+        },
+        {
+          "content": {
+            "korean": "쓸데없는 질문은 방해만 될 뿐이다. 당장 멈춰라."
+          },
+          "emotion": "base",
+          "type": "speech",
+          "speaker": "random_boss"
+        }
+      ]
+    }
+  ]
+}

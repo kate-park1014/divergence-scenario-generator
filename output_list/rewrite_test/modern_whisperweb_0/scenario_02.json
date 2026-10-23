@@ -1,0 +1,359 @@
+{
+  "scenario_id": "modern_whisperweb_0_02",
+  "order": 2,
+  "act": "rising",
+  "theme": "modern",
+  "actors": {
+    "dax": {
+      "id": "mon_08d5b43e-f9ab-4469-9064-855e170b0cdc",
+      "name": {
+        "korean": "닥스",
+        "english": "Dax",
+        "japanese": "ダックス",
+        "chinese": "达克斯",
+        "french": "Dax",
+        "spanish": "Dax",
+        "vietnamese": "Dax",
+        "thai": "แด็กซ์",
+        "hindi": "डैक्स"
+      },
+      "description": "",
+      "face_image_url": "https://imagedelivery.net/WTEqQNGFb-l-IHS6IGnzUQ/84bb11db-6eb4-4500-d274-222e8b100100/public",
+      "battle_sprite_url": "https://imagedelivery.net/WTEqQNGFb-l-IHS6IGnzUQ/5d325a75-bd91-4758-7b3f-ad9a97e52700/public",
+      "role": {
+        "korean": "프리랜서 해커"
+      }
+    }
+  },
+  "boss": {
+    "pool_id": "random_boss",
+    "role": {
+      "korean": "보안 요원"
+    }
+  },
+  "prologue": {
+    "korean": [
+      "폐기된 네온 간판들이 산처럼 쌓인 중앙 처리 구역.",
+      "혼란스러운 정보의 잔해 속에서 새로운 소문이 피어난다.",
+      "개인 정보 유출의 그림자가 도시를 뒤덮고,",
+      "아무도 모르게 스크린의 파편들이 속삭이기 시작한다.",
+      "진실을 찾는 자, 그 끝은 혼돈인가 구원인가."
+    ]
+  },
+  "rooms": [
+    {
+      "id": 1,
+      "dialogue": [
+        {
+          "speaker": "narrator",
+          "content": {
+            "korean": "버려진 네온 간판이 즐비한 중앙 처리 구역, 정체불명의 소문이 떠돌고 있었다."
+          },
+          "type": "speech"
+        },
+        {
+          "speaker": "dax",
+          "action": "enter",
+          "type": "direction",
+          "spot": [
+            50,
+            10
+          ],
+          "duration_ms": 500
+        },
+        {
+          "emotion": "base",
+          "type": "speech",
+          "content": {
+            "korean": "여기는 웬일이십니까? 냄새나는 폐기장에는 잘 안 오시더니."
+          },
+          "speaker": "dax"
+        },
+        {
+          "speaker": "character_any",
+          "emotion": "base",
+          "type": "speech",
+          "content": {
+            "korean": "개인 정보 유출 사건 때문에 왔습니다. 이 구역에서 시작되었다는 소문이 파다해요."
+          }
+        },
+        {
+          "type": "speech",
+          "speaker": "character_any",
+          "emotion": "base",
+          "content": {
+            "korean": "깨진 스크린에서 뭔가 수상한 신호가 잡힌다고 합니다. 혹시 분석해 주실 수 있나요?"
+          }
+        },
+        {
+          "emotion": "base",
+          "content": {
+            "korean": "깨진 스크린이라… 흥미롭네요. 어디 한번 제가 살펴보죠."
+          },
+          "speaker": "dax",
+          "type": "speech"
+        }
+      ]
+    },
+    {
+      "dialogue": [
+        {
+          "action": "enter",
+          "duration_ms": 500,
+          "spot": [
+            50,
+            10
+          ],
+          "type": "direction",
+          "speaker": "dax"
+        },
+        {
+          "type": "speech",
+          "speaker": "dax",
+          "content": {
+            "korean": "이런, 예상보다 심각한데요. 이 스크린들, 서로 미세한 신호를 주고받고 있습니다."
+          },
+          "emotion": "base"
+        },
+        {
+          "emotion": "sad",
+          "content": {
+            "korean": "신호를 주고받는다고요? 설마… 정보를 합치고 있다는 뜻인가요?"
+          },
+          "type": "speech",
+          "speaker": "character_any"
+        },
+        {
+          "emotion": "base",
+          "content": {
+            "korean": "정확히 말하면, 정보를 무작위로 뒤섞는 중입니다. 도시 곳곳의 전광판도 이 영향인 것 같군요."
+          },
+          "type": "speech",
+          "speaker": "dax"
+        },
+        {
+          "type": "speech",
+          "speaker": "character_1",
+          "content": {
+            "korean": "아, 그래서 광고가 뒤죽박죽이었구나."
+          },
+          "emotion": "sad"
+        },
+        {
+          "emotion": "base",
+          "content": {
+            "korean": "그럼 깨진 스크린을 합치면 어떻게 되는 거죠?"
+          },
+          "type": "speech",
+          "speaker": "character_any"
+        }
+      ],
+      "id": 3
+    },
+    {
+      "dialogue": [
+        {
+          "duration_ms": 500,
+          "type": "direction",
+          "spot": [
+            50,
+            10
+          ],
+          "action": "enter",
+          "speaker": "dax"
+        },
+        {
+          "content": {
+            "korean": "방금 폐기장 주변 상인들의 재정 정보가 뒤섞여 황당한 피해를 입었다는 소식이 들어왔습니다!"
+          },
+          "emotion": "angry",
+          "type": "speech",
+          "speaker": "dax"
+        },
+        {
+          "type": "speech",
+          "speaker": "character_any",
+          "content": {
+            "korean": "피해자가 발생했군요. 깨진 스크린을 합치는 게 원인이었나요?"
+          },
+          "emotion": "sad"
+        },
+        {
+          "content": {
+            "korean": "네, 스크린을 합칠수록 정보 유출의 범위와 피해가 커지고 있습니다. 이건 재앙이에요."
+          },
+          "emotion": "base",
+          "type": "speech",
+          "speaker": "dax"
+        },
+        {
+          "speaker": "narrator",
+          "type": "speech",
+          "content": {
+            "korean": "그때, 폐기장 한편의 네온 간판이 섬광처럼 번뜩이며 기묘한 글자를 띄웠다."
+          }
+        },
+        {
+          "speaker": "narrator",
+          "type": "speech",
+          "content": {
+            "korean": "『합쳐야만 모든 것이 명확해진다』"
+          }
+        },
+        {
+          "emotion": "base",
+          "content": {
+            "korean": "…아직 모든 조각을 모으지 못했습니다. 더 합쳐야만 진실을 볼 수 있을 것 같아요."
+          },
+          "speaker": "character_any",
+          "type": "speech"
+        }
+      ],
+      "id": 5
+    },
+    {
+      "dialogue": [
+        {
+          "emotion": "sad",
+          "content": {
+            "korean": "벌써 몇 번째인가요? 폐기장 전체가 혼란에 빠졌습니다."
+          },
+          "type": "speech",
+          "speaker": "character_any"
+        },
+        {
+          "content": {
+            "korean": "이러다 모두 파산하겠어!"
+          },
+          "type": "speech",
+          "emotion": "angry",
+          "speaker": "character_2"
+        },
+        {
+          "type": "direction",
+          "duration_ms": 500,
+          "spot": [
+            50,
+            10
+          ],
+          "action": "enter",
+          "speaker": "random_boss"
+        },
+        {
+          "speaker": "random_boss",
+          "emotion": "base",
+          "type": "speech",
+          "content": {
+            "korean": "당신들, 여기서 대체 뭘 하는 겁니까? 더 이상 소란을 피우면 안 됩니다."
+          }
+        },
+        {
+          "content": {
+            "korean": "저희는 이 폐기장에서 벌어지는 일의 진실을 찾고 있습니다."
+          },
+          "emotion": "base",
+          "type": "speech",
+          "speaker": "character_any"
+        },
+        {
+          "emotion": "angry",
+          "content": {
+            "korean": "쓸데없는 짓은 그만두고 즉시 이 구역을 떠나십시오. 이 구역은 통제 구역입니다."
+          },
+          "type": "speech",
+          "speaker": "random_boss"
+        }
+      ],
+      "id": 9
+    },
+    {
+      "win_dialogue": [
+        {
+          "content": {
+            "korean": "보안 요원은 막아섰지만, 정보 유출은 멈추지 않고 계속되고 있어."
+          },
+          "emotion": "sad",
+          "speaker": "character_any",
+          "type": "speech"
+        },
+        {
+          "emotion": "base",
+          "content": {
+            "korean": "이 폐기장만의 문제가 아니었어. 도시 전체가 점점 더 혼돈 속으로 빠져드는 것 같아."
+          },
+          "speaker": "character_any",
+          "type": "speech"
+        },
+        {
+          "emotion": "sad",
+          "content": {
+            "korean": "다음은 어디일까..."
+          },
+          "type": "speech",
+          "speaker": "character_4"
+        }
+      ],
+      "dialogue": [
+        {
+          "type": "speech",
+          "speaker": "random_boss",
+          "emotion": "angry",
+          "content": {
+            "korean": "마지막 경고입니다. 지금 당장 멈추지 않으면 물리적으로 제지하겠습니다."
+          }
+        },
+        {
+          "speaker": "character_any",
+          "emotion": "base",
+          "content": {
+            "korean": "저희는 여기서 멈출 수 없습니다. 더 깊은 곳에 원인이 있을 거예요."
+          },
+          "type": "speech"
+        },
+        {
+          "speaker": "character_any",
+          "content": {
+            "korean": "당신은 누굴 위해 이 일을 막으려는 겁니까?"
+          },
+          "emotion": "base",
+          "type": "speech"
+        },
+        {
+          "speaker": "random_boss",
+          "emotion": "base",
+          "content": {
+            "korean": "저는 이 폐기장의 질서를 유지할 뿐입니다. 더 이상의 혼란은 용납할 수 없습니다."
+          },
+          "type": "speech"
+        },
+        {
+          "type": "speech",
+          "speaker": "character_3",
+          "content": {
+            "korean": "이건 질서가 아니야!"
+          },
+          "emotion": "angry"
+        }
+      ],
+      "id": 15,
+      "lose_dialogue": [
+        {
+          "content": {
+            "korean": "규칙을 어긴 대가는 혹독할 겁니다."
+          },
+          "emotion": "base",
+          "speaker": "random_boss",
+          "type": "speech"
+        },
+        {
+          "speaker": "character_any",
+          "type": "speech",
+          "emotion": "sad",
+          "content": {
+            "korean": "젠장, 막다른 길에 다다랐어."
+          }
+        }
+      ]
+    }
+  ]
+}

@@ -3,12 +3,12 @@ import { json } from '@sveltejs/kit';
 import type { RequestHandler } from './$types';
 
 export const POST: RequestHandler = async ({ request }) => {
-	const { message, tools, tool_choice, temperature, top_p } = await request.json();
+	const { message, tools, tool_choice, temperature, top_p, model } = await request.json();
 
 	const apiUrl = 'https://generativelanguage.googleapis.com/v1beta/openai/chat/completions';
 
 	const body: Record<string, unknown> = {
-		model: 'gemini-2.5-flash',
+		model: model ?? 'gemini-2.5-flash',
 		messages: [{ role: 'user', content: message }]
 	};
 

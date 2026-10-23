@@ -85,6 +85,9 @@ export type BossRef = 'random_boss' | `pool_${string}`;
 export type NpcArcItem = {
 	role: string;
 	arc: string;
+	title?: string; // summary 에서 이 NPC 를 부르는 호칭
+	turn_order?: number; // 마음을 바꾸는 화 번호 (0 = 안 바꿈)
+	turn_scene?: string; // 마음을 바꾸는 이유 장면 (그 화 summary 에 그대로 들어감)
 };
 
 export type ScenarioOutlineItem = {
@@ -94,6 +97,8 @@ export type ScenarioOutlineItem = {
 	boss: BossRef;
 	npc: string; // npc key
 	summary: string;
+	random_boss_title?: string; // 1~4화: 그 화 일반 보스의 직업 (화마다 다름)
+	place?: string; // 이 화의 장소: 무대 안의 한 구역 (화마다 다름)
 };
 
 export type ActSummary = {
@@ -110,6 +115,16 @@ export type StoryArc = {
 	rising_count: number;
 	world: World;
 	protagonist_goal: string;
+	story_spine?: { order: number; line: string; protagonist_action?: string }[]; // 이야기 전체를 단순하게 줄인 뼈대 (5화 문장에 결말 포함)
+	stage?: string; // 이야기의 무대: 보스가 있는 한 장소
+	genre?: string; // 재작업 때 배정된 장르
+	key_object?: string; // 1~5화에 계속 나오고 5화 결말에서 쓰이는 핵심 물건
+	wrong_action?: string; // 1~4화의 핵심 물건에 대한 틀린 행동
+	right_action?: string; // 5화의 핵심 물건에 대한 정답 행동 (결말 행동)
+	random_boss_role?: string; // (예전 필드) 1~4화 일반 보스 집단 이름 — 지금은 scenarioOutline[].random_boss_title 을 쓴다
+	boss_name_korean?: string; // 최종보스 이름의 한국어 발음
+	boss_human_title?: string; // (예전 필드) 최종보스 호칭 — 지금은 쓰지 않음. 최종보스는 이름으로만 부른다
+	boss_trace?: string; // 1~4화에 최종보스가 얼굴 없이 드러나는 매체 (목소리·글자·물건)
 	act_tone: {
 		intro: ActTone;
 		rising: ActTone;

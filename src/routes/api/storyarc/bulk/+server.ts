@@ -9,6 +9,7 @@ import {
 } from '$lib/prompts/storyarcGen';
 import { BOSS_POOL_MAP, BOSS_LIST_FILE, OUT_DIR } from '$lib/data/storyarc/boss_pool_map';
 import { npc_by_theme } from '$lib/data/sample/npc_pool';
+import { clampChapterName } from '$lib/server/storyarcUtil';
 import type { RequestHandler } from './$types';
 
 /**
@@ -25,33 +26,6 @@ import type { RequestHandler } from './$types';
  */
 
 type Failure = { boss: string; step: string; error: string };
-
-// chapter_name 각 언어 12자 이내 강제(결정론적). 부제 제거 → 첫 문장 → 단어경계로 ≤12 절단.
-const TITLE_CHAR_LIMIT = 12;
-function clampTitle(t: string): string {
-	let s = (t ?? '').trim();
-	for (const sep of ['：', ':', '—', '–']) {
-		const i = s.indexOf(sep);
-		if (i > 0) s = s.slice(0, i).trim();
-	}
-	const sentences = s
-		.split(/[.。!?]/)
-		.map((p) => p.trim())
-		.filter(Boolean);
-	if (sentences.length) s = sentences[0];
-	if (s.length > TITLE_CHAR_LIMIT) {
-		const cut = s.slice(0, TITLE_CHAR_LIMIT);
-		if (s.length === TITLE_CHAR_LIMIT || s[TITLE_CHAR_LIMIT] === ' ') s = cut.trim();
-		else if (cut.includes(' ')) s = cut.slice(0, cut.lastIndexOf(' ')).trim();
-		else s = cut.trim();
-	}
-	return s;
-}
-function clampChapterName(cn: unknown): Record<string, string> {
-	const out: Record<string, string> = {};
-	for (const [k, v] of Object.entries((cn ?? {}) as Record<string, string>)) out[k] = clampTitle(String(v));
-	return out;
-}
 
 export const POST: RequestHandler = async ({ request, fetch }) => {
 	const body = await request.json();
