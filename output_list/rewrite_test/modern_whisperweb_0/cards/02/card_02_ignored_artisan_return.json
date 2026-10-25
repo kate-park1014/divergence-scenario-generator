@@ -1,0 +1,135 @@
+{
+	"id": "card_02_ignored_artisan_return",
+	"title": {
+		"korean": "방해하는 조형물"
+	},
+	"tags": "signal",
+	"intensity": "high",
+	"after_story": 5,
+	"before_story": 9,
+	"callback": {
+		"seed": "ignored_artisan",
+		"min_rooms_after": 2
+	},
+	"background_tags": [
+		"rusty structures",
+		"scrap piles",
+		"narrow path",
+		"dismantled screens",
+		"unstable ground"
+	],
+	"dialogue": [
+		{
+			"speaker": "narrator",
+			"content": {
+				"korean": "거대한 폐품 조형물이 길을 막아섰다. 이전에 만났던 폐품 예술가였다."
+			}
+		},
+		{
+			"speaker": "junk_artisan",
+			"content": {
+				"korean": "하하, 어때? 이 구역의 새로운 랜드마크다! 이젠 내 작품이 네 길을 막을 거야."
+			}
+		},
+		{
+			"speaker": "dax",
+			"content": {
+				"korean": "이런, 우리가 그때 그 사람을 너무 무시했나? 길이 완전히 막혀버렸잖아!"
+			}
+		}
+	],
+	"choices": [
+		{
+			"text": {
+				"korean": "폐품 조형물을 힘으로 밀어내고 강제로 길을 확보한다."
+			},
+			"mbti": "SP",
+			"effects": {
+				"fighting": -10,
+				"echo": -5
+			},
+			"reward": [
+				"hp_down"
+			],
+			"flag": "blocked_path_junk_artisan",
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "조형물이 삐걱거리며 한쪽으로 밀렸다. 예술가는 분노에 찬 얼굴로 노려봤다."
+					}
+				},
+				{
+					"speaker": "dax",
+					"content": {
+						"korean": "억지로 길을 뚫긴 했지만, 뒤탈이 없을지는 모르겠네. 찝찝한 기분이 드는군."
+					}
+				}
+			]
+		},
+		{
+			"text": {
+				"korean": "닥스의 도움을 받아 조형물을 조심스럽게 옮길 방법을 찾는다."
+			},
+			"mbti": "FJ",
+			"effects": {
+				"community": 10,
+				"echo": 10
+			},
+			"reward": [
+				"shield"
+			],
+			"flag": "clear_path_junk_artisan",
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "닥스와 함께 조형물 구조를 파악하고 안전하게 옮겼다. 예술가는 지켜봤다."
+					}
+				},
+				{
+					"speaker": "dax",
+					"content": {
+						"korean": "역시 머리를 쓰는 게 최고야. 불필요한 충돌 없이 길을 열었군."
+					}
+				}
+			]
+		},
+		{
+			"text": {
+				"korean": "폐품 예술가에게 조형물을 치워달라고 돈을 주고 부탁한다."
+			},
+			"mbti": "EF",
+			"require": {
+				"stat": "gold",
+				"op": ">=",
+				"value": 100
+			},
+			"effects": {
+				"gold": -100,
+				"community": 5
+			},
+			"reward": [
+				"heal"
+			],
+			"flag": "clear_path_junk_artisan",
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "돈을 받은 예술가는 못 이기는 척 조형물을 치웠다. 길은 다시 확보되었다."
+					}
+				},
+				{
+					"speaker": "dax",
+					"content": {
+						"korean": "역시 돈이면 다 해결되는 세상인가. 어쨌든 우리 목적 달성이 중요하니까."
+					}
+				}
+			]
+		}
+	]
+}

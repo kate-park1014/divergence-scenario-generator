@@ -1,0 +1,166 @@
+{
+	"id": "card_02_rumor_of_error",
+	"title": {
+		"korean": "오류의 소문"
+	},
+	"tags": "rumor",
+	"intensity": "calm",
+	"after_story": 3,
+	"before_story": 5,
+	"leaning": "reason-",
+	"background_tags": [
+		"shady alley",
+		"whispering shadows",
+		"cluttered stalls",
+		"nervous glances",
+		"scattered leaflets"
+	],
+	"dialogue": [
+		{
+			"speaker": "narrator",
+			"content": {
+				"korean": "닥스의 설명이 이어지려는 찰나, 어둠 속에서"
+			}
+		},
+		{
+			"speaker": "narrator",
+			"content": {
+				"korean": "소문 상인이 나타나 속삭였다."
+			}
+		},
+		{
+			"speaker": "rumor_vendor",
+			"content": {
+				"korean": "헤이, 친구. 요즘 폐기장 주변에 이상한 소문이 돌아."
+			}
+		},
+		{
+			"speaker": "rumor_vendor",
+			"content": {
+				"korean": "은행 계좌나 청구서가 뒤죽박죽이 된다지 뭐야."
+			}
+		},
+		{
+			"speaker": "dax",
+			"content": {
+				"korean": "개인 재정 정보 유출 소문이라… 그게 사실이라면 심각해."
+			}
+		}
+	],
+	"choices": [
+		{
+			"text": {
+				"korean": "소문 상인의 말을 믿고 정보를 더 많은 사람들에게 퍼뜨린다."
+			},
+			"mbti": "SP",
+			"effects": {
+				"reason": -20,
+				"echo": -5,
+				"gold": 80
+			},
+			"event": "minigame_slot",
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "소문 상인은 당신의 행동에 만족한 듯 웃으며 사라졌다."
+					}
+				},
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "당신의 말에 사람들은 더 혼란스러워했다."
+					}
+				},
+				{
+					"speaker": "dax",
+					"content": {
+						"korean": "진위도 확인 안 된 정보를 퍼뜨리다니… 상황을 악화시킬 수 있어."
+					}
+				}
+			],
+			"event_intro": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "소문 상인은 당신에게 폐품 슬롯머신을 가리켰다."
+					}
+				},
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "'정보를 퍼뜨릴수록 운이 따를 걸세!'"
+					}
+				}
+			]
+		},
+		{
+			"text": {
+				"korean": "소문 상인의 말을 의심하고 직접 소문의 진위를 확인하려 한다."
+			},
+			"mbti": "NT",
+			"effects": {
+				"reason": 20,
+				"echo": 10
+			},
+			"reward": [
+				"intelligence_up"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "당신은 소문의 근원을 추적했다. 닥스는 당신의 신중함에 놀란 듯 보였다."
+					}
+				},
+				{
+					"speaker": "dax",
+					"content": {
+						"korean": "역시 신중한 접근이 필요해. 섣부른 판단은 독이 될 수 있지."
+					}
+				}
+			]
+		},
+		{
+			"text": {
+				"korean": "소문 상인에게 소문의 출처와 근거를 강하게 추궁하며 사실 확인을 요구한다."
+			},
+			"mbti": "ET",
+			"require": {
+				"stat": "fighting",
+				"op": ">=",
+				"value": 40
+			},
+			"effects": {
+				"fighting": -10,
+				"echo": -5
+			},
+			"reward": [
+				"attack_up"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "당신의 강한 추궁에 소문 상인은 당황하며 얼버무렸다."
+					}
+				},
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "결국 시시한 정보만 얻었다."
+					}
+				},
+				{
+					"speaker": "dax",
+					"content": {
+						"korean": "굳이 그렇게까지 몰아붙일 필요는 없었을 텐데. 중요한 정보는 없잖아."
+					}
+				}
+			]
+		}
+	]
+}

@@ -1,0 +1,155 @@
+{
+	"id": "card_01_janitor_trouble_return",
+	"title": {
+		"korean": "되돌아온 채무자들"
+	},
+	"tags": [
+		"vehicle"
+	],
+	"intensity": "high",
+	"after_story": 5,
+	"before_story": 9,
+	"callback": {
+		"seed": "helped_janitor_easy",
+		"min_rooms_after": 2
+	},
+	"background_tags": [
+		"폐기장 입구",
+		"채무자들",
+		"긴장된 분위기",
+		"고물차 흔적",
+		"어수선한 주변"
+	],
+	"dialogue": [
+		{
+			"speaker": "narrator",
+			"content": {
+				"korean": "폐기장 입구, 낡은 고물차를 손봐주었던 정비공 조가 채무자들에게 둘러싸여 있었다."
+			}
+		},
+		{
+			"speaker": "janitor",
+			"content": {
+				"korean": "제발, 저 사람 건드리지 마세요! 제가 어떻게든 할게요!"
+			}
+		},
+		{
+			"speaker": "narrator",
+			"content": {
+				"korean": "그때 채무자 중 한 명이 당신을 향해 손가락질했다."
+			}
+		},
+		{
+			"speaker": "narrator",
+			"content": {
+				"korean": "“흥, 저번에 네가 도망치게 해줬지? 그 빚, 네가 갚아야겠어.”"
+			}
+		},
+		{
+			"speaker": "echo",
+			"content": {
+				"korean": "조 아저씨가 위험해 보여요. 어떻게든 도와줘야 할 것 같은데…"
+			}
+		}
+	],
+	"choices": [
+		{
+			"text": {
+				"korean": "채무자들을 피해 다른 길로 급히 이동한다"
+			},
+			"mbti": "SP",
+			"effects": {
+				"fighting": -20,
+				"defense_down": 10
+			},
+			"reward": [
+				"defense_down"
+			],
+			"flag": "janitor_debt_collectors",
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "채무자들의 시선을 피해 폐기장 구석의 좁은 길로 서둘러 빠져나왔다. 등 뒤에서 사람들의 비난이 쫓아왔다."
+					}
+				},
+				{
+					"speaker": "echo",
+					"content": {
+						"korean": "조 아저씨를 그냥 두고 오는 건 좀… 마음이 불편하네요."
+					}
+				}
+			]
+		},
+		{
+			"text": {
+				"korean": "정비공 조를 대신해 채무자들과 직접 협상한다"
+			},
+			"mbti": "NF",
+			"effects": {
+				"community": 20,
+				"echo": 10
+			},
+			"reward": [
+				"defense_up"
+			],
+			"flag": "janitor_safety_tips",
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "채무자들과 협상해 조 아저씨의 빚을 당장 재촉하지 않게 했다."
+					}
+				},
+				{
+					"speaker": "echo",
+					"content": {
+						"korean": "잘 해결됐어요! 덕분에 조 아저씨도 안심할 거예요."
+					}
+				}
+			]
+		},
+		{
+			"text": {
+				"korean": "정비공 조의 빚을 대신 갚아주고 그를 풀어준다"
+			},
+			"mbti": "SJ",
+			"require": {
+				"stat": "gold",
+				"op": ">=",
+				"value": 100
+			},
+			"effects": {
+				"gold": -100,
+				"echo": 10
+			},
+			"reward": [
+				"shield"
+			],
+			"flag": "janitor_safety_tips",
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "채무자들에게 조 아저씨의 빚을 대신 갚아주자, 그들은 의외라는 듯 물러섰다."
+					}
+				},
+				{
+					"speaker": "janitor",
+					"content": {
+						"korean": "정말 감사합니다! 이 은혜는 꼭 갚겠습니다."
+					}
+				},
+				{
+					"speaker": "echo",
+					"content": {
+						"korean": "아저씨를 살리는 길이었어요. 이 정도면 충분할 거예요."
+					}
+				}
+			]
+		}
+	]
+}

@@ -1,0 +1,196 @@
+{
+	"id": "card_01_hidden_passage",
+	"title": {
+		"korean": "숨겨진 통로"
+	},
+	"tags": [
+		"passage"
+	],
+	"intensity": "calm",
+	"after_story": 9,
+	"before_story": 15,
+	"leaning": "reason-",
+	"background_tags": [
+		"폐기장 벽",
+		"숨겨진 통로",
+		"운동가의 발견",
+		"어두운 내부",
+		"희미한 빛"
+	],
+	"dialogue": [
+		{
+			"speaker": "narrator",
+			"content": {
+				"korean": "운동가 박이 폐기장 입구 근처의 벽 뒤 숨겨진 좁은 통로를 발견했다고 알려주었다."
+			}
+		},
+		{
+			"speaker": "narrator",
+			"content": {
+				"korean": "통로 안은 어둡고 위험해 보였다."
+			}
+		},
+		{
+			"speaker": "protestor",
+			"content": {
+				"korean": "이봐, 여기 이상한 길을 찾았어! 폐기장 안으로 통하는 것 같아!"
+			}
+		},
+		{
+			"speaker": "echo",
+			"content": {
+				"korean": "숨겨진 길이라니! 위험해 보이지만, 어쩌면 돌파구가 될지도 몰라요."
+			}
+		}
+	],
+	"choices": [
+		{
+			"text": {
+				"korean": "통로의 위험을 감수하고 빠르게 진입한다"
+			},
+			"mbti": "SJ",
+			"effects": {
+				"reason": -20,
+				"move_range_up": 10,
+				"echo": -5
+			},
+			"reward": [
+				"move_range_up"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "위험을 감수하고 어두운 통로로 빠르게 진입했다. 뒤에서 박이 걱정스러운 표정으로 당신을 지켜보았다."
+					}
+				},
+				{
+					"speaker": "echo",
+					"content": {
+						"korean": "빨리 움직여서 다행이에요. 하지만 조금 무모했을지도…"
+					}
+				}
+			]
+		},
+		{
+			"text": {
+				"korean": "통로를 면밀히 조사하여 안전을 확보한 후 진입한다"
+			},
+			"mbti": "FP",
+			"effects": {
+				"reason": 20,
+				"defense_up": 10,
+				"echo": 10
+			},
+			"reward": [
+				"defense_up"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "통로를 꼼꼼히 조사하여 위험 요소를 확인한 후 안전하게 진입했다. 박은 당신의 신중함에 놀랐다."
+					}
+				},
+				{
+					"speaker": "protestor",
+					"content": {
+						"korean": "대단하군… 그렇게 침착하게!"
+					}
+				},
+				{
+					"speaker": "echo",
+					"content": {
+						"korean": "역시 신중하게 움직이는 게 안전하네요! 잘했어요."
+					}
+				}
+			]
+		},
+		{
+			"text": {
+				"korean": "통로의 지형을 파악하는 미니게임을 진행한다"
+			},
+			"mbti": "TP",
+			"effects": {
+				"intelligence": 10
+			},
+			"event": "minigame_cup",
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "통로의 복잡한 지형을 완벽하게 파악했다. 박은 당신의 직관력에 감탄했다."
+					}
+				},
+				{
+					"speaker": "protestor",
+					"content": {
+						"korean": "와! 저걸 한눈에 파악하다니! 정말 대단하군!"
+					}
+				},
+				{
+					"speaker": "echo",
+					"content": {
+						"korean": "어둡지만, 통로가 어떻게 생겼는지 이제 정확히 알겠어요!"
+					}
+				}
+			],
+			"event_intro": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "어두운 통로 입구에 숨겨진 지형도가 나타났다. 몇 개의 조각이 빠르게 섞였다."
+					}
+				},
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "정확한 통로 지도를 완성해야 한다."
+					}
+				}
+			]
+		},
+		{
+			"text": {
+				"korean": "통로를 안전하게 탐색할 장비를 구매하여 진입한다"
+			},
+			"mbti": "FJ",
+			"require": {
+				"stat": "gold",
+				"op": ">=",
+				"value": 50
+			},
+			"effects": {
+				"gold": -50,
+				"defense_up": 5
+			},
+			"reward": [
+				"defense_up"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "장비를 갖춘 후 통로로 진입했다. 박은 당신의 준비성에 고개를 끄덕였다."
+					}
+				},
+				{
+					"speaker": "protestor",
+					"content": {
+						"korean": "그래, 역시 준비를 잘해야지! 현명한 선택이다."
+					}
+				},
+				{
+					"speaker": "echo",
+					"content": {
+						"korean": "안전하게 들어갈 수 있을 것 같아요! 돈 쓴 보람이 있네요."
+					}
+				}
+			]
+		}
+	]
+}

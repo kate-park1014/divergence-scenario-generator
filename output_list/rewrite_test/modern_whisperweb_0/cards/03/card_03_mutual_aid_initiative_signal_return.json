@@ -1,0 +1,134 @@
+{
+	"id": "card_03_mutual_aid_initiative_signal_return",
+	"title": {
+		"korean": "상호 협력의 결과"
+	},
+	"tags": "signal",
+	"intensity": "calm",
+	"after_story": 9,
+	"before_story": 15,
+	"callback": {
+		"seed": "shared_burden",
+		"min_rooms_after": 2
+	},
+	"background_tags": [
+		"workshop",
+		"technician",
+		"information_flow",
+		"calm_moment",
+		"display"
+	],
+	"dialogue": [
+		{
+			"speaker": "narrator",
+			"content": {
+				"korean": "이전에 도움을 줬던 기술 보조가 당신에게 달려와 중요한 정보를 건넨다."
+			}
+		},
+		{
+			"speaker": "technician",
+			"content": {
+				"korean": "이 신호 흐름을 보니... 그의 시스템 핵심 노드 위치가 보여요! 여기예요!"
+			}
+		},
+		{
+			"speaker": "lin",
+			"content": {
+				"korean": "정말 고마워요! 우리가 함께 노력한 보람이 있네요!"
+			}
+		}
+	],
+	"choices": [
+		{
+			"text": {
+				"korean": "정보를 즉시 동료들에게 공유하여 사기를 높인다"
+			},
+			"mbti": "NF",
+			"effects": {
+				"community": 10
+			},
+			"reward": [
+				"heal"
+			],
+			"flag": "revealed_control_node",
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "모두가 정보를 확인하고 잠시 희망에 찬 표정을 짓는다."
+					}
+				},
+				{
+					"speaker": "lin",
+					"content": {
+						"korean": "우리가 무엇을 해야 할지 분명해졌어요!"
+					}
+				}
+			]
+		},
+		{
+			"text": {
+				"korean": "정보를 분석하여 기술 감독의 시스템에 대한 방어 전략을 세운다"
+			},
+			"mbti": "SJ",
+			"effects": {
+				"reason": 20,
+				"echo": 5
+			},
+			"reward": [
+				"shield"
+			],
+			"flag": "cooperative_breakthrough",
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "정보를 토대로 그의 시스템에 대항할 방어책을 세운다."
+					}
+				},
+				{
+					"speaker": "lin",
+					"content": {
+						"korean": "이 정보를 활용하면 그의 공격을 막아낼 수 있을 거예요!"
+					}
+				}
+			]
+		},
+		{
+			"text": {
+				"korean": "정보 확산을 막기 위해 방해 전파 장치를 가동한다"
+			},
+			"mbti": "IT",
+			"require": {
+				"stat": "reason",
+				"op": ">=",
+				"value": -40
+			},
+			"effects": {
+				"fighting": 10,
+				"echo": -5
+			},
+			"reward": [
+				"stun"
+			],
+			"flag": "cooperative_breakthrough",
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "작업실 주변에 방해 전파가 가동되어 정보 흐름을 일시적으로 차단한다."
+					}
+				},
+				{
+					"speaker": "lin",
+					"content": {
+						"korean": "신호가 잠시 교란될 거예요. 이 틈을 놓치지 말아요."
+					}
+				}
+			]
+		}
+	]
+}

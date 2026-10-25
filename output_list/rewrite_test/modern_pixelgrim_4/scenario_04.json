@@ -1,0 +1,425 @@
+{
+  "scenario_id": "modern_pixelgrim_4_04",
+  "order": 4,
+  "act": "rising",
+  "theme": "modern",
+  "actors": {
+    "lin": {
+      "id": "mon_d036a884-3dde-472c-9fe7-c4807643860f",
+      "name": {
+        "korean": "린",
+        "english": "Lin",
+        "japanese": "リン",
+        "chinese": "琳",
+        "french": "Lin",
+        "spanish": "Lin",
+        "vietnamese": "Lin",
+        "thai": "ลิน",
+        "hindi": "लिन"
+      },
+      "description": "",
+      "face_image_url": "https://imagedelivery.net/WTEqQNGFb-l-IHS6IGnzUQ/a095dd66-1857-4f44-68b0-2ece83006d00/public",
+      "battle_sprite_url": "https://imagedelivery.net/WTEqQNGFb-l-IHS6IGnzUQ/05b02694-f1ed-4e4c-b7ca-fb5b74a48900/public",
+      "role": {
+        "korean": "기념품 판매원"
+      }
+    },
+    "kai": {
+      "id": "mon_d7f29313-b8fb-49da-9a1a-01df5d13866e",
+      "name": {
+        "korean": "카이",
+        "english": "Kai",
+        "japanese": "カイ",
+        "chinese": "凯",
+        "french": "Kai",
+        "spanish": "Kai",
+        "vietnamese": "Kai",
+        "thai": "ไค",
+        "hindi": "काई"
+      },
+      "description": "",
+      "face_image_url": "https://imagedelivery.net/WTEqQNGFb-l-IHS6IGnzUQ/f10d9184-4155-4bb9-de2d-db61463f7c00/public",
+      "battle_sprite_url": "https://imagedelivery.net/WTEqQNGFb-l-IHS6IGnzUQ/e41f8e03-08c9-4a4f-6f72-fa9342876f00/public",
+      "role": {
+        "korean": "게임 개발자"
+      }
+    }
+  },
+  "boss": {
+    "pool_id": "random_boss",
+    "role": {
+      "korean": "상인"
+    }
+  },
+  "prologue": {
+    "korean": [
+      "낡은 아케이드의 네온빛이 퇴색된 기억을 비춘다.",
+      "소중한 추억들은 비디오테이프 속에서 서서히 지워지고 있었다.",
+      "재생 버튼을 누를수록 망각의 그림자는 더욱 짙어졌다.",
+      "이제, 또 하나의 보물이 흔적도 없이 사라질 위기에 처했다."
+    ]
+  },
+  "rooms": [
+    {
+      "dialogue": [
+        {
+          "content": {
+            "korean": "고장 난 인형 뽑기 코너, 린의 보물 상자가 텅 비어 있었다."
+          },
+          "speaker": "narrator",
+          "type": "speech",
+          "emotion": "base"
+        },
+        {
+          "duration_ms": 500,
+          "spot": [
+            50,
+            10
+          ],
+          "type": "direction",
+          "action": "enter",
+          "speaker": "lin"
+        },
+        {
+          "emotion": "sad",
+          "speaker": "lin",
+          "type": "speech",
+          "content": {
+            "korean": "안 돼…! 내 보물 상자가 텅 비어 버렸어!"
+          }
+        },
+        {
+          "type": "speech",
+          "emotion": "base",
+          "content": {
+            "korean": "무슨 일이야? 상자가 왜 이렇게 텅 비어 있지?"
+          },
+          "speaker": "character_any"
+        },
+        {
+          "emotion": "sad",
+          "content": {
+            "korean": "어릴 적 추억이 담긴 물건들이… 전부 사라졌어."
+          },
+          "type": "speech",
+          "speaker": "lin"
+        },
+        {
+          "emotion": "sad",
+          "type": "speech",
+          "speaker": "character_any",
+          "content": {
+            "korean": "혹시… 비디오테이프를 재생한 것 때문일까?"
+          }
+        }
+      ],
+      "id": 1
+    },
+    {
+      "id": 3,
+      "dialogue": [
+        {
+          "duration_ms": 500,
+          "speaker": "kai",
+          "spot": [
+            50,
+            10
+          ],
+          "type": "direction",
+          "action": "enter"
+        },
+        {
+          "emotion": "angry",
+          "speaker": "kai",
+          "type": "speech",
+          "content": {
+            "korean": "모두 내 말을 들어야 해! 큰일 났어!"
+          }
+        },
+        {
+          "emotion": "base",
+          "content": {
+            "korean": "카이? 무슨 일이야? 왜 그렇게 화난 표정이야?"
+          },
+          "type": "speech",
+          "speaker": "character_any"
+        },
+        {
+          "speaker": "kai",
+          "content": {
+            "korean": "내 가족 사진이 사라졌어. 비디오테이프를 재생하는 건 잘못된 일이야."
+          },
+          "emotion": "angry",
+          "type": "speech"
+        },
+        {
+          "emotion": "base",
+          "type": "speech",
+          "content": {
+            "korean": "그게 정말 테이프 때문이라고 확신하는 거야?"
+          },
+          "speaker": "character_any"
+        },
+        {
+          "emotion": "angry",
+          "speaker": "kai",
+          "content": {
+            "korean": "그래, 과거를 되찾는 게 아니라 망가뜨리고 있어. 이 테이프를 재편집해야 해."
+          },
+          "type": "speech"
+        },
+        {
+          "emotion": "base",
+          "type": "speech",
+          "speaker": "character_any",
+          "content": {
+            "korean": "재편집이라니… 그런 방법이 있었어?"
+          }
+        },
+        {
+          "content": {
+            "korean": "우리가 잘못 생각하고 있었나…."
+          },
+          "speaker": "character_1",
+          "type": "speech",
+          "emotion": "sad"
+        },
+        {
+          "emotion": "base",
+          "type": "speech",
+          "speaker": "narrator",
+          "content": {
+            "korean": "아케이드 스피커에서 기록자 픽셀그림의 방송이 흘러나왔다."
+          }
+        },
+        {
+          "emotion": "base",
+          "type": "speech",
+          "speaker": "narrator",
+          "content": {
+            "korean": "“과거를 되찾을 마지막 기회, 재생 버튼을 눌러라.”"
+          }
+        }
+      ]
+    },
+    {
+      "dialogue": [
+        {
+          "emotion": "sad",
+          "type": "speech",
+          "speaker": "character_any",
+          "content": {
+            "korean": "우리는 어떻게 해야 할까… 기록자의 말이 계속 신경 쓰여."
+          }
+        },
+        {
+          "emotion": "sad",
+          "type": "speech",
+          "content": {
+            "korean": "혼란스러워."
+          },
+          "speaker": "character_2"
+        },
+        {
+          "emotion": "base",
+          "speaker": "narrator",
+          "type": "speech",
+          "content": {
+            "korean": "주인공은 낡은 비디오테이프를 재생했다."
+          }
+        },
+        {
+          "content": {
+            "korean": "빛이… 린의 보물 상자를 향해 흘러간다!"
+          },
+          "type": "speech",
+          "speaker": "character_any",
+          "emotion": "sad"
+        },
+        {
+          "action": "enter",
+          "duration_ms": 500,
+          "type": "direction",
+          "speaker": "lin",
+          "spot": [
+            50,
+            10
+          ]
+        },
+        {
+          "type": "speech",
+          "emotion": "sad",
+          "content": {
+            "korean": "안 돼… 내 기억들이…! 모두 사라지고 있어!"
+          },
+          "speaker": "lin"
+        },
+        {
+          "emotion": "sad",
+          "type": "speech",
+          "speaker": "character_any",
+          "content": {
+            "korean": "결국… 린의 소중한 추억마저 사라져 버렸어."
+          }
+        },
+        {
+          "speaker": "character_3",
+          "type": "speech",
+          "content": {
+            "korean": "믿을 수 없어. 픽셀그림의 말은 전부 거짓이었나!"
+          },
+          "emotion": "angry"
+        }
+      ],
+      "id": 5
+    },
+    {
+      "id": 9,
+      "dialogue": [
+        {
+          "action": "enter",
+          "spot": [
+            50,
+            10
+          ],
+          "type": "direction",
+          "speaker": "lin",
+          "duration_ms": 500
+        },
+        {
+          "content": {
+            "korean": "내 어린 시절의 추억이 완전히 사라졌어… 모든 게 텅 비었어."
+          },
+          "type": "speech",
+          "speaker": "lin",
+          "emotion": "sad"
+        },
+        {
+          "type": "direction",
+          "speaker": "kai",
+          "spot": [
+            50,
+            10
+          ],
+          "action": "enter",
+          "duration_ms": 500
+        },
+        {
+          "speaker": "kai",
+          "content": {
+            "korean": "이러다 모두의 소중한 기억이 없어질 거야. 더 이상 픽셀그림에게 속으면 안 돼."
+          },
+          "type": "speech",
+          "emotion": "angry"
+        },
+        {
+          "emotion": "sad",
+          "speaker": "character_any",
+          "type": "speech",
+          "content": {
+            "korean": "픽셀그림의 말은 결국 거짓이었던 건가… 우리는 속았던 거야."
+          }
+        },
+        {
+          "speaker": "character_any",
+          "content": {
+            "korean": "이제 우리가 이 잘못된 흐름을 막아야 해. 더 이상 지켜보고만 있을 수는 없어."
+          },
+          "type": "speech",
+          "emotion": "base"
+        },
+        {
+          "type": "speech",
+          "speaker": "character_4",
+          "content": {
+            "korean": "그래야만 해. 우리의 기억을 되찾으려면."
+          },
+          "emotion": "base"
+        }
+      ]
+    },
+    {
+      "dialogue": [
+        {
+          "emotion": "angry",
+          "speaker": "random_boss",
+          "type": "speech",
+          "content": {
+            "korean": "규칙을 어기는 자는 이 상점을 떠날 수 없다. 감히 저항하려 하는가!"
+          }
+        },
+        {
+          "speaker": "character_any",
+          "content": {
+            "korean": "우리를 막는 건가? 이제 더 이상 너의 거짓된 평화에 속지 않을 거야."
+          },
+          "type": "speech",
+          "emotion": "angry"
+        },
+        {
+          "speaker": "random_boss",
+          "type": "speech",
+          "content": {
+            "korean": "어리석은 선택이다. 이곳의 평화를 깨뜨리지 마라. 너희는 그저 순응해야 할 뿐이다."
+          },
+          "emotion": "angry"
+        }
+      ],
+      "id": 15,
+      "win_dialogue": [
+        {
+          "emotion": "sad",
+          "type": "speech",
+          "speaker": "character_any",
+          "content": {
+            "korean": "이겼지만… 린의 추억은 돌아오지 않아. 무엇을 위한 싸움이었을까."
+          }
+        },
+        {
+          "action": "enter",
+          "duration_ms": 500,
+          "spot": [
+            50,
+            10
+          ],
+          "type": "direction",
+          "speaker": "kai"
+        },
+        {
+          "type": "speech",
+          "emotion": "base",
+          "content": {
+            "korean": "전투에서 이기는 것만으로는 안 돼. 근본적인 원인을 해결해야 해. 픽셀그림을 막지 않으면…."
+          },
+          "speaker": "kai"
+        },
+        {
+          "emotion": "sad",
+          "content": {
+            "korean": "결국 재편집만이 답일까… 어떻게 해야 할지 모르겠어."
+          },
+          "type": "speech",
+          "speaker": "character_any"
+        }
+      ],
+      "lose_dialogue": [
+        {
+          "content": {
+            "korean": "규칙을 어긴 대가는 혹독할 것이다. 너희는 이곳을 벗어날 수 없어."
+          },
+          "speaker": "random_boss",
+          "type": "speech",
+          "emotion": "angry"
+        },
+        {
+          "emotion": "sad",
+          "type": "speech",
+          "speaker": "character_any",
+          "content": {
+            "korean": "젠장, 우리가 졌어… 이대로 끝낼 수는 없어."
+          }
+        }
+      ]
+    }
+  ]
+}

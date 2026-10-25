@@ -1,0 +1,155 @@
+{
+	"id": "card_05_rumor_deal",
+	"title": {
+		"korean": "소문꾼의 거래"
+	},
+	"tags": [
+		"info_brokerage"
+	],
+	"intensity": "calm",
+	"after_story": 3,
+	"before_story": 5,
+	"leaning": "fighting-",
+	"background_tags": [
+		"flickering neon",
+		"shady alley",
+		"whispering crowd",
+		"paper scraps",
+		"half-hidden stall"
+	],
+	"dialogue": [
+		{
+			"speaker": "narrator",
+			"content": {
+				"korean": "폐기장 안쪽 어두운 통로, 쭈그리고 앉은 정보 행상인이 손짓했다."
+			}
+		},
+		{
+			"speaker": "info_peddler",
+			"content": {
+				"korean": "이봐요, 이 최신 유출 정보들 좀 보라고! 당신 것도 있을지 몰라!"
+			}
+		},
+		{
+			"speaker": "echo",
+			"content": {
+				"korean": "개인의 불행을 사고파는 짓을 하다니... 역겨워."
+			}
+		}
+	],
+	"choices": [
+		{
+			"text": {
+				"korean": "정보 행상인에게 돈을 지불하고 나에게 관련된 모든 유출 정보를 회수한다."
+			},
+			"mbti": "IF",
+			"effects": {
+				"fighting": -30,
+				"gold": -100
+			},
+			"event": "meet_stranger",
+			"seed": "B_easy_path",
+			"result": [
+				{
+					"speaker": "info_peddler",
+					"content": {
+						"korean": "현명한 선택이야. 깨끗하게 지워줄게, 내 목록에서."
+					}
+				},
+				{
+					"speaker": "echo",
+					"content": {
+						"korean": "결국 돈으로 해결하는 수밖에 없나... 씁쓸하다."
+					}
+				},
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "그는 내 정보가 담긴 듯한 데이터 칩을 건네며 씨익 웃었다."
+					}
+				}
+			],
+			"event_intro": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "행상인이 건넨 칩에는 낯선 이들의 정보가 잔뜩 들어 있었다. 다른 이의 비밀을 엿본 기분이었다."
+					}
+				}
+			]
+		},
+		{
+			"text": {
+				"korean": "정보 행상인의 거래를 거부하고, 유출 정보의 확산을 막을 방법을 직접 찾는다."
+			},
+			"mbti": "ET",
+			"effects": {
+				"fighting": 20,
+				"echo": 10
+			},
+			"reward": [
+				"attack_up"
+			],
+			"seed": "B_hard_path",
+			"result": [
+				{
+					"speaker": "info_peddler",
+					"content": {
+						"korean": "호기롭게 굴어봐야 결국 혼돈에 휩쓸릴 뿐이야!"
+					}
+				},
+				{
+					"speaker": "echo",
+					"content": {
+						"korean": "그래! 저런 꾼들에게 휘둘려선 안 돼! 우리가 막아야 해!"
+					}
+				},
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "정보 행상인은 불쾌한 표정을 지으며 침묵했다."
+					}
+				}
+			]
+		},
+		{
+			"text": {
+				"korean": "정보 행상인에게 나를 위해 다른 사람의 정보를 넘기도록 제안한다."
+			},
+			"mbti": "IS",
+			"require": {
+				"stat": "community",
+				"op": "<=",
+				"value": -40
+			},
+			"effects": {
+				"community": -10,
+				"echo": -5
+			},
+			"reward": [
+				"hp_down"
+			],
+			"seed": "B_easy_path",
+			"result": [
+				{
+					"speaker": "info_peddler",
+					"content": {
+						"korean": "오, 생각보다 더 영악하잖아? 흥미로운 거래군."
+					}
+				},
+				{
+					"speaker": "echo",
+					"content": {
+						"korean": "다른 사람의 희생으로 얻는 평화는 가짜일 뿐이야!"
+					}
+				},
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "그는 내 제안을 듣고는 더러운 미소를 지었다."
+					}
+				}
+			]
+		}
+	]
+}

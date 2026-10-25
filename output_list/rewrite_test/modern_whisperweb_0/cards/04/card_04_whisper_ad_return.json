@@ -1,0 +1,138 @@
+{
+	"id": "card_04_whisper_ad_return",
+	"title": {
+		"korean": "위스퍼 웹의 지시"
+	},
+	"tags": "rumor",
+	"intensity": "high",
+	"after_story": 9,
+	"before_story": 15,
+	"callback": {
+		"seed": "hide_traces",
+		"min_rooms_after": 2
+	},
+	"background_tags": [
+		"blinking neon",
+		"shadowed corner",
+		"unstable data stream",
+		"rumbling sound",
+		"whispering wind"
+	],
+	"dialogue": [
+		{
+			"speaker": "narrator",
+			"content": {
+				"korean": "폐기물 더미 사이, 한 구석에서 정보꾼이 불안한 표정으로 웅크린 채 누군가에게 지시를 받고 있었다."
+			}
+		},
+		{
+			"speaker": "gossip_monger",
+			"content": {
+				"korean": "(작게) …네, 위스퍼 웹. …그렇게 하겠습니다."
+			}
+		},
+		{
+			"speaker": "kai",
+			"content": {
+				"korean": "저 자가 위스퍼 웹과 직접 연결되어 있었군요! 대체 어떤 지시를 받고 있는 걸까요?"
+			}
+		}
+	],
+	"choices": [
+		{
+			"text": {
+				"korean": "정보꾼의 혼란스러운 움직임을 보고 상황을 이용한다"
+			},
+			"mbti": "SP",
+			"effects": {
+				"reason": -10
+			},
+			"reward": [
+				"attack_down"
+			],
+			"flag": "distracted_attention",
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "정보꾼은 지시에 따라 움직여 또 다른 혼란을 만들었다."
+					}
+				},
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "그 틈을 타 움직이려 했지만, 카이는 안절부절못했다."
+					}
+				},
+				{
+					"speaker": "kai",
+					"content": {
+						"korean": "섣부른 행동은 더 큰 위험을 부를 수 있습니다!"
+					}
+				}
+			]
+		},
+		{
+			"text": {
+				"korean": "정보꾼이 위스퍼 웹에게 받은 지시의 내용을 알아낸다"
+			},
+			"mbti": "NJ",
+			"effects": {
+				"intelligence": 10
+			},
+			"reward": [
+				"intelligence_up"
+			],
+			"flag": "hidden_fault",
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "정보꾼의 말을 엿듣던 중, 위스퍼 웹의 핵심 계획에 대한 중요한 단서를 포착했다."
+					}
+				},
+				{
+					"speaker": "kai",
+					"content": {
+						"korean": "이제 위스퍼 웹의 다음 수를 알 수 있겠군요!"
+					}
+				}
+			]
+		},
+		{
+			"text": {
+				"korean": "정보꾼에게 뇌물을 줘서 위스퍼 웹의 지시를 방해하게 한다"
+			},
+			"mbti": "SJ",
+			"require": {
+				"stat": "gold",
+				"op": ">=",
+				"value": 100
+			},
+			"effects": {
+				"gold": -100
+			},
+			"reward": [
+				"stun"
+			],
+			"flag": "hidden_fault",
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "재빨리 금화를 던져 정보꾼의 주의를 돌렸다. 그는 어쩔 줄 몰라 하며 지시를 제대로 따르지 못했다."
+					}
+				},
+				{
+					"speaker": "kai",
+					"content": {
+						"korean": "당신의 기지가 상황을 뒤집을 수도 있겠어요!"
+					}
+				}
+			]
+		}
+	]
+}

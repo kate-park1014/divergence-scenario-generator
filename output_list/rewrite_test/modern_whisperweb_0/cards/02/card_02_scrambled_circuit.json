@@ -1,0 +1,152 @@
+{
+	"id": "card_02_scrambled_circuit",
+	"title": {
+		"korean": "뒤죽박죽 회로"
+	},
+	"tags": "circuit",
+	"intensity": "calm",
+	"after_story": 1,
+	"before_story": 3,
+	"leaning": "reason+",
+	"background_tags": [
+		"tangled wires",
+		"discarded electronics",
+		"cluttered workstation",
+		"dusty circuit boards",
+		"flickering indicator"
+	],
+	"dialogue": [
+		{
+			"speaker": "narrator",
+			"content": {
+				"korean": "닥스가 분석 장비를 설치하려는 스크린 옆."
+			}
+		},
+		{
+			"speaker": "narrator",
+			"content": {
+				"korean": "데이터 청소부가 엉망이 된 회로를 뒤적이고 있었다."
+			}
+		},
+		{
+			"speaker": "data_cleaner",
+			"content": {
+				"korean": "이리저리 엉킨 것들을 좀 치워야지! 깨끗하게 정리해야 해."
+			}
+		},
+		{
+			"speaker": "dax",
+			"content": {
+				"korean": "지금 그쪽이 만지는 회로 때문에 장비가 오작동할 수 있어요!"
+			}
+		}
+	],
+	"choices": [
+		{
+			"text": {
+				"korean": "데이터 청소부의 엉성한 정리를 그냥 지켜보며 간섭하지 않는다."
+			},
+			"mbti": "IP",
+			"effects": {
+				"reason": 20,
+				"echo": -5,
+				"gold": 50
+			},
+			"event": "minigame_timing",
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "청소부는 땀 흘리며 회로를 더 엉망으로 만들었다. 닥스는 한숨 쉬었다."
+					}
+				},
+				{
+					"speaker": "dax",
+					"content": {
+						"korean": "끼어들었다간 더 일이 커졌을지도 모르지. 이대로 진행하는 수밖에."
+					}
+				}
+			],
+			"event_intro": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "엉망이 된 회로 사이로 닥스의 장비를 설치해야 했다."
+					}
+				},
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "미세한 전류의 흐름에 맞춰 정확한 순간에 꽂아야 했다."
+					}
+				}
+			]
+		},
+		{
+			"text": {
+				"korean": "직접 나서서 회로를 올바른 방식으로 정리하며 청소부를 제지한다."
+			},
+			"mbti": "EJ",
+			"effects": {
+				"fighting": 20,
+				"echo": 5
+			},
+			"reward": [
+				"intelligence_up"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "당신이 회로를 정리하자 청소부는 어리둥절한 표정으로 쳐다봤다."
+					}
+				},
+				{
+					"speaker": "dax",
+					"content": {
+						"korean": "휴, 이제야 좀 숨통이 트이네. 당신 덕분에 작업 효율이 올랐어."
+					}
+				}
+			]
+		},
+		{
+			"text": {
+				"korean": "{actor}이(가) 닥스에게 나서서 청소부를 도와주라고 설득하여 작업을 서두르게 한다."
+			},
+			"mbti": "ES",
+			"require": {
+				"mbti": "ES"
+			},
+			"effects": {
+				"community": 10,
+				"echo": 10
+			},
+			"reward": [
+				"heal"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "{actor}이(가) 닥스를 설득하자 닥스는 불평하며 청소부를 도왔다."
+					}
+				},
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "어수선했지만, 작업은 빠르게 진행됐다."
+					}
+				},
+				{
+					"speaker": "dax",
+					"content": {
+						"korean": "내가 직접 나서야 하는 건가… 당신 부탁이니 어쩔 수 없지."
+					}
+				}
+			]
+		}
+	]
+}

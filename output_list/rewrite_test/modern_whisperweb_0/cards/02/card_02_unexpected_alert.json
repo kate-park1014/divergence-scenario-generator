@@ -1,0 +1,138 @@
+{
+	"id": "card_02_unexpected_alert",
+	"title": {
+		"korean": "예상치 못한 경보"
+	},
+	"tags": "alert",
+	"intensity": "high",
+	"after_story": 5,
+	"before_story": 9,
+	"leaning": "fighting-",
+	"background_tags": [
+		"blinding red light",
+		"piercing siren",
+		"agitated officer",
+		"chaotic movement",
+		"warning signs"
+	],
+	"dialogue": [
+		{
+			"speaker": "narrator",
+			"content": {
+				"korean": "스크린을 합치자 폐기장의 낡은 보안 시스템에서"
+			}
+		},
+		{
+			"speaker": "narrator",
+			"content": {
+				"korean": "요란한 경보음이 울렸다. 보안 담당자가 달려왔다."
+			}
+		},
+		{
+			"speaker": "security_officer",
+			"content": {
+				"korean": "무슨 일이야! 경보 시스템이 오작동하고 있어!"
+			}
+		},
+		{
+			"speaker": "security_officer",
+			"content": {
+				"korean": "당신들, 여기서 수상한 짓을 하는 거냐?"
+			}
+		},
+		{
+			"speaker": "dax",
+			"content": {
+				"korean": "큰일이군! 경보가 울려 모두의 시선이 우리에게 집중됐어."
+			}
+		},
+		{
+			"speaker": "dax",
+			"content": {
+				"korean": "이러다간 폐기장 전체가 혼란에 빠지겠어."
+			}
+		}
+	],
+	"choices": [
+		{
+			"text": {
+				"korean": "경보음을 무시하고 작업을 서두른다."
+			},
+			"mbti": "ST",
+			"effects": {
+				"fighting": -30,
+				"echo": -10
+			},
+			"event": "minigame_cup",
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "당신은 경보를 무시하고 작업을 서둘렀다."
+					}
+				},
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "보안 담당자는 경계하며 무전을 날렸다."
+					}
+				},
+				{
+					"speaker": "dax",
+					"content": {
+						"korean": "계속 무시하다간 저 담당자가 더 많은 사람들을 불러올지도 몰라."
+					}
+				}
+			],
+			"event_intro": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "보안 담당자의 경고는 계속되었지만,"
+					}
+				},
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "당신은 빠르게 다음 행동을 해야만 했다. 컵 속의 위치를 파악해야 했다."
+					}
+				}
+			]
+		},
+		{
+			"text": {
+				"korean": "경보 시스템의 전원을 찾아 차단하여 소음을 멈춘다."
+			},
+			"mbti": "NT",
+			"effects": {
+				"reason": 20,
+				"echo": 5
+			},
+			"reward": [
+				"stun"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "당신은 닥스와 함께 경보 시스템의 전원을 찾아 차단했다."
+					}
+				},
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "주변은 다시 조용해졌다."
+					}
+				},
+				{
+					"speaker": "dax",
+					"content": {
+						"korean": "역시 이게 효율적이야. 더 큰 소란을 막았군."
+					}
+				}
+			]
+		}
+	]
+}

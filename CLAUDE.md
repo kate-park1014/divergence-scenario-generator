@@ -180,3 +180,21 @@ rewrite_test 의 storyarc 로 새 프롬프트 [chapterGenRewrite.ts](src/lib/pr
 - 게임 데이터 형식 규칙은 [chapterRules.ts](src/lib/prompts/chapterRules.ts) 로 분리해 chapterGen.ts 와 공유 (chapterGen.ts 프롬프트 결과는 분리 전과 글자 단위로 같음을 확인)
 - 새 프롬프트는 규칙을 짧게, 필드 문구를 대사에 그대로 옮기지 않게, 출력 예시 없이 (예시를 베낌). prologue·epilogue 3인칭. 일반 보스는 방 15 밖에도 나와도 됨
 
+
+## 칸 고정 카드 (재작업 시나리오용, 성향 조합 없음)
+
+rewrite_test 시나리오(`output_list/rewrite_test/<id>/scenario_0N.json`)마다 카드 16장 + additions. 엔드포인트 `POST /api/scenario/card-seq-pipeline`, 프롬프트 [cardGenSeq.ts](src/lib/prompts/cardGenSeq.ts), 검사 `checkSeqDesign`([cardCheck.ts](src/lib/server/cardCheck.ts)).
+- 칸 A(스토리 1→3) B(3→5) C(5→9) D(9→15). 칸마다 후보 3장(심기+일반), 카드는 자기 칸에서만 나옴. Gemini 는 `slot` 만 쓰고 코드가 after_story/before_story 와 id 앞 `card_0N_` 를 붙임
+- 프롬프트에 칸마다 앞 방 마지막 6줄 / 다음 방 첫 6줄을 넣음. 카드는 앞 방 끝을 이어받고, 다음 방 첫 대사의 전제를 깨지 않게. 설계표 `bridge` 에 연결 이유
+- storyarc(rewrite_test)에서 무대 `stage`·`world.setting`·`world.rule`, 이번 화 `scenarioOutline[].place`·summary, `key_object`·이번 화 `protagonist_action`, `boss_trace` 를 넣음. 카드는 이번 화 공간 안에서만. 보스 정체·secret 은 넣지 않음 (앞질러 밝히지 않게)
+- 내용 규칙: 사람이 일으키는 사건(카드마다 동행 말고 인물 1명 이상, summary 에 그 인물), 데이터가 스스로 움직이는 사건 금지, 보스는 카드에서 직접 움직이지 않음, 선택지 깎아내리는 말(`BELITTLE`)·설명투(`META`) 금지 — 코드 검사함
+- 성향 조합 대신 선택지 `path`: easy(당장 이득, 회수 때 bad+good) / hard(지금 대가, 회수 때 good+good) / gold / lock / stat
+- 기억: 칸 A 심기 1장 → 칸 C 회수 2장, 칸 B 심기 1장 → 칸 D 회수 2장. leaning 은 코드가 easy 선택지의 가장 큰 축으로 정함, 같은 칸 3장은 방향이 다름. 1~4화 칸 D 일반 카드 1장은 일반 보스 카드(speaker `random_boss`, 서술은 `{random_boss}` 자리표시, 막기만 함). "보스" 낱말·일반 보스 호칭·첫 줄 앞 방 베끼기·앞 화 인물 이름 재사용은 코드 검사. 이벤트 8~14개(5종 모두 1~4개), MBTI 잠금 3~6장 (16장에 정확한 개수를 Gemini 가 못 맞춰서 범위로)
+- 다시 요청할 때는 "오류 난 곳만 고치고 나머지는 그대로" (MAX_RETRY 3). reward·event 가 같이 있으면 코드가 reward 를 빼고, choices 안에 들어간 강제 사건(path forced)은 forced 로 옮김 (`normalizeDesign`)
+- 카드D 뒤 이벤트 방은 webfront 엔진이 자동으로 넣음 (대사 없음, 카드와 무관)
+- 출력: `output_list/rewrite_test/<id>/cards/0N/card_*.json`(카드 1장당 1파일), `0N/additions.json`(webfront 형식), 단계별 결과 `0N/steps/`(design·text·additions_raw, 설계 실패 시 design_failed.json 에 시도별 오류), 읽기용 `cards/cards_0N.md`
+- 01→05 차례대로 (앞 설계표의 제목·인물을 넘김). 실패하면 뒤 번호는 진행 안 함. webfront 에는 쓰지 않음. 얼굴 풀은 `WEBFRONT_DATA_DIR` 또는 옆 폴더 project-mj-webfront 에서 읽기만 함
+
+```bash
+npm run gen:cards-seq -- --story=modern_whisperweb_0 --orders=1
+```

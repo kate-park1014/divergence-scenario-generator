@@ -1,0 +1,166 @@
+{
+	"id": "card_05_dark_flashlight",
+	"title": {
+		"korean": "어둠 속 손전등"
+	},
+	"tags": [
+		"dark_deal"
+	],
+	"intensity": "high",
+	"after_story": 5,
+	"before_story": 9,
+	"leaning": "fighting-",
+	"background_tags": [
+		"deep shadows",
+		"flickering light",
+		"narrow corridor",
+		"shady figure",
+		"junk piles"
+	],
+	"dialogue": [
+		{
+			"speaker": "narrator",
+			"content": {
+				"korean": "네온 간판의 '분리는 고통' 속삭임이 울리는 심층부. 어둠 속에서 손전등을 든 해결사가 불쑥 나타났다."
+			}
+		},
+		{
+			"speaker": "fixer",
+			"content": {
+				"korean": "이런 험한 길을 그냥 지나갈 순 없지. 통행료를 내라고."
+			}
+		},
+		{
+			"speaker": "echo",
+			"content": {
+				"korean": "이런 혼돈 속에서 돈이나 벌려고 하다니, 역겹다!"
+			}
+		}
+	],
+	"choices": [
+		{
+			"text": {
+				"korean": "뒷골목 해결사에게 돈을 주고 방해하지 말라고 요청한다."
+			},
+			"mbti": "IP",
+			"effects": {
+				"fighting": -30,
+				"gold": -100
+			},
+			"event": "minigame_slot",
+			"seed": null,
+			"result": [
+				{
+					"speaker": "fixer",
+					"content": {
+						"korean": "좋아. 현명한 선택이야. 앞길은 터줄게."
+					}
+				},
+				{
+					"speaker": "echo",
+					"content": {
+						"korean": "하아... 결국 이런 식으로 해결해야 하는 건가. 분해."
+					}
+				},
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "그는 돈을 받아 챙기고 어둠 속으로 사라졌다. 길은 열렸다."
+					}
+				},
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "지불 후, 주변에 무작위 정보 조각들이 쏟아져 나왔다. 번개 같은 속도로 튀어 오르는 조각들을 피해야 했다."
+					}
+				}
+			],
+			"event_intro": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "어둠 속에서 해결사의 눈이 번뜩였다. 그는 내가 어떤 수를 쓸지 예측하는 듯했다."
+					}
+				}
+			]
+		},
+		{
+			"text": {
+				"korean": "뒷골목 해결사의 요구를 거절하고, 스스로 길을 개척한다."
+			},
+			"mbti": "EJ",
+			"effects": {
+				"fighting": 20,
+				"echo": 10
+			},
+			"reward": [
+				"attack_up"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "fixer",
+					"content": {
+						"korean": "건방지군! 네가 감히 내 영역에서 반항하려 해?"
+					}
+				},
+				{
+					"speaker": "echo",
+					"content": {
+						"korean": "잘했어! 저런 놈들에게는 한 치도 물러서면 안 돼!"
+					}
+				},
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "해결사는 분노에 찬 목소리로 길을 가로막았지만, 우리는 틈을 찾아 빠르게 움직였다."
+					}
+				}
+			]
+		},
+		{
+			"text": {
+				"korean": "뒷골목 해결사의 어려움에 공감하며 다른 형태의 도움을 제안한다."
+			},
+			"mbti": "SF",
+			"require": {
+				"mbti": "SF"
+			},
+			"effects": {
+				"community": 10,
+				"echo": 5,
+				"gold": 50
+			},
+			"reward": [
+				"stun"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "fixer",
+					"content": {
+						"korean": "날 동정하는 건가? 흥, 어차피 별 차이는 없지만."
+					}
+				},
+				{
+					"speaker": "echo",
+					"content": {
+						"korean": "그래, 누구나 사정은 있는 법이지. 이 혼란을 함께 헤쳐나가야 해."
+					}
+				},
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "해결사는 잠시 놀란 표정을 짓더니, 마지못해 길을 열어주었다."
+					}
+				},
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "그는 길을 열어주었지만, 여전히 탐탁지 않은 표정으로 서 있었다."
+					}
+				}
+			]
+		}
+	]
+}

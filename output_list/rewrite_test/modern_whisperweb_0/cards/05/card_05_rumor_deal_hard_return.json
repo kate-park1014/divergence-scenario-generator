@@ -1,0 +1,154 @@
+{
+	"id": "card_05_rumor_deal_hard_return",
+	"title": {
+		"korean": "은밀한 지원 요청"
+	},
+	"tags": [
+		"info_brokerage"
+	],
+	"intensity": "calm",
+	"after_story": 9,
+	"before_story": 15,
+	"callback": {
+		"seed": "B_hard_path",
+		"min_rooms_after": 2
+	},
+	"background_tags": [
+		"determined faces",
+		"hidden whispers",
+		"dilapidated structures",
+		"flickering lights",
+		"gathering shadows"
+	],
+	"dialogue": [
+		{
+			"speaker": "narrator",
+			"content": {
+				"korean": "폐기장 심층부의 어두운 구석, 주민 몇몇이 조용히 다가왔다."
+			}
+		},
+		{
+			"speaker": "resident_ally",
+			"content": {
+				"korean": "지난번에 저희 정보를 지켜주셔서 감사합니다. 저희도 '위스퍼 웹'에 맞설 은밀한 방법을 찾았어요."
+			}
+		},
+		{
+			"speaker": "echo",
+			"content": {
+				"korean": "정말이야? 우리가 해냈던 일이 헛되지 않았어!"
+			}
+		}
+	],
+	"choices": [
+		{
+			"text": {
+				"korean": "주민들의 은밀한 지원을 받아들여 최종 목표를 향한 혼란을 야기한다."
+			},
+			"mbti": "IS",
+			"effects": {
+				"fighting": 10
+			},
+			"reward": [
+				"attack_up"
+			],
+			"flag": "resource_diversion",
+			"seed": null,
+			"result": [
+				{
+					"speaker": "resident_ally",
+					"content": {
+						"korean": "좋아요. 저희가 '위스퍼 웹'의 전송망에 작은 오류를 일으키겠습니다."
+					}
+				},
+				{
+					"speaker": "echo",
+					"content": {
+						"korean": "그럼 '위스퍼 웹'이 순간적으로 집중력을 잃을 거야!"
+					}
+				},
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "주민들은 고개를 끄덕이며 폐기장 깊은 곳으로 향했다."
+					}
+				}
+			]
+		},
+		{
+			"text": {
+				"korean": "주민들에게 직접적인 지원 대신, 주변 정보를 수집해 달라고 요청한다."
+			},
+			"mbti": "EN",
+			"effects": {
+				"community": 20,
+				"echo": 10
+			},
+			"reward": [
+				"move_range_up"
+			],
+			"flag": "local_support_network",
+			"seed": null,
+			"result": [
+				{
+					"speaker": "resident_ally",
+					"content": {
+						"korean": "정보 수집이라면 저희에게 맡기세요. 폐기장의 구석구석을 잘 알고 있습니다."
+					}
+				},
+				{
+					"speaker": "echo",
+					"content": {
+						"korean": "맞아, 정확한 정보는 언제나 큰 무기가 될 수 있어!"
+					}
+				},
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "주민들은 흩어져 폐기장 곳곳에서 정보를 모으기 시작했다."
+					}
+				}
+			]
+		},
+		{
+			"text": {
+				"korean": "주민들에게 보상을 제공하고, 더욱 강력한 지원을 요청한다."
+			},
+			"mbti": "FJ",
+			"require": {
+				"stat": "gold",
+				"op": ">=",
+				"value": 100
+			},
+			"effects": {
+				"gold": -100,
+				"echo": 5
+			},
+			"reward": [
+				"attack_up"
+			],
+			"flag": "resource_diversion",
+			"seed": null,
+			"result": [
+				{
+					"speaker": "resident_ally",
+					"content": {
+						"korean": "이 돈이라면 더 큰 규모의 방해 공작을 펼칠 수 있습니다!"
+					}
+				},
+				{
+					"speaker": "echo",
+					"content": {
+						"korean": "돈으로 얻은 지원이지만, 효과는 확실할 거야."
+					}
+				},
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "주민들은 감사의 말을 전하며 결의에 찬 눈빛으로 떠났다."
+					}
+				}
+			]
+		}
+	]
+}

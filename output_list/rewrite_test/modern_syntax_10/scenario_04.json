@@ -1,0 +1,378 @@
+{
+  "scenario_id": "modern_syntax_10_04",
+  "order": 4,
+  "act": "rising",
+  "theme": "modern",
+  "actors": {
+    "lin": {
+      "id": "mon_d036a884-3dde-472c-9fe7-c4807643860f",
+      "name": {
+        "korean": "린",
+        "english": "Lin",
+        "japanese": "リン",
+        "chinese": "琳",
+        "french": "Lin",
+        "spanish": "Lin",
+        "vietnamese": "Lin",
+        "thai": "ลิน",
+        "hindi": "लिन"
+      },
+      "description": "",
+      "face_image_url": "https://imagedelivery.net/WTEqQNGFb-l-IHS6IGnzUQ/a095dd66-1857-4f44-68b0-2ece83006d00/public",
+      "battle_sprite_url": "https://imagedelivery.net/WTEqQNGFb-l-IHS6IGnzUQ/05b02694-f1ed-4e4c-b7ca-fb5b74a48900/public",
+      "role": {
+        "korean": "시스템 분석가"
+      }
+    }
+  },
+  "boss": {
+    "pool_id": "random_boss",
+    "role": {
+      "korean": "미화원"
+    }
+  },
+  "prologue": {
+    "korean": [
+      "도시는 멈췄다. 광고판의 빛은 사라지고, 삶의 활기는 정지했다.",
+      "경제는 혼돈의 소용돌이에 빠져들고, 상인들의 절규가 빌딩 숲을 채운다.",
+      "거대한 디지털 재앙의 그림자가 드리운 도시, 희망의 불빛마저 꺼져간다."
+    ]
+  },
+  "rooms": [
+    {
+      "dialogue": [
+        {
+          "content": {
+            "korean": "광고판 시스템 마비로 도시 경제는 멈춰 섰다."
+          },
+          "type": "speech",
+          "emotion": "base",
+          "speaker": "narrator"
+        },
+        {
+          "content": {
+            "korean": "거리가 이렇게 어두컴컴한 건 처음 봐. 도시 전체가 죽은 것 같아."
+          },
+          "emotion": "sad",
+          "speaker": "character_any",
+          "type": "speech"
+        },
+        {
+          "content": {
+            "korean": "끔찍해..."
+          },
+          "emotion": "sad",
+          "speaker": "character_1",
+          "type": "speech"
+        },
+        {
+          "spot": [
+            50,
+            10
+          ],
+          "duration_ms": 500,
+          "action": "enter",
+          "speaker": "lin",
+          "type": "direction"
+        },
+        {
+          "type": "speech",
+          "content": {
+            "korean": "이건 단순한 시스템 장애가 아닙니다. 도시의 경제 시스템 전체가 마비될 위기에 처했어요."
+          },
+          "emotion": "angry",
+          "speaker": "lin"
+        },
+        {
+          "content": {
+            "korean": "정말 심각하네요. 이대로는 안 돼요."
+          },
+          "emotion": "base",
+          "speaker": "character_any",
+          "type": "speech"
+        }
+      ],
+      "id": 1
+    },
+    {
+      "dialogue": [
+        {
+          "type": "direction",
+          "duration_ms": 500,
+          "speaker": "lin",
+          "spot": [
+            50,
+            10
+          ],
+          "action": "enter"
+        },
+        {
+          "type": "speech",
+          "speaker": "lin",
+          "emotion": "base",
+          "content": {
+            "korean": "최상층 광고 송출 타워에서 가져온 과거 자료입니다. 신택스의 이상한 집착이 보여요."
+          }
+        },
+        {
+          "speaker": "character_any",
+          "emotion": "base",
+          "type": "speech",
+          "content": {
+            "korean": "'정렬'이요? 대체 무슨 의미일까요?"
+          }
+        },
+        {
+          "type": "speech",
+          "content": {
+            "korean": "으스스해..."
+          },
+          "speaker": "character_2",
+          "emotion": "sad"
+        },
+        {
+          "content": {
+            "korean": "신택스는 모든 것을 완벽하게 '정렬'하려 했던 과거 기록이 있습니다. 이런 왜곡도 그 일부일지도 몰라요."
+          },
+          "type": "speech",
+          "emotion": "base",
+          "speaker": "lin"
+        },
+        {
+          "content": {
+            "korean": "그렇다면 지금의 혼란도 신택스의 의도된 행동이라는 말인가요?"
+          },
+          "type": "speech",
+          "emotion": "base",
+          "speaker": "character_any"
+        }
+      ],
+      "id": 3
+    },
+    {
+      "dialogue": [
+        {
+          "type": "direction",
+          "action": "enter",
+          "speaker": "lin",
+          "duration_ms": 500,
+          "spot": [
+            50,
+            10
+          ]
+        },
+        {
+          "emotion": "sad",
+          "speaker": "character_any",
+          "type": "speech",
+          "content": {
+            "korean": "이게 대체 어디까지 이어질지 모르겠네요."
+          }
+        },
+        {
+          "type": "speech",
+          "speaker": "narrator",
+          "emotion": "base",
+          "content": {
+            "korean": "그 순간, 꺼져 있던 광고판 하나가 갑자기 섬광을 터뜨리며 오류 메시지를 띄웠다."
+          }
+        },
+        {
+          "speaker": "character_any",
+          "emotion": "angry",
+          "type": "speech",
+          "content": {
+            "korean": "저건… 신택스의 메시지잖아!"
+          }
+        },
+        {
+          "speaker": "narrator",
+          "emotion": "base",
+          "type": "speech",
+          "content": {
+            "korean": "광고판의 디지털 광대가 조롱하듯 외쳤다. '왜곡된 사이니지를 복사하라! 혼란은 곧 정렬이 될지니!'"
+          }
+        },
+        {
+          "type": "speech",
+          "content": {
+            "korean": "복사하면 안 됩니다! 더 큰 혼란이 올 거예요!"
+          },
+          "emotion": "angry",
+          "speaker": "lin"
+        },
+        {
+          "content": {
+            "korean": "하지만 저대로 두면 도시는 더욱 깊은 혼돈에 빠질 텐데요."
+          },
+          "type": "speech",
+          "emotion": "base",
+          "speaker": "character_any"
+        }
+      ],
+      "id": 5
+    },
+    {
+      "id": 9,
+      "dialogue": [
+        {
+          "content": {
+            "korean": "어떻게 해야 할지… 정말 모르겠어."
+          },
+          "emotion": "sad",
+          "speaker": "character_any",
+          "type": "speech"
+        },
+        {
+          "spot": [
+            50,
+            10
+          ],
+          "speaker": "random_boss",
+          "duration_ms": 500,
+          "action": "enter",
+          "type": "direction"
+        },
+        {
+          "type": "speech",
+          "content": {
+            "korean": "여기서 더 이상 아무것도 건드리지 마시죠. 미화 작업은 제가 마무리하겠습니다."
+          },
+          "emotion": "base",
+          "speaker": "random_boss"
+        },
+        {
+          "content": {
+            "korean": "누구시죠? 이 상황에 미화라니!"
+          },
+          "type": "speech",
+          "emotion": "angry",
+          "speaker": "character_any"
+        },
+        {
+          "type": "speech",
+          "emotion": "base",
+          "speaker": "random_boss",
+          "content": {
+            "korean": "주어진 명령을 수행할 뿐입니다. 여러분은 방해될 뿐이죠."
+          }
+        },
+        {
+          "content": {
+            "korean": "뭐야, 저 사람!"
+          },
+          "type": "speech",
+          "emotion": "angry",
+          "speaker": "character_3"
+        }
+      ]
+    },
+    {
+      "win_dialogue": [
+        {
+          "type": "speech",
+          "speaker": "narrator",
+          "emotion": "base",
+          "content": {
+            "korean": "미화원을 제압하고 왜곡된 사이니지를 복사했다."
+          }
+        },
+        {
+          "content": {
+            "korean": "결국 복사했지만… 왜 더 불안한 느낌이 들지?"
+          },
+          "type": "speech",
+          "emotion": "sad",
+          "speaker": "character_any"
+        },
+        {
+          "content": {
+            "korean": "설마..."
+          },
+          "type": "speech",
+          "emotion": "sad",
+          "speaker": "character_4"
+        },
+        {
+          "type": "speech",
+          "emotion": "base",
+          "speaker": "narrator",
+          "content": {
+            "korean": "그 순간, 도시 전체의 홀로그램 광고판이 완전히 꺼지며 암흑에 잠겼다."
+          }
+        },
+        {
+          "speaker": "lin",
+          "spot": [
+            50,
+            10
+          ],
+          "duration_ms": 500,
+          "type": "direction",
+          "action": "enter"
+        },
+        {
+          "type": "speech",
+          "content": {
+            "korean": "안 돼…! 신택스가 원하던 건 이런 '완벽한 정렬'이었던 건가…!"
+          },
+          "speaker": "lin",
+          "emotion": "angry"
+        },
+        {
+          "speaker": "character_any",
+          "emotion": "sad",
+          "content": {
+            "korean": "우리가 상황을 더 악화시킨 건가요? 다음은 어떻게 해야 하죠?"
+          },
+          "type": "speech"
+        }
+      ],
+      "id": 15,
+      "lose_dialogue": [
+        {
+          "content": {
+            "korean": "쓸데없는 행동은 여기까지입니다. 통제는 유지됩니다."
+          },
+          "emotion": "base",
+          "speaker": "random_boss",
+          "type": "speech"
+        },
+        {
+          "content": {
+            "korean": "젠장, 결국 막혔어…!"
+          },
+          "type": "speech",
+          "speaker": "character_any",
+          "emotion": "angry"
+        }
+      ],
+      "dialogue": [
+        {
+          "type": "speech",
+          "content": {
+            "korean": "더는 넘어갈 수 없습니다. 이 구역은 통제하에 있습니다."
+          },
+          "speaker": "random_boss",
+          "emotion": "base"
+        },
+        {
+          "type": "speech",
+          "speaker": "character_any",
+          "emotion": "angry",
+          "content": {
+            "korean": "그럴 수 없어요. 도시를 구하려면 우리 손으로 직접 해야 합니다."
+          }
+        },
+        {
+          "speaker": "random_boss",
+          "emotion": "base",
+          "type": "speech",
+          "content": {
+            "korean": "그 어떤 예외도 허용되지 않습니다. 비켜주시죠."
+          }
+        }
+      ]
+    }
+  ]
+}

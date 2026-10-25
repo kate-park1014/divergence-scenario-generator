@@ -1,0 +1,473 @@
+{
+  "scenario_id": "modern_memento_9_04",
+  "order": 4,
+  "act": "rising",
+  "theme": "modern",
+  "actors": {
+    "lin": {
+      "id": "mon_d036a884-3dde-472c-9fe7-c4807643860f",
+      "name": {
+        "korean": "린",
+        "english": "Lin",
+        "japanese": "リン",
+        "chinese": "琳",
+        "french": "Lin",
+        "spanish": "Lin",
+        "vietnamese": "Lin",
+        "thai": "ลิน",
+        "hindi": "लिन"
+      },
+      "description": "",
+      "face_image_url": "https://imagedelivery.net/WTEqQNGFb-l-IHS6IGnzUQ/a095dd66-1857-4f44-68b0-2ece83006d00/public",
+      "battle_sprite_url": "https://imagedelivery.net/WTEqQNGFb-l-IHS6IGnzUQ/05b02694-f1ed-4e4c-b7ca-fb5b74a48900/public",
+      "role": {
+        "korean": "거리의 예술가"
+      }
+    },
+    "bex": {
+      "id": "mon_74e24324-3f9a-4d44-9611-1da33b654ca1",
+      "name": {
+        "korean": "벡스",
+        "english": "Bex",
+        "japanese": "ベックス",
+        "chinese": "贝克斯",
+        "french": "Bex",
+        "spanish": "Bex",
+        "vietnamese": "Bex",
+        "thai": "เบ็กซ์",
+        "hindi": "बेक्स"
+      },
+      "description": "",
+      "face_image_url": "https://imagedelivery.net/WTEqQNGFb-l-IHS6IGnzUQ/09dae190-ff6b-4a9d-b656-e1a2b896aa00/public",
+      "battle_sprite_url": "https://imagedelivery.net/WTEqQNGFb-l-IHS6IGnzUQ/5cc3c77f-72e1-416e-b346-31889b3b9300/public",
+      "role": {
+        "korean": "정보상"
+      }
+    }
+  },
+  "boss": {
+    "pool_id": "random_boss",
+    "role": {
+      "korean": "암시장 브로커"
+    }
+  },
+  "prologue": {
+    "korean": [
+      "네온 불빛이 드리운 어두운 골목, 기억이 퇴색하는 곳.",
+      "거리의 예술가는 잃어버린 얼굴을 찾아 헤맨다.",
+      "잘못된 선택이 또 다른 진실을 드러낼 때.",
+      "오팔빛 실은 갈등의 씨앗을 뿌린다."
+    ]
+  },
+  "rooms": [
+    {
+      "id": 1,
+      "dialogue": [
+        {
+          "type": "speech",
+          "content": {
+            "korean": "어두운 골목길, 린은 자신의 그림 앞에서 절규하고 있었다."
+          },
+          "speaker": "narrator"
+        },
+        {
+          "spot": [
+            50,
+            10
+          ],
+          "duration_ms": 500,
+          "type": "direction",
+          "action": "enter",
+          "speaker": "lin"
+        },
+        {
+          "emotion": "sad",
+          "type": "speech",
+          "content": {
+            "korean": "이 얼굴은 누구지? 왜… 아무것도 기억나지 않지?"
+          },
+          "speaker": "lin"
+        },
+        {
+          "content": {
+            "korean": "린 예술가님, 괜찮으세요?"
+          },
+          "emotion": "base",
+          "speaker": "character_any",
+          "type": "speech"
+        },
+        {
+          "speaker": "bex",
+          "duration_ms": 500,
+          "action": "enter",
+          "spot": [
+            50,
+            10
+          ],
+          "type": "direction"
+        },
+        {
+          "emotion": "base",
+          "content": {
+            "korean": "완전히 끊어내야 고통이 끝납니다."
+          },
+          "type": "speech",
+          "speaker": "bex"
+        },
+        {
+          "speaker": "bex",
+          "content": {
+            "korean": "오팔빛 빛의 잔향이 말합니다. 이 실을 끊어야 합니다."
+          },
+          "emotion": "base",
+          "type": "speech"
+        },
+        {
+          "speaker": "character_any",
+          "content": {
+            "korean": "또 오팔빛 실을 끊으라고요? 대체 무슨 소리를 하는 거야?"
+          },
+          "type": "speech",
+          "emotion": "base"
+        },
+        {
+          "speaker": "character_1",
+          "type": "speech",
+          "content": {
+            "korean": "말도 안 돼!"
+          },
+          "emotion": "angry"
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "dialogue": [
+        {
+          "content": {
+            "korean": "린의 절규는 주인공의 결심을 흔들었다."
+          },
+          "type": "speech",
+          "speaker": "narrator"
+        },
+        {
+          "content": {
+            "korean": "정말 이 방법뿐일까… 저렇게 힘들어하는데…"
+          },
+          "emotion": "base",
+          "speaker": "character_any",
+          "type": "speech"
+        },
+        {
+          "speaker": "character_2",
+          "type": "speech",
+          "emotion": "sad",
+          "content": {
+            "korean": "어떡하면 좋지..."
+          }
+        },
+        {
+          "content": {
+            "korean": "주인공은 오팔빛 실을 끊어냈다."
+          },
+          "type": "speech",
+          "speaker": "narrator"
+        },
+        {
+          "type": "direction",
+          "speaker": "lin",
+          "action": "enter",
+          "spot": [
+            50,
+            10
+          ],
+          "duration_ms": 500
+        },
+        {
+          "emotion": "happy",
+          "content": {
+            "korean": "아… 어렴풋이, 다시… 보인다!"
+          },
+          "type": "speech",
+          "speaker": "lin"
+        },
+        {
+          "duration_ms": 500,
+          "speaker": "bex",
+          "type": "direction",
+          "spot": [
+            50,
+            10
+          ],
+          "action": "enter"
+        },
+        {
+          "emotion": "sad",
+          "content": {
+            "korean": "말도 안 돼… 이게 아니었어…"
+          },
+          "speaker": "bex",
+          "type": "speech"
+        }
+      ]
+    },
+    {
+      "dialogue": [
+        {
+          "action": "enter",
+          "speaker": "bex",
+          "duration_ms": 500,
+          "type": "direction",
+          "spot": [
+            50,
+            10
+          ]
+        },
+        {
+          "speaker": "bex",
+          "content": {
+            "korean": "내가 틀렸습니다. 그 빛은 나를 속였어요."
+          },
+          "type": "speech",
+          "emotion": "sad"
+        },
+        {
+          "speaker": "character_any",
+          "emotion": "base",
+          "type": "speech",
+          "content": {
+            "korean": "이제야 그걸 깨달았다는 건가요?"
+          }
+        },
+        {
+          "speaker": "bex",
+          "emotion": "base",
+          "content": {
+            "korean": "린 예술가의 기억이 돌아오는 걸 보니 알겠습니다. 이건 올바른 길이 아니었어."
+          },
+          "type": "speech"
+        },
+        {
+          "speaker": "character_any",
+          "type": "speech",
+          "content": {
+            "korean": "그럼 이제 어떻게 해야 하죠?"
+          },
+          "emotion": "base"
+        },
+        {
+          "type": "speech",
+          "speaker": "bex",
+          "emotion": "base",
+          "content": {
+            "korean": "돕겠습니다. 이 모든 것을 바로잡아야만 해."
+          }
+        },
+        {
+          "type": "speech",
+          "content": {
+            "korean": "이제라도 다행이네."
+          },
+          "emotion": "base",
+          "speaker": "character_3"
+        }
+      ],
+      "id": 5
+    },
+    {
+      "id": 9,
+      "dialogue": [
+        {
+          "type": "speech",
+          "emotion": "base",
+          "content": {
+            "korean": "오팔빛 실을 끊을수록 상황이 악화될 뿐이야."
+          },
+          "speaker": "character_any"
+        },
+        {
+          "action": "enter",
+          "duration_ms": 500,
+          "speaker": "bex",
+          "spot": [
+            50,
+            10
+          ],
+          "type": "direction"
+        },
+        {
+          "content": {
+            "korean": "그 빛은 사람들의 고통을 이용해 잘못된 길로 이끌고 있습니다."
+          },
+          "emotion": "base",
+          "speaker": "bex",
+          "type": "speech"
+        },
+        {
+          "emotion": "base",
+          "type": "speech",
+          "content": {
+            "korean": "다음엔 어떤 것을 요구할지 예측해야 해요."
+          },
+          "speaker": "character_any"
+        },
+        {
+          "speaker": "character_any",
+          "emotion": "base",
+          "type": "speech",
+          "content": {
+            "korean": "어쩌면, 우리가 계속 저지른 실수가 단서가 될지도."
+          }
+        },
+        {
+          "speaker": "character_4",
+          "content": {
+            "korean": "더 이상 망설일 시간이 없어."
+          },
+          "emotion": "sad",
+          "type": "speech"
+        }
+      ]
+    },
+    {
+      "id": 15,
+      "dialogue": [
+        {
+          "content": {
+            "korean": "더 이상 진행할 수 없다. 여기서 멈춰라."
+          },
+          "type": "speech",
+          "emotion": "base",
+          "speaker": "random_boss"
+        },
+        {
+          "speaker": "character_any",
+          "type": "speech",
+          "content": {
+            "korean": "당신은 누구죠? 왜 우리를 막는 거죠?"
+          },
+          "emotion": "base"
+        },
+        {
+          "speaker": "random_boss",
+          "type": "speech",
+          "content": {
+            "korean": "불필요한 의심은 골목의 질서를 해칠 뿐이다."
+          },
+          "emotion": "base"
+        },
+        {
+          "type": "speech",
+          "speaker": "random_boss",
+          "content": {
+            "korean": "너희의 행동은 암시장의 규칙에 어긋난다."
+          },
+          "emotion": "angry"
+        },
+        {
+          "speaker": "bex",
+          "duration_ms": 500,
+          "action": "enter",
+          "spot": [
+            50,
+            10
+          ],
+          "type": "direction"
+        },
+        {
+          "speaker": "bex",
+          "content": {
+            "korean": "저자는 {random_boss}, 암시장의 질서를 지키는 자입니다. 놈의 말은 듣지 마십시오."
+          },
+          "type": "speech",
+          "emotion": "base"
+        },
+        {
+          "action": "exit",
+          "direction": "right",
+          "duration_ms": 500,
+          "speaker": "bex",
+          "type": "direction"
+        },
+        {
+          "speaker": "bex",
+          "content": {
+            "korean": "제가 뒤를 맡겠습니다. 어서 가세요!"
+          },
+          "type": "speech",
+          "emotion": "base"
+        },
+        {
+          "emotion": "base",
+          "type": "speech",
+          "content": {
+            "korean": "벡스!"
+          },
+          "speaker": "character_any"
+        }
+      ],
+      "lose_dialogue": [
+        {
+          "speaker": "random_boss",
+          "type": "speech",
+          "content": {
+            "korean": "어리석은 자들. 결국 너희는 아무것도 바꾸지 못한다."
+          },
+          "emotion": "angry"
+        },
+        {
+          "emotion": "sad",
+          "content": {
+            "korean": "젠장…!"
+          },
+          "type": "speech",
+          "speaker": "character_any"
+        }
+      ],
+      "win_dialogue": [
+        {
+          "emotion": "base",
+          "type": "speech",
+          "content": {
+            "korean": "겨우 이겼지만… 아직 끝이 아니야."
+          },
+          "speaker": "character_any"
+        },
+        {
+          "type": "direction",
+          "spot": [
+            50,
+            10
+          ],
+          "duration_ms": 500,
+          "action": "enter",
+          "speaker": "bex"
+        },
+        {
+          "emotion": "sad",
+          "content": {
+            "korean": "린 예술가의 기억은 일부만 돌아왔습니다. 여전히 불안정해요."
+          },
+          "type": "speech",
+          "speaker": "bex"
+        },
+        {
+          "speaker": "character_any",
+          "type": "speech",
+          "content": {
+            "korean": "우리가 끊어낸 실의 대가는 아직 남아있다는 거겠지."
+          },
+          "emotion": "base"
+        },
+        {
+          "speaker": "character_any",
+          "type": "speech",
+          "emotion": "sad",
+          "content": {
+            "korean": "다음엔 뭘 해야 하지?"
+          }
+        }
+      ]
+    }
+  ]
+}

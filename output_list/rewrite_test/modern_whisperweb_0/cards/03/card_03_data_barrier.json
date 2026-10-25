@@ -1,0 +1,128 @@
+{
+	"id": "card_03_data_barrier",
+	"title": {
+		"korean": "정보 장벽"
+	},
+	"tags": "barrier",
+	"intensity": "high",
+	"after_story": 9,
+	"before_story": 15,
+	"leaning": "fighting+",
+	"background_tags": [
+		"workshop",
+		"random_boss",
+		"data_barrier",
+		"hologram",
+		"standoff"
+	],
+	"dialogue": [
+		{
+			"speaker": "narrator",
+			"content": {
+				"korean": "주인공의 외침에도 {random_boss}이(가) 전광판 통로에 푸른 정보 장벽을 설치한다."
+			}
+		},
+		{
+			"speaker": "random_boss",
+			"content": {
+				"korean": "이곳을 통과하려면 제 시스템의 허락이 필요합니다. 더 이상 방해하지 마십시오."
+			}
+		},
+		{
+			"speaker": "lin",
+			"content": {
+				"korean": "저 장벽을 뚫지 않으면 앞으로 나아갈 수 없어요!"
+			}
+		}
+	],
+	"choices": [
+		{
+			"text": {
+				"korean": "정면으로 장벽을 부수려 한다"
+			},
+			"mbti": "ST",
+			"effects": {
+				"fighting": 30,
+				"echo": -5
+			},
+			"reward": [
+				"hp_down"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "random_boss",
+					"content": {
+						"korean": "무모한 시도입니다. 시스템은 당신의 공격을 흡수할 뿐입니다."
+					}
+				},
+				{
+					"speaker": "lin",
+					"content": {
+						"korean": "저 장벽은 물리적인 힘으로만 뚫기 어려울 거예요."
+					}
+				}
+			]
+		},
+		{
+			"text": {
+				"korean": "장벽의 틈새를 찾아 우회한다"
+			},
+			"mbti": "NF",
+			"effects": {
+				"reason": 20,
+				"echo": 10
+			},
+			"reward": [
+				"move_range_up"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "장벽의 미세한 흐름을 읽고 약한 지점을 찾아낸다. 그곳을 통해 살며시 지나간다."
+					}
+				},
+				{
+					"speaker": "lin",
+					"content": {
+						"korean": "좋은 판단이에요! 싸우지 않고도 돌파할 방법을 찾았어요."
+					}
+				}
+			]
+		},
+		{
+			"text": {
+				"korean": "돈을 주고 외부 조력자의 도움을 받아 우회로를 찾는다"
+			},
+			"mbti": "ES",
+			"require": {
+				"stat": "gold",
+				"op": ">=",
+				"value": 150
+			},
+			"effects": {
+				"gold": -150
+			},
+			"reward": [
+				"stun"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "random_boss",
+					"content": {
+						"korean": "외부 개입이라니... 예상 밖의 변수입니다."
+					}
+				},
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "어딘가에서 날아온 전파가 장벽에 잠시 틈을 만들고 사라진다."
+					}
+				}
+			]
+		}
+	]
+}

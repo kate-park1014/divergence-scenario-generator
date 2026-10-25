@@ -1,0 +1,191 @@
+{
+	"id": "card_01_lost_parts",
+	"title": {
+		"korean": "뒤섞인 부품들"
+	},
+	"tags": [
+		"parts"
+	],
+	"intensity": "high",
+	"after_story": 1,
+	"before_story": 3,
+	"leaning": "community-",
+	"background_tags": [
+		"폐기장 입구",
+		"폐품 더미",
+		"흩어진 부품",
+		"상인의 초조함",
+		"어수선한 배경"
+	],
+	"dialogue": [
+		{
+			"speaker": "narrator",
+			"content": {
+				"korean": "폐기장 입구 한쪽에서 폐품 상인 리가 주변 스크린 잔해를 격하게 뒤지고 있었다."
+			}
+		},
+		{
+			"speaker": "merchant",
+			"content": {
+				"korean": "어디 간 거야, 내 희귀 부품! 하필 이런 개판인 곳에서 사라지다니!"
+			}
+		},
+		{
+			"speaker": "echo",
+			"content": {
+				"korean": "상인 아저씨가 뭔가 중요한 걸 잃어버린 것 같아요. 너무 초조해 보여요."
+			}
+		}
+	],
+	"choices": [
+		{
+			"text": {
+				"korean": "상인이 찾는 물건을 함께 찾는 척만 하며 시간을 번다"
+			},
+			"mbti": "EN",
+			"effects": {
+				"community": -20,
+				"gold": 100,
+				"echo": -5
+			},
+			"reward": [
+				"gold"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "리는 고맙다고 했지만, 당신의 어설픈 수색에 못 미더운 눈치였다. 시간만 지체될 뿐이었다."
+					}
+				},
+				{
+					"speaker": "echo",
+					"content": {
+						"korean": "아저씨한테는 좀 미안하지만, 빨리 지나가는 게 중요하잖아요."
+					}
+				}
+			]
+		},
+		{
+			"text": {
+				"korean": "상인의 수색을 방해하고 바로 길을 지나간다"
+			},
+			"mbti": "IJ",
+			"effects": {
+				"fighting": 20,
+				"echo": -10
+			},
+			"reward": [
+				"attack_up"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "리는 노골적인 방해에 불평했지만, 결국 당신에게 길을 내주었다."
+					}
+				},
+				{
+					"speaker": "merchant",
+					"content": {
+						"korean": "쳇, 맘대로 해라! 나도 바쁘다고!"
+					}
+				},
+				{
+					"speaker": "echo",
+					"content": {
+						"korean": "방해만 했어요. 아저씨가 우리 때문에 더 화난 것 같은데요."
+					}
+				}
+			]
+		},
+		{
+			"text": {
+				"korean": "상인에게 물건을 찾아주겠다고 제안하고 보상금을 받는다"
+			},
+			"mbti": "TP",
+			"require": {
+				"stat": "gold",
+				"op": ">=",
+				"value": 50
+			},
+			"effects": {
+				"gold": -50,
+				"community": 10,
+				"echo": 5
+			},
+			"reward": [
+				"intelligence_up"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "리는 당신의 제안에 보상금 액수를 확인하고 흔쾌히 승낙했다."
+					}
+				},
+				{
+					"speaker": "merchant",
+					"content": {
+						"korean": "진작 이렇게 나오지! 좋아, 찾아만 주면 후하게 쳐주지!"
+					}
+				},
+				{
+					"speaker": "echo",
+					"content": {
+						"korean": "돈을 준다니 아저씨 표정이 순식간에 밝아졌어요."
+					}
+				}
+			]
+		},
+		{
+			"text": {
+				"korean": "폐기장 구석의 숨겨진 공간에서 부품을 찾아 상인에게 돌려준다"
+			},
+			"mbti": "SP",
+			"effects": {
+				"community": 10,
+				"echo": 5
+			},
+			"event": "minigame_cup",
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "리는 잃어버렸던 부품을 되찾자 기쁨에 넘쳐 당신에게 거듭 고맙다고 말했다."
+					}
+				},
+				{
+					"speaker": "merchant",
+					"content": {
+						"korean": "정말 고맙습니다! 복받으실 거예요!"
+					}
+				},
+				{
+					"speaker": "echo",
+					"content": {
+						"korean": "우리가 좋은 일을 했네요! 아저씨도 기뻐 보여요."
+					}
+				}
+			],
+			"event_intro": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "폐기장 구석, 흩어진 잔해들 사이에서 컵 세 개가 흔들리고 있었다."
+					}
+				},
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "상인이 말한 부품이 어디에 숨어 있는지 맞춰야 한다."
+					}
+				}
+			]
+		}
+	]
+}

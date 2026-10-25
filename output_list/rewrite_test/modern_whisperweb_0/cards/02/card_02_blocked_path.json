@@ -1,0 +1,165 @@
+{
+	"id": "card_02_blocked_path",
+	"title": {
+		"korean": "통제된 통로"
+	},
+	"tags": "blockade",
+	"intensity": "high",
+	"after_story": 9,
+	"before_story": 15,
+	"leaning": "fighting+",
+	"background_tags": [
+		"imposing guard",
+		"narrow passage",
+		"tense silence",
+		"worn metal barricade",
+		"shadowy gate"
+	],
+	"dialogue": [
+		{
+			"speaker": "narrator",
+			"content": {
+				"korean": "{random_boss}이(가) 안쪽 구역으로 향하는 유일한 통로를 가로막았다."
+			}
+		},
+		{
+			"speaker": "narrator",
+			"content": {
+				"korean": "그의 눈은 확고했다."
+			}
+		},
+		{
+			"speaker": "random_boss",
+			"content": {
+				"korean": "다시 경고합니다. 이 구역은 통제 구역입니다."
+			}
+		},
+		{
+			"speaker": "random_boss",
+			"content": {
+				"korean": "더 이상 진입하려 하지 마십시오."
+			}
+		},
+		{
+			"speaker": "dax",
+			"content": {
+				"korean": "저 사람이 계속해서 우리 길을 막아서고 있어."
+			}
+		},
+		{
+			"speaker": "dax",
+			"content": {
+				"korean": "강경하게 나올 작정인가 봐."
+			}
+		}
+	],
+	"choices": [
+		{
+			"text": {
+				"korean": "{random_boss}의 경고에 따라 잠시 물러나 다른 길을 모색한다."
+			},
+			"mbti": "SJ",
+			"effects": {
+				"fighting": 20,
+				"echo": -5
+			},
+			"reward": [
+				"defense_down"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "당신은 {random_boss}의 경고에 물러섰다."
+					}
+				},
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "그는 잠시 만족한 듯 보였다. 닥스는 고개를 젓는다."
+					}
+				},
+				{
+					"speaker": "dax",
+					"content": {
+						"korean": "이렇게 물러서면 안 될 것 같은데… 다른 길을 찾기엔 부족해."
+					}
+				}
+			]
+		},
+		{
+			"text": {
+				"korean": "{random_boss}에게 직접 돌파를 시도하며 시선을 분산시킨다."
+			},
+			"mbti": "EP",
+			"effects": {
+				"fighting": -20,
+				"echo": 10
+			},
+			"reward": [
+				"attack_up"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "당신이 {random_boss}에게 돌진하자, 그는 당황한 듯 잠시 주춤했다."
+					}
+				},
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "닥스는 당신을 도왔다."
+					}
+				},
+				{
+					"speaker": "dax",
+					"content": {
+						"korean": "저 사람의 허를 찔렀어! 지금이 기회야!"
+					}
+				}
+			]
+		},
+		{
+			"text": {
+				"korean": "{random_boss}에게 뇌물을 주고 통과를 시도한다."
+			},
+			"mbti": "FP",
+			"require": {
+				"stat": "gold",
+				"op": ">=",
+				"value": 120
+			},
+			"effects": {
+				"gold": -120,
+				"reason": -10
+			},
+			"reward": [
+				"move_range_up"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "{random_boss}은(는) 뇌물을 받자 표정이 미묘해졌다."
+					}
+				},
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "잠시 망설이더니 길을 살짝 비켜주었다."
+					}
+				},
+				{
+					"speaker": "dax",
+					"content": {
+						"korean": "저 사람, 돈에 약하군! 덕분에 길을 좀 더 쉽게 지나갈 수 있겠어."
+					}
+				}
+			]
+		}
+	]
+}

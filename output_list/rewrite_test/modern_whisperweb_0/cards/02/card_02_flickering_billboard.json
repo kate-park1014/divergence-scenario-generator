@@ -1,0 +1,208 @@
+{
+	"id": "card_02_flickering_billboard",
+	"title": {
+		"korean": "깜빡이는 광고판"
+	},
+	"tags": "billboard",
+	"intensity": "high",
+	"after_story": 3,
+	"before_story": 5,
+	"leaning": "fighting-",
+	"background_tags": [
+		"broken neon signs",
+		"glitching advertisements",
+		"angry crowd",
+		"sparking wires",
+		"frantic gestures"
+	],
+	"dialogue": [
+		{
+			"speaker": "narrator",
+			"content": {
+				"korean": "폐기장 한편의 낡은 전광판이 불규칙하게 깜빡였다."
+			}
+		},
+		{
+			"speaker": "narrator",
+			"content": {
+				"korean": "뒤섞인 광고를 내보내는 전광판을 한 사업가가 노려봤다."
+			}
+		},
+		{
+			"speaker": "small_business_owner",
+			"content": {
+				"korean": "저놈의 광고판 때문에 손해가 이만저만이 아니야!"
+			}
+		},
+		{
+			"speaker": "small_business_owner",
+			"content": {
+				"korean": "내 가게 광고도 안 나오고, 남의 정보만 줄줄 새고 있다고!"
+			}
+		},
+		{
+			"speaker": "dax",
+			"content": {
+				"korean": "저 전광판의 혼란… 깨진 스크린과 무관하지 않을 것 같군."
+			}
+		}
+	],
+	"choices": [
+		{
+			"text": {
+				"korean": "깜빡이는 광고판을 무시하고 서둘러 지나간다."
+			},
+			"mbti": "ST",
+			"effects": {
+				"fighting": -20,
+				"echo": -5
+			},
+			"reward": [
+				"hp_down"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "당신은 소란을 뒤로하고 자리를 떴다."
+					}
+				},
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "닥스는 불안한 눈빛으로 광고판을 돌아봤다."
+					}
+				},
+				{
+					"speaker": "dax",
+					"content": {
+						"korean": "그냥 지나치면 될 문제가 아닐지도 모르는데… 불길한 예감이 들어."
+					}
+				}
+			]
+		},
+		{
+			"text": {
+				"korean": "닥스와 함께 광고판의 전원을 찾아 끈다."
+			},
+			"mbti": "NF",
+			"effects": {
+				"fighting": 20,
+				"echo": 10
+			},
+			"event": "minigame_timing",
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "당신과 닥스는 전광판 주변을 수색해 전원 장치를 찾아 껐다."
+					}
+				},
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "전광판은 침묵했다."
+					}
+				},
+				{
+					"speaker": "dax",
+					"content": {
+						"korean": "이제야 좀 조용해졌네. 근본적인 해결책은 아니지만, 급한 불은 껐어."
+					}
+				}
+			],
+			"event_intro": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "낡은 전광판의 복잡한 배선 속에서 전원 장치를 찾아야 했다."
+					}
+				},
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "미세한 전류의 흐름에 맞춰야 했다."
+					}
+				}
+			]
+		},
+		{
+			"text": {
+				"korean": "{actor}이(가) 광고판의 작동 방식을 분석하여 오작동의 원인을 파악한다."
+			},
+			"mbti": "TJ",
+			"require": {
+				"mbti": "TJ"
+			},
+			"effects": {
+				"reason": 10
+			},
+			"reward": [
+				"intelligence_up"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "{actor}이(가) 전광판의 오작동 패턴을 분석했다."
+					}
+				},
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "닥스는 당신의 통찰력에 감탄했다."
+					}
+				},
+				{
+					"speaker": "dax",
+					"content": {
+						"korean": "당신의 분석대로야! 정보 왜곡의 패턴이 보이는군!"
+					}
+				}
+			]
+		}
+	],
+	"forced": [
+		{
+			"text": {
+				"korean": "{small_business_owner}가 갑자기 달려들어 광고판을 부수려 한다."
+			},
+			"mbti": "EF",
+			"require": {
+				"mbti": "EF"
+			},
+			"chance": 0.3,
+			"effects": {
+				"fighting": -10,
+				"echo": -10
+			},
+			"reward": [
+				"defense_down"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "{small_business_owner}이(가) 분노에 차 광고판을 부수려 했다."
+					}
+				},
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "닥스는 경악하며 비명을 질렀다."
+					}
+				},
+				{
+					"speaker": "dax",
+					"content": {
+						"korean": "저기요! 지금 뭐하는 거야! 위험하잖아!"
+					}
+				}
+			]
+		}
+	]
+}

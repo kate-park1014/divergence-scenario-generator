@@ -1,0 +1,132 @@
+{
+	"id": "card_03_lost_contact",
+	"title": {
+		"korean": "사라진 연락처"
+	},
+	"tags": "contact",
+	"intensity": "calm",
+	"after_story": 5,
+	"before_story": 9,
+	"leaning": "fighting-",
+	"background_tags": [
+		"workshop",
+		"citizen",
+		"broken_phone",
+		"lost_data",
+		"despair"
+	],
+	"dialogue": [
+		{
+			"speaker": "narrator",
+			"content": {
+				"korean": "작업실 복도에서, 시민 한 명이 중요한 연락처가 담긴 깨진 휴대폰을 들고 초조하게 정보를 찾으려 애쓴다."
+			}
+		},
+		{
+			"speaker": "citizen",
+			"content": {
+				"korean": "제게 정말 중요한 연락처가 있었는데... 이 안에 있을까요? 다 지워진 것 같아요."
+			}
+		},
+		{
+			"speaker": "lin",
+			"content": {
+				"korean": "개인 정보 유출의 피해자가 또 생겼군요. 이 상황이 계속되면 안 돼요."
+			}
+		}
+	],
+	"choices": [
+		{
+			"text": {
+				"korean": "개인적인 문제에 개입하지 않고 조용히 자리를 피한다"
+			},
+			"mbti": "IF",
+			"effects": {
+				"fighting": -30,
+				"echo": -10
+			},
+			"reward": [
+				"hp_down"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "시민은 여전히 절망스러운 표정으로 휴대폰만 바라보고 있다."
+					}
+				},
+				{
+					"speaker": "lin",
+					"content": {
+						"korean": "그냥 지나치면 이 혼란은 계속될 거예요."
+					}
+				}
+			]
+		},
+		{
+			"text": {
+				"korean": "깨진 휴대폰에서 정보를 복구할 방법을 찾아본다"
+			},
+			"mbti": "EP",
+			"effects": {
+				"reason": 20,
+				"echo": 10
+			},
+			"event": "minigame_cup",
+			"seed": null,
+			"result": [
+				{
+					"speaker": "citizen",
+					"content": {
+						"korean": "정말 복구할 수 있을까요? 희망이 보입니다!"
+					}
+				},
+				{
+					"speaker": "lin",
+					"content": {
+						"korean": "작은 정보라도 소중해요. 모든 조각이 중요하죠."
+					}
+				}
+			],
+			"event_intro": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "세 개의 컵이 뒤집힌다. 어디에 사라진 정보가 숨어 있을까?"
+					}
+				}
+			]
+		},
+		{
+			"text": {
+				"korean": "작업실의 정보 복구 장비를 사용한다"
+			},
+			"mbti": "TJ",
+			"require": {
+				"mbti": "TJ"
+			},
+			"effects": {
+				"reason": 10
+			},
+			"reward": [
+				"cooldown_reset"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "citizen",
+					"content": {
+						"korean": "여기 이런 장비가 있었다니! 정말 감사합니다!"
+					}
+				},
+				{
+					"speaker": "lin",
+					"content": {
+						"korean": "장비를 활용하는 것이 가장 효율적인 방법일 거예요."
+					}
+				}
+			]
+		}
+	]
+}

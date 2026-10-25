@@ -1,0 +1,189 @@
+{
+	"id": "card_01_strange_device",
+	"title": {
+		"korean": "수상한 신호의 기기"
+	},
+	"tags": [
+		"device"
+	],
+	"intensity": "calm",
+	"after_story": 5,
+	"before_story": 9,
+	"leaning": "fighting-",
+	"background_tags": [
+		"폐기장 입구",
+		"작은 기기",
+		"불규칙한 신호",
+		"사람들의 시선",
+		"네온 빛 반사"
+	],
+	"dialogue": [
+		{
+			"speaker": "narrator",
+			"content": {
+				"korean": "폐기장 입구, 폐품 상인 리가 손에 든 작은 기기에서 불규칙한 신호를 보내며 사람들의 이목을 끌고 있었다."
+			}
+		},
+		{
+			"speaker": "merchant",
+			"content": {
+				"korean": "자, 보세요! 이 기기에서 나오는 신호! 보통 물건이 아니라니까!"
+			}
+		},
+		{
+			"speaker": "echo",
+			"content": {
+				"korean": "저 신호, 폐기장의 정보 혼란이랑 관련 있을지도 몰라요. 수상한데요."
+			}
+		}
+	],
+	"choices": [
+		{
+			"text": {
+				"korean": "상인에게 기기를 구매하여 그 신호를 직접 분석한다"
+			},
+			"mbti": "IT",
+			"effects": {
+				"gold": -100,
+				"fighting": -20,
+				"echo": -5
+			},
+			"reward": [
+				"intelligence_up"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "기기를 구매하여 신호를 분석하기 시작했다. 리는 돈을 받자마자 만족스러운 표정으로 사라졌다."
+					}
+				},
+				{
+					"speaker": "echo",
+					"content": {
+						"korean": "돈을 썼지만, 직접 분석할 수 있다면 가치가 있을 거예요."
+					}
+				}
+			]
+		},
+		{
+			"text": {
+				"korean": "상인에게 기기의 출처를 강력하게 따져 물어 정보를 얻어낸다"
+			},
+			"mbti": "EN",
+			"effects": {
+				"fighting": 30,
+				"echo": 10
+			},
+			"reward": [
+				"attack_up"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "리는 당신의 강압적인 태도에 못 이겨 기기의 출처에 대한 단서를 흘렸다. 탐탁지 않은 표정이었다."
+					}
+				},
+				{
+					"speaker": "merchant",
+					"content": {
+						"korean": "아, 알았어! 알았으니까 그만 좀 해!"
+					}
+				},
+				{
+					"speaker": "echo",
+					"content": {
+						"korean": "협박으로 정보를 얻어냈네요! 과격했지만, 효과는 확실해요."
+					}
+				}
+			]
+		},
+		{
+			"text": {
+				"korean": "기기에서 나오는 신호를 해독하는 퍼즐을 푼다"
+			},
+			"mbti": "NT",
+			"effects": {
+				"intelligence": 10
+			},
+			"event": "minigame_timing",
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "기기에서 나오는 불규칙한 신호 속에서 숨겨진 패턴을 찾아 해독에 성공했다."
+					}
+				},
+				{
+					"speaker": "merchant",
+					"content": {
+						"korean": "말도 안 돼! 저걸 바로 알아내다니! 정체가 뭐야?"
+					}
+				},
+				{
+					"speaker": "echo",
+					"content": {
+						"korean": "기기 속에 숨겨진 메시지를 찾아냈어요! 정말 대단해요!"
+					}
+				}
+			],
+			"event_intro": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "작은 기기 화면에 여러 개의 신호선이 불규칙하게 깜빡였다."
+					}
+				},
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "정해진 박자에 맞춰 신호선을 연결하여 정확한 신호를 만들어야 한다."
+					}
+				}
+			]
+		},
+		{
+			"text": {
+				"korean": "기기에서 나는 소리가 특정 정보와 연관되어 있음을 밝혀낸다"
+			},
+			"mbti": "SF",
+			"require": {
+				"stat": "intelligence",
+				"op": ">=",
+				"value": 40
+			},
+			"effects": {
+				"intelligence": 10,
+				"community": 10
+			},
+			"reward": [
+				"intelligence_up"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "{actor}이(가) 기기의 신호음이 폐기장의 특정 정보 유출과 연관되어 있음을 밝혀냈다."
+					}
+				},
+				{
+					"speaker": "merchant",
+					"content": {
+						"korean": "크으, 설마… 이걸 알아낸다고? 나도 몰랐던 건데!"
+					}
+				},
+				{
+					"speaker": "echo",
+					"content": {
+						"korean": "기기 소리만으로 이런 사실을 알다니! 역시 대단해요!"
+					}
+				}
+			]
+		}
+	]
+}

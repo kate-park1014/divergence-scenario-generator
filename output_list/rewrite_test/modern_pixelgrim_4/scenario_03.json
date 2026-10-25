@@ -1,0 +1,384 @@
+{
+  "scenario_id": "modern_pixelgrim_4_03",
+  "order": 3,
+  "act": "rising",
+  "theme": "modern",
+  "actors": {
+    "kai": {
+      "id": "mon_d7f29313-b8fb-49da-9a1a-01df5d13866e",
+      "name": {
+        "korean": "카이",
+        "english": "Kai",
+        "japanese": "カイ",
+        "chinese": "凯",
+        "french": "Kai",
+        "spanish": "Kai",
+        "vietnamese": "Kai",
+        "thai": "ไค",
+        "hindi": "काई"
+      },
+      "description": "",
+      "face_image_url": "https://imagedelivery.net/WTEqQNGFb-l-IHS6IGnzUQ/f10d9184-4155-4bb9-de2d-db61463f7c00/public",
+      "battle_sprite_url": "https://imagedelivery.net/WTEqQNGFb-l-IHS6IGnzUQ/e41f8e03-08c9-4a4f-6f72-fa9342876f00/public",
+      "role": {
+        "korean": "게임 개발자"
+      }
+    },
+    "max": {
+      "id": "mon_6e8c1577-89e2-49f6-a9f3-a6521b9e7f59",
+      "name": {
+        "korean": "맥스",
+        "english": "Max",
+        "japanese": "マックス",
+        "chinese": "麦克斯",
+        "french": "Max",
+        "spanish": "Max",
+        "vietnamese": "Max",
+        "thai": "แม็กซ์",
+        "hindi": "मैक्स"
+      },
+      "description": "",
+      "face_image_url": "https://imagedelivery.net/WTEqQNGFb-l-IHS6IGnzUQ/8bd7f351-400b-46f9-828f-aa2542734900/public",
+      "battle_sprite_url": "https://imagedelivery.net/WTEqQNGFb-l-IHS6IGnzUQ/62971060-c904-4d96-afcd-d11f831b3e00/public",
+      "role": {
+        "korean": "아케이드 직원"
+      }
+    }
+  },
+  "boss": {
+    "pool_id": "random_boss",
+    "role": {
+      "korean": "기술자"
+    }
+  },
+  "prologue": {
+    "korean": [
+      "녹슨 아케이드 기계들이 낡은 추억의 잔해처럼 늘어선 곳.",
+      "한때 빛나던 기억들은 이제 빛바랜 디지털 기록으로 남았다.",
+      "누군가의 소중한 순간들이 점차 왜곡되고, 사라져 간다.",
+      "이곳에 갇힌 자들은 그 진실을 마주할 수 있을까?"
+    ]
+  },
+  "rooms": [
+    {
+      "id": 1,
+      "dialogue": [
+        {
+          "type": "speech",
+          "speaker": "narrator",
+          "content": {
+            "korean": "폐쇄된 오락실, 잊힌 시간의 흔적만이 가득하다."
+          }
+        },
+        {
+          "duration_ms": 500,
+          "type": "direction",
+          "action": "enter",
+          "speaker": "kai",
+          "spot": [
+            5,
+            1
+          ]
+        },
+        {
+          "emotion": "sad",
+          "type": "speech",
+          "speaker": "kai",
+          "content": {
+            "korean": "이곳은 제가 가족과 함께했던 행복한 기억이 담긴 곳인데…."
+          }
+        },
+        {
+          "emotion": "base",
+          "type": "speech",
+          "speaker": "kai",
+          "content": {
+            "korean": "그때의 모든 순간이 생생하게 남아있어요. 디지털 기록으로요."
+          }
+        },
+        {
+          "type": "speech",
+          "emotion": "base",
+          "speaker": "character_any",
+          "content": {
+            "korean": "이 낡은 공간이 카이님에게는 특별한 의미가 있었군요."
+          }
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "dialogue": [
+        {
+          "duration_ms": 500,
+          "speaker": "kai",
+          "type": "direction",
+          "action": "enter",
+          "spot": [
+            5,
+            1
+          ]
+        },
+        {
+          "emotion": "sad",
+          "type": "speech",
+          "speaker": "kai",
+          "content": {
+            "korean": "이상해요. 어쩐지 기억이 선명하지 않아요. 뭔가 잘못된 것 같은데…."
+          }
+        },
+        {
+          "content": {
+            "korean": "아케이드 스피커에서 픽셀그림의 방송이 흘러나온다."
+          },
+          "speaker": "narrator",
+          "type": "speech"
+        },
+        {
+          "speaker": "narrator",
+          "content": {
+            "korean": "“완벽한 기록을 위해 재생을 계속하라. 과거의 영광은 당신의 손끝에 달려있다.”"
+          },
+          "type": "speech"
+        },
+        {
+          "emotion": "base",
+          "content": {
+            "korean": "기록을 위해 재생을 계속하라고요? 그게 뭘 의미하는 걸까요?"
+          },
+          "type": "speech",
+          "speaker": "character_any"
+        },
+        {
+          "emotion": "base",
+          "type": "speech",
+          "content": {
+            "korean": "정말 그럴까요? 제가 만든 기록인데… 완벽해져야 할 텐데."
+          },
+          "speaker": "kai"
+        }
+      ]
+    },
+    {
+      "dialogue": [
+        {
+          "duration_ms": 500,
+          "spot": [
+            5,
+            1
+          ],
+          "type": "direction",
+          "speaker": "kai",
+          "action": "enter"
+        },
+        {
+          "emotion": "sad",
+          "type": "speech",
+          "speaker": "kai",
+          "content": {
+            "korean": "안 돼! 내가 기억하는 행복한 식사 장면이… 깨지고 있어!"
+          }
+        },
+        {
+          "content": {
+            "korean": "기억이 눈앞에서 왜곡되고 있어요. 저 낡은 비디오테이프 때문인가요?"
+          },
+          "speaker": "character_any",
+          "emotion": "angry",
+          "type": "speech"
+        },
+        {
+          "type": "speech",
+          "content": {
+            "korean": "주인공은 낡은 비디오테이프를 다시 재생한다."
+          },
+          "speaker": "narrator"
+        },
+        {
+          "action": "enter",
+          "duration_ms": 500,
+          "type": "direction",
+          "spot": [
+            2,
+            1
+          ],
+          "speaker": "max"
+        },
+        {
+          "type": "speech",
+          "emotion": "base",
+          "content": {
+            "korean": "이곳에서 믿을 수 있는 건 아무것도 없어."
+          },
+          "speaker": "max"
+        },
+        {
+          "type": "speech",
+          "emotion": "sad",
+          "speaker": "max",
+          "content": {
+            "korean": "과거의 실수는 반복될 뿐이지…."
+          }
+        },
+        {
+          "emotion": "base",
+          "type": "speech",
+          "speaker": "character_any",
+          "content": {
+            "korean": "무슨 말씀이세요, 맥스님?"
+          }
+        }
+      ],
+      "id": 5
+    },
+    {
+      "id": 9,
+      "dialogue": [
+        {
+          "type": "direction",
+          "action": "enter",
+          "spot": [
+            5,
+            1
+          ],
+          "duration_ms": 500,
+          "speaker": "kai"
+        },
+        {
+          "content": {
+            "korean": "카이의 행복한 기억이 형체도 없이 사라져 보스에게 흡수된다."
+          },
+          "speaker": "narrator",
+          "type": "speech"
+        },
+        {
+          "emotion": "angry",
+          "content": {
+            "korean": "내 기억이… 전부 사라졌어! 이건… 내가 아는 추억이 아니야!"
+          },
+          "speaker": "kai",
+          "type": "speech"
+        },
+        {
+          "emotion": "sad",
+          "type": "speech",
+          "content": {
+            "korean": "비디오테이프를 재생할수록 추억이 사라지고 있어요. 뭔가 잘못됐어요!"
+          },
+          "speaker": "character_any"
+        },
+        {
+          "type": "speech",
+          "emotion": "sad",
+          "speaker": "character_3",
+          "content": {
+            "korean": "믿을 수 없어…."
+          }
+        },
+        {
+          "content": {
+            "korean": "픽셀그림의 말은 전부 거짓이었어요. 재생하면 안 되는 거였어요!"
+          },
+          "speaker": "character_any",
+          "type": "speech",
+          "emotion": "angry"
+        }
+      ]
+    },
+    {
+      "dialogue": [
+        {
+          "speaker": "random_boss",
+          "content": {
+            "korean": "기록의 왜곡을 막아라. 침입자, 더 이상 이곳을 헤집지 마라."
+          },
+          "type": "speech"
+        },
+        {
+          "type": "speech",
+          "content": {
+            "korean": "당신이 막으려는 건 기록이 아니라 진실이겠죠!"
+          },
+          "speaker": "character_any",
+          "emotion": "angry"
+        },
+        {
+          "speaker": "random_boss",
+          "content": {
+            "korean": "기록자는 완벽한 과거를 원할 뿐이다. 방해는 용납할 수 없다."
+          },
+          "type": "speech"
+        },
+        {
+          "emotion": "base",
+          "type": "speech",
+          "content": {
+            "korean": "완벽한 과거가 모두의 기억을 지워버리는 것이라면, 우린 그걸 막을 거예요!"
+          },
+          "speaker": "character_any"
+        }
+      ],
+      "id": 15,
+      "win_dialogue": [
+        {
+          "type": "direction",
+          "action": "enter",
+          "spot": [
+            5,
+            1
+          ],
+          "duration_ms": 500,
+          "speaker": "kai"
+        },
+        {
+          "emotion": "sad",
+          "type": "speech",
+          "speaker": "character_any",
+          "content": {
+            "korean": "이 기술자를 물리쳤지만, 카이님의 기억은 돌아오지 않아요…."
+          }
+        },
+        {
+          "speaker": "kai",
+          "content": {
+            "korean": "사라진 기억은 되돌릴 수 없는 건가요? 제가 직접 만든 기록인데…."
+          },
+          "emotion": "sad",
+          "type": "speech"
+        },
+        {
+          "emotion": "base",
+          "type": "speech",
+          "speaker": "character_any",
+          "content": {
+            "korean": "이제 알겠어요. 픽셀그림의 방식이 틀렸어요. 다음엔 절대 재생하지 않을 거예요."
+          }
+        },
+        {
+          "emotion": "base",
+          "type": "speech",
+          "speaker": "character_any",
+          "content": {
+            "korean": "어쩌면… 비디오테이프를 다른 방법으로 사용해야 할지도 몰라요."
+          }
+        }
+      ],
+      "lose_dialogue": [
+        {
+          "content": {
+            "korean": "쓸데없는 저항이다. 기록은 계속될 것이다."
+          },
+          "speaker": "random_boss",
+          "type": "speech"
+        },
+        {
+          "speaker": "random_boss",
+          "content": {
+            "korean": "이곳의 질서는 변하지 않는다."
+          },
+          "type": "speech"
+        }
+      ]
+    }
+  ]
+}

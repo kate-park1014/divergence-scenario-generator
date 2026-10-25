@@ -1,0 +1,188 @@
+{
+	"id": "card_01_ominous_message",
+	"title": {
+		"korean": "불길한 메시지 해독"
+	},
+	"tags": [
+		"message"
+	],
+	"intensity": "calm",
+	"after_story": 9,
+	"before_story": 15,
+	"leaning": "community+",
+	"background_tags": [
+		"폐기장 입구",
+		"깨진 스크린",
+		"소문꾼의 호기심",
+		"알 수 없는 글자",
+		"빛바랜 정보"
+	],
+	"dialogue": [
+		{
+			"speaker": "narrator",
+			"content": {
+				"korean": "소문꾼 미리가 폐기장 안에서 발견한 깨진 스크린 조각을 들고 왔다."
+			}
+		},
+		{
+			"speaker": "rumor_vendor",
+			"content": {
+				"korean": "이것 봐! 폐기장 안에서 찾았는데, 이상한 글자들이 쓰여 있어! 뭔지 모르겠어!"
+			}
+		},
+		{
+			"speaker": "echo",
+			"content": {
+				"korean": "이 메시지가 위스퍼 웹과 관련된 중요한 단서일지도 몰라요!"
+			}
+		}
+	],
+	"choices": [
+		{
+			"text": {
+				"korean": "메시지 해독을 도와주고 그 내용을 모두와 공유한다"
+			},
+			"mbti": "FJ",
+			"effects": {
+				"community": 20,
+				"intelligence": 10,
+				"echo": 10
+			},
+			"reward": [
+				"intelligence_up"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "미리와 함께 메시지를 해독했다. 내용은 충격적이었고, 당신은 그 정보를 사람들과 공유했다."
+					}
+				},
+				{
+					"speaker": "rumor_vendor",
+					"content": {
+						"korean": "세상에, 이런 내용이었다니! 모두에게 알려야 해!"
+					}
+				},
+				{
+					"speaker": "echo",
+					"content": {
+						"korean": "정말 중요한 정보예요. 모두와 공유하는 게 맞아요!"
+					}
+				}
+			]
+		},
+		{
+			"text": {
+				"korean": "메시지를 직접 해독하고 그 내용을 독점한다"
+			},
+			"mbti": "ST",
+			"effects": {
+				"community": -20,
+				"intelligence": 20,
+				"echo": -10
+			},
+			"reward": [
+				"intelligence_up"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "메시지를 직접 해독하여 중요한 정보를 얻었다. 미리는 당신의 행동에 불평했다."
+					}
+				},
+				{
+					"speaker": "rumor_vendor",
+					"content": {
+						"korean": "혼자만 알다니, 치사하게!"
+					}
+				},
+				{
+					"speaker": "echo",
+					"content": {
+						"korean": "독점하는 것도 나쁘지 않네요. 어쩌면 이게 더 유리할지도 몰라요."
+					}
+				}
+			]
+		},
+		{
+			"text": {
+				"korean": "메시지 내 숨겨진 암호를 파악하여 해독한다"
+			},
+			"mbti": "NT",
+			"require": {
+				"mbti": "NT"
+			},
+			"effects": {
+				"intelligence": 30,
+				"echo": 15
+			},
+			"reward": [
+				"cooldown_reset"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "{actor}이(가) 메시지 안에 숨겨진 복잡한 암호를 정확히 파악하여 해독에 성공했다."
+					}
+				},
+				{
+					"speaker": "rumor_vendor",
+					"content": {
+						"korean": "암호? 저런 게 숨어 있었다니! 정말 대단하다!"
+					}
+				},
+				{
+					"speaker": "echo",
+					"content": {
+						"korean": "놀라워요! 저 암호, 아무도 못 찾을 줄 알았는데!"
+					}
+				}
+			]
+		},
+		{
+			"text": {
+				"korean": "메시지의 출처를 분석하여 위협의 근원을 추론한다"
+			},
+			"mbti": "TJ",
+			"require": {
+				"stat": "reason",
+				"op": ">=",
+				"value": 40
+			},
+			"effects": {
+				"reason": 10,
+				"intelligence": 10
+			},
+			"reward": [
+				"intelligence_up"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "{actor}이(가) 메시지의 출처를 분석하여 폐기장의 위협이 어디서 오는지 추론했다."
+					}
+				},
+				{
+					"speaker": "rumor_vendor",
+					"content": {
+						"korean": "진짜로 그럴 리가… 그게 전부 사실이란 말이야?!"
+					}
+				},
+				{
+					"speaker": "echo",
+					"content": {
+						"korean": "메시지에서 나온 정보가 정말 중요한 단서가 된 것 같아요!"
+					}
+				}
+			]
+		}
+	]
+}

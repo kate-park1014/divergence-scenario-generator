@@ -1,0 +1,161 @@
+{
+	"id": "card_05_lost_visitor",
+	"title": {
+		"korean": "길 잃은 방문객"
+	},
+	"tags": [
+		"lost_guest"
+	],
+	"intensity": "calm",
+	"after_story": 3,
+	"before_story": 5,
+	"leaning": "community+",
+	"background_tags": [
+		"confused faces",
+		"dimly lit corridor",
+		"discarded signs",
+		"eerie silence",
+		"unstable footing"
+	],
+	"dialogue": [
+		{
+			"speaker": "narrator",
+			"content": {
+				"korean": "에코의 목소리가 가시기도 전, 심층부 어두운 통로에서 길 잃은 방문객이 헤매고 있었다."
+			}
+		},
+		{
+			"speaker": "curious_visitor",
+			"content": {
+				"korean": "여기가 어디죠? 대체 출구는 어디로... 아무것도 보이지 않아!"
+			}
+		},
+		{
+			"speaker": "echo",
+			"content": {
+				"korean": "저 사람도 이 혼란의 피해자야! 도와줘야 해!"
+			}
+		}
+	],
+	"choices": [
+		{
+			"text": {
+				"korean": "방문객을 안전한 곳으로 안내하고 폐기장 출구까지 동행한다."
+			},
+			"mbti": "IS",
+			"effects": {
+				"community": 30,
+				"echo": 5
+			},
+			"event": "minigame_timing",
+			"seed": null,
+			"result": [
+				{
+					"speaker": "curious_visitor",
+					"content": {
+						"korean": "감사합니다! 정말 살았어요! 이 은혜는 잊지 않을게요."
+					}
+				},
+				{
+					"speaker": "echo",
+					"content": {
+						"korean": "그래, 이렇게 서로 돕는 게 당연한 거야. 잘했어!"
+					}
+				},
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "방문객은 안도의 한숨을 쉬며 내 뒤를 따랐다. 안전한 곳으로 향했다."
+					}
+				},
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "우리는 폐기장 입구를 향해 조심스럽게 발걸음을 옮겼다."
+					}
+				}
+			],
+			"event_intro": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "폐기장 곳곳에 함정이 숨어 있었다. 방문객이 휘청거릴 때마다 나도 발걸음을 맞춰야 했다."
+					}
+				}
+			]
+		},
+		{
+			"text": {
+				"korean": "방문객에게 스스로 길을 찾도록 정보를 주고, 주변 환경에 주의하라고 경고한다."
+			},
+			"mbti": "EN",
+			"effects": {
+				"community": -20,
+				"echo": -5
+			},
+			"reward": [
+				"move_range_up"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "curious_visitor",
+					"content": {
+						"korean": "혼자서요? 하지만 전 길을 잘 모르는데..."
+					}
+				},
+				{
+					"speaker": "echo",
+					"content": {
+						"korean": "너무 냉정한 거 아니야? 저 사람 혼자서는 위험할 텐데."
+					}
+				},
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "방문객은 불안한 얼굴로 내가 알려준 방향을 응시했다. 길은 멀어 보였다."
+					}
+				}
+			]
+		},
+		{
+			"text": {
+				"korean": "방문객에게 소정의 경비를 지급하고, 안전한 귀가를 위한 정보를 제공한다."
+			},
+			"mbti": "IF",
+			"require": {
+				"stat": "gold",
+				"op": ">=",
+				"value": 100
+			},
+			"effects": {
+				"gold": -100,
+				"echo": 5
+			},
+			"reward": [
+				"move_range_up"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "curious_visitor",
+					"content": {
+						"korean": "이 돈으로 택시라도 탈 수 있겠네요! 정말 고마워요!"
+					}
+				},
+				{
+					"speaker": "echo",
+					"content": {
+						"korean": "돈으로라도 도움을 줄 수 있어서 다행이야."
+					}
+				},
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "방문객은 지도를 들고 폐기장 출구로 향했다. 희미한 불빛이 사라졌다."
+					}
+				}
+			]
+		}
+	]
+}

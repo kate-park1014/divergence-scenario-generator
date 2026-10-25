@@ -1,0 +1,255 @@
+{
+	"scenario_id": "modern_whisperweb_0_01",
+	"actors": {
+		"echo": {
+			"name": {
+				"korean": "에코"
+			},
+			"style": {
+				"korean": "날 서 있고 걱정이 섞인 짧은 반말"
+			}
+		},
+		"janitor": {
+			"name": {
+				"korean": "정비공 조"
+			},
+			"style": {
+				"korean": "친절하고 허둥대는 존댓말"
+			},
+			"portrait_no": 42
+		},
+		"data_scavenger": {
+			"name": {
+				"korean": "정보꾼 지미"
+			},
+			"style": {
+				"korean": "수상하고 비밀스러운 반말"
+			},
+			"portrait_no": 3
+		},
+		"merchant": {
+			"name": {
+				"korean": "폐품 상인 리"
+			},
+			"style": {
+				"korean": "초조하고 변덕스러운 반말"
+			},
+			"portrait_no": 44
+		},
+		"repair_tech": {
+			"name": {
+				"korean": "고물 수리공 칼"
+			},
+			"style": {
+				"korean": "투덜거리지만 순박한 반말"
+			},
+			"portrait_no": 53
+		},
+		"rumor_vendor": {
+			"name": {
+				"korean": "소문꾼 미리"
+			},
+			"style": {
+				"korean": "과장되고 수다스러운 반말"
+			},
+			"portrait_no": 8
+		},
+		"protestor": {
+			"name": {
+				"korean": "운동가 박"
+			},
+			"style": {
+				"korean": "열정적이고 단호한 반말"
+			},
+			"portrait_needed": {
+				"korean": "40대 남성 운동가. 낡은 조끼, 땀에 젖은 머리, 단호한 인상"
+			}
+		},
+		"scanner_operator": {
+			"name": {
+				"korean": "스캐너 조작자 루"
+			},
+			"style": {
+				"korean": "초조하고 잰체하는 반말"
+			},
+			"portrait_needed": {
+				"korean": "30대 남성 직원. 작업복, 피곤하고 초조한 인상"
+			}
+		}
+	},
+	"seeds": {
+		"helped_janitor_easy": {
+			"korean": "정비공 조의 고장 난 차를 빠르게 수리해 줌",
+			"english": "Quickly repaired Janitor Joe's broken car"
+		},
+		"helped_janitor_hard": {
+			"korean": "정비공 조의 고장 난 차를 대신 운반해 줌",
+			"english": "Transported Janitor Joe's broken car instead"
+		},
+		"bought_data_easy": {
+			"korean": "정보꾼 지미의 조각난 데이터를 비싸게 사 줌",
+			"english": "Bought Data Scavenger Jimmy's fragmented data at a high price"
+		},
+		"negotiated_data_hard": {
+			"korean": "정보꾼 지미의 조각난 데이터를 끈질기게 흥정하여 받음",
+			"english": "Persistently negotiated to get Data Scavenger Jimmy's fragmented data"
+		}
+	},
+	"flags": {
+		"janitor_debt_collectors": {
+			"label": {
+				"korean": "정비공 조의 채무자들"
+			},
+			"boss_line": {
+				"korean": "정비공 조의 사적인 채무자들이 폐기장 깊은 곳으로 향하는 길을 막아섬"
+			},
+			"boss_penalty": -1
+		},
+		"janitor_safety_tips": {
+			"label": {
+				"korean": "정비공 조의 안전 수칙"
+			},
+			"boss_choice": {
+				"korean": "정비공 조가 알려준 폐기장 안 위험 구역의 안전 수칙을 따른다"
+			},
+			"boss_penalty": 1
+		},
+		"janitor_secret_route": {
+			"label": {
+				"korean": "정비공 조의 지름길"
+			},
+			"boss_choice": {
+				"korean": "정비공 조가 알려준 폐기장 깊숙이 들어갈 수 있는 지름길을 택한다"
+			},
+			"boss_penalty": 2
+		},
+		"data_scavenger_misinformation": {
+			"label": {
+				"korean": "정보꾼 지미의 오정보"
+			},
+			"boss_line": {
+				"korean": "정보꾼 지미가 흘린 잘못된 정보로 인해 폐기장 내 수상한 함정에 빠짐"
+			},
+			"boss_penalty": -1
+		},
+		"data_scavenger_useful_tip": {
+			"label": {
+				"korean": "정보꾼 지미의 유용한 정보"
+			},
+			"boss_choice": {
+				"korean": "정보꾼 지미가 흘려준 폐기장 내부 특정 스크린에 대한 정보를 활용한다"
+			},
+			"boss_penalty": 1
+		},
+		"data_scavenger_decoy": {
+			"label": {
+				"korean": "정보꾼 지미의 미끼"
+			},
+			"boss_choice": {
+				"korean": "정보꾼 지미가 유포한 가짜 정보로 폐기장 내 경계를 흐트러뜨린다"
+			},
+			"boss_penalty": 2
+		}
+	},
+	"rooms": {
+		"1": {
+			"title": {
+				"korean": "폐기장 입구"
+			}
+		},
+		"3": {
+			"title": {
+				"korean": "뒤섞인 소문"
+			},
+			"dialogue": [
+				{
+					"after_line": 3,
+					"line": {
+						"type": "speech",
+						"speaker": "character_any",
+						"if": {
+							"seed": "helped_janitor_easy"
+						},
+						"source": "llm",
+						"intent": "정비공 조를 도왔던 당시에도 폐기장의 소음이 심했음을 언급",
+						"example": {
+							"korean": "아까 조 아저씨를 도울 때도, 이 지직거리는 소리가 거슬렸는데…"
+						},
+						"emotion": "base"
+					}
+				}
+			]
+		},
+		"5": {
+			"title": {
+				"korean": "생존하는 데이터"
+			},
+			"dialogue": [
+				{
+					"after_line": 4,
+					"line": {
+						"type": "speech",
+						"speaker": "character_any",
+						"if": {
+							"seed": "bought_data_easy"
+						},
+						"source": "llm",
+						"intent": "정보꾼 지미에게서 산 데이터가 오히려 정보 혼란을 가중시키는 것 같다고 언급",
+						"example": {
+							"korean": "지미에게 산 데이터도 결국 이 혼란의 일부였던 것 같네요."
+						},
+						"emotion": "base"
+					}
+				}
+			]
+		},
+		"9": {
+			"title": {
+				"korean": "통제되는 진실"
+			},
+			"dialogue": [
+				{
+					"after_line": 6,
+					"line": {
+						"type": "speech",
+						"speaker": "echo",
+						"if": {
+							"stat": "echo",
+							"op": ">=",
+							"value": 60
+						},
+						"source": "llm",
+						"intent": "에코가 주인공의 행동에 대한 긍정적인 감정을 표현하고 격려함",
+						"example": {
+							"korean": "당신 덕분에 여기까지 올 수 있었어요. 계속 나아가야 해요!"
+						},
+						"emotion": "happy"
+					}
+				}
+			]
+		},
+		"15": {
+			"title": {
+				"korean": "혼돈의 근원"
+			},
+			"dialogue": [
+				{
+					"after_line": 2,
+					"line": {
+						"type": "speech",
+						"speaker": "random_boss",
+						"if": {
+							"flag": "data_scavenger_misinformation"
+						},
+						"source": "llm",
+						"intent": "정보꾼 지미의 잘못된 정보로 인해 발생한 혼란을 언급하며 주인공을 비난함",
+						"example": {
+							"korean": "지미가 퍼뜨린 헛소문 때문에, 너희는 더욱 혼란에 빠질 뿐이다!"
+						},
+						"emotion": "angry"
+					}
+				}
+			]
+		}
+	}
+}

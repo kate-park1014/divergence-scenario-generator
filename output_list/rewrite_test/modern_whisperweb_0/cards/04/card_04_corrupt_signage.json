@@ -1,0 +1,135 @@
+{
+	"id": "card_04_corrupt_signage",
+	"title": {
+		"korean": "왜곡된 간판"
+	},
+	"tags": "misinformation",
+	"intensity": "calm",
+	"after_story": 9,
+	"before_story": 15,
+	"leaning": "community+",
+	"background_tags": [
+		"flickering screen",
+		"distorted letters",
+		"confused faces",
+		"shadowed alley",
+		"misleading arrows"
+	],
+	"dialogue": [
+		{
+			"speaker": "narrator",
+			"content": {
+				"korean": "정보꾼이 폐기물 관리동의 간판들을 조작해 왜곡된 정보와 방향을 표시하고 있었다."
+			}
+		},
+		{
+			"speaker": "gossip_monger",
+			"content": {
+				"korean": "하하! 이쪽으로 가야 한다고! 저 간판이 진실을 말하고 있어!"
+			}
+		},
+		{
+			"speaker": "kai",
+			"content": {
+				"korean": "저 자가 혼란을 부추기고 있어요! 간판의 말을 믿어선 안 됩니다!"
+			}
+		}
+	],
+	"choices": [
+		{
+			"text": {
+				"korean": "간판의 정보에 따라 움직이며 불확실한 길을 택한다"
+			},
+			"mbti": "ET",
+			"effects": {
+				"community": 30,
+				"echo": -5
+			},
+			"event": "minigame_cup",
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "간판이 가리키는 방향으로 움직였다. 정보꾼은 만족하며 비웃었다. 카이가 초조해했다."
+					}
+				},
+				{
+					"speaker": "kai",
+					"content": {
+						"korean": "저 간판이 우리를 어디로 이끌려는 걸까요?"
+					}
+				}
+			],
+			"event_intro": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "간판의 정보는 빠르게 변했다. 컵 아래 숨겨진 진짜 정보를 찾아내야 했다."
+					}
+				}
+			]
+		},
+		{
+			"text": {
+				"korean": "정보꾼의 의도를 파악하고 간판 정보를 무시한다"
+			},
+			"mbti": "IF",
+			"effects": {
+				"community": -20,
+				"intelligence": 10
+			},
+			"reward": [
+				"intelligence_up"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "정보꾼의 의도를 파악하고 간판을 무시하자, 정보꾼은 당황하며 말을 더듬었다. 카이가 고개를 끄덕였다."
+					}
+				},
+				{
+					"speaker": "kai",
+					"content": {
+						"korean": "역시 당신은 속지 않네요! 저자의 속셈은 뻔했습니다."
+					}
+				}
+			]
+		},
+		{
+			"text": {
+				"korean": "정보꾼에게 강하게 경고하여 간판을 끄게 만든다"
+			},
+			"mbti": "IP",
+			"require": {
+				"stat": "fighting",
+				"op": "<=",
+				"value": -40
+			},
+			"effects": {
+				"fighting": -10,
+				"echo": -10
+			},
+			"reward": [
+				"stun"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "강하게 경고하자 정보꾼은 겁에 질려 간판의 전원을 내렸다. 카이가 안도했다."
+					}
+				},
+				{
+					"speaker": "kai",
+					"content": {
+						"korean": "이젠 더 이상 속는 사람이 없겠군요. 잘하셨습니다!"
+					}
+				}
+			]
+		}
+	]
+}

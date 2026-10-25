@@ -1,0 +1,149 @@
+{
+	"id": "card_05_parts_box",
+	"title": {
+		"korean": "뒤섞인 부품 상자"
+	},
+	"tags": [
+		"parts_trade"
+	],
+	"intensity": "calm",
+	"after_story": 1,
+	"before_story": 3,
+	"leaning": "community-",
+	"background_tags": [
+		"scrawled numbers",
+		"junk piles",
+		"rusting metal",
+		"glittering dust",
+		"broken screens"
+	],
+	"dialogue": [
+		{
+			"speaker": "narrator",
+			"content": {
+				"korean": "폐기장 심층부 한구석, 잔해가 쌓인 임시 좌판에서 부품 사냥꾼이 무언가를 흥정하고 있었다."
+			}
+		},
+		{
+			"speaker": "component_hunter",
+			"content": {
+				"korean": "이거 봐요, 완벽하게 합쳐진 스크린 부품이라니까? 정보가 마구 뒤섞여서 더 희귀하다고요."
+			}
+		},
+		{
+			"speaker": "echo",
+			"content": {
+				"korean": "합쳐진 게 자랑이야? 그걸 팔아서 돈을 벌겠다니!"
+			}
+		}
+	],
+	"choices": [
+		{
+			"text": {
+				"korean": "부품 사냥꾼의 제안을 받아들여 뒤섞인 부품 상자 하나를 구매한다."
+			},
+			"mbti": "ST",
+			"effects": {
+				"community": -30,
+				"gold": -50
+			},
+			"event": "minigame_timing",
+			"seed": "A_easy_path",
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "지불 후, 부품 사냥꾼은 쾌재를 부르며 낡은 상자를 건넸다. 내용물이 희미하게 빛났다."
+					}
+				},
+				{
+					"speaker": "echo",
+					"content": {
+						"korean": "이러니까 혼란이 끝없이 퍼지는 거야..."
+					}
+				}
+			],
+			"event_intro": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "상자에서 무작위 정보 조각들이 쏟아져 나왔다. 번개 같은 속도로 튀어 오르는 조각들을 피해야 했다."
+					}
+				}
+			]
+		},
+		{
+			"text": {
+				"korean": "부품 사냥꾼에게 스크린 부품 판매를 당장 중단하라고 강력히 요구한다."
+			},
+			"mbti": "NF",
+			"effects": {
+				"fighting": 20,
+				"echo": 10
+			},
+			"reward": [
+				"defense_up"
+			],
+			"seed": "A_hard_path",
+			"result": [
+				{
+					"speaker": "component_hunter",
+					"content": {
+						"korean": "쳇, 훼방 놓지 마요! 이 혼란 속에서라도 살아야 할 거 아니야."
+					}
+				},
+				{
+					"speaker": "echo",
+					"content": {
+						"korean": "맞아, 이런 식으로 돈을 벌면 안 돼! 잘했어!"
+					}
+				},
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "그는 결국 상자를 닫고 불평하며 자리를 떴다."
+					}
+				}
+			]
+		},
+		{
+			"text": {
+				"korean": "부품 사냥꾼에게 웃돈을 주고 모든 뒤섞인 부품을 매입하여 폐기한다."
+			},
+			"mbti": "SJ",
+			"require": {
+				"stat": "gold",
+				"op": ">=",
+				"value": 150
+			},
+			"effects": {
+				"gold": -150,
+				"echo": 10
+			},
+			"reward": [
+				"heal"
+			],
+			"seed": "A_hard_path",
+			"result": [
+				{
+					"speaker": "component_hunter",
+					"content": {
+						"korean": "돈이 최고지! 다 가져가요, 이제 내 손은 깨끗하니까."
+					}
+				},
+				{
+					"speaker": "echo",
+					"content": {
+						"korean": "그나마 다행이야. 이 부품들이 더 이상 퍼지지 않으니."
+					}
+				},
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "그는 모든 부품을 건네고 홀가분하게 사라졌다. 폐기장 한구석에 부품들이 잠시 쌓였다."
+					}
+				}
+			]
+		}
+	]
+}

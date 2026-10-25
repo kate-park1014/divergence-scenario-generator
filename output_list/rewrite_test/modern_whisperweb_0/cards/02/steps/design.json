@@ -1,0 +1,1132 @@
+{
+	"actors": {
+		"junk_artisan": {
+			"name": {
+				"korean": "폐품 예술가"
+			},
+			"role": "버려진 폐품으로 기묘한 조형물을 만드는 예술가"
+		},
+		"data_cleaner": {
+			"name": {
+				"korean": "데이터 청소부"
+			},
+			"role": "뒤섞인 데이터를 '정리'하려 하지만 더 혼란을 초래하는 인물"
+		},
+		"local_entrepreneur": {
+			"name": {
+				"korean": "지역 사업가"
+			},
+			"role": "폐기장 근처에서 소규모 사업을 운영하며 정보 유출 피해를 겪는 인물"
+		},
+		"lost_tourist": {
+			"name": {
+				"korean": "길 잃은 관광객"
+			},
+			"role": "중앙 처리 구역에 잘못 들어와 소지품 분실 등 사소한 피해를 겪는 인물"
+		},
+		"rumor_vendor": {
+			"name": {
+				"korean": "소문 상인"
+			},
+			"role": "폐기장 안팎의 소문과 정보를 사고파는 정보 브로커"
+		},
+		"power_broker": {
+			"name": {
+				"korean": "전력 중개상"
+			},
+			"role": "폐기장 구역의 전력 공급을 통제하며 이득을 취하는 인물"
+		},
+		"sensor_operator": {
+			"name": {
+				"korean": "센서 담당자"
+			},
+			"role": "폐기장 내 환경 센서 시스템을 관리하지만 과부하에 시달리는 인물"
+		},
+		"small_business_owner": {
+			"name": {
+				"korean": "소규모 사업주"
+			},
+			"role": "폐기장 주변에서 작은 가게를 운영하며 정보 유출 피해를 직접 겪는 인물"
+		},
+		"security_officer": {
+			"name": {
+				"korean": "보안 담당자"
+			},
+			"role": "폐기장 내부의 질서와 보안 시스템을 관리하는 인물"
+		},
+		"info_collector": {
+			"name": {
+				"korean": "정보 수집가"
+			},
+			"role": "폐기장의 오염된 단말기에서 흘러나오는 정보를 독점하려는 인물"
+		}
+	},
+	"seeds": {
+		"ignored_artisan": "폐품 예술가의 작업을 무시하고 개인의 목표를 우선시함",
+		"respected_artisan": "폐품 예술가의 작업 공간을 존중하거나 도움을 줌",
+		"helped_tourist": "길 잃은 관광객을 도와 소지품을 찾거나 재정적 도움을 줌",
+		"ignored_tourist": "길 잃은 관광객의 소동을 무시하고 자신의 임무에 집중함"
+	},
+	"flags": {
+		"blocked_path_junk_artisan": {
+			"kind": "bad",
+			"boss_penalty": -1,
+			"summary": "폐품 예술가가 설치한 거대한 조형물이 보스 방으로 향하는 길을 방해함"
+		},
+		"clear_path_junk_artisan": {
+			"kind": "good",
+			"boss_penalty": 1,
+			"summary": "폐품 예술가가 보스 방으로 가는 길을 열어주거나 작은 단서를 제공함"
+		},
+		"small_clue_junk_artisan_1": {
+			"kind": "good",
+			"boss_penalty": 1,
+			"summary": "폐품 예술가가 준 폐품 속에서 작은 정보 단서를 얻음"
+		},
+		"small_clue_junk_artisan_2": {
+			"kind": "good",
+			"boss_penalty": 2,
+			"summary": "폐품 예술가가 준 폐품 속에서 보스에 대한 결정적인 단서를 얻음"
+		},
+		"obscure_path_tourist": {
+			"kind": "bad",
+			"boss_penalty": -1,
+			"summary": "길 잃은 관광객이 제시한 단서가 잘못된 길로 이끌어 혼란을 줌"
+		},
+		"clear_path_tourist": {
+			"kind": "good",
+			"boss_penalty": 1,
+			"summary": "길 잃은 관광객이 준 단서로 보스 방으로 가는 숨겨진 길을 발견함"
+		},
+		"distracted_guard_tourist": {
+			"kind": "good",
+			"boss_penalty": 1,
+			"summary": "길 잃은 관광객의 소동이 보스 방 경비의 주의를 분산시킴"
+		},
+		"calm_situation_tourist": {
+			"kind": "good",
+			"boss_penalty": 2,
+			"summary": "길 잃은 관광객의 소동을 잠재워 보스 방 진입 전의 불필요한 문제를 해결함"
+		}
+	},
+	"cards": [
+		{
+			"id": "card_02_broken_signal_tower",
+			"kind": "plant",
+			"slot": "A",
+			"title": {
+				"korean": "고장난 신호탑"
+			},
+			"summary": "폐품 예술가가 고장난 신호탑을 작품 재료로 쓰려 해 닥스가 분석할 장비를 놓을 공간이 없다.",
+			"bridge": "앞 방 끝: 닥스는 깨진 스크린을 살펴보겠다고 했지만, 닥스가 장비를 설치하려는 곳에 폐품 예술가가 방해가 된다. / 카드: 닥스가 스크린 분석을 시작하려는데, 폐품 예술가가 고장난 신호탑을 작품 재료로 쓰려 하면서 공간을 막고 있다. / 다음 방 시작: 닥스가 스크린을 분석한 결과를 말하며 예상보다 심각하다고 한다. 와 이어지는 이유: 플레이어의 개입으로 닥스가 겨우 분석을 시작하거나, 방해를 무릅쓰고 분석을 시도한다.",
+			"people": [
+				"dax",
+				"junk_artisan"
+			],
+			"tags": "signal",
+			"intensity": "calm",
+			"leaning": "fighting-",
+			"choices": [
+				{
+					"path": "easy",
+					"summary": "폐품 예술가를 무시하고 장비를 놓을 공간을 강제로 만든다.",
+					"mbti": "IT",
+					"effects": {
+						"fighting": -30,
+						"echo": -5
+					},
+					"reward": [
+						"hp_down"
+					],
+					"seed": "ignored_artisan"
+				},
+				{
+					"path": "hard",
+					"summary": "폐품 예술가를 설득해 다른 곳을 찾아 작품을 만들게 한다.",
+					"mbti": "EN",
+					"effects": {
+						"community": 20,
+						"echo": 10
+					},
+					"event": "meet_stranger",
+					"seed": "respected_artisan"
+				},
+				{
+					"path": "gold",
+					"summary": "돈을 주고 예술가가 더 나은 재료를 찾아 폐기장의 다른 구역으로 가게 한다.",
+					"mbti": "FJ",
+					"require": {
+						"stat": "gold",
+						"op": ">=",
+						"value": 100
+					},
+					"effects": {
+						"gold": -100,
+						"community": 10
+					},
+					"reward": [
+						"intelligence_up"
+					],
+					"seed": "respected_artisan"
+				},
+				{
+					"path": "stat",
+					"summary": "폐품 예술가의 행동이 폐기장의 질서를 해친다고 비난하며 물러나게 한다.",
+					"mbti": "TJ",
+					"require": {
+						"stat": "reason",
+						"op": "<=",
+						"value": -40
+					},
+					"effects": {
+						"reason": -10,
+						"fighting": -10
+					},
+					"reward": [
+						"attack_down"
+					],
+					"seed": "ignored_artisan"
+				}
+			],
+			"after_story": 1,
+			"before_story": 3
+		},
+		{
+			"id": "card_02_scrambled_circuit",
+			"kind": "normal",
+			"slot": "A",
+			"title": {
+				"korean": "뒤죽박죽 회로"
+			},
+			"summary": "데이터 청소부가 버려진 회로를 '정리'하려다 더 엉망으로 만들어 닥스의 분석 작업에 방해가 된다.",
+			"bridge": "앞 방 끝: 닥스는 깨진 스크린을 살펴보겠다고 했다. / 카드: 닥스가 스크린 분석을 시작하려는 도중, 데이터 청소부의 엉성한 '정리' 작업이 주변 회로를 엉망으로 만들어 분석에 방해가 된다. / 다음 방 시작: 닥스가 스크린 분석 결과를 말하며 예상보다 심각하다고 한다. 와 이어지는 이유: 플레이어가 이 방해를 해결하거나 무시한 뒤 닥스가 마침내 분석을 완료한다.",
+			"people": [
+				"dax",
+				"data_cleaner"
+			],
+			"tags": "circuit",
+			"intensity": "calm",
+			"leaning": "reason+",
+			"choices": [
+				{
+					"path": "easy",
+					"summary": "데이터 청소부의 엉성한 정리를 그냥 지켜보며 간섭하지 않는다.",
+					"mbti": "IP",
+					"effects": {
+						"reason": 20,
+						"echo": -5,
+						"gold": 50
+					},
+					"event": "minigame_timing",
+					"seed": null
+				},
+				{
+					"path": "hard",
+					"summary": "직접 나서서 회로를 올바른 방식으로 정리하며 청소부를 제지한다.",
+					"mbti": "EJ",
+					"effects": {
+						"fighting": 20,
+						"echo": 5
+					},
+					"reward": [
+						"intelligence_up"
+					],
+					"seed": null
+				},
+				{
+					"path": "lock",
+					"summary": "닥스에게 나서서 청소부를 도와주라고 설득하여 작업을 서두르게 한다.",
+					"mbti": "ES",
+					"require": {
+						"mbti": "ES"
+					},
+					"effects": {
+						"community": 10,
+						"echo": 10
+					},
+					"reward": [
+						"heal"
+					],
+					"seed": null
+				}
+			],
+			"after_story": 1,
+			"before_story": 3
+		},
+		{
+			"id": "card_02_rusty_scanner",
+			"kind": "normal",
+			"slot": "A",
+			"title": {
+				"korean": "녹슨 스캐너"
+			},
+			"summary": "지역 사업가가 스크린 분석에 필요한 녹슨 스캐너 부품을 닥스에게 팔려 해 돈을 요구한다.",
+			"bridge": "앞 방 끝: 닥스는 깨진 스크린을 살펴보겠다고 했다. / 카드: 닥스가 스크린 분석을 위해 필요한 핵심 부품이 없어 폐기장 내의 상인에게 도움을 요청한다. / 다음 방 시작: 닥스가 스크린을 분석한 결과를 말하며 예상보다 심각하다고 한다. 와 이어지는 이유: 닥스가 부품을 확보하여 스크린 분석을 마칠 수 있게 된다.",
+			"people": [
+				"dax",
+				"local_entrepreneur"
+			],
+			"tags": "scanner",
+			"intensity": "calm",
+			"leaning": "fighting+",
+			"choices": [
+				{
+					"path": "easy",
+					"summary": "상인에게 부품을 빌려달라고 설득하여 잠시 사용권을 얻는다.",
+					"mbti": "EN",
+					"effects": {
+						"fighting": 20,
+						"echo": 5,
+						"gold": 50
+					},
+					"event": "minigame_cup",
+					"seed": null
+				},
+				{
+					"path": "hard",
+					"summary": "직접 폐기장을 뒤져 상인이 가진 것과 비슷한 부품을 찾는다.",
+					"mbti": "IS",
+					"effects": {
+						"fighting": -20,
+						"echo": -5
+					},
+					"reward": [
+						"move_range_down"
+					],
+					"seed": null
+				},
+				{
+					"path": "gold",
+					"summary": "상인에게 웃돈을 주고 즉시 부품을 구매하여 시간을 단축한다.",
+					"mbti": "IN",
+					"require": {
+						"stat": "gold",
+						"op": ">=",
+						"value": 80
+					},
+					"effects": {
+						"gold": -80,
+						"reason": -5
+					},
+					"reward": [
+						"move_range_up"
+					],
+					"seed": null
+				}
+			],
+			"after_story": 1,
+			"before_story": 3
+		},
+		{
+			"id": "card_02_misplaced_property",
+			"kind": "plant",
+			"slot": "B",
+			"title": {
+				"korean": "뒤바뀐 소유권"
+			},
+			"summary": "길 잃은 관광객이 자신의 소지품이 다른 사람의 것으로 뒤바뀌었다며 폐기장 주변에 소동을 일으킨다.",
+			"bridge": "앞 방 끝: 닥스는 깨진 스크린을 합치면 어떻게 되는지 질문받았다. / 카드: 닥스의 분석 결과가 나오기 전, 폐기장에서 소유권이 뒤바뀌는 작은 소동이 일어난다. / 다음 방 시작: 닥스가 폐기장 주변 상인들의 재정 정보가 뒤섞였다고 발표한다. 와 이어지는 이유: 이 작은 소동이 정보 유출의 전조 현상이었음이 나중에 밝혀진다.",
+			"people": [
+				"lost_tourist",
+				"dax"
+			],
+			"tags": "property",
+			"intensity": "calm",
+			"leaning": "community+",
+			"choices": [
+				{
+					"path": "easy",
+					"summary": "길 잃은 관광객을 도와 소지품을 찾아주며 상황을 해결한다.",
+					"mbti": "FJ",
+					"effects": {
+						"community": 20,
+						"echo": 5
+					},
+					"reward": [
+						"heal"
+					],
+					"seed": "helped_tourist"
+				},
+				{
+					"path": "hard",
+					"summary": "닥스의 분석을 우선시하며 소동에 관여하지 않고 자리를 피한다.",
+					"mbti": "IJ",
+					"effects": {
+						"community": -20,
+						"echo": -10
+					},
+					"reward": [
+						"hp_down"
+					],
+					"seed": "ignored_tourist"
+				},
+				{
+					"path": "gold",
+					"summary": "돈을 주고 관광객에게 새 소지품을 사라고 제안하여 신속하게 문제를 해결한다.",
+					"mbti": "EF",
+					"require": {
+						"stat": "gold",
+						"op": ">=",
+						"value": 120
+					},
+					"effects": {
+						"gold": -120,
+						"community": 10
+					},
+					"reward": [
+						"intelligence_up"
+					],
+					"seed": "helped_tourist"
+				},
+				{
+					"path": "lock",
+					"summary": "논리적으로 관광객의 불평이 비합리적임을 지적하며 소동을 잠재운다.",
+					"mbti": "TJ",
+					"require": {
+						"mbti": "TJ"
+					},
+					"effects": {
+						"reason": -10,
+						"echo": -5
+					},
+					"reward": [
+						"attack_down"
+					],
+					"seed": "ignored_tourist"
+				}
+			],
+			"after_story": 3,
+			"before_story": 5
+		},
+		{
+			"id": "card_02_rumor_of_error",
+			"kind": "normal",
+			"slot": "B",
+			"title": {
+				"korean": "오류의 소문"
+			},
+			"summary": "소문 상인이 폐기장 주변에 은행 계좌 오류나 청구서 혼동 같은 기묘한 소문이 돌고 있다고 속삭인다.",
+			"bridge": "앞 방 끝: 닥스는 깨진 스크린을 합치면 어떻게 되는지 질문받았다. / 카드: 소문 상인이 폐기장 주변에서 개인 재정 정보와 관련된 기묘한 소문들을 퍼뜨린다. / 다음 방 시작: 닥스가 폐기장 주변 상인들의 재정 정보가 뒤섞였다고 발표한다. 와 이어지는 이유: 소문 상인의 이야기는 실제 정보 유출 사건의 초기 징후였음이 드러난다.",
+			"people": [
+				"rumor_vendor",
+				"dax"
+			],
+			"tags": "rumor",
+			"intensity": "calm",
+			"leaning": "reason-",
+			"choices": [
+				{
+					"path": "easy",
+					"summary": "소문 상인의 말을 믿고 정보를 더 많은 사람들에게 퍼뜨린다.",
+					"mbti": "SP",
+					"effects": {
+						"reason": -20,
+						"echo": -5,
+						"gold": 80
+					},
+					"event": "minigame_slot",
+					"seed": null
+				},
+				{
+					"path": "hard",
+					"summary": "소문 상인의 말을 의심하고 직접 소문의 진위를 확인하려 한다.",
+					"mbti": "NT",
+					"effects": {
+						"reason": 20,
+						"echo": 10
+					},
+					"reward": [
+						"intelligence_up"
+					],
+					"seed": null
+				},
+				{
+					"path": "stat",
+					"summary": "소문 상인에게 소문의 출처와 근거를 강하게 추궁하며 사실 확인을 요구한다.",
+					"mbti": "ET",
+					"require": {
+						"stat": "fighting",
+						"op": ">=",
+						"value": 40
+					},
+					"effects": {
+						"fighting": -10,
+						"echo": -5
+					},
+					"reward": [
+						"attack_up"
+					],
+					"seed": null
+				}
+			],
+			"after_story": 3,
+			"before_story": 5
+		},
+		{
+			"id": "card_02_flickering_billboard",
+			"kind": "normal",
+			"slot": "B",
+			"title": {
+				"korean": "깜빡이는 광고판"
+			},
+			"summary": "소규모 사업주가 오작동하는 전광판 때문에 손해를 본다며 분노하여 광고판을 부수려 한다.",
+			"bridge": "앞 방 끝: 닥스는 깨진 스크린을 합치면 어떻게 되는지 질문받았다. / 카드: 폐기장 내의 오래된 전광판이 정보 혼란의 전조처럼 불규칙하게 깜빡이며 사람들을 혼란에 빠뜨린다. / 다음 방 시작: 닥스가 폐기장 주변 상인들의 재정 정보가 뒤섞였다고 발표한다. 와 이어지는 이유: 전광판의 혼란은 닥스가 곧 발표할 대규모 정보 유출의 작은 예시였음이 드러난다.",
+			"people": [
+				"dax",
+				"small_business_owner"
+			],
+			"tags": "billboard",
+			"intensity": "high",
+			"leaning": "fighting-",
+			"forced": [
+				{
+					"path": "forced",
+					"summary": "{small_business_owner}가 갑자기 달려들어 광고판을 부수려 한다.",
+					"mbti": "EF",
+					"require": {
+						"mbti": "EF"
+					},
+					"chance": 0.3,
+					"effects": {
+						"fighting": -10,
+						"echo": -10
+					},
+					"reward": [
+						"defense_down"
+					],
+					"seed": null
+				}
+			],
+			"choices": [
+				{
+					"path": "easy",
+					"summary": "깜빡이는 광고판을 무시하고 서둘러 지나간다.",
+					"mbti": "ST",
+					"effects": {
+						"fighting": -20,
+						"echo": -5
+					},
+					"reward": [
+						"hp_down"
+					],
+					"seed": null
+				},
+				{
+					"path": "hard",
+					"summary": "닥스와 함께 광고판의 전원을 찾아 끈다.",
+					"mbti": "NF",
+					"effects": {
+						"fighting": 20,
+						"echo": 10
+					},
+					"event": "minigame_timing",
+					"seed": null
+				},
+				{
+					"path": "lock",
+					"summary": "광고판의 작동 방식을 분석하여 오작동의 원인을 파악한다.",
+					"mbti": "TJ",
+					"require": {
+						"mbti": "TJ"
+					},
+					"effects": {
+						"reason": 10
+					},
+					"reward": [
+						"intelligence_up"
+					],
+					"seed": null
+				}
+			],
+			"after_story": 3,
+			"before_story": 5
+		},
+		{
+			"id": "card_02_unauthorized_access",
+			"kind": "normal",
+			"slot": "C",
+			"title": {
+				"korean": "무단 접근"
+			},
+			"summary": "전력 중개상이 스크린을 합치려는 당신에게 전력 사용료를 요구하며 폐기장 일부 구역의 전원을 끊으려 한다.",
+			"bridge": "앞 방 끝: 플레이어는 더 많은 스크린을 합치겠다고 결심했다. / 카드: 플레이어가 스크린을 합치려는 도중, 전력 중개상이 나타나 전력 사용료를 요구하며 작업을 방해한다. / 다음 방 시작: 폐기장 전체가 혼란에 빠졌다고 묘사된다. 와 이어지는 이유: 전력 중개상과의 충돌이 해결되거나 무시된 뒤, 플레이어의 작업이 계속되어 폐기장의 혼란이 심화된다.",
+			"people": [
+				"power_broker",
+				"dax"
+			],
+			"tags": "power",
+			"intensity": "high",
+			"leaning": "community-",
+			"choices": [
+				{
+					"path": "easy",
+					"summary": "전력 중개상의 요구를 무시하고 작업을 강행한다.",
+					"mbti": "IT",
+					"effects": {
+						"community": -30,
+						"echo": -10
+					},
+					"reward": [
+						"hp_down"
+					],
+					"seed": null
+				},
+				{
+					"path": "hard",
+					"summary": "전력 중개상과 협상하여 임시 전력 사용을 허락받는다.",
+					"mbti": "EF",
+					"effects": {
+						"community": 20,
+						"echo": 10
+					},
+					"reward": [
+						"move_range_up"
+					],
+					"seed": null
+				},
+				{
+					"path": "gold",
+					"summary": "돈을 주고 전력 중개상을 매수하여 즉시 전력 사용 문제를 해결한다.",
+					"mbti": "EN",
+					"require": {
+						"stat": "gold",
+						"op": ">=",
+						"value": 150
+					},
+					"effects": {
+						"gold": -150,
+						"community": 10
+					},
+					"reward": [
+						"intelligence_up"
+					],
+					"seed": null
+				}
+			],
+			"after_story": 5,
+			"before_story": 9
+		},
+		{
+			"id": "card_02_overwhelmed_operator",
+			"kind": "normal",
+			"slot": "C",
+			"title": {
+				"korean": "과부하된 센서 담당자"
+			},
+			"summary": "센서 담당자가 급증하는 정보 유출 신호에 과부하되어 제 역할을 하지 못하고 혼란에 빠져있다.",
+			"bridge": "앞 방 끝: 플레이어는 더 많은 스크린을 합치겠다고 결심했다. / 카드: 플레이어의 결정으로 스크린 합치기가 계속되면서, 폐기장의 센서 담당자가 과부하로 인한 정보 유출 신호에 압도되어 혼란스러워한다. / 다음 방 시작: 폐기장 전체가 혼란에 빠졌다고 묘사된다. 와 이어지는 이유: 센서 담당자의 혼란은 정보 유출로 인한 광범위한 혼란의 한 단면을 보여준다.",
+			"people": [
+				"sensor_operator",
+				"dax"
+			],
+			"tags": "sensor",
+			"intensity": "calm",
+			"leaning": "reason-",
+			"choices": [
+				{
+					"path": "easy",
+					"summary": "센서 담당자의 혼란을 방관하며 자신만의 분석에 집중한다.",
+					"mbti": "IN",
+					"effects": {
+						"reason": -20,
+						"echo": -5
+					},
+					"reward": [
+						"intelligence_down"
+					],
+					"seed": null
+				},
+				{
+					"path": "hard",
+					"summary": "센서 담당자를 도와 시스템을 재부팅하고 진정시킨다.",
+					"mbti": "ES",
+					"effects": {
+						"reason": 20,
+						"echo": 10
+					},
+					"reward": [
+						"cooldown_reset"
+					],
+					"seed": null
+				},
+				{
+					"path": "lock",
+					"summary": "센서 담당자의 감정적 고통에 공감하며 위로하고 도움을 제안한다.",
+					"mbti": "NF",
+					"require": {
+						"mbti": "NF"
+					},
+					"effects": {
+						"community": 10,
+						"echo": 15
+					},
+					"reward": [
+						"heal"
+					],
+					"seed": null
+				}
+			],
+			"after_story": 5,
+			"before_story": 9
+		},
+		{
+			"id": "card_02_unexpected_alert",
+			"kind": "normal",
+			"slot": "C",
+			"title": {
+				"korean": "예상치 못한 경보"
+			},
+			"summary": "폐기장 보안 담당자가 오작동하는 경보 시스템 때문에 플레이어를 경계하고 통행을 막으려 한다.",
+			"bridge": "앞 방 끝: 플레이어는 더 많은 스크린을 합치겠다고 결심했다. / 카드: 스크린 합치기 작업이 진행되던 중, 폐기장의 낡은 보안 시스템이 오작동하며 요란한 경보음을 울려 주변의 주의를 끈다. / 다음 방 시작: 폐기장 전체가 혼란에 빠졌다고 묘사된다. 와 이어지는 이유: 경보음은 플레이어의 작업이 주변에 미치는 영향이 커지고 있음을 시사하며, 곧 닥치게 될 더 큰 혼란의 전조가 된다.",
+			"people": [
+				"dax",
+				"security_officer"
+			],
+			"tags": "alert",
+			"intensity": "high",
+			"leaning": "fighting-",
+			"choices": [
+				{
+					"path": "easy",
+					"summary": "경보음을 무시하고 작업을 서두른다.",
+					"mbti": "ST",
+					"effects": {
+						"fighting": -30,
+						"echo": -10
+					},
+					"event": "minigame_cup",
+					"seed": null
+				},
+				{
+					"path": "hard",
+					"summary": "경보 시스템의 전원을 찾아 차단하여 소음을 멈춘다.",
+					"mbti": "NT",
+					"effects": {
+						"reason": 20,
+						"echo": 5
+					},
+					"reward": [
+						"stun"
+					],
+					"seed": null
+				}
+			],
+			"after_story": 5,
+			"before_story": 9
+		},
+		{
+			"id": "card_02_ignored_artisan_return",
+			"kind": "callback",
+			"slot": "C",
+			"title": {
+				"korean": "방해하는 조형물"
+			},
+			"summary": "이전에 무시했던 폐품 예술가가 당신의 작업을 방해하며 자신이 만든 거대한 폐품 조형물을 설치한다.",
+			"bridge": "앞 방 끝: 플레이어는 더 많은 스크린을 합치겠다고 결심했다. / 카드: 과거에 무시당했던 폐품 예술가가 당신의 진행을 막아서는 거대한 폐품 조형물을 설치하여 작업을 방해한다. / 다음 방 시작: 폐기장 전체가 혼란에 빠졌다고 묘사된다. 와 이어지는 이유: 예술가의 방해는 플레이어의 과거 행동이 초래한 예상치 못한 장애물이며, 현재의 혼란스러운 상황을 더욱 복잡하게 만든다.",
+			"people": [
+				"junk_artisan",
+				"dax"
+			],
+			"tags": "signal",
+			"intensity": "high",
+			"callback": {
+				"seed": "ignored_artisan",
+				"min_rooms_after": 2
+			},
+			"choices": [
+				{
+					"path": "easy",
+					"summary": "폐품 조형물을 힘으로 밀어내고 강제로 길을 확보한다.",
+					"mbti": "SP",
+					"effects": {
+						"fighting": -10,
+						"echo": -5
+					},
+					"reward": [
+						"hp_down"
+					],
+					"flag": "blocked_path_junk_artisan",
+					"seed": null
+				},
+				{
+					"path": "hard",
+					"summary": "닥스의 도움을 받아 조형물을 조심스럽게 옮길 방법을 찾는다.",
+					"mbti": "FJ",
+					"effects": {
+						"community": 10,
+						"echo": 10
+					},
+					"reward": [
+						"shield"
+					],
+					"flag": "clear_path_junk_artisan",
+					"seed": null
+				},
+				{
+					"path": "gold",
+					"summary": "폐품 예술가에게 조형물을 치워달라고 돈을 주고 부탁한다.",
+					"mbti": "EF",
+					"require": {
+						"stat": "gold",
+						"op": ">=",
+						"value": 100
+					},
+					"effects": {
+						"gold": -100,
+						"community": 5
+					},
+					"reward": [
+						"heal"
+					],
+					"flag": "clear_path_junk_artisan",
+					"seed": null
+				}
+			],
+			"after_story": 5,
+			"before_story": 9
+		},
+		{
+			"id": "card_02_respected_artisan_return",
+			"kind": "callback",
+			"slot": "C",
+			"title": {
+				"korean": "예술가의 선물"
+			},
+			"summary": "이전에 도움을 주었던 폐품 예술가가 당신에게 작은 정보가 담긴 폐품을 선물한다.",
+			"bridge": "앞 방 끝: 플레이어는 더 많은 스크린을 합치겠다고 결심했다. / 카드: 과거에 존중했던 폐품 예술가가 당신에게 작은 정보가 담긴 폐품을 건네주며 작업에 도움을 준다. / 다음 방 시작: 폐기장 전체가 혼란에 빠졌다고 묘사된다. 와 이어지는 이유: 예술가의 선물은 현재의 혼란 속에서 예상치 못한 작은 단서가 되어, 플레이어가 나아가야 할 방향을 암시할 수 있다.",
+			"people": [
+				"junk_artisan",
+				"dax"
+			],
+			"tags": "signal",
+			"intensity": "calm",
+			"callback": {
+				"seed": "respected_artisan",
+				"min_rooms_after": 2
+			},
+			"choices": [
+				{
+					"path": "easy",
+					"summary": "예술가가 준 폐품 속 정보가 쓸모없어 보이지만 일단 확인해본다.",
+					"mbti": "IS",
+					"effects": {
+						"reason": 10
+					},
+					"reward": [
+						"intelligence_up"
+					],
+					"flag": "small_clue_junk_artisan_1",
+					"seed": null
+				},
+				{
+					"path": "hard",
+					"summary": "닥스에게 폐품 속 정보를 정밀하게 분석해 달라고 요청한다.",
+					"mbti": "EN",
+					"effects": {
+						"reason": 20,
+						"echo": 15
+					},
+					"reward": [
+						"attack_up"
+					],
+					"flag": "small_clue_junk_artisan_2",
+					"seed": null
+				}
+			],
+			"after_story": 5,
+			"before_story": 9
+		},
+		{
+			"id": "card_02_corrupted_terminal",
+			"kind": "normal",
+			"slot": "D",
+			"title": {
+				"korean": "오염된 단말기"
+			},
+			"summary": "정보 수집가가 오염된 단말기에서 흘러나오는 정보를 독점하려다 플레이어와 충돌한다.",
+			"bridge": "앞 방 끝: 보안 요원이 이 구역은 통제 구역이니 즉시 떠나라고 명령한다. / 카드: 보안 요원과의 대치 중, 폐기장 중앙의 오염된 단말기가 알 수 없는 정보를 쏟아내며 경계를 흐트러뜨린다. / 다음 방 시작: 보안 요원이 마지막 경고를 한다. 와 이어지는 이유: 단말기의 혼란은 보안 요원과의 대치 상황을 더 복잡하게 만들거나, 플레이어에게 다음 행동을 결정할 작은 변수를 제공한다.",
+			"people": [
+				"dax",
+				"info_collector"
+			],
+			"tags": "terminal",
+			"intensity": "high",
+			"leaning": "community-",
+			"choices": [
+				{
+					"path": "easy",
+					"summary": "오염된 단말기를 외면하고 보스 구역으로 돌진한다.",
+					"mbti": "ST",
+					"effects": {
+						"community": -20,
+						"echo": -10
+					},
+					"reward": [
+						"move_range_down"
+					],
+					"seed": null
+				},
+				{
+					"path": "hard",
+					"summary": "단말기의 전원을 찾아 꺼서 혼란을 막는다.",
+					"mbti": "TJ",
+					"effects": {
+						"reason": 20,
+						"echo": 10
+					},
+					"event": "campsite",
+					"seed": null
+				},
+				{
+					"path": "lock",
+					"summary": "단말기에서 흘러나오는 정보의 흐름을 역추적해 핵심 메시지를 파악한다.",
+					"mbti": "IN",
+					"require": {
+						"mbti": "IN"
+					},
+					"effects": {
+						"echo": 10
+					},
+					"reward": [
+						"intelligence_up"
+					],
+					"seed": null
+				}
+			],
+			"after_story": 9,
+			"before_story": 15
+		},
+		{
+			"id": "card_02_blocked_path",
+			"kind": "normal",
+			"slot": "D",
+			"title": {
+				"korean": "통제된 통로"
+			},
+			"summary": "{random_boss}이(가) 보스 구역으로 향하는 유일한 통로를 직접 막아서며 당신에게 강제로 떠나라고 명령한다.",
+			"bridge": "앞 방 끝: 보안 요원이 이 구역은 통제 구역이니 즉시 떠나라고 명령한다. / 카드: 보안 요원이 보스 구역으로 가는 길을 막아서며 강제로 떠나라고 재차 명령한다. / 다음 방 시작: 보안 요원이 마지막 경고를 한다. 와 이어지는 이유: 이 카드는 보안 요원과의 긴장된 대치 상황이 지속되고 있음을 보여주며, 곧 다가올 직접적인 충돌의 서막이 된다.",
+			"people": [
+				"random_boss",
+				"dax"
+			],
+			"tags": "blockade",
+			"intensity": "high",
+			"leaning": "fighting+",
+			"choices": [
+				{
+					"path": "easy",
+					"summary": "{random_boss}의 경고에 따라 잠시 물러나 다른 길을 모색한다.",
+					"mbti": "SJ",
+					"effects": {
+						"fighting": 20,
+						"echo": -5
+					},
+					"reward": [
+						"defense_down"
+					],
+					"seed": null
+				},
+				{
+					"path": "hard",
+					"summary": "{random_boss}에게 직접 돌파를 시도하며 시선을 분산시킨다.",
+					"mbti": "EP",
+					"effects": {
+						"fighting": -20,
+						"echo": 10
+					},
+					"reward": [
+						"attack_up"
+					],
+					"seed": null
+				},
+				{
+					"path": "gold",
+					"summary": "{random_boss}에게 뇌물을 주고 통과를 시도한다.",
+					"mbti": "FP",
+					"require": {
+						"stat": "gold",
+						"op": ">=",
+						"value": 120
+					},
+					"effects": {
+						"gold": -120,
+						"reason": -10
+					},
+					"reward": [
+						"move_range_up"
+					],
+					"seed": null
+				}
+			],
+			"after_story": 9,
+			"before_story": 15
+		},
+		{
+			"id": "card_02_frantic_cleaner",
+			"kind": "normal",
+			"slot": "D",
+			"title": {
+				"korean": "필사적인 청소부"
+			},
+			"summary": "데이터 청소부가 정보 유출로 더 혼란스러워진 폐기장을 필사적으로 '청소'하려다 중요한 통로를 막아버린다.",
+			"bridge": "앞 방 끝: 보안 요원이 이 구역은 통제 구역이니 즉시 떠나라고 명령한다. / 카드: 보안 요원과의 대치 상황이 이어지는 가운데, 데이터 청소부가 정보 유출로 인해 혼란스러워진 폐기장을 '정리'하려다 중요한 통로를 막아버린다. / 다음 방 시작: 보안 요원이 마지막 경고를 한다. 와 이어지는 이유: 청소부의 행동은 플레이어에게 또 다른 장애물을 제시하며, 보안 요원과의 대치 상황에 영향을 미친다.",
+			"people": [
+				"data_cleaner",
+				"dax"
+			],
+			"tags": "obstruction",
+			"intensity": "calm",
+			"leaning": "reason-",
+			"choices": [
+				{
+					"path": "easy",
+					"summary": "청소부가 쌓아놓은 쓰레기를 치우고 강제로 통로를 확보한다.",
+					"mbti": "ET",
+					"effects": {
+						"reason": -20,
+						"echo": -10
+					},
+					"reward": [
+						"hp_down"
+					],
+					"seed": null
+				},
+				{
+					"path": "hard",
+					"summary": "청소부의 작업을 돕는 척하며, 통로를 안전하게 확보할 방법을 찾는다.",
+					"mbti": "NF",
+					"effects": {
+						"community": 20,
+						"echo": 10
+					},
+					"event": "meet_stranger",
+					"seed": null
+				}
+			],
+			"after_story": 9,
+			"before_story": 15
+		},
+		{
+			"id": "card_02_helped_tourist_return",
+			"kind": "callback",
+			"slot": "D",
+			"title": {
+				"korean": "관광객의 단서"
+			},
+			"summary": "이전에 도움을 주었던 길 잃은 관광객이 당신에게 폐기장 내부의 숨겨진 길에 대한 단서를 준다.",
+			"bridge": "앞 방 끝: 보안 요원이 이 구역은 통제 구역이니 즉시 떠나라고 명령한다. / 카드: 과거에 도움을 받았던 길 잃은 관광객이 보안 요원의 통제를 우회할 수 있는 숨겨진 길에 대한 단서를 제공한다. / 다음 방 시작: 보안 요원이 마지막 경고를 한다. 와 이어지는 이유: 관광객의 단서는 보안 요원과의 정면 대결에 앞서 플레이어가 상황을 유리하게 이끌 수 있는 기회를 제공한다.",
+			"people": [
+				"lost_tourist",
+				"dax"
+			],
+			"tags": "property",
+			"intensity": "calm",
+			"callback": {
+				"seed": "helped_tourist",
+				"min_rooms_after": 2
+			},
+			"choices": [
+				{
+					"path": "easy",
+					"summary": "관광객이 준 단서가 미심쩍지만 일단 따라가 본다.",
+					"mbti": "SP",
+					"effects": {
+						"reason": -10
+					},
+					"reward": [
+						"move_range_down"
+					],
+					"flag": "obscure_path_tourist",
+					"seed": null
+				},
+				{
+					"path": "hard",
+					"summary": "닥스와 함께 단서를 분석하여 가장 안전하고 효율적인 길을 파악한다.",
+					"mbti": "NT",
+					"effects": {
+						"reason": 10,
+						"echo": 10
+					},
+					"reward": [
+						"move_range_up"
+					],
+					"flag": "clear_path_tourist",
+					"seed": null
+				},
+				{
+					"path": "gold",
+					"summary": "관광객에게 보상을 주고 추가 정보를 얻어내어 길에 대한 확신을 얻는다.",
+					"mbti": "EN",
+					"require": {
+						"stat": "gold",
+						"op": ">=",
+						"value": 80
+					},
+					"effects": {
+						"gold": -80,
+						"reason": 5
+					},
+					"reward": [
+						"intelligence_up"
+					],
+					"flag": "clear_path_tourist",
+					"seed": null
+				}
+			],
+			"after_story": 9,
+			"before_story": 15
+		},
+		{
+			"id": "card_02_ignored_tourist_return",
+			"kind": "callback",
+			"slot": "D",
+			"title": {
+				"korean": "소란스러운 관광객"
+			},
+			"summary": "이전에 무시했던 길 잃은 관광객이 보스 구역 입구 앞에서 혼란스러운 소동을 일으키며 경비의 주의를 끈다.",
+			"bridge": "앞 방 끝: 보안 요원이 이 구역은 통제 구역이니 즉시 떠나라고 명령한다. / 카드: 과거에 무시했던 길 잃은 관광객이 보스 구역 입구에서 소동을 일으켜 경비의 주의를 분산시킨다. / 다음 방 시작: 보안 요원이 마지막 경고를 한다. 와 이어지는 이유: 관광객의 소동은 플레이어의 과거 행동이 초래한 결과이며, 보안 요원과의 대치 상황에 예상치 못한 변수로 작용한다.",
+			"people": [
+				"lost_tourist",
+				"dax"
+			],
+			"tags": "property",
+			"intensity": "high",
+			"callback": {
+				"seed": "ignored_tourist",
+				"min_rooms_after": 2
+			},
+			"choices": [
+				{
+					"path": "easy",
+					"summary": "관광객의 소동을 이용해 경비의 시선을 돌리고 몰래 통과한다.",
+					"mbti": "ET",
+					"effects": {
+						"fighting": -10,
+						"echo": -5
+					},
+					"reward": [
+						"defense_down"
+					],
+					"flag": "distracted_guard_tourist",
+					"seed": null
+				},
+				{
+					"path": "hard",
+					"summary": "닥스의 도움으로 관광객을 진정시키고 소동을 잠재운다.",
+					"mbti": "IF",
+					"effects": {
+						"community": 10,
+						"echo": 10
+					},
+					"reward": [
+						"heal"
+					],
+					"flag": "calm_situation_tourist",
+					"seed": null
+				}
+			],
+			"after_story": 9,
+			"before_story": 15
+		}
+	]
+}

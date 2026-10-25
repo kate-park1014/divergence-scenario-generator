@@ -1,0 +1,187 @@
+{
+	"id": "card_01_broken_vehicle",
+	"title": {
+		"korean": "멈춰선 고물차"
+	},
+	"tags": [
+		"vehicle"
+	],
+	"intensity": "calm",
+	"after_story": 1,
+	"before_story": 3,
+	"leaning": "reason-",
+	"background_tags": [
+		"폐기장 입구",
+		"낡은 고물차",
+		"고장난 엔진",
+		"어수선한 주변",
+		"찌그러진 부품"
+	],
+	"dialogue": [
+		{
+			"speaker": "narrator",
+			"content": {
+				"korean": "폐기장 입구 중앙에 낡은 고물차가 멈춰 길을 막고 있었다."
+			}
+		},
+		{
+			"speaker": "janitor",
+			"content": {
+				"korean": "아이고, 이런! 하필 여기서 고장 날 게 뭐람… 이거 치워야 하는데…."
+			}
+		},
+		{
+			"speaker": "echo",
+			"content": {
+				"korean": "뭔가 급한 일이 생긴 것 같아요. 도와줄까요?"
+			}
+		}
+	],
+	"choices": [
+		{
+			"text": {
+				"korean": "정비공 조의 고물차를 대충 수리하여 옆으로 치운다"
+			},
+			"mbti": "ST",
+			"effects": {
+				"reason": -30,
+				"fighting": -20,
+				"gold": 50,
+				"echo": -5
+			},
+			"event": "minigame_timing",
+			"seed": "helped_janitor_easy",
+			"result": [
+				{
+					"speaker": "janitor",
+					"content": {
+						"korean": "고맙습니다! 덕분에 겨우 움직이네요."
+					}
+				},
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "고물차는 덜컥거리며 옆으로 비켜났다. 정비공 조가 고맙다고 연신 허리 숙여 인사했다."
+					}
+				},
+				{
+					"speaker": "echo",
+					"content": {
+						"korean": "그냥… 빨리 넘어가고 싶었던 거겠죠."
+					}
+				}
+			]
+		},
+		{
+			"text": {
+				"korean": "정비공 조를 대신하여 고물차를 직접 운반한다"
+			},
+			"mbti": "NF",
+			"effects": {
+				"fighting": 20,
+				"community": 20,
+				"echo": 10
+			},
+			"reward": [
+				"move_range_up"
+			],
+			"seed": "helped_janitor_hard",
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "낡은 고물차를 있는 힘껏 밀어냈다. 정비공 조는 놀라움과 감사함에 말을 잇지 못했다."
+					}
+				},
+				{
+					"speaker": "janitor",
+					"content": {
+						"korean": "이걸 혼자… 정말 고맙습니다! 빚을 진 기분입니다."
+					}
+				},
+				{
+					"speaker": "echo",
+					"content": {
+						"korean": "혼자서는 절대 못 했을 일이에요. 대단해요!"
+					}
+				}
+			]
+		},
+		{
+			"text": {
+				"korean": "수리공을 불러 고물차를 처리해달라고 요청하고 비용을 지불한다"
+			},
+			"mbti": "SJ",
+			"require": {
+				"stat": "gold",
+				"op": ">=",
+				"value": 100
+			},
+			"effects": {
+				"gold": -100,
+				"echo": 5
+			},
+			"reward": [
+				"intelligence_up"
+			],
+			"seed": "helped_janitor_hard",
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "수리공이 도착해 능숙하게 고물차를 처리하자, 정비공 조는 안도했다."
+					}
+				},
+				{
+					"speaker": "janitor",
+					"content": {
+						"korean": "이야, 역시 전문가가 다르네요! 덕분에 살았습니다."
+					}
+				},
+				{
+					"speaker": "echo",
+					"content": {
+						"korean": "돈으로 해결하는 건 역시 빠르네요. 조 아저씨가 좋아하네요."
+					}
+				}
+			]
+		},
+		{
+			"text": {
+				"korean": "고물차의 복잡한 배선 문제를 정확히 파악하여 빠르게 해결한다"
+			},
+			"mbti": "TJ",
+			"require": {
+				"mbti": "TJ"
+			},
+			"effects": {
+				"reason": 20,
+				"echo": 10
+			},
+			"reward": [
+				"intelligence_up"
+			],
+			"seed": "helped_janitor_easy",
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "{actor}이(가) 배선 문제를 정확히 찾아내 순식간에 시동을 걸었다."
+					}
+				},
+				{
+					"speaker": "janitor",
+					"content": {
+						"korean": "세상에! 이걸 바로 찾아내다니… 정말 감사합니다!"
+					}
+				},
+				{
+					"speaker": "echo",
+					"content": {
+						"korean": "와, 저걸 바로 찾아내다니! 정말 빠르네요!"
+					}
+				}
+			]
+		}
+	]
+}

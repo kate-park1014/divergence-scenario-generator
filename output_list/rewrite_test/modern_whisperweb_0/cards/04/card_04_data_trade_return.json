@@ -1,0 +1,132 @@
+{
+	"id": "card_04_data_trade_return",
+	"title": {
+		"korean": "정보 거래의 대가"
+	},
+	"tags": "data",
+	"intensity": "calm",
+	"after_story": 5,
+	"before_story": 9,
+	"callback": {
+		"seed": "bargain_info",
+		"min_rooms_after": 2
+	},
+	"background_tags": [
+		"debris field",
+		"cracked screen pile",
+		"distant sirens",
+		"confused crowd",
+		"glowing data"
+	],
+	"dialogue": [
+		{
+			"speaker": "narrator",
+			"content": {
+				"korean": "주변의 스크린들이 계속해서 뒤섞인 정보를 뿜어냈다. 그때, 앞서 만났던 정보 중개인이 불쑥 나타났다."
+			}
+		},
+		{
+			"speaker": "data_broker",
+			"content": {
+				"korean": "흐음, 약속했던 정보 대가로 한 가지 더 알려줄게. 당신이 찾고 있는 건 생각보다 가까이 있어. 하지만…"
+			}
+		},
+		{
+			"speaker": "kai",
+			"content": {
+				"korean": "저런 수상한 말을 믿어서는 안 됩니다. 저 자의 정보는 항상 대가가 따르죠."
+			}
+		}
+	],
+	"choices": [
+		{
+			"text": {
+				"korean": "중개인의 말을 대수롭지 않게 넘기고 지나간다"
+			},
+			"mbti": "ST",
+			"effects": {
+				"fighting": -10
+			},
+			"reward": [
+				"defense_down"
+			],
+			"flag": "data_vulnerability",
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "중개인은 묘한 미소를 지으며 사라졌다. 카이가 한숨을 쉬었다."
+					}
+				},
+				{
+					"speaker": "kai",
+					"content": {
+						"korean": "그 말을 흘려들어서는 안 돼요. 나중에 후회할 수도 있습니다."
+					}
+				}
+			]
+		},
+		{
+			"text": {
+				"korean": "중개인이 전한 의미심장한 정보를 면밀히 분석한다"
+			},
+			"mbti": "NF",
+			"effects": {
+				"intelligence": 10
+			},
+			"reward": [
+				"intelligence_up"
+			],
+			"flag": "quick_insight",
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "중개인의 말 속에 숨겨진 단서를 찾아냈다. 알 수 없는 불안감이 엄습했다."
+					}
+				},
+				{
+					"speaker": "kai",
+					"content": {
+						"korean": "역시… 무언가 중요한 정보가 숨겨져 있을 줄 알았습니다."
+					}
+				}
+			]
+		},
+		{
+			"text": {
+				"korean": "중개인에게 추가 금화를 지불하여 더 깊은 정보를 얻어낸다"
+			},
+			"mbti": "NT",
+			"require": {
+				"stat": "gold",
+				"op": ">=",
+				"value": 50
+			},
+			"effects": {
+				"gold": -50
+			},
+			"reward": [
+				"intelligence_up"
+			],
+			"flag": "quick_insight",
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "중개인은 금화를 받자마자 더 상세한 정보를 털어놓았다. 카이의 눈이 휘둥그레졌다."
+					}
+				},
+				{
+					"speaker": "kai",
+					"content": {
+						"korean": "당신의 판단력은 정말 놀랍습니다!"
+					}
+				}
+			]
+		}
+	]
+}

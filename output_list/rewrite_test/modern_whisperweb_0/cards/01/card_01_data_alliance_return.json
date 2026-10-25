@@ -1,0 +1,109 @@
+{
+	"id": "card_01_data_alliance_return",
+	"title": {
+		"korean": "지미와의 공조"
+	},
+	"tags": [
+		"data"
+	],
+	"intensity": "calm",
+	"after_story": 9,
+	"before_story": 15,
+	"callback": {
+		"seed": "negotiated_data_hard",
+		"min_rooms_after": 2
+	},
+	"background_tags": [
+		"폐기장 입구",
+		"정보 거래",
+		"지미의 미소",
+		"비밀스러운 대화",
+		"데이터 조각"
+	],
+	"dialogue": [
+		{
+			"speaker": "narrator",
+			"content": {
+				"korean": "폐기장 입구에서 정보꾼 지미가 은밀하게 당신에게 다가와 조심스럽게 속삭였다."
+			}
+		},
+		{
+			"speaker": "data_scavenger",
+			"content": {
+				"korean": "전에 흥정한 데이터가 중요한 단서가 될 거야. 추가 정보를 찾았어."
+			}
+		},
+		{
+			"speaker": "echo",
+			"content": {
+				"korean": "지미가 우리와 협력하고 싶어 하는 것 같아요. 어떤 정보를 줄 생각일까요?"
+			}
+		}
+	],
+	"choices": [
+		{
+			"text": {
+				"korean": "지미의 제안을 받아들여 정보를 교환하고 협력한다"
+			},
+			"mbti": "NF",
+			"effects": {
+				"reason": 10,
+				"echo": 5
+			},
+			"reward": [
+				"stun"
+			],
+			"flag": "data_scavenger_useful_tip",
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "지미는 폐기장 내부 스크린 정보를 알려주었다. 경계 뚫을 단서를 얻었다."
+					}
+				},
+				{
+					"speaker": "echo",
+					"content": {
+						"korean": "지미의 정보가 폐기장 안에서 우리에게 큰 도움이 될 거예요!"
+					}
+				}
+			]
+		},
+		{
+			"text": {
+				"korean": "지미에게 더 강력한 협력을 요구하여 폐기장의 경계를 흩트리게 한다"
+			},
+			"mbti": "ST",
+			"effects": {
+				"community": 20,
+				"echo": 15
+			},
+			"event": "minigame_slot",
+			"flag": "data_scavenger_decoy",
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "지미는 폐기장 내부에 가짜 정보를 유포해 경계를 흐트러트렸다."
+					}
+				},
+				{
+					"speaker": "echo",
+					"content": {
+						"korean": "이게 통하면, 더 쉽게 안으로 들어갈 수 있을 거예요!"
+					}
+				}
+			],
+			"event_intro": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "지미가 무작위로 뒤섞인 정보를 단말기에 입력하자, 폐기장 곳곳의 스크린들이 일제히 깜빡이며 경보음이 울렸다."
+					}
+				}
+			]
+		}
+	]
+}

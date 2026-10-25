@@ -1,0 +1,656 @@
+{
+  "scenario_id": "modern_solace_3_04",
+  "order": 4,
+  "act": "rising",
+  "theme": "modern",
+  "actors": {
+    "kai": {
+      "id": "mon_d7f29313-b8fb-49da-9a1a-01df5d13866e",
+      "name": {
+        "korean": "카이",
+        "english": "Kai",
+        "japanese": "カイ",
+        "chinese": "凯",
+        "french": "Kai",
+        "spanish": "Kai",
+        "vietnamese": "Kai",
+        "thai": "ไค",
+        "hindi": "काई"
+      },
+      "description": "",
+      "face_image_url": "https://imagedelivery.net/WTEqQNGFb-l-IHS6IGnzUQ/f10d9184-4155-4bb9-de2d-db61463f7c00/public",
+      "battle_sprite_url": "https://imagedelivery.net/WTEqQNGFb-l-IHS6IGnzUQ/e41f8e03-08c9-4a4f-6f72-fa9342876f00/public",
+      "role": {
+        "korean": "예술가"
+      }
+    },
+    "lin": {
+      "id": "mon_d036a884-3dde-472c-9fe7-c4807643860f",
+      "name": {
+        "korean": "린",
+        "english": "Lin",
+        "japanese": "リン",
+        "chinese": "琳",
+        "french": "Lin",
+        "spanish": "Lin",
+        "vietnamese": "Lin",
+        "thai": "ลิน",
+        "hindi": "लिन"
+      },
+      "description": "",
+      "face_image_url": "https://imagedelivery.net/WTEqQNGFb-l-IHS6IGnzUQ/a095dd66-1857-4f44-68b0-2ece83006d00/public",
+      "battle_sprite_url": "https://imagedelivery.net/WTEqQNGFb-l-IHS6IGnzUQ/05b02694-f1ed-4e4c-b7ca-fb5b74a48900/public",
+      "role": {
+        "korean": "연구가"
+      }
+    }
+  },
+  "boss": {
+    "pool_id": "random_boss",
+    "role": {
+      "korean": "안내원"
+    }
+  },
+  "rooms": [
+    {
+      "dialogue": [
+        {
+          "type": "speech",
+          "speaker": "narrator",
+          "content": {
+            "korean": "네온 극장 영사실에 과거의 기록을 담은 필름들이 급속도로 부패하고 있다."
+          }
+        },
+        {
+          "speaker": "narrator",
+          "content": {
+            "korean": "낡은 전광판 영상에서 솔라스의 목소리가 울린다: \"빛의 조각을 흩뿌려 모든 것을 지워버리라.\""
+          },
+          "type": "speech"
+        },
+        {
+          "type": "speech",
+          "emotion": "base",
+          "speaker": "character_any",
+          "content": {
+            "korean": "이 전광판의 말… 또 따라야 할까?"
+          }
+        },
+        {
+          "type": "speech",
+          "emotion": "sad",
+          "speaker": "character_1",
+          "content": {
+            "korean": "왠지 불안해."
+          }
+        },
+        {
+          "type": "speech",
+          "emotion": "base",
+          "speaker": "character_any",
+          "content": {
+            "korean": "하지만 지금까지는 저 말대로 하면 해결됐잖아."
+          }
+        },
+        {
+          "action": "shake",
+          "duration_ms": 500,
+          "type": "direction",
+          "speaker": "narrator"
+        },
+        {
+          "emotion": "angry",
+          "type": "speech",
+          "content": {
+            "korean": "아니, 이번엔 달라. 필름이 타들어가고 있어!"
+          },
+          "speaker": "character_any"
+        },
+        {
+          "type": "speech",
+          "speaker": "character_3",
+          "content": {
+            "korean": "맙소사…"
+          },
+          "emotion": "sad"
+        },
+        {
+          "speaker": "lin",
+          "type": "direction",
+          "duration_ms": 500,
+          "spot": [
+            5,
+            2
+          ],
+          "action": "enter"
+        },
+        {
+          "type": "speech",
+          "speaker": "lin",
+          "content": {
+            "korean": "이대로 가면 모든 기록이 사라집니다!"
+          },
+          "emotion": "angry"
+        },
+        {
+          "action": "enter",
+          "type": "direction",
+          "duration_ms": 500,
+          "spot": [
+            15,
+            3
+          ],
+          "speaker": "kai"
+        },
+        {
+          "emotion": "base",
+          "speaker": "kai",
+          "content": {
+            "korean": "저항해 봐야 소용없어. 이미 예정된 비극이니."
+          },
+          "type": "speech"
+        }
+      ],
+      "id": 1
+    },
+    {
+      "id": 3,
+      "dialogue": [
+        {
+          "type": "direction",
+          "speaker": "lin",
+          "duration_ms": 500,
+          "action": "enter",
+          "spot": [
+            5,
+            2
+          ]
+        },
+        {
+          "type": "speech",
+          "emotion": "angry",
+          "content": {
+            "korean": "조각을 흩뿌리는 건 극장을 파괴하는 일이에요. 멈춰야 합니다!"
+          },
+          "speaker": "lin"
+        },
+        {
+          "emotion": "base",
+          "type": "speech",
+          "speaker": "character_any",
+          "content": {
+            "korean": "린의 말이 맞아. 필름이 이렇게 빨리 부패할 리 없어."
+          }
+        },
+        {
+          "type": "speech",
+          "emotion": "sad",
+          "content": {
+            "korean": "정말 이상해."
+          },
+          "speaker": "character_2"
+        },
+        {
+          "speaker": "character_any",
+          "content": {
+            "korean": "솔라스의 말은 우리를 함정에 빠뜨리고 있어."
+          },
+          "emotion": "base",
+          "type": "speech"
+        },
+        {
+          "type": "direction",
+          "duration_ms": 500,
+          "action": "enter",
+          "spot": [
+            15,
+            3
+          ],
+          "speaker": "kai"
+        },
+        {
+          "content": {
+            "korean": "다 부질없는 짓이야. 이 극장은 이미 무너지고 있어."
+          },
+          "speaker": "kai",
+          "emotion": "base",
+          "type": "speech"
+        },
+        {
+          "duration_ms": 500,
+          "speaker": "random_boss",
+          "spot": [
+            10,
+            2
+          ],
+          "type": "direction",
+          "action": "enter"
+        },
+        {
+          "content": {
+            "korean": "관람객 여러분, 이곳은 출입 금지입니다. 질서를 지켜 주십시오."
+          },
+          "speaker": "random_boss",
+          "type": "speech",
+          "emotion": "base"
+        },
+        {
+          "emotion": "angry",
+          "content": {
+            "korean": "안내원까지 우리를 막아서는군."
+          },
+          "type": "speech",
+          "speaker": "character_any"
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "dialogue": [
+        {
+          "speaker": "random_boss",
+          "type": "direction",
+          "spot": [
+            10,
+            2
+          ],
+          "action": "enter",
+          "duration_ms": 500
+        },
+        {
+          "type": "speech",
+          "emotion": "base",
+          "content": {
+            "korean": "경고합니다. 극장의 규칙을 따르지 않으면 강제로 퇴장시킬 겁니다."
+          },
+          "speaker": "random_boss"
+        },
+        {
+          "type": "speech",
+          "emotion": "angry",
+          "content": {
+            "korean": "규칙이라니? 극장은 망가지고 있는데!"
+          },
+          "speaker": "character_any"
+        },
+        {
+          "speaker": "character_4",
+          "content": {
+            "korean": "믿을 수 없어."
+          },
+          "emotion": "sad",
+          "type": "speech"
+        },
+        {
+          "spot": [
+            5,
+            2
+          ],
+          "speaker": "lin",
+          "action": "enter",
+          "type": "direction",
+          "duration_ms": 500
+        },
+        {
+          "speaker": "lin",
+          "content": {
+            "korean": "안내원님, 지금 중요한 기록들이 사라지고 있어요!"
+          },
+          "emotion": "angry",
+          "type": "speech"
+        },
+        {
+          "spot": [
+            15,
+            3
+          ],
+          "duration_ms": 500,
+          "speaker": "kai",
+          "type": "direction",
+          "action": "enter"
+        },
+        {
+          "emotion": "base",
+          "speaker": "kai",
+          "content": {
+            "korean": "어차피 무의미한 저항. 모든 것이 사라지는 것이 이 극장의 운명일지도 모르지."
+          },
+          "type": "speech"
+        },
+        {
+          "type": "speech",
+          "speaker": "character_any",
+          "content": {
+            "korean": "운명이라니! 우리는 이걸 막아야 해."
+          },
+          "emotion": "angry"
+        },
+        {
+          "type": "speech",
+          "emotion": "base",
+          "speaker": "lin",
+          "content": {
+            "korean": "빛의 조각을 흩뿌리는 대신, 모아야 합니다. 제 연구 결과가 그 증거예요."
+          }
+        },
+        {
+          "content": {
+            "korean": "빛의 조각을 모은다고?"
+          },
+          "speaker": "character_any",
+          "type": "speech",
+          "emotion": "base"
+        }
+      ]
+    },
+    {
+      "id": 9,
+      "dialogue": [
+        {
+          "speaker": "character_any",
+          "content": {
+            "korean": "솔라스의 유혹은 거짓이었어. 극장을 파괴하려는 술수였던 거야."
+          },
+          "emotion": "base",
+          "type": "speech"
+        },
+        {
+          "content": {
+            "korean": "너무 늦은 걸까…"
+          },
+          "speaker": "character_1",
+          "emotion": "sad",
+          "type": "speech"
+        },
+        {
+          "action": "enter",
+          "type": "direction",
+          "speaker": "lin",
+          "duration_ms": 500,
+          "spot": [
+            5,
+            2
+          ]
+        },
+        {
+          "speaker": "lin",
+          "content": {
+            "korean": "아직 늦지 않았습니다. 조각을 맞추면, 이 파괴를 멈출 수 있어요."
+          },
+          "emotion": "base",
+          "type": "speech"
+        },
+        {
+          "type": "direction",
+          "action": "enter",
+          "spot": [
+            10,
+            2
+          ],
+          "speaker": "random_boss",
+          "duration_ms": 500
+        },
+        {
+          "content": {
+            "korean": "규칙을 어기지 마십시오! 이곳에서 어떤 행위도 용납되지 않습니다."
+          },
+          "speaker": "random_boss",
+          "emotion": "angry",
+          "type": "speech"
+        },
+        {
+          "duration_ms": 500,
+          "spot": [
+            15,
+            3
+          ],
+          "action": "enter",
+          "type": "direction",
+          "speaker": "kai"
+        },
+        {
+          "emotion": "base",
+          "type": "speech",
+          "speaker": "kai",
+          "content": {
+            "korean": "아무것도 되돌릴 수 없어. 너희의 노력은 물거품이 될 뿐."
+          }
+        },
+        {
+          "type": "speech",
+          "emotion": "angry",
+          "speaker": "character_any",
+          "content": {
+            "korean": "우리는 이 비극을 막을 거야!"
+          }
+        },
+        {
+          "speaker": "lin",
+          "type": "direction",
+          "action": "exit",
+          "direction": "down",
+          "duration_ms": 500
+        },
+        {
+          "direction": "up",
+          "type": "direction",
+          "duration_ms": 500,
+          "speaker": "kai",
+          "action": "exit"
+        }
+      ]
+    },
+    {
+      "lose_dialogue": [
+        {
+          "emotion": "base",
+          "speaker": "random_boss",
+          "content": {
+            "korean": "극장의 질서는 흔들림이 없습니다."
+          },
+          "type": "speech"
+        },
+        {
+          "emotion": "sad",
+          "content": {
+            "korean": "젠장… 모든 기록이 사라질 거야."
+          },
+          "speaker": "character_any",
+          "type": "speech"
+        },
+        {
+          "type": "speech",
+          "speaker": "character_4",
+          "content": {
+            "korean": "패배했어…"
+          },
+          "emotion": "sad"
+        },
+        {
+          "duration_ms": 500,
+          "spot": [
+            6,
+            2
+          ],
+          "action": "enter",
+          "type": "direction",
+          "speaker": "lin"
+        },
+        {
+          "content": {
+            "korean": "이대로는… 안 됩니다."
+          },
+          "speaker": "lin",
+          "type": "speech",
+          "emotion": "sad"
+        },
+        {
+          "action": "enter",
+          "type": "direction",
+          "duration_ms": 500,
+          "spot": [
+            14,
+            3
+          ],
+          "speaker": "kai"
+        },
+        {
+          "content": {
+            "korean": "결국, 모든 것은 사라지는군."
+          },
+          "speaker": "kai",
+          "type": "speech",
+          "emotion": "base"
+        }
+      ],
+      "dialogue": [
+        {
+          "type": "speech",
+          "emotion": "angry",
+          "speaker": "random_boss",
+          "content": {
+            "korean": "더 이상은 넘어갈 수 없습니다. 극장의 질서를 위해, 여기서 멈추십시오."
+          }
+        },
+        {
+          "type": "speech",
+          "emotion": "angry",
+          "content": {
+            "korean": "당신이 막아서는 한, 우리는 극장을 구할 수 없어!"
+          },
+          "speaker": "character_any"
+        },
+        {
+          "type": "speech",
+          "speaker": "character_2",
+          "content": {
+            "korean": "비켜!"
+          },
+          "emotion": "angry"
+        },
+        {
+          "type": "speech",
+          "emotion": "base",
+          "speaker": "character_any",
+          "content": {
+            "korean": "우리는 이제 올바른 방법을 찾았어!"
+          }
+        },
+        {
+          "action": "enter",
+          "type": "direction",
+          "speaker": "lin",
+          "duration_ms": 500,
+          "spot": [
+            7,
+            2
+          ]
+        },
+        {
+          "type": "speech",
+          "speaker": "lin",
+          "content": {
+            "korean": "안내원님, 이 파괴를 막아야 합니다."
+          },
+          "emotion": "base"
+        },
+        {
+          "type": "direction",
+          "duration_ms": 500,
+          "action": "enter",
+          "speaker": "kai",
+          "spot": [
+            13,
+            3
+          ]
+        },
+        {
+          "type": "speech",
+          "speaker": "kai",
+          "content": {
+            "korean": "이 무대가 끝나면, 새로운 서막이 오를 뿐."
+          },
+          "emotion": "base"
+        }
+      ],
+      "win_dialogue": [
+        {
+          "duration_ms": 500,
+          "action": "exit",
+          "type": "direction",
+          "speaker": "random_boss",
+          "direction": "down"
+        },
+        {
+          "emotion": "sad",
+          "type": "speech",
+          "speaker": "character_any",
+          "content": {
+            "korean": "안내원을 물리쳤지만… 필름은 이미 너무 많이 손상됐어."
+          }
+        },
+        {
+          "type": "speech",
+          "emotion": "sad",
+          "speaker": "character_3",
+          "content": {
+            "korean": "기록이…"
+          }
+        },
+        {
+          "type": "direction",
+          "action": "enter",
+          "duration_ms": 500,
+          "spot": [
+            8,
+            2
+          ],
+          "speaker": "lin"
+        },
+        {
+          "type": "speech",
+          "content": {
+            "korean": "중요한 부분들이 완전히 사라졌습니다. 하지만 희망은 있습니다."
+          },
+          "speaker": "lin",
+          "emotion": "base"
+        },
+        {
+          "emotion": "base",
+          "type": "speech",
+          "speaker": "character_any",
+          "content": {
+            "korean": "이제 솔라스의 진실을 밝혀낼 차례야."
+          }
+        },
+        {
+          "spot": [
+            12,
+            3
+          ],
+          "action": "enter",
+          "speaker": "kai",
+          "duration_ms": 500,
+          "type": "direction"
+        },
+        {
+          "content": {
+            "korean": "진실은… 곧 막을 올릴 거야."
+          },
+          "speaker": "kai",
+          "emotion": "base",
+          "type": "speech"
+        }
+      ],
+      "id": 15
+    }
+  ],
+  "prologue": {
+    "korean": [
+      "네온 극장 영사실, 타들어가는 필름들이 과거의 기록을 집어삼킨다.",
+      "중요한 증거들이 연기처럼 사라지는 위기 속,",
+      "낡은 전광판은 '모든 것을 지워버리라' 속삭인다.",
+      "선택의 기로에 선 자, 과연 극장의 운명은?"
+    ]
+  }
+}

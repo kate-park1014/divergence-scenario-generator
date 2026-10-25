@@ -1,0 +1,135 @@
+{
+	"id": "card_03_garbled_broadcast",
+	"title": {
+		"korean": "뒤섞인 뉴스 제보"
+	},
+	"tags": "news",
+	"intensity": "calm",
+	"after_story": 1,
+	"before_story": 3,
+	"leaning": "community-",
+	"background_tags": [
+		"workshop",
+		"citizen",
+		"phone",
+		"jumbled_news",
+		"anxiety"
+	],
+	"dialogue": [
+		{
+			"speaker": "narrator",
+			"content": {
+				"korean": "작업실 입구, 다급하게 뛰어든 시민 한 명이 손에 든 휴대폰을 내민다."
+			}
+		},
+		{
+			"speaker": "citizen",
+			"content": {
+				"korean": "이거 진짜 뉴스인가요? 제 휴대폰에 자꾸 이상한 게 떠요!"
+			}
+		},
+		{
+			"speaker": "lin",
+			"content": {
+				"korean": "개인 정보 유출 문제가 이제 일상으로 번지는군요."
+			}
+		}
+	],
+	"choices": [
+		{
+			"text": {
+				"korean": "시민의 문제는 개인적인 일이라며 외면한다"
+			},
+			"mbti": "IT",
+			"effects": {
+				"community": -30,
+				"echo": -10
+			},
+			"reward": [
+				"hp_down"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "lin",
+					"content": {
+						"korean": "혼란에 빠진 사람을 외면하는 건 옳지 않아요."
+					}
+				},
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "시민은 여전히 혼란스러운 표정으로 당신을 바라본다."
+					}
+				}
+			]
+		},
+		{
+			"text": {
+				"korean": "시민을 안심시키고 뉴스의 정보들을 분석한다"
+			},
+			"mbti": "ES",
+			"effects": {
+				"reason": 20,
+				"echo": 10
+			},
+			"reward": [
+				"intelligence_up"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "citizen",
+					"content": {
+						"korean": "진정하고 보니 뉴스 내용이 앞뒤가 안 맞네요. 감사합니다!"
+					}
+				},
+				{
+					"speaker": "lin",
+					"content": {
+						"korean": "사람들을 안심시키는 것이 가장 중요해요."
+					}
+				}
+			]
+		},
+		{
+			"text": {
+				"korean": "강하게 경고하여 시민에게 자리를 비우게 한다"
+			},
+			"mbti": "SJ",
+			"require": {
+				"stat": "fighting",
+				"op": ">=",
+				"value": 40
+			},
+			"effects": {
+				"fighting": -10,
+				"community": -10
+			},
+			"event": "minigame_cup",
+			"seed": null,
+			"result": [
+				{
+					"speaker": "citizen",
+					"content": {
+						"korean": "알겠습니다... 방해가 됐다면 죄송해요."
+					}
+				},
+				{
+					"speaker": "lin",
+					"content": {
+						"korean": "너무 강압적이었어요. 더 좋은 방법이 있었을 텐데."
+					}
+				}
+			],
+			"event_intro": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "시민이 컵 세 개를 들고 숨긴 정보를 맞혀보라고 한다."
+					}
+				}
+			]
+		}
+	]
+}

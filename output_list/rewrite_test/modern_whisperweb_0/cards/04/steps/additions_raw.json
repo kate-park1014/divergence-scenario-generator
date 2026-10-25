@@ -1,0 +1,274 @@
+{
+	"scenario_id": "modern_whisperweb_0_04",
+	"actors": {
+		"kai": {
+			"name": {
+				"korean": "카이"
+			},
+			"style": {
+				"korean": "날 서 있고 걱정이 섞인 짧은 반말"
+			}
+		},
+		"data_broker": {
+			"name": {
+				"korean": "정보 중개인"
+			},
+			"role": "폐기된 정보 조각을 거래하는 인물",
+			"style": {
+				"korean": "거래를 제안하는 능글맞은 말투"
+			},
+			"portrait_no": 3
+		},
+		"security_guard": {
+			"name": {
+				"korean": "보안 경비원"
+			},
+			"role": "폐기물 관리동의 출입을 통제하는 인물",
+			"style": {
+				"korean": "통제를 강조하는 급박한 말투"
+			},
+			"portrait_no": 2
+		},
+		"janitor": {
+			"name": {
+				"korean": "청소원"
+			},
+			"role": "폐기물 관리동을 청소하는 인물",
+			"style": {
+				"korean": "당황하며 도움을 호소하는 말투"
+			},
+			"portrait_needed": {
+				"korean": "중년 남성 청소원. 땀으로 젖은 작업복, 고된 표정"
+			}
+		},
+		"gossip_monger": {
+			"name": {
+				"korean": "정보꾼"
+			},
+			"role": "폐기장 내외의 소문을 퍼뜨리는 인물",
+			"style": {
+				"korean": "선동하며 정보를 퍼뜨리는 말투"
+			},
+			"portrait_needed": {
+				"korean": "30대 여성 정보상. 여러 장의 전단지를 들고, 불안정한 눈빛"
+			}
+		},
+		"scrap_collector": {
+			"name": {
+				"korean": "고물 수집가"
+			},
+			"role": "쓸만한 부품을 찾아 폐기장을 뒤지는 인물",
+			"style": {
+				"korean": "합리화하며 물건을 챙기는 말투"
+			},
+			"portrait_no": 44
+		},
+		"engineer": {
+			"name": {
+				"korean": "기술자"
+			},
+			"role": "오래된 시스템을 수리하거나 개조하는 인물",
+			"style": {
+				"korean": "기술적인 문제를 해결하려는 말투"
+			},
+			"portrait_no": 29
+		},
+		"lost_citizen": {
+			"name": {
+				"korean": "길 잃은 시민"
+			},
+			"role": "정보 유출 피해를 직접 겪은 일반인",
+			"style": {
+				"korean": "공포에 질려 비이성적으로 외치는 말투"
+			},
+			"portrait_no": 1
+		},
+		"recycler": {
+			"name": {
+				"korean": "재활용 전문가"
+			},
+			"role": "폐기물 재활용 효율을 높이려는 인물",
+			"style": {
+				"korean": "상황을 수습하려는 다급한 말투"
+			},
+			"portrait_needed": {
+				"korean": "40대 남성 재활용 전문가. 보호 장비를 착용, 진지하고 피곤한 표정"
+			}
+		}
+	},
+	"seeds": {
+		"bargain_info": {
+			"korean": "정보 중개인과 개인 정보 거래함",
+			"english": "Traded personal information with a data broker"
+		},
+		"secure_passage": {
+			"korean": "안전한 통로를 확보함",
+			"english": "Secured a safe passage"
+		},
+		"hide_traces": {
+			"korean": "정보꾼의 정보를 이용해 흔적을 숨김",
+			"english": "Used gossip monger's information to hide traces"
+		},
+		"reveal_corrupted_data": {
+			"korean": "정보꾼의 거짓 정보를 폭로하고 오염된 데이터 드러냄",
+			"english": "Exposed gossip monger's false information and revealed corrupted data"
+		}
+	},
+	"flags": {
+		"data_vulnerability": {
+			"label": {
+				"korean": "정보 취약성"
+			},
+			"boss_line": {
+				"korean": "개인 정보가 유출되어 {random_boss}의 공격에 더욱 취약해졌다."
+			},
+			"boss_penalty": -1
+		},
+		"distracted_attention": {
+			"label": {
+				"korean": "주의 분산"
+			},
+			"boss_line": {
+				"korean": "{random_boss}이(가) 혼란스러운 상황에 주의를 빼앗겨 공격이 잠시 멈췄다."
+			},
+			"boss_penalty": -2
+		},
+		"quick_insight": {
+			"label": {
+				"korean": "빠른 통찰"
+			},
+			"boss_choice": {
+				"korean": "상황을 빠르게 파악할 단서를 활용하여 {random_boss}의 패턴을 간파한다"
+			},
+			"boss_penalty": 1
+		},
+		"secure_route": {
+			"label": {
+				"korean": "안전 통로 확보"
+			},
+			"boss_choice": {
+				"korean": "확보한 안전 통로를 통해 {random_boss}의 방어를 뚫고 진입한다"
+			},
+			"boss_penalty": 2
+		},
+		"hidden_fault": {
+			"label": {
+				"korean": "숨겨진 결함"
+			},
+			"boss_choice": {
+				"korean": "{random_boss}의 숨겨진 시스템 결함을 파고들어 치명타를 입힌다"
+			},
+			"boss_penalty": 1
+		},
+		"boss_vulnerable": {
+			"label": {
+				"korean": "보스 약점 노출"
+			},
+			"boss_choice": {
+				"korean": "{random_boss}의 노출된 약점을 정확히 공격한다"
+			},
+			"boss_penalty": 2
+		}
+	},
+	"rooms": {
+		"1": {
+			"title": {
+				"korean": "폐기물 가득한 통로"
+			}
+		},
+		"3": {
+			"title": {
+				"korean": "정보의 물결 속"
+			},
+			"dialogue": [
+				{
+					"after_line": 5,
+					"line": {
+						"type": "speech",
+						"speaker": "character_any",
+						"if": {
+							"seed": "bargain_info"
+						},
+						"source": "llm",
+						"intent": "플레이어가 정보 중개인에게 개인 정보를 넘긴 것을 후회하거나, 그 결정의 파급력을 인식",
+						"example": {
+							"korean": "우리가 넘긴 그 정보들이, 이렇게 큰 물결이 된 건가…."
+						},
+						"emotion": "sad"
+					}
+				}
+			]
+		},
+		"5": {
+			"title": {
+				"korean": "개인 정보의 혼란"
+			},
+			"dialogue": [
+				{
+					"after_line": 6,
+					"line": {
+						"type": "speech",
+						"speaker": "character_any",
+						"if": {
+							"seed": "hide_traces"
+						},
+						"source": "llm",
+						"intent": "정보꾼에게서 얻은 정보(흔적 숨기기)가 실제로는 상황을 더 악화시켰음을 깨달음",
+						"example": {
+							"korean": "정보꾼의 말이 나를 속였어. 감춘다고 끝나는 일이 아니었군."
+						},
+						"emotion": "sad"
+					}
+				}
+			]
+		},
+		"9": {
+			"title": {
+				"korean": "진실을 마주하며"
+			},
+			"dialogue": [
+				{
+					"after_line": 8,
+					"line": {
+						"type": "speech",
+						"speaker": "kai",
+						"if": {
+							"stat": "echo",
+							"op": ">=",
+							"value": 60
+						},
+						"source": "llm",
+						"intent": "플레이어와의 관계가 좋았음을 보여주며, 절망적인 상황 속에서도 플레이어에게 신뢰를 표현",
+						"example": {
+							"korean": "하지만 당신과 함께라면, 아직 희망은 있습니다."
+						},
+						"emotion": "base"
+					}
+				}
+			]
+		},
+		"15": {
+			"title": {
+				"korean": "최후의 재활용"
+			},
+			"dialogue": [
+				{
+					"after_line": 1,
+					"line": {
+						"type": "speech",
+						"speaker": "random_boss",
+						"if": {
+							"flag": "data_vulnerability"
+						},
+						"source": "llm",
+						"intent": "정보 취약성 플래그로 인해 플레이어의 약점을 언급하며 조롱",
+						"example": {
+							"korean": "네가 흘린 사소한 정보들이, 결국 널 이곳으로 이끈 거다."
+						},
+						"emotion": "angry"
+					}
+				}
+			]
+		}
+	}
+}

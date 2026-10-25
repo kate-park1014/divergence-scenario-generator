@@ -1,0 +1,176 @@
+{
+	"id": "card_01_fragmented_data",
+	"title": {
+		"korean": "조각난 데이터 판매"
+	},
+	"tags": [
+		"data"
+	],
+	"intensity": "calm",
+	"after_story": 3,
+	"before_story": 5,
+	"leaning": "community-",
+	"background_tags": [
+		"폐기장 입구",
+		"수상한 단말기",
+		"정보 브로커",
+		"번잡한 시장",
+		"뒤섞인 정보"
+	],
+	"dialogue": [
+		{
+			"speaker": "narrator",
+			"content": {
+				"korean": "폐기장 입구 구석, 정보꾼 지미가 단말기를 들고 서 있었다."
+			}
+		},
+		{
+			"speaker": "data_scavenger",
+			"content": {
+				"korean": "…잃어버린 정보를 찾고 싶다고? 여기 '진짜' 조각들이 있어. 싼 값에 줄게."
+			}
+		},
+		{
+			"speaker": "echo",
+			"content": {
+				"korean": "저 사람, 뭔가 수상해요. 지직거리는 소리랑 관련 있을지도 몰라요."
+			}
+		}
+	],
+	"choices": [
+		{
+			"text": {
+				"korean": "지미가 파는 조각난 데이터를 비싼 값에 구입한다"
+			},
+			"mbti": "IS",
+			"effects": {
+				"gold": -100,
+				"community": -20,
+				"echo": -5
+			},
+			"event": "minigame_slot",
+			"seed": "bought_data_easy",
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "돈을 지불하자 지미는 의미심장한 미소를 지었다. 데이터는 손에 쥐었지만, 어딘가 찜찜했다."
+					}
+				},
+				{
+					"speaker": "echo",
+					"content": {
+						"korean": "왠지 낚인 기분인데요… 저 데이터가 정말 쓸모 있을까요?"
+					}
+				}
+			],
+			"event_intro": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "지미가 세 개의 컵 아래, 어떤 데이터 조각이 숨겨져 있는지 맞춰보라고 유혹했다."
+					}
+				}
+			]
+		},
+		{
+			"text": {
+				"korean": "흥정을 통해 지미의 데이터를 얻어낸다"
+			},
+			"mbti": "EF",
+			"effects": {
+				"reason": 20,
+				"fighting": 20,
+				"echo": 10
+			},
+			"reward": [
+				"intelligence_up"
+			],
+			"seed": "negotiated_data_hard",
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "지미는 끈질긴 흥정에 결국 데이터를 내어주었다. 탐탁지 않은 표정이었지만, 원하는 것을 얻었다."
+					}
+				},
+				{
+					"speaker": "echo",
+					"content": {
+						"korean": "쉽지 않은 흥정이었지만, 결국 얻어냈네요! 잘했어요."
+					}
+				}
+			]
+		},
+		{
+			"text": {
+				"korean": "지미에게 폐기장 상황에 대한 정보 공유를 설득한다"
+			},
+			"mbti": "EN",
+			"require": {
+				"mbti": "EN"
+			},
+			"effects": {
+				"community": 20,
+				"echo": 10
+			},
+			"reward": [
+				"defense_up"
+			],
+			"seed": "negotiated_data_hard",
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "{actor}이(가) 폐기장 혼란을 언급하며 정보 공유를 설득했다."
+					}
+				},
+				{
+					"speaker": "data_scavenger",
+					"content": {
+						"korean": "…알았어, 알았다고. 상황이 심상치 않으니, 나도 협력해야겠지."
+					}
+				},
+				{
+					"speaker": "echo",
+					"content": {
+						"korean": "아직 완벽한 건 아니지만, 한 발짝 나아간 것 같아요."
+					}
+				}
+			]
+		},
+		{
+			"text": {
+				"korean": "지미에게 더 좋은 정보를 얻기 위해 추가 비용을 지불한다"
+			},
+			"mbti": "TP",
+			"require": {
+				"stat": "gold",
+				"op": ">=",
+				"value": 150
+			},
+			"effects": {
+				"gold": -150,
+				"echo": 5
+			},
+			"reward": [
+				"stun"
+			],
+			"seed": "bought_data_easy",
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "지미는 추가 비용에 더 깊은 정보를 귓속말처럼 알려주었다. 데이터 판매상은 만족한 얼굴이었다."
+					}
+				},
+				{
+					"speaker": "echo",
+					"content": {
+						"korean": "돈을 쓰니 바로 솔직해지네요. 확실히 중요한 정보인 것 같아요."
+					}
+				}
+			]
+		}
+	]
+}

@@ -1,0 +1,1141 @@
+{
+	"actors": {
+		"cleaner": {
+			"name": {
+				"korean": "폐기장 청소원"
+			},
+			"role": "폐기장 시설을 청소하고 유지하는 인물"
+		},
+		"component_hunter": {
+			"name": {
+				"korean": "부품 사냥꾼"
+			},
+			"role": "버려진 스크린에서 재활용 가능한 부품을 찾아 판매하는 사람"
+		},
+		"info_peddler": {
+			"name": {
+				"korean": "정보 행상인"
+			},
+			"role": "폐기장 주변에 떠도는 개인 정보 유출 루머를 사고파는 행상인"
+		},
+		"sensor_tech": {
+			"name": {
+				"korean": "센서 기술자"
+			},
+			"role": "폐기장의 환경 센서 및 보안 시스템을 유지보수하는 기술자"
+		},
+		"data_artist": {
+			"name": {
+				"korean": "데이터 예술가"
+			},
+			"role": "폐기된 스크린의 잔해로 디지털 예술 설치물을 만드는 예술가"
+		},
+		"curious_visitor": {
+			"name": {
+				"korean": "호기심 많은 방문객"
+			},
+			"role": "폐기장의 정보 혼란에 휩쓸려 길을 잃은 외부인"
+		},
+		"fixer": {
+			"name": {
+				"korean": "뒷골목 해결사"
+			},
+			"role": "스크린 합침으로 인한 사소한 문제를 돈으로 해결해주는 인물"
+		},
+		"data_miner": {
+			"name": {
+				"korean": "정보 광부"
+			},
+			"role": "폐기장에서 유출된 정보 잔해를 몰래 수집하는 인물"
+		},
+		"desperate_resident": {
+			"name": {
+				"korean": "절박한 주민"
+			},
+			"role": "폭주하는 정보 유출에 직접적인 피해를 겪는 평범한 주민"
+		},
+		"resident_ally": {
+			"name": {
+				"korean": "폐기장 주민"
+			},
+			"role": "주인공의 과거 행동으로 도움을 받은 폐기장 주민"
+		}
+	},
+	"seeds": {
+		"A_easy_path": "폐기장 정보를 쉽게 넘겨줌",
+		"A_hard_path": "위험을 감수하고 스크린 합침을 방해함",
+		"B_easy_path": "혼란 속 이득을 위해 거짓 정보를 흘림",
+		"B_hard_path": "스스로 불편을 감수하며 문제를 해결하려 노력함"
+	},
+	"flags": {
+		"data_leak_exposed": {
+			"kind": "bad",
+			"boss_penalty": -2,
+			"summary": "플레이어의 개인 정보가 보스에게 노출되어 보스가 더 강력해진다."
+		},
+		"rumor_spread": {
+			"kind": "good",
+			"boss_penalty": 1,
+			"summary": "보스 주변에 대한 긍정적 소문이 퍼져 보스가 잠시 혼란스러워 한다."
+		},
+		"obfuscated_info": {
+			"kind": "good",
+			"boss_penalty": 2,
+			"summary": "스크린 정보 혼란을 가중시켜 보스가 데이터 처리에 버벅인다."
+		},
+		"unexpected_alliance": {
+			"kind": "good",
+			"boss_penalty": 1,
+			"summary": "폐기장 관리인 카이에게 우호적인 인물을 얻어 보스 전투에 약간의 도움을 받는다."
+		},
+		"false_signal_trap": {
+			"kind": "bad",
+			"boss_penalty": -1,
+			"summary": "잘못된 신호가 보스의 주의를 끌어 플레이어가 발각될 위험이 커진다."
+		},
+		"system_exploit_clue": {
+			"kind": "good",
+			"boss_penalty": 1,
+			"summary": "보스의 시스템 취약점을 우회할 작은 단서를 얻어 보스의 특정 공격을 회피할 수 있다."
+		},
+		"resource_diversion": {
+			"kind": "good",
+			"boss_penalty": 2,
+			"summary": "보스의 핵심 자원 일부를 다른 곳으로 돌려 보스의 전체적인 능력을 약화시킨다."
+		},
+		"local_support_network": {
+			"kind": "good",
+			"boss_penalty": 1,
+			"summary": "폐기장 주민들의 작은 협력을 얻어 보스의 주변 방어막을 약화시킨다."
+		}
+	},
+	"cards": [
+		{
+			"id": "card_05_parts_box",
+			"kind": "plant",
+			"slot": "A",
+			"title": {
+				"korean": "뒤섞인 부품 상자"
+			},
+			"summary": "부품 사냥꾼이 합쳐진 스크린 부품을 팔려 한다.",
+			"bridge": "앞 방 끝: 폐기장 심층부는 스크린 합침의 끔찍한 결과에 절망하는 모습으로 끝난다. / 카드: 부품 사냥꾼은 이러한 혼란 속에서도 뒤섞인 스크린 부품에서 이득을 취하려 한다. / 다음 방 시작: 에코가 자신의 정보 유출을 깨닫고 분리를 외치는 장면과 이어지는 이유: 이러한 사소한 이득 추구가 더 큰 혼란을 야기했음을 암시하며 에코의 절규를 뒷받침한다.",
+			"people": [
+				"component_hunter",
+				"echo"
+			],
+			"tags": [
+				"parts_trade"
+			],
+			"intensity": "calm",
+			"leaning": "community-",
+			"choices": [
+				{
+					"path": "easy",
+					"summary": "부품 사냥꾼의 제안을 받아들여 뒤섞인 부품 상자를 구매한다.",
+					"mbti": "ST",
+					"effects": {
+						"community": -30,
+						"gold": -50
+					},
+					"event": "minigame_timing",
+					"seed": "A_easy_path"
+				},
+				{
+					"path": "hard",
+					"summary": "부품 사냥꾼에게 스크린 부품 판매를 당장 중단하라고 강력히 요구한다.",
+					"mbti": "NF",
+					"effects": {
+						"fighting": 20,
+						"echo": 10
+					},
+					"reward": [
+						"defense_up"
+					],
+					"seed": "A_hard_path"
+				},
+				{
+					"path": "gold",
+					"summary": "부품 사냥꾼에게 웃돈을 주고 모든 뒤섞인 부품을 매입하여 폐기한다.",
+					"mbti": "SJ",
+					"require": {
+						"stat": "gold",
+						"op": ">=",
+						"value": 150
+					},
+					"effects": {
+						"gold": -150,
+						"echo": 10
+					},
+					"reward": [
+						"heal"
+					],
+					"seed": "A_hard_path"
+				}
+			],
+			"after_story": 1,
+			"before_story": 3
+		},
+		{
+			"id": "card_05_locked_cabinet",
+			"kind": "normal",
+			"slot": "A",
+			"title": {
+				"korean": "잠긴 정보 캐비닛"
+			},
+			"summary": "폐기장 청소원이 잘못 잠긴 캐비닛을 열어달라 요청한다.",
+			"bridge": "앞 방 끝: 스크린 합침의 끔찍한 결과에 모두가 절망하는 상황이 이어진다. / 카드: 청소원은 그 와중에 잠긴 캐비닛이라는 일상적이지만 미심쩍은 문제에 봉착한다. / 다음 방 시작: 에코가 개인 정보 유출을 겪는 장면과 이어지는 이유: 폐기장의 혼란이 일상 깊숙이 스며들었으며, 이러한 정보 관리의 허술함이 개인에게 미치는 영향을 부각시킨다.",
+			"people": [
+				"cleaner",
+				"echo"
+			],
+			"tags": [
+				"clean_up"
+			],
+			"intensity": "calm",
+			"leaning": "reason+",
+			"choices": [
+				{
+					"path": "easy",
+					"summary": "청소원의 요청대로 캐비닛을 조심스럽게 열어준다.",
+					"mbti": "FP",
+					"effects": {
+						"reason": 20,
+						"gold": 50
+					},
+					"event": "minigame_cup",
+					"seed": null
+				},
+				{
+					"path": "hard",
+					"summary": "캐비닛이 잠긴 이유를 먼저 파악하고, 열지 말 것을 권유한다.",
+					"mbti": "TJ",
+					"effects": {
+						"reason": -10,
+						"echo": 5
+					},
+					"reward": [
+						"intelligence_up"
+					],
+					"seed": null
+				},
+				{
+					"path": "stat",
+					"summary": "캐비닛 잠금 장치 해독을 위해 복잡한 절차를 거쳐 안전하게 연다.",
+					"mbti": "EN",
+					"require": {
+						"stat": "reason",
+						"op": ">=",
+						"value": 40
+					},
+					"effects": {
+						"reason": 10,
+						"echo": 5
+					},
+					"reward": [
+						"cooldown_reset"
+					],
+					"seed": null
+				}
+			],
+			"after_story": 1,
+			"before_story": 3
+		},
+		{
+			"id": "card_05_noisy_comm",
+			"kind": "normal",
+			"slot": "A",
+			"title": {
+				"korean": "노이즈 가득한 통신"
+			},
+			"summary": "센서 기술자가 불안정한 통신 장비에서 중요한 정보를 복구하려 한다.",
+			"bridge": "앞 방 끝: 스크린 섬광과 혼돈이 가득한 폐기장 심층부의 모습이 이어진다. / 카드: 기술자는 그 혼란 속에서 중요한 정보의 흔적을 쫓으며 통신 장비 복구를 시도한다. / 다음 방 시작: 에코가 개인 정보 유출을 겪는 장면과 이어지는 이유: 불안정한 통신망을 통해 정보가 더욱 확산될 수 있음을 암시하며, 정보 혼란의 근원을 찾으려는 노력을 보여준다.",
+			"people": [
+				"sensor_tech",
+				"echo"
+			],
+			"tags": [
+				"signal_error"
+			],
+			"intensity": "high",
+			"leaning": "fighting+",
+			"choices": [
+				{
+					"path": "easy",
+					"summary": "기술자에게 통신 장비 수리를 돕고 함께 정보를 복구한다.",
+					"mbti": "ES",
+					"effects": {
+						"fighting": 30,
+						"gold": 100
+					},
+					"event": "minigame_slot",
+					"seed": null
+				},
+				{
+					"path": "hard",
+					"summary": "기술자의 작업이 더 큰 혼란을 초래할 수 있다며 일단 멈추도록 설득한다.",
+					"mbti": "IN",
+					"effects": {
+						"fighting": -20,
+						"echo": -10
+					},
+					"reward": [
+						"move_range_down"
+					],
+					"seed": null
+				}
+			],
+			"forced": [
+				{
+					"path": "forced",
+					"summary": "기술자가 급하게 스위치를 조작하려다 장비가 폭주하는 것을 에코가 급히 막는다.",
+					"mbti": "EN",
+					"require": {
+						"mbti": "EN"
+					},
+					"chance": 0.3,
+					"effects": {
+						"fighting": -10,
+						"echo": -5
+					},
+					"reward": [
+						"stun"
+					],
+					"seed": null
+				}
+			],
+			"after_story": 1,
+			"before_story": 3
+		},
+		{
+			"id": "card_05_rumor_deal",
+			"kind": "plant",
+			"slot": "B",
+			"title": {
+				"korean": "소문꾼의 거래"
+			},
+			"summary": "정보 행상인이 스크린 유출 정보로 금전을 요구한다.",
+			"bridge": "앞 방 끝: 에코가 개인 정보 유출 피해에 분노하며 스크린 분리를 외치는 장면으로 마무리된다. / 카드: 정보 행상인은 이러한 유출된 정보를 상품처럼 거래하며 이득을 취하려 한다. / 다음 방 시작: 카이 씨가 폐기장이 망가진 것에 한탄하며 스크린 분리를 역설하는 장면과 이어지는 이유: 정보 혼란 속에서 개인의 윤리적 가치가 훼손될 수 있음을 보여주며, 카이의 등장이 이러한 혼란을 해결할 필요성을 강조한다.",
+			"people": [
+				"info_peddler",
+				"echo"
+			],
+			"tags": [
+				"info_brokerage"
+			],
+			"intensity": "calm",
+			"leaning": "fighting-",
+			"choices": [
+				{
+					"path": "easy",
+					"summary": "정보 행상인에게 돈을 지불하고 개인 정보를 회수한다.",
+					"mbti": "IF",
+					"effects": {
+						"fighting": -30,
+						"gold": -100
+					},
+					"event": "meet_stranger",
+					"seed": "B_easy_path"
+				},
+				{
+					"path": "hard",
+					"summary": "정보 행상인의 거래를 거부하고, 유출 정보의 확산을 막을 방법을 직접 찾는다.",
+					"mbti": "ET",
+					"effects": {
+						"fighting": 20,
+						"echo": 10
+					},
+					"reward": [
+						"attack_up"
+					],
+					"seed": "B_hard_path"
+				},
+				{
+					"path": "stat",
+					"summary": "정보 행상인에게 자신을 위해 다른 사람의 정보를 넘기도록 제안한다.",
+					"mbti": "IS",
+					"require": {
+						"stat": "community",
+						"op": "<=",
+						"value": -40
+					},
+					"effects": {
+						"community": -10,
+						"echo": -5
+					},
+					"reward": [
+						"hp_down"
+					],
+					"seed": "B_easy_path"
+				}
+			],
+			"after_story": 3,
+			"before_story": 5
+		},
+		{
+			"id": "card_05_artist_installation",
+			"kind": "normal",
+			"slot": "B",
+			"title": {
+				"korean": "예술가의 스크린 설치물"
+			},
+			"summary": "데이터 예술가가 깨진 스크린 조각으로 기묘한 설치물을 만든다.",
+			"bridge": "앞 방 끝: 네온 간판이 '모두 연결해야 완전해진다'고 속삭이는 가운데 혼돈이 이어지는 모습이 나온다. / 카드: 데이터 예술가는 깨진 스크린 조각들을 모아 또 다른 '연결'을 시도하며 기묘한 작품을 만든다. / 다음 방 시작: 카이 씨가 폐기장이 망가진 것에 한탄하며 스크린 분리를 역설하는 장면과 이어지는 이유: 혼돈 속에서 아름다움을 찾으려는 시도이자, 동시에 잘못된 연결의 위험성을 은유적으로 보여주며 스크린 분리의 필요성을 강조한다.",
+			"people": [
+				"data_artist",
+				"echo"
+			],
+			"tags": [
+				"broken_art"
+			],
+			"intensity": "calm",
+			"leaning": "reason-",
+			"choices": [
+				{
+					"path": "easy",
+					"summary": "예술가의 작품에 감탄하며 그대로 두도록 격려한다.",
+					"mbti": "EP",
+					"effects": {
+						"reason": -30,
+						"gold": 50
+					},
+					"event": "campsite",
+					"seed": null
+				},
+				{
+					"path": "hard",
+					"summary": "작품이 더 큰 정보 유출을 일으킬 수 있다며 해체를 요청한다.",
+					"mbti": "IJ",
+					"effects": {
+						"reason": 20,
+						"echo": -5
+					},
+					"reward": [
+						"defense_up"
+					],
+					"seed": null
+				},
+				{
+					"path": "lock",
+					"summary": "설치물의 재료와 연결 방식을 분석하여 안전성을 검토한다.",
+					"mbti": "TJ",
+					"require": {
+						"mbti": "TJ"
+					},
+					"effects": {
+						"reason": 10,
+						"echo": 5
+					},
+					"reward": [
+						"intelligence_up"
+					],
+					"seed": null
+				}
+			],
+			"after_story": 3,
+			"before_story": 5
+		},
+		{
+			"id": "card_05_lost_visitor",
+			"kind": "normal",
+			"slot": "B",
+			"title": {
+				"korean": "길 잃은 방문객"
+			},
+			"summary": "폐기장 심층부에서 호기심 많은 방문객이 도움을 요청한다.",
+			"bridge": "앞 방 끝: 에코가 개인 정보 유출에 분노하며 분리를 외치는 상황이 이어진다. / 카드: 외부인인 방문객이 폐기장의 혼란에 직접적으로 노출되어 도움을 요청한다. / 다음 방 시작: 카이 씨가 폐기장이 망가진 것에 한탄하며 스크린 분리를 역설하는 장면과 이어지는 이유: 정보 유출의 피해가 일반 대중에게까지 확산되고 있음을 보여주며, 이러한 무고한 피해를 막기 위한 해결책이 시급함을 강조한다.",
+			"people": [
+				"curious_visitor",
+				"echo"
+			],
+			"tags": [
+				"lost_guest"
+			],
+			"intensity": "calm",
+			"leaning": "community+",
+			"choices": [
+				{
+					"path": "easy",
+					"summary": "방문객을 안전한 곳으로 안내하고 폐기장 출구까지 동행한다.",
+					"mbti": "IS",
+					"effects": {
+						"community": 30,
+						"echo": 5
+					},
+					"event": "minigame_timing",
+					"seed": null
+				},
+				{
+					"path": "hard",
+					"summary": "방문객에게 스스로 길을 찾도록 정보를 주고, 주변 환경에 주의하라고 경고한다.",
+					"mbti": "EN",
+					"effects": {
+						"community": -20,
+						"echo": -5
+					},
+					"reward": [
+						"move_range_up"
+					],
+					"seed": null
+				},
+				{
+					"path": "gold",
+					"summary": "방문객에게 소정의 경비를 지급하고, 안전한 귀가를 위한 정보를 제공한다.",
+					"mbti": "IF",
+					"require": {
+						"stat": "gold",
+						"op": ">=",
+						"value": 100
+					},
+					"effects": {
+						"gold": -100,
+						"echo": 5
+					},
+					"reward": [
+						"move_range_up"
+					],
+					"seed": null
+				}
+			],
+			"after_story": 3,
+			"before_story": 5
+		},
+		{
+			"id": "card_05_dark_flashlight",
+			"kind": "normal",
+			"slot": "C",
+			"title": {
+				"korean": "어둠 속 손전등"
+			},
+			"summary": "어둠 속에서 고장 난 손전등을 든 뒷골목 해결사가 돈을 요구한다.",
+			"bridge": "앞 방 끝: 카이 씨가 스크린 분리 기술의 유일한 방법임을 말하며 희망을 제시하지만, 네온 간판이 '분리는 고통이다'고 외치며 상황은 여전히 혼란스럽다. / 카드: 뒷골목 해결사는 이러한 상황을 이용해 돈을 벌려 하며, 혼돈 속의 잔혹한 현실을 보여준다. / 다음 방 시작: 네온 간판의 폭주와 함께 '분리할 차례'라는 결심이 서는 장면과 이어지는 이유: 이러한 부당한 이득 추구에 종지부를 찍어야 함을 강조하며, 해결사의 방해가 주인공의 목표를 향한 의지를 더욱 굳건하게 만든다.",
+			"people": [
+				"fixer",
+				"echo"
+			],
+			"tags": [
+				"dark_deal"
+			],
+			"intensity": "high",
+			"leaning": "fighting-",
+			"choices": [
+				{
+					"path": "easy",
+					"summary": "뒷골목 해결사에게 돈을 주고 방해하지 말라고 요청한다.",
+					"mbti": "IP",
+					"effects": {
+						"fighting": -30,
+						"gold": -100
+					},
+					"event": "minigame_slot",
+					"seed": null
+				},
+				{
+					"path": "hard",
+					"summary": "뒷골목 해결사의 요구를 거절하고, 스스로 길을 개척한다.",
+					"mbti": "EJ",
+					"effects": {
+						"fighting": 20,
+						"echo": 10
+					},
+					"reward": [
+						"attack_up"
+					],
+					"seed": null
+				},
+				{
+					"path": "lock",
+					"summary": "뒷골목 해결사의 어려움에 공감하며 다른 형태의 도움을 제안한다.",
+					"mbti": "SF",
+					"require": {
+						"mbti": "SF"
+					},
+					"effects": {
+						"community": 10,
+						"echo": 5,
+						"gold": 50
+					},
+					"reward": [
+						"stun"
+					],
+					"seed": null
+				}
+			],
+			"after_story": 5,
+			"before_story": 9
+		},
+		{
+			"id": "card_05_malfunctioning_cam",
+			"kind": "normal",
+			"slot": "C",
+			"title": {
+				"korean": "오작동하는 감시 카메라"
+			},
+			"summary": "센서 기술자가 오작동하는 감시 카메라를 수리하며 도움을 요청한다.",
+			"bridge": "앞 방 끝: 카이 씨가 스크린 분리의 필요성을 역설하지만, 네온 간판은 '통합만이 진리'라며 격렬하게 흔들린다. / 카드: 폐기장의 감시 시스템은 여전히 불안정하며, 센서 기술자는 이 오작동을 해결하려 한다. / 다음 방 시작: 네온 간판의 폭주와 함께 '분리할 차례'라는 결심이 서는 장면과 이어지는 이유: 보이지 않는 위협이 계속되고 있음을 보여주며, '위스퍼 웹'이 이러한 감시망의 허점을 통해 영향력을 확장하고 있음을 암시한다.",
+			"people": [
+				"sensor_tech",
+				"echo"
+			],
+			"tags": [
+				"malfunctioning_cam"
+			],
+			"intensity": "calm",
+			"leaning": "community+",
+			"choices": [
+				{
+					"path": "easy",
+					"summary": "센서 기술자의 수리를 돕고 감시 시스템 복구에 협력한다.",
+					"mbti": "EF",
+					"effects": {
+						"community": 30,
+						"echo": 5
+					},
+					"event": "minigame_cup",
+					"seed": null
+				},
+				{
+					"path": "hard",
+					"summary": "감시 시스템 복구가 오히려 '위스퍼 웹'에게 유리할 수 있다며 중단을 요구한다.",
+					"mbti": "IT",
+					"effects": {
+						"community": -20,
+						"echo": -10
+					},
+					"reward": [
+						"intelligence_down"
+					],
+					"seed": null
+				},
+				{
+					"path": "stat",
+					"summary": "센서 기술자를 위협하여 감시 시스템의 제어권을 넘겨받는다.",
+					"mbti": "ES",
+					"require": {
+						"stat": "fighting",
+						"op": "<=",
+						"value": -40
+					},
+					"effects": {
+						"fighting": -10,
+						"echo": -5
+					},
+					"reward": [
+						"stun"
+					],
+					"seed": null
+				}
+			],
+			"after_story": 5,
+			"before_story": 9
+		},
+		{
+			"id": "card_05_glowing_screen",
+			"kind": "normal",
+			"slot": "C",
+			"title": {
+				"korean": "폐기된 스크린의 광채"
+			},
+			"summary": "정보 광부가 폐기된 스크린에서 특별한 광채를 발견하고 몰래 수집하려 한다.",
+			"bridge": "앞 방 끝: 카이 씨가 스크린 분리의 필요성을 역설하지만, 네온 간판은 여전히 '통합만이 진리'라며 격렬하게 흔들린다. / 카드: 정보 광부는 폐기장 혼란 속에서 '위스퍼 웹'의 잔재 또는 그와 관련된 이상 현상을 발견하고 이를 이용하려 한다. / 다음 방 시작: 네온 간판이 폭주하며 '합치라'는 메시지를 쏟아내는 장면과 이어지는 이유: 이러한 스크린 잔해가 여전히 '위스퍼 웹'의 영향력 아래에 있음을 보여주며, 주인공의 분리 결심을 더욱 확고히 만든다.",
+			"people": [
+				"data_miner",
+				"echo"
+			],
+			"tags": [
+				"glowing_screen"
+			],
+			"intensity": "high",
+			"leaning": "reason-",
+			"choices": [
+				{
+					"path": "easy",
+					"summary": "정보 광부가 광채 나는 스크린을 수집하도록 내버려 둔다.",
+					"mbti": "SP",
+					"effects": {
+						"reason": -30,
+						"echo": -5
+					},
+					"event": "meet_stranger",
+					"seed": null
+				},
+				{
+					"path": "hard",
+					"summary": "정보 광부를 저지하고, 광채 나는 스크린의 위험성을 경고한다.",
+					"mbti": "NJ",
+					"effects": {
+						"reason": 20,
+						"echo": 10
+					},
+					"reward": [
+						"move_range_up"
+					],
+					"seed": null
+				},
+				{
+					"path": "gold",
+					"summary": "정보 광부에게 돈을 주고 광채 나는 스크린을 포기하게 만든다.",
+					"mbti": "EN",
+					"require": {
+						"stat": "gold",
+						"op": ">=",
+						"value": 150
+					},
+					"effects": {
+						"gold": -150,
+						"echo": 5
+					},
+					"reward": [
+						"cooldown_reset"
+					],
+					"seed": null
+				}
+			],
+			"after_story": 5,
+			"before_story": 9
+		},
+		{
+			"id": "card_05_parts_box_return",
+			"kind": "callback",
+			"slot": "C",
+			"title": {
+				"korean": "뒤섞인 부품의 오작동"
+			},
+			"summary": "부품 사냥꾼과의 거래로 얻은 뒤섞인 부품 상자에서 정보 유출이 시작된다.",
+			"bridge": "앞 방 끝: 카이 씨가 스크린 분리의 중요성을 언급하지만, 네온 간판은 '분리는 고통이다'고 흔들린다. / 카드: 과거 A_plant 카드에서 구매했던 뒤섞인 부품 상자가 갑자기 오작동하며 주변을 혼란스럽게 만든다. / 다음 방 시작: 네온 간판의 폭주와 함께 '분리할 차례'라는 결심이 서는 장면과 이어지는 이유: '위스퍼 웹'의 영향력이 계속되고 있음을 보여주며, 주인공의 쉬운 선택이 결국 더 큰 혼란을 야기했음을 강조한다.",
+			"people": [
+				"component_hunter",
+				"echo"
+			],
+			"tags": [
+				"parts_trade"
+			],
+			"intensity": "high",
+			"callback": {
+				"seed": "A_easy_path",
+				"min_rooms_after": 2
+			},
+			"choices": [
+				{
+					"path": "easy",
+					"summary": "오작동하는 부품을 강제로 끄고 주변에 추가 피해가 없기를 바란다.",
+					"mbti": "ST",
+					"effects": {
+						"community": -10
+					},
+					"reward": [
+						"defense_down"
+					],
+					"flag": "data_leak_exposed",
+					"seed": null
+				},
+				{
+					"path": "hard",
+					"summary": "위험을 무릅쓰고 오작동 부품을 해체하여 유출 정보를 역추적한다.",
+					"mbti": "NF",
+					"effects": {
+						"fighting": 10,
+						"echo": 5
+					},
+					"reward": [
+						"heal"
+					],
+					"flag": "rumor_spread",
+					"seed": null
+				}
+			],
+			"after_story": 5,
+			"before_story": 9
+		},
+		{
+			"id": "card_05_parts_box_hard_return",
+			"kind": "callback",
+			"slot": "C",
+			"title": {
+				"korean": "부품 사냥꾼의 불만"
+			},
+			"summary": "이전에 스크린 부품 판매를 막았던 부품 사냥꾼이 불만을 품고 길을 가로막는다.",
+			"bridge": "앞 방 끝: 카이 씨가 스크린 분리의 중요성을 언급하지만, 네온 간판은 '분리는 고통이다'고 흔들린다. / 카드: 과거 A_plant 카드에서 스크린 부품 판매를 저지했던 부품 사냥꾼이 불만을 품고 주인공의 길을 가로막는다. / 다음 방 시작: 네온 간판의 폭주와 함께 '분리할 차례'라는 결심이 서는 장면과 이어지는 이유: 사소한 개인적 갈등조차 주인공의 목표를 방해하는 요소가 되며, '위스퍼 웹'의 압력과 맞물려 주인공의 결심을 더욱 굳건하게 만든다.",
+			"people": [
+				"component_hunter",
+				"echo"
+			],
+			"tags": [
+				"parts_trade"
+			],
+			"intensity": "high",
+			"callback": {
+				"seed": "A_hard_path",
+				"min_rooms_after": 2
+			},
+			"choices": [
+				{
+					"path": "easy",
+					"summary": "부품 사냥꾼의 불만을 달래고, 그가 폐기장 심층부의 중요한 정보를 흘리게 유도한다.",
+					"mbti": "EP",
+					"effects": {
+						"reason": 10,
+						"gold": 50
+					},
+					"reward": [
+						"intelligence_up"
+					],
+					"flag": "obfuscated_info",
+					"seed": null
+				},
+				{
+					"path": "hard",
+					"summary": "부품 사냥꾼에게 현재 상황의 심각성을 설명하고, 함께 스크린 분리에 동참하도록 설득한다.",
+					"mbti": "IJ",
+					"effects": {
+						"community": 20,
+						"echo": 10
+					},
+					"event": "campsite",
+					"flag": "unexpected_alliance",
+					"seed": null
+				},
+				{
+					"path": "gold",
+					"summary": "부품 사냥꾼에게 돈을 주고, 안전한 우회로를 확보한다.",
+					"mbti": "IS",
+					"require": {
+						"stat": "gold",
+						"op": ">=",
+						"value": 100
+					},
+					"effects": {
+						"gold": -100,
+						"echo": 5
+					},
+					"reward": [
+						"move_range_up"
+					],
+					"flag": "obfuscated_info",
+					"seed": null
+				}
+			],
+			"after_story": 5,
+			"before_story": 9
+		},
+		{
+			"id": "card_05_damaged_shredder",
+			"kind": "normal",
+			"slot": "D",
+			"title": {
+				"korean": "훼손된 폐기물 분류기"
+			},
+			"summary": "폐기장 청소원이 관리하던 폐기물 분류기가 훼손되어 정보가 뒤섞인 잔해가 쏟아진다.",
+			"bridge": "앞 방 끝: 폐기장 전체가 거대한 스크린처럼 일렁이며, 네온 간판이 '분리하지 마라'는 메시지를 폭주시키는 상황이 이어진다. / 카드: 폐기물 분류기가 훼손되어 '위스퍼 웹'의 영향으로 정보가 뒤섞인 잔해가 쏟아지며 혼란을 가중시킨다. / 다음 방 시작: '위스퍼 웹'이 거대한 홀로그램처럼 나타나 주인공에게 분노하는 보스전과 이어지는 이유: 최종 보스와의 대결 직전에 그 혼란의 규모를 실감하게 하는 물리적 장애물을 상징하며, 이러한 무질서가 최종 보스의 위협을 더욱 고조시킨다.",
+			"people": [
+				"cleaner",
+				"echo"
+			],
+			"tags": [
+				"waste_shredder"
+			],
+			"intensity": "high",
+			"leaning": "fighting+",
+			"choices": [
+				{
+					"path": "easy",
+					"summary": "훼손된 분류기를 임시방편으로 고치고 작업을 속행한다.",
+					"mbti": "FT",
+					"effects": {
+						"fighting": 30,
+						"echo": -5
+					},
+					"event": "campsite",
+					"seed": null
+				},
+				{
+					"path": "hard",
+					"summary": "분류기의 잔해 속에서 '위스퍼 웹'의 흔적을 찾아내 제거한다.",
+					"mbti": "SN",
+					"effects": {
+						"fighting": -20,
+						"echo": 10
+					},
+					"reward": [
+						"stun"
+					],
+					"seed": null
+				},
+				{
+					"path": "lock",
+					"summary": "분류기의 설계도를 분석하여 효율적인 복구 방안을 제시한다.",
+					"mbti": "IN",
+					"require": {
+						"mbti": "IN"
+					},
+					"effects": {
+						"reason": 10,
+						"echo": 5
+					},
+					"reward": [
+						"intelligence_up"
+					],
+					"seed": null
+				}
+			],
+			"after_story": 9,
+			"before_story": 15
+		},
+		{
+			"id": "card_05_stolen_plans",
+			"kind": "normal",
+			"slot": "D",
+			"title": {
+				"korean": "유출된 설계도의 유혹"
+			},
+			"summary": "정보 광부가 '위스퍼 웹'의 것으로 추정되는 시스템 설계도를 건넨다.",
+			"bridge": "앞 방 끝: 네온 간판이 폭주하며 '모든 것을 합쳐라'는 메시지를 쏟아내는 상황이 이어진다. / 카드: 정보 광부는 그 혼란 속에서 '위스퍼 웹'의 것으로 추정되는 시스템 설계도를 제시하며 주인공을 유혹한다. / 다음 방 시작: '위스퍼 웹'이 거대한 홀로그램처럼 나타나 주인공에게 분노하는 보스전과 이어지는 이유: 최종 보스전을 앞두고 주인공의 판단력을 시험하는 마지막 기회가 될 수 있으며, 이러한 설계도 유출 시도가 '위스퍼 웹'의 계획을 흔들 수 있었음을 암시한다.",
+			"people": [
+				"data_miner",
+				"echo"
+			],
+			"tags": [
+				"stolen_plans"
+			],
+			"intensity": "high",
+			"leaning": "reason+",
+			"choices": [
+				{
+					"path": "easy",
+					"summary": "정보 광부로부터 설계도를 받아내 분석한다.",
+					"mbti": "TP",
+					"effects": {
+						"reason": 30,
+						"echo": -5
+					},
+					"reward": [
+						"intelligence_up"
+					],
+					"seed": null
+				},
+				{
+					"path": "hard",
+					"summary": "정보 광부의 거래를 거부하고, 설계도의 위험성을 경고하며 폐기한다.",
+					"mbti": "FJ",
+					"effects": {
+						"reason": -20,
+						"echo": 10
+					},
+					"reward": [
+						"defense_up"
+					],
+					"seed": null
+				},
+				{
+					"path": "stat",
+					"summary": "설계도를 공동체에 공개하여 '위스퍼 웹'의 위협을 알린다.",
+					"mbti": "EF",
+					"require": {
+						"stat": "community",
+						"op": ">=",
+						"value": 40
+					},
+					"effects": {
+						"community": 10,
+						"echo": 5
+					},
+					"reward": [
+						"move_range_up"
+					],
+					"seed": null
+				}
+			],
+			"after_story": 9,
+			"before_story": 15
+		},
+		{
+			"id": "card_05_system_overload",
+			"kind": "normal",
+			"slot": "D",
+			"title": {
+				"korean": "폐기장 심층부의 폭주"
+			},
+			"summary": "절박한 주민이 '위스퍼 웹'의 영향으로 폭주하는 폐기장 심층부의 스크린 앞에서 절규한다.",
+			"bridge": "앞 방 끝: 네온 간판이 폭주하며 '합치라'는 메시지를 쏟아내는 상황이 이어진다. / 카드: 그 상황이 더욱 심화되어 폐기장 심층부 전체의 스크린이 통제 불능으로 폭주한다. / 다음 방 시작: '위스퍼 웹'이 거대한 홀로그램처럼 나타나 주인공에게 분노하는 보스전과 이어지는 이유: 최종 보스와의 대결 직전에 그들의 압도적인 힘을 보여주며, 주인공이 맞서야 할 혼란의 규모를 실감하게 한다.",
+			"people": [
+				"desperate_resident",
+				"echo"
+			],
+			"tags": [
+				"system_overload"
+			],
+			"intensity": "high",
+			"leaning": "community-",
+			"choices": [
+				{
+					"path": "easy",
+					"summary": "폭주하는 스크린 사이를 피해 안전한 곳으로 몸을 숨긴다.",
+					"mbti": "IS",
+					"effects": {
+						"community": -30,
+						"echo": -5
+					},
+					"reward": [
+						"hp_down"
+					],
+					"seed": null
+				},
+				{
+					"path": "hard",
+					"summary": "폭주하는 스크린 중 '위스퍼 웹'의 핵심 시스템을 찾아 일시적으로 마비시킨다.",
+					"mbti": "EN",
+					"effects": {
+						"community": 20,
+						"echo": 10
+					},
+					"reward": [
+						"attack_up"
+					],
+					"seed": null
+				},
+				{
+					"path": "lock",
+					"summary": "주변의 다른 스크린을 연결하여 폭주하는 스크린의 과부하를 분산시킨다.",
+					"mbti": "ES",
+					"require": {
+						"mbti": "ES"
+					},
+					"effects": {
+						"reason": 10,
+						"echo": 5
+					},
+					"reward": [
+						"cooldown_reset"
+					],
+					"seed": null
+				}
+			],
+			"after_story": 9,
+			"before_story": 15
+		},
+		{
+			"id": "card_05_rumor_deal_return",
+			"kind": "callback",
+			"slot": "D",
+			"title": {
+				"korean": "거짓 정보의 역습"
+			},
+			"summary": "정보 행상인이 흘렸던 거짓 정보가 부메랑처럼 돌아와 불필요한 혼란을 야기한다.",
+			"bridge": "앞 방 끝: 네온 간판이 폭주하며 '분리할 차례'라는 결심을 더욱 확고히 하는 상황이 이어진다. / 카드: 과거 B_plant 카드에서 흘렸던 거짓 정보가 이제 부메랑처럼 돌아와 최종 보스전 직전에 주인공의 발목을 잡는 혼란을 야기한다. / 다음 방 시작: '위스퍼 웹'이 거대한 홀로그램처럼 나타나 주인공에게 분노하는 보스전과 이어지는 이유: 이러한 실책이 보스의 비난을 강화하는 근거가 될 수 있음을 암시하며, 주인공의 과거 선택이 현재에 미치는 영향을 보여준다.",
+			"people": [
+				"info_peddler",
+				"echo"
+			],
+			"tags": [
+				"info_brokerage"
+			],
+			"intensity": "high",
+			"callback": {
+				"seed": "B_easy_path",
+				"min_rooms_after": 2
+			},
+			"choices": [
+				{
+					"path": "easy",
+					"summary": "거짓 정보를 무시하고 다음 목표로 나아간다.",
+					"mbti": "IF",
+					"effects": {
+						"reason": -10
+					},
+					"reward": [
+						"move_range_down"
+					],
+					"flag": "false_signal_trap",
+					"seed": null
+				},
+				{
+					"path": "hard",
+					"summary": "거짓 정보의 출처를 역추적하여 근원을 차단한다.",
+					"mbti": "ET",
+					"effects": {
+						"reason": 10,
+						"echo": 5
+					},
+					"reward": [
+						"intelligence_up"
+					],
+					"flag": "system_exploit_clue",
+					"seed": null
+				}
+			],
+			"after_story": 9,
+			"before_story": 15
+		},
+		{
+			"id": "card_05_rumor_deal_hard_return",
+			"kind": "callback",
+			"slot": "D",
+			"title": {
+				"korean": "은밀한 지원 요청"
+			},
+			"summary": "이전에 주인공이 정보를 보호해주었던 폐기장 주민들이 '위스퍼 웹'에 맞설 은밀한 지원을 요청한다.",
+			"bridge": "앞 방 끝: 네온 간판이 폭주하며 '분리할 차례'라는 결심을 더욱 확고히 하는 상황이 이어진다. / 카드: 과거 B_plant 카드에서 도움을 주었던 주민들이 최종 보스전을 앞두고 '위스퍼 웹'에 맞설 은밀한 지원을 제안한다. / 다음 방 시작: '위스퍼 웹'이 거대한 홀로그램처럼 나타나 주인공에게 분노하는 보스전과 이어지는 이유: 주인공의 노력이 헛되지 않았음을 보여주는 동시에, 최종 대결에 필요한 작은 희망의 불씨가 되어 보스의 맹목적인 '연결' 주장에 대한 위협이 될 수 있음을 암시한다.",
+			"people": [
+				"resident_ally",
+				"echo"
+			],
+			"tags": [
+				"info_brokerage"
+			],
+			"intensity": "calm",
+			"callback": {
+				"seed": "B_hard_path",
+				"min_rooms_after": 2
+			},
+			"choices": [
+				{
+					"path": "easy",
+					"summary": "주민들의 은밀한 지원을 받아들여 최종 보스에게 혼란을 준다.",
+					"mbti": "IS",
+					"effects": {
+						"fighting": 10
+					},
+					"reward": [
+						"attack_up"
+					],
+					"flag": "resource_diversion",
+					"seed": null
+				},
+				{
+					"path": "hard",
+					"summary": "주민들에게 직접적인 지원 대신, 주변 정보를 수집해 달라고 요청한다.",
+					"mbti": "EN",
+					"effects": {
+						"community": 20,
+						"echo": 10
+					},
+					"reward": [
+						"move_range_up"
+					],
+					"flag": "local_support_network",
+					"seed": null
+				},
+				{
+					"path": "gold",
+					"summary": "주민들에게 보상을 제공하고, 더욱 강력한 지원을 요청한다.",
+					"mbti": "FJ",
+					"require": {
+						"stat": "gold",
+						"op": ">=",
+						"value": 100
+					},
+					"effects": {
+						"gold": -100,
+						"echo": 5
+					},
+					"reward": [
+						"attack_up"
+					],
+					"flag": "resource_diversion",
+					"seed": null
+				}
+			],
+			"after_story": 9,
+			"before_story": 15
+		}
+	]
+}

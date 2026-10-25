@@ -1,0 +1,132 @@
+{
+	"id": "card_03_stolen_prototype",
+	"title": {
+		"korean": "도난당한 프로토타입"
+	},
+	"tags": "prototype",
+	"intensity": "high",
+	"after_story": 9,
+	"before_story": 15,
+	"leaning": "reason+",
+	"background_tags": [
+		"workshop",
+		"artifact_dealer",
+		"prototype",
+		"escape",
+		"pursuit"
+	],
+	"dialogue": [
+		{
+			"speaker": "narrator",
+			"content": {
+				"korean": "전광판 작업실 저편에서, 유물상인 한 명이 비밀 프로토타입 부품을 손에 쥐고 달아나려 하고 있다."
+			}
+		},
+		{
+			"speaker": "artifact_dealer",
+			"content": {
+				"korean": "이건 아무도 모르는 귀한 물건이야. 내가 가져가야지!"
+			}
+		},
+		{
+			"speaker": "lin",
+			"content": {
+				"korean": "저 부품이 중요해 보이는데, 놓치면 안 돼요!"
+			}
+		}
+	],
+	"choices": [
+		{
+			"text": {
+				"korean": "유물상인을 그대로 두고 다른 할 일을 찾는다"
+			},
+			"mbti": "SJ",
+			"effects": {
+				"reason": 30,
+				"echo": -5
+			},
+			"reward": [
+				"move_range_down"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "유물상인은 작업실 틈새로 사라지고, 부품은 그의 손에 들린 채였다."
+					}
+				},
+				{
+					"speaker": "lin",
+					"content": {
+						"korean": "중요한 기회를 놓친 건 아닐까요?"
+					}
+				}
+			]
+		},
+		{
+			"text": {
+				"korean": "직접 유물상인을 추격하여 부품을 회수한다"
+			},
+			"mbti": "NF",
+			"effects": {
+				"fighting": 20,
+				"echo": 10
+			},
+			"reward": [
+				"attack_up"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "유물상인을 따라 작업실을 가로질러 달려간다. 부품이 그의 손에서 벗겨진다."
+					}
+				},
+				{
+					"speaker": "lin",
+					"content": {
+						"korean": "잘했어요! 중요한 부품을 되찾았어요."
+					}
+				}
+			]
+		},
+		{
+			"text": {
+				"korean": "유물상인에게 부품의 위험성을 경고하고 설득한다"
+			},
+			"mbti": "FP",
+			"require": {
+				"mbti": "FP"
+			},
+			"effects": {
+				"community": 10
+			},
+			"event": "minigame_timing",
+			"seed": null,
+			"result": [
+				{
+					"speaker": "artifact_dealer",
+					"content": {
+						"korean": "위험하다니... 정말인가요? 그럼 이건 잠시 보관해두죠."
+					}
+				},
+				{
+					"speaker": "lin",
+					"content": {
+						"korean": "강압적이지 않게 문제를 해결할 수 있었네요."
+					}
+				}
+			],
+			"event_intro": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "유물상인이 부품을 놓치지 않으려 한다. 그의 손에서 부품을 뺏을 타이밍을 찾아야 한다."
+					}
+				}
+			]
+		}
+	]
+}

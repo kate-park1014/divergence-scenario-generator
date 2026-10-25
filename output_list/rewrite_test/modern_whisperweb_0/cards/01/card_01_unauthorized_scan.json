@@ -1,0 +1,186 @@
+{
+	"id": "card_01_unauthorized_scan",
+	"title": {
+		"korean": "불법 스캔 장비"
+	},
+	"tags": [
+		"scan"
+	],
+	"intensity": "high",
+	"after_story": 5,
+	"before_story": 9,
+	"leaning": "reason-",
+	"background_tags": [
+		"폐기장 입구",
+		"숨겨진 장비",
+		"루의 초조함",
+		"어두운 골목",
+		"낡은 스크린"
+	],
+	"dialogue": [
+		{
+			"speaker": "narrator",
+			"content": {
+				"korean": "폐기장 입구 한쪽에서 스캐너 조작자 루가 불법 스캔 장비를 허둥지둥 숨기려 하고 있었다."
+			}
+		},
+		{
+			"speaker": "scanner_operator",
+			"content": {
+				"korean": "젠장, 누가 오는 거야! 이거 들키면 큰일인데…!"
+			}
+		},
+		{
+			"speaker": "echo",
+			"content": {
+				"korean": "루 아저씨가 뭔가 불법적인 일을 하고 있는 것 같아요. 저 장비가 수상해요."
+			}
+		}
+	],
+	"choices": [
+		{
+			"text": {
+				"korean": "스캐너 조작자의 불법 행위를 묵인하고 조용히 지나간다"
+			},
+			"mbti": "ES",
+			"effects": {
+				"reason": -20,
+				"community": -10,
+				"hp_down": 10,
+				"echo": -5
+			},
+			"reward": [
+				"hp_down"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "루는 당신이 묵인한 것에 안도하며 얼른 장비를 숨겼다. 등 뒤에서 불안한 시선이 느껴졌다."
+					}
+				},
+				{
+					"speaker": "echo",
+					"content": {
+						"korean": "괜히 엮였다간 더 골치 아파질 수도 있었을 거예요."
+					}
+				}
+			]
+		},
+		{
+			"text": {
+				"korean": "스캐너 조작자의 불법 스캔 장비를 관계 당국에 제보한다"
+			},
+			"mbti": "TJ",
+			"effects": {
+				"community": 20,
+				"reason": 10,
+				"echo": 10
+			},
+			"reward": [
+				"stun"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "루는 경악했지만, 당신의 제보로 관계 당국이 출동하여 그의 장비를 압수했다."
+					}
+				},
+				{
+					"speaker": "scanner_operator",
+					"content": {
+						"korean": "이럴 수가! 너, 너 감히…!"
+					}
+				},
+				{
+					"speaker": "echo",
+					"content": {
+						"korean": "잘했어요! 이런 불법적인 일은 막아야 해요!"
+					}
+				}
+			]
+		},
+		{
+			"text": {
+				"korean": "스캔 장비에 대한 정보를 얻기 위해 루에게 비용을 지불한다"
+			},
+			"mbti": "FP",
+			"require": {
+				"stat": "gold",
+				"op": ">=",
+				"value": 100
+			},
+			"effects": {
+				"gold": -100,
+				"intelligence": 10
+			},
+			"reward": [
+				"intelligence_up"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "루는 당신의 돈에 솔깃해하며 스캔 장비의 기능과 폐기장 내 정보 흐름에 대해 알려주었다."
+					}
+				},
+				{
+					"speaker": "scanner_operator",
+					"content": {
+						"korean": "흐음, 역시 돈이 최고지. 좋아, 특별히 알려줄게."
+					}
+				},
+				{
+					"speaker": "echo",
+					"content": {
+						"korean": "이 정보, 우리가 뭘 알아내는 데 도움이 될 것 같아요!"
+					}
+				}
+			]
+		}
+	],
+	"forced": [
+		{
+			"text": {
+				"korean": "{actor}이(가) 루의 장비를 망가뜨려 더 이상 불법 스캔을 못하게 한다"
+			},
+			"mbti": "IN",
+			"require": {
+				"mbti": "IN"
+			},
+			"chance": 0.3,
+			"effects": {
+				"fighting": 30,
+				"echo": -10
+			},
+			"reward": [
+				"attack_up"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "{actor}이(가) 갑자기 루의 스캔 장비를 발로 밟아버렸다. 루는 망연자실했다."
+					}
+				},
+				{
+					"speaker": "scanner_operator",
+					"content": {
+						"korean": "아악! 내 장비! 감히 무슨 짓을…!"
+					}
+				},
+				{
+					"speaker": "echo",
+					"content": {
+						"korean": "조금 과격했지만, 확실하게 방해했네요."
+					}
+				}
+			]
+		}
+	]
+}

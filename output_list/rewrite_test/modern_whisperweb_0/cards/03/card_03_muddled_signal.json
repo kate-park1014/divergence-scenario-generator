@@ -1,0 +1,166 @@
+{
+	"id": "card_03_muddled_signal",
+	"title": {
+		"korean": "뒤죽박죽 신호"
+	},
+	"tags": "signal",
+	"intensity": "calm",
+	"after_story": 3,
+	"before_story": 5,
+	"leaning": "community-",
+	"background_tags": [
+		"workshop",
+		"technician",
+		"console",
+		"spark",
+		"messy_cables"
+	],
+	"dialogue": [
+		{
+			"speaker": "narrator",
+			"content": {
+				"korean": "작업실 한구석에서 기술 보조 한 명이 뒤섞인 신호음이 나는 콘솔 앞에서 골머리를 앓고 있다."
+			}
+		},
+		{
+			"speaker": "technician",
+			"content": {
+				"korean": "이 신호가 자꾸 엉키네요. 분명히 잡아냈는데 또다시 사라져요."
+			}
+		},
+		{
+			"speaker": "lin",
+			"content": {
+				"korean": "저 신호가 잡히지 않으면 또 어디로 정보가 튈지 몰라요."
+			}
+		}
+	],
+	"choices": [
+		{
+			"text": {
+				"korean": "이 혼란을 이용해 이득을 취하고 자리를 뜬다"
+			},
+			"mbti": "IJ",
+			"effects": {
+				"community": -30,
+				"gold": 100
+			},
+			"event": "minigame_cup",
+			"seed": "quick_gain",
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "잠시 후, 린이 당신의 행동에 실망한 듯 고개를 젓는다."
+					}
+				},
+				{
+					"speaker": "lin",
+					"content": {
+						"korean": "지금은 모두가 서로를 도울 때라고 생각했어요."
+					}
+				}
+			],
+			"event_intro": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "콘솔 옆 빈 컵 세 개 중 하나를 고르라는 듯 기술 보조가 당신을 쳐다본다. 어디에 진짜 답이 있을까?"
+					}
+				}
+			]
+		},
+		{
+			"text": {
+				"korean": "기술 보조와 함께 신호 문제 해결에 동참한다"
+			},
+			"mbti": "EP",
+			"effects": {
+				"community": 30,
+				"echo": 10
+			},
+			"reward": [
+				"heal"
+			],
+			"seed": "shared_burden",
+			"result": [
+				{
+					"speaker": "technician",
+					"content": {
+						"korean": "도움을 주시니 정말 든든하네요! 같이 해봐요."
+					}
+				},
+				{
+					"speaker": "lin",
+					"content": {
+						"korean": "그렇게 함께 노력하면 분명 해결책을 찾을 수 있을 거예요."
+					}
+				}
+			]
+		},
+		{
+			"text": {
+				"korean": "돈을 써서 전문 신호 분석 장비를 빌려준다"
+			},
+			"mbti": "NT",
+			"require": {
+				"stat": "gold",
+				"op": ">=",
+				"value": 150
+			},
+			"effects": {
+				"gold": -150,
+				"echo": 5
+			},
+			"reward": [
+				"stun"
+			],
+			"seed": "shared_burden",
+			"result": [
+				{
+					"speaker": "technician",
+					"content": {
+						"korean": "이런 장비가 있었다니! 이걸로 좀 더 정확하게 잡을 수 있을 것 같아요."
+					}
+				},
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "기술 보조는 장비를 능숙하게 연결하며 신호 분석을 시작했다."
+					}
+				}
+			]
+		},
+		{
+			"text": {
+				"korean": "적극적으로 상황을 정리하고 새로운 대안을 제시한다"
+			},
+			"mbti": "NF",
+			"require": {
+				"mbti": "NF"
+			},
+			"effects": {
+				"fighting": 10,
+				"echo": 15
+			},
+			"reward": [
+				"attack_up"
+			],
+			"seed": "quick_gain",
+			"result": [
+				{
+					"speaker": "technician",
+					"content": {
+						"korean": "아, 그런 방법도 있군요! 한번 시도해 볼 가치가 있어요."
+					}
+				},
+				{
+					"speaker": "lin",
+					"content": {
+						"korean": "주저앉아 있을 때가 아니죠. 당신의 리더십이 필요해요."
+					}
+				}
+			]
+		}
+	]
+}

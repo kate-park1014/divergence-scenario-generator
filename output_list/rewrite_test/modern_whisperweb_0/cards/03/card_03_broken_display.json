@@ -1,0 +1,165 @@
+{
+	"id": "card_03_broken_display",
+	"title": {
+		"korean": "파손된 디스플레이"
+	},
+	"tags": "display",
+	"intensity": "calm",
+	"after_story": 1,
+	"before_story": 3,
+	"leaning": "reason-",
+	"background_tags": [
+		"workshop",
+		"large display",
+		"mechanic",
+		"junk",
+		"bright_light"
+	],
+	"dialogue": [
+		{
+			"speaker": "narrator",
+			"content": {
+				"korean": "전광판 작업실 한가운데, 정비공 한 명이 커다란 깨진 디스플레이를 낑낑대며 끌고 있다."
+			}
+		},
+		{
+			"speaker": "mechanic",
+			"content": {
+				"korean": "이거 너무 무거워서 폐기장으로 옮기기 힘드네요. 잘못 건드리면 정보가 또 새어 나갈 텐데..."
+			}
+		},
+		{
+			"speaker": "lin",
+			"content": {
+				"korean": "조심해야 해요. 여기서 정보가 새어 나가면 또 다른 가짜 뉴스가 될 수 있어요."
+			}
+		}
+	],
+	"choices": [
+		{
+			"text": {
+				"korean": "정비공의 경고를 무시하고 지나간다"
+			},
+			"mbti": "ST",
+			"effects": {
+				"reason": -30,
+				"echo": -5
+			},
+			"reward": [
+				"move_range_up"
+			],
+			"seed": "ignored_warning",
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "정비공은 여전히 디스플레이와 씨름하고 있다. 린은 못마땅한 표정으로 당신을 바라본다."
+					}
+				},
+				{
+					"speaker": "lin",
+					"content": {
+						"korean": "저렇게 방치하면 문제가 더 커질 텐데..."
+					}
+				}
+			]
+		},
+		{
+			"text": {
+				"korean": "정비공의 대형 디스플레이 처리 작업을 직접 돕는다"
+			},
+			"mbti": "NF",
+			"effects": {
+				"community": 30,
+				"echo": 10
+			},
+			"reward": [
+				"shield"
+			],
+			"seed": "assisted_worker",
+			"result": [
+				{
+					"speaker": "mechanic",
+					"content": {
+						"korean": "오, 정말 감사합니다! 덕분에 훨씬 수월해졌어요."
+					}
+				},
+				{
+					"speaker": "lin",
+					"content": {
+						"korean": "힘들었을 텐데, 잘했어요. 덕분에 큰 혼란을 막았을 수도 있어요."
+					}
+				}
+			]
+		},
+		{
+			"text": {
+				"korean": "돈을 주고 정비공에게 빠르게 폐기해달라고 요청한다"
+			},
+			"mbti": "TJ",
+			"require": {
+				"stat": "gold",
+				"op": ">=",
+				"value": 100
+			},
+			"effects": {
+				"gold": -100,
+				"echo": 5
+			},
+			"reward": [
+				"intelligence_up"
+			],
+			"seed": "assisted_worker",
+			"result": [
+				{
+					"speaker": "mechanic",
+					"content": {
+						"korean": "이 정도면 제가 따로 사람을 불러서 빠르게 처리하죠. 감사합니다!"
+					}
+				},
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "정비공은 재빨리 폐기 절차를 밟기 위해 연락을 취했다."
+					}
+				}
+			]
+		},
+		{
+			"text": {
+				"korean": "디스플레이의 파손된 부분을 대담하게 직접 확인한다"
+			},
+			"mbti": "EP",
+			"require": {
+				"mbti": "EP"
+			},
+			"effects": {
+				"fighting": 10
+			},
+			"event": "meet_stranger",
+			"seed": "ignored_warning",
+			"result": [
+				{
+					"speaker": "mechanic",
+					"content": {
+						"korean": "위험해요! 잘못 건드리면 시스템이 오작동할 수 있어요."
+					}
+				},
+				{
+					"speaker": "lin",
+					"content": {
+						"korean": "무모한 행동은 상황을 더 악화시킬 수 있어요."
+					}
+				}
+			],
+			"event_intro": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "디스플레이 옆에 서 있던 낯선 사람이 흥미로운 눈빛으로 당신을 지켜본다."
+					}
+				}
+			]
+		}
+	]
+}

@@ -1,0 +1,178 @@
+{
+	"id": "card_02_rusty_scanner",
+	"title": {
+		"korean": "녹슨 스캐너"
+	},
+	"tags": "scanner",
+	"intensity": "calm",
+	"after_story": 1,
+	"before_story": 3,
+	"leaning": "fighting+",
+	"background_tags": [
+		"makeshift shop",
+		"piles of junk",
+		"old signboards",
+		"negotiating voices",
+		"dimly lit corner"
+	],
+	"dialogue": [
+		{
+			"speaker": "narrator",
+			"content": {
+				"korean": "닥스가 스크린 분석 장비를 점검하다 멈칫했다."
+			}
+		},
+		{
+			"speaker": "narrator",
+			"content": {
+				"korean": "필요한 부품이 보이지 않았다."
+			}
+		},
+		{
+			"speaker": "dax",
+			"content": {
+				"korean": "이런, 스캐너 부품이 하나 빠졌잖아! 저기, 주인 양반!"
+			}
+		},
+		{
+			"speaker": "dax",
+			"content": {
+				"korean": "혹시 녹슨 스캐너 부품 없으신가요?"
+			}
+		},
+		{
+			"speaker": "local_entrepreneur",
+			"content": {
+				"korean": "아하, 그 부품 말인가? 마침 내가 딱 하나 가지고 있지."
+			}
+		},
+		{
+			"speaker": "local_entrepreneur",
+			"content": {
+				"korean": "물론 공짜는 아니지, 흥정해야지."
+			}
+		}
+	],
+	"choices": [
+		{
+			"text": {
+				"korean": "상인에게 부품을 빌려달라고 설득하여 잠시 사용권을 얻는다."
+			},
+			"mbti": "EN",
+			"effects": {
+				"fighting": 20,
+				"echo": 5,
+				"gold": 50
+			},
+			"event": "minigame_cup",
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "당신의 설득에 상인은 마지못해 부품을 빌려주었다."
+					}
+				},
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "닥스는 서둘러 장비를 조립했다."
+					}
+				},
+				{
+					"speaker": "dax",
+					"content": {
+						"korean": "간신히 빌렸네. 아무래도 눈치를 보며 사용해야 할 것 같아."
+					}
+				}
+			],
+			"event_intro": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "상인은 흥미로운 제안을 했다. 낡은 컵 세 개 중"
+					}
+				},
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "부품이 든 컵을 맞추면 빌려주겠다고."
+					}
+				}
+			]
+		},
+		{
+			"text": {
+				"korean": "직접 폐기장을 뒤져 상인이 가진 것과 비슷한 부품을 찾는다."
+			},
+			"mbti": "IS",
+			"effects": {
+				"fighting": -20,
+				"echo": -5
+			},
+			"reward": [
+				"move_range_down"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "당신은 먼지 쌓인 폐기장 구석을 뒤졌다."
+					}
+				},
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "닥스는 초조하게 당신을 기다렸다."
+					}
+				},
+				{
+					"speaker": "dax",
+					"content": {
+						"korean": "시간이 없는데… 너무 돌아가는 방법 아니겠어?"
+					}
+				}
+			]
+		},
+		{
+			"text": {
+				"korean": "상인에게 웃돈을 주고 즉시 부품을 구매하여 시간을 단축한다."
+			},
+			"mbti": "IN",
+			"require": {
+				"stat": "gold",
+				"op": ">=",
+				"value": 80
+			},
+			"effects": {
+				"gold": -80,
+				"reason": -5
+			},
+			"reward": [
+				"move_range_up"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "돈을 건네자 상인은 만족하며 부품을 내주었다."
+					}
+				},
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "닥스는 즉시 스캐너를 연결했다."
+					}
+				},
+				{
+					"speaker": "dax",
+					"content": {
+						"korean": "깔끔하게 해결됐군. 역시 돈이 최고야. 이제 분석을 시작할 수 있겠어."
+					}
+				}
+			]
+		}
+	]
+}

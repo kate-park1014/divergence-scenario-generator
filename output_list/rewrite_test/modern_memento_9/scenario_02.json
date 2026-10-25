@@ -1,0 +1,464 @@
+{
+  "scenario_id": "modern_memento_9_02",
+  "order": 2,
+  "act": "rising",
+  "theme": "modern",
+  "actors": {
+    "dax": {
+      "id": "mon_08d5b43e-f9ab-4469-9064-855e170b0cdc",
+      "name": {
+        "korean": "닥스",
+        "english": "Dax",
+        "japanese": "ダックス",
+        "chinese": "达克斯",
+        "french": "Dax",
+        "spanish": "Dax",
+        "vietnamese": "Dax",
+        "thai": "แด็กซ์",
+        "hindi": "डैक्स"
+      },
+      "description": "",
+      "face_image_url": "https://imagedelivery.net/WTEqQNGFb-l-IHS6IGnzUQ/84bb11db-6eb4-4500-d274-222e8b100100/public",
+      "battle_sprite_url": "https://imagedelivery.net/WTEqQNGFb-l-IHS6IGnzUQ/5d325a75-bd91-4758-7b3f-ad9a97e52700/public",
+      "role": {
+        "korean": "뒷골목 순찰자"
+      }
+    },
+    "bex": {
+      "id": "mon_74e24324-3f9a-4d44-9611-1da33b654ca1",
+      "name": {
+        "korean": "벡스",
+        "english": "Bex",
+        "japanese": "ベックス",
+        "chinese": "贝克斯",
+        "french": "Bex",
+        "spanish": "Bex",
+        "vietnamese": "Bex",
+        "thai": "เบ็กซ์",
+        "hindi": "बेक्स"
+      },
+      "description": "",
+      "face_image_url": "https://imagedelivery.net/WTEqQNGFb-l-IHS6IGnzUQ/09dae190-ff6b-4a9d-b656-e1a2b896aa00/public",
+      "battle_sprite_url": "https://imagedelivery.net/WTEqQNGFb-l-IHS6IGnzUQ/5cc3c77f-72e1-416e-b346-31889b3b9300/public",
+      "role": {
+        "korean": "정보상"
+      }
+    }
+  },
+  "boss": {
+    "pool_id": "random_boss",
+    "role": {
+      "korean": "네온 수리공"
+    }
+  },
+  "rooms": [
+    {
+      "id": 1,
+      "dialogue": [
+        {
+          "speaker": "narrator",
+          "type": "speech",
+          "content": {
+            "korean": "네온 간판 거리의 빛이 바래고, 사람들 사이에 존재했던 연결의 흔적이 희미해진다."
+          }
+        },
+        {
+          "spot": [
+            10,
+            2
+          ],
+          "duration_ms": 500,
+          "action": "enter",
+          "type": "direction",
+          "speaker": "dax"
+        },
+        {
+          "type": "speech",
+          "content": {
+            "korean": "멈춰요! 당신 때문에 모두가 기억을 잃어가고 있어요."
+          },
+          "emotion": "sad",
+          "speaker": "dax"
+        },
+        {
+          "emotion": "base",
+          "type": "speech",
+          "speaker": "character_any",
+          "content": {
+            "korean": "기억을 잃는다고요?"
+          }
+        },
+        {
+          "emotion": "sad",
+          "type": "speech",
+          "speaker": "dax",
+          "content": {
+            "korean": "이 실 조각들 때문에 사람들이 자꾸 뭔가를 잊어버려요. 더 이상 끊으면 안 됩니다."
+          }
+        },
+        {
+          "action": "enter",
+          "speaker": "bex",
+          "duration_ms": 500,
+          "type": "direction",
+          "spot": [
+            9,
+            3
+          ]
+        },
+        {
+          "emotion": "base",
+          "speaker": "bex",
+          "content": {
+            "korean": "아니요, 저 순찰자의 말에 현혹되지 마세요. 이 혼란은 일시적인 겁니다."
+          },
+          "type": "speech"
+        },
+        {
+          "content": {
+            "korean": "메멘토님께서 말씀하시길, 완전히 끊어내야만 고통이 끝난다고 했습니다. 그래야 진정한 해결이 찾아올 겁니다."
+          },
+          "type": "speech",
+          "speaker": "bex",
+          "emotion": "base"
+        },
+        {
+          "emotion": "base",
+          "type": "speech",
+          "speaker": "character_1",
+          "content": {
+            "korean": "정말일까..."
+          }
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "dialogue": [
+        {
+          "speaker": "narrator",
+          "content": {
+            "korean": "오팔빛 실이 또다시 끊어지자, 거리의 네온은 더욱 희미해지고 사람들의 단체 사진 속 한 명은 흔적도 없이 사라졌다."
+          },
+          "type": "speech"
+        },
+        {
+          "spot": [
+            10,
+            2
+          ],
+          "speaker": "dax",
+          "duration_ms": 500,
+          "action": "enter",
+          "type": "direction"
+        },
+        {
+          "speaker": "dax",
+          "emotion": "angry",
+          "content": {
+            "korean": "대체 무슨 짓을 하는 겁니까! 이대로 가다간 모든 것이 사라질 거예요!"
+          },
+          "type": "speech"
+        },
+        {
+          "emotion": "sad",
+          "speaker": "character_any",
+          "type": "speech",
+          "content": {
+            "korean": "사진 속 사람이 사라졌어..."
+          }
+        },
+        {
+          "duration_ms": 500,
+          "action": "enter",
+          "speaker": "bex",
+          "type": "direction",
+          "spot": [
+            9,
+            3
+          ]
+        },
+        {
+          "emotion": "base",
+          "speaker": "bex",
+          "type": "speech",
+          "content": {
+            "korean": "겁먹을 필요 없습니다. 진정한 기억은 끊어진 실 너머에 있습니다. 나약한 연결에 얽매이지 마세요."
+          }
+        },
+        {
+          "emotion": "sad",
+          "type": "speech",
+          "speaker": "character_2",
+          "content": {
+            "korean": "안 돼!"
+          }
+        }
+      ]
+    },
+    {
+      "dialogue": [
+        {
+          "type": "speech",
+          "content": {
+            "korean": "끊어진 오팔빛 실의 파편들이 거리를 떠다니고, 불쾌하게 왜곡된 멜로디가 스피커에서 흘러나온다."
+          },
+          "speaker": "narrator"
+        },
+        {
+          "content": {
+            "korean": "저 멜로디... 뭔가 불편해."
+          },
+          "emotion": "base",
+          "type": "speech",
+          "speaker": "character_any"
+        },
+        {
+          "spot": [
+            10,
+            2
+          ],
+          "type": "direction",
+          "duration_ms": 500,
+          "action": "enter",
+          "speaker": "dax"
+        },
+        {
+          "emotion": "angry",
+          "speaker": "dax",
+          "type": "speech",
+          "content": {
+            "korean": "이건 재앙입니다. 사람들이 서로를 알아보지 못하고 있어요. 당신의 행동 때문에..."
+          }
+        },
+        {
+          "duration_ms": 500,
+          "action": "enter",
+          "speaker": "bex",
+          "spot": [
+            9,
+            3
+          ],
+          "type": "direction"
+        },
+        {
+          "type": "speech",
+          "content": {
+            "korean": "이것이야말로 진정한 해방의 시작입니다. 불필요한 기억은 오히려 짐이 될 뿐이죠."
+          },
+          "emotion": "base",
+          "speaker": "bex"
+        },
+        {
+          "content": {
+            "korean": "점점 더 심해지잖아..."
+          },
+          "type": "speech",
+          "emotion": "sad",
+          "speaker": "character_3"
+        }
+      ],
+      "id": 5
+    },
+    {
+      "id": 9,
+      "dialogue": [
+        {
+          "speaker": "narrator",
+          "content": {
+            "korean": "네온 간판 거리의 풍경은 마치 지워진 그림처럼 변해갔다. 사람들의 눈빛에는 혼란만이 가득하다."
+          },
+          "type": "speech"
+        },
+        {
+          "speaker": "character_any",
+          "type": "speech",
+          "emotion": "sad",
+          "content": {
+            "korean": "아니야, 뭔가 단단히 잘못되고 있어."
+          }
+        },
+        {
+          "speaker": "dax",
+          "type": "direction",
+          "spot": [
+            10,
+            2
+          ],
+          "duration_ms": 500,
+          "action": "enter"
+        },
+        {
+          "speaker": "dax",
+          "emotion": "angry",
+          "content": {
+            "korean": "더는 안 됩니다! 이 길이 틀렸다는 걸 깨달아야 해요! 제발 멈춰요!"
+          },
+          "type": "speech"
+        },
+        {
+          "spot": [
+            9,
+            3
+          ],
+          "speaker": "bex",
+          "duration_ms": 500,
+          "type": "direction",
+          "action": "enter"
+        },
+        {
+          "content": {
+            "korean": "헛소리입니다. 당신은 메멘토님의 뜻을 따라야 합니다. 완벽한 기억을 위해서는 깨끗한 단절이 필요해요."
+          },
+          "emotion": "base",
+          "type": "speech",
+          "speaker": "bex"
+        },
+        {
+          "type": "direction",
+          "action": "exit",
+          "duration_ms": 500,
+          "direction": "down",
+          "speaker": "dax"
+        },
+        {
+          "content": {
+            "korean": "내가 막아야 해..."
+          },
+          "speaker": "dax",
+          "type": "speech",
+          "emotion": "sad"
+        },
+        {
+          "speaker": "character_4",
+          "type": "speech",
+          "emotion": "angry",
+          "content": {
+            "korean": "가지 마!"
+          }
+        }
+      ]
+    },
+    {
+      "id": 15,
+      "dialogue": [
+        {
+          "content": {
+            "korean": "네온 간판 거리의 마지막을 지키는 네온 수리공이 나타나, 빛을 잃은 간판들을 조용히 응시하고 있다."
+          },
+          "type": "speech",
+          "speaker": "narrator"
+        },
+        {
+          "type": "speech",
+          "content": {
+            "korean": "당신은 이 거리의 질서를 망치고 있다. 내가 막아서겠다."
+          },
+          "emotion": "base",
+          "speaker": "random_boss"
+        },
+        {
+          "content": {
+            "korean": "닥치고 비켜! 지금 우리는 모든 걸 되돌려야 해!"
+          },
+          "type": "speech",
+          "speaker": "character_any",
+          "emotion": "angry"
+        },
+        {
+          "content": {
+            "korean": "이미 깨진 빛은 되돌릴 수 없어. 단지 어둠이 더 깊어질 뿐."
+          },
+          "speaker": "random_boss",
+          "emotion": "base",
+          "type": "speech"
+        }
+      ],
+      "win_dialogue": [
+        {
+          "content": {
+            "korean": "네온 수리공을 쓰러뜨렸지만, 거리의 어둠은 여전하다. 오팔빛 실의 파편들은 여전히 불안하게 떠다닌다."
+          },
+          "type": "speech",
+          "speaker": "narrator"
+        },
+        {
+          "type": "speech",
+          "content": {
+            "korean": "이겼지만... 아무것도 나아지지 않았어."
+          },
+          "emotion": "sad",
+          "speaker": "character_any"
+        },
+        {
+          "speaker": "bex",
+          "spot": [
+            9,
+            3
+          ],
+          "type": "direction",
+          "action": "enter",
+          "duration_ms": 500
+        },
+        {
+          "speaker": "bex",
+          "type": "speech",
+          "emotion": "base",
+          "content": {
+            "korean": "겨우 이 정도에 만족할 건가요? 아직 멀었습니다. 진정한 완성을 위해서는 더 많은 것이 사라져야 합니다."
+          }
+        },
+        {
+          "content": {
+            "korean": "저 자의 말이 맞나..."
+          },
+          "type": "speech",
+          "speaker": "character_1",
+          "emotion": "base"
+        }
+      ],
+      "lose_dialogue": [
+        {
+          "content": {
+            "korean": "네온 수리공에게 패배하고, 거리는 더욱 깊은 혼돈 속으로 빠져든다."
+          },
+          "speaker": "narrator",
+          "type": "speech"
+        },
+        {
+          "speaker": "character_any",
+          "emotion": "sad",
+          "content": {
+            "korean": "이렇게 무너질 순 없어..."
+          },
+          "type": "speech"
+        },
+        {
+          "duration_ms": 500,
+          "speaker": "bex",
+          "type": "direction",
+          "spot": [
+            9,
+            3
+          ],
+          "action": "enter"
+        },
+        {
+          "emotion": "base",
+          "speaker": "bex",
+          "type": "speech",
+          "content": {
+            "korean": "보셨죠? 어설픈 저항은 무의미합니다. 메멘토님의 뜻에 따르는 것이 유일한 길입니다."
+          }
+        }
+      ]
+    }
+  ],
+  "prologue": {
+    "korean": [
+      "네온 골목길을 감싸던 오팔빛 실이 끊어지자, 거리의 표정은 차츰 흐려졌다.",
+      "빛을 잃은 간판처럼, 사람들의 기억 속 소중한 순간들이 지워져 갔다.",
+      "끊어진 실은 더 큰 혼란의 시작을 알리고 있었다."
+    ]
+  }
+}

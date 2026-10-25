@@ -1,0 +1,513 @@
+{
+  "scenario_id": "modern_nomos_7_04",
+  "order": 4,
+  "act": "rising",
+  "theme": "modern",
+  "actors": {
+    "dax": {
+      "id": "mon_08d5b43e-f9ab-4469-9064-855e170b0cdc",
+      "name": {
+        "korean": "닥스",
+        "english": "Dax",
+        "japanese": "ダックス",
+        "chinese": "达克斯",
+        "french": "Dax",
+        "spanish": "Dax",
+        "vietnamese": "Dax",
+        "thai": "แด็กซ์",
+        "hindi": "डैक्स"
+      },
+      "description": "",
+      "face_image_url": "https://imagedelivery.net/WTEqQNGFb-l-IHS6IGnzUQ/84bb11db-6eb4-4500-d274-222e8b100100/public",
+      "battle_sprite_url": "https://imagedelivery.net/WTEqQNGFb-l-IHS6IGnzUQ/5d325a75-bd91-4758-7b3f-ad9a97e52700/public",
+      "role": {
+        "korean": "기록관"
+      }
+    },
+    "lin": {
+      "id": "mon_d036a884-3dde-472c-9fe7-c4807643860f",
+      "name": {
+        "korean": "린",
+        "english": "Lin",
+        "japanese": "リン",
+        "chinese": "琳",
+        "french": "Lin",
+        "spanish": "Lin",
+        "vietnamese": "Lin",
+        "thai": "ลิน",
+        "hindi": "लिन"
+      },
+      "description": "",
+      "face_image_url": "https://imagedelivery.net/WTEqQNGFb-l-IHS6IGnzUQ/a095dd66-1857-4f44-68b0-2ece83006d00/public",
+      "battle_sprite_url": "https://imagedelivery.net/WTEqQNGFb-l-IHS6IGnzUQ/05b02694-f1ed-4e4c-b7ca-fb5b74a48900/public",
+      "role": {
+        "korean": "피해자"
+      }
+    }
+  },
+  "boss": {
+    "pool_id": "random_boss",
+    "role": {
+      "korean": "집행관"
+    }
+  },
+  "rooms": [
+    {
+      "dialogue": [
+        {
+          "type": "speech",
+          "content": {
+            "korean": "폐쇄된 중재소 재판정, 모든 판결이 내려지던 곳이 침묵에 잠겨 있다."
+          },
+          "speaker": "narrator"
+        },
+        {
+          "type": "speech",
+          "speaker": "narrator",
+          "content": {
+            "korean": "중재소 스피커에서 율법 관리인 노모스의 속삭임이 흘러나온다."
+          }
+        },
+        {
+          "content": {
+            "korean": "“마지막 오팔 핵을 봉인하면 모든 굴레에서 벗어날 것이다.”"
+          },
+          "type": "speech",
+          "speaker": "narrator"
+        },
+        {
+          "type": "speech",
+          "speaker": "character_any",
+          "content": {
+            "korean": "또 다시 들려오는 유혹이군."
+          }
+        },
+        {
+          "content": {
+            "korean": "불길한 예감이 들어."
+          },
+          "type": "speech",
+          "speaker": "character_1"
+        },
+        {
+          "type": "direction",
+          "spot": [
+            5,
+            1
+          ],
+          "action": "enter",
+          "duration_ms": 500,
+          "speaker": "dax"
+        },
+        {
+          "type": "speech",
+          "emotion": "angry",
+          "content": {
+            "korean": "안 됩니다! 제발, 더 이상 봉인하지 마십시오!"
+          },
+          "speaker": "dax"
+        },
+        {
+          "content": {
+            "korean": "이미 기록들은 뒤틀리고, 삶의 터전은 파괴되었습니다."
+          },
+          "speaker": "dax",
+          "type": "speech",
+          "emotion": "sad"
+        },
+        {
+          "content": {
+            "korean": "이 모든 혼란이 오팔 핵 봉인 때문이었군."
+          },
+          "type": "speech",
+          "speaker": "character_any"
+        },
+        {
+          "speaker": "character_2",
+          "content": {
+            "korean": "정말 충격적이야."
+          },
+          "type": "speech"
+        }
+      ],
+      "id": 1
+    },
+    {
+      "dialogue": [
+        {
+          "action": "enter",
+          "speaker": "lin",
+          "spot": [
+            5,
+            1
+          ],
+          "duration_ms": 500,
+          "type": "direction"
+        },
+        {
+          "type": "speech",
+          "emotion": "sad",
+          "content": {
+            "korean": "아아, 노모스! 당신의 진실은… 이런 것이었나요!"
+          },
+          "speaker": "lin"
+        },
+        {
+          "speaker": "lin",
+          "content": {
+            "korean": "그는 중재자가 아니었습니다! 오팔 핵을 봉인할 때마다 약속이 왜곡된다는 것을 알면서도!"
+          },
+          "type": "speech",
+          "emotion": "angry"
+        },
+        {
+          "type": "speech",
+          "speaker": "character_any",
+          "content": {
+            "korean": "그럼 노모스가 진실을 숨겼다는 말인가?"
+          }
+        },
+        {
+          "speaker": "character_3",
+          "content": {
+            "korean": "우리가 뭘 한 거지."
+          },
+          "type": "speech"
+        },
+        {
+          "emotion": "sad",
+          "type": "speech",
+          "content": {
+            "korean": "봉인된 약속은 사라지고, 사람들의 삶은 망가져 버립니다!"
+          },
+          "speaker": "lin"
+        },
+        {
+          "speaker": "character_any",
+          "type": "speech",
+          "content": {
+            "korean": "우리가 속은 것이 분명해."
+          }
+        },
+        {
+          "speaker": "character_4",
+          "type": "speech",
+          "content": {
+            "korean": "돌이킬 수 없는 걸까."
+          }
+        }
+      ],
+      "id": 3
+    },
+    {
+      "dialogue": [
+        {
+          "speaker": "narrator",
+          "type": "speech",
+          "content": {
+            "korean": "주인공은 망설임 끝에 오팔 핵에 손을 뻗는다."
+          }
+        },
+        {
+          "type": "direction",
+          "speaker": "dax",
+          "duration_ms": 500,
+          "spot": [
+            5,
+            1
+          ],
+          "action": "enter"
+        },
+        {
+          "emotion": "angry",
+          "type": "speech",
+          "speaker": "dax",
+          "content": {
+            "korean": "멈춰요! 이대로 가면 모든 것이 되돌릴 수 없게 됩니다!"
+          }
+        },
+        {
+          "speaker": "character_any",
+          "content": {
+            "korean": "어떻게 해야 할지 혼란스럽다."
+          },
+          "type": "speech"
+        },
+        {
+          "action": "enter",
+          "spot": [
+            5,
+            1
+          ],
+          "duration_ms": 500,
+          "speaker": "random_boss",
+          "type": "direction"
+        },
+        {
+          "type": "speech",
+          "content": {
+            "korean": "감히 재판정에서 율법을 거스르려는가!"
+          },
+          "speaker": "random_boss",
+          "emotion": "angry"
+        },
+        {
+          "type": "speech",
+          "speaker": "random_boss",
+          "content": {
+            "korean": "모든 것은 노모스의 의지 아래 질서가 유지된다."
+          },
+          "emotion": "base"
+        },
+        {
+          "type": "speech",
+          "speaker": "character_any",
+          "content": {
+            "korean": "이게 질서라고? 이 모든 혼란이?"
+          }
+        },
+        {
+          "content": {
+            "korean": "저지할 수밖에 없다. 더 이상의 혼란은 용납할 수 없다!"
+          },
+          "speaker": "random_boss",
+          "type": "speech",
+          "emotion": "angry"
+        },
+        {
+          "content": {
+            "korean": "막아선다!"
+          },
+          "speaker": "character_1",
+          "type": "speech"
+        }
+      ],
+      "id": 5
+    },
+    {
+      "dialogue": [
+        {
+          "type": "speech",
+          "speaker": "narrator",
+          "content": {
+            "korean": "오팔 핵을 봉인하려던 시도, 그 불완전한 결과가 재판정을 덮쳤다."
+          }
+        },
+        {
+          "type": "speech",
+          "content": {
+            "korean": "모든 판결 약속이 뒤집히며 사회는 격렬한 혼란 속으로 빠져든다."
+          },
+          "speaker": "narrator"
+        },
+        {
+          "content": {
+            "korean": "봐! 저기… 재판 기록들이 사라지고 있어!"
+          },
+          "speaker": "character_any",
+          "type": "speech"
+        },
+        {
+          "action": "enter",
+          "spot": [
+            5,
+            1
+          ],
+          "duration_ms": 500,
+          "type": "direction",
+          "speaker": "dax"
+        },
+        {
+          "type": "speech",
+          "emotion": "angry",
+          "content": {
+            "korean": "말씀드렸잖습니까! 봉인은 약속을 파괴할 뿐입니다!"
+          },
+          "speaker": "dax"
+        },
+        {
+          "emotion": "sad",
+          "speaker": "dax",
+          "content": {
+            "korean": "정의롭던 판결은 불의가 되고, 죄인들은 해방됩니다!"
+          },
+          "type": "speech"
+        },
+        {
+          "content": {
+            "korean": "우리가 돌이킬 수 없는 잘못을 저지른 것인가."
+          },
+          "speaker": "character_any",
+          "type": "speech"
+        },
+        {
+          "content": {
+            "korean": "이 절망적인 상황이라니."
+          },
+          "speaker": "character_2",
+          "type": "speech"
+        },
+        {
+          "type": "direction",
+          "speaker": "lin",
+          "duration_ms": 500,
+          "spot": [
+            5,
+            1
+          ],
+          "action": "enter"
+        },
+        {
+          "speaker": "lin",
+          "content": {
+            "korean": "파괴된 약속들 속에서, 희망은 사라져 갑니다."
+          },
+          "type": "speech",
+          "emotion": "sad"
+        }
+      ],
+      "id": 9
+    },
+    {
+      "win_dialogue": [
+        {
+          "speaker": "narrator",
+          "type": "speech",
+          "content": {
+            "korean": "집행관은 쓰러졌지만, 재판정의 혼란은 걷잡을 수 없이 커졌다."
+          }
+        },
+        {
+          "content": {
+            "korean": "집행관을 이겼지만, 판결은 뒤집히고 사회는 혼란에 빠졌어."
+          },
+          "speaker": "character_any",
+          "type": "speech"
+        },
+        {
+          "duration_ms": 500,
+          "spot": [
+            5,
+            1
+          ],
+          "speaker": "dax",
+          "type": "direction",
+          "action": "enter"
+        },
+        {
+          "emotion": "sad",
+          "type": "speech",
+          "content": {
+            "korean": "결국… 모든 약속이 뒤틀려 버렸습니다."
+          },
+          "speaker": "dax"
+        },
+        {
+          "speaker": "lin",
+          "spot": [
+            5,
+            1
+          ],
+          "action": "enter",
+          "type": "direction",
+          "duration_ms": 500
+        },
+        {
+          "content": {
+            "korean": "이 어둠을 어떻게 벗어날 수 있을까요?"
+          },
+          "type": "speech",
+          "speaker": "lin",
+          "emotion": "sad"
+        },
+        {
+          "type": "speech",
+          "content": {
+            "korean": "이 모든 것을 되돌릴 방법이 있을 거야."
+          },
+          "speaker": "character_any"
+        },
+        {
+          "content": {
+            "korean": "절대 포기할 수 없어."
+          },
+          "speaker": "character_4",
+          "type": "speech"
+        },
+        {
+          "speaker": "narrator",
+          "content": {
+            "korean": "이제 남은 것은 율법의 왜곡된 심장, 노모스를 마주하는 것뿐이다."
+          },
+          "type": "speech"
+        }
+      ],
+      "dialogue": [
+        {
+          "emotion": "angry",
+          "type": "speech",
+          "content": {
+            "korean": "율법을 어지럽히려는 자들은 모두 처단될 것이다!"
+          },
+          "speaker": "random_boss"
+        },
+        {
+          "speaker": "random_boss",
+          "content": {
+            "korean": "이곳에서 너희의 어리석은 시도는 끝이 날 것이다."
+          },
+          "type": "speech",
+          "emotion": "angry"
+        },
+        {
+          "content": {
+            "korean": "이 싸움은 노모스의 거짓된 질서에 대한 저항이다!"
+          },
+          "speaker": "character_any",
+          "type": "speech"
+        },
+        {
+          "content": {
+            "korean": "결코 물러서지 않아!"
+          },
+          "speaker": "character_3",
+          "type": "speech"
+        }
+      ],
+      "id": 15,
+      "lose_dialogue": [
+        {
+          "speaker": "random_boss",
+          "type": "speech",
+          "content": {
+            "korean": "어리석은 자들… 율법의 힘을 거스를 수 없다."
+          },
+          "emotion": "base"
+        },
+        {
+          "type": "speech",
+          "content": {
+            "korean": "이대로 모든 것이 끝나는 것인가…"
+          },
+          "speaker": "character_any",
+          "emotion": "sad"
+        },
+        {
+          "emotion": "sad",
+          "type": "speech",
+          "speaker": "character_1",
+          "content": {
+            "korean": "아아, 절망적이야…"
+          }
+        }
+      ]
+    }
+  ],
+  "prologue": {
+    "korean": [
+      "폐쇄된 중재소 재판정, 율법의 상징이 뒤틀리는 곳에 선 주인공.",
+      "오팔 핵의 봉인이 가져온 파괴는 이제 돌이킬 수 없는 혼돈을 예고한다.",
+      "노모스의 속삭임은 마지막 유혹을 드리우고, 진실은 절규 속에 파묻힌다."
+    ]
+  }
+}

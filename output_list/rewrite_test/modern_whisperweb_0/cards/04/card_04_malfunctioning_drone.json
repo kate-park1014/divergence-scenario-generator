@@ -1,0 +1,136 @@
+{
+	"id": "card_04_malfunctioning_drone",
+	"title": {
+		"korean": "오작동 드론"
+	},
+	"tags": "drone",
+	"intensity": "calm",
+	"after_story": 3,
+	"before_story": 5,
+	"leaning": "community-",
+	"background_tags": [
+		"flying drone",
+		"tangled wires",
+		"broken antenna",
+		"tool box",
+		"flickering light"
+	],
+	"dialogue": [
+		{
+			"speaker": "narrator",
+			"content": {
+				"korean": "기술자가 오작동하는 감시 드론을 붙잡고 씨름하고 있었다. 드론은 엉뚱한 방향으로 날아갔다."
+			}
+		},
+		{
+			"speaker": "engineer",
+			"content": {
+				"korean": "젠장, 이 드론이 고장 나서 주변 스크린들을 제대로 감시할 수가 없어!"
+			}
+		},
+		{
+			"speaker": "kai",
+			"content": {
+				"korean": "드론이 오작동하면, 어디서 또 정보가 유출될지 알 수 없습니다."
+			}
+		}
+	],
+	"choices": [
+		{
+			"text": {
+				"korean": "기술자의 문제를 무시하고 자신의 길을 간다"
+			},
+			"mbti": "IT",
+			"effects": {
+				"community": -30,
+				"echo": -5,
+				"gold": 50
+			},
+			"event": "campsite",
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "기술자는 여전히 드론과 씨름하고 있었다. 카이가 걱정스러운 눈으로 뒤를 돌아봤다."
+					}
+				},
+				{
+					"speaker": "kai",
+					"content": {
+						"korean": "누군가는 저 문제를 해결해야 할 텐데요…"
+					}
+				}
+			],
+			"event_intro": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "잠시 쉴 곳을 찾았다. 주변 폐기물에서 알 수 없는 소리가 들려왔다."
+					}
+				}
+			]
+		},
+		{
+			"text": {
+				"korean": "기술자를 도와 드론 문제를 해결한다"
+			},
+			"mbti": "EF",
+			"effects": {
+				"community": 20,
+				"echo": 10
+			},
+			"reward": [
+				"cooldown_reset"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "기술자와 함께 드론의 문제를 해결하자, 드론은 다시 안정적으로 날아다녔다. 카이가 기뻐했다."
+					}
+				},
+				{
+					"speaker": "kai",
+					"content": {
+						"korean": "이제 감시도 다시 제대로 되겠네요!"
+					}
+				}
+			]
+		},
+		{
+			"text": {
+				"korean": "숙련된 기술을 이용해 빠르게 드론을 수리해준다"
+			},
+			"mbti": "TJ",
+			"require": {
+				"stat": "gold",
+				"op": ">=",
+				"value": 150
+			},
+			"effects": {
+				"gold": -150,
+				"echo": 15
+			},
+			"reward": [
+				"attack_up"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "숙련된 기술로 드론을 순식간에 수리했다. 기술자는 감탄하며 고마워했다."
+					}
+				},
+				{
+					"speaker": "kai",
+					"content": {
+						"korean": "당신의 기술은 정말 대단하군요. 드론도 이렇게 쉽게 고치다니!"
+					}
+				}
+			]
+		}
+	]
+}

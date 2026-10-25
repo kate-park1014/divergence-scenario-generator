@@ -1,0 +1,133 @@
+{
+	"id": "card_04_rewired_access",
+	"title": {
+		"korean": "재조정된 접근"
+	},
+	"tags": "access",
+	"intensity": "calm",
+	"after_story": 5,
+	"before_story": 9,
+	"leaning": "reason+",
+	"background_tags": [
+		"control panel",
+		"tangled wires",
+		"locked gate",
+		"red light",
+		"warning siren"
+	],
+	"dialogue": [
+		{
+			"speaker": "narrator",
+			"content": {
+				"korean": "보안 경비원이 내부 출입 시스템을 재조정하며 통로 접근을 제한하고 있었다."
+			}
+		},
+		{
+			"speaker": "security_guard",
+			"content": {
+				"korean": "정보 유출 때문에 통로를 재조정해야 합니다. 새로운 접근 규정을 따라주십시오."
+			}
+		},
+		{
+			"speaker": "kai",
+			"content": {
+				"korean": "다른 길을 찾아야겠어요. 시스템이 자꾸 바뀌니 정말 혼란스럽습니다."
+			}
+		}
+	],
+	"choices": [
+		{
+			"text": {
+				"korean": "새로운 접근 규정을 따르고 우회한다"
+			},
+			"mbti": "SJ",
+			"effects": {
+				"reason": 30,
+				"echo": -5
+			},
+			"event": "minigame_timing",
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "경비원의 지시에 따라 우회로를 따라갔다. 길은 돌아갔지만 안전했다. 카이가 안심했다."
+					}
+				},
+				{
+					"speaker": "kai",
+					"content": {
+						"korean": "규정을 따르는 것이 안전하겠죠."
+					}
+				}
+			],
+			"event_intro": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "우회로를 따라가자, 센서들이 연달아 깜빡였다. 정확한 타이밍에 지나가야 했다."
+					}
+				}
+			]
+		},
+		{
+			"text": {
+				"korean": "시스템의 허점을 찾아내 비밀 통로를 개방한다"
+			},
+			"mbti": "NP",
+			"effects": {
+				"reason": -20,
+				"intelligence": 10
+			},
+			"reward": [
+				"move_range_up"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "시스템의 숨겨진 허점을 찾아내자, 비밀 통로가 조용히 열렸다. 카이가 놀라워했다."
+					}
+				},
+				{
+					"speaker": "kai",
+					"content": {
+						"korean": "당신은 정말… 이런 걸 어떻게 찾아내는 거죠?"
+					}
+				}
+			]
+		},
+		{
+			"text": {
+				"korean": "{actor}이(가) 경비원과의 대화를 피하고 조용히 우회로를 찾는다"
+			},
+			"mbti": "IT",
+			"require": {
+				"mbti": "IT"
+			},
+			"effects": {
+				"community": -10,
+				"echo": -5
+			},
+			"reward": [
+				"stun"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "{actor}이(가) 경비원의 시선을 피해 조용히 우회로를 찾아냈다. 카이가 조용히 말했다."
+					}
+				},
+				{
+					"speaker": "kai",
+					"content": {
+						"korean": "조용히 움직이는 것이 때로는 최선일 때도 있겠죠."
+					}
+				}
+			]
+		}
+	]
+}

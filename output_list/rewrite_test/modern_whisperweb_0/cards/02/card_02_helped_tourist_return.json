@@ -1,0 +1,134 @@
+{
+	"id": "card_02_helped_tourist_return",
+	"title": {
+		"korean": "관광객의 단서"
+	},
+	"tags": "property",
+	"intensity": "calm",
+	"after_story": 9,
+	"before_story": 15,
+	"callback": {
+		"seed": "helped_tourist",
+		"min_rooms_after": 2
+	},
+	"background_tags": [
+		"dim corridor",
+		"whispering voices",
+		"shadowy figures",
+		"abandoned vehicles",
+		"hidden alleys"
+	],
+	"dialogue": [
+		{
+			"speaker": "narrator",
+			"content": {
+				"korean": "{random_boss}의 경고가 끝나자, 이전에 도왔던 길 잃은 관광객이 다가왔다."
+			}
+		},
+		{
+			"speaker": "lost_tourist",
+			"content": {
+				"korean": "저 사람, 경비가 삼엄해 보여요. 하지만 제가 아는 폐기장 뒤편에… 숨겨진 작은 통로가 있어요."
+			}
+		},
+		{
+			"speaker": "dax",
+			"content": {
+				"korean": "오호, 운이 좋은 건가? 관광객의 말이 사실이라면 저 사람의 통제를 피할 수 있겠는데."
+			}
+		}
+	],
+	"choices": [
+		{
+			"text": {
+				"korean": "관광객이 준 단서가 미심쩍지만 일단 따라가 본다."
+			},
+			"mbti": "SP",
+			"effects": {
+				"reason": -10
+			},
+			"reward": [
+				"move_range_down"
+			],
+			"flag": "obscure_path_tourist",
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "관광객이 안내한 길은 점점 복잡하고 좁아졌다. 방향이 맞는 건지 확신할 수 없었다."
+					}
+				},
+				{
+					"speaker": "dax",
+					"content": {
+						"korean": "어딘가 미심쩍은데… 맹목적으로 믿고 따르기엔 너무 위험한 길 같아."
+					}
+				}
+			]
+		},
+		{
+			"text": {
+				"korean": "닥스와 함께 단서를 분석하여 가장 안전하고 효율적인 길을 파악한다."
+			},
+			"mbti": "NT",
+			"effects": {
+				"reason": 10,
+				"echo": 10
+			},
+			"reward": [
+				"move_range_up"
+			],
+			"flag": "clear_path_tourist",
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "닥스는 단서를 분석해 안전한 우회로를 찾았다. {random_boss}의 경계를 벗어났다."
+					}
+				},
+				{
+					"speaker": "dax",
+					"content": {
+						"korean": "역시 내 판단이 맞았어! 완벽하게 숨겨진 길을 찾았다!"
+					}
+				}
+			]
+		},
+		{
+			"text": {
+				"korean": "관광객에게 보상을 주고 추가 정보를 얻어내어 길에 대한 확신을 얻는다."
+			},
+			"mbti": "EN",
+			"require": {
+				"stat": "gold",
+				"op": ">=",
+				"value": 80
+			},
+			"effects": {
+				"gold": -80,
+				"reason": 5
+			},
+			"reward": [
+				"intelligence_up"
+			],
+			"flag": "clear_path_tourist",
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "관광객은 보상을 받고 자세한 길을 안내했다. {random_boss}의 눈을 피할 수 있었다."
+					}
+				},
+				{
+					"speaker": "dax",
+					"content": {
+						"korean": "돈이 사람을 움직이는 법이지. 덕분에 우회로를 완벽하게 파악했어."
+					}
+				}
+			]
+		}
+	]
+}

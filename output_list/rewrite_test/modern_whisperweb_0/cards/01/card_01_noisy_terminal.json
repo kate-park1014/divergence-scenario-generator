@@ -1,0 +1,194 @@
+{
+	"id": "card_01_noisy_terminal",
+	"title": {
+		"korean": "잡음 가득한 단말기"
+	},
+	"tags": [
+		"terminal"
+	],
+	"intensity": "calm",
+	"after_story": 3,
+	"before_story": 5,
+	"leaning": "fighting+",
+	"background_tags": [
+		"폐기장 통로",
+		"낡은 단말기",
+		"지직거리는 소리",
+		"수리공의 집중",
+		"어두운 그림자"
+	],
+	"dialogue": [
+		{
+			"speaker": "narrator",
+			"content": {
+				"korean": "폐기장 입구 통로에 고물 수리공 칼이 앉아 잡음 심한 단말기를 수리하고 있었다."
+			}
+		},
+		{
+			"speaker": "narrator",
+			"content": {
+				"korean": "단말기에서 나는 '지직'거리는 소리가 통로를 가득 채웠다."
+			}
+		},
+		{
+			"speaker": "repair_tech",
+			"content": {
+				"korean": "이놈의 단말기는 왜 이리 잡음이 심한지… 중요한 정보가 끊기잖아!"
+			}
+		},
+		{
+			"speaker": "echo",
+			"content": {
+				"korean": "이 소리, 어쩐지 아까 그 스크린 소리랑 비슷해요. 점점 심해지는 것 같지 않아요?"
+			}
+		}
+	],
+	"choices": [
+		{
+			"text": {
+				"korean": "수리공 칼의 작업을 도와주며 단말기의 정보를 엿본다"
+			},
+			"mbti": "ET",
+			"effects": {
+				"fighting": 20,
+				"echo": 5
+			},
+			"reward": [
+				"intelligence_up"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "수리공은 당신의 도움에 감사하며 단말기 내부 정보를 잠시 보여주었다. 혼란스러운 데이터였다."
+					}
+				},
+				{
+					"speaker": "repair_tech",
+					"content": {
+						"korean": "오, 제법인데? 고마워!"
+					}
+				},
+				{
+					"speaker": "echo",
+					"content": {
+						"korean": "데이터에서 뭔가 알아낼 수 있을지도 몰라요!"
+					}
+				}
+			]
+		},
+		{
+			"text": {
+				"korean": "수리공의 작업을 방해하지 않고 조용히 기다린다"
+			},
+			"mbti": "IF",
+			"effects": {
+				"reason": -20,
+				"community": -10
+			},
+			"reward": [
+				"heal"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "잡음 가득한 단말기 소리 속에서 한동안 기다렸다. 수리공은 당신의 존재를 알아채지 못했다."
+					}
+				},
+				{
+					"speaker": "echo",
+					"content": {
+						"korean": "조용히 기다리는 것도 나쁘지 않네요. 어쩌면 그게 현명할지도…"
+					}
+				}
+			]
+		},
+		{
+			"text": {
+				"korean": "수리공에게 수리를 서둘러달라고 요청하고 사례금을 지불한다"
+			},
+			"mbti": "PJ",
+			"require": {
+				"stat": "gold",
+				"op": ">=",
+				"value": 50
+			},
+			"effects": {
+				"gold": -50,
+				"echo": 5
+			},
+			"reward": [
+				"cooldown_reset"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "사례금을 받은 칼은 활기찬 모습으로 서둘러 수리를 마쳤다. 단말기의 잡음은 여전했다."
+					}
+				},
+				{
+					"speaker": "repair_tech",
+					"content": {
+						"korean": "자, 여기! 이제 됐다! 돈도 받았으니 열심히 해야지!"
+					}
+				},
+				{
+					"speaker": "echo",
+					"content": {
+						"korean": "돈의 힘은 대단하네요! 칼 아저씨가 눈 깜짝할 새 움직였어요."
+					}
+				}
+			]
+		},
+		{
+			"text": {
+				"korean": "단말기에서 흘러나오는 정보를 해독하는 미니게임을 진행한다"
+			},
+			"mbti": "IN",
+			"effects": {
+				"intelligence": 10
+			},
+			"event": "minigame_cup",
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "단말기의 잡음 속에서 의미 있는 패턴을 찾아냈다. 수리공은 당신의 능력에 놀랐다."
+					}
+				},
+				{
+					"speaker": "repair_tech",
+					"content": {
+						"korean": "이런! 당신 혹시… 천재야?"
+					}
+				},
+				{
+					"speaker": "echo",
+					"content": {
+						"korean": "지직거리는 소리 속에 숨겨진 메시지를 찾았어요!"
+					}
+				}
+			],
+			"event_intro": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "단말기 화면에 세 개의 불확실한 아이콘이 빠르게 깜빡였다."
+					}
+				},
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "정확한 정보를 나타내는 아이콘을 찾아야 한다."
+					}
+				}
+			]
+		}
+	]
+}

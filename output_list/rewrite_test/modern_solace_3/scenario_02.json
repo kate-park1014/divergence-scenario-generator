@@ -1,0 +1,478 @@
+{
+  "scenario_id": "modern_solace_3_02",
+  "order": 2,
+  "act": "rising",
+  "theme": "modern",
+  "actors": {
+    "dax": {
+      "id": "mon_08d5b43e-f9ab-4469-9064-855e170b0cdc",
+      "name": {
+        "korean": "닥스",
+        "english": "Dax",
+        "japanese": "ダックス",
+        "chinese": "达克斯",
+        "french": "Dax",
+        "spanish": "Dax",
+        "vietnamese": "Dax",
+        "thai": "แด็กซ์",
+        "hindi": "डैक्स"
+      },
+      "description": "",
+      "face_image_url": "https://imagedelivery.net/WTEqQNGFb-l-IHS6IGnzUQ/84bb11db-6eb4-4500-d274-222e8b100100/public",
+      "battle_sprite_url": "https://imagedelivery.net/WTEqQNGFb-l-IHS6IGnzUQ/5d325a75-bd91-4758-7b3f-ad9a97e52700/public",
+      "role": {
+        "korean": "정보상"
+      }
+    }
+  },
+  "boss": {
+    "pool_id": "random_boss",
+    "role": {
+      "korean": "청소부"
+    }
+  },
+  "rooms": [
+    {
+      "id": 1,
+      "dialogue": [
+        {
+          "speaker": "narrator",
+          "content": {
+            "korean": "객석의 관객들이 점차 불안정해지며 기억을 잃어간다."
+          },
+          "type": "speech"
+        },
+        {
+          "emotion": "sad",
+          "content": {
+            "korean": "관객들이 자기 자리도 기억 못하는 것 같아… 대체 무슨 일이야?"
+          },
+          "type": "speech",
+          "speaker": "character_any"
+        },
+        {
+          "type": "speech",
+          "speaker": "character_1",
+          "content": {
+            "korean": "점점 더 심해져…"
+          },
+          "emotion": "sad"
+        },
+        {
+          "action": "shake",
+          "speaker": "narrator",
+          "type": "direction",
+          "duration_ms": 500
+        },
+        {
+          "speaker": "character_any",
+          "content": {
+            "korean": "저기 전광판 좀 봐! 또 솔라스의 영상이야."
+          },
+          "emotion": "base",
+          "type": "speech"
+        },
+        {
+          "speaker": "narrator",
+          "type": "speech",
+          "content": {
+            "korean": "낡은 전광판에 솔라스의 영상이 나타나 '기억을 지우고 공연에 집중하라'고 속삭인다."
+          }
+        },
+        {
+          "speaker": "character_any",
+          "content": {
+            "korean": "기억을 지우라니? 그게 정말 이 혼란을 잠재울 방법이라고?"
+          },
+          "emotion": "angry",
+          "type": "speech"
+        },
+        {
+          "speaker": "character_2",
+          "type": "speech",
+          "emotion": "angry",
+          "content": {
+            "korean": "말도 안 돼…"
+          }
+        },
+        {
+          "type": "speech",
+          "content": {
+            "korean": "어쩌면… 이 방법이 진실을 찾는 열쇠일지도 몰라. 빛의 조각을 흩뿌려 보자."
+          },
+          "emotion": "base",
+          "speaker": "character_any"
+        },
+        {
+          "action": "shake",
+          "speaker": "narrator",
+          "duration_ms": 700,
+          "type": "direction"
+        },
+        {
+          "type": "speech",
+          "speaker": "character_any",
+          "content": {
+            "korean": "이런! 객석의 조명이 더 불안정해지고 있어!"
+          },
+          "emotion": "sad"
+        },
+        {
+          "speaker": "character_3",
+          "emotion": "sad",
+          "content": {
+            "korean": "관객들도 더 동요하기 시작했어…"
+          },
+          "type": "speech"
+        },
+        {
+          "type": "speech",
+          "speaker": "character_any",
+          "emotion": "sad",
+          "content": {
+            "korean": "우리가 뭔가 잘못한 걸까…?"
+          }
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "dialogue": [
+        {
+          "duration_ms": 500,
+          "spot": [
+            5,
+            1
+          ],
+          "speaker": "dax",
+          "type": "direction",
+          "action": "enter"
+        },
+        {
+          "emotion": "sad",
+          "content": {
+            "korean": "망할… 내 정보 네트워크가 완전히 엉망이 됐어."
+          },
+          "type": "speech",
+          "speaker": "dax"
+        },
+        {
+          "type": "speech",
+          "content": {
+            "korean": "닥스! 당신도 이 혼란을 느끼고 있었군요."
+          },
+          "emotion": "base",
+          "speaker": "character_any"
+        },
+        {
+          "emotion": "base",
+          "content": {
+            "korean": "그래, 객석에서 기억이 사라진다니… 이런 현상은 처음이야. 겨우 단서 하나를 잡았어."
+          },
+          "type": "speech",
+          "speaker": "dax"
+        },
+        {
+          "speaker": "character_any",
+          "type": "speech",
+          "content": {
+            "korean": "어떤 단서죠?"
+          },
+          "emotion": "base"
+        },
+        {
+          "speaker": "dax",
+          "content": {
+            "korean": "분장실 거울에서 '마지막 공연까지 00:00:00'이라는 문구가 짧게 나타났다가 사라졌어."
+          },
+          "emotion": "base",
+          "type": "speech"
+        },
+        {
+          "speaker": "character_4",
+          "emotion": "base",
+          "content": {
+            "korean": "섬뜩하군…"
+          },
+          "type": "speech"
+        },
+        {
+          "type": "speech",
+          "emotion": "base",
+          "content": {
+            "korean": "솔라스가 말한 '공연'과 관련이 있는 걸까요?"
+          },
+          "speaker": "character_any"
+        },
+        {
+          "type": "speech",
+          "speaker": "dax",
+          "content": {
+            "korean": "그럴 가능성이 높지. 하지만 이게 정확히 뭘 의미하는지는 나도 모르겠어."
+          },
+          "emotion": "base"
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "dialogue": [
+        {
+          "speaker": "character_any",
+          "type": "speech",
+          "emotion": "base",
+          "content": {
+            "korean": "'마지막 공연까지 00:00:00'이라는 문구가 계속 머릿속을 맴돌아."
+          }
+        },
+        {
+          "content": {
+            "korean": "솔라스는 왜 계속 우리에게 이런 혼란스러운 행동을 권유하는 걸까?"
+          },
+          "emotion": "sad",
+          "speaker": "character_any",
+          "type": "speech"
+        },
+        {
+          "speaker": "character_1",
+          "type": "speech",
+          "content": {
+            "korean": "알 수 없어…"
+          },
+          "emotion": "sad"
+        },
+        {
+          "action": "shake",
+          "speaker": "narrator",
+          "duration_ms": 600,
+          "type": "direction"
+        },
+        {
+          "speaker": "character_any",
+          "type": "speech",
+          "emotion": "base",
+          "content": {
+            "korean": "저길 봐! 객석 스크린에 뭔가가 나타나고 있어!"
+          }
+        },
+        {
+          "speaker": "character_any",
+          "type": "speech",
+          "content": {
+            "korean": "낡은 흑백 사진 조각들이 모여… 얼굴을 만들고 있어!"
+          },
+          "emotion": "base"
+        },
+        {
+          "speaker": "character_any",
+          "type": "speech",
+          "content": {
+            "korean": "솔라스의 얼굴인가? 너무 흐릿해서 알아볼 수가 없어…"
+          },
+          "emotion": "sad"
+        },
+        {
+          "speaker": "character_2",
+          "type": "speech",
+          "emotion": "sad",
+          "content": {
+            "korean": "섬뜩해…"
+          }
+        }
+      ]
+    },
+    {
+      "id": 9,
+      "dialogue": [
+        {
+          "spot": [
+            5,
+            1
+          ],
+          "duration_ms": 500,
+          "action": "enter",
+          "type": "direction",
+          "speaker": "random_boss"
+        },
+        {
+          "content": {
+            "korean": "여기서 더 이상 소란을 피우지 마라. 내 구역의 질서를 흐트러뜨릴 셈인가?"
+          },
+          "emotion": "angry",
+          "speaker": "random_boss",
+          "type": "speech"
+        },
+        {
+          "content": {
+            "korean": "당신은 누구시죠? 우린 이 혼란을 조사하고 있을 뿐이에요!"
+          },
+          "emotion": "base",
+          "speaker": "character_any",
+          "type": "speech"
+        },
+        {
+          "emotion": "angry",
+          "content": {
+            "korean": "조용히 해! 이 객석은 완벽한 공연을 위한 공간이다. 모든 방해는 제거해야 해."
+          },
+          "type": "speech",
+          "speaker": "random_boss"
+        },
+        {
+          "type": "speech",
+          "speaker": "character_any",
+          "content": {
+            "korean": "하지만 관객들은 혼란스러워하고 있어요! 기억을 잃어가고 있다고요!"
+          },
+          "emotion": "angry"
+        },
+        {
+          "speaker": "random_boss",
+          "type": "speech",
+          "content": {
+            "korean": "그건 그들의 집중을 위한 것. 더 이상 막을 수는 없다."
+          },
+          "emotion": "base"
+        },
+        {
+          "content": {
+            "korean": "비켜요!"
+          },
+          "emotion": "angry",
+          "speaker": "character_3",
+          "type": "speech"
+        },
+        {
+          "type": "speech",
+          "speaker": "character_any",
+          "emotion": "angry",
+          "content": {
+            "korean": "우린 진실을 알아야 해요! 길을 비키세요!"
+          }
+        },
+        {
+          "speaker": "random_boss",
+          "type": "speech",
+          "content": {
+            "korean": "감히 질서에 거역하려 드는군. 용서받지 못할 것이다."
+          },
+          "emotion": "angry"
+        }
+      ]
+    },
+    {
+      "win_dialogue": [
+        {
+          "type": "speech",
+          "speaker": "character_any",
+          "emotion": "base",
+          "content": {
+            "korean": "해냈어… 하지만 객석의 조명은 여전히 불안정해."
+          }
+        },
+        {
+          "content": {
+            "korean": "관객들도 아직 혼란스러워 보여."
+          },
+          "emotion": "sad",
+          "type": "speech",
+          "speaker": "character_4"
+        },
+        {
+          "duration_ms": 500,
+          "spot": [
+            5,
+            1
+          ],
+          "speaker": "dax",
+          "type": "direction",
+          "action": "enter"
+        },
+        {
+          "type": "speech",
+          "speaker": "dax",
+          "content": {
+            "korean": "이 혼란이 여기서 끝이 아니었군. 오히려 더 깊어진 것 같아."
+          },
+          "emotion": "sad"
+        },
+        {
+          "content": {
+            "korean": "다음은 분장실인가요? 닥스, 그 '마지막 공연'이라는 단서가 계속 마음에 걸려요."
+          },
+          "emotion": "base",
+          "speaker": "character_any",
+          "type": "speech"
+        },
+        {
+          "speaker": "dax",
+          "emotion": "base",
+          "type": "speech",
+          "content": {
+            "korean": "그래, 그곳에 무언가 더 중요한 진실이 숨겨져 있을지도 몰라."
+          }
+        }
+      ],
+      "dialogue": [
+        {
+          "speaker": "random_boss",
+          "emotion": "angry",
+          "content": {
+            "korean": "여기까지 오다니… 하지만 더 이상은 안 돼."
+          },
+          "type": "speech"
+        },
+        {
+          "type": "speech",
+          "content": {
+            "korean": "네온 극장의 평화를 방해하는 자들은 모두 쓸어버려야 한다."
+          },
+          "emotion": "angry",
+          "speaker": "random_boss"
+        },
+        {
+          "speaker": "character_any",
+          "type": "speech",
+          "content": {
+            "korean": "우리가 찾는 건 평화가 아니에요. 왜곡된 진실을 바로잡으려는 거예요!"
+          },
+          "emotion": "angry"
+        },
+        {
+          "speaker": "random_boss",
+          "type": "speech",
+          "emotion": "angry",
+          "content": {
+            "korean": "닥쳐라! 내 청소는 완벽해야 한다!"
+          }
+        }
+      ],
+      "id": 15,
+      "lose_dialogue": [
+        {
+          "content": {
+            "korean": "감히 질서를 거스를 생각은 하지 마라."
+          },
+          "emotion": "angry",
+          "type": "speech",
+          "speaker": "random_boss"
+        },
+        {
+          "emotion": "sad",
+          "content": {
+            "korean": "젠장… 너무 강해. 일단 물러서자."
+          },
+          "type": "speech",
+          "speaker": "character_any"
+        }
+      ]
+    }
+  ],
+  "prologue": {
+    "korean": [
+      "네온 극장 객석에 짙은 안개가 드리우고, 사람들의 기억은 흐릿한 조명처럼 점멸하기 시작한다.",
+      "잊혀가는 과거 속에서, 낡은 전광판은 또 다시 매혹적인 속삭임을 전한다.",
+      "빛의 조각을 흩뿌리는 손길에, 극장의 질서는 더욱 위태롭게 흔들린다."
+    ]
+  }
+}

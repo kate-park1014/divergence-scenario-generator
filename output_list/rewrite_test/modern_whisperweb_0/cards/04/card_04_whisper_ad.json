@@ -1,0 +1,125 @@
+{
+	"id": "card_04_whisper_ad",
+	"title": {
+		"korean": "위스퍼 웹 광고"
+	},
+	"tags": "rumor",
+	"intensity": "calm",
+	"after_story": 3,
+	"before_story": 5,
+	"leaning": "reason-",
+	"background_tags": [
+		"faded poster",
+		"distorted billboard",
+		"small crowd",
+		"whispering sound",
+		"trash bin"
+	],
+	"dialogue": [
+		{
+			"speaker": "narrator",
+			"content": {
+				"korean": "폐전광판에 알 수 없는 기호가 흐릿하게 비쳤다. 정보꾼이 사람들에게 전단지를 흔들며 무언가 속삭이고 있었다."
+			}
+		},
+		{
+			"speaker": "gossip_monger",
+			"content": {
+				"korean": "이거 다 믿을 만한 정보라니까! 합쳐진 정보야말로 진실이라고!"
+			}
+		},
+		{
+			"speaker": "kai",
+			"content": {
+				"korean": "저것은 위스퍼 웹의 속삭임을 확산시키고 있어요. 사람들을 현혹하고 있습니다."
+			}
+		}
+	],
+	"choices": [
+		{
+			"text": {
+				"korean": "정보꾼의 말에 귀 기울여 위스퍼 웹과 관련된 정보를 얻는다"
+			},
+			"mbti": "SP",
+			"effects": {
+				"reason": -30,
+				"echo": -5,
+				"gold": 100
+			},
+			"seed": "hide_traces",
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "정보꾼은 만족하며 은밀한 정보를 흘렸다. 카이는 고개를 저었다."
+					}
+				},
+				{
+					"speaker": "kai",
+					"content": {
+						"korean": "불필요한 위험을 감수하는 것 같아요."
+					}
+				}
+			]
+		},
+		{
+			"text": {
+				"korean": "정보꾼의 거짓 정보를 폭로하고 사람들에게 위스퍼 웹의 위험성을 경고한다"
+			},
+			"mbti": "NJ",
+			"effects": {
+				"reason": 20,
+				"echo": 5
+			},
+			"reward": [
+				"defense_up"
+			],
+			"seed": "reveal_corrupted_data",
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "주인공의 경고에 몇몇 사람이 정보꾼에게서 멀어졌다. 카이가 고개를 끄덕였다."
+					}
+				},
+				{
+					"speaker": "kai",
+					"content": {
+						"korean": "잘하셨어요. 진실을 알리는 것이 중요합니다."
+					}
+				}
+			]
+		},
+		{
+			"text": {
+				"korean": "{actor}이(가) 사람들에게 위스퍼 웹의 위험성을 알리고 정보꾼을 저지한다"
+			},
+			"mbti": "NF",
+			"require": {
+				"mbti": "NF"
+			},
+			"effects": {
+				"community": 10,
+				"echo": 10
+			},
+			"reward": [
+				"move_range_up"
+			],
+			"seed": "reveal_corrupted_data",
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "{actor}이(가) 큰 목소리로 사람들에게 경고하자, 정보꾼은 당황하며 자리를 피했다. 카이가 감탄했다."
+					}
+				},
+				{
+					"speaker": "kai",
+					"content": {
+						"korean": "당신의 용기에 감명받았습니다."
+					}
+				}
+			]
+		}
+	]
+}

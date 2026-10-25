@@ -1,0 +1,102 @@
+{
+	"id": "card_05_parts_box_return",
+	"title": {
+		"korean": "뒤섞인 부품의 오작동"
+	},
+	"tags": [
+		"parts_trade"
+	],
+	"intensity": "high",
+	"after_story": 5,
+	"before_story": 9,
+	"callback": {
+		"seed": "A_easy_path",
+		"min_rooms_after": 2
+	},
+	"background_tags": [
+		"sparks flying",
+		"confused whispers",
+		"junk piles",
+		"unstable light",
+		"emergency signs"
+	],
+	"dialogue": [
+		{
+			"speaker": "narrator",
+			"content": {
+				"korean": "카이 씨의 말을 곱씹으며 폐기장을 지나던 중, 구매했던 뒤섞인 부품 상자에서 갑자기 푸른 섬광이 터졌다."
+			}
+		},
+		{
+			"speaker": "echo",
+			"content": {
+				"korean": "저거 봐! 부품들이 또 개인 정보를 유출하기 시작했어!"
+			}
+		},
+		{
+			"speaker": "narrator",
+			"content": {
+				"korean": "주변의 깨진 스크린들이 깜빡이며 알 수 없는 정보 조각들을 띄웠다."
+			}
+		}
+	],
+	"choices": [
+		{
+			"text": {
+				"korean": "오작동하는 부품 상자를 강제로 끄고, 더 이상의 피해가 없기를 바란다."
+			},
+			"mbti": "ST",
+			"effects": {
+				"community": -10
+			},
+			"reward": [
+				"defense_down"
+			],
+			"flag": "data_leak_exposed",
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "상자는 겨우 멈췄지만, 이미 유출된 정보는 폐기장 곳곳으로 퍼져나간 뒤였다."
+					}
+				},
+				{
+					"speaker": "echo",
+					"content": {
+						"korean": "아무것도 해결되지 않았어... 내 정보도 또 유출된 것 같아."
+					}
+				}
+			]
+		},
+		{
+			"text": {
+				"korean": "위험을 무릅쓰고 오작동 부품을 해체하여 유출 정보의 근원을 역추적한다."
+			},
+			"mbti": "NF",
+			"effects": {
+				"fighting": 10,
+				"echo": 5
+			},
+			"reward": [
+				"heal"
+			],
+			"flag": "rumor_spread",
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "해체된 부품 속에서 '위스퍼 웹'의 약한 연결 지점을 발견했다. 미약하지만 혼란을 일으킬 단서였다."
+					}
+				},
+				{
+					"speaker": "echo",
+					"content": {
+						"korean": "좋아! 작은 단서라도 찾았으니 희망이 보여!"
+					}
+				}
+			]
+		}
+	]
+}

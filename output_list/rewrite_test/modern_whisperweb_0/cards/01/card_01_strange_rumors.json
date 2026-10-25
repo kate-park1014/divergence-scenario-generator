@@ -1,0 +1,182 @@
+{
+	"id": "card_01_strange_rumors",
+	"title": {
+		"korean": "폐기장의 기묘한 소문"
+	},
+	"tags": [
+		"rumor"
+	],
+	"intensity": "calm",
+	"after_story": 3,
+	"before_story": 5,
+	"leaning": "reason-",
+	"background_tags": [
+		"폐기장 모퉁이",
+		"모여든 사람들",
+		"소문꾼의 목소리",
+		"네온의 깜빡임",
+		"웅성이는 분위기"
+	],
+	"dialogue": [
+		{
+			"speaker": "narrator",
+			"content": {
+				"korean": "폐기장 입구 모퉁이, 소문꾼 미리가 모여든 사람들에게 폐기장 내의 기묘한 소문들을 팔고 있었다."
+			}
+		},
+		{
+			"speaker": "rumor_vendor",
+			"content": {
+				"korean": "…밤마다 스크린이 속삭인대! 잃어버린 기억을 찾아준다고!"
+			}
+		},
+		{
+			"speaker": "echo",
+			"content": {
+				"korean": "이런 소문들이 사람들을 더 불안하게 만들고 있는 것 같아요."
+			}
+		}
+	],
+	"choices": [
+		{
+			"text": {
+				"korean": "미리의 소문을 무시하고 불안감을 안고 지나간다"
+			},
+			"mbti": "SP",
+			"effects": {
+				"reason": -30,
+				"hp_down": 10,
+				"echo": -5
+			},
+			"reward": [
+				"hp_down"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "불안한 소문들이 귓가를 맴돌았지만, 그들을 무시하고 지나쳤다. 마음 한구석이 계속 불편했다."
+					}
+				},
+				{
+					"speaker": "echo",
+					"content": {
+						"korean": "괜히 찝찝하네요. 저 소문이 사실일 리 없겠죠…?"
+					}
+				}
+			]
+		},
+		{
+			"text": {
+				"korean": "미리의 소문에 대해 심층적으로 질문하고 진실을 캐낸다"
+			},
+			"mbti": "NJ",
+			"effects": {
+				"reason": 20,
+				"echo": 10,
+				"gold": 50
+			},
+			"reward": [
+				"intelligence_up"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "미리는 끈질긴 질문에 결국 소문의 출처를 희미하게나마 알려주었다. 미심쩍은 정보였다."
+					}
+				},
+				{
+					"speaker": "rumor_vendor",
+					"content": {
+						"korean": "너무 깊이 파고들지 마! 내 정보는 여기까지야!"
+					}
+				},
+				{
+					"speaker": "echo",
+					"content": {
+						"korean": "소문 속에서 중요한 단서를 찾은 것 같아요!"
+					}
+				}
+			]
+		},
+		{
+			"text": {
+				"korean": "미리가 들은 소문 중 현실적인 정보를 파악하여 캐낸다"
+			},
+			"mbti": "IS",
+			"require": {
+				"mbti": "IS"
+			},
+			"effects": {
+				"reason": 10,
+				"echo": 5
+			},
+			"reward": [
+				"intelligence_up"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "{actor}이(가) 미리가 파는 수많은 소문 속에서 현실적인 정보 조각을 정확히 골라냈다."
+					}
+				},
+				{
+					"speaker": "rumor_vendor",
+					"content": {
+						"korean": "흐음, 그건 그냥 소문이 아니지. 폐기장에서 실제로 일어나는 일이야."
+					}
+				},
+				{
+					"speaker": "echo",
+					"content": {
+						"korean": "역시! 그 많은 소문 중에 딱 중요한 것만 찾아냈네요!"
+					}
+				}
+			]
+		},
+		{
+			"text": {
+				"korean": "소문의 근원지에 대한 정보를 미끼로 미리를 압박한다"
+			},
+			"mbti": "TJ",
+			"require": {
+				"stat": "fighting",
+				"op": ">=",
+				"value": 40
+			},
+			"effects": {
+				"fighting": 10,
+				"community": -10
+			},
+			"reward": [
+				"attack_up"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "미리는 당신의 압박에 못 이겨 소문의 근원지에 대한 단서를 흘렸다. 불안한 눈빛이었다."
+					}
+				},
+				{
+					"speaker": "rumor_vendor",
+					"content": {
+						"korean": "알았어! 알았으니까 그만! 더 이상은 나도 몰라!"
+					}
+				},
+				{
+					"speaker": "echo",
+					"content": {
+						"korean": "미리 아줌마가 움찔했어요! 우리가 뭘 좀 알아낸 것 같아요."
+					}
+				}
+			]
+		}
+	]
+}

@@ -1,0 +1,109 @@
+{
+	"id": "card_01_janitor_favors_return",
+	"title": {
+		"korean": "정비공의 보답"
+	},
+	"tags": [
+		"vehicle"
+	],
+	"intensity": "calm",
+	"after_story": 5,
+	"before_story": 9,
+	"callback": {
+		"seed": "helped_janitor_hard",
+		"min_rooms_after": 2
+	},
+	"background_tags": [
+		"폐기장 입구",
+		"정비공 조",
+		"친근한 분위기",
+		"오래된 지도",
+		"낡은 공구"
+	],
+	"dialogue": [
+		{
+			"speaker": "narrator",
+			"content": {
+				"korean": "폐기장 입구에서 정비공 조가 환한 얼굴로 당신을 반기며 다가왔다."
+			}
+		},
+		{
+			"speaker": "janitor",
+			"content": {
+				"korean": "전에 제 고물차를 운반해 주신 은혜, 잊지 않고 있었습니다. 폐기장 안 위험한 곳, 제가 조언해 드릴까요?"
+			}
+		},
+		{
+			"speaker": "echo",
+			"content": {
+				"korean": "조 아저씨가 우리를 돕고 싶어 하는 것 같아요. 좋은 정보일 수도 있어요."
+			}
+		}
+	],
+	"choices": [
+		{
+			"text": {
+				"korean": "정비공 조의 조언을 받아들여 위험 구역을 신중하게 통과한다"
+			},
+			"mbti": "IT",
+			"effects": {
+				"reason": 10,
+				"echo": 5
+			},
+			"reward": [
+				"move_range_up"
+			],
+			"flag": "janitor_safety_tips",
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "조 아저씨는 폐기장 위험 구역을 상세히 알려주었다. 덕분에 안전하게 이동했다."
+					}
+				},
+				{
+					"speaker": "echo",
+					"content": {
+						"korean": "아저씨의 조언 덕분에 안전하게 길을 찾을 수 있었어요."
+					}
+				}
+			]
+		},
+		{
+			"text": {
+				"korean": "정비공 조가 알려준 폐기장 깊숙이 들어갈 수 있는 지름길을 택한다"
+			},
+			"mbti": "EN",
+			"effects": {
+				"fighting": 20,
+				"echo": 15
+			},
+			"event": "campsite",
+			"flag": "janitor_secret_route",
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "조 아저씨는 폐기장 깊숙이 통하는 숨겨진 지름길을 알려주었다. 낡은 문이 열리자 희미한 빛이 새어 나왔다."
+					}
+				},
+				{
+					"speaker": "echo",
+					"content": {
+						"korean": "우리가 찾는 곳에 더 빨리 갈 수 있을 것 같아요!"
+					}
+				}
+			],
+			"event_intro": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "낡고 좁은 터널을 지나는 동안, 조 아저씨가 건넨 지도가 다음 캠프 지점을 정확히 가리켰다."
+					}
+				}
+			]
+		}
+	]
+}

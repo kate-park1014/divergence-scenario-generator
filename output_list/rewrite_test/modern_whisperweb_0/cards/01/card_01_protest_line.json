@@ -1,0 +1,182 @@
+{
+	"id": "card_01_protest_line",
+	"title": {
+		"korean": "시위대의 저지선"
+	},
+	"tags": [
+		"protest"
+	],
+	"intensity": "high",
+	"after_story": 1,
+	"before_story": 3,
+	"leaning": "fighting-",
+	"background_tags": [
+		"폐기장 입구",
+		"시위대 팻말",
+		"확성기 소리",
+		"혼잡한 길",
+		"운동가의 열정"
+	],
+	"dialogue": [
+		{
+			"speaker": "narrator",
+			"content": {
+				"korean": "폐기장 입구에 운동가 박을 비롯한 시위대가 모여들어 진입을 막아서고 있었다."
+			}
+		},
+		{
+			"speaker": "protestor",
+			"content": {
+				"korean": "이 폐기장은 즉시 폐쇄되어야 한다! 우리의 정보를 돌려내라!"
+			}
+		},
+		{
+			"speaker": "echo",
+			"content": {
+				"korean": "상황이 심각한데요. 저들을 지나가려면 뭔가 해야 할 것 같아요."
+			}
+		}
+	],
+	"choices": [
+		{
+			"text": {
+				"korean": "시위대를 피해 옆쪽의 좁은 틈새로 몰래 이동한다"
+			},
+			"mbti": "IS",
+			"effects": {
+				"fighting": -30,
+				"echo": -5
+			},
+			"reward": [
+				"defense_up"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "시위대의 시선을 피해 좁은 틈새를 비집고 이동했다. 시위대의 웅성거림이 뒤따랐다."
+					}
+				},
+				{
+					"speaker": "echo",
+					"content": {
+						"korean": "사람들이 우리를 이상하게 쳐다봐요… 들킨 건 아니겠죠?"
+					}
+				}
+			]
+		},
+		{
+			"text": {
+				"korean": "시위대의 요구사항을 경청하고 통과를 정중히 설득한다"
+			},
+			"mbti": "EF",
+			"effects": {
+				"community": 20,
+				"echo": 10
+			},
+			"reward": [
+				"shield"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "시위대는 당신의 진심 어린 설득에 공감하며 잠시 길을 열어주었다."
+					}
+				},
+				{
+					"speaker": "protestor",
+					"content": {
+						"korean": "…좋아, 당신이라면 우리 마음을 알아줄 거야. 조심해서 가게."
+					}
+				},
+				{
+					"speaker": "echo",
+					"content": {
+						"korean": "잘 해결됐네요! 운동가 아저씨도 결국엔 좋은 분인 것 같아요."
+					}
+				}
+			]
+		},
+		{
+			"text": {
+				"korean": "시위가 비합리적임을 논리적으로 설득하여 통과한다"
+			},
+			"mbti": "NT",
+			"require": {
+				"stat": "reason",
+				"op": ">=",
+				"value": 40
+			},
+			"effects": {
+				"reason": 20,
+				"echo": 5
+			},
+			"reward": [
+				"intelligence_up"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "{actor}이(가) 시위의 맹점을 정확히 지적하며 운동가 박을 설득했다. 박은 잠시 할 말을 잃었다."
+					}
+				},
+				{
+					"speaker": "protestor",
+					"content": {
+						"korean": "…그 말도 일리가 있군. 잠시 통과하도록 하지."
+					}
+				},
+				{
+					"speaker": "echo",
+					"content": {
+						"korean": "와, 완벽한 논리였어요! 박 아저씨도 인정할 수밖에 없었겠네요."
+					}
+				}
+			]
+		},
+		{
+			"text": {
+				"korean": "시위대의 해산을 위해 일부 비용을 지불한다"
+			},
+			"mbti": "ES",
+			"require": {
+				"stat": "gold",
+				"op": ">=",
+				"value": 50
+			},
+			"effects": {
+				"gold": -50,
+				"community": 10
+			},
+			"reward": [
+				"cooldown_reset"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "당신이 내민 돈에 시위대는 잠시 혼란스러워했지만, 이내 길을 열어주었다."
+					}
+				},
+				{
+					"speaker": "protestor",
+					"content": {
+						"korean": "이… 이건 뇌물이 아니다! 우리의 정당한 시위 비용이다!"
+					}
+				},
+				{
+					"speaker": "echo",
+					"content": {
+						"korean": "돈으로 해결하는 건 영 개운치 않지만… 어쨌든 통과했어요."
+					}
+				}
+			]
+		}
+	]
+}

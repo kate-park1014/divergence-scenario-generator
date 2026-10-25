@@ -1,0 +1,160 @@
+{
+	"id": "card_02_misplaced_property",
+	"title": {
+		"korean": "뒤바뀐 소유권"
+	},
+	"tags": "property",
+	"intensity": "calm",
+	"after_story": 3,
+	"before_story": 5,
+	"leaning": "community+",
+	"background_tags": [
+		"chaotic market",
+		"discarded goods",
+		"confused faces",
+		"broken display",
+		"nervous crowd"
+	],
+	"dialogue": [
+		{
+			"speaker": "narrator",
+			"content": {
+				"korean": "폐기장 한편에서 고함이 들렸다. 한 남자가 자신의 가방을 붙잡고 소리쳤다."
+			}
+		},
+		{
+			"speaker": "lost_tourist",
+			"content": {
+				"korean": "이럴 수가! 내 지갑이랑 휴대폰이 다른 사람 걸로 바뀌었다고! 누가 이런 짓을 했어?"
+			}
+		},
+		{
+			"speaker": "dax",
+			"content": {
+				"korean": "…흥미롭군. 단순한 소매치기 같지는 않아 보이는군. 대체 무슨 일이 벌어지고 있는 거지?"
+			}
+		}
+	],
+	"choices": [
+		{
+			"text": {
+				"korean": "길 잃은 관광객을 도와 소지품을 찾아주며 상황을 해결한다."
+			},
+			"mbti": "FJ",
+			"effects": {
+				"community": 20,
+				"echo": 5
+			},
+			"reward": [
+				"heal"
+			],
+			"seed": "helped_tourist",
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "관광객은 안도하며 연신 고마워했다. 닥스도 고개를 끄덕였다."
+					}
+				},
+				{
+					"speaker": "dax",
+					"content": {
+						"korean": "당신은 항상 사람들을 돕는군. 이런 상황에서도 침착함을 잃지 않는 건 대단해."
+					}
+				}
+			]
+		},
+		{
+			"text": {
+				"korean": "닥스의 분석을 우선시하며 소동에 관여하지 않고 자리를 피한다."
+			},
+			"mbti": "IJ",
+			"effects": {
+				"community": -20,
+				"echo": -10
+			},
+			"reward": [
+				"hp_down"
+			],
+			"seed": "ignored_tourist",
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "관광객은 계속 소리쳤지만, 당신은 닥스에게 집중했다. 닥스 표정이 어두워졌다."
+					}
+				},
+				{
+					"speaker": "dax",
+					"content": {
+						"korean": "저런 작은 소동마저 외면하는 건가. 정보 유출은 분명 사회 전반에 퍼져 있을 텐데."
+					}
+				}
+			]
+		},
+		{
+			"text": {
+				"korean": "돈을 주고 관광객에게 새 소지품을 사라고 제안하여 신속하게 문제를 해결한다."
+			},
+			"mbti": "EF",
+			"require": {
+				"stat": "gold",
+				"op": ">=",
+				"value": 120
+			},
+			"effects": {
+				"gold": -120,
+				"community": 10
+			},
+			"reward": [
+				"intelligence_up"
+			],
+			"seed": "helped_tourist",
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "관광객은 돈을 받고 즉시 새 물건을 사러 떠났다. 폐기장은 다시 조용해졌다."
+					}
+				},
+				{
+					"speaker": "dax",
+					"content": {
+						"korean": "아무튼 소동은 진정되었네. 급한 불은 껐다고 봐야지."
+					}
+				}
+			]
+		},
+		{
+			"text": {
+				"korean": "{actor}이(가) 논리적으로 관광객의 불평이 비합리적임을 지적하며 소동을 잠재운다."
+			},
+			"mbti": "TJ",
+			"require": {
+				"mbti": "TJ"
+			},
+			"effects": {
+				"reason": -10,
+				"echo": -5
+			},
+			"reward": [
+				"attack_down"
+			],
+			"seed": "ignored_tourist",
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "{actor}이(가) 냉철한 어조로 관광객의 불평이 비논리적임을 지적했다. 관광객은 당황했다."
+					}
+				},
+				{
+					"speaker": "dax",
+					"content": {
+						"korean": "…그렇게까지 냉정하게 말할 필요는 없었을 텐데. 이해하긴 어렵지."
+					}
+				}
+			]
+		}
+	]
+}

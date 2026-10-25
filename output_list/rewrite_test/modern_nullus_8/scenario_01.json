@@ -1,0 +1,462 @@
+{
+  "scenario_id": "modern_nullus_8_01",
+  "order": 1,
+  "act": "intro",
+  "theme": "modern",
+  "actors": {
+    "kai": {
+      "id": "mon_d7f29313-b8fb-49da-9a1a-01df5d13866e",
+      "name": {
+        "korean": "카이",
+        "english": "Kai",
+        "japanese": "カイ",
+        "chinese": "凯",
+        "french": "Kai",
+        "spanish": "Kai",
+        "vietnamese": "Kai",
+        "thai": "ไค",
+        "hindi": "काई"
+      },
+      "description": "",
+      "face_image_url": "https://imagedelivery.net/WTEqQNGFb-l-IHS6IGnzUQ/f10d9184-4155-4bb9-de2d-db61463f7c00/public",
+      "battle_sprite_url": "https://imagedelivery.net/WTEqQNGFb-l-IHS6IGnzUQ/e41f8e03-08c9-4a4f-6f72-fa9342876f00/public",
+      "role": {
+        "korean": "기술자"
+      }
+    }
+  },
+  "boss": {
+    "pool_id": "random_boss",
+    "role": {
+      "korean": "보안 요원"
+    }
+  },
+  "prologue": {
+    "korean": [
+      "정보국 서버실 깊은 곳, 잊힌 데이터의 먼지가 쌓인다.",
+      "빛바랜 영수증들은 과거의 잔재처럼 숨 쉬고,",
+      "시스템은 이 모든 것을 '쓸모없는 기록'이라 부른다.",
+      "미지의 그림자가 드리운 이 공간에서,",
+      "진실은 기록 속에서 사라지고 기억은 왜곡되기 시작한다."
+    ]
+  },
+  "rooms": [
+    {
+      "id": 1,
+      "dialogue": [
+        {
+          "type": "speech",
+          "emotion": "base",
+          "speaker": "narrator",
+          "content": {
+            "korean": "정보국 서버실의 데이터 보관실. 오래된 영수증 뭉치가 발견된다."
+          }
+        },
+        {
+          "speaker": "character_any",
+          "type": "speech",
+          "content": {
+            "korean": "이게 다 뭐지? 빛바래서 글씨도 제대로 안 보여."
+          },
+          "emotion": "base"
+        },
+        {
+          "emotion": "base",
+          "type": "speech",
+          "content": {
+            "korean": "너무 오래된 것 같아."
+          },
+          "speaker": "character_1"
+        },
+        {
+          "content": {
+            "korean": "서버실 스피커에서 정산관 눌루스의 목소리가 들려온다."
+          },
+          "type": "speech",
+          "speaker": "narrator",
+          "emotion": "base"
+        },
+        {
+          "emotion": "base",
+          "type": "speech",
+          "content": {
+            "korean": "『이 빛바랜 영수증들은 쓸모없는 과거이니 파기하라.』"
+          },
+          "speaker": "narrator"
+        },
+        {
+          "duration_ms": 500,
+          "speaker": "kai",
+          "type": "direction",
+          "spot": [
+            5,
+            1
+          ],
+          "action": "enter"
+        },
+        {
+          "content": {
+            "korean": "맞습니다. 파기하면 공간 확보도 되고, 모두에게 이로운 일입니다."
+          },
+          "speaker": "kai",
+          "type": "speech",
+          "emotion": "base"
+        },
+        {
+          "emotion": "base",
+          "type": "speech",
+          "speaker": "character_any",
+          "content": {
+            "korean": "하지만... 왠지 중요한 것 같기도 한데..."
+          }
+        },
+        {
+          "emotion": "base",
+          "type": "speech",
+          "content": {
+            "korean": "결정하기 어려워."
+          },
+          "speaker": "character_2"
+        },
+        {
+          "emotion": "base",
+          "type": "speech",
+          "content": {
+            "korean": "의심할 필요 없습니다. 이것이 모두를 위한 길입니다."
+          },
+          "speaker": "kai"
+        }
+      ]
+    },
+    {
+      "dialogue": [
+        {
+          "type": "speech",
+          "emotion": "base",
+          "content": {
+            "korean": "서버실 곳곳의 오래된 모니터에 '오류 코드 404: 존재 없음'이 깜빡인다."
+          },
+          "speaker": "narrator"
+        },
+        {
+          "speaker": "character_any",
+          "type": "speech",
+          "content": {
+            "korean": "파기하고 나니 좀 홀가분한 것 같기도 하고... 그런데 저 오류 코드는 뭐지?"
+          },
+          "emotion": "base"
+        },
+        {
+          "emotion": "base",
+          "type": "speech",
+          "content": {
+            "korean": "이상한 기분이야."
+          },
+          "speaker": "character_3"
+        },
+        {
+          "action": "enter",
+          "duration_ms": 500,
+          "type": "direction",
+          "speaker": "kai",
+          "spot": [
+            5,
+            1
+          ]
+        },
+        {
+          "speaker": "kai",
+          "content": {
+            "korean": "시스템은 언제나 완벽합니다. 이런 오래된 기록은 사라지는 게 당연합니다."
+          },
+          "emotion": "base",
+          "type": "speech"
+        },
+        {
+          "content": {
+            "korean": "정말 그럴까? 왠지 찝찝해."
+          },
+          "speaker": "character_any",
+          "emotion": "base",
+          "type": "speech"
+        }
+      ],
+      "id": 3
+    },
+    {
+      "id": 5,
+      "dialogue": [
+        {
+          "emotion": "base",
+          "type": "speech",
+          "content": {
+            "korean": "모니터의 '오류 코드 404: 존재 없음' 메시지가 더욱 빈번하게 깜빡인다."
+          },
+          "speaker": "narrator"
+        },
+        {
+          "type": "speech",
+          "emotion": "base",
+          "speaker": "character_any",
+          "content": {
+            "korean": "오류 코드가 점점 늘어나는 것 같아. 영수증 때문인가?"
+          }
+        },
+        {
+          "type": "speech",
+          "speaker": "character_4",
+          "content": {
+            "korean": "설마..."
+          },
+          "emotion": "base"
+        },
+        {
+          "type": "direction",
+          "action": "enter",
+          "duration_ms": 500,
+          "spot": [
+            5,
+            1
+          ],
+          "speaker": "kai"
+        },
+        {
+          "speaker": "kai",
+          "content": {
+            "korean": "아닙니다! 그저 시스템 최적화 과정일 뿐입니다. 어서 남은 영수증도 마저 파기해야..."
+          },
+          "type": "speech",
+          "emotion": "base"
+        },
+        {
+          "speaker": "character_any",
+          "content": {
+            "korean": "카이, 당신 손이 왜 떨리는 거지?"
+          },
+          "type": "speech",
+          "emotion": "base"
+        },
+        {
+          "emotion": "base",
+          "speaker": "kai",
+          "type": "speech",
+          "content": {
+            "korean": "아무것도 아닙니다. 서둘러야 합니다."
+          }
+        }
+      ]
+    },
+    {
+      "id": 9,
+      "dialogue": [
+        {
+          "speaker": "narrator",
+          "content": {
+            "korean": "서버실 스피커에서 눌루스의 목소리가 다시 들려온다."
+          },
+          "type": "speech",
+          "emotion": "base"
+        },
+        {
+          "speaker": "narrator",
+          "content": {
+            "korean": "『남아 있는 기록을 정리하라. 망설임은 시스템의 오류를 부른다.』"
+          },
+          "type": "speech",
+          "emotion": "base"
+        },
+        {
+          "emotion": "base",
+          "type": "speech",
+          "content": {
+            "korean": "정리? 아니, 파기하라는 말이지? 우리가 뭘 잘못하고 있는 건 아닐까?"
+          },
+          "speaker": "character_any"
+        },
+        {
+          "type": "speech",
+          "emotion": "base",
+          "speaker": "character_1",
+          "content": {
+            "korean": "혼란스러워."
+          }
+        },
+        {
+          "speaker": "kai",
+          "spot": [
+            5,
+            1
+          ],
+          "action": "enter",
+          "duration_ms": 500,
+          "type": "direction"
+        },
+        {
+          "speaker": "kai",
+          "type": "speech",
+          "content": {
+            "korean": "옳은 판단입니다! 이 모든 것을 끝내야 합니다."
+          },
+          "emotion": "base"
+        },
+        {
+          "content": {
+            "korean": "더 이상은 안 되겠어. 뭔가 이상해."
+          },
+          "speaker": "character_any",
+          "type": "speech",
+          "emotion": "base"
+        },
+        {
+          "emotion": "base",
+          "type": "speech",
+          "content": {
+            "korean": "빛바랜 영수증 뭉치를 마저 파기하려는 순간, 누군가 앞을 막아선다."
+          },
+          "speaker": "narrator"
+        }
+      ]
+    },
+    {
+      "dialogue": [
+        {
+          "speaker": "random_boss",
+          "action": "enter",
+          "type": "direction",
+          "duration_ms": 500,
+          "spot": [
+            5,
+            1
+          ]
+        },
+        {
+          "speaker": "random_boss",
+          "content": {
+            "korean": "정지. 정보국 규율 위반입니다."
+          },
+          "emotion": "base",
+          "type": "speech"
+        },
+        {
+          "content": {
+            "korean": "규율 위반? 우리가 뭘 했다고?"
+          },
+          "speaker": "character_any",
+          "type": "speech",
+          "emotion": "base"
+        },
+        {
+          "emotion": "base",
+          "speaker": "random_boss",
+          "type": "speech",
+          "content": {
+            "korean": "서버실 내 허가되지 않은 행동은 용납되지 않습니다. 당장 멈추십시오."
+          }
+        },
+        {
+          "speaker": "character_any",
+          "content": {
+            "korean": "당신이야말로 왜 우리를 막는 거야? 파기하라고 지시받았는데!"
+          },
+          "type": "speech",
+          "emotion": "base"
+        },
+        {
+          "speaker": "random_boss",
+          "content": {
+            "korean": "의문에 답할 필요는 없습니다. 오직 명령에 복종할 뿐."
+          },
+          "type": "speech",
+          "emotion": "base"
+        },
+        {
+          "content": {
+            "korean": "우리가 잘못된 길을 가고 있었다는 건가..."
+          },
+          "type": "speech",
+          "speaker": "character_any",
+          "emotion": "base"
+        },
+        {
+          "emotion": "base",
+          "content": {
+            "korean": "싸워야 해!"
+          },
+          "speaker": "character_2",
+          "type": "speech"
+        }
+      ],
+      "lose_dialogue": [
+        {
+          "emotion": "base",
+          "speaker": "random_boss",
+          "type": "speech",
+          "content": {
+            "korean": "규칙을 어긴 자에게는 대가가 따르는 법. 이 기록들은 사라질 것입니다."
+          }
+        },
+        {
+          "emotion": "sad",
+          "speaker": "character_any",
+          "type": "speech",
+          "content": {
+            "korean": "안 돼... 이렇게 끝날 수는 없어!"
+          }
+        }
+      ],
+      "id": 15,
+      "win_dialogue": [
+        {
+          "content": {
+            "korean": "간신히 물리쳤지만... 상황은 나아지지 않았어."
+          },
+          "type": "speech",
+          "speaker": "character_any",
+          "emotion": "base"
+        },
+        {
+          "content": {
+            "korean": "오류 코드가 더 심해졌어!"
+          },
+          "type": "speech",
+          "speaker": "character_3",
+          "emotion": "sad"
+        },
+        {
+          "spot": [
+            3,
+            1
+          ],
+          "action": "enter",
+          "speaker": "kai",
+          "type": "direction",
+          "duration_ms": 500
+        },
+        {
+          "type": "speech",
+          "emotion": "sad",
+          "speaker": "kai",
+          "content": {
+            "korean": "결국 이렇게 되는군요... 파기된 기억은 되돌릴 수 없습니다."
+          }
+        },
+        {
+          "emotion": "angry",
+          "type": "speech",
+          "content": {
+            "korean": "카이, 당신! 대체 무슨 짓을 한 거야?"
+          },
+          "speaker": "character_any"
+        },
+        {
+          "emotion": "sad",
+          "type": "speech",
+          "speaker": "kai",
+          "content": {
+            "korean": "죄송합니다... 이 모든 것이... 시스템의 명령이었으니."
+          }
+        }
+      ]
+    }
+  ]
+}

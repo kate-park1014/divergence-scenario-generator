@@ -1,0 +1,327 @@
+{
+  "scenario_id": "modern_nomos_7_02",
+  "order": 2,
+  "act": "rising",
+  "theme": "modern",
+  "actors": {
+    "lin": {
+      "id": "mon_d036a884-3dde-472c-9fe7-c4807643860f",
+      "name": {
+        "korean": "린",
+        "english": "Lin",
+        "japanese": "リン",
+        "chinese": "琳",
+        "french": "Lin",
+        "spanish": "Lin",
+        "vietnamese": "Lin",
+        "thai": "ลิน",
+        "hindi": "लिन"
+      },
+      "description": "",
+      "face_image_url": "https://imagedelivery.net/WTEqQNGFb-l-IHS6IGnzUQ/a095dd66-1857-4f44-68b0-2ece83006d00/public",
+      "battle_sprite_url": "https://imagedelivery.net/WTEqQNGFb-l-IHS6IGnzUQ/05b02694-f1ed-4e4c-b7ca-fb5b74a48900/public",
+      "role": {
+        "korean": "피해자"
+      }
+    }
+  },
+  "boss": {
+    "pool_id": "random_boss",
+    "role": {
+      "korean": "경비원"
+    }
+  },
+  "rooms": [
+    {
+      "dialogue": [
+        {
+          "speaker": "narrator",
+          "type": "speech",
+          "content": {
+            "korean": "폐쇄된 중재소 기록실, 끝없이 이어지는 서류들 사이로 어두운 그림자가 드리운다."
+          }
+        },
+        {
+          "content": {
+            "korean": "중재소 스피커에서 나지막한 속삭임이 들려온다. '오팔 핵을 봉인하면... 비로소 자유로워질 수 있다.'"
+          },
+          "speaker": "narrator",
+          "type": "speech"
+        },
+        {
+          "spot": [
+            50,
+            10
+          ],
+          "type": "direction",
+          "duration_ms": 500,
+          "action": "enter",
+          "speaker": "lin"
+        },
+        {
+          "speaker": "lin",
+          "type": "speech",
+          "content": {
+            "korean": "안 돼요! 저 말을 믿어선 안 돼요!"
+          },
+          "emotion": "sad"
+        },
+        {
+          "speaker": "character_any",
+          "type": "speech",
+          "content": {
+            "korean": "당신은 누구죠? 이곳에 어떻게..."
+          },
+          "emotion": "base"
+        },
+        {
+          "content": {
+            "korean": "저는... 오팔 핵 때문에 모든 것을 잃은 린이에요. 이 기록실의 약속도 파괴될 거예요."
+          },
+          "emotion": "sad",
+          "type": "speech",
+          "speaker": "lin"
+        },
+        {
+          "emotion": "base",
+          "content": {
+            "korean": "망설여지네요."
+          },
+          "speaker": "character_1",
+          "type": "speech"
+        }
+      ],
+      "id": 1
+    },
+    {
+      "dialogue": [
+        {
+          "duration_ms": 500,
+          "action": "enter",
+          "spot": [
+            50,
+            10
+          ],
+          "speaker": "lin",
+          "type": "direction"
+        },
+        {
+          "content": {
+            "korean": "기록실 벽에 새겨진 글귀를 보셨나요? '내가 곧 율법이다'... 노모스는 자신을 신처럼 떠받들어요."
+          },
+          "emotion": "sad",
+          "type": "speech",
+          "speaker": "lin"
+        },
+        {
+          "type": "speech",
+          "emotion": "base",
+          "content": {
+            "korean": "기록들을 보면 오팔 핵 봉인 후 약속들이 사라진 흔적이 보입니다. 린의 말이 맞는 것 같아요."
+          },
+          "speaker": "character_any"
+        },
+        {
+          "type": "speech",
+          "content": {
+            "korean": "다시 스피커에서 노모스의 목소리가 흘러나온다. '두려워 말라. 너의 의심을 깨고 봉인하면 모든 것이 명확해진다.'"
+          },
+          "speaker": "narrator"
+        },
+        {
+          "speaker": "character_2",
+          "type": "speech",
+          "emotion": "base",
+          "content": {
+            "korean": "혼란스러워요."
+          }
+        }
+      ],
+      "id": 3
+    },
+    {
+      "id": 5,
+      "dialogue": [
+        {
+          "speaker": "lin",
+          "action": "enter",
+          "duration_ms": 500,
+          "spot": [
+            50,
+            10
+          ],
+          "type": "direction"
+        },
+        {
+          "type": "speech",
+          "speaker": "lin",
+          "content": {
+            "korean": "제발... 멈춰주세요. 이 기록들이 사라지면 세상은 더 큰 혼란에 빠질 거예요."
+          },
+          "emotion": "sad"
+        },
+        {
+          "emotion": "base",
+          "content": {
+            "korean": "오팔 핵을 봉인하면 정말 기록들이 사라질까요? 확인해 봐야 하지 않을까요?"
+          },
+          "speaker": "character_any",
+          "type": "speech"
+        },
+        {
+          "type": "speech",
+          "speaker": "narrator",
+          "content": {
+            "korean": "노모스의 속삭임이 더욱 강해진다. '확인하고 싶다면... 직접 봉인하라. 진실은 너의 손 안에 있다.'"
+          }
+        },
+        {
+          "type": "speech",
+          "speaker": "character_3",
+          "emotion": "base",
+          "content": {
+            "korean": "도전해 보죠."
+          }
+        }
+      ]
+    },
+    {
+      "id": 9,
+      "dialogue": [
+        {
+          "content": {
+            "korean": "주인공은 결국 오팔 핵을 봉인한다. 강렬한 빛이 기록실을 뒤덮고, 모든 서류가 뒤틀리기 시작한다."
+          },
+          "speaker": "narrator",
+          "type": "speech"
+        },
+        {
+          "duration_ms": 500,
+          "type": "direction",
+          "spot": [
+            50,
+            10
+          ],
+          "action": "enter",
+          "speaker": "lin"
+        },
+        {
+          "speaker": "lin",
+          "type": "speech",
+          "content": {
+            "korean": "아니... 이럴 수가! 모든 약속 기록이 사라졌어요. 중요한 정보들이 전부 왜곡되고 있어요!"
+          },
+          "emotion": "sad"
+        },
+        {
+          "content": {
+            "korean": "우리가 틀렸어요! 린의 말이 맞았어. 돌이킬 수 없는 실수를 저지른 것 같아요."
+          },
+          "emotion": "sad",
+          "type": "speech",
+          "speaker": "character_any"
+        },
+        {
+          "duration_ms": 500,
+          "action": "enter",
+          "speaker": "random_boss",
+          "spot": [
+            50,
+            10
+          ],
+          "type": "direction"
+        },
+        {
+          "type": "speech",
+          "speaker": "random_boss",
+          "emotion": "angry",
+          "content": {
+            "korean": "정지! 기록실에서 무슨 짓을 하는 겁니까? 이곳의 질서를 어지럽히지 마십시오."
+          }
+        },
+        {
+          "type": "speech",
+          "speaker": "character_4",
+          "content": {
+            "korean": "방해하지 마!"
+          },
+          "emotion": "angry"
+        }
+      ]
+    },
+    {
+      "dialogue": [
+        {
+          "content": {
+            "korean": "기록관 경비원으로서, 당신들의 무모한 행동을 더 이상 좌시할 수 없습니다. 즉시 물러나십시오!"
+          },
+          "emotion": "angry",
+          "type": "speech",
+          "speaker": "random_boss"
+        },
+        {
+          "emotion": "angry",
+          "content": {
+            "korean": "비켜요! 우리는 진실을 확인해야 해. 더 이상 노모스의 거짓말에 속지 않을 거야!"
+          },
+          "type": "speech",
+          "speaker": "character_any"
+        }
+      ],
+      "lose_dialogue": [
+        {
+          "type": "speech",
+          "speaker": "random_boss",
+          "emotion": "base",
+          "content": {
+            "korean": "규칙은 깨질 수 없다. 기록실의 질서는 유지되어야 한다."
+          }
+        }
+      ],
+      "id": 15,
+      "win_dialogue": [
+        {
+          "speaker": "narrator",
+          "content": {
+            "korean": "경비원을 제압했지만, 기록실의 약속 기록들은 이미 지워진 상태였다."
+          },
+          "type": "speech"
+        },
+        {
+          "duration_ms": 500,
+          "action": "enter",
+          "spot": [
+            50,
+            10
+          ],
+          "type": "direction",
+          "speaker": "lin"
+        },
+        {
+          "type": "speech",
+          "content": {
+            "korean": "돌이킬 수 없게 되어버렸어요... 이제 어디에서도 진실을 찾기 어렵겠네요."
+          },
+          "emotion": "sad",
+          "speaker": "lin"
+        },
+        {
+          "emotion": "sad",
+          "content": {
+            "korean": "우리의 잘못된 선택이 이런 결과를 낳다니... 다음은 심문실인가. 거기서도 같은 일이 벌어질까?"
+          },
+          "type": "speech",
+          "speaker": "character_any"
+        }
+      ]
+    }
+  ],
+  "prologue": {
+    "korean": [
+      "폐쇄된 중재소 기록실, 수많은 약속의 기록이 잠들어 있는 곳.",
+      "오팔 핵의 봉인은 이 모든 것을 뒤흔들 위험을 품고 있다.",
+      "어둠 속 속삭임이 또 다시 주인공을 유혹하고, 피해자의 절박한 경고가 울려 퍼진다.",
+      "과연 주인공은 올바른 선택을 할 수 있을까."
+    ]
+  }
+}

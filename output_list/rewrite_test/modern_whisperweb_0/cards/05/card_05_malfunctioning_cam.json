@@ -1,0 +1,161 @@
+{
+	"id": "card_05_malfunctioning_cam",
+	"title": {
+		"korean": "오작동하는 감시 카메라"
+	},
+	"tags": [
+		"malfunctioning_cam"
+	],
+	"intensity": "calm",
+	"after_story": 5,
+	"before_story": 9,
+	"leaning": "community+",
+	"background_tags": [
+		"flickering monitor",
+		"tangled wires",
+		"security panel",
+		"hidden alcove",
+		"blurry images"
+	],
+	"dialogue": [
+		{
+			"speaker": "narrator",
+			"content": {
+				"korean": "폐기장 깊숙한 곳, 센서 기술자가 오작동하는 감시 카메라를 수리하며 애를 먹고 있었다."
+			}
+		},
+		{
+			"speaker": "sensor_tech",
+			"content": {
+				"korean": "화면이 자꾸 엉망이 돼! 이것만 고치면 중요한 정보를 얻을 수 있는데."
+			}
+		},
+		{
+			"speaker": "echo",
+			"content": {
+				"korean": "감시 카메라가 제대로 작동하면 오히려 우리가 감시당하는 거 아닐까?"
+			}
+		}
+	],
+	"choices": [
+		{
+			"text": {
+				"korean": "센서 기술자의 수리를 돕고 감시 시스템 복구에 협력한다."
+			},
+			"mbti": "EF",
+			"effects": {
+				"community": 30,
+				"echo": 5
+			},
+			"event": "minigame_cup",
+			"seed": null,
+			"result": [
+				{
+					"speaker": "sensor_tech",
+					"content": {
+						"korean": "당신 덕분에 시야가 확보됐어! 고마워요, 정말!"
+					}
+				},
+				{
+					"speaker": "echo",
+					"content": {
+						"korean": "그래도 폐기장 안의 상황을 좀 더 명확하게 볼 수 있으니 도움이 될 거야."
+					}
+				},
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "카메라 화면이 점차 선명해졌다. 폐기장 내부의 모습이 눈에 들어왔다."
+					}
+				},
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "고장 난 감시 카메라를 수리하자, 화면이 깜빡였다. 무작위 정보 조각들 속에서 진짜를 골라내야 했다."
+					}
+				}
+			],
+			"event_intro": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "화면이 여러 개로 분할되며 겹쳐졌다. 어떤 화면이 진짜 정보인지 빠르게 골라야 했다."
+					}
+				}
+			]
+		},
+		{
+			"text": {
+				"korean": "감시 시스템 복구가 오히려 '위스퍼 웹'에게 유리할 수 있다며 중단을 요구한다."
+			},
+			"mbti": "IT",
+			"effects": {
+				"community": -20,
+				"echo": -10
+			},
+			"reward": [
+				"intelligence_down"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "sensor_tech",
+					"content": {
+						"korean": "말도 안 돼! 이건 폐기장 안전을 위한 거야!"
+					}
+				},
+				{
+					"speaker": "echo",
+					"content": {
+						"korean": "그 말이 맞아. 굳이 그들의 눈이 될 필요는 없어."
+					}
+				},
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "기술자는 불만에 가득 찬 얼굴로 작업 도구를 내려놓았다. 카메라는 꺼져 있었다."
+					}
+				}
+			]
+		},
+		{
+			"text": {
+				"korean": "센서 기술자를 위협하여 감시 시스템의 제어권을 넘겨받는다."
+			},
+			"mbti": "ES",
+			"require": {
+				"stat": "fighting",
+				"op": "<=",
+				"value": -40
+			},
+			"effects": {
+				"fighting": -10,
+				"echo": -5
+			},
+			"reward": [
+				"stun"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "sensor_tech",
+					"content": {
+						"korean": "히익! 알겠습니다! 제어권을 넘겨드리죠!"
+					}
+				},
+				{
+					"speaker": "echo",
+					"content": {
+						"korean": "너무 과격한 거 아니야? 꼭 이렇게까지 해야 해?"
+					}
+				},
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "기술자는 겁먹은 얼굴로 제어권을 넘겨주었다. 감시 시스템이 잠시 멈췄다."
+					}
+				}
+			]
+		}
+	]
+}

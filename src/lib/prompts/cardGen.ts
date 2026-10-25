@@ -7,13 +7,13 @@
 import { AXES, type AxisCombo, type AxisKey } from './axisVariantGen';
 
 type Lang = { korean: string; [k: string]: string };
-type Line = { type?: string; speaker?: string; emotion?: string; content?: Lang | null };
+export type Line = { type?: string; speaker?: string; emotion?: string; content?: Lang | null };
 type Room = { id: number; dialogue: Line[]; win_dialogue?: Line[]; lose_dialogue?: Line[] };
 export type CardScenario = {
 	scenario_id: string;
 	order: number;
 	actors: Record<string, { name: Lang }>;
-	boss?: { pool_id: string };
+	boss?: { pool_id: string; role?: Lang };
 	prologue?: { korean: string[] };
 	rooms: Room[];
 };
@@ -43,7 +43,7 @@ function sideOf(combo: AxisCombo) {
 }
 
 /** 스토리 방 대사에 줄 번호를 붙임. additions 의 after_line 기준 (direction 줄도 셈) */
-function numberedRooms(s: CardScenario): string {
+export function numberedRooms(s: CardScenario): string {
 	const out: string[] = [];
 	const lines = (list: Line[]) =>
 		list.map((l, i) =>
@@ -60,7 +60,7 @@ function numberedRooms(s: CardScenario): string {
 	return out.join('\n');
 }
 
-const EXAMPLE_ADDITIONS = `{
+export const EXAMPLE_ADDITIONS = `{
   "scenario_id": "modern_whisperweb_0_FIE_01",
   "actors": {
     "echo": { "name": { "korean": "에코" }, "style": { "korean": "날 서 있고 걱정이 섞인 짧은 반말" } },
@@ -109,7 +109,7 @@ const EXAMPLE_ADDITIONS = `{
 // ── 공통 맥락 ───────────────────────────────────────────────
 
 /** 예시(다른 시나리오)의 동행 id "echo" 를 이 시나리오의 동행 id 로 바꿈. 호감도 수치 echo 와 헷갈리지 않게 */
-function withCompanion(example: string, companion: string, name: string): string {
+export function withCompanion(example: string, companion: string, name: string): string {
 	return example
 		.replaceAll('"speaker": "echo"', `"speaker": "${companion}"`)
 		.replace('"echo": { "name": { "korean": "에코" }', `"${companion}": { "name": { "korean": "${name}" }`);
@@ -183,7 +183,7 @@ ${numberedRooms(s)}
 ${prevLines}`;
 }
 
-const STYLE = `# 문체
+export const STYLE = `# 문체
 - 사람·장소·물건·사건은 이 스토리 원문에서 출발. 원문에 없는 큰 설정(새 조직·초능력) 금지. 작은 사항(시간·숫자·물건)은 추가 가능
 - 장르의 분위기로. 단 비유 금지: "그림자", "심연", "집어삼키다", "광기" 대신 실제 물건·장소·숫자
   - 원문에 실제로 나오는 물건·현상은 그 단어 그대로 써도 됨 (예: 원문의 "겹쳐진 그림자")
@@ -416,7 +416,7 @@ export function textBatches(design: CardDesign): string[][] {
 	return [[...ids('plant'), ...ids('callback')], ids('normal')];
 }
 
-const TEXT_EXAMPLE = `{
+export const TEXT_EXAMPLE = `{
   "cards": [
     {
       "id": "card_fie_taxi_cam",

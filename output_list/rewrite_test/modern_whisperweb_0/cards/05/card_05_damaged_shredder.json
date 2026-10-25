@@ -1,0 +1,159 @@
+{
+	"id": "card_05_damaged_shredder",
+	"title": {
+		"korean": "훼손된 폐기물 분류기"
+	},
+	"tags": [
+		"waste_shredder"
+	],
+	"intensity": "high",
+	"after_story": 9,
+	"before_story": 15,
+	"leaning": "fighting+",
+	"background_tags": [
+		"shredded debris",
+		"sparks flying",
+		"broken machinery",
+		"chaotic mess",
+		"emergency lights"
+	],
+	"dialogue": [
+		{
+			"speaker": "narrator",
+			"content": {
+				"korean": "폐기장 전체가 스크린처럼 일렁이는 가운데, 훼손된 폐기물 분류기에서 정보 잔해가 쏟아졌다."
+			}
+		},
+		{
+			"speaker": "cleaner",
+			"content": {
+				"korean": "이런! 분류기가 망가져서 정보가 마구 섞이고 있어! 어떻게 해야 해!"
+			}
+		},
+		{
+			"speaker": "echo",
+			"content": {
+				"korean": "이대로 두면 '위스퍼 웹'의 혼란이 더 심해질 거야! 빨리 막아야 해!"
+			}
+		}
+	],
+	"choices": [
+		{
+			"text": {
+				"korean": "훼손된 분류기를 임시방편으로 고치고 작업을 속행한다."
+			},
+			"mbti": "FT",
+			"effects": {
+				"fighting": 30,
+				"echo": -5
+			},
+			"event": "campsite",
+			"seed": null,
+			"result": [
+				{
+					"speaker": "cleaner",
+					"content": {
+						"korean": "휴... 덕분에 한숨 돌렸습니다. 이제 다시 작업할 수 있겠군요."
+					}
+				},
+				{
+					"speaker": "echo",
+					"content": {
+						"korean": "임시방편일 뿐이지만, 일단 이대로는 버틸 수 있을 거야."
+					}
+				},
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "분류기는 덜컹거렸지만, 쏟아지는 잔해의 양은 줄었다."
+					}
+				},
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "임시방편으로 고쳐진 분류기 옆에서 우리는 잠시 숨을 돌렸다. 폐기장 심층부의 소음이 더욱 강렬하게 들려왔다."
+					}
+				}
+			],
+			"event_intro": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "분류기 주변의 정보 조각들이 춤을 추듯 휘몰아쳤다. 우리는 파편들을 피해 균형을 잡아야 했다."
+					}
+				}
+			]
+		},
+		{
+			"text": {
+				"korean": "분류기의 잔해 속에서 '위스퍼 웹'의 흔적을 찾아내 제거한다."
+			},
+			"mbti": "SN",
+			"effects": {
+				"fighting": -20,
+				"echo": 10
+			},
+			"reward": [
+				"stun"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "잔해 속에서 '위스퍼 웹'의 흔적을 발견하고 강제로 연결을 끊었다. 분류기는 완전히 멈췄다."
+					}
+				},
+				{
+					"speaker": "echo",
+					"content": {
+						"korean": "좋아! 근본적인 원인을 없앴으니 더 큰 문제는 없을 거야!"
+					}
+				},
+				{
+					"speaker": "cleaner",
+					"content": {
+						"korean": "아니, 분류기가 멈춰버렸잖아! 어떡하죠!"
+					}
+				}
+			]
+		},
+		{
+			"text": {
+				"korean": "분류기의 설계도를 분석하여 효율적인 복구 방안을 제시한다."
+			},
+			"mbti": "IN",
+			"require": {
+				"mbti": "IN"
+			},
+			"effects": {
+				"reason": 10,
+				"echo": 5
+			},
+			"reward": [
+				"intelligence_up"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "설계도를 토대로 분류기의 핵심 결함을 찾아내고, 청소원에게 복구 방법을 상세히 설명했다."
+					}
+				},
+				{
+					"speaker": "echo",
+					"content": {
+						"korean": "역시 정확한 분석이 중요해. 저 친구도 잘 알아들었을 거야."
+					}
+				},
+				{
+					"speaker": "cleaner",
+					"content": {
+						"korean": "오! 이렇게 하면 되는군요! 정말 대단합니다!"
+					}
+				}
+			]
+		}
+	]
+}

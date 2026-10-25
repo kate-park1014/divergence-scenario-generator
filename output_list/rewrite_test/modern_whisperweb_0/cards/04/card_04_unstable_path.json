@@ -1,0 +1,126 @@
+{
+	"id": "card_04_unstable_path",
+	"title": {
+		"korean": "불안정한 통로"
+	},
+	"tags": "collapse",
+	"intensity": "high",
+	"after_story": 9,
+	"before_story": 15,
+	"leaning": "reason-",
+	"background_tags": [
+		"crumbling floor",
+		"falling debris",
+		"cracked walls",
+		"dust cloud",
+		"emergency exit sign"
+	],
+	"dialogue": [
+		{
+			"speaker": "narrator",
+			"content": {
+				"korean": "진행하려던 통로가 갑자기 무너져 내렸다. 재활용 전문가가 급히 잔해를 막으려 애썼다."
+			}
+		},
+		{
+			"speaker": "recycler",
+			"content": {
+				"korean": "이런! 길이 막혔어! 더 이상 무너지면 안 되는데…"
+			}
+		},
+		{
+			"speaker": "kai",
+			"content": {
+				"korean": "상황이 정말 걷잡을 수 없게 되었군요. 위험하니 조심해야 합니다."
+			}
+		}
+	],
+	"choices": [
+		{
+			"text": {
+				"korean": "무너진 잔해 속에서 안전한 길을 급히 찾으려 한다"
+			},
+			"mbti": "SJ",
+			"effects": {
+				"reason": -30,
+				"echo": -5
+			},
+			"reward": [
+				"hp_down"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "잔해 속에서 길을 찾으려 했지만, 발을 헛디뎌 넘어질 뻔했다. 카이가 걱정했다."
+					}
+				},
+				{
+					"speaker": "kai",
+					"content": {
+						"korean": "무모한 행동이에요! 더 다칠 수 있습니다."
+					}
+				}
+			]
+		},
+		{
+			"text": {
+				"korean": "전문가와 협력하여 무너진 통로를 우회하는 방법을 모색한다"
+			},
+			"mbti": "NP",
+			"effects": {
+				"reason": 20,
+				"echo": 10
+			},
+			"reward": [
+				"move_range_up"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "전문가와 함께 주변을 살피자, 안전하게 우회할 수 있는 좁은 틈을 발견했다. 카이가 안도했다."
+					}
+				},
+				{
+					"speaker": "kai",
+					"content": {
+						"korean": "역시 함께 지혜를 모으니 길이 보이는군요."
+					}
+				}
+			]
+		},
+		{
+			"text": {
+				"korean": "{actor}이(가) 잔해의 구조를 분석하여 무너진 통로를 빠르게 통과한다"
+			},
+			"mbti": "TJ",
+			"require": {
+				"mbti": "TJ"
+			},
+			"effects": {
+				"intelligence": 10
+			},
+			"reward": [
+				"intelligence_up"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "{actor}이(가) 무너진 통로의 약한 부분을 정확히 짚어내 빠르게 통과했다. 전문가가 감탄했다."
+					}
+				},
+				{
+					"speaker": "recycler",
+					"content": {
+						"korean": "대단하군! 나도 미처 생각지 못했던 방법이야."
+					}
+				}
+			]
+		}
+	]
+}

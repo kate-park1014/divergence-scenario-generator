@@ -1,0 +1,183 @@
+{
+	"id": "card_01_boss_blockade",
+	"title": {
+		"korean": "최후의 저지선"
+	},
+	"tags": [
+		"boss_encounter"
+	],
+	"intensity": "high",
+	"after_story": 9,
+	"before_story": 15,
+	"leaning": "fighting-",
+	"background_tags": [
+		"폐기장 길목",
+		"보스 막아섬",
+		"위압적인 분위기",
+		"네온의 그림자",
+		"폐기물 산"
+	],
+	"dialogue": [
+		{
+			"speaker": "narrator",
+			"content": {
+				"korean": "폐기장 가장 깊숙한 길목, {random_boss}이(가) 나타나 길을 가로막았다."
+			}
+		},
+		{
+			"speaker": "random_boss",
+			"content": {
+				"korean": "감히 이곳까지 오다니! 더는 한 발짝도 들일 수 없다!"
+			}
+		},
+		{
+			"speaker": "echo",
+			"content": {
+				"korean": "이 사람이 여기를 지키고 있었어요. 우리를 막으려는 게 분명해요!"
+			}
+		}
+	],
+	"choices": [
+		{
+			"text": {
+				"korean": "{random_boss}의 경고를 받아들이는 척하며 잠시 후퇴한다"
+			},
+			"mbti": "SF",
+			"effects": {
+				"fighting": -30,
+				"defense_up": 10,
+				"echo": -5
+			},
+			"reward": [
+				"defense_up"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "{random_boss}의 시선을 피해 잠시 후퇴했다. 그는 여전히 길을 막고 있었다."
+					}
+				},
+				{
+					"speaker": "echo",
+					"content": {
+						"korean": "지금은 물러서는 게 현명할지도 몰라요. 하지만 포기할 순 없어요!"
+					}
+				}
+			]
+		},
+		{
+			"text": {
+				"korean": "{random_boss}에게 단호하게 길을 열 것을 요구한다"
+			},
+			"mbti": "TP",
+			"effects": {
+				"fighting": 30,
+				"echo": 10
+			},
+			"reward": [
+				"attack_up"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "당신의 단호한 요구에 {random_boss}은(는) 꿈쩍도 않았다. 그의 눈빛은 더욱 날카로워졌다."
+					}
+				},
+				{
+					"speaker": "random_boss",
+					"content": {
+						"korean": "어리석은 짓이다. 경고는 끝났다."
+					}
+				},
+				{
+					"speaker": "echo",
+					"content": {
+						"korean": "강하게 나갔지만… 저 사람은 요지부동이에요."
+					}
+				}
+			]
+		},
+		{
+			"text": {
+				"korean": "{random_boss}가 내세우는 이유를 반박하며 독단적으로 돌파한다"
+			},
+			"mbti": "TJ",
+			"require": {
+				"stat": "community",
+				"op": "<=",
+				"value": -40
+			},
+			"effects": {
+				"community": -30,
+				"echo": -10
+			},
+			"reward": [
+				"move_range_up"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "{actor}이(가) {random_boss}의 논리를 반박하며 돌파했다. 그는 비웃듯 당신을 밀쳐냈다."
+					}
+				},
+				{
+					"speaker": "random_boss",
+					"content": {
+						"korean": "네놈의 말은 통하지 않는다. 네 판단은 틀렸다."
+					}
+				},
+				{
+					"speaker": "echo",
+					"content": {
+						"korean": "너무 독단적이었나요? 저 사람을 설득하긴 어려워 보여요."
+					}
+				}
+			]
+		},
+		{
+			"text": {
+				"korean": "{random_boss}에게 폐기장 통과를 위한 뇌물을 건넨다"
+			},
+			"mbti": "SP",
+			"require": {
+				"stat": "gold",
+				"op": ">=",
+				"value": 150
+			},
+			"effects": {
+				"gold": -150,
+				"fighting": -10
+			},
+			"reward": [
+				"cooldown_reset"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "뇌물을 받은 {random_boss}은(는) 잠시 망설였으나 고개를 저었다. 그는 여전히 길을 막았다."
+					}
+				},
+				{
+					"speaker": "random_boss",
+					"content": {
+						"korean": "흥, 돈으로 이 길을 살 순 없다. 돌아가라."
+					}
+				},
+				{
+					"speaker": "echo",
+					"content": {
+						"korean": "돈도 안 통하네요… 저 사람은 정말 꽉 막힌 사람이에요!"
+					}
+				}
+			]
+		}
+	]
+}

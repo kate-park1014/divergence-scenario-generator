@@ -1,0 +1,168 @@
+{
+	"id": "card_02_broken_signal_tower",
+	"title": {
+		"korean": "고장난 신호탑"
+	},
+	"tags": "signal",
+	"intensity": "calm",
+	"after_story": 1,
+	"before_story": 3,
+	"leaning": "fighting-",
+	"background_tags": [
+		"scrap metal",
+		"dusty air",
+		"broken screens",
+		"flickering light",
+		"makeshift workshop"
+	],
+	"dialogue": [
+		{
+			"speaker": "narrator",
+			"content": {
+				"korean": "폐품 예술가가 고장 난 신호탑을 끌고 와 닥스의 앞을 막아섰다."
+			}
+		},
+		{
+			"speaker": "junk_artisan",
+			"content": {
+				"korean": "이 신호탑은 내 작품의 핵심 재료다! 누구도 여기에 손대지 마."
+			}
+		},
+		{
+			"speaker": "dax",
+			"content": {
+				"korean": "이봐요, 지금 내가 작업할 공간이 필요하다고. 못 본 척할 셈이야?"
+			}
+		}
+	],
+	"choices": [
+		{
+			"text": {
+				"korean": "폐품 예술가를 무시하고 장비를 놓을 공간을 강제로 만든다."
+			},
+			"mbti": "IT",
+			"effects": {
+				"fighting": -30,
+				"echo": -5
+			},
+			"reward": [
+				"hp_down"
+			],
+			"seed": "ignored_artisan",
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "억지로 공간을 확보하자, 폐품 예술가는 불쾌한 표정으로 노려봤다."
+					}
+				},
+				{
+					"speaker": "dax",
+					"content": {
+						"korean": "…굳이 그렇게까지 해야 했어? 이제 뒤끝이 좀 생기겠는걸."
+					}
+				}
+			]
+		},
+		{
+			"text": {
+				"korean": "폐품 예술가를 설득해 다른 곳을 찾아 작품을 만들게 한다."
+			},
+			"mbti": "EN",
+			"effects": {
+				"community": 20,
+				"echo": 10
+			},
+			"event": "meet_stranger",
+			"seed": "respected_artisan",
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "폐품 예술가는 마지못해 신호탑을 옮겼다. 닥스가 장비를 설치했다."
+					}
+				},
+				{
+					"speaker": "dax",
+					"content": {
+						"korean": "휴, 덕분에 한시름 놓았네. 당신 덕분에 작업이 훨씬 수월해졌어."
+					}
+				}
+			],
+			"event_intro": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "낯선 사람의 작업실. 기묘한 조형물들이 삐걱거렸다. 폐기물 냄새가 진동했다."
+					}
+				}
+			]
+		},
+		{
+			"text": {
+				"korean": "돈을 주고 예술가가 더 나은 재료를 찾아 폐기장의 다른 구역으로 가게 한다."
+			},
+			"mbti": "FJ",
+			"require": {
+				"stat": "gold",
+				"op": ">=",
+				"value": 100
+			},
+			"effects": {
+				"gold": -100,
+				"community": 10
+			},
+			"reward": [
+				"intelligence_up"
+			],
+			"seed": "respected_artisan",
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "예술가는 돈을 받자마자 만족스러운 미소로 신호탑을 끌고 떠났다."
+					}
+				},
+				{
+					"speaker": "dax",
+					"content": {
+						"korean": "돈으로 해결하는 게 제일 빠르긴 하지. 작업 속도가 붙겠어."
+					}
+				}
+			]
+		},
+		{
+			"text": {
+				"korean": "폐품 예술가의 행동이 폐기장의 질서를 해친다고 비난하며 물러나게 한다."
+			},
+			"mbti": "TJ",
+			"require": {
+				"stat": "reason",
+				"op": "<=",
+				"value": -40
+			},
+			"effects": {
+				"reason": -10,
+				"fighting": -10
+			},
+			"reward": [
+				"attack_down"
+			],
+			"seed": "ignored_artisan",
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "당신의 지적에 폐품 예술가는 주춤하며 신호탑을 치웠다. 침묵이 흘렀다."
+					}
+				},
+				{
+					"speaker": "dax",
+					"content": {
+						"korean": "…그렇게까지 강하게 나갈 필요는 없었을 텐데. 여긴 질서가 통하는 곳이 아니라고."
+					}
+				}
+			]
+		}
+	]
+}

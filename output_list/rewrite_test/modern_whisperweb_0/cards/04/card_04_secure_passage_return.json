@@ -1,0 +1,99 @@
+{
+	"id": "card_04_secure_passage_return",
+	"title": {
+		"korean": "확보된 통로의 이점"
+	},
+	"tags": "path",
+	"intensity": "calm",
+	"after_story": 5,
+	"before_story": 9,
+	"callback": {
+		"seed": "secure_passage",
+		"min_rooms_after": 2
+	},
+	"background_tags": [
+		"fenced area",
+		"warning sign",
+		"patrolling drone",
+		"overgrown wires",
+		"crumbling wall"
+	],
+	"dialogue": [
+		{
+			"speaker": "narrator",
+			"content": {
+				"korean": "사방에서 정보들이 뒤섞여 번졌다. 그때, 익숙한 보안 경비원이 다가와 조심스러운 표정으로 말을 걸었다."
+			}
+		},
+		{
+			"speaker": "security_guard",
+			"content": {
+				"korean": "이쪽은 위험합니다. 제가 안내해 드리죠. 전에 저를 도와주신 덕분에 저도 여길 좀 압니다."
+			}
+		},
+		{
+			"speaker": "kai",
+			"content": {
+				"korean": "다행입니다! 신뢰는 이런 위기에서 빛을 발하는군요."
+			}
+		}
+	],
+	"choices": [
+		{
+			"text": {
+				"korean": "경비원의 도움을 받아 안전하게 통과한다"
+			},
+			"mbti": "EF",
+			"effects": {
+				"community": 10
+			},
+			"reward": [
+				"move_range_up"
+			],
+			"flag": "secure_route",
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "경비원은 조용히 잠겨있던 문을 열어 안전한 통로를 알려주었다. 덕분에 위험을 피할 수 있었다."
+					}
+				},
+				{
+					"speaker": "kai",
+					"content": {
+						"korean": "경비원의 도움이 큰 힘이 되었네요."
+					}
+				}
+			]
+		},
+		{
+			"text": {
+				"korean": "경비원에게 폐기장의 불안정한 상황에 대해 더 묻는다"
+			},
+			"mbti": "TJ",
+			"effects": {
+				"reason": 10
+			},
+			"reward": [
+				"intelligence_up"
+			],
+			"flag": "secure_route",
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "경비원은 잠시 망설이다, 이 지역의 정보 흐름에 대한 중요한 단서를 알려주었다."
+					}
+				},
+				{
+					"speaker": "kai",
+					"content": {
+						"korean": "폐기물 관리동이 생각보다 더 복잡하게 얽혀있었군요."
+					}
+				}
+			]
+		}
+	]
+}

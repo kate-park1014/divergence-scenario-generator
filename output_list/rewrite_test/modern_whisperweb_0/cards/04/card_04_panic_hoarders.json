@@ -1,0 +1,130 @@
+{
+	"id": "card_04_panic_hoarders",
+	"title": {
+		"korean": "공황에 빠진 사람들"
+	},
+	"tags": "panic",
+	"intensity": "high",
+	"after_story": 5,
+	"before_story": 9,
+	"leaning": "community-",
+	"background_tags": [
+		"piled junk",
+		"confused faces",
+		"scattered paper",
+		"flickering screens",
+		"distorted voices"
+	],
+	"dialogue": [
+		{
+			"speaker": "narrator",
+			"content": {
+				"korean": "개인 정보 유출의 공포에 휩싸인 시민들이 필요 없는 물건들을 쌓아두고 길을 막고 있었다."
+			}
+		},
+		{
+			"speaker": "lost_citizen",
+			"content": {
+				"korean": "내 정보가 새어나가고 있어! 이 물건들이 나를 지켜줄 거야! 아무도 못 지나가!"
+			}
+		},
+		{
+			"speaker": "kai",
+			"content": {
+				"korean": "공포가 사람들을 비이성적으로 만들고 있습니다. 우리가 지나가야 할 텐데요."
+			}
+		}
+	],
+	"choices": [
+		{
+			"text": {
+				"korean": "공포에 빠진 시민을 밀치고 억지로 길을 연다"
+			},
+			"mbti": "ET",
+			"effects": {
+				"community": -30,
+				"echo": -10
+			},
+			"reward": [
+				"hp_down"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "시민을 밀치고 억지로 길을 열자, 시민은 비명을 지르며 넘어졌다. 카이가 크게 실망했다."
+					}
+				},
+				{
+					"speaker": "kai",
+					"content": {
+						"korean": "이건 너무했습니다…"
+					}
+				}
+			]
+		},
+		{
+			"text": {
+				"korean": "시민을 진정시키고 안전한 통로를 확보한다"
+			},
+			"mbti": "IF",
+			"effects": {
+				"community": 20,
+				"echo": 10
+			},
+			"reward": [
+				"defense_up"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "시민을 진정시키자 불안해하던 시민은 조금씩 물러섰다. 카이가 안도하며 말했다."
+					}
+				},
+				{
+					"speaker": "kai",
+					"content": {
+						"korean": "역시 대화가 필요했어요. 잘하셨습니다!"
+					}
+				}
+			]
+		}
+	],
+	"forced": [
+		{
+			"text": {
+				"korean": "{actor}이(가) 시민의 불안을 자극하는 소문을 퍼뜨려 군중을 해산시킨다"
+			},
+			"mbti": "EN",
+			"require": {
+				"mbti": "EN"
+			},
+			"chance": 0.3,
+			"effects": {
+				"reason": -20,
+				"community": -10
+			},
+			"reward": [
+				"attack_up"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "{actor}이(가) 일부러 불안한 소문을 퍼뜨리자, 시민들은 혼비백산하여 도망쳤다. 카이가 경악했다."
+					}
+				},
+				{
+					"speaker": "kai",
+					"content": {
+						"korean": "어떻게 이런 생각을… 비록 통로는 열렸지만, 마음이 좋지 않네요."
+					}
+				}
+			]
+		}
+	]
+}

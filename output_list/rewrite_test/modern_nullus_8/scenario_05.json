@@ -1,0 +1,396 @@
+{
+  "scenario_id": "modern_nullus_8_05",
+  "order": 5,
+  "act": "climax_finale",
+  "theme": "modern",
+  "actors": {
+    "echo": {
+      "id": "mon_57f2edb8-aa81-4ce7-beed-ab009cd2ff35",
+      "name": {
+        "korean": "에코",
+        "english": "Echo",
+        "japanese": "エコー",
+        "chinese": "艾可",
+        "french": "Écho",
+        "spanish": "Eco",
+        "vietnamese": "Echo",
+        "thai": "เอคโค่",
+        "hindi": "इको"
+      },
+      "description": "",
+      "face_image_url": "https://imagedelivery.net/WTEqQNGFb-l-IHS6IGnzUQ/da48e2c2-6733-4f65-f8b6-f197af4ff700/public",
+      "battle_sprite_url": "https://imagedelivery.net/WTEqQNGFb-l-IHS6IGnzUQ/e90605b9-372f-4bf1-cdec-56a2fdef0800/public",
+      "role": {
+        "korean": "목격자"
+      }
+    },
+    "kai": {
+      "id": "mon_d7f29313-b8fb-49da-9a1a-01df5d13866e",
+      "name": {
+        "korean": "카이",
+        "english": "Kai",
+        "japanese": "カイ",
+        "chinese": "凯",
+        "french": "Kai",
+        "spanish": "Kai",
+        "vietnamese": "Kai",
+        "thai": "ไค",
+        "hindi": "काई"
+      },
+      "description": "",
+      "face_image_url": "https://imagedelivery.net/WTEqQNGFb-l-IHS6IGnzUQ/f10d9184-4155-4bb9-de2d-db61463f7c00/public",
+      "battle_sprite_url": "https://imagedelivery.net/WTEqQNGFb-l-IHS6IGnzUQ/e41f8e03-08c9-4a4f-6f72-fa9342876f00/public",
+      "role": {
+        "korean": "기술자"
+      }
+    }
+  },
+  "boss": {
+    "pool_id": "pool_271"
+  },
+  "prologue": {
+    "korean": [
+      "정보국 핵심 서버실, 빛바랜 영수증 파기로 인한 혼돈이 극에 달했다.",
+      "사라진 기억과 뒤틀린 신원, 모든 기록이 왜곡된 채 쌓여만 간다.",
+      "누군가의 진실은 사라지고, 존재마저 위태로워졌다.",
+      "파국의 그림자가 모두를 집어삼키려 하는 순간이다."
+    ]
+  },
+  "rooms": [
+    {
+      "id": 1,
+      "dialogue": [
+        {
+          "type": "speech",
+          "emotion": "base",
+          "content": {
+            "korean": "핵심 서버실, 기록과 기억의 조작으로 모든 것이 뒤틀려 버린 공간이다."
+          },
+          "speaker": "narrator"
+        },
+        {
+          "speaker": "character_any",
+          "content": {
+            "korean": "이 모든 혼란이... 우리가 빛바랜 영수증을 파기한 결과라니."
+          },
+          "type": "speech",
+          "emotion": "sad"
+        },
+        {
+          "emotion": "sad",
+          "type": "speech",
+          "content": {
+            "korean": "끔찍해."
+          },
+          "speaker": "character_1"
+        },
+        {
+          "speaker": "kai",
+          "type": "direction",
+          "duration_ms": 500,
+          "action": "enter",
+          "spot": [
+            5,
+            1
+          ]
+        },
+        {
+          "content": {
+            "korean": "여러분, 아직 늦지 않았습니다. 파기만이 이 혼란을 끝낼 유일한 해결책입니다."
+          },
+          "speaker": "kai",
+          "type": "speech",
+          "emotion": "base"
+        },
+        {
+          "emotion": "angry",
+          "type": "speech",
+          "content": {
+            "korean": "더 이상 그 말을 믿을 수 없어. 모든 것이 악화되고 있을 뿐이잖아."
+          },
+          "speaker": "character_any"
+        }
+      ]
+    },
+    {
+      "dialogue": [
+        {
+          "type": "direction",
+          "action": "enter",
+          "spot": [
+            5,
+            1
+          ],
+          "duration_ms": 500,
+          "speaker": "kai"
+        },
+        {
+          "emotion": "angry",
+          "content": {
+            "korean": "이건... 사라진 게 아니었어. 파기된 영수증들이 왜곡된 채 다시 나타났어!"
+          },
+          "speaker": "kai",
+          "type": "speech"
+        },
+        {
+          "speaker": "character_any",
+          "content": {
+            "korean": "카이, 그게 무슨 소리야?"
+          },
+          "type": "speech",
+          "emotion": "base"
+        },
+        {
+          "content": {
+            "korean": "내가... 내가 틀렸어. 모든 것이... 거짓이었어."
+          },
+          "speaker": "kai",
+          "type": "speech",
+          "emotion": "sad"
+        },
+        {
+          "spot": [
+            5,
+            2
+          ],
+          "action": "enter",
+          "type": "direction",
+          "duration_ms": 500,
+          "speaker": "echo"
+        },
+        {
+          "type": "speech",
+          "content": {
+            "korean": "흐릿하지만... 기억이... 돌아와... 파기가... 아니야..."
+          },
+          "speaker": "echo",
+          "emotion": "sad"
+        },
+        {
+          "emotion": "happy",
+          "type": "speech",
+          "speaker": "character_any",
+          "content": {
+            "korean": "에코! 기억이 돌아오는 거야? 진실을 알게 된 건가!"
+          }
+        }
+      ],
+      "id": 3
+    },
+    {
+      "id": 5,
+      "dialogue": [
+        {
+          "spot": [
+            5,
+            2
+          ],
+          "speaker": "echo",
+          "type": "direction",
+          "duration_ms": 500,
+          "action": "enter"
+        },
+        {
+          "emotion": "angry",
+          "content": {
+            "korean": "기억났어! 빛바랜 영수증을 파기하면... 기억이 사라져!"
+          },
+          "speaker": "echo",
+          "type": "speech"
+        },
+        {
+          "content": {
+            "korean": "그랬구나! 이제야 모든 퍼즐이 맞춰져. 우린 모든 걸 되돌려야 해."
+          },
+          "speaker": "character_any",
+          "type": "speech",
+          "emotion": "happy"
+        },
+        {
+          "type": "speech",
+          "speaker": "random_boss",
+          "content": {
+            "korean": "어리석은 시도는 기록을 더 혼란스럽게 할 뿐이다. 파기만이 완전한 소멸을 가져온다."
+          },
+          "emotion": "base"
+        },
+        {
+          "type": "speech",
+          "emotion": "angry",
+          "content": {
+            "korean": "말도 안 돼!"
+          },
+          "speaker": "character_2"
+        },
+        {
+          "type": "speech",
+          "content": {
+            "korean": "아니, 넌 우릴 속여 왔어. 이제 더 이상 네 말에 따르지 않아."
+          },
+          "speaker": "character_any",
+          "emotion": "angry"
+        }
+      ]
+    },
+    {
+      "id": 9,
+      "dialogue": [
+        {
+          "speaker": "character_any",
+          "content": {
+            "korean": "이 빛바랜 영수증을 정리하면... 모든 것이 원래대로 돌아올 거야."
+          },
+          "emotion": "base",
+          "type": "speech"
+        },
+        {
+          "type": "speech",
+          "emotion": "happy",
+          "content": {
+            "korean": "할 수 있어!"
+          },
+          "speaker": "character_3"
+        },
+        {
+          "type": "speech",
+          "emotion": "angry",
+          "content": {
+            "korean": "나는 사라져야 할 모든 기록의 파기자다. 너희의 '정리'는 나의 존재를 부정하는 것!"
+          },
+          "speaker": "random_boss"
+        },
+        {
+          "type": "speech",
+          "content": {
+            "korean": "네가 감춰왔던 진실을 이제야 바로잡을 때야."
+          },
+          "speaker": "character_any",
+          "emotion": "base"
+        },
+        {
+          "emotion": "angry",
+          "type": "speech",
+          "speaker": "random_boss",
+          "content": {
+            "korean": "내 뜻을 거스를 셈이냐? 이 서버실은 영원히 기록을 지울 것이다."
+          }
+        }
+      ]
+    },
+    {
+      "win_dialogue": [
+        {
+          "type": "speech",
+          "emotion": "happy",
+          "speaker": "character_any",
+          "content": {
+            "korean": "이제야 모든 것이 제자리로 돌아와!"
+          }
+        },
+        {
+          "speaker": "boss",
+          "content": {
+            "korean": "모든 것은 기록된다. 너의 '정리'도."
+          },
+          "emotion": "sad",
+          "type": "speech"
+        },
+        {
+          "duration_ms": 500,
+          "speaker": "echo",
+          "type": "direction",
+          "action": "enter",
+          "spot": [
+            5,
+            2
+          ]
+        },
+        {
+          "type": "speech",
+          "speaker": "echo",
+          "content": {
+            "korean": "내 기억이... 완전히 돌아왔어! 고마워, 모두!"
+          },
+          "emotion": "happy"
+        },
+        {
+          "type": "speech",
+          "emotion": "happy",
+          "content": {
+            "korean": "사라졌던 기록들도 전부 복원되었어. 우리가 해냈어."
+          },
+          "speaker": "character_any"
+        },
+        {
+          "emotion": "happy",
+          "speaker": "character_1",
+          "content": {
+            "korean": "정말 다행이야!"
+          },
+          "type": "speech"
+        }
+      ],
+      "lose_dialogue": [
+        {
+          "content": {
+            "korean": "결국 너희의 어리석음이 모든 것을 삼킬 것이다."
+          },
+          "speaker": "boss",
+          "emotion": "angry",
+          "type": "speech"
+        },
+        {
+          "speaker": "character_any",
+          "content": {
+            "korean": "이대로 포기할 순 없어..."
+          },
+          "type": "speech",
+          "emotion": "sad"
+        }
+      ],
+      "dialogue": [
+        {
+          "type": "speech",
+          "content": {
+            "korean": "기록은 소멸되어야 마땅하다. 너희의 모든 시도는 무의미해."
+          },
+          "speaker": "boss",
+          "emotion": "angry"
+        },
+        {
+          "speaker": "character_any",
+          "content": {
+            "korean": "더 이상 네 뜻대로 되지 않을 거야. 우리는 모든 것을 되돌릴 거야."
+          },
+          "type": "speech",
+          "emotion": "angry"
+        },
+        {
+          "speaker": "character_4",
+          "content": {
+            "korean": "여기서 끝장을 보자!"
+          },
+          "emotion": "angry",
+          "type": "speech"
+        },
+        {
+          "content": {
+            "korean": "어리석은 것들! 이 무의미한 기록들을 붙잡고 무엇을 얻으려는가?"
+          },
+          "speaker": "boss",
+          "type": "speech",
+          "emotion": "angry"
+        }
+      ],
+      "id": 15
+    }
+  ],
+  "epilogue": {
+    "korean": [
+      "핵심 서버실의 모니터에 빛바랜 영수증 기록이 선명하게 복원된다.",
+      "뒤틀렸던 기억들은 원래의 모습을 되찾고, 모든 신원 정보는 거짓의 그림자에서 벗어났다.",
+      "정리된 기록 속에서, 비로소 진실이 모습을 드러낸다.",
+      "무대는 원래의 빛을 되찾고, 이야기는 새로운 막을 준비한다."
+    ]
+  }
+}

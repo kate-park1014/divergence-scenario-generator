@@ -1,0 +1,149 @@
+{
+	"id": "card_05_stolen_plans",
+	"title": {
+		"korean": "유출된 설계도의 유혹"
+	},
+	"tags": [
+		"stolen_plans"
+	],
+	"intensity": "high",
+	"after_story": 9,
+	"before_story": 15,
+	"leaning": "reason+",
+	"background_tags": [
+		"holographic schematics",
+		"shady transaction",
+		"hidden data",
+		"glowing symbols",
+		"crumbling walls"
+	],
+	"dialogue": [
+		{
+			"speaker": "narrator",
+			"content": {
+				"korean": "네온 간판이 '모든 것을 합쳐라'는 메시지를 폭주시키는 심층부. 정보 광부가 수상한 설계도를 내밀었다."
+			}
+		},
+		{
+			"speaker": "data_miner",
+			"content": {
+				"korean": "이거 봐요, '위스퍼 웹'의 시스템 설계도로 추정되는 거야. 아주 비싼 정보라고!"
+			}
+		},
+		{
+			"speaker": "echo",
+			"content": {
+				"korean": "저게 진짜면 엄청난 기회일 수 있어. 하지만 함정일지도 몰라!"
+			}
+		}
+	],
+	"choices": [
+		{
+			"text": {
+				"korean": "정보 광부로부터 설계도를 받아내 분석한다."
+			},
+			"mbti": "TP",
+			"effects": {
+				"reason": 30,
+				"echo": -5
+			},
+			"reward": [
+				"intelligence_up"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "data_miner",
+					"content": {
+						"korean": "크크, 현명하네! 이걸로 뭘 할지는 당신 마음이지."
+					}
+				},
+				{
+					"speaker": "echo",
+					"content": {
+						"korean": "정말 유용한 정보일까? 아니면... 우리를 꾀는 함정일까?"
+					}
+				},
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "설계도에는 복잡한 회로와 알 수 없는 기호들이 가득했다."
+					}
+				}
+			]
+		},
+		{
+			"text": {
+				"korean": "정보 광부의 거래를 거부하고, 설계도의 위험성을 경고하며 폐기한다."
+			},
+			"mbti": "FJ",
+			"effects": {
+				"reason": -20,
+				"echo": 10
+			},
+			"reward": [
+				"defense_up"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "data_miner",
+					"content": {
+						"korean": "멍청한 놈! 이런 기회를 놓치다니 후회할 걸!"
+					}
+				},
+				{
+					"speaker": "echo",
+					"content": {
+						"korean": "잘했어! 저런 위험한 정보는 가까이하지 않는 게 상책이야!"
+					}
+				},
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "정보 광부는 역정을 내며 사라졌다. 설계도는 폐기장 바닥에 떨어져 찢어졌다."
+					}
+				}
+			]
+		},
+		{
+			"text": {
+				"korean": "설계도를 공동체에 공개하여 '위스퍼 웹'의 위협을 알린다."
+			},
+			"mbti": "EF",
+			"require": {
+				"stat": "community",
+				"op": ">=",
+				"value": 40
+			},
+			"effects": {
+				"community": 10,
+				"echo": 5
+			},
+			"reward": [
+				"move_range_up"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "data_miner",
+					"content": {
+						"korean": "아니, 이걸 왜...!"
+					}
+				},
+				{
+					"speaker": "echo",
+					"content": {
+						"korean": "맞아, 혼자서 감당할 문제가 아니야. 모두가 알아야 해!"
+					}
+				},
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "정보 광부는 혼란스러운 얼굴로 도망쳤다. 설계도 정보는 폐기장 스크린에 잠깐 나타났다 사라졌다."
+					}
+				}
+			]
+		}
+	]
+}

@@ -1,0 +1,96 @@
+{
+	"id": "card_03_conspiracy_rumor",
+	"title": {
+		"korean": "음모론자의 선동"
+	},
+	"tags": "rumor",
+	"intensity": "high",
+	"after_story": 3,
+	"before_story": 5,
+	"leaning": "fighting-",
+	"background_tags": [
+		"workshop",
+		"theorist",
+		"rant",
+		"crowd",
+		"distrust"
+	],
+	"dialogue": [
+		{
+			"speaker": "narrator",
+			"content": {
+				"korean": "작업실 안쪽, 음모론자 한 명이 주변 사람들을 향해 손짓하며 큰 소리로 외친다."
+			}
+		},
+		{
+			"speaker": "theorist",
+			"content": {
+				"korean": "이 모든 혼란은 계획된 겁니다! 거대한 그림자가 정보를 조작하고 있어요!"
+			}
+		},
+		{
+			"speaker": "lin",
+			"content": {
+				"korean": "저런 주장이 사람들의 불신만 키울 뿐인데..."
+			}
+		}
+	],
+	"choices": [
+		{
+			"text": {
+				"korean": "음모론자의 주장을 무시하고 거리를 둔다"
+			},
+			"mbti": "IN",
+			"effects": {
+				"fighting": -30,
+				"echo": -5
+			},
+			"reward": [
+				"intelligence_down"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "음모론자는 여전히 목소리를 높이고, 사람들은 더욱 술렁거린다."
+					}
+				},
+				{
+					"speaker": "lin",
+					"content": {
+						"korean": "가짜 정보가 퍼지는 것을 그냥 두면 안 될 텐데요."
+					}
+				}
+			]
+		},
+		{
+			"text": {
+				"korean": "음모론자에게 논리적으로 반박하며 진실을 요구한다"
+			},
+			"mbti": "ES",
+			"effects": {
+				"reason": 20,
+				"echo": 10
+			},
+			"reward": [
+				"attack_up"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "theorist",
+					"content": {
+						"korean": "당신도 그들의 속임수에 넘어간 거로군! 진실은 저 밖에 있다!"
+					}
+				},
+				{
+					"speaker": "lin",
+					"content": {
+						"korean": "쉽지는 않겠지만, 저런 주장에 맞서는 건 중요해요."
+					}
+				}
+			]
+		}
+	]
+}

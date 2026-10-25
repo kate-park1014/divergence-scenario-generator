@@ -1,0 +1,96 @@
+{
+	"id": "card_05_rumor_deal_return",
+	"title": {
+		"korean": "거짓 정보의 역습"
+	},
+	"tags": [
+		"info_brokerage"
+	],
+	"intensity": "high",
+	"after_story": 9,
+	"before_story": 15,
+	"callback": {
+		"seed": "B_easy_path",
+		"min_rooms_after": 2
+	},
+	"background_tags": [
+		"panicked crowd",
+		"chaotic signals",
+		"broken screens",
+		"blaring alarms",
+		"dark corners"
+	],
+	"dialogue": [
+		{
+			"speaker": "narrator",
+			"content": {
+				"korean": "폐기장 심층부의 시끌벅적한 소리 사이로, 이전에 정보 행상인이 흘렸던 거짓 정보가 다시 퍼지고 있었다."
+			}
+		},
+		{
+			"speaker": "echo",
+			"content": {
+				"korean": "저 봐! 결국 또 이런 식이야! 진실이 가려지고 있어!"
+			}
+		}
+	],
+	"choices": [
+		{
+			"text": {
+				"korean": "거짓 정보를 무시하고 다음 목표를 향해 발걸음을 재촉한다."
+			},
+			"mbti": "IF",
+			"effects": {
+				"reason": -10
+			},
+			"reward": [
+				"move_range_down"
+			],
+			"flag": "false_signal_trap",
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "사람들은 혼란 속에서 우리를 의심스러운 눈으로 바라봤다. 그들의 시선이 불편하게 느껴졌다."
+					}
+				},
+				{
+					"speaker": "echo",
+					"content": {
+						"korean": "우리가 아무것도 안 하면, 이 거짓말이 전부 진실이 될 거야."
+					}
+				}
+			]
+		},
+		{
+			"text": {
+				"korean": "거짓 정보의 출처를 역추적하여 근원을 찾아 차단한다."
+			},
+			"mbti": "ET",
+			"effects": {
+				"reason": 10,
+				"echo": 5
+			},
+			"reward": [
+				"intelligence_up"
+			],
+			"flag": "system_exploit_clue",
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "정보의 근원을 따라가자 '위스퍼 웹'의 비정상적인 데이터 흐름을 발견했다. 즉시 이를 차단했다."
+					}
+				},
+				{
+					"speaker": "echo",
+					"content": {
+						"korean": "휴, 다행이다. 적어도 더는 퍼지지 않을 거야."
+					}
+				}
+			]
+		}
+	]
+}
