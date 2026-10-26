@@ -45,6 +45,98 @@ export const BELITTLE = ['무작정', '현혹', '알아채지 못', '맹목', '�
 /** 이야기 밖 설명투 */
 export const META = ['언급된', '앞 방', '다음 방', '이 카드'];
 
+// ── 60자 넘는 줄 나누기 ─────────────────────────────────
+
+const MAX_LINE = 60;
+/** 한 줄을 60자 이내 두 조각으로: 문장 끝 → 쉼표 → 띄어쓰기 순으로, 가운데에 가까운 자리에서 자름 */
+function splitText(t: string): string[] {
+	if (t.length <= MAX_LINE) return [t];
+	const mid = t.length / 2;
+	const cuts = (re: RegExp) => [...t.matchAll(re)].map((m) => m.index! + m[0].length);
+	for (const re of [/[.?!…]\s+/g, /,\s+/g, /\s+/g]) {
+		const at = cuts(re)
+			.filter((k) => k <= MAX_LINE && t.length - k <= MAX_LINE)
+			.sort((a, b) => Math.abs(a - mid) - Math.abs(b - mid))[0];
+		if (at) return [t.slice(0, at).trim(), t.slice(at).trim()];
+	}
+	return [t]; // 못 나누면 그대로 (검사에서 걸림)
+}
+/** 대사·결과·이벤트 줄 중 60자 넘는 줄을 같은 화자의 두 줄로 나눔 (선택지 text 는 그대로). 고친 줄 수 */
+export function splitLongLines(cards: unknown): number {
+	let n = 0;
+	const fix = (lines: unknown) => {
+		if (!Array.isArray(lines)) return lines;
+		return lines.flatMap((l: any) => {
+			const t = l?.content?.korean;
+			if (typeof t !== 'string' || t.length <= MAX_LINE) return [l];
+			const parts = splitText(t);
+			if (parts.length > 1) n++;
+			return parts.map((p) => ({ ...l, content: { ...l.content, korean: p } }));
+		});
+	};
+	for (const c of (Array.isArray(cards) ? cards : []) as any[]) {
+		c.dialogue = fix(c.dialogue);
+		for (const ch of [...(c.choices ?? []), ...(c.forced ?? [])]) {
+			ch.result = fix(ch.result);
+			if (ch.event_intro) ch.event_intro = fix(ch.event_intro);
+			const o = ch.event_options;
+			if (o?.fight) {
+				o.fight.win = fix(o.fight.win);
+				o.fight.lose = fix(o.fight.lose);
+			}
+			if (o?.avoid) o.avoid.result = fix(o.avoid.result);
+		}
+	}
+	return n;
+}
+
+// ── 말투 (존댓말 / 반말) ──────────────────────────────────
+
+export type Register = 'polite' | 'plain';
+const POLITE_END = /(요|니다|니까|죠)[\s.?!…~"'”)]*$/;
+const PLAIN_END = /[다야어아지해네군래자냐니게걸데까가나라고]\s*[.?!…~"'”)]*$/;
+
+/** 문장마다 존댓말·반말 (끝말로 판단, 모르면·말꼬리면 뺌). {actor} 같은 자리표시는 그대로 둠 */
+export function registersOf(line: string): Register[] {
+	return line
+		.split(/(?<=[.?!…])\s+/)
+		.map((x) => x.trim())
+		.filter(Boolean)
+		// 말줄임표로 끝나는 말꼬리("~하는데…", "~이라니...")는 판단하지 않음
+		// "~다니", "~라니" 감탄도 판단하지 않음
+		.map((x) => (/(…|\.\.)[\s"'”)]*$/.test(x) || /[다라]니[\s.?!~"'”)]*$/.test(x) ? null : POLITE_END.test(x) ? 'polite' : PLAIN_END.test(x) ? 'plain' : null))
+		.filter((x): x is Register => !!x);
+}
+
+/** 원문에서 화자마다 주로 쓰는 말투 (문장 70% 이상이 한쪽일 때만, 문장 3개 이상) */
+export function storyRegisters(s: CardScenario): Record<string, Register> {
+	const tally: Record<string, Record<Register, number>> = {};
+	for (const r of s.rooms)
+		for (const l of r.dialogue) {
+			if (!l.speaker || !l.content?.korean || l.speaker === 'narrator') continue;
+			const t = (tally[l.speaker] ??= { polite: 0, plain: 0 });
+			for (const g of registersOf(l.content.korean)) t[g]++;
+		}
+	const out: Record<string, Register> = {};
+	for (const [sp, t] of Object.entries(tally)) {
+		const n = t.polite + t.plain;
+		if (n < 3) continue;
+		if (t.polite / n >= 0.7) out[sp] = 'polite';
+		else if (t.plain / n >= 0.7) out[sp] = 'plain';
+	}
+	return out;
+}
+
+const REG_KO: Record<Register, string> = { polite: '존댓말 (~요, ~니다)', plain: '반말 (~야, ~어, ~다)' };
+
+/** 원문에 나온 인물마다 말투 한 줄 (프롬프트용) */
+export function registerBlock(s: CardScenario): string {
+	const regs = storyRegisters(s);
+	const name = (id: string) => (id === 'character_any' ? '주인공' : (s.actors[id]?.name.korean ?? id));
+	const lines = Object.entries(regs).map(([id, g]) => `- \`${id}\`(${name(id)}): ${REG_KO[g]}`);
+	return lines.length ? lines.join('\n') : '- 없음';
+}
+
 /** 스토리 방 id 사이마다 칸 1개. [1,3,5,9,15] → A(1~3) B(3~5) C(5~9) D(9~15) */
 export function slotsOf(s: CardScenario): Slot[] {
 	const ids = s.rooms.map((r) => r.id);
@@ -56,7 +148,7 @@ const say = (l: Line) =>
 	l.type === 'direction' ? `(등장 연출: ${l.speaker})` : `${l.speaker}: ${l.content?.korean ?? ''}`;
 
 /** 칸마다 앞 방 마지막 줄들 / 다음 방 첫 줄들 */
-function gapBlock(s: CardScenario): string {
+export function gapBlock(s: CardScenario): string {
 	const room = (id: number) => s.rooms.find((r) => r.id === id)!;
 	return slotsOf(s)
 		.map((g) => {
@@ -72,7 +164,7 @@ ${next.map((t) => `  ${t}`).join('\n')}`;
 		.join('\n\n');
 }
 
-function ctxOf(s: CardScenario) {
+export function ctxOf(s: CardScenario) {
 	const companion = Object.keys(s.actors)[0];
 	const isFinal = !!s.boss?.pool_id && s.boss.pool_id !== 'random_boss';
 	return {
@@ -112,6 +204,16 @@ function contextBlock(input: SeqInput): string {
 - 같은 칸의 3장은 같은 틈의 서로 다른 사건. 어느 1장이 나와도 앞뒤가 이어져야 함
 - 다음 방은 어떤 카드가 나왔는지 모름. 카드 결과는 다음 방 상황을 바꾸지 않는 크기로 (작은 물건·사람·소문·몸 상태)
 
+# 누구의 일인가 (주인공 관점)
+- 선택하는 사람은 플레이어(주인공, 서술에서는 "당신"). 사건은 주인공에게 닥치고, 이득·손해도 주인공 쪽이 봄
+  - 인물이 원하거나 막는 상대는 주인공: "<인물>이(가) 당신 앞을 막아섰다", "<인물>이(가) 당신에게 ~을 내밀었다"
+  - 금지: 동행이 사건의 당사자가 되는 것 ("<인물>이(가) ${c.companionName}의 앞을 막아섰다", 동행의 작업·장비·자리가 문제의 원인)
+- 동행은 곁에서 거듦: 상황을 알려 주고, 걱정하거나 부추기고, 선택 뒤에 반응함
+  - 동행이 "내가 ~해야 해", "내 ~가 필요해" 처럼 자기 목표를 세우지 않음
+  - 동행이 주인공을 재촉해 선택을 대신 정하지 않음 (선택지는 주인공이 고르는 것)
+  - 동행의 말은 누구에게 하는 말인지 분명하게 (상대 인물에게인지, 주인공에게인지)
+- 선택지 결과에서 행동하는 사람은 주인공 ("당신이 ~하자"). 동행은 echo 수치에 맞는 한마디로 반응
+
 # 카드 내용 규칙
 - 사건은 사람이 일으킴: 카드마다 동행 말고 다른 인물(새 인물 또는 원문 인물) 1명 이상이 나와서 말하고, 그 사람이 무엇을 원하거나 막음
   - 사람이 데이터 현상에 반응하는 장면이 아니라, 사람이 사람에게 요구·거래·방해하는 장면 (스크린·정보는 그 사람이 탐내거나 감추는 물건으로)
@@ -141,12 +243,16 @@ ${
 
 ## 일반 보스 카드 (칸 D 일반 카드 1장, 정확히 1장)
 - 방 9에서 이미 만난 그 사람이 방 15 직전에 한 번 더 길을 막는 장면. 카드의 \`people\` 에 \`random_boss\`, 대사 speaker \`random_boss\`
-- 막는 행동만: 경고, 통행료 요구, 장비 압수, 출입 통제 같은 것. 설득당하거나 물러나지 않고, 싸움도 끝나지 않음. 이번 화 주인공 행동의 정답·결말을 미리 내지 않음
+- 일반 보스는 경고하는 쪽 (최종보스 편이 아님): 주인공이 이번 화 행동(${arc.action ?? '없음'})을 계속하지 못하게 막는다. 경고, 장비 압수, 출입 통제 같은 것. 경고 내용은 맞지만 막는 까닭이 자기 사정(자기 일·구역·물건·규칙)처럼 들림
+- 설득당하거나 물러나지 않고, 싸움도 끝나지 않음. 정답 행동·결말을 미리 내지 않음
 - 선택지 결과는 일반 보스가 그대로 버티는 가운데 주인공 쪽에 작은 이득·손해가 남는 정도
 - 나레이션·다른 인물이 그 사람을 부를 때는 \`{random_boss}\` 자리표시 (게임이 캐릭터 이름으로 바꿈). 조사는 "{random_boss}이(가)", "{random_boss}을(를)", "{random_boss}은(는)"
 - 이 카드는 다른 인물(새 인물)이 없어도 됨. 기억·회수 없음
 - 다른 카드에는 일반 보스가 나오지 않음`
 	}
+
+## 원문 인물 말투 (카드·additions 에서 그대로 따름. 상대가 누구든 바꾸지 않음)
+${registerBlock(s)}
 
 ## 공간과 세계
 - 무대: ${arc.stage ?? '없음'} — ${arc.setting ?? ''}
@@ -191,14 +297,14 @@ const DESIGN_EXAMPLE = `{
       "kind": "plant",
       "slot": "A",
       "title": { "korean": "[짧은 제목]" },
-      "summary": "[인물 이름]이(가) [물건] 때문에 [원하는 것]",
+      "summary": "[인물 이름]이(가) [물건] 때문에 당신에게 [원하는 것]",
       "bridge": "앞 방 끝: [..] / 카드: [..] / 다음 방 시작: [..] 와 이어지는 이유: [..]",
       "people": ["[인물 id]"],
       "tags": ["[소재]"],
       "intensity": "calm",
       "leaning": "fighting-",
       "choices": [
-        { "path": "easy", "summary": "[행동 ~한다]", "mbti": "ST", "effects": { "fighting": -30, "echo": -5 }, "event": "minigame_timing", "seed": "[쉬운 길 기억]" },
+        { "path": "easy", "summary": "[행동 ~한다]", "mbti": "ST", "effects": { "fighting": -30, "echo": -5 }, "event": "minigame_timing", "event_reason": "[이 선택 뒤에 왜 세 번 연달아 맞춰야 하는 일이 벌어지는지]", "seed": "[쉬운 길 기억]" },
         { "path": "hard", "summary": "[행동 ~한다]", "mbti": "NF", "effects": { "fighting": 20, "echo": 5 }, "reward": ["shield"], "seed": "[어려운 길 기억]" },
         { "path": "gold", "summary": "[행동 ~한다]", "mbti": "SJ", "require": { "stat": "gold", "op": ">=", "value": 100 }, "effects": { "gold": -100, "echo": 5 }, "reward": ["intelligence_up"], "seed": "[어려운 길 기억]" }
       ]
@@ -258,7 +364,7 @@ ${contextBlock(input)}
 
 - 칸마다 심기+일반 = 3장. 회수 카드는 기억이 있을 때만 나오는 추가 후보
 - \`slot\`: "A"~"D". 카드 내용이 그 칸의 앞 방 끝·다음 방 시작 사이에 맞아야 함
-- \`summary\`: "<인물 이름>이(가) <물건> 때문에 <원하는 것>" 형식. 그 카드 people 중 동행이 아닌 인물이 주어
+- \`summary\`: "<인물 이름>이(가) <물건> 때문에 당신에게 <원하는 것>" 형식. 그 카드 people 중 동행이 아닌 인물이 주어, 상대는 주인공(당신)
 - \`bridge\`: 어떻게 이어지는지 한 줄. "앞 방 끝: … / 카드: … / 다음 방 시작: … 와 이어지는 이유: …"
 
 ## 길 (path) — 성향 조합 대신 쓰는 기준
@@ -325,8 +431,23 @@ ${contextBlock(input)}
 - 그 성격의 히어로가 말릴 틈 없이 먼저 저지르는 일. 이 카드는 intensity high, 일반 선택지 3~4개도 그대로 둠
 
 ## 이벤트 (\`event\`) — 8~14개 (가능하면 10개)
-- 종류 5개 모두 1~4개씩 (가능하면 2개씩): \`campsite\`(쉬기), \`meet_stranger\`(낯선 사람), \`minigame_slot\`(운·도박), \`minigame_timing\`(박자·타이밍), \`minigame_cup\`(속임수·컵 고르기)
-- 카드 1장에 1개까지. 같은 종류는 서로 다른 카드에. 장면과 맞는 선택지에만
+- 종류 5개 모두 1~4개씩 (가능하면 2개씩). 카드 1장에 1개까지. 같은 종류는 서로 다른 카드에
+- 이벤트는 그 선택의 결과로 바로 벌어지는 일. 이유를 댈 수 없는 선택지에는 붙이지 않음 (다른 선택지·다른 카드로 옮김)
+- 이벤트가 있는 선택지마다 \`event_reason\`: 이 선택 뒤에 왜 이 일이 벌어지는지 한 줄 (누가, 무엇 때문에)
+- 종류별로 게임에서 실제로 하는 일. 장면 안에서 그 일이 그대로 벌어져야 함 ("컵처럼", "슬롯머신처럼" 같은 비유로 다른 일을 미니게임에 빗대지 않음)
+
+| 이벤트 | 게임에서 하는 일 | 어울리는 선택·이유 |
+| --- | --- | --- |
+| \`campsite\` | 쉬면서 회복 | 기다려야 함, 다친 사람 돌보기, 누가 쉴 곳을 내줌, 숨어서 때를 기다림 |
+| \`meet_stranger\` | 낯선 사람이 히어로 1명에게 1:1 대결을 걺. 맞서거나(대결) 피함(작은 패널티) | 선택 때문에 생긴 시비, 길목을 지키는 사람, 가져간 물건을 되찾으러 옴, 실력 시험 |
+| \`minigame_slot\` | 운에 맡기는 내기 | 누가 돈·물건을 걸고 내기를 제안 |
+| \`minigame_timing\` | 움직이는 구간을 정확한 순간에 클릭. 기회 3번, 한 번이라도 놓치면 그 자리에서 끝 | 세 번 연달아 정확한 때에 움직여야 하는 일 (닫히는 문, 순찰이 비는 틈, 무너지는 더미) |
+| \`minigame_cup\` | 여러 개 중 물건이 숨은 하나 고르기 (야바위) | 누가 물건을 여러 그릇·상자 중 하나에 숨기고 고르게 함 |
+
+- \`meet_stranger\` 선택지
+  - 낯선 사람은 카드 인물이 아닌 새 사람 (actors 에 넣지 않음, 이름 없이 "낯선 ~")
+  - 대결하는 히어로는 그 선택지 \`mbti\` 의 히어로 1명
+  - \`event_avoid\`: 피했을 때 작은 패널티. \`{ "reward": ["<*_down 1개>"] }\`, echo -5 를 더해도 됨 (\`"effects": { "echo": -5 }\`)
 
 ## 보상 종류 (\`reward\`, 배열, 보통 1개)
 - 버프: \`attack_up\`(싸움·기세), \`defense_up\`·\`shield\`(지키기·동료 신뢰), \`intelligence_up\`(정보·기록·암호), \`move_range_up\`(길·열쇠·우회로), \`stun\`(기습·경비 정보·화면 끄기), \`heal\`(치료·쉬기), \`cooldown_reset\`(시간 벌기·정신 차리기), \`bleed\`(큰 싸움, 거의 안 씀)
@@ -361,6 +482,7 @@ JSON 하나만 출력. 설명·마크다운 금지. \`{ "actors", "seeds", "flag
 - [ ] 칸마다 심기+일반 3장 (A·B 는 심기 1장 포함), 회수 카드 C 2장(A 심기의 기억) · D 2장(B 심기의 기억)
 - [ ] ${c.isFinal ? '일반 보스·최종 보스가 나오는 카드 없음' : '칸 D 일반 카드 중 정확히 1장이 일반 보스 카드 (people 에 random_boss)'}
 - [ ] 카드마다 bridge 가 있고, 다음 방 첫 대사가 그대로 말이 됨
+- [ ] 카드마다 summary 의 상대가 주인공(당신)이고, 동행의 일이 사건의 원인이 아님
 - [ ] 같은 칸 3장의 easy 방향(축·부호)이 서로 다름
 - [ ] 심기·일반 카드마다 easy 1 + hard 1, mbti 두 글자 반대
 - [ ] 이벤트 8~14개, 5종 모두 1~4개, 카드당 1개까지
@@ -435,17 +557,28 @@ ${target.map((x) => `- ${x.id} (${x.kind}, 카드 ${x.slot}) ${x.title?.korean ?
     - 기억(seed)이 있는 선택지: 회수 카드에서 돌아올 사람·물건을 결과에 남길 것. 같은 기억을 남기는 선택지가 여럿이면 모두 같은 사람·물건
     - 표시(flag)가 있는 선택지: 보스 방에서 쓰일 것(문, 길, 소문, 얼굴 등)이 결과에 보이게
     - 수치가 오른 쪽이 결과에 드러나게 (예: echo -10 → 동행이 실망하는 한 마디)
-  - \`event_intro\`: 설계표에 \`event\` 가 있는 선택지에만. 이벤트가 열릴 때 1~2줄
-    - campsite 쉬기, meet_stranger 낯선 사람, minigame_slot 운·도박, minigame_timing 박자·타이밍, minigame_cup 속임수·컵 고르기를 이 장면에 맞게
-    - 낯선 사람의 말은 narrator 줄에 따옴표로
+  - \`event_intro\`: 설계표에 \`event\` 가 있는 선택지에만. 1~2줄. 설계표 \`event_reason\` 대로, 바로 앞 result 에서 이어지게
+    - 그 이벤트에서 실제로 하는 일이 장면 안에서 벌어짐 (비유 금지). 종류를 섞지 않음
+    - campsite: 쉴 곳과 쉬는 이유
+    - minigame_slot: 누가 무엇을 걸고 내기를 제안 ("정확한 순간"·"타이밍" 같은 말 금지)
+    - minigame_timing: 세 번 연달아 맞춰야 하는 순간, 한 번이라도 놓치면 끝인 상황
+    - minigame_cup: 누가 물건을 여러 개(그릇·상자·컵) 중 하나에 숨기고 고르게 함
+    - meet_stranger: 낯선 사람이 나타나 왜 덤비는지 말하고 \`{actor}\` 에게 1:1 대결을 걺. 대결이 시작되기 직전에 끝 (승패는 쓰지 않음)
+    - 낯선 사람의 말은 narrator 줄에 “ ” 따옴표로 (JSON 큰따옴표 " 는 문장 안에 쓰지 않음)
+    - 같은 시나리오 안에서 event_intro 문장을 되풀이하지 않음
+  - \`event_options\`: meet_stranger 선택지에만. 대결 뒤 고르기
+    - \`{ "fight": { "text": { "korean": "{actor}이(가) … 맞선다" }, "win": [1줄], "lose": [1줄] }, "avoid": { "text": { "korean": "… 피한다" }, "result": [1줄] } }\`
+    - win·lose: 대결이 끝난 장면 1줄씩 (narrator 또는 낯선 사람). avoid.result: 피한 대가가 보이게 (설계표 \`event_avoid\` 의 패널티와 맞게)
   - MBTI 잠금 선택지(\`require.mbti\`)·강제 사건: \`text\`·\`result\` 에 \`{actor}\` 를 써서 그 히어로가 직접 하는 행동으로 ("{actor}이(가) …한다")
 - \`forced\`: 설계표에 있는 카드만. 형식은 choices 와 같음
 - 회수 카드: 짝 심기 카드에서 남긴 사람·물건이 다시 나옴. 그 기억이 무엇이었는지 플레이어가 바로 알아보게
   - 같은 기억을 남기는 심기 선택지가 여럿이면, 어느 선택지로 왔어도 말이 되게
 - \`background_tags\`: 영어 소문자 5개. 카드 dialogue 장면의 장소·시간·조명·군중·분위기. 이름 있는 인물 금지
-- \`speaker\`: \`narrator\`, \`${c.companion}\`(동행), 원문 인물 id, 설계표 \`actors\` 의 id${c.isFinal ? '' : ', \`random_boss\`(일반 보스 카드만)'} 만. 주인공의 행동은 narrator 로
+- \`speaker\`: \`narrator\`, \`${c.companion}\`(동행), 원문 인물 id, 설계표 \`actors\` 의 id${c.isFinal ? '' : ', \`random_boss\`(일반 보스 카드만)'} 만. 주인공의 행동은 narrator 로 ("당신")
+- 위 "누구의 일인가" 대로: 장면 소개 첫 줄은 주인공 앞에서 일어나는 일, 결과 서술의 행동 주체는 주인공, 동행은 반응만
 - 동행 \`${c.companion}\` 의 말투는 원문 대사를 따름. 새 인물은 설계표 \`role\` 에 맞는 말투로 일관되게
 - 한 줄 60자 이내 (넘으면 두 줄로 나눌 것)
+- 서술(narrator)은 "~했다" 체, 선택지 text 는 "~한다" 로 끝. 존댓말("~했습니다", "~합니다") 금지. 인물 대사의 말투만 "원문 인물 말투" 를 따름
 
 ${STYLE}
 
@@ -465,6 +598,14 @@ export function buildSeqAdditionsPrompt(input: SeqInput, design: CardDesign, car
 	const portraitLines = input.portraits.map((p, i) => `${i + 1}. ${p.note}`).join('\n');
 	const ids = s.rooms.map((r) => r.id);
 	const lastRoom = ids.at(-1);
+	// 호감도 조건 줄: 원문에 동행이 말하는 방 (방 ${ids[3]} 부터 앞으로). 없으면 주인공이 말함
+	const speaksIn = (id: number) => s.rooms.find((r) => r.id === id)?.dialogue.some((l) => l.speaker === c.companion);
+	const echoRoom = [ids[3], ids[2], ids[1], ids[0]].find(speaksIn);
+	const echoSpeaker = echoRoom ? c.companion : 'character_any';
+	const speakers = (id: number) =>
+		[...new Set(s.rooms.find((r) => r.id === id)?.dialogue.map((l) => l.speaker).filter((x) => x && x !== 'narrator'))]
+			.map((x) => `\`${x}\``)
+			.join(', ');
 
 	return `당신은 선택형 내러티브 게임의 작가입니다.
 카드 ${cards.length}장이 완성되었습니다. 이 카드들을 보고 시나리오의 **additions 파일**을 JSON 으로 만드세요.
@@ -489,6 +630,9 @@ ${JSON.stringify({ actors: design.actors, seeds: design.seeds, flags: design.fla
 ### 얼굴 풀 (번호. 역할)
 ${portraitLines}
 
+## 주인공 관점
+- seeds 는 주인공이 한 일 ("~해 줌"), boss_choice 는 주인공이 고르는 행동, boss_line 은 주인공에게 닥치는 일 ("당신 앞을 ~")
+
 ## seeds
 - 설계표의 기억 전부: \`korean\`(무엇을 했는지 한 줄, "~함"으로 끝. 카드 결과와 맞게), \`english\`
 
@@ -501,15 +645,23 @@ ${portraitLines}
 
 ## rooms
 - 스토리 방 ${ids.join(', ')} 모두 \`title\`(짧은 방 제목)
-- 그중 4개 방에 LLM 줄 1개씩: 기억·표시·호감도에 반응하는 한 줄
+- LLM 줄 4개 (아래 방마다 1개, 같은 방에 2개가 될 수도 있음): 기억·표시·호감도에 반응하는 한 줄
   - 스토리 ${ids[1]}: 칸 A 심기 카드의 기억 조건 \`{ "seed": "<기억>" }\`
   - 스토리 ${ids[2]}: 칸 B 심기 카드의 기억 조건 \`{ "seed": "<기억>" }\`
-  - 스토리 ${ids[3]}: 동행 호감도 조건 \`{ "stat": "echo", "op": ">=", "value": 60 }\`
+  - 스토리 ${echoRoom ?? ids[3]}: 동행 호감도 조건 \`{ "stat": "echo", "op": ">=", "value": 60 }\`, 화자 \`${echoSpeaker}\`${echoRoom ? '' : ' (원문에 동행이 말하는 방이 없음 → 주인공이 동행에 대해 말함)'}
   - 스토리 ${lastRoom}: 불리한 표시 조건 \`{ "flag": "<표시>" }\`, 화자 \`${c.bossSpeaker}\`
   - rooms 의 키는 스토리 id 그대로 (${ids.join(', ')})
   - 회수 카드에서만 밝혀지는 사실은 LLM 줄에서 미리 말하지 않음. 기억 조건 줄은 심기 카드 결과에 나온 것만 언급
   - \`after_line\` = 위 원문 줄 번호 (그 줄 뒤에 들어감). 앞뒤 대사와 자연스럽게 이어지는 자리
-  - 화자: \`character_any\`(주인공), \`${c.companion}\`, \`${c.bossSpeaker}\`(마지막 방만)
+  - 화자: 그 방 원문에 나오는 인물 또는 \`character_any\`(주인공)만. 방마다 나오는 인물:
+${ids.map((id) => `    - 스토리 ${id}: \`character_any\`, ${speakers(id) || '없음'}`).join('\n')}
+  - 말투: 위 "원문 인물 말투" 그대로 (example 도). additions 의 \`style\` 도 이 말투와 맞게
+  - 넣는 자리 (after_line): 그 줄까지 나온 것만 말함. 뒤 줄에서 처음 나오는 소리·물건·사실을 미리 말하지 않음
+    - 앞 줄에 바로 이어지는 말로 (앞 줄에 대답하거나, 앞 줄이 본 것을 받아서)
+    - 장면 분위기에 맞게: 누가 막아서거나 다투는 중에는 응원·감상 대신 그 상황에 대한 말
+  - 아는 범위: 화자가 알 수 있는 것만
+    - 기억 조건 줄: 주인공이 그 카드에서 한 일을 주인공·동행이 떠올림 (카드 결과에 나온 사람·물건으로)
+    - 불리한 표시 줄(\`${c.bossSpeaker}\`): 보스는 카드 인물을 모르고 주인공이 카드에서 한 일도 모름. 카드 인물 이름 금지. 그 표시의 \`boss_line\` 에 적힌 일(눈앞에서 벌어진 일)을 보스 쪽에서 말함
   - \`intent\`(무엇을 말하는지), \`example\`(그대로 써도 되는 예시 대사), \`emotion\`(base/happy/sad/angry)
   - 줄 형식: \`{ "after_line": N, "line": { "type": "speech", "speaker", "if", "source": "llm", "intent", "example": { "korean" }, "emotion" } }\`
 

@@ -322,14 +322,15 @@ function checkStructure(gen: Gen, ctx: CheckCtx): string[] {
 			const bossSents = sentencesOf(summary).filter((x) => x.includes(rbTitle));
 			if (bossSents.length && !bossSents.some((x) => BLOCK_VERBS.some((v) => x.includes(v))))
 				errors.push(`order ${order} 의 일반 보스 문장에 막는 행동(막아선다·가로막는다·덤빈다·저지한다·공격한다)이 없습니다: "${bossSents[0]}"`);
+			// 일반 보스는 경고하는 쪽: 주인공이 핵심 물건으로 틀린 행동을 하려는 것을 막는다 (무엇을 막는지 문장에 나와야 함)
+			const keyHeadWord = headOf(keyObject);
+			if (bossSents.length && keyHeadWord && !bossSents.some((x) => x.replaceAll(rbTitle, '').includes(keyHeadWord)))
+				errors.push(`order ${order} 의 일반 보스 문장에 핵심 물건 "${keyObject}" 이 없습니다. 일반 보스는 주인공이 "${String(gen.wrong_action ?? '')}" 하려는 것을 경고하며 막아선다: "${bossSents[0]}"`);
 			for (const sent of bossSents) {
 				const persuade = PERSUADE_WORDS.filter((w) => sent.includes(w));
 				if (persuade.length)
 					errors.push(`order ${order} 의 일반 보스 문장에 설득·권유(${persuade.join(', ')})가 있습니다. 일반 보스는 막기만 한다: "${sent}"`);
 				if (right && sent.includes(right)) errors.push(`order ${order} 에서 일반 보스가 정답 행동을 합니다: "${sent}"`);
-				// 일반 보스는 틀린 쪽: 핵심 물건으로 하는 주인공의 행동을 막지 않는다 (막으면 틀린 행동을 말리는 사람이 된다)
-				if (keyObject && sent.includes(keyObject) && BLOCK_VERBS.some((v) => sent.includes(v)))
-					errors.push(`order ${order} 에서 일반 보스가 핵심 물건에 대한 주인공의 행동을 막습니다. 일반 보스는 최종보스 쪽이라 주인공의 의심·이탈·전진을 막는다: "${sent}"`);
 				if (bossKo && sent.includes(bossKo))
 					errors.push(`order ${order} 의 일반 보스 문장에 최종보스 "${bossKo}" 가 함께 있습니다. 문장을 나눌 것: "${sent}"`);
 				const story = BOSS_STORY_WORDS.filter((w) => sent.includes(w));

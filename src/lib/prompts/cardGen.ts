@@ -105,14 +105,16 @@ export const EXAMPLE_ADDITIONS = `{
   }
 }`;
 
-
 // ── 공통 맥락 ───────────────────────────────────────────────
 
 /** 예시(다른 시나리오)의 동행 id "echo" 를 이 시나리오의 동행 id 로 바꿈. 호감도 수치 echo 와 헷갈리지 않게 */
 export function withCompanion(example: string, companion: string, name: string): string {
 	return example
 		.replaceAll('"speaker": "echo"', `"speaker": "${companion}"`)
-		.replace('"echo": { "name": { "korean": "에코" }', `"${companion}": { "name": { "korean": "${name}" }`);
+		.replace(
+			'"echo": { "name": { "korean": "에코" }',
+			`"${companion}": { "name": { "korean": "${name}" }`
+		);
 }
 
 function ctxOf(input: CardSetInput) {
@@ -406,8 +408,13 @@ export type CardText = {
 	id: string;
 	background_tags: string[];
 	dialogue: Line[];
-	choices: { text: Lang; result: Line[]; event_intro?: Line[] }[];
-	forced?: { text: Lang; result: Line[]; event_intro?: Line[] }[];
+	choices: { text: Lang; result: Line[]; event_intro?: Line[]; event_options?: EventOptionsText }[];
+	forced?: { text: Lang; result: Line[]; event_intro?: Line[]; event_options?: EventOptionsText }[];
+};
+/** meet_stranger 뒤 고르기 (대사 단계 출력). 패널티(reward·effects)는 설계표 event_avoid 에서 코드가 붙임 */
+export type EventOptionsText = {
+	fight: { text: Lang; win: Line[]; lose: Line[] };
+	avoid: { text: Lang; result: Line[] };
 };
 
 /** 대사 단계 묶음: ① 심기 3 + 회수 5 (짝이 이어지게) ② 일반 6 */
@@ -534,7 +541,14 @@ export function assembleCards(design: CardDesign, texts: CardText[]): Record<str
 			...(rest.flag && { flag: rest.flag }),
 			seed: rest.seed ?? null,
 			result: t?.result,
-			...(rest.event && t?.event_intro && { event_intro: t.event_intro })
+			...(rest.event && t?.event_intro && { event_intro: t.event_intro }),
+			...(rest.event === 'meet_stranger' &&
+				t?.event_options && {
+					event_options: {
+						fight: t.event_options.fight,
+						avoid: { ...t.event_options.avoid, ...(rest.event_avoid ?? {}) }
+					}
+				})
 		};
 	};
 	return design.cards.map((d) => {
@@ -561,7 +575,11 @@ export function assembleCards(design: CardDesign, texts: CardText[]): Record<str
 }
 
 /** 3단계: 다 쓴 카드를 보고 additions (인물 말투·얼굴, 기억·표시 문구, 방 제목, LLM 줄) */
-export function buildAdditionsPrompt(input: CardSetInput, design: CardDesign, cards: Record<string, any>[]): string {
+export function buildAdditionsPrompt(
+	input: CardSetInput,
+	design: CardDesign,
+	cards: Record<string, any>[]
+): string {
 	const c = ctxOf(input);
 	const portraitLines = input.portraits.map((p, i) => `${i + 1}. ${p.note}`).join('\n');
 	const ids = input.scenario.rooms.map((r) => r.id);
@@ -637,7 +655,13 @@ export function toWebfrontAdditions(additions: Record<string, any>, portraits: P
 			const p = portrait_no ? portraits[portrait_no - 1] : undefined;
 			return [
 				id,
-				p ? { ...rest, base_image_url: p.base_image_url, base_image_nobg_url: p.base_image_nobg_url } : rest
+				p
+					? {
+							...rest,
+							base_image_url: p.base_image_url,
+							base_image_nobg_url: p.base_image_nobg_url
+						}
+					: rest
 			];
 		})
 	);

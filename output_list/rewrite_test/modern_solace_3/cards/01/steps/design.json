@@ -1,0 +1,1120 @@
+{
+	"actors": {
+		"stagehand": {
+			"name": {
+				"korean": "무대 조수"
+			},
+			"role": "네온 극장 무대의 조명 및 소품 담당"
+		},
+		"ticket_checker": {
+			"name": {
+				"korean": "검표원"
+			},
+			"role": "극장 입구에서 관객들의 티켓을 확인하고 통제를 돕는 사람"
+		},
+		"ticket_seller": {
+			"name": {
+				"korean": "매표소 직원"
+			},
+			"role": "극장 매표소에서 관객들을 응대하는 사람"
+		},
+		"costume_designer": {
+			"name": {
+				"korean": "의상 디자이너"
+			},
+			"role": "무대 의상을 제작하고 관리하는 전문가"
+		},
+		"sound_engineer": {
+			"name": {
+				"korean": "음향 기사"
+			},
+			"role": "무대 음향 장비를 관리하고 조작하는 사람"
+		},
+		"theater_critic": {
+			"name": {
+				"korean": "극장 평론가"
+			},
+			"role": "공연을 평가하고 극장의 역사를 연구하는 학자"
+		}
+	},
+	"seeds": {
+		"lost_prop_pursuit": "빛나는 무대 소품을 찾던 중 내기에 참여함",
+		"hidden_mechanism_found": "무대 뒤 숨겨진 통로를 발견함",
+		"program_damage_concealed": "손상된 공연 프로그램의 문제를 덮어둠",
+		"historical_notes_collected": "무대 뒤편에 버려진 역사적 메모를 수집함"
+	},
+	"flags": {
+		"bad_prop_disturbance": {
+			"kind": "bad",
+			"boss_penalty": -1,
+			"summary": "무대 소품의 오작동으로 관객들이 불안해한다."
+		},
+		"good_prop_stability": {
+			"kind": "good",
+			"boss_penalty": 1,
+			"summary": "안정화된 소품 덕분에 무대 연출이 순조롭다."
+		},
+		"good_passage_access": {
+			"kind": "good",
+			"boss_penalty": 1,
+			"summary": "극장 내 숨겨진 구역으로의 접근 권한을 얻는다."
+		},
+		"stage_layout_map": {
+			"kind": "good",
+			"boss_penalty": 2,
+			"summary": "극장 비밀 통로 지도를 확보하여 이동이 용이해진다."
+		},
+		"theater_rumors_spread": {
+			"kind": "bad",
+			"boss_penalty": -1,
+			"summary": "손상된 프로그램으로 인해 극장 내 불길한 소문이 퍼진다."
+		},
+		"program_historical_clue": {
+			"kind": "good",
+			"boss_penalty": 1,
+			"summary": "복구된 프로그램에서 극장의 중요한 정보 단서를 얻는다."
+		},
+		"notes_minor_clue": {
+			"kind": "good",
+			"boss_penalty": 1,
+			"summary": "수집된 메모에서 중요한 사건의 단서를 발견한다."
+		},
+		"notes_major_revelation": {
+			"kind": "good",
+			"boss_penalty": 2,
+			"summary": "메모 분석을 통해 무대 현상의 근원적 비밀을 깨닫는다."
+		}
+	},
+	"cards": [
+		{
+			"id": "card_01_stolen_prop",
+			"kind": "plant",
+			"slot": "A",
+			"title": {
+				"korean": "사라진 조명 소품"
+			},
+			"summary": "무대 조수가 빛나는 소품 때문에 당신에게 도움을 요청한다",
+			"bridge": "앞 방 끝: 당신은 빛의 조각을 흩뿌리기로 결정했다. / 카드: 빛의 조각이 흩뿌려지자, 무대 조수가 당신에게 사라진 빛나는 소품을 찾아달라고 한다. / 다음 방 시작: 조이는 당신이 빛의 조각을 흩뿌린 것에 대해 언급하며, 무대가 기묘한 안개로 뒤덮였다고 설명한다. 와 이어지는 이유: 빛의 조각을 흩뿌리는 과정에서 무대 질서가 불안정해지고, 이로 인해 무대 소품의 관리 소홀이라는 작은 사건이 발생한다. 조이는 이 사건을 인지하기 전, 이미 발생한 현상에 대해 설명하는 것으로 이야기가 이어진다.",
+			"people": [
+				"stagehand",
+				"zoe"
+			],
+			"tags": [
+				"prop"
+			],
+			"intensity": "calm",
+			"leaning": "community+",
+			"choices": [
+				{
+					"path": "easy",
+					"summary": "무대 조수가 원하는 대로 빛나는 소품을 같이 찾으면서 우연히 돈을 건 내기에 휘말린다",
+					"mbti": "ES",
+					"effects": {
+						"community": 30,
+						"echo": 5,
+						"gold": 100
+					},
+					"event": "minigame_slot",
+					"event_reason": "빛나는 소품을 찾던 중, 우연히 마주친 무대 관계자가 당신에게 짧은 내기를 제안한다.",
+					"seed": "lost_prop_pursuit"
+				},
+				{
+					"path": "hard",
+					"summary": "빛나는 소품을 찾기 전에, 당신은 조이가 지시한 다른 중요한 작업을 먼저 마무리한다",
+					"mbti": "IN",
+					"effects": {
+						"reason": 20,
+						"echo": -5
+					},
+					"reward": [
+						"intelligence_up"
+					],
+					"seed": "hidden_mechanism_found"
+				},
+				{
+					"path": "lock",
+					"summary": "소품을 잃어버린 경위를 꼼꼼히 따져 물어 책임 소재를 명확히 한다",
+					"mbti": "TJ",
+					"require": {
+						"mbti": "TJ"
+					},
+					"effects": {
+						"fighting": -10
+					},
+					"reward": [
+						"defense_up"
+					],
+					"seed": null
+				}
+			],
+			"after_story": 1,
+			"before_story": 3
+		},
+		{
+			"id": "card_01_broken_light_source",
+			"kind": "normal",
+			"slot": "A",
+			"title": {
+				"korean": "고장 난 조명기"
+			},
+			"summary": "무대 조수가 고장 난 조명기 때문에 당신에게 수리 요청을 한다",
+			"bridge": "앞 방 끝: 당신은 빛의 조각을 흩뿌리기로 결정했다. / 카드: 빛의 조각이 흩뿌려지자, 무대 조수가 고장 난 조명기를 들고 당신에게 급히 다가와 수리를 부탁한다. / 다음 방 시작: 조이는 당신이 빛의 조각을 흩뿌린 것에 대해 언급하며, 무대가 기묘한 안개로 뒤덮였다고 설명한다. 와 이어지는 이유: 빛의 조각을 흩뿌리는 행위는 무대 장치의 예상치 못한 고장을 유발할 수 있으며, 조이는 이 현상 전체를 보고 전반적인 상황을 설명한다.",
+			"people": [
+				"stagehand",
+				"zoe"
+			],
+			"tags": [
+				"equipment"
+			],
+			"intensity": "calm",
+			"leaning": "fighting-",
+			"choices": [
+				{
+					"path": "easy",
+					"summary": "복잡한 수리 대신 고장 난 조명기를 잠시 숨겨둔다",
+					"mbti": "IP",
+					"effects": {
+						"fighting": -30,
+						"echo": -5,
+						"gold": 100
+					},
+					"reward": [
+						"move_range_up"
+					],
+					"seed": null
+				},
+				{
+					"path": "hard",
+					"summary": "시간이 걸리더라도 조명기의 문제를 정석대로 해결한다",
+					"mbti": "EF",
+					"effects": {
+						"fighting": 20,
+						"echo": 10
+					},
+					"reward": [
+						"heal"
+					],
+					"seed": null
+				},
+				{
+					"path": "gold",
+					"summary": "가지고 있는 도구를 써서 최대한 빠르게 조명기를 수리한다",
+					"mbti": "ST",
+					"require": {
+						"stat": "gold",
+						"op": ">=",
+						"value": 100
+					},
+					"effects": {
+						"gold": -100,
+						"echo": 5
+					},
+					"reward": [
+						"stun"
+					],
+					"seed": null
+				}
+			],
+			"after_story": 1,
+			"before_story": 3
+		},
+		{
+			"id": "card_01_curtain_blockade",
+			"kind": "normal",
+			"slot": "A",
+			"title": {
+				"korean": "닫힌 무대 커튼"
+			},
+			"summary": "검표원이 닫힌 무대 커튼 때문에 당신에게 우회를 요청한다",
+			"bridge": "앞 방 끝: 당신은 빛의 조각을 흩뿌리기로 결정했다. / 카드: 빛의 조각이 흩뿌려지자, 갑자기 무대 중앙의 커튼이 내려와 길을 막고, 검표원이 당신에게 다른 통로를 이용하라고 한다. / 다음 방 시작: 조이는 당신이 빛의 조각을 흩뿌린 것에 대해 언급하며, 무대가 기묘한 안개로 뒤덮였다고 설명한다. 와 이어지는 이유: 빛의 조각을 흩뿌리는 행위는 무대 장치에 예상치 못한 영향을 줄 수 있으며, 조이는 그 결과를 전반적인 무대 변화로 설명한다.",
+			"people": [
+				"ticket_checker",
+				"zoe"
+			],
+			"tags": [
+				"obstacle"
+			],
+			"intensity": "calm",
+			"leaning": "reason-",
+			"choices": [
+				{
+					"path": "easy",
+					"summary": "검표원의 말대로 닫힌 커튼을 피해 다른 통로로 돌아간다",
+					"mbti": "SP",
+					"effects": {
+						"reason": -20
+					},
+					"reward": [
+						"cooldown_reset"
+					],
+					"seed": null
+				},
+				{
+					"path": "hard",
+					"summary": "시간이 걸리더라도 커튼을 열기 위해 숨겨진 틈새를 찾는다",
+					"mbti": "NF",
+					"effects": {
+						"reason": 30,
+						"echo": -10
+					},
+					"event": "minigame_timing",
+					"event_reason": "무작정 커튼을 열려 하자, 숨겨진 틈새를 찾아 정확한 타이밍에 힘을 주어야 하는 난관에 부딪힌다.",
+					"seed": null
+				},
+				{
+					"path": "stat",
+					"summary": "규칙을 어기더라도 닫힌 커튼을 강제로 젖혀 길을 연다",
+					"mbti": "EP",
+					"require": {
+						"stat": "reason",
+						"op": ">=",
+						"value": 40
+					},
+					"effects": {
+						"reason": -10,
+						"fighting": 10
+					},
+					"reward": [
+						"attack_up"
+					],
+					"seed": null
+				}
+			],
+			"after_story": 1,
+			"before_story": 3
+		},
+		{
+			"id": "card_01_damaged_program",
+			"kind": "plant",
+			"slot": "B",
+			"title": {
+				"korean": "손상된 공연 프로그램"
+			},
+			"summary": "매표소 직원이 손상된 공연 프로그램 때문에 당신에게 수습을 요청한다",
+			"bridge": "앞 방 끝: 당신은 무대 바닥에 흩어진 낡은 흑백 사진 조각들을 보고 있었다. / 카드: 흑백 사진 조각들 옆에 찢겨진 공연 프로그램이 놓여있고, 매표소 직원이 당신에게 이 상황을 수습해달라고 한다. / 다음 방 시작: 조이는 빛을 흩뿌린 것에 대해 의문을 제기하며, 무대의 공기가 무거워졌다고 말한다. 와 이어지는 이유: 흑백 사진과 프로그램 손상 모두 과거의 기억과 관련된 작은 혼란의 증거이며, 조이는 이런 상황들을 보며 극장 전체의 질서가 깨지고 있다고 느낀다.",
+			"people": [
+				"ticket_seller",
+				"zoe"
+			],
+			"tags": [
+				"program"
+			],
+			"intensity": "calm",
+			"leaning": "fighting+",
+			"choices": [
+				{
+					"path": "easy",
+					"summary": "손상된 프로그램들을 다른 곳에 숨겨 문제없이 넘어간다",
+					"mbti": "IS",
+					"effects": {
+						"fighting": 30,
+						"echo": -5,
+						"gold": 100
+					},
+					"reward": [
+						"cooldown_reset"
+					],
+					"seed": "program_damage_concealed"
+				},
+				{
+					"path": "hard",
+					"summary": "버려진 프로그램 조각들을 하나하나 모아 원래대로 복원한다",
+					"mbti": "EN",
+					"effects": {
+						"community": 20,
+						"echo": 10
+					},
+					"reward": [
+						"cooldown_reset"
+					],
+					"seed": "historical_notes_collected"
+				},
+				{
+					"path": "lock",
+					"summary": "프로그램이 훼손된 명확한 원인을 찾아내 관계자에게 보고한다",
+					"mbti": "IT",
+					"require": {
+						"mbti": "IT"
+					},
+					"effects": {
+						"reason": -10
+					},
+					"reward": [
+						"intelligence_up"
+					],
+					"seed": null
+				}
+			],
+			"after_story": 3,
+			"before_story": 5
+		},
+		{
+			"id": "card_01_misplaced_costume",
+			"kind": "normal",
+			"slot": "B",
+			"title": {
+				"korean": "사라진 의상"
+			},
+			"summary": "의상 디자이너가 사라진 의상 때문에 당신에게 수색을 요청한다",
+			"bridge": "앞 방 끝: 당신은 무대 바닥에 흩어진 낡은 흑백 사진 조각들을 보고 있었다. / 카드: 흑백 사진 조각들 옆에 무대 의상 스케치 몇 장이 떨어져 있고, 의상 디자이너가 다가와 중요한 의상이 사라졌다며 찾아달라고 한다. / 다음 방 시작: 조이는 빛을 흩뿌린 것에 대해 의문을 제기하며, 무대의 공기가 무거워졌다고 말한다. 와 이어지는 이유: 과거의 흔적과 의상 분실은 모두 무대의 혼란을 나타내며, 조이는 이를 통해 상황이 악화되고 있음을 감지한다.",
+			"people": [
+				"costume_designer",
+				"zoe"
+			],
+			"tags": [
+				"costume"
+			],
+			"intensity": "calm",
+			"leaning": "reason+",
+			"choices": [
+				{
+					"path": "easy",
+					"summary": "새로운 의상을 즉석에서 만들어 대체하자고 제안한다",
+					"mbti": "IN",
+					"effects": {
+						"reason": 30,
+						"echo": -5
+					},
+					"reward": [
+						"stun"
+					],
+					"seed": null
+				},
+				{
+					"path": "hard",
+					"summary": "사라진 의상의 행방을 찾기 위해 무대 구석구석을 꼼꼼히 수색한다",
+					"mbti": "ES",
+					"effects": {
+						"fighting": 20,
+						"echo": 10
+					},
+					"reward": [
+						"move_range_up"
+					],
+					"seed": null
+				},
+				{
+					"path": "gold",
+					"summary": "다른 의상 제작자에게 돈을 주고 비슷한 의상을 급히 제작하게 한다",
+					"mbti": "SJ",
+					"require": {
+						"stat": "gold",
+						"op": ">=",
+						"value": 150
+					},
+					"effects": {
+						"gold": -150,
+						"echo": 5
+					},
+					"reward": [
+						"shield"
+					],
+					"seed": null
+				}
+			],
+			"after_story": 3,
+			"before_story": 5
+		},
+		{
+			"id": "card_01_sound_malfunction",
+			"kind": "normal",
+			"slot": "B",
+			"title": {
+				"korean": "음향 장치 오작동"
+			},
+			"summary": "음향 기사가 음향 장치 오작동 때문에 당신에게 해결을 부탁한다",
+			"bridge": "앞 방 끝: 당신은 무대 바닥에 흩어진 낡은 흑백 사진 조각들을 보고 있었다. / 카드: 흑백 사진 조각들이 흔들리는 가운데, 음향 기사가 다급하게 달려와 무대 음향 장치가 오작동하고 있다며 도움을 요청한다. / 다음 방 시작: 조이는 빛을 흩뿌린 것에 대해 의문을 제기하며, 무대의 공기가 무거워졌다고 말한다. 와 이어지는 이유: 무대의 불안정한 현상이 음향 장치 오작동과 같은 기술적 문제로 이어질 수 있으며, 조이는 이 모든 현상을 질서의 붕괴로 이해한다.",
+			"people": [
+				"sound_engineer",
+				"zoe"
+			],
+			"tags": [
+				"tech"
+			],
+			"intensity": "calm",
+			"leaning": "community-",
+			"choices": [
+				{
+					"path": "easy",
+					"summary": "음향 기사에게 오작동 원인을 찾도록 하고 당신은 관객의 반응을 살핀다",
+					"mbti": "EP",
+					"effects": {
+						"community": -20,
+						"echo": -5
+					},
+					"event": "meet_stranger",
+					"event_reason": "관객석에서 갑자기 일어난 낯선 사람이 오작동에 불평하며 당신에게 시비를 걸어온다.",
+					"event_avoid": {
+						"reward": [
+							"hp_down"
+						],
+						"effects": {
+							"echo": -5
+						}
+					},
+					"seed": null
+				},
+				{
+					"path": "hard",
+					"summary": "음향 기사와 함께 오작동하는 장치를 직접 점검하고 문제를 해결한다",
+					"mbti": "IJ",
+					"effects": {
+						"community": 20,
+						"echo": 10
+					},
+					"reward": [
+						"heal"
+					],
+					"seed": null
+				},
+				{
+					"path": "stat",
+					"summary": "음향 장치의 숨겨진 오작동 코드를 찾아 강제로 시스템을 종료시킨다",
+					"mbti": "NT",
+					"require": {
+						"stat": "reason",
+						"op": "<=",
+						"value": -40
+					},
+					"effects": {
+						"reason": -10,
+						"intelligence": 10
+					},
+					"reward": [
+						"attack_up"
+					],
+					"seed": null
+				}
+			],
+			"after_story": 3,
+			"before_story": 5
+		},
+		{
+			"id": "card_01_critic_interview",
+			"kind": "normal",
+			"slot": "C",
+			"title": {
+				"korean": "극장 평론가의 인터뷰"
+			},
+			"summary": "극장 평론가가 무대 현상에 대해 당신에게 인터뷰를 요청한다",
+			"bridge": "앞 방 끝: 당신은 네온 극장 객석에서 슬픈 옛 노래를 흥얼거리는 관객들을 보았다. / 카드: 객석에서 들려오는 노래 소리 속에서, 한 극장 평론가가 당신에게 다가와 무대 현상에 대한 생각을 묻는 인터뷰를 요청한다. / 다음 방 시작: 무대 감독이 당신들을 향해 무대를 흐트러뜨렸다며 화를 낸다. 와 이어지는 이유: 객석의 슬픈 노래와 평론가의 질문은 모두 극장의 불안정한 분위기를 반영하며, 이는 곧 무대 감독의 불만으로 이어진다.",
+			"people": [
+				"theater_critic",
+				"zoe"
+			],
+			"tags": [
+				"interview"
+			],
+			"intensity": "calm",
+			"leaning": "reason-",
+			"choices": [
+				{
+					"path": "easy",
+					"summary": "간단히 대답하고 인터뷰를 서둘러 끝낸다",
+					"mbti": "ES",
+					"effects": {
+						"reason": -20
+					},
+					"reward": [
+						"move_range_up"
+					],
+					"seed": null
+				},
+				{
+					"path": "hard",
+					"summary": "무대의 혼란에 대한 책임감을 느끼며 상세하게 답변한다",
+					"mbti": "IN",
+					"effects": {
+						"reason": 30,
+						"echo": 10
+					},
+					"reward": [
+						"shield"
+					],
+					"seed": null
+				}
+			],
+			"forced": [
+				{
+					"path": "forced",
+					"summary": "조이가 주도하여 상세하고 깊이 있는 질문을 던지며 인터뷰를 장악한다",
+					"mbti": "EN",
+					"require": {
+						"mbti": "EN"
+					},
+					"chance": 0.3,
+					"effects": {
+						"community": 10,
+						"echo": 5
+					},
+					"reward": [
+						"intelligence_up"
+					],
+					"seed": null
+				}
+			],
+			"after_story": 5,
+			"before_story": 9
+		},
+		{
+			"id": "card_01_lost_journal",
+			"kind": "normal",
+			"slot": "C",
+			"title": {
+				"korean": "잃어버린 일기장"
+			},
+			"summary": "무대 조수가 잃어버린 일기장 때문에 당신에게 수색을 요청한다",
+			"bridge": "앞 방 끝: 당신은 네온 극장 객석에서 슬픈 옛 노래를 흥얼거리는 관객들을 보았다. / 카드: 객석의 노래 소리가 잦아들 무렵, 무대 조수가 다가와 자신의 잃어버린 일기장을 찾아달라고 애원한다. / 다음 방 시작: 무대 감독이 당신들을 향해 무대를 흐트러뜨렸다며 화를 낸다. 와 이어지는 이유: 개인적인 물건 분실은 극장의 혼란스러운 분위기를 더하며, 이는 무대 감독이 질서를 강조하는 이유가 될 수 있다.",
+			"people": [
+				"stagehand",
+				"zoe"
+			],
+			"tags": [
+				"journal"
+			],
+			"intensity": "calm",
+			"leaning": "community-",
+			"choices": [
+				{
+					"path": "easy",
+					"summary": "일기장을 찾는 대신 무대 조수에게 새 일기장을 사주겠다고 한다",
+					"mbti": "SF",
+					"effects": {
+						"community": -20,
+						"echo": -5
+					},
+					"reward": [
+						"hp_down"
+					],
+					"seed": null
+				},
+				{
+					"path": "hard",
+					"summary": "일기장을 잃어버린 무대 조수를 다독이며 함께 꼼꼼히 주변을 수색한다",
+					"mbti": "NT",
+					"effects": {
+						"community": 30,
+						"echo": 10
+					},
+					"event": "minigame_cup",
+					"event_reason": "무대 조수가 일기장을 찾던 중 비슷한 모양의 물건들이 흩어져 있는 것을 발견하고 당신에게 어느 것이 진짜인지 맞춰달라고 한다.",
+					"seed": null
+				},
+				{
+					"path": "gold",
+					"summary": "보수를 받고 무대 조수의 일기장을 찾아준다",
+					"mbti": "ST",
+					"require": {
+						"stat": "gold",
+						"op": ">=",
+						"value": 50
+					},
+					"effects": {
+						"gold": -50,
+						"fighting": 5
+					},
+					"reward": [
+						"attack_up"
+					],
+					"seed": null
+				}
+			],
+			"after_story": 5,
+			"before_story": 9
+		},
+		{
+			"id": "card_01_old_ticket_stubs",
+			"kind": "normal",
+			"slot": "C",
+			"title": {
+				"korean": "오래된 티켓 수수께끼"
+			},
+			"summary": "매표소 직원이 오래된 티켓을 두고 당신에게 수수께끼를 낸다",
+			"bridge": "앞 방 끝: 당신은 네온 극장 객석에서 슬픈 옛 노래를 흥얼거리는 관객들을 보았다. / 카드: 객석의 분위기가 미묘한 슬픔에 잠긴 가운데, 매표소 직원이 오래된 티켓 뭉치를 내밀며 풀기 어려운 수수께끼를 낸다. / 다음 방 시작: 무대 감독이 당신들을 향해 무대를 흐트러뜨렸다며 화를 낸다. 와 이어지는 이유: 과거의 흔적인 슬픈 노래와 오래된 티켓은 모두 극장의 숨겨진 이야기를 암시하며, 이는 무대 감독이 지키려는 극장의 비밀과 연결될 수 있다.",
+			"people": [
+				"ticket_seller",
+				"zoe"
+			],
+			"tags": [
+				"ticket"
+			],
+			"intensity": "calm",
+			"leaning": "fighting+",
+			"choices": [
+				{
+					"path": "easy",
+					"summary": "수수께끼를 풀기보다 티켓이 쓸모없다고 판단하고 무시한다",
+					"mbti": "EP",
+					"effects": {
+						"fighting": 20,
+						"echo": -5
+					},
+					"reward": [
+						"attack_down"
+					],
+					"seed": null
+				},
+				{
+					"path": "hard",
+					"summary": "수수께끼에 집중하여 티켓 속에 담긴 의미를 파악하려 노력한다",
+					"mbti": "IJ",
+					"effects": {
+						"intelligence": 30,
+						"echo": 10
+					},
+					"event": "minigame_timing",
+					"event_reason": "수수께끼는 특정 시간 안에 정확한 순서로 티켓을 배열해야 하는 과제를 제시한다.",
+					"seed": null
+				},
+				{
+					"path": "lock",
+					"summary": "오래된 티켓의 발행 날짜를 정확히 확인하여 극장의 과거사를 파악한다",
+					"mbti": "SF",
+					"require": {
+						"mbti": "SF"
+					},
+					"effects": {
+						"reason": 10
+					},
+					"reward": [
+						"cooldown_reset"
+					],
+					"seed": null
+				}
+			],
+			"after_story": 5,
+			"before_story": 9
+		},
+		{
+			"id": "card_01_stolen_prop_return",
+			"kind": "callback",
+			"slot": "C",
+			"title": {
+				"korean": "되찾은 조명 소품"
+			},
+			"summary": "무대 조수에게서 되찾은 빛나는 소품에서 이상한 기운이 느껴진다",
+			"bridge": "앞 방 끝: 당신은 네온 극장 객석에서 슬픈 옛 노래를 흥얼거리는 관객들을 보았다. / 카드: 객석에서 들려오는 노래 소리가 불안하게 느껴지는 가운데, 무대 조수에게서 되찾은 빛나는 소품에서 갑자기 이상한 빛이 번쩍인다. / 다음 방 시작: 무대 감독이 당신들을 향해 무대를 흐트러뜨렸다며 화를 낸다. 와 이어지는 이유: 되찾은 소품의 이상 현상은 극장 전체의 불안한 분위기를 심화시키고, 무대 감독이 무대의 질서를 강조하며 나타나는 것과 연결된다.",
+			"people": [
+				"stagehand",
+				"zoe"
+			],
+			"tags": [
+				"prop"
+			],
+			"intensity": "high",
+			"callback": {
+				"seed": "lost_prop_pursuit",
+				"min_rooms_after": 2
+			},
+			"choices": [
+				{
+					"path": "easy",
+					"summary": "이상한 빛을 무시하고 소품을 원래 자리에 둔다",
+					"mbti": "SP",
+					"effects": {
+						"reason": -10
+					},
+					"reward": [
+						"defense_down"
+					],
+					"flag": "bad_prop_disturbance",
+					"seed": null
+				},
+				{
+					"path": "hard",
+					"summary": "소품의 이상 현상을 면밀히 관찰하여 문제를 해결한다",
+					"mbti": "NF",
+					"effects": {
+						"intelligence": 20,
+						"echo": 5
+					},
+					"reward": [
+						"defense_up"
+					],
+					"flag": "good_prop_stability",
+					"seed": null
+				},
+				{
+					"path": "gold",
+					"summary": "소품의 불안정한 에너지를 제어하기 위해 특별한 재료를 사용한다",
+					"mbti": "TJ",
+					"require": {
+						"stat": "gold",
+						"op": ">=",
+						"value": 70
+					},
+					"effects": {
+						"gold": -70,
+						"echo": 5
+					},
+					"reward": [
+						"shield"
+					],
+					"flag": "good_prop_stability",
+					"seed": null
+				}
+			],
+			"after_story": 5,
+			"before_story": 9
+		},
+		{
+			"id": "card_01_hidden_mechanism_found_return",
+			"kind": "callback",
+			"slot": "C",
+			"title": {
+				"korean": "숨겨진 통로의 이점"
+			},
+			"summary": "무대 조수와의 사건 해결 중 당신이 발견한 숨겨진 통로가 뜻밖의 이점을 가져온다",
+			"bridge": "앞 방 끝: 당신은 네온 극장 객석에서 슬픈 옛 노래를 흥얼거리는 관객들을 보았다. / 카드: 객석의 노래 소리 사이로, 당신이 발견한 숨겨진 통로의 입구가 희미하게 빛나며 극장의 지도를 보여준다. / 다음 방 시작: 무대 감독이 당신들을 향해 무대를 흐트러뜨렸다며 화를 낸다. 와 이어지는 이유: 숨겨진 통로의 발견은 극장의 비밀스러운 면모를 드러내고, 이는 무대 감독이 지키려는 질서와 대립하는 요소가 된다.",
+			"people": [
+				"stagehand",
+				"zoe"
+			],
+			"tags": [
+				"passage"
+			],
+			"intensity": "calm",
+			"callback": {
+				"seed": "hidden_mechanism_found",
+				"min_rooms_after": 2
+			},
+			"choices": [
+				{
+					"path": "easy",
+					"summary": "통로를 이용해 무대 감독의 눈을 피해 빠르게 이동한다",
+					"mbti": "EP",
+					"effects": {
+						"fighting": 10
+					},
+					"reward": [
+						"move_range_up"
+					],
+					"flag": "good_passage_access",
+					"seed": null
+				},
+				{
+					"path": "hard",
+					"summary": "통로 안에서 발견한 지도를 자세히 살펴보고 극장의 구조를 파악한다",
+					"mbti": "IJ",
+					"effects": {
+						"intelligence": 20,
+						"echo": 5
+					},
+					"event": "campsite",
+					"event_reason": "통로 안의 아늑한 공간에서 잠시 쉬어가며 지도를 탐독할 기회를 얻는다.",
+					"flag": "stage_layout_map",
+					"seed": null
+				}
+			],
+			"after_story": 5,
+			"before_story": 9
+		},
+		{
+			"id": "card_01_boss_blockade",
+			"kind": "normal",
+			"slot": "D",
+			"title": {
+				"korean": "무대를 가로막는 그림자"
+			},
+			"summary": "{random_boss}이(가) 당신의 앞길을 막아서며 경고한다",
+			"bridge": "앞 방 끝: 당신은 무대 감독과의 대화가 어렵다고 느꼈다. / 카드: 당신의 앞을 {random_boss}이(가) 불쑥 나타나 더 이상 무대를 방해하지 말라며 강하게 경고한다. / 다음 방 시작: {random_boss}이(가) 이 무대에선 자신만이 규칙이라며 물러나라고 한다. 와 이어지는 이유: 무대 감독과의 대화가 결렬된 직후, 그가 직접 나서서 물리적으로 당신의 길을 막으며 최종 대결 직전의 긴장감을 고조시킨다.",
+			"people": [
+				"random_boss",
+				"zoe"
+			],
+			"tags": [
+				"boss_encounter"
+			],
+			"intensity": "high",
+			"leaning": "fighting-",
+			"choices": [
+				{
+					"path": "easy",
+					"summary": "{random_boss}의 경고를 무시하고 조용히 우회할 길을 찾는다",
+					"mbti": "IS",
+					"effects": {
+						"fighting": -20
+					},
+					"reward": [
+						"move_range_up"
+					],
+					"seed": null
+				},
+				{
+					"path": "hard",
+					"summary": "{random_boss}에게 무대를 흐트러뜨릴 의도가 없었음을 분명히 밝힌다",
+					"mbti": "EN",
+					"effects": {
+						"community": 20,
+						"echo": -5
+					},
+					"reward": [
+						"defense_down"
+					],
+					"seed": null
+				},
+				{
+					"path": "gold",
+					"summary": "{random_boss}에게 일정 금액을 지불하고 잠시 길을 터달라고 요청한다",
+					"mbti": "ST",
+					"require": {
+						"stat": "gold",
+						"op": ">=",
+						"value": 150
+					},
+					"effects": {
+						"gold": -150,
+						"reason": -5
+					},
+					"reward": [
+						"shield"
+					],
+					"seed": null
+				}
+			],
+			"after_story": 9,
+			"before_story": 15
+		},
+		{
+			"id": "card_01_unstable_platform",
+			"kind": "normal",
+			"slot": "D",
+			"title": {
+				"korean": "흔들리는 무대 발판"
+			},
+			"summary": "무대 조수가 흔들리는 무대 발판 때문에 당신에게 수리를 요청한다",
+			"bridge": "앞 방 끝: 당신은 무대 감독과의 대화가 어렵다고 느꼈다. / 카드: 무대 감독과의 언쟁으로 긴장이 고조된 가운데, 무대 조수가 흔들리는 발판을 가리키며 위험을 경고하고 수리를 부탁한다. / 다음 방 시작: {random_boss}이(가) 이 무대에선 자신만이 규칙이라며 물러나라고 한다. 와 이어지는 이유: 무대 감독과의 갈등 직후 무대 장치의 불안정성이 드러나며, 이는 곧 보스 방에서의 물리적 충돌로 이어지는 전조가 된다.",
+			"people": [
+				"stagehand",
+				"zoe"
+			],
+			"tags": [
+				"platform"
+			],
+			"intensity": "high",
+			"leaning": "community+",
+			"choices": [
+				{
+					"path": "easy",
+					"summary": "흔들리는 발판을 무시하고 다른 길로 돌아간다",
+					"mbti": "ES",
+					"effects": {
+						"community": 30
+					},
+					"reward": [
+						"move_range_up"
+					],
+					"seed": null
+				},
+				{
+					"path": "hard",
+					"summary": "위험을 감수하고 흔들리는 발판을 고정하여 안정화시킨다",
+					"mbti": "IN",
+					"effects": {
+						"fighting": 20,
+						"echo": 10
+					},
+					"event": "minigame_timing",
+					"event_reason": "발판이 가장 안정되는 순간을 포착하여 정확하게 고정해야 한다.",
+					"seed": null
+				},
+				{
+					"path": "lock",
+					"summary": "발판 아래 숨겨진 보강 장치를 발견하고 정교하게 수리한다",
+					"mbti": "NT",
+					"require": {
+						"mbti": "NT"
+					},
+					"effects": {
+						"reason": 10
+					},
+					"reward": [
+						"intelligence_up"
+					],
+					"seed": null
+				}
+			],
+			"after_story": 9,
+			"before_story": 15
+		},
+		{
+			"id": "card_01_prop_storage_access",
+			"kind": "normal",
+			"slot": "D",
+			"title": {
+				"korean": "소품 보관실 잠금"
+			},
+			"summary": "검표원이 잠긴 소품 보관실 때문에 당신에게 열쇠를 요구한다",
+			"bridge": "앞 방 끝: 당신은 무대 감독과의 대화가 어렵다고 느꼈다. / 카드: 무대 감독과의 대화가 끝난 직후, 검표원이 다급하게 다가와 잠긴 소품 보관실을 열어야 한다며 당신에게 열쇠를 요구한다. / 다음 방 시작: {random_boss}이(가) 이 무대에선 자신만이 규칙이라며 물러나라고 한다. 와 이어지는 이유: 극장 내 혼란이 가중되면서 작은 문제들이 발생하고, 이는 무대 감독의 권위에 대한 도전으로 이어지는 상황과 병렬적으로 전개된다.",
+			"people": [
+				"ticket_checker",
+				"zoe"
+			],
+			"tags": [
+				"storage"
+			],
+			"intensity": "calm",
+			"leaning": "reason+",
+			"choices": [
+				{
+					"path": "easy",
+					"summary": "검표원의 요구를 무시하고 당신의 갈 길을 간다",
+					"mbti": "EF",
+					"effects": {
+						"reason": 20,
+						"echo": -5
+					},
+					"reward": [
+						"attack_down"
+					],
+					"seed": null
+				},
+				{
+					"path": "hard",
+					"summary": "보관실 열쇠를 찾아 검표원에게 건네고 잠긴 문을 열어준다",
+					"mbti": "IT",
+					"effects": {
+						"community": 20,
+						"echo": 10
+					},
+					"event": "meet_stranger",
+					"event_reason": "보관실 열쇠를 가지고 있던 낯선 사람이 나타나 당신과 조이를 시험하려 한다.",
+					"event_avoid": {
+						"reward": [
+							"hp_down"
+						],
+						"effects": {
+							"echo": -5
+						}
+					},
+					"seed": null
+				},
+				{
+					"path": "gold",
+					"summary": "보관실 문을 부수기 위해 필요한 장비를 골드를 주고 구입한다",
+					"mbti": "SF",
+					"require": {
+						"stat": "gold",
+						"op": ">=",
+						"value": 100
+					},
+					"effects": {
+						"gold": -100,
+						"fighting": 5
+					},
+					"reward": [
+						"attack_up"
+					],
+					"seed": null
+				}
+			],
+			"after_story": 9,
+			"before_story": 15
+		},
+		{
+			"id": "card_01_program_damage_concealed_return",
+			"kind": "callback",
+			"slot": "D",
+			"title": {
+				"korean": "복구된 공연 프로그램"
+			},
+			"summary": "매표소 직원과 함께 덮어두었던 손상된 공연 프로그램에서 불길한 내용이 발견된다.",
+			"bridge": "앞 방 끝: 당신은 무대 감독과의 대화가 어렵다고 느꼈다. / 카드: 무대 감독의 고압적인 태도 속에서, 당신이 매표소 직원과 함께 덮어두었던 공연 프로그램에서 낡은 페이지들이 뜯어져 나오고, 그 안에 불길한 내용이 적혀있다. / 다음 방 시작: {random_boss}이(가) 이 무대에선 자신만이 규칙이라며 물러나라고 한다. 와 이어지는 이유: 복구된 프로그램에서 발견된 불길한 내용은 극장의 혼란을 암시하며, 이는 무대 감독의 강압적인 통제와 맞물려 최종 대결의 긴장감을 높인다.",
+			"people": [
+				"ticket_seller",
+				"zoe"
+			],
+			"tags": [
+				"program"
+			],
+			"intensity": "high",
+			"callback": {
+				"seed": "program_damage_concealed",
+				"min_rooms_after": 2
+			},
+			"choices": [
+				{
+					"path": "easy",
+					"summary": "불길한 내용을 무시하고 프로그램을 대충 정리한다",
+					"mbti": "SP",
+					"effects": {
+						"fighting": -10
+					},
+					"reward": [
+						"intelligence_down"
+					],
+					"flag": "theater_rumors_spread",
+					"seed": null
+				},
+				{
+					"path": "hard",
+					"summary": "불길한 내용을 조이에게 공유하고 함께 분석한다",
+					"mbti": "NF",
+					"effects": {
+						"intelligence": 20,
+						"echo": 5
+					},
+					"reward": [
+						"intelligence_up"
+					],
+					"flag": "program_historical_clue",
+					"seed": null
+				}
+			],
+			"after_story": 9,
+			"before_story": 15
+		},
+		{
+			"id": "card_01_historical_notes_collected_return",
+			"kind": "callback",
+			"slot": "D",
+			"title": {
+				"korean": "메모 속 숨겨진 단서"
+			},
+			"summary": "매표소 직원과의 대화 중에 당신이 수집한 버려진 메모에서 중요한 단서가 발견된다",
+			"bridge": "앞 방 끝: 당신은 무대 감독과의 대화가 어렵다고 느꼈다. / 카드: 무대 감독과의 긴장감 넘치는 대화가 이어지는 가운데, 당신이 수집했던 버려진 메모 조각들이 갑자기 빛나며 극장의 비밀을 암시하는 단서를 보여준다. / 다음 방 시작: {random_boss}이(가) 이 무대에선 자신만이 규칙이라며 물러나라고 한다. 와 이어지는 이유: 메모에서 발견된 단서는 무대 감독이 숨기려는 진실의 일부를 드러내며, 이는 곧 보스 방에서의 대결을 더욱 의미심장하게 만든다.",
+			"people": [
+				"ticket_seller",
+				"zoe"
+			],
+			"tags": [
+				"notes"
+			],
+			"intensity": "calm",
+			"callback": {
+				"seed": "historical_notes_collected",
+				"min_rooms_after": 2
+			},
+			"choices": [
+				{
+					"path": "easy",
+					"summary": "메모의 단서를 따라 무대 뒤의 숨겨진 공간을 탐색한다",
+					"mbti": "EP",
+					"effects": {
+						"fighting": 10
+					},
+					"reward": [
+						"move_range_up"
+					],
+					"flag": "notes_minor_clue",
+					"seed": null
+				},
+				{
+					"path": "hard",
+					"summary": "메모의 내용을 조이와 깊이 있게 토론하며 극장의 진실을 추리한다",
+					"mbti": "IJ",
+					"effects": {
+						"intelligence": 20,
+						"echo": 5
+					},
+					"event": "campsite",
+					"event_reason": "메모를 분석하기 위해 잠시 안전한 곳에 앉아 조이와 함께 머리를 맞대고 고민한다.",
+					"flag": "notes_major_revelation",
+					"seed": null
+				}
+			],
+			"after_story": 9,
+			"before_story": 15
+		}
+	]
+}

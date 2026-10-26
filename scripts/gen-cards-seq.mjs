@@ -7,6 +7,8 @@
 //   npm run dev                                                   # 먼저 dev 서버(포트 5178) 실행
 //   npm run gen:cards-seq -- --story=modern_whisperweb_0          # 01~05
 //   npm run gen:cards-seq -- --story=modern_whisperweb_0 --orders=1
+//   npm run gen:cards-seq -- --story=modern_whisperweb_0 --judge-only   # 이미 만든 카드만 다시 채점
+//   npm run gen:cards-seq -- --story=modern_whisperweb_0 --fix          # 말투 문제 카드만 다시 + additions 새로
 //
 // 옵션:
 //   --story=<id>          (필수) output_list/rewrite_test/<id>/ 의 스토리
@@ -14,6 +16,9 @@
 //   --portraits=<name>    얼굴 풀 (기본 modern_whisperweb_0)
 //   --model=<name>        Gemini 모델 (기본 gemini-2.5-flash)
 //   --base=URL            기본 http://localhost:5178
+//   --no-judge            저장 뒤 채점(cardJudge.ts) 건너뜀
+//   --fix                 설계표 그대로, 말투 문제 카드(코드 검사 + 채점 C10)만 대사 다시 쓰고 additions 새로 만든 뒤 채점
+//   --judge-only          생성 없이 이미 만든 카드만 채점 (결과: 0N/steps/judge.json, cards_0N.md 끝)
 
 import http from 'node:http';
 
@@ -69,7 +74,10 @@ const body = {
 	storyId: args.story,
 	orders: list(args.orders)?.map(Number),
 	portraits: args.portraits,
-	model: args.model
+	model: args.model,
+	judge: !args['no-judge'],
+	judgeOnly: Boolean(args['judge-only']),
+	fix: Boolean(args.fix)
 };
 
 console.log(`칸 고정 카드 생성: ${JSON.stringify(body)}`);
@@ -80,7 +88,11 @@ if (status !== 200) {
 	process.exit(1);
 }
 console.log(`\n완료 (${Math.round((Date.now() - started) / 1000)}초): ok=${data.okCount} failed=${data.failedCount}`);
-for (const o of data.ok)
+for (const o of data.ok) {
 	console.log(`  ✓ ${o.scenario} 카드 ${o.cards}장, 재요청 ${o.retries}번${o.rewritten.length ? `, 다시 쓴 카드 ${o.rewritten.join(', ')}` : ''}`);
+	if (o.toneFixed) console.log(`      말투 고친 카드: ${o.toneFixed.length ? o.toneFixed.join(', ') : '없음'}`);
+	if (o.judgeError) console.log(`      채점 실패: ${o.judgeError}`);
+	else if (o.judgeFailed) console.log(`      채점: ${o.judgeFailed.length ? `불통과 ${o.judgeFailed.join(', ')}` : '모두 통과'}`);
+}
 for (const f of data.failed) console.log(`  ✗ ${f.scenario} [${f.step}] ${f.error}`);
 console.log(`\n저장 위치: ${data.out}`);

@@ -161,10 +161,10 @@ npm run gen:cards -- --story=modern_evannext_1 --combos=FIR --orders=1   # 스�
 - 고정(코드로 덮어씀): `id`, `level`, `theme`, `rising_count`, final_boss 의 `id`·`name`·`appearance_npc`·`appearance_boss`(얼굴 이미지가 이미 있음)·`zodiac_sign`, NPC key 목록, order 별 `act`·`boss`, tension 1/3/5
 - 나머지(chapter_name, world, final_boss 의 정체·동기·twist, npc_roles 내용, scenarioOutline, 복선, act_summary)는 새로 씀
 - 구조 규칙 `STORY_STRUCTURE_RULES`: Gemini 가 `story_spine`(화별 1~2문장 뼈대, 5화에 결말)을 먼저 쓰고 나머지를 그에 맞춰 풂. 핵심 물건 `key_object` 하나 + 행동 두 개(`wrong_action` 1~4화 / `right_action` 5화), 1~4화 일반 보스 직업 `scenarioOutline[].random_boss_title`(화마다 다름, 예전 `random_boss_role` 집단 이름 대신), 최종보스는 1~4화에 얼굴 없이 흔적(`boss_trace`: 목소리·글자·물건)으로만 등장하고 5화에 처음 모습을 드러냄(B안 — 평상시 모습 이미지가 없어서. chapterGen 미반영)
-- 검사: NPC 키·씬 5개·복선 4개·방 번호(1,3,5,9,15)·복선 페어 중복·story_spine 1~5·key_object(1~5화)·random_boss_role(1~4화) summary 포함·화별 protagonist_action(1~4=wrong, 5=right)·흐린 말·마크다운/메모·영어 보스 이름·소문형 복선·world.rule 한 문장+핵심 물건·정답/틀린 행동이 "~않는다" 아님·보스 한국어 이름 첫소리·호칭 단어 겹침(보스/NPC/일반 보스)·2~5화 첫 문장 앞 화 전제 표현·일반 보스 문장(막는 동사 필수, 설득·정답 행동 금지) → 걸리면 오류를 붙여 최대 3번 다시 요청. 그래도 남으면 저장하고 [남은 오류]로 출력. 필수 필드(story_spine·stage·key_object·행동·호칭 등)가 빠지면 저장하지 않고 실패
-- 채점(기본 켜짐, `--no-judge` 로 끔): 저장 뒤 [storyarcJudge.ts](src/lib/prompts/storyarcJudge.ts) 로 Gemini 1콜(temperature 0). 코드로 못 잡는 J1~J11(인물 편 유지, 정답 행동 실패 장면, 결말 장면, 화당 정보 하나, 독립 읽기, 5화 보스가 정답에 맞섬, 규칙·정답 일치, 인물 구분, 일반 보스 매화 다름, 예시 베끼기, J11 장르)을 통과/불통과 + 원문 인용. 인용이 원문에 있는지 코드로 대조(`quote_found`). 결과 `storyarc_<id>.judge.json`. 채점은 다시 쓰기를 일으키지 않음(측정용). 실패 시 1번 재시도, `--judge-only` 로 기존 재작업본만 다시 채점
+- 검사: NPC 키·씬 5개·복선 4개·방 번호(1,3,5,9,15)·복선 페어 중복·story_spine 1~5·key_object(1~5화)·random_boss_role(1~4화) summary 포함·화별 protagonist_action(1~4=wrong, 5=right)·흐린 말·마크다운/메모·영어 보스 이름·소문형 복선·world.rule 한 문장+핵심 물건·정답/틀린 행동이 "~않는다" 아님·보스 한국어 이름 첫소리·호칭 단어 겹침(보스/NPC/일반 보스)·2~5화 첫 문장 앞 화 전제 표현·일반 보스 문장(막는 동사·핵심 물건 필수, 설득·정답 행동 금지) → 걸리면 오류를 붙여 최대 3번 다시 요청. 그래도 남으면 저장하고 [남은 오류]로 출력. 필수 필드(story_spine·stage·key_object·행동·호칭 등)가 빠지면 저장하지 않고 실패
+- 채점(기본 켜짐, `--no-judge` 로 끔): 저장 뒤 [storyarcJudge.ts](src/lib/prompts/storyarcJudge.ts) 로 Gemini 1콜(temperature 0). 코드로 못 잡는 J1~J11(인물 편 유지, 정답 행동 실패 장면, 결말 장면, 화당 정보 하나, 독립 읽기, 5화 보스가 정답에 맞섬, 규칙·정답 일치, 인물 구분, 일반 보스 매화 다름, 예시 베끼기, J11 장르, J15 경고를 무시하는 이유)을 통과/불통과 + 원문 인용. 인용이 원문에 있는지 코드로 대조(`quote_found`). 결과 `storyarc_<id>.judge.json`. 채점은 다시 쓰기를 일으키지 않음(측정용). 실패 시 1번 재시도, `--judge-only` 로 기존 재작업본만 다시 채점
 - 개성 규칙: 장르를 id 로 고정 배정(`genreForId`), 한 번에 돌리는 묶음 안에서는 겹치지 않게(`assignGenres`) → `genre` 필드. 핵심 물건 중심 낱말은 보스 외형·겉모습 설명에 나와야 함. 무대 `stage`(보스가 있는 한 장소, world.setting·1화 summary 에 포함), world.rule 에 "도시" 금지. 같은 테마의 다른 재작업본(outDir)·이번 실행에서 먼저 끝난 것과 핵심 물건·무대 중심 낱말이 겹치면 오류("조각" 같은 흔한 끝말은 앞 낱말까지 비교). stage 에도 "도시" 금지
-- 보스는 1~5화 내내 틀린 쪽, 5화에 right_action 을 막다가 무너짐(코드 검사). NPC 는 이유 장면이 있으면 편을 바꿔도 됨(아크당 1명, npc_roles 의 `turn_order`·`turn_scene`, 그 화 summary 에 NPC 이름 + turn_scene 핵심 낱말 2개 이상). wrong/right 행동은 반대 뜻이어야 함(비슷한 동사 묶음 `SIMILAR_VERBS` 검사, 채점 J12). 1~4화에 보스 단서·목적·정체 공개 허용
+- 보스는 1~5화 내내 틀린 쪽, 5화에 right_action 을 막다가 무너짐(코드 검사). 1~4화 일반 보스는 경고하는 쪽(최종보스 편 아님): 주인공의 wrong_action 을 막으며 경고하고 경고는 맞지만, 막는 까닭이 자기 사정처럼 보여 주인공이 믿지 않음 → 5화에 경고가 맞았음을 깨달음. NPC 는 이유 장면이 있으면 편을 바꿔도 됨(아크당 1명, npc_roles 의 `turn_order`·`turn_scene`, 그 화 summary 에 NPC 이름 + turn_scene 핵심 낱말 2개 이상). wrong/right 행동은 반대 뜻이어야 함(비슷한 동사 묶음 `SIMILAR_VERBS` 검사, 채점 J12). 1~4화에 보스 단서·목적·정체 공개 허용
 - 프롬프트 예시는 소재 없는 틀(`[...]`)만 씀 — 구체 예시를 넣으면 Gemini 가 그대로 베낌(예: PixelGrim 이 "위스퍼 웹"이 됨)
 - 출력: `src/lib/data/storyarc/rewrite_test/storyarc_<id>.ts` (index.ts 에 등록하지 않음 — id 가 원본과 같음)
 
@@ -178,7 +178,7 @@ npm run rewrite:storyarc -- --id=modern_evannext_1        # 여러 개: --id=a,b
 
 rewrite_test 의 storyarc 로 새 프롬프트 [chapterGenRewrite.ts](src/lib/prompts/chapterGenRewrite.ts) 를 써서 시나리오 생성. `npm run gen:rewrite-scenarios -- --id=<id>` → `output_list/rewrite_test/<id>/script.md`(읽기용) + `scenario_0N.json`. 생성만 함(번역·output 저장 없음). 자세한 내용은 [rewrite_test/README.md](src/lib/data/storyarc/rewrite_test/README.md) 하단.
 - 게임 데이터 형식 규칙은 [chapterRules.ts](src/lib/prompts/chapterRules.ts) 로 분리해 chapterGen.ts 와 공유 (chapterGen.ts 프롬프트 결과는 분리 전과 글자 단위로 같음을 확인)
-- 새 프롬프트는 규칙을 짧게, 필드 문구를 대사에 그대로 옮기지 않게, 출력 예시 없이 (예시를 베낌). prologue·epilogue 3인칭. 일반 보스는 방 15 밖에도 나와도 됨
+- 새 프롬프트는 규칙을 짧게, 필드 문구를 대사에 그대로 옮기지 않게, 출력 예시 없이 (예시를 베낌). prologue·epilogue 3인칭. 일반 보스는 방 15 밖에도 나와도 됨. 일반 보스는 틀린 행동을 경고하며 막고 파티는 이유를 대며 무시함. NPC 는 앞 입장 유지. 최종보스 이름은 화마다 NPC·일반 보스·흔적으로 소개한 뒤에만 (파티 대사·prologue 가 먼저 쓰면 코드 오류)
 
 
 ## 칸 고정 카드 (재작업 시나리오용, 성향 조합 없음)
@@ -189,12 +189,21 @@ rewrite_test 시나리오(`output_list/rewrite_test/<id>/scenario_0N.json`)마�
 - storyarc(rewrite_test)에서 무대 `stage`·`world.setting`·`world.rule`, 이번 화 `scenarioOutline[].place`·summary, `key_object`·이번 화 `protagonist_action`, `boss_trace` 를 넣음. 카드는 이번 화 공간 안에서만. 보스 정체·secret 은 넣지 않음 (앞질러 밝히지 않게)
 - 내용 규칙: 사람이 일으키는 사건(카드마다 동행 말고 인물 1명 이상, summary 에 그 인물), 데이터가 스스로 움직이는 사건 금지, 보스는 카드에서 직접 움직이지 않음, 선택지 깎아내리는 말(`BELITTLE`)·설명투(`META`) 금지 — 코드 검사함
 - 성향 조합 대신 선택지 `path`: easy(당장 이득, 회수 때 bad+good) / hard(지금 대가, 회수 때 good+good) / gold / lock / stat
-- 기억: 칸 A 심기 1장 → 칸 C 회수 2장, 칸 B 심기 1장 → 칸 D 회수 2장. leaning 은 코드가 easy 선택지의 가장 큰 축으로 정함, 같은 칸 3장은 방향이 다름. 1~4화 칸 D 일반 카드 1장은 일반 보스 카드(speaker `random_boss`, 서술은 `{random_boss}` 자리표시, 막기만 함). "보스" 낱말·일반 보스 호칭·첫 줄 앞 방 베끼기·앞 화 인물 이름 재사용은 코드 검사. 이벤트 8~14개(5종 모두 1~4개), MBTI 잠금 3~6장 (16장에 정확한 개수를 Gemini 가 못 맞춰서 범위로)
+- 기억: 칸 A 심기 1장 → 칸 C 회수 2장, 칸 B 심기 1장 → 칸 D 회수 2장. leaning 은 코드가 easy 선택지의 가장 큰 축으로 정함, 같은 칸 3장은 방향이 다름. 1~4화 칸 D 일반 카드 1장은 일반 보스 카드(speaker `random_boss`, 서술은 `{random_boss}` 자리표시, 이번 화 틀린 행동을 경고하며 막기만 함). "보스" 낱말·일반 보스 호칭·첫 줄 앞 방 베끼기·앞 화 인물 이름 재사용은 코드 검사. 이벤트 8~14개(5종 모두 1~4개), MBTI 잠금 3~6장 (16장에 정확한 개수를 Gemini 가 못 맞춰서 범위로)
 - 다시 요청할 때는 "오류 난 곳만 고치고 나머지는 그대로" (MAX_RETRY 3). reward·event 가 같이 있으면 코드가 reward 를 빼고, choices 안에 들어간 강제 사건(path forced)은 forced 로 옮김 (`normalizeDesign`)
+- 주인공 관점: 사건은 주인공("당신")에게 닥치고 선택·이득·손해도 주인공 것. 동행은 거들기·반응만 (동행이 막히는 당사자, 동행의 작업·장비가 문제의 원인, "내가 ~필요해" 금지). 설계 summary 는 "<인물>이(가) <물건> 때문에 당신에게 <원하는 것>" (회수 카드 제외) — 코드 검사(`companionTarget`, `COMPANION_GOAL`)
+- 채점(기본 켜짐, `--no-judge` 로 끔): 저장 뒤 [cardJudge.ts](src/lib/prompts/cardJudge.ts) 로 시나리오당 Gemini 1콜(temperature 0). 코드로 못 잡는 C1~C12(주인공 관점, 말 상대 분명, 앞뒤 연결, 선택지 모두 고를 만함, 선택과 결과·echo 일치, 회수 카드 알아보기, 인물이 원하는 것, 같은 칸 사건 다름, 앞질러 밝히지 않음, 말투 일관, 공간 안, 장르)를 통과/불통과 + 카드 id·원문 인용. 인용 대조(`quote_found`). 결과 `0N/steps/judge.json` + `cards_0N.md` 끝. 다시 쓰기를 일으키지 않음(측정용). `--judge-only` 로 기존 카드만 다시 채점
+- 말투: `storyRegisters`(cardGenSeq.ts)가 원문에서 인물마다 존댓말·반말을 끝말로 정함(문장 70% 이상, 3문장 이상일 때만). 프롬프트에 "원문 인물 말투"로 넣고, 카드 대사·additions 예시·style 이 다르면 코드 검사 오류
+- additions 방 줄: 화자는 그 방 원문 인물 또는 character_any, after_line 은 0~방 줄 수, 줄 4개, 보스 줄에 카드 인물 이름 금지 (코드 검사). 호감도 조건 줄은 원문에 동행이 말하는 방(방 9부터 앞으로)에 넣음. 넣는 자리·아는 범위·말투·기억 문구는 채점 A1~A4
+- 이벤트: 설계표의 이벤트 선택지마다 `event_reason`(왜 이 선택 뒤에 열리는지). 종류별 실제 게임 — campsite 휴식 / meet_stranger 낯선 사람이 선택지 mbti 히어로 1명(`{actor}`)에게 1:1 대결을 걺 / minigame_slot 운 내기 / minigame_timing 클릭 구간 맞추기 3번, 한 번 놓치면 끝 / minigame_cup 숨긴 물건 고르기. 비유 금지. meet_stranger 는 `event_options`(fight: text·win·lose / avoid: text·result) + 설계표 `event_avoid` 패널티(`*_down` 1개, echo -5 가능)를 `assembleCards` 가 합침. 코드 검사 `eventTextErrors` + 채점 C13. webfront 엔진이 `event_options` 를 읽고 {actor} 를 1명으로 정함
+- 서술(narrator)은 "~했다" 체, 선택지 text 는 "~한다" (존댓말이면 코드 검사 오류)
+- `--fix`: 설계표 그대로, 말투 문제 카드(코드 검사 + 기존 judge.json 의 C10)만 대사를 8장씩 다시 쓰고(steps/tone_fix.json) additions 를 새로 만든 뒤 채점. 시나리오끼리 독립이라 실패해도 다음 번호 진행
 - 카드D 뒤 이벤트 방은 webfront 엔진이 자동으로 넣음 (대사 없음, 카드와 무관)
 - 출력: `output_list/rewrite_test/<id>/cards/0N/card_*.json`(카드 1장당 1파일), `0N/additions.json`(webfront 형식), 단계별 결과 `0N/steps/`(design·text·additions_raw, 설계 실패 시 design_failed.json 에 시도별 오류), 읽기용 `cards/cards_0N.md`
 - 01→05 차례대로 (앞 설계표의 제목·인물을 넘김). 실패하면 뒤 번호는 진행 안 함. webfront 에는 쓰지 않음. 얼굴 풀은 `WEBFRONT_DATA_DIR` 또는 옆 폴더 project-mj-webfront 에서 읽기만 함
 
 ```bash
 npm run gen:cards-seq -- --story=modern_whisperweb_0 --orders=1
+npm run gen:cards-seq -- --story=modern_whisperweb_0 --judge-only   # 기존 카드 채점만
+npm run gen:cards-seq -- --story=modern_whisperweb_0 --fix          # 말투 문제 카드만 다시 + additions 새로
 ```

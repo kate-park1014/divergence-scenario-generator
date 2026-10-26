@@ -83,6 +83,27 @@ function checkScenario(out: Gen, order: number, arc: StoryArc, npcKeys: string[]
 		for (const l of lines) errors.push(`${key} 가 1인칭입니다. 3인칭으로 쓸 것: "${l}"`);
 	}
 
+	// 최종보스 이름은 소개한 뒤에만: 이 화에서 이름이 처음 나오는 곳이 파티 대사나 prologue 면 안 된다
+	// (파티는 이름을 모른다. NPC·일반 보스가 전하거나 흔적에 이름이 뜨는 장면으로 소개)
+	const bossName = (arc.boss_name_korean ?? arc.final_boss.name ?? '').replace(/\s+/g, '');
+	if (bossName) {
+		const has = (t: string) => t.replace(/\s+/g, '').includes(bossName);
+		const pro = ((out.prologue as Gen | undefined)?.korean ?? []) as string[];
+		const proHit = pro.find(has);
+		if (proHit) errors.push(`prologue 에서 최종보스 이름 "${bossName}" 을 소개 없이 씁니다. 이름은 방 안에서 NPC·일반 보스·흔적으로 먼저 소개할 것: "${proHit}"`);
+		else {
+			first: for (const room of rooms)
+				for (const [block, entries] of blocksOf(room))
+					for (const [i, e] of entries.entries()) {
+						const text = String(e.content?.korean ?? '');
+						if (e.type !== 'speech' || !has(text)) continue;
+						if (/^character_(any|[1-4])$/.test(String(e.speaker)))
+							errors.push(`방 ${room.id} ${block} ${i}번: 최종보스 이름 "${bossName}" 이 소개 없이 파티 대사에서 처음 나옵니다. 파티는 이름을 모른다. NPC·일반 보스가 전하거나 흔적에 이름이 뜨는 장면으로 먼저 소개하고 파티가 반응할 것: "${text}"`);
+						break first;
+					}
+		}
+	}
+
 	// 첫 방 첫 줄은 narrator 상황 한 줄
 	const first = rooms.find((r) => Number(r.id) === 1);
 	const firstEntry = first ? ((first.dialogue as Entry[] | undefined) ?? [])[0] : undefined;

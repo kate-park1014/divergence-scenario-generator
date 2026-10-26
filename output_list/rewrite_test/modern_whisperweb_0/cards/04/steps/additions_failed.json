@@ -1,0 +1,294 @@
+{
+	"tries": [
+		[
+			"rooms.15.dialogue[0]: 보스가 카드 인물 \"정보\" 을(를) 말함 (보스는 카드 인물을 모름) — 이미 네 정보는 내 손안에 있어. 더 이상의 움직임은 무의미하다!",
+			"방 LLM 줄 11개 (4개여야 함)"
+		],
+		[
+			"rooms.15.dialogue[0]: 보스가 카드 인물 \"정보\" 을(를) 말함 (보스는 카드 인물을 모름) — 네 취약한 정보가 이미 혼란 속에 노출되어 있군. 더 이상의 저항은 무의미하다!",
+			"방 LLM 줄 6개 (4개여야 함)"
+		],
+		[
+			"rooms.15.dialogue[0]: 보스가 카드 인물 \"정보\" 을(를) 말함 (보스는 카드 인물을 모름) — 네 취약한 정보가 이미 혼란 속에 노출되어 있군. 더 이상의 저항은 무의미하다!"
+		],
+		[
+			"rooms.15.dialogue[0]: 보스가 카드 인물 \"정보\" 을(를) 말함 (보스는 카드 인물을 모름) — 네 취약한 정보가 이미 혼란 속에 노출되어 있더군. 쓸모없는 저항은 그만둬라."
+		]
+	],
+	"result": {
+		"scenario_id": "modern_whisperweb_0_04",
+		"actors": {
+			"kai": {
+				"name": {
+					"korean": "카이"
+				},
+				"style": {
+					"korean": "날 서 있고 걱정이 섞인 짧은 반말"
+				}
+			},
+			"janitor": {
+				"name": {
+					"korean": "청소원"
+				},
+				"role": "폐기물 관리동을 청소하는 인물",
+				"style": {
+					"korean": "다급하고 걱정하는 말투"
+				},
+				"portrait_no": 33
+			},
+			"data_broker": {
+				"name": {
+					"korean": "정보 중개인"
+				},
+				"role": "폐기된 정보 조각을 거래하는 인물",
+				"style": {
+					"korean": "은밀하고 이득을 꾀하는 말투"
+				},
+				"portrait_no": 3
+			},
+			"scrap_collector": {
+				"name": {
+					"korean": "고물 수집가"
+				},
+				"role": "쓸만한 부품을 찾아 폐기장을 뒤지는 인물",
+				"style": {
+					"korean": "자기 합리화하는 말투"
+				},
+				"portrait_no": 44
+			},
+			"security_guard": {
+				"name": {
+					"korean": "보안 경비원"
+				},
+				"role": "폐기물 관리동의 출입을 통제하는 인물",
+				"style": {
+					"korean": "통제적이고 혼란스러워하는 말투"
+				},
+				"portrait_no": 2
+			},
+			"agitator": {
+				"name": {
+					"korean": "선동가"
+				},
+				"role": "왜곡된 정보를 선동하여 혼란을 부추기는 인물",
+				"style": {
+					"korean": "선동적이고 비아냥거리는 말투"
+				},
+				"portrait_no": 16
+			},
+			"engineer": {
+				"name": {
+					"korean": "기술자"
+				},
+				"role": "오래된 시스템을 수리하거나 개조하는 인물",
+				"style": {
+					"korean": "문제 해결에 집중하는 말투"
+				},
+				"portrait_no": 28
+			},
+			"lost_citizen": {
+				"name": {
+					"korean": "길 잃은 시민"
+				},
+				"role": "정보 유출 피해를 직접 겪은 일반인",
+				"style": {
+					"korean": "공포에 질린 비이성적인 말투"
+				},
+				"portrait_no": 1
+			},
+			"recycler": {
+				"name": {
+					"korean": "재활용 전문가"
+				},
+				"role": "폐기물 재활용 효율을 높이려는 인물",
+				"style": {
+					"korean": "다급하고 걱정하는 말투"
+				},
+				"portrait_needed": {
+					"korean": "40대 남성 재활용 전문가. 작업복에 보호 장비를 착용했고, 진지하고 피곤한 인상"
+				}
+			}
+		},
+		"seeds": {
+			"bargain_info": {
+				"korean": "정보 중개인에게 개인 정보를 넘기고 길을 안내받음",
+				"english": "Traded personal information to a data broker and got directions"
+			},
+			"secure_passage": {
+				"korean": "정보 중개인의 간섭 없이 통로를 확보함",
+				"english": "Secured passage without interference from the data broker"
+			},
+			"hide_traces": {
+				"korean": "선동가의 정보를 이용해 흔적을 숨김",
+				"english": "Used agitator's information to hide traces"
+			},
+			"reveal_corrupted_data": {
+				"korean": "선동가의 거짓 정보를 폭로하고 오염된 데이터를 드러냄",
+				"english": "Exposed the agitator's false information and revealed corrupted data"
+			}
+		},
+		"flags": {
+			"data_vulnerability": {
+				"label": {
+					"korean": "개인 정보 취약점 노출"
+				},
+				"kind": "bad",
+				"boss_line": {
+					"korean": "네 취약한 정보가 이미 혼란 속에 노출되어 있군."
+				},
+				"boss_penalty": -1
+			},
+			"distracted_attention": {
+				"label": {
+					"korean": "흩어진 주의"
+				},
+				"kind": "bad",
+				"boss_line": {
+					"korean": "혼란스러운 움직임이군. 그런 잔재주로는 나의 흐름을 끊을 수 없다!"
+				},
+				"boss_penalty": -2
+			},
+			"quick_insight": {
+				"label": {
+					"korean": "빠른 통찰력"
+				},
+				"kind": "good",
+				"boss_choice": {
+					"korean": "{random_boss}의 다음 움직임을 예측하고 방어 태세를 갖춘다."
+				},
+				"boss_penalty": 1
+			},
+			"secure_route": {
+				"label": {
+					"korean": "안전한 우회로"
+				},
+				"kind": "good",
+				"boss_choice": {
+					"korean": "경비원의 도움으로 확보한 안전한 우회로를 통해 {random_boss}의 측면을 공격한다."
+				},
+				"boss_penalty": 2
+			},
+			"hidden_fault": {
+				"label": {
+					"korean": "숨겨진 결함 발견"
+				},
+				"kind": "good",
+				"boss_choice": {
+					"korean": "위스퍼 웹의 지시에 숨겨진 결함을 파고들어 {random_boss}의 방어를 약화시킨다."
+				},
+				"boss_penalty": 1
+			},
+			"boss_vulnerable": {
+				"label": {
+					"korean": "{random_boss}의 약점 파악"
+				},
+				"kind": "good",
+				"boss_choice": {
+					"korean": "{random_boss}의 시스템 결함을 노려 치명적인 공격을 가한다."
+				},
+				"boss_penalty": 2
+			}
+		},
+		"rooms": {
+			"1": {
+				"title": {
+					"korean": "폐기물 관리동 입구"
+				}
+			},
+			"3": {
+				"title": {
+					"korean": "정보의 물결 속"
+				},
+				"dialogue": [
+					{
+						"after_line": 5,
+						"line": {
+							"type": "speech",
+							"speaker": "kai",
+							"if": {
+								"seed": "secure_passage"
+							},
+							"source": "llm",
+							"intent": "개인 정보 유출의 위험 속에서 길을 찾아낸 것에 대한 긍정적인 평가",
+							"example": {
+								"korean": "개인 정보에 현혹되지 않고 우리 길을 찾은 것이 잘한 일 같아요."
+							},
+							"emotion": "happy"
+						}
+					}
+				]
+			},
+			"5": {
+				"title": {
+					"korean": "혼란스러운 전광판"
+				},
+				"dialogue": [
+					{
+						"after_line": 6,
+						"line": {
+							"type": "speech",
+							"speaker": "kai",
+							"if": {
+								"seed": "reveal_corrupted_data"
+							},
+							"source": "llm",
+							"intent": "과거 행동의 효과에 대한 회의감과 현재 상황에 대한 좌절감",
+							"example": {
+								"korean": "우리가 거짓 정보를 폭로했지만, 이 혼란을 막기엔 역부족이었던 걸까요?"
+							},
+							"emotion": "sad"
+						}
+					}
+				]
+			},
+			"9": {
+				"title": {
+					"korean": "재활용 전문가의 방해"
+				},
+				"dialogue": [
+					{
+						"after_line": 8,
+						"line": {
+							"type": "speech",
+							"speaker": "kai",
+							"if": {
+								"stat": "echo",
+								"op": ">=",
+								"value": 60
+							},
+							"source": "llm",
+							"intent": "절망적인 상황에서도 동료에 대한 신뢰와 희망을 표현",
+							"example": {
+								"korean": "하지만 당신과 함께라면, 아직 희망은 있습니다."
+							},
+							"emotion": "base"
+						}
+					}
+				]
+			},
+			"15": {
+				"title": {
+					"korean": "최후의 길목"
+				},
+				"dialogue": [
+					{
+						"after_line": 1,
+						"line": {
+							"type": "speech",
+							"speaker": "random_boss",
+							"if": {
+								"flag": "data_vulnerability"
+							},
+							"source": "llm",
+							"intent": "주인공의 정보가 노출된 상태를 조롱하며 저항의 무의미함을 강조",
+							"example": {
+								"korean": "네 취약한 정보가 이미 혼란 속에 노출되어 있더군. 쓸모없는 저항은 그만둬라."
+							},
+							"emotion": "angry"
+						}
+					}
+				]
+			}
+		}
+	}
+}
