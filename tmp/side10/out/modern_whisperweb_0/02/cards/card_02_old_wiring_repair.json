@@ -1,0 +1,180 @@
+{
+	"id": "card_02_old_wiring_repair",
+	"title": {
+		"korean": "낡은 배선 수리"
+	},
+	"tags": [
+		"old"
+	],
+	"intensity": "calm",
+	"after_story": 3,
+	"before_story": 5,
+	"background_tags": [
+		"전력실",
+		"배선",
+		"도구",
+		"스파크",
+		"작업중"
+	],
+	"dialogue": [
+		{
+			"speaker": "narrator",
+			"content": {
+				"korean": "비상 전력실 안, 노련한 기술자가 낡은 배선 앞에 쪼그려 앉아 있다."
+			}
+		},
+		{
+			"speaker": "narrator",
+			"content": {
+				"korean": "한 전력 공급 장치에서는 끊임없이 스파크가 튀고 있었다."
+			}
+		},
+		{
+			"speaker": "technician_old",
+			"content": {
+				"korean": "아이고, 젠장. 이 낡은 배선이 또 말썽이네."
+			}
+		},
+		{
+			"speaker": "lin",
+			"content": {
+				"korean": "저 스파크… 전력 공급이 불안정해진 것 같아요."
+			}
+		},
+		{
+			"speaker": "technician_old",
+			"content": {
+				"korean": "맞아, 큰일 나기 전에 빨리 잡아야 하는데… 공구통이 저 안쪽에 끼었어."
+			}
+		},
+		{
+			"speaker": "technician_old",
+			"content": {
+				"korean": "당신이 잠깐만 이 전선들 좀 잡아줄 수 있겠나?"
+			}
+		}
+	],
+	"choices": [
+		{
+			"text": {
+				"korean": "위험한 전선을 대충 고정하고 서둘러 자리를 뜬다."
+			},
+			"path": "easy",
+			"mbti": "SP",
+			"effects": {
+				"gold": 100,
+				"reason": -10
+			},
+			"reward": [
+				"attack_up"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "당신은 전선을 대충 묶어 고정하고 급히 자리를 떴다."
+					}
+				},
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "기술자는 불안한 듯 당신의 뒷모습을 바라봤다."
+					}
+				},
+				{
+					"speaker": "lin",
+					"content": {
+						"korean": "좀 위험해 보였지만, 급하니까 어쩔 수 없었겠죠?"
+					}
+				}
+			]
+		},
+		{
+			"text": {
+				"korean": "기술자를 도와 공구통을 꺼내고 작업을 돕는다."
+			},
+			"path": "hard",
+			"mbti": "FJ",
+			"effects": {
+				"community": 20,
+				"echo": 10,
+				"gold": -50
+			},
+			"reward": [
+				"defense_up"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "당신은 기술자를 도와 공구통을 꺼내고 불안정한 전선을 함께 잡았다."
+					}
+				},
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "기술자는 한숨을 돌리며 고맙다고 인사했다."
+					}
+				},
+				{
+					"speaker": "technician_old",
+					"content": {
+						"korean": "휴, 덕분에 큰일 막았어. 고마워!"
+					}
+				},
+				{
+					"speaker": "lin",
+					"content": {
+						"korean": "당신 덕분에 이 건물이 더 큰 혼란에 빠질 뻔한 걸 막았어요."
+					}
+				}
+			]
+		},
+		{
+			"text": {
+				"korean": "기술자에게 충분한 돈을 주고 배선 수리를 맡긴다."
+			},
+			"path": "gold",
+			"mbti": "TJ",
+			"require": {
+				"stat": "gold",
+				"op": ">=",
+				"value": 100
+			},
+			"effects": {
+				"reason": 10,
+				"fighting": -10,
+				"gold": -100
+			},
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "당신은 기술자에게 돈을 건네고 확실한 수리를 부탁했다."
+					}
+				},
+				{
+					"speaker": "technician_old",
+					"content": {
+						"korean": "이 정도면 완벽하게 고쳐 놓지! 걱정 마!"
+					}
+				},
+				{
+					"speaker": "lin",
+					"content": {
+						"korean": "돈으로 해결하는 것도 나쁘지 않은 방법이네요."
+					}
+				}
+			]
+		}
+	],
+	"_slot": {
+		"room": 4,
+		"must": "비상 전력실의 한 전력 공급 장치에서 스파크가 튀며 전력 공급이 불안정해지고 있다.",
+		"must_line": "저 스파크… 전력 공급이 불안정해진 것 같아요.",
+		"event": "전기 기술자가 오래된 배선 때문에 당신에게 도움을 요청한다."
+	}
+}

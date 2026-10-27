@@ -1,0 +1,129 @@
+{
+  "issues": [
+    {
+      "quote": "기억은 조각나고, 사람들은 서로를 오해해.",
+      "block": "dialogue",
+      "index": 2,
+      "item": "R6",
+      "problem": "바로 앞 character_any 줄(\"우리가 했던 모든 행동이 결국 이 모양 이 꼴인가?\")과 말투(가/해)가 섞여 있다.",
+      "fix": "\"기억은 조각나고, 사람들은 서로를 오해하는가.\" 등으로 말투를 통일한다.",
+      "order": 5,
+      "room": 1,
+      "quote_found": true
+    },
+    {
+      "order": 5,
+      "room": 3,
+      "fix": "\"마치 보이지 않는 실에 묶인 것처럼, 늘 같은 곳으로 돌아오는 것 같아.\" 등으로 말투를 통일한다.",
+      "problem": "바로 앞 character_any 줄(\"이상해. 우리가 뭘 해도, 결과는 항상 똑같아.\")과 말투(해/와)가 섞여 있다.",
+      "item": "R6",
+      "index": 1,
+      "block": "dialogue",
+      "quote": "마치 보이지 않는 실에 묶인 것처럼, 늘 같은 곳으로 돌아와.",
+      "quote_found": true
+    },
+    {
+      "item": "R6",
+      "order": 5,
+      "fix": "\"겉모습만 달랐을 뿐, 결국 전부 같은 일이었던 것 같아.\" 등으로 말투를 통일한다.",
+      "index": 2,
+      "room": 5,
+      "quote": "겉모습만 달랐을 뿐, 결국 전부 같은 일이었어.",
+      "block": "dialogue",
+      "problem": "바로 앞 character_any 줄(\"닥스의 시스템을 건드린 것도, 카이를 구하려던 것도…\")과 말투(도/어)가 섞여 있다.",
+      "quote_found": true
+    },
+    {
+      "order": 5,
+      "room": 5,
+      "block": "dialogue",
+      "quote": "모든 것이 녀석의 계획이었던 건가.",
+      "item": "R6",
+      "index": 6,
+      "problem": "바로 앞 character_any 줄(\"네온빛 잔상. 우리가 퍼뜨렸던 건 모두 그거였어.\")과 말투(어/가)가 섞여 있다.",
+      "fix": "\"모든 것이 녀석의 계획이었던 것인가.\" 등으로 말투를 통일한다.",
+      "quote_found": true
+    },
+    {
+      "problem": "1~4화의 warn 일반 보스들의 경고가 맞았다는 것을 파티가 명시적으로 떠올리는 장면이 없다.",
+      "order": 5,
+      "room": 9,
+      "fix": "파티 대사 중 \"그때 경비원/편집장/보안 책임자의 경고가 옳았어.\" 또는 \"그들의 경고가 모두 이 위스퍼 웹에 대한 것이었군.\"과 같은 내용을 추가하여 과거 경고를 회수한다.",
+      "quote": "네온빛 잔상의 연결을 끊어야 해. 지금 당장.",
+      "block": "dialogue",
+      "index": 10,
+      "item": "R9",
+      "quote_found": true
+    },
+    {
+      "block": "dialogue",
+      "quote": "이제 진실을 되찾을 시간이야!",
+      "index": 6,
+      "item": "R6",
+      "fix": "\"이제 진실을 되찾을 시간인 것 같아!\" 등으로 말투를 통일한다.",
+      "room": 15,
+      "order": 5,
+      "problem": "바로 앞 character_any 줄(\"더 이상 속지 않아! 네온빛 잔상의 연결을 끊겠어!\")과 말투(어/야)가 섞여 있다.",
+      "quote_found": true
+    }
+  ],
+  "codeErrors": [],
+  "attempts": [
+    {
+      "edits": [
+        {
+          "index": 2,
+          "op": "replace",
+          "room": 1,
+          "block": "dialogue",
+          "text": "기억은 조각나고, 사람들은 서로를 오해하는가.",
+          "speaker": "character_any"
+        },
+        {
+          "block": "dialogue",
+          "text": "마치 보이지 않는 실에 묶인 것처럼, 늘 같은 곳으로 돌아오는 것 같아.",
+          "speaker": "character_any",
+          "index": 1,
+          "room": 3,
+          "op": "replace"
+        },
+        {
+          "text": "겉모습만 달랐을 뿐, 결국 전부 같은 일이었던 것 같아.",
+          "room": 5,
+          "block": "dialogue",
+          "op": "replace",
+          "index": 2,
+          "speaker": "character_any"
+        },
+        {
+          "op": "replace",
+          "index": 6,
+          "room": 5,
+          "block": "dialogue",
+          "text": "모든 것이 녀석의 계획이었던 것인가.",
+          "speaker": "character_any"
+        },
+        {
+          "speaker": "character_any",
+          "index": 9,
+          "block": "dialogue",
+          "room": 9,
+          "text": "그때 그들의 경고가 모두 위스퍼 웹에 대한 것이었군.",
+          "op": "insert_after"
+        },
+        {
+          "room": 15,
+          "speaker": "character_any",
+          "index": 6,
+          "op": "replace",
+          "text": "이제 진실을 되찾을 시간인 것 같아!",
+          "block": "dialogue"
+        }
+      ],
+      "skipped": [],
+      "newErrors": []
+    }
+  ],
+  "kept": true,
+  "codeErrorsAfter": []
+}

@@ -1,0 +1,172 @@
+{
+	"id": "card_01_guard_report",
+	"title": {
+		"korean": "읽을 수 없는 보고서"
+	},
+	"tags": [
+		"guard"
+	],
+	"intensity": "high",
+	"after_story": 1,
+	"before_story": 3,
+	"background_tags": [
+		"서버 랙",
+		"보안",
+		"로그",
+		"전산실",
+		"긴급"
+	],
+	"dialogue": [
+		{
+			"speaker": "narrator",
+			"content": {
+				"korean": "낡은 서버 랙 옆, 보안 요원 팻이 깨진 스크린 앞에서 한숨을 쉬고 있다."
+			}
+		},
+		{
+			"speaker": "pat",
+			"content": {
+				"korean": "젠장, 이러다간 보고서 제출 시간 놓치겠네!"
+			}
+		},
+		{
+			"speaker": "echo",
+			"content": {
+				"korean": "저기... 내 데이터가 엉망이 되면서 보안 시스템 로그까지 망가뜨린 것 같아."
+			}
+		},
+		{
+			"speaker": "pat",
+			"content": {
+				"korean": "이 로그 기록들은 죄다 깨져서 읽을 수가 없어. 무슨 일이 있었는지 파악하는 게 거의 불가능해!"
+			}
+		},
+		{
+			"speaker": "echo",
+			"content": {
+				"korean": "내 데이터가 이렇게까지 보안 시스템에 문제를 일으켰다니..."
+			}
+		},
+		{
+			"speaker": "pat",
+			"content": {
+				"korean": "당신, 혹시 이 로그들을 읽는 방법 좀 알아? 급해 죽겠어!"
+			}
+		}
+	],
+	"choices": [
+		{
+			"text": {
+				"korean": "대충 그럴듯한 내용으로 보고서를 대신 작성해 준다."
+			},
+			"path": "easy",
+			"mbti": "EP",
+			"effects": {
+				"gold": 70
+			},
+			"reward": [
+				"cooldown_reset"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "당신이 건넨 보고서를 본 팻은 일단 안도한 표정으로 받아들였다."
+					}
+				},
+				{
+					"speaker": "pat",
+					"content": {
+						"korean": "어휴, 일단 이거라도 내야겠네. 고마워!"
+					}
+				},
+				{
+					"speaker": "echo",
+					"content": {
+						"korean": "뭔가 대충 넘어간 것 같지만, 팻은 일단 급한 불을 끈 것 같아."
+					}
+				}
+			]
+		},
+		{
+			"text": {
+				"korean": "깨진 로그 조각들을 하나하나 맞춰보며 정확한 사건의 전말을 파악하려 노력한다."
+			},
+			"path": "hard",
+			"mbti": "ST",
+			"effects": {
+				"echo": 10,
+				"community": -10,
+				"fighting": 15
+			},
+			"reward": [
+				"hp_down"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "당신은 인내심을 가지고 깨진 로그들을 분석하기 시작했다. 팻은 초조하게 당신을 지켜본다."
+					}
+				},
+				{
+					"speaker": "pat",
+					"content": {
+						"korean": "언제 다 할 거야? 시간이 없어!"
+					}
+				},
+				{
+					"speaker": "echo",
+					"content": {
+						"korean": "당신의 노력이 헛되지 않기를 바라지만, 정말 시간이 오래 걸릴 것 같아."
+					}
+				}
+			]
+		},
+		{
+			"text": {
+				"korean": "골드를 지불하고 인공지능 분석 프로그램을 사용해 로그 복구를 시도한다."
+			},
+			"path": "gold",
+			"mbti": "NT",
+			"require": {
+				"stat": "gold",
+				"op": ">=",
+				"value": 120
+			},
+			"effects": {
+				"gold": -120,
+				"reason": 20
+			},
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "당신이 골드를 지불하자 팻은 놀랐지만, 이내 인공지능 프로그램을 가동했다."
+					}
+				},
+				{
+					"speaker": "pat",
+					"content": {
+						"korean": "와, 이런 방법이 있었네! 덕분에 보고서 작성이 훨씬 수월해지겠어!"
+					}
+				},
+				{
+					"speaker": "echo",
+					"content": {
+						"korean": "비싼 돈을 썼지만, 덕분에 복잡한 로그가 해결될 실마리가 보인 것 같아."
+					}
+				}
+			]
+		}
+	],
+	"_slot": {
+		"room": 2,
+		"must": "에코의 스크린에 뒤섞인 데이터가 얼마나 복구하기 어려운지 보인다.",
+		"must_line": "이 로그 기록들은 죄다 깨져서 읽을 수가 없어. 무슨 일이 있었는지 파악하는 게 거의 불가능해!",
+		"event": "보안 요원이 읽을 수 없는 로그 때문에 당신에게 보고서 작성을 도와달라고 한다"
+	}
+}

@@ -1,0 +1,394 @@
+{
+	"cards": [
+		{
+			"background_tags": [
+				"전산실",
+				"종이",
+				"폐기물",
+				"인쇄물",
+				"혼란"
+			],
+			"event": "폐기물 수거원이 당신에게 비정상적인 데이터 인쇄물 때문에 불평한다.",
+			"key": "strange_printouts",
+			"must_line": "폐기물 처리 장치에서 개인 정보 파일이 무단으로 복사되어 외부로 전송되고 있다고 계속 찍혀 나와요!",
+			"people": [
+				{
+					"id": "collector",
+					"name": "폐기물 수거원",
+					"role": "데이터 폐기물 처리장의 수거 담당 직원"
+				}
+			],
+			"choices": [
+				{
+					"text": "수거원을 도와 비정상적인 프린트물을 빠르게 처리한다",
+					"reward": [
+						"heal"
+					],
+					"effects": {
+						"echo": 5,
+						"community": -10,
+						"gold": 100
+					},
+					"path": "easy",
+					"mbti": "ES",
+					"result": [
+						{
+							"text": "당신은 수거원을 도와 비정상적인 인쇄물을 빠르게 처리했다.",
+							"speaker": "narrator"
+						},
+						{
+							"text": "덕분에 한숨 돌렸어요. 고마워요!",
+							"speaker": "collector"
+						},
+						{
+							"speaker": "dax",
+							"text": "일단 급한 불은 껐지만, 근본적인 원인은 아니야."
+						}
+					]
+				},
+				{
+					"mbti": "IT",
+					"path": "hard",
+					"result": [
+						{
+							"speaker": "narrator",
+							"text": "당신은 수거원과 함께 인쇄물 내용을 자세히 조사했다. 유출의 심각성을 더욱 명확히 알게 되었다."
+						},
+						{
+							"text": "이렇게까지 심각한 문제였다니...",
+							"speaker": "collector"
+						},
+						{
+							"text": "시간은 걸렸지만, 중요한 단서를 찾았어.",
+							"speaker": "dax"
+						}
+					],
+					"reward": [
+						"intelligence_up"
+					],
+					"effects": {
+						"echo": 10,
+						"reason": 20
+					},
+					"text": "수거원과 함께 프린트물의 내용을 자세히 조사한다"
+				},
+				{
+					"effects": {
+						"fighting": 15,
+						"community": -10,
+						"gold": -100
+					},
+					"result": [
+						{
+							"text": "당신은 수거원에게 골드를 건네며 이 사실을 외부에 알리지 않도록 부탁했다.",
+							"speaker": "narrator"
+						},
+						{
+							"text": "걱정 마세요. 제가 조용히 처리하죠.",
+							"speaker": "collector"
+						},
+						{
+							"speaker": "dax",
+							"text": "돈은 들었지만, 불필요한 소동은 막았어."
+						}
+					],
+					"reward": [],
+					"text": "골드를 주고 수거원에게 이 사실을 외부에 알리지 않도록 부탁한다",
+					"mbti": "FP",
+					"path": "gold"
+				}
+			],
+			"intensity": "high",
+			"title": "이상한 인쇄물",
+			"dialogue": [
+				{
+					"text": "낡은 전산실 바닥에 찢겨진 종이들이 널려 있다.",
+					"speaker": "narrator"
+				},
+				{
+					"text": "아이고, 이것 좀 봐요! 또 이래요.",
+					"speaker": "collector"
+				},
+				{
+					"speaker": "dax",
+					"text": "종이? 무슨 일이야?"
+				},
+				{
+					"speaker": "collector",
+					"text": "폐기물 처리 장치에서 개인 정보 파일이 무단으로 복사되어 외부로 전송되고 있다고 계속 찍혀 나와요!"
+				},
+				{
+					"text": "이걸 매번 치우기도 힘들고, 대체 누가 이런 짓을 하는 건지!",
+					"speaker": "collector"
+				},
+				{
+					"text": "복사된 데이터가 종이로 나온다고?",
+					"speaker": "dax"
+				}
+			]
+		},
+		{
+			"choices": [
+				{
+					"result": [
+						{
+							"text": "당신은 점검원에게 장치 임시 조치 방법을 알려주었다. 그는 잠시 안도하며 당신에게 보상을 건넸다.",
+							"speaker": "narrator"
+						},
+						{
+							"speaker": "inspector",
+							"text": "휴, 한숨 돌렸어요. 고마워요!"
+						},
+						{
+							"text": "급한 불은 껐지만, 근본적인 원인은 여전해.",
+							"speaker": "dax"
+						}
+					],
+					"reward": [
+						"shield"
+					],
+					"text": "점검원에게 임시 조치 방법을 알려주고 다른 점검을 돕는다",
+					"effects": {
+						"gold": 80,
+						"community": -10,
+						"echo": 5
+					},
+					"mbti": "SJ",
+					"path": "easy"
+				},
+				{
+					"path": "hard",
+					"mbti": "NT",
+					"text": "점검원과 함께 장치의 신호 패턴을 분석하여 유출 경로를 추적한다",
+					"effects": {
+						"reason": 25,
+						"echo": 10
+					},
+					"reward": [
+						"attack_up"
+					],
+					"result": [
+						{
+							"speaker": "narrator",
+							"text": "당신은 점검원과 함께 장치의 신호 패턴을 분석했다. 유출의 규모가 생각보다 크다는 것을 알게 되었다."
+						},
+						{
+							"text": "이렇게까지 심각한 문제였다니...",
+							"speaker": "inspector"
+						},
+						{
+							"speaker": "dax",
+							"text": "시간은 걸렸지만, 중요한 단서를 찾았어."
+						}
+					]
+				},
+				{
+					"result": [
+						{
+							"text": "당신은 점검원에게 골드를 건네며 문제의 장치 집중 감시를 요청했다.",
+							"speaker": "narrator"
+						},
+						{
+							"text": "돈을 주시니, 제가 좀 더 신경 써서 보죠!",
+							"speaker": "inspector"
+						},
+						{
+							"speaker": "dax",
+							"text": "비용은 들었지만, 감시를 통해 새로운 정보를 얻을 수 있을 거야."
+						}
+					],
+					"reward": [],
+					"effects": {
+						"gold": -120,
+						"fighting": 10,
+						"community": 10
+					},
+					"text": "골드를 주고 점검원에게 이 장치를 면밀히 조사해 달라고 부탁한다",
+					"mbti": "IP",
+					"path": "gold"
+				}
+			],
+			"must_line": "분명 폐기물 처리 장치인데, 개인 정보 파일이 무단으로 복사돼서 외부로 계속 나간다고 이상 신호가 깜빡거려요.",
+			"title": "깜빡이는 신호",
+			"dialogue": [
+				{
+					"speaker": "narrator",
+					"text": "낡은 전산실 한켠에서 설비 점검원이 낡은 기계를 유심히 살피고 있다."
+				},
+				{
+					"text": "어, 마침 잘 오셨네요. 이 장치 좀 봐요.",
+					"speaker": "inspector"
+				},
+				{
+					"text": "무슨 문제라도 있어?",
+					"speaker": "dax"
+				},
+				{
+					"speaker": "inspector",
+					"text": "분명 폐기물 처리 장치인데,"
+				},
+				{
+					"speaker": "inspector",
+					"text": "개인 정보 파일이 무단으로 복사돼서 외부로 계속 나간다고 이상 신호가 깜빡거려요."
+				},
+				{
+					"speaker": "inspector",
+					"text": "평소에는 이런 일이 없는데, 며칠 전부터 계속 이러네요."
+				},
+				{
+					"speaker": "dax",
+					"text": "그럼 저기서 데이터가 나간다는 거야?"
+				}
+			],
+			"key": "blinking_signal",
+			"background_tags": [
+				"전산실",
+				"기계",
+				"신호",
+				"오류",
+				"점검"
+			],
+			"intensity": "calm",
+			"event": "설비 점검원이 당신에게 데이터 폐기물 처리장의 한 장치에서 이상 신호가 감지되었다고 알린다.",
+			"people": [
+				{
+					"id": "inspector",
+					"name": "설비 점검원",
+					"role": "데이터 폐기물 처리장의 설비 상태를 점검하는 직원"
+				}
+			]
+		},
+		{
+			"choices": [
+				{
+					"result": [
+						{
+							"text": "당신은 검증원에게 임시 방지책을 알려주었다. 그는 잠시나마 안도하며 당신에게 보상을 건넸다.",
+							"speaker": "narrator"
+						},
+						{
+							"speaker": "verifier",
+							"text": "휴, 한숨 돌렸어요. 고마워요!"
+						},
+						{
+							"speaker": "dax",
+							"text": "당장 급한 불은 껐지만, 근본적인 해결은 아니야."
+						}
+					],
+					"reward": [
+						"move_range_up"
+					],
+					"effects": {
+						"gold": 120,
+						"community": -15,
+						"echo": 5
+					},
+					"mbti": "EN",
+					"path": "easy",
+					"text": "검증원에게 데이터 복구 방지책을 알려주고 임시 대책을 세운다"
+				},
+				{
+					"result": [
+						{
+							"text": "당신은 검증원과 함께 복잡한 데이터 흐름을 역추적했다.",
+							"speaker": "narrator"
+						},
+						{
+							"text": "유출의 정확한 경로와 재생성 원인을 파악할 수 있었다.",
+							"speaker": "narrator"
+						},
+						{
+							"text": "당신이 없었다면 영원히 미궁에 빠질 뻔했어요.",
+							"speaker": "verifier"
+						},
+						{
+							"text": "시간이 걸렸지만, 정확한 원인을 알게 되었어.",
+							"speaker": "dax"
+						}
+					],
+					"reward": [
+						"stun"
+					],
+					"text": "검증원과 함께 데이터 흐름을 역추적하여 재생성 원인을 밝혀낸다",
+					"effects": {
+						"echo": 15,
+						"reason": 30
+					},
+					"path": "hard",
+					"mbti": "TJ"
+				},
+				{
+					"result": [
+						{
+							"speaker": "narrator",
+							"text": "당신은 검증원에게 골드를 건네며 문제의 장치 조사를 요청했다."
+						},
+						{
+							"speaker": "verifier",
+							"text": "이 돈이면 밤샘 작업도 할 수 있죠!"
+						},
+						{
+							"speaker": "dax",
+							"text": "비싸게 먹혔지만, 확실한 조사가 이루어질 거야."
+						}
+					],
+					"reward": [],
+					"path": "gold",
+					"mbti": "IN",
+					"effects": {
+						"gold": -150,
+						"community": 10,
+						"fighting": 20
+					},
+					"text": "골드를 주고 검증원에게 이 이상 현상을 집중적으로 조사하도록 요청한다"
+				}
+			],
+			"must_line": "이 폐기물 처리 장치에서 분명 지운 개인 정보 파일이 자꾸만 외부로 복사되고 다시 시스템에 나타나요.",
+			"event": "데이터 검증원이 당신에게 폐기된 데이터가 다시 나타나는 이상 현상을 보고한다.",
+			"background_tags": [
+				"전산실",
+				"데이터",
+				"파기",
+				"복구",
+				"혼란"
+			],
+			"dialogue": [
+				{
+					"speaker": "narrator",
+					"text": "낡은 전산실 깊숙한 곳에서 데이터 검증원이 한숨을 쉬고 있다."
+				},
+				{
+					"speaker": "verifier",
+					"text": "이거 정말 미치겠어요. 분명히 파기했던 파일인데!"
+				},
+				{
+					"speaker": "dax",
+					"text": "뭐가 또 문제야?"
+				},
+				{
+					"speaker": "verifier",
+					"text": "이 폐기물 처리 장치에서 분명 지운 개인 정보 파일이 자꾸만 외부로 복사되고 다시 시스템에 나타나요."
+				},
+				{
+					"text": "아무리 지워도 끝이 없어요. 누가 장난치는 것도 아니고!",
+					"speaker": "verifier"
+				},
+				{
+					"speaker": "dax",
+					"text": "그럼 지워도 소용없다는 거야?"
+				}
+			],
+			"title": "사라진 줄 알았던",
+			"key": "thought_to_be_gone",
+			"people": [
+				{
+					"role": "폐기물 데이터의 최종 파기 여부를 검증하는 직원",
+					"name": "데이터 검증원",
+					"id": "verifier"
+				}
+			],
+			"intensity": "high"
+		}
+	],
+	"errors": []
+}

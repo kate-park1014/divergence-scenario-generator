@@ -1,0 +1,91 @@
+{
+  "issues": [
+    {
+      "block": "dialogue",
+      "index": 1,
+      "fix": "혼잣말처럼 독백으로 바꾸거나, NPC에게 질문하는 형태로 수정한다. 예: \"정말 엉망진창이 됐군. 대체 우리가 뭘 건드렸기에 이 지경이 된 걸까?\"",
+      "order": 5,
+      "problem": "character_any가 다른 파티원에게 질문을 던지고 있다. 이는 R6 (b) 'character_any 줄이 다른 파티원을 부르거나 말을 걸음'에 해당한다.",
+      "room": 1,
+      "item": "R6",
+      "quote": "정말 엉망진창이 됐군. 대체 우리가 뭘 건드렸기에 이 지경이 된 거지?",
+      "quote_found": true
+    },
+    {
+      "room": 5,
+      "item": "R6",
+      "quote": "이 목소리… 2화에서 라디오를 통해 들었던 소리 아니야?",
+      "fix": "혼잣말처럼 독백으로 바꾸거나, NPC에게 질문하는 형태로 수정한다. 예: \"이 목소리… 2화에서 라디오를 통해 들었던 소리 같군.\"",
+      "order": 5,
+      "problem": "character_any가 다른 파티원에게 질문을 던지고 있다. 이는 R6 (b) 'character_any 줄이 다른 파티원을 부르거나 말을 걸음'에 해당한다.",
+      "index": 6,
+      "block": "dialogue",
+      "quote_found": true
+    },
+    {
+      "fix": "혼잣말처럼 독백으로 바꾸거나, 파티 전체의 의지를 나타내는 문장으로 수정한다. 예: \"데이터 스크린 조각을 맞춰서, 모든 것을 원래대로 돌려놔야 해!\"",
+      "room": 9,
+      "item": "R6",
+      "index": 8,
+      "block": "dialogue",
+      "quote": "데이터 스크린 조각을 맞춰서, 모든 것을 원래대로 돌려놓자!",
+      "order": 5,
+      "problem": "character_any가 다른 파티원에게 제안·권유하고 있다. 이는 R6 (b) 'character_any 줄이 다른 파티원을 부르거나 말을 걸음'에 해당한다.",
+      "quote_found": true
+    },
+    {
+      "quote": "(No specific quote, but the absence of it)",
+      "room": 1,
+      "item": "R9",
+      "order": 5,
+      "index": 1,
+      "fix": "5화의 적절한 시점에 파티가 1~3화의 'warn' 타입 일반 보스들의 경고를 떠올리며 그들의 말이 옳았음을 인정하는 대사를 추가한다. 예: \"생각해 보니, 전산실 보안관, 시설 경비원, 냉각 담당자 모두 우리에게 경고했었어. 그들의 말이 맞았던 거야.\"",
+      "problem": "1~4화에 'warn' 타입 일반 보스(전산실 보안관, 시설 경비원, 냉각 담당자)가 있었음에도 불구하고, 5화에서 파티가 그들의 경고가 맞았다는 것을 명시적으로 떠올리는 장면이 없다. 이는 R9 '5화 경고 회수'에 어긋난다.",
+      "block": "dialogue",
+      "quote_found": false
+    }
+  ],
+  "codeErrors": [],
+  "attempts": [
+    {
+      "edits": [
+        {
+          "index": 1,
+          "speaker": "character_any",
+          "block": "dialogue",
+          "text": "정말 엉망진창이 됐군. 대체 우리가 뭘 건드렸기에 이 지경이 된 걸까?",
+          "room": 1,
+          "op": "replace"
+        },
+        {
+          "index": 6,
+          "block": "dialogue",
+          "speaker": "character_any",
+          "op": "replace",
+          "text": "이 목소리… 2화에서 라디오를 통해 들었던 소리 같군.",
+          "room": 5
+        },
+        {
+          "speaker": "character_any",
+          "text": "데이터 스크린 조각을 맞춰서, 모든 것을 원래대로 돌려놔야 해!",
+          "room": 9,
+          "op": "replace",
+          "block": "dialogue",
+          "index": 8
+        },
+        {
+          "index": 3,
+          "op": "insert_after",
+          "block": "dialogue",
+          "text": "생각해 보니, 전산실 보안관, 시설 경비원, 냉각 담당자 모두 우리에게 경고했었어. 그들의 말이 맞았던 거야.",
+          "room": 1,
+          "speaker": "character_any"
+        }
+      ],
+      "skipped": [],
+      "newErrors": []
+    }
+  ],
+  "kept": true,
+  "codeErrorsAfter": []
+}

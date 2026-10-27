@@ -125,7 +125,8 @@ export const POST: RequestHandler = async ({ request, fetch }) => {
 			summary: o?.summary,
 			keyObject: arc.key_object,
 			action: arc.story_spine?.find((x: any) => x.order === order)?.protagonist_action,
-			bossTrace: arc.boss_trace
+			bossTrace: o?.boss_trace ?? arc.boss_trace, // 화마다 다른 흔적 (예전 storyarc 는 아크 하나)
+			bossSide: o?.random_boss_side
 		};
 	};
 

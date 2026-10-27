@@ -1,0 +1,185 @@
+{
+	"id": "card_01_broken_device",
+	"title": {
+		"korean": "작동 불능 장치"
+	},
+	"tags": [
+		"broken"
+	],
+	"intensity": "high",
+	"after_story": 3,
+	"before_story": 5,
+	"background_tags": [
+		"낡은",
+		"전산실",
+		"장치",
+		"고장",
+		"패닉"
+	],
+	"dialogue": [
+		{
+			"speaker": "researcher_new",
+			"content": {
+				"korean": "이런, 큰일 났네! 분석 장치가 갑자기 멈춰 버렸어!"
+			}
+		},
+		{
+			"speaker": "echo",
+			"content": {
+				"korean": "이 장치가 우리 데이터 복구에도 중요한 역할을 할 텐데."
+			}
+		},
+		{
+			"speaker": "researcher_new",
+			"content": {
+				"korean": "이게 멈추면 데이터 무결성이 깨져서, 에코 계약 취소로 인한 회사 손실이 엄청날 거야!"
+			}
+		},
+		{
+			"speaker": "narrator",
+			"content": {
+				"korean": "연구원이 장치를 두드리다 옆 스크린을 흘끗 본다."
+			}
+		},
+		{
+			"speaker": "researcher_new",
+			"content": {
+				"korean": "저 스크린은 또 왜 저래? 이상한 숫자가 잠깐씩 나타났다 사라지네."
+			}
+		},
+		{
+			"speaker": "narrator",
+			"content": {
+				"korean": "연구원이 장치 앞에서 어쩔 줄 몰라 한다."
+			}
+		}
+	],
+	"choices": [
+		{
+			"text": {
+				"korean": "장치를 직접 고쳐주고 빠른 해결책을 제시한다."
+			},
+			"path": "easy",
+			"mbti": "ST",
+			"effects": {
+				"gold": 80,
+				"fighting": -15
+			},
+			"reward": [
+				"move_range_up"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "당신은 고장 난 장치를 빠르게 진단하고 수리했다."
+					}
+				},
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "연구원이 놀라워하며 감사를 표한다."
+					}
+				},
+				{
+					"speaker": "researcher_new",
+					"content": {
+						"korean": "와, 당신 정말 대단하네요! 정말 고마워요!"
+					}
+				}
+			]
+		},
+		{
+			"text": {
+				"korean": "연구원을 진정시키고 함께 해결 방법을 고민한다."
+			},
+			"path": "hard",
+			"mbti": "NF",
+			"effects": {
+				"community": 10,
+				"echo": 8
+			},
+			"reward": [
+				"stun"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "당신은 패닉에 빠진 연구원을 진정시키고 함께 문제를 분석했다."
+					}
+				},
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "연구원은 당신에게 마음을 열고 도움을 청한다."
+					}
+				},
+				{
+					"speaker": "researcher_new",
+					"content": {
+						"korean": "혼자서는 정말 막막했는데... 고마워요."
+					}
+				},
+				{
+					"speaker": "echo",
+					"content": {
+						"korean": "네가 나서주니 나도 안심이 돼."
+					}
+				}
+			]
+		},
+		{
+			"text": {
+				"korean": "돈을 주고 외부 전문가를 불러 장치를 수리하게 한다."
+			},
+			"path": "gold",
+			"mbti": "TJ",
+			"require": {
+				"stat": "gold",
+				"op": ">=",
+				"value": 120
+			},
+			"effects": {
+				"gold": -120,
+				"reason": 10
+			},
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "당신은 돈을 들여 외부 수리 전문가를 급히 불렀다."
+					}
+				},
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "전문가는 능숙하게 장치를 수리하고 사라진다."
+					}
+				},
+				{
+					"speaker": "researcher_new",
+					"content": {
+						"korean": "돈이 최고네요! 덕분에 살았어요!"
+					}
+				},
+				{
+					"speaker": "echo",
+					"content": {
+						"korean": "빠르게 해결돼서 다행이다."
+					}
+				}
+			]
+		}
+	],
+	"_slot": {
+		"room": 4,
+		"must": "에코의 데이터가 복구되지 않으면 중요한 계약이 취소되어 큰 손실을 입는다.",
+		"must_line": "이게 멈추면 데이터 무결성이 깨져서, 에코 계약 취소로 인한 회사 손실이 엄청날 거야!",
+		"hint_line": "저 스크린은 또 왜 저래? 이상한 숫자가 잠깐씩 나타났다 사라지네.",
+		"event": "연구원이 고장 난 데이터 분석 장치 앞에서 발을 동동 구르고 있다."
+	}
+}

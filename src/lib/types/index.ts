@@ -43,6 +43,7 @@ export type MultiLangTextArray = {
 export type World = {
 	setting: string;
 	rule: string;
+	how?: string; // 왜 나쁜 결과가 생기는지: 핵심 물건이 어떻게 작동하는지 한 문장 (재작업본)
 	secret: string;
 };
 
@@ -61,6 +62,7 @@ export type FinalBoss = {
 	surface_identity: string;
 	true_identity: string;
 	motivation: string;
+	want?: string; // 보스가 이 일로 얻는 구체적인 이득 한 문장 (재작업본)
 	twist: string;
 	zodiac_sign?: string;
 };
@@ -98,7 +100,21 @@ export type ScenarioOutlineItem = {
 	npc: string; // npc key
 	summary: string;
 	random_boss_title?: string; // 1~4화: 그 화 일반 보스의 직업 (화마다 다름)
+	random_boss_side?: 'warn' | 'ally'; // 1~4화: 일반 보스의 편. warn = 틀린 행동을 경고하며 막음 / ally = 최종보스 편. 없으면 ally
+	// 1~4화: 주인공이 속는 방식 (코드가 id 로 고정, 화마다 다름). 후보·설명은 storyarcGen.ts 의 DECEIVE_MODE_POOL / DECEIVE_MODE_LABEL
+	deceive_mode?:
+		| 'direct'
+		| 'verify'
+		| 'npc_acts'
+		| 'avoid'
+		| 'pressure'
+		| 'undo'
+		| 'tradeoff'
+		| 'bait'
+		| 'piecemeal'
+		| 'gift';
 	place?: string; // 이 화의 장소: 무대 안의 한 구역 (화마다 다름)
+	boss_trace?: string; // 1~4화: 그 화에 최종보스가 얼굴 없이 드러나는 매체 (화마다 다름. 주인공은 같은 존재인 줄 모름)
 };
 
 export type ActSummary = {
@@ -115,16 +131,20 @@ export type StoryArc = {
 	rising_count: number;
 	world: World;
 	protagonist_goal: string;
-	story_spine?: { order: number; line: string; protagonist_action?: string }[]; // 이야기 전체를 단순하게 줄인 뼈대 (5화 문장에 결말 포함)
+	// 이야기 전체를 단순하게 줄인 뼈대 (5화 문장에 결말 포함)
+	// protagonist_action: 그 화 주인공의 행동 (1화=wrong_action, 2~4화=겉모습이 다른 행동, 5화=right_action)
+	// lesson: 2~4화. 주인공이 앞 화에서 배운 것과, 그래서 이번 행동이 안전해 보이는 이유
+	// hidden_link: 1~4화. 그 행동이 사실은 왜 wrong_action 과 같은 일인지 (5화에 드러남, 1~4화 대사에는 안 씀)
+	story_spine?: { order: number; line: string; protagonist_action?: string; lesson?: string; hidden_link?: string }[];
 	stage?: string; // 이야기의 무대: 보스가 있는 한 장소
 	genre?: string; // 재작업 때 배정된 장르
 	key_object?: string; // 1~5화에 계속 나오고 5화 결말에서 쓰이는 핵심 물건
-	wrong_action?: string; // 1~4화의 핵심 물건에 대한 틀린 행동
+	wrong_action?: string; // 1~4화 행동이 사실은 모두 하는 일 (1화에는 그대로 한다). 핵심 물건에 대한 틀린 행동
 	right_action?: string; // 5화의 핵심 물건에 대한 정답 행동 (결말 행동)
 	random_boss_role?: string; // (예전 필드) 1~4화 일반 보스 집단 이름 — 지금은 scenarioOutline[].random_boss_title 을 쓴다
 	boss_name_korean?: string; // 최종보스 이름의 한국어 발음
 	boss_human_title?: string; // (예전 필드) 최종보스 호칭 — 지금은 쓰지 않음. 최종보스는 이름으로만 부른다
-	boss_trace?: string; // 1~4화에 최종보스가 얼굴 없이 드러나는 매체 (목소리·글자·물건)
+	boss_trace?: string; // 1화에 최종보스가 얼굴 없이 드러나는 매체 (목소리·글자·물건). 2~4화는 scenarioOutline[].boss_trace
 	act_tone: {
 		intro: ActTone;
 		rising: ActTone;
@@ -135,6 +155,16 @@ export type StoryArc = {
 	npc_roles?: Record<string, NpcArcItem>;
 	scenarioOutline: ScenarioOutlineItem[];
 	act_summary: ActSummary;
+};
+
+/** side_test storyarc (tmp/side10 입력). side10 이 안 쓰는 필드를 뺀 StoryArc */
+export type SideTestStoryArc = Omit<
+	StoryArc,
+	'rising_count' | 'protagonist_goal' | 'boss_trace' | 'act_summary' | 'world' | 'act_tone' | 'scenarioOutline'
+> & {
+	world: Omit<World, 'secret'>;
+	act_tone: Record<Act, Pick<ActTone, 'mood'>>;
+	scenarioOutline: Omit<ScenarioOutlineItem, 'act'>[];
 };
 
 // ─────────────────────────────────────────

@@ -1,0 +1,317 @@
+{
+	"cards": [
+		{
+			"title": "낡은 단말기의 오류",
+			"dialogue": [
+				{
+					"speaker": "narrator",
+					"text": "낡은 단말기 화면에 오류 메시지가 가득하다. 최인식의 얼굴에는 당혹감이 역력하다."
+				},
+				{
+					"text": "아이고, 이게 뭐야! 핵심 보안 시스템이 고장 나니, 데이터 분류도 엉망진창이잖아!",
+					"speaker": "data_sorter"
+				},
+				{
+					"text": "시스템이 망가지니 이런 사소한 것까지 다 꼬이네. 어떻게 해야 할까?",
+					"speaker": "dax"
+				}
+			],
+			"hint_line": "낡은 전산실의 핵심 보안 시스템이 파괴되어 데이터 분류 시스템이 엉망이 되었다.",
+			"key": "old_terminal_error",
+			"must_line": "아이고, 이게 뭐야! 핵심 보안 시스템이 고장 나니, 데이터 분류도 엉망진창이잖아!",
+			"people": [
+				{
+					"id": "data_sorter",
+					"role": "낡은 전산실의 데이터를 분류하는 직원",
+					"name": "최인식"
+				}
+			],
+			"intensity": "calm",
+			"background_tags": [
+				"전산실",
+				"단말기",
+				"오류",
+				"데이터",
+				"혼란"
+			],
+			"choices": [
+				{
+					"reward": [
+						"defense_up"
+					],
+					"path": "easy",
+					"text": "모니터의 오류 메시지를 대충 훑어보고 중요한 건 없다고 말한다.",
+					"result": [
+						{
+							"speaker": "narrator",
+							"text": "당신은 대수롭지 않다는 듯 말했다. 최인식은 잠시 안도하는 듯했지만, 곧 다시 모니터를 살폈다."
+						},
+						{
+							"speaker": "dax",
+							"text": "그렇게 넘어가도 괜찮을까? 괜히 나중에 더 큰일이 될까 걱정돼."
+						}
+					],
+					"mbti": "EP",
+					"effects": {
+						"gold": 70,
+						"fighting": -15
+					}
+				},
+				{
+					"reward": [
+						"intelligence_up"
+					],
+					"result": [
+						{
+							"speaker": "narrator",
+							"text": "당신의 지적에 최인식의 얼굴이 굳어졌다. 그는 상황의 심각성을 깨달은 듯 고개를 숙였다."
+						},
+						{
+							"speaker": "dax",
+							"text": "지금은 안심시키는 게 먼저였을지도… 너무 원론적이었나?"
+						}
+					],
+					"mbti": "TJ",
+					"path": "hard",
+					"text": "데이터 분류 시스템의 논리적 오류를 지적하고 해결책을 제시한다.",
+					"effects": {
+						"echo": -10,
+						"reason": 20
+					}
+				},
+				{
+					"reward": [
+						"heal"
+					],
+					"effects": {
+						"community": 10,
+						"gold": -100
+					},
+					"result": [
+						{
+							"speaker": "narrator",
+							"text": "최인식은 당신의 제안에 놀라워했다. 그는 당신에게 감사를 표하며 서둘러 임시 대책을 강구하기 시작했다."
+						},
+						{
+							"speaker": "dax",
+							"text": "유연한 대처였어. 저 사람도 한시름 놓았겠네."
+						}
+					],
+					"text": "최인식에게 새 분류 장비를 사주겠다고 제안한다.",
+					"path": "gold",
+					"mbti": "IN"
+				}
+			],
+			"event": "데이터 분류원 최인식이 낡은 단말기 앞에서 시스템 오류로 당황하고 있다."
+		},
+		{
+			"people": [
+				{
+					"name": "이철수",
+					"id": "security_guard",
+					"role": "전산실 출입 통제를 담당하는 보안 관리원"
+				}
+			],
+			"dialogue": [
+				{
+					"text": "낡은 전산실의 출입문이 덜컥거린다. 이철수가 문을 잡고 안간힘을 쓰고 있지만, 통제가 어렵다.",
+					"speaker": "narrator"
+				},
+				{
+					"speaker": "security_guard",
+					"text": "젠장, 문이 안 잠겨! 핵심 보안 시스템이 맛이 가서 통제가 아예 안 되네!"
+				},
+				{
+					"speaker": "dax",
+					"text": "보안 시스템이 완전히 망가져서 문도 통제할 수 없나 봐. 저대로 두면 위험한데."
+				}
+			],
+			"title": "잠긴 문 앞의 실랑이",
+			"intensity": "calm",
+			"event": "보안 관리원 이철수가 낡은 전산실 문 앞에서 누군가를 들여보내려 애쓰고 있다.",
+			"key": "struggle_at_door",
+			"must_line": "젠장, 문이 안 잠겨! 핵심 보안 시스템이 맛이 가서 통제가 아예 안 되네!",
+			"hint_line": "낡은 전산실의 핵심 보안 시스템이 파괴되어 출입문 통제가 불가능하다.",
+			"choices": [
+				{
+					"effects": {
+						"community": -10,
+						"gold": 50
+					},
+					"result": [
+						{
+							"speaker": "narrator",
+							"text": "당신은 문을 잡고 힘껏 버텼다. 이철수는 잠시 안도했지만, 근본적인 해결책은 아니었다."
+						},
+						{
+							"text": "빨리 해결됐으니 다행이네. 하지만 저 문이 언제까지 버틸 수 있을까?",
+							"speaker": "dax"
+						}
+					],
+					"mbti": "SP",
+					"text": "문을 잡고 잠시 버텨주며 시간을 벌어준다.",
+					"path": "easy",
+					"reward": [
+						"move_range_up"
+					]
+				},
+				{
+					"reward": [
+						"attack_up"
+					],
+					"effects": {
+						"community": 20,
+						"echo": -10
+					},
+					"result": [
+						{
+							"speaker": "narrator",
+							"text": "당신의 경고에 이철수의 얼굴이 굳어졌다. 그는 상황의 심각성을 깨달은 듯 고개를 끄덕였다."
+						},
+						{
+							"text": "지금은 저 사람을 안심시키는 게 먼저였을지도… 너무 직설적이었나?",
+							"speaker": "dax"
+						}
+					],
+					"text": "보안 관리원에게 통제 불능의 위험성을 경고하고 다른 방법을 찾으라고 조언한다.",
+					"path": "hard",
+					"mbti": "FJ"
+				},
+				{
+					"result": [
+						{
+							"speaker": "narrator",
+							"text": "이철수는 당신의 제안에 감사하며 서둘러 임시 잠금장치를 구하기 시작했다."
+						},
+						{
+							"text": "돈으로 해결하는 것도 방법이지. 잠시 시간을 벌었어.",
+							"speaker": "dax"
+						}
+					],
+					"effects": {
+						"fighting": -10,
+						"gold": -120
+					},
+					"path": "gold",
+					"text": "이철수에게 임시 잠금장치를 설치하라고 돈을 건넨다.",
+					"reward": [
+						"shield"
+					],
+					"mbti": "ET"
+				}
+			],
+			"background_tags": [
+				"전산실",
+				"출입문",
+				"보안",
+				"통제불능",
+				"실랑이"
+			]
+		},
+		{
+			"background_tags": [
+				"전산실",
+				"기록물",
+				"문서",
+				"관리",
+				"혼란"
+			],
+			"key": "messy_records",
+			"must_line": "이런, 큰일 났네! 핵심 보안 시스템이 파괴되니까, 기록물 접근 통제가 완전히 사라졌잖아!",
+			"event": "기록물 관리자 정미경이 뒤죽박죽 된 종이 기록물들을 보며 한숨 쉬고 있다.",
+			"hint_line": "핵심 보안 시스템 파괴로 낡은 전산실의 기록물 접근 통제가 사라졌다.",
+			"choices": [
+				{
+					"path": "easy",
+					"text": "기록물 더미에서 중요한 것을 대충 찾아 준다.",
+					"mbti": "IP",
+					"result": [
+						{
+							"text": "당신은 서류를 받아 정미경의 짐을 덜어주었다. 그녀는 잠시 경계를 풀고 고마워했다.",
+							"speaker": "narrator"
+						},
+						{
+							"speaker": "dax",
+							"text": "작은 도움이지만 큰 위로가 됐을 거야. 나이스!"
+						}
+					],
+					"effects": {
+						"gold": 60,
+						"fighting": -10
+					},
+					"reward": [
+						"cooldown_reset"
+					]
+				},
+				{
+					"mbti": "NJ",
+					"path": "hard",
+					"text": "기록물의 중요성을 강조하며 체계적인 재분류를 돕는다.",
+					"reward": [
+						"stun"
+					],
+					"effects": {
+						"echo": -5,
+						"reason": 15
+					},
+					"result": [
+						{
+							"speaker": "narrator",
+							"text": "당신의 경고에 정미경은 기록물 더미를 돌아봤다. 그녀의 얼굴에는 불안감이 스쳤다."
+						},
+						{
+							"speaker": "dax",
+							"text": "지금은 정미경님을 안심시키는 게 먼저였을지도… 너무 직설적이었나?"
+						}
+					]
+				},
+				{
+					"mbti": "SF",
+					"path": "gold",
+					"text": "정미경에게 새 보관함 구매 비용을 지원한다.",
+					"reward": [
+						"heal"
+					],
+					"effects": {
+						"gold": -90,
+						"community": 10
+					},
+					"result": [
+						{
+							"speaker": "narrator",
+							"text": "정미경은 당신의 제안에 고개를 끄덕였다. 그녀는 잠시 안도하며 당신에게 길을 비켜주었다."
+						},
+						{
+							"text": "돈으로 안 되는 건 없지! 이제 우리의 길을 갈 시간이야.",
+							"speaker": "dax"
+						}
+					]
+				}
+			],
+			"title": "엉망이 된 기록물",
+			"people": [
+				{
+					"name": "정미경",
+					"role": "낡은 전산실의 물리적 기록물을 관리하는 직원",
+					"id": "archivist"
+				}
+			],
+			"intensity": "calm",
+			"dialogue": [
+				{
+					"text": "낡은 전산실 한구석에 종이 기록물들이 어지럽게 흩어져 있다. 정미경은 쌓인 서류를 보며 한숨 쉰다.",
+					"speaker": "narrator"
+				},
+				{
+					"text": "이런, 큰일 났네! 핵심 보안 시스템이 파괴되니까, 기록물 접근 통제가 완전히 사라졌잖아!",
+					"speaker": "archivist"
+				},
+				{
+					"text": "저렇게 중요한 자료들이 마구 흩어져 있는데, 누가 가져가면 어쩌려고 저러지?",
+					"speaker": "dax"
+				}
+			]
+		}
+	],
+	"errors": []
+}

@@ -1,0 +1,170 @@
+{
+	"id": "card_05_privacy_invasion_complaint",
+	"title": {
+		"korean": "사생활 침해 민원"
+	},
+	"tags": [
+		"privacy"
+	],
+	"intensity": "high",
+	"after_story": 5,
+	"before_story": 7,
+	"background_tags": [
+		"중앙_제어실",
+		"민원_창구",
+		"공공_디스플레이",
+		"분노",
+		"개인_정보"
+	],
+	"dialogue": [
+		{
+			"speaker": "narrator",
+			"content": {
+				"korean": "중앙 제어실 옆 민원 창구, 시민들의 분노 섞인 목소리가 들린다."
+			}
+		},
+		{
+			"speaker": "minsu",
+			"content": {
+				"korean": "시민들 채팅 기록이 광장 전광판에 그대로 뜨고 있다고!"
+			}
+		},
+		{
+			"speaker": "echo",
+			"content": {
+				"korean": "저 사람들의 사적인 대화가 왜 공개되는 거지?"
+			}
+		},
+		{
+			"speaker": "minsu",
+			"content": {
+				"korean": "이건 무의식적인 생각들이 현실로 튀어나온 것 같아."
+			}
+		},
+		{
+			"speaker": "narrator",
+			"content": {
+				"korean": "민수가 당신을 보며 어쩔 줄 몰라 한다."
+			}
+		}
+	],
+	"choices": [
+		{
+			"text": {
+				"korean": "공공 디스플레이를 임시로 꺼서 정보 노출을 중단시킨다."
+			},
+			"path": "easy",
+			"mbti": "ET",
+			"effects": {
+				"gold": 100,
+				"echo": -5,
+				"community": -10
+			},
+			"reward": [
+				"shield"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "당신은 공공 디스플레이를 임시로 껐다."
+					}
+				},
+				{
+					"speaker": "minsu",
+					"content": {
+						"korean": "일단 진정됐지만, 언제까지 이렇게 막을 수 있을까?"
+					}
+				},
+				{
+					"speaker": "echo",
+					"content": {
+						"korean": "빠른 대처였지만, 근본적인 문제는 남아있어."
+					}
+				}
+			]
+		},
+		{
+			"text": {
+				"korean": "민수와 함께 분노한 시민들을 진정시키고 상황을 설명한다."
+			},
+			"path": "hard",
+			"mbti": "EN",
+			"effects": {
+				"echo": 10,
+				"fighting": -10,
+				"community": 20
+			},
+			"reward": [
+				"move_range_up"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "당신은 민수와 함께 시민들을 진정시키고 상황을 설명했다."
+					}
+				},
+				{
+					"speaker": "minsu",
+					"content": {
+						"korean": "쉽지 않았지만, 시민들이 조금은 이해해 주는 것 같아."
+					}
+				},
+				{
+					"speaker": "echo",
+					"content": {
+						"korean": "어려운 일이었지만, 정말 잘했어."
+					}
+				}
+			]
+		},
+		{
+			"text": {
+				"korean": "긴급 대변인 섭외 비용을 지불하여 위기 관리를 맡긴다."
+			},
+			"path": "gold",
+			"mbti": "IT",
+			"require": {
+				"stat": "gold",
+				"op": ">=",
+				"value": 100
+			},
+			"effects": {
+				"echo": 5,
+				"gold": -100,
+				"reason": 10
+			},
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "당신은 긴급 대변인 섭외 비용을 지불했다."
+					}
+				},
+				{
+					"speaker": "minsu",
+					"content": {
+						"korean": "전문가가 오면 이 혼란을 수습할 수 있겠지."
+					}
+				},
+				{
+					"speaker": "echo",
+					"content": {
+						"korean": "돈은 아깝지만, 확실한 방법이었네."
+					}
+				}
+			]
+		}
+	],
+	"_slot": {
+		"room": 6,
+		"must": "중앙 제어실의 스크린에 도시 사람들의 개인 정보가 뒤섞여 표시되며 큰 혼란이 발생한다.",
+		"must_line": "시민들 채팅 기록이 광장 전광판에 그대로 뜨고 있다고!",
+		"hint_line": "이건 무의식적인 생각들이 현실로 튀어나온 것 같아.",
+		"event": "시민 서비스 상담원 민수가 사생활 유출 민원 때문에 당신에게 도움을 요청한다."
+	}
+}

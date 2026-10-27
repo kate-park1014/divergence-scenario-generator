@@ -1,0 +1,185 @@
+{
+	"id": "card_01_damaged_delivery_data",
+	"title": {
+		"korean": "손상된 배송 데이터"
+	},
+	"tags": [
+		"damaged"
+	],
+	"intensity": "high",
+	"after_story": 5,
+	"before_story": 7,
+	"background_tags": [
+		"전산실",
+		"서버 랙",
+		"배송 단말기",
+		"데이터",
+		"진동"
+	],
+	"dialogue": [
+		{
+			"speaker": "courier",
+			"content": {
+				"korean": "으악! 방금 스크린 깨지는 소리 때문에 이 배송 단말기가 맛이 갔나 봐요!"
+			}
+		},
+		{
+			"speaker": "courier",
+			"content": {
+				"korean": "중요한 데이터인데, 화면이 계속 깜빡거려서 확인이 안 돼요!"
+			}
+		},
+		{
+			"speaker": "echo",
+			"content": {
+				"korean": "내 스크린에 복구된 데이터가 정상적으로 표시되고 있어."
+			}
+		},
+		{
+			"speaker": "echo",
+			"content": {
+				"korean": "이 데이터를 참고하면 저 장치의 오류를 분석할 수 있을 거야."
+			}
+		},
+		{
+			"speaker": "courier",
+			"content": {
+				"korean": "정말요? 그럼 제발, 이 데이터가 제대로 전달될 수 있는지 확인해 주세요!"
+			}
+		}
+	],
+	"choices": [
+		{
+			"text": {
+				"korean": "복구된 데이터로 핵심 정보만 빠르게 대조해 오류 없음을 알린다"
+			},
+			"path": "easy",
+			"mbti": "ES",
+			"effects": {
+				"fighting": -10,
+				"gold": 70
+			},
+			"reward": [
+				"shield"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "당신은 에코의 스크린으로 핵심 데이터를 빠르게 대조했다."
+					}
+				},
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "배송원은 안도하며 서둘러 다음 목적지로 향했다."
+					}
+				},
+				{
+					"speaker": "courier",
+					"content": {
+						"korean": "휴, 다행이다! 일단 이걸로 급한 불은 껐어요. 정말 감사합니다!"
+					}
+				},
+				{
+					"speaker": "echo",
+					"content": {
+						"korean": "임시방편이지만, 지금으로서는 최선의 선택이었을 거야."
+					}
+				}
+			]
+		},
+		{
+			"text": {
+				"korean": "배송원과 함께 단말기 내부 회선을 꼼꼼히 점검해 오류를 바로잡는다"
+			},
+			"path": "hard",
+			"mbti": "TJ",
+			"effects": {
+				"echo": 10,
+				"community": 20
+			},
+			"reward": [
+				"defense_up"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "당신은 배송원과 함께 단말기의 복잡한 내부 회선을 꼼꼼히 점검했다."
+					}
+				},
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "작은 부품 하나를 다시 연결하자 단말기는 정상 작동했다."
+					}
+				},
+				{
+					"speaker": "courier",
+					"content": {
+						"korean": "완벽해요! 이 데이터를 안전하게 전달할 수 있게 됐어요!"
+					}
+				},
+				{
+					"speaker": "echo",
+					"content": {
+						"korean": "함께 노력하니 해결 못 할 일이 없네."
+					}
+				}
+			]
+		},
+		{
+			"text": {
+				"korean": "새 데이터 안정화 모듈을 구매해 배송 단말기에 설치한다"
+			},
+			"path": "gold",
+			"mbti": "IP",
+			"require": {
+				"stat": "gold",
+				"op": ">=",
+				"value": 100
+			},
+			"effects": {
+				"reason": 15,
+				"gold": -100
+			},
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "당신은 새 데이터 안정화 모듈을 구매하여 단말기에 설치했다."
+					}
+				},
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "모듈은 순식간에 모든 오류를 제거하고 데이터를 안정시켰다."
+					}
+				},
+				{
+					"speaker": "echo",
+					"content": {
+						"korean": "돈으로 해결하는 방법도 나쁘지 않네. 결과가 확실하잖아."
+					}
+				},
+				{
+					"speaker": "courier",
+					"content": {
+						"korean": "이제야 안심하고 제자리로 돌려놓을 수 있겠어요. 고마워요!"
+					}
+				}
+			]
+		}
+	],
+	"_slot": {
+		"room": 6,
+		"must": "에코의 스크린에 복구된 데이터가 정상적으로 표시되고 있다.",
+		"must_line": "내 스크린에 복구된 데이터가 정상적으로 표시되고 있어.",
+		"hint_line": "데이터 배송원의 단말기 오류를 해결하고 데이터를 확인해 준다.",
+		"event": "데이터 배송원이 손상된 배송 데이터 때문에 당신에게 확인을 요청한다"
+	}
+}

@@ -1,0 +1,359 @@
+{
+	"cards": [
+		{
+			"choices": [
+				{
+					"result": [
+						{
+							"speaker": "narrator",
+							"text": "당신은 대충 화면을 확인하고 유출이 멈췄다고 말한다. 시민은 한숨을 쉬며 안도한다."
+						},
+						{
+							"speaker": "citizen_a",
+							"text": "정말 다행이다… 이제 좀 마음이 놓이네요."
+						},
+						{
+							"speaker": "dax",
+							"text": "너무 쉽게 말한 거 아니야? 그래도 뭐, 일단락됐으니 됐나."
+						}
+					],
+					"mbti": "EJ",
+					"reward": [
+						"attack_up"
+					],
+					"path": "easy",
+					"text": "단말기 화면을 대충 훑어보고 안심시킨다.",
+					"effects": {
+						"gold": 100,
+						"community": -10
+					}
+				},
+				{
+					"effects": {
+						"reason": 15,
+						"echo": 10
+					},
+					"path": "hard",
+					"text": "시민의 단말기를 받아 꼼꼼히 검사하며 안심시킨다.",
+					"reward": [
+						"defense_up"
+					],
+					"mbti": "IT",
+					"result": [
+						{
+							"text": "당신은 시민의 단말기를 건네받아 모든 기록을 확인하며 유출이 없음을 확신시킨다.",
+							"speaker": "narrator"
+						},
+						{
+							"text": "이렇게까지 신경 써 주시다니… 정말 감사합니다.",
+							"speaker": "citizen_a"
+						},
+						{
+							"text": "꽤 시간이 걸렸네. 그래도 저 사람도 이제 안심하겠지.",
+							"speaker": "dax"
+						}
+					]
+				},
+				{
+					"mbti": "FP",
+					"result": [
+						{
+							"text": "당신은 시민에게 개인 정보 보호용 장치 구매에 필요한 돈을 건넨다.",
+							"speaker": "narrator"
+						},
+						{
+							"text": "이걸로 안심하고 지낼 수 있겠어요. 정말 고마워요!",
+							"speaker": "citizen_a"
+						},
+						{
+							"speaker": "dax",
+							"text": "돈으로 해결하는 것도 방법이긴 하지만… 조금 아깝지 않아?"
+						}
+					],
+					"effects": {
+						"gold": -100,
+						"community": 20
+					},
+					"reward": [],
+					"text": "시민에게 개인 정보 보호용 보안 장치 구매 비용을 건넨다.",
+					"path": "gold"
+				}
+			],
+			"title": "안절부절못하는 시민",
+			"key": "anxious_citizen",
+			"hint_line": "시민의 불안감을 잠재워야 한다.",
+			"must_line": "이봐, 이제 더는 새로운 데이터 유출은 없을 거야. 방금 확인했어.",
+			"people": [
+				{
+					"id": "citizen_a",
+					"role": "자신의 개인 정보 유출을 걱정하는 시민",
+					"name": "안절부절못하는 시민"
+				}
+			],
+			"dialogue": [
+				{
+					"speaker": "narrator",
+					"text": "낡은 전산실 한구석에서 한 시민이 작은 단말기를 들여다보고 있다."
+				},
+				{
+					"text": "제 정보가 아직도 흘러나오고 있는 건가요? 불안해서 살 수가 없어요.",
+					"speaker": "citizen_a"
+				},
+				{
+					"speaker": "dax",
+					"text": "이봐, 이제 더는 새로운 데이터 유출은 없을 거야. 방금 확인했어."
+				},
+				{
+					"speaker": "citizen_a",
+					"text": "정말요? 그래도… 제 눈으로 직접 확인해야 믿을 수 있을 것 같아요."
+				}
+			],
+			"background_tags": [
+				"낡은_전산실",
+				"데이터_폐기물",
+				"어수선함",
+				"모니터",
+				"전선"
+			],
+			"event": "안절부절못하는 시민이 당신에게 자신의 정보 유출 여부를 확인해달라고 조른다.",
+			"intensity": "calm"
+		},
+		{
+			"choices": [
+				{
+					"mbti": "EP",
+					"text": "서류 더미를 대충 헤집어 먼저 보이는 문서를 건넨다.",
+					"path": "easy",
+					"effects": {
+						"gold": 70,
+						"fighting": -10
+					},
+					"result": [
+						{
+							"speaker": "narrator",
+							"text": "당신은 손에 잡히는 서류 몇 장을 건넨다. 문서 관리원은 일단 받아든다."
+						},
+						{
+							"text": "음… 이게 맞으려나? 일단 고마워.",
+							"speaker": "tech_b"
+						},
+						{
+							"text": "중요한 건 아니었겠지? 그래도 뭐, 급한 불은 껐네.",
+							"speaker": "dax"
+						}
+					],
+					"reward": [
+						"move_range_up"
+					]
+				},
+				{
+					"result": [
+						{
+							"text": "당신은 서류 분류법을 설명하고 함께 정리하기 시작한다. 문서 관리원은 감탄한다.",
+							"speaker": "narrator"
+						},
+						{
+							"speaker": "tech_b",
+							"text": "오, 이렇게 하면 훨씬 좋겠네요! 정말 대단해요."
+						},
+						{
+							"text": "고생 좀 하겠지만, 나중엔 훨씬 편해질 거야.",
+							"speaker": "dax"
+						}
+					],
+					"reward": [
+						"intelligence_up"
+					],
+					"mbti": "IJ",
+					"effects": {
+						"echo": 8,
+						"reason": 20
+					},
+					"text": "문서 관리원에게 정리 시스템을 제안하고 함께 서류를 분류한다.",
+					"path": "hard"
+				},
+				{
+					"mbti": "SF",
+					"effects": {
+						"gold": -80,
+						"community": 15
+					},
+					"path": "gold",
+					"text": "문서 관리원에게 새 서류 정리 장비 구매 비용을 건넨다.",
+					"result": [
+						{
+							"text": "당신은 문서 관리원에게 서류 정리 장비를 살 돈을 건넨다.",
+							"speaker": "narrator"
+						},
+						{
+							"speaker": "tech_b",
+							"text": "이걸로 훨씬 빨리 끝낼 수 있겠어요! 정말 감사해요!"
+						},
+						{
+							"speaker": "dax",
+							"text": "돈으로 해결하는 게 가장 빠르긴 하지."
+						}
+					],
+					"reward": []
+				}
+			],
+			"background_tags": [
+				"낡은_전산실",
+				"서류더미",
+				"어지러움",
+				"찢어진_종이",
+				"먼지"
+			],
+			"hint_line": "문서 관리원의 혼란을 정리해 줄 방법이 필요하다.",
+			"event": "과로한 기술자가 어수선한 서류 더미 속에서 중요한 문서를 찾고 있다.",
+			"intensity": "high",
+			"title": "어수선한 서류 더미",
+			"dialogue": [
+				{
+					"text": "낡은 전산실 바닥에 수많은 서류와 부품이 널려 있다. 문서 관리원이 허둥댄다.",
+					"speaker": "narrator"
+				},
+				{
+					"speaker": "tech_b",
+					"text": "젠장, 서류가 어디로 간 거야! 예전 같으면 매일 새로 쌓였을 텐데…"
+				},
+				{
+					"speaker": "dax",
+					"text": "이제 더는 새로운 보고서가 올라오진 않을 거야. 유출은 멈췄으니까."
+				},
+				{
+					"text": "알아. 근데 이미 쌓인 게 산더미라고! 이 중에 중요한 게 섞여 있다고.",
+					"speaker": "tech_b"
+				}
+			],
+			"key": "overwhelmed_tech",
+			"people": [
+				{
+					"name": "노련한 문서 관리원",
+					"role": "데이터 유출 관련 서류를 정리하는 기술자",
+					"id": "tech_b"
+				}
+			],
+			"must_line": "이제 더는 새로운 보고서가 올라오진 않을 거야. 유출은 멈췄으니까."
+		},
+		{
+			"title": "부품을 찾는 사람",
+			"hint_line": "부품 재활용업자의 의도를 파악하고 적절히 대응해야 한다.",
+			"key": "curious_salvager",
+			"people": [
+				{
+					"name": "호기심 많은 부품 재활용업자",
+					"role": "폐기된 전산 장비에서 쓸 만한 부품을 찾는 사람",
+					"id": "salvager_c"
+				}
+			],
+			"intensity": "calm",
+			"dialogue": [
+				{
+					"text": "낡은 전산실 구석, 분해된 장치 옆에서 한 남자가 공구를 만지작거린다.",
+					"speaker": "narrator"
+				},
+				{
+					"speaker": "salvager_c",
+					"text": "흠, 이거 꽤 쓸 만한 부품들이 많아 보이는데. 이제 더는 개인 정보가 흐르지도 않고 말이야."
+				},
+				{
+					"speaker": "dax",
+					"text": "이봐, 함부로 손대지 마. 아직 위험할 수도 있어."
+				},
+				{
+					"text": "에이, 괜찮아. 어차피 이제 다 식은 정보들이잖아?",
+					"speaker": "salvager_c"
+				}
+			],
+			"choices": [
+				{
+					"effects": {
+						"fighting": -15,
+						"gold": 60
+					},
+					"mbti": "SP",
+					"result": [
+						{
+							"text": "당신은 쓸모없어 보이는 부품 몇 개를 그에게 건넨다. 그는 만족하며 길을 비킨다.",
+							"speaker": "narrator"
+						},
+						{
+							"speaker": "salvager_c",
+							"text": "오, 이 정도면 괜찮지! 고마워."
+						},
+						{
+							"text": "아까운 거 아니야? 뭐, 그래도 문제없이 넘어갔으니 다행인가.",
+							"speaker": "dax"
+						}
+					],
+					"reward": [
+						"heal"
+					],
+					"text": "부품 중 일부를 재활용업자에게 건네고 길을 연다.",
+					"path": "easy"
+				},
+				{
+					"mbti": "TJ",
+					"effects": {
+						"echo": 12,
+						"reason": 10
+					},
+					"path": "hard",
+					"text": "재활용업자에게 지금은 위험하니 나중에 다시 오라고 단호하게 말한다.",
+					"result": [
+						{
+							"speaker": "narrator",
+							"text": "당신은 단호하게 지금은 접근 금지라고 말한다. 재활용업자는 아쉬워하며 물러난다."
+						},
+						{
+							"speaker": "salvager_c",
+							"text": "쳇, 너무 깐깐하게 구네."
+						},
+						{
+							"speaker": "dax",
+							"text": "잘했어. 괜히 만졌다가 또 문제 생길 수도 있었잖아."
+						}
+					],
+					"reward": [
+						"shield"
+					]
+				},
+				{
+					"effects": {
+						"gold": -90,
+						"community": 10
+					},
+					"mbti": "IF",
+					"result": [
+						{
+							"speaker": "narrator",
+							"text": "당신은 재활용업자에게 다른 곳에서 부품을 찾을 수 있도록 돈을 건넨다."
+						},
+						{
+							"speaker": "salvager_c",
+							"text": "오, 이런… 고맙습니다! 이걸로 좋은 부품 구할 수 있겠네요!"
+						},
+						{
+							"text": "돈으로 해결하긴 했지만, 확실히 깔끔하네.",
+							"speaker": "dax"
+						}
+					],
+					"reward": [],
+					"path": "gold",
+					"text": "재활용업자에게 다른 곳에서 부품을 구할 돈을 건넨다."
+				}
+			],
+			"must_line": "흠, 이거 꽤 쓸 만한 부품들이 많아 보이는데. 이제 더는 개인 정보가 흐르지도 않고 말이야.",
+			"event": "부품 재활용업자가 당신이 분해한 장치 주변을 기웃거리며 부품을 노린다.",
+			"background_tags": [
+				"데이터_폐기물",
+				"부품더미",
+				"낡은_전산실",
+				"스패너",
+				"작업복"
+			]
+		}
+	],
+	"errors": []
+}

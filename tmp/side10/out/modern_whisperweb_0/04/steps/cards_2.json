@@ -1,0 +1,388 @@
+{
+	"cards": [
+		{
+			"must_line": "아니, '오늘 점심은 김치찌개' 이런 것까지 왜 다 뜨는 거야!",
+			"people": [
+				{
+					"name": "택배 기사",
+					"id": "courier",
+					"role": "데이터 폐기물 처리장으로 배송 온 택배 기사"
+				}
+			],
+			"title": "분실된 택배",
+			"dialogue": [
+				{
+					"text": "낡은 전산실 안, 택배 기사 한 명이 주변을 둘러보며 애를 태우고 있었다.",
+					"speaker": "narrator"
+				},
+				{
+					"text": "아, 큰일 났다! 이 중요한 택배를 어디다 둔 거지?",
+					"speaker": "courier"
+				},
+				{
+					"text": "저 사람, 택배를 잃어버린 것 같아. 저기 전광판 좀 봐.",
+					"speaker": "dax"
+				},
+				{
+					"speaker": "courier",
+					"text": "아니, '오늘 점심은 김치찌개' 이런 것까지 왜 다 뜨는 거야!"
+				},
+				{
+					"text": "택배 기사는 당신을 발견하고 다급하게 물었다.",
+					"speaker": "narrator"
+				},
+				{
+					"text": "혹시 이 근처에서 작은 상자 못 보셨어요?",
+					"speaker": "courier"
+				}
+			],
+			"hint_line": "잃어버린 택배를 어떻게 도와줄까?",
+			"event": "택배 기사가 분실된 택배 때문에 난처해하고 있다. 전광판에는 그의 개인 정보가 노출되고 있다.",
+			"background_tags": [
+				"데이터 폐기물 처리장",
+				"낡은 전산실",
+				"택배",
+				"분실",
+				"전광판"
+			],
+			"key": "lost_delivery",
+			"choices": [
+				{
+					"text": "택배 기사를 도와 주변을 빠르게 수색하여 택배를 찾아준다.",
+					"path": "easy",
+					"reward": [
+						"heal"
+					],
+					"result": [
+						{
+							"text": "당신은 택배 기사와 함께 주변을 빠르게 훑었다. 잠시 후, 장비 뒤에서 택배가 발견되었다.",
+							"speaker": "narrator"
+						},
+						{
+							"text": "찾았다! 정말 감사합니다! 여기 작은 사례입니다.",
+							"speaker": "courier"
+						},
+						{
+							"text": "다행이다. 택배도 찾고, 우리도 골드를 얻었네.",
+							"speaker": "dax"
+						}
+					],
+					"effects": {
+						"gold": 100,
+						"echo": 5,
+						"fighting": -15
+					},
+					"mbti": "ES"
+				},
+				{
+					"reward": [
+						"defense_up"
+					],
+					"text": "택배보다 전광판에 노출된 개인 정보의 심각성을 알려준다.",
+					"path": "hard",
+					"result": [
+						{
+							"text": "당신은 택배 기사에게 전광판의 개인 정보 유출 문제를 지적했다. 그는 그제야 화면을 응시했다.",
+							"speaker": "narrator"
+						},
+						{
+							"speaker": "courier",
+							"text": "맙소사, 이런 일이… 택배보다 이게 더 큰 문제였네요!"
+						},
+						{
+							"speaker": "dax",
+							"text": "저 사람도 이제 상황을 인지했어."
+						}
+					],
+					"mbti": "TJ",
+					"effects": {
+						"community": 20,
+						"echo": 10
+					}
+				},
+				{
+					"reward": [],
+					"path": "gold",
+					"text": "돈을 주고 새 택배를 보내도록 권유한다.",
+					"mbti": "IP",
+					"result": [
+						{
+							"text": "당신은 택배 기사에게 돈을 건네며 새 택배를 보내는 편이 빠르다고 말했다. 그는 고마워하며 배송지로 향했다.",
+							"speaker": "narrator"
+						},
+						{
+							"speaker": "courier",
+							"text": "세상에, 이렇게까지 해주시다니! 정말 감사합니다!"
+						},
+						{
+							"speaker": "dax",
+							"text": "돈으로 해결했지만, 저 사람의 문제는 일단락되었어."
+						}
+					],
+					"effects": {
+						"gold": -100,
+						"reason": 20
+					}
+				}
+			],
+			"intensity": "calm"
+		},
+		{
+			"key": "cleaner_argument",
+			"intensity": "high",
+			"background_tags": [
+				"데이터 폐기물 처리장",
+				"낡은 전산실",
+				"싸움",
+				"업무",
+				"전광판"
+			],
+			"people": [
+				{
+					"role": "데이터 폐기물 처리장의 환경미화원",
+					"id": "cleaner_a",
+					"name": "환경미화원 A"
+				},
+				{
+					"id": "cleaner_b",
+					"name": "환경미화원 B",
+					"role": "데이터 폐기물 처리장의 환경미화원"
+				}
+			],
+			"title": "청소부들의 실랑이",
+			"event": "두 환경미화원이 서로에게 책임을 전가하며 다투고 있다. 전광판에는 그들의 업무 정보가 공개되어 있다.",
+			"hint_line": "다투는 환경미화원들을 어떻게 할까?",
+			"choices": [
+				{
+					"reward": [
+						"stun"
+					],
+					"effects": {
+						"reason": -10,
+						"echo": -5,
+						"gold": 80
+					},
+					"mbti": "EP",
+					"path": "easy",
+					"result": [
+						{
+							"speaker": "narrator",
+							"text": "당신은 환경미화원 A의 편을 들어주었다. 환경미화원 B는 불평하며 자리를 피했다."
+						},
+						{
+							"speaker": "cleaner_a",
+							"text": "휴, 덕분에 속 시원하네요! 고맙습니다!"
+						},
+						{
+							"text": "문제를 해결했지만, 다른 한 명이 불만을 가졌을 거야.",
+							"speaker": "dax"
+						}
+					],
+					"text": "한쪽 환경미화원의 편을 들어주어 상황을 빠르게 정리한다."
+				},
+				{
+					"path": "hard",
+					"text": "양쪽의 이야기를 모두 듣고 공정하게 중재한다.",
+					"reward": [
+						"intelligence_up"
+					],
+					"effects": {
+						"community": 25,
+						"fighting": 15,
+						"echo": 10
+					},
+					"mbti": "SF",
+					"result": [
+						{
+							"text": "당신은 두 환경미화원의 말을 차분히 들었다. 그들은 서로의 입장을 이해하며 오해를 풀었다.",
+							"speaker": "narrator"
+						},
+						{
+							"text": "저희가 너무 흥분했네요. 감사합니다.",
+							"speaker": "cleaner_b"
+						},
+						{
+							"text": "현명한 판단이었어. 둘 다 만족한 것 같아.",
+							"speaker": "dax"
+						}
+					]
+				},
+				{
+					"reward": [],
+					"effects": {
+						"fighting": -10,
+						"gold": -90
+					},
+					"mbti": "TJ",
+					"text": "돈을 주고 청소 구역을 명확히 구분하도록 제안한다.",
+					"path": "gold",
+					"result": [
+						{
+							"text": "당신은 돈을 건네며 청소 구역을 명확히 나눌 것을 제안했다. 두 사람은 고개를 끄덕였다.",
+							"speaker": "narrator"
+						},
+						{
+							"text": "좋은 생각입니다! 이렇게 하면 싸울 일 없겠네요.",
+							"speaker": "cleaner_a"
+						},
+						{
+							"speaker": "dax",
+							"text": "돈으로 질서를 잡았군."
+						}
+					]
+				}
+			],
+			"dialogue": [
+				{
+					"speaker": "narrator",
+					"text": "낡은 전산실 복도에서 두 환경미화원이 고성을 주고받고 있었다."
+				},
+				{
+					"speaker": "cleaner_a",
+					"text": "이쪽 청소는 네 담당이잖아! 왜 나한테 미루는 거야?"
+				},
+				{
+					"text": "무슨 소리야! 저번에 네가 안 해서 내가 다 했잖아!",
+					"speaker": "cleaner_b"
+				},
+				{
+					"speaker": "dax",
+					"text": "저 사람들, 자기들 업무 때문에 싸우고 있네. 저기 전광판 좀 봐."
+				},
+				{
+					"text": "내 '월별 폐기물 처리량: 2톤' 같은 게 왜 남들한테 다 보여야 하냐고!",
+					"speaker": "cleaner_a"
+				},
+				{
+					"text": "두 환경미화원은 당신의 등장에도 아랑곳하지 않고 다툼을 이어갔다.",
+					"speaker": "narrator"
+				}
+			],
+			"must_line": "내 '월별 폐기물 처리량: 2톤' 같은 게 왜 남들한테 다 보여야 하냐고!"
+		},
+		{
+			"hint_line": "당황한 감시원을 어떻게 할까?",
+			"people": [
+				{
+					"id": "watcher",
+					"role": "데이터 폐기물 처리장의 감시원",
+					"name": "감시원"
+				}
+			],
+			"event": "감시원이 작은 화면에 집중한 사이, 그의 개인 게임 정보가 전광판에 노출되고 있다.",
+			"must_line": "어? 내 '게임 랭킹: 123위' 이런 게 왜 저기 다 뜨고 있냐고!",
+			"choices": [
+				{
+					"mbti": "IS",
+					"result": [
+						{
+							"text": "당신은 감시원에게 괜찮다고 말하며 그가 전광판을 보는 동안 빠르게 자리를 떴다.",
+							"speaker": "narrator"
+						},
+						{
+							"speaker": "watcher",
+							"text": "아, 네… 감사합니다."
+						},
+						{
+							"speaker": "dax",
+							"text": "급한 대로 잘 넘어갔어."
+						}
+					],
+					"effects": {
+						"gold": 70,
+						"echo": 5
+					},
+					"reward": [
+						"move_range_up"
+					],
+					"path": "easy",
+					"text": "감시원을 안심시키고 그가 상황을 수습하는 동안 몰래 지나간다."
+				},
+				{
+					"reward": [
+						"hp_down"
+					],
+					"effects": {
+						"community": 15,
+						"reason": 10,
+						"echo": 10
+					},
+					"text": "감시원을 도와 전광판 문제를 해결할 수 있는 방법을 찾아본다.",
+					"path": "hard",
+					"result": [
+						{
+							"speaker": "narrator",
+							"text": "당신은 감시원과 함께 전광판의 연결 상태를 확인했다. 근본적인 해결책은 아니었지만, 임시로 화면을 껐다."
+						},
+						{
+							"speaker": "watcher",
+							"text": "휴, 덕분에 한시름 놓았네요. 고맙습니다."
+						},
+						{
+							"speaker": "dax",
+							"text": "시간을 좀 썼지만, 좋은 일이었어."
+						}
+					],
+					"mbti": "IN"
+				},
+				{
+					"result": [
+						{
+							"text": "당신은 감시원에게 돈을 건네며 이 상황을 못 본 것으로 해달라고 부탁했다. 그는 고개를 끄덕였다.",
+							"speaker": "narrator"
+						},
+						{
+							"speaker": "watcher",
+							"text": "알겠습니다. 아무것도 못 봤습니다."
+						},
+						{
+							"text": "돈의 힘은 대단하군.",
+							"speaker": "dax"
+						}
+					],
+					"mbti": "EN",
+					"effects": {
+						"fighting": -15,
+						"gold": -100
+					},
+					"reward": [],
+					"text": "돈을 주고 감시원에게 이 상황을 모른 척해달라고 부탁한다.",
+					"path": "gold"
+				}
+			],
+			"title": "감시원의 딴짓",
+			"dialogue": [
+				{
+					"text": "데이터 폐기물 처리장의 한쪽 구석, 감시원 한 명이 작은 휴대용 단말기에 몰두해 있었다.",
+					"speaker": "narrator"
+				},
+				{
+					"speaker": "watcher",
+					"text": "좋아, 이번 판도 이겼어! 역시 내 실력은…"
+				},
+				{
+					"text": "저 사람, 게임에 빠져 있네. 그런데 저기 전광판 좀 봐.",
+					"speaker": "dax"
+				},
+				{
+					"text": "어? 내 '게임 랭킹: 123위' 이런 게 왜 저기 다 뜨고 있냐고!",
+					"speaker": "watcher"
+				},
+				{
+					"text": "감시원은 당신의 시선을 따라 전광판을 보고 깜짝 놀랐다.",
+					"speaker": "narrator"
+				}
+			],
+			"background_tags": [
+				"데이터 폐기물 처리장",
+				"낡은 전산실",
+				"감시원",
+				"게임",
+				"전광판"
+			],
+			"key": "watcher_distraction",
+			"intensity": "calm"
+		}
+	],
+	"errors": []
+}

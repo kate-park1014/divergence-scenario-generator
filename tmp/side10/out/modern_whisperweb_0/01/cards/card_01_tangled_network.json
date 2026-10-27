@@ -1,0 +1,185 @@
+{
+	"id": "card_01_tangled_network",
+	"title": {
+		"korean": "엉망진창 네트워크"
+	},
+	"tags": [
+		"tangled"
+	],
+	"intensity": "high",
+	"after_story": 3,
+	"before_story": 5,
+	"background_tags": [
+		"낡은",
+		"전산실",
+		"서버",
+		"케이블",
+		"혼란"
+	],
+	"dialogue": [
+		{
+			"speaker": "network_manager",
+			"content": {
+				"korean": "젠장, 이놈의 케이블은 또 왜 이래! 다 꼬여서 작동을 안 하잖아."
+			}
+		},
+		{
+			"speaker": "echo",
+			"content": {
+				"korean": "네트워크가 불안정하면 데이터 전송도 문제 생길 거야."
+			}
+		},
+		{
+			"speaker": "network_manager",
+			"content": {
+				"korean": "이대로면 중요한 계약 데이터 복구도 안 될 거고, 회사 손실이 어마어마할 텐데!"
+			}
+		},
+		{
+			"speaker": "narrator",
+			"content": {
+				"korean": "관리자가 땀을 닦으며 스크린을 쳐다본다."
+			}
+		},
+		{
+			"speaker": "network_manager",
+			"content": {
+				"korean": "아, 저 스크린은 또 왜 저래? 불규칙한 숫자가 계속 깜빡이네."
+			}
+		},
+		{
+			"speaker": "narrator",
+			"content": {
+				"korean": "관리자가 얽힌 케이블을 한숨 쉬며 바라본다."
+			}
+		}
+	],
+	"choices": [
+		{
+			"text": {
+				"korean": "관리자를 도와 케이블을 정리하고 문제의 원인을 찾아준다."
+			},
+			"path": "easy",
+			"mbti": "ES",
+			"effects": {
+				"gold": 60,
+				"community": 15
+			},
+			"reward": [
+				"defense_up"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "당신은 관리자를 도와 엉킨 케이블 문제를 해결했다."
+					}
+				},
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "관리자가 고맙다며 작은 부품을 건넨다."
+					}
+				},
+				{
+					"speaker": "network_manager",
+					"content": {
+						"korean": "휴, 살았네! 고마워!"
+					}
+				}
+			]
+		},
+		{
+			"text": {
+				"korean": "관리자에게 에코의 데이터 복구가 더 중요하다고 설득한다."
+			},
+			"path": "hard",
+			"mbti": "IN",
+			"effects": {
+				"reason": -10,
+				"echo": 10
+			},
+			"reward": [
+				"attack_up"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "당신은 에코의 상황을 설명하며 관리자를 설득했다."
+					}
+				},
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "관리자는 마지못해 당신의 길을 터준다."
+					}
+				},
+				{
+					"speaker": "network_manager",
+					"content": {
+						"korean": "알았어, 알았어. 그래도 내 일도 중요하다고!"
+					}
+				},
+				{
+					"speaker": "echo",
+					"content": {
+						"korean": "네가 내 편을 들어줘서 다행이야."
+					}
+				}
+			]
+		},
+		{
+			"text": {
+				"korean": "관리자에게 돈을 주고 잠시 자리를 비켜달라 한다."
+			},
+			"path": "gold",
+			"mbti": "FP",
+			"require": {
+				"stat": "gold",
+				"op": ">=",
+				"value": 100
+			},
+			"effects": {
+				"fighting": -10,
+				"gold": -100
+			},
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "당신은 관리자에게 약간의 골드를 건넸다."
+					}
+				},
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "관리자는 당신에게 길을 열어주며 미소 짓는다."
+					}
+				},
+				{
+					"speaker": "network_manager",
+					"content": {
+						"korean": "아이고, 고맙습니다! 잠시 다른 곳 좀 봐드릴까요?"
+					}
+				},
+				{
+					"speaker": "echo",
+					"content": {
+						"korean": "돈으로 해결하니 속이 편하네."
+					}
+				}
+			]
+		}
+	],
+	"_slot": {
+		"room": 4,
+		"must": "에코의 데이터가 복구되지 않으면 중요한 계약이 취소되어 큰 손실을 입는다.",
+		"must_line": "이대로면 중요한 계약 데이터 복구도 안 될 거고, 회사 손실이 어마어마할 텐데!",
+		"hint_line": "아, 저 스크린은 또 왜 저래? 불규칙한 숫자가 계속 깜빡이네.",
+		"event": "네트워크 관리자가 복잡하게 얽힌 네트워크 케이블 때문에 짜증 내고 있다."
+	}
+}

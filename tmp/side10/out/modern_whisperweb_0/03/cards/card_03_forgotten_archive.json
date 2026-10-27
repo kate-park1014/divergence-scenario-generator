@@ -1,0 +1,176 @@
+{
+	"id": "card_03_forgotten_archive",
+	"title": {
+		"korean": "잊힌 기록의 수호자"
+	},
+	"tags": [
+		"forgotten"
+	],
+	"intensity": "calm",
+	"after_story": 3,
+	"before_story": 5,
+	"background_tags": [
+		"낡은 서류",
+		"먼지 쌓인",
+		"기록물",
+		"정리정돈",
+		"복도"
+	],
+	"dialogue": [
+		{
+			"speaker": "narrator",
+			"content": {
+				"korean": "냉각수 파이프실 옆, 오래된 기록 보관실에서 과거 기록 보관원이 책장을 정리하고 있다."
+			}
+		},
+		{
+			"speaker": "archivist",
+			"content": {
+				"korean": "흐트러진 기록은 곧 사라진 역사와 같지."
+			}
+		},
+		{
+			"speaker": "kai",
+			"content": {
+				"korean": "어르신, 지금은 기록 정리할 때가 아니에요. 서버가 위험하다고요."
+			}
+		},
+		{
+			"speaker": "archivist",
+			"content": {
+				"korean": "서버 과열로 전산 기록이 날아가면, 보안 시스템의 모든 수동 기록도 사라질 걸세."
+			}
+		},
+		{
+			"speaker": "kai",
+			"content": {
+				"korean": "어? 이 기록, 갱스터 조직이 만들었다는 초기 형태에 대한 문서 같아."
+			}
+		},
+		{
+			"speaker": "archivist",
+			"content": {
+				"korean": "난 내 할 일을 할 뿐이야. 이 기록들은 모두 소중하다고!"
+			}
+		}
+	],
+	"choices": [
+		{
+			"text": {
+				"korean": "보관원의 손이 닿기 쉬운 곳에 중요한 기록 몇 권을 던져 놓는다."
+			},
+			"path": "easy",
+			"mbti": "SP",
+			"effects": {
+				"reason": -10,
+				"community": -15,
+				"gold": 50
+			},
+			"reward": [
+				"shield"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "당신은 기록 몇 권을 대충 쌓아 놓으며 길을 확보했다."
+					}
+				},
+				{
+					"speaker": "archivist",
+					"content": {
+						"korean": "이보게! 기록을 함부로 다루면 안 되지!"
+					}
+				},
+				{
+					"speaker": "kai",
+					"content": {
+						"korean": "급하니까 어쩔 수 없었어."
+					}
+				}
+			]
+		},
+		{
+			"text": {
+				"korean": "보관원과 함께 중요도에 따라 기록을 분류하고 정리한다."
+			},
+			"path": "hard",
+			"mbti": "IJ",
+			"effects": {
+				"community": 20,
+				"echo": 10,
+				"fighting": -10
+			},
+			"reward": [
+				"intelligence_up"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "당신은 보관원과 함께 중요도에 따라 기록 정리를 도왔다."
+					}
+				},
+				{
+					"speaker": "archivist",
+					"content": {
+						"korean": "젊은 친구가 이렇게 꼼꼼하다니, 고맙네."
+					}
+				},
+				{
+					"speaker": "kai",
+					"content": {
+						"korean": "시간이 좀 걸렸지만, 어르신이 기뻐하시는 것 같아."
+					}
+				}
+			]
+		},
+		{
+			"text": {
+				"korean": "보관원에게 새로운 기록 보관함 구매 비용을 지불한다."
+			},
+			"path": "gold",
+			"mbti": "NF",
+			"require": {
+				"stat": "gold",
+				"op": ">=",
+				"value": 70
+			},
+			"effects": {
+				"gold": -70,
+				"community": 5,
+				"reason": 10
+			},
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "당신은 보관원에게 새 보관함 비용을 건네며 길을 비켜달라 요청했다."
+					}
+				},
+				{
+					"speaker": "archivist",
+					"content": {
+						"korean": "오, 이런 지원이라면 흔쾌히 비켜주겠네!"
+					}
+				},
+				{
+					"speaker": "kai",
+					"content": {
+						"korean": "돈으로 해결하는 것도 방법이지."
+					}
+				}
+			]
+		}
+	],
+	"_slot": {
+		"room": 4,
+		"must": "서버 과열이 지속되면 낡은 전산실의 핵심 보안 시스템이 영구적으로 손상된다.",
+		"must_line": "서버 과열로 전산 기록이 날아가면, 보안 시스템의 모든 수동 기록도 사라질 걸세.",
+		"hint_line": "어? 이 기록, 갱스터 조직이 만들었다는 초기 형태에 대한 문서 같아.",
+		"event": "과거 기록 보관원이 냉각수 파이프 옆에서 오래된 기록을 정리하고 있다."
+	}
+}

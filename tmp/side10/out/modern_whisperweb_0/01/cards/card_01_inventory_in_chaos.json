@@ -1,0 +1,174 @@
+{
+	"id": "card_01_inventory_in_chaos",
+	"title": {
+		"korean": "혼란 속 재고"
+	},
+	"tags": [
+		"inventory"
+	],
+	"intensity": "high",
+	"after_story": 7,
+	"before_story": 10,
+	"background_tags": [
+		"전산실",
+		"재고",
+		"물품",
+		"오작동",
+		"혼란"
+	],
+	"dialogue": [
+		{
+			"speaker": "narrator",
+			"content": {
+				"korean": "당신은 낡은 서버 랙 근처, 재고 관리원 앞을 지나고 있다."
+			}
+		},
+		{
+			"speaker": "manager",
+			"content": {
+				"korean": "이런, 또 화면이 멋대로야! 내 재고 목록이 엉망진창이잖아!"
+			}
+		},
+		{
+			"speaker": "manager",
+			"content": {
+				"korean": "이게 뭐야! '최신 서버 부품'이 갑자기 '폐기물 처리장'에 있다고 나오잖아?"
+			}
+		},
+		{
+			"speaker": "echo",
+			"content": {
+				"korean": "어휴, 저 사람 완전 난감해 보이는데. 저러다 중요한 물건 못 찾겠어."
+			}
+		},
+		{
+			"speaker": "manager",
+			"content": {
+				"korean": "서랍 안에서 '모든 것을 뒤섞어라'고 적힌 낡은 쪽지를 봤어. 섬뜩하네."
+			}
+		},
+		{
+			"speaker": "manager",
+			"content": {
+				"korean": "이 재고 목록 좀 정리해 줄 수 있어? 보상은 해줄게."
+			}
+		}
+	],
+	"choices": [
+		{
+			"text": {
+				"korean": "급한 물품 몇 개만 찾아 목록을 대충 수정한다."
+			},
+			"path": "easy",
+			"mbti": "EP",
+			"effects": {
+				"gold": 60,
+				"fighting": 10
+			},
+			"reward": [
+				"shield"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "당신은 빠르게 몇 개의 물품을 찾아 목록을 수정했다."
+					}
+				},
+				{
+					"speaker": "manager",
+					"content": {
+						"korean": "음… 고마워. 나머지는 내가 어떻게든 해 볼게."
+					}
+				},
+				{
+					"speaker": "echo",
+					"content": {
+						"korean": "일단 급한 건 해결했네. 저 사람도 한숨 돌리겠어."
+					}
+				}
+			]
+		},
+		{
+			"text": {
+				"korean": "모든 재고 목록을 꼼꼼히 대조하며 정확히 정리한다."
+			},
+			"path": "hard",
+			"mbti": "TJ",
+			"effects": {
+				"echo": -5,
+				"reason": 10,
+				"community": 15
+			},
+			"reward": [
+				"intelligence_up"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "당신은 오랜 시간 모든 재고 목록을 확인하며 정리했다."
+					}
+				},
+				{
+					"speaker": "manager",
+					"content": {
+						"korean": "정말 고마워! 덕분에 재고가 엉망이 될 뻔했어."
+					}
+				},
+				{
+					"speaker": "echo",
+					"content": {
+						"korean": "고생했어. 덕분에 저 사람이 안심했네."
+					}
+				}
+			]
+		},
+		{
+			"text": {
+				"korean": "돈을 주고 외부 전문가에게 목록 정리를 의뢰한다."
+			},
+			"path": "gold",
+			"mbti": "IF",
+			"require": {
+				"stat": "gold",
+				"op": ">=",
+				"value": 90
+			},
+			"effects": {
+				"echo": 8,
+				"gold": -90
+			},
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "당신은 재고 관리원에게 돈을 건넸다."
+					}
+				},
+				{
+					"speaker": "manager",
+					"content": {
+						"korean": "오, 고마워! 이걸로 전문가를 부를 수 있겠어."
+					}
+				},
+				{
+					"speaker": "echo",
+					"content": {
+						"korean": "돈으로 해결하니 깔끔하긴 하네. 좋은 방법이야."
+					}
+				}
+			]
+		}
+	],
+	"_slot": {
+		"room": 8,
+		"must": "낡은 전산실의 안내 스크린에 엉뚱한 정보가 짧게 깜빡이며 사람들이 혼란스러워한다.",
+		"must_line": "이게 뭐야! '최신 서버 부품'이 갑자기 '폐기물 처리장'에 있다고 나오잖아?",
+		"hint_line": "서랍 안에서 '모든 것을 뒤섞어라'고 적힌 낡은 쪽지를 봤어. 섬뜩하네.",
+		"event": "재고 관리원이 엉뚱한 화면 때문에 재고 목록이 꼬여 물건을 찾지 못하고 당신에게 도움을 청한다."
+	}
+}

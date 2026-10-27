@@ -1,0 +1,178 @@
+{
+	"id": "card_01_scavenger_deal",
+	"title": {
+		"korean": "쓸모없는 전리품"
+	},
+	"tags": [
+		"scavenger"
+	],
+	"intensity": "calm",
+	"after_story": 1,
+	"before_story": 3,
+	"background_tags": [
+		"서버 랙",
+		"고물",
+		"데이터 조각",
+		"전산실",
+		"거래"
+	],
+	"dialogue": [
+		{
+			"speaker": "narrator",
+			"content": {
+				"korean": "낡은 서버 랙 옆, 한 남자가 깨진 데이터 스크린 조각들을 들고 수상쩍은 눈빛으로 당신을 바라본다."
+			}
+		},
+		{
+			"speaker": "sam",
+			"content": {
+				"korean": "어이, 여기 대단한 물건이 있는데 관심 있어? 아주 귀한 데이터가 들어있다고."
+			}
+		},
+		{
+			"speaker": "echo",
+			"content": {
+				"korean": "저거... 내 데이터의 일부 같은데? 하지만 저렇게 깨져서 뭐가 들어있을까?"
+			}
+		},
+		{
+			"speaker": "sam",
+			"content": {
+				"korean": "이 조각들 안에 뭐가 들어있는지는 나도 몰라."
+			}
+		},
+		{
+			"speaker": "sam",
+			"content": {
+				"korean": "너무 조각나서 도무지 복원이 안 돼. 그냥 쓸모없는 유리 조각이나 마찬가지야."
+			}
+		},
+		{
+			"speaker": "echo",
+			"content": {
+				"korean": "내 데이터가 저렇게까지 망가져서 아무 쓸모 없게 되어버렸다니..."
+			}
+		},
+		{
+			"speaker": "sam",
+			"content": {
+				"korean": "어때? 싸게 줄게. 가져갈래?"
+			}
+		}
+	],
+	"choices": [
+		{
+			"text": {
+				"korean": "그의 말에 속는 척하며, 가장 빛나는 조각 하나를 흥정해서 얻어낸다."
+			},
+			"path": "easy",
+			"mbti": "IP",
+			"effects": {
+				"gold": 60
+			},
+			"reward": [
+				"shield"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "당신은 샘의 어설픈 장사에 맞춰주며, 그나마 온전해 보이는 조각 하나를 싸게 얻었다."
+					}
+				},
+				{
+					"speaker": "sam",
+					"content": {
+						"korean": "쳇, 싼값에 넘기긴 했는데... 뭐, 됐어."
+					}
+				},
+				{
+					"speaker": "echo",
+					"content": {
+						"korean": "빛나는 조각이라니, 뭔가 특별한 게 있을까? 그래도 사기당한 건 아니겠지?"
+					}
+				}
+			]
+		},
+		{
+			"text": {
+				"korean": "그에게 데이터의 진정한 가치는 투명성에 있음을 알려주고, 정직한 거래를 제안한다."
+			},
+			"path": "hard",
+			"mbti": "NF",
+			"effects": {
+				"community": -10,
+				"echo": 10,
+				"reason": 15
+			},
+			"reward": [
+				"move_range_down"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "당신은 샘에게 데이터 거래의 윤리적 측면에 대해 진지하게 이야기했다."
+					}
+				},
+				{
+					"speaker": "sam",
+					"content": {
+						"korean": "흥, 쓸데없는 소리. 돈 되는 게 최고지."
+					}
+				},
+				{
+					"speaker": "echo",
+					"content": {
+						"korean": "샘이 이해하진 못했지만, 당신의 말은 틀리지 않았어."
+					}
+				}
+			]
+		},
+		{
+			"text": {
+				"korean": "그의 모든 데이터 조각을 구매하여 더 이상 쓸모없는 거래가 이루어지지 않도록 한다."
+			},
+			"path": "gold",
+			"mbti": "ET",
+			"require": {
+				"stat": "gold",
+				"op": ">=",
+				"value": 90
+			},
+			"effects": {
+				"gold": -90,
+				"fighting": 20
+			},
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "당신은 샘의 모든 데이터 조각을 구매했다. 그는 눈을 빛내며 골드를 챙겼다."
+					}
+				},
+				{
+					"speaker": "sam",
+					"content": {
+						"korean": "오예! 이렇게 비싼 값에 팔릴 줄이야!"
+					}
+				},
+				{
+					"speaker": "echo",
+					"content": {
+						"korean": "돈을 많이 썼지만, 더 이상 쓸모없는 데이터가 돌아다니지 않게 되었으니 다행이야."
+					}
+				}
+			]
+		}
+	],
+	"_slot": {
+		"room": 2,
+		"must": "에코의 스크린에 뒤섞인 데이터가 얼마나 복구하기 어려운지 보인다.",
+		"must_line": "이 조각들 안에 뭐가 들어있는지는 나도 몰라. 너무 조각나서 도무지 복원이 안 돼. 그냥 쓸모없는 유리 조각이나 마찬가지야.",
+		"event": "데이터 고물상이 당신에게 쓸모없는 데이터 조각을 팔려고 한다"
+	}
+}

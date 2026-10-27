@@ -3,11 +3,16 @@ import { mkdir, readFile, readdir, writeFile } from 'fs/promises';
 import { join } from 'path';
 import {
 	assignGenres,
+	bossSidesForId,
+	deceiveModesForId,
 	buildStoryarcRewritePrompt,
+	type BossSide,
+	type DeceiveMode,
 	storyarcRewriteTool,
 	type RewriteNpc,
 	type UsedMaterial
 } from '$lib/prompts/storyarcGen';
+import { verbStem } from '$lib/prompts/arcEpisode';
 import { getStoryarc } from '$lib/data/storyarc';
 import { npc_by_theme } from '$lib/data/sample/npc_pool';
 import { getNpcPersona } from '$lib/data/sample/npc';
@@ -45,8 +50,6 @@ type Result = { id: string; file?: string; errors?: string[]; judge?: JudgeItem[
 const BOSS_STORY_WORDS = ['목적', '영원히', '원한다', '소원', '사연', '복수'];
 const BLOCK_VERBS = ['막아', '막는', '막으', '가로막', '덤비', '덤빈', '저지', '공격', '방해', '쫓아', '붙잡'];
 const PERSUADE_WORDS = ['설득', '권유', '권한', '권하', '유혹', '부추', '종용'];
-// 첫 문장이 앞 화를 전제로 하는 표현
-const DEPENDENT_OPENERS = /(한|된|은|던|운|친) (후|뒤|결과)|에 따라|(말|권유|조언|지시)대로|그 후|이후로|[가-힣]자,/;
 // 1~4화 보스 문장에 얼굴·몸이 보이는 표현
 const FACE_WORDS = ['얼굴', '미소', '웃으며', '웃는', '다가와', '다가온', '나타나', '나타난', '눈빛', '손을 내밀', '모습을 드러'];
 const RESIST_WORDS = ['막', '저지', '빼앗', '방해', '공격', '덤비', '덤빈', '붙잡', '가로'];
@@ -60,7 +63,7 @@ const SIMILAR_VERBS = [
 	['파기', '파쇄', '폐기', '삭제', '지운', '지우'],
 	['부수', '부순', '깨뜨', '깨부', '파괴'],
 	['숨기', '숨긴', '감추', '감춘'],
-	['모으', '모은', '수집']
+	['모으', '모은', '수집', '통합', '합치', '합친', '취합']
 ];
 const NOT_ACTION = /(지 않는다|지 않고|않는다)[.]?$/;
 
@@ -119,9 +122,19 @@ const contentWords = (text: string) =>
 		.map((w) => w.replace(JOSA, ''))
 		.filter((w) => w.length >= 2);
 
-type CheckCtx = { npcs: RewriteNpc[]; bossName: string; bossMaterial: string; used: UsedMaterial[] };
+type CheckCtx = {
+	npcs: RewriteNpc[];
+	bossName: string;
+	bossMaterial: string;
+	used: UsedMaterial[];
+	bossSides: BossSide[];
+	deceiveModes?: DeceiveMode[];
+};
 
-// 개성 검사: 보스 소재에서 뽑았는지, 무대가 한 장소인지, 다른 아크와 겹치는지
+// 핵심 물건은 누구나 아는 일상 물건: 만질 수 없는 것·지어낸 느낌의 낱말이 있으면 오류
+const ABSTRACT_OBJECT = ['빛', '잔상', '기운', '기억', '데이터', '신호', '그림자', '속삭임', '에너지', '파동', '영혼', '꿈', '코드', '정보', '조각', '파편', '결정체', '홀로그램'];
+
+// 개성 검사: 핵심 물건이 일상 물건인지, 무대가 한 장소인지, 다른 아크와 겹치는지
 function checkIndividuality(gen: Gen, ctx: CheckCtx): string[] {
 	const errors: string[] = [];
 	const keyObject = String(gen.key_object ?? '').trim();
@@ -129,9 +142,23 @@ function checkIndividuality(gen: Gen, ctx: CheckCtx): string[] {
 	const world = (gen.world ?? {}) as Gen;
 	const outline = (gen.scenarioOutline ?? []) as Gen[];
 
-	const keyHead = headOf(keyObject);
-	if (keyHead && !ctx.bossMaterial.includes(keyHead))
-		errors.push(`핵심 물건 "${keyObject}" 의 중심 낱말 "${keyHead}" 이 보스 소재(외형·겉모습)에 없습니다. 보스 소재에 나오는 물건으로 정할 것`);
+	const abstract = ABSTRACT_OBJECT.filter((w) => keyObject.includes(w));
+	if (abstract.length)
+		errors.push(`핵심 물건 "${keyObject}" 에 만질 수 없거나 지어낸 느낌의 낱말(${abstract.join(', ')})이 있습니다. 누구나 아는 일상 물건(손에 들 수 있고 이름만 들어도 모양이 떠오르는 것)으로 정할 것`);
+	if (keyObject && keyObject.split(/\s+/).length > 2)
+		errors.push(`핵심 물건 "${keyObject}" 에 꾸밈말이 많습니다. 일상 물건 이름 그대로(한두 낱말) 쓸 것`);
+
+	// 왜 그런 일이 생기는지 / 보스가 얻는 것
+	const how = String(world.how ?? '').trim();
+	if (!how) errors.push('world.how(왜 나쁜 결과가 생기는지, 핵심 물건이 어떻게 작동하는지 한 문장)가 없습니다.');
+	else {
+		if (keyObject && !how.includes(keyObject)) errors.push(`world.how 에 핵심 물건 "${keyObject}" 가 없습니다: "${how}"`);
+		if (sentencesOf(how).length > 1) errors.push(`world.how 가 ${sentencesOf(how).length}문장입니다. 한 문장으로 쓸 것: "${how}"`);
+	}
+	const want = String(((gen.final_boss ?? {}) as Gen).want ?? '').trim();
+	if (!want) errors.push('final_boss.want(보스가 이 일로 얻는 구체적인 이득 한 문장)가 없습니다.');
+	else if (/광기|혼란|지배|파멸|절망/.test(want))
+		errors.push(`final_boss.want 가 추상적입니다("광기·혼란·지배" 같은 말). 보스가 손에 넣는 구체적인 것으로 쓸 것: "${want}"`);
 
 	if (!stage) errors.push('stage 가 없습니다.');
 	else {
@@ -188,14 +215,50 @@ function checkStructure(gen: Gen, ctx: CheckCtx): string[] {
 		errors.push(`wrong_action "${wrong}" 과 right_action "${right}" 의 뜻이 비슷합니다(${similar.join('/')}). 서로 반대인 행동으로 쓸 것`);
 	if (NOT_ACTION.test(right)) errors.push(`right_action "${right}" 이 안 하는 것입니다. 눈에 보이는 행동으로 쓸 것`);
 	if (NOT_ACTION.test(wrong)) errors.push(`wrong_action "${wrong}" 이 안 하는 것입니다. 눈에 보이는 행동으로 쓸 것`);
+	// 화별 행동: 1화=wrong_action, 5화=right_action 그대로. 2~4화는 겉모습이 다른 행동 (동사가 wrong·right·앞 화와 다름)
+	const stem = (action: string) => verbStem(action, keyForVerb);
+	const seenStems: { order: number; stem: string; act: string }[] = [];
 	for (const l of spine) {
 		const order = Number(l.order);
-		const expected = order <= 4 ? wrong : right;
 		const act = String(l.protagonist_action ?? '').trim();
-		if (expected && act !== expected)
-			errors.push(
-				`story_spine ${order}화의 protagonist_action 은 ${order <= 4 ? 'wrong_action' : 'right_action'} "${expected}" 와 같아야 합니다. (지금: "${act}") 주인공이 ${order <= 4 ? '1~4화마다 틀린 행동을 직접 한다' : '5화에 정답 행동을 한다'}.`
-			);
+		if (act && !/다[.]?$/.test(act)) errors.push(`story_spine ${order}화의 protagonist_action "${act}" 이 "~한다" 꼴이 아닙니다. "[대상]을 [동사]한다" 로 쓸 것`);
+		if (order === 1 || order === 5) {
+			const expected = order === 1 ? wrong : right;
+			if (expected && act !== expected)
+				errors.push(
+					`story_spine ${order}화의 protagonist_action 은 ${order === 1 ? 'wrong_action' : 'right_action'} "${expected}" 와 같아야 합니다. (지금: "${act}")`
+				);
+		} else if (order >= 2 && order <= 4) {
+			if (!act) {
+				errors.push(`story_spine ${order}화의 protagonist_action 이 없습니다.`);
+				continue;
+			}
+			if (NOT_ACTION.test(act)) errors.push(`story_spine ${order}화의 protagonist_action "${act}" 이 안 하는 것입니다. 눈에 보이는 행동으로 쓸 것`);
+			if (keyForVerb && act.includes(headOf(keyForVerb)))
+				errors.push(`story_spine ${order}화의 행동 "${act}" 에 핵심 물건 "${keyForVerb}" 가 있습니다. 2~4화 주인공은 앞 화에서 탈이 난 핵심 물건을 다시 손대지 않는다. 핵심 물건이 숨어 있는 다른 물건·장치를 다루는 행동으로 쓸 것 (연결은 hidden_link 에)`);
+			const st = stem(act);
+			if (st && st === stem(wrong))
+				errors.push(`story_spine ${order}화의 행동 "${act}" 이 wrong_action "${wrong}" 과 동사가 같습니다. 주인공은 앞 화에서 나쁜 결과를 낳은 행동을 다시 하지 않는다. 겉모습이 다른 행동으로 쓸 것`);
+			if (st && st === stem(right))
+				errors.push(`story_spine ${order}화의 행동 "${act}" 이 right_action "${right}" 과 동사가 같습니다. 1~4화에는 정답과 비슷한 행동을 쓰지 않는다`);
+			const sim = SIMILAR_VERBS.find((g) => g.some((v) => verbOf(act).includes(v)) && g.some((v) => verbOf(right).includes(v)));
+			if (sim) errors.push(`story_spine ${order}화의 행동 "${act}" 이 right_action "${right}" 과 뜻이 비슷합니다(${sim.join('/')}). 정답이 위험해 보이게 된다`);
+			const dup = seenStems.find((x) => x.stem && x.stem === st);
+			if (dup) errors.push(`story_spine ${order}화의 행동 "${act}" 이 ${dup.order}화 행동과 동사가 같습니다. 화마다 다른 행동으로 쓸 것`);
+			for (const x of seenStems) {
+				const g = SIMILAR_VERBS.find((grp) => grp.some((v) => verbOf(act).includes(v)) && grp.some((v) => verbOf(x.act).includes(v)));
+				if (g) errors.push(`story_spine ${order}화의 행동 "${act}" 이 ${x.order}화 행동 "${x.act}" 과 뜻이 비슷합니다(${g.join('/')}). 화마다 다른 행동으로 쓸 것`);
+			}
+			seenStems.push({ order, stem: st, act });
+			if (!String(l.lesson ?? '').trim())
+				errors.push(`story_spine ${order}화의 lesson(앞 화에서 배운 것, 이번 행동이 안전해 보이는 이유)이 없습니다.`);
+		}
+		if (order >= 1 && order <= 4) {
+			const link = String(l.hidden_link ?? '').trim();
+			if (!link) errors.push(`story_spine ${order}화의 hidden_link(이 행동이 사실은 왜 wrong_action 과 같은 일인지)가 없습니다.`);
+			else if (order >= 2 && keyForVerb && !link.includes(headOf(keyForVerb)))
+				errors.push(`story_spine ${order}화의 hidden_link 에 핵심 물건 "${keyForVerb}" 가 없습니다. 이 행동이 핵심 물건에 어떻게 이어지는지 쓸 것: "${link}"`);
+		}
 	}
 
 	const keyObject = String(gen.key_object ?? '').trim();
@@ -222,6 +285,18 @@ function checkStructure(gen: Gen, ctx: CheckCtx): string[] {
 	const bossTrace = String(gen.boss_trace ?? '').trim();
 	if (!bossTrace) errors.push('boss_trace 가 없습니다.');
 	else if (bossTrace.length > 15) errors.push(`boss_trace "${bossTrace}" 가 15자를 넘습니다.`);
+	// 화별 흔적: 1~4화마다 다름 (1화는 boss_trace). 주인공이 같은 존재인 줄 모르게
+	const traceAt = (o: Gen) => String(o.boss_trace ?? '').trim() || (Number(o.order) === 1 ? bossTrace : '');
+	const traces = outline.filter((o) => Number(o.order) <= 4).map((o) => ({ order: Number(o.order), trace: traceAt(o) }));
+	for (const t of traces) {
+		if (!t.trace) errors.push(`${t.order}화 scenarioOutline 의 boss_trace(그 화에 보스가 드러나는 매체)가 없습니다.`);
+		else if (t.trace.length > 15) errors.push(`${t.order}화 boss_trace "${t.trace}" 가 15자를 넘습니다.`);
+	}
+	const traceHeads = traces.map((t) => ({ ...t, head: headOf(t.trace) }));
+	for (let i = 0; i < traceHeads.length; i++)
+		for (let j = i + 1; j < traceHeads.length; j++)
+			if (traceHeads[i].head && traceHeads[i].head === traceHeads[j].head)
+				errors.push(`${traceHeads[i].order}화와 ${traceHeads[j].order}화의 boss_trace 가 같은 매체입니다("${traceHeads[i].trace}" / "${traceHeads[j].trace}"). 화마다 다른 종류의 매체로 (주인공이 같은 존재인 줄 모르게)`);
 	if (bossKo && !nameInitialMatches(bossName, bossKo))
 		errors.push(`boss_name_korean "${bossKo}" 가 영어 이름 "${bossName}" 의 소리와 맞지 않습니다. 영어 이름을 소리 그대로 옮길 것`);
 
@@ -282,12 +357,17 @@ function checkStructure(gen: Gen, ctx: CheckCtx): string[] {
 		if (bossKo && order <= 4 && !summary.includes(bossKo))
 			errors.push(`order ${order} summary 에 보스 "${bossKo}" 가 나오지 않습니다. 1~4화마다 boss_trace 로 나와야 합니다.`);
 		if (order <= 4) {
-			if (bossTrace && !summary.includes(bossTrace))
-				errors.push(`order ${order} summary 에 boss_trace "${bossTrace}" 가 그대로 나오지 않습니다. 1~4화의 보스는 이 매체로만 드러난다`);
+			const trace = traceAt(s);
+			if (trace && !summary.includes(trace))
+				errors.push(`order ${order} summary 에 그 화 boss_trace "${trace}" 가 그대로 나오지 않습니다. 이 화의 보스는 이 매체로만 드러난다`);
+			const rightStem = stem(right);
+			for (const sent of sentencesOf(summary).filter((x) => bossKo && x.includes(bossKo)))
+				if (rightStem && sent.includes(rightStem))
+					errors.push(`order ${order} 에서 보스의 말에 정답 행동("${right}")의 동사가 있습니다. 보스는 그 화 행동만 권한다 (정답을 권하는 것처럼 읽힌다): "${sent}"`);
 			for (const sent of sentencesOf(summary).filter((x) => bossKo && x.includes(bossKo))) {
 				const face = FACE_WORDS.filter((w) => sent.includes(w));
 				if (face.length)
-					errors.push(`order ${order} 에서 보스의 얼굴·몸이 보입니다(${face.join(', ')}). 1~4화의 보스는 ${bossTrace || 'boss_trace'} 로만 드러낼 것: "${sent}"`);
+					errors.push(`order ${order} 에서 보스의 얼굴·몸이 보입니다(${face.join(', ')}). 1~4화의 보스는 ${trace || 'boss_trace'} 로만 드러낼 것: "${sent}"`);
 			}
 		}
 		for (const n of npcTitles) {
@@ -312,20 +392,27 @@ function checkStructure(gen: Gen, ctx: CheckCtx): string[] {
 			}
 		}
 
-		const first = sentencesOf(summary)[0] ?? '';
-		if (order >= 2 && DEPENDENT_OPENERS.test(first))
-			errors.push(`order ${order} summary 첫 문장이 앞 화를 전제로 합니다. 그 문장만으로 상황을 알 수 있게 쓸 것: "${first}"`);
-
 		// 일반 보스 문장: 막는 행동만, 보스 이름·목적·사연·설득 금지
 		const rbTitle = bossTitleOf(s);
 		if (rbTitle && order <= 4) {
 			const bossSents = sentencesOf(summary).filter((x) => x.includes(rbTitle));
 			if (bossSents.length && !bossSents.some((x) => BLOCK_VERBS.some((v) => x.includes(v))))
 				errors.push(`order ${order} 의 일반 보스 문장에 막는 행동(막아선다·가로막는다·덤빈다·저지한다·공격한다)이 없습니다: "${bossSents[0]}"`);
-			// 일반 보스는 경고하는 쪽: 주인공이 핵심 물건으로 틀린 행동을 하려는 것을 막는다 (무엇을 막는지 문장에 나와야 함)
+			// 일반 보스의 편 (코드가 고정): warn 은 핵심 물건으로 하는 틀린 행동을 막고, ally 는 막지 않는다
+			// 직업 이름 속 낱말(예: "스크린 해체공"의 스크린)은 빼고 본다
+			const side = ctx.bossSides[order - 1] ?? 'ally';
 			const keyHeadWord = headOf(keyObject);
-			if (bossSents.length && keyHeadWord && !bossSents.some((x) => x.replaceAll(rbTitle, '').includes(keyHeadWord)))
-				errors.push(`order ${order} 의 일반 보스 문장에 핵심 물건 "${keyObject}" 이 없습니다. 일반 보스는 주인공이 "${String(gen.wrong_action ?? '')}" 하려는 것을 경고하며 막아선다: "${bossSents[0]}"`);
+			const mentionsKey = (x: string) => !!keyHeadWord && x.replaceAll(rbTitle, '').includes(keyHeadWord);
+			// 그 화 행동 (2~4화는 겉모습이 다른 행동이라 핵심 물건 대신 그 행동 동사로 막아도 된다)
+			const actHere = String(spine.find((l) => Number(l.order) === order)?.protagonist_action ?? '').trim() || wrong;
+			const actStem = stem(actHere);
+			const mentionsAct = (x: string) => mentionsKey(x) || (!!actStem && x.replaceAll(rbTitle, '').includes(actStem));
+			if (side === 'warn' && bossSents.length && keyHeadWord && !bossSents.some(mentionsAct))
+				errors.push(`order ${order} 의 일반 보스(경고하는 쪽) 문장에 핵심 물건 "${keyObject}" 이나 그 화 행동이 없습니다. 이 화 일반 보스는 주인공이 "${actHere}" 하려는 것을 경고하며 막아선다: "${bossSents[0]}"`);
+			if (side === 'ally')
+				for (const sent of bossSents)
+					if (mentionsKey(sent) && BLOCK_VERBS.some((v) => sent.includes(v)))
+						errors.push(`order ${order} 의 일반 보스(최종보스 편)가 핵심 물건에 대한 주인공의 행동을 막습니다. 이 화 일반 보스는 주인공의 의심·이탈·전진을 막는다: "${sent}"`);
 			for (const sent of bossSents) {
 				const persuade = PERSUADE_WORDS.filter((w) => sent.includes(w));
 				if (persuade.length)
@@ -339,6 +426,15 @@ function checkStructure(gen: Gen, ctx: CheckCtx): string[] {
 			}
 		}
 	}
+
+	// npc_acts 화: 주 NPC 가 먼저 행동하므로 그 화 summary 에 그 NPC 이름이 나와야 한다
+	ctx.deceiveModes?.forEach((mode, i) => {
+		if (mode !== 'npc_acts') return;
+		const o = outline.find((x) => Number(x.order) === i + 1);
+		const npc = npcs.find((n) => n.key === String(o?.npc ?? ''));
+		if (o && npc && !String(o.summary ?? '').includes(npc.name_korean))
+			errors.push(`${i + 1}화는 "동료가 먼저 함"(npc_acts) 화입니다. summary 에 주 NPC ${npc.name_korean} 이(가) 흔적을 보고 먼저 그 화 행동을 시작하는 장면을 쓸 것`);
+	});
 
 	// 화마다 다른 장소 / 2~4화 요약이 서로 너무 비슷하지 않은지
 	const places = outline.map((o) => String(o.place ?? '').trim());
@@ -393,7 +489,10 @@ function checkWriting(gen: Gen, bossName: string): string[] {
 	}
 
 	for (const [where, text] of texts) {
-		const vague = VAGUE_WORDS.filter((w) => text.includes(w));
+		if (/(order \d summary|story_spine)/.test(where) && /보스/.test(text))
+			errors.push(`${where} 에 "보스"라는 게임 용어가 있습니다. 일반 보스는 그 화 직업으로, 최종보스는 이름으로 부를 것`);
+		// "암시장" 같은 낱말 속 글자는 빼고 본다
+		const vague = VAGUE_WORDS.filter((w) => (w === '암시' ? /암시(?!장)/.test(text) : text.includes(w)));
 		if (vague.length) errors.push(`${where} 에 흐린 말: ${vague.join(', ')} → 눈에 보이는 일로 바꿀 것`);
 		if (text.includes('**')) errors.push(`${where} 에 마크다운(**)이 있습니다. 평문으로 쓸 것`);
 		if (/[(（]\s*복선|복선\s*[:：]/.test(text)) errors.push(`${where} 에 "(복선: …)" 같은 메모가 있습니다. 장면으로 녹여 쓸 것`);
@@ -478,6 +577,8 @@ export const POST: RequestHandler = async ({ request, fetch }) => {
 		});
 
 		const genre = genres[id];
+		const bossSides = bossSidesForId(id);
+		const deceiveModes = deceiveModesForId(id);
 		const bossMaterial = [
 			source.final_boss.appearance_npc ?? source.final_boss.appearance ?? '',
 			source.final_boss.appearance_boss ?? '',
@@ -487,9 +588,11 @@ export const POST: RequestHandler = async ({ request, fetch }) => {
 			npcs,
 			bossName: source.final_boss.name,
 			bossMaterial,
-			used: used.filter((u) => u.id !== id)
+			used: used.filter((u) => u.id !== id),
+			bossSides,
+			deceiveModes
 		});
-		const promptNow = () => buildStoryarcRewritePrompt(source, npcs, { genre, used: ctxNow().used });
+		const promptNow = () => buildStoryarcRewritePrompt(source, npcs, { genre, used: ctxNow().used, bossSides, deceiveModes });
 
 		const prompt = promptNow();
 		let gen = await gemini(prompt);
@@ -516,6 +619,16 @@ export const POST: RequestHandler = async ({ request, fetch }) => {
 			const order = i + 1;
 			const item: Gen = { ...s, order, act: ACT_BY_ORDER[order], boss: bossByOrder.get(order) ?? 'random_boss' };
 			if (order === 5 || !String(item.random_boss_title ?? '').trim()) delete item.random_boss_title;
+			if (order <= 4) {
+				item.random_boss_side = bossSides[order - 1];
+				item.deceive_mode = deceiveModes[order - 1];
+			} else {
+				delete item.random_boss_side;
+				delete item.deceive_mode;
+			}
+			// 1화 흔적 = boss_trace. 5화에는 흔적 없음
+			if (order === 1 && !String(item.boss_trace ?? '').trim()) item.boss_trace = gen.boss_trace;
+			if (order === 5 || !String(item.boss_trace ?? '').trim()) delete item.boss_trace;
 			return item;
 		});
 		const at = (gen.act_tone ?? {}) as Record<string, Gen>;
@@ -551,6 +664,7 @@ export const POST: RequestHandler = async ({ request, fetch }) => {
 				surface_identity: fb.surface_identity,
 				true_identity: fb.true_identity,
 				motivation: fb.motivation,
+				want: fb.want,
 				twist: fb.twist,
 				...(src.zodiac_sign ? { zodiac_sign: src.zodiac_sign } : {})
 			},

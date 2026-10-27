@@ -1,0 +1,127 @@
+{
+  "issues": [
+    {
+      "index": 0,
+      "problem": "character_any가 다른 파티원에게 제안·권유하고 있다. 이는 R6 (b) 'character_any 줄이 다른 파티원을 부르거나 말을 걸음'에 해당한다.",
+      "block": "dialogue",
+      "room": 3,
+      "item": "R6",
+      "quote": "카이를 돕기 위해 이 방법을 시도하자.",
+      "fix": "혼잣말처럼 독백으로 바꾸거나, 파티 전체의 의지를 나타내는 문장으로 수정한다. 예: \"카이를 돕기 위해 이 방법을 시도해야겠어.\"",
+      "order": 3,
+      "quote_found": true
+    },
+    {
+      "block": "dialogue",
+      "index": 5,
+      "problem": "character_any가 다른 파티원에게 질문을 던지고 있다. 이는 R6 (b) 'character_any 줄이 다른 파티원을 부르거나 말을 걸음'에 해당한다.",
+      "order": 3,
+      "fix": "혼잣말처럼 독백으로 바꾸거나, NPC에게 질문하는 형태로 수정한다. 예: \"스크린 조각이 왜 흐려지는 거지? 무슨 일이 생긴 것 같군.\"",
+      "room": 5,
+      "item": "R6",
+      "quote": "스크린 조각이 왜 흐려지는 거지? 무슨 일이 생긴 거야.",
+      "quote_found": true
+    },
+    {
+      "problem": "바로 앞 대사나 지문과 연결되지 않는 개인적인 경험을 갑자기 언급한다. 이는 R3 '앞뒤 이어짐'에 어긋난다.",
+      "room": 5,
+      "item": "R3",
+      "index": 6,
+      "fix": "앞뒤 맥락과 자연스럽게 이어지도록 수정하거나, 삭제한다. 예: (삭제) 또는 \"이런 상황을 보니, 어젯밤 내 개인 정보가 뒤죽박죽되는 꿈을 꾼 게 떠오르는군.\"",
+      "block": "dialogue",
+      "quote": "어젯밤, 내 개인 정보가 뒤죽박죽되는 꿈을 꿨어.",
+      "order": 3,
+      "quote_found": true
+    },
+    {
+      "block": "dialogue",
+      "fix": "NPC의 경고를 이해하되, 파티의 행동 이유를 설명하는 방향으로 수정한다. 예: \"하지만 우리는 카이를 돕는 것이 급선무라고 생각했습니다.\"",
+      "index": 3,
+      "order": 3,
+      "room": 15,
+      "item": "R5",
+      "quote": "하지만 당신은 우리를 막으려고만 했잖아.",
+      "problem": "파티가 경고하는 NPC의 행동을 '막으려고만 한 것'으로 치부하며 비난하는 듯한 뉘앙스를 풍긴다. 이는 R5의 '경고하는 사람을 비웃거나 모욕함'에 해당할 수 있다.",
+      "quote_found": true
+    }
+  ],
+  "codeErrors": [],
+  "attempts": [
+    {
+      "edits": [
+        {
+          "index": 0,
+          "speaker": "character_any",
+          "text": "카이를 돕기 위해 이 방법을 시도해야겠어.",
+          "block": "dialogue",
+          "op": "replace",
+          "room": 3
+        },
+        {
+          "room": 5,
+          "speaker": "character_any",
+          "index": 5,
+          "op": "replace",
+          "text": "스크린 조각이 왜 흐려지는 거지? 무슨 일이 생긴 것 같군.",
+          "block": "dialogue"
+        },
+        {
+          "op": "delete",
+          "block": "dialogue",
+          "index": 6,
+          "room": 5
+        },
+        {
+          "text": "하지만 우리는 카이를 돕는 것이 급선무라고 생각했습니다.",
+          "block": "dialogue",
+          "op": "replace",
+          "speaker": "character_any",
+          "index": 3,
+          "room": 15
+        }
+      ],
+      "skipped": [],
+      "newErrors": [
+        "방 15 dialogue: 이어지는 파티(character_any) 대사의 말투가 다릅니다(존댓말·반말). 파티가 1명이면 한 사람이 말투를 바꾸는 것처럼 들린다. 맞출 것: \"우린 카이를 돕기 위해 한 일이다.\" / \"하지만 우리는 카이를 돕는 것이 급선무라고 생각했습니다.\""
+      ]
+    },
+    {
+      "edits": [
+        {
+          "block": "dialogue",
+          "index": 0,
+          "speaker": "character_any",
+          "op": "replace",
+          "room": 3,
+          "text": "카이를 돕기 위해 이 방법을 시도해야겠어."
+        },
+        {
+          "speaker": "character_any",
+          "room": 5,
+          "block": "dialogue",
+          "text": "스크린 조각이 왜 흐려지는 거지? 무슨 일이 생긴 것 같군.",
+          "index": 5,
+          "op": "replace"
+        },
+        {
+          "index": 6,
+          "op": "delete",
+          "block": "dialogue",
+          "room": 5
+        },
+        {
+          "index": 3,
+          "speaker": "character_any",
+          "room": 15,
+          "block": "dialogue",
+          "text": "하지만 우리는 카이를 돕는 것이 급선무라고 생각했어.",
+          "op": "replace"
+        }
+      ],
+      "skipped": [],
+      "newErrors": []
+    }
+  ],
+  "kept": true,
+  "codeErrorsAfter": []
+}

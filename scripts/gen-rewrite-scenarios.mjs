@@ -12,7 +12,10 @@
 //   --orders=1,2      만들 화 (기본 1~5)
 //   --concurrency=N   아크 동시 실행 (기본 2)
 //   --out=DIR         저장 폴더 (기본 output_list/rewrite_test)
+//   --arc-dir=DIR     storyarc 를 읽을 폴더 (기본 src/lib/data/storyarc/rewrite_test)
 //   --base=URL        기본 http://localhost:5178
+//   --no-review       검토자·수정자를 건너뜀 (기본은 생성 뒤 1번 돌림 → <out>/<id>/review/)
+//   --review-only     생성 없이 기존 scenario_0N.json 을 검토·수정만
 
 import http from 'node:http';
 import https from 'node:https';
@@ -74,6 +77,9 @@ const body = { ids };
 if (args.orders) body.orders = String(args.orders).split(',').map(Number);
 if (args.concurrency) body.concurrency = Number(args.concurrency);
 if (args.out) body.outDir = args.out;
+if (args['arc-dir']) body.storyarcDir = args['arc-dir'];
+if (args['no-review']) body.review = false;
+if (args['review-only']) body.reviewOnly = true;
 
 console.log(`[scenario] ${ids.join(', ')} → ${base}/api/scenario/rewrite-test`);
 const t0 = Date.now();
@@ -93,6 +99,14 @@ for (const a of data.arcs) {
 		}
 		console.log(`  ✓ ${r.order}화${r.errors?.length ? ` (남은 오류 ${r.errors.length})` : ''}`);
 		for (const e of r.errors ?? []) console.log(`     - ${e}`);
+	}
+	const rv = a.review;
+	if (rv?.error) console.log(`  [검토 실패] ${rv.error}`);
+	else if (rv) {
+		console.log(`  [검토] 문제 ${rv.before}개 → 고친 뒤 안 풀림 ${rv.unresolved ?? rv.before}개 + 고치다 새로 생김 ${rv.newProblems ?? 0}개 (고친 화: ${rv.edited?.join(', ') || '없음'})`);
+		for (const [id, c] of Object.entries(rv.byItem ?? {})) if (c.before || c.after) console.log(`     ${id}: ${c.before} → ${c.after}`);
+		for (const r of rv.reverted ?? []) console.log(`     ${r.order}화는 고친 뒤 코드 검사 오류가 생겨 원래대로: ${r.errors.join(' / ')}`);
+		console.log(`     자세히: ${a.dir}/review/ (review.json, edits_0N.json, verify.json, script_before.md)`);
 	}
 }
 for (const f of data.failed ?? []) {

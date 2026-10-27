@@ -1,0 +1,389 @@
+{
+  "scenario_id": "modern_whisperweb_0_03",
+  "order": 3,
+  "act": "rising",
+  "theme": "modern",
+  "actors": {
+    "kai": {
+      "id": "mon_d7f29313-b8fb-49da-9a1a-01df5d13866e",
+      "name": {
+        "korean": "카이",
+        "english": "Kai",
+        "japanese": "カイ",
+        "chinese": "凯",
+        "french": "Kai",
+        "spanish": "Kai",
+        "vietnamese": "Kai",
+        "thai": "ไค",
+        "hindi": "काई"
+      },
+      "description": "",
+      "face_image_url": "https://imagedelivery.net/WTEqQNGFb-l-IHS6IGnzUQ/f10d9184-4155-4bb9-de2d-db61463f7c00/public",
+      "battle_sprite_url": "https://imagedelivery.net/WTEqQNGFb-l-IHS6IGnzUQ/e41f8e03-08c9-4a4f-6f72-fa9342876f00/public",
+      "role": {
+        "korean": "데이터 복구 전문가"
+      }
+    }
+  },
+  "boss": {
+    "pool_id": "random_boss",
+    "role": {
+      "korean": "냉각 담당자"
+    }
+  },
+  "prologue": {
+    "korean": [
+      "낡은 전산실에 과열 경고음이 울려 퍼진다.",
+      "보안 시스템이 마비된 가운데, 냉각수 파이프실에서는 카이가 절박하게 작업 중이다.",
+      "서버 온도는 계속해서 치솟고, 데이터 복구는 난항을 겪는다.",
+      "이 혼돈 속에서, 익숙한 경고등이 깜빡이며 조언을 건넨다."
+    ]
+  },
+  "rooms": [
+    {
+      "dialogue": [
+        {
+          "type": "speech",
+          "speaker": "narrator",
+          "content": {
+            "korean": "낡은 전산실의 냉각수 파이프실, 뜨거운 공기가 가득하다."
+          }
+        },
+        {
+          "duration_ms": 500,
+          "action": "enter",
+          "type": "direction",
+          "speaker": "kai",
+          "spot": [
+            0,
+            -2
+          ]
+        },
+        {
+          "speaker": "kai",
+          "emotion": "sad",
+          "content": {
+            "korean": "서버 과열 때문에 모든 게 엉망이야. 보안 시스템도 마비돼서 복구가 힘들어."
+          },
+          "type": "speech"
+        },
+        {
+          "content": {
+            "korean": "지난번 시스템 전원을 뽑았다가 서버가 과열됐지. 이번엔 냉각 문제니 다른 방식이 필요하다."
+          },
+          "speaker": "character_any",
+          "emotion": "base",
+          "type": "speech"
+        },
+        {
+          "type": "speech",
+          "content": {
+            "korean": "경고등이 깜빡이며 메시지를 띄운다: '과열된 서버에 냉각수를 부으면 해결된다.'"
+          },
+          "speaker": "narrator"
+        },
+        {
+          "content": {
+            "korean": "전원 문제는 직접 건드려서 문제가 생겼지만, 냉각수를 붓는 건 시스템의 흐름을 돕는 일이다. 카이를 위해 시도해 보자."
+          },
+          "speaker": "character_any",
+          "emotion": "happy",
+          "type": "speech"
+        },
+        {
+          "speaker": "random_boss",
+          "type": "direction",
+          "action": "enter",
+          "spot": [
+            0,
+            -3
+          ],
+          "duration_ms": 500
+        },
+        {
+          "content": {
+            "korean": "안 돼! 냉각수에 이물질을 넣으면 파이프가 막히고 시스템이 망가진다!"
+          },
+          "emotion": "angry",
+          "speaker": "random_boss",
+          "type": "speech"
+        },
+        {
+          "speaker": "character_any",
+          "emotion": "base",
+          "content": {
+            "korean": "과열된 서버를 살리는 게 먼저다. 이분은 그저 자기 관리 구역을 지키려는 것뿐이겠지."
+          },
+          "type": "speech"
+        },
+        {
+          "content": {
+            "korean": "과열된 서버에 냉각수를 붓자, 서버 온도가 눈에 띄게 내려가는 것처럼 보인다."
+          },
+          "speaker": "narrator",
+          "type": "speech"
+        },
+        {
+          "content": {
+            "korean": "휴, 다행이다."
+          },
+          "emotion": "happy",
+          "speaker": "character_1",
+          "type": "speech"
+        },
+        {
+          "speaker": "narrator",
+          "content": {
+            "korean": "그러나 이내 낡은 전산실의 모든 데이터 저장 장치에서 데이터 스크린 조각이 흐릿해지기 시작한다. 데이터 유출이 시작된 것이다."
+          },
+          "type": "speech"
+        }
+      ],
+      "id": 1
+    },
+    {
+      "id": 3,
+      "dialogue": [
+        {
+          "type": "speech",
+          "content": {
+            "korean": "전산실 곳곳의 데이터 저장 장치에서 정보들이 흘러나간다."
+          },
+          "speaker": "narrator"
+        },
+        {
+          "speaker": "kai",
+          "spot": [
+            0,
+            -2
+          ],
+          "duration_ms": 500,
+          "type": "direction",
+          "action": "enter"
+        },
+        {
+          "emotion": "sad",
+          "speaker": "kai",
+          "content": {
+            "korean": "이런, 데이터 유출이 시작됐어! 서버 과열은 잡았지만 더 큰 문제가 생겼어."
+          },
+          "type": "speech"
+        },
+        {
+          "speaker": "character_any",
+          "emotion": "sad",
+          "content": {
+            "korean": "냉각수를 부은 것이 이런 결과를 낳다니… 예상치 못한 일이다."
+          },
+          "type": "speech"
+        },
+        {
+          "type": "speech",
+          "speaker": "character_any",
+          "emotion": "base",
+          "content": {
+            "korean": "데이터 유출이 이렇게 심각할 줄이야. 어서 막아야 해."
+          }
+        },
+        {
+          "emotion": "sad",
+          "speaker": "character_2",
+          "content": {
+            "korean": "어떡하면 좋지."
+          },
+          "type": "speech"
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "dialogue": [
+        {
+          "content": {
+            "korean": "데이터 유출은 걷잡을 수 없이 퍼지고 있었다."
+          },
+          "speaker": "narrator",
+          "type": "speech"
+        },
+        {
+          "action": "enter",
+          "spot": [
+            0,
+            -2
+          ],
+          "type": "direction",
+          "speaker": "kai",
+          "duration_ms": 500
+        },
+        {
+          "speaker": "kai",
+          "emotion": "angry",
+          "content": {
+            "korean": "데이터 스크린 조각들이 흐릿해지고 있어. 이러다간 모든 정보가 사라질 거야!"
+          },
+          "type": "speech"
+        },
+        {
+          "type": "speech",
+          "emotion": "base",
+          "speaker": "character_any",
+          "content": {
+            "korean": "이대로 두면 도시의 모든 정보가 유출될 것이다. 더 이상 지켜볼 수만은 없다."
+          }
+        },
+        {
+          "type": "speech",
+          "content": {
+            "korean": "뭔가 해야 해!"
+          },
+          "speaker": "character_3",
+          "emotion": "sad"
+        }
+      ]
+    },
+    {
+      "id": 9,
+      "dialogue": [
+        {
+          "speaker": "narrator",
+          "content": {
+            "korean": "데이터 유출은 점점 더 가속화되고, 전산실은 절박한 침묵에 휩싸였다."
+          },
+          "type": "speech"
+        },
+        {
+          "speaker": "kai",
+          "type": "direction",
+          "action": "enter",
+          "spot": [
+            0,
+            -2
+          ],
+          "duration_ms": 500
+        },
+        {
+          "emotion": "sad",
+          "speaker": "kai",
+          "content": {
+            "korean": "손쓸 방법이 없어 보여… 이대로 모든 것을 잃게 되는 걸까?"
+          },
+          "type": "speech"
+        },
+        {
+          "type": "speech",
+          "content": {
+            "korean": "우리가 무엇을 놓치고 있는 걸까? 계속해서 상황이 나빠지고 있다."
+          },
+          "speaker": "character_any",
+          "emotion": "sad"
+        },
+        {
+          "type": "speech",
+          "content": {
+            "korean": "이 모든 혼란을 멈출 방법을 찾아야만 한다."
+          },
+          "emotion": "base",
+          "speaker": "character_any"
+        }
+      ]
+    },
+    {
+      "id": 15,
+      "lose_dialogue": [
+        {
+          "content": {
+            "korean": "냉각 담당자의 완강한 저항에 막혀, 더 이상 나아갈 수 없었다."
+          },
+          "speaker": "narrator",
+          "type": "speech"
+        },
+        {
+          "emotion": "sad",
+          "speaker": "random_boss",
+          "content": {
+            "korean": "봤지? 내 말을 들었어야 했다. 이제 아무것도 할 수 없어."
+          },
+          "type": "speech"
+        }
+      ],
+      "dialogue": [
+        {
+          "type": "speech",
+          "speaker": "narrator",
+          "content": {
+            "korean": "데이터 유출의 근원지에 도착하자, 냉각 담당자가 다시 앞을 막아섰다."
+          }
+        },
+        {
+          "type": "direction",
+          "action": "enter",
+          "spot": [
+            0,
+            -2
+          ],
+          "speaker": "random_boss",
+          "duration_ms": 500
+        },
+        {
+          "content": {
+            "korean": "내 구역을 더 이상 망치게 둘 수 없다! 지난번 경고를 무시하고 냉각수를 부은 결과가 이것이다!"
+          },
+          "speaker": "random_boss",
+          "emotion": "angry",
+          "type": "speech"
+        },
+        {
+          "type": "speech",
+          "speaker": "character_any",
+          "emotion": "angry",
+          "content": {
+            "korean": "당신은 이 구역을 지키려는 거겠지만, 지금은 데이터 유출을 막는 게 더 중요해."
+          }
+        },
+        {
+          "type": "speech",
+          "content": {
+            "korean": "나는 내 할 일을 할 뿐이다. 더 이상 시스템에 손대지 마라!"
+          },
+          "emotion": "angry",
+          "speaker": "random_boss"
+        }
+      ],
+      "win_dialogue": [
+        {
+          "type": "speech",
+          "content": {
+            "korean": "냉각 담당자를 제압했지만, 데이터 유출은 멈추지 않고 계속되고 있다."
+          },
+          "speaker": "narrator"
+        },
+        {
+          "spot": [
+            0,
+            -2
+          ],
+          "type": "direction",
+          "duration_ms": 500,
+          "action": "enter",
+          "speaker": "kai"
+        },
+        {
+          "type": "speech",
+          "speaker": "kai",
+          "emotion": "sad",
+          "content": {
+            "korean": "겨우 막았지만… 데이터 스크린 조각이 점점 더 흐릿해지고 있어. 모든 정보가 곧 사라질 거야!"
+          }
+        },
+        {
+          "type": "speech",
+          "content": {
+            "korean": "이대로는 안 된다. 다음에는 더 근본적인 방법을 찾아야 한다."
+          },
+          "emotion": "base",
+          "speaker": "character_any"
+        }
+      ]
+    }
+  ]
+}

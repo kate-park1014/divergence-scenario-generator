@@ -1,0 +1,180 @@
+{
+	"id": "card_03_clogged_pipe",
+	"title": {
+		"korean": "막힌 냉각수 파이프"
+	},
+	"tags": [
+		"clogged"
+	],
+	"intensity": "high",
+	"after_story": 1,
+	"before_story": 3,
+	"background_tags": [
+		"파이프",
+		"막힘",
+		"청소",
+		"소음",
+		"전산실"
+	],
+	"dialogue": [
+		{
+			"speaker": "narrator",
+			"content": {
+				"korean": "파이프 청소부가 냉각수 파이프 앞에서 땀을 닦고 있다. 파이프에서 둔탁한 소리가 난다."
+			}
+		},
+		{
+			"speaker": "pipe_cleaner",
+			"content": {
+				"korean": "으아, 이 파이프가 또 막혔네!"
+			}
+		},
+		{
+			"speaker": "kai",
+			"content": {
+				"korean": "무슨 문제야? 냉각수 흐름에 지장이 있나?"
+			}
+		},
+		{
+			"speaker": "pipe_cleaner",
+			"content": {
+				"korean": "그럼! 여기 막히면 저쪽 서버는 과열돼서 데이터 처리 속도가 현저히 느려져."
+			}
+		},
+		{
+			"speaker": "pipe_cleaner",
+			"content": {
+				"korean": "긴급 보고도 못 올리는 상황이라니까."
+			}
+		},
+		{
+			"speaker": "pipe_cleaner",
+			"content": {
+				"korean": "어젠 밤마다 꿈에서 내 청소 도구가 멋대로 변형되는 꿈을 꿨는데, 혹시 이것 때문인가?"
+			}
+		},
+		{
+			"speaker": "kai",
+			"content": {
+				"korean": "저걸 뚫지 못하면 냉각수가 서버까지 안 갈 텐데."
+			}
+		}
+	],
+	"choices": [
+		{
+			"text": {
+				"korean": "급하게 주워 온 공구로 파이프를 강하게 두드려 본다"
+			},
+			"path": "easy",
+			"mbti": "SP",
+			"effects": {
+				"fighting": 10,
+				"gold": 60
+			},
+			"reward": [
+				"stun"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "당신은 공구로 파이프를 강하게 두드렸고, 막힌 곳이 일시적으로 뚫렸다."
+					}
+				},
+				{
+					"speaker": "pipe_cleaner",
+					"content": {
+						"korean": "오! 신기하다! 일단 물이 다시 흐르네."
+					}
+				},
+				{
+					"speaker": "kai",
+					"content": {
+						"korean": "위험했지만, 그래도 다행이다!"
+					}
+				}
+			]
+		},
+		{
+			"text": {
+				"korean": "청소부와 함께 도면을 분석하여 막힌 곳을 정확히 찾아 제거한다"
+			},
+			"path": "hard",
+			"mbti": "IJ",
+			"effects": {
+				"echo": 10,
+				"community": 10,
+				"reason": 20
+			},
+			"reward": [
+				"heal"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "당신은 청소부와 함께 파이프 도면을 분석하여 막힌 곳을 정확히 찾아 제거했다."
+					}
+				},
+				{
+					"speaker": "pipe_cleaner",
+					"content": {
+						"korean": "와, 완벽하게 해결됐어! 정말 고마워!"
+					}
+				},
+				{
+					"speaker": "kai",
+					"content": {
+						"korean": "역시 머리를 쓰는 게 중요하네!"
+					}
+				}
+			]
+		},
+		{
+			"text": {
+				"korean": "특수 용액을 구매하여 막힌 곳을 녹여버린다"
+			},
+			"path": "gold",
+			"mbti": "ET",
+			"require": {
+				"stat": "gold",
+				"op": ">=",
+				"value": 120
+			},
+			"effects": {
+				"reason": 15,
+				"gold": -120
+			},
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "당신은 특수 용액을 구매하여 파이프에 부었고, 막힌 곳이 깔끔하게 녹아내렸다."
+					}
+				},
+				{
+					"speaker": "pipe_cleaner",
+					"content": {
+						"korean": "깔끔하게 뚫렸네! 이런 용액이 있었다니!"
+					}
+				},
+				{
+					"speaker": "kai",
+					"content": {
+						"korean": "돈은 좀 들었지만, 가장 확실한 방법이네."
+					}
+				}
+			]
+		}
+	],
+	"_slot": {
+		"room": 2,
+		"must": "일부 서버에서 과열로 데이터 처리 속도가 현저히 느려져 긴급 업무가 지연되고 있다.",
+		"must_line": "그럼! 여기 막히면 저쪽 서버는 과열돼서 데이터 처리 속도가 현저히 느려져. 긴급 보고도 못 올리는 상황이라니까.",
+		"hint_line": "어젠 밤마다 꿈에서 내 청소 도구가 멋대로 변형되는 꿈을 꿨는데, 혹시 이것 때문인가?",
+		"event": "파이프 청소부가 막힌 냉각수 파이프 때문에 애를 먹고 있다"
+	}
+}

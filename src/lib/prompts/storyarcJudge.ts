@@ -1,4 +1,5 @@
 import type { StoryArc } from '$lib/types';
+import { DECEIVE_MODE_LABEL } from './storyarcGen';
 
 // 재작업된 storyarc 를 채점하는 프롬프트. 코드로 검사하지 못하는 "읽고 판단해야 하는" 항목만 본다.
 // 각 항목은 통과/불통과로 답하고, 불통과면 근거 문장을 원문 그대로 인용한다 (인용은 코드로 원문 대조).
@@ -7,7 +8,7 @@ export const JUDGE_ITEMS = [
 	{
 		id: 'J1',
 		name: '인물 편 유지',
-		rule: '보스는 1~5화 내내 틀린 쪽(1~4화 wrong_action 권유, 5화 right_action 저지)이다. 1~4화 일반 보스는 경고하는 쪽(주인공의 wrong_action 을 막아섬)이고 wrong_action 을 권하지 않는다. NPC 는 마음을 바꿔도 되지만, 바꾸는 화의 summary 에 그 이유가 되는 장면(무엇을 보거나 겪고 바꾸는지)이 있어야 하고 바꾼 뒤에는 그 편을 유지한다. 보스가 편을 바꾸거나, NPC 가 이유 장면 없이 편을 바꾸면 불통과.'
+		rule: '보스는 1~5화 내내 틀린 쪽(1~4화 그 화 행동 권유, 5화 right_action 저지)이다. 1~4화 일반 보스는 그 화 random_boss_side 대로 행동한다: warn 이면 주인공의 그 화 행동(story_spine 의 protagonist_action)을 경고하며 막고, ally 면 최종보스 편으로 주인공의 의심·전진을 막으며 그 화 행동을 말리지 않는다. random_boss_side 가 없으면 ally 로 본다. (ally 일반 보스가 주인공의 전진·의심을 막아서는 것은 설계대로라 통과) NPC 는 마음을 바꿔도 되지만, 바꾸는 화의 summary 에 그 이유가 되는 장면(무엇을 보거나 겪고 바꾸는지)이 있어야 하고 바꾼 뒤에는 그 편을 유지한다. 보스가 편을 바꾸거나, NPC 가 이유 장면 없이 편을 바꾸면 불통과.'
 	},
 	{
 		id: 'J2',
@@ -26,8 +27,8 @@ export const JUDGE_ITEMS = [
 	},
 	{
 		id: 'J5',
-		name: '어느 화부터 읽어도 이해',
-		rule: '각 summary 첫 문장이 그 화의 현재 상황 요약이고, 앞 화를 읽지 않아도 누가 누구인지·무엇이 문제인지 그 summary 안에서 알 수 있다. 앞 화를 알아야만 이해되는 summary 가 있으면 불통과.'
+		name: '앞 화를 이어받음',
+		rule: '2~4화가 앞 화가 남긴 피해에서 출발하고, 주인공이 앞 화에서 배운 것(lesson)을 지킨다. 주인공이 앞 화에서 나쁜 결과를 낳은 행동을 다시 하거나, 앞 화에서 권한 흔적(그 화 boss_trace)을 다시 믿거나, 앞 화 일을 잊은 듯 처음 겪는 것처럼 행동하는 화가 있으면 불통과.'
 	},
 	{
 		id: 'J6',
@@ -37,7 +38,7 @@ export const JUDGE_ITEMS = [
 	{
 		id: 'J7',
 		name: '규칙 하나, 위험과 정답 일치',
-		rule: 'world.rule 이 규칙 하나이고, 그 규칙이 wrong_action 의 결과(위험)를 설명하며, right_action 이 그 위험을 끝내는 행동으로 맞아떨어진다. 규칙이 여러 개이거나 서로 안 맞으면 불통과.'
+		rule: 'world.rule 이 규칙 하나이고, 그 규칙이 wrong_action 의 결과(위험)를 설명하며, 2~4화 행동도 hidden_link 대로 이 결과를 일으키고, right_action 이 그 위험을 끝내는 행동으로 맞아떨어진다. 규칙이 여러 개이거나 서로 안 맞으면 불통과.'
 	},
 	{
 		id: 'J8',
@@ -57,17 +58,37 @@ export const JUDGE_ITEMS = [
 	{
 		id: 'J13',
 		name: '1~4화 보스는 흔적으로만',
-		rule: '1~4화에서 최종보스는 얼굴·몸을 보이지 않고 boss_trace(목소리·글자·물건)로만 드러나며, 5화에 처음 모습을 드러낸다. 1~4화에 보스가 나타나거나 다가오거나 웃는 등 모습이 보이는 장면이 있으면 불통과.'
+		rule: '1~4화에서 최종보스는 얼굴·몸을 보이지 않고 그 화의 boss_trace(목소리·글자·물건, 화마다 다름)로만 드러나며, 5화에 처음 모습을 드러낸다. 1~4화에 보스가 나타나거나 다가오거나 웃는 등 모습이 보이는 장면이 있으면 불통과.'
 	},
 	{
 		id: 'J14',
 		name: '화마다 다른 상황',
-		rule: '1~4화에 같은 틀린 행동을 하더라도 화마다 장소·이유·대가가 다르다. 2~4화가 "더 많이·더 크게"만 반복되거나, summary 를 서로 바꿔도 말이 되면 불통과.'
+		rule: '1~4화는 화마다 행동·장소·이유·대가가 다르다. 2~4화가 "더 많이·더 크게"만 반복되거나, summary 를 서로 바꿔도 말이 되면 불통과.'
 	},
 	{
 		id: 'J15',
 		name: '경고를 무시하는 이유',
-		rule: '1~4화마다 일반 보스가 주인공의 wrong_action 을 경고하며 막고, 그 화 summary 에 주인공이 경고를 믿지 않는 이유(일반 보스가 자기 사정 때문에 막는 것처럼 보임, 보스 흔적·NPC 의 말이 더 그럴듯함 등)가 있다. 이유 없이 경고를 무시해 주인공이 고집만 부리는 것처럼 읽히는 화가 있으면 불통과.'
+		rule: 'random_boss_side 가 warn 인 화마다 일반 보스가 주인공의 그 화 행동을 경고하며 막고, 그 화 summary 에 주인공이 경고를 믿지 않는 이유(일반 보스가 자기 사정 때문에 막는 것처럼 보임, 보스 흔적·NPC 의 말이 더 그럴듯함 등)가 있다. 이유 없이 경고를 무시해 주인공이 고집만 부리는 것처럼 읽히는 화가 있으면 불통과. warn 인 화가 없으면 통과.'
+	},
+	{
+		id: 'J16',
+		name: '주인공에게 공감',
+		rule: '1~4화마다 주인공의 그 화 행동이 선한 이유(사람 돕기·부탁·위기 막기·앞 화 피해 막기)이고, 그 순간 아는 것으로는 옳아 보이며, 당장 효과를 본 뒤 대가가 드러난다. 주인공이 효율·호기심·이익 때문에 하거나, 수상한 명령을 그대로 따르거나, 믿을 만한 인물(NPC)의 분명한 경고를 무시하거나, 하자마자 나쁜 일이 보이는데 계속하는 화가 있으면 불통과.'
+	},
+	{
+		id: 'J17',
+		name: '숨은 연결이 그럴듯함',
+		rule: '2~4화 행동이 주인공이 보기에는 앞 화 실수와 다른 행동(오히려 바로잡는 일)처럼 보이지만, hidden_link 대로 사실은 핵심 물건에 wrong_action 을 한 것과 같은 일이라는 게 납득되고, 5화 summary 에서 그 연결이 드러난다. 겉으로도 앞 화와 같은 행동으로 보이거나, 연결이 억지스럽거나, 5화에 연결이 드러나지 않으면 불통과.'
+	},
+	{
+		id: 'J18',
+		name: '화마다 속는 방식이 다름',
+		rule: '1~4화 summary 가 그 화 deceive_mode 대로 흘러간다 (방식별 흐름은 아래 "이 아크의 속는 방식"). 2~4화에 주인공이 조심하는 모습이 보인다. 2~4화가 "곤란한 사람 → 흔적의 해결책 → 이번엔 다르다며 함"의 같은 순서로 되풀이되거나, 그 화 방식과 다르게 흘러가는 화가 있으면 불통과. deceive_mode 가 없으면 통과.'
+	},
+	{
+		id: 'J19',
+		name: '한 번 읽으면 이해됨',
+		rule: '처음 읽는 사람이 이 스토리아크를 한 번 읽고 화마다 누가 무엇을 왜 했고 그래서 무엇이 됐는지 설명할 수 있다. 핵심 물건이 누구나 아는 일상 물건이고, world.how 로 나쁜 결과가 왜 생기는지 납득되며, final_boss.want 로 보스가 왜 이러는지 알 수 있다. 지어낸 물건·추상 개념(빛·기운·잔상·기억 등)이 이야기를 움직이거나, 원인 설명 없이 결과만 있거나, 두 번 읽어야 이해되는 문장이 있으면 불통과.'
 	},
 	{
 		id: 'J11',
@@ -96,6 +117,11 @@ const PROMPT_EXAMPLES = [
 
 export function buildStoryarcJudgePrompt(arc: StoryArc): string {
 	const items = JUDGE_ITEMS.map((i) => `- ${i.id} ${i.name}: ${i.rule}`).join('\n');
+	// J18 용: 이 아크에 쓰인 속는 방식의 흐름만
+	const modes = [...new Set(arc.scenarioOutline.map((s) => s.deceive_mode).filter((m) => !!m))];
+	const modeList = modes.length
+		? modes.map((m) => `- ${m}: ${DECEIVE_MODE_LABEL[m!]}`).join('\n')
+		: '(없음)';
 	const data = {
 		genre: arc.genre,
 		stage: arc.stage,
@@ -110,15 +136,19 @@ export function buildStoryarcJudgePrompt(arc: StoryArc): string {
 			surface_identity: arc.final_boss.surface_identity,
 			true_identity: arc.final_boss.true_identity,
 			motivation: arc.final_boss.motivation,
+			want: arc.final_boss.want,
 			twist: arc.final_boss.twist
 		},
 		npc_roles: arc.npc_roles,
-		scenarioOutline: arc.scenarioOutline.map(({ order, npc, title, summary, random_boss_title, place }) => ({
+		scenarioOutline: arc.scenarioOutline.map(({ order, npc, title, summary, random_boss_title, random_boss_side, deceive_mode, place, boss_trace }) => ({
 			order,
 			npc,
 			title,
 			place,
+			boss_trace,
 			random_boss_title,
+			random_boss_side,
+			deceive_mode,
 			summary
 		})),
 		global_foreshadowing: arc.global_foreshadowing,
@@ -136,6 +166,9 @@ export function buildStoryarcJudgePrompt(arc: StoryArc): string {
 
 # 항목
 ${items}
+
+# 이 아크의 속는 방식 (J18 용)
+${modeList}
 
 # 생성 프롬프트의 예시 문장 (J10 용)
 ${PROMPT_EXAMPLES.map((e) => `- ${e}`).join('\n')}

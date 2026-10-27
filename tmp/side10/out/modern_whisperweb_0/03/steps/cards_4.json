@@ -1,0 +1,392 @@
+{
+	"cards": [
+		{
+			"hint_line": "어? 이 데이터, 갱스터 조직이 만들었다는 초기 형태 기록 같아.",
+			"choices": [
+				{
+					"result": [
+						{
+							"speaker": "narrator",
+							"text": "당신은 연구원의 데이터를 다른 단말기에 빠르게 옮겼다."
+						},
+						{
+							"speaker": "researcher",
+							"text": "고마워! 덕분에 중요한 데이터를 살렸어!"
+						},
+						{
+							"text": "잘했지만, 핵심 시스템은 여전히 불안정해.",
+							"speaker": "kai"
+						}
+					],
+					"path": "easy",
+					"text": "급한 대로 연구원의 옆 단말기에 데이터를 백업해 준다.",
+					"effects": {
+						"gold": 100,
+						"community": -10,
+						"fighting": -10
+					},
+					"reward": [
+						"attack_up"
+					],
+					"mbti": "ES"
+				},
+				{
+					"result": [
+						{
+							"text": "당신은 연구원과 함께 우선순위가 높은 데이터를 선별했다.",
+							"speaker": "narrator"
+						},
+						{
+							"speaker": "researcher",
+							"text": "당신의 판단이 옳았어. 이게 최선이었어."
+						},
+						{
+							"text": "시간을 조금 썼지만, 현명한 선택이었어.",
+							"speaker": "kai"
+						}
+					],
+					"path": "hard",
+					"text": "연구원을 설득하여 가장 중요한 데이터만 분류해 옮기도록 돕는다.",
+					"effects": {
+						"echo": 10,
+						"fighting": -10,
+						"reason": 20
+					},
+					"reward": [
+						"defense_up"
+					],
+					"mbti": "TJ"
+				},
+				{
+					"mbti": "IP",
+					"reward": [],
+					"path": "gold",
+					"result": [
+						{
+							"speaker": "narrator",
+							"text": "당신은 연구원에게 고성능 저장 장치를 주었다."
+						},
+						{
+							"text": "이런 걸 가지고 있다니! 덕분에 안심하고 비킬 수 있겠어!",
+							"speaker": "researcher"
+						},
+						{
+							"text": "돈은 좀 썼지만, 문제는 해결됐네.",
+							"speaker": "kai"
+						}
+					],
+					"text": "비상용 데이터 저장 장치를 건네며 연구원을 안심시킨다.",
+					"effects": {
+						"gold": -100,
+						"community": 10,
+						"echo": 5
+					}
+				}
+			],
+			"people": [
+				{
+					"name": "데이터 연구원",
+					"role": "서버 과열 속에서도 데이터를 놓지 못하는 연구원",
+					"id": "researcher"
+				}
+			],
+			"background_tags": [
+				"낡은 전산실",
+				"냉각수 파이프",
+				"비상등",
+				"데이터 손실",
+				"패닉"
+			],
+			"intensity": "high",
+			"key": "researcher_scream",
+			"dialogue": [
+				{
+					"speaker": "narrator",
+					"text": "냉각수 파이프실, 오래된 단말기 앞에 데이터 연구원이 서 있다."
+				},
+				{
+					"speaker": "researcher",
+					"text": "안 돼! 이 데이터는 반드시 살려야 해!"
+				},
+				{
+					"speaker": "kai",
+					"text": "저러다 시스템 자체가 망가질 텐데. 냉각수를 빨리 부어야 해."
+				},
+				{
+					"text": "서버 과열이 지속되면 핵심 보안 시스템이 영구적으로 손상될 거라고!",
+					"speaker": "researcher"
+				},
+				{
+					"speaker": "kai",
+					"text": "어? 이 데이터, 갱스터 조직이 만들었다는 초기 형태 기록 같아."
+				},
+				{
+					"speaker": "researcher",
+					"text": "제발 잠시만 기다려 줘! 조금만 더 하면 돼!"
+				}
+			],
+			"title": "과부하 연구원의 절규",
+			"must_line": "서버 과열이 지속되면 핵심 보안 시스템이 영구적으로 손상될 거라고!",
+			"event": "데이터 연구원이 당신 앞을 막아서며 서버에 마지막 데이터를 저장하려 한다."
+		},
+		{
+			"choices": [
+				{
+					"reward": [
+						"shield"
+					],
+					"text": "보관원의 손이 닿기 쉬운 곳에 중요한 기록 몇 권을 던져 놓는다.",
+					"effects": {
+						"reason": -10,
+						"community": -15,
+						"gold": 50
+					},
+					"path": "easy",
+					"mbti": "SP",
+					"result": [
+						{
+							"text": "당신은 기록 몇 권을 대충 쌓아 놓으며 길을 확보했다.",
+							"speaker": "narrator"
+						},
+						{
+							"speaker": "archivist",
+							"text": "이보게! 기록을 함부로 다루면 안 되지!"
+						},
+						{
+							"speaker": "kai",
+							"text": "급하니까 어쩔 수 없었어."
+						}
+					]
+				},
+				{
+					"mbti": "IJ",
+					"reward": [
+						"intelligence_up"
+					],
+					"effects": {
+						"community": 20,
+						"echo": 10,
+						"fighting": -10
+					},
+					"result": [
+						{
+							"text": "당신은 보관원과 함께 중요도에 따라 기록 정리를 도왔다.",
+							"speaker": "narrator"
+						},
+						{
+							"text": "젊은 친구가 이렇게 꼼꼼하다니, 고맙네.",
+							"speaker": "archivist"
+						},
+						{
+							"text": "시간이 좀 걸렸지만, 어르신이 기뻐하시는 것 같아.",
+							"speaker": "kai"
+						}
+					],
+					"text": "보관원과 함께 중요도에 따라 기록을 분류하고 정리한다.",
+					"path": "hard"
+				},
+				{
+					"result": [
+						{
+							"speaker": "narrator",
+							"text": "당신은 보관원에게 새 보관함 비용을 건네며 길을 비켜달라 요청했다."
+						},
+						{
+							"text": "오, 이런 지원이라면 흔쾌히 비켜주겠네!",
+							"speaker": "archivist"
+						},
+						{
+							"text": "돈으로 해결하는 것도 방법이지.",
+							"speaker": "kai"
+						}
+					],
+					"mbti": "NF",
+					"effects": {
+						"gold": -70,
+						"community": 5,
+						"reason": 10
+					},
+					"path": "gold",
+					"reward": [],
+					"text": "보관원에게 새로운 기록 보관함 구매 비용을 지불한다."
+				}
+			],
+			"key": "forgotten_archive",
+			"title": "잊힌 기록의 수호자",
+			"intensity": "calm",
+			"dialogue": [
+				{
+					"text": "냉각수 파이프실 옆, 오래된 기록 보관실에서 과거 기록 보관원이 책장을 정리하고 있다.",
+					"speaker": "narrator"
+				},
+				{
+					"text": "흐트러진 기록은 곧 사라진 역사와 같지.",
+					"speaker": "archivist"
+				},
+				{
+					"text": "어르신, 지금은 기록 정리할 때가 아니에요. 서버가 위험하다고요.",
+					"speaker": "kai"
+				},
+				{
+					"speaker": "archivist",
+					"text": "서버 과열로 전산 기록이 날아가면, 보안 시스템의 모든 수동 기록도 사라질 걸세."
+				},
+				{
+					"text": "어? 이 기록, 갱스터 조직이 만들었다는 초기 형태에 대한 문서 같아.",
+					"speaker": "kai"
+				},
+				{
+					"text": "난 내 할 일을 할 뿐이야. 이 기록들은 모두 소중하다고!",
+					"speaker": "archivist"
+				}
+			],
+			"people": [
+				{
+					"id": "archivist",
+					"name": "과거 기록 보관원",
+					"role": "낡은 전산실의 모든 기록을 손으로 보관하는 고집 센 사람"
+				}
+			],
+			"event": "과거 기록 보관원이 냉각수 파이프 옆에서 오래된 기록을 정리하고 있다.",
+			"hint_line": "어? 이 기록, 갱스터 조직이 만들었다는 초기 형태에 대한 문서 같아.",
+			"background_tags": [
+				"낡은 서류",
+				"먼지 쌓인",
+				"기록물",
+				"정리정돈",
+				"복도"
+			],
+			"must_line": "서버 과열로 전산 기록이 날아가면, 보안 시스템의 모든 수동 기록도 사라질 걸세."
+		},
+		{
+			"must_line": "서버 과열로 보안 시스템이 터지기 전에, 꿀 같은 데이터를 미리 챙기는 중이라고.",
+			"background_tags": [
+				"긴급 상황",
+				"냉각수 파이프",
+				"콘솔",
+				"데이터 유출",
+				"도발"
+			],
+			"dialogue": [
+				{
+					"speaker": "narrator",
+					"text": "냉각수 파이프실, 해커가 유지보수 패널에 연결된 단말기를 조작하고 있다."
+				},
+				{
+					"speaker": "hacker",
+					"text": "이런 기회는 흔치 않지. 귀한 데이터들이 그냥 버려질 순 없잖아?"
+				},
+				{
+					"speaker": "kai",
+					"text": "저 사람이 뭘 하는 거야? 시스템에 더 부담을 주고 있어!"
+				},
+				{
+					"speaker": "hacker",
+					"text": "서버 과열로 보안 시스템이 터지기 전에, 꿀 같은 데이터를 미리 챙기는 중이라고."
+				},
+				{
+					"text": "이 코드, 갱스터 조직이 만들었다는 초기 형태와 비슷해 보여.",
+					"speaker": "kai"
+				},
+				{
+					"speaker": "hacker",
+					"text": "너도 한몫 챙기고 싶으면 끼어들지 마. 아니면 나랑 손잡을래?"
+				}
+			],
+			"event": "해커가 냉각수 파이프 옆의 패널에서 데이터 유출을 시도하고 있다.",
+			"intensity": "high",
+			"people": [
+				{
+					"id": "hacker",
+					"name": "해커",
+					"role": "서버 과열을 틈타 중요한 데이터를 훔치려는 이기적인 해커"
+				}
+			],
+			"key": "hacker_temptation",
+			"hint_line": "이 코드, 갱스터 조직이 만들었다는 초기 형태와 비슷해 보여.",
+			"title": "데이터 도둑의 유혹",
+			"choices": [
+				{
+					"result": [
+						{
+							"speaker": "narrator",
+							"text": "당신은 해커에게 필요한 정보를 물었고, 그는 냉각수 파이프의 구조를 알려주었다."
+						},
+						{
+							"speaker": "hacker",
+							"text": "흥, 쓸모 있는 녀석이군."
+						},
+						{
+							"speaker": "kai",
+							"text": "저런 사람을 믿을 수 있을까?"
+						}
+					],
+					"mbti": "ET",
+					"effects": {
+						"fighting": -10,
+						"gold": 150,
+						"reason": -10
+					},
+					"text": "해커에게 지금 당장 필요한 데이터가 무엇인지 묻고 정보를 얻는다.",
+					"path": "easy",
+					"reward": [
+						"stun"
+					]
+				},
+				{
+					"reward": [
+						"cooldown_reset"
+					],
+					"path": "hard",
+					"effects": {
+						"fighting": 20,
+						"reason": 10,
+						"echo": 10
+					},
+					"text": "해커에게 서버의 안전을 위해 즉시 작업을 중단하라고 경고한다.",
+					"mbti": "IF",
+					"result": [
+						{
+							"text": "당신은 해커에게 단호하게 작업을 멈추라 요구했다.",
+							"speaker": "narrator"
+						},
+						{
+							"speaker": "hacker",
+							"text": "쳇, 재미없는 친구네. 어쩔 수 없지."
+						},
+						{
+							"speaker": "kai",
+							"text": "잘했어! 서버 안전이 우선이야."
+						}
+					]
+				},
+				{
+					"mbti": "EN",
+					"result": [
+						{
+							"text": "당신은 해커에게 골드를 지불하고 작업을 중단시켰다.",
+							"speaker": "narrator"
+						},
+						{
+							"speaker": "hacker",
+							"text": "역시 돈이 최고지. 그럼 이만."
+						},
+						{
+							"speaker": "kai",
+							"text": "돈으로 평화를 사는 것도 나쁘지 않네."
+						}
+					],
+					"text": "해커에게 데이터 유출을 멈추는 대가로 골드를 지불한다.",
+					"effects": {
+						"community": 10,
+						"echo": 5,
+						"gold": -120
+					},
+					"path": "gold",
+					"reward": []
+				}
+			]
+		}
+	],
+	"errors": []
+}

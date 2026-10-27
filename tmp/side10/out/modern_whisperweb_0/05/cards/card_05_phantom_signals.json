@@ -1,0 +1,179 @@
+{
+	"id": "card_05_phantom_signals",
+	"title": {
+		"korean": "유령 신호에 시달리는 심령 연구가"
+	},
+	"tags": [
+		"phantom"
+	],
+	"intensity": "high",
+	"after_story": 7,
+	"before_story": 10,
+	"background_tags": [
+		"중앙_제어실",
+		"대기실",
+		"유령_신호",
+		"미스터리",
+		"혼란"
+	],
+	"dialogue": [
+		{
+			"speaker": "narrator",
+			"content": {
+				"korean": "중앙 제어실 옆 대기실, 심령 연구가가 두 손으로 머리를 감싸고 있었다."
+			}
+		},
+		{
+			"speaker": "psychic_researcher",
+			"content": {
+				"korean": "으윽, 제어실로 가는 길에 이 데이터 조각들이 계속 이상한 신호를 보내서…"
+			}
+		},
+		{
+			"speaker": "psychic_researcher",
+			"content": {
+				"korean": "내 연구도, 당신이 조각을 맞추는 일도, 모든 게 엉망진창이야!"
+			}
+		},
+		{
+			"speaker": "echo",
+			"content": {
+				"korean": "저 사람이 많이 힘들어 보여."
+			}
+		},
+		{
+			"speaker": "psychic_researcher",
+			"content": {
+				"korean": "모든 존재가… 연결된다… 헛소리라고 생각했지. 하지만 지금은…"
+			}
+		},
+		{
+			"speaker": "echo",
+			"content": {
+				"korean": "저 유령 신호 때문에 우리가 집중할 수 없어."
+			}
+		}
+	],
+	"choices": [
+		{
+			"text": {
+				"korean": "연구가의 장비를 슬쩍 조작해 당신에게 유리한 정보를 얻는다."
+			},
+			"path": "easy",
+			"mbti": "TP",
+			"effects": {
+				"gold": 100,
+				"reason": -15,
+				"fighting": 15
+			},
+			"reward": [
+				"shield"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "당신은 연구가의 장비 설정을 바꾸어 데이터를 가로챘다."
+					}
+				},
+				{
+					"speaker": "psychic_researcher",
+					"content": {
+						"korean": "어? 신호가 잠잠해졌군. 고마워!"
+					}
+				},
+				{
+					"speaker": "echo",
+					"content": {
+						"korean": "뭔가 방어력이 생긴 것 같아!"
+					}
+				}
+			]
+		},
+		{
+			"text": {
+				"korean": "연구가의 장비를 점검하며 유령 신호의 원인을 함께 찾는다."
+			},
+			"path": "hard",
+			"mbti": "SF",
+			"effects": {
+				"community": 20,
+				"echo": -10,
+				"reason": 10
+			},
+			"reward": [
+				"move_range_down"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "당신은 연구가의 장비를 꼼꼼히 살피며 원인 모를 신호를 분석했다."
+					}
+				},
+				{
+					"speaker": "psychic_researcher",
+					"content": {
+						"korean": "덕분에 좀 나아졌어. 고마워."
+					}
+				},
+				{
+					"speaker": "echo",
+					"content": {
+						"korean": "너무 지체되고 있어. 몸이 무거워지는 것 같아."
+					}
+				}
+			]
+		},
+		{
+			"text": {
+				"korean": "유령 신호를 일시적으로 차단하는 장치를 구매한다."
+			},
+			"path": "gold",
+			"mbti": "EN",
+			"require": {
+				"stat": "gold",
+				"op": ">=",
+				"value": 100
+			},
+			"effects": {
+				"gold": -100,
+				"reason": 10,
+				"echo": 5
+			},
+			"reward": [
+				"heal"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "당신은 임시 차단 장치를 설치했다. 주변의 혼란스러운 신호가 사라졌다."
+					}
+				},
+				{
+					"speaker": "psychic_researcher",
+					"content": {
+						"korean": "이제야 숨통이 트이는군."
+					}
+				},
+				{
+					"speaker": "echo",
+					"content": {
+						"korean": "이대로라면 어떤 공격도 막아낼 수 있을 것 같아."
+					}
+				}
+			]
+		}
+	],
+	"_slot": {
+		"room": 8,
+		"must": "중앙 제어실로 가는 길에 사람들이 데이터 스크린 조각을 맞추려는 주인공을 막아서며 혼란을 부추긴다.",
+		"must_line": "제어실로 가는 길에 이 데이터 조각들이 계속 이상한 신호를 보내서… 내 연구도, 당신이 조각을 맞추는 일도, 모든 게 엉망진창이야!",
+		"hint_line": "모든 존재가… 연결된다… 헛소리라고 생각했지. 하지만 지금은…",
+		"event": "심령 연구가가 당신이 맞추려는 데이터 조각들 때문에 환영과 유령 신호에 시달린다며 도움을 요청한다."
+	}
+}

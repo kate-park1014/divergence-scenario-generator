@@ -1,0 +1,72 @@
+{
+  "issues": [
+    {
+      "item": "R5",
+      "block": "dialogue",
+      "order": 1,
+      "index": 11,
+      "quote": "자기 구역만 챙기는 소리처럼 들리는군.",
+      "room": 1,
+      "fix": "일반 보스의 경고를 그 사람의 사정으로 이해하되, 비난하거나 비웃는 듯한 어조를 사용하지 않도록 수정한다. (예: \"당신은 이 구역을 지키려는 거겠지만, 지금은 에코를 돕는 게 우선이야.\")",
+      "problem": "파티가 일반 보스의 경고를 자기 구역만 챙기는 이기적인 말로 치부하며 비웃는 듯한 태도를 보인다.",
+      "quote_found": true
+    },
+    {
+      "index": 3,
+      "order": 1,
+      "room": 5,
+      "block": "dialogue",
+      "problem": "최종보스 '위스퍼 웹'의 이름이 이 화에서 아무런 소개 없이 에코의 대사로 처음 등장한다.",
+      "fix": "'위스퍼 웹'이라는 이름이 등장하기 전에, 이 존재에 대한 정보나 이름이 언급되는 장면을 추가한다. (예: 낡은 문서에서 이름이 발견되거나, NPC가 그 존재에 대해 어렴풋이 언급하는 등)",
+      "quote": "이게 혹시... 위스퍼 웹이 말한 '새로운 질서'라는 건가?",
+      "item": "R1",
+      "quote_found": true
+    },
+    {
+      "room": 5,
+      "problem": "파티가 '위스퍼 웹'이 누구인지 묻는 중요한 질문을 던졌으나, 같은 방 안에서 답을 얻지 못하고 넘어간다.",
+      "quote": "위스퍼 웹? 그게 누군데?",
+      "order": 1,
+      "index": 4,
+      "item": "R2",
+      "fix": "파티의 질문에 대해 낡은 문서나 다른 NPC의 대사를 통해 '위스퍼 웹'에 대한 최소한의 정보를 제공하여 질문에 답한다.",
+      "block": "dialogue",
+      "quote_found": true
+    }
+  ],
+  "codeErrors": [],
+  "attempts": [
+    {
+      "edits": [
+        {
+          "room": 1,
+          "index": 11,
+          "text": "당신은 이 구역을 지키려는 거겠지만, 에코의 상황도 좋지 않아.",
+          "speaker": "character_any",
+          "op": "replace",
+          "block": "dialogue"
+        },
+        {
+          "index": 2,
+          "room": 5,
+          "op": "insert_after",
+          "text": "낡은 전산실의 벽 한쪽에서 '위스퍼 웹'이라는 이름이 희미하게 적힌 낙서가 발견된다.",
+          "speaker": "narrator",
+          "block": "dialogue"
+        },
+        {
+          "text": "오래된 문서 보관함에서 '위스퍼 웹'이라는 이름과 함께, 그들이 '모든 것을 뒤섞어라'는 지침을 내렸다는 낡은 쪽지가 발견된다.",
+          "room": 5,
+          "block": "dialogue",
+          "op": "replace",
+          "index": 5,
+          "speaker": "narrator"
+        }
+      ],
+      "skipped": [],
+      "newErrors": []
+    }
+  ],
+  "kept": true,
+  "codeErrorsAfter": []
+}

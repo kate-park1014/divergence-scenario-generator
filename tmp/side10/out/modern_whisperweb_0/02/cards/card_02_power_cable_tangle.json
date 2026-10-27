@@ -1,0 +1,179 @@
+{
+	"id": "card_02_power_cable_tangle",
+	"title": {
+		"korean": "엉킨 전원 케이블 논쟁"
+	},
+	"tags": [
+		"power"
+	],
+	"intensity": "high",
+	"after_story": 5,
+	"before_story": 7,
+	"background_tags": [
+		"전산실",
+		"케이블",
+		"소란",
+		"다툼",
+		"라디오"
+	],
+	"dialogue": [
+		{
+			"speaker": "narrator",
+			"content": {
+				"korean": "낡은 전산실, 두 정비사가 엉킨 전원 케이블 앞에서 언성을 높이고 있다."
+			}
+		},
+		{
+			"speaker": "mechanic_a",
+			"content": {
+				"korean": "케이블이 너무 엉켰잖아! 이러다 큰 사고 나겠어."
+			}
+		},
+		{
+			"speaker": "mechanic_b",
+			"content": {
+				"korean": "엉망진창이라 위험하긴 해도, 지금 표지판들 다 꺼져서 작업할 시간은 충분하잖아! 이 정도면 괜찮아."
+			}
+		},
+		{
+			"speaker": "lin",
+			"content": {
+				"korean": "저 둘이 또 싸우네."
+			}
+		},
+		{
+			"speaker": "mechanic_a",
+			"content": {
+				"korean": "저 라디오에서 '모든 비밀이… 연결된다…'는 이상한 소리만 자꾸 들려 신경 쓰여 죽겠어!"
+			}
+		},
+		{
+			"speaker": "lin",
+			"content": {
+				"korean": "우리가 나서야 할 것 같아."
+			}
+		}
+	],
+	"choices": [
+		{
+			"text": {
+				"korean": "당장 위험하지 않으니 그대로 두게 한다."
+			},
+			"path": "easy",
+			"mbti": "SP",
+			"effects": {
+				"gold": 50,
+				"fighting": 20
+			},
+			"reward": [
+				"move_range_up"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "당장 위험하지 않으니 그대로 두게 했다."
+					}
+				},
+				{
+					"speaker": "mechanic_b",
+					"content": {
+						"korean": "역시! 현명한 판단입니다."
+					}
+				},
+				{
+					"speaker": "lin",
+					"content": {
+						"korean": "소란은 여전하지만, 일단 급한 불은 껐네."
+					}
+				}
+			]
+		},
+		{
+			"text": {
+				"korean": "시간을 들여 케이블을 정리하고 다른 작업 방법을 찾는다."
+			},
+			"path": "hard",
+			"mbti": "FJ",
+			"effects": {
+				"community": 20,
+				"echo": -10
+			},
+			"reward": [
+				"shield"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "시간을 들여 케이블을 정리하게 했다."
+					}
+				},
+				{
+					"speaker": "mechanic_a",
+					"content": {
+						"korean": "감사합니다! 훨씬 낫네요."
+					}
+				},
+				{
+					"speaker": "lin",
+					"content": {
+						"korean": "잠시 불편하겠지만, 안전을 생각하는 게 중요해."
+					}
+				}
+			]
+		},
+		{
+			"text": {
+				"korean": "전문 업체를 불러 완벽하게 재정비하게 한다."
+			},
+			"path": "gold",
+			"mbti": "IT",
+			"require": {
+				"stat": "gold",
+				"op": ">=",
+				"value": 150
+			},
+			"effects": {
+				"gold": -150,
+				"reason": 30
+			},
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "전문 업체를 불러 모든 케이블을 재정비하게 했다."
+					}
+				},
+				{
+					"speaker": "mechanic_a",
+					"content": {
+						"korean": "완벽합니다!"
+					}
+				},
+				{
+					"speaker": "mechanic_b",
+					"content": {
+						"korean": "돈은 좀 들었지만, 불만은 없네요."
+					}
+				},
+				{
+					"speaker": "lin",
+					"content": {
+						"korean": "깔끔하게 해결했네!"
+					}
+				}
+			]
+		}
+	],
+	"_slot": {
+		"room": 6,
+		"must": "도시의 디지털 표지판들이 모두 꺼져 잠시 동안 정상으로 돌아온 것처럼 보인다.",
+		"must_line": "엉망진창이라 위험하긴 해도, 지금 표지판들 다 꺼져서 작업할 시간은 충분하잖아! 이 정도면 괜찮아.",
+		"hint_line": "저 라디오에서 '모든 비밀이… 연결된다…'는 이상한 소리만 자꾸 들려 신경 쓰여 죽겠어!",
+		"event": "두 정비사가 엉킨 전원 케이블 문제로 다투고 당신에게 판단을 요구한다."
+	}
+}

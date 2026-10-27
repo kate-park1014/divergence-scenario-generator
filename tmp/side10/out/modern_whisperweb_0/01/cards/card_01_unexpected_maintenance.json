@@ -1,0 +1,174 @@
+{
+	"id": "card_01_unexpected_maintenance",
+	"title": {
+		"korean": "엉뚱한 정비"
+	},
+	"tags": [
+		"unexpected"
+	],
+	"intensity": "high",
+	"after_story": 7,
+	"before_story": 10,
+	"background_tags": [
+		"전산실",
+		"장비",
+		"수리",
+		"스파크",
+		"진단기"
+	],
+	"dialogue": [
+		{
+			"speaker": "narrator",
+			"content": {
+				"korean": "당신은 낡은 서버 랙 옆, 정비 기사 앞을 지나고 있다."
+			}
+		},
+		{
+			"speaker": "engineer",
+			"content": {
+				"korean": "젠장, 진단 스크린이 또 이래! 엉뚱한 정보만 보여줘!"
+			}
+		},
+		{
+			"speaker": "engineer",
+			"content": {
+				"korean": "아니, 이 장비가 '정상 작동 중'이라고? 지금 불꽃이 튀는데!"
+			}
+		},
+		{
+			"speaker": "echo",
+			"content": {
+				"korean": "어휴, 저 아저씨 진짜 짜증 나 보이는데. 저러다 장비 다 망가지겠어."
+			}
+		},
+		{
+			"speaker": "engineer",
+			"content": {
+				"korean": "어떤 놈이 버린 문서함에서 '모든 걸 뒤섞어라'는 쪽지를 봤는데, 그게 뭔 소린지."
+			}
+		},
+		{
+			"speaker": "engineer",
+			"content": {
+				"korean": "이 장비, 어디가 고장 난 건지 좀 봐줄 수 있겠어?"
+			}
+		}
+	],
+	"choices": [
+		{
+			"text": {
+				"korean": "대충 눈에 띄는 고장 부위를 지적한다."
+			},
+			"path": "easy",
+			"mbti": "SP",
+			"effects": {
+				"gold": 80,
+				"reason": -15
+			},
+			"reward": [
+				"stun"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "당신은 보이는 대로 장비의 한 부분을 가리켰다."
+					}
+				},
+				{
+					"speaker": "engineer",
+					"content": {
+						"korean": "음… 알았어. 일단 해 볼게. 고마워."
+					}
+				},
+				{
+					"speaker": "echo",
+					"content": {
+						"korean": "너무 무모한 거 아니야? 잘 될까 모르겠네."
+					}
+				}
+			]
+		},
+		{
+			"text": {
+				"korean": "진단 기록을 자세히 확인하며 정확한 고장 부위를 찾아낸다."
+			},
+			"path": "hard",
+			"mbti": "TJ",
+			"effects": {
+				"gold": -5,
+				"echo": 8,
+				"community": 15
+			},
+			"reward": [
+				"cooldown_reset"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "당신은 꼼꼼하게 진단 기록을 살피고 정확한 고장 부위를 찾아냈다."
+					}
+				},
+				{
+					"speaker": "engineer",
+					"content": {
+						"korean": "오, 이거였군! 덕분에 살았어. 정말 고마워!"
+					}
+				},
+				{
+					"speaker": "echo",
+					"content": {
+						"korean": "역시 침착하게 하는 게 최고지! 훌륭했어."
+					}
+				}
+			]
+		},
+		{
+			"text": {
+				"korean": "새 부품을 사서 고장 난 부분을 완전히 교체한다."
+			},
+			"path": "gold",
+			"mbti": "NF",
+			"require": {
+				"stat": "gold",
+				"op": ">=",
+				"value": 120
+			},
+			"effects": {
+				"fighting": -10,
+				"gold": -120
+			},
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "당신은 정비 기사에게 새 부품 값을 건넸다."
+					}
+				},
+				{
+					"speaker": "engineer",
+					"content": {
+						"korean": "오! 이렇게 깔끔하게 해결하다니. 고마워!"
+					}
+				},
+				{
+					"speaker": "echo",
+					"content": {
+						"korean": "돈으로 해결하니 속이 편하긴 하네. 좋은 방법이야."
+					}
+				}
+			]
+		}
+	],
+	"_slot": {
+		"room": 8,
+		"must": "낡은 전산실의 안내 스크린에 엉뚱한 정보가 짧게 깜빡이며 사람들이 혼란스러워한다.",
+		"must_line": "아니, 이 장비가 '정상 작동 중'이라고? 지금 불꽃이 튀는데!",
+		"hint_line": "어떤 놈이 버린 문서함에서 '모든 걸 뒤섞어라'는 쪽지를 봤는데, 그게 뭔 소린지.",
+		"event": "정비 기사가 엉뚱한 화면 때문에 장비 진단에 실패하고 당신에게 도움을 청한다."
+	}
+}

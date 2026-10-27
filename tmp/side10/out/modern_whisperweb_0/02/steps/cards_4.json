@@ -1,0 +1,393 @@
+{
+	"cards": [
+		{
+			"title": "낡은 배선 수리",
+			"people": [
+				{
+					"id": "technician_old",
+					"role": "비상 전력실의 낡은 배선을 수리하는 사람",
+					"name": "노련한 기술자"
+				}
+			],
+			"must_line": "저 스파크… 전력 공급이 불안정해진 것 같아요.",
+			"event": "전기 기술자가 오래된 배선 때문에 당신에게 도움을 요청한다.",
+			"background_tags": [
+				"전력실",
+				"배선",
+				"도구",
+				"스파크",
+				"작업중"
+			],
+			"intensity": "calm",
+			"key": "old_wiring_repair",
+			"dialogue": [
+				{
+					"speaker": "narrator",
+					"text": "비상 전력실 안, 노련한 기술자가 낡은 배선 앞에 쪼그려 앉아 있다."
+				},
+				{
+					"text": "한 전력 공급 장치에서는 끊임없이 스파크가 튀고 있었다.",
+					"speaker": "narrator"
+				},
+				{
+					"speaker": "technician_old",
+					"text": "아이고, 젠장. 이 낡은 배선이 또 말썽이네."
+				},
+				{
+					"speaker": "lin",
+					"text": "저 스파크… 전력 공급이 불안정해진 것 같아요."
+				},
+				{
+					"speaker": "technician_old",
+					"text": "맞아, 큰일 나기 전에 빨리 잡아야 하는데… 공구통이 저 안쪽에 끼었어."
+				},
+				{
+					"speaker": "technician_old",
+					"text": "당신이 잠깐만 이 전선들 좀 잡아줄 수 있겠나?"
+				}
+			],
+			"choices": [
+				{
+					"effects": {
+						"gold": 100,
+						"reason": -10
+					},
+					"mbti": "SP",
+					"result": [
+						{
+							"text": "당신은 전선을 대충 묶어 고정하고 급히 자리를 떴다.",
+							"speaker": "narrator"
+						},
+						{
+							"speaker": "narrator",
+							"text": "기술자는 불안한 듯 당신의 뒷모습을 바라봤다."
+						},
+						{
+							"speaker": "lin",
+							"text": "좀 위험해 보였지만, 급하니까 어쩔 수 없었겠죠?"
+						}
+					],
+					"text": "위험한 전선을 대충 고정하고 서둘러 자리를 뜬다.",
+					"reward": [
+						"attack_up"
+					],
+					"path": "easy"
+				},
+				{
+					"mbti": "FJ",
+					"text": "기술자를 도와 공구통을 꺼내고 작업을 돕는다.",
+					"path": "hard",
+					"effects": {
+						"community": 20,
+						"echo": 10,
+						"gold": -50
+					},
+					"reward": [
+						"defense_up"
+					],
+					"result": [
+						{
+							"text": "당신은 기술자를 도와 공구통을 꺼내고 불안정한 전선을 함께 잡았다.",
+							"speaker": "narrator"
+						},
+						{
+							"text": "기술자는 한숨을 돌리며 고맙다고 인사했다.",
+							"speaker": "narrator"
+						},
+						{
+							"text": "휴, 덕분에 큰일 막았어. 고마워!",
+							"speaker": "technician_old"
+						},
+						{
+							"speaker": "lin",
+							"text": "당신 덕분에 이 건물이 더 큰 혼란에 빠질 뻔한 걸 막았어요."
+						}
+					]
+				},
+				{
+					"result": [
+						{
+							"text": "당신은 기술자에게 돈을 건네고 확실한 수리를 부탁했다.",
+							"speaker": "narrator"
+						},
+						{
+							"speaker": "technician_old",
+							"text": "이 정도면 완벽하게 고쳐 놓지! 걱정 마!"
+						},
+						{
+							"text": "돈으로 해결하는 것도 나쁘지 않은 방법이네요.",
+							"speaker": "lin"
+						}
+					],
+					"reward": [],
+					"path": "gold",
+					"text": "기술자에게 충분한 돈을 주고 배선 수리를 맡긴다.",
+					"effects": {
+						"reason": 10,
+						"fighting": -10,
+						"gold": -100
+					},
+					"mbti": "TJ"
+				}
+			]
+		},
+		{
+			"people": [
+				{
+					"role": "낡은 전산 부품을 수집하는 사람",
+					"id": "recycler",
+					"name": "부품 재활용업자"
+				}
+			],
+			"event": "부품 재활용업자가 당신에게 비상 전력실의 부품을 가져가게 해달라고 요청한다.",
+			"title": "부품 재활용 요청",
+			"background_tags": [
+				"전력실",
+				"재활용",
+				"부품",
+				"스파크",
+				"거래"
+			],
+			"must_line": "저 스파크가 심상치 않아요. 전력 공급 장치에 문제가 생긴 것 같아요.",
+			"dialogue": [
+				{
+					"speaker": "narrator",
+					"text": "비상 전력실의 한구석, 부품 재활용업자가 커다란 자루를 들고 서 있다."
+				},
+				{
+					"text": "그는 불안하게 스파크가 튀는 전력 공급 장치를 흘끗 보았다.",
+					"speaker": "narrator"
+				},
+				{
+					"speaker": "recycler",
+					"text": "이봐요, 잠깐만요! 저기 저 쓸모없는 부품들, 제가 좀 가져가도 될까요?"
+				},
+				{
+					"text": "저 스파크가 심상치 않아요. 전력 공급 장치에 문제가 생긴 것 같아요.",
+					"speaker": "lin"
+				},
+				{
+					"text": "쳇, 저런 고물이나 신경 쓰지 말고, 저기 저 쓸만한 부품들 말이에요!",
+					"speaker": "recycler"
+				},
+				{
+					"text": "당신이 눈감아 주면, 제가 특별히 보답할게요.",
+					"speaker": "recycler"
+				}
+			],
+			"choices": [
+				{
+					"effects": {
+						"gold": 70,
+						"community": -15
+					},
+					"result": [
+						{
+							"text": "당신은 재활용업자의 제안을 받아들여 그가 부품을 가져가게 했다.",
+							"speaker": "narrator"
+						},
+						{
+							"text": "그는 약속대로 당신에게 작은 부품 하나를 건넸다.",
+							"speaker": "narrator"
+						},
+						{
+							"text": "저 부품이 어디에 쓰일지는 모르겠지만, 일단 받았으니 좋네요.",
+							"speaker": "lin"
+						}
+					],
+					"reward": [
+						"intelligence_up"
+					],
+					"mbti": "ES",
+					"path": "easy",
+					"text": "재활용업자의 요구를 들어주고 작은 부품 하나를 받는다."
+				},
+				{
+					"result": [
+						{
+							"text": "당신은 단호하게 재활용업자를 막아섰고, 그는 불평하며 물러났다.",
+							"speaker": "narrator"
+						},
+						{
+							"text": "칫, 당신 때문에 내 사업 망하겠네!",
+							"speaker": "recycler"
+						},
+						{
+							"text": "잘하셨어요. 저런 행동은 용납할 수 없죠.",
+							"speaker": "lin"
+						}
+					],
+					"reward": [
+						"shield"
+					],
+					"effects": {
+						"echo": 5,
+						"gold": -30,
+						"fighting": 20
+					},
+					"mbti": "EJ",
+					"text": "재활용업자에게 경고하고, 부품을 가져가지 못하게 막는다.",
+					"path": "hard"
+				},
+				{
+					"result": [
+						{
+							"speaker": "narrator",
+							"text": "당신은 재활용업자에게 돈을 건네 그를 조용히 돌려보냈다."
+						},
+						{
+							"text": "흠, 뭐… 당신이 정 그렇다면야.",
+							"speaker": "recycler"
+						},
+						{
+							"text": "복잡한 일을 돈으로 간단하게 해결했네요.",
+							"speaker": "lin"
+						}
+					],
+					"reward": [],
+					"path": "gold",
+					"text": "재활용업자에게 금품을 주고 조용히 물러나게 한다.",
+					"effects": {
+						"gold": -80,
+						"reason": 10
+					},
+					"mbti": "IT"
+				}
+			],
+			"intensity": "high",
+			"key": "component_recycling_request"
+		},
+		{
+			"background_tags": [
+				"전력실",
+				"안전",
+				"검사",
+				"스파크",
+				"규칙"
+			],
+			"title": "비상 발전기 검사",
+			"key": "emergency_generator_inspection",
+			"event": "안전 관리원이 비상 발전기 검사를 이유로 당신에게 길을 막아선다.",
+			"intensity": "calm",
+			"people": [
+				{
+					"id": "safety_officer",
+					"name": "안전 관리원",
+					"role": "비상 전력실의 안전을 담당하는 사람"
+				}
+			],
+			"choices": [
+				{
+					"result": [
+						{
+							"speaker": "narrator",
+							"text": "당신은 서류를 대충 훑어보고 급한 볼일을 강조하며 통과를 요청했다."
+						},
+						{
+							"text": "으음… 알겠습니다. 하지만 조심해서 다니세요.",
+							"speaker": "safety_officer"
+						},
+						{
+							"speaker": "lin",
+							"text": "다행히 통과할 수 있었네요."
+						}
+					],
+					"reward": [
+						"move_range_up"
+					],
+					"path": "easy",
+					"text": "검사 서류를 대충 확인하고 통과를 요청한다.",
+					"effects": {
+						"gold": 50,
+						"reason": -10
+					},
+					"mbti": "EP"
+				},
+				{
+					"text": "안전 관리원의 지시에 따라 검사가 끝날 때까지 기다린다.",
+					"path": "hard",
+					"result": [
+						{
+							"text": "당신은 안전 관리원의 지시에 따라 검사가 끝날 때까지 기다렸다.",
+							"speaker": "narrator"
+						},
+						{
+							"text": "검사를 마친 관리원이 당신에게 길을 열어주었다.",
+							"speaker": "narrator"
+						},
+						{
+							"speaker": "safety_officer",
+							"text": "검사 완료. 이제 지나가셔도 좋습니다."
+						},
+						{
+							"text": "잘 참으셨어요. 덕분에 괜한 마찰을 피했어요.",
+							"speaker": "lin"
+						}
+					],
+					"reward": [
+						"heal"
+					],
+					"mbti": "IJ",
+					"effects": {
+						"echo": 10,
+						"community": 10,
+						"gold": -50
+					}
+				},
+				{
+					"mbti": "SP",
+					"effects": {
+						"fighting": -10,
+						"community": -10,
+						"gold": -120
+					},
+					"reward": [],
+					"result": [
+						{
+							"speaker": "narrator",
+							"text": "당신은 안전 관리원에게 돈을 건네고 통과를 부탁했다."
+						},
+						{
+							"speaker": "safety_officer",
+							"text": "흠… 다음부터는 이런 일이 없도록 해주시죠."
+						},
+						{
+							"speaker": "lin",
+							"text": "돈으로 해결하는 게 가장 빠른 방법일 때도 있죠."
+						}
+					],
+					"text": "안전 관리원에게 뇌물을 주고 통과하게 한다.",
+					"path": "gold"
+				}
+			],
+			"must_line": "저 스파크 소리… 전력 시스템에 문제가 생긴 것 같아요.",
+			"dialogue": [
+				{
+					"speaker": "narrator",
+					"text": "비상 전력실 입구, 안전 관리원이 서류철을 들고 당신 앞을 막아섰다."
+				},
+				{
+					"text": "그의 등 뒤, 전력 공급 장치에서 규칙적으로 스파크가 튀는 소리가 들려왔다.",
+					"speaker": "narrator"
+				},
+				{
+					"text": "멈추세요! 지금은 비상 발전기 정기 검사 중입니다.",
+					"speaker": "safety_officer"
+				},
+				{
+					"text": "저 스파크 소리… 전력 시스템에 문제가 생긴 것 같아요.",
+					"speaker": "lin"
+				},
+				{
+					"speaker": "safety_officer",
+					"text": "네, 그래서 더 철저히 검사해야 합니다. 혹시 이상을 발견하셨다면 말씀해 주세요."
+				},
+				{
+					"text": "당신은 지금 여기를 지나갈 수 없습니다.",
+					"speaker": "safety_officer"
+				}
+			]
+		}
+	],
+	"errors": []
+}

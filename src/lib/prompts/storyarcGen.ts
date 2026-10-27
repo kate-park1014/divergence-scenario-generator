@@ -82,86 +82,73 @@ export const CLARITY_RULES = `# 명확성 규칙 (중요)
   - 결과도 눈에 보이는 장면으로 쓴다. 나쁜 예: "새로운 시대를 맞이한다" / "진정한 평화가 온다". 좋은 틀: "[1~4화에서 망가진 바로 그것]이 [눈에 보이게] 되돌아온다"
 - 복선 hint 는 소문·속삭임·전해 들은 말이 아니라 주인공이 직접 보거나 겪는 일로 쓴다`;
 
-// 이야기 구조 규칙: 단순하고 어느 화부터 읽어도 이해되는 이야기. 재작업 프롬프트가 쓴다.
+// 이야기 구조 규칙: 1~5화가 이어지는 이야기. 주인공은 화마다 배우지만 매번 새 방식으로 속는다. 재작업 프롬프트가 쓴다.
 // 1~4화에 최종보스가 흔적(boss_trace)으로 나오는 구조라, 챕터 생성이 이를 지원하기 전까지 신규 생성에는 넣지 않는다.
-export const STORY_STRUCTURE_RULES = `# 이야기 구조 규칙 (가장 중요) — 단순하고, 어느 화부터 읽어도 이해되는 이야기
-- 1화 = scenarioOutline order 1, … 5화 = order 5
+// 글자 수·호칭 겹침 같은 세부 형식은 코드 검사(rewrite/+server.ts)가 잡고 오류 문구로 고치게 한다. 여기에는 이야기 규칙만 둔다.
+export const STORY_STRUCTURE_RULES = `# 쉬운 이야기 (가장 중요)
+- 처음 읽는 사람이 **한 번 읽고 다 이해**해야 한다. 각 화 summary 에 누가, 무엇을, 왜 했고, 그래서 무엇이 됐는지가 모두 있다
+- 핵심 물건(key_object)은 **누구나 아는 일상 물건** 하나다. 손에 들 수 있고, 이름만 들어도 모양이 떠오르는 것 (10자 이내)
+  - 안 되는 것: 지어낸 물건, 만질 수 없는 것(빛·기운·잔상·기억·데이터·신호·그림자 등), 꾸밈말을 붙인 이름
+- 나쁜 결과도 눈에 보이는 일로 쓴다. "기억이 왜곡된다"보다 "사람들이 서로 이름을 바꿔 부른다"처럼
+- **왜 그런 일이 생기는지**를 정한다
+  - world.how: 그 물건이 어떻게 작동해서 나쁜 결과가 나는지 한 문장. "[핵심 물건]은 [무엇을 하는 물건]이라서, [wrong_action] 하면 [무엇이 어떻게 되어] [나쁜 결과]가 된다." 핵심 물건 이름이 들어간다
+  - final_boss.want: 보스가 이 일로 무엇을 얻는지 한 문장. "광기·혼란·지배"가 아니라 구체적인 이득 ("[무엇]을 손에 넣는다", "[누구]를 [어떻게] 만든다")
+  - 신기한 설정(마법·저주·이상한 기계)은 이 하나뿐이고, world.how 에 적은 것만 쓴다
+  - 주 NPC 의 곤란에도 이유가 있다. 그 화 summary 에 "[NPC]는 [무엇]을 잃어서(못 해서), [그게 없으면 무엇을 못 한다]"가 들어간다. "억울하다·힘들다"처럼 감정만 쓰지 않는다
+- 쉬운 말로, 비유 없이 쓴다. 같은 문장을 여러 화에 되풀이하지 않는다
 
-## 쓰는 순서: story_spine 을 가장 먼저 쓴다
-- story_spine 은 이야기 전체를 단순하게 줄인 뼈대다. 1~5화마다 1~2문장, 5화 문장에는 결말까지 넣는다
-  - 틀 (대괄호를 이 아크의 내용으로 채운다):
-    1화 "[주인공이 어디에서 무엇을 하는 상황]. [boss_trace]로 [보스 이름]이 '[wrong_action 을 권하는 말]'이라고 한다. 주인공은 [wrong_action]."
-    2~4화 "[그 화의 상황]. 주인공은 [wrong_action]. 그러자 [world.rule 의 결과가 앞 화보다 커진 모습]."
-    5화 "[보스가 처음으로 모습을 드러내며 right_action 을 막아서는 모습]. 주인공은 [right_action]. [보스가 무너지는 모습]. [망가졌던 것이 되돌아오는 모습]."
-- 각 화마다 protagonist_action 에 그 화에서 주인공이 핵심 물건으로 하는 행동을 적는다. 1~4화는 wrong_action, 5화는 right_action 과 글자 그대로 같다
-- 쉬운 말로, 비유 없이, 눈에 보이는 일만 쓴다
-- 나머지 필드는 모두 story_spine 을 풀어 쓴 것이다. story_spine 에 없는 설정·규칙·물건·반전을 더하거나 바꾸지 않는다
+# 이야기 구조 — 화마다 배우지만, 매번 새 방식으로 속는 주인공
+- 1화 = scenarioOutline order 1, … 5화 = order 5. 1~5화는 이어지는 이야기다 (2~4화는 앞 화가 남긴 피해에서 출발한다)
+- 1화: 주인공이 누군가를 돕기 위해 wrong_action 을 한다. 당장은 효과가 있다가, 나쁜 결과(world.rule)가 드러난다
+- 2~4화: 주인공은 앞 화 행동을 다시 하지 않는다. 앞 화 피해를 막거나 눈앞의 사람을 돕기 위해, 핵심 물건과 상관없어 보이는 **다른 물건·장치**를 다룬다. 그런데 그 안에 핵심 물건이 숨어 있거나 이어져 있어서(주인공은 모른다), 결국 wrong_action 을 한 것과 같은 결과가 또 난다
+- 5화: 1~4화의 행동이 모두 같은 일이었고 그 뒤에 최종보스가 있었다는 것이 드러난다. 주인공은 right_action 으로 바로잡는다
+- 주인공은 바보가 아니다. 2화부터는 조심한다(확인하기·의심하기·피하기·망설이기). 그래도 그 화의 "속는 방식"(USER 섹션) 때문에 결국 그 화 행동에 이른다. 화마다 그 방식의 순서대로 쓴다
 
-## 화마다 달라지는 것 (같은 이야기가 반복되지 않게)
-- 1~4화에 주인공은 같은 wrong_action 을 하지만, 화마다 **장소·이유·대가**가 다르다
-  - 장소(place): scenarioOutline 각 화에 무대 안의 한 구역을 정한다. 15자 이내. 다섯 화 모두 다르다. 그 화 summary 에 나온다
-  - 이유: 주인공이 그 화에 wrong_action 을 하는 까닭이 화마다 다르다 (누군가의 부탁, 급한 위기, 보스의 거래 등)
-  - 대가: world.rule 의 나쁜 결과가 화마다 다른 사람·다른 물건에 닥친다. "더 많이·더 크게"만 커지는 것으로 쓰지 않는다
-- 2~4화 summary·story_spine 을 서로 바꿔 넣어도 말이 되면 안 된다
+# story_spine 을 가장 먼저 쓴다 (나머지 필드는 모두 이것을 풀어 쓴 것)
+- 화마다 1~3문장의 뼈대(line). 5화에는 결말까지
+- protagonist_action: 그 화 주인공의 행동. "[대상]을 [동사]한다". 1화는 wrong_action, 5화는 right_action 과 글자 그대로 같다. 2~4화는 핵심 물건 이름 없이, 화마다 다른 동사로
+- lesson (2~4화): "[앞 화 행동]이 [나쁜 결과]를 낳아서, 이번에는 [조심하는 모습]". 1·5화는 빈 문자열
+- hidden_link (1~4화): 그 행동이 왜 사실은 wrong_action 과 같은 일인지. 1화는 "wrong_action 그대로". 2~4화는 "[다룬 물건] 안에 [핵심 물건]이 [어떻게] 들어 있어서, [그 화 행동]을 하면 [핵심 물건]이 [어떻게] 되어 결국 [wrong_action] 것과 같아진다. 주인공이 못 보는 까닭: [까닭]". 5화에 눈에 보이게 드러난다 (1~4화 summary 에는 쓰지 않는다). 5화는 빈 문자열
 
-## 핵심 물건과 행동
-- 핵심 물건(key_object)을 **하나** 정한다. 10자 이내 짧은 명사구
-  - 1~5화 summary 에 모두 이 말 그대로 한 번 이상 나온다
-- 핵심 물건에 대한 행동은 두 가지만 있다. 그 밖의 행동(찢기·숨기기 등 다른 선택지)은 쓰지 않는다
-  - wrong_action: 1~4화에서 주인공이 하는, 보스와 주변 인물이 권하는 틀린 행동. "[핵심 물건]을 [동사]한다" 형태
-    - 주인공은 1~4화마다 이 행동을 **직접 한다**. 처음부터 정답 쪽에 서서 막기만 하면 안 된다. 주인공이 틀린 행동을 하고 그 결과(world.rule)를 겪어야 5화의 선택이 뒤집힘이 된다
-    - 한 NPC 가 정답 쪽을 말할 수는 있지만, 주인공은 4화까지 따르지 않는다
-  - right_action: 5화에서 주인공이 하는 정답 행동. "[핵심 물건]을 [동사]한다" 형태
-    - 눈에 보이는 행동이어야 한다. "~하지 않는다"처럼 안 하는 것은 정답 행동이 될 수 없다 (결말 장면이 사라진다)
-  - wrong_action 과 right_action 은 **서로 반대**인 행동이다 (부순다↔지킨다, 버린다↔맞춘다처럼). 뜻이 비슷한 동사(초기화한다↔재설정한다, 정리한다↔정돈한다)를 쓰지 않는다
-  - 1~4화에서는 아무도 right_action 을 하지 않는다. 시도하다 실패하거나 벌을 받는 장면도 쓰지 않는다 (정답이 위험해 보이게 된다)
-  - 5화의 결말 행동은 right_action 그대로다
-- 보스는 1~5화 내내 틀린 쪽이다. 1~4화에는 wrong_action 을 권하고, 5화에는 right_action 을 막는다
-- NPC 는 마음을 바꿔도 된다 (틀린 쪽 → 정답 쪽, 또는 그 반대)
-  - 마음을 바꾸는 NPC 는 아크당 **1명까지**. 그 NPC 는 npc_roles 에 turn_order(바꾸는 화 번호)와 turn_scene(바꾸는 이유가 되는 장면, 30자 이내)을 적는다. 다른 NPC 는 turn_order 0
-  - 그 화(turn_order) summary 에 그 NPC 이름과 turn_scene 장면이 들어간다. npc_roles 설명에만 쓰고 summary 에 빠뜨리면 안 된다
-  - 이유 장면 없이 편이 바뀌지 않는다. 바꾼 뒤에는 그 편을 유지한다
-- 복선에도 핵심 물건 외의 새 물건·장소를 넣지 않는다
+# 화마다 달라지는 것
+- 행동·장소(place, 무대 안의 한 구역)·이유·흔적이 화마다 다르다. 2~4화 summary 를 서로 바꿔 넣어도 말이 되면 안 된다
+- 나쁜 결과는 world.rule 과 같은 종류의 일이 화마다 **다른 사람·다른 물건**에 일어난다 (그래야 5화에 같은 일이었다는 것이 보인다)
 
-## 그 밖의 구조
-- 추상 개념이 아니라 눈에 보이는 물건·행동이 이야기를 움직인다. "기회", "굴레", "유예", "부적격" 같은 비유를 사건 대신 쓰지 않는다
-- 세계 규칙(world.rule)은 **한 문장**: "[wrong_action]을 하면 [눈에 보이는 나쁜 결과]가 일어난다"
-  - 핵심 물건 이름이 들어간다. right_action 이나 "~하지 않으면" 같은 다른 경우는 쓰지 않는다 (규칙이 여러 개가 된다)
-  - right_action 은 이 나쁜 결과를 끝내는 행동이다. 규칙이 right_action 을 벌주는 것처럼 읽히면 안 된다
-  - 나쁜 예: 규칙을 여러 개 두기 / 추상 규칙
-- 무엇이 위험하고 무엇이 정답인지 분명해야 한다. world.rule 이 위험이고, 5화의 결말 행동이 정답이다. 둘이 서로 맞아야 한다
-- 최종보스는 1화부터 **흔적으로** 나온다. 1~4화에는 얼굴·몸을 보이지 않는다
-  - boss_trace: 1~4화에 보스가 드러나는 매체 하나. 15자 이내 (예: "[장소]의 스피커 방송", "[물건] 화면의 문구", "문틈으로 들어오는 쪽지" 같은 틀). 보스 소재(appearance_npc·surface_identity)에 어울리는 것
-  - 1~4화 summary 에는 boss_trace 가 그대로 나오고, 보스의 말·지시는 그 매체로만 전해진다 (목소리·글자·물건). 보스가 나타나거나 다가오거나 웃는 등 얼굴·몸이 보이는 장면을 쓰지 않는다
-  - 5화에 보스가 처음으로 모습(appearance_boss)을 드러낸다
-  - boss_name_korean: final_boss.name(영어)을 소리 그대로 한국어로 옮긴 것. 다른 이름을 지어내지 않는다. 서사 문장에는 영어 이름 대신 이것만 쓴다. 1~4화 summary 에 모두 나온다
-  - 최종보스는 호칭(직업) 없이 이름(boss_name_korean)으로만 부른다. 이야기에서 가장 큰 존재라 직업으로 부르지 않는다
-  - npc_roles 의 각 NPC 에도 title(호칭, 10자 이내)을 정한다. summary 에서 NPC 를 직업·호칭으로 부를 때는 이 title 만 쓴다
-  - NPC 호칭들과 1~4화 일반 보스 직업(random_boss_title)들은 서로 단어 하나도 겹치지 않는다 (같은 단어도, 앞 두 글자가 같은 단어도 안 된다)
-  - 1~4화에서 보스에 대한 수상한 단서, 목적, 정체가 드러나도 된다. 드러난 뒤에도 보스는 계속 wrong_action 을 권한다
-  - 5화: 주인공이 right_action 을 하려 하면 보스가 처음으로 모습(appearance_boss)을 드러내며 막아선다 (빼앗기·공격·방해). 주인공이 해내면 보스가 무너진다
-  - 5화의 보스는 정답 행동을 반기거나 돕거나 그냥 물러나지 않는다. 끝까지 막다가 진다
-- 1~4화의 일반 보스(random_boss)는 **화마다 다른 인물**이다. 런타임에 무작위로 배정되어 외형·이름을 정할 수 없다
-  - scenarioOutline 1~4화마다 그 화 일반 보스의 직업(random_boss_title)을 정한다. 10자 이내. 무대(stage)에 있을 법한 사람이다
-  - 네 직업은 모두 다르다. 그 화 summary 에 그 직업이 그대로 나온다. 5화에는 random_boss_title 을 비운다
-  - 앞 화의 일반 보스를 기억하거나, 일반 보스끼리 이어지는 사연을 쓰지 않는다. 외형·이름·사연도 쓰지 않는다
-  - 일반 보스는 최종보스가 아니고, 최종보스가 위장하거나 변신한 모습도 아니다. 그 화에서 주인공을 막아서는 상대일 뿐이다
-  - 일반 보스는 **최종보스 편이 아니다. 경고하는 쪽**이다. 그 화에서 주인공이 wrong_action 을 하려는 것을 막아서며 경고한다. 경고 내용(world.rule 의 나쁜 결과)은 맞다
-    - 그 화 summary 의 일반 보스 문장에 핵심 물건이 나온다 (무엇을 막는지 분명하게)
-    - 다만 막는 까닭이 자기 사정(자기 일·구역·물건·규칙)처럼 보여서 주인공은 경고를 믿지 않는다. 그 화 summary 에 주인공이 경고를 믿지 않는 이유가 나온다 (자기 이익 때문에 막는 것처럼 보임, boss_trace·NPC 의 말이 더 그럴듯함 등)
-    - 주인공은 경고를 무시하고 wrong_action 을 하고, 경고대로 나쁜 결과를 겪는다. 5화에 주인공은 그 경고들이 맞았다는 것을 깨닫는다
-  - 일반 보스가 나오는 문장에는 "막아선다·가로막는다·덤빈다·저지한다·공격한다" 중 하나를 쓴다
-  - 일반 보스 문장에 목적·소원·사연("~을 영원히 하려 한다", "~을 원한다"), 최종보스 이름, 설득·권유·유혹을 쓰지 않는다. 일반 보스는 right_action 을 말하거나 하지 않는다 (정답은 5화에 주인공이 깨닫는다)
-  - 주인공을 설득하거나 유혹하는 말은 최종보스(boss_trace 로)와 NPC 가 한다
-- 화당 새 정보는 **하나**. 복선도 한 화에 하나만 심는다
-  - 1화는 소개 화다. 핵심 물건, 흔적(boss_trace)으로 나오는 보스, wrong_action 과 그 결과를 함께 보여 줘도 된다. 그 밖의 새 사실·새 미스터리는 넣지 않는다
-  - 2~4화 summary 에 새 의문·새 비밀(미스터리)은 한 가지만 둔다. 경고·권유·막기·나쁜 결과가 커지는 것은 새 미스터리로 세지 않는다
-- 각 summary 의 첫 문장은 그 화의 현재 상황을 그 문장만으로 알 수 있게 요약한다
-  - 첫 문장에 "~한 후", "~한 뒤", "~한 결과", "~하자,", "~에 따라", "~대로", "그 후" 처럼 앞 화 사건을 전제로 하는 말을 쓰지 않는다
-  - 첫 문장에 나오는 인물은 호칭과 함께 쓴다 (이름만 쓰면 앞 화를 모르는 사람은 누군지 모른다)
-- 서사 문장은 평문으로 쓴다. 마크다운(**), "(복선: …)" 같은 메모, 규칙 문구를 그대로 끼워 넣은 문장을 쓰지 않는다. 복선은 장면 속 일로 녹인다
-- 각 summary 는 앞 화를 몰라도 읽혀야 한다. 그 화에 나오는 NPC 가 누구인지, 지금 무엇이 문제인지를 그 summary 안에서 밝힌다
-- 한 화에 NPC 가 여러 명 나와도 된다. scenarioOutline 의 npc 는 그 화의 주 NPC 한 명(key 하나)이고, 다른 NPC 도 함께 나올 수 있다 (주어진 NPC 목록 안에서만)`;
+# 핵심 물건과 행동
+- wrong_action·right_action: "[핵심 물건]을 [동사]한다". 서로 반대 뜻이고, 둘 다 눈에 보이는 행동이다 ("~하지 않는다" 안 됨)
+- world.rule: 한 문장. "[wrong_action]을 하면 [눈에 보이는 나쁜 결과]가 일어난다". right_action 은 이 결과를 끝내는 행동이다
+- 1~4화에는 아무도 right_action 을 하지 않는다 (시도하다 실패하는 장면도 없음)
+- 1~5화 summary 에 핵심 물건 이름이 그대로 나온다. 복선에도 다른 새 물건을 넣지 않는다
+
+# 주인공 = 플레이어 = 히어로 (공감할 수 있게)
+- 주인공은 속는 사람이지 고집부리는 사람이 아니다. 그 순간 아는 것으로는 옳은 선택을 한다
+- 이유는 선하다: 사람 돕기, 부탁 들어주기, 위기 막기, 앞 화 피해 막기 (효율·호기심·이익·명령은 안 됨)
+- 그 화 행동은 당장 효과가 있고, 나쁜 결과는 그 뒤에 드러난다
+- NPC 는 주인공이 그 화 행동을 하기 전에 말리지 않는다 (청하거나, 권하거나, 함께 속는다). 결과를 보고 놀라는 것은 된다
+- 1~4화에 그 행동을 하지 말라고 경고하는 사람은 그 화의 warn 일반 보스뿐이다
+
+# 최종보스
+- 1~4화에는 얼굴·몸 없이 **흔적**(boss_trace)으로만 나온다: 목소리·글자·물건 같은 매체 하나, 15자 이내. 2~4화는 화마다 다른 종류의 매체 (주인공은 같은 존재인 줄 모른다)
+- 흔적의 말은 친절한 조언처럼 들리고 그 화 행동만 권한다 (정답 행동 비슷한 말은 안 함)
+- 1~4화 summary 에 그 화 흔적과 보스 이름(boss_name_korean, 영어 이름을 소리 그대로)이 나온다 (작가용 메모. 주인공이 이름을 아는 것은 아니다)
+- 5화: 주인공이 right_action 을 하려 하면 처음으로 모습(appearance_boss)을 드러내며 막아서고, 주인공이 해내면 무너진다. 정답을 돕거나 그냥 물러나지 않는다
+
+# 일반 보스 (1~4화, 화마다 다른 사람)
+- 화마다 직업(random_boss_title, 10자 이내)만 정한다. 이름·외형·사연은 없다. 최종보스와 다른 존재다
+- 그 화 summary 의 일반 보스 문장에는 "막아선다·가로막는다·덤빈다·저지한다·공격한다" 중 하나가 있다. 설득·권유·사연·최종보스 이름은 없다
+- 편은 USER 섹션 "일반 보스의 편" 그대로
+  - warn: 주인공이 그 화 행동을 하려는 것을 거칠게 막으며 경고한다 (경고 내용은 맞다). 그러나 막는 까닭이 자기 사정처럼 보여서 주인공은 믿지 않는다. 믿지 않는 이유가 summary 에 나온다
+  - ally: 주인공이 의심하거나 앞으로 나아가는 것을 막는다. 그 화 행동은 말리지 않는다
+
+# NPC
+- 주어진 NPC 만 쓴다. 각자 npc_roles 에 title(호칭)을 정하고, summary 에서 호칭은 이것만 쓴다
+- 마음을 바꾸는 NPC 는 아크당 1명까지 (turn_order·turn_scene). 바꾸는 화 summary 에 그 이유 장면이 있다
+
+# 쓰는 법
+- 화당 새 의문은 하나. 1화는 소개 화(핵심 물건·흔적·wrong_action 과 그 결과)
+- summary 첫 문장은 그 화의 지금 상황. 처음 나오는 인물은 호칭과 함께
+- 평문으로 쓴다 (마크다운·괄호 메모 없음)`;
+
 
 export function buildStoryarcPrompt(
 	boss: BossInput,
@@ -393,14 +380,82 @@ export type RewriteNpc = NpcInput & { persona?: string };
  * 나머지는 원본을 참고 자료로만 쓰고 새로 쓴다. 고정값은 orchestrator 가 출력 위에 다시 덮어쓴다.
  */
 export type UsedMaterial = { id: string; key_object?: string; stage?: string; rule?: string };
-export type RewriteOptions = { genre?: string; used?: UsedMaterial[] };
+export type BossSide = 'warn' | 'ally';
+export type DeceiveMode = NonNullable<StoryArc['scenarioOutline'][number]['deceive_mode']>;
+export type RewriteOptions = {
+	genre?: string;
+	used?: UsedMaterial[];
+	bossSides?: BossSide[];
+	deceiveModes?: DeceiveMode[];
+};
+
+const hashOf = (s: string) => {
+	let h = 2166136261;
+	for (const c of s) h = Math.imul(h ^ c.charCodeAt(0), 16777619) >>> 0;
+	return h;
+};
 
 // id 로 장르를 고정 (다시 돌려도 같은 장르)
 export function genreForId(id: string): string {
-	let h = 2166136261;
-	for (const c of id) h = Math.imul(h ^ c.charCodeAt(0), 16777619) >>> 0;
-	return VARIATION_POOLS.genre[h % VARIATION_POOLS.genre.length];
+	return VARIATION_POOLS.genre[hashOf(id) % VARIATION_POOLS.genre.length];
 }
+
+// id 로 1~4화 일반 보스의 편을 고정 (warn: 틀린 행동을 경고하며 막음 / ally: 최종보스 편). 스토리마다 조합이 다르다
+export function bossSidesForId(id: string): BossSide[] {
+	const bits = hashOf(`${id}:random_boss_side`) % 16;
+	return [0, 1, 2, 3].map((i) => ((bits >> i) & 1 ? 'warn' : 'ally'));
+}
+
+// 2~4화 속는 방식 후보. 아크마다 이 중 서로 다른 셋을 뽑는다 (후보가 많을수록 아크끼리 흐름이 덜 겹친다)
+// 새 방식을 넣을 때: 이야기 순서가 기존 방식과 달라야 함 (표현만 다르면 같은 이야기가 된다).
+// DECEIVE_MODE_LABEL 과 chapterGenRewrite.ts 의 modeScene, types 의 deceive_mode 에 함께 추가
+export const DECEIVE_MODE_POOL: DeceiveMode[] = [
+	'verify',
+	'npc_acts',
+	'avoid',
+	'pressure',
+	'undo',
+	'tradeoff',
+	'bait',
+	'piecemeal',
+	'gift'
+];
+
+// id 로 1~4화 속는 방식을 고정. 1화는 direct, 2~4화는 후보 중 서로 다른 셋 (매화 같은 순서로 속지 않게)
+export function deceiveModesForId(id: string): DeceiveMode[] {
+	const rest = [...DECEIVE_MODE_POOL];
+	const picked: DeceiveMode[] = [];
+	for (let i = 0; i < 3; i++) picked.push(rest.splice(hashOf(`${id}:deceive_mode:${i}`) % rest.length, 1)[0]);
+	return ['direct', ...picked];
+}
+
+// 방식별 흐름. 이 아크에 뽑힌 방식만 프롬프트(USER "화별 속는 방식")와 채점(J18)에 넣는다
+export const DECEIVE_MODE_LABEL: Record<DeceiveMode, string> = {
+	direct: '직접 속음 — 주인공이 흔적의 친절한 해결책을 믿고 누군가를 돕기 위해 그 화 행동을 한다',
+	verify:
+		'확인했는데 속음 — 주인공이 앞 화에서 배운 대로 먼저 확인한다 (기록을 대조하기, 다른 사람에게 묻기, 장치로 재기 등). 확인 결과는 안전하다고 나온다. 그러나 그 확인 수단(기록·장치·답해 준 사람의 말)이 그 화 흔적이었다. 그래서 주인공은 안심하고 그 화 행동을 한다',
+	npc_acts:
+		'동료가 먼저 함 — 주인공은 흔적의 말을 의심해 망설이거나 멈추자고 한다. 그런데 그 화의 주 NPC 가 흔적을 보고 혼자 먼저 그 화 행동을 시작해 버린다. 주인공은 반쯤 끝난 일을 그대로 두면 NPC 가 다치거나 더 나빠질 것 같아 그 행동을 함께 마무리한다',
+	avoid:
+		'피하려다 걸림 — 주인공은 앞 화와 비슷해 보이는 일을 일부러 피한다. 이 화의 흔적은 오히려 "그건 위험하니 대신 이렇게 하라"는 경고처럼 들린다. 주인공이 피하려고 고른 그 길이 그 화 행동이다',
+	pressure:
+		'급해서 차선책 — 주인공은 흔적의 말이 수상하다고 느낀다. 그러나 눈앞에서 사람이 진짜로 위험해 시간이 없다. 주인공은 의심을 말로 남긴 채, 다른 방법이 없어 그 화 행동을 한다',
+	undo:
+		'되돌리려다 걸림 — 주인공은 앞 화가 남긴 피해를 원래대로 되돌리려 한다. 흔적이 되돌리는 방법을 알려 주고, 겉으로는 앞 화 행동을 취소하는 일처럼 보인다. 그 되돌리는 방법이 그 화 행동이다. 되돌린 것처럼 보이지만 피해는 더 커진다',
+	tradeoff:
+		'대가를 알고 감수 — 흔적이 이번 방법에는 작은 대가가 있다고 먼저 솔직하게 말한다 (그 대가는 world.rule 의 진짜 결과가 아니다). 주인공은 대가를 따져 본 뒤, 더 큰 피해를 막으려고 그 작은 대가를 감수하고 그 화 행동을 한다. 진짜 대가는 말한 것보다 훨씬 크다',
+	bait:
+		'꾸며진 위기 — 흔적이 먼저 위기처럼 보이는 일을 꾸며 보여 준다. 주인공은 흔적을 경계하지만, 그 위기는 흔적과 상관없어 보인다. 주인공은 그 위기를 막으려고 서둘러 그 화 행동을 한다. 그 화 끝에 위기는 처음부터 없었다는 것이 드러난다 (pressure 와 다름: 위기가 가짜이고, 주인공은 위기와 흔적을 연결하지 못한다)',
+	piecemeal:
+		'나눠서 함 — 주인공은 위험할까 봐 한 번에 하지 않고 작은 단계로 나눈다. 단계 하나하나는 해롭지 않아 보이고, 흔적은 단계마다 "여기까지는 괜찮다"고 확인해 준다. 다 마친 뒤에야 단계들이 합쳐져 그 화 행동이 된 것이 드러난다',
+	gift:
+		'먼저 받은 도움 — 흔적이 먼저 주인공의 작은 문제 하나를 조건 없이 해결해 준다 (진짜 도움). 주인공은 의심을 조금 내려놓는다. 이어 흔적이 다른 사람을 위한 작은 부탁처럼 그 화 행동을 권하고, 주인공은 받은 도움도 있고 그 사람을 돕고 싶어 들어준다'
+};
+
+export const BOSS_SIDE_LABEL: Record<BossSide, string> = {
+	warn: '경고하는 쪽 (최종보스 편 아님, 주인공의 그 화 행동을 막으며 경고)',
+	ally: '최종보스 편 (주인공의 의심·이탈·전진을 막음, 그 화 행동은 말리지 않음)'
+};
 
 // 한 번에 돌리는 묶음 안에서 장르가 겹치지 않게 배정. 각 id 의 고정 장르가 이미 쓰였으면 목록의 다음 장르
 export function assignGenres(ids: string[]): Record<string, string> {
@@ -423,6 +478,11 @@ export function buildStoryarcRewritePrompt(
 	opts: RewriteOptions = {}
 ): string {
 	const genre = opts.genre ?? genreForId(source.id);
+	const bossSides = opts.bossSides ?? bossSidesForId(source.id);
+	const sideList = bossSides.map((side, i) => `- ${i + 1}화: "${side}" — ${BOSS_SIDE_LABEL[side]}`).join('\n');
+	const modeList = (opts.deceiveModes ?? deceiveModesForId(source.id))
+		.map((m, i) => `- ${i + 1}화: "${m}" — ${DECEIVE_MODE_LABEL[m]}`)
+		.join('\n');
 	const used = (opts.used ?? []).filter((u) => u.id !== source.id);
 	const usedList = used.length
 		? used.map((u) => `- ${u.id}: 핵심 물건 "${u.key_object ?? ''}" / 무대 "${u.stage ?? ''}" / 규칙 "${u.rule ?? ''}"`).join('\n')
@@ -469,8 +529,7 @@ export function buildStoryarcRewritePrompt(
 - 보스의 이야기(겉모습 정체·진짜 정체·동기·반전)도 새로 써도 된다. 단, 아래 고정된 이름·외형과 맞아야 한다
 
 # 개성 규칙 (중요) — 다른 아크와 비슷한 이야기가 되지 않게
-- 소재는 **이 보스에게서** 뽑는다. USER 섹션 "보스 소재"(외형·겉모습)에 나오는 물건·장소·행동이 이야기의 재료다
-  - key_object 의 중심 낱말(마지막 낱말)은 "보스 소재"에 나오는 낱말이다. 계약서·데이터 칩·기록처럼 아무 보스에나 붙는 흔한 물건으로 바꾸지 않는다
+- 무대·흔적·보스의 이득은 **이 보스에게서** 뽑는다 (USER 섹션 "보스 소재"). 핵심 물건은 이 보스와 어울리는 일상 물건이면 된다 (보스 소재의 낱말이 아니어도 된다)
 - 무대(stage)는 보스가 있는 **한 장소**다. 15자 이내, 가능하면 "보스 소재"나 원본 world.setting 에 나오는 곳
   - "도시 전체"가 무대가 아니다. stage 이름에 "도시"를 쓰지 않는다. world.setting 과 1화 summary 에 stage 가 그대로 나온다
   - world.rule 의 나쁜 결과는 그 무대와 거기 있는 사람에게 일어나는 일이다. world.rule 에 "도시"라는 말을 쓰지 않는다
@@ -485,10 +544,12 @@ export function buildStoryarcRewritePrompt(
    - scenarioOutline 의 npc 는 이 중 하나(그 화의 주 NPC). 각 NPC 는 최소 한 번 주 NPC 가 된다. 어느 order 에 누구를 둘지는 새로 정해도 된다
    - NPC 의 persona 와 맞는 역할을 준다
 4. scenarioOutline 의 boss 값: USER 섹션에 주어진 order 별 값 그대로
+5. scenarioOutline 1~4화의 random_boss_side: USER 섹션 "일반 보스의 편" 그대로. 그 화 summary 의 일반 보스를 그 편에 맞게 쓴다
+6. 1~4화의 속는 방식: USER 섹션 "화별 속는 방식" 그대로. 그 화 story_spine·lesson·summary 를 그 방식대로 쓴다
 
 # 새로 쓰는 것
-chapter_name, world, protagonist_goal, act_tone(mood·narrative_role), final_boss 의 surface_identity·true_identity·motivation·twist,
-story_spine, stage, key_object, wrong_action, right_action, boss_name_korean, boss_trace, npc_roles 의 role·arc·title, scenarioOutline 의 title·summary·npc, global_foreshadowing, act_summary
+chapter_name, world, protagonist_goal, act_tone(mood·narrative_role), world.how, final_boss 의 surface_identity·true_identity·motivation·want·twist,
+story_spine(화별 protagonist_action·lesson·hidden_link 포함), stage, key_object, wrong_action, right_action, boss_name_korean, boss_trace, npc_roles 의 role·arc·title, scenarioOutline 의 title·summary·npc·place·boss_trace, global_foreshadowing, act_summary
 
 # 구성 규칙
 - scenarioOutline 은 5개: order 1 = intro, order 2~4 = rising, order 5 = climax_finale
@@ -504,6 +565,7 @@ ${CLARITY_RULES}
 
 # 복선(global_foreshadowing) 규칙
 - 4개. 복선은 자연스럽게, 티 내지 말 것
+- 1~4화에 심는 복선은 주인공이 그 화 행동을 하기 **전**의 경고·이상 징후가 아니다 (그러면 주인공이 알고도 하는 사람이 된다). 행동 뒤에 보이는 일이거나, 행동과 상관없는 보스의 흔적으로 심는다
 - 4개 복선의 (plant_act, plant_room) 페어는 서로 모두 달라야 한다
 - 4개 복선의 (reveal_act, reveal_room) 페어도 서로 모두 달라야 한다
 - reveal_act 는 plant_act 보다 늦은 act. 가능한 한 climax_finale 로 모은다
@@ -526,7 +588,13 @@ ${bossRefs}
 ## 이 아크의 장르
 ${genre}
 
-## 보스 소재 (key_object·stage 를 여기서 뽑는다)
+## 일반 보스의 편 (고정, 1~4화)
+${sideList}
+
+## 화별 속는 방식 (고정, 1~4화 — 이야기 구조 규칙 "속는 방식")
+${modeList}
+
+## 보스 소재 (stage·흔적·보스의 이득을 여기서 뽑는다. 핵심 물건은 일상 물건)
 ${bossMaterial}
 
 ## 다른 아크가 이미 쓴 소재 (핵심 물건·무대가 겹치면 안 됨)
@@ -602,7 +670,15 @@ export const storyarcGenTool = [
 								line: { type: 'string' },
 								protagonist_action: {
 									type: 'string',
-									description: '이 화에서 주인공이 핵심 물건으로 하는 행동. 1~4화=wrong_action, 5화=right_action 과 글자 그대로 같게.'
+									description: '이 화에서 주인공이 하는 행동. 1화=wrong_action, 5화=right_action 과 글자 그대로 같게. 2~4화=화마다 다른 행동 (wrong_action·앞 화 동사를 쓰지 않음).'
+								},
+								lesson: {
+									type: 'string',
+									description: '2~4화: 주인공이 앞 화에서 배운 것과, 그래서 이번 화에 어떻게 조심하는지 (그 화 속는 방식에 맞게, 한 문장). 1·5화: 빈 문자열.'
+								},
+								hidden_link: {
+									type: 'string',
+									description: '1~4화: 이 행동이 사실은 왜 핵심 물건에 wrong_action 을 한 것과 같은 일인지 (한 문장, 핵심 물건 이름 포함, 5화에 드러남). 5화: 빈 문자열.'
 								}
 							},
 							required: ['order', 'line', 'protagonist_action']
@@ -617,6 +693,10 @@ export const storyarcGenTool = [
 						properties: {
 							setting: { type: 'string' },
 							rule: { type: 'string' },
+							how: {
+								type: 'string',
+								description: '왜 나쁜 결과가 생기는지 한 문장: 핵심 물건이 어떻게 작동해서 그렇게 되는지.'
+							},
 							secret: { type: 'string' }
 						},
 						required: ['setting', 'rule', 'secret']
@@ -628,7 +708,7 @@ export const storyarcGenTool = [
 					},
 					key_object: {
 						type: 'string',
-						description: '1~5화에 계속 나오고 5화 결말에서 쓰이는 핵심 물건. 10자 이내 명사구.'
+						description: '1~5화에 계속 나오고 5화 결말에서 쓰이는 핵심 물건. 누구나 아는 일상 물건, 10자 이내 명사구.'
 					},
 					boss_name_korean: {
 						type: 'string',
@@ -636,11 +716,11 @@ export const storyarcGenTool = [
 					},
 					boss_trace: {
 						type: 'string',
-						description: '1~4화에 최종보스가 얼굴 없이 드러나는 매체(목소리·글자·물건). 15자 이내. 1~4화 summary 에 그대로 나옴.'
+						description: '1화에 최종보스가 얼굴 없이 드러나는 매체(목소리·글자·물건). 15자 이내. scenarioOutline 1화 boss_trace 와 같음.'
 					},
 					wrong_action: {
 						type: 'string',
-						description: '1~4화에서 주인공이 하는, 주변이 권하는 핵심 물건에 대한 틀린 행동.'
+						description: '1~4화 행동이 사실은 모두 하는 일 (핵심 물건에 대한 틀린 행동). 1화에는 주인공이 그대로 한다.'
 					},
 					right_action: {
 						type: 'string',
@@ -665,6 +745,10 @@ export const storyarcGenTool = [
 							surface_identity: { type: 'string' },
 							true_identity: { type: 'string' },
 							motivation: { type: 'string' },
+							want: {
+								type: 'string',
+								description: '보스가 이 일로 얻는 구체적인 이득 한 문장 (광기·혼란 같은 말 말고).'
+							},
 							twist: { type: 'string' },
 							zodiac_sign: {
 								type: 'string',
@@ -739,6 +823,15 @@ export const storyarcGenTool = [
 								random_boss_title: {
 									type: 'string',
 									description: '1~4화: 그 화 일반 보스의 직업 (10자 이내, 무대에 있을 법한 사람, 화마다 다름). 5화: 빈 문자열.'
+								},
+								random_boss_side: {
+									type: 'string',
+									enum: ['warn', 'ally', ''],
+									description: '1~4화: 그 화 일반 보스의 편. warn = 주인공의 그 화 행동을 경고하며 막음(최종보스 편 아님), ally = 최종보스 편(의심·전진을 막음). 5화: 빈 문자열.'
+								},
+								boss_trace: {
+									type: 'string',
+									description: '1~4화: 그 화에 최종보스가 드러나는 매체 (15자 이내, 화마다 다른 종류, 1화=boss_trace, summary 에 그대로 나옴). 5화: 빈 문자열.'
 								}
 							},
 							required: ['order', 'act', 'title', 'boss', 'npc', 'summary']
@@ -787,11 +880,15 @@ export const storyarcRewriteTool = (() => {
 		'boss_name_korean',
 		'boss_trace'
 	];
+	params.properties.world.required = [...params.properties.world.required, 'how'];
+	params.properties.final_boss.required = [...(params.properties.final_boss.required ?? []), 'want'];
 	params.properties.npc_roles.additionalProperties.required = ['role', 'arc', 'title', 'turn_order'];
 	params.properties.scenarioOutline.items.required = [
 		...params.properties.scenarioOutline.items.required,
 		'place',
-		'random_boss_title'
+		'random_boss_title',
+		'boss_trace'
 	];
+	params.properties.story_spine.items.required = ['order', 'line', 'protagonist_action', 'lesson', 'hidden_link'];
 	return tool;
 })();

@@ -1,0 +1,173 @@
+{
+	"id": "card_05_fragment_dispute",
+	"title": {
+		"korean": "데이터 조각을 둘러싼 언쟁"
+	},
+	"tags": [
+		"fragment"
+	],
+	"intensity": "high",
+	"after_story": 7,
+	"before_story": 10,
+	"background_tags": [
+		"낡은_전산실",
+		"복도",
+		"데이터_조각",
+		"소음",
+		"갈등"
+	],
+	"dialogue": [
+		{
+			"speaker": "narrator",
+			"content": {
+				"korean": "낡은 전산실 복도, 음향 분석가가 당신을 향해 손을 휘저었다."
+			}
+		},
+		{
+			"speaker": "sound_analyst",
+			"content": {
+				"korean": "대체 뭘 하는 거야? 이 조각들이 계속 소리를 내는 바람에 뭘 맞추기는커녕, 제어실 앞이 온통 뒤죽박죽이야!"
+			}
+		},
+		{
+			"speaker": "echo",
+			"content": {
+				"korean": "저 사람이 흥분했어. 우리가 조용히 작업하길 바라나 봐."
+			}
+		},
+		{
+			"speaker": "sound_analyst",
+			"content": {
+				"korean": "모든 소리가… 연결된다… 귓가에 자꾸 맴도는군. 이상한 일이야."
+			}
+		},
+		{
+			"speaker": "echo",
+			"content": {
+				"korean": "어서 해결해야 해."
+			}
+		}
+	],
+	"choices": [
+		{
+			"text": {
+				"korean": "조각의 소음을 더 키워서 방해한다."
+			},
+			"path": "easy",
+			"mbti": "EP",
+			"effects": {
+				"fighting": 20,
+				"gold": 100,
+				"community": -10
+			},
+			"reward": [
+				"attack_up"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "당신은 데이터 조각의 소리를 최대로 증폭했다. 복도는 더욱 혼란에 빠졌다."
+					}
+				},
+				{
+					"speaker": "sound_analyst",
+					"content": {
+						"korean": "젠장, 더 시끄러워졌잖아!"
+					}
+				},
+				{
+					"speaker": "echo",
+					"content": {
+						"korean": "공격력이 조금 올라간 것 같아."
+					}
+				}
+			]
+		},
+		{
+			"text": {
+				"korean": "분석가의 장비를 수리해 주며 소음을 줄인다."
+			},
+			"path": "hard",
+			"mbti": "TJ",
+			"effects": {
+				"echo": -10,
+				"community": 20,
+				"reason": 10
+			},
+			"reward": [
+				"defense_up"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "당신은 분석가의 장비 일부를 고쳐 주었다. 소음이 잠시 줄어들었다."
+					}
+				},
+				{
+					"speaker": "sound_analyst",
+					"content": {
+						"korean": "오, 잠깐 조용해졌잖아? 고마워!"
+					}
+				},
+				{
+					"speaker": "echo",
+					"content": {
+						"korean": "시간이 지체되겠어."
+					}
+				}
+			]
+		},
+		{
+			"text": {
+				"korean": "분석가에게 조용한 헤드폰을 사 준다."
+			},
+			"path": "gold",
+			"mbti": "NF",
+			"require": {
+				"stat": "gold",
+				"op": ">=",
+				"value": 100
+			},
+			"effects": {
+				"gold": -100,
+				"community": 10,
+				"echo": 5
+			},
+			"reward": [
+				"heal"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "당신은 휴대용 상점에서 최고급 헤드폰을 구매해 분석가에게 건넸다."
+					}
+				},
+				{
+					"speaker": "sound_analyst",
+					"content": {
+						"korean": "이 정도면 괜찮겠어. 고마워!"
+					}
+				},
+				{
+					"speaker": "echo",
+					"content": {
+						"korean": "덕분에 마음이 편안해졌어."
+					}
+				}
+			]
+		}
+	],
+	"_slot": {
+		"room": 8,
+		"must": "중앙 제어실로 가는 길에 사람들이 데이터 스크린 조각을 맞추려는 주인공을 막아서며 혼란을 부추긴다.",
+		"must_line": "이 조각들이 계속 소리를 내는 바람에 뭘 맞추기는커녕, 제어실 앞이 온통 뒤죽박죽이야!",
+		"hint_line": "모든 소리가… 연결된다… 귓가에 자꾸 맴도는군.",
+		"event": "음향 분석가가 당신이 맞추려는 데이터 조각 때문에 시끄럽다고 시비를 건다."
+	}
+}

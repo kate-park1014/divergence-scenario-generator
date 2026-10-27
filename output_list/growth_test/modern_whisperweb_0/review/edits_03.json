@@ -1,0 +1,63 @@
+{
+  "issues": [
+    {
+      "block": "win_dialogue",
+      "quote": "이번에는 어떤 방식으로 기억 왜곡이 확산되었는지 그 패턴을 분석해야 합니다.",
+      "room": 15,
+      "index": 3,
+      "order": 3,
+      "problem": "15번 방 win_dialogue 가 '이겼지만…', '다음엔 반드시…’ 같은 틀로 끝나는 것이 반복된다. (1화: '다음엔 더 신중해야 해요.', '다음부터는 정보의 출처를 먼저 의심해야겠어요.', 2화: '이 혼란 속에서 의미 있는 실마리를 찾아내고, 다음 단계로 나아갈 방법을 모색해야 합니다.')",
+      "item": "R11",
+      "fix": "다음 화의 win_dialogue 엔딩 대사를 다른 방식으로 변경하여 반복을 피한다.",
+      "quote_found": true
+    },
+    {
+      "item": "R11",
+      "order": 3,
+      "fix": "다음 화의 win_dialogue 엔딩 대사를 다른 방식으로 변경하여 반복을 피한다.",
+      "index": 4,
+      "problem": "15번 방 win_dialogue 가 '이겼지만…', '다음엔 반드시…’ 같은 틀로 끝나는 것이 반복된다. (1화: '다음엔 더 신중해야 해요.', '다음부터는 정보의 출처를 먼저 의심해야겠어요.', 2화: '이 혼란 속에서 의미 있는 실마리를 찾아내고, 다음 단계로 나아갈 방법을 모색해야 합니다.')",
+      "block": "win_dialogue",
+      "room": 15,
+      "quote": "이 현상을 멈출 새로운 단서를 찾아야만 합니다.",
+      "quote_found": true
+    }
+  ],
+  "codeErrors": [
+    "방 3 dialogue: 이어지는 파티(character_any) 대사의 말투가 다릅니다(존댓말·반말). 파티가 1명이면 한 사람이 말투를 바꾸는 것처럼 들린다. 맞출 것: \"하지만 지난번처럼 섣불리 행동하다가 더 나쁜 결과를 초래할 수도 있습니다.\" / \"일단 경고문대로 기존 시스템의 취약점을 열어두는 것으로 해킹을 막아봅시다.\""
+  ],
+  "attempts": [
+    {
+      "edits": [
+        {
+          "block": "win_dialogue",
+          "index": 3,
+          "text": "이번에는 기존 시스템의 취약점이 어떻게 악용되었는지 파악해야 합니다.",
+          "op": "replace",
+          "speaker": "character_any",
+          "room": 15
+        },
+        {
+          "op": "replace",
+          "block": "win_dialogue",
+          "index": 4,
+          "text": "더 이상 이런 일이 반복되지 않도록 근본적인 해결책을 찾아야 합니다.",
+          "speaker": "character_any",
+          "room": 15
+        },
+        {
+          "room": 3,
+          "text": "일단 경고문대로 기존 시스템의 취약점을 열어두는 것으로 해킹을 막아보겠습니다.",
+          "index": 7,
+          "block": "dialogue",
+          "speaker": "character_any",
+          "op": "replace"
+        }
+      ],
+      "skipped": [],
+      "newErrors": []
+    }
+  ],
+  "kept": true,
+  "codeErrorsAfter": []
+}

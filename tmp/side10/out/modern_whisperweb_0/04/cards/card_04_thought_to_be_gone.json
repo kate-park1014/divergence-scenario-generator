@@ -1,0 +1,180 @@
+{
+	"id": "card_04_thought_to_be_gone",
+	"title": {
+		"korean": "사라진 줄 알았던"
+	},
+	"tags": [
+		"thought"
+	],
+	"intensity": "high",
+	"after_story": 3,
+	"before_story": 5,
+	"background_tags": [
+		"전산실",
+		"데이터",
+		"파기",
+		"복구",
+		"혼란"
+	],
+	"dialogue": [
+		{
+			"speaker": "narrator",
+			"content": {
+				"korean": "낡은 전산실 깊숙한 곳에서 데이터 검증원이 한숨을 쉬고 있다."
+			}
+		},
+		{
+			"speaker": "verifier",
+			"content": {
+				"korean": "이거 정말 미치겠어요. 분명히 파기했던 파일인데!"
+			}
+		},
+		{
+			"speaker": "dax",
+			"content": {
+				"korean": "뭐가 또 문제야?"
+			}
+		},
+		{
+			"speaker": "verifier",
+			"content": {
+				"korean": "이 폐기물 처리 장치에서 분명 지운 개인 정보 파일이 자꾸만 외부로 복사되고 다시 시스템에 나타나요."
+			}
+		},
+		{
+			"speaker": "verifier",
+			"content": {
+				"korean": "아무리 지워도 끝이 없어요. 누가 장난치는 것도 아니고!"
+			}
+		},
+		{
+			"speaker": "dax",
+			"content": {
+				"korean": "그럼 지워도 소용없다는 거야?"
+			}
+		}
+	],
+	"choices": [
+		{
+			"text": {
+				"korean": "검증원에게 데이터 복구 방지책을 알려주고 임시 대책을 세운다"
+			},
+			"path": "easy",
+			"mbti": "EN",
+			"effects": {
+				"gold": 120,
+				"community": -15,
+				"echo": 5
+			},
+			"reward": [
+				"move_range_up"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "당신은 검증원에게 임시 방지책을 알려주었다. 그는 잠시나마 안도하며 당신에게 보상을 건넸다."
+					}
+				},
+				{
+					"speaker": "verifier",
+					"content": {
+						"korean": "휴, 한숨 돌렸어요. 고마워요!"
+					}
+				},
+				{
+					"speaker": "dax",
+					"content": {
+						"korean": "당장 급한 불은 껐지만, 근본적인 해결은 아니야."
+					}
+				}
+			]
+		},
+		{
+			"text": {
+				"korean": "검증원과 함께 데이터 흐름을 역추적하여 재생성 원인을 밝혀낸다"
+			},
+			"path": "hard",
+			"mbti": "TJ",
+			"effects": {
+				"echo": 15,
+				"reason": 30
+			},
+			"reward": [
+				"stun"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "당신은 검증원과 함께 복잡한 데이터 흐름을 역추적했다."
+					}
+				},
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "유출의 정확한 경로와 재생성 원인을 파악할 수 있었다."
+					}
+				},
+				{
+					"speaker": "verifier",
+					"content": {
+						"korean": "당신이 없었다면 영원히 미궁에 빠질 뻔했어요."
+					}
+				},
+				{
+					"speaker": "dax",
+					"content": {
+						"korean": "시간이 걸렸지만, 정확한 원인을 알게 되었어."
+					}
+				}
+			]
+		},
+		{
+			"text": {
+				"korean": "골드를 주고 검증원에게 이 이상 현상을 집중적으로 조사하도록 요청한다"
+			},
+			"path": "gold",
+			"mbti": "IN",
+			"require": {
+				"stat": "gold",
+				"op": ">=",
+				"value": 150
+			},
+			"effects": {
+				"gold": -150,
+				"community": 10,
+				"fighting": 20
+			},
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "당신은 검증원에게 골드를 건네며 문제의 장치 조사를 요청했다."
+					}
+				},
+				{
+					"speaker": "verifier",
+					"content": {
+						"korean": "이 돈이면 밤샘 작업도 할 수 있죠!"
+					}
+				},
+				{
+					"speaker": "dax",
+					"content": {
+						"korean": "비싸게 먹혔지만, 확실한 조사가 이루어질 거야."
+					}
+				}
+			]
+		}
+	],
+	"_slot": {
+		"room": 4,
+		"must": "데이터 폐기물 처리장의 한 장치에서 끊임없이 개인 정보 파일이 무단으로 복사되어 외부로 전송되고 있다.",
+		"must_line": "이 폐기물 처리 장치에서 분명 지운 개인 정보 파일이 자꾸만 외부로 복사되고 다시 시스템에 나타나요.",
+		"event": "데이터 검증원이 당신에게 폐기된 데이터가 다시 나타나는 이상 현상을 보고한다."
+	}
+}

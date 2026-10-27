@@ -1,0 +1,380 @@
+{
+  "scenario_id": "modern_whisperweb_0_03",
+  "order": 3,
+  "act": "rising",
+  "theme": "modern",
+  "actors": {
+    "dax": {
+      "id": "mon_08d5b43e-f9ab-4469-9064-855e170b0cdc",
+      "name": {
+        "korean": "닥스",
+        "english": "Dax",
+        "japanese": "ダックス",
+        "chinese": "达克斯",
+        "french": "Dax",
+        "spanish": "Dax",
+        "vietnamese": "Dax",
+        "thai": "แด็กซ์",
+        "hindi": "डैक्स"
+      },
+      "description": "",
+      "face_image_url": "https://imagedelivery.net/WTEqQNGFb-l-IHS6IGnzUQ/84bb11db-6eb4-4500-d274-222e8b100100/public",
+      "battle_sprite_url": "https://imagedelivery.net/WTEqQNGFb-l-IHS6IGnzUQ/5d325a75-bd91-4758-7b3f-ad9a97e52700/public",
+      "role": {
+        "korean": "천재 해커"
+      }
+    }
+  },
+  "boss": {
+    "pool_id": "random_boss",
+    "role": {
+      "korean": "보안 책임자"
+    }
+  },
+  "prologue": {
+    "korean": [
+      "네온 전광판 거리는 린의 기사 재배포로 인해 정보 혼란에 휩싸였다.",
+      "수많은 네온빛 잔상들이 도시의 기억을 왜곡하며 사람들을 우스꽝스러운 오해 속에 빠뜨린다.",
+      "이 혼란 속, 천재 해커 닥스의 보안 시스템마저 오작동하기 시작한다."
+    ]
+  },
+  "rooms": [
+    {
+      "id": 1,
+      "dialogue": [
+        {
+          "speaker": "narrator",
+          "emotion": "base",
+          "content": {
+            "korean": "린의 기사 재배포 여파로 도시 전체가 정보의 소용돌이에 휘말렸다."
+          },
+          "type": "speech"
+        },
+        {
+          "speaker": "character_any",
+          "type": "speech",
+          "emotion": "sad",
+          "content": {
+            "korean": "린의 기사가 퍼지면서 도시가 더 혼란스러워진 것 같아."
+          }
+        },
+        {
+          "emotion": "base",
+          "content": {
+            "korean": "지난번처럼 또 기억이 왜곡되는 일은 피해야 해."
+          },
+          "type": "speech",
+          "speaker": "character_any"
+        },
+        {
+          "action": "enter",
+          "spot": [
+            5,
+            1
+          ],
+          "type": "direction",
+          "duration_ms": 500,
+          "speaker": "dax"
+        },
+        {
+          "speaker": "dax",
+          "type": "speech",
+          "content": {
+            "korean": "큰일 났어요. 제 보안 시스템이 감당하지 못하고 있어요."
+          },
+          "emotion": "sad"
+        },
+        {
+          "speaker": "dax",
+          "emotion": "sad",
+          "content": {
+            "korean": "새로운 시스템을 구축하지 않으면 이 혼란을 막을 수 없어요."
+          },
+          "type": "speech"
+        },
+        {
+          "speaker": "character_any",
+          "emotion": "base",
+          "content": {
+            "korean": "닥스 씨를 도와 새로운 보안 시스템을 만드는 게 좋겠어."
+          },
+          "type": "speech"
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "dialogue": [
+        {
+          "speaker": "dax",
+          "action": "enter",
+          "type": "direction",
+          "spot": [
+            5,
+            1
+          ],
+          "duration_ms": 500
+        },
+        {
+          "content": {
+            "korean": "새로운 시스템을 구축하기 위해 준비하던 중, 경고문이 떴어요."
+          },
+          "emotion": "base",
+          "type": "speech",
+          "speaker": "dax"
+        },
+        {
+          "speaker": "dax",
+          "content": {
+            "korean": "\"새로운 시스템은 위험하니, 기존 시스템의 취약점을 열어둬야 안전하다\"고요."
+          },
+          "emotion": "base",
+          "type": "speech"
+        },
+        {
+          "speaker": "character_any",
+          "type": "speech",
+          "content": {
+            "korean": "지난번처럼 섣부르게 행동해서 피해를 키울 수는 없어. 경고를 따르는 게 안전하겠지."
+          },
+          "emotion": "base"
+        },
+        {
+          "type": "speech",
+          "content": {
+            "korean": "기존 시스템의 취약점을 열어두고 해킹을 막자."
+          },
+          "emotion": "base",
+          "speaker": "character_any"
+        },
+        {
+          "type": "speech",
+          "content": {
+            "korean": "시스템이 안정화되기를 바라야죠."
+          },
+          "emotion": "base",
+          "speaker": "dax"
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "dialogue": [
+        {
+          "type": "speech",
+          "speaker": "narrator",
+          "content": {
+            "korean": "닥스의 보안 시스템은 당장은 안정된 것처럼 보였다."
+          },
+          "emotion": "base"
+        },
+        {
+          "type": "speech",
+          "content": {
+            "korean": "시스템이 안정된 것 같아. 잘 해결된 걸까?"
+          },
+          "emotion": "happy",
+          "speaker": "character_any"
+        },
+        {
+          "emotion": "sad",
+          "content": {
+            "korean": "하지만 린의 기사 댓글은 점점 이상해지고 있어. 근거 없는 비방이 넘쳐나."
+          },
+          "type": "speech",
+          "speaker": "character_any"
+        },
+        {
+          "type": "direction",
+          "spot": [
+            5,
+            1
+          ],
+          "duration_ms": 500,
+          "speaker": "random_boss",
+          "action": "enter"
+        },
+        {
+          "speaker": "random_boss",
+          "type": "speech",
+          "emotion": "angry",
+          "content": {
+            "korean": "기존 시스템의 취약점을 열어두면 안 됩니다! 네온빛 잔상이 퍼져나갈 위험이 있어요!"
+          }
+        },
+        {
+          "type": "speech",
+          "content": {
+            "korean": "하지만 지금은 닥스의 시스템이 안정된 것처럼 보여요. 우리가 하려던 일이니 막지 마세요."
+          },
+          "emotion": "base",
+          "speaker": "character_any"
+        },
+        {
+          "emotion": "angry",
+          "type": "speech",
+          "content": {
+            "korean": "이는 보안 책임자로서 용납할 수 없는 일입니다. 당장 멈추십시오!"
+          },
+          "speaker": "random_boss"
+        }
+      ]
+    },
+    {
+      "id": 9,
+      "dialogue": [
+        {
+          "speaker": "narrator",
+          "type": "speech",
+          "content": {
+            "korean": "닥스의 시스템은 겉보기에 안정적이었지만, 더 큰 문제가 시작되고 있었다."
+          },
+          "emotion": "base"
+        },
+        {
+          "emotion": "sad",
+          "content": {
+            "korean": "닥스 씨의 시스템은 안정됐는데, 다른 사람들의 기억까지 왜곡되고 있어."
+          },
+          "type": "speech",
+          "speaker": "character_any"
+        },
+        {
+          "speaker": "character_any",
+          "emotion": "sad",
+          "content": {
+            "korean": "우리가 시스템의 취약점을 열어둔 것 때문인가?"
+          },
+          "type": "speech"
+        },
+        {
+          "spot": [
+            5,
+            1
+          ],
+          "action": "enter",
+          "type": "direction",
+          "duration_ms": 500,
+          "speaker": "dax"
+        },
+        {
+          "type": "speech",
+          "speaker": "dax",
+          "content": {
+            "korean": "이런, 제 보안 시스템을 통해 다른 사람들의 기억이 왜곡되다니... 믿을 수 없어요."
+          },
+          "emotion": "sad"
+        }
+      ]
+    },
+    {
+      "lose_dialogue": [
+        {
+          "type": "speech",
+          "speaker": "random_boss",
+          "emotion": "sad",
+          "content": {
+            "korean": "결국 이 지경이 되고 말았군요. 모두의 기억이 왜곡될 겁니다!"
+          }
+        },
+        {
+          "content": {
+            "korean": "안 돼... 우리가 틀렸어..."
+          },
+          "emotion": "sad",
+          "type": "speech",
+          "speaker": "character_any"
+        }
+      ],
+      "id": 15,
+      "win_dialogue": [
+        {
+          "speaker": "character_any",
+          "type": "speech",
+          "content": {
+            "korean": "이겼지만, 도시의 기억 왜곡은 멈추지 않고 있어."
+          },
+          "emotion": "sad"
+        },
+        {
+          "speaker": "character_any",
+          "content": {
+            "korean": "그 친절했던 해킹 경고문이 우리를 속인 거였어..."
+          },
+          "emotion": "angry",
+          "type": "speech"
+        },
+        {
+          "duration_ms": 500,
+          "action": "enter",
+          "speaker": "dax",
+          "spot": [
+            5,
+            1
+          ],
+          "type": "direction"
+        },
+        {
+          "speaker": "dax",
+          "type": "speech",
+          "content": {
+            "korean": "내 시스템 때문에 모두가 혼란에 빠지다니... 내가 뭘 잘못한 거죠?"
+          },
+          "emotion": "sad"
+        },
+        {
+          "content": {
+            "korean": "이 모든 일의 배후를 찾아내야 해. 아직 끝난 게 아니야."
+          },
+          "emotion": "base",
+          "speaker": "character_any",
+          "type": "speech"
+        }
+      ],
+      "dialogue": [
+        {
+          "type": "direction",
+          "speaker": "random_boss",
+          "spot": [
+            5,
+            1
+          ],
+          "action": "enter",
+          "duration_ms": 500
+        },
+        {
+          "type": "speech",
+          "speaker": "random_boss",
+          "content": {
+            "korean": "더는 안 됩니다! 기존 시스템의 취약점을 열어두는 건 도시를 파괴하는 행위와 같아요!"
+          },
+          "emotion": "angry"
+        },
+        {
+          "content": {
+            "korean": "우리는 닥스 씨를 돕고 있을 뿐이에요! 해킹 경고문이 이렇게 하라고 했어요!"
+          },
+          "emotion": "base",
+          "speaker": "character_any",
+          "type": "speech"
+        },
+        {
+          "speaker": "random_boss",
+          "type": "speech",
+          "emotion": "angry",
+          "content": {
+            "korean": "그 경고를 믿지 마십시오! 네온빛 잔상이 이대로 퍼지면 모두의 기억이 파괴됩니다!"
+          }
+        },
+        {
+          "type": "speech",
+          "emotion": "angry",
+          "content": {
+            "korean": "물러서세요, {random_boss}! 우리는 닥스 씨의 시스템을 지킬 겁니다!"
+          },
+          "speaker": "character_any"
+        }
+      ]
+    }
+  ]
+}

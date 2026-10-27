@@ -1,0 +1,173 @@
+{
+	"id": "card_02_rogue_ad_screen",
+	"title": {
+		"korean": "폭주하는 광고판"
+	},
+	"tags": [
+		"rogue"
+	],
+	"intensity": "high",
+	"after_story": 1,
+	"before_story": 3,
+	"background_tags": [
+		"비상 전력실",
+		"광고판",
+		"개인정보",
+		"데이터",
+		"사무실"
+	],
+	"dialogue": [
+		{
+			"speaker": "narrator",
+			"content": {
+				"korean": "비상 전력실 옆 작은 사무실, 광고판 관리자가 대형 스크린 앞에서 한숨을 쉬고 있다."
+			}
+		},
+		{
+			"speaker": "manager",
+			"content": {
+				"korean": "아, 진짜 미치겠네! 이 망할 광고판이 또..."
+			}
+		},
+		{
+			"speaker": "manager",
+			"content": {
+				"korean": "\"오늘 점심은 생선구이, 민수 엄마!\" 이런 걸 내보내고 있다고요!"
+			}
+		},
+		{
+			"speaker": "lin",
+			"content": {
+				"korean": "저건 너무 구체적이잖아. 게다가 온 동네에 알리고 있네."
+			}
+		},
+		{
+			"speaker": "manager",
+			"content": {
+				"korean": "이걸 당장 멈춰야 하는데... 당신, 혹시 이 시스템에 대해 뭐 아는 거 없어요?"
+			}
+		},
+		{
+			"speaker": "lin",
+			"content": {
+				"korean": "우리는 지금 다른 일에 집중해야 해. 함부로 손대면 안 돼."
+			}
+		}
+	],
+	"choices": [
+		{
+			"text": {
+				"korean": "관리자를 유인하고 광고판 전원을 재빨리 뽑는다"
+			},
+			"path": "easy",
+			"mbti": "SP",
+			"effects": {
+				"reason": -10,
+				"gold": 70,
+				"echo": -5
+			},
+			"reward": [
+				"defense_up"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "당신은 관리자의 시선을 돌린 뒤, 재빨리 광고판 전원 코드를 뽑았다."
+					}
+				},
+				{
+					"speaker": "manager",
+					"content": {
+						"korean": "어? 갑자기 꺼졌네? 당신, 방금 뭐 한 거예요?"
+					}
+				},
+				{
+					"speaker": "lin",
+					"content": {
+						"korean": "좀 찜찜하지만, 일단 해결은 됐어."
+					}
+				}
+			]
+		},
+		{
+			"text": {
+				"korean": "관리자를 도와 광고판 오작동 원인을 찾는다"
+			},
+			"path": "hard",
+			"mbti": "NF",
+			"effects": {
+				"community": 15,
+				"echo": 10
+			},
+			"reward": [
+				"heal"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "당신은 관리자와 함께 광고판의 제어 시스템을 살펴보며 문제 해결을 도왔다."
+					}
+				},
+				{
+					"speaker": "manager",
+					"content": {
+						"korean": "덕분에 원인을 찾았어요! 정말 고마워요, 당신이 아니었으면 큰일 날 뻔했어요."
+					}
+				},
+				{
+					"speaker": "lin",
+					"content": {
+						"korean": "잠시 지체됐지만, 저 사람을 도와준 건 잘한 일이야."
+					}
+				}
+			]
+		},
+		{
+			"text": {
+				"korean": "골드를 주고 광고판에 대한 정보를 구매한다"
+			},
+			"path": "gold",
+			"mbti": "IT",
+			"require": {
+				"stat": "gold",
+				"op": ">=",
+				"value": 120
+			},
+			"effects": {
+				"fighting": 15,
+				"gold": -120
+			},
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "당신은 관리자에게 골드를 건네며 이 시스템에 대한 정보를 물었다."
+					}
+				},
+				{
+					"speaker": "manager",
+					"content": {
+						"korean": "음... 알겠습니다. 제가 아는 한도 내에서 최대한 알려드릴게요."
+					}
+				},
+				{
+					"speaker": "lin",
+					"content": {
+						"korean": "돈으로 정보를 사는 건 확실한 방법이긴 해."
+					}
+				}
+			]
+		}
+	],
+	"_slot": {
+		"room": 2,
+		"must": "도시 곳곳의 디지털 표지판이 우스꽝스러운 문구를 계속 송출하고 있다.",
+		"must_line": "\"오늘 점심은 생선구이, 민수 엄마!\" 이런 걸 내보내고 있다고요!",
+		"event": "광고판 관리자가 개인 정보를 노출하는 광고판 때문에 당신에게 도움을 요청한다"
+	}
+}

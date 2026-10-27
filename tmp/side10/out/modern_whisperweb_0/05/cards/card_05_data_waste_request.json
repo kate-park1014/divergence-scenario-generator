@@ -1,0 +1,174 @@
+{
+	"id": "card_05_data_waste_request",
+	"title": {
+		"korean": "데이터 폐기물 담당자의 의뢰"
+	},
+	"tags": [
+		"data"
+	],
+	"intensity": "high",
+	"after_story": 1,
+	"before_story": 3,
+	"background_tags": [
+		"중앙 제어실",
+		"폐기물 처리",
+		"쓰레기",
+		"탐색",
+		"혼란"
+	],
+	"dialogue": [
+		{
+			"speaker": "narrator",
+			"content": {
+				"korean": "중앙 제어실 옆, 폐기물 처리 구역에서 담당자가 한숨을 쉬고 있다."
+			}
+		},
+		{
+			"speaker": "pye_gi_mul_dam_dang_ja",
+			"content": {
+				"korean": "휴, 이놈의 폐기물이 끝이 없네. 중요한 물건을 버린 것 같아서 말이야."
+			}
+		},
+		{
+			"speaker": "pye_gi_mul_dam_dang_ja",
+			"content": {
+				"korean": "얼마 전 보조 전원 장치 쪽에서 나온 폐기물 중에 말야,"
+			}
+		},
+		{
+			"speaker": "pye_gi_mul_dam_dang_ja",
+			"content": {
+				"korean": "전원 코드를 뽑아 망가진 데이터 스크린 조각들이 많았어."
+			}
+		},
+		{
+			"speaker": "echo",
+			"content": {
+				"korean": "데이터 스크린 조각이라니! 그게 왜 폐기물에서 나와?"
+			}
+		},
+		{
+			"speaker": "pye_gi_mul_dam_dang_ja",
+			"content": {
+				"korean": "당신이 이 더미 속에서 내 물건 좀 찾아줄 수 있을까?"
+			}
+		}
+	],
+	"choices": [
+		{
+			"text": {
+				"korean": "대충 겉만 훑어 필요한 물건을 찾아본다."
+			},
+			"path": "easy",
+			"mbti": "EP",
+			"effects": {
+				"community": -10,
+				"fighting": -10,
+				"gold": 70
+			},
+			"reward": [
+				"intelligence_up"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "당신은 폐기물 더미를 대충 헤치며 물건을 찾았다."
+					}
+				},
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "담당자는 불평했지만 작은 보상을 건넸다."
+					}
+				},
+				{
+					"speaker": "echo",
+					"content": {
+						"korean": "찾긴 찾았지만, 좀 더 꼼꼼히 봤으면 좋았을 텐데."
+					}
+				}
+			]
+		},
+		{
+			"text": {
+				"korean": "폐기물을 분류하며 꼼꼼하게 물건을 찾아낸다."
+			},
+			"path": "hard",
+			"mbti": "TJ",
+			"effects": {
+				"reason": 15,
+				"echo": 10
+			},
+			"reward": [
+				"heal"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "당신은 끈기 있게 폐기물을 분류했다."
+					}
+				},
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "담당자는 감탄하며 고마움을 표했다."
+					}
+				},
+				{
+					"speaker": "echo",
+					"content": {
+						"korean": "이런 식으로 하면 나중에 중요한 단서도 놓치지 않을 거야."
+					}
+				}
+			]
+		},
+		{
+			"text": {
+				"korean": "다른 직원에게 돈을 주고 폐기물 분류를 맡긴다."
+			},
+			"path": "gold",
+			"mbti": "EN",
+			"require": {
+				"stat": "gold",
+				"op": ">=",
+				"value": 100
+			},
+			"effects": {
+				"gold": -100,
+				"echo": -5,
+				"community": 10
+			},
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "당신은 폐기물 분류를 다른 사람에게 맡겼다."
+					}
+				},
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "담당자는 만족했지만, 에코는 조금 아쉬워하는 눈치였다."
+					}
+				},
+				{
+					"speaker": "echo",
+					"content": {
+						"korean": "돈으로 해결하는 것도 방법이지만, 직접 해보는 것도 의미가 있잖아?"
+					}
+				}
+			]
+		}
+	],
+	"_slot": {
+		"room": 2,
+		"must": "중앙 제어실의 폐기된 보조 전원 장치에서 2화에 전원 코드를 뽑아 충격을 받은 데이터 스크린 조각의 흔적이 발견된다.",
+		"must_line": "전원 코드를 뽑아 망가진 데이터 스크린 조각들이 많았어.",
+		"event": "데이터 폐기물 담당자가 당신에게 폐기물 더미 속에서 특정 물건을 찾아달라고 의뢰한다"
+	}
+}

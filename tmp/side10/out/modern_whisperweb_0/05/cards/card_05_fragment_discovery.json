@@ -1,0 +1,191 @@
+{
+	"id": "card_05_fragment_discovery",
+	"title": {
+		"korean": "데이터 조각을 발견한 신입"
+	},
+	"tags": [
+		"fragment"
+	],
+	"intensity": "high",
+	"after_story": 3,
+	"before_story": 5,
+	"background_tags": [
+		"중앙 제어실",
+		"서버실",
+		"과열",
+		"데이터",
+		"긴급"
+	],
+	"dialogue": [
+		{
+			"speaker": "narrator",
+			"content": {
+				"korean": "중앙 제어실의 서버들은 이상하리만치 뜨겁게 달아올라 있었다."
+			}
+		},
+		{
+			"speaker": "narrator",
+			"content": {
+				"korean": "신입 엔지니어가 비명 같은 소리를 지르며 당신을 돌아본다."
+			}
+		},
+		{
+			"speaker": "rookie_engineer",
+			"content": {
+				"korean": "어떡해! 서버가 과열돼서 난리 났어요!"
+			}
+		},
+		{
+			"speaker": "rookie_engineer",
+			"content": {
+				"korean": "여기, 데이터 유출 출처 장치에 3, 4화의 손상된 데이터 스크린 조각 흔적이 발견됐어요!"
+			}
+		},
+		{
+			"speaker": "echo",
+			"content": {
+				"korean": "저 조각들이 왜 여기서 나와? 우리가 깨뜨린 건데…"
+			}
+		},
+		{
+			"speaker": "rookie_engineer",
+			"content": {
+				"korean": "당장 서버를 식히지 않으면 큰일 나요!"
+			}
+		}
+	],
+	"choices": [
+		{
+			"text": {
+				"korean": "옆 서버의 냉각 팬을 강제로 돌려 온도를 낮춘다."
+			},
+			"path": "easy",
+			"mbti": "EP",
+			"effects": {
+				"community": -15,
+				"gold": 50
+			},
+			"reward": [
+				"attack_up"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "당신은 옆 서버의 냉각 팬을 최대로 가동시켜 온도를 낮췄다."
+					}
+				},
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "신입 엔지니어는 한숨 돌리며 감사의 인사를 전했다."
+					}
+				},
+				{
+					"speaker": "rookie_engineer",
+					"content": {
+						"korean": "덕분에 살았어요! 다른 서버에는 문제가 없겠죠?"
+					}
+				},
+				{
+					"speaker": "echo",
+					"content": {
+						"korean": "임시방편일 뿐인데, 괜찮을까?"
+					}
+				}
+			]
+		},
+		{
+			"text": {
+				"korean": "시간을 들여 과열 원인을 정확히 찾아 해결한다."
+			},
+			"path": "hard",
+			"mbti": "TJ",
+			"effects": {
+				"echo": 10,
+				"reason": 20
+			},
+			"reward": [
+				"defense_up"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "당신은 과열된 서버의 로그를 꼼꼼히 살폈다."
+					}
+				},
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "원인을 파악하고 안정적으로 온도를 조절하는 데 성공했다."
+					}
+				},
+				{
+					"speaker": "rookie_engineer",
+					"content": {
+						"korean": "역시 전문가시네요! 시간이 좀 걸렸지만 완벽해요!"
+					}
+				},
+				{
+					"speaker": "echo",
+					"content": {
+						"korean": "잘했어. 나중에 탈 나는 것보다 이게 낫지."
+					}
+				}
+			]
+		},
+		{
+			"text": {
+				"korean": "비싼 고급 냉각제를 구매해 즉시 서버에 투입한다."
+			},
+			"path": "gold",
+			"mbti": "NP",
+			"require": {
+				"stat": "gold",
+				"op": ">=",
+				"value": 100
+			},
+			"effects": {
+				"fighting": 10,
+				"gold": -100
+			},
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "당신은 비싼 냉각제를 즉시 구매하여 서버에 투입했다."
+					}
+				},
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "서버 온도는 빠르게 정상으로 돌아왔고, 시스템은 안정화되었다."
+					}
+				},
+				{
+					"speaker": "rookie_engineer",
+					"content": {
+						"korean": "와, 이렇게 빨리 해결될 줄이야! 대단해요!"
+					}
+				},
+				{
+					"speaker": "echo",
+					"content": {
+						"korean": "비용은 들었지만 확실하네."
+					}
+				}
+			]
+		}
+	],
+	"_slot": {
+		"room": 4,
+		"must": "중앙 제어실의 과열된 서버와 데이터 유출 출처 장치에서 3, 4화에 손상된 데이터 스크린 조각의 흔적들이 발견된다.",
+		"must_line": "여기, 데이터 유출 출처 장치에 3, 4화의 손상된 데이터 스크린 조각 흔적이 발견됐어요!",
+		"hint_line": "서버 과열을 해결해야 해.",
+		"event": "신입 엔지니어가 과열된 서버에서 이상한 데이터 조각을 발견하고 당신에게 도움을 요청한다."
+	}
+}

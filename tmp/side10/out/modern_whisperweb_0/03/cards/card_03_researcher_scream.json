@@ -1,0 +1,176 @@
+{
+	"id": "card_03_researcher_scream",
+	"title": {
+		"korean": "과부하 연구원의 절규"
+	},
+	"tags": [
+		"researcher"
+	],
+	"intensity": "high",
+	"after_story": 3,
+	"before_story": 5,
+	"background_tags": [
+		"낡은 전산실",
+		"냉각수 파이프",
+		"비상등",
+		"데이터 손실",
+		"패닉"
+	],
+	"dialogue": [
+		{
+			"speaker": "narrator",
+			"content": {
+				"korean": "냉각수 파이프실, 오래된 단말기 앞에 데이터 연구원이 서 있다."
+			}
+		},
+		{
+			"speaker": "researcher",
+			"content": {
+				"korean": "안 돼! 이 데이터는 반드시 살려야 해!"
+			}
+		},
+		{
+			"speaker": "kai",
+			"content": {
+				"korean": "저러다 시스템 자체가 망가질 텐데. 냉각수를 빨리 부어야 해."
+			}
+		},
+		{
+			"speaker": "researcher",
+			"content": {
+				"korean": "서버 과열이 지속되면 핵심 보안 시스템이 영구적으로 손상될 거라고!"
+			}
+		},
+		{
+			"speaker": "kai",
+			"content": {
+				"korean": "어? 이 데이터, 갱스터 조직이 만들었다는 초기 형태 기록 같아."
+			}
+		},
+		{
+			"speaker": "researcher",
+			"content": {
+				"korean": "제발 잠시만 기다려 줘! 조금만 더 하면 돼!"
+			}
+		}
+	],
+	"choices": [
+		{
+			"text": {
+				"korean": "급한 대로 연구원의 옆 단말기에 데이터를 백업해 준다."
+			},
+			"path": "easy",
+			"mbti": "ES",
+			"effects": {
+				"gold": 100,
+				"community": -10,
+				"fighting": -10
+			},
+			"reward": [
+				"attack_up"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "당신은 연구원의 데이터를 다른 단말기에 빠르게 옮겼다."
+					}
+				},
+				{
+					"speaker": "researcher",
+					"content": {
+						"korean": "고마워! 덕분에 중요한 데이터를 살렸어!"
+					}
+				},
+				{
+					"speaker": "kai",
+					"content": {
+						"korean": "잘했지만, 핵심 시스템은 여전히 불안정해."
+					}
+				}
+			]
+		},
+		{
+			"text": {
+				"korean": "연구원을 설득하여 가장 중요한 데이터만 분류해 옮기도록 돕는다."
+			},
+			"path": "hard",
+			"mbti": "TJ",
+			"effects": {
+				"echo": 10,
+				"fighting": -10,
+				"reason": 20
+			},
+			"reward": [
+				"defense_up"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "당신은 연구원과 함께 우선순위가 높은 데이터를 선별했다."
+					}
+				},
+				{
+					"speaker": "researcher",
+					"content": {
+						"korean": "당신의 판단이 옳았어. 이게 최선이었어."
+					}
+				},
+				{
+					"speaker": "kai",
+					"content": {
+						"korean": "시간을 조금 썼지만, 현명한 선택이었어."
+					}
+				}
+			]
+		},
+		{
+			"text": {
+				"korean": "비상용 데이터 저장 장치를 건네며 연구원을 안심시킨다."
+			},
+			"path": "gold",
+			"mbti": "IP",
+			"require": {
+				"stat": "gold",
+				"op": ">=",
+				"value": 100
+			},
+			"effects": {
+				"gold": -100,
+				"community": 10,
+				"echo": 5
+			},
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "당신은 연구원에게 고성능 저장 장치를 주었다."
+					}
+				},
+				{
+					"speaker": "researcher",
+					"content": {
+						"korean": "이런 걸 가지고 있다니! 덕분에 안심하고 비킬 수 있겠어!"
+					}
+				},
+				{
+					"speaker": "kai",
+					"content": {
+						"korean": "돈은 좀 썼지만, 문제는 해결됐네."
+					}
+				}
+			]
+		}
+	],
+	"_slot": {
+		"room": 4,
+		"must": "서버 과열이 지속되면 낡은 전산실의 핵심 보안 시스템이 영구적으로 손상된다.",
+		"must_line": "서버 과열이 지속되면 핵심 보안 시스템이 영구적으로 손상될 거라고!",
+		"hint_line": "어? 이 데이터, 갱스터 조직이 만들었다는 초기 형태 기록 같아.",
+		"event": "데이터 연구원이 당신 앞을 막아서며 서버에 마지막 데이터를 저장하려 한다."
+	}
+}

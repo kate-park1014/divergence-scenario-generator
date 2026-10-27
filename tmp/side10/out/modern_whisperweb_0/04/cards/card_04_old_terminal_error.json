@@ -1,0 +1,140 @@
+{
+	"id": "card_04_old_terminal_error",
+	"title": {
+		"korean": "낡은 단말기의 오류"
+	},
+	"tags": [
+		"old"
+	],
+	"intensity": "calm",
+	"after_story": 7,
+	"before_story": 10,
+	"background_tags": [
+		"전산실",
+		"단말기",
+		"오류",
+		"데이터",
+		"혼란"
+	],
+	"dialogue": [
+		{
+			"speaker": "narrator",
+			"content": {
+				"korean": "낡은 단말기 화면에 오류 메시지가 가득하다. 최인식의 얼굴에는 당혹감이 역력하다."
+			}
+		},
+		{
+			"speaker": "data_sorter",
+			"content": {
+				"korean": "아이고, 이게 뭐야! 핵심 보안 시스템이 고장 나니, 데이터 분류도 엉망진창이잖아!"
+			}
+		},
+		{
+			"speaker": "dax",
+			"content": {
+				"korean": "시스템이 망가지니 이런 사소한 것까지 다 꼬이네. 어떻게 해야 할까?"
+			}
+		}
+	],
+	"choices": [
+		{
+			"text": {
+				"korean": "모니터의 오류 메시지를 대충 훑어보고 중요한 건 없다고 말한다."
+			},
+			"path": "easy",
+			"mbti": "EP",
+			"effects": {
+				"gold": 70,
+				"fighting": -15
+			},
+			"reward": [
+				"defense_up"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "당신은 대수롭지 않다는 듯 말했다. 최인식은 잠시 안도하는 듯했지만, 곧 다시 모니터를 살폈다."
+					}
+				},
+				{
+					"speaker": "dax",
+					"content": {
+						"korean": "그렇게 넘어가도 괜찮을까? 괜히 나중에 더 큰일이 될까 걱정돼."
+					}
+				}
+			]
+		},
+		{
+			"text": {
+				"korean": "데이터 분류 시스템의 논리적 오류를 지적하고 해결책을 제시한다."
+			},
+			"path": "hard",
+			"mbti": "TJ",
+			"effects": {
+				"echo": -10,
+				"reason": 20
+			},
+			"reward": [
+				"intelligence_up"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "당신의 지적에 최인식의 얼굴이 굳어졌다. 그는 상황의 심각성을 깨달은 듯 고개를 숙였다."
+					}
+				},
+				{
+					"speaker": "dax",
+					"content": {
+						"korean": "지금은 안심시키는 게 먼저였을지도… 너무 원론적이었나?"
+					}
+				}
+			]
+		},
+		{
+			"text": {
+				"korean": "최인식에게 새 분류 장비를 사주겠다고 제안한다."
+			},
+			"path": "gold",
+			"mbti": "IN",
+			"require": {
+				"stat": "gold",
+				"op": ">=",
+				"value": 100
+			},
+			"effects": {
+				"community": 10,
+				"gold": -100
+			},
+			"reward": [
+				"heal"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "최인식은 당신의 제안에 놀라워했다. 그는 당신에게 감사를 표하며 서둘러 임시 대책을 강구하기 시작했다."
+					}
+				},
+				{
+					"speaker": "dax",
+					"content": {
+						"korean": "유연한 대처였어. 저 사람도 한시름 놓았겠네."
+					}
+				}
+			]
+		}
+	],
+	"_slot": {
+		"room": 8,
+		"must": "낡은 전산실의 핵심 보안 시스템이 파괴되어 문이 잠기지 않고 통제 불능 상태가 된다.",
+		"must_line": "아이고, 이게 뭐야! 핵심 보안 시스템이 고장 나니, 데이터 분류도 엉망진창이잖아!",
+		"hint_line": "낡은 전산실의 핵심 보안 시스템이 파괴되어 데이터 분류 시스템이 엉망이 되었다.",
+		"event": "데이터 분류원 최인식이 낡은 단말기 앞에서 시스템 오류로 당황하고 있다."
+	}
+}

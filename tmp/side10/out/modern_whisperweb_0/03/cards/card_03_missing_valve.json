@@ -1,0 +1,180 @@
+{
+	"id": "card_03_missing_valve",
+	"title": {
+		"korean": "사라진 냉각수 밸브"
+	},
+	"tags": [
+		"missing"
+	],
+	"intensity": "high",
+	"after_story": 1,
+	"before_story": 3,
+	"background_tags": [
+		"냉각수",
+		"밸브",
+		"비품실",
+		"혼란",
+		"전산실"
+	],
+	"dialogue": [
+		{
+			"speaker": "narrator",
+			"content": {
+				"korean": "비품 관리원이 냉각수 파이프실 한구석에서 땀을 뻘뻘 흘리고 있다."
+			}
+		},
+		{
+			"speaker": "supply_clerk",
+			"content": {
+				"korean": "맙소사, 맙소사! 냉각수 밸브가 없어졌어!"
+			}
+		},
+		{
+			"speaker": "kai",
+			"content": {
+				"korean": "무슨 일이야? 뭘 그렇게 찾아?"
+			}
+		},
+		{
+			"speaker": "supply_clerk",
+			"content": {
+				"korean": "중요한 냉각수 밸브가 감쪽같이 사라졌어."
+			}
+		},
+		{
+			"speaker": "supply_clerk",
+			"content": {
+				"korean": "이대로면 일부 서버는 과열돼서 긴급 업무 처리 속도가 확 느려질 거야."
+			}
+		},
+		{
+			"speaker": "supply_clerk",
+			"content": {
+				"korean": "어젯밤엔 꿈에서 내 비품 목록이 멋대로 뒤섞이는 꿈을 꿨는데, 이게 현실이 되네."
+			}
+		},
+		{
+			"speaker": "kai",
+			"content": {
+				"korean": "저 밸브가 없으면 냉각수 공급에 문제가 생길 수도 있어."
+			}
+		}
+	],
+	"choices": [
+		{
+			"text": {
+				"korean": "대충 비슷한 낡은 밸브를 찾아 끼운다"
+			},
+			"path": "easy",
+			"mbti": "EP",
+			"effects": {
+				"gold": 80,
+				"fighting": 15
+			},
+			"reward": [
+				"attack_up"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "당신은 낡은 밸브를 대충 끼웠다. 일단 작동은 하지만 어딘가 불안하다."
+					}
+				},
+				{
+					"speaker": "supply_clerk",
+					"content": {
+						"korean": "고마워... 근데 이거 정말 괜찮을까?"
+					}
+				},
+				{
+					"speaker": "kai",
+					"content": {
+						"korean": "임시방편이긴 하지만, 그래도 당장은 괜찮겠지?"
+					}
+				}
+			]
+		},
+		{
+			"text": {
+				"korean": "비품 관리원과 함께 주변을 꼼꼼히 뒤져 밸브를 찾아낸다"
+			},
+			"path": "hard",
+			"mbti": "TJ",
+			"effects": {
+				"community": 20,
+				"echo": 10,
+				"reason": 10
+			},
+			"reward": [
+				"intelligence_up"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "당신은 비품 관리원과 함께 구석구석을 뒤져 사라진 밸브를 찾아냈다."
+					}
+				},
+				{
+					"speaker": "supply_clerk",
+					"content": {
+						"korean": "휴, 정말 고마워! 덕분에 한숨 돌렸어."
+					}
+				},
+				{
+					"speaker": "kai",
+					"content": {
+						"korean": "역시 꼼꼼하게 찾는 게 최고야. 잘했어!"
+					}
+				}
+			]
+		},
+		{
+			"text": {
+				"korean": "비상용 새 밸브를 즉시 주문해 교체한다"
+			},
+			"path": "gold",
+			"mbti": "IN",
+			"require": {
+				"stat": "gold",
+				"op": ">=",
+				"value": 100
+			},
+			"effects": {
+				"gold": -100,
+				"reason": 20
+			},
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "당신은 새 밸브를 주문했고, 곧바로 교체하여 냉각수 흐름을 완벽히 복구했다."
+					}
+				},
+				{
+					"speaker": "supply_clerk",
+					"content": {
+						"korean": "와, 완벽해! 이런 방법이 있었다니!"
+					}
+				},
+				{
+					"speaker": "kai",
+					"content": {
+						"korean": "돈은 좀 들었지만, 확실한 해결책이네."
+					}
+				}
+			]
+		}
+	],
+	"_slot": {
+		"room": 2,
+		"must": "일부 서버에서 과열로 데이터 처리 속도가 현저히 느려져 긴급 업무가 지연되고 있다.",
+		"must_line": "이대로면 일부 서버는 과열돼서 긴급 업무 처리 속도가 확 느려질 거야.",
+		"hint_line": "어젯밤엔 꿈에서 내 비품 목록이 멋대로 뒤섞이는 꿈을 꿨는데, 이게 현실이 되네.",
+		"event": "비품 관리원이 중요한 냉각수 밸브가 없어졌다며 당신에게 찾아달라고 한다"
+	}
+}

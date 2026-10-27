@@ -1,0 +1,394 @@
+{
+	"cards": [
+		{
+			"dialogue": [
+				{
+					"text": "낡은 전산실 복도, 음향 분석가가 당신을 향해 손을 휘저었다.",
+					"speaker": "narrator"
+				},
+				{
+					"text": "대체 뭘 하는 거야? 이 조각들이 계속 소리를 내는 바람에 뭘 맞추기는커녕, 제어실 앞이 온통 뒤죽박죽이야!",
+					"speaker": "sound_analyst"
+				},
+				{
+					"speaker": "echo",
+					"text": "저 사람이 흥분했어. 우리가 조용히 작업하길 바라나 봐."
+				},
+				{
+					"text": "모든 소리가… 연결된다… 귓가에 자꾸 맴도는군. 이상한 일이야.",
+					"speaker": "sound_analyst"
+				},
+				{
+					"text": "어서 해결해야 해.",
+					"speaker": "echo"
+				}
+			],
+			"people": [
+				{
+					"id": "sound_analyst",
+					"name": "음향 분석가",
+					"role": "데이터의 소리를 분석하는 데 예민한 전문가"
+				}
+			],
+			"hint_line": "모든 소리가… 연결된다… 귓가에 자꾸 맴도는군.",
+			"background_tags": [
+				"낡은_전산실",
+				"복도",
+				"데이터_조각",
+				"소음",
+				"갈등"
+			],
+			"choices": [
+				{
+					"reward": [
+						"attack_up"
+					],
+					"text": "조각의 소음을 더 키워서 방해한다.",
+					"effects": {
+						"fighting": 20,
+						"gold": 100,
+						"community": -10
+					},
+					"mbti": "EP",
+					"path": "easy",
+					"result": [
+						{
+							"text": "당신은 데이터 조각의 소리를 최대로 증폭했다. 복도는 더욱 혼란에 빠졌다.",
+							"speaker": "narrator"
+						},
+						{
+							"speaker": "sound_analyst",
+							"text": "젠장, 더 시끄러워졌잖아!"
+						},
+						{
+							"text": "공격력이 조금 올라간 것 같아.",
+							"speaker": "echo"
+						}
+					]
+				},
+				{
+					"reward": [
+						"defense_up"
+					],
+					"effects": {
+						"echo": -10,
+						"community": 20,
+						"reason": 10
+					},
+					"result": [
+						{
+							"speaker": "narrator",
+							"text": "당신은 분석가의 장비 일부를 고쳐 주었다. 소음이 잠시 줄어들었다."
+						},
+						{
+							"text": "오, 잠깐 조용해졌잖아? 고마워!",
+							"speaker": "sound_analyst"
+						},
+						{
+							"speaker": "echo",
+							"text": "시간이 지체되겠어."
+						}
+					],
+					"text": "분석가의 장비를 수리해 주며 소음을 줄인다.",
+					"path": "hard",
+					"mbti": "TJ"
+				},
+				{
+					"result": [
+						{
+							"speaker": "narrator",
+							"text": "당신은 휴대용 상점에서 최고급 헤드폰을 구매해 분석가에게 건넸다."
+						},
+						{
+							"text": "이 정도면 괜찮겠어. 고마워!",
+							"speaker": "sound_analyst"
+						},
+						{
+							"speaker": "echo",
+							"text": "덕분에 마음이 편안해졌어."
+						}
+					],
+					"path": "gold",
+					"mbti": "NF",
+					"effects": {
+						"gold": -100,
+						"community": 10,
+						"echo": 5
+					},
+					"text": "분석가에게 조용한 헤드폰을 사 준다.",
+					"reward": [
+						"heal"
+					]
+				}
+			],
+			"key": "fragment_dispute",
+			"intensity": "high",
+			"event": "음향 분석가가 당신이 맞추려는 데이터 조각 때문에 시끄럽다고 시비를 건다.",
+			"title": "데이터 조각을 둘러싼 언쟁",
+			"must_line": "이 조각들이 계속 소리를 내는 바람에 뭘 맞추기는커녕, 제어실 앞이 온통 뒤죽박죽이야!"
+		},
+		{
+			"intensity": "high",
+			"dialogue": [
+				{
+					"speaker": "narrator",
+					"text": "중앙 제어실 입구, 언어학자가 데이터 스크린 조각 더미를 발로 툭툭 찼다."
+				},
+				{
+					"speaker": "linguist",
+					"text": "쯧, 제어실로 향하는 길목에 데이터 조각이 이렇게 뒤섞여 있으면,"
+				},
+				{
+					"speaker": "linguist",
+					"text": "중요한 알고리즘 파일이 전부 엉망진창이 되잖아!"
+				},
+				{
+					"text": "저분은 파일이 뒤섞인 게 문제인 것 같아.",
+					"speaker": "echo"
+				},
+				{
+					"text": "모든 정보가… 연결된다…고 했던가? 엉뚱한 말이지. 이 파일들은 독립적인데.",
+					"speaker": "linguist"
+				},
+				{
+					"speaker": "echo",
+					"text": "우리가 해결해야 해."
+				}
+			],
+			"key": "misplaced_algorithm",
+			"hint_line": "모든 정보가… 연결된다…고 했던가? 엉뚱한 말이지.",
+			"background_tags": [
+				"중앙_제어실",
+				"입구",
+				"알고리즘",
+				"혼란",
+				"언어"
+			],
+			"people": [
+				{
+					"name": "언어학자",
+					"role": "데이터 속 숨은 언어를 연구하는 고지식한 학자",
+					"id": "linguist"
+				}
+			],
+			"choices": [
+				{
+					"effects": {
+						"fighting": 10,
+						"reason": -20,
+						"gold": 100
+					},
+					"reward": [
+						"intelligence_up"
+					],
+					"text": "알고리즘 파일 일부를 당신에게 유리하게 바꾼다.",
+					"path": "easy",
+					"result": [
+						{
+							"text": "당신은 언어학자의 알고리즘 파일 중 일부를 몰래 수정했다.",
+							"speaker": "narrator"
+						},
+						{
+							"text": "음, 이제 좀 정돈된 것 같군. 잘 됐어.",
+							"speaker": "linguist"
+						},
+						{
+							"speaker": "echo",
+							"text": "당신의 지능이 조금 올라간 것 같아."
+						}
+					],
+					"mbti": "TJ"
+				},
+				{
+					"text": "뒤섞인 파일들을 직접 찾아 언어학자에게 돌려준다.",
+					"reward": [
+						"stun"
+					],
+					"effects": {
+						"community": 15,
+						"reason": 10,
+						"echo": -10
+					},
+					"path": "hard",
+					"mbti": "IS",
+					"result": [
+						{
+							"text": "당신은 흩어진 알고리즘 파일들을 일일이 찾아 언어학자에게 건넸다.",
+							"speaker": "narrator"
+						},
+						{
+							"text": "오, 찾았군. 고마워!",
+							"speaker": "linguist"
+						},
+						{
+							"speaker": "echo",
+							"text": "우리가 너무 많은 시간을 낭비했어."
+						}
+					]
+				},
+				{
+					"result": [
+						{
+							"text": "당신은 언어학자에게 새 저장 장치를 건넸다.",
+							"speaker": "narrator"
+						},
+						{
+							"text": "이제 여기에 백업하면 되겠군. 편리해졌어.",
+							"speaker": "linguist"
+						},
+						{
+							"speaker": "echo",
+							"text": "덕분에 중요한 기술을 재사용할 수 있겠어."
+						}
+					],
+					"reward": [
+						"cooldown_reset"
+					],
+					"text": "새로운 알고리즘 파일 저장 장치를 구매해 준다.",
+					"effects": {
+						"echo": 5,
+						"community": 10,
+						"gold": -100
+					},
+					"mbti": "NP",
+					"path": "gold"
+				}
+			],
+			"title": "뒤섞인 알고리즘 파일",
+			"event": "언어학자가 당신이 맞추려는 데이터 조각들 때문에 중요한 알고리즘 파일이 뒤섞였다며 투덜거린다.",
+			"must_line": "제어실로 향하는 길목에 데이터 조각이 이렇게 뒤섞여 있으면, 중요한 알고리즘 파일이 전부 엉망진창이 되잖아!"
+		},
+		{
+			"people": [
+				{
+					"id": "psychic_researcher",
+					"name": "심령 연구가",
+					"role": "데이터 속의 미스터리한 신호를 분석하는 연구원"
+				}
+			],
+			"hint_line": "모든 존재가… 연결된다… 헛소리라고 생각했지. 하지만 지금은…",
+			"event": "심령 연구가가 당신이 맞추려는 데이터 조각들 때문에 환영과 유령 신호에 시달린다며 도움을 요청한다.",
+			"dialogue": [
+				{
+					"text": "중앙 제어실 옆 대기실, 심령 연구가가 두 손으로 머리를 감싸고 있었다.",
+					"speaker": "narrator"
+				},
+				{
+					"speaker": "psychic_researcher",
+					"text": "으윽, 제어실로 가는 길에 이 데이터 조각들이 계속 이상한 신호를 보내서…"
+				},
+				{
+					"speaker": "psychic_researcher",
+					"text": "내 연구도, 당신이 조각을 맞추는 일도, 모든 게 엉망진창이야!"
+				},
+				{
+					"text": "저 사람이 많이 힘들어 보여.",
+					"speaker": "echo"
+				},
+				{
+					"text": "모든 존재가… 연결된다… 헛소리라고 생각했지. 하지만 지금은…",
+					"speaker": "psychic_researcher"
+				},
+				{
+					"speaker": "echo",
+					"text": "저 유령 신호 때문에 우리가 집중할 수 없어."
+				}
+			],
+			"intensity": "high",
+			"title": "유령 신호에 시달리는 심령 연구가",
+			"background_tags": [
+				"중앙_제어실",
+				"대기실",
+				"유령_신호",
+				"미스터리",
+				"혼란"
+			],
+			"must_line": "제어실로 가는 길에 이 데이터 조각들이 계속 이상한 신호를 보내서… 내 연구도, 당신이 조각을 맞추는 일도, 모든 게 엉망진창이야!",
+			"choices": [
+				{
+					"reward": [
+						"shield"
+					],
+					"mbti": "TP",
+					"effects": {
+						"gold": 100,
+						"reason": -15,
+						"fighting": 15
+					},
+					"path": "easy",
+					"result": [
+						{
+							"text": "당신은 연구가의 장비 설정을 바꾸어 데이터를 가로챘다.",
+							"speaker": "narrator"
+						},
+						{
+							"text": "어? 신호가 잠잠해졌군. 고마워!",
+							"speaker": "psychic_researcher"
+						},
+						{
+							"text": "뭔가 방어력이 생긴 것 같아!",
+							"speaker": "echo"
+						}
+					],
+					"text": "연구가의 장비를 슬쩍 조작해 당신에게 유리한 정보를 얻는다."
+				},
+				{
+					"result": [
+						{
+							"text": "당신은 연구가의 장비를 꼼꼼히 살피며 원인 모를 신호를 분석했다.",
+							"speaker": "narrator"
+						},
+						{
+							"speaker": "psychic_researcher",
+							"text": "덕분에 좀 나아졌어. 고마워."
+						},
+						{
+							"text": "너무 지체되고 있어. 몸이 무거워지는 것 같아.",
+							"speaker": "echo"
+						}
+					],
+					"text": "연구가의 장비를 점검하며 유령 신호의 원인을 함께 찾는다.",
+					"mbti": "SF",
+					"effects": {
+						"community": 20,
+						"echo": -10,
+						"reason": 10
+					},
+					"path": "hard",
+					"reward": [
+						"move_range_down"
+					]
+				},
+				{
+					"path": "gold",
+					"mbti": "EN",
+					"result": [
+						{
+							"text": "당신은 임시 차단 장치를 설치했다. 주변의 혼란스러운 신호가 사라졌다.",
+							"speaker": "narrator"
+						},
+						{
+							"text": "이제야 숨통이 트이는군.",
+							"speaker": "psychic_researcher"
+						},
+						{
+							"text": "이대로라면 어떤 공격도 막아낼 수 있을 것 같아.",
+							"speaker": "echo"
+						}
+					],
+					"effects": {
+						"gold": -100,
+						"reason": 10,
+						"echo": 5
+					},
+					"text": "유령 신호를 일시적으로 차단하는 장치를 구매한다.",
+					"reward": [
+						"heal"
+					]
+				}
+			],
+			"key": "phantom_signals"
+		}
+	],
+	"errors": []
+}

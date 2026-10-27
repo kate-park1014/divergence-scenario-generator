@@ -1,0 +1,173 @@
+{
+	"id": "card_02_sign_confusion",
+	"title": {
+		"korean": "혼란스러운 표지판"
+	},
+	"tags": [
+		"sign"
+	],
+	"intensity": "high",
+	"after_story": 1,
+	"before_story": 3,
+	"background_tags": [
+		"비상 전력실",
+		"표지판",
+		"혼란",
+		"제어판",
+		"복도"
+	],
+	"dialogue": [
+		{
+			"speaker": "narrator",
+			"content": {
+				"korean": "비상 전력실로 향하는 복도, 교통 통제 요원이 낡은 디지털 표지판 앞에서 애를 먹고 있다."
+			}
+		},
+		{
+			"speaker": "controller",
+			"content": {
+				"korean": "이놈의 표지판이 또 이상한 걸 내보내고 있네!"
+			}
+		},
+		{
+			"speaker": "controller",
+			"content": {
+				"korean": "\"긴급 상황: 모든 차량은 후진하십시오.\" 이게 뭐야!"
+			}
+		},
+		{
+			"speaker": "lin",
+			"content": {
+				"korean": "저건 완전히 쓸모없는 정보잖아."
+			}
+		},
+		{
+			"speaker": "controller",
+			"content": {
+				"korean": "당신, 혹시 저거 잠깐 꺼줄 수 있어요? 제 업무가 마비될 지경이라서요."
+			}
+		},
+		{
+			"speaker": "lin",
+			"content": {
+				"korean": "우리는 전원 시스템을 찾아야 하는데... 저 사람 정말 절박해 보여."
+			}
+		}
+	],
+	"choices": [
+		{
+			"text": {
+				"korean": "표지판 전원만 뽑아 잠시 멈춘다"
+			},
+			"path": "easy",
+			"mbti": "ES",
+			"effects": {
+				"echo": 5,
+				"community": -10,
+				"gold": 50
+			},
+			"reward": [
+				"attack_up"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "당신은 능숙하게 표지판 전원 코드를 찾아 뽑았다. 화면이 툭 꺼진다."
+					}
+				},
+				{
+					"speaker": "controller",
+					"content": {
+						"korean": "휴, 이제야 좀 살겠네요. 고마워요!"
+					}
+				},
+				{
+					"speaker": "lin",
+					"content": {
+						"korean": "임시방편이긴 하지만, 저 사람한테는 큰 도움이 됐을 거야."
+					}
+				}
+			]
+		},
+		{
+			"text": {
+				"korean": "요원의 업무를 잠시 돕는다"
+			},
+			"path": "hard",
+			"mbti": "IF",
+			"effects": {
+				"echo": 10,
+				"community": 20
+			},
+			"reward": [
+				"heal"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "당신은 요원과 함께 혼란스러운 시민들을 진정시키고 길을 안내했다."
+					}
+				},
+				{
+					"speaker": "controller",
+					"content": {
+						"korean": "덕분에 한숨 돌렸어요. 정말 큰 도움이 됐습니다."
+					}
+				},
+				{
+					"speaker": "lin",
+					"content": {
+						"korean": "우리 임무에 시간을 좀 썼지만, 좋은 일 한 것 같아."
+					}
+				}
+			]
+		},
+		{
+			"text": {
+				"korean": "골드를 주고 다른 해결책을 찾으라고 제안한다"
+			},
+			"path": "gold",
+			"mbti": "TJ",
+			"require": {
+				"stat": "gold",
+				"op": ">=",
+				"value": 100
+			},
+			"effects": {
+				"gold": -100,
+				"reason": 10
+			},
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "당신은 요원에게 골드를 건네며 다른 해결책을 찾아보라고 말했다."
+					}
+				},
+				{
+					"speaker": "controller",
+					"content": {
+						"korean": "이런... 생각지도 못했는데. 알겠습니다, 다른 방법을 찾아볼게요."
+					}
+				},
+				{
+					"speaker": "lin",
+					"content": {
+						"korean": "돈으로 해결하는 것도 방법이지만, 좀 씁쓸하네."
+					}
+				}
+			]
+		}
+	],
+	"_slot": {
+		"room": 2,
+		"must": "도시 곳곳의 디지털 표지판이 우스꽝스러운 문구를 계속 송출하고 있다.",
+		"must_line": "\"긴급 상황: 모든 차량은 후진하십시오.\" 이게 뭐야!",
+		"event": "교통 통제 요원이 오작동하는 표지판 때문에 당신에게 도움을 요청한다"
+	}
+}

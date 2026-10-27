@@ -1,0 +1,386 @@
+{
+	"cards": [
+		{
+			"key": "scrap_collector_blockade",
+			"intensity": "high",
+			"event": "낡은 전산실 통로에서 폐품 수집가가 연기 나는 서버 랙에서 부품을 뜯어내고 있다.",
+			"hint_line": "수집가의 욕심이 상황을 악화시킬 수 있어요.",
+			"people": [
+				{
+					"role": "연기 나는 서버 랙에서 부품을 떼어내려는 폐품 수집가",
+					"name": "수집가",
+					"id": "collector"
+				}
+			],
+			"title": "폐품 수집가의 방해",
+			"background_tags": [
+				"전산실",
+				"서버랙",
+				"연기",
+				"수집가",
+				"망치"
+			],
+			"choices": [
+				{
+					"mbti": "ET",
+					"effects": {
+						"community": -10,
+						"gold": 100,
+						"fighting": 20
+					},
+					"reward": [
+						"attack_up"
+					],
+					"text": "수집가를 강하게 밀치고 길을 확보한다.",
+					"path": "easy",
+					"result": [
+						{
+							"speaker": "narrator",
+							"text": "당신은 수집가를 강하게 밀쳐내고 길을 확보한다. 수집가는 놀라 넘어진다."
+						},
+						{
+							"speaker": "collector",
+							"text": "아야! 뭘 하는 거예요!"
+						},
+						{
+							"text": "어쩔 수 없었어. 급한 상황이었잖아.",
+							"speaker": "lin"
+						}
+					]
+				},
+				{
+					"mbti": "IF",
+					"effects": {
+						"reason": 20,
+						"echo": 10
+					},
+					"reward": [
+						"defense_up"
+					],
+					"result": [
+						{
+							"text": "당신은 수집가에게 서버 과열의 위험성을 차분히 설명한다. 수집가는 고개를 끄덕이며 진정한다.",
+							"speaker": "narrator"
+						},
+						{
+							"speaker": "collector",
+							"text": "아, 그렇군요! 큰일 날 뻔했네요. 고맙습니다."
+						},
+						{
+							"text": "좋은 방법이었어. 모두에게 더 안전한 선택이야.",
+							"speaker": "lin"
+						}
+					],
+					"path": "hard",
+					"text": "수집가에게 서버의 위험성을 알리고 다른 폐기물을 제안한다."
+				},
+				{
+					"mbti": "IJ",
+					"path": "gold",
+					"text": "수집가에게 부품 가격만큼의 골드를 주고 길을 비켜달라고 한다.",
+					"result": [
+						{
+							"text": "당신은 수집가에게 부품 가격만큼의 골드를 건네며 길을 비켜달라고 설득한다.",
+							"speaker": "narrator"
+						},
+						{
+							"text": "수집가는 기뻐하며 자리를 비켜준다.",
+							"speaker": "narrator"
+						},
+						{
+							"text": "정말요? 고맙습니다! 제가 방해하지 않을게요!",
+							"speaker": "collector"
+						},
+						{
+							"speaker": "lin",
+							"text": "돈으로 해결하는 것도 방법이네요. 잘했어."
+						}
+					],
+					"reward": [],
+					"effects": {
+						"gold": -100,
+						"echo": 5
+					}
+				}
+			],
+			"dialogue": [
+				{
+					"text": "서버 쿨링팬이 멈춘 전산실은 이미 후끈한 열기로 가득하다.",
+					"speaker": "narrator"
+				},
+				{
+					"text": "경고음 때문에 더는 못 버티겠어. 빨리 길을 찾아야 해.",
+					"speaker": "lin"
+				},
+				{
+					"speaker": "collector",
+					"text": "어서 빨리... 이 부품들만 챙기면 한몫 잡는다고..."
+				},
+				{
+					"text": "수집가가 연기 나는 서버 랙에 망치를 휘두르며 부품을 떼어내려 한다.",
+					"speaker": "narrator"
+				},
+				{
+					"speaker": "collector",
+					"text": "헉! 저기서 연기가 나고 작은 화재 경보도 울리잖아! 이거 비싼 부품인가?"
+				},
+				{
+					"text": "저러다 서버 전체가 망가지겠어!",
+					"speaker": "lin"
+				}
+			],
+			"must_line": "헉! 저기서 연기가 나고 작은 화재 경보도 울리잖아! 이거 비싼 부품인가?"
+		},
+		{
+			"event": "낡은 전산실 중앙에서 음향 엔지니어가 헤드폰을 쓰고 서버 경고음에 집중하고 있다.",
+			"intensity": "calm",
+			"key": "sound_engineer_obsession",
+			"choices": [
+				{
+					"path": "easy",
+					"text": "엔지니어의 헤드폰을 벗겨 던지고 길을 확보한다.",
+					"effects": {
+						"echo": -10,
+						"fighting": 20,
+						"gold": 50
+					},
+					"result": [
+						{
+							"speaker": "narrator",
+							"text": "당신은 엔지니어의 헤드폰을 벗겨 던지고 서버 랙으로 가는 길을 연다. 엔지니어는 크게 놀란다."
+						},
+						{
+							"speaker": "sound_engineer",
+							"text": "내 소리! 내 영감!"
+						},
+						{
+							"speaker": "lin",
+							"text": "휴, 간신히 빠져나왔네. 잘했어!"
+						}
+					],
+					"mbti": "EP",
+					"reward": [
+						"stun"
+					]
+				},
+				{
+					"result": [
+						{
+							"speaker": "narrator",
+							"text": "당신은 엔지니어에게 서버 과열 상황과 화재 위험을 설명한다. 엔지니어는 마지못해 고개를 끄덕인다."
+						},
+						{
+							"text": "위험하다니... 아쉽지만 어쩔 수 없군요.",
+							"speaker": "sound_engineer"
+						},
+						{
+							"speaker": "lin",
+							"text": "설득이 통했어! 현명한 선택이야."
+						}
+					],
+					"text": "엔지니어에게 상황의 위험성을 알리고, 잠시 자리를 비켜달라고 설득한다.",
+					"path": "hard",
+					"reward": [
+						"heal"
+					],
+					"effects": {
+						"echo": 10,
+						"community": 20
+					},
+					"mbti": "NT"
+				},
+				{
+					"path": "gold",
+					"text": "엔지니어에게 다른 '소음 예술' 소재를 찾을 골드를 주고 지나간다.",
+					"reward": [],
+					"result": [
+						{
+							"speaker": "narrator",
+							"text": "당신은 엔지니어에게 다른 곳에서 영감을 찾을 골드를 건네며 길을 비켜달라고 한다. 엔지니어는 눈을 반짝인다."
+						},
+						{
+							"text": "오, 새로운 영감을 찾을 기회군요! 고맙습니다!",
+							"speaker": "sound_engineer"
+						},
+						{
+							"speaker": "lin",
+							"text": "돈으로 해결하는 것도 나쁘지 않네요."
+						}
+					],
+					"effects": {
+						"echo": 5,
+						"gold": -100
+					},
+					"mbti": "SP"
+				}
+			],
+			"background_tags": [
+				"전산실",
+				"경고음",
+				"엔지니어",
+				"헤드폰",
+				"소음"
+			],
+			"dialogue": [
+				{
+					"speaker": "narrator",
+					"text": "서버 쿨링팬이 멈추고, 전산실 전체에 날카로운 과열 경고음이 울려 퍼진다."
+				},
+				{
+					"speaker": "lin",
+					"text": "이 소리 때문에 귀가 아파. 어서 전원 코드를 찾아야 해."
+				},
+				{
+					"speaker": "sound_engineer",
+					"text": "으음... 이 진동음과... 저 연기 나는 서버 랙에서 울리는 작은 화재 경보음의 조화! 완벽해!"
+				},
+				{
+					"speaker": "narrator",
+					"text": "엔지니어가 당신의 길을 막고 서서, 온몸으로 소리를 느끼는 듯한 포즈를 취한다."
+				},
+				{
+					"text": "저 사람, 설마 저 소리를 즐기는 거야?",
+					"speaker": "lin"
+				}
+			],
+			"people": [
+				{
+					"role": "서버 경고음을 예술 작품으로 착각하는 음향 엔지니어",
+					"id": "sound_engineer",
+					"name": "엔지니어"
+				}
+			],
+			"title": "소음 예술가의 방해",
+			"must_line": "으음... 이 진동음과... 저 연기 나는 서버 랙에서 울리는 작은 화재 경보음의 조화! 완벽해!",
+			"hint_line": "엔지니어는 현재 상황을 오해하고 있어요."
+		},
+		{
+			"title": "전파 연구원의 호기심",
+			"intensity": "high",
+			"dialogue": [
+				{
+					"speaker": "narrator",
+					"text": "전산실은 서버 쿨링팬이 멈춰 열기로 가득하고, 과열 경고음이 끊이지 않는다."
+				},
+				{
+					"speaker": "lin",
+					"text": "이 열기 속에서 움직이려니 힘들어. 어서 전원 코드를 찾아야 해."
+				},
+				{
+					"speaker": "researcher",
+					"text": "이봐요! 잠깐만요! 저기 연기가 피어오르는 서버 랙에서 작은 화재 경보가 울리는데,"
+				},
+				{
+					"speaker": "researcher",
+					"text": "그 순간에 발생하는 전파 신호가 정말 독특합니다!"
+				},
+				{
+					"speaker": "narrator",
+					"text": "연구원이 당신의 길목에 복잡한 측정 장비를 설치하며 방해한다."
+				},
+				{
+					"speaker": "lin",
+					"text": "저 사람, 지금 저런 걸 연구할 때가 아니잖아!"
+				}
+			],
+			"key": "radio_researcher_capture",
+			"must_line": "이봐요! 잠깐만요! 저기 연기가 피어오르는 서버 랙에서 작은 화재 경보가 울리는데, 그 순간에 발생하는 전파 신호가 정말 독특합니다!",
+			"event": "낡은 전산실 통로에서 전파 연구원이 특이한 신호를 감지하고 장비를 설치 중이다.",
+			"people": [
+				{
+					"name": "연구원",
+					"id": "researcher",
+					"role": "과열된 서버에서 나오는 특이 전파를 기록하려는 전파 연구원"
+				}
+			],
+			"choices": [
+				{
+					"path": "easy",
+					"text": "연구원의 장비를 치우고 억지로 길을 뚫고 지나간다.",
+					"result": [
+						{
+							"speaker": "narrator",
+							"text": "당신은 연구원의 장비를 거칠게 밀쳐내고 길을 확보한다. 장비 일부가 흔들린다."
+						},
+						{
+							"text": "안 돼! 내 소중한 데이터!",
+							"speaker": "researcher"
+						},
+						{
+							"text": "어서 서둘러야 해!",
+							"speaker": "lin"
+						}
+					],
+					"reward": [
+						"move_range_up"
+					],
+					"mbti": "TJ",
+					"effects": {
+						"gold": 100,
+						"community": -10,
+						"fighting": 20
+					}
+				},
+				{
+					"result": [
+						{
+							"speaker": "narrator",
+							"text": "당신은 연구원에게 서버 과열의 위험성을 알리고, 나중에 데이터 공유를 약속하며 협력을 제안한다."
+						},
+						{
+							"text": "오, 그런 방법이! 좋습니다, 협력합시다!",
+							"speaker": "researcher"
+						},
+						{
+							"text": "서로 도우니 더 좋은 결과가 나올 것 같아.",
+							"speaker": "lin"
+						}
+					],
+					"effects": {
+						"echo": 10,
+						"reason": 20
+					},
+					"reward": [
+						"intelligence_up"
+					],
+					"mbti": "IS",
+					"text": "연구원에게 서버 과열의 위험성을 설명하고, 나중에 데이터를 공유해 주겠다고 약속한다.",
+					"path": "hard"
+				},
+				{
+					"result": [
+						{
+							"speaker": "narrator",
+							"text": "당신은 연구원에게 최신 측정 장비를 사주겠다고 약속하며 자리를 비켜달라고 설득한다. 연구원은 감격한다."
+						},
+						{
+							"text": "정말요? 꿈만 같아요! 기꺼이 비켜드리겠습니다!",
+							"speaker": "researcher"
+						},
+						{
+							"speaker": "lin",
+							"text": "엄청난 제안이었어. 덕분에 길이 열렸네."
+						}
+					],
+					"reward": [],
+					"path": "gold",
+					"text": "연구원에게 더 좋은 측정 장비를 사주겠다고 제안하며 길을 비켜달라고 한다.",
+					"mbti": "EN",
+					"effects": {
+						"gold": -120,
+						"echo": 5
+					}
+				}
+			],
+			"hint_line": "연구원은 이례적인 현상에 너무 몰두하고 있어요.",
+			"background_tags": [
+				"전산실",
+				"전파",
+				"연구원",
+				"장비",
+				"신호"
+			]
+		}
+	],
+	"errors": []
+}

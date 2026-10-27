@@ -1,0 +1,53 @@
+{
+  "issues": [
+    {
+      "problem": "바로 앞 character_any 줄(\"다른 방법이 없어 보여.\")과 말투(해/자)가 섞여 있다.",
+      "room": 1,
+      "index": 6,
+      "block": "dialogue",
+      "quote": "협박범의 정보를 폭로해서, 우선 카이님을 돕자.",
+      "fix": "\"협박범의 정보를 폭로해서, 우선 카이님을 돕는 게 좋겠어.\" 또는 \"협박범의 정보를 폭로해서, 우선 카이님을 돕도록 하자.\" 등으로 말투를 통일한다.",
+      "item": "R6",
+      "order": 4,
+      "quote_found": true
+    },
+    {
+      "order": 4,
+      "room": 1,
+      "quote": "수상한데. 저번에 시스템 취약점을 열어뒀다가 문제가 생겼었지.",
+      "block": "dialogue",
+      "item": "R5",
+      "problem": "파티가 '익명 게시판'의 조언을 수상하다고 말하면서도 결국 그 조언을 따르게 된다.",
+      "fix": "'익명 게시판'의 조언을 수상하게 묘사하는 대사를 삭제하거나, 파티가 그 조언을 따르지 않도록 스토리를 변경한다.",
+      "index": 4,
+      "quote_found": true
+    }
+  ],
+  "codeErrors": [],
+  "attempts": [
+    {
+      "edits": [
+        {
+          "speaker": "character_any",
+          "index": 4,
+          "block": "dialogue",
+          "text": "저번에 시스템 취약점을 열어뒀다가 문제가 생겼었지.",
+          "op": "replace",
+          "room": 1
+        },
+        {
+          "block": "dialogue",
+          "index": 6,
+          "text": "협박범의 정보를 폭로해서, 우선 카이님을 돕는 게 좋겠어.",
+          "op": "replace",
+          "room": 1,
+          "speaker": "character_any"
+        }
+      ],
+      "skipped": [],
+      "newErrors": []
+    }
+  ],
+  "kept": true,
+  "codeErrorsAfter": []
+}

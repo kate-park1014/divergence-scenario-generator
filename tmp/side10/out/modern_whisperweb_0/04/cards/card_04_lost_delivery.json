@@ -1,0 +1,174 @@
+{
+	"id": "card_04_lost_delivery",
+	"title": {
+		"korean": "분실된 택배"
+	},
+	"tags": [
+		"lost"
+	],
+	"intensity": "calm",
+	"after_story": 1,
+	"before_story": 3,
+	"background_tags": [
+		"데이터 폐기물 처리장",
+		"낡은 전산실",
+		"택배",
+		"분실",
+		"전광판"
+	],
+	"dialogue": [
+		{
+			"speaker": "narrator",
+			"content": {
+				"korean": "낡은 전산실 안, 택배 기사 한 명이 주변을 둘러보며 애를 태우고 있었다."
+			}
+		},
+		{
+			"speaker": "courier",
+			"content": {
+				"korean": "아, 큰일 났다! 이 중요한 택배를 어디다 둔 거지?"
+			}
+		},
+		{
+			"speaker": "dax",
+			"content": {
+				"korean": "저 사람, 택배를 잃어버린 것 같아. 저기 전광판 좀 봐."
+			}
+		},
+		{
+			"speaker": "courier",
+			"content": {
+				"korean": "아니, '오늘 점심은 김치찌개' 이런 것까지 왜 다 뜨는 거야!"
+			}
+		},
+		{
+			"speaker": "narrator",
+			"content": {
+				"korean": "택배 기사는 당신을 발견하고 다급하게 물었다."
+			}
+		},
+		{
+			"speaker": "courier",
+			"content": {
+				"korean": "혹시 이 근처에서 작은 상자 못 보셨어요?"
+			}
+		}
+	],
+	"choices": [
+		{
+			"text": {
+				"korean": "택배 기사를 도와 주변을 빠르게 수색하여 택배를 찾아준다."
+			},
+			"path": "easy",
+			"mbti": "ES",
+			"effects": {
+				"gold": 100,
+				"echo": 5,
+				"fighting": -15
+			},
+			"reward": [
+				"heal"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "당신은 택배 기사와 함께 주변을 빠르게 훑었다. 잠시 후, 장비 뒤에서 택배가 발견되었다."
+					}
+				},
+				{
+					"speaker": "courier",
+					"content": {
+						"korean": "찾았다! 정말 감사합니다! 여기 작은 사례입니다."
+					}
+				},
+				{
+					"speaker": "dax",
+					"content": {
+						"korean": "다행이다. 택배도 찾고, 우리도 골드를 얻었네."
+					}
+				}
+			]
+		},
+		{
+			"text": {
+				"korean": "택배보다 전광판에 노출된 개인 정보의 심각성을 알려준다."
+			},
+			"path": "hard",
+			"mbti": "TJ",
+			"effects": {
+				"community": 20,
+				"echo": 10
+			},
+			"reward": [
+				"defense_up"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "당신은 택배 기사에게 전광판의 개인 정보 유출 문제를 지적했다. 그는 그제야 화면을 응시했다."
+					}
+				},
+				{
+					"speaker": "courier",
+					"content": {
+						"korean": "맙소사, 이런 일이… 택배보다 이게 더 큰 문제였네요!"
+					}
+				},
+				{
+					"speaker": "dax",
+					"content": {
+						"korean": "저 사람도 이제 상황을 인지했어."
+					}
+				}
+			]
+		},
+		{
+			"text": {
+				"korean": "돈을 주고 새 택배를 보내도록 권유한다."
+			},
+			"path": "gold",
+			"mbti": "IP",
+			"require": {
+				"stat": "gold",
+				"op": ">=",
+				"value": 100
+			},
+			"effects": {
+				"gold": -100,
+				"reason": 20
+			},
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "당신은 택배 기사에게 돈을 건네며 새 택배를 보내는 편이 빠르다고 말했다. 그는 고마워하며 배송지로 향했다."
+					}
+				},
+				{
+					"speaker": "courier",
+					"content": {
+						"korean": "세상에, 이렇게까지 해주시다니! 정말 감사합니다!"
+					}
+				},
+				{
+					"speaker": "dax",
+					"content": {
+						"korean": "돈으로 해결했지만, 저 사람의 문제는 일단락되었어."
+					}
+				}
+			]
+		}
+	],
+	"_slot": {
+		"room": 2,
+		"must": "도시의 전광판에 무작위 개인 정보들이 우스꽝스럽게 노출되고 있다.",
+		"must_line": "아니, '오늘 점심은 김치찌개' 이런 것까지 왜 다 뜨는 거야!",
+		"hint_line": "잃어버린 택배를 어떻게 도와줄까?",
+		"event": "택배 기사가 분실된 택배 때문에 난처해하고 있다. 전광판에는 그의 개인 정보가 노출되고 있다."
+	}
+}
