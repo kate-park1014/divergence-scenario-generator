@@ -1,0 +1,217 @@
+{
+	"id": "card_01_auditor_taejin",
+	"kind": "rep",
+	"title": {
+		"korean": "백지 명패의 검수원"
+	},
+	"intensity": "calm",
+	"after_story": 7,
+	"before_story": 10,
+	"condition": {
+		"leaning": "reason-",
+		"among": [
+			"fighting-",
+			"fighting+",
+			"community-",
+			"community+",
+			"reason-",
+			"reason+"
+		],
+		"min": 20
+	},
+	"urgency": 8,
+	"leaning": "reason-",
+	"background_tags": [
+		"waiting_hall",
+		"midday",
+		"white_neon",
+		"strict_order",
+		"bureaucratic_chill"
+	],
+	"dialogue": [
+		{
+			"speaker": "narrator",
+			"content": {
+				"korean": "안경을 쓴 사내가 백지로 변해버린 명패를 들고 창백하게 떨며 서 있다."
+			}
+		},
+		{
+			"speaker": "taejin",
+			"content": {
+				"korean": "접수대 규정집을 들이밀며 철저히 절차대로만 서류를 접수하던 분이시죠?"
+			}
+		},
+		{
+			"speaker": "taejin",
+			"content": {
+				"korean": "규격 서식을 통과하려고 위조 검수인을 찍었더니, 명패의 제 이름이 소멸했어요!"
+			}
+		},
+		{
+			"speaker": "lin",
+			"content": {
+				"korean": "철저한 규칙주의자조차 허위 서류 앞에서는 규정의 칼날을 피하지 못했군요."
+			}
+		}
+	],
+	"choices": [
+		{
+			"text": {
+				"korean": "태진의 규정집을 밀쳐내고 번호표를 챙겨 접수대로 내달린다"
+			},
+			"path": "easy",
+			"mbti": "FP",
+			"flag": "audit_alert",
+			"effects": {
+				"community": -15,
+				"echo": -5,
+				"reason": -20,
+				"gold": 80
+			},
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "당신은 태진이 든 규정집을 쳐내고 과장된 경력이 찍힌 번호표를 낚아챘다."
+					}
+				},
+				{
+					"speaker": "taejin",
+					"content": {
+						"korean": "절차를 지키던 사람이 어찌 이런 협잡을! 규정 위반자는 반드시 처벌받소!"
+					}
+				},
+				{
+					"speaker": "lin",
+					"content": {
+						"korean": "태진 씨의 명패 글자가 백지로 바래고 있어요. 규정의 대가가 무서워요."
+					}
+				}
+			]
+		},
+		{
+			"text": {
+				"korean": "내 이력서의 과장된 조항을 규정집 절차에 맞춰 정식 삭제한다"
+			},
+			"path": "hard",
+			"mbti": "TJ",
+			"flag": "official_ticket",
+			"effects": {
+				"reason": -25,
+				"echo": 10,
+				"community": 10
+			},
+			"reward": [
+				"attack_up"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "당신은 자신의 서류에서 과장된 공증 직인을 칼로 긁어내 원본 규격에 맞췄다."
+					}
+				},
+				{
+					"speaker": "taejin",
+					"content": {
+						"korean": "스스로 규격을 바로잡았군요. 덕분에 내 백지 명패에도 이름 석 자가 돌아왔소."
+					}
+				},
+				{
+					"speaker": "lin",
+					"content": {
+						"korean": "거짓을 긁어내자 서류 규격이 맞아떨어졌어요. 정정 도장이 찍혔습니다!"
+					}
+				}
+			]
+		},
+		{
+			"text": {
+				"korean": "행정 감사 규정 4조 7항을 정확히 읊어 기계의 오류 삭제를 동결시킨다"
+			},
+			"path": "stat",
+			"mbti": "ST",
+			"require": {
+				"stat": "reason",
+				"op": "<=",
+				"value": -40
+			},
+			"flag": "rule_override",
+			"effects": {
+				"echo": 10,
+				"fighting": 10,
+				"reason": -35
+			},
+			"reward": [
+				"cooldown_reset"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "당신이 암기한 감사 조례 4항을 읊자 접수대 시스템이 적법 절차 모드로 멈춰 섰다."
+					}
+				},
+				{
+					"speaker": "taejin",
+					"content": {
+						"korean": "세상에, 행정 규칙의 빈틈을 완벽하게 꿰뚫고 있군! 내 권한 카드를 넘기겠소."
+					}
+				},
+				{
+					"speaker": "lin",
+					"content": {
+						"korean": "규칙의 허점을 찔러 시스템의 존재 삭제 카운트다운을 일시 중지시켰어요!"
+					}
+				}
+			]
+		}
+	],
+	"_side": {
+		"slot": "D",
+		"person": {
+			"role": "위조 직인으로 명패가 백지화된 전직 검수원",
+			"name": "서태진",
+			"id": "taejin"
+		},
+		"wants": "규정에 맞춘 정정 절차를 밟아 백지가 된 명패의 이름을 복원하는 것",
+		"rule_link": "서식 규격을 맞추려 허위 직인을 찍었다가 규정에 의해 정체성이 지워진 대가",
+		"rep": "reason-",
+		"events": {},
+		"flags": {
+			"audit_alert": {
+				"kind": "bad",
+				"boss_penalty": -1,
+				"label": {
+					"korean": "감사 경보 발령"
+				},
+				"boss_line": {
+					"korean": "규정집을 짓밟고 강행한 탓에, 면접관의 원칙 감사 경보가 울려 이동 경로가 차단된다."
+				}
+			},
+			"official_ticket": {
+				"kind": "good",
+				"boss_penalty": 1,
+				"label": {
+					"korean": "정식 면접 번호표"
+				},
+				"boss_choice": {
+					"korean": "태진이 공인 인출기로 출력해 준 정규 번호표를 제시해 보스의 부정 입실 심사를 통과한다."
+				}
+			},
+			"rule_override": {
+				"kind": "good",
+				"boss_penalty": 2,
+				"label": {
+					"korean": "규정 강제 해제"
+				},
+				"boss_choice": {
+					"korean": "원칙 감사관의 권한으로 봉쇄된 면접장 규정 스위치를 조작해 비상 출구를 개방한다."
+				}
+			}
+		}
+	}
+}

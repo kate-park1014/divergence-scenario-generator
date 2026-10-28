@@ -1,0 +1,251 @@
+{
+	"id": "card_03_frozen_cables_carry",
+	"kind": "rep",
+	"title": {
+		"korean": "얼어붙은 케이블 나르기"
+	},
+	"intensity": "calm",
+	"after_story": 3,
+	"before_story": 5,
+	"condition": {
+		"leaning": "community+",
+		"among": [
+			"fighting-",
+			"fighting+",
+			"community-",
+			"community+",
+			"reason-",
+			"reason+"
+		],
+		"min": 20
+	},
+	"urgency": 8,
+	"leaning": "community+",
+	"background_tags": [
+		"pipe_room",
+		"dim_light",
+		"wet_floor",
+		"cold_air",
+		"busy"
+	],
+	"dialogue": [
+		{
+			"speaker": "narrator",
+			"content": {
+				"korean": "교대 조장이 케이블 다발을 어깨에 걸치고 숨을 몰아쉬고 있었다."
+			}
+		},
+		{
+			"speaker": "shift_lead",
+			"content": {
+				"korean": "당신이 위험한 줄 알면서도 먼저 나섰다는 사람이죠. 그래서 찾아왔어요."
+			}
+		},
+		{
+			"speaker": "shift_lead",
+			"content": {
+				"korean": "이 케이블 다발, 열 식으니까 만질 만해졌어요. 같이 옮겨 줄래요?"
+			}
+		},
+		{
+			"speaker": "kai",
+			"content": {
+				"korean": "무거워 보이는데... 저 사람 혼자 다 들다가 허리 나가겠어."
+			}
+		}
+	],
+	"choices": [
+		{
+			"text": {
+				"korean": "교대 조장과 함께 케이블 다발을 어깨에 걸고 옮긴다"
+			},
+			"path": "easy",
+			"mbti": "FJ",
+			"flag": "lead_carries",
+			"effects": {
+				"community": 20,
+				"echo": 5
+			},
+			"reward": [
+				"defense_up"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "둘이 다발을 나눠 들자 발밑에서 눌려 있던 스크린 조각이 드러났다."
+					}
+				},
+				{
+					"speaker": "shift_lead",
+					"content": {
+						"korean": "이거 여기 있었네요. 옮기길 잘했어요."
+					}
+				},
+				{
+					"speaker": "kai",
+					"content": {
+						"korean": "조각 하나 건졌네. 어깨는 좀 어떤가요?"
+					}
+				}
+			]
+		},
+		{
+			"text": {
+				"korean": "짐은 두고 조장에게 케이블을 다시 감아 두라고만 말한다"
+			},
+			"path": "hard",
+			"mbti": "TP",
+			"flag": "lead_strained",
+			"effects": {
+				"community": -20,
+				"reason": 10
+			},
+			"reward": [
+				"attack_up"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "shift_lead",
+					"content": {
+						"korean": "네? 지금 그게 급한 게 아닌데."
+					}
+				},
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "조장은 다발을 내려놓고 혼자 케이블을 감기 시작했다."
+					}
+				},
+				{
+					"speaker": "kai",
+					"content": {
+						"korean": "조각은 발밑에 그대로 있네. 저 사람 등만 굽었고."
+					}
+				}
+			]
+		},
+		{
+			"text": {
+				"korean": "교대 조장에게 당신 지시대로 다발을 나눠 들 사람을 부르게 한다"
+			},
+			"path": "stat",
+			"mbti": "EJ",
+			"require": {
+				"stat": "community",
+				"op": ">=",
+				"value": 40
+			},
+			"flag": "lead_crew",
+			"effects": {
+				"community": 25,
+				"fighting": 5
+			},
+			"reward": [
+				"intelligence_up"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "조장이 손짓하자 교대 인원 셋이 달려와 다발을 나눠 들었다."
+					}
+				},
+				{
+					"speaker": "shift_lead",
+					"content": {
+						"korean": "당신 말이면 다들 움직여요. 이 정도면 금방이에요."
+					}
+				},
+				{
+					"speaker": "kai",
+					"content": {
+						"korean": "사람이 모이니까 조각도 금방 나오네."
+					}
+				}
+			]
+		},
+		{
+			"text": {
+				"korean": "케이블 다발을 파이프 위에 얹어 눈썰매처럼 타고 미끄러진다"
+			},
+			"path": "fun",
+			"mbti": "FP",
+			"effects": {
+				"reason": 25,
+				"community": 10
+			},
+			"reward": [
+				"move_range_up"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "다발이 젖은 파이프를 타고 미끄러져 벽에 쿵, 부딪혔다."
+					}
+				},
+				{
+					"speaker": "shift_lead",
+					"content": {
+						"korean": "야! 케이블이 다 풀렸잖아요! ...근데 조각은 다 나왔네."
+					}
+				},
+				{
+					"speaker": "kai",
+					"content": {
+						"korean": "다친 데는 없지? 조장이 지금 웃어야 할지 울어야 할지 모��겠대."
+					}
+				}
+			]
+		}
+	],
+	"_side": {
+		"slot": "B",
+		"person": {
+			"id": "shift_lead",
+			"name": "교대 조장",
+			"role": "전산실 교대 책임자"
+		},
+		"wants": "차가워진 파이프실에서 식은 케이블 다발을 빨리 옮겨야 한다며, 모두를 위해 나서는 사람이라는 소문을 믿고 짐을 나눠 들자고 청한다.",
+		"rule_link": "케이블 다발 아래에 눌린 데이터 스크린 조각을 옮기는 과정에서 꺼낼 수 있다.",
+		"rep": "community+",
+		"events": {},
+		"flags": {
+			"lead_carries": {
+				"kind": "bad",
+				"boss_penalty": -1,
+				"label": {
+					"korean": "조장의 어깨"
+				},
+				"boss_line": {
+					"korean": "교대 조장에게 케이블 다발을 함께 들어 통로를 연다."
+				}
+			},
+			"lead_strained": {
+				"kind": "good",
+				"boss_penalty": 1,
+				"label": {
+					"korean": "조장의 부상"
+				},
+				"boss_choice": {
+					"korean": "교대 조장이 허리를 짚은 채 케이블 위치를 알려 준다."
+				}
+			},
+			"lead_crew": {
+				"kind": "good",
+				"boss_penalty": 2,
+				"label": {
+					"korean": "모인 인원"
+				},
+				"boss_choice": {
+					"korean": "교대 조장이 불러 모은 인원에게 길을 열게 한다."
+				}
+			}
+		}
+	}
+}

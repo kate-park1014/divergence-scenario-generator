@@ -1,0 +1,249 @@
+{
+	"id": "card_04_scrap_share",
+	"kind": "rep",
+	"title": {
+		"korean": "나눠 가질 폐기물"
+	},
+	"intensity": "calm",
+	"after_story": 7,
+	"before_story": 10,
+	"condition": {
+		"leaning": "community-",
+		"among": [
+			"fighting-",
+			"fighting+",
+			"community-",
+			"community+",
+			"reason-",
+			"reason+"
+		],
+		"min": 20
+	},
+	"urgency": 8,
+	"leaning": "community-",
+	"background_tags": [
+		"data_plant",
+		"graveyard_shift",
+		"green_light",
+		"few_people",
+		"greedy"
+	],
+	"dialogue": [
+		{
+			"speaker": "gori",
+			"content": {
+				"korean": "당신이 폐기물 목록에서 제일 값 나가는 것만 골라 챙겼다는 사람이죠?"
+			}
+		},
+		{
+			"speaker": "narrator",
+			"content": {
+				"korean": "고리는 손가락마다 반지 자국이 남은 장갑을 끼고 있었다."
+			}
+		},
+		{
+			"speaker": "dax",
+			"content": {
+				"korean": "저 사람 손에 든 거, 아까 우리 앞에서 사라진 상자 아니야?"
+			}
+		},
+		{
+			"speaker": "gori",
+			"content": {
+				"korean": "주인 없는 물건이야. 지금 안 챙기면 남 좋은 거 돼요. 반반 합시다."
+			}
+		}
+	],
+	"choices": [
+		{
+			"text": {
+				"korean": "고리와 함께 폐기물 더미에서 값 나가는 부품부터 골라 챙긴다."
+			},
+			"path": "easy",
+			"mbti": "TP",
+			"flag": "shared_scrap",
+			"effects": {
+				"fighting": 15,
+				"community": -15,
+				"gold": 90
+			},
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "고리가 더미를 발로 차자 반짝이는 부품이 여러 개 굴러 나왔다."
+					}
+				},
+				{
+					"speaker": "gori",
+					"content": {
+						"korean": "이 정도면 반반 맞죠. 좋은 거래였어요."
+					}
+				},
+				{
+					"speaker": "dax",
+					"content": {
+						"korean": "저기 남은 더미에 뭐가 묻혀 있는데, 우리 건 다 챙긴 거 맞아?"
+					}
+				}
+			]
+		},
+		{
+			"text": {
+				"korean": "고리에게��� 챙긴 부품을 도로 더미에 부어 넣고 주인 찾기 목록에 올린다."
+			},
+			"path": "hard",
+			"mbti": "FJ",
+			"flag": "listed_scrap",
+			"effects": {
+				"community": 20,
+				"fighting": -10
+			},
+			"reward": [
+				"shield"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "부품이 더미로 되돌아가자 고리가 장갑을 벗어 던졌다."
+					}
+				},
+				{
+					"speaker": "gori",
+					"content": {
+						"korean": "이런 데서 손해 보는 사람 처음 봐요. 진짜."
+					}
+				},
+				{
+					"speaker": "dax",
+					"content": {
+						"korean": "고리가 가면서 뭐라고 중얼거렸어. 나쁜 말은 아니었어."
+					}
+				}
+			]
+		},
+		{
+			"text": {
+				"korean": "당신이 값 나가는 것만 챙긴다고 아는 고리에게 제일 큰 몫부터 내놓으라고 한다."
+			},
+			"path": "stat",
+			"mbti": "TJ",
+			"require": {
+				"stat": "community",
+				"op": "<=",
+				"value": -40
+			},
+			"flag": "gori_cut",
+			"effects": {
+				"fighting": 20,
+				"community": -10
+			},
+			"reward": [
+				"attack_up"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "gori",
+					"content": {
+						"korean": "역시 소문대로네. 좋아요, 큰 거 드릴게요."
+					}
+				},
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "고리가 장갑을 벗고 가장 큰 부품을 양손으로 들어 올렸다."
+					}
+				},
+				{
+					"speaker": "dax",
+					"content": {
+						"korean": "이거 이렇게 가져가도 되는 거야? 뒤에 뭐가 있든?"
+					}
+				}
+			]
+		},
+		{
+			"text": {
+				"korean": "고리에게 폐기물 더미를 반으로 가르는 내기를 하자고 한다."
+			},
+			"path": "fun",
+			"mbti": "EP",
+			"effects": {
+				"reason": 25,
+				"community": -10
+			},
+			"reward": [
+				"intelligence_up"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "고리는 웃으며 더미를 두 쪽으로 갈랐고, 당신은 한쪽을 골랐다."
+					}
+				},
+				{
+					"speaker": "gori",
+					"content": {
+						"korean": "이쪽이요? ...어라, 이쪽엔 전부 라벨만 붙은 빈 통인데."
+					}
+				},
+				{
+					"speaker": "dax",
+					"content": {
+						"korean": "내기에서 이겼는데 빈 통을 이겼네. 박수."
+					}
+				}
+			]
+		}
+	],
+	"_side": {
+		"slot": "D",
+		"person": {
+			"id": "gori",
+			"name": "고리",
+			"role": "폐기물 재활용 업자"
+		},
+		"wants": "뒤섞인 기록 덕에 주인 없는 폐기물이 쏟아졌다며, 당신과 몫을 나눠 가지자고 꼬드긴다.",
+		"rule_link": "분류��� 안쪽에 끼어 나온 스크린 조각도 폐기물 더미에 섞여 있어, 누가 먼저 챙기느냐의 문제가 된다.",
+		"rep": "community-",
+		"events": {},
+		"flags": {
+			"shared_scrap": {
+				"kind": "bad",
+				"boss_penalty": -1,
+				"label": {
+					"korean": "나눈 폐기물"
+				},
+				"boss_line": {
+					"korean": "고리에게 받은 부품으로 분류기 잠금 회로를 덮는다."
+				}
+			},
+			"listed_scrap": {
+				"kind": "good",
+				"boss_penalty": 1,
+				"label": {
+					"korean": "주인 찾기 목록"
+				},
+				"boss_choice": {
+					"korean": "주인 찾기 목록에 오른 폐기물이라며 더미 앞을 통과한다."
+				}
+			},
+			"gori_cut": {
+				"kind": "good",
+				"boss_penalty": 2,
+				"label": {
+					"korean": "고리의 몫"
+				},
+				"boss_choice": {
+					"korean": "고리가 내준 큰 부품으로 분류기 앞의 잠금 회로를 막는다."
+				}
+			}
+		}
+	}
+}

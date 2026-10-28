@@ -1,0 +1,263 @@
+{
+	"id": "card_03_fist_in_debris",
+	"kind": "rep",
+	"title": {
+		"korean": "파편 앞의 주먹"
+	},
+	"intensity": "calm",
+	"after_story": 7,
+	"before_story": 10,
+	"condition": {
+		"leaning": "fighting-",
+		"among": [
+			"fighting-",
+			"fighting+",
+			"community-",
+			"community+",
+			"reason-",
+			"reason+"
+		],
+		"min": 20
+	},
+	"urgency": 8,
+	"leaning": "fighting-",
+	"background_tags": [
+		"pipe_room",
+		"dim",
+		"dust",
+		"crowd",
+		"tense"
+	],
+	"dialogue": [
+		{
+			"speaker": "narrator",
+			"content": {
+				"korean": "깨진 스크린 조각이 바닥에 흩어져 글자들이 서로 몸을 바꾸고 있었다."
+			}
+		},
+		{
+			"speaker": "scrap_dealer",
+			"content": {
+				"korean": "당신이 냉각수를 부어 파이프를 뚫었다는 그 사람이죠? 여기서 제일 큰 조각은 내 거요."
+			}
+		},
+		{
+			"speaker": "kai",
+			"content": {
+				"korean": "저 사람, 조각을 주머니에 넣으면서 손이 떨려. 뭘 숨기고 있는 것 같은데."
+			}
+		},
+		{
+			"speaker": "scrap_dealer",
+			"content": {
+				"korean": "흠, 손이 떨리긴 하지. 이 조각 하나만 팔면 빚을 한 번에 정리할 수 있으니까."
+			}
+		},
+		{
+			"speaker": "scrap_dealer",
+			"content": {
+				"korean": "비켜 주면 나머지는 당신들이 가져요. 안 비키면... 글쎄, 팔에 힘 좀 쓰는 편이라서."
+			}
+		}
+	],
+	"choices": [
+		{
+			"text": {
+				"korean": "고물상 곰의 어깨를 짚고 밀어내 큰 조각을 먼저 챙긴다."
+			},
+			"path": "easy",
+			"mbti": "TJ",
+			"flag": "shoved_dealer",
+			"effects": {
+				"fighting": 15,
+				"reason": -10
+			},
+			"reward": [
+				"attack_up"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "scrap_dealer",
+					"content": {
+						"korean": "이봐! 팔이... 팔이 안 움직여!"
+					}
+				},
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "곰이 품에서 조각을 떨어뜨렸다. 당신이 그걸 집어 들자 남은 조각도 순순히 바닥에 놓였다."
+					}
+				},
+				{
+					"speaker": "kai",
+					"content": {
+						"korean": "주머니에 뭐가 들었는지 봤어? 고물 등급표가 아니라 채무 확인서였어."
+					}
+				}
+			]
+		},
+		{
+			"text": {
+				"korean": "곰에게 큰 조각을 넘기고 대신 조각에 찍힌 냉각 담당자 서명을 읽어 낸다."
+			},
+			"path": "hard",
+			"mbti": "NF",
+			"flag": "kept_signature",
+			"effects": {
+				"fighting": -15,
+				"community": 10
+			},
+			"reward": [
+				"intelligence_up"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "scrap_dealer",
+					"content": {
+						"korean": "이걸 그냥 준다고? ...이상한 사람이네."
+					}
+				},
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "곰이 조각을 뒤집자 흐릿한 서명과 날짜가 드러났다. 냉각 담당자가 마지막으로 남긴 기록이었다."
+					}
+				},
+				{
+					"speaker": "kai",
+					"content": {
+						"korean": "이 서명, 지금 복도에서 안 보이는 사람 이름이야. 어디 갔을까."
+					}
+				}
+			]
+		},
+		{
+			"text": {
+				"korean": "곰에게 당신이 여기서 무슨 일을 해 왔는지 늘어놓고 조각을 전부 넘기게 한다."
+			},
+			"path": "stat",
+			"mbti": "EP",
+			"require": {
+				"stat": "fighting",
+				"op": "<=",
+				"value": -40
+			},
+			"flag": "dealer_backed_off",
+			"effects": {
+				"fighting": -20,
+				"echo": 5
+			},
+			"reward": [
+				"shield"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "scrap_dealer",
+					"content": {
+						"korean": "아... 당신 얘기, 복도에서 들었어요. 문짝을 부숴서 사람들 빼냈다는."
+					}
+				},
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "곰이 주머니를 뒤집었다. 조각과 함께 접힌 채무 확인서가 바닥에 떨어졌다."
+					}
+				},
+				{
+					"speaker": "kai",
+					"content": {
+						"korean": "주머니를 비우니까 걸음이 가벼워 보이네. 조각도 한 줌 더 생겼고."
+					}
+				}
+			]
+		},
+		{
+			"text": {
+				"korean": "곰의 채무 확인서를 대신 들고 조각 대신 빚을 정리해 주겠다고 제안한다."
+			},
+			"path": "fun",
+			"mbti": "FP",
+			"effects": {
+				"reason": 20,
+				"community": -10
+			},
+			"reward": [
+				"heal"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "scrap_dealer",
+					"content": {
+						"korean": "빚을... 당신이? 무슨 수로요?"
+					}
+				},
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "당신이 확인서를 접어 주머니에 넣자 곰이 조각을 전부 밀어냈다."
+					}
+				},
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "대신 확인서에 적힌 집 주소가 당신 손에 남았다."
+					}
+				},
+				{
+					"speaker": "kai",
+					"content": {
+						"korean": "빚을 대신 진다는 말이 그렇게 무섭게 들릴 줄은 몰랐어."
+					}
+				}
+			]
+		}
+	],
+	"_side": {
+		"slot": "D",
+		"person": {
+			"id": "scrap_dealer",
+			"name": "고물상 곰",
+			"role": "파편 수집상"
+		},
+		"wants": "깨진 데이터 스크린 조각을 값 나가는 고물로 챙기려 하며, 길을 막고 먼저 자기 몫을 내놓으라고 요구한다.",
+		"rule_link": "깨진 데이터 스크린 조각이 누구 손에 들어가느냐로 이 방의 정보와 다음 보스 방의 명분이 갈린다.",
+		"rep": "fighting-",
+		"events": {},
+		"flags": {
+			"shoved_dealer": {
+				"kind": "bad",
+				"boss_penalty": -1,
+				"label": {
+					"korean": "밀려난 고물상"
+				},
+				"boss_line": {
+					"korean": "고물상 곰이 복도 끝에서 당신을 가리키며 소리친다."
+				}
+			},
+			"kept_signature": {
+				"kind": "good",
+				"boss_penalty": 1,
+				"label": {
+					"korean": "읽어 낸 서명"
+				},
+				"boss_choice": {
+					"korean": "당신이 냉각 담당자의 서명과 날짜를 들어 보이며 복도 끝을 가리킨다."
+				}
+			},
+			"dealer_backed_off": {
+				"kind": "good",
+				"boss_penalty": 2,
+				"label": {
+					"korean": "물러난 고물상"
+				},
+				"boss_choice": {
+					"korean": "고물상 곰이 당신 앞에서 길을 비키고 어깨를 숙인다."
+				}
+			}
+		}
+	}
+}

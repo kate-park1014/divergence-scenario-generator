@@ -1,0 +1,171 @@
+{
+	"id": "card_03_melting_cable",
+	"kind": "normal",
+	"title": {
+		"korean": "녹아내리는 케이블"
+	},
+	"intensity": "high",
+	"after_story": 1,
+	"before_story": 3,
+	"background_tags": [
+		"cable",
+		"smoke",
+		"fan",
+		"rack",
+		"dust"
+	],
+	"dialogue": [
+		{
+			"speaker": "cable_worker",
+			"content": {
+				"korean": "이쪽 통신 케이블이 열을 못 버티고 녹아내리고 있어요. 휴대용 냉각팬 좀 빌려주세요!"
+			}
+		},
+		{
+			"speaker": "kai",
+			"content": {
+				"korean": "저걸 식히지 않으면 주변 장비까지 불이 옮겨붙을지도 몰라."
+			}
+		},
+		{
+			"speaker": "cable_worker",
+			"content": {
+				"korean": "당장 겉면만 식혀도 10분은 버틸 수 있다고요!"
+			}
+		}
+	],
+	"forced": [
+		{
+			"text": {
+				"korean": "{actor}이(가) 냉각팬 대신 소화기를 집어들고 통째로 분사한다."
+			},
+			"path": "forced",
+			"mbti": "EP",
+			"require": {
+				"mbti": "EP"
+			},
+			"chance": 0.3,
+			"effects": {
+				"fighting": 15,
+				"gold": 50
+			},
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "{actor}의 거친 조치 덕에 열기는 잡혔지만, 하얀 가루가 주변을 엉망으로 만들었다."
+					}
+				},
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "케이블 작업자가 멍한 표정으로 쳐다보며 수고비를 건넸다."
+					}
+				}
+			]
+		}
+	],
+	"choices": [
+		{
+			"text": {
+				"korean": "냉각팬을 빌려주어 케이블 겉면을 빠르게 식힌다."
+			},
+			"path": "easy",
+			"mbti": "ES",
+			"effects": {
+				"gold": 50,
+				"community": 10
+			},
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "냉각팬의 바람을 맞은 케이블이 일시적으로 열기를 가라앉혔다."
+					}
+				},
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "작업자가 고맙다며 동전을 건넸다."
+					}
+				}
+			]
+		},
+		{
+			"text": {
+				"korean": "케이블을 끊고 안전하게 절연 테이프로 감는다."
+			},
+			"path": "hard",
+			"mbti": "TJ",
+			"effects": {
+				"reason": 10,
+				"echo": -5
+			},
+			"reward": [
+				"shield"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "케이블을 끊어버리자 작업자가 당황하며 불평을 쏟아냈다."
+					}
+				},
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "하지만 화재 위험은 완전히 사라졌다."
+					}
+				}
+			]
+		},
+		{
+			"text": {
+				"korean": "근처 보급기에 돈을 넣고 냉각 가스를 뽑아 뿌려 완전히 식힌다."
+			},
+			"path": "gold",
+			"mbti": "IN",
+			"require": {
+				"stat": "gold",
+				"op": ">=",
+				"value": 50
+			},
+			"effects": {
+				"gold": -50
+			},
+			"reward": [
+				"move_range_up"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "냉각 가스가 케이블의 열기를 단숨에 얼려버렸다."
+					}
+				},
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "더 이상 녹아내릴 걱정 없이 깔끔하게 해결되었다."
+					}
+				}
+			]
+		}
+	],
+	"_side": {
+		"slot": "A",
+		"person": {
+			"id": "cable_worker",
+			"name": "케이블 작업자",
+			"role": "전산실 직원"
+		},
+		"wants": "과열로 녹아내리는 케이블을 식히기 위해 휴대용 냉각팬을 빌려달라고 한다.",
+		"rule_link": "열기로 인한 기계적 손상을 막기 위해 임시방편을 쓰는 상황이다.",
+		"events": {},
+		"flags": {}
+	}
+}

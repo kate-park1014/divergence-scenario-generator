@@ -1,0 +1,354 @@
+{
+	"cards": [
+		{
+			"no": 1,
+			"key": "resume_exaggeration_deal",
+			"wants": "수화 교육 앱에 이력서 자동 과장 기능을 넣어서 수강생들의 평가 점수를 만점으로 조작하고 관리 수수료를 챙기는 것.",
+			"dialogue": [
+				{
+					"speaker": "narrator",
+					"text": "강사 한이 수강생들의 이력서 뭉치와 빨간 인쇄용 도장을 테이블 위에 세개 내던졌다."
+				},
+				{
+					"speaker": "instructor_han",
+					"text": "당신이 지난번 배급 현장에서 남들 사정 안 보고 자기 보상표부터 냉큼 챙겼다던 그 개발자 맞죠?"
+				},
+				{
+					"speaker": "instructor_han",
+					"text": "당신처럼 잇속 밝은 사람이라면 이 제안이 반가울 겁니다."
+				},
+				{
+					"speaker": "instructor_han",
+					"text": "앱을 등록할 때 이력서 자동 완성 옵션을 켜서 모든 수강생의 성적을 최고 등급으로 과장해 주세요."
+				},
+				{
+					"text": "수수료 100 골드도 떼어 드리죠.",
+					"speaker": "instructor_han"
+				},
+				{
+					"speaker": "lin",
+					"text": "수강생들의 실제 숙련도와 다른 거짓 성적이 이력서에 올라가면 나중에 문제가 생길 텐데요."
+				}
+			],
+			"rule_link": "수화 교육 앱으로 언어 항목 이력서 성적을 자동 조작하면, 실제 언어 능력과 기록 사이에 왜곡이 발생한다.",
+			"person": {
+				"name": "강사 한",
+				"role": "수강생들의 수화 연습 노트와 이력서 성적을 관리하는 강사",
+				"id": "instructor_han"
+			},
+			"title": "성적 조작 제안",
+			"background_tags": [
+				"practice_room",
+				"daylight",
+				"bright",
+				"crowded",
+				"tense"
+			],
+			"choices": [
+				{
+					"effects": {
+						"community": -15,
+						"gold": 100,
+						"echo": -5
+					},
+					"result": [
+						{
+							"speaker": "narrator",
+							"text": "수화 교육 앱에 이력서 성적 자동 과장 옵션을 추가하고 강사 한에게서 100 골드를 받았다."
+						},
+						{
+							"speaker": "instructor_han",
+							"text": "역시 소문대로 계산이 빠르군요. 이 정도 성적표라면 면접관들도 토를 달지 못할 겁니다."
+						},
+						{
+							"speaker": "lin",
+							"text": "앱 덕분에 사람들이 손짓을 주고받지만, 이력서 점수와 실제 실력이 달라서 나중에 큰일이 나면 어쩌죠?"
+						}
+					],
+					"flag": {
+						"key": "overstated_resume_app",
+						"label": "성적 조작 앱",
+						"boss_text": "수화 교육 앱의 성적 조작 기록이 통신망에 발각되어 면접관들의 감시 모듈이 일제히 가동된다."
+					},
+					"path": "easy",
+					"reward": [
+						"intelligence_up"
+					],
+					"mbti": "TJ",
+					"text": "앱에 이력서 성적 자동 과장 옵션을 넣고 수수료를 받는다."
+				},
+				{
+					"reward": [
+						"defense_up"
+					],
+					"result": [
+						{
+							"text": "강사 한의 제안을 거절하고 수강생들의 실제 연습 기록만 이력서에 연동되도록 앱을 완성했다.",
+							"speaker": "narrator"
+						},
+						{
+							"text": "쯧, 융통성이라곤 전혀 없군. 이대로 제출했다가 기준 점수 미달자가 나오면 당신 책임입니다.",
+							"speaker": "instructor_han"
+						},
+						{
+							"speaker": "lin",
+							"text": "잘하셨어요! 비록 당장 이력서 점수는 낮아도 다들 앱으로 손짓 인사를 나누며 즐거워하고 있어요."
+						}
+					],
+					"effects": {
+						"community": 20,
+						"fighting": -10,
+						"echo": 10
+					},
+					"path": "hard",
+					"flag": {
+						"label": "정직한 숙련도 기록",
+						"key": "honest_evaluation_data",
+						"boss_text": "수화 교육 앱에 정직하게 기록된 숙련도 데이터를 제출하여 통과 인증을 받는다."
+					},
+					"mbti": "NF",
+					"text": "강사 한의 요청을 거절하고 실제 손짓 숙련도만 이력서에 기록되게 앱을 완성한다."
+				},
+				{
+					"path": "stat",
+					"flag": {
+						"boss_text": "강사 한의 비밀 거래 약점을 들어 면접관의 추궁을 강사 쪽으로 돌려버린다.",
+						"key": "instructor_secret_deal",
+						"label": "강사의 밀약 약점"
+					},
+					"effects": {
+						"community": -20,
+						"gold": 150,
+						"echo": 5
+					},
+					"reward": [
+						"attack_up"
+					],
+					"text": "당신의 실리적인 평판을 이용해 강사 한의 의도를 짚어내고 더 높은 보상금을 요구한다.",
+					"mbti": "TP",
+					"result": [
+						{
+							"speaker": "narrator",
+							"text": "강사 한의 수수료 독식 의도를 지적하며 150 골드의 보상금을 역으로 요구하여 받아냈다."
+						},
+						{
+							"speaker": "instructor_han",
+							"text": "자기 잇속만 챙긴다는 소문이 거짓이 아니었군요. 알았습니다, 원하는 대로 골드를 주죠."
+						},
+						{
+							"speaker": "lin",
+							"text": "돈은 챙겼지만 이력서 성적을 이렇게 조작해도 괜찮을지 걱정돼요."
+						}
+					]
+				},
+				{
+					"text": "강사 한의 빨간 인쇄용 도장을 뺏어 자신의 손등에 만점 도장을 찍는다.",
+					"mbti": "EP",
+					"reward": [
+						"stun"
+					],
+					"result": [
+						{
+							"speaker": "narrator",
+							"text": "강사 한의 빨간 도장을 뺏어 당신의 손등에 만점 도장을 찍어 버렸다."
+						},
+						{
+							"text": "지금 무슨 짓입니까! 내 채점 도장에 붉은 인목이 다 묻었잖아요!",
+							"speaker": "instructor_han"
+						},
+						{
+							"speaker": "lin",
+							"text": "휴, 황당한 행동 덕분에 성적 조작 이야기는 쏙 들어갔네요. 일단 완성된 앱부터 배포해요!"
+						}
+					],
+					"path": "fun",
+					"effects": {
+						"reason": -25,
+						"community": 0,
+						"fighting": 15,
+						"echo": -10
+					}
+				}
+			],
+			"slot": "B",
+			"kind": "rep",
+			"rep_dir": "community-"
+		},
+		{
+			"choices": [
+				{
+					"text": "수강생 민과 연습실 사람들을 위해 앱의 이력서 성적 자동 부풀리기 기능을 활성화한다.",
+					"result": [
+						{
+							"text": "수강생 민과 연습실 사람들을 위해 앱의 이력서 성적 자동 부풀리기 기능을 활성화했다.",
+							"speaker": "narrator"
+						},
+						{
+							"speaker": "student_min",
+							"text": "고마워요! 이력서 자격란이 만점으로 채워졌어요. 이제 면접을 볼 수 있게 됐어요!"
+						},
+						{
+							"text": "다들 앱 덕분에 손짓으로 기쁘게 인사를 나누고 있지만, 이력서 성적과 실제 실력이 다를 텐데 괜찮을까요?",
+							"speaker": "lin"
+						}
+					],
+					"mbti": "FJ",
+					"effects": {
+						"echo": 5,
+						"reason": -15,
+						"community": 15
+					},
+					"reward": [
+						"heal"
+					],
+					"path": "easy",
+					"flag": {
+						"key": "boosted_student_resumes",
+						"boss_text": "연습실 사람들의 과장된 이력서 성적이 발각되어 면접장 전체에 비상 경보가 울린다.",
+						"label": "과장된 수강생 이력서"
+					}
+				},
+				{
+					"flag": {
+						"boss_text": "수강생 민에게 직접 가르쳐 준 수화 표현으로 면접관의 기습 질문을 돌파한다.",
+						"key": "intensive_sign_coaching",
+						"label": "수화 단기 집중 지도"
+					},
+					"path": "hard",
+					"result": [
+						{
+							"text": "이력서 조작을 거부하고 수강생 민에게 남은 30분 동안 수화 핵심 단어를 직접 가르쳐 주었다.",
+							"speaker": "narrator"
+						},
+						{
+							"speaker": "student_min",
+							"text": "손가락이 꼬이지만 직접 배우니 훨씬 기억에 잘 남아요. 정직하게 면접장에 들어갈게요!"
+						},
+						{
+							"text": "올바른 선택이에요! 수강생들도 앱으로 손짓 단어를 하나씩 익히며 반갑게 대화하고 있어요.",
+							"speaker": "lin"
+						}
+					],
+					"effects": {
+						"echo": 10,
+						"fighting": 10,
+						"community": 20
+					},
+					"reward": [
+						"intelligence_up"
+					],
+					"text": "이력서 조작을 거부하고 수강생 민에게 남은 30분 동안 수화 핵심 단어를 직접 가르쳐 준다.",
+					"mbti": "ST"
+				},
+				{
+					"flag": {
+						"label": "연기된 면접 시간",
+						"key": "extended_interview_time",
+						"boss_text": "연기된 면접 시간 덕분에 수강생들과 정식 수화 표현을 점검할 여유를 얻는다."
+					},
+					"path": "stat",
+					"result": [
+						{
+							"speaker": "narrator",
+							"text": "당신의 헌신적인 명성을 활용해 연습실 사람들과 강사를 설득하여 면접 시간을 뒤로 연기시켰다."
+						},
+						{
+							"text": "당신이 나서 주신 덕분에 면접관들이 시험 시간을 연장해 줬어요! 준비할 시간이 생겼어요!",
+							"speaker": "student_min"
+						},
+						{
+							"speaker": "lin",
+							"text": "역시 남을 먼저 생각하는 당신다워요. 다들 앱을 켜고 손짓 인사를 나누며 시험을 준비하고 있어요."
+						}
+					],
+					"text": "헌신적인 평판을 활용해 연습실 사람들과 강사를 설득하여 면접 시간을 연기시킨다.",
+					"effects": {
+						"community": 25,
+						"echo": 15,
+						"reason": 10
+					},
+					"mbti": "IJ",
+					"reward": [
+						"move_range_up"
+					]
+				},
+				{
+					"mbti": "SP",
+					"text": "100 골드를 내고 강사 한에게 민의 단기 이력서 보충 검정 시험을 즉시 개설해 달라고 요청한다.",
+					"reward": [
+						"shield"
+					],
+					"result": [
+						{
+							"text": "100 골드를 지불하여 강사 한에게 수강생 민을 위한 10분 단기 이력서 보충 검정 시험을 개설하게 했다.",
+							"speaker": "narrator"
+						},
+						{
+							"text": "사비까지 써가며 특별 시험을 열어 주시다니 정말 감사합니다! 꼭 합격할게요!",
+							"speaker": "student_min"
+						},
+						{
+							"speaker": "lin",
+							"text": "돈을 들여서 정당한 기회를 만들어 주셨네요! 다들 안도하며 손인사를 나누고 있어요."
+						}
+					],
+					"effects": {
+						"community": 0,
+						"gold": -100,
+						"echo": 10,
+						"fighting": -10
+					},
+					"path": "gold"
+				}
+			],
+			"no": 2,
+			"key": "desperate_student_request",
+			"dialogue": [
+				{
+					"text": "수강생 민이 손때 묻은 수화 연습 노트를 끌어안은 채 초조하게 발을 굴렀다.",
+					"speaker": "narrator"
+				},
+				{
+					"text": "당신이 지난번 무너진 연습실에서 끝까지 남아서 사람들을 끌어내 준 그 헌신적인 분이죠?",
+					"speaker": "student_min"
+				},
+				{
+					"text": "부탁이에요, 절 좀 도와주세요!",
+					"speaker": "student_min"
+				},
+				{
+					"text": "30분 뒤면 면접인데 연습 노트 시험 점수가 모자라요.",
+					"speaker": "student_min"
+				},
+				{
+					"speaker": "student_min",
+					"text": "교육 앱이 이력서 성적을 자동으로 최고점으로 입력해 주게 해주세요!"
+				},
+				{
+					"speaker": "lin",
+					"text": "민 씨가 면접을 보고 싶어 하는 마음은 이해하지만, 이력서 기록을 사실과 다르게 수정하는 건 위험해요."
+				}
+			],
+			"title": "수강생의 간청",
+			"wants": "수화 교육 앱이 이력서 성적과 숙련도를 자동으로 과장 작성하게 하여 면접 자격을 당장 얻는 것.",
+			"person": {
+				"name": "수강생 민",
+				"id": "student_min",
+				"role": "수화 연습실에서 수화를 빨리 배우고 싶어 하는 수강생"
+			},
+			"background_tags": [
+				"practice_room",
+				"afternoon",
+				"warm",
+				"crowded",
+				"anxious"
+			],
+			"rule_link": "앱을 통해 이력서의 수화 자격 수준을 부풀리면 당장의 면접 자격은 얻으나 언어 체계 검증을 교란한다.",
+			"slot": "B",
+			"kind": "rep",
+			"rep_dir": "community+"
+		}
+	],
+	"errors": [],
+	"prompt_hash": "5d3c60620094ae31ab0221e078b4c17167adea79"
+}

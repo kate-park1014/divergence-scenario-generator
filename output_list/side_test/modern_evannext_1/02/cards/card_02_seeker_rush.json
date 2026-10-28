@@ -1,0 +1,184 @@
+{
+	"id": "card_02_seeker_rush",
+	"kind": "normal",
+	"title": {
+		"korean": "출력 창구의 밀치기"
+	},
+	"intensity": "calm",
+	"after_story": 3,
+	"before_story": 5,
+	"background_tags": [
+		"printer_zone",
+		"morning",
+		"white_neon",
+		"rushing_crowd",
+		"tense"
+	],
+	"dialogue": [
+		{
+			"speaker": "narrator",
+			"content": {
+				"korean": "단말기 옆 프린터에서 정렬된 서류가 뿜어져 나오자 한 지원자가 허겁지겁 끼어든다."
+			}
+		},
+		{
+			"speaker": "seeker",
+			"content": {
+				"korean": "방금 정리된 데이터 출력물 맞죠? 제 경력 수정본도 지금 바로 출력해야 합니다!"
+			}
+		},
+		{
+			"speaker": "seeker",
+			"content": {
+				"korean": "5분 뒤면 면접 서류 제출 마감이에요. 대기열 롤러가 멈추기 전에 제 칩을 단말기에 꽂아주세요!"
+			}
+		},
+		{
+			"speaker": "nia",
+			"content": {
+				"korean": "롤러가 빠르게 돌고 있어서 잘못 건드리면 용지가 걸릴 것 같아요."
+			}
+		}
+	],
+	"choices": [
+		{
+			"text": {
+				"korean": "회전하는 출력 롤러의 타이밍에 맞춰 구직자의 칩을 단말기에 밀어 넣는다"
+			},
+			"path": "easy",
+			"mbti": "SP",
+			"effects": {
+				"echo": 5,
+				"reason": -15,
+				"fighting": 20
+			},
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "출력 타이밍에 정확히 맞춰 칩을 접촉하자 구직자의 수정 이력서가 첫 줄로 인쇄되어 나온다."
+					}
+				},
+				{
+					"speaker": "seeker",
+					"content": {
+						"korean": "해냈군요! 면접관들에게 제 부풀려진 경력이 그대로 전달될 겁니다!"
+					}
+				},
+				{
+					"speaker": "nia",
+					"content": {
+						"korean": "아슬아슬하게 성공했지만, 저 사람 경력이 진짜인지 검증되지 않아서 걱정이에요."
+					}
+				}
+			],
+			"event": "minigame_timing",
+			"event_intro": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "출력 노즐이 요란한 기계음을 내며 좌우로 빠르게 왕복하기 시작한다."
+					}
+				},
+				{
+					"speaker": "seeker",
+					"content": {
+						"korean": "지금입니다! 노즐이 양 끝에 닿는 순간 세 번 연속으로 눌러야 등록됩니다!"
+					}
+				}
+			]
+		},
+		{
+			"text": {
+				"korean": "정규 출력 순서를 지키도록 구직자의 칩을 밀어내고 대기열을 유지한다"
+			},
+			"path": "hard",
+			"mbti": "SJ",
+			"effects": {
+				"fighting": -20,
+				"community": 15,
+				"echo": 10
+			},
+			"reward": [
+				"shield"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "구직자의 손을 물리고 대기 순번표 순서대로 서류를 배출구로 밀어 올린다."
+					}
+				},
+				{
+					"speaker": "seeker",
+					"content": {
+						"korean": "제 인생이 걸린 제출인데 이렇게 융통성이 없을 수가 있습니까!"
+					}
+				},
+				{
+					"speaker": "nia",
+					"content": {
+						"korean": "거센 항의를 받았지만, 다른 사람들의 서류 순서가 뒤엉키지 않아서 다행이에요."
+					}
+				}
+			]
+		},
+		{
+			"text": {
+				"korean": "구직자의 급행 출력 수수료 80골드를 대신 결제해 전용 슬롯을 연다"
+			},
+			"path": "gold",
+			"mbti": "FJ",
+			"require": {
+				"stat": "gold",
+				"op": ">=",
+				"value": 80
+			},
+			"effects": {
+				"echo": 10,
+				"community": 20,
+				"gold": -80
+			},
+			"reward": [
+				"move_range_up"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "단말기 과금 슬롯에 80골드를 결제하자 예비용 고속 인쇄 채널이 활성화된다."
+					}
+				},
+				{
+					"speaker": "seeker",
+					"content": {
+						"korean": "급행 요금을 대신 내주시다니! 덕분에 새치기하지 않고 정식으로 뽑았습니다!"
+					}
+				},
+				{
+					"speaker": "nia",
+					"content": {
+						"korean": "돈은 들었지만 현장에서 큰 소란이 번지는 건 막았네요."
+					}
+				}
+			]
+		}
+	],
+	"_side": {
+		"slot": "B",
+		"person": {
+			"name": "초조한 구직자",
+			"role": "이력서 과장 등록을 노리는 지원자",
+			"id": "seeker"
+		},
+		"wants": "마감 직전 자신의 과장된 이력서 수정본을 출력 대기열 맨 앞에 끼워 넣으려 한다.",
+		"rule_link": "단말기 대기열에서 먼저 정리되어 출력된 이력서가 면접관에게 우선 접수된다.",
+		"events": {
+			"easy": "출력기 헤드가 좌우로 세 번 왕복하는 틈에 칩을 밀어 넣어야 한다."
+		},
+		"flags": {}
+	}
+}

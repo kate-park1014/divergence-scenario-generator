@@ -1,0 +1,217 @@
+{
+	"id": "card_01_timid_help_seeker",
+	"kind": "rep",
+	"title": {
+		"korean": "창백한 지원자의 눈물"
+	},
+	"intensity": "calm",
+	"after_story": 3,
+	"before_story": 5,
+	"condition": {
+		"leaning": "fighting+",
+		"among": [
+			"fighting-",
+			"fighting+",
+			"community-",
+			"community+",
+			"reason-",
+			"reason+"
+		],
+		"min": 20
+	},
+	"urgency": 8,
+	"leaning": "fighting+",
+	"background_tags": [
+		"central_hall",
+		"afternoon",
+		"dim_light",
+		"anxious_crowd",
+		"sympathetic"
+	],
+	"dialogue": [
+		{
+			"speaker": "narrator",
+			"content": {
+				"korean": "구겨진 이력서를 품에 안은 창백한 지원자가 안절부절못하며 다가왔다."
+			}
+		},
+		{
+			"speaker": "timid_applicant",
+			"content": {
+				"korean": "\"당신이 아까 탈진한 사람에게 물을 건네고 끝까지 챙겨주던 그 다정한 분 맞죠?\""
+			}
+		},
+		{
+			"speaker": "timid_applicant",
+			"content": {
+				"korean": "\"저, 제 순번이 백 번 밖이라 오늘 안에 면접실 문턱도 못 넘어요... 제 서류도 조금만 손봐주세요!\""
+			}
+		},
+		{
+			"speaker": "lin",
+			"content": {
+				"korean": "\"손가락을 하도 쥐어뜯어서 피가 날 지경이에요. 정말 절박해 보이기는 한데...\""
+			}
+		}
+	],
+	"choices": [
+		{
+			"text": {
+				"korean": "식은땀을 흘리는 지원자의 이력서에 모범 봉사상 내역을 정성껏 꾸며 써서 접수대에 내민다"
+			},
+			"path": "easy",
+			"mbti": "EF",
+			"flag": "timid_weeping_clog",
+			"effects": {
+				"community": 10,
+				"fighting": 20,
+				"echo": 10
+			},
+			"reward": [
+				"heal"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "당신이 덧칠해 준 수상 경력 덕에 창백한 지원자의 번호표가 순식간에 8번으로 갱신되었다."
+					}
+				},
+				{
+					"speaker": "timid_applicant",
+					"content": {
+						"korean": "\"아아, 고맙습니다! 소문대로 정말 곤경에 처한 사람을 그냥 지나치지 않으시는군요!\""
+					}
+				},
+				{
+					"speaker": "lin",
+					"content": {
+						"korean": "\"순번이 앞당겨져서 다행이긴 한데... 저 사람 손이 아직도 덜덜 떨리고 있어요.\""
+					}
+				}
+			]
+		},
+		{
+			"text": {
+				"korean": "손을 떼며 거짓 경력은 스스로 감당할 수 없을 거라 타이르고 돌아선다"
+			},
+			"path": "hard",
+			"mbti": "IT",
+			"flag": "cold_reality_check",
+			"effects": {
+				"fighting": -20,
+				"echo": -10
+			},
+			"reward": [
+				"defense_up"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "당신이 손을 거두고 똑바로 쳐다보자, 지원자는 울음을 삼키며 가슴팍으로 서류를 끌어안았다."
+					}
+				},
+				{
+					"speaker": "timid_applicant",
+					"content": {
+						"korean": "\"그, 그렇군요... 다들 당신이 누구든 돕는 천사라고 했는데... 너무 냉정하세요...\""
+					}
+				},
+				{
+					"speaker": "lin",
+					"content": {
+						"korean": "\"마음은 쓰이지만, 저 사람 몫까지 우리가 거짓말을 떠안을 수는 없으니까요.\""
+					}
+				}
+			]
+		},
+		{
+			"text": {
+				"korean": "주변 대기자들을 모아 떨고 있는 지원자를 다독이며 정규 번호표를 챙겨준다"
+			},
+			"path": "stat",
+			"mbti": "SJ",
+			"require": {
+				"stat": "fighting",
+				"op": ">=",
+				"value": 40
+			},
+			"flag": "united_applicant_wall",
+			"effects": {
+				"fighting": 30,
+				"echo": 15
+			},
+			"reward": [
+				"intelligence_up"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "당신의 한마디에 주변 대기자들이 모여들어 떨고 있는 지원자의 어깨를 두드리며 서류를 교정해 주었다."
+					}
+				},
+				{
+					"speaker": "timid_applicant",
+					"content": {
+						"korean": "\"모두가 도와주다니... 당신 곁에 있으면 정말 기운이 나요! 정정당당히 줄을 서 볼게요!\""
+					}
+				},
+				{
+					"speaker": "lin",
+					"content": {
+						"korean": "\"대기홀 분위기가 한결 따뜻해졌어요. 당신 말이라면 다들 고개를 끄덕이네요.\""
+					}
+				}
+			]
+		}
+	],
+	"_side": {
+		"slot": "B",
+		"person": {
+			"role": "뒷번호에 절망한 수험생",
+			"id": "timid_applicant",
+			"name": "창백한 지원자"
+		},
+		"wants": "서류를 다듬어 백 번 밖으로 밀려난 순번을 한 자릿수로 끌어올리는 것",
+		"rule_link": "순번이 한참 밀린 지원자가 조작된 봉사 경력을 요구하며 당장의 번호 당기기를 원한다.",
+		"rep": "fighting+",
+		"events": {},
+		"flags": {
+			"timid_weeping_clog": {
+				"kind": "bad",
+				"boss_penalty": -1,
+				"label": {
+					"korean": "울보 대기자의 지체"
+				},
+				"boss_line": {
+					"korean": "당신이 서류를 챙겨준 울보 지원자가 떨림을 멈추지 못해 전광판 신호를 가로막는다."
+				}
+			},
+			"cold_reality_check": {
+				"kind": "good",
+				"boss_penalty": 1,
+				"label": {
+					"korean": "냉혹한 현실 직시"
+				},
+				"boss_choice": {
+					"korean": "냉정하게 쳐냈던 지원자의 서류 뭉치를 떠올려, 면접관의 헛점을 날카롭게 파고든다."
+				}
+			},
+			"united_applicant_wall": {
+				"kind": "good",
+				"boss_penalty": 2,
+				"label": {
+					"korean": "대기자들의 연대 방패"
+				},
+				"boss_choice": {
+					"korean": "지원자들의 든든한 신망을 바탕으로, 대기석 동료들의 합심을 이끌어내 압박을 버텨낸다."
+				}
+			}
+		}
+	}
+}

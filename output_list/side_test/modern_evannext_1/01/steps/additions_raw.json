@@ -1,0 +1,300 @@
+{
+	"seeds": [
+		{
+			"key": "hayeon_portfolio_easy",
+			"korean": "하연의 서류에 허위 무대 경력을 덧써 접수대에 제출함",
+			"english": "hayeon_portfolio_easy"
+		},
+		{
+			"key": "hayeon_portfolio_hard",
+			"english": "hayeon_portfolio_hard",
+			"korean": "하연의 조작 부탁을 거절하고 원본 그대로 제출하게 돌려보냄"
+		},
+		{
+			"korean": "진수의 실적을 채워주려 서류에 허위 직무를 써서 넘김",
+			"english": "jinsu_quota_easy",
+			"key": "jinsu_quota_easy"
+		},
+		{
+			"key": "jinsu_quota_hard",
+			"korean": "진수의 실적용 허위 서류 요구를 단호히 거절함",
+			"english": "jinsu_quota_hard"
+		}
+	],
+	"lines": [
+		{
+			"intent": "하연의 포트폴리오에 무대 경력을 덧써주어 순번을 올렸던 일처럼 자신의 서류도 합격 도장을 받아 기뻐함",
+			"emotion": "happy",
+			"example": "하연 씨의 포트폴리오에 무대 경력을 덧써주었더니 순번이 올랐던 것처럼, 제 서류도 힘을 발휘했나 봐요!",
+			"speaker": "lin",
+			"room": 3,
+			"after_line": 3,
+			"if_value": "hayeon_portfolio_easy"
+		},
+		{
+			"emotion": "sad",
+			"room": 5,
+			"speaker": "lin",
+			"after_line": 4,
+			"example": "접수원 진수 씨의 실적을 채워주겠다고 남의 서류에 허위 직무를 마구 써넣었던 게 마음에 걸려요... 그래서 제 이름까지 꼬여버린 걸까요?",
+			"if_value": "jinsu_quota_easy",
+			"intent": "접수원 진수의 실적을 채워주려 서류에 허위 직무를 대신 써주었던 일 때문에 이름이 꼬인 것은 아닌지 걱정함"
+		},
+		{
+			"speaker": "lin",
+			"example": "모두의 이름이 지워져 가는 이 혼란 속에서도, 당신 곁에 있으면 제 진짜 모습을 잃지 않을 것 같아요.",
+			"if_value": "echo >= 60",
+			"room": 7,
+			"after_line": 3,
+			"intent": "이름이 지워지는 혼란 속에서도 주인공에 대한 깊은 신뢰를 드러냄",
+			"emotion": "happy"
+		},
+		{
+			"after_line": 1,
+			"if_value": "graffiti_resume_drift",
+			"example": "마구잡이로 휘갈긴 낙서 서류들이 복도에 흩날려 발목을 묶고 있소! 이런 소란을 피운 자를 들일 순 없소!",
+			"room": 10,
+			"speaker": "random_boss",
+			"intent": "마구잡이로 휘갈긴 낙서 서류가 복도에 날려 시야와 발목을 묶은 사태를 성토함",
+			"emotion": "angry"
+		},
+		{
+			"if_value": "",
+			"emotion": "angry",
+			"intent": "접수창구 직원의 멱살을 잡고 거칠게 밀어붙이며 올라온 난폭한 행보를 경계함",
+			"speaker": "random_boss",
+			"room": 3,
+			"after_line": 5,
+			"example": "접수창구 직원의 멱살을 잡고 거칠게 밀어붙였다는 험악한 소문이 홀 전체에 파다하오! 어디서 또 완력을 쓰려는 거요?"
+		},
+		{
+			"intent": "지쳐 쓰러져 가던 대기자들에게 손을 내밀고 음료를 챙겨주었던 주인공의 따뜻한 행동에 고마워함",
+			"speaker": "lin",
+			"example": "지쳐 쓰러져 가던 대기자들에게 먼저 손을 내밀어 주셨던 것처럼, 제게도 이렇게 큰 힘이 되어주시는군요.",
+			"after_line": 3,
+			"if_value": "",
+			"room": 3,
+			"emotion": "happy"
+		},
+		{
+			"example": "다른 사람들은 번호표를 빼앗기든 말든 자기 좌석부터 챙기시더니... 결국 전광판마저 이 지경이 되었군요.",
+			"room": 5,
+			"speaker": "lin",
+			"intent": "남들을 제치고 자기 몫의 앞자리만 악착같이 챙기던 주인공의 냉정한 태도를 안타까워함",
+			"emotion": "sad",
+			"after_line": 6,
+			"if_value": ""
+		},
+		{
+			"after_line": 6,
+			"emotion": "happy",
+			"if_value": "",
+			"room": 5,
+			"speaker": "lin",
+			"intent": "탈락 위기의 지원자들을 위해 앞장서서 줄을 세워주었던 주인공의 헌신을 떠올림",
+			"example": "소외된 대기자들을 위해 앞장서서 한목소리를 내어주시더니, 이 기괴한 방송 앞에서도 물러서지 않으시는군요."
+		},
+		{
+			"emotion": "base",
+			"after_line": 4,
+			"room": 7,
+			"if_value": "",
+			"intent": "조례 항목과 공식 서식을 일일이 대조하며 꼼꼼하게 따지던 주인공의 침착한 면모에 기대를 검",
+			"speaker": "lin",
+			"example": "항목 하나하나 대조하며 빈틈없이 서식을 바로잡던 분이니, 이 관리 지침의 허점도 찾아내실 수 있을 거예요."
+		},
+		{
+			"example": "서식 따윈 상관없다며 내키는 대로 휘갈겨 접수하시더니, 끝내 사람들 이름까지 사방으로 흩날리게 된 건가요?",
+			"if_value": "",
+			"room": 7,
+			"speaker": "lin",
+			"after_line": 3,
+			"emotion": "sad",
+			"intent": "정해진 서식에 얽매이지 않고 즉흥적으로 낙서를 휘갈기며 기분 내키는 대로 행동하던 주인공을 걱정함"
+		},
+		{
+			"room": 10,
+			"emotion": "angry",
+			"if_value": "",
+			"speaker": "random_boss",
+			"after_line": 2,
+			"intent": "거구의 지원자들을 완력으로 굴복시키며 밀어붙여 온 주인공의 거친 행보를 비웃음",
+			"example": "소문대로 거구의 지원자들까지 주먹으로 찍어 누르며 올라온 독종이군! 하지만 내 앞에서도 그 완력이 통할 것 같소?"
+		},
+		{
+			"intent": "탈락자들에게 물과 약을 건네며 자비를 베풀던 주인공의 무른 태도를 비웃음",
+			"emotion": "angry",
+			"example": "탈락자들에게 물이나 건네며 천사 노릇을 하던 자가 여기까지 기어올라왔군! 그런 무른 동정심으로 면접관을 상대할 셈이오?",
+			"speaker": "random_boss",
+			"room": 10,
+			"if_value": "",
+			"after_line": 2
+		},
+		{
+			"intent": "남의 번호표를 가로채고 제 잇속과 독점 좌석만 악착같이 챙겨온 주인공의 이기심을 비난함",
+			"speaker": "random_boss",
+			"example": "남의 번호표를 가로채고 제 잇속만 악착같이 챙겨온 모리배로군! 네놈 혼자 살겠다고 이 문을 열어줄 성싶으냐!",
+			"if_value": "",
+			"emotion": "angry",
+			"after_line": 2,
+			"room": 10
+		},
+		{
+			"room": 10,
+			"emotion": "angry",
+			"if_value": "",
+			"intent": "소외된 군중을 규합해 선동하며 앞장서던 주인공의 우두머리 행세를 경계함",
+			"speaker": "random_boss",
+			"after_line": 2,
+			"example": "소외된 군중을 규합해 선동하던 패거리의 우두머리가 바로 네놈이었군! 떼를 지어 몰려온다고 이 굳건한 철문을 뚫을 순 없소!"
+		},
+		{
+			"emotion": "angry",
+			"after_line": 2,
+			"intent": "조례 몇 장과 감사 조항을 달달 외워 들이대며 꼬투리를 잡던 행보를 비웃음",
+			"room": 10,
+			"if_value": "",
+			"example": "조례 몇 장과 감사 조항을 달달 외워 들이대며 꼬투리를 잡던 족속이로군! 먹물 묻은 종이 뒤에 숨은 자에게 열어줄 면접실은 없소!",
+			"speaker": "random_boss"
+		},
+		{
+			"speaker": "random_boss",
+			"room": 10,
+			"example": "이력서에 해골 낙서나 휘갈기고 종이비행기를 날려대던 천둥벌거숭이가 여기까지 왔군! 온갖 장난질로 판을 어지럽힌 자는 절대 들일 수 없소!",
+			"after_line": 2,
+			"intent": "이력서에 해골 낙서나 휘갈기고 종이비행기를 날리며 장난질로 버텨온 행동을 꾸짖음",
+			"if_value": "",
+			"emotion": "angry"
+		}
+	],
+	"actors": [
+		{
+			"style": "간절하고 예의 바른 경어체",
+			"portrait_needed": "20대 초반 여성 대기자. 단정하게 빗은 단발머리에 구겨진 정장 차림, 불안과 간절함이 서린 눈빛",
+			"id": "lin"
+		},
+		{
+			"id": "free_spirit",
+			"portrait_needed": "20대 후반 남성 지원자. 머리에 넥타이를 두르고 셔츠 단추를 푼 차림, 장난기 가득한 표정",
+			"style": "능청스럽고 흥분된 반말투"
+		},
+		{
+			"style": "원칙을 따지는 깐깐한 하오체",
+			"portrait_needed": "30대 중반 남성 전직 검수원. 뿔테 안경에 빳빳한 와이셔츠 차림, 창백하고 신경질적인 인상",
+			"id": "taejin"
+		},
+		{
+			"style": "거칠고 위압적인 반말투",
+			"portrait_needed": "30대 후반 거구의 남성 용병. 얼굴에 굵은 칼자국 흉터가 있고 낡은 가죽 조끼를 입은 우람한 체격",
+			"id": "brawler"
+		},
+		{
+			"portrait_needed": "20대 중반 남성 지원자 대표. 잉크 묻은 작업복에 종이 팻말을 든 단호하고 절박한 인상",
+			"id": "group_rep",
+			"style": "정중하고 호소력 있는 존댓말"
+		},
+		{
+			"style": "다급하고 당황한 경어체",
+			"id": "daesik",
+			"portrait_needed": "40대 초반 남성 기능공. 기름때 묻은 작업 점퍼 차림에 멍하니 가슴을 쥐어뜯는 모습"
+		},
+		{
+			"portrait_needed": "20대 초반 남성 대기자. 물감과 형광펜이 묻은 헐렁한 셔츠 차림, 허공을 떠도는 멍한 표정",
+			"style": "엉뚱하고 나른한 반말투",
+			"id": "dohyeon"
+		},
+		{
+			"id": "minhyeok",
+			"portrait_needed": "30대 초반 남성 경비 지원자. 보안 요원 조끼 차림에 윤곽이 반투명하게 흐려지는 건장한 체구",
+			"style": "거칠고 조급한 반말투"
+		},
+		{
+			"style": "눈물 섞인 절박한 존댓말",
+			"portrait_needed": "20대 후반 여성 간호 보조원. 흐트러진 간호사 가운 차림에 다리가 투명해진 채 주저앉은 모습",
+			"id": "sukyeong"
+		},
+		{
+			"style": "눈치를 보며 재촉하는 말투",
+			"id": "pet_trainer",
+			"portrait_needed": "30대 남성 대기자. 낡은 훈련용 조끼 차림에 수상쩍은 쪽지를 쥐고 안절부절못하는 인상"
+		},
+		{
+			"portrait_needed": "40대 남성 암표상. 금시계를 차고 번들거리는 정장을 입은 교활한 인상",
+			"id": "shrewd_broker",
+			"style": "능글맞고 계산적인 하오체"
+		},
+		{
+			"style": "묵직하고 책임감 있는 하오체",
+			"id": "rep_oh",
+			"portrait_needed": "50대 남성 자치 대표. 낡은 돋보기안경을 목에 걸고 두꺼운 서류철을 품에 안은 지친 모습"
+		},
+		{
+			"id": "hayeon",
+			"style": "초조하게 매달리는 경어체",
+			"portrait_needed": "20대 중반 여성 대기자. 손톱을 물어뜯으며 구겨진 포트폴리오를 쥔 채 초조해하는 인상"
+		},
+		{
+			"portrait_needed": "20대 후반 남성 접수원. 빳빳한 제복 차림에 얇은 미소를 띠고 결재 도장을 만지작거리는 모습",
+			"style": "사무적이고 능청스러운 존댓말",
+			"id": "jinsu"
+		},
+		{
+			"style": "장사꾼처럼 넉살 좋은 존댓말",
+			"portrait_needed": "30대 남성 정비공. 정전기 방지 장갑을 끼고 기름 묻은 공구 주머니를 찬 호탕한 인상",
+			"id": "machine_tech"
+		},
+		{
+			"style": "투박하고 호통치는 하오체",
+			"id": "mechanic_oh",
+			"portrait_needed": "50대 남성 수리공. 낡은 렌치를 들고 땀을 뻘뻘 흘리는 투박하고 고집스러운 인상"
+		},
+		{
+			"id": "park",
+			"style": "비열하고 거친 억양의 말투",
+			"portrait_needed": "30대 후반 남성 투기자. 번호표 뭉치를 품에 쑤셔 넣고 주위를 두리번거리는 음흉한 인상"
+		},
+		{
+			"style": "엄격하고 사무적인 하오체",
+			"id": "procedure_clerk",
+			"portrait_needed": "30대 여성 규정 감시원. 칼각 잡힌 정복에 인주와 규정집을 들고 있는 차갑고 꼿꼿한 인상"
+		},
+		{
+			"portrait_needed": "남녀 대기자 무리. 머리칼이 헝클어지고 번호표를 쥔 채 서로를 밀치는 아수라장의 군중",
+			"id": "desperate_group",
+			"style": "아우성치며 매달리는 군중의 말투"
+		},
+		{
+			"id": "timid_applicant",
+			"style": "말끝을 흐리며 떠는 존댓말",
+			"portrait_needed": "20대 초반 남성 지원자. 땀에 젖은 안경을 올리며 구겨진 이력서를 가슴에 꼭 쥔 위축된 모습"
+		},
+		{
+			"id": "faint_man",
+			"portrait_needed": "40대 남성 대기자. 흙빛 얼굴로 식은땀을 흘리며 소파 모서리를 붙잡고 있는 탈진한 모습",
+			"style": "숨이 넘어갈 듯 헐떡이는 하오체"
+		}
+	],
+	"rooms_title": [
+		{
+			"title": "거부당한 번호표",
+			"room": 1
+		},
+		{
+			"room": 3,
+			"title": "위조된 임시 합격"
+		},
+		{
+			"title": "바뀌어버린 호명",
+			"room": 5
+		},
+		{
+			"title": "흩날리는 명패들",
+			"room": 7
+		},
+		{
+			"room": 10,
+			"title": "닫혀버린 철제 문"
+		}
+	],
+	"errors": []
+}

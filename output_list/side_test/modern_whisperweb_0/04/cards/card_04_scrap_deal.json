@@ -1,0 +1,252 @@
+{
+	"id": "card_04_scrap_deal",
+	"kind": "rep",
+	"title": {
+		"korean": "값 매겨진 조각"
+	},
+	"intensity": "calm",
+	"after_story": 1,
+	"before_story": 3,
+	"condition": {
+		"leaning": "community-",
+		"among": [
+			"fighting-",
+			"fighting+",
+			"community-",
+			"community+",
+			"reason-",
+			"reason+"
+		],
+		"min": 20
+	},
+	"urgency": 8,
+	"leaning": "community-",
+	"background_tags": [
+		"auction_line",
+		"dusty_floor",
+		"cold_light",
+		"murmuring_crowd",
+		"tense"
+	],
+	"dialogue": [
+		{
+			"speaker": "mira",
+			"content": {
+				"korean": "당신이 남 먼저 자기 몫 챙긴다는 사람이죠? 마음에 들어요. 저랑 잘 맞을 얼굴이에요."
+			}
+		},
+		{
+			"speaker": "dax",
+			"content": {
+				"korean": "내 일기장도 경매에 올라 있다는 거야? 누가 사는데?"
+			}
+		},
+		{
+			"speaker": "mira",
+			"content": {
+				"korean": "지금 줄 선 사람 열둘, 다 남의 기록 훔쳐갈 눈이에요. 당신 몫은 따로 챙겨 드릴게요."
+			}
+		},
+		{
+			"speaker": "narrator",
+			"content": {
+				"korean": "미라의 손가락엔 값이 적힌 종이 테이프가 여섯 겹이나 감겨 있었다."
+			}
+		}
+	],
+	"choices": [
+		{
+			"text": {
+				"korean": "미라의 줄에 끼어 남의 정보를 골라 챙긴다."
+			},
+			"path": "easy",
+			"mbti": "TP",
+			"flag": "mira_share",
+			"effects": {
+				"community": -20,
+				"echo": -5
+			},
+			"reward": [
+				"attack_up"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "미라가 목록에서 세 줄을 지우고 그 자리에 당신 이름을 적었다."
+					}
+				},
+				{
+					"speaker": "mira",
+					"content": {
+						"korean": "이 몫은 당신 거예요. 배신은 없어요, 아직은."
+					}
+				},
+				{
+					"speaker": "dax",
+					"content": {
+						"korean": "그 목록에 내 이름은 없지? 확인 좀 해봐."
+					}
+				}
+			]
+		},
+		{
+			"text": {
+				"korean": "미라의 경매를 취소시키고 줄 선 사람들을 돌려보낸다."
+			},
+			"path": "hard",
+			"mbti": "FJ",
+			"flag": "mira_blocked",
+			"effects": {
+				"community": 20,
+				"reason": -10,
+				"echo": 10
+			},
+			"reward": [
+				"defense_up"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "mira",
+					"content": {
+						"korean": "당신 같은 사람이 왜 여기 왔어요. 손해만 보면서."
+					}
+				},
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "줄이 흩어지자 미라가 종이 테이프를 전부 뜯어 바닥에 버렸다."
+					}
+				},
+				{
+					"speaker": "dax",
+					"content": {
+						"korean": "내 기록이 경매에서 내려온 건 좋은데… 저 사람 표정이 영 안 좋아."
+					}
+				}
+			]
+		},
+		{
+			"text": {
+				"korean": "미라에게 내 몫만 챙기고 나머지는 손대지 않겠다고 값을 부른다."
+			},
+			"path": "stat",
+			"mbti": "TJ",
+			"require": {
+				"stat": "community",
+				"op": "<=",
+				"value": -40
+			},
+			"flag": "mira_private",
+			"effects": {
+				"community": -15,
+				"echo": 5
+			},
+			"reward": [
+				"intelligence_up"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "mira",
+					"content": {
+						"korean": "역시 소문대로네요. 딱 자기 몫만. 계산 빠르세요."
+					}
+				},
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "미라가 명단 한 장을 접어 당신 손바닥에 밀어 넣었다."
+					}
+				},
+				{
+					"speaker": "dax",
+					"content": {
+						"korean": "나도 뭐 하나 챙겨줘. 내 일기장 같은 거."
+					}
+				}
+			]
+		},
+		{
+			"text": {
+				"korean": "미라의 종이 테이프를 풀어 경매 번호를 다시 붙인다."
+			},
+			"path": "fun",
+			"mbti": "EP",
+			"effects": {
+				"reason": 25,
+				"community": -10
+			},
+			"reward": [
+				"stun"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "번호가 뒤바뀌자 사람들이 엉뚱한 기록을 사 가며 줄이 꼬이기 시작했다."
+					}
+				},
+				{
+					"speaker": "mira",
+					"content": {
+						"korean": "이거… 사 온 사람들이 다 화난 얼굴인데요. 당신 때문에."
+					}
+				},
+				{
+					"speaker": "dax",
+					"content": {
+						"korean": "근데 내 일기장이 제일 싼 번호에 붙었어. 이거 산 사람이 없네?"
+					}
+				}
+			]
+		}
+	],
+	"_side": {
+		"slot": "A",
+		"person": {
+			"id": "mira",
+			"name": "미라",
+			"role": "폐기물 경매 중개인"
+		},
+		"wants": "유출된 타인 정보를 사 모아 되팔려는 처리장 사람들의 줄에 끼어, 자기 몫을 먼저 챙겨 달라고 요구한다.",
+		"rule_link": "경매 목록에 데이터 스크린 조각의 파편이 최고가로 올라 있다.",
+		"rep": "community-",
+		"events": {},
+		"flags": {
+			"mira_share": {
+				"kind": "bad",
+				"boss_penalty": -1,
+				"label": {
+					"korean": "챙긴 몫"
+				},
+				"boss_line": {
+					"korean": "미라가 넘겨준 명단 속 이름 하나가 보스 방 문 앞에서 당신을 붙잡는다."
+				}
+			},
+			"mira_blocked": {
+				"kind": "good",
+				"boss_penalty": 1,
+				"label": {
+					"korean": "막은 경매"
+				},
+				"boss_choice": {
+					"korean": "미라가 경매 종이를 찢어 버리고, 줄 서 있던 사람들이 정보 대신 배관 지도를 넘긴다."
+				}
+			},
+			"mira_private": {
+				"kind": "good",
+				"boss_penalty": 2,
+				"label": {
+					"korean": "개인 거래"
+				},
+				"boss_choice": {
+					"korean": "미라가 몰래 건넨 명단에서 보스 방 열쇠 번호를 찾아낸다."
+				}
+			}
+		}
+	}
+}

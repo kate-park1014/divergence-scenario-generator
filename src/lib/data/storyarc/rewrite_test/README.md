@@ -12,7 +12,7 @@
 ```bash
 npm run dev &                                              # dev 서버 (포트 5178)
 
-npm run rewrite:storyarc -- --id=modern_whisperweb_0        # 1개
+npm run rewrite:storyarc -- --id=modern_evannext_1        # 1개
 npm run rewrite:storyarc -- --id=a,b,c --concurrency=5      # 여러 개
 npm run rewrite:storyarc -- --id=a --judge-only             # 다시 쓰지 않고 채점만
 npm run rewrite:storyarc -- --id=a --no-judge               # 채점 없이 다시 쓰기만

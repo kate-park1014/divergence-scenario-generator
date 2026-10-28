@@ -1,0 +1,252 @@
+{
+	"id": "card_01_nameplate_thief",
+	"kind": "rep",
+	"title": {
+		"korean": "녹아내리는 명패"
+	},
+	"intensity": "calm",
+	"after_story": 7,
+	"before_story": 10,
+	"condition": {
+		"leaning": "community-",
+		"among": [
+			"fighting-",
+			"fighting+",
+			"community-",
+			"community+",
+			"reason-",
+			"reason+"
+		],
+		"min": 20
+	},
+	"urgency": 8,
+	"leaning": "community-",
+	"background_tags": [
+		"waiting_hall",
+		"midday",
+		"glaring_lamp",
+		"chaotic_hall",
+		"selfish_tension"
+	],
+	"dialogue": [
+		{
+			"speaker": "narrator",
+			"content": {
+				"korean": "명패를 품에 숨긴 한 남자가 헐레벌떡 당신 등 뒤로 숨어들며 이를 갈았다."
+			}
+		},
+		{
+			"speaker": "park",
+			"content": {
+				"korean": "남들이 쫓겨나든 말든 자기 몫의 합격 도장부터 먼저 챙겼다는 양반이지?"
+			}
+		},
+		{
+			"speaker": "park",
+			"content": {
+				"korean": "내가 남의 명패를 긁어모아 경력을 부풀렸더니, 내 명패가 녹아내리고 있어!"
+			}
+		},
+		{
+			"speaker": "lin",
+			"content": {
+				"korean": "남의 이름을 훔쳐 서류를 채운 대가로 자기 신분마저 지워지는 거예요."
+			}
+		}
+	],
+	"choices": [
+		{
+			"text": {
+				"korean": "박수철이 숨기려던 위조 명패를 낚아채 내 몫으로 챙긴다"
+			},
+			"path": "easy",
+			"mbti": "NT",
+			"flag": "stolen_tag",
+			"effects": {
+				"community": -25,
+				"echo": -10,
+				"gold": 100
+			},
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "당신은 박수철의 손목을 꺾어 그가 빼돌린 타인의 상급 명패를 빼앗았다."
+					}
+				},
+				{
+					"speaker": "park",
+					"content": {
+						"korean": "크억! 제 잇속만 챙긴다더니 진짜 피도 눈물도 없는 놈이잖아!"
+					}
+				},
+				{
+					"speaker": "lin",
+					"content": {
+						"korean": "그 명패는 남의 것이에요. 욕심을 부리다 우리 이름까지 오염될 수 있어요."
+					}
+				}
+			]
+		},
+		{
+			"text": {
+				"korean": "훔쳐낸 명패들을 강제로 회수해 원래 대기자들에게 돌려준다"
+			},
+			"path": "hard",
+			"mbti": "SF",
+			"flag": "fraud_ledger",
+			"effects": {
+				"echo": 10,
+				"community": 20,
+				"reason": -10
+			},
+			"reward": [
+				"intelligence_up"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "당신은 박수철이 훔친 명패를 압수해 본래 주인들에게 모조리 돌려주었다."
+					}
+				},
+				{
+					"speaker": "park",
+					"content": {
+						"korean": "이러면 나만 완전히 증발해 버린다고! 당신 소문과 영 딴판이잖아!"
+					}
+				},
+				{
+					"speaker": "lin",
+					"content": {
+						"korean": "피해자들이 자기 이름을 되찾았어요. 이제 우리 과장 서류도 결단해야 해요."
+					}
+				}
+			]
+		},
+		{
+			"text": {
+				"korean": "박수철의 덜미를 잡고 쥐고 있는 밀거래 서류 일체를 상납받는다"
+			},
+			"path": "stat",
+			"mbti": "ST",
+			"require": {
+				"stat": "community",
+				"op": "<=",
+				"value": -40
+			},
+			"flag": "black_route",
+			"effects": {
+				"echo": -5,
+				"community": -35,
+				"reason": 15
+			},
+			"reward": [
+				"move_range_up"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "당신은 박수철의 약점을 쥐고 흔들어 그가 몰래 빼돌린 여분의 도장 패스를 털어냈다."
+					}
+				},
+				{
+					"speaker": "park",
+					"content": {
+						"korean": "과연 자기 이익 앞에서는 한 치의 양보도 없군. 전부 다 줄 테니 놔줘!"
+					}
+				},
+				{
+					"speaker": "lin",
+					"content": {
+						"korean": "철저하게 털어냈군요. 하지만 임시 합격 도장이 찍힌 제 차례가 다가와요."
+					}
+				}
+			]
+		},
+		{
+			"text": {
+				"korean": "박수철의 등에 명패를 거꾸로 달고 명패 출력기 역회전 버튼을 누른다"
+			},
+			"path": "fun",
+			"mbti": "EN",
+			"effects": {
+				"community": 20,
+				"fighting": -20,
+				"echo": 10
+			},
+			"reward": [
+				"defense_up"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "당신은 박수철의 가슴팍에 과장된 명패를 거꾸로 붙이고 출력기 스위치를 눌렀다."
+					}
+				},
+				{
+					"speaker": "park",
+					"content": {
+						"korean": "어라? 기계가 역회전하더니 내 손가락 윤곽이 다시 나타났어?"
+					}
+				},
+				{
+					"speaker": "lin",
+					"content": {
+						"korean": "장난인 줄 알았는데, 기계가 오류를 역연산해서 이름을 뱉어냈어요!"
+					}
+				}
+			]
+		}
+	],
+	"_side": {
+		"slot": "D",
+		"person": {
+			"role": "명패를 훔치다 흐려진 투기 지원자",
+			"id": "park",
+			"name": "박수철"
+		},
+		"wants": "흐려지는 자신의 몸을 막기 위해 타인의 과장 이력서와 명패를 훔쳐 바꾸는 것",
+		"rule_link": "타인의 명패 정보를 가로채 허위 경력을 만들다 정체성이 증발하는 대가",
+		"rep": "community-",
+		"events": {},
+		"flags": {
+			"stolen_tag": {
+				"kind": "bad",
+				"boss_penalty": -1,
+				"label": {
+					"korean": "도난 명패의 경보"
+				},
+				"boss_line": {
+					"korean": "박수철의 훔친 명패를 챙긴 탓에, 분실물 추적 신호가 울려 당신의 위치가 드러난다."
+				}
+			},
+			"fraud_ledger": {
+				"kind": "good",
+				"boss_penalty": 1,
+				"label": {
+					"korean": "사기꾼 폭로 장부"
+				},
+				"boss_choice": {
+					"korean": "박수철의 은닉 장부를 제출해 대기실 서류 사기꾼 명단을 즉시 폭로한다."
+				}
+			},
+			"black_route": {
+				"kind": "good",
+				"boss_penalty": 2,
+				"label": {
+					"korean": "밀거래 퇴로"
+				},
+				"boss_choice": {
+					"korean": "박수철의 은밀한 밀거래 통로를 장악해 닫히는 비상 탈출용 환풍구를 선점한다."
+				}
+			}
+		}
+	}
+}

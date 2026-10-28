@@ -1,0 +1,192 @@
+{
+	"id": "card_05_format_terminal",
+	"kind": "normal",
+	"title": {
+		"korean": "엉킨 임시 단말기"
+	},
+	"intensity": "high",
+	"after_story": 1,
+	"before_story": 3,
+	"background_tags": [
+		"temporary_terminal",
+		"flickering_screen",
+		"messy_cables",
+		"anxious_worker",
+		"control_room"
+	],
+	"dialogue": [
+		{
+			"speaker": "data_clerk",
+			"content": {
+				"korean": "단말기에 임시로 모아둔 데이터가 전부 꼬여버렸어요! 복구는 무리입니다."
+			}
+		},
+		{
+			"speaker": "echo",
+			"content": {
+				"korean": "당장 포맷해서 조각을 깨버려! 안 그러면 내 1급 정보가 스팸 메일이랑 섞인다고!"
+			}
+		},
+		{
+			"speaker": "data_clerk",
+			"content": {
+				"korean": "차라리 저장소를 포맷해서 싹 밀어버리는 게 나아요. 안 그러면 시스템 전체로 퍼집니다."
+			}
+		},
+		{
+			"speaker": "narrator",
+			"content": {
+				"korean": "기록원이 단말기의 포맷 버튼을 누르려 했다."
+			}
+		}
+	],
+	"forced": [
+		{
+			"text": {
+				"korean": "{actor}이(가) 멋대로 단말기의 초기화 칩을 뽑아버린다."
+			},
+			"path": "forced",
+			"mbti": "EP",
+			"require": {
+				"mbti": "EP"
+			},
+			"chance": 0.3,
+			"effects": {
+				"echo": -10,
+				"reason": -20,
+				"fighting": 10
+			},
+			"reward": [
+				"hp_down"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "{actor}이(가) 답답하다며 단말기에 꽂혀 있던 초기화 칩을 확 뽑아버렸다."
+					}
+				},
+				{
+					"speaker": "data_clerk",
+					"content": {
+						"korean": "앗, 그걸 뽑으면 데이터가 물리적으로 타버린다고요!"
+					}
+				}
+			]
+		}
+	],
+	"choices": [
+		{
+			"text": {
+				"korean": "단말기를 포맷하게 둔다."
+			},
+			"path": "easy",
+			"mbti": "FP",
+			"effects": {
+				"fighting": 10,
+				"echo": -5,
+				"reason": -15
+			},
+			"reward": [
+				"heal"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "당신은 기록원의 행동을 묵인했다. 단말기의 모든 데이터가 지워지며 화면이 꺼졌다."
+					}
+				},
+				{
+					"speaker": "data_clerk",
+					"content": {
+						"korean": "속은 쓰리지만, 당장 시스템이 뻗는 것보단 낫죠."
+					}
+				}
+			]
+		},
+		{
+			"text": {
+				"korean": "포맷을 막고 핵심 백업 칩을 찾는다."
+			},
+			"path": "hard",
+			"mbti": "TP",
+			"effects": {
+				"reason": 20,
+				"fighting": -10,
+				"echo": 5
+			},
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "당신은 단말기의 슬롯들을 열고 진짜 백업 칩을 골라내어 복구를 시도했다."
+					}
+				},
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "데이터는 살려냈지만, 그 과정에서 눈이 빠질 듯한 피로를 느꼈다."
+					}
+				}
+			],
+			"event": "minigame_cup",
+			"event_intro": [
+				{
+					"speaker": "data_clerk",
+					"content": {
+						"korean": "슬롯이 세 개나 되는데, 어느 쪽에 진짜 백업 칩이 들어있는지 저도 모릅니다!"
+					}
+				}
+			]
+		},
+		{
+			"text": {
+				"korean": "외부 저장 장치를 사서 데이터를 옮긴다."
+			},
+			"path": "gold",
+			"mbti": "EN",
+			"require": {
+				"stat": "gold",
+				"op": ">=",
+				"value": 80
+			},
+			"effects": {
+				"community": 10,
+				"gold": -80
+			},
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "당신이 새 저장 장치를 연결해 꼬인 데이터를 안전하게 격리했다."
+					}
+				},
+				{
+					"speaker": "data_clerk",
+					"content": {
+						"korean": "비용은 들었지만, 포맷을 피해서 다행입니다."
+					}
+				}
+			]
+		}
+	],
+	"_side": {
+		"slot": "A",
+		"person": {
+			"id": "data_clerk",
+			"role": "데이터 기록원",
+			"name": "기록원"
+		},
+		"wants": "꼬여버린 임시 데이터 단말기의 저장소를 포맷해 버리자고 한다.",
+		"rule_link": "단말기 포맷은 데이터 스크린 조각의 파편화를 가속시키는 잘못된 해결책이다.",
+		"events": {
+			"hard": "여러 개의 단말기 슬롯 중 백업 칩이 들어있는 진짜 슬롯을 찾아야 한다."
+		},
+		"flags": {}
+	}
+}

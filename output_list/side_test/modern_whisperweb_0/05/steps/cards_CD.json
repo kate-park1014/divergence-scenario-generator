@@ -1,0 +1,630 @@
+{
+	"cards": [
+		{
+			"key": "erased_identity",
+			"wants": "통제판을 부쉈던 여파로 신분 데이터가 날아가자, 당황하며 남은 조각마저 깨버리려 한다.",
+			"kind": "callback",
+			"slot": "C",
+			"person": {
+				"id": "tech_worker",
+				"role": "제어실 기술자",
+				"name": "기술자"
+			},
+			"returns": "easy",
+			"dialogue": [
+				{
+					"speaker": "narrator",
+					"text": "제어실 한구석, 부서진 통제판에서 불꽃이 튀며 데이터 스크린 조각 하나가 바닥으로 떨어졌다."
+				},
+				{
+					"text": "방금 내 정보망이 아주 잠깐 복구됐었어! 너희 대체 뭘 한 거야?",
+					"speaker": "echo"
+				},
+				{
+					"speaker": "tech_worker",
+					"text": "내 신분 데이터가 삭제됐어! 통제판을 부순 탓이야! 이 조각들도 전부 박살 내야 해!"
+				},
+				{
+					"text": "기술자가 바닥에 떨어진 데이터 조각을 발로 짓밟으려 했다.",
+					"speaker": "narrator"
+				}
+			],
+			"background_tags": [
+				"room",
+				"panel",
+				"data",
+				"spark",
+				"fear"
+			],
+			"rule_link": "부서진 통제판의 충격으로 데이터가 더 깨져, 조각을 모으는 정답 행동을 방해하는 작은 위기가 된다.",
+			"title": "지워진 기술자의 신분",
+			"choices": [
+				{
+					"mbti": "FP",
+					"text": "기술자가 조각을 짓밟게 둔다.",
+					"flag": {
+						"boss_text": "바닥에 흩어진 데이터 파편들이 뾰족한 유리창처럼 당신의 발목을 찌른다.",
+						"label": "깨진 조각",
+						"key": "broken_piece"
+					},
+					"path": "easy",
+					"result": [
+						{
+							"speaker": "narrator",
+							"text": "당신이 막지 않자 기술자의 발밑에서 조각이 산산조각 났다."
+						},
+						{
+							"speaker": "narrator",
+							"text": "신분 데이터 복구는 영영 불가능해졌다."
+						}
+					],
+					"effects": {
+						"community": -10,
+						"reason": -20
+					},
+					"reward": [
+						"hp_down"
+					]
+				},
+				{
+					"mbti": "TJ",
+					"text": "기술자를 밀쳐내고 조각을 주워 맞춘다.",
+					"flag": {
+						"label": "맞춰진 조각",
+						"boss_text": "당신이 모아둔 데이터 조각들이 방패가 되어 날아오는 코드를 튕겨낸다.",
+						"key": "saved_piece"
+					},
+					"path": "hard",
+					"result": [
+						{
+							"speaker": "narrator",
+							"text": "당신은 몸을 날려 조각을 지켜내고 다른 파편과 조심스럽게 연결했다."
+						},
+						{
+							"speaker": "narrator",
+							"text": "바닥에 구른 탓에 무릎에 멍이 들었다."
+						}
+					],
+					"effects": {
+						"fighting": 20,
+						"echo": 10
+					},
+					"reward": [
+						"defense_up"
+					]
+				}
+			]
+		},
+		{
+			"dialogue": [
+				{
+					"text": "제어실 한구석, 멀쩡한 통제판 위로 데이터 스크린 조각들이 어지럽게 흩어져 있다.",
+					"speaker": "narrator"
+				},
+				{
+					"text": "방금 내 정보망이 아주 잠깐 복구됐었어! 너희 대체 뭘 한 거야?",
+					"speaker": "echo"
+				},
+				{
+					"speaker": "tech_worker",
+					"text": "당신이 통제판을 고쳐준 덕에 내 권한이 일부 돌아왔어. 이 조각들 맞추는 거, 내가 기계로 도와줄게."
+				},
+				{
+					"text": "기술자가 통제판의 정밀 핀셋 팔을 조종해 데이터 조각들을 집어 들었다.",
+					"speaker": "narrator"
+				}
+			],
+			"title": "온전한 통제판의 도움",
+			"kind": "callback",
+			"slot": "C",
+			"wants": "온전한 통제판 덕에 권한을 일부 되찾은 기술자가, 데이터 조각을 맞추는 작업을 돕고 싶어 한다.",
+			"person": {
+				"id": "tech_worker",
+				"role": "제어실 기술자",
+				"name": "기술자"
+			},
+			"choices": [
+				{
+					"mbti": "FJ",
+					"flag": {
+						"boss_text": "통제판에서 뻗어 나온 기계 팔이 엉킨 회로를 붙잡아 당신의 길을 열어준다.",
+						"label": "기계 팔의 정밀도",
+						"key": "machine_help"
+					},
+					"result": [
+						{
+							"speaker": "narrator",
+							"text": "기계 팔이 섬세하게 조각들을 끼워 맞추자 데이터 배열이 안정적으로 연결되었다."
+						},
+						{
+							"speaker": "narrator",
+							"text": "당신은 수고를 덜었다."
+						}
+					],
+					"text": "기술자의 도움을 받아 조각을 맞춘다.",
+					"path": "easy",
+					"effects": {
+						"gold": 50,
+						"community": 20
+					},
+					"reward": [
+						"heal"
+					]
+				},
+				{
+					"reward": [
+						"intelligence_up"
+					],
+					"effects": {
+						"reason": 20,
+						"echo": -5
+					},
+					"result": [
+						{
+							"text": "당신은 기계 팔을 물리고 단면의 코드를 일일이 확인하며 조각을 붙였다.",
+							"speaker": "narrator"
+						},
+						{
+							"speaker": "narrator",
+							"text": "시간이 지체되어 피로가 몰려왔다."
+						}
+					],
+					"path": "hard",
+					"mbti": "TP",
+					"text": "기계 대신 직접 손으로 조각의 단면을 확인하며 맞춘다.",
+					"flag": {
+						"label": "수동 복원",
+						"boss_text": "당신이 직접 확인했던 코드의 결함 부위를 찔러 시스템의 빈틈을 파고든다.",
+						"key": "hand_matched"
+					}
+				}
+			],
+			"key": "helper_technician",
+			"background_tags": [
+				"room",
+				"panel",
+				"arm",
+				"screen",
+				"focus"
+			],
+			"returns": "hard",
+			"rule_link": "통제판을 지켜낸 덕분에, 조각을 맞춰 데이터를 복원하려는 정답 행동을 수월하게 진행할 수 있다."
+		},
+		{
+			"dialogue": [
+				{
+					"text": "임시 데이터 단말기 위에 올려둔 조각들이 정전기를 일으키며 서로를 밀어내고 있다.",
+					"speaker": "narrator"
+				},
+				{
+					"text": "방금 내 정보망이 아주 잠깐 복구됐었어! 너희 대체 뭘 한 거야?",
+					"speaker": "echo"
+				},
+				{
+					"speaker": "archive_manager",
+					"text": "조각들의 극성이 안 맞아서 튕겨 나갑니다! 강제로라도 눌러서 고정해야 해요!"
+				},
+				{
+					"text": "관리자가 절연 장갑을 낀 손으로 조각들을 억지로 뭉쳐 누르려 했다.",
+					"speaker": "narrator"
+				}
+			],
+			"slot": "C",
+			"kind": "normal",
+			"title": "불안정한 임시 단말기",
+			"wants": "단말기 위에 모아둔 데이터 조각이 자꾸 튕겨 나가려 하니, 억지로라도 고정해 달라고 한다.",
+			"rule_link": "조각을 모아 임시로 고정하는 과정에서, 올바른 데이터 복원의 예행연습을 치른다.",
+			"choices": [
+				{
+					"text": "관리자가 조각을 강제로 억누르게 둔다.",
+					"result": [
+						{
+							"speaker": "narrator",
+							"text": "억지로 눌린 조각들이 마찰을 일으키며 겨우 맞물렸다."
+						},
+						{
+							"speaker": "narrator",
+							"text": "단말기가 정상 작동하며 작은 보상 크레딧이 쏟아졌다."
+						}
+					],
+					"mbti": "SP",
+					"effects": {
+						"gold": 100,
+						"fighting": 10
+					},
+					"path": "easy"
+				},
+				{
+					"reward": [
+						"cooldown_reset"
+					],
+					"result": [
+						{
+							"speaker": "narrator",
+							"text": "당신은 밀어내는 힘을 거슬러 가며 조각들을 올바른 방향으로 꼼꼼히 배열했다."
+						},
+						{
+							"text": "손가락 끝에 정전기가 튀어 따끔거렸다.",
+							"speaker": "narrator"
+						}
+					],
+					"path": "hard",
+					"mbti": "NF",
+					"effects": {
+						"echo": -5,
+						"reason": 20
+					},
+					"text": "억누르지 않고 핀셋으로 조각의 극성을 하나씩 맞춰 배열한다."
+				},
+				{
+					"path": "gold",
+					"result": [
+						{
+							"text": "당신이 접착제를 바르고 조각을 밀어 넣자, 단단하게 굳으며 조각이 완벽히 이어졌다.",
+							"speaker": "narrator"
+						}
+					],
+					"event_reason": "관리자가 접착제의 효과를 의심하며 크레딧을 걸고 내기를 제안했다.",
+					"mbti": "NJ",
+					"effects": {
+						"reason": 10,
+						"gold": -50
+					},
+					"text": "비싼 전도성 접착제를 사서 조각들을 붙이는 내기를 한다.",
+					"event": "minigame_slot",
+					"event_intro": [
+						{
+							"speaker": "archive_manager",
+							"text": "그 비싼 접착제가 통할까요? 실패하면 크레딧은 제가 갖습니다. 슬롯을 당겨보시죠!"
+						}
+					]
+				},
+				{
+					"require_mbti": "TJ",
+					"result": [
+						{
+							"speaker": "narrator",
+							"text": "{actor}이(가) 단말기의 전압을 조절해 극성을 반전시키자, 조각들이 자석처럼 서로 달라붙었다."
+						}
+					],
+					"text": "{actor}이(가) 단말기의 자기장 수치를 계산해 조각이 스스로 붙게 만든다.",
+					"effects": {
+						"reason": 10,
+						"community": 5
+					},
+					"mbti": "TJ",
+					"reward": [
+						"intelligence_up"
+					],
+					"path": "lock"
+				}
+			],
+			"person": {
+				"name": "관리자",
+				"role": "기록 보관소 관리자",
+				"id": "archive_manager"
+			},
+			"key": "temporary_assembly",
+			"background_tags": [
+				"room",
+				"terminal",
+				"spark",
+				"glove",
+				"repair"
+			]
+		},
+		{
+			"background_tags": [
+				"room",
+				"door",
+				"red",
+				"person",
+				"floor"
+			],
+			"kind": "callback",
+			"person": {
+				"role": "수습 오퍼레이터",
+				"name": "수습",
+				"id": "apprentice"
+			},
+			"slot": "D",
+			"rule_link": "시스템 오작동이 심해져 방해물을 물리력으로 돌파해야 하는 상황이 되며, 정답 행동을 밀어붙일지 망설일지 시험받는다.",
+			"key": "trapped_operator",
+			"title": "오작동하는 문 갇힘",
+			"returns": "easy",
+			"wants": "코드를 뽑은 후폭풍으로 문에 갇혀버렸다며, 당장 문을 부수고 자기를 꺼내달라고 소리친다.",
+			"dialogue": [
+				{
+					"text": "굳게 닫힌 강철문 너머에서 수습 오퍼레이터가 유리를 쾅쾅 두드리는 소리가 들린다.",
+					"speaker": "narrator"
+				},
+				{
+					"speaker": "echo",
+					"text": "조심해! 놈은 정보 과부하로 미쳐버린 덩어리야. 조각이 맞춰지는 걸 목숨 걸고 막으려 들 거야."
+				},
+				{
+					"text": "전원 코드를 뽑았더니 시스템이 엉켜서 문이 안 열려요! 제발 이 문 좀 부수고 꺼내주세요!",
+					"speaker": "apprentice"
+				},
+				{
+					"speaker": "narrator",
+					"text": "붉은 경고등이 깜빡이며, 주변의 데이터 조각들이 문틈으로 빨려 들어갈 듯 진동한다."
+				}
+			],
+			"choices": [
+				{
+					"effects": {
+						"community": 20,
+						"fighting": 10
+					},
+					"result": [
+						{
+							"text": "당신은 쇠지렛대로 문을 뜯어내 수습을 구했다.",
+							"speaker": "narrator"
+						},
+						{
+							"speaker": "narrator",
+							"text": "그 사이 맞추려던 데이터 조각 일부가 흩어져 버렸다."
+						}
+					],
+					"path": "easy",
+					"reward": [
+						"attack_down"
+					],
+					"text": "조각을 맞추는 작업을 멈추고 문을 부수는 데 힘을 쏟는다.",
+					"flag": {
+						"key": "lost_pieces",
+						"boss_text": "데이터 조각이 부족해 방어막이 뚫리고 강한 충격파가 당신을 덮친다.",
+						"label": "잃어버린 조각"
+					},
+					"mbti": "SF"
+				},
+				{
+					"path": "hard",
+					"effects": {
+						"echo": -10,
+						"reason": 20
+					},
+					"mbti": "NT",
+					"text": "수습의 외침을 뒤로하고 조각을 먼저 맞춰 시스템을 정상화한다.",
+					"flag": {
+						"boss_text": "정상화된 시스템이 거대한 홀로그램의 에너지를 일부 흡수해 힘을 약화시킨다.",
+						"label": "복구된 시스템",
+						"key": "restored_system"
+					},
+					"result": [
+						{
+							"speaker": "narrator",
+							"text": "당신이 문 앞의 조각들을 서둘러 맞추자 시스템이 복구되며 문이 열렸다."
+						},
+						{
+							"text": "수습은 공포에 질려 주저앉았다.",
+							"speaker": "narrator"
+						}
+					],
+					"reward": [
+						"shield"
+					]
+				}
+			]
+		},
+		{
+			"key": "power_of_system",
+			"wants": "안전하게 유지된 시스템에서 뽑아낸 예비 전력을 사용해, 다가올 방해를 뚫고 갈 동력으로 쓰자고 한다.",
+			"slot": "D",
+			"kind": "callback",
+			"background_tags": [
+				"room",
+				"server",
+				"spark",
+				"battery",
+				"hum"
+			],
+			"choices": [
+				{
+					"path": "easy",
+					"effects": {
+						"reason": 20,
+						"gold": 50
+					},
+					"mbti": "ST",
+					"text": "예비 전력을 단말기에 연결해 조각을 빠르게 융합한다.",
+					"flag": {
+						"key": "fused_data",
+						"boss_text": "당신이 쥔 융합 데이터가 눈부신 빛을 내며 홀로그램의 시야를 가린다.",
+						"label": "융합된 데이터"
+					},
+					"result": [
+						{
+							"speaker": "narrator",
+							"text": "강한 전류가 흐르며 조각들이 순식간에 하나로 엉겨 붙었다."
+						},
+						{
+							"text": "융합된 데이터 덩어리가 든든하게 손에 쥐어졌다.",
+							"speaker": "narrator"
+						}
+					],
+					"reward": [
+						"move_range_up"
+					]
+				},
+				{
+					"path": "hard",
+					"effects": {
+						"fighting": -10,
+						"community": 10
+					},
+					"mbti": "NF",
+					"text": "전력을 직접 사용하지 않고 방어용 에너지 장벽으로 전환한다.",
+					"flag": {
+						"label": "에너지 장벽",
+						"boss_text": "데이터 조각을 둘러싼 장벽이 사방에서 날아오는 파편들을 안전하게 튕겨낸다.",
+						"key": "energy_barrier"
+					},
+					"result": [
+						{
+							"speaker": "narrator",
+							"text": "당신은 배터리를 조각 주변에 둘러 보호막을 쳤다."
+						},
+						{
+							"text": "조각을 맞추는 속도는 느렸지만, 외부의 어떤 충격도 닿지 않았다.",
+							"speaker": "narrator"
+						}
+					],
+					"reward": [
+						"defense_up"
+					]
+				}
+			],
+			"rule_link": "온전한 시스템 덕분에 데이터 조각을 더 빠르고 강하게 맞출 수 있는 추진력을 얻는다.",
+			"returns": "hard",
+			"person": {
+				"name": "수습",
+				"role": "수습 오퍼레이터",
+				"id": "apprentice"
+			},
+			"title": "작은 동력의 확보",
+			"dialogue": [
+				{
+					"speaker": "narrator",
+					"text": "안정적으로 돌아가는 서버 랙 사이에서 수습 오퍼레이터가 예비 배터리를 들고 다가온다."
+				},
+				{
+					"speaker": "echo",
+					"text": "조심해! 놈은 정보 과부하로 미쳐버린 덩어리야. 조각이 맞춰지는 걸 목숨 걸고 막으려 들 거야."
+				},
+				{
+					"speaker": "apprentice",
+					"text": "코드를 안 뽑길 잘했어요! 남은 예비 전력으로 조각을 한 번에 여러 개 융합할 수 있을 거예요."
+				},
+				{
+					"speaker": "narrator",
+					"text": "수습이 건넨 배터리 팩에서 푸른 스파크가 규칙적으로 튀고 있다."
+				}
+			]
+		},
+		{
+			"choices": [
+				{
+					"text": "방화벽을 피해 안전한 우회로를 찾는다.",
+					"mbti": "SJ",
+					"reward": [
+						"heal"
+					],
+					"path": "easy",
+					"effects": {
+						"reason": -10,
+						"community": 10
+					},
+					"result": [
+						{
+							"speaker": "narrator",
+							"text": "당신은 좁고 구불구불한 환풍구를 통해 방화벽을 돌아갔다."
+						},
+						{
+							"speaker": "narrator",
+							"text": "시간은 지체되었지만 화상은 피했다."
+						}
+					]
+				},
+				{
+					"result": [
+						{
+							"speaker": "narrator",
+							"text": "당신은 옷소매가 타들어 가는 것을 견디며 방화벽 내부의 제어 콘솔에 조각을 끼워 넣었다."
+						}
+					],
+					"effects": {
+						"echo": 10,
+						"fighting": 20
+					},
+					"path": "hard",
+					"mbti": "NT",
+					"reward": [
+						"attack_up"
+					],
+					"text": "도망치지 않고 방화벽의 열기를 뚫고 들어가 조각을 맞춘다."
+				},
+				{
+					"path": "gold",
+					"event_intro": [
+						{
+							"text": "화면에 초록색 불이 들어오는 순간에만 움직이세요! 세 번 연달아 성공해야 합니다.",
+							"speaker": "firewall_guard"
+						}
+					],
+					"event_reason": "스캐너가 방화벽이 열리는 정확한 순간을 세 번 연속으로 화면에 띄워주었다.",
+					"event": "minigame_timing",
+					"effects": {
+						"reason": 10,
+						"gold": -100
+					},
+					"mbti": "FJ",
+					"text": "방화벽의 패턴을 분석하는 스캐너를 사서 타이밍을 맞춘다.",
+					"result": [
+						{
+							"speaker": "narrator",
+							"text": "당신은 스캐너의 신호에 맞춰 세 번 연속으로 몸을 날려 방화벽을 무사히 통과했다."
+						}
+					]
+				},
+				{
+					"path": "lock",
+					"mbti": "EP",
+					"reward": [
+						"move_range_up"
+					],
+					"text": "{actor}이(가) 방화벽의 패턴을 눈으로 좇아 빈틈으로 뛰어든다.",
+					"require_mbti": "EP",
+					"effects": {
+						"reason": -5,
+						"fighting": 10
+					},
+					"result": [
+						{
+							"speaker": "narrator",
+							"text": "{actor}이(가) 레이저가 점멸하는 찰나의 순간을 노려 가볍게 굴러 방화벽을 통과했다."
+						}
+					]
+				}
+			],
+			"dialogue": [
+				{
+					"speaker": "narrator",
+					"text": "제어실 중앙 통로에 붉은색 레이저 방화벽이 쳐지며 매캐한 연기가 피어오른다."
+				},
+				{
+					"speaker": "echo",
+					"text": "조심해! 놈은 정보 과부하로 미쳐버린 덩어리야. 조각이 맞춰지는 걸 목숨 걸고 막으려 들 거야."
+				},
+				{
+					"text": "방화벽이 우리를 적으로 인식하고 있어요! 당장 도망쳐야 해요!",
+					"speaker": "firewall_guard"
+				},
+				{
+					"text": "관리자가 뒷걸음질 치며 방화벽을 피해 비상구 쪽으로 몸을 돌렸다.",
+					"speaker": "narrator"
+				}
+			],
+			"rule_link": "흔적 주인의 방해가 시작된 상황에서, 정답 행동을 밀어붙일지 멈출지 결정하는 마지막 시험.",
+			"slot": "D",
+			"kind": "normal",
+			"title": "길을 막는 방화벽",
+			"background_tags": [
+				"room",
+				"wall",
+				"smoke",
+				"floor",
+				"guard"
+			],
+			"wants": "보안 시스템이 미쳐 날뛰어 물리적인 불꽃을 뿜는 방화벽을 켰으니, 조각 맞추기를 포기하고 도망치자고 한다.",
+			"person": {
+				"id": "firewall_guard",
+				"role": "보안 프로그램 관리자",
+				"name": "보안 관리자"
+			},
+			"key": "blocking_firewall"
+		}
+	],
+	"errors": []
+}

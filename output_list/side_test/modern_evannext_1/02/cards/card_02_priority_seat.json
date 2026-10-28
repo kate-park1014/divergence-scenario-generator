@@ -1,0 +1,248 @@
+{
+	"id": "card_02_priority_seat",
+	"kind": "rep",
+	"title": {
+		"korean": "단말기 독점권"
+	},
+	"intensity": "calm",
+	"after_story": 3,
+	"before_story": 5,
+	"condition": {
+		"leaning": "community-",
+		"among": [
+			"fighting-",
+			"fighting+",
+			"community-",
+			"community+",
+			"reason-",
+			"reason+"
+		],
+		"min": 20
+	},
+	"urgency": 8,
+	"leaning": "community-",
+	"background_tags": [
+		"terminal_room",
+		"morning",
+		"fluorescent_light",
+		"restless_jobseekers",
+		"tense_air"
+	],
+	"dialogue": [
+		{
+			"speaker": "seeker",
+			"content": {
+				"korean": "남의 사정엔 눈 하나 깜짝 안 하고 자기 몫부터 챙긴다더니, 역시 발 빠르시네."
+			}
+		},
+		{
+			"speaker": "nia",
+			"content": {
+				"korean": "단말기 화면이 막 깨끗해졌을 뿐인데, 무슨 용건이시죠?"
+			}
+		},
+		{
+			"speaker": "seeker",
+			"content": {
+				"korean": "저 화면 정상 맞지? 100골드 줄 테니 비켜줘요. 뒤에 줄 선 놈들도 좀 막아주고."
+			}
+		}
+	],
+	"choices": [
+		{
+			"text": {
+				"korean": "100골드를 받고 단말기 자리를 넘긴 뒤 뒤편 사람들을 막아선다."
+			},
+			"path": "easy",
+			"mbti": "TP",
+			"flag": "bribe_receipt",
+			"effects": {
+				"echo": -10,
+				"gold": 100,
+				"community": -20
+			},
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "당신은 100골드를 주머니에 넣고 대기자들의 접근을 단말기 앞에서 막아섰다."
+					}
+				},
+				{
+					"speaker": "seeker",
+					"content": {
+						"korean": "좋았어! 내 경력 10년 치가 순식간에 등록되는군!"
+					}
+				},
+				{
+					"speaker": "nia",
+					"content": {
+						"korean": "뒤에 선 사람들이 웅성거리기 시작했어요. 표정이 험악해요."
+					}
+				}
+			]
+		},
+		{
+			"text": {
+				"korean": "돈을 거절하고 순번에 맞춰 이용하라며 구직자의 진입을 제지한다."
+			},
+			"path": "hard",
+			"mbti": "FJ",
+			"flag": "orderly_ticket",
+			"effects": {
+				"echo": 10,
+				"community": 20,
+				"fighting": 10
+			},
+			"reward": [
+				"shield"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "당신은 건네진 동전을 밀어내고 단말기 화면 앞을 가로막았다."
+					}
+				},
+				{
+					"speaker": "seeker",
+					"content": {
+						"korean": "쳇, 챙길 줄 아는 녀석인 줄 알았더니 순진한 척하기는!"
+					}
+				},
+				{
+					"speaker": "nia",
+					"content": {
+						"korean": "잘하셨어요. 규칙대로 해야 뒤탈이 없는 법이니까요."
+					}
+				}
+			]
+		},
+		{
+			"text": {
+				"korean": "구직자의 과장된 이력서 서류를 낚아채 결함을 지적하며 쫓아낸다."
+			},
+			"path": "stat",
+			"mbti": "TJ",
+			"require": {
+				"stat": "community",
+				"op": "<=",
+				"value": -40
+			},
+			"flag": "forged_resume_sheet",
+			"effects": {
+				"echo": 5,
+				"reason": -15,
+				"community": -20
+			},
+			"reward": [
+				"intelligence_up"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "당신은 구직자가 쥔 이력서 출력본을 빼앗아 경력 중복 기재를 지적했다."
+					}
+				},
+				{
+					"speaker": "seeker",
+					"content": {
+						"korean": "윽, 그걸 어떻게 한눈에…! 아, 알았소, 저리 갈 테니 서류는 돌려줘요!"
+					}
+				},
+				{
+					"speaker": "nia",
+					"content": {
+						"korean": "소문대로 매섭게 자기 영역을 지키시네요. 허위 기재 서류는 분석에 쓸 수 있겠어요."
+					}
+				}
+			]
+		},
+		{
+			"text": {
+				"korean": "단말기 보조 출력기 이용료 70골드를 대신 결제해 다른 자리로 보낸다."
+			},
+			"path": "gold",
+			"mbti": "FP",
+			"require": {
+				"stat": "gold",
+				"op": ">=",
+				"value": 70
+			},
+			"effects": {
+				"fighting": 15,
+				"echo": 10,
+				"gold": -70
+			},
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "당신은 옆쪽 보조 단말기 슬롯에 70골드를 결제하고 구직자에게 전표를 건넸다."
+					}
+				},
+				{
+					"speaker": "seeker",
+					"content": {
+						"korean": "어? 비어 있는 보조석을 열어준 거요? 그럼 거기로 가지!"
+					}
+				},
+				{
+					"speaker": "nia",
+					"content": {
+						"korean": "돈을 써서 충돌 없이 줄을 정리했군요. 현명한 판단이에요."
+					}
+				}
+			]
+		}
+	],
+	"_side": {
+		"slot": "B",
+		"person": {
+			"id": "seeker",
+			"name": "초조한 구직자",
+			"role": "경력 지원자"
+		},
+		"wants": "안정화된 공용 단말기에서 자기 이력서를 먼저 등록하고 다른 대기자를 차단하기",
+		"rule_link": "이력서 이름 정보가 정리된 단말기의 처리 우선권을 차지하려는 경쟁이 벌어진다.",
+		"rep": "community-",
+		"events": {},
+		"flags": {
+			"bribe_receipt": {
+				"kind": "bad",
+				"boss_penalty": -1,
+				"label": {
+					"korean": "새치기 방조"
+				},
+				"boss_line": {
+					"korean": "면접 대기실의 항의 소동으로 당신의 단말기 접근 순번표가 무효 처리된다."
+				}
+			},
+			"orderly_ticket": {
+				"kind": "good",
+				"boss_penalty": 1,
+				"label": {
+					"korean": "정규 대기표"
+				},
+				"boss_choice": {
+					"korean": "단말기 정규 대기표를 제시해 통제 구역의 우선 접근권을 행사한다."
+				}
+			},
+			"forged_resume_sheet": {
+				"kind": "good",
+				"boss_penalty": 2,
+				"label": {
+					"korean": "적발된 허위 이력서"
+				},
+				"boss_choice": {
+					"korean": "적발했던 구직자의 허위 이력서 양식을 대조해 보안 검증망의 오류를 우회한다."
+				}
+			}
+		}
+	}
+}

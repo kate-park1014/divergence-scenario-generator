@@ -1,0 +1,282 @@
+{
+	"cards": [
+		{
+			"choices": [
+				{
+					"effects": {
+						"community": -20,
+						"gold": 100
+					},
+					"flag": {
+						"label": "허위 이력서 누적",
+						"boss_text": "과장된 허위 이력서가 수거함에 쌓여 최종 면접에서 추가 감점을 받는다.",
+						"key": "fake_resume_penalty"
+					},
+					"mbti": "TJ",
+					"reward": [
+						"attack_up"
+					],
+					"text": "민석의 부탁대로 부실한 경력을 허위 성과로 과장해 이력서에 적어준다.",
+					"result": [
+						{
+							"text": "고맙습니다! 화려하게 포장된 이력서 덕에 일단 제출함을 넘길 수 있겠군요.",
+							"speaker": "minseok"
+						},
+						{
+							"speaker": "lin",
+							"text": "당장의 수수료는 챙겼지만 허위 서류가 제출함에 더 쌓여버렸어요."
+						}
+					],
+					"path": "easy"
+				},
+				{
+					"text": "민석의 요구를 거절하고 사실에 기반한 경력만을 작성하도록 이력서를 고쳐준다.",
+					"reward": [
+						"defense_up"
+					],
+					"path": "hard",
+					"result": [
+						{
+							"text": "허황된 과장 대신 진짜 경력만 남기니 마음은 편하네요.",
+							"speaker": "minseok"
+						},
+						{
+							"text": "손실을 무릅쓰고 제대로 된 서류를 제출함에 넣었군요.",
+							"speaker": "lin"
+						}
+					],
+					"mbti": "NF",
+					"flag": {
+						"label": "진실한 이력서 증빙",
+						"boss_text": "진실되게 바로잡은 이력서를 제출해 면접관의 압박 질문을 무력화한다.",
+						"key": "authentic_resume_proof"
+					},
+					"effects": {
+						"fighting": 10,
+						"community": 20
+					}
+				},
+				{
+					"reward": [
+						"shield"
+					],
+					"path": "stat",
+					"effects": {
+						"community": -30,
+						"gold": 150
+					},
+					"result": [
+						{
+							"text": "보증금까지 뺏어가다니... 그래도 서류는 제대로 과장되어 제출함에 들어갔군요.",
+							"speaker": "minseok"
+						},
+						{
+							"speaker": "lin",
+							"text": "철저하게 챙긴 보증금 인장이 나중에 뜻밖의 증거가 될 수 있겠어요."
+						}
+					],
+					"text": "민석의 과장 작성 요청을 받아들이는 대가로 보증금 인장을 담보로 강제 징수한다.",
+					"flag": {
+						"label": "보증금 인장 확보",
+						"boss_text": "민석에게 징수한 보증금 인장을 이용해 면접관의 서류 판정을 취소시킨다.",
+						"key": "guarantee_seal"
+					},
+					"mbti": "EP"
+				},
+				{
+					"mbti": "FP",
+					"effects": {
+						"echo": 10,
+						"gold": -100
+					},
+					"result": [
+						{
+							"text": "수속 단말기에서 승인음이 울리며 정식 기재 서식이 출력되어 제출함으로 이송되었다.",
+							"speaker": "narrator"
+						},
+						{
+							"text": "돈을 써서 허위 기재 없이 민석의 서류 절차를 안전하게 처리했군요.",
+							"speaker": "lin"
+						}
+					],
+					"text": "대기실 보조 단말기에 100 골드를 지불하여 민석의 이력서를 정식 표준 서식으로 등록한다.",
+					"reward": [
+						"intelligence_up"
+					],
+					"path": "gold"
+				}
+			],
+			"rule_link": "과장된 이력서로 임시 통과하려는 대기실 마비 현상의 일부",
+			"key": "exaggerated_resume",
+			"dialogue": [
+				{
+					"text": "대기실 제출함 앞에 서 있던 민석이 땀을 흘리며 당신을 가로막았다.",
+					"speaker": "narrator"
+				},
+				{
+					"text": "남들이 손해를 보든 자기 몫부터 빠르게 계산해 챙기던 그분 맞죠?",
+					"speaker": "minseok"
+				},
+				{
+					"text": "3분 뒤 제출함이 닫히는데 제 경력 좀 화려하게 과장해서 적어주세요!",
+					"speaker": "minseok"
+				},
+				{
+					"text": "대기실이 완전히 마비된 판에 허위 이력서를 제출함에 보태는 게 맞을까요?",
+					"speaker": "lin"
+				},
+				{
+					"speaker": "minseok",
+					"text": "서류만 통과하면 합격 수수료로 통제구역 통행증을 드릴 테니 제발 부탁합니다!"
+				}
+			],
+			"person": {
+				"name": "민석",
+				"role": "지원자",
+				"id": "minseok"
+			},
+			"background_tags": [
+				"waiting_room",
+				"dim_light",
+				"paper_stacks",
+				"tense",
+				"indoor"
+			],
+			"wants": "자신의 부실한 경력을 터무니없이 과장하여 이력서 제출함에 넣는 것",
+			"title": "민석의 과장 이력서",
+			"no": 1,
+			"slot": "A",
+			"kind": "rep",
+			"rep_dir": "community-"
+		},
+		{
+			"choices": [
+				{
+					"path": "easy",
+					"reward": [
+						"shield"
+					],
+					"result": [
+						{
+							"speaker": "yuri",
+							"text": "감사합니다! 지원자 모두가 과장된 서명 덕분에 일단 탈락을 면했어요."
+						},
+						{
+							"text": "모두를 구했지만 대량의 과장 서명이 서류함에 기록으로 남아버렸네요.",
+							"speaker": "lin"
+						}
+					],
+					"flag": {
+						"label": "대량 허위 서명",
+						"key": "mass_false_signature",
+						"boss_text": "대기실 전체의 허위 서명 기록이 적발되어 면접관의 정밀 검수 표적이 된다."
+					},
+					"effects": {
+						"community": 20,
+						"echo": 10
+					},
+					"text": "지원자 전원의 탈락을 막기 위해 3단계 과장 서명란에 당신의 이름을 도장 찍는다.",
+					"mbti": "SF"
+				},
+				{
+					"result": [
+						{
+							"speaker": "yuri",
+							"text": "결국 대리 서명 없이 다들 자기 서류를 직접 챙겨 제출함으로 들어가는군요."
+						},
+						{
+							"speaker": "lin",
+							"text": "거짓 포장을 거부한 선택이 지원자 스스로 서게 만들었어요."
+						}
+					],
+					"text": "대리 과장 서명을 거절하고 각 지원자가 직접 이력서를 정정하여 내도록 설득한다.",
+					"mbti": "NT",
+					"reward": [
+						"attack_up"
+					],
+					"effects": {
+						"community": -20,
+						"fighting": 20
+					},
+					"path": "hard",
+					"flag": {
+						"key": "self_written_resumes",
+						"boss_text": "지원자들이 직접 작성한 진짜 이력서를 내세워 면접장의 제재 규칙을 깨뜨린다.",
+						"label": "직접 작성한 이력서"
+					}
+				},
+				{
+					"text": "지원자들을 모아 과장 서명 요구를 철회시키고 제출함 입구를 일렬로 봉쇄한다.",
+					"mbti": "FJ",
+					"effects": {
+						"community": 30,
+						"reason": 20
+					},
+					"path": "stat",
+					"result": [
+						{
+							"speaker": "yuri",
+							"text": "당신의 말 한마디에 지원자들이 제출함 앞을 막아서며 강제 입고를 거부하고 있어요!"
+						},
+						{
+							"text": "평소 보여준 헌신 덕에 모두가 당신의 제안을 믿고 함께 움직이고 있어요.",
+							"speaker": "lin"
+						}
+					],
+					"reward": [
+						"cooldown_reset"
+					],
+					"flag": {
+						"key": "submission_blockade",
+						"label": "제출함 입구 봉쇄",
+						"boss_text": "지원자 대열과 함께 서류 검사대를 가로막아 면접관의 진행을 지연시킨다."
+					}
+				}
+			],
+			"title": "유리의 대량 허위 서명",
+			"no": 2,
+			"rule_link": "탈락 위기를 모면하려는 대기실 마비용 과장 서명 강요",
+			"background_tags": [
+				"waiting_room",
+				"crowded",
+				"paper_stacks",
+				"urgent",
+				"indoor"
+			],
+			"person": {
+				"role": "대기실 안내원",
+				"name": "유리",
+				"id": "yuri"
+			},
+			"key": "batch_exaggerated_signature",
+			"wants": "대기실 지원자들의 탈락을 막기 위해 모든 이력서에 과장 날인을 받아내는 것",
+			"dialogue": [
+				{
+					"text": "안내원 유리가 겹겹이 쌓인 서류 뭉치를 든 채 당신에게 달려왔다.",
+					"speaker": "narrator"
+				},
+				{
+					"text": "곤경에 처한 사람들을 매번 대신 구해주시던 분이죠?",
+					"speaker": "yuri"
+				},
+				{
+					"text": "3분 뒤에 제출함이 마감되는데 대기실 지원자 모두의 이력서에 과장 서명을 대신 해주세요!",
+					"speaker": "yuri"
+				},
+				{
+					"speaker": "lin",
+					"text": "당장 위기를 넘기려고 무더기로 허위 서명을 날인하는 건 위험해요."
+				},
+				{
+					"speaker": "yuri",
+					"text": "지금 서명하지 않으면 지원자 전원이 대기실 탈락자로 분쇄기 통로에 던져집니다!"
+				}
+			],
+			"slot": "A",
+			"kind": "rep",
+			"rep_dir": "community+"
+		}
+	],
+	"errors": [],
+	"prompt_hash": "176c5723cbcf703985bbdfa0ec4f16b3696cb6fc"
+}

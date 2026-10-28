@@ -1,0 +1,257 @@
+{
+	"id": "card_01_greedy_broker",
+	"kind": "rep",
+	"title": {
+		"korean": "암표상의 은밀한 제안"
+	},
+	"intensity": "calm",
+	"after_story": 3,
+	"before_story": 5,
+	"condition": {
+		"leaning": "community-",
+		"among": [
+			"fighting-",
+			"fighting+",
+			"community-",
+			"community+",
+			"reason-",
+			"reason+"
+		],
+		"min": 20
+	},
+	"urgency": 8,
+	"leaning": "community-",
+	"background_tags": [
+		"central_hall",
+		"bright",
+		"white_light",
+		"calculating_crowd",
+		"cold"
+	],
+	"dialogue": [
+		{
+			"speaker": "narrator",
+			"content": {
+				"korean": "손목에 금시계를 찬 약삭빠른 남자가 번호표 뭉치를 펄럭이며 은밀하게 말을 걸어왔다."
+			}
+		},
+		{
+			"speaker": "shrewd_broker",
+			"content": {
+				"korean": "\"당신이 아까 안내대에서 자기 번호표부터 잽싸게 가로채 챙겼다는 그 양반이지?\""
+			}
+		},
+		{
+			"speaker": "shrewd_broker",
+			"content": {
+				"korean": "\"실속 차릴 줄 아는 사람끼리 통하는 법이지. 내 서류를 당신 밑으로 슬쩍 끼워주면 짭짤하게 떼어 주겠소.\""
+			}
+		},
+		{
+			"speaker": "lin",
+			"content": {
+				"korean": "\"저 사람 손에 든 거, 다른 사람들한테서 웃돈 주고 뺏어온 번호표 같아요...\""
+			}
+		}
+	],
+	"choices": [
+		{
+			"text": {
+				"korean": "약삭빠른 브로커에게서 정보료를 뜯어내고 그의 서류 대신 당신의 우선권만 굳힌다"
+			},
+			"path": "easy",
+			"mbti": "TJ",
+			"flag": "greedy_seat_monopoly",
+			"effects": {
+				"community": -20,
+				"gold": 120,
+				"echo": -5
+			},
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "당신은 수수료를 챙긴 뒤 그 지원자의 이력서를 맨 밑으로 밀어 넣고 당신과 린의 좌석 번호만 앞당겼다."
+					}
+				},
+				{
+					"speaker": "shrewd_broker",
+					"content": {
+						"korean": "\"이런 지독한... 자기 배만 불리고 내 서류는 거들떠도 안 보다니!\""
+					}
+				},
+				{
+					"speaker": "lin",
+					"content": {
+						"korean": "\"지갑은 두둑해졌지만, 저 브로커가 이를 갈며 우리 뒤통수를 째려보고 있어요.\""
+					}
+				}
+			]
+		},
+		{
+			"text": {
+				"korean": "브로커가 내민 뇌물을 거부하고 그가 든 수정 잉크를 빼앗아 주변 사람들에게 나눈다"
+			},
+			"path": "hard",
+			"mbti": "NF",
+			"flag": "conceded_form_buffer",
+			"effects": {
+				"community": 20,
+				"echo": 10
+			},
+			"reward": [
+				"cooldown_reset"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "당신은 거래를 단칼에 거절하고 그가 가져온 고급 필기구를 대기석 사람들에게 골고루 나눠주었다."
+					}
+				},
+				{
+					"speaker": "shrewd_broker",
+					"content": {
+						"korean": "\"내 자산을 멋대로 남한테 뿌려? 실속만 차린다던 소문은 다 헛소리였나!\""
+					}
+				},
+				{
+					"speaker": "lin",
+					"content": {
+						"korean": "\"눈앞의 잇속 대신 남을 챙기다니, 당신을 다시 보게 됐어요.\""
+					}
+				}
+			]
+		},
+		{
+			"text": {
+				"korean": "브로커의 위조 수법을 접수처에 찌르겠다고 협박해 3번 대기표를 통째로 뜯어낸다"
+			},
+			"path": "stat",
+			"mbti": "IP",
+			"require": {
+				"stat": "community",
+				"op": "<=",
+				"value": -40
+			},
+			"flag": "merciless_seat_scalper",
+			"effects": {
+				"gold": 150,
+				"echo": -10,
+				"community": -30
+			},
+			"reward": [
+				"move_range_up"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "당신이 서류 접수권의 허점을 짚어 압박하자, 브로커는 땀을 뻘뻘 흘리며 황금 번호표를 헌납했다."
+					}
+				},
+				{
+					"speaker": "shrewd_broker",
+					"content": {
+						"korean": "\"으윽... 과연 남 등쳐먹는 솜씨가 한 수 위군. 이 3번 대기표를 드릴 테니 입만 다물어 주시오.\""
+					}
+				},
+				{
+					"speaker": "lin",
+					"content": {
+						"korean": "\"저 능구렁이 같은 사람을 털끝 하나 안 건드리고 털어먹다니, 정말 대단한 수완이에요.\""
+					}
+				}
+			]
+		},
+		{
+			"text": {
+				"korean": "브로커의 서류철에 '대기홀 전원 합격'이라 낙서해 접수함에 쑤셔 넣는다"
+			},
+			"path": "fun",
+			"mbti": "ES",
+			"effects": {
+				"gold": -60,
+				"echo": 5,
+				"community": 25
+			},
+			"reward": [
+				"stun"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "당신이 백지 서류에 '대기홀 전원 수석 합격'을 휘갈겨 통에 넣자,"
+					}
+				},
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "전광판 기계가 굉음을 내며 번호표 백 장을 뿜어냈다."
+					}
+				},
+				{
+					"speaker": "shrewd_broker",
+					"content": {
+						"korean": "\"크악! 기계가 폭주하잖아! 내 번호표가 종이 눈꽃더미에 파묻혔어!\""
+					}
+				},
+				{
+					"speaker": "lin",
+					"content": {
+						"korean": "\"와아, 온 대기홀에 번호표가 흩뿌려지고 있어요! 사람들이 신나서 줍느라 난리예요!\""
+					}
+				}
+			]
+		}
+	],
+	"_side": {
+		"slot": "B",
+		"person": {
+			"name": "약삭빠른 브로커",
+			"id": "shrewd_broker",
+			"role": "앞번호 암표 거래상"
+		},
+		"wants": "자신의 과장 서류를 통과시켜 1열 번호표를 추가로 확보하고 되파는 것",
+		"rule_link": "브로커가 위조 서류를 끼워 넣어 획득한 앞 순번으로 대기표 장사를 벌이려 한다.",
+		"rep": "community-",
+		"events": {},
+		"flags": {
+			"greedy_seat_monopoly": {
+				"kind": "bad",
+				"boss_penalty": -1,
+				"label": {
+					"korean": "독점 대기석의 앙화"
+				},
+				"boss_line": {
+					"korean": "독차지한 앞줄 자리 때문에 화가 난 뒤편 대기자들이 무대 뒤에서 흙탕물을 끼얹는다."
+				}
+			},
+			"conceded_form_buffer": {
+				"kind": "good",
+				"boss_penalty": 1,
+				"label": {
+					"korean": "양보한 서류의 여유"
+				},
+				"boss_choice": {
+					"korean": "욕심을 버리고 양보했던 서류 양식을 방패막이 삼아, 면접관의 까다로운 질문을 넘긴다."
+				}
+			},
+			"merciless_seat_scalper": {
+				"kind": "good",
+				"boss_penalty": 2,
+				"label": {
+					"korean": "이권 장악의 수완"
+				},
+				"boss_choice": {
+					"korean": "대기실 이권을 틀어쥐었던 수완을 살려, 면접장의 제한 시간을 1분 연장시킨다."
+				}
+			}
+		}
+	}
+}

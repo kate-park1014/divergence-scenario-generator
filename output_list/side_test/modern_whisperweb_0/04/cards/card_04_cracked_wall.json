@@ -1,0 +1,246 @@
+{
+	"id": "card_04_cracked_wall",
+	"kind": "rep",
+	"title": {
+		"korean": "부품 위의 낙서"
+	},
+	"intensity": "calm",
+	"after_story": 3,
+	"before_story": 5,
+	"condition": {
+		"leaning": "fighting-",
+		"among": [
+			"fighting-",
+			"fighting+",
+			"community-",
+			"community+",
+			"reason-",
+			"reason+"
+		],
+		"min": 20
+	},
+	"urgency": 8,
+	"leaning": "fighting-",
+	"background_tags": [
+		"data_waste_yard",
+		"late_shift",
+		"flickering_lamp",
+		"crowded",
+		"tense"
+	],
+	"dialogue": [
+		{
+			"speaker": "goro",
+			"content": {
+				"korean": "당신이 처리장 기계를 맨손으로 뜯어냈다는 그 사람이죠? 부품 되찾는 일도 그렇게 밀어붙여 주세요."
+			}
+		},
+		{
+			"speaker": "dax",
+			"content": {
+				"korean": "또 밀어붙이자는 사람이네. 이번엔 내 흑역사 말고 남의 부품이야."
+			}
+		},
+		{
+			"speaker": "goro",
+			"content": {
+				"korean": "하역조 몫으로 떼어둔 부품을 누가 슬쩍 가져갔어요. 이 손 놓으면 다음 달 임금이 없어요."
+			}
+		},
+		{
+			"speaker": "narrator",
+			"content": {
+				"korean": "고로가 낡은 작업 장갑을 벗어 던지자 등 뒤로 인부 셋이 우두커니 서 있었다."
+			}
+		}
+	],
+	"choices": [
+		{
+			"text": {
+				"korean": "인부들을 앞세워 부품을 가져간 자를 찾아내 붙잡는다"
+			},
+			"path": "easy",
+			"mbti": "TJ",
+			"flag": "crew_at_side",
+			"effects": {
+				"fighting": 20,
+				"echo": 5
+			},
+			"reward": [
+				"attack_up"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "goro",
+					"content": {
+						"korean": "역시 소문대로군요. 이 정도면 우리도 따라갑니다."
+					}
+				},
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "부품을 챙긴 자가 인부들에게 둘러싸여 부품을 내려놓았다."
+					}
+				},
+				{
+					"speaker": "dax",
+					"content": {
+						"korean": "사람 부르는 솜씨는 확실하네요. 근데 그 부품, 조각이 하나 모자라요."
+					}
+				}
+			]
+		},
+		{
+			"text": {
+				"korean": "인부들 대신 당신이 부품 값을 털어 보상하고 자리를 뜬다"
+			},
+			"path": "hard",
+			"mbti": "FP",
+			"flag": "crew_at_side_b1",
+			"effects": {
+				"fighting": -15,
+				"community": 15
+			},
+			"reward": [
+				"defense_up"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "goro",
+					"content": {
+						"korean": "…말로 끝내다니. 그런 사람은 처음 봐요."
+					}
+				},
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "인부들이 부품을 나눠 들고 조용히 물러났다."
+					}
+				},
+				{
+					"speaker": "dax",
+					"content": {
+						"korean": "싸움 안 하는 것도 나쁘지 않은데, 솔직히 좀 허전하네요."
+					}
+				}
+			]
+		},
+		{
+			"text": {
+				"korean": "당신의 이름을 내세워 인부들에게 부품 분배 순서를 정하게 한다"
+			},
+			"path": "stat",
+			"mbti": "EJ",
+			"require": {
+				"stat": "fighting",
+				"op": "<=",
+				"value": -40
+			},
+			"flag": "crew_at_side_b1",
+			"effects": {
+				"fighting": -15,
+				"reason": -10
+			},
+			"reward": [
+				"attack_up"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "goro",
+					"content": {
+						"korean": "당신이 정한 순서면 따르겠습니다. 어차피 그 이름 안 들으면 아무도 안 움직여요."
+					}
+				},
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "인부들이 줄을 서서 부품을 하나씩 받아 갔다."
+					}
+				},
+				{
+					"speaker": "dax",
+					"content": {
+						"korean": "이름 하나로 줄을 세우다니. 무섭기도 하고 든든하기도 하네요."
+					}
+				}
+			]
+		},
+		{
+			"text": {
+				"korean": "고로에게 120골드를 주고 인부들 몫 부품을 사들인다"
+			},
+			"path": "gold",
+			"mbti": "SP",
+			"require": {
+				"stat": "gold",
+				"op": ">=",
+				"value": 120
+			},
+			"effects": {
+				"gold": -120,
+				"community": 10
+			},
+			"reward": [
+				"shield"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "goro",
+					"content": {
+						"korean": "돈이라면… 뭐, 이번 달은 넘어가죠."
+					}
+				},
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "고로가 부품 꾸러미를 넘기고 인부들을 데리고 계단으로 사라졌다."
+					}
+				},
+				{
+					"speaker": "dax",
+					"content": {
+						"korean": "돈으로 사람 마음 사는 것도 실력이긴 한데, 지갑이 얇아졌어요."
+					}
+				}
+			]
+		}
+	],
+	"_side": {
+		"slot": "B",
+		"person": {
+			"id": "goro",
+			"name": "고로",
+			"role": "처리장 하역 인부"
+		},
+		"wants": "자기 몫 데이터 부품을 빼앗긴 하역 인부들이 힘으로 되찾으려 하자, 당신에게 앞장서서 부품을 되찾아달라고 한다.",
+		"rule_link": "분해된 출처 장치에서 나온 깨끗한 데이터 부품을 두고 벌어지는 실랑이 — 그 부품이 곧 데이터 스크린 조각으로 이어진다.",
+		"rep": "fighting-",
+		"events": {},
+		"flags": {
+			"crew_at_side": {
+				"kind": "bad",
+				"boss_penalty": -1,
+				"label": {
+					"korean": "하역조"
+				},
+				"boss_line": {
+					"korean": "고로와 하역 인부들이 뒤에서 길을 열며 앞을 가로막는 것을 밀어낸다."
+				}
+			},
+			"crew_at_side_b1": {
+				"kind": "good",
+				"boss_penalty": 2,
+				"label": {
+					"korean": "하역조"
+				},
+				"boss_choice": {
+					"korean": "고로와 하역 인부들이 뒤에서 길을 열며 앞을 가로막는 것을 밀어낸다."
+				}
+			}
+		}
+	}
+}

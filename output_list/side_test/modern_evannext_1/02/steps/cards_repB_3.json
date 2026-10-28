@@ -1,0 +1,328 @@
+{
+	"cards": [
+		{
+			"person": {
+				"role": "단말기 담당자",
+				"name": "바인드",
+				"id": "clerk"
+			},
+			"wants": "규칙대로 검색실 단말기의 모든 이력서 성명 정리를 당장 완수하고 승인 도장을 받으려 한다.",
+			"rule_link": "이력서 이름 정보를 표준 정렬 규격에 맞춰 정리하면 승인 마크가 찍히는 규칙과 이어진다.",
+			"title": "규정대로 일괄 정리",
+			"no": 1,
+			"key": "strict_clerk_order",
+			"dialogue": [
+				{
+					"speaker": "narrator",
+					"text": "단말기 담당자가 정돈된 서류 열람함을 찰칵 소리 나게 닫는다."
+				},
+				{
+					"speaker": "clerk",
+					"text": "\"당신이 서류 창구 규정을 토씨 하나 틀리지 않고 엄격하게 지킨다는 그분이시군요?\""
+				},
+				{
+					"speaker": "clerk",
+					"text": "\"린의 이력서 정렬이 끝났으니, 검색실의 모든 대기자 이력서 이름도 규정대로 일괄 정리해 주십시오.\""
+				},
+				{
+					"text": "\"저기, 담당자님 말대로 서류 규격만 맞추면 다들 빠르게 등록될 것 같아요.\"",
+					"speaker": "nia"
+				}
+			],
+			"choices": [
+				{
+					"effects": {
+						"reason": -15,
+						"gold": 100
+					},
+					"flag": {
+						"boss_text": "일괄 정리된 서류의 철자가 일그러지며 데이터 과부하 통증이 발생한다.",
+						"label": "일괄 정렬 지시",
+						"key": "clerk_order_done"
+					},
+					"text": "단말기 담당자의 요청에 따라 대기자 이력서들의 이름 정보를 규정대로 정리한다.",
+					"reward": [
+						"intelligence_up"
+					],
+					"result": [
+						{
+							"speaker": "narrator",
+							"text": "대기자들의 이력서 이름 정보가 기계음과 함께 깔끔하게 일괄 정렬된다."
+						},
+						{
+							"speaker": "clerk",
+							"text": "\"훌륭하군요! 원칙대로 처리되니 마음이 편안해집니다. 이 수수료를 받으세요.\""
+						},
+						{
+							"speaker": "nia",
+							"text": "\"다들 서류가 바로 정리되어서 다행이에요.\""
+						}
+					],
+					"path": "easy",
+					"mbti": "TJ"
+				},
+				{
+					"path": "hard",
+					"mbti": "NF",
+					"result": [
+						{
+							"text": "당신이 수동 입력을 권하자 단말기 담당자가 불만을 뿜으며 수첩을 꺼낸다.",
+							"speaker": "narrator"
+						},
+						{
+							"speaker": "clerk",
+							"text": "\"쯧, 규정 절차를 놔두고 일일이 적으라니 대단한 고집이시군요.\""
+						},
+						{
+							"text": "\"직접 적으면 적어도 서류가 엉킬 일은 없겠어요.\"",
+							"speaker": "nia"
+						}
+					],
+					"reward": [
+						"defense_up"
+					],
+					"text": "서류 검수를 미루고 단말기 담당자에게 이력서 직접 입력을 권고한다.",
+					"flag": {
+						"key": "clerk_manual_input",
+						"boss_text": "담당자가 직접 작성한 원본 이력서 기록을 제시해 오류를 바로잡는다.",
+						"label": "수동 입력 권고"
+					},
+					"effects": {
+						"reason": 20,
+						"echo": 10
+					}
+				},
+				{
+					"flag": {
+						"label": "원칙적 일괄 정리 거부",
+						"key": "strict_rule_refusal",
+						"boss_text": "원칙을 지킨 이력서 검수 기록 덕분에 부당한 제재 수수료를 면제받는다."
+					},
+					"text": "엄격한 검색실 원칙을 들어 대기자들의 동의 없는 일괄 이력서 정리를 거부한다.",
+					"effects": {
+						"reason": -25,
+						"community": 15
+					},
+					"reward": [
+						"shield"
+					],
+					"mbti": "EP",
+					"result": [
+						{
+							"text": "당신이 규정을 들어 정색하자 단말기 담당자가 주춤하며 뒤로 물러선다.",
+							"speaker": "narrator"
+						},
+						{
+							"speaker": "clerk",
+							"text": "\"당신의 철저한 원칙 준수 소문이 사실이었군요. 일괄 처리는 철회하겠습니다.\""
+						},
+						{
+							"speaker": "nia",
+							"text": "\"규정을 당당하게 내세우니 담당자님도 더 반박하지 못하네요.\""
+						}
+					],
+					"path": "stat"
+				},
+				{
+					"path": "fun",
+					"mbti": "SP",
+					"result": [
+						{
+							"text": "당신이 담당자의 명찰을 손끝으로 누르자 담당자가 펄쩍 뛰며 서류를 떨어뜨린다.",
+							"speaker": "narrator"
+						},
+						{
+							"text": "\"무, 무슨 짓입니까! 내 이름표는 이미 제대로 붙어 있습니다!\"",
+							"speaker": "clerk"
+						},
+						{
+							"speaker": "nia",
+							"text": "\"아하하, 담당자님 얼굴이 서류보다 더 붉어졌어요.\""
+						}
+					],
+					"text": "단말기 담당자의 명찰 이름 글자부터 바르게 펴져 있는지 손으로 꾹꾹 누른다.",
+					"reward": [
+						"move_range_up"
+					],
+					"effects": {
+						"gold": 80,
+						"fighting": 15
+					}
+				}
+			],
+			"background_tags": [
+				"search_room",
+				"bright",
+				"terminal_light",
+				"crowded",
+				"tense"
+			],
+			"slot": "B",
+			"kind": "rep",
+			"rep_dir": "reason-"
+		},
+		{
+			"person": {
+				"name": "지크",
+				"id": "seeker",
+				"role": "초조한 구직자"
+			},
+			"dialogue": [
+				{
+					"speaker": "narrator",
+					"text": "초조한 구직자가 서류 뭉치를 쥔 채 공용 검색 단말기 앞으로 성큼 다가온다."
+				},
+				{
+					"speaker": "seeker",
+					"text": "\"당신이 서류 양식 따위 찢어 버리고 내키는 대로 사람들을 통과시켜 줬다는 그 사람 맞죠?\""
+				},
+				{
+					"text": "\"내 이력서 경력 칸의 이름도 거창한 수식어로 바꿔서 단말기에 등록해 주시오!\"",
+					"speaker": "seeker"
+				},
+				{
+					"text": "\"저기, 원본 서류와 다르게 이름을 바꾸는 건 조금 위험할 수도 있어요.\"",
+					"speaker": "nia"
+				}
+			],
+			"choices": [
+				{
+					"mbti": "TP",
+					"result": [
+						{
+							"speaker": "narrator",
+							"text": "단말기 모니터에 구직자가 요청한 화려한 경력 명칭이 즉각 반영된다."
+						},
+						{
+							"text": "\"하하! 역시 소문대로 수완이 좋으시네! 이 정도 수고비는 당연히 드려야죠.\"",
+							"speaker": "seeker"
+						},
+						{
+							"speaker": "nia",
+							"text": "\"이름을 이렇게 바꿔도 정말 괜찮은 걸까요?\""
+						}
+					],
+					"reward": [
+						"attack_up"
+					],
+					"path": "easy",
+					"text": "구직자의 요구대로 경력란의 이름을 원하는 대로 멋대로 정리해 준다.",
+					"flag": {
+						"key": "seeker_fake_name",
+						"label": "경력명 변조 승인",
+						"boss_text": "변조된 경력 데이터가 뒤엉켜 검색실 제어 단말기가 차단된다."
+					},
+					"effects": {
+						"reason": 15,
+						"gold": 120
+					}
+				},
+				{
+					"flag": {
+						"label": "정석 이력서 정리",
+						"boss_text": "올바르게 입력된 인적 사항 덕분에 안전한 인증 열쇠를 확보한다.",
+						"key": "seeker_honest_edit"
+					},
+					"reward": [
+						"cooldown_reset"
+					],
+					"result": [
+						{
+							"text": "당신이 구직자의 이력서 이름을 공식 신원 증명서와 토씨 하나 안 틀리게 정리한다.",
+							"speaker": "narrator"
+						},
+						{
+							"text": "\"치, 제멋대로 해줄 줄 알았더니 생각보다 융통성이 없으시네.\"",
+							"speaker": "seeker"
+						},
+						{
+							"speaker": "nia",
+							"text": "\"그래도 사실대로 적는 편이 나중에 덜 위험할 거예요.\""
+						}
+					],
+					"effects": {
+						"reason": -20,
+						"community": 10
+					},
+					"mbti": "FJ",
+					"text": "구직자의 요구를 거절하고 이력서 이름을 증명서와 똑같이 정석대로 정리한다.",
+					"path": "hard"
+				},
+				{
+					"effects": {
+						"reason": 25,
+						"echo": 10
+					},
+					"flag": {
+						"key": "free_edit_access",
+						"label": "자율 수정 권한 부여",
+						"boss_text": "구직자가 직접 수정한 이력서 덕에 단말기 응급 복구 코드를 얻는다."
+					},
+					"reward": [
+						"intelligence_up"
+					],
+					"result": [
+						{
+							"text": "당신이 키보드를 넘겨주자 구직자가 신나게 자판을 두드리며 경력을 적어 내려간다.",
+							"speaker": "narrator"
+						},
+						{
+							"text": "\"오! 진짜로 마음대로 적게 해 주는군요? 당신 진짜 마음에 듭니다!\"",
+							"speaker": "seeker"
+						},
+						{
+							"text": "\"원하는 대로 직접 적게 하니 저 사람도 만족한 것 같아요.\"",
+							"speaker": "nia"
+						}
+					],
+					"path": "stat",
+					"text": "자유로운 변형 경험을 살려 구직자 스스로 이력서 이름을 수정하도록 단말기 접근권을 넘긴다.",
+					"mbti": "NP"
+				},
+				{
+					"effects": {
+						"community": 20,
+						"gold": -100
+					},
+					"reward": [
+						"heal"
+					],
+					"result": [
+						{
+							"text": "당신이 수수료를 지불하고 조작 단말기의 이력서 처리 순서를 맨 앞으로 당긴다.",
+							"speaker": "narrator"
+						},
+						{
+							"speaker": "seeker",
+							"text": "\"돈까지 써 가며 내 순서를 당겨 주다니, 정말 고맙소!\""
+						},
+						{
+							"text": "\"지갑은 가벼워졌지만 일단 저분의 급한 불은 껐네요.\"",
+							"speaker": "nia"
+						}
+					],
+					"text": "수수료 100 골드를 받고 구직자의 이력서를 검색실 단말기 우선순위에 올려 준다.",
+					"path": "gold",
+					"mbti": "IS"
+				}
+			],
+			"wants": "공식 규격을 무시하고 자기 이력서의 허위 경력 이름을 마음대로 등록하려 한다.",
+			"background_tags": [
+				"search_room",
+				"dim",
+				"screen_flicker",
+				"restless",
+				"suspicious"
+			],
+			"no": 2,
+			"key": "free_seeker_request",
+			"title": "내키는 대로 경력 수정",
+			"rule_link": "대기자의 이력서 이름과 경력 칸을 단말기에서 편의대로 수정해 주는 작업과 이어진다.",
+			"slot": "B",
+			"kind": "rep",
+			"rep_dir": "reason+"
+		}
+	],
+	"errors": [],
+	"prompt_hash": "dd300c0aa02d8750cee026d14c460f24425ada5f"
+}

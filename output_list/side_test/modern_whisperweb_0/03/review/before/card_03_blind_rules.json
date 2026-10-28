@@ -1,0 +1,222 @@
+{
+	"id": "card_03_blind_rules",
+	"kind": "rep",
+	"title": {
+		"korean": "규칙을 어긴 손"
+	},
+	"intensity": "calm",
+	"after_story": 7,
+	"before_story": 10,
+	"condition": {
+		"leaning": "reason+",
+		"among": [
+			"fighting-",
+			"fighting+",
+			"community-",
+			"community+",
+			"reason-",
+			"reason+"
+		],
+		"min": 20
+	},
+	"urgency": 8,
+	"leaning": "reason+",
+	"background_tags": [
+		"pipe_room",
+		"dim",
+		"dust",
+		"crowd",
+		"tense"
+	],
+	"dialogue": [
+		{
+			"speaker": "narrator",
+			"content": {
+				"korean": "순찰자가 봉인 상자를 열어 두고 조각을 하나씩 담고 있었다."
+			}
+		},
+		{
+			"speaker": "night_guard",
+			"content": {
+				"korean": "당신이요, 절차 무시하고 냉각수부터 부은 사람. 이 조각은 제가 봉인합니다."
+			}
+		},
+		{
+			"speaker": "kai",
+			"content": {
+				"korean": "저 상자에 들어가면 다시는 못 꺼낸다고 하던데요. 조각이 아까워요."
+			}
+		},
+		{
+			"speaker": "night_guard",
+			"content": {
+				"korean": "규칙이 그래요. 읽을 수 없는 채로 보존하는 게 맞는 거예요."
+			}
+		},
+		{
+			"speaker": "night_guard",
+			"content": {
+				"korean": "제 순찰 일지에도 오늘 봉인 수량을 적어야 하니까, 손대지 마세요."
+			}
+		}
+	],
+	"choices": [
+		{
+			"text": {
+				"korean": "순찰자의 봉인 상자를 밀어 닫고 조각을 품에 챙긴다."
+			},
+			"path": "easy",
+			"mbti": "EP",
+			"flag": "log_written",
+			"effects": {
+				"reason": 15,
+				"community": -10
+			},
+			"reward": [
+				"move_range_up"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "night_guard",
+					"content": {
+						"korean": "당신, 지금 규칙을 두 번 어긴 거예요!"
+					}
+				},
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "상자 뚜껑이 닫히자 순찰자가 일지를 꺼내 뭐라고 적기 시작했다. 당신 품에는 조각이 남았다."
+					}
+				},
+				{
+					"speaker": "kai",
+					"content": {
+						"korean": "일지에 뭐라고 적혔는지 봐야겠어요. 나중에 문제 될지도."
+					}
+				}
+			]
+		},
+		{
+			"text": {
+				"korean": "순찰자의 봉인 절차를 따르되, 조각을 읽을 수 있게 사본을 먼저 뜬다."
+			},
+			"path": "hard",
+			"mbti": "TJ",
+			"flag": "copy_made",
+			"effects": {
+				"reason": -15,
+				"echo": 5
+			},
+			"reward": [
+				"intelligence_up"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "night_guard",
+					"content": {
+						"korean": "사본을 뜬다고요? 그건 규칙에 없는데..."
+					}
+				},
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "순찰자가 일지 끝에 사본 항목을 새로 적었다. 상자에는 원본이, 당신 손에는 사본이 들어갔다."
+					}
+				},
+				{
+					"speaker": "kai",
+					"content": {
+						"korean": "규칙에 한 줄 추가됐네요. 순찰자가 적는 손이 조금 떨렸어요."
+					}
+				}
+			]
+		},
+		{
+			"text": {
+				"korean": "순찰자에게 당신이 규칙 대신 사람을 살린 일들을 말하고 조각을 읽게 해 달라고 한다."
+			},
+			"path": "stat",
+			"mbti": "FP",
+			"require": {
+				"stat": "reason",
+				"op": ">=",
+				"value": 40
+			},
+			"flag": "box_ajar",
+			"effects": {
+				"reason": 20,
+				"community": 10
+			},
+			"reward": [
+				"shield"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "night_guard",
+					"content": {
+						"korean": "그 얘기는... 저도 들었어요. 절차를 깨고 사람을 빼냈다고."
+					}
+				},
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "순찰자가 상자 뚜껑을 반쯤 열어 두었다. 조각이 상자 안에서 희미하게 빛났다."
+					}
+				},
+				{
+					"speaker": "kai",
+					"content": {
+						"korean": "뚜껑이 반쯤 열려 있어요. 지금이면 꺼낼 수 있겠는데요."
+					}
+				}
+			]
+		}
+	],
+	"_side": {
+		"slot": "D",
+		"person": {
+			"id": "night_guard",
+			"name": "야간 순찰자",
+			"role": "전산실 경비"
+		},
+		"wants": "뒤섞인 스크린 조각을 규칙대로 봉인 상자에 넣어야 한다며, 주인공이 조각을 만지지 못하게 막는다.",
+		"rule_link": "데이터 스크린 조각을 규칙대로 봉인하면 정보는 보존되지만 아무도 못 읽게 되고, 마음대로 쓰면 읽을 수 있게 된다.",
+		"rep": "reason+",
+		"events": {},
+		"flags": {
+			"log_written": {
+				"kind": "bad",
+				"boss_penalty": -1,
+				"label": {
+					"korean": "적힌 일지"
+				},
+				"boss_line": {
+					"korean": "야간 순찰자가 일지를 펼쳐 당신의 위반 기록을 읽어 내려간다."
+				}
+			},
+			"copy_made": {
+				"kind": "good",
+				"boss_penalty": 1,
+				"label": {
+					"korean": "떠 둔 사본"
+				},
+				"boss_choice": {
+					"korean": "당신이 떠 둔 사본을 펼쳐 조각의 내용을 읽어 낸다."
+				}
+			},
+			"box_ajar": {
+				"kind": "good",
+				"boss_penalty": 2,
+				"label": {
+					"korean": "반쯤 열린 상자"
+				},
+				"boss_choice": {
+					"korean": "당신이 반쯤 열린 봉인 상자에서 조각을 꺼내 든다."
+				}
+			}
+		}
+	}
+}

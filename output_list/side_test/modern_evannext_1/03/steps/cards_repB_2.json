@@ -1,0 +1,307 @@
+{
+	"cards": [
+		{
+			"dialogue": [
+				{
+					"speaker": "narrator",
+					"text": "민호가 전자 인증 도장을 한 손에 쥐고 당신에게 다가왔다."
+				},
+				{
+					"text": "남들 일엔 손도 안 대고 자기 이력서 승인만 쏙 받아내셨다는 소문을 들었습니다.",
+					"speaker": "minho"
+				},
+				{
+					"speaker": "minho",
+					"text": "이 전자 인증 도장으로 제 이력서에 보조 인증만 찍어 주시면 단말기 혜택을 나누어 드리죠."
+				},
+				{
+					"speaker": "kai",
+					"text": "저 사람, 다른 대기자 몰래 자기 이력서만 승인받으려 하고 있어요. 조심하세요."
+				}
+			],
+			"wants": "자기 이력서에 추가 보조 인증 도장을 받아 단독 혜택을 차지하고 싶어 한다.",
+			"no": 1,
+			"rule_link": "1단계 인증 후 추가 보조 인증 도장을 찍어 보상을 독점하려는 구직자와의 거래",
+			"background_tags": [
+				"booth",
+				"indoor",
+				"bright",
+				"crowd",
+				"tense"
+			],
+			"choices": [
+				{
+					"flag": {
+						"boss_text": "민호가 독점한 인증 혜택 때문에 대기실 단말기의 가동률이 떨어져 지원 장비의 효율이 감소한다.",
+						"label": "민호의 독점",
+						"key": "minho_monopoly_boss"
+					},
+					"mbti": "EP",
+					"reward": [
+						"attack_up"
+					],
+					"text": "민호의 이력서에 보조 인증 도장을 찍어 주고 보상을 받는다.",
+					"result": [
+						{
+							"text": "당신은 민호의 이력서에 전자 인증 도장을 찍어 주고 골드를 넘겨받았다.",
+							"speaker": "narrator"
+						},
+						{
+							"text": "고맙습니다! 이제 제 이력서 승인은 완전히 끝났군요. 혜택은 제가 다 가져갑니다.",
+							"speaker": "minho"
+						},
+						{
+							"text": "저 혼자만 혜택을 챙겨 가다니... 다른 구직자들의 시선이 따가워요.",
+							"speaker": "kai"
+						}
+					],
+					"path": "easy",
+					"effects": {
+						"community": -20,
+						"gold": 100
+					}
+				},
+				{
+					"result": [
+						{
+							"text": "당신은 민호의 제안을 거절하고 도장을 공용 단말기 받침대에 올려놓았다.",
+							"speaker": "narrator"
+						},
+						{
+							"speaker": "minho",
+							"text": "웻, 혼자만 좋은 자리를 차지해 놓고 남한테는 엄격하시네요!"
+						},
+						{
+							"text": "잘하셨어요. 특정 사람에게만 특혜를 주면 더 큰 혼란이 올 거예요.",
+							"speaker": "kai"
+						}
+					],
+					"path": "hard",
+					"mbti": "FJ",
+					"flag": {
+						"key": "shared_stamp_boss",
+						"label": "공용 도장 회수",
+						"boss_text": "공용 도장에 남아 있던 승인 기록을 활용해 제어 장치의 방어막을 무력화한다."
+					},
+					"effects": {
+						"fighting": -10,
+						"community": 20,
+						"echo": 10
+					},
+					"reward": [
+						"shield"
+					],
+					"text": "보조 인증을 거절하고 전자 인증 도장을 공용 단말기 옆에 놓는다."
+				},
+				{
+					"reward": [
+						"defense_up"
+					],
+					"path": "stat",
+					"effects": {
+						"echo": 5,
+						"reason": 20,
+						"community": -30
+					},
+					"result": [
+						{
+							"text": "당신은 민호의 손에서 도장을 빼앗아 공용 승인 목록 단말기를 잠가 버렸다.",
+							"speaker": "narrator"
+						},
+						{
+							"speaker": "minho",
+							"text": "아니, 제 이력서는 어쩌고요! 소문대로 정말 차가운 분이시군요."
+						},
+						{
+							"speaker": "kai",
+							"text": "단호하게 제지하셨네요. 더 이상 이력서 혜택을 탐내는 편법은 못 쓰겠어요."
+						}
+					],
+					"flag": {
+						"label": "목록 잠금",
+						"key": "lock_list_boss",
+						"boss_text": "잠근 승인 목록의 보안 코드를 입력하여 관리 시스템의 기습 작동을 차단한다."
+					},
+					"mbti": "TJ",
+					"text": "개인 행동만을 노리는 민호의 도장을 빼앗아 공용 승인 목록을 잠근다."
+				}
+			],
+			"person": {
+				"name": "민호",
+				"id": "minho",
+				"role": "구직자"
+			},
+			"title": "내 이력서부터 찍어 주시오",
+			"key": "minho_self_first",
+			"slot": "B",
+			"kind": "rep",
+			"rep_dir": "community-"
+		},
+		{
+			"title": "대기자들을 위한 보조 승인",
+			"dialogue": [
+				{
+					"speaker": "narrator",
+					"text": "대기자 소라가 이력서 묶음을 품에 안고 당신 앞에 섰다."
+				},
+				{
+					"text": "남들의 이력서 제출까지 팔벗고 도우셨다고 들었어요. 참 든든한 분이시네요.",
+					"speaker": "sora"
+				},
+				{
+					"text": "제발 대기자 모두의 이력서에 보조 인증을 한꺼번에 적용해 주실 수 있나요?",
+					"speaker": "sora"
+				},
+				{
+					"text": "모두를 도우려는 마음은 좋지만, 감독관의 경고를 받은 직후라 무리가 될지도 몰라요.",
+					"speaker": "kai"
+				}
+			],
+			"person": {
+				"name": "소라",
+				"id": "sora",
+				"role": "대기자"
+			},
+			"choices": [
+				{
+					"text": "대기자 모두의 이력서에 보조 인증 도장을 한 번에 찍는다.",
+					"result": [
+						{
+							"speaker": "narrator",
+							"text": "당신은 이력서 묶음에 보조 인증 도장을 연속으로 눌러 찍었다."
+						},
+						{
+							"speaker": "sora",
+							"text": "정말 감사합니다! 덕분에 대기실에 있던 모두가 다음 승인 단계로 넘어갔어요!"
+						},
+						{
+							"text": "대기자들은 기뻐하지만 단말기 화면이 붉게 과열되는 것 같아 불안해요.",
+							"speaker": "kai"
+						}
+					],
+					"mbti": "NF",
+					"flag": {
+						"boss_text": "한꺼번에 처리된 인증 요청 때문에 단말기가 과부하되어 제어판 작동이 지연된다.",
+						"label": "과부하 승인",
+						"key": "overload_approval_boss"
+					},
+					"effects": {
+						"fighting": -10,
+						"echo": 10,
+						"community": 20
+					},
+					"path": "easy",
+					"reward": [
+						"heal"
+					]
+				},
+				{
+					"reward": [
+						"intelligence_up"
+					],
+					"mbti": "ST",
+					"flag": {
+						"key": "orderly_record_boss",
+						"label": "정돈된 기록",
+						"boss_text": "꼼꼼히 검토한 인증 기록을 바탕으로 장비의 동작 허점을 정확하게 파악한다."
+					},
+					"text": "차례대로 이력서를 검토하고 개별 보조 인증만 진행한다.",
+					"effects": {
+						"reason": 20,
+						"community": -10
+					},
+					"result": [
+						{
+							"speaker": "narrator",
+							"text": "당신은 이력서를 한 장씩 받아 들어 기재 내용을 확인한 뒤 도장을 찍었다."
+						},
+						{
+							"speaker": "sora",
+							"text": "하나씩 확인하느라 시간은 걸렸지만, 탈 없이 처리해 주셔서 안심이 되네요."
+						},
+						{
+							"speaker": "kai",
+							"text": "감독관의 눈치를 보면서도 차분하게 차례를 지키셨네요. 다행이에요."
+						}
+					],
+					"path": "hard"
+				},
+				{
+					"mbti": "EJ",
+					"flag": {
+						"boss_text": "당신을 따르는 구직자들이 경비 구역 통로를 통제하여 방어 진형을 갖춰 준다.",
+						"key": "orderly_crowd_boss",
+						"label": "질서 정연한 구직자들"
+					},
+					"text": "신망을 바탕으로 모두가 번호표 순서대로 단말기를 사용하도록 통제한다.",
+					"reward": [
+						"defense_up"
+					],
+					"result": [
+						{
+							"text": "당신의 지시에 따라 구직자들이 일렬로 줄을 서서 순서대로 단말기에 이력서를 대었다.",
+							"speaker": "narrator"
+						},
+						{
+							"speaker": "sora",
+							"text": "역시 사람들을 이끄는 힘이 있으시네요! 아무런 다툼 없이 전부 보조 인증을 마쳤어요."
+						},
+						{
+							"text": "사람들이 완전히 당신 말을 신뢰하고 있어요. 절차가 정말 매끄럽게 진행되었네요.",
+							"speaker": "kai"
+						}
+					],
+					"effects": {
+						"community": 30,
+						"echo": 15,
+						"reason": 10
+					},
+					"path": "stat"
+				},
+				{
+					"text": "이력서 묶음에 보조 인증 도장을 연타하며 박수를 치도록 유도한다.",
+					"reward": [
+						"cooldown_reset"
+					],
+					"mbti": "FP",
+					"effects": {
+						"echo": 10,
+						"reason": -20,
+						"gold": 80
+					},
+					"result": [
+						{
+							"text": "당신은 박자에 맞춰 이력서마다 도장을 찍었고 대기자들이 손뼉을 치며 응원했다.",
+							"speaker": "narrator"
+						},
+						{
+							"speaker": "sora",
+							"text": "어머나, 축제판처럼 신나게 승인을 받으니 대기 시간이 전혀 지루하지 않았어요! 팁도 드릴게요!"
+						},
+						{
+							"speaker": "kai",
+							"text": "인증부스가 순식간에 공연장처럼 변했군요... 어쨌든 분위기는 무척 좋아졌어요."
+						}
+					],
+					"path": "fun"
+				}
+			],
+			"no": 2,
+			"background_tags": [
+				"booth",
+				"indoor",
+				"fluorescent",
+				"queue",
+				"hopeful"
+			],
+			"wants": "대기실 전체 구직자들의 이력서에 보조 인증을 한꺼번에 적용하려 한다.",
+			"rule_link": "1단계 인증 성공 후 줄을 선 대기자 전원의 이력서에 보조 인증을 연동하려는 요청",
+			"key": "sora_public_request",
+			"slot": "B",
+			"kind": "rep",
+			"rep_dir": "community+"
+		}
+	],
+	"errors": [],
+	"prompt_hash": "b17f5a528a203f67c799e453247a57fe69feb405"
+}

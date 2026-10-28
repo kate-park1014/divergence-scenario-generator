@@ -1,0 +1,218 @@
+{
+	"id": "card_01_oliver_power_dist",
+	"kind": "rep",
+	"title": {
+		"korean": "빈민가로 향하는 전력"
+	},
+	"intensity": "calm",
+	"after_story": 3,
+	"before_story": 5,
+	"condition": {
+		"leaning": "community+",
+		"among": [
+			"fighting-",
+			"fighting+",
+			"community-",
+			"community+",
+			"reason-",
+			"reason+"
+		],
+		"min": 20
+	},
+	"urgency": 8,
+	"leaning": "community+",
+	"background_tags": [
+		"server_rack",
+		"day",
+		"flickering",
+		"crowded",
+		"hopeful"
+	],
+	"dialogue": [
+		{
+			"speaker": "oliver",
+			"content": {
+				"korean": "언제나 자기보다 남들을 먼저 챙겨주신다면서요? 부탁 하나만 합시다."
+			}
+		},
+		{
+			"speaker": "oliver",
+			"content": {
+				"korean": "이 서버 랙에 전력이 넘치는데, 저기 스위치 좀 내려서 빈민가 쪽으로 돌려주세요."
+			}
+		},
+		{
+			"speaker": "echo",
+			"content": {
+				"korean": "당장 복구 작업에 쓸 전력도 부족한데, 저기로 다 빼버려도 괜찮은 거야?"
+			}
+		}
+	],
+	"choices": [
+		{
+			"text": {
+				"korean": "스위치를 내려 전력을 빈민가로 ��린다"
+			},
+			"path": "easy",
+			"mbti": "FJ",
+			"flag": "oliver_low_power",
+			"effects": {
+				"community": 20,
+				"gold": 50
+			},
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "당신이 스위치를 내리자 전산실 조명이 어두워졌다."
+					}
+				},
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "올리버가 고맙다며 주머니에서 돈을 꺼내 주었다."
+					}
+				}
+			]
+		},
+		{
+			"text": {
+				"korean": "전력을 서버 랙 유지에 집중시킨다"
+			},
+			"path": "hard",
+			"mbti": "TJ",
+			"flag": "oliver_full_power",
+			"effects": {
+				"community": -20,
+				"echo": -10
+			},
+			"reward": [
+				"hp_down"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "당신은 올리버의 부탁을 무시하고 서버 랙의 메인 전원을 올렸다."
+					}
+				},
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "전산실이 환해졌지만 올리버는 실망했다."
+					}
+				}
+			]
+		},
+		{
+			"text": {
+				"korean": "모든 구역에 전력이 골고루 가도록 배선한다"
+			},
+			"path": "stat",
+			"mbti": "NF",
+			"require": {
+				"stat": "community",
+				"op": ">=",
+				"value": 40
+			},
+			"flag": "oliver_balance",
+			"effects": {
+				"reason": 10,
+				"community": 30
+			},
+			"reward": [
+				"heal"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "당신이 능숙하게 배선을 나누자 모든 구역에 전기가 들어왔다."
+					}
+				},
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "사람들의 환호 소리가 들렸다."
+					}
+				}
+			]
+		},
+		{
+			"text": {
+				"korean": "스위치를 반대로 돌려 전광판을 터뜨린다"
+			},
+			"path": "fun",
+			"mbti": "EP",
+			"effects": {
+				"fighting": -10,
+				"reason": -10
+			},
+			"reward": [
+				"attack_up"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "당신이 장난스레 스위치를 끝까지 올렸다."
+					}
+				},
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "주변 전광판들이 요란한 소리를 내며 펑펑 터져나갔다."
+					}
+				}
+			]
+		}
+	],
+	"_side": {
+		"slot": "B",
+		"person": {
+			"id": "oliver",
+			"name": "올리버",
+			"role": "서버 랙 관리자"
+		},
+		"wants": "복구된 서버의 잉여 전력을 빈민가 구역으로 보내는 작업을 도와달라고 함",
+		"rule_link": "조각을 깨어 일시적으로 돌아온 전력을 공공을 위해 분배하려 함",
+		"rep": "community+",
+		"events": {},
+		"flags": {
+			"oliver_low_power": {
+				"kind": "bad",
+				"boss_penalty": -1,
+				"label": {
+					"korean": "부족해진 전력"
+				},
+				"boss_line": {
+					"korean": "전력이 부족해진 탓에 당신의 통신 장비가 먹통이 된다."
+				}
+			},
+			"oliver_full_power": {
+				"kind": "good",
+				"boss_penalty": 1,
+				"label": {
+					"korean": "집중된 전력"
+				},
+				"boss_choice": {
+					"korean": "서버 랙의 넘치는 전력을 이용해 보안관의 시야를 가린다."
+				}
+			},
+			"oliver_balance": {
+				"kind": "good",
+				"boss_penalty": 2,
+				"label": {
+					"korean": "안정된 전력망"
+				},
+				"boss_choice": {
+					"korean": "안정된 전력망에 접속해 보안관의 자동 방어 시스템을 무력화���다."
+				}
+			}
+		}
+	}
+}

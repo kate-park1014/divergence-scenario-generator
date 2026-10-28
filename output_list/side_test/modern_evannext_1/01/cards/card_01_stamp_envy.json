@@ -1,0 +1,188 @@
+{
+	"id": "card_01_stamp_envy",
+	"kind": "normal",
+	"title": {
+		"korean": "도장을 본 사람들"
+	},
+	"intensity": "calm",
+	"after_story": 3,
+	"before_story": 5,
+	"background_tags": [
+		"waiting_hall",
+		"bulletin_board",
+		"loudspeaker",
+		"stamped_paper",
+		"whispering"
+	],
+	"dialogue": [
+		{
+			"speaker": "narrator",
+			"content": {
+				"korean": "린의 손에 찍힌 임시 합격 도장을 본 지원자들이 구름처럼 몰려들었다."
+			}
+		},
+		{
+			"speaker": "desperate_group",
+			"content": {
+				"korean": "어떻게 순번 1번을 받은 겁니까? 제 서류에도 같은 도장을 받게 해주십시오!"
+			}
+		},
+		{
+			"speaker": "lin",
+			"content": {
+				"korean": "저도 얼떨결에 받은 거라 말씀드리기 곤란해요. 다들 물러서 주세요!"
+			}
+		},
+		{
+			"speaker": "desperate_group",
+			"content": {
+				"korean": "방법만 알려주면 뭐든 보답하겠소! 번호표 순번만 앞당겨 주시오!"
+			}
+		}
+	],
+	"choices": [
+		{
+			"text": {
+				"korean": "협회장의 추천 문구를 지어내 대기자의 명부에 서명해 준다."
+			},
+			"path": "easy",
+			"mbti": "EF",
+			"effects": {
+				"community": -20,
+				"gold": 80,
+				"echo": 10,
+				"reason": -20
+			},
+			"reward": [
+				"move_range_up"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "주최 측 찬조 경력을 적어 넣자 접수 창구의 등이 푸른색으로 바뀌었다."
+					}
+				},
+				{
+					"speaker": "lin",
+					"content": {
+						"korean": "벌써 임시 도장이 번쩍여요. 사람들이 우릴 부러운 눈으로 쳐다봐요."
+					}
+				}
+			]
+		},
+		{
+			"text": {
+				"korean": "몰려드는 대기자들의 서류를 뿌리치고 접수대 앞을 비켜선다."
+			},
+			"path": "hard",
+			"mbti": "IT",
+			"effects": {
+				"echo": -10,
+				"reason": 20,
+				"community": 20
+			},
+			"reward": [
+				"defense_up"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "지원자들의 청탁 메모를 모두 모아 중앙 분쇄기에 밀어 넣었다."
+					}
+				},
+				{
+					"speaker": "lin",
+					"content": {
+						"korean": "원성이 자자하지만, 우리 서류 순번을 지키려면 엮이지 않는 게 맞아요."
+					}
+				}
+			]
+		},
+		{
+			"text": {
+				"korean": "{actor}이(가) 규정 조항의 빈틈을 이용해 대기자들의 서류를 정식 분류한다."
+			},
+			"path": "lock",
+			"mbti": "NT",
+			"require": {
+				"mbti": "NT"
+			},
+			"effects": {
+				"gold": 50,
+				"echo": 5,
+				"community": -10,
+				"reason": -10
+			},
+			"reward": [
+				"intelligence_up"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "{actor}이(가) 규정상 허용되는 유사 경력 인정 조항을 찾아내 합법적으로 순번을 조율했다."
+					}
+				},
+				{
+					"speaker": "lin",
+					"content": {
+						"korean": "{actor} 덕분에 허위 작성 없이도 몇 사람의 순번을 빠르게 통과시켰어요!"
+					}
+				}
+			]
+		},
+		{
+			"text": {
+				"korean": "90골드를 창구에 지불해 대기자들의 정식 서류 검토 수수료를 낸다."
+			},
+			"path": "gold",
+			"mbti": "SJ",
+			"require": {
+				"stat": "gold",
+				"op": ">=",
+				"value": 90
+			},
+			"effects": {
+				"gold": -90,
+				"echo": 5,
+				"reason": 10,
+				"community": 10
+			},
+			"reward": [
+				"shield"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "90골드로 접수대 급행 수수료를 대신 내주자 서류 검토가 일괄 승인되었다."
+					}
+				},
+				{
+					"speaker": "lin",
+					"content": {
+						"korean": "비용이 꽤 들었지만, 불필요한 시비 없이 순번을 지켜냈네요."
+					}
+				}
+			]
+		}
+	],
+	"_side": {
+		"slot": "B",
+		"person": {
+			"name": "몰려든 지원자들",
+			"id": "desperate_group",
+			"role": "임시 합격 도장을 목격한 대기자 무리"
+		},
+		"wants": "린처럼 순번이 맨 앞으로 오르는 임시 합격 도장을 받는 것",
+		"rule_link": "임시 합격 도장의 선례를 본 대기자들이 과장 접수를 요구한다.",
+		"events": {},
+		"flags": {}
+	}
+}

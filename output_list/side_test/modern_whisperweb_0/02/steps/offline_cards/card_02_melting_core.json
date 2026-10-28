@@ -1,0 +1,183 @@
+{
+	"id": "card_02_melting_core",
+	"kind": "normal",
+	"title": {
+		"korean": "녹아내리는 코어"
+	},
+	"intensity": "calm",
+	"after_story": 5,
+	"before_story": 7,
+	"background_tags": [
+		"emergency_room",
+		"server_rack",
+		"melting_metal",
+		"heat_haze",
+		"red_light"
+	],
+	"dialogue": [
+		{
+			"speaker": "stubborn_technician",
+			"content": {
+				"korean": "내 30년 경력에 이런 미친 과열은 처음이야! 코어가 다 녹게 생겼어."
+			}
+		},
+		{
+			"speaker": "stubborn_technician",
+			"content": {
+				"korean": "저기 구석에 냉각 스프레이가 있는데, 열기 때문에 다가갈 수가 없어. 좀 가져다줘!"
+			}
+		},
+		{
+			"speaker": "lin",
+			"content": {
+				"korean": "저 장비마저 녹으면 데이터 스크린 조각들이 완전히 파괴될 거예요. 서둘러야 해요."
+			}
+		},
+		{
+			"speaker": "lin",
+			"content": {
+				"korean": "너무 뜨거워서 가까이 가기엔 위험해 보여요. 조심하세요."
+			}
+		}
+	],
+	"choices": [
+		{
+			"text": {
+				"korean": "열기를 피해 긴 막대기로 스프레이를 끌어와 건네주고 수고비를 받는다."
+			},
+			"path": "easy",
+			"mbti": "NP",
+			"effects": {
+				"gold": 80,
+				"reason": 10
+			},
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "당신이 막대기로 안전하게 스프레이를 챙기자 베라는 안도하며 돈을 주었다."
+					}
+				},
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "스프레이를 뿌리자 코어의 온도가 간신히 내려갔다."
+					}
+				}
+			]
+		},
+		{
+			"text": {
+				"korean": "뜨거운 바닥을 뚫고 들어가 스프레이를 직접 주워온다."
+			},
+			"path": "hard",
+			"mbti": "SJ",
+			"effects": {
+				"echo": 10,
+				"fighting": 20,
+				"community": 20
+			},
+			"reward": [
+				"hp_down"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "당신은 열기에 피부가 붉어지는 것을 참으며 스프레이를 집어왔다."
+					}
+				},
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "베라는 당신의 헌신에 감탄하며 재빨리 코어를 식혔다."
+					}
+				}
+			]
+		},
+		{
+			"text": {
+				"korean": "{actor}이(가) 주변의 환풍구를 뜯어내 임시로 바람이 통하게 만들어 열기를 식힌다."
+			},
+			"path": "lock",
+			"mbti": "TP",
+			"require": {
+				"mbti": "TP"
+			},
+			"effects": {
+				"gold": 50,
+				"reason": 10,
+				"echo": 5,
+				"community": 10
+			},
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "{actor}이(가) 능숙하게 환풍구를 조작하자 시원한 공기가 유입되었다."
+					}
+				},
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "베라는 훌륭한 응급처치라며 칭찬하고 보상을 건넸다."
+					}
+				}
+			]
+		},
+		{
+			"text": {
+				"korean": "스프레이를 찾는 대신 베라와 함께 안전한 구석에 앉아 열기가 가라앉기를 기다린다."
+			},
+			"path": "fun",
+			"mbti": "IF",
+			"effects": {
+				"echo": 15,
+				"community": 20,
+				"gold": 50,
+				"fighting": -10
+			},
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "당신과 베라는 과열된 서버를 등지고 앉아 땀을 닦으며 휴식을 취했다."
+					}
+				},
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "코어는 결국 반쯤 녹아내렸지만 두 사람은 무사했다."
+					}
+				}
+			],
+			"event": "campsite",
+			"event_intro": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "베라가 열기가 식기를 기다리며 당신에게 구석의 빈자리를 내어준다."
+					}
+				}
+			]
+		}
+	],
+	"_side": {
+		"slot": "C",
+		"person": {
+			"id": "stubborn_technician",
+			"name": "베라",
+			"role": "수석 기술자"
+		},
+		"wants": "과열로 녹아내리는 코어 부품을 식히기 위해 열기 속에 있는 냉각 스프레이를 가져다달라고 한다.",
+		"rule_link": "전원 코드를 뽑아 멈춘 냉각 시스템 때문에 핵심 장비가 녹아내릴 위기에 처했다.",
+		"events": {
+			"fun": "당신의 제안에 베라는 포기한 듯 주저앉아 잠시 숨을 고르기로 했다."
+		},
+		"flags": {}
+	}
+}

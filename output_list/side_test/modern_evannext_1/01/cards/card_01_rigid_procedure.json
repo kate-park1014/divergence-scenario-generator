@@ -1,0 +1,223 @@
+{
+	"id": "card_01_rigid_procedure",
+	"kind": "rep",
+	"title": {
+		"korean": "규정 감시원의 정식 서식"
+	},
+	"intensity": "calm",
+	"after_story": 3,
+	"before_story": 5,
+	"condition": {
+		"leaning": "reason-",
+		"among": [
+			"fighting-",
+			"fighting+",
+			"community-",
+			"community+",
+			"reason-",
+			"reason+"
+		],
+		"min": 20
+	},
+	"urgency": 8,
+	"leaning": "reason-",
+	"background_tags": [
+		"central_hall",
+		"afternoon",
+		"stark_light",
+		"rigid_line",
+		"formal"
+	],
+	"dialogue": [
+		{
+			"speaker": "narrator",
+			"content": {
+				"korean": "단정한 정복을 입고 결재 인주를 든 직원이 각 잡힌 걸음걸이로 다가왔다."
+			}
+		},
+		{
+			"speaker": "procedure_clerk",
+			"content": {
+				"korean": "\"당신이 아까 규정집 서식 오류를 지적하며 정식 절차대로 접수대를 정돈시킨 그 원칙주의자군요.\""
+			}
+		},
+		{
+			"speaker": "procedure_clerk",
+			"content": {
+				"korean": "\"이 지원자의 서류에 양식 번호만 규정대로 덧붙여 주면,"
+			}
+		},
+		{
+			"speaker": "procedure_clerk",
+			"content": {
+				"korean": "절차 위반 없이 당장 순번을 5번으로 승격시킬 수 있습니다.\""
+			}
+		},
+		{
+			"speaker": "lin",
+			"content": {
+				"korean": "\"서류 빈틈을 규격대로 메워달라는 건가요? 겉보기엔 그럴듯한데, 이것도 일종의 조작 아닐까요?\""
+			}
+		}
+	],
+	"choices": [
+		{
+			"text": {
+				"korean": "규정 서식에 맞추어 결격 사유 공란에 적격 인증 번호를 채워 넣고 공식 접수한다"
+			},
+			"path": "easy",
+			"mbti": "ST",
+			"flag": "overcertified_dossier_delay",
+			"effects": {
+				"echo": 5,
+				"fighting": -10,
+				"reason": -20
+			},
+			"reward": [
+				"intelligence_up"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "당신이 규정집 12조를 인용해 빈칸을 승인 번호로 메우자, 엄격한 접수증이 덜컥 발행되었다."
+					}
+				},
+				{
+					"speaker": "procedure_clerk",
+					"content": {
+						"korean": "\"흠, 서류 양식과 직인 규정에는 한 치의 어긋남도 없군요. 7번 번호표를 즉시 발급합니다.\""
+					}
+				},
+				{
+					"speaker": "lin",
+					"content": {
+						"korean": "\"도장이 번지지도 않게 찍혔어요. 절차대로 하니 트집 잡을 구석이 하나도 없네요.\""
+					}
+				}
+			]
+		},
+		{
+			"text": {
+				"korean": "원칙에 없는 편법 공증 서류의 효력을 인정할 수 없다며 서류철을 덮어버린다"
+			},
+			"path": "hard",
+			"mbti": "NP",
+			"flag": "procedural_loophole_strike",
+			"effects": {
+				"reason": 20,
+				"echo": -5
+			},
+			"reward": [
+				"attack_up"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "당신이 서류 양식의 허구성을 지적하며 접수증을 반려하자, 대기자들의 줄이 웅성거리기 시작했다."
+					}
+				},
+				{
+					"speaker": "procedure_clerk",
+					"content": {
+						"korean": "\"원칙주의자라더니... 융통성이라곤 전혀 없군. 당신 같은 자는 절차의 틈을 모르는 법이오.\""
+					}
+				},
+				{
+					"speaker": "lin",
+					"content": {
+						"korean": "\"정형화된 서류를 거부하다니 대단해요. 하지만 저 깐깐한 직원의 눈 밖에 난 건 아닐까요?\""
+					}
+				}
+			]
+		},
+		{
+			"text": {
+				"korean": "면접 규정집 4장 8조를 소리 높여 읊으며 부정 접수대를 즉각 감사하겠다고 선언한다"
+			},
+			"path": "stat",
+			"mbti": "EJ",
+			"require": {
+				"stat": "reason",
+				"op": "<=",
+				"value": -40
+			},
+			"flag": "certified_auditor_authority",
+			"effects": {
+				"echo": 10,
+				"reason": -30
+			},
+			"reward": [
+				"shield"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "당신이 내민 결재 지침서를 본 직원은 안경을 치켜올리며 벌떡 일어나 경례를 붙였다."
+					}
+				},
+				{
+					"speaker": "procedure_clerk",
+					"content": {
+						"korean": "\"아, 본부 감사 기준을 완벽히 꿰뚫고 계신 그 감사관님이시군요! 이 자리의 전권을 맡기겠습니다!\""
+					}
+				},
+				{
+					"speaker": "lin",
+					"content": {
+						"korean": "\"저 깐깐한 직원이 허리를 90도로 숙였어요! 규정을 완벽하게 외우고 계셨던 건가요?\""
+					}
+				}
+			]
+		}
+	],
+	"_side": {
+		"slot": "B",
+		"person": {
+			"name": "규정 준수 직원",
+			"id": "procedure_clerk",
+			"role": "접수처 규정 감시원"
+		},
+		"wants": "양식 규정에 맞춘 결재 기호를 기입해 순번을 정식으로 앞당기는 것",
+		"rule_link": "규정 서식의 공란을 형식적 인증 번호로 메워 합법을 가장한 순번 급상승을 노린다.",
+		"rep": "reason-",
+		"events": {},
+		"flags": {
+			"overcertified_dossier_delay": {
+				"kind": "bad",
+				"boss_penalty": -1,
+				"label": {
+					"korean": "과다 공증 서류의 역풍"
+				},
+				"boss_line": {
+					"korean": "지나치게 결재 도장을 빽빽이 채운 탓에, 면접실 입구의 적격 심사관이 돋보기를 들고 검사를 시작한다."
+				}
+			},
+			"procedural_loophole_strike": {
+				"kind": "good",
+				"boss_penalty": 1,
+				"label": {
+					"korean": "규정 역이용 반박"
+				},
+				"boss_choice": {
+					"korean": "절차를 꼬집어 비틀었던 경험을 살려, 면접관이 내세우는 억지 규정을 역으로 반박한다."
+				}
+			},
+			"certified_auditor_authority": {
+				"kind": "good",
+				"boss_penalty": 2,
+				"label": {
+					"korean": "공인 감찰관의 특권"
+				},
+				"boss_choice": {
+					"korean": "철저한 규정 준수자로 인정받아, 면접실 안의 결재 도장 권한을 넘겨받고 프리패스를 얻는다."
+				}
+			}
+		}
+	}
+}

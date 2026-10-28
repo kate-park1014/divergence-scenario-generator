@@ -1,0 +1,188 @@
+{
+	"id": "card_02_selfless_cleaner_filter",
+	"kind": "rep",
+	"title": {
+		"korean": "유독 가스 필터"
+	},
+	"intensity": "calm",
+	"after_story": 3,
+	"before_story": 5,
+	"condition": {
+		"leaning": "community+",
+		"among": [
+			"fighting-",
+			"fighting+",
+			"community-",
+			"community+",
+			"reason-",
+			"reason+"
+		],
+		"min": 20
+	},
+	"urgency": 8,
+	"leaning": "community+",
+	"background_tags": [
+		"power_room",
+		"dusty_vent",
+		"quiet",
+		"dirty_filter",
+		"stuffy"
+	],
+	"dialogue": [
+		{
+			"speaker": "night_cleaner",
+			"content": {
+				"korean": "아이고, 위험을 무릅쓰고 모두를 위해 나서는 분이시군요."
+			}
+		},
+		{
+			"speaker": "night_cleaner",
+			"content": {
+				"korean": "환기구가 멈춘 김에 이 유독 가스 필터를 갈아야 해요. 제 키가 닿지 않아서 그러는데 한 번만 들어주실래요?"
+			}
+		},
+		{
+			"speaker": "lin",
+			"content": {
+				"korean": "저 필터, 보기만 해도 시커먼 게 위험해 보여요."
+			}
+		}
+	],
+	"choices": [
+		{
+			"text": {
+				"korean": "마샤를 어깨에 무등 태워 필터를 교체하게 돕는다."
+			},
+			"path": "easy",
+			"mbti": "FJ",
+			"flag": "selfless_toxic_dust",
+			"effects": {
+				"community": 20,
+				"gold": 50
+			},
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "마샤가 기침하며 필터를 갈아 끼운다."
+					}
+				},
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "검은 먼지가 당신의 어깨 위로 후두둑 떨어진다."
+					}
+				}
+			]
+		},
+		{
+			"text": {
+				"korean": "필터를 교체하지 않고 환기구를 아예 막아버린다."
+			},
+			"path": "hard",
+			"mbti": "TP",
+			"flag": "selfless_block_vent",
+			"effects": {
+				"community": -20,
+				"echo": 10
+			},
+			"reward": [
+				"defense_up"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "마샤가 깜짝 놀라 뒷걸음질 친다."
+					}
+				},
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "더 이상 유독 가스가 새어 나오지 않지만 공기가 탁해진다."
+					}
+				}
+			]
+		},
+		{
+			"text": {
+				"korean": "낡은 필터를 씻어내 다시 깨끗하게 만들어 끼운다."
+			},
+			"path": "stat",
+			"mbti": "FP",
+			"require": {
+				"stat": "community",
+				"op": ">=",
+				"value": 40
+			},
+			"flag": "selfless_clean_filter",
+			"effects": {
+				"community": 30
+			},
+			"reward": [
+				"shield"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "당신이 필터의 오염을 털어내자 마샤가 활짝 웃는다."
+					}
+				},
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "맑아진 공기에 린도 크게 숨을 들이마신다."
+					}
+				}
+			]
+		}
+	],
+	"_side": {
+		"slot": "B",
+		"person": {
+			"id": "night_cleaner",
+			"name": "마샤",
+			"role": "야간 청소부"
+		},
+		"wants": "전원이 꺼져 환기구가 멈춘 틈을 타, 낡은 유독 가스 필터를 교체하게 도와달라고 한다.",
+		"rule_link": "전원이 꺼지며 낡은 전산실의 환기 장치가 작동을 멈춘 상태를 이용한다.",
+		"rep": "community+",
+		"events": {},
+		"flags": {
+			"selfless_toxic_dust": {
+				"kind": "bad",
+				"boss_penalty": -1,
+				"label": {
+					"korean": "묻어난 유독물질"
+				},
+				"boss_line": {
+					"korean": "어깨에 묻은 유독물질이 피부를 따갑게 해 움직임이 둔해진다."
+				}
+			},
+			"selfless_block_vent": {
+				"kind": "good",
+				"boss_penalty": 1,
+				"label": {
+					"korean": "막힌 환기구"
+				},
+				"boss_choice": {
+					"korean": "환기구를 막아둔 덕에 경비원이 살포한 최루 가스를 가볍게 피한다."
+				}
+			},
+			"selfless_clean_filter": {
+				"kind": "good",
+				"boss_penalty": 2,
+				"label": {
+					"korean": "정화된 공기"
+				},
+				"boss_choice": {
+					"korean": "깨끗해진 공기를 깊게 들이마시며 경비원에게 빠르게 돌진한다."
+				}
+			}
+		}
+	}
+}

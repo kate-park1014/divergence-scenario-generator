@@ -1,0 +1,934 @@
+{
+	"cards": [
+		{
+			"key": "brawler_submission",
+			"wants": "가짜 전투 경력을 이력서에 채워 넣어 당장 앞 순번 표를 빼앗는 것",
+			"rule_link": "싸움꾼이 이력서에 가짜 용병대장 경력을 덧칠해 대기 순번을 강제로 끌어올리려 한다.",
+			"no": 1,
+			"background_tags": [
+				"central_hall",
+				"noon",
+				"fluorescent",
+				"crowded_lobby",
+				"tense"
+			],
+			"person": {
+				"id": "brawler",
+				"name": "흉터투성이 지원자",
+				"role": "순번을 노리는 거구의 용병"
+			},
+			"choices": [
+				{
+					"text": "험상궂은 지원자의 서류에 대규모 방어 작전 지휘 경력을 굵게 덧칠해 접수대에 꽂아 넣는다",
+					"path": "easy",
+					"effects": {
+						"gold": 100,
+						"echo": 5,
+						"fighting": -20
+					},
+					"result": [
+						{
+							"text": "\"크하하! 대기 순번이 7번으로 뛰었잖아! 여기 약속한 수고비요!\"",
+							"speaker": "brawler"
+						},
+						{
+							"text": "\"순번표를 빼앗긴 뒤쪽 지원자들이 주먹을 쥐고 이쪽을 노려보고 있어요...\"",
+							"speaker": "lin"
+						},
+						{
+							"speaker": "narrator",
+							"text": "우람한 지원자는 붉은 접수증을 흔들며 대기석 앞자리를 거칠게 꿰찼다."
+						}
+					],
+					"mbti": "ET",
+					"flag": {
+						"key": "muscle_applicant_barrier",
+						"boss_text": "당신이 서류를 대신 부풀려 준 거친 지원자가 문 앞을 가로막아 이동이 지체된다.",
+						"label": "거친 대기자의 난동"
+					}
+				},
+				{
+					"text": "거친 지원자가 내민 허위 무공 이력서를 강제로 빼앗아 바닥에 짓밟는다",
+					"path": "hard",
+					"result": [
+						{
+							"text": "당신은 남자의 거대한 손목을 비틀어 과장하려던 가짜 무공 훈장 증명서를 낚아챘다.",
+							"speaker": "narrator"
+						},
+						{
+							"text": "\"뭐야? 남의 기회를 가로채? 두고 봐, 무대에서 뼈를 부러뜨려 줄 테니!\"",
+							"speaker": "brawler"
+						},
+						{
+							"speaker": "lin",
+							"text": "\"저 사람 정말 화가 머리끝까지 났어요. 다음 면접 때 마주치면 어쩌죠?\""
+						}
+					],
+					"reward": [
+						"attack_up"
+					],
+					"mbti": "IF",
+					"flag": {
+						"key": "snatched_fake_dossier",
+						"boss_text": "당신이 물러서지 않고 서류를 빼앗았던 기억을 떠올려, 면접관의 돌발 위협을 몸으로 튕겨낸다.",
+						"label": "강경한 서류 압류"
+					},
+					"effects": {
+						"fighting": 20,
+						"echo": -10
+					}
+				},
+				{
+					"text": "거구의 지원자를 벽으로 몰아붙여 서류를 포기하고 맨 뒷줄로 돌아가게 윽박지른다",
+					"effects": {
+						"echo": 10,
+						"fighting": -30
+					},
+					"result": [
+						{
+							"speaker": "narrator",
+							"text": "당신이 목을 꺾으며 서늘한 눈빛을 쏘아붙이자, 거구의 지원자가 침을 삼키며 뒷걸음질 쳤다."
+						},
+						{
+							"text": "\"히익... 그 눈빛... 소문보다 진짜 독종이잖아! 알았소, 서류는 내 손으로 찢겠소!\"",
+							"speaker": "brawler"
+						},
+						{
+							"speaker": "lin",
+							"text": "\"말 한마디에 거한이 제 발로 물러나다니, 저 사람 완전히 기가 질렸어요.\""
+						}
+					],
+					"path": "stat",
+					"mbti": "TJ",
+					"reward": [
+						"shield"
+					],
+					"flag": {
+						"boss_text": "대기실을 제압했던 서슬 퍼런 악명을 무기로 삼아, 돌진해 오는 면접 진행 요원의 기세를 꺾는다.",
+						"key": "intimidating_brawler_submission",
+						"label": "투기장 패왕의 기세"
+					}
+				},
+				{
+					"mbti": "SP",
+					"effects": {
+						"gold": -80,
+						"echo": -5,
+						"fighting": -10
+					},
+					"path": "gold",
+					"text": "시끄러워지는 것을 막기 위해 거친 지원자에게 금화 80냥을 쥐여주며 대기석 뒤로 돌려보낸다",
+					"result": [
+						{
+							"text": "당신이 건넨 금화 주머니를 받아 든 남자는 입을 삐죽이며 뭉개진 서류를 주머니에 쑤셔 넣었다.",
+							"speaker": "narrator"
+						},
+						{
+							"text": "\"쳇, 피차 주먹 쓰는 처지에 돈으로 때우겠다? 이번 한 번만 조용히 물러나 주지.\"",
+							"speaker": "brawler"
+						},
+						{
+							"text": "\"돈을 쥐여주니 물러서긴 했지만, 주머니 사정이 꽤 빠듯해졌어요.\"",
+							"speaker": "lin"
+						}
+					]
+				}
+			],
+			"dialogue": [
+				{
+					"text": "팔뚝에 굵은 흉터가 가득한 거구의 지원자가 붉은 도장이 찍힌 린의 서류를 보며 다가왔다.",
+					"speaker": "narrator"
+				},
+				{
+					"speaker": "brawler",
+					"text": "\"당신이 접수대 진행 요원 멱살을 잡고 문을 부술 듯이 밀고 들어왔다는 그 독종 맞지?\""
+				},
+				{
+					"speaker": "brawler",
+					"text": "\"마침 잘됐군. 내 이력서에도 용병대장 경력 석 줄만 거칠게 갈겨써서 접수대에 꽂아 넣어 줘!\""
+				},
+				{
+					"speaker": "lin",
+					"text": "\"저 사람 덩치 좀 보세요... 들어주지 않으면 당장 주먹이라도 휘두를 기세예요.\""
+				}
+			],
+			"title": "흉터투성이 거한의 요구",
+			"slot": "B",
+			"kind": "rep",
+			"rep_dir": "fighting-"
+		},
+		{
+			"no": 2,
+			"key": "timid_help_seeker",
+			"choices": [
+				{
+					"text": "식은땀을 흘리는 지원자의 이력서에 모범 봉사상 내역을 정성껏 꾸며 써서 접수대에 내민다",
+					"path": "easy",
+					"result": [
+						{
+							"text": "당신이 덧칠해 준 수상 경력 덕에 창백한 지원자의 번호표가 순식간에 8번으로 갱신되었다.",
+							"speaker": "narrator"
+						},
+						{
+							"speaker": "timid_applicant",
+							"text": "\"아아, 고맙습니다! 소문대로 정말 곤경에 처한 사람을 그냥 지나치지 않으시는군요!\""
+						},
+						{
+							"text": "\"순번이 앞당겨져서 다행이긴 한데... 저 사람 손이 아직도 덜덜 떨리고 있어요.\"",
+							"speaker": "lin"
+						}
+					],
+					"mbti": "EF",
+					"reward": [
+						"heal"
+					],
+					"flag": {
+						"key": "timid_weeping_clog",
+						"label": "울보 대기자의 지체",
+						"boss_text": "당신이 서류를 챙겨준 울보 지원자가 떨림을 멈추지 못해 전광판 신호를 가로막는다."
+					},
+					"effects": {
+						"community": 10,
+						"fighting": 20,
+						"echo": 10
+					}
+				},
+				{
+					"flag": {
+						"label": "냉혹한 현실 직시",
+						"key": "cold_reality_check",
+						"boss_text": "냉정하게 쳐냈던 지원자의 서류 뭉치를 떠올려, 면접관의 헛점을 날카롭게 파고든다."
+					},
+					"mbti": "IT",
+					"result": [
+						{
+							"text": "당신이 손을 거두고 똑바로 쳐다보자, 지원자는 울음을 삼키며 가슴팍으로 서류를 끌어안았다.",
+							"speaker": "narrator"
+						},
+						{
+							"text": "\"그, 그렇군요... 다들 당신이 누구든 돕는 천사라고 했는데... 너무 냉정하세요...\"",
+							"speaker": "timid_applicant"
+						},
+						{
+							"text": "\"마음은 쓰이지만, 저 사람 몫까지 우리가 거짓말을 떠안을 수는 없으니까요.\"",
+							"speaker": "lin"
+						}
+					],
+					"effects": {
+						"fighting": -20,
+						"echo": -10
+					},
+					"path": "hard",
+					"reward": [
+						"defense_up"
+					],
+					"text": "손을 떼며 거짓 경력은 스스로 감당할 수 없을 거라 타이르고 돌아선다"
+				},
+				{
+					"text": "주변 대기자들을 모아 떨고 있는 지원자를 다독이며 정규 번호표를 챙겨준다",
+					"reward": [
+						"intelligence_up"
+					],
+					"path": "stat",
+					"mbti": "SJ",
+					"result": [
+						{
+							"text": "당신의 한마디에 주변 대기자들이 모여들어 떨고 있는 지원자의 어깨를 두드리며 서류를 교정해 주었다.",
+							"speaker": "narrator"
+						},
+						{
+							"text": "\"모두가 도와주다니... 당신 곁에 있으면 정말 기운이 나요! 정정당당히 줄을 서 볼게요!\"",
+							"speaker": "timid_applicant"
+						},
+						{
+							"text": "\"대기홀 분위기가 한결 따뜻해졌어요. 당신 말이라면 다들 고개를 끄덕이네요.\"",
+							"speaker": "lin"
+						}
+					],
+					"effects": {
+						"fighting": 30,
+						"echo": 15
+					},
+					"flag": {
+						"key": "united_applicant_wall",
+						"label": "대기자들의 연대 방패",
+						"boss_text": "지원자들의 든든한 신망을 바탕으로, 대기석 동료들의 합심을 이끌어내 압박을 버텨낸다."
+					}
+				}
+			],
+			"wants": "서류를 다듬어 백 번 밖으로 밀려난 순번을 한 자릿수로 끌어올리는 것",
+			"title": "창백한 지원자의 눈물",
+			"person": {
+				"role": "뒷번호에 절망한 수험생",
+				"id": "timid_applicant",
+				"name": "창백한 지원자"
+			},
+			"background_tags": [
+				"central_hall",
+				"afternoon",
+				"dim_light",
+				"anxious_crowd",
+				"sympathetic"
+			],
+			"rule_link": "순번이 한참 밀린 지원자가 조작된 봉사 경력을 요구하며 당장의 번호 당기기를 원한다.",
+			"dialogue": [
+				{
+					"text": "구겨진 이력서를 품에 안은 창백한 지원자가 안절부절못하며 다가왔다.",
+					"speaker": "narrator"
+				},
+				{
+					"text": "\"당신이 아까 탈진한 사람에게 물을 건네고 끝까지 챙겨주던 그 다정한 분 맞죠?\"",
+					"speaker": "timid_applicant"
+				},
+				{
+					"text": "\"저, 제 순번이 백 번 밖이라 오늘 안에 면접실 문턱도 못 넘어요... 제 서류도 조금만 손봐주세요!\"",
+					"speaker": "timid_applicant"
+				},
+				{
+					"speaker": "lin",
+					"text": "\"손가락을 하도 쥐어뜯어서 피가 날 지경이에요. 정말 절박해 보이기는 한데...\""
+				}
+			],
+			"slot": "B",
+			"kind": "rep",
+			"rep_dir": "fighting+"
+		},
+		{
+			"background_tags": [
+				"central_hall",
+				"bright",
+				"white_light",
+				"calculating_crowd",
+				"cold"
+			],
+			"wants": "자신의 과장 서류를 통과시켜 1열 번호표를 추가로 확보하고 되파는 것",
+			"dialogue": [
+				{
+					"text": "손목에 금시계를 찬 약삭빠른 남자가 번호표 뭉치를 펄럭이며 은밀하게 말을 걸어왔다.",
+					"speaker": "narrator"
+				},
+				{
+					"speaker": "shrewd_broker",
+					"text": "\"당신이 아까 안내대에서 자기 번호표부터 잽싸게 가로채 챙겼다는 그 양반이지?\""
+				},
+				{
+					"speaker": "shrewd_broker",
+					"text": "\"실속 차릴 줄 아는 사람끼리 통하는 법이지. 내 서류를 당신 밑으로 슬쩍 끼워주면 짭짤하게 떼어 주겠소.\""
+				},
+				{
+					"text": "\"저 사람 손에 든 거, 다른 사람들한테서 웃돈 주고 뺏어온 번호표 같아요...\"",
+					"speaker": "lin"
+				}
+			],
+			"person": {
+				"name": "약삭빠른 브로커",
+				"id": "shrewd_broker",
+				"role": "앞번호 암표 거래상"
+			},
+			"choices": [
+				{
+					"text": "약삭빠른 브로커에게서 정보료를 뜯어내고 그의 서류 대신 당신의 우선권만 굳힌다",
+					"result": [
+						{
+							"text": "당신은 수수료를 챙긴 뒤 그 지원자의 이력서를 맨 밑으로 밀어 넣고 당신과 린의 좌석 번호만 앞당겼다.",
+							"speaker": "narrator"
+						},
+						{
+							"text": "\"이런 지독한... 자기 배만 불리고 내 서류는 거들떠도 안 보다니!\"",
+							"speaker": "shrewd_broker"
+						},
+						{
+							"text": "\"지갑은 두둑해졌지만, 저 브로커가 이를 갈며 우리 뒤통수를 째려보고 있어요.\"",
+							"speaker": "lin"
+						}
+					],
+					"effects": {
+						"community": -20,
+						"gold": 120,
+						"echo": -5
+					},
+					"path": "easy",
+					"mbti": "TJ",
+					"flag": {
+						"key": "greedy_seat_monopoly",
+						"boss_text": "독차지한 앞줄 자리 때문에 화가 난 뒤편 대기자들이 무대 뒤에서 흙탕물을 끼얹는다.",
+						"label": "독점 대기석의 앙화"
+					}
+				},
+				{
+					"mbti": "NF",
+					"reward": [
+						"cooldown_reset"
+					],
+					"effects": {
+						"community": 20,
+						"echo": 10
+					},
+					"flag": {
+						"label": "양보한 서류의 여유",
+						"key": "conceded_form_buffer",
+						"boss_text": "욕심을 버리고 양보했던 서류 양식을 방패막이 삼아, 면접관의 까다로운 질문을 넘긴다."
+					},
+					"text": "브로커가 내민 뇌물을 거부하고 그가 든 수정 잉크를 빼앗아 주변 사람들에게 나눈다",
+					"path": "hard",
+					"result": [
+						{
+							"speaker": "narrator",
+							"text": "당신은 거래를 단칼에 거절하고 그가 가져온 고급 필기구를 대기석 사람들에게 골고루 나눠주었다."
+						},
+						{
+							"speaker": "shrewd_broker",
+							"text": "\"내 자산을 멋대로 남한테 뿌려? 실속만 차린다던 소문은 다 헛소리였나!\""
+						},
+						{
+							"speaker": "lin",
+							"text": "\"눈앞의 잇속 대신 남을 챙기다니, 당신을 다시 보게 됐어요.\""
+						}
+					]
+				},
+				{
+					"effects": {
+						"gold": 150,
+						"echo": -10,
+						"community": -30
+					},
+					"mbti": "IP",
+					"flag": {
+						"boss_text": "대기실 이권을 틀어쥐었던 수완을 살려, 면접장의 제한 시간을 1분 연장시킨다.",
+						"label": "이권 장악의 수완",
+						"key": "merciless_seat_scalper"
+					},
+					"reward": [
+						"move_range_up"
+					],
+					"result": [
+						{
+							"text": "당신이 서류 접수권의 허점을 짚어 압박하자, 브로커는 땀을 뻘뻘 흘리며 황금 번호표를 헌납했다.",
+							"speaker": "narrator"
+						},
+						{
+							"speaker": "shrewd_broker",
+							"text": "\"으윽... 과연 남 등쳐먹는 솜씨가 한 수 위군. 이 3번 대기표를 드릴 테니 입만 다물어 주시오.\""
+						},
+						{
+							"speaker": "lin",
+							"text": "\"저 능구렁이 같은 사람을 털끝 하나 안 건드리고 털어먹다니, 정말 대단한 수완이에요.\""
+						}
+					],
+					"text": "브로커의 위조 수법을 접수처에 찌르겠다고 협박해 3번 대기표를 통째로 뜯어낸다",
+					"path": "stat"
+				},
+				{
+					"reward": [
+						"stun"
+					],
+					"text": "브로커의 서류철에 '대기홀 전원 합격'이라 낙서해 접수함에 쑤셔 넣는다",
+					"path": "fun",
+					"effects": {
+						"gold": -60,
+						"echo": 5,
+						"community": 25
+					},
+					"mbti": "ES",
+					"result": [
+						{
+							"speaker": "narrator",
+							"text": "당신이 백지 서류에 '대기홀 전원 수석 합격'을 휘갈겨 통에 넣자,"
+						},
+						{
+							"speaker": "narrator",
+							"text": "전광판 기계가 굉음을 내며 번호표 백 장을 뿜어냈다."
+						},
+						{
+							"text": "\"크악! 기계가 폭주하잖아! 내 번호표가 종이 눈꽃더미에 파묻혔어!\"",
+							"speaker": "shrewd_broker"
+						},
+						{
+							"speaker": "lin",
+							"text": "\"와아, 온 대기홀에 번호표가 흩뿌려지고 있어요! 사람들이 신나서 줍느라 난리예요!\""
+						}
+					]
+				}
+			],
+			"rule_link": "브로커가 위조 서류를 끼워 넣어 획득한 앞 순번으로 대기표 장사를 벌이려 한다.",
+			"no": 3,
+			"key": "greedy_broker",
+			"title": "암표상의 은밀한 제안",
+			"slot": "B",
+			"kind": "rep",
+			"rep_dir": "community-"
+		},
+		{
+			"wants": "뒷번호 대기자들의 서류를 집단 경력으로 엮어 전원 순번 상승을 얻어내는 것",
+			"choices": [
+				{
+					"effects": {
+						"community": 20,
+						"reason": 10,
+						"echo": 10
+					},
+					"text": "소외된 지원자 스무 명의 서류를 모아 '공동 연구팀'으로 묶어 접수함에 단체로 밀어 넣는다",
+					"reward": [
+						"defense_up"
+					],
+					"path": "easy",
+					"mbti": "FJ",
+					"result": [
+						{
+							"text": "당신이 모은 서류 묶음이 한꺼번에 도장을 받아내며 앞마당 대기자들의 순번이 무더기로 당겨졌다.",
+							"speaker": "narrator"
+						},
+						{
+							"speaker": "group_rep",
+							"text": "\"해냈어요! 역시 약자들을 위해 제일 먼저 깃발을 들던 분답습니다! 우리 모두 살았습니다!\""
+						},
+						{
+							"text": "\"모두의 순번이 올랐어요! 다만 접수함이 서류 폭탄을 맞아 터져 나가기 직전이에요.\"",
+							"speaker": "lin"
+						}
+					],
+					"flag": {
+						"boss_text": "대기자 전원의 과장 서류를 밀어붙인 탓에, 검증관의 서류 심사 대기열이 엉켜 이동이 둔화된다.",
+						"key": "collective_doc_paralysis",
+						"label": "연대 서류 폭주"
+					}
+				},
+				{
+					"reward": [
+						"attack_up"
+					],
+					"flag": {
+						"boss_text": "단독 행동을 택해 아낀 기운으로, 면접장의 첫 번째 돌발 질문을 기민하게 피한다.",
+						"label": "홀가분한 독자 행동",
+						"key": "solo_stride_advantage"
+					},
+					"mbti": "TP",
+					"path": "hard",
+					"effects": {
+						"echo": -10,
+						"community": -20
+					},
+					"result": [
+						{
+							"speaker": "narrator",
+							"text": "당신이 정중히 선을 긋자, 대표는 입술을 깨물며 들고 온 팻말을 바닥으로 내렸다."
+						},
+						{
+							"speaker": "group_rep",
+							"text": "\"모두를 위해 앞장서던 사람이... 이제 와서 우리를 버리고 혼자만 가겠다는 건가요?\""
+						},
+						{
+							"text": "\"사람들의 눈빛이 원망으로 바뀌고 있어요... 하지만 저 많은 서류를 다 책임질 순 없어요.\"",
+							"speaker": "lin"
+						}
+					],
+					"text": "모두를 책임질 수는 없다며 집단 서류 작성을 거절하고 린의 서류만 챙긴다"
+				},
+				{
+					"flag": {
+						"key": "public_trust_vanguard",
+						"boss_text": "대기실 군중의 열렬한 신뢰와 엄호를 받아, 면접관이 던지는 기습 제재를 무력화한다.",
+						"label": "군중의 절대 신뢰"
+					},
+					"result": [
+						{
+							"text": "당신이 단상에 올라 질서 있는 접수를 호소하자, 수십 명의 지원자가 환호하며 줄을 다시 맞췄다.",
+							"speaker": "narrator"
+						},
+						{
+							"speaker": "group_rep",
+							"text": "\"당신의 한마디라면 믿겠습니다! 꼼수 없이, 당신의 지휘 아래 차례를 지켜 들어가겠습니다!\""
+						},
+						{
+							"speaker": "lin",
+							"text": "\"밀치고 싸우던 사람들이 거짓말처럼 줄을 서요... 당신의 목소리엔 사람을 움직이는 힘이 있어요.\""
+						}
+					],
+					"mbti": "EN",
+					"path": "stat",
+					"text": "대기홀 중앙 의자에 올라서서 전원의 차례를 공평하게 재조정하는 연설을 펼친다",
+					"effects": {
+						"echo": 15,
+						"community": 30
+					},
+					"reward": [
+						"shield"
+					]
+				},
+				{
+					"effects": {
+						"gold": -90,
+						"echo": 5,
+						"community": 10
+					},
+					"mbti": "IS",
+					"text": "뒤처진 대기자 전원에게 빠른 접수를 돕는 특급 속성 잉크 열 통을 사비로 사서 돌린다",
+					"result": [
+						{
+							"text": "당신이 사비로 특급 접수용 속성 잉크를 대량 구매해 나누어주자, 지원자들이 환호성을 질렀다.",
+							"speaker": "narrator"
+						},
+						{
+							"text": "\"이 비싼 속성 잉크를 우리 모두에게? 정말 대단한 헌신입니다! 고맙습니다!\"",
+							"speaker": "group_rep"
+						},
+						{
+							"text": "\"돈을 꽤 많이 쓰셨지만, 저 사람들 얼굴에 다시 희망이 도는 걸 보니 뿌듯하네요.\"",
+							"speaker": "lin"
+						}
+					],
+					"path": "gold"
+				}
+			],
+			"rule_link": "수십 명의 이력서를 하나로 묶어 단체 실적으로 과장해 집단으로 순번 도약을 꾀한다.",
+			"key": "collective_petition",
+			"person": {
+				"name": "지원자 모임 대표",
+				"id": "group_rep",
+				"role": "탈락 위기 대기자 대표"
+			},
+			"no": 4,
+			"background_tags": [
+				"central_hall",
+				"afternoon",
+				"glaring_light",
+				"packed_hall",
+				"solidarity"
+			],
+			"title": "뒷줄 모임의 연대 서명",
+			"dialogue": [
+				{
+					"speaker": "narrator",
+					"text": "종이 팻말을 든 청년이 뒷줄 대기자 여럿을 이끌고 린과 당신의 앞을 찾아왔다."
+				},
+				{
+					"text": "\"당신이 아까 방송실 문을 두드리며 힘없는 탈락자들을 대변해 소리쳐 준 그분이죠?\"",
+					"speaker": "group_rep"
+				},
+				{
+					"speaker": "group_rep",
+					"text": "\"우리 같은 비주류 지원자들의 서류를 하나로 묶어 '공동"
+				},
+				{
+					"speaker": "group_rep",
+					"text": "프로젝트팀'으로 올리면 다 같이 순번을 앞당길 수 있습니다!\""
+				},
+				{
+					"speaker": "lin",
+					"text": "\"사람들이 당신만 바라보고 있어요... 정말 저 많은 사람의 서류를 한꺼번에 올릴 수 있을까요?\""
+				}
+			],
+			"slot": "B",
+			"kind": "rep",
+			"rep_dir": "community+"
+		},
+		{
+			"key": "rigid_procedure",
+			"background_tags": [
+				"central_hall",
+				"afternoon",
+				"stark_light",
+				"rigid_line",
+				"formal"
+			],
+			"dialogue": [
+				{
+					"text": "단정한 정복을 입고 결재 인주를 든 직원이 각 잡힌 걸음걸이로 다가왔다.",
+					"speaker": "narrator"
+				},
+				{
+					"speaker": "procedure_clerk",
+					"text": "\"당신이 아까 규정집 서식 오류를 지적하며 정식 절차대로 접수대를 정돈시킨 그 원칙주의자군요.\""
+				},
+				{
+					"text": "\"이 지원자의 서류에 양식 번호만 규정대로 덧붙여 주면,",
+					"speaker": "procedure_clerk"
+				},
+				{
+					"text": "절차 위반 없이 당장 순번을 5번으로 승격시킬 수 있습니다.\"",
+					"speaker": "procedure_clerk"
+				},
+				{
+					"text": "\"서류 빈틈을 규격대로 메워달라는 건가요? 겉보기엔 그럴듯한데, 이것도 일종의 조작 아닐까요?\"",
+					"speaker": "lin"
+				}
+			],
+			"title": "규정 감시원의 정식 서식",
+			"no": 5,
+			"choices": [
+				{
+					"path": "easy",
+					"text": "규정 서식에 맞추어 결격 사유 공란에 적격 인증 번호를 채워 넣고 공식 접수한다",
+					"result": [
+						{
+							"text": "당신이 규정집 12조를 인용해 빈칸을 승인 번호로 메우자, 엄격한 접수증이 덜컥 발행되었다.",
+							"speaker": "narrator"
+						},
+						{
+							"speaker": "procedure_clerk",
+							"text": "\"흠, 서류 양식과 직인 규정에는 한 치의 어긋남도 없군요. 7번 번호표를 즉시 발급합니다.\""
+						},
+						{
+							"speaker": "lin",
+							"text": "\"도장이 번지지도 않게 찍혔어요. 절차대로 하니 트집 잡을 구석이 하나도 없네요.\""
+						}
+					],
+					"reward": [
+						"intelligence_up"
+					],
+					"flag": {
+						"key": "overcertified_dossier_delay",
+						"boss_text": "지나치게 결재 도장을 빽빽이 채운 탓에, 면접실 입구의 적격 심사관이 돋보기를 들고 검사를 시작한다.",
+						"label": "과다 공증 서류의 역풍"
+					},
+					"mbti": "ST",
+					"effects": {
+						"echo": 5,
+						"fighting": -10,
+						"reason": -20
+					}
+				},
+				{
+					"effects": {
+						"reason": 20,
+						"echo": -5
+					},
+					"text": "원칙에 없는 편법 공증 서류의 효력을 인정할 수 없다며 서류철을 덮어버린다",
+					"path": "hard",
+					"result": [
+						{
+							"speaker": "narrator",
+							"text": "당신이 서류 양식의 허구성을 지적하며 접수증을 반려하자, 대기자들의 줄이 웅성거리기 시작했다."
+						},
+						{
+							"speaker": "procedure_clerk",
+							"text": "\"원칙주의자라더니... 융통성이라곤 전혀 없군. 당신 같은 자는 절차의 틈을 모르는 법이오.\""
+						},
+						{
+							"speaker": "lin",
+							"text": "\"정형화된 서류를 거부하다니 대단해요. 하지만 저 깐깐한 직원의 눈 밖에 난 건 아닐까요?\""
+						}
+					],
+					"mbti": "NP",
+					"reward": [
+						"attack_up"
+					],
+					"flag": {
+						"boss_text": "절차를 꼬집어 비틀었던 경험을 살려, 면접관이 내세우는 억지 규정을 역으로 반박한다.",
+						"key": "procedural_loophole_strike",
+						"label": "규정 역이용 반박"
+					}
+				},
+				{
+					"path": "stat",
+					"reward": [
+						"shield"
+					],
+					"effects": {
+						"echo": 10,
+						"reason": -30
+					},
+					"text": "면접 규정집 4장 8조를 소리 높여 읊으며 부정 접수대를 즉각 감사하겠다고 선언한다",
+					"flag": {
+						"key": "certified_auditor_authority",
+						"boss_text": "철저한 규정 준수자로 인정받아, 면접실 안의 결재 도장 권한을 넘겨받고 프리패스를 얻는다.",
+						"label": "공인 감찰관의 특권"
+					},
+					"mbti": "EJ",
+					"result": [
+						{
+							"speaker": "narrator",
+							"text": "당신이 내민 결재 지침서를 본 직원은 안경을 치켜올리며 벌떡 일어나 경례를 붙였다."
+						},
+						{
+							"text": "\"아, 본부 감사 기준을 완벽히 꿰뚫고 계신 그 감사관님이시군요! 이 자리의 전권을 맡기겠습니다!\"",
+							"speaker": "procedure_clerk"
+						},
+						{
+							"text": "\"저 깐깐한 직원이 허리를 90도로 숙였어요! 규정을 완벽하게 외우고 계셨던 건가요?\"",
+							"speaker": "lin"
+						}
+					]
+				}
+			],
+			"wants": "양식 규정에 맞춘 결재 기호를 기입해 순번을 정식으로 앞당기는 것",
+			"rule_link": "규정 서식의 공란을 형식적 인증 번호로 메워 합법을 가장한 순번 급상승을 노린다.",
+			"person": {
+				"name": "규정 준수 직원",
+				"id": "procedure_clerk",
+				"role": "접수처 규정 감시원"
+			},
+			"slot": "B",
+			"kind": "rep",
+			"rep_dir": "reason-"
+		},
+		{
+			"rule_link": "이력서 서식을 파괴하는 황당무계한 낙서와 허풍으로 시스템의 허점을 찔러 순번을 도약시킨다.",
+			"title": "형광 펜을 든 방랑자",
+			"background_tags": [
+				"central_hall",
+				"afternoon",
+				"flickering_light",
+				"rowdy_lobby",
+				"chaotic"
+			],
+			"choices": [
+				{
+					"reward": [
+						"move_range_up"
+					],
+					"effects": {
+						"echo": 5,
+						"community": -10,
+						"reason": 20
+					},
+					"path": "easy",
+					"text": "이력서 경력란을 찢어내고 형광 잉크로 '우주 최강의 모험가'라 큼직하게 낙서해 던진다",
+					"flag": {
+						"boss_text": "마구잡이로 휘갈긴 낙서 서류가 바람에 날려, 면접관의 시야를 가리는 대신 발목을 묶는다.",
+						"key": "graffiti_resume_drift",
+						"label": "낙서 이력서의 흩날림"
+					},
+					"result": [
+						{
+							"speaker": "narrator",
+							"text": "당신이 이력서 한복판에 별 모양과 화려한 날조 수식어를 휘갈기자 접수기 화면에 별점 5개가 찍혔다."
+						},
+						{
+							"text": "\"캬하! 바로 이거지! 격식 따위 개나 주라 그래! 대기 순번이 맨 윗줄로 튀어 올랐잖아!\"",
+							"speaker": "free_spirit"
+						},
+						{
+							"text": "\"이력서에 형광 펜으로 그림을 그렸는데 접수가 되다니... 이 대기실 시스템은 제정신이 아니에요.\"",
+							"speaker": "lin"
+						}
+					],
+					"mbti": "FP"
+				},
+				{
+					"text": "장난치지 말라며 잉크병을 빼앗고 규격 이력서 서식으로 정갈하게 되돌린다",
+					"result": [
+						{
+							"speaker": "narrator",
+							"text": "당신이 잉크병을 뺏어 뚜껑을 닫고 정중한 양식으로 되돌리자, 남자는 따분하다는 듯 하품을 했다."
+						},
+						{
+							"speaker": "free_spirit",
+							"text": "\"틀을 깨부수던 그 멋진 반항아는 어디 가고 꼰대 같은 짓을 한담? 재미 더럽게 없네.\""
+						},
+						{
+							"text": "\"조금 지루해졌을진 몰라도, 저런 장난질에 장단을 맞춰줄 필요는 없죠.\"",
+							"speaker": "lin"
+						}
+					],
+					"path": "hard",
+					"effects": {
+						"echo": -5,
+						"reason": -20
+					},
+					"mbti": "TJ",
+					"flag": {
+						"boss_text": "규율을 고집하며 억눌렀던 기억이 떠올라, 혼란스러운 면접장의 환각을 또렷하게 걷어낸다.",
+						"label": "엄격한 정신 집중",
+						"key": "iron_discipline_focus"
+					},
+					"reward": [
+						"defense_up"
+					]
+				},
+				{
+					"result": [
+						{
+							"text": "당신이 이력서를 접어 날린 종이비행기가 접수처 메인 전원 스위치에 꽂히며 전광판 순번이 춤을 추었다.",
+							"speaker": "narrator"
+						},
+						{
+							"speaker": "free_spirit",
+							"text": "\"푸하하하! 전광판 순번이 전부 뒤죽박죽으로 섞였어! 당신 진짜 미친 사람 맞구나! 최고야!\\\""
+						},
+						{
+							"speaker": "lin",
+							"text": "\"종이비행기 하나로 접수기를 해킹한 셈인가요? 장내가 완전히 뒤집어졌어요!\""
+						}
+					],
+					"flag": {
+						"label": "광대극의 혼란 조성",
+						"boss_text": "대기실을 뒤흔든 파격적인 돌출 행동으로 면접관의 시선을 분산시켜 기습 공격의 틈을 연다.",
+						"key": "unhinged_showman_feint"
+					},
+					"effects": {
+						"echo": 10,
+						"reason": 30
+					},
+					"mbti": "EN",
+					"path": "stat",
+					"text": "이력서를 접어 만든 종이비행기를 접수기 핵심 슬롯으로 정확히 날려 꽂는다",
+					"reward": [
+						"cooldown_reset"
+					]
+				},
+				{
+					"path": "fun",
+					"result": [
+						{
+							"text": "당신이 이력서를 높이 들고 뮤지컬 배우처럼 노래를 부르자, 대기홀 전체가 떼창과 박수로 뒤덮였다.",
+							"speaker": "narrator"
+						},
+						{
+							"speaker": "free_spirit",
+							"text": "\"브라보! 인생은 무대지! 서류에 적힌 활자 따위보다 이 노래가 백만 배는 낫다!\""
+						},
+						{
+							"speaker": "lin",
+							"text": "\"사람들이 박자를 맞추며 춤추고 있어요... 창피하긴 한데, 이상하게 기분은 후련하네요!\""
+						}
+					],
+					"text": "이력서를 마이크 삼아 쥐고 대기석 복도 한가운데서 합격 기원 노래를 열창한다",
+					"reward": [
+						"stun"
+					],
+					"mbti": "IS",
+					"effects": {
+						"community": 20,
+						"reason": 25,
+						"echo": -10
+					}
+				}
+			],
+			"dialogue": [
+				{
+					"text": "넥타이를 머리에 묶고 형광 펜을 빙글빙글 돌리는 괴짜 지원자가 히죽거리며 뛰어왔다.",
+					"speaker": "narrator"
+				},
+				{
+					"text": "\"크하, 당신이 아까 면접 대기선 테이프를 찢어 발로 차버리며 규정을 비웃던 그 양반 맞지?\"",
+					"speaker": "free_spirit"
+				},
+				{
+					"speaker": "free_spirit",
+					"text": "\"딱딱한 경력 칸에 낙서나 한판 휘갈겨 줘!"
+				},
+				{
+					"speaker": "free_spirit",
+					"text": "서류 양식이 미쳐 날뛰어야 순번도 단숨에 1번으로 튈 거 아냐!\""
+				},
+				{
+					"text": "\"이력서에 형광 펜으로 해골 낙서를 하고 있어요... 저 사람 말을 진지하게 들어도 될까요?\"",
+					"speaker": "lin"
+				}
+			],
+			"person": {
+				"role": "규범 파괴 지원자",
+				"name": "괴짜 방랑자",
+				"id": "free_spirit"
+			},
+			"key": "anarchic_graffiti",
+			"no": 6,
+			"wants": "이력서 서식을 파괴하는 기상천외한 낙서로 초특급 번호표를 따내는 것",
+			"slot": "B",
+			"kind": "rep",
+			"rep_dir": "reason+"
+		}
+	],
+	"errors": []
+}

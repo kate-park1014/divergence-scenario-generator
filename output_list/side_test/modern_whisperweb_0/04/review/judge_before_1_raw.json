@@ -1,0 +1,332 @@
+{
+	"cards": [
+		{
+			"card_id": "card_04_everyone_queue",
+			"asks": "하루가 주인공에게 줄 선 열아홉 명의 순서를 정해 달라고 한다.",
+			"choices_read": [
+				{
+					"path": "easy",
+					"target": "줄 선 사람들",
+					"does": "순서를 정하고 먼저 온 사람부터 들여보낸다",
+					"reaction_assumes": "주인공이 줄 앞에서 순번을 정리해 주기를 바란다"
+				},
+				{
+					"path": "hard",
+					"target": "줄 선 사람들",
+					"does": "줄을 전부 해산시켜 아무도 정보를 못 가져가게 한다",
+					"reaction_assumes": "주인공이 줄을 없애 버렸다"
+				},
+				{
+					"path": "stat",
+					"target": "하루",
+					"does": "사람들을 믿고 줄을 맡기라고 한다",
+					"reaction_assumes": "주인공이 하루에게 줄을 맡겼다"
+				},
+				{
+					"path": "gold",
+					"target": "하루",
+					"does": "100골드를 주고 줄 선 사람들의 기록을 대신 사 오게 한다",
+					"reaction_assumes": "주인공이 하루에게 돈을 주고 기록을 사 오게 했다"
+				}
+			],
+			"checks": [
+				{
+					"item": "S1",
+					"pass": true
+				},
+				{
+					"item": "S2",
+					"pass": true
+				},
+				{
+					"item": "S3",
+					"pass": true
+				},
+				{
+					"item": "S4",
+					"pass": false,
+					"quote": "이제 좀 사�� 같네요. 고맙습니다, 진짜로.",
+					"problem": "결과 첫 줄 대사에 글자가 깨져 '사��'로 출력되어 읽을 수 없다."
+				},
+				{
+					"item": "S5",
+					"pass": true
+				},
+				{
+					"item": "S6",
+					"pass": true
+				}
+			]
+		},
+		{
+			"card_id": "card_04_fight_grip_hook",
+			"asks": "고로가 주인공에게 자기 딸의 기록을 먼저 지워 주면 출처 장치 위치를 알려 주겠다고 한다.",
+			"choices_read": [
+				{
+					"path": "easy",
+					"target": "고로",
+					"does": "어깨를 짚어 눌러 위치를 대라고 한다",
+					"reaction_assumes": "주인공이 고로를 위협해 위치를 받아냈다"
+				},
+				{
+					"path": "hard",
+					"target": "고로의 딸 기록",
+					"does": "딸 기록을 먼저 지워 주고 위치를 받는다",
+					"reaction_assumes": "주인공이 딸 기록을 지워 주었다"
+				},
+				{
+					"path": "stat",
+					"target": "고로",
+					"does": "처리장 사람들이 내 말을 들을 거라며 앞장서라고 한다",
+					"reaction_assumes": "주인공이 고로에게 앞장서라고 했다"
+				},
+				{
+					"path": "gold",
+					"target": "고로",
+					"does": "120골드를 주고 딸 기록을 지워줄 업자를 소개받는다",
+					"reaction_assumes": "주인공이 고로에게 돈을 주고 업자를 소개받았다"
+				}
+			],
+			"checks": [
+				{
+					"item": "S1",
+					"pass": true
+				},
+				{
+					"item": "S2",
+					"pass": true
+				},
+				{
+					"item": "S3",
+					"pass": true
+				},
+				{
+					"item": "S4",
+					"pass": false,
+					"quote": "이 빚은 안 잊어요. 관 뒤���, 손 뻗으면 닿는 자리예요.",
+					"problem": "결과 대사에 글자가 깨져 '관 뒤���'로 출력되어 읽을 수 없다."
+				},
+				{
+					"item": "S5",
+					"pass": true
+				},
+				{
+					"item": "S6",
+					"pass": true
+				}
+			]
+		},
+		{
+			"card_id": "card_04_hand_under_pipe",
+			"asks": "셀라가 관 밑에 깔린 동료를 빼내 달라며, 그 대신 점검 도면을 주겠다고 한다.",
+			"choices_read": [
+				{
+					"path": "easy",
+					"target": "관 밑에 깔린 동료",
+					"does": "관을 어깨로 밀어 올려 동료를 빼낸다",
+					"reaction_assumes": "주인공이 관을 들어 동료를 빼냈다"
+				},
+				{
+					"path": "hard",
+					"target": "셀라",
+					"does": "동료를 두고 도면부터 넘기라며 재촉한다",
+					"reaction_assumes": "주인공이 도면을 먼저 받았다"
+				},
+				{
+					"path": "stat",
+					"target": "셀라",
+					"does": "작업자들을 불러 관을 함께 들라 한다",
+					"reaction_assumes": "주인공이 작업자들을 불러 모았다"
+				}
+			],
+			"checks": [
+				{
+					"item": "S1",
+					"pass": true
+				},
+				{
+					"item": "S2",
+					"pass": true
+				},
+				{
+					"item": "S3",
+					"pass": true
+				},
+				{
+					"item": "S4",
+					"pass": true
+				},
+				{
+					"item": "S5",
+					"pass": true
+				},
+				{
+					"item": "S6",
+					"pass": true
+				}
+			]
+		},
+		{
+			"card_id": "card_04_rule_break_bell",
+			"asks": "피아가 규칙을 어기고 폐쇄 구역으로 먼저 들어가겠다며 함께 가 달라고 한다.",
+			"choices_read": [
+				{
+					"path": "easy",
+					"target": "피아",
+					"does": "함께 폐쇄 구역으로 먼저 들어간다",
+					"reaction_assumes": "주인공이 피아와 함께 들어갔다"
+				},
+				{
+					"path": "hard",
+					"target": "피아",
+					"does": "폐쇄 구역 밖에 세우고 혼자 들어간다",
+					"reaction_assumes": "주인공이 피아를 남겨 두고 혼자 들어갔다"
+				},
+				{
+					"path": "stat",
+					"target": "피아",
+					"does": "규칙은 내가 책임질 테니 문을 열라 한다",
+					"reaction_assumes": "주인공이 책임을 지겠다고 했다"
+				},
+				{
+					"path": "fun",
+					"target": "피아의 끊긴 종",
+					"does": "끊긴 종을 벨트에 다시 매달아 준다",
+					"reaction_assumes": "주인공이 종을 다시 매달았다"
+				}
+			],
+			"checks": [
+				{
+					"item": "S1",
+					"pass": true
+				},
+				{
+					"item": "S2",
+					"pass": true
+				},
+				{
+					"item": "S3",
+					"pass": true
+				},
+				{
+					"item": "S4",
+					"pass": true
+				},
+				{
+					"item": "S5",
+					"pass": true
+				},
+				{
+					"item": "S6",
+					"pass": true
+				}
+			]
+		},
+		{
+			"card_id": "card_04_scrap_deal",
+			"asks": "미라가 자기 몫을 먼저 챙겨 달라고 요구한다.",
+			"choices_read": [
+				{
+					"path": "easy",
+					"target": "미라의 줄",
+					"does": "줄에 끼어 남의 정보를 골라 챙긴다",
+					"reaction_assumes": "주인공이 미라와 함께 몫을 챙겼다"
+				},
+				{
+					"path": "hard",
+					"target": "미라의 경매",
+					"does": "경매를 취소시키고 줄 선 사람들을 돌려보낸다",
+					"reaction_assumes": "주인공이 경매를 취소시켰다"
+				},
+				{
+					"path": "stat",
+					"target": "미라",
+					"does": "내 몫만 챙기고 나머지는 손대지 않겠다고 값을 부른다",
+					"reaction_assumes": "주인공이 자기 몫만 챙기는 거래를 했다"
+				},
+				{
+					"path": "fun",
+					"target": "미라의 종이 테이프",
+					"does": "테이프를 풀어 경매 번호를 다시 붙인다",
+					"reaction_assumes": "주인공이 경매 번호를 뒤바꿨다"
+				}
+			],
+			"checks": [
+				{
+					"item": "S1",
+					"pass": true
+				},
+				{
+					"item": "S2",
+					"pass": true
+				},
+				{
+					"item": "S3",
+					"pass": true
+				},
+				{
+					"item": "S4",
+					"pass": true
+				},
+				{
+					"item": "S5",
+					"pass": true
+				},
+				{
+					"item": "S6",
+					"pass": true
+				}
+			]
+		},
+		{
+			"card_id": "card_04_unfiled_form",
+			"asks": "오덴이 결재 서류가 나올 때까지 장치 해체를 하지 말고 기다리라고 막아선다.",
+			"choices_read": [
+				{
+					"path": "easy",
+					"target": "오덴",
+					"does": "결재 서류를 빨리 올려 달라고 조른다",
+					"reaction_assumes": "주인공이 서류를 급히 올리게 했다"
+				},
+				{
+					"path": "hard",
+					"target": "오덴",
+					"does": "서류를 접어 주머니에 넣고 지나쳐 간다",
+					"reaction_assumes": "주인공이 절차를 건너뛰고 지나갔다"
+				},
+				{
+					"path": "stat",
+					"target": "오덴",
+					"does": "지금까지 지킨 절차 기록을 보여 주며 결재를 넘긴다",
+					"reaction_assumes": "주인공이 절차 기록을 보여 주어 결재를 받았다"
+				}
+			],
+			"checks": [
+				{
+					"item": "S1",
+					"pass": true
+				},
+				{
+					"item": "S2",
+					"pass": true
+				},
+				{
+					"item": "S3",
+					"pass": true
+				},
+				{
+					"item": "S4",
+					"pass": true
+				},
+				{
+					"item": "S5",
+					"pass": true
+				},
+				{
+					"item": "S6",
+					"pass": true
+				}
+			]
+		}
+	]
+}

@@ -1,0 +1,142 @@
+{
+	"id": "card_05_helper_technician",
+	"kind": "callback",
+	"title": {
+		"korean": "온전한 통제판의 도움"
+	},
+	"intensity": "high",
+	"after_story": 5,
+	"before_story": 7,
+	"callback": {
+		"seed": "smashed_panel_hard",
+		"min_rooms_after": 2
+	},
+	"background_tags": [
+		"room",
+		"panel",
+		"arm",
+		"screen",
+		"focus"
+	],
+	"dialogue": [
+		{
+			"speaker": "narrator",
+			"content": {
+				"korean": "제어실 한구석, 멀쩡한 통제판 위로 데이터 스크린 조각들이 어지럽게 흩어져 있다."
+			}
+		},
+		{
+			"speaker": "echo",
+			"content": {
+				"korean": "저 조각들만 다 맞추면 내 1급 정보들도 돌아올 텐데, 손으로 하긴 너무 벅차 보여!"
+			}
+		},
+		{
+			"speaker": "tech_worker",
+			"content": {
+				"korean": "당신이 단말기를 분해한 덕에 내 권한이 일부 돌아왔어. 이 조각들 맞추는 거, 내가 기계로 도와줄게."
+			}
+		},
+		{
+			"speaker": "narrator",
+			"content": {
+				"korean": "기술자가 통제판의 정밀 핀셋 팔을 조종해 데이터 조각들을 집어 들었다."
+			}
+		}
+	],
+	"choices": [
+		{
+			"text": {
+				"korean": "기술자의 도움을 받아 조각을 맞춘다."
+			},
+			"path": "easy",
+			"mbti": "FJ",
+			"flag": "machine_help",
+			"effects": {
+				"gold": 50,
+				"community": 20
+			},
+			"reward": [
+				"heal"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "기계 팔이 섬세하게 조각들을 끼워 맞추자 데이터 배열이 안정적으로 연결되었다."
+					}
+				},
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "당신은 수고를 덜었다."
+					}
+				}
+			]
+		},
+		{
+			"text": {
+				"korean": "기계 대신 직접 손으로 조각의 단면을 확인하며 맞춘다."
+			},
+			"path": "hard",
+			"mbti": "TP",
+			"flag": "hand_matched",
+			"effects": {
+				"reason": 20,
+				"echo": -5
+			},
+			"reward": [
+				"intelligence_up"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "당신은 기계 팔을 물리고 단면의 코드를 일일이 확인하며 조각을 붙였다."
+					}
+				},
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "시간이 지체되어 피로가 몰려왔다."
+					}
+				}
+			]
+		}
+	],
+	"_side": {
+		"slot": "C",
+		"person": {
+			"id": "tech_worker",
+			"role": "제어실 기술자",
+			"name": "기술자"
+		},
+		"wants": "온전한 통제판 덕에 권한을 일부 되찾은 기술자가, 데이터 조각을 맞추는 작업을 돕고 싶어 한다.",
+		"rule_link": "통제판을 지켜낸 덕분에, 조각을 맞춰 데이터를 복원하려는 정답 행동을 수월하게 진행할 수 있다.",
+		"events": {},
+		"flags": {
+			"machine_help": {
+				"kind": "good",
+				"boss_penalty": 1,
+				"label": {
+					"korean": "기계 팔의 정밀도"
+				},
+				"boss_choice": {
+					"korean": "통제판에서 뻗어 나온 기계 팔이 엉킨 회로를 붙잡아 당신의 길을 열어준다."
+				}
+			},
+			"hand_matched": {
+				"kind": "good",
+				"boss_penalty": 2,
+				"label": {
+					"korean": "수동 복원"
+				},
+				"boss_choice": {
+					"korean": "당신이 직접 확인했던 코드의 결함 부위를 찔러 시스템의 빈틈을 파고든다."
+				}
+			}
+		}
+	}
+}

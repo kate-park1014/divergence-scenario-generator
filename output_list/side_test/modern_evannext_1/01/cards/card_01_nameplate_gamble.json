@@ -1,0 +1,168 @@
+{
+	"id": "card_01_nameplate_gamble",
+	"kind": "normal",
+	"title": {
+		"korean": "덜컹거리는 명패 출력기"
+	},
+	"intensity": "calm",
+	"after_story": 3,
+	"before_story": 5,
+	"background_tags": [
+		"waiting_hall",
+		"nameplate_machine",
+		"clattering",
+		"stamped_paper",
+		"gamble"
+	],
+	"dialogue": [
+		{
+			"speaker": "narrator",
+			"content": {
+				"korean": "요란한 쇠소리를 내며 명패 출력기가 불꽃을 튀긴다."
+			}
+		},
+		{
+			"speaker": "machine_tech",
+			"content": {
+				"korean": "과장 접수 도장을 찍으셨군요? 기계에 서류를 한 번 더 긁으면 대박 명패가 나옵니다!"
+			}
+		},
+		{
+			"speaker": "lin",
+			"content": {
+				"korean": "임시 합격 도장이 번질까 봐 겁나요. 기계에 무리한 조작을 해도 될까요?"
+			}
+		},
+		{
+			"speaker": "machine_tech",
+			"content": {
+				"korean": "순번을 굳히려면 특수 금속 명패를 뽑아야죠. 한번 돌려보시겠습니까?"
+			}
+		}
+	],
+	"choices": [
+		{
+			"text": {
+				"korean": "명패 출력기의 인식기에 과장된 경력 칩을 밀어 넣는다."
+			},
+			"path": "easy",
+			"mbti": "IP",
+			"effects": {
+				"reason": -15,
+				"community": -15,
+				"gold": 90,
+				"echo": 10
+			},
+			"reward": [
+				"attack_up"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "기계 틈새에 서류 조각을 덧대자 골드 명패와 접수 확인증이 굴러떨어졌다."
+					}
+				},
+				{
+					"speaker": "lin",
+					"content": {
+						"korean": "도장을 받으니 기계도 순순히 통과시켜 주네요. 정말 신기해요."
+					}
+				}
+			]
+		},
+		{
+			"text": {
+				"korean": "조작 모듈을 끄고 표준 규격대로 명패를 인쇄한다."
+			},
+			"path": "hard",
+			"mbti": "FJ",
+			"effects": {
+				"echo": -10,
+				"reason": 15,
+				"community": 15
+			},
+			"reward": [
+				"defense_up"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "기계 전원을 내리고 순수 인적 사항만 기록된 일반 플라스틱 명패를 집었다."
+					}
+				},
+				{
+					"speaker": "lin",
+					"content": {
+						"korean": "반짝이는 명패는 아니지만, 본래 내역대로 처리되는 게 마음 편해요."
+					}
+				}
+			]
+		},
+		{
+			"text": {
+				"korean": "70골드를 걸고 명패 출력기의 보너스 추첨 레버를 돌린다."
+			},
+			"path": "gold",
+			"mbti": "SP",
+			"require": {
+				"stat": "gold",
+				"op": ">=",
+				"value": 70
+			},
+			"effects": {
+				"community": 25,
+				"reason": -20,
+				"echo": 5,
+				"gold": -70
+			},
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "70골드를 투입구에 넣고 슬롯 형태의 출력기 레버를 힘차게 당겼다."
+					}
+				},
+				{
+					"speaker": "lin",
+					"content": {
+						"korean": "톱니가 돌아가요! 같은 모양이 나오면 앞당겨진 순번을 굳힐 수 있어요!"
+					}
+				}
+			],
+			"event": "minigame_slot",
+			"event_intro": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "기술자가 레버를 당기자 세 개의 톱니바퀴가 맹렬히 회전하기 시작했다."
+					}
+				},
+				{
+					"speaker": "lin",
+					"content": {
+						"korean": "돈까지 걸고 이러다 고장이라도 나면 어쩌려고 그래요?"
+					}
+				}
+			]
+		}
+	],
+	"_side": {
+		"slot": "B",
+		"person": {
+			"name": "기계 관리원",
+			"id": "machine_tech",
+			"role": "명패 출력기 수리공"
+		},
+		"wants": "명패 기계의 조작 기능을 가동해 특수 명패 출력 실적을 내는 것",
+		"rule_link": "명패 출력기는 조작된 서류 기록을 바탕으로 특수 명패를 발급한다.",
+		"events": {
+			"gold": "명패 기계의 레버를 당겨 추가 순번 보너스 슬롯을 작동시킨다."
+		},
+		"flags": {}
+	}
+}

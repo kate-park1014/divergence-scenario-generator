@@ -1,0 +1,156 @@
+{
+	"id": "card_05_blocked_valve",
+	"kind": "normal",
+	"title": {
+		"korean": "막혀버린 냉각수 밸브"
+	},
+	"intensity": "calm",
+	"after_story": 1,
+	"before_story": 3,
+	"background_tags": [
+		"cooling_pipes",
+		"steaming_valve",
+		"pressure_gauge",
+		"control_room",
+		"nervous_engineer"
+	],
+	"dialogue": [
+		{
+			"speaker": "cooling_engineer",
+			"content": {
+				"korean": "냉각수 파이프 밸브가 막혀서 압력이 치솟고 있어요!"
+			}
+		},
+		{
+			"speaker": "echo",
+			"content": {
+				"korean": "맞아, 밸브를 부숴서 조각도 깨버려! 이대로면 내 계좌 정보가 오픈 소스로 풀린다고!"
+			}
+		},
+		{
+			"speaker": "cooling_engineer",
+			"content": {
+				"korean": "이대로 두면 터집니다! 차라리 밸브를 부숴서 강제로 압력을 빼야 해요!"
+			}
+		},
+		{
+			"speaker": "narrator",
+			"content": {
+				"korean": "기술자가 무거운 파이프 렌치로 밸브를 가격하려 했다."
+			}
+		}
+	],
+	"choices": [
+		{
+			"text": {
+				"korean": "밸브를 부수게 둔다."
+			},
+			"path": "easy",
+			"mbti": "ST",
+			"effects": {
+				"reason": -20,
+				"fighting": 20,
+				"echo": -10
+			},
+			"reward": [
+				"attack_up"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "당신이 고개를 끄덕이자 기술자가 밸브를 박살 냈다."
+					}
+				},
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "냉각수가 쏟아져 나오며 당장의 압력은 줄어들었지만 바닥이 물바다가 되었다."
+					}
+				}
+			]
+		},
+		{
+			"text": {
+				"korean": "부수지 말고 압력이 스스로 빠질 때까지 기다린다."
+			},
+			"path": "hard",
+			"mbti": "NF",
+			"effects": {
+				"community": 10,
+				"echo": 10,
+				"reason": 10
+			},
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "당신은 밸브가 부서지는 것을 막고, 서서히 압력이 정상화되는 것을 지켜보았다."
+					}
+				},
+				{
+					"speaker": "cooling_engineer",
+					"content": {
+						"korean": "식은땀이 다 났네요. 기다리길 잘했습니다."
+					}
+				}
+			],
+			"event": "campsite",
+			"event_intro": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "당신은 기술자를 달래고 파이프 뒤의 안전한 구석에 자리를 잡고 앉았다."
+					}
+				}
+			]
+		},
+		{
+			"text": {
+				"korean": "자동 압력 조절기를 사서 부착한다."
+			},
+			"path": "gold",
+			"mbti": "SJ",
+			"require": {
+				"stat": "gold",
+				"op": ">=",
+				"value": 120
+			},
+			"effects": {
+				"gold": -120,
+				"reason": 10
+			},
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "당신이 조절기를 사서 밸브에 달자, 압력이 안전하게 빠져나갔다."
+					}
+				},
+				{
+					"speaker": "cooling_engineer",
+					"content": {
+						"korean": "이런 장비가 있었다니, 진작 돈을 쓸 걸 그랬네요."
+					}
+				}
+			]
+		}
+	],
+	"_side": {
+		"slot": "A",
+		"person": {
+			"id": "cooling_engineer",
+			"role": "파이프 관리자",
+			"name": "냉각수 기술자"
+		},
+		"wants": "제어실 냉각수 파이프 밸브가 막혔으니 밸브를 부숴서 뚫어버리자고 한다.",
+		"rule_link": "파이프 밸브 파괴는 스크린 조각으로 이어지는 압력을 비정상적으로 높인다.",
+		"events": {
+			"hard": "밸브의 압력이 자연스럽게 빠지기를 기다리며 안전한 곳에서 휴식을 취한다."
+		},
+		"flags": {}
+	}
+}

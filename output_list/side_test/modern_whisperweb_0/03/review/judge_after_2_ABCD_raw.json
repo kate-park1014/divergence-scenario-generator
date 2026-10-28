@@ -1,0 +1,256 @@
+{
+	"cards": [
+		{
+			"checks": [
+				{
+					"item": "S1",
+					"pass": true
+				},
+				{
+					"item": "S2",
+					"pass": true
+				},
+				{
+					"pass": true,
+					"item": "S3"
+				},
+				{
+					"pass": true,
+					"item": "S4"
+				},
+				{
+					"item": "S5",
+					"pass": true
+				}
+			],
+			"asks": "통풍구 앞에서 5분만 같이 쉬다 가자고 제안한다.",
+			"card_id": "card_03_cool_breeze",
+			"choices_read": [
+				{
+					"target": "주인공 자신",
+					"does": "통풍구 앞에 앉아 시원한 바람을 맞으며 쉰다.",
+					"reaction_assumes": "체력이 회복되고 작업자가 간식을 나눠줌.",
+					"path": "easy"
+				},
+				{
+					"does": "바람의 냄새를 수상히 여겨 쉬지 않고 서둘러 이동한다.",
+					"reaction_assumes": "휴식을 포기하고 이동하여 머리가 맑아짐.",
+					"target": "주인공 자신",
+					"path": "hard"
+				},
+				{
+					"path": "gold",
+					"does": "돈을 넣고 방독 마스크를 뽑아 착용하고 쉰다.",
+					"reaction_assumes": "마스크를 쓰고 안전하게 휴식을 취함.",
+					"target": "자판기"
+				},
+				{
+					"target": "작업자",
+					"reaction_assumes": "작업자도 황급히 자리를 피함.",
+					"does": "바람의 성분을 조용히 분석하여 위험을 경고한다.",
+					"path": "lock"
+				}
+			]
+		},
+		{
+			"card_id": "card_03_melting_cable",
+			"choices_read": [
+				{
+					"reaction_assumes": "케이블이 일시적으로 열기를 가라앉히고 작업자가 동전을 건넴.",
+					"path": "easy",
+					"target": "케이블 작업자",
+					"does": "냉각팬을 빌려주어 케이블 겉면을 빠르게 식힌다."
+				},
+				{
+					"reaction_assumes": "작업자가 당황하며 불평하지만 화재 위험은 사라짐.",
+					"path": "hard",
+					"does": "케이블을 끊고 안전하게 절연 테이프로 감는다.",
+					"target": "케이블"
+				},
+				{
+					"does": "돈을 넣고 냉각 가스를 뽑아 뿌려 완전히 식힌다.",
+					"path": "gold",
+					"reaction_assumes": "냉각 가스가 케이블의 열기를 얼려버림.",
+					"target": "보급기"
+				},
+				{
+					"reaction_assumes": "열기는 잡혔지만 하얀 가루가 주변을 엉망으로 만들고 작업자가 수고비를 건넴.",
+					"path": "forced",
+					"target": "케이블",
+					"does": "냉각팬 대신 소화기를 집어들고 통째로 분사한다."
+				}
+			],
+			"checks": [
+				{
+					"pass": true,
+					"item": "S1"
+				},
+				{
+					"item": "S2",
+					"pass": true
+				},
+				{
+					"item": "S3",
+					"pass": true
+				},
+				{
+					"pass": true,
+					"item": "S4"
+				},
+				{
+					"pass": true,
+					"item": "S5"
+				}
+			],
+			"asks": "녹아내리는 케이블을 식히기 위해 휴대용 냉각팬을 빌려달라고 한다."
+		},
+		{
+			"choices_read": [
+				{
+					"target": "배관 수리공",
+					"does": "요구대로 예비 부품을 넘겨준다.",
+					"path": "easy",
+					"reaction_assumes": "수리공이 부품을 끼워 금이 간 곳을 막고 돈을 건네줌."
+				},
+				{
+					"reaction_assumes": "수리공이 투덜거리며 자신의 테이프로 구멍을 감음.",
+					"target": "배관 수리공",
+					"path": "hard",
+					"does": "나중을 위해 부품을 주지 않는다."
+				},
+				{
+					"reaction_assumes": "밀봉제가 파이프의 금을 메우고 수리공이 놀라워하며 감사함.",
+					"does": "돈을 넣고 고성능 밀봉제를 뽑아 파이프에 발라준다.",
+					"target": "자판기",
+					"path": "gold"
+				},
+				{
+					"does": "압력 계산을 통해 부품 없이 수리할 방법을 지시한다.",
+					"target": "배관 수리공",
+					"reaction_assumes": "지시에 따라 밸브 틈새를 조절하여 압력이 안정됨.",
+					"path": "lock"
+				}
+			],
+			"asks": "파이프에 금이 간 것을 막기 위해 예비 부품을 달라고 한다.",
+			"checks": [
+				{
+					"pass": true,
+					"item": "S1"
+				},
+				{
+					"item": "S2",
+					"pass": true
+				},
+				{
+					"item": "S3",
+					"pass": true
+				},
+				{
+					"pass": true,
+					"item": "S4"
+				},
+				{
+					"pass": true,
+					"item": "S5"
+				}
+			],
+			"card_id": "card_03_pipe_repair"
+		},
+		{
+			"card_id": "card_03_strange_puddle",
+			"checks": [
+				{
+					"item": "S1",
+					"pass": true
+				},
+				{
+					"item": "S2",
+					"pass": true
+				},
+				{
+					"pass": true,
+					"item": "S3"
+				},
+				{
+					"pass": true,
+					"item": "S4"
+				},
+				{
+					"problem": "선택지에서 예고한 내기(칩 건지기)는 텍스트로 끝나고, 미니게임은 뜬금없이 슬롯머신을 하는 것이 어색합니다.",
+					"pass": false,
+					"quote": "투덜거리던 기술자가 기분 전환을 하겠다며 휴대용 슬롯머신을 꺼낸다.",
+					"item": "S5"
+				}
+			],
+			"asks": "물웅덩이 안의 메모리 칩을 주울 수 있는지에 대해 돈을 걸고 내기를 하자고 제안한다.",
+			"choices_read": [
+				{
+					"reaction_assumes": "기술자가 손을 넣었다가 끈적이는 촉감에 놀라 빼고 칩을 건지지 못함.",
+					"path": "easy",
+					"does": "기술자가 칩을 건질 수 없다에 돈을 걸어 내기에 응한다.",
+					"target": "호기심 많은 기술자"
+				},
+				{
+					"target": "호기심 많은 기술자",
+					"path": "hard",
+					"does": "내기를 무시하고 물웅덩이에 접근하지 못하게 막는다.",
+					"reaction_assumes": "기술자가 입맛을 다시며 물러남."
+				},
+				{
+					"path": "gold",
+					"target": "보급기",
+					"does": "돈을 넣고 특수 집게를 뽑아 칩을 안전하게 건져낸다.",
+					"reaction_assumes": "특수 집게로 칩을 건져내고 데이터를 확인함."
+				}
+			]
+		},
+		{
+			"choices_read": [
+				{
+					"path": "easy",
+					"target": "비상 냉각수 밸브",
+					"reaction_assumes": "소량의 냉각수가 쏟아지며 압력이 정상으로 돌아옴.",
+					"does": "밸브를 완전히 열어버려 압력을 단번에 뺀다."
+				},
+				{
+					"path": "hard",
+					"target": "비상 냉각수 밸브",
+					"does": "밸브의 잠금장치를 타이밍에 맞춰 다시 조인다.",
+					"reaction_assumes": "압력이 치솟는 순간마다 렌치를 돌려 고정하고 수리 도구가 조금 망가짐."
+				},
+				{
+					"reaction_assumes": "자동 수리 키트가 밸브를 밀봉함.",
+					"target": "자판기",
+					"does": "돈을 넣고 자동 수리 키트를 뽑아 밸브에 부착한다.",
+					"path": "gold"
+				}
+			],
+			"checks": [
+				{
+					"item": "S1",
+					"pass": true
+				},
+				{
+					"pass": true,
+					"item": "S2"
+				},
+				{
+					"pass": true,
+					"item": "S3"
+				},
+				{
+					"item": "S4",
+					"pass": true
+				},
+				{
+					"problem": "선택지에서 예고한 타이밍 액션(밸브 조이기)은 텍스트로 끝나고, 미니게임은 수리 도구를 고치는 것이 되어 어색합니다.",
+					"quote": "망가진 수리 도구를 고치기 위해 정확한 타이밍에 맞춰 부품을 끼워 넣어야 한다.",
+					"item": "S5",
+					"pass": false
+				}
+			],
+			"card_id": "card_03_unstable_valve",
+			"asks": "압력 때문에 터질 것 같은 비상 냉각수 밸브의 잠금장치를 조여달라고 한다."
+		}
+	]
+}

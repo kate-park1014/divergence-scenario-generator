@@ -1,0 +1,389 @@
+{
+	"cards": [
+		{
+			"background_tags": [
+				"booth",
+				"lobby",
+				"bright",
+				"crowded",
+				"anxious"
+			],
+			"key": "sora_voice_stamp",
+			"choices": [
+				{
+					"path": "easy",
+					"result": [
+						{
+							"text": "버튼을 누르자 소라의 음성 입력이 단번에 승인 판정을 받았다.",
+							"speaker": "narrator"
+						},
+						{
+							"speaker": "sora",
+							"text": "\"감사해요! 덕분에 이력서 승인표를 받았어요. 이건 작은 감사 선물이에요.\""
+						},
+						{
+							"text": "\"목소리가 바로 트이다니 신기하지만... 규정을 넘겨짚은 건 아닐지 걱정돼요.\"",
+							"speaker": "kai"
+						}
+					],
+					"text": "소라의 요청대로 보조 인증 버튼을 대신 눌러준다.",
+					"reward": [
+						"heal"
+					],
+					"mbti": "EF",
+					"effects": {
+						"echo": 5,
+						"gold": 100,
+						"fighting": -10
+					}
+				},
+				{
+					"mbti": "TJ",
+					"text": "보조 인증을 본인이 직접 정석대로 진행하도록 두고 거절한다.",
+					"result": [
+						{
+							"speaker": "narrator",
+							"text": "원칙대로 본인이 직접 절차를 밟아야 한다며 대신 눌러주지 않았다."
+						},
+						{
+							"speaker": "sora",
+							"text": "\"쯧, 박한 사람이네! 굳이 돌아가라는 법이 어디 있다고 이러는 거예요?\""
+						},
+						{
+							"speaker": "kai",
+							"text": "\"소라 씨가 짜증을 내며 가버렸지만, 원칙을 지킨 건 잘한 일이에요.\""
+						}
+					],
+					"reward": [
+						"intelligence_up"
+					],
+					"path": "hard",
+					"effects": {
+						"echo": -5,
+						"reason": 15
+					}
+				},
+				{
+					"reward": [
+						"cooldown_reset"
+					],
+					"effects": {
+						"reason": -20,
+						"gold": 50,
+						"community": 15
+					},
+					"text": "단말기 마이크에 대고 직접 큰 소리로 소라의 이름을 대신 외쳐 준다.",
+					"mbti": "EP",
+					"path": "fun",
+					"result": [
+						{
+							"speaker": "narrator",
+							"text": "당신이 마이크에 고함을 치자 단말기 오작동으로 음성 등록 창이 강제 완료 처리되었다."
+						},
+						{
+							"speaker": "sora",
+							"text": "\"어... 어쨌든 등록은 됐네요? 얼떨떨하지만 소리는 들리니 다행이에요.\""
+						},
+						{
+							"text": "\"와, 이런 방식으로 단말기가 반응할 줄은 몰랐어요! 역시 행동파이시네요.\"",
+							"speaker": "kai"
+						}
+					]
+				}
+			],
+			"wants": "이력서 음성 입력 보조 인증을 마치고 이름 승인을 받고 싶음",
+			"no": 1,
+			"title": "소라의 이력서 음성 등록",
+			"dialogue": [
+				{
+					"speaker": "narrator",
+					"text": "소라가 이력서 음성 등록 단말기 앞에서 불안하게 인증 버튼을 만지작거렸다."
+				},
+				{
+					"text": "\"목소리 인식이 자꾸 끊겨요. 보조 인증 버튼 한 번만 대신 눌러주시면 안 될까요?\"",
+					"speaker": "sora"
+				},
+				{
+					"text": "\"저기, 단말기 지침을 보니 보조 인증은 타인이 대신 누르면 안 된다고 써 있어요.\"",
+					"speaker": "kai"
+				}
+			],
+			"rule_link": "이력서 단말기의 보조 인증 버튼을 통해 즉각적인 음성 승인을 얻으려는 보조 절차",
+			"person": {
+				"id": "sora",
+				"name": "소라",
+				"role": "대기자"
+			},
+			"slot": "B",
+			"kind": "plant"
+		},
+		{
+			"background_tags": [
+				"booth",
+				"hall",
+				"neon",
+				"busy",
+				"hopeful"
+			],
+			"rule_link": "전자 인증 도장을 사용해 1단계 인증을 마친 구직자의 빠른 승인 절차",
+			"title": "민호의 전자 인증 도장",
+			"no": 2,
+			"key": "minho_auth_stamp",
+			"choices": [
+				{
+					"event_intro": [
+						{
+							"speaker": "narrator",
+							"text": "민호가 똑같이 생긴 상자 세 개를 빠르게 섞은 뒤 손으로 가리켰다."
+						},
+						{
+							"text": "\"자, 이 중 보조 인증 쿠폰이 들어있는 진짜 상자를 골라보세요!\"",
+							"speaker": "minho"
+						}
+					],
+					"event_reason": "민호가 제시한 상자 세 개 중 보조 인증 쿠폰이 들어있는 진짜 상자를 맞혀야 한다.",
+					"event": "minigame_cup",
+					"path": "easy",
+					"result": [
+						{
+							"text": "상자를 고르자 그 안에서 빛나는 보조 인증 쿠폰이 나왔다.",
+							"speaker": "narrator"
+						},
+						{
+							"speaker": "minho",
+							"text": "\"대단해요! 덕분에 보조 인증을 마치고 이력서를 빠르게 승인받을 수 있겠어요.\""
+						},
+						{
+							"text": "\"좋은 결과가 나와서 다행이에요. 민호 씨 목소리도 한결 맑아진 것 같아요.\"",
+							"speaker": "kai"
+						}
+					],
+					"effects": {
+						"community": 10,
+						"echo": 5
+					},
+					"text": "민호 대신 눈썰미를 발휘해 보조 인증 쿠폰이 든 상자를 찾아준다.",
+					"mbti": "SF"
+				},
+				{
+					"reward": [
+						"defense_up"
+					],
+					"mbti": "IT",
+					"text": "요행을 바라지 말고 순서대로 단말기 정규 검사를 받으라고 민호를 설득한다.",
+					"effects": {
+						"reason": 20,
+						"fighting": -10
+					},
+					"result": [
+						{
+							"text": "상자 뽑기 대신 정규 단말기 절차를 밟도록 차분히 설득했다.",
+							"speaker": "narrator"
+						},
+						{
+							"text": "\"듣고 보니 그렇군요. 정석대로 검사받는 게 혹시 모를 오류를 막겠네요.\"",
+							"speaker": "minho"
+						},
+						{
+							"text": "\"맞아요, 꼼수는 결국 나중에 문제를 일으킬 수 있으니까요.\"",
+							"speaker": "kai"
+						}
+					],
+					"path": "hard"
+				},
+				{
+					"path": "gold",
+					"reward": [
+						"attack_up"
+					],
+					"mbti": "NF",
+					"text": "수수료 100골드를 지급하고 민호의 전자 인증 도장을 직접 대여해 승인받는다.",
+					"result": [
+						{
+							"speaker": "narrator",
+							"text": "민호에게 골드를 주고 전자 인증 도장을 임대해 서류에 승인 도장을 찍었다."
+						},
+						{
+							"text": "\"쏠쏠한 수수료를 받아서 기분 좋네요! 안전하게 사용하세요.\"",
+							"speaker": "minho"
+						},
+						{
+							"speaker": "kai",
+							"text": "\"인증 도장을 직접 손에 넣으니 다음 단계를 준비하기 한결 수월해졌어요.\""
+						}
+					],
+					"effects": {
+						"gold": -100,
+						"echo": 10
+					}
+				}
+			],
+			"person": {
+				"name": "민호",
+				"role": "구직자",
+				"id": "minho"
+			},
+			"wants": "전자 인증 도장의 혜택을 먼저 확인하고 이력서 속도를 높이고 싶음",
+			"dialogue": [
+				{
+					"text": "민호가 전자 인증 도장을 쥐고 부스 앞 상자 세 개를 번갈아 보며 고민하고 있었다.",
+					"speaker": "narrator"
+				},
+				{
+					"text": "\"이 도장으로 인증하면 제출 속도가 배로 빠른데, 상자 속에 보조 인증권이 들어있대요.\"",
+					"speaker": "minho"
+				},
+				{
+					"text": "\"어느 상자에 진짜 보조 인증 쿠폰이 들어있는지 맞춰보는 건가요?\"",
+					"speaker": "kai"
+				}
+			],
+			"slot": "B",
+			"kind": "normal"
+		},
+		{
+			"rule_link": "보조 인증 단말기 작동을 통해 즉각적인 서류 승인을 얻는 규칙",
+			"key": "hana_extra_auth",
+			"wants": "보조 인증 단말기의 오류를 해결하고 지원서를 빠르게 제출하고 싶음",
+			"person": {
+				"name": "하나",
+				"role": "구직 대기자",
+				"id": "hana"
+			},
+			"no": 3,
+			"choices": [
+				{
+					"reward": [
+						"shield"
+					],
+					"effects": {
+						"echo": 5,
+						"fighting": 10
+					},
+					"mbti": "EF",
+					"text": "하나 대신 단말기 리셋 스위치를 눌러 보조 인증을 재가동한다.",
+					"path": "easy",
+					"result": [
+						{
+							"text": "리셋 버튼을 누르자 단말기 화면이 켜지며 하나에게 즉각적인 승인표가 출력되었다.",
+							"speaker": "narrator"
+						},
+						{
+							"speaker": "hana",
+							"text": "\"와! 서류 승인이 바로 끝났어요. 고마워요, 진짜 답답했는데!\""
+						},
+						{
+							"text": "\"간단히 해결되어서 다행이에요. 다들 빠른 처리만 바라는 모습이군요.\"",
+							"speaker": "kai"
+						}
+					]
+				},
+				{
+					"reward": [
+						"intelligence_up"
+					],
+					"path": "hard",
+					"effects": {
+						"reason": 20,
+						"echo": -5
+					},
+					"mbti": "TJ",
+					"result": [
+						{
+							"speaker": "narrator",
+							"text": "시간을 들여 단말기 시스템 내역을 정밀하게 조사하여 신호 누출을 바로잡았다."
+						},
+						{
+							"text": "\"시간은 좀 걸렸지만 찜찜한 오류가 사라졌다니 마음이 편하네요.\"",
+							"speaker": "hana"
+						},
+						{
+							"speaker": "kai",
+							"text": "\"원인을 정확히 짚어낸 덕분에 나중에 발생할 누출 문제를 예방했어요.\""
+						}
+					],
+					"text": "리셋 대신 시스템 정밀 점검을 진행해 오작동 원인을 조사한다."
+				},
+				{
+					"result": [
+						{
+							"text": "{actor}이(가) 능숙하게 부품을 조율하자 보조 단말기가 정밀 모드로 가동되었다.",
+							"speaker": "narrator"
+						},
+						{
+							"text": "\"세상에, 이렇게 정교하게 고쳐주시다니! 이력서 승인 수준이 아주 완벽해졌어요.\"",
+							"speaker": "hana"
+						},
+						{
+							"text": "\"전문가다운 솜씨네요! 보조 인증 절차가 신속하고 정확하게 마무리되었어요.\"",
+							"speaker": "kai"
+						}
+					],
+					"path": "lock",
+					"require_mbti": "NT",
+					"text": "{actor}이(가) 단말기의 보조 회로를 직접 재배선하여 완벽하게 수리한다.",
+					"effects": {
+						"reason": 15,
+						"fighting": 10
+					},
+					"reward": [
+						"cooldown_reset"
+					],
+					"mbti": "NT"
+				},
+				{
+					"reward": [
+						"move_range_up"
+					],
+					"path": "gold",
+					"effects": {
+						"gold": -100,
+						"echo": 10
+					},
+					"mbti": "SF",
+					"result": [
+						{
+							"text": "당신이 보태준 비용으로 하나는 고급 보조 인증 기기를 새로 구입해 제출을 완료했다.",
+							"speaker": "narrator"
+						},
+						{
+							"text": "\"덕분에 최신 기기로 한 번에 승인받았어요! 정말 감사합니다.\"",
+							"speaker": "hana"
+						},
+						{
+							"text": "\"비용이 들었지만 하나 씨의 급한 불을 꺼줄 수 있어서 보람 있네요.\"",
+							"speaker": "kai"
+						}
+					],
+					"text": "하나에게 100골드를 건네주어 고급 보조 인증 기기를 구매하도록 돕는다."
+				}
+			],
+			"dialogue": [
+				{
+					"speaker": "narrator",
+					"text": "하나가 붉은 불이 들어온 보조 인증 단말기를 들고 발을 굴렀다."
+				},
+				{
+					"speaker": "hana",
+					"text": "\"1단계 인증은 마쳤는데 보조 단말기가 먹통이에요! 빠른 승인을 받아야 하는데...\""
+				},
+				{
+					"text": "\"보조 단말기 시스템에 경미한 과부하가 걸린 모양이에요.\"",
+					"speaker": "kai"
+				}
+			],
+			"title": "하나와 보조 인증 단말기",
+			"background_tags": [
+				"booth",
+				"terminal",
+				"fluorescent",
+				"waiting",
+				"tense"
+			],
+			"slot": "B",
+			"kind": "normal"
+		}
+	],
+	"errors": [],
+	"prompt_hash": "30bec1fa89b00471df968a22e5741217c76e58df"
+}

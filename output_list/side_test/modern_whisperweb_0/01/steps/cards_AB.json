@@ -1,0 +1,626 @@
+{
+	"cards": [
+		{
+			"title": "막혀버린 부품 주문",
+			"key": "ryan_order_data",
+			"wants": "부품 주문 데이터를 빨리 고치기 위해 스크린 조각의 힘을 빌려달라고 함",
+			"slot": "A",
+			"rule_link": "아직 깨지지 않은 스크린 조각의 힘을 흉내 내어 규칙을 우회하려는 시도.",
+			"person": {
+				"id": "ryan",
+				"role": "낡은 서버 랙 정비공",
+				"name": "라이언"
+			},
+			"choices": [
+				{
+					"effects": {
+						"reason": -20,
+						"gold": 100
+					},
+					"text": "조각의 힘을 흉내 내어 데이터를 강제로 덮어씌우고 당장 주문을 통과시킨다.",
+					"result": [
+						{
+							"speaker": "narrator",
+							"text": "주문 승인 창이 곧바로 뜬다. 라이언이 기뻐하며 부품값의 일부를 수고비로 건넨다."
+						}
+					],
+					"mbti": "EN",
+					"path": "easy"
+				},
+				{
+					"path": "hard",
+					"effects": {
+						"echo": -10,
+						"reason": 20
+					},
+					"event": "campsite",
+					"event_reason": "복잡한 코딩 작업으로 시간이 오래 걸려 쉴 곳이 필요하다.",
+					"mbti": "IS",
+					"text": "위험하다며 거절하고 정석대로 복잡한 수동 코딩을 돕는다.",
+					"event_intro": [
+						{
+							"text": "서버 랙 사이의 빈 공간에 라이언이 종이 박스를 깔아주며 교대로 쉬자고 제안한다.",
+							"speaker": "narrator"
+						}
+					],
+					"result": [
+						{
+							"text": "수동으로 코드를 한 줄씩 고치자 라이언이 지루해하며 하품을 한다. 작업이 길어져 잠시 눈을 붙이기로 한다.",
+							"speaker": "narrator"
+						}
+					]
+				},
+				{
+					"reward": [
+						"intelligence_up"
+					],
+					"text": "{actor}이(가) 시스템의 허점을 분석해 합법적인 우회로를 찾는다.",
+					"result": [
+						{
+							"speaker": "narrator",
+							"text": "{actor}이(가) 몇 분 만에 합법적인 관리자 포트를 찾아내 주문을 넣는다."
+						},
+						{
+							"speaker": "narrator",
+							"text": "라이언이 그 솜씨에 감탄하며 남는 부품을 챙겨준다."
+						}
+					],
+					"effects": {
+						"reason": 10
+					},
+					"path": "lock",
+					"mbti": "TJ",
+					"require_mbti": "TJ"
+				}
+			],
+			"dialogue": [
+				{
+					"speaker": "narrator",
+					"text": "낡은 서버 랙 앞에서 정비공 라이언이 태블릿을 두드리며 한숨을 쉰다."
+				},
+				{
+					"text": "메인보드 부품을 주문해야 하는데 데이터가 꽉 막혔어요.",
+					"speaker": "ryan"
+				},
+				{
+					"speaker": "ryan",
+					"text": "저 스피커 말대로 스크린 조각의 힘을 조금만 흉내 내면 바로 뚫릴 텐데."
+				},
+				{
+					"speaker": "echo",
+					"text": "아직 조각을 깬 것도 아닌데, 섣불리 그 힘을 흉내 내는 건 위험해 보여."
+				},
+				{
+					"text": "당신들이 좀 도와줄 수 없나요? 딱 한 번만 강제로 신호를 덮어씌워 줘요.",
+					"speaker": "ryan"
+				}
+			],
+			"kind": "plant",
+			"background_tags": [
+				"old_server_rack",
+				"blinking_lights",
+				"dusty_air",
+				"quiet_humming",
+				"dim_lighting"
+			]
+		},
+		{
+			"background_tags": [
+				"narrow_aisle",
+				"cleaning_tools",
+				"messy_cables",
+				"metallic_floor",
+				"flickering_led"
+			],
+			"person": {
+				"name": "조이",
+				"id": "zoe",
+				"role": "서버 랙 청소부"
+			},
+			"rule_link": "스피커의 말에 따라 기존 데이터 규칙을 무시하려는 유혹.",
+			"dialogue": [
+				{
+					"text": "서버 랙 구석에서 청소 로봇 세 대가 제자리만 맴돌고 있다.",
+					"speaker": "narrator"
+				},
+				{
+					"speaker": "zoe",
+					"text": "스피커 방송 들었죠? 이 멍청한 로봇들의 동선 제한 데이터를 확 깨버리면 청소가 10배는 빨라질 거예요."
+				},
+				{
+					"text": "질서를 깨면 당장은 편해도 로봇들이 통제를 벗어날지 몰라.",
+					"speaker": "echo"
+				},
+				{
+					"text": "제어판을 부수고 제한을 풀게 공구 좀 빌려줘요. 빨리 퇴근하고 싶단 말이에요.",
+					"speaker": "zoe"
+				}
+			],
+			"wants": "꼬여버린 청소 로봇의 동선 데이터를 부수고 새로 짜고 싶어 함",
+			"title": "고장 난 청소 로봇",
+			"key": "zoe_cleaning_robot",
+			"kind": "normal",
+			"choices": [
+				{
+					"text": "청소 로봇의 동선 제한을 풀어버려 순식간에 청소를 끝내게 한다.",
+					"result": [
+						{
+							"speaker": "narrator",
+							"text": "로봇들이 미친 듯이 돌아다니며 먼지를 빨아들인다. 조이가 고맙다며 주머니에 있던 동전을 털어준다."
+						}
+					],
+					"path": "easy",
+					"mbti": "EP",
+					"effects": {
+						"reason": -15,
+						"gold": 80
+					}
+				},
+				{
+					"result": [
+						{
+							"text": "먼지를 닦아내고 재부팅하자 로봇들이 얌전히 정해진 구역을 청소한다. 조이는 투덜거리면서도 대걸레를 든다.",
+							"speaker": "narrator"
+						}
+					],
+					"path": "hard",
+					"reward": [
+						"defense_up"
+					],
+					"mbti": "SJ",
+					"effects": {
+						"reason": 15,
+						"echo": 10
+					},
+					"text": "로봇의 센서를 일일이 닦고 정상적인 초기화 절차를 밟는다."
+				},
+				{
+					"text": "로봇들의 청소 구역을 서버 랙 위쪽 좁은 틈새로 지정해버린다.",
+					"effects": {
+						"reason": -30,
+						"fighting": 20
+					},
+					"reward": [
+						"move_range_up"
+					],
+					"result": [
+						{
+							"text": "로봇들이 벽을 타고 오르려다 바닥으로 굴러떨어진다. 조이가 당황해 로봇들을 주우러 뛰어간다.",
+							"speaker": "narrator"
+						}
+					],
+					"path": "fun",
+					"mbti": "NP"
+				}
+			],
+			"slot": "A"
+		},
+		{
+			"title": "불안정한 데이터 가로채기",
+			"forced": [
+				{
+					"effects": {
+						"fighting": 20,
+						"reason": 15
+					},
+					"reward": [
+						"attack_up"
+					],
+					"require_mbti": "EP",
+					"result": [
+						{
+							"speaker": "narrator",
+							"text": "{actor}이(가) 카일의 장비를 망가뜨리자 카일이 욕설을 뱉으며 장비를 챙겨 달아난다."
+						}
+					],
+					"text": "{actor}이(가) 집게 전선을 뽑아버리고 케이블 뭉치를 묶어버린다.",
+					"mbti": "EP"
+				}
+			],
+			"wants": "낡은 케이블 뭉치에 흐르는 불안정한 데이터를 가로채 돈을 벌고 싶어 함",
+			"key": "kyle_cable_data",
+			"person": {
+				"role": "암시장 상인",
+				"id": "kyle",
+				"name": "카일"
+			},
+			"choices": [
+				{
+					"effects": {
+						"gold": 150,
+						"community": -20
+					},
+					"text": "케이블의 피복을 벗겨 데이터를 복제해 주고 돈을 받는다.",
+					"result": [
+						{
+							"text": "당신이 케이블을 연결하자 카일의 단말기에 데이터가 쏟아진다. 그는 약속한 몫을 챙겨주고 황급히 사라진다.",
+							"speaker": "narrator"
+						}
+					],
+					"path": "easy",
+					"mbti": "TP"
+				},
+				{
+					"path": "hard",
+					"event_intro": [
+						{
+							"speaker": "narrator",
+							"text": "\"내 데이터를 가로막은 게 너냐?"
+						},
+						{
+							"speaker": "narrator",
+							"text": "오늘 아주 끝장을 내주지!\" 낯선 브로커가 쇠파이프를 끌며 {actor}에게 1:1 대결을 걸어온다."
+						}
+					],
+					"avoid_penalty": "hp_down",
+					"event_options": {
+						"avoid": {
+							"text": "브로커의 공격을 피해 좁은 서버 랙 사이로 도망친다.",
+							"result": [
+								{
+									"text": "도망치다 튀어나온 철제 모서리에 부딪혀 가벼운 타박상을 입는다.",
+									"speaker": "narrator"
+								}
+							]
+						},
+						"fight": {
+							"lose": [
+								{
+									"text": "브로커가 휘두른 쇠파이프에 맞아 뒤로 밀려난다.",
+									"speaker": "narrator"
+								}
+							],
+							"text": "{actor}이(가) 브로커의 쇠파이프에 맞선다.",
+							"win": [
+								{
+									"text": "{actor}이(가) 브로커의 무기를 빼앗아 멀리 던져버린다.",
+									"speaker": "narrator"
+								}
+							]
+						}
+					},
+					"event_reason": "카일의 거래처였던 정보 브로커가 데이터를 받지 못하자 화를 내며 나타난다.",
+					"effects": {
+						"echo": 10,
+						"community": 20
+					},
+					"text": "케이블을 안전하게 절연 테이프로 감아 데이터 유출을 막는다.",
+					"result": [
+						{
+							"speaker": "narrator",
+							"text": "당신이 케이블을 테이프로 감아버리자 카일이 화를 내며 자리를 뜬다."
+						},
+						{
+							"text": "잠시 후 발소리와 함께 험악한 인상의 남자가 다가온다.",
+							"speaker": "narrator"
+						}
+					],
+					"mbti": "FJ",
+					"event": "meet_stranger"
+				},
+				{
+					"effects": {
+						"reason": -20,
+						"community": 30,
+						"gold": 50
+					},
+					"result": [
+						{
+							"text": "반짝이는 전구 빛에 카일이 어이없다는 듯 쳐다보더니 사진을 찍고는 가버린다.",
+							"speaker": "narrator"
+						}
+					],
+					"text": "케이블 뭉치에 화려한 전구를 달아 데이터 흐름을 시각 예술로 만든다.",
+					"mbti": "EN",
+					"path": "fun"
+				}
+			],
+			"dialogue": [
+				{
+					"text": "낡은 케이블 뭉치 옆에서 카일이 집게 전선을 들고 주변을 살핀다.",
+					"speaker": "narrator"
+				},
+				{
+					"text": "스피커 말대로 곧 새로운 질서가 생기면 이 낡은 케이블의 데이터는 다 버려지겠지.",
+					"speaker": "kyle"
+				},
+				{
+					"speaker": "echo",
+					"text": "누군가의 중요한 정보일지도 모르는데, 함부로 건드려도 될까?"
+				},
+				{
+					"speaker": "kyle",
+					"text": "버려지기 전에 내가 챙겨서 팔면 모두에게 이득이야. 내 집게를 저 메인 선에 좀 연결해 줘."
+				}
+			],
+			"slot": "A",
+			"background_tags": [
+				"tangled_wires",
+				"dark_corner",
+				"sparking_cable",
+				"secret_deal",
+				"stale_air"
+			],
+			"rule_link": "스크린 조각의 힘을 핑계로 데이터의 흐름을 왜곡하려는 시도.",
+			"kind": "normal"
+		},
+		{
+			"slot": "B",
+			"choices": [
+				{
+					"text": "파편을 이용해 암호를 강제로 해제하여 즉시 데이터를 얻게 해준다.",
+					"path": "easy",
+					"result": [
+						{
+							"speaker": "narrator",
+							"text": "노트북 화면이 지지직거리더니 암호가 풀린다. 미아가 기뻐하며 데이터의 일부를 팔아 현금으로 나눠준다."
+						}
+					],
+					"effects": {
+						"gold": 100,
+						"reason": -20
+					},
+					"mbti": "EN"
+				},
+				{
+					"text": "파편 사용을 막고 미아가 스스로 천천히 암호를 풀도록 둔다.",
+					"path": "hard",
+					"effects": {
+						"echo": 10,
+						"reason": 20
+					},
+					"mbti": "IS",
+					"reward": [
+						"intelligence_up"
+					],
+					"result": [
+						{
+							"text": "당신이 파편을 감추자 미아가 투덜대며 수동으로 암호 해독 프로그램을 돌리기 시작한다.",
+							"speaker": "narrator"
+						}
+					]
+				},
+				{
+					"mbti": "FP",
+					"path": "fun",
+					"result": [
+						{
+							"text": "노트북에서 요란한 음악이 흘러나온다. 미아가 당황해 노트북을 닫으려다 동전을 떨어뜨린다.",
+							"speaker": "narrator"
+						}
+					],
+					"effects": {
+						"echo": -15,
+						"reason": -30,
+						"gold": 50
+					},
+					"text": "노트북에 파편 대신 동행의 낡은 스피커 부품을 갖다 댄다."
+				}
+			],
+			"kind": "plant",
+			"title": "암호화된 파일",
+			"wants": "암호화된 파일을 빨리 풀기 위해 깨진 데이터 스크린 조각의 파편을 이용하게 해달라고 함",
+			"background_tags": [
+				"broken_shard",
+				"glowing_data",
+				"encrypted_screen",
+				"tense_silence",
+				"shadowy_figure"
+			],
+			"key": "mia_broken_shard",
+			"dialogue": [
+				{
+					"text": "미아가 암호 입력 창이 뜬 두꺼운 노트북을 들고 당신을 가로막는다.",
+					"speaker": "narrator"
+				},
+				{
+					"speaker": "mia",
+					"text": "당신들이 데이터 스크린 조각을 깼잖아요? 그 파편 하나만 빌려줘요."
+				},
+				{
+					"speaker": "echo",
+					"text": "파편의 힘이 강력하긴 하지만, 이런 식으로 막 써도 괜찮은 걸까?"
+				},
+				{
+					"speaker": "mia",
+					"text": "거 봐요! 그 파편을 노트북에 대면 이 징글징글한 암호도 단번에 풀릴 거라고요."
+				}
+			],
+			"person": {
+				"name": "미아",
+				"role": "데이터 밀수꾼",
+				"id": "mia"
+			},
+			"rule_link": "깨진 스크린 조각의 파편이 일시적으로 데이터를 복구하는 현상을 이용."
+		},
+		{
+			"choices": [
+				{
+					"path": "easy",
+					"result": [
+						{
+							"text": "레오의 하드디스크에서 요란한 회전음이 나며 데이터가 복원된다. 그는 만족하며 두둑한 수수료를 건넨다.",
+							"speaker": "narrator"
+						}
+					],
+					"effects": {
+						"gold": 120,
+						"community": -15
+					},
+					"mbti": "ES",
+					"text": "서버의 보조 전력을 레오의 하드디스크로 돌려준다."
+				},
+				{
+					"result": [
+						{
+							"text": "당신이 강제로 전선을 뽑자 레오가 항의하지만, 서버 랙의 과열 경고등이 꺼지며 안정을 찾는다.",
+							"speaker": "narrator"
+						}
+					],
+					"mbti": "TJ",
+					"effects": {
+						"community": 15,
+						"fighting": 10
+					},
+					"reward": [
+						"defense_up"
+					],
+					"path": "hard",
+					"text": "서버의 전력을 원래대로 유지하고 레오의 연결을 끊는다."
+				},
+				{
+					"path": "lock",
+					"require_mbti": "TP",
+					"mbti": "TP",
+					"result": [
+						{
+							"speaker": "narrator",
+							"text": "{actor}이(가) 제어판을 조작해 전력을 분배한다. 서버도 안정되고 레오의 기계도 무사히 돌아간다."
+						}
+					],
+					"effects": {
+						"reason": 10
+					},
+					"text": "{actor}이(가) 전력을 미세하게 조정해 서버와 하드디스크 모두에 공급되도록 나눈다.",
+					"reward": [
+						"intelligence_up"
+					]
+				}
+			],
+			"person": {
+				"name": "레오",
+				"role": "데이터 복원업자",
+				"id": "leo"
+			},
+			"key": "leo_power_redirect",
+			"slot": "B",
+			"kind": "normal",
+			"title": "넘쳐흐르는 전력",
+			"dialogue": [
+				{
+					"text": "레오가 과열되어 윙윙거리는 서버 랙에 굵은 전선을 꽂아두고 있다.",
+					"speaker": "narrator"
+				},
+				{
+					"speaker": "leo",
+					"text": "스크린 조각이 깨지더니 서버 전력이 남아도네! 이참에 내 창고에 있는 하드디스크 좀 싹 다 돌려야겠어."
+				},
+				{
+					"text": "일시적으로 복구된 전력을 함부로 끌어다 써도 서버가 버틸 수 있을까?",
+					"speaker": "echo"
+				},
+				{
+					"speaker": "leo",
+					"text": "그건 일시적인 거라니까. 전력이 넘칠 때 내 쪽으로 전송 스위치 좀 꽉 눌러줘. 혼자선 힘들어."
+				}
+			],
+			"rule_link": "조각 파편으로 인한 일시적인 과전력 현상을 사적으로 악용.",
+			"background_tags": [
+				"overheated_server",
+				"thick_cables",
+				"spinning_disk",
+				"loud_noise",
+				"red_warning_light"
+			],
+			"wants": "일시적으로 돌아온 서버의 전력을 자신의 오래된 하드디스크에 끌어다 쓰고 싶어 함"
+		},
+		{
+			"background_tags": [
+				"error_logs",
+				"red_screen",
+				"tired_worker",
+				"flashing_monitor",
+				"messy_desk"
+			],
+			"dialogue": [
+				{
+					"speaker": "narrator",
+					"text": "노라가 새빨간 오류 로그가 가득한 모니터를 보며 머리를 쥐어뜯고 있다."
+				},
+				{
+					"speaker": "nora",
+					"text": "스크린 조각 깨진 뒤로 이상한 에러가 계속 떠. 어차피 다 일시적인 거잖아?"
+				},
+				{
+					"text": "데이터를 마음대로 지웠다가 나중에 더 큰 문제가 생기면 어떡해.",
+					"speaker": "echo"
+				},
+				{
+					"speaker": "nora",
+					"text": "그니까! 그냥 파편 힘으로 에러 로그 싹 다 날려버리자. 나 퇴근 좀 하게 내기 한 판 할래?"
+				}
+			],
+			"rule_link": "파편이 만든 일시적 복구 현상을 믿고 문제를 덮어버리려는 행동.",
+			"key": "nora_error_log",
+			"title": "쌓여가는 오류 로그",
+			"person": {
+				"id": "nora",
+				"name": "노라",
+				"role": "네트워크 순찰대원"
+			},
+			"slot": "B",
+			"wants": "갑자기 뜬 오류 로그들을 파편의 힘을 이용해 한 번에 삭제해버리고 퇴근하려 함",
+			"kind": "normal",
+			"choices": [
+				{
+					"result": [
+						{
+							"text": "모니터가 잠시 깜빡이더니 경고창이 모두 사라진다. 노라는 ���벼운 발걸음으로 전산실을 빠져나간다.",
+							"speaker": "narrator"
+						}
+					],
+					"text": "파편을 가까이 대어 오류 로그를 덮어버리고 삭제를 돕는다.",
+					"effects": {
+						"echo": -10,
+						"gold": 100,
+						"reason": -15
+					},
+					"mbti": "FJ",
+					"path": "easy"
+				},
+				{
+					"result": [
+						{
+							"speaker": "narrator",
+							"text": "노라가 울상을 지으며 자리에 주저앉아 키보드를 두드린다. 밤샘 작업이 확정된 그녀의 어깨가 축 처진다."
+						}
+					],
+					"reward": [
+						"intelligence_up"
+					],
+					"mbti": "NT",
+					"path": "hard",
+					"effects": {
+						"reason": 20,
+						"echo": 10
+					},
+					"text": "로그를 하나하나 백업하고 원인을 분석하도록 설득한다."
+				},
+				{
+					"effects": {
+						"fighting": -10,
+						"community": 10
+					},
+					"event_intro": [
+						{
+							"text": "노라가 주머니에서 동전을 꺼내며 앞면이 나오면 로그를 지우고 뒷면이 나오면 남기자고 내기를 제안한다.",
+							"speaker": "narrator"
+						}
+					],
+					"text": "노라의 제안대로 오류 로그 삭제 여부를 걸고 동전 던지기 내기를 한다.",
+					"mbti": "SP",
+					"event_reason": "노라가 책임을 회피하기 위해 운에 결과를 맡기려 한다.",
+					"result": [
+						{
+							"speaker": "narrator",
+							"text": "동전이 허공을 가르며 빙글빙글 돈다. 노라가 긴장한 표정으로 떨어지는 동전을 쳐다본다."
+						}
+					],
+					"event": "minigame_slot",
+					"path": "fun"
+				}
+			]
+		}
+	],
+	"errors": []
+}

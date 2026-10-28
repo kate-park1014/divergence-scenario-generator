@@ -1,0 +1,154 @@
+{
+	"id": "card_01_hayeon_kept_name",
+	"kind": "callback",
+	"title": {
+		"korean": "지켜낸 이름"
+	},
+	"intensity": "high",
+	"after_story": 5,
+	"before_story": 7,
+	"callback": {
+		"seed": "hayeon_portfolio_hard",
+		"min_rooms_after": 2
+	},
+	"background_tags": [
+		"waiting_hall",
+		"steady_lamp",
+		"wooden_bench",
+		"sparse_crowd",
+		"stable_mood"
+	],
+	"dialogue": [
+		{
+			"speaker": "narrator",
+			"content": {
+				"korean": "하연이 또렷한 글씨가 적힌 접수증을 쥔 채 안도하는 얼굴로 서 있다."
+			}
+		},
+		{
+			"speaker": "hayeon",
+			"content": {
+				"korean": "서류 과장을 거절당했을 땐 서운했는데, 저 사람들 이름이 뒤섞이는 걸 보니 소름이 돋아요."
+			}
+		},
+		{
+			"speaker": "lin",
+			"content": {
+				"korean": "다른 지원자들은 거짓 경력 때문에 엉뚱한 이름으로 불려 나가고 있거든요."
+			}
+		},
+		{
+			"speaker": "hayeon",
+			"content": {
+				"korean": "제 서류는 단단히 고정돼 있어요. 이제 접수대에서 진짜 제 명패를 받아야겠어요."
+			}
+		}
+	],
+	"choices": [
+		{
+			"text": {
+				"korean": "하연의 원본 지원 번호를 접수대에 확인시켜 원래 이름을 확정한다."
+			},
+			"path": "easy",
+			"mbti": "TJ",
+			"flag": "hayeon_solid_proof",
+			"effects": {
+				"reason": 15,
+				"echo": 10,
+				"community": 15,
+				"gold": 60
+			},
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "당신은 하연의 손을 잡고 접수원에게 원본 접수증 번호를 똑똑히 불러주었다."
+					}
+				},
+				{
+					"speaker": "hayeon",
+					"content": {
+						"korean": "거짓말을 안 보태길 정말 잘했어요! 제 이름이 명부에 정확하게 남았습니다."
+					}
+				},
+				{
+					"speaker": "lin",
+					"content": {
+						"korean": "순번은 조금 늦어졌지만, 하연 씨의 진짜 자리가 온전히 지켜졌어요."
+					}
+				}
+			]
+		},
+		{
+			"text": {
+				"korean": "하연의 낡은 포트폴리오 표지에 본래 이름을 직접 써서 가슴에 달아준다."
+			},
+			"path": "hard",
+			"mbti": "FP",
+			"flag": "hayeon_sturdy_portfolio",
+			"effects": {
+				"echo": 15,
+				"community": -15,
+				"fighting": 20
+			},
+			"reward": [
+				"shield"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "당신은 하연의 포트폴리오 맨 앞장에 굵은 붉은 펜으로 원래 이름을 크게 적어 걸어주었다."
+					}
+				},
+				{
+					"speaker": "hayeon",
+					"content": {
+						"korean": "세 번이나 떨어진 서류라도 제 진짜 노력이에요. 이걸 들고 당당히 들어갈게요!"
+					}
+				},
+				{
+					"speaker": "lin",
+					"content": {
+						"korean": "남들의 이름이 뒤섞이는 와중에도 하연 씨의 명패만은 홀로 흔들리지 않네요."
+					}
+				}
+			]
+		}
+	],
+	"_side": {
+		"slot": "C",
+		"person": {
+			"id": "hayeon",
+			"role": "본래 이름을 지킨 지원자",
+			"name": "하연"
+		},
+		"wants": "정직한 서류를 바탕으로 시스템에 본래 이름을 온전히 등록하는 것",
+		"rule_link": "과장하지 않은 원본 서류 덕분에 시스템의 왜곡 속에서도 본래 신원이 유지된다.",
+		"events": {},
+		"flags": {
+			"hayeon_solid_proof": {
+				"kind": "good",
+				"boss_penalty": 1,
+				"label": {
+					"korean": "하연의 정직한 기록"
+				},
+				"boss_choice": {
+					"korean": "하연이 정직하게 정리했던 서류 사본을 건네주어 심사관의 허점을 파고든다."
+				}
+			},
+			"hayeon_sturdy_portfolio": {
+				"kind": "good",
+				"boss_penalty": 2,
+				"label": {
+					"korean": "단단한 포트폴리오"
+				},
+				"boss_choice": {
+					"korean": "하연이 직접 제작한 포트폴리오 철판으로 굳게 닫힌 문틈을 비집어 연다."
+				}
+			}
+		}
+	}
+}

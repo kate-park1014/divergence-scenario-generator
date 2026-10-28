@@ -157,7 +157,7 @@ export type StoryArc = {
 	act_summary: ActSummary;
 };
 
-/** side_test storyarc (tmp/side10 입력). side10 이 안 쓰는 필드를 뺀 StoryArc */
+/** side_test storyarc (scripts/side_test 입력). 안 쓰는 필드를 뺀 StoryArc */
 export type SideTestStoryArc = Omit<
 	StoryArc,
 	'rising_count' | 'protagonist_goal' | 'boss_trace' | 'act_summary' | 'world' | 'act_tone' | 'scenarioOutline'

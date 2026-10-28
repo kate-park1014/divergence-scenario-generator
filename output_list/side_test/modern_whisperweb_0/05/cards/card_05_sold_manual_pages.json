@@ -1,0 +1,263 @@
+{
+	"id": "card_05_sold_manual_pages",
+	"kind": "rep",
+	"title": {
+		"korean": "찢어 팔 수 있는 설명서"
+	},
+	"intensity": "calm",
+	"after_story": 3,
+	"before_story": 5,
+	"condition": {
+		"leaning": "reason+",
+		"among": [
+			"fighting-",
+			"fighting+",
+			"community-",
+			"community+",
+			"reason-",
+			"reason+"
+		],
+		"min": 20
+	},
+	"urgency": 8,
+	"leaning": "reason+",
+	"background_tags": [
+		"control_room",
+		"paper_scraps",
+		"lamp_light",
+		"crates",
+		"shifty"
+	],
+	"dialogue": [
+		{
+			"speaker": "narrator",
+			"content": {
+				"korean": "업자가 찢어진 설명서 뭉치를 부채처럼 펼쳐 들고 있었다."
+			}
+		},
+		{
+			"speaker": "manual_dealer",
+			"content": {
+				"korean": "당신이죠? 지시를 어기고 자기 마음대로 문을 연 사람. 그 얘기 들으면 다들 웃던데."
+			}
+		},
+		{
+			"speaker": "manual_dealer",
+			"content": {
+				"korean": "이 페이지에 조각 맞추는 순서가 있어요. 한 장에 백 골드. 안 사면 그냥 찢어 버릴게요."
+			}
+		},
+		{
+			"speaker": "echo",
+			"content": {
+				"korean": "저 페이지 중에 내 정보망 열쇠가 적힌 게 있을지도. 근데 저 사람 손에 있으면 값이 오를 거야."
+			}
+		},
+		{
+			"speaker": "narrator",
+			"content": {
+				"korean": "업자의 발밑에 찢어진 종이가 눈처럼 쌓여 있었다."
+			}
+		}
+	],
+	"choices": [
+		{
+			"text": {
+				"korean": "업자 몫으로 페이지를 챙기고 나머지 설명서를 빼앗는다"
+			},
+			"path": "easy",
+			"mbti": "TP",
+			"flag": "grabbed_manual",
+			"effects": {
+				"reason": -20,
+				"fighting": 15
+			},
+			"reward": [
+				"attack_up"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "당신이 설명서 뭉치를 낚아채자, 업자가 빈손으로 허둥댔다."
+					}
+				},
+				{
+					"speaker": "manual_dealer",
+					"content": {
+						"korean": "이봐요! 그건 내 장사 밑천이라고요! …아, 근데 페이지 순서가 다 섞였네."
+					}
+				},
+				{
+					"speaker": "echo",
+					"content": {
+						"korean": "설명서는 가져왔는데 순서가 다 엉망이야. 읽는 데만 한참 걸리겠는데."
+					}
+				}
+			]
+		},
+		{
+			"text": {
+				"korean": "업자에게 값을 다 치르고 설명서 뭉치를 통째로 사 온다"
+			},
+			"path": "hard",
+			"mbti": "FJ",
+			"flag": "bought_manual",
+			"effects": {
+				"reason": 15,
+				"community": 10,
+				"gold": -100
+			},
+			"reward": [
+				"intelligence_up"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "금화를 받은 업자가 설명서 뭉치를 두 손으로 건넸다."
+					}
+				},
+				{
+					"speaker": "manual_dealer",
+					"content": {
+						"korean": "거래는 이렇게 하는 거예요. …아, 실은 이 페이지가 마지막 장이라서요. 이건 서비스로 드릴게요."
+					}
+				},
+				{
+					"speaker": "echo",
+					"content": {
+						"korean": "마지막 장이 서비스라니. 이 사람도 마음이 있었네. 정보망 열쇠는 아직 안 보이지만."
+					}
+				}
+			]
+		},
+		{
+			"text": {
+				"korean": "업자에게 설명서를 내려놓게 하고 값을 직접 정하게 한다"
+			},
+			"path": "stat",
+			"mbti": "EJ",
+			"require": {
+				"stat": "reason",
+				"op": ">=",
+				"value": 40
+			},
+			"flag": "laid_manual",
+			"effects": {
+				"reason": 20,
+				"community": 15
+			},
+			"reward": [
+				"shield"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "당신이 말없이 손을 내밀자, 업자가 설명서를 조각 위에 내려놓았다."
+					}
+				},
+				{
+					"speaker": "manual_dealer",
+					"content": {
+						"korean": "…당신 앞에서는 값을 못 부르겠네요. 그냥 가져가요. 대신 내 이름은 빼 주고요."
+					}
+				},
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "설명서는 조각 옆에 놓였고, 업자는 찢어진 종이를 쓸어 담아 뒷문으로 사라졌다."
+					}
+				}
+			]
+		},
+		{
+			"text": {
+				"korean": "업자에게 페이지 두 장 값 100골드를 치르고 순서를 묻는다"
+			},
+			"path": "gold",
+			"mbti": "EP",
+			"require": {
+				"stat": "gold",
+				"op": ">=",
+				"value": 100
+			},
+			"effects": {
+				"gold": -100,
+				"reason": -10
+			},
+			"reward": [
+				"cooldown_reset"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "금화를 받은 업자가 페이지 두 장을 찢어 건넸다."
+					}
+				},
+				{
+					"speaker": "manual_dealer",
+					"content": {
+						"korean": "첫 장은 순서, 둘째 장은 함정 위치예요. 이게 진짜 값나가는 거죠."
+					}
+				},
+				{
+					"speaker": "echo",
+					"content": {
+						"korean": "함정 위치라니. 그럼 이 페이지 없이 손댔으면 어땠을까. 생각만 해도 아찔하네."
+					}
+				}
+			]
+		}
+	],
+	"_side": {
+		"slot": "B",
+		"person": {
+			"id": "manual_dealer",
+			"name": "설명서 장물업자",
+			"role": "제어실 장물업자"
+		},
+		"wants": "복구 설명서를 페이지 단위로 팔고 있다며, 값을 치르면 조각 맞추는 순서를 알려 주겠다고 한다.",
+		"rule_link": "스크린 조각을 맞추는 순서가 적힌 설명서인데, 업자는 그 페이지를 뜯어 조각 위에 흔들며 값을 부른다.",
+		"rep": "reason+",
+		"events": {},
+		"flags": {
+			"grabbed_manual": {
+				"kind": "bad",
+				"boss_penalty": -1,
+				"label": {
+					"korean": "빼앗은 설명서"
+				},
+				"boss_line": {
+					"korean": "당신은 순서가 뒤섞인 설명서를 한 장씩 뒤져 가며 스크린 조각을 맞춘다."
+				}
+			},
+			"bought_manual": {
+				"kind": "good",
+				"boss_penalty": 1,
+				"label": {
+					"korean": "온전한 설명서"
+				},
+				"boss_choice": {
+					"korean": "당신은 온전한 설명서의 순서대로 스크린 조각을 맞춘다."
+				}
+			},
+			"laid_manual": {
+				"kind": "good",
+				"boss_penalty": 2,
+				"label": {
+					"korean": "내려놓은 설명서"
+				},
+				"boss_choice": {
+					"korean": "당신은 업자가 두고 간 설명서를 펼쳐 순서대로 스크린 조각을 맞춘다."
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,171 @@
+{
+	"id": "card_02_rep_fighting_plus_jamie",
+	"title": {
+		"korean": "끼어버린 빗자루"
+	},
+	"intensity": "calm",
+	"after_story": 1,
+	"before_story": 3,
+	"condition": {
+		"leaning": "fighting+",
+		"among": [
+			"fighting-",
+			"fighting+",
+			"community-",
+			"community+",
+			"reason-",
+			"reason+"
+		],
+		"min": 20
+	},
+	"urgency": 8,
+	"leaning": "fighting+",
+	"background_tags": [
+		"powerroom",
+		"dim",
+		"sparks",
+		"dusty",
+		"tense"
+	],
+	"dialogue": [
+		{
+			"speaker": "trapped_cleaner",
+			"content": {
+				"korean": "위험에 처한 사람을 보면 어떻게든 구해주고 본다면서요?"
+			}
+		},
+		{
+			"speaker": "trapped_cleaner",
+			"content": {
+				"korean": "제 빗자루가 저기 끼었어요! 코드를 ��아야 꺼낼 수 있어요."
+			}
+		},
+		{
+			"speaker": "lin",
+			"content": {
+				"korean": "스파크가 튀고 있어요! 다치기 전에 얼른 코드를 빼서 도와주죠."
+			}
+		}
+	],
+	"choices": [
+		{
+			"text": {
+				"korean": "위험을 무릅쓰고 코드를 뽑아 빗자루를 꺼내준다."
+			},
+			"path": "easy",
+			"mbti": "FJ",
+			"flag": "jamie_spark_burn",
+			"effects": {
+				"fighting": 20,
+				"gold": 50
+			},
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "제이미가 연신 고맙다고 인사한다. 손등에 화상을 입었다."
+					}
+				}
+			]
+		},
+		{
+			"text": {
+				"korean": "빗자루를 포기하라고 차갑게 말하며 코드만 뽑는다."
+			},
+			"path": "hard",
+			"mbti": "TP",
+			"flag": "jamie_thick_gloves",
+			"effects": {
+				"echo": -10,
+				"fighting": -20
+			},
+			"reward": [
+				"defense_up"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "제이미가 울상을 지으며 두꺼운 장갑을 바닥에 버리고 도망친다."
+					}
+				}
+			]
+		},
+		{
+			"text": {
+				"korean": "주변의 고무 매트를 덮고 안전하게 코드를 뽑는다."
+			},
+			"path": "stat",
+			"mbti": "NF",
+			"require": {
+				"stat": "fighting",
+				"op": ">=",
+				"value": 40
+			},
+			"flag": "jamie_rubber_mat",
+			"effects": {
+				"fighting": 30,
+				"echo": 10
+			},
+			"reward": [
+				"shield"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "스파크가 고무 매트에 막힌다. 제이미가 무사히 빗자루를 챙긴다."
+					}
+				}
+			]
+		}
+	],
+	"kind": "rep",
+	"_side": {
+		"slot": "A",
+		"person": {
+			"id": "trapped_cleaner",
+			"name": "제이미",
+			"role": "청소부"
+		},
+		"wants": "",
+		"rule_link": "",
+		"rep": "fighting+",
+		"events": {},
+		"flags": {
+			"jamie_spark_burn": {
+				"boss_penalty": -1,
+				"label": {
+					"korean": "스파크 화상"
+				},
+				"boss_line": {
+					"korean": "스파크에 데인 상처가 덧나면서 움직임이 둔해진다."
+				},
+				"kind": "bad"
+			},
+			"jamie_thick_gloves": {
+				"boss_penalty": 1,
+				"label": {
+					"korean": "두꺼운 장갑"
+				},
+				"boss_choice": {
+					"korean": "제이미가 남긴 두꺼운 장갑을 끼고 뜨거운 코어를 맨손으로 잡는다."
+				},
+				"kind": "good"
+			},
+			"jamie_rubber_mat": {
+				"boss_penalty": 2,
+				"label": {
+					"korean": "고무 매트"
+				},
+				"boss_choice": {
+					"korean": "주워둔 고무 매트를 펼쳐 전기 공격을 차단한다."
+				},
+				"kind": "good"
+			}
+		}
+	}
+}

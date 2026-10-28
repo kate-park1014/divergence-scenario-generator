@@ -1,0 +1,142 @@
+{
+	"id": "card_04_analog_ledger",
+	"kind": "callback",
+	"title": {
+		"korean": "아날로그 장부"
+	},
+	"intensity": "high",
+	"after_story": 5,
+	"before_story": 7,
+	"callback": {
+		"seed": "secret_ledger_hard",
+		"min_rooms_after": 2
+	},
+	"background_tags": [
+		"paper",
+		"crowd",
+		"dim",
+		"waste",
+		"labels"
+	],
+	"dialogue": [
+		{
+			"speaker": "narrator",
+			"content": {
+				"korean": "혼란에 빠진 사람들 사이에서 토마가 여유롭게 수첩을 넘기고 있다."
+			}
+		},
+		{
+			"speaker": "toma",
+			"content": {
+				"korean": "하하! 그때 네가 거래를 거절한 덕에 데이터망 대신 종이 수첩만 챙겼지!"
+			}
+		},
+		{
+			"speaker": "toma",
+			"content": {
+				"korean": "지금 이 구역에서 제대로 된 폐기물 정보는 나한테만 있다고. 하나 살 텐가?"
+			}
+		},
+		{
+			"speaker": "dax",
+			"content": {
+				"korean": "거절했던 게 오히려 전화위복이 됐네."
+			}
+		}
+	],
+	"choices": [
+		{
+			"text": {
+				"korean": "아날로그 방식이 최고라며 토마를 치켜세워 공짜로 지도를 얻어낸다."
+			},
+			"path": "easy",
+			"mbti": "EF",
+			"flag": "safe_map",
+			"effects": {
+				"community": 10,
+				"reason": -10
+			},
+			"reward": [
+				"move_range_up"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "당신의 칭찬에 우쭐해진 토마가 기분 좋게 지도를 건넨다."
+					}
+				},
+				{
+					"speaker": "toma",
+					"content": {
+						"korean": "하하! 넌 역시 뭘 좀 아는 녀석이라니까. 이거 가져가!"
+					}
+				}
+			]
+		},
+		{
+			"text": {
+				"korean": "지난번에 거래를 거절했던 일을 언급하며 정당한 정보 공유를 요구한다."
+			},
+			"path": "hard",
+			"mbti": "TJ",
+			"flag": "toma_hint",
+			"effects": {
+				"echo": -5,
+				"reason": 15
+			},
+			"reward": [
+				"defense_up"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "당신의 정론에 찔린 토마가 마지못해 안전한 경로를 알려준다."
+					}
+				},
+				{
+					"speaker": "toma",
+					"content": {
+						"korean": "쳇, 말이나 못 하면. 메인 파이프 쪽은 피해서 가."
+					}
+				}
+			]
+		}
+	],
+	"_side": {
+		"slot": "C",
+		"person": {
+			"id": "toma",
+			"role": "잡동사니 상인",
+			"name": "토마"
+		},
+		"wants": "아날로그 장부 덕에 피해를 면했다며 정확한 폐기물 정보를 사라고 제안한다.",
+		"rule_link": "정보가 섞이는 현상 속에서도 아날로그로 따로 관리한 장부 덕에 온전한 정보를 유지했다.",
+		"events": {},
+		"flags": {
+			"safe_map": {
+				"kind": "good",
+				"boss_penalty": 1,
+				"label": {
+					"korean": "안전한 지도"
+				},
+				"boss_choice": {
+					"korean": "당신은 토마에게 얻은 지도를 활용해 위험 폐기물 구역을 우회한다."
+				}
+			},
+			"toma_hint": {
+				"kind": "good",
+				"boss_penalty": 2,
+				"label": {
+					"korean": "토마의 힌트"
+				},
+				"boss_choice": {
+					"korean": "당신은 토마가 마지못해 공유해 준 힌트를 떠올려 메인 파이프의 폭발을 피한다."
+				}
+			}
+		}
+	}
+}

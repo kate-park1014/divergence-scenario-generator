@@ -1,0 +1,221 @@
+{
+	"id": "card_01_silvia_locked_door",
+	"kind": "rep",
+	"title": {
+		"korean": "잠겨버린 출입문"
+	},
+	"intensity": "calm",
+	"after_story": 7,
+	"before_story": 10,
+	"condition": {
+		"leaning": "fighting+",
+		"among": [
+			"fighting-",
+			"fighting+",
+			"community-",
+			"community+",
+			"reason-",
+			"reason+"
+		],
+		"min": 20
+	},
+	"urgency": 8,
+	"leaning": "fighting+",
+	"background_tags": [
+		"locked_door",
+		"server_rack",
+		"flashing_lights",
+		"confused_crowd",
+		"noisy_drone"
+	],
+	"dialogue": [
+		{
+			"speaker": "echo",
+			"content": {
+				"korean": "배달 드론 데이터가 섞이면서 저쪽 문이 아예 잠겨버렸네."
+			}
+		},
+		{
+			"speaker": "narrator",
+			"content": {
+				"korean": "잠긴 문 너머에서 길 잃은 방문객이 유리를 두드리며 당신을 부른다."
+			}
+		},
+		{
+			"speaker": "silvia",
+			"content": {
+				"korean": "곤경에 처한 사람을 그냥 지나치지 못한다더니, 정말 와주셨네요! 제발 이 문 좀 열어주세요!"
+			}
+		}
+	],
+	"choices": [
+		{
+			"text": {
+				"korean": "고장 난 문을 억지로 비틀어 열어준다."
+			},
+			"path": "easy",
+			"mbti": "FJ",
+			"flag": "force_door_open",
+			"effects": {
+				"fighting": 20,
+				"echo": 10
+			},
+			"reward": [
+				"hp_down"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "당신이 억지로 문을 비틀어 열자 실비아가 연신 고개를 숙이며 빠져나간다."
+					}
+				},
+				{
+					"speaker": "echo",
+					"content": {
+						"korean": "다행이긴 한데, 문이 너무 삐걱거려서 소문이 다 나겠어."
+					}
+				}
+			]
+		},
+		{
+			"text": {
+				"korean": "알아서 빠져나오라며 실비아를 무시한다."
+			},
+			"path": "hard",
+			"mbti": "TP",
+			"flag": "ignore_silvia",
+			"effects": {
+				"fighting": -20,
+				"echo": -10
+			},
+			"reward": [
+				"move_range_up"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "당신이 차갑게 돌아서자 실비아가 당황하며 문을 두드린다."
+					}
+				},
+				{
+					"speaker": "echo",
+					"content": {
+						"korean": "지금은 우리 코가 석 자니까 어쩔 수 없지. 빨리 이동하자."
+					}
+				}
+			]
+		},
+		{
+			"text": {
+				"korean": "배관을 타고 넘어가 수동으로 잠금장치를 푼다."
+			},
+			"path": "stat",
+			"mbti": "IS",
+			"require": {
+				"stat": "fighting",
+				"op": ">=",
+				"value": 40
+			},
+			"flag": "climb_pipe",
+			"effects": {
+				"fighting": 30,
+				"echo": 15
+			},
+			"reward": [
+				"defense_up"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "당신이 배관을 타고 넘어가 잠금장치를 풀자 문이 부드럽게 열린다."
+					}
+				},
+				{
+					"speaker": "echo",
+					"content": {
+						"korean": "와, 배관을 그렇게 잘 탈 줄은 몰랐어!"
+					}
+				}
+			]
+		},
+		{
+			"text": {
+				"korean": "배달 드론을 문에 충돌시켜 폭파시킨다."
+			},
+			"path": "fun",
+			"mbti": "EP",
+			"effects": {
+				"reason": 10,
+				"echo": -5
+			},
+			"reward": [
+				"attack_up"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "드론이 문에 처박히며 폭발하자, 놀란 실비아가 비명을 지르며 도망친다."
+					}
+				},
+				{
+					"speaker": "echo",
+					"content": {
+						"korean": "문은 열렸는데... 저 사람 울고 있잖아."
+					}
+				}
+			]
+		}
+	],
+	"_side": {
+		"slot": "D",
+		"person": {
+			"id": "silvia",
+			"role": "길 잃은 방문객",
+			"name": "실비아"
+		},
+		"wants": "고장 난 문을 억지로 열어 자신을 구해달라고 함",
+		"rule_link": "데이터 혼선으로 고립된 방문객을 도울지 무시할지 선택",
+		"rep": "fighting+",
+		"events": {},
+		"flags": {
+			"force_door_open": {
+				"kind": "bad",
+				"boss_penalty": -1,
+				"label": {
+					"korean": "삐걱이는 문"
+				},
+				"boss_line": {
+					"korean": "억지로 연 문이 삐걱거리며 보안관의 주의를 끈다."
+				}
+			},
+			"ignore_silvia": {
+				"kind": "good",
+				"boss_penalty": 1,
+				"label": {
+					"korean": "빠른 이동"
+				},
+				"boss_choice": {
+					"korean": "지체 없이 이동해 보안관의 동선을 미리 파악한다."
+				}
+			},
+			"climb_pipe": {
+				"kind": "good",
+				"boss_penalty": 2,
+				"label": {
+					"korean": "배관 타기"
+				},
+				"boss_choice": {
+					"korean": "배관을 타고 이동하며 보안관의 시야를 피한다."
+				}
+			}
+		}
+	}
+}

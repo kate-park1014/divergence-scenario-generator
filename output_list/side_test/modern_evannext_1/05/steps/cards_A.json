@@ -1,0 +1,370 @@
+{
+	"cards": [
+		{
+			"wants": "부실한 경력을 과장해서 서류를 통과하고 싶어 한다.",
+			"background_tags": [
+				"waiting_room",
+				"dim_light",
+				"paper_piles",
+				"crowded_waiters",
+				"tense_atmosphere"
+			],
+			"key": "minseok_resume",
+			"no": 1,
+			"choices": [
+				{
+					"text": "민석의 요청대로 경력을 최고 등급으로 과장해 적어준다.",
+					"effects": {
+						"echo": 10,
+						"reason": -15
+					},
+					"path": "easy",
+					"mbti": "NF",
+					"reward": [
+						"move_range_up"
+					],
+					"result": [
+						{
+							"speaker": "narrator",
+							"text": "민석의 이력서에 화려한 거짓 경력을 적어주었다."
+						},
+						{
+							"speaker": "minseok",
+							"text": "고맙습니다! 대기실 내부에 감춰진 구밀 정보를 드릴게요."
+						}
+					]
+				},
+				{
+					"effects": {
+						"fighting": 15,
+						"reason": 10
+					},
+					"mbti": "TJ",
+					"result": [
+						{
+							"text": "민석은 크게 반발하며 서류를 빼앗아 제출함으로 달려갔다.",
+							"speaker": "narrator"
+						},
+						{
+							"text": "원칙을 지켰지만 민석 씨의 화를 사고 말았네요.",
+							"speaker": "lin"
+						}
+					],
+					"reward": [
+						"defense_up"
+					],
+					"text": "거짓 경력 작성을 거절하고 원래 서류대로 제출하게 한다.",
+					"path": "hard"
+				},
+				{
+					"require_mbti": "IT",
+					"mbti": "IT",
+					"reward": [
+						"intelligence_up"
+					],
+					"result": [
+						{
+							"text": "{actor}의 세심한 정돈 덕에 민석의 서류는 과장 없이도 규격을 갖추었다.",
+							"speaker": "narrator"
+						},
+						{
+							"speaker": "minseok",
+							"text": "거짓말을 안 적고도 제출할 수 있다니, 고맙습니다."
+						}
+					],
+					"text": "{actor}이(가) 민석의 이력서 양식을 깔끔하게 정리해 서류를 통과시킨다.",
+					"path": "lock",
+					"effects": {
+						"reason": 20,
+						"echo": 5
+					}
+				}
+			],
+			"title": "민석의 텅 빈 경력란",
+			"rule_link": "텅 빈 경력 대신 허위 이력을 채워 제출하게 만드는 대기실의 서류 규정",
+			"dialogue": [
+				{
+					"speaker": "narrator",
+					"text": "지원자 민석이 펜을 쥔 손을 떨며 이력서 제출함 앞을 서성거렸다."
+				},
+				{
+					"text": "부탁입니다! 이전 시험 기록을 전부 최고 등급으로 바꿔 적어주세요!",
+					"speaker": "minseok"
+				},
+				{
+					"text": "서류에 거짓을 적으면 당장은 넘어가겠지만 위험해요.",
+					"speaker": "lin"
+				},
+				{
+					"text": "이대로 제출하면 제 이름마저 서류함에서 사라진단 말입니다!",
+					"speaker": "minseok"
+				}
+			],
+			"person": {
+				"role": "지원자",
+				"name": "민석",
+				"id": "minseok"
+			},
+			"slot": "A",
+			"kind": "plant"
+		},
+		{
+			"wants": "통과 기준을 맞추기 위해 지원자들의 과장 서명을 빠르게 수집하고 싶어 한다.",
+			"dialogue": [
+				{
+					"text": "안내원 유리가 도장이 가득 찍힌 서류 뭉치를 든 채 당신을 막아섰다.",
+					"speaker": "narrator"
+				},
+				{
+					"text": "딱 한 명의 과장 서명만 더 모으면 이번 칸의 제출함이 채워집니다!",
+					"speaker": "yuri"
+				},
+				{
+					"speaker": "lin",
+					"text": "저 사람, 과장 서류를 모으는 데 지나치게 집착하고 있어요."
+				},
+				{
+					"speaker": "yuri",
+					"text": "그냥 서명 하나만 해주세요. 컵 아래에 서명을 숨겨둘 테니 뽑기만 하시면 됩니다."
+				}
+			],
+			"key": "yuri_stamp",
+			"rule_link": "일정 수 이상의 과장 서류를 모아야만 안내대를 유지하는 대기실 운영 방식",
+			"person": {
+				"id": "yuri",
+				"role": "대기실 안내원",
+				"name": "유리"
+			},
+			"background_tags": [
+				"desk_area",
+				"bright_lamp",
+				"paper_stack",
+				"busy_hall",
+				"anxious_people"
+			],
+			"title": "안내원 유리의 서명 요청",
+			"no": 2,
+			"choices": [
+				{
+					"event_intro": [
+						{
+							"text": "유리가 테이블 위에 컵 3개를 엎어놓고 빠르게 섞기 시작했다.",
+							"speaker": "narrator"
+						},
+						{
+							"speaker": "yuri",
+							"text": "서명이 적힌 용지가 들어있는 컵을 찾아내면 통과입니다!"
+						}
+					],
+					"path": "easy",
+					"result": [
+						{
+							"speaker": "narrator",
+							"text": "컵 하나를 고르자 서명 용지가 드러났다."
+						},
+						{
+							"speaker": "yuri",
+							"text": "약속대로 허위 서명 수록을 완료했습니다!"
+						}
+					],
+					"event_reason": "유리가 3개의 컵 아래 서명 용지를 숨겨두고 하나를 고르게 했다.",
+					"text": "유리의 컵 뽑기 제안에 응해 서명 용지를 고른다.",
+					"event": "minigame_cup",
+					"effects": {
+						"gold": 50,
+						"echo": -5
+					},
+					"mbti": "EP"
+				},
+				{
+					"path": "hard",
+					"text": "허위 서명 수집을 거부하고 유리의 서류판을 치워버린다.",
+					"result": [
+						{
+							"text": "유리의 손에 들려 있던 서류판을 멀리 내던졌다.",
+							"speaker": "narrator"
+						},
+						{
+							"text": "아악! 서명 모으기가 전부 허사로 돌아갔잖아요!",
+							"speaker": "yuri"
+						}
+					],
+					"reward": [
+						"attack_up"
+					],
+					"effects": {
+						"fighting": 20,
+						"reason": 10
+					},
+					"mbti": "NT"
+				},
+				{
+					"path": "gold",
+					"text": "유리에게 100골드를 주고 서명 요구를 철회하게 한다.",
+					"effects": {
+						"gold": -100,
+						"reason": 15
+					},
+					"mbti": "SF",
+					"reward": [
+						"shield"
+					],
+					"result": [
+						{
+							"speaker": "narrator",
+							"text": "금전을 받은 유리는 못 이기는 척 서명판을 치워두었다."
+						},
+						{
+							"text": "돈으로 해결했지만 조용히 넘어가서 다행이에요.",
+							"speaker": "lin"
+						}
+					]
+				}
+			],
+			"slot": "A",
+			"kind": "normal"
+		},
+		{
+			"dialogue": [
+				{
+					"speaker": "narrator",
+					"text": "지원자 세진이 이력서 제출함 구석에 앉아 거친 숨을 내쉬었다."
+				},
+				{
+					"speaker": "sejin",
+					"text": "더는 허위 서류를 적어 내고 싶지 않아요. 조금만 쉬게 해주세요."
+				},
+				{
+					"text": "지친 사람을 무리하게 밀어붙이면 서류함 잔재가 더 엉킬 거예요.",
+					"speaker": "lin"
+				},
+				{
+					"speaker": "sejin",
+					"text": "제발 잠깐이라도 조용히 앉아 있을 자리를 내주세요."
+				}
+			],
+			"title": "제출함 앞의 휴식",
+			"key": "sejin_break",
+			"forced": [
+				{
+					"mbti": "EF",
+					"reward": [
+						"heal"
+					],
+					"result": [
+						{
+							"speaker": "narrator",
+							"text": "{actor}의 강압적인 친절에 세진은 당황하면서도 구석에 앉아 쉬었다."
+						},
+						{
+							"text": "덕분에 억지로 서류를 내지 않고 쉴 수 있었어요.",
+							"speaker": "sejin"
+						}
+					],
+					"require_mbti": "EF",
+					"effects": {
+						"echo": 10,
+						"community": 20
+					},
+					"text": "{actor}이(가) 세진의 손을 잡고 강제로 휴식 구역으로 끌고 간다."
+				}
+			],
+			"wants": "과장된 이력서 제출을 미루고 잠시 쉬고 싶어 한다.",
+			"rule_link": "과장 제출 압박 속에서 서류함을 멀리하고 체력을 회복하려는 시도",
+			"choices": [
+				{
+					"mbti": "FP",
+					"event_intro": [
+						{
+							"speaker": "narrator",
+							"text": "세진이 가방에서 푹신한 방석을 꺼내 바닥에 깔았다."
+						},
+						{
+							"text": "여기는 안전해요. 차라도 한잔 마시며 숨을 돌리죠.",
+							"speaker": "sejin"
+						}
+					],
+					"result": [
+						{
+							"text": "제출함 구석에서 어깨를 맞대고 잠시 안식을 취했다.",
+							"speaker": "narrator"
+						},
+						{
+							"speaker": "sejin",
+							"text": "덕분에 마음이 조금 가라앉았어요."
+						}
+					],
+					"event": "campsite",
+					"text": "세진 옆에 앉아 제출함의 소란을 피하고 푹 쉰다.",
+					"effects": {
+						"echo": 10,
+						"community": 15
+					},
+					"path": "easy",
+					"event_reason": "세진과 함께 제출함 구석에서 잠시 휴식을 취하기로 했다."
+				},
+				{
+					"mbti": "TJ",
+					"reward": [
+						"cooldown_reset"
+					],
+					"result": [
+						{
+							"text": "세진을 압박하여 통로 중앙에서 치워냈다.",
+							"speaker": "narrator"
+						},
+						{
+							"text": "너무하네요. 다들 제정신이 아니야!",
+							"speaker": "sejin"
+						}
+					],
+					"effects": {
+						"fighting": 15,
+						"reason": -10
+					},
+					"path": "hard",
+					"text": "세진에게 바로 서류를 제출하도록 독촉하여 통로를 비우게 한다."
+				},
+				{
+					"mbti": "EN",
+					"reward": [
+						"heal"
+					],
+					"result": [
+						{
+							"speaker": "narrator",
+							"text": "종이비행기가 공중을 휘저으며 수거함 속으로 골인했다."
+						},
+						{
+							"speaker": "lin",
+							"text": "엄청난 비행 실력이네요! 세진 씨도 멍하니 바라보고 있어요."
+						}
+					],
+					"text": "세진의 과장된 이력서를 종이비행기로 접어 날려 버린다.",
+					"effects": {
+						"gold": 50,
+						"reason": -20
+					},
+					"path": "fun"
+				}
+			],
+			"no": 3,
+			"person": {
+				"name": "세진",
+				"id": "sejin",
+				"role": "지친 지원자"
+			},
+			"background_tags": [
+				"corner_bench",
+				"dusty_corner",
+				"resume_box",
+				"exhausted_crowd",
+				"quiet_place"
+			],
+			"slot": "A",
+			"kind": "normal"
+		}
+	],
+	"errors": [],
+	"prompt_hash": "580ff6f97c9661648cb6e99ca4268117ec1e32a0"
+}

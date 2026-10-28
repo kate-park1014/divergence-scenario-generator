@@ -1,0 +1,183 @@
+{
+	"id": "card_02_worker_cables_trapped",
+	"kind": "callback",
+	"title": {
+		"korean": "불타는 케이블"
+	},
+	"intensity": "high",
+	"after_story": 7,
+	"before_story": 10,
+	"callback": {
+		"seed": "worker_cables_easy",
+		"min_rooms_after": 2
+	},
+	"background_tags": [
+		"emergency_room",
+		"thick_cables",
+		"blazing_fire",
+		"black_smoke",
+		"sparks"
+	],
+	"dialogue": [
+		{
+			"speaker": "repair_worker",
+			"content": {
+				"korean": "살려줘! 아까 고정했던 케이블에 불이 붙어서 나갈 길이 막혔어!"
+			}
+		},
+		{
+			"speaker": "repair_worker",
+			"content": {
+				"korean": "데이터 스크린 조각들이 폭발하고 있다고! 제발 나 좀 여기서 꺼내줘!"
+			}
+		},
+		{
+			"speaker": "lin",
+			"content": {
+				"korean": "우리가 수리를 도왔던 그 케이블이 화재의 원인이 되었네요… 당장 구해야 해요."
+			}
+		},
+		{
+			"speaker": "lin",
+			"content": {
+				"korean": "불길이 너무 거세서 잘못하면 우리까지 갇힐 수 있어요."
+			}
+		}
+	],
+	"choices": [
+		{
+			"text": {
+				"korean": "불길이 무서워 돈이 든 그�� 작업 가방만 챙기고 대충 길을 터준다."
+			},
+			"path": "easy",
+			"mbti": "TP",
+			"flag": "harrison_grudge",
+			"effects": {
+				"gold": 150,
+				"community": -20,
+				"echo": -10,
+				"reason": -10
+			},
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "당신이 짐만 챙겨 빠져나가자 해리슨은 욕설을 퍼부으며 스스로 탈출구를 찾았다."
+					}
+				},
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "린은 당신의 행동에 충격을 받은 듯 입을 다물었다."
+					}
+				}
+			]
+		},
+		{
+			"text": {
+				"korean": "불길을 뚫고 들어가 케이블을 끊어내고 그를 안전하게 구출한다."
+			},
+			"path": "hard",
+			"mbti": "FJ",
+			"flag": "repair_tools",
+			"effects": {
+				"echo": 15,
+				"fighting": 20,
+				"community": 20
+			},
+			"reward": [
+				"hp_down"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "당신은 화상을 입어가며 케이블을 끊어 해리슨을 밖으로 끌어냈다."
+					}
+				},
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "그는 목숨을 건졌다며 자신의 수리 도구를 당신에게 넘겨주었다."
+					}
+				}
+			]
+		},
+		{
+			"text": {
+				"korean": "주변의 무너진 구조물을 지렛대 삼아 불타는 케이블을 들어올린다."
+			},
+			"path": "stat",
+			"mbti": "ST",
+			"flag": "heavy_pipe",
+			"effects": {
+				"community": 10,
+				"echo": 5,
+				"fighting": 10
+			},
+			"reward": [
+				"attack_up"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "당신이 지렛대로 케이블을 들어올리자 해리슨이 재빨리 기���나왔다."
+					}
+				},
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "그는 목숨을 건졌다며 무거운 파이프를 넘겨주었다."
+					}
+				}
+			]
+		}
+	],
+	"_side": {
+		"slot": "D",
+		"person": {
+			"role": "전력실 수리공",
+			"name": "해리슨",
+			"id": "repair_worker"
+		},
+		"wants": "과열로 단단히 고정된 케이블에 불이 붙어 갇혀버렸다며 구출해달라고 한다.",
+		"rule_link": "전원 코드를 뽑아 과열된 서버에서 튄 불꽃이 무리하게 고정했던 케이블에 옮겨붙었다.",
+		"events": {},
+		"flags": {
+			"harrison_grudge": {
+				"kind": "bad",
+				"boss_penalty": -1,
+				"label": {
+					"korean": "해리슨의 원망"
+				},
+				"boss_line": {
+					"korean": "버림받은 기억에 분노한 해리슨이 통로의 문을 닫아버려 당신을 가둔다."
+				}
+			},
+			"repair_tools": {
+				"kind": "good",
+				"boss_penalty": 1,
+				"label": {
+					"korean": "수리 도구"
+				},
+				"boss_choice": {
+					"korean": "해리슨이 두고 간 수리 도구로 시스템의 제어 장치를 강제로 뜯어낸다."
+				}
+			},
+			"heavy_pipe": {
+				"kind": "good",
+				"boss_penalty": 1,
+				"label": {
+					"korean": "무거운 파이프"
+				},
+				"boss_choice": {
+					"korean": "해리슨이 남긴 무거운 파이프를 휘둘러 시스템의 방어막을 깬다."
+				}
+			}
+		}
+	}
+}

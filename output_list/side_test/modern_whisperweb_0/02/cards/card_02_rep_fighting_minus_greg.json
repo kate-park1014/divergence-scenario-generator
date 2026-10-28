@@ -1,0 +1,194 @@
+{
+	"id": "card_02_rep_fighting_minus_greg",
+	"title": {
+		"korean": "부서진 단말기 강탈"
+	},
+	"intensity": "calm",
+	"after_story": 1,
+	"before_story": 3,
+	"condition": {
+		"leaning": "fighting-",
+		"among": [
+			"fighting-",
+			"fighting+",
+			"community-",
+			"community+",
+			"reason-",
+			"reason+"
+		],
+		"min": 20
+	},
+	"urgency": 8,
+	"leaning": "fighting-",
+	"background_tags": [
+		"powerroom",
+		"dim",
+		"machinery",
+		"empty",
+		"tense"
+	],
+	"dialogue": [
+		{
+			"speaker": "thug_mechanic",
+			"content": {
+				"korean": "네가 그 거슬리는 놈들을 전부 힘으로 밟아버렸다는 녀석이군."
+			}
+		},
+		{
+			"speaker": "thug_mechanic",
+			"content": {
+				"korean": "이 단말기 속 데이터 스크린 조각이 필요해. 코드를 확 뽑아버려."
+			}
+		},
+		{
+			"speaker": "lin",
+			"content": {
+				"korean": "저 사람이 부품을 건드리기 전에 빨리 전원부터 차단하는 게 좋겠어요."
+			}
+		}
+	],
+	"choices": [
+		{
+			"text": {
+				"korean": "렌치로 단말기의 코드를 강제로 뽑아 부순다."
+			},
+			"path": "easy",
+			"mbti": "TJ",
+			"flag": "greg_broken_parts",
+			"effects": {
+				"gold": 100,
+				"fighting": -20
+			},
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "그렉이 웃으며 데이터를 빼낸다. 단말기 파편이 사방으로 튄다."
+					}
+				}
+			]
+		},
+		{
+			"text": {
+				"korean": "얌전히 단말기 절차에 따라 종료를 시도한다."
+			},
+			"path": "hard",
+			"mbti": "FP",
+			"flag": "greg_normal_log",
+			"effects": {
+				"echo": 10,
+				"fighting": 20
+			},
+			"reward": [
+				"defense_up"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "그렉이 욕설을 내뱉으며 멀어진다. 단말기는 서서히 꺼진다."
+					}
+				}
+			]
+		},
+		{
+			"text": {
+				"korean": "눈빛만으로 그렉을 위협해 부품을 뺏고 코드를 뽑는다."
+			},
+			"path": "stat",
+			"mbti": "ST",
+			"require": {
+				"stat": "fighting",
+				"op": "<=",
+				"value": -40
+			},
+			"flag": "greg_stolen_part",
+			"effects": {
+				"fighting": -30,
+				"echo": -10
+			},
+			"reward": [
+				"shield"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "그렉이 렌치를 떨어뜨리고 도망간다. 당신은 안전하게 코드를 뽑는다."
+					}
+				}
+			]
+		},
+		{
+			"text": {
+				"korean": "그렉의 렌치를 뺏어서 멀리 던져버린다."
+			},
+			"path": "fun",
+			"mbti": "EN",
+			"effects": {
+				"echo": 5,
+				"reason": 15
+			},
+			"reward": [
+				"cooldown_reset"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "그렉이 비명을 지르며 렌치를 찾으러 뛰어간다. 주변이 조용해진다."
+					}
+				}
+			]
+		}
+	],
+	"kind": "rep",
+	"_side": {
+		"slot": "A",
+		"person": {
+			"id": "thug_mechanic",
+			"name": "그렉",
+			"role": "뒷골목 기계공"
+		},
+		"wants": "",
+		"rule_link": "",
+		"rep": "fighting-",
+		"events": {},
+		"flags": {
+			"greg_broken_parts": {
+				"boss_penalty": -1,
+				"label": {
+					"korean": "단말기 파편"
+				},
+				"boss_line": {
+					"korean": "단말기 파편이 튀어 바닥에 흩어지며 발목을 잡는다."
+				},
+				"kind": "bad"
+			},
+			"greg_normal_log": {
+				"boss_penalty": 1,
+				"label": {
+					"korean": "종료 기록"
+				},
+				"boss_choice": {
+					"korean": "정상 종료 시도 기록을 방패막이로 삼아 공격을 피한다."
+				},
+				"kind": "good"
+			},
+			"greg_stolen_part": {
+				"boss_penalty": 2,
+				"label": {
+					"korean": "빼앗은 부품"
+				},
+				"boss_choice": {
+					"korean": "빼앗은 불법 부품을 방패로 사용해 충격을 막아낸다."
+				},
+				"kind": "good"
+			}
+		}
+	}
+}

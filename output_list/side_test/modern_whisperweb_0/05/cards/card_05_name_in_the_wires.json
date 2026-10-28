@@ -1,0 +1,219 @@
+{
+	"id": "card_05_name_in_the_wires",
+	"kind": "rep",
+	"title": {
+		"korean": "이름이 새겨진 회로"
+	},
+	"intensity": "calm",
+	"after_story": 7,
+	"before_story": 10,
+	"condition": {
+		"leaning": "fighting-",
+		"among": [
+			"fighting-",
+			"fighting+",
+			"community-",
+			"community+",
+			"reason-",
+			"reason+"
+		],
+		"min": 20
+	},
+	"urgency": 8,
+	"leaning": "fighting-",
+	"background_tags": [
+		"control_room",
+		"late_night",
+		"blue_spark",
+		"empty_floor",
+		"tense"
+	],
+	"dialogue": [
+		{
+			"speaker": "narrator",
+			"content": {
+				"korean": "제어실 바닥에 흩어진 조각들이 맞춰진 자리마다 회로가 파랗게 타올랐다."
+			}
+		},
+		{
+			"speaker": "hardline_foreman",
+			"content": {
+				"korean": "당신이 그 조각들 부수고 다니는 사람이죠? 서명이 찍힌 회로는 내 배상금이야."
+			}
+		},
+		{
+			"speaker": "echo",
+			"content": {
+				"korean": "저 사람 지금 돈 얘기할 때가 아닌데! 조각이 맞춰질수록 놈이 더 가까이 오고 있어!"
+			}
+		},
+		{
+			"speaker": "hardline_foreman",
+			"content": {
+				"korean": "돈이 먼저야. 회로를 뜯어낼 거면 내 앞에서 뜯어내."
+			}
+		}
+	],
+	"choices": [
+		{
+			"text": {
+				"korean": "배선 반장 앞에서 서명 회로를 뜯어낸다"
+			},
+			"path": "easy",
+			"mbti": "TJ",
+			"flag": "torn_signature_circuit",
+			"effects": {
+				"fighting": 20,
+				"community": -10,
+				"echo": -5
+			},
+			"reward": [
+				"attack_up"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "회로가 뜯기자 반장의 손에 파란 잔불이 남았다. 그는 그 불꽃을 손수건으로 닦아냈다."
+					}
+				},
+				{
+					"speaker": "hardline_foreman",
+					"content": {
+						"korean": "좋아, 이걸로 배상금은 확보했어. 조각은 당신이 알아서 해."
+					}
+				},
+				{
+					"speaker": "echo",
+					"content": {
+						"korean": "잠깐, 회로를 뜯어내니까 놈의 신호가 한 줄 줄었어! 이거 쓸 만한데?"
+					}
+				}
+			]
+		},
+		{
+			"text": {
+				"korean": "서명 회로를 반장에게 넘기고 조각 맞추기를 계속한다"
+			},
+			"path": "hard",
+			"mbti": "FP",
+			"flag": "foreman_debt",
+			"effects": {
+				"fighting": -15,
+				"community": 15,
+				"echo": 10
+			},
+			"reward": [
+				"intelligence_up"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "반장이 회로를 품에 넣고 뒤로 물러섰다. 조각 하나가 손끝에서 제자리를 찾았다."
+					}
+				},
+				{
+					"speaker": "hardline_foreman",
+					"content": {
+						"korean": "이 은혜는 잊지 않을게. 나중에 이 회로가 필요해지면 말해."
+					}
+				},
+				{
+					"speaker": "echo",
+					"content": {
+						"korean": "미련 없네. 근데 저 반장, 빚은 꼭 갚는 사람이야. 나쁘지 않아."
+					}
+				}
+			]
+		},
+		{
+			"text": {
+				"korean": "배선 반장에게 서명 회로를 찾아주는 대가로 통로를 비켜 달라 한다"
+			},
+			"path": "stat",
+			"mbti": "EN",
+			"require": {
+				"stat": "fighting",
+				"op": "<=",
+				"value": -40
+			},
+			"flag": "cleared_wire_path",
+			"effects": {
+				"fighting": -25,
+				"reason": -10,
+				"echo": 5
+			},
+			"reward": [
+				"defense_up"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "반장이 몸을 옆으로 붙이며 뒷벽의 배선 통로를 가리켰다."
+					}
+				},
+				{
+					"speaker": "hardline_foreman",
+					"content": {
+						"korean": "당신이 그렇게 밀어붙이는 사람인 줄 알았어. 통로는 비켜줄게, 대신 회로는 내 거야."
+					}
+				},
+				{
+					"speaker": "echo",
+					"content": {
+						"korean": "이 사람 이름만 들어도 길이 열리네. 무서운데 편하다."
+					}
+				}
+			]
+		}
+	],
+	"_side": {
+		"slot": "D",
+		"person": {
+			"id": "hardline_foreman",
+			"name": "배선 반장",
+			"role": "제어실 배선 반장"
+		},
+		"wants": "서명이 찍힌 회로를 뜯어내 자기 몫의 배상금을 먼저 받아내려 한다.",
+		"rule_link": "깨진 조각을 맞추면 흔적의 주인 서명이 회로에 더 선명하게 드러나는데, 반장은 그 조각이 자기 배상금 증거라며 붙잡고 늘어진다.",
+		"rep": "fighting-",
+		"events": {},
+		"flags": {
+			"torn_signature_circuit": {
+				"kind": "bad",
+				"boss_penalty": -1,
+				"label": {
+					"korean": "뜯어낸 서명 회로"
+				},
+				"boss_line": {
+					"korean": "뜯어낸 서명 회로를 홀로그램에 들이밀어 놈의 연결선을 끊는다."
+				}
+			},
+			"foreman_debt": {
+				"kind": "good",
+				"boss_penalty": 1,
+				"label": {
+					"korean": "반장의 빚"
+				},
+				"boss_choice": {
+					"korean": "배상금을 챙긴 반장이 홀로그램 아래에서 회로를 대신 끊어준다."
+				}
+			},
+			"cleared_wire_path": {
+				"kind": "good",
+				"boss_penalty": 2,
+				"label": {
+					"korean": "열린 배선 통로"
+				},
+				"boss_choice": {
+					"korean": "반장이 비켜준 배선 통로로 홀로그램 뒤쪽에 붙어 회로를 끊는다."
+				}
+			}
+		}
+	}
+}

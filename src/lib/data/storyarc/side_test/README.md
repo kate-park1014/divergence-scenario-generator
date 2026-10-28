@@ -1,10 +1,12 @@
-# side_test: 방 10개 구조로 스토리 + 카드 만들기 (계획)
+# side_test: 방 10개 구조로 스토리 + 카드 만들기
 
-입력 스토리아크: [storyarc_modern_evannext_1.ts](storyarc_modern_evannext_1.ts)
+입력 스토리아크: [storyarc_modern_evannext_1.ts](storyarc_modern_evannext_1.ts), [storyarc_modern_whisperweb_0.ts](storyarc_modern_whisperweb_0.ts)
 목표: 이 스토리아크로 스토리 5화를 뽑고, 화마다 **내용이 이어지는** 카드를 만든다.
 
-> 상태: 계획만 있음. 코드는 아직 없음. 기존 파이프라인(rewrite_test, card-seq-pipeline)은 건드리지 않고 새 파일로 만든다.
-> 예전 시도: `tmp/side10/` (1_plan → 2_story → 3_cards → 4_book). 너무 오래 걸리고, 카드가 사건으로서 연관성·재미가 약했음.
+> 상태 (2026-10-28): 코드 있음 — [scripts/side_test/](../../../../../scripts/side_test/). 기존 파이프라인(rewrite_test, card-seq-pipeline)은 건드리지 않음.
+> 결과: whisperweb 1~5화(pro, 이벤트·표시·잠금·강제 사건·additions, 3b 검토) → webfront `new_whisperweb` 탭 / evannext 1화(DeepSeek `deepseek-flash`, 1~3c·3b 전부) → `side_test_evannext_1` 탭.
+> 아래 "카드 장수"~"1차 테스트"는 처음 계획 그대로 둔 것.
+> 예전 시도: `tmp/side10/` (1_plan → 2_story → 3_cards → 4_book, 2026-10-28 삭제 — 커밋 d58c760 에 있음). 너무 오래 걸리고, 카드가 사건으로서 연관성·재미가 약했음.
 
 ## 한 화 = 방 10개
 
@@ -78,6 +80,104 @@
 3. 스토리 + 카드를 방 순서대로 섞은 읽기용 파일
 
 카드가 재밌게 읽히면 → 30장으로 늘리기 → 성향 넣기 → 2~5화로 넓히기.
+
+## 1차 테스트 실행
+
+스크립트: [scripts/side_test/](../../../../../scripts/side_test/) (기존 파이프라인은 안 건드림). 모델 API 를 직접 부름 (dev 서버 필요 없음, 응답을 8분까지 기다림). 키는 `.env` 의 `GEMINI_API_KEY` / `DEEPSEEK_API_KEY`.
+
+```bash
+R="node --no-warnings --import ./scripts/side_test/ts-register.mjs"
+$R scripts/side_test/1_design.mjs   # 화 설계표 → design.json / design.md
+$R scripts/side_test/2_story.mjs    # 스토리 방 1·3·5·7·10 → story.json
+$R scripts/side_test/3_cards.mjs    # 카드 12장 → cards/*.json, actors.json
+$R scripts/side_test/3c_additions.mjs # additions (방 제목·LLM 줄 4개·인물 말투·얼굴·기억 문구) → additions.json
+$R scripts/side_test/3b_review.mjs  # (선택) 카드 매끄러움 채점 → 걸린 카드만 고침 → 다시 채점 → review/
+$R scripts/side_test/4_play.mjs     # 읽기용 → play_01.md (네트워크 없음)
+$R scripts/side_test/5_webfront.mjs # webfront /test/adventure 의 탭 "side_test_evannext_1" 로 넣기 (네트워크 없음)
+```
+- 5단계 출력 (webfront `data/` 아래, `WEBFRONT_DATA_DIR` 없으면 옆 폴더 project-mj-webfront): `stories/test/side_test_<스토리>/scenarios.json`, `cards/side_<스토리>_0N/`, `additions/side_<스토리>_0N.json`. 그 시나리오 카드 폴더는 지우고 새로 씀. 동행 얼굴은 `output_list/rewrite_test/<id>/scenario_0N.json` 의 actors 에서. 확인: webfront 에서 `npx vitest run --project=unit "src/routes/(app)/test/adventure/data.test.ts"`
+- 카드 선택지마다 reward 또는 gold 가 있어야 함 (webfront 검사 규칙이라 3단계 검사에 넣음)
+옵션: `--id=modern_evannext_1`(기본), `--order=1`(기본, 1~5화), `--model=…`(기본 gemini-2.5-flash. `deepseek` 로 시작하면 DeepSeek, 예: `deepseek-flash`. 3b 는 기본 pro), `--max-tokens`(DeepSeek 출력 상한, 기본 16384). 출력: `output_list/side_test/<id>/0N/` (프롬프트는 `*_prompt.md`, `steps/`)
+
+- `ts-register.mjs`: node 에서 src 의 .ts 를 `$lib/…` 경로째 불러오게 함 (스토리 단계가 `chapterGenRewrite.ts` 를 그대로 씀)
+- 1~4화 뼈대: 방 1 곤란+흔적의 말 / **방 3 주인공 행동**+당장 효과 (warn 일반 보스는 여기서 한 번 경고) / 방 5 첫 조짐 / 방 7 대가 커짐+원인 / 방 10 일반 보스. 카드 C·D 에서 대가를 겪으려면 조짐이 방 5 에 나와야 해서 행동을 방 3 으로 당김
+- 카드: A 유혹, B 당장 이득 (규칙의 나쁜 결과는 아직 안 보임), C·D 대가. 기억 A→C·B→D (심기 easy → `<key>_easy`, hard·gold → `<key>_hard`, 회수 카드 `callback.seed`)
+- 방 10 은 휴식 뒤라 첫 줄에서 앞 방 마지막 대사를 이어받지 않게 함 (위 "정할 것"의 1차 답)
+- 검사는 형식만 (방·칸 개수, 화자, path, mbti, 60자, 최종보스 이름, 다른 NPC). 카드 단계는 **카드 자리표**(자리마다 종류·선택지·이벤트·강제 사건·평판 방향을 코드가 정함) + **걸린 자리만 다시 요청**(최대 2번). 빈 자리가 남으면 멈춤. `--offline` 은 모델을 부르지 않고 지난 steps 로 검사만
+- `--model=gemini-3.1-pro-preview`: 모든 단계에서 그 모델로 (기본 gemini-2.5-flash). pro 로 1화 1~4단계 약 3분 20초
+- 5단계 `--tab=이름`: 그 이름의 탭으로 따로 넣음 (시나리오 id `<탭>_<스토리>_0N`, 기존 탭을 덮지 않음). `--sid=…` 로 id 직접 지정
+
+## 카드 룰 (2026-10-28 정리)
+
+> 만드는 곳: [3_cards.mjs](../../../../../scripts/side_test/3_cards.mjs). 게임이 읽는 형식은 webfront adventure `CLAUDE.md`
+
+### 이 게임은 평판 게임
+- 선택지의 `effects` 가 성향 3축을 움직임: `fighting` 투쟁(-)↔협력(+), `community` 개인(-)↔공동체(+), `reason` 질서(-)↔자유(+)
+- 가장 뚜렷한 방향이 플레이어의 **평판**. 다음 화로 0.7배가 넘어감 (webfront `CARRY_RATE`)
+- 평판이 세 군데로 돌아옴: ① 평판 카드(다른 사건) ② 스토리 방에 덧붙는 대사 ③ 평판으로 열리는 선택지(⭐ stat)
+
+### 한 화의 카드 (방 2·4·6·8 = 칸 A·B·C·D)
+
+| 칸 | 기본 카드 3장 | 평판 카드 6장 (6방향 1장씩) |
+| --- | --- | --- |
+| A (스토리 1→3) | 심기 1 + 일반 2 | 2화부터 (1화는 모두 중립이라 없음) |
+| B (3→5) | 심기 1 + 일반 2 | 있음 |
+| C (5→7) | 회수 2 (A 심기의 easy/hard 기억) + 일반 1 | 없음 (회수 칸) |
+| D (7→10) | 회수 2 (B 심기) + 일반 1 | 있음 |
+
+- 1화 24장, 2~5화 30장
+- 칸마다 1장만 나옴 (webfront Director 점수). 심기 +6, 회수 +12(+8 보장), 평판 카드 `urgency` 8
+- 평판 카드: `condition` = 가장 뚜렷한 성향이 그 방향이고 20 이상 (`{ leaning, among: 6방향, min: 20 }`). 그 플레이어에게는 기본 카드 대신 거의 확실히 나옴. 중립이면 기본 카드 3장 중 1장
+- 평판 카드가 A·B 에 나오면 심기 카드가 안 나와 C·D 회수도 없음 → 평판 카드 선택지가 보스 방 표시를 대신 줌
+- 평판 카드 인물은 주인공의 평판을 알아보고(소문) 찾아오거나 막거나 이용하려 함. 첫 대사에 평판을 알아보는 말 (축 이름 낱말 금지). 같은 칸 6장은 서로 다른 종류의 사건
+
+### 선택지 (path)
+- 심기·일반 카드: 3~4개. easy·hard 필수 + gold / fun / lock 중 1~2개
+- 평판 카드: 3~4개. easy·hard·stat 필수 + gold / fun 중 0~1개 (6장 중 fun 2개 이상)
+- 회수 카드: easy·hard 2개
+
+| path | 뜻 | 수치 |
+| --- | --- | --- |
+| easy | 당장 이득 (평판 카드: 평판대로) | reward 또는 gold +50~150 |
+| hard | 지금 대가 대신 바르게 (평판 카드: 평판과 다르게) | reward |
+| gold | 돈으로 해결. 누구에게 무엇에 쓰는지 text 에 | gold -50~-150, `require` gold |
+| fun | 엉뚱하지만 말이 되는 행동, 예상 밖 결과. 묶음마다 1개 이상 | 성향 한 축 ±20~30 |
+| lock | MBTI 잠금. 시작 파티(ISTJ·ENFP·INTP·ESFJ)로 열리는 2글자, text 에 {actor}. 화당 4개 | 축 ±10 이하 |
+| stat | ⭐ 평판 선택지. 그 방향 40 이상일 때만 보임. 평판 덕에 되는 해결 | 그 방향으로 |
+
+- 모든 선택지: `reward`·`effects.gold`(0 아님)·`event` 중 1개 이상. `reward` 와 `event` 함께 안 씀. mbti 2글자, 한 카드 안에서 모두 다르게
+- 강제 사건 `forced`: 화당 1개 (칸 A·B 일반 카드), 확률 0.3, {actor}
+
+### 기억과 보스 방 표시 (flag)
+- 기억: 심기 카드 easy → `<key>_easy`, hard·gold·lock·fun → `<key>_hard`. 회수 카드가 그 기억으로 나옴
+- 표시 (boss_penalty, 코드가 정함): 회수(쉬운 길 기억) easy -1 / hard +1, 회수(어려운 길 기억) +1 / +2, 평판 카드 easy -1 / hard +1 / stat +2. 그 밖에 `paid_network` (쓴 골드 500)
+- 유리한 표시는 보스 방 선택지(`boss_choice`), 불리한 표시는 보스 방 앞 내레이션(`boss_line`)
+
+### 이벤트
+- 화당 5종 × 1개 (기본 카드에만). A·B 묶음 3종, C·D 묶음 2종, 화마다 돌림. 이벤트 선택지는 reward 없음, `event_intro`, meet_stranger 는 맞선다/피한다 + 패널티
+
+### 재미 (프롬프트 `FUN_RULES`)
+- 평범한 부탁·잡일로 끝내지 않음. 인물마다 눈에 띄는 버릇·사정, 사건에 구체적인 걸린 것(돈·시간·들키면 안 되는 사람), 결과에 작은 반전이나 웃음, 선택지끼리 성격이 확실히 다르게
+
+### 문장 규칙 (코드 검사 + 3b 채점)
+- 한 줄 60자, narrator "~했다", 선택지 "~한다", 주인공 "당신". 동행은 1인칭(존댓말 저/제, 반말 나/내), 원문 말투, 카드 인물 부탁에 반응
+- 금지: 괄호 메모, 스토리 방 대사 베끼기, 최종보스 이름, "보스" 낱말, 다른 NPC, "밤새"·"다음 날", 설명투·선택지 깎아내리기
+- 배경 태그: 카드마다 영어 5개
+
+### 스토리 방에 덧붙는 대사 (3c additions)
+- 기억 2줄(방 3·5), 동행 호감도 1줄, 방 10 불리한 표시 1줄
+- 평판 12줄: 방 3 투쟁·협력, 방 5 개인·공동체, 방 7 질서·자유 (그 축에서 20 이상 기운 쪽) / 방 10 보스가 6방향 평판에 반응 (가장 뚜렷한 평판)
+
+## 3b 카드 검토 (매끄러움)
+
+flash 로 만든 카드에 선택지 대상이 틀림("접수원에게 접수원 실수를 보고"), 같은 예고 문장 반복, 동행이 자기를 이름으로 부름 같은 문제가 있어서 추가. 형식 검사로는 안 잡힘.
+- 채점(Gemini pro 고정, temperature 0): S1 선택지 문장이 말이 됨 / S2 부탁과 선택지가 맞음 / S3 결과가 선택을 보여 줌 / S4 자연스러운 말(동행 말투가 원문과 같은지 포함). 선택지마다 누구에게·무엇을·결과 반응이 전제하는 행동을 먼저 적게 함 (flash 는 이걸 해도 못 잡음)
+- 코드: R1 같은 문장 2번 이상 / R2 동행이 자기 이름을 부름
+- 고치기: 걸린 카드의 그 줄만, 줄 수 유지, 수치·보상·path·화자 그대로. 채점 → 고치기 1번으로 끝 (`--verify` 를 주면 고친 카드만 다시 채점)
+- 채점·고치기 모두 6장씩 나눠 동시에 (한 번에 많이 보내면 응답이 너무 길어짐)
+- 앞 방 연결 항목은 뺌 (고치기가 칸 B 에 아직 나오면 안 되는 대가를 끌어옴)
+- 출력: `review/review.md`(지적·바뀐 줄), 처음 원본 카드 `review/before/`. 1화 약 4분
+- `--judge-only`: 채점만
 
 ## 스토리아크에서 본 약한 곳 (참고)
 

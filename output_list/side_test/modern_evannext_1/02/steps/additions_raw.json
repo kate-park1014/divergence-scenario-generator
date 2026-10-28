@@ -1,0 +1,221 @@
+{
+	"lines": [
+		{
+			"after_line": 4,
+			"speaker": "lin",
+			"emotion": "happy",
+			"room": 3,
+			"if_value": "resume_forgery_seeker_easy",
+			"example": "아까 다른 지원자분께 가짜 자격증을 넣어 주셨을 때와 달리, 제자리를 찾으니 모니터가 정말 깨끗해졌어요!",
+			"intent": "아까 다른 단말기에서 가짜 자격증을 등록해 주었던 일을 상기하며 깔끔해진 모니터 화면과 비교함"
+		},
+		{
+			"if_value": "clerk_request_easy",
+			"example": "아까 담당자님의 이력서 수정 요청을 대조도 안 하고 일괄 승인해 준 것 때문에 화면이 변조된 걸까요?",
+			"room": 5,
+			"after_line": 4,
+			"intent": "담당자의 이력서 수정 요청을 검토 없이 일괄 승인했던 행동이 전산 변조를 부른 것은 아닌지 염려함",
+			"emotion": "sad",
+			"speaker": "nia"
+		},
+		{
+			"room": 7,
+			"intent": "동행과의 깊은 신뢰를 바탕으로 사람들의 이름이 숫자로 바뀌는 혼란 속에서도 끝까지 함께 보스 방으로 나아가자고 다짐함",
+			"example": "사람들의 이름이 숫자로 지워지는 이런 혼란 속에서도, 당신 곁이라면 저도 두렵지 않아요.",
+			"after_line": 7,
+			"emotion": "happy",
+			"if_value": "echo >= 60",
+			"speaker": "nia"
+		},
+		{
+			"example": "덮어씌운 단말기 데이터 오류가 누적되어 통로 출입을 일시 차단합니다. 더 이상의 진입은 불가합니다.",
+			"if_value": "mass_override_done",
+			"room": 10,
+			"after_line": 2,
+			"speaker": "random_boss",
+			"emotion": "angry",
+			"intent": "단말기 데이터 무단 덮어쓰기로 누적된 오류를 지적하며 통로 차단을 선언함"
+		},
+		{
+			"after_line": 5,
+			"example": "단말기 앞에서 난동을 부리던 지원자를 단숨에 제압하셨다는 이야기를 들었어요. 든든하지만 조금 무섭기도 하네요.",
+			"room": 3,
+			"intent": "난동을 부리던 구직자를 힘으로 제압했던 주인공의 행동을 듣고 안도함",
+			"if_value": "",
+			"speaker": "lin",
+			"emotion": "happy"
+		},
+		{
+			"room": 3,
+			"example": "곤란해하는 다른 지원자들에게 늘 따뜻한 손을 내밀어 주셨다면서요? 절 도와주신 것도 정말 감사해요.",
+			"after_line": 5,
+			"emotion": "happy",
+			"intent": "곤경에 처한 사람들에게 따뜻하게 손을 내밀어온 주인공의 친절함에 고마워함",
+			"speaker": "lin",
+			"if_value": ""
+		},
+		{
+			"after_line": 7,
+			"if_value": "",
+			"example": "남이야 어떻게 되든 자기 이력서 출력물만 챙겨 떠났다던 사람이니, 남의 이름이 변조되든 말든 신경 안 쓰겠지.",
+			"emotion": "base",
+			"speaker": "character_any",
+			"intent": "자기 이력서만 챙겨 빠져나갔던 주인공의 이기적인 행동을 비꼬음",
+			"room": 5
+		},
+		{
+			"intent": "대기실 사람들을 이끌고 서로 돕게 만들었던 주인공의 보살핌을 떠올리며 안심함",
+			"emotion": "base",
+			"room": 5,
+			"speaker": "nia",
+			"if_value": "",
+			"after_line": 6,
+			"example": "대기실 사람들을 차분하게 다독여 정돈하셨던 것처럼, 이번 오류도 당신과 함께라면 헤쳐나갈 수 있어요."
+		},
+		{
+			"example": "창구 규정을 토씨 하나 안 틀리고 철저하게 따르더니, 결국 전산망의 번호 통제에 말려든 건가…",
+			"after_line": 5,
+			"room": 7,
+			"intent": "규정과 절차를 원칙대로 철저히 지키더니 결국 숫자로 통제당하게 되었다고 씁쓸해함",
+			"if_value": "",
+			"emotion": "sad",
+			"speaker": "character_any"
+		},
+		{
+			"example": "기존의 빡빡한 서식과 규칙에 매이지 않고 자유롭게 움직이셨던 것처럼, 이번에도 틀을 깨부수며 나가요!",
+			"emotion": "base",
+			"speaker": "nia",
+			"room": 7,
+			"after_line": 7,
+			"intent": "서식이나 규정에 매이지 않고 자유롭게 해결하던 방식을 떠올리며 이번 대치도 기지를 발휘하자고 함",
+			"if_value": ""
+		},
+		{
+			"if_value": "",
+			"speaker": "random_boss",
+			"emotion": "angry",
+			"intent": "물리적 압박과 실력 행사로 장내를 통제하던 주인공의 거친 행적을 지적하며 경계함",
+			"example": "단말기를 걷어차고 무력으로 장내를 누르던 거친 행적은 이곳 시스템 보안망 앞에서 통하지 않습니다.",
+			"after_line": 2,
+			"room": 10
+		},
+		{
+			"example": "다른 지원자들을 감싸고 돌며 시스템의 정당한 정보 정리를 지체시킨 원인 제공자이시군요.",
+			"intent": "구직자들을 감싸고 도우며 시스템의 정당한 정보 정리를 지연시킨 점을 지적함",
+			"after_line": 2,
+			"if_value": "",
+			"speaker": "random_boss",
+			"room": 10,
+			"emotion": "base"
+		},
+		{
+			"room": 10,
+			"if_value": "",
+			"intent": "자기 몫의 출력물과 이득만 챙기려던 이기적인 접근 기록을 조회함",
+			"example": "남의 사정은 외면한 채 본인의 단말기 데이터와 수수료만 독점하려던 기회주의적 접근 기록이 확인되었습니다.",
+			"after_line": 2,
+			"emotion": "base",
+			"speaker": "random_boss"
+		},
+		{
+			"room": 10,
+			"speaker": "random_boss",
+			"emotion": "angry",
+			"if_value": "",
+			"example": "지원자들을 모아 집단 연대를 유도하고 통제에 저항하는 위험 인자로 분류합니다.",
+			"intent": "모두를 모아 집단 연대를 이끌어낸 주인공을 시스템 위협 인자로 규정함",
+			"after_line": 2
+		},
+		{
+			"after_line": 2,
+			"example": "매뉴얼과 서류 절차에 집착해 수작업 대조를 고집하며 처리 효율을 떨어뜨린 대상이군요.",
+			"intent": "매뉴얼과 절차 준수에 집착하여 수작업 검수를 고집해 전산망 처리 효율을 떨어뜨린 점을 지적함",
+			"speaker": "random_boss",
+			"if_value": "",
+			"emotion": "base",
+			"room": 10
+		},
+		{
+			"after_line": 2,
+			"room": 10,
+			"speaker": "random_boss",
+			"emotion": "angry",
+			"if_value": "",
+			"example": "서식과 규정을 무시하고 시스템 입력을 제멋대로 우회하던 불법 접속 기록이 명확히 남아 있습니다.",
+			"intent": "서식과 규정을 무시하고 입력을 우회하려던 불법 접근 기록을 지적함"
+		}
+	],
+	"seeds": [
+		{
+			"korean": "밀린 이력서 수정 요청 30건을 검토 없이 일괄 승인함",
+			"english": "bulk_approved_clerk_requests",
+			"key": "clerk_request_easy"
+		},
+		{
+			"english": "rejected_invalid_clerk_requests",
+			"korean": "허위 기재된 이력서 30건을 원부와 대조해 반려함",
+			"key": "clerk_request_hard"
+		},
+		{
+			"english": "added_fake_certificate_for_seeker",
+			"korean": "단말기에 구직자의 가짜 전산 1급 자격증을 추가해 줌",
+			"key": "resume_forgery_seeker_easy"
+		},
+		{
+			"korean": "구직자의 허위 자격증 등록 요청을 거절함",
+			"key": "resume_forgery_seeker_hard",
+			"english": "refused_forged_certificate_request"
+		}
+	],
+	"rooms_title": [
+		{
+			"title": "뒤섞인 이름의 단말기",
+			"room": 1
+		},
+		{
+			"title": "정돈된 인적 사항",
+			"room": 3
+		},
+		{
+			"room": 5,
+			"title": "모니터 너머의 변조"
+		},
+		{
+			"room": 7,
+			"title": "숫자로 불리는 지원자들"
+		},
+		{
+			"room": 10,
+			"title": "서버실 앞의 데이터 관리자"
+		}
+	],
+	"actors": [
+		{
+			"style": "걱정스러우면서도 다정하게 서포트하는 존댓말",
+			"id": "nia",
+			"portrait_needed": "10대 후반 여성 동행. 단정한 차림에 걱정스럽고 조심스러운 눈빛의 다정한 인상",
+			"portrait_no": 0
+		},
+		{
+			"style": "업무 과중에 시달리는 초조하고 정중한 존댓말",
+			"portrait_no": 0,
+			"portrait_needed": "30대 남성 검색실 관리 직원. 깔끔한 셔츠에 명찰을 차고 있으며 초조해 보이는 인상",
+			"id": "clerk"
+		},
+		{
+			"portrait_no": 0,
+			"portrait_needed": "20대 남성 구직자. 구겨진 양복에 서류 뭉치를 쥔 초조하고 날카로운 인상",
+			"id": "seeker",
+			"style": "불안과 욕심에 차 거칠게 내지르는 반말과 존댓말 섞인 말투"
+		},
+		{
+			"id": "technician",
+			"portrait_needed": "40대 남성 단말기 정비원. 작업복 차림에 공구함을 든 무던한 인상",
+			"style": "전산 용어를 사용하는 무덤덤하고 건조한 존댓말",
+			"portrait_no": 0
+		}
+	],
+	"errors": [
+		"lines[9] 방 7: 축 이름·\"평판\" 낱말 대신 주인공이 한 일로 말함"
+	]
+}

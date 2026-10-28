@@ -1,0 +1,140 @@
+{
+	"id": "card_04_mixed_ledger",
+	"kind": "callback",
+	"title": {
+		"korean": "뒤섞인 장부"
+	},
+	"intensity": "high",
+	"after_story": 5,
+	"before_story": 7,
+	"callback": {
+		"seed": "secret_ledger_easy",
+		"min_rooms_after": 2
+	},
+	"background_tags": [
+		"mixed",
+		"waste",
+		"lights",
+		"messy",
+		"screen"
+	],
+	"dialogue": [
+		{
+			"speaker": "narrator",
+			"content": {
+				"korean": "라벨이 제멋대로 바뀌는 폐기물 더미 앞에서 토마가 머리를 감싸 쥐고 있다."
+			}
+		},
+		{
+			"speaker": "toma",
+			"content": {
+				"korean": "큰일이야! 내 황금 같은 장부가 고철 폐기물 목록이랑 완전히 섞여버렸어!"
+			}
+		},
+		{
+			"speaker": "toma",
+			"content": {
+				"korean": "당장 거래처에 넘겨야 하는데, 이것 좀 빨리 분리해 줘!"
+			}
+		},
+		{
+			"speaker": "dax",
+			"content": {
+				"korean": "쉽게 도와줬던 게 이렇게 꼬일 줄은 몰랐네."
+			}
+		}
+	],
+	"choices": [
+		{
+			"text": {
+				"korean": "대충 비슷해 보이는 정보들만 모아서 빠르게 장부를 재구성해 준다."
+			},
+			"path": "easy",
+			"mbti": "FP",
+			"flag": "wrong_ledger",
+			"effects": {
+				"reason": -10,
+				"gold": 50,
+				"community": -10
+			},
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "당신이 급한 대로 데이터를 짜깁기해 넘겨주었다."
+					}
+				},
+				{
+					"speaker": "toma",
+					"content": {
+						"korean": "일단 이거라도 가져가야겠군. 수고했어."
+					}
+				}
+			]
+		},
+		{
+			"text": {
+				"korean": "시간이 걸리더라도 폐기물 목록과 장부를 하나씩 대조하며 정확히 분리한다."
+			},
+			"path": "hard",
+			"mbti": "TJ",
+			"flag": "perfect_ledger",
+			"effects": {
+				"echo": -10,
+				"reason": 10
+			},
+			"reward": [
+				"intelligence_up"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "당신이 꼼꼼하게 정보를 대조해 완벽한 장부를 복구해 냈다."
+					}
+				},
+				{
+					"speaker": "toma",
+					"content": {
+						"korean": "늦긴 했지만 확실하군! 덕분에 살았어."
+					}
+				}
+			]
+		}
+	],
+	"_side": {
+		"slot": "C",
+		"person": {
+			"id": "toma",
+			"name": "토마",
+			"role": "잡동사니 상인"
+		},
+		"wants": "섞여버린 폐기물 목록 속에서 자신의 장부를 분리해달라고 한다.",
+		"rule_link": "데이터 스크린 조각에 금이 가면서 폐기물 정보와 장부가 뒤섞여버렸다.",
+		"events": {},
+		"flags": {
+			"wrong_ledger": {
+				"kind": "bad",
+				"boss_penalty": -1,
+				"label": {
+					"korean": "잘못된 장부"
+				},
+				"boss_line": {
+					"korean": "잘못된 장부 데이터가 얽힌 함정이 당신의 발목을 잡는다."
+				}
+			},
+			"perfect_ledger": {
+				"kind": "good",
+				"boss_penalty": 1,
+				"label": {
+					"korean": "완벽한 장부"
+				},
+				"boss_choice": {
+					"korean": "당신은 토마의 완벽한 장부에서 얻은 정보로 안전한 길을 찾아낸다."
+				}
+			}
+		}
+	}
+}

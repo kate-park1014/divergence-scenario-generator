@@ -1,0 +1,214 @@
+{
+	"id": "card_01_daesik_scrambled_tag",
+	"kind": "normal",
+	"title": {
+		"korean": "마르셀이 된 용접공"
+	},
+	"intensity": "calm",
+	"after_story": 5,
+	"before_story": 7,
+	"background_tags": [
+		"waiting_hall",
+		"blinking_screen",
+		"ticket_booth",
+		"panicked_crowd",
+		"tense_mood"
+	],
+	"dialogue": [
+		{
+			"speaker": "narrator",
+			"content": {
+				"korean": "작업복을 입은 대기자 대식이 자신의 가슴팍을 쥐어뜯으며 접수대 앞을 서성인다."
+			}
+		},
+		{
+			"speaker": "daesik",
+			"content": {
+				"korean": "제 이름은 분명 최대식인데, 출력기가 '마르셀'이라는 금빛 명패를 뱉어냈어요!"
+			}
+		},
+		{
+			"speaker": "lin",
+			"content": {
+				"korean": "마르셀이라니, 이력서에 고급 매니저 경력을 적으셨던 건가요?"
+			}
+		},
+		{
+			"speaker": "daesik",
+			"content": {
+				"korean": "합격 확률을 높이려고 남의 자격증 번호를 적었더니, 제 원래 이름이 전광판에서 사라졌어요!"
+			}
+		}
+	],
+	"choices": [
+		{
+			"text": {
+				"korean": "오르내리는 접수 차단봉 틈새로 대식의 이름 정정 용지를 밀어 넣는다."
+			},
+			"path": "easy",
+			"mbti": "TP",
+			"effects": {
+				"reason": -15,
+				"community": 20,
+				"echo": -10
+			},
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "당신은 오르내리는 차단봉 틈으로 재빠르게 손을 찔러 넣어 정정 용지를 창구에 밀어 넣었다."
+					}
+				},
+				{
+					"speaker": "lin",
+					"content": {
+						"korean": "간발의 차로 성공했어요! 창구 전산망에 정정 요청 신호가 들어갔습니다."
+					}
+				},
+				{
+					"speaker": "daesik",
+					"content": {
+						"korean": "대식이라는 제 진짜 이름이 전광판 밑에 작게 떴어요! 숨통이 좀 트이네요."
+					}
+				}
+			],
+			"event": "minigame_timing",
+			"event_intro": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "접수창구의 차단봉이 2초 간격으로 빠르게 오르내리며 서류 접수를 가로막는다."
+					}
+				},
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "차단봉이 맨 위로 올라가는 정확한 순간을 세 번 노려 수정 신청서를 밀어 넣어야 한다."
+					}
+				}
+			]
+		},
+		{
+			"text": {
+				"korean": "창구 호출 마이크를 붙잡고 대식의 원래 이름과 자격을 대기홀 전체에 알린다."
+			},
+			"path": "hard",
+			"mbti": "FJ",
+			"effects": {
+				"reason": 20,
+				"community": -20,
+				"echo": 10
+			},
+			"reward": [
+				"defense_up"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "당신은 창구 호출기를 집어 들고 지원자 대식의 원래 경력과 번호를 큰 소리로 읊었다."
+					}
+				},
+				{
+					"speaker": "daesik",
+					"content": {
+						"korean": "맞아요, 저는 용접공 대식입니다! 거짓 직함 같은 건 필요 없어요!"
+					}
+				},
+				{
+					"speaker": "lin",
+					"content": {
+						"korean": "접수 직원이 당황해서 경고 벨을 눌렀지만, 주변 사람들도 대식 씨를 알아보기 시작했어요."
+					}
+				}
+			]
+		},
+		{
+			"text": {
+				"korean": "{actor}이(가) 대기실 운영 규정의 오류 정정 조항을 들어 즉석 수정을 요구한다."
+			},
+			"path": "lock",
+			"mbti": "TJ",
+			"require": {
+				"mbti": "TJ"
+			},
+			"effects": {
+				"community": 10,
+				"reason": 10
+			},
+			"reward": [
+				"intelligence_up"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "{actor}이(가) 규정집 12조 오기재 정정 조항을 펼쳐 접수원 책상 위에 내리쳤다."
+					}
+				},
+				{
+					"speaker": "daesik",
+					"content": {
+						"korean": "규정대로 처리해 달라니 직원이 군말 없이 제 본명을 전산에 되돌려 놓았어요!"
+					}
+				},
+				{
+					"speaker": "lin",
+					"content": {
+						"korean": "정확한 규칙을 짚어내니 꼼짝 못 하네요. 대식 씨의 본래 서류가 복구됐어요."
+					}
+				}
+			]
+		},
+		{
+			"text": {
+				"korean": "접수창구의 번호표 기계를 마구 눌러 대기홀 바닥에 표를 흩뿌린다."
+			},
+			"path": "fun",
+			"mbti": "EP",
+			"effects": {
+				"gold": 80,
+				"fighting": 25,
+				"community": -25
+			},
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "당신은 접수창구 번호표 뭉치를 통째로 뽑아 바닥에 흩뿌렸다."
+					}
+				},
+				{
+					"speaker": "lin",
+					"content": {
+						"korean": "대기홀 전체가 번호표를 줍느라 아수라장이 됐어요! 창구 직원이 자리를 박차고 일어납니다!"
+					}
+				},
+				{
+					"speaker": "daesik",
+					"content": {
+						"korean": "직원이 자리를 비운 틈에 제 명패를 손으로 낚아챘어요! 덕분에 제 명패를 찾았습니다!"
+					}
+				}
+			]
+		}
+	],
+	"_side": {
+		"slot": "C",
+		"person": {
+			"name": "대식",
+			"role": "이름이 지워지는 기능공",
+			"id": "daesik"
+		},
+		"wants": "접수대 전산 오류를 바로잡아 '최대식'이라는 본래 이름을 되찾는 것",
+		"rule_link": "허위 자격증 기재로 인해 시스템이 대상을 엉뚱한 해외 경력자로 인식하여 본래 이름이 소멸한다.",
+		"events": {
+			"easy": "차단봉이 오르내리는 틈을 타 접수대 서랍에 수정 신청서를 밀어 넣어야 하기 때문"
+		},
+		"flags": {}
+	}
+}

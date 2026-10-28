@@ -1,0 +1,250 @@
+{
+	"id": "card_04_wrecked_gate",
+	"kind": "rep",
+	"title": {
+		"korean": "부서진 잠금장치"
+	},
+	"intensity": "calm",
+	"after_story": 7,
+	"before_story": 10,
+	"condition": {
+		"leaning": "fighting-",
+		"among": [
+			"fighting-",
+			"fighting+",
+			"community-",
+			"community+",
+			"reason-",
+			"reason+"
+		],
+		"min": 20
+	},
+	"urgency": 8,
+	"leaning": "fighting-",
+	"background_tags": [
+		"data_plant",
+		"late_shift",
+		"flickering_light",
+		"crowded_floor",
+		"tense"
+	],
+	"dialogue": [
+		{
+			"speaker": "mara",
+			"content": {
+				"korean": "당신이 아까 처리장 파이프를 힘으로 뜯어냈다는 사람이죠? 손 좀 빌리려고요."
+			}
+		},
+		{
+			"speaker": "narrator",
+			"content": {
+				"korean": "마라는 손등에 밴드가 세 개 붙은 채 분류기 잠금장치를 툭툭 쳤다."
+			}
+		},
+		{
+			"speaker": "dax",
+			"content": {
+				"korean": "저 사람 명패에 파손 책임자라고 찍혀 있어. 방금 뜬 거야."
+			}
+		},
+		{
+			"speaker": "mara",
+			"content": {
+				"korean": "저 잠금장치만 부수면 제 이름 뜬 기록도 같이 멈춰요. 안 부수면 제 월급에서 수리비가 빠져요."
+			}
+		}
+	],
+	"choices": [
+		{
+			"text": {
+				"korean": "마라 대신 분류기 잠금장치를 어깨로 들이받아 부순다."
+			},
+			"path": "easy",
+			"mbti": "TJ",
+			"flag": "broken_sorter_lock",
+			"effects": {
+				"fighting": 15,
+				"gold": 120
+			},
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "잠금장치가 두 조각으로 갈라지며 안쪽에서 뜨거운 바람이 뿜어져 나왔다."
+					}
+				},
+				{
+					"speaker": "mara",
+					"content": {
+						"korean": "됐어요! 기록 멈췄어요. 이건 제 성의예요, 받으세요."
+					}
+				},
+				{
+					"speaker": "dax",
+					"content": {
+						"korean": "부순 값은 받았는데, 저 안쪽에서 파열음이 더 크게 들리는 건 나만 듣나?"
+					}
+				}
+			]
+		},
+		{
+			"text": {
+				"korean": "부수지 않고 마라와 함께 잠금장치 오류 기록을 손으로 대조한다."
+			},
+			"path": "hard",
+			"mbti": "FJ",
+			"flag": "checked_error_log",
+			"effects": {
+				"fighting": -20,
+				"reason": 10
+			},
+			"reward": [
+				"intelligence_up"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "마라는 잠금장치를 붙잡고, 당신은 화면의 오류 기록을 한 줄씩 짚었다."
+					}
+				},
+				{
+					"speaker": "mara",
+					"content": {
+						"korean": "이거 진짜 제 명의가 아니네요. 시간은 걸렸지만 이게 맞아요."
+					}
+				},
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "잠금장치는 그대로인 채, 마라의 명패에서 책임자 이름이 지워졌다."
+					}
+				}
+			]
+		},
+		{
+			"text": {
+				"korean": "당신이 여기서 뭘 부수고 다녔는지 아는 마라에게 잠금장치 열쇠를 넘겨받는다."
+			},
+			"path": "stat",
+			"mbti": "TP",
+			"require": {
+				"stat": "fighting",
+				"op": "<=",
+				"value": -40
+			},
+			"flag": "sorter_key",
+			"effects": {
+				"fighting": -20,
+				"echo": 5
+			},
+			"reward": [
+				"move_range_up"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "mara",
+					"content": {
+						"korean": "당신이 파이프를 뜯어냈다길래, 이건 당신이 열어야 맞겠다 싶었어요."
+					}
+				},
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "마라가 허리춤에서 낡은 열쇠를 꺼내 손바닥에 올렸다."
+					}
+				},
+				{
+					"speaker": "dax",
+					"content": {
+						"korean": "이름만 들어도 열쇠가 나오네. 무섭다, 무서워."
+					}
+				}
+			]
+		},
+		{
+			"text": {
+				"korean": "마라에게 수리비 100골드를 쥐여주고 잠금장치를 그대로 두게 한다."
+			},
+			"path": "gold",
+			"mbti": "EP",
+			"require": {
+				"stat": "gold",
+				"op": ">=",
+				"value": 100
+			},
+			"effects": {
+				"gold": -100,
+				"community": -10
+			},
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "마라는 골드를 세어 보고는 잠금장치 앞에 쪼그려 앉았다."
+					}
+				},
+				{
+					"speaker": "mara",
+					"content": {
+						"korean": "이 정도면 이번 달은 버텨요. 근데 다음 달엔 어쩌죠?"
+					}
+				},
+				{
+					"speaker": "dax",
+					"content": {
+						"korean": "돈으로 시간을 샀네. 그 시간에 우린 뭘 할 건데?"
+					}
+				}
+			]
+		}
+	],
+	"_side": {
+		"slot": "D",
+		"person": {
+			"id": "mara",
+			"name": "마라",
+			"role": "처리장 설비 기사"
+		},
+		"wants": "뒤섞인 기록 때문에 자기 명의로 뜬 파손 책임을 물리치려, 당신에게 분류기 잠금장치를 부숴달라고 한다.",
+		"rule_link": "분류기 안쪽에서 파열음이 나는 스크린 조각의 상태를 확인하려면 그 잠금장치를 먼저 열어야 한다.",
+		"rep": "fighting-",
+		"events": {},
+		"flags": {
+			"broken_sorter_lock": {
+				"kind": "bad",
+				"boss_penalty": -1,
+				"label": {
+					"korean": "부순 잠금장치"
+				},
+				"boss_line": {
+					"korean": "갈라진 잠금장치 틈으로 손을 넣어 분류기 배선을 뽑는다."
+				}
+			},
+			"checked_error_log": {
+				"kind": "good",
+				"boss_penalty": 1,
+				"label": {
+					"korean": "대조한 오류 기록"
+				},
+				"boss_choice": {
+					"korean": "마라가 대조해 둔 오류 기록을 근거로 분류기 앞을 지나간다."
+				}
+			},
+			"sorter_key": {
+				"kind": "good",
+				"boss_penalty": 2,
+				"label": {
+					"korean": "설비 열쇠"
+				},
+				"boss_choice": {
+					"korean": "마라에게 받은 열쇠로 분류기 옆 비상문을 열고 지나간다."
+				}
+			}
+		}
+	}
+}

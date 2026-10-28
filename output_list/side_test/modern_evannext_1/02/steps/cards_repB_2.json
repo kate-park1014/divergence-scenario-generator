@@ -1,0 +1,295 @@
+{
+	"cards": [
+		{
+			"rule_link": "이력서 이름 정보가 정리된 단말기의 처리 우선권을 차지하려는 경쟁이 벌어진다.",
+			"choices": [
+				{
+					"text": "100골드를 받고 단말기 자리를 넘긴 뒤 뒤편 사람들을 막아선다.",
+					"path": "easy",
+					"flag": {
+						"label": "새치기 방조",
+						"boss_text": "면접 대기실의 항의 소동으로 당신의 단말기 접근 순번표가 무효 처리된다.",
+						"key": "bribe_receipt"
+					},
+					"result": [
+						{
+							"speaker": "narrator",
+							"text": "당신은 100골드를 주머니에 넣고 대기자들의 접근을 단말기 앞에서 막아섰다."
+						},
+						{
+							"speaker": "seeker",
+							"text": "좋았어! 내 경력 10년 치가 순식간에 등록되는군!"
+						},
+						{
+							"text": "뒤에 선 사람들이 웅성거리기 시작했어요. 표정이 험악해요.",
+							"speaker": "nia"
+						}
+					],
+					"effects": {
+						"echo": -10,
+						"gold": 100,
+						"community": -20
+					},
+					"mbti": "TP"
+				},
+				{
+					"reward": [
+						"shield"
+					],
+					"mbti": "FJ",
+					"text": "돈을 거절하고 순번에 맞춰 이용하라며 구직자의 진입을 제지한다.",
+					"result": [
+						{
+							"speaker": "narrator",
+							"text": "당신은 건네진 동전을 밀어내고 단말기 화면 앞을 가로막았다."
+						},
+						{
+							"text": "쳇, 챙길 줄 아는 녀석인 줄 알았더니 순진한 척하기는!",
+							"speaker": "seeker"
+						},
+						{
+							"speaker": "nia",
+							"text": "잘하셨어요. 규칙대로 해야 뒤탈이 없는 법이니까요."
+						}
+					],
+					"flag": {
+						"label": "정규 대기표",
+						"key": "orderly_ticket",
+						"boss_text": "단말기 정규 대기표를 제시해 통제 구역의 우선 접근권을 행사한다."
+					},
+					"path": "hard",
+					"effects": {
+						"echo": 10,
+						"community": 20,
+						"fighting": 10
+					}
+				},
+				{
+					"path": "stat",
+					"flag": {
+						"label": "적발된 허위 이력서",
+						"boss_text": "적발했던 구직자의 허위 이력서 양식을 대조해 보안 검증망의 오류를 우회한다.",
+						"key": "forged_resume_sheet"
+					},
+					"effects": {
+						"echo": 5,
+						"reason": -15,
+						"community": -20
+					},
+					"text": "구직자의 과장된 이력서 서류를 낚아채 결함을 지적하며 쫓아낸다.",
+					"reward": [
+						"intelligence_up"
+					],
+					"result": [
+						{
+							"speaker": "narrator",
+							"text": "당신은 구직자가 쥔 이력서 출력본을 빼앗아 경력 중복 기재를 지적했다."
+						},
+						{
+							"text": "윽, 그걸 어떻게 한눈에…! 아, 알았소, 저리 갈 테니 서류는 돌려줘요!",
+							"speaker": "seeker"
+						},
+						{
+							"speaker": "nia",
+							"text": "소문대로 매섭게 자기 영역을 지키시네요. 허위 기재 서류는 분석에 쓸 수 있겠어요."
+						}
+					],
+					"mbti": "TJ"
+				},
+				{
+					"effects": {
+						"fighting": 15,
+						"echo": 10,
+						"gold": -70
+					},
+					"result": [
+						{
+							"speaker": "narrator",
+							"text": "당신은 옆쪽 보조 단말기 슬롯에 70골드를 결제하고 구직자에게 전표를 건넸다."
+						},
+						{
+							"text": "어? 비어 있는 보조석을 열어준 거요? 그럼 거기로 가지!",
+							"speaker": "seeker"
+						},
+						{
+							"text": "돈을 써서 충돌 없이 줄을 정리했군요. 현명한 판단이에요.",
+							"speaker": "nia"
+						}
+					],
+					"mbti": "FP",
+					"path": "gold",
+					"text": "단말기 보조 출력기 이용료 70골드를 대신 결제해 다른 자리로 보낸다."
+				}
+			],
+			"dialogue": [
+				{
+					"text": "남의 사정엔 눈 하나 깜짝 안 하고 자기 몫부터 챙긴다더니, 역시 발 빠르시네.",
+					"speaker": "seeker"
+				},
+				{
+					"text": "단말기 화면이 막 깨끗해졌을 뿐인데, 무슨 용건이시죠?",
+					"speaker": "nia"
+				},
+				{
+					"speaker": "seeker",
+					"text": "저 화면 정상 맞지? 100골드 줄 테니 비켜줘요. 뒤에 줄 선 놈들도 좀 막아주고."
+				}
+			],
+			"background_tags": [
+				"terminal_room",
+				"morning",
+				"fluorescent_light",
+				"restless_jobseekers",
+				"tense_air"
+			],
+			"no": 1,
+			"person": {
+				"id": "seeker",
+				"name": "초조한 구직자",
+				"role": "경력 지원자"
+			},
+			"title": "단말기 독점권",
+			"key": "priority_seat",
+			"wants": "안정화된 공용 단말기에서 자기 이력서를 먼저 등록하고 다른 대기자를 차단하기",
+			"slot": "B",
+			"kind": "rep",
+			"rep_dir": "community-"
+		},
+		{
+			"wants": "대기자들의 수많은 이력서 데이터를 한 번에 밀어넣어 업무를 신속히 끝내기",
+			"person": {
+				"name": "단말기 담당자",
+				"role": "검색실 관리 직원",
+				"id": "clerk"
+			},
+			"background_tags": [
+				"terminal_room",
+				"morning",
+				"monitor_glow",
+				"crowded_queue",
+				"bustling_mood"
+			],
+			"key": "bulk_registration",
+			"choices": [
+				{
+					"flag": {
+						"label": "과부하된 버퍼",
+						"key": "overloaded_buffer",
+						"boss_text": "일괄 등록으로 과열된 단말기 슬롯에서 파편화된 데이터 노이즈가 분출된다."
+					},
+					"path": "easy",
+					"reward": [
+						"move_range_up"
+					],
+					"effects": {
+						"reason": 10,
+						"echo": 10,
+						"community": 20
+					},
+					"text": "대기자 30명의 이력서를 넘겨받아 단말기 투입구에 한꺼번에 밀어넣는다.",
+					"mbti": "ES",
+					"result": [
+						{
+							"text": "당신은 이력서 더미를 단말기 광학 스캐너 슬롯에 겹쳐 넣었다.",
+							"speaker": "narrator"
+						},
+						{
+							"speaker": "clerk",
+							"text": "와, 한꺼번에 처리되네요! 대기자 전원의 이름이 목록에 뜹니다!"
+						},
+						{
+							"speaker": "nia",
+							"text": "모두를 도운 건 기쁘지만, 단말기 내부 모터 소리가 갑자기 거칠어졌어요."
+						}
+					]
+				},
+				{
+					"text": "기계 과열 위험을 지적하며 일괄 처리를 거절하고 서류를 돌려준다.",
+					"flag": {
+						"label": "단말기 안전 지침서",
+						"boss_text": "담당자에게서 넘겨받은 단말기 비상 안전 지침서를 참조해 시스템 제어 콘솔을 조작한다.",
+						"key": "safety_guideline"
+					},
+					"path": "hard",
+					"effects": {
+						"community": -20,
+						"reason": -10,
+						"echo": -5
+					},
+					"reward": [
+						"defense_up"
+					],
+					"mbti": "IN",
+					"result": [
+						{
+							"speaker": "narrator",
+							"text": "당신은 이력서 뭉치를 담당자의 품으로 단호하게 밀어냈다."
+						},
+						{
+							"speaker": "clerk",
+							"text": "남을 잘 돕는다고 들었는데… 야속하군요. 대신 안전 지침서나 읽어봐야겠습니다."
+						},
+						{
+							"text": "냉정해 보였지만 기계를 지키기 위한 선택이었어요. 지침서 한 장이 떨어졌네요.",
+							"speaker": "nia"
+						}
+					]
+				},
+				{
+					"reward": [
+						"attack_up"
+					],
+					"mbti": "ET",
+					"text": "대기자들을 직접 이끌어 이력서 유형별로 3개 조로 나누어 줄을 세운다.",
+					"result": [
+						{
+							"text": "당신이 목소리를 높여 구직자들을 직군별로 분류하자 혼잡했던 대기실이 정돈되었다.",
+							"speaker": "narrator"
+						},
+						{
+							"speaker": "clerk",
+							"text": "모두가 한마음으로 당신 지시에 따르는군요. 정말 대단한 인망입니다!"
+						},
+						{
+							"speaker": "nia",
+							"text": "사람들이 당신을 믿고 차분해졌어요. 이 대열이라면 어떤 혼선도 통제할 수 있겠어요."
+						}
+					],
+					"path": "stat",
+					"flag": {
+						"key": "organized_crowd",
+						"boss_text": "당신의 통솔을 따르는 지원자들의 지원을 받아 경비 장벽을 신속하게 해제한다.",
+						"label": "질서정연한 지원자들"
+					},
+					"effects": {
+						"echo": 15,
+						"fighting": 10,
+						"community": 30
+					}
+				}
+			],
+			"title": "대기열 일괄 등록",
+			"dialogue": [
+				{
+					"speaker": "clerk",
+					"text": "곤란한 사람만 보면 먼저 손을 내민다는 분이시군요. 마침 잘됐습니다."
+				},
+				{
+					"text": "담당자님, 품에 안고 계신 이력서 뭉치는 전부 뭔가요?",
+					"speaker": "nia"
+				},
+				{
+					"speaker": "clerk",
+					"text": "대기자 30명의 서류입니다. 그 단말기가 깨끗해졌으니 한꺼번에 밀어넣어 정리해 주십시오."
+				}
+			],
+			"rule_link": "정상 작동하는 단말기에 많은 사람의 이력서 데이터가 한꺼번에 입력된다.",
+			"no": 2,
+			"slot": "B",
+			"kind": "rep",
+			"rep_dir": "community+"
+		}
+	],
+	"errors": [],
+	"prompt_hash": "fe7ac99001434300b89bbd187bb8f812f6528419"
+}

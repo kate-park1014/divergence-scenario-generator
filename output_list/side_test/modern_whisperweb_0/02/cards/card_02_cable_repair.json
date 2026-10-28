@@ -1,0 +1,119 @@
+{
+	"id": "card_02_cable_repair",
+	"title": {
+		"korean": "밀린 수리 작업"
+	},
+	"intensity": "calm",
+	"after_story": 3,
+	"before_story": 5,
+	"background_tags": [
+		"server",
+		"cables",
+		"quiet",
+		"oldroom",
+		"tools"
+	],
+	"dialogue": [
+		{
+			"speaker": "narrator",
+			"content": {
+				"korean": "서버의 전원이 꺼져 조용한 틈을 타, 수리공이 굵은 케이블을 당기고 있다."
+			}
+		},
+		{
+			"speaker": "repair_worker",
+			"content": {
+				"korean": "전원이 나간 김에 이 위험한 케이블을 마저 고치려오. 거기 좀 잡아주시오."
+			}
+		},
+		{
+			"speaker": "lin",
+			"content": {
+				"korean": "지금은 전원이 꺼져 있어서 다행이지만, 언제 다시 들어올지 모르잖아요."
+			}
+		}
+	],
+	"choices": [
+		{
+			"text": {
+				"korean": "케이블을 잡아주어 수리가 빠르게 진행되도록 돕는다."
+			},
+			"path": "easy",
+			"mbti": "SF",
+			"effects": {
+				"community": 15,
+				"gold": 80
+			},
+			"seed": "cable_repair_easy",
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "당신이 케이블을 팽팽하게 잡아준 덕에 수리가 금방 끝났다. 그는 수고비라며 동전을 건넸다."
+					}
+				}
+			]
+		},
+		{
+			"text": {
+				"korean": "수리를 미루고 안전한 곳으로 대피하라고 한다."
+			},
+			"path": "hard",
+			"mbti": "NT",
+			"effects": {
+				"echo": 10,
+				"reason": 15
+			},
+			"reward": [
+				"defense_up"
+			],
+			"seed": "cable_repair_hard",
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "당신은 전원이 언제 들어올지 모른다며 그를 말렸다. 그는 마지못해 연장을 챙겨 물러났다."
+					}
+				}
+			]
+		},
+		{
+			"text": {
+				"korean": "근처 자판기에 돈을 쓰고 절연 테이프를 사서 안전하게 돕는다."
+			},
+			"path": "gold",
+			"mbti": "NF",
+			"require": {
+				"stat": "gold",
+				"op": ">=",
+				"value": 60
+			},
+			"effects": {
+				"community": 20,
+				"gold": -60
+			},
+			"seed": "cable_repair_hard",
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "당신은 절연 장비를 사서 그에게 건넸다. 그는 안전하게 작업을 마무리할 수 있었다."
+					}
+				}
+			]
+		}
+	],
+	"kind": "plant",
+	"_side": {
+		"slot": "B",
+		"person": {
+			"id": "repair_worker",
+			"name": "전력실 수리공",
+			"role": "'~오', '~시오' 체의 무뚝뚝한 말투"
+		},
+		"wants": "",
+		"rule_link": "",
+		"events": {},
+		"flags": {}
+	}
+}

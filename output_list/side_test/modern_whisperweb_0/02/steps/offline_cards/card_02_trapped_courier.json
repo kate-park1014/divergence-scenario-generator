@@ -1,0 +1,184 @@
+{
+	"id": "card_02_trapped_courier",
+	"kind": "normal",
+	"title": {
+		"korean": "튕겨나간 배달물"
+	},
+	"intensity": "calm",
+	"after_story": 7,
+	"before_story": 10,
+	"background_tags": [
+		"emergency_room",
+		"security_door",
+		"cardboard_box",
+		"blinking_lights",
+		"sparks"
+	],
+	"dialogue": [
+		{
+			"speaker": "panicked_courier",
+			"content": {
+				"korean": "큰일이야! 문이 제멋대로 움직이다가 내 소중한 배달 물품을 튕겨냈어!"
+			}
+		},
+		{
+			"speaker": "panicked_courier",
+			"content": {
+				"korean": "저기 널브러진 상자 세 개 중 하나에 들어있는데, 문이 닫히기 전에 빨리 찾아줘!"
+			}
+		},
+		{
+			"speaker": "lin",
+			"content": {
+				"korean": "경비원이 오기 전에 빨리 빠져나가야 하는데… 저 상자들을 다 뒤질 시간은 없어요."
+			}
+		},
+		{
+			"speaker": "lin",
+			"content": {
+				"korean": "문이 오작동하고 있어서 섣��리 다가갔다간 다칠 거예요."
+			}
+		}
+	],
+	"choices": [
+		{
+			"text": {
+				"korean": "상자를 대충 발로 차서 소리를 듣고 내용물을 확인한다."
+			},
+			"path": "easy",
+			"mbti": "EP",
+			"effects": {
+				"community": -10,
+				"echo": -5,
+				"fighting": 10,
+				"gold": 80
+			},
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "당신이 발로 차서 찾아낸 진짜 상자는 약간 찌그러져 있었다."
+					}
+				},
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "샘은 투덜거��면서도 물건을 찾은 대가로 돈을 지불했다."
+					}
+				}
+			]
+		},
+		{
+			"text": {
+				"korean": "위험을 무릅쓰고 닫히려는 문틈으로 들어가 상자를 신중하게 살펴본다."
+			},
+			"path": "hard",
+			"mbti": "IJ",
+			"effects": {
+				"echo": 10,
+				"fighting": 20,
+				"community": 20
+			},
+			"reward": [
+				"hp_down"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "당신은 문틈에 끼일 뻔한 아찔한 순간을 넘기고 진짜 상자를 무사히 구출했다."
+					}
+				},
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "샘은 감탄하며 당신에게 고마움을 담아 사례했다."
+					}
+				}
+			]
+		},
+		{
+			"text": {
+				"korean": "{actor}이(가) 상자의 무게와 굴러간 궤적을 분석해 단숨에 진짜를 찾아낸다."
+			},
+			"path": "lock",
+			"mbti": "TJ",
+			"require": {
+				"mbti": "TJ"
+			},
+			"effects": {
+				"echo": 10,
+				"gold": 50,
+				"community": 10,
+				"reason": 20
+			},
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "{actor}이(가) 한 치의 망설임 없이 상자를 고르자 그 안에 물건이 온전히 들어있었다."
+					}
+				},
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "샘은 놀라운 눈썰미라며 감사를 표했다."
+					}
+				}
+			]
+		},
+		{
+			"text": {
+				"korean": "다급해진 샘이 상자들을 이리저리 섞어버리며 진짜를 골라보라고 재촉한다."
+			},
+			"path": "fun",
+			"mbti": "EN",
+			"effects": {
+				"echo": 10,
+				"reason": -20,
+				"gold": 50
+			},
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "당신이 상자를 고르는 사이 보안문이 요란한 소리를 내며 완전히 닫혀버렸다."
+					}
+				},
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "샘은 숨을 헐떡이며 당신이 고른 상자를 꽉 끌어안았다."
+					}
+				}
+			],
+			"event": "minigame_cup",
+			"event_intro": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "샘이 허둥지둥 상자 세 개를 빠르게 섞은 뒤 어느 것이 진짜인지 물어본다."
+					}
+				}
+			]
+		}
+	],
+	"_side": {
+		"slot": "D",
+		"person": {
+			"role": "배달원",
+			"name": "샘",
+			"id": "panicked_courier"
+		},
+		"wants": "과열로 오작동하는 보안문이 튕겨낸 배달 상자 세 개 중 진짜 물건이 든 것을 찾아달라고 한다.",
+		"rule_link": "심각해진 과열로 인해 시설 곳곳의 보안문이 제멋대로 움직이며 피해를 주고 있다.",
+		"events": {
+			"fun": "패닉에 빠진 샘이 상자를 마구잡이로 뒤섞으며 당신을 시험했다."
+		},
+		"flags": {}
+	}
+}

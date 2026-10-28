@@ -1,0 +1,258 @@
+{
+	"id": "card_01_last_seat_claim",
+	"kind": "rep",
+	"title": {
+		"korean": "마지막 빈자리"
+	},
+	"intensity": "calm",
+	"after_story": 7,
+	"before_story": 10,
+	"condition": {
+		"leaning": "community-",
+		"among": [
+			"fighting-",
+			"fighting+",
+			"community-",
+			"community+",
+			"reason-",
+			"reason+"
+		],
+		"min": 20
+	},
+	"urgency": 8,
+	"leaning": "community-",
+	"background_tags": [
+		"waiting_hall",
+		"daytime",
+		"wall_outlet",
+		"crowd",
+		"fidgety"
+	],
+	"dialogue": [
+		{
+			"speaker": "narrator",
+			"content": {
+				"korean": "대기홀 벽 끝 콘센트 하나에 휴대폰 네 대가 꽂혀 있었다. 태주가 그 앞 의자를 팔로 감싸 쥐고 있었다."
+			}
+		},
+		{
+			"speaker": "taeju",
+			"content": {
+				"korean": "당신이죠, 남 접수표 챙겨 주면서 자기 몫은 안 챙긴다는 사람."
+			}
+		},
+		{
+			"speaker": "taeju",
+			"content": {
+				"korean": "여기 자리 하나 남았어요. 내 휴대폰 다 충전될 때까지 아무도 못 앉아요."
+			}
+		},
+		{
+			"speaker": "lin",
+			"content": {
+				"korean": "저 휴대폰 화면에 명패 출력기 사진이 떠 있어요. 계속 찍어 두는 것 같은데요."
+			}
+		},
+		{
+			"speaker": "taeju",
+			"content": {
+				"korean": "출력기 전원이 여기서 들어와요. 이 자리 뽑히면 다 같이 이름 잃는 거예요."
+			}
+		}
+	],
+	"choices": [
+		{
+			"text": {
+				"korean": "태주를 밀어내고 콘센트 옆자리를 차지한다"
+			},
+			"path": "easy",
+			"mbti": "TJ",
+			"flag": "plug_seized",
+			"effects": {
+				"community": -20,
+				"fighting": 15,
+				"gold": 100
+			},
+			"reward": [
+				"attack_up"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "taeju",
+					"content": {
+						"korean": "야, 그럼 내 휴대폰은요? 아직 40프로인데!"
+					}
+				},
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "태주가 뽑힌 충전기를 들고 의자 옆에 서서 당신을 노려봤다."
+					}
+				},
+				{
+					"speaker": "lin",
+					"content": {
+						"korean": "자리는 얻었는데, 저 사람이 계속 콘센트만 보고 있어요."
+					}
+				}
+			]
+		},
+		{
+			"text": {
+				"korean": "태주에게 자기 휴대폰을 맡기고 자리를 비켜 준다"
+			},
+			"path": "hard",
+			"mbti": "FP",
+			"flag": "charger_shared",
+			"effects": {
+				"community": 20,
+				"gold": -50
+			},
+			"reward": [
+				"defense_up"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "taeju",
+					"content": {
+						"korean": "진짜요? 이거 충전 느린데… 그래도 고마워요."
+					}
+				},
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "태주가 자기 충전기를 하나 빼서 당신 휴대폰에 꽂았다."
+					}
+				},
+				{
+					"speaker": "lin",
+					"content": {
+						"korean": "저 사람 사진첩에 출력기 명패가 잔뜩 찍혀 있어요."
+					}
+				}
+			]
+		},
+		{
+			"text": {
+				"korean": "태주에게 콘센트를 나눠 쓰자고 제안하고 남는 자리를 접수대로 돌린다"
+			},
+			"path": "stat",
+			"mbti": "SP",
+			"require": {
+				"stat": "community",
+				"op": "<=",
+				"value": -40
+			},
+			"flag": "outlet_split",
+			"effects": {
+				"community": -15,
+				"reason": 15
+			},
+			"reward": [
+				"intelligence_up"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "taeju",
+					"content": {
+						"korean": "반씩이요? 그럼 내 휴대폰은 한 시간에 20프로네요."
+					}
+				},
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "태주가 충전기 두 개를 뽑아 하나를 당신 쪽으로 밀었다."
+					}
+				},
+				{
+					"speaker": "lin",
+					"content": {
+						"korean": "저 사람 사진, 명패 이름이 다섯 개나 찍혀 있어요."
+					}
+				}
+			]
+		},
+		{
+			"text": {
+				"korean": "태주 휴대폰 배터리를 다 쓰게 두고 출력기 전원을 뽑아 본다"
+			},
+			"path": "fun",
+			"mbti": "NP",
+			"effects": {
+				"reason": -25,
+				"community": 10
+			},
+			"reward": [
+				"stun"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "taeju",
+					"content": {
+						"korean": "뭐 해요! 지금 명패 다섯 장이 한꺼번에 지워졌어요!"
+					}
+				},
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "출력기에서 종이가 걸린 채 멈췄다. 대기자들이 각자 명패를 뒤집어 봤다."
+					}
+				},
+				{
+					"speaker": "lin",
+					"content": {
+						"korean": "제 명패에 이름이… 아직 보여요. 다행이다."
+					}
+				}
+			]
+		}
+	],
+	"_side": {
+		"slot": "D",
+		"person": {
+			"id": "taeju",
+			"name": "태주",
+			"role": "대기홀 맨 끝자리를 차지한 대기자"
+		},
+		"wants": "출력기 옆 마지막 콘센트 자리를 혼자 차지해 휴대폰을 계속 충전하고 싶다",
+		"rule_link": "명패 출력기가 기록대로 찍히는 동안만 이름이 유지되니, 전원이 붙은 자리를 쥔 사람이 유리하다고 믿는다",
+		"rep": "community-",
+		"events": {},
+		"flags": {
+			"plug_seized": {
+				"kind": "bad",
+				"boss_penalty": -1,
+				"label": {
+					"korean": "콘센트 뺏김"
+				},
+				"boss_line": {
+					"korean": "출입문 앞에서 태주가 콘센트를 뽑아 출력기를 멈춰 세운다."
+				}
+			},
+			"charger_shared": {
+				"kind": "good",
+				"boss_penalty": 1,
+				"label": {
+					"korean": "나눈 충전기"
+				},
+				"boss_choice": {
+					"korean": "출입문 앞에서 태주가 충전된 휴대폰을 건네며 출력기 기록 사진을 보여 준다."
+				}
+			},
+			"outlet_split": {
+				"kind": "good",
+				"boss_penalty": 2,
+				"label": {
+					"korean": "나눈 콘센트"
+				},
+				"boss_choice": {
+					"korean": "출입문 앞에서 태주가 출력기 기록 사진을 넘겨 주고 당신 대신 문 손잡이를 잡아 준다."
+				}
+			}
+		}
+	}
+}

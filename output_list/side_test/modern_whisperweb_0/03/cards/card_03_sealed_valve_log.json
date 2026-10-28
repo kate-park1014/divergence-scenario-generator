@@ -1,0 +1,256 @@
+{
+	"id": "card_03_sealed_valve_log",
+	"kind": "rep",
+	"title": {
+		"korean": "봉인 밸브 대장"
+	},
+	"intensity": "calm",
+	"after_story": 7,
+	"before_story": 10,
+	"condition": {
+		"leaning": "reason-",
+		"among": [
+			"fighting-",
+			"fighting+",
+			"community-",
+			"community+",
+			"reason-",
+			"reason+"
+		],
+		"min": 20
+	},
+	"urgency": 8,
+	"leaning": "reason-",
+	"background_tags": [
+		"pipe_room",
+		"dim",
+		"dust",
+		"crowd",
+		"tense"
+	],
+	"dialogue": [
+		{
+			"speaker": "narrator",
+			"content": {
+				"korean": "대장 담당자가 조각을 무릎에 올리고 봉인 번호를 하나씩 대조하고 있었다."
+			}
+		},
+		{
+			"speaker": "ledger_keeper",
+			"content": {
+				"korean": "당신이 그 냉각수 마음대로 부은 사람이죠? 그래서 여기 대장이 이 꼴이 됐어요."
+			}
+		},
+		{
+			"speaker": "kai",
+			"content": {
+				"korean": "저 사람, 같은 번호를 세 번이나 다시 읽어. 조각이 섞여서 못 믿겠는 모양이야."
+			}
+		},
+		{
+			"speaker": "ledger_keeper",
+			"content": {
+				"korean": "규칙대로면 봉인은 제 기록으로만 풀 수 있어요. 조각이 맞아야 밸브도 열리죠."
+			}
+		}
+	],
+	"choices": [
+		{
+			"text": {
+				"korean": "대장 담당자의 지시대로 조각 번호를 대조해 봉인 대장을 완성한다."
+			},
+			"path": "easy",
+			"mbti": "TJ",
+			"flag": "seal_locked",
+			"effects": {
+				"reason": 15,
+				"fighting": -10
+			},
+			"reward": [
+				"defense_up"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "ledger_keeper",
+					"content": {
+						"korean": "스물두 번, 스물세 번... 맞았어요. 이게 진짜 대장이에요."
+					}
+				},
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "담당자가 완성된 대장을 품에 넣고 밸브 옆에 붙은 봉인 테이프를 한 번 눌렀다."
+					}
+				},
+				{
+					"speaker": "kai",
+					"content": {
+						"korean": "대장이 완성됐으니 밸브는 이제 이 사람 허락 없이는 못 여네."
+					}
+				}
+			]
+		},
+		{
+			"text": {
+				"korean": "대장 담당자 몫의 조각을 빼앗아 봉인 번호를 당신 손으로 다시 매긴다."
+			},
+			"path": "hard",
+			"mbti": "TP",
+			"flag": "rewritten_seal",
+			"effects": {
+				"reason": -15,
+				"fighting": 15
+			},
+			"reward": [
+				"attack_up"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "ledger_keeper",
+					"content": {
+						"korean": "그 번호는 제가 매긴 거예요! 함부로 바꾸면 기록이 안 맞아요!"
+					}
+				},
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "당신이 매긴 번호로 조각이 다시 정렬됐다. 담당자는 무릎의 조각을 떨어뜨린 채 앉아 있었다."
+					}
+				},
+				{
+					"speaker": "kai",
+					"content": {
+						"korean": "번호는 맞는데, 저 사람이 계속 고개를 젓네. 뭐가 틀린 걸까."
+					}
+				}
+			]
+		},
+		{
+			"text": {
+				"korean": "대장 담당자에게 당신이 지켜 온 절차를 늘어놓고, 대장을 당신에게 맡기게 한다."
+			},
+			"path": "stat",
+			"mbti": "FJ",
+			"require": {
+				"stat": "reason",
+				"op": "<=",
+				"value": -40
+			},
+			"flag": "ledger_handed",
+			"effects": {
+				"reason": -20,
+				"echo": 5
+			},
+			"reward": [
+				"cooldown_reset"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "ledger_keeper",
+					"content": {
+						"korean": "당신이 그렇게까지 확인하고 움직였다는 건 처음 들었어요."
+					}
+				},
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "담당자가 완성된 대장을 당신에게 넘겼다. 봉인 테이프 끝이 살짝 들려 있었다."
+					}
+				},
+				{
+					"speaker": "kai",
+					"content": {
+						"korean": "대장을 넘겨받았으니 이제 밸브는 당신 결정에 달렸네."
+					}
+				}
+			]
+		},
+		{
+			"text": {
+				"korean": "대장 담당자에게 120골드를 주고 봉인 기록을 새로 사 온다."
+			},
+			"path": "gold",
+			"mbti": "EP",
+			"require": {
+				"stat": "gold",
+				"op": ">=",
+				"value": 120
+			},
+			"effects": {
+				"reason": 10,
+				"gold": -120
+			},
+			"reward": [
+				"intelligence_up"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "ledger_keeper",
+					"content": {
+						"korean": "새 대장이라... 이러면 제 기록은 어디로 가는 거죠?"
+					}
+				},
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "새 봉인 대장이 밸브 옆에 걸렸다. 옛 대장은 담당자 품에 접힌 채 남았다."
+					}
+				},
+				{
+					"speaker": "kai",
+					"content": {
+						"korean": "대장이 두 개가 됐네. 어느 쪽이 진짜인지는 나중에 문제가 되겠어."
+					}
+				}
+			]
+		}
+	],
+	"_side": {
+		"slot": "D",
+		"person": {
+			"id": "ledger_keeper",
+			"name": "대장 담당자",
+			"role": "설비 기록 담당"
+		},
+		"wants": "비상 냉각수 밸브의 봉인 대장이 데이터 파편에 묻혀 버렸다며, 자기 기록대로 밸브를 잠가 두자고 요구한다.",
+		"rule_link": "깨진 데이터 스크린 조각에 밸브 봉인 기록이 섞여, 어떤 조각이 진짜 대장인지 가려야 밸브를 다룰 수 있다.",
+		"rep": "reason-",
+		"events": {},
+		"flags": {
+			"seal_locked": {
+				"kind": "bad",
+				"boss_penalty": -1,
+				"label": {
+					"korean": "잠긴 봉인"
+				},
+				"boss_line": {
+					"korean": "대장 담당자가 봉인 테이프를 가리키며 당신 앞을 막아선다."
+				}
+			},
+			"rewritten_seal": {
+				"kind": "good",
+				"boss_penalty": 1,
+				"label": {
+					"korean": "다시 매긴 번호"
+				},
+				"boss_choice": {
+					"korean": "당신이 다시 매긴 봉인 번호를 복도 벽에 크게 적어 둔다."
+				}
+			},
+			"ledger_handed": {
+				"kind": "good",
+				"boss_penalty": 2,
+				"label": {
+					"korean": "넘겨받은 대장"
+				},
+				"boss_choice": {
+					"korean": "당신이 넘겨받은 봉인 대장을 펼쳐 밸브 앞에 선다."
+				}
+			}
+		}
+	}
+}

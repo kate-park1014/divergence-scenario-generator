@@ -1,0 +1,714 @@
+{
+	"cards": [
+		{
+			"kind": "rep",
+			"background_tags": [
+				"powerroom",
+				"dim",
+				"machinery",
+				"empty",
+				"tense"
+			],
+			"title": "부서진 단말기 강탈",
+			"key": "rep_fighting_minus_greg",
+			"returns": "easy",
+			"person": {
+				"name": "그렉",
+				"role": "뒷골목 기계공",
+				"id": "thug_mechanic"
+			},
+			"forced": [],
+			"dialogue": [
+				{
+					"text": "네가 그 거슬리는 놈들을 전부 힘으로 밟아버렸다는 녀석이군.",
+					"speaker": "thug_mechanic"
+				},
+				{
+					"text": "이 단말기 속 데이터 스크린 조각이 필요해. 코드를 확 뽑아버려.",
+					"speaker": "thug_mechanic"
+				},
+				{
+					"speaker": "lin",
+					"text": "저 사람이 부품을 건드리기 전에 빨리 전원부터 차단하는 게 좋겠어요."
+				}
+			],
+			"slot": "A",
+			"choices": [
+				{
+					"avoid_penalty": "hp_down",
+					"flag": {
+						"label": "단말기 파편",
+						"key": "greg_broken_parts",
+						"boss_text": "단말기 파편이 튀어 바닥에 흩어지며 발목을 잡는다."
+					},
+					"path": "easy",
+					"effects": {
+						"gold": 100,
+						"fighting": -20
+					},
+					"event_reason": "그렉의 움직임에 맞춰 코드를 뽑아야 한다.",
+					"text": "렌치로 단말기의 코드를 강제로 뽑아 부순다.",
+					"event": "minigame_timing",
+					"result": [
+						{
+							"speaker": "narrator",
+							"text": "그렉이 웃으며 데이터를 빼낸다. 단말기 파편이 사방으로 튄다."
+						}
+					],
+					"mbti": "TJ",
+					"event_intro": [
+						{
+							"text": "자, 내가 렌치로 찍을 때 확 뜯어버려!",
+							"speaker": "thug_mechanic"
+						}
+					]
+				},
+				{
+					"result": [
+						{
+							"speaker": "narrator",
+							"text": "그렉이 욕설을 내뱉으며 멀어진다. 단말기는 서서히 꺼진다."
+						}
+					],
+					"mbti": "FP",
+					"effects": {
+						"echo": 10,
+						"fighting": 20
+					},
+					"text": "얌전히 단말기 절차에 따라 종료를 시도한다.",
+					"path": "hard",
+					"flag": {
+						"key": "greg_normal_log",
+						"label": "종료 기록",
+						"boss_text": "정상 종료 시도 기록을 방패막이로 삼아 공격을 피한다."
+					}
+				},
+				{
+					"result": [
+						{
+							"text": "그렉이 렌치를 떨어뜨리고 도망간다. 당신은 안전하게 코드를 뽑는다.",
+							"speaker": "narrator"
+						}
+					],
+					"effects": {
+						"fighting": -30,
+						"echo": -10
+					},
+					"mbti": "ST",
+					"text": "눈빛만으로 그렉을 위협해 부품을 뺏고 코드를 뽑는다.",
+					"path": "stat",
+					"flag": {
+						"key": "greg_stolen_part",
+						"label": "빼앗은 부품",
+						"boss_text": "빼앗은 불법 부품을 방패로 사용해 충격을 막아낸다."
+					}
+				},
+				{
+					"path": "fun",
+					"mbti": "EN",
+					"result": [
+						{
+							"speaker": "narrator",
+							"text": "그렉이 비명을 지르며 렌치를 찾으러 뛰어간다. 주변이 조용해진다."
+						}
+					],
+					"text": "그렉의 렌치를 뺏어서 멀리 던져버린다.",
+					"effects": {
+						"echo": 5,
+						"reason": 15
+					}
+				}
+			],
+			"wants": "당신이 거슬리는 자들을 힘으로 제압한다는 소문을 듣고, 자신이 불법 부품을 빼낼 동안 오작동하는 단말기를 힘으로 부숴서 꺼달라고 함.",
+			"rep_dir": "fighting-",
+			"rule_link": "단말기를 물리적으로 멈추는 과정에서 전원 코드를 뽑는 행위를 하게 된다."
+		},
+		{
+			"slot": "A",
+			"wants": "당신이 곤란한 사람을 지나치지 않는다며, 스파크가 튀는 단말기 밑에 낀 빗자루를 꺼내기 위해 코드를 뽑아달라고 함.",
+			"choices": [
+				{
+					"flag": {
+						"key": "jamie_spark_burn",
+						"label": "스파크 화상",
+						"boss_text": "스파크에 데인 상처가 덧나면서 움직임이 둔해진다."
+					},
+					"path": "easy",
+					"avoid_penalty": "hp_down",
+					"event_reason": "스파크가 멈추는 순간을 노려 코드를 뽑아야 한다.",
+					"event": "minigame_timing",
+					"text": "위험을 무릅쓰고 코드를 뽑아 빗자루를 꺼내준다.",
+					"result": [
+						{
+							"speaker": "narrator",
+							"text": "제이미가 연신 고맙다고 인사한다. 손등에 화상을 입었다."
+						}
+					],
+					"event_intro": [
+						{
+							"text": "전기가 튀지 않을 때 재빨리 뽑아주세요!",
+							"speaker": "trapped_cleaner"
+						}
+					],
+					"mbti": "FJ",
+					"effects": {
+						"fighting": 20,
+						"gold": 50
+					}
+				},
+				{
+					"text": "빗자루를 포기하라고 차갑게 말하며 코드만 뽑는다.",
+					"result": [
+						{
+							"text": "제이미가 울상을 지으며 두꺼운 장갑을 바닥에 버리고 도망친다.",
+							"speaker": "narrator"
+						}
+					],
+					"mbti": "TP",
+					"effects": {
+						"echo": -10,
+						"fighting": -20
+					},
+					"path": "hard",
+					"flag": {
+						"label": "두꺼운 장갑",
+						"boss_text": "제이미가 남긴 두꺼운 장갑을 끼고 뜨거운 코어를 맨손으로 잡는다.",
+						"key": "jamie_thick_gloves"
+					}
+				},
+				{
+					"text": "주변의 고무 매트를 덮고 안전하게 코드를 뽑는다.",
+					"mbti": "NF",
+					"effects": {
+						"fighting": 30,
+						"echo": 10
+					},
+					"result": [
+						{
+							"text": "스파크가 고무 매트에 막힌다. 제이미가 무사히 빗자루를 챙긴다.",
+							"speaker": "narrator"
+						}
+					],
+					"path": "stat",
+					"flag": {
+						"key": "jamie_rubber_mat",
+						"label": "고무 매트",
+						"boss_text": "주워둔 고무 매트를 펼쳐 전기 공격을 차단한다."
+					}
+				}
+			],
+			"person": {
+				"id": "trapped_cleaner",
+				"role": "청소부",
+				"name": "제이미"
+			},
+			"rep_dir": "fighting+",
+			"kind": "rep",
+			"rule_link": "청소부의 빗자루를 구하기 위해 스파크가 튀는 단말기의 전원 코드를 뽑게 된다.",
+			"forced": [],
+			"returns": "easy",
+			"key": "rep_fighting_plus_jamie",
+			"background_tags": [
+				"powerroom",
+				"dim",
+				"sparks",
+				"dusty",
+				"tense"
+			],
+			"title": "끼어버린 빗자루",
+			"dialogue": [
+				{
+					"speaker": "trapped_cleaner",
+					"text": "위험에 처한 사람을 보면 어떻게든 구해주고 본다면서요?"
+				},
+				{
+					"speaker": "trapped_cleaner",
+					"text": "제 빗자루가 저기 끼었어요! 코드를 ��아야 꺼낼 수 있어요."
+				},
+				{
+					"text": "스파크가 튀고 있어요! 다치기 전에 얼른 코드를 빼서 도와주죠.",
+					"speaker": "lin"
+				}
+			]
+		},
+		{
+			"forced": [],
+			"kind": "rep",
+			"title": "은밀한 거래",
+			"key": "rep_community_minus_lucas",
+			"background_tags": [
+				"powerroom",
+				"shadow",
+				"quiet",
+				"machinery",
+				"tense"
+			],
+			"returns": "easy",
+			"dialogue": [
+				{
+					"text": "네가 남들보다 네 몫부터 확실하게 챙긴다는 그 친구지?",
+					"speaker": "bribe_officer"
+				},
+				{
+					"speaker": "bribe_officer",
+					"text": "코드를 뽑을 때 내 기록도 좀 지워줘. 사례는 섭섭지 않게 할게."
+				},
+				{
+					"text": "지금 뇌물 받을 때가 아니에요! 시스템이 멈추기 전에 코드를 뽑아야 해요!",
+					"speaker": "lin"
+				}
+			],
+			"choices": [
+				{
+					"event": "minigame_timing",
+					"result": [
+						{
+							"speaker": "narrator",
+							"text": "동전이 가득 든 주머니를 챙긴다. 단말기 화면이 까맣게 꺼진다."
+						}
+					],
+					"effects": {
+						"gold": 150,
+						"community": -20
+					},
+					"mbti": "ET",
+					"flag": {
+						"boss_text": "루카스의 횡령 데이터가 엮여 시스템의 타겟이 된다.",
+						"key": "lucas_embezzle_data",
+						"label": "횡령 데이터"
+					},
+					"avoid_penalty": "hp_down",
+					"path": "easy",
+					"event_intro": [
+						{
+							"speaker": "bribe_officer",
+							"text": "내 기록이 화면에 뜰 때 딱 뽑아주면 돼."
+						}
+					],
+					"text": "돈을 받고 단말기 코드를 ��싸게 뽑는다.",
+					"event_reason": "루카스의 데이터가 나타나는 순간 코드를 뽑아야 한다."
+				},
+				{
+					"text": "뇌물을 거절하고 린을 위해 코드를 뽑는다.",
+					"mbti": "IF",
+					"effects": {
+						"community": 20,
+						"echo": 10
+					},
+					"flag": {
+						"label": "보안 카드",
+						"boss_text": "루카스가 흘린 보안 카드로 잠긴 문을 강제로 연다.",
+						"key": "lucas_security_card"
+					},
+					"result": [
+						{
+							"text": "루카스가 당황해 보안 카드를 흘리고 달아난다. 단말기가 정지한다.",
+							"speaker": "narrator"
+						}
+					],
+					"path": "hard"
+				},
+				{
+					"mbti": "ST",
+					"text": "루카스의 돈만 가로채고 횡령 기록은 남긴 채 코드를 뽑는다.",
+					"result": [
+						{
+							"speaker": "narrator",
+							"text": "루카스가 분통을 터뜨리며 도망간다. 주머니가 제법 묵직해졌다."
+						}
+					],
+					"flag": {
+						"key": "lucas_stolen_bribe",
+						"boss_text": "가로챈 뇌물로 용병을 매수해 시선을 분산시킨다.",
+						"label": "가로챈 뇌물"
+					},
+					"path": "stat",
+					"effects": {
+						"gold": 150,
+						"community": -30
+					}
+				},
+				{
+					"path": "fun",
+					"effects": {
+						"echo": 5,
+						"reason": 20
+					},
+					"mbti": "EP",
+					"result": [
+						{
+							"speaker": "narrator",
+							"text": "루카스가 비명을 지르며 바지를 올리느라 정신이 없다."
+						}
+					],
+					"text": "코드를 뽑는 척하며 루카스의 바지를 벗긴다."
+				}
+			],
+			"rep_dir": "community-",
+			"slot": "A",
+			"person": {
+				"name": "루카스",
+				"role": "하급 관리자",
+				"id": "bribe_officer"
+			},
+			"wants": "단말기 코드를 뽑아 에러를 낸 뒤 자신의 횡령 데이터를 지워주면 돈을 주겠다고 제안함.",
+			"rule_link": "돈을 대가로 오작동하는 단말기의 전원 코드를 뽑아 시스템 에러를 유도한다."
+		},
+		{
+			"wants": "오작동을 멈춰 구역 전체의 화재 위험을 막기 위해 단말기 코드를 뽑아달라고 함.",
+			"returns": "easy",
+			"background_tags": [
+				"powerroom",
+				"alarm",
+				"redlight",
+				"machinery",
+				"tense"
+			],
+			"forced": [],
+			"slot": "A",
+			"key": "rep_community_plus_sara",
+			"rule_link": "구역 사람들을 위험에서 구하기 위해 단말기의 전원 코드를 뽑는다.",
+			"choices": [
+				{
+					"text": "모두의 안전을 위해 즉시 코드를 뽑는다.",
+					"flag": {
+						"key": "sara_power_outage",
+						"boss_text": "전력이 차단되어 시야가 어두워지며 길을 잃는다.",
+						"label": "전력 차단"
+					},
+					"result": [
+						{
+							"text": "단말기가 꺼지며 화재 경보가 멈춘다. 사라는 안도의 한숨을 쉰다.",
+							"speaker": "narrator"
+						}
+					],
+					"path": "easy",
+					"event_intro": [
+						{
+							"text": "코드를 뽑고 바로 뒤로 물러나야 해요!",
+							"speaker": "worried_engineer"
+						}
+					],
+					"event_reason": "뜨거운 열기를 피해 안전하게 코드를 뽑아야 한다.",
+					"effects": {
+						"community": 20,
+						"gold": 50
+					},
+					"mbti": "FJ",
+					"avoid_penalty": "hp_down",
+					"event": "minigame_timing"
+				},
+				{
+					"effects": {
+						"community": -20,
+						"echo": -10
+					},
+					"text": "코드를 뽑는 대신 소화기로 단말기를 덮어버린다.",
+					"result": [
+						{
+							"text": "단말기가 하얀 거품에 파묻혀 작동을 멈춘다. 코드는 그대로 꽂혀 있다.",
+							"speaker": "narrator"
+						}
+					],
+					"mbti": "TP",
+					"path": "hard",
+					"flag": {
+						"boss_text": "바닥에 남은 소화액을 흩뿌려 센서의 눈을 가린다.",
+						"label": "소화액 분사",
+						"key": "sara_extinguisher"
+					}
+				},
+				{
+					"path": "stat",
+					"flag": {
+						"key": "sara_evacuated_people",
+						"boss_text": "대피했던 사람들이 나타나 막힌 길을 열어준다.",
+						"label": "대피한 사람들"
+					},
+					"result": [
+						{
+							"speaker": "narrator",
+							"text": "모두가 안전하게 빠져나간 뒤, 당신이 마지막으로 코드를 뽑는다."
+						}
+					],
+					"mbti": "NF",
+					"effects": {
+						"community": 30,
+						"echo": 10
+					},
+					"text": "사람들을 대피시키며 여유롭게 코드를 뽑는다."
+				}
+			],
+			"dialogue": [
+				{
+					"speaker": "worried_engineer",
+					"text": "당신이 사람들을 구하려고 물불 안 가린다는 분이군요."
+				},
+				{
+					"speaker": "worried_engineer",
+					"text": "이 단말기가 계속 돌면 구역 전체에 불이 나요! 제발 코드를 뽑아주세요."
+				},
+				{
+					"speaker": "lin",
+					"text": "화재가 번지면 정말 큰일이에요. 어서 코드를 ���아주세요!"
+				}
+			],
+			"title": "모두를 위한 정지",
+			"rep_dir": "community+",
+			"person": {
+				"name": "사라",
+				"role": "설비 기사",
+				"id": "worried_engineer"
+			},
+			"kind": "rep"
+		},
+		{
+			"forced": [],
+			"background_tags": [
+				"powerroom",
+				"bright",
+				"tidy",
+				"machinery",
+				"strict"
+			],
+			"title": "매뉴얼의 한계",
+			"choices": [
+				{
+					"text": "매뉴얼에 적힌 순서대로 전원 코드를 뽑는다.",
+					"path": "easy",
+					"effects": {
+						"gold": 80,
+						"reason": -20
+					},
+					"event": "minigame_timing",
+					"flag": {
+						"key": "morgan_manual_delay",
+						"boss_text": "매뉴얼 절차에 따른 지연 시간이 발목을 잡아 공격에 노출된다.",
+						"label": "절차 지연"
+					},
+					"event_intro": [
+						{
+							"text": "자, 정확히 3�� 후에 코드를 분리하시오.",
+							"speaker": "strict_auditor"
+						}
+					],
+					"result": [
+						{
+							"speaker": "narrator",
+							"text": "3초를 정확히 세고 코드를 뽑았다. 모건이 만족스럽게 수첩에 체크한다."
+						}
+					],
+					"avoid_penalty": "hp_down",
+					"mbti": "SJ",
+					"event_reason": "매뉴얼에 명시된 타이밍에 맞춰 코드를 뽑아야 한다."
+				},
+				{
+					"text": "매뉴얼을 무시하고 선을 발로 차서 뽑는다.",
+					"result": [
+						{
+							"text": "단말기가 요란한 소리를 내며 멈춘다. 모건이 경악하며 수첩을 떨어뜨린다.",
+							"speaker": "narrator"
+						}
+					],
+					"mbti": "NP",
+					"effects": {
+						"echo": 10,
+						"reason": 20
+					},
+					"flag": {
+						"key": "morgan_kicked_wire",
+						"label": "끊어진 선",
+						"boss_text": "발로 차서 끊어낸 선을 엮어 트랩으로 사용한다."
+					},
+					"path": "hard"
+				},
+				{
+					"text": "감사관의 수첩을 빼앗아 확인하고 코드를 단번에 뽑는다.",
+					"mbti": "TJ",
+					"effects": {
+						"echo": -10,
+						"reason": -30
+					},
+					"result": [
+						{
+							"speaker": "narrator",
+							"text": "모건이 항의하지만, 당신은 수첩의 내용을 모두 외워버렸다."
+						}
+					],
+					"path": "stat",
+					"flag": {
+						"boss_text": "수첩에서 알아낸 기밀 암호로 보안 장치를 무력화한다.",
+						"key": "morgan_secret_code",
+						"label": "기밀 암호"
+					}
+				}
+			],
+			"kind": "rep",
+			"rep_dir": "reason-",
+			"dialogue": [
+				{
+					"speaker": "strict_auditor",
+					"text": "어떤 상황에서도 절차와 규칙을 칼같이 지킨다더니, 딱 맞춰 왔군."
+				},
+				{
+					"text": "매뉴얼 4장 2절에 따라 3초 대기 후 코드를 뽑으시오.",
+					"speaker": "strict_auditor"
+				},
+				{
+					"text": "절차가 너무 길어요! 당장 코드를 뽑지 않으면 터질지도 모른다고요!",
+					"speaker": "lin"
+				}
+			],
+			"returns": "easy",
+			"wants": "당신이 규정을 철저히 지킨다며, 오작동 단말기의 매뉴얼대로 비상 전원 코드를 뽑아 시스템을 정지시켜 달라고 함.",
+			"slot": "A",
+			"key": "rep_reason_minus_morgan",
+			"person": {
+				"role": "감사관",
+				"name": "모건",
+				"id": "strict_auditor"
+			},
+			"rule_link": "매뉴얼 절차에 따라 비상 전원 코드를 뽑는다."
+		},
+		{
+			"choices": [
+				{
+					"mbti": "EP",
+					"event_intro": [
+						{
+							"text": "내가 손가락 튕기면 바로 뽑았다 꽂아!",
+							"speaker": "rebel_hacker"
+						}
+					],
+					"avoid_penalty": "hp_down",
+					"text": "해커의 신호에 맞춰 전원 코드를 뽑았다 꽂는다.",
+					"event": "minigame_timing",
+					"flag": {
+						"key": "jett_firewall_down",
+						"label": "방화벽 무력화",
+						"boss_text": "방화벽 무력화로 인해 보안 알람이 크게 울리며 포위당한다."
+					},
+					"path": "easy",
+					"effects": {
+						"reason": 20,
+						"gold": 100
+					},
+					"event_reason": "해커의 신호에 맞춰 코드를 조작해야 한다.",
+					"result": [
+						{
+							"speaker": "narrator",
+							"text": "시스템이 미친 듯이 깜빡인다. 제트가 박장대소하며 데이터를 빼낸다."
+						}
+					]
+				},
+				{
+					"result": [
+						{
+							"speaker": "narrator",
+							"text": "단말기가 허무하게 꺼진다. 제트가 욕설을 내뱉으며 해킹 칩을 흘리고 간다."
+						}
+					],
+					"path": "hard",
+					"effects": {
+						"echo": -10,
+						"reason": -20
+					},
+					"flag": {
+						"boss_text": "제트가 떨어뜨린 해킹 칩을 단말기에 꽂아 통제권을 뺏는다.",
+						"label": "해킹 칩",
+						"key": "jett_hacking_chip"
+					},
+					"text": "장난에 동참하지 않고 코드만 완전히 뽑아버린다.",
+					"mbti": "IJ"
+				},
+				{
+					"result": [
+						{
+							"speaker": "narrator",
+							"text": "기이하게 묶인 코드를 보고 제트가 어이없다는 듯 휘파람을 분다."
+						}
+					],
+					"flag": {
+						"label": "묶인 코드",
+						"key": "jett_tied_cable",
+						"boss_text": "매듭지어 묶어둔 코드가 장애물이 되어 접근을 막아낸다."
+					},
+					"path": "stat",
+					"effects": {
+						"echo": 10,
+						"reason": 30
+					},
+					"text": "해커를 밀쳐내고 코드를 뽑아 춤추듯 선을 묶어버린다.",
+					"mbti": "FP"
+				},
+				{
+					"result": [
+						{
+							"speaker": "narrator",
+							"text": "제트가 머리에 달린 리본 코드를 풀려고 발버둥 친다."
+						}
+					],
+					"text": "코드를 뽑아 제트의 머리에 리본 모양으로 묶어버린다.",
+					"effects": {
+						"echo": 5,
+						"community": 15
+					},
+					"mbti": "EN",
+					"path": "fun"
+				}
+			],
+			"dialogue": [
+				{
+					"text": "규칙 ���위 가볍게 무시하고 마음대로 날뛴다는 게 너지?",
+					"speaker": "rebel_hacker"
+				},
+				{
+					"text": "내가 신호하면 코드 뺐다가 다시 꽂아! 시스템 엉키는 거 구경하자고.",
+					"speaker": "rebel_hacker"
+				},
+				{
+					"text": "저런 장난에 어울릴 시간이 없어요! 어서 전원만 차단해요.",
+					"speaker": "lin"
+				}
+			],
+			"forced": [],
+			"rep_dir": "reason+",
+			"kind": "rep",
+			"wants": "단말기를 해킹하는 동안 전원 코드를 뽑았다 꽂아서 방화벽을 무력화시켜 달라고 함.",
+			"rule_link": "해커의 장난에 동참하여 단말기 전원 코드를 뽑았다 꽂는다.",
+			"title": "해커의 장난",
+			"key": "rep_reason_plus_jett",
+			"background_tags": [
+				"powerroom",
+				"flicker",
+				"messy",
+				"machinery",
+				"tense"
+			],
+			"person": {
+				"id": "rebel_hacker",
+				"role": "반항아 해커",
+				"name": "제트"
+			},
+			"slot": "A",
+			"returns": "easy"
+		}
+	],
+	"errors": [
+		"이벤트는  하나씩 (지금 minigame_timing, minigame_timing, minigame_timing, minigame_timing, minigame_timing, minigame_timing)",
+		"rep_fighting_minus_greg/hard: reward 1개·effects.gold(0 아님)·event 중 하나가 있어야 합니다",
+		"rep_fighting_minus_greg/stat: reward 1개·effects.gold(0 아님)·event 중 하나가 있어야 합니다",
+		"rep_fighting_minus_greg/fun: reward 1개·effects.gold(0 아님)·event 중 하나가 있어야 합니다",
+		"rep_fighting_plus_jamie/hard: reward 1개·effects.gold(0 아님)·event 중 하나가 있어야 합니다",
+		"rep_fighting_plus_jamie/stat: reward 1개·effects.gold(0 아님)·event 중 하나가 있어야 합니다",
+		"rep_community_minus_lucas/hard: reward 1개·effects.gold(0 아님)·event 중 하나가 있어야 합니다",
+		"rep_community_minus_lucas/fun: reward 1개·effects.gold(0 아님)·event 중 하나가 있어야 합니다",
+		"rep_community_plus_sara/hard: reward 1개·effects.gold(0 아님)·event 중 하나가 있어야 합니다",
+		"rep_community_plus_sara/stat: reward 1개·effects.gold(0 아님)·event 중 하나가 있어야 합니다",
+		"rep_reason_minus_morgan/hard: reward 1개·effects.gold(0 아님)·event 중 하나가 있어야 합니다",
+		"rep_reason_minus_morgan/stat: reward 1개·effects.gold(0 아님)·event 중 하나가 있어야 합니다",
+		"rep_reason_plus_jett/hard: reward 1개·effects.gold(0 아님)·event 중 하나가 있어야 합니다",
+		"rep_reason_plus_jett/stat: reward 1개·effects.gold(0 아님)·event 중 하나가 있어야 합니다",
+		"rep_reason_plus_jett/fun: reward 1개·effects.gold(0 아님)·event 중 하나가 있어야 합니다"
+	]
+}

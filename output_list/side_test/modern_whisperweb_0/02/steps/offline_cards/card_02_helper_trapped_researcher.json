@@ -1,0 +1,216 @@
+{
+	"id": "card_02_helper_trapped_researcher",
+	"kind": "rep",
+	"title": {
+		"korean": "갇힌 동료와 잠긴 문"
+	},
+	"intensity": "calm",
+	"after_story": 3,
+	"before_story": 5,
+	"condition": {
+		"leaning": "fighting+",
+		"among": [
+			"fighting-",
+			"fighting+",
+			"community-",
+			"community+",
+			"reason-",
+			"reason+"
+		],
+		"min": 20
+	},
+	"urgency": 8,
+	"leaning": "fighting+",
+	"background_tags": [
+		"power_room",
+		"locked_door",
+		"dim_light",
+		"trapped_person",
+		"urgent"
+	],
+	"dialogue": [
+		{
+			"speaker": "anxious_researcher",
+			"content": {
+				"korean": "곤경에 처한 사람을 절대 지나치지 않는다더니, 여기까지 오셨군요!"
+			}
+		},
+		{
+			"speaker": "anxious_researcher",
+			"content": {
+				"korean": "전원이 나가서 저출력 보안문이 굳어버렸어요. 안에 갇힌 제 동료에게 이 데이터 스크린 조각을 전해주세요!"
+			}
+		},
+		{
+			"speaker": "lin",
+			"content": {
+				"korean": "저 작은 틈새로 물건을 밀어 넣으라는 건가요?"
+			}
+		}
+	],
+	"choices": [
+		{
+			"text": {
+				"korean": "문을 억지로 비틀어 열고 조각을 건넨다."
+			},
+			"path": "easy",
+			"mbti": "FJ",
+			"flag": "helper_broken_door",
+			"effects": {
+				"gold": 50,
+				"fighting": 20
+			},
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "낡은 문이 삐걱거리며 열린다."
+					}
+				},
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "동료는 구출됐지만 문이 완전히 고장 나 닫히지 않는다."
+					}
+				}
+			]
+		},
+		{
+			"text": {
+				"korean": "조각을 전해주지 않고 문틈으로 동료를 끄집어낸다."
+			},
+			"path": "hard",
+			"mbti": "TP",
+			"flag": "helper_drag_out",
+			"effects": {
+				"fighting": -20,
+				"echo": 10
+			},
+			"reward": [
+				"defense_up"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "올리버가 안경을 떨어뜨리며 경악한다."
+					}
+				},
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "동료는 옷이 찢어진 채로 빠져나와 가쁜 숨을 몰아쉰다."
+					}
+				}
+			]
+		},
+		{
+			"text": {
+				"korean": "문틈으로 손을 뻗어 동료의 손을 잡고 안심시킨다."
+			},
+			"path": "stat",
+			"mbti": "FP",
+			"require": {
+				"stat": "fighting",
+				"op": ">=",
+				"value": 40
+			},
+			"flag": "helper_warm_hand",
+			"effects": {
+				"fighting": 30
+			},
+			"reward": [
+				"shield"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "당신의 온기에 동료가 진정한다."
+					}
+				},
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "올리버는 감동하며 조각을 스스로 틈새로 밀어 넣는다."
+					}
+				}
+			]
+		},
+		{
+			"text": {
+				"korean": "데이터 스크린 조각을 종이비행기처럼 접어 문틈으로 날린다."
+			},
+			"path": "fun",
+			"mbti": "EN",
+			"effects": {
+				"echo": 15
+			},
+			"reward": [
+				"cooldown_reset"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "조각이 완벽한 포물선을 그리며 동료의 이마에 꽂힌다."
+					}
+				},
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "올리버가 비명을 지른다."
+					}
+				}
+			]
+		}
+	],
+	"_side": {
+		"slot": "B",
+		"person": {
+			"name": "올리버",
+			"role": "연구원",
+			"id": "anxious_researcher"
+		},
+		"wants": "전원이 꺼져 통제실 문이 잠겨버린 틈에, 안에 갇힌 동료에게 데이터 스크린 조각을 전달해 달라고 한다.",
+		"rule_link": "전원 코드를 뽑아 오작동이 멈췄지만 일부 보안문이 수동 상태로 잠겨버린 상황.",
+		"rep": "fighting+",
+		"events": {},
+		"flags": {
+			"helper_broken_door": {
+				"kind": "bad",
+				"boss_penalty": -1,
+				"label": {
+					"korean": "망가진 보안문"
+				},
+				"boss_line": {
+					"korean": "억지로 연 문에서 경보가 울려 경비원이 당신의 위치를 알아챈다."
+				}
+			},
+			"helper_drag_out": {
+				"kind": "good",
+				"boss_penalty": 1,
+				"label": {
+					"korean": "끄집어낸 동료"
+				},
+				"boss_choice": {
+					"korean": "좁은 틈으로 사람을 빼낸 완력으로 경비원의 방패를 밀쳐낸다."
+				}
+			},
+			"helper_warm_hand": {
+				"kind": "good",
+				"boss_penalty": 2,
+				"label": {
+					"korean": "따뜻한 위로"
+				},
+				"boss_choice": {
+					"korean": "위로받은 동료가 주의를 끄는 틈을 타 경비원의 사각으로 파고든다."
+				}
+			}
+		}
+	}
+}

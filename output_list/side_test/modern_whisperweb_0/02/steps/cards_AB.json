@@ -1,0 +1,748 @@
+{
+	"cards": [
+		{
+			"key": "novice_terminal",
+			"dialogue": [
+				{
+					"speaker": "tech_novice",
+					"text": "제발 도와주세요! 제 관리 단말기가 미쳐 날뛰고 있어요."
+				},
+				{
+					"text": "이 전원 코드만 뽑으면 멈출 텐데, 제가 손을 대면 감전될 것 같아요!",
+					"speaker": "tech_novice"
+				},
+				{
+					"text": "단말기 화면에 데이터 스크린 조각들이 깨져서 쏟아지고 있네요.",
+					"speaker": "lin"
+				},
+				{
+					"speaker": "lin",
+					"text": "저대로 두면 더 위험해질 텐데… 코드를 뽑아주는 게 낫지 않을까요?"
+				}
+			],
+			"kind": "plant",
+			"wants": "관리 단말기가 오작동한다며 전원 코드를 뽑아달라고 부탁한다.",
+			"choices": [
+				{
+					"result": [
+						{
+							"text": "당신이 단말기의 전원 코드를 뽑자 요란한 소리와 함께 화면이 꺼졌다.",
+							"speaker": "narrator"
+						},
+						{
+							"text": "토비는 안도하며 당신에게 작은 칩을 건넸고, 뽑힌 코드는 바닥에 뒹굴었다.",
+							"speaker": "narrator"
+						}
+					],
+					"effects": {
+						"gold": 50,
+						"echo": 10,
+						"community": 0,
+						"reason": -20,
+						"fighting": -10
+					},
+					"text": "단말��� 전원을 뽑아주어 당장 오작동을 멈추게 한다.",
+					"path": "easy",
+					"mbti": "ES"
+				},
+				{
+					"mbti": "IN",
+					"result": [
+						{
+							"text": "매뉴얼대로 하라는 당신의 말에 토비는 울상을 지으며 두꺼운 책자를 뒤적였다.",
+							"speaker": "narrator"
+						},
+						{
+							"text": "단말기의 소음은 계속되었지만, 적어도 강제 종료로 인한 손상은 막았다.",
+							"speaker": "narrator"
+						}
+					],
+					"path": "hard",
+					"effects": {
+						"fighting": 10,
+						"community": 0,
+						"echo": -10,
+						"reason": 20,
+						"gold": 0
+					},
+					"text": "전원을 뽑지 말고 매뉴얼대로 고치라고 조언한다.",
+					"reward": [
+						"defense_up"
+					]
+				},
+				{
+					"result": [
+						{
+							"speaker": "narrator",
+							"text": "{actor}이(가) 단말기 옆면을 주먹으로 내리치자 거짓말처럼 화면이 조용해졌다."
+						},
+						{
+							"speaker": "narrator",
+							"text": "토비는 놀란 눈으로 고마워하며 주머니를 털어 보답했고, 단말기는 위태롭게 버티고 섰다."
+						}
+					],
+					"mbti": "SF",
+					"path": "lock",
+					"require_mbti": "SF",
+					"effects": {
+						"fighting": 0,
+						"gold": 50,
+						"echo": 0,
+						"reason": -10,
+						"community": 0
+					},
+					"text": "{actor}이(가) 단말기를 툭툭 쳐서 잠시 오작동을 멈춘다."
+				}
+			],
+			"title": "오작동하는 단말기",
+			"rule_link": "오작동하는 시스템의 전원 코드를 뽑는 행위의 축소판으로 당장의 문제를 끄는 예행연습.",
+			"person": {
+				"id": "tech_novice",
+				"name": "토비",
+				"role": "신입 관리자"
+			},
+			"slot": "A",
+			"background_tags": [
+				"sparks_flying",
+				"dim_light",
+				"noisy_terminal",
+				"cluttered_desk",
+				"tense_atmosphere"
+			]
+		},
+		{
+			"rule_link": "전원 조작을 통해 일어나는 데이터 스크린 조각의 초기화와 은폐를 보여줌.",
+			"wants": "단말기 전원을 껐다 켜서 에러를 핑계로 기록을 조작하게 해달라고 함.",
+			"slot": "A",
+			"key": "clerk_records",
+			"dialogue": [
+				{
+					"text": "지금 시스템이 불안정해서 데이터 스크린 조각이 깜빡이고 있잖아.",
+					"speaker": "stressed_clerk"
+				},
+				{
+					"text": "이참에 단말기 전원만 살짝 껐다 켜줘. 에러 핑계로 지워야 할 기록이 있거든.",
+					"speaker": "stressed_clerk"
+				},
+				{
+					"speaker": "lin",
+					"text": "일부러 시스템을 끄다니요? 그건 명백한 규정 위반이에요."
+				},
+				{
+					"text": "하지만 지금 상황에서는 누가 고의로 했는지 알 수 없긴 하겠네요.",
+					"speaker": "lin"
+				}
+			],
+			"background_tags": [
+				"flickering_screen",
+				"dusty_archive",
+				"nervous_sweat",
+				"stacked_papers",
+				"hushed_voices"
+			],
+			"choices": [
+				{
+					"mbti": "EN",
+					"result": [
+						{
+							"speaker": "narrator",
+							"text": "당신이 전원을 껐다 켜자 마일즈는 재빨리 기록을 지우고 안도했다."
+						},
+						{
+							"speaker": "narrator",
+							"text": "린은 못마땅한 표정을 지으며 고개를 ���렸다."
+						}
+					],
+					"path": "easy",
+					"text": "전원을 껐다 켜서 기록 조작을 돕는다.",
+					"effects": {
+						"reason": -20,
+						"community": -20,
+						"gold": 0,
+						"fighting": 0,
+						"echo": -10
+					},
+					"event_intro": [
+						{
+							"text": "\"운이 좋으면 더 큰 걸 주지. 한 번 해볼래?\" 마일즈가 자신이 빼돌린 부품을 걸고 내기를 제안한다.",
+							"speaker": "narrator"
+						}
+					],
+					"event_reason": "마일즈가 고맙다며 자신이 빼돌린 부품을 걸고 내기를 제안한다.",
+					"event": "minigame_slot"
+				},
+				{
+					"result": [
+						{
+							"speaker": "narrator",
+							"text": "당신이 거절하자 마일즈는 투덜거리며 단말기에서 물러났다."
+						},
+						{
+							"text": "깜빡이던 데이터 스크린 조각들은 곧 원래의 기록을 복구했다.",
+							"speaker": "narrator"
+						}
+					],
+					"effects": {
+						"echo": 10,
+						"gold": 0,
+						"reason": 20,
+						"community": 20,
+						"fighting": 0
+					},
+					"text": "기록은 훼손하면 안 된다며 거절한다.",
+					"path": "hard",
+					"reward": [
+						"intelligence_up"
+					],
+					"mbti": "IS"
+				},
+				{
+					"effects": {
+						"echo": -15,
+						"gold": 100,
+						"community": 0,
+						"fighting": 20,
+						"reason": -30
+					},
+					"mbti": "EP",
+					"path": "fun",
+					"result": [
+						{
+							"speaker": "narrator",
+							"text": "{actor}이(가) 버튼을 연타해 단말기의 모든 기록을 날려버렸다."
+						},
+						{
+							"text": "마일즈는 경악하며 입을 다물지 못했고, 당신은 그의 손에 들린 돈을 챙겼다.",
+							"speaker": "narrator"
+						}
+					],
+					"text": "{actor}이(가) 기록을 아예 전부 삭제해버린다."
+				}
+			],
+			"kind": "normal",
+			"person": {
+				"id": "stressed_clerk",
+				"name": "마일즈",
+				"role": "기록원"
+			},
+			"title": "꼬여버린 기록"
+		},
+		{
+			"choices": [
+				{
+					"mbti": "SP",
+					"path": "easy",
+					"effects": {
+						"reason": -20,
+						"community": -15,
+						"gold": 100,
+						"echo": -10,
+						"fighting": 0
+					},
+					"result": [
+						{
+							"speaker": "narrator",
+							"text": "전원이 꺼진 짧은 틈을 타 로간은 무언가를 전송하고 당신에게 돈을 쥐여주었다."
+						},
+						{
+							"speaker": "narrator",
+							"text": "린은 한숨을 쉬며 고개를 저었다."
+						}
+					],
+					"text": "중계기 전원을 잠시 뽑아주고 뒷돈을 챙긴다."
+				},
+				{
+					"result": [
+						{
+							"text": "당신이 로간을 밀쳐내고 전원 코드를 지켰다.",
+							"speaker": "narrator"
+						},
+						{
+							"text": "로간은 욕설을 내뱉으며 서둘러 자리를 떴다.",
+							"speaker": "narrator"
+						}
+					],
+					"text": "통신망에 문제를 일으킬 수 없다며 막는다.",
+					"event": "meet_stranger",
+					"event_options": {
+						"fight": {
+							"lose": [
+								{
+									"speaker": "narrator",
+									"text": "용병의 거센 공격에 당신은 뒤로 밀려났다."
+								}
+							],
+							"text": "{actor}이(가) 용병에게 맞선다.",
+							"win": [
+								{
+									"speaker": "narrator",
+									"text": "당신은 용병을 가볍게 제압하고 쫓아냈다."
+								}
+							]
+						},
+						"avoid": {
+							"text": "싸움을 피하고 물러선다.",
+							"result": [
+								{
+									"speaker": "narrator",
+									"text": "당신이 자리를 피하는 사이 중계기는 충격을 받아 부서졌다."
+								}
+							]
+						}
+					},
+					"effects": {
+						"gold": 0,
+						"echo": 10,
+						"fighting": 20,
+						"reason": 20,
+						"community": 0
+					},
+					"path": "hard",
+					"event_reason": "거래를 기다리던 용병이 통신이 오지 않자 화가 나서 나타난다.",
+					"mbti": "TJ",
+					"event_intro": [
+						{
+							"speaker": "narrator",
+							"text": "\"누가 내 거래를 방해하는 거냐!\" 낯선 용병이 나타나"
+						},
+						{
+							"speaker": "narrator",
+							"text": "거래를 방해했다며 {actor}에게 1:1 대결을 걺."
+						}
+					]
+				},
+				{
+					"reward": [
+						"shield"
+					],
+					"text": "돈을 쥐여주며 이런 위험한 짓은 그만두라고 한다.",
+					"effects": {
+						"reason": 10,
+						"community": 10,
+						"fighting": 0,
+						"gold": -50,
+						"echo": 0
+					},
+					"result": [
+						{
+							"speaker": "narrator",
+							"text": "당신이 돈을 주며 타이르자 로간은 머쓱한 표정으로 장비를 챙겨 돌아갔다."
+						},
+						{
+							"text": "중계기는 다행히 안전하게 유지되었다.",
+							"speaker": "narrator"
+						}
+					],
+					"path": "gold",
+					"mbti": "NF"
+				}
+			],
+			"background_tags": [
+				"blinking_lights",
+				"hidden_corner",
+				"humming_machine",
+				"shadowy_figure",
+				"wire_bundles"
+			],
+			"slot": "A",
+			"title": "은밀한 송신",
+			"forced": [
+				{
+					"mbti": "EP",
+					"result": [
+						{
+							"text": "{actor}이(가) 장난치듯 선을 꼬아버리자 중계기 전체가 합선되며 꺼졌다.",
+							"speaker": "narrator"
+						},
+						{
+							"speaker": "narrator",
+							"text": "로간은 당황하며 도망쳤고, 당신은 바닥에 떨어진 동전을 주웠다."
+						}
+					],
+					"effects": {
+						"gold": 50,
+						"echo": -10,
+						"fighting": 15,
+						"reason": -20,
+						"community": 0
+					},
+					"require_mbti": "EP",
+					"text": "{actor}이(가) 중계기 전원을 뽑기 전에 선을 꼬아버린다."
+				}
+			],
+			"key": "trader_signal",
+			"dialogue": [
+				{
+					"speaker": "suspicious_trader",
+					"text": "중계기가 오작동하는 지금이 딱 좋은 기회야."
+				},
+				{
+					"speaker": "suspicious_trader",
+					"text": "전원을 딱 1분만 뽑아줘. 감시가 꺼진 틈에 전송해야 할 데이터 스크린 조각이 있거든."
+				},
+				{
+					"text": "저런 수상한 사람의 부탁을 들어주면 안 돼요.",
+					"speaker": "lin"
+				},
+				{
+					"text": "어떤 위험한 정보가 넘어갈지 모르잖아요.",
+					"speaker": "lin"
+				}
+			],
+			"wants": "통신 중계기 전원을 잠시 뽑아 불법 데이터 스크린 조각을 전송하게 해달라고 함.",
+			"person": {
+				"id": "suspicious_trader",
+				"role": "암시장 상인",
+				"name": "로간"
+			},
+			"kind": "normal",
+			"rule_link": "오작동을 기회로 시스템의 감시망을 무력화하려는 행동을 보여줌."
+		},
+		{
+			"slot": "B",
+			"person": {
+				"name": "해리슨",
+				"role": "전력실 수리공",
+				"id": "repair_worker"
+			},
+			"title": "멈춘 전력실의 수리",
+			"choices": [
+				{
+					"path": "easy",
+					"mbti": "ES",
+					"effects": {
+						"gold": 50,
+						"fighting": 0,
+						"community": 20,
+						"echo": 10,
+						"reason": -10
+					},
+					"text": "케이블을 잡아주어 수리가 빠르게 진행되도록 돕는다.",
+					"result": [
+						{
+							"speaker": "narrator",
+							"text": "당신이 무거운 케이블을 잡아준 덕분에 해리슨은 순식간에 수리를 마쳤다."
+						},
+						{
+							"text": "그는 고맙다며 수당의 일부를 나눠주었고, 단단히 고정된 케이블이 남았다.",
+							"speaker": "narrator"
+						}
+					]
+				},
+				{
+					"mbti": "IN",
+					"result": [
+						{
+							"text": "당신이 위험하다며 말리자 해리슨은 아쉬워하며 연장을 챙겨 물러났다.",
+							"speaker": "narrator"
+						},
+						{
+							"text": "수리되지 않은 케이블은 바닥에 널브러진 채 방치되었다.",
+							"speaker": "narrator"
+						}
+					],
+					"path": "hard",
+					"effects": {
+						"echo": -10,
+						"gold": 0,
+						"fighting": 0,
+						"reason": 20,
+						"community": -10
+					},
+					"reward": [
+						"move_range_up"
+					],
+					"text": "수리를 미루고 안전한 곳으로 대피하라고 한다."
+				},
+				{
+					"reward": [
+						"intelligence_up"
+					],
+					"text": "{actor}이(가) 케이블을 잡아당겨 끊어버린다.",
+					"effects": {
+						"reason": -10,
+						"fighting": 20,
+						"community": -20,
+						"echo": 0,
+						"gold": 0
+					},
+					"result": [
+						{
+							"text": "{actor}이(가) 케이블을 확 잡아당기자 낡은 선이 툭 끊어졌다.",
+							"speaker": "narrator"
+						},
+						{
+							"text": "해리슨은 경악하며 도망쳤고, 당신은 끊어진 선 사이에서 작은 칩을 주웠다.",
+							"speaker": "narrator"
+						}
+					],
+					"mbti": "EN",
+					"path": "fun"
+				}
+			],
+			"background_tags": [
+				"silent_room",
+				"heavy_cables",
+				"tool_belt",
+				"dust_particles",
+				"faint_heat"
+			],
+			"wants": "시스템 전원이 꺼진 김에 위험한 케이블 수리를 빨리 끝내려 하며 옆에서 케이블을 잡아달라고 한다.",
+			"kind": "plant",
+			"dialogue": [
+				{
+					"text": "시스템 전원이 꺼졌잖아! 이 틈에 밀린 케이블 수리를 해치워야겠어.",
+					"speaker": "repair_worker"
+				},
+				{
+					"speaker": "repair_worker",
+					"text": "데이터 스크린 조각이 박힌 저 무거운 케이블 좀 꽉 잡아줘. 금방 끝낼 테니까."
+				},
+				{
+					"speaker": "lin",
+					"text": "전원이 언제 다시 들어올지 모르는데 너무 위험해요."
+				},
+				{
+					"text": "무리하지 말고 안전한 곳으로 대피하는 게 좋지 않을까요?",
+					"speaker": "lin"
+				}
+			],
+			"rule_link": "시스템 전원이 꺼진 고요함이 누군가에게는 위험한 작업을 강행할 기회가 됨.",
+			"key": "worker_cables"
+		},
+		{
+			"wants": "전원이 꺼져 열린 보안문이 닫히지 않게 잡아달라고 함.",
+			"rule_link": "시스템 정지로 인해 보호되던 데이터 스크린 조각이 무방비로 노출됨.",
+			"person": {
+				"name": "핀",
+				"id": "greedy_scavenger",
+				"role": "부품 수집가"
+			},
+			"background_tags": [
+				"heavy_door",
+				"dark_hallway",
+				"valuable_scrap",
+				"strained_muscles",
+				"flickering_emergency_light"
+			],
+			"slot": "B",
+			"choices": [
+				{
+					"text": "문을 잡아주고 그가 훔친 부품의 일부를 나눠 받는다.",
+					"event": "minigame_timing",
+					"event_intro": [
+						{
+							"text": "\"꽉 잡아!",
+							"speaker": "narrator"
+						},
+						{
+							"text": "문이 움직인다!\" 비상 전력이 꿈틀거리며 보안문이 세 번 연달아 닫히려 하고, 한 번이라도 놓치면 끝이다.",
+							"speaker": "narrator"
+						}
+					],
+					"event_reason": "비상 전력이 꿈틀거리며 보안문이 불규칙하게 닫히려 한다.",
+					"effects": {
+						"community": -20,
+						"echo": -10,
+						"fighting": 0,
+						"gold": 0,
+						"reason": -20
+					},
+					"mbti": "SP",
+					"path": "easy",
+					"result": [
+						{
+							"speaker": "narrator",
+							"text": "당신이 문을 버텨낸 사이 핀은 부품을 한가득 챙겨 나왔다."
+						},
+						{
+							"text": "린은 실망한 기색을 감추지 못했다.",
+							"speaker": "narrator"
+						}
+					]
+				},
+				{
+					"text": "훔치는 것을 돕지 않겠다며 문을 닫아버린다.",
+					"reward": [
+						"defense_up"
+					],
+					"effects": {
+						"fighting": 0,
+						"reason": 20,
+						"community": 10,
+						"echo": 10,
+						"gold": 0
+					},
+					"result": [
+						{
+							"text": "당신이 문을 밀어 닫아버리자 핀은 화를 내며 빈손으로 돌아갔다.",
+							"speaker": "narrator"
+						},
+						{
+							"text": "보안문은 굳게 닫혀 안쪽을 보호했다.",
+							"speaker": "narrator"
+						}
+					],
+					"path": "hard",
+					"mbti": "SJ"
+				},
+				{
+					"require_mbti": "TJ",
+					"path": "lock",
+					"result": [
+						{
+							"speaker": "narrator",
+							"text": "{actor}이(가) 정확한 타이밍을 계산해 문을 고정하자 핀은 감탄하며 부품을 꺼내왔다."
+						},
+						{
+							"speaker": "narrator",
+							"text": "당신은 약속된 몫을 확실히 챙겼다."
+						}
+					],
+					"mbti": "TJ",
+					"effects": {
+						"fighting": -10,
+						"reason": 10,
+						"gold": 80,
+						"community": 0,
+						"echo": 0
+					},
+					"text": "{actor}이(가) 문이 닫히는 패턴을 계산해 안전한 틈을 찾는다."
+				}
+			],
+			"key": "scavenger_door",
+			"kind": "normal",
+			"dialogue": [
+				{
+					"text": "전원이 나가서 보안문이 열렸어! 안쪽에 비싼 부품들이 널려있다고.",
+					"speaker": "greedy_scavenger"
+				},
+				{
+					"speaker": "greedy_scavenger",
+					"text": "문이 닫히지 않게 잠깐만 잡아줘. 절반은 너한테 줄 테니까."
+				},
+				{
+					"text": "저건 명백한 도둑질이에요. 도와주면 안 돼요.",
+					"speaker": "lin"
+				},
+				{
+					"text": "게다가 문이 갑자기 닫히면 크게 다칠 수도 있다고요.",
+					"speaker": "lin"
+				}
+			],
+			"title": "열린 보안문"
+		},
+		{
+			"key": "guard_locker",
+			"person": {
+				"role": "야간 경비원",
+				"id": "nervous_guard",
+				"name": "콜린"
+			},
+			"background_tags": [
+				"open_locker",
+				"contraband_item",
+				"sweaty_guard",
+				"dim_corridor",
+				"ticking_clock"
+			],
+			"slot": "B",
+			"title": "열려버린 사물함",
+			"rule_link": "시스템 정지가 개인의 숨겨진 비밀까지 노출시킴.",
+			"wants": "전원이 꺼져 열린 사물함에서 금지된 물건을 옮기는 것을 도와달라고 함.",
+			"kind": "normal",
+			"choices": [
+				{
+					"text": "물건 옮기는 것을 도와주고 입막음 비용을 받는다.",
+					"result": [
+						{
+							"speaker": "narrator",
+							"text": "당신은 콜린이 물건을 안전한 곳으로 숨기는 것을 재빨리 도왔다."
+						},
+						{
+							"text": "그는 안도의 한숨을 쉬며 당신에게 돈을 쥐여주었다.",
+							"speaker": "narrator"
+						}
+					],
+					"mbti": "SF",
+					"effects": {
+						"fighting": 0,
+						"echo": -10,
+						"community": -15,
+						"reason": -20,
+						"gold": 100
+					},
+					"path": "easy"
+				},
+				{
+					"reward": [
+						"attack_up"
+					],
+					"text": "규정을 어긴 물건이라며 압수한다.",
+					"effects": {
+						"echo": 10,
+						"reason": 20,
+						"gold": 0,
+						"community": 0,
+						"fighting": 15
+					},
+					"path": "hard",
+					"mbti": "TJ",
+					"result": [
+						{
+							"speaker": "narrator",
+							"text": "당신이 물건을 빼앗아 압수하자 콜린은 창백해진 얼굴로 주저앉았다."
+						},
+						{
+							"text": "린은 당신의 단호한 대처에 고개를 끄덕였다.",
+							"speaker": "narrator"
+						}
+					]
+				},
+				{
+					"path": "fun",
+					"effects": {
+						"gold": 50,
+						"fighting": 0,
+						"echo": -15,
+						"reason": -30,
+						"community": -20
+					},
+					"mbti": "EP",
+					"result": [
+						{
+							"text": "{actor}이(가) 마이크에 대고 물건을 흔들며 소리치자, 콜린은 기겁하며 입을 막으려 발버둥 쳤다.",
+							"speaker": "narrator"
+						},
+						{
+							"text": "그 난장판 속에��� 당신은 떨어뜨린 동전을 챙겼다.",
+							"speaker": "narrator"
+						}
+					],
+					"text": "{actor}이(가) 그 물건을 꺼내 경비실 방송 마이크에 대고 자랑한다."
+				}
+			],
+			"dialogue": [
+				{
+					"text": "전원이 꺼지니까 내 전자 사물함도 열려버렸잖아!",
+					"speaker": "nervous_guard"
+				},
+				{
+					"speaker": "nervous_guard",
+					"text": "안에 있는 물건을 누가 보기 전에 빨리 옮겨야 해. 좀 도와줘!"
+				},
+				{
+					"text": "저건 반입이 금지된 데이터 스크린 조각이잖아요.",
+					"speaker": "lin"
+				},
+				{
+					"speaker": "lin",
+					"text": "저런 걸 숨기고 있었다니, 당장 보고해야 하는 거 아닌가요?"
+				}
+			]
+		}
+	],
+	"errors": [
+		"trader_signal/hard: avoid_penalty 는 attack_down, defense_down, intelligence_down, hp_down, move_range_down 중 1개"
+	]
+}

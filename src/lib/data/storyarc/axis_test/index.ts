@@ -7,11 +7,9 @@ import {
 	type AxisVariantSet,
 	type Tendency
 } from '$lib/prompts/axisVariantGen';
-import { axis_modern_whisperweb_0 } from './axis_modern_whisperweb_0';
 import { axis_modern_evannext_1 } from './axis_modern_evannext_1';
 
 export const axisVariantRegistry: Record<string, AxisVariantSet> = {
-	[axis_modern_whisperweb_0.sourceId]: axis_modern_whisperweb_0,
 	[axis_modern_evannext_1.sourceId]: axis_modern_evannext_1
 };
 

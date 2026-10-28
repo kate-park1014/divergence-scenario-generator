@@ -1,0 +1,331 @@
+{
+	"cards": [
+		{
+			"rule_link": "이력서 앱의 언어 대체로 인한 머릿속 언어 개념 상실을 막기 위해 DB 폐기 여부를 결정해야 함",
+			"title": "자기 몫의 백업",
+			"dialogue": [
+				{
+					"text": "강사 한은 손짓을 잊은 수강생들을 뒤로한 채, 수화 연습 노트를 끌어안고 당신을 가로막았다.",
+					"speaker": "narrator"
+				},
+				{
+					"speaker": "instructor_han",
+					"text": "남의 일엔 손도 안 대고 자기 실속만 챙긴다는 소문은 들었습니다."
+				},
+				{
+					"text": "앱 데이터베이스를 당장 폐기하면 이 수화 연습 노트와 이력서 연동 자료까지 전부 날아갑니다!",
+					"speaker": "instructor_han"
+				},
+				{
+					"speaker": "lin",
+					"text": "수강생들의 머릿속에서 글자 개념이 사라지고 있어요! 앱 서버 데이터부터 전부 지워야 해요!"
+				}
+			],
+			"person": {
+				"role": "연습실 강사",
+				"name": "강사 한",
+				"id": "instructor_han"
+			},
+			"wants": "이력서 연동 DB 파기로 인한 개인 성적 자료 손실을 피하고 싶어 함",
+			"background_tags": [
+				"practice_room",
+				"daylight",
+				"fluorescent",
+				"crowded",
+				"tense"
+			],
+			"choices": [
+				{
+					"reward": [],
+					"result": [
+						{
+							"speaker": "narrator",
+							"text": "당신은 자신의 이력서 연동 데이터만 뽑아낸 뒤 DB 서버 정지 버튼을 눌렀다."
+						},
+						{
+							"speaker": "instructor_han",
+							"text": "이러면 내 수강생들 기록은 전부 날아가잖아! 치사하게 혼자만 빠져나가다니!"
+						},
+						{
+							"text": "저기, 추출한 데이터 파일이 불안정해 보여요. 정말 괜찮은 거 맞나요?",
+							"speaker": "lin"
+						}
+					],
+					"text": "자신의 이력서 연동 데이터만 백업한 뒤 DB 서버를 정지시킨다.",
+					"mbti": "TJ",
+					"flag": {
+						"boss_text": "백업된 개인 이력서 데이터의 오류로 연습실 안전 장치가 마비된다.",
+						"key": "data_loss_penalty",
+						"label": "데이터 혼선"
+					},
+					"effects": {
+						"community": -20,
+						"gold": 100
+					},
+					"path": "easy"
+				},
+				{
+					"flag": {
+						"key": "db_purged",
+						"boss_text": "이력서 연동 DB를 완전 파기하여 연동 서버의 폭주를 강제로 저지한다.",
+						"label": "DB 전면 파기"
+					},
+					"result": [
+						{
+							"text": "당신은 망설임 없이 삭제 단말기를 눌러 이력서 연동 DB 전체를 파기했다.",
+							"speaker": "narrator"
+						},
+						{
+							"text": "내 연습 노트 기록까지 지워졌지만... 사람들 기억이 더 사라지는 건 막았군요.",
+							"speaker": "instructor_han"
+						},
+						{
+							"speaker": "lin",
+							"text": "잘하셨어요! 언어 개념이 지워지는 원인이 완전히 사라졌어요."
+						}
+					],
+					"mbti": "NF",
+					"reward": [
+						"shield"
+					],
+					"path": "hard",
+					"effects": {
+						"echo": 10,
+						"community": 20
+					},
+					"text": "자신에게 올 손해를 감수하고 이력서 연동 DB 전체를 즉시 파기한다."
+				},
+				{
+					"text": "개인 권한 카드로 이력서 DB 삭제 단말기를 점령해 단숨에 셧다운한다.",
+					"effects": {
+						"reason": 20,
+						"community": -30,
+						"echo": 5
+					},
+					"reward": [
+						"attack_up"
+					],
+					"result": [
+						{
+							"text": "당신은 독점한 개인 권한 카드로 DB 삭제 단말기를 제어해 원격 셧다운을 실행했다.",
+							"speaker": "narrator"
+						},
+						{
+							"speaker": "instructor_han",
+							"text": "남들 사정 안 가리고 제멋대로 처리하더니, 이 상황도 단번에 꺼버리네요."
+						},
+						{
+							"speaker": "lin",
+							"text": "역시 제어권을 확실히 쥐고 계시네요! 시스템 오버로드가 멈췄어요."
+						}
+					],
+					"path": "stat",
+					"mbti": "EP",
+					"flag": {
+						"key": "terminal_control",
+						"label": "단말기 독점",
+						"boss_text": "점령한 삭제 단말기 권한으로 원격 시스템의 작동을 일시 정지시킨다."
+					}
+				},
+				{
+					"effects": {
+						"reason": -20,
+						"gold": 80
+					},
+					"text": "수화 연습 노트를 삭제 스위치 위에 얹어 강제로 눌러 고정한다.",
+					"reward": [
+						"stun"
+					],
+					"result": [
+						{
+							"text": "당신은 수화 연습 노트를 DB 삭제 스위치 위에 얹어 강제로 눌러버렸다.",
+							"speaker": "narrator"
+						},
+						{
+							"speaker": "instructor_han",
+							"text": "내 연습 노트가 스위치 고정용으로 쓰이다니... 그래도 DB는 꺼졌네요."
+						},
+						{
+							"speaker": "lin",
+							"text": "노트가 찌그러졌지만 덕분에 삭제 버튼이 계속 눌려 있어요!"
+						}
+					],
+					"path": "fun",
+					"mbti": "FP"
+				}
+			],
+			"no": 1,
+			"key": "personal_data_purge",
+			"slot": "D",
+			"kind": "rep",
+			"rep_dir": "community-"
+		},
+		{
+			"choices": [
+				{
+					"flag": {
+						"boss_text": "갑작스러운 DB 파괴로 발생한 과전류가 연습실의 전자기기를 과열시킨다.",
+						"label": "급진적 폐기",
+						"key": "panic_shutdown"
+					},
+					"effects": {
+						"echo": 10,
+						"community": 20
+					},
+					"mbti": "NF",
+					"path": "easy",
+					"result": [
+						{
+							"text": "당신은 망설임 없이 비상 파괴 스위치를 눌러 이력서 DB를 완전히 파기했다.",
+							"speaker": "narrator"
+						},
+						{
+							"text": "다행이에요! 다들 손짓을 보고 조금씩 고개를 끄덕이기 시작했어요.",
+							"speaker": "student_min"
+						},
+						{
+							"speaker": "lin",
+							"text": "사람들의 머릿속에서 글자가 사라지는 게 멈췄어요! 역시 제때 결단해주셨네요."
+						}
+					],
+					"reward": [
+						"attack_up"
+					],
+					"text": "모두를 구하기 위해 이력서 연동 DB 비상 파괴 스위치를 누른다."
+				},
+				{
+					"effects": {
+						"community": -20,
+						"reason": 20
+					},
+					"text": "모두의 반대를 무릅쓰고 이력서 DB 파괴를 유예하며 개별 수정을 시도한다.",
+					"path": "hard",
+					"flag": {
+						"key": "careful_correction",
+						"label": "개별 수정 시도",
+						"boss_text": "남겨둔 이력서 DB의 일부 백업 코드로 비상 보호막을 출력한다."
+					},
+					"reward": [
+						"defense_up"
+					],
+					"result": [
+						{
+							"text": "당신은 파괴 스위치를 내리고 이력서 DB 데이터를 직접 하나씩 수정하기 시작했다.",
+							"speaker": "narrator"
+						},
+						{
+							"speaker": "student_min",
+							"text": "모두를 돕는다더니 왜 DB 파괴를 망설이시나요? 머리가 여전히 멍해요..."
+						},
+						{
+							"speaker": "lin",
+							"text": "시간이 걸리지만 이력서 데이터의 오류 코드가 직접 교정되고 있어요!"
+						}
+					],
+					"mbti": "ST"
+				},
+				{
+					"reward": [
+						"cooldown_reset"
+					],
+					"text": "수강생 모두를 설득해 다 함께 이력서 연동 서버 동시 차단 절차를 수행한다.",
+					"result": [
+						{
+							"speaker": "narrator",
+							"text": "당신이 신호를 주자 수강생 전체가 각자의 단말기 전원을 동시에 내렸다."
+						},
+						{
+							"speaker": "student_min",
+							"text": "당신이 끌어주신 덕분에 우리 손으로 이력서 DB 서버 차단을 성공시켰어요!"
+						},
+						{
+							"speaker": "lin",
+							"text": "다 함께 힘을 합치니까 언어 상실 현상이 순식간에 진정되었어요!"
+						}
+					],
+					"effects": {
+						"echo": 15,
+						"community": 30
+					},
+					"path": "stat",
+					"flag": {
+						"label": "전원 동시 차단",
+						"boss_text": "수강생들의 협력으로 정지시킨 보조 전원을 활용해 원격 장치를 마비시킨다.",
+						"key": "united_shutdown"
+					},
+					"mbti": "FJ"
+				},
+				{
+					"text": "100골드를 지불하고 수화 연습실로 DB 전문 폐기 기사를 즉시 부른다.",
+					"reward": [
+						"intelligence_up"
+					],
+					"effects": {
+						"gold": -100,
+						"echo": 10
+					},
+					"path": "gold",
+					"result": [
+						{
+							"text": "호출받은 전문 기사가 도착해 이력서 DB를 흔적도 없이 완전히 폐기했다.",
+							"speaker": "narrator"
+						},
+						{
+							"speaker": "student_min",
+							"text": "돈까지 쓰시면서 기사를 불러 해결해주시다니, 역시 믿음직스러워요!"
+						},
+						{
+							"text": "전문가가 손을 쓰니 신호 혼선 없이 깔끔하게 서버가 정리되었어요.",
+							"speaker": "lin"
+						}
+					],
+					"mbti": "TJ"
+				}
+			],
+			"dialogue": [
+				{
+					"text": "수강생 민은 멍하니 글자를 바라보는 사람들 사이에서 손짓을 번갈아 시도하며 당신에게 다가왔다.",
+					"speaker": "narrator"
+				},
+				{
+					"speaker": "student_min",
+					"text": "곤경에 처한 사람들을 위해 언제나 가장 먼저 나선다는 소문을 들었어요!"
+				},
+				{
+					"text": "사람들이 머릿속에서 언어 자체를 잊어가고 있어요.",
+					"speaker": "student_min"
+				},
+				{
+					"text": "이력서 앱 데이터베이스를 지워야만 모두가 살 수 있는 건가요?",
+					"speaker": "student_min"
+				},
+				{
+					"text": "맞아요! 앱을 통해 이력서의 언어가 대체되면서 모두의 기억이 지워지고 있어요. 당장 결단해야 해요!",
+					"speaker": "lin"
+				}
+			],
+			"no": 2,
+			"wants": "이력서 연동 DB가 지워지더라도 사람들의 언어 개념 상실이 멈추기를 바람",
+			"person": {
+				"id": "student_min",
+				"name": "수강생 민",
+				"role": "수화 연습실 수강생"
+			},
+			"rule_link": "언어 개념 상실의 원인인 이력서 연동 DB를 파기하여 모두의 기억 파괴를 저지해야 함",
+			"title": "모두를 위한 삭제",
+			"key": "collective_db_purge",
+			"background_tags": [
+				"practice_room",
+				"daylight",
+				"fluorescent",
+				"crowded",
+				"chaotic"
+			],
+			"slot": "D",
+			"kind": "rep",
+			"rep_dir": "community+"
+		}
+	],
+	"errors": [],
+	"prompt_hash": "d8bab6cf842d1074993f4aae60d3e8331f449975"
+}

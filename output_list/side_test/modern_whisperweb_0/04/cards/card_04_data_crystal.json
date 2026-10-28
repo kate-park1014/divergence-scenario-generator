@@ -1,0 +1,195 @@
+{
+	"id": "card_04_data_crystal",
+	"kind": "normal",
+	"title": {
+		"korean": "굳어버린 데이터 결정"
+	},
+	"intensity": "high",
+	"after_story": 1,
+	"before_story": 3,
+	"background_tags": [
+		"server_room",
+		"data_storm",
+		"dark_corner",
+		"hiding",
+		"tense"
+	],
+	"dialogue": [
+		{
+			"speaker": "narrator",
+			"content": {
+				"korean": "낡은 전산실 구석에서 케노가 바닥에 웅크린 채 허공을 주시하고 있다."
+			}
+		},
+		{
+			"speaker": "keno",
+			"content": {
+				"korean": "저기 봐, 유출된 데이터가 엉기면서 값비싼 결정체로 변하고 있어!"
+			}
+		},
+		{
+			"speaker": "keno",
+			"content": {
+				"korean": "폭풍이 잦아들 때까지 여기서 숨어 기다렸다가 주워 가자고."
+			}
+		},
+		{
+			"speaker": "dax",
+			"content": {
+				"korean": "저걸 주우려다간 데이터에 휩쓸릴지도 몰라."
+			}
+		}
+	],
+	"forced": [
+		{
+			"text": {
+				"korean": "{actor}이(가) 폭풍이 잦아들기도 전에 결정체를 향해 뛰어나간다."
+			},
+			"path": "forced",
+			"mbti": "FP",
+			"require": {
+				"mbti": "FP"
+			},
+			"chance": 0.3,
+			"effects": {
+				"reason": -15,
+				"fighting": 15
+			},
+			"reward": [
+				"hp_down"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "{actor}이(가) 무작정 뛰어들었다가 데이터 파편에 맞아 상처를 입었다."
+					}
+				},
+				{
+					"speaker": "dax",
+					"content": {
+						"korean": "으이구, 그러니까 좀 기다리라니까!"
+					}
+				}
+			]
+		}
+	],
+	"choices": [
+		{
+			"text": {
+				"korean": "케노와 함께 안전한 구석에 숨어 데이터 폭풍이 지나가길 기다린다."
+			},
+			"path": "easy",
+			"mbti": "IJ",
+			"effects": {
+				"reason": 10,
+				"community": 10
+			},
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "폭풍이 지나간 뒤 당신은 바닥에 떨어진 결정체를 챙겼다."
+					}
+				},
+				{
+					"speaker": "dax",
+					"content": {
+						"korean": "기다린 보람이 있네."
+					}
+				}
+			],
+			"event": "campsite",
+			"event_intro": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "당신과 케노는 무너진 서버 랙 뒤에 자리를 잡고 숨을 죽인다."
+					}
+				},
+				{
+					"speaker": "keno",
+					"content": {
+						"korean": "조용히 해, 곧 폭풍이 지나갈 거야."
+					}
+				}
+			]
+		},
+		{
+			"text": {
+				"korean": "위험한 결정체에 미련을 버리고 출처 장치로 가는 길을 서두른다."
+			},
+			"path": "hard",
+			"mbti": "ET",
+			"effects": {
+				"fighting": 15,
+				"reason": 10
+			},
+			"reward": [
+				"move_range_up"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "당신이 케노를 남겨두고 발걸음을 재촉했다."
+					}
+				},
+				{
+					"speaker": "keno",
+					"content": {
+						"korean": "저 귀한 걸 그냥 두고 가다니!"
+					}
+				}
+			]
+		},
+		{
+			"text": {
+				"korean": "케노에게 크레딧을 주며 결정체 대신 안전한 부품을 사라고 조언한다."
+			},
+			"path": "gold",
+			"mbti": "EN",
+			"require": {
+				"stat": "gold",
+				"op": ">=",
+				"value": 100
+			},
+			"effects": {
+				"community": 15,
+				"gold": -100
+			},
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "당신이 건넨 돈을 받은 케노가 만족하며 물러난다."
+					}
+				},
+				{
+					"speaker": "keno",
+					"content": {
+						"korean": "이 정도면 굳이 목숨 걸고 저걸 주울 필요 없지."
+					}
+				}
+			]
+		}
+	],
+	"_side": {
+		"slot": "A",
+		"person": {
+			"name": "케노",
+			"id": "keno",
+			"role": "고철 수집가"
+		},
+		"wants": "유출 데이터가 굳어 만들어진 결정체를 줍기 위해 폭풍이 지나가길 기다려달라고 한다.",
+		"rule_link": "출처 장치에서 뿜어져 나오는 유출 데이터가 물리적인 결정체로 굳어지는 기이한 현상.",
+		"events": {
+			"easy": "결정체를 줍기 위해서는 데이터 폭풍이 잦아들 때까지 몸을 숨기고 쉬어야 한다."
+		},
+		"flags": {}
+	}
+}

@@ -1,0 +1,142 @@
+{
+	"id": "card_02_terminal_power",
+	"title": {
+		"korean": "깜빡이는 단말기"
+	},
+	"intensity": "calm",
+	"after_story": 1,
+	"before_story": 3,
+	"background_tags": [
+		"oldroom",
+		"dimlight",
+		"blinking",
+		"quiet",
+		"messy"
+	],
+	"dialogue": [
+		{
+			"speaker": "narrator",
+			"content": {
+				"korean": "낡은 전산실 구석, 한 관리자가 깜빡이는 단말기 앞에서 어쩔 줄 모르고 있다."
+			}
+		},
+		{
+			"speaker": "tech_novice",
+			"content": {
+				"korean": "단말기가 제멋대로 깜빡여요! 전원 코드 좀 뽑아주시겠어요?"
+			}
+		},
+		{
+			"speaker": "lin",
+			"content": {
+				"korean": "제가 보기엔 그 코드를 뽑으면 당장 꺼지긴 할 텐데... 안전할까요?"
+			}
+		}
+	],
+	"choices": [
+		{
+			"text": {
+				"korean": "단말기 전원을 뽑아주어 당장 오작동을 멈추게 한다."
+			},
+			"path": "easy",
+			"mbti": "TJ",
+			"effects": {
+				"reason": -10,
+				"gold": 50
+			},
+			"seed": "terminal_power_easy",
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "당신은 코드를 뽑았다. 단말기는 조용해졌고 그는 안도하며 주머니에서 동전을 꺼내 주었다."
+					}
+				}
+			]
+		},
+		{
+			"text": {
+				"korean": "전원을 뽑지 말고 매뉴얼대로 고치라고 조언한다."
+			},
+			"path": "hard",
+			"mbti": "FP",
+			"effects": {
+				"reason": 20,
+				"echo": 10
+			},
+			"reward": [
+				"intelligence_up"
+			],
+			"seed": "terminal_power_hard",
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "당신은 매뉴얼대로 고치라고 일렀다. 당장 시끄럽지만 그는 원칙대로 수리를 시작했다."
+					}
+				}
+			]
+		},
+		{
+			"text": {
+				"korean": "근처 자판기에 돈을 쓰고 안정기를 사다 단말기를 고쳐준다."
+			},
+			"path": "gold",
+			"mbti": "ST",
+			"require": {
+				"stat": "gold",
+				"op": ">=",
+				"value": 50
+			},
+			"effects": {
+				"gold": -50,
+				"reason": 15
+			},
+			"seed": "terminal_power_hard",
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "당신이 사온 안정기를 연결하자 단말기가 부드럽게 돌아가기 시작했다."
+					}
+				}
+			]
+		},
+		{
+			"text": {
+				"korean": "{actor}이(가) 단말기 회로를 분석해 재부팅 코드를 입력한다."
+			},
+			"path": "lock",
+			"mbti": "IN",
+			"require": {
+				"mbti": "IN"
+			},
+			"effects": {
+				"reason": 10,
+				"gold": 50
+			},
+			"seed": "terminal_power_hard",
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "{actor}이(가) 키보드를 두드리자 단말기가 정상으로 돌아왔다. 관리자는 고마워하며 사례를 했다."
+					}
+				}
+			]
+		}
+	],
+	"kind": "plant",
+	"_side": {
+		"slot": "A",
+		"person": {
+			"id": "tech_novice",
+			"name": "신입 관리자",
+			"role": "어쩔 줄 몰라하며 의지하는 존댓말"
+		},
+		"wants": "",
+		"rule_link": "",
+		"events": {},
+		"flags": {}
+	}
+}

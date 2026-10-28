@@ -1,0 +1,174 @@
+{
+	"id": "card_05_temporary_assembly",
+	"kind": "normal",
+	"title": {
+		"korean": "불안정한 임시 단말기"
+	},
+	"intensity": "calm",
+	"after_story": 5,
+	"before_story": 7,
+	"background_tags": [
+		"room",
+		"terminal",
+		"spark",
+		"glove",
+		"repair"
+	],
+	"dialogue": [
+		{
+			"speaker": "narrator",
+			"content": {
+				"korean": "임시 데이터 단말기 위에 올려둔 조각들이 정전기를 일으키며 서로를 밀어내고 있다."
+			}
+		},
+		{
+			"speaker": "echo",
+			"content": {
+				"korean": "방금 내 정보망이 아주 잠깐 복구됐었어! 너희 대체 뭘 한 거야?"
+			}
+		},
+		{
+			"speaker": "archive_manager",
+			"content": {
+				"korean": "조각들의 극성이 안 맞아서 튕겨 나갑니다! 강제로라도 눌러서 고정해야 해요!"
+			}
+		},
+		{
+			"speaker": "narrator",
+			"content": {
+				"korean": "관리자가 절연 장갑을 낀 손으로 조각들을 억지로 뭉쳐 누르려 했다."
+			}
+		}
+	],
+	"choices": [
+		{
+			"text": {
+				"korean": "관리자가 조각을 강제로 억누르게 둔다."
+			},
+			"path": "easy",
+			"mbti": "SP",
+			"effects": {
+				"gold": 100,
+				"fighting": 10
+			},
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "억지로 눌린 조각들이 마찰을 일으키며 겨우 맞물렸다."
+					}
+				},
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "단말기가 정상 작동하며 작은 보상 크레딧이 쏟아졌다."
+					}
+				}
+			]
+		},
+		{
+			"text": {
+				"korean": "억누르지 않고 핀셋으로 조각의 극성을 하나씩 맞춰 배열한다."
+			},
+			"path": "hard",
+			"mbti": "NF",
+			"effects": {
+				"echo": -5,
+				"reason": 20
+			},
+			"reward": [
+				"cooldown_reset"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "당신은 밀어내는 힘을 거슬러 가며 조각들을 올바른 방향으로 꼼꼼히 배열했다."
+					}
+				},
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "손가락 끝에 정전기가 튀어 따끔거렸다."
+					}
+				}
+			]
+		},
+		{
+			"text": {
+				"korean": "비싼 전도성 접착제를 사서 조각들을 붙이는 내기를 한다."
+			},
+			"path": "gold",
+			"mbti": "NJ",
+			"require": {
+				"stat": "gold",
+				"op": ">=",
+				"value": 50
+			},
+			"effects": {
+				"reason": 10,
+				"gold": -50
+			},
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "당신이 접착제를 바르고 조각을 밀어 넣자, 단단하게 굳으며 조각이 완벽히 이어졌다."
+					}
+				}
+			],
+			"event": "minigame_slot",
+			"event_intro": [
+				{
+					"speaker": "archive_manager",
+					"content": {
+						"korean": "그 비싼 접착제가 통할까요? 실패하면 크레딧은 제가 갖습니다. 슬롯을 당겨보시죠!"
+					}
+				}
+			]
+		},
+		{
+			"text": {
+				"korean": "{actor}이(가) 단말기의 자기장 수치를 계산해 조각이 스스로 붙게 만든다."
+			},
+			"path": "lock",
+			"mbti": "TJ",
+			"require": {
+				"mbti": "TJ"
+			},
+			"effects": {
+				"reason": 10,
+				"community": 5
+			},
+			"reward": [
+				"intelligence_up"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "{actor}이(가) 단말기의 전압을 조절해 극성을 반전시키자, 조각들이 자석처럼 서로 달라붙었다."
+					}
+				}
+			]
+		}
+	],
+	"_side": {
+		"slot": "C",
+		"person": {
+			"name": "관리자",
+			"role": "기록 보관소 관리자",
+			"id": "archive_manager"
+		},
+		"wants": "단말기 위에 모아둔 데이터 조각이 자꾸 튕겨 나가려 하니, 억지로라도 고정해 달라고 한다.",
+		"rule_link": "조각을 모아 임시로 고정하는 과정에서, 올바른 데이터 복원의 예행연습을 치른다.",
+		"events": {
+			"gold": "관리자가 접착제의 효과를 의심하며 크레딧을 걸고 내기를 제안했다."
+		},
+		"flags": {}
+	}
+}

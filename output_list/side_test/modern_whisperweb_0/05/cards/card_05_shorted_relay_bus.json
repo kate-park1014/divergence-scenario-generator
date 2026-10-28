@@ -1,0 +1,223 @@
+{
+	"id": "card_05_shorted_relay_bus",
+	"kind": "rep",
+	"title": {
+		"korean": "부수면 통하는 배전반"
+	},
+	"intensity": "calm",
+	"after_story": 3,
+	"before_story": 5,
+	"condition": {
+		"leaning": "fighting-",
+		"among": [
+			"fighting-",
+			"fighting+",
+			"community-",
+			"community+",
+			"reason-",
+			"reason+"
+		],
+		"min": 20
+	},
+	"urgency": 8,
+	"leaning": "fighting-",
+	"background_tags": [
+		"control_room",
+		"dim_light",
+		"smoke",
+		"crowded_debris",
+		"tense"
+	],
+	"dialogue": [
+		{
+			"speaker": "narrator",
+			"content": {
+				"korean": "배전반 앞, 관리인이 손도끼 자루를 무릎에 얹고 앉아 있었다."
+			}
+		},
+		{
+			"speaker": "relay_keeper",
+			"content": {
+				"korean": "당신이죠? 경비원 총을 팔 비틀어 꺾어 버린 사람. 소문 들었어요."
+			}
+		},
+		{
+			"speaker": "relay_keeper",
+			"content": {
+				"korean": "이 배전반, 여기만 부수면 전력이 확 들어와요. 조각 맞추는 데 힘이 붙는다고요."
+			}
+		},
+		{
+			"speaker": "echo",
+			"content": {
+				"korean": "저 사람 손도끼, 날이 이빨처럼 나갔어. 벌써 몇 번 찍어 본 모양인데."
+			}
+		},
+		{
+			"speaker": "narrator",
+			"content": {
+				"korean": "배전반 안쪽에서 코일이 타는 냄새가 올라오고, 단말기 위 조각 하나가 홈에서 튕겨 굴렀다."
+			}
+		}
+	],
+	"choices": [
+		{
+			"text": {
+				"korean": "관리인에게 손도끼를 넘기고 배전반을 부수게 한다"
+			},
+			"path": "easy",
+			"mbti": "TJ",
+			"flag": "burned_relay",
+			"effects": {
+				"fighting": 15,
+				"gold": 80
+			},
+			"reward": [
+				"attack_up"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "손도끼가 배전반을 두 번 내리쳤고, 전력이 확 올라오며 조각들이 홈에 붙었다."
+					}
+				},
+				{
+					"speaker": "relay_keeper",
+					"content": {
+						"korean": "봐요, 역시 부수는 게 빨라요. 아, 아직 뭐가 타는 냄새가 나는데."
+					}
+				},
+				{
+					"speaker": "echo",
+					"content": {
+						"korean": "전력은 올랐는데 내 정보망이 또 한 번 끊겼어. 대체 뭘 태운 거야."
+					}
+				}
+			]
+		},
+		{
+			"text": {
+				"korean": "손도끼를 빼앗아 바닥에 내려놓고 관리인을 배전반에서 떼어낸다"
+			},
+			"path": "hard",
+			"mbti": "FP",
+			"flag": "steady_relay",
+			"effects": {
+				"fighting": -20,
+				"community": 15,
+				"echo": 10
+			},
+			"reward": [
+				"defense_up"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "관리인이 손도끼를 놓자마자, 당신은 배전반 차단기를 하나씩 내리기 시작했다."
+					}
+				},
+				{
+					"speaker": "relay_keeper",
+					"content": {
+						"korean": "이봐요, 그럼 전력이 반으로 줄어든다고요! 조각 맞추다 손 놓으면 어쩌고!"
+					}
+				},
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "차단기를 내린 자리에서 전력이 고르게 흐르자, 튕기던 조각이 홈에 얌전히 앉았다."
+					}
+				}
+			]
+		},
+		{
+			"text": {
+				"korean": "관리인에게 부수지 않겠다고 선언하고 배전반 옆을 지키게 한다"
+			},
+			"path": "stat",
+			"mbti": "EJ",
+			"require": {
+				"stat": "fighting",
+				"op": "<=",
+				"value": -40
+			},
+			"flag": "relay_watched",
+			"effects": {
+				"fighting": -20,
+				"reason": -10
+			},
+			"reward": [
+				"shield"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "당신이 팔짱을 끼고 배전반 앞을 막아서자, 관리인이 손도끼를 내렸다."
+					}
+				},
+				{
+					"speaker": "relay_keeper",
+					"content": {
+						"korean": "…당신이 그렇게 서 있으면 내가 찍을 수가 없잖아요. 알겠어요, 안 찍을게요."
+					}
+				},
+				{
+					"speaker": "echo",
+					"content": {
+						"korean": "저 사람 손도끼를 바닥에 내려놨어. 저게 오늘 제일 놀라운 소식이야."
+					}
+				}
+			]
+		}
+	],
+	"_side": {
+		"slot": "B",
+		"person": {
+			"id": "relay_keeper",
+			"name": "배전반 관리인",
+			"role": "제어실 배전반 관리인"
+		},
+		"wants": "쪼그라든 전력이 조각 맞추기 작업까지 못 버티니, 배전반을 부숴서라도 전력을 밀어 넣자고 한다.",
+		"rule_link": "스크린 조각은 전력이 끊기면 맞춘 홈에서 다시 튕겨 나가는데, 관리인은 그 전력을 부수는 방식으로 얻으려 한다.",
+		"rep": "fighting-",
+		"events": {},
+		"flags": {
+			"burned_relay": {
+				"kind": "bad",
+				"boss_penalty": -1,
+				"label": {
+					"korean": "탄 배전반"
+				},
+				"boss_line": {
+					"korean": "배전반에서 올라온 연기가 제어실을 채우고, 당신 앞의 스크린 조각이 뜨겁게 달아오른다."
+				}
+			},
+			"steady_relay": {
+				"kind": "good",
+				"boss_penalty": 1,
+				"label": {
+					"korean": "고른 전력"
+				},
+				"boss_choice": {
+					"korean": "당신은 차단기를 순서대로 내려 전력을 고르게 맞춘 뒤 스크린 조각을 맞춘다."
+				}
+			},
+			"relay_watched": {
+				"kind": "good",
+				"boss_penalty": 2,
+				"label": {
+					"korean": "지켜진 배전반"
+				},
+				"boss_choice": {
+					"korean": "당신은 관리인에게 배전반을 지키게 한 뒤, 안정된 전력 위에서 스크린 조각을 맞춘다."
+				}
+			}
+		}
+	}
+}

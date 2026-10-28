@@ -1,0 +1,254 @@
+{
+	"id": "card_05_hand_out_parts",
+	"kind": "rep",
+	"title": {
+		"korean": "몫을 나눠 달라는 손"
+	},
+	"intensity": "calm",
+	"after_story": 1,
+	"before_story": 3,
+	"condition": {
+		"leaning": "fighting+",
+		"among": [
+			"fighting-",
+			"fighting+",
+			"community-",
+			"community+",
+			"reason-",
+			"reason+"
+		],
+		"min": 20
+	},
+	"urgency": 8,
+	"leaning": "fighting+",
+	"background_tags": [
+		"control_room",
+		"dusk",
+		"dim_lamp",
+		"queue",
+		"warm"
+	],
+	"dialogue": [
+		{
+			"speaker": "scavenger_mother",
+			"content": {
+				"korean": "당신이 굶는 사람한테 자기 식량 나눠 줬다는 그 사람이죠? 그래서 왔어요."
+			}
+		},
+		{
+			"speaker": "scavenger_mother",
+			"content": {
+				"korean": "제 딸 신분증이 데이터 엉킴에 먹혔어요. 여기 남은 부품 좀 챙겨 가면 안 될까요?"
+			}
+		},
+		{
+			"speaker": "echo",
+			"content": {
+				"korean": "저 아주머니 손수레에 이미 부품이 세 상자야. 다섯 번째 상자를 채우려는 거 아니야?"
+			}
+		},
+		{
+			"speaker": "narrator",
+			"content": {
+				"korean": "수집가의 손수레 한쪽 바퀴가 부품 무게에 눌려 삐걱거렸다."
+			}
+		}
+	],
+	"choices": [
+		{
+			"text": {
+				"korean": "부품 상자 하나를 수집가에게 내준다."
+			},
+			"path": "easy",
+			"mbti": "FJ",
+			"flag": "parts_given_away",
+			"effects": {
+				"community": 15,
+				"fighting": -10,
+				"echo": -5
+			},
+			"reward": [
+				"heal"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "scavenger_mother",
+					"content": {
+						"korean": "고마워요, 정말 고마워요. 딸이 이거 보면 기뻐할 거예요."
+					}
+				},
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "상자를 받아 든 수집가의 손수레가 한층 더 기울었다."
+					}
+				},
+				{
+					"speaker": "echo",
+					"content": {
+						"korean": "좋은 일 한 건 알겠는데, 우리 몫이 하나 줄었어. 조각 맞출 때 쓸 게 남아 있으려나."
+					}
+				}
+			]
+		},
+		{
+			"text": {
+				"korean": "수집가의 손수레를 붙잡고 부품 목록을 하나씩 대조한다."
+			},
+			"path": "hard",
+			"mbti": "TP",
+			"flag": "parts_recovered",
+			"effects": {
+				"community": -15,
+				"reason": -10,
+				"echo": 10
+			},
+			"reward": [
+				"intelligence_up"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "scavenger_mother",
+					"content": {
+						"korean": "이, 이건 그냥 주워온 거예요! 왜 남의 수레를 뒤져요!"
+					}
+				},
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "세 번째 상자 밑에서 제어실 표식이 찍힌 부품이 스무 개 넘게 나왔다."
+					}
+				},
+				{
+					"speaker": "echo",
+					"content": {
+						"korean": "이거 우리 거잖아. 어머니, 이건 좀 아니죠."
+					}
+				}
+			]
+		},
+		{
+			"text": {
+				"korean": "수집가에게 딸 신분증을 직접 복구해 주겠다고 약속한다."
+			},
+			"path": "stat",
+			"mbti": "FP",
+			"require": {
+				"stat": "fighting",
+				"op": ">=",
+				"value": 40
+			},
+			"flag": "mother_promise",
+			"effects": {
+				"community": 20,
+				"echo": 5,
+				"fighting": 10
+			},
+			"reward": [
+				"cooldown_reset"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "scavenger_mother",
+					"content": {
+						"korean": "당신이 그렇게 말하면 믿어요. 소문대로 손이 먼저 나가는 사람이네."
+					}
+				},
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "수집가가 손수레를 돌려 부품을 제자리에 쏟아 놓았다."
+					}
+				},
+				{
+					"speaker": "echo",
+					"content": {
+						"korean": "와, 부품이 다 돌아왔어. 약속 하나로 상자 세 개를 되찾았네."
+					}
+				}
+			]
+		},
+		{
+			"text": {
+				"korean": "수집가의 손수레를 제어실 구석에 세워 두고 함께 부품을 분류한다."
+			},
+			"path": "fun",
+			"mbti": "NP",
+			"effects": {
+				"reason": -20,
+				"community": 10
+			},
+			"reward": [
+				"move_range_up"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "두 사람이 부품을 나누는 사이, 수레가 저절로 굴러가 단말기 옆에 딱 멈췄다."
+					}
+				},
+				{
+					"speaker": "scavenger_mother",
+					"content": {
+						"korean": "어머, 이거 내 수레가 이렇게 착한 적이 없는데."
+					}
+				},
+				{
+					"speaker": "echo",
+					"content": {
+						"korean": "수레가 알아서 길을 찾았어. 이거 우리 정보망에도 꽤 쓸모 있는데?"
+					}
+				}
+			]
+		}
+	],
+	"_side": {
+		"slot": "A",
+		"person": {
+			"id": "scavenger_mother",
+			"name": "부품 수집가",
+			"role": "폐부품 수집가"
+		},
+		"wants": "데이터가 꼬여 버린 딸의 신분증을 살리려고, 제어실의 남은 부품을 자기 몫으로 달라고 손을 내민다.",
+		"rule_link": "데이터 스크린 조각을 맞추려면 부품이 필요한데, 수집가가 그 부품을 쓸어 담으려 한다.",
+		"rep": "fighting+",
+		"events": {},
+		"flags": {
+			"parts_given_away": {
+				"kind": "bad",
+				"boss_penalty": -1,
+				"label": {
+					"korean": "나눠준 부품"
+				},
+				"boss_line": {
+					"korean": "부품이 모자라, 조각을 맞추려다 손이 헛돈다."
+				}
+			},
+			"parts_recovered": {
+				"kind": "good",
+				"boss_penalty": 1,
+				"label": {
+					"korean": "되찾은 부품"
+				},
+				"boss_choice": {
+					"korean": "되찾아 둔 부품을 꺼내 조각의 빈자리에 끼워 넣는다."
+				}
+			},
+			"mother_promise": {
+				"kind": "good",
+				"boss_penalty": 2,
+				"label": {
+					"korean": "수집가의 신뢰"
+				},
+				"boss_choice": {
+					"korean": "수집가가 건네준 부품을 조각에 맞춰 넣는다."
+				}
+			}
+		}
+	}
+}

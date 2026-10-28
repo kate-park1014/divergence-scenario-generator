@@ -1,0 +1,308 @@
+{
+	"cards": [
+		{
+			"background_tags": [
+				"search_room",
+				"afternoon",
+				"fluorescent",
+				"anxious_crowd",
+				"tense"
+			],
+			"rule_link": "경력 조작 이력서의 이름 정렬 요청을 처리할지 결정한다.",
+			"person": {
+				"id": "seeker",
+				"role": "경력 과장 지원자",
+				"name": "초조한 구직자"
+			},
+			"choices": [
+				{
+					"flag": {
+						"key": "forced_resume_bias",
+						"label": "허위 이력서 강제 정렬",
+						"boss_text": "조작된 이력서 데이터가 단말기 과부하를 일으켜 시스템 경보음이 울린다."
+					},
+					"mbti": "TJ",
+					"path": "easy",
+					"result": [
+						{
+							"speaker": "narrator",
+							"text": "구직자의 허위 경력 데이터를 단말기 맨 위에 강제로 올려 정렬했다."
+						},
+						{
+							"speaker": "seeker",
+							"text": "역시 소문대로 화끈하시네! 덕분에 내 거짓 경력이 깔끔하게 묻혔어."
+						},
+						{
+							"speaker": "nia",
+							"text": "이렇게 거짓 서류를 우선 처리해주면 나중에 큰 문제가 생길 텐데요…"
+						}
+					],
+					"reward": [
+						"defense_down"
+					],
+					"effects": {
+						"gold": 100,
+						"echo": -10,
+						"fighting": -20
+					},
+					"text": "100크레딧을 받고 초조한 구직자의 허위 이력서를 단말기에 우선 정렬한다."
+				},
+				{
+					"text": "단말기 앞을 막아서며 구직자의 허위 이력서 등록을 단칼에 거절한다.",
+					"effects": {
+						"community": 15,
+						"fighting": 15,
+						"echo": 10
+					},
+					"path": "hard",
+					"reward": [
+						"defense_up"
+					],
+					"result": [
+						{
+							"speaker": "narrator",
+							"text": "초조한 구직자의 인쇄용지를 밀쳐내며 단말기 접근을 차단했다."
+						},
+						{
+							"speaker": "seeker",
+							"text": "웩, 진짜로 찌르기라도 할 기세네. 칫, 다른 단말기나 알아봐야겠군."
+						},
+						{
+							"text": "잘하셨어요. 조작된 이력서까지 정렬해 줄 이유는 없죠.",
+							"speaker": "nia"
+						}
+					],
+					"mbti": "EP",
+					"flag": {
+						"label": "강경한 거절",
+						"key": "unyielding_refusal",
+						"boss_text": "거짓 데이터를 배제하여 단말기 시스템의 정렬 안정성을 높인다."
+					}
+				},
+				{
+					"effects": {
+						"echo": 10,
+						"fighting": -30,
+						"reason": 20
+					},
+					"flag": {
+						"key": "intimidating_order",
+						"label": "위압적 질서 확립",
+						"boss_text": "주변 대기자들을 위협으로 통제하여 단말기 접근권을 독점한다."
+					},
+					"mbti": "ST",
+					"path": "stat",
+					"result": [
+						{
+							"speaker": "narrator",
+							"text": "서늘한 눈빛으로 구직자를 노려보며 정당한 대기 순서를 지키게 했다."
+						},
+						{
+							"text": "히익! 알았어요, 줄 끝으로 갈 테니까 그 무서운 눈빛 좀 치워요!",
+							"speaker": "seeker"
+						},
+						{
+							"text": "당신의 기세에 눌려 저 사람이 단숨에 순서를 지키러 돌아갔네요.",
+							"speaker": "nia"
+						}
+					],
+					"reward": [
+						"attack_up"
+					],
+					"text": "구직자를 눈빛으로 압박하여 순서를 지키게 하고 정당하게 이름 정보를 정리한다."
+				}
+			],
+			"no": 1,
+			"title": "위협과 이력서 정렬",
+			"dialogue": [
+				{
+					"text": "한 구직자가 고급 인쇄용지 뭉치를 손가락으로 딱딱 소리 내며 다가왔다.",
+					"speaker": "narrator"
+				},
+				{
+					"speaker": "seeker",
+					"text": "당신이 단말기 자리를 막아서는 직원의 멱살을 잡고 밀어붙였다면서요?"
+				},
+				{
+					"speaker": "seeker",
+					"text": "감독관이 오기 전에 내 과장된 경력 이력서부터 단말기에 우선 정렬해 줘요."
+				},
+				{
+					"text": "저 사람이 든 서류는 거짓 경력이에요. 정렬해 주면 문제가 생길 거예요.",
+					"speaker": "nia"
+				}
+			],
+			"key": "forced_resume_sorting",
+			"wants": "주인공의 거친 기세에 얹혀 허위 경력 이력서를 우선 정렬하고 싶어 한다.",
+			"slot": "B",
+			"kind": "rep",
+			"rep_dir": "fighting-"
+		},
+		{
+			"person": {
+				"name": "단말기 담당자",
+				"role": "검색실 관리 직원",
+				"id": "clerk"
+			},
+			"dialogue": [
+				{
+					"speaker": "narrator",
+					"text": "단말기 담당자가 손목시계의 타이머를 초조하게 누르며 다가왔다."
+				},
+				{
+					"text": "곤란해하는 대기자들에게 선뜻 자기 단말기 이용 순서를 양보하셨다죠?",
+					"speaker": "clerk"
+				},
+				{
+					"speaker": "clerk",
+					"text": "출력 마감이 10분 남았는데 줄이 엉켰어요. 명단 이름 정렬을 도와주시겠어요?"
+				},
+				{
+					"speaker": "nia",
+					"text": "저분 혼자서는 마감 시간 안에 명단을 전부 정리하기 어려워 보여요."
+				}
+			],
+			"choices": [
+				{
+					"text": "대기자 명단의 이름 정렬을 순순히 도와주고 담당자에게 보수를 받는다.",
+					"reward": [
+						"heal"
+					],
+					"result": [
+						{
+							"text": "담당자의 부탁을 받아 대기자 명단의 이름 정보를 차례대로 정렬했다.",
+							"speaker": "narrator"
+						},
+						{
+							"speaker": "clerk",
+							"text": "정말 감사합니다! 마감 전에 명단이 정돈되어 출력 작업이 원활해졌어요."
+						},
+						{
+							"speaker": "nia",
+							"text": "사람들의 이력서 이름이 착착 정렬되니 마음이 한결 편해지네요."
+						}
+					],
+					"effects": {
+						"fighting": 20,
+						"gold": 80,
+						"echo": 10
+					},
+					"mbti": "NF",
+					"flag": {
+						"label": "대기자 명단 수동 정렬",
+						"key": "helping_hand_clerk",
+						"boss_text": "검색실 직원의 과중한 업무를 떠안아 보스 방 전투 준비 시간이 줄어든다."
+					},
+					"path": "easy"
+				},
+				{
+					"text": "당장 내 단말기 작업이 우선이라며 명단 정렬 요청을 거절한다.",
+					"effects": {
+						"fighting": -15,
+						"echo": -10,
+						"community": -15
+					},
+					"reward": [
+						"intelligence_up"
+					],
+					"path": "hard",
+					"mbti": "IJ",
+					"flag": {
+						"label": "자신 작업 우선",
+						"key": "strict_prioritization",
+						"boss_text": "자신의 단말기 작업에만 집중하여 정밀 분석 데이터를 미리 확보한다."
+					},
+					"result": [
+						{
+							"text": "출력 마감 시각이 얼마 안 남았다는 담당자의 요청을 차갑게 외면했다.",
+							"speaker": "narrator"
+						},
+						{
+							"speaker": "clerk",
+							"text": "하긴, 자기 볼일이 급한 상황이니 어쩔 수 없겠죠… 휴, 어쩌지."
+						},
+						{
+							"speaker": "nia",
+							"text": "지금은 우리 작업에 집중하는 게 맞지만, 조금 아쉽기도 하네요."
+						}
+					]
+				},
+				{
+					"reward": [
+						"shield"
+					],
+					"text": "주변 대기자들을 모아 협력 체계를 구축하고 명단을 일시에 정리한다.",
+					"result": [
+						{
+							"text": "대기자들을 다독여 각자 이름을 입력하게 하고 전체 정렬을 완료했다.",
+							"speaker": "narrator"
+						},
+						{
+							"text": "순식간에 대기선이 정돈되다니! 당신의 리더십에 정말 감탄했습니다.",
+							"speaker": "clerk"
+						},
+						{
+							"text": "모두가 힘을 모으니 그 많던 명단이 순식간에 정렬되었어요!",
+							"speaker": "nia"
+						}
+					],
+					"flag": {
+						"label": "대기자 협력 체계",
+						"key": "mass_cooperation",
+						"boss_text": "대기자들의 협조를 얻어 단말기 네트워크 지원을 요청한다."
+					},
+					"mbti": "SF",
+					"effects": {
+						"fighting": 30,
+						"community": 20,
+						"echo": 15
+					},
+					"path": "stat"
+				},
+				{
+					"mbti": "EN",
+					"result": [
+						{
+							"speaker": "narrator",
+							"text": "담당자의 손목시계 타이머를 누른 뒤 단말기 출력 버튼을 미친 듯 연타했다."
+						},
+						{
+							"text": "어어? 시계 버튼을 왜 누르죠? 그런데 명단이 얼떨결에 다 출력됐네요?",
+							"speaker": "clerk"
+						},
+						{
+							"speaker": "nia",
+							"text": "시계 시간이 멈춘 건 아니지만, 정렬 출력이 엄청나게 빨라졌어요!"
+						}
+					],
+					"path": "fun",
+					"reward": [
+						"cooldown_reset"
+					],
+					"effects": {
+						"gold": 50,
+						"reason": -25
+					},
+					"text": "타이머 시계를 빼앗아 누르고 단말기 출력 버튼을 빠르게 연타한다."
+				}
+			],
+			"rule_link": "엉킨 대기자 명단의 이름 정보 정렬 작업을 도와줄지 결정한다.",
+			"no": 2,
+			"wants": "주인공의 친절한 평판을 믿고 대기자 명단의 이름 정보 정렬을 부탁하려 한다.",
+			"key": "clerk_queue_sorting",
+			"title": "마감 시간과 명단 정렬",
+			"background_tags": [
+				"search_room",
+				"afternoon",
+				"bright",
+				"waiting_line",
+				"busy"
+			],
+			"slot": "B",
+			"kind": "rep",
+			"rep_dir": "fighting+"
+		}
+	],
+	"errors": [],
+	"prompt_hash": "0ab055771d28413987f6129aaf8b14c7dda32222"
+}

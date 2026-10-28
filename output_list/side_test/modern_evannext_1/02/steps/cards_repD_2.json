@@ -1,0 +1,306 @@
+{
+	"cards": [
+		{
+			"background_tags": [
+				"search_room",
+				"emergency_light",
+				"crowded",
+				"flashing_screens",
+				"tense"
+			],
+			"choices": [
+				{
+					"effects": {
+						"gold": 80,
+						"community": -20,
+						"echo": -5
+					},
+					"text": "임도윤의 단말기만 강제로 재부팅해 그의 114번 이력서만 뽑아 넘긴다.",
+					"path": "easy",
+					"mbti": "TP",
+					"flag": {
+						"key": "monopolized_reboot",
+						"label": "단말기 비정상 종료 로그",
+						"boss_text": "단말기 강제 재부팅 로그가 감지되어 데이터 관리자의 추적 경보가 울린다."
+					},
+					"result": [
+						{
+							"speaker": "seeker",
+							"text": "나왔다! 내 114번 이력서예요. 약속대로 통로 비상키는 드립니다!"
+						},
+						{
+							"text": "임도윤이 출력물을 낚아채 달아나자 뒤편 단말기 화면이 붉은 오류 코드를 뿜었다.",
+							"speaker": "narrator"
+						},
+						{
+							"speaker": "nia",
+							"text": "다른 사람들 이력서는 단말기 안에 다 갇혀버렸어요. 뒤편에서 경보가 울려요!"
+						}
+					]
+				},
+				{
+					"effects": {
+						"echo": 10,
+						"community": 25,
+						"fighting": -10
+					},
+					"flag": {
+						"key": "sorted_applicants",
+						"label": "정돈된 지원자 명부",
+						"boss_text": "정돈된 지원자 명부를 제시해 데이터 관리자의 식별 절차를 지연시킨다."
+					},
+					"result": [
+						{
+							"text": "남의 것부터 챙기면 어쩌자는 겁니까! 내 번호는 언제 불러줄 건데요?",
+							"speaker": "seeker"
+						},
+						{
+							"speaker": "narrator",
+							"text": "당신이 엉킨 출력 용지들을 순서대로 분리해 번호 순서대로 벽면에 부착했다."
+						},
+						{
+							"speaker": "nia",
+							"text": "화내던 사람들도 차분해졌어요. 이 명부 사본은 챙겨두는 게 좋겠어요."
+						}
+					],
+					"reward": [
+						"defense_up"
+					],
+					"path": "hard",
+					"text": "임도윤을 제치고 뒤엉킨 지원자들의 이력서 시트부터 차례로 정렬한다.",
+					"mbti": "NF"
+				},
+				{
+					"flag": {
+						"key": "ruthless_priority",
+						"label": "단말기 독점 데이터 팩",
+						"boss_text": "독점 확보한 단말기 캐시 메모리를 과부하 배출하여 데이터 관리자의 발걸음을 멈추게 한다."
+					},
+					"path": "stat",
+					"text": "자기 몫만 따지는 구직자들을 완력으로 밀어내고 단말기 권한을 통째로 확보한다.",
+					"effects": {
+						"community": -20,
+						"reason": -10,
+						"echo": -5
+					},
+					"mbti": "TJ",
+					"reward": [
+						"cooldown_reset"
+					],
+					"result": [
+						{
+							"speaker": "narrator",
+							"text": "당신이 차가운 눈빛으로 밀어붙이자 단말기를 에워쌌던 구직자들이 슬금슬금 물러섰다."
+						},
+						{
+							"speaker": "seeker",
+							"text": "역시 소문대로 인정사정없군. 칩에 담긴 검색실 임시 캐시라도 넘겨주시오."
+						},
+						{
+							"text": "저들이 겁을 먹고 비켜섰어요. 관리자가 오기 전에 이걸 분석해야 해요.",
+							"speaker": "nia"
+						}
+					]
+				},
+				{
+					"path": "gold",
+					"text": "단말기 담당자에게 100골드를 건네고 임도윤의 번호 이력서만 우선 분리하게 한다.",
+					"reward": [
+						"intelligence_up"
+					],
+					"result": [
+						{
+							"text": "돈으로 직원을 매수하다니, 생각보다 수단이 좋으시네! 제 이력서도 드디어 나왔어요.",
+							"speaker": "seeker"
+						},
+						{
+							"text": "담당자가 100골드를 챙기며 특별 인쇄 큐를 가동해 임도윤의 출력물을 분리해 건넸다.",
+							"speaker": "narrator"
+						},
+						{
+							"text": "골드는 줄었지만 적어도 소란은 피했어요. 서둘러 서버실 쪽으로 가요.",
+							"speaker": "nia"
+						}
+					],
+					"effects": {
+						"echo": 5,
+						"community": 10,
+						"gold": -100
+					},
+					"mbti": "FP"
+				}
+			],
+			"rule_link": "이력서의 이름이 숫자로 뒤섞이자 단말기 독점을 시도하는 구직자와 얽힌다.",
+			"no": 1,
+			"dialogue": [
+				{
+					"text": "당신, 아까 남들 줄 밀려날 때 자기 출력물만 잽싸게 챙겨 빠져나간 사람이죠?",
+					"speaker": "seeker"
+				},
+				{
+					"speaker": "seeker",
+					"text": "지금 방송에서 84번이니 뭐니 부르면서 내 이름 칸도 번호 114번으로 덮였어요!"
+				},
+				{
+					"speaker": "seeker",
+					"text": "저 단말기 배출구에서 내 이력서만 뽑아주면 탈출용 통로 비상키를 넘길게요."
+				},
+				{
+					"speaker": "nia",
+					"text": "단말기에 다른 사람들 데이터까지 엉켜 있어요. 관리자가 오기 전에 결정해야 해요."
+				}
+			],
+			"person": {
+				"role": "초조한 구직자",
+				"name": "임도윤",
+				"id": "seeker"
+			},
+			"title": "114번 이력서의 흥정",
+			"key": "monopolized_terminal",
+			"wants": "숫자로 바뀐 자기 이력서만 단말기에서 빼내어 도망치는 것",
+			"slot": "D",
+			"kind": "rep",
+			"rep_dir": "community-"
+		},
+		{
+			"background_tags": [
+				"search_room",
+				"terminal_desk",
+				"torn_paper",
+				"alarm_buzz",
+				"chaotic"
+			],
+			"choices": [
+				{
+					"effects": {
+						"echo": 10,
+						"community": 20,
+						"gold": 70
+					},
+					"result": [
+						{
+							"text": "정말 감사합니다! 당신 덕분에 창구가 박살 나는 걸 막았어요. 이건 수고비예요.",
+							"speaker": "clerk"
+						},
+						{
+							"speaker": "narrator",
+							"text": "사람들이 당신의 지시에 따라 한 줄로 섰지만 복도 끝에서 육중한 기계음이 가까워졌다."
+						},
+						{
+							"speaker": "nia",
+							"text": "사람들은 진정됐지만 시간이 너무 지체됐어요. 관리자가 복도 끝까지 왔어요!"
+						}
+					],
+					"reward": [
+						"heal"
+					],
+					"flag": {
+						"boss_text": "대기자들을 수습하느라 지체된 사이 데이터 관리자가 통로를 완전히 차단한다.",
+						"label": "군중 수습의 지체",
+						"key": "crowd_delay"
+					},
+					"path": "easy",
+					"text": "군중 앞에 서서 번호표를 든 사람들을 하나하나 호명하며 줄을 세운다.",
+					"mbti": "FJ"
+				},
+				{
+					"flag": {
+						"boss_text": "온전하게 회수한 원본 이력서 뭉치를 펼쳐 데이터 관리자의 이름 검증 루틴을 교란한다.",
+						"key": "salvaged_dossier",
+						"label": "회수한 원본 이력서 묶음"
+					},
+					"mbti": "NT",
+					"reward": [
+						"intelligence_up"
+					],
+					"result": [
+						{
+							"text": "잠깐, 남의 이력서 뭉치를 들고 어디로 가는 겁니까! 거기 서요!",
+							"speaker": "clerk"
+						},
+						{
+							"text": "당신은 바닥에 흩뿌려진 서류 뭉치를 낚아채 품에 품고 비상구 쪽으로 몸을 돌렸다.",
+							"speaker": "narrator"
+						},
+						{
+							"speaker": "nia",
+							"text": "담당자가 소리를 지르지만 이 원본 명단이 있으면 관리자의 추적을 흩뜨릴 수 있어요."
+						}
+					],
+					"effects": {
+						"echo": -10,
+						"community": -25,
+						"fighting": 15
+					},
+					"path": "hard",
+					"text": "밀려드는 사람들을 뿌리치고 바닥에 짓밟히던 원본 이력서 뭉치만 품에 안고 빠져나온다."
+				},
+				{
+					"flag": {
+						"label": "지원자들의 연대 탄원서",
+						"boss_text": "합심한 지원자들의 탄원과 서명이 데이터 관리자의 배제 집행을 주저하게 만든다.",
+						"key": "united_applicants"
+					},
+					"effects": {
+						"community": 25,
+						"echo": 10,
+						"reason": -10
+					},
+					"reward": [
+						"shield"
+					],
+					"result": [
+						{
+							"text": "당신이 손을 들어 올리자 웅성거리던 지원자들이 일제히 단말기 앞을 비우고 정숙했다.",
+							"speaker": "narrator"
+						},
+						{
+							"speaker": "clerk",
+							"text": "모두가 이분의 말에 따르다니… 여기, 지원자들이 직접 서명한 이름 대조표예요."
+						},
+						{
+							"text": "사람들이 서로의 번호를 확인해 주며 물러서고 있어요. 우리를 믿고 뭉친 거예요!",
+							"speaker": "nia"
+						}
+					],
+					"mbti": "IF",
+					"text": "모두를 위해 헌신했던 명망으로 구직자들을 설득해 서로의 번호표를 대조하게 한다.",
+					"path": "stat"
+				}
+			],
+			"title": "쇄도하는 출력 창구",
+			"wants": "군중의 폭주를 막고 짓밟히는 이력서 데이터와 출력 장비를 보호하는 것",
+			"no": 2,
+			"rule_link": "이름이 숫자로 지워지며 패닉에 빠진 군중이 이력서 출력구로 쇄도한다.",
+			"dialogue": [
+				{
+					"text": "당신, 아까 검색실 입구에서 넘어진 사람들 일으켜 세우고 번호표 양보하던 분이죠?",
+					"speaker": "clerk"
+				},
+				{
+					"text": "방송에서 이름 대신 숫자를 부르자마자 이력서 출력구로 사람들이 쇄도하고 있어요!",
+					"speaker": "clerk"
+				},
+				{
+					"text": "이력서들이 짓밟혀서 숫자가 더 뭉개지고 있어요. 저러다 관리자가 오면 전부 배제당해요!",
+					"speaker": "nia"
+				},
+				{
+					"text": "제발 저 흥분한 사람들을 진정시키고 출력 순서 좀 잡아주세요!",
+					"speaker": "clerk"
+				}
+			],
+			"key": "terminal_stampede",
+			"person": {
+				"id": "clerk",
+				"name": "정은하",
+				"role": "단말기 담당자"
+			},
+			"slot": "D",
+			"kind": "rep",
+			"rep_dir": "community+"
+		}
+	],
+	"errors": [],
+	"prompt_hash": "caf0c790d91fbbbac0965208b855385ca2531d77"
+}

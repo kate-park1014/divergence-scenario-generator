@@ -1,0 +1,253 @@
+{
+	"id": "card_04_shutdown_shift",
+	"kind": "rep",
+	"title": {
+		"korean": "멈추지 않는 교대"
+	},
+	"intensity": "calm",
+	"after_story": 7,
+	"before_story": 10,
+	"condition": {
+		"leaning": "community+",
+		"among": [
+			"fighting-",
+			"fighting+",
+			"community-",
+			"community+",
+			"reason-",
+			"reason+"
+		],
+		"min": 20
+	},
+	"urgency": 8,
+	"leaning": "community+",
+	"background_tags": [
+		"data_plant",
+		"overtime",
+		"emergency_light",
+		"many_workers",
+		"exhausted"
+	],
+	"dialogue": [
+		{
+			"speaker": "sera",
+			"content": {
+				"korean": "모두를 ���해 앞장섰다는 사람이 여기 있다고 들었어요. 맞죠?"
+			}
+		},
+		{
+			"speaker": "narrator",
+			"content": {
+				"korean": "세라는 손에 근무표를 쥐고 있었고, 종이에는 같은 이름이 네 번 찍혀 있었다."
+			}
+		},
+		{
+			"speaker": "dax",
+			"content": {
+				"korean": "저 사람들 벌써 열두 시간째 서 있어. 기록이 섞여서 퇴근 신호가 안 왔대."
+			}
+		},
+		{
+			"speaker": "sera",
+			"content": {
+				"korean": "제가 전원을 끌게요. 그런데 그 결정은 당신이 해 주세요."
+			}
+		}
+	],
+	"choices": [
+		{
+			"text": {
+				"korean": "세라에게 전원을 끄라고 하고, 당신은 교대 근무자들을 통로 밖으로 내보낸다."
+			},
+			"path": "easy",
+			"mbti": "TJ",
+			"flag": "workers_out",
+			"effects": {
+				"community": 15,
+				"fighting": 10
+			},
+			"reward": [
+				"attack_up"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "전원이 꺼지자 근무표를 쥔 손들이 일제히 힘을 풀었다."
+					}
+				},
+				{
+					"speaker": "sera",
+					"content": {
+						"korean": "다들 나가요. 오늘 일은 제가 책임질게요."
+					}
+				},
+				{
+					"speaker": "dax",
+					"content": {
+						"korean": "불 다 꺼졌는데 저 조각만 아직 빛나고 있어."
+					}
+				}
+			]
+		},
+		{
+			"text": {
+				"korean": "전원을 끄지 않고 세라와 함께 근무표를 손으로 다시 짠다."
+			},
+			"path": "hard",
+			"mbti": "FJ",
+			"flag": "rewritten_roster",
+			"effects": {
+				"community": -15,
+				"reason": 15
+			},
+			"reward": [
+				"cooldown_reset"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "세라가 근무표를 바닥에 펴고, 당신은 이름을 하나씩 지우고 다시 적었다."
+					}
+				},
+				{
+					"speaker": "sera",
+					"content": {
+						"korean": "이러면 한 시간은 더 서 있어야 해요. 그래도 다 같이 나갈 수 있죠."
+					}
+				},
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "모니터는 여전히 뒤섞인 기록을 뱉어 냈다."
+					}
+				}
+			]
+		},
+		{
+			"text": {
+				"korean": "세라에게 전원 차단 권한을 넘겨받아 당신 손으로 스위치를 내린다."
+			},
+			"path": "stat",
+			"mbti": "TP",
+			"require": {
+				"stat": "community",
+				"op": ">=",
+				"value": 40
+			},
+			"flag": "power_down",
+			"effects": {
+				"community": 20,
+				"echo": 5
+			},
+			"reward": [
+				"stun"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "sera",
+					"content": {
+						"korean": "당신이 끄면 아무도 원망 안 해요. 다들 그렇게 말해요."
+					}
+				},
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "스위치가 내려가자 처리장 절반이 어두워졌다."
+					}
+				},
+				{
+					"speaker": "dax",
+					"content": {
+						"korean": "어두워진 김에 우리도 뭐 좀 해 볼까."
+					}
+				}
+			]
+		},
+		{
+			"text": {
+				"korean": "세라에게 초과 근무 수당 150골드를 대신 내주고 근무자들을 먼저 돌려보낸다."
+			},
+			"path": "gold",
+			"mbti": "EP",
+			"require": {
+				"stat": "gold",
+				"op": ">=",
+				"value": 150
+			},
+			"effects": {
+				"gold": -150,
+				"community": 10
+			},
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "세라가 골드 봉투를 받아 들고 근무자들 앞에 섰다."
+					}
+				},
+				{
+					"speaker": "sera",
+					"content": {
+						"korean": "수당 나왔어요! 오늘은 이걸로 버텨요!"
+					}
+				},
+				{
+					"speaker": "dax",
+					"content": {
+						"korean": "지갑은 얇아졌는데 사람들은 웃네. 이상한 거래야."
+					}
+				}
+			]
+		}
+	],
+	"_side": {
+		"slot": "D",
+		"person": {
+			"id": "sera",
+			"name": "세라",
+			"role": "교대 근무자 대표"
+		},
+		"wants": "기록이 뒤섞여 누가 언제 퇴근인지 알 수 없게 되자, 당신에게 전원을 끌 권한을 넘기려 한다.",
+		"rule_link": "전원을 끄면 스크린 조각의 파열음도 잠깐 멈추지만, 보안 시스템까지 함께 꺼진다.",
+		"rep": "community+",
+		"events": {},
+		"flags": {
+			"workers_out": {
+				"kind": "bad",
+				"boss_penalty": -1,
+				"label": {
+					"korean": "나간 근무자들"
+				},
+				"boss_line": {
+					"korean": "세라가 데리고 나간 근무자들의 빈자리로 곧장 올라간다."
+				}
+			},
+			"rewritten_roster": {
+				"kind": "good",
+				"boss_penalty": 1,
+				"label": {
+					"korean": "다시 쓴 근무표"
+				},
+				"boss_choice": {
+					"korean": "세라가 다시 쓴 근무표를 보여 주며 근무자들 사이를 지나간다."
+				}
+			},
+			"power_down": {
+				"kind": "good",
+				"boss_penalty": 2,
+				"label": {
+					"korean": "내린 전원"
+				},
+				"boss_choice": {
+					"korean": "전원이 꺼진 어둠 속으로 분류기 뒤편을 돌아간다."
+				}
+			}
+		}
+	}
+}

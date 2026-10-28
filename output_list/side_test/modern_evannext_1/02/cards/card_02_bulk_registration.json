@@ -1,0 +1,213 @@
+{
+	"id": "card_02_bulk_registration",
+	"kind": "rep",
+	"title": {
+		"korean": "대기열 일괄 등록"
+	},
+	"intensity": "calm",
+	"after_story": 3,
+	"before_story": 5,
+	"condition": {
+		"leaning": "community+",
+		"among": [
+			"fighting-",
+			"fighting+",
+			"community-",
+			"community+",
+			"reason-",
+			"reason+"
+		],
+		"min": 20
+	},
+	"urgency": 8,
+	"leaning": "community+",
+	"background_tags": [
+		"terminal_room",
+		"morning",
+		"monitor_glow",
+		"crowded_queue",
+		"bustling_mood"
+	],
+	"dialogue": [
+		{
+			"speaker": "clerk",
+			"content": {
+				"korean": "곤란한 사람만 보면 먼저 손을 내민다는 분이시군요. 마침 잘됐습니다."
+			}
+		},
+		{
+			"speaker": "nia",
+			"content": {
+				"korean": "담당자님, 품에 안고 계신 이력서 뭉치는 전부 뭔가요?"
+			}
+		},
+		{
+			"speaker": "clerk",
+			"content": {
+				"korean": "대기자 30명의 서류입니다. 그 단말기가 깨끗해졌으니 한꺼번에 밀어넣어 정리해 주십시오."
+			}
+		}
+	],
+	"choices": [
+		{
+			"text": {
+				"korean": "대기자 30명의 이력서를 넘겨받아 단말기 투입구에 한꺼번에 밀어넣는다."
+			},
+			"path": "easy",
+			"mbti": "ES",
+			"flag": "overloaded_buffer",
+			"effects": {
+				"reason": 10,
+				"echo": 10,
+				"community": 20
+			},
+			"reward": [
+				"move_range_up"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "당신은 이력서 더미를 단말기 광학 스캐너 슬롯에 겹쳐 넣었다."
+					}
+				},
+				{
+					"speaker": "clerk",
+					"content": {
+						"korean": "와, 한꺼번에 처리되네요! 대기자 전원의 이름이 목록에 뜹니다!"
+					}
+				},
+				{
+					"speaker": "nia",
+					"content": {
+						"korean": "모두를 도운 건 기쁘지만, 단말기 내부 모터 소리가 갑자기 거칠어졌어요."
+					}
+				}
+			]
+		},
+		{
+			"text": {
+				"korean": "기계 과열 위험을 지적하며 일괄 처리를 거절하고 서류를 돌려준다."
+			},
+			"path": "hard",
+			"mbti": "IN",
+			"flag": "safety_guideline",
+			"effects": {
+				"community": -20,
+				"reason": -10,
+				"echo": -5
+			},
+			"reward": [
+				"defense_up"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "당신은 이력서 뭉치를 담당자의 품으로 단호하게 밀어냈다."
+					}
+				},
+				{
+					"speaker": "clerk",
+					"content": {
+						"korean": "남을 잘 돕는다고 들었는데… 야속하군요. 대신 안전 지침서나 읽어봐야겠습니다."
+					}
+				},
+				{
+					"speaker": "nia",
+					"content": {
+						"korean": "냉정해 보였지만 기계를 지키기 위한 선택이었어요. 지침서 한 장이 떨어졌네요."
+					}
+				}
+			]
+		},
+		{
+			"text": {
+				"korean": "대기자들을 직접 이끌어 이력서 유형별로 3개 조로 나누어 줄을 세운다."
+			},
+			"path": "stat",
+			"mbti": "ET",
+			"require": {
+				"stat": "community",
+				"op": ">=",
+				"value": 40
+			},
+			"flag": "organized_crowd",
+			"effects": {
+				"echo": 15,
+				"fighting": 10,
+				"community": 30
+			},
+			"reward": [
+				"attack_up"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "당신이 목소리를 높여 구직자들을 직군별로 분류하자 혼잡했던 대기실이 정돈되었다."
+					}
+				},
+				{
+					"speaker": "clerk",
+					"content": {
+						"korean": "모두가 한마음으로 당신 지시에 따르는군요. 정말 대단한 인망입니다!"
+					}
+				},
+				{
+					"speaker": "nia",
+					"content": {
+						"korean": "사람들이 당신을 믿고 차분해졌어요. 이 대열이라면 어떤 혼선도 통제할 수 있겠어요."
+					}
+				}
+			]
+		}
+	],
+	"_side": {
+		"slot": "B",
+		"person": {
+			"name": "단말기 담당자",
+			"role": "검색실 관리 직원",
+			"id": "clerk"
+		},
+		"wants": "대기자들의 수많은 이력서 데이터를 한 번에 밀어넣어 업무를 신속히 끝내기",
+		"rule_link": "정상 작동하는 단말기에 많은 사람의 이력서 데이터가 한꺼번에 입력된다.",
+		"rep": "community+",
+		"events": {},
+		"flags": {
+			"overloaded_buffer": {
+				"kind": "bad",
+				"boss_penalty": -1,
+				"label": {
+					"korean": "과부하된 버퍼"
+				},
+				"boss_line": {
+					"korean": "일괄 등록으로 과열된 단말기 슬롯에서 파편화된 데이터 노이즈가 분출된다."
+				}
+			},
+			"safety_guideline": {
+				"kind": "good",
+				"boss_penalty": 1,
+				"label": {
+					"korean": "단말기 안전 지침서"
+				},
+				"boss_choice": {
+					"korean": "담당자에게서 넘겨받은 단말기 비상 안전 지침서를 참조해 시스템 제어 콘솔을 조작한다."
+				}
+			},
+			"organized_crowd": {
+				"kind": "good",
+				"boss_penalty": 2,
+				"label": {
+					"korean": "질서정연한 지원자들"
+				},
+				"boss_choice": {
+					"korean": "당신의 통솔을 따르는 지원자들의 지원을 받아 경비 장벽을 신속하게 해제한다."
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,407 @@
+{
+	"cards": [
+		{
+			"title": "밀린 승인 목록",
+			"key": "clerk_request",
+			"rule_link": "단말기에서 이름과 이력서 데이터를 일괄 승인해 시스템에 즉시 등록한다.",
+			"choices": [
+				{
+					"effects": {
+						"community": -20,
+						"echo": -5,
+						"fighting": 10
+					},
+					"path": "easy",
+					"text": "밀린 이력서 수정 요청들을 검토 없이 일괄 승인한다",
+					"result": [
+						{
+							"speaker": "narrator",
+							"text": "승인 확인 버튼을 연속으로 누르자 30건의 이력서 수정 요청이 단말기에 즉시 승인된다."
+						},
+						{
+							"speaker": "clerk",
+							"text": "덕분에 오늘 야근을 피했습니다! 이건 검색실 보관함의 여분 열쇠입니다."
+						},
+						{
+							"text": "화면은 깨끗해졌지만, 내용을 제대로 대조하지 못해서 조금 찜찜하네요.",
+							"speaker": "nia"
+						}
+					],
+					"reward": [
+						"intelligence_up"
+					],
+					"mbti": "TP"
+				},
+				{
+					"reward": [
+						"defense_up"
+					],
+					"result": [
+						{
+							"speaker": "narrator",
+							"text": "30건의 서류를 대조하며 허위 수정 요청을 차례대로 걸러내 반려 처리한다."
+						},
+						{
+							"text": "그렇게 하나하나 따지시면 오늘 안에 창구 업무를 마칠 수가 없잖습니까!",
+							"speaker": "clerk"
+						},
+						{
+							"text": "눈이 침침해질 정도로 피곤하지만, 엉터리 기록을 그대로 넘길 수는 없었으니까요.",
+							"speaker": "nia"
+						}
+					],
+					"mbti": "TJ",
+					"text": "허위 기재된 이력서들을 원부와 일일이 대조해 반려한다",
+					"path": "hard",
+					"effects": {
+						"fighting": -10,
+						"community": 20,
+						"echo": 10
+					}
+				},
+				{
+					"mbti": "FP",
+					"result": [
+						{
+							"text": "단말기 승인 대기열 맨 위에 친절 우수 사원 표창 항목을 새로 입력해 승인 처리한다.",
+							"speaker": "narrator"
+						},
+						{
+							"text": "제 사원 평가 점수가 만점으로 갱신되었군요? 이건 성과급으로 나온 상품권입니다.",
+							"speaker": "clerk"
+						},
+						{
+							"speaker": "nia",
+							"text": "엉뚱한 기록을 추가하셨지만, 담당자 표정이 한결 풀린 건 다행이네요."
+						}
+					],
+					"text": "담당자의 이력서 승인 창에 담당자 본인의 우수 추천서를 등록한다",
+					"effects": {
+						"gold": 80,
+						"reason": 25,
+						"echo": 10
+					},
+					"path": "fun"
+				}
+			],
+			"background_tags": [
+				"terminal_room",
+				"morning",
+				"fluorescent",
+				"waiting_crowd",
+				"efficient"
+			],
+			"wants": "밀린 이력서 수정 요청들을 일괄 승인해 퇴근 시간을 앞당기려 한다.",
+			"person": {
+				"name": "단말기 담당자",
+				"role": "정보 검색실 단말기 관리 직원",
+				"id": "clerk"
+			},
+			"dialogue": [
+				{
+					"speaker": "narrator",
+					"text": "단말기 화면이 정리된 모습을 본 담당 직원이 결재 단말기를 들고 다가온다."
+				},
+				{
+					"speaker": "clerk",
+					"text": "린 씨의 데이터가 말끔히 정리된 걸 봤습니다. 단말기 다루는 솜씨가 대단하시네요."
+				},
+				{
+					"text": "처리해야 할 이력서 수정 요청이 30건이나 밀려 있는데, 일괄 승인 코드를 넣어주시겠습니까?",
+					"speaker": "clerk"
+				},
+				{
+					"text": "저 사람들 이력서를 다 읽어보지도 않고 한 번에 승인해도 괜찮은 걸까요?",
+					"speaker": "nia"
+				}
+			],
+			"no": 1,
+			"slot": "B",
+			"kind": "plant"
+		},
+		{
+			"background_tags": [
+				"printer_zone",
+				"morning",
+				"white_neon",
+				"rushing_crowd",
+				"tense"
+			],
+			"dialogue": [
+				{
+					"speaker": "narrator",
+					"text": "단말기 옆 프린터에서 정렬된 서류가 뿜어져 나오자 한 지원자가 허겁지겁 끼어든다."
+				},
+				{
+					"speaker": "seeker",
+					"text": "방금 정리된 데이터 출력물 맞죠? 제 경력 수정본도 지금 바로 출력해야 합니다!"
+				},
+				{
+					"text": "5분 뒤면 면접 서류 제출 마감이에요. 대기열 롤러가 멈추기 전에 제 칩을 단말기에 꽂아주세요!",
+					"speaker": "seeker"
+				},
+				{
+					"text": "롤러가 빠르게 돌고 있어서 잘못 건드리면 용지가 걸릴 것 같아요.",
+					"speaker": "nia"
+				}
+			],
+			"key": "seeker_rush",
+			"choices": [
+				{
+					"event": "minigame_timing",
+					"mbti": "SP",
+					"event_reason": "출력기 헤드가 좌우로 세 번 왕복하는 틈에 칩을 밀어 넣어야 한다.",
+					"result": [
+						{
+							"text": "출력 타이밍에 정확히 맞춰 칩을 접촉하자 구직자의 수정 이력서가 첫 줄로 인쇄되어 나온다.",
+							"speaker": "narrator"
+						},
+						{
+							"speaker": "seeker",
+							"text": "해냈군요! 면접관들에게 제 부풀려진 경력이 그대로 전달될 겁니다!"
+						},
+						{
+							"speaker": "nia",
+							"text": "아슬아슬하게 성공했지만, 저 사람 경력이 진짜인지 검증되지 않아서 걱정이에요."
+						}
+					],
+					"text": "회전하는 출력 롤러의 타이밍에 맞춰 구직자의 칩을 단말기에 밀어 넣는다",
+					"path": "easy",
+					"effects": {
+						"echo": 5,
+						"reason": -15,
+						"fighting": 20
+					},
+					"event_intro": [
+						{
+							"text": "출력 노즐이 요란한 기계음을 내며 좌우로 빠르게 왕복하기 시작한다.",
+							"speaker": "narrator"
+						},
+						{
+							"text": "지금입니다! 노즐이 양 끝에 닿는 순간 세 번 연속으로 눌러야 등록됩니다!",
+							"speaker": "seeker"
+						}
+					]
+				},
+				{
+					"text": "정규 출력 순서를 지키도록 구직자의 칩을 밀어내고 대기열을 유지한다",
+					"result": [
+						{
+							"text": "구직자의 손을 물리고 대기 순번표 순서대로 서류를 배출구로 밀어 올린다.",
+							"speaker": "narrator"
+						},
+						{
+							"text": "제 인생이 걸린 제출인데 이렇게 융통성이 없을 수가 있습니까!",
+							"speaker": "seeker"
+						},
+						{
+							"speaker": "nia",
+							"text": "거센 항의를 받았지만, 다른 사람들의 서류 순서가 뒤엉키지 않아서 다행이에요."
+						}
+					],
+					"effects": {
+						"fighting": -20,
+						"community": 15,
+						"echo": 10
+					},
+					"reward": [
+						"shield"
+					],
+					"path": "hard",
+					"mbti": "SJ"
+				},
+				{
+					"text": "구직자의 급행 출력 수수료 80골드를 대신 결제해 전용 슬롯을 연다",
+					"path": "gold",
+					"result": [
+						{
+							"speaker": "narrator",
+							"text": "단말기 과금 슬롯에 80골드를 결제하자 예비용 고속 인쇄 채널이 활성화된다."
+						},
+						{
+							"speaker": "seeker",
+							"text": "급행 요금을 대신 내주시다니! 덕분에 새치기하지 않고 정식으로 뽑았습니다!"
+						},
+						{
+							"text": "돈은 들었지만 현장에서 큰 소란이 번지는 건 막았네요.",
+							"speaker": "nia"
+						}
+					],
+					"effects": {
+						"echo": 10,
+						"community": 20,
+						"gold": -80
+					},
+					"reward": [
+						"move_range_up"
+					],
+					"mbti": "FJ"
+				}
+			],
+			"no": 2,
+			"rule_link": "단말기 대기열에서 먼저 정리되어 출력된 이력서가 면접관에게 우선 접수된다.",
+			"title": "출력 창구의 밀치기",
+			"person": {
+				"name": "초조한 구직자",
+				"role": "이력서 과장 등록을 노리는 지원자",
+				"id": "seeker"
+			},
+			"wants": "마감 직전 자신의 과장된 이력서 수정본을 출력 대기열 맨 앞에 끼워 넣으려 한다.",
+			"slot": "B",
+			"kind": "normal"
+		},
+		{
+			"background_tags": [
+				"server_corner",
+				"morning",
+				"dim_fluorescent",
+				"sparse_staff",
+				"orderly"
+			],
+			"rule_link": "단말기에서 정리된 이력서 데이터가 백업 칩에 기록되며 시스템이 겉보기에 안정적으로 유지된다.",
+			"dialogue": [
+				{
+					"speaker": "narrator",
+					"text": "단말기 점검구를 열고 있던 정비원이 정리된 화면을 보며 공구를 내려놓는다."
+				},
+				{
+					"text": "단말기 화면이 이렇게 안정적으로 정렬된 건 오랜만이군요.",
+					"speaker": "technician"
+				},
+				{
+					"speaker": "technician",
+					"text": "이 정리된 상태를 임시 백업 드라이브에 복사해 두면 점검 실적을 보고할 수 있습니다."
+				},
+				{
+					"speaker": "nia",
+					"text": "백업을 해 두면 나중에 문제가 생겼을 때 데이터를 되돌리는 데 도움이 될지도 몰라요."
+				}
+			],
+			"person": {
+				"id": "technician",
+				"name": "단말기 정비원",
+				"role": "검색실 보조 정비 기사"
+			},
+			"no": 3,
+			"wants": "정리된 이력서 데이터를 임시 보관함에 복사해 점검 실적을 확보하려 한다.",
+			"choices": [
+				{
+					"mbti": "TP",
+					"text": "정비원의 백업 드라이브에 단말기 데이터를 그대로 복제해 넘겨준다",
+					"effects": {
+						"echo": -5,
+						"reason": -15,
+						"community": 10
+					},
+					"path": "easy",
+					"reward": [
+						"attack_up"
+					],
+					"result": [
+						{
+							"text": "전송 케이블을 연결하자 화면 속 정렬된 이력서 정보가 백업 드라이브로 빠르게 복사된다.",
+							"speaker": "narrator"
+						},
+						{
+							"text": "고맙습니다! 검증 완료 보고서에 보조 작업자로 올려두고 공구 키트를 드리죠.",
+							"speaker": "technician"
+						},
+						{
+							"text": "겉보기에는 완벽한 백업 파일인데, 아무 문제 없이 잘 보존되겠죠?",
+							"speaker": "nia"
+						}
+					]
+				},
+				{
+					"effects": {
+						"echo": 10,
+						"fighting": 10,
+						"reason": 20,
+						"community": 10
+					},
+					"mbti": "TJ",
+					"reward": [
+						"heal"
+					],
+					"path": "hard",
+					"result": [
+						{
+							"speaker": "narrator",
+							"text": "데이터 복제 전 단말기 보안 콘솔을 열어 지원자들의 식별 코드를 마스킹 처리한다."
+						},
+						{
+							"speaker": "technician",
+							"text": "규정대로 철저하게 하시는군요. 시간이 조금 더 걸리긴 했지만 안전하긴 합니다."
+						},
+						{
+							"speaker": "nia",
+							"text": "손이 많이 가는 작업이었지만 다른 사람의 신원 정보가 함부로 새어나가지 않게 지켰어요."
+						}
+					],
+					"text": "개인정보 유출 방지를 위해 식별 코드를 하나씩 마스킹한 뒤 백업한다"
+				},
+				{
+					"reward": [
+						"cooldown_reset"
+					],
+					"result": [
+						{
+							"speaker": "narrator",
+							"text": "{actor}이(가) 백업 명령어에 버퍼 확장 코드를 덧붙이자 단말기 연산 속도가 두 배로 치솟는다."
+						},
+						{
+							"text": "기본 단말기에서 이런 전송 속도가 나올 수 있다니 놀랍습니다!",
+							"speaker": "technician"
+						},
+						{
+							"speaker": "nia",
+							"text": "{actor} 덕분에 백업도 순식간에 끝나고 단말기 화면도 한층 더 매끄럽게 돌아가네요."
+						}
+					],
+					"effects": {
+						"reason": 10,
+						"community": 10,
+						"echo": 10
+					},
+					"mbti": "NT",
+					"require_mbti": "NT",
+					"text": "{actor}이(가) 백업 스크립트의 메모리 할당량을 조정해 처리 속도를 높인다",
+					"path": "lock"
+				},
+				{
+					"mbti": "SF",
+					"reward": [
+						"defense_up"
+					],
+					"text": "정비원에게 고성능 백업 저장 카트리지를 100골드에 사서 지급한다",
+					"result": [
+						{
+							"text": "정비 창구에 100골드를 지불하고 대용량 금도금 백업 카트리지를 건넨다.",
+							"speaker": "narrator"
+						},
+						{
+							"speaker": "technician",
+							"text": "이렇게 고급 카트리지에 담아주시다니 데이터 손실 걱정이 사라졌습니다!"
+						},
+						{
+							"text": "단말기 화면이 정말 단단하게 고정된 느낌이에요. 좋은 투자를 하셨어요.",
+							"speaker": "nia"
+						}
+					],
+					"effects": {
+						"echo": 10,
+						"gold": -100,
+						"reason": 15
+					},
+					"path": "gold"
+				}
+			],
+			"title": "백업 데이터 복원기",
+			"key": "terminal_backup",
+			"slot": "B",
+			"kind": "normal"
+		}
+	],
+	"errors": [],
+	"prompt_hash": "1e3c72d6ab1db3bef94964a44085eac75d63102b"
+}

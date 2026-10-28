@@ -1,0 +1,209 @@
+{
+	"id": "card_01_kyle_cable_data",
+	"kind": "normal",
+	"title": {
+		"korean": "불안정한 데이터 가로채기"
+	},
+	"intensity": "high",
+	"after_story": 1,
+	"before_story": 3,
+	"background_tags": [
+		"tangled_wires",
+		"dark_corner",
+		"sparking_cable",
+		"secret_deal",
+		"stale_air"
+	],
+	"dialogue": [
+		{
+			"speaker": "narrator",
+			"content": {
+				"korean": "낡은 케이블 뭉치 옆에서 카일이 집게 전선을 들고 주변을 살핀다."
+			}
+		},
+		{
+			"speaker": "kyle",
+			"content": {
+				"korean": "스피커 말대로 곧 새로운 질서가 생기면 이 낡은 케이블의 데이터는 다 버려지겠지."
+			}
+		},
+		{
+			"speaker": "echo",
+			"content": {
+				"korean": "누군가의 중요한 정보일지도 모르는데, 함부로 건드려도 될까?"
+			}
+		},
+		{
+			"speaker": "kyle",
+			"content": {
+				"korean": "버려지기 전에 내가 챙겨서 팔면 모두에게 이득이야. 내 집게를 저 메인 선에 좀 연결해 줘."
+			}
+		}
+	],
+	"forced": [
+		{
+			"text": {
+				"korean": "{actor}이(가) 집게 전선을 뽑아버리고 케이블 뭉치를 묶어버린다."
+			},
+			"path": "forced",
+			"mbti": "EP",
+			"require": {
+				"mbti": "EP"
+			},
+			"chance": 0.3,
+			"effects": {
+				"fighting": 20,
+				"reason": 15
+			},
+			"reward": [
+				"attack_up"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "{actor}이(가) 카일의 장비를 망가뜨리자 카일이 욕설을 뱉으며 장비를 챙겨 달아난다."
+					}
+				}
+			]
+		}
+	],
+	"choices": [
+		{
+			"text": {
+				"korean": "케이블의 피복을 벗겨 데이터를 복제해 주고 돈을 받는다."
+			},
+			"path": "easy",
+			"mbti": "TP",
+			"effects": {
+				"gold": 150,
+				"community": -20
+			},
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "당신이 케이블을 연결하자 카일의 단말기에 데이터가 쏟아진다. 그는 약속한 몫을 챙겨주고 황급히 사라진다."
+					}
+				}
+			]
+		},
+		{
+			"text": {
+				"korean": "케이블을 안전하게 절연 테이프로 감아 데이터 유출을 막는다."
+			},
+			"path": "hard",
+			"mbti": "FJ",
+			"effects": {
+				"echo": 10,
+				"community": 20
+			},
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "당신이 케이블을 테이프로 감아버리자 카일이 화를 내며 자리를 뜬다."
+					}
+				},
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "잠시 후 발소리와 함께 험악한 인상의 남자가 다가온다."
+					}
+				}
+			],
+			"event": "meet_stranger",
+			"event_intro": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "\"내 데이터를 가로막은 게 너냐?"
+					}
+				},
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "오늘 아주 끝장을 내주지!\" 낯선 브로커가 쇠파이프를 끌며 {actor}에게 1:1 대결을 걸어온다."
+					}
+				}
+			],
+			"event_options": {
+				"fight": {
+					"text": {
+						"korean": "{actor}이(가) 브로커의 쇠파이프에 맞선다."
+					},
+					"win": [
+						{
+							"speaker": "narrator",
+							"content": {
+								"korean": "{actor}이(가) 브로커의 무기를 빼앗아 멀리 던져버린다."
+							}
+						}
+					],
+					"lose": [
+						{
+							"speaker": "narrator",
+							"content": {
+								"korean": "브로커가 휘두른 쇠파이프에 맞아 뒤로 밀려난다."
+							}
+						}
+					]
+				},
+				"avoid": {
+					"text": {
+						"korean": "브로커의 공격을 피해 좁은 서버 랙 사이로 도망친다."
+					},
+					"result": [
+						{
+							"speaker": "narrator",
+							"content": {
+								"korean": "도망치다 튀어나온 철제 모서리에 부딪혀 가벼운 타박상을 입는다."
+							}
+						}
+					],
+					"reward": [
+						"hp_down"
+					]
+				}
+			}
+		},
+		{
+			"text": {
+				"korean": "케이블 뭉치에 화려한 전구를 달아 데이터 흐름을 시각 예술로 만든다."
+			},
+			"path": "fun",
+			"mbti": "EN",
+			"effects": {
+				"reason": -20,
+				"community": 30,
+				"gold": 50
+			},
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "반짝이는 전구 빛에 카일이 어이없다는 듯 쳐다보더니 사진을 찍고는 가버린다."
+					}
+				}
+			]
+		}
+	],
+	"_side": {
+		"slot": "A",
+		"person": {
+			"role": "암시장 상인",
+			"id": "kyle",
+			"name": "카일"
+		},
+		"wants": "낡은 케이블 뭉치에 흐르는 불안정한 데이터를 가로채 돈을 벌고 싶어 함",
+		"rule_link": "스크린 조각의 힘을 핑계로 데이터의 흐름을 왜곡하려는 시도.",
+		"events": {
+			"hard": "카일의 거래처였던 정보 브로커가 데이터를 받지 못하자 화를 내며 나타난다."
+		},
+		"flags": {}
+	}
+}

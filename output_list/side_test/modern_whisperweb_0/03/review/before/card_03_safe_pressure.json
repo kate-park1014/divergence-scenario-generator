@@ -1,0 +1,146 @@
+{
+	"id": "card_03_safe_pressure",
+	"kind": "callback",
+	"title": {
+		"korean": "압력을 버틴 틈"
+	},
+	"intensity": "high",
+	"after_story": 5,
+	"before_story": 7,
+	"callback": {
+		"seed": "pipe_repair_hard",
+		"min_rooms_after": 2
+	},
+	"background_tags": [
+		"dry",
+		"tape",
+		"quiet",
+		"warm",
+		"calm"
+	],
+	"dialogue": [
+		{
+			"speaker": "piping_tech",
+			"content": {
+				"korean": "거 봐, 내 테이프가 최고라니까! 틈새로 압력이 조금씩 빠져나가서 파이프가 안 터졌어."
+			}
+		},
+		{
+			"speaker": "kai",
+			"content": {
+				"korean": "정말이네. 덕분에 주변 장치나 데이터 스크린 조각들도 번짐 없이 멀쩡해."
+			}
+		},
+		{
+			"speaker": "piping_tech",
+			"content": {
+				"korean": "물기 하나 없이 안전하니까, 여기서 숨 좀 고르고 가."
+			}
+		}
+	],
+	"choices": [
+		{
+			"text": {
+				"korean": "수리공 옆에 앉아 안전한 구역에서 휴식을 취한다."
+			},
+			"path": "easy",
+			"mbti": "FP",
+			"flag": "rested_legs",
+			"effects": {
+				"gold": 50,
+				"community": 10,
+				"echo": 10
+			},
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "수리공과 농담을 주고받으며 체력을 회복했다."
+					}
+				},
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "바닥에 떨어져 있던 동전도 주워 기분이 좋아졌다."
+					}
+				}
+			],
+			"event": "campsite",
+			"event_intro": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "수리공이 파이프 옆에 깨끗한 상자를 깔아주어 쉴 수 있었다."
+					}
+				}
+			]
+		},
+		{
+			"text": {
+				"korean": "쉬지 않고 틈새 주변의 장치들을 한 번 더 점검한다."
+			},
+			"path": "hard",
+			"mbti": "TJ",
+			"flag": "wrench_gift",
+			"effects": {
+				"fighting": 10,
+				"echo": 10,
+				"community": 10
+			},
+			"reward": [
+				"move_range_up"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "장치들이 안전한 것을 확인하고 수리공에게 인사했다."
+					}
+				},
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "수리공이 감탄하며 유용한 렌치를 선물로 주었다."
+					}
+				}
+			]
+		}
+	],
+	"_side": {
+		"slot": "C",
+		"person": {
+			"name": "배관 수리공",
+			"role": "파이프실 관리자",
+			"id": "piping_tech"
+		},
+		"wants": "테이프 틈으로 압력이 안전하게 빠지고 있다며 옆에서 잠시 쉬어가라고 권한다.",
+		"rule_link": "테이프로 감은 틈새로 압력이 새어나가 데이터 스크린 조각의 파손을 막는다.",
+		"events": {
+			"easy": "수리공이 내어준 마른 바닥에서 숨을 돌린다."
+		},
+		"flags": {
+			"rested_legs": {
+				"kind": "good",
+				"boss_penalty": 1,
+				"label": {
+					"korean": "가벼운 발걸음"
+				},
+				"boss_choice": {
+					"korean": "휴식으로 얻은 활력을 바탕으로 재빠르게 회피한다."
+				}
+			},
+			"wrench_gift": {
+				"kind": "good",
+				"boss_penalty": 2,
+				"label": {
+					"korean": "수리공의 렌치"
+				},
+				"boss_choice": {
+					"korean": "수리공에게 받은 렌치로 닫힌 문을 강제로 열어젖힌다."
+				}
+			}
+		}
+	}
+}

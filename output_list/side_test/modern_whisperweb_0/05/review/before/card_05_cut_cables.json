@@ -1,0 +1,148 @@
+{
+	"id": "card_05_cut_cables",
+	"kind": "normal",
+	"title": {
+		"korean": "엉켜버린 광케이블"
+	},
+	"intensity": "calm",
+	"after_story": 3,
+	"before_story": 5,
+	"background_tags": [
+		"tangled_wires",
+		"fiber_optics",
+		"wire_cutters",
+		"control_room",
+		"frustrated_tech"
+	],
+	"dialogue": [
+		{
+			"speaker": "network_technician",
+			"content": {
+				"korean": "이 케이블들 엉킨 꼴 좀 봐. 이걸 언제 다 풀고 있어?"
+			}
+		},
+		{
+			"speaker": "echo",
+			"content": {
+				"korean": "내 1급 정보들이 죄다 스팸 메일이랑 섞여버렸어! 이대로면 내 신용은 끝장이야!"
+			}
+		},
+		{
+			"speaker": "network_technician",
+			"content": {
+				"korean": "그냥 이 부분은 니퍼로 싹둑 자르고 우회선을 깔아버리자."
+			}
+		},
+		{
+			"speaker": "narrator",
+			"content": {
+				"korean": "기술자가 날카로운 니퍼를 들고 광케이블 뭉치에 다가갔다."
+			}
+		}
+	],
+	"choices": [
+		{
+			"text": {
+				"korean": "케이블을 자르게 둔다."
+			},
+			"path": "easy",
+			"mbti": "IS",
+			"effects": {
+				"fighting": 10,
+				"reason": -20,
+				"echo": -10
+			},
+			"reward": [
+				"defense_up"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "당신은 말없이 고개를 끄덕였다. 기술자가 케이블을 잘라내자 복잡한 엉킴이 사라졌다."
+					}
+				},
+				{
+					"speaker": "network_technician",
+					"content": {
+						"korean": "속이 다 시원하네. 나중에 문제 생기면 그때 가서 생각하지 뭐."
+					}
+				}
+			]
+		},
+		{
+			"text": {
+				"korean": "자르지 못하게 막고 엉킨 케이블을 하나씩 푼다."
+			},
+			"path": "hard",
+			"mbti": "NF",
+			"effects": {
+				"community": 10,
+				"echo": 5,
+				"reason": 15
+			},
+			"reward": [
+				"attack_down"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "당신은 기술자의 니퍼를 빼앗고 엉킨 광케이블을 손끝으로 일일이 풀어냈다."
+					}
+				},
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "케이블은 무사히 제자리를 찾았지만, 장시간의 작업으로 손목이 시큰거렸다."
+					}
+				}
+			]
+		},
+		{
+			"text": {
+				"korean": "케이블 정렬기를 사서 엉킴을 푼다."
+			},
+			"path": "gold",
+			"mbti": "ET",
+			"require": {
+				"stat": "gold",
+				"op": ">=",
+				"value": 90
+			},
+			"effects": {
+				"gold": -90,
+				"reason": 10
+			},
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "당신이 자동 정렬기를 작동시키자, 기계가 순식간에 케이블의 엉킴을 풀어냈다."
+					}
+				},
+				{
+					"speaker": "network_technician",
+					"content": {
+						"korean": "돈이 좋긴 좋네. 굳이 자를 필요가 없었어."
+					}
+				}
+			]
+		}
+	],
+	"_side": {
+		"slot": "B",
+		"person": {
+			"id": "network_technician",
+			"role": "네트워크 기술자",
+			"name": "통신 기술자"
+		},
+		"wants": "엉킨 케이블을 푸는 대신 그냥 잘라내고 새로 잇자고 한다.",
+		"rule_link": "케이블 절단은 조각들 사이의 물리적 연결을 영구적으로 끊는 파괴 행위다.",
+		"events": {},
+		"flags": {}
+	}
+}

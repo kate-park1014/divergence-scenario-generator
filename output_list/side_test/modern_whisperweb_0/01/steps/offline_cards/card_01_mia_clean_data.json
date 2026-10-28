@@ -1,0 +1,178 @@
+{
+	"id": "card_01_mia_clean_data",
+	"kind": "callback",
+	"title": {
+		"korean": "안전하게 해독된 데이터"
+	},
+	"intensity": "high",
+	"after_story": 7,
+	"before_story": 10,
+	"callback": {
+		"seed": "mia_broken_shard_hard",
+		"min_rooms_after": 2
+	},
+	"background_tags": [
+		"server_rack",
+		"neat_screen",
+		"backup_drive",
+		"smiling_smuggler",
+		"stable_connection"
+	],
+	"dialogue": [
+		{
+			"speaker": "narrator",
+			"content": {
+				"korean": "미아가 노트북 화면에 깔끔하게 정렬된 데이터를 띄워놓고 만족스럽게 웃고 있다."
+			}
+		},
+		{
+			"speaker": "mia",
+			"content": {
+				"korean": "봤지? 밤새 고생해서 수동으로 암호를 풀었더니 내 데이터만 완벽하게 해독됐어!"
+			}
+		},
+		{
+			"speaker": "echo",
+			"content": {
+				"korean": "주변 데이터가 다 섞여서 난장판인데, 미아의 정보만 온전하네."
+			}
+		},
+		{
+			"speaker": "mia",
+			"content": {
+				"korean": "파편을 안 쓴 게 신의 한 수였지. 이 데이터를 백업 드라이브로 옮길 건���, 연결선 좀 꽉 잡아줄래?"
+			}
+		}
+	],
+	"choices": [
+		{
+			"text": {
+				"korean": "백업 연결선을 잡아주고 미아에게 넉넉한 보상을 받는다."
+			},
+			"path": "easy",
+			"mbti": "SP",
+			"flag": "mia_safe_route",
+			"effects": {
+				"reason": -10,
+				"gold": 100
+			},
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "선이 흔들리지 않게 꽉 잡아주자 백업이 안전하게 끝난다."
+					}
+				},
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "미아는 기분이 좋은지 당신에게 수고비를 넉넉히 챙겨준다."
+					}
+				}
+			]
+		},
+		{
+			"text": {
+				"korean": "데이터를 옮기는 동안 다른 꼬인 정보들이 침범하지 못하게 방화벽을 세운다."
+			},
+			"path": "hard",
+			"mbti": "TJ",
+			"flag": "mia_firewall_prog",
+			"effects": {
+				"echo": 10,
+				"reason": 15
+			},
+			"reward": [
+				"defense_up"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "방화벽을 구축하느라 진땀을 뺐지만, 데이터는 안전하게 보존된다."
+					}
+				},
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "미아가 고맙다며 쓸만한 방화벽 프로그램을 복사해 준다."
+					}
+				}
+			]
+		},
+		{
+			"text": {
+				"korean": "더 빠르고 안정적인 연결을 위해 가지고 있던 고성능 케이블을 내어준다."
+			},
+			"path": "stat",
+			"mbti": "SF",
+			"flag": "mia_fast_backup",
+			"effects": {
+				"reason": 10
+			},
+			"reward": [
+				"move_range_up"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "고성능 케이�� 덕분에 백업이 순식간에 완료된다."
+					}
+				},
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "미아가 만족스럽게 웃으며 다음에도 거래하자고 손을 내민다."
+					}
+				}
+			]
+		}
+	],
+	"_side": {
+		"slot": "D",
+		"person": {
+			"role": "데이터 밀수꾼",
+			"name": "미아",
+			"id": "mia"
+		},
+		"wants": "해독된 데이터를 백업하는 동안 연결선이 흔들리지 않게 잡아달라고 함",
+		"rule_link": "수동으로 천천히 암호를 푼 덕분에 주변 데이터가 꼬이는 와중에도 안전하게 정보를 건졌다.",
+		"events": {},
+		"flags": {
+			"mia_safe_route": {
+				"kind": "good",
+				"boss_penalty": 1,
+				"label": {
+					"korean": "안전 경로"
+				},
+				"boss_choice": {
+					"korean": "미아가 백업해 둔 안전 경로 데이터를 활용해 함정을 피한다."
+				}
+			},
+			"mia_firewall_prog": {
+				"kind": "good",
+				"boss_penalty": 2,
+				"label": {
+					"korean": "강력한 방화벽"
+				},
+				"boss_choice": {
+					"korean": "미아가 건네준 방화벽 프로그램으로 적의 통신망을 마비시킨다."
+				}
+			},
+			"mia_fast_backup": {
+				"kind": "good",
+				"boss_penalty": 1,
+				"label": {
+					"korean": "빠른 백업"
+				},
+				"boss_choice": {
+					"korean": "미아가 빠르게 백업을 끝내고 남은 시간에 적의 통신을 도청해 알려준다."
+				}
+			}
+		}
+	}
+}

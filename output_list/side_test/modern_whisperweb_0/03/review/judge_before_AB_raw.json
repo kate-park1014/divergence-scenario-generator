@@ -1,0 +1,312 @@
+{
+	"cards": [
+		{
+			"asks": "온도가 내려가 쾌적해진 통풍구 앞에서 같이 5분만 쉬다 가자고 권한다.",
+			"checks": [
+				{
+					"quote": "방독 마스크를 구매해 착용하고 쉰다.",
+					"pass": false,
+					"item": "S1",
+					"problem": "gold 선택지에 돈을 누구에게 지불하고 마스크를 구매하는지 명시되어 있지 않습니다."
+				},
+				{
+					"pass": true,
+					"item": "S2"
+				},
+				{
+					"pass": true,
+					"item": "S3"
+				},
+				{
+					"pass": true,
+					"item": "S4"
+				},
+				{
+					"pass": true,
+					"item": "S5"
+				}
+			],
+			"choices_read": [
+				{
+					"path": "easy",
+					"reaction_assumes": "쾌적한 바람을 맞으며 땀을 식히자 체력이 조금 회복되었다.",
+					"does": "통풍구 앞에 앉아 시원한 바람을 맞으며 쉰다.",
+					"target": "주인공 자신"
+				},
+				{
+					"does": "바람의 냄새를 수상히 여겨 쉬지 않고 서둘러 이동한다.",
+					"reaction_assumes": "달콤한 휴식을 포기하고 발걸음을 재촉했다.",
+					"target": "주인공 자신",
+					"path": "hard"
+				},
+				{
+					"reaction_assumes": "마스크를 쓰고 안전하게 통풍구 앞에서 휴식을 취했다.",
+					"does": "방독 마스크를 구매해 착용하고 쉰다.",
+					"path": "gold",
+					"target": "주인공 자신"
+				},
+				{
+					"path": "lock",
+					"does": "{actor}이(가) 통풍구에서 나오는 바람의 성분을 조용히 분석하여 위험을 경고한다.",
+					"reaction_assumes": "{actor}의 날카로운 분석을 듣고 작업자도 황급히 자리를 피했다.",
+					"target": "작업자"
+				}
+			],
+			"card_id": "card_03_cool_breeze"
+		},
+		{
+			"asks": "파이프 겉면의 이슬을 닦아내게 흡수성 천을 던져달라고 한다.",
+			"checks": [
+				{
+					"pass": true,
+					"item": "S1"
+				},
+				{
+					"pass": true,
+					"item": "S2"
+				},
+				{
+					"pass": true,
+					"item": "S3"
+				},
+				{
+					"pass": true,
+					"item": "S4"
+				},
+				{
+					"pass": true,
+					"item": "S5"
+				}
+			],
+			"card_id": "card_03_dewy_pipe",
+			"choices_read": [
+				{
+					"path": "easy",
+					"reaction_assumes": "흡수성 천 덕분에 파이프의 이슬이 순식간에 닦였다.",
+					"target": "청소부",
+					"does": "천을 던져주어 청소가 빨리 끝나게 돕는다."
+				},
+				{
+					"does": "천을 주지 않고 청소부가 직접 손걸레로 닦게 둔다.",
+					"reaction_assumes": "청소부는 투덜거리며 자신의 낡은 걸레로 느릿느릿 이슬을 닦아냈다.",
+					"path": "hard",
+					"target": "청소부"
+				},
+				{
+					"does": "돈을 넉넉히 쥐여주며 꼼꼼히 닦아달라고 부탁한다.",
+					"target": "청소부",
+					"reaction_assumes": "팁을 받은 청소부는 콧노래를 부르며 바닥까지 완벽하게 건조시켰다.",
+					"path": "gold"
+				}
+			]
+		},
+		{
+			"checks": [
+				{
+					"problem": "gold 선택지에 돈을 누구에게 지불하고 냉각 가스를 사는지 명시되어 있지 않습니다.",
+					"item": "S1",
+					"pass": false,
+					"quote": "강력한 냉각 가스를 사서 뿌려 완전히 식힌다."
+				},
+				{
+					"pass": true,
+					"item": "S2"
+				},
+				{
+					"pass": true,
+					"item": "S3"
+				},
+				{
+					"pass": true,
+					"item": "S4"
+				},
+				{
+					"pass": true,
+					"item": "S5"
+				}
+			],
+			"card_id": "card_03_melting_cable",
+			"choices_read": [
+				{
+					"target": "작업자",
+					"reaction_assumes": "냉각팬의 바람을 맞은 케이블이 일시적으로 열기를 가라앉혔다.",
+					"path": "easy",
+					"does": "냉각팬을 빌려주어 케이블 겉면을 빠르게 식힌다."
+				},
+				{
+					"path": "hard",
+					"target": "케이블",
+					"reaction_assumes": "케이블을 끊어버리자 작업자가 당황하며 불평을 쏟아냈다.",
+					"does": "케이블을 끊고 안전하게 절연 테이프로 감는다."
+				},
+				{
+					"target": "케이블",
+					"path": "gold",
+					"reaction_assumes": "냉각 가스가 케이블의 열기를 단숨에 얼려버렸다.",
+					"does": "강력한 냉각 가스를 사서 뿌려 완전히 식힌다."
+				},
+				{
+					"path": "forced",
+					"reaction_assumes": "{actor}의 거친 조치 덕에 열기는 잡혔지만, 하얀 가루가 주변을 엉망으로 만들었다.",
+					"target": "케이블",
+					"does": "{actor}이(가) 냉각팬 대신 소화기를 집어들고 통째로 분사한다."
+				}
+			],
+			"asks": "과열로 녹아내리는 케이블을 식히게 휴대용 냉각팬을 빌려달라고 한다."
+		},
+		{
+			"checks": [
+				{
+					"item": "S1",
+					"pass": false,
+					"quote": "돈을 주고 고성능 밀봉제를 사서 직접 발라준다.",
+					"problem": "gold 선택지에 돈을 누구에게 지불하고 밀봉제를 사는지 명시되어 있지 않습니다."
+				},
+				{
+					"pass": true,
+					"item": "S2"
+				},
+				{
+					"pass": true,
+					"item": "S3"
+				},
+				{
+					"pass": true,
+					"item": "S4"
+				},
+				{
+					"pass": true,
+					"item": "S5"
+				}
+			],
+			"asks": "파이프 균열을 막기 위해 예비 부품을 달라고 한다.",
+			"choices_read": [
+				{
+					"does": "요구대로 예비 부품을 넘겨준다.",
+					"target": "수리공",
+					"path": "easy",
+					"reaction_assumes": "수리공이 재빨리 부품을 끼워 넣어 금이 간 곳을 막았다."
+				},
+				{
+					"path": "hard",
+					"reaction_assumes": "수리공은 투덜거리며 자신의 테이프로 간신히 구멍을 칭칭 감았다.",
+					"target": "수리공",
+					"does": "나중을 위해 부품을 주지 않는다."
+				},
+				{
+					"path": "gold",
+					"target": "파이프",
+					"reaction_assumes": "고급 밀봉제가 파이프의 금을 완벽하게 메웠다.",
+					"does": "돈을 주고 고성능 밀봉제를 사서 직접 발라준다."
+				},
+				{
+					"reaction_assumes": "{actor}의 지시에 따라 밸브 틈새를 조절하자 파이프의 압력이 안정되었다.",
+					"path": "lock",
+					"target": "수리공",
+					"does": "{actor}이(가) 압력 계산을 통해 부품 없이 수리할 방법을 지시한다."
+				}
+			],
+			"card_id": "card_03_pipe_repair"
+		},
+		{
+			"choices_read": [
+				{
+					"path": "easy",
+					"reaction_assumes": "기술자가 손을 집어넣으려다 끈적이는 물의 촉감에 놀라 손을 뺐다.",
+					"target": "기술자",
+					"does": "기술자가 칩을 건질 수 없다에 돈을 걸어 내기에 응한다."
+				},
+				{
+					"does": "내기를 무시하고 물웅덩이에 접근하지 못하게 막는다.",
+					"path": "hard",
+					"target": "기술자",
+					"reaction_assumes": "강하게 제지하자 기술자는 입맛을 다시며 물러났다."
+				},
+				{
+					"path": "gold",
+					"target": "물웅덩이",
+					"reaction_assumes": "특수 집게를 사용해 끈적이는 물에 닿지 않고 칩을 건져냈다.",
+					"does": "특수 집게를 사서 웅덩이의 칩을 안전하게 건져낸다."
+				}
+			],
+			"card_id": "card_03_strange_puddle",
+			"checks": [
+				{
+					"problem": "gold 선택지에 돈을 누구에게 지불하고 특수 집게를 사는지 명시되어 있지 않습니다.",
+					"pass": false,
+					"item": "S1",
+					"quote": "특수 집게를 사서 웅덩이의 칩을 안전하게 건져낸다."
+				},
+				{
+					"pass": true,
+					"item": "S2"
+				},
+				{
+					"pass": true,
+					"item": "S3"
+				},
+				{
+					"pass": true,
+					"item": "S4"
+				},
+				{
+					"problem": "결과에서 이미 기술자가 칩 건지기에 실패했는데, 이벤트 도입부에서 다시 내기를 제안하는 것은 흐름이 이어지지 않습니다.",
+					"pass": false,
+					"item": "S5",
+					"quote": "기술자가 동전을 꺼내며 칩을 무사히 건져낼지 내기를 제안한다."
+				}
+			],
+			"asks": "물웅덩이 안의 메모리 칩을 자기가 주울 수 있다에 돈을 걸고 내기를 하자고 한다."
+		},
+		{
+			"card_id": "card_03_unstable_valve",
+			"choices_read": [
+				{
+					"does": "밸브를 완전히 열어버려 압력을 단번에 뺀다.",
+					"target": "밸브",
+					"reaction_assumes": "밸브를 열자 소량의 냉각수가 쏟아지며 압력이 순식간에 정상으로 돌아왔다.",
+					"path": "easy"
+				},
+				{
+					"target": "밸브",
+					"reaction_assumes": "압력이 치솟는 순간마다 정확히 렌치를 돌려 잠금장치를 고정했다.",
+					"does": "밸브의 잠금장치를 타이밍에 맞춰 다시 조인다.",
+					"path": "hard"
+				},
+				{
+					"target": "밸브",
+					"reaction_assumes": "자동 수리 키트가 작동하며 밸브를 완벽하게 밀봉했다.",
+					"path": "gold",
+					"does": "고성능 자동 수리 키트를 부착하여 해결한다."
+				}
+			],
+			"asks": "비상 냉각수 밸브의 잠금장치가 헐거워졌으니 조여달라고 한다.",
+			"checks": [
+				{
+					"problem": "gold 선택지임에도 돈을 누구에게 무엇에 쓰는지 텍스트에 전혀 명시되어 있지 않습니다.",
+					"pass": false,
+					"item": "S1",
+					"quote": "고성능 자동 수리 키트를 부착하여 해결한다."
+				},
+				{
+					"pass": true,
+					"item": "S2"
+				},
+				{
+					"pass": true,
+					"item": "S3"
+				},
+				{
+					"pass": true,
+					"item": "S4"
+				},
+				{
+					"quote": "밸브의 잠금장치가 세 번 연달아 튕겨져 나온다. 그 순간에 맞춰 렌치를 돌려야 한다.",
+					"problem": "결과에서 이미 밸브를 고정하여 안전해졌다고 서술했는데, 이벤트 도입부에서 다시 잠금장치가 튕겨져 나온다고 하는 것은 흐름이 이어지지 않습니다.",
+					"item": "S5",
+					"pass": false
+				}
+			]
+		}
+	]
+}

@@ -1,0 +1,178 @@
+{
+	"id": "card_01_ryan_exact_delivery",
+	"kind": "callback",
+	"title": {
+		"korean": "늦었지만 정확한 부품"
+	},
+	"intensity": "high",
+	"after_story": 5,
+	"before_story": 7,
+	"callback": {
+		"seed": "ryan_order_data_hard",
+		"min_rooms_after": 2
+	},
+	"background_tags": [
+		"old_server",
+		"metal_box",
+		"fixed_controller",
+		"bright_light",
+		"relieved_mechanic"
+	],
+	"dialogue": [
+		{
+			"speaker": "narrator",
+			"content": {
+				"korean": "낡은 서버 랙 앞, 라이언이 방금 도착한 금속 상자를 조심스레 열어본다."
+			}
+		},
+		{
+			"speaker": "ryan",
+			"content": {
+				"korean": "휴, 주문이 한참 늦긴 했지만 메인보드 부품이 제대로 왔어!"
+			}
+		},
+		{
+			"speaker": "echo",
+			"content": {
+				"korean": "주변 정보가 다 꼬였는데, 수동으로 꼼꼼히 입력해 둔 덕분에 무사히 도착했나 봐."
+			}
+		},
+		{
+			"speaker": "ryan",
+			"content": {
+				"korean": "맞아, 무작정 덮어씌웠으면 큰일 날 뻔했어. 고장 난 제어기를 수리할 건데, 조금만 거들어 줄래?"
+			}
+		}
+	],
+	"choices": [
+		{
+			"text": {
+				"korean": "부품 조립을 빠르게 돕고 수고비를 받아 챙긴다."
+			},
+			"path": "easy",
+			"mbti": "SP",
+			"flag": "ryan_power_help",
+			"effects": {
+				"reason": -10,
+				"gold": 100
+			},
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "당신의 빠른 손놀림 덕분에 제어기가 순식간에 고쳐진다."
+					}
+				},
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "라이언이 기뻐하며 주머니에서 돈을 꺼내어 건넨다."
+					}
+				}
+			]
+		},
+		{
+			"text": {
+				"korean": "제어기가 다시 고장 나지 않도록 배선까지 꼼꼼하게 다시 깐다."
+			},
+			"path": "hard",
+			"mbti": "TJ",
+			"flag": "ryan_wire_shield",
+			"effects": {
+				"reason": 15,
+				"echo": 10
+			},
+			"reward": [
+				"defense_up"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "배선 작업에 시간이 꽤 걸렸지만 제어기가 완벽하게 작동한다."
+					}
+				},
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "라이언이 감탄하며 남은 절연 장갑을 당신에게 챙겨준다."
+					}
+				}
+			]
+		},
+		{
+			"text": {
+				"korean": "제어기 구조를 뜯어보고 효율을 극대화하는 방향으로 재조립한다."
+			},
+			"path": "stat",
+			"mbti": "NT",
+			"flag": "ryan_overclock",
+			"effects": {
+				"reason": 10
+			},
+			"reward": [
+				"intelligence_up"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "제어기가 이전보다 훨씬 빠르게 돌아가며 불빛을 뿜는다."
+					}
+				},
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "라이언이 당신의 솜씨에 놀라워하며 엄지를 치켜세운다."
+					}
+				}
+			]
+		}
+	],
+	"_side": {
+		"slot": "C",
+		"person": {
+			"name": "라이언",
+			"id": "ryan",
+			"role": "낡은 서버 랙 정비공"
+		},
+		"wants": "무사히 도착한 부품으로 고장 난 제어기를 수리하는 것을 도와달라고 함",
+		"rule_link": "수동으로 데이터를 안전하게 입력한 덕분에 정보 혼선 속에서도 부품이 정확히 도착했다.",
+		"events": {},
+		"flags": {
+			"ryan_power_help": {
+				"kind": "good",
+				"boss_penalty": 1,
+				"label": {
+					"korean": "라이언의 도움"
+				},
+				"boss_choice": {
+					"korean": "라이언이 서버 랙 전력을 조작해 당신의 길을 밝혀준다."
+				}
+			},
+			"ryan_wire_shield": {
+				"kind": "good",
+				"boss_penalty": 2,
+				"label": {
+					"korean": "튼튼한 배선"
+				},
+				"boss_choice": {
+					"korean": "라이언이 챙겨준 튼튼한 배선을 방패 삼아 공격을 막아낸다."
+				}
+			},
+			"ryan_overclock": {
+				"kind": "good",
+				"boss_penalty": 1,
+				"label": {
+					"korean": "오버클럭"
+				},
+				"boss_choice": {
+					"korean": "라이언이 제어기를 과부하시켜 적의 장비를 방해한다."
+				}
+			}
+		}
+	}
+}

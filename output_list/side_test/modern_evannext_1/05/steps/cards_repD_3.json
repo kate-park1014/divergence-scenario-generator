@@ -1,0 +1,304 @@
+{
+	"cards": [
+		{
+			"person": {
+				"role": "대기실 안내원",
+				"name": "유리",
+				"id": "yuri"
+			},
+			"title": "규정집의 단서",
+			"background_tags": [
+				"waiting_room",
+				"bright_light",
+				"paper_piles",
+				"tense_air",
+				"stage_back"
+			],
+			"key": "yuri_rule_check",
+			"rule_link": "대기실 제출함에 남은 과장 이력서의 처리 방식을 두고 검인 규정을 적용하는 일",
+			"dialogue": [
+				{
+					"speaker": "narrator",
+					"text": "안내원 유리가 도장을 쥔 채 과장 이력서가 쌓인 수거함 앞을 막아섰다."
+				},
+				{
+					"speaker": "lin",
+					"text": "서류함에 과장된 이력서를 제출하면 일단 상황을 모면할 수 있다는 안내가 떠 있습니다."
+				},
+				{
+					"text": "서식과 절차를 토씨 하나 틀리지 않고 엄격히 지켜 통과하셨다는 이야기를 들었습니다.",
+					"speaker": "yuri"
+				},
+				{
+					"speaker": "yuri",
+					"text": "규정상 대기실의 남은 과장 서류도 완벽히 검인 도장을 찍어 제출함에 넣어야 합니다."
+				},
+				{
+					"text": "저 서류들을 정식 승인하면 거대 조작의 일부가 되어 버립니다.",
+					"speaker": "lin"
+				}
+			],
+			"choices": [
+				{
+					"path": "easy",
+					"flag": {
+						"key": "certified_resumes",
+						"boss_text": "대기실 수거함에 남겨진 허위 서류가 검증 시스템을 오작동시켜 면접관의 압박 면접 공격을 강화한다.",
+						"label": "검인된 허위 서류"
+					},
+					"text": "안내원의 지시대로 과장된 이력서에 정식 검인 도장을 찍는다",
+					"effects": {
+						"community": 10,
+						"reason": -20
+					},
+					"mbti": "TJ",
+					"reward": [
+						"defense_down"
+					],
+					"result": [
+						{
+							"speaker": "yuri",
+							"text": "규정을 정확히 따르셨군요. 대기실 서류 절차는 이상 없이 승인 처리됩니다."
+						},
+						{
+							"speaker": "lin",
+							"text": "허위 서류가 정식 등록되어 대기실의 거짓 구성을 더 강하게 만들었습니다."
+						}
+					]
+				},
+				{
+					"mbti": "FP",
+					"text": "서식 규정을 무시하고 검인 대상 이력서를 전부 갈갈이 찢어 버린다",
+					"reward": [
+						"attack_up"
+					],
+					"result": [
+						{
+							"text": "검인도 받지 않은 서류를 무단 파기하다니 명백한 규정 위반입니다!",
+							"speaker": "yuri"
+						},
+						{
+							"speaker": "lin",
+							"text": "종이 조각들이 흩어지면서 서류함 주변의 허구 진동이 약해지고 있습니다."
+						}
+					],
+					"effects": {
+						"reason": 25,
+						"fighting": 15
+					},
+					"flag": {
+						"label": "파기된 서류 조각",
+						"boss_text": "찢어버린 서류 조각을 뿌려 면접장의 가짜 환영 투사기를 교란한다.",
+						"key": "destroyed_records"
+					},
+					"path": "hard"
+				},
+				{
+					"result": [
+						{
+							"speaker": "yuri",
+							"text": "조항 그대로 무효화를 선언하시다니, 예외 항목 적용을 거부할 수가 없군요."
+						},
+						{
+							"speaker": "lin",
+							"text": "규칙을 이용해 서류의 허구를 무력화했습니다. 대기실의 압박감이 사라집니다."
+						}
+					],
+					"reward": [
+						"intelligence_up"
+					],
+					"text": "검증 규칙 제12조를 적용해 모든 과장 이력서를 무효 서류로 분류하여 파기한다",
+					"mbti": "TP",
+					"effects": {
+						"reason": -20,
+						"fighting": 20
+					},
+					"flag": {
+						"label": "규정상 무효 파기",
+						"boss_text": "엄격한 무효 파기 선언으로 거짓 서류로 유지되던 대기실 상쇄 장치를 즉시 가동한다.",
+						"key": "strict_invalidation"
+					},
+					"path": "stat"
+				},
+				{
+					"mbti": "EN",
+					"text": "유리의 검인 도장을 빼앗아 이력서 제출함 겉면에 거대하게 무효 도장을 찍는다",
+					"reward": [
+						"cooldown_reset"
+					],
+					"result": [
+						{
+							"speaker": "yuri",
+							"text": "검인 도장을 제출함 본체에 무단으로 찍어 버리면 어떡합니까!"
+						},
+						{
+							"text": "제출함 통째로 도장이 찍히며 기계가 과부하를 일으키고 있습니다.",
+							"speaker": "lin"
+						}
+					],
+					"effects": {
+						"gold": 50,
+						"reason": 20
+					},
+					"path": "fun"
+				}
+			],
+			"wants": "과장 이력서에 정식 검인을 완료하여 제출함을 채우기",
+			"no": 1,
+			"slot": "D",
+			"kind": "rep",
+			"rep_dir": "reason-"
+		},
+		{
+			"dialogue": [
+				{
+					"text": "지원자 민석이 떨리는 손으로 과장된 이력서를 쥔 채 수거함 앞을 기웃거린다.",
+					"speaker": "narrator"
+				},
+				{
+					"text": "서류함에 과장된 이력서를 제출하면 일단 상황을 모면할 수 있다는 안내가 떠 있습니다.",
+					"speaker": "lin"
+				},
+				{
+					"text": "규정 따위는 무시하고 정해진 방식과 절차를 내팽개치며 여기까지 오셨다고 들었습니다.",
+					"speaker": "minseok"
+				},
+				{
+					"text": "제 경력은 부실하지만 이 과장 이력서만 넣으면 문이 열려요. 제발 찢지 말아 주세요.",
+					"speaker": "minseok"
+				},
+				{
+					"speaker": "lin",
+					"text": "저건 허식으로 가득 찬 서류예요. 통과시키면 대기실의 유예가 더 길어집니다."
+				}
+			],
+			"wants": "자신의 부실한 경력을 과장한 이력서를 제출함에 넣어 면접장에 들어가기",
+			"choices": [
+				{
+					"flag": {
+						"key": "inflated_entry",
+						"boss_text": "수거함에 들어간 과장 이력서 때문에 대기실의 왜곡된 수치들이 면접장의 장애물로 정착한다.",
+						"label": "허위 이력서 제출"
+					},
+					"path": "easy",
+					"mbti": "FJ",
+					"effects": {
+						"community": 15,
+						"reason": 20
+					},
+					"reward": [
+						"hp_down"
+					],
+					"result": [
+						{
+							"speaker": "minseok",
+							"text": "고맙습니다! 일단 제출만 되면 어떻게든 면접 문은 열릴 테니까요."
+						},
+						{
+							"speaker": "lin",
+							"text": "과장 서류가 수거함에 들어가자 주변의 왜곡된 기운이 더 짙어졌습니다."
+						}
+					],
+					"text": "민석의 과장된 이력서를 검토 없이 서류 수거함에 그대로 던져 넣는다"
+				},
+				{
+					"text": "민석의 과장 이력서를 빼앗아 그가 보는 앞에서 두 동강으로 찢는다",
+					"effects": {
+						"fighting": 20,
+						"reason": -25
+					},
+					"mbti": "ST",
+					"result": [
+						{
+							"speaker": "minseok",
+							"text": "제 이력서를 찢어 버리다니! 이렇게 되면 저는 면접도 못 보고 쫓겨납니다!"
+						},
+						{
+							"text": "허구 서류를 찢자 서류함에 얽혀 있던 거짓 결계가 한 꺼풀 벗겨졌습니다.",
+							"speaker": "lin"
+						}
+					],
+					"reward": [
+						"attack_up"
+					],
+					"flag": {
+						"label": "과장 이력서 파기",
+						"boss_text": "과장된 이력서를 찢어 확보한 진짜 경력 수치를 면접관의 거짓 방어막을 뚫는 무기로 활용한다.",
+						"key": "ripped_falsehood"
+					},
+					"path": "hard"
+				},
+				{
+					"result": [
+						{
+							"text": "수거함 서류를 한꺼번에 다 찢어발기다니요!",
+							"speaker": "minseok"
+						},
+						{
+							"text": "망설임 없는 파쇄에 과장된 기운들이 사방으로 산산이 부서져 날아갑니다.",
+							"speaker": "lin"
+						}
+					],
+					"reward": [
+						"shield"
+					],
+					"text": "민석을 밀쳐내고 대기실 수거함 속 남은 과장 서류 전체를 과감하게 찢어버린다",
+					"mbti": "SF",
+					"path": "stat",
+					"effects": {
+						"reason": 30,
+						"fighting": 15
+					},
+					"flag": {
+						"label": "대기실 공중 파기",
+						"boss_text": "공중에 흩뿌린 파면들을 회오리로 만들어 면접관의 시야를 완전히 차단한다.",
+						"key": "freestyle_shredding"
+					}
+				},
+				{
+					"result": [
+						{
+							"text": "이 정도 금액이라면 경력 없이도 다른 길을 알아볼 수 있겠네요. 서류는 마음대로 하세요.",
+							"speaker": "minseok"
+						},
+						{
+							"speaker": "lin",
+							"text": "금화로 합의를 보고 허위 서류를 파쇄하여 안전하게 허상을 제거했습니다."
+						}
+					],
+					"reward": [
+						"intelligence_up"
+					],
+					"path": "gold",
+					"mbti": "NT",
+					"text": "민석에게 100 골드를 주고 그의 과장 이력서를 사서 현장에서 찢는다",
+					"effects": {
+						"gold": -100,
+						"community": 10
+					}
+				}
+			],
+			"key": "minseok_resume_deal",
+			"background_tags": [
+				"waiting_room",
+				"dim_light",
+				"paper_piles",
+				"anxious_crowd",
+				"stage_back"
+			],
+			"no": 2,
+			"rule_link": "대기실 지원자 민석의 과장 이력서를 찢거나 수거함에 넣는 갈등",
+			"title": "민석의 간청",
+			"person": {
+				"name": "민석",
+				"role": "과장 서류 지원자",
+				"id": "minseok"
+			},
+			"slot": "D",
+			"kind": "rep",
+			"rep_dir": "reason+"
+		}
+	],
+	"errors": [],
+	"prompt_hash": "5ad94c6bb2a09fb260ba462e54f375ae09c76ac7"
+}

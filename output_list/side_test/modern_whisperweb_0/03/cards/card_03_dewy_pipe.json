@@ -1,0 +1,147 @@
+{
+	"id": "card_03_dewy_pipe",
+	"kind": "plant",
+	"title": {
+		"korean": "파이프의 이슬"
+	},
+	"intensity": "calm",
+	"after_story": 3,
+	"before_story": 5,
+	"background_tags": [
+		"dew",
+		"pipe",
+		"cloth",
+		"puddle",
+		"chill"
+	],
+	"dialogue": [
+		{
+			"speaker": "server_cleaner",
+			"content": {
+				"korean": "파이프 겉면에 이슬이 엄청나게 맺히기 시작했어요. 바닥이 미끄러우니 그쪽의 흡수성 천을 던져주세요."
+			}
+		},
+		{
+			"speaker": "kai",
+			"content": {
+				"korean": "온도가 갑자기 내려가서 결로 현상이 생겼나 봐."
+			}
+		},
+		{
+			"speaker": "server_cleaner",
+			"content": {
+				"korean": "닦아내지 않으면 기계 틈새로 다 스며들 겁니다. 빨리요!"
+			}
+		}
+	],
+	"choices": [
+		{
+			"text": {
+				"korean": "천을 던져주어 청소가 빨리 끝나게 돕는다."
+			},
+			"path": "easy",
+			"mbti": "FJ",
+			"effects": {
+				"gold": 50,
+				"community": 15
+			},
+			"seed": "dewy_pipe_easy",
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "흡수성 천 덕분에 파이프의 이슬이 순식간에 닦였다."
+					}
+				},
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "청소부가 고맙다며 깨끗해진 천을 다시 돌려주었다."
+					}
+				}
+			]
+		},
+		{
+			"text": {
+				"korean": "천을 주지 않고 청소부가 직접 손걸레로 닦게 둔다."
+			},
+			"path": "hard",
+			"mbti": "TP",
+			"effects": {
+				"echo": -5,
+				"reason": 10
+			},
+			"reward": [
+				"intelligence_up"
+			],
+			"seed": "dewy_pipe_hard",
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "청소부는 투덜거리며 자신의 낡은 걸레로 느릿느릿 이슬을 닦아냈다."
+					}
+				},
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "천을 아낀 덕에 나중에 유용하게 쓸 수 있게 되었다."
+					}
+				}
+			]
+		},
+		{
+			"text": {
+				"korean": "돈을 넉넉히 쥐여주며 꼼꼼히 닦아달라고 부탁한다."
+			},
+			"path": "gold",
+			"mbti": "ES",
+			"require": {
+				"stat": "gold",
+				"op": ">=",
+				"value": 50
+			},
+			"effects": {
+				"gold": -50
+			},
+			"seed": "dewy_pipe_hard",
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "팁을 받은 청소부는 콧노래를 부르며 바닥까지 완벽하게 건조시켰다."
+					}
+				},
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "물기 하나 없는 쾌적한 환경이 되었다."
+					}
+				}
+			],
+			"event": "minigame_cup",
+			"event_intro": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "청소부가 고맙다며 보답으로 세 개의 공구함 중 하나에 물건을 숨기고 고르게 한다."
+					}
+				}
+			]
+		}
+	],
+	"_side": {
+		"slot": "B",
+		"person": {
+			"id": "server_cleaner",
+			"role": "청소 담당자",
+			"name": "서버 청소부"
+		},
+		"wants": "차가워진 파이프 표면의 이슬을 닦아낼 흡수성 천을 빌려달라고 한다.",
+		"rule_link": "냉각수로 인해 발생한 이슬을 닦아내는 것은 훗날 스크린 부식을 막는 행동의 작은 버전이다.",
+		"events": {
+			"gold": "넉넉한 팁을 받은 청소부가 기분이 좋아져 작은 게임을 제안했기 때문이다."
+		},
+		"flags": {}
+	}
+}

@@ -1,0 +1,263 @@
+{
+	"id": "card_03_screen_hand",
+	"kind": "rep",
+	"title": {
+		"korean": "조각을 건네는 손"
+	},
+	"intensity": "calm",
+	"after_story": 7,
+	"before_story": 10,
+	"condition": {
+		"leaning": "fighting+",
+		"among": [
+			"fighting-",
+			"fighting+",
+			"community-",
+			"community+",
+			"reason-",
+			"reason+"
+		],
+		"min": 20
+	},
+	"urgency": 8,
+	"leaning": "fighting+",
+	"background_tags": [
+		"pipe_room",
+		"dim",
+		"dust",
+		"crowd",
+		"tense"
+	],
+	"dialogue": [
+		{
+			"speaker": "narrator",
+			"content": {
+				"korean": "분석관이 바닥에 앉아 조각 두 장을 맞대고 있었다. 맞지 않는 모서리만 계속 부딪쳤다."
+			}
+		},
+		{
+			"speaker": "shaking_analyst",
+			"content": {
+				"korean": "당신이요, 아까 사람들 문 앞에서 끌어내 준 사람. 손 좀 빌려줄 수 있어요?"
+			}
+		},
+		{
+			"speaker": "kai",
+			"content": {
+				"korean": "저 사람 손이 계속 떨려요. 조각을 놓으면 기록이 사라질까 봐 그러는 것 같은데."
+			}
+		},
+		{
+			"speaker": "shaking_analyst",
+			"content": {
+				"korean": "제 분석 기록이에요. 이거 없으면 제가 여기 있었다는 것도 증명이 안 돼요."
+			}
+		},
+		{
+			"speaker": "shaking_analyst",
+			"content": {
+				"korean": "조각이 스물세 장인데, 저 혼자서는 두 장도 못 맞춰요."
+			}
+		}
+	],
+	"choices": [
+		{
+			"text": {
+				"korean": "분석관 옆에 앉아 스물세 장의 조각을 함께 맞춘다."
+			},
+			"path": "easy",
+			"mbti": "FJ",
+			"flag": "analyst_record",
+			"effects": {
+				"community": 15,
+				"echo": 10
+			},
+			"reward": [
+				"intelligence_up"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "shaking_analyst",
+					"content": {
+						"korean": "맞았어요! 이 모서리, 이 모서리예요!"
+					}
+				},
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "맞춰진 조각에 냉각 담당자의 마지막 점검 시각이 떠올랐다. 분석관이 그 조각만 따로 품에 넣었다."
+					}
+				},
+				{
+					"speaker": "kai",
+					"content": {
+						"korean": "저 조각, 나중에 꼭 필요할 것 같아요. 품에 넣는 걸 봤으니까."
+					}
+				}
+			]
+		},
+		{
+			"text": {
+				"korean": "분석관의 조각을 빼앗아 자기 손으로만 맞추고, 그를 뒤로 물린다."
+			},
+			"path": "hard",
+			"mbti": "TP",
+			"flag": "snatched_record",
+			"effects": {
+				"community": -15,
+				"reason": 10
+			},
+			"reward": [
+				"attack_up"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "shaking_analyst",
+					"content": {
+						"korean": "아... 아니, 그건 제 거예요!"
+					}
+				},
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "당신 손에서 조각이 훨씬 빨리 맞춰졌다. 분석관은 벽에 기대어 손을 비볐다."
+					}
+				},
+				{
+					"speaker": "kai",
+					"content": {
+						"korean": "빨랐어요. 근데 저 사람 표정은 안 좋네요. 기록은 남았는데 사람은 빠졌으니까."
+					}
+				}
+			]
+		},
+		{
+			"text": {
+				"korean": "분석관에게 당신이 사람들을 어떻게 빼냈는지 말하고 조각을 전부 맡긴다."
+			},
+			"path": "stat",
+			"mbti": "FP",
+			"require": {
+				"stat": "fighting",
+				"op": ">=",
+				"value": 40
+			},
+			"flag": "analyst_trust",
+			"effects": {
+				"community": 20,
+				"echo": 5,
+				"fighting": 10
+			},
+			"reward": [
+				"heal"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "shaking_analyst",
+					"content": {
+						"korean": "그 얘기 들었어요. 문 앞에서 마지막까지 남아 있던 사람이 당신이라고."
+					}
+				},
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "분석관이 조각 다발을 당신 손에 쥐여 주고, 자기 몫은 한 장만 남겼다."
+					}
+				},
+				{
+					"speaker": "kai",
+					"content": {
+						"korean": "스물세 장 중에 스물두 장이 여기 있어요. 이 정도면 뭐든 맞출 수 있겠는데요."
+					}
+				}
+			]
+		},
+		{
+			"text": {
+				"korean": "분석관에게 100골드를 주고 조각 맞추기를 다른 기술자에게 맡긴다."
+			},
+			"path": "gold",
+			"mbti": "TJ",
+			"require": {
+				"stat": "gold",
+				"op": ">=",
+				"value": 100
+			},
+			"effects": {
+				"community": -10,
+				"gold": -100
+			},
+			"reward": [
+				"cooldown_reset"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "shaking_analyst",
+					"content": {
+						"korean": "돈을... 주시는 거예요? 그럼 저는 손 놓고 있어도 되는 거네요."
+					}
+				},
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "불려온 기술자가 조각을 빠르게 맞췄다. 분석관은 받은 골드를 세며 벽에 기대 앉아 있었다."
+					}
+				},
+				{
+					"speaker": "kai",
+					"content": {
+						"korean": "기록은 살았는데, 그 기록을 만든 사람은 구경만 하네요."
+					}
+				}
+			]
+		}
+	],
+	"_side": {
+		"slot": "D",
+		"person": {
+			"id": "shaking_analyst",
+			"name": "떨리는 분석관",
+			"role": "데이터 분석 담당"
+		},
+		"wants": "흩어진 스크린 조각 속 자기 분석 기록을 다시 맞춰 달라며, 손에 든 조각을 놓지 못하고 있다.",
+		"rule_link": "뒤섞인 데이터 스크린 조각을 다시 맞추면 이 방의 정보가 살아나고, 그 기록이 다음 보스 방의 근거가 된다.",
+		"rep": "fighting+",
+		"events": {},
+		"flags": {
+			"analyst_record": {
+				"kind": "bad",
+				"boss_penalty": -1,
+				"label": {
+					"korean": "되살아난 기록"
+				},
+				"boss_line": {
+					"korean": "분석관이 맞춰 낸 점검 기록을 당신 앞에 펼쳐 든다."
+				}
+			},
+			"snatched_record": {
+				"kind": "good",
+				"boss_penalty": 1,
+				"label": {
+					"korean": "빼앗은 기록"
+				},
+				"boss_choice": {
+					"korean": "분석관이 복도에서 당신을 피해 몸을 돌린다."
+				}
+			},
+			"analyst_trust": {
+				"kind": "good",
+				"boss_penalty": 2,
+				"label": {
+					"korean": "맡긴 조각"
+				},
+				"boss_choice": {
+					"korean": "분석관이 당신 뒤에 서서 조각을 맞춰 가며 길을 알려 준다."
+				}
+			}
+		}
+	}
+}

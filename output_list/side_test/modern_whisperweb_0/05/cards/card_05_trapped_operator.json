@@ -1,0 +1,142 @@
+{
+	"id": "card_05_trapped_operator",
+	"kind": "callback",
+	"title": {
+		"korean": "오작동하는 문 갇힘"
+	},
+	"intensity": "high",
+	"after_story": 7,
+	"before_story": 10,
+	"callback": {
+		"seed": "loud_system_easy",
+		"min_rooms_after": 2
+	},
+	"background_tags": [
+		"room",
+		"door",
+		"red",
+		"person",
+		"floor"
+	],
+	"dialogue": [
+		{
+			"speaker": "narrator",
+			"content": {
+				"korean": "굳게 닫힌 강철문 너머에서 수습 오퍼레이터가 유리를 쾅쾅 두드리는 소리가 들린다."
+			}
+		},
+		{
+			"speaker": "echo",
+			"content": {
+				"korean": "문 너머에 누가 갇혔어! 근데 지금 조각을 안 맞추면 놈이 내 데이터를 다 날려버릴 텐데!"
+			}
+		},
+		{
+			"speaker": "apprentice",
+			"content": {
+				"korean": "전원 코드를 뽑았더니 시스템이 엉켜서 문이 안 열려요! 제발 이 문 좀 부수고 꺼내주세요!"
+			}
+		},
+		{
+			"speaker": "narrator",
+			"content": {
+				"korean": "붉은 경고등이 깜빡이며, 주변의 데이터 조각들이 문틈으로 빨려 들어갈 듯 진동한다."
+			}
+		}
+	],
+	"choices": [
+		{
+			"text": {
+				"korean": "조각을 맞추는 작업을 멈추고 문을 부수는 데 힘을 쏟는다."
+			},
+			"path": "easy",
+			"mbti": "SF",
+			"flag": "lost_pieces",
+			"effects": {
+				"community": 20,
+				"fighting": 10
+			},
+			"reward": [
+				"attack_down"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "당신은 쇠지렛대로 문을 뜯어내 수습을 구했다."
+					}
+				},
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "그 사이 맞추려던 데이터 조각 일부가 흩어져 버렸다."
+					}
+				}
+			]
+		},
+		{
+			"text": {
+				"korean": "수습의 외침을 뒤로하고 조각을 먼저 맞춰 시스템을 정상화한다."
+			},
+			"path": "hard",
+			"mbti": "NT",
+			"flag": "restored_system",
+			"effects": {
+				"echo": -10,
+				"reason": 20
+			},
+			"reward": [
+				"shield"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "당신이 문 앞의 조각들을 서둘러 맞추자 시스템이 복구되며 문이 열렸다."
+					}
+				},
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "수습은 공포에 질려 주저앉았다."
+					}
+				}
+			]
+		}
+	],
+	"_side": {
+		"slot": "D",
+		"person": {
+			"role": "수습 오퍼레이터",
+			"name": "수습",
+			"id": "apprentice"
+		},
+		"wants": "코드를 뽑은 후폭풍으로 문에 갇혀버렸다며, 당장 문을 부수고 자기를 꺼내달라고 소리친다.",
+		"rule_link": "시스템 오작동이 심해져 방해물을 물리력으로 돌파해야 하는 상황이 되며, 정답 행동을 밀어붙일지 망설일지 시험받는다.",
+		"events": {},
+		"flags": {
+			"lost_pieces": {
+				"kind": "bad",
+				"boss_penalty": -1,
+				"label": {
+					"korean": "잃어버린 조각"
+				},
+				"boss_line": {
+					"korean": "데이터 조각이 부족해 방어막이 뚫리고 강한 충격파가 당신을 덮친다."
+				}
+			},
+			"restored_system": {
+				"kind": "good",
+				"boss_penalty": 1,
+				"label": {
+					"korean": "복구된 시스템"
+				},
+				"boss_choice": {
+					"korean": "정상화된 시스템이 거대한 홀로그램의 에너지를 일부 흡수해 힘을 약화시킨다."
+				}
+			}
+		}
+	}
+}

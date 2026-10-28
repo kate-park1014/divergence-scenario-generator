@@ -1,0 +1,750 @@
+{
+	"cards": [
+		{
+			"background_tags": [
+				"old_server",
+				"toy_pile",
+				"messy_floor",
+				"flickering_light",
+				"confused_mechanic"
+			],
+			"person": {
+				"role": "낡은 서버 랙 정비공",
+				"id": "ryan",
+				"name": "라이언"
+			},
+			"kind": "rep",
+			"rep_dir": "reason-",
+			"choices": [
+				{
+					"mbti": "TP",
+					"text": "엉킨 반품 시스템을 무시하고 장난감을 근처 고물상에 헐값에 팔아버린다.",
+					"result": [
+						{
+							"text": "장난감을 고물상에 넘겨 푼돈을 챙긴다.",
+							"speaker": "narrator"
+						},
+						{
+							"speaker": "narrator",
+							"text": "라이언은 부품을 구하지 못해 넋을 잃고 주저앉는다."
+						}
+					],
+					"effects": {
+						"reason": -15,
+						"gold": 50
+					},
+					"flag": {
+						"key": "ryan_toy_mess",
+						"boss_text": "라이언이 남긴 고장 난 장난감이 발밑에 굴러다녀 걸음을 방해한다.",
+						"label": "라이언의 원망"
+					},
+					"path": "easy"
+				},
+				{
+					"flag": {
+						"label": "개조된 장난감",
+						"key": "ryan_toy_bomb",
+						"boss_text": "라이언이 개조해 준 장난감 폭탄을 던져 적의 시야를 가린다."
+					},
+					"path": "hard",
+					"result": [
+						{
+							"speaker": "narrator",
+							"text": "복잡한 주소를 풀어 반품 처리에 성공한다."
+						},
+						{
+							"speaker": "narrator",
+							"text": "라이언이 안도하며 감사의 표시로 개조한 장난감 하나를 건넨다."
+						}
+					],
+					"effects": {
+						"echo": 10,
+						"reason": 15
+					},
+					"text": "반품 데이터를 하나하나 추적해 원래 창고로 돌려보낼 주소를 찾는다.",
+					"reward": [
+						"intelligence_up"
+					],
+					"mbti": "FJ"
+				},
+				{
+					"result": [
+						{
+							"speaker": "narrator",
+							"text": "장난감이 산산조각 나며 파편이 사방으로 튄다."
+						},
+						{
+							"text": "라이언이 경악하며 뒷걸음질 친다.",
+							"speaker": "narrator"
+						}
+					],
+					"text": "완력을 써서 장난감들을 모두 부수고 강제로 쓰레기장에 폐기한다.",
+					"effects": {
+						"fighting": 20
+					},
+					"mbti": "ST",
+					"reward": [
+						"attack_down"
+					],
+					"flag": {
+						"label": "부서진 파편",
+						"boss_text": "부서진 장난감 파편에 찔려 체력이 조금 깎인다.",
+						"key": "ryan_broken_toy"
+					},
+					"path": "stat"
+				}
+			],
+			"rule_link": "데이터를 강제로 덮어씌운 부작용으로 부품 주문 정보가 장난감 ���달 정보와 섞였다.",
+			"key": "ryan_toy_delivery",
+			"dialogue": [
+				{
+					"speaker": "narrator",
+					"text": "낡은 서버 랙 앞, 라이언의 발밑에 장난감들이 산더미처럼 쌓여 있다."
+				},
+				{
+					"text": "부품을 시켰는데 웬 춤추는 인형들만 잔뜩 왔잖아! 그 스크린 조각 흉내를 냈더니 배달 좌표가 다 섞였어!",
+					"speaker": "ryan"
+				},
+				{
+					"speaker": "echo",
+					"text": "어제저녁 메뉴판이 쓰레기장 좌표로 뜬 것처럼 정보가 완전히 엉켜버렸네."
+				},
+				{
+					"text": "이 장난감들을 당장 반품하지 않으면 해고당할지도 몰라. 제발 수습 좀 도와줘!",
+					"speaker": "ryan"
+				}
+			],
+			"title": "장난감이 된 부품",
+			"slot": "C",
+			"wants": "엉뚱하게 배달된 장난감들의 반품 데이터를 수습해달라고 함",
+			"returns": "easy"
+		},
+		{
+			"person": {
+				"name": "라이언",
+				"id": "ryan",
+				"role": "낡은 서버 랙 정비공"
+			},
+			"rep_dir": "reason+",
+			"choices": [
+				{
+					"result": [
+						{
+							"text": "당신의 빠른 손놀림 덕분에 제어기가 순식간에 고쳐진다.",
+							"speaker": "narrator"
+						},
+						{
+							"text": "라이언이 기뻐하며 주머니에서 돈을 꺼내어 건넨다.",
+							"speaker": "narrator"
+						}
+					],
+					"mbti": "SP",
+					"effects": {
+						"reason": -10,
+						"gold": 100
+					},
+					"text": "부품 조립을 빠르게 돕고 수고비를 받아 챙긴다.",
+					"path": "easy",
+					"flag": {
+						"boss_text": "라이언이 서버 랙 전력을 조작해 당신의 길을 밝혀준다.",
+						"label": "라이언의 도움",
+						"key": "ryan_power_help"
+					}
+				},
+				{
+					"result": [
+						{
+							"text": "배선 작업에 시간이 꽤 걸렸지만 제어기가 완벽하게 작동한다.",
+							"speaker": "narrator"
+						},
+						{
+							"speaker": "narrator",
+							"text": "라이언이 감탄하며 남은 절연 장갑을 당신에게 챙겨준다."
+						}
+					],
+					"flag": {
+						"boss_text": "라이언이 챙겨준 튼튼한 배선을 방패 삼아 공격을 막아낸다.",
+						"label": "튼튼한 배선",
+						"key": "ryan_wire_shield"
+					},
+					"path": "hard",
+					"effects": {
+						"reason": 15,
+						"echo": 10
+					},
+					"mbti": "TJ",
+					"reward": [
+						"defense_up"
+					],
+					"text": "제어기가 다시 고장 나지 않도록 배선까지 꼼꼼하게 다시 깐다."
+				},
+				{
+					"text": "제어기 구조를 뜯어보고 효율을 극대화하는 방향으로 재조립한다.",
+					"result": [
+						{
+							"text": "제어기가 이전보다 훨씬 빠르게 돌아가며 불빛을 뿜는다.",
+							"speaker": "narrator"
+						},
+						{
+							"text": "라이언이 당신의 솜씨에 놀라워하며 엄지를 치켜세운다.",
+							"speaker": "narrator"
+						}
+					],
+					"mbti": "NT",
+					"flag": {
+						"boss_text": "라이언이 제어기를 과부하시켜 적의 장비를 방해한다.",
+						"label": "오버클럭",
+						"key": "ryan_overclock"
+					},
+					"path": "stat",
+					"effects": {
+						"reason": 10
+					},
+					"reward": [
+						"intelligence_up"
+					]
+				}
+			],
+			"kind": "rep",
+			"key": "ryan_exact_delivery",
+			"rule_link": "수동으로 데이터를 안전하게 입력한 덕분에 정보 혼선 속에서도 부품이 정확히 도착했다.",
+			"background_tags": [
+				"old_server",
+				"metal_box",
+				"fixed_controller",
+				"bright_light",
+				"relieved_mechanic"
+			],
+			"slot": "C",
+			"wants": "무사히 도착한 부품으로 고장 난 제어기를 수리하는 것을 도와달라고 함",
+			"dialogue": [
+				{
+					"text": "낡은 서버 랙 앞, 라이언이 방금 도착한 금속 상자를 조심스레 열어본다.",
+					"speaker": "narrator"
+				},
+				{
+					"text": "휴, 주문이 한참 늦긴 했지만 메인보드 부품이 제대로 왔어!",
+					"speaker": "ryan"
+				},
+				{
+					"speaker": "echo",
+					"text": "주변 정보가 다 꼬였는데, 수동으로 꼼꼼히 입력해 둔 덕분에 무사히 도착했나 봐."
+				},
+				{
+					"text": "맞아, 무작정 덮어씌웠으면 큰일 날 뻔했어. 고장 난 제어기를 수리할 건데, 조금만 거들어 줄래?",
+					"speaker": "ryan"
+				}
+			],
+			"title": "늦었지만 정확한 부품",
+			"returns": "hard"
+		},
+		{
+			"title": "뒤바뀐 청구서",
+			"wants": "엉뚱하게 변한 전광판 때문에 뒤바뀐 매점 청구서를 억지로 수습해달라고 함",
+			"rule_link": "스크린 조각이 깨져 정보가 엉키면서 청구서 데이터가 다른 사람의 것과 뒤바뀌었다.",
+			"background_tags": [
+				"old_server",
+				"blinking_sign",
+				"wrong_bill",
+				"frustrated_merchant",
+				"digital_error"
+			],
+			"slot": "C",
+			"kind": "normal",
+			"dialogue": [
+				{
+					"speaker": "narrator",
+					"text": "빈스가 전광판에 뜬 엄청난 금액의 청구서를 보며 발을 동동 구르고 있다."
+				},
+				{
+					"text": "내 매점 청구서가 왜 이래? 배달 드론 수리비가 나한테 청구됐잖아!",
+					"speaker": "vince"
+				},
+				{
+					"speaker": "echo",
+					"text": "전광판에 엉뚱한 기호들이 출력되는 거랑 같은 증상이야."
+				},
+				{
+					"text": "이대로 뒀다간 파산이라고! 시스템이 깜빡일 때마다 정보가 바뀌는데, 내 청구서가 나올 때 딱 멈춰 줘!",
+					"speaker": "vince"
+				}
+			],
+			"choices": [
+				{
+					"path": "easy",
+					"effects": {
+						"reason": -15,
+						"gold": 50
+					},
+					"event_intro": [
+						{
+							"text": "전광판의 숫자가 빠르게 돌아간다. 가장 적은 금액이 뜨는 세 번의 순간에 맞춰 시스템을 정지시켜야 한다.",
+							"speaker": "narrator"
+						}
+					],
+					"event": "minigame_timing",
+					"text": "시스템을 강제로 멈춰 가장 금액이 적은 청구서에 고정시킨다.",
+					"event_reason": "전광판에 청구서가 빠르게 스쳐 지나가는 타이밍에 맞춰야 한다.",
+					"mbti": "EP",
+					"result": [
+						{
+							"text": "시스템이 멈추고 엉뚱한 사람의 저렴한 청구서가 빈스에게 할당된다.",
+							"speaker": "narrator"
+						},
+						{
+							"text": "빈스��� 안도하며 매점 금고에서 돈을 꺼내 당신에게 쥐여준다.",
+							"speaker": "narrator"
+						}
+					]
+				},
+				{
+					"mbti": "FJ",
+					"effects": {
+						"reason": 15
+					},
+					"result": [
+						{
+							"speaker": "narrator",
+							"text": "수많은 데이터를 대조하느라 눈이 빠질 것 같지만, 마침내 정확한 청구서를 찾아낸다."
+						},
+						{
+							"speaker": "narrator",
+							"text": "빈스는 고마워하며 따뜻한 음료를 내어준다."
+						}
+					],
+					"text": "청구서 데이터를 일일이 대조해 빈스의 진짜 정보를 찾아준다.",
+					"reward": [
+						"intelligence_up"
+					],
+					"path": "hard"
+				},
+				{
+					"text": "{actor}이(가) 시스템의 오류 패턴을 분석해 청구서 할당 스크립트를 재작성한다.",
+					"effects": {
+						"reason": 10
+					},
+					"result": [
+						{
+							"text": "{actor}이(가) 차분하게 코드를 수정하자 청구서가 원래 주인들을 찾아간다.",
+							"speaker": "narrator"
+						},
+						{
+							"text": "빈스가 감탄하며 매점의 고급 간식을 챙겨준다.",
+							"speaker": "narrator"
+						}
+					],
+					"mbti": "TJ",
+					"path": "lock",
+					"reward": [
+						"cooldown_reset"
+					],
+					"require_mbti": "TJ"
+				},
+				{
+					"result": [
+						{
+							"text": "모든 사람의 청구서가 0이 되자 서버가 경고음을 내며 스파크를 튀긴다.",
+							"speaker": "narrator"
+						},
+						{
+							"text": "빈스는 당황해 매점 셔터를 닫고 도망쳐버린다.",
+							"speaker": "narrator"
+						}
+					],
+					"path": "fun",
+					"effects": {
+						"reason": -20
+					},
+					"mbti": "NP",
+					"reward": [
+						"hp_down"
+					],
+					"text": "청구서 금액을 모두 '0'으로 수정한 뒤 시스템을 얼려버린다."
+				}
+			],
+			"key": "vince_wrong_bill",
+			"person": {
+				"name": "빈스",
+				"id": "vince",
+				"role": "전산실 매점 주인"
+			}
+		},
+		{
+			"slot": "D",
+			"wants": "일기장과 뒤섞여버린 밀수 데이터에서 원래 정보만 분리해달라고 함",
+			"rule_link": "데이터를 강제로 해독한 부작용으로 다른 사람의 일기장 정보와 완전히 섞여버렸다.",
+			"key": "mia_mixed_diary",
+			"title": "일기장과 섞인 데이터",
+			"returns": "easy",
+			"person": {
+				"role": "데이터 밀수꾼",
+				"name": "미아",
+				"id": "mia"
+			},
+			"dialogue": [
+				{
+					"text": "미아가 노트북 화면을 노려보며 머리를 쥐어뜯고 있다.",
+					"speaker": "narrator"
+				},
+				{
+					"text": "아악! 암호 푼 건 좋은데 내 밀수 데이터가 누군가의 짝사랑 일기장이랑 섞여버렸어!",
+					"speaker": "mia"
+				},
+				{
+					"text": "배달 드론 경로랑 수위 조절 데이터가 섞인 것처럼, 강제로 암호를 푼 부작용이 나타난 거야.",
+					"speaker": "echo"
+				},
+				{
+					"speaker": "mia",
+					"text": "쓸데없는 일기장 문장 좀 분리해 줘! 이대론 아무 짝에도 쓸모가 없어!"
+				}
+			],
+			"kind": "rep",
+			"rep_dir": "reason-",
+			"choices": [
+				{
+					"path": "easy",
+					"flag": {
+						"boss_text": "속아서 데이터를 산 밀수꾼들이 남긴 덫이 앞길을 가로막는다.",
+						"key": "mia_scam_trap",
+						"label": "사기꾼의 덫"
+					},
+					"mbti": "TP",
+					"result": [
+						{
+							"text": "일기장이 섞인 데이터를 그럴싸하게 포장해 넘기고 큰돈을 챙긴다.",
+							"speaker": "narrator"
+						},
+						{
+							"speaker": "narrator",
+							"text": "미아는 찝찝해하면서도 몫을 챙겨 재빨리 사라진다."
+						}
+					],
+					"effects": {
+						"gold": 150,
+						"reason": -15
+					},
+					"text": "꼬여버린 데이터를 그대로 통째로 다른 밀수꾼에게 속여서 팔아버린다."
+				},
+				{
+					"reward": [
+						"intelligence_up"
+					],
+					"text": "일기장 문장들을 하나하나 읽어내며 원래 데이터만 조심스럽게 분리해낸다.",
+					"mbti": "FJ",
+					"result": [
+						{
+							"text": "오글거리는 일기를 수십 페이지 읽은 끝에 유효한 데이터만 추출해낸다.",
+							"speaker": "narrator"
+						},
+						{
+							"speaker": "narrator",
+							"text": "미아가 혀를 내두르며 쓸만한 암호화 키 하나를 넘겨준다."
+						}
+					],
+					"path": "hard",
+					"flag": {
+						"key": "mia_admin_key",
+						"boss_text": "미아의 데이터에서 빼낸 관리자 암호로 잠긴 문을 쉽게 연다.",
+						"label": "관리자 암호"
+					},
+					"effects": {
+						"echo": 10,
+						"reason": 15
+					}
+				},
+				{
+					"mbti": "NF",
+					"result": [
+						{
+							"speaker": "narrator",
+							"text": "당신이 낭독을 시작하자 전산실에 쩌렁쩌렁한 목소리가 울려 퍼진다."
+						},
+						{
+							"speaker": "narrator",
+							"text": "미아가 창피함에 얼굴을 붉히며 노트북을 빼앗아간다."
+						}
+					],
+					"text": "일기장의 감성적인 문구에 심취해 데이터를 읽으며 큰 소리로 낭독한다.",
+					"effects": {
+						"reason": -10
+					},
+					"reward": [
+						"intelligence_down"
+					],
+					"path": "stat",
+					"flag": {
+						"key": "mia_noise_trap",
+						"label": "소음 경보",
+						"boss_text": "당신의 낭독 소리에 어그로가 끌려 적들이 몰려든다."
+					}
+				}
+			],
+			"background_tags": [
+				"server_rack",
+				"broken_screen",
+				"mixed_data",
+				"angry_smuggler",
+				"error_code"
+			]
+		},
+		{
+			"slot": "D",
+			"key": "mia_clean_data",
+			"wants": "해독된 데이터를 백업하는 동안 연결선이 흔들리지 않게 잡아달라고 함",
+			"title": "안전하게 해독된 데이터",
+			"returns": "hard",
+			"person": {
+				"role": "데이터 밀수꾼",
+				"name": "미아",
+				"id": "mia"
+			},
+			"background_tags": [
+				"server_rack",
+				"neat_screen",
+				"backup_drive",
+				"smiling_smuggler",
+				"stable_connection"
+			],
+			"rule_link": "수동으로 천천히 암호를 푼 덕분에 주변 데이터가 꼬이는 와중에도 안전하게 정보를 건졌다.",
+			"dialogue": [
+				{
+					"speaker": "narrator",
+					"text": "미아가 노트북 화면에 깔끔하게 정렬된 데이터를 띄워놓고 만족스럽게 웃고 있다."
+				},
+				{
+					"text": "봤지? 밤새 고생해서 수동으로 암호를 풀었더니 내 데이터만 완벽하게 해독됐어!",
+					"speaker": "mia"
+				},
+				{
+					"speaker": "echo",
+					"text": "주변 데이터가 다 섞여서 난장판인데, 미아의 정보만 온전하네."
+				},
+				{
+					"text": "파편을 안 쓴 게 신의 한 수였지. 이 데이터를 백업 드라이브로 옮길 건���, 연결선 좀 꽉 잡아줄래?",
+					"speaker": "mia"
+				}
+			],
+			"kind": "rep",
+			"choices": [
+				{
+					"text": "백업 연결선을 잡아주고 미아에게 넉넉한 보상을 받는다.",
+					"mbti": "SP",
+					"result": [
+						{
+							"speaker": "narrator",
+							"text": "선이 흔들리지 않게 꽉 잡아주자 백업이 안전하게 끝난다."
+						},
+						{
+							"text": "미아는 기분이 좋은지 당신에게 수고비를 넉넉히 챙겨준다.",
+							"speaker": "narrator"
+						}
+					],
+					"flag": {
+						"boss_text": "미아가 백업해 둔 안전 경로 데이터를 활용해 함정을 피한다.",
+						"label": "안전 경로",
+						"key": "mia_safe_route"
+					},
+					"path": "easy",
+					"effects": {
+						"reason": -10,
+						"gold": 100
+					}
+				},
+				{
+					"text": "데이터를 옮기는 동안 다른 꼬인 정보들이 침범하지 못하게 방화벽을 세운다.",
+					"result": [
+						{
+							"text": "방화벽을 구축하느라 진땀을 뺐지만, 데이터는 안전하게 보존된다.",
+							"speaker": "narrator"
+						},
+						{
+							"speaker": "narrator",
+							"text": "미아가 고맙다며 쓸만한 방화벽 프로그램을 복사해 준다."
+						}
+					],
+					"mbti": "TJ",
+					"path": "hard",
+					"flag": {
+						"key": "mia_firewall_prog",
+						"label": "강력한 방화벽",
+						"boss_text": "미아가 건네준 방화벽 프로그램으로 적의 통신망을 마비시킨다."
+					},
+					"effects": {
+						"echo": 10,
+						"reason": 15
+					},
+					"reward": [
+						"defense_up"
+					]
+				},
+				{
+					"result": [
+						{
+							"text": "고성능 케이�� 덕분에 백업이 순식간에 완료된다.",
+							"speaker": "narrator"
+						},
+						{
+							"speaker": "narrator",
+							"text": "미아가 만족스럽게 웃으며 다음에도 거래하자고 손을 내민다."
+						}
+					],
+					"flag": {
+						"label": "빠른 백업",
+						"key": "mia_fast_backup",
+						"boss_text": "미아가 빠르게 백업을 끝내고 남은 시간에 적의 통신을 도청해 알려준다."
+					},
+					"path": "stat",
+					"mbti": "SF",
+					"text": "더 빠르고 안정적인 연결을 위해 가지고 있던 고성능 케이블을 내어준다.",
+					"reward": [
+						"move_range_up"
+					],
+					"effects": {
+						"reason": 10
+					}
+				}
+			],
+			"rep_dir": "reason+"
+		},
+		{
+			"choices": [
+				{
+					"path": "easy",
+					"event_intro": [
+						{
+							"text": "바닥에 흩어진 여러 장의 카드 중 미세하게 불빛이 들어오는 진짜 카드를 찾아야 한다.",
+							"speaker": "narrator"
+						}
+					],
+					"effects": {
+						"gold": 50,
+						"reason": -15
+					},
+					"event": "minigame_cup",
+					"result": [
+						{
+							"text": "운 좋게 권한이 담긴 카드를 골라내자 굳게 닫혔던 문이 열린다.",
+							"speaker": "narrator"
+						},
+						{
+							"speaker": "narrator",
+							"text": "코디는 안도하며 주머니에 있던 비상금을 털어준다."
+						}
+					],
+					"text": "대충 눈에 띄는 카드를 집어 출입 단말기에 갖다 댄다.",
+					"event_reason": "코디가 떨어뜨린 여러 장의 카드 중 진짜 권한이 담긴 카드를 골라야 한다.",
+					"mbti": "SP"
+				},
+				{
+					"effects": {
+						"reason": 15
+					},
+					"result": [
+						{
+							"speaker": "narrator",
+							"text": "리더기를 해체하고 생체 정보를 등록하느라 손끝이 다 까진다."
+						},
+						{
+							"speaker": "narrator",
+							"text": "문이 열리자 코디가 감격하며 자신의 방검 조끼를 빌려준다."
+						}
+					],
+					"text": "카드 리더기를 뜯어내고 코디의 남은 생체 정보를 이용해 시스템을 재설정한다.",
+					"mbti": "TJ",
+					"reward": [
+						"defense_up"
+					],
+					"path": "hard"
+				},
+				{
+					"result": [
+						{
+							"speaker": "narrator",
+							"text": "{actor}이(가) 막힌 문 대신 환풍구를 뜯어내고 날쌔게 기어 들어간다."
+						},
+						{
+							"speaker": "narrator",
+							"text": "코디는 당황하면서도 당신을 따라 환풍구로 몸을 숨긴다."
+						}
+					],
+					"require_mbti": "EP",
+					"path": "lock",
+					"mbti": "EP",
+					"effects": {
+						"reason": -10
+					},
+					"reward": [
+						"move_range_up"
+					],
+					"text": "{actor}이(가) 청소부 권한을 역이용해 환풍구를 열고 보안 구역으로 몰래 들어간다."
+				},
+				{
+					"path": "gold",
+					"reward": [
+						"attack_up"
+					],
+					"text": "돈을 써서 암시장 브로커에게 원격으로 임시 권한을 사들인다.",
+					"result": [
+						{
+							"speaker": "narrator",
+							"text": "브로커에게 돈을 송금하자 단말기 불빛이 초록색으로 변한다."
+						},
+						{
+							"speaker": "narrator",
+							"text": "코디는 눈이 휘둥그레지며 보안 구역의 무기 하나를 꺼내준다."
+						}
+					],
+					"effects": {
+						"gold": -100,
+						"reason": -10
+					},
+					"mbti": "FP"
+				}
+			],
+			"key": "cody_mixed_id",
+			"dialogue": [
+				{
+					"speaker": "narrator",
+					"text": "코디가 굳게 닫힌 전산실 내부 문 앞에서 출입 단말기에 카드를 연신 긁고 있다."
+				},
+				{
+					"text": "이럴 수가, 내 보안 등급이 왜 이래? 청소 구역만 열리고 보안 구역은 다 막혔잖아!",
+					"speaker": "cody"
+				},
+				{
+					"text": "배달 경로가 섞인 것처럼, 신분증 데이터도 다른 사람의 것과 뒤죽박죽 꼬였나 봐.",
+					"speaker": "echo"
+				},
+				{
+					"text": "내 권한이 담긴 카드가 저기 폐기 카드 틈에 섞여 들어갔어. 제발 하나만 골라 줘!",
+					"speaker": "cody"
+				}
+			],
+			"kind": "normal",
+			"background_tags": [
+				"server_rack",
+				"locked_door",
+				"id_card",
+				"nervous_guard",
+				"error_terminal"
+			],
+			"person": {
+				"role": "신입 보안 요원",
+				"id": "cody",
+				"name": "코디"
+			},
+			"slot": "D",
+			"rule_link": "정보가 섞이면서 코디의 보안 등급이 청소부의 것과 뒤바뀌어 출입 권한을 잃었다.",
+			"wants": "여러 장의 카드에 섞여 들어간 진짜 권한 카드를 찾아달라고 함",
+			"title": "섞여버린 신분증"
+		}
+	],
+	"errors": [
+		"칸 C callback 카드는 2장 (지금 0)",
+		"칸 C 회수 카드 returns 는 easy 1장·hard 1장 (지금 )",
+		"칸 D callback 카드는 2장 (지금 0)",
+		"칸 D 회수 카드 returns 는 easy 1장·hard 1장 (지금 )",
+		"ryan_toy_delivery/stat: 평판 방향(reason-) 쪽으로 effects.reason 를 움직임"
+	]
+}

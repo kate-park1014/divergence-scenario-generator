@@ -1,0 +1,224 @@
+{
+	"id": "card_03_shared_meter",
+	"kind": "rep",
+	"title": {
+		"korean": "나눠 쓰는 계량기"
+	},
+	"intensity": "calm",
+	"after_story": 1,
+	"before_story": 3,
+	"condition": {
+		"leaning": "community-",
+		"among": [
+			"fighting-",
+			"fighting+",
+			"community-",
+			"community+",
+			"reason-",
+			"reason+"
+		],
+		"min": 20
+	},
+	"urgency": 8,
+	"leaning": "community-",
+	"background_tags": [
+		"pipe_room",
+		"afternoon",
+		"dim_lamp",
+		"one_worker",
+		"sneaky"
+	],
+	"dialogue": [
+		{
+			"speaker": "meter_reader",
+			"content": {
+				"korean": "당신이죠, 남 몫은 안 챙기고 자기 몫만 딱 챙긴다는 사람."
+			}
+		},
+		{
+			"speaker": "narrator",
+			"content": {
+				"korean": "그는 계량기 앞에 앉아 연필로 숫자를 지우고 다시 쓰고 있었다."
+			}
+		},
+		{
+			"speaker": "meter_reader",
+			"content": {
+				"korean": "이 칸에 당신 이름만 안 적으면 서로 이득이에요. 어때요?"
+			}
+		},
+		{
+			"speaker": "kai",
+			"content": {
+				"korean": "방금 지운 숫자, 두 번 지웠다가 다시 썼어요."
+			}
+		},
+		{
+			"speaker": "meter_reader",
+			"content": {
+				"korean": "빨리요. 검사 나오기 전에 정리해야 하니까."
+			}
+		}
+	],
+	"choices": [
+		{
+			"text": {
+				"korean": "계량 기록에서 자기 이름을 빼고 남의 칸에 숫자를 옮겨 적는다"
+			},
+			"path": "easy",
+			"mbti": "TP",
+			"flag": "fudged_meter",
+			"effects": {
+				"community": -20,
+				"reason": -10,
+				"gold": 100
+			},
+			"reward": [
+				"cooldown_reset"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "연필 끝이 남의 칸 위를 몇 번 오갔다."
+					}
+				},
+				{
+					"speaker": "meter_reader",
+					"content": {
+						"korean": "좋아요, 이제 이 몫은 당신 거예요. 수고비도 챙겨드릴게요."
+					}
+				},
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "계량기 유리에 다른 이름이 비스듬히 비쳐 보였다."
+					}
+				}
+			]
+		},
+		{
+			"text": {
+				"korean": "계량기에 적힌 숫자를 원래대로 되돌려 놓는다"
+			},
+			"path": "hard",
+			"mbti": "FJ",
+			"flag": "honest_meter",
+			"effects": {
+				"community": 20,
+				"reason": 10,
+				"echo": 5
+			},
+			"reward": [
+				"shield"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "meter_reader",
+					"content": {
+						"korean": "아... 그럼 나 몫이 줄어드는데. 진짜 이럴 거예요?"
+					}
+				},
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "그는 연필을 놓고 한숨을 크게 쉬었다."
+					}
+				},
+				{
+					"speaker": "kai",
+					"content": {
+						"korean": "숫자가 맞으니까 기록도 맞겠네요."
+					}
+				}
+			]
+		},
+		{
+			"text": {
+				"korean": "계량기 담당자에게 남의 몫에 손대지 말고 자기 칸만 채우라고 한다"
+			},
+			"path": "stat",
+			"mbti": "TJ",
+			"require": {
+				"stat": "community",
+				"op": "<=",
+				"value": -40
+			},
+			"flag": "own_column",
+			"effects": {
+				"community": -15,
+				"reason": 20
+			},
+			"reward": [
+				"intelligence_up"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "meter_reader",
+					"content": {
+						"korean": "하, 당신 같은 사람이 그런 말 하면 할 말이 없죠."
+					}
+				},
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "그는 연필을 귀에 꽂고 자기 칸만 다시 채워 넣었다."
+					}
+				},
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "계량기 옆 서류 뭉치가 정리되어 가지런히 쌓였다."
+					}
+				}
+			]
+		}
+	],
+	"_side": {
+		"slot": "A",
+		"person": {
+			"id": "meter_reader",
+			"name": "계량기 담당자",
+			"role": "설비 기록원"
+		},
+		"wants": "자기 몫 냉각수를 늘리려면 주인공이 쓴 양을 남의 이름으로 돌려 달라고 제안한다.",
+		"rule_link": "계량 기록이 어긋나면 데이터 스크린 조각에 찍히는 사용 기록도 함께 어긋난다.",
+		"rep": "community-",
+		"events": {},
+		"flags": {
+			"fudged_meter": {
+				"kind": "bad",
+				"boss_penalty": -1,
+				"label": {
+					"korean": "고친 계량 기록"
+				},
+				"boss_line": {
+					"korean": "고친 계량 기록을 검사 앞에서 다시 펼쳐 보인다."
+				}
+			},
+			"honest_meter": {
+				"kind": "good",
+				"boss_penalty": 1,
+				"label": {
+					"korean": "바른 계량 기록"
+				},
+				"boss_choice": {
+					"korean": "바른 계량 기록을 검사에게 내민다."
+				}
+			},
+			"own_column": {
+				"kind": "good",
+				"boss_penalty": 2,
+				"label": {
+					"korean": "제 칸만 채운 기록"
+				},
+				"boss_choice": {
+					"korean": "제 칸만 채워진 계량 기록을 근거로 냉각수 몫을 요구한다."
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,217 @@
+{
+	"id": "card_02_numbered_tag",
+	"kind": "rep",
+	"title": {
+		"korean": "손톱 밑의 바코드"
+	},
+	"intensity": "calm",
+	"after_story": 7,
+	"before_story": 10,
+	"condition": {
+		"leaning": "fighting-",
+		"among": [
+			"fighting-",
+			"fighting+",
+			"community-",
+			"community+",
+			"reason-",
+			"reason+"
+		],
+		"min": 20
+	},
+	"urgency": 8,
+	"leaning": "fighting-",
+	"background_tags": [
+		"terminal_room",
+		"flickering_light",
+		"crowded_desk",
+		"paper_clutter",
+		"tense_silence"
+	],
+	"dialogue": [
+		{
+			"speaker": "seeker",
+			"content": {
+				"korean": "단말기 관리 요원들을 거칠게 들이받고 검색실로 쳐들어온 분이 당신이죠?"
+			}
+		},
+		{
+			"speaker": "seeker",
+			"content": {
+				"korean": "저 안내 방송 들려요? 102번 지원자, 그게 접니다! 명찰의 이름이 숫자로 눌려 뭉개지고 있어요."
+			}
+		},
+		{
+			"speaker": "nia",
+			"content": {
+				"korean": "저분의 가슴 명찰을 봐요. 철자가 지워지고 바코드 숫자만 번져가고 있어요!"
+			}
+		},
+		{
+			"speaker": "seeker",
+			"content": {
+				"korean": "이대로 불려 나가면 끝장이에요. 단말기를 뜯어서라도 원래 명찰 데이터를 뱉어내게 해줘요!"
+			}
+		}
+	],
+	"choices": [
+		{
+			"text": {
+				"korean": "seeker의 단말기를 발로 걷어차 경보를 울려 검색실을 혼란에 빠뜨린다."
+			},
+			"path": "easy",
+			"mbti": "SP",
+			"flag": "triggered_alarm",
+			"effects": {
+				"echo": -10,
+				"fighting": -20
+			},
+			"reward": [
+				"attack_up"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "단말기 외장 케이스가 부서지며 붉은 비상등이 점멸한다."
+					}
+				},
+				{
+					"speaker": "seeker",
+					"content": {
+						"korean": "으악, 경보가 울리잖아! 번호표고 뭐고 일단 튑시다!"
+					}
+				},
+				{
+					"speaker": "nia",
+					"content": {
+						"korean": "관리자가 경보 소리를 듣고 서버실 통로 쪽으로 뛰어오고 있어요!"
+					}
+				}
+			]
+		},
+		{
+			"text": {
+				"korean": "난동을 부리려는 seeker의 팔을 꺾어 누르고 단말기에서 이력서를 뽑아낸다."
+			},
+			"path": "hard",
+			"mbti": "NF",
+			"flag": "rescued_document",
+			"effects": {
+				"fighting": 20,
+				"echo": 10
+			},
+			"reward": [
+				"defense_up"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "seeker",
+					"content": {
+						"korean": "커억... 팔이 부러지는 줄 알았잖아요. 하지만 내 서류는 무사하네."
+					}
+				},
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "단말기 투입구에서 숫자로 오염되지 않은 종이 이력서가 빠져나온다."
+					}
+				},
+				{
+					"speaker": "nia",
+					"content": {
+						"korean": "거칠었지만 서류가 숫자로 덮이기 전에 빼내서 다행이에요."
+					}
+				}
+			]
+		},
+		{
+			"text": {
+				"korean": "검색실 중앙 테이블을 강하게 내리쳐 웅성거리는 숫자 지원자들을 위압한다."
+			},
+			"path": "stat",
+			"mbti": "TJ",
+			"require": {
+				"stat": "fighting",
+				"op": "<=",
+				"value": -40
+			},
+			"flag": "suppressed_room",
+			"effects": {
+				"community": -10,
+				"echo": 5,
+				"fighting": -30
+			},
+			"reward": [
+				"intelligence_up"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "두 동강 난 서류 테이블이 바닥에 나뒹굴며 검색실 전체가 얼어붙는다."
+					}
+				},
+				{
+					"speaker": "seeker",
+					"content": {
+						"korean": "히익... 알겠습니다. 입 닥치고 번호표 안 흔들게요."
+					}
+				},
+				{
+					"speaker": "nia",
+					"content": {
+						"korean": "모두 겁을 먹었지만, 소란이 멎어서 단말기 화면을 똑바로 볼 수 있게 됐어요."
+					}
+				}
+			]
+		}
+	],
+	"_side": {
+		"slot": "D",
+		"person": {
+			"name": "초조한 구직자",
+			"id": "seeker",
+			"role": "이름이 숫자로 지워지는 대기자"
+		},
+		"wants": "숫자로 덮여가는 자신의 명찰을 단말기에서 강제로 뜯어내 원래 이름을 유지하기",
+		"rule_link": "이력서의 이름이 숫자로 변환되어 호명되는 시스템 폭주 상황에서 발생하는 물리적 마찰",
+		"rep": "fighting-",
+		"events": {},
+		"flags": {
+			"triggered_alarm": {
+				"kind": "bad",
+				"boss_penalty": -1,
+				"label": {
+					"korean": "경보 발령"
+				},
+				"boss_line": {
+					"korean": "통로의 경보 장치가 요란하게 울려 데이터 관리자가 요격 모드로 통로를 전면 봉쇄한다."
+				}
+			},
+			"rescued_document": {
+				"kind": "good",
+				"boss_penalty": 1,
+				"label": {
+					"korean": "온전한 문서철"
+				},
+				"boss_choice": {
+					"korean": "seeker에게서 확보한 이력서 원본을 데이터 관리자의 스캐너에 밀어 넣어 인식을 지연시킨다."
+				}
+			},
+			"suppressed_room": {
+				"kind": "good",
+				"boss_penalty": 2,
+				"label": {
+					"korean": "통제된 침묵"
+				},
+				"boss_choice": {
+					"korean": "공포로 굳어버린 지원자들의 침묵을 틈타 데이터 관리자의 시선이 닿지 않는 통로 벽면으로 붙는다."
+				}
+			}
+		}
+	}
+}

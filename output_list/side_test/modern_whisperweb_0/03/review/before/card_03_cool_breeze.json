@@ -1,0 +1,168 @@
+{
+	"id": "card_03_cool_breeze",
+	"kind": "normal",
+	"title": {
+		"korean": "시원한 통풍구"
+	},
+	"intensity": "calm",
+	"after_story": 3,
+	"before_story": 5,
+	"background_tags": [
+		"vent",
+		"breeze",
+		"rust",
+		"grating",
+		"worker"
+	],
+	"dialogue": [
+		{
+			"speaker": "tired_worker",
+			"content": {
+				"korean": "아, 아까까진 찜통이었는데 이제 살 것 같네. 여기 통풍구 앞이 제일 시원해요. 같이 쉴래요?"
+			}
+		},
+		{
+			"speaker": "kai",
+			"content": {
+				"korean": "온도가 내려가서 다행이긴 하지만, 저 바람에서 미세하게 쇠 냄새가 나."
+			}
+		},
+		{
+			"speaker": "tired_worker",
+			"content": {
+				"korean": "냄새가 대수입니까? 당장 쓰러질 것 같은데 5분만 쉬다 가요."
+			}
+		}
+	],
+	"choices": [
+		{
+			"text": {
+				"korean": "통풍구 앞에 앉아 시원한 바람을 맞으며 쉰다."
+			},
+			"path": "easy",
+			"mbti": "FP",
+			"effects": {
+				"community": 10,
+				"gold": 40
+			},
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "쾌적한 바람을 맞으며 땀을 식히자 체력이 조금 회복되었다."
+					}
+				},
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "작업자가 옆에서 수다를 떨며 간식을 나눠주었다."
+					}
+				}
+			]
+		},
+		{
+			"text": {
+				"korean": "바람의 냄새를 수상히 여겨 쉬지 않고 서둘러 이동한다."
+			},
+			"path": "hard",
+			"mbti": "TJ",
+			"effects": {
+				"echo": 5,
+				"reason": 15
+			},
+			"reward": [
+				"move_range_up"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "달콤한 휴식을 포기하고 발걸음을 재촉했다."
+					}
+				},
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "쇠 냄새가 나는 바람을 피한 덕분에 머리가 맑아졌다."
+					}
+				}
+			]
+		},
+		{
+			"text": {
+				"korean": "방독 마스크를 구매해 착용하고 쉰다."
+			},
+			"path": "gold",
+			"mbti": "IS",
+			"require": {
+				"stat": "gold",
+				"op": ">=",
+				"value": 50
+			},
+			"effects": {
+				"gold": -50
+			},
+			"reward": [
+				"heal"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "마스크를 쓰고 안전하게 통풍구 앞에서 휴식을 취했다."
+					}
+				},
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "불쾌한 냄새 없이 체력을 완전히 회복했다."
+					}
+				}
+			]
+		},
+		{
+			"text": {
+				"korean": "{actor}이(가) 통풍구에서 나오는 바람의 성분을 조용히 분석하여 위험을 경고한다."
+			},
+			"path": "lock",
+			"mbti": "IN",
+			"require": {
+				"mbti": "IN"
+			},
+			"effects": {
+				"reason": 20,
+				"gold": 50
+			},
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "{actor}의 날카로운 분석을 듣고 작업자도 황급히 자리를 피했다."
+					}
+				},
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "보이지 않는 위협을 미연에 방지했다."
+					}
+				}
+			]
+		}
+	],
+	"_side": {
+		"slot": "B",
+		"person": {
+			"name": "지친 작업자",
+			"id": "tired_worker",
+			"role": "전산실 직원"
+		},
+		"wants": "온도가 내려가 쾌적해진 통풍구 앞에 자리를 잡고 쉬려 하며, 주인공에게도 권한다.",
+		"rule_link": "냉각의 즉각적인 쾌적함에 취해 다가올 위협을 보지 못하는 상황이다.",
+		"events": {},
+		"flags": {}
+	}
+}

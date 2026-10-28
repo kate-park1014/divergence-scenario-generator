@@ -1,0 +1,182 @@
+{
+	"id": "card_02_selfish_broker_tracker",
+	"title": {
+		"korean": "은밀한 추적 장치"
+	},
+	"intensity": "calm",
+	"after_story": 3,
+	"before_story": 5,
+	"condition": {
+		"leaning": "community-",
+		"among": [
+			"fighting-",
+			"fighting+",
+			"community-",
+			"community+",
+			"reason-",
+			"reason+"
+		],
+		"min": 20
+	},
+	"urgency": 8,
+	"leaning": "community-",
+	"background_tags": [
+		"power_room",
+		"switchboard",
+		"shadowy",
+		"hidden_device",
+		"secretive"
+	],
+	"dialogue": [
+		{
+			"speaker": "shady_broker",
+			"content": {
+				"korean": "전원을 내려주시다니 고맙군. 자기 이익을 위해선 남들 시선 따위 신경 안 쓰는 분이라 들었는데."
+			}
+		},
+		{
+			"speaker": "shady_broker",
+			"content": {
+				"korean": "스캔이 멈춘 지금이 기회야. 저 배전반에 꽂아둔 내 추적 장치 좀 뽑아주면 사례를 섭섭지 않게 하지."
+			}
+		},
+		{
+			"speaker": "lin",
+			"content": {
+				"korean": "저건 불법 장치잖아요! 건드리면 안 돼요!"
+			}
+		}
+	],
+	"choices": [
+		{
+			"text": {
+				"korean": "배전반에서 추적 장치를 뽑아 실라스에게 넘긴다."
+			},
+			"path": "easy",
+			"mbti": "TP",
+			"flag": "selfish_tracker_mark",
+			"effects": {
+				"gold": 100,
+				"community": -20
+			},
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "장치를 뽑자 실라스가 재빨리 돈을 쥐여주고 사라진다."
+					}
+				},
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "당신의 손끝에 검은 그을음이 남았다."
+					}
+				}
+			]
+		},
+		{
+			"text": {
+				"korean": "추적 장치를 부수고 실라스의 거래 장부를 빼앗는다."
+			},
+			"path": "hard",
+			"mbti": "FJ",
+			"flag": "selfish_steal_ledger",
+			"effects": {
+				"echo": 10,
+				"community": 20
+			},
+			"reward": [
+				"defense_up"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "실라스가 손톱을 물어뜯으며 비명을 지른다."
+					}
+				},
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "당신은 장부를 품에 챙겨 넣는다."
+					}
+				}
+			]
+		},
+		{
+			"text": {
+				"korean": "장치를 뽑는 대신 내 단말기에 연결해 정보를 빼돌린다."
+			},
+			"path": "stat",
+			"mbti": "TJ",
+			"require": {
+				"stat": "community",
+				"op": "<=",
+				"value": -40
+			},
+			"flag": "selfish_data_hijack",
+			"effects": {
+				"community": -30
+			},
+			"reward": [
+				"shield"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "실라스가 당황해 말리는 사이, 모든 은밀한 정보가 당신의 단말기로 복사된다."
+					}
+				}
+			]
+		}
+	],
+	"kind": "rep",
+	"_side": {
+		"slot": "B",
+		"person": {
+			"id": "shady_broker",
+			"name": "실라스",
+			"role": "정보 브로커"
+		},
+		"wants": "",
+		"rule_link": "",
+		"rep": "community-",
+		"events": {},
+		"flags": {
+			"selfish_tracker_mark": {
+				"boss_penalty": -1,
+				"label": {
+					"korean": "남겨진 흔적"
+				},
+				"boss_line": {
+					"korean": "배전반을 건드린 흔적 때문에 경비원이 당신을 집중적으로 공격한다."
+				},
+				"kind": "bad"
+			},
+			"selfish_steal_ledger": {
+				"boss_penalty": 1,
+				"label": {
+					"korean": "빼앗은 장부"
+				},
+				"boss_choice": {
+					"korean": "거래 장부를 흔들어 보이며 경비원을 협박해 길을 연다."
+				},
+				"kind": "good"
+			},
+			"selfish_data_hijack": {
+				"boss_penalty": 2,
+				"label": {
+					"korean": "가로챈 정보"
+				},
+				"boss_choice": {
+					"korean": "가로챈 정보를 이용해 보안 시스템의 약점을 파고든다."
+				},
+				"kind": "good"
+			}
+		}
+	}
+}

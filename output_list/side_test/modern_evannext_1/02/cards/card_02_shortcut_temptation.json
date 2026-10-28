@@ -1,0 +1,261 @@
+{
+	"id": "card_02_shortcut_temptation",
+	"kind": "rep",
+	"title": {
+		"korean": "단말기 급행 요청"
+	},
+	"intensity": "calm",
+	"after_story": 1,
+	"before_story": 3,
+	"condition": {
+		"leaning": "reason+",
+		"among": [
+			"fighting-",
+			"fighting+",
+			"community-",
+			"community+",
+			"reason-",
+			"reason+"
+		],
+		"min": 20
+	},
+	"urgency": 8,
+	"leaning": "reason+",
+	"background_tags": [
+		"terminal_room",
+		"flickering_light",
+		"waiting_area",
+		"cluttered_desk",
+		"hasty_atmosphere"
+	],
+	"dialogue": [
+		{
+			"speaker": "narrator",
+			"content": {
+				"korean": "공용 검색 단말기 화면 앞, 초조하게 발을 굴러대는 구직자가 당신을 가로막는다."
+			}
+		},
+		{
+			"speaker": "seeker",
+			"content": {
+				"korean": "당신 지난번에도 절차 따위 무시하고 멋대로 서류 제출창을 넘겨버린 사람 맞죠?"
+			}
+		},
+		{
+			"speaker": "seeker",
+			"content": {
+				"korean": "내 이력서에 경력 몇 줄만 거짓으로 적어 단말기에 찔러 넣어줘요. 순서 기다리다 늦겠어요!"
+			}
+		},
+		{
+			"speaker": "nia",
+			"content": {
+				"korean": "규칙을 거스르고 데이터까지 바꾸는 건 너무 위험해요."
+			}
+		}
+	],
+	"choices": [
+		{
+			"text": {
+				"korean": "구직자의 요구대로 거짓 경력을 추가해 단말기 입력을 바로 끝내준다."
+			},
+			"path": "easy",
+			"mbti": "EP",
+			"flag": "forged_alarm",
+			"effects": {
+				"reason": 20,
+				"echo": -5,
+				"gold": 120,
+				"fighting": 10
+			},
+			"reward": [
+				"attack_up"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "당신은 구직자가 말한 거짓 경력을 단말기에 거침없이 입력했다."
+					}
+				},
+				{
+					"speaker": "seeker",
+					"content": {
+						"korean": "역시 소문대로 손이 빠르시네요! 꽉 막힌 규정 따위 신경 안 써서 살았습니다!"
+					}
+				},
+				{
+					"speaker": "nia",
+					"content": {
+						"korean": "당장 넘어가긴 했지만, 나중에 단말기 오류로 돌아오면 어쩌죠?"
+					}
+				}
+			]
+		},
+		{
+			"text": {
+				"korean": "마음 가는 대로 하지 않고 규칙을 내세워 거짓 경력 입력을 거부한다."
+			},
+			"path": "hard",
+			"mbti": "IJ",
+			"flag": "honest_proof",
+			"effects": {
+				"community": 10,
+				"echo": 10,
+				"reason": -20
+			},
+			"reward": [
+				"defense_up"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "당신은 구직자의 말을 물리치고 단말기 정당 입력을 요구했다."
+					}
+				},
+				{
+					"speaker": "seeker",
+					"content": {
+						"korean": "에이, 평소엔 제멋대로 하면서 왜 내 부탁엔 원칙을 따지는 거예요?"
+					}
+				},
+				{
+					"speaker": "nia",
+					"content": {
+						"korean": "올바른 선택이에요! 거짓 데이터를 넣으면 다른 이력서까지 엉망이 돼요."
+					}
+				}
+			]
+		},
+		{
+			"text": {
+				"korean": "단말기 제어판을 강제로 재부팅하여 거짓 경력 없이 대기 순번만 맨 앞으로 당긴다."
+			},
+			"path": "stat",
+			"mbti": "ET",
+			"require": {
+				"stat": "reason",
+				"op": ">=",
+				"value": 40
+			},
+			"flag": "system_override",
+			"effects": {
+				"echo": 5,
+				"fighting": 15,
+				"reason": 30
+			},
+			"reward": [
+				"cooldown_reset"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "당신이 단말기 제어판을 재부팅해 경력 위조 없이 대기 순서만 최상단으로 올렸다."
+					}
+				},
+				{
+					"speaker": "seeker",
+					"content": {
+						"korean": "와, 경력을 조작하지 않고도 내 차례가 됐네요! 당신 최고예요!"
+					}
+				},
+				{
+					"speaker": "nia",
+					"content": {
+						"korean": "규칙을 훌륭히 우회하면서 거짓 정보도 막아냈어요. 정말 대단해요!"
+					}
+				}
+			]
+		},
+		{
+			"text": {
+				"korean": "단말기 급행 이용 수수료 100골드를 대신 지불하고 구직자의 정식 검수 절차를 빠르게 진행시킨다."
+			},
+			"path": "gold",
+			"mbti": "NF",
+			"require": {
+				"stat": "gold",
+				"op": ">=",
+				"value": 100
+			},
+			"effects": {
+				"community": 15,
+				"gold": -100,
+				"echo": 10
+			},
+			"reward": [
+				"heal"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "당신이 단말기 유료 급행 처리 수수료 100골드를 건네어 순서를 바로 앞당겨주었다."
+					}
+				},
+				{
+					"speaker": "seeker",
+					"content": {
+						"korean": "돈으로 정식 급행 처리를 해줄 줄이야! 거짓말을 안 써도 돼서 정말 다행입니다."
+					}
+				},
+				{
+					"speaker": "nia",
+					"content": {
+						"korean": "수수료를 내고 정식 해결했으니 거짓 경력을 굳이 적을 필요도 없겠어요."
+					}
+				}
+			]
+		}
+	],
+	"_side": {
+		"slot": "A",
+		"person": {
+			"name": "구직자",
+			"role": "초조한 지원자",
+			"id": "seeker"
+		},
+		"wants": "단말기 순서를 바꾸고 거짓 경력을 빠르게 등록하고 싶어 함",
+		"rule_link": "린의 이력서를 정리하기 전, 단말기 사용 순서와 거짓 경력 입력 수락 여부를 결정한다.",
+		"rep": "reason+",
+		"events": {},
+		"flags": {
+			"forged_alarm": {
+				"kind": "bad",
+				"boss_penalty": -1,
+				"label": {
+					"korean": "허위 기록 검출"
+				},
+				"boss_line": {
+					"korean": "보스 방에서 위조 데이터 검출 알람이 뒤늦게 터져 일행의 이동 속도를 떨어뜨린다."
+				}
+			},
+			"honest_proof": {
+				"kind": "good",
+				"boss_penalty": 1,
+				"label": {
+					"korean": "정직의 증표"
+				},
+				"boss_choice": {
+					"korean": "보스 방에서 정직하게 작성된 지원자의 단말기 인증서로 보안 문을 빠르게 개착한다."
+				}
+			},
+			"system_override": {
+				"kind": "good",
+				"boss_penalty": 2,
+				"label": {
+					"korean": "제어판 우회"
+				},
+				"boss_choice": {
+					"korean": "보스 방에서 단말기 과부하 재부팅 허점을 이용해 시스템 통제를 우회한다."
+				}
+			}
+		}
+	}
+}

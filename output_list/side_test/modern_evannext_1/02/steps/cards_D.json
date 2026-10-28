@@ -1,0 +1,378 @@
+{
+	"cards": [
+		{
+			"title": "041번으로 바뀐 명찰",
+			"key": "clerk_expelled_crisis",
+			"background_tags": [
+				"search_room",
+				"indoor_fluorescent",
+				"crowded_queue",
+				"terminal_desk",
+				"urgent_tension"
+			],
+			"dialogue": [
+				{
+					"text": "안내 방송 단말기에서 날카로운 신호음과 함께 경고 메시지가 깜빡인다.",
+					"speaker": "narrator"
+				},
+				{
+					"text": "\\\"안내 데스크 담당자, 번호 041번으로 전환. 자격 상실로 퇴실하십시오.\\\"",
+					"speaker": "narrator"
+				},
+				{
+					"text": "아까 마구잡이로 승인했던 이력서 수치들이 제 정보까지 덮어써 버렸습니다! 명찰에 이름이 없어요!",
+					"speaker": "clerk"
+				},
+				{
+					"speaker": "nia",
+					"text": "저 사람의 이름마저 숫자로 바뀌어 쫓겨나고 있어요. 저러다 검색실 밖으로 밀려나겠어요."
+				}
+			],
+			"choices": [
+				{
+					"result": [
+						{
+							"speaker": "narrator",
+							"text": "당신은 041번 명찰을 쥔 담당자를 지나쳐 창구 서류함의 등록 인장을 챙겼다."
+						},
+						{
+							"text": "이름도 직함도 지워졌는데, 이 서류들이 다 무슨 소용입니까…",
+							"speaker": "clerk"
+						},
+						{
+							"speaker": "nia",
+							"text": "일괄 승인의 여파가 담당자 본인에게까지 번졌군요. 마음이 편치 않아요."
+						}
+					],
+					"mbti": "TJ",
+					"path": "easy",
+					"reward": [],
+					"text": "쫓겨나는 담당자를 두고 비어 있는 데스크의 등록 인장만 챙긴다",
+					"flag": {
+						"key": "clerk_expelled",
+						"boss_text": "데이터 관리자가 규정 위반자로 분류된 번호표 041번의 보안 코드를 흡수해 공격력이 상승합니다.",
+						"label": "담당자 퇴출 방치"
+					},
+					"effects": {
+						"community": -20,
+						"fighting": 20,
+						"echo": -10,
+						"gold": 100
+					}
+				},
+				{
+					"result": [
+						{
+							"speaker": "narrator",
+							"text": "당신은 결재 단말기의 최근 승인 로그를 열어 담당자의 원래 성명을 수기 대장에 대조해 적었다."
+						},
+						{
+							"text": "제 사원증에 적힌 이름이 완전히 날아가기 직전이었군요. 정말 감사합니다.",
+							"speaker": "clerk"
+						},
+						{
+							"speaker": "nia",
+							"text": "숫자로 완전히 굳어지기 전에 원래 명찰을 돌려주어서 다행이에요."
+						}
+					],
+					"flag": {
+						"boss_text": "안내 데스크에서 되찾은 담당자의 사원증으로 서버실 차단벽의 암호 해제를 시도합니다.",
+						"label": "담당자 기록 복구",
+						"key": "clerk_record_saved"
+					},
+					"text": "단말기 승인 로그를 뒤져 담당자의 원래 성명을 수기 대장에 적어준다",
+					"effects": {
+						"reason": -15,
+						"community": 25,
+						"echo": 10
+					},
+					"mbti": "FP",
+					"reward": [
+						"defense_up"
+					],
+					"path": "hard"
+				}
+			],
+			"no": 1,
+			"wants": "숫자로 지워진 자신의 이름을 되찾아 안내 데스크에서 쫓겨나는 것을 막으려 한다.",
+			"rule_link": "허위 이력서들을 일괄 승인한 대가로 담당자의 원래 이름마저 숫자로 치환되어 자격을 잃는다.",
+			"person": {
+				"id": "clerk",
+				"role": "정보 검색실 단말기 관리 직원",
+				"name": "단말기 담당자"
+			},
+			"slot": "D",
+			"kind": "callback",
+			"returns": "easy"
+		},
+		{
+			"title": "보존된 명찰",
+			"choices": [
+				{
+					"flag": {
+						"key": "clerk_code_override",
+						"boss_text": "정규 승인된 단말기 관리자 코드를 이용해 서버실 앞 방어막 출력을 일시적으로 낮춥니다.",
+						"label": "관리자 코드 확보"
+					},
+					"text": "담당자에게서 단말기 긴급 관리자 인증 칩을 건네받는다",
+					"reward": [
+						"attack_up"
+					],
+					"effects": {
+						"fighting": 15,
+						"reason": 20,
+						"echo": 10
+					},
+					"path": "easy",
+					"result": [
+						{
+							"speaker": "narrator",
+							"text": "당신은 담당자가 건넨 긴급 관리자 인증 칩을 단말기에 꽂아 보안 권한을 넘겨받았다."
+						},
+						{
+							"speaker": "clerk",
+							"text": "이 코드로 단말기 제어권을 열면 서버실 보안문 앞에서도 도움이 될 겁니다."
+						},
+						{
+							"speaker": "nia",
+							"text": "이름을 온전히 지켜낸 직원이 남아 있어서 검색실 처리가 한결 수월하겠어요."
+						}
+					],
+					"mbti": "TP"
+				},
+				{
+					"path": "hard",
+					"reward": [
+						"shield"
+					],
+					"mbti": "FJ",
+					"text": "담당자와 함께 정상 반려된 서류들의 명찰을 지원자들에게 돌려준다",
+					"flag": {
+						"key": "applicants_shield",
+						"label": "지원자 대열 분산",
+						"boss_text": "이름을 보존한 지원자 30명이 서버실 통로에서 관리자의 주의를 분산시킵니다."
+					},
+					"result": [
+						{
+							"speaker": "narrator",
+							"text": "당신은 담당자와 함께 단말기 대기열의 지원자들에게 원래 이름표를 차례대로 나누어 주었다."
+						},
+						{
+							"speaker": "clerk",
+							"text": "반려했던 이력서들을 정확히 분류해 둔 덕에 이 사람들의 이름도 무사했습니다."
+						},
+						{
+							"speaker": "nia",
+							"text": "숫자로 불리며 불안해하던 사람들이 제 이름을 되찾고 안도하고 있어요."
+						}
+					],
+					"effects": {
+						"community": 20,
+						"gold": 60,
+						"echo": 10,
+						"reason": 10
+					}
+				}
+			],
+			"key": "clerk_safe_desk",
+			"no": 2,
+			"background_tags": [
+				"search_room",
+				"indoor_fluorescent",
+				"terminal_desk",
+				"orderly_queue",
+				"tense_calm"
+			],
+			"dialogue": [
+				{
+					"text": "검색실 안이 숫자로 술렁이는 가운데, 안내 데스크의 단말기 담당자가 명찰을 만지며 서 있다.",
+					"speaker": "narrator"
+				},
+				{
+					"text": "아까 허위 서류들을 전부 반려해 주신 덕분에 제 이름은 숫자로 덮이지 않고 무사합니다.",
+					"speaker": "clerk"
+				},
+				{
+					"text": "하지만 주변 단말기들은 온통 숫자로 뒤덮여 있습니다. 데이터 관리자가 오기 전에 손을 써야 합니다.",
+					"speaker": "clerk"
+				},
+				{
+					"speaker": "nia",
+					"text": "이쪽 데스크는 온전하네요. 하지만 방송에서 계속 숫자를 부르고 있어요."
+				}
+			],
+			"wants": "자신의 이름이 남아 있는 단말기 데스크를 지키며 숫자로 혼란해진 대기실을 수습하려 한다.",
+			"rule_link": "원칙대로 허위 이력서를 반려해 이름을 보존한 직원이 혼란 속에서 업무를 유지한다.",
+			"person": {
+				"id": "clerk",
+				"role": "정보 검색실 단말기 관리 직원",
+				"name": "단말기 담당자"
+			},
+			"slot": "D",
+			"kind": "callback",
+			"returns": "hard"
+		},
+		{
+			"background_tags": [
+				"search_room",
+				"flashing_monitors",
+				"panicked_crowd",
+				"waiting_benches",
+				"dim_fluorescent"
+			],
+			"no": 3,
+			"title": "119번의 절규",
+			"person": {
+				"role": "이력서 과장 등록을 노리는 지원자",
+				"name": "초조한 구직자",
+				"id": "seeker"
+			},
+			"dialogue": [
+				{
+					"speaker": "narrator",
+					"text": "\\\"대기 번호 119번 지원자, 호명에 응답하지 않을 시 전산 삭제됩니다.\\\""
+				},
+				{
+					"speaker": "seeker",
+					"text": "내 이력서 성명란에 119라는 숫자만 박혀 있습니다! 내 이름이 뭐였는지 단말기가 지워버렸어요!"
+				},
+				{
+					"text": "이름을 잃어버렸는데 다음 방으로 어떻게 가란 말입니까? 제발 아무나 내 이름 좀 찾아줘요!",
+					"speaker": "seeker"
+				},
+				{
+					"text": "단말기에 이력서를 과장해서 올리려다 본래 이름 데이터까지 숫자로 덮어씌워진 것 같아요.",
+					"speaker": "nia"
+				}
+			],
+			"choices": [
+				{
+					"reward": [
+						"attack_up"
+					],
+					"text": "비명을 지르는 구직자의 번호표를 강제로 뜯어내고 단말기에서 떼어놓는다",
+					"effects": {
+						"fighting": 25,
+						"echo": -10,
+						"community": -20
+					},
+					"mbti": "ST",
+					"result": [
+						{
+							"text": "당신은 구직자의 옷깃에 붙은 119번 번호표를 떼어내 짓밟고 서류 뭉치를 낚아챘다.",
+							"speaker": "narrator"
+						},
+						{
+							"speaker": "seeker",
+							"text": "이게 무슨 짓입니까! 내 번호표가 없으면 면접장에 한 걸음도 못 들어간다고요!"
+						},
+						{
+							"speaker": "nia",
+							"text": "소동을 강제로 누르긴 했지만, 저 사람은 이제 번호로도 불리지 못하게 되었어요."
+						}
+					],
+					"path": "easy"
+				},
+				{
+					"effects": {
+						"community": 25,
+						"echo": 15,
+						"reason": -10
+					},
+					"event": "campsite",
+					"event_reason": "숫자로 변한 이름 때문에 탈진한 구직자를 진정시키고 휴식을 취한다.",
+					"result": [
+						{
+							"text": "당신은 떨고 있는 구직자의 손을 잡고 수기 이력서 원본의 첫 줄을 소리 내어 읽어주었다.",
+							"speaker": "narrator"
+						},
+						{
+							"text": "맞아요… 내 이름은 119번이 아니라 박진우였습니다. 기억났어요, 정말 고맙습니다.",
+							"speaker": "seeker"
+						},
+						{
+							"speaker": "nia",
+							"text": "자신의 이름을 잊지 않으려고 안간힘을 쓰는 모습이 너무 안쓰러웠어요."
+						}
+					],
+					"text": "구직자를 진정시키고 수기 원본에 적힌 원래 이름을 몇 번이고 되뇌게 돕는다",
+					"mbti": "NF",
+					"event_intro": [
+						{
+							"speaker": "narrator",
+							"text": "당신은 구직자를 대기실 구석의 비어 있는 소파로 데려가 숨을 고르게 했다."
+						},
+						{
+							"text": "단말기 모니터 불빛을 피해서 잠시 눈을 붙이고 생각을 정리해요.",
+							"speaker": "nia"
+						}
+					],
+					"path": "hard"
+				},
+				{
+					"mbti": "NT",
+					"path": "lock",
+					"effects": {
+						"reason": 15,
+						"community": 15,
+						"echo": 10
+					},
+					"reward": [
+						"intelligence_up"
+					],
+					"result": [
+						{
+							"speaker": "narrator",
+							"text": "{actor}이(가) 단말기의 폰트 렌더링 캐시를 초기화해 임시로 원래 이름을 화면에 띄웠다."
+						},
+						{
+							"speaker": "seeker",
+							"text": "화면에 다시 내 성명이 떴어! 숫자가 글자로 되돌아왔습니다!"
+						},
+						{
+							"text": "완벽한 복구는 아니지만 표기 오류를 임시로 멈춘 것만으로도 패닉이 가라앉았어요.",
+							"speaker": "nia"
+						}
+					],
+					"require_mbti": "NT",
+					"text": "{actor}이(가) 단말기 화면의 텍스트 변환 필터를 조작해 원래 표기를 임시 고정한다"
+				},
+				{
+					"result": [
+						{
+							"speaker": "narrator",
+							"text": "당신은 보관료 80골드를 결제하고 구직자의 인적 사항 원본 철을 수기 금고에 봉인했다."
+						},
+						{
+							"speaker": "seeker",
+							"text": "단말기가 숫자로 덮어써도 이 철인 금고 속 서류는 지워지지 않겠군요. 살았습니다."
+						},
+						{
+							"text": "종이에 찍힌 이름만큼은 시스템도 함부로 숫자로 바꾸지 못할 테니까요.",
+							"speaker": "nia"
+						}
+					],
+					"text": "단말기 수기 보관함 이용료 80골드를 내고 구직자의 종이 서류를 금고에 넣는다",
+					"mbti": "SF",
+					"effects": {
+						"community": 10,
+						"echo": 5,
+						"gold": -80,
+						"reason": 20
+					},
+					"path": "gold",
+					"reward": [
+						"move_range_up"
+					]
+				}
+			],
+			"key": "seeker_number_crisis",
+			"rule_link": "이력서가 숫자로 치환되면서 자신의 본래 이름과 존재를 망각하는 공포를 겪는다.",
+			"wants": "단말기 화면에서 지워진 자신의 원래 이름을 확인해 전산 삭제를 피하려 한다.",
+			"slot": "D",
+			"kind": "normal"
+		}
+	],
+	"errors": [],
+	"prompt_hash": "150c2fa6a1a4e63c41779e1cdc99c84cf6be2c9e"
+}

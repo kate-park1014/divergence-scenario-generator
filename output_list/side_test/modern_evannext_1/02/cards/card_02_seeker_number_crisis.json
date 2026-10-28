@@ -1,0 +1,224 @@
+{
+	"id": "card_02_seeker_number_crisis",
+	"kind": "normal",
+	"title": {
+		"korean": "119번의 절규"
+	},
+	"intensity": "calm",
+	"after_story": 7,
+	"before_story": 10,
+	"background_tags": [
+		"search_room",
+		"flashing_monitors",
+		"panicked_crowd",
+		"waiting_benches",
+		"dim_fluorescent"
+	],
+	"dialogue": [
+		{
+			"speaker": "narrator",
+			"content": {
+				"korean": "\\\"대기 번호 119번 지원자, 호명에 응답하지 않을 시 전산 삭제됩니다.\\\""
+			}
+		},
+		{
+			"speaker": "seeker",
+			"content": {
+				"korean": "내 이력서 성명란에 119라는 숫자만 박혀 있습니다! 내 이름이 뭐였는지 단말기가 지워버렸어요!"
+			}
+		},
+		{
+			"speaker": "seeker",
+			"content": {
+				"korean": "이름을 잃어버렸는데 다음 방으로 어떻게 가란 말입니까? 제발 아무나 내 이름 좀 찾아줘요!"
+			}
+		},
+		{
+			"speaker": "nia",
+			"content": {
+				"korean": "단말기에 이력서를 과장해서 올리려다 본래 이름 데이터까지 숫자로 덮어씌워진 것 같아요."
+			}
+		}
+	],
+	"choices": [
+		{
+			"text": {
+				"korean": "비명을 지르는 구직자의 번호표를 강제로 뜯어내고 단말기에서 떼어놓는다"
+			},
+			"path": "easy",
+			"mbti": "ST",
+			"effects": {
+				"fighting": 25,
+				"echo": -10,
+				"community": -20
+			},
+			"reward": [
+				"attack_up"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "당신은 구직자의 옷깃에 붙은 119번 번호표를 떼어내 짓밟고 서류 뭉치를 낚아챘다."
+					}
+				},
+				{
+					"speaker": "seeker",
+					"content": {
+						"korean": "이게 무슨 짓입니까! 내 번호표가 없으면 면접장에 한 걸음도 못 들어간다고요!"
+					}
+				},
+				{
+					"speaker": "nia",
+					"content": {
+						"korean": "소동을 강제로 누르긴 했지만, 저 사람은 이제 번호로도 불리지 못하게 되었어요."
+					}
+				}
+			]
+		},
+		{
+			"text": {
+				"korean": "구직자를 진정시키고 수기 원본에 적힌 원래 이름을 몇 번이고 되뇌게 돕는다"
+			},
+			"path": "hard",
+			"mbti": "NF",
+			"effects": {
+				"community": 25,
+				"echo": 15,
+				"reason": -10
+			},
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "당신은 떨고 있는 구직자의 손을 잡고 수기 이력서 원본의 첫 줄을 소리 내어 읽어주었다."
+					}
+				},
+				{
+					"speaker": "seeker",
+					"content": {
+						"korean": "맞아요… 내 이름은 119번이 아니라 박진우였습니다. 기억났어요, 정말 고맙습니다."
+					}
+				},
+				{
+					"speaker": "nia",
+					"content": {
+						"korean": "자신의 이름을 잊지 않으려고 안간힘을 쓰는 모습이 너무 안쓰러웠어요."
+					}
+				}
+			],
+			"event": "campsite",
+			"event_intro": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "당신은 구직자를 대기실 구석의 비어 있는 소파로 데려가 숨을 고르게 했다."
+					}
+				},
+				{
+					"speaker": "nia",
+					"content": {
+						"korean": "단말기 모니터 불빛을 피해서 잠시 눈을 붙이고 생각을 정리해요."
+					}
+				}
+			]
+		},
+		{
+			"text": {
+				"korean": "{actor}이(가) 단말기 화면의 텍스트 변환 필터를 조작해 원래 표기를 임시 고정한다"
+			},
+			"path": "lock",
+			"mbti": "NT",
+			"require": {
+				"mbti": "NT"
+			},
+			"effects": {
+				"reason": 15,
+				"community": 15,
+				"echo": 10
+			},
+			"reward": [
+				"intelligence_up"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "{actor}이(가) 단말기의 폰트 렌더링 캐시를 초기화해 임시로 원래 이름을 화면에 띄웠다."
+					}
+				},
+				{
+					"speaker": "seeker",
+					"content": {
+						"korean": "화면에 다시 내 성명이 떴어! 숫자가 글자로 되돌아왔습니다!"
+					}
+				},
+				{
+					"speaker": "nia",
+					"content": {
+						"korean": "완벽한 복구는 아니지만 표기 오류를 임시로 멈춘 것만으로도 패닉이 가라앉았어요."
+					}
+				}
+			]
+		},
+		{
+			"text": {
+				"korean": "단말기 수기 보관함 이용료 80골드를 내고 구직자의 종이 서류를 금고에 넣는다"
+			},
+			"path": "gold",
+			"mbti": "SF",
+			"require": {
+				"stat": "gold",
+				"op": ">=",
+				"value": 80
+			},
+			"effects": {
+				"community": 10,
+				"echo": 5,
+				"gold": -80,
+				"reason": 20
+			},
+			"reward": [
+				"move_range_up"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "당신은 보관료 80골드를 결제하고 구직자의 인적 사항 원본 철을 수기 금고에 봉인했다."
+					}
+				},
+				{
+					"speaker": "seeker",
+					"content": {
+						"korean": "단말기가 숫자로 덮어써도 이 철인 금고 속 서류는 지워지지 않겠군요. 살았습니다."
+					}
+				},
+				{
+					"speaker": "nia",
+					"content": {
+						"korean": "종이에 찍힌 이름만큼은 시스템도 함부로 숫자로 바꾸지 못할 테니까요."
+					}
+				}
+			]
+		}
+	],
+	"_side": {
+		"slot": "D",
+		"person": {
+			"role": "이력서 과장 등록을 노리는 지원자",
+			"name": "초조한 구직자",
+			"id": "seeker"
+		},
+		"wants": "단말기 화면에서 지워진 자신의 원래 이름을 확인해 전산 삭제를 피하려 한다.",
+		"rule_link": "이력서가 숫자로 치환되면서 자신의 본래 이름과 존재를 망각하는 공포를 겪는다.",
+		"events": {
+			"hard": "숫자로 변한 이름 때문에 탈진한 구직자를 진정시키고 휴식을 취한다."
+		},
+		"flags": {}
+	}
+}

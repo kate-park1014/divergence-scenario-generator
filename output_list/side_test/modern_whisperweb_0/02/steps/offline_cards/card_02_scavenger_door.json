@@ -1,0 +1,161 @@
+{
+	"id": "card_02_scavenger_door",
+	"kind": "normal",
+	"title": {
+		"korean": "열린 보안문"
+	},
+	"intensity": "calm",
+	"after_story": 3,
+	"before_story": 5,
+	"background_tags": [
+		"heavy_door",
+		"dark_hallway",
+		"valuable_scrap",
+		"strained_muscles",
+		"flickering_emergency_light"
+	],
+	"dialogue": [
+		{
+			"speaker": "greedy_scavenger",
+			"content": {
+				"korean": "전원이 나가서 보안문이 열렸어! 안쪽에 비싼 부품들이 널려있다고."
+			}
+		},
+		{
+			"speaker": "greedy_scavenger",
+			"content": {
+				"korean": "문이 닫히지 않게 잠깐만 잡아줘. 절반은 너한테 줄 테니까."
+			}
+		},
+		{
+			"speaker": "lin",
+			"content": {
+				"korean": "저건 명백한 도둑질이에요. 도와주면 안 돼요."
+			}
+		},
+		{
+			"speaker": "lin",
+			"content": {
+				"korean": "게다가 문이 갑자기 닫히면 크게 다칠 수도 있다고요."
+			}
+		}
+	],
+	"choices": [
+		{
+			"text": {
+				"korean": "문을 잡아주고 그가 훔친 부품의 일부를 나눠 받는다."
+			},
+			"path": "easy",
+			"mbti": "SP",
+			"effects": {
+				"community": -20,
+				"echo": -10,
+				"reason": -20
+			},
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "당신이 문을 버텨낸 사이 핀은 부품을 한가득 챙겨 나왔다."
+					}
+				},
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "린은 실망한 기색을 감추지 못했다."
+					}
+				}
+			],
+			"event": "minigame_timing",
+			"event_intro": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "\"꽉 잡아!"
+					}
+				},
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "문이 움직인다!\" 비상 전력이 꿈틀거리며 보안문이 세 번 연달아 닫히려 하고, 한 번이라도 놓치면 끝이다."
+					}
+				}
+			]
+		},
+		{
+			"text": {
+				"korean": "훔치는 것을 돕지 않겠다며 문을 닫아버린다."
+			},
+			"path": "hard",
+			"mbti": "SJ",
+			"effects": {
+				"reason": 20,
+				"community": 10,
+				"echo": 10
+			},
+			"reward": [
+				"defense_up"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "당신이 문을 밀어 닫아버리자 핀은 화를 내며 빈손으로 돌아갔다."
+					}
+				},
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "보안문은 굳게 닫혀 안쪽을 보호했다."
+					}
+				}
+			]
+		},
+		{
+			"text": {
+				"korean": "{actor}이(가) 문이 닫히는 패턴을 계산해 안전한 틈을 찾는다."
+			},
+			"path": "lock",
+			"mbti": "TJ",
+			"require": {
+				"mbti": "TJ"
+			},
+			"effects": {
+				"fighting": -10,
+				"reason": 10,
+				"gold": 80
+			},
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "{actor}이(가) 정확한 타이밍을 계산해 문을 고정하자 핀은 감탄하며 부품을 꺼내왔다."
+					}
+				},
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "당신은 약속된 몫을 확실히 챙겼다."
+					}
+				}
+			]
+		}
+	],
+	"_side": {
+		"slot": "B",
+		"person": {
+			"name": "핀",
+			"id": "greedy_scavenger",
+			"role": "부품 수집가"
+		},
+		"wants": "전원이 꺼져 열린 보안문이 닫히지 않게 잡아달라고 함.",
+		"rule_link": "시스템 정지로 인해 보호되던 데이터 스크린 조각이 무방비로 노출됨.",
+		"events": {
+			"easy": "비상 전력이 꿈틀거리며 보안문이 불규칙하게 닫히려 한다."
+		},
+		"flags": {}
+	}
+}

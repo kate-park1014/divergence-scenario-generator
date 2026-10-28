@@ -1,0 +1,165 @@
+{
+	"id": "card_02_stolen_battery",
+	"title": {
+		"korean": "기회를 노리는 손"
+	},
+	"intensity": "calm",
+	"after_story": 3,
+	"before_story": 5,
+	"background_tags": [
+		"server",
+		"shadow",
+		"secret",
+		"oldroom",
+		"battery"
+	],
+	"dialogue": [
+		{
+			"speaker": "narrator",
+			"content": {
+				"korean": "정지된 서버 랙 앞에서 한 남자가 비상 배터리에 손을 뻗고 있다."
+			}
+		},
+		{
+			"speaker": "opportunist_thief",
+			"content": {
+				"korean": "어차피 꺼진 서버잖아. 이 비상 배터만 빼가게 잠깐 망 좀 봐줘."
+			}
+		},
+		{
+			"speaker": "lin",
+			"content": {
+				"korean": "저 배터리를 빼버리면 나중에 전원이 들어와도 문제가 생길 거예요."
+			}
+		}
+	],
+	"choices": [
+		{
+			"text": {
+				"korean": "망을 봐주고 비상 배터리를 함께 빼낸다."
+			},
+			"path": "easy",
+			"mbti": "FP",
+			"effects": {
+				"gold": 100,
+				"community": -10,
+				"reason": -20
+			},
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "당신이 주위를 살피는 동안 그는 배터리를 챙겼다. 그는 몫을 나눠주고 도망쳤다."
+					}
+				}
+			]
+		},
+		{
+			"text": {
+				"korean": "도둑질을 막고 그를 쫓아낸다."
+			},
+			"path": "hard",
+			"mbti": "TJ",
+			"effects": {
+				"fighting": 20,
+				"reason": 15
+			},
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "당신이 앞을 가로막자 그는 뒤로 물러섰다. 하지만 곧 어둠 속에서 다른 발소리가 들려왔다."
+					}
+				}
+			],
+			"event": "meet_stranger",
+			"event_intro": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "\"감히 내 동료를 건드려? 비켜!\" 도둑의 일행이 나타났다."
+					}
+				}
+			],
+			"event_options": {
+				"fight": {
+					"text": {
+						"korean": "{actor}이(가) 주먹을 쥐고 맞선다."
+					},
+					"win": [
+						{
+							"speaker": "narrator",
+							"content": {
+								"korean": "당신은 가볍게 상대를 제압했고, 둘은 허겁지겁 도망쳤다."
+							}
+						}
+					],
+					"lose": [
+						{
+							"speaker": "narrator",
+							"content": {
+								"korean": "당신은 밀려 넘어졌고, 그들은 배터리를 챙겨 사라졌다."
+							}
+						}
+					]
+				},
+				"avoid": {
+					"text": {
+						"korean": "싸움을 피하고 자리를 벗어난다."
+					},
+					"result": [
+						{
+							"speaker": "narrator",
+							"content": {
+								"korean": "당신이 물러난 사이 그들은 배터리를 뜯어갔다."
+							}
+						}
+					],
+					"reward": [
+						"defense_down"
+					]
+				}
+			}
+		},
+		{
+			"text": {
+				"korean": "도둑에게 돈을 주고 배터리를 훔치지 말고 떠나라고 한다."
+			},
+			"path": "gold",
+			"mbti": "NT",
+			"require": {
+				"stat": "gold",
+				"op": ">=",
+				"value": 100
+			},
+			"effects": {
+				"gold": -100,
+				"community": 10
+			},
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "당신이 돈을 쥐여주자 그는 순순히 떠났다. 서버의 부품은 지켜졌다."
+					}
+				}
+			]
+		}
+	],
+	"kind": "normal",
+	"_side": {
+		"slot": "B",
+		"person": {
+			"id": "opportunist_thief",
+			"name": "기회주의자 도둑",
+			"role": "뻔뻔하게 반말을 쓰는 말투"
+		},
+		"wants": "",
+		"rule_link": "",
+		"events": {},
+		"flags": {}
+	}
+}

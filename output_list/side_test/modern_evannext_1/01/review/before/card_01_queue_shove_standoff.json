@@ -1,0 +1,269 @@
+{
+	"id": "card_01_queue_shove_standoff",
+	"kind": "rep",
+	"title": {
+		"korean": "줄을 밀어낸 사람"
+	},
+	"intensity": "calm",
+	"after_story": 7,
+	"before_story": 10,
+	"condition": {
+		"leaning": "fighting-",
+		"among": [
+			"fighting-",
+			"fighting+",
+			"community-",
+			"community+",
+			"reason-",
+			"reason+"
+		],
+		"min": 20
+	},
+	"urgency": 8,
+	"leaning": "fighting-",
+	"background_tags": [
+		"waiting_hall",
+		"daytime",
+		"fluorescent",
+		"crowd",
+		"tense"
+	],
+	"dialogue": [
+		{
+			"speaker": "narrator",
+			"content": {
+				"korean": "접수 줄 한가운데가 벌어져 있었다."
+			}
+		},
+		{
+			"speaker": "narrator",
+			"content": {
+				"korean": "광수가 어깨를 앞세워 서 있고, 뒤에 선 사람들이 반 발짝씩 밀려나 있었다."
+			}
+		},
+		{
+			"speaker": "gwangsu",
+			"content": {
+				"korean": "당신이죠? 아까 사람들 밀어내고 접수표 먼저 받아 간 사람."
+			}
+		},
+		{
+			"speaker": "gwangsu",
+			"content": {
+				"korean": "내 순번이 저 뒤로 밀렸어요. 당신이 밀어낸 사람들 줄 세워서 내 자리 돌려주면 조용히 넘어갈게요."
+			}
+		},
+		{
+			"speaker": "lin",
+			"content": {
+				"korean": "저 사람 진짜 화나 보여요. 명패에 찍힌 이름이랑 줄 순서가 다���다고 계속 말하고 있는데요."
+			}
+		},
+		{
+			"speaker": "gwangsu",
+			"content": {
+				"korean": "명패 출력기 옆에 내 번호표 붙여 놨습니다. 그거 안 돌아오면 나도 안 돌아가요."
+			}
+		}
+	],
+	"choices": [
+		{
+			"text": {
+				"korean": "광수 어깨를 붙잡고 줄 맨 뒤로 밀어낸다"
+			},
+			"path": "easy",
+			"mbti": "TJ",
+			"flag": "queue_line_broken",
+			"effects": {
+				"fighting": 20,
+				"reason": -10
+			},
+			"reward": [
+				"attack_up"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "gwangsu",
+					"content": {
+						"korean": "지금… 저 사람 손부터 나왔어요! 다들 봤죠?"
+					}
+				},
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "광수가 줄 밖으로 밀려나며 번호표를 바닥에 떨어뜨렸다."
+					}
+				},
+				{
+					"speaker": "lin",
+					"content": {
+						"korean": "줄은 다시 섰는데, 저 사람 명패는 아직 출력기 옆에 붙어 있어요."
+					}
+				}
+			]
+		},
+		{
+			"text": {
+				"korean": "광수에게 밀려난 사람들의 순번을 한 칸씩 앞으로 다시 세운다"
+			},
+			"path": "hard",
+			"mbti": "NF",
+			"flag": "queue_order_restored",
+			"effects": {
+				"fighting": -20,
+				"community": 15,
+				"echo": 10
+			},
+			"reward": [
+				"defense_up"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "gwangsu",
+					"content": {
+						"korean": "…내 번호표는요? 왜 내가 맨 뒤예요?"
+					}
+				},
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "광수가 억울한 얼굴로 접수표를 두 손으로 고쳐 쥐었다."
+					}
+				},
+				{
+					"speaker": "lin",
+					"content": {
+						"korean": "줄이 다시 곧아졌어요. 저는 제 자리로 돌아갈게요."
+					}
+				}
+			]
+		},
+		{
+			"text": {
+				"korean": "광수에게 손을 내밀어 줄 맨 앞자리까지 직접 데려다준다"
+			},
+			"path": "stat",
+			"mbti": "EP",
+			"require": {
+				"stat": "fighting",
+				"op": "<=",
+				"value": -40
+			},
+			"flag": "gwangsu_owes_hand",
+			"effects": {
+				"fighting": -20,
+				"community": 15
+			},
+			"reward": [
+				"shield"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "gwangsu",
+					"content": {
+						"korean": "저, 저 사람이 저 데려다줬어요. 다들 비켜 주세요."
+					}
+				},
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "광수가 줄 앞에 서서 뒤를 돌아봤다. 손등에 접수표 도장이 찍혀 있었다."
+					}
+				},
+				{
+					"speaker": "lin",
+					"content": {
+						"korean": "저 사람 표정이 아까랑 달라요. 근데 왜 계속 당신 쪽을 보죠?"
+					}
+				}
+			]
+		},
+		{
+			"text": {
+				"korean": "광수에게 80골드를 주고 번호표를 되사 온다"
+			},
+			"path": "gold",
+			"mbti": "SP",
+			"require": {
+				"stat": "gold",
+				"op": ">=",
+				"value": 80
+			},
+			"effects": {
+				"gold": -80,
+				"community": -10
+			},
+			"reward": [
+				"intelligence_up"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "gwangsu",
+					"content": {
+						"korean": "돈이면… 뭐, 번호표는 여기요. 근데 이거 도장 안 찍힌 표예요."
+					}
+				},
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "광수가 손바닥에 붙여 둔 번호표를 떼어 건넸다. 종이 끝이 접혀 있었다."
+					}
+				},
+				{
+					"speaker": "lin",
+					"content": {
+						"korean": "도장이 없으면 접수대에서 또 막힐 텐데요."
+					}
+				}
+			]
+		}
+	],
+	"_side": {
+		"slot": "D",
+		"person": {
+			"id": "gwangsu",
+			"name": "광수",
+			"role": "접수 줄을 어깨로 밀어낸 대기자"
+		},
+		"wants": "자기 순번을 되찾고, 밀려난 사람 몫까지 접수표를 자기 손으로 넣고 싶다",
+		"rule_link": "접수 기록이 사람마다 갈라진 지금, 줄을 물리적으로 잡은 사람이 순번을 차지한다",
+		"rep": "fighting-",
+		"events": {},
+		"flags": {
+			"queue_line_broken": {
+				"kind": "bad",
+				"boss_penalty": -1,
+				"label": {
+					"korean": "줄 끊김"
+				},
+				"boss_line": {
+					"korean": "출입문 앞에서 광수가 당신의 접수표를 낚아채 바닥에 던진다."
+				}
+			},
+			"queue_order_restored": {
+				"kind": "good",
+				"boss_penalty": 1,
+				"label": {
+					"korean": "줄 순서 복구"
+				},
+				"boss_choice": {
+					"korean": "출입문 앞에서 뒤에 서 있던 대기자들이 당신 자리를 비켜 주고 먼저 손을 든다."
+				}
+			},
+			"gwangsu_owes_hand": {
+				"kind": "good",
+				"boss_penalty": 2,
+				"label": {
+					"korean": "광수의 빚"
+				},
+				"boss_choice": {
+					"korean": "출입문 앞에서 광수가 당신을 막아서며 양팔을 벌려 다른 대기자들을 붙잡는다."
+				}
+			}
+		}
+	}
+}

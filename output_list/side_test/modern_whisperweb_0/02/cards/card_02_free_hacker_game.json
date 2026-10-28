@@ -1,0 +1,216 @@
+{
+	"id": "card_02_free_hacker_game",
+	"title": {
+		"korean": "단말기와 해커"
+	},
+	"intensity": "calm",
+	"after_story": 3,
+	"before_story": 5,
+	"condition": {
+		"leaning": "reason+",
+		"among": [
+			"fighting-",
+			"fighting+",
+			"community-",
+			"community+",
+			"reason-",
+			"reason+"
+		],
+		"min": 20
+	},
+	"urgency": 8,
+	"leaning": "reason+",
+	"background_tags": [
+		"power_room",
+		"terminal",
+		"blinking_screen",
+		"loose_cable",
+		"playful"
+	],
+	"dialogue": [
+		{
+			"speaker": "rebel_hacker",
+			"content": {
+				"korean": "아하! 규칙 따위 가볍게 무시하고 재미부터 쫓는다는 게 당신이군."
+			}
+		},
+		{
+			"speaker": "rebel_hacker",
+			"content": {
+				"korean": "방화벽이 꺼진 참에 이 단말기에 내 게임 하나만 심자고. 저기 케이블만 잠깐 꽂아줘."
+			}
+		},
+		{
+			"speaker": "lin",
+			"content": {
+				"korean": "지금 이 상황에 게임을 설치한다고요? 농담이죠?"
+			}
+		}
+	],
+	"choices": [
+		{
+			"text": {
+				"korean": "케이블을 꽂아 게임 설치를 돕는다."
+			},
+			"path": "easy",
+			"mbti": "EP",
+			"flag": "free_noisy_game",
+			"effects": {
+				"gold": 100,
+				"reason": 20
+			},
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "제트가 껌을 터뜨리며 웃는다."
+					}
+				},
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "화면에 화려한 게임 로고가 뜨며 경���한 음악이 울려 퍼진다."
+					}
+				}
+			]
+		},
+		{
+			"text": {
+				"korean": "케이블을 낚아채 가위로 잘라버린다."
+			},
+			"path": "hard",
+			"mbti": "TJ",
+			"flag": "free_cut_cable",
+			"effects": {
+				"echo": 10,
+				"reason": -20
+			},
+			"reward": [
+				"defense_up"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "제트가 비명을 지르며 잘린 케이블을 껴안는다."
+					}
+				},
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "당신은 단호하게 단말기를 지켜낸다."
+					}
+				}
+			]
+		},
+		{
+			"text": {
+				"korean": "게임 코드를 수정해 화면에 제트의 우스꽝스러운 얼굴을 띄운다."
+			},
+			"path": "stat",
+			"mbti": "FP",
+			"require": {
+				"stat": "reason",
+				"op": ">=",
+				"value": 40
+			},
+			"flag": "free_funny_face",
+			"effects": {
+				"reason": 30
+			},
+			"reward": [
+				"shield"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "단말기 화면에 제트의 굴욕 사진이 대문짝만하게 뜬다."
+					}
+				},
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "린이 참지 못하고 풉 하고 웃는다."
+					}
+				}
+			]
+		},
+		{
+			"text": {
+				"korean": "게임 대신 내 이름을 대문짝만하게 단말기에 띄운다."
+			},
+			"path": "fun",
+			"mbti": "EN",
+			"effects": {
+				"echo": 15
+			},
+			"reward": [
+				"cooldown_reset"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "화면에 당신의 이름이 반짝이며 돌아다닌다."
+					}
+				},
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "제트는 어이없다는 듯 껌을 씹다 돌아선다."
+					}
+				}
+			]
+		}
+	],
+	"kind": "rep",
+	"_side": {
+		"slot": "B",
+		"person": {
+			"id": "rebel_hacker",
+			"name": "제트",
+			"role": "해커"
+		},
+		"wants": "",
+		"rule_link": "",
+		"rep": "reason+",
+		"events": {},
+		"flags": {
+			"free_noisy_game": {
+				"boss_penalty": -1,
+				"label": {
+					"korean": "시끄러운 게임"
+				},
+				"boss_line": {
+					"korean": "단말기에서 울리는 요란한 게임 음악 때문에 경비원이 곧장 다가온다."
+				},
+				"kind": "bad"
+			},
+			"free_cut_cable": {
+				"boss_penalty": 1,
+				"label": {
+					"korean": "잘린 케이블"
+				},
+				"boss_choice": {
+					"korean": "잘린 케이블을 채찍처럼 휘둘러 경비원의 무기를 떨어뜨린다."
+				},
+				"kind": "good"
+			},
+			"free_funny_face": {
+				"boss_penalty": 2,
+				"label": {
+					"korean": "우���꽝스러운 사진"
+				},
+				"boss_choice": {
+					"korean": "화면에 뜬 우스꽝스러운 얼굴을 보고 헛웃음을 짓는 경비원을 공격한다."
+				},
+				"kind": "good"
+			}
+		}
+	}
+}

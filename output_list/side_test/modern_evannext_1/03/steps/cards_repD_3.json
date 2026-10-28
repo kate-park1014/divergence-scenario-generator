@@ -1,0 +1,302 @@
+{
+	"cards": [
+		{
+			"background_tags": [
+				"booth",
+				"hallway",
+				"flickering_light",
+				"silent_crowd",
+				"urgent"
+			],
+			"key": "stamp_forced_approval",
+			"no": 1,
+			"person": {
+				"role": "구직자",
+				"name": "민호",
+				"id": "minho"
+			},
+			"wants": "방전 직전인 전자 인증 도장으로 이력서의 마지막 인증 단계를 승인받고 싶어 한다.",
+			"title": "방전되는 인증 도장",
+			"choices": [
+				{
+					"path": "easy",
+					"result": [
+						{
+							"speaker": "narrator",
+							"text": "인증 도장에서 스파크가 튀며 민호의 이력서에 붉은 승인 도장이 찍혔다."
+						},
+						{
+							"speaker": "narrator",
+							"text": "민호는 기뻐하며 이력서를 쥐었지만 부스의 제어 회로가 타며 검은 연기를 내뿜었다."
+						},
+						{
+							"speaker": "kai",
+							"text": "아... 인증 도장이 타버렸어요! 부스 전체의 과부하가 더 심해지고 있어요!"
+						}
+					],
+					"text": "민호의 이력서에 과부하가 걸린 전자 인증 도장을 눌러 승인 절차를 마친다.",
+					"reward": [
+						"attack_up"
+					],
+					"mbti": "TJ",
+					"effects": {
+						"reason": -20,
+						"echo": -10
+					},
+					"flag": {
+						"boss_text": "불안정하게 과부하된 인증 도장이 폭발해 주인공 전원이 피해를 입는다.",
+						"label": "과부하 인증 도장",
+						"key": "overloaded_stamp"
+					}
+				},
+				{
+					"path": "hard",
+					"effects": {
+						"echo": 10,
+						"reason": 20
+					},
+					"reward": [
+						"shield"
+					],
+					"mbti": "FP",
+					"text": "규정 지침에 따라 방전 직전인 인증 도장의 전원을 즉시 차단한다.",
+					"result": [
+						{
+							"speaker": "narrator",
+							"text": "당신이 인증 도장의 스위치를 내리자 붉은 경고등이 꺼지고 전류가 차단되었다."
+						},
+						{
+							"text": "민호는 안타까워했으나 부스의 위험한 2차 감전 사고는 방지되었다.",
+							"speaker": "narrator"
+						},
+						{
+							"speaker": "kai",
+							"text": "잘하셨어요! 무리한 인증 진행을 멈추지 않았다면 부스가 숏트났을 거예요."
+						}
+					],
+					"flag": {
+						"boss_text": "차단해 둔 인증 도장의 전원 유닛을 활용해 시스템 과부하를 막아낸다.",
+						"label": "안전 전원 차단",
+						"key": "safety_power_off"
+					}
+				},
+				{
+					"path": "stat",
+					"text": "원칙주의자의 권한으로 긴급 정지 보증키를 꽂아 민호를 대기선 밖으로 안전하게 이동시킨다.",
+					"effects": {
+						"reason": -30,
+						"echo": 15
+					},
+					"mbti": "ST",
+					"reward": [
+						"defense_up"
+					],
+					"flag": {
+						"label": "부스 제어 마스터키",
+						"key": "booth_override_key",
+						"boss_text": "부스 제어 마스터키를 이용해 적의 시스템 차단 공격을 한 번 무력화한다."
+					},
+					"result": [
+						{
+							"text": "당신이 긴급 정지 보증키를 꽂자 부스가 정숙 모드로 전환되며 민호가 안전하게 이동했다.",
+							"speaker": "narrator"
+						},
+						{
+							"text": "남아있던 전력이 차분하게 수거되었고 부스의 열화 현상이 가라앉았다.",
+							"speaker": "narrator"
+						},
+						{
+							"text": "절차를 완벽하게 숙지하고 계셨군요! 부스 제어 마스터키까지 확보했어요.",
+							"speaker": "kai"
+						}
+					]
+				},
+				{
+					"reward": [
+						"intelligence_up"
+					],
+					"effects": {
+						"echo": 10,
+						"gold": -100
+					},
+					"result": [
+						{
+							"speaker": "narrator",
+							"text": "새 보조 전원 팩이 슬롯에 장착되자 전자 인증 도장의 전류 표류 현상이 정돈되었다."
+						},
+						{
+							"speaker": "narrator",
+							"text": "민호는 안정적인 출력 아래 안전하게 이력서에 도장을 찍고 감사를 표했다."
+						},
+						{
+							"speaker": "kai",
+							"text": "돈은 좀 들었지만 안전하게 이력서 인증을 끝낼 수 있어서 다행이에요!"
+						}
+					],
+					"text": "100 골드를 지불해 상점에서 판매하는 부스 전용 보조 전원 팩을 구입해 도장에 연결한다.",
+					"mbti": "SF",
+					"path": "gold"
+				}
+			],
+			"rule_link": "이력서의 최종 인증 단계를 무리하게 강행하려다 전자 인증 부스의 오류가 악화된다.",
+			"dialogue": [
+				{
+					"speaker": "narrator",
+					"text": "민호가 붉은 빛을 내뿜는 전자 인증 도장을 쥔 채 당신을 바라보았다."
+				},
+				{
+					"speaker": "minho",
+					"text": "당신이 저번 부스에서 매뉴얼대로 정확하게 절차를 밟아 서류를 처리했던 분이군요!"
+				},
+				{
+					"speaker": "minho",
+					"text": "목소리는 안 나오지만 2분 뒤면 도장이 완전히 멈춰요! 이 이력서에 도장을 찍게 해 주세요!"
+				},
+				{
+					"speaker": "kai",
+					"text": "저 도장의 출력 강도가 위험할 정도로 상승하고 있어요. 인증 강행은 위험해요!"
+				}
+			],
+			"slot": "D",
+			"kind": "rep",
+			"rep_dir": "reason-"
+		},
+		{
+			"person": {
+				"id": "sora",
+				"name": "소라",
+				"role": "대기자"
+			},
+			"key": "circuit_bypass_attempt",
+			"rule_link": "인증 부스의 순서 시스템을 무리하게 강제 개입하면서 이력서 데이터 처리 오류를 일으킨다.",
+			"wants": "전자 부스의 순서 제어반을 강제로 조작해 꼬여버린 이력서 인증 차례를 즉시 확보하고 싶어 한다.",
+			"title": "꼬여버린 대기 순서",
+			"dialogue": [
+				{
+					"text": "대기자 소라가 제어반 배선함을 비틀어 열며 불안한 눈빛으로 당신을 바라보았다.",
+					"speaker": "narrator"
+				},
+				{
+					"text": "당신이 지난번 꽉 막힌 지침을 무시하고 마음 가는 대로 서류 창구를 개방했던 그 사람이죠?",
+					"speaker": "sora"
+				},
+				{
+					"speaker": "sora",
+					"text": "지금 순서가 꼬여서 이력서를 제출할 수 없어요! 제어반 전선을 잘라 제 순서를 먼저 끌어와 주세요!"
+				},
+				{
+					"speaker": "kai",
+					"text": "제어반을 함부로 합선시키면 인증 부스 내부 데이터가 완전히 꼬여버릴 거예요!"
+				}
+			],
+			"choices": [
+				{
+					"text": "소라가 요청한 대로 순서 제어반의 배선을 단선시켜 차례를 강제로 앞당긴다.",
+					"mbti": "EP",
+					"reward": [
+						"attack_up"
+					],
+					"path": "easy",
+					"result": [
+						{
+							"speaker": "narrator",
+							"text": "당신이 배선을 자르자 제어반에서 불꽃이 튀며 소라의 이력서 번호가 대기열 1번으로 떴다."
+						},
+						{
+							"text": "소라는 부스로 뛰어들었지만 주변 구직자들의 이력서 번호가 연쇄 파손되었다.",
+							"speaker": "narrator"
+						},
+						{
+							"text": "순서는 앞당겨졌지만 제어반이 단선되면서 다른 구직자들의 차례까지 날아갔어요...",
+							"speaker": "kai"
+						}
+					],
+					"effects": {
+						"reason": 20,
+						"echo": -10
+					},
+					"flag": {
+						"key": "shorted_control_panel",
+						"boss_text": "합선된 제어반에서 튄 불꽃 때문에 주인공의 다음 스킬 쿨타임이 늘어난다.",
+						"label": "합선된 제어반"
+					}
+				},
+				{
+					"mbti": "TJ",
+					"text": "소라의 손을 제지하고 제어반 배선 회로를 원상복구한 뒤 규정된 차례를 기다리게 한다.",
+					"path": "hard",
+					"effects": {
+						"reason": -20,
+						"echo": 10
+					},
+					"reward": [
+						"defense_up"
+					],
+					"flag": {
+						"label": "복구된 순서 시스템",
+						"key": "restored_sequence",
+						"boss_text": "안정적으로 복구한 대기 순서 데이터를 활용해 적의 방해 공격 배치를 파악한다."
+					},
+					"result": [
+						{
+							"text": "당신은 열린 배선함을 닫고 소라가 망가뜨리려던 순서 제어반을 원위치로 연결했다.",
+							"speaker": "narrator"
+						},
+						{
+							"text": "순서 제어반이 정상 전력을 회복하자 정식 차례표가 안정적으로 출력되었다.",
+							"speaker": "narrator"
+						},
+						{
+							"text": "충동적인 조작을 막아내서 다행이에요! 순서 회로가 정돈되어 시스템이 정상화되었어요.",
+							"speaker": "kai"
+						}
+					]
+				},
+				{
+					"mbti": "EN",
+					"text": "규칙에 매이지 않는 대담한 손놀림으로 우회 연결선만 건드려 소라의 이력서 등록을 안전하게 통과시킨다.",
+					"path": "stat",
+					"result": [
+						{
+							"text": "당신이 우회 단자를 재빠르게 조율하자 손상 없이 소라의 이력서가 승인 열에 들어갔다.",
+							"speaker": "narrator"
+						},
+						{
+							"speaker": "narrator",
+							"text": "소라는 감탄하며 부스로 들어가 안전하게 인증 등록을 마쳤다."
+						},
+						{
+							"text": "와, 전혀 위험하지 않은 우회로를 바로 찾아내시다니 정말 대단해요!",
+							"speaker": "kai"
+						}
+					],
+					"effects": {
+						"reason": 30,
+						"echo": 15
+					},
+					"flag": {
+						"label": "우회 접속 기록",
+						"boss_text": "우회 접속 경로를 이용해 적의 차단벽을 통과해 유리한 위치를 선점한다.",
+						"key": "bypass_technique"
+					},
+					"reward": [
+						"move_range_up"
+					]
+				}
+			],
+			"no": 2,
+			"background_tags": [
+				"booth",
+				"control_panel",
+				"spark",
+				"crowd",
+				"tense"
+			],
+			"slot": "D",
+			"kind": "rep",
+			"rep_dir": "reason+"
+		}
+	],
+	"errors": [],
+	"prompt_hash": "bc74426add7f555feb438d43a69ddf984ba90393"
+}

@@ -205,7 +205,18 @@ rewrite_test 시나리오(`output_list/rewrite_test/<id>/scenario_0N.json`)마�
 - 01→05 차례대로 (앞 설계표의 제목·인물을 넘김). 실패하면 뒤 번호는 진행 안 함. webfront 에는 쓰지 않음. 얼굴 풀은 `WEBFRONT_DATA_DIR` 또는 옆 폴더 project-mj-webfront 에서 읽기만 함
 
 ```bash
-npm run gen:cards-seq -- --story=modern_whisperweb_0 --orders=1
-npm run gen:cards-seq -- --story=modern_whisperweb_0 --judge-only   # 기존 카드 채점만
-npm run gen:cards-seq -- --story=modern_whisperweb_0 --fix          # 말투 문제 카드만 다시 + additions 새로
+npm run gen:cards-seq -- --story=modern_evannext_1 --orders=1
+npm run gen:cards-seq -- --story=modern_evannext_1 --judge-only   # 기존 카드 채점만
+npm run gen:cards-seq -- --story=modern_evannext_1 --fix          # 말투 문제 카드만 다시 + additions 새로
 ```
+
+## side_test (방 10개 스토리 + 카드, 1~5화)
+
+> 사람용 전체 설명: [side_test/README.md](src/lib/data/storyarc/side_test/README.md) — 흐름·검사가 바뀌면 함께 갱신할 것
+
+side_test storyarc(`src/lib/data/storyarc/side_test/`)로 한 화를 방 10개(스토리 1·3·5·7·10 / 카드 2·4·6·8 / 휴식 9)로 만든다. 러너 없이 단계별 스크립트 `scripts/side_test/`. 모델 API 를 직접 부름 (dev 서버 필요 없음). `--model=deepseek-flash` 면 DeepSeek (`.env` 의 `DEEPSEEK_API_KEY`).
+- 1_design 설계표 → 2_story 스토리 방 → 3_cards 카드(기본 12 + 평판 카드 칸 B·D·(2화부터)A 6방향씩, 자리표·걸린 자리만 다시) → (선택) 3b_review 채점·고치기 1번 → 3c_additions → 4_play 읽기용 → 5_webfront 넣기
+- 카드 룰(평판 게임, 선택지 path, 표시 점수 등): side_test README 의 "카드 룰"
+- 공통 옵션 `--id`, `--order`(1~5), `--model`. 5단계 `--tab`, `--sid`
+- 출력 `output_list/side_test/<id>/0N/`. webfront: whisperweb → `new_whisperweb` 탭(sid `modern_whisperweb_0_0N`), evannext → `side_test_evannext_1`
+- 예전 시도 `tmp/side10`·`tmp/room10` 은 삭제 (커밋 d58c760 에 있음)

@@ -1,0 +1,318 @@
+{
+	"cards": [
+		{
+			"card_id": "card_01_bench_seat_guard",
+			"asks": "덕순이 벤치에 잠깐 앉아 자리를 지켜 달라고 부탁한다(번호표를 잃어버린 손자 자리).",
+			"choices_read": [
+				{
+					"path": "easy",
+					"target": "덕순(의 손자 번호표·벤치)",
+					"does": "손자 번호표를 접수대에 대신 넣고 벤치를 지킨다",
+					"reaction_assumes": "번호표를 넣고 자리를 지켜 주자 덕순이 벤치를 비켜 주며 앉으라고 한다"
+				},
+				{
+					"path": "hard",
+					"target": "덕순",
+					"does": "번호표 분실은 본인 책임이라 말하고 자리를 비켜 달라 한다",
+					"reaction_assumes": "매정하다는 반응 — 자리를 요구받고 물러난 것에 대한 반응"
+				},
+				{
+					"path": "gold",
+					"target": "덕순",
+					"does": "만 원을 주고 번호표 재발급 창구 앞자리를 산다",
+					"reaction_assumes": "만 원을 받고 손자 번호표를 다시 뽑겠다고 고마워한다"
+				}
+			],
+			"checks": [
+				{
+					"item": "S1",
+					"pass": true
+				},
+				{
+					"item": "S2",
+					"pass": true
+				},
+				{
+					"item": "S3",
+					"pass": true
+				},
+				{
+					"item": "S4",
+					"pass": false,
+					"quote": "이 자리, 우리 손자 자리예요. 번호표는 잃어버렸고, 창구는 곧 닫아요.",
+					"problem": "덕순이 자기 벤치를 지켜 달라면서, 정작 선택지(easy)는 손자 번호표를 대신 넣는 일까지 포함하는데 대사에는 그 부탁이 없어 easy 선택지의 '번호표 대신 접수'가 인물 부탁 밖 행동으로 튄다."
+				},
+				{
+					"item": "S5",
+					"pass": false,
+					"quote": "앉아요, 앉아. 창구 닫기까지 아직 십 분 있으니까.",
+					"problem": "event가 campsite(쉬기)인데 event_intro는 벤치에 앉으라는 말뿐이고, 카드가 '창구 닫기까지 십 분'이라는 짧은 틈인데 campsite 휴식이 장면 안에서 실제로 벌어지지 않는다."
+				},
+				{
+					"item": "S6",
+					"pass": true
+				}
+			]
+		},
+		{
+			"card_id": "card_01_hayeon_resume_favor",
+			"asks": "하연이 자기 접수표에 경력 한 줄을 대신 적어 창구에 넣어 달라고 부탁한다.",
+			"choices_read": [
+				{
+					"path": "easy",
+					"target": "하연의 접수표",
+					"does": "경력 한 줄을 대신 적어 창구에 넣는다",
+					"reaction_assumes": "순번이 당겨지고 하연이 화면의 점을 알려 준다"
+				},
+				{
+					"path": "hard",
+					"target": "하연",
+					"does": "접수표를 돌려주고 자기 순번으로 다시 서게 한다",
+					"reaction_assumes": "됐다며 혼자 서겠다고 물러난다"
+				},
+				{
+					"path": "lock",
+					"target": "하연의 접수표",
+					"does": "직접 경력을 한 줄 늘려 쓴다",
+					"reaction_assumes": "필체가 다르다는 반응 — 대신 써 넣은 행동에 대한 반응"
+				}
+			],
+			"checks": [
+				{
+					"item": "S1",
+					"pass": true
+				},
+				{
+					"item": "S2",
+					"pass": true
+				},
+				{
+					"item": "S3",
+					"pass": true
+				},
+				{
+					"item": "S4",
+					"pass": true
+				},
+				{
+					"item": "S5",
+					"pass": true
+				},
+				{
+					"item": "S6",
+					"pass": true
+				}
+			]
+		},
+		{
+			"card_id": "card_01_queue_jumper_standoff",
+			"asks": "만태가 자기 순번이 맞다며 증인을 세워 달라는 식으로 버티고, 뚜렷한 부탁은 없다.",
+			"choices_read": [
+				{
+					"path": "easy",
+					"target": "만태의 접수표",
+					"does": "대신 창구에 밀어 넣어 두 칸 앞 순번을 만들어 준다",
+					"reaction_assumes": "도장이 찍혀 순번이 당겨지고 만태가 고맙다고 한다"
+				},
+				{
+					"path": "hard",
+					"target": "만태",
+					"does": "어깨를 잡고 줄 맨 끝으로 끌어다 세운다",
+					"reaction_assumes": "손 대지 말라며 접수표 책임을 묻는다"
+				},
+				{
+					"path": "fun",
+					"target": "만태",
+					"does": "줄 맨 앞자리를 걸고 접수표 순서 맞히기 내기를 한다",
+					"reaction_assumes": "만태가 줄 앞쪽을 가리키고 ��선 사람이 등장한다"
+				}
+			],
+			"checks": [
+				{
+					"item": "S1",
+					"pass": true
+				},
+				{
+					"item": "S2",
+					"pass": false,
+					"quote": "증인 불러요. 이 줄에서 내 앞에 있던 사람 손 들어 봐요.",
+					"problem": "만태가 주인공에게 구체적으로 무엇을 해 달라는 부탁이 없는데, 선택지들이 각각 순번 조작·끌어내기·내기로 제각각이라 '부탁에 대한 응답'이 성립하지 않는다."
+				},
+				{
+					"item": "S3",
+					"pass": true
+				},
+				{
+					"item": "S4",
+					"pass": true
+				},
+				{
+					"item": "S5",
+					"pass": false,
+					"quote": "만태가 손을 들어 줄 앞쪽을 가리켰다. 그쪽에서 검은 우산을 든 사람이 걸어 나온다.",
+					"problem": "fun 선택지의 event가 meet_stranger인데, event_intro에서 낯선 사람이 {actor}에게 1:1 대결을 거는 장면이 없이 그냥 걸어 나오기만 하고, 이어지는 fight/avoid 선택지도 event_intro 밖에 따로 붙어 장면이 이어지지 않는다."
+				},
+				{
+					"item": "S6",
+					"pass": true
+				}
+			]
+		},
+		{
+			"card_id": "card_01_jinsu_quota_favor",
+			"asks": "진수가 실적 한 장을 채우게 서류를 하나 더 넣어 달라고(대신 써 주겠다며) 부탁한다.",
+			"choices_read": [
+				{
+					"path": "easy",
+					"target": "진수(의 실적)",
+					"does": "대기자 서류 몇 장을 받아 실적을 채워 준다",
+					"reaction_assumes": "전광판이 초록이 되고 진수가 뒷문 통로를 알려 준다"
+				},
+				{
+					"path": "hard",
+					"target": "진수",
+					"does": "실적은 자기 몫이라 말하고 서류를 돌려준다",
+					"reaction_assumes": "야근이라며 원대로 하라고 한다"
+				},
+				{
+					"path": "fun",
+					"target": "진수",
+					"does": "접수대 서류를 자기 이력서와 바꿔 보자고 제안한다",
+					"reaction_assumes": "제 이름으로 접수하시겠냐고 되묻는다"
+				}
+			],
+			"checks": [
+				{
+					"item": "S1",
+					"pass": true
+				},
+				{
+					"item": "S2",
+					"pass": true
+				},
+				{
+					"item": "S3",
+					"pass": true
+				},
+				{
+					"item": "S4",
+					"pass": true
+				},
+				{
+					"item": "S5",
+					"pass": true
+				},
+				{
+					"item": "S6",
+					"pass": true
+				}
+			]
+		},
+		{
+			"card_id": "card_01_nameplate_slot_bet",
+			"asks": "상필이 다음 명패에 자기 이름이 찍히는지 만 원을 걸고 내기하자고 한다.",
+			"choices_read": [
+				{
+					"path": "easy",
+					"target": "상필의 명패",
+					"does": "접수대에 다시 넣어 자기 이름으로 찍히게 한다",
+					"reaction_assumes": "이름이 찍혀 나오고 점이 생겨 상필이 묻는다"
+				},
+				{
+					"path": "hard",
+					"target": "상필",
+					"does": "명패는 기록대로 나온다며 출력기 앞을 비키게 한다",
+					"reaction_assumes": "기록에 내 이름이 없냐고 되묻는다"
+				},
+				{
+					"path": "gold",
+					"target": "상필",
+					"does": "만 원을 걸고 다음 명패에 상필 이름이 찍히는지 내기한다",
+					"reaction_assumes": "상필이 명패 세 장을 뒤집어 늘어놓고 돈을 얹는다"
+				}
+			],
+			"checks": [
+				{
+					"item": "S1",
+					"pass": true
+				},
+				{
+					"item": "S2",
+					"pass": true
+				},
+				{
+					"item": "S3",
+					"pass": true
+				},
+				{
+					"item": "S4",
+					"pass": true
+				},
+				{
+					"item": "S5",
+					"pass": true
+				},
+				{
+					"item": "S6",
+					"pass": true
+				}
+			]
+		},
+		{
+			"card_id": "card_01_rink_ink_refill",
+			"asks": "유정이 첫 장 실수를 지우고 두 번째 장만 접수되게 해 달라고(어떻게 하면 되는지) 묻는다.",
+			"choices_read": [
+				{
+					"path": "easy",
+					"target": "유정의 두 번째 접수표",
+					"does": "먼저 창구에 넣어 잘못 적은 장을 밀어낸다",
+					"reaction_assumes": "첫 장이 걸러지고 유정이 잘못 적은 경력이 사라졌다고 한다"
+				},
+				{
+					"path": "hard",
+					"target": "유정",
+					"does": "한 장만 유효하다고 설명하고 첫 장을 고쳐 쓰게 한다",
+					"reaction_assumes": "마감까지 십 분이라며 당황한다"
+				},
+				{
+					"path": "lock",
+					"target": "유정의 두 접수표",
+					"does": "나란히 놓고 다른 점을 하나씩 짚어 준다",
+					"reaction_assumes": "한 칸만 다르다며 고개를 끄덕인다"
+				},
+				{
+					"path": "gold",
+					"target": "유정",
+					"does": "만 원을 주고 복사기에서 접수표를 새로 뽑게 한다",
+					"reaction_assumes": "새 접수표가 나오고 유정이 두 장을 찢는다"
+				}
+			],
+			"checks": [
+				{
+					"item": "S1",
+					"pass": true
+				},
+				{
+					"item": "S2",
+					"pass": true
+				},
+				{
+					"item": "S3",
+					"pass": true
+				},
+				{
+					"item": "S4",
+					"pass": true
+				},
+				{
+					"item": "S5",
+					"pass": true
+				},
+				{
+					"item": "S6",
+					"pass": true
+				}
+			]
+		}
+	]
+}

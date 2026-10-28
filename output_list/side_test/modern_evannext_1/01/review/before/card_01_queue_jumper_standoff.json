@@ -1,0 +1,238 @@
+{
+	"id": "card_01_queue_jumper_standoff",
+	"kind": "normal",
+	"title": {
+		"korean": "새치기 한 칸"
+	},
+	"intensity": "high",
+	"after_story": 1,
+	"before_story": 3,
+	"background_tags": [
+		"waiting_hall",
+		"afternoon",
+		"fluorescent",
+		"queue",
+		"noisy"
+	],
+	"dialogue": [
+		{
+			"speaker": "narrator",
+			"content": {
+				"korean": "만태가 줄 중간에 몸을 비스듬히 끼워 넣고 접수표를 가슴에 붙였다. 뒤에 선 사람들이 발끝만 본다."
+			}
+		},
+		{
+			"speaker": "mangtae",
+			"content": {
+				"korean": "저 여기 있었어요. 접수표에도 이 순서로 찍혀 있다니까요."
+			}
+		},
+		{
+			"speaker": "lin",
+			"content": {
+				"korean": "방금 뒤에서 오셨잖아요. 저, 앞에서 봤어요."
+			}
+		},
+		{
+			"speaker": "mangtae",
+			"content": {
+				"korean": "증인 불러요. 이 줄에서 내 앞에 있던 사람 손 들어 봐요."
+			}
+		}
+	],
+	"forced": [
+		{
+			"text": {
+				"korean": "{actor}이(가) 만태의 접수표를 빼앗아 찢어 버린다"
+			},
+			"path": "forced",
+			"mbti": "TJ",
+			"require": {
+				"mbti": "TJ"
+			},
+			"chance": 0.3,
+			"effects": {
+				"reason": 25,
+				"community": -10,
+				"echo": -5
+			},
+			"reward": [
+				"attack_up"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "만태의 접수표가 두 동강 났다. {actor}이(가) 반쪽을 창구에 밀어 넣고 나머지를 구겨 쥐었다."
+					}
+				},
+				{
+					"speaker": "mangtae",
+					"content": {
+						"korean": "내 접수표! 그거 다시 못 뽑아요, 오늘은!"
+					}
+				},
+				{
+					"speaker": "lin",
+					"content": {
+						"korean": "찢어진 접수표도 접수는 되네요. 순번이 세 칸 뒤로 갔어요."
+					}
+				}
+			]
+		}
+	],
+	"choices": [
+		{
+			"text": {
+				"korean": "만태의 접수표를 대신 창구에 밀어 넣어 두 칸 앞 순번을 만들어 준다"
+			},
+			"path": "easy",
+			"mbti": "ST",
+			"effects": {
+				"reason": -15,
+				"gold": 70
+			},
+			"reward": [
+				"move_range_up"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "창구 직원이 접수표를 한 번 훑고 도장을 찍었다. 만태의 순번이 두 칸 당겨졌다."
+					}
+				},
+				{
+					"speaker": "mangtae",
+					"content": {
+						"korean": "이거야. 이제 아무도 뭐라 못 해요. 고맙다니까."
+					}
+				},
+				{
+					"speaker": "lin",
+					"content": {
+						"korean": "저 사람 뒤에 있던 분들이 다 한 칸씩 밀렸어요. 방금."
+					}
+				}
+			]
+		},
+		{
+			"text": {
+				"korean": "만태의 어깨를 잡고 줄 맨 끝으로 끌어다 세운다"
+			},
+			"path": "hard",
+			"mbti": "TJ",
+			"effects": {
+				"reason": 20,
+				"echo": 10
+			},
+			"reward": [
+				"attack_up"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "mangtae",
+					"content": {
+						"korean": "손 대지 마세요! 접수표 구겨지면 당신이 책임져요."
+					}
+				},
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "만태가 줄 끝으로 걸어갔다. 지나가며 접수표를 손바닥으로 세 번 쳤다."
+					}
+				},
+				{
+					"speaker": "lin",
+					"content": {
+						"korean": "고맙습니다. 근데 저 사람, 접수표를 계속 만지작거리네요."
+					}
+				}
+			]
+		},
+		{
+			"text": {
+				"korean": "만태에게 줄 맨 앞자리를 걸고 접수표 순서 맞히기 내기를 한다"
+			},
+			"path": "fun",
+			"mbti": "EP",
+			"effects": {
+				"reason": 25,
+				"echo": -5
+			},
+			"seed": null,
+			"result": [],
+			"event": "meet_stranger",
+			"event_intro": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "만태가 손을 들어 줄 앞쪽을 가리켰다. 그쪽에서 검은 우산을 든 사람이 걸어 나온다."
+					}
+				},
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "“이 줄에서 접수표 순서를 바꾸는 사람이 있다고 들었습니다. 제 접수표가 먼저인데요.”"
+					}
+				}
+			],
+			"event_options": {
+				"fight": {
+					"text": {
+						"korean": "{actor}이(가) 접수표를 든 낯선 사람과 줄 앞에서 맞선다"
+					},
+					"win": [
+						{
+							"speaker": "narrator",
+							"content": {
+								"korean": "낯선 사람이 접수표를 도로 접어 주머니에 넣고 줄 뒤로 물러났다."
+							}
+						}
+					],
+					"lose": [
+						{
+							"speaker": "narrator",
+							"content": {
+								"korean": "낯선 사람이 접수표를 빼앗아 줄 맨 앞에 꽂고 갔다. 당신은 두 칸 뒤에 섰다."
+							}
+						}
+					]
+				},
+				"avoid": {
+					"text": {
+						"korean": "낯선 사람에게 줄 앞자리를 내주고 뒤로 물러선다"
+					},
+					"result": [
+						{
+							"speaker": "narrator",
+							"content": {
+								"korean": "낯선 사람이 앞자리에 서고, 당신의 접수표에 옅은 표시가 하나 찍혔다."
+							}
+						}
+					],
+					"reward": [
+						"attack_down"
+					]
+				}
+			}
+		}
+	],
+	"_side": {
+		"slot": "A",
+		"person": {
+			"id": "mangtae",
+			"name": "만태",
+			"role": "줄 중간에 끼어든 대기자"
+		},
+		"wants": "아무도 못 본 척하고 두 칸 앞 순번을 차지한 채 버티고 싶다",
+		"rule_link": "접수 기록에 남은 순서가 곧 줄의 순서라, 앞사람 기록을 밀어내면 내 순번이 당겨진다",
+		"events": {
+			"fun": "만태가 내기에서 이기려고 줄 앞을 지키는 사람을 불러 세웠다. 그 사람이 접수표를 들고 당신 앞을 막는다"
+		},
+		"flags": {}
+	}
+}

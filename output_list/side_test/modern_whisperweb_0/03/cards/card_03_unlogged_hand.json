@@ -1,0 +1,223 @@
+{
+	"id": "card_03_unlogged_hand",
+	"kind": "rep",
+	"title": {
+		"korean": "기록 없는 손"
+	},
+	"intensity": "calm",
+	"after_story": 1,
+	"before_story": 3,
+	"condition": {
+		"leaning": "reason+",
+		"among": [
+			"fighting-",
+			"fighting+",
+			"community-",
+			"community+",
+			"reason-",
+			"reason+"
+		],
+		"min": 20
+	},
+	"urgency": 8,
+	"leaning": "reason+",
+	"background_tags": [
+		"pipe_room",
+		"afternoon",
+		"amber_lamp",
+		"one_worker",
+		"restless"
+	],
+	"dialogue": [
+		{
+			"speaker": "night_tinkerer",
+			"content": {
+				"korean": "당신이죠? 규정엔 안 적혀 있는 방법으로 일 해치운다는 사람."
+			}
+		},
+		{
+			"speaker": "narrator",
+			"content": {
+				"korean": "그는 봉인 테이프 위에 재를 톡톡 털어 번호를 흐리게 만들어 두었다."
+			}
+		},
+		{
+			"speaker": "night_tinkerer",
+			"content": {
+				"korean": "이렇게 해두면 누가 만졌는지 아무도 몰라요. 해볼래요?"
+			}
+		},
+		{
+			"speaker": "kai",
+			"content": {
+				"korean": "테이프에 재를 뿌리면 나중에 붙일 때 안 붙어요."
+			}
+		},
+		{
+			"speaker": "night_tinkerer",
+			"content": {
+				"korean": "그러니까 이게 재밌는 거지. 자, 손 내밀어 봐요."
+			}
+		}
+	],
+	"choices": [
+		{
+			"text": {
+				"korean": "기술자를 따라 봉인 테이프를 재로 덮고 밸브 손잡이를 돌려 본다"
+			},
+			"path": "easy",
+			"mbti": "EP",
+			"flag": "ash_tape",
+			"effects": {
+				"reason": 20,
+				"fighting": 10
+			},
+			"reward": [
+				"move_range_up"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "손잡이가 반 바퀴 돌자 배관 안쪽에서 물소리가 가까워졌다."
+					}
+				},
+				{
+					"speaker": "night_tinkerer",
+					"content": {
+						"korean": "봐요, 아무도 몰라요. 이게 자유라는 거예요."
+					}
+				},
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "테이프 위 재가 손자국 모양으로 지워져 있었다."
+					}
+				}
+			]
+		},
+		{
+			"text": {
+				"korean": "테이프의 재를 닦아내고 번호를 다시 또렷하게 쓴다"
+			},
+			"path": "hard",
+			"mbti": "TJ",
+			"flag": "clean_number",
+			"effects": {
+				"reason": -20,
+				"community": 10,
+				"echo": 5
+			},
+			"reward": [
+				"intelligence_up"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "night_tinkerer",
+					"content": {
+						"korean": "쳇, 재미없게. 그래도 번호는 살았네요."
+					}
+				},
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "닦아낸 자리에 번호가 다시 검게 드러났다."
+					}
+				},
+				{
+					"speaker": "kai",
+					"content": {
+						"korean": "이제 누가 봐도 봉인이 온전해 보여요."
+					}
+				}
+			]
+		},
+		{
+			"text": {
+				"korean": "기술자에게 재 봉투를 거두고 손잡이 옆에 서 있으라고 한다"
+			},
+			"path": "stat",
+			"mbti": "FP",
+			"require": {
+				"stat": "reason",
+				"op": ">=",
+				"value": 40
+			},
+			"flag": "tinkerer_beside",
+			"effects": {
+				"reason": 20,
+				"fighting": 15
+			},
+			"reward": [
+				"stun"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "night_tinkerer",
+					"content": {
+						"korean": "당신이 그렇게 말하면... 알겠어요, 손 뗄게요."
+					}
+				},
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "그는 재 봉투를 주머니에 넣고 손잡이 옆에 나란히 섰다."
+					}
+				},
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "밸브 손잡이가 아직 미지근하게 데워져 있었다."
+					}
+				}
+			]
+		}
+	],
+	"_side": {
+		"slot": "A",
+		"person": {
+			"id": "night_tinkerer",
+			"name": "몰래 손보는 기술자",
+			"role": "야간 정비 담당"
+		},
+		"wants": "절차 없이 밸브를 손봐 온 자신의 방식을 인정받고 싶어 하며, 주인공에게 같이 손대자고 손짓한다.",
+		"rule_link": "절차 없이 밸브를 만지면 데이터 스크린 조각에 찍히는 봉인 시각이 실제와 어긋난다.",
+		"rep": "reason+",
+		"events": {},
+		"flags": {
+			"ash_tape": {
+				"kind": "bad",
+				"boss_penalty": -1,
+				"label": {
+					"korean": "재 묻은 테이프"
+				},
+				"boss_line": {
+					"korean": "재 묻은 테이프를 보며 봉인 시각이 맞지 않는다고 항의한다."
+				}
+			},
+			"clean_number": {
+				"kind": "good",
+				"boss_penalty": 1,
+				"label": {
+					"korean": "또렷한 번호"
+				},
+				"boss_choice": {
+					"korean": "또렷한 봉인 번호를 가리키며 손대지 않았음을 밝힌다."
+				}
+			},
+			"tinkerer_beside": {
+				"kind": "good",
+				"boss_penalty": 2,
+				"label": {
+					"korean": "손잡이 옆 기술자"
+				},
+				"boss_choice": {
+					"korean": "손잡이 옆에 선 기술자에게 밸브 상태를 확인시킨다."
+				}
+			}
+		}
+	}
+}

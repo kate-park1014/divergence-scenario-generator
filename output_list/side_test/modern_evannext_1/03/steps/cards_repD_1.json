@@ -1,0 +1,305 @@
+{
+	"cards": [
+		{
+			"background_tags": [
+				"booth",
+				"waiting_room",
+				"dim_light",
+				"silent_crowd",
+				"urgent"
+			],
+			"title": "멈추지 않는 도장",
+			"dialogue": [
+				{
+					"speaker": "narrator",
+					"text": "민호가 떨리는 손으로 전자 인증 도장을 쥔 채 공용 인증부스 콘솔로 들어간다."
+				},
+				{
+					"speaker": "minho",
+					"text": "당신이 방해물은 전부 힘으로 치워 버린다던 그 구직자군요..."
+				},
+				{
+					"speaker": "minho",
+					"text": "목소리가 안 나와도 상관없습니다! 이 도장만 눌러서 이력서 인증 절차를 마치면 됩니다!"
+				},
+				{
+					"speaker": "kai",
+					"text": "잠시만요! 기계가 소리를 빨아들이고 있어요! 여기서 도장을 더 누르면 완전히 목소리가 묶여 버린다고요!"
+				},
+				{
+					"text": "목소리가 나오지 않더라도 내 이력서 제출이 먼저야!",
+					"speaker": "minho"
+				}
+			],
+			"wants": "소리를 잃더라도 마지막 인증 도장을 찍어 이력서를 완벽히 등록하려 한다.",
+			"key": "stamp_overdrive",
+			"choices": [
+				{
+					"text": "민호의 전자 인증 도장을 억지로 빼앗아 이력서 인증을 강제로 중단한다.",
+					"reward": [
+						"attack_up"
+					],
+					"flag": {
+						"boss_text": "인증부스의 과부하 스파크가 튀어 시야가 가려지고 장비가 손상된다.",
+						"label": "강제 중단",
+						"key": "forced_stamp_stop"
+					},
+					"mbti": "TJ",
+					"result": [
+						{
+							"speaker": "narrator",
+							"text": "당신이 거칠게 전자 인증 도장을 빼앗아 콘솔 바닥으로 던져 버렸다."
+						},
+						{
+							"speaker": "kai",
+							"text": "거친 방식이었지만 소리가 더 빼앗기는 건 막았어요! 하지만 기계가 폭주하기 시작했어요."
+						}
+					],
+					"effects": {
+						"echo": -5,
+						"fighting": -20
+					},
+					"path": "easy"
+				},
+				{
+					"result": [
+						{
+							"text": "전기 불꽃이 튀는 도장 옆의 안전 밸브를 손으로 움켜잡아 전압을 빼냈다.",
+							"speaker": "narrator"
+						},
+						{
+							"text": "손에 화상을 입으셨잖아요! 그래도 부스 내부의 과부하 전력 밸브를 조절해 냈군요.",
+							"speaker": "kai"
+						}
+					],
+					"mbti": "NF",
+					"effects": {
+						"fighting": 20,
+						"echo": 10
+					},
+					"path": "hard",
+					"text": "민호 대신 소리 빼앗김을 각오하고 전자 인증 도장의 안전 밸브를 잡아 차단한다.",
+					"flag": {
+						"label": "밸브 차단",
+						"key": "valve_controlled",
+						"boss_text": "안전 밸브를 확보해 인증 시스템의 비상 가동을 멈추게 만든다."
+					},
+					"reward": [
+						"shield"
+					]
+				},
+				{
+					"reward": [
+						"stun"
+					],
+					"text": "거친 위압감으로 민호와 주변 구직자들을 한 번에 물러서게 만든다.",
+					"flag": {
+						"label": "군중 제압",
+						"boss_text": "주변 구직자들이 당신의 기세에 밀려 무리한 인증 시도를 즉시 멈춘다.",
+						"key": "intimidating_presence"
+					},
+					"effects": {
+						"echo": 5,
+						"fighting": -30
+					},
+					"mbti": "EP",
+					"result": [
+						{
+							"speaker": "narrator",
+							"text": "당신이 차가운 눈빛으로 서슬 퍼렇게 쏘아보자 민호가 도장을 쥔 채 굳어버렸다."
+						},
+						{
+							"text": "당신의 기세에 눌려 다들 손을 떼었군요. 서슬 퍼런 압도감이 대기실을 지배하네요.",
+							"speaker": "kai"
+						}
+					],
+					"path": "stat"
+				},
+				{
+					"result": [
+						{
+							"speaker": "narrator",
+							"text": "당신이 민호의 이력서 뒷면에 가짜 합격 도장을 찍어 부스 바깥으로 던졌다."
+						},
+						{
+							"text": "어라? 민호 씨가 도장이 찍힌 이력서를 보고 기뻐하며 부스 밖으로 달려나가네요!",
+							"speaker": "kai"
+						}
+					],
+					"text": "전자 인증 도장 대신 민호의 이력서 뒷면에 장난감 도장을 찍어 준다.",
+					"path": "fun",
+					"reward": [
+						"cooldown_reset"
+					],
+					"effects": {
+						"gold": 50,
+						"reason": -25,
+						"echo": 10
+					},
+					"mbti": "SP"
+				}
+			],
+			"rule_link": "전자 인증 도장을 누를 때마다 이력서의 존재 정보가 왜곡되어 소리가 소멸하는 규칙.",
+			"person": {
+				"name": "민호",
+				"id": "minho",
+				"role": "구직자"
+			},
+			"no": 1,
+			"slot": "D",
+			"kind": "rep",
+			"rep_dir": "fighting-"
+		},
+		{
+			"key": "silent_sacrifice",
+			"person": {
+				"name": "소라",
+				"role": "대기자",
+				"id": "sora"
+			},
+			"dialogue": [
+				{
+					"speaker": "narrator",
+					"text": "소라가 붉게 과열된 인증부스 앞에서 소리를 잃은 이들의 이력서 뭉치를 안고 있다."
+				},
+				{
+					"text": "남들을 가리지 않고 항상 먼저 손을 내밀었다던 당신이군요.",
+					"speaker": "sora"
+				},
+				{
+					"speaker": "sora",
+					"text": "제 목소리가 사라지더라도... 이 사람들의 이력서를 대신 인증해야 해요."
+				},
+				{
+					"speaker": "kai",
+					"text": "저 사람 목소리가 이미 가늘어져서 거의 들리지 않아요! 저 많은 이력서를 혼자 인증하려는 건 위험해요!"
+				},
+				{
+					"speaker": "narrator",
+					"text": "소라는 소리 없이 입술만 뻐끔거리며 이력서를 기계 틈으로 밀어 넣는다."
+				}
+			],
+			"no": 2,
+			"rule_link": "합쳐진 단계별 인증이 이력서 소유자의 목소리를 대가로 요구하는 규칙.",
+			"choices": [
+				{
+					"path": "easy",
+					"effects": {
+						"fighting": 20,
+						"echo": 10
+					},
+					"result": [
+						{
+							"speaker": "narrator",
+							"text": "당신이 소라와 함께 이력서 뭉치를 무더기로 기계 슬롯에 쑤셔 넣었다."
+						},
+						{
+							"text": "인증부스가 과열되면서 강한 스파크가 일어나고 있어요! 위험해요!",
+							"speaker": "kai"
+						}
+					],
+					"mbti": "FJ",
+					"flag": {
+						"key": "mass_auth_surge",
+						"label": "인증 과부하",
+						"boss_text": "인증부스의 비상 경보음이 크게 울리며 기계 스파크가 사방으로 튄다."
+					},
+					"reward": [
+						"attack_up"
+					],
+					"text": "소라의 이력서 뭉치를 함께 들어 올려 인증부스 슬롯에 단숨에 집어넣는다."
+				},
+				{
+					"text": "소라를 가로막아 이력서 뭉치를 빼앗고 단독 인증을 멈추도록 만든다.",
+					"effects": {
+						"fighting": -20,
+						"echo": -5
+					},
+					"result": [
+						{
+							"speaker": "narrator",
+							"text": "소라의 손에서 이력서 뭉치를 빼앗아 부스 입구 바깥으로 내던졌다."
+						},
+						{
+							"speaker": "kai",
+							"text": "소라 씨가 눈물을 흘리며 멈춰 섰어요. 하지만 위험한 대신 인증은 일단 저지했네요."
+						}
+					],
+					"flag": {
+						"boss_text": "소라가 넘겨준 이력서 단서를 분석하여 장치의 파괴 위치를 파악한다.",
+						"key": "sora_persuaded",
+						"label": "단독 중단"
+					},
+					"reward": [
+						"intelligence_up"
+					],
+					"mbti": "TP",
+					"path": "hard"
+				},
+				{
+					"path": "stat",
+					"reward": [
+						"heal"
+					],
+					"mbti": "EN",
+					"effects": {
+						"fighting": 30,
+						"echo": 15
+					},
+					"flag": {
+						"key": "coop_power_off",
+						"label": "전원 차단",
+						"boss_text": "사람들과 함께 인증부스 메인 전원을 내려 강력한 전류 방해 장벽을 끈다."
+					},
+					"text": "그동안 쌓은 신뢰로 사람들을 모아 이력서 인증부스의 전원을 다 함께 내려버린다.",
+					"result": [
+						{
+							"text": "당신의 손짓에 구직자들이 일제히 뭉쳐 인증부스의 메인 전원 레버를 내려버렸다.",
+							"speaker": "narrator"
+						},
+						{
+							"text": "당신을 믿는 사람들이 단합했군요! 기계 전원이 끊기며 인증 흡수가 멈췄어요!",
+							"speaker": "kai"
+						}
+					]
+				},
+				{
+					"result": [
+						{
+							"speaker": "narrator",
+							"text": "100 골드를 주고 부스 관리용 기계 셔터를 강제로 내려 입구를 막아 버렸다."
+						},
+						{
+							"speaker": "kai",
+							"text": "돈을 써서 물리적 셔터를 내렸군요! 더 이상 아무도 무리하게 들어가지 못하겠어요."
+						}
+					],
+					"text": "100 골드를 내어 관리용 셔터를 강제로 내려 인증부스 출입구를 즉시 봉쇄하게 한다.",
+					"effects": {
+						"gold": -100,
+						"echo": 5
+					},
+					"mbti": "IS",
+					"reward": [
+						"move_range_up"
+					],
+					"path": "gold"
+				}
+			],
+			"title": "대신 짊어진 인증",
+			"background_tags": [
+				"booth",
+				"waiting_room",
+				"red_glow",
+				"desperate",
+				"choking"
+			],
+			"wants": "남을 위해 소리를 잃은 구직자들의 이력서를 대신 모아 인증을 완료해 주려 한다.",
+			"slot": "D",
+			"kind": "rep",
+			"rep_dir": "fighting+"
+		}
+	],
+	"errors": [],
+	"prompt_hash": "71f9e081517505b02cf577006f4487d44d89cdc6"
+}

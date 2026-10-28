@@ -1,0 +1,254 @@
+{
+	"id": "card_02_clerk_queue_sorting",
+	"kind": "rep",
+	"title": {
+		"korean": "마감 시간과 명단 정렬"
+	},
+	"intensity": "calm",
+	"after_story": 3,
+	"before_story": 5,
+	"condition": {
+		"leaning": "fighting+",
+		"among": [
+			"fighting-",
+			"fighting+",
+			"community-",
+			"community+",
+			"reason-",
+			"reason+"
+		],
+		"min": 20
+	},
+	"urgency": 8,
+	"leaning": "fighting+",
+	"background_tags": [
+		"search_room",
+		"afternoon",
+		"bright",
+		"waiting_line",
+		"busy"
+	],
+	"dialogue": [
+		{
+			"speaker": "narrator",
+			"content": {
+				"korean": "단말기 담당자가 손목시계의 타이머를 초조하게 누르며 다가왔다."
+			}
+		},
+		{
+			"speaker": "clerk",
+			"content": {
+				"korean": "곤란해하는 대기자들에게 선뜻 자기 단말기 이용 순서를 양보하셨다죠?"
+			}
+		},
+		{
+			"speaker": "clerk",
+			"content": {
+				"korean": "출력 마감이 10분 남았는데 줄이 엉켰어요. 명단 이름 정렬을 도와주시겠어요?"
+			}
+		},
+		{
+			"speaker": "nia",
+			"content": {
+				"korean": "저분 혼자서는 마감 시간 안에 명단을 전부 정리하기 어려워 보여요."
+			}
+		}
+	],
+	"choices": [
+		{
+			"text": {
+				"korean": "대기자 명단의 이름 정렬을 순순히 도와주고 담당자에게 보수를 받는다."
+			},
+			"path": "easy",
+			"mbti": "NF",
+			"flag": "helping_hand_clerk",
+			"effects": {
+				"fighting": 20,
+				"gold": 80,
+				"echo": 10
+			},
+			"reward": [
+				"heal"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "담당자의 부탁을 받아 대기자 명단의 이름 정보를 차례대로 정렬했다."
+					}
+				},
+				{
+					"speaker": "clerk",
+					"content": {
+						"korean": "정말 감사합니다! 마감 전에 명단이 정돈되어 출력 작업이 원활해졌어요."
+					}
+				},
+				{
+					"speaker": "nia",
+					"content": {
+						"korean": "사람들의 이력서 이름이 착착 정렬되니 마음이 한결 편해지네요."
+					}
+				}
+			]
+		},
+		{
+			"text": {
+				"korean": "당장 내 단말기 작업이 우선이라며 명단 정렬 요청을 거절한다."
+			},
+			"path": "hard",
+			"mbti": "IJ",
+			"flag": "strict_prioritization",
+			"effects": {
+				"fighting": -15,
+				"echo": -10,
+				"community": -15
+			},
+			"reward": [
+				"intelligence_up"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "출력 마감 시각이 얼마 안 남았다는 담당자의 요청을 차갑게 외면했다."
+					}
+				},
+				{
+					"speaker": "clerk",
+					"content": {
+						"korean": "하긴, 자기 볼일이 급한 상황이니 어쩔 수 없겠죠… 휴, 어쩌지."
+					}
+				},
+				{
+					"speaker": "nia",
+					"content": {
+						"korean": "지금은 우리 작업에 집중하는 게 맞지만, 조금 아쉽기도 하네요."
+					}
+				}
+			]
+		},
+		{
+			"text": {
+				"korean": "주변 대기자들을 모아 협력 체계를 구축하고 명단을 일시에 정리한다."
+			},
+			"path": "stat",
+			"mbti": "SF",
+			"require": {
+				"stat": "fighting",
+				"op": ">=",
+				"value": 40
+			},
+			"flag": "mass_cooperation",
+			"effects": {
+				"fighting": 30,
+				"community": 20,
+				"echo": 15
+			},
+			"reward": [
+				"shield"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "대기자들을 다독여 각자 이름을 입력하게 하고 전체 정렬을 완료했다."
+					}
+				},
+				{
+					"speaker": "clerk",
+					"content": {
+						"korean": "순식간에 대기선이 정돈되다니! 당신의 리더십에 정말 감탄했습니다."
+					}
+				},
+				{
+					"speaker": "nia",
+					"content": {
+						"korean": "모두가 힘을 모으니 그 많던 명단이 순식간에 정렬되었어요!"
+					}
+				}
+			]
+		},
+		{
+			"text": {
+				"korean": "타이머 시계를 빼앗아 누르고 단말기 출력 버튼을 빠르게 연타한다."
+			},
+			"path": "fun",
+			"mbti": "EN",
+			"effects": {
+				"gold": 50,
+				"reason": -25
+			},
+			"reward": [
+				"cooldown_reset"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "담당자의 손목시계 타이머를 누른 뒤 단말기 출력 버튼을 미친 듯 연타했다."
+					}
+				},
+				{
+					"speaker": "clerk",
+					"content": {
+						"korean": "어어? 시계 버튼을 왜 누르죠? 그런데 명단이 얼떨결에 다 출력됐네요?"
+					}
+				},
+				{
+					"speaker": "nia",
+					"content": {
+						"korean": "시계 시간이 멈춘 건 아니지만, 정렬 출력이 엄청나게 빨라졌어요!"
+					}
+				}
+			]
+		}
+	],
+	"_side": {
+		"slot": "B",
+		"person": {
+			"name": "단말기 담당자",
+			"role": "검색실 관리 직원",
+			"id": "clerk"
+		},
+		"wants": "주인공의 친절한 평판을 믿고 대기자 명단의 이름 정보 정렬을 부탁하려 한다.",
+		"rule_link": "엉킨 대기자 명단의 이름 정보 정렬 작업을 도와줄지 결정한다.",
+		"rep": "fighting+",
+		"events": {},
+		"flags": {
+			"helping_hand_clerk": {
+				"kind": "bad",
+				"boss_penalty": -1,
+				"label": {
+					"korean": "대기자 명단 수동 정렬"
+				},
+				"boss_line": {
+					"korean": "검색실 직원의 과중한 업무를 떠안아 보스 방 전투 준비 시간이 줄어든다."
+				}
+			},
+			"strict_prioritization": {
+				"kind": "good",
+				"boss_penalty": 1,
+				"label": {
+					"korean": "자신 작업 우선"
+				},
+				"boss_choice": {
+					"korean": "자신의 단말기 작업에만 집중하여 정밀 분석 데이터를 미리 확보한다."
+				}
+			},
+			"mass_cooperation": {
+				"kind": "good",
+				"boss_penalty": 2,
+				"label": {
+					"korean": "대기자 협력 체계"
+				},
+				"boss_choice": {
+					"korean": "대기자들의 협조를 얻어 단말기 네트워크 지원을 요청한다."
+				}
+			}
+		}
+	}
+}

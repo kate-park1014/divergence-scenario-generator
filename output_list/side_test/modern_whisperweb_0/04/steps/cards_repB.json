@@ -1,0 +1,918 @@
+{
+	"cards": [
+		{
+			"no": 1,
+			"key": "cracked_wall",
+			"title": "부품 위의 낙서",
+			"person": {
+				"id": "goro",
+				"name": "고로",
+				"role": "처리장 하역 인부"
+			},
+			"wants": "자기 몫 데이터 부품을 빼앗긴 하역 인부들이 힘으로 되찾으려 하자, 당신에게 앞장서서 부품을 되찾아달라고 한다.",
+			"rule_link": "분해된 출처 장치에서 나온 깨끗한 데이터 부품을 두고 벌어지는 실랑이 — 그 부품이 곧 데이터 스크린 조각으로 이어진다.",
+			"dialogue": [
+				{
+					"speaker": "goro",
+					"text": "당신이 처리장 기계를 맨손으로 뜯어냈다는 그 사람이죠? 부품 좀 나눠 받으러 왔어요."
+				},
+				{
+					"speaker": "dax",
+					"text": "또 시작이네, 내 흑역사는 끝났는데 왜 자꾸 사람이 몰려오지?"
+				},
+				{
+					"speaker": "goro",
+					"text": "하역조 몫으로 떼어둔 부품을 누가 슬쩍 가져갔어요. 이 손 놓으면 다음 달 임금이 없어요."
+				},
+				{
+					"speaker": "narrator",
+					"text": "고로가 낡은 작업 장갑을 벗어 던지자 등 뒤로 인부 셋이 우두커니 서 있었다."
+				}
+			],
+			"choices": [
+				{
+					"path": "easy",
+					"text": "인부들을 앞세워 부품을 가져간 자를 찾아내 붙잡는다",
+					"mbti": "TJ",
+					"effects": {
+						"fighting": 20,
+						"echo": 5
+					},
+					"reward": [
+						"attack_up"
+					],
+					"flag": {
+						"key": "crew_at_side",
+						"label": "하역조",
+						"boss_text": "고로와 하역 인부들이 뒤에서 길을 열며 앞을 가로막는 것을 밀어낸다."
+					},
+					"result": [
+						{
+							"speaker": "goro",
+							"text": "역시 소문대로군요. 이 정도면 우리도 따라갑니다."
+						},
+						{
+							"speaker": "narrator",
+							"text": "부품을 챙긴 자가 인부들에게 둘러싸여 부품을 내려놓았다."
+						},
+						{
+							"speaker": "dax",
+							"text": "사람 부르는 솜씨는 확실하네요. 근데 그 부품, 조각이 하나 모자라요."
+						}
+					]
+				},
+				{
+					"path": "hard",
+					"text": "인부들 대신 당신이 부품 값을 털어 보상하고 자리를 뜬다",
+					"mbti": "FP",
+					"effects": {
+						"fighting": -15,
+						"community": 15
+					},
+					"reward": [
+						"defense_up"
+					],
+					"flag": {
+						"key": "crew_at_side",
+						"label": "하역조",
+						"boss_text": "고로와 하역 인부들이 뒤에서 길을 열며 앞을 가로막는 것을 밀어낸다."
+					},
+					"result": [
+						{
+							"speaker": "goro",
+							"text": "…말로 끝내다니. 그런 사람은 처음 봐요."
+						},
+						{
+							"speaker": "narrator",
+							"text": "인부들이 부품을 나눠 들고 조용히 물러났다."
+						},
+						{
+							"speaker": "dax",
+							"text": "싸움 안 하는 것도 나쁘지 않은데, 솔직히 좀 허전하네요."
+						}
+					]
+				},
+				{
+					"path": "stat",
+					"text": "당신의 이름을 내세워 인부들에게 부품 분배 순서를 정하게 한다",
+					"mbti": "EJ",
+					"effects": {
+						"fighting": -15,
+						"reason": -10
+					},
+					"reward": [
+						"attack_up"
+					],
+					"flag": {
+						"key": "crew_at_side",
+						"label": "하역조",
+						"boss_text": "고로와 하역 인부들이 뒤에서 길을 열며 앞을 가로막는 것을 밀어낸다."
+					},
+					"result": [
+						{
+							"speaker": "goro",
+							"text": "당신이 정한 순서면 따르겠습니다. 어차피 그 이름 안 들으면 아무도 안 움직여요."
+						},
+						{
+							"speaker": "narrator",
+							"text": "인부들이 줄을 서서 부품을 하나씩 받아 갔다."
+						},
+						{
+							"speaker": "dax",
+							"text": "이름 하나로 줄을 세우다니. 무섭기도 하고 든든하기도 하네요."
+						}
+					]
+				},
+				{
+					"path": "gold",
+					"text": "고로에게 120골드를 주고 인부들 몫 부품을 사들인다",
+					"mbti": "SP",
+					"effects": {
+						"gold": -120,
+						"community": 10
+					},
+					"reward": [
+						"shield"
+					],
+					"result": [
+						{
+							"speaker": "goro",
+							"text": "돈이라면… 뭐, 이번 달은 넘어가죠."
+						},
+						{
+							"speaker": "narrator",
+							"text": "고로가 부품 꾸러미를 넘기고 인부들을 데리고 계단으로 사라졌다."
+						},
+						{
+							"speaker": "dax",
+							"text": "돈으로 사람 마음 사는 것도 실력이긴 한데, 지갑이 얇아졌어요."
+						}
+					]
+				}
+			],
+			"background_tags": [
+				"data_waste_yard",
+				"late_shift",
+				"flickering_lamp",
+				"crowded",
+				"tense"
+			],
+			"slot": "B",
+			"kind": "rep",
+			"rep_dir": "fighting-"
+		},
+		{
+			"no": 2,
+			"key": "empty_hands",
+			"title": "손 내미는 사람",
+			"person": {
+				"id": "mira",
+				"name": "미라",
+				"role": "처리장 응급 구조 요원"
+			},
+			"wants": "부품을 나르다 넘어진 동료를 일으켜 달라며, 당신이 사람을 돕는다는 소문을 믿고 찾아온다.",
+			"rule_link": "분해 직후 쏟아진 데이터 부품 더미에 동료가 깔려 있다 — 그 부품을 옮기면 스크린 조각이 드러난다.",
+			"dialogue": [
+				{
+					"speaker": "mira",
+					"text": "기계를 맨손으로 끊었다더니, 사람도 그렇게 끌어올린다면서요? 저기 좀 봐 주세요."
+				},
+				{
+					"speaker": "dax",
+					"text": "저 사람 발목이 부품 더미에 깔렸네요. 나도 좀 도와야 하나?"
+				},
+				{
+					"speaker": "mira",
+					"text": "구조 요원인데 정작 제 동료를 못 꺼내고 있어요. 손이 하나 모자라요."
+				},
+				{
+					"speaker": "narrator",
+					"text": "부품 더미 아래에서 작업화 한 짝이 허우적거리고 있었다."
+				}
+			],
+			"choices": [
+				{
+					"path": "easy",
+					"text": "부품 더미를 들어 올려 깔린 동료를 꺼내 준다",
+					"mbti": "FJ",
+					"effects": {
+						"community": 20,
+						"echo": 10
+					},
+					"reward": [
+						"heal"
+					],
+					"flag": {
+						"key": "mira_stretcher",
+						"label": "구조대",
+						"boss_text": "미라가 들것을 끌고 와 부상한 동료를 옮기며 길을 비켜 준다."
+					},
+					"result": [
+						{
+							"speaker": "mira",
+							"text": "됐어요! 정말 됐어요!"
+						},
+						{
+							"speaker": "narrator",
+							"text": "동료가 기침하며 더미 밖으로 기어 나왔다. 그 밑에서 금 간 스크린 조각이 드러났다."
+						},
+						{
+							"speaker": "dax",
+							"text": "사람부터 꺼내는 거, 역시 소문이 틀리지 않았네요."
+						}
+					]
+				},
+				{
+					"path": "hard",
+					"text": "미라에게 부품 더미 옆 고정 핀 위치만 알려주고 손을 뗀다",
+					"mbti": "TP",
+					"effects": {
+						"community": -15,
+						"reason": 10
+					},
+					"reward": [
+						"intelligence_up"
+					],
+					"flag": {
+						"key": "mira_stretcher",
+						"label": "구조대",
+						"boss_text": "미라가 들것을 끌고 와 부상한 동료를 옮기며 길을 비켜 준다."
+					},
+					"result": [
+						{
+							"speaker": "mira",
+							"text": "…핀을 뽑으라고요? 그렇게는 안 해요, 사람이 다쳐요."
+						},
+						{
+							"speaker": "narrator",
+							"text": "미라가 혼자 더미를 밀어내다 지쳐 앉았다. 동료는 그제야 빠져나왔다."
+						},
+						{
+							"speaker": "dax",
+							"text": "도울 땐 확실히 돕지, 반만 돕는 건 더 나빠요."
+						}
+					]
+				},
+				{
+					"path": "stat",
+					"text": "당신을 돕겠다는 처리장 사람들을 불러 동료를 함께 꺼낸다",
+					"mbti": "EF",
+					"effects": {
+						"community": 25,
+						"fighting": 10
+					},
+					"reward": [
+						"shield"
+					],
+					"flag": {
+						"key": "mira_stretcher",
+						"label": "구조대",
+						"boss_text": "미라가 들것을 끌고 와 부상한 동료를 옮기며 길을 비켜 준다."
+					},
+					"result": [
+						{
+							"speaker": "mira",
+							"text": "당신 이름 걸고 부탁하니 다들 달려오네요. 무서운 사람이에요."
+						},
+						{
+							"speaker": "narrator",
+							"text": "여섯 명이 더미를 들어 올리자 동료가 곧바로 끌려 나왔다."
+						},
+						{
+							"speaker": "dax",
+							"text": "이름 하나로 사람이 이렇게 모이다니, 나도 좀 써 볼까요?"
+						}
+					]
+				}
+			],
+			"background_tags": [
+				"data_waste_yard",
+				"late_shift",
+				"dusty",
+				"heated",
+				"dutiful"
+			],
+			"slot": "B",
+			"kind": "rep",
+			"rep_dir": "fighting+"
+		},
+		{
+			"no": 3,
+			"key": "first_pick",
+			"title": "먼저 챙기는 몫",
+			"person": {
+				"id": "sevik",
+				"name": "세빅",
+				"role": "폐기물 중고 거래상"
+			},
+			"wants": "당신이 자기 몫부터 챙긴다는 소문을 듣고, 가장 값나가는 부품을 먼저 골라 나누자는 거래를 제안한다.",
+			"rule_link": "분해된 장치에서 나온 부품 중 값이 나가는 것을 먼저 고르는 일 — 고른 부품 안에 스크린 조각이 섞여 있다.",
+			"dialogue": [
+				{
+					"speaker": "sevik",
+					"text": "당신이 남의 몫도 앞서 챙긴다는 그 사람이죠? 그럼 얘기가 빠르겠네요."
+				},
+				{
+					"speaker": "dax",
+					"text": "이 사람 눈빛이 좀… 내 일기장 값 매기던 그 눈빛이에요."
+				},
+				{
+					"speaker": "sevik",
+					"text": "부품 더미 반반으로 가르죠. 대신 제가 먼저 고르게요. 손해는 안 보시잖아요."
+				},
+				{
+					"speaker": "narrator",
+					"text": "세빅이 낡은 저울을 꺼내 부품 하나하나 무게를 재기 시작했다."
+				}
+			],
+			"choices": [
+				{
+					"path": "easy",
+					"text": "세빅의 거래를 받고 가장 무거운 부품을 먼저 챙긴다",
+					"mbti": "TP",
+					"effects": {
+						"community": -20,
+						"gold": 90
+					},
+					"reward": [
+						"attack_up"
+					],
+					"flag": {
+						"key": "sevik_scale",
+						"label": "세빅의 저울",
+						"boss_text": "세빅이 저울을 앞세워 부품 분배를 막아서며 자기 몫을 먼저 내놓으라고 한다."
+					},
+					"result": [
+						{
+							"speaker": "sevik",
+							"text": "역시 소문대로 계산이 빠르시네요."
+						},
+						{
+							"speaker": "narrator",
+							"text": "당신이 고른 부품을 세빅이 90골드에 사 갔다. 그 안에서 금 간 조각이 툭 떨어졌다."
+						},
+						{
+							"speaker": "dax",
+							"text": "돈은 들어왔는데… 왜 내 몫이 줄어든 기분이지?"
+						}
+					]
+				},
+				{
+					"path": "hard",
+					"text": "부품을 균등하게 나누고 당신 몫을 세빅에게 넘긴다",
+					"mbti": "FJ",
+					"effects": {
+						"community": 25,
+						"echo": 10
+					},
+					"reward": [
+						"defense_up"
+					],
+					"flag": {
+						"key": "sevik_scale",
+						"label": "세빅의 저울",
+						"boss_text": "세빅이 저울을 앞세워 부품 분배를 막아서며 자기 몫을 먼저 내놓으라고 한다."
+					},
+					"result": [
+						{
+							"speaker": "sevik",
+							"text": "…이런 건 처음 봅니다. 그럼 저도 반은 남겨야겠네요."
+						},
+						{
+							"speaker": "narrator",
+							"text": "세빅이 저울을 접고 부품 절반을 더미에 도로 놓았다."
+						},
+						{
+							"speaker": "dax",
+							"text": "저 사람이 손해 보는 거 처음 봤어요. 기분 좋네요."
+						}
+					]
+				},
+				{
+					"path": "stat",
+					"text": "당신이 먼저 챙긴다는 소문을 이용해 세빅에게서 웃돈을 받아낸다",
+					"mbti": "EJ",
+					"effects": {
+						"community": -15,
+						"gold": 130
+					},
+					"reward": [
+						"intelligence_up"
+					],
+					"flag": {
+						"key": "sevik_scale",
+						"label": "세빅의 저울",
+						"boss_text": "세빅이 저울을 앞세워 부품 분배를 막아서며 자기 몫을 먼저 내놓으라고 한다."
+					},
+					"result": [
+						{
+							"speaker": "sevik",
+							"text": "이 정도면 저도 남는 장사네요. 거래 성립."
+						},
+						{
+							"speaker": "narrator",
+							"text": "세빅이 지갑을 열어 130골드를 세었다. 부품 하나가 그의 손에서 굴러떨어졌다."
+						},
+						{
+							"speaker": "dax",
+							"text": "이름 팔아서 돈 버는 거, 나쁘진 않은데 좀 찜찜하네요."
+						}
+					]
+				},
+				{
+					"path": "fun",
+					"text": "세빅의 저울을 부품 위에 올려 저울부터 반으로 가른다",
+					"mbti": "EP",
+					"effects": {
+						"community": -25,
+						"echo": 10
+					},
+					"reward": [
+						"stun"
+					],
+					"result": [
+						{
+							"speaker": "sevik",
+							"text": "저, 저울이! 아버지가 쓰던 저울인데!"
+						},
+						{
+							"speaker": "narrator",
+							"text": "부러진 저울 팔이 부품 더미를 휘저어 조각들이 사방으로 튀었다."
+						},
+						{
+							"speaker": "dax",
+							"text": "저울은 미안한데… 튄 조각 중에 반짝이는 게 있었어요."
+						}
+					]
+				}
+			],
+			"background_tags": [
+				"data_waste_yard",
+				"late_shift",
+				"dim_glow",
+				"two_people",
+				"greedy"
+			],
+			"slot": "B",
+			"kind": "rep",
+			"rep_dir": "community-"
+		},
+		{
+			"no": 4,
+			"key": "shared_ration",
+			"title": "나눠야 하는 몫",
+			"person": {
+				"id": "bex",
+				"name": "벡스",
+				"role": "폐기물 분류 작업자"
+			},
+			"wants": "부품을 전부 처리장 공용으로 돌려달라며, 당신이 모두를 위해 나선다는 소문에 기대어 부탁한다.",
+			"rule_link": "깨끗한 데이터 부품을 공용으로 돌리는 결정 — 그 부품을 쓸 사람들이 스크린 조각을 먼저 손에 넣으려 한다.",
+			"dialogue": [
+				{
+					"speaker": "bex",
+					"text": "당신이 처리장 사람들 일을 대신 맡아 준다는 그 사람이죠? 이번엔 저희 차례예요."
+				},
+				{
+					"speaker": "dax",
+					"text": "또 벡스 씨예요. 이번엔 승진 얘기 아니죠?"
+				},
+				{
+					"speaker": "bex",
+					"text": "부품 전부 공용 창고에 넣어 주세요. 그러면 아무도 저를 탓하지 않을 테니까요."
+				},
+				{
+					"speaker": "narrator",
+					"text": "벡스가 창고 열쇠를 두 손으로 감싼 채 당신 얼굴만 보고 있었다."
+				}
+			],
+			"choices": [
+				{
+					"path": "easy",
+					"text": "부품 전부를 공용 창고에 넣고 명단을 붙인다",
+					"mbti": "FJ",
+					"effects": {
+						"community": 20,
+						"echo": 5
+					},
+					"reward": [
+						"shield"
+					],
+					"flag": {
+						"key": "shared_store",
+						"label": "공용 창고",
+						"boss_text": "공용 창고 명단에 오른 작업자들이 앞을 막는 폐기물을 함께 치워 준다."
+					},
+					"result": [
+						{
+							"speaker": "bex",
+							"text": "고맙습니다! 이제 아무도 제 탓을 못 하겠네요."
+						},
+						{
+							"speaker": "narrator",
+							"text": "명단이 붙자 작업자들이 우르르 몰려와 부품을 하나씩 받아 갔다."
+						},
+						{
+							"speaker": "dax",
+							"text": "명단 맨 아래에 제 이름도 써 주시죠. 그럼 저도 한 몫."
+						}
+					]
+				},
+				{
+					"path": "hard",
+					"text": "부품을 당신이 직접 관리하고 벡스에게 창고 열쇠를 돌려받는다",
+					"mbti": "TP",
+					"effects": {
+						"community": -15,
+						"reason": 10
+					},
+					"reward": [
+						"intelligence_up"
+					],
+					"flag": {
+						"key": "shared_store",
+						"label": "공용 창고",
+						"boss_text": "공용 창고 명단에 오른 작업자들이 앞을 막는 폐기물을 함께 치워 준다."
+					},
+					"result": [
+						{
+							"speaker": "bex",
+							"text": "제 열쇠를… 그럼 저는 뭘 하나요?"
+						},
+						{
+							"speaker": "narrator",
+							"text": "벡스가 열쇠를 내려놓고 뒤로 물러섰다. 창고 문은 닫힌 채였다."
+						},
+						{
+							"speaker": "dax",
+							"text": "열쇠는 받았는데, 이제 문 열 사람이 없네요."
+						}
+					]
+				},
+				{
+					"path": "stat",
+					"text": "당신을 따르는 작업자들을 불러 부품 분배를 맡긴다",
+					"mbti": "EF",
+					"effects": {
+						"community": 25,
+						"echo": 10
+					},
+					"reward": [
+						"heal"
+					],
+					"flag": {
+						"key": "shared_store",
+						"label": "공용 창고",
+						"boss_text": "공용 창고 명단에 오른 작업자들이 앞을 막는 폐기물을 함께 치워 준다."
+					},
+					"result": [
+						{
+							"speaker": "bex",
+							"text": "다들 당신 말만 기다렸어요. 저는 명단 정리할게요."
+						},
+						{
+							"speaker": "narrator",
+							"text": "작업자들이 스스로 줄을 서서 부품을 나눠 들었다."
+						},
+						{
+							"speaker": "dax",
+							"text": "사람들이 알아서 움직이니까 편하네요. 좀 무섭기도 하고."
+						}
+					]
+				},
+				{
+					"path": "gold",
+					"text": "벡스에게 100골드를 주고 부품 대신 공용 창고를 새로 잠근다",
+					"mbti": "SJ",
+					"effects": {
+						"gold": -100,
+						"community": 10
+					},
+					"reward": [
+						"defense_up"
+					],
+					"result": [
+						{
+							"speaker": "bex",
+							"text": "새 자물쇠라니… 이제 아무도 못 열겠네요. 좋아요, 좋아요."
+						},
+						{
+							"speaker": "narrator",
+							"text": "벡스가 새 자물쇠를 만지작거리며 창고 앞을 서성였다."
+						},
+						{
+							"speaker": "dax",
+							"text": "잠그는 데 돈 쓰다니, 오늘 지갑이 자꾸 얇아지네요."
+						}
+					]
+				}
+			],
+			"background_tags": [
+				"data_waste_yard",
+				"late_shift",
+				"warehouse_glare",
+				"work_crew",
+				"hopeful"
+			],
+			"slot": "B",
+			"kind": "rep",
+			"rep_dir": "community+"
+		},
+		{
+			"no": 5,
+			"key": "form_blank",
+			"title": "빈칸 한 줄",
+			"person": {
+				"id": "rosa",
+				"name": "로사",
+				"role": "처리장 기록 담당 직원"
+			},
+			"wants": "분해된 장치의 부품 목록을 규정대로 서류에 올려야 한다며, 당신이 절차를 지킨다는 소문을 근거로 서명을 요구한다.",
+			"rule_link": "분해된 장치 부품 목록을 규정 서류에 올리는 일 — 목록에 데이터 스크린 조각이 빠져 있다.",
+			"dialogue": [
+				{
+					"speaker": "rosa",
+					"text": "당신이 규정대로만 처리한다는 그 사람이죠? 서명 하나만 받으러 왔습니다."
+				},
+				{
+					"speaker": "dax",
+					"text": "서류요? 저 사람 손에 든 그 종이, 칸이 스물두 개예요."
+				},
+				{
+					"speaker": "rosa",
+					"text": "부품 목록 스물두 칸인데 스물한 개만 적혀 있어요. 하나가 어디 갔는지 모르겠어요."
+				},
+				{
+					"speaker": "narrator",
+					"text": "로사가 서류를 넘기자 마지막 칸이 비어 있었다."
+				}
+			],
+			"choices": [
+				{
+					"path": "easy",
+					"text": "규정대로 빈칸을 '확인 불가'로 적고 서명한다",
+					"mbti": "TJ",
+					"effects": {
+						"reason": 20
+					},
+					"reward": [
+						"defense_up"
+					],
+					"flag": {
+						"key": "blank_line",
+						"label": "빈칸 서류",
+						"boss_text": "로사가 확인 불가로 적힌 서류를 들고 와 부품 하나가 없다며 통행을 막는다."
+					},
+					"result": [
+						{
+							"speaker": "rosa",
+							"text": "확인 불가로 적으면 저는 책임을 안 져요. 고맙습니다."
+						},
+						{
+							"speaker": "narrator",
+							"text": "로사가 서류를 접어 주머니에 넣고 발걸음을 돌렸다."
+						},
+						{
+							"speaker": "dax",
+							"text": "빈칸 하나로 책임이 사라지다니, 편리한 세상이네요."
+						}
+					]
+				},
+				{
+					"path": "hard",
+					"text": "빈칸을 채우지 않고 로사와 함께 부품을 다시 센다",
+					"mbti": "FP",
+					"effects": {
+						"reason": -20,
+						"community": 10
+					},
+					"reward": [
+						"intelligence_up"
+					],
+					"flag": {
+						"key": "blank_line",
+						"label": "빈칸 서류",
+						"boss_text": "로사가 확인 불가로 적힌 서류를 들고 와 부품 하나가 없다며 통행을 막는다."
+					},
+					"result": [
+						{
+							"speaker": "rosa",
+							"text": "스물두 개… 맞네요. 이건 제가 본 적 없는 조각인데요."
+						},
+						{
+							"speaker": "narrator",
+							"text": "세어 보니 조각 하나가 더 있었고, 그것은 금이 가 있었다."
+						},
+						{
+							"speaker": "dax",
+							"text": "서류보다 눈이 빠른 게 나은 것 같네요."
+						}
+					]
+				},
+				{
+					"path": "stat",
+					"text": "당신의 서명을 믿는 로���에게 목록 없이 통행을 요청한다",
+					"mbti": "EJ",
+					"effects": {
+						"reason": -15,
+						"echo": 5
+					},
+					"reward": [
+						"shield"
+					],
+					"flag": {
+						"key": "blank_line",
+						"label": "빈칸 서류",
+						"boss_text": "로사가 확인 불가로 적힌 서류를 들고 와 부품 하나가 없다며 통행을 막는다."
+					},
+					"result": [
+						{
+							"speaker": "rosa",
+							"text": "당신 서명이면 저도 상관없어요. 절차는 제가 맞출게요."
+						},
+						{
+							"speaker": "narrator",
+							"text": "로사가 서류를 접어 넣고 통행문 쪽으로 손짓했다."
+						},
+						{
+							"speaker": "dax",
+							"text": "서명 하나로 문이 열리다니. 그 서명, 한번 빌려 주세요."
+						}
+					]
+				}
+			],
+			"background_tags": [
+				"data_waste_yard",
+				"late_shift",
+				"desk_lamp",
+				"empty_room",
+				"bureaucratic"
+			],
+			"slot": "B",
+			"kind": "rep",
+			"rep_dir": "reason-"
+		},
+		{
+			"no": 6,
+			"key": "no_bad_news",
+			"title": "규칙 밖의 부탁",
+			"person": {
+				"id": "jun",
+				"name": "준",
+				"role": "처리장 야간 순찰자"
+			},
+			"wants": "순찰 기록에 안 남게 부품 하나를 몰래 빼달라며, 당신이 규칙보다 마음대로 하는 사람이라는 소문을 믿고 온다.",
+			"rule_link": "부품 하나를 기록 없이 빼내는 일 — 그 부품이 바로 금이 가는 데이터 스크린 조각이다.",
+			"dialogue": [
+				{
+					"speaker": "jun",
+					"text": "당신이 규칙은 됐고 하고 싶은 대로 한다는 그 사람이죠? 딱 한 개만 부탁드려요."
+				},
+				{
+					"speaker": "dax",
+					"text": "순찰 기록에 안 남게요? 저 사람 순찰대 배지가 아직 반짝거리는데."
+				},
+				{
+					"speaker": "jun",
+					"text": "부품 하나만 빼 가면 제 이름은 기록에 안 남아요. 대신 절반은 드릴게요."
+				},
+				{
+					"speaker": "narrator",
+					"text": "준이 순찰 기록판을 손바닥으로 가리며 뒷걸음질 쳤다."
+				}
+			],
+			"choices": [
+				{
+					"path": "easy",
+					"text": "준의 부탁대로 기록 없이 부품 하나를 빼 준다",
+					"mbti": "EP",
+					"effects": {
+						"reason": 20,
+						"community": -10
+					},
+					"reward": [
+						"move_range_up"
+					],
+					"flag": {
+						"key": "jun_record",
+						"label": "순찰 기록판",
+						"boss_text": "준이 순찰 기록판을 들고 나타나 기록에 없는 부품을 내놓으라고 당신 앞을 막는다."
+					},
+					"result": [
+						{
+							"speaker": "jun",
+							"text": "역시 소문대로예요. 이건 제 몫입니다."
+						},
+						{
+							"speaker": "narrator",
+							"text": "준이 부품 하나를 품에 넣고 기록판을 뒤집었다. 그 부품 겉면에 금이 가 있었다."
+						},
+						{
+							"speaker": "dax",
+							"text": "빼 가는 건 좋은데, 저 금 간 거 왠지 찜찜하네요."
+						}
+					]
+				},
+				{
+					"path": "hard",
+					"text": "준의 부탁을 거절하고 순찰 기록판에 직접 적는다",
+					"mbti": "TJ",
+					"effects": {
+						"reason": -20,
+						"community": 10
+					},
+					"reward": [
+						"defense_up"
+					],
+					"flag": {
+						"key": "jun_record",
+						"label": "순찰 기록판",
+						"boss_text": "준이 순찰 기록판을 들고 나타나 기록에 없는 부품을 내놓으라고 당신 앞을 막는다."
+					},
+					"result": [
+						{
+							"speaker": "jun",
+							"text": "적으시면 제 근무 평가 끝이에요. 정말 이러실 거예요?"
+						},
+						{
+							"speaker": "narrator",
+							"text": "기록판에 부품 수가 또박또박 적혔다. 준은 한참 그 글자를 내려다보았다."
+						},
+						{
+							"speaker": "dax",
+							"text": "기록은 남았는데, 사람이 남았나 모르겠네요."
+						}
+					]
+				},
+				{
+					"path": "stat",
+					"text": "당신의 이름을 걸고 준에게 부품을 정식으로 신청하게 한다",
+					"mbti": "EJ",
+					"effects": {
+						"reason": 15,
+						"community": 10
+					},
+					"reward": [
+						"intelligence_up"
+					],
+					"flag": {
+						"key": "jun_record",
+						"label": "순찰 기록판",
+						"boss_text": "준이 순찰 기록판을 들고 나타나 기록에 없는 부품을 내놓으라고 당신 앞을 막는다."
+					},
+					"result": [
+						{
+							"speaker": "jun",
+							"text": "당신 이름이면 신청이 통과될 거예요. 서류는 제가 쓸게요."
+						},
+						{
+							"speaker": "narrator",
+							"text": "준이 기록판 대신 신청서를 꺼내 당신 이름 옆에 자기 이름을 적었다."
+						},
+						{
+							"speaker": "dax",
+							"text": "이름 하나로 서류가 통과되다니, 이거 은근히 편하네요."
+						}
+					]
+				},
+				{
+					"path": "fun",
+					"text": "준의 순찰 기록판에 오늘 순찰을 '없던 일'로 적어 넣는다",
+					"mbti": "FP",
+					"effects": {
+						"reason": 25,
+						"echo": 5
+					},
+					"reward": [
+						"stun"
+					],
+					"result": [
+						{
+							"speaker": "jun",
+							"text": "없던 일로… 그러면 제가 여기 있었다는 것도 없는 거네요?"
+						},
+						{
+							"speaker": "narrator",
+							"text": "준이 기록판을 들고 한참 서 있다가 천천히 뒤로 걸어갔다."
+						},
+						{
+							"speaker": "dax",
+							"text": "사람이 사라졌어요. 이거… 좀 무섭네요."
+						}
+					]
+				}
+			],
+			"background_tags": [
+				"data_waste_yard",
+				"late_shift",
+				"moonlit_aisle",
+				"quiet",
+				"wry"
+			],
+			"slot": "B",
+			"kind": "rep",
+			"rep_dir": "reason+"
+		}
+	],
+	"errors": []
+}

@@ -1,0 +1,805 @@
+{
+	"cards": [
+		{
+			"person": {
+				"name": "��록",
+				"role": "현상금 사냥꾼",
+				"id": "brock"
+			},
+			"rep_dir": "fighting-",
+			"wants": "복구된 현상금 데이터베이스를 가로막는 다른 해커들을 힘으로 쫓아내달라고 함",
+			"kind": "rep",
+			"rule_link": "데이터 스크린 조각을 깬 후 일시적으로 복구된 수배망 데이터를 독점하려 함",
+			"slot": "B",
+			"title": "독점한 수배망 데이터",
+			"key": "brock_bounty_data",
+			"background_tags": [
+				"server_rack",
+				"day",
+				"dim",
+				"crowded",
+				"tense"
+			],
+			"choices": [
+				{
+					"mbti": "ET",
+					"path": "easy",
+					"result": [
+						{
+							"text": "당신이 주먹을 쥐고 다가가자 해커들이 기겁하며 도망쳤다.",
+							"speaker": "narrator"
+						},
+						{
+							"speaker": "narrator",
+							"text": "브록이 데이터를 챙기며 돈을 건넸다."
+						}
+					],
+					"reward": [],
+					"flag": {
+						"label": "해커들의 원한",
+						"boss_text": "쫓겨난 해커들이 보안관에게 당신의 위치를 밀고한다.",
+						"key": "brock_enemy"
+					},
+					"text": "해커들을 위협해 쫓아낸다",
+					"effects": {
+						"reason": 0,
+						"fighting": -20,
+						"echo": 0,
+						"gold": 100,
+						"community": 0
+					}
+				},
+				{
+					"flag": {
+						"label": "해커들의 도움",
+						"key": "brock_ally",
+						"boss_text": "해커들이 준 통신 교란 장비로 보안관의 시야를 가린다."
+					},
+					"text": "브록을 공격해 쫓아낸다",
+					"mbti": "IF",
+					"effects": {
+						"community": 0,
+						"reason": 0,
+						"fighting": 20,
+						"echo": 0,
+						"gold": 0
+					},
+					"path": "hard",
+					"reward": [
+						"hp_down"
+					],
+					"result": [
+						{
+							"speaker": "narrator",
+							"text": "당신이 브록의 멱살을 잡고 바닥에 내동댕이쳤다."
+						},
+						{
+							"text": "해커들이 고마워하며 당신에게 작은 장비를 주었다.",
+							"speaker": "narrator"
+						}
+					]
+				},
+				{
+					"reward": [
+						"attack_up"
+					],
+					"result": [
+						{
+							"text": "당신이 노려보자 해커들이 알아서 자리를 피했다.",
+							"speaker": "narrator"
+						},
+						{
+							"text": "피를 보지 않고 데이터를 독점했다.",
+							"speaker": "narrator"
+						}
+					],
+					"mbti": "TJ",
+					"path": "stat",
+					"effects": {
+						"community": 0,
+						"reason": 0,
+						"echo": -10,
+						"gold": 0,
+						"fighting": -30
+					},
+					"flag": {
+						"key": "fearful_look",
+						"boss_text": "압도적인 위압감을 뿜어내 보안관을 주춤하게 만든다.",
+						"label": "압도적인 위압감"
+					},
+					"text": "눈빛만으로 해커들을 물러나게 한다"
+				},
+				{
+					"mbti": "EP",
+					"path": "fun",
+					"text": "해커들 틈에 끼어들어 같이 데이터를 캔다",
+					"effects": {
+						"gold": 50,
+						"echo": 0,
+						"reason": 0,
+						"community": -10,
+						"fighting": 0
+					},
+					"result": [
+						{
+							"text": "당신은 브록을 무시하고 해커들 옆에 앉아 타자를 치기 시작했다.",
+							"speaker": "narrator"
+						},
+						{
+							"text": "브록이 황당하다는 듯 쳐다보았다.",
+							"speaker": "narrator"
+						}
+					],
+					"reward": []
+				}
+			],
+			"dialogue": [
+				{
+					"speaker": "brock",
+					"text": "어이, 앞길 막는 녀석들은 죄다 주먹으로 해결하고 다닌다는 게 당신인가?"
+				},
+				{
+					"text": "저기 찌질한 해커들이 복구된 현상금 데이터를 빼가려 하는데, 좀 치워주면 몫을 떼어주지.",
+					"speaker": "brock"
+				},
+				{
+					"speaker": "echo",
+					"text": "저 사람들이 먼저 온 것 같은데, 억지로 쫓아내도 괜찮을까?"
+				}
+			]
+		},
+		{
+			"choices": [
+				{
+					"mbti": "FJ",
+					"path": "easy",
+					"effects": {
+						"fighting": 20,
+						"community": 0,
+						"reason": 0,
+						"gold": 0,
+						"echo": 0
+					},
+					"flag": {
+						"key": "tommy_shock",
+						"label": "과부하의 흔적",
+						"boss_text": "몸에 남은 과부하 전류 때문에 보안관의 스캐너에 쉽게 발각된다."
+					},
+					"text": "단말기를 대신 붙잡아 버틴다",
+					"reward": [
+						"shield"
+					],
+					"result": [
+						{
+							"speaker": "narrator",
+							"text": "당신이 흐르는 전류를 이 악물고 버텨냈다."
+						},
+						{
+							"speaker": "narrator",
+							"text": "토미가 무사히 데이터를 받고 고맙다며 방어막 장비를 건넸다."
+						}
+					]
+				},
+				{
+					"reward": [
+						"hp_down"
+					],
+					"result": [
+						{
+							"speaker": "narrator",
+							"text": "당신이 단말기 케이블을 발로 차 끊어버렸다."
+						},
+						{
+							"text": "폭발은 막았지만 다운로드가 실패해 토미가 주저앉았다.",
+							"speaker": "narrator"
+						}
+					],
+					"effects": {
+						"fighting": -20,
+						"reason": 0,
+						"community": 0,
+						"echo": 10,
+						"gold": 0
+					},
+					"mbti": "TJ",
+					"path": "hard",
+					"flag": {
+						"label": "끊어진 회로",
+						"key": "tommy_safe",
+						"boss_text": "전력이 차단된 구역으로 유인해 보안관의 시야를 피한다."
+					},
+					"text": "강제로 케이블을 끊어버린다"
+				},
+				{
+					"text": "사람들을 불러 모아 전력을 분산시킨다",
+					"flag": {
+						"key": "tommy_help",
+						"boss_text": "사람들의 도움을 받아 보안관의 포위망을 돌파한다.",
+						"label": "은혜를 갚는 사람들"
+					},
+					"effects": {
+						"fighting": 30,
+						"reason": 0,
+						"community": 20,
+						"echo": 0,
+						"gold": 0
+					},
+					"path": "stat",
+					"mbti": "NF",
+					"reward": [
+						"defense_up"
+					],
+					"result": [
+						{
+							"speaker": "narrator",
+							"text": "당신의 외침에 주변 사람들이 달려와 접지선을 하나씩 잡았다."
+						},
+						{
+							"speaker": "narrator",
+							"text": "안전하게 다운로드가 끝났다."
+						}
+					]
+				}
+			],
+			"wants": "과부하가 걸린 단말기에서 데이터를 마저 받을 수 있게 대신 버텨달라고 함",
+			"slot": "B",
+			"background_tags": [
+				"server_rack",
+				"day",
+				"bright",
+				"sparse",
+				"dangerous"
+			],
+			"person": {
+				"id": "tommy",
+				"name": "토미",
+				"role": "초보 해커"
+			},
+			"dialogue": [
+				{
+					"text": "어려움에 처한 사람을 그냥 못 지나친다면서요? 제발 저 좀 도와주세요!",
+					"speaker": "tommy"
+				},
+				{
+					"text": "데이터가 복구돼서 급하게 받고 있는데, 전류가 역류해서 손을 뗄 수가 없어요!",
+					"speaker": "tommy"
+				},
+				{
+					"speaker": "echo",
+					"text": "저 단말기 터지기 직전이야! 잘못 건드리면 당신까지 다칠 텐데."
+				}
+			],
+			"title": "감전 위기의 해커",
+			"kind": "rep",
+			"rule_link": "스크린 조각을 깨어 생긴 일시적 과부하 속에서 위험을 감수하고 데이터를 얻으려 함",
+			"rep_dir": "fighting+",
+			"key": "tommy_overload_save"
+		},
+		{
+			"kind": "rep",
+			"wants": "시스템 복구로 일시적으로 열린 금융 서버에서 돈을 빼내어 나누자고 함",
+			"rep_dir": "community-",
+			"key": "sylvia_crypto_wallet",
+			"background_tags": [
+				"server_rack",
+				"day",
+				"dark",
+				"sparse",
+				"secretive"
+			],
+			"choices": [
+				{
+					"text": "실비아와 함께 돈을 빼낸다",
+					"flag": {
+						"label": "금융 해킹 흔적",
+						"boss_text": "당신이 남긴 해킹 흔적을 추적한 보안관이 방어막을 무력화한다.",
+						"key": "sylvia_trace"
+					},
+					"result": [
+						{
+							"text": "당신은 능숙하게 서버에 접속해 화폐를 빼돌렸다.",
+							"speaker": "narrator"
+						},
+						{
+							"text": "실비아가 약속대로 두둑한 몫을 나눠주었다.",
+							"speaker": "narrator"
+						}
+					],
+					"reward": [],
+					"path": "easy",
+					"mbti": "TP",
+					"effects": {
+						"community": -20,
+						"fighting": 0,
+						"reason": 0,
+						"echo": 0,
+						"gold": 100
+					}
+				},
+				{
+					"reward": [
+						"hp_down"
+					],
+					"result": [
+						{
+							"speaker": "narrator",
+							"text": "당신이 지갑을 닫고 보안 모드를 작동��켰다."
+						},
+						{
+							"speaker": "narrator",
+							"text": "다 된 밥에 재를 뿌렸다며 실비아가 화를 냈다."
+						}
+					],
+					"text": "서버의 보안 모드를 강제로 켠다",
+					"flag": {
+						"label": "잠긴 금융 서버",
+						"key": "sylvia_lock",
+						"boss_text": "잠긴 서버의 보안 시스템을 역이용해 보안관을 가둔다."
+					},
+					"effects": {
+						"reason": 0,
+						"fighting": 0,
+						"echo": 10,
+						"gold": 0,
+						"community": 20
+					},
+					"path": "hard",
+					"mbti": "FJ"
+				},
+				{
+					"reward": [
+						"intelligence_up"
+					],
+					"result": [
+						{
+							"speaker": "narrator",
+							"text": "당신이 평판을 들먹이며 으름장을 놓자 실비아가 물러났다."
+						},
+						{
+							"text": "지갑 안의 돈은 모두 당신 차지가 되었다.",
+							"speaker": "narrator"
+						}
+					],
+					"flag": {
+						"boss_text": "빼돌린 자금으로 보안관의 무기를 매수해버린다.",
+						"label": "독점한 자금",
+						"key": "sylvia_monopoly"
+					},
+					"text": "실비아의 몫까지 전부 가로챈다",
+					"mbti": "TJ",
+					"path": "stat",
+					"effects": {
+						"gold": 0,
+						"echo": 0,
+						"fighting": -10,
+						"reason": 0,
+						"community": -30
+					}
+				}
+			],
+			"person": {
+				"id": "sylvia",
+				"role": "뒷골목 브로커",
+				"name": "실비아"
+			},
+			"title": "풀려난 암호화폐",
+			"dialogue": [
+				{
+					"text": "자기 이익은 기가 막히게 잘 챙긴다는 분이시지? 딱 좋은 일거리가 있어.",
+					"speaker": "sylvia"
+				},
+				{
+					"speaker": "sylvia",
+					"text": "���버가 복구되면서 휴면 암호화폐 지갑이 싹 열렸거든. 나랑 같이 돈 좀 빼볼까?"
+				},
+				{
+					"speaker": "echo",
+					"text": "저 돈은 원래 주인들이 있을 텐데. 우리가 이렇게 가져가도 되는 걸까?"
+				}
+			],
+			"rule_link": "조각을 깨어 생긴 일시적 오류를 이용해 휴면 가상 화폐를 탈취하려 함",
+			"slot": "B"
+		},
+		{
+			"key": "oliver_power_dist",
+			"dialogue": [
+				{
+					"speaker": "oliver",
+					"text": "언제나 자기보다 남들을 먼저 챙겨주신다면서요? 부탁 하나만 합시다."
+				},
+				{
+					"speaker": "oliver",
+					"text": "이 서버 랙에 전력이 넘치는데, 저기 스위치 좀 내려서 빈민가 쪽으로 돌려주세요."
+				},
+				{
+					"text": "당장 복구 작업에 쓸 전력도 부족한데, 저기로 다 빼버려도 괜찮은 거야?",
+					"speaker": "echo"
+				}
+			],
+			"rule_link": "조각을 깨어 일시적으로 돌아온 전력을 공공을 위해 분배하려 함",
+			"slot": "B",
+			"choices": [
+				{
+					"result": [
+						{
+							"text": "당신이 스위치를 내리자 전산실 조명이 어두워졌다.",
+							"speaker": "narrator"
+						},
+						{
+							"text": "올리버가 고맙다며 주머니에서 돈을 꺼내 주었다.",
+							"speaker": "narrator"
+						}
+					],
+					"reward": [],
+					"path": "easy",
+					"mbti": "FJ",
+					"effects": {
+						"fighting": 0,
+						"reason": 0,
+						"community": 20,
+						"echo": 0,
+						"gold": 50
+					},
+					"text": "스위치를 내려 전력을 빈민가로 ��린다",
+					"flag": {
+						"key": "oliver_low_power",
+						"boss_text": "전력이 부족해진 탓에 당신의 통신 장비가 먹통이 된다.",
+						"label": "부족해진 전력"
+					}
+				},
+				{
+					"effects": {
+						"community": -20,
+						"reason": 0,
+						"fighting": 0,
+						"echo": -10,
+						"gold": 0
+					},
+					"text": "전력을 서버 랙 유지에 집중시킨다",
+					"flag": {
+						"key": "oliver_full_power",
+						"label": "집중된 전력",
+						"boss_text": "서버 랙의 넘치는 전력을 이용해 보안관의 시야를 가린다."
+					},
+					"path": "hard",
+					"mbti": "TJ",
+					"result": [
+						{
+							"text": "당신은 올리버의 부탁을 무시하고 서버 랙의 메인 전원을 올렸다.",
+							"speaker": "narrator"
+						},
+						{
+							"text": "전산실이 환해졌지만 올리버는 실망했다.",
+							"speaker": "narrator"
+						}
+					],
+					"reward": [
+						"hp_down"
+					]
+				},
+				{
+					"effects": {
+						"reason": 10,
+						"community": 30,
+						"echo": 0,
+						"gold": 0,
+						"fighting": 0
+					},
+					"reward": [
+						"heal"
+					],
+					"result": [
+						{
+							"speaker": "narrator",
+							"text": "당신이 능숙하게 배선을 나누자 모든 구역에 전기가 들어왔다."
+						},
+						{
+							"text": "사람들의 환호 소리가 들렸다.",
+							"speaker": "narrator"
+						}
+					],
+					"path": "stat",
+					"mbti": "NF",
+					"text": "모든 구역에 전력이 골고루 가도록 배선한다",
+					"flag": {
+						"key": "oliver_balance",
+						"boss_text": "안정된 전력망에 접속해 보안관의 자동 방어 시스템을 무력화���다.",
+						"label": "안정된 전력망"
+					}
+				},
+				{
+					"text": "스위치를 반대로 돌려 전광판을 터뜨린다",
+					"reward": [
+						"attack_up"
+					],
+					"result": [
+						{
+							"text": "당신이 장난스레 스위치를 끝까지 올렸다.",
+							"speaker": "narrator"
+						},
+						{
+							"speaker": "narrator",
+							"text": "주변 전광판들이 요란한 소리를 내며 펑펑 터져나갔다."
+						}
+					],
+					"mbti": "EP",
+					"path": "fun",
+					"effects": {
+						"fighting": -10,
+						"community": 0,
+						"reason": -10,
+						"gold": 0,
+						"echo": 0
+					}
+				}
+			],
+			"title": "빈민가로 향하는 전력",
+			"person": {
+				"id": "oliver",
+				"name": "올리버",
+				"role": "서버 랙 관리자"
+			},
+			"rep_dir": "community+",
+			"wants": "복구된 서버의 잉여 전력을 빈민가 구역으로 보내는 작업을 도와달라고 함",
+			"kind": "rep",
+			"background_tags": [
+				"server_rack",
+				"day",
+				"flickering",
+				"crowded",
+				"hopeful"
+			]
+		},
+		{
+			"choices": [
+				{
+					"result": [
+						{
+							"speaker": "narrator",
+							"text": "당신은 지루한 시간을 견디며 루카스의 곁을 지켰다."
+						},
+						{
+							"text": "백업이 끝나자 그가 수고비를 지급했다.",
+							"speaker": "narrator"
+						}
+					],
+					"reward": [],
+					"effects": {
+						"fighting": 0,
+						"echo": 0,
+						"gold": 50,
+						"reason": -20,
+						"community": 0
+					},
+					"text": "루카스가 백업을 마칠 때까지 주변을 경계한다",
+					"flag": {
+						"label": "느린 백업 절차",
+						"boss_text": "꼬여버린 백업 절차 탓에 보안관이 당신의 동선을 미리 파악한다.",
+						"key": "lucas_slow_backup"
+					},
+					"path": "easy",
+					"mbti": "SJ"
+				},
+				{
+					"effects": {
+						"echo": 10,
+						"gold": 0,
+						"fighting": 0,
+						"reason": 20,
+						"community": 0
+					},
+					"mbti": "NP",
+					"path": "hard",
+					"flag": {
+						"label": "빼돌린 로그",
+						"key": "lucas_fast_data",
+						"boss_text": "빼돌린 로그 데이터를 이용해 보안관의 약점을 찾아낸다."
+					},
+					"text": "로그 데이터를 드라이브에 강제로 복사해 빼낸다",
+					"reward": [
+						"hp_down"
+					],
+					"result": [
+						{
+							"text": "당신이 선을 뽑고 강제로 데이터를 복사해버렸다.",
+							"speaker": "narrator"
+						},
+						{
+							"text": "루카스가 규정 위반이라며 길길이 날뛰었다.",
+							"speaker": "narrator"
+						}
+					]
+				},
+				{
+					"result": [
+						{
+							"text": "당신이 규정의 빈틈을 짚어주자 루카스가 고개를 끄덕였다.",
+							"speaker": "narrator"
+						},
+						{
+							"speaker": "narrator",
+							"text": "순식간에 합법적인 백업이 끝났다."
+						}
+					],
+					"path": "stat",
+					"reward": [
+						"cooldown_reset"
+					],
+					"mbti": "TJ",
+					"effects": {
+						"reason": -30,
+						"community": 10,
+						"fighting": 0,
+						"gold": 0,
+						"echo": 0
+					},
+					"text": "감찰관의 권한을 이용해 백업 절차를 간소화시킨다",
+					"flag": {
+						"key": "lucas_bypass",
+						"label": "간소화된 절차",
+						"boss_text": "간소화된 절차를 이용해 보안관의 통제 구역을 합법적으로 통과한다."
+					}
+				}
+			],
+			"dialogue": [
+				{
+					"speaker": "lucas",
+					"text": "어떤 혼란 속에서도 절차를 지키는 분이라고 들었습니다."
+				},
+				{
+					"text": "일시적으로 복구된 이 로그들을 정식으로 백업할 때까지 아무도 못 오게 막아주십시오.",
+					"speaker": "lucas"
+				},
+				{
+					"text": "그냥 통째로 복사해서 가져가면 빠를 텐데, 굳이 저 복잡한 절차를 다 밟아야 해?",
+					"speaker": "echo"
+				}
+			],
+			"rule_link": "조각이 깨져 강제 복구된 데이터 중 중요한 로그를 절차대로 보존하려 함",
+			"kind": "rep",
+			"wants": "복구된 로그 데이터를 정식 절차대로 백업할 때까지 옆에서 보안을 서 달라고 함",
+			"person": {
+				"name": "루카스",
+				"role": "원칙주의 감찰관",
+				"id": "lucas"
+			},
+			"title": "절차대로 백업된 로그",
+			"slot": "B",
+			"key": "lucas_log_backup",
+			"background_tags": [
+				"server_rack",
+				"day",
+				"bright",
+				"sparse",
+				"strict"
+			],
+			"rep_dir": "reason-"
+		},
+		{
+			"key": "zeta_graffiti_screen",
+			"wants": "복구된 서버 랙의 화면에 자신의 화려한 그래피티 영상을 덮어씌우게 해달라고 함",
+			"rep_dir": "reason+",
+			"person": {
+				"id": "zeta",
+				"role": "자유분방한 아티스트",
+				"name": "제타"
+			},
+			"slot": "B",
+			"dialogue": [
+				{
+					"text": "형식 같은 건 다 무시하고 마음 가는 대로 산다며? 완전 내 스타일이야!",
+					"speaker": "zeta"
+				},
+				{
+					"text": "저기 켜진 전광판들에 내 끝내주는 영상을 틀고 싶은데, 메인 서버 권한 좀 뚫어줄래?",
+					"speaker": "zeta"
+				},
+				{
+					"speaker": "echo",
+					"text": "지금 에러 메시지도 감당이 안 되는데, 저런 화려한 영상까지 틀면 서버가 멈출지도 몰라."
+				}
+			],
+			"kind": "rep",
+			"rule_link": "데이터 복구로 활성화된 전광판에 규칙을 무시하고 예술 작품을 틀려는 상황",
+			"choices": [
+				{
+					"flag": {
+						"label": "눈부신 전광판",
+						"key": "zeta_blind",
+						"boss_text": "사방에서 번쩍이는 영상 때문에 시야가 가려져 공격을 피하기 어렵다."
+					},
+					"text": "메인 서버 권한을 뚫어 영상을 튼다",
+					"mbti": "NP",
+					"path": "easy",
+					"reward": [],
+					"result": [
+						{
+							"text": "당신이 보안을 풀자 모든 화면에 현란한 그래피티가 재생되었다.",
+							"speaker": "narrator"
+						},
+						{
+							"text": "제타가 신나서 돈을 쥐여주었다.",
+							"speaker": "narrator"
+						}
+					],
+					"effects": {
+						"reason": 20,
+						"gold": 50,
+						"echo": 0,
+						"fighting": 0,
+						"community": 0
+					}
+				},
+				{
+					"mbti": "SJ",
+					"path": "hard",
+					"result": [
+						{
+							"speaker": "narrator",
+							"text": "당신이 제어판을 잠그고 단호하게 거절했다."
+						},
+						{
+							"speaker": "narrator",
+							"text": "제타는 꽉 막힌 사람이라며 투덜대고 떠났다."
+						}
+					],
+					"reward": [
+						"hp_down"
+					],
+					"flag": {
+						"boss_text": "정상적��로 출력되는 화면을 보고 보안관의 움직임을 예측한다.",
+						"label": "깔끔한 화면",
+						"key": "zeta_clean"
+					},
+					"text": "권한을 잠그고 제타를 쫓아낸다",
+					"effects": {
+						"community": 0,
+						"echo": 10,
+						"gold": 0,
+						"reason": -20,
+						"fighting": 0
+					}
+				},
+				{
+					"reward": [
+						"move_range_up"
+					],
+					"result": [
+						{
+							"text": "당신이 멋대로 코드를 섞어 틀자 전광판이 미친 듯이 깜빡거렸다.",
+							"speaker": "narrator"
+						},
+						{
+							"speaker": "narrator",
+							"text": "제타가 최고라며 환호했다."
+						}
+					],
+					"path": "stat",
+					"mbti": "TP",
+					"text": "제타의 영상을 해킹 코드와 섞어 틀어버린다",
+					"flag": {
+						"label": "혼란스러운 시스템",
+						"key": "zeta_chaos",
+						"boss_text": "해킹 코드가 섞인 영상을 틀어 보안관의 감시 드론을 추락시킨다."
+					},
+					"effects": {
+						"fighting": -10,
+						"echo": 0,
+						"community": 0,
+						"gold": 0,
+						"reason": 30
+					}
+				}
+			],
+			"background_tags": [
+				"server_rack",
+				"day",
+				"colorful",
+				"crowded",
+				"chaotic"
+			],
+			"title": "전광판을 덮은 예술"
+		}
+	],
+	"errors": []
+}

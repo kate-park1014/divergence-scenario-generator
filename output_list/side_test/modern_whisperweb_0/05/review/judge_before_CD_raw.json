@@ -1,0 +1,280 @@
+{
+	"cards": [
+		{
+			"card_id": "card_05_blocking_firewall",
+			"asks": "방화벽이 우리를 적으로 인식하고 있으니 당장 도망치자고 한다.",
+			"checks": [
+				{
+					"item": "S1",
+					"pass": true
+				},
+				{
+					"item": "S2",
+					"pass": true
+				},
+				{
+					"pass": true,
+					"item": "S3"
+				},
+				{
+					"item": "S4",
+					"problem": "동행이 카드 인물의 상황에 반응하지 않고 스토리 방 대사를 그대로 되풀이하고 있습니다.",
+					"quote": "조심해! 놈은 정보 과부하로 미쳐버린 덩어리야. 조각이 맞춰지는 걸 목숨 걸고 막으려 들 거야.",
+					"pass": false
+				},
+				{
+					"item": "S5",
+					"pass": true
+				}
+			],
+			"choices_read": [
+				{
+					"target": "주인공",
+					"path": "easy",
+					"does": "방화벽을 피해 안전한 우회로를 찾는다.",
+					"reaction_assumes": "좁고 구불구불한 환풍구를 통해 방화벽을 돌아갔다."
+				},
+				{
+					"reaction_assumes": "옷소매가 타들어 가는 것을 견디며 방화벽 내부의 제어 콘솔에 조각을 끼워 넣었다.",
+					"path": "hard",
+					"does": "도망치지 않고 방화벽의 열기를 뚫고 들어가 조각을 맞춘다.",
+					"target": "주인공"
+				},
+				{
+					"target": "주인공",
+					"reaction_assumes": "스캐너의 신호에 맞춰 세 번 연속으로 몸을 날려 방화벽을 무사히 통과했다.",
+					"does": "방화벽의 패턴을 분석하는 스캐너를 사서 타이밍을 맞춘다.",
+					"path": "gold"
+				},
+				{
+					"target": "{actor}",
+					"reaction_assumes": "레이저가 점멸하는 찰나의 순간을 노려 가볍게 굴러 방화벽을 통과했다.",
+					"path": "lock",
+					"does": "방화벽의 패턴을 눈으로 좇아 빈틈으로 뛰어든다."
+				}
+			]
+		},
+		{
+			"asks": "통제판을 부순 탓에 신분 데이터가 삭제되었으니 남은 조각들도 전부 박살 내자고 한다.",
+			"card_id": "card_05_erased_identity",
+			"choices_read": [
+				{
+					"does": "기술자가 조각을 짓밟게 둔다.",
+					"path": "easy",
+					"reaction_assumes": "막지 않아서 기술자의 발밑에서 조각이 산산조각 났다.",
+					"target": "기술자"
+				},
+				{
+					"reaction_assumes": "몸을 날려 조각을 지켜내고 다른 파편과 조심스럽게 연결했다.",
+					"target": "기술자/조각",
+					"does": "기술자를 밀쳐내고 조각을 주워 맞춘다.",
+					"path": "hard"
+				}
+			],
+			"checks": [
+				{
+					"pass": true,
+					"item": "S1"
+				},
+				{
+					"pass": true,
+					"item": "S2"
+				},
+				{
+					"item": "S3",
+					"pass": true
+				},
+				{
+					"quote": "방금 내 정보망이 아주 잠깐 복구됐었어! 너희 대체 뭘 한 거야?",
+					"item": "S4",
+					"problem": "동행이 카드 인물의 상황에 반응하지 않고 스토리 방 대사를 그대로 되풀이하고 있습니다.",
+					"pass": false
+				},
+				{
+					"item": "S5",
+					"pass": true
+				}
+			]
+		},
+		{
+			"asks": "기계 팔을 조종해 데이터 조각 맞추는 것을 도와주겠다고 한다.",
+			"card_id": "card_05_helper_technician",
+			"choices_read": [
+				{
+					"path": "easy",
+					"does": "기술자의 도움을 받아 조각을 맞춘다.",
+					"reaction_assumes": "기계 팔이 섬세하게 조각들을 끼워 맞추어 데이터 배열이 안정적으로 연결되었다.",
+					"target": "기술자/조각"
+				},
+				{
+					"target": "조각",
+					"does": "기계 대신 직접 손으로 조각의 단면을 확인하며 맞춘다.",
+					"path": "hard",
+					"reaction_assumes": "기계 팔을 물리고 단면의 코드를 일일이 확인하며 조각을 붙였다."
+				}
+			],
+			"checks": [
+				{
+					"pass": true,
+					"item": "S1"
+				},
+				{
+					"pass": true,
+					"item": "S2"
+				},
+				{
+					"item": "S3",
+					"pass": true
+				},
+				{
+					"problem": "동행이 카드 인물의 상황에 반응하지 않고 스토리 방 대사를 그대로 되풀이하고 있습니다.",
+					"pass": false,
+					"item": "S4",
+					"quote": "방금 내 정보망이 아주 잠깐 복구됐었어! 너희 대체 뭘 한 거야?"
+				},
+				{
+					"pass": true,
+					"item": "S5"
+				}
+			]
+		},
+		{
+			"checks": [
+				{
+					"pass": true,
+					"item": "S1"
+				},
+				{
+					"item": "S2",
+					"pass": true
+				},
+				{
+					"item": "S3",
+					"pass": true
+				},
+				{
+					"problem": "동행이 카드 인물의 상황에 반응하지 않고 스토리 방 대사를 그대로 되풀이하고 있습니다.",
+					"pass": false,
+					"item": "S4",
+					"quote": "조심해! 놈은 정보 과부하로 미쳐버린 덩어리야. 조각이 맞춰지는 걸 목숨 걸고 막으려 들 거야."
+				},
+				{
+					"item": "S5",
+					"pass": true
+				}
+			],
+			"card_id": "card_05_power_of_system",
+			"asks": "남은 예비 전력으로 조각을 한 번에 여러 개 융합하자고 한다.",
+			"choices_read": [
+				{
+					"does": "예비 전력을 단말기에 연결해 조각을 빠르게 융합한다.",
+					"path": "easy",
+					"reaction_assumes": "강한 전류가 흐르며 조각들이 순식간에 하나로 엉겨 붙었다.",
+					"target": "조각/단말기"
+				},
+				{
+					"target": "전력",
+					"reaction_assumes": "배터리를 조각 주변에 둘러 보호막을 쳤다.",
+					"does": "전력을 직접 사용하지 않고 방어용 에너지 장벽으로 전환한다.",
+					"path": "hard"
+				}
+			]
+		},
+		{
+			"card_id": "card_05_temporary_assembly",
+			"choices_read": [
+				{
+					"target": "관리자",
+					"reaction_assumes": "억지로 눌린 조각들이 마찰을 일으키며 겨우 맞물렸다.",
+					"path": "easy",
+					"does": "관리자가 조각을 강제로 억누르게 둔다."
+				},
+				{
+					"target": "조각",
+					"reaction_assumes": "밀어내는 힘을 거슬러 가며 조각들을 올바른 방향으로 꼼꼼히 배열했다.",
+					"does": "억누르지 않고 핀셋으로 조각의 극성을 하나씩 맞춰 배열한다.",
+					"path": "hard"
+				},
+				{
+					"path": "gold",
+					"reaction_assumes": "접착제를 바르고 조각을 밀어 넣자 단단하게 굳으며 조각이 완벽히 이어졌다.",
+					"does": "비싼 전도성 접착제를 사서 조각들을 붙이는 내기를 한다.",
+					"target": "조각"
+				},
+				{
+					"path": "lock",
+					"does": "단말기의 자기장 수치를 계산해 조각이 스스로 붙게 만든다.",
+					"reaction_assumes": "단말기의 전압을 조절해 극성을 반전시키자 조각들이 자석처럼 서로 달라붙었다.",
+					"target": "단말기/조각"
+				}
+			],
+			"asks": "조각들의 극성이 안 맞아 튕겨 나가니 강제로라도 눌러서 고정해야 한다고 한다.",
+			"checks": [
+				{
+					"item": "S1",
+					"pass": true
+				},
+				{
+					"item": "S2",
+					"pass": true
+				},
+				{
+					"pass": true,
+					"item": "S3"
+				},
+				{
+					"quote": "방금 내 정보망이 아주 잠깐 복구됐었어! 너희 대체 뭘 한 거야?",
+					"pass": false,
+					"item": "S4",
+					"problem": "동행이 카드 인물의 상황에 반응하지 않고 스토리 방 대사를 그대로 되풀이하고 있습니다."
+				},
+				{
+					"item": "S5",
+					"pass": true
+				}
+			]
+		},
+		{
+			"choices_read": [
+				{
+					"does": "조각을 맞추는 작업을 멈추고 문을 부수는 데 힘을 쏟는다.",
+					"path": "easy",
+					"reaction_assumes": "쇠지렛대로 문을 뜯어내 수습을 구했다.",
+					"target": "문"
+				},
+				{
+					"path": "hard",
+					"does": "수습의 외침을 뒤로하고 조각을 먼저 맞춰 시스템을 정상화한다.",
+					"reaction_assumes": "문 앞의 조각들을 서둘러 맞추자 시스템이 복구되며 문이 열렸다.",
+					"target": "조각/시스템"
+				}
+			],
+			"card_id": "card_05_trapped_operator",
+			"checks": [
+				{
+					"pass": true,
+					"item": "S1"
+				},
+				{
+					"item": "S2",
+					"pass": true
+				},
+				{
+					"item": "S3",
+					"pass": true
+				},
+				{
+					"item": "S4",
+					"problem": "동행이 카드 인물의 상황에 반응하지 않고 스토리 방 대사를 그대로 되풀이하고 있습니다.",
+					"quote": "조심해! 놈은 정보 과부하로 미쳐버린 덩어리야. 조각이 맞춰지는 걸 목숨 걸고 막으려 들 거야.",
+					"pass": false
+				},
+				{
+					"item": "S5",
+					"pass": true
+				}
+			],
+			"asks": "시스템이 엉켜 문이 안 열리니 제발 문을 부수고 꺼내달라고 한다."
+		}
+	]
+}

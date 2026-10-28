@@ -1,0 +1,147 @@
+{
+	"id": "card_02_honest_queue_seeker",
+	"kind": "callback",
+	"title": {
+		"korean": "정직하게 남은 이름"
+	},
+	"intensity": "high",
+	"after_story": 5,
+	"before_story": 7,
+	"callback": {
+		"seed": "resume_forgery_seeker_hard",
+		"min_rooms_after": 2
+	},
+	"background_tags": [
+		"terminal_room",
+		"fluorescent_light",
+		"waiting_line",
+		"quiet_tension",
+		"stable_screen"
+	],
+	"dialogue": [
+		{
+			"speaker": "narrator",
+			"content": {
+				"korean": "단말기 옆 대기 줄에 서 있던 초조한 구직자가 당신을 알아보고 고개를 숙인다."
+			}
+		},
+		{
+			"speaker": "seeker",
+			"content": {
+				"korean": "그때 가짜 경력을 안 적은 덕분에 제 이름은 다른 사람과 엉키지 않았네요."
+			}
+		},
+		{
+			"speaker": "nia",
+			"content": {
+				"korean": "수많은 지원자의 이름이 일그러지는 와중에도 본래 이름이 선명하게 남아 있어요."
+			}
+		}
+	],
+	"choices": [
+		{
+			"text": {
+				"korean": "구직자의 선명한 명단 옆 단말기 슬롯을 이용해 검색 속도를 높인다."
+			},
+			"path": "easy",
+			"mbti": "EF",
+			"flag": "clean_record_shortcut",
+			"effects": {
+				"gold": 100,
+				"echo": 5,
+				"reason": 10
+			},
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "구직자의 선명한 이름 옆 단말기 슬롯에 보조 기기를 연결해 검색 속도를 높였다."
+					}
+				},
+				{
+					"speaker": "seeker",
+					"content": {
+						"korean": "제 이름이 올바르게 적혀 있어서 단말기 승인도 빠르게 떨어지네요."
+					}
+				},
+				{
+					"speaker": "nia",
+					"content": {
+						"korean": "원래 기록이 깨끗하게 남아 있으니 전산 처리도 막힘이 없어요."
+					}
+				}
+			]
+		},
+		{
+			"text": {
+				"korean": "구직자의 순서가 밀리지 않도록 단말기 출력을 보조한다."
+			},
+			"path": "hard",
+			"mbti": "NF",
+			"flag": "queue_support_trust",
+			"effects": {
+				"community": 20,
+				"fighting": 10,
+				"echo": 10
+			},
+			"reward": [
+				"defense_up"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "구직자의 명단 출력이 지연되지 않도록 단말기 종이 용지를 직접 교체해 주었다."
+					}
+				},
+				{
+					"speaker": "seeker",
+					"content": {
+						"korean": "정직하게 순서를 기다린 보람이 있군요. 정말 감사합니다!"
+					}
+				},
+				{
+					"speaker": "nia",
+					"content": {
+						"korean": "올바른 이름을 지켜낸 사람들끼리 서로 도우니 마음이 든든해요."
+					}
+				}
+			]
+		}
+	],
+	"_side": {
+		"slot": "C",
+		"person": {
+			"role": "단말기에 정직한 데이터만 남기고 대기 중인 지원자",
+			"id": "seeker",
+			"name": "초조한 구직자"
+		},
+		"wants": "이름 표기가 흔들리는 와중에도 자신의 본래 접수 번호 순서를 지키기",
+		"rule_link": "허위 기재를 거부했던 덕분에 이름이 왜곡되지 않고 원래 접수 명단에 정확히 남아 있다.",
+		"events": {},
+		"flags": {
+			"clean_record_shortcut": {
+				"kind": "good",
+				"boss_penalty": 1,
+				"label": {
+					"korean": "선명한 기록 활용"
+				},
+				"boss_choice": {
+					"korean": "왜곡되지 않은 인적 데이터를 기반으로 관리 장치를 쉽게 우회한다."
+				}
+			},
+			"queue_support_trust": {
+				"kind": "good",
+				"boss_penalty": 2,
+				"label": {
+					"korean": "정직한 지원자 연대"
+				},
+				"boss_choice": {
+					"korean": "정직한 지원자들의 신뢰를 얻어 보스 방 진입 시 방어 지원을 받는다."
+				}
+			}
+		}
+	}
+}

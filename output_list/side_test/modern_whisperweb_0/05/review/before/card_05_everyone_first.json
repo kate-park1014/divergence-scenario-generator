@@ -1,0 +1,219 @@
+{
+	"id": "card_05_everyone_first",
+	"kind": "rep",
+	"title": {
+		"korean": "모두의 몫을 세는 손"
+	},
+	"intensity": "calm",
+	"after_story": 7,
+	"before_story": 10,
+	"condition": {
+		"leaning": "community+",
+		"among": [
+			"fighting-",
+			"fighting+",
+			"community-",
+			"community+",
+			"reason-",
+			"reason+"
+		],
+		"min": 20
+	},
+	"urgency": 8,
+	"leaning": "community+",
+	"background_tags": [
+		"control_room",
+		"late_shift",
+		"paper_list",
+		"crowd",
+		"busy"
+	],
+	"dialogue": [
+		{
+			"speaker": "narrator",
+			"content": {
+				"korean": "교대 조장이 명단이 적힌 종이를 단말기 옆에 펼쳐 놓았다."
+			}
+		},
+		{
+			"speaker": "shift_leader",
+			"content": {
+				"korean": "당신이 끝까지 남는 사람 챙긴다는 소문의 그 사람이죠? 명단부터 봐 주세요."
+			}
+		},
+		{
+			"speaker": "shift_leader",
+			"content": {
+				"korean": "여기 열두 명이야. 조각 맞추는 순서를 정하기 전에 몫부터 정해야 해요."
+			}
+		},
+		{
+			"speaker": "echo",
+			"content": {
+				"korean": "열두 명 몫을 다 정하다간 조각 맞출 시간이 없어! 근데 저 종이, 이름이 하나 지워져 있는데?"
+			}
+		}
+	],
+	"choices": [
+		{
+			"text": {
+				"korean": "교대 조장과 함께 열두 명 몫을 명단에 적는다"
+			},
+			"path": "easy",
+			"mbti": "FJ",
+			"flag": "twelve_names_d4",
+			"effects": {
+				"community": 25,
+				"reason": 10,
+				"echo": 5
+			},
+			"reward": [
+				"heal"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "종이에 이름이 하나씩 채워졌다. 조장이 지워진 자리에 새 이름을 적었다."
+					}
+				},
+				{
+					"speaker": "shift_leader",
+					"content": {
+						"korean": "이제 열두 명 다 몫이 있어요. 아, 지워진 건 퇴근한 사람 이름이었네요."
+					}
+				},
+				{
+					"speaker": "echo",
+					"content": {
+						"korean": "명단이 탄탄하네. 이 정도면 다들 우리 편이야."
+					}
+				}
+			]
+		},
+		{
+			"text": {
+				"korean": "명단은 조장에게 맡기고 조각의 홈부터 확인한다"
+			},
+			"path": "hard",
+			"mbti": "TP",
+			"flag": "checked_grooves",
+			"effects": {
+				"community": -20,
+				"reason": 20,
+				"echo": -5
+			},
+			"reward": [
+				"intelligence_up"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "조장이 종이를 접어 주머니에 넣었다. 당신은 조각 홈의 각도만 재었다."
+					}
+				},
+				{
+					"speaker": "shift_leader",
+					"content": {
+						"korean": "몫은 제가 챙길게요. 당신은 하던 거 하세요."
+					}
+				},
+				{
+					"speaker": "echo",
+					"content": {
+						"korean": "차갑게 굴었는데 조장이 오히려 안심한 표정이야."
+					}
+				}
+			]
+		},
+		{
+			"text": {
+				"korean": "교대 조장에게 열두 명을 홀로그램 앞에 세우게 한다"
+			},
+			"path": "stat",
+			"mbti": "EN",
+			"require": {
+				"stat": "community",
+				"op": ">=",
+				"value": 40
+			},
+			"flag": "twelve_wall",
+			"effects": {
+				"community": 25,
+				"fighting": 10,
+				"echo": 10
+			},
+			"reward": [
+				"shield"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "조장이 손짓하자 열두 명이 단말기 앞에 나란히 섰다."
+					}
+				},
+				{
+					"speaker": "shift_leader",
+					"content": {
+						"korean": "당신이 시키면 다들 따라와요. 이름값 하네요."
+					}
+				},
+				{
+					"speaker": "echo",
+					"content": {
+						"korean": "사람이 이렇게 모이는 거, 나도 처음 봐."
+					}
+				}
+			]
+		}
+	],
+	"_side": {
+		"slot": "D",
+		"person": {
+			"id": "shift_leader",
+			"name": "교대 조장",
+			"role": "야간 교대 조장"
+		},
+		"wants": "제어실에 남은 인원 전원의 몫을 먼저 확보해 달라며, 조각 맞추기를 잠시 멈추고 인원 점검을 하자고 한다.",
+		"rule_link": "데이터 스크린 조각은 맞추는 순서를 정해야 하는데, 조장은 인원별 몫을 먼저 정하자며 순서표를 들고 왔다.",
+		"rep": "community+",
+		"events": {},
+		"flags": {
+			"twelve_names_d4": {
+				"kind": "bad",
+				"boss_penalty": -1,
+				"label": {
+					"korean": "열두 명 명단"
+				},
+				"boss_line": {
+					"korean": "명단에 적힌 열두 명이 홀로그램 앞에 늘어서서 정보 파편을 막아 준다."
+				}
+			},
+			"checked_grooves": {
+				"kind": "good",
+				"boss_penalty": 1,
+				"label": {
+					"korean": "확인한 홈"
+				},
+				"boss_choice": {
+					"korean": "확인해 둔 홈 위치로 홀로그램의 출력 회로를 곧장 찌른다."
+				}
+			},
+			"twelve_wall": {
+				"kind": "good",
+				"boss_penalty": 2,
+				"label": {
+					"korean": "열두 명의 벽"
+				},
+				"boss_choice": {
+					"korean": "열두 명이 홀로그램 앞에 벽을 세워 정보 파편을 막는 동안 회로에 붙는다."
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,908 @@
+{
+	"cards": [
+		{
+			"no": 1,
+			"key": "wrecked_gate",
+			"title": "부서진 잠금장치",
+			"person": {
+				"id": "mara",
+				"name": "마라",
+				"role": "처리장 설비 기사"
+			},
+			"wants": "뒤섞인 기록 때문에 자기 명의로 뜬 파손 책임을 물리치려, 당신에게 분류기 잠금장치를 부숴달라고 한다.",
+			"rule_link": "분류기 안쪽에서 파열음이 나는 스크린 조각의 상태를 확인하려면 그 잠금장치를 먼저 열어야 한다.",
+			"dialogue": [
+				{
+					"speaker": "mara",
+					"text": "당신이 아까 처리장 파이프를 힘으로 뜯어냈다는 사람이죠? 손 좀 빌리려고요."
+				},
+				{
+					"speaker": "narrator",
+					"text": "마라는 손등에 밴드가 세 개 붙은 채 분류기 잠금장치를 툭툭 쳤다."
+				},
+				{
+					"speaker": "dax",
+					"text": "저 사람 명패에 파손 책임자라고 찍혀 있어. 방금 뜬 거야."
+				},
+				{
+					"speaker": "mara",
+					"text": "저 잠금장치만 부수면 제 이름 뜬 기록도 같이 멈춰요. 안 부수면 제 월급에서 수리비가 빠져요."
+				}
+			],
+			"choices": [
+				{
+					"path": "easy",
+					"text": "마라 대신 분류기 잠금장치를 어깨로 들이받아 부순다.",
+					"mbti": "TJ",
+					"effects": {
+						"fighting": 15,
+						"gold": 120
+					},
+					"result": [
+						{
+							"speaker": "narrator",
+							"text": "잠금장치가 두 조각으로 갈라지며 안쪽에서 뜨거운 바람이 뿜어져 나왔다."
+						},
+						{
+							"speaker": "mara",
+							"text": "됐어요! 기록 멈췄어요. 이건 제 성의예요, 받으세요."
+						},
+						{
+							"speaker": "dax",
+							"text": "부순 값은 받았는데, 저 안쪽에서 파열음이 더 크게 들리는 건 나만 듣나?"
+						}
+					],
+					"flag": {
+						"key": "broken_sorter_lock",
+						"label": "부순 잠금장치",
+						"boss_text": "갈라진 잠금장치 틈으로 손을 넣어 분류기 배선을 뽑는다."
+					}
+				},
+				{
+					"path": "hard",
+					"text": "부수지 않고 마라와 함께 잠금장치 오류 기록을 손으로 대조한다.",
+					"mbti": "FJ",
+					"effects": {
+						"fighting": -20,
+						"reason": 10
+					},
+					"reward": [
+						"intelligence_up"
+					],
+					"result": [
+						{
+							"speaker": "narrator",
+							"text": "마라는 잠금장치를 붙잡고, 당신은 화면의 오류 기록을 한 줄씩 짚었다."
+						},
+						{
+							"speaker": "mara",
+							"text": "이거 진짜 제 명의가 아니네요. 시간은 걸렸지만 이게 맞아요."
+						},
+						{
+							"speaker": "narrator",
+							"text": "잠금장치는 그대로인 채, 마라의 명패에서 책임자 이름이 지워졌다."
+						}
+					],
+					"flag": {
+						"key": "checked_error_log",
+						"label": "대조한 오류 기록",
+						"boss_text": "마라가 대조해 둔 오류 기록을 근거로 분류기 앞을 지나간다."
+					}
+				},
+				{
+					"path": "stat",
+					"text": "당신이 여기서 뭘 부수고 다녔는지 아는 마라에게 잠금장치 열쇠를 넘겨받는다.",
+					"mbti": "TP",
+					"effects": {
+						"fighting": -20,
+						"echo": 5
+					},
+					"reward": [
+						"move_range_up"
+					],
+					"result": [
+						{
+							"speaker": "mara",
+							"text": "당신이 파이프를 뜯어냈다길래, 이건 당신이 열어야 맞겠다 싶었어요."
+						},
+						{
+							"speaker": "narrator",
+							"text": "마라가 허리춤에서 낡은 열쇠를 꺼내 손바닥에 올렸다."
+						},
+						{
+							"speaker": "dax",
+							"text": "이름만 들어도 열쇠가 나오네. 무섭다, 무서워."
+						}
+					],
+					"flag": {
+						"key": "sorter_key",
+						"label": "설비 열쇠",
+						"boss_text": "마라에게 받은 열쇠로 분류기 옆 비상문을 열고 지나간다."
+					}
+				},
+				{
+					"path": "gold",
+					"text": "마라에게 수리비 100골드를 쥐여주고 잠금장치를 그대로 두게 한다.",
+					"mbti": "EP",
+					"effects": {
+						"gold": -100,
+						"community": -10
+					},
+					"result": [
+						{
+							"speaker": "narrator",
+							"text": "마라는 골드를 세어 보고는 잠금장치 앞에 쪼그려 앉았다."
+						},
+						{
+							"speaker": "mara",
+							"text": "이 정도면 이번 달은 버텨요. 근데 다음 달엔 어쩌죠?"
+						},
+						{
+							"speaker": "dax",
+							"text": "돈으로 시간을 샀네. 그 시간에 우린 뭘 할 건데?"
+						}
+					]
+				}
+			],
+			"background_tags": [
+				"data_plant",
+				"late_shift",
+				"flickering_light",
+				"crowded_floor",
+				"tense"
+			],
+			"slot": "D",
+			"kind": "rep",
+			"rep_dir": "fighting-"
+		},
+		{
+			"no": 2,
+			"key": "stretcher_worker",
+			"title": "들것에 눕힌 작업자",
+			"person": {
+				"id": "pila",
+				"name": "필라",
+				"role": "야간 교대 조장"
+			},
+			"wants": "뒤섞인 기록 탓에 짐을 진 채 쓰러진 동료를 옮길 사람이 없어, 당신에게 함께 들것을 들자고 한다.",
+			"rule_link": "스크린 조각을 확인하러 가려면 쓰러진 작업자가 막고 있는 통로를 비워야 한다.",
+			"dialogue": [
+				{
+					"speaker": "pila",
+					"text": "아까 쓰러진 사람 손 잡아 일으켰다는 소문, 당신 얘기죠?"
+				},
+				{
+					"speaker": "narrator",
+					"text": "필라는 들것 한쪽을 이미 들고 있었고, 다른 쪽 끝은 바닥에 놓여 있었다."
+				},
+				{
+					"speaker": "dax",
+					"text": "저 사람 명패 기록도 엉망이야. 누가 누구를 업고 가야 하는지 아무도 몰라."
+				},
+				{
+					"speaker": "pila",
+					"text": "한쪽만 들어 주세요. 저 사람이 통로 한가운데 누워서 아무도 못 지나가요."
+				}
+			],
+			"choices": [
+				{
+					"path": "easy",
+					"text": "필라와 함께 들것을 들어 쓰러진 작업자를 벽 쪽으로 옮긴다.",
+					"mbti": "FJ",
+					"effects": {
+						"fighting": 15,
+						"community": 10
+					},
+					"reward": [
+						"heal"
+					],
+					"result": [
+						{
+							"speaker": "narrator",
+							"text": "들것이 들리자 통로 바닥이 드러났고, 작업자는 얕게 숨을 쉬었다."
+						},
+						{
+							"speaker": "pila",
+							"text": "고맙습니다. 이 사람 이름은 제가 꼭 다시 찾아줄게요."
+						},
+						{
+							"speaker": "dax",
+							"text": "통로 열렸어. 근데 저 사람 손에 쥔 명패, 왜 우리 이름이 찍혀 있지?"
+						}
+					],
+					"flag": {
+						"key": "cleared_corridor",
+						"label": "비운 통로",
+						"boss_text": "필라가 비워 둔 통로를 따라 분류기 뒤쪽으로 올라간다."
+					}
+				},
+				{
+					"path": "hard",
+					"text": "들것 대신 필라에게 작업자 명패를 뒤져 신원부터 확인하자고 한다.",
+					"mbti": "TP",
+					"effects": {
+						"fighting": -20,
+						"reason": 15
+					},
+					"reward": [
+						"intelligence_up"
+					],
+					"result": [
+						{
+							"speaker": "narrator",
+							"text": "필라는 들것을 내려놓고 당신을 노려보다가 명패를 넘겼다."
+						},
+						{
+							"speaker": "pila",
+							"text": "사람부터 옮겨야 하는 거 아닙니까. ...근데 이 명패, 남의 거네요."
+						},
+						{
+							"speaker": "narrator",
+							"text": "쓰러진 작업자는 다른 사람 명패를 차고 있었다. 통로는 여전히 막혀 있었다."
+						}
+					],
+					"flag": {
+						"key": "wrong_badge_found",
+						"label": "뒤바뀐 명패",
+						"boss_text": "뒤바뀐 명패를 근거로 삼��� 막힌 통로의 경비를 세운다."
+					}
+				},
+				{
+					"path": "stat",
+					"text": "당신이 남을 일으켜 세웠다는 소문을 믿는 필라에게 들것을 맡기고 앞장선다.",
+					"mbti": "EP",
+					"effects": {
+						"fighting": 20,
+						"echo": 8
+					},
+					"reward": [
+						"move_range_up"
+					],
+					"result": [
+						{
+							"speaker": "pila",
+							"text": "당신이면 들어 줄 거라고 다들 그러더라고요. 역시."
+						},
+						{
+							"speaker": "narrator",
+							"text": "필라가 들것을 혼자 끌어당기며 통로 벽 쪽으로 비켜 섰다."
+						},
+						{
+							"speaker": "dax",
+							"text": "이름값 하네. 나도 좀 팔아 볼까?"
+						}
+					],
+					"flag": {
+						"key": "pila_trust",
+						"label": "필라의 신뢰",
+						"boss_text": "필라가 앞장서 통로를 열어 주는 길로 간다."
+					}
+				}
+			],
+			"background_tags": [
+				"data_plant",
+				"night_shift",
+				"dim_light",
+				"sparse_crowd",
+				"urgent"
+			],
+			"slot": "D",
+			"kind": "rep",
+			"rep_dir": "fighting+"
+		},
+		{
+			"no": 3,
+			"key": "scrap_share",
+			"title": "나눠 가질 폐기물",
+			"person": {
+				"id": "gori",
+				"name": "고리",
+				"role": "폐기물 재활용 업자"
+			},
+			"wants": "뒤섞인 기록 덕에 주인 없는 폐기물이 쏟아졌다며, 당신과 몫을 나눠 가지자고 꼬드긴다.",
+			"rule_link": "분류��� 안쪽에 끼어 나온 스크린 조각도 폐기물 더미에 섞여 있어, 누가 먼저 챙기느냐의 문제가 된다.",
+			"dialogue": [
+				{
+					"speaker": "gori",
+					"text": "당신이 폐기물 목록에서 제일 값 나가는 것만 골라 챙겼다는 사람이죠?"
+				},
+				{
+					"speaker": "narrator",
+					"text": "고리는 손가락마다 반지 자국이 남은 장갑을 끼고 있었다."
+				},
+				{
+					"speaker": "dax",
+					"text": "저 사람 손에 든 거, 아까 우리 앞에서 사라진 상자 아니야?"
+				},
+				{
+					"speaker": "gori",
+					"text": "주인 없는 물건이야. 지금 안 챙기면 남 좋은 거 돼요. 반반 합시다."
+				}
+			],
+			"choices": [
+				{
+					"path": "easy",
+					"text": "고리와 함께 폐기물 더미에서 값 나가는 부품부터 골라 챙긴다.",
+					"mbti": "TP",
+					"effects": {
+						"fighting": 15,
+						"community": -15,
+						"gold": 90
+					},
+					"result": [
+						{
+							"speaker": "narrator",
+							"text": "고리가 더미를 발로 차자 반짝이는 부품이 여러 개 굴러 나왔다."
+						},
+						{
+							"speaker": "gori",
+							"text": "이 정도면 반반 맞죠. 좋은 거래였어요."
+						},
+						{
+							"speaker": "dax",
+							"text": "저기 남은 더미에 뭐가 묻혀 있는데, 우리 건 다 챙긴 거 맞아?"
+						}
+					],
+					"flag": {
+						"key": "shared_scrap",
+						"label": "나눈 폐기물",
+						"boss_text": "고리에게 받은 부품으로 분류기 잠금 회로를 덮는다."
+					}
+				},
+				{
+					"path": "hard",
+					"text": "고리에게��� 챙긴 부품을 도로 더미에 부어 넣고 주인 찾기 목록에 올린다.",
+					"mbti": "FJ",
+					"effects": {
+						"community": 20,
+						"fighting": -10
+					},
+					"reward": [
+						"shield"
+					],
+					"result": [
+						{
+							"speaker": "narrator",
+							"text": "부품이 더미로 되돌아가자 고리가 장갑을 벗어 던졌다."
+						},
+						{
+							"speaker": "gori",
+							"text": "이런 데서 손해 보는 사람 처음 봐요. 진짜."
+						},
+						{
+							"speaker": "dax",
+							"text": "고리가 가면서 뭐라고 중얼거렸어. 나쁜 말은 아니었어."
+						}
+					],
+					"flag": {
+						"key": "listed_scrap",
+						"label": "주인 찾기 목록",
+						"boss_text": "주인 찾기 목록에 오른 폐기물이라며 더미 앞을 통과한다."
+					}
+				},
+				{
+					"path": "stat",
+					"text": "당신이 값 나가는 것만 챙긴다고 아는 고리에게 제일 큰 몫부터 내놓으라고 한다.",
+					"mbti": "TJ",
+					"effects": {
+						"fighting": 20,
+						"community": -10
+					},
+					"reward": [
+						"attack_up"
+					],
+					"result": [
+						{
+							"speaker": "gori",
+							"text": "역시 소문대로네. 좋아요, 큰 거 드릴게요."
+						},
+						{
+							"speaker": "narrator",
+							"text": "고리가 장갑을 벗고 가장 큰 부품을 양손으로 들어 올렸다."
+						},
+						{
+							"speaker": "dax",
+							"text": "이거 이렇게 가져가도 되는 거야? 뒤에 뭐가 있든?"
+						}
+					],
+					"flag": {
+						"key": "gori_cut",
+						"label": "고리의 몫",
+						"boss_text": "고리가 내준 큰 부품으로 분류기 앞의 잠금 회로를 막는다."
+					}
+				},
+				{
+					"path": "fun",
+					"text": "고리에게 폐기물 더미를 반으로 가르는 내기를 하자고 한다.",
+					"mbti": "EP",
+					"effects": {
+						"reason": 25,
+						"community": -10
+					},
+					"reward": [
+						"intelligence_up"
+					],
+					"result": [
+						{
+							"speaker": "narrator",
+							"text": "고리는 웃으며 더미를 두 쪽으로 갈랐고, 당신은 한쪽을 골랐다."
+						},
+						{
+							"speaker": "gori",
+							"text": "이쪽이요? ...어라, 이쪽엔 전부 라벨만 붙은 빈 통인데."
+						},
+						{
+							"speaker": "dax",
+							"text": "내기에서 이겼는데 빈 통을 이겼네. 박수."
+						}
+					]
+				}
+			],
+			"background_tags": [
+				"data_plant",
+				"graveyard_shift",
+				"green_light",
+				"few_people",
+				"greedy"
+			],
+			"slot": "D",
+			"kind": "rep",
+			"rep_dir": "community-"
+		},
+		{
+			"no": 4,
+			"key": "shutdown_shift",
+			"title": "멈추지 않는 교대",
+			"person": {
+				"id": "sera",
+				"name": "세라",
+				"role": "교대 근무자 대표"
+			},
+			"wants": "기록이 뒤섞여 누가 언제 퇴근인지 알 수 없게 되자, 당신에게 전원을 끌 권한을 넘기려 한다.",
+			"rule_link": "전원을 끄면 스크린 조각의 파열음도 잠깐 멈추지만, 보안 시스템까지 함께 꺼진다.",
+			"dialogue": [
+				{
+					"speaker": "sera",
+					"text": "모두를 ���해 앞장섰다는 사람이 여기 있다고 들었어요. 맞죠?"
+				},
+				{
+					"speaker": "narrator",
+					"text": "세라는 손에 근무표를 쥐고 있었고, 종이에는 같은 이름이 네 번 찍혀 있었다."
+				},
+				{
+					"speaker": "dax",
+					"text": "저 사람들 벌써 열두 시간째 서 있어. 기록이 섞여서 퇴근 신호가 안 왔대."
+				},
+				{
+					"speaker": "sera",
+					"text": "제가 전원을 끌게요. 그런데 그 결정은 당신이 해 주세요."
+				}
+			],
+			"choices": [
+				{
+					"path": "easy",
+					"text": "세라에게 전원을 끄라고 하고, 당신은 교대 근무자들을 통로 밖으로 내보낸다.",
+					"mbti": "TJ",
+					"effects": {
+						"community": 15,
+						"fighting": 10
+					},
+					"reward": [
+						"attack_up"
+					],
+					"result": [
+						{
+							"speaker": "narrator",
+							"text": "전원이 꺼지자 근무표를 쥔 손들이 일제히 힘을 풀었다."
+						},
+						{
+							"speaker": "sera",
+							"text": "다들 나가요. 오늘 일은 제가 책임질게요."
+						},
+						{
+							"speaker": "dax",
+							"text": "불 다 꺼졌는데 저 조각만 아직 빛나고 있어."
+						}
+					],
+					"flag": {
+						"key": "workers_out",
+						"label": "나간 근무자들",
+						"boss_text": "세라가 데리고 나간 근무자들의 빈자리로 곧장 올라간다."
+					}
+				},
+				{
+					"path": "hard",
+					"text": "전원을 끄지 않고 세라와 함께 근무표를 손으로 다시 짠다.",
+					"mbti": "FJ",
+					"effects": {
+						"community": -15,
+						"reason": 15
+					},
+					"reward": [
+						"cooldown_reset"
+					],
+					"result": [
+						{
+							"speaker": "narrator",
+							"text": "세라가 근무표를 바닥에 펴고, 당신은 이름을 하나씩 지우고 다시 적었다."
+						},
+						{
+							"speaker": "sera",
+							"text": "이러면 한 시간은 더 서 있어야 해요. 그래도 다 같이 나갈 수 있죠."
+						},
+						{
+							"speaker": "narrator",
+							"text": "모니터는 여전히 뒤섞인 기록을 뱉어 냈다."
+						}
+					],
+					"flag": {
+						"key": "rewritten_roster",
+						"label": "다시 쓴 근무표",
+						"boss_text": "세라가 다시 쓴 근무표를 보여 주며 근무자들 사이를 지나간다."
+					}
+				},
+				{
+					"path": "stat",
+					"text": "세라에게 전원 차단 권한을 넘겨받아 당신 손으로 스위치를 내린다.",
+					"mbti": "TP",
+					"effects": {
+						"community": 20,
+						"echo": 5
+					},
+					"reward": [
+						"stun"
+					],
+					"result": [
+						{
+							"speaker": "sera",
+							"text": "당신이 끄면 아무도 원망 안 해요. 다들 그렇게 말해요."
+						},
+						{
+							"speaker": "narrator",
+							"text": "스위치가 내려가자 처리장 절반이 어두워졌다."
+						},
+						{
+							"speaker": "dax",
+							"text": "어두워진 김에 우리도 뭐 좀 해 볼까."
+						}
+					],
+					"flag": {
+						"key": "power_down",
+						"label": "내린 전원",
+						"boss_text": "전원이 꺼진 어둠 속으로 분류기 뒤편을 돌아간다."
+					}
+				},
+				{
+					"path": "gold",
+					"text": "세라에게 초과 근무 수당 150골드를 대신 내주고 근무자들을 먼저 돌려보낸다.",
+					"mbti": "EP",
+					"effects": {
+						"gold": -150,
+						"community": 10
+					},
+					"result": [
+						{
+							"speaker": "narrator",
+							"text": "세라가 골드 봉투를 받아 들고 근무자들 앞에 섰다."
+						},
+						{
+							"speaker": "sera",
+							"text": "수당 나왔어요! 오늘은 이걸로 버텨요!"
+						},
+						{
+							"speaker": "dax",
+							"text": "지갑은 얇아졌는데 사람들은 웃네. 이상한 거래야."
+						}
+					]
+				}
+			],
+			"background_tags": [
+				"data_plant",
+				"overtime",
+				"emergency_light",
+				"many_workers",
+				"exhausted"
+			],
+			"slot": "D",
+			"kind": "rep",
+			"rep_dir": "community+"
+		},
+		{
+			"no": 5,
+			"key": "unfiled_report",
+			"title": "접수되지 않은 신고서",
+			"person": {
+				"id": "hobel",
+				"name": "호벨",
+				"role": "처리장 기록 담당자"
+			},
+			"wants": "규정대로 접수하려다 기록이 섞여 반려된 신고서를, 당신에게 정식 절차로 다시 통과시켜 달라고 한다.",
+			"rule_link": "신고 접수 대장이 살아 있어야 스크린 조각의 소유권과 폐기 절차를 나중에 증명할 수 있다.",
+			"dialogue": [
+				{
+					"speaker": "hobel",
+					"text": "당신이 규정대로만 처리해서 소문난 그 사람이죠? 마침 잘됐어요."
+				},
+				{
+					"speaker": "narrator",
+					"text": "호벨은 신고서를 여섯 장 겹쳐 들고, 모서리를 손가락으로 계속 고쳐 잡았다."
+				},
+				{
+					"speaker": "dax",
+					"text": "저 사람 서류 모서리 맞추는 거, 세 시간째 봤어."
+				},
+				{
+					"speaker": "hobel",
+					"text": "이 신고서 하나만 접수되면 피해자들이 보상받아요. 도장 하나만 찍어 주세요."
+				}
+			],
+			"choices": [
+				{
+					"path": "easy",
+					"text": "호벨의 신고서에 접수 도장을 찍어 절차를 끝까지 밀어붙인다.",
+					"mbti": "TJ",
+					"effects": {
+						"reason": 15,
+						"community": 10
+					},
+					"reward": [
+						"defense_up"
+					],
+					"result": [
+						{
+							"speaker": "narrator",
+							"text": "도장이 찍히자 호벨이 신고서를 가슴에 안고 접수대에 넣었다."
+						},
+						{
+							"speaker": "hobel",
+							"text": "접수됐어요! 이제 규정대로 처리될 거예요."
+						},
+						{
+							"speaker": "dax",
+							"text": "근데 접수대 화면에 처리 기한이 삼 분으로 떠 있는데."
+						}
+					],
+					"flag": {
+						"key": "filed_report",
+						"label": "접수된 신고서",
+						"boss_text": "접수된 신고서 사본을 들고 분류기 관리 구역을 통과한다."
+					}
+				},
+				{
+					"path": "hard",
+					"text": "도장을 찍지 않고 호벨에게 신고서를 폐기하고 피해자와 직접 얘기하자고 한다.",
+					"mbti": "FP",
+					"effects": {
+						"reason": -20,
+						"community": 10
+					},
+					"reward": [
+						"heal"
+					],
+					"result": [
+						{
+							"speaker": "narrator",
+							"text": "호벨은 신고서를 반으로 접어 주머니에 넣었다. 도장은 찍히지 않았다."
+						},
+						{
+							"speaker": "hobel",
+							"text": "절차를 건너뛰면 나중에 아무것도 증명 못 해요. 알아두세요."
+						},
+						{
+							"speaker": "dax",
+							"text": "서류는 접혔는데 저 사람 표정이 더 안 펴지네."
+						}
+					],
+					"flag": {
+						"key": "skipped_procedure",
+						"label": "건너뛴 절차",
+						"boss_text": "절차를 건너뛴 대신 피해자들의 증언만 들고 앞으로 나아간다."
+					}
+				},
+				{
+					"path": "stat",
+					"text": "호벨에게 규정집을 받아 접수 대장의 오류 항목을 직접 고친다.",
+					"mbti": "NP",
+					"effects": {
+						"reason": -20,
+						"echo": 5
+					},
+					"reward": [
+						"intelligence_up"
+					],
+					"result": [
+						{
+							"speaker": "hobel",
+							"text": "당신이라면 규정 안에서 답을 찾을 줄 알았어요."
+						},
+						{
+							"speaker": "narrator",
+							"text": "접수 대장 화면에서 반려 표시가 하나씩 사라졌다."
+						},
+						{
+							"speaker": "dax",
+							"text": "규정집 두 권을 이고 다니는 사람은 처음 봐."
+						}
+					],
+					"flag": {
+						"key": "fixed_ledger",
+						"label": "고친 접수 대장",
+						"boss_text": "고친 접수 대장의 승인 번호를 불러 주며 잠긴 문을 연다."
+					}
+				}
+			],
+			"background_tags": [
+				"data_plant",
+				"office_corner",
+				"white_light",
+				"small_crowd",
+				"procedural"
+			],
+			"slot": "D",
+			"kind": "rep",
+			"rep_dir": "reason-"
+		},
+		{
+			"no": 6,
+			"key": "stamp_refusal",
+			"title": "도장 거부",
+			"person": {
+				"id": "junu",
+				"name": "주누",
+				"role": "폐기물 검사원"
+			},
+			"wants": "규정상 폐기해야 할 물건을 마음 가는 대로 남겨 둔 게 들통나, 당신에게 그 물건을 숨겨 달라고 한다.",
+			"rule_link": "분류기 안쪽 스크린 조각을 규정대로 즉시 폐기하면 파열음을 확인할 수 없게 된다.",
+			"dialogue": [
+				{
+					"speaker": "junu",
+					"text": "당신이 규정 안 지키고 마음대로 한다는 사람이죠? 그럼 이것도 이해하겠네요."
+				},
+				{
+					"speaker": "narrator",
+					"text": "주누는 검사 도장을 주머니에 넣은 채, 발치의 상자를 신발로 밀었다."
+				},
+				{
+					"speaker": "dax",
+					"text": "저 상자, 폐기 도장이 안 찍혀 있어. 검사원이 일부러 남긴 거 아냐?"
+				},
+				{
+					"speaker": "junu",
+					"text": "이 안에 제가 삼 년 모은 거예요. 폐기하면 다 사라져요. 제발."
+				}
+			],
+			"choices": [
+				{
+					"path": "easy",
+					"text": "주누의 상자를 검사대 뒤 빈 선반에 숨겨 준다.",
+					"mbti": "FP",
+					"effects": {
+						"reason": 15,
+						"community": -10
+					},
+					"reward": [
+						"shield"
+					],
+					"result": [
+						{
+							"speaker": "narrator",
+							"text": "상자가 선반 위로 올라가자 주누가 검사 도장을 다시 꺼냈다."
+						},
+						{
+							"speaker": "junu",
+							"text": "고마워요. 이 은혜는 꼭 갚을게요."
+						},
+						{
+							"speaker": "dax",
+							"text": "선반 위에 뭘 올렸는지, 저 위쪽 카메라가 보고 있으면 어쩌지?"
+						}
+					],
+					"flag": {
+						"key": "hidden_box",
+						"label": "숨긴 상자",
+						"boss_text": "검사대 뒤 선반에 숨긴 상자를 꺼내 분류기 앞을 막는 데 쓴다."
+					}
+				},
+				{
+					"path": "hard",
+					"text": "주누에게 검사 도장을 돌려주라고 하고 상자를 폐기 목록에 올린다.",
+					"mbti": "TJ",
+					"effects": {
+						"reason": -25,
+						"fighting": 10
+					},
+					"reward": [
+						"attack_up"
+					],
+					"result": [
+						{
+							"speaker": "narrator",
+							"text": "주누가 도장을 내미는 손이 떨렸다. 상자에는 폐기 표시가 찍혔다."
+						},
+						{
+							"speaker": "junu",
+							"text": "삼 년이에요. ...규정이 그렇다면 어쩔 수 없죠."
+						},
+						{
+							"speaker": "dax",
+							"text": "도장은 찍혔는데, 저 사람이 상자 위에 손을 계속 얹고 있어."
+						}
+					],
+					"flag": {
+						"key": "stamped_box",
+						"label": "폐기 도장",
+						"boss_text": "폐기 도장이 찍힌 상자를 근거로 검사 구역을 통과한다."
+					}
+				},
+				{
+					"path": "stat",
+					"text": "규정을 무시해 온 당신 이름을 내세워 주누의 상자를 검사 없이 통과시킨다.",
+					"mbti": "NP",
+					"effects": {
+						"reason": 20,
+						"echo": 8
+					},
+					"reward": [
+						"move_range_up"
+					],
+					"result": [
+						{
+							"speaker": "junu",
+							"text": "당신 이름이면 검사대도 눈감아 줄 거예요. 다들 그러잖아요."
+						},
+						{
+							"speaker": "narrator",
+							"text": "주누가 상자를 들고 검사대를 지나갔다. 도장 소리는 나지 않았다."
+						},
+						{
+							"speaker": "dax",
+							"text": "이름 하나로 도장을 대신하다니. 편하면서도 좀 무섭네."
+						}
+					],
+					"flag": {
+						"key": "junu_favor",
+						"label": "주누의 호의",
+						"boss_text": "주누가 검사대 쪽 통로를 비워 주는 길로 간다."
+					}
+				},
+				{
+					"path": "fun",
+					"text": "주누에게 상자 안 물건을 하나씩 꺼내 검사 도장 대신 손도장을 찍자고 한다.",
+					"mbti": "EP",
+					"effects": {
+						"reason": 25,
+						"community": -10
+					},
+					"reward": [
+						"cooldown_reset"
+					],
+					"result": [
+						{
+							"speaker": "narrator",
+							"text": "주누가 상자에서 낡은 부품을 하나씩 꺼내 늘어놓았다. 손도장이 스물세 개 찍혔다."
+						},
+						{
+							"speaker": "junu",
+							"text": "이건 규정에 없는 방식인데... 근데 뭔가 되긴 되네요."
+						},
+						{
+							"speaker": "dax",
+							"text": "손도장 스물세 개. 손바닥 빨개졌겠다."
+						}
+					]
+				}
+			],
+			"background_tags": [
+				"data_plant",
+				"inspection_booth",
+				"harsh_light",
+				"empty_aisle",
+				"uneasy"
+			],
+			"slot": "D",
+			"kind": "rep",
+			"rep_dir": "reason+"
+		}
+	],
+	"errors": []
+}

@@ -1,0 +1,764 @@
+{
+	"cards": [
+		{
+			"slot": "D",
+			"key": "lex_broken_turret",
+			"background_tags": [
+				"broken_turret",
+				"server_rack",
+				"dim_light",
+				"sparks",
+				"tense_atmosphere"
+			],
+			"kind": "rep",
+			"wants": "오작동하는 포탑을 힘으로 부숴달라고 함",
+			"choices": [
+				{
+					"reward": [
+						"attack_up"
+					],
+					"mbti": "ST",
+					"path": "easy",
+					"flag": {
+						"label": "부서진 포탑",
+						"boss_text": "보안관이 부서진 포탑 잔해를 가리키며 분노한다.",
+						"key": "destroy_turret"
+					},
+					"text": "포탑을 강제로 부숴버린다.",
+					"result": [
+						{
+							"text": "당신이 무기로 포탑을 내려치자 요란한 소리와 함께 박살 난다.",
+							"speaker": "narrator"
+						},
+						{
+							"speaker": "echo",
+							"text": "해결되긴 했는데, 부서진 잔해 때문에 금방 들키겠어."
+						}
+					],
+					"effects": {
+						"fighting": -20,
+						"echo": -5
+					}
+				},
+				{
+					"reward": [
+						"hp_down"
+					],
+					"flag": {
+						"key": "avoid_turret",
+						"boss_text": "아낀 기력으로 보안관의 공격을 단숨에 튕겨낸다.",
+						"label": "보존된 체력"
+					},
+					"mbti": "IN",
+					"path": "hard",
+					"text": "포탑의 사각지대로 조용히 피한다.",
+					"result": [
+						{
+							"speaker": "narrator",
+							"text": "당신은 렉스의 말을 무시하고 포탑의 사각지대로 조용히 이동했다."
+						},
+						{
+							"speaker": "echo",
+							"text": "맞아, 굳이 힘을 빼서 체력을 낭비할 필요는 없지."
+						}
+					],
+					"effects": {
+						"fighting": 20,
+						"echo": 10
+					}
+				},
+				{
+					"flag": {
+						"key": "turret_controller",
+						"boss_text": "포탑 제어기를 던져 보안관의 시야를 가린다.",
+						"label": "포탑 제어기"
+					},
+					"effects": {
+						"fighting": -30
+					},
+					"mbti": "ET",
+					"result": [
+						{
+							"text": "당신이 무기를 들이밀며 압박하자 렉스가 투덜거리며 제어기를 넘긴다.",
+							"speaker": "narrator"
+						},
+						{
+							"text": "역시 말보다 행동이 빠르다니까. 제어기는 잘 챙겨둬.",
+							"speaker": "echo"
+						}
+					],
+					"path": "stat",
+					"reward": [
+						"move_range_up"
+					],
+					"text": "렉스를 협박해 ���탑 제어기를 빼앗는다."
+				}
+			],
+			"returns": "easy",
+			"forced": [],
+			"rep_dir": "fighting-",
+			"dialogue": [
+				{
+					"text": "저 보안 포탑, 아까부터 아군 적군 안 가리고 마구 쏘고 있어!",
+					"speaker": "echo"
+				},
+				{
+					"speaker": "narrator",
+					"text": "오작동하는 포탑 뒤에서 험악한 인상의 용병이 고개를 내민다."
+				},
+				{
+					"text": "다짜고짜 다 때려부수고 다닌다는 게 당신인가 보군. 저 미쳐버린 포탑 좀 박살 내주지 않겠어?",
+					"speaker": "lex"
+				}
+			],
+			"title": "미쳐버린 보안 포탑",
+			"person": {
+				"name": "렉스",
+				"role": "용병",
+				"id": "lex"
+			},
+			"rule_link": "데이터가 섞여 통제 불능이 된 보안 포탑 문제를 힘으로 해결할지 선택"
+		},
+		{
+			"choices": [
+				{
+					"effects": {
+						"fighting": 20,
+						"echo": 10
+					},
+					"mbti": "FJ",
+					"path": "easy",
+					"flag": {
+						"boss_text": "억지로 연 문이 삐걱거리며 보안관의 주의를 끈다.",
+						"key": "force_door_open",
+						"label": "삐걱이는 문"
+					},
+					"reward": [
+						"hp_down"
+					],
+					"result": [
+						{
+							"text": "당신이 억지로 문을 비틀어 열자 실비아가 연신 고개를 숙이며 빠져나간다.",
+							"speaker": "narrator"
+						},
+						{
+							"speaker": "echo",
+							"text": "다행이긴 한데, 문이 너무 삐걱거려서 소문이 다 나겠어."
+						}
+					],
+					"text": "고장 난 문을 억지로 비틀어 열어준다."
+				},
+				{
+					"flag": {
+						"boss_text": "지체 없이 이동해 보안관의 동선을 미리 파악한다.",
+						"key": "ignore_silvia",
+						"label": "빠른 이동"
+					},
+					"mbti": "TP",
+					"path": "hard",
+					"result": [
+						{
+							"text": "당신이 차갑게 돌아서자 실비아가 당황하며 문을 두드린다.",
+							"speaker": "narrator"
+						},
+						{
+							"speaker": "echo",
+							"text": "지금은 우리 코가 석 자니까 어쩔 수 없지. 빨리 이동하자."
+						}
+					],
+					"effects": {
+						"fighting": -20,
+						"echo": -10
+					},
+					"reward": [
+						"move_range_up"
+					],
+					"text": "알아서 빠져나오라며 실비아를 무시한다."
+				},
+				{
+					"path": "stat",
+					"mbti": "IS",
+					"flag": {
+						"key": "climb_pipe",
+						"label": "배관 타기",
+						"boss_text": "배관을 타고 이동하며 보안관의 시야를 피한다."
+					},
+					"effects": {
+						"fighting": 30,
+						"echo": 15
+					},
+					"reward": [
+						"defense_up"
+					],
+					"text": "배관을 타고 넘어가 수동으로 잠금장치를 푼다.",
+					"result": [
+						{
+							"text": "당신이 배관을 타고 넘어가 잠금장치를 풀자 문이 부드럽게 열린다.",
+							"speaker": "narrator"
+						},
+						{
+							"text": "와, 배관을 그렇게 잘 탈 줄은 몰랐어!",
+							"speaker": "echo"
+						}
+					]
+				},
+				{
+					"effects": {
+						"reason": 10,
+						"echo": -5
+					},
+					"result": [
+						{
+							"speaker": "narrator",
+							"text": "드론이 문에 처박히며 폭발하자, 놀란 실비아가 비명을 지르며 도망친다."
+						},
+						{
+							"speaker": "echo",
+							"text": "문은 열렸는데... 저 사람 울고 있잖아."
+						}
+					],
+					"mbti": "EP",
+					"path": "fun",
+					"reward": [
+						"attack_up"
+					],
+					"text": "배달 드론을 문에 충돌시켜 폭파시킨다."
+				}
+			],
+			"dialogue": [
+				{
+					"speaker": "echo",
+					"text": "배달 드론 데이터가 섞이면서 저쪽 문이 아예 잠겨버렸네."
+				},
+				{
+					"text": "잠긴 문 너머에서 길 잃은 방문객이 유리를 두드리며 당신을 부른다.",
+					"speaker": "narrator"
+				},
+				{
+					"speaker": "silvia",
+					"text": "곤경에 처한 사람을 그냥 지나치지 못한다더니, 정말 와주셨네요! 제발 이 문 좀 열어주세요!"
+				}
+			],
+			"title": "잠겨버린 출입문",
+			"rule_link": "데이터 혼선으로 고립된 방문객을 도울지 무시할지 선택",
+			"background_tags": [
+				"locked_door",
+				"server_rack",
+				"flashing_lights",
+				"confused_crowd",
+				"noisy_drone"
+			],
+			"person": {
+				"id": "silvia",
+				"role": "길 잃은 방문객",
+				"name": "실비아"
+			},
+			"wants": "고장 난 문을 억지로 열어 자신을 구해달라고 함",
+			"rep_dir": "fighting+",
+			"forced": [],
+			"key": "silvia_locked_door",
+			"kind": "rep",
+			"slot": "D",
+			"returns": "easy"
+		},
+		{
+			"background_tags": [
+				"mixed_data",
+				"server_rack",
+				"blue_screen",
+				"messy_cables",
+				"hustle_bustle"
+			],
+			"person": {
+				"id": "benny",
+				"role": "데이터 브로커",
+				"name": "베니"
+			},
+			"choices": [
+				{
+					"result": [
+						{
+							"speaker": "narrator",
+							"text": "당신은 베니가 건넨 백업 장��에 돈이 될 만한 정보들을 쓸어 담았다."
+						},
+						{
+							"text": "챙길 건 다 챙기네. 근데 장치 불빛이 너무 밝은 거 아니야?",
+							"speaker": "echo"
+						}
+					],
+					"text": "베니와 함께 쓸만한 데이터를 백업해 돈을 번다.",
+					"effects": {
+						"gold": 100,
+						"community": -20
+					},
+					"flag": {
+						"boss_text": "백업 장치에서 나는 불빛 때문에 보안관에게 발각된다.",
+						"label": "백업 장치 불빛",
+						"key": "backup_data"
+					},
+					"path": "easy",
+					"mbti": "ST"
+				},
+				{
+					"mbti": "NF",
+					"path": "hard",
+					"reward": [
+						"defense_up"
+					],
+					"flag": {
+						"label": "포맷된 빈 서버",
+						"boss_text": "포맷된 빈 서버를 방패 삼아 보안관의 무기를 막는다.",
+						"key": "format_data"
+					},
+					"result": [
+						{
+							"text": "당신이 서버를 포맷해 버리자 베니가 머리를 쥐어뜯으며 절망한다.",
+							"speaker": "narrator"
+						},
+						{
+							"speaker": "echo",
+							"text": "잘했어! 이제 이 빈 서버 뒤에 숨어서 숨 좀 돌리자."
+						}
+					],
+					"effects": {
+						"echo": 10,
+						"community": 20
+					},
+					"text": "베니의 제안을 거절하고 섞인 데이터를 포맷한다."
+				},
+				{
+					"flag": {
+						"boss_text": "가로챈 고급 데이터 칩셋을 미끼로 던진다.",
+						"label": "고급 데이터 칩셋",
+						"key": "steal_data"
+					},
+					"mbti": "EP",
+					"path": "stat",
+					"result": [
+						{
+							"text": "베니가 한눈을 판 사이, 당신은 비싼 칩셋만 골라 주머니에 넣���다.",
+							"speaker": "narrator"
+						},
+						{
+							"text": "동업자까지 속이다니, 정말 대단하다. 나중에 미끼로 쓰기 좋겠어.",
+							"speaker": "echo"
+						}
+					],
+					"effects": {
+						"community": -30,
+						"echo": -5,
+						"gold": 150
+					},
+					"text": "베니를 속이고 고급 정보만 전부 가로챈다."
+				}
+			],
+			"wants": "섞여버린 데이터 속에서 돈이 될 정보를 함께 빼돌리자고 함",
+			"forced": [],
+			"key": "benny_mixed_data",
+			"rule_link": "혼란 속에서 가치 있는 데이터를 빼돌릴지 복원할지 선택",
+			"dialogue": [
+				{
+					"text": "저기 봐, 쓸모없는 정보 사이로 암호화된 고급 데이터가 섞여서 나오고 있어.",
+					"speaker": "echo"
+				},
+				{
+					"text": "낡은 서버 랙 옆에서 데이터 브로커가 눈을 반짝이며 당신에게 다가온다.",
+					"speaker": "narrator"
+				},
+				{
+					"text": "자기 실속은 기가 막히게 챙긴다며? 이 혼란 속에 떨어지는 돈다발이나 주워 담자고.",
+					"speaker": "benny"
+				}
+			],
+			"returns": "easy",
+			"kind": "rep",
+			"rep_dir": "community-",
+			"title": "쏟아지는 고급 정보",
+			"slot": "D"
+		},
+		{
+			"choices": [
+				{
+					"effects": {
+						"echo": 10,
+						"community": 20
+					},
+					"flag": {
+						"boss_text": "옷에 묻은 오염수 냄새 때문에 보안관이 금방 추적해 온다.",
+						"label": "오염수 냄새",
+						"key": "close_valve"
+					},
+					"result": [
+						{
+							"speaker": "narrator",
+							"text": "당신이 오염수��� 맞으며 밸브를 잠그자 앨리스가 안도의 한숨을 쉰다."
+						},
+						{
+							"text": "정말 고생했어. 근데 옷에서 오염수 냄새가 너무 심하게 나.",
+							"speaker": "echo"
+						}
+					],
+					"path": "easy",
+					"mbti": "ES",
+					"text": "오염수를 뒤집어쓰며 수동 밸브를 잠근다.",
+					"reward": [
+						"hp_down"
+					]
+				},
+				{
+					"flag": {
+						"boss_text": "젖지 않은 가벼운 몸으로 보안관의 무기를 피한다.",
+						"label": "가벼운 몸",
+						"key": "run_away"
+					},
+					"effects": {
+						"community": -20,
+						"echo": -10
+					},
+					"result": [
+						{
+							"text": "당신이 뒤도 돌아보지 않고 뛰어가자 앨리스가 발을 구르며 원망한다.",
+							"speaker": "narrator"
+						},
+						{
+							"text": "물에 젖지 않아서 다행이야. 가벼운 몸으로 빨리 벗어나자.",
+							"speaker": "echo"
+						}
+					],
+					"path": "hard",
+					"mbti": "IN",
+					"reward": [
+						"move_range_up"
+					],
+					"text": "위험을 감수하기 싫다며 앨리스를 두고 도망친다."
+				},
+				{
+					"flag": {
+						"key": "shout_people",
+						"label": "흩어지는 사람들",
+						"boss_text": "모여든 사람들이 흩어지며 보안관의 시야를 방해한다."
+					},
+					"effects": {
+						"echo": 15,
+						"community": 30
+					},
+					"path": "stat",
+					"mbti": "FJ",
+					"reward": [
+						"shield"
+					],
+					"text": "사람들에게 소리쳐 다 같이 밸브를 잠그게 만든다.",
+					"result": [
+						{
+							"text": "당신의 외침에 주변 사람들이 달려들어 순식간에 밸브를 잠가���린다.",
+							"speaker": "narrator"
+						},
+						{
+							"text": "다들 널 믿고 따르는구나! 사람들이 많아서 적들도 헷갈리겠어.",
+							"speaker": "echo"
+						}
+					]
+				},
+				{
+					"result": [
+						{
+							"speaker": "narrator",
+							"text": "서버 랙이 배관 구멍에 기괴한 소리를 내며 끼어들어가자 물이 멈춘다."
+						},
+						{
+							"speaker": "echo",
+							"text": "이게 진짜 해결된 거 맞아...? 금방이라도 터질 것 같아."
+						}
+					],
+					"mbti": "TP",
+					"path": "fun",
+					"reward": [
+						"attack_up"
+					],
+					"effects": {
+						"reason": -10,
+						"echo": -5,
+						"community": 5
+					},
+					"text": "오염수가 쏟아지는 구멍에 빈 서버 랙을 던져 막는다."
+				}
+			],
+			"title": "터지기 직전의 밸브",
+			"key": "alice_dirty_water",
+			"kind": "rep",
+			"rep_dir": "community+",
+			"forced": [],
+			"slot": "D",
+			"wants": "오염수가 쏟아지는 수동 밸브를 함께 잠가달라고 함",
+			"returns": "easy",
+			"person": {
+				"role": "전산실 당직자",
+				"id": "alice",
+				"name": "앨리스"
+			},
+			"dialogue": [
+				{
+					"text": "이러다 하수도 수위 조절 장치까지 터져서 오염수가 쏟아지겠어!",
+					"speaker": "echo"
+				},
+				{
+					"speaker": "narrator",
+					"text": "발밑으로 물이 차오르는 가운데, 전산실 당직자가 다급히 당신을 붙잡는다."
+				},
+				{
+					"text": "모두가 위험할 때 제일 먼저 나서는 분 맞죠? 제발 이 오염수 밸브 좀 같이 잠가주세요!",
+					"speaker": "alice"
+				}
+			],
+			"background_tags": [
+				"dirty_water",
+				"server_rack",
+				"red_warning",
+				"panicking_people",
+				"wet_floor"
+			],
+			"rule_link": "통제 불능이 된 하수도 수위 데이터로 인한 침수 피해를 막을지 선택"
+		},
+		{
+			"choices": [
+				{
+					"result": [
+						{
+							"speaker": "narrator",
+							"text": "당신이 복잡한 서류에 서명하는 동안 시스템 오류가 더욱 심해진다."
+						},
+						{
+							"speaker": "echo",
+							"text": "서명하느라 시간을 너무 많이 뺏겼어. 빨리 피해야 해."
+						}
+					],
+					"text": "복잡한 복구 절차에 따라 예비 규정집에 서명한다.",
+					"path": "easy",
+					"mbti": "SJ",
+					"reward": [
+						"defense_up"
+					],
+					"effects": {
+						"echo": -5,
+						"reason": -20
+					},
+					"flag": {
+						"boss_text": "서명하느라 지체된 시간 탓에 보안관에게 포위당한다.",
+						"key": "sign_paper",
+						"label": "지체된 시간"
+					}
+				},
+				{
+					"effects": {
+						"reason": 20,
+						"echo": 10
+					},
+					"mbti": "NP",
+					"path": "hard",
+					"flag": {
+						"boss_text": "흩날리는 규정집 종이들 사이로 보안관의 뒤를 잡는다.",
+						"key": "tear_paper",
+						"label": "찢어진 규정집"
+					},
+					"result": [
+						{
+							"speaker": "narrator",
+							"text": "당신이 종이를 찢어 던지자 클라크가 경악하며 조각을 줍기 시작한다."
+						},
+						{
+							"speaker": "echo",
+							"text": "속은 시원하네. 흩날리는 종이들 덕분에 시야가 가려지겠어."
+						}
+					],
+					"text": "규정집 따위 알 게 뭐��며 종이를 찢어버린다.",
+					"reward": [
+						"attack_up"
+					]
+				},
+				{
+					"path": "stat",
+					"mbti": "IT",
+					"flag": {
+						"boss_text": "활성화된 관리자 권한으로 보안관의 통신을 끊는다.",
+						"label": "관리자 권한",
+						"key": "admin_auth"
+					},
+					"reward": [
+						"intelligence_up"
+					],
+					"result": [
+						{
+							"speaker": "narrator",
+							"text": "관리자 권한으로 시스템을 잠그자 규정집 훼손이 멈춘다."
+						},
+						{
+							"speaker": "echo",
+							"text": "원칙을 지키려면 아예 윗선에서 막아야지. 통신망도 우리가 쥐게 됐네."
+						}
+					],
+					"effects": {
+						"reason": -30,
+						"echo": 15
+					},
+					"text": "관리자 권한을 강제로 활성화해 규정집을 잠근다."
+				}
+			],
+			"kind": "rep",
+			"slot": "D",
+			"wants": "예비 규정집을 지키기 위해 복구 절차 서명을 요구함",
+			"background_tags": [
+				"falling_papers",
+				"server_rack",
+				"flickering_hologram",
+				"dusty_air",
+				"frustrated_worker"
+			],
+			"key": "clark_broken_rules",
+			"rule_link": "엉망이 된 시스템 속에서 예비 규정집을 지킬지 무시할지 선택",
+			"rep_dir": "reason-",
+			"person": {
+				"role": "기록 보관원",
+				"id": "clark",
+				"name": "클라크"
+			},
+			"title": "망가지는 규정집",
+			"returns": "easy",
+			"dialogue": [
+				{
+					"speaker": "echo",
+					"text": "데이터가 섞이니까 보안 규정집 내용까지 쓰레기장 좌표로 바뀌고 있어."
+				},
+				{
+					"speaker": "narrator",
+					"text": "서류 뭉치를 껴안은 기록 보관원이 안경을 밀어 올리며 앞을 막아선다."
+				},
+				{
+					"text": "어떤 상황에서도 절차를 지킨다는 분이군요. 이 예비 규정집마저 덮어씌워지기 전에 서명을 남겨주십시오.",
+					"speaker": "clark"
+				}
+			],
+			"forced": []
+		},
+		{
+			"person": {
+				"name": "펠릭스",
+				"role": "해커 지망생",
+				"id": "felix"
+			},
+			"returns": "easy",
+			"wants": "통제 불능이 된 서버에 과부하를 일으켜 불꽃놀이를 보자고 함",
+			"background_tags": [
+				"crazy_lights",
+				"server_rack",
+				"noisy_alarm",
+				"laughing_boy",
+				"tangled_wires"
+			],
+			"rep_dir": "reason+",
+			"forced": [],
+			"kind": "rep",
+			"dialogue": [
+				{
+					"text": "전광판들이 제멋대로 깜빡거리니까 꼭 클럽 조명 같네.",
+					"speaker": "echo"
+				},
+				{
+					"text": "낡은 서버 랙 위에서 해커 지망생이 다리를 까닥거리며 웃고 있다.",
+					"speaker": "narrator"
+				},
+				{
+					"speaker": "felix",
+					"text": "규칙 따윈 콧방귀도 안 뀐다면서요? 기왕 망가진 거, 코드를 확 꼬아서 불꽃놀이나 보죠!"
+				}
+			],
+			"slot": "D",
+			"choices": [
+				{
+					"result": [
+						{
+							"text": "과부하 코드가 입력되자 서버에서 요란한 경보음과 함께 불꽃이 튄다.",
+							"speaker": "narrator"
+						},
+						{
+							"text": "진짜 불꽃놀이가 터져버렸잖아! 경보음 때문에 다 들키겠어.",
+							"speaker": "echo"
+						}
+					],
+					"flag": {
+						"boss_text": "과부하로 울린 요란한 경보음이 보안관을 자극한다.",
+						"label": "서버 경보음",
+						"key": "overload_server"
+					},
+					"path": "easy",
+					"mbti": "EN",
+					"text": "펠릭스와 함께 서버에 과부하 코드를 입력한다.",
+					"reward": [
+						"attack_up"
+					],
+					"effects": {
+						"echo": 5,
+						"reason": 20
+					}
+				},
+				{
+					"text": "펠릭스를 말리고 서버의 전원을 안전하게 내린다.",
+					"result": [
+						{
+							"speaker": "narrator",
+							"text": "전원을 내리자 전광판이 꺼지며 주변이 쥐죽은 듯 고요해진다."
+						},
+						{
+							"text": "휴, 더 큰일이 나기 전에 잘 막았어. 어두워졌으니 몰래 빠져나가자.",
+							"speaker": "echo"
+						}
+					],
+					"effects": {
+						"reason": -20,
+						"echo": 10
+					},
+					"reward": [
+						"defense_down"
+					],
+					"flag": {
+						"label": "내려간 전원",
+						"boss_text": "전원이 내려가 어두워진 틈을 타 보안관의 곁을 지나간다.",
+						"key": "power_down"
+					},
+					"path": "hard",
+					"mbti": "IS"
+				},
+				{
+					"result": [
+						{
+							"text": "코드를 비틀자 전산실 허공에 거대하고 화려한 홀로그램이 떠오른다.",
+							"speaker": "narrator"
+						},
+						{
+							"speaker": "echo",
+							"text": "와, 이건 좀 멋진데? 저기 시선을 뺏긴 사이에 도망치자."
+						}
+					],
+					"text": "코드를 수정해 전광판에 화려한 홀로그램만 띄운다.",
+					"effects": {
+						"echo": 15,
+						"reason": 30
+					},
+					"reward": [
+						"intelligence_up"
+					],
+					"mbti": "FP",
+					"path": "stat",
+					"flag": {
+						"boss_text": "화려한 홀로그램으로 보안관의 시선을 돌린다.",
+						"label": "화려한 홀로그램",
+						"key": "fancy_hologram"
+					}
+				}
+			],
+			"title": "전산실의 불꽃놀이",
+			"rule_link": "통제 불능이 된 서버를 방치할지 안전하게 수습할지 선택",
+			"key": "felix_fireworks"
+		}
+	],
+	"errors": []
+}

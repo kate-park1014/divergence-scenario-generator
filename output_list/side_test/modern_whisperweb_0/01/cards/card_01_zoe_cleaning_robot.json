@@ -1,0 +1,123 @@
+{
+	"id": "card_01_zoe_cleaning_robot",
+	"kind": "normal",
+	"title": {
+		"korean": "고장 난 청소 로봇"
+	},
+	"intensity": "calm",
+	"after_story": 1,
+	"before_story": 3,
+	"background_tags": [
+		"narrow_aisle",
+		"cleaning_tools",
+		"messy_cables",
+		"metallic_floor",
+		"flickering_led"
+	],
+	"dialogue": [
+		{
+			"speaker": "narrator",
+			"content": {
+				"korean": "서버 랙 구석에서 청소 로봇 세 대가 제자리만 맴돌고 있다."
+			}
+		},
+		{
+			"speaker": "zoe",
+			"content": {
+				"korean": "스피커 방송 들었죠? 이 멍청한 로봇들의 동선 제한 데이터를 확 깨버리면 청소가 10배는 빨라질 거예요."
+			}
+		},
+		{
+			"speaker": "echo",
+			"content": {
+				"korean": "질서를 깨면 당장은 편해도 로봇들이 통제를 벗어날지 몰라."
+			}
+		},
+		{
+			"speaker": "zoe",
+			"content": {
+				"korean": "당신들이 직접 제어판을 부수고 제한을 풀어줘요. 빨리 퇴근하고 싶단 말이에요."
+			}
+		}
+	],
+	"choices": [
+		{
+			"text": {
+				"korean": "청소 로봇의 동선 제한을 풀어버려 순식간에 청소를 끝내게 한다."
+			},
+			"path": "easy",
+			"mbti": "EP",
+			"effects": {
+				"reason": -15,
+				"gold": 80
+			},
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "로봇들이 미친 듯이 돌아다니며 먼지를 빨아들인다. ��이가 고맙다며 주머니에 있던 동전을 털어준다."
+					}
+				}
+			]
+		},
+		{
+			"text": {
+				"korean": "로봇의 센서를 일일이 닦고 정상적인 초기화 절차를 밟는다."
+			},
+			"path": "hard",
+			"mbti": "SJ",
+			"effects": {
+				"reason": 15,
+				"echo": 10
+			},
+			"reward": [
+				"defense_up"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "먼지를 닦아내고 재부팅하자 로봇들이 얌전히 정해진 구역을 청소한다. 조이는 투덜거리면서도 대걸레를 든다."
+					}
+				}
+			]
+		},
+		{
+			"text": {
+				"korean": "로봇들의 청소 구역을 서버 랙 위쪽 좁은 틈새로 지정해버린다."
+			},
+			"path": "fun",
+			"mbti": "NP",
+			"effects": {
+				"reason": -30,
+				"fighting": 20
+			},
+			"reward": [
+				"move_range_up"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "로봇들이 벽을 타고 오르려다 바닥으로 굴러떨어진다. 조이가 당황해 로봇들을 주우러 뛰어간다."
+					}
+				}
+			]
+		}
+	],
+	"_side": {
+		"slot": "A",
+		"person": {
+			"name": "조이",
+			"id": "zoe",
+			"role": "서버 랙 청소부"
+		},
+		"wants": "꼬여버린 청소 로봇의 동선 데이터를 부수고 새로 짜고 싶어 함",
+		"rule_link": "스피커의 말에 따라 기존 데이터 규칙을 무시하려는 유혹.",
+		"events": {},
+		"flags": {}
+	}
+}

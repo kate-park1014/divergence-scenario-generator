@@ -1,0 +1,330 @@
+{
+	"cards": [
+		{
+			"card_id": "card_01_form_rulebook_fine",
+			"asks": "규정집 스물세 쪽을 근거로 자기 서류를 규정대로 다시 심사해 달라(순번이 뒤집힌 세 건을 바로잡아 달라).",
+			"choices_read": [
+				{
+					"path": "easy",
+					"target": "접수대 직원(태식의 규정집을 접수대에 펼쳐 놓는 상대)",
+					"does": "태식의 규정집을 받아 스물세 쪽을 접수대에 펼쳐 놓고 재심사를 요구한다",
+					"reaction_assumes": "규정집이 접수대 위에 펼쳐지고 직원이 그 쪽을 읽는다"
+				},
+				{
+					"path": "hard",
+					"target": "태식",
+					"does": "규정집을 덮으라고 말하고 순번은 접수 기록대로 두자고 한다",
+					"reaction_assumes": "태식이 규정집을 오므려 겨드랑이에 낀다"
+				},
+				{
+					"path": "stat",
+					"target": "태식의 규정집(접수대 직원 앞에서 낭독)",
+					"does": "규정집을 받아 접수대 직원 앞에서 스물세 쪽을 소리 내어 읽는다",
+					"reaction_assumes": "낭독이 끝나자 접수대 주변이 조용해지고 직원이 서류를 정리한다"
+				}
+			],
+			"checks": [
+				{
+					"item": "S1",
+					"pass": true
+				},
+				{
+					"item": "S2",
+					"pass": true
+				},
+				{
+					"item": "S3",
+					"pass": true
+				},
+				{
+					"item": "S4",
+					"pass": true
+				},
+				{
+					"item": "S5",
+					"pass": true
+				},
+				{
+					"item": "S6",
+					"pass": true
+				}
+			]
+		},
+		{
+			"card_id": "card_01_front_desk_shakedown",
+			"asks": "새치기한 대기자를 접수대 앞에서 밀어내 달라(그 자리를 지키겠다).",
+			"choices_read": [
+				{
+					"path": "easy",
+					"target": "새치기한 대기자",
+					"does": "광철 대신 나서서 그 대기자의 서류를 접수대 밖으로 밀어낸다",
+					"reaction_assumes": "서류가 흘러내리고 그 대기자가 줄 끝으로 간다"
+				},
+				{
+					"path": "hard",
+					"target": "광철",
+					"does": "부탁을 물리고 두 사람 사이에 서서 번호표를 확인하자고 말한다",
+					"reaction_assumes": "광철이 혀를 차고 두 사람이 번호표를 꺼내 놓는다"
+				},
+				{
+					"path": "stat",
+					"target": "광철",
+					"does": "그 자리는 당신이 지킨다고 말하고 대기자들을 뒤로 물린다",
+					"reaction_assumes": "광철이 한 걸음 물러나고 대기자들이 반 발씩 밀린다"
+				},
+				{
+					"path": "gold",
+					"target": "광철",
+					"does": "100골드를 주고 새치기한 대기자 번호표를 사서 줄 끝으로 돌려보낸다",
+					"reaction_assumes": "광철이 번호표를 받아 웃고, 새치기한 대기자가 돈을 세다 줄 끝으로 간다"
+				}
+			],
+			"checks": [
+				{
+					"item": "S1",
+					"pass": true
+				},
+				{
+					"item": "S2",
+					"pass": true
+				},
+				{
+					"item": "S3",
+					"pass": false,
+					"quote": "광철이 번호표를 받아 들고 웃었다. 새치기한 대기자는 돈을 세다가 줄 끝으로 걸어갔다.",
+					"problem": "선택지는 광철에게 100골드를 주고 번호표를 사는 것인데, 결과에서는 돈을 받아 세는 사람이 새치기한 대기자로 뒤바뀌어 누가 무엇을 받았는지 어긋난다."
+				},
+				{
+					"item": "S4",
+					"pass": true
+				},
+				{
+					"item": "S5",
+					"pass": true
+				},
+				{
+					"item": "S6",
+					"pass": true
+				}
+			]
+		},
+		{
+			"card_id": "card_01_hall_clock_petition",
+			"asks": "대기홀 벽시계를 십이 분 늦춰 접수 마감 시간을 늘려 달라(다 같이 급한 사람들이니).",
+			"choices_read": [
+				{
+					"path": "easy",
+					"target": "벽시계(미라와 함께)",
+					"does": "미라와 함께 벽시계를 십이 분 늦춰 대기자들이 접수할 시간을 벌어 준다",
+					"reaction_assumes": "벽시계 초침이 십이 분을 거꾸로 돌아가고 대기자들이 접수대로 몰려간다"
+				},
+				{
+					"path": "hard",
+					"target": "미라",
+					"does": "시계를 건드리면 기록이 어긋난다고 말리고 접수대에 알린다",
+					"reaction_assumes": "미라가 시계 아래에서 손을 떼고 접수대 직원이 시계를 확인한다"
+				},
+				{
+					"path": "stat",
+					"target": "대기자들/접수대",
+					"does": "시계는 그대로 두고 접수대에 마감 연장을 요구한다",
+					"reaction_assumes": "대기자들이 당신 뒤에 반원으로 서고 직원이 수첩에 적는다"
+				},
+				{
+					"path": "gold",
+					"target": "미라(수리 기사)",
+					"does": "120골드를 주고 벽시계 수리 기사에게 시계를 손보게 한다",
+					"reaction_assumes": "수리 기사가 시계를 열고 초침이 다시 앞으로 간다"
+				}
+			],
+			"checks": [
+				{
+					"item": "S1",
+					"pass": true
+				},
+				{
+					"item": "S2",
+					"pass": true
+				},
+				{
+					"item": "S3",
+					"pass": true
+				},
+				{
+					"item": "S4",
+					"pass": true
+				},
+				{
+					"item": "S5",
+					"pass": true
+				},
+				{
+					"item": "S6",
+					"pass": true
+				}
+			]
+		},
+		{
+			"card_id": "card_01_hayeon_rule_break_offer",
+			"asks": "쪽문을 열어 접수표 정리함 맨 위에 자기 접수표를 올려 달라(한 번만).",
+			"choices_read": [
+				{
+					"path": "easy",
+					"target": "하연(쪽문·정리함)",
+					"does": "하연과 함께 쪽문을 열고 정리함 맨 위에 하연 접수표를 올린다",
+					"reaction_assumes": "쪽문이 열리고 정리함 맨 위에 접수표가 얹힌다"
+				},
+				{
+					"path": "hard",
+					"target": "하연",
+					"does": "쪽문을 닫으라고 말하고 접수표는 접수대에 정식으로 넣게 한다",
+					"reaction_assumes": "쪽문이 닫히고 하연이 접수표를 들고 줄 맨 뒤로 간다"
+				},
+				{
+					"path": "stat",
+					"target": "하연(정리함)",
+					"does": "규칙대로 줄을 서라고 말하고 정리함을 잠근다",
+					"reaction_assumes": "정리함이 잠기고 열쇠가 당신 손에 남는다"
+				},
+				{
+					"path": "fun",
+					"target": "명패 출력기(하연 이름)",
+					"does": "쪽문 대신 명패 출력기 앞으로 가서 하연 이름이 찍히는지 지켜본다",
+					"reaction_assumes": "출력기가 하연 이름을 찍어 내고 하연이 명패를 받는다"
+				}
+			],
+			"checks": [
+				{
+					"item": "S1",
+					"pass": true
+				},
+				{
+					"item": "S2",
+					"pass": true
+				},
+				{
+					"item": "S3",
+					"pass": true
+				},
+				{
+					"item": "S4",
+					"pass": true
+				},
+				{
+					"item": "S5",
+					"pass": true
+				},
+				{
+					"item": "S6",
+					"pass": true
+				}
+			]
+		},
+		{
+			"card_id": "card_01_hayeon_slot_trade",
+			"asks": "자기 접수표에 경력 한 줄을 붙여 순번을 두 칸 올려 달라(한 칸은 당신 몫).",
+			"choices_read": [
+				{
+					"path": "easy",
+					"target": "하연의 접수표",
+					"does": "경력 한 줄을 붙이고 그 대가로 순번 한 칸을 받아 낸다",
+					"reaction_assumes": "접수표에 한 줄이 늘고 하연이 접수대에 밀어 넣은 뒤 돌아본다"
+				},
+				{
+					"path": "hard",
+					"target": "하연",
+					"does": "접수표를 돌려주고 당신 순번은 그대로 두겠다고 말한다",
+					"reaction_assumes": "하연이 접수표를 도로 받아 들고 입을 다문다"
+				},
+				{
+					"path": "stat",
+					"target": "하연",
+					"does": "당신 몫은 당신이 챙긴다며 접수표를 돌려보내고 자기 자리로 간다",
+					"reaction_assumes": "하연이 접수표를 접어 주머니에 넣고 접수대 쪽으로 가다 멈춘다"
+				},
+				{
+					"path": "fun",
+					"target": "하연의 접수표(유리창)",
+					"does": "접수표를 접수대 유리창에 붙여 두고 누가 먼저 가져가는지 지켜본다",
+					"reaction_assumes": "대기자 셋이 다가오고 하연이 그중 하나를 낚아챈다"
+				}
+			],
+			"checks": [
+				{
+					"item": "S1",
+					"pass": true
+				},
+				{
+					"item": "S2",
+					"pass": true
+				},
+				{
+					"item": "S3",
+					"pass": true
+				},
+				{
+					"item": "S4",
+					"pass": true
+				},
+				{
+					"item": "S5",
+					"pass": true
+				},
+				{
+					"item": "S6",
+					"pass": true
+				}
+			]
+		},
+		{
+			"card_id": "card_01_wheelchair_ramp_push",
+			"asks": "끊어진 가방끈 때문에 혼자 못 넘는 계단 턱을 넘어 서류를 접수대에 올려놓게 도와 달라.",
+			"choices_read": [
+				{
+					"path": "easy",
+					"target": "선화의 서류 가방",
+					"does": "가방을 대신 들어 접수대 위에 올려놓는다",
+					"reaction_assumes": "가방을 받자 끈이 끊어지고 서류가 접수대 위에 올라간다"
+				},
+				{
+					"path": "hard",
+					"target": "선화",
+					"does": "접수대 직원을 부르라고 일러 주고 당신은 줄로 돌아간다",
+					"reaction_assumes": "선화가 접수대 쪽에 손을 흔들고 직원이 서류를 받는다"
+				},
+				{
+					"path": "stat",
+					"target": "선화(대기자들)",
+					"does": "선화를 부축해 턱을 넘게 하고 대기자들에게 길을 열어 달라고 말한다",
+					"reaction_assumes": "대기자들이 비켜 서고 선화가 부축받아 턱을 넘어 서류를 올린다"
+				}
+			],
+			"checks": [
+				{
+					"item": "S1",
+					"pass": true
+				},
+				{
+					"item": "S2",
+					"pass": true
+				},
+				{
+					"item": "S3",
+					"pass": true
+				},
+				{
+					"item": "S4",
+					"pass": true
+				},
+				{
+					"item": "S5",
+					"pass": true
+				},
+				{
+					"item": "S6",
+					"pass": true
+				}
+			]
+		}
+	]
+}

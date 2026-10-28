@@ -1,0 +1,330 @@
+{
+	"cards": [
+		{
+			"title": "부스는 힘으로 조작하는 것",
+			"person": {
+				"name": "민호",
+				"id": "minho",
+				"role": "구직자"
+			},
+			"rule_link": "공용 인증부스의 제어판을 강제로 열어 이력서에 손쉽게 인증 도장을 찍는 꼼수를 쓰려고 한다.",
+			"no": 1,
+			"key": "stamp_force",
+			"background_tags": [
+				"auth_booth",
+				"waiting_room",
+				"red_light",
+				"crowded",
+				"tense"
+			],
+			"choices": [
+				{
+					"text": "단말기 제어판을 냅다 때려 강제 승인 램프를 켠다",
+					"mbti": "TP",
+					"result": [
+						{
+							"text": "주인공이 제어판을 강하게 내리치자 붉은 경보등이 켜지며 강제 승인 문이 열렸다.",
+							"speaker": "narrator"
+						},
+						{
+							"text": "역시 소문대로 화끈하시네요! 덕분에 이력서에 도장을 찍었습니다.",
+							"speaker": "minho"
+						},
+						{
+							"speaker": "kai",
+							"text": "부스가 온통 요란한 소리를 내요. 다음 절차를 진행해도 괜찮을까요?"
+						}
+					],
+					"effects": {
+						"fighting": -20,
+						"gold": 100
+					},
+					"flag": {
+						"label": "단말기 경보",
+						"key": "broken_terminal_alarm",
+						"boss_text": "과열된 단말기 경보음 때문에 보스의 주의가 주인공에게 집중된다."
+					},
+					"reward": [],
+					"path": "easy"
+				},
+				{
+					"path": "hard",
+					"reward": [
+						"defense_up"
+					],
+					"effects": {
+						"fighting": 20,
+						"reason": 10
+					},
+					"flag": {
+						"key": "safe_override_key",
+						"label": "우회 승인 키",
+						"boss_text": "단말기 안전 키를 사용하여 보스의 강제 차단을 한 차례 무효화한다."
+					},
+					"mbti": "FJ",
+					"result": [
+						{
+							"speaker": "narrator",
+							"text": "주인공이 강타를 거부하고 정석대로 수동 냉각 버튼을 누르자 기계가 차갑게 식었다."
+						},
+						{
+							"text": "웩, 거칠게 돌파하는 줄 알았더니 생각보다 융통성이 없으시군요.",
+							"speaker": "minho"
+						},
+						{
+							"text": "안전하게 단말기가 가동되었어요. 이제 저희 이력서 인증을 시작할 수 있겠어요.",
+							"speaker": "kai"
+						}
+					],
+					"text": "민호의 제안을 거절하고 단말기가 정상 식을 때까지 기다리라고 요구한다"
+				},
+				{
+					"text": "위압적인 태도로 민호에게 과열 단말기를 정석대로 냉각하라고 지시한다",
+					"mbti": "TJ",
+					"result": [
+						{
+							"text": "주인공이 눈빛으로 압박하자 민호가 지레 겁을 먹고 냉각 장치를 정성껏 가동했다.",
+							"speaker": "narrator"
+						},
+						{
+							"text": "히익, 때리지 마세요! 제가 직접 부스 기기를 정상화해 놓겠습니다!",
+							"speaker": "minho"
+						},
+						{
+							"text": "그 무서운 소문 덕분에 부스가 금방 조용해지고 제대로 가동되네요.",
+							"speaker": "kai"
+						}
+					],
+					"effects": {
+						"fighting": -30,
+						"community": 10
+					},
+					"flag": {
+						"key": "frightened_applicant",
+						"label": "협조적인 민호",
+						"boss_text": "민호가 덤벼드는 방해 공작원 하나를 몸으로 막아준다."
+					},
+					"path": "stat",
+					"reward": [
+						"shield"
+					]
+				},
+				{
+					"path": "fun",
+					"reward": [],
+					"text": "전자 인증 도장으로 단말기의 경보 램프를 쾅 찍어버린다",
+					"effects": {
+						"reason": -25,
+						"gold": 50
+					},
+					"result": [
+						{
+							"text": "주인공이 전자 인증 도장으로 붉은 경보 램프를 쾅 찍자 램프가 깨지며 기계가 침묵했다.",
+							"speaker": "narrator"
+						},
+						{
+							"text": "도장으로 경보등을 부수다니... 의외로 기발한 해법이네요!",
+							"speaker": "minho"
+						},
+						{
+							"text": "아하하, 도장의 찍는 면이 작살났지만 어쨌든 소용돌이치던 경보음은 멈췄어요.",
+							"speaker": "kai"
+						}
+					],
+					"mbti": "EP"
+				}
+			],
+			"wants": "인증부스 단말기가 과열되어 먹통이 되자 힘으로 기기를 쳐서 제어판을 강제로 열고 빠른 인증을 받고 싶어 한다.",
+			"dialogue": [
+				{
+					"text": "민호가 과열되어 붉은 경보등이 들어온 인증 단말기 앞을 가로막고 땀을 닦는다.",
+					"speaker": "narrator"
+				},
+				{
+					"speaker": "minho",
+					"text": "당신이 지난번 입구에서 검문 요원을 무력으로 날려버렸던 그 무서운 분이군요."
+				},
+				{
+					"text": "이 단말기가 굳어서 통과가 안 되는데, 주먹으로 제어판을 쳐서 강제 승인 구역을 열어주시겠어요?",
+					"speaker": "minho"
+				},
+				{
+					"speaker": "kai",
+					"text": "...저 단말기를 힘으로 때려잡으시려는 건가요? 제 이력서 인증도 위험해지는 건 아닌지 걱정돼요."
+				},
+				{
+					"speaker": "minho",
+					"text": "딱 5초만 승인 램프가 켜지면 제 이력서에 바로 인증 도장을 찍을 수 있습니다!"
+				}
+			],
+			"slot": "A",
+			"kind": "rep",
+			"rep_dir": "fighting-"
+		},
+		{
+			"background_tags": [
+				"auth_booth",
+				"waiting_room",
+				"neon_light",
+				"crowded",
+				"anxious"
+			],
+			"wants": "자신의 순서가 뒤로 밀려 10분 남은 채용 마감 시한을 놓칠까 봐 주인공의 인증부스 조작 조력을 받아 우선 승인을 받으려 한다.",
+			"rule_link": "인증부스 단말기 승인 순서를 조작하여 10분 남은 이력서 제출 마감 시한을 맞추려 한다.",
+			"key": "shared_stamp",
+			"choices": [
+				{
+					"path": "easy",
+					"reward": [
+						"attack_up"
+					],
+					"effects": {
+						"fighting": 20,
+						"community": 10
+					},
+					"flag": {
+						"label": "순서 혼선",
+						"boss_text": "새치기당한 대기자들의 항의로 보스 방의 진입로가 혼잡해진다.",
+						"key": "queue_disruption"
+					},
+					"mbti": "NF",
+					"result": [
+						{
+							"speaker": "narrator",
+							"text": "주인공이 단말기 신호 라인을 조작하여 소라의 이력서 등록 차례를 맨 앞으로 돌렸다."
+						},
+						{
+							"speaker": "sora",
+							"text": "역시 남아있는 사람들을 도우신다는 말이 맞았네요! 정말 감사합니다!"
+						},
+						{
+							"text": "저분 이력서는 무사히 등록되었지만, 뒤에 계신 분들의 눈총이 매서워졌어요.",
+							"speaker": "kai"
+						}
+					],
+					"text": "부스 단말기 라인을 조작하여 소라의 순서를 가장 앞으로 앞당겨준다"
+				},
+				{
+					"result": [
+						{
+							"speaker": "narrator",
+							"text": "주인공이 순서 조작을 거부하고 제 차례에 맞춰 서류를 제출하라고 안내했다."
+						},
+						{
+							"text": "남을 잘 돕는다더니... 제 사정은 하나도 안 들어주시는군요.",
+							"speaker": "sora"
+						},
+						{
+							"speaker": "kai",
+							"text": "마음은 아프지만 차례를 지키는 게 순서겠죠. 저희 인증 절차를 계속 진행해요."
+						}
+					],
+					"path": "hard",
+					"effects": {
+						"reason": 20,
+						"fighting": -20
+					},
+					"flag": {
+						"boss_text": "규칙 준수 기록이 보스의 시스템 제약 명령을 약화시킨다.",
+						"label": "공정 기록",
+						"key": "fair_process_log"
+					},
+					"mbti": "ST",
+					"reward": [
+						"defense_up"
+					],
+					"text": "순서를 바꾸는 것은 불공정하므로 정해진 줄대로 대기하라고 고지한다"
+				},
+				{
+					"text": "따뜻한 평판을 활용해 대기자 사람들에게 소라의 사정을 설명하고 조용히 동의를 구한다",
+					"result": [
+						{
+							"speaker": "narrator",
+							"text": "주인공의 호소에 대기자들이 흔쾌히 양보하며 소라가 먼저 부스에 들어가게 해주었다."
+						},
+						{
+							"text": "당신의 따뜻한 평판 덕분에 모두가 흔쾌히 양보해 주셨어요! 정말 고맙습니다!",
+							"speaker": "sora"
+						},
+						{
+							"speaker": "kai",
+							"text": "사람들이 군말 없이 길을 비켜주는군요. 제 마음도 덩달아 따뜻해지는 기분이에요."
+						}
+					],
+					"effects": {
+						"community": 20,
+						"fighting": 30
+					},
+					"mbti": "SF",
+					"flag": {
+						"label": "단합된 대기자들",
+						"key": "united_applicants",
+						"boss_text": "대기자들이 보스의 압박에 맞서 주인공의 편에 선다."
+					},
+					"reward": [
+						"shield"
+					],
+					"path": "stat"
+				},
+				{
+					"mbti": "ET",
+					"text": "소라에게 100 골드를 주고 빠른 인증 전용 급행 단말기 이용권을 구매해 준다",
+					"result": [
+						{
+							"text": "주인공이 100 골드를 내고 소라에게 급행 부스 이용 티켓을 끊어주었다.",
+							"speaker": "narrator"
+						},
+						{
+							"speaker": "sora",
+							"text": "골드까지 내주시면서 절 도와주시다니... 평판이 거짓이 아니었군요!"
+						},
+						{
+							"text": "100 골드나 쓰셨지만, 저분의 이력서 마감도 지키고 저희 인증 절차도 안 꼬였어요!",
+							"speaker": "kai"
+						}
+					],
+					"effects": {
+						"community": 15,
+						"gold": -100
+					},
+					"path": "gold",
+					"reward": []
+				}
+			],
+			"person": {
+				"id": "sora",
+				"name": "소라",
+				"role": "대기자"
+			},
+			"dialogue": [
+				{
+					"text": "소라가 이력서 봉투를 쥔 손을 떨며 인증부스 줄 뒤쪽에서 서성인다.",
+					"speaker": "narrator"
+				},
+				{
+					"speaker": "sora",
+					"text": "쓰러진 구직자들에게 자기 식량을 전부 나누어 주셨던 분이시죠?"
+				},
+				{
+					"text": "10분 뒤면 제출 마감인데 제 차례가 오지 않아요.",
+					"speaker": "sora"
+				},
+				{
+					"text": "저분 서류 봉투가 온통 구겨져 있어요. 제 인증도 순서대로 해야 하지만 정말 안절부절못하시는군요.",
+					"speaker": "kai"
+				},
+				{
+					"text": "부스 단말기 승인 순서 라인을 약간만 바꿔주시면 제 이력서를 먼저 넣을 수 있어요!",
+					"speaker": "sora"
+				}
+			],
+			"title": "차례를 양보하는 마음",
+			"no": 2,
+			"slot": "A",
+			"kind": "rep",
+			"rep_dir": "fighting+"
+		}
+	],
+	"errors": [],
+	"prompt_hash": "7c9b881869e099307e03ae53d93be9114776acf3"
+}

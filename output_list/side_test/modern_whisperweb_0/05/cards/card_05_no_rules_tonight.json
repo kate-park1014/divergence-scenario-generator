@@ -1,0 +1,260 @@
+{
+	"id": "card_05_no_rules_tonight",
+	"kind": "rep",
+	"title": {
+		"korean": "규칙 없는 밤의 거래"
+	},
+	"intensity": "calm",
+	"after_story": 7,
+	"before_story": 10,
+	"condition": {
+		"leaning": "reason+",
+		"among": [
+			"fighting-",
+			"fighting+",
+			"community-",
+			"community+",
+			"reason-",
+			"reason+"
+		],
+		"min": 20
+	},
+	"urgency": 8,
+	"leaning": "reason+",
+	"background_tags": [
+		"control_room",
+		"midnight",
+		"vent_grate",
+		"lone_figure",
+		"sly"
+	],
+	"dialogue": [
+		{
+			"speaker": "narrator",
+			"content": {
+				"korean": "러너가 환풍구에서 내려와 단말기 뒤쪽 배선에 손을 댔다."
+			}
+		},
+		{
+			"speaker": "rogue_runner",
+			"content": {
+				"korean": "당신이 규칙 같은 거 무시하고 밀어붙인다는 사람이죠? 딱 내 스타일이야."
+			}
+		},
+		{
+			"speaker": "rogue_runner",
+			"content": {
+				"korean": "조각 하나만 떼어내면 나머지는 내가 순서 없이 맞춰 줄게. 그 하나는 내가 가져가고."
+			}
+		},
+		{
+			"speaker": "echo",
+			"content": {
+				"korean": "환풍구로 들어왔다고? 저 사람 어디서 우리 얘기를 들은 거야!"
+			}
+		}
+	],
+	"choices": [
+		{
+			"text": {
+				"korean": "야간 러너에게 조각 하나를 떼어 주고 나머지를 맡긴다"
+			},
+			"path": "easy",
+			"mbti": "EP",
+			"flag": "runner_shard",
+			"effects": {
+				"reason": 20,
+				"community": -15,
+				"echo": -5
+			},
+			"reward": [
+				"move_range_up"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "러너가 조각 하나를 소매에 넣고 나머지를 빠르게 홈에 밀어 넣었다."
+					}
+				},
+				{
+					"speaker": "rogue_runner",
+					"content": {
+						"korean": "거래 성사. 이 조각은 내 퇴로 값이야. 잘 쓸게."
+					}
+				},
+				{
+					"speaker": "echo",
+					"content": {
+						"korean": "빠르긴 한데, 저 사람이 가져간 조각이 나중에 문제될 것 같아."
+					}
+				}
+			]
+		},
+		{
+			"text": {
+				"korean": "러너에게 조각을 주지 않고 자기 방식대로 맞추게 둔다"
+			},
+			"path": "hard",
+			"mbti": "FJ",
+			"flag": "runner_helped_free",
+			"effects": {
+				"reason": -20,
+				"community": 15,
+				"echo": 10
+			},
+			"reward": [
+				"heal"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "러너가 어깨를 으쓱하고 단말기 옆에 앉았다. 조각은 그대로 남았다."
+					}
+				},
+				{
+					"speaker": "rogue_runner",
+					"content": {
+						"korean": "공짜로 해 주는 건 처음이야. 이거, 나중에 갚으라고 할 거야."
+					}
+				},
+				{
+					"speaker": "echo",
+					"content": {
+						"korean": "조각은 다 지켰고 러너도 남았어. 이게 더 이득인데?"
+					}
+				}
+			]
+		},
+		{
+			"text": {
+				"korean": "러너에게 환풍구 퇴로를 열어 주고 조각 작업을 맡긴다"
+			},
+			"path": "stat",
+			"mbti": "EN",
+			"require": {
+				"stat": "reason",
+				"op": ">=",
+				"value": 40
+			},
+			"flag": "runner_exit",
+			"effects": {
+				"reason": 25,
+				"community": -10,
+				"echo": 5
+			},
+			"reward": [
+				"move_range_up"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "환풍구 덮개가 열리자 러너가 고개를 끄덕이고 단말기 앞에 앉았다."
+					}
+				},
+				{
+					"speaker": "rogue_runner",
+					"content": {
+						"korean": "퇴로를 열어 주는 사람은 처음이야. 당신 이름, 역시 헛되지 않네."
+					}
+				},
+				{
+					"speaker": "echo",
+					"content": {
+						"korean": "퇴로를 열어 줬는데 도망 안 갔어. 이거 믿어도 되는 거지?"
+					}
+				}
+			]
+		},
+		{
+			"text": {
+				"korean": "야간 러너에게 100골드를 주고 조각은 건드리지 않게 한다"
+			},
+			"path": "gold",
+			"mbti": "TJ",
+			"require": {
+				"stat": "gold",
+				"op": ">=",
+				"value": 100
+			},
+			"effects": {
+				"reason": -10,
+				"community": 10,
+				"gold": -100
+			},
+			"reward": [
+				"shield"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "러너가 지폐를 세어 넣고 소매에서 조각을 꺼내 돌려줬다."
+					}
+				},
+				{
+					"speaker": "rogue_runner",
+					"content": {
+						"korean": "돈이면 조각은 안 건드려. 오늘 밤은 규칙 지켜 줄게."
+					}
+				},
+				{
+					"speaker": "echo",
+					"content": {
+						"korean": "돈으로 규칙을 산 셈이네. 러너가 웃는데 좀 무서워."
+					}
+				}
+			]
+		}
+	],
+	"_side": {
+		"slot": "D",
+		"person": {
+			"id": "rogue_runner",
+			"name": "야간 러너",
+			"role": "제어실 잠입 러너"
+		},
+		"wants": "규칙을 어기고 조각을 자기 방식으로 맞춰 보겠다며, 대신 조각 하나를 가져가겠다고 한다.",
+		"rule_link": "데이터 스크린 조각은 정해진 순서 없이도 맞출 수 있지만, 러너의 방식은 조각 하나를 떼어내야 한다.",
+		"rep": "reason+",
+		"events": {},
+		"flags": {
+			"runner_shard": {
+				"kind": "bad",
+				"boss_penalty": -1,
+				"label": {
+					"korean": "러너가 가진 조각"
+				},
+				"boss_line": {
+					"korean": "러너가 가져간 조각을 홀로그램 구석에 던져 출력을 흩트린다."
+				}
+			},
+			"runner_helped_free": {
+				"kind": "good",
+				"boss_penalty": 1,
+				"label": {
+					"korean": "러너의 호의"
+				},
+				"boss_choice": {
+					"korean": "러너가 홀로그램 뒤에서 회로 하나를 대신 끊어 준다."
+				}
+			},
+			"runner_exit": {
+				"kind": "good",
+				"boss_penalty": 2,
+				"label": {
+					"korean": "열린 퇴로"
+				},
+				"boss_choice": {
+					"korean": "러너가 열어 둔 환풍구로 홀로그램 뒤편에 붙어 회로를 끊는다."
+				}
+			}
+		}
+	}
+}

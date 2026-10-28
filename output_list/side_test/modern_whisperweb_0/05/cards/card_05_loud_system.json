@@ -1,0 +1,177 @@
+{
+	"id": "card_05_loud_system",
+	"kind": "plant",
+	"title": {
+		"korean": "윙윙거리는 경고음"
+	},
+	"intensity": "calm",
+	"after_story": 3,
+	"before_story": 5,
+	"background_tags": [
+		"blinking_lights",
+		"loud_alarm",
+		"tangled_cords",
+		"control_room",
+		"panicked_apprentice"
+	],
+	"dialogue": [
+		{
+			"speaker": "apprentice",
+			"content": {
+				"korean": "귀가 터질 것 같아요! 이 시스템 경고음 좀 제발 꺼주세요!"
+			}
+		},
+		{
+			"speaker": "echo",
+			"content": {
+				"korean": "그래, 코드를 뽑아서 조각도 깨버려! 안 그러면 내 1급 정보가 스팸 메일이랑 섞인다고!"
+			}
+		},
+		{
+			"speaker": "apprentice",
+			"content": {
+				"korean": "복구 점검이고 뭐고, 그냥 메인 전원 코드를 확 뽑아버리죠. 그게 제일 확실하잖아요."
+			}
+		},
+		{
+			"speaker": "narrator",
+			"content": {
+				"korean": "수습 오퍼레이터가 굵은 전원 코드를 향해 손을 뻗었다."
+			}
+		}
+	],
+	"choices": [
+		{
+			"text": {
+				"korean": "전원 코드를 뽑게 내버려 둔다."
+			},
+			"path": "easy",
+			"mbti": "EN",
+			"effects": {
+				"reason": -20,
+				"echo": -10,
+				"fighting": 10
+			},
+			"reward": [
+				"attack_up"
+			],
+			"seed": "loud_system_easy",
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "당신이 말리지 않자 수습이 코드를 뽑아버렸다. 시끄러운 경고음이 멎었다."
+					}
+				},
+				{
+					"speaker": "apprentice",
+					"content": {
+						"korean": "아, 이제야 살 것 같네요. 나중 일은 나중에 생각하죠."
+					}
+				}
+			]
+		},
+		{
+			"text": {
+				"korean": "코드를 뽑지 못하게 막고 시스템 내부를 점검한다."
+			},
+			"path": "hard",
+			"mbti": "IS",
+			"effects": {
+				"reason": 20,
+				"echo": 5,
+				"fighting": -15
+			},
+			"reward": [
+				"defense_down"
+			],
+			"seed": "loud_system_hard",
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "당신은 수습의 손을 쳐내고, 복잡한 시스템 내부를 하나하나 뒤지며 오류를 찾았다."
+					}
+				},
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "간신히 경고음을 껐지만, 무리한 작업으로 손끝이 베여 피가 났다."
+					}
+				}
+			]
+		},
+		{
+			"text": {
+				"korean": "전문가용 진단 툴을 사서 시스템을 고친다."
+			},
+			"path": "gold",
+			"mbti": "ES",
+			"require": {
+				"stat": "gold",
+				"op": ">=",
+				"value": 100
+			},
+			"effects": {
+				"reason": 15,
+				"gold": -100
+			},
+			"seed": "loud_system_hard",
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "당신이 비싼 진단 툴을 연결하자, 시스템이 오류를 스스로 수정하며 안정을 찾았다."
+					}
+				},
+				{
+					"speaker": "apprentice",
+					"content": {
+						"korean": "와, 돈값을 제대로 하네요. 코드를 뽑았으면 큰일 날 뻔했어요."
+					}
+				}
+			]
+		},
+		{
+			"text": {
+				"korean": "{actor}이(가) 시스템의 숨겨진 소프트웨어 종료 버튼을 찾아 누른다."
+			},
+			"path": "lock",
+			"mbti": "IN",
+			"require": {
+				"mbti": "IN"
+			},
+			"effects": {
+				"reason": 10,
+				"gold": 50
+			},
+			"seed": "loud_system_hard",
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "{actor}이(가) 코드를 뽑는 무식한 방법 대신, 콘솔에 명령어를 입력해 안전하게 시스템을 종료했다."
+					}
+				},
+				{
+					"speaker": "apprentice",
+					"content": {
+						"korean": "그런 방법이 있는 줄은 꿈에도 몰랐어요."
+					}
+				}
+			]
+		}
+	],
+	"_side": {
+		"slot": "B",
+		"person": {
+			"role": "수습 오퍼레이터",
+			"name": "수습",
+			"id": "apprentice"
+		},
+		"wants": "복구가 귀찮다며 오작동하는 시스템의 전원 코드를 뽑아버리자고 요구한다.",
+		"rule_link": "전원 코드를 뽑는 것은 스크린 조각의 연결을 끊어버리는 파괴적인 행위다.",
+		"events": {},
+		"flags": {}
+	}
+}

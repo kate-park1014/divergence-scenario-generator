@@ -1,0 +1,253 @@
+{
+	"id": "card_04_rule_break_bell",
+	"kind": "rep",
+	"title": {
+		"korean": "종을 울리는 사람"
+	},
+	"intensity": "calm",
+	"after_story": 1,
+	"before_story": 3,
+	"condition": {
+		"leaning": "reason+",
+		"among": [
+			"fighting-",
+			"fighting+",
+			"community-",
+			"community+",
+			"reason-",
+			"reason+"
+		],
+		"min": 20
+	},
+	"urgency": 8,
+	"leaning": "reason+",
+	"background_tags": [
+		"closed_corridor",
+		"low_buzz",
+		"patrol_light",
+		"empty_hall",
+		"tense"
+	],
+	"dialogue": [
+		{
+			"speaker": "pia",
+			"content": {
+				"korean": "당신이 규칙 같은 거 접어두고 먼저 뛰어드는 사람이라면서요? 저도 그렇게 배웠어요, 이번엔."
+			}
+		},
+		{
+			"speaker": "dax",
+			"content": {
+				"korean": "또 나야? 내 일기장도 좀 뛰어다녀 줬으면 좋겠는데."
+			}
+		},
+		{
+			"speaker": "pia",
+			"content": {
+				"korean": "순찰 규칙대로면 지금 이 구역은 폐쇄예요. 저는 그 규칙을 어기고 들어갈 거고요."
+			}
+		},
+		{
+			"speaker": "narrator",
+			"content": {
+				"korean": "피아의 순찰 벨트엔 종이 두 개 달려 있었고, 그중 하나는 끈이 끊겨 있었다."
+			}
+		}
+	],
+	"choices": [
+		{
+			"text": {
+				"korean": "피아와 함께 폐쇄 구역으로 먼저 들어간다."
+			},
+			"path": "easy",
+			"mbti": "EP",
+			"flag": "pia_first_in",
+			"effects": {
+				"reason": -20,
+				"echo": 10
+			},
+			"reward": [
+				"move_range_up"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "피아가 벨트의 종을 손바닥으로 감싸 소리를 죽이고 문틈으로 먼저 들어갔다."
+					}
+				},
+				{
+					"speaker": "pia",
+					"content": {
+						"korean": "들키면 저는 순찰대에서 잘려요. 대신 이 문은 열렸네요."
+					}
+				},
+				{
+					"speaker": "dax",
+					"content": {
+						"korean": "종 안 울렸어. 다행이다. 나 심장은 울렸지만."
+					}
+				}
+			]
+		},
+		{
+			"text": {
+				"korean": "피아를 폐쇄 구역 밖에 세우고 혼자 들어간다."
+			},
+			"path": "hard",
+			"mbti": "TJ",
+			"flag": "pia_left",
+			"effects": {
+				"reason": 15,
+				"community": -10,
+				"echo": -5
+			},
+			"reward": [
+				"defense_up"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "pia",
+					"content": {
+						"korean": "혼자 가면 저는 규칙대로 벨을 울려야 해요. 알죠?"
+					}
+				},
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "피아가 끊긴 종을 다시 벨트에 매고 문 앞에 섰다."
+					}
+				},
+				{
+					"speaker": "dax",
+					"content": {
+						"korean": "저 사람 종 소리 나면 우리 다 들켜. 빨리 가자."
+					}
+				}
+			]
+		},
+		{
+			"text": {
+				"korean": "피아에게 규칙은 내가 책임질 테니 문을 열라 한다."
+			},
+			"path": "stat",
+			"mbti": "FP",
+			"require": {
+				"stat": "reason",
+				"op": ">=",
+				"value": 40
+			},
+			"flag": "pia_cover",
+			"effects": {
+				"reason": 20,
+				"community": 15,
+				"echo": 10
+			},
+			"reward": [
+				"shield"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "pia",
+					"content": {
+						"korean": "그 말 믿을게요. 저는 당신 뒤에 있을게요."
+					}
+				},
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "피아가 벨트에서 종을 떼어 바닥에 내려놓고 문 손잡이를 잡았다."
+					}
+				},
+				{
+					"speaker": "dax",
+					"content": {
+						"korean": "종 내려놨네. 이제 안 울리겠다. 아마도."
+					}
+				}
+			]
+		},
+		{
+			"text": {
+				"korean": "피아의 끊긴 종을 벨트에 다시 매달아 준다."
+			},
+			"path": "fun",
+			"mbti": "FJ",
+			"effects": {
+				"reason": 25,
+				"echo": 5
+			},
+			"reward": [
+				"cooldown_reset"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "끈을 매자 종이 두 번 울렸고, 복도 끝에서 발소리가 멎었다."
+					}
+				},
+				{
+					"speaker": "pia",
+					"content": {
+						"korean": "…지금 그거 일부러 그러셨어요? 저 순찰대한테 잡혀요."
+					}
+				},
+				{
+					"speaker": "dax",
+					"content": {
+						"korean": "근데 순찰대가 반대쪽으로 갔어. 종 소리에 놀라서?"
+					}
+				}
+			]
+		}
+	],
+	"_side": {
+		"slot": "A",
+		"person": {
+			"id": "pia",
+			"name": "피아",
+			"role": "야간 순찰 감시자"
+		},
+		"wants": "규칙대로만 하다 유출을 놓친 전력이 있어, 이번엔 규칙을 어기고 장치 쪽으로 먼저 들어가겠다며 동행을 요구한다.",
+		"rule_link": "감시 기록에 데이터 스크린 조각의 좌표가 규칙 위반 표시로 찍혀 있다.",
+		"rep": "reason+",
+		"events": {},
+		"flags": {
+			"pia_first_in": {
+				"kind": "bad",
+				"boss_penalty": -1,
+				"label": {
+					"korean": "먼저 들어간 발"
+				},
+				"boss_line": {
+					"korean": "피아가 끊긴 종을 주머니에 넣고 보스 방 쪽 폐쇄문을 어깨로 밀어 연다."
+				}
+			},
+			"pia_left": {
+				"kind": "good",
+				"boss_penalty": 1,
+				"label": {
+					"korean": "남겨진 순찰자"
+				},
+				"boss_choice": {
+					"korean": "피아가 규칙대로 종을 울려 보스 방 앞 통로에 순찰대를 불러들인다."
+				}
+			},
+			"pia_cover": {
+				"kind": "good",
+				"boss_penalty": 2,
+				"label": {
+					"korean": "덮은 책임"
+				},
+				"boss_choice": {
+					"korean": "피아가 당신 뒤에 서서 순찰대에 다른 곳을 가리키며 보스 방 통로를 비켜 준다."
+				}
+			}
+		}
+	}
+}

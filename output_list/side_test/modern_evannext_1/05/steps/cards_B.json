@@ -1,0 +1,452 @@
+{
+	"cards": [
+		{
+			"no": 1,
+			"person": {
+				"id": "yuri",
+				"role": "대기실 안내원",
+				"name": "유리"
+			},
+			"choices": [
+				{
+					"reward": [
+						"intelligence_up"
+					],
+					"result": [
+						{
+							"speaker": "narrator",
+							"text": "서류에 과장 서명을 남기자 통 통행증이 출력되고 대기실 경보음이 잠시 멈췄다."
+						},
+						{
+							"text": "잘하셨어요. 이제 이 통행증으로 대기실 제어반 스위치를 작동하세요.",
+							"speaker": "yuri"
+						},
+						{
+							"text": "일단 통행증은 얻었지만, 부풀려진 서류가 수거함에 또 쌓였어요.",
+							"speaker": "lin"
+						}
+					],
+					"path": "easy",
+					"text": "유리의 지시대로 과장된 서명을 작성해 주고 통행증을 얻는다",
+					"mbti": "EF",
+					"effects": {
+						"community": -10,
+						"gold": 0,
+						"reason": -20,
+						"echo": -5,
+						"fighting": -10
+					}
+				},
+				{
+					"result": [
+						{
+							"speaker": "narrator",
+							"text": "과장 서명을 거부하고 불완전한 양식지를 찢어버리자 유리가 비난을 퍼붓기 시작했다."
+						},
+						{
+							"speaker": "yuri",
+							"text": "서류를 찢다니 미쳤군요! 당신들에겐 통과 미달 판정을 내리겠어요!"
+						},
+						{
+							"text": "유리의 비난을 받게 되었지만, 거짓 서류를 더 늘리지 않았어요.",
+							"speaker": "lin"
+						}
+					],
+					"reward": [
+						"shield"
+					],
+					"path": "hard",
+					"text": "과장 서명을 거부하고 불완전한 서류를 찢어 유리의 비난을 받는다",
+					"mbti": "TJ",
+					"effects": {
+						"gold": 0,
+						"fighting": 20,
+						"community": 10,
+						"reason": 20,
+						"echo": 10
+					}
+				},
+				{
+					"effects": {
+						"fighting": -10,
+						"gold": 50,
+						"community": 10,
+						"reason": -10,
+						"echo": 10
+					},
+					"mbti": "FP",
+					"text": "서명란에 유리를 향한 칭찬 문구를 적어 서류판에 도로 붙인다",
+					"path": "fun",
+					"reward": [
+						"cooldown_reset"
+					],
+					"result": [
+						{
+							"text": "과장 서명란에 유리를 향한 칭찬 시를 써서 제출하자 유리가 황당해하며 웃었다.",
+							"speaker": "narrator"
+						},
+						{
+							"speaker": "yuri",
+							"text": "글재주는 좋지만... 이런 장난스러운 문구로 수거함 기준이 채워질 리 없잖아요!"
+						},
+						{
+							"speaker": "lin",
+							"text": "대기실 분위기는 풀렸지만 제어반 스위치는 직접 조작해야겠어요."
+						}
+					]
+				}
+			],
+			"key": "yuri_signature_request",
+			"title": "안내원 유리의 과장 서명 요구",
+			"wants": "통과 기준 수치를 맞추기 위해 지원자들에게 과장된 서명을 받아내려 한다.",
+			"background_tags": [
+				"waiting_room",
+				"dim_lighting",
+				"crowd_waiting",
+				"paper_stacks",
+				"tense_atmosphere"
+			],
+			"rule_link": "허위 서명을 모아 이력서 수거함의 통과 기준 수치를 강제로 맞추려는 규칙",
+			"dialogue": [
+				{
+					"speaker": "narrator",
+					"text": "안내원 유리가 도장이 찍힌 양식지를 들고 대기실 중앙에 들어선다."
+				},
+				{
+					"text": "통과 인원이 부족해요. 자격란에 경력 5년 이상이라고 과장해서 서명하세요.",
+					"speaker": "yuri"
+				},
+				{
+					"speaker": "lin",
+					"text": "저 서류에 과장 서명을 하면 대기실 통과 통행증은 바로 나오는 것 같아요."
+				},
+				{
+					"speaker": "yuri",
+					"text": "망설일 시간 없어요! 배포한 양식에 서명만 하면 모두 무사히 지나갑니다!"
+				}
+			],
+			"slot": "B",
+			"kind": "plant"
+		},
+		{
+			"rule_link": "부실한 경력을 부풀려 제출함을 채우려 하는 대기실 지원자의 선택 규칙",
+			"background_tags": [
+				"interview_room",
+				"waiting_area",
+				"flickering_light",
+				"nervous_people",
+				"cold_breeze"
+			],
+			"choices": [
+				{
+					"effects": {
+						"gold": 0,
+						"reason": -15,
+						"community": -15,
+						"fighting": -15,
+						"echo": -10
+					},
+					"result": [
+						{
+							"text": "민석이 조작한 경력서를 제출함에 쑤셔 넣고 한숨을 크게 내쉬었다.",
+							"speaker": "narrator"
+						},
+						{
+							"speaker": "minseok",
+							"text": "고마워요! 대기실 오른쪽 비상문은 보안 카드가 없어도 열립니다."
+						},
+						{
+							"text": "거짓 서류가 하나 더 들어가면서 제출함 주변 오염이 심해지고 있어요.",
+							"speaker": "lin"
+						}
+					],
+					"reward": [
+						"move_range_up"
+					],
+					"text": "민석의 서류 조작을 못 본 척 넘어가고 대기실 통과 정보를 얻는다",
+					"mbti": "TP",
+					"path": "easy"
+				},
+				{
+					"effects": {
+						"echo": 10,
+						"community": 10,
+						"gold": 0,
+						"fighting": 20,
+						"reason": 10
+					},
+					"event_intro": [
+						{
+							"text": "거짓 서류를 방해받자 붉은 띠를 두른 낯선 동조 지원자가 무기를 꺼내 들었다.",
+							"speaker": "narrator"
+						},
+						{
+							"speaker": "narrator",
+							"text": "\"낯선 동조 지원자: {actor}! 남의 이력서에 참견한 대가를 치러라!\""
+						}
+					],
+					"path": "hard",
+					"text": "민석의 조작 서류를 빼앗아 제출함 입구를 막아선다",
+					"event": "meet_stranger",
+					"result": [
+						{
+							"speaker": "narrator",
+							"text": "서류를 빼앗아 제출함을 막아서자 주변 동조 지원자가 격분해 다가왔다."
+						},
+						{
+							"text": "거짓 제출을 저지하려 하자 대기실 동조자가 공격적으로 변했어요!",
+							"speaker": "lin"
+						}
+					],
+					"event_options": {
+						"fight": {
+							"text": "{actor}이(가) 무기를 들고 낯선 동조 지원자에 맞선다",
+							"lose": [
+								{
+									"text": "{actor}이(가) 공격에 맞아 밀려났지만 제출함의 잘못된 입력을 차단했다.",
+									"speaker": "narrator"
+								}
+							],
+							"win": [
+								{
+									"speaker": "narrator",
+									"text": "{actor}이(가) 동조 지원자를 순식간에 제압하고 조작 서류를 수거함에서 완전히 분리했다."
+								}
+							]
+						},
+						"avoid": {
+							"text": "동조 지원자의 공격을 유연하게 피하며 뒤로 물러선다",
+							"result": [
+								{
+									"speaker": "narrator",
+									"text": "{actor}이(가) 공격을 날렵하게 피했지만 조작 서류 일부가 제출함 안으로 떨어졌다."
+								}
+							]
+						}
+					},
+					"event_reason": "거짓 서류 제출을 저지당하자 격분한 동조 지원자가 대결을 신청함",
+					"avoid_penalty": "defense_down",
+					"mbti": "NF"
+				},
+				{
+					"effects": {
+						"fighting": -10,
+						"echo": 10,
+						"reason": 20,
+						"community": 10,
+						"gold": -100
+					},
+					"path": "gold",
+					"reward": [
+						"defense_up"
+					],
+					"result": [
+						{
+							"text": "민석이 돈을 받고 떨리는 손으로 원래의 부실한 경력지를 다시 써서 냈다.",
+							"speaker": "narrator"
+						},
+						{
+							"speaker": "minseok",
+							"text": "정직하게 내니 마음은 편하네요. 이 보조 열쇠를 대신 드릴게요."
+						},
+						{
+							"text": "제출함의 오염을 막았어요. 비용은 들었지만 정직한 선택이었어요.",
+							"speaker": "lin"
+						}
+					],
+					"text": "민석에게 100골드를 주고 진짜 경력으로 제출하도록 설득한다",
+					"mbti": "SF"
+				}
+			],
+			"key": "minseok_fake_experience",
+			"dialogue": [
+				{
+					"text": "지원자 민석이 손을 떨며 이력서 제출함 앞에서 서성이고 있다.",
+					"speaker": "narrator"
+				},
+				{
+					"text": "내 진짜 경력으론 낙방이야... 수석 연구원이라고 부풀려 적어야 해!",
+					"speaker": "minseok"
+				},
+				{
+					"speaker": "lin",
+					"text": "저분이 경력을 조작해서 내면 수거함의 수치가 점점 더 오염돼요."
+				},
+				{
+					"text": "날 방해하지 마! 이렇게라도 안 하면 여기서 영영 탈출 못 한단 말이야!",
+					"speaker": "minseok"
+				}
+			],
+			"person": {
+				"id": "minseok",
+				"role": "대기실 지원자",
+				"name": "민석"
+			},
+			"wants": "부실한 경력 서류를 부풀려 제출함에 넣고 대기실을 통과하고 싶어 한다.",
+			"no": 2,
+			"title": "지원자 민석의 경력 부풀리기",
+			"slot": "B",
+			"kind": "normal"
+		},
+		{
+			"wants": "완벽한 서류 모양새를 갖추기 위해 위조 자격증 스티커를 사람들에게 유통하려 한다.",
+			"rule_link": "서류 칸을 거짓 자격증으로 메워 관문을 통과하려는 세계 규칙",
+			"title": "경재의 위조 자격증 스티커",
+			"key": "gyeongjae_tampered_sticker",
+			"background_tags": [
+				"waiting_room",
+				"fluorescent_light",
+				"documents_table",
+				"whispering_crowd",
+				"anxious_mood"
+			],
+			"no": 3,
+			"choices": [
+				{
+					"path": "easy",
+					"effects": {
+						"echo": -10,
+						"community": -10,
+						"fighting": -10,
+						"gold": 0,
+						"reason": -20
+					},
+					"text": "위조 자격 스티커를 받아 자기 서류에 붙이고 검수기를 통과한다",
+					"mbti": "EF",
+					"reward": [
+						"attack_up"
+					],
+					"result": [
+						{
+							"text": "스티커를 붙이자 검수기가 녹색 불을 켜며 대기실 차단 봉을 치웠다.",
+							"speaker": "narrator"
+						},
+						{
+							"speaker": "gyeongjae",
+							"text": "거봐, 통과했지? 완벽한 자격증 스티커라니까!"
+						},
+						{
+							"speaker": "lin",
+							"text": "당장은 길문이 열렸지만 서류함 수치가 기괴하게 뒤틀리고 있어요."
+						}
+					]
+				},
+				{
+					"text": "경재의 위조 스티커 판을 빼앗아 회수 봉투에 봉인한다",
+					"mbti": "TJ",
+					"path": "hard",
+					"effects": {
+						"reason": 20,
+						"gold": 0,
+						"fighting": 15,
+						"echo": 10,
+						"community": 10
+					},
+					"reward": [
+						"heal"
+					],
+					"result": [
+						{
+							"speaker": "narrator",
+							"text": "스티커 판을 몰수하자 경재가 억울하다는 표정으로 자리에 앉았다."
+						},
+						{
+							"speaker": "gyeongjae",
+							"text": "이렇게 까다롭게 굴다간 당신들도 다음 관문에서 막힐 거라고!"
+						},
+						{
+							"speaker": "lin",
+							"text": "검수기의 오작동을 막고 수거함 오염을 성공적으로 늦췄어요."
+						}
+					]
+				},
+				{
+					"effects": {
+						"fighting": 0,
+						"gold": 0,
+						"community": 0,
+						"reason": 25,
+						"echo": 5
+					},
+					"text": "{actor}이(가) 위조 스티커의 바코드를 분석해 검수기의 오류를 정밀 수정한다",
+					"mbti": "NT",
+					"reward": [
+						"cooldown_reset"
+					],
+					"result": [
+						{
+							"speaker": "narrator",
+							"text": "{actor}이(가) 회로를 분석해 검수기가 위조 스티커를 자동 파쇄하도록 재설정했다."
+						},
+						{
+							"speaker": "gyeongjae",
+							"text": "뭐야, 스티커를 붙이자마자 기계 안에서 다 잘려 나가잖아!"
+						},
+						{
+							"text": "{actor} 덕분에 위조 서류가 제출함으로 들어가는 걸 완전히 막았어요.",
+							"speaker": "lin"
+						}
+					],
+					"require_mbti": "NT",
+					"path": "lock"
+				},
+				{
+					"reward": [
+						"defense_up"
+					],
+					"result": [
+						{
+							"speaker": "narrator",
+							"text": "돈을 받은 경재가 스티커 판을 순순히 넘겨주고 다른 대기석으로 옮겨갔다."
+						},
+						{
+							"speaker": "gyeongjae",
+							"text": "돈을 받았으니 군말 않지. 이 스티커들은 전부 알아서 처리해."
+						},
+						{
+							"text": "대기실 전체로 퍼질 뻔한 위조 스티커 유통을 돈으로 차단했어요.",
+							"speaker": "lin"
+						}
+					],
+					"mbti": "SF",
+					"text": "경재에게 80골드를 주고 위조 스티커 판을 통째로 사서 파기한다",
+					"effects": {
+						"fighting": -5,
+						"gold": -80,
+						"reason": 15,
+						"echo": 10,
+						"community": 10
+					},
+					"path": "gold"
+				}
+			],
+			"person": {
+				"id": "gyeongjae",
+				"name": "경재",
+				"role": "대기실 지원자"
+			},
+			"dialogue": [
+				{
+					"speaker": "narrator",
+					"text": "경재가 대기실 테이블 위에서 위조 자격증 스티커를 몰래 나누어 붙이고 있다."
+				},
+				{
+					"speaker": "gyeongjae",
+					"text": "이 스티커 하나만 붙이면 서류 검수기를 단번에 통과할 수 있어."
+				},
+				{
+					"speaker": "lin",
+					"text": "저 스티커를 붙이면 제출함의 검수 장치가 완전히 오염될 텐데요."
+				},
+				{
+					"speaker": "gyeongjae",
+					"text": "당신들도 서류 빈칸이 허전하면 한 장 사서 붙여보지 그래?"
+				}
+			],
+			"slot": "B",
+			"kind": "normal"
+		}
+	],
+	"errors": [],
+	"prompt_hash": "1925477d683b07c67fcf34c95dae29acc97e1a52"
+}

@@ -1,0 +1,205 @@
+{
+	"id": "card_04_form_blank",
+	"kind": "rep",
+	"title": {
+		"korean": "빈칸 한 줄"
+	},
+	"intensity": "calm",
+	"after_story": 3,
+	"before_story": 5,
+	"condition": {
+		"leaning": "reason-",
+		"among": [
+			"fighting-",
+			"fighting+",
+			"community-",
+			"community+",
+			"reason-",
+			"reason+"
+		],
+		"min": 20
+	},
+	"urgency": 8,
+	"leaning": "reason-",
+	"background_tags": [
+		"data_waste_yard",
+		"late_shift",
+		"desk_lamp",
+		"empty_room",
+		"bureaucratic"
+	],
+	"dialogue": [
+		{
+			"speaker": "rosa",
+			"content": {
+				"korean": "당신이 규정대로만 처리한다는 그 사람이죠? 서명 하나만 받으러 왔습니다."
+			}
+		},
+		{
+			"speaker": "dax",
+			"content": {
+				"korean": "서류요? 저 사람 손에 든 그 종이, 칸이 스물두 개예요."
+			}
+		},
+		{
+			"speaker": "rosa",
+			"content": {
+				"korean": "부품 목록 스물두 칸인데 스물한 개만 적혀 있어요. 하나가 어디 갔는지 모르겠어요."
+			}
+		},
+		{
+			"speaker": "narrator",
+			"content": {
+				"korean": "로사가 서류를 넘기자 마지막 칸이 비어 있었다."
+			}
+		}
+	],
+	"choices": [
+		{
+			"text": {
+				"korean": "규정대로 빈칸을 '확인 불가'로 적고 서명한다"
+			},
+			"path": "easy",
+			"mbti": "TJ",
+			"flag": "blank_line",
+			"effects": {
+				"reason": 20
+			},
+			"reward": [
+				"defense_up"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "rosa",
+					"content": {
+						"korean": "확인 불가로 적으면 저는 책임을 안 져요. 고맙습니다."
+					}
+				},
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "로사가 서류를 접어 주머니에 넣고 발걸음을 돌렸다."
+					}
+				},
+				{
+					"speaker": "dax",
+					"content": {
+						"korean": "빈칸 하나로 책임이 사라지다니, 편리한 세상이네요."
+					}
+				}
+			]
+		},
+		{
+			"text": {
+				"korean": "빈칸을 채우지 않고 로사와 함께 부품을 다시 센다"
+			},
+			"path": "hard",
+			"mbti": "FP",
+			"flag": "blank_line_b5",
+			"effects": {
+				"reason": -20,
+				"community": 10
+			},
+			"reward": [
+				"intelligence_up"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "rosa",
+					"content": {
+						"korean": "스물두 개… 맞네요. 이건 제가 본 적 없는 조각인데요."
+					}
+				},
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "세어 보니 조각 하나가 더 있었고, 그것은 금이 가 있었다."
+					}
+				},
+				{
+					"speaker": "dax",
+					"content": {
+						"korean": "서류보다 눈이 빠른 게 나은 것 같네요."
+					}
+				}
+			]
+		},
+		{
+			"text": {
+				"korean": "당신의 서명을 믿는 로���에게 목록 없이 통행을 요청한다"
+			},
+			"path": "stat",
+			"mbti": "EJ",
+			"require": {
+				"stat": "reason",
+				"op": "<=",
+				"value": -40
+			},
+			"flag": "blank_line_b5",
+			"effects": {
+				"reason": -15,
+				"echo": 5
+			},
+			"reward": [
+				"shield"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "rosa",
+					"content": {
+						"korean": "당신 서명이면 저도 상관없어요. 절차는 제가 맞출게요."
+					}
+				},
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "로사가 서류를 접어 넣고 통행문 쪽으로 손짓했다."
+					}
+				},
+				{
+					"speaker": "dax",
+					"content": {
+						"korean": "서명 하나로 문이 열리다니. 그 서명, 한번 빌려 주세요."
+					}
+				}
+			]
+		}
+	],
+	"_side": {
+		"slot": "B",
+		"person": {
+			"id": "rosa",
+			"name": "로사",
+			"role": "처리장 기록 담당 직원"
+		},
+		"wants": "분해된 장치의 부품 목록을 규정대로 서류에 올려야 한다며, 당신이 절차를 지킨다는 소문을 근거로 서명을 요구한다.",
+		"rule_link": "분해된 장치 부품 목록을 규정 서류에 올리는 일 — 목록에 데이터 스크린 조각이 빠져 있다.",
+		"rep": "reason-",
+		"events": {},
+		"flags": {
+			"blank_line": {
+				"kind": "bad",
+				"boss_penalty": -1,
+				"label": {
+					"korean": "빈칸 서류"
+				},
+				"boss_line": {
+					"korean": "로사가 확인 불가로 적힌 서류를 들고 와 부품 하나가 없다며 통행을 막는다."
+				}
+			},
+			"blank_line_b5": {
+				"kind": "good",
+				"boss_penalty": 2,
+				"label": {
+					"korean": "빈칸 서류"
+				},
+				"boss_choice": {
+					"korean": "로사가 확인 불가로 적힌 서류를 들고 와 부품 하나가 없다며 통행을 막는다."
+				}
+			}
+		}
+	}
+}

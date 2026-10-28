@@ -1,0 +1,360 @@
+{
+	"cards": [
+		{
+			"person": {
+				"name": "초조한 구직자",
+				"role": "검색 단말기에서 허위 경력을 등록하려 했던 지원자",
+				"id": "seeker"
+			},
+			"choices": [
+				{
+					"flag": {
+						"key": "seeker_identity_erased",
+						"label": "이름 혼선 증대",
+						"boss_text": "뒤섞인 지원자 명단 때문에 본인 확인 절차가 지연된다."
+					},
+					"mbti": "EP",
+					"result": [
+						{
+							"text": "단말기 화면의 강제 종료 버튼을 눌러 구직자의 일그러진 모니터를 꺼 버렸다.",
+							"speaker": "narrator"
+						},
+						{
+							"text": "이러면 내 이름이 아예 시스템에서 지워지는 거 아닙니까?",
+							"speaker": "seeker"
+						},
+						{
+							"text": "일단 당장의 경고음은 멈췄지만, 이름이 더 심하게 뒤엉킬 것 같아요.",
+							"speaker": "nia"
+						}
+					],
+					"effects": {
+						"fighting": -10,
+						"echo": -5,
+						"gold": 80
+					},
+					"text": "구직자의 본인 확인을 건너뛰고 단말기 모니터 화면을 무단 종료한다.",
+					"path": "easy"
+				},
+				{
+					"path": "hard",
+					"text": "일그러진 기호를 하나씩 지워 구직자의 본래 이름 표기를 복구한다.",
+					"reward": [
+						"defense_up"
+					],
+					"effects": {
+						"reason": 10,
+						"community": 15,
+						"echo": 10
+					},
+					"result": [
+						{
+							"text": "단말기 자격증란에 덧씌워졌던 가짜 코드를 지우고 본래 성명을 되살렸다.",
+							"speaker": "narrator"
+						},
+						{
+							"speaker": "seeker",
+							"text": "이름 철자가 다시 정돈됐어요! 거짓 정보를 지우니 원래 이름이 돌아왔군요."
+						},
+						{
+							"speaker": "nia",
+							"text": "다행이에요. 과장된 데이터를 덜어내야 이름이 지워지지 않는 거였어요."
+						}
+					],
+					"mbti": "TJ",
+					"flag": {
+						"boss_text": "정리된 명단 덕분에 대기실의 지원자들을 신속하게 통제한다.",
+						"label": "이름 복구 협력",
+						"key": "seeker_identity_restored"
+					}
+				}
+			],
+			"key": "twisted_identity_seeker",
+			"background_tags": [
+				"terminal_room",
+				"dim_lighting",
+				"flickering_screens",
+				"anxious_crowd",
+				"system_glitch"
+			],
+			"wants": "단말기 모니터에 다른 이름과 숫자로 겹쳐 출력되는 자신의 명단을 수습하기",
+			"rule_link": "과장 기재했던 자격증 데이터가 다른 지원자의 이름 정보를 침범하며 본인 명단을 일그러뜨리고 있다.",
+			"no": 1,
+			"dialogue": [
+				{
+					"speaker": "narrator",
+					"text": "검색실 단말기 모니터 앞에서 초조한 구직자가 모니터를 거세게 두드리고 있다."
+				},
+				{
+					"text": "내 자격증란에 적었던 코드 때문에 이름 칸까지 이상한 기호로 뒤덮였어!",
+					"speaker": "seeker"
+				},
+				{
+					"text": "지난번 과장 입력 때문에 단말기 본인 확인 시스템에 심각한 오류가 생겼군요.",
+					"speaker": "nia"
+				}
+			],
+			"title": "일그러진 본인 확인",
+			"slot": "C",
+			"kind": "callback",
+			"returns": "easy"
+		},
+		{
+			"title": "정직하게 남은 이름",
+			"choices": [
+				{
+					"text": "구직자의 선명한 명단 옆 단말기 슬롯을 이용해 검색 속도를 높인다.",
+					"path": "easy",
+					"result": [
+						{
+							"speaker": "narrator",
+							"text": "구직자의 선명한 이름 옆 단말기 슬롯에 보조 기기를 연결해 검색 속도를 높였다."
+						},
+						{
+							"text": "제 이름이 올바르게 적혀 있어서 단말기 승인도 빠르게 떨어지네요.",
+							"speaker": "seeker"
+						},
+						{
+							"text": "원래 기록이 깨끗하게 남아 있으니 전산 처리도 막힘이 없어요.",
+							"speaker": "nia"
+						}
+					],
+					"mbti": "EF",
+					"flag": {
+						"boss_text": "왜곡되지 않은 인적 데이터를 기반으로 관리 장치를 쉽게 우회한다.",
+						"key": "clean_record_shortcut",
+						"label": "선명한 기록 활용"
+					},
+					"effects": {
+						"gold": 100,
+						"echo": 5,
+						"reason": 10
+					}
+				},
+				{
+					"result": [
+						{
+							"text": "구직자의 명단 출력이 지연되지 않도록 단말기 종이 용지를 직접 교체해 주었다.",
+							"speaker": "narrator"
+						},
+						{
+							"text": "정직하게 순서를 기다린 보람이 있군요. 정말 감사합니다!",
+							"speaker": "seeker"
+						},
+						{
+							"speaker": "nia",
+							"text": "올바른 이름을 지켜낸 사람들끼리 서로 도우니 마음이 든든해요."
+						}
+					],
+					"flag": {
+						"boss_text": "정직한 지원자들의 신뢰를 얻어 보스 방 진입 시 방어 지원을 받는다.",
+						"key": "queue_support_trust",
+						"label": "정직한 지원자 연대"
+					},
+					"mbti": "NF",
+					"reward": [
+						"defense_up"
+					],
+					"path": "hard",
+					"effects": {
+						"community": 20,
+						"fighting": 10,
+						"echo": 10
+					},
+					"text": "구직자의 순서가 밀리지 않도록 단말기 출력을 보조한다."
+				}
+			],
+			"rule_link": "허위 기재를 거부했던 덕분에 이름이 왜곡되지 않고 원래 접수 명단에 정확히 남아 있다.",
+			"key": "honest_queue_seeker",
+			"dialogue": [
+				{
+					"speaker": "narrator",
+					"text": "단말기 옆 대기 줄에 서 있던 초조한 구직자가 당신을 알아보고 고개를 숙인다."
+				},
+				{
+					"text": "그때 가짜 경력을 안 적은 덕분에 제 이름은 다른 사람과 엉키지 않았네요.",
+					"speaker": "seeker"
+				},
+				{
+					"text": "수많은 지원자의 이름이 일그러지는 와중에도 본래 이름이 선명하게 남아 있어요.",
+					"speaker": "nia"
+				}
+			],
+			"no": 2,
+			"wants": "이름 표기가 흔들리는 와중에도 자신의 본래 접수 번호 순서를 지키기",
+			"background_tags": [
+				"terminal_room",
+				"fluorescent_light",
+				"waiting_line",
+				"quiet_tension",
+				"stable_screen"
+			],
+			"person": {
+				"role": "단말기에 정직한 데이터만 남기고 대기 중인 지원자",
+				"id": "seeker",
+				"name": "초조한 구직자"
+			},
+			"slot": "C",
+			"kind": "callback",
+			"returns": "hard"
+		},
+		{
+			"person": {
+				"id": "clerk",
+				"name": "단말기 담당자",
+				"role": "정보 검색실의 출입증 및 출력 명단을 관리하는 직원"
+			},
+			"key": "scrambled_id_badge",
+			"no": 3,
+			"wants": "단말기 오류로 수거 상자 안 출입 명찰의 이름들이 섞이자 본래 주인을 찾아내기",
+			"dialogue": [
+				{
+					"text": "단말기 담당자가 수거 상자에 담긴 명찰들을 헤집으며 진땀을 흘리고 있다.",
+					"speaker": "narrator"
+				},
+				{
+					"text": "단말기 모니터가 일그러지더니 명찰 상자 속 글자들까지 엉뚱하게 바뀌고 있어요!",
+					"speaker": "clerk"
+				},
+				{
+					"speaker": "nia",
+					"text": "출입 명찰의 철자가 달라지면 검색실 밖으로 나갈 때 신원 불일치 판정을 받게 될 거예요."
+				}
+			],
+			"choices": [
+				{
+					"text": "표기가 뒤엉킨 명찰 중 글자가 가장 덜 뭉개진 명찰을 먼저 챙긴다.",
+					"result": [
+						{
+							"speaker": "narrator",
+							"text": "수거함 구석에서 글자가 그나마 또렷하게 남아 있는 출입 명찰을 챙겼다."
+						},
+						{
+							"text": "아, 그건 옆 지원자 것 같은데… 일단 그거라도 갖고 계세요.",
+							"speaker": "clerk"
+						},
+						{
+							"text": "남의 명찰을 가져왔지만, 지금은 이거라도 없으면 이동하기 어려워요.",
+							"speaker": "nia"
+						}
+					],
+					"path": "easy",
+					"effects": {
+						"echo": -5,
+						"gold": 60,
+						"reason": -10
+					},
+					"mbti": "IT",
+					"reward": [
+						"move_range_up"
+					]
+				},
+				{
+					"text": "담당자와 함께 뒤섞인 명찰들의 칩 코드를 대조해 본래 이름을 다듬는다.",
+					"path": "hard",
+					"result": [
+						{
+							"text": "담당자와 함께 명찰의 뒷면 칩셋 번호를 대조하며 뒤섞인 철자를 정돈했다.",
+							"speaker": "narrator"
+						},
+						{
+							"speaker": "clerk",
+							"text": "칩셋 번호로 이름을 맞추니 엉킨 명단이 조금씩 되돌아오는군요!"
+						},
+						{
+							"text": "하나씩 바르게 교정해 나가면 이름이 전부 지워지는 건 막을 수 있을 거예요.",
+							"speaker": "nia"
+						}
+					],
+					"mbti": "SF",
+					"reward": [
+						"intelligence_up"
+					],
+					"effects": {
+						"community": 15,
+						"echo": 10,
+						"reason": 15
+					}
+				},
+				{
+					"text": "{actor}이(가) 단말기 분류 법칙을 파악해 정돈된 명찰 상자 하나를 정확히 골라낸다.",
+					"require_mbti": "TJ",
+					"path": "lock",
+					"event_intro": [
+						{
+							"text": "{actor}이(가) 똑같이 생긴 3개의 명찰 수거 상자를 검색대 위에 올려놓았다.",
+							"speaker": "narrator"
+						},
+						{
+							"speaker": "clerk",
+							"text": "{actor} 님, 이 중 단 하나에만 칩셋 데이터가 일그러지지 않은 명찰이 들어 있습니다!"
+						}
+					],
+					"result": [
+						{
+							"speaker": "narrator",
+							"text": "{actor}이(가) 단말기 분류 법칙을 파악해 정돈된 명찰 상자 하나를 가리켰다."
+						},
+						{
+							"text": "이 상자 안에 든 명찰들만 이름 철자가 무사히 유지되어 있네요!",
+							"speaker": "clerk"
+						},
+						{
+							"text": "정확한 규칙을 찾아낸 덕분에 혼란을 크게 줄였어요.",
+							"speaker": "nia"
+						}
+					],
+					"event": "minigame_cup",
+					"effects": {
+						"community": 10,
+						"echo": 10,
+						"reason": 10
+					},
+					"mbti": "TJ",
+					"event_reason": "뒤섞인 상자들 중에서 올바른 칩셋 코드가 담긴 명찰 상자를 가려내야 한다."
+				},
+				{
+					"text": "이름이 엉망으로 인쇄된 명찰을 가슴에 달고 모른 척 지나간다.",
+					"effects": {
+						"fighting": 20,
+						"gold": 120,
+						"reason": -20,
+						"echo": -10
+					},
+					"path": "fun",
+					"reward": [
+						"attack_up"
+					],
+					"mbti": "EP",
+					"result": [
+						{
+							"text": "철자가 기호로 뭉개진 명찰을 가슴에 달고 능청스럽게 단말기 앞을 지나쳤다.",
+							"speaker": "narrator"
+						},
+						{
+							"text": "자기 이름도 못 읽는 명찰을 달고 어디로 가시는 겁니까?",
+							"speaker": "clerk"
+						},
+						{
+							"text": "이름이 이상하게 출력됐는데 당당히 행동하니까 오히려 직원이 당황하네요.",
+							"speaker": "nia"
+						}
+					]
+				}
+			],
+			"background_tags": [
+				"terminal_room",
+				"scattered_badges",
+				"flickering_monitors",
+				"anxious_clerk",
+				"sorting_desk"
+			],
+			"rule_link": "과장된 이력서 정보가 전산망에 누적되며 물리적인 출입 명찰의 텍스트 표기까지 흐트러지고 있다.",
+			"title": "뒤섞이는 출입 명찰",
+			"slot": "C",
+			"kind": "normal"
+		}
+	],
+	"errors": [],
+	"prompt_hash": "29c111d13d68650bf38a28fdd54aa9e5aec01583"
+}

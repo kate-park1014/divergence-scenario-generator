@@ -1,0 +1,318 @@
+{
+	"cards": [
+		{
+			"no": 1,
+			"rule_link": "공용 단말기에서 린의 이름 정리를 시작하기 전, 구직자가 허위 경력 데이터를 입력해달라며 거래를 제안한다.",
+			"dialogue": [
+				{
+					"text": "공용 검색 단말기 화면에 다가가자, 옆에 서 있던 지원자가 어깨를 잡아챈다.",
+					"speaker": "narrator"
+				},
+				{
+					"text": "당신이 방해되는 녀석들을 주먹으로 때려눕혔다는 그 무서운 지원자죠?",
+					"speaker": "seeker"
+				},
+				{
+					"speaker": "seeker",
+					"text": "제 허위 이력서부터 단말기에 넣게 해 주면 100골드를 주겠소!"
+				},
+				{
+					"speaker": "nia",
+					"text": "이 사람은 자기 가짜 경력을 먼저 덮어씌우려고 순서를 빼앗는 거예요!"
+				},
+				{
+					"speaker": "seeker",
+					"text": "시끄러워! 내 경력증명서가 입력되지 않으면 난 오늘 여기서 끝장이야!"
+				}
+			],
+			"wants": "자신의 허위 경력이 담긴 저장 장치를 공용 단말기에 먼저 입력해 이력서를 조작하려 한다.",
+			"person": {
+				"id": "seeker",
+				"role": "지원자",
+				"name": "초조한 구직자"
+			},
+			"key": "seeker_fake_resume",
+			"title": "초조한 구직자의 거래",
+			"choices": [
+				{
+					"mbti": "ET",
+					"flag": {
+						"key": "seeker_fake_data",
+						"boss_text": "면접실 단말기 감시 시스템이 작동하여 당신의 이력서 열람이 10초간 제한된다.",
+						"label": "허위 데이터 등록"
+					},
+					"path": "easy",
+					"text": "구직자의 뇌물을 받고 허위 경력 데이터를 단말기 임시 폴더에 넣어 준다.",
+					"effects": {
+						"gold": 100,
+						"echo": -10,
+						"fighting": -20
+					},
+					"result": [
+						{
+							"speaker": "narrator",
+							"text": "당신은 지원자의 뇌물을 주머니에 넣고 허위 경력 데이터를 입력했다."
+						},
+						{
+							"text": "고맙습니다! 이 경력만 올라가면 전 바로 최종 면접 통과입니다!",
+							"speaker": "seeker"
+						},
+						{
+							"text": "남의 거짓 서류를 먼저 넣어주다니, 나중에 문제가 생기면 어쩌려고 그래요?",
+							"speaker": "nia"
+						}
+					],
+					"reward": [
+						"attack_up"
+					]
+				},
+				{
+					"result": [
+						{
+							"speaker": "narrator",
+							"text": "당신은 지원자의 손을 쳐내고 허위 데이터가 든 저장 장치를 내던졌다."
+						},
+						{
+							"speaker": "seeker",
+							"text": "내 10년 치 가짜 경력이! 감히 내 기회를 짓밟다니 두고 보자!"
+						},
+						{
+							"text": "잘하셨어요! 순서를 새치기해서 거짓 정보를 넣게 둘 수는 없죠.",
+							"speaker": "nia"
+						}
+					],
+					"reward": [
+						"shield"
+					],
+					"text": "구직자의 손을 내치고 허위 이력서 파일이 든 저장 장치를 바닥에 던진다.",
+					"path": "hard",
+					"mbti": "NF",
+					"flag": {
+						"label": "조작 데이터 파괴",
+						"key": "seeker_usb_destroyed",
+						"boss_text": "단말기 조작을 방지한 공로로 면접관이 보안 인증 혜택을 제공한다."
+					},
+					"effects": {
+						"fighting": 20,
+						"community": 10,
+						"echo": 10
+					}
+				},
+				{
+					"result": [
+						{
+							"speaker": "narrator",
+							"text": "당신이 차가운 눈빛으로 노려보자 지원자는 떨리는 손으로 서류를 찢었다."
+						},
+						{
+							"speaker": "seeker",
+							"text": "히익, 찢을게요! 찢으면 되잖아요! 제발 때리지 마세요!"
+						},
+						{
+							"text": "소문대로 엄청난 기세네요. 덕분에 단말기 앞이 금방 조용해졌어요.",
+							"speaker": "nia"
+						}
+					],
+					"reward": [
+						"intelligence_up"
+					],
+					"text": "살벌한 눈빛으로 구직자를 위협해 허위 서류를 스스로 찢게 만든다.",
+					"path": "stat",
+					"flag": {
+						"key": "seeker_cowered",
+						"label": "지원자 제압",
+						"boss_text": "위압당한 지원자가 면접장에서 당신의 지시를 순순히 따라 행동한다."
+					},
+					"mbti": "EJ",
+					"effects": {
+						"fighting": -20,
+						"echo": 5,
+						"reason": 10
+					}
+				}
+			],
+			"background_tags": [
+				"search_room",
+				"daylight",
+				"fluorescent",
+				"crowded",
+				"tense"
+			],
+			"slot": "A",
+			"kind": "rep",
+			"rep_dir": "fighting-"
+		},
+		{
+			"key": "clerk_mistake_coverup",
+			"dialogue": [
+				{
+					"text": "단말기 앞으로 다가가자 담당 직원이 식은땀을 흘리며 손을 잡는다.",
+					"speaker": "narrator"
+				},
+				{
+					"text": "당신이 곤경에 처한 사람들을 팔 벗고 도와준다던 그 친절한 지원자 맞죠?",
+					"speaker": "clerk"
+				},
+				{
+					"text": "제발 제가 날려버린 대기자 명단을 가짜 정보로라도 채워주세요!",
+					"speaker": "clerk"
+				},
+				{
+					"speaker": "nia",
+					"text": "직원의 실수를 거짓 정보로 덮으면 다른 사람들의 이력서까지 엉망이 돼요."
+				},
+				{
+					"text": "부탁입니다! 오늘 감사를 통과하지 못하면 전 당장 해고된다고요!",
+					"speaker": "clerk"
+				}
+			],
+			"rule_link": "린의 이력서 정리를 준비하던 중, 직원이 부실한 관리 기록을 거짓으로 덮어달라며 부탁한다.",
+			"no": 2,
+			"wants": "징계 위험에 처한 직원이 자신의 실수를 덮기 위해 인적 사항 거짓 수정을 요청한다.",
+			"title": "단말기 담당자의 읍소",
+			"person": {
+				"role": "직원",
+				"name": "단말기 담당자",
+				"id": "clerk"
+			},
+			"choices": [
+				{
+					"path": "easy",
+					"text": "직원의 해고를 막기 위해 임의의 가짜 대기자 명단을 단말기에 등록해 준다.",
+					"result": [
+						{
+							"speaker": "narrator",
+							"text": "당신은 담당자를 불쌍히 여겨 단말기에 임의의 대기자 명단을 채워 넣었다."
+						},
+						{
+							"speaker": "clerk",
+							"text": "정말 감사합니다! 덕분에 제가 해고당하는 일은 면했어요!"
+						},
+						{
+							"text": "불쌍한 건 이해하지만, 이렇게 하면 다른 대기자들의 순서가 꼬일 텐데요.",
+							"speaker": "nia"
+						}
+					],
+					"reward": [
+						"heal"
+					],
+					"flag": {
+						"label": "담당자 실책 은폐",
+						"key": "clerk_coverup",
+						"boss_text": "조작된 대기자 명단 때문에 면접장 입장이 지연되어 기습을 받는다."
+					},
+					"effects": {
+						"fighting": 20,
+						"echo": 5,
+						"community": -10,
+						"gold": 50
+					},
+					"mbti": "FP"
+				},
+				{
+					"reward": [
+						"intelligence_up"
+					],
+					"result": [
+						{
+							"speaker": "narrator",
+							"text": "당신은 요청을 단칼에 거절하고 단말기 오류 보고서 양식을 열어주었다."
+						},
+						{
+							"speaker": "clerk",
+							"text": "흑흑, 정직하게 사유서를 쓰는 수밖에 없겠네요. 원망하진 않겠습니다."
+						},
+						{
+							"text": "맞아요. 거짓말로 덮는 것보다 올바른 절차를 밟는 게 모두를 위한 길이에요.",
+							"speaker": "nia"
+						}
+					],
+					"effects": {
+						"reason": 20,
+						"fighting": -20,
+						"echo": 10
+					},
+					"flag": {
+						"boss_text": "정직한 관리 기록 덕분에 면접실 보안 통로가 정식 개방된다.",
+						"label": "오류 보고서 작성",
+						"key": "clerk_honest_report"
+					},
+					"mbti": "IJ",
+					"text": "직원의 조작 요청을 거절하고 단말기 오류 보고서를 작성하도록 설득한다.",
+					"path": "hard"
+				},
+				{
+					"text": "남을 잘 돕는 평판을 활용해 대기자들의 동의를 얻어 명단을 재작성한다.",
+					"path": "stat",
+					"flag": {
+						"label": "대기자 명단 복구",
+						"key": "community_rebuilt_list",
+						"boss_text": "대기자들의 신뢰를 얻어 면접장에서 응원 효과로 방어력이 상승한다."
+					},
+					"reward": [
+						"cooldown_reset"
+					],
+					"result": [
+						{
+							"text": "당신의 설득에 대기자들이 순순히 수긍하며 본인의 신원 정보를 직접 제출했다.",
+							"speaker": "narrator"
+						},
+						{
+							"speaker": "clerk",
+							"text": "모두가 협조해 주다니! 당신의 평판 덕분에 명단이 정확히 복구되었어요!"
+						},
+						{
+							"speaker": "nia",
+							"text": "역시 사람들을 끌어모으는 힘이 있으시네요! 완벽하게 해결됐어요."
+						}
+					],
+					"effects": {
+						"fighting": 20,
+						"echo": 15,
+						"community": 20
+					},
+					"mbti": "NJ"
+				},
+				{
+					"result": [
+						{
+							"text": "당신이 단말기 코드를 뽑고 재부팅하자 시스템 오류 로그가 초기화되었다.",
+							"speaker": "narrator"
+						},
+						{
+							"speaker": "clerk",
+							"text": "어? 점검 중으로 표시되면서 날아간 데이터 복구 버튼이 생겼어요!"
+						},
+						{
+							"speaker": "nia",
+							"text": "엉뚱한 방법이었지만 의외로 기계가 정상으로 돌아왔네요!"
+						}
+					],
+					"reward": [
+						"stun"
+					],
+					"text": "담당자의 옷에 '점검 중' 스티커를 붙이고 단말기 전원을 강제로 껐다 킨다.",
+					"path": "fun",
+					"effects": {
+						"reason": -25,
+						"gold": 80,
+						"echo": 10
+					},
+					"mbti": "TP"
+				}
+			],
+			"background_tags": [
+				"search_room",
+				"daylight",
+				"fluorescent",
+				"crowded",
+				"anxious"
+			],
+			"slot": "A",
+			"kind": "rep",
+			"rep_dir": "fighting+"
+		}
+	],
+	"errors": [],
+	"prompt_hash": "080eafc47f880636c12f1b4d4964b15464853897"
+}

@@ -1,0 +1,352 @@
+{
+	"cards": [
+		{
+			"no": 1,
+			"title": "조급한 보조 인증 요구",
+			"wants": "다른 구직자의 순서를 빼앗아서라도 2단계 보조 인증을 즉시 완료하고 싶어 한다.",
+			"background_tags": [
+				"booth",
+				"daylight",
+				"bright",
+				"crowd",
+				"tense"
+			],
+			"dialogue": [
+				{
+					"text": "민호가 손에 쥔 전자 인증 도장의 승인창을 띄운 채 다가왔다.",
+					"speaker": "narrator"
+				},
+				{
+					"text": "부스 차단봉을 힘으로 부수고 들어왔다는 그분이군요! 제 이력서 보조 승인부터 당장 찍어 주십시오.",
+					"speaker": "minho"
+				},
+				{
+					"text": "이분은 1단계 인증으로 목소리가 트인 뒤로 훨씬 당당해졌군요. 하지만 서두르면 경경고를 받을 지도 몰라요.",
+					"speaker": "kai"
+				},
+				{
+					"text": "서류 제출 시각이 5분 남았습니다! 다른 부스 도장을 뺏어서라도 당장 찍어 주셔야 합니다!",
+					"speaker": "minho"
+				}
+			],
+			"person": {
+				"name": "민호",
+				"role": "조급한 구직자",
+				"id": "minho"
+			},
+			"choices": [
+				{
+					"effects": {
+						"reason": 0,
+						"fighting": -20,
+						"gold": 100,
+						"community": 0,
+						"echo": -5
+					},
+					"text": "옆 부스의 전자 인증 도장을 힘으로 빼앗아 민호의 이력서에 2단계 승인을 찍어 준다.",
+					"path": "easy",
+					"flag": {
+						"key": "force_approval_penalty",
+						"boss_text": "인증 시스템 감시 장치가 주인공의 무단 승인 이력을 조회하여 첫 공격 대상을 주인공으로 고정한다.",
+						"label": "강제 승인 기록"
+					},
+					"result": [
+						{
+							"text": "옆 부스의 전자 인증 도장을 빼앗아 민호의 이력서에 도장을 찍었다.",
+							"speaker": "narrator"
+						},
+						{
+							"text": "고맙습니다! 이제 제 서류 승인이 완료되었군요!",
+							"speaker": "minho"
+						},
+						{
+							"text": "저기 부스 경보음이 조용히 울리기 시작했어요... 괜찮을까요?",
+							"speaker": "kai"
+						}
+					],
+					"mbti": "TP",
+					"reward": [
+						"attack_up"
+					]
+				},
+				{
+					"effects": {
+						"gold": 0,
+						"community": 0,
+						"reason": 0,
+						"fighting": 20,
+						"echo": 10
+					},
+					"flag": {
+						"key": "orderly_procedure",
+						"boss_text": "정식 절차 준수 기록을 확인한 부스 방어 시스템이 주인공에게 방어막을 부여한다.",
+						"label": "절차 준수 기록"
+					},
+					"path": "hard",
+					"text": "민호의 억지를 저지하고 정식 절차에 따라 대기 순번표를 기다리라고 설득한다.",
+					"mbti": "NF",
+					"result": [
+						{
+							"text": "민호의 손목을 잡고 정식 대기 순번표를 뽑도록 안내했다.",
+							"speaker": "narrator"
+						},
+						{
+							"speaker": "minho",
+							"text": "투덜거리며 번호표를 뽑았지만, 곧 자신의 차례를 기다리기 시작했다."
+						},
+						{
+							"speaker": "kai",
+							"text": "차분하게 설득해 주셔서 다행이에요. 규칙을 지키는 편이 안전하겠죠."
+						}
+					],
+					"reward": [
+						"defense_up"
+					]
+				},
+				{
+					"flag": {
+						"boss_text": "주인공의 위압적인 기세에 눌린 보스 방 경비 장치의 공격력이 15% 감소한다.",
+						"key": "intimidating_presence",
+						"label": "위압적 평판"
+					},
+					"path": "stat",
+					"text": "험악한 태도로 차례를 기다리라고 고함을 쳐 민호와 주변 대기자들을 단숨에 조용히 시킨다.",
+					"mbti": "TJ",
+					"effects": {
+						"echo": 5,
+						"reason": 0,
+						"fighting": -30,
+						"gold": 0,
+						"community": 0
+					},
+					"result": [
+						{
+							"speaker": "narrator",
+							"text": "단상에 올라서서 고함을 치자 부스 안의 대기자들이 조용해졌다."
+						},
+						{
+							"text": "주춤거리며 이력서를 거두고 뒷줄로 발걸음을 옮겼다.",
+							"speaker": "minho"
+						},
+						{
+							"text": "와, 한마디로 대기실 전체를 통제하시다니 정말 대단해요!",
+							"speaker": "kai"
+						}
+					],
+					"reward": [
+						"stun"
+					]
+				},
+				{
+					"text": "전자 인증 도장을 마술 도구처럼 공중에 던졌다 받으며 민호의 주의를 돌린다.",
+					"result": [
+						{
+							"speaker": "narrator",
+							"text": "전자 인증 도장을 공중에 던지며 저글링 동작을 선보였다."
+						},
+						{
+							"speaker": "minho",
+							"text": "넋을 놓고 바라보느라 5분 제출 시각을 까맣게 잊어버렸다."
+						},
+						{
+							"speaker": "kai",
+							"text": "아하하, 민호 씨 눈동자가 도장을 따라 굴러가고 있어요!"
+						}
+					],
+					"path": "fun",
+					"reward": [
+						"cooldown_reset"
+					],
+					"mbti": "FP",
+					"effects": {
+						"echo": 0,
+						"community": 0,
+						"reason": 20,
+						"gold": 80,
+						"fighting": 0
+					}
+				}
+			],
+			"rule_link": "1단계 인증으로 목소리를 되찾은 구직자가 2단계 보조 인증 도장을 즉시 찍어달라고 요구한다.",
+			"key": "urgent_approval_demand",
+			"slot": "B",
+			"kind": "rep",
+			"rep_dir": "fighting-"
+		},
+		{
+			"dialogue": [
+				{
+					"text": "소라가 이력서 뭉치를 품에 안은 채 주인공에게 다가왔다.",
+					"speaker": "narrator"
+				},
+				{
+					"speaker": "sora",
+					"text": "쓰러진 구직자를 부축해 주셨던 그 따뜻한 분이군요! 제 보조 인증도 도와주세요."
+				},
+				{
+					"speaker": "kai",
+					"text": "소라 씨의 목소리도 1단계 인증 덕분에 깨끗하게 들려요. 저까지 기분이 좋아지네요!"
+				},
+				{
+					"speaker": "sora",
+					"text": "다른 대기자분들도 2단계 보조 인증을 받을 수 있게 도장 단말기를 공유해 주실 수 있나요?"
+				}
+			],
+			"rule_link": "1단계 인증 혜택을 받은 대기자가 다른 사람들과 함께 2단계 보조 인증을 받을 수 있도록 도와달라 요청한다.",
+			"wants": "1단계 인증을 마친 다른 대기자들과 전자 인증 도장을 공유하여 2단계 보조 인증을 같이 처리하고 싶어 한다.",
+			"no": 2,
+			"title": "함께 받는 보조 인증",
+			"key": "shared_approval_request",
+			"choices": [
+				{
+					"effects": {
+						"echo": 10,
+						"gold": 50,
+						"reason": 0,
+						"community": 0,
+						"fighting": 20
+					},
+					"mbti": "FJ",
+					"text": "소라와 대기자들의 요청을 받아들여 전자 인증 도장을 공유하고 보조 인증을 승인해 준다.",
+					"reward": [
+						"heal"
+					],
+					"result": [
+						{
+							"speaker": "narrator",
+							"text": "전자 인증 도장 단말기를 소라와 대기자들에게 넘겨 승인을 도왔다."
+						},
+						{
+							"speaker": "sora",
+							"text": "정말 감사합니다! 모두 함께 보조 인증을 마칠 수 있었어요!"
+						},
+						{
+							"speaker": "kai",
+							"text": "다들 기뻐하는 모습을 보니 마음이 따뜻해지네요."
+						}
+					],
+					"path": "easy",
+					"flag": {
+						"boss_text": "다중 승인 패턴을 감지한 부스 보안 시스템이 보스 방에서 추가 경비 기계를 출동시킨다.",
+						"key": "mass_approval_warning",
+						"label": "다수 승인 경고"
+					}
+				},
+				{
+					"text": "1차 경고를 떠올리며 규정 준수를 위해 거절하고 자신만의 인증 절차만 진행한다.",
+					"effects": {
+						"gold": 0,
+						"community": 0,
+						"reason": 0,
+						"fighting": -20,
+						"echo": -5
+					},
+					"path": "hard",
+					"flag": {
+						"boss_text": "규정 준수 기록을 인정받아 전투 중 주인공의 스킬 쿨타임이 즉시 초기화된다.",
+						"label": "규정 엄수 인증",
+						"key": "strict_compliance"
+					},
+					"mbti": "ST",
+					"result": [
+						{
+							"text": "단말기 공유를 거절하고 본인의 인증 절차만 단독으로 마무리했다.",
+							"speaker": "narrator"
+						},
+						{
+							"speaker": "sora",
+							"text": "아쉬운 표정으로 이력서 뭉치를 품에 안고 발길을 돌렸다."
+						},
+						{
+							"speaker": "kai",
+							"text": "1차 경고를 받은 상태니 조심하는 편이 안전할 거예요."
+						}
+					],
+					"reward": [
+						"shield"
+					]
+				},
+				{
+					"path": "stat",
+					"flag": {
+						"label": "협력 네트워크",
+						"key": "cooperative_network",
+						"boss_text": "도움을 받은 대기자들이 전투 중 플레이어의 체력을 매 초 10씩 지속 회복시킨다."
+					},
+					"text": "대기자 전원이 서로 돕도록 순서표와 이력서를 정리해 주어 부스 전체 승인을 마친다.",
+					"mbti": "SF",
+					"effects": {
+						"fighting": 30,
+						"reason": 0,
+						"gold": 0,
+						"community": 0,
+						"echo": 15
+					},
+					"result": [
+						{
+							"text": "대기자들의 이력서 순서를 정돈하고 부스 승인 절차를 일률적으로 처리했다.",
+							"speaker": "narrator"
+						},
+						{
+							"text": "역시 듣던 대로 남을 돕는 데 탁월한 분이시네요! 깊이 감사드려요.",
+							"speaker": "sora"
+						},
+						{
+							"speaker": "kai",
+							"text": "대기실 부스 전체가 아주 일사불란하게 움직였어요!"
+						}
+					],
+					"reward": [
+						"defense_up"
+					]
+				},
+				{
+					"result": [
+						{
+							"speaker": "narrator",
+							"text": "부스 수수료 단말기에 100골드를 투입하여 소라의 이력서를 급행으로 승인했다."
+						},
+						{
+							"speaker": "sora",
+							"text": "제 대신 수수료를 내주시다니! 이 은혜는 잊지 않겠습니다."
+						},
+						{
+							"speaker": "kai",
+							"text": "골드로 해결하니 깔끔하고 빠르게 인증이 끝났네요."
+						}
+					],
+					"path": "gold",
+					"reward": [
+						"intelligence_up"
+					],
+					"text": "부스 급행 이용료 100골드를 지불하여 소라의 보조 인증 절차를 대신 처리해 준다.",
+					"mbti": "IP",
+					"effects": {
+						"echo": 10,
+						"reason": 0,
+						"gold": -100,
+						"fighting": 10,
+						"community": 0
+					}
+				}
+			],
+			"person": {
+				"id": "sora",
+				"role": "목소리를 되찾은 대기자",
+				"name": "소라"
+			},
+			"background_tags": [
+				"booth",
+				"daylight",
+				"bright",
+				"crowd",
+				"peaceful"
+			],
+			"slot": "B",
+			"kind": "rep",
+			"rep_dir": "fighting+"
+		}
+	],
+	"errors": [],
+	"prompt_hash": "da6da92c44051c8ce3d0559f135fe48f8e18a811"
+}

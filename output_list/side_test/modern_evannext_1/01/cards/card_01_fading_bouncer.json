@@ -1,0 +1,255 @@
+{
+	"id": "card_01_fading_bouncer",
+	"kind": "rep",
+	"title": {
+		"korean": "희미해지는 싸움꾼"
+	},
+	"intensity": "calm",
+	"after_story": 7,
+	"before_story": 10,
+	"condition": {
+		"leaning": "fighting-",
+		"among": [
+			"fighting-",
+			"fighting+",
+			"community-",
+			"community+",
+			"reason-",
+			"reason+"
+		],
+		"min": 20
+	},
+	"urgency": 8,
+	"leaning": "fighting-",
+	"background_tags": [
+		"waiting_hall",
+		"midday",
+		"fluorescent_light",
+		"panicked_crowd",
+		"fading_anxiety"
+	],
+	"dialogue": [
+		{
+			"speaker": "narrator",
+			"content": {
+				"korean": "몸의 윤곽이 희미하게 번진 건장한 남자가 당신의 앞을 거칠게 가로막았다."
+			}
+		},
+		{
+			"speaker": "minhyeok",
+			"content": {
+				"korean": "당신이 그 접수대 차단봉을 박살 내고 힘으로 앞줄을 밀어붙였다던 그 싸움꾼이지?"
+			}
+		},
+		{
+			"speaker": "minhyeok",
+			"content": {
+				"korean": "경호 경력을 석 줄 부풀렸더니 내 팔뚝이 지워지고 있어! 당신 서류와 섞어 채워라!"
+			}
+		},
+		{
+			"speaker": "lin",
+			"content": {
+				"korean": "저 사람의 경비 조교 완장이 투명해지고 있어요! 이력서의 벌칙이에요!"
+			}
+		}
+	],
+	"choices": [
+		{
+			"text": {
+				"korean": "민혁의 멱살을 쥐어틀며 헛소리 말고 서류를 넘기라고 윽박지른다"
+			},
+			"path": "easy",
+			"mbti": "TJ",
+			"flag": "intimidate_applicant",
+			"effects": {
+				"reason": 10,
+				"fighting": -25,
+				"gold": 80,
+				"echo": -5
+			},
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "당신은 민혁의 멱살을 잡고 흐려진 서류 뭉치를 바닥에 내동댕이쳤다."
+					}
+				},
+				{
+					"speaker": "minhyeok",
+					"content": {
+						"korean": "으윽, 힘으로 밀어붙인다고 내 지워지는 몸이 돌아올 것 같아?"
+					}
+				},
+				{
+					"speaker": "lin",
+					"content": {
+						"korean": "저 사람의 손끝이 거의 투명해졌어요. 이러다 정말 사라지겠어요."
+					}
+				}
+			]
+		},
+		{
+			"text": {
+				"korean": "주먹을 거두고 민혁의 과장된 경력을 본래 이력으로 고쳐 준다"
+			},
+			"path": "hard",
+			"mbti": "FP",
+			"flag": "guard_club",
+			"effects": {
+				"community": 10,
+				"echo": 10,
+				"fighting": 20
+			},
+			"reward": [
+				"shield"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "당신은 주먹을 거두고 민혁의 과장된 직무 기술서를 본래 이력으로 다시 고쳐 썼다."
+					}
+				},
+				{
+					"speaker": "minhyeok",
+					"content": {
+						"korean": "손의 윤곽이 돌아왔어. 당신, 주먹만 휘두르는 망나니는 아니었군. 이 곤봉을 가져가."
+					}
+				},
+				{
+					"speaker": "lin",
+					"content": {
+						"korean": "과장을 거두니 사람의 모습이 또렷해졌어요. 우리 서류도 어서 바로잡아야 해요."
+					}
+				}
+			]
+		},
+		{
+			"text": {
+				"korean": "접수대 벽면을 주먹으로 후려쳐 소란을 단숨에 찍어 누른다"
+			},
+			"path": "stat",
+			"mbti": "ST",
+			"require": {
+				"stat": "fighting",
+				"op": "<=",
+				"value": -40
+			},
+			"flag": "brawler_awe",
+			"effects": {
+				"echo": 10,
+				"fighting": -35,
+				"reason": -10
+			},
+			"reward": [
+				"stun"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "당신이 살벌한 눈빛으로 벽을 내리치자 홀 안의 지원자 전원이 사시나무 떨듯 굳었다."
+					}
+				},
+				{
+					"speaker": "minhyeok",
+					"content": {
+						"korean": "히익, 알았어! 덤비지 않을 테니 제발 그 주먹만은 거둬 줘!"
+					}
+				},
+				{
+					"speaker": "lin",
+					"content": {
+						"korean": "이 사람들의 공포를 이용해 일단 이름을 붙잡을 시간을 벌었어요."
+					}
+				}
+			]
+		},
+		{
+			"text": {
+				"korean": "민혁에게 80골드를 쥐여주며 원본 인지 구입대로 보내 버린다"
+			},
+			"path": "gold",
+			"mbti": "NF",
+			"require": {
+				"stat": "gold",
+				"op": ">=",
+				"value": 80
+			},
+			"effects": {
+				"gold": -80,
+				"community": 10,
+				"echo": 5
+			},
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "당신은 민혁의 쥐어진 손에 지폐를 쑤셔 넣고 출력기 앞자리로 그를 밀어 넣었다."
+					}
+				},
+				{
+					"speaker": "minhyeok",
+					"content": {
+						"korean": "돈을 주다니? 좋아, 이 돈으로 원본 복원 인지를 사 오겠어."
+					}
+				},
+				{
+					"speaker": "lin",
+					"content": {
+						"korean": "돈으로 급한 불은 껐지만, 아직 번호표 이름이 엉켜 있어요."
+					}
+				}
+			]
+		}
+	],
+	"_side": {
+		"slot": "D",
+		"person": {
+			"name": "민혁",
+			"role": "신체 윤곽이 흐려진 경비 지원자",
+			"id": "minhyeok"
+		},
+		"wants": "자신의 흐려지는 신체를 되돌리기 위해 타인의 이력서 조각을 강탈하는 것",
+		"rule_link": "이력서의 직무 경력을 거짓으로 부풀려 존재의 윤곽이 지워져 가는 규정의 대가",
+		"rep": "fighting-",
+		"events": {},
+		"flags": {
+			"intimidate_applicant": {
+				"kind": "bad",
+				"boss_penalty": -1,
+				"label": {
+					"korean": "위압의 여파"
+				},
+				"boss_line": {
+					"korean": "대기실 출입문 앞의 물리적 충돌 소동 때문에 면접관들의 감시 시선이 입구로 일제히 쏠린다."
+				}
+			},
+			"guard_club": {
+				"kind": "good",
+				"boss_penalty": 1,
+				"label": {
+					"korean": "경비용 곤봉"
+				},
+				"boss_choice": {
+					"korean": "민혁이 넘겨준 묵직한 경비용 곤봉을 단단히 쥐고 닫히는 철문을 틈새에 끼워 버틴다."
+				}
+			},
+			"brawler_awe": {
+				"kind": "good",
+				"boss_penalty": 2,
+				"label": {
+					"korean": "싸움꾼의 위명"
+				},
+				"boss_choice": {
+					"korean": "싸움꾼의 악명으로 기선 제압된 지원자들을 일렬로 세워 출입구 방패벽을 세운다."
+				}
+			}
+		}
+	}
+}

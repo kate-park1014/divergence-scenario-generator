@@ -1,0 +1,302 @@
+{
+	"cards": [
+		{
+			"title": "서버 파괴의 대가",
+			"choices": [
+				{
+					"mbti": "TJ",
+					"effects": {
+						"reason": 10,
+						"fighting": -15
+					},
+					"text": "연습실 중앙의 이력서 연동 단말기를 망치로 깨부순다.",
+					"path": "easy",
+					"flag": {
+						"label": "서버 파괴 여파",
+						"key": "broken_terminal_leak",
+						"boss_text": "파괴된 단말기 전선에서 누전 불꽃이 튀어 주인공 일행의 발받침을 덮친다."
+					},
+					"reward": [
+						"attack_up"
+					],
+					"result": [
+						{
+							"text": "단말기가 파괴되며 연동 데이터베이스 서버의 가동이 즉시 중단되었다.",
+							"speaker": "narrator"
+						},
+						{
+							"speaker": "instructor_han",
+							"text": "고맙습니다! 이제 언어 파열 신호는 멈췄지만 전선에서 누전이 일어나고 있군요."
+						},
+						{
+							"speaker": "lin",
+							"text": "수강생들의 이력서 기록은 잃었지만 더 나쁜 상황은 막은 셈이에요."
+						}
+					]
+				},
+				{
+					"text": "강사 한을 제지하고 이력서 데이터 백업용 칩을 안전하게 추출한다.",
+					"result": [
+						{
+							"speaker": "narrator",
+							"text": "단말기 오작동을 차단하고 칩에 핵심 이력서 데이터를 저장해 꺼냈다."
+						},
+						{
+							"speaker": "instructor_han",
+							"text": "무력으로 때려부수지 않고 해결할 수도 있었군요. 제가 제정신이 아니었습니다."
+						},
+						{
+							"text": "백업 칩을 챙겨서 다행이에요! 나중에 정식으로 수습할 때 쓸 수 있겠어요.",
+							"speaker": "lin"
+						}
+					],
+					"mbti": "NF",
+					"effects": {
+						"community": 10,
+						"fighting": 15
+					},
+					"reward": [
+						"defense_up"
+					],
+					"path": "hard",
+					"flag": {
+						"key": "resume_backup_chip",
+						"boss_text": "추출해 둔 백업 칩을 기계 장치에 삽입해 이력서 오작동 코드를 정지시킨다.",
+						"label": "백업 데이터 칩"
+					}
+				},
+				{
+					"effects": {
+						"fighting": -25,
+						"reason": 15
+					},
+					"flag": {
+						"label": "관리자 강제 코드",
+						"boss_text": "강제로 확보한 관리자 권한을 입력해 교육 앱의 작동을 해제한다.",
+						"key": "forced_admin_code"
+					},
+					"path": "stat",
+					"reward": [
+						"intelligence_up"
+					],
+					"text": "강사 한에게서 관리자 단말기를 뺏어 데이터베이스 폐기 명령을 직접 입력한다.",
+					"result": [
+						{
+							"text": "주인공의 서슬 퍼런 위압감에 밀려 강사 한이 제어 키패드를 넘겨주었다.",
+							"speaker": "narrator"
+						},
+						{
+							"text": "그렇게 무시무시한 눈빛으로 노려보시면 권한을 넘길 수밖에 없군요.",
+							"speaker": "instructor_han"
+						},
+						{
+							"text": "깔끔하고 빠르게 폐기 명령을 내리셨어요. 관리자 승인 코드가 단말기에 찍혔네요!",
+							"speaker": "lin"
+						}
+					],
+					"mbti": "TP"
+				},
+				{
+					"mbti": "FP",
+					"text": "외부 데이터 전문가에게 100골드를 송금하고 원격 파기 코드를 구매한다.",
+					"path": "gold",
+					"reward": [
+						"shield"
+					],
+					"effects": {
+						"gold": -100,
+						"reason": 10
+					},
+					"result": [
+						{
+							"text": "골드가 입금되자 원격 파기 프로그램이 데이터베이스를 안전하게 소멸시켰다.",
+							"speaker": "narrator"
+						},
+						{
+							"speaker": "instructor_han",
+							"text": "돈으로 즉시 정식 파기 절차를 밟다니 단말기 폭발 위험 없이 깨끗해졌습니다."
+						},
+						{
+							"text": "100골드나 쓰셨지만 전선 합선이나 이력서 손상 없이 정리되었네요.",
+							"speaker": "lin"
+						}
+					]
+				}
+			],
+			"wants": "언어 상실이 확산되자 이력서 연동 앱 데이터베이스를 물리적으로 파괴하고 싶어 한다.",
+			"background_tags": [
+				"practice_room",
+				"dim_lights",
+				"server_rack",
+				"tense",
+				"waiting_area"
+			],
+			"no": 1,
+			"person": {
+				"id": "instructor_han",
+				"role": "수화 연습실 강사",
+				"name": "강사 한"
+			},
+			"rule_link": "이력서 성적과 연동된 앱 데이터베이스가 수강생들의 뇌 속 언어 개념을 상실시키는 대가를 발생시킴.",
+			"dialogue": [
+				{
+					"speaker": "narrator",
+					"text": "강사 한이 수화 연습 노트를 쥐고 이력서 연동 서버 앞에서 손을 떨었다."
+				},
+				{
+					"speaker": "instructor_han",
+					"text": "방해하는 경비원들을 주먹으로 쳐부수고 뚫고 들어왔다던 분이시군요."
+				},
+				{
+					"speaker": "instructor_han",
+					"text": "수강생들이 노트를 보고도 손짓을 잊어가고 있어요! 당장 데이터베이스를 부숴야 합니다!"
+				},
+				{
+					"text": "앱 데이터베이스를 즉시 폐기하면 성적 데이터까지 몽땅 사라져 버려요!",
+					"speaker": "lin"
+				}
+			],
+			"key": "database_breaker",
+			"slot": "D",
+			"kind": "rep",
+			"rep_dir": "fighting-"
+		},
+		{
+			"dialogue": [
+				{
+					"text": "수강생 민이 멍한 눈으로 자신의 이력서를 쥔 채 대기실 벽에 쓰러져 있었다.",
+					"speaker": "narrator"
+				},
+				{
+					"speaker": "student_min",
+					"text": "쓰러진 수강생들을 지나치지 않고 손을 매번 잡아주셨던 그분 맞죠?"
+				},
+				{
+					"text": "손가락이 굳어가서 제 이력서조차 못 읽겠어요. 앱 데이터베이스를 제발 지우지 말아 주세요!",
+					"speaker": "student_min"
+				},
+				{
+					"text": "이력서 연동 데이터베이스를 놔두면 언어 개념 파괴가 더 넓게 번질 텐데요!",
+					"speaker": "lin"
+				}
+			],
+			"rule_link": "이력서 과장 앱 데이터베이스가 유지되는 동안 사용자의 손짓 단어 기억이 점차 파괴됨.",
+			"title": "잃어버린 단어의 기록",
+			"choices": [
+				{
+					"mbti": "FJ",
+					"result": [
+						{
+							"speaker": "narrator",
+							"text": "데이터베이스 가동을 유지하자 수강생 민의 손끝에 수화 기억이 일시 유지되었다."
+						},
+						{
+							"text": "감사해요…… 덕분에 이력서 이름을 아직 기억할 수 있어요!",
+							"speaker": "student_min"
+						},
+						{
+							"speaker": "lin",
+							"text": "민 씨는 안심했지만 연동 데이터 오염 신호가 여전히 공기 중에서 번지고 있어요."
+						}
+					],
+					"text": "수강생 민의 부탁을 받아들여 데이터베이스 파기를 유예하고 사람들을 감싸 안는다.",
+					"reward": [
+						"defense_up"
+					],
+					"flag": {
+						"boss_text": "유예된 이력서 연동 데이터 오염으로 시야 속 글자들이 노이즈로 뭉개진다.",
+						"label": "연동 오염 지속",
+						"key": "data_decay_hazard"
+					},
+					"path": "easy",
+					"effects": {
+						"community": 15,
+						"fighting": 15
+					}
+				},
+				{
+					"mbti": "NT",
+					"text": "수강생 민의 눈물을 뒤로하고 이력서 연동 데이터베이스를 즉시 폐기한다.",
+					"flag": {
+						"label": "파기된 이력서 기록",
+						"key": "purged_db_record",
+						"boss_text": "데이터베이스 즉시 파기 기록을 제시해 오작동 앱의 신호 전파를 차단한다."
+					},
+					"path": "hard",
+					"result": [
+						{
+							"speaker": "narrator",
+							"text": "차갑게 제어반 스위치를 내려 데이터베이스의 연동 신호를 끊어버렸다."
+						},
+						{
+							"speaker": "student_min",
+							"text": "아아…… 제 이력서 문장들이 사라지고 있어요. 하지만 모두를 위한 거겠죠."
+						},
+						{
+							"speaker": "lin",
+							"text": "마음은 아프지만 이력서 앱의 오작동 신호 전파를 확실하게 끊어냈어요!"
+						}
+					],
+					"effects": {
+						"reason": 15,
+						"fighting": -15
+					},
+					"reward": [
+						"attack_up"
+					]
+				},
+				{
+					"path": "stat",
+					"flag": {
+						"boss_text": "수강생들과 맞춰둔 정지 수화를 시전해 교육 앱 네트워크 신호를 차단한다.",
+						"key": "collective_gesture",
+						"label": "동시 정지 수화"
+					},
+					"effects": {
+						"community": 20,
+						"fighting": 25
+					},
+					"reward": [
+						"intelligence_up"
+					],
+					"mbti": "SP",
+					"text": "동요하는 수강생들을 모아 데이터베이스 안전 정지 수화를 공동으로 실행한다.",
+					"result": [
+						{
+							"text": "주인공의 호응에 맞춰 수강생들이 일제히 손짓하자 앱 데이터 신호가 안전 정지되었다.",
+							"speaker": "narrator"
+						},
+						{
+							"speaker": "student_min",
+							"text": "모두 함께 수화를 보내니 기억을 잃지 않고도 연동을 끌 수 있었어요!"
+						},
+						{
+							"speaker": "lin",
+							"text": "다들 돕고 싶어 하는 마음이 하나로 모여서 안전 정지 수화 신호가 성공했네요!"
+						}
+					]
+				}
+			],
+			"key": "practice_note_archive",
+			"person": {
+				"role": "수화 연습실 수강생",
+				"name": "수강생 민",
+				"id": "student_min"
+			},
+			"no": 2,
+			"wants": "자신의 기억과 이력서 성적이 영구 삭제되는 것을 막기 위해 앱 데이터베이스 파기를 유예하려 한다.",
+			"background_tags": [
+				"practice_room",
+				"flickering_light",
+				"desks",
+				"panicked",
+				"waiting_area"
+			],
+			"slot": "D",
+			"kind": "rep",
+			"rep_dir": "fighting+"
+		}
+	],
+	"errors": [],
+	"prompt_hash": "5231c17954a7f2fc30732b230d5d52011c17247a"
+}

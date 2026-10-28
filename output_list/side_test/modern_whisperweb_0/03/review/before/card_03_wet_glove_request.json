@@ -1,0 +1,257 @@
+{
+	"id": "card_03_wet_glove_request",
+	"kind": "rep",
+	"title": {
+		"korean": "젖은 장갑을 빌려달라는 부탁"
+	},
+	"intensity": "calm",
+	"after_story": 3,
+	"before_story": 5,
+	"condition": {
+		"leaning": "fighting+",
+		"among": [
+			"fighting-",
+			"fighting+",
+			"community-",
+			"community+",
+			"reason-",
+			"reason+"
+		],
+		"min": 20
+	},
+	"urgency": 8,
+	"leaning": "fighting+",
+	"background_tags": [
+		"pipe_room",
+		"dim_light",
+		"wet_floor",
+		"cold_air",
+		"quiet"
+	],
+	"dialogue": [
+		{
+			"speaker": "narrator",
+			"content": {
+				"korean": "파이프실 입구에서 어린 견습공이 장갑을 움켜쥔 채 서 있었다."
+			}
+		},
+		{
+			"speaker": "young_apprentice",
+			"content": {
+				"korean": "저기, 아까 사람 살린다고 밸브 열었다는 분이죠? 소문 들었어요."
+			}
+		},
+		{
+			"speaker": "young_apprentice",
+			"content": {
+				"korean": "동�� 손이 얼음 파이프에 붙어서 벗겨졌어요. 여분 장갑 있으면 하나만요."
+			}
+		},
+		{
+			"speaker": "kai",
+			"content": {
+				"korean": "장갑을 빌려주면 저 애가 대신 들어가겠다는 건가요?"
+			}
+		}
+	],
+	"choices": [
+		{
+			"text": {
+				"korean": "여분 장갑을 벗어 견습공에게 건네고 동료를 살피게 한다"
+			},
+			"path": "easy",
+			"mbti": "FJ",
+			"flag": "apprentice_helps",
+			"effects": {
+				"community": 15,
+				"echo": 10
+			},
+			"reward": [
+				"heal"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "견습공이 장갑을 끼고 얼음 파이프 사이로 손을 넣어 동료를 끌어냈다."
+					}
+				},
+				{
+					"speaker": "young_apprentice",
+					"content": {
+						"korean": "됐어요! 손은 다쳤지만 살았어요. 정말 고마워요."
+					}
+				},
+				{
+					"speaker": "kai",
+					"content": {
+						"korean": "장갑 하나로 사람 하나 살았네요."
+					}
+				}
+			]
+		},
+		{
+			"text": {
+				"korean": "장갑 대신 견습공을 붙잡고 파이프를 만지지 말라고 단단히 일러둔다"
+			},
+			"path": "hard",
+			"mbti": "TP",
+			"flag": "apprentice_wary",
+			"effects": {
+				"community": -15,
+				"reason": 10
+			},
+			"reward": [
+				"defense_up"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "young_apprentice",
+					"content": {
+						"korean": "그럼 동료는요? 그냥 두라는 거예요?"
+					}
+				},
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "견습공은 입을 다물고 물러섰다. 동료는 다른 사람이 부축해 나갔다."
+					}
+				},
+				{
+					"speaker": "kai",
+					"content": {
+						"korean": "맞는 말이긴 한데... 저 애 표정이 안 좋아요."
+					}
+				}
+			]
+		},
+		{
+			"text": {
+				"korean": "견습공에게 당신이 냉각수를 부은 구역을 맡아 살피라고 지시한다"
+			},
+			"path": "stat",
+			"mbti": "EJ",
+			"require": {
+				"stat": "fighting",
+				"op": ">=",
+				"value": 40
+			},
+			"flag": "apprentice_scouts",
+			"effects": {
+				"community": 20,
+				"echo": 5,
+				"fighting": 10
+			},
+			"reward": [
+				"intelligence_up"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "견습공이 고개를 크게 끄덕이고 파이프 사이를 뛰어다녔다."
+					}
+				},
+				{
+					"speaker": "young_apprentice",
+					"content": {
+						"korean": "여기 조각들 있어요! 젖어서 미끄러운데 다 건져왔어요."
+					}
+				},
+				{
+					"speaker": "kai",
+					"content": {
+						"korean": "저 애가 사람 하나 살린 걸로 끝이 아니었네요."
+					}
+				}
+			]
+		},
+		{
+			"text": {
+				"korean": "견습공에게 돈을 쥐여주고 근처 상점에서 두꺼운 방한 장갑을 사 오게 한다"
+			},
+			"path": "gold",
+			"mbti": "SP",
+			"require": {
+				"stat": "gold",
+				"op": ">=",
+				"value": 100
+			},
+			"effects": {
+				"gold": -100,
+				"community": 10
+			},
+			"reward": [
+				"defense_up"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "견습공이 숨을 헐떡이며 장갑 보따리를 안고 돌아왔다."
+					}
+				},
+				{
+					"speaker": "young_apprentice",
+					"content": {
+						"korean": "다섯 켤레요! 이제 다들 손 안 다쳐요."
+					}
+				},
+				{
+					"speaker": "kai",
+					"content": {
+						"korean": "돈이 장갑이 되고 장갑이 손이 됐네요."
+					}
+				}
+			]
+		}
+	],
+	"_side": {
+		"slot": "B",
+		"person": {
+			"id": "young_apprentice",
+			"name": "어린 견습공",
+			"role": "설비 견습"
+		},
+		"wants": "차가운 파이프에 손을 대다 손을 데인 동료를 위해, 주인공이 남을 돕는 사람이라는 소문을 믿고 여분 장갑을 빌려달라고 한다.",
+		"rule_link": "장갑을 빌려주면 견습공이 젖은 데이터 스크린 조각을 파이프 틈에서 꺼내 줄 수 있다.",
+		"rep": "fighting+",
+		"events": {},
+		"flags": {
+			"apprentice_helps": {
+				"kind": "bad",
+				"boss_penalty": -1,
+				"label": {
+					"korean": "견습공의 손"
+				},
+				"boss_line": {
+					"korean": "견습공에게 손짓해 얼어붙은 파이프 틈을 함께 벌린다."
+				}
+			},
+			"apprentice_wary": {
+				"kind": "good",
+				"boss_penalty": 1,
+				"label": {
+					"korean": "견습공의 경계"
+				},
+				"boss_choice": {
+					"korean": "견습공이 파이프 위치를 손끝으로 가리켜 준다."
+				}
+			},
+			"apprentice_scouts": {
+				"kind": "good",
+				"boss_penalty": 2,
+				"label": {
+					"korean": "견습공의 눈"
+				},
+				"boss_choice": {
+					"korean": "견습공이 파이프 사이에 깔린 데이터 조각의 자리를 알려 준다."
+				}
+			}
+		}
+	}
+}

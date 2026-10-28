@@ -1,0 +1,147 @@
+{
+	"id": "card_03_unstable_valve",
+	"kind": "normal",
+	"title": {
+		"korean": "불안정한 밸브"
+	},
+	"intensity": "calm",
+	"after_story": 1,
+	"before_story": 3,
+	"background_tags": [
+		"valve",
+		"alert",
+		"drop",
+		"cable",
+		"panel"
+	],
+	"dialogue": [
+		{
+			"speaker": "valve_monitor",
+			"content": {
+				"korean": "이 비상 냉각수 밸브의 잠금장치가 헐거워졌어. 압력 때문에 튀어 오를 것 같아."
+			}
+		},
+		{
+			"speaker": "kai",
+			"content": {
+				"korean": "밸브 틈새로 이미 물방울이 맺히고 있어. 바닥이 젖기 시작했는걸."
+			}
+		},
+		{
+			"speaker": "valve_monitor",
+			"content": {
+				"korean": "당장 조이지 않으면 터질 거야. 좀 도와줘!"
+			}
+		}
+	],
+	"choices": [
+		{
+			"text": {
+				"korean": "밸브를 완전히 열어버려 압력을 단번에 뺀다."
+			},
+			"path": "easy",
+			"mbti": "EP",
+			"effects": {
+				"gold": 50,
+				"reason": -15
+			},
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "밸브를 열자 소량의 냉각수가 쏟아지며 압력이 순식간에 정상으로 돌아왔다."
+					}
+				},
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "시원한 물줄기에 기분이 한결 나아졌다."
+					}
+				}
+			]
+		},
+		{
+			"text": {
+				"korean": "밸브의 잠금장치를 타이밍에 맞춰 다시 조인다."
+			},
+			"path": "hard",
+			"mbti": "IS",
+			"effects": {
+				"gold": -20,
+				"reason": 10
+			},
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "압력이 치솟는 순간마다 정확히 렌치를 돌려 잠금장치를 고정했다."
+					}
+				},
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "수리 도구가 조금 망가졌지만 밸브는 안전해졌다."
+					}
+				}
+			],
+			"event": "minigame_timing",
+			"event_intro": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "밸브의 잠금장치가 세 번 연달아 튕겨져 나온다. 그 순간에 맞춰 렌치를 돌려야 한다."
+					}
+				}
+			]
+		},
+		{
+			"text": {
+				"korean": "고성능 자동 수리 키트를 부착하여 해결한다."
+			},
+			"path": "gold",
+			"mbti": "EN",
+			"require": {
+				"stat": "gold",
+				"op": ">=",
+				"value": 100
+			},
+			"effects": {
+				"gold": -100
+			},
+			"reward": [
+				"cooldown_reset"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "자동 수리 키트가 작동하며 밸브를 완벽하게 밀봉했다."
+					}
+				},
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "힘을 들이지 않고 안전하게 상황을 넘겼다."
+					}
+				}
+			]
+		}
+	],
+	"_side": {
+		"slot": "A",
+		"person": {
+			"name": "밸브 감시원",
+			"id": "valve_monitor",
+			"role": "설비 관리자"
+		},
+		"wants": "잠겨 있는 밸브의 압력이 불안정하니 밸브를 조여달라고 한다.",
+		"rule_link": "강제로 밸브를 조작하여 냉각수를 빼는 행위는 서버에 직접 물을 붓는 결정의 축소판이다.",
+		"events": {
+			"hard": "밸브 내부 압력이 불안정하게 요동치고 있기 때문이다."
+		},
+		"flags": {}
+	}
+}

@@ -1,0 +1,236 @@
+{
+	"id": "card_02_torn_cables",
+	"kind": "rep",
+	"title": {
+		"korean": "찢어진 배선과 99번"
+	},
+	"intensity": "calm",
+	"after_story": 7,
+	"before_story": 10,
+	"condition": {
+		"leaning": "reason+",
+		"among": [
+			"fighting-",
+			"fighting+",
+			"community-",
+			"community+",
+			"reason-",
+			"reason+"
+		],
+		"min": 20
+	},
+	"urgency": 8,
+	"leaning": "reason+",
+	"background_tags": [
+		"search_room",
+		"flashing_monitors",
+		"sparking_cables",
+		"crowded_applicants",
+		"frantic"
+	],
+	"dialogue": [
+		{
+			"speaker": "seeker",
+			"content": {
+				"korean": "규정 서식 다 무시하고 네 멋대로 접수창구를 헤집어놓았다던 녀석이 너지? 잘 왔어!"
+			}
+		},
+		{
+			"speaker": "seeker",
+			"content": {
+				"korean": "단말기가 내 이력서 성명란을 지우고 99번이란 숫자를 박아버렸어. 내 이름이 사라졌다고!"
+			}
+		},
+		{
+			"speaker": "narrator",
+			"content": {
+				"korean": "구직자가 이성을 잃고 단말기 하부 케이블을 쥐어뜯어 불꽃이 튀고 있다."
+			}
+		},
+		{
+			"speaker": "nia",
+			"content": {
+				"korean": "저러다 단말기 전체가 타버리면 린의 이력서 데이터도 복구할 수 없게 돼요!"
+			}
+		}
+	],
+	"choices": [
+		{
+			"text": {
+				"korean": "단말기 전원 플러그를 뽑아 화면을 꺼버리고 혼란에 빠진 사람들을 남겨둔 채 물러선다."
+			},
+			"path": "easy",
+			"mbti": "TP",
+			"flag": "blackout_cable",
+			"effects": {
+				"community": -20,
+				"echo": -10,
+				"reason": 20
+			},
+			"reward": [
+				"attack_up"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "seeker",
+					"content": {
+						"korean": "단말기가 꺼져 버렸잖아요! 내 이력서 원본이 저 안에 갇혔는데 그냥 가버리겠다고요?"
+					}
+				},
+				{
+					"speaker": "nia",
+					"content": {
+						"korean": "사람들의 항의 소리가 더 커졌어요. 관리자가 소란을 듣고 걸음을 재촉하고 있어요!"
+					}
+				}
+			]
+		},
+		{
+			"text": {
+				"korean": "구직자를 붙잡아 진정시키고 단말기 화면의 번호 코드와 찢어진 이력서를 대조해 준다."
+			},
+			"path": "hard",
+			"mbti": "FJ",
+			"flag": "seeker_distraction",
+			"effects": {
+				"echo": 10,
+				"reason": -20,
+				"community": 20
+			},
+			"reward": [
+				"shield"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "seeker",
+					"content": {
+						"korean": "손을 떨면서도 번호표 조각을 맞춰 주실 줄은 몰랐습니다. 덕분에 제 옛 서명란을 찾았어요!"
+					}
+				},
+				{
+					"speaker": "nia",
+					"content": {
+						"korean": "사람들이 안정을 찾고 있어요. 찢어진 종이 사이에서 관리자의 통행증 조각도 발견했어요."
+					}
+				}
+			]
+		},
+		{
+			"text": {
+				"korean": "단말기 화면의 번호 코드 위에 붉은 유성펜으로 구직자의 본명을 크게 덧칠해 적어준다."
+			},
+			"path": "stat",
+			"mbti": "EP",
+			"require": {
+				"stat": "reason",
+				"op": ">=",
+				"value": 40
+			},
+			"flag": "red_graffiti",
+			"effects": {
+				"echo": 15,
+				"community": 10,
+				"reason": 25
+			},
+			"reward": [
+				"move_range_up"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "seeker",
+					"content": {
+						"korean": "맞아요, 난 99번이 아니라 내 이름으로 불려야 해! 다들 자기 번호표에 이름을 쓰세요!"
+					}
+				},
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "당신의 행동에 자극받은 지원자들이 단말기 화면을 본명으로 덮어쓰며 검색실 입구를 봉쇄했다."
+					}
+				}
+			]
+		},
+		{
+			"text": {
+				"korean": "단말기 담당자에게 80골드를 건네 구직자가 훼손한 배선 수리비를 대신 변제한다."
+			},
+			"path": "gold",
+			"mbti": "IS",
+			"require": {
+				"stat": "gold",
+				"op": ">=",
+				"value": 80
+			},
+			"effects": {
+				"echo": 5,
+				"community": 10,
+				"gold": -80
+			},
+			"reward": [
+				"intelligence_up"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "seeker",
+					"content": {
+						"korean": "단말기 수리비 80골드를 대신 내주신 겁니까? 덜덜 떨리던 손이 이제야 멈추네요."
+					}
+				},
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "구직자가 배선 훼손 책임을 벗고 안도하며 품에서 여분의 단말기 데이터 칩을 건넸다."
+					}
+				}
+			]
+		}
+	],
+	"_side": {
+		"slot": "D",
+		"person": {
+			"role": "이름이 번호로 지워져 폭주하는 지원자",
+			"id": "seeker",
+			"name": "초조한 구직자"
+		},
+		"wants": "자신의 이력서에서 지워진 이름을 되찾고 번호로 대체된 단말기를 부수고 싶다.",
+		"rule_link": "이력서의 성명이 숫자로 대체되는 현상에 분노한 지원자가 단말기 배선을 파괴하여 전체 검색실의 데이터 처리가 멈출 위기에 처한다.",
+		"rep": "reason+",
+		"events": {},
+		"flags": {
+			"blackout_cable": {
+				"kind": "bad",
+				"boss_penalty": -1,
+				"label": {
+					"korean": "단말기 전원 강제 차단"
+				},
+				"boss_line": {
+					"korean": "강제로 뽑혀 나간 전원선 합선으로 통로 조명이 꺼져 주변 시야 확보에 페널티를 받는다."
+				}
+			},
+			"seeker_distraction": {
+				"kind": "good",
+				"boss_penalty": 1,
+				"label": {
+					"korean": "구직자의 유인 지원"
+				},
+				"boss_choice": {
+					"korean": "이력서 조각을 되찾은 지원자가 관리자의 주의를 다른 복도로 돌려주는 미끼 역할을 맡는다."
+				}
+			},
+			"red_graffiti": {
+				"kind": "good",
+				"boss_penalty": 2,
+				"label": {
+					"korean": "붉은 서명 기록"
+				},
+				"boss_choice": {
+					"korean": "단말기에 남겨둔 도발적인 붉은 서명 흔적이 관리자의 추적 알고리즘을 1턴간 지연시킨다."
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,303 @@
+{
+	"cards": [
+		{
+			"wants": "민호는 전자 인증 도장으로 자기 이력서를 먼저 승인 처리하여 부스를 독점하려 한다.",
+			"title": "새치기용 전자 도장",
+			"rule_link": "전자 인증 도장으로 이력서 절차를 꼼수로 조작하면 다른 구직자의 순서가 밀려난다.",
+			"no": 1,
+			"choices": [
+				{
+					"text": "민호의 전자 인증 도장을 부스에 찍어 편법 승인을 돕는다.",
+					"effects": {
+						"community": -20,
+						"gold": 100,
+						"echo": -5
+					},
+					"mbti": "TJ",
+					"reward": [
+						"attack_up"
+					],
+					"path": "easy",
+					"flag": {
+						"label": "민호의 편법 조작",
+						"key": "minho_shortcut_used",
+						"boss_text": "인증 부스 편법 조작 기록이 남아 단말기 감시 수치가 상승한다."
+					},
+					"result": [
+						{
+							"speaker": "narrator",
+							"text": "민호의 이력서에 승인 도장이 찍히고 손안으로 골드가 들어왔다."
+						},
+						{
+							"speaker": "minho",
+							"text": "역시 자기 몫부터 챙기는 분답군요! 내 이력서는 해결되었습니다."
+						},
+						{
+							"text": "부스 단말기에 경고등이 들어왔어요... 저희 절차는 괜찮을까요?",
+							"speaker": "kai"
+						}
+					]
+				},
+				{
+					"mbti": "NF",
+					"text": "민호의 요청을 거절하고 차례대로 카이의 인증 절차를 진행한다.",
+					"result": [
+						{
+							"text": "민호의 도장을 밀쳐내고 카이의 차례에 맞춰 단말기 화면을 눌렀다.",
+							"speaker": "narrator"
+						},
+						{
+							"speaker": "minho",
+							"text": "쯧, 소문과 달리 왜 이제 와서 착한 척을 하는 겁니까? 낭패로군요."
+						},
+						{
+							"text": "고마워요! 덕분에 순서가 뒤틀리지 않고 차근차근 진행돼요.",
+							"speaker": "kai"
+						}
+					],
+					"flag": {
+						"key": "minho_shortcut_refused",
+						"boss_text": "원칙대로 인증 절차를 시작하여 시스템 정당성 인증을 확보한다.",
+						"label": "정석 인증 진행"
+					},
+					"effects": {
+						"echo": 10,
+						"community": 15
+					},
+					"path": "hard",
+					"reward": [
+						"shield"
+					]
+				},
+				{
+					"reward": [
+						"intelligence_up"
+					],
+					"path": "stat",
+					"flag": {
+						"label": "악명으로 차례 확보",
+						"boss_text": "주변 구직자들이 길을 비켜주어 단말기 조작권을 전적으로 독점한다.",
+						"key": "minho_stat_yield"
+					},
+					"result": [
+						{
+							"text": "차가운 눈빛으로 노려보자 민호가 지레 겁을 먹고 뒤로 물러섰다.",
+							"speaker": "narrator"
+						},
+						{
+							"text": "으윽, 소문대로 남 사정은 눈도 안 깜짝하는군요. 먼저 하세요!",
+							"speaker": "minho"
+						},
+						{
+							"speaker": "kai",
+							"text": "조금 무서웠지만... 방해 없이 카이의 인증 절차를 시작할 수 있겠어요."
+						}
+					],
+					"text": "개인주의 악명을 내세워 민호에게 순서를 양보받고 카이의 인증을 진행한다.",
+					"effects": {
+						"community": -10,
+						"echo": 5
+					},
+					"mbti": "EP"
+				}
+			],
+			"dialogue": [
+				{
+					"text": "민호가 품속에서 전자 인증 도장을 만지작거리며 슬그머니 다가온다.",
+					"speaker": "narrator"
+				},
+				{
+					"text": "당신이 남 사정 무시하고 자기 표부터 단숨에 처리했다는 그 사람 맞죠?",
+					"speaker": "minho"
+				},
+				{
+					"text": "이 전자 인증 도장으로 내 이력서부터 손쉽게 도장을 찍게 도와줘요.",
+					"speaker": "minho"
+				},
+				{
+					"speaker": "kai",
+					"text": "저 사람 이력서만 꼼수로 승인하면 다른 대기자 순서가 완전히 엉킬 텐데요..."
+				}
+			],
+			"background_tags": [
+				"booth",
+				"indoor",
+				"dim",
+				"crowd",
+				"tense"
+			],
+			"key": "minho_shortcut_stamp",
+			"person": {
+				"name": "민호",
+				"id": "minho",
+				"role": "구직자"
+			},
+			"slot": "A",
+			"kind": "rep",
+			"rep_dir": "community-"
+		},
+		{
+			"background_tags": [
+				"booth",
+				"indoor",
+				"bright",
+				"queue",
+				"lively"
+			],
+			"title": "대기열의 공동 인증",
+			"key": "sora_fair_queue",
+			"wants": "소라는 줄 서 있는 구직자 모두의 이력서를 한꺼번에 일괄 승인받고 싶어 한다.",
+			"rule_link": "다중 승인 모드로 부스를 조작하면 대기자 전체의 이력서 인증 단계가 동시 진행된다.",
+			"dialogue": [
+				{
+					"speaker": "narrator",
+					"text": "소라가 대기자들의 이력서를 뭉치로 든 채 기대에 찬 눈빛으로 다가온다."
+				},
+				{
+					"speaker": "sora",
+					"text": "당신이 지난번 사람들을 모아 다 같이 위기를 넘기게 해준 그분 맞죠?"
+				},
+				{
+					"speaker": "sora",
+					"text": "이 전자 인증 도장을 연결해서 모두의 이력서를 동시에 승인 처리해 주세요!"
+				},
+				{
+					"text": "저희 인증 절차와 함께 진행하면 다른 사람들 목소리도 조금씩 트일 것 같아요.",
+					"speaker": "kai"
+				}
+			],
+			"choices": [
+				{
+					"result": [
+						{
+							"speaker": "narrator",
+							"text": "단말기에서 인증 도장이 빛나며 수십 장의 이력서가 일괄 승인되었다."
+						},
+						{
+							"text": "와! 정말 감사합니다! 역시 소문대로 모두를 챙겨주시는군요!",
+							"speaker": "sora"
+						},
+						{
+							"speaker": "kai",
+							"text": "주변 분들 표정이 밝아졌어요! 하지만 단말기 모니터가 과열되는 소리가 나요..."
+						}
+					],
+					"flag": {
+						"label": "집단 인증 조작",
+						"key": "sora_mass_auth",
+						"boss_text": "단말기 다중 접속으로 인해 시스템 부하가 발생하여 경고음이 울린다."
+					},
+					"path": "easy",
+					"effects": {
+						"community": 20,
+						"gold": 50,
+						"echo": 10
+					},
+					"reward": [
+						"defense_up"
+					],
+					"mbti": "FJ",
+					"text": "부스를 다중 모드로 조작해 줄 선 모두의 이력서를 함께 승인 처리한다."
+				},
+				{
+					"path": "hard",
+					"result": [
+						{
+							"speaker": "narrator",
+							"text": "일괄 처리 단추 대신 단일 인증 메뉴를 눌러 카이의 절차를 진행했다."
+						},
+						{
+							"speaker": "sora",
+							"text": "아... 모두를 도와주실 줄 알았는데 이번엔 아니군요. 어쩔 수 없죠."
+						},
+						{
+							"text": "아쉽지만 안전하게 하나씩 진행하는 게 부스 오류를 막는 길이에요.",
+							"speaker": "kai"
+						}
+					],
+					"effects": {
+						"echo": -5,
+						"community": -15
+					},
+					"flag": {
+						"label": "개별 정석 진행",
+						"key": "sora_mass_refused",
+						"boss_text": "부스 단말기의 안정적인 전력을 유지하여 시스템 보안 보너스를 획득한다."
+					},
+					"reward": [
+						"heal"
+					],
+					"text": "일괄 승인 요청을 거절하고 카이의 이력서 인증부터 순차적으로 진행한다.",
+					"mbti": "TP"
+				},
+				{
+					"path": "stat",
+					"flag": {
+						"label": "질서정연한 순번 정리",
+						"key": "sora_organized_queue",
+						"boss_text": "대기자들이 협조하여 단말기 조작의 안정성을 극대화해 준다."
+					},
+					"reward": [
+						"cooldown_reset"
+					],
+					"text": "공동체 덕망을 이용해 대기자들을 다독이며 부스 과부하 없이 차례를 정리한다.",
+					"effects": {
+						"echo": 10,
+						"community": 10
+					},
+					"result": [
+						{
+							"speaker": "narrator",
+							"text": "당신의 목소리에 구직자들이 수긍하며 부스 앞에 질서정연하게 줄을 섰다."
+						},
+						{
+							"text": "역시 당신의 말씀이라면 믿을 수 있어요! 순서대로 진행할게요.",
+							"speaker": "sora"
+						},
+						{
+							"text": "멋져요! 과부하 우려 없이 카이의 인증 절차도 순조롭게 시작되고 있어요.",
+							"speaker": "kai"
+						}
+					],
+					"mbti": "EN"
+				},
+				{
+					"text": "전자 인증 도장의 선을 뽑고 단말기 승인 버튼을 피아노 치듯 연주한다.",
+					"mbti": "IS",
+					"result": [
+						{
+							"speaker": "narrator",
+							"text": "버튼을 마구 누르자 부스에서 실로폰 소리가 나며 동전 몇 개가 튀어나왔다."
+						},
+						{
+							"speaker": "sora",
+							"text": "어... 승인 작업이 아니라 음악 연주를 하신 건가요? 특이하시네요!"
+						},
+						{
+							"speaker": "kai",
+							"text": "갑자기 오락실이 된 것 같아요! 다행히 기계가 고장 나지는 않았군요."
+						}
+					],
+					"path": "fun",
+					"effects": {
+						"reason": -25
+					},
+					"reward": [
+						"stun"
+					]
+				}
+			],
+			"no": 2,
+			"person": {
+				"role": "대기자",
+				"name": "소라",
+				"id": "sora"
+			},
+			"slot": "A",
+			"kind": "rep",
+			"rep_dir": "community+"
+		}
+	],
+	"errors": [],
+	"prompt_hash": "3ecfdaa0f7d9015b38716a8f8554f16bb3a4fe70"
+}

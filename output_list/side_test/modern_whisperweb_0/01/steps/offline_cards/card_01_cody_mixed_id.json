@@ -1,0 +1,187 @@
+{
+	"id": "card_01_cody_mixed_id",
+	"kind": "normal",
+	"title": {
+		"korean": "섞여버린 신분증"
+	},
+	"intensity": "calm",
+	"after_story": 7,
+	"before_story": 10,
+	"background_tags": [
+		"server_rack",
+		"locked_door",
+		"id_card",
+		"nervous_guard",
+		"error_terminal"
+	],
+	"dialogue": [
+		{
+			"speaker": "narrator",
+			"content": {
+				"korean": "코디가 굳게 닫힌 전산실 내부 문 앞에서 출입 단말기에 카드를 연신 긁고 있다."
+			}
+		},
+		{
+			"speaker": "cody",
+			"content": {
+				"korean": "이럴 수가, 내 보안 등급이 왜 이래? 청소 구역만 열리고 보안 구역은 다 막혔잖아!"
+			}
+		},
+		{
+			"speaker": "echo",
+			"content": {
+				"korean": "배달 경로가 섞인 것처럼, 신분증 데이터도 다른 사람의 것과 뒤죽박죽 꼬였나 봐."
+			}
+		},
+		{
+			"speaker": "cody",
+			"content": {
+				"korean": "내 권한이 담긴 카드가 저기 폐기 카드 틈에 섞여 들어갔어. 제발 하나만 골라 줘!"
+			}
+		}
+	],
+	"choices": [
+		{
+			"text": {
+				"korean": "대충 눈에 띄는 카드를 집어 출입 단말기에 갖다 댄다."
+			},
+			"path": "easy",
+			"mbti": "SP",
+			"effects": {
+				"gold": 50,
+				"reason": -15
+			},
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "운 좋게 권한이 담긴 카드를 골라내자 굳게 닫혔던 문이 열린다."
+					}
+				},
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "코디는 안도하며 주머니에 있던 비상금을 털어준다."
+					}
+				}
+			],
+			"event": "minigame_cup",
+			"event_intro": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "바닥에 흩어진 여러 장의 카드 중 미세하게 불빛이 들어오는 진짜 카드를 찾아야 한다."
+					}
+				}
+			]
+		},
+		{
+			"text": {
+				"korean": "카드 리더기를 뜯어내고 코디의 남은 생체 정보를 이용해 시스템을 재설정한다."
+			},
+			"path": "hard",
+			"mbti": "TJ",
+			"effects": {
+				"reason": 15
+			},
+			"reward": [
+				"defense_up"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "리더기를 해체하고 생체 정보를 등록하느라 손끝이 다 까진다."
+					}
+				},
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "문이 열리자 코디가 감격하며 자신의 방검 조끼를 빌려준다."
+					}
+				}
+			]
+		},
+		{
+			"text": {
+				"korean": "{actor}이(가) 청소부 권한을 역이용해 환풍구를 열고 보안 구역으로 몰래 들어간다."
+			},
+			"path": "lock",
+			"mbti": "EP",
+			"require": {
+				"mbti": "EP"
+			},
+			"effects": {
+				"reason": -10
+			},
+			"reward": [
+				"move_range_up"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "{actor}이(가) 막힌 문 대신 환풍구를 뜯어내고 날쌔게 기어 들어간다."
+					}
+				},
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "코디는 당황하면서도 당신을 따라 환풍구로 몸을 숨긴다."
+					}
+				}
+			]
+		},
+		{
+			"text": {
+				"korean": "돈을 써서 암시장 브로커에게 원격으로 임시 권한을 사들인다."
+			},
+			"path": "gold",
+			"mbti": "FP",
+			"require": {
+				"stat": "gold",
+				"op": ">=",
+				"value": 100
+			},
+			"effects": {
+				"gold": -100,
+				"reason": -10
+			},
+			"reward": [
+				"attack_up"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "브로커에게 돈을 송금하자 단말기 불빛이 초록색으로 변한다."
+					}
+				},
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "코디는 눈이 휘둥그레지며 보안 구역의 무기 하나를 꺼내준다."
+					}
+				}
+			]
+		}
+	],
+	"_side": {
+		"slot": "D",
+		"person": {
+			"role": "신입 보안 요원",
+			"id": "cody",
+			"name": "코디"
+		},
+		"wants": "여러 장의 카드에 섞여 들어간 진짜 권한 카드를 찾아달라고 함",
+		"rule_link": "정보가 섞이면서 코디의 보안 등급이 청소부의 것과 뒤바뀌어 출입 권한을 잃었다.",
+		"events": {
+			"easy": "코디가 떨어뜨린 여러 장의 카드 중 진짜 권한이 담긴 카드를 골라야 한다."
+		},
+		"flags": {}
+	}
+}

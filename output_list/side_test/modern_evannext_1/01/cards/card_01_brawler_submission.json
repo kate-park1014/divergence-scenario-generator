@@ -1,0 +1,252 @@
+{
+	"id": "card_01_brawler_submission",
+	"kind": "rep",
+	"title": {
+		"korean": "흉터투성이 거한의 요구"
+	},
+	"intensity": "calm",
+	"after_story": 3,
+	"before_story": 5,
+	"condition": {
+		"leaning": "fighting-",
+		"among": [
+			"fighting-",
+			"fighting+",
+			"community-",
+			"community+",
+			"reason-",
+			"reason+"
+		],
+		"min": 20
+	},
+	"urgency": 8,
+	"leaning": "fighting-",
+	"background_tags": [
+		"central_hall",
+		"noon",
+		"fluorescent",
+		"crowded_lobby",
+		"tense"
+	],
+	"dialogue": [
+		{
+			"speaker": "narrator",
+			"content": {
+				"korean": "팔뚝에 굵은 흉터가 가득한 거구의 지원자가 붉은 도장이 찍힌 린의 서류를 보며 다가왔다."
+			}
+		},
+		{
+			"speaker": "brawler",
+			"content": {
+				"korean": "\"당신이 접수대 진행 요원 멱살을 잡고 문을 부술 듯이 밀고 들어왔다는 그 독종 맞지?\""
+			}
+		},
+		{
+			"speaker": "brawler",
+			"content": {
+				"korean": "\"마침 잘됐군. 내 이력서에도 용병대장 경력 석 줄만 거칠게 갈겨써서 접수대에 꽂아 넣어 줘!\""
+			}
+		},
+		{
+			"speaker": "lin",
+			"content": {
+				"korean": "\"저 사람 덩치 좀 보세요... 들어주지 않으면 당장 주먹이라도 휘두를 기세예요.\""
+			}
+		}
+	],
+	"choices": [
+		{
+			"text": {
+				"korean": "험상궂은 지원자의 서류에 대규모 방어 작전 지휘 경력을 굵게 덧칠해 접수대에 꽂아 넣는다"
+			},
+			"path": "easy",
+			"mbti": "ET",
+			"flag": "muscle_applicant_barrier",
+			"effects": {
+				"gold": 100,
+				"echo": 5,
+				"fighting": -20
+			},
+			"seed": null,
+			"result": [
+				{
+					"speaker": "brawler",
+					"content": {
+						"korean": "\"크하하! 대기 순번이 7번으로 뛰었잖아! 여기 약속한 수고비요!\""
+					}
+				},
+				{
+					"speaker": "lin",
+					"content": {
+						"korean": "\"순번표를 빼앗긴 뒤쪽 지원자들이 주먹을 쥐고 이쪽을 노려보고 있어요...\""
+					}
+				},
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "우람한 지원자는 붉은 접수증을 흔들며 대기석 앞자리를 거칠게 꿰찼다."
+					}
+				}
+			]
+		},
+		{
+			"text": {
+				"korean": "거친 지원자가 내민 허위 무공 이력서를 강제로 빼앗아 바닥에 짓밟는다"
+			},
+			"path": "hard",
+			"mbti": "IF",
+			"flag": "snatched_fake_dossier",
+			"effects": {
+				"fighting": 20,
+				"echo": -10
+			},
+			"reward": [
+				"attack_up"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "당신은 남자의 거대한 손목을 비틀어 과장하려던 가짜 무공 훈장 증명서를 낚아챘다."
+					}
+				},
+				{
+					"speaker": "brawler",
+					"content": {
+						"korean": "\"뭐야? 남의 기회를 가로채? 두고 봐, 무대에서 뼈를 부러뜨려 줄 테니!\""
+					}
+				},
+				{
+					"speaker": "lin",
+					"content": {
+						"korean": "\"저 사람 정말 화가 머리끝까지 났어요. 다음 면접 때 마주치면 어쩌죠?\""
+					}
+				}
+			]
+		},
+		{
+			"text": {
+				"korean": "거구의 지원자를 벽으로 몰아붙여 서류를 포기하고 맨 뒷줄로 돌아가게 윽박지른다"
+			},
+			"path": "stat",
+			"mbti": "TJ",
+			"require": {
+				"stat": "fighting",
+				"op": "<=",
+				"value": -40
+			},
+			"flag": "intimidating_brawler_submission",
+			"effects": {
+				"echo": 10,
+				"fighting": -30
+			},
+			"reward": [
+				"shield"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "당신이 목을 꺾으며 서늘한 눈빛을 쏘아붙이자, 거구의 지원자가 침을 삼키며 뒷걸음질 쳤다."
+					}
+				},
+				{
+					"speaker": "brawler",
+					"content": {
+						"korean": "\"히익... 그 눈빛... 소문보다 진짜 독종이잖아! 알았소, 서류는 내 손으로 찢겠소!\""
+					}
+				},
+				{
+					"speaker": "lin",
+					"content": {
+						"korean": "\"말 한마디에 거한이 제 발로 물러나다니, 저 사람 완전히 기가 질렸어요.\""
+					}
+				}
+			]
+		},
+		{
+			"text": {
+				"korean": "시끄러워지는 것을 막기 위해 거친 지원자에게 금화 80냥을 쥐여주며 대기석 뒤로 돌려보낸다"
+			},
+			"path": "gold",
+			"mbti": "SP",
+			"require": {
+				"stat": "gold",
+				"op": ">=",
+				"value": 80
+			},
+			"effects": {
+				"gold": -80,
+				"echo": -5,
+				"fighting": -10
+			},
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "당신이 건넨 금화 주머니를 받아 든 남자는 입을 삐죽이며 뭉개진 서류를 주머니에 쑤셔 넣었다."
+					}
+				},
+				{
+					"speaker": "brawler",
+					"content": {
+						"korean": "\"쳇, 피차 주먹 쓰는 처지에 돈으로 때우겠다? 이번 한 번만 조용히 물러나 주지.\""
+					}
+				},
+				{
+					"speaker": "lin",
+					"content": {
+						"korean": "\"돈을 쥐여주니 물러서긴 했지만, 주머니 사정이 꽤 빠듯해졌어요.\""
+					}
+				}
+			]
+		}
+	],
+	"_side": {
+		"slot": "B",
+		"person": {
+			"id": "brawler",
+			"name": "흉터투성이 지원자",
+			"role": "순번을 노리는 거구의 용병"
+		},
+		"wants": "가짜 전투 경력을 이력서에 채워 넣어 당장 앞 순번 표를 빼앗는 것",
+		"rule_link": "싸움꾼이 이력서에 가짜 용병대장 경력을 덧칠해 대기 순번을 강제로 끌어올리려 한다.",
+		"rep": "fighting-",
+		"events": {},
+		"flags": {
+			"muscle_applicant_barrier": {
+				"kind": "bad",
+				"boss_penalty": -1,
+				"label": {
+					"korean": "거친 대기자의 난동"
+				},
+				"boss_line": {
+					"korean": "당신이 서류를 대신 부풀려 준 거친 지원자가 문 앞을 가로막아 이동이 지체된다."
+				}
+			},
+			"snatched_fake_dossier": {
+				"kind": "good",
+				"boss_penalty": 1,
+				"label": {
+					"korean": "강경한 서류 압류"
+				},
+				"boss_choice": {
+					"korean": "당신이 물러서지 않고 서류를 빼앗았던 기억을 떠올려, 면접관의 돌발 위협을 몸으로 튕겨낸다."
+				}
+			},
+			"intimidating_brawler_submission": {
+				"kind": "good",
+				"boss_penalty": 2,
+				"label": {
+					"korean": "투기장 패왕의 기세"
+				},
+				"boss_choice": {
+					"korean": "대기실을 제압했던 서슬 퍼런 악명을 무기로 삼아, 돌진해 오는 면접 진행 요원의 기세를 꺾는다."
+				}
+			}
+		}
+	}
+}

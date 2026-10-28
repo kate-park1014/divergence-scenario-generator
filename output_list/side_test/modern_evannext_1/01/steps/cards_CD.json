@@ -1,0 +1,736 @@
+{
+	"cards": [
+		{
+			"no": 1,
+			"key": "hayeon_lost_identity",
+			"choices": [
+				{
+					"mbti": "ST",
+					"text": "하연의 뒤바뀐 명패를 그대로 쥐여주며 새 이름으로 면접을 보라고 부추긴다.",
+					"path": "easy",
+					"result": [
+						{
+							"text": "당신은 명패를 낚아채 원래 이름을 지우고 새 가짜 이름을 적어 넣었다.",
+							"speaker": "narrator"
+						},
+						{
+							"speaker": "hayeon",
+							"text": "이게 정말 제 이름이 맞나요? 머릿속이 새하얘져서 제 경력이 기억나지 않아요."
+						},
+						{
+							"text": "과장해서 적었던 경력이 하연 씨의 진짜 이름까지 덮어버린 것 같아요.",
+							"speaker": "lin"
+						}
+					],
+					"effects": {
+						"echo": -10,
+						"gold": 70,
+						"community": 10,
+						"fighting": 20
+					},
+					"flag": {
+						"boss_text": "접수 명단 속 하연의 이름이 지워져 대기 순번 호출이 취소된다.",
+						"label": "지워진 이름",
+						"key": "hayeon_lost_name"
+					}
+				},
+				{
+					"mbti": "NF",
+					"effects": {
+						"fighting": -10,
+						"community": -20,
+						"echo": 15
+					},
+					"flag": {
+						"key": "hayeon_real_name",
+						"label": "원래 이름 회복",
+						"boss_text": "원래 이름표를 되찾은 하연이 비상구 유도봉을 넘겨주어 면접관의 시야를 가린다."
+					},
+					"text": "접수창구에 하연의 원본 신분증을 내밀며 명패 정정을 단호하게 요구한다.",
+					"path": "hard",
+					"reward": [
+						"defense_up"
+					],
+					"result": [
+						{
+							"speaker": "narrator",
+							"text": "당신은 하연의 옛 이력서를 펼쳐 들고 직원에게 원래 신원을 정정하라 요구했다."
+						},
+						{
+							"speaker": "hayeon",
+							"text": "맞아요, 제 진짜 이름은 하연이에요! 기억을 잃어버릴 뻔했는데 정말 감사해요."
+						},
+						{
+							"speaker": "lin",
+							"text": "창구 직원이 혀를 차며 명부를 고쳤어요. 하연 씨 눈빛이 이제야 또렷해졌네요."
+						}
+					]
+				}
+			],
+			"person": {
+				"id": "hayeon",
+				"name": "하연",
+				"role": "신원이 뒤섞인 지원자"
+			},
+			"wants": "자신의 원래 이름을 듣고 접수 기록의 이름을 원래대로 되돌리는 것",
+			"dialogue": [
+				{
+					"speaker": "narrator",
+					"text": "하연이 잉크가 번진 명패를 손에 쥔 채 파들거리는 손으로 다가온다."
+				},
+				{
+					"text": "접수처에서 제 서류를 보더니 '세라'라는 이름표를 줬어요. 절 하연이라고 불러주세요!",
+					"speaker": "hayeon"
+				},
+				{
+					"text": "방금 전 방송에서 저를 수잔이라고 부르더니, 하연 씨 이름도 바뀌어 나왔군요.",
+					"speaker": "lin"
+				},
+				{
+					"speaker": "hayeon",
+					"text": "제 이름을 부르지 않으면 제 원래 모습이 흔적도 없이 사라질 것만 같아요!"
+				}
+			],
+			"rule_link": "이력서 경력을 부풀린 대가로 접수 시스템에서 본래 이름이 지워지고 엉뚱한 명패가 발행된다.",
+			"title": "지워진 이름표",
+			"background_tags": [
+				"waiting_hall",
+				"flickering_light",
+				"service_counter",
+				"crowded_room",
+				"confused_mood"
+			],
+			"slot": "C",
+			"kind": "callback",
+			"returns": "easy"
+		},
+		{
+			"choices": [
+				{
+					"result": [
+						{
+							"text": "당신은 하연의 손을 잡고 접수원에게 원본 접수증 번호를 똑똑히 불러주었다.",
+							"speaker": "narrator"
+						},
+						{
+							"speaker": "hayeon",
+							"text": "거짓말을 안 보태길 정말 잘했어요! 제 이름이 명부에 정확하게 남았습니다."
+						},
+						{
+							"speaker": "lin",
+							"text": "순번은 조금 늦어졌지만, 하연 씨의 진짜 자리가 온전히 지켜졌어요."
+						}
+					],
+					"mbti": "TJ",
+					"flag": {
+						"boss_text": "하연이 정직하게 정리했던 서류 사본을 건네주어 심사관의 허점을 파고든다.",
+						"key": "hayeon_solid_proof",
+						"label": "하연의 정직한 기록"
+					},
+					"path": "easy",
+					"reward": [],
+					"text": "하연의 원본 지원 번호를 접수대에 확인시켜 원래 이름을 확정한다.",
+					"effects": {
+						"reason": 15,
+						"echo": 10,
+						"community": 15,
+						"gold": 60
+					}
+				},
+				{
+					"path": "hard",
+					"result": [
+						{
+							"speaker": "narrator",
+							"text": "당신은 하연의 포트폴리오 맨 앞장에 굵은 붉은 펜으로 원래 이름을 크게 적어 걸어주었다."
+						},
+						{
+							"speaker": "hayeon",
+							"text": "세 번이나 떨어진 서류라도 제 진짜 노력이에요. 이걸 들고 당당히 들어갈게요!"
+						},
+						{
+							"speaker": "lin",
+							"text": "남들의 이름이 뒤섞이는 와중에도 하연 씨의 명패만은 홀로 흔들리지 않네요."
+						}
+					],
+					"effects": {
+						"echo": 15,
+						"community": -15,
+						"fighting": 20
+					},
+					"text": "하연의 낡은 포트폴리오 표지에 본래 이름을 직접 써서 가슴에 달아준다.",
+					"reward": [
+						"shield"
+					],
+					"mbti": "FP",
+					"flag": {
+						"label": "단단한 포트폴리오",
+						"boss_text": "하연이 직접 제작한 포트폴리오 철판으로 굳게 닫힌 문틈을 비집어 연다.",
+						"key": "hayeon_sturdy_portfolio"
+					}
+				}
+			],
+			"key": "hayeon_kept_name",
+			"title": "지켜낸 이름",
+			"no": 2,
+			"rule_link": "과장하지 않은 원본 서류 덕분에 시스템의 왜곡 속에서도 본래 신원이 유지된다.",
+			"background_tags": [
+				"waiting_hall",
+				"steady_lamp",
+				"wooden_bench",
+				"sparse_crowd",
+				"stable_mood"
+			],
+			"person": {
+				"id": "hayeon",
+				"role": "본래 이름을 지킨 지원자",
+				"name": "하연"
+			},
+			"wants": "정직한 서류를 바탕으로 시스템에 본래 이름을 온전히 등록하는 것",
+			"dialogue": [
+				{
+					"speaker": "narrator",
+					"text": "하연이 또렷한 글씨가 적힌 접수증을 쥔 채 안도하는 얼굴로 서 있다."
+				},
+				{
+					"text": "서류 과장을 거절당했을 땐 서운했는데, 저 사람들 이름이 뒤섞이는 걸 보니 소름이 돋아요.",
+					"speaker": "hayeon"
+				},
+				{
+					"speaker": "lin",
+					"text": "다른 지원자들은 거짓 경력 때문에 엉뚱한 이름으로 불려 나가고 있거든요."
+				},
+				{
+					"speaker": "hayeon",
+					"text": "제 서류는 단단히 고정돼 있어요. 이제 접수대에서 진짜 제 명패를 받아야겠어요."
+				}
+			],
+			"slot": "C",
+			"kind": "callback",
+			"returns": "hard"
+		},
+		{
+			"wants": "접수대 전산 오류를 바로잡아 '최대식'이라는 본래 이름을 되찾는 것",
+			"person": {
+				"name": "대식",
+				"role": "이름이 지워지는 기능공",
+				"id": "daesik"
+			},
+			"no": 3,
+			"dialogue": [
+				{
+					"text": "작업복을 입은 대기자 대식이 자신의 가슴팍을 쥐어뜯으며 접수대 앞을 서성인다.",
+					"speaker": "narrator"
+				},
+				{
+					"speaker": "daesik",
+					"text": "제 이름은 분명 최대식인데, 출력기가 '마르셀'이라는 금빛 명패를 뱉어냈어요!"
+				},
+				{
+					"text": "마르셀이라니, 이력서에 고급 매니저 경력을 적으셨던 건가요?",
+					"speaker": "lin"
+				},
+				{
+					"speaker": "daesik",
+					"text": "합격 확률을 높이려고 남의 자격증 번호를 적었더니, 제 원래 이름이 전광판에서 사라졌어요!"
+				}
+			],
+			"choices": [
+				{
+					"result": [
+						{
+							"speaker": "narrator",
+							"text": "당신은 오르내리는 차단봉 틈으로 재빠르게 손을 찔러 넣어 정정 용지를 창구에 밀어 넣었다."
+						},
+						{
+							"text": "간발의 차로 성공했어요! 창구 전산망에 정정 요청 신호가 들어갔습니다.",
+							"speaker": "lin"
+						},
+						{
+							"text": "대식이라는 제 진짜 이름이 전광판 밑에 작게 떴어요! 숨통이 좀 트이네요.",
+							"speaker": "daesik"
+						}
+					],
+					"text": "오르내리는 접수 차단봉 틈새로 대식의 이름 정정 용지를 밀어 넣는다.",
+					"path": "easy",
+					"event_reason": "차단봉이 오르내리는 틈을 타 접수대 서랍에 수정 신청서를 밀어 넣어야 하기 때문",
+					"mbti": "TP",
+					"event_intro": [
+						{
+							"text": "접수창구의 차단봉이 2초 간격으로 빠르게 오르내리며 서류 접수를 가로막는다.",
+							"speaker": "narrator"
+						},
+						{
+							"speaker": "narrator",
+							"text": "차단봉이 맨 위로 올라가는 정확한 순간을 세 번 노려 수정 신청서를 밀어 넣어야 한다."
+						}
+					],
+					"effects": {
+						"reason": -15,
+						"community": 20,
+						"echo": -10
+					},
+					"event": "minigame_timing"
+				},
+				{
+					"effects": {
+						"reason": 20,
+						"community": -20,
+						"echo": 10
+					},
+					"mbti": "FJ",
+					"reward": [
+						"defense_up"
+					],
+					"text": "창구 호출 마이크를 붙잡고 대식의 원래 이름과 자격을 대기홀 전체에 알린다.",
+					"result": [
+						{
+							"speaker": "narrator",
+							"text": "당신은 창구 호출기를 집어 들고 지원자 대식의 원래 경력과 번호를 큰 소리로 읊었다."
+						},
+						{
+							"text": "맞아요, 저는 용접공 대식입니다! 거짓 직함 같은 건 필요 없어요!",
+							"speaker": "daesik"
+						},
+						{
+							"text": "접수 직원이 당황해서 경고 벨을 눌렀지만, 주변 사람들도 대식 씨를 알아보기 시작했어요.",
+							"speaker": "lin"
+						}
+					],
+					"path": "hard"
+				},
+				{
+					"mbti": "TJ",
+					"require_mbti": "TJ",
+					"reward": [
+						"intelligence_up"
+					],
+					"effects": {
+						"community": 10,
+						"reason": 10
+					},
+					"text": "{actor}이(가) 대기실 운영 규정의 오류 정정 조항을 들어 즉석 수정을 요구한다.",
+					"result": [
+						{
+							"text": "{actor}이(가) 규정집 12조 오기재 정정 조항을 펼쳐 접수원 책상 위에 내리쳤다.",
+							"speaker": "narrator"
+						},
+						{
+							"speaker": "daesik",
+							"text": "규정대로 처리해 달라니 직원이 군말 없이 제 본명을 전산에 되돌려 놓았어요!"
+						},
+						{
+							"text": "정확한 규칙을 짚어내니 꼼짝 못 하네요. 대식 씨의 본래 서류가 복구됐어요.",
+							"speaker": "lin"
+						}
+					],
+					"path": "lock"
+				},
+				{
+					"mbti": "EP",
+					"result": [
+						{
+							"speaker": "narrator",
+							"text": "당신은 접수창구 번호표 뭉치를 통째로 뽑아 바닥에 흩뿌렸다."
+						},
+						{
+							"speaker": "lin",
+							"text": "대기홀 전체가 번호표를 줍느라 아수라장이 됐어요! 창구 직원이 자리를 박차고 일어납니다!"
+						},
+						{
+							"text": "직원이 자리를 비운 틈에 제 명패를 손으로 낚아챘어요! 덕분에 제 명패를 찾았습니다!",
+							"speaker": "daesik"
+						}
+					],
+					"effects": {
+						"gold": 80,
+						"fighting": 25,
+						"community": -25
+					},
+					"reward": [],
+					"text": "접수창구의 번호표 기계를 마구 눌러 대기홀 바닥에 표를 흩뿌린다.",
+					"path": "fun"
+				}
+			],
+			"title": "마르셀이 된 용접공",
+			"background_tags": [
+				"waiting_hall",
+				"blinking_screen",
+				"ticket_booth",
+				"panicked_crowd",
+				"tense_mood"
+			],
+			"key": "daesik_scrambled_tag",
+			"rule_link": "허위 자격증 기재로 인해 시스템이 대상을 엉뚱한 해외 경력자로 인식하여 본래 이름이 소멸한다.",
+			"slot": "C",
+			"kind": "normal"
+		},
+		{
+			"no": 4,
+			"wants": "자신의 사원 번호와 진짜 이름을 확인받아 사라지는 존재를 붙잡는 것",
+			"rule_link": "허위 서류 통과 실적의 부작용으로 접수원 본인의 사원 정보와 이름이 시스템에서 소멸한다.",
+			"dialogue": [
+				{
+					"text": "접수원 진수가 출력기 옆에 주저앉아 잉크가 묻은 명패를 멍하니 내려다본다.",
+					"speaker": "narrator"
+				},
+				{
+					"speaker": "jinsu",
+					"text": "허위 서류를 너무 많이 통과시켰나 봅니다. 제 사원 명패에 '접수관 9호'라고만 찍혀 나와요."
+				},
+				{
+					"text": "지원자들의 서류가 뒤섞이더니, 접수원분의 이름까지 기계가 삼켜버린 건가요?",
+					"speaker": "lin"
+				},
+				{
+					"text": "내 이름이 진수였던가요? 저 좀 도와주세요, 사원증 번호가 전부 지워지고 있어요!",
+					"speaker": "jinsu"
+				}
+			],
+			"person": {
+				"role": "존재가 흐려진 접수원",
+				"name": "진수",
+				"id": "jinsu"
+			},
+			"background_tags": [
+				"waiting_hall",
+				"printer_corner",
+				"red_flashing_lamp",
+				"shouting_crowd",
+				"desperate_mood"
+			],
+			"title": "이름을 잃은 직원",
+			"choices": [
+				{
+					"result": [
+						{
+							"text": "당신은 진수가 내민 가짜 명패를 접수기 리더기에 강제로 인식시켰다.",
+							"speaker": "narrator"
+						},
+						{
+							"speaker": "jinsu",
+							"text": "이러면 전 퇴근할 수 있겠지만... 어라? 내 사원증 사진의 얼굴이 왜 흐려지지?"
+						},
+						{
+							"speaker": "lin",
+							"text": "진수 씨의 안색이 종이처럼 하얘졌어요. 본인의 존재마저 규정에 먹혀버린 걸까요?"
+						}
+					],
+					"text": "진수의 손에 들린 가짜 명패를 접수 단말기에 강제로 등록해 넘겨준다.",
+					"path": "easy",
+					"mbti": "ET",
+					"flag": {
+						"boss_text": "접수원 진수가 자신의 신원을 증명하지 못해 경비 장치가 통로 전체를 봉쇄한다.",
+						"label": "유령 직원의 방해",
+						"key": "jinsu_ghost_worker"
+					},
+					"effects": {
+						"echo": -10,
+						"community": -15,
+						"gold": 70,
+						"fighting": 20
+					}
+				},
+				{
+					"result": [
+						{
+							"text": "당신은 진수의 멱살을 잡고 사원 명부 원본을 바닥에 내동댕이치며 본래 서명을 확인시켰다.",
+							"speaker": "narrator"
+						},
+						{
+							"speaker": "jinsu",
+							"text": "맞다, 내 이름은 접수원 진수야! 허위 실적에 눈이 멀어 내 사번까지 잊을 뻔했어."
+						},
+						{
+							"speaker": "lin",
+							"text": "진수 씨가 제정신을 차리고 허위 접수 목록을 전산에서 황급히 삭제하고 있어요."
+						}
+					],
+					"text": "진수의 사원 명부 원본을 강제로 대조시켜 본래 이름을 낭독하게 만든다.",
+					"path": "hard",
+					"reward": [
+						"heal"
+					],
+					"mbti": "IN",
+					"flag": {
+						"boss_text": "진수가 자신의 사원 열쇠를 넘겨주어 면접장 안쪽 잠금 밸브를 즉시 차단한다.",
+						"key": "jinsu_master_key",
+						"label": "진수의 사원 열쇠"
+					},
+					"effects": {
+						"community": 20,
+						"echo": 15,
+						"reason": 15
+					}
+				}
+			],
+			"key": "jinsu_erased_clerk",
+			"slot": "D",
+			"kind": "callback",
+			"returns": "easy"
+		},
+		{
+			"rule_link": "허위 서류를 배제한 덕분에 직원의 고유 신원이 전산망에서 온전히 보존된다.",
+			"dialogue": [
+				{
+					"text": "접수원 진수가 반듯하게 인쇄된 자신의 이름표를 가슴에 달고 다가온다.",
+					"speaker": "narrator"
+				},
+				{
+					"text": "아까 억지 실적을 거절해 주신 덕분에 제 명패는 엉뚱한 이름으로 바뀌지 않았습니다.",
+					"speaker": "jinsu"
+				},
+				{
+					"text": "주변 지원자들의 명패가 흩날리며 난리가 났는데, 진수 씨 창구는 멀쩡하네요!",
+					"speaker": "lin"
+				},
+				{
+					"speaker": "jinsu",
+					"text": "하지만 명패 출력기가 폭주하고 있어요. 당신들의 이력서도 이대로 두면 이름을 잃게 됩니다!"
+				}
+			],
+			"title": "온전한 명찰",
+			"background_tags": [
+				"waiting_hall",
+				"cleared_aisle",
+				"bright_fluorescent",
+				"calm_crowd",
+				"relieved_mood"
+			],
+			"no": 5,
+			"key": "jinsu_firm_clerk",
+			"choices": [
+				{
+					"result": [
+						{
+							"speaker": "narrator",
+							"text": "당신은 진수가 작성한 정규 서류 보관함을 확인하고 그의 정식 명패를 가슴에 꽂아주었다."
+						},
+						{
+							"text": "당신들이 가짜 서류를 거절해 준 덕에 전산 오류에 휩쓸리지 않았습니다. 정말 다행이에요.",
+							"speaker": "jinsu"
+						},
+						{
+							"speaker": "lin",
+							"text": "정직하게 버틴 덕분에 진수 씨의 접수창구만 유일하게 정상 작동하고 있네요."
+						}
+					],
+					"mbti": "ES",
+					"flag": {
+						"key": "jinsu_belt_conveyor",
+						"boss_text": "진수가 정상 가동시킨 서류 운반 레일을 타고 면접장 중앙으로 빠르게 이동한다.",
+						"label": "진수의 운반 레일"
+					},
+					"text": "진수의 정규 접수 장부를 전산망에 동기화해 본래 직책을 공식 확정한다.",
+					"reward": [],
+					"path": "easy",
+					"effects": {
+						"echo": 10,
+						"community": 15,
+						"gold": 80,
+						"reason": 10
+					}
+				},
+				{
+					"text": "진수의 책상에 놓인 정식 철제 직인으로 원본 서류의 무결성을 공인한다.",
+					"result": [
+						{
+							"speaker": "narrator",
+							"text": "당신은 진수의 창구에 놓인 무거운 철제 직인을 들어 린의 서류에 정식 인증 도장을 찍었다."
+						},
+						{
+							"text": "이 도장은 본래 이름이 확실한 사람에게만 찍히는 물건입니다. 린 씨의 자격은 확실해요.",
+							"speaker": "jinsu"
+						},
+						{
+							"text": "가짜 이름들이 날아다니는 와중에도 제 서류에는 선명하고 묵직한 진짜 도장이 남았어요.",
+							"speaker": "lin"
+						}
+					],
+					"path": "hard",
+					"effects": {
+						"fighting": 20,
+						"echo": 15,
+						"community": -10
+					},
+					"mbti": "IT",
+					"flag": {
+						"label": "단단한 철인 도장",
+						"key": "jinsu_heavy_stamp",
+						"boss_text": "진수가 건넨 접수용 강철 철인 도장으로 닫히려는 면접장 출입문을 찍어 고정한다."
+					},
+					"reward": [
+						"cooldown_reset"
+					]
+				}
+			],
+			"person": {
+				"role": "정직한 접수원",
+				"id": "jinsu",
+				"name": "진수"
+			},
+			"wants": "폭주하는 명패 출력기의 오류를 막고 정규 지원자들의 진짜 이름을 보호하는 것",
+			"slot": "D",
+			"kind": "callback",
+			"returns": "hard"
+		},
+		{
+			"key": "nameplate_meltdown",
+			"dialogue": [
+				{
+					"text": "명패 출력기 옆에서 렌치를 든 수리공 오 씨가 덜컹거리는 기계를 두들긴다.",
+					"speaker": "narrator"
+				},
+				{
+					"speaker": "mechanic_oh",
+					"text": "과장된 이력서가 쏟아져 들어가니 출력기가 감당을 못 하고 지원자들 이름을 마구 뒤섞고 있소!"
+				},
+				{
+					"speaker": "lin",
+					"text": "제 이력서에도 가짜 경력이 적혀 있는데, 이대로 두면 제 이름도 기계 속으로 빨려 들어갈까요?"
+				},
+				{
+					"speaker": "mechanic_oh",
+					"text": "기계 규정판을 보시오! '이력서의 정보가 뒤섞이면 존재가 흐려진다'고 분명히 적혀 있단 말이오!"
+				}
+			],
+			"title": "폭주하는 출력기",
+			"person": {
+				"role": "명패 출력기 정비공",
+				"id": "mechanic_oh",
+				"name": "수리공 오 씨"
+			},
+			"background_tags": [
+				"waiting_hall",
+				"broken_printer",
+				"flying_papers",
+				"pushing_crowd",
+				"urgent_mood"
+			],
+			"rule_link": "과장된 허위 이력서가 대량 투입되어 출력기가 폭주하고, 지원자들의 실재가 이름표와 함께 분열한다.",
+			"wants": "과장된 이력서의 투입을 멈추고 출력기의 이름 뒤섞임 오류를 정상화하는 것",
+			"no": 6,
+			"choices": [
+				{
+					"path": "easy",
+					"effects": {
+						"fighting": 25,
+						"echo": -10,
+						"community": -15,
+						"gold": 70
+					},
+					"text": "린의 이력서 속 과장 경력을 그대로 둔 채 출력기를 강제 가동한다.",
+					"reward": [],
+					"mbti": "NT",
+					"result": [
+						{
+							"speaker": "narrator",
+							"text": "당신은 린의 이력서에 적힌 화려한 허위 수상 내역을 그대로 둔 채 출력기를 발로 찼다."
+						},
+						{
+							"text": "제 번호표가 번쩍이며 앞 번호로 유지됐지만... 이름표 글자가 흐릿하게 번지기 시작해요.",
+							"speaker": "lin"
+						},
+						{
+							"text": "거짓 경력을 유지하면 명패는 유지될지 몰라도, 면접장에 들어가면 진짜 당신은 없을 거요!",
+							"speaker": "mechanic_oh"
+						}
+					]
+				},
+				{
+					"path": "hard",
+					"text": "린의 서류에 덧붙여진 허위 경력 용지를 찢어내고 본래 이력서로 환원한다.",
+					"reward": [
+						"attack_up"
+					],
+					"effects": {
+						"community": 20,
+						"reason": -10,
+						"echo": 15
+					},
+					"mbti": "SF",
+					"result": [
+						{
+							"text": "당신은 린의 서류에서 과장된 경력란을 손으로 뜯어내고 원래 지원서로 되돌렸다.",
+							"speaker": "narrator"
+						},
+						{
+							"speaker": "lin",
+							"text": "순번이 조금 뒤로 밀렸지만 상관없어요. 제 진짜 이름이 적힌 명패가 똑바로 인쇄됐습니다!"
+						},
+						{
+							"speaker": "mechanic_oh",
+							"text": "훌륭한 결단이오! 거짓 잉크를 털어내야 기계도 그 사람의 온전한 형태를 찍어내는 법이지."
+						}
+					]
+				},
+				{
+					"result": [
+						{
+							"speaker": "narrator",
+							"text": "{actor}이(가) 혼란에 빠진 대기자들을 다독이며 흩어진 원본 이력서 조각들을 바르게 맞추었다."
+						},
+						{
+							"text": "사람들이 서로의 진짜 이름을 불러주니 출력기 롤러의 과열 경고등이 꺼졌소!",
+							"speaker": "mechanic_oh"
+						},
+						{
+							"text": "주변 분들이 자기 이름을 되찾고 있어요. {actor} 덕분에 대기실이 안정을 찾았네요.",
+							"speaker": "lin"
+						}
+					],
+					"path": "lock",
+					"require_mbti": "NF",
+					"text": "{actor}이(가) 서로를 잊어가는 대기자들의 본래 이름을 일일이 불러주며 기록을 맞춘다.",
+					"reward": [
+						"move_range_up"
+					],
+					"effects": {
+						"community": 10,
+						"reason": 10
+					},
+					"mbti": "NF"
+				},
+				{
+					"event_reason": "수리공이 흩날린 명패들을 세 개의 금속 통에 숨겨두고 진짜 명패를 찾게 했기 때문",
+					"path": "gold",
+					"text": "수리공에게 100골드를 건네고 뒤섞인 부품함 속에서 린의 원본 명패를 찾는다.",
+					"effects": {
+						"echo": 10,
+						"gold": -100,
+						"community": 10
+					},
+					"event": "minigame_cup",
+					"event_intro": [
+						{
+							"speaker": "narrator",
+							"text": "수리공 오 씨가 뒤섞인 이름표가 든 세 개의 금속 보관함을 책상 위에 엎어놓는다."
+						},
+						{
+							"speaker": "mechanic_oh",
+							"text": "100골드를 냈으니 진짜 린의 원본 명패가 들어간 통을 하나 골라보시오!"
+						}
+					],
+					"mbti": "EN",
+					"result": [
+						{
+							"text": "당신은 100골드를 건네고 통 속에 숨겨져 있던 린의 정품 금속 명패를 찾아냈다.",
+							"speaker": "narrator"
+						},
+						{
+							"text": "선명하게 제 이름이 음각된 명패예요! 돈을 썼지만 제 진짜 이름을 건졌어요.",
+							"speaker": "lin"
+						},
+						{
+							"text": "정밀하게 조율된 원래 명패요. 거짓 정보에 휩쓸리지 않게 품에 단단히 넣고 가시오.",
+							"speaker": "mechanic_oh"
+						}
+					]
+				}
+			],
+			"slot": "D",
+			"kind": "normal"
+		}
+	],
+	"errors": []
+}

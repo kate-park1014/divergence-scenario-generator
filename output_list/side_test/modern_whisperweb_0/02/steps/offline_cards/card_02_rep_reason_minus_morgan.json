@@ -1,0 +1,182 @@
+{
+	"id": "card_02_rep_reason_minus_morgan",
+	"kind": "rep",
+	"title": {
+		"korean": "매뉴얼의 한계"
+	},
+	"intensity": "calm",
+	"after_story": 1,
+	"before_story": 3,
+	"condition": {
+		"leaning": "reason-",
+		"among": [
+			"fighting-",
+			"fighting+",
+			"community-",
+			"community+",
+			"reason-",
+			"reason+"
+		],
+		"min": 20
+	},
+	"urgency": 8,
+	"leaning": "reason-",
+	"background_tags": [
+		"powerroom",
+		"bright",
+		"tidy",
+		"machinery",
+		"strict"
+	],
+	"dialogue": [
+		{
+			"speaker": "strict_auditor",
+			"content": {
+				"korean": "어떤 상황에서도 절차와 규칙을 칼같이 지킨다더니, 딱 맞춰 왔군."
+			}
+		},
+		{
+			"speaker": "strict_auditor",
+			"content": {
+				"korean": "매뉴얼 4장 2절에 따라 3초 대기 후 코드를 뽑으시오."
+			}
+		},
+		{
+			"speaker": "lin",
+			"content": {
+				"korean": "절차가 너무 길어요! 당장 코드를 뽑지 않으면 터질지도 모른다고요!"
+			}
+		}
+	],
+	"choices": [
+		{
+			"text": {
+				"korean": "매뉴얼에 적힌 순서대로 전원 코드를 뽑는다."
+			},
+			"path": "easy",
+			"mbti": "SJ",
+			"flag": "morgan_manual_delay",
+			"effects": {
+				"gold": 80,
+				"reason": -20
+			},
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "3초를 정확히 세고 코드를 뽑았다. 모건이 만족스럽게 수첩에 체크한다."
+					}
+				}
+			],
+			"event": "minigame_timing",
+			"event_intro": [
+				{
+					"speaker": "strict_auditor",
+					"content": {
+						"korean": "자, 정확히 3�� 후에 코드를 분리하시오."
+					}
+				}
+			]
+		},
+		{
+			"text": {
+				"korean": "매뉴얼을 무시하고 선을 발로 차서 뽑는다."
+			},
+			"path": "hard",
+			"mbti": "NP",
+			"flag": "morgan_kicked_wire",
+			"effects": {
+				"echo": 10,
+				"reason": 20
+			},
+			"reward": [
+				"defense_up"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "단말기가 요란한 소리를 내며 멈춘다. 모건이 경악하며 수첩을 떨어뜨린다."
+					}
+				}
+			]
+		},
+		{
+			"text": {
+				"korean": "감사관의 수첩을 빼앗아 확인하고 코드를 단번에 뽑는다."
+			},
+			"path": "stat",
+			"mbti": "TJ",
+			"require": {
+				"stat": "reason",
+				"op": "<=",
+				"value": -40
+			},
+			"flag": "morgan_secret_code",
+			"effects": {
+				"echo": -10,
+				"reason": -30
+			},
+			"reward": [
+				"shield"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "모건이 항의하지만, 당신은 수첩의 내용을 모두 외워버렸다."
+					}
+				}
+			]
+		}
+	],
+	"_side": {
+		"slot": "A",
+		"person": {
+			"role": "감사관",
+			"name": "모건",
+			"id": "strict_auditor"
+		},
+		"wants": "당신이 규정을 철저히 지킨다며, 오작동 단말기의 매뉴얼대로 비상 전원 코드를 뽑아 시스템을 정지시켜 달라고 함.",
+		"rule_link": "매뉴얼 절차에 따라 비상 전원 코드를 뽑는다.",
+		"rep": "reason-",
+		"events": {
+			"easy": "매뉴얼에 명시된 타이밍에 맞춰 코드를 뽑아야 한다."
+		},
+		"flags": {
+			"morgan_manual_delay": {
+				"kind": "bad",
+				"boss_penalty": -1,
+				"label": {
+					"korean": "절차 지연"
+				},
+				"boss_line": {
+					"korean": "매뉴얼 절차에 따른 지연 시간이 발목을 잡아 공격에 노출된다."
+				}
+			},
+			"morgan_kicked_wire": {
+				"kind": "good",
+				"boss_penalty": 1,
+				"label": {
+					"korean": "끊어진 선"
+				},
+				"boss_choice": {
+					"korean": "발로 차서 끊어낸 선을 엮어 트랩으로 사용한다."
+				}
+			},
+			"morgan_secret_code": {
+				"kind": "good",
+				"boss_penalty": 2,
+				"label": {
+					"korean": "기밀 암호"
+				},
+				"boss_choice": {
+					"korean": "수첩에서 알아낸 기밀 암호로 보안 장치를 무력화한다."
+				}
+			}
+		}
+	}
+}

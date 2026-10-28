@@ -1,0 +1,219 @@
+{
+	"id": "card_02_forced_resume_sorting",
+	"kind": "rep",
+	"title": {
+		"korean": "위협과 이력서 정렬"
+	},
+	"intensity": "calm",
+	"after_story": 3,
+	"before_story": 5,
+	"condition": {
+		"leaning": "fighting-",
+		"among": [
+			"fighting-",
+			"fighting+",
+			"community-",
+			"community+",
+			"reason-",
+			"reason+"
+		],
+		"min": 20
+	},
+	"urgency": 8,
+	"leaning": "fighting-",
+	"background_tags": [
+		"search_room",
+		"afternoon",
+		"fluorescent",
+		"anxious_crowd",
+		"tense"
+	],
+	"dialogue": [
+		{
+			"speaker": "narrator",
+			"content": {
+				"korean": "한 구직자가 고급 인쇄용지 뭉치를 손가락으로 딱딱 소리 내며 다가왔다."
+			}
+		},
+		{
+			"speaker": "seeker",
+			"content": {
+				"korean": "당신이 단말기 자리를 막아서는 직원의 멱살을 잡고 밀어붙였다면서요?"
+			}
+		},
+		{
+			"speaker": "seeker",
+			"content": {
+				"korean": "감독관이 오기 전에 내 과장된 경력 이력서부터 단말기에 우선 정렬해 줘요."
+			}
+		},
+		{
+			"speaker": "nia",
+			"content": {
+				"korean": "저 사람이 든 서류는 거짓 경력이에요. 정렬해 주면 문제가 생길 거예요."
+			}
+		}
+	],
+	"choices": [
+		{
+			"text": {
+				"korean": "100크레딧을 받고 초조한 구직자의 허위 이력서를 단말기에 우선 정렬한다."
+			},
+			"path": "easy",
+			"mbti": "TJ",
+			"flag": "forced_resume_bias",
+			"effects": {
+				"gold": 100,
+				"echo": -10,
+				"fighting": -20
+			},
+			"reward": [
+				"defense_down"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "구직자의 허위 경력 데이터를 단말기 맨 위에 강제로 올려 정렬했다."
+					}
+				},
+				{
+					"speaker": "seeker",
+					"content": {
+						"korean": "역시 소문대로 화끈하시네! 덕분에 내 거짓 경력이 깔끔하게 묻혔어."
+					}
+				},
+				{
+					"speaker": "nia",
+					"content": {
+						"korean": "이렇게 거짓 서류를 우선 처리해주면 나중에 큰 문제가 생길 텐데요…"
+					}
+				}
+			]
+		},
+		{
+			"text": {
+				"korean": "단말기 앞을 막아서며 구직자의 허위 이력서 등록을 단칼에 거절한다."
+			},
+			"path": "hard",
+			"mbti": "EP",
+			"flag": "unyielding_refusal",
+			"effects": {
+				"community": 15,
+				"fighting": 15,
+				"echo": 10
+			},
+			"reward": [
+				"defense_up"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "초조한 구직자의 인쇄용지를 밀쳐내며 단말기 접근을 차단했다."
+					}
+				},
+				{
+					"speaker": "seeker",
+					"content": {
+						"korean": "웩, 진짜로 찌르기라도 할 기세네. 칫, 다른 단말기나 알아봐야겠군."
+					}
+				},
+				{
+					"speaker": "nia",
+					"content": {
+						"korean": "잘하셨어요. 조작된 이력서까지 정렬해 줄 이유는 없죠."
+					}
+				}
+			]
+		},
+		{
+			"text": {
+				"korean": "구직자를 눈빛으로 압박하여 순서를 지키게 하고 정당하게 이름 정보를 정리한다."
+			},
+			"path": "stat",
+			"mbti": "ST",
+			"require": {
+				"stat": "fighting",
+				"op": "<=",
+				"value": -40
+			},
+			"flag": "intimidating_order",
+			"effects": {
+				"echo": 10,
+				"fighting": -30,
+				"reason": 20
+			},
+			"reward": [
+				"attack_up"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "서늘한 눈빛으로 구직자를 노려보며 정당한 대기 순서를 지키게 했다."
+					}
+				},
+				{
+					"speaker": "seeker",
+					"content": {
+						"korean": "히익! 알았어요, 줄 끝으로 갈 테니까 그 무서운 눈빛 좀 치워요!"
+					}
+				},
+				{
+					"speaker": "nia",
+					"content": {
+						"korean": "당신의 기세에 눌려 저 사람이 단숨에 순서를 지키러 돌아갔네요."
+					}
+				}
+			]
+		}
+	],
+	"_side": {
+		"slot": "B",
+		"person": {
+			"id": "seeker",
+			"role": "경력 과장 지원자",
+			"name": "초조한 구직자"
+		},
+		"wants": "주인공의 거친 기세에 얹혀 허위 경력 이력서를 우선 정렬하고 싶어 한다.",
+		"rule_link": "경력 조작 이력서의 이름 정렬 요청을 처리할지 결정한다.",
+		"rep": "fighting-",
+		"events": {},
+		"flags": {
+			"forced_resume_bias": {
+				"kind": "bad",
+				"boss_penalty": -1,
+				"label": {
+					"korean": "허위 이력서 강제 정렬"
+				},
+				"boss_line": {
+					"korean": "조작된 이력서 데이터가 단말기 과부하를 일으켜 시스템 경보음이 울린다."
+				}
+			},
+			"unyielding_refusal": {
+				"kind": "good",
+				"boss_penalty": 1,
+				"label": {
+					"korean": "강경한 거절"
+				},
+				"boss_choice": {
+					"korean": "거짓 데이터를 배제하여 단말기 시스템의 정렬 안정성을 높인다."
+				}
+			},
+			"intimidating_order": {
+				"kind": "good",
+				"boss_penalty": 2,
+				"label": {
+					"korean": "위압적 질서 확립"
+				},
+				"boss_choice": {
+					"korean": "주변 대기자들을 위협으로 통제하여 단말기 접근권을 독점한다."
+				}
+			}
+		}
+	}
+}

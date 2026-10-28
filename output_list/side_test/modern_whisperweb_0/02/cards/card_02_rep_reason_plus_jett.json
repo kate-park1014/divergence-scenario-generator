@@ -1,0 +1,194 @@
+{
+	"id": "card_02_rep_reason_plus_jett",
+	"title": {
+		"korean": "해커의 장난"
+	},
+	"intensity": "calm",
+	"after_story": 1,
+	"before_story": 3,
+	"condition": {
+		"leaning": "reason+",
+		"among": [
+			"fighting-",
+			"fighting+",
+			"community-",
+			"community+",
+			"reason-",
+			"reason+"
+		],
+		"min": 20
+	},
+	"urgency": 8,
+	"leaning": "reason+",
+	"background_tags": [
+		"powerroom",
+		"flicker",
+		"messy",
+		"machinery",
+		"tense"
+	],
+	"dialogue": [
+		{
+			"speaker": "rebel_hacker",
+			"content": {
+				"korean": "규칙 ���위 가볍게 무시하고 마음대로 날뛴다는 게 너지?"
+			}
+		},
+		{
+			"speaker": "rebel_hacker",
+			"content": {
+				"korean": "내가 신호하면 코드 뺐다가 다시 꽂아! 시스템 엉키는 거 구경하자고."
+			}
+		},
+		{
+			"speaker": "lin",
+			"content": {
+				"korean": "저런 장난에 어울릴 시간이 없어요! 어서 전원만 차단해요."
+			}
+		}
+	],
+	"choices": [
+		{
+			"text": {
+				"korean": "해커의 신호에 맞춰 전원 코드를 뽑았다 꽂는다."
+			},
+			"path": "easy",
+			"mbti": "EP",
+			"flag": "jett_firewall_down",
+			"effects": {
+				"reason": 20,
+				"gold": 100
+			},
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "시스템이 미친 듯이 깜빡인다. 제트가 박장대소하며 데이터를 빼낸다."
+					}
+				}
+			]
+		},
+		{
+			"text": {
+				"korean": "장난에 동참하지 않고 코드만 완전히 뽑아버린다."
+			},
+			"path": "hard",
+			"mbti": "IJ",
+			"flag": "jett_hacking_chip",
+			"effects": {
+				"echo": -10,
+				"reason": -20
+			},
+			"reward": [
+				"defense_up"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "단말기가 허무하게 꺼진다. 제트가 욕설을 내뱉으며 해킹 칩을 흘리고 간다."
+					}
+				}
+			]
+		},
+		{
+			"text": {
+				"korean": "해커를 밀쳐내고 코드를 뽑아 춤추듯 선을 묶어버린다."
+			},
+			"path": "stat",
+			"mbti": "FP",
+			"require": {
+				"stat": "reason",
+				"op": ">=",
+				"value": 40
+			},
+			"flag": "jett_tied_cable",
+			"effects": {
+				"echo": 10,
+				"reason": 30
+			},
+			"reward": [
+				"shield"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "기이하게 묶인 코드를 보고 제트가 어이없다는 듯 휘파람을 분다."
+					}
+				}
+			]
+		},
+		{
+			"text": {
+				"korean": "코드를 뽑아 제트의 머리에 리본 모양으로 묶어버린다."
+			},
+			"path": "fun",
+			"mbti": "EN",
+			"effects": {
+				"echo": 5,
+				"community": 15
+			},
+			"reward": [
+				"cooldown_reset"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "제트가 머리에 달린 리본 코드를 풀려고 발버둥 친다."
+					}
+				}
+			]
+		}
+	],
+	"kind": "rep",
+	"_side": {
+		"slot": "A",
+		"person": {
+			"id": "rebel_hacker",
+			"name": "제트",
+			"role": "해커"
+		},
+		"wants": "",
+		"rule_link": "",
+		"rep": "reason+",
+		"events": {},
+		"flags": {
+			"jett_firewall_down": {
+				"boss_penalty": -1,
+				"label": {
+					"korean": "방화벽 무력화"
+				},
+				"boss_line": {
+					"korean": "방화벽 무력화로 인해 보안 알람이 크게 울리며 포위당한다."
+				},
+				"kind": "bad"
+			},
+			"jett_hacking_chip": {
+				"boss_penalty": 1,
+				"label": {
+					"korean": "해킹 칩"
+				},
+				"boss_choice": {
+					"korean": "제트가 떨어뜨린 해킹 칩을 단말기에 꽂아 통제권을 뺏는다."
+				},
+				"kind": "good"
+			},
+			"jett_tied_cable": {
+				"boss_penalty": 2,
+				"label": {
+					"korean": "묶인 코드"
+				},
+				"boss_choice": {
+					"korean": "매듭지어 묶어둔 코드가 장애물이 되어 접근을 막아낸다."
+				},
+				"kind": "good"
+			}
+		}
+	}
+}

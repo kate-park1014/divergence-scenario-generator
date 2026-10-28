@@ -1,0 +1,237 @@
+{
+	"id": "card_02_trader_signal",
+	"kind": "normal",
+	"title": {
+		"korean": "은밀한 송신"
+	},
+	"intensity": "high",
+	"after_story": 1,
+	"before_story": 3,
+	"background_tags": [
+		"blinking_lights",
+		"hidden_corner",
+		"humming_machine",
+		"shadowy_figure",
+		"wire_bundles"
+	],
+	"dialogue": [
+		{
+			"speaker": "suspicious_trader",
+			"content": {
+				"korean": "중계기가 오작동하는 지금이 딱 좋은 기회야."
+			}
+		},
+		{
+			"speaker": "suspicious_trader",
+			"content": {
+				"korean": "전원을 딱 1분만 뽑아줘. 감시가 꺼진 틈에 전송해야 할 데이터 스크린 조각이 있거든."
+			}
+		},
+		{
+			"speaker": "lin",
+			"content": {
+				"korean": "저런 수상한 사람의 부탁을 들어주면 안 돼요."
+			}
+		},
+		{
+			"speaker": "lin",
+			"content": {
+				"korean": "어떤 위험한 정보가 넘어갈지 모르잖아요."
+			}
+		}
+	],
+	"forced": [
+		{
+			"text": {
+				"korean": "{actor}이(가) 중계기 전원을 뽑기 전에 선을 꼬아버린다."
+			},
+			"path": "forced",
+			"mbti": "EP",
+			"require": {
+				"mbti": "EP"
+			},
+			"chance": 0.3,
+			"effects": {
+				"gold": 50,
+				"echo": -10,
+				"fighting": 15,
+				"reason": -20
+			},
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "{actor}이(가) 장난치듯 선을 꼬아버리자 중계기 전체가 합선되며 꺼졌다."
+					}
+				},
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "로간은 당황하며 도망쳤고, 당신은 바닥에 떨어진 동전을 주웠다."
+					}
+				}
+			]
+		}
+	],
+	"choices": [
+		{
+			"text": {
+				"korean": "중계기 전원을 잠시 뽑아주고 뒷돈을 챙긴다."
+			},
+			"path": "easy",
+			"mbti": "SP",
+			"effects": {
+				"reason": -20,
+				"community": -15,
+				"gold": 100,
+				"echo": -10
+			},
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "전원이 꺼진 짧은 틈을 타 로간은 무언가를 전송하고 당신에게 돈을 쥐여주었다."
+					}
+				},
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "린은 한숨을 쉬며 고개를 저었다."
+					}
+				}
+			]
+		},
+		{
+			"text": {
+				"korean": "통신망에 문제를 일으킬 수 없다며 막는다."
+			},
+			"path": "hard",
+			"mbti": "TJ",
+			"effects": {
+				"echo": 10,
+				"fighting": 20,
+				"reason": 20
+			},
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "당신이 로간을 밀쳐내고 전원 코드를 지켰다."
+					}
+				},
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "로간은 욕설을 내뱉으며 서둘러 자리를 떴다."
+					}
+				}
+			],
+			"event": "meet_stranger",
+			"event_intro": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "\"누가 내 거래를 방해하는 거냐!\" 낯선 용병이 나타나"
+					}
+				},
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "거래를 방해했다며 {actor}에게 1:1 대결을 걺."
+					}
+				}
+			],
+			"event_options": {
+				"fight": {
+					"text": {
+						"korean": "{actor}이(가) 용병에게 맞선다."
+					},
+					"win": [
+						{
+							"speaker": "narrator",
+							"content": {
+								"korean": "당신은 용병을 가볍게 제압하고 쫓아냈다."
+							}
+						}
+					],
+					"lose": [
+						{
+							"speaker": "narrator",
+							"content": {
+								"korean": "용병의 거센 공격에 당신은 뒤로 밀려났다."
+							}
+						}
+					]
+				},
+				"avoid": {
+					"text": {
+						"korean": "싸움을 피하고 물러선다."
+					},
+					"result": [
+						{
+							"speaker": "narrator",
+							"content": {
+								"korean": "당신이 자리를 피하는 사이 중계기는 충격을 받아 부서졌다."
+							}
+						}
+					],
+					"reward": [
+						"defense_down"
+					]
+				}
+			}
+		},
+		{
+			"text": {
+				"korean": "돈을 쥐여주며 이런 위험한 짓은 그만두라고 한다."
+			},
+			"path": "gold",
+			"mbti": "NF",
+			"require": {
+				"stat": "gold",
+				"op": ">=",
+				"value": 50
+			},
+			"effects": {
+				"reason": 10,
+				"community": 10,
+				"gold": -50
+			},
+			"reward": [
+				"shield"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "당신이 돈을 주며 타이르자 로간은 머쓱한 표정으로 장비를 챙겨 돌아갔다."
+					}
+				},
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "중계기는 다행히 안전하게 유지되었다."
+					}
+				}
+			]
+		}
+	],
+	"_side": {
+		"slot": "A",
+		"person": {
+			"id": "suspicious_trader",
+			"role": "암시장 상인",
+			"name": "로간"
+		},
+		"wants": "통신 중계기 전원을 잠시 뽑아 불법 데이터 스크린 조각을 전송하게 해달라고 함.",
+		"rule_link": "오작동을 기회로 시스템의 감시망을 무력화하려는 행동을 보여줌.",
+		"events": {
+			"hard": "거래를 기다리던 용병이 통신이 오지 않자 화가 나서 나타난다."
+		},
+		"flags": {}
+	}
+}

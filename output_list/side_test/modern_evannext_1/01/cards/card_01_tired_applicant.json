@@ -1,0 +1,162 @@
+{
+	"id": "card_01_tired_applicant",
+	"kind": "normal",
+	"title": {
+		"korean": "지친 대기자의 거래"
+	},
+	"intensity": "calm",
+	"after_story": 1,
+	"before_story": 3,
+	"background_tags": [
+		"waiting_hall",
+		"waiting_bench",
+		"exhausted_people",
+		"paper_scattered",
+		"restless"
+	],
+	"dialogue": [
+		{
+			"speaker": "narrator",
+			"content": {
+				"korean": "이마에 식은땀을 흘리는 남자가 구겨진 지원서 세 장을 쥐고 다가왔다."
+			}
+		},
+		{
+			"speaker": "lin",
+			"content": {
+				"korean": "얼굴이 사색이시네요. 어디 몸이라도 안 좋으신 건가요?"
+			}
+		},
+		{
+			"speaker": "faint_man",
+			"content": {
+				"korean": "경력 한 칸만 보태주면 저쪽 소파 자리를 양보하겠소. 당장 쓰러질 것 같소."
+			}
+		}
+	],
+	"choices": [
+		{
+			"text": {
+				"korean": "대기자의 허위 경력 증빙을 접수원에 전달하고 쉴 곳을 얻는다."
+			},
+			"path": "easy",
+			"mbti": "FP",
+			"effects": {
+				"gold": 80,
+				"community": -20,
+				"reason": -15,
+				"echo": 10
+			},
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "대기자의 문서철에 현장 스태프 경력을 끼워 넣어 접수원 손에 쥐여주었다."
+					}
+				},
+				{
+					"speaker": "lin",
+					"content": {
+						"korean": "저 사람 번호표를 받았어요! 구석 소파 자리가 비었으니 잠시 앉아서 쉬어요."
+					}
+				}
+			],
+			"event": "campsite",
+			"event_intro": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "소파에 앉아 가쁜 숨을 가다듬으며 접수대 틈을 살핀다."
+					}
+				},
+				{
+					"speaker": "lin",
+					"content": {
+						"korean": "잠시 숨 좀 돌려요. 제 서류를 어떻게 접수할지도 상의해야 하니까요."
+					}
+				}
+			]
+		},
+		{
+			"text": {
+				"korean": "부탁을 거절하고 각자의 차례를 조용히 기다리라고 이른다."
+			},
+			"path": "hard",
+			"mbti": "IS",
+			"effects": {
+				"echo": -10,
+				"community": 20,
+				"reason": 15
+			},
+			"reward": [
+				"shield"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "손을 저으며 뒤통수를 긁적이는 대기자를 돌려보냈다."
+					}
+				},
+				{
+					"speaker": "lin",
+					"content": {
+						"korean": "매몰차 보였을 수도 있지만, 우리 서류도 아직 접수하지 못했잖아요."
+					}
+				}
+			]
+		},
+		{
+			"text": {
+				"korean": "80골드를 들여 매점에서 피로회복제를 사 대기자들에게 건넨다."
+			},
+			"path": "gold",
+			"mbti": "ES",
+			"require": {
+				"stat": "gold",
+				"op": ">=",
+				"value": 80
+			},
+			"effects": {
+				"gold": -80,
+				"community": 10,
+				"reason": 10,
+				"echo": 10
+			},
+			"reward": [
+				"heal"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "비상용 간식과 음료수를 사서 지친 대기자들에게 나누어주었다."
+					}
+				},
+				{
+					"speaker": "lin",
+					"content": {
+						"korean": "다들 조금 진정된 것 같네요. 우리도 곧 방도를 찾을 수 있을 거예요."
+					}
+				}
+			]
+		}
+	],
+	"_side": {
+		"slot": "A",
+		"person": {
+			"id": "faint_man",
+			"role": "탈진 직전의 지원자",
+			"name": "지친 대기자"
+		},
+		"wants": "서류에 거짓 경력을 덧대어 대기 순번을 앞당기고 쉬러 가는 것",
+		"rule_link": "이력서에 이득을 주면 대기실 내의 휴식 권한을 양도받는다.",
+		"events": {
+			"easy": "대기홀 한구석 소파에서 숨을 돌리며 다음 행동을 의논한다."
+		},
+		"flags": {}
+	}
+}

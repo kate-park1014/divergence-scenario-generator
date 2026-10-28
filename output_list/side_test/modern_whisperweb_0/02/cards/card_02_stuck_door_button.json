@@ -1,0 +1,148 @@
+{
+	"id": "card_02_stuck_door_button",
+	"title": {
+		"korean": "닫힌 문 앞의 초조함"
+	},
+	"intensity": "high",
+	"after_story": 1,
+	"before_story": 3,
+	"background_tags": [
+		"locked",
+		"hallway",
+		"anxious",
+		"oldroom",
+		"exit"
+	],
+	"dialogue": [
+		{
+			"speaker": "narrator",
+			"content": {
+				"korean": "굳게 닫힌 문 앞에서 한 직원이 발을 구르며 안절부절못하고 있다."
+			}
+		},
+		{
+			"speaker": "rushed_employee",
+			"content": {
+				"korean": "시스템이 엉켜서 문이 안 열려요! 이 비상 버튼 좀 억지로 눌러주세요!"
+			}
+		},
+		{
+			"speaker": "lin",
+			"content": {
+				"korean": "억지로 누르면 고장 날 텐데... 많이 급한가 봐요."
+			}
+		}
+	],
+	"forced": [
+		{
+			"text": {
+				"korean": "{actor}이(가) 망설임 없이 비상 버튼을 주먹으로 내리쳐 문을 연다."
+			},
+			"path": "forced",
+			"mbti": "ES",
+			"require": {
+				"mbti": "ES"
+			},
+			"chance": 0.3,
+			"effects": {
+				"reason": -20,
+				"fighting": 20
+			},
+			"reward": [
+				"attack_up"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "{actor}이(가) 강제로 버튼을 부수자 문이 열렸다. 다급했던 직원은 서둘러 빠져나갔다."
+					}
+				}
+			]
+		}
+	],
+	"choices": [
+		{
+			"text": {
+				"korean": "비상 버튼을 강제로 눌러 문을 억지로 열어준다."
+			},
+			"path": "easy",
+			"mbti": "TP",
+			"effects": {
+				"gold": 50,
+				"reason": -10
+			},
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "당신이 버튼을 세게 누르자 문이 억지로 열렸다. 그는 급히 나가며 바닥에 동전을 떨어뜨렸다."
+					}
+				}
+			]
+		},
+		{
+			"text": {
+				"korean": "강제로 열지 말고 보안 담당자를 부르라고 한다."
+			},
+			"path": "hard",
+			"mbti": "FJ",
+			"effects": {
+				"reason": 15,
+				"echo": 10
+			},
+			"reward": [
+				"shield"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "당신은 절차를 따르라고 조언했다. 그는 한숨을 쉬며 통신기를 꺼내 들었다."
+					}
+				}
+			]
+		},
+		{
+			"text": {
+				"korean": "근처 자판기에 돈을 쓰고 도구를 사서 문을 안전하게 열어준다."
+			},
+			"path": "gold",
+			"mbti": "NT",
+			"require": {
+				"stat": "gold",
+				"op": ">=",
+				"value": 80
+			},
+			"effects": {
+				"gold": -80,
+				"reason": 10
+			},
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "당신은 근처 자판기에서 도구를 사서 문을 열어주었다. 기계는 전혀 손상되지 않았다."
+					}
+				}
+			]
+		}
+	],
+	"kind": "normal",
+	"_side": {
+		"slot": "A",
+		"person": {
+			"id": "rushed_employee",
+			"name": "다급한 직원",
+			"role": "급박하게 재촉하는 존댓말"
+		},
+		"wants": "",
+		"rule_link": "",
+		"events": {},
+		"flags": {}
+	}
+}

@@ -1,0 +1,154 @@
+{
+	"id": "card_01_jinsu_erased_clerk",
+	"kind": "callback",
+	"title": {
+		"korean": "이름을 잃은 직원"
+	},
+	"intensity": "high",
+	"after_story": 7,
+	"before_story": 10,
+	"callback": {
+		"seed": "jinsu_quota_easy",
+		"min_rooms_after": 2
+	},
+	"background_tags": [
+		"waiting_hall",
+		"printer_corner",
+		"red_flashing_lamp",
+		"shouting_crowd",
+		"desperate_mood"
+	],
+	"dialogue": [
+		{
+			"speaker": "narrator",
+			"content": {
+				"korean": "접수원 진수가 출력기 옆에 주저앉아 잉크가 묻은 명패를 멍하니 내려다본다."
+			}
+		},
+		{
+			"speaker": "jinsu",
+			"content": {
+				"korean": "허위 서류를 너무 많이 통과시켰나 봅니다. 제 사원 명패에 '접수관 9호'라고만 찍혀 나와요."
+			}
+		},
+		{
+			"speaker": "lin",
+			"content": {
+				"korean": "지원자들의 서류가 뒤섞이더니, 접수원분의 이름까지 기계가 삼켜버린 건가요?"
+			}
+		},
+		{
+			"speaker": "jinsu",
+			"content": {
+				"korean": "내 이름이 진수였던가요? 저 좀 도와주세요, 사원증 번호가 전부 지워지고 있어요!"
+			}
+		}
+	],
+	"choices": [
+		{
+			"text": {
+				"korean": "진수의 손에 들린 가짜 명패를 접수 단말기에 강제로 등록해 넘겨준다."
+			},
+			"path": "easy",
+			"mbti": "ET",
+			"flag": "jinsu_ghost_worker",
+			"effects": {
+				"echo": -10,
+				"community": -15,
+				"gold": 70,
+				"fighting": 20
+			},
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "당신은 진수가 내민 가짜 명패를 접수기 리더기에 강제로 인식시켰다."
+					}
+				},
+				{
+					"speaker": "jinsu",
+					"content": {
+						"korean": "이러면 전 퇴근할 수 있겠지만... 어라? 내 사원증 사진의 얼굴이 왜 흐려지지?"
+					}
+				},
+				{
+					"speaker": "lin",
+					"content": {
+						"korean": "진수 씨의 안색이 종이처럼 하얘졌어요. 본인의 존재마저 규정에 먹혀버린 걸까요?"
+					}
+				}
+			]
+		},
+		{
+			"text": {
+				"korean": "진수의 사원 명부 원본을 강제로 대조시켜 본래 이름을 낭독하게 만든다."
+			},
+			"path": "hard",
+			"mbti": "IN",
+			"flag": "jinsu_master_key",
+			"effects": {
+				"community": 20,
+				"echo": 15,
+				"reason": 15
+			},
+			"reward": [
+				"heal"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "당신은 진수의 멱살을 잡고 사원 명부 원본을 바닥에 내동댕이치며 본래 서명을 확인시켰다."
+					}
+				},
+				{
+					"speaker": "jinsu",
+					"content": {
+						"korean": "맞다, 내 이름은 접수원 진수야! 허위 실적에 눈이 멀어 내 사번까지 잊을 뻔했어."
+					}
+				},
+				{
+					"speaker": "lin",
+					"content": {
+						"korean": "진수 씨가 제정신을 차리고 허위 접수 목록을 전산에서 황급히 삭제하고 있어요."
+					}
+				}
+			]
+		}
+	],
+	"_side": {
+		"slot": "D",
+		"person": {
+			"role": "존재가 흐려진 접수원",
+			"name": "진수",
+			"id": "jinsu"
+		},
+		"wants": "자신의 사원 번호와 진짜 이름을 확인받아 사라지는 존재를 붙잡는 것",
+		"rule_link": "허위 서류 통과 실적의 부작용으로 접수원 본인의 사원 정보와 이름이 시스템에서 소멸한다.",
+		"events": {},
+		"flags": {
+			"jinsu_ghost_worker": {
+				"kind": "bad",
+				"boss_penalty": -1,
+				"label": {
+					"korean": "유령 직원의 방해"
+				},
+				"boss_line": {
+					"korean": "접수원 진수가 자신의 신원을 증명하지 못해 경비 장치가 통로 전체를 봉쇄한다."
+				}
+			},
+			"jinsu_master_key": {
+				"kind": "good",
+				"boss_penalty": 1,
+				"label": {
+					"korean": "진수의 사원 열쇠"
+				},
+				"boss_choice": {
+					"korean": "진수가 자신의 사원 열쇠를 넘겨주어 면접장 안쪽 잠금 밸브를 즉시 차단한다."
+				}
+			}
+		}
+	}
+}

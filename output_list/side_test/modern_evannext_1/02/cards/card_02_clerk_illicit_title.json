@@ -1,0 +1,211 @@
+{
+	"id": "card_02_clerk_illicit_title",
+	"kind": "normal",
+	"title": {
+		"korean": "담당자의 은밀한 청탁"
+	},
+	"intensity": "high",
+	"after_story": 1,
+	"before_story": 3,
+	"background_tags": [
+		"terminal_counter",
+		"blue_led",
+		"noon",
+		"line_of_seekers",
+		"impatient_mood"
+	],
+	"dialogue": [
+		{
+			"speaker": "narrator",
+			"content": {
+				"korean": "단말기 관리 데스크의 담당자가 주위를 두리번거리며 서류 한 장을 들이밀었다."
+			}
+		},
+		{
+			"speaker": "clerk",
+			"content": {
+				"korean": "쉿, 목소리 낮춰요. 이력서 직함을 '선임 연구원'으로 몇 명만 바꿔 넣어줘요."
+			}
+		},
+		{
+			"speaker": "clerk",
+			"content": {
+				"korean": "요령대로 이름 규격만 맞추면 단말기가 그냥 승인하거든요. 수고비는 섭섭잖게 챙겨줄 테니."
+			}
+		},
+		{
+			"speaker": "nia",
+			"content": {
+				"korean": "단말기를 관리하는 직원마저 뒷돈을 받고 조작을 의뢰하고 있어요."
+			}
+		}
+	],
+	"forced": [
+		{
+			"text": {
+				"korean": "{actor}이(가) 분통을 터뜨리며 허위 직함 서류철을 담당자 면전에 흩뿌린다."
+			},
+			"path": "forced",
+			"mbti": "FP",
+			"require": {
+				"mbti": "FP"
+			},
+			"chance": 0.3,
+			"effects": {
+				"community": -15,
+				"reason": -20,
+				"fighting": 25
+			},
+			"reward": [
+				"move_range_up"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "{actor}이(가) 참지 못하고 담당자가 내민 조작용 서류 뭉치를 공중에 확 뿌려버렸다!"
+					}
+				},
+				{
+					"speaker": "clerk",
+					"content": {
+						"korean": "내 서류! 으악, 바닥에 다 흩어졌잖아! 저 미친놈 잡아!"
+					}
+				},
+				{
+					"speaker": "nia",
+					"content": {
+						"korean": "어머, 서류가 눈꽃처럼 날려요! 담당자가 허겁지겁 줍느라 정신이 없네요."
+					}
+				}
+			]
+		}
+	],
+	"choices": [
+		{
+			"text": {
+				"korean": "담당자의 요구대로 허위 직함 목록을 단말기에 일괄 입력해 준다."
+			},
+			"path": "easy",
+			"mbti": "NT",
+			"effects": {
+				"community": -20,
+				"gold": 110,
+				"echo": -10
+			},
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "담당자가 건넨 서류 뭉치 속 허위 직함을 단말기 명단에 빠르게 타이핑했다."
+					}
+				},
+				{
+					"speaker": "clerk",
+					"content": {
+						"korean": "손이 빠르시네. 여기 수고비 110골드입니다. 다음 대기자 부르세요!"
+					}
+				},
+				{
+					"speaker": "nia",
+					"content": {
+						"korean": "안내문 뒤에 이런 조작 작업이 버젓이 돌고 있었다니 기가 차네요."
+					}
+				}
+			]
+		},
+		{
+			"text": {
+				"korean": "허위 직함 명단 입력을 거부하고 일반 대기열 뒤로 돌아간다."
+			},
+			"path": "hard",
+			"mbti": "NF",
+			"effects": {
+				"reason": 20,
+				"community": 25,
+				"echo": 10
+			},
+			"reward": [
+				"move_range_up"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "서류철을 덮어 창구 위로 돌려주며 명단 입력을 거부했다."
+					}
+				},
+				{
+					"speaker": "clerk",
+					"content": {
+						"korean": "융통성이 없으시네. 그럼 저 뒤에 가서 번호표 뽑고 순서나 기다리쇼!"
+					}
+				},
+				{
+					"speaker": "nia",
+					"content": {
+						"korean": "줄이 엄청 길어졌지만, 저런 엉터리 등록에 가담하지 않은 게 옳아요."
+					}
+				}
+			]
+		},
+		{
+			"text": {
+				"korean": "수정 대신 담당자가 굴리는 단말기 슬롯 추첨기에 판돈을 건다."
+			},
+			"path": "fun",
+			"mbti": "EP",
+			"effects": {
+				"gold": 80,
+				"reason": -25
+			},
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "담당자가 만지작거리던 단말기 번호 슬롯에 손가락을 얹었다."
+					}
+				},
+				{
+					"speaker": "clerk",
+					"content": {
+						"korean": "오, 배짱이 두둑하네! 세 번 돌려서 같은 숫자가 나오면 코드를 통째로 넘기지."
+					}
+				}
+			],
+			"event": "minigame_slot",
+			"event_intro": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "담당자가 책상 밑에서 숫자 세 개가 빠르게 돌아가는 미등록 단말기를 꺼냈다."
+					}
+				},
+				{
+					"speaker": "clerk",
+					"content": {
+						"korean": "자, 정지 버튼을 눌러 숫자가 맞으면 관리자 코드를 주고, 틀리면 내게 골드를 줘요."
+					}
+				}
+			]
+		}
+	],
+	"_side": {
+		"slot": "A",
+		"person": {
+			"id": "clerk",
+			"role": "검색실 단말기 이용과 출력 업무를 관리하는 직원",
+			"name": "단말기 담당자"
+		},
+		"wants": "이력서 직함 날조 데이터를 단말기에 대신 입력받기",
+		"rule_link": "이력서 이름 복구 규격을 이용해 허위 직함을 대리 입력해 달라고 청탁함",
+		"events": {
+			"fun": "담당자가 단말기 관리자 코드를 걸고 슬롯 내기를 제안함"
+		},
+		"flags": {}
+	}
+}

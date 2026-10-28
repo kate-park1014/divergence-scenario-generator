@@ -1,0 +1,187 @@
+{
+	"id": "card_01_benny_mixed_data",
+	"kind": "rep",
+	"title": {
+		"korean": "쏟아지는 고급 정보"
+	},
+	"intensity": "calm",
+	"after_story": 7,
+	"before_story": 10,
+	"condition": {
+		"leaning": "community-",
+		"among": [
+			"fighting-",
+			"fighting+",
+			"community-",
+			"community+",
+			"reason-",
+			"reason+"
+		],
+		"min": 20
+	},
+	"urgency": 8,
+	"leaning": "community-",
+	"background_tags": [
+		"mixed_data",
+		"server_rack",
+		"blue_screen",
+		"messy_cables",
+		"hustle_bustle"
+	],
+	"dialogue": [
+		{
+			"speaker": "echo",
+			"content": {
+				"korean": "저기 봐, 쓸모없는 정보 사이로 암호화된 고급 데이터가 섞여서 나오고 있어."
+			}
+		},
+		{
+			"speaker": "narrator",
+			"content": {
+				"korean": "낡은 서버 랙 옆에서 데이터 브로커가 눈을 반짝이며 당신에게 다가온다."
+			}
+		},
+		{
+			"speaker": "benny",
+			"content": {
+				"korean": "자기 실속은 기가 막히게 챙긴다며? 이 혼란 속에 떨어지는 돈다발이나 주워 담자고."
+			}
+		}
+	],
+	"choices": [
+		{
+			"text": {
+				"korean": "베니와 함께 쓸만한 데이터를 백업해 돈을 번다."
+			},
+			"path": "easy",
+			"mbti": "ST",
+			"flag": "backup_data",
+			"effects": {
+				"gold": 100,
+				"community": -20
+			},
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "당신은 베니가 건넨 백업 장��에 돈이 될 만한 정보들을 쓸어 담았다."
+					}
+				},
+				{
+					"speaker": "echo",
+					"content": {
+						"korean": "챙길 건 다 챙기네. 근데 장치 불빛이 너무 밝은 거 아니야?"
+					}
+				}
+			]
+		},
+		{
+			"text": {
+				"korean": "베니의 제안을 거절하고 섞인 데이터를 포맷한다."
+			},
+			"path": "hard",
+			"mbti": "NF",
+			"flag": "format_data",
+			"effects": {
+				"echo": 10,
+				"community": 20
+			},
+			"reward": [
+				"defense_up"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "당신이 서버를 포맷해 버리자 베니가 머리를 쥐어뜯으며 절망한다."
+					}
+				},
+				{
+					"speaker": "echo",
+					"content": {
+						"korean": "잘했어! 이제 이 빈 서버 뒤에 숨어서 숨 좀 돌리자."
+					}
+				}
+			]
+		},
+		{
+			"text": {
+				"korean": "베니를 속이고 고급 정보만 전부 가로챈다."
+			},
+			"path": "stat",
+			"mbti": "EP",
+			"require": {
+				"stat": "community",
+				"op": "<=",
+				"value": -40
+			},
+			"flag": "steal_data",
+			"effects": {
+				"community": -30,
+				"echo": -5,
+				"gold": 150
+			},
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "베니가 한눈을 판 사이, 당신은 비싼 칩셋만 골라 주머니에 넣���다."
+					}
+				},
+				{
+					"speaker": "echo",
+					"content": {
+						"korean": "동업자까지 속이다니, 정말 대단하다. 나중에 미끼로 쓰기 좋겠어."
+					}
+				}
+			]
+		}
+	],
+	"_side": {
+		"slot": "D",
+		"person": {
+			"id": "benny",
+			"role": "데이터 브로커",
+			"name": "베니"
+		},
+		"wants": "섞여버린 데이터 속에서 돈이 될 정보를 함께 빼돌리자고 함",
+		"rule_link": "혼란 속에서 가치 있는 데이터를 빼돌릴지 복원할지 선택",
+		"events": {},
+		"rep": "community-",
+		"flags": {
+			"backup_data": {
+				"kind": "bad",
+				"boss_penalty": -1,
+				"label": {
+					"korean": "백업 장치 불빛"
+				},
+				"boss_line": {
+					"korean": "백업 장치에서 나는 불빛 때문에 보안관에게 발각된다."
+				}
+			},
+			"format_data": {
+				"kind": "good",
+				"boss_penalty": 1,
+				"label": {
+					"korean": "포맷된 빈 서버"
+				},
+				"boss_choice": {
+					"korean": "포맷된 빈 서버를 방패 삼아 보안관의 무기를 막는다."
+				}
+			},
+			"steal_data": {
+				"kind": "good",
+				"boss_penalty": 2,
+				"label": {
+					"korean": "고급 데이터 칩셋"
+				},
+				"boss_choice": {
+					"korean": "가로챈 고급 데이터 칩셋을 미끼로 던진다."
+				}
+			}
+		}
+	}
+}

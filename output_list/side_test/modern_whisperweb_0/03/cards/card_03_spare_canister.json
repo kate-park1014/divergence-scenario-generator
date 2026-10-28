@@ -1,0 +1,264 @@
+{
+	"id": "card_03_spare_canister",
+	"kind": "rep",
+	"title": {
+		"korean": "여분 통을 내미는 손"
+	},
+	"intensity": "calm",
+	"after_story": 1,
+	"before_story": 3,
+	"condition": {
+		"leaning": "fighting+",
+		"among": [
+			"fighting-",
+			"fighting+",
+			"community-",
+			"community+",
+			"reason-",
+			"reason+"
+		],
+		"min": 20
+	},
+	"urgency": 8,
+	"leaning": "fighting+",
+	"background_tags": [
+		"pipe_room",
+		"afternoon",
+		"flickering_lamp",
+		"one_worker",
+		"hurried"
+	],
+	"dialogue": [
+		{
+			"speaker": "coolant_courier",
+			"content": {
+				"korean": "당신이 그 낯선 사람 챙겨준다는 분이죠? 소문 났어요."
+			}
+		},
+		{
+			"speaker": "narrator",
+			"content": {
+				"korean": "그는 통 하나를 허리에 붙인 채 다른 통은 바닥에 굴려 두고 있었다."
+			}
+		},
+		{
+			"speaker": "coolant_courier",
+			"content": {
+				"korean": "손이 하나뿐이라. 대신 통 옮겨주면 수고비는 챙겨드릴게요."
+			}
+		},
+		{
+			"speaker": "kai",
+			"content": {
+				"korean": "저 통, 옆에 붙은 라벨에 뭐라고 적혀 있는지 보이세요?"
+			}
+		},
+		{
+			"speaker": "coolant_courier",
+			"content": {
+				"korean": "라벨은 신경 쓰지 마요. 물만 옮겨주면 되는 거예요."
+			}
+		}
+	],
+	"choices": [
+		{
+			"text": {
+				"korean": "배달원 대신 냉각수 통을 서버 쪽까지 옮겨준다"
+			},
+			"path": "easy",
+			"mbti": "FJ",
+			"flag": "shelf_screen",
+			"effects": {
+				"community": 15,
+				"echo": 10
+			},
+			"reward": [
+				"heal"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "통을 옮기는 동안 데이터 스크린 조각을 배관 선반에 잠시 올려 두었다."
+					}
+				},
+				{
+					"speaker": "coolant_courier",
+					"content": {
+						"korean": "역시 소문대로네요. 수고비, 여기요."
+					}
+				},
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "선반 위 조각이 미세하게 떨리며 표시가 한 칸 바뀌었다."
+					}
+				}
+			]
+		},
+		{
+			"text": {
+				"korean": "통을 받되 배달원에게 라벨부터 읽어보라고 요구한다"
+			},
+			"path": "hard",
+			"mbti": "TP",
+			"flag": "discard_label",
+			"effects": {
+				"community": -15,
+				"reason": 15,
+				"echo": -5
+			},
+			"reward": [
+				"intelligence_up"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "coolant_courier",
+					"content": {
+						"korean": "하... 폐기 예정분이래요. 그래도 물은 물이잖아요."
+					}
+				},
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "그는 통을 세워 두고 자기 몫 수고비를 챙겨 먼저 나갔다."
+					}
+				},
+				{
+					"speaker": "kai",
+					"content": {
+						"korean": "폐기 예정분이라니. 버리긴 아깝고, 쓰긴 찜찜하고."
+					}
+				}
+			]
+		},
+		{
+			"text": {
+				"korean": "배달원에게 통을 제자리에 두고 손을 잡아당기지 말라고 일러둔다"
+			},
+			"path": "stat",
+			"mbti": "FP",
+			"require": {
+				"stat": "fighting",
+				"op": ">=",
+				"value": 40
+			},
+			"flag": "stacked_canisters",
+			"effects": {
+				"community": 20,
+				"echo": 5,
+				"fighting": 10
+			},
+			"reward": [
+				"defense_up"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "coolant_courier",
+					"content": {
+						"korean": "예전에 당신이 사람들 챙겨서 통로 뚫었다는 얘기, 들었어요. 그럼 믿을게요."
+					}
+				},
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "그는 통을 벽 쪽에 나란히 세우고 빈손으로 물러섰다."
+					}
+				},
+				{
+					"speaker": "kai",
+					"content": {
+						"korean": "통 위치를 저 사람이 기억하고 있으니 나중에 찾기 쉽겠네요."
+					}
+				}
+			]
+		},
+		{
+			"text": {
+				"korean": "배달원에게 동전 80닢을 주고 통을 직접 서버 옆에 두게 한다"
+			},
+			"path": "gold",
+			"mbti": "TJ",
+			"require": {
+				"stat": "gold",
+				"op": ">=",
+				"value": 80
+			},
+			"effects": {
+				"community": -10,
+				"gold": -80
+			},
+			"reward": [
+				"move_range_up"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "coolant_courier",
+					"content": {
+						"korean": "돈이라면야! 두 통 다 서버 옆에 딱 붙여 놓을게요."
+					}
+				},
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "그는 통을 서버 벽에 붙여 놓고 손바닥을 털며 나갔다."
+					}
+				},
+				{
+					"speaker": "kai",
+					"content": {
+						"korean": "발밑에 통이 있으면 나중에 발이 걸리겠는데요."
+					}
+				}
+			]
+		}
+	],
+	"_side": {
+		"slot": "A",
+		"person": {
+			"id": "coolant_courier",
+			"name": "냉각수 배달원",
+			"role": "자재 운반 담당"
+		},
+		"wants": "자기 손이 모자라다며, 냉각수 통을 서버 쪽까지 옮겨줄 사람을 찾는다.",
+		"rule_link": "냉각수를 옮기는 동안 데이터 스크린 조각을 든 채 팔을 쓸 수 없어 조각을 잠시 어딘가에 두어야 한다.",
+		"rep": "fighting+",
+		"events": {},
+		"flags": {
+			"shelf_screen": {
+				"kind": "bad",
+				"boss_penalty": -1,
+				"label": {
+					"korean": "선반에 둔 조각"
+				},
+				"boss_line": {
+					"korean": "선반에 올려 둔 데이터 스크린 조각을 다시 꺼내 든다."
+				}
+			},
+			"discard_label": {
+				"kind": "good",
+				"boss_penalty": 1,
+				"label": {
+					"korean": "폐기 예정 라벨"
+				},
+				"boss_choice": {
+					"korean": "폐기 예정 라벨이 붙은 통을 서버 앞에서 열어 보인다."
+				}
+			},
+			"stacked_canisters": {
+				"kind": "good",
+				"boss_penalty": 2,
+				"label": {
+					"korean": "벽에 세운 통"
+				},
+				"boss_choice": {
+					"korean": "벽에 세워 둔 냉각수 통을 가리켜 위치를 확인한다."
+				}
+			}
+		}
+	}
+}

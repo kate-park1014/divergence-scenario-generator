@@ -1,0 +1,255 @@
+{
+	"id": "card_05_procedure_trap",
+	"kind": "rep",
+	"title": {
+		"korean": "절차서에 없는 조각"
+	},
+	"intensity": "calm",
+	"after_story": 7,
+	"before_story": 10,
+	"condition": {
+		"leaning": "reason-",
+		"among": [
+			"fighting-",
+			"fighting+",
+			"community-",
+			"community+",
+			"reason-",
+			"reason+"
+		],
+		"min": 20
+	},
+	"urgency": 8,
+	"leaning": "reason-",
+	"background_tags": [
+		"control_room",
+		"night",
+		"clipboard",
+		"single_file",
+		"stiff"
+	],
+	"dialogue": [
+		{
+			"speaker": "narrator",
+			"content": {
+				"korean": "안전 점검관이 절차서를 펴 들고 단말기 앞을 가로막았다."
+			}
+		},
+		{
+			"speaker": "safety_inspector",
+			"content": {
+				"korean": "당신이 서명 없이는 손대지 않는다는 사람이죠? 그럼 서명부터 받으시죠."
+			}
+		},
+		{
+			"speaker": "safety_inspector",
+			"content": {
+				"korean": "허가서 없이 조각을 맞추면 이 방 전체를 폐쇄합니다. 규정입니다."
+			}
+		},
+		{
+			"speaker": "echo",
+			"content": {
+				"korean": "폐쇄라니! 그러면 내 정보망 복구도 다 끝이야! 저 점검관, 절차서를 손에서 안 놓네."
+			}
+		}
+	],
+	"choices": [
+		{
+			"text": {
+				"korean": "안전 점검관의 허가서에 서명을 받아 둔다"
+			},
+			"path": "easy",
+			"mbti": "TJ",
+			"flag": "signed_permit",
+			"effects": {
+				"reason": 25,
+				"community": -10,
+				"echo": -5
+			},
+			"reward": [
+				"defense_up"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "점검관이 허가서에 도장을 찍고 절차서에 날짜를 적었다."
+					}
+				},
+				{
+					"speaker": "safety_inspector",
+					"content": {
+						"korean": "좋습니다. 이제 규정 안에서 일하세요. 규정 밖은 안 됩니다."
+					}
+				},
+				{
+					"speaker": "echo",
+					"content": {
+						"korean": "서명 하나 받자고 이 시간을 다 썼어. 근데 이제 뭐라 할 사람은 없네."
+					}
+				}
+			]
+		},
+		{
+			"text": {
+				"korean": "점검관의 절차서를 접어 옆에 두고 조각을 계속 맞춘다"
+			},
+			"path": "hard",
+			"mbti": "FP",
+			"flag": "unverified_repair",
+			"effects": {
+				"reason": -25,
+				"fighting": 15,
+				"echo": 10
+			},
+			"reward": [
+				"attack_up"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "절차서가 단말기 옆으로 밀렸다. 조각 하나가 홈에 걸쭉한 소리를 내며 들어갔다."
+					}
+				},
+				{
+					"speaker": "safety_inspector",
+					"content": {
+						"korean": "이건 기록에 남길 겁니다. 분명히 남길 겁니다."
+					}
+				},
+				{
+					"speaker": "echo",
+					"content": {
+						"korean": "기록에 남아도 지금 조각이 맞는 게 중요하지. 근데 저 사람, 진짜로 남길걸."
+					}
+				}
+			]
+		},
+		{
+			"text": {
+				"korean": "점검관에게 절차서에 조각 맞추기 항목을 추가하게 한다"
+			},
+			"path": "stat",
+			"mbti": "EN",
+			"require": {
+				"stat": "reason",
+				"op": "<=",
+				"value": -40
+			},
+			"flag": "amended_procedure",
+			"effects": {
+				"reason": -25,
+				"community": 10,
+				"echo": 5
+			},
+			"reward": [
+				"intelligence_up"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "점검관이 절차서 여백에 항목을 한 줄 추가하고 서명했다."
+					}
+				},
+				{
+					"speaker": "safety_inspector",
+					"content": {
+						"korean": "이제 규정 안에 들어왔습니다. 당신 이름이면 여백도 채워 주죠."
+					}
+				},
+				{
+					"speaker": "echo",
+					"content": {
+						"korean": "규칙을 규칙대로 이겼네. 이거 은근히 멋있어."
+					}
+				}
+			]
+		},
+		{
+			"text": {
+				"korean": "점검관의 절차서에 자기 이름을 대신 적어 넣는다"
+			},
+			"path": "fun",
+			"mbti": "EP",
+			"effects": {
+				"reason": -25,
+				"community": 15,
+				"echo": -10
+			},
+			"reward": [
+				"cooldown_reset"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "점검관이 절차서를 뒤집어 확인했다. 여백에 당신 이름이 또렷하게 적혀 있었다."
+					}
+				},
+				{
+					"speaker": "safety_inspector",
+					"content": {
+						"korean": "이, 이건 제가 안 썼는데요? 그런데 서명이 있으니 유효합니다."
+					}
+				},
+				{
+					"speaker": "echo",
+					"content": {
+						"korean": "규정을 규정으로 속이다니. 저 점검관 표정 좀 봐."
+					}
+				}
+			]
+		}
+	],
+	"_side": {
+		"slot": "D",
+		"person": {
+			"id": "safety_inspector",
+			"name": "안전 점검관",
+			"role": "야간 안전 점검관"
+		},
+		"wants": "절차서에 없는 방식으로 조각을 맞추면 제어실 전체를 폐쇄하겠다며, 서명된 허가서를 요구한다.",
+		"rule_link": "데이터 스크린 조각을 맞추는 작업은 절차서상 '미검증 수리'라, 점검관은 서명 없는 작업을 그냥 넘길 수 없다고 한다.",
+		"rep": "reason-",
+		"events": {},
+		"flags": {
+			"signed_permit": {
+				"kind": "bad",
+				"boss_penalty": -1,
+				"label": {
+					"korean": "서명된 허가서"
+				},
+				"boss_line": {
+					"korean": "허가서를 홀로그램에 내밀어 놈의 접근 차단 명령을 받아낸다."
+				}
+			},
+			"unverified_repair": {
+				"kind": "good",
+				"boss_penalty": 1,
+				"label": {
+					"korean": "미검증 수리"
+				},
+				"boss_choice": {
+					"korean": "절차서를 무시한 수리 덕에 홀로그램의 안전 회로를 곧장 건너뛴다."
+				}
+			},
+			"amended_procedure": {
+				"kind": "good",
+				"boss_penalty": 2,
+				"label": {
+					"korean": "개정된 절차서"
+				},
+				"boss_choice": {
+					"korean": "개정된 절차서대로 홀로그램의 검증 절차를 통과해 접근 권한을 얻는다."
+				}
+			}
+		}
+	}
+}

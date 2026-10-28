@@ -1,0 +1,303 @@
+{
+	"cards": [
+		{
+			"key": "resume_manipulation",
+			"choices": [
+				{
+					"path": "easy",
+					"text": "민석의 과장된 이력서를 제출함 맨 위에 올려주고 서류 찢기를 미룬다.",
+					"result": [
+						{
+							"speaker": "narrator",
+							"text": "당신은 민석의 서류를 제출함 가장 위쪽으로 옮겨 올려주었다."
+						},
+						{
+							"speaker": "minseok",
+							"text": "고맙습니다! 이제 제 합격표는 안전하게 수거함 상단에 고정되었군요."
+						},
+						{
+							"text": "다른 이력서들이 아래에 갇혀서 찢을 수 없는 상태가 되었어요.",
+							"speaker": "lin"
+						}
+					],
+					"mbti": "FP",
+					"effects": {
+						"echo": 5,
+						"gold": 100,
+						"community": -20
+					},
+					"flag": {
+						"key": "manipulated_resume",
+						"label": "감시 강화",
+						"boss_text": "조작된 서류 제출로 인해 면접관의 감시가 강화되어 대기실 행동에 제약을 받는다."
+					}
+				},
+				{
+					"flag": {
+						"key": "shredded_proof",
+						"label": "거짓 안내 교란",
+						"boss_text": "찢어진 이력서 파편을 이용해 면접장의 거짓 안내 판을 교란한다."
+					},
+					"mbti": "ST",
+					"result": [
+						{
+							"speaker": "narrator",
+							"text": "당신은 민석의 손에서 이력서를 빼앗아 조각조각 찢어버렸다."
+						},
+						{
+							"text": "제 과장 경력이 다 날아가 버렸잖아요! 너무 지나치십니다!",
+							"speaker": "minseok"
+						},
+						{
+							"text": "가짜 이력서가 파괴되면서 제출함의 거짓 반응이 한 풀 꺾였어요.",
+							"speaker": "lin"
+						}
+					],
+					"path": "hard",
+					"text": "민석의 과장된 이력서를 빼앗아 통째로 찢어 버린다.",
+					"effects": {
+						"echo": 10,
+						"fighting": 10,
+						"community": 20
+					},
+					"reward": [
+						"defense_up"
+					]
+				},
+				{
+					"text": "민석의 서류를 빌미로 그의 과장된 경력증명서 원본을 몰수한다.",
+					"path": "stat",
+					"mbti": "TJ",
+					"effects": {
+						"community": -30,
+						"reason": 20,
+						"gold": 150
+					},
+					"reward": [],
+					"result": [
+						{
+							"speaker": "narrator",
+							"text": "당신은 민석의 은밀한 위조 서류를 몰수해 호주머니에 집어넣었다."
+						},
+						{
+							"speaker": "minseok",
+							"text": "당신 소문대로 역시 자기 실속 하나는 무섭게 챙기시는군요."
+						},
+						{
+							"speaker": "lin",
+							"text": "상대의 약점이 담긴 핵심 원본 서류를 확실히 손에 넣었군요."
+						}
+					],
+					"flag": {
+						"boss_text": "민석에게서 빼앗은 경력증명서를 제시해 면접관의 압박 질문을 반박한다.",
+						"label": "경력 증명서 확보",
+						"key": "seized_certificate"
+					}
+				},
+				{
+					"reward": [
+						"intelligence_up"
+					],
+					"result": [
+						{
+							"speaker": "narrator",
+							"text": "금화를 건네받은 민석이 수거함 뒷면의 비상 열쇠를 건넸다."
+						},
+						{
+							"speaker": "minseok",
+							"text": "거래 성립입니다. 열쇠가 있으면 제출함을 직접 통제할 수 있죠."
+						},
+						{
+							"speaker": "lin",
+							"text": "돈으로 열쇠를 구했으니 대기실 조작 장치에 접근할 수 있겠어요."
+						}
+					],
+					"mbti": "TP",
+					"effects": {
+						"echo": -5,
+						"gold": -100
+					},
+					"path": "gold",
+					"text": "민석에게 100골드를 주고 제출함 비상 열쇠를 사들인다."
+				}
+			],
+			"title": "자기 몫의 서류함",
+			"person": {
+				"role": "지원자",
+				"id": "minseok",
+				"name": "민석"
+			},
+			"no": 1,
+			"dialogue": [
+				{
+					"text": "제출함에 쌓인 이력서들 사이로 서류 찢어지는 소리가 작게 새어 나온다.",
+					"speaker": "narrator"
+				},
+				{
+					"text": "저기 민석 씨가 다른 이력서의 귀퉁이만 조용히 찢어서 숨기고 있어요.",
+					"speaker": "lin"
+				},
+				{
+					"speaker": "minseok",
+					"text": "혼란을 틈타 자기 서류만 먼저 빼내 통과하셨던 분이죠?"
+				},
+				{
+					"speaker": "minseok",
+					"text": "수거함 전체를 비우기 전에 제 합격 서류부터 맨 위에 얹게 도와주세요."
+				}
+			],
+			"rule_link": "과장된 이력서의 귀퉁이를 일부 파기해 개인의 통과 기준을 조작한다.",
+			"wants": "자신의 과장 이력서만 수거함 맨 위에 올려 안전하게 면접장에 들어가고자 함",
+			"background_tags": [
+				"waiting_room",
+				"dim_light",
+				"crowded",
+				"paper_littered",
+				"tense"
+			],
+			"slot": "D",
+			"kind": "rep",
+			"rep_dir": "community-"
+		},
+		{
+			"key": "collective_shredding",
+			"title": "모두의 대기표",
+			"no": 2,
+			"dialogue": [
+				{
+					"text": "안내원 유리가 굳은 표정으로 과장 서명 수첩을 손에 쥐고 서 있다.",
+					"speaker": "narrator"
+				},
+				{
+					"speaker": "lin",
+					"text": "대기실 마비가 심해지자 유리가 수첩의 귀퉁이를 조금씩 찢고 있어요."
+				},
+				{
+					"speaker": "yuri",
+					"text": "억울하게 갇힌 지원자들을 위해 과장 서류함을 대신 부숴주셨던 분 맞죠?"
+				},
+				{
+					"speaker": "yuri",
+					"text": "이 서명 수첩의 과장 항목만 살짝 찢어서 대기자 전원의 수속을 앞당겨요."
+				}
+			],
+			"background_tags": [
+				"waiting_room",
+				"bright_light",
+				"crowded",
+				"paper_scattered",
+				"urgent"
+			],
+			"rule_link": "과장 서류 수첩의 일부를 찢어 대기자 전원의 대기 시간을 단축시킨다.",
+			"wants": "과장 서명 수첩을 부분 파기해 대기실 전원의 수속을 빠르게 마치고자 함",
+			"choices": [
+				{
+					"result": [
+						{
+							"text": "당신은 유리의 과장 서명 수첩 모서리만 살짝 찢어 수속을 끝냈다.",
+							"speaker": "narrator"
+						},
+						{
+							"speaker": "yuri",
+							"text": "임시 조치지만 덕분에 대기실 사람들의 수속이 일단 시작되었어요!"
+						},
+						{
+							"text": "하지만 남은 과장 서류들이 수거함에 그대로 쌓여 있습니다.",
+							"speaker": "lin"
+						}
+					],
+					"flag": {
+						"key": "crowded_entrance",
+						"boss_text": "서둘러 들어온 불완전한 지원자들 때문에 면접장 입구가 혼잡해진다.",
+						"label": "입구 혼잡"
+					},
+					"text": "유리를 도와 과장 서명 수첩의 귀퉁이만 소량 찢어 인원들을 통과시킨다.",
+					"path": "easy",
+					"effects": {
+						"reason": 10,
+						"fighting": -20,
+						"community": 10
+					},
+					"mbti": "SF",
+					"reward": [
+						"attack_up"
+					]
+				},
+				{
+					"mbti": "NT",
+					"result": [
+						{
+							"text": "당신은 수거함으로 걸어가 과장된 서류 뭉치를 쏟아내고 전부 찢었다.",
+							"speaker": "narrator"
+						},
+						{
+							"text": "서류함을 통째로 파기하시다니! 과장된 규칙이 통째로 날아갔어요.",
+							"speaker": "yuri"
+						},
+						{
+							"text": "대기실 전체를 가로막던 허위 서류의 고리가 완전히 끊어졌어요.",
+							"speaker": "lin"
+						}
+					],
+					"text": "일부만 찢는 편법을 거부하고 수거함의 남은 과장 서류 전량을 찢어버린다.",
+					"path": "hard",
+					"flag": {
+						"key": "shredded_barrier",
+						"boss_text": "완전히 파기된 이력서 가루가 대기실 안내 장치의 차단 벽을 무력화한다.",
+						"label": "차단 벽 무력화"
+					},
+					"effects": {
+						"reason": -10,
+						"community": 20,
+						"fighting": 20
+					},
+					"reward": [
+						"defense_up"
+					]
+				},
+				{
+					"reward": [
+						"shield"
+					],
+					"path": "stat",
+					"result": [
+						{
+							"speaker": "narrator",
+							"text": "당신이 외치자 대기실 지원자들이 들고 있던 과장 서류를 함께 찢었다."
+						},
+						{
+							"text": "모두가 한마음으로 거짓 서류를 거부하다니, 정말 대단한 광경이에요!",
+							"speaker": "yuri"
+						},
+						{
+							"text": "용기 있는 행동에 감명받은 지원자들이 우리 편에 섰습니다.",
+							"speaker": "lin"
+						}
+					],
+					"text": "대기실 모든 지원자를 설득해 과장 서류를 일제히 찢어버리게 한다.",
+					"mbti": "NF",
+					"flag": {
+						"boss_text": "일제히 서류를 찢은 지원자 연합이 면접장의 진입 통로를 확보해준다.",
+						"key": "applicant_alliance",
+						"label": "지원자 연합 지원"
+					},
+					"effects": {
+						"echo": 15,
+						"community": 30,
+						"fighting": 10
+					}
+				}
+			],
+			"person": {
+				"role": "대기실 안내원",
+				"name": "유리",
+				"id": "yuri"
+			},
+			"slot": "D",
+			"kind": "rep",
+			"rep_dir": "community+"
+		}
+	],
+	"errors": [],
+	"prompt_hash": "8cd6580452a632e8a899ae8c0220c825f37e9bc4"
+}

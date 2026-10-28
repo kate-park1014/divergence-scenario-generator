@@ -1,0 +1,145 @@
+{
+	"id": "card_02_worker_cables",
+	"kind": "plant",
+	"title": {
+		"korean": "멈춘 전력실의 수리"
+	},
+	"intensity": "calm",
+	"after_story": 3,
+	"before_story": 5,
+	"background_tags": [
+		"silent_room",
+		"heavy_cables",
+		"tool_belt",
+		"dust_particles",
+		"faint_heat"
+	],
+	"dialogue": [
+		{
+			"speaker": "repair_worker",
+			"content": {
+				"korean": "시스템 전원이 꺼졌잖아! 이 틈에 밀린 케이블 수리를 해치워야겠어."
+			}
+		},
+		{
+			"speaker": "repair_worker",
+			"content": {
+				"korean": "데이터 스크린 조각이 박힌 저 무거운 케이블 좀 꽉 잡아줘. 금방 끝낼 테니까."
+			}
+		},
+		{
+			"speaker": "lin",
+			"content": {
+				"korean": "전원이 언제 다시 들어올지 모르는데 너무 위험해요."
+			}
+		},
+		{
+			"speaker": "lin",
+			"content": {
+				"korean": "무리하지 말고 안전한 곳으로 대피하는 게 좋지 않을까요?"
+			}
+		}
+	],
+	"choices": [
+		{
+			"text": {
+				"korean": "케이블을 잡아주어 수리가 빠르게 진행되도록 돕는다."
+			},
+			"path": "easy",
+			"mbti": "ES",
+			"effects": {
+				"gold": 50,
+				"community": 20,
+				"echo": 10,
+				"reason": -10
+			},
+			"seed": "worker_cables_easy",
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "당신이 무거운 케이블을 잡아준 덕분에 해리슨은 순식간에 수리를 마쳤다."
+					}
+				},
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "그는 고맙다며 수당의 일부를 나눠주었고, 단단히 고정된 케이블이 남았다."
+					}
+				}
+			]
+		},
+		{
+			"text": {
+				"korean": "수리를 미루고 안전한 곳으로 대피하라고 한다."
+			},
+			"path": "hard",
+			"mbti": "IN",
+			"effects": {
+				"echo": -10,
+				"reason": 20,
+				"community": -10
+			},
+			"reward": [
+				"move_range_up"
+			],
+			"seed": "worker_cables_hard",
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "당신이 위험하다며 말리자 해리슨은 아쉬워하며 연장을 챙겨 물러났다."
+					}
+				},
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "수리되지 않은 케이블은 바닥에 널브러진 채 방치되었다."
+					}
+				}
+			]
+		},
+		{
+			"text": {
+				"korean": "{actor}이(가) 케이블을 잡아당겨 끊어버린다."
+			},
+			"path": "fun",
+			"mbti": "EN",
+			"effects": {
+				"reason": -10,
+				"fighting": 20,
+				"community": -20
+			},
+			"reward": [
+				"intelligence_up"
+			],
+			"seed": "worker_cables_hard",
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "{actor}이(가) 케이블을 확 잡아당기자 낡은 선이 툭 끊어졌다."
+					}
+				},
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "해리슨은 경악하며 도망쳤고, 당신은 끊어진 선 사이에서 작은 칩을 주웠다."
+					}
+				}
+			]
+		}
+	],
+	"_side": {
+		"slot": "B",
+		"person": {
+			"name": "해리슨",
+			"role": "전력실 수리공",
+			"id": "repair_worker"
+		},
+		"wants": "시스템 전원이 꺼진 김에 위험한 케이블 수리를 빨리 끝내려 하며 옆에서 케이블을 잡아달라고 한다.",
+		"rule_link": "시스템 전원이 꺼진 고요함이 누군가에게는 위험한 작업을 강행할 기회가 됨.",
+		"events": {},
+		"flags": {}
+	}
+}

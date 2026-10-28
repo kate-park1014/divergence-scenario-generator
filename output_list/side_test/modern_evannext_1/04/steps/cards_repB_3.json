@@ -1,0 +1,319 @@
+{
+	"cards": [
+		{
+			"no": 1,
+			"rule_link": "이력서 서류의 성적 수치를 수화 교육 앱으로 자동 과장할지 여부를 결정한다.",
+			"key": "strict_rule_resume",
+			"wants": "수강생들의 취업을 위해 이력서 성적 자동 과장 기능을 앱에 켜 달라고 요청한다.",
+			"choices": [
+				{
+					"mbti": "TJ",
+					"path": "easy",
+					"reward": [],
+					"effects": {
+						"echo": -5,
+						"fighting": 15,
+						"community": 10,
+						"reason": -20,
+						"gold": 100
+					},
+					"text": "앱의 이력서 점수 과장 기능을 끄고 연습 노트의 실제 점수만 기록한다",
+					"flag": {
+						"label": "엄격한 성적 기록",
+						"key": "strict_resume_record",
+						"boss_text": "연습실 수강생들의 이력서 수화 점수가 과장되지 않아 면접 서류 전형 통과율이 낮아진다."
+					},
+					"result": [
+						{
+							"text": "\"규칙대로만 쓰면 수강생 절반은 면접 서류에서 떨어질 텐데요. 아쉽군요.\"",
+							"speaker": "instructor_han"
+						},
+						{
+							"text": "\"제 원칙을 지키는 것도 좋지만, 연습실 사람들의 사정도 가슴 아파요.\"",
+							"speaker": "lin"
+						},
+						{
+							"speaker": "narrator",
+							"text": "\"수화 교육 앱의 이력서 점수 과장 알고리즘이 비활성화된 채 배포되었다.\""
+						}
+					]
+				},
+				{
+					"reward": [
+						"intelligence_up"
+					],
+					"text": "수강생들의 이력서 수화 점수가 높게 나오도록 자동 과장 기능을 켜 준다",
+					"result": [
+						{
+							"text": "\"고맙습니다! 이 기록이라면 다들 면접 대기실에서 큰 기회를 얻을 겁니다.\"",
+							"speaker": "instructor_han"
+						},
+						{
+							"text": "\"다들 손짓으로 기뻐하고 있어요. 저도 왠지 마음이 뿌듯해지네요!\"",
+							"speaker": "lin"
+						},
+						{
+							"speaker": "narrator",
+							"text": "\"앱을 통해 수강생들의 이력서 수화 숙련도가 실제보다 훨씬 높게 자동 입력되었다.\""
+						}
+					],
+					"flag": {
+						"label": "이력서 점수 과장",
+						"key": "boosted_resume_score",
+						"boss_text": "이력서 수화 점수가 자동으로 부풀려져 수강생 전원이 서류 심사를 손쉽게 통과한다."
+					},
+					"mbti": "FP",
+					"effects": {
+						"gold": 0,
+						"fighting": -15,
+						"echo": 10,
+						"reason": 20,
+						"community": -10
+					},
+					"path": "hard"
+				},
+				{
+					"reward": [
+						"shield"
+					],
+					"effects": {
+						"fighting": 0,
+						"gold": 0,
+						"reason": -30,
+						"community": 15,
+						"echo": 15
+					},
+					"text": "법률 규정집을 제시하며 과장 없이도 인정받는 공식 수료 인장을 찍어 준다",
+					"flag": {
+						"label": "공식 수료 인장",
+						"key": "official_seal_issued",
+						"boss_text": "공식 수료 인장이 찍힌 표준 이력서 덕분에 보스 방에서 정당한 대우를 요구할 수 있다."
+					},
+					"result": [
+						{
+							"speaker": "instructor_han",
+							"text": "\"규정을 이렇게 활용하다니! 과장 없이도 정식 인정 도장을 찍을 수 있겠군요.\""
+						},
+						{
+							"text": "\"원칙을 지키면서도 다들을 돕는 길을 찾으셨군요. 역시 대단해요!\"",
+							"speaker": "lin"
+						},
+						{
+							"text": "\"원칙을 엄수하는 평판 덕분에 이력서 과장 없이 규정집을 활용한 공식 수료증이 완성되었다.\"",
+							"speaker": "narrator"
+						}
+					],
+					"mbti": "TP",
+					"path": "stat"
+				}
+			],
+			"title": "규칙을 엄수하는 사람",
+			"person": {
+				"name": "강사 한",
+				"role": "수강생들의 연습 노트와 이력서 성적을 관리하는 강사",
+				"id": "instructor_han"
+			},
+			"background_tags": [
+				"practice_room",
+				"daylight",
+				"bright",
+				"crowded",
+				"tense"
+			],
+			"dialogue": [
+				{
+					"text": "\"강사 한이 수강생들의 수화 연습 노트와 이력서 서류 뭉치를 들고 다가왔다.\"",
+					"speaker": "narrator"
+				},
+				{
+					"speaker": "instructor_han",
+					"text": "\"이력서 서류 제출 양식까지 법률 조항에 맞춰 칼같이 검토하신다는 분이군요.\""
+				},
+				{
+					"text": "\"완성된 교육 앱에 수강생들의 이력서 성적을 자동 과장해 주는 기능을 슬쩍 켜 주실 수 있나요?\"",
+					"speaker": "instructor_han"
+				},
+				{
+					"speaker": "lin",
+					"text": "\"목소리를 잃은 수강생들과 소통을 돕는 것도 중요하지만, 이력서 성적을 거짓으로 올려도 괜찮을까요?\""
+				}
+			],
+			"slot": "B",
+			"kind": "rep",
+			"rep_dir": "reason-"
+		},
+		{
+			"key": "free_spirit_resume",
+			"background_tags": [
+				"practice_room",
+				"afternoon",
+				"warm",
+				"noisy",
+				"playful"
+			],
+			"person": {
+				"name": "수강생 민",
+				"id": "student_min",
+				"role": "수화 연습실에서 수화를 빨리 배우고 싶어 하는 수강생"
+			},
+			"title": "마음 가는 대로 하는 사람",
+			"no": 2,
+			"dialogue": [
+				{
+					"speaker": "narrator",
+					"text": "\"수강생 민이 손짓을 크고 화려하게 흔들며 앱 화면 앞으로 달려왔다.\""
+				},
+				{
+					"speaker": "student_min",
+					"text": "\"원래 표준 규정 따위 싹 무시하고 당신만의 방식대로 앱을 짜 버리신 분 맞죠?\""
+				},
+				{
+					"speaker": "student_min",
+					"text": "\"제 이력서에 수화 숙련도 라벨을 고급 통역사 수준으로 확 과장해서 박아주세요!\""
+				},
+				{
+					"speaker": "lin",
+					"text": "\"수강생들이 손짓으로 신나게 대화하고는 있지만, 이력서에 거짓 정보를 넣는 건 위험하지 않을까요?\""
+				}
+			],
+			"rule_link": "이력서 서류의 숙련도 라벨을 수화 교육 앱으로 과장하여 부풀릴지 여부를 정한다.",
+			"wants": "면접관들을 사로잡기 위해 자신의 이력서 수화 숙련도 라벨을 앱으로 과장해 달라고 떼를 쓴다.",
+			"choices": [
+				{
+					"flag": {
+						"label": "과장된 숙련도 라벨",
+						"key": "fake_master_badge",
+						"boss_text": "수강생들의 이력서 숙련도 표시가 최고 등급으로 과장되어 면접관들의 눈길을 끈다."
+					},
+					"text": "민의 이력서 수화 숙련도 라벨을 앱 알고리즘으로 즉시 만점으로 과장해 준다",
+					"reward": [
+						"attack_up"
+					],
+					"effects": {
+						"community": 10,
+						"echo": 10,
+						"fighting": -10,
+						"reason": 20,
+						"gold": 0
+					},
+					"path": "easy",
+					"mbti": "EP",
+					"result": [
+						{
+							"speaker": "student_min",
+							"text": "\"야호! 이 이력서 뱃지라면 면접장에서 날 거절할 사람은 아무도 없을 거예요!\""
+						},
+						{
+							"text": "\"앱 덕분에 다들 자신감을 얻은 표정이에요. 결과가 좋으면 된 거겠죠?\"",
+							"speaker": "lin"
+						},
+						{
+							"text": "\"수강생 민의 이력서 수화 숙련도 라벨이 최상위 통역사 단계로 자동 보정되었다.\"",
+							"speaker": "narrator"
+						}
+					]
+				},
+				{
+					"result": [
+						{
+							"speaker": "student_min",
+							"text": "\"칫, 진짜 단호하시네요. 기초 단계라고 사실대로 적히다니 쑥스러운데요.\""
+						},
+						{
+							"text": "\"조금 아쉽지만, 거짓 이력서보다는 차라리 솔직한 연습 기록이 나을 거예요.\"",
+							"speaker": "lin"
+						},
+						{
+							"speaker": "narrator",
+							"text": "\"앱의 성적 자동 과장 기능이 거절되고 실제 초보 숙련도가 이력서에 정확히 기록되었다.\""
+						}
+					],
+					"effects": {
+						"community": -15,
+						"gold": 100,
+						"fighting": 10,
+						"reason": -20,
+						"echo": -5
+					},
+					"text": "과장 요청을 거절하고 연습실 노트의 실제 기초 숙련도대로 앱에 입력한다",
+					"flag": {
+						"key": "honest_novice_label",
+						"boss_text": "수강생들의 솔직한 이력서 점수 때문에 면접관들이 수화 능력을 의심하게 된다.",
+						"label": "솔직한 초보 라벨"
+					},
+					"reward": [],
+					"mbti": "FJ",
+					"path": "hard"
+				},
+				{
+					"text": "표준 성적 양식을 깨고 앱 안에서 자신만의 입체 수화 이력서 영상을 녹화하게 개방한다",
+					"flag": {
+						"boss_text": "이력서에 내장된 입체 수화 시연 영상 덕분에 면접장에서 별도의 언어 검수를 생략받는다.",
+						"label": "입체 수화 이력서",
+						"key": "freestyle_video_resume"
+					},
+					"reward": [
+						"move_range_up"
+					],
+					"effects": {
+						"community": 20,
+						"gold": 0,
+						"reason": 30,
+						"echo": 15,
+						"fighting": 0
+					},
+					"mbti": "NT",
+					"path": "stat",
+					"result": [
+						{
+							"speaker": "student_min",
+							"text": "\"와! 형식적 성적표 대신 제 손짓 영상을 직접 보여주는 방식으로 바꿔주시다니!\""
+						},
+						{
+							"text": "\"틀에 얽매이지 않는 해결책이네요! 다들 자기만의 손짓을 신나게 녹화하고 있어요.\"",
+							"speaker": "lin"
+						},
+						{
+							"text": "\"자유로운 방식을 선호하는 평판 덕분에 이력서 텍스트를 대체하는 획기적인 영상 시연 기능이 추가되었다.\"",
+							"speaker": "narrator"
+						}
+					]
+				},
+				{
+					"effects": {
+						"echo": 5,
+						"fighting": 0,
+						"reason": 10,
+						"community": 5,
+						"gold": 150
+					},
+					"result": [
+						{
+							"text": "\"어라? 수화 숙련도 칸에 화려한 비보잉 댄스 아이콘이 찍혔는데요? 대박!\"",
+							"speaker": "student_min"
+						},
+						{
+							"text": "\"이력서에 수화 점수 대신 춤 동작 코드가 들어가다니, 면접관들이 엄청 깜짝 놀라겠어요!\"",
+							"speaker": "lin"
+						},
+						{
+							"speaker": "narrator",
+							"text": "\"이력서 성적 데이터 입력란에 화려한 손재주 댄스 동작 코드가 잘못 입력되어 저장되었다.\""
+						}
+					],
+					"path": "fun",
+					"reward": [
+						"heal"
+					],
+					"mbti": "NF",
+					"text": "이력서 숙련도 란에 점수 대신 화려한 손재주 댄스 동작 코드를 과장해 입력한다"
+				}
+			],
+			"slot": "B",
+			"kind": "rep",
+			"rep_dir": "reason+"
+		}
+	],
+	"errors": [],
+	"prompt_hash": "e9b8ca1c90c95ba001b056832de973851590ade2"
+}

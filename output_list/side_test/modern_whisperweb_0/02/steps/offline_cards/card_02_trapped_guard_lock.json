@@ -1,0 +1,223 @@
+{
+	"id": "card_02_trapped_guard_lock",
+	"kind": "rep",
+	"title": {
+		"korean": "손이 끼인 요원"
+	},
+	"intensity": "calm",
+	"after_story": 7,
+	"before_story": 10,
+	"condition": {
+		"leaning": "reason-",
+		"among": [
+			"fighting-",
+			"fighting+",
+			"community-",
+			"community+",
+			"reason-",
+			"reason+"
+		],
+		"min": 20
+	},
+	"urgency": 8,
+	"leaning": "reason-",
+	"background_tags": [
+		"server_room",
+		"emergency_lights",
+		"locked_door",
+		"sparks",
+		"tense"
+	],
+	"dialogue": [
+		{
+			"speaker": "narrator",
+			"content": {
+				"korean": "시스템 전원이 차단되면서 오작동한 비상 잠금장치에 보안 요원의 손이 끼어 있었다."
+			}
+		},
+		{
+			"speaker": "sylvia",
+			"content": {
+				"korean": "매뉴얼대로만 깐깐하게 구는 녀석이 있다더니, 딱 당신이군. 이거 좀 풀어줘!"
+			}
+		},
+		{
+			"speaker": "narrator",
+			"content": {
+				"korean": "그녀는 손이 끼어 고통스러운 와중에도 두꺼운 규정집을 입에 물고 있었다."
+			}
+		},
+		{
+			"speaker": "lin",
+			"content": {
+				"korean": "손이 으스러지겠어요! 빨리 장치를 해제해야 해요!"
+			}
+		}
+	],
+	"choices": [
+		{
+			"text": {
+				"korean": "보안 요원에게 규정 위반을 지적하며 보고서를 쓰게 한다."
+			},
+			"path": "easy",
+			"mbti": "TJ",
+			"flag": "rule_obsession",
+			"effects": {
+				"reason": -20,
+				"echo": 5,
+				"gold": 100
+			},
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "당신이 규정을 읊어대자 실비아는 억울한 표정으로 고개를 끄덕였다."
+					}
+				},
+				{
+					"speaker": "sylvia",
+					"content": {
+						"korean": "알았으니까 보고서 쓸 테니까 이 손 좀 빼주라고!"
+					}
+				}
+			]
+		},
+		{
+			"text": {
+				"korean": "규정을 무시하고 잠금장치를 강제로 박살 내어 구출한다."
+			},
+			"path": "hard",
+			"mbti": "FP",
+			"flag": "broken_lock",
+			"effects": {
+				"echo": -5,
+				"reason": 20
+			},
+			"reward": [
+				"attack_up"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "당신이 잠금장치를 박살 내자 경고음이 울리며 손이 빠져나왔다."
+					}
+				},
+				{
+					"speaker": "lin",
+					"content": {
+						"korean": "이러면 나중에 문책당할 텐데요! 뭐, 일단 구했으니 됐죠."
+					}
+				}
+			]
+		},
+		{
+			"text": {
+				"korean": "비상 매뉴얼의 허점을 찾아내 합법적으로 잠금장치를 해제한다."
+			},
+			"path": "stat",
+			"mbti": "ST",
+			"require": {
+				"stat": "reason",
+				"op": "<=",
+				"value": -40
+			},
+			"flag": "manual_exploit",
+			"effects": {
+				"reason": -30,
+				"echo": 10
+			},
+			"reward": [
+				"intelligence_up"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "당신은 매뉴얼의 예외 조항을 이용해 시스템을 합법적으로 해제했다."
+					}
+				},
+				{
+					"speaker": "sylvia",
+					"content": {
+						"korean": "그런 조항이 있었다고? 역시 소문대로 철저하군."
+					}
+				}
+			]
+		},
+		{
+			"text": {
+				"korean": "요원의 입에 물린 규정집을 빼앗아 부채질을 해준다."
+			},
+			"path": "fun",
+			"mbti": "EP",
+			"effects": {
+				"reason": 10,
+				"gold": 50,
+				"echo": -10
+			},
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "당신은 실비아의 입에서 규정집을 빼앗아 여유롭게 부채질을 했다."
+					}
+				},
+				{
+					"speaker": "sylvia",
+					"content": {
+						"korean": "내 규정집 돌려줘! 지금 장난할 때가 아니잖아!"
+					}
+				}
+			]
+		}
+	],
+	"_side": {
+		"slot": "D",
+		"person": {
+			"id": "sylvia",
+			"name": "실비아",
+			"role": "보안 요원"
+		},
+		"wants": "오작동한 잠금장치에 낀 손을 규정에 맞게 빼내달라고 한다.",
+		"rule_link": "시스템 전원 차단으로 비상 잠금장치가 오작동하는 상황에서 대처 결정",
+		"rep": "reason-",
+		"events": {},
+		"flags": {
+			"rule_obsession": {
+				"kind": "bad",
+				"boss_penalty": -1,
+				"label": {
+					"korean": "규정 집착"
+				},
+				"boss_line": {
+					"korean": "규정을 따지느라 경비원의 기습에 늦게 반응한다."
+				}
+			},
+			"broken_lock": {
+				"kind": "good",
+				"boss_penalty": 1,
+				"label": {
+					"korean": "부서진 잠금장치"
+				},
+				"boss_choice": {
+					"korean": "부서진 비상 잠금장치 파편을 경비원에게 던진다."
+				}
+			},
+			"manual_exploit": {
+				"kind": "good",
+				"boss_penalty": 2,
+				"label": {
+					"korean": "매뉴얼의 허점"
+				},
+				"boss_choice": {
+					"korean": "매뉴얼에 적힌 사각지대로 이동해 공격을 피한다."
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,188 @@
+{
+	"id": "card_04_mixed_box",
+	"kind": "normal",
+	"title": {
+		"korean": "정체불명의 상자"
+	},
+	"intensity": "calm",
+	"after_story": 5,
+	"before_story": 7,
+	"background_tags": [
+		"torn",
+		"box",
+		"waste",
+		"lights",
+		"floor"
+	],
+	"dialogue": [
+		{
+			"speaker": "narrator",
+			"content": {
+				"korean": "제이스가 라벨이 찢어진 상자 위에 걸터앉아 손을 흔든다."
+			}
+		},
+		{
+			"speaker": "jace",
+			"content": {
+				"korean": "어차피 라벨이 다 섞여서 뭐가 1급 위험물인지 아무도 몰라."
+			}
+		},
+		{
+			"speaker": "jace",
+			"content": {
+				"korean": "이 상자에 값비싼 부품이 들었을지, 폭발물이 들었을지 나랑 내기할래?"
+			}
+		},
+		{
+			"speaker": "dax",
+			"content": {
+				"korean": "위험 폐기물이 섞인 마당에 내기라니, 제정신이야?"
+			}
+		}
+	],
+	"choices": [
+		{
+			"text": {
+				"korean": "상자 안에 값비싼 부품이 들어있을 거라며 제이스의 내기에 돈을 건다."
+			},
+			"path": "easy",
+			"mbti": "EF",
+			"effects": {
+				"reason": -10,
+				"gold": -20
+			},
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "당신은 내기에 참여해 상자의 내용물을 확인하기로 했다."
+					}
+				},
+				{
+					"speaker": "jace",
+					"content": {
+						"korean": "과연 네 운이 얼마나 좋을지 한번 볼까?"
+					}
+				}
+			],
+			"event": "minigame_slot",
+			"event_intro": [
+				{
+					"speaker": "jace",
+					"content": {
+						"korean": "좋아! 판돈을 걸었으니 이제 상자를 열어 결과를 확인해 보자고!"
+					}
+				}
+			]
+		},
+		{
+			"text": {
+				"korean": "비상 상황에 내기를 할 때가 아니라며 상자를 위험 폐기물로 격리한다."
+			},
+			"path": "hard",
+			"mbti": "IJ",
+			"effects": {
+				"reason": 10,
+				"echo": -10
+			},
+			"reward": [
+				"shield"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "당신이 내기를 무시하고 상자를 안전 구역으로 밀어 넣었다."
+					}
+				},
+				{
+					"speaker": "jace",
+					"content": {
+						"korean": "아쉽네, 스릴을 즐길 줄 모르는 녀석."
+					}
+				}
+			]
+		},
+		{
+			"text": {
+				"korean": "제이스에게 크레딧을 주며 위험하니 스캔 장비로 내용물을 확인하게 한다."
+			},
+			"path": "gold",
+			"mbti": "TJ",
+			"require": {
+				"stat": "gold",
+				"op": ">=",
+				"value": 50
+			},
+			"effects": {
+				"gold": -50,
+				"reason": 10
+			},
+			"reward": [
+				"defense_up"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "당신이 돈을 쥐여주자 제이스가 군말 없이 스캐너를 켠다."
+					}
+				},
+				{
+					"speaker": "jace",
+					"content": {
+						"korean": "뭐, 돈을 준다면야 굳이 목숨 걸고 내기할 필요 없지."
+					}
+				}
+			]
+		},
+		{
+			"text": {
+				"korean": "{actor}이(가) 상자 외부의 화학 반응 흔적을 스캔해 내용물이 부품임을 증명한다."
+			},
+			"path": "lock",
+			"mbti": "ST",
+			"require": {
+				"mbti": "ST"
+			},
+			"effects": {
+				"reason": 10
+			},
+			"reward": [
+				"intelligence_up"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "{actor}이(가) 스캐너를 들이대어 안전한 부품 상자임을 밝혀냈다."
+					}
+				},
+				{
+					"speaker": "jace",
+					"content": {
+						"korean": "쳇, 과학 장비 앞에서는 내기가 성립 안 되지. 가져가라."
+					}
+				}
+			]
+		}
+	],
+	"_side": {
+		"slot": "C",
+		"person": {
+			"id": "jace",
+			"role": "폐기물 수거원",
+			"name": "제이스"
+		},
+		"wants": "라벨이 섞여 내용물을 알 수 없는 상자를 두고 무엇이 들었는지 내기를 제안한다.",
+		"rule_link": "데이터 스크린 조각에 금이 가면서 폐기물 상자의 분류 라벨이 모두 엉터리로 바뀌었다.",
+		"events": {
+			"easy": "제이스가 상자의 내용물을 확인하며 룰렛을 돌리듯 결과를 확인한다."
+		},
+		"flags": {}
+	}
+}

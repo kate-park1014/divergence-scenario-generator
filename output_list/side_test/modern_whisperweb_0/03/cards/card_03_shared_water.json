@@ -1,0 +1,257 @@
+{
+	"id": "card_03_shared_water",
+	"kind": "rep",
+	"title": {
+		"korean": "나눠 마실 물"
+	},
+	"intensity": "calm",
+	"after_story": 7,
+	"before_story": 10,
+	"condition": {
+		"leaning": "community+",
+		"among": [
+			"fighting-",
+			"fighting+",
+			"community-",
+			"community+",
+			"reason-",
+			"reason+"
+		],
+		"min": 20
+	},
+	"urgency": 8,
+	"leaning": "community+",
+	"background_tags": [
+		"pipe_room",
+		"dim",
+		"dust",
+		"crowd",
+		"tense"
+	],
+	"dialogue": [
+		{
+			"speaker": "narrator",
+			"content": {
+				"korean": "작업반장이 깨진 스크린 앞에서 이름 목록을 손가락으로 훑고 있었다."
+			}
+		},
+		{
+			"speaker": "thirsty_crew",
+			"content": {
+				"korean": "당신이요, 아까 사람들 빼내 준 사람. 우리 반 애들 이름이 화면에서 다 섞였어요."
+			}
+		},
+		{
+			"speaker": "kai",
+			"content": {
+				"korean": "저 사람 손에 물병이 하나뿐이야. 반원은 여섯인데."
+			}
+		},
+		{
+			"speaker": "thirsty_crew",
+			"content": {
+				"korean": "제 물을 나눠 주면 애들 버틸 거예요. 화면은 당신이 좀 봐 주고요."
+			}
+		},
+		{
+			"speaker": "thirsty_crew",
+			"content": {
+				"korean": "여섯 명 중에 둘은 벌써 연락이 끊겼어요. 이름이라도 찾아야죠."
+			}
+		}
+	],
+	"choices": [
+		{
+			"text": {
+				"korean": "작업반장의 물병을 받아 반원들에게 돌리고, 남은 물은 당신이 마신다."
+			},
+			"path": "easy",
+			"mbti": "FJ",
+			"flag": "crew_rested",
+			"effects": {
+				"community": 15,
+				"echo": 5
+			},
+			"reward": [
+				"heal"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "thirsty_crew",
+					"content": {
+						"korean": "고맙습니다. 애들이 숨 좀 돌렸어요."
+					}
+				},
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "물병이 빙 돌아오자 반원들이 벽에 기대 앉았다. 작업반장이 당신 어깨를 한 번 두드렸다."
+					}
+				},
+				{
+					"speaker": "kai",
+					"content": {
+						"korean": "물병이 돌아왔는데 반쯤 비었네. 그래도 다들 숨은 붙였어."
+					}
+				}
+			]
+		},
+		{
+			"text": {
+				"korean": "물은 작업반장에게 남겨 두고, 당신이 뒤섞인 화면에서 여섯 이름을 직접 찾아낸다."
+			},
+			"path": "hard",
+			"mbti": "TJ",
+			"flag": "found_names",
+			"effects": {
+				"community": -10,
+				"reason": 15
+			},
+			"reward": [
+				"intelligence_up"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "thirsty_crew",
+					"content": {
+						"korean": "이름이... 여기 있네요. 둘 다 살아 있어요!"
+					}
+				},
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "당신이 짚은 두 이름 옆에 작은 점이 깜빡였다. 작업반장이 물병을 쥔 채 그 화면을 들여다봤다."
+					}
+				},
+				{
+					"speaker": "kai",
+					"content": {
+						"korean": "이름 두 개가 살아 있는 게 보여. 근데 물은 아직 그대로네."
+					}
+				}
+			]
+		},
+		{
+			"text": {
+				"korean": "작업반장에게 반원들을 당신 뒤에 붙이라고 하고, 물은 전부 반원들에게 넘긴다."
+			},
+			"path": "stat",
+			"mbti": "FP",
+			"require": {
+				"stat": "community",
+				"op": ">=",
+				"value": 40
+			},
+			"flag": "crew_behind",
+			"effects": {
+				"community": 20,
+				"echo": 10
+			},
+			"reward": [
+				"defense_up"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "thirsty_crew",
+					"content": {
+						"korean": "당신 뒤에 서라고요? ...좋아요, 애들아 이쪽으로 붙어!"
+					}
+				},
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "반원 여섯이 당신 뒤에 줄을 섰다. 빈 물병이 바닥에 굴러떨어졌다."
+					}
+				},
+				{
+					"speaker": "kai",
+					"content": {
+						"korean": "여섯이 뒤에 붙었어. 이러면 앞에서 뭘 하든 등이 든든하겠네."
+					}
+				}
+			]
+		},
+		{
+			"text": {
+				"korean": "작업반장에게 물 대신 파이프에 맺힌 이슬을 긁어 모아 반원들에게 먹인다."
+			},
+			"path": "fun",
+			"mbti": "EP",
+			"effects": {
+				"reason": 20,
+				"community": 10
+			},
+			"reward": [
+				"shield"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "thirsty_crew",
+					"content": {
+						"korean": "이슬을... 마시라고요? 이거 냉각수 파이프에서 나온 건데."
+					}
+				},
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "반원들이 손바닥에 고인 물을 핥았다. 한 사람이 얼굴을 찡그리며도 엄지를 들었다."
+					}
+				},
+				{
+					"speaker": "kai",
+					"content": {
+						"korean": "다들 마시긴 마셨네. 맛은... 묻지 말래."
+					}
+				}
+			]
+		}
+	],
+	"_side": {
+		"slot": "D",
+		"person": {
+			"id": "thirsty_crew",
+			"name": "목마른 작업반장",
+			"role": "전산실 작업반"
+		},
+		"wants": "뒤섞인 화면 속에서 자기 반 사람들 이름을 못 찾고 있다며, 남은 식수를 반원들에게 나눠 달라고 한다.",
+		"rule_link": "데이터 스크린 조각이 뒤섞여 누가 어디 있는지 알 수 없게 된 탓에, 사람을 찾는 일이 정보 맞추기와 얽힌다.",
+		"rep": "community+",
+		"events": {},
+		"flags": {
+			"crew_rested": {
+				"kind": "bad",
+				"boss_penalty": -1,
+				"label": {
+					"korean": "숨 돌린 작업반"
+				},
+				"boss_line": {
+					"korean": "작업반장이 반원들을 이끌고 당신 옆에 나란히 선다."
+				}
+			},
+			"found_names": {
+				"kind": "good",
+				"boss_penalty": 1,
+				"label": {
+					"korean": "찾아낸 이름"
+				},
+				"boss_choice": {
+					"korean": "당신이 화면에서 찾아낸 반원 두 명의 위치를 복도 끝으로 외친다."
+				}
+			},
+			"crew_behind": {
+				"kind": "good",
+				"boss_penalty": 2,
+				"label": {
+					"korean": "뒤에 선 작업반"
+				},
+				"boss_choice": {
+					"korean": "작업반장이 반원들과 함께 당신 등 뒤를 막아선다."
+				}
+			}
+		}
+	}
+}
