@@ -1,0 +1,144 @@
+{
+	"id": "card_02_overheated_server_door",
+	"title": {
+		"korean": "팽창한 철문"
+	},
+	"intensity": "calm",
+	"after_story": 5,
+	"before_story": 7,
+	"background_tags": [
+		"red",
+		"hot",
+		"door",
+		"sweat",
+		"rush"
+	],
+	"dialogue": [
+		{
+			"speaker": "narrator",
+			"content": {
+				"korean": "경고음이 울리는 복도, 찌그러진 철문 너머에서 엔지니어가 땀을 닦고 있다."
+			}
+		},
+		{
+			"speaker": "sweating_engineer",
+			"content": {
+				"korean": "열기 때문에 문이 팽창해서 나갈 수가 없어요! 이 틈새로 지렛대 좀 밀어 넣어주세요."
+			}
+		},
+		{
+			"speaker": "lin",
+			"content": {
+				"korean": "억지로 열다가 문이 튕겨 나갈 수도 있겠어요."
+			}
+		}
+	],
+	"choices": [
+		{
+			"text": {
+				"korean": "지렛대를 강하게 밀어 넣어 문을 비틀어 연다."
+			},
+			"path": "easy",
+			"mbti": "SP",
+			"effects": {
+				"gold": 100,
+				"reason": -20
+			},
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "당신이 지렛대를 누르자 문이 억지로 열렸다. 그는 틈새로 빠져나오며 동전을 떨어뜨렸다."
+					}
+				}
+			]
+		},
+		{
+			"text": {
+				"korean": "지렛대 대신 비상 냉각수를 부어 문을 식혀서 연다."
+			},
+			"path": "hard",
+			"mbti": "IF",
+			"effects": {
+				"reason": 10,
+				"community": 20
+			},
+			"reward": [
+				"hp_down"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "당신은 냉각수를 부었다. 뜨거운 증기가 튀어 화상을 입었지만 문은 부드럽게 열렸다."
+					}
+				}
+			]
+		},
+		{
+			"text": {
+				"korean": "근처 자판기에 돈을 넣고 휴대용 절단기를 빌려 문을 잘라낸다."
+			},
+			"path": "gold",
+			"mbti": "TJ",
+			"require": {
+				"stat": "gold",
+				"op": ">=",
+				"value": 50
+			},
+			"effects": {
+				"reason": 20,
+				"gold": -50
+			},
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "당신은 자판기에서 빌린 절단기로 문을 안전하게 잘라냈다. 엔지니어는 무사히 빠져나왔다."
+					}
+				}
+			]
+		},
+		{
+			"text": {
+				"korean": "{actor}이(가) 문의 구조를 파악해 팽창하지 않은 경첩을 분해한다."
+			},
+			"path": "lock",
+			"mbti": "NT",
+			"require": {
+				"mbti": "NT"
+			},
+			"effects": {
+				"reason": 10
+			},
+			"reward": [
+				"intelligence_up"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "{actor}이(가) 정확한 위치의 경첩을 풀어내자 문이 쉽게 열렸다. 엔지니어는 감탄했다."
+					}
+				}
+			]
+		}
+	],
+	"kind": "normal",
+	"_side": {
+		"slot": "C",
+		"person": {
+			"id": "sweating_engineer",
+			"name": "땀흘리는 엔지니어",
+			"role": "다급하게 지시하는 존댓말"
+		},
+		"wants": "",
+		"rule_link": "",
+		"events": {},
+		"flags": {}
+	}
+}

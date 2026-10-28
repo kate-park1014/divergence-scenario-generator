@@ -1,0 +1,179 @@
+{
+	"id": "card_02_novice_terminal_fire",
+	"kind": "callback",
+	"title": {
+		"korean": "불타오르는 단말기"
+	},
+	"intensity": "high",
+	"after_story": 5,
+	"before_story": 7,
+	"callback": {
+		"seed": "novice_terminal_easy",
+		"min_rooms_after": 2
+	},
+	"background_tags": [
+		"emergency_room",
+		"server_rack",
+		"blinking_lights",
+		"black_smoke",
+		"sparks"
+	],
+	"dialogue": [
+		{
+			"speaker": "tech_novice",
+			"content": {
+				"korean": "큰일 났어요! 아까 전원 코드를 뽑았더니 내부 냉각 팬까지 꺼져서 불이 붙었어요!"
+			}
+		},
+		{
+			"speaker": "tech_novice",
+			"content": {
+				"korean": "이 데이터 스크린 조각들이 다 타버리면 전 쫓겨날 거예요. 제발 불 좀 꺼주세요!"
+			}
+		},
+		{
+			"speaker": "lin",
+			"content": {
+				"korean": "코드를 뽑은 게 화근이었네요… 이대로 두면 다른 장비로 불이 옮겨붙겠어요."
+			}
+		},
+		{
+			"speaker": "lin",
+			"content": {
+				"korean": "제대로 진화하지 않으면 더 큰 문제가 생길 거예요."
+			}
+		}
+	],
+	"choices": [
+		{
+			"text": {
+				"korean": "주변에 있는 소형 소화기로 대충 불길만 잡고 사례금을 챙긴다."
+			},
+			"path": "easy",
+			"mbti": "SP",
+			"flag": "burnt_terminal",
+			"effects": {
+				"community": -10,
+				"gold": 100,
+				"echo": -5
+			},
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "당신이 소화기를 뿌리자 불길은 잦아들었지만 지독한 매연이 뿜어졌다."
+					}
+				},
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "토비는 기침을 하며 약속한 돈을 건넸고, 단말기는 검게 그을렸다."
+					}
+				}
+			]
+		},
+		{
+			"text": {
+				"korean": "뜨거운 열기를 참으며 단말기를 분해해 화재의 근원을 완전히 제거한다."
+			},
+			"path": "hard",
+			"mbti": "FJ",
+			"flag": "salvaged_parts",
+			"effects": {
+				"echo": 10,
+				"fighting": 10,
+				"community": 20
+			},
+			"reward": [
+				"hp_down"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "당신은 손을 데이면서도 단말기를 뜯어내 불씨를 완벽하게 밟아 껐다."
+					}
+				},
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "토비는 감격하며 멀쩡한 부품을 건넸고, 린은 화상을 걱정했다."
+					}
+				}
+			]
+		},
+		{
+			"text": {
+				"korean": "냉각 가스의 흐름을 계산해 불길의 중심부에만 정확히 소화기를 분사한다."
+			},
+			"path": "stat",
+			"mbti": "NT",
+			"flag": "cooling_chip",
+			"effects": {
+				"reason": 10,
+				"gold": 50,
+				"echo": 5
+			},
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "당신이 계산된 위치에 가스를 쏘자 불길이 단숨에 사그라들었다."
+					}
+				},
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "토비는 놀라워하며 남은 냉각 칩을 건넸고, 단말기는 안전하게 식었다."
+					}
+				}
+			]
+		}
+	],
+	"_side": {
+		"slot": "C",
+		"person": {
+			"id": "tech_novice",
+			"role": "신입 관리자",
+			"name": "토비"
+		},
+		"wants": "전원을 뽑았던 단말기에서 내부 냉각 팬까지 꺼져 화재가 발생했다며 불을 꺼달라고 부탁한다.",
+		"rule_link": "전원 코드를 뽑아 발생한 냉각팬 정지가 단말기 화재로 직결되었다.",
+		"events": {},
+		"flags": {
+			"burnt_terminal": {
+				"kind": "bad",
+				"boss_penalty": -1,
+				"label": {
+					"korean": "불타버린 단말기"
+				},
+				"boss_line": {
+					"korean": "대충 끈 화재의 잔해에서 매연이 뿜어져 나와 당신의 시야를 가린다."
+				}
+			},
+			"salvaged_parts": {
+				"kind": "good",
+				"boss_penalty": 1,
+				"label": {
+					"korean": "멀쩡한 부품"
+				},
+				"boss_choice": {
+					"korean": "화재 속에서 건져낸 멀쩡한 부품을 던져 시스템의 시선을 끈다."
+				}
+			},
+			"cooling_chip": {
+				"kind": "good",
+				"boss_penalty": 1,
+				"label": {
+					"korean": "냉각 칩"
+				},
+				"boss_choice": {
+					"korean": "정확히 진화된 단말기에서 얻은 냉각 칩을 던져 시스템을 얼린다."
+				}
+			}
+		}
+	}
+}

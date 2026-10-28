@@ -1,0 +1,154 @@
+{
+	"id": "card_01_jinsu_firm_clerk",
+	"kind": "callback",
+	"title": {
+		"korean": "온전한 명찰"
+	},
+	"intensity": "high",
+	"after_story": 7,
+	"before_story": 10,
+	"callback": {
+		"seed": "jinsu_quota_hard",
+		"min_rooms_after": 2
+	},
+	"background_tags": [
+		"waiting_hall",
+		"cleared_aisle",
+		"bright_fluorescent",
+		"calm_crowd",
+		"relieved_mood"
+	],
+	"dialogue": [
+		{
+			"speaker": "narrator",
+			"content": {
+				"korean": "접수원 진수가 반듯하게 인쇄된 자신의 이름표를 가슴에 달고 다가온다."
+			}
+		},
+		{
+			"speaker": "jinsu",
+			"content": {
+				"korean": "아까 억지 실적을 거절해 주신 덕분에 제 명패는 엉뚱한 이름으로 바뀌지 않았습니다."
+			}
+		},
+		{
+			"speaker": "lin",
+			"content": {
+				"korean": "주변 지원자들의 명패가 흩날리며 난리가 났는데, 진수 씨 창구는 멀쩡하네요!"
+			}
+		},
+		{
+			"speaker": "jinsu",
+			"content": {
+				"korean": "하지만 명패 출력기가 폭주하고 있어요. 당신들의 이력서도 이대로 두면 이름을 잃게 됩니다!"
+			}
+		}
+	],
+	"choices": [
+		{
+			"text": {
+				"korean": "진수의 정규 접수 장부를 전산망에 동기화해 본래 직책을 공식 확정한다."
+			},
+			"path": "easy",
+			"mbti": "ES",
+			"flag": "jinsu_belt_conveyor",
+			"effects": {
+				"echo": 10,
+				"community": 15,
+				"gold": 80,
+				"reason": 10
+			},
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "당신은 진수가 작성한 정규 서류 보관함을 확인하고 그의 정식 명패를 가슴에 꽂아주었다."
+					}
+				},
+				{
+					"speaker": "jinsu",
+					"content": {
+						"korean": "당신들이 가짜 서류를 거절해 준 덕에 전산 오류에 휩쓸리지 않았습니다. 정말 다행이에요."
+					}
+				},
+				{
+					"speaker": "lin",
+					"content": {
+						"korean": "정직하게 버틴 덕분에 진수 씨의 접수창구만 유일하게 정상 작동하고 있네요."
+					}
+				}
+			]
+		},
+		{
+			"text": {
+				"korean": "진수의 책상에 놓인 정식 철제 직인으로 원본 서류의 무결성을 공인한다."
+			},
+			"path": "hard",
+			"mbti": "IT",
+			"flag": "jinsu_heavy_stamp",
+			"effects": {
+				"fighting": 20,
+				"echo": 15,
+				"community": -10
+			},
+			"reward": [
+				"cooldown_reset"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "당신은 진수의 창구에 놓인 무거운 철제 직인을 들어 린의 서류에 정식 인증 도장을 찍었다."
+					}
+				},
+				{
+					"speaker": "jinsu",
+					"content": {
+						"korean": "이 도장은 본래 이름이 확실한 사람에게만 찍히는 물건입니다. 린 씨의 자격은 확실해요."
+					}
+				},
+				{
+					"speaker": "lin",
+					"content": {
+						"korean": "가짜 이름들이 날아다니는 와중에도 제 서류에는 선명하고 묵직한 진짜 도장이 남았어요."
+					}
+				}
+			]
+		}
+	],
+	"_side": {
+		"slot": "D",
+		"person": {
+			"role": "정직한 접수원",
+			"id": "jinsu",
+			"name": "진수"
+		},
+		"wants": "폭주하는 명패 출력기의 오류를 막고 정규 지원자들의 진짜 이름을 보호하는 것",
+		"rule_link": "허위 서류를 배제한 덕분에 직원의 고유 신원이 전산망에서 온전히 보존된다.",
+		"events": {},
+		"flags": {
+			"jinsu_belt_conveyor": {
+				"kind": "good",
+				"boss_penalty": 1,
+				"label": {
+					"korean": "진수의 운반 레일"
+				},
+				"boss_choice": {
+					"korean": "진수가 정상 가동시킨 서류 운반 레일을 타고 면접장 중앙으로 빠르게 이동한다."
+				}
+			},
+			"jinsu_heavy_stamp": {
+				"kind": "good",
+				"boss_penalty": 2,
+				"label": {
+					"korean": "단단한 철인 도장"
+				},
+				"boss_choice": {
+					"korean": "진수가 건넨 접수용 강철 철인 도장으로 닫히려는 면접장 출입문을 찍어 고정한다."
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,154 @@
+{
+	"id": "card_01_hayeon_lost_identity",
+	"kind": "callback",
+	"title": {
+		"korean": "지워진 이름표"
+	},
+	"intensity": "high",
+	"after_story": 5,
+	"before_story": 7,
+	"callback": {
+		"seed": "hayeon_portfolio_easy",
+		"min_rooms_after": 2
+	},
+	"background_tags": [
+		"waiting_hall",
+		"flickering_light",
+		"service_counter",
+		"crowded_room",
+		"confused_mood"
+	],
+	"dialogue": [
+		{
+			"speaker": "narrator",
+			"content": {
+				"korean": "하연이 잉크가 번진 명패를 손에 쥔 채 파들거리는 손으로 다가온다."
+			}
+		},
+		{
+			"speaker": "hayeon",
+			"content": {
+				"korean": "접수처에서 제 서류를 보더니 '세라'라는 이름표를 줬어요. 절 하연이라고 불러주세요!"
+			}
+		},
+		{
+			"speaker": "lin",
+			"content": {
+				"korean": "방금 전 방송에서 저를 수잔이라고 부르더니, 하연 씨 이름도 바뀌어 나왔군요."
+			}
+		},
+		{
+			"speaker": "hayeon",
+			"content": {
+				"korean": "제 이름을 부르지 않으면 제 원래 모습이 흔적도 없이 사라질 것만 같아요!"
+			}
+		}
+	],
+	"choices": [
+		{
+			"text": {
+				"korean": "하연의 뒤바뀐 명패를 그대로 쥐여주며 새 이름으로 면접을 보라고 부추긴다."
+			},
+			"path": "easy",
+			"mbti": "ST",
+			"flag": "hayeon_lost_name",
+			"effects": {
+				"echo": -10,
+				"gold": 70,
+				"community": 10,
+				"fighting": 20
+			},
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "당신은 명패를 낚아채 원래 이름을 지우고 새 가짜 이름을 적어 넣었다."
+					}
+				},
+				{
+					"speaker": "hayeon",
+					"content": {
+						"korean": "이게 정말 제 이름이 맞나요? 머릿속이 새하얘져서 제 경력이 기억나지 않아요."
+					}
+				},
+				{
+					"speaker": "lin",
+					"content": {
+						"korean": "과장해서 적었던 경력이 하연 씨의 진짜 이름까지 덮어버린 것 같아요."
+					}
+				}
+			]
+		},
+		{
+			"text": {
+				"korean": "접수창구에 하연의 원본 신분증을 내밀며 명패 정정을 단호하게 요구한다."
+			},
+			"path": "hard",
+			"mbti": "NF",
+			"flag": "hayeon_real_name",
+			"effects": {
+				"fighting": -10,
+				"community": -20,
+				"echo": 15
+			},
+			"reward": [
+				"defense_up"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "당신은 하연의 옛 이력서를 펼쳐 들고 직원에게 원래 신원을 정정하라 요구했다."
+					}
+				},
+				{
+					"speaker": "hayeon",
+					"content": {
+						"korean": "맞아요, 제 진짜 이름은 하연이에요! 기억을 잃어버릴 뻔했는데 정말 감사해요."
+					}
+				},
+				{
+					"speaker": "lin",
+					"content": {
+						"korean": "창구 직원이 혀를 차며 명부를 고쳤어요. 하연 씨 눈빛이 이제야 또렷해졌네요."
+					}
+				}
+			]
+		}
+	],
+	"_side": {
+		"slot": "C",
+		"person": {
+			"id": "hayeon",
+			"name": "하연",
+			"role": "신원이 뒤섞인 지원자"
+		},
+		"wants": "자신의 원래 이름을 듣고 접수 기록의 이름을 원래대로 되돌리는 것",
+		"rule_link": "이력서 경력을 부풀린 대가로 접수 시스템에서 본래 이름이 지워지고 엉뚱한 명패가 발행된다.",
+		"events": {},
+		"flags": {
+			"hayeon_lost_name": {
+				"kind": "bad",
+				"boss_penalty": -1,
+				"label": {
+					"korean": "지워진 이름"
+				},
+				"boss_line": {
+					"korean": "접수 명단 속 하연의 이름이 지워져 대기 순번 호출이 취소된다."
+				}
+			},
+			"hayeon_real_name": {
+				"kind": "good",
+				"boss_penalty": 1,
+				"label": {
+					"korean": "원래 이름 회복"
+				},
+				"boss_choice": {
+					"korean": "원래 이름표를 되찾은 하연이 비상구 유도봉을 넘겨주어 면접관의 시야를 가린다."
+				}
+			}
+		}
+	}
+}

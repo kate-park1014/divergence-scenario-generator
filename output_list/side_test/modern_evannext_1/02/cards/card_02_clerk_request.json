@@ -1,0 +1,162 @@
+{
+	"id": "card_02_clerk_request",
+	"kind": "plant",
+	"title": {
+		"korean": "밀린 승인 목록"
+	},
+	"intensity": "calm",
+	"after_story": 3,
+	"before_story": 5,
+	"background_tags": [
+		"terminal_room",
+		"morning",
+		"fluorescent",
+		"waiting_crowd",
+		"efficient"
+	],
+	"dialogue": [
+		{
+			"speaker": "narrator",
+			"content": {
+				"korean": "단말기 화면이 정리된 모습을 본 담당 직원이 결재 단말기를 들고 다가온다."
+			}
+		},
+		{
+			"speaker": "clerk",
+			"content": {
+				"korean": "린 씨의 데이터가 말끔히 정리된 걸 봤습니다. 단말기 다루는 솜씨가 대단하시네요."
+			}
+		},
+		{
+			"speaker": "clerk",
+			"content": {
+				"korean": "처리해야 할 이력서 수정 요청이 30건이나 밀려 있는데, 일괄 승인 코드를 넣어주시겠습니까?"
+			}
+		},
+		{
+			"speaker": "nia",
+			"content": {
+				"korean": "저 사람들 이력서를 다 읽어보지도 않고 한 번에 승인해도 괜찮은 걸까요?"
+			}
+		}
+	],
+	"choices": [
+		{
+			"text": {
+				"korean": "밀린 이력서 수정 요청들을 검토 없이 일괄 승인한다"
+			},
+			"path": "easy",
+			"mbti": "TP",
+			"effects": {
+				"community": -20,
+				"echo": -5,
+				"fighting": 10
+			},
+			"reward": [
+				"intelligence_up"
+			],
+			"seed": "clerk_request_easy",
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "승인 확인 버튼을 연속으로 누르자 30건의 이력서 수정 요청이 단말기에 즉시 승인된다."
+					}
+				},
+				{
+					"speaker": "clerk",
+					"content": {
+						"korean": "덕분에 오늘 야근을 피했습니다! 이건 검색실 보관함의 여분 열쇠입니다."
+					}
+				},
+				{
+					"speaker": "nia",
+					"content": {
+						"korean": "화면은 깨끗해졌지만, 내용을 제대로 대조하지 못해서 조금 찜찜하네요."
+					}
+				}
+			]
+		},
+		{
+			"text": {
+				"korean": "허위 기재된 이력서들을 원부와 일일이 대조해 반려한다"
+			},
+			"path": "hard",
+			"mbti": "TJ",
+			"effects": {
+				"fighting": -10,
+				"community": 20,
+				"echo": 10
+			},
+			"reward": [
+				"defense_up"
+			],
+			"seed": "clerk_request_hard",
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "30건의 서류를 대조하며 허위 수정 요청을 차례대로 걸러내 반려 처리한다."
+					}
+				},
+				{
+					"speaker": "clerk",
+					"content": {
+						"korean": "그렇게 하나하나 따지시면 오늘 안에 창구 업무를 마칠 수가 없잖습니까!"
+					}
+				},
+				{
+					"speaker": "nia",
+					"content": {
+						"korean": "눈이 침침해질 정도로 피곤하지만, 엉터리 기록을 그대로 넘길 수는 없었으니까요."
+					}
+				}
+			]
+		},
+		{
+			"text": {
+				"korean": "담당자의 이력서 승인 창에 담당자 본인의 우수 추천서를 등록한다"
+			},
+			"path": "fun",
+			"mbti": "FP",
+			"effects": {
+				"gold": 80,
+				"reason": 25,
+				"echo": 10
+			},
+			"seed": "clerk_request_hard",
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "단말기 승인 대기열 맨 위에 친절 우수 사원 표창 항목을 새로 입력해 승인 처리한다."
+					}
+				},
+				{
+					"speaker": "clerk",
+					"content": {
+						"korean": "제 사원 평가 점수가 만점으로 갱신되었군요? 이건 성과급으로 나온 상품권입니다."
+					}
+				},
+				{
+					"speaker": "nia",
+					"content": {
+						"korean": "엉뚱한 기록을 추가하셨지만, 담당자 표정이 한결 풀린 건 다행이네요."
+					}
+				}
+			]
+		}
+	],
+	"_side": {
+		"slot": "B",
+		"person": {
+			"name": "단말기 담당자",
+			"role": "정보 검색실 단말기 관리 직원",
+			"id": "clerk"
+		},
+		"wants": "밀린 이력서 수정 요청들을 일괄 승인해 퇴근 시간을 앞당기려 한다.",
+		"rule_link": "단말기에서 이름과 이력서 데이터를 일괄 승인해 시스템에 즉시 등록한다.",
+		"events": {},
+		"flags": {}
+	}
+}

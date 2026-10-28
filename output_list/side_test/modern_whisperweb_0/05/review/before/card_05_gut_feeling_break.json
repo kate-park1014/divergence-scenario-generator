@@ -1,0 +1,258 @@
+{
+	"id": "card_05_gut_feeling_break",
+	"kind": "rep",
+	"title": {
+		"korean": "느낌이 그래"
+	},
+	"intensity": "calm",
+	"after_story": 1,
+	"before_story": 3,
+	"condition": {
+		"leaning": "reason+",
+		"among": [
+			"fighting-",
+			"fighting+",
+			"community-",
+			"community+",
+			"reason-",
+			"reason+"
+		],
+		"min": 20
+	},
+	"urgency": 8,
+	"leaning": "reason+",
+	"background_tags": [
+		"control_room",
+		"night",
+		"blue_light",
+		"quiet",
+		"restless"
+	],
+	"dialogue": [
+		{
+			"speaker": "impulse_operator",
+			"content": {
+				"korean": "당신이 규칙 무시하고 판을 뒤집었다는 그 사람이죠? 딱 내 스타일이에요."
+			}
+		},
+		{
+			"speaker": "impulse_operator",
+			"content": {
+				"korean": "매뉴얼은 됐어요. 내 느낌엔 저 조각을 부숴야 해요. 손이 저릿저릿하거든요."
+			}
+		},
+		{
+			"speaker": "echo",
+			"content": {
+				"korean": "손이 저릿거린다고 조각을 부순다고? 이 사람, 아까부터 같은 손만 쳐다보고 있어."
+			}
+		},
+		{
+			"speaker": "narrator",
+			"content": {
+				"korean": "교대자의 오른손 손가락이 조각 쪽을 향해 작게 떨렸다."
+			}
+		}
+	],
+	"choices": [
+		{
+			"text": {
+				"korean": "교대자의 느낌을 따라 조각에 손을 댄다."
+			},
+			"path": "easy",
+			"mbti": "FP",
+			"flag": "gut_followed",
+			"effects": {
+				"reason": 15,
+				"fighting": 10,
+				"echo": -10
+			},
+			"reward": [
+				"attack_up"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "impulse_operator",
+					"content": {
+						"korean": "거 봐요, 느낌이 맞았죠! 이제 다 풀릴 거예요!"
+					}
+				},
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "조각 모서리가 손끝에서 부스러지며 단말기 숫자가 한꺼번에 흔들렸다."
+					}
+				},
+				{
+					"speaker": "echo",
+					"content": {
+						"korean": "풀리기는. 아까보다 더 얽혔어."
+					}
+				}
+			]
+		},
+		{
+			"text": {
+				"korean": "교대자의 손을 잡아 내리고 조각의 접속 순서를 확인한다."
+			},
+			"path": "hard",
+			"mbti": "TJ",
+			"flag": "order_engraved",
+			"effects": {
+				"reason": -15,
+				"echo": 10
+			},
+			"reward": [
+				"intelligence_up"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "impulse_operator",
+					"content": {
+						"korean": "야, 왜 그래요. 내 느낌이 그렇게 못 믿어요?"
+					}
+				},
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "조각 뒷면에 접속 순서를 적은 작은 각인이 여섯 개 찍혀 있었다."
+					}
+				},
+				{
+					"speaker": "echo",
+					"content": {
+						"korean": "느낌이 아니라 각인이었네. 이거면 순서대로 맞출 수 있어."
+					}
+				}
+			]
+		},
+		{
+			"text": {
+				"korean": "교대자에게 이 조각은 내가 맡겠다고 말하고 물러나게 한다."
+			},
+			"path": "stat",
+			"mbti": "EP",
+			"require": {
+				"stat": "reason",
+				"op": ">=",
+				"value": 40
+			},
+			"flag": "operator_stepped_back",
+			"effects": {
+				"reason": 20,
+				"echo": 5
+			},
+			"reward": [
+				"move_range_up"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "impulse_operator",
+					"content": {
+						"korean": "당신이 그렇게 나오면 나도 물러나죠. 대신 결과는 당신 책임이에요."
+					}
+				},
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "교대자가 손을 내리고 벽 쪽으로 비켜섰다."
+					}
+				},
+				{
+					"speaker": "echo",
+					"content": {
+						"korean": "이 사람이 순순히 물러나다니. 당신 말에는 뭔가 있나 봐."
+					}
+				}
+			]
+		},
+		{
+			"text": {
+				"korean": "교대자에게 금화 80닢을 주고 야간 근무를 마치고 돌아가게 한다."
+			},
+			"path": "gold",
+			"mbti": "TP",
+			"require": {
+				"stat": "gold",
+				"op": ">=",
+				"value": 80
+			},
+			"effects": {
+				"reason": 10,
+				"echo": -5,
+				"gold": -80
+			},
+			"reward": [
+				"heal"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "impulse_operator",
+					"content": {
+						"korean": "이거면 오늘 야간 근무는 접을 수 있겠네요. 느낌은 접어 둘게요."
+					}
+				},
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "금화를 받아 챙긴 교대자가 문가에서 한 번 뒤돌아봤다."
+					}
+				},
+				{
+					"speaker": "echo",
+					"content": {
+						"korean": "돈으로 보낼 수 있는 사람이라 다행이야. 저 사람 손은 계속 저릿거렸지만."
+					}
+				}
+			]
+		}
+	],
+	"_side": {
+		"slot": "A",
+		"person": {
+			"id": "impulse_operator",
+			"name": "야간 교대자",
+			"role": "야간 교대 오퍼레이터"
+		},
+		"wants": "규칙은 됐다며, 감으로 조각을 부숴야 한다고 우기며 당신의 손을 잡아끈다.",
+		"rule_link": "조각을 부수면 데이터가 초기화된다는 소문을 감으로 확신하는 인물이라, 조각 맞추기와 정면으로 부딪힌다.",
+		"rep": "reason+",
+		"events": {},
+		"flags": {
+			"gut_followed": {
+				"kind": "bad",
+				"boss_penalty": -1,
+				"label": {
+					"korean": "따른 느낌"
+				},
+				"boss_line": {
+					"korean": "부스러진 조각 틈으로 새어 나온 데이터가 시야를 가린다."
+				}
+			},
+			"order_engraved": {
+				"kind": "good",
+				"boss_penalty": 1,
+				"label": {
+					"korean": "새긴 순서"
+				},
+				"boss_choice": {
+					"korean": "각인된 순서대로 조각을 하나씩 물린다."
+				}
+			},
+			"operator_stepped_back": {
+				"kind": "good",
+				"boss_penalty": 2,
+				"label": {
+					"korean": "비켜선 교대자"
+				},
+				"boss_choice": {
+					"korean": "비켜선 교대자 덕에 조각 앞자리를 온전히 쓴다."
+				}
+			}
+		}
+	}
+}

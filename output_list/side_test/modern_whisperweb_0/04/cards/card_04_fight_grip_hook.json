@@ -1,0 +1,257 @@
+{
+	"id": "card_04_fight_grip_hook",
+	"kind": "rep",
+	"title": {
+		"korean": "담장을 넘는 사내"
+	},
+	"intensity": "calm",
+	"after_story": 1,
+	"before_story": 3,
+	"condition": {
+		"leaning": "fighting-",
+		"among": [
+			"fighting-",
+			"fighting+",
+			"community-",
+			"community+",
+			"reason-",
+			"reason+"
+		],
+		"min": 20
+	},
+	"urgency": 8,
+	"leaning": "fighting-",
+	"background_tags": [
+		"processing_plant",
+		"shift_change",
+		"flickering_lamp",
+		"crowded_floor",
+		"humid"
+	],
+	"dialogue": [
+		{
+			"speaker": "goro",
+			"content": {
+				"korean": "당신이 유출 뚫린 데를 혼자 밀어붙여 틀어막았다는 사람이죠? 팔에 붕대 감은 거 보니 맞네."
+			}
+		},
+		{
+			"speaker": "dax",
+			"content": {
+				"korean": "나도 들었어. 처리장에서 제일 안 무서운 얼굴로 제일 무서운 일 하는 사람이라고."
+			}
+		},
+		{
+			"speaker": "goro",
+			"content": {
+				"korean": "메인 파이프 쪽 장치 위치는 내가 알아요. 다만 우리 애 기록이 먼저 지워져야 말해줄 수 있어요."
+			}
+		},
+		{
+			"speaker": "narrator",
+			"content": {
+				"korean": "고로의 손에는 절단기 대신 삐뚤게 구겨진 아이 그림이 쥐여 있었다."
+			}
+		}
+	],
+	"choices": [
+		{
+			"text": {
+				"korean": "고로에게 위치를 대라고 어깨를 짚어 누른다."
+			},
+			"path": "easy",
+			"mbti": "TJ",
+			"flag": "goro_pinched",
+			"effects": {
+				"fighting": 20,
+				"echo": -5
+			},
+			"reward": [
+				"attack_up"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "goro",
+					"content": {
+						"korean": "알았어요, 알았어! 메인 파이프 안쪽, 굽은 관 뒤예요!"
+					}
+				},
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "고로가 휘적휘적 앞서 걸으며 벽의 배관 번호를 손끝으로 짚어 갔다."
+					}
+				},
+				{
+					"speaker": "dax",
+					"content": {
+						"korean": "무섭게 하니까 바로 나오네. 근데 저 아저씨, 나중에 뒷말 할 얼굴이야."
+					}
+				}
+			]
+		},
+		{
+			"text": {
+				"korean": "고로의 딸 기록을 먼저 지워주고 위치를 받는다."
+			},
+			"path": "hard",
+			"mbti": "FP",
+			"flag": "goro_owes",
+			"effects": {
+				"fighting": -15,
+				"community": 10,
+				"echo": 10
+			},
+			"reward": [
+				"shield"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "고로가 단말기를 두 손으로 감싸고 딸의 이름이 사라지는 걸 끝까지 봤다."
+					}
+				},
+				{
+					"speaker": "goro",
+					"content": {
+						"korean": "이 빚은 안 잊어요. 관 뒤쪽, 손 뻗으면 닿는 자리예요."
+					}
+				},
+				{
+					"speaker": "dax",
+					"content": {
+						"korean": "저 아저씨 손이 아까보다 안 떨려. 좋은 일 한 거 맞지?"
+					}
+				}
+			]
+		},
+		{
+			"text": {
+				"korean": "고로에게 처리장 사람들이 내 말을 들을 거라며 앞장서라고 한다."
+			},
+			"path": "stat",
+			"mbti": "TP",
+			"require": {
+				"stat": "fighting",
+				"op": "<=",
+				"value": -40
+			},
+			"flag": "goro_follows",
+			"effects": {
+				"fighting": -20,
+				"echo": 5
+			},
+			"reward": [
+				"intelligence_up"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "goro",
+					"content": {
+						"korean": "당신이 앞장서면 애들도 따라와요. 다들 당신 이름은 알아요."
+					}
+				},
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "고로가 하역장 쪽으로 달려가 인부 셋을 불러왔다."
+					}
+				},
+				{
+					"speaker": "dax",
+					"content": {
+						"korean": "이름값 하네. 나도 좀 얹혀 볼까."
+					}
+				}
+			]
+		},
+		{
+			"text": {
+				"korean": "고로에게 120골드를 주고 딸 기록을 대신 지워줄 업자를 소개받는다."
+			},
+			"path": "gold",
+			"mbti": "TJ",
+			"require": {
+				"stat": "gold",
+				"op": ">=",
+				"value": 120
+			},
+			"effects": {
+				"gold": -120,
+				"echo": 5
+			},
+			"reward": [
+				"defense_up"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "goro",
+					"content": {
+						"korean": "복원업자 유리한테 말해둘게요. 돈은 그쪽으로 가는 거예요."
+					}
+				},
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "고로가 지폐 뭉치를 세어 보더니 안쪽 주머니에 넣고 배관 번호를 불러 줬다."
+					}
+				},
+				{
+					"speaker": "dax",
+					"content": {
+						"korean": "돈으로 해결되면 제일 편하지. 내 일기장도 얼마면 되려나."
+					}
+				}
+			]
+		}
+	],
+	"_side": {
+		"slot": "A",
+		"person": {
+			"id": "goro",
+			"name": "고로",
+			"role": "폐기물 하역 인부"
+		},
+		"wants": "유출을 막으려는 사람이라는 소문을 듣고, 처리장 밖으로 흘러나간 자기 딸의 기록을 지우는 대가로 출처 장치 위치를 알려주겠다고 한다.",
+		"rule_link": "출처 장치의 위치를 먼저 알아내려는 시도가 데이터 스크린 조각의 좌표와 부딪힌다.",
+		"rep": "fighting-",
+		"events": {},
+		"flags": {
+			"goro_pinched": {
+				"kind": "bad",
+				"boss_penalty": -1,
+				"label": {
+					"korean": "짚어진 어깨"
+				},
+				"boss_line": {
+					"korean": "고로가 처리장 입구에서 당신 앞을 막아서며 장치 쪽 통로를 가리킨 손을 내린다."
+				}
+			},
+			"goro_owes": {
+				"kind": "good",
+				"boss_penalty": 1,
+				"label": {
+					"korean": "갚을 빚"
+				},
+				"boss_choice": {
+					"korean": "고로가 굽은 관 뒤편으로 몸을 숙여 먼저 기어들어가 길을 열어 준다."
+				}
+			},
+			"goro_follows": {
+				"kind": "good",
+				"boss_penalty": 2,
+				"label": {
+					"korean": "따라오는 인부들"
+				},
+				"boss_choice": {
+					"korean": "고로와 하역 인부들이 배관 앞에 늘어서서 당신 손짓에 무거운 관 뚜껑을 함께 들어 올린다."
+				}
+			}
+		}
+	}
+}

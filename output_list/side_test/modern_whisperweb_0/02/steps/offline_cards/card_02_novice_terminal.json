@@ -1,0 +1,144 @@
+{
+	"id": "card_02_novice_terminal",
+	"kind": "plant",
+	"title": {
+		"korean": "오작동하는 단말기"
+	},
+	"intensity": "calm",
+	"after_story": 1,
+	"before_story": 3,
+	"background_tags": [
+		"sparks_flying",
+		"dim_light",
+		"noisy_terminal",
+		"cluttered_desk",
+		"tense_atmosphere"
+	],
+	"dialogue": [
+		{
+			"speaker": "tech_novice",
+			"content": {
+				"korean": "제발 도와주세요! 제 관리 단말기가 미쳐 날뛰고 있어요."
+			}
+		},
+		{
+			"speaker": "tech_novice",
+			"content": {
+				"korean": "이 전원 코드만 뽑으면 멈출 텐데, 제가 손을 대면 감전될 것 같아요!"
+			}
+		},
+		{
+			"speaker": "lin",
+			"content": {
+				"korean": "단말기 화면에 데이터 스크린 조각들이 깨져서 쏟아지고 있네요."
+			}
+		},
+		{
+			"speaker": "lin",
+			"content": {
+				"korean": "저대로 두면 더 위험해질 텐데… 코드를 뽑아주는 게 낫지 않을까요?"
+			}
+		}
+	],
+	"choices": [
+		{
+			"text": {
+				"korean": "단말��� 전원을 뽑아주어 당장 오작동을 멈추게 한다."
+			},
+			"path": "easy",
+			"mbti": "ES",
+			"effects": {
+				"gold": 50,
+				"echo": 10,
+				"reason": -20,
+				"fighting": -10
+			},
+			"seed": "novice_terminal_easy",
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "당신이 단말기의 전원 코드를 뽑자 요란한 소리와 함께 화면이 꺼졌다."
+					}
+				},
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "토비는 안도하며 당신에게 작은 칩을 건넸고, 뽑힌 코드는 바닥에 뒹굴었다."
+					}
+				}
+			]
+		},
+		{
+			"text": {
+				"korean": "전원을 뽑지 말고 매뉴얼대로 고치라고 조언한다."
+			},
+			"path": "hard",
+			"mbti": "IN",
+			"effects": {
+				"fighting": 10,
+				"echo": -10,
+				"reason": 20
+			},
+			"reward": [
+				"defense_up"
+			],
+			"seed": "novice_terminal_hard",
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "매뉴얼대로 하라는 당신의 말에 토비는 울상을 지으며 두꺼운 책자를 뒤적였다."
+					}
+				},
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "단말기의 소음은 계속되었지만, 적어도 강제 종료로 인한 손상은 막았다."
+					}
+				}
+			]
+		},
+		{
+			"text": {
+				"korean": "{actor}이(가) 단말기를 툭툭 쳐서 잠시 오작동을 멈춘다."
+			},
+			"path": "lock",
+			"mbti": "SF",
+			"require": {
+				"mbti": "SF"
+			},
+			"effects": {
+				"gold": 50,
+				"reason": -10
+			},
+			"seed": "novice_terminal_hard",
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "{actor}이(가) 단말기 옆면을 주먹으로 내리치자 거짓말처럼 화면이 조용해졌다."
+					}
+				},
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "토비는 놀란 눈으로 고마워하며 주머니를 털어 보답했고, 단말기는 위태롭게 버티고 섰다."
+					}
+				}
+			]
+		}
+	],
+	"_side": {
+		"slot": "A",
+		"person": {
+			"id": "tech_novice",
+			"name": "토비",
+			"role": "신입 관리자"
+		},
+		"wants": "관리 단말기가 오작동한다며 전원 코드를 뽑아달라고 부탁한다.",
+		"rule_link": "오작동하는 시스템의 전원 코드를 뽑는 행위의 축소판으로 당장의 문제를 끄는 예행연습.",
+		"events": {},
+		"flags": {}
+	}
+}

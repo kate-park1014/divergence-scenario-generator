@@ -1,0 +1,328 @@
+{
+	"cards": [
+		{
+			"card_id": "card_03_ledger_of_hands",
+			"asks": "명부에 적힌 여덟 명에게 산소 통을 먼저 돌리도록, 냉각수 밸브를 열 사람으로서 어떻게 할지 정해 달라는 것.",
+			"choices_read": [
+				{
+					"path": "easy",
+					"target": "명부의 이름 여덟 명(구호 대상자들)",
+					"does": "산소 통을 여덟 명에게 먼저 돌리게 한다",
+					"reaction_assumes": "주인공이 산소 통을 복도 쪽으로 넘겨 여덟 명에게 배분했다"
+				},
+				{
+					"path": "hard",
+					"target": "구호 물품 담당자",
+					"does": "산소 통은 담당자에게 맡기고 봉인 상자를 확인한다",
+					"reaction_assumes": "주인공이 산소 통을 담당자에게 맡기고 봉인 상자를 확인했다"
+				},
+				{
+					"path": "stat",
+					"target": "구호 물품 담당자",
+					"does": "물품 배분을 맡기고 명부에 서명한다",
+					"reaction_assumes": "주인공이 명부에 서명해 이름이 올라갔다"
+				},
+				{
+					"path": "fun",
+					"target": "헐거운 산소 통 밸브",
+					"does": "배관 나사로 밸브를 조여 고친다",
+					"reaction_assumes": "주인공이 배관 나사로 산소 통 밸브를 고쳐 새지 않게 했다"
+				}
+			],
+			"checks": [
+				{
+					"item": "S1",
+					"pass": true
+				},
+				{
+					"item": "S2",
+					"pass": true
+				},
+				{
+					"item": "S3",
+					"pass": true
+				},
+				{
+					"item": "S4",
+					"pass": true
+				},
+				{
+					"item": "S5",
+					"pass": true
+				},
+				{
+					"item": "S6",
+					"pass": true
+				}
+			]
+		},
+		{
+			"card_id": "card_03_loud_pressure",
+			"asks": "봉인 테이프를 뜯어 밸브를 열어 주되, 자기 몫 냉각수 두 통을 먼저 달라는 것.",
+			"choices_read": [
+				{
+					"path": "easy",
+					"target": "배관 투덜이(쇠지렛대)",
+					"does": "쇠지렛대를 빌려 봉인 테이프를 힘으로 뜯어낸다",
+					"reaction_assumes": "주인공이 테이프를 뜯어 냉각수가 흘러나왔다"
+				},
+				{
+					"path": "hard",
+					"target": "배관 투덜이",
+					"does": "쇠지렛대를 빼앗아 봉인을 그대로 두게 한다",
+					"reaction_assumes": "주인공이 지렛대를 빼앗아 봉인이 그대로 유지됐다"
+				},
+				{
+					"path": "stat",
+					"target": "배관 투덜이(잡역꾼)",
+					"does": "밸브를 등지고 서 있으라고 명령한다",
+					"reaction_assumes": "주인공의 명령에 잡역꾼이 밸브 앞을 등으로 막았다"
+				},
+				{
+					"path": "fun",
+					"target": "밸브 옆 배관",
+					"does": "지렛대를 빼앗아 배관을 두드려 소리를 낸다",
+					"reaction_assumes": "주인공이 배관을 두드려 압력이 빠지는 소리가 났다"
+				}
+			],
+			"checks": [
+				{
+					"item": "S1",
+					"pass": true
+				},
+				{
+					"item": "S2",
+					"pass": true
+				},
+				{
+					"item": "S3",
+					"pass": true
+				},
+				{
+					"item": "S4",
+					"pass": true
+				},
+				{
+					"item": "S5",
+					"pass": true
+				},
+				{
+					"item": "S6",
+					"pass": true
+				}
+			]
+		},
+		{
+			"card_id": "card_03_seal_procedure",
+			"asks": "밸브 봉인 번호를 대조하고, 어긋난 번호를 누가 만졌는지 지금 기록에 남기라는 것.",
+			"choices_read": [
+				{
+					"path": "easy",
+					"target": "봉인 검사관",
+					"does": "절차서대로 번호를 대조하고 어긋난 곳을 기록에 남긴다",
+					"reaction_assumes": "주인공이 절차서 여백에 번호와 시각을 적었다"
+				},
+				{
+					"path": "hard",
+					"target": "봉인 검사관",
+					"does": "번호표를 원래 자리에 다시 붙이고 검사관에게 알린다",
+					"reaction_assumes": "주인공이 번호표를 다시 붙이고 신고했다"
+				},
+				{
+					"path": "stat",
+					"target": "봉인 검사관",
+					"does": "절차서 사본을 받아 밸브 옆에 붙여 둔다",
+					"reaction_assumes": "주인공이 절차서 사본을 받아 벽에 붙였다"
+				},
+				{
+					"path": "gold",
+					"target": "봉인 검사관",
+					"does": "동전 120닢을 주고 어긋난 번호를 조용히 넘기게 한다",
+					"reaction_assumes": "주인공이 돈을 주어 검사관이 수첩 한 줄을 지웠다"
+				}
+			],
+			"checks": [
+				{
+					"item": "S1",
+					"pass": true
+				},
+				{
+					"item": "S2",
+					"pass": true
+				},
+				{
+					"item": "S3",
+					"pass": true
+				},
+				{
+					"item": "S4",
+					"pass": true
+				},
+				{
+					"item": "S5",
+					"pass": true
+				},
+				{
+					"item": "S6",
+					"pass": true
+				}
+			]
+		},
+		{
+			"card_id": "card_03_shared_meter",
+			"asks": "계량 기록에서 주인공 이름을 빼고 남의 칸에 숫자를 옮겨 적어 서로 이득을 보자는 것.",
+			"choices_read": [
+				{
+					"path": "easy",
+					"target": "계량 기록(남의 칸)",
+					"does": "자기 이름을 빼고 남의 칸에 숫자를 옮겨 적는다",
+					"reaction_assumes": "주인공이 남의 칸에 숫자를 옮겨 적었다"
+				},
+				{
+					"path": "hard",
+					"target": "계량기(담당자가 고친 숫자)",
+					"does": "적힌 숫자를 원래대로 되돌려 놓는다",
+					"reaction_assumes": "주인공이 숫자를 원래대로 되돌렸다"
+				},
+				{
+					"path": "stat",
+					"target": "계량기 담당자",
+					"does": "남의 몫에 손대지 말고 자기 칸만 채우라고 한다",
+					"reaction_assumes": "주인공의 말에 담당자가 자기 칸만 다시 채웠다"
+				}
+			],
+			"checks": [
+				{
+					"item": "S1",
+					"pass": true
+				},
+				{
+					"item": "S2",
+					"pass": true
+				},
+				{
+					"item": "S3",
+					"pass": true
+				},
+				{
+					"item": "S4",
+					"pass": true
+				},
+				{
+					"item": "S5",
+					"pass": true
+				},
+				{
+					"item": "S6",
+					"pass": true
+				}
+			]
+		},
+		{
+			"card_id": "card_03_spare_canister",
+			"asks": "손이 모자라니 냉각수 통을 서버 쪽까지 대신 옮겨 달라는 것.",
+			"choices_read": [
+				{
+					"path": "easy",
+					"target": "냉각수 배달원(대신)",
+					"does": "냉각수 통을 서버 쪽까지 옮겨준다",
+					"reaction_assumes": "주인공이 통을 옮겼고 그 과정에서 조각을 선반에 올려 두었다"
+				},
+				{
+					"path": "hard",
+					"target": "냉각수 배달원",
+					"does": "통을 받되 라벨부터 읽어보라고 요구한다",
+					"reaction_assumes": "주인공이 라벨을 읽게 했고 폐기 예정분임이 드러났다"
+				},
+				{
+					"path": "stat",
+					"target": "냉각수 배달원",
+					"does": "통을 제자리에 두고 손을 잡아당기지 말라고 일러둔다",
+					"reaction_assumes": "주인공의 말에 배달원이 통을 벽에 세우고 물러섰다"
+				},
+				{
+					"path": "gold",
+					"target": "냉각수 배달원",
+					"does": "동전 80닢을 주고 통을 직접 서버 옆에 두게 한다",
+					"reaction_assumes": "주인공이 돈을 주어 배달원이 통을 서버 옆에 붙여 놓았다"
+				}
+			],
+			"checks": [
+				{
+					"item": "S1",
+					"pass": true
+				},
+				{
+					"item": "S2",
+					"pass": true
+				},
+				{
+					"item": "S3",
+					"pass": true
+				},
+				{
+					"item": "S4",
+					"pass": true
+				},
+				{
+					"item": "S5",
+					"pass": true
+				},
+				{
+					"item": "S6",
+					"pass": true
+				}
+			]
+		},
+		{
+			"card_id": "card_03_unlogged_hand",
+			"asks": "절차 없이 봉인 테이프를 재로 덮어 번호를 흐리는 자신의 방식에 같이 손대 보자는 것.",
+			"choices_read": [
+				{
+					"path": "easy",
+					"target": "몰래 손보는 기술자(봉인 테이프)",
+					"does": "테이프를 재로 덮고 밸브 손잡이를 돌려 본다",
+					"reaction_assumes": "주인공이 손잡이를 돌려 물소리가 가까워졌다"
+				},
+				{
+					"path": "hard",
+					"target": "봉인 테이프(재와 번호)",
+					"does": "재를 닦아내고 번호를 다시 또렷하게 쓴다",
+					"reaction_assumes": "주인공이 재를 닦아 번호가 다시 드러났다"
+				},
+				{
+					"path": "stat",
+					"target": "몰래 손보는 기술자",
+					"does": "재 봉투를 거두고 손잡이 옆에 서 있으라고 한다",
+					"reaction_assumes": "주인공의 말에 기술자가 재 봉투를 넣고 손잡이 옆에 섰다"
+				}
+			],
+			"checks": [
+				{
+					"item": "S1",
+					"pass": true
+				},
+				{
+					"item": "S2",
+					"pass": true
+				},
+				{
+					"item": "S3",
+					"pass": true
+				},
+				{
+					"item": "S4",
+					"pass": true
+				},
+				{
+					"item": "S5",
+					"pass": true
+				},
+				{
+					"item": "S6",
+					"pass": true
+				}
+			]
+		}
+	]
+}

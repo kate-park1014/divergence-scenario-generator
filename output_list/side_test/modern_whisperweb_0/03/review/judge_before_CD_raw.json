@@ -1,0 +1,270 @@
+{
+	"cards": [
+		{
+			"checks": [
+				{
+					"item": "S1",
+					"pass": true
+				},
+				{
+					"pass": true,
+					"item": "S2"
+				},
+				{
+					"pass": true,
+					"item": "S3"
+				},
+				{
+					"item": "S4",
+					"pass": true
+				},
+				{
+					"pass": true,
+					"item": "S5"
+				}
+			],
+			"asks": "기기에 묻은 물기를 닦아달라고 부탁한다.",
+			"card_id": "card_03_blurred_screen",
+			"choices_read": [
+				{
+					"reaction_assumes": "기록의 일부는 구했지만 오염 물질이 틈새에 남았다.",
+					"target": "오염된 기기",
+					"does": "장갑을 끼고 대충 겉면의 물기만 닦아내어 당장의 번짐을 막는다.",
+					"path": "easy"
+				},
+				{
+					"target": "오염된 기기",
+					"path": "hard",
+					"does": "완전히 분해하여 안전하게 이물질을 제거한다.",
+					"reaction_assumes": "기기를 분해하느라 시간이 지체되고 손끝이 조금 부르텄다."
+				},
+				{
+					"does": "전문 세척액을 사서 기기의 오염을 빠르고 말끔하게 지운다.",
+					"reaction_assumes": "세척액이 이물질을 녹여내어 스크린 조각이 깨끗해졌다.",
+					"path": "gold",
+					"target": "기기"
+				},
+				{
+					"does": "오염 확산 속도를 계산하여 가장 중요한 데이터 칩만 신속히 뽑아낸다.",
+					"path": "lock",
+					"reaction_assumes": "빠른 판단 덕분에 핵심 기록은 손상 없이 건져냈다.",
+					"target": "데이터 칩"
+				}
+			]
+		},
+		{
+			"asks": "밸브를 돌려 물줄기 방향을 틀어달라고 부탁한다.",
+			"card_id": "card_03_burst_pipe",
+			"checks": [
+				{
+					"pass": true,
+					"item": "S1"
+				},
+				{
+					"pass": true,
+					"item": "S2"
+				},
+				{
+					"pass": true,
+					"item": "S3"
+				},
+				{
+					"pass": true,
+					"item": "S4"
+				},
+				{
+					"item": "S5",
+					"pass": true
+				}
+			],
+			"choices_read": [
+				{
+					"target": "밸브",
+					"path": "easy",
+					"reaction_assumes": "물줄기가 다른 곳으로 튀어 수리공은 살았지만 바닥이 엉망이 되었다.",
+					"does": "밸브를 돌려 물줄기 방향을 튼다."
+				},
+				{
+					"does": "쏟아지는 냉각수를 몸으로 막으며 밸브를 닫는다.",
+					"path": "hard",
+					"target": "밸브",
+					"reaction_assumes": "차가운 냉각수를 뒤집어썼지만 장치 오염을 최소화했다."
+				}
+			]
+		},
+		{
+			"checks": [
+				{
+					"item": "S1",
+					"pass": true
+				},
+				{
+					"item": "S2",
+					"pass": true
+				},
+				{
+					"item": "S3",
+					"pass": true
+				},
+				{
+					"item": "S4",
+					"pass": true
+				},
+				{
+					"pass": true,
+					"item": "S5"
+				}
+			],
+			"asks": "자신들을 출구 쪽으로 데려다주며 안전한 곳으로 안내해 달라고 부탁한다.",
+			"card_id": "card_03_confused_crowd",
+			"choices_read": [
+				{
+					"reaction_assumes": "기술자들은 반신반의하며 떠났고, 당신은 시간을 아꼈다.",
+					"does": "대충 방향만 손가락으로 가리키고 갈 길을 간다.",
+					"target": "기술자 무리",
+					"path": "easy"
+				},
+				{
+					"does": "직접 이끌고 안전 구역까지 안내하려다 시비를 거는 자와 마주친다.",
+					"reaction_assumes": "무리를 안전하게 대피시키느라 체력을 썼다.",
+					"path": "hard",
+					"target": "무리"
+				},
+				{
+					"reaction_assumes": "단말기의 정확한 안내 덕분에 기술자들이 무사히 빠져나갔다.",
+					"path": "gold",
+					"does": "휴대용 길잡이 단말기를 구매해 건네준다.",
+					"target": "기술자들"
+				},
+				{
+					"target": "패닉에 빠진 사람들",
+					"reaction_assumes": "진심 어린 위로에 기술자들은 스스로 길을 찾아 나섰다.",
+					"path": "lock",
+					"does": "다독이며 차분하게 바른 길을 설명한다."
+				}
+			]
+		},
+		{
+			"card_id": "card_03_mixed_identity",
+			"choices_read": [
+				{
+					"reaction_assumes": "이름표가 망가져 청소부의 출입 권한이 날아갔다.",
+					"target": "청소부의 이름표",
+					"does": "강제로 뜯어내어 데이터 연결을 끊는다.",
+					"path": "easy"
+				},
+				{
+					"does": "복잡한 암호를 풀어 하나씩 분리해낸다.",
+					"path": "hard",
+					"reaction_assumes": "암호를 푸느라 눈이 피로해졌지만 청소부의 신분은 복구되었다.",
+					"target": "청소부의 개인 정보"
+				}
+			],
+			"asks": "자신의 신분 데이터를 원래대로 되돌려달라고 부탁한다.",
+			"checks": [
+				{
+					"pass": true,
+					"item": "S1"
+				},
+				{
+					"item": "S2",
+					"pass": true
+				},
+				{
+					"pass": true,
+					"item": "S3"
+				},
+				{
+					"pass": true,
+					"item": "S4"
+				},
+				{
+					"item": "S5",
+					"pass": true
+				}
+			]
+		},
+		{
+			"choices_read": [
+				{
+					"target": "청소부",
+					"reaction_assumes": "청소부가 능숙하게 길을 터주어 힘을 들이지 않고 통과했다.",
+					"path": "easy",
+					"does": "파편을 다 치울 때까지 뒤에서 편하게 기다린다."
+				},
+				{
+					"path": "hard",
+					"reaction_assumes": "땀을 흘리며 치운 덕분에 파편 더미 속에 숨겨져 있던 보안 코드를 발견했다.",
+					"target": "파편",
+					"does": "청소부와 함께 빗자루를 들고 적극적으로 파편을 치운다."
+				}
+			],
+			"card_id": "card_03_safe_cleaner",
+			"checks": [
+				{
+					"item": "S1",
+					"pass": true
+				},
+				{
+					"item": "S2",
+					"pass": true
+				},
+				{
+					"pass": true,
+					"item": "S3"
+				},
+				{
+					"item": "S4",
+					"pass": true
+				},
+				{
+					"item": "S5",
+					"pass": true
+				}
+			],
+			"asks": "자신이 파편들을 빗자루로 쓸어내 드릴 테니 조금만 기다려달라고 한다."
+		},
+		{
+			"asks": "물기 하나 없이 안전하니까 여기서 숨 좀 고르고 가라고 권한다.",
+			"card_id": "card_03_safe_pressure",
+			"choices_read": [
+				{
+					"target": "수리공 옆",
+					"path": "easy",
+					"does": "앉아 안전한 구역에서 휴식을 취한다.",
+					"reaction_assumes": "수리공과 농담을 주고받으며 체력을 회복했다."
+				},
+				{
+					"target": "틈새 주변의 장치들",
+					"reaction_assumes": "장치들이 안전한 것을 확인하고 수리공에게 인사했다.",
+					"path": "hard",
+					"does": "쉬지 않고 한 번 더 점검한다."
+				}
+			],
+			"checks": [
+				{
+					"pass": true,
+					"item": "S1"
+				},
+				{
+					"pass": true,
+					"item": "S2"
+				},
+				{
+					"item": "S3",
+					"pass": true
+				},
+				{
+					"item": "S4",
+					"quote": "정말이네. 덕분에 주변 장치나 데이터 스크린 조각들도 번짐 없이 멀쩡해.",
+					"problem": "앞 방(스토리 5)에서 이미 스크린 조각들이 번지고 있다고 했는데, 멀쩡하다고 말하는 것은 앞뒤 사실이 어긋납니다.",
+					"pass": false
+				},
+				{
+					"pass": true,
+					"item": "S5"
+				}
+			]
+		}
+	]
+}

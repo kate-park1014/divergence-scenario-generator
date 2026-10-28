@@ -1,0 +1,136 @@
+{
+	"id": "card_03_safe_cleaner",
+	"kind": "callback",
+	"title": {
+		"korean": "안전한 청소부"
+	},
+	"intensity": "high",
+	"after_story": 7,
+	"before_story": 10,
+	"callback": {
+		"seed": "dewy_pipe_hard",
+		"min_rooms_after": 2
+	},
+	"background_tags": [
+		"floor",
+		"pile",
+		"staff",
+		"path",
+		"calm"
+	],
+	"dialogue": [
+		{
+			"speaker": "server_cleaner",
+			"content": {
+				"korean": "휴, 그때 천을 안 빌려주셔서 다행이에요. 걸레로 대충 닦고 말았더니 이 난장판을 피했네요."
+			}
+		},
+		{
+			"speaker": "kai",
+			"content": {
+				"korean": "스크린 조각이 깨지면서 튄 데이터 파편들이 저기 쌓여서 길을 막고 있어."
+			}
+		},
+		{
+			"speaker": "server_cleaner",
+			"content": {
+				"korean": "제가 저 파편들을 빗자루로 쓸어내 드릴 테니, 조금만 기다려봐요."
+			}
+		}
+	],
+	"choices": [
+		{
+			"text": {
+				"korean": "청소부가 파편을 다 치울 때까지 뒤에서 편하게 기다린다."
+			},
+			"path": "easy",
+			"mbti": "IN",
+			"flag": "clear_path",
+			"effects": {
+				"echo": 10,
+				"community": 10,
+				"gold": 50,
+				"reason": -10
+			},
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "청소부가 능숙하게 길을 터주어 힘을 들이지 않고 통과했다."
+					}
+				},
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "바닥에서 반짝이는 동전도 주웠다."
+					}
+				}
+			]
+		},
+		{
+			"text": {
+				"korean": "청소부와 함께 빗자루를 들고 적극적으로 파편을 치운다."
+			},
+			"path": "hard",
+			"mbti": "ES",
+			"flag": "security_code",
+			"effects": {
+				"community": 20,
+				"fighting": 20,
+				"echo": 10
+			},
+			"reward": [
+				"intelligence_up"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "땀을 흘리며 치운 덕분에 파편 더미 속에 숨겨져 있던 보안 코드를 발견했다."
+					}
+				},
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "청소부와 가볍게 하이파이브를 했다."
+					}
+				}
+			]
+		}
+	],
+	"_side": {
+		"slot": "D",
+		"person": {
+			"role": "청소 담당자",
+			"id": "server_cleaner",
+			"name": "서버 청소부"
+		},
+		"wants": "자신은 운 좋게 오염을 피했다며, 보답으로 길을 가로막는 데이터 파편을 치워주겠다고 한다.",
+		"rule_link": "천을 아낀 덕분에 오염수를 직접 만지지 않아 데이터 섞임 현상을 피했다.",
+		"events": {},
+		"flags": {
+			"clear_path": {
+				"kind": "good",
+				"boss_penalty": 1,
+				"label": {
+					"korean": "열린 길"
+				},
+				"boss_choice": {
+					"korean": "청소부가 미리 치워둔 깨끗한 통로를 따라 빠르게 접근한다."
+				}
+			},
+			"security_code": {
+				"kind": "good",
+				"boss_penalty": 2,
+				"label": {
+					"korean": "보안 코드"
+				},
+				"boss_choice": {
+					"korean": "발견한 보안 코드를 입력해 방어 체계를 무력화한다."
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,255 @@
+{
+	"id": "card_02_resume_audit",
+	"kind": "rep",
+	"title": {
+		"korean": "규정대로의 검수"
+	},
+	"intensity": "calm",
+	"after_story": 1,
+	"before_story": 3,
+	"condition": {
+		"leaning": "reason-",
+		"among": [
+			"fighting-",
+			"fighting+",
+			"community-",
+			"community+",
+			"reason-",
+			"reason+"
+		],
+		"min": 20
+	},
+	"urgency": 8,
+	"leaning": "reason-",
+	"background_tags": [
+		"terminal_room",
+		"bright_light",
+		"waiting_area",
+		"digital_board",
+		"tense_atmosphere"
+	],
+	"dialogue": [
+		{
+			"speaker": "narrator",
+			"content": {
+				"korean": "공용 검색 단말기 옆에서 초조한 표정의 구직자가 주변을 두리번거린다."
+			}
+		},
+		{
+			"speaker": "seeker",
+			"content": {
+				"korean": "당신이 지난번 서류 접수 때 서류 양식을 꼼꼼히 따져 정돈하던 그 사람이죠?"
+			}
+		},
+		{
+			"speaker": "seeker",
+			"content": {
+				"korean": "이 경력 증명서 날짜만 살짝 바꿔서 단말기에 넣게 도와주세요. 수수료는 두둑이 드릴게요!"
+			}
+		},
+		{
+			"speaker": "nia",
+			"content": {
+				"korean": "거짓으로 이력서를 바꾸는 건 단말기 규칙 위반이에요. 그대로 두면 위험해요!"
+			}
+		}
+	],
+	"choices": [
+		{
+			"text": {
+				"korean": "규정을 들먹이며 구직자의 거짓 이력서를 고발하고 신고 포상금을 받는다."
+			},
+			"path": "easy",
+			"mbti": "TJ",
+			"flag": "strict_report",
+			"effects": {
+				"community": 10,
+				"fighting": -10,
+				"gold": 100
+			},
+			"reward": [
+				"intelligence_up"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "당신은 단말기 담당자에게 구직자의 경력 위조 시도를 즉시 고발했다."
+					}
+				},
+				{
+					"speaker": "seeker",
+					"content": {
+						"korean": "웩, 진짜 원칙주의자를 만나서 망했네! 포상금이나 잘 챙겨 드시지!"
+					}
+				},
+				{
+					"speaker": "nia",
+					"content": {
+						"korean": "잘했어요! 원칙을 지키지 않으면 검색실 전체 데이터가 엉망이 되었을 거예요."
+					}
+				}
+			]
+		},
+		{
+			"text": {
+				"korean": "원칙을 깨고 구직자의 요청대로 거짓 경력을 단말기에 입력해 준다."
+			},
+			"path": "hard",
+			"mbti": "FP",
+			"flag": "forged_pass",
+			"effects": {
+				"echo": -10,
+				"fighting": 10,
+				"reason": 20
+			},
+			"reward": [
+				"shield"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "당신은 구직자가 넘겨준 거짓 경력을 단말기에 승인 처리해 주었다."
+					}
+				},
+				{
+					"speaker": "seeker",
+					"content": {
+						"korean": "고마워요! 덕분에 서류 심사는 무사히 넘어가겠네요. 나중에 꼭 보답할게요!"
+					}
+				},
+				{
+					"speaker": "nia",
+					"content": {
+						"korean": "하지만 이러면 데이터가 일그러져서 다른 사람의 이력서도 위험해져요."
+					}
+				}
+			]
+		},
+		{
+			"text": {
+				"korean": "질서의 권한으로 구직자의 위조 서류를 압류하고 정당한 양식으로 다시 쓰게 강제한다."
+			},
+			"path": "stat",
+			"mbti": "FJ",
+			"require": {
+				"stat": "reason",
+				"op": "<=",
+				"value": -40
+			},
+			"flag": "perfect_order",
+			"effects": {
+				"reason": -30,
+				"community": 20,
+				"echo": 10
+			},
+			"reward": [
+				"intelligence_up"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "당신이 규정집을 제시하며 구직자의 위조 시도를 막고 바른 경력 입력을 지시했다."
+					}
+				},
+				{
+					"speaker": "seeker",
+					"content": {
+						"korean": "으으, 서류 압류는 너무해요! 그래도 지침대로 다시 쓰니 마음은 편하네요."
+					}
+				},
+				{
+					"speaker": "nia",
+					"content": {
+						"korean": "당신이 한마디 하니까 순순히 따르네요! 검색실 질서가 단번에 잡혔어요."
+					}
+				}
+			]
+		},
+		{
+			"text": {
+				"korean": "구직자의 경력란에 '단말기 먼지 털기 봉사 100시간'을 입력한다."
+			},
+			"path": "fun",
+			"mbti": "TP",
+			"effects": {
+				"reason": 25,
+				"echo": 5,
+				"gold": 50
+			},
+			"reward": [
+				"heal"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "당신이 경력란에 엉뚱한 청소 봉사 기록을 입력하고 승인 버튼을 눌렀다."
+					}
+				},
+				{
+					"speaker": "seeker",
+					"content": {
+						"korean": "네? 먼지 털기 봉사요? 어, 그런데 단말기에서 봉사 가산점이 인정됐어요!"
+					}
+				},
+				{
+					"speaker": "nia",
+					"content": {
+						"korean": "거짓 경력 대신 진짜 봉사 활동으로 바뀐 셈이네요. 의외로 좋은 결과예요!"
+					}
+				}
+			]
+		}
+	],
+	"_side": {
+		"slot": "A",
+		"person": {
+			"id": "seeker",
+			"role": "초조한 지원자",
+			"name": "구직자"
+		},
+		"wants": "자신의 거짓 이력서를 단말기에 우회 등록하고 싶어 함",
+		"rule_link": "린의 이력서를 정리하기 전, 단말기에서 거짓 이력서를 등록하려는 구직자와 마주친다.",
+		"rep": "reason-",
+		"events": {},
+		"flags": {
+			"strict_report": {
+				"kind": "bad",
+				"boss_penalty": -1,
+				"label": {
+					"korean": "고발의 대가"
+				},
+				"boss_line": {
+					"korean": "보스 방에서 상급 감독관이 당신의 깐깐한 고발 기록을 조회하며 당신 일행의 행동에 제약을 가한다."
+				}
+			},
+			"forged_pass": {
+				"kind": "good",
+				"boss_penalty": 1,
+				"label": {
+					"korean": "암묵적 조력"
+				},
+				"boss_choice": {
+					"korean": "보스 방에서 구직자가 보답으로 건넨 보안 키로 차단된 단말기 통로를 개착한다."
+				}
+			},
+			"perfect_order": {
+				"kind": "good",
+				"boss_penalty": 2,
+				"label": {
+					"korean": "질서의 보증"
+				},
+				"boss_choice": {
+					"korean": "보스 방에서 규정 준수 보증서를 제출하여 검색실 보안 장치의 감시를 무력화한다."
+				}
+			}
+		}
+	}
+}

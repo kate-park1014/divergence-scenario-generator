@@ -1,0 +1,171 @@
+{
+	"id": "card_02_rep_community_plus_sara",
+	"title": {
+		"korean": "모두를 위한 정지"
+	},
+	"intensity": "calm",
+	"after_story": 1,
+	"before_story": 3,
+	"condition": {
+		"leaning": "community+",
+		"among": [
+			"fighting-",
+			"fighting+",
+			"community-",
+			"community+",
+			"reason-",
+			"reason+"
+		],
+		"min": 20
+	},
+	"urgency": 8,
+	"leaning": "community+",
+	"background_tags": [
+		"powerroom",
+		"alarm",
+		"redlight",
+		"machinery",
+		"tense"
+	],
+	"dialogue": [
+		{
+			"speaker": "worried_engineer",
+			"content": {
+				"korean": "당신이 사람들을 구하려고 물불 안 가린다는 분이군요."
+			}
+		},
+		{
+			"speaker": "worried_engineer",
+			"content": {
+				"korean": "이 단말기가 계속 돌면 구역 전체에 불이 나요! 제발 코드를 뽑아주세요."
+			}
+		},
+		{
+			"speaker": "lin",
+			"content": {
+				"korean": "화재가 번지면 정말 큰일이에요. 어서 코드를 ���아주세요!"
+			}
+		}
+	],
+	"choices": [
+		{
+			"text": {
+				"korean": "모두의 안전을 위해 즉시 코드를 뽑는다."
+			},
+			"path": "easy",
+			"mbti": "FJ",
+			"flag": "sara_power_outage",
+			"effects": {
+				"community": 20,
+				"gold": 50
+			},
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "단말기가 꺼지며 화재 경보가 멈춘다. 사라는 안도의 한숨을 쉰다."
+					}
+				}
+			]
+		},
+		{
+			"text": {
+				"korean": "코드를 뽑는 대신 소화기로 단말기를 덮어버린다."
+			},
+			"path": "hard",
+			"mbti": "TP",
+			"flag": "sara_extinguisher",
+			"effects": {
+				"community": -20,
+				"echo": -10
+			},
+			"reward": [
+				"defense_up"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "단말기가 하얀 거품에 파묻혀 작동을 멈춘다. 코드는 그대로 꽂혀 있다."
+					}
+				}
+			]
+		},
+		{
+			"text": {
+				"korean": "사람들을 대피시키며 여유롭게 코드를 뽑는다."
+			},
+			"path": "stat",
+			"mbti": "NF",
+			"require": {
+				"stat": "community",
+				"op": ">=",
+				"value": 40
+			},
+			"flag": "sara_evacuated_people",
+			"effects": {
+				"community": 30,
+				"echo": 10
+			},
+			"reward": [
+				"shield"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "모두가 안전하게 빠져나간 뒤, 당신이 마지막으로 코드를 뽑는다."
+					}
+				}
+			]
+		}
+	],
+	"kind": "rep",
+	"_side": {
+		"slot": "A",
+		"person": {
+			"id": "worried_engineer",
+			"name": "사라",
+			"role": "설비 기사"
+		},
+		"wants": "",
+		"rule_link": "",
+		"rep": "community+",
+		"events": {},
+		"flags": {
+			"sara_power_outage": {
+				"boss_penalty": -1,
+				"label": {
+					"korean": "전력 차단"
+				},
+				"boss_line": {
+					"korean": "전력이 차단되어 시야가 어두워지며 길을 잃는다."
+				},
+				"kind": "bad"
+			},
+			"sara_extinguisher": {
+				"boss_penalty": 1,
+				"label": {
+					"korean": "소화액 분사"
+				},
+				"boss_choice": {
+					"korean": "바닥에 남은 소화액을 흩뿌려 센서의 눈을 가린다."
+				},
+				"kind": "good"
+			},
+			"sara_evacuated_people": {
+				"boss_penalty": 2,
+				"label": {
+					"korean": "대피한 사람들"
+				},
+				"boss_choice": {
+					"korean": "대피했던 사람들이 나타나 막힌 길을 열어준다."
+				},
+				"kind": "good"
+			}
+		}
+	}
+}

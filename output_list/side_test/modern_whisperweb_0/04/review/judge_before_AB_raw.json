@@ -1,0 +1,288 @@
+{
+	"cards": [
+		{
+			"checks": [
+				{
+					"item": "S1",
+					"pass": true
+				},
+				{
+					"item": "S2",
+					"pass": true
+				},
+				{
+					"pass": true,
+					"item": "S3"
+				},
+				{
+					"pass": true,
+					"item": "S4"
+				},
+				{
+					"pass": true,
+					"item": "S5"
+				}
+			],
+			"card_id": "card_04_clean_core",
+			"asks": "어느 상자에 코어를 숨겼는지 맞춰달라고 한다.",
+			"choices_read": [
+				{
+					"does": "무게와 형태를 분석해 코어가 든 상자를 찾아낸다.",
+					"target": "상자",
+					"reaction_assumes": "주인공이 단번에 정답을 가리켰다.",
+					"path": "lock"
+				},
+				{
+					"reaction_assumes": "주인공이 정확한 상자를 골라냈다.",
+					"does": "야바위 게임에 참여해 코어가 든 상자를 고른다.",
+					"target": "리온의 게임 / 상자",
+					"path": "easy"
+				},
+				{
+					"target": "리온 / 부품",
+					"path": "hard",
+					"reaction_assumes": "주인공이 상자를 걷어차고 부품을 회수했다.",
+					"does": "리온의 게임을 무시하고 부품을 거둬들인다."
+				}
+			]
+		},
+		{
+			"asks": "폭풍이 잦아들 때까지 숨어 기다렸다가 결정체를 주워 가자고 한다.",
+			"choices_read": [
+				{
+					"does": "안전한 구석에 숨어 데이터 폭풍이 지나가길 기다린다.",
+					"target": "케노 / 데이터 폭풍",
+					"path": "easy",
+					"reaction_assumes": "폭풍이 지나간 뒤 주인공이 결정체를 챙겼다."
+				},
+				{
+					"path": "hard",
+					"reaction_assumes": "주인공이 케노를 남겨두고 발걸음을 재촉했다.",
+					"does": "미련을 버리고 출처 장치로 가는 길을 서두른다.",
+					"target": "결정체 / 출처 장치"
+				},
+				{
+					"does": "크레딧을 주며 결정체 대신 안전한 부품을 사라고 조언한다.",
+					"target": "케노",
+					"reaction_assumes": "주인공이 건넨 돈을 케노가 받았다.",
+					"path": "gold"
+				},
+				{
+					"path": "forced",
+					"does": "폭풍이 잦아들기도 전에 결정체를 향해 뛰어나간다.",
+					"reaction_assumes": "주인공이 무작정 뛰어들었다가 데이터 파편에 맞아 상처를 입었다.",
+					"target": "결정체"
+				}
+			],
+			"card_id": "card_04_data_crystal",
+			"checks": [
+				{
+					"item": "S1",
+					"pass": true
+				},
+				{
+					"item": "S2",
+					"pass": true
+				},
+				{
+					"item": "S3",
+					"pass": true
+				},
+				{
+					"item": "S4",
+					"pass": true
+				},
+				{
+					"item": "S5",
+					"pass": true
+				}
+			]
+		},
+		{
+			"checks": [
+				{
+					"pass": true,
+					"item": "S1"
+				},
+				{
+					"item": "S2",
+					"pass": true
+				},
+				{
+					"item": "S3",
+					"pass": true
+				},
+				{
+					"item": "S4",
+					"pass": true
+				},
+				{
+					"item": "S5",
+					"pass": true
+				}
+			],
+			"choices_read": [
+				{
+					"target": "단말기 / 벡스",
+					"does": "단말기를 조작해 인사 고과 점수를 올려준다.",
+					"path": "easy",
+					"reaction_assumes": "주인공이 데이터를 조작했다."
+				},
+				{
+					"reaction_assumes": "주인공이 거절했다.",
+					"target": "벡스",
+					"does": "기록 조작은 규칙 위반이라며 부탁을 단호히 거절한다.",
+					"path": "hard"
+				},
+				{
+					"reaction_assumes": "벡스가 돈을 쥐고 잠시 망설이다 고개를 끄덕인다.",
+					"does": "크레딧을 쥐여주며 정당한 방법으로 노력하라고 위로한다.",
+					"target": "벡스",
+					"path": "gold"
+				}
+			],
+			"asks": "자신의 인사 고과 데이터를 조금만 높여달라고 한다.",
+			"card_id": "card_04_fake_record"
+		},
+		{
+			"card_id": "card_04_lost_log",
+			"checks": [
+				{
+					"pass": true,
+					"item": "S1"
+				},
+				{
+					"item": "S2",
+					"pass": true
+				},
+				{
+					"pass": true,
+					"item": "S3"
+				},
+				{
+					"item": "S4",
+					"pass": true
+				},
+				{
+					"item": "S5",
+					"pass": true
+				}
+			],
+			"asks": "유출되는 데이터 속에서 자신의 작업 일지를 대신 잡아달라고 한다.",
+			"choices_read": [
+				{
+					"reaction_assumes": "주인공이 눈앞의 데이터 궤적을 분석해 일지를 건져냈다.",
+					"does": "데이터의 흐름을 계산해 일지만 정확히 낚아챈다.",
+					"target": "일지",
+					"path": "lock"
+				},
+				{
+					"does": "유출되는 데이터 속으로 손을 뻗어 일지가 지나가길 기다린다.",
+					"target": "데이터 / 일지",
+					"reaction_assumes": "주인공이 정확한 순간에 손을 뻗어 일지를 낚아챘다.",
+					"path": "easy"
+				},
+				{
+					"does": "데이터 흐름에 손을 넣는 건 위험하다며 유리를 뒤로 물러나게 한다.",
+					"reaction_assumes": "주인공이 유리를 안전한 곳으로 끌어당겼다.",
+					"path": "hard",
+					"target": "유리"
+				}
+			]
+		},
+		{
+			"card_id": "card_04_old_sorter",
+			"choices_read": [
+				{
+					"does": "단말기의 전체 포맷 버튼을 눌러준다.",
+					"target": "단말기 / 기계",
+					"path": "easy",
+					"reaction_assumes": "주인공이 승인 버튼을 눌렀다."
+				},
+				{
+					"reaction_assumes": "주인공이 전원을 내렸다.",
+					"does": "포맷을 취소하고 전원을 내린다.",
+					"target": "기계",
+					"path": "hard"
+				},
+				{
+					"does": "크레딧을 들여 기계의 외부 메모리를 교체해 안전하게 비워준다.",
+					"reaction_assumes": "주인공이 새 메모리를 끼워주었다.",
+					"path": "gold",
+					"target": "기계"
+				}
+			],
+			"asks": "전체 포맷 승인 버튼을 눌러달라고 한다.",
+			"checks": [
+				{
+					"problem": "크레딧을 누구에게 지불하여 메모리를 구하는지 명확하지 않습니다.",
+					"item": "S1",
+					"pass": false,
+					"quote": "크레딧을 들여 기계의 외부 메모리를 교체해 안전하게 비워준다."
+				},
+				{
+					"item": "S2",
+					"pass": true
+				},
+				{
+					"pass": true,
+					"item": "S3"
+				},
+				{
+					"item": "S4",
+					"pass": true
+				},
+				{
+					"item": "S5",
+					"pass": true
+				}
+			]
+		},
+		{
+			"checks": [
+				{
+					"pass": true,
+					"item": "S1"
+				},
+				{
+					"pass": true,
+					"item": "S2"
+				},
+				{
+					"item": "S3",
+					"pass": true
+				},
+				{
+					"pass": true,
+					"item": "S4"
+				},
+				{
+					"pass": true,
+					"item": "S5"
+				}
+			],
+			"card_id": "card_04_secret_ledger",
+			"asks": "경쟁자의 뒷거래 기록을 찾아달라고 한다.",
+			"choices_read": [
+				{
+					"reaction_assumes": "주인공이 데이터 스트림에서 장부를 낚아채 토마에게 건넸다.",
+					"target": "토마 / 비밀 거래 기록",
+					"does": "경쟁 상인의 비밀 거래 기록을 찾아 넘긴다.",
+					"path": "easy"
+				},
+				{
+					"target": "토마",
+					"reaction_assumes": "주인공이 제안을 물리쳤다.",
+					"path": "hard",
+					"does": "남의 정보를 캐는 짓은 안 한다며 단호히 거절한다."
+				},
+				{
+					"target": "토마",
+					"does": "크레딧을 쥐여주며 남의 뒤를 캐는 대신 정당하게 장사하라고 한다.",
+					"reaction_assumes": "주인공이 돈을 주며 타일렀다.",
+					"path": "gold"
+				}
+			]
+		}
+	]
+}

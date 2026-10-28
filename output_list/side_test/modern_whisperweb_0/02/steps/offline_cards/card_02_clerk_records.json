@@ -1,0 +1,153 @@
+{
+	"id": "card_02_clerk_records",
+	"kind": "normal",
+	"title": {
+		"korean": "꼬여버린 기록"
+	},
+	"intensity": "calm",
+	"after_story": 1,
+	"before_story": 3,
+	"background_tags": [
+		"flickering_screen",
+		"dusty_archive",
+		"nervous_sweat",
+		"stacked_papers",
+		"hushed_voices"
+	],
+	"dialogue": [
+		{
+			"speaker": "stressed_clerk",
+			"content": {
+				"korean": "지금 시스템이 불안정해서 데이터 스크린 조각이 깜빡이고 있잖아."
+			}
+		},
+		{
+			"speaker": "stressed_clerk",
+			"content": {
+				"korean": "이참에 단말기 전원만 살짝 껐다 켜줘. 에러 핑계로 지워야 할 기록이 있거든."
+			}
+		},
+		{
+			"speaker": "lin",
+			"content": {
+				"korean": "일부러 시스템을 끄다니요? 그건 명백한 규정 위반이에요."
+			}
+		},
+		{
+			"speaker": "lin",
+			"content": {
+				"korean": "하지만 지금 상황에서는 누가 고의로 했는지 알 수 없긴 하겠네요."
+			}
+		}
+	],
+	"choices": [
+		{
+			"text": {
+				"korean": "전원을 껐다 켜서 기록 조작을 돕는다."
+			},
+			"path": "easy",
+			"mbti": "EN",
+			"effects": {
+				"reason": -20,
+				"community": -20,
+				"echo": -10
+			},
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "당신이 전원을 껐다 켜자 마일즈는 재빨리 기록을 지우고 안도했다."
+					}
+				},
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "린은 못마땅한 표정을 지으며 고개를 ���렸다."
+					}
+				}
+			],
+			"event": "minigame_slot",
+			"event_intro": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "\"운이 좋으면 더 큰 걸 주지. 한 번 해볼래?\" 마일즈가 자신이 빼돌린 부품을 걸고 내기를 제안한다."
+					}
+				}
+			]
+		},
+		{
+			"text": {
+				"korean": "기록은 훼손하면 안 된다며 거절한다."
+			},
+			"path": "hard",
+			"mbti": "IS",
+			"effects": {
+				"echo": 10,
+				"reason": 20,
+				"community": 20
+			},
+			"reward": [
+				"intelligence_up"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "당신이 거절하자 마일즈는 투덜거리며 단말기에서 물러났다."
+					}
+				},
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "깜빡이던 데이터 스크린 조각들은 곧 원래의 기록을 복구했다."
+					}
+				}
+			]
+		},
+		{
+			"text": {
+				"korean": "{actor}이(가) 기록을 아예 전부 삭제해버린다."
+			},
+			"path": "fun",
+			"mbti": "EP",
+			"effects": {
+				"echo": -15,
+				"gold": 100,
+				"fighting": 20,
+				"reason": -30
+			},
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "{actor}이(가) 버튼을 연타해 단말기의 모든 기록을 날려버렸다."
+					}
+				},
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "마일즈는 경악하며 입을 다물지 못했고, 당신은 그의 손에 들린 돈을 챙겼다."
+					}
+				}
+			]
+		}
+	],
+	"_side": {
+		"slot": "A",
+		"person": {
+			"id": "stressed_clerk",
+			"name": "마일즈",
+			"role": "기록원"
+		},
+		"wants": "단말기 전원을 껐다 켜서 에러를 핑계로 기록을 조작하게 해달라고 함.",
+		"rule_link": "전원 조작을 통해 일어나는 데이터 스크린 조각의 초기화와 은폐를 보여줌.",
+		"events": {
+			"easy": "마일즈가 고맙다며 자신이 빼돌린 부품을 걸고 내기를 제안한다."
+		},
+		"flags": {}
+	}
+}

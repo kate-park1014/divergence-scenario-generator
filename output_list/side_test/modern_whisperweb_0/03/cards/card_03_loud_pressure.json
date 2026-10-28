@@ -1,0 +1,259 @@
+{
+	"id": "card_03_loud_pressure",
+	"kind": "rep",
+	"title": {
+		"korean": "소문난 주먹"
+	},
+	"intensity": "calm",
+	"after_story": 1,
+	"before_story": 3,
+	"condition": {
+		"leaning": "fighting-",
+		"among": [
+			"fighting-",
+			"fighting+",
+			"community-",
+			"community+",
+			"reason-",
+			"reason+"
+		],
+		"min": 20
+	},
+	"urgency": 8,
+	"leaning": "fighting-",
+	"background_tags": [
+		"pipe_room",
+		"afternoon",
+		"red_lamp",
+		"two_workers",
+		"tense"
+	],
+	"dialogue": [
+		{
+			"speaker": "pipe_bruiser",
+			"content": {
+				"korean": "당신이죠? 지난번에 통로 막은 놈들 멱살 잡고 밀어낸 사람."
+			}
+		},
+		{
+			"speaker": "narrator",
+			"content": {
+				"korean": "그는 손에 쇠지렛대를 쥔 채 밸브 봉인 테이프를 툭툭 두드렸다."
+			}
+		},
+		{
+			"speaker": "pipe_bruiser",
+			"content": {
+				"korean": "이거 반 장짜리 테이프 하나 뜯으면 끝이야. 대신 내 몫 두 통 먼저."
+			}
+		},
+		{
+			"speaker": "kai",
+			"content": {
+				"korean": "저 사람 눈이 벌써 물통에 가 있네요."
+			}
+		},
+		{
+			"speaker": "pipe_bruiser",
+			"content": {
+				"korean": "빨리 정해. 온도 올라가는 소리가 벌써 나잖아."
+			}
+		}
+	],
+	"choices": [
+		{
+			"text": {
+				"korean": "쇠지렛대를 빌려 봉인 테이프를 힘으로 뜯어낸다"
+			},
+			"path": "easy",
+			"mbti": "EP",
+			"flag": "rust_water",
+			"effects": {
+				"fighting": 15,
+				"reason": -10,
+				"echo": -5
+			},
+			"reward": [
+				"attack_up"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "테이프가 뜯기며 냉각수가 두 통째 흘러나왔다."
+					}
+				},
+				{
+					"speaker": "pipe_bruiser",
+					"content": {
+						"korean": "거봐, 힘이 답이야. 한 통은 내가 가져간다."
+					}
+				},
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "녹슨 물줄기가 바닥 홈통으로 흘러가며 붉은 자국을 남겼다."
+					}
+				}
+			]
+		},
+		{
+			"text": {
+				"korean": "쇠지렛대를 빼앗아 밸브 봉인을 그대로 두게 한다"
+			},
+			"path": "hard",
+			"mbti": "TJ",
+			"flag": "bruiser_watch",
+			"effects": {
+				"fighting": -15,
+				"reason": 15,
+				"echo": 10
+			},
+			"reward": [
+				"defense_up"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "pipe_bruiser",
+					"content": {
+						"korean": "뭐야, 이거 안 뜯으면 나는 그냥 나간다?"
+					}
+				},
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "그는 지렛대를 바닥에 놓고 투덜대며 문가에 서서 팔짱을 꼈다."
+					}
+				},
+				{
+					"speaker": "kai",
+					"content": {
+						"korean": "봉인은 그대로네요. 저 사람이 지켜보고 있으니 확실하겠어요."
+					}
+				}
+			]
+		},
+		{
+			"text": {
+				"korean": "잡역꾼에게 밸브를 등지고 서 있으라고 명령한다"
+			},
+			"path": "stat",
+			"mbti": "TP",
+			"require": {
+				"stat": "fighting",
+				"op": "<=",
+				"value": -40
+			},
+			"flag": "valve_guard",
+			"effects": {
+				"fighting": -20,
+				"community": -10
+			},
+			"reward": [
+				"shield"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "그는 지렛대를 내려놓고 밸브 앞을 등으로 막았다."
+					}
+				},
+				{
+					"speaker": "pipe_bruiser",
+					"content": {
+						"korean": "알겠어, 알겠어. 당신 앞에서 손대는 놈은 없을 거야."
+					}
+				},
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "파이프실 입구 쪽에서 발소리가 뚝 멈췄다."
+					}
+				}
+			]
+		},
+		{
+			"text": {
+				"korean": "지렛대를 빼앗아 밸브 옆 배관을 툭툭 두드려 소리를 낸다"
+			},
+			"path": "fun",
+			"mbti": "FP",
+			"effects": {
+				"fighting": 10,
+				"reason": 25
+			},
+			"reward": [
+				"intelligence_up"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "둔탁한 소리가 나자 배관 안쪽에서 물방울이 규칙적으로 떨어졌다."
+					}
+				},
+				{
+					"speaker": "pipe_bruiser",
+					"content": {
+						"korean": "어? 이 소리... 압력이 빠지는 소리잖아."
+					}
+				},
+				{
+					"speaker": "kai",
+					"content": {
+						"korean": "테이프는 그대로인데 압력이 줄었어요. 이상하네요."
+					}
+				}
+			]
+		}
+	],
+	"_side": {
+		"slot": "A",
+		"person": {
+			"id": "pipe_bruiser",
+			"name": "배관 투덜이",
+			"role": "파이프실 잡역꾼"
+		},
+		"wants": "자기 몫의 냉각수를 먼저 빼앗겼다며, 봉인된 밸브를 힘으로 뜯어 열자고 부추긴다.",
+		"rule_link": "강제로 밸브를 뜯으면 냉각수에 녹이 섞여 데이터 스크린 조각의 판독이 흐려진다.",
+		"rep": "fighting-",
+		"events": {},
+		"flags": {
+			"rust_water": {
+				"kind": "bad",
+				"boss_penalty": -1,
+				"label": {
+					"korean": "녹물 섞인 냉각수"
+				},
+				"boss_line": {
+					"korean": "녹이 섞인 냉각수를 들고 서버 앞에 선다."
+				}
+			},
+			"bruiser_watch": {
+				"kind": "good",
+				"boss_penalty": 1,
+				"label": {
+					"korean": "지켜보는 잡역꾼"
+				},
+				"boss_choice": {
+					"korean": "문가에서 지켜보는 잡역꾼에게 봉인 상태를 확인시킨다."
+				}
+			},
+			"valve_guard": {
+				"kind": "good",
+				"boss_penalty": 2,
+				"label": {
+					"korean": "밸브 앞을 막은 잡역꾼"
+				},
+				"boss_choice": {
+					"korean": "밸브 앞을 막아선 잡역꾼에게 냉각수 통을 건네받는다."
+				}
+			}
+		}
+	}
+}

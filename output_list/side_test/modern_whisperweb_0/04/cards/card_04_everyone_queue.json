@@ -1,0 +1,257 @@
+{
+	"id": "card_04_everyone_queue",
+	"kind": "rep",
+	"title": {
+		"korean": "줄을 세우는 사람"
+	},
+	"intensity": "calm",
+	"after_story": 1,
+	"before_story": 3,
+	"condition": {
+		"leaning": "community+",
+		"among": [
+			"fighting-",
+			"fighting+",
+			"community-",
+			"community+",
+			"reason-",
+			"reason+"
+		],
+		"min": 20
+	},
+	"urgency": 8,
+	"leaning": "community+",
+	"background_tags": [
+		"long_queue",
+		"dim_hall",
+		"paper_smell",
+		"restless_crowd",
+		"echoing"
+	],
+	"dialogue": [
+		{
+			"speaker": "haru",
+			"content": {
+				"korean": "당신이 다들 챙기느라 자기 일 놓는 사람이라면서요? 이 줄 좀 봐 주세요."
+			}
+		},
+		{
+			"speaker": "dax",
+			"content": {
+				"korean": "저 줄 안에 내 일기장 찾으러 온 사람도 있을걸. 다들 목적이 뚜렷하네."
+			}
+		},
+		{
+			"speaker": "haru",
+			"content": {
+				"korean": "열아홉 명이에요. 순서를 안 정하면 여기서 싸움 나요. 저는 반장이라 책임이 있단 말이에요."
+			}
+		},
+		{
+			"speaker": "narrator",
+			"content": {
+				"korean": "하루의 팔에는 반장 표시 대신 누렇게 바랜 완장이 헐겁게 걸려 있었다."
+			}
+		}
+	],
+	"choices": [
+		{
+			"text": {
+				"korean": "줄 선 사람들의 순서를 정하고 먼저 온 사람부터 들여보낸다."
+			},
+			"path": "easy",
+			"mbti": "FJ",
+			"flag": "haru_line",
+			"effects": {
+				"community": 20,
+				"echo": 5
+			},
+			"reward": [
+				"defense_up"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "하루가 완장을 고쳐 매고 줄 앞에 서서 순번을 하나씩 불렀다."
+					}
+				},
+				{
+					"speaker": "haru",
+					"content": {
+						"korean": "이제 좀 사람 같네요. 고맙습니다, 진짜로."
+					}
+				},
+				{
+					"speaker": "dax",
+					"content": {
+						"korean": "줄이 서니까 내 차례도 오겠다. 몇 번째야?"
+					}
+				}
+			]
+		},
+		{
+			"text": {
+				"korean": "줄을 전부 해산시키고 아무도 정보를 못 가져가게 한다."
+			},
+			"path": "hard",
+			"mbti": "TJ",
+			"flag": "haru_dismissed",
+			"effects": {
+				"community": -15,
+				"reason": 10,
+				"echo": -10
+			},
+			"reward": [
+				"attack_up"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "haru",
+					"content": {
+						"korean": "그럼 저는 어떻게 해요? 반장인데 아무것도 못 했어요."
+					}
+				},
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "사람들이 하나둘 돌아서자 하루가 완장을 벗어 접었다."
+					}
+				},
+				{
+					"speaker": "dax",
+					"content": {
+						"korean": "다들 가버렸네. 내 일기장 찾아줄 사람도 가버렸고."
+					}
+				}
+			]
+		},
+		{
+			"text": {
+				"korean": "하루에게 사람들을 믿고 줄을 맡기라고 한다."
+			},
+			"path": "stat",
+			"mbti": "FP",
+			"require": {
+				"stat": "community",
+				"op": ">=",
+				"value": 40
+			},
+			"flag": "haru_trusted",
+			"effects": {
+				"community": 20,
+				"echo": 10
+			},
+			"reward": [
+				"shield"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "haru",
+					"content": {
+						"korean": "저한테요? …알겠어요. 한 번 해볼게요."
+					}
+				},
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "하루가 완장을 두 번 매만지고 줄 앞으로 걸어 나갔다."
+					}
+				},
+				{
+					"speaker": "dax",
+					"content": {
+						"korean": "저 사람 눈이 아까보다 살아났어. 좋은 거지?"
+					}
+				}
+			]
+		},
+		{
+			"text": {
+				"korean": "하루에게 100골드를 주고 줄 선 사람들의 기록을 대신 사 오게 한다."
+			},
+			"path": "gold",
+			"mbti": "TP",
+			"require": {
+				"stat": "gold",
+				"op": ">=",
+				"value": 100
+			},
+			"effects": {
+				"gold": -100,
+				"community": 10
+			},
+			"reward": [
+				"intelligence_up"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "haru",
+					"content": {
+						"korean": "이 돈이면 열 명 몫은 되겠네요. 순서대로 사 올게요."
+					}
+				},
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "하루가 지폐를 완장 안에 넣고 줄을 따라 걸어가며 값을 흥정했다."
+					}
+				},
+				{
+					"speaker": "dax",
+					"content": {
+						"korean": "돈이 사람 사이를 오가네. 내 일기장은 누가 사 주나."
+					}
+				}
+			]
+		}
+	],
+	"_side": {
+		"slot": "A",
+		"person": {
+			"id": "haru",
+			"name": "하루",
+			"role": "처리장 임시 반장"
+		},
+		"wants": "유출된 정보를 캐내려는 사람들을 말리지 못해, 주인공에게 줄을 세우고 순서를 정해 달라고 한다.",
+		"rule_link": "줄을 세우는 사이 데이터 스크린 조각이 순번표에 출처 장치 좌표를 찍어 낸다.",
+		"rep": "community+",
+		"events": {},
+		"flags": {
+			"haru_line": {
+				"kind": "bad",
+				"boss_penalty": -1,
+				"label": {
+					"korean": "정리된 줄"
+				},
+				"boss_line": {
+					"korean": "하루가 세운 순번표를 들고 보스 방 앞에서 사람들을 통제해 준다."
+				}
+			},
+			"haru_dismissed": {
+				"kind": "good",
+				"boss_penalty": 1,
+				"label": {
+					"korean": "해산된 줄"
+				},
+				"boss_choice": {
+					"korean": "해산된 사람들 중 몇이 보스 방 앞에서 당신을 붙잡고 소리를 지른다."
+				}
+			},
+			"haru_trusted": {
+				"kind": "good",
+				"boss_penalty": 2,
+				"label": {
+					"korean": "맡긴 줄"
+				},
+				"boss_choice": {
+					"korean": "하루가 줄을 이끌고 와 보스 방 앞 통로를 비워 주고 경로를 알려 준다."
+				}
+			}
+		}
+	}
+}

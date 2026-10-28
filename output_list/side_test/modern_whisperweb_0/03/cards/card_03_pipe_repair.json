@@ -1,0 +1,168 @@
+{
+	"id": "card_03_pipe_repair",
+	"kind": "plant",
+	"title": {
+		"korean": "금이 간 파이프"
+	},
+	"intensity": "calm",
+	"after_story": 1,
+	"before_story": 3,
+	"background_tags": [
+		"pipe",
+		"heat",
+		"wrench",
+		"steam",
+		"sweat"
+	],
+	"dialogue": [
+		{
+			"speaker": "piping_tech",
+			"content": {
+				"korean": "밸브 쪽 압력이 너무 높아서 파이프에 금이 갔어. 그쪽에 있는 예비 부품 좀 줘."
+			}
+		},
+		{
+			"speaker": "kai",
+			"content": {
+				"korean": "밸브 부품을 줘버리면 우리가 나중에 밸브를 열 때 문제가 생기지 않을까?"
+			}
+		},
+		{
+			"speaker": "piping_tech",
+			"content": {
+				"korean": "지금 당장 터지는 걸 막으려면 어쩔 수 없잖아! 빨리 줘!"
+			}
+		}
+	],
+	"choices": [
+		{
+			"text": {
+				"korean": "요구대로 예비 부품을 넘겨준다."
+			},
+			"path": "easy",
+			"mbti": "SF",
+			"effects": {
+				"community": 10,
+				"gold": 50
+			},
+			"seed": "pipe_repair_easy",
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "수리공이 재빨리 부품을 끼워 넣어 금이 간 곳을 막았다."
+					}
+				},
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "그는 감사의 표시로 주머니에 있던 약간의 돈을 건네주었다."
+					}
+				}
+			]
+		},
+		{
+			"text": {
+				"korean": "나중을 위해 부품을 주지 않는다."
+			},
+			"path": "hard",
+			"mbti": "NT",
+			"effects": {
+				"echo": -5,
+				"reason": 10
+			},
+			"reward": [
+				"defense_up"
+			],
+			"seed": "pipe_repair_hard",
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "수리공은 투덜거리며 자신의 테이프로 간신히 구멍을 칭칭 감았다."
+					}
+				},
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "부품을 아낀 덕분에 밸브를 조작할 때 더 수월하게 접근할 수 있게 되었다."
+					}
+				}
+			]
+		},
+		{
+			"text": {
+				"korean": "근처 자판기에 돈을 넣고 고성능 밀봉제를 뽑아 파이프에 발라준다."
+			},
+			"path": "gold",
+			"mbti": "ES",
+			"require": {
+				"stat": "gold",
+				"op": ">=",
+				"value": 50
+			},
+			"effects": {
+				"gold": -50
+			},
+			"reward": [
+				"heal"
+			],
+			"seed": "pipe_repair_hard",
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "고급 밀봉제가 파이프의 금을 완벽하게 메웠다."
+					}
+				},
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "수리공이 놀라워하며 감사를 표했다."
+					}
+				}
+			]
+		},
+		{
+			"text": {
+				"korean": "{actor}이(가) 압력 계산을 통해 부품 없이 수리할 방법을 지시한다."
+			},
+			"path": "lock",
+			"mbti": "TJ",
+			"require": {
+				"mbti": "TJ"
+			},
+			"effects": {
+				"reason": 10,
+				"gold": 30
+			},
+			"seed": "pipe_repair_hard",
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "{actor}의 지시에 따라 밸브 틈새를 조절하자 파이프의 압력이 안정되었다."
+					}
+				},
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "부품을 아끼고 수리공의 신뢰도 얻었다."
+					}
+				}
+			]
+		}
+	],
+	"_side": {
+		"slot": "A",
+		"person": {
+			"role": "파이프실 관리자",
+			"name": "배관 수리공",
+			"id": "piping_tech"
+		},
+		"wants": "파이프 균열을 막기 위해 주변의 예비 부품을 요구한다.",
+		"rule_link": "파이프의 압력을 조작하는 예행연습으로, 밸브 개방의 여파를 암시한다.",
+		"events": {},
+		"flags": {}
+	}
+}

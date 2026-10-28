@@ -1,0 +1,223 @@
+{
+	"id": "card_01_nurse_bandage_hand",
+	"kind": "rep",
+	"title": {
+		"korean": "붕대를 감아 주는 손"
+	},
+	"intensity": "calm",
+	"after_story": 7,
+	"before_story": 10,
+	"condition": {
+		"leaning": "fighting+",
+		"among": [
+			"fighting-",
+			"fighting+",
+			"community-",
+			"community+",
+			"reason-",
+			"reason+"
+		],
+		"min": 20
+	},
+	"urgency": 8,
+	"leaning": "fighting+",
+	"background_tags": [
+		"waiting_hall",
+		"daytime",
+		"fluorescent",
+		"crowd",
+		"hurried"
+	],
+	"dialogue": [
+		{
+			"speaker": "narrator",
+			"content": {
+				"korean": "대기홀 구석 탁자에 붕대와 가위가 가지런히 놓여 있었다. 선우가 앉은 사람 손목마다 붕대를 감고 있었다."
+			}
+		},
+		{
+			"speaker": "seonwoo",
+			"content": {
+				"korean": "당신이 그 사람들 손 잡아 일으켜 세운다는 분이죠. 소문 들었어요."
+			}
+		},
+		{
+			"speaker": "seonwoo",
+			"content": {
+				"korean": "이 사람들 손등에 이름이 안 보여요. 붕대를 감아 두면 적어도 손은 여기 있잖아요."
+			}
+		},
+		{
+			"speaker": "lin",
+			"content": {
+				"korean": "저기 앉은 분, 아까부터 자기 이름을 계속 되뇌고 있어요."
+			}
+		},
+		{
+			"speaker": "seonwoo",
+			"content": {
+				"korean": "당신 손도 좀 보여 줄래요? 접수표에 도장 찍다 보면 손부터 흐려져요."
+			}
+		}
+	],
+	"choices": [
+		{
+			"text": {
+				"korean": "선우를 도와 대기자들 손목에 붕대를 감아 준다"
+			},
+			"path": "easy",
+			"mbti": "FJ",
+			"flag": "bandaged_hands",
+			"effects": {
+				"community": 20,
+				"fighting": 10
+			},
+			"reward": [
+				"heal"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "seonwoo",
+					"content": {
+						"korean": "됐어요, 이분 손등에 이름이 다시 보여요."
+					}
+				},
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "붕대 끝을 묶자 대기자가 자기 손등을 들여다보고 입을 다물었다."
+					}
+				},
+				{
+					"speaker": "lin",
+					"content": {
+						"korean": "저도 한 번 감아 주세요. 손이 좀 시려서요."
+					}
+				}
+			]
+		},
+		{
+			"text": {
+				"korean": "선우에게 붕대를 거두고 대기자들을 접수대 쪽으로 보낸다"
+			},
+			"path": "hard",
+			"mbti": "TP",
+			"flag": "bandage_removed",
+			"effects": {
+				"community": -20,
+				"reason": 15
+			},
+			"reward": [
+				"move_range_up"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "seonwoo",
+					"content": {
+						"korean": "여기 앉아 있으면 손은 붙잡히는데, 이름은 계속 흐려져요."
+					}
+				},
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "대기자들이 붕대를 풀고 일어서자 탁자 위 가위만 남았다."
+					}
+				},
+				{
+					"speaker": "lin",
+					"content": {
+						"korean": "가 버렸어요. 이름 부르면 돌아오려나요."
+					}
+				}
+			]
+		},
+		{
+			"text": {
+				"korean": "선우에게 대기자 명단을 받아 이름을 하나씩 불러 준다"
+			},
+			"path": "stat",
+			"mbti": "EN",
+			"require": {
+				"stat": "fighting",
+				"op": ">=",
+				"value": 40
+			},
+			"flag": "name_list_called",
+			"effects": {
+				"community": 25,
+				"echo": 10,
+				"fighting": 10
+			},
+			"reward": [
+				"intelligence_up"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "seonwoo",
+					"content": {
+						"korean": "지금 부른 이름, 저 사람이에요. 손등에 다시 글씨가 보여요."
+					}
+				},
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "이름을 부를 때마다 누군가 손을 들었다. 탁자 위 붕대가 하나씩 줄었다."
+					}
+				},
+				{
+					"speaker": "lin",
+					"content": {
+						"korean": "제 이름도 불러 주시면 안 돼요? 순번은 그대로 둘게요."
+					}
+				}
+			]
+		}
+	],
+	"_side": {
+		"slot": "D",
+		"person": {
+			"id": "seonwoo",
+			"name": "선우",
+			"role": "대기홀 의무실 자원봉사자"
+		},
+		"wants": "접수표에 손도장을 찍다 손목을 다친 대기자들을 한 명이라도 더 붙잡아 두고 싶다",
+		"rule_link": "접수 기록이 어긋나면 사람이 흐려지는데, 선우는 그 흐려짐이 손등부터 온다고 믿는다",
+		"rep": "fighting+",
+		"events": {},
+		"flags": {
+			"bandaged_hands": {
+				"kind": "bad",
+				"boss_penalty": -1,
+				"label": {
+					"korean": "감긴 손목"
+				},
+				"boss_line": {
+					"korean": "출입문 앞에서 붕대 감은 대기자들이 당신 손을 잡아 세우고 문 쪽으로 끌어 준다."
+				}
+			},
+			"bandage_removed": {
+				"kind": "good",
+				"boss_penalty": 1,
+				"label": {
+					"korean": "붕대 거둠"
+				},
+				"boss_choice": {
+					"korean": "출입문 앞에서 붕대를 풀어 버린 대기자들이 당신을 알아보지 못하고 지나친다."
+				}
+			},
+			"name_list_called": {
+				"kind": "good",
+				"boss_penalty": 2,
+				"label": {
+					"korean": "불린 이름"
+				},
+				"boss_choice": {
+					"korean": "출입문 앞에서 당신이 이름을 부르자 대기자들이 줄을 만들어 문을 막아선다."
+				}
+			}
+		}
+	}
+}

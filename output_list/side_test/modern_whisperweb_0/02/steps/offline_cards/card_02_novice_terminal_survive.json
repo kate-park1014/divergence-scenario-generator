@@ -1,0 +1,181 @@
+{
+	"id": "card_02_novice_terminal_survive",
+	"kind": "callback",
+	"title": {
+		"korean": "버텨낸 단말기"
+	},
+	"intensity": "high",
+	"after_story": 5,
+	"before_story": 7,
+	"callback": {
+		"seed": "novice_terminal_hard",
+		"min_rooms_after": 2
+	},
+	"background_tags": [
+		"emergency_room",
+		"server_rack",
+		"blinking_lights",
+		"heat_haze",
+		"sweat"
+	],
+	"dialogue": [
+		{
+			"speaker": "tech_novice",
+			"content": {
+				"korean": "아까 매뉴얼대로 놔두길 천만다행이에요! 다른 건 다 타는데 제 것만 멀쩡해요."
+			}
+		},
+		{
+			"speaker": "tech_novice",
+			"content": {
+				"korean": "데이터 스크린 조각들을 백업할 동안 과열된 주변 장비들이 안 무너지게 막아주세요!"
+			}
+		},
+		{
+			"speaker": "lin",
+			"content": {
+				"korean": "우리가 했던 조언이 도움이 되었네요. 백업을 무사히 마칠 수 있게 도와주죠."
+			}
+		},
+		{
+			"speaker": "lin",
+			"content": {
+				"korean": "조금만 버티면 중요한 기록을 살릴 수 있을 거예요."
+			}
+		}
+	],
+	"choices": [
+		{
+			"text": {
+				"korean": "주변 장비를 적당히 받쳐주고 백업 데이터의 일부를 챙긴다."
+			},
+			"path": "easy",
+			"mbti": "ET",
+			"flag": "backup_data",
+			"effects": {
+				"reason": -10,
+				"gold": 100
+			},
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "당신이 장비를 지탱하는 동안 토비는 무사히 백업을 마쳤다."
+					}
+				},
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "그는 고맙다며 데이터를 복사해 주었고, 단말기는 마침내 전원이 나갔다."
+					}
+				}
+			]
+		},
+		{
+			"text": {
+				"korean": "무너지는 장비들을 온몸으로 막아내며 토비가 안전하게 작업하도록 돕는다."
+			},
+			"path": "hard",
+			"mbti": "IN",
+			"flag": "toby_support",
+			"effects": {
+				"fighting": 10,
+				"community": 30,
+				"echo": 15
+			},
+			"reward": [
+				"hp_down"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "당신이 무거운 서버 랙을 버텨낸 덕분에 토비는 완벽하게 백업을 끝냈다."
+					}
+				},
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "그는 나중에 꼭 은혜를 갚겠다며 서둘러 대피했다."
+					}
+				}
+			]
+		},
+		{
+			"text": {
+				"korean": "데이터 스크린 조각의 흐름을 분석해 가장 안전한 백업 경로를 찾아낸다."
+			},
+			"path": "stat",
+			"mbti": "SJ",
+			"flag": "safe_route",
+			"effects": {
+				"reason": 20,
+				"echo": 5,
+				"community": 10
+			},
+			"reward": [
+				"defense_up"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "당신이 찾아낸 경로 덕분에 토비는 과열을 피해 무사히 백업을 마쳤다."
+					}
+				},
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "그는 감사의 표시로 방어용 코드를 주었고, 단말기는 마침내 전원이 나갔다."
+					}
+				}
+			]
+		}
+	],
+	"_side": {
+		"slot": "C",
+		"person": {
+			"id": "tech_novice",
+			"role": "신입 관리자",
+			"name": "토비"
+		},
+		"wants": "강제 종료하지 않아 과열을 버틴 단말기에서 데이터를 백업할 동안 주변 장비를 막아달라고 한다.",
+		"rule_link": "전원 코드를 뽑아 발생한 서버 과열 속에서도 매뉴얼대로 둔 단말기는 꿋꿋이 버티고 있다.",
+		"events": {},
+		"flags": {
+			"backup_data": {
+				"kind": "good",
+				"boss_penalty": 1,
+				"label": {
+					"korean": "백업 데이터"
+				},
+				"boss_choice": {
+					"korean": "토비에게서 받은 백업 데이터를 시스템에 덮어씌워 공격을 지연시킨다."
+				}
+			},
+			"toby_support": {
+				"kind": "good",
+				"boss_penalty": 2,
+				"label": {
+					"korean": "토비의 지원"
+				},
+				"boss_choice": {
+					"korean": "은혜를 입은 토비가 원격으로 방화벽을 해제해 당신의 길을 열어준다."
+				}
+			},
+			"safe_route": {
+				"kind": "good",
+				"boss_penalty": 1,
+				"label": {
+					"korean": "안전�� 경로"
+				},
+				"boss_choice": {
+					"korean": "토비가 분석해 준 최적의 경로로 시스템의 공격을 회피한다."
+				}
+			}
+		}
+	}
+}

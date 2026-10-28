@@ -1,0 +1,340 @@
+{
+	"cards": [
+		{
+			"card_id": "card_03_checklist_after_coolant",
+			"asks": "밸브 개방 시각·유입량·담당자 확인이 적힌 절차 기록을 갖춰 와서 서명받을 수 있게 해 달라.",
+			"choices_read": [
+				{
+					"path": "easy",
+					"target": "안전 점검관",
+					"does": "점검관의 서류판을 받아 항목을 하나씩 채우고 서명을 받아낸다",
+					"reaction_assumes": "주인공이 서류판 항목을 다 채워 서명을 받아냈다"
+				},
+				{
+					"path": "hard",
+					"target": "안전 점검관",
+					"does": "서명을 미루고 조각 오염부터 함께 확인하자고 말한다",
+					"reaction_assumes": "주인공이 서명을 미루자고 했고, 점검관이 서류판을 챙겨 떠났다"
+				},
+				{
+					"path": "stat",
+					"target": "안전 점검관",
+					"does": "밸브를 열 때의 순서를 불러 주고 서명을 요구한다",
+					"reaction_assumes": "주인공이 순서를 정확히 불러 점검관이 서명했다"
+				},
+				{
+					"path": "gold",
+					"target": "안전 점검관",
+					"does": "과태료를 대신 내주고 서명을 받아 둔다",
+					"reaction_assumes": "주인공이 과태료를 대신 내 점검관이 도장을 찍었다"
+				}
+			],
+			"checks": [
+				{
+					"item": "S1",
+					"pass": true
+				},
+				{
+					"item": "S2",
+					"pass": true
+				},
+				{
+					"item": "S3",
+					"pass": true
+				},
+				{
+					"item": "S4",
+					"pass": false,
+					"quote": "kai: 지금 그걸 다 어디서 확인해요. 담당자는 이미 나갔는데.",
+					"problem": "카이의 원문 대사는 반말(…없다고, …판이긴 해, …열어줘)인데 이 카드에서는 존댓말로 말하고 있어 동행 말투가 어긋난다."
+				},
+				{
+					"item": "S5",
+					"pass": true
+				},
+				{
+					"item": "S6",
+					"pass": true
+				}
+			]
+		},
+		{
+			"card_id": "card_03_cold_hands_offer",
+			"asks": "자기 반원들이 못 들어가는 얼어붙은 파이프 묶음을 힘으로 뜯어내 달라.",
+			"choices_read": [
+				{
+					"path": "easy",
+					"target": "얼어붙은 파이프 묶음(하역 반장의 부탁)",
+					"does": "파이프 묶음을 힘으로 뜯어내 반원들을 들여보낸다",
+					"reaction_assumes": "주인공이 파이프를 뜯어냈고 반장이 수고비를 준다"
+				},
+				{
+					"path": "hard",
+					"target": "하역 반장",
+					"does": "뜯는 대신 반원들을 손상 없는 길로 돌리자고 말한다",
+					"reaction_assumes": "주인공이 돌아가자고 했고 반장이 결국 길을 가리켰다"
+				},
+				{
+					"path": "stat",
+					"target": "하역 반장",
+					"does": "자기가 연 밸브 이야기를 꺼내 반원들을 통제하게 한다",
+					"reaction_assumes": "반장이 반원들을 멈추게 했다"
+				},
+				{
+					"path": "fun",
+					"target": "하역 반장",
+					"does": "얼어붙은 파이프에 손바닥을 대고 누가 더 오래 버티는지 겨룬다",
+					"reaction_assumes": "반장이 내기에서 졌다"
+				}
+			],
+			"checks": [
+				{
+					"item": "S1",
+					"pass": true
+				},
+				{
+					"item": "S2",
+					"pass": true
+				},
+				{
+					"item": "S3",
+					"pass": true
+				},
+				{
+					"item": "S4",
+					"pass": false,
+					"quote": "kai: 저 사람, 아까부터 파이프 틈만 들여다보고 있어요.",
+					"problem": "카이의 원문 대사는 반말인데 이 카드에서는 존댓말로 말하고 있어 동행 말투가 어긋난다."
+				},
+				{
+					"item": "S5",
+					"pass": true
+				},
+				{
+					"item": "S6",
+					"pass": true
+				}
+			]
+		},
+		{
+			"card_id": "card_03_frozen_cables_carry",
+			"asks": "식은 케이블 다발을 함께 나눠 들어 옮겨 달라.",
+			"choices_read": [
+				{
+					"path": "easy",
+					"target": "교대 조장",
+					"does": "함께 케이블 다발을 어깨에 걸고 옮긴다",
+					"reaction_assumes": "주인공이 다발을 나눠 들었고 조장이 조각을 발견했다"
+				},
+				{
+					"path": "hard",
+					"target": "교대 조장",
+					"does": "짐은 두고 케이블을 다시 감아 두라고만 말한다",
+					"reaction_assumes": "주인공이 짐을 두고 가라고 했고 조장이 혼자 감았다"
+				},
+				{
+					"path": "stat",
+					"target": "교대 조장",
+					"does": "자기 지시대로 다발을 나눠 들 사람을 부르게 한다",
+					"reaction_assumes": "조장이 사람을 불러 다발을 나눠 들었다"
+				},
+				{
+					"path": "fun",
+					"target": "케이블 다발",
+					"does": "다발을 파이프 위에 얹어 눈썰매처럼 타고 미끄러진다",
+					"reaction_assumes": "다발이 미끄러져 벽에 부딪혔고 조장이 케이블이 풀렸다고 한다"
+				}
+			],
+			"checks": [
+				{
+					"item": "S1",
+					"pass": true
+				},
+				{
+					"item": "S2",
+					"pass": true
+				},
+				{
+					"item": "S3",
+					"pass": true
+				},
+				{
+					"item": "S4",
+					"pass": false,
+					"quote": "kai: 무거워 보이는데... 저 사람 혼자 다 들다가 허리 나가겠어요.",
+					"problem": "카이의 원문 대사는 반말인데 이 카드에서는 존댓말로 말하고 있어 동행 말투가 어긋난다."
+				},
+				{
+					"item": "S5",
+					"pass": true
+				},
+				{
+					"item": "S6",
+					"pass": true
+				}
+			]
+		},
+		{
+			"card_id": "card_03_no_permit_shortcut",
+			"asks": "봉인된 밸브 옆 지름길로 데이터 스크린 조각을 빼돌려 밖에서 값을 받자고 청한다.",
+			"choices_read": [
+				{
+					"path": "easy",
+					"target": "야간 배달원",
+					"does": "배달원의 가방에 조각을 담아 지름길로 함께 빠져나간다",
+					"reaction_assumes": "주인공이 함께 빠져나가 값을 받았다"
+				},
+				{
+					"path": "hard",
+					"target": "야간 배달원",
+					"does": "배달원을 붙잡아 조각을 도로 꺼내고 철문을 닫아 버린다",
+					"reaction_assumes": "주인공이 철문을 닫았고 배달원이 다른 길로 갔다"
+				},
+				{
+					"path": "stat",
+					"target": "야간 배달원",
+					"does": "지름길을 여는 대신 조각은 여기 두라고 명령한다",
+					"reaction_assumes": "배달원이 가방을 내려놓고 지름길을 열어 두었다"
+				}
+			],
+			"checks": [
+				{
+					"item": "S1",
+					"pass": true
+				},
+				{
+					"item": "S2",
+					"pass": true
+				},
+				{
+					"item": "S3",
+					"pass": true
+				},
+				{
+					"item": "S4",
+					"pass": false,
+					"quote": "kai: 그 조각, 물이 번져 있지 않아요? 밖에 내보내면 큰일인데.",
+					"problem": "카이의 원문 대사는 반말인데 이 카드에서는 존댓말로 말하고 있어 동행 말투가 어긋난다."
+				},
+				{
+					"item": "S5",
+					"pass": true
+				},
+				{
+					"item": "S6",
+					"pass": true
+				}
+			]
+		},
+		{
+			"card_id": "card_03_sealed_valve_split",
+			"asks": "비상 냉각수 밸브에서 소량을 빼내 팔아 반씩 나누자고 제안한다.",
+			"choices_read": [
+				{
+					"path": "easy",
+					"target": "냉각수 중개상",
+					"does": "중개상의 통에 냉각수를 받아 몫을 챙기고 봉인은 그대로 둔다",
+					"reaction_assumes": "주인공이 통을 받고 돈을 챙겼다"
+				},
+				{
+					"path": "hard",
+					"target": "냉각수 중개상",
+					"does": "봉인 테이프를 다시 붙이고 통을 빼앗아 제자리에 돌려놓는다",
+					"reaction_assumes": "중개상이 욕하며 물러났고 봉인이 다시 붙어 있었다"
+				},
+				{
+					"path": "stat",
+					"target": "냉각수 중개상",
+					"does": "자기 몫을 먼저 챙기려면 봉인부터 다루라고 밸브 앞을 가로막는다",
+					"reaction_assumes": "중개상이 물러나며 통을 주인공에게 넘겼다"
+				}
+			],
+			"checks": [
+				{
+					"item": "S1",
+					"pass": true
+				},
+				{
+					"item": "S2",
+					"pass": true
+				},
+				{
+					"item": "S3",
+					"pass": true
+				},
+				{
+					"item": "S4",
+					"pass": false,
+					"quote": "kai: 봉인 풀면 보관함 온도부터 흔들린다고 하던데요.",
+					"problem": "카이의 원문 대사는 반말인데 이 카드에서는 존댓말로 말하고 있어 동행 말투가 어긋난다."
+				},
+				{
+					"item": "S5",
+					"pass": true
+				},
+				{
+					"item": "S6",
+					"pass": true
+				}
+			]
+		},
+		{
+			"card_id": "card_03_wet_glove_request",
+			"asks": "얼음 파이프에 손이 붙어 벗겨진 동료를 위해 여분 장갑을 하나 빌려 달라.",
+			"choices_read": [
+				{
+					"path": "easy",
+					"target": "어린 견습공",
+					"does": "여분 장갑을 벗어 건네고 동료를 살피게 한다",
+					"reaction_assumes": "견습공이 장갑을 끼고 동료를 끌어냈다"
+				},
+				{
+					"path": "hard",
+					"target": "어린 견습공",
+					"does": "장갑 대신 붙잡고 파이프를 만지지 말라고 일러둔다",
+					"reaction_assumes": "견습공이 입을 다물고 물러섰고 동료는 다른 사람이 부축해 나갔다"
+				},
+				{
+					"path": "stat",
+					"target": "어린 견습공",
+					"does": "자기가 냉각수를 부은 구역을 맡아 살피라고 지시한다",
+					"reaction_assumes": "견습공이 파이프 사이를 뛰어다니며 조각을 건졌다"
+				},
+				{
+					"path": "gold",
+					"target": "어린 견습공",
+					"does": "돈을 쥐여주고 상점에서 방한 장갑을 사 오게 한다",
+					"reaction_assumes": "견습공이 장갑 보따리를 안고 돌아왔다"
+				}
+			],
+			"checks": [
+				{
+					"item": "S1",
+					"pass": true
+				},
+				{
+					"item": "S2",
+					"pass": true
+				},
+				{
+					"item": "S3",
+					"pass": true
+				},
+				{
+					"item": "S4",
+					"pass": false,
+					"quote": "kai: 장갑을 빌려주면 저 애가 대신 들어가겠다는 건가요?",
+					"problem": "카이의 원문 대사는 반말인데 이 카드에서는 존댓말로 말하고 있어 동행 말투가 어긋난다."
+				},
+				{
+					"item": "S5",
+					"pass": true
+				},
+				{
+					"item": "S6",
+					"pass": true
+				}
+			]
+		}
+	]
+}

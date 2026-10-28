@@ -1,0 +1,251 @@
+{
+	"id": "card_02_strict_clerk_order",
+	"kind": "rep",
+	"title": {
+		"korean": "규정대로 일괄 정리"
+	},
+	"intensity": "calm",
+	"after_story": 3,
+	"before_story": 5,
+	"condition": {
+		"leaning": "reason-",
+		"among": [
+			"fighting-",
+			"fighting+",
+			"community-",
+			"community+",
+			"reason-",
+			"reason+"
+		],
+		"min": 20
+	},
+	"urgency": 8,
+	"leaning": "reason-",
+	"background_tags": [
+		"search_room",
+		"bright",
+		"terminal_light",
+		"crowded",
+		"tense"
+	],
+	"dialogue": [
+		{
+			"speaker": "narrator",
+			"content": {
+				"korean": "단말기 담당자가 정돈된 서류 열람함을 찰칵 소리 나게 닫는다."
+			}
+		},
+		{
+			"speaker": "clerk",
+			"content": {
+				"korean": "\"당신이 서류 창구 규정을 토씨 하나 틀리지 않고 엄격하게 지킨다는 그분이시군요?\""
+			}
+		},
+		{
+			"speaker": "clerk",
+			"content": {
+				"korean": "\"린의 이력서 정렬이 끝났으니, 검색실의 모든 대기자 이력서 이름도 규정대로 일괄 정리해 주십시오.\""
+			}
+		},
+		{
+			"speaker": "nia",
+			"content": {
+				"korean": "\"저기, 담당자님 말대로 서류 규격만 맞추면 다들 빠르게 등록될 것 같아요.\""
+			}
+		}
+	],
+	"choices": [
+		{
+			"text": {
+				"korean": "단말기 담당자의 요청에 따라 대기자 이력서들의 이름 정보를 규정대로 정리한다."
+			},
+			"path": "easy",
+			"mbti": "TJ",
+			"flag": "clerk_order_done",
+			"effects": {
+				"reason": -15,
+				"gold": 100
+			},
+			"reward": [
+				"intelligence_up"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "대기자들의 이력서 이름 정보가 기계음과 함께 깔끔하게 일괄 정렬된다."
+					}
+				},
+				{
+					"speaker": "clerk",
+					"content": {
+						"korean": "\"훌륭하군요! 원칙대로 처리되니 마음이 편안해집니다. 이 수수료를 받으세요.\""
+					}
+				},
+				{
+					"speaker": "nia",
+					"content": {
+						"korean": "\"다들 서류가 바로 정리되어서 다행이에요.\""
+					}
+				}
+			]
+		},
+		{
+			"text": {
+				"korean": "서류 검수를 미루고 단말기 담당자에게 이력서 직접 입력을 권고한다."
+			},
+			"path": "hard",
+			"mbti": "NF",
+			"flag": "clerk_manual_input",
+			"effects": {
+				"reason": 20,
+				"echo": 10
+			},
+			"reward": [
+				"defense_up"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "당신이 수동 입력을 권하자 단말기 담당자가 불만을 뿜으며 수첩을 꺼낸다."
+					}
+				},
+				{
+					"speaker": "clerk",
+					"content": {
+						"korean": "\"쯧, 규정 절차를 놔두고 일일이 적으라니 대단한 고집이시군요.\""
+					}
+				},
+				{
+					"speaker": "nia",
+					"content": {
+						"korean": "\"직접 적으면 적어도 서류가 엉킬 일은 없겠어요.\""
+					}
+				}
+			]
+		},
+		{
+			"text": {
+				"korean": "엄격한 검색실 원칙을 들어 대기자들의 동의 없는 일괄 이력서 정리를 거부한다."
+			},
+			"path": "stat",
+			"mbti": "EP",
+			"require": {
+				"stat": "reason",
+				"op": "<=",
+				"value": -40
+			},
+			"flag": "strict_rule_refusal",
+			"effects": {
+				"reason": -25,
+				"community": 15
+			},
+			"reward": [
+				"shield"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "당신이 규정을 들어 정색하자 단말기 담당자가 주춤하며 뒤로 물러선다."
+					}
+				},
+				{
+					"speaker": "clerk",
+					"content": {
+						"korean": "\"당신의 철저한 원칙 준수 소문이 사실이었군요. 일괄 처리는 철회하겠습니다.\""
+					}
+				},
+				{
+					"speaker": "nia",
+					"content": {
+						"korean": "\"규정을 당당하게 내세우니 담당자님도 더 반박하지 못하네요.\""
+					}
+				}
+			]
+		},
+		{
+			"text": {
+				"korean": "단말기 담당자의 명찰 이름 글자부터 바르게 펴져 있는지 손으로 꾹꾹 누른다."
+			},
+			"path": "fun",
+			"mbti": "SP",
+			"effects": {
+				"gold": 80,
+				"fighting": 15
+			},
+			"reward": [
+				"move_range_up"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "당신이 담당자의 명찰을 손끝으로 누르자 담당자가 펄쩍 뛰며 서류를 떨어뜨린다."
+					}
+				},
+				{
+					"speaker": "clerk",
+					"content": {
+						"korean": "\"무, 무슨 짓입니까! 내 이름표는 이미 제대로 붙어 있습니다!\""
+					}
+				},
+				{
+					"speaker": "nia",
+					"content": {
+						"korean": "\"아하하, 담당자님 얼굴이 서류보다 더 붉어졌어요.\""
+					}
+				}
+			]
+		}
+	],
+	"_side": {
+		"slot": "B",
+		"person": {
+			"role": "단말기 담당자",
+			"name": "바인드",
+			"id": "clerk"
+		},
+		"wants": "규칙대로 검색실 단말기의 모든 이력서 성명 정리를 당장 완수하고 승인 도장을 받으려 한다.",
+		"rule_link": "이력서 이름 정보를 표준 정렬 규격에 맞춰 정리하면 승인 마크가 찍히는 규칙과 이어진다.",
+		"rep": "reason-",
+		"events": {},
+		"flags": {
+			"clerk_order_done": {
+				"kind": "bad",
+				"boss_penalty": -1,
+				"label": {
+					"korean": "일괄 정렬 지시"
+				},
+				"boss_line": {
+					"korean": "일괄 정리된 서류의 철자가 일그러지며 데이터 과부하 통증이 발생한다."
+				}
+			},
+			"clerk_manual_input": {
+				"kind": "good",
+				"boss_penalty": 1,
+				"label": {
+					"korean": "수동 입력 권고"
+				},
+				"boss_choice": {
+					"korean": "담당자가 직접 작성한 원본 이력서 기록을 제시해 오류를 바로잡는다."
+				}
+			},
+			"strict_rule_refusal": {
+				"kind": "good",
+				"boss_penalty": 2,
+				"label": {
+					"korean": "원칙적 일괄 정리 거부"
+				},
+				"boss_choice": {
+					"korean": "원칙을 지킨 이력서 검수 기록 덕분에 부당한 제재 수수료를 면제받는다."
+				}
+			}
+		}
+	}
+}

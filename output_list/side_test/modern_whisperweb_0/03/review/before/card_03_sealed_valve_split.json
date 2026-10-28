@@ -1,0 +1,216 @@
+{
+	"id": "card_03_sealed_valve_split",
+	"kind": "rep",
+	"title": {
+		"korean": "봉인된 밸브의 몫"
+	},
+	"intensity": "calm",
+	"after_story": 3,
+	"before_story": 5,
+	"condition": {
+		"leaning": "community-",
+		"among": [
+			"fighting-",
+			"fighting+",
+			"community-",
+			"community+",
+			"reason-",
+			"reason+"
+		],
+		"min": 20
+	},
+	"urgency": 8,
+	"leaning": "community-",
+	"background_tags": [
+		"pipe_room",
+		"sealed_valve",
+		"wet_floor",
+		"cold_air",
+		"hushed"
+	],
+	"dialogue": [
+		{
+			"speaker": "narrator",
+			"content": {
+				"korean": "비상 냉각수 밸브 옆, 중개상이 봉인 테이프를 손톱으로 긁고 있었다."
+			}
+		},
+		{
+			"speaker": "coolant_broker",
+			"content": {
+				"korean": "당신이 남 먼저 자기 몫 챙긴다는 사람이죠? 딱 맞는 거래가 있어요."
+			}
+		},
+		{
+			"speaker": "coolant_broker",
+			"content": {
+				"korean": "이 밸브에서 조금만 빼면 냉각수 한 통에 큰돈이에요. 반씩 나눠요."
+			}
+		},
+		{
+			"speaker": "kai",
+			"content": {
+				"korean": "봉인 풀면 보관함 온도부터 흔들린다고 하던데요."
+			}
+		}
+	],
+	"choices": [
+		{
+			"text": {
+				"korean": "중개상의 통에 냉각수를 받아 몫을 챙기고 봉인은 그대로 둔다"
+			},
+			"path": "easy",
+			"mbti": "TP",
+			"flag": "broker_cut",
+			"effects": {
+				"community": -15,
+				"gold": 130
+			},
+			"reward": [
+				"attack_up"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "중개상이 통을 채우고 지폐 뭉치를 주인공 손에 쥐여줬다."
+					}
+				},
+				{
+					"speaker": "coolant_broker",
+					"content": {
+						"korean": "좋은 거래였어요. 다음에 또 봐요."
+					}
+				},
+				{
+					"speaker": "kai",
+					"content": {
+						"korean": "보관함 쪽에서 삐 소리가 났어요. 뭔가 흔들린 것 같은데."
+					}
+				}
+			]
+		},
+		{
+			"text": {
+				"korean": "중개상의 봉인 테이프를 다시 붙이고 통을 빼앗아 제자리에 돌려놓는다"
+			},
+			"path": "hard",
+			"mbti": "FJ",
+			"flag": "broker_enemy",
+			"effects": {
+				"community": 20,
+				"reason": 10
+			},
+			"reward": [
+				"shield"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "coolant_broker",
+					"content": {
+						"korean": "이봐요! 내 돈이 걸렸다고요!"
+					}
+				},
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "중개상은 욕을 하며 물러났다. 밸브 봉인은 다시 붙어 있었다."
+					}
+				},
+				{
+					"speaker": "kai",
+					"content": {
+						"korean": "냉각수는 지켰는데, 저 사람이 어디 가서 뭐라고 할지 모르겠네요."
+					}
+				}
+			]
+		},
+		{
+			"text": {
+				"korean": "중개상에게 당신 몫을 먼저 챙기려면 봉인부터 다루라고 밸브 앞을 가로막는다"
+			},
+			"path": "stat",
+			"mbti": "EP",
+			"require": {
+				"stat": "community",
+				"op": "<=",
+				"value": -40
+			},
+			"flag": "broker_yields",
+			"effects": {
+				"community": -20,
+				"gold": 80
+			},
+			"reward": [
+				"intelligence_up"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "중개상이 손을 들며 뒤로 물러났다. 통은 주인공 발치에 남았다."
+					}
+				},
+				{
+					"speaker": "coolant_broker",
+					"content": {
+						"korean": "알겠어요, 알겠어. 당신 몫은 통째로 드릴게요."
+					}
+				},
+				{
+					"speaker": "kai",
+					"content": {
+						"korean": "이러면 저 사람은 빈손이네요."
+					}
+				}
+			]
+		}
+	],
+	"_side": {
+		"slot": "B",
+		"person": {
+			"id": "coolant_broker",
+			"name": "냉각수 중개상",
+			"role": "파이프실 암거래꾼"
+		},
+		"wants": "비상 냉각수 밸브에서 소량을 빼내 팔아 나누자는 제안을 하며, 주인공이 자기 몫부터 챙기는 사람이라는 소문을 근거로 든다.",
+		"rule_link": "봉인 밸브에서 냉각수를 빼면 데이터 스크린 조각을 담아 두던 보관함의 온도가 흔들린다.",
+		"rep": "community-",
+		"events": {},
+		"flags": {
+			"broker_cut": {
+				"kind": "bad",
+				"boss_penalty": -1,
+				"label": {
+					"korean": "중개상의 몫"
+				},
+				"boss_line": {
+					"korean": "중개상이 창고 문을 열어 준다."
+				}
+			},
+			"broker_enemy": {
+				"kind": "good",
+				"boss_penalty": 1,
+				"label": {
+					"korean": "중개상의 원한"
+				},
+				"boss_choice": {
+					"korean": "중개상이 봉인된 밸브의 압력 수치를 알려 준다."
+				}
+			},
+			"broker_yields": {
+				"kind": "good",
+				"boss_penalty": 2,
+				"label": {
+					"korean": "중개상의 굴복"
+				},
+				"boss_choice": {
+					"korean": "중개상이 몸을 숙여 밸브 옆 통로를 비켜 준다."
+				}
+			}
+		}
+	}
+}

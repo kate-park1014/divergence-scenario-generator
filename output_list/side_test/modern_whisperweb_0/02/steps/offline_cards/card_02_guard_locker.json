@@ -1,0 +1,143 @@
+{
+	"id": "card_02_guard_locker",
+	"kind": "normal",
+	"title": {
+		"korean": "열려버린 사물함"
+	},
+	"intensity": "calm",
+	"after_story": 3,
+	"before_story": 5,
+	"background_tags": [
+		"open_locker",
+		"contraband_item",
+		"sweaty_guard",
+		"dim_corridor",
+		"ticking_clock"
+	],
+	"dialogue": [
+		{
+			"speaker": "nervous_guard",
+			"content": {
+				"korean": "전원이 꺼지니까 내 전자 사물함도 열려버렸잖아!"
+			}
+		},
+		{
+			"speaker": "nervous_guard",
+			"content": {
+				"korean": "안에 있는 물건을 누가 보기 전에 빨리 옮겨야 해. 좀 도와줘!"
+			}
+		},
+		{
+			"speaker": "lin",
+			"content": {
+				"korean": "저건 반입이 금지된 데이터 스크린 조각이잖아요."
+			}
+		},
+		{
+			"speaker": "lin",
+			"content": {
+				"korean": "저런 걸 숨기고 있었다니, 당장 보고해야 하는 거 아닌가요?"
+			}
+		}
+	],
+	"choices": [
+		{
+			"text": {
+				"korean": "물건 옮기는 것을 도와주고 입막음 비용을 받는다."
+			},
+			"path": "easy",
+			"mbti": "SF",
+			"effects": {
+				"echo": -10,
+				"community": -15,
+				"reason": -20,
+				"gold": 100
+			},
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "당신은 콜린이 물건을 안전한 곳으로 숨기는 것을 재빨리 도왔다."
+					}
+				},
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "그는 안도의 한숨을 쉬며 당신에게 돈을 쥐여주었다."
+					}
+				}
+			]
+		},
+		{
+			"text": {
+				"korean": "규정을 어긴 물건이라며 압수한다."
+			},
+			"path": "hard",
+			"mbti": "TJ",
+			"effects": {
+				"echo": 10,
+				"reason": 20,
+				"fighting": 15
+			},
+			"reward": [
+				"attack_up"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "당신이 물건을 빼앗아 압수하자 콜린은 창백해진 얼굴로 주저앉았다."
+					}
+				},
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "린은 당신의 단호한 대처에 고개를 끄덕였다."
+					}
+				}
+			]
+		},
+		{
+			"text": {
+				"korean": "{actor}이(가) 그 물건을 꺼내 경비실 방송 마이크에 대고 자랑한다."
+			},
+			"path": "fun",
+			"mbti": "EP",
+			"effects": {
+				"gold": 50,
+				"echo": -15,
+				"reason": -30,
+				"community": -20
+			},
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "{actor}이(가) 마이크에 대고 물건을 흔들며 소리치자, 콜린은 기겁하며 입을 막으려 발버둥 쳤다."
+					}
+				},
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "그 난장판 속에��� 당신은 떨어뜨린 동전을 챙겼다."
+					}
+				}
+			]
+		}
+	],
+	"_side": {
+		"slot": "B",
+		"person": {
+			"role": "야간 경비원",
+			"id": "nervous_guard",
+			"name": "콜린"
+		},
+		"wants": "전원이 꺼져 열린 사물함에서 금지된 물건을 옮기는 것을 도와달라고 함.",
+		"rule_link": "시스템 정지가 개인의 숨겨진 비밀까지 노출시킴.",
+		"events": {},
+		"flags": {}
+	}
+}

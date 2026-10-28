@@ -1,0 +1,160 @@
+{
+	"id": "card_04_clean_core",
+	"kind": "normal",
+	"title": {
+		"korean": "깨끗한 데이터 코어"
+	},
+	"intensity": "calm",
+	"after_story": 3,
+	"before_story": 5,
+	"background_tags": [
+		"server_room",
+		"scattered_parts",
+		"dim_light",
+		"two_people",
+		"playful"
+	],
+	"dialogue": [
+		{
+			"speaker": "narrator",
+			"content": {
+				"korean": "리온이 분해된 부품들을 이리저리 뒤적이며 살피고 있다."
+			}
+		},
+		{
+			"speaker": "rion",
+			"content": {
+				"korean": "분해된 부품 중에 아주 쌩쌩한 코어가 하나 섞여 있더군."
+			}
+		},
+		{
+			"speaker": "rion",
+			"content": {
+				"korean": "그걸 내 단말기에 끼우고 싶은데, 어느 상자에 숨겼는지 맞춰보겠나?"
+			}
+		},
+		{
+			"speaker": "dax",
+			"content": {
+				"korean": "쓸 만한 부품은 나중에 다시 써야 하는데, 그냥 줘도 되는 거야?"
+			}
+		}
+	],
+	"choices": [
+		{
+			"text": {
+				"korean": "{actor}이(가) 상자의 무게와 형태를 분석해 코어가 든 상자를 찾아낸다."
+			},
+			"path": "lock",
+			"mbti": "NT",
+			"require": {
+				"mbti": "NT"
+			},
+			"effects": {
+				"reason": 15
+			},
+			"reward": [
+				"intelligence_up"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "{actor}이(가) 단번에 정답을 가리키자 리온이 감탄한다."
+					}
+				},
+				{
+					"speaker": "rion",
+					"content": {
+						"korean": "눈썰미가 제법이군. 약속대로 이 코어는 내 차지야."
+					}
+				}
+			]
+		},
+		{
+			"text": {
+				"korean": "리온이 제안한 야바위 게임에 참여해 코어가 든 상자를 고른다."
+			},
+			"path": "easy",
+			"mbti": "EP",
+			"effects": {
+				"community": 10,
+				"fighting": 10
+			},
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "당신이 정확한 상자를 골라내자 리온이 코어를 챙겨간다."
+					}
+				},
+				{
+					"speaker": "dax",
+					"content": {
+						"korean": "맞추긴 했는데, 저걸 저렇게 가져가도 되나 몰라."
+					}
+				}
+			],
+			"event": "minigame_cup",
+			"event_intro": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "리온이 바닥에 상자 세 개를 엎어놓고 현란한 솜씨로 섞기 시작한다."
+					}
+				},
+				{
+					"speaker": "rion",
+					"content": {
+						"korean": "자, 두 눈 크게 뜨고 잘 보라고!"
+					}
+				}
+			]
+		},
+		{
+			"text": {
+				"korean": "부품은 공용 자산이라며 리온의 게임을 무시하고 부품을 거둬들인다."
+			},
+			"path": "hard",
+			"mbti": "SJ",
+			"effects": {
+				"reason": 15,
+				"fighting": 10
+			},
+			"reward": [
+				"attack_up"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "당신이 상자를 걷어차고 부품을 회수하자 리온이 혀를 찬다."
+					}
+				},
+				{
+					"speaker": "rion",
+					"content": {
+						"korean": "쳇, 빡빡하게 굴기는."
+					}
+				}
+			]
+		}
+	],
+	"_side": {
+		"slot": "B",
+		"person": {
+			"role": "야간 경비원",
+			"id": "rion",
+			"name": "리온"
+		},
+		"wants": "분해된 장치의 부품 중 가장 깨끗한 코어를 찾아 자신의 단말기에 끼워달라고 한다.",
+		"rule_link": "유출 구멍을 막아 얻은 깨끗한 부품을 개인적인 용도로 쓰려는 이기적인 시도.",
+		"events": {
+			"easy": "리온은 세 개의 낡은 상자 중 하나에 코어를 숨기고 고르게 한다."
+		},
+		"flags": {}
+	}
+}

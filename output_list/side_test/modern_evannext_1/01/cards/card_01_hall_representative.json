@@ -1,0 +1,255 @@
+{
+	"id": "card_01_hall_representative",
+	"kind": "rep",
+	"title": {
+		"korean": "사라지는 대표"
+	},
+	"intensity": "calm",
+	"after_story": 7,
+	"before_story": 10,
+	"condition": {
+		"leaning": "community+",
+		"among": [
+			"fighting-",
+			"fighting+",
+			"community-",
+			"community+",
+			"reason-",
+			"reason+"
+		],
+		"min": 20
+	},
+	"urgency": 8,
+	"leaning": "community+",
+	"background_tags": [
+		"waiting_hall",
+		"midday",
+		"flickering_light",
+		"crowded_room",
+		"resolute_atmosphere"
+	],
+	"dialogue": [
+		{
+			"speaker": "narrator",
+			"content": {
+				"korean": "대기자들의 이름을 적은 큰 장부를 든 노련한 남자가 가슴을 쥐어짜며 비틀거렸다."
+			}
+		},
+		{
+			"speaker": "rep_oh",
+			"content": {
+				"korean": "소란이 났을 때 앞장서서 힘없는 사람들의 접수 자리를 지켜준 분이 맞지요?"
+			}
+		},
+		{
+			"speaker": "rep_oh",
+			"content": {
+				"korean": "대기자들을 돕겠다고 단체 봉사 경력을 허위로 적었더니 내 존재가 사라져 가오."
+			}
+		},
+		{
+			"speaker": "lin",
+			"content": {
+				"korean": "오 반장님의 서류철에 적힌 이름들이 번지면서, 몸까지 함께 바래고 있어요."
+			}
+		}
+	],
+	"choices": [
+		{
+			"text": {
+				"korean": "오 반장의 명부를 뒤로하고 내 번호표만 챙겨 앞줄로 직행한다"
+			},
+			"path": "easy",
+			"mbti": "NT",
+			"flag": "neglected_roster",
+			"effects": {
+				"community": -20,
+				"echo": -5,
+				"fighting": 10,
+				"gold": 70
+			},
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "당신은 오 반장의 명부를 밀어두고 자신의 과장된 서류만 챙겨 면접선으로 나아갔다."
+					}
+				},
+				{
+					"speaker": "rep_oh",
+					"content": {
+						"korean": "모두를 위해 서던 사람이 어찌 자기 면접표만 챙겨 떠난단 말이오!"
+					}
+				},
+				{
+					"speaker": "lin",
+					"content": {
+						"korean": "오 반장님의 얼굴선이 지워지고 있어요. 모두의 이름을 지탱하느라 한계예요."
+					}
+				}
+			]
+		},
+		{
+			"text": {
+				"korean": "내 서류의 과장 항목을 지우고 오 반장의 대조 작업을 분담한다"
+			},
+			"path": "hard",
+			"mbti": "SJ",
+			"flag": "verified_copy",
+			"effects": {
+				"community": 25,
+				"echo": 10,
+				"reason": 15
+			},
+			"reward": [
+				"move_range_up"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "당신은 자신의 서류에서 부풀려진 봉사 점수를 지우고 오 반장의 명부를 교차 검증했다."
+					}
+				},
+				{
+					"speaker": "rep_oh",
+					"content": {
+						"korean": "서류의 무게를 덜어내니 내 몸이 버티는군! 진정 공동체를 아는 이요."
+					}
+				},
+				{
+					"speaker": "lin",
+					"content": {
+						"korean": "과장을 덜어내자 오 반장님의 흐려지던 가슴팍이 온전히 되돌아왔어요!"
+					}
+				}
+			]
+		},
+		{
+			"text": {
+				"korean": "홀 전체의 지원자들을 결집해 서로의 이름을 연호하도록 이끈다"
+			},
+			"path": "stat",
+			"mbti": "NF",
+			"require": {
+				"stat": "community",
+				"op": ">=",
+				"value": 40
+			},
+			"flag": "applicant_council",
+			"effects": {
+				"reason": -10,
+				"echo": 15,
+				"community": 35
+			},
+			"reward": [
+				"shield"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "당신이 호소하자 홀의 대기자 전원이 스크럼을 짜고 오 반장의 이름을 일제히 제창했다."
+					}
+				},
+				{
+					"speaker": "rep_oh",
+					"content": {
+						"korean": "모두의 목소리가 내 존재를 묶어주는군! 홀의 모든 지원자가 당신을 따르겠소!"
+					}
+				},
+				{
+					"speaker": "lin",
+					"content": {
+						"korean": "사람들이 서로의 진짜 이름을 불러주고 있어요. 규정의 저주가 멈췄어요!"
+					}
+				}
+			]
+		},
+		{
+			"text": {
+				"korean": "오 반장의 대조 명부 전체에 걸린 정정 수수료 90골드를 대납한다"
+			},
+			"path": "gold",
+			"mbti": "IS",
+			"require": {
+				"stat": "gold",
+				"op": ">=",
+				"value": 90
+			},
+			"effects": {
+				"community": 15,
+				"gold": -90,
+				"echo": 5
+			},
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "당신은 사비 90골드를 털어 접수대 직원에게 단체 명부 정정 수수료를 완납했다."
+					}
+				},
+				{
+					"speaker": "rep_oh",
+					"content": {
+						"korean": "이 막대한 벌금을 대신 내주다니! 덕분에 백여 명의 이름이 살아났소!"
+					}
+				},
+				{
+					"speaker": "lin",
+					"content": {
+						"korean": "모두의 명패가 다시 찍혀 나오고 있어요. 하지만 우리 서류는 어쩌죠?"
+					}
+				}
+			]
+		}
+	],
+	"_side": {
+		"slot": "D",
+		"person": {
+			"id": "rep_oh",
+			"name": "오 반장",
+			"role": "대기자들을 돕다 지워져 가는 자치 대표"
+		},
+		"wants": "대기자들의 진짜 명부를 바로잡아 자신의 흩어지는 존재를 수습하는 것",
+		"rule_link": "모두를 구하려 단체 허위 경력을 적어 넣었다가 집단 규정의 대가로 소멸해 가는 상황",
+		"rep": "community+",
+		"events": {},
+		"flags": {
+			"neglected_roster": {
+				"kind": "bad",
+				"boss_penalty": -1,
+				"label": {
+					"korean": "명부의 공백"
+				},
+				"boss_line": {
+					"korean": "오 반장의 관리 명부를 방치한 대가로, 명부 누락자들이 입구를 막아서서 통행을 방해한다."
+				}
+			},
+			"verified_copy": {
+				"kind": "good",
+				"boss_penalty": 1,
+				"label": {
+					"korean": "공인 명부 사본"
+				},
+				"boss_choice": {
+					"korean": "오 반장이 정돈해 준 공인 명부 사본을 제시해 면접관의 허위 서류 즉각 폐기 처분을 피한다."
+				}
+			},
+			"applicant_council": {
+				"kind": "good",
+				"boss_penalty": 2,
+				"label": {
+					"korean": "대기자 평의회"
+				},
+				"boss_choice": {
+					"korean": "오 반장과 회복된 대기자 전원이 면접장 빗장을 풀지 못하도록 바깥에서 빗장을 함께 잠근다."
+				}
+			}
+		}
+	}
+}

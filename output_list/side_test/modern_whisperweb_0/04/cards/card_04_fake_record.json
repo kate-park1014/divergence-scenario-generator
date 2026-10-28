@@ -1,0 +1,145 @@
+{
+	"id": "card_04_fake_record",
+	"kind": "plant",
+	"title": {
+		"korean": "벡스의 인사 고과 조작"
+	},
+	"intensity": "calm",
+	"after_story": 3,
+	"before_story": 5,
+	"background_tags": [
+		"server_room",
+		"silent_machine",
+		"bright_screen",
+		"alone",
+		"tempting"
+	],
+	"dialogue": [
+		{
+			"speaker": "narrator",
+			"content": {
+				"korean": "유출이 멈추고 굉음이 사라진 처리장 한구석에서 벡스가 다가온다."
+			}
+		},
+		{
+			"speaker": "bex",
+			"content": {
+				"korean": "기계가 멈춘 지금이 기회예요. 제 인사 고과 데이터를 조금만 높여주세요."
+			}
+		},
+		{
+			"speaker": "bex",
+			"content": {
+				"korean": "승진 명단에 들려면 약간의 점수가 더 필요하거든요."
+			}
+		},
+		{
+			"speaker": "dax",
+			"content": {
+				"korean": "유출이 멈췄다고 해서 시스템을 맘대로 건드려도 될까?"
+			}
+		}
+	],
+	"choices": [
+		{
+			"text": {
+				"korean": "벡스의 부탁대로 단말기를 조작해 인사 고과 점수를 올려준다."
+			},
+			"path": "easy",
+			"mbti": "TP",
+			"effects": {
+				"reason": -15,
+				"gold": 50,
+				"community": 15
+			},
+			"seed": "fake_record_easy",
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "당신이 데이터를 조작하자 벡스가 기뻐하며 크레딧을 건넨다."
+					}
+				},
+				{
+					"speaker": "bex",
+					"content": {
+						"korean": "정말 고마워요! 덕분에 이번엔 꼭 승진할 거예요."
+					}
+				}
+			]
+		},
+		{
+			"text": {
+				"korean": "기록 조작은 규칙 위반이라며 벡스의 부탁을 단호히 거절한다."
+			},
+			"path": "hard",
+			"mbti": "TJ",
+			"effects": {
+				"community": -10,
+				"reason": 15
+			},
+			"reward": [
+				"defense_up"
+			],
+			"seed": "fake_record_hard",
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "당신이 거절하자 벡스가 원망스러운 눈빛으로 노려본다."
+					}
+				},
+				{
+					"speaker": "bex",
+					"content": {
+						"korean": "당신은 내 간절함을 몰라요. 두고 봐요!"
+					}
+				}
+			]
+		},
+		{
+			"text": {
+				"korean": "벡스에게 크레딧을 쥐여주며 정당한 방법으로 노력하라고 위로한다."
+			},
+			"path": "gold",
+			"mbti": "FJ",
+			"require": {
+				"stat": "gold",
+				"op": ">=",
+				"value": 100
+			},
+			"effects": {
+				"gold": -100,
+				"community": 15,
+				"reason": 10
+			},
+			"seed": "fake_record_hard",
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "벡스가 돈을 쥐고 잠시 망설이다 고개를 끄덕인다."
+					}
+				},
+				{
+					"speaker": "bex",
+					"content": {
+						"korean": "하아, 알았어요. 요행을 바라면 안 되겠죠."
+					}
+				}
+			]
+		}
+	],
+	"_side": {
+		"slot": "B",
+		"person": {
+			"name": "벡스",
+			"id": "bex",
+			"role": "폐기물 분류 작업자"
+		},
+		"wants": "유출이 멈춘 틈을 타 자신의 인사 고과 데이터를 조작해달라고 부탁한다.",
+		"rule_link": "장치가 분해되어 유출이 멈춘 안정기를 개인적인 이익을 위해 악용하려는 유혹.",
+		"events": {},
+		"flags": {}
+	}
+}

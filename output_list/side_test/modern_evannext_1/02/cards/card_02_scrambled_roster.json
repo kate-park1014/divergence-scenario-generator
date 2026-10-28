@@ -1,0 +1,253 @@
+{
+	"id": "card_02_scrambled_roster",
+	"kind": "rep",
+	"title": {
+		"korean": "뒤섞인 출석부"
+	},
+	"intensity": "calm",
+	"after_story": 7,
+	"before_story": 10,
+	"condition": {
+		"leaning": "fighting+",
+		"among": [
+			"fighting-",
+			"fighting+",
+			"community-",
+			"community+",
+			"reason-",
+			"reason+"
+		],
+		"min": 20
+	},
+	"urgency": 8,
+	"leaning": "fighting+",
+	"background_tags": [
+		"information_desk",
+		"scattered_forms",
+		"blinking_monitors",
+		"panicked_applicants",
+		"urgent_atmosphere"
+	],
+	"dialogue": [
+		{
+			"speaker": "clerk",
+			"content": {
+				"korean": "로비에서 넘어진 다른 지원자들을 부축하고 흩어진 서류를 모아주신 분이군요!"
+			}
+		},
+		{
+			"speaker": "clerk",
+			"content": {
+				"korean": "단말기 오류로 명단이 온통 84번, 102번 같은 번호로 지워지고 있어요."
+			}
+		},
+		{
+			"speaker": "clerk",
+			"content": {
+				"korean": "데이터 관리자가 오기 전에 저 사람들의 원래 이름을 수기 명부에 적어둬야 합니다."
+			}
+		},
+		{
+			"speaker": "nia",
+			"content": {
+				"korean": "담당자 혼자선 역부족이에요. 지원자들이 공포에 질려 창구로 몰려들고 있어요!"
+			}
+		}
+	],
+	"choices": [
+		{
+			"text": {
+				"korean": "clerk의 붉은 펜을 넘겨받아 번호로 바뀐 지원자들의 원래 이름을 대조해 적는다."
+			},
+			"path": "easy",
+			"mbti": "SF",
+			"flag": "delayed_paperwork",
+			"effects": {
+				"fighting": 20,
+				"echo": 10
+			},
+			"reward": [
+				"heal"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "clerk",
+					"content": {
+						"korean": "감사합니다! 84번이랑 102번 지원자 원래 이름을 겨우 펜으로 덧썼어요!"
+					}
+				},
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "복도 저편에서 서버실 차단벽이 내려앉는 둔탁한 소리가 울린다."
+					}
+				},
+				{
+					"speaker": "nia",
+					"content": {
+						"korean": "사람들은 챙겼지만 시간이 너무 지체됐어요. 관리자가 바로 앞까지 당도했어요!"
+					}
+				}
+			]
+		},
+		{
+			"text": {
+				"korean": "혼란을 수습하려는 clerk를 밀치고 메인 단말기 전원 코드를 뽑아 절차를 중단한다."
+			},
+			"path": "hard",
+			"mbti": "TP",
+			"flag": "power_cut",
+			"effects": {
+				"echo": -10,
+				"fighting": -20
+			},
+			"reward": [
+				"move_range_up"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "clerk",
+					"content": {
+						"korean": "단말기 전원을 뽑아버리면 대기자들 인적 사항이 통째로 날아갑니다!"
+					}
+				},
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "화면이 암전되자 숫자를 부르던 안내 방송 스피커가 뚝 끊긴다."
+					}
+				},
+				{
+					"speaker": "nia",
+					"content": {
+						"korean": "냉정하지만... 관리자가 지원자들을 추적하던 단말기 화면도 함께 꺼졌어요."
+					}
+				}
+			]
+		},
+		{
+			"text": {
+				"korean": "검색실 지원자들을 향해 소리쳐 서로의 본명을 부르며 대기열을 유지하게 만든다."
+			},
+			"path": "stat",
+			"mbti": "EN",
+			"require": {
+				"stat": "fighting",
+				"op": ">=",
+				"value": 40
+			},
+			"flag": "united_seekers",
+			"effects": {
+				"fighting": 30,
+				"community": 20,
+				"echo": 15
+			},
+			"reward": [
+				"shield"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "당신의 지시에 따라 지원자들이 서로의 얼굴을 확인하며 큰 소리로 본명을 부른다."
+					}
+				},
+				{
+					"speaker": "clerk",
+					"content": {
+						"korean": "사람들이 번호에 굴하지 않고 이름을 부르고 있어... 기계 화면의 숫자가 멈칫거려요!"
+					}
+				},
+				{
+					"speaker": "nia",
+					"content": {
+						"korean": "저들이 길을 터주고 있어요. 이 틈에 서버실 통로로 돌파해요!"
+					}
+				}
+			]
+		},
+		{
+			"text": {
+				"korean": "창구의 안내 방송용 마이크를 낚아채 무작위 음료수 번호를 부르며 장내를 교란한다."
+			},
+			"path": "fun",
+			"mbti": "FP",
+			"effects": {
+				"echo": 5,
+				"gold": 100,
+				"reason": 20
+			},
+			"reward": [
+				"cooldown_reset"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "스피커에서 무작위 음료수 주문 방송이 터져 나오자 대기실이 일순간 멍해진다."
+					}
+				},
+				{
+					"speaker": "clerk",
+					"content": {
+						"korean": "지금 방송실 마이크로 무슨 헛소리를 하시는 겁니까?!"
+					}
+				},
+				{
+					"speaker": "nia",
+					"content": {
+						"korean": "푸흡, 사람들이 멍하니 쳐다보느라 밀치질 않아요. 바닥에 떨어진 지원금 봉투나 챙겨요!"
+					}
+				}
+			]
+		}
+	],
+	"_side": {
+		"slot": "D",
+		"person": {
+			"role": "숫자로 덮이는 인적 사항을 수작업으로 지키려는 직원",
+			"id": "clerk",
+			"name": "창구의 단말기 담당자"
+		},
+		"wants": "숫자로 대체되는 구직자들의 본래 이름을 수기 대장에 적어 신원을 보존하기",
+		"rule_link": "이력서의 인적 사항이 번호로 덮어씌워지는 와중에 수기 명부와 대조하려는 현장 수습 행위",
+		"rep": "fighting+",
+		"events": {},
+		"flags": {
+			"delayed_paperwork": {
+				"kind": "bad",
+				"boss_penalty": -1,
+				"label": {
+					"korean": "지연된 수기 작업"
+				},
+				"boss_line": {
+					"korean": "명부 정리에 시간을 지체한 탓에 데이터 관리자가 통로를 선점하고 차단 격벽을 내린다."
+				}
+			},
+			"power_cut": {
+				"kind": "good",
+				"boss_penalty": 1,
+				"label": {
+					"korean": "전원 차단"
+				},
+				"boss_choice": {
+					"korean": "주전원이 꺼져 깜빡이는 통로의 비상등 틈을 타 데이터 관리자의 사각지대로 파고든다."
+				}
+			},
+			"united_seekers": {
+				"kind": "good",
+				"boss_penalty": 2,
+				"label": {
+					"korean": "연대하는 지원자들"
+				},
+				"boss_choice": {
+					"korean": "서로의 이름을 부르며 결속한 지원자들이 스크럼을 짜 데이터 관리자의 앞길을 가로막는다."
+				}
+			}
+		}
+	}
+}

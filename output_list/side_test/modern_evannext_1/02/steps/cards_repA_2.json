@@ -1,0 +1,271 @@
+{
+	"cards": [
+		{
+			"title": "개인을 위한 거래",
+			"choices": [
+				{
+					"path": "easy",
+					"text": "구직자의 탈락 기록을 남의 명단으로 넘기는 조작을 돕고 보상금을 받는다.",
+					"mbti": "TJ",
+					"reward": [],
+					"result": [
+						{
+							"speaker": "seeker",
+							"text": "\"고맙습니다! 약속대로 보상금 120골드를 단말기 밑으로 넣어두었습니다.\""
+						},
+						{
+							"text": "\"저렇게 다른 사람의 이력서에 손을 대면 나중에 큰 문제가 생길 텐데요...\"",
+							"speaker": "nia"
+						}
+					],
+					"flag": {
+						"label": "조작 협조",
+						"boss_text": "이전의 조작된 경력 데이터가 보스의 보안 감시망에 걸려 추가 공격을 받는다.",
+						"key": "seeker_bribe_done"
+					},
+					"effects": {
+						"community": -20,
+						"gold": 120,
+						"echo": -10
+					}
+				},
+				{
+					"result": [
+						{
+							"speaker": "seeker",
+							"text": "\"쯧, 소문과 달리 왜 이제 와서 정의로운 척입니까? 조용히 떠나죠.\""
+						},
+						{
+							"text": "\"잘하셨어요! 남의 이력서를 망가뜨리는 행동은 절대 받아주면 안 돼요.\"",
+							"speaker": "nia"
+						}
+					],
+					"mbti": "FP",
+					"reward": [
+						"intelligence_up"
+					],
+					"text": "이력서 조작 요구를 거절하고 단말기 담당자에게 알리겠다고 경고한다.",
+					"path": "hard",
+					"effects": {
+						"echo": 10,
+						"community": 20
+					},
+					"flag": {
+						"boss_text": "위조 시도를 차단해 얻은 깨끗한 로그 덕분에 보스 방의 보안 시스템을 쉽게 해킹한다.",
+						"key": "seeker_denied",
+						"label": "위조 거절"
+					}
+				},
+				{
+					"mbti": "EN",
+					"effects": {
+						"community": -15,
+						"fighting": 20
+					},
+					"path": "stat",
+					"text": "손해 보는 거래는 안 한다는 철저한 태도로 구직자의 협박성 부탁을 꺾는다.",
+					"flag": {
+						"boss_text": "이기적인 악명을 이용해 보스 방의 경비원들을 위협하여 퇴로를 확보한다.",
+						"key": "selfish_intimidation",
+						"label": "냉정한 위협"
+					},
+					"result": [
+						{
+							"speaker": "seeker",
+							"text": "\"히익, 그렇게 무서운 눈으로 보지 마세요! 없던 일로 하겠습니다!\""
+						},
+						{
+							"speaker": "nia",
+							"text": "\"당신의 냉정한 대처 덕분에 사기꾼이 지레 겁을 먹고 달아났네요.\""
+						}
+					],
+					"reward": [
+						"attack_up"
+					]
+				},
+				{
+					"path": "gold",
+					"text": "단말기 담당자에게 80골드를 지불하여 이력서 조작 시도를 정식 차단한다.",
+					"effects": {
+						"gold": -80,
+						"reason": 15
+					},
+					"mbti": "IS",
+					"result": [
+						{
+							"speaker": "narrator",
+							"text": "담당자에게 80골드를 지불하자 공용 단말기 수정 권한이 안전하게 잠긴다."
+						},
+						{
+							"speaker": "nia",
+							"text": "\"돈을 써서 단말기 보안 조치를 확실히 해두니 마음이 한결 편해요.\""
+						}
+					],
+					"reward": []
+				}
+			],
+			"rule_link": "단말기의 이력서 정리 기능을 이용해 자신의 징계 기록을 타인의 데이터에 덮어씌우려 한다.",
+			"key": "fake_career_bribe",
+			"background_tags": [
+				"information_room",
+				"afternoon",
+				"fluorescent_light",
+				"anxious_crowd",
+				"tense"
+			],
+			"person": {
+				"id": "seeker",
+				"name": "구직자 박씨",
+				"role": "자격증을 위조하려는 지원자"
+			},
+			"no": 1,
+			"dialogue": [
+				{
+					"speaker": "narrator",
+					"text": "공용 검색 단말기 옆에서 초조하게 서성이던 구직자가 당신에게 다가온다."
+				},
+				{
+					"speaker": "seeker",
+					"text": "\"당신이 남이야 어찌 되든 제 밥그릇부터 챙겨서 살아남았다는 그분이죠?\""
+				},
+				{
+					"text": "\"내 탈락 경력을 다른 대기자 이력서에 슬쩍 넘겨주면 두둑이 챙겨주겠소.\"",
+					"speaker": "seeker"
+				},
+				{
+					"speaker": "nia",
+					"text": "\"남의 이력서 데이터를 함부로 바꾸는 건 위험한 일이에요.\""
+				}
+			],
+			"wants": "자신의 탈락 기록을 남에게 넘기고 주인공에게 현금을 쥐여주려 함.",
+			"slot": "A",
+			"kind": "rep",
+			"rep_dir": "community-"
+		},
+		{
+			"no": 2,
+			"choices": [
+				{
+					"result": [
+						{
+							"text": "\"약자들을 위해 결단을 내려주셔서 감사합니다! 바로 승인 처리하겠습니다.\"",
+							"speaker": "clerk"
+						},
+						{
+							"speaker": "nia",
+							"text": "\"모두를 도왔지만 단말기 시스템에 부하가 걸린 것 같아 조금 걱정돼요.\""
+						}
+					],
+					"effects": {
+						"echo": 10,
+						"community": 25
+					},
+					"text": "미계약 대기자 전체를 위해 단말기의 이력서 덮어쓰기 승인을 누른다.",
+					"flag": {
+						"label": "일괄 덮어쓰기",
+						"boss_text": "덮어씌운 단말기 데이터 오류가 누적되어 보스 방의 출입구가 일시 차단된다.",
+						"key": "mass_override_done"
+					},
+					"reward": [
+						"attack_up"
+					],
+					"mbti": "NF",
+					"path": "easy"
+				},
+				{
+					"effects": {
+						"community": -15,
+						"reason": 20
+					},
+					"reward": [
+						"defense_up"
+					],
+					"flag": {
+						"boss_text": "정석대로 이력서 시스템을 정돈한 덕에 보스의 데이터 교란 공격을 방어한다.",
+						"key": "manual_restoration",
+						"label": "원칙 유지"
+					},
+					"text": "편법 승인을 거절하고 린의 이력서부터 차례로 수동 정돈하라고 권한다.",
+					"result": [
+						{
+							"text": "\"아쉽지만 당신 말씀대로 정석 절차를 밟아 하나씩 복원하겠습니다.\"",
+							"speaker": "clerk"
+						},
+						{
+							"text": "\"조금 돌아가더라도 안전하게 원칙을 지키는 편이 린에게도 도움이 돼요.\"",
+							"speaker": "nia"
+						}
+					],
+					"path": "hard",
+					"mbti": "TP"
+				},
+				{
+					"flag": {
+						"boss_text": "당신의 헌신적인 명성을 들은 대기자들이 보스 방에서 방패막이가 되어준다.",
+						"key": "crowd_reputation_help",
+						"label": "대기자 연대"
+					},
+					"text": "모두를 돕는 평판을 발휘해 주변 대기자들이 자발적으로 정리 순서를 지키게 만든다.",
+					"mbti": "ES",
+					"result": [
+						{
+							"text": "\"모두가 돕겠다고 나서는군요! 이 정도 열기면 편법 없이도 정리되겠습니다.\"",
+							"speaker": "clerk"
+						},
+						{
+							"text": "\"당신의 평판을 들은 사람들이 스스로 차례를 지키며 단말기를 정돈해요!\"",
+							"speaker": "nia"
+						}
+					],
+					"path": "stat",
+					"reward": [
+						"shield"
+					],
+					"effects": {
+						"fighting": 10,
+						"community": 30
+					}
+				}
+			],
+			"wants": "미계약 지원자들의 이력서를 통째로 유력 지원자 자리에 덮어쓰도록 승인받으려 함.",
+			"person": {
+				"id": "clerk",
+				"name": "직원 김씨",
+				"role": "정보 검색실 출력 관리자"
+			},
+			"background_tags": [
+				"information_room",
+				"afternoon",
+				"dim_lighting",
+				"desperate_crowd",
+				"urgent"
+			],
+			"title": "모두를 위한 편법",
+			"dialogue": [
+				{
+					"speaker": "narrator",
+					"text": "정보 검색실의 단말기 담당자가 서류 뭉치를 든 채 당신을 반갑게 맞이한다."
+				},
+				{
+					"text": "\"어려운 이웃을 위해 늘 먼저 나선다는 소문을 듣고 기다렸습니다!\"",
+					"speaker": "clerk"
+				},
+				{
+					"speaker": "clerk",
+					"text": "\"불이익을 받는 대기자들을 위해 통째로 이력서 데이터를 덮어써 주십시오.\""
+				},
+				{
+					"text": "\"전체 데이터를 한 번에 바꾸면 린의 이력서까지 꼬여버릴 수도 있어요.\"",
+					"speaker": "nia"
+				}
+			],
+			"rule_link": "이력서 일괄 복구 기능을 악용해 미계약자들의 데이터를 합법 지원자 칸에 덮어씌우려 한다.",
+			"key": "blank_resume_swap",
+			"slot": "A",
+			"kind": "rep",
+			"rep_dir": "community+"
+		}
+	],
+	"errors": [],
+	"prompt_hash": "50b1c17d49393bb57980ec743d7d0926aaa24fe9"
+}

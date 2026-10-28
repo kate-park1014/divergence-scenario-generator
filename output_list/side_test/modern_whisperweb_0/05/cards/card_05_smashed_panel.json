@@ -1,0 +1,177 @@
+{
+	"id": "card_05_smashed_panel",
+	"kind": "plant",
+	"title": {
+		"korean": "닫힌 문 앞의 분노"
+	},
+	"intensity": "calm",
+	"after_story": 1,
+	"before_story": 3,
+	"background_tags": [
+		"control_room",
+		"dim_light",
+		"broken_panel",
+		"flying_sparks",
+		"closed_door"
+	],
+	"dialogue": [
+		{
+			"speaker": "tech_worker",
+			"content": {
+				"korean": "빌어먹을! 내 계정 권한이 통째로 날아갔어. 이 문을 열 방법이 없다고!"
+			}
+		},
+		{
+			"speaker": "echo",
+			"content": {
+				"korean": "그 렌치로 통제판이랑 조각을 같이 박살 내! 당장 안 깨면 내 계좌 정보가 오픈 소스로 풀려!"
+			}
+		},
+		{
+			"speaker": "tech_worker",
+			"content": {
+				"korean": "어차피 먹통인 거, 이 통제판을 그냥 박살 내버리자. 그럼 문 락은 풀릴 거야."
+			}
+		},
+		{
+			"speaker": "narrator",
+			"content": {
+				"korean": "기술자가 무거운 렌치를 들고 통제판을 내리치려 했다."
+			}
+		}
+	],
+	"choices": [
+		{
+			"text": {
+				"korean": "통제판을 부수게 둔다."
+			},
+			"path": "easy",
+			"mbti": "SP",
+			"effects": {
+				"reason": -20,
+				"echo": -5,
+				"fighting": 20
+			},
+			"reward": [
+				"move_range_up"
+			],
+			"seed": "smashed_panel_easy",
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "당신은 렌치가 통제판을 으깨도록 내버려 두었다. 파열음과 함께 닫혀 있던 문이 스르륵 열렸다."
+					}
+				},
+				{
+					"speaker": "tech_worker",
+					"content": {
+						"korean": "거 봐, 복잡하게 굴 거 없다니까. 당장 살고 봐야지."
+					}
+				}
+			]
+		},
+		{
+			"text": {
+				"korean": "부수지 못하게 막고 수동으로 암호를 해독한다."
+			},
+			"path": "hard",
+			"mbti": "TJ",
+			"effects": {
+				"echo": 5,
+				"reason": 20,
+				"fighting": -20
+			},
+			"reward": [
+				"intelligence_up"
+			],
+			"seed": "smashed_panel_hard",
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "당신은 기술자를 제지하고 통제판의 복잡한 배선을 뜯어 일일이 암호를 풀었다."
+					}
+				},
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "오랜 시간이 걸려 문이 열렸지만, 머리가 깨질 듯 아팠다."
+					}
+				}
+			]
+		},
+		{
+			"text": {
+				"korean": "우회 접속 키를 사서 문을 연다."
+			},
+			"path": "gold",
+			"mbti": "FJ",
+			"require": {
+				"stat": "gold",
+				"op": ">=",
+				"value": 100
+			},
+			"effects": {
+				"gold": -100,
+				"community": 10
+			},
+			"seed": "smashed_panel_hard",
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "당신이 크레딧을 지불하고 우회 키를 꽂자, 통제판이 온전한 상태로 문을 개방했다."
+					}
+				},
+				{
+					"speaker": "tech_worker",
+					"content": {
+						"korean": "돈 쓰는 게 제일 빠르긴 하네."
+					}
+				}
+			]
+		},
+		{
+			"text": {
+				"korean": "{actor}이(가) 통제판의 배선을 재정렬해 문을 연다."
+			},
+			"path": "lock",
+			"mbti": "TP",
+			"require": {
+				"mbti": "TP"
+			},
+			"effects": {
+				"reason": 10,
+				"gold": 50
+			},
+			"seed": "smashed_panel_hard",
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "{actor}이(가) 망가진 통제판의 회로를 계산해 정확한 순서로 배선을 다시 이었다."
+					}
+				},
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "통제판이 부서지지 않고 무사히 작동하며 문이 열렸다."
+					}
+				}
+			]
+		}
+	],
+	"_side": {
+		"slot": "A",
+		"person": {
+			"id": "tech_worker",
+			"role": "제어실 기술자",
+			"name": "기술자"
+		},
+		"wants": "권한 복구가 안 되니 당장 통제판을 부수고 싶어 한다.",
+		"rule_link": "통제판을 부수는 것은 결국 제어실 안의 데이터 스크린 조각을 파괴하는 일의 연장선이다.",
+		"events": {},
+		"flags": {}
+	}
+}

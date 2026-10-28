@@ -1,0 +1,334 @@
+{
+	"cards": [
+		{
+			"card_id": "card_04_cracked_wall",
+			"asks": "하역조 몫으로 떼어둔 부품을 가져간 자를 찾아 부품을 되찾아 달라.",
+			"choices_read": [
+				{
+					"path": "easy",
+					"target": "부품을 가져간 자",
+					"does": "인부들을 앞세워 부품을 가져간 자를 찾아내 붙잡는다",
+					"reaction_assumes": "인부들을 앞세워 부품을 가져간 자를 붙잡아 부품을 되찾음"
+				},
+				{
+					"path": "hard",
+					"target": "고로/인부들",
+					"does": "부품 값을 대신 털어 보상하고 자리를 뜬다",
+					"reaction_assumes": "돈으로 보상하고 말로 끝냄"
+				},
+				{
+					"path": "stat",
+					"target": "인부들",
+					"does": "당신 이름을 내세워 분배 순서를 정하게 한다",
+					"reaction_assumes": "당신이 정한 순서대로 인부들이 부품을 받음"
+				},
+				{
+					"path": "gold",
+					"target": "고로",
+					"does": "120골드를 주고 인부들 몫 부품을 사들인다",
+					"reaction_assumes": "돈을 받고 고로가 부품 꾸러미를 넘김"
+				}
+			],
+			"checks": [
+				{
+					"item": "S1",
+					"pass": true
+				},
+				{
+					"item": "S2",
+					"pass": true
+				},
+				{
+					"item": "S3",
+					"pass": true
+				},
+				{
+					"item": "S4",
+					"pass": false,
+					"quote": "또 시작이네, 내 흑역사는 끝났는데 왜 자꾸 사람이 몰려오지?",
+					"problem": "닥스가 고로의 부탁(부품 되찾기)에 반응하지 않고 자기 흑역사·스토리 방 상황을 되풀이하며, 반말 원문 대사와 달리 이 카드에서만 반말을 쓴다."
+				},
+				{
+					"item": "S5",
+					"pass": true
+				},
+				{
+					"item": "S6",
+					"pass": false,
+					"quote": "당신이 처리장 기계를 맨손으로 뜯어냈다는 그 사람이죠? 부품 좀 나눠 받으러 왔어요.",
+					"problem": "rep_note는 '힘으로 밀어붙이고 맞서 싸우는 사람'인데 고로는 기계를 뜯어낸 일만 언급할 뿐 그 평판을 알아보는 말이 없고, 사건도 부품 분배라 평판과 무관하다."
+				}
+			]
+		},
+		{
+			"card_id": "card_04_empty_hands",
+			"asks": "부품 더미에 깔린 동료를 꺼내 달라(손이 하나 모자란다).",
+			"choices_read": [
+				{
+					"path": "easy",
+					"target": "부품 더미/깔린 동료",
+					"does": "부품 더미를 들어 올려 깔린 동료를 꺼내 준다",
+					"reaction_assumes": "더미를 들어 동료를 꺼냄"
+				},
+				{
+					"path": "hard",
+					"target": "미라",
+					"does": "고정 핀 위치만 알려주고 손을 뗀다",
+					"reaction_assumes": "핀을 뽑으라고 알려줌"
+				},
+				{
+					"path": "stat",
+					"target": "처리장 사람들",
+					"does": "당신을 돕겠다는 사람들을 불러 동료를 함께 꺼낸다",
+					"reaction_assumes": "당신 이름으로 사람들이 모여 더미를 들어 올림"
+				}
+			],
+			"checks": [
+				{
+					"item": "S1",
+					"pass": true
+				},
+				{
+					"item": "S2",
+					"pass": true
+				},
+				{
+					"item": "S3",
+					"pass": true
+				},
+				{
+					"item": "S4",
+					"pass": true
+				},
+				{
+					"item": "S5",
+					"pass": true
+				},
+				{
+					"item": "S6",
+					"pass": false,
+					"quote": "기계를 맨손으로 끊었다더니, 사람도 그렇게 끌어올린다면서요? 저기 좀 봐 주세요.",
+					"problem": "rep_note는 '남을 돕고 손을 내미는 사람'인데 미라가 알아보는 말은 기계를 끊은 일에 대한 것이고, 사건도 구조 요청이라 '손 내미는' 평판을 알아보는 대사가 없다."
+				}
+			]
+		},
+		{
+			"card_id": "card_04_first_pick",
+			"asks": "부품 더미를 반반 가르되 자기가 먼저 고르게 해 달라(가장 값나가는 부품을 먼저 고르자는 거래).",
+			"choices_read": [
+				{
+					"path": "easy",
+					"target": "세빅",
+					"does": "거래를 받고 가장 무거운 부품을 먼저 챙긴다",
+					"reaction_assumes": "먼저 골라 계산이 빠름"
+				},
+				{
+					"path": "hard",
+					"target": "세빅",
+					"does": "부품을 균등하게 나누고 당신 몫을 세빅에게 넘긴다",
+					"reaction_assumes": "손해를 봄"
+				},
+				{
+					"path": "stat",
+					"target": "세빅",
+					"does": "먼저 챙긴다는 소문을 이용해 웃돈을 받아낸다",
+					"reaction_assumes": "소문을 이용해 돈을 받아냄"
+				},
+				{
+					"path": "fun",
+					"target": "세빅의 저울",
+					"does": "저울을 부품 위에 올려 저울부터 반으로 가른다",
+					"reaction_assumes": "저울이 부서짐"
+				}
+			],
+			"checks": [
+				{
+					"item": "S1",
+					"pass": true
+				},
+				{
+					"item": "S2",
+					"pass": true
+				},
+				{
+					"item": "S3",
+					"pass": true
+				},
+				{
+					"item": "S4",
+					"pass": true
+				},
+				{
+					"item": "S5",
+					"pass": true
+				},
+				{
+					"item": "S6",
+					"pass": true
+				}
+			]
+		},
+		{
+			"card_id": "card_04_form_blank",
+			"asks": "부품 목록 서류의 빈칸 하나를 채워 서명해 달라.",
+			"choices_read": [
+				{
+					"path": "easy",
+					"target": "서류 빈칸",
+					"does": "빈칸을 '확인 불가'로 적고 서명한다",
+					"reaction_assumes": "확인 불가로 적어 책임을 면함"
+				},
+				{
+					"path": "hard",
+					"target": "로사",
+					"does": "빈칸을 채우지 않고 함께 부품을 다시 센다",
+					"reaction_assumes": "다시 세어 스물두 개 확인"
+				},
+				{
+					"path": "stat",
+					"target": "로사",
+					"does": "목록 없이 통행을 요청한다",
+					"reaction_assumes": "서명을 믿고 통행을 허락함"
+				}
+			],
+			"checks": [
+				{
+					"item": "S1",
+					"pass": true
+				},
+				{
+					"item": "S2",
+					"pass": true
+				},
+				{
+					"item": "S3",
+					"pass": true
+				},
+				{
+					"item": "S4",
+					"pass": true
+				},
+				{
+					"item": "S5",
+					"pass": true
+				},
+				{
+					"item": "S6",
+					"pass": true
+				}
+			]
+		},
+		{
+			"card_id": "card_04_no_bad_news",
+			"asks": "순찰 기록에 안 남게 부품 하나를 몰래 빼 달라.",
+			"choices_read": [
+				{
+					"path": "easy",
+					"target": "준",
+					"does": "기록 없이 부품 하나를 빼 준다",
+					"reaction_assumes": "부품을 받아 감"
+				},
+				{
+					"path": "hard",
+					"target": "준/순찰 기록판",
+					"does": "부탁을 거절하고 기록판에 직접 적는다",
+					"reaction_assumes": "기록에 적혀 근무 평가가 끝남"
+				},
+				{
+					"path": "stat",
+					"target": "준",
+					"does": "당신 이름을 걸고 정식으로 신청하게 한다",
+					"reaction_assumes": "당신 이름으로 신청이 통과됨"
+				},
+				{
+					"path": "fun",
+					"target": "준의 순찰 기록판",
+					"does": "오늘 순찰을 '없던 일'로 적어 넣는다",
+					"reaction_assumes": "자기 존재까지 없어진 듯함"
+				}
+			],
+			"checks": [
+				{
+					"item": "S1",
+					"pass": true
+				},
+				{
+					"item": "S2",
+					"pass": true
+				},
+				{
+					"item": "S3",
+					"pass": true
+				},
+				{
+					"item": "S4",
+					"pass": true
+				},
+				{
+					"item": "S5",
+					"pass": true
+				},
+				{
+					"item": "S6",
+					"pass": true
+				}
+			]
+		},
+		{
+			"card_id": "card_04_shared_ration",
+			"asks": "부품 전부를 공용 창고에 넣어 달라.",
+			"choices_read": [
+				{
+					"path": "easy",
+					"target": "공용 창고",
+					"does": "부품 전부를 공용 창고에 넣고 명단을 붙인다",
+					"reaction_assumes": "명단이 붙어 아무도 탓 못 함"
+				},
+				{
+					"path": "hard",
+					"target": "벡스",
+					"does": "부품을 직접 관리하고 창고 열쇠를 돌려받는다",
+					"reaction_assumes": "열쇠를 빼앗겨 벡스가 물러남"
+				},
+				{
+					"path": "stat",
+					"target": "작업자들",
+					"does": "당신을 따르는 작업자들을 불러 분배를 맡긴다",
+					"reaction_assumes": "작업자들이 스스로 줄을 섬"
+				},
+				{
+					"path": "gold",
+					"target": "벡스",
+					"does": "100골드를 주고 부품 대신 공용 창고를 새로 잠근다",
+					"reaction_assumes": "새 자물쇠를 받아 창고를 잠금"
+				}
+			],
+			"checks": [
+				{
+					"item": "S1",
+					"pass": true
+				},
+				{
+					"item": "S2",
+					"pass": true
+				},
+				{
+					"item": "S3",
+					"pass": true
+				},
+				{
+					"item": "S4",
+					"pass": true
+				},
+				{
+					"item": "S5",
+					"pass": true
+				},
+				{
+					"item": "S6",
+					"pass": true
+				}
+			]
+		}
+	]
+}

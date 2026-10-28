@@ -1,0 +1,278 @@
+{
+	"cards": [
+		{
+			"person": {
+				"name": "민석",
+				"id": "minseok",
+				"role": "경력 과장을 시도하는 지원자"
+			},
+			"dialogue": [
+				{
+					"speaker": "narrator",
+					"text": "대기실 한구석에서 민석이 구겨진 이력서 용지를 쥔 채 불안하게 입술을 깨물었다."
+				},
+				{
+					"text": "당신이 앞을 막아서는 상대는 누구든 정면으로 꺾고 올라왔다는 그 사람이죠?",
+					"speaker": "minseok"
+				},
+				{
+					"text": "저 좀 살려주세요! 제 이력서에 경력 10년을 거짓으로 적어주시면 승인권을 넘기겠습니다!",
+					"speaker": "minseok"
+				},
+				{
+					"text": "대기실이 마비되어 과장된 이력서를 내야 모면할 수 있다는 지침이 떠 있기는 해요.",
+					"speaker": "lin"
+				},
+				{
+					"text": "안 적어주시면 경비원을 불러 당신이 작성 방해자라고 소리칠 겁니다!",
+					"speaker": "minseok"
+				}
+			],
+			"no": 1,
+			"key": "minseok_resume_threat",
+			"background_tags": [
+				"waiting_room",
+				"lighting_flicker",
+				"paper_piles",
+				"tense",
+				"crowded"
+			],
+			"rule_link": "부실한 경력을 과장해 서류함을 통과하려는 지원자의 억지 부탁과 강요",
+			"choices": [
+				{
+					"mbti": "TJ",
+					"flag": {
+						"key": "forged_resume_record",
+						"boss_text": "허위 작성된 이력서 승인표 때문에 보안 경비 장치가 주인공을 허위 제출자로 지목한다.",
+						"label": "위조 이력서 기록"
+					},
+					"result": [
+						{
+							"text": "고맙습니다! 이 경력 10년짜리 서류만 있으면 대기실 통과 승인권은 제 겁니다.",
+							"speaker": "minseok"
+						},
+						{
+							"speaker": "lin",
+							"text": "과장된 서류로 당장 위기는 넘겼지만, 서류함 수거 기록에 당신 이름이 같이 남았어요."
+						}
+					],
+					"effects": {
+						"gold": 100,
+						"fighting": -20,
+						"echo": -10
+					},
+					"text": "민석의 요구대로 경력을 10년으로 과장한 이력서를 적어주고 대가를 받는다",
+					"path": "easy",
+					"reward": []
+				},
+				{
+					"mbti": "NF",
+					"reward": [
+						"defense_up"
+					],
+					"effects": {
+						"echo": 10,
+						"fighting": 20
+					},
+					"flag": {
+						"key": "honest_validation",
+						"boss_text": "원칙을 지킨 이력서 검증 덕분에 면접장의 서류 검사 장치를 무사히 통과한다.",
+						"label": "정직한 서류 검증"
+					},
+					"text": "민석의 과장 작성 요구를 거절하고 실제 경력만 서류에 적도록 설득한다",
+					"path": "hard",
+					"result": [
+						{
+							"speaker": "minseok",
+							"text": "거짓 경력을 안 적어주신다고요? 하는 수 없이 사실대로 적어서 제출하겠어요."
+						},
+						{
+							"text": "위험 부담은 있지만 거짓 서류에 의존하지 않는 편이 나중에 덜 발목을 잡힐 거예요.",
+							"speaker": "lin"
+						}
+					]
+				},
+				{
+					"flag": {
+						"boss_text": "당당한 기세로 위조 서류 작성을 거부해 대기실 서류 검사관의 신뢰를 확보한다.",
+						"key": "intimidate_forger",
+						"label": "강압적 위조 거부"
+					},
+					"mbti": "EP",
+					"result": [
+						{
+							"speaker": "minseok",
+							"text": "으억, 알겠습니다! 그런 눈으로 노려보지 마세요, 그냥 제 진짜 경력만 적겠습니다!"
+						},
+						{
+							"speaker": "lin",
+							"text": "상대의 억지 요구를 기세만으로 눌러버렸네요. 서류함도 조용해졌어요."
+						}
+					],
+					"path": "stat",
+					"effects": {
+						"fighting": -10,
+						"echo": 5
+					},
+					"reward": [
+						"attack_up"
+					],
+					"text": "압도적인 기세로 민석을 쏘아보며 부실한 이력서를 당장 치우라고 명령한다"
+				}
+			],
+			"wants": "자신의 부실한 이력서에 과장된 성과를 대신 적어달라고 강요하는 것",
+			"title": "거짓 경력 작성 강요",
+			"slot": "A",
+			"kind": "rep",
+			"rep_dir": "fighting-"
+		},
+		{
+			"background_tags": [
+				"waiting_room",
+				"counter",
+				"stamp_sound",
+				"quiet",
+				"anxious"
+			],
+			"title": "대기실 연대 서명 요청",
+			"wants": "주인공의 협력적 평판을 이용해 지원자 15명의 과장 이력서에 연대 서명을 받는 것",
+			"no": 2,
+			"person": {
+				"role": "과장 서류 대량 승인을 요청하는 대기실 안내원",
+				"id": "yuri",
+				"name": "유리"
+			},
+			"choices": [
+				{
+					"effects": {
+						"fighting": 20,
+						"echo": 10,
+						"gold": 80
+					},
+					"reward": [],
+					"flag": {
+						"boss_text": "대량 연대 서명에 묶여 대기실 과장 서류 연좌제 조사를 받게 된다.",
+						"label": "대량 연대 서명",
+						"key": "mass_joint_signature"
+					},
+					"mbti": "FJ",
+					"result": [
+						{
+							"text": "정말 감사해요! 당신의 서명 덕분에 대기실 사람 모두가 서류함 기준을 맞췄어요.",
+							"speaker": "yuri"
+						},
+						{
+							"speaker": "lin",
+							"text": "사람들을 도운 건 좋지만, 저 많은 과장 서류에 저명된 당신 이름이 걱정되네요."
+						}
+					],
+					"path": "easy",
+					"text": "대기실 사람들을 구하기 위해 과장된 이력서의 연대 보증란에 모두 서명한다"
+				},
+				{
+					"mbti": "TP",
+					"flag": {
+						"boss_text": "부실 연대 서명을 거부한 덕분에 면접장의 서류 연좌제 처벌을 면한다.",
+						"key": "refuse_joint_guarantee",
+						"label": "연대 보증 거부"
+					},
+					"reward": [
+						"shield"
+					],
+					"text": "거짓 연대 보증의 위험을 지적하며 단체 과장 서명 요청을 거절한다",
+					"path": "hard",
+					"result": [
+						{
+							"speaker": "yuri",
+							"text": "차가우시네요... 아무리 허위 서류라도 당장 쫓겨나는 것보단 나을 텐데."
+						},
+						{
+							"text": "안내원의 원망을 샀지만, 책임질 수 없는 거짓 보증을 서지 않은 건 현명했어요.",
+							"speaker": "lin"
+						}
+					],
+					"effects": {
+						"fighting": -20,
+						"echo": -5
+					}
+				},
+				{
+					"reward": [
+						"intelligence_up"
+					],
+					"mbti": "EN",
+					"effects": {
+						"echo": 15,
+						"fighting": 30
+					},
+					"flag": {
+						"label": "협력 자격 검증",
+						"key": "coop_qualification_check",
+						"boss_text": "협력 연대를 이끌어낸 지휘력 덕분에 면접장에서 지원자들의 조력을 얻는다."
+					},
+					"result": [
+						{
+							"speaker": "yuri",
+							"text": "서로의 진짜 경력을 보증해 주는 방식이라니... 과장 서류 없이도 모두 통과했어요!"
+						},
+						{
+							"speaker": "lin",
+							"text": "당신의 협력 평판 덕분에 대기실 사람들이 과장 서류 없이도 단합했군요."
+						}
+					],
+					"text": "사람들을 모아 거짓 작성 없이 각자의 실제 성과를 입증할 협력안을 제시한다",
+					"path": "stat"
+				},
+				{
+					"effects": {
+						"reason": 25,
+						"gold": 50
+					},
+					"result": [
+						{
+							"text": "잠시만요! 이력서 대신 안내판에 서명 도장을 찍으시면 어떡해요!",
+							"speaker": "yuri"
+						},
+						{
+							"text": "안내판이 승인 상태로 바뀌면서 수거함 입구가 잠시 열렸어요! 어서 움직여요.",
+							"speaker": "lin"
+						}
+					],
+					"path": "fun",
+					"text": "유리의 승인 도장을 빼앗아 대기실 안내판에 합격 도장을 마구 찍는다",
+					"reward": [],
+					"mbti": "FP"
+				}
+			],
+			"rule_link": "대기실 지원자 전체의 과장 이력서 연대 보증 요청을 처리하는 선택",
+			"dialogue": [
+				{
+					"speaker": "narrator",
+					"text": "안내원 유리가 승인 도장을 든 채 쩔쩔매며 이력서 더미를 쓸어 모았다."
+				},
+				{
+					"speaker": "yuri",
+					"text": "곤경에 처한 지원자들에게 매번 묵묵히 손을 내밀어주셨다는 분이 맞으시죠?"
+				},
+				{
+					"speaker": "yuri",
+					"text": "이 대기실 분들이 통과 기준 미달로 쫓겨나게 생겼어요. 과장 서류에 연대 서명을 해주세요!"
+				},
+				{
+					"text": "서류함에 과장된 이력서를 제출해야 위기를 모면한다는 안내가 붙어 있기는 해요.",
+					"speaker": "lin"
+				},
+				{
+					"text": "당신의 서명만 있으면 이 가엾은 대기실 사람 15명이 전부 살 수 있어요!",
+					"speaker": "yuri"
+				}
+			],
+			"key": "yuri_coop_signature",
+			"slot": "A",
+			"kind": "rep",
+			"rep_dir": "fighting+"
+		}
+	],
+	"errors": [],
+	"prompt_hash": "40a03f1e75a601468c57f28bebe7ce1b310975bb"
+}

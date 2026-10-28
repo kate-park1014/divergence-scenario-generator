@@ -1,0 +1,951 @@
+{
+	"cards": [
+		{
+			"no": 1,
+			"key": "loud_pressure",
+			"title": "소문난 주먹",
+			"person": {
+				"id": "pipe_bruiser",
+				"name": "배관 투덜이",
+				"role": "파이프실 잡역꾼"
+			},
+			"wants": "자기 몫의 냉각수를 먼저 빼앗겼다며, 봉인된 밸브를 힘으로 뜯어 열자고 부추긴다.",
+			"rule_link": "강제로 밸브를 뜯으면 냉각수에 녹이 섞여 데이터 스크린 조각의 판독이 흐려진다.",
+			"dialogue": [
+				{
+					"speaker": "pipe_bruiser",
+					"text": "당신이죠? 지난번에 통로 막은 놈들 멱살 잡고 밀어낸 사람."
+				},
+				{
+					"speaker": "narrator",
+					"text": "그는 손에 쇠지렛대를 쥔 채 밸브 봉인 테이프를 툭툭 두드렸다."
+				},
+				{
+					"speaker": "pipe_bruiser",
+					"text": "이거 반 장짜리 테이프 하나 뜯으면 끝이야. 대신 내 몫 두 통 먼저."
+				},
+				{
+					"speaker": "kai",
+					"text": "저 사람 눈이 벌써 물통에 가 있네요."
+				},
+				{
+					"speaker": "pipe_bruiser",
+					"text": "빨리 정해. 온도 올라가는 소리가 벌써 나잖아."
+				}
+			],
+			"choices": [
+				{
+					"path": "easy",
+					"text": "쇠지렛대를 빌려 봉인 테이프를 힘으로 뜯어낸다",
+					"mbti": "EP",
+					"effects": {
+						"fighting": 15,
+						"reason": -10,
+						"echo": -5
+					},
+					"reward": [
+						"attack_up"
+					],
+					"result": [
+						{
+							"speaker": "narrator",
+							"text": "테이프가 뜯기며 냉각수가 두 통째 흘러나왔다."
+						},
+						{
+							"speaker": "pipe_bruiser",
+							"text": "거봐, 힘이 답이야. 한 통은 내가 가져간다."
+						},
+						{
+							"speaker": "narrator",
+							"text": "녹슨 물줄기가 바닥 홈통으로 흘러가며 붉은 자국을 남겼다."
+						}
+					],
+					"flag": {
+						"key": "rust_water",
+						"label": "녹물 섞인 냉각수",
+						"boss_text": "녹이 섞인 냉각수를 들고 서버 앞에 선다."
+					}
+				},
+				{
+					"path": "hard",
+					"text": "쇠지렛대를 빼앗아 밸브 봉인을 그대로 두게 한다",
+					"mbti": "TJ",
+					"effects": {
+						"fighting": -15,
+						"reason": 15,
+						"echo": 10
+					},
+					"reward": [
+						"defense_up"
+					],
+					"result": [
+						{
+							"speaker": "pipe_bruiser",
+							"text": "뭐야, 이거 안 뜯으면 나는 그냥 나간다?"
+						},
+						{
+							"speaker": "narrator",
+							"text": "그는 지렛대를 바닥에 놓고 투덜대며 문가에 서서 팔짱을 꼈다."
+						},
+						{
+							"speaker": "kai",
+							"text": "봉인은 그대로네요. 저 사람이 지켜보고 있으니 확실하겠어요."
+						}
+					],
+					"flag": {
+						"key": "bruiser_watch",
+						"label": "지켜보는 잡역꾼",
+						"boss_text": "문가에서 지켜보는 잡역꾼에게 봉인 상태를 확인시킨다."
+					}
+				},
+				{
+					"path": "stat",
+					"text": "잡역꾼에게 밸브를 등지고 서 있으라고 명령한다",
+					"mbti": "TP",
+					"effects": {
+						"fighting": -20,
+						"community": -10
+					},
+					"reward": [
+						"shield"
+					],
+					"result": [
+						{
+							"speaker": "narrator",
+							"text": "그는 지렛대를 내려놓고 밸브 앞을 등으로 막았다."
+						},
+						{
+							"speaker": "pipe_bruiser",
+							"text": "알겠어, 알겠어. 당신 앞에서 손대는 놈은 없을 거야."
+						},
+						{
+							"speaker": "narrator",
+							"text": "파이프실 입구 쪽에서 발소리가 뚝 멈췄다."
+						}
+					],
+					"flag": {
+						"key": "valve_guard",
+						"label": "밸브 앞을 막은 잡역꾼",
+						"boss_text": "밸브 앞을 막아선 잡역꾼에게 냉각수 통을 건네받는다."
+					}
+				},
+				{
+					"path": "fun",
+					"text": "지렛대를 빼앗아 밸브 옆 배관을 툭툭 두드려 소리를 낸다",
+					"mbti": "FP",
+					"effects": {
+						"fighting": 10,
+						"reason": 25
+					},
+					"reward": [
+						"intelligence_up"
+					],
+					"result": [
+						{
+							"speaker": "narrator",
+							"text": "둔탁한 소리가 나자 배관 안쪽에서 물방울이 규칙적으로 떨어졌다."
+						},
+						{
+							"speaker": "pipe_bruiser",
+							"text": "어? 이 소리... 압력이 빠지는 소리잖아."
+						},
+						{
+							"speaker": "kai",
+							"text": "테이프는 그대로인데 압력이 줄었어요. 이상하네요."
+						}
+					]
+				}
+			],
+			"background_tags": [
+				"pipe_room",
+				"afternoon",
+				"red_lamp",
+				"two_workers",
+				"tense"
+			],
+			"slot": "A",
+			"kind": "rep",
+			"rep_dir": "fighting-"
+		},
+		{
+			"no": 2,
+			"key": "spare_canister",
+			"title": "여분 통을 내미는 손",
+			"person": {
+				"id": "coolant_courier",
+				"name": "냉각수 배달원",
+				"role": "자재 운반 담당"
+			},
+			"wants": "자기 손이 모자라다며, 냉각수 통을 서버 쪽까지 옮겨줄 사람을 찾는다.",
+			"rule_link": "냉각수를 옮기는 동안 데이터 스크린 조각을 든 채 팔을 쓸 수 없어 조각을 잠시 어딘가에 두어야 한다.",
+			"dialogue": [
+				{
+					"speaker": "coolant_courier",
+					"text": "당신이 그 낯선 사람 챙겨준다는 분이죠? 소문 났어요."
+				},
+				{
+					"speaker": "narrator",
+					"text": "그는 통 하나를 허리에 붙인 채 다른 통은 바닥에 굴려 두고 있었다."
+				},
+				{
+					"speaker": "coolant_courier",
+					"text": "손이 하나뿐이라. 대신 통 옮겨주면 수고비는 챙겨드릴게요."
+				},
+				{
+					"speaker": "kai",
+					"text": "저 통, 옆에 붙은 라벨에 뭐라고 적혀 있는지 보이세요?"
+				},
+				{
+					"speaker": "coolant_courier",
+					"text": "라벨은 신경 쓰지 마요. 물만 옮겨주면 되는 거예요."
+				}
+			],
+			"choices": [
+				{
+					"path": "easy",
+					"text": "배달원 대신 냉각수 통을 서버 쪽까지 옮겨준다",
+					"mbti": "FJ",
+					"effects": {
+						"community": 15,
+						"echo": 10
+					},
+					"reward": [
+						"heal"
+					],
+					"result": [
+						{
+							"speaker": "narrator",
+							"text": "통을 옮기는 동안 데이터 스크린 조각을 배관 선반에 잠시 올려 두었다."
+						},
+						{
+							"speaker": "coolant_courier",
+							"text": "역시 소문대로네요. 수고비, 여기요."
+						},
+						{
+							"speaker": "narrator",
+							"text": "선반 위 조각이 미세하게 떨리며 표시가 한 칸 바뀌었다."
+						}
+					],
+					"flag": {
+						"key": "shelf_screen",
+						"label": "선반에 둔 조각",
+						"boss_text": "선반에 올려 둔 데이터 스크린 조각을 다시 꺼내 든다."
+					}
+				},
+				{
+					"path": "hard",
+					"text": "통을 받되 배달원에게 라벨부터 읽어보라고 요구한다",
+					"mbti": "TP",
+					"effects": {
+						"community": -15,
+						"reason": 15,
+						"echo": -5
+					},
+					"reward": [
+						"intelligence_up"
+					],
+					"result": [
+						{
+							"speaker": "coolant_courier",
+							"text": "하... 폐기 예정분이래요. 그래도 물은 물이잖아요."
+						},
+						{
+							"speaker": "narrator",
+							"text": "그는 통을 세워 두고 자기 몫 수고비를 챙겨 먼저 나갔다."
+						},
+						{
+							"speaker": "kai",
+							"text": "폐기 예정분이라니. 버리긴 아깝고, 쓰긴 찜찜하고."
+						}
+					],
+					"flag": {
+						"key": "discard_label",
+						"label": "폐기 예정 라벨",
+						"boss_text": "폐기 예정 라벨이 붙은 통을 서버 앞에서 열어 보인다."
+					}
+				},
+				{
+					"path": "stat",
+					"text": "배달원에게 통을 제자리에 두고 손을 잡아당기지 말라고 일러둔다",
+					"mbti": "FP",
+					"effects": {
+						"community": 20,
+						"echo": 5,
+						"fighting": 10
+					},
+					"reward": [
+						"defense_up"
+					],
+					"result": [
+						{
+							"speaker": "coolant_courier",
+							"text": "예전에 당신이 사람들 챙겨서 통로 뚫었다는 얘기, 들었어요. 그럼 믿을게요."
+						},
+						{
+							"speaker": "narrator",
+							"text": "그는 통을 벽 쪽에 나란히 세우고 빈손으로 물러섰다."
+						},
+						{
+							"speaker": "kai",
+							"text": "통 위치를 저 사람이 기억하고 있으니 나중에 찾기 쉽겠네요."
+						}
+					],
+					"flag": {
+						"key": "stacked_canisters",
+						"label": "벽에 세운 통",
+						"boss_text": "벽에 세워 둔 냉각수 통을 가리켜 위치를 확인한다."
+					}
+				},
+				{
+					"path": "gold",
+					"text": "배달원에게 동전 80닢을 주고 통을 직접 서버 옆에 두게 한다",
+					"mbti": "TJ",
+					"effects": {
+						"community": -10,
+						"gold": -80
+					},
+					"reward": [
+						"move_range_up"
+					],
+					"result": [
+						{
+							"speaker": "coolant_courier",
+							"text": "돈이라면야! 두 통 다 서버 옆에 딱 붙여 놓을게요."
+						},
+						{
+							"speaker": "narrator",
+							"text": "그는 통을 서버 벽에 붙여 놓고 손바닥을 털며 나갔다."
+						},
+						{
+							"speaker": "kai",
+							"text": "발밑에 통이 있으면 나중에 발이 걸리겠는데요."
+						}
+					]
+				}
+			],
+			"background_tags": [
+				"pipe_room",
+				"afternoon",
+				"flickering_lamp",
+				"one_worker",
+				"hurried"
+			],
+			"slot": "A",
+			"kind": "rep",
+			"rep_dir": "fighting+"
+		},
+		{
+			"no": 3,
+			"key": "shared_meter",
+			"title": "나눠 쓰는 계량기",
+			"person": {
+				"id": "meter_reader",
+				"name": "계량기 담당자",
+				"role": "설비 기록원"
+			},
+			"wants": "자기 몫 냉각수를 늘리려면 주인공이 쓴 양을 남의 이름으로 돌려 달라고 제안한다.",
+			"rule_link": "계량 기록이 어긋나면 데이터 스크린 조각에 찍히는 사용 기록도 함께 어긋난다.",
+			"dialogue": [
+				{
+					"speaker": "meter_reader",
+					"text": "당신이죠, 남 몫은 안 챙기고 자기 몫만 딱 챙긴다는 사람."
+				},
+				{
+					"speaker": "narrator",
+					"text": "그는 계량기 앞에 앉아 연필로 숫자를 지우고 다시 쓰고 있었다."
+				},
+				{
+					"speaker": "meter_reader",
+					"text": "이 칸에 당신 이름만 안 적으면 서로 이득이에요. 어때요?"
+				},
+				{
+					"speaker": "kai",
+					"text": "방금 지운 숫자, 두 번 지웠다가 다시 썼어요."
+				},
+				{
+					"speaker": "meter_reader",
+					"text": "빨리요. 검사 나오기 전에 정리해야 하니까."
+				}
+			],
+			"choices": [
+				{
+					"path": "easy",
+					"text": "계량 기록에서 자기 이름을 빼고 남의 칸에 숫자를 옮겨 적는다",
+					"mbti": "TP",
+					"effects": {
+						"community": -20,
+						"reason": -10,
+						"gold": 100
+					},
+					"reward": [
+						"cooldown_reset"
+					],
+					"result": [
+						{
+							"speaker": "narrator",
+							"text": "연필 끝이 남의 칸 위를 몇 번 오갔다."
+						},
+						{
+							"speaker": "meter_reader",
+							"text": "좋아요, 이제 이 몫은 당신 거예요. 수고비도 챙겨드릴게요."
+						},
+						{
+							"speaker": "narrator",
+							"text": "계량기 유리에 다른 이름이 비스듬히 비쳐 보였다."
+						}
+					],
+					"flag": {
+						"key": "fudged_meter",
+						"label": "고친 계량 기록",
+						"boss_text": "고친 계량 기록을 검사 앞에서 다시 펼쳐 보인다."
+					}
+				},
+				{
+					"path": "hard",
+					"text": "계량기에 적힌 숫자를 원래대로 되돌려 놓는다",
+					"mbti": "FJ",
+					"effects": {
+						"community": 20,
+						"reason": 10,
+						"echo": 5
+					},
+					"reward": [
+						"shield"
+					],
+					"result": [
+						{
+							"speaker": "meter_reader",
+							"text": "아... 그럼 나 몫이 줄어드는데. 진짜 이럴 거예요?"
+						},
+						{
+							"speaker": "narrator",
+							"text": "그는 연필을 놓고 한숨을 크게 쉬었다."
+						},
+						{
+							"speaker": "kai",
+							"text": "숫자가 맞으니까 기록도 맞겠네요."
+						}
+					],
+					"flag": {
+						"key": "honest_meter",
+						"label": "바른 계량 기록",
+						"boss_text": "바른 계량 기록을 검사에게 내민다."
+					}
+				},
+				{
+					"path": "stat",
+					"text": "계량기 담당자에게 남의 몫에 손대지 말고 자기 칸만 채우라고 한다",
+					"mbti": "TJ",
+					"effects": {
+						"community": -15,
+						"reason": 20
+					},
+					"reward": [
+						"intelligence_up"
+					],
+					"result": [
+						{
+							"speaker": "meter_reader",
+							"text": "하, 당신 같은 사람이 그런 말 하면 할 말이 없죠."
+						},
+						{
+							"speaker": "narrator",
+							"text": "그는 연필을 귀에 꽂고 자기 칸만 다시 채워 넣었다."
+						},
+						{
+							"speaker": "narrator",
+							"text": "계량기 옆 서류 뭉치가 정리되어 가지런히 쌓였다."
+						}
+					],
+					"flag": {
+						"key": "own_column",
+						"label": "제 칸만 채운 기록",
+						"boss_text": "제 칸만 채워진 계량 기록을 근거로 냉각수 몫을 요구한다."
+					}
+				}
+			],
+			"background_tags": [
+				"pipe_room",
+				"afternoon",
+				"dim_lamp",
+				"one_worker",
+				"sneaky"
+			],
+			"slot": "A",
+			"kind": "rep",
+			"rep_dir": "community-"
+		},
+		{
+			"no": 4,
+			"key": "ledger_of_hands",
+			"title": "손길 명부",
+			"person": {
+				"id": "relief_keeper",
+				"name": "구호 물품 담당자",
+				"role": "전산실 구호 담당"
+			},
+			"wants": "질식 직전인 사람들 몫으로 남겨 둔 산소 통을 지키느라, 냉각수 밸브를 열 사람을 찾고 있다.",
+			"rule_link": "냉각수를 먼저 빼면 산소 통을 돌릴 시간이 생기지만, 그 사이 데이터 스크린 조각은 봉인 상자에 그대로 남는다.",
+			"dialogue": [
+				{
+					"speaker": "relief_keeper",
+					"text": "당신이죠, 위험한 자리에 먼저 뛰어들어 사람 빼낸 사람."
+				},
+				{
+					"speaker": "narrator",
+					"text": "그는 산소 통 두 개를 양팔에 끼고 명부를 무릎에 올려놓고 있었다."
+				},
+				{
+					"speaker": "relief_keeper",
+					"text": "여기 명부에 이름 여덟 개예요. 이 사람들 숨부터 붙여야 해요."
+				},
+				{
+					"speaker": "kai",
+					"text": "저 통, 하나는 밸브가 헐거워 보이는데요."
+				},
+				{
+					"speaker": "relief_keeper",
+					"text": "그래도 이 여덟 명이 먼저예요. 어떻게 할래요?"
+				}
+			],
+			"choices": [
+				{
+					"path": "easy",
+					"text": "명부의 이름 여덟 명에게 산소 통을 먼저 돌리게 한다",
+					"mbti": "FJ",
+					"effects": {
+						"community": 20,
+						"echo": 10
+					},
+					"reward": [
+						"heal"
+					],
+					"result": [
+						{
+							"speaker": "narrator",
+							"text": "산소 통이 복도 쪽으로 빠르게 넘어갔다."
+						},
+						{
+							"speaker": "relief_keeper",
+							"text": "고마워요. 이 명부, 당신 이름도 맨 위에 올려둘게요."
+						},
+						{
+							"speaker": "narrator",
+							"text": "헐거운 통 하나는 여전히 밸브가 흔들렸다."
+						}
+					],
+					"flag": {
+						"key": "oxygen_roster",
+						"label": "산소 명부",
+						"boss_text": "산소 명부를 펼쳐 남은 사람 수를 세어 본다."
+					}
+				},
+				{
+					"path": "hard",
+					"text": "산소 통은 담당자에게 맡기고 봉인 상자부터 확인한다",
+					"mbti": "TP",
+					"effects": {
+						"community": -15,
+						"reason": 20
+					},
+					"reward": [
+						"intelligence_up"
+					],
+					"result": [
+						{
+							"speaker": "relief_keeper",
+							"text": "당신이 그런 말을... 하, 그래도 상자는 안전하겠네요."
+						},
+						{
+							"speaker": "narrator",
+							"text": "봉인 상자 뚜껑 틈으로 스크린 조각의 빛이 새어 나왔다."
+						},
+						{
+							"speaker": "kai",
+							"text": "상자는 멀쩡해요. 명부는... 저쪽에서 알아서 하겠죠."
+						}
+					],
+					"flag": {
+						"key": "sealed_box",
+						"label": "봉인 상자",
+						"boss_text": "봉인 상자를 열어 데이터 스크린 조각 상태를 확인한다."
+					}
+				},
+				{
+					"path": "stat",
+					"text": "구호 담당자에게 물품 배분을 맡기고 명부에 서명한다",
+					"mbti": "TJ",
+					"effects": {
+						"community": 25,
+						"reason": 10,
+						"echo": 5
+					},
+					"reward": [
+						"shield"
+					],
+					"result": [
+						{
+							"speaker": "relief_keeper",
+							"text": "당신 이름이 있으면 사람들이 줄을 서요. 벌써 소문났거든요."
+						},
+						{
+							"speaker": "narrator",
+							"text": "명부 아래쪽에 이름 석 자가 또렷하게 적혔다."
+						},
+						{
+							"speaker": "narrator",
+							"text": "복도 쪽에서 줄이 서는 소리가 들려왔다."
+						}
+					],
+					"flag": {
+						"key": "signed_roster",
+						"label": "서명된 명부",
+						"boss_text": "서명된 명부를 보이며 사람들을 물러나게 한다."
+					}
+				},
+				{
+					"path": "fun",
+					"text": "헐거운 산소 통 밸브를 배관 나사로 조여 고친다",
+					"mbti": "EP",
+					"effects": {
+						"community": 15,
+						"reason": 25
+					},
+					"reward": [
+						"defense_up"
+					],
+					"result": [
+						{
+							"speaker": "narrator",
+							"text": "배관에서 뽑은 나사가 산소 통 밸브에 딱 맞아 들어갔다."
+						},
+						{
+							"speaker": "relief_keeper",
+							"text": "이게 왜 여기 맞아요? 아무튼 살았네요."
+						},
+						{
+							"speaker": "kai",
+							"text": "배관 나사로 산소 통을 고치다니. 그래도 새지 않네요."
+						}
+					]
+				}
+			],
+			"background_tags": [
+				"pipe_room",
+				"afternoon",
+				"white_lamp",
+				"small_crowd",
+				"frantic"
+			],
+			"slot": "A",
+			"kind": "rep",
+			"rep_dir": "community+"
+		},
+		{
+			"no": 5,
+			"key": "seal_procedure",
+			"title": "봉인 절차서",
+			"person": {
+				"id": "seal_inspector",
+				"name": "봉인 검사관",
+				"role": "설비 규정 담당"
+			},
+			"wants": "밸브 봉인 번호를 대조하라며, 절차서에 없는 손길은 전부 기록에 남기겠다고 한다.",
+			"rule_link": "절차서대로 봉인을 확인하면 데이터 스크린 조각의 원본 대조표가 훼손되지 않는다.",
+			"dialogue": [
+				{
+					"speaker": "seal_inspector",
+					"text": "당신이죠, 절차서 없으면 손도 안 댄다는 사람."
+				},
+				{
+					"speaker": "narrator",
+					"text": "그는 봉인 테이프에 붙은 번호표를 손끝으로 하나하나 짚었다."
+				},
+				{
+					"speaker": "seal_inspector",
+					"text": "번호가 하나 어긋났어요. 누가 만졌는지 지금 적어야 해요."
+				},
+				{
+					"speaker": "kai",
+					"text": "번호표 끝이 살짝 들려 있어요. 누가 떼었다 붙인 것 같은데."
+				},
+				{
+					"speaker": "seal_inspector",
+					"text": "기록은 정확해야 해요. 서두르지 마요."
+				}
+			],
+			"choices": [
+				{
+					"path": "easy",
+					"text": "절차서대로 봉인 번호를 대조하고 어긋난 곳을 기록에 남긴다",
+					"mbti": "TJ",
+					"effects": {
+						"reason": 20,
+						"echo": 5
+					},
+					"reward": [
+						"defense_up"
+					],
+					"result": [
+						{
+							"speaker": "narrator",
+							"text": "절차서 여백에 번호와 시각이 또박또박 적혔다."
+						},
+						{
+							"speaker": "seal_inspector",
+							"text": "이 정도면 통과예요. 대신 이 기록은 제가 가져갑니다."
+						},
+						{
+							"speaker": "narrator",
+							"text": "그는 절차서를 가슴에 끼고 밸브 옆에 섰다."
+						}
+					],
+					"flag": {
+						"key": "seal_log",
+						"label": "봉인 대조 기록",
+						"boss_text": "봉인 대조 기록을 펼쳐 밸브 상태를 증명한다."
+					}
+				},
+				{
+					"path": "hard",
+					"text": "번호표를 떼어 원래 자리에 다시 붙이고 검사관에게 알린다",
+					"mbti": "FP",
+					"effects": {
+						"reason": -15,
+						"community": 15
+					},
+					"reward": [
+						"shield"
+					],
+					"result": [
+						{
+							"speaker": "seal_inspector",
+							"text": "스스로 신고했으니 이번엔 넘어가죠. 다음엔 없어요."
+						},
+						{
+							"speaker": "narrator",
+							"text": "그는 번호표를 다시 붙이고 수첩에 짧게 적었다."
+						},
+						{
+							"speaker": "kai",
+							"text": "번호가 맞으니 나중에 대조할 때 편하겠네요."
+						}
+					],
+					"flag": {
+						"key": "restuck_seal",
+						"label": "다시 붙인 번호표",
+						"boss_text": "다시 붙인 번호표를 가리키며 봉인이 온전하다고 말한다."
+					}
+				},
+				{
+					"path": "stat",
+					"text": "검사관에게 절차서 사본을 받아 밸브 옆에 붙여 둔다",
+					"mbti": "TP",
+					"effects": {
+						"reason": -25,
+						"echo": 5
+					},
+					"reward": [
+						"intelligence_up"
+					],
+					"result": [
+						{
+							"speaker": "seal_inspector",
+							"text": "당신 이름이 걸린 기록이라면야. 사본은 드리죠."
+						},
+						{
+							"speaker": "narrator",
+							"text": "절차서 사본이 밸브 옆 벽에 나란히 붙었다."
+						},
+						{
+							"speaker": "narrator",
+							"text": "지나가던 작업자가 그 앞에 잠깐 멈춰 서서 읽었다."
+						}
+					],
+					"flag": {
+						"key": "posted_copy",
+						"label": "벽에 붙은 절차서",
+						"boss_text": "벽에 붙은 절차서 사본을 가리켜 순서를 확인한다."
+					}
+				},
+				{
+					"path": "gold",
+					"text": "검사관에게 동전 120닢을 주고 어긋난 번호를 조용히 넘기게 한다",
+					"mbti": "EP",
+					"effects": {
+						"reason": -20,
+						"gold": -120
+					},
+					"reward": [
+						"cooldown_reset"
+					],
+					"result": [
+						{
+							"speaker": "seal_inspector",
+							"text": "...기록은 제가 맡을 테니 당신은 모르는 걸로 하죠."
+						},
+						{
+							"speaker": "narrator",
+							"text": "그는 수첩에서 한 줄을 지우고 동전을 주머니에 넣었다."
+						},
+						{
+							"speaker": "kai",
+							"text": "지운 자국이 수첩에 그대로 남아 있는데요."
+						}
+					]
+				}
+			],
+			"background_tags": [
+				"pipe_room",
+				"afternoon",
+				"cold_lamp",
+				"one_worker",
+				"formal"
+			],
+			"slot": "A",
+			"kind": "rep",
+			"rep_dir": "reason-"
+		},
+		{
+			"no": 6,
+			"key": "unlogged_hand",
+			"title": "기록 없는 손",
+			"person": {
+				"id": "night_tinkerer",
+				"name": "몰래 손보는 기술자",
+				"role": "야간 정비 담당"
+			},
+			"wants": "절차 없이 밸브를 손봐 온 자신의 방식을 인정받고 싶어 하며, 주인공에게 같이 손대자고 손짓한다.",
+			"rule_link": "절차 없이 밸브를 만지면 데이터 스크린 조각에 찍히는 봉인 시각이 실제와 어긋난다.",
+			"dialogue": [
+				{
+					"speaker": "night_tinkerer",
+					"text": "당신이죠? 규정엔 안 적혀 있는 방법으로 일 해치운다는 사람."
+				},
+				{
+					"speaker": "narrator",
+					"text": "그는 봉인 테이프 위에 재를 톡톡 털어 번호를 흐리게 만들어 두었다."
+				},
+				{
+					"speaker": "night_tinkerer",
+					"text": "이렇게 해두면 누가 만졌는지 아무도 몰라요. 해볼래요?"
+				},
+				{
+					"speaker": "kai",
+					"text": "테이프에 재를 뿌리면 나중에 붙일 때 안 붙어요."
+				},
+				{
+					"speaker": "night_tinkerer",
+					"text": "그러니까 이게 재밌는 거지. 자, 손 내밀어 봐요."
+				}
+			],
+			"choices": [
+				{
+					"path": "easy",
+					"text": "기술자를 따라 봉인 테이프를 재로 덮고 밸브 손잡이를 돌려 본다",
+					"mbti": "EP",
+					"effects": {
+						"reason": 20,
+						"fighting": 10
+					},
+					"reward": [
+						"move_range_up"
+					],
+					"result": [
+						{
+							"speaker": "narrator",
+							"text": "손잡이가 반 바퀴 돌자 배관 안쪽에서 물소리가 가까워졌다."
+						},
+						{
+							"speaker": "night_tinkerer",
+							"text": "봐요, 아무도 몰라요. 이게 자유라는 거예요."
+						},
+						{
+							"speaker": "narrator",
+							"text": "테이프 위 재가 손자국 모양으로 지워져 있었다."
+						}
+					],
+					"flag": {
+						"key": "ash_tape",
+						"label": "재 묻은 테이프",
+						"boss_text": "재 묻은 테이프를 보며 봉인 시각이 맞지 않는다고 항의한다."
+					}
+				},
+				{
+					"path": "hard",
+					"text": "테이프의 재를 닦아내고 번호를 다시 또렷하게 쓴다",
+					"mbti": "TJ",
+					"effects": {
+						"reason": -20,
+						"community": 10,
+						"echo": 5
+					},
+					"reward": [
+						"intelligence_up"
+					],
+					"result": [
+						{
+							"speaker": "night_tinkerer",
+							"text": "쳇, 재미없게. 그래도 번호는 살았네요."
+						},
+						{
+							"speaker": "narrator",
+							"text": "닦아낸 자리에 번호가 다시 검게 드러났다."
+						},
+						{
+							"speaker": "kai",
+							"text": "이제 누가 봐도 봉인이 온전해 보여요."
+						}
+					],
+					"flag": {
+						"key": "clean_number",
+						"label": "또렷한 번호",
+						"boss_text": "또렷한 봉인 번호를 가리키며 손대지 않았음을 밝힌다."
+					}
+				},
+				{
+					"path": "stat",
+					"text": "기술자에게 재 봉투를 거두고 손잡이 옆에 서 있으라고 한다",
+					"mbti": "FP",
+					"effects": {
+						"reason": 20,
+						"fighting": 15
+					},
+					"reward": [
+						"stun"
+					],
+					"result": [
+						{
+							"speaker": "night_tinkerer",
+							"text": "당신이 그렇게 말하면... 알겠어요, 손 뗄게요."
+						},
+						{
+							"speaker": "narrator",
+							"text": "그는 재 봉투를 주머니에 넣고 손잡이 옆에 나란히 섰다."
+						},
+						{
+							"speaker": "narrator",
+							"text": "밸브 손잡이가 아직 미지근하게 데워져 있었다."
+						}
+					],
+					"flag": {
+						"key": "tinkerer_beside",
+						"label": "손잡이 옆 기술자",
+						"boss_text": "손잡이 옆에 선 기술자에게 밸브 상태를 확인시킨다."
+					}
+				}
+			],
+			"background_tags": [
+				"pipe_room",
+				"afternoon",
+				"amber_lamp",
+				"one_worker",
+				"restless"
+			],
+			"slot": "A",
+			"kind": "rep",
+			"rep_dir": "reason+"
+		}
+	],
+	"errors": []
+}

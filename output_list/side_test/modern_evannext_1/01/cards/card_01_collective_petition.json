@@ -1,0 +1,261 @@
+{
+	"id": "card_01_collective_petition",
+	"kind": "rep",
+	"title": {
+		"korean": "뒷줄 모임의 연대 서명"
+	},
+	"intensity": "calm",
+	"after_story": 3,
+	"before_story": 5,
+	"condition": {
+		"leaning": "community+",
+		"among": [
+			"fighting-",
+			"fighting+",
+			"community-",
+			"community+",
+			"reason-",
+			"reason+"
+		],
+		"min": 20
+	},
+	"urgency": 8,
+	"leaning": "community+",
+	"background_tags": [
+		"central_hall",
+		"afternoon",
+		"glaring_light",
+		"packed_hall",
+		"solidarity"
+	],
+	"dialogue": [
+		{
+			"speaker": "narrator",
+			"content": {
+				"korean": "종이 팻말을 든 청년이 뒷줄 대기자 여럿을 이끌고 린과 당신의 앞을 찾아왔다."
+			}
+		},
+		{
+			"speaker": "group_rep",
+			"content": {
+				"korean": "\"당신이 아까 방송실 문을 두드리며 힘없는 탈락자들을 대변해 소리쳐 준 그분이죠?\""
+			}
+		},
+		{
+			"speaker": "group_rep",
+			"content": {
+				"korean": "\"우리 같은 비주류 지원자들의 서류를 하나로 묶어 '공동"
+			}
+		},
+		{
+			"speaker": "group_rep",
+			"content": {
+				"korean": "프로젝트팀'으로 올리면 다 같이 순번을 앞당길 수 있습니다!\""
+			}
+		},
+		{
+			"speaker": "lin",
+			"content": {
+				"korean": "\"사람들이 당신만 바라보고 있어요... 정말 저 많은 사람의 서류를 한꺼번에 올릴 수 있을까요?\""
+			}
+		}
+	],
+	"choices": [
+		{
+			"text": {
+				"korean": "소외된 지원자 스무 명의 서류를 모아 '공동 연구팀'으로 묶어 접수함에 단체로 밀어 넣는다"
+			},
+			"path": "easy",
+			"mbti": "FJ",
+			"flag": "collective_doc_paralysis",
+			"effects": {
+				"community": 20,
+				"reason": 10,
+				"echo": 10
+			},
+			"reward": [
+				"defense_up"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "당신이 모은 서류 묶음이 한꺼번에 도장을 받아내며 앞마당 대기자들의 순번이 무더기로 당겨졌다."
+					}
+				},
+				{
+					"speaker": "group_rep",
+					"content": {
+						"korean": "\"해냈어요! 역시 약자들을 위해 제일 먼저 깃발을 들던 분답습니다! 우리 모두 살았습니다!\""
+					}
+				},
+				{
+					"speaker": "lin",
+					"content": {
+						"korean": "\"모두의 순번이 올랐어요! 다만 접수함이 서류 폭탄을 맞아 터져 나가기 직전이에요.\""
+					}
+				}
+			]
+		},
+		{
+			"text": {
+				"korean": "모두를 책임질 수는 없다며 집단 서류 작성을 거절하고 린의 서류만 챙긴다"
+			},
+			"path": "hard",
+			"mbti": "TP",
+			"flag": "solo_stride_advantage",
+			"effects": {
+				"echo": -10,
+				"community": -20
+			},
+			"reward": [
+				"attack_up"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "당신이 정중히 선을 긋자, 대표는 입술을 깨물며 들고 온 팻말을 바닥으로 내렸다."
+					}
+				},
+				{
+					"speaker": "group_rep",
+					"content": {
+						"korean": "\"모두를 위해 앞장서던 사람이... 이제 와서 우리를 버리고 혼자만 가겠다는 건가요?\""
+					}
+				},
+				{
+					"speaker": "lin",
+					"content": {
+						"korean": "\"사람들의 눈빛이 원망으로 바뀌고 있어요... 하지만 저 많은 서류를 다 책임질 순 없어요.\""
+					}
+				}
+			]
+		},
+		{
+			"text": {
+				"korean": "대기홀 중앙 의자에 올라서서 전원의 차례를 공평하게 재조정하는 연설을 펼친다"
+			},
+			"path": "stat",
+			"mbti": "EN",
+			"require": {
+				"stat": "community",
+				"op": ">=",
+				"value": 40
+			},
+			"flag": "public_trust_vanguard",
+			"effects": {
+				"echo": 15,
+				"community": 30
+			},
+			"reward": [
+				"shield"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "당신이 단상에 올라 질서 있는 접수를 호소하자, 수십 명의 지원자가 환호하며 줄을 다시 맞췄다."
+					}
+				},
+				{
+					"speaker": "group_rep",
+					"content": {
+						"korean": "\"당신의 한마디라면 믿겠습니다! 꼼수 없이, 당신의 지휘 아래 차례를 지켜 들어가겠습니다!\""
+					}
+				},
+				{
+					"speaker": "lin",
+					"content": {
+						"korean": "\"밀치고 싸우던 사람들이 거짓말처럼 줄을 서요... 당신의 목소리엔 사람을 움직이는 힘이 있어요.\""
+					}
+				}
+			]
+		},
+		{
+			"text": {
+				"korean": "뒤처진 대기자 전원에게 빠른 접수를 돕는 특급 속성 잉크 열 통을 사비로 사서 돌린다"
+			},
+			"path": "gold",
+			"mbti": "IS",
+			"require": {
+				"stat": "gold",
+				"op": ">=",
+				"value": 90
+			},
+			"effects": {
+				"gold": -90,
+				"echo": 5,
+				"community": 10
+			},
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "당신이 사비로 특급 접수용 속성 잉크를 대량 구매해 나누어주자, 지원자들이 환호성을 질렀다."
+					}
+				},
+				{
+					"speaker": "group_rep",
+					"content": {
+						"korean": "\"이 비싼 속성 잉크를 우리 모두에게? 정말 대단한 헌신입니다! 고맙습니다!\""
+					}
+				},
+				{
+					"speaker": "lin",
+					"content": {
+						"korean": "\"돈을 꽤 많이 쓰셨지만, 저 사람들 얼굴에 다시 희망이 도는 걸 보니 뿌듯하네요.\""
+					}
+				}
+			]
+		}
+	],
+	"_side": {
+		"slot": "B",
+		"person": {
+			"name": "지원자 모임 대표",
+			"id": "group_rep",
+			"role": "탈락 위기 대기자 대표"
+		},
+		"wants": "뒷번호 대기자들의 서류를 집단 경력으로 엮어 전원 순번 상승을 얻어내는 것",
+		"rule_link": "수십 명의 이력서를 하나로 묶어 단체 실적으로 과장해 집단으로 순번 도약을 꾀한다.",
+		"rep": "community+",
+		"events": {},
+		"flags": {
+			"collective_doc_paralysis": {
+				"kind": "bad",
+				"boss_penalty": -1,
+				"label": {
+					"korean": "연대 서류 폭주"
+				},
+				"boss_line": {
+					"korean": "대기자 전원의 과장 서류를 밀어붙인 탓에, 검증관의 서류 심사 대기열이 엉켜 이동이 둔화된다."
+				}
+			},
+			"solo_stride_advantage": {
+				"kind": "good",
+				"boss_penalty": 1,
+				"label": {
+					"korean": "홀가분한 독자 행동"
+				},
+				"boss_choice": {
+					"korean": "단독 행동을 택해 아낀 기운으로, 면접장의 첫 번째 돌발 질문을 기민하게 피한다."
+				}
+			},
+			"public_trust_vanguard": {
+				"kind": "good",
+				"boss_penalty": 2,
+				"label": {
+					"korean": "군중의 절대 신뢰"
+				},
+				"boss_choice": {
+					"korean": "대기실 군중의 열렬한 신뢰와 엄호를 받아, 면접관이 던지는 기습 제재를 무력화한다."
+				}
+			}
+		}
+	}
+}

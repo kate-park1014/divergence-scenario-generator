@@ -1,0 +1,198 @@
+{
+	"id": "card_02_blank_resume_swap",
+	"kind": "rep",
+	"title": {
+		"korean": "모두를 위한 편법"
+	},
+	"intensity": "calm",
+	"after_story": 1,
+	"before_story": 3,
+	"condition": {
+		"leaning": "community+",
+		"among": [
+			"fighting-",
+			"fighting+",
+			"community-",
+			"community+",
+			"reason-",
+			"reason+"
+		],
+		"min": 20
+	},
+	"urgency": 8,
+	"leaning": "community+",
+	"background_tags": [
+		"information_room",
+		"afternoon",
+		"dim_lighting",
+		"desperate_crowd",
+		"urgent"
+	],
+	"dialogue": [
+		{
+			"speaker": "narrator",
+			"content": {
+				"korean": "정보 검색실의 단말기 담당자가 서류 뭉치를 든 채 당신을 반갑게 맞이한다."
+			}
+		},
+		{
+			"speaker": "clerk",
+			"content": {
+				"korean": "\"어려운 이웃을 위해 늘 먼저 나선다는 소문을 듣고 기다렸습니다!\""
+			}
+		},
+		{
+			"speaker": "clerk",
+			"content": {
+				"korean": "\"불이익을 받는 대기자들을 위해 통째로 이력서 데이터를 덮어써 주십시오.\""
+			}
+		},
+		{
+			"speaker": "nia",
+			"content": {
+				"korean": "\"전체 데이터를 한 번에 바꾸면 린의 이력서까지 꼬여버릴 수도 있어요.\""
+			}
+		}
+	],
+	"choices": [
+		{
+			"text": {
+				"korean": "미계약 대기자 전체를 위해 단말기의 이력서 덮어쓰기 승인을 누른다."
+			},
+			"path": "easy",
+			"mbti": "NF",
+			"flag": "mass_override_done",
+			"effects": {
+				"echo": 10,
+				"community": 25
+			},
+			"reward": [
+				"attack_up"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "clerk",
+					"content": {
+						"korean": "\"약자들을 위해 결단을 내려주셔서 감사합니다! 바로 승인 처리하겠습니다.\""
+					}
+				},
+				{
+					"speaker": "nia",
+					"content": {
+						"korean": "\"모두를 도왔지만 단말기 시스템에 부하가 걸린 것 같아 조금 걱정돼요.\""
+					}
+				}
+			]
+		},
+		{
+			"text": {
+				"korean": "편법 승인을 거절하고 린의 이력서부터 차례로 수동 정돈하라고 권한다."
+			},
+			"path": "hard",
+			"mbti": "TP",
+			"flag": "manual_restoration",
+			"effects": {
+				"community": -15,
+				"reason": 20
+			},
+			"reward": [
+				"defense_up"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "clerk",
+					"content": {
+						"korean": "\"아쉽지만 당신 말씀대로 정석 절차를 밟아 하나씩 복원하겠습니다.\""
+					}
+				},
+				{
+					"speaker": "nia",
+					"content": {
+						"korean": "\"조금 돌아가더라도 안전하게 원칙을 지키는 편이 린에게도 도움이 돼요.\""
+					}
+				}
+			]
+		},
+		{
+			"text": {
+				"korean": "모두를 돕는 평판을 발휘해 주변 대기자들이 자발적으로 정리 순서를 지키게 만든다."
+			},
+			"path": "stat",
+			"mbti": "ES",
+			"require": {
+				"stat": "community",
+				"op": ">=",
+				"value": 40
+			},
+			"flag": "crowd_reputation_help",
+			"effects": {
+				"fighting": 10,
+				"community": 30
+			},
+			"reward": [
+				"shield"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "clerk",
+					"content": {
+						"korean": "\"모두가 돕겠다고 나서는군요! 이 정도 열기면 편법 없이도 정리되겠습니다.\""
+					}
+				},
+				{
+					"speaker": "nia",
+					"content": {
+						"korean": "\"당신의 평판을 들은 사람들이 스스로 차례를 지키며 단말기를 정돈해요!\""
+					}
+				}
+			]
+		}
+	],
+	"_side": {
+		"slot": "A",
+		"person": {
+			"id": "clerk",
+			"name": "직원 김씨",
+			"role": "정보 검색실 출력 관리자"
+		},
+		"wants": "미계약 지원자들의 이력서를 통째로 유력 지원자 자리에 덮어쓰도록 승인받으려 함.",
+		"rule_link": "이력서 일괄 복구 기능을 악용해 미계약자들의 데이터를 합법 지원자 칸에 덮어씌우려 한다.",
+		"rep": "community+",
+		"events": {},
+		"flags": {
+			"mass_override_done": {
+				"kind": "bad",
+				"boss_penalty": -1,
+				"label": {
+					"korean": "일괄 덮어쓰기"
+				},
+				"boss_line": {
+					"korean": "덮어씌운 단말기 데이터 오류가 누적되어 보스 방의 출입구가 일시 차단된다."
+				}
+			},
+			"manual_restoration": {
+				"kind": "good",
+				"boss_penalty": 1,
+				"label": {
+					"korean": "원칙 유지"
+				},
+				"boss_choice": {
+					"korean": "정석대로 이력서 시스템을 정돈한 덕에 보스의 데이터 교란 공격을 방어한다."
+				}
+			},
+			"crowd_reputation_help": {
+				"kind": "good",
+				"boss_penalty": 2,
+				"label": {
+					"korean": "대기자 연대"
+				},
+				"boss_choice": {
+					"korean": "당신의 헌신적인 명성을 들은 대기자들이 보스 방에서 방패막이가 되어준다."
+				}
+			}
+		}
+	}
+}

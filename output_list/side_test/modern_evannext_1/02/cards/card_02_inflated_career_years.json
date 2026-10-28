@@ -1,0 +1,216 @@
+{
+	"id": "card_02_inflated_career_years",
+	"kind": "normal",
+	"title": {
+		"korean": "부풀린 근무 연차"
+	},
+	"intensity": "calm",
+	"after_story": 1,
+	"before_story": 3,
+	"background_tags": [
+		"search_corner",
+		"dim_screen",
+		"daytime",
+		"whispering_people",
+		"restless_air"
+	],
+	"dialogue": [
+		{
+			"speaker": "narrator",
+			"content": {
+				"korean": "옆자리 지원자가 식은땀을 흘리며 단말기 자판을 떨리는 손으로 누르고 있다."
+			}
+		},
+		{
+			"speaker": "seeker",
+			"content": {
+				"korean": "경력 1년을 5년으로 고치고 싶은데, 제 손이 떨려서 입력창 오타가 나요."
+			}
+		},
+		{
+			"speaker": "seeker",
+			"content": {
+				"korean": "거기 당신, 키보드 좀 대신 쳐줘요. 이 단말기는 검증 단계가 허술하다고요!"
+			}
+		},
+		{
+			"speaker": "nia",
+			"content": {
+				"korean": "정리 안내문을 보고는 경력란까지 마음대로 조작하려는 것 같아요."
+			}
+		}
+	],
+	"choices": [
+		{
+			"text": {
+				"korean": "지원자의 경력 연차를 1년에서 5년으로 부풀려 단말기에 입력한다."
+			},
+			"path": "easy",
+			"mbti": "FP",
+			"effects": {
+				"echo": -5,
+				"fighting": 20,
+				"community": -15
+			},
+			"reward": [
+				"attack_up"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "단말기 화면의 경력 연차 숫자를 1년에서 5년으로 수정해 주었다."
+					}
+				},
+				{
+					"speaker": "seeker",
+					"content": {
+						"korean": "휴, 살았다! 당장 제출 버튼을 눌러야지. 보답으로 이 강화 칩을 받으세요."
+					}
+				},
+				{
+					"speaker": "nia",
+					"content": {
+						"korean": "이렇게 쉽게 수정 처리가 끝나다니, 전산망이 정말 엉성하네요."
+					}
+				}
+			]
+		},
+		{
+			"text": {
+				"korean": "단말기 입력 버튼을 가로막아 허위 경력 기재를 완강히 거부한다."
+			},
+			"path": "hard",
+			"mbti": "ST",
+			"effects": {
+				"community": 20,
+				"echo": 10,
+				"reason": 15
+			},
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "단말기 전원 버튼을 손바닥으로 가려 수정 입력을 차단했다."
+					}
+				},
+				{
+					"speaker": "seeker",
+					"content": {
+						"korean": "이 사람이 남의 취업을 방해하네! 여보세요, 여기 와서 이것 좀 봐요!"
+					}
+				}
+			],
+			"event": "meet_stranger",
+			"event_intro": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "뒤편에서 대기열을 감시하던 브로커 차림의 낯선 사내가 다가왔다."
+					}
+				},
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "“우리 의뢰인의 접수를 방해해? 좋은 말로 할 때 저리 비켜라.”"
+					}
+				}
+			],
+			"event_options": {
+				"fight": {
+					"text": {
+						"korean": "{actor}이(가) 브로커의 멱살을 잡고 거칠게 밀어붙인다."
+					},
+					"win": [
+						{
+							"speaker": "narrator",
+							"content": {
+								"korean": "{actor}이(가) 사내의 팔목목을 비틀어 단말기 앞 바닥에 메치며 제압했다."
+							}
+						}
+					],
+					"lose": [
+						{
+							"speaker": "narrator",
+							"content": {
+								"korean": "사내의 거친 밀침에 밀려 단말기 모서리에 어깨를 부딪쳤다."
+							}
+						}
+					]
+				},
+				"avoid": {
+					"text": {
+						"korean": "몸을 숙여 사내의 손길을 피하며 물러선다."
+					},
+					"result": [
+						{
+							"speaker": "narrator",
+							"content": {
+								"korean": "사내의 멱살잡이를 피해 몸을 숙여 비좁은 복도 틈으로 물러났다."
+							}
+						}
+					],
+					"reward": [
+						"defense_down"
+					]
+				}
+			}
+		},
+		{
+			"text": {
+				"korean": "70골드를 지불해 정식 서류 검토 창구 접수표를 뽑아 넘긴다."
+			},
+			"path": "gold",
+			"mbti": "TJ",
+			"require": {
+				"stat": "gold",
+				"op": ">=",
+				"value": 70
+			},
+			"effects": {
+				"gold": -70,
+				"reason": 20
+			},
+			"reward": [
+				"shield"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "70골드를 내고 1인용 정식 상담 창구 접수표를 뽑아 손에 쥐여주었다."
+					}
+				},
+				{
+					"speaker": "seeker",
+					"content": {
+						"korean": "아니, 정식 창구로 가면 다 들통나는데… 표 값은 아까우니 일단 가보죠."
+					}
+				},
+				{
+					"speaker": "nia",
+					"content": {
+						"korean": "돈을 쓰긴 했지만, 거짓 데이터를 검색기에 직접 넣는 건 막았어요."
+					}
+				}
+			]
+		}
+	],
+	"_side": {
+		"slot": "A",
+		"person": {
+			"role": "단말기에 경력 연차를 속여 적으려는 지원자",
+			"id": "seeker",
+			"name": "조급한 면접자"
+		},
+		"wants": "이력서의 근무 기간 숫자를 5년으로 늘려 입력하기",
+		"rule_link": "이력서 검증 허점을 노려 가짜 근무 연차를 단말기에 집어넣으려 함",
+		"events": {
+			"hard": "허위 경력 대리 작성을 방해받은 브로커가 시비를 걸어옴"
+		},
+		"flags": {}
+	}
+}

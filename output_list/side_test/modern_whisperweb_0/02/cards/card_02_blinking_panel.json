@@ -1,0 +1,128 @@
+{
+	"id": "card_02_blinking_panel",
+	"title": {
+		"korean": "눈가림 테이프"
+	},
+	"intensity": "calm",
+	"after_story": 1,
+	"before_story": 3,
+	"background_tags": [
+		"redlight",
+		"dusty",
+		"nervous",
+		"oldroom",
+		"narrow"
+	],
+	"dialogue": [
+		{
+			"speaker": "narrator",
+			"content": {
+				"korean": "벽면의 낡은 패널에서 붉은 경고등이 신경 쓰이게 깜빡인다."
+			}
+		},
+		{
+			"speaker": "nervous_technician",
+			"content": {
+				"korean": "저 불빛 때문에 머리가 아파요. 제가 가진 부품을 걸 테니 내기 하나 할래요? 이기면 테이프 좀 붙여줘요."
+			}
+		},
+		{
+			"speaker": "lin",
+			"content": {
+				"korean": "눈가림일 뿐이겠지만, 당장 거슬리긴 하네요."
+			}
+		}
+	],
+	"choices": [
+		{
+			"text": {
+				"korean": "내기에 응하고 테이프를 붙여 경고등을 가려준다."
+			},
+			"path": "easy",
+			"mbti": "EP",
+			"effects": {
+				"reason": -15,
+				"community": 10
+			},
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "당신은 부품을 얻기 위해 그의 내기에 참여하기로 했다."
+					}
+				}
+			],
+			"event": "minigame_slot",
+			"event_intro": [
+				{
+					"speaker": "nervous_technician",
+					"content": {
+						"korean": "자, 앞면이 나오면 이 부품을 주죠. 제가 이기면 테이프를 붙여줘요."
+					}
+				}
+			]
+		},
+		{
+			"text": {
+				"korean": "경고등을 가리지 말고 배선을 확인하라고 말한다."
+			},
+			"path": "hard",
+			"mbti": "TJ",
+			"effects": {
+				"reason": 15,
+				"fighting": -10
+			},
+			"reward": [
+				"defense_up"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "당신은 근본적인 원인을 찾으라고 충고했다. 그는 투덜거리며 배선함을 열었다."
+					}
+				}
+			]
+		},
+		{
+			"text": {
+				"korean": "돈을 주고 그의 부품을 정당하게 산다."
+			},
+			"path": "gold",
+			"mbti": "SF",
+			"require": {
+				"stat": "gold",
+				"op": ">=",
+				"value": 50
+			},
+			"effects": {
+				"community": 15,
+				"gold": -50
+			},
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "당신은 동전을 쥐여주고 부품을 샀다. 그는 돈을 받아들고 조용히 사라졌다."
+					}
+				}
+			]
+		}
+	],
+	"kind": "normal",
+	"_side": {
+		"slot": "A",
+		"person": {
+			"id": "nervous_technician",
+			"name": "불안해하는 기술자",
+			"role": "불안해하며 내기를 제안하는 존댓말"
+		},
+		"wants": "",
+		"rule_link": "",
+		"events": {},
+		"flags": {}
+	}
+}

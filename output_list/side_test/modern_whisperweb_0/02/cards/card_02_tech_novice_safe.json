@@ -1,0 +1,128 @@
+{
+	"id": "card_02_tech_novice_safe",
+	"title": {
+		"korean": "안전한 단말기"
+	},
+	"intensity": "high",
+	"after_story": 5,
+	"before_story": 7,
+	"callback": {
+		"seed": "terminal_power_hard",
+		"min_rooms_after": 2
+	},
+	"background_tags": [
+		"dim",
+		"fan",
+		"quiet",
+		"calm",
+		"rack"
+	],
+	"dialogue": [
+		{
+			"speaker": "narrator",
+			"content": {
+				"korean": "과열 경고음이 울리는 가운데, 신입 관리자가 안정된 단말기 옆에서 안도하고 있다."
+			}
+		},
+		{
+			"speaker": "tech_novice",
+			"content": {
+				"korean": "전원을 안 뽑고 고친 덕에 제 건 무사해요! 이 남는 부품으로 다른 곳을 식히죠."
+			}
+		},
+		{
+			"speaker": "lin",
+			"content": {
+				"korean": "원칙대로 한 덕분에 여유가 생겼네요. 어떻게 할까요?"
+			}
+		}
+	],
+	"choices": [
+		{
+			"text": {
+				"korean": "남는 부품을 받아 과열된 다른 단말기를 식힌다."
+			},
+			"path": "easy",
+			"mbti": "EF",
+			"flag": "coolant_part",
+			"effects": {
+				"community": 20,
+				"gold": 100,
+				"reason": 10
+			},
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "당신은 부품을 사용해 다른 단말기를 식혔다. 관리자는 남은 돈을 당신에게 건넸다."
+					}
+				}
+			]
+		},
+		{
+			"text": {
+				"korean": "부품을 아끼고 수동으로 환풍구를 열어 열기를 뺀다."
+			},
+			"path": "hard",
+			"mbti": "IT",
+			"flag": "vent_open",
+			"effects": {
+				"reason": 10,
+				"community": 10
+			},
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "당신은 힘을 주어 환풍구를 열었다. 열기가 빠져나가며 방 안이 조금 시원해졌다."
+					}
+				}
+			],
+			"event": "campsite",
+			"event_intro": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "환풍구에서 시원한 바람이 내려오자, 당신과 일행은 잠시 바닥에 주저앉아 쉰다."
+					}
+				}
+			]
+		}
+	],
+	"kind": "callback",
+	"_side": {
+		"slot": "C",
+		"person": {
+			"id": "tech_novice",
+			"name": "신입 관리자",
+			"role": "어쩔 줄 몰라하며 의지하는 존댓말"
+		},
+		"wants": "",
+		"rule_link": "",
+		"events": {},
+		"flags": {
+			"coolant_part": {
+				"boss_penalty": 1,
+				"label": {
+					"korean": "냉각 부품"
+				},
+				"boss_choice": {
+					"korean": "냉각 부품을 던져 과열된 시스템을 잠시 멈춘다."
+				},
+				"kind": "good"
+			},
+			"vent_open": {
+				"boss_penalty": 2,
+				"label": {
+					"korean": "열린 환풍구"
+				},
+				"boss_choice": {
+					"korean": "미리 열어둔 환풍구로 뜨거운 열기를 빼낸다."
+				},
+				"kind": "good"
+			}
+		}
+	}
+}

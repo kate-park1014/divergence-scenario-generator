@@ -1,0 +1,219 @@
+{
+	"id": "card_04_hand_under_pipe",
+	"kind": "rep",
+	"title": {
+		"korean": "관 밑에 깔린 사람"
+	},
+	"intensity": "calm",
+	"after_story": 1,
+	"before_story": 3,
+	"condition": {
+		"leaning": "fighting+",
+		"among": [
+			"fighting-",
+			"fighting+",
+			"community-",
+			"community+",
+			"reason-",
+			"reason+"
+		],
+		"min": 20
+	},
+	"urgency": 8,
+	"leaning": "fighting+",
+	"background_tags": [
+		"pipe_tunnel",
+		"night_shift",
+		"steam",
+		"clanging",
+		"cramped"
+	],
+	"dialogue": [
+		{
+			"speaker": "sella",
+			"content": {
+				"korean": "당신이 다친 사람 두고 못 가는 사람이라면서요? 소문이 벌써 여기까지 왔어요."
+			}
+		},
+		{
+			"speaker": "dax",
+			"content": {
+				"korean": "소문이 사람을 부르네. 이번엔 우리가 불린 쪽이야."
+			}
+		},
+		{
+			"speaker": "sella",
+			"content": {
+				"korean": "동료가 관 밑에 깔렸어요. 팔이 안 빠져요. 도면은 그 사람 빼내면 드릴게요."
+			}
+		},
+		{
+			"speaker": "narrator",
+			"content": {
+				"korean": "셀라의 안전모엔 누가 손으로 쓴 점검 순번이 다섯 개나 지워져 있었다."
+			}
+		}
+	],
+	"choices": [
+		{
+			"text": {
+				"korean": "관을 어깨로 밀어 올려 동료를 빼낸다."
+			},
+			"path": "easy",
+			"mbti": "FP",
+			"flag": "sella_grateful",
+			"effects": {
+				"fighting": -15,
+				"community": 15,
+				"echo": 10
+			},
+			"reward": [
+				"heal"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "관이 한 뼘 들리자 깔린 작업자가 기어 나와 바닥에 엎드렸다."
+					}
+				},
+				{
+					"speaker": "sella",
+					"content": {
+						"korean": "됐어요! 도면 여기요. 굽은 관 안쪽, 세 번째 갈림길이에요."
+					}
+				},
+				{
+					"speaker": "dax",
+					"content": {
+						"korean": "어깨 괜찮아? 나는 저 관 밀었다가 허리 나갈 뻔했는데."
+					}
+				}
+			]
+		},
+		{
+			"text": {
+				"korean": "동료를 두고 도면부터 넘기라며 셀라를 재촉한다."
+			},
+			"path": "hard",
+			"mbti": "TJ",
+			"flag": "sella_cold",
+			"effects": {
+				"fighting": 15,
+				"community": -15,
+				"echo": -10
+			},
+			"reward": [
+				"move_range_up"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "sella",
+					"content": {
+						"korean": "여기요. 대신 우리 동료는 제가 알아서 할게요."
+					}
+				},
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "셀라가 도면을 쥐여 주고 관 밑으로 돌아가 어깨를 밀어 넣었다."
+					}
+				},
+				{
+					"speaker": "dax",
+					"content": {
+						"korean": "도면은 받았는데… 저 사람 등이 좀 쓸쓸해 보이네."
+					}
+				}
+			]
+		},
+		{
+			"text": {
+				"korean": "셀라에게 작업자들을 불러 관을 함께 들라 한다."
+			},
+			"path": "stat",
+			"mbti": "FJ",
+			"require": {
+				"stat": "fighting",
+				"op": ">=",
+				"value": 40
+			},
+			"flag": "sella_team",
+			"effects": {
+				"community": 20,
+				"echo": 10,
+				"fighting": 10
+			},
+			"reward": [
+				"shield"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "셀라가 손을 휘젓자 점검조 넷이 달려와 관 옆에 어깨를 나란히 댔다."
+					}
+				},
+				{
+					"speaker": "sella",
+					"content": {
+						"korean": "당신 이름 부르니까 다들 손 놓고 왔어요. 무섭네요, 진짜."
+					}
+				},
+				{
+					"speaker": "dax",
+					"content": {
+						"korean": "나도 손 놓고 왔어. 참고로 손 아파."
+					}
+				}
+			]
+		}
+	],
+	"_side": {
+		"slot": "A",
+		"person": {
+			"id": "sella",
+			"name": "셀라",
+			"role": "배관 점검 작업자"
+		},
+		"wants": "유출을 막으려다 깔린 동료를 빼내 달라며, 그 대신 장치 위치가 적힌 점검 도면을 넘기겠다고 한다.",
+		"rule_link": "점검 도면에 찍힌 좌표가 데이터 스크린 조각이 비추는 출처 장치 자리와 겹친다.",
+		"rep": "fighting+",
+		"events": {},
+		"flags": {
+			"sella_grateful": {
+				"kind": "bad",
+				"boss_penalty": -1,
+				"label": {
+					"korean": "빼낸 동료"
+				},
+				"boss_line": {
+					"korean": "셀라가 점검 도면을 펼쳐 출처 장치까지의 배관 순번을 짚어 준다."
+				}
+			},
+			"sella_cold": {
+				"kind": "good",
+				"boss_penalty": 1,
+				"label": {
+					"korean": "식은 눈빛"
+				},
+				"boss_choice": {
+					"korean": "셀라가 도면을 던지듯 넘기고 관 밑 동료에게서 눈을 돌린다."
+				}
+			},
+			"sella_team": {
+				"kind": "good",
+				"boss_penalty": 2,
+				"label": {
+					"korean": "모인 작업자들"
+				},
+				"boss_choice": {
+					"korean": "셀라가 데려온 작업자들이 관 앞에 줄을 서서 함께 무게를 받쳐 준다."
+				}
+			}
+		}
+	}
+}

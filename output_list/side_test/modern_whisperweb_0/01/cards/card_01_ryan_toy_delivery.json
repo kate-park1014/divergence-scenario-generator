@@ -1,0 +1,139 @@
+{
+	"id": "card_01_ryan_toy_delivery",
+	"kind": "callback",
+	"title": {
+		"korean": "장난감이 된 부품"
+	},
+	"intensity": "high",
+	"after_story": 5,
+	"before_story": 7,
+	"background_tags": [
+		"old_server",
+		"toy_pile",
+		"messy_floor",
+		"flickering_light",
+		"confused_mechanic"
+	],
+	"dialogue": [
+		{
+			"speaker": "narrator",
+			"content": {
+				"korean": "낡은 서버 랙 앞, 라이언의 발밑에 장난감들이 산더미처럼 쌓여 있다."
+			}
+		},
+		{
+			"speaker": "ryan",
+			"content": {
+				"korean": "부품을 시켰는데 웬 춤추는 인형들만 잔뜩 왔잖아! 스크린 조각이 깨지더니 배달 좌표가 다 섞였어!"
+			}
+		},
+		{
+			"speaker": "echo",
+			"content": {
+				"korean": "어제저녁 메뉴판이 쓰레기장 좌표로 뜬 것처럼 정보가 완전히 엉���버렸네."
+			}
+		},
+		{
+			"speaker": "ryan",
+			"content": {
+				"korean": "당신은 항상 절차를 철저히 지킨다면서? 해고당하기 전에 이 장난감들 반품하는 것 좀 도와줘!"
+			}
+		}
+	],
+	"choices": [
+		{
+			"text": {
+				"korean": "엉킨 반품 시스템을 무시하고 장난감을 근처 고물상에 헐값에 팔아버린다."
+			},
+			"path": "easy",
+			"mbti": "TP",
+			"flag": "ryan_toy_mess",
+			"effects": {
+				"reason": -15,
+				"gold": 50
+			},
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "장난감을 고물상에 넘겨 푼돈을 챙긴다."
+					}
+				},
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "라이언은 부품을 구하지 못해 넋을 잃고 주저앉는다."
+					}
+				}
+			]
+		},
+		{
+			"text": {
+				"korean": "반품 데이터를 하나하나 추적해 원래 창고로 돌려보낼 주소를 찾는다."
+			},
+			"path": "hard",
+			"mbti": "FJ",
+			"flag": "ryan_toy_bomb",
+			"effects": {
+				"echo": 10,
+				"reason": 15
+			},
+			"reward": [
+				"intelligence_up"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "복잡한 주소를 풀어 반품 처리에 성공한다."
+					}
+				},
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "라이언이 안도하며 감사의 표시로 개조한 장난감 하나를 건넨다."
+					}
+				}
+			]
+		}
+	],
+	"_side": {
+		"slot": "C",
+		"person": {
+			"role": "낡은 서버 랙 정비공",
+			"id": "ryan",
+			"name": "라이언"
+		},
+		"wants": "엉뚱하게 배달된 장난감들의 반품 데이터를 수습해달라고 함",
+		"rule_link": "데이터를 강제로 덮어씌운 부작용으로 부품 주문 정보가 장난감 ���달 정보와 섞였다.",
+		"events": {},
+		"flags": {
+			"ryan_toy_mess": {
+				"kind": "bad",
+				"boss_penalty": -1,
+				"label": {
+					"korean": "라이언의 원망"
+				},
+				"boss_line": {
+					"korean": "라이언이 남긴 고장 난 장난감이 발밑에 굴러다녀 걸음을 방해한다."
+				}
+			},
+			"ryan_toy_bomb": {
+				"kind": "good",
+				"boss_penalty": 1,
+				"label": {
+					"korean": "개조된 장난감"
+				},
+				"boss_choice": {
+					"korean": "라이언이 개조해 준 장난감 폭탄을 던져 적의 시야를 가린다."
+				}
+			}
+		}
+	},
+	"callback": {
+		"seed": "ryan_order_data_easy",
+		"min_rooms_after": 2
+	}
+}

@@ -1,0 +1,931 @@
+{
+	"cards": [
+		{
+			"no": 1,
+			"background_tags": [
+				"waiting_hall",
+				"midday",
+				"fluorescent_light",
+				"panicked_crowd",
+				"fading_anxiety"
+			],
+			"person": {
+				"name": "민혁",
+				"role": "신체 윤곽이 흐려진 경비 지원자",
+				"id": "minhyeok"
+			},
+			"key": "fading_bouncer",
+			"rule_link": "이력서의 직무 경력을 거짓으로 부풀려 존재의 윤곽이 지워져 가는 규정의 대가",
+			"choices": [
+				{
+					"flag": {
+						"boss_text": "대기실 출입문 앞의 물리적 충돌 소동 때문에 면접관들의 감시 시선이 입구로 일제히 쏠린다.",
+						"key": "intimidate_applicant",
+						"label": "위압의 여파"
+					},
+					"reward": [],
+					"result": [
+						{
+							"speaker": "narrator",
+							"text": "당신은 민혁의 멱살을 잡고 흐려진 서류 뭉치를 바닥에 내동댕이쳤다."
+						},
+						{
+							"speaker": "minhyeok",
+							"text": "으윽, 힘으로 밀어붙인다고 내 지워지는 몸이 돌아올 것 같아?"
+						},
+						{
+							"text": "저 사람의 손끝이 거의 투명해졌어요. 이러다 정말 사라지겠어요.",
+							"speaker": "lin"
+						}
+					],
+					"path": "easy",
+					"effects": {
+						"reason": 10,
+						"fighting": -25,
+						"gold": 80,
+						"community": 0,
+						"echo": -5
+					},
+					"text": "민혁의 멱살을 쥐어틀며 헛소리 말고 서류를 넘기라고 윽박지른다",
+					"mbti": "TJ"
+				},
+				{
+					"text": "주먹을 거두고 민혁의 과장된 경력을 본래 이력으로 고쳐 준다",
+					"mbti": "FP",
+					"result": [
+						{
+							"text": "당신은 주먹을 거두고 민혁의 과장된 직무 기술서를 본래 이력으로 다시 고쳐 썼다.",
+							"speaker": "narrator"
+						},
+						{
+							"text": "손의 윤곽이 돌아왔어. 당신, 주먹만 휘두르는 망나니는 아니었군. 이 곤봉을 가져가.",
+							"speaker": "minhyeok"
+						},
+						{
+							"text": "과장을 거두니 사람의 모습이 또렷해졌어요. 우리 서류도 어서 바로잡아야 해요.",
+							"speaker": "lin"
+						}
+					],
+					"path": "hard",
+					"effects": {
+						"community": 10,
+						"echo": 10,
+						"fighting": 20
+					},
+					"flag": {
+						"boss_text": "민혁이 넘겨준 묵직한 경비용 곤봉을 단단히 쥐고 닫히는 철문을 틈새에 끼워 버틴다.",
+						"key": "guard_club",
+						"label": "경비용 곤봉"
+					},
+					"reward": [
+						"shield"
+					]
+				},
+				{
+					"text": "접수대 벽면을 주먹으로 후려쳐 소란을 단숨에 찍어 누른다",
+					"effects": {
+						"echo": 10,
+						"fighting": -35,
+						"reason": -10
+					},
+					"mbti": "ST",
+					"result": [
+						{
+							"text": "당신이 살벌한 눈빛으로 벽을 내리치자 홀 안의 지원자 전원이 사시나무 떨듯 굳었다.",
+							"speaker": "narrator"
+						},
+						{
+							"speaker": "minhyeok",
+							"text": "히익, 알았어! 덤비지 않을 테니 제발 그 주먹만은 거둬 줘!"
+						},
+						{
+							"text": "이 사람들의 공포를 이용해 일단 이름을 붙잡을 시간을 벌었어요.",
+							"speaker": "lin"
+						}
+					],
+					"path": "stat",
+					"reward": [
+						"stun"
+					],
+					"flag": {
+						"label": "싸움꾼의 위명",
+						"key": "brawler_awe",
+						"boss_text": "싸움꾼의 악명으로 기선 제압된 지원자들을 일렬로 세워 출입구 방패벽을 세운다."
+					}
+				},
+				{
+					"effects": {
+						"gold": -80,
+						"community": 10,
+						"echo": 5
+					},
+					"path": "gold",
+					"text": "민혁에게 80골드를 쥐여주며 원본 인지 구입대로 보내 버린다",
+					"reward": [],
+					"mbti": "NF",
+					"result": [
+						{
+							"speaker": "narrator",
+							"text": "당신은 민혁의 쥐어진 손에 지폐를 쑤셔 넣고 출력기 앞자리로 그를 밀어 넣었다."
+						},
+						{
+							"speaker": "minhyeok",
+							"text": "돈을 주다니? 좋아, 이 돈으로 원본 복원 인지를 사 오겠어."
+						},
+						{
+							"speaker": "lin",
+							"text": "돈으로 급한 불은 껐지만, 아직 번호표 이름이 엉켜 있어요."
+						}
+					]
+				}
+			],
+			"wants": "자신의 흐려지는 신체를 되돌리기 위해 타인의 이력서 조각을 강탈하는 것",
+			"title": "희미해지는 싸움꾼",
+			"dialogue": [
+				{
+					"speaker": "narrator",
+					"text": "몸의 윤곽이 희미하게 번진 건장한 남자가 당신의 앞을 거칠게 가로막았다."
+				},
+				{
+					"speaker": "minhyeok",
+					"text": "당신이 그 접수대 차단봉을 박살 내고 힘으로 앞줄을 밀어붙였다던 그 싸움꾼이지?"
+				},
+				{
+					"text": "경호 경력을 석 줄 부풀렸더니 내 팔뚝이 지워지고 있어! 당신 서류와 섞어 채워라!",
+					"speaker": "minhyeok"
+				},
+				{
+					"speaker": "lin",
+					"text": "저 사람의 경비 조교 완장이 투명해지고 있어요! 이력서의 벌칙이에요!"
+				}
+			],
+			"slot": "D",
+			"kind": "rep",
+			"rep_dir": "fighting-"
+		},
+		{
+			"rule_link": "거짓된 의료 경력을 덧대어 규정 위반으로 신체가 투명해지는 현상",
+			"person": {
+				"role": "존재가 사라져 가는 간호 보조원",
+				"id": "sukyeong",
+				"name": "수경"
+			},
+			"title": "사라지는 간호사",
+			"dialogue": [
+				{
+					"speaker": "narrator",
+					"text": "간호사 복장을 한 여성이 바닥에 주저앉아 투명해지는 다리를 부여잡고 흐느낀다."
+				},
+				{
+					"text": "뒤처진 사람들에게 번호표를 건네주며 먼저 손을 내밀던 분, 맞으시죠?",
+					"speaker": "sukyeong"
+				},
+				{
+					"speaker": "sukyeong",
+					"text": "다친 대기자를 고치겠다고 수술 경력을 한 줄 덧댔더니, 제 존재가 지워져요."
+				},
+				{
+					"text": "저분의 무릎 아래가 비쳐 보여요. 이력서에 거짓을 적은 대가가 시작됐어요.",
+					"speaker": "lin"
+				}
+			],
+			"wants": "자신의 흐려진 서류를 바로잡아 지워져 가는 존재를 되찾는 것",
+			"key": "fading_nurse",
+			"choices": [
+				{
+					"mbti": "ST",
+					"result": [
+						{
+							"text": "당신은 수경의 떨리는 손을 뿌리치고 바닥에 떨어진 지원 번호표를 챙겼다.",
+							"speaker": "narrator"
+						},
+						{
+							"text": "남을 돕는다는 소문은 다 거짓이었나요? 제 이름이 완전히 사라지고 있어요.",
+							"speaker": "sukyeong"
+						},
+						{
+							"speaker": "lin",
+							"text": "수경 씨의 목소리가 점점 멀어져요. 이러면 저분은 시험을 볼 수 없어요."
+						}
+					],
+					"reward": [],
+					"text": "수경의 매달리는 손을 냉정하게 털어내고 지나친다",
+					"flag": {
+						"key": "abandon_nurse",
+						"label": "버려진 원망",
+						"boss_text": "지쳐 쓰러진 수경을 외면한 탓에, 분노한 주변 대기자들이 당신의 등 뒤를 밀쳐 흩뜨린다."
+					},
+					"effects": {
+						"echo": -5,
+						"community": -20,
+						"gold": 70,
+						"fighting": 20
+					},
+					"path": "easy"
+				},
+				{
+					"text": "주저앉은 수경을 부축해 흐려진 서류의 구겨진 부분을 함께 편다",
+					"result": [
+						{
+							"speaker": "narrator",
+							"text": "당신은 웅크린 수경을 일으켜 세우고, 엉켜버린 서류 모서리를 조심스레 펴냈다."
+						},
+						{
+							"speaker": "sukyeong",
+							"text": "고마워요. 손가락에 감각이 돌아왔어요. 가방에 남은 마지막 구급 앰플을 드릴게요."
+						},
+						{
+							"speaker": "lin",
+							"text": "사람을 구하니 서류의 먹선도 본래 형태를 되찾고 있어요!"
+						}
+					],
+					"effects": {
+						"echo": 10,
+						"fighting": 25,
+						"community": 25
+					},
+					"reward": [
+						"heal"
+					],
+					"mbti": "NF",
+					"path": "hard",
+					"flag": {
+						"boss_text": "기운을 차린 수경이 건넨 상급 회복 앰플을 마셔 지친 호흡과 부상을 즉각 추스른다.",
+						"key": "nurse_ampoule",
+						"label": "간호사의 보은"
+					}
+				},
+				{
+					"path": "stat",
+					"flag": {
+						"boss_text": "수경과 연대 지원자들이 문지기의 출입 통제봉을 온몸으로 붙잡아 길을 터준다.",
+						"label": "돌봄의 연대",
+						"key": "care_alliance"
+					},
+					"reward": [
+						"defense_up"
+					],
+					"result": [
+						{
+							"text": "당신의 따스한 부축에 주변 대기자 여럿이 모여들어 수경의 존재를 함께 외쳐주었다.",
+							"speaker": "narrator"
+						},
+						{
+							"speaker": "sukyeong",
+							"text": "모두가 제 이름을 불러주니 사라지지 않아요! 이 빚은 반드시 갚을게요!"
+						},
+						{
+							"text": "사람들의 연대가 이력서의 규정보다 더 강하게 이름을 붙잡아 주었어요!",
+							"speaker": "lin"
+						}
+					],
+					"text": "대기자들을 불러 모아 수경의 이름을 함께 부르며 지워짐을 막는다",
+					"effects": {
+						"echo": 15,
+						"fighting": 35,
+						"community": 30
+					},
+					"mbti": "FJ"
+				}
+			],
+			"background_tags": [
+				"waiting_hall",
+				"midday",
+				"dim_light",
+				"whispering_group",
+				"melancholy"
+			],
+			"no": 2,
+			"slot": "D",
+			"kind": "rep",
+			"rep_dir": "fighting+"
+		},
+		{
+			"rule_link": "타인의 명패 정보를 가로채 허위 경력을 만들다 정체성이 증발하는 대가",
+			"no": 3,
+			"dialogue": [
+				{
+					"text": "명패를 품에 숨긴 한 남자가 헐레벌떡 당신 등 뒤로 숨어들며 이를 갈았다.",
+					"speaker": "narrator"
+				},
+				{
+					"speaker": "park",
+					"text": "남들이 쫓겨나든 말든 자기 몫의 합격 도장부터 먼저 챙겼다는 양반이지?"
+				},
+				{
+					"text": "내가 남의 명패를 긁어모아 경력을 부풀렸더니, 내 명패가 녹아내리고 있어!",
+					"speaker": "park"
+				},
+				{
+					"text": "남의 이름을 훔쳐 서류를 채운 대가로 자기 신분마저 지워지는 거예요.",
+					"speaker": "lin"
+				}
+			],
+			"background_tags": [
+				"waiting_hall",
+				"midday",
+				"glaring_lamp",
+				"chaotic_hall",
+				"selfish_tension"
+			],
+			"choices": [
+				{
+					"mbti": "NT",
+					"text": "박수철이 숨기려던 위조 명패를 낚아채 내 몫으로 챙긴다",
+					"effects": {
+						"community": -25,
+						"echo": -10,
+						"gold": 100
+					},
+					"result": [
+						{
+							"speaker": "narrator",
+							"text": "당신은 박수철의 손목을 꺾어 그가 빼돌린 타인의 상급 명패를 빼앗았다."
+						},
+						{
+							"text": "크억! 제 잇속만 챙긴다더니 진짜 피도 눈물도 없는 놈이잖아!",
+							"speaker": "park"
+						},
+						{
+							"speaker": "lin",
+							"text": "그 명패는 남의 것이에요. 욕심을 부리다 우리 이름까지 오염될 수 있어요."
+						}
+					],
+					"reward": [],
+					"flag": {
+						"key": "stolen_tag",
+						"boss_text": "박수철의 훔친 명패를 챙긴 탓에, 분실물 추적 신호가 울려 당신의 위치가 드러난다.",
+						"label": "도난 명패의 경보"
+					},
+					"path": "easy"
+				},
+				{
+					"text": "훔쳐낸 명패들을 강제로 회수해 원래 대기자들에게 돌려준다",
+					"mbti": "SF",
+					"flag": {
+						"boss_text": "박수철의 은닉 장부를 제출해 대기실 서류 사기꾼 명단을 즉시 폭로한다.",
+						"key": "fraud_ledger",
+						"label": "사기꾼 폭로 장부"
+					},
+					"result": [
+						{
+							"speaker": "narrator",
+							"text": "당신은 박수철이 훔친 명패를 압수해 본래 주인들에게 모조리 돌려주었다."
+						},
+						{
+							"text": "이러면 나만 완전히 증발해 버린다고! 당신 소문과 영 딴판이잖아!",
+							"speaker": "park"
+						},
+						{
+							"text": "피해자들이 자기 이름을 되찾았어요. 이제 우리 과장 서류도 결단해야 해요.",
+							"speaker": "lin"
+						}
+					],
+					"path": "hard",
+					"reward": [
+						"intelligence_up"
+					],
+					"effects": {
+						"echo": 10,
+						"community": 20,
+						"reason": -10
+					}
+				},
+				{
+					"text": "박수철의 덜미를 잡고 쥐고 있는 밀거래 서류 일체를 상납받는다",
+					"effects": {
+						"echo": -5,
+						"community": -35,
+						"reason": 15
+					},
+					"mbti": "ST",
+					"result": [
+						{
+							"text": "당신은 박수철의 약점을 쥐고 흔들어 그가 몰래 빼돌린 여분의 도장 패스를 털어냈다.",
+							"speaker": "narrator"
+						},
+						{
+							"text": "과연 자기 이익 앞에서는 한 치의 양보도 없군. 전부 다 줄 테니 놔줘!",
+							"speaker": "park"
+						},
+						{
+							"text": "철저하게 털어냈군요. 하지만 임시 합격 도장이 찍힌 제 차례가 다가와요.",
+							"speaker": "lin"
+						}
+					],
+					"path": "stat",
+					"flag": {
+						"key": "black_route",
+						"label": "밀거래 퇴로",
+						"boss_text": "박수철의 은밀한 밀거래 통로를 장악해 닫히는 비상 탈출용 환풍구를 선점한다."
+					},
+					"reward": [
+						"move_range_up"
+					]
+				},
+				{
+					"mbti": "EN",
+					"effects": {
+						"community": 20,
+						"fighting": -20,
+						"echo": 10
+					},
+					"text": "박수철의 등에 명패를 거꾸로 달고 명패 출력기 역회전 버튼을 누른다",
+					"path": "fun",
+					"result": [
+						{
+							"text": "당신은 박수철의 가슴팍에 과장된 명패를 거꾸로 붙이고 출력기 스위치를 눌렀다.",
+							"speaker": "narrator"
+						},
+						{
+							"speaker": "park",
+							"text": "어라? 기계가 역회전하더니 내 손가락 윤곽이 다시 나타났어?"
+						},
+						{
+							"speaker": "lin",
+							"text": "장난인 줄 알았는데, 기계가 오류를 역연산해서 이름을 뱉어냈어요!"
+						}
+					],
+					"reward": [
+						"defense_up"
+					]
+				}
+			],
+			"title": "녹아내리는 명패",
+			"key": "nameplate_thief",
+			"wants": "흐려지는 자신의 몸을 막기 위해 타인의 과장 이력서와 명패를 훔쳐 바꾸는 것",
+			"person": {
+				"role": "명패를 훔치다 흐려진 투기 지원자",
+				"id": "park",
+				"name": "박수철"
+			},
+			"slot": "D",
+			"kind": "rep",
+			"rep_dir": "community-"
+		},
+		{
+			"choices": [
+				{
+					"reward": [],
+					"path": "easy",
+					"flag": {
+						"boss_text": "오 반장의 관리 명부를 방치한 대가로, 명부 누락자들이 입구를 막아서서 통행을 방해한다.",
+						"key": "neglected_roster",
+						"label": "명부의 공백"
+					},
+					"result": [
+						{
+							"text": "당신은 오 반장의 명부를 밀어두고 자신의 과장된 서류만 챙겨 면접선으로 나아갔다.",
+							"speaker": "narrator"
+						},
+						{
+							"speaker": "rep_oh",
+							"text": "모두를 위해 서던 사람이 어찌 자기 면접표만 챙겨 떠난단 말이오!"
+						},
+						{
+							"speaker": "lin",
+							"text": "오 반장님의 얼굴선이 지워지고 있어요. 모두의 이름을 지탱하느라 한계예요."
+						}
+					],
+					"text": "오 반장의 명부를 뒤로하고 내 번호표만 챙겨 앞줄로 직행한다",
+					"mbti": "NT",
+					"effects": {
+						"community": -20,
+						"echo": -5,
+						"fighting": 10,
+						"gold": 70
+					}
+				},
+				{
+					"effects": {
+						"community": 25,
+						"echo": 10,
+						"reason": 15
+					},
+					"mbti": "SJ",
+					"result": [
+						{
+							"text": "당신은 자신의 서류에서 부풀려진 봉사 점수를 지우고 오 반장의 명부를 교차 검증했다.",
+							"speaker": "narrator"
+						},
+						{
+							"text": "서류의 무게를 덜어내니 내 몸이 버티는군! 진정 공동체를 아는 이요.",
+							"speaker": "rep_oh"
+						},
+						{
+							"text": "과장을 덜어내자 오 반장님의 흐려지던 가슴팍이 온전히 되돌아왔어요!",
+							"speaker": "lin"
+						}
+					],
+					"text": "내 서류의 과장 항목을 지우고 오 반장의 대조 작업을 분담한다",
+					"reward": [
+						"move_range_up"
+					],
+					"path": "hard",
+					"flag": {
+						"boss_text": "오 반장이 정돈해 준 공인 명부 사본을 제시해 면접관의 허위 서류 즉각 폐기 처분을 피한다.",
+						"label": "공인 명부 사본",
+						"key": "verified_copy"
+					}
+				},
+				{
+					"text": "홀 전체의 지원자들을 결집해 서로의 이름을 연호하도록 이끈다",
+					"effects": {
+						"reason": -10,
+						"echo": 15,
+						"community": 35
+					},
+					"result": [
+						{
+							"speaker": "narrator",
+							"text": "당신이 호소하자 홀의 대기자 전원이 스크럼을 짜고 오 반장의 이름을 일제히 제창했다."
+						},
+						{
+							"speaker": "rep_oh",
+							"text": "모두의 목소리가 내 존재를 묶어주는군! 홀의 모든 지원자가 당신을 따르겠소!"
+						},
+						{
+							"text": "사람들이 서로의 진짜 이름을 불러주고 있어요. 규정의 저주가 멈췄어요!",
+							"speaker": "lin"
+						}
+					],
+					"mbti": "NF",
+					"reward": [
+						"shield"
+					],
+					"flag": {
+						"key": "applicant_council",
+						"boss_text": "오 반장과 회복된 대기자 전원이 면접장 빗장을 풀지 못하도록 바깥에서 빗장을 함께 잠근다.",
+						"label": "대기자 평의회"
+					},
+					"path": "stat"
+				},
+				{
+					"path": "gold",
+					"effects": {
+						"community": 15,
+						"gold": -90,
+						"echo": 5
+					},
+					"reward": [],
+					"result": [
+						{
+							"text": "당신은 사비 90골드를 털어 접수대 직원에게 단체 명부 정정 수수료를 완납했다.",
+							"speaker": "narrator"
+						},
+						{
+							"speaker": "rep_oh",
+							"text": "이 막대한 벌금을 대신 내주다니! 덕분에 백여 명의 이름이 살아났소!"
+						},
+						{
+							"speaker": "lin",
+							"text": "모두의 명패가 다시 찍혀 나오고 있어요. 하지만 우리 서류는 어쩌죠?"
+						}
+					],
+					"text": "오 반장의 대조 명부 전체에 걸린 정정 수수료 90골드를 대납한다",
+					"mbti": "IS"
+				}
+			],
+			"rule_link": "모두를 구하려 단체 허위 경력을 적어 넣었다가 집단 규정의 대가로 소멸해 가는 상황",
+			"person": {
+				"id": "rep_oh",
+				"name": "오 반장",
+				"role": "대기자들을 돕다 지워져 가는 자치 대표"
+			},
+			"no": 4,
+			"dialogue": [
+				{
+					"text": "대기자들의 이름을 적은 큰 장부를 든 노련한 남자가 가슴을 쥐어짜며 비틀거렸다.",
+					"speaker": "narrator"
+				},
+				{
+					"speaker": "rep_oh",
+					"text": "소란이 났을 때 앞장서서 힘없는 사람들의 접수 자리를 지켜준 분이 맞지요?"
+				},
+				{
+					"speaker": "rep_oh",
+					"text": "대기자들을 돕겠다고 단체 봉사 경력을 허위로 적었더니 내 존재가 사라져 가오."
+				},
+				{
+					"speaker": "lin",
+					"text": "오 반장님의 서류철에 적힌 이름들이 번지면서, 몸까지 함께 바래고 있어요."
+				}
+			],
+			"key": "hall_representative",
+			"title": "사라지는 대표",
+			"wants": "대기자들의 진짜 명부를 바로잡아 자신의 흩어지는 존재를 수습하는 것",
+			"background_tags": [
+				"waiting_hall",
+				"midday",
+				"flickering_light",
+				"crowded_room",
+				"resolute_atmosphere"
+			],
+			"slot": "D",
+			"kind": "rep",
+			"rep_dir": "community+"
+		},
+		{
+			"no": 5,
+			"wants": "규정에 맞춘 정정 절차를 밟아 백지가 된 명패의 이름을 복원하는 것",
+			"dialogue": [
+				{
+					"text": "안경을 쓴 사내가 백지로 변해버린 명패를 들고 창백하게 떨며 서 있다.",
+					"speaker": "narrator"
+				},
+				{
+					"speaker": "taejin",
+					"text": "접수대 규정집을 들이밀며 철저히 절차대로만 서류를 접수하던 분이시죠?"
+				},
+				{
+					"text": "규격 서식을 통과하려고 위조 검수인을 찍었더니, 명패의 제 이름이 소멸했어요!",
+					"speaker": "taejin"
+				},
+				{
+					"speaker": "lin",
+					"text": "철저한 규칙주의자조차 허위 서류 앞에서는 규정의 칼날을 피하지 못했군요."
+				}
+			],
+			"rule_link": "서식 규격을 맞추려 허위 직인을 찍었다가 규정에 의해 정체성이 지워진 대가",
+			"title": "백지 명패의 검수원",
+			"key": "auditor_taejin",
+			"person": {
+				"role": "위조 직인으로 명패가 백지화된 전직 검수원",
+				"name": "서태진",
+				"id": "taejin"
+			},
+			"background_tags": [
+				"waiting_hall",
+				"midday",
+				"white_neon",
+				"strict_order",
+				"bureaucratic_chill"
+			],
+			"choices": [
+				{
+					"mbti": "FP",
+					"text": "태진의 규정집을 밀쳐내고 번호표를 챙겨 접수대로 내달린다",
+					"result": [
+						{
+							"text": "당신은 태진이 든 규정집을 쳐내고 과장된 경력이 찍힌 번호표를 낚아챘다.",
+							"speaker": "narrator"
+						},
+						{
+							"text": "절차를 지키던 사람이 어찌 이런 협잡을! 규정 위반자는 반드시 처벌받소!",
+							"speaker": "taejin"
+						},
+						{
+							"text": "태진 씨의 명패 글자가 백지로 바래고 있어요. 규정의 대가가 무서워요.",
+							"speaker": "lin"
+						}
+					],
+					"reward": [],
+					"path": "easy",
+					"flag": {
+						"key": "audit_alert",
+						"label": "감사 경보 발령",
+						"boss_text": "규정집을 짓밟고 강행한 탓에, 면접관의 원칙 감사 경보가 울려 이동 경로가 차단된다."
+					},
+					"effects": {
+						"community": -15,
+						"echo": -5,
+						"reason": -20,
+						"gold": 80
+					}
+				},
+				{
+					"mbti": "TJ",
+					"effects": {
+						"reason": -25,
+						"echo": 10,
+						"community": 10
+					},
+					"text": "내 이력서의 과장된 조항을 규정집 절차에 맞춰 정식 삭제한다",
+					"result": [
+						{
+							"text": "당신은 자신의 서류에서 과장된 공증 직인을 칼로 긁어내 원본 규격에 맞췄다.",
+							"speaker": "narrator"
+						},
+						{
+							"speaker": "taejin",
+							"text": "스스로 규격을 바로잡았군요. 덕분에 내 백지 명패에도 이름 석 자가 돌아왔소."
+						},
+						{
+							"speaker": "lin",
+							"text": "거짓을 긁어내자 서류 규격이 맞아떨어졌어요. 정정 도장이 찍혔습니다!"
+						}
+					],
+					"path": "hard",
+					"reward": [
+						"attack_up"
+					],
+					"flag": {
+						"label": "정식 면접 번호표",
+						"boss_text": "태진이 공인 인출기로 출력해 준 정규 번호표를 제시해 보스의 부정 입실 심사를 통과한다.",
+						"key": "official_ticket"
+					}
+				},
+				{
+					"flag": {
+						"boss_text": "원칙 감사관의 권한으로 봉쇄된 면접장 규정 스위치를 조작해 비상 출구를 개방한다.",
+						"key": "rule_override",
+						"label": "규정 강제 해제"
+					},
+					"path": "stat",
+					"reward": [
+						"cooldown_reset"
+					],
+					"result": [
+						{
+							"text": "당신이 암기한 감사 조례 4항을 읊자 접수대 시스템이 적법 절차 모드로 멈춰 섰다.",
+							"speaker": "narrator"
+						},
+						{
+							"text": "세상에, 행정 규칙의 빈틈을 완벽하게 꿰뚫고 있군! 내 권한 카드를 넘기겠소.",
+							"speaker": "taejin"
+						},
+						{
+							"text": "규칙의 허점을 찔러 시스템의 존재 삭제 카운트다운을 일시 중지시켰어요!",
+							"speaker": "lin"
+						}
+					],
+					"text": "행정 감사 규정 4조 7항을 정확히 읊어 기계의 오류 삭제를 동결시킨다",
+					"mbti": "ST",
+					"effects": {
+						"echo": 10,
+						"fighting": 10,
+						"reason": -35
+					}
+				}
+			],
+			"slot": "D",
+			"kind": "rep",
+			"rep_dir": "reason-"
+		},
+		{
+			"dialogue": [
+				{
+					"speaker": "narrator",
+					"text": "온갖 색깔로 낙서된 이력서를 든 청년이 발이 허공에 뜬 채 둥둥 떠다니고 있다."
+				},
+				{
+					"text": "양식 따윈 개나 주라며 서류에 마음대로 휘갈기고 접수대를 통과한 게 당신이지?",
+					"speaker": "dohyeon"
+				},
+				{
+					"text": "나도 마음 내키는 대로 경력을 예술적으로 그렸더니, 몸이 깃털처럼 뜨고 있어!",
+					"speaker": "dohyeon"
+				},
+				{
+					"text": "규칙을 완전히 무시한 채 서류를 적어서, 존재의 무게 자체가 증발하고 있어요!",
+					"speaker": "lin"
+				}
+			],
+			"choices": [
+				{
+					"flag": {
+						"boss_text": "도현의 찢어진 서류 조각들이 복도에 흩날려 발목을 휘감고 미끄러뜨린다.",
+						"label": "흩날리는 서류 조각",
+						"key": "fluttering_scraps"
+					},
+					"effects": {
+						"community": -20,
+						"gold": 80,
+						"echo": -5,
+						"reason": 20
+					},
+					"path": "easy",
+					"reward": [],
+					"result": [
+						{
+							"text": "당신은 흩날리는 도현의 기괴한 낙서 서류를 걷어차며 출구 번호판을 붙잡았다.",
+							"speaker": "narrator"
+						},
+						{
+							"text": "형식 따위 부수자더니 나 혼자 날아가 버리잖아! 당신도 곧 바람에 날릴걸!",
+							"speaker": "dohyeon"
+						},
+						{
+							"speaker": "lin",
+							"text": "도현 씨의 발이 완전히 허공에 떴어요. 규정을 너무 무시한 대가예요."
+						}
+					],
+					"text": "도현의 흩날리는 서류를 발로 차버리고 내 과장 이력서를 움켜쥔다",
+					"mbti": "NT"
+				},
+				{
+					"reward": [
+						"cooldown_reset"
+					],
+					"path": "hard",
+					"result": [
+						{
+							"text": "당신은 묵직한 접수용 문진을 가져와 공중에 붕 뜬 도현의 옷자락을 바닥에 박았다.",
+							"speaker": "narrator"
+						},
+						{
+							"text": "와, 바닥에 발이 닿았어! 규칙을 부수는 덴 규격품 문진이 최고라니까!",
+							"speaker": "dohyeon"
+						},
+						{
+							"speaker": "lin",
+							"text": "몸이 가라앉았어요. 자유롭게 구는 것도 좋지만 일단 땅에 발은 붙여야죠."
+						}
+					],
+					"flag": {
+						"key": "anchor_pen",
+						"boss_text": "무게추로 고정된 도현의 만능 조례 펜을 던져 닫히는 철제 문의 전자식 빗장을 꺾는다.",
+						"label": "무게추 깃펜"
+					},
+					"text": "육중한 접수대 문진을 가져와 허공에 뜬 도현의 옷자락을 바닥에 고정한다",
+					"effects": {
+						"reason": -20,
+						"echo": 10,
+						"community": 15
+					},
+					"mbti": "SF"
+				},
+				{
+					"path": "stat",
+					"flag": {
+						"key": "hall_graffiti",
+						"label": "천장 교란 낙서",
+						"boss_text": "도현과 함께 접수대 천장에 그려둔 미로 낙서로 면접관들의 추적 시야를 교란한다."
+					},
+					"text": "도현의 온갖 낙서 서류를 센서에 뭉텅이로 쑤셔 넣어 판독기를 과열시킨다",
+					"reward": [
+						"intelligence_up"
+					],
+					"effects": {
+						"echo": 15,
+						"reason": 35,
+						"community": -10
+					},
+					"result": [
+						{
+							"text": "당신은 도현의 손을 잡고 이력서 낙서를 기계 센서 판독기에 거꾸로 밀어 넣었다.",
+							"speaker": "narrator"
+						},
+						{
+							"speaker": "dohyeon",
+							"text": "아하하! 기계가 예술을 인식 못 하고 이름을 통째로 다시 뱉어냈어!"
+						},
+						{
+							"speaker": "lin",
+							"text": "틀에 얽매이지 않는 발상이 기계의 엄격한 판독 논리를 마비시켰어요!"
+						}
+					],
+					"mbti": "EN"
+				},
+				{
+					"reward": [
+						"attack_up"
+					],
+					"path": "fun",
+					"result": [
+						{
+							"text": "당신은 도현의 둥둥 뜬 몸에 끈을 묶어 연처럼 날리며 대기실 천장 환풍구를 열었다.",
+							"speaker": "narrator"
+						},
+						{
+							"text": "우와아! 공중에서 보니까 면접실 문이 어디로 열리는지 다 보여요!",
+							"speaker": "dohyeon"
+						},
+						{
+							"speaker": "lin",
+							"text": "사람을 연처럼 날리다니요! 그런데 덕분에 면접실 안쪽 구조를 파악했어요!"
+						}
+					],
+					"mbti": "TP",
+					"effects": {
+						"fighting": 25,
+						"echo": 10,
+						"reason": 25
+					},
+					"text": "도현의 허리춤에 서류 묶음 끈을 감아 대기실 천장 환풍구로 띄워 올린다"
+				}
+			],
+			"background_tags": [
+				"waiting_hall",
+				"midday",
+				"strobe_light",
+				"restless_mob",
+				"bizarre_tension"
+			],
+			"person": {
+				"id": "dohyeon",
+				"role": "허위 낙서 경력으로 몸이 허공에 뜨는 괴짜 대기자",
+				"name": "도현"
+			},
+			"no": 6,
+			"rule_link": "형식을 무시하고 마음대로 허위 경력을 적어 넣었다가 존재의 중량이 사라지는 대가",
+			"key": "drifting_artist",
+			"title": "떠오르는 자유인",
+			"wants": "흐려지고 떠오르는 몸의 무게를 되찾아 바닥에 내려서는 것",
+			"slot": "D",
+			"kind": "rep",
+			"rep_dir": "reason+"
+		}
+	],
+	"errors": []
+}

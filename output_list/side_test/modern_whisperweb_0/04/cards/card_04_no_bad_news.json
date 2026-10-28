@@ -1,0 +1,241 @@
+{
+	"id": "card_04_no_bad_news",
+	"kind": "rep",
+	"title": {
+		"korean": "규칙 밖의 부탁"
+	},
+	"intensity": "calm",
+	"after_story": 3,
+	"before_story": 5,
+	"condition": {
+		"leaning": "reason+",
+		"among": [
+			"fighting-",
+			"fighting+",
+			"community-",
+			"community+",
+			"reason-",
+			"reason+"
+		],
+		"min": 20
+	},
+	"urgency": 8,
+	"leaning": "reason+",
+	"background_tags": [
+		"data_waste_yard",
+		"late_shift",
+		"moonlit_aisle",
+		"quiet",
+		"wry"
+	],
+	"dialogue": [
+		{
+			"speaker": "jun",
+			"content": {
+				"korean": "당신이 규칙은 됐고 하고 싶은 대로 한다는 그 사람이죠? 딱 한 개만 부탁드려요."
+			}
+		},
+		{
+			"speaker": "dax",
+			"content": {
+				"korean": "순찰 기록에 안 남게요? 저 사람 순찰대 배지가 아직 반짝거리는데."
+			}
+		},
+		{
+			"speaker": "jun",
+			"content": {
+				"korean": "부품 하나만 빼 가면 제 이름은 기록에 안 남아요. 대신 절반은 드릴게요."
+			}
+		},
+		{
+			"speaker": "narrator",
+			"content": {
+				"korean": "준이 순찰 기록판을 손바닥으로 가리며 뒷걸음질 쳤다."
+			}
+		}
+	],
+	"choices": [
+		{
+			"text": {
+				"korean": "준의 부탁대로 기록 없이 부품 하나를 빼 준다"
+			},
+			"path": "easy",
+			"mbti": "EP",
+			"flag": "jun_record",
+			"effects": {
+				"reason": 20,
+				"community": -10
+			},
+			"reward": [
+				"move_range_up"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "jun",
+					"content": {
+						"korean": "역시 소문대로예요. 이건 제 몫입니다."
+					}
+				},
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "준이 부품 하나를 품에 넣고 기록판을 뒤집었다. 그 부품 겉면에 금이 가 있었다."
+					}
+				},
+				{
+					"speaker": "dax",
+					"content": {
+						"korean": "빼 가는 건 좋은데, 저 금 간 거 왠지 찜찜하네요."
+					}
+				}
+			]
+		},
+		{
+			"text": {
+				"korean": "준의 부탁을 거절하고 순찰 기록판에 직접 적는다"
+			},
+			"path": "hard",
+			"mbti": "TJ",
+			"flag": "jun_record_b6",
+			"effects": {
+				"reason": -20,
+				"community": 10
+			},
+			"reward": [
+				"defense_up"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "jun",
+					"content": {
+						"korean": "적으시면 제 근무 평가 끝이에요. 정말 이러실 거예요?"
+					}
+				},
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "기록판에 부품 수가 또박또박 적혔다. 준은 한참 그 글자를 내려다보았다."
+					}
+				},
+				{
+					"speaker": "dax",
+					"content": {
+						"korean": "기록은 남았는데, 사람이 남았나 모르겠네요."
+					}
+				}
+			]
+		},
+		{
+			"text": {
+				"korean": "당신의 이름을 걸고 준에게 부품을 정식으로 신청하게 한다"
+			},
+			"path": "stat",
+			"mbti": "EJ",
+			"require": {
+				"stat": "reason",
+				"op": ">=",
+				"value": 40
+			},
+			"flag": "jun_record_b6",
+			"effects": {
+				"reason": 15,
+				"community": 10
+			},
+			"reward": [
+				"intelligence_up"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "jun",
+					"content": {
+						"korean": "당신 이름이면 신청이 통과될 거예요. 서류는 제가 쓸게요."
+					}
+				},
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "준이 기록판 대신 신청서를 꺼내 당신 이름 옆에 자기 이름을 적었다."
+					}
+				},
+				{
+					"speaker": "dax",
+					"content": {
+						"korean": "이름 하나로 서류가 통과되다니, 이거 은근히 편하네요."
+					}
+				}
+			]
+		},
+		{
+			"text": {
+				"korean": "준의 순찰 기록판에 오늘 순찰을 '없던 일'로 적어 넣는다"
+			},
+			"path": "fun",
+			"mbti": "FP",
+			"effects": {
+				"reason": 25,
+				"echo": 5
+			},
+			"reward": [
+				"stun"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "jun",
+					"content": {
+						"korean": "없던 일로… 그러면 제가 여기 있었다는 것도 없는 거네요?"
+					}
+				},
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "준이 기록판을 들고 한참 서 있다가 천천히 뒤로 걸어갔다."
+					}
+				},
+				{
+					"speaker": "dax",
+					"content": {
+						"korean": "사람이 사라졌어요. 이거… 좀 무섭네요."
+					}
+				}
+			]
+		}
+	],
+	"_side": {
+		"slot": "B",
+		"person": {
+			"id": "jun",
+			"name": "준",
+			"role": "처리장 야간 순찰자"
+		},
+		"wants": "순찰 기록에 안 남게 부품 하나를 몰래 빼달라며, 당신이 규칙보다 마음대로 하는 사람이라는 소문을 믿고 온다.",
+		"rule_link": "부품 하나를 기록 없이 빼내는 일 — 그 부품이 바로 금이 가는 데이터 스크린 조각이다.",
+		"rep": "reason+",
+		"events": {},
+		"flags": {
+			"jun_record": {
+				"kind": "bad",
+				"boss_penalty": -1,
+				"label": {
+					"korean": "순찰 기록판"
+				},
+				"boss_line": {
+					"korean": "준이 순찰 기록판을 들고 나타나 기록에 없는 부품을 내놓으라고 당신 앞을 막는다."
+				}
+			},
+			"jun_record_b6": {
+				"kind": "good",
+				"boss_penalty": 2,
+				"label": {
+					"korean": "순찰 기록판"
+				},
+				"boss_choice": {
+					"korean": "준이 순찰 기록판을 들고 나타나 기록에 없는 부품을 내놓으라고 당신 앞을 막는다."
+				}
+			}
+		}
+	}
+}

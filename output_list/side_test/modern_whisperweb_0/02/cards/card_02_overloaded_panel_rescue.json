@@ -1,0 +1,144 @@
+{
+	"id": "card_02_overloaded_panel_rescue",
+	"title": {
+		"korean": "폭주하는 제어 패널"
+	},
+	"intensity": "calm",
+	"after_story": 7,
+	"before_story": 10,
+	"background_tags": [
+		"spark",
+		"hide",
+		"panel",
+		"step",
+		"tense"
+	],
+	"dialogue": [
+		{
+			"speaker": "narrator",
+			"content": {
+				"korean": "번쩍이는 스파크 사이로 조작원이 몸을 웅크린 채 떨고 있다."
+			}
+		},
+		{
+			"speaker": "trapped_operator",
+			"content": {
+				"korean": "누군가 오고 있는데, 스파크 때문에 나갈 수가 없어요! 차단기 좀 내려주세요!"
+			}
+		},
+		{
+			"speaker": "lin",
+			"content": {
+				"korean": "발소리가 코앞까지 왔어요. 당장 결정을 내려야 해요."
+			}
+		}
+	],
+	"choices": [
+		{
+			"text": {
+				"korean": "스파크를 피해 차단기를 발로 차서 강제로 내린다."
+			},
+			"path": "easy",
+			"mbti": "EP",
+			"effects": {
+				"reason": -20,
+				"gold": 100
+			},
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "당신이 차단기를 걷어차자 스파크가 멎었다. 조작원은 돈을 쥐여주고 급히 달아났다."
+					}
+				}
+			]
+		},
+		{
+			"text": {
+				"korean": "절연 장갑을 끼고 정밀하게 전류를 우회시킨다."
+			},
+			"path": "hard",
+			"mbti": "IJ",
+			"effects": {
+				"reason": 20,
+				"community": 20
+			},
+			"reward": [
+				"attack_down"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "당신이 전류를 우회시키자 기계는 안정을 찾았다. 조작원은 무사히 빠져나와 가슴을 쓸어내렸다."
+					}
+				}
+			]
+		},
+		{
+			"text": {
+				"korean": "비상 보관함에 돈을 넣고 절연포를 꺼내 스파크를 완전히 덮는다."
+			},
+			"path": "gold",
+			"mbti": "SF",
+			"require": {
+				"stat": "gold",
+				"op": ">=",
+				"value": 50
+			},
+			"effects": {
+				"gold": -50,
+				"reason": 10
+			},
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "당신은 보관함에서 꺼낸 절연포로 스파크를 덮었다. 조작원은 안전하게 빠져나와 몸을 숨겼다."
+					}
+				}
+			]
+		},
+		{
+			"text": {
+				"korean": "{actor}이(가) 스파크의 패턴을 읽고 틈을 타 조작원을 빼낸다."
+			},
+			"path": "lock",
+			"mbti": "TP",
+			"require": {
+				"mbti": "TP"
+			},
+			"effects": {
+				"reason": 10
+			},
+			"reward": [
+				"move_range_up"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "{actor}이(가) 전류가 끊기는 순간을 노려 그를 구출했다. 조작원은 안도하며 숨을 골랐다."
+					}
+				}
+			]
+		}
+	],
+	"kind": "normal",
+	"_side": {
+		"slot": "D",
+		"person": {
+			"id": "trapped_operator",
+			"name": "갇힌 조작원",
+			"role": "절박하고 다급한 존댓말"
+		},
+		"wants": "",
+		"rule_link": "",
+		"events": {},
+		"flags": {}
+	}
+}

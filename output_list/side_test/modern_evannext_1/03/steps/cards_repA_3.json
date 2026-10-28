@@ -1,0 +1,278 @@
+{
+	"cards": [
+		{
+			"choices": [
+				{
+					"mbti": "TJ",
+					"result": [
+						{
+							"speaker": "narrator",
+							"text": "민호는 투덜거리며 전자 인증 도장을 거두고 맨 뒤 줄로 돌아갔다."
+						},
+						{
+							"text": "휴, 규칙을 지킨 덕분에 단말기가 안전하게 보호되었어요.",
+							"speaker": "kai"
+						}
+					],
+					"reward": [
+						"shield"
+					],
+					"effects": {
+						"reason": 10,
+						"gold": 100
+					},
+					"path": "easy",
+					"flag": {
+						"boss_text": "민호가 단말기 전원선을 차단하여 비상 조명이 꺼진다.",
+						"label": "민호의 원망",
+						"key": "minho_resentment"
+					},
+					"text": "민호의 전자 인증 도장을 빼앗아 정상 절차대로 대기하게 한다"
+				},
+				{
+					"result": [
+						{
+							"speaker": "narrator",
+							"text": "민호는 이력서에 직인을 찍은 뒤 고맙다는 말을 남기고 급히 떠났다."
+						},
+						{
+							"text": "당장은 무사했지만, 단말기 기록에 이상 승인 로그가 남아버렸어요.",
+							"speaker": "kai"
+						}
+					],
+					"reward": [
+						"cooldown_reset"
+					],
+					"mbti": "FP",
+					"flag": {
+						"boss_text": "전자 인증 도장의 승인 코드를 활용해 보안 시스템을 우회한다.",
+						"key": "stamp_bypass_data",
+						"label": "도장 우회 기록"
+					},
+					"text": "민호가 전자 인증 도장으로 이력서에 즉시 승인 직인을 찍도록 둔다",
+					"effects": {
+						"reason": -20,
+						"echo": 10
+					},
+					"path": "hard"
+				},
+				{
+					"effects": {
+						"echo": 10,
+						"reason": -25
+					},
+					"mbti": "NJ",
+					"result": [
+						{
+							"text": "민호는 당신의 단호함에 압도되어 도장을 포트에 정식 등록했다.",
+							"speaker": "narrator"
+						},
+						{
+							"text": "당신의 명성 덕분에 불법 조작 없이 정상 인증 절차가 진행되는군요!",
+							"speaker": "kai"
+						}
+					],
+					"path": "stat",
+					"reward": [
+						"intelligence_up"
+					],
+					"flag": {
+						"label": "정석 인증 절차",
+						"key": "strict_protocol",
+						"boss_text": "정석 인증 프로토콜을 발동하여 시스템 이상을 즉시 복구한다."
+					},
+					"text": "엄격한 가이드라인을 제시하며 민호가 부스 정품 도장을 정상 등록하게 만든다"
+				},
+				{
+					"mbti": "TP",
+					"result": [
+						{
+							"speaker": "narrator",
+							"text": "민호는 전달받은 골드로 정식 급속 승인권을 구매해 부스에 입력했다."
+						},
+						{
+							"speaker": "kai",
+							"text": "돈으로 깔끔하게 해결했으니 규칙 위반 걱정도 없겠어요."
+						}
+					],
+					"reward": [
+						"heal"
+					],
+					"effects": {
+						"gold": -100,
+						"community": 10
+					},
+					"text": "민호에게 100골드를 주고 합법적인 일일 급속 승인권을 구매하게 한다",
+					"path": "gold"
+				}
+			],
+			"wants": "전자 인증 도장을 임의 조작해 대기열 없이 이력서 승인을 받으려 함.",
+			"key": "stamp_override",
+			"dialogue": [
+				{
+					"text": "민호가 품속에서 전자 인증 도장을 꺼내 부스 단말기 뒷면에 무단 연결한다.",
+					"speaker": "narrator"
+				},
+				{
+					"text": "당신이 지난번 검수장에서 규정을 하나도 안 어기고 합격시켰다는 그 원칙주의자죠?",
+					"speaker": "minho"
+				},
+				{
+					"text": "이 도장을 쓰면 이력서 승인이 한 번에 끝나니 눈감아 주세요.",
+					"speaker": "minho"
+				},
+				{
+					"text": "저... 저 기기는 함부로 다루면 전압이 급등해요! 부스 전체의 인증 시스템이 꼬일 거예요.",
+					"speaker": "kai"
+				},
+				{
+					"text": "딱 한 번만 찍고 빼면 돼요. 몇 분이라도 아껴야 한다고요!",
+					"speaker": "minho"
+				}
+			],
+			"rule_link": "공용 인증부스의 전자 인증 도장을 임의 조작해 이력서 승인 단계를 건너뛰려는 시도.",
+			"title": "정석대로 작동하는 도장",
+			"no": 1,
+			"person": {
+				"id": "minho",
+				"role": "성급한 구직자",
+				"name": "민호"
+			},
+			"background_tags": [
+				"booth",
+				"day",
+				"bright",
+				"crowd",
+				"tense"
+			],
+			"slot": "A",
+			"kind": "rep",
+			"rep_dir": "reason-"
+		},
+		{
+			"rule_link": "단말기 제어판을 임의로 해킹해 이력서 승인 순서를 엉뚱하게 바꾸는 시도.",
+			"no": 2,
+			"key": "booth_override",
+			"background_tags": [
+				"booth",
+				"day",
+				"dim",
+				"crowd",
+				"unsettled"
+			],
+			"person": {
+				"role": "자유로운 대기자",
+				"name": "소라",
+				"id": "sora"
+			},
+			"dialogue": [
+				{
+					"speaker": "narrator",
+					"text": "소라가 부스 제어판 덮개를 열고 전선을 교차 접선하며 단말기 설정을 흔든다."
+				},
+				{
+					"speaker": "sora",
+					"text": "당신이 저번 구역에서 답답한 순서표를 찢어버리고 제어판을 직접 건드렸다는 그분이군요!"
+				},
+				{
+					"text": "저... 저렇게 전선을 섞으면 대기 순서가 엉켜서 이력서 이름이 섞일 텐데요!",
+					"speaker": "kai"
+				},
+				{
+					"speaker": "sora",
+					"text": "답답하게 하나씩 하지 말고 한 번에 다 승인 처리해 버리자고요. 어때요?"
+				}
+			],
+			"title": "줄을 건너뛰는 꼼수",
+			"choices": [
+				{
+					"reward": [
+						"attack_up"
+					],
+					"result": [
+						{
+							"speaker": "narrator",
+							"text": "제어판 신호가 폭주하며 대기열의 절반이 즉시 승인 상태로 바뀐다."
+						},
+						{
+							"text": "주변 구직자들의 이력서 번호가 순식간에 지나가지만 제어판이 과열되고 있어요!",
+							"speaker": "kai"
+						}
+					],
+					"text": "소라와 함께 부스 제어판 전선을 조작해 승인 속도를 올린다",
+					"path": "easy",
+					"flag": {
+						"label": "엉킨 전선",
+						"boss_text": "과부하된 제어판에서 불꽃이 튀어 접근이 제한된다.",
+						"key": "tangled_wires"
+					},
+					"mbti": "EP",
+					"effects": {
+						"reason": -20,
+						"gold": 80
+					}
+				},
+				{
+					"effects": {
+						"echo": 10,
+						"reason": 15
+					},
+					"mbti": "FJ",
+					"flag": {
+						"key": "booth_stabilization",
+						"boss_text": "안정화된 부스 시스템을 활용하여 시스템 과부하 공격을 방어한다.",
+						"label": "부스 안정화"
+					},
+					"path": "hard",
+					"text": "소라가 뜯어낸 제어판 덮개를 다시 닫고 순서대로 대기하게 제지한다",
+					"result": [
+						{
+							"text": "소라는 입을 삐죽이며 덮개를 닫고 자기 번호표를 확인하러 들어갔다.",
+							"speaker": "narrator"
+						},
+						{
+							"speaker": "kai",
+							"text": "평소와 달리 정석대로 다루니 부스 시스템이 안정적으로 돌아가네요."
+						}
+					],
+					"reward": [
+						"defense_up"
+					]
+				},
+				{
+					"effects": {
+						"reason": 25,
+						"echo": 15
+					},
+					"mbti": "NP",
+					"flag": {
+						"boss_text": "변형된 프로토콜 노선을 통해 방의 경보 장치를 즉시 우회한다.",
+						"key": "freestyle_bypass",
+						"label": "자유 우회 기술"
+					},
+					"result": [
+						{
+							"speaker": "narrator",
+							"text": "당신의 기교에 제어판은 경보 없이 일제히 승인 신호를 내뿜었다."
+						},
+						{
+							"speaker": "kai",
+							"text": "와... 규칙을 완전히 무시하는데도 아무런 오류가 안 뜨다니 신기해요!"
+						}
+					],
+					"reward": [
+						"move_range_up"
+					],
+					"path": "stat",
+					"text": "임의 조작 노하우를 발휘해 제어판 오류 없이 대기열 전체를 즉시 승인한다"
+				}
+			],
+			"wants": "부스 제어판을 해킹해 순서 없이 한 번에 다수의 이력서를 승인받으려 함.",
+			"slot": "A",
+			"kind": "rep",
+			"rep_dir": "reason+"
+		}
+	],
+	"errors": [],
+	"prompt_hash": "2ad1717f0c4e55a13e700b2f72c5d89caba1592c"
+}

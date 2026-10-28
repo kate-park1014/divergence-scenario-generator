@@ -1,0 +1,192 @@
+{
+	"id": "card_01_felix_fireworks",
+	"kind": "rep",
+	"title": {
+		"korean": "전산실의 불꽃놀이"
+	},
+	"intensity": "calm",
+	"after_story": 7,
+	"before_story": 10,
+	"condition": {
+		"leaning": "reason+",
+		"among": [
+			"fighting-",
+			"fighting+",
+			"community-",
+			"community+",
+			"reason-",
+			"reason+"
+		],
+		"min": 20
+	},
+	"urgency": 8,
+	"leaning": "reason+",
+	"background_tags": [
+		"crazy_lights",
+		"server_rack",
+		"noisy_alarm",
+		"laughing_boy",
+		"tangled_wires"
+	],
+	"dialogue": [
+		{
+			"speaker": "echo",
+			"content": {
+				"korean": "주변 장치들이 통제를 잃고 마구잡이로 돌아가니까, 이 서버 랙도 언제 터질지 몰라 불안해."
+			}
+		},
+		{
+			"speaker": "narrator",
+			"content": {
+				"korean": "낡은 서버 랙 위에서 해커 지망생이 다리를 까닥거리며 웃고 있다."
+			}
+		},
+		{
+			"speaker": "felix",
+			"content": {
+				"korean": "규칙 따윈 콧방귀도 안 뀐다면서요? 기왕 망가진 거, 코드를 확 꼬아서 불꽃놀이나 보죠!"
+			}
+		}
+	],
+	"choices": [
+		{
+			"text": {
+				"korean": "펠릭스와 함께 서버에 과부하 코드를 입력한다."
+			},
+			"path": "easy",
+			"mbti": "EN",
+			"flag": "overload_server",
+			"effects": {
+				"echo": 5,
+				"reason": 20
+			},
+			"reward": [
+				"attack_up"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "과부하 코드가 입력되자 서버에서 요란한 경보음과 함께 불꽃이 튄다."
+					}
+				},
+				{
+					"speaker": "echo",
+					"content": {
+						"korean": "진짜 불꽃놀이가 터져버렸잖아! 경보음 때문에 다 들키겠어."
+					}
+				}
+			]
+		},
+		{
+			"text": {
+				"korean": "펠릭스를 말리고 서버의 전원을 안전하게 내린다."
+			},
+			"path": "hard",
+			"mbti": "IS",
+			"flag": "power_down",
+			"effects": {
+				"reason": -20,
+				"echo": 10
+			},
+			"reward": [
+				"defense_down"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "전원을 내리자 전광판이 꺼지며 주변이 쥐죽은 듯 고요해진다."
+					}
+				},
+				{
+					"speaker": "echo",
+					"content": {
+						"korean": "휴, 더 큰일이 나기 전에 잘 막았어. 어두워졌으니 몰래 빠져나가자."
+					}
+				}
+			]
+		},
+		{
+			"text": {
+				"korean": "코드를 수정해 전광판에 화려한 홀로그램만 띄운다."
+			},
+			"path": "stat",
+			"mbti": "FP",
+			"require": {
+				"stat": "reason",
+				"op": ">=",
+				"value": 40
+			},
+			"flag": "fancy_hologram",
+			"effects": {
+				"echo": 15,
+				"reason": 30
+			},
+			"reward": [
+				"intelligence_up"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "코드를 비틀자 전산실 허공에 거대하고 화려한 홀로그램이 떠오른다."
+					}
+				},
+				{
+					"speaker": "echo",
+					"content": {
+						"korean": "와, 이건 좀 멋진데? 저기 시선을 뺏긴 사이에 도망치자."
+					}
+				}
+			]
+		}
+	],
+	"_side": {
+		"slot": "D",
+		"person": {
+			"name": "펠릭스",
+			"role": "해커 지망생",
+			"id": "felix"
+		},
+		"wants": "통제 불능이 된 서버에 과부하를 일으켜 불꽃놀이를 보자고 함",
+		"rule_link": "통제 불능이 된 서버를 방치할지 안전하게 수습할지 선택",
+		"events": {},
+		"rep": "reason+",
+		"flags": {
+			"overload_server": {
+				"kind": "bad",
+				"boss_penalty": -1,
+				"label": {
+					"korean": "서버 경보음"
+				},
+				"boss_line": {
+					"korean": "과부하로 울린 요란한 경보음이 보안관을 자극한다."
+				}
+			},
+			"power_down": {
+				"kind": "good",
+				"boss_penalty": 1,
+				"label": {
+					"korean": "내려간 전원"
+				},
+				"boss_choice": {
+					"korean": "전원이 내려가 어두워진 틈을 타 보안관의 곁을 지나간다."
+				}
+			},
+			"fancy_hologram": {
+				"kind": "good",
+				"boss_penalty": 2,
+				"label": {
+					"korean": "화려한 홀로그램"
+				},
+				"boss_choice": {
+					"korean": "화려한 홀로그램으로 보안관의 시선을 돌린다."
+				}
+			}
+		}
+	}
+}

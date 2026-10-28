@@ -1,0 +1,178 @@
+{
+	"id": "card_01_mia_mixed_diary",
+	"kind": "callback",
+	"title": {
+		"korean": "일기장과 섞인 데이터"
+	},
+	"intensity": "high",
+	"after_story": 7,
+	"before_story": 10,
+	"callback": {
+		"seed": "mia_broken_shard_easy",
+		"min_rooms_after": 2
+	},
+	"background_tags": [
+		"server_rack",
+		"broken_screen",
+		"mixed_data",
+		"angry_smuggler",
+		"error_code"
+	],
+	"dialogue": [
+		{
+			"speaker": "narrator",
+			"content": {
+				"korean": "미아가 노트북 화면을 노려보며 머리를 쥐어뜯고 있다."
+			}
+		},
+		{
+			"speaker": "mia",
+			"content": {
+				"korean": "아악! 암호 푼 건 좋은데 내 밀수 데이터가 누군가의 짝사랑 일기장이랑 섞여버렸어!"
+			}
+		},
+		{
+			"speaker": "echo",
+			"content": {
+				"korean": "배달 드론 경로랑 수위 조절 데이터가 섞인 것처럼, 강제로 암호를 푼 부작용이 나타난 거야."
+			}
+		},
+		{
+			"speaker": "mia",
+			"content": {
+				"korean": "쓸데없는 일기장 문장 좀 분리해 줘! 이대론 아무 짝에도 쓸모가 없어!"
+			}
+		}
+	],
+	"choices": [
+		{
+			"text": {
+				"korean": "꼬여버린 데이터를 그대로 통째로 다른 밀수꾼에게 속여서 팔아버린다."
+			},
+			"path": "easy",
+			"mbti": "TP",
+			"flag": "mia_scam_trap",
+			"effects": {
+				"gold": 150,
+				"reason": -15
+			},
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "일기장이 섞인 데이터를 그럴싸하게 포장해 넘기고 큰돈을 챙긴다."
+					}
+				},
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "미아는 찝찝해하면서도 몫을 챙겨 재빨리 사라진다."
+					}
+				}
+			]
+		},
+		{
+			"text": {
+				"korean": "일기장 문장들을 하나하나 읽어내며 원래 데이터만 조심스럽게 분리해낸다."
+			},
+			"path": "hard",
+			"mbti": "FJ",
+			"flag": "mia_admin_key",
+			"effects": {
+				"echo": 10,
+				"reason": 15
+			},
+			"reward": [
+				"intelligence_up"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "오글거리는 일기를 수십 페이지 읽은 끝에 유효한 데이터만 추출해낸다."
+					}
+				},
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "미아가 혀를 내두르며 쓸만한 암호화 키 하나를 넘겨준다."
+					}
+				}
+			]
+		},
+		{
+			"text": {
+				"korean": "일기장의 감성적인 문구에 심취해 데이터를 읽으며 큰 소리로 낭독한다."
+			},
+			"path": "stat",
+			"mbti": "NF",
+			"flag": "mia_noise_trap",
+			"effects": {
+				"reason": -10
+			},
+			"reward": [
+				"intelligence_down"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "당신이 낭독을 시작하자 전산실에 쩌렁쩌렁한 목소리가 울려 퍼진다."
+					}
+				},
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "미아가 창피함에 얼굴을 붉히며 노트북을 빼앗아간다."
+					}
+				}
+			]
+		}
+	],
+	"_side": {
+		"slot": "D",
+		"person": {
+			"role": "데이터 밀수꾼",
+			"name": "미아",
+			"id": "mia"
+		},
+		"wants": "일기장과 뒤섞여버린 밀수 데이터에서 원래 정보만 분리해달라고 함",
+		"rule_link": "데이터를 강제로 해독한 부작용으로 다른 사람의 일기장 정보와 완전히 섞여버렸다.",
+		"events": {},
+		"flags": {
+			"mia_scam_trap": {
+				"kind": "bad",
+				"boss_penalty": -1,
+				"label": {
+					"korean": "사기꾼의 덫"
+				},
+				"boss_line": {
+					"korean": "속아서 데이터를 산 밀수꾼들이 남긴 덫이 앞길을 가로막는다."
+				}
+			},
+			"mia_admin_key": {
+				"kind": "good",
+				"boss_penalty": 1,
+				"label": {
+					"korean": "관리자 암호"
+				},
+				"boss_choice": {
+					"korean": "미아의 데이터에서 빼낸 관리자 암호로 잠긴 문을 쉽게 연다."
+				}
+			},
+			"mia_noise_trap": {
+				"kind": "good",
+				"boss_penalty": 1,
+				"label": {
+					"korean": "소음 경보"
+				},
+				"boss_choice": {
+					"korean": "당신의 낭독 소리에 어그로가 끌려 적들이 몰려든다."
+				}
+			}
+		}
+	}
+}

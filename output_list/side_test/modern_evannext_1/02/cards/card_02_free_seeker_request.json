@@ -1,0 +1,256 @@
+{
+	"id": "card_02_free_seeker_request",
+	"kind": "rep",
+	"title": {
+		"korean": "내키는 대로 경력 수정"
+	},
+	"intensity": "calm",
+	"after_story": 3,
+	"before_story": 5,
+	"condition": {
+		"leaning": "reason+",
+		"among": [
+			"fighting-",
+			"fighting+",
+			"community-",
+			"community+",
+			"reason-",
+			"reason+"
+		],
+		"min": 20
+	},
+	"urgency": 8,
+	"leaning": "reason+",
+	"background_tags": [
+		"search_room",
+		"dim",
+		"screen_flicker",
+		"restless",
+		"suspicious"
+	],
+	"dialogue": [
+		{
+			"speaker": "narrator",
+			"content": {
+				"korean": "초조한 구직자가 서류 뭉치를 쥔 채 공용 검색 단말기 앞으로 성큼 다가온다."
+			}
+		},
+		{
+			"speaker": "seeker",
+			"content": {
+				"korean": "\"당신이 서류 양식 따위 찢어 버리고 내키는 대로 사람들을 통과시켜 줬다는 그 사람 맞죠?\""
+			}
+		},
+		{
+			"speaker": "seeker",
+			"content": {
+				"korean": "\"내 이력서 경력 칸의 이름도 거창한 수식어로 바꿔서 단말기에 등록해 주시오!\""
+			}
+		},
+		{
+			"speaker": "nia",
+			"content": {
+				"korean": "\"저기, 원본 서류와 다르게 이름을 바꾸는 건 조금 위험할 수도 있어요.\""
+			}
+		}
+	],
+	"choices": [
+		{
+			"text": {
+				"korean": "구직자의 요구대로 경력란의 이름을 원하는 대로 멋대로 정리해 준다."
+			},
+			"path": "easy",
+			"mbti": "TP",
+			"flag": "seeker_fake_name",
+			"effects": {
+				"reason": 15,
+				"gold": 120
+			},
+			"reward": [
+				"attack_up"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "단말기 모니터에 구직자가 요청한 화려한 경력 명칭이 즉각 반영된다."
+					}
+				},
+				{
+					"speaker": "seeker",
+					"content": {
+						"korean": "\"하하! 역시 소문대로 수완이 좋으시네! 이 정도 수고비는 당연히 드려야죠.\""
+					}
+				},
+				{
+					"speaker": "nia",
+					"content": {
+						"korean": "\"이름을 이렇게 바꿔도 정말 괜찮은 걸까요?\""
+					}
+				}
+			]
+		},
+		{
+			"text": {
+				"korean": "구직자의 요구를 거절하고 이력서 이름을 증명서와 똑같이 정석대로 정리한다."
+			},
+			"path": "hard",
+			"mbti": "FJ",
+			"flag": "seeker_honest_edit",
+			"effects": {
+				"reason": -20,
+				"community": 10
+			},
+			"reward": [
+				"cooldown_reset"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "당신이 구직자의 이력서 이름을 공식 신원 증명서와 토씨 하나 안 틀리게 정리한다."
+					}
+				},
+				{
+					"speaker": "seeker",
+					"content": {
+						"korean": "\"치, 제멋대로 해줄 줄 알았더니 생각보다 융통성이 없으시네.\""
+					}
+				},
+				{
+					"speaker": "nia",
+					"content": {
+						"korean": "\"그래도 사실대로 적는 편이 나중에 덜 위험할 거예요.\""
+					}
+				}
+			]
+		},
+		{
+			"text": {
+				"korean": "자유로운 변형 경험을 살려 구직자 스스로 이력서 이름을 수정하도록 단말기 접근권을 넘긴다."
+			},
+			"path": "stat",
+			"mbti": "NP",
+			"require": {
+				"stat": "reason",
+				"op": ">=",
+				"value": 40
+			},
+			"flag": "free_edit_access",
+			"effects": {
+				"reason": 25,
+				"echo": 10
+			},
+			"reward": [
+				"intelligence_up"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "당신이 키보드를 넘겨주자 구직자가 신나게 자판을 두드리며 경력을 적어 내려간다."
+					}
+				},
+				{
+					"speaker": "seeker",
+					"content": {
+						"korean": "\"오! 진짜로 마음대로 적게 해 주는군요? 당신 진짜 마음에 듭니다!\""
+					}
+				},
+				{
+					"speaker": "nia",
+					"content": {
+						"korean": "\"원하는 대로 직접 적게 하니 저 사람도 만족한 것 같아요.\""
+					}
+				}
+			]
+		},
+		{
+			"text": {
+				"korean": "수수료 100 골드를 받고 구직자의 이력서를 검색실 단말기 우선순위에 올려 준다."
+			},
+			"path": "gold",
+			"mbti": "IS",
+			"require": {
+				"stat": "gold",
+				"op": ">=",
+				"value": 100
+			},
+			"effects": {
+				"community": 20,
+				"gold": -100
+			},
+			"reward": [
+				"heal"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "당신이 수수료를 지불하고 조작 단말기의 이력서 처리 순서를 맨 앞으로 당긴다."
+					}
+				},
+				{
+					"speaker": "seeker",
+					"content": {
+						"korean": "\"돈까지 써 가며 내 순서를 당겨 주다니, 정말 고맙소!\""
+					}
+				},
+				{
+					"speaker": "nia",
+					"content": {
+						"korean": "\"지갑은 가벼워졌지만 일단 저분의 급한 불은 껐네요.\""
+					}
+				}
+			]
+		}
+	],
+	"_side": {
+		"slot": "B",
+		"person": {
+			"name": "지크",
+			"id": "seeker",
+			"role": "초조한 구직자"
+		},
+		"wants": "공식 규격을 무시하고 자기 이력서의 허위 경력 이름을 마음대로 등록하려 한다.",
+		"rule_link": "대기자의 이력서 이름과 경력 칸을 단말기에서 편의대로 수정해 주는 작업과 이어진다.",
+		"rep": "reason+",
+		"events": {},
+		"flags": {
+			"seeker_fake_name": {
+				"kind": "bad",
+				"boss_penalty": -1,
+				"label": {
+					"korean": "경력명 변조 승인"
+				},
+				"boss_line": {
+					"korean": "변조된 경력 데이터가 뒤엉켜 검색실 제어 단말기가 차단된다."
+				}
+			},
+			"seeker_honest_edit": {
+				"kind": "good",
+				"boss_penalty": 1,
+				"label": {
+					"korean": "정석 이력서 정리"
+				},
+				"boss_choice": {
+					"korean": "올바르게 입력된 인적 사항 덕분에 안전한 인증 열쇠를 확보한다."
+				}
+			},
+			"free_edit_access": {
+				"kind": "good",
+				"boss_penalty": 2,
+				"label": {
+					"korean": "자율 수정 권한 부여"
+				},
+				"boss_choice": {
+					"korean": "구직자가 직접 수정한 이력서 덕에 단말기 응급 복구 코드를 얻는다."
+				}
+			}
+		}
+	}
+}

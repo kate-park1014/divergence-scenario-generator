@@ -1,0 +1,196 @@
+{
+	"id": "card_02_smashing_hacker",
+	"kind": "rep",
+	"title": {
+		"korean": "저장소를 부수는 해커"
+	},
+	"intensity": "calm",
+	"after_story": 7,
+	"before_story": 10,
+	"condition": {
+		"leaning": "reason+",
+		"among": [
+			"fighting-",
+			"fighting+",
+			"community-",
+			"community+",
+			"reason-",
+			"reason+"
+		],
+		"min": 20
+	},
+	"urgency": 8,
+	"leaning": "reason+",
+	"background_tags": [
+		"server_room",
+		"overheated",
+		"sparks",
+		"dim_light",
+		"tense"
+	],
+	"dialogue": [
+		{
+			"speaker": "narrator",
+			"content": {
+				"korean": "과열로 녹아내리는 기록 저장소를 막무가내로 뜯어내려는 해커가 보였다."
+			}
+		},
+		{
+			"speaker": "roy",
+			"content": {
+				"korean": "절차 다 무시하고 제멋대로 쑤시고 다닌다는 게 너구나. 와서 좀 거들어!"
+			}
+		},
+		{
+			"speaker": "narrator",
+			"content": {
+				"korean": "그는 쉴 새 없이 풍선껌을 씹으며 렌치로 저장소를 쾅쾅 두드리고 있었다."
+			}
+		},
+		{
+			"speaker": "lin",
+			"content": {
+				"korean": "저러다 데이터가 전부 손상되겠어요! 말려야 해요!"
+			}
+		}
+	],
+	"choices": [
+		{
+			"text": {
+				"korean": "해커와 함께 렌치로 저장소를 마구 두들겨 부순다."
+			},
+			"path": "easy",
+			"mbti": "EP",
+			"flag": "reckless_smash",
+			"effects": {
+				"reason": 20,
+				"gold": 100,
+				"echo": -10
+			},
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "당신과 로이가 렌치로 내리치자 저장소 커버가 우그러지며 떨어졌다."
+					}
+				},
+				{
+					"speaker": "roy",
+					"content": {
+						"korean": "하하! 역시 화끈하네! 데이터는 내가 챙길게!"
+					}
+				}
+			]
+		},
+		{
+			"text": {
+				"korean": "해커의 행동을 제지하고 정식 복구 절차를 기다리게 한다."
+			},
+			"path": "hard",
+			"mbti": "SJ",
+			"flag": "wait_procedure",
+			"effects": {
+				"echo": 10,
+				"reason": -20
+			},
+			"reward": [
+				"defense_up"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "당신이 앞을 가로막자 로이는 짜증을 내며 렌치를 내려놓았다."
+					}
+				},
+				{
+					"speaker": "lin",
+					"content": {
+						"korean": "잘하셨어요. 무리하게 뜯어내면 더 큰일이 났을 거예요."
+					}
+				}
+			]
+		},
+		{
+			"text": {
+				"korean": "합선된 전선을 이용해 저장소 문을 단숨에 폭파시킨다."
+			},
+			"path": "stat",
+			"mbti": "NT",
+			"require": {
+				"stat": "reason",
+				"op": ">=",
+				"value": 40
+			},
+			"flag": "blown_door",
+			"effects": {
+				"echo": -15,
+				"reason": 30
+			},
+			"reward": [
+				"stun"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "합선된 전선에서 스파크가 튀며 저장소 문이 굉음과 ���께 날아갔다."
+					}
+				},
+				{
+					"speaker": "roy",
+					"content": {
+						"korean": "와우! 나보다 더 미친 짓을 할 줄은 몰랐는데!"
+					}
+				}
+			]
+		}
+	],
+	"_side": {
+		"slot": "D",
+		"person": {
+			"role": "해커",
+			"name": "로이",
+			"id": "roy"
+		},
+		"wants": "녹아내리는 기록 저장소를 렌치로 부숴 데이터를 빼내려고 한다.",
+		"rule_link": "과열된 서버에서 정보를 빼내려는 해커를 돕거나 막을지 결정",
+		"rep": "reason+",
+		"events": {},
+		"flags": {
+			"reckless_smash": {
+				"kind": "bad",
+				"boss_penalty": -1,
+				"label": {
+					"korean": "부서진 파편"
+				},
+				"boss_line": {
+					"korean": "마구잡이로 부순 저장소 파편에 발이 걸려 넘어진다."
+				}
+			},
+			"wait_procedure": {
+				"kind": "good",
+				"boss_penalty": 1,
+				"label": {
+					"korean": "기다린 절차"
+				},
+				"boss_choice": {
+					"korean": "정식 복구 절차에 맞춰 시스템 방화벽을 활성화한다."
+				}
+			},
+			"blown_door": {
+				"kind": "good",
+				"boss_penalty": 2,
+				"label": {
+					"korean": "날아간 문짝"
+				},
+				"boss_choice": {
+					"korean": "폭파된 저장소 문짝을 방패 삼아 돌진한다."
+				}
+			}
+		}
+	}
+}

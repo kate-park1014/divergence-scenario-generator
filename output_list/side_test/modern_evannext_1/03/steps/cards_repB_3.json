@@ -1,0 +1,295 @@
+{
+	"cards": [
+		{
+			"choices": [
+				{
+					"flag": {
+						"key": "illegal_stamp_record",
+						"boss_text": "인증 감독관이 규정을 위반한 이력서 보조 인증 기록을 발견하고 조사에 착수한다.",
+						"label": "임의 승인 기록"
+					},
+					"result": [
+						{
+							"text": "전자 인증 도장이 이력서에 찍히며 파란 불빛을 발산했다. 민호는 고마워하며 대기실을 떠났다.",
+							"speaker": "narrator"
+						},
+						{
+							"text": "아... 빠른 처리는 좋지만 감독관 경고를 받은 뒤라 마음이 놓이지 않네요.",
+							"speaker": "kai"
+						}
+					],
+					"path": "easy",
+					"effects": {
+						"community": 10,
+						"reason": -15,
+						"fighting": 10,
+						"echo": -5,
+						"gold": 0
+					},
+					"text": "규정 양식에 맞춰 민호의 이력서에 전자 인증 도장을 직접 찍어 준다.",
+					"mbti": "TJ",
+					"reward": [
+						"attack_up"
+					]
+				},
+				{
+					"flag": {
+						"key": "strict_rule_compliance",
+						"boss_text": "인증 감독관의 지침을 완벽히 이행한 대가로 보스 방에서 보안 승인권을 행사한다.",
+						"label": "원칙 준수 서약"
+					},
+					"effects": {
+						"reason": 20,
+						"gold": 0,
+						"echo": 10,
+						"community": -10,
+						"fighting": -10
+					},
+					"result": [
+						{
+							"speaker": "narrator",
+							"text": "민호의 보조 인증 요청을 규정 미달을 이유로 정중히 거절했다. 민호는 아쉬워하며 돌아섰다."
+						},
+						{
+							"speaker": "kai",
+							"text": "철저하게 절차를 지키셨군요! 제 목소리도 언젠가 원칙대로 되찾을 수 있겠죠?"
+						}
+					],
+					"path": "hard",
+					"text": "감독관의 경고를 고려해 보조 인증 요청을 규칙대로 거절한다.",
+					"mbti": "FP",
+					"reward": [
+						"defense_up"
+					]
+				},
+				{
+					"flag": {
+						"boss_text": "철저한 서식 검증으로 보스 방 기계 시스템의 불법 오작동을 무효화한다.",
+						"key": "perfect_manual_guide",
+						"label": "매뉴얼 숙달"
+					},
+					"reward": [
+						"intelligence_up"
+					],
+					"path": "stat",
+					"text": "규정 수호자답게 보조 인증 사용 기준을 명확히 제시하며 사람들을 통제한다.",
+					"mbti": "TP",
+					"effects": {
+						"reason": -30,
+						"fighting": 0,
+						"echo": 15,
+						"community": 20,
+						"gold": 0
+					},
+					"result": [
+						{
+							"speaker": "narrator",
+							"text": "부스 내 정식 승인 매뉴얼을 낭독하자 민호와 대기자들이 고개를 숙이며 지침에 따랐다."
+						},
+						{
+							"text": "당신의 단호하고 정확한 규칙 설명 덕분에 모두가 서류를 바르게 고치고 있어요!",
+							"speaker": "kai"
+						}
+					]
+				},
+				{
+					"effects": {
+						"reason": 0,
+						"echo": 5,
+						"fighting": 0,
+						"community": 0,
+						"gold": -100
+					},
+					"result": [
+						{
+							"speaker": "narrator",
+							"text": "100 골드로 부스 전용 임시 승인 칩을 구매해 민호에게 전했다. 민호가 이력서에 칩을 붙였다."
+						},
+						{
+							"text": "사비까지 써서 안전하게 도왔군요. 제 마음도 조금은 편안해졌어요.",
+							"speaker": "kai"
+						}
+					],
+					"text": "100 골드를 지불해 정식 보조 인증 단말 칩을 사서 민호에게 준다.",
+					"mbti": "FJ",
+					"reward": [
+						"heal"
+					],
+					"path": "gold"
+				}
+			],
+			"person": {
+				"id": "minho",
+				"name": "민호",
+				"role": "빠른 인증을 받아 이력서 제출을 완료하고 싶어 하는 구직자"
+			},
+			"key": "rule_stickler_stamp",
+			"title": "규칙을 준수하는 자의 결단",
+			"background_tags": [
+				"booth",
+				"waiting_room",
+				"daylight",
+				"crowd",
+				"tense"
+			],
+			"dialogue": [
+				{
+					"speaker": "narrator",
+					"text": "전자 인증 도장이 정갈한 기계음을 내며 대기석 단말기 옆에 놓여 있다."
+				},
+				{
+					"text": "당신이 지난번 검증에서도 규정을 토씨 하나 안 틀리고 끝까지 지키셨다던 그분 맞죠?",
+					"speaker": "minho"
+				},
+				{
+					"text": "제 이력서 보조 인증도 절차에 맞게 확인해 주실 수 있나요?",
+					"speaker": "minho"
+				},
+				{
+					"text": "저 구직자분의 이력서 서식은 깔끔하지만, 방금 경고를 받은 직후라 임의로 도장을 찍어주는 건 부담스러워요.",
+					"speaker": "kai"
+				}
+			],
+			"no": 1,
+			"rule_link": "이력서의 보조 인증 절차는 합격률을 높이지만 1차 경고 상태에서 잘못된 승인은 위험을 가중시킨다.",
+			"wants": "자신의 이력서에 보조 인증 도장을 받아 단숨에 2단계 승인 자격을 취득하고 싶어 한다.",
+			"slot": "B",
+			"kind": "rep",
+			"rep_dir": "reason-"
+		},
+		{
+			"dialogue": [
+				{
+					"speaker": "narrator",
+					"text": "대기자 소라가 전자 인증 도장 부속 장치를 조심스럽게 만지작거리고 있다."
+				},
+				{
+					"text": "당신이 지난번 절차 따위 싹 무시하고 부스 단말기를 직감대로 조작하셨다는 그분이군요!",
+					"speaker": "sora"
+				},
+				{
+					"text": "내 이력서에도 보조 인증 도장을 마음대로 찍게 도와주겠어?",
+					"speaker": "sora"
+				},
+				{
+					"speaker": "kai",
+					"text": "앗, 제 생각엔 제멋대로 보조 인증을 들어주는 건 위험해요! 이미 경고까지 받으셨잖아요."
+				}
+			],
+			"key": "freestyle_bypass_stamp",
+			"rule_link": "편법을 통한 이력서 보조 인증은 당장 유혹적이지만 감시체계의 도발을 불러온다.",
+			"no": 2,
+			"background_tags": [
+				"booth",
+				"waiting_room",
+				"neon_light",
+				"crowd",
+				"unstable"
+			],
+			"wants": "규정에 얽매이지 않고 이력서에 자유롭게 보조 인증 혜택을 등록하길 원한다.",
+			"choices": [
+				{
+					"effects": {
+						"community": 10,
+						"fighting": 15,
+						"reason": 20,
+						"gold": 0,
+						"echo": -10
+					},
+					"flag": {
+						"key": "illegal_bypass_log",
+						"boss_text": "인증 감독관의 감시망에 불법 보조 인증 로그가 적발되어 시스템 압박을 받는다.",
+						"label": "우회 인증 흔적"
+					},
+					"result": [
+						{
+							"speaker": "narrator",
+							"text": "소라의 이력서에 도장을 찍자 단말기가 감정적인 불빛을 뿜어냈다. 소라는 환하게 웃었다."
+						},
+						{
+							"text": "성공은 했지만 주변 감시 카메라가 방금 빛을 내뿜었어요... 괜찮은 걸까요?",
+							"speaker": "kai"
+						}
+					],
+					"text": "소라의 요청대로 전자 인증 도장의 잠금을 해제해 이력서에 도장을 찍어 준다.",
+					"mbti": "EP",
+					"path": "easy",
+					"reward": [
+						"attack_up"
+					]
+				},
+				{
+					"reward": [
+						"shield"
+					],
+					"flag": {
+						"label": "보안 우회 승인",
+						"boss_text": "규율을 엄격히 수호한 덕분에 보스 방 단말기의 1차 보안 방화벽 통과권을 얻는다.",
+						"key": "security_override_pass"
+					},
+					"text": "단말기 보안 절차에 따라 무단 보조 인증 시도를 저지한다.",
+					"mbti": "SP",
+					"result": [
+						{
+							"speaker": "narrator",
+							"text": "단말기 보안 버튼을 눌러 임의 승인 시도를 차단했다. 소라는 입을 삐죽이며 돌아섰다."
+						},
+						{
+							"text": "옳은 선택이에요! 규정을 무시하다간 감독관에게 즉시 제재를 당했을 테니까요.",
+							"speaker": "kai"
+						}
+					],
+					"effects": {
+						"reason": -20,
+						"fighting": -10,
+						"community": -10,
+						"gold": 0,
+						"echo": 10
+					},
+					"path": "hard"
+				},
+				{
+					"effects": {
+						"fighting": 10,
+						"community": 20,
+						"reason": 30,
+						"gold": 0,
+						"echo": 15
+					},
+					"result": [
+						{
+							"text": "단말기의 빈틈을 노려 감독관의 감시를 피한 채 보조 인증 혜택만 소라의 이력서에 분배했다.",
+							"speaker": "narrator"
+						},
+						{
+							"speaker": "kai",
+							"text": "와, 경고를 받지 않고도 이렇게 승인받다니! 제 떨리던 목소리도 조금은 안정되는 것 같아요."
+						}
+					],
+					"flag": {
+						"key": "free_hacking_master",
+						"label": "우회 조작 전문가",
+						"boss_text": "자유로운 우회 기술을 활용해 보스 방 장치의 무단 경보 시스템을 해제한다."
+					},
+					"text": "형식에 매이지 않는 본능으로 감시를 피하며 보조 인증 혜택을 몰래 분배한다.",
+					"mbti": "NT",
+					"reward": [
+						"cooldown_reset"
+					],
+					"path": "stat"
+				}
+			],
+			"title": "자유로운 영혼의 우회 승인",
+			"person": {
+				"role": "이력서에 이름을 등록하기 위해 부스 차례를 기다리는 대기자",
+				"name": "소라",
+				"id": "sora"
+			},
+			"slot": "B",
+			"kind": "rep",
+			"rep_dir": "reason+"
+		}
+	],
+	"errors": [],
+	"prompt_hash": "1a48596b82e884d41287f4e2b83bc8eae35e8b5f"
+}

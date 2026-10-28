@@ -1,0 +1,304 @@
+{
+	"cards": [
+		{
+			"person": {
+				"name": "민석",
+				"role": "경력 과장 지원자",
+				"id": "minseok"
+			},
+			"no": 1,
+			"background_tags": [
+				"waiting_room",
+				"interview_stage",
+				"fluorescent_light",
+				"anxious_crowd",
+				"tense_atmosphere"
+			],
+			"key": "fake_stamp_threat",
+			"choices": [
+				{
+					"flag": {
+						"label": "강제 위조 직인",
+						"key": "forced_fake_stamp",
+						"boss_text": "위조 직인이 찍힌 민석의 이력서 마귀가 거대한 서류 장벽을 형성하며 시야를 가린다."
+					},
+					"mbti": "TJ",
+					"effects": {
+						"fighting": -20,
+						"gold": 100,
+						"echo": -5
+					},
+					"reward": [
+						"attack_up"
+					],
+					"text": "민석의 서류에 위조 직인을 강제로 찍어주고 제출함에 던져 넣는다.",
+					"path": "easy",
+					"result": [
+						{
+							"speaker": "narrator",
+							"text": "민석의 서류함에 붉은 위조 직인이 찍히고 100골드가 주머니로 들어왔다."
+						},
+						{
+							"speaker": "minseok",
+							"text": "고마워요! 역시 힘으로 누르면 서류 통과도 문제없군요."
+						},
+						{
+							"speaker": "lin",
+							"text": "급한 불은 껐지만, 조작된 직인의 흔적이 서류함 깊숙이 파고들고 있어요."
+						}
+					]
+				},
+				{
+					"result": [
+						{
+							"text": "민석의 손에서 직인을 회수하여 단단한 쇠보관함 속에 봉인했다.",
+							"speaker": "narrator"
+						},
+						{
+							"text": "내 위조 직인을 빼앗다니! 이러면 다음 관문은 어떻게 통과하라는 겁니까?",
+							"speaker": "minseok"
+						},
+						{
+							"text": "직인을 확보했어요! 거짓 서류의 왜곡을 막을 중요한 도구가 될 거예요.",
+							"speaker": "lin"
+						}
+					],
+					"effects": {
+						"echo": 10,
+						"fighting": 20
+					},
+					"text": "민석의 위조 직인을 빼앗아 보관함에 넣고 펜을 놓게 만든다.",
+					"path": "hard",
+					"reward": [
+						"defense_up"
+					],
+					"mbti": "NF",
+					"flag": {
+						"key": "confiscated_seal",
+						"label": "위조 직인 회수",
+						"boss_text": "회수한 위조 직인을 수거함 핵에 찍어 왜곡된 경력 결계를 해제한다."
+					}
+				},
+				{
+					"effects": {
+						"echo": 10,
+						"fighting": -30
+					},
+					"path": "stat",
+					"text": "압도적인 기세로 민석과 대기실 지원자들의 과장 서류 작성을 즉시 중단시킨다.",
+					"reward": [
+						"stun"
+					],
+					"result": [
+						{
+							"speaker": "narrator",
+							"text": "당신의 위압적인 태도에 대기실의 모든 지원자가 과장 서류 작성을 멈추었다."
+						},
+						{
+							"text": "그렇게 노려보지 마세요! 펜을 내려놓을 테니 제발 그만하세요.",
+							"speaker": "minseok"
+						},
+						{
+							"text": "모두가 거짓 서류 작성을 멈췄어요. 당신의 단호한 태도가 효과를 발휘했네요.",
+							"speaker": "lin"
+						}
+					],
+					"flag": {
+						"boss_text": "지원자들을 통제해 얻은 과장 서류의 약점 목록으로 기괴한 압박 현상을 반격한다.",
+						"key": "applicant_control",
+						"label": "지원자 통제"
+					},
+					"mbti": "EP"
+				}
+			],
+			"wants": "주인공의 위압감을 이용해 위조 직인을 찍고 제출함을 통과하기",
+			"title": "직인 찍기의 위압",
+			"rule_link": "깨달음 후에도 서류함 통과를 위해 이력서 경력 칸을 억지로 부풀리려는 밀어붙이기 시도",
+			"dialogue": [
+				{
+					"text": "민석이 땀에 젖은 금색 손수건으로 이마를 닦으며 서류 수거함 앞으로 다가왔다.",
+					"speaker": "narrator"
+				},
+				{
+					"text": "당신이 지난번 대기실 입구 경비의 멱살을 잡고 문을 강제로 열어제낀 그 난폭한 사람이군요?",
+					"speaker": "minseok"
+				},
+				{
+					"speaker": "lin",
+					"text": "저 사람, 경력이 조작된 것을 깨닫고도 이력서에 가짜 직인을 더 찍으려 해요."
+				},
+				{
+					"speaker": "minseok",
+					"text": "서류함에 과장된 성과가 없으면 탈락입니다! 제 손을 좀 거들어 직인을 강제로 찍어주세요!"
+				}
+			],
+			"slot": "B",
+			"kind": "rep",
+			"rep_dir": "fighting-"
+		},
+		{
+			"no": 2,
+			"key": "joint_signature",
+			"background_tags": [
+				"waiting_room",
+				"interview_stage",
+				"bright_lamps",
+				"signing_desk",
+				"cooperative_mood"
+			],
+			"dialogue": [
+				{
+					"text": "안내원 유리가 4색 볼펜을 연신 딸깍거리며 이력서 제출함 앞을 서성였다.",
+					"speaker": "narrator"
+				},
+				{
+					"text": "당신이 지난번 탈진한 지원자들에게 비상식량을 전부 나누어주며 부축했던 그 친절한 분이시죠?",
+					"speaker": "yuri"
+				},
+				{
+					"speaker": "lin",
+					"text": "유리 씨는 과장된 서류의 위험성을 알면서도 서명 인원을 채우려 하고 있어요."
+				},
+				{
+					"speaker": "yuri",
+					"text": "5명만 더 서명하면 통과예요! 거짓 순환인 건 알아도 다 함께 다음 방으로 가려면 어쩔 수 없어요."
+				}
+			],
+			"person": {
+				"id": "yuri",
+				"role": "대기실 안내원",
+				"name": "유리"
+			},
+			"title": "과장 서명의 연대",
+			"choices": [
+				{
+					"reward": [
+						"heal"
+					],
+					"flag": {
+						"boss_text": "당신이 보증한 허위 서명들이 결착되어 서류 조종의 사슬로 변해 주인공을 구속한다.",
+						"label": "허위 보증 서명",
+						"key": "guaranteed_fake_sign"
+					},
+					"mbti": "SF",
+					"result": [
+						{
+							"speaker": "narrator",
+							"text": "과장된 서류들에 보증 서명을 적어주자 유리가 수수료 120골드를 건넸다."
+						},
+						{
+							"text": "정말 감사합니다! 덕분에 오늘 서명 할당량을 모두 채웠어요.",
+							"speaker": "yuri"
+						},
+						{
+							"text": "지원자들은 기뻐하지만, 당신의 서명이 거짓 순환을 더 굳건하게 만들었어요.",
+							"speaker": "lin"
+						}
+					],
+					"effects": {
+						"gold": 120,
+						"echo": -5,
+						"fighting": 20
+					},
+					"path": "easy",
+					"text": "유리의 요청대로 지원자들의 과장된 서류에 보증 서명을 남긴다."
+				},
+				{
+					"reward": [
+						"shield"
+					],
+					"effects": {
+						"fighting": -20,
+						"echo": 10
+					},
+					"mbti": "NT",
+					"flag": {
+						"label": "교정 펜 회수",
+						"key": "collected_pens",
+						"boss_text": "회수한 교정 펜으로 기괴한 공기 흔적의 결합점 세 곳을 정확히 그어 비틀림을 끊어낸다."
+					},
+					"result": [
+						{
+							"speaker": "narrator",
+							"text": "안내대의 교정 펜을 모두 거둬들여 제출함 옆 묵직한 함에 집어넣었다."
+						},
+						{
+							"text": "펜을 가져가시면 어떡해요! 이러면 누구도 과장 서명으로 통과 못 해요.",
+							"speaker": "yuri"
+						},
+						{
+							"text": "서류를 교정하던 특수 펜을 확보했어요. 비틀린 흔적을 바로잡을 때 쓸 수 있겠어요.",
+							"speaker": "lin"
+						}
+					],
+					"path": "hard",
+					"text": "유리의 보증 서명 요청을 거절하고 서류 교정 펜을 모두 거둬들인다."
+				},
+				{
+					"path": "stat",
+					"text": "대기실 모든 지원자를 하나로 모아 과장 서류 서명 거부 연대를 결성한다.",
+					"effects": {
+						"fighting": 30,
+						"echo": 15
+					},
+					"result": [
+						{
+							"speaker": "narrator",
+							"text": "당신의 호소에 지원자들이 서명 펜을 던지고 대기실 중앙에 모여들었다."
+						},
+						{
+							"speaker": "yuri",
+							"text": "지원자들이 전부 서명을 거부하다니... 수거함 운영이 정지되겠어요."
+						},
+						{
+							"speaker": "lin",
+							"text": "모두가 손을 잡고 거짓 서명을 거부하고 있어요! 엄청난 연대의 힘이에요."
+						}
+					],
+					"mbti": "FJ",
+					"flag": {
+						"label": "지원자 연대",
+						"key": "applicant_union",
+						"boss_text": "지원자 연대의 서명 거부선언으로 이력서를 둘러싼 기괴한 압박을 무력화한다."
+					},
+					"reward": [
+						"cooldown_reset"
+					]
+				},
+				{
+					"mbti": "TP",
+					"reward": [
+						"intelligence_up"
+					],
+					"text": "유리의 4색 볼펜을 빼앗아 이력서 수거함 표면에 커다란 낙서를 그린다.",
+					"path": "fun",
+					"effects": {
+						"gold": 80,
+						"reason": -20
+					},
+					"result": [
+						{
+							"text": "4색 볼펜으로 수거함에 낙서를 그리자 경고음과 함께 80골드가 바닥에 쏟아졌다.",
+							"speaker": "narrator"
+						},
+						{
+							"text": "제 소중한 4색 볼펜으로 수거함에 낙서를 하시면 어떡해요!",
+							"speaker": "yuri"
+						},
+						{
+							"speaker": "lin",
+							"text": "기괴한 수거함 시스템이 엉뚱한 낙서 때문에 잠시 작동 오류를 일으켰어요."
+						}
+					]
+				}
+			],
+			"wants": "과장된 이력서 서명 인원을 채워 대기실 제출함 관문을 함께 넘기",
+			"rule_link": "진실을 알고도 다른 지원자들과 함께 통과하기 위해 과장된 서명을 연대해서 써주려는 시도",
+			"slot": "B",
+			"kind": "rep",
+			"rep_dir": "fighting+"
+		}
+	],
+	"errors": [],
+	"prompt_hash": "b20aa8c86a4856e21808246dc47423299e603c91"
+}

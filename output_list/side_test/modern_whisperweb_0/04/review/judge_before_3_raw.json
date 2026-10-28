@@ -1,0 +1,334 @@
+{
+	"cards": [
+		{
+			"card_id": "card_04_scrap_share",
+			"asks": "뒤섞인 기록 덕에 주인 없는 폐기물이 쏟아졌으니 반반 나눠 가지자고 꼬드긴다.",
+			"choices_read": [
+				{
+					"path": "easy",
+					"target": "고리와 폐기물 더미",
+					"does": "고리와 함께 값 나가는 부품부터 골라 챙긴다",
+					"reaction_assumes": "고리가 더미를 차서 부품이 나오고 '반반 맞죠'라고 함 — 함께 나눠 챙긴 행동에 대한 반응"
+				},
+				{
+					"path": "hard",
+					"target": "고리(에게 말하고 부품을 더미로)",
+					"does": "챙긴 부품을 더미에 부어 넣고 주인 찾기 목록에 올린다",
+					"reaction_assumes": "고리가 장갑을 벗어 던지고 '손해 보는 사람 처음 봤다'고 함 — 나눔을 거부하고 되돌린 행동에 대한 반응"
+				},
+				{
+					"path": "stat",
+					"target": "고리",
+					"does": "제일 큰 몫부터 내놓으라고 요구한다",
+					"reaction_assumes": "고리가 '역시 소문대로네, 큰 거 드릴게요'라며 큰 부품을 들어 올림 — 요구에 응한 반응"
+				},
+				{
+					"path": "fun",
+					"target": "고리",
+					"does": "폐기물 더미를 반으로 가르는 내기를 하자고 한다",
+					"reaction_assumes": "고리가 더미를 갈라 당신이 한쪽을 골랐고, 빈 통이 나옴 — 내기에 응한 반응"
+				}
+			],
+			"checks": [
+				{
+					"item": "S1",
+					"pass": true
+				},
+				{
+					"item": "S2",
+					"pass": true
+				},
+				{
+					"item": "S3",
+					"pass": true
+				},
+				{
+					"item": "S4",
+					"pass": false,
+					"quote": "고리에게��� 챙긴 부품을 도로 더미에 부어 넣고 주인 찾기 목록에 올린다.",
+					"problem": "hard 선택지 text 에 글자가 깨져(���) 문장이 읽히지 않는다."
+				},
+				{
+					"item": "S5",
+					"pass": true
+				},
+				{
+					"item": "S6",
+					"pass": true
+				}
+			]
+		},
+		{
+			"card_id": "card_04_shutdown_shift",
+			"asks": "기록이 뒤섞여 퇴근을 못 하는 근무자들을 위해 전원을 끌 결정을 당신이 대신 내려 달라고 한다.",
+			"choices_read": [
+				{
+					"path": "easy",
+					"target": "세라(에게 지시) / 근무자들",
+					"does": "세라에게 전원을 끄라고 하고 근무자들을 통로 밖으로 내보낸다",
+					"reaction_assumes": "전원이 꺼지고 세라가 '다들 나가요'라고 함 — 전원 차단과 퇴근 조치에 대한 반응"
+				},
+				{
+					"path": "hard",
+					"target": "세라",
+					"does": "전원을 끄지 않고 함께 근무표를 손으로 다시 짠다",
+					"reaction_assumes": "세라가 근무표를 펴고 '한 시간은 더 서 있어야 해요'라고 함 — 근무표 재작성에 대한 반응"
+				},
+				{
+					"path": "stat",
+					"target": "세라",
+					"does": "전원 차단 권한을 넘겨받아 직접 스위치를 내린다",
+					"reaction_assumes": "세라가 '당신이 끄면 아무도 원망 안 해요'라 하고 스위치가 내려감 — 직접 차단한 행동에 대한 반응"
+				},
+				{
+					"path": "gold",
+					"target": "세라(에게 150골드)",
+					"does": "초과 근무 수당 150골드를 대신 내주고 근무자들을 돌려보낸다",
+					"reaction_assumes": "세라가 골드 봉투를 받아 '수당 나왔어요'라고 함 — 돈을 낸 행동에 대한 반응"
+				}
+			],
+			"checks": [
+				{
+					"item": "S1",
+					"pass": true
+				},
+				{
+					"item": "S2",
+					"pass": true
+				},
+				{
+					"item": "S3",
+					"pass": true
+				},
+				{
+					"item": "S4",
+					"pass": false,
+					"quote": "모두를 ���해 앞장섰다는 사람이 여기 있다고 들었어요. 맞죠?",
+					"problem": "세라의 첫 대사에 글자가 깨져(���) '모두를 위해'가 읽히지 않는다."
+				},
+				{
+					"item": "S5",
+					"pass": true
+				},
+				{
+					"item": "S6",
+					"pass": true
+				}
+			]
+		},
+		{
+			"card_id": "card_04_stamp_refusal",
+			"asks": "규정상 폐기해야 할, 삼 년 모은 물건이 든 상자를 숨겨 달라고 한다.",
+			"choices_read": [
+				{
+					"path": "easy",
+					"target": "주누의 상자",
+					"does": "상자를 검사대 뒤 빈 선반에 숨겨 준다",
+					"reaction_assumes": "상자가 선반에 올라가고 주누가 '고마워요, 은혜 갚을게요'라고 함 — 숨겨 준 행동에 대한 반응"
+				},
+				{
+					"path": "hard",
+					"target": "주누",
+					"does": "도장을 돌려주라고 하고 상자를 폐기 목록에 올린다",
+					"reaction_assumes": "주누가 떨리는 손으로 도장을 내밀고 '규정이 그렇다면 어쩔 수 없죠'라고 함 — 폐기 처리에 대한 반응"
+				},
+				{
+					"path": "stat",
+					"target": "주누의 상자(검사대)",
+					"does": "당신 이름을 내세워 상자를 검사 없이 통과시킨다",
+					"reaction_assumes": "주누가 '당신 이름이면 검사대도 눈감아 줄 거예요'라 하고 상자를 들고 지나감 — 통과시킨 행동에 대한 반응"
+				},
+				{
+					"path": "fun",
+					"target": "주누",
+					"does": "상자 안 물건을 꺼내 도장 대신 손도장을 찍자고 한다",
+					"reaction_assumes": "주누가 부품을 꺼내 손도장 스물세 개를 찍고 '뭔가 되긴 되네요'라고 함 — 제안에 응한 반응"
+				}
+			],
+			"checks": [
+				{
+					"item": "S1",
+					"pass": true
+				},
+				{
+					"item": "S2",
+					"pass": true
+				},
+				{
+					"item": "S3",
+					"pass": true
+				},
+				{
+					"item": "S4",
+					"pass": true
+				},
+				{
+					"item": "S5",
+					"pass": true
+				},
+				{
+					"item": "S6",
+					"pass": true
+				}
+			]
+		},
+		{
+			"card_id": "card_04_stretcher_worker",
+			"asks": "통로 한가운데 쓰러진 작업자를 옮길 수 있게 들것 한쪽을 들어 달라고 한다.",
+			"choices_read": [
+				{
+					"path": "easy",
+					"target": "필라와 들것",
+					"does": "함께 들것을 들어 작업자를 벽 쪽으로 옮긴다",
+					"reaction_assumes": "들것이 들리고 필라가 '고맙습니다'라고 함 — 함께 든 행동에 대한 반응"
+				},
+				{
+					"path": "hard",
+					"target": "필라",
+					"does": "들것 대신 명패를 뒤져 신원부터 확인하자고 한다",
+					"reaction_assumes": "필라가 들것을 내려놓고 노려보다 명패를 넘기며 '사람부터 옮겨야 하는 거 아닙니까'라고 함 — 들것을 거부한 행동에 대한 반응"
+				},
+				{
+					"path": "stat",
+					"target": "필라",
+					"does": "들것을 맡기고 앞장선다",
+					"reaction_assumes": "필라가 '당신이면 들어 줄 거라고 다들 그러더라고요'라며 혼자 들것을 끌어당김 — 들것을 맡긴 행동에 대한 반응"
+				}
+			],
+			"checks": [
+				{
+					"item": "S1",
+					"pass": true
+				},
+				{
+					"item": "S2",
+					"pass": true
+				},
+				{
+					"item": "S3",
+					"pass": true
+				},
+				{
+					"item": "S4",
+					"pass": false,
+					"quote": "뒤바뀐 명패를 근거로 삼��� 막힌 통로의 경비를 세운다.",
+					"problem": "boss_choice 문장에 글자가 깨져(삼���) '삼아'가 읽히지 않는다."
+				},
+				{
+					"item": "S5",
+					"pass": true
+				},
+				{
+					"item": "S6",
+					"pass": true
+				}
+			]
+		},
+		{
+			"card_id": "card_04_unfiled_report",
+			"asks": "기록이 섞여 반려된 신고서에 도장 하나만 찍어 접수시켜 달라고 한다.",
+			"choices_read": [
+				{
+					"path": "easy",
+					"target": "호벨의 신고서",
+					"does": "접수 도장을 찍어 절차를 끝까지 밀어붙인다",
+					"reaction_assumes": "도장이 찍히고 호벨이 '접수됐어요!'라고 함 — 도장을 찍은 행동에 대한 반응"
+				},
+				{
+					"path": "hard",
+					"target": "호벨",
+					"does": "도장을 찍지 않고 신고서를 폐기하고 피해자와 직접 얘기하자고 한다",
+					"reaction_assumes": "호벨이 신고서를 접어 넣고 '절차를 건너뛰면 나중에 아무것도 증명 못 해요'라고 함 — 도장을 거부한 행동에 대한 반응"
+				},
+				{
+					"path": "stat",
+					"target": "호벨(에게 규정집을 받아)",
+					"does": "접수 대장의 오류 항목을 직접 고친다",
+					"reaction_assumes": "호벨이 '당신이라면 규정 안에서 답을 찾을 줄 알았어요'라 하고 반려 표시가 사라짐 — 오류를 고친 행동에 대한 반응"
+				}
+			],
+			"checks": [
+				{
+					"item": "S1",
+					"pass": true
+				},
+				{
+					"item": "S2",
+					"pass": true
+				},
+				{
+					"item": "S3",
+					"pass": true
+				},
+				{
+					"item": "S4",
+					"pass": true
+				},
+				{
+					"item": "S5",
+					"pass": true
+				},
+				{
+					"item": "S6",
+					"pass": true
+				}
+			]
+		},
+		{
+			"card_id": "card_04_wrecked_gate",
+			"asks": "자기 명의로 뜬 파손 책임 기록을 멈추게 하려니 분류기 잠금장치를 부숴 달라고 한다.",
+			"choices_read": [
+				{
+					"path": "easy",
+					"target": "분류기 잠금장치",
+					"does": "마라 대신 잠금장치를 어깨로 들이받아 부순다",
+					"reaction_assumes": "잠금장치가 갈라지고 마라가 '됐어요! 기록 멈췄어요'라며 성의를 줌 — 부순 행동에 대한 반응"
+				},
+				{
+					"path": "hard",
+					"target": "마라",
+					"does": "부수지 않고 함께 잠금장치 오류 기록을 손으로 대조한다",
+					"reaction_assumes": "마라가 '이거 진짜 제 명의가 아니네요'라고 함 — 대조한 행동에 대한 반응"
+				},
+				{
+					"path": "stat",
+					"target": "마라",
+					"does": "잠금장치 열쇠를 넘겨받는다",
+					"reaction_assumes": "마라가 '이건 당신이 열어야 맞겠다 싶었어요'라며 열쇠를 꺼내 줌 — 열쇠를 요구한 행동에 대한 반응"
+				},
+				{
+					"path": "gold",
+					"target": "마라(에게 100골드)",
+					"does": "수리비 100골드를 쥐여주고 잠금장치를 그대로 두게 한다",
+					"reaction_assumes": "마라가 골드를 세어 보고 '이 정도면 이번 달은 버텨요'라고 함 — 돈을 준 행동에 대한 반응"
+				}
+			],
+			"checks": [
+				{
+					"item": "S1",
+					"pass": true
+				},
+				{
+					"item": "S2",
+					"pass": true
+				},
+				{
+					"item": "S3",
+					"pass": true
+				},
+				{
+					"item": "S4",
+					"pass": true
+				},
+				{
+					"item": "S5",
+					"pass": true
+				},
+				{
+					"item": "S6",
+					"pass": true
+				}
+			]
+		}
+	]
+}

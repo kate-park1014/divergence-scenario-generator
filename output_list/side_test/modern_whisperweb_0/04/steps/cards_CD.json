@@ -1,0 +1,679 @@
+{
+	"cards": [
+		{
+			"title": "뒤섞인 장부",
+			"slot": "C",
+			"rule_link": "데이터 스크린 조각에 금이 가면서 폐기물 정보와 장부가 뒤섞여버렸다.",
+			"key": "mixed_ledger",
+			"choices": [
+				{
+					"flag": {
+						"key": "wrong_ledger",
+						"boss_text": "잘못된 장부 데이터가 얽힌 함정이 당신의 발목을 잡는다.",
+						"label": "잘못된 장부"
+					},
+					"mbti": "FP",
+					"text": "대충 비슷해 보이는 정보들만 모아서 빠르게 장부를 재구성해 준다.",
+					"reward": [],
+					"result": [
+						{
+							"text": "당신이 급한 대로 데이터를 짜깁기해 넘겨주었다.",
+							"speaker": "narrator"
+						},
+						{
+							"text": "일단 이거라도 가져가야겠군. 수고했어.",
+							"speaker": "toma"
+						}
+					],
+					"path": "easy",
+					"effects": {
+						"reason": -10,
+						"gold": 50,
+						"community": -10
+					}
+				},
+				{
+					"mbti": "TJ",
+					"text": "시간이 걸리더라도 폐기물 목록과 장부를 하나씩 대조하며 정확히 분리한다.",
+					"flag": {
+						"key": "perfect_ledger",
+						"label": "완벽한 장부",
+						"boss_text": "당신은 토마의 완벽한 장부에서 얻은 정보로 안전한 길을 찾아낸다."
+					},
+					"effects": {
+						"echo": -10,
+						"reason": 10
+					},
+					"result": [
+						{
+							"speaker": "narrator",
+							"text": "당신이 꼼꼼하게 정보를 대조해 완벽한 장부를 복구해 냈다."
+						},
+						{
+							"speaker": "toma",
+							"text": "늦긴 했지만 확실하군! 덕분에 살았어."
+						}
+					],
+					"reward": [
+						"intelligence_up"
+					],
+					"path": "hard"
+				}
+			],
+			"person": {
+				"id": "toma",
+				"name": "토마",
+				"role": "잡동사니 상인"
+			},
+			"kind": "callback",
+			"wants": "섞여버린 폐기물 목록 속에서 자신의 장부를 분리해달라고 한다.",
+			"dialogue": [
+				{
+					"speaker": "narrator",
+					"text": "라벨이 제멋대로 바뀌는 폐기물 더미 앞에서 토마가 머리를 감싸 쥐고 있다."
+				},
+				{
+					"text": "큰일이야! 내 황금 같은 장부가 고철 폐기물 목록이랑 완전히 섞여버렸어!",
+					"speaker": "toma"
+				},
+				{
+					"speaker": "toma",
+					"text": "당장 거래처에 넘겨야 하는데, 이것 좀 빨리 분리해 줘!"
+				},
+				{
+					"text": "쉽게 도와줬던 게 이렇게 꼬일 줄은 몰랐네.",
+					"speaker": "dax"
+				}
+			],
+			"background_tags": [
+				"mixed",
+				"waste",
+				"lights",
+				"messy",
+				"screen"
+			],
+			"returns": "easy"
+		},
+		{
+			"wants": "아날로그 장부 덕에 피해를 면했다며 정확한 폐기물 정보를 사라고 제안한다.",
+			"returns": "hard",
+			"slot": "C",
+			"dialogue": [
+				{
+					"text": "혼란에 빠진 사람들 사이에서 토마가 여유롭게 수첩을 넘기고 있다.",
+					"speaker": "narrator"
+				},
+				{
+					"text": "하하! 그때 네 말대로 종이 수첩에 적어두길 정말 잘했지 뭐야!",
+					"speaker": "toma"
+				},
+				{
+					"text": "지금 이 구역에서 제대로 된 폐기물 정보는 나한테만 있다고. 하나 살 텐가?",
+					"speaker": "toma"
+				},
+				{
+					"speaker": "dax",
+					"text": "거절했던 게 오히려 전화위복이 됐네."
+				}
+			],
+			"title": "아날로그 장부",
+			"person": {
+				"id": "toma",
+				"role": "잡동사니 상인",
+				"name": "토마"
+			},
+			"choices": [
+				{
+					"path": "easy",
+					"flag": {
+						"label": "안전한 지도",
+						"boss_text": "당신은 토마에게 얻은 지도를 활용해 위험 폐기물 구역을 우회한다.",
+						"key": "safe_map"
+					},
+					"result": [
+						{
+							"text": "당신의 칭찬에 우쭐해진 토마가 기분 좋게 지도를 건넨다.",
+							"speaker": "narrator"
+						},
+						{
+							"speaker": "toma",
+							"text": "하하! 넌 역시 뭘 좀 아는 녀석이라니까. 이거 가져가!"
+						}
+					],
+					"reward": [
+						"move_range_up"
+					],
+					"effects": {
+						"community": 10,
+						"reason": -10
+					},
+					"text": "아날로그 방식이 최고라며 토마를 치켜세워 공짜로 지도를 얻어낸다.",
+					"mbti": "EF"
+				},
+				{
+					"path": "hard",
+					"flag": {
+						"label": "토마의 힌트",
+						"boss_text": "당신은 토마가 마지못해 공유해 준 힌트를 떠올려 메인 파이프의 폭발을 피한다.",
+						"key": "toma_hint"
+					},
+					"effects": {
+						"echo": -5,
+						"reason": 15
+					},
+					"result": [
+						{
+							"text": "당신의 정론에 찔린 토마가 마지못해 안전한 경로를 알려준다.",
+							"speaker": "narrator"
+						},
+						{
+							"text": "쳇, 말이나 못 하면. 메인 파이프 쪽은 피해서 가.",
+							"speaker": "toma"
+						}
+					],
+					"reward": [
+						"defense_up"
+					],
+					"mbti": "TJ",
+					"text": "지난번의 충고를 언급하며 거래 대신 정당한 정보 공유를 요구한다."
+				}
+			],
+			"rule_link": "정보가 섞이는 현상 속에서도 아날로그로 따로 관리한 장부 덕에 온전한 정보를 유지했다.",
+			"background_tags": [
+				"paper",
+				"crowd",
+				"dim",
+				"waste",
+				"labels"
+			],
+			"key": "analog_ledger",
+			"kind": "callback"
+		},
+		{
+			"person": {
+				"id": "jace",
+				"role": "폐기물 수거원",
+				"name": "제이스"
+			},
+			"dialogue": [
+				{
+					"text": "제이스가 라벨이 찢어진 상자 위에 걸터앉아 손을 흔든다.",
+					"speaker": "narrator"
+				},
+				{
+					"text": "어차피 라벨이 다 섞여서 뭐가 1급 위험물인지 아무도 몰라.",
+					"speaker": "jace"
+				},
+				{
+					"text": "이 상자에 값비싼 부품이 들었을지, 폭발물이 들었을지 나랑 내기할래?",
+					"speaker": "jace"
+				},
+				{
+					"text": "위험 폐기물이 섞인 마당에 내기라니, 제정신이야?",
+					"speaker": "dax"
+				}
+			],
+			"wants": "라벨이 섞여 내용물을 알 수 없는 상자를 두고 무엇이 들었는지 내기를 제안한다.",
+			"background_tags": [
+				"torn",
+				"box",
+				"waste",
+				"lights",
+				"floor"
+			],
+			"kind": "normal",
+			"rule_link": "데이터 스크린 조각에 금이 가면서 폐기물 상자의 분류 라벨이 모두 엉터리로 바뀌었다.",
+			"key": "mixed_box",
+			"choices": [
+				{
+					"event_reason": "제이스가 상자의 내용물을 확인하며 룰렛을 돌리듯 결과를 확인한다.",
+					"mbti": "EF",
+					"effects": {
+						"reason": -10,
+						"gold": -20
+					},
+					"result": [
+						{
+							"speaker": "narrator",
+							"text": "당신은 내기에 참여해 상자의 내용물을 확인하기로 했다."
+						},
+						{
+							"text": "과연 네 운이 얼마나 좋을지 한번 볼까?",
+							"speaker": "jace"
+						}
+					],
+					"reward": [],
+					"path": "easy",
+					"text": "상자 안에 값비싼 부품이 들어있을 거라며 제이스의 내기에 돈을 건다.",
+					"event_intro": [
+						{
+							"text": "좋아! 판돈을 걸었으니 이제 상자를 열어 결과를 확인해 보자고!",
+							"speaker": "jace"
+						}
+					],
+					"event": "minigame_slot"
+				},
+				{
+					"path": "hard",
+					"result": [
+						{
+							"speaker": "narrator",
+							"text": "당신이 내기를 무시하고 상자를 안전 구역으로 밀어 넣었다."
+						},
+						{
+							"speaker": "jace",
+							"text": "아쉽네, 스릴을 즐길 줄 모르는 녀석."
+						}
+					],
+					"reward": [
+						"shield"
+					],
+					"effects": {
+						"reason": 10,
+						"echo": -10
+					},
+					"text": "비상 상황에 내기를 할 때가 아니라며 상자를 위험 폐기물로 격리한다.",
+					"mbti": "IJ"
+				},
+				{
+					"effects": {
+						"gold": -50,
+						"reason": 10
+					},
+					"text": "제이스에게 크레딧을 주며 위험하니 스캔 장비로 내용물을 확인하게 한다.",
+					"mbti": "TJ",
+					"result": [
+						{
+							"speaker": "narrator",
+							"text": "당신이 돈을 쥐여주자 제이스가 군말 없이 스캐너를 켠다."
+						},
+						{
+							"speaker": "jace",
+							"text": "뭐, 돈을 준다면야 굳이 목숨 걸고 내기할 필요 없지."
+						}
+					],
+					"reward": [
+						"defense_up"
+					],
+					"path": "gold"
+				},
+				{
+					"path": "lock",
+					"require_mbti": "ST",
+					"reward": [
+						"intelligence_up"
+					],
+					"result": [
+						{
+							"speaker": "narrator",
+							"text": "{actor}이(가) 스캐너를 들이대어 안전한 부품 상자임을 밝혀냈다."
+						},
+						{
+							"speaker": "jace",
+							"text": "쳇, 과학 장비 앞에서는 내기가 성립 안 되지. 가져가라."
+						}
+					],
+					"mbti": "ST",
+					"text": "{actor}이(가) 상자 외부의 화학 반응 흔적을 스캔해 내용물이 부품임을 증명한다.",
+					"effects": {
+						"reason": 10
+					}
+				}
+			],
+			"slot": "C",
+			"title": "정체불명의 상자"
+		},
+		{
+			"title": "뒤섞인 인사 기록",
+			"returns": "easy",
+			"slot": "D",
+			"dialogue": [
+				{
+					"speaker": "narrator",
+					"text": "모니터들이 폭주하는 가운데 벡스가 창백한 얼굴로 달려온다."
+				},
+				{
+					"speaker": "bex",
+					"text": "큰일 났어요! 제 인사 기록이 청소 로봇의 폐기 기록이랑 섞여버렸어요!"
+				},
+				{
+					"text": "이대로면 제가 쓰레기장으로 폐기 처분될 거예요. 제발 한 번만 더 조작해 줘요!",
+					"speaker": "bex"
+				},
+				{
+					"text": "기록을 어설프게 건드렸다가 완전히 뒤죽박죽이 됐잖아!",
+					"speaker": "dax"
+				}
+			],
+			"key": "bex_crisis",
+			"choices": [
+				{
+					"path": "easy",
+					"result": [
+						{
+							"text": "당신이 급하게 시스템을 조작해 벡스의 폐기 처분을 막았다.",
+							"speaker": "narrator"
+						},
+						{
+							"speaker": "bex",
+							"text": "휴, 일단 살았네요. 정말 고마워요!"
+						}
+					],
+					"reward": [
+						"cooldown_reset"
+					],
+					"mbti": "FJ",
+					"text": "벡스를 위해 관리자 단말기를 해킹해 폐기 기록을 임시로 덮어씌운다.",
+					"effects": {
+						"community": 10,
+						"reason": -10,
+						"gold": 50
+					},
+					"flag": {
+						"label": "조작된 기록",
+						"boss_text": "임시로 덮어씌운 기록이 들통나 보안 장치가 당신을 적으로 인식하고 공격한다.",
+						"key": "hacked_record"
+					}
+				},
+				{
+					"text": "원래의 조작 사실을 관리자에게 이실직고해 시스템 오류를 바로잡으라고 설득한다.",
+					"mbti": "TJ",
+					"effects": {
+						"echo": -10,
+						"reason": 15
+					},
+					"flag": {
+						"boss_text": "당신은 벡스가 관리자에게 받아온 권한 코드를 이용해 굳게 닫힌 문을 연다.",
+						"key": "honest_confession",
+						"label": "솔직한 고백"
+					},
+					"path": "hard",
+					"result": [
+						{
+							"speaker": "narrator",
+							"text": "당신의 설득에 벡스가 고개를 숙이며 관리자에게 향한다."
+						},
+						{
+							"speaker": "bex",
+							"text": "네... 제 잘못이니 제가 책임지고 바로잡을게요."
+						}
+					],
+					"reward": [
+						"defense_up"
+					]
+				}
+			],
+			"kind": "callback",
+			"background_tags": [
+				"monitors",
+				"alerts",
+				"room",
+				"screen",
+				"noise"
+			],
+			"wants": "자신의 고과가 폐기 기록과 섞여 해고될 위기라며 시스템을 다시 조작해달라고 한다.",
+			"rule_link": "스크린 조각이 깨지기 직전이라 보안 시스템이 무력화되고 기록이 엉망으로 섞였다.",
+			"person": {
+				"role": "폐기물 분류 작업자",
+				"name": "벡스",
+				"id": "bex"
+			}
+		},
+		{
+			"title": "온전한 신분증",
+			"key": "bex_safe",
+			"slot": "D",
+			"choices": [
+				{
+					"path": "easy",
+					"reward": [
+						"move_range_up"
+					],
+					"result": [
+						{
+							"text": "당신은 벡스의 신분증을 스캔해 게이트를 무사히 통과했다.",
+							"speaker": "narrator"
+						},
+						{
+							"text": "행운을 빌어요! 전 여기서 대기할게요.",
+							"speaker": "bex"
+						}
+					],
+					"effects": {
+						"echo": 10,
+						"community": 10
+					},
+					"flag": {
+						"boss_text": "당신은 벡스의 유효한 신분증을 활용해 보안 시스템의 스캔을 무사히 통과한다.",
+						"label": "유효한 신분증",
+						"key": "valid_id"
+					},
+					"mbti": "EP",
+					"text": "벡스의 호의를 받아들여 신분증으로 보안 게이트를 통과한다."
+				},
+				{
+					"reward": [
+						"attack_up"
+					],
+					"result": [
+						{
+							"text": "당신이 완력으로 게이트를 열어젖히자 벡스가 놀란 표정을 짓는다.",
+							"speaker": "narrator"
+						},
+						{
+							"speaker": "bex",
+							"text": "굳이 힘을 쓰다니... 그래도 조심하세요."
+						}
+					],
+					"flag": {
+						"label": "강제 개방된 문",
+						"key": "forced_gate",
+						"boss_text": "당신은 강제로 열어둔 게이트의 틈새를 통해 파쇄기의 감시를 피한다."
+					},
+					"effects": {
+						"echo": -5,
+						"fighting": 15
+					},
+					"text": "벡스까지 위험해질 수 있다며 도움을 거절하고 수동으로 게이트를 강제 개방한다.",
+					"mbti": "IT",
+					"path": "hard"
+				}
+			],
+			"person": {
+				"id": "bex",
+				"name": "벡스",
+				"role": "폐기물 분류 작업자"
+			},
+			"dialogue": [
+				{
+					"text": "사람들의 기록이 섞여 난장판인 곳에서 벡스가 평온하게 다가온다.",
+					"speaker": "narrator"
+				},
+				{
+					"speaker": "bex",
+					"text": "당신 말대로 기록을 안 건드리길 잘했어요. 저만 멀쩡하거든요."
+				},
+				{
+					"text": "위로 올라가야 하죠? 제 신분증으로 잠긴 구역을 열어드릴게요.",
+					"speaker": "bex"
+				},
+				{
+					"text": "거절했던 게 이렇게 도움이 될 줄이야.",
+					"speaker": "dax"
+				}
+			],
+			"background_tags": [
+				"gate",
+				"monitors",
+				"room",
+				"dim",
+				"data"
+			],
+			"kind": "callback",
+			"wants": "홀로 정상 기록을 유지한 자신의 유효한 신분증으로 잠긴 게이트를 열어주겠다고 한다.",
+			"rule_link": "보안 시스템이 붕괴하는 와중에도 원본 기록을 유지한 덕분에 정상 상태다.",
+			"returns": "hard"
+		},
+		{
+			"choices": [
+				{
+					"path": "easy",
+					"reward": [],
+					"result": [
+						{
+							"text": "당신이 시선을 끄는 사이 네로가 모니터의 전원을 내렸다.",
+							"speaker": "narrator"
+						},
+						{
+							"speaker": "nero",
+							"text": "휴, 덕분에 살았습니다."
+						}
+					],
+					"effects": {
+						"fighting": 15
+					},
+					"event_reason": "억울한 기록 때문에 분노한 낯선 작업자가 당신을 관리자로 오해하고 덤벼든다.",
+					"event": "meet_stranger",
+					"mbti": "ET",
+					"event_intro": [
+						{
+							"speaker": "narrator",
+							"text": "“내 기록 당장 원래대로 돌려놔!” 낯선 작업자가 스패너를 치켜들고 달려든다."
+						}
+					],
+					"avoid_penalty": "hp_down",
+					"text": "흥분한 낯선 작업자의 앞을 가로막고 정면으로 맞선다.",
+					"event_options": {
+						"avoid": {
+							"text": "{actor}이(가) 작업자의 공격을 아슬아슬하게 피한다.",
+							"result": [
+								{
+									"speaker": "narrator",
+									"text": "작업자가 휘두른 스패너에 스쳐 타박상을 입었다."
+								}
+							]
+						},
+						"fight": {
+							"lose": [
+								{
+									"text": "{actor}이(가) 작업자의 거센 공격에 밀려 넘어졌다.",
+									"speaker": "narrator"
+								}
+							],
+							"text": "{actor}이(가) 작업자의 스패너를 쳐내며 맞선다.",
+							"win": [
+								{
+									"speaker": "narrator",
+									"text": "{actor}이(가) 작업자를 제압해 바닥에 눕혔다."
+								}
+							]
+						}
+					}
+				},
+				{
+					"path": "hard",
+					"effects": {
+						"echo": -10,
+						"reason": 10
+					},
+					"reward": [
+						"defense_up"
+					],
+					"result": [
+						{
+							"speaker": "narrator",
+							"text": "당신이 재빨리 케이블을 뽑아버리자 모니터가 꺼지며 소동이 멈췄다."
+						},
+						{
+							"text": "윽, 데이터가 날아갔겠지만... 어쩔 수 없죠.",
+							"speaker": "nero"
+						}
+					],
+					"text": "싸움에 휘말리지 않도록 작업자를 피해 네로 대신 직접 전원 케이블을 뽑는다.",
+					"mbti": "IJ"
+				},
+				{
+					"reward": [
+						"heal"
+					],
+					"result": [
+						{
+							"text": "당신이 건넨 돈을 본 작업자가 스패너를 내리며 멈칫한다.",
+							"speaker": "narrator"
+						},
+						{
+							"text": "돈으로 해결하다니, 역시 가장 확실한 방법이네요.",
+							"speaker": "nero"
+						}
+					],
+					"mbti": "ES",
+					"text": "작업자에게 크레딧을 쥐여주며 시스템 오류니 화를 내지 말라고 진정시킨다.",
+					"effects": {
+						"gold": -50,
+						"community": 10
+					},
+					"path": "gold"
+				},
+				{
+					"require_mbti": "FJ",
+					"text": "{actor}이(가) 작업자의 억울함에 공감하며 오해를 논리적으로 풀어준다.",
+					"mbti": "FJ",
+					"path": "lock",
+					"effects": {
+						"community": 15
+					},
+					"reward": [
+						"heal"
+					],
+					"result": [
+						{
+							"text": "{actor}이(가) 차분하게 시스템 오류를 설명하자 작업자가 스패너를 내려놓는다.",
+							"speaker": "narrator"
+						},
+						{
+							"speaker": "nero",
+							"text": "말로 해결하다니, 대단한 솜씨네요."
+						}
+					]
+				}
+			],
+			"title": "폭주하는 작업자",
+			"background_tags": [
+				"console",
+				"monitors",
+				"worker",
+				"alerts",
+				"room"
+			],
+			"slot": "D",
+			"dialogue": [
+				{
+					"text": "네로가 스패너를 휘두르는 작업자를 피해 콘솔 뒤에 숨어 있다.",
+					"speaker": "narrator"
+				},
+				{
+					"text": "저 사람이 남의 징계 기록을 자기 걸로 오해하고 모니터를 부수려 해요!",
+					"speaker": "nero"
+				},
+				{
+					"text": "제가 전원을 차단할 때까지 저 사람 좀 막아주세요!",
+					"speaker": "nero"
+				},
+				{
+					"text": "완전히 이성을 잃었어. 당장 우리 쪽으로 달려오고 있잖아!",
+					"speaker": "dax"
+				}
+			],
+			"wants": "남의 징계 기록을 뒤집어쓰고 폭주하는 작업자를 막아달라고 부탁한다.",
+			"key": "angry_stranger",
+			"rule_link": "시스템 경계가 무너지며 모니터에 다른 사람의 업무 기록이 무작위로 출력되고 있다.",
+			"kind": "normal",
+			"person": {
+				"name": "네로",
+				"role": "시스템 관리자",
+				"id": "nero"
+			}
+		}
+	],
+	"errors": []
+}

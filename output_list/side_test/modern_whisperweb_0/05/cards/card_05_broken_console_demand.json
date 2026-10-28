@@ -1,0 +1,224 @@
+{
+	"id": "card_05_broken_console_demand",
+	"kind": "rep",
+	"title": {
+		"korean": "부숴야 직성이 풀리는 남자"
+	},
+	"intensity": "calm",
+	"after_story": 1,
+	"before_story": 3,
+	"condition": {
+		"leaning": "fighting-",
+		"among": [
+			"fighting-",
+			"fighting+",
+			"community-",
+			"community+",
+			"reason-",
+			"reason+"
+		],
+		"min": 20
+	},
+	"urgency": 8,
+	"leaning": "fighting-",
+	"background_tags": [
+		"control_room",
+		"late_shift",
+		"flickering_light",
+		"crowded",
+		"tense"
+	],
+	"dialogue": [
+		{
+			"speaker": "console_breaker",
+			"content": {
+				"korean": "당신이 지난번에 힘으로 밀어붙여 사람들 앞을 뚫었다는 그 사람이죠? 소문 들었어요."
+			}
+		},
+		{
+			"speaker": "console_breaker",
+			"content": {
+				"korean": "마침 잘됐네. 이 통제판, 세 번 갈아치워도 안 돼요. 부수는 데는 자신 있죠?"
+			}
+		},
+		{
+			"speaker": "echo",
+			"content": {
+				"korean": "잠깐, 저 사람 손에 든 망치 각도 좀 봐. 저건 통제판이 아니라 뒤쪽 선을 노리고 있어!"
+			}
+		},
+		{
+			"speaker": "narrator",
+			"content": {
+				"korean": "망치 끝이 흔들릴 때마다 통제판 뒤로 이어진 선이 팽팽하게 튕겼다."
+			}
+		},
+		{
+			"speaker": "console_breaker",
+			"content": {
+				"korean": "한 번만 때리면 끝나요. 안 부수면 내가 대신 부순다고요."
+			}
+		}
+	],
+	"choices": [
+		{
+			"text": {
+				"korean": "망치를 받아 통제판을 내리친다."
+			},
+			"path": "easy",
+			"mbti": "TJ",
+			"flag": "console_smashed",
+			"effects": {
+				"fighting": 15,
+				"community": -10,
+				"echo": -10
+			},
+			"reward": [
+				"attack_up"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "통제판이 두 쪽으로 갈라지며 파편이 튀었다."
+					}
+				},
+				{
+					"speaker": "console_breaker",
+					"content": {
+						"korean": "거 봐요, 시원하잖아! 다음엔 그 조각도 부탁해요."
+					}
+				},
+				{
+					"speaker": "echo",
+					"content": {
+						"korean": "야, 방금 뒤쪽 선이 같이 끊긴 소리 났어. 내 정보망이 또 흔들렸다고!"
+					}
+				}
+			]
+		},
+		{
+			"text": {
+				"korean": "망치를 내려놓고 통제판 뒤의 선부터 확인한다."
+			},
+			"path": "hard",
+			"mbti": "NF",
+			"flag": "console_wiring_seen",
+			"effects": {
+				"fighting": -15,
+				"reason": -10,
+				"echo": 10
+			},
+			"reward": [
+				"intelligence_up"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "console_breaker",
+					"content": {
+						"korean": "뭐요? 안 부순다고? 그럼 이 답답한 화면은 누가 책임져요!"
+					}
+				},
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "선을 따라가자 통제판 뒤에 반쯤 끼인 데이터 스크린 조각의 모서리가 드러났다."
+					}
+				},
+				{
+					"speaker": "echo",
+					"content": {
+						"korean": "봐, 안 부수니까 보이잖아. 저 모서리, 아까까진 없던 거야."
+					}
+				}
+			]
+		},
+		{
+			"text": {
+				"korean": "철거반 오퍼레이터에게 통제판을 맡기고 당신은 앞을 막아선다."
+			},
+			"path": "stat",
+			"mbti": "EP",
+			"require": {
+				"stat": "fighting",
+				"op": "<=",
+				"value": -40
+			},
+			"flag": "breaker_on_guard",
+			"effects": {
+				"fighting": -20,
+				"echo": 5
+			},
+			"reward": [
+				"shield"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "console_breaker",
+					"content": {
+						"korean": "당신 이름값 하네요. 뒤는 제가 맡을 테니 앞만 봐요!"
+					}
+				},
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "망치가 통제판 옆 기둥을 정확히 때려, 흔들리던 선이 제자리로 돌아갔다."
+					}
+				},
+				{
+					"speaker": "echo",
+					"content": {
+						"korean": "어? 정보망이 조금 살아났어. 이 사람, 생각보다 쓸 만한데?"
+					}
+				}
+			]
+		}
+	],
+	"_side": {
+		"slot": "A",
+		"person": {
+			"id": "console_breaker",
+			"name": "철거반 오퍼레이터",
+			"role": "구역 철거 담당"
+		},
+		"wants": "데이터가 꼬여 통제판이 먹통이 되자, 자기 손으로 통제판을 부숴야 직성이 풀린다며 당신에게 큰 망치를 쥐여 주려 한다.",
+		"rule_link": "통제판과 데이터 스크린 조각이 같은 선으로 이어져 있어, 부수면 조각이 깨질 수 있다.",
+		"rep": "fighting-",
+		"events": {},
+		"flags": {
+			"console_smashed": {
+				"kind": "bad",
+				"boss_penalty": -1,
+				"label": {
+					"korean": "부서진 통제판"
+				},
+				"boss_line": {
+					"korean": "부서진 통제판 파편이 발밑에서 굴러, 당신의 발이 끼어 한 걸음 늦는다."
+				}
+			},
+			"console_wiring_seen": {
+				"kind": "good",
+				"boss_penalty": 1,
+				"label": {
+					"korean": "확인한 배선"
+				},
+				"boss_choice": {
+					"korean": "통제판 뒤에서 확인해 둔 배선 위치를 따라 조각에 손을 뻗는다."
+				}
+			},
+			"breaker_on_guard": {
+				"kind": "good",
+				"boss_penalty": 2,
+				"label": {
+					"korean": "철거반의 호위"
+				},
+				"boss_choice": {
+					"korean": "망치를 든 오퍼레이터가 옆에서 길을 틔워 준다."
+				}
+			}
+		}
+	}
+}

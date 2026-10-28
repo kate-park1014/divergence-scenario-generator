@@ -1,0 +1,177 @@
+{
+	"id": "card_03_blurred_screen",
+	"kind": "normal",
+	"title": {
+		"korean": "흐릿해진 화면"
+	},
+	"intensity": "calm",
+	"after_story": 5,
+	"before_story": 7,
+	"background_tags": [
+		"stain",
+		"blur",
+		"worker",
+		"light",
+		"anxious"
+	],
+	"dialogue": [
+		{
+			"speaker": "data_archivist",
+			"content": {
+				"korean": "큰일 났어요! 기기에 묻은 물기 때문에 제 기록이 담긴 스크린 조각이 번지고 있어요."
+			}
+		},
+		{
+			"speaker": "kai",
+			"content": {
+				"korean": "이물질이 섞인 냉각수야. 함부로 만지면 피부도 상할 텐데."
+			}
+		},
+		{
+			"speaker": "data_archivist",
+			"content": {
+				"korean": "이 기록이 날아가면 저는 쫓겨날 겁니다. 제발 좀 닦아주세요!"
+			}
+		}
+	],
+	"choices": [
+		{
+			"text": {
+				"korean": "장갑을 끼고 대충 겉면의 물기만 닦아내어 당장의 번짐을 막는다."
+			},
+			"path": "easy",
+			"mbti": "EP",
+			"effects": {
+				"echo": -10,
+				"reason": -10,
+				"gold": 100,
+				"community": -10
+			},
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "기록의 일부는 구했지만 오염 물질이 틈새에 남았다."
+					}
+				},
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "보관자가 안도하며 두둑한 사례금을 주었다."
+					}
+				}
+			]
+		},
+		{
+			"text": {
+				"korean": "오염된 기기를 완전히 분해하여 안전하게 이물질을 제거한다."
+			},
+			"path": "hard",
+			"mbti": "IS",
+			"effects": {
+				"community": 20,
+				"echo": 10,
+				"reason": 20
+			},
+			"reward": [
+				"intelligence_up"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "기기를 분해하느라 시간이 지체되고 손끝이 조금 부르텄다."
+					}
+				},
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "하지만 기록은 완벽하게 보존되었다."
+					}
+				}
+			]
+		},
+		{
+			"text": {
+				"korean": "전문 세척액을 사서 기기의 오염을 빠르고 말끔하게 지운다."
+			},
+			"path": "gold",
+			"mbti": "ES",
+			"require": {
+				"stat": "gold",
+				"op": ">=",
+				"value": 50
+			},
+			"effects": {
+				"reason": 10,
+				"gold": -50,
+				"community": 10
+			},
+			"reward": [
+				"heal"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "세척액이 이물질을 녹여내어 스크린 조각이 깨끗해졌다."
+					}
+				},
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "보관자가 거듭 감사 인사를 전했다."
+					}
+				}
+			]
+		},
+		{
+			"text": {
+				"korean": "{actor}이(가) 오염 확산 속도를 계산하여 가장 중요한 데이터 칩만 신속히 뽑아낸다."
+			},
+			"path": "lock",
+			"mbti": "TJ",
+			"require": {
+				"mbti": "TJ"
+			},
+			"effects": {
+				"echo": 10,
+				"reason": 20,
+				"community": 10
+			},
+			"reward": [
+				"intelligence_up"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "{actor}의 빠른 판단 덕분에 핵심 기록은 손상 없이 건져냈다."
+					}
+				},
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "보관자가 감탄하며 데이터 칩의 복사본을 건넸다."
+					}
+				}
+			]
+		}
+	],
+	"_side": {
+		"slot": "C",
+		"person": {
+			"name": "기록 보관자",
+			"role": "전산실 직원",
+			"id": "data_archivist"
+		},
+		"wants": "자신의 작업 기록이 번지고 있다며 오염된 기기를 닦아달라고 부탁한다.",
+		"rule_link": "냉각수 이물질에 닿은 데이터 스크린 조각의 글자들이 물감처럼 번지고 있다.",
+		"events": {},
+		"flags": {}
+	}
+}

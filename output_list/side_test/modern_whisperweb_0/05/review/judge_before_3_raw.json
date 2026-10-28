@@ -1,0 +1,334 @@
+{
+	"cards": [
+		{
+			"card_id": "card_05_everyone_first",
+			"asks": "조각 맞추기 전에 제어실에 남은 열두 명 전원의 몫을 명단에 먼저 정해 달라.",
+			"choices_read": [
+				{
+					"path": "easy",
+					"target": "교대 조장",
+					"does": "조장과 함께 열두 명 몫을 명단에 적는다",
+					"reaction_assumes": "주인공이 명단에 이름을 채워 넣는 데 동참함"
+				},
+				{
+					"path": "hard",
+					"target": "교대 조장(명단)",
+					"does": "명단은 조장에게 맡기고 조각 홈을 확인한다",
+					"reaction_assumes": "주인공이 명단 작업을 조장에게 넘기고 조각 쪽으로 돌아섬"
+				},
+				{
+					"path": "stat",
+					"target": "교대 조장",
+					"does": "조장에게 열두 명을 홀로그램 앞에 세우게 한다",
+					"reaction_assumes": "주인공이 조장에게 인원을 세우라고 지시함"
+				}
+			],
+			"checks": [
+				{
+					"item": "S1",
+					"pass": true
+				},
+				{
+					"item": "S2",
+					"pass": true
+				},
+				{
+					"item": "S3",
+					"pass": true
+				},
+				{
+					"item": "S4",
+					"pass": true
+				},
+				{
+					"item": "S5",
+					"pass": true
+				},
+				{
+					"item": "S6",
+					"pass": false,
+					"quote": "교대 조장과 함께 열두 명 몫을 명단에 적는다",
+					"problem": "rep_note가 '모두를 위해 나서는 사람'인데, easy 선택지의 결과가 '지워진 건 퇴근한 사람 이름이었네요'로 끝나며 열두 명 몫 확보라는 평판 사건이 실제로 성립하는지 흐려지고, stat 선택지의 '홀로그램 앞에 세우게 한다'는 평판과 무관한 전투 준비 행동이라 같은 칸 평판 카드들과 사건 종류가 겹친다."
+				}
+			]
+		},
+		{
+			"card_id": "card_05_my_share_first",
+			"asks": "맞춰지기 전의 조각 세 개를 200골드에 자기에게 넘기라고 한다.",
+			"choices_read": [
+				{
+					"path": "easy",
+					"target": "부품 상인",
+					"does": "조각 세 개를 넘기고 200골드를 받는다",
+					"reaction_assumes": "주인공이 조각을 상인에게 팔아넘김"
+				},
+				{
+					"path": "hard",
+					"target": "부품 상인의 가방",
+					"does": "가방을 열어 조각을 다시 꺼낸다",
+					"reaction_assumes": "주인공이 이미 넘긴 조각을 되찾아 감"
+				},
+				{
+					"path": "stat",
+					"target": "부품 상인",
+					"does": "조각 값 대신 다른 부품을 팔아넘긴다",
+					"reaction_assumes": "주인공이 상인에게 부품을 팔아 조각은 지킴"
+				},
+				{
+					"path": "gold",
+					"target": "부품 상인",
+					"does": "120골드를 얹어 조각을 되사 온다",
+					"reaction_assumes": "주인공이 돈을 더 내고 조각을 되삼"
+				}
+			],
+			"checks": [
+				{
+					"item": "S1",
+					"pass": true
+				},
+				{
+					"item": "S2",
+					"pass": true
+				},
+				{
+					"item": "S3",
+					"pass": false,
+					"quote": "부품 상인의 가방을 열어 조각을 다시 꺼낸다",
+					"problem": "hard 선택지는 '가방을 열어 조각을 다시 꺼낸다'인데, 앞 대사에서 주인공이 조각을 판 적이 없어 '다시'가 성립하지 않고 결과 첫 줄도 상인이 뒷걸음질 치는 반응이라 주인공이 이미 조각을 넘긴 뒤 되찾는 행동을 전제한다."
+				},
+				{
+					"item": "S4",
+					"pass": true
+				},
+				{
+					"item": "S5",
+					"pass": true
+				},
+				{
+					"item": "S6",
+					"pass": true
+				}
+			]
+		},
+		{
+			"card_id": "card_05_name_in_the_wires",
+			"asks": "서명이 찍힌 회로를 자기 배상금으로 내놓으라고, 뜯어낼 거면 자기 앞에서 뜯어내라고 한다.",
+			"choices_read": [
+				{
+					"path": "easy",
+					"target": "배선 반장(앞)",
+					"does": "서명 회로를 뜯어낸다",
+					"reaction_assumes": "주인공이 반장 앞에서 회로를 뜯어냄"
+				},
+				{
+					"path": "hard",
+					"target": "배선 반장",
+					"does": "서명 회로를 반장에게 넘기고 조각 맞추기를 계속한다",
+					"reaction_assumes": "주인공이 회로를 반장에게 양보함"
+				},
+				{
+					"path": "stat",
+					"target": "배선 반장",
+					"does": "회로를 찾아주는 대가로 통로를 비켜 달라 한다",
+					"reaction_assumes": "주인공이 반장에게 거래를 제안함"
+				}
+			],
+			"checks": [
+				{
+					"item": "S1",
+					"pass": true
+				},
+				{
+					"item": "S2",
+					"pass": true
+				},
+				{
+					"item": "S3",
+					"pass": true
+				},
+				{
+					"item": "S4",
+					"pass": true
+				},
+				{
+					"item": "S5",
+					"pass": true
+				},
+				{
+					"item": "S6",
+					"pass": true
+				}
+			]
+		},
+		{
+			"card_id": "card_05_no_rules_tonight",
+			"asks": "조각 하나를 떼어 자기에게 주면 나머지를 순서 없이 맞춰 주겠다고 한다.",
+			"choices_read": [
+				{
+					"path": "easy",
+					"target": "야간 러너",
+					"does": "조각 하나를 떼어 주고 나머지를 맡긴다",
+					"reaction_assumes": "주인공이 조각 하나를 러너에게 넘김"
+				},
+				{
+					"path": "hard",
+					"target": "야간 러너",
+					"does": "조각을 주지 않고 자기 방식대로 맞추게 둔다",
+					"reaction_assumes": "주인공이 러너에게 조각을 주지 않고 작업을 맡김"
+				},
+				{
+					"path": "stat",
+					"target": "야간 러너",
+					"does": "환풍구 퇴로를 열어 주고 조각 작업을 맡긴다",
+					"reaction_assumes": "주인공이 러너의 퇴로를 열어 줌"
+				},
+				{
+					"path": "gold",
+					"target": "야간 러너",
+					"does": "100골드를 주고 조각은 건드리지 않게 한다",
+					"reaction_assumes": "주인공이 돈을 주고 러너를 물러나게 함"
+				}
+			],
+			"checks": [
+				{
+					"item": "S1",
+					"pass": true
+				},
+				{
+					"item": "S2",
+					"pass": true
+				},
+				{
+					"item": "S3",
+					"pass": true
+				},
+				{
+					"item": "S4",
+					"pass": true
+				},
+				{
+					"item": "S5",
+					"pass": true
+				},
+				{
+					"item": "S6",
+					"pass": true
+				}
+			]
+		},
+		{
+			"card_id": "card_05_procedure_trap",
+			"asks": "절차서에 없는 방식으로 조각을 맞추면 제어실을 폐쇄하겠다며 서명된 허가서를 받으라고 한다.",
+			"choices_read": [
+				{
+					"path": "easy",
+					"target": "안전 점검관",
+					"does": "허가서에 서명을 받아 둔다",
+					"reaction_assumes": "주인공이 점검관에게 허가서 서명을 받음"
+				},
+				{
+					"path": "hard",
+					"target": "안전 점검관의 절차서",
+					"does": "절차서를 접어 옆에 두고 조각을 계속 맞춘다",
+					"reaction_assumes": "주인공이 절차서를 무시하고 조각을 맞춤"
+				},
+				{
+					"path": "stat",
+					"target": "안전 점검관",
+					"does": "절차서에 조각 맞추기 항목을 추가하게 한다",
+					"reaction_assumes": "주인공이 점검관에게 항목 추가를 요구함"
+				},
+				{
+					"path": "fun",
+					"target": "안전 점검관의 절차서",
+					"does": "절차서에 자기 이름을 대신 적어 넣는다",
+					"reaction_assumes": "주인공이 절차서에 이름을 적어 넣음"
+				}
+			],
+			"checks": [
+				{
+					"item": "S1",
+					"pass": true
+				},
+				{
+					"item": "S2",
+					"pass": true
+				},
+				{
+					"item": "S3",
+					"pass": true
+				},
+				{
+					"item": "S4",
+					"pass": true
+				},
+				{
+					"item": "S5",
+					"pass": true
+				},
+				{
+					"item": "S6",
+					"pass": true
+				}
+			]
+		},
+		{
+			"card_id": "card_05_shaking_hands",
+			"asks": "손이 떨려 조각을 잡을 수 없으니 대신 잡아 주고, 보고서엔 자기 이름으로 올려 달라고 한다.",
+			"choices_read": [
+				{
+					"path": "easy",
+					"target": "신입 코더",
+					"does": "코더의 손을 잡아 조각을 홈에 얹게 돕는다",
+					"reaction_assumes": "주인공이 코더의 손을 잡아 함께 조각을 얹음"
+				},
+				{
+					"path": "hard",
+					"target": "신입 코더",
+					"does": "코더를 옆에 앉혀 두고 조각 맞추기 순서를 직접 확인한다",
+					"reaction_assumes": "주인공이 코더를 돕지 않고 혼자 순서를 확인함"
+				},
+				{
+					"path": "stat",
+					"target": "신입 코더",
+					"does": "조각 잡는 법을 알려 주고 손을 떼게 한다",
+					"reaction_assumes": "주인공이 코더에게 방법을 가르치고 물러남"
+				},
+				{
+					"path": "fun",
+					"target": "신입 코더",
+					"does": "떨리는 손을 붙잡고 같이 박수 쳐서 손을 풀어준다",
+					"reaction_assumes": "주인공이 코더와 함께 박수를 침"
+				}
+			],
+			"checks": [
+				{
+					"item": "S1",
+					"pass": true
+				},
+				{
+					"item": "S2",
+					"pass": true
+				},
+				{
+					"item": "S3",
+					"pass": true
+				},
+				{
+					"item": "S4",
+					"pass": false,
+					"quote": "박수라니. 옆에서 보는데 나도 모르게 ���이 아팠어.",
+					"problem": "에코 대사에 글자가 깨져 '���이 아팠어'로 읽혀 뜻이 통하지 않는다."
+				},
+				{
+					"item": "S5",
+					"pass": true
+				},
+				{
+					"item": "S6",
+					"pass": true
+				}
+			]
+		}
+	]
+}

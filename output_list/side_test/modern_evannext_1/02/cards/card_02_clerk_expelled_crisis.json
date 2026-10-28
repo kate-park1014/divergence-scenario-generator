@@ -1,0 +1,154 @@
+{
+	"id": "card_02_clerk_expelled_crisis",
+	"kind": "callback",
+	"title": {
+		"korean": "041번으로 바뀐 명찰"
+	},
+	"intensity": "high",
+	"after_story": 7,
+	"before_story": 10,
+	"callback": {
+		"seed": "clerk_request_easy",
+		"min_rooms_after": 2
+	},
+	"background_tags": [
+		"search_room",
+		"indoor_fluorescent",
+		"crowded_queue",
+		"terminal_desk",
+		"urgent_tension"
+	],
+	"dialogue": [
+		{
+			"speaker": "narrator",
+			"content": {
+				"korean": "안내 방송 단말기에서 날카로운 신호음과 함께 경고 메시지가 깜빡인다."
+			}
+		},
+		{
+			"speaker": "narrator",
+			"content": {
+				"korean": "\\\"안내 데스크 담당자, 번호 041번으로 전환. 자격 상실로 퇴실하십시오.\\\""
+			}
+		},
+		{
+			"speaker": "clerk",
+			"content": {
+				"korean": "아까 마구잡이로 승인했던 이력서 수치들이 제 정보까지 덮어써 버렸습니다! 명찰에 이름이 없어요!"
+			}
+		},
+		{
+			"speaker": "nia",
+			"content": {
+				"korean": "저 사람의 이름마저 숫자로 바뀌어 쫓겨나고 있어요. 저러다 검색실 밖으로 밀려나겠어요."
+			}
+		}
+	],
+	"choices": [
+		{
+			"text": {
+				"korean": "쫓겨나는 담당자를 두고 비어 있는 데스크의 등록 인장만 챙긴다"
+			},
+			"path": "easy",
+			"mbti": "TJ",
+			"flag": "clerk_expelled",
+			"effects": {
+				"community": -20,
+				"fighting": 20,
+				"echo": -10,
+				"gold": 100
+			},
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "당신은 041번 명찰을 쥔 담당자를 지나쳐 창구 서류함의 등록 인장을 챙겼다."
+					}
+				},
+				{
+					"speaker": "clerk",
+					"content": {
+						"korean": "이름도 직함도 지워졌는데, 이 서류들이 다 무슨 소용입니까…"
+					}
+				},
+				{
+					"speaker": "nia",
+					"content": {
+						"korean": "일괄 승인의 여파가 담당자 본인에게까지 번졌군요. 마음이 편치 않아요."
+					}
+				}
+			]
+		},
+		{
+			"text": {
+				"korean": "단말기 승인 로그를 뒤져 담당자의 원래 성명을 수기 대장에 적어준다"
+			},
+			"path": "hard",
+			"mbti": "FP",
+			"flag": "clerk_record_saved",
+			"effects": {
+				"reason": -15,
+				"community": 25,
+				"echo": 10
+			},
+			"reward": [
+				"defense_up"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "당신은 결재 단말기의 최근 승인 로그를 열어 담당자의 원래 성명을 수기 대장에 대조해 적었다."
+					}
+				},
+				{
+					"speaker": "clerk",
+					"content": {
+						"korean": "제 사원증에 적힌 이름이 완전히 날아가기 직전이었군요. 정말 감사합니다."
+					}
+				},
+				{
+					"speaker": "nia",
+					"content": {
+						"korean": "숫자로 완전히 굳어지기 전에 원래 명찰을 돌려주어서 다행이에요."
+					}
+				}
+			]
+		}
+	],
+	"_side": {
+		"slot": "D",
+		"person": {
+			"id": "clerk",
+			"role": "정보 검색실 단말기 관리 직원",
+			"name": "단말기 담당자"
+		},
+		"wants": "숫자로 지워진 자신의 이름을 되찾아 안내 데스크에서 쫓겨나는 것을 막으려 한다.",
+		"rule_link": "허위 이력서들을 일괄 승인한 대가로 담당자의 원래 이름마저 숫자로 치환되어 자격을 잃는다.",
+		"events": {},
+		"flags": {
+			"clerk_expelled": {
+				"kind": "bad",
+				"boss_penalty": -1,
+				"label": {
+					"korean": "담당자 퇴출 방치"
+				},
+				"boss_line": {
+					"korean": "데이터 관리자가 규정 위반자로 분류된 번호표 041번의 보안 코드를 흡수해 공격력이 상승합니다."
+				}
+			},
+			"clerk_record_saved": {
+				"kind": "good",
+				"boss_penalty": 1,
+				"label": {
+					"korean": "담당자 기록 복구"
+				},
+				"boss_choice": {
+					"korean": "안내 데스크에서 되찾은 담당자의 사원증으로 서버실 차단벽의 암호 해제를 시도합니다."
+				}
+			}
+		}
+	}
+}

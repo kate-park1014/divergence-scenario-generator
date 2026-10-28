@@ -1,0 +1,171 @@
+{
+	"id": "card_05_blocking_firewall",
+	"kind": "normal",
+	"title": {
+		"korean": "길을 막는 방화벽"
+	},
+	"intensity": "calm",
+	"after_story": 7,
+	"before_story": 10,
+	"background_tags": [
+		"room",
+		"wall",
+		"smoke",
+		"floor",
+		"guard"
+	],
+	"dialogue": [
+		{
+			"speaker": "narrator",
+			"content": {
+				"korean": "제어실 중앙 통로에 붉은색 레이저 방화벽이 쳐지며 매캐한 연기가 피어오른다."
+			}
+		},
+		{
+			"speaker": "echo",
+			"content": {
+				"korean": "조심해! 놈은 정보 과부하로 미쳐버린 덩어리야. 조각이 맞춰지는 걸 목숨 걸고 막으려 들 거야."
+			}
+		},
+		{
+			"speaker": "firewall_guard",
+			"content": {
+				"korean": "방화벽이 우리를 적으로 인식하고 있어요! 당장 도망쳐야 해요!"
+			}
+		},
+		{
+			"speaker": "narrator",
+			"content": {
+				"korean": "관리자가 뒷걸음질 치며 방화벽을 피해 비상구 쪽으로 몸을 돌렸다."
+			}
+		}
+	],
+	"choices": [
+		{
+			"text": {
+				"korean": "방화벽을 피해 안전한 우회로를 찾는다."
+			},
+			"path": "easy",
+			"mbti": "SJ",
+			"effects": {
+				"reason": -10,
+				"community": 10
+			},
+			"reward": [
+				"heal"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "당신은 좁고 구불구불한 환풍구를 통해 방화벽을 돌아갔다."
+					}
+				},
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "시간은 지체되었지만 화상은 피했다."
+					}
+				}
+			]
+		},
+		{
+			"text": {
+				"korean": "도망치지 않고 방화벽의 열기를 뚫고 들어가 조각을 맞춘다."
+			},
+			"path": "hard",
+			"mbti": "NT",
+			"effects": {
+				"echo": 10,
+				"fighting": 20
+			},
+			"reward": [
+				"attack_up"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "당신은 옷소매가 타들어 가는 것을 견디며 방화벽 내부의 제어 콘솔에 조각을 끼워 넣었다."
+					}
+				}
+			]
+		},
+		{
+			"text": {
+				"korean": "방화벽의 패턴을 분석하는 스캐너를 사서 타이밍을 맞춘다."
+			},
+			"path": "gold",
+			"mbti": "FJ",
+			"require": {
+				"stat": "gold",
+				"op": ">=",
+				"value": 100
+			},
+			"effects": {
+				"reason": 10,
+				"gold": -100
+			},
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "당신은 스캐너의 신호에 맞춰 세 번 연속으로 몸을 날려 방화벽을 무사히 통과했다."
+					}
+				}
+			],
+			"event": "minigame_timing",
+			"event_intro": [
+				{
+					"speaker": "firewall_guard",
+					"content": {
+						"korean": "화면에 초록색 불이 들어오는 순간에만 움직이세요! 세 번 연달아 성공해야 합니다."
+					}
+				}
+			]
+		},
+		{
+			"text": {
+				"korean": "{actor}이(가) 방화벽의 패턴을 눈으로 좇아 빈틈으로 뛰어든다."
+			},
+			"path": "lock",
+			"mbti": "EP",
+			"require": {
+				"mbti": "EP"
+			},
+			"effects": {
+				"reason": -5,
+				"fighting": 10
+			},
+			"reward": [
+				"move_range_up"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "{actor}이(가) 레이저가 점멸하는 찰나의 순간을 노려 가볍게 굴러 방화벽을 통과했다."
+					}
+				}
+			]
+		}
+	],
+	"_side": {
+		"slot": "D",
+		"person": {
+			"id": "firewall_guard",
+			"role": "보안 프로그램 관리자",
+			"name": "보안 관리자"
+		},
+		"wants": "보안 시스템이 미쳐 날뛰어 물리적인 불꽃을 뿜는 방화벽을 켰으니, 조각 맞추기를 포기하고 도망치자고 한다.",
+		"rule_link": "흔적 주인의 방해가 시작된 상황에서, 정답 행동을 밀어붙일지 멈출지 결정하는 마지막 시험.",
+		"events": {
+			"gold": "스캐너가 방화벽이 열리는 정확한 순간을 세 번 연속으로 화면에 띄워주었다."
+		},
+		"flags": {}
+	}
+}

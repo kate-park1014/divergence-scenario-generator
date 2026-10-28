@@ -1,0 +1,147 @@
+{
+	"id": "card_02_twisted_identity_seeker",
+	"kind": "callback",
+	"title": {
+		"korean": "일그러진 본인 확인"
+	},
+	"intensity": "high",
+	"after_story": 5,
+	"before_story": 7,
+	"callback": {
+		"seed": "resume_forgery_seeker_easy",
+		"min_rooms_after": 2
+	},
+	"background_tags": [
+		"terminal_room",
+		"dim_lighting",
+		"flickering_screens",
+		"anxious_crowd",
+		"system_glitch"
+	],
+	"dialogue": [
+		{
+			"speaker": "narrator",
+			"content": {
+				"korean": "검색실 단말기 모니터 앞에서 초조한 구직자가 모니터를 거세게 두드리고 있다."
+			}
+		},
+		{
+			"speaker": "seeker",
+			"content": {
+				"korean": "내 자격증란에 적었던 코드 때문에 이름 칸까지 이상한 기호로 뒤덮였어!"
+			}
+		},
+		{
+			"speaker": "nia",
+			"content": {
+				"korean": "지난번 과장 입력 때문에 단말기 본인 확인 시스템에 심각한 오류가 생겼군요."
+			}
+		}
+	],
+	"choices": [
+		{
+			"text": {
+				"korean": "구직자의 본인 확인을 건너뛰고 단말기 모니터 화면을 무단 종료한다."
+			},
+			"path": "easy",
+			"mbti": "EP",
+			"flag": "seeker_identity_erased",
+			"effects": {
+				"fighting": -10,
+				"echo": -5,
+				"gold": 80
+			},
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "단말기 화면의 강제 종료 버튼을 눌러 구직자의 일그러진 모니터를 꺼 버렸다."
+					}
+				},
+				{
+					"speaker": "seeker",
+					"content": {
+						"korean": "이러면 내 이름이 아예 시스템에서 지워지는 거 아닙니까?"
+					}
+				},
+				{
+					"speaker": "nia",
+					"content": {
+						"korean": "일단 당장의 경고음은 멈췄지만, 이름이 더 심하게 뒤엉킬 것 같아요."
+					}
+				}
+			]
+		},
+		{
+			"text": {
+				"korean": "일그러진 기호를 하나씩 지워 구직자의 본래 이름 표기를 복구한다."
+			},
+			"path": "hard",
+			"mbti": "TJ",
+			"flag": "seeker_identity_restored",
+			"effects": {
+				"reason": 10,
+				"community": 15,
+				"echo": 10
+			},
+			"reward": [
+				"defense_up"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "단말기 자격증란에 덧씌워졌던 가짜 코드를 지우고 본래 성명을 되살렸다."
+					}
+				},
+				{
+					"speaker": "seeker",
+					"content": {
+						"korean": "이름 철자가 다시 정돈됐어요! 거짓 정보를 지우니 원래 이름이 돌아왔군요."
+					}
+				},
+				{
+					"speaker": "nia",
+					"content": {
+						"korean": "다행이에요. 과장된 데이터를 덜어내야 이름이 지워지지 않는 거였어요."
+					}
+				}
+			]
+		}
+	],
+	"_side": {
+		"slot": "C",
+		"person": {
+			"name": "초조한 구직자",
+			"role": "검색 단말기에서 허위 경력을 등록하려 했던 지원자",
+			"id": "seeker"
+		},
+		"wants": "단말기 모니터에 다른 이름과 숫자로 겹쳐 출력되는 자신의 명단을 수습하기",
+		"rule_link": "과장 기재했던 자격증 데이터가 다른 지원자의 이름 정보를 침범하며 본인 명단을 일그러뜨리고 있다.",
+		"events": {},
+		"flags": {
+			"seeker_identity_erased": {
+				"kind": "bad",
+				"boss_penalty": -1,
+				"label": {
+					"korean": "이름 혼선 증대"
+				},
+				"boss_line": {
+					"korean": "뒤섞인 지원자 명단 때문에 본인 확인 절차가 지연된다."
+				}
+			},
+			"seeker_identity_restored": {
+				"kind": "good",
+				"boss_penalty": 1,
+				"label": {
+					"korean": "이름 복구 협력"
+				},
+				"boss_choice": {
+					"korean": "정리된 명단 덕분에 대기실의 지원자들을 신속하게 통제한다."
+				}
+			}
+		}
+	}
+}

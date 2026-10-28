@@ -1,0 +1,226 @@
+{
+	"id": "card_04_angry_stranger",
+	"kind": "normal",
+	"title": {
+		"korean": "폭주하는 작업자"
+	},
+	"intensity": "calm",
+	"after_story": 7,
+	"before_story": 10,
+	"background_tags": [
+		"console",
+		"monitors",
+		"worker",
+		"alerts",
+		"room"
+	],
+	"dialogue": [
+		{
+			"speaker": "narrator",
+			"content": {
+				"korean": "네로가 스패너를 휘두르는 작업자를 피해 콘솔 뒤에 숨어 있다."
+			}
+		},
+		{
+			"speaker": "nero",
+			"content": {
+				"korean": "저 사람이 남의 징계 기록을 자기 걸로 오해하고 모니터를 부수려 해요!"
+			}
+		},
+		{
+			"speaker": "nero",
+			"content": {
+				"korean": "제가 전원을 차단할 때까지 저 사람 좀 막아주세요!"
+			}
+		},
+		{
+			"speaker": "dax",
+			"content": {
+				"korean": "완전히 이성을 잃었어. 당장 우리 쪽으로 달려오고 있잖아!"
+			}
+		}
+	],
+	"choices": [
+		{
+			"text": {
+				"korean": "흥분한 낯선 작업자의 앞을 가로막고 정면으로 맞선다."
+			},
+			"path": "easy",
+			"mbti": "ET",
+			"effects": {
+				"fighting": 15
+			},
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "당신이 시선을 끄는 사이 네로가 모니터의 전원을 내렸다."
+					}
+				},
+				{
+					"speaker": "nero",
+					"content": {
+						"korean": "휴, 덕분에 살았습니다."
+					}
+				}
+			],
+			"event": "meet_stranger",
+			"event_intro": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "“내 기록 당장 원래대로 돌려놔!” 낯선 작업자가 스패너를 치켜들고 달려든다."
+					}
+				}
+			],
+			"event_options": {
+				"fight": {
+					"text": {
+						"korean": "{actor}이(가) 작업자의 스패너를 쳐내며 맞선다."
+					},
+					"win": [
+						{
+							"speaker": "narrator",
+							"content": {
+								"korean": "{actor}이(가) 작업자를 제압해 바닥에 눕혔다."
+							}
+						}
+					],
+					"lose": [
+						{
+							"speaker": "narrator",
+							"content": {
+								"korean": "{actor}이(가) 작업자의 거센 공격에 밀려 넘어졌다."
+							}
+						}
+					]
+				},
+				"avoid": {
+					"text": {
+						"korean": "{actor}이(가) 작업자의 공격을 아슬아슬하게 피한다."
+					},
+					"result": [
+						{
+							"speaker": "narrator",
+							"content": {
+								"korean": "작업자가 휘두른 스패너에 스쳐 타박상을 입었다."
+							}
+						}
+					],
+					"reward": [
+						"hp_down"
+					]
+				}
+			}
+		},
+		{
+			"text": {
+				"korean": "싸움에 휘말리지 않도록 작업자를 피해 네로 대신 직접 전원 케이블을 뽑는다."
+			},
+			"path": "hard",
+			"mbti": "IJ",
+			"effects": {
+				"echo": -10,
+				"reason": 10
+			},
+			"reward": [
+				"defense_up"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "당신이 재빨리 케이블을 뽑아버리자 모니터가 꺼지며 소동이 멈췄다."
+					}
+				},
+				{
+					"speaker": "nero",
+					"content": {
+						"korean": "윽, 데이터가 날아갔겠지만... 어쩔 수 없죠."
+					}
+				}
+			]
+		},
+		{
+			"text": {
+				"korean": "작업자에게 크레딧을 쥐여주며 시스템 오류니 화를 내지 말라고 진정시킨다."
+			},
+			"path": "gold",
+			"mbti": "ES",
+			"require": {
+				"stat": "gold",
+				"op": ">=",
+				"value": 50
+			},
+			"effects": {
+				"gold": -50,
+				"community": 10
+			},
+			"reward": [
+				"heal"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "당신이 건넨 돈을 본 작업자가 스패너를 내리며 멈칫한다."
+					}
+				},
+				{
+					"speaker": "nero",
+					"content": {
+						"korean": "돈으로 해결하다니, 역시 가장 확실한 방법이네요."
+					}
+				}
+			]
+		},
+		{
+			"text": {
+				"korean": "{actor}이(가) 작업자의 억울함에 공감하며 오해를 논리적으로 풀어준다."
+			},
+			"path": "lock",
+			"mbti": "FJ",
+			"require": {
+				"mbti": "FJ"
+			},
+			"effects": {
+				"community": 15
+			},
+			"reward": [
+				"heal"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "{actor}이(가) 차분하게 시스템 오류를 설명하자 작업자가 스패너를 내려놓는다."
+					}
+				},
+				{
+					"speaker": "nero",
+					"content": {
+						"korean": "말로 해결하다니, 대단한 솜씨네요."
+					}
+				}
+			]
+		}
+	],
+	"_side": {
+		"slot": "D",
+		"person": {
+			"name": "네로",
+			"role": "시스템 관리자",
+			"id": "nero"
+		},
+		"wants": "남의 징계 기록을 뒤집어쓰고 폭주하는 작업자를 막아달라고 부탁한다.",
+		"rule_link": "시스템 경계가 무너지며 모니터에 다른 사람의 업무 기록이 무작위로 출력되고 있다.",
+		"events": {
+			"easy": "억울한 기록 때문에 분노한 낯선 작업자가 당신을 관리자로 오해하고 덤벼든다."
+		},
+		"flags": {}
+	}
+}

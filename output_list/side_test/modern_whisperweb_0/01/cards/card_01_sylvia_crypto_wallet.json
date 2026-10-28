@@ -1,0 +1,189 @@
+{
+	"id": "card_01_sylvia_crypto_wallet",
+	"kind": "rep",
+	"title": {
+		"korean": "풀려난 암호화폐"
+	},
+	"intensity": "calm",
+	"after_story": 3,
+	"before_story": 5,
+	"condition": {
+		"leaning": "community-",
+		"among": [
+			"fighting-",
+			"fighting+",
+			"community-",
+			"community+",
+			"reason-",
+			"reason+"
+		],
+		"min": 20
+	},
+	"urgency": 8,
+	"leaning": "community-",
+	"background_tags": [
+		"server_rack",
+		"day",
+		"dark",
+		"sparse",
+		"secretive"
+	],
+	"dialogue": [
+		{
+			"speaker": "sylvia",
+			"content": {
+				"korean": "곤경에 처한 사람을 그냥 지나치지 못한다더니, 사실 나한테 딱 좋은 일거리가 있어."
+			}
+		},
+		{
+			"speaker": "sylvia",
+			"content": {
+				"korean": "길을 잃고 헤매다 보니 휴면 암호화폐 지갑이 열려 있더라고. 나랑 같이 돈 좀 빼볼까?"
+			}
+		},
+		{
+			"speaker": "echo",
+			"content": {
+				"korean": "저 돈은 원래 주인들이 있을 텐데. 우리가 이렇게 가져가도 되는 걸까?"
+			}
+		}
+	],
+	"choices": [
+		{
+			"text": {
+				"korean": "실비아와 함께 돈을 빼낸다."
+			},
+			"path": "easy",
+			"mbti": "TP",
+			"flag": "sylvia_trace",
+			"effects": {
+				"community": -20,
+				"gold": 100
+			},
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "당신은 능숙하게 서버에 접속해 화폐를 빼돌렸다."
+					}
+				},
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "실비아가 약속대로 두둑한 몫을 나눠주었다."
+					}
+				}
+			]
+		},
+		{
+			"text": {
+				"korean": "서버의 보안 모드를 강제로 켠다."
+			},
+			"path": "hard",
+			"mbti": "FJ",
+			"flag": "sylvia_lock",
+			"effects": {
+				"echo": 10,
+				"community": 20
+			},
+			"reward": [
+				"hp_down"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "당신이 지갑을 닫고 보안 모드를 작동시켰다."
+					}
+				},
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "다 된 밥에 재를 뿌렸다며 실비아가 화를 냈다."
+					}
+				}
+			]
+		},
+		{
+			"text": {
+				"korean": "서버 접속 권한을 가로채 실비아의 몫까지 전부 빼돌린다."
+			},
+			"path": "stat",
+			"mbti": "TJ",
+			"require": {
+				"stat": "community",
+				"op": "<=",
+				"value": -40
+			},
+			"flag": "sylvia_monopoly",
+			"effects": {
+				"fighting": -10,
+				"community": -30
+			},
+			"reward": [
+				"intelligence_up"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "당신이 접속 권한을 독점하자 실비아가 분통을 터뜨리며 물러났다."
+					}
+				},
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "지갑 안의 돈은 모두 당신 차지가 되었다."
+					}
+				}
+			]
+		}
+	],
+	"_side": {
+		"slot": "B",
+		"person": {
+			"id": "sylvia",
+			"role": "뒷골목 브로커",
+			"name": "실비아"
+		},
+		"wants": "시스템 복구로 일시적으로 열린 금융 서버에서 돈을 빼내어 나누자고 함",
+		"rule_link": "조각을 깨어 생긴 일시적 오류를 이용해 휴면 가상 화폐를 탈취하려 함",
+		"events": {},
+		"rep": "community-",
+		"flags": {
+			"sylvia_trace": {
+				"kind": "bad",
+				"boss_penalty": -1,
+				"label": {
+					"korean": "금융 해킹 흔적"
+				},
+				"boss_line": {
+					"korean": "당신이 남긴 해킹 흔적을 추적한 보안관이 방어막을 무력화한다."
+				}
+			},
+			"sylvia_lock": {
+				"kind": "good",
+				"boss_penalty": 1,
+				"label": {
+					"korean": "잠긴 금융 서버"
+				},
+				"boss_choice": {
+					"korean": "잠긴 서버의 보안 시스템을 역이용해 보안관을 가둔다."
+				}
+			},
+			"sylvia_monopoly": {
+				"kind": "good",
+				"boss_penalty": 2,
+				"label": {
+					"korean": "독점한 자금"
+				},
+				"boss_choice": {
+					"korean": "빼돌린 자금으로 보안관의 무기를 매수해버린다."
+				}
+			}
+		}
+	}
+}

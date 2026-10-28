@@ -1,0 +1,136 @@
+{
+	"id": "card_03_mixed_identity",
+	"kind": "callback",
+	"title": {
+		"korean": "뒤섞인 정보"
+	},
+	"intensity": "high",
+	"after_story": 7,
+	"before_story": 10,
+	"callback": {
+		"seed": "dewy_pipe_easy",
+		"min_rooms_after": 2
+	},
+	"background_tags": [
+		"badge",
+		"data",
+		"staff",
+		"glass",
+		"noise"
+	],
+	"dialogue": [
+		{
+			"speaker": "server_cleaner",
+			"content": {
+				"korean": "아까 그 천으로 파이프를 닦았는데, 갑자기 내 이름표에 이상한 데이터가 섞여서 번쩍거려요!"
+			}
+		},
+		{
+			"speaker": "kai",
+			"content": {
+				"korean": "스크린 조각들이 깨지면서 유출된 정보가 이물질을 타고 청소부의 개인 정보와 엉킨 거야!"
+			}
+		},
+		{
+			"speaker": "server_cleaner",
+			"content": {
+				"korean": "내가 누군지도 헷갈려요... 내 신분 데이터를 원래대로 되돌려줘요!"
+			}
+		}
+	],
+	"choices": [
+		{
+			"text": {
+				"korean": "청소부의 이름표를 강제로 뜯어내어 데이터 연결을 끊는다."
+			},
+			"path": "easy",
+			"mbti": "ST",
+			"flag": "lost_access",
+			"effects": {
+				"fighting": 10,
+				"echo": -10,
+				"gold": 50,
+				"community": -20
+			},
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "이름표가 망가져 청소부의 출입 권한이 날아갔다."
+					}
+				},
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "망가진 이름표에서 쓸만한 부품을 챙겼다."
+					}
+				}
+			]
+		},
+		{
+			"text": {
+				"korean": "복잡한 암호를 풀어 청소부의 개인 정보를 하나씩 분리해낸다."
+			},
+			"path": "hard",
+			"mbti": "NF",
+			"flag": "master_key",
+			"effects": {
+				"echo": 10,
+				"reason": 20,
+				"community": 20
+			},
+			"reward": [
+				"defense_up"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "암호를 푸느라 눈이 피로해졌지만 청소부의 신분은 복구되었다."
+					}
+				},
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "청소부가 눈물을 흘리며 청소용 만능 키를 주었다."
+					}
+				}
+			]
+		}
+	],
+	"_side": {
+		"slot": "D",
+		"person": {
+			"id": "server_cleaner",
+			"name": "서버 청소부",
+			"role": "청소 담당자"
+		},
+		"wants": "천으로 닦은 곳에서 유출된 데이터가 자신에게 튀어 혼란스럽다며 도움을 청한다.",
+		"rule_link": "이슬과 섞인 유출 데이터가 스크린 조각에 닿아 개인 정보가 뒤죽박죽 섞여버린다.",
+		"events": {},
+		"flags": {
+			"lost_access": {
+				"kind": "bad",
+				"boss_penalty": -1,
+				"label": {
+					"korean": "막힌 통로"
+				},
+				"boss_line": {
+					"korean": "청소부의 권한 상실로 인해 지름길 문이 굳게 닫혀 있다."
+				}
+			},
+			"master_key": {
+				"kind": "good",
+				"boss_penalty": 1,
+				"label": {
+					"korean": "만능 키"
+				},
+				"boss_choice": {
+					"korean": "청소용 만능 키를 사용해 보안 셔터를 가볍게 열고 통과한다."
+				}
+			}
+		}
+	}
+}

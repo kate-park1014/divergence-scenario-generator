@@ -1,0 +1,222 @@
+{
+	"id": "card_01_alice_dirty_water",
+	"kind": "rep",
+	"title": {
+		"korean": "터지기 직전의 밸브"
+	},
+	"intensity": "calm",
+	"after_story": 7,
+	"before_story": 10,
+	"condition": {
+		"leaning": "community+",
+		"among": [
+			"fighting-",
+			"fighting+",
+			"community-",
+			"community+",
+			"reason-",
+			"reason+"
+		],
+		"min": 20
+	},
+	"urgency": 8,
+	"leaning": "community+",
+	"background_tags": [
+		"dirty_water",
+		"server_rack",
+		"red_warning",
+		"panicking_people",
+		"wet_floor"
+	],
+	"dialogue": [
+		{
+			"speaker": "echo",
+			"content": {
+				"korean": "이러다 하수도 수위 조절 장치까지 터져서 오염수가 쏟아지겠어!"
+			}
+		},
+		{
+			"speaker": "narrator",
+			"content": {
+				"korean": "발밑으로 물이 차오르는 가운데, 전산실 당직자가 다급히 당신을 붙잡는다."
+			}
+		},
+		{
+			"speaker": "alice",
+			"content": {
+				"korean": "모두가 위험할 때 제일 먼저 나서는 분 맞죠? 제발 이 오염수 밸브 좀 같이 잠가주세요!"
+			}
+		}
+	],
+	"choices": [
+		{
+			"text": {
+				"korean": "오염수를 뒤집어쓰며 수동 밸브를 잠근다."
+			},
+			"path": "easy",
+			"mbti": "ES",
+			"flag": "close_valve",
+			"effects": {
+				"echo": 10,
+				"community": 20
+			},
+			"reward": [
+				"hp_down"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "당신이 오염수��� 맞으며 밸브를 잠그자 앨리스가 안도의 한숨을 쉰다."
+					}
+				},
+				{
+					"speaker": "echo",
+					"content": {
+						"korean": "정말 고생했어. 근데 옷에서 오염수 냄새가 너무 심하게 나."
+					}
+				}
+			]
+		},
+		{
+			"text": {
+				"korean": "위험을 감수하기 싫다며 앨리스를 두고 도망친다."
+			},
+			"path": "hard",
+			"mbti": "IN",
+			"flag": "run_away",
+			"effects": {
+				"community": -20,
+				"echo": -10
+			},
+			"reward": [
+				"move_range_up"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "당신이 뒤도 돌아보지 않고 뛰어가자 앨리스가 발을 구르며 원망한다."
+					}
+				},
+				{
+					"speaker": "echo",
+					"content": {
+						"korean": "물에 젖지 않아서 다행이야. 가벼운 몸으로 빨리 벗어나자."
+					}
+				}
+			]
+		},
+		{
+			"text": {
+				"korean": "사람들에게 소리쳐 다 같이 밸브를 잠그게 만든다."
+			},
+			"path": "stat",
+			"mbti": "FJ",
+			"require": {
+				"stat": "community",
+				"op": ">=",
+				"value": 40
+			},
+			"flag": "shout_people",
+			"effects": {
+				"echo": 15,
+				"community": 30
+			},
+			"reward": [
+				"shield"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "당신의 외침에 주변 사람들이 달려들어 순식간에 밸브를 잠가���린다."
+					}
+				},
+				{
+					"speaker": "echo",
+					"content": {
+						"korean": "다들 널 믿고 따르는구나! 사람들이 많아서 적들도 헷갈리겠어."
+					}
+				}
+			]
+		},
+		{
+			"text": {
+				"korean": "오염수가 쏟아지는 구멍에 빈 서버 랙을 던져 막는다."
+			},
+			"path": "fun",
+			"mbti": "TP",
+			"effects": {
+				"reason": -10,
+				"echo": -5,
+				"community": 5
+			},
+			"reward": [
+				"attack_up"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "서버 랙이 배관 구멍에 기괴한 소리를 내며 끼어들어가자 물이 멈춘다."
+					}
+				},
+				{
+					"speaker": "echo",
+					"content": {
+						"korean": "이게 진짜 해결된 거 맞아...? 금방이라도 터질 것 같아."
+					}
+				}
+			]
+		}
+	],
+	"_side": {
+		"slot": "D",
+		"person": {
+			"role": "전산실 당직자",
+			"id": "alice",
+			"name": "앨리스"
+		},
+		"wants": "오염수가 쏟아지는 수동 밸브를 함께 잠가달라고 함",
+		"rule_link": "통제 불능이 된 하수도 수위 데이터로 인한 침수 피해를 막을지 선택",
+		"rep": "community+",
+		"events": {},
+		"flags": {
+			"close_valve": {
+				"kind": "bad",
+				"boss_penalty": -1,
+				"label": {
+					"korean": "오염수 냄새"
+				},
+				"boss_line": {
+					"korean": "옷에 묻은 오염수 냄새 때문에 보안관이 금방 추적해 온다."
+				}
+			},
+			"run_away": {
+				"kind": "good",
+				"boss_penalty": 1,
+				"label": {
+					"korean": "가벼운 몸"
+				},
+				"boss_choice": {
+					"korean": "젖지 않은 가벼운 몸으로 보안관의 무기를 피한다."
+				}
+			},
+			"shout_people": {
+				"kind": "good",
+				"boss_penalty": 2,
+				"label": {
+					"korean": "흩어지는 사람들"
+				},
+				"boss_choice": {
+					"korean": "모여든 사람들이 흩어지며 보안관의 시야를 방해한다."
+				}
+			}
+		}
+	}
+}

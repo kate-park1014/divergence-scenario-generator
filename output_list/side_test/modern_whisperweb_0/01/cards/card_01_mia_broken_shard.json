@@ -1,0 +1,121 @@
+{
+	"id": "card_01_mia_broken_shard",
+	"kind": "plant",
+	"title": {
+		"korean": "암호화된 파일"
+	},
+	"intensity": "calm",
+	"after_story": 3,
+	"before_story": 5,
+	"background_tags": [
+		"broken_shard",
+		"glowing_data",
+		"encrypted_screen",
+		"tense_silence",
+		"shadowy_figure"
+	],
+	"dialogue": [
+		{
+			"speaker": "narrator",
+			"content": {
+				"korean": "미아가 암호 입력 창이 뜬 두꺼운 노트북을 들고 당신을 가로막는다."
+			}
+		},
+		{
+			"speaker": "mia",
+			"content": {
+				"korean": "당신들이 데이터 스크린 조각을 깼잖아요? 그 파편 하나만 빌려줘요."
+			}
+		},
+		{
+			"speaker": "echo",
+			"content": {
+				"korean": "파편의 힘이 강력하긴 하지만, 이런 식으로 막 써도 괜찮은 걸까?"
+			}
+		},
+		{
+			"speaker": "mia",
+			"content": {
+				"korean": "부작용은 나중에 생각하고요! 파편을 노트북에 대면 이 암호도 단번에 풀릴 거라고요."
+			}
+		}
+	],
+	"choices": [
+		{
+			"text": {
+				"korean": "파편을 이용해 암호를 강제로 해제하여 즉시 데이터를 얻게 해준다."
+			},
+			"path": "easy",
+			"mbti": "EN",
+			"effects": {
+				"gold": 100,
+				"reason": -20
+			},
+			"seed": "mia_broken_shard_easy",
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "노트북 화면이 지지직거리더니 암호가 풀린다. 미아가 기뻐하며 데이터의 일부를 팔아 현금으로 나눠준다."
+					}
+				}
+			]
+		},
+		{
+			"text": {
+				"korean": "파편 사용을 막고 미아가 스스로 천천히 암호를 풀도록 둔다."
+			},
+			"path": "hard",
+			"mbti": "IS",
+			"effects": {
+				"echo": 10,
+				"reason": 20
+			},
+			"reward": [
+				"intelligence_up"
+			],
+			"seed": "mia_broken_shard_hard",
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "당신이 파편을 감추자 미아가 투덜대며 수동으로 암호 해독 프로그램을 돌리기 시작한다."
+					}
+				}
+			]
+		},
+		{
+			"text": {
+				"korean": "노트북에 파편 대신 머리 위 낡은 스피커 부품을 뜯어 갖다 댄다."
+			},
+			"path": "fun",
+			"mbti": "FP",
+			"effects": {
+				"echo": -15,
+				"reason": -30,
+				"gold": 50
+			},
+			"seed": "mia_broken_shard_hard",
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "노트북에서 요란한 음악이 흘러나온다. 미아가 당황해 노트북�� 닫으려다 동전을 떨어뜨린다."
+					}
+				}
+			]
+		}
+	],
+	"_side": {
+		"slot": "B",
+		"person": {
+			"name": "미아",
+			"role": "데이터 밀수꾼",
+			"id": "mia"
+		},
+		"wants": "암호화된 파일을 빨리 풀기 위해 깨진 데이터 스크린 조각의 파편을 이용하게 해달라고 함",
+		"rule_link": "깨진 스크린 조각의 파편이 일시적으로 데이터를 복구하는 현상을 이용.",
+		"events": {},
+		"flags": {}
+	}
+}

@@ -1,0 +1,198 @@
+{
+	"id": "card_02_leaking_pipe_plumber",
+	"title": {
+		"korean": "가스를 막는 배관공"
+	},
+	"intensity": "calm",
+	"after_story": 7,
+	"before_story": 10,
+	"condition": {
+		"leaning": "community+",
+		"among": [
+			"fighting-",
+			"fighting+",
+			"community-",
+			"community+",
+			"reason-",
+			"reason+"
+		],
+		"min": 20
+	},
+	"urgency": 8,
+	"leaning": "community+",
+	"background_tags": [
+		"server_room",
+		"toxic_gas",
+		"leaking_pipes",
+		"dim_light",
+		"tense"
+	],
+	"dialogue": [
+		{
+			"speaker": "narrator",
+			"content": {
+				"korean": "냉각 시스템이 멈춰 압력이 높아진 파이프에서 유독 가스가 새어 나오고 있었다."
+			}
+		},
+		{
+			"speaker": "morgan",
+			"content": {
+				"korean": "모두를 위해서라면 자기 손해를 마다하지 않는다더니, 맞네. 이것 좀 막아줘!"
+			}
+		},
+		{
+			"speaker": "narrator",
+			"content": {
+				"korean": "배관공은 기침을 심하게 하면서도 파이프 밸브를 절대 놓지 않았다."
+			}
+		},
+		{
+			"speaker": "lin",
+			"content": {
+				"korean": "가스가 퍼지고 있어요! 빨리 도와줘야 해요!"
+			}
+		}
+	],
+	"choices": [
+		{
+			"text": {
+				"korean": "배관공 대신 유독 가스 파이프를 맨몸으로 막아선다."
+			},
+			"path": "easy",
+			"mbti": "FJ",
+			"flag": "toxic_gas_inhale",
+			"effects": {
+				"echo": 10,
+				"community": 20
+			},
+			"reward": [
+				"heal"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "당신이 파이프를 막아서자 매캐한 가스가 폐부로 밀려들어왔다."
+					}
+				},
+				{
+					"speaker": "morgan",
+					"content": {
+						"korean": "콜록! 당신 진짜 소문대로 구는구만! 미안해!"
+					}
+				}
+			]
+		},
+		{
+			"text": {
+				"korean": "배관공을 밀쳐내고 깨끗한 공기가 있는 곳으로 도망친다."
+			},
+			"path": "hard",
+			"mbti": "TP",
+			"flag": "escape_route",
+			"effects": {
+				"echo": -10,
+				"community": -20
+			},
+			"reward": [
+				"move_range_up"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "당신은 뒤도 돌아보지 않고 깨끗한 공기가 있는 곳으로 도망쳤다."
+					}
+				},
+				{
+					"speaker": "lin",
+					"content": {
+						"korean": "저 사람을 저렇게 두고 가버리면 어떡해요!"
+					}
+				}
+			]
+		},
+		{
+			"text": {
+				"korean": "주변의 냉각수를 파이프에 부어 압력을 낮추고 배관공을 구한다."
+			},
+			"path": "stat",
+			"mbti": "NF",
+			"require": {
+				"stat": "community",
+				"op": ">=",
+				"value": 40
+			},
+			"flag": "coolant_spill",
+			"effects": {
+				"echo": 15,
+				"community": 30
+			},
+			"reward": [
+				"stun"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "냉각수가 부어지자 파이프의 압력이 낮아지며 가스 누출이 멎었다."
+					}
+				},
+				{
+					"speaker": "morgan",
+					"content": {
+						"korean": "이런 방법이 있었다니! 정말 고맙소!"
+					}
+				}
+			]
+		}
+	],
+	"kind": "rep",
+	"_side": {
+		"slot": "D",
+		"person": {
+			"id": "morgan",
+			"name": "모건",
+			"role": "배관공"
+		},
+		"wants": "",
+		"rule_link": "",
+		"rep": "community+",
+		"events": {},
+		"flags": {
+			"toxic_gas_inhale": {
+				"boss_penalty": -1,
+				"label": {
+					"korean": "마신 가스"
+				},
+				"boss_line": {
+					"korean": "유독 가스의 후유증으로 시야가 흐려진다."
+				},
+				"kind": "bad"
+			},
+			"escape_route": {
+				"boss_penalty": 1,
+				"label": {
+					"korean": "도망친 경로"
+				},
+				"boss_choice": {
+					"korean": "미리 파악해둔 환기구 쪽으로 재빨리 회피한다."
+				},
+				"kind": "good"
+			},
+			"coolant_spill": {
+				"boss_penalty": 2,
+				"label": {
+					"korean": "뿌려진 냉각수"
+				},
+				"boss_choice": {
+					"korean": "바닥에 고인 냉각수를 차올려 경비원의 시야를 가린다."
+				},
+				"kind": "good"
+			}
+		}
+	}
+}

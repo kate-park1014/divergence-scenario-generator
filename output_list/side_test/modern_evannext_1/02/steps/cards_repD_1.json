@@ -1,0 +1,305 @@
+{
+	"cards": [
+		{
+			"rule_link": "이력서의 이름이 숫자로 변환되어 호명되는 시스템 폭주 상황에서 발생하는 물리적 마찰",
+			"wants": "숫자로 덮여가는 자신의 명찰을 단말기에서 강제로 뜯어내 원래 이름을 유지하기",
+			"person": {
+				"name": "초조한 구직자",
+				"id": "seeker",
+				"role": "이름이 숫자로 지워지는 대기자"
+			},
+			"choices": [
+				{
+					"result": [
+						{
+							"speaker": "narrator",
+							"text": "단말기 외장 케이스가 부서지며 붉은 비상등이 점멸한다."
+						},
+						{
+							"text": "으악, 경보가 울리잖아! 번호표고 뭐고 일단 튑시다!",
+							"speaker": "seeker"
+						},
+						{
+							"speaker": "nia",
+							"text": "관리자가 경보 소리를 듣고 서버실 통로 쪽으로 뛰어오고 있어요!"
+						}
+					],
+					"flag": {
+						"boss_text": "통로의 경보 장치가 요란하게 울려 데이터 관리자가 요격 모드로 통로를 전면 봉쇄한다.",
+						"label": "경보 발령",
+						"key": "triggered_alarm"
+					},
+					"effects": {
+						"echo": -10,
+						"fighting": -20
+					},
+					"reward": [
+						"attack_up"
+					],
+					"text": "seeker의 단말기를 발로 걷어차 경보를 울려 검색실을 혼란에 빠뜨린다.",
+					"mbti": "SP",
+					"path": "easy"
+				},
+				{
+					"text": "난동을 부리려는 seeker의 팔을 꺾어 누르고 단말기에서 이력서를 뽑아낸다.",
+					"mbti": "NF",
+					"path": "hard",
+					"reward": [
+						"defense_up"
+					],
+					"flag": {
+						"boss_text": "seeker에게서 확보한 이력서 원본을 데이터 관리자의 스캐너에 밀어 넣어 인식을 지연시킨다.",
+						"key": "rescued_document",
+						"label": "온전한 문서철"
+					},
+					"effects": {
+						"fighting": 20,
+						"echo": 10
+					},
+					"result": [
+						{
+							"speaker": "seeker",
+							"text": "커억... 팔이 부러지는 줄 알았잖아요. 하지만 내 서류는 무사하네."
+						},
+						{
+							"speaker": "narrator",
+							"text": "단말기 투입구에서 숫자로 오염되지 않은 종이 이력서가 빠져나온다."
+						},
+						{
+							"speaker": "nia",
+							"text": "거칠었지만 서류가 숫자로 덮이기 전에 빼내서 다행이에요."
+						}
+					]
+				},
+				{
+					"effects": {
+						"community": -10,
+						"echo": 5,
+						"fighting": -30
+					},
+					"result": [
+						{
+							"text": "두 동강 난 서류 테이블이 바닥에 나뒹굴며 검색실 전체가 얼어붙는다.",
+							"speaker": "narrator"
+						},
+						{
+							"text": "히익... 알겠습니다. 입 닥치고 번호표 안 흔들게요.",
+							"speaker": "seeker"
+						},
+						{
+							"speaker": "nia",
+							"text": "모두 겁을 먹었지만, 소란이 멎어서 단말기 화면을 똑바로 볼 수 있게 됐어요."
+						}
+					],
+					"path": "stat",
+					"mbti": "TJ",
+					"text": "검색실 중앙 테이블을 강하게 내리쳐 웅성거리는 숫자 지원자들을 위압한다.",
+					"flag": {
+						"boss_text": "공포로 굳어버린 지원자들의 침묵을 틈타 데이터 관리자의 시선이 닿지 않는 통로 벽면으로 붙는다.",
+						"key": "suppressed_room",
+						"label": "통제된 침묵"
+					},
+					"reward": [
+						"intelligence_up"
+					]
+				}
+			],
+			"title": "손톱 밑의 바코드",
+			"dialogue": [
+				{
+					"speaker": "seeker",
+					"text": "단말기 관리 요원들을 거칠게 들이받고 검색실로 쳐들어온 분이 당신이죠?"
+				},
+				{
+					"speaker": "seeker",
+					"text": "저 안내 방송 들려요? 102번 지원자, 그게 접니다! 명찰의 이름이 숫자로 눌려 뭉개지고 있어요."
+				},
+				{
+					"speaker": "nia",
+					"text": "저분의 가슴 명찰을 봐요. 철자가 지워지고 바코드 숫자만 번져가고 있어요!"
+				},
+				{
+					"text": "이대로 불려 나가면 끝장이에요. 단말기를 뜯어서라도 원래 명찰 데이터를 뱉어내게 해줘요!",
+					"speaker": "seeker"
+				}
+			],
+			"key": "numbered_tag",
+			"background_tags": [
+				"terminal_room",
+				"flickering_light",
+				"crowded_desk",
+				"paper_clutter",
+				"tense_silence"
+			],
+			"no": 1,
+			"slot": "D",
+			"kind": "rep",
+			"rep_dir": "fighting-"
+		},
+		{
+			"title": "뒤섞인 출석부",
+			"person": {
+				"role": "숫자로 덮이는 인적 사항을 수작업으로 지키려는 직원",
+				"id": "clerk",
+				"name": "창구의 단말기 담당자"
+			},
+			"background_tags": [
+				"information_desk",
+				"scattered_forms",
+				"blinking_monitors",
+				"panicked_applicants",
+				"urgent_atmosphere"
+			],
+			"rule_link": "이력서의 인적 사항이 번호로 덮어씌워지는 와중에 수기 명부와 대조하려는 현장 수습 행위",
+			"no": 2,
+			"dialogue": [
+				{
+					"text": "로비에서 넘어진 다른 지원자들을 부축하고 흩어진 서류를 모아주신 분이군요!",
+					"speaker": "clerk"
+				},
+				{
+					"speaker": "clerk",
+					"text": "단말기 오류로 명단이 온통 84번, 102번 같은 번호로 지워지고 있어요."
+				},
+				{
+					"text": "데이터 관리자가 오기 전에 저 사람들의 원래 이름을 수기 명부에 적어둬야 합니다.",
+					"speaker": "clerk"
+				},
+				{
+					"speaker": "nia",
+					"text": "담당자 혼자선 역부족이에요. 지원자들이 공포에 질려 창구로 몰려들고 있어요!"
+				}
+			],
+			"key": "scrambled_roster",
+			"choices": [
+				{
+					"effects": {
+						"fighting": 20,
+						"echo": 10
+					},
+					"reward": [
+						"heal"
+					],
+					"mbti": "SF",
+					"path": "easy",
+					"text": "clerk의 붉은 펜을 넘겨받아 번호로 바뀐 지원자들의 원래 이름을 대조해 적는다.",
+					"result": [
+						{
+							"text": "감사합니다! 84번이랑 102번 지원자 원래 이름을 겨우 펜으로 덧썼어요!",
+							"speaker": "clerk"
+						},
+						{
+							"speaker": "narrator",
+							"text": "복도 저편에서 서버실 차단벽이 내려앉는 둔탁한 소리가 울린다."
+						},
+						{
+							"speaker": "nia",
+							"text": "사람들은 챙겼지만 시간이 너무 지체됐어요. 관리자가 바로 앞까지 당도했어요!"
+						}
+					],
+					"flag": {
+						"key": "delayed_paperwork",
+						"boss_text": "명부 정리에 시간을 지체한 탓에 데이터 관리자가 통로를 선점하고 차단 격벽을 내린다.",
+						"label": "지연된 수기 작업"
+					}
+				},
+				{
+					"reward": [
+						"move_range_up"
+					],
+					"text": "혼란을 수습하려는 clerk를 밀치고 메인 단말기 전원 코드를 뽑아 절차를 중단한다.",
+					"path": "hard",
+					"mbti": "TP",
+					"result": [
+						{
+							"text": "단말기 전원을 뽑아버리면 대기자들 인적 사항이 통째로 날아갑니다!",
+							"speaker": "clerk"
+						},
+						{
+							"speaker": "narrator",
+							"text": "화면이 암전되자 숫자를 부르던 안내 방송 스피커가 뚝 끊긴다."
+						},
+						{
+							"speaker": "nia",
+							"text": "냉정하지만... 관리자가 지원자들을 추적하던 단말기 화면도 함께 꺼졌어요."
+						}
+					],
+					"flag": {
+						"label": "전원 차단",
+						"key": "power_cut",
+						"boss_text": "주전원이 꺼져 깜빡이는 통로의 비상등 틈을 타 데이터 관리자의 사각지대로 파고든다."
+					},
+					"effects": {
+						"echo": -10,
+						"fighting": -20
+					}
+				},
+				{
+					"path": "stat",
+					"mbti": "EN",
+					"reward": [
+						"shield"
+					],
+					"text": "검색실 지원자들을 향해 소리쳐 서로의 본명을 부르며 대기열을 유지하게 만든다.",
+					"result": [
+						{
+							"text": "당신의 지시에 따라 지원자들이 서로의 얼굴을 확인하며 큰 소리로 본명을 부른다.",
+							"speaker": "narrator"
+						},
+						{
+							"speaker": "clerk",
+							"text": "사람들이 번호에 굴하지 않고 이름을 부르고 있어... 기계 화면의 숫자가 멈칫거려요!"
+						},
+						{
+							"speaker": "nia",
+							"text": "저들이 길을 터주고 있어요. 이 틈에 서버실 통로로 돌파해요!"
+						}
+					],
+					"effects": {
+						"fighting": 30,
+						"community": 20,
+						"echo": 15
+					},
+					"flag": {
+						"label": "연대하는 지원자들",
+						"boss_text": "서로의 이름을 부르며 결속한 지원자들이 스크럼을 짜 데이터 관리자의 앞길을 가로막는다.",
+						"key": "united_seekers"
+					}
+				},
+				{
+					"reward": [
+						"cooldown_reset"
+					],
+					"effects": {
+						"echo": 5,
+						"gold": 100,
+						"reason": 20
+					},
+					"text": "창구의 안내 방송용 마이크를 낚아채 무작위 음료수 번호를 부르며 장내를 교란한다.",
+					"mbti": "FP",
+					"path": "fun",
+					"result": [
+						{
+							"speaker": "narrator",
+							"text": "스피커에서 무작위 음료수 주문 방송이 터져 나오자 대기실이 일순간 멍해진다."
+						},
+						{
+							"text": "지금 방송실 마이크로 무슨 헛소리를 하시는 겁니까?!",
+							"speaker": "clerk"
+						},
+						{
+							"text": "푸흡, 사람들이 멍하니 쳐다보느라 밀치질 않아요. 바닥에 떨어진 지원금 봉투나 챙겨요!",
+							"speaker": "nia"
+						}
+					]
+				}
+			],
+			"wants": "숫자로 대체되는 구직자들의 본래 이름을 수기 대장에 적어 신원을 보존하기",
+			"slot": "D",
+			"kind": "rep",
+			"rep_dir": "fighting+"
+		}
+	],
+	"errors": [],
+	"prompt_hash": "00a9a5577d9167d1a1b6b4eeaacd205efeba7e40"
+}

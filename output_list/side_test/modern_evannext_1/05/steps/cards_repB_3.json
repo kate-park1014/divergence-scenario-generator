@@ -1,0 +1,331 @@
+{
+	"cards": [
+		{
+			"rule_link": "대기실 규칙의 허점을 이용해 부실한 경력을 이력서에 과장해 봉인하려 함",
+			"title": "규칙의 허점과 과장 서류",
+			"wants": "수거함 규정집의 허점을 이용해 자신의 부실한 이력서를 상급 경력으로 승인받는 것",
+			"person": {
+				"name": "민석",
+				"id": "minseok",
+				"role": "부실한 경력을 과장해 통과하려는 지원자"
+			},
+			"no": 1,
+			"key": "rules_and_forgery",
+			"background_tags": [
+				"interview_room",
+				"afternoon",
+				"fluorescent_light",
+				"crowded_applicants",
+				"anxious_atmosphere"
+			],
+			"choices": [
+				{
+					"flag": {
+						"key": "falsified_approval",
+						"boss_text": "과장 승인된 민석의 서류가 수거함 내부 메커니즘을 왜곡해 방어막을 형성한다.",
+						"label": "위조 승인"
+					},
+					"mbti": "TJ",
+					"result": [
+						{
+							"speaker": "minseok",
+							"text": "\"완벽해요! 규정집 오차를 이용하니 허위 경력이 감쪽같이 진짜로 변했네요.\""
+						},
+						{
+							"speaker": "narrator",
+							"text": "당신은 민석의 서류에 위조 승인 도장을 찍어 제출함에 밀어 넣었다."
+						},
+						{
+							"text": "\"저렇게 왜곡된 서류가 수거함 안에서 무슨 문제를 일으킬지 걱정돼요.\"",
+							"speaker": "lin"
+						}
+					],
+					"text": "규정집 예외 조항을 찾아 민석의 과장된 이력서 승인을 돕는다.",
+					"path": "easy",
+					"reward": [
+						"hp_down"
+					],
+					"effects": {
+						"reason": -15,
+						"community": 10,
+						"gold": 100
+					}
+				},
+				{
+					"result": [
+						{
+							"speaker": "minseok",
+							"text": "\"웻, 절차 타령만 하다가 다 같이 대기실에 갇혀 죽자는 건가요?\""
+						},
+						{
+							"text": "당신은 민석의 허위 서류 승인 요청을 단칼에 거절하고 붉은 도장을 빼앗았다.",
+							"speaker": "narrator"
+						},
+						{
+							"text": "\"원칙을 지킨 덕분에 수거함의 수치 이상 작동이 일단 정지했어요.\"",
+							"speaker": "lin"
+						}
+					],
+					"text": "규정 위반임을 지적하며 민석의 허위 서류 승인 요청을 거절한다.",
+					"mbti": "FP",
+					"flag": {
+						"key": "strict_rejection",
+						"boss_text": "민석의 거짓 서류 승인을 거부한 기록이 수거함의 오작동 감지장치를 정상화시킨다.",
+						"label": "규격 엄수"
+					},
+					"reward": [
+						"defense_up"
+					],
+					"effects": {
+						"fighting": -10,
+						"reason": 15
+					},
+					"path": "hard"
+				},
+				{
+					"effects": {
+						"echo": 10,
+						"reason": -20
+					},
+					"path": "stat",
+					"reward": [
+						"intelligence_up"
+					],
+					"text": "수거함 관리 규칙을 엄밀히 적용해 민석의 과장 서류 제출을 원천 차단한다.",
+					"mbti": "FJ",
+					"result": [
+						{
+							"text": "\"당신의 그 지독한 규정 검증 앞에서는 어떠한 꼼수도 안 통하는군요...\"",
+							"speaker": "minseok"
+						},
+						{
+							"speaker": "narrator",
+							"text": "당신이 수거함 관리 규칙을 엄밀히 들먹이자 민석은 과장 서류를 거두어들였다."
+						},
+						{
+							"text": "\"절차에 따른 엄격한 통제가 허위 서류 제출을 사전 차단했어요.\"",
+							"speaker": "lin"
+						}
+					],
+					"flag": {
+						"key": "perfect_audit",
+						"label": "완벽한 감사",
+						"boss_text": "원칙대로 완벽히 검증한 기록 덕분에 수거함 주변의 기괴한 압박 현상이 약화된다."
+					}
+				},
+				{
+					"result": [
+						{
+							"speaker": "minseok",
+							"text": "\"아니, 서류 대신 자기 손등에 승인 도장을 찍으면 어떡합니까?\""
+						},
+						{
+							"text": "당신은 도장을 빼앗아 손등에 찍은 뒤 민석의 과장 서류를 구겨서 바닥에 던졌다.",
+							"speaker": "narrator"
+						},
+						{
+							"speaker": "lin",
+							"text": "\"상식 밖의 행동이었지만, 민석 씨가 황당해하며 서류 제출을 포기했네요.\""
+						}
+					],
+					"text": "민석의 수류탄 도장을 빼앗아 서류 대신 자기 손등에 승인 도장을 찍는다.",
+					"mbti": "TP",
+					"effects": {
+						"echo": -5,
+						"gold": 50,
+						"reason": 25
+					},
+					"reward": [
+						"move_range_up"
+					],
+					"path": "fun"
+				}
+			],
+			"dialogue": [
+				{
+					"speaker": "narrator",
+					"text": "제출함 옆에서 민석이 수류탄 형태의 인쇄용 도장을 만지작거리며 주변을 살핀다."
+				},
+				{
+					"text": "\"당신이 그 시험장 규칙과 제출 양식을 토씨 하나 안 틀리고 통과했던 사람이죠?\"",
+					"speaker": "minseok"
+				},
+				{
+					"text": "\"제 부실한 경력을 상급 관리자 경력으로 자동 교정되게 규정집 허점으로 봉인해 주세요!\"",
+					"speaker": "minseok"
+				},
+				{
+					"speaker": "lin",
+					"text": "\"저 사람은 대기실 마비 지침을 악용해 거짓 서류를 제출함에 집어넣으려 하고 있어요.\""
+				}
+			],
+			"slot": "B",
+			"kind": "rep",
+			"rep_dir": "reason-"
+		},
+		{
+			"dialogue": [
+				{
+					"text": "수거함 제어대 앞에서 안내원 유리가 붉은 결재 펜을 든 채 사람들을 막아선다.",
+					"speaker": "narrator"
+				},
+				{
+					"speaker": "yuri",
+					"text": "\"양식 따위는 무시하고 자기 마음 가는 대로 대기실을 휘젓고 다니는 당신이군요?\""
+				},
+				{
+					"speaker": "yuri",
+					"text": "\"어차피 형식일 뿐이에요. 마비를 풀려면 과장 승인란에 붉은 펜으로 서명하세요!\""
+				},
+				{
+					"text": "\"유리는 무조건적인 과장 서명만이 대기실 마비를 풀 유일한 길이라며 압박하고 있어요.\"",
+					"speaker": "lin"
+				}
+			],
+			"rule_link": "대기실 통과 기준을 맞추기 위해 과장된 서명을 이력서 승인란에 강요함",
+			"person": {
+				"id": "yuri",
+				"name": "유리",
+				"role": "과장된 서명을 요구하는 대기실 안내원"
+			},
+			"background_tags": [
+				"interview_room",
+				"afternoon",
+				"red_neon_light",
+				"crowded_applicants",
+				"tense_atmosphere"
+			],
+			"key": "forced_signature_pressure",
+			"no": 2,
+			"wants": "지원자들에게 과장 승인란 서명을 받아내 대기실 마비를 모면하는 것",
+			"title": "강제 서명과 거침없는 선택",
+			"choices": [
+				{
+					"reward": [
+						"attack_down"
+					],
+					"mbti": "EP",
+					"flag": {
+						"boss_text": "아무렇게나 서명된 이력서 집합이 제어장치를 자극해 강렬한 충격파를 발생시킨다.",
+						"key": "reckless_signature",
+						"label": "즉흥 서명"
+					},
+					"effects": {
+						"community": -10,
+						"gold": 100,
+						"reason": 15
+					},
+					"text": "유리의 요구대로 과장 승인 서명란에 망설임 없이 붉은 펜으로 서명한다.",
+					"path": "easy",
+					"result": [
+						{
+							"speaker": "yuri",
+							"text": "\"좋아요! 그렇게 시원시원하게 서명해야 대기실 지체 시간을 모면하죠!\""
+						},
+						{
+							"speaker": "narrator",
+							"text": "당신은 망설임 없이 과장 승인 서명란에 붉은 결재 펜으로 서명했다."
+						},
+						{
+							"speaker": "lin",
+							"text": "\"당장은 넘어갔지만 허위 서명의 대가가 수거함에 쌓이고 있어요.\""
+						}
+					]
+				},
+				{
+					"path": "hard",
+					"result": [
+						{
+							"speaker": "yuri",
+							"text": "\"내 펜을 빼앗다니! 서명 없이 과장 서류가 통과할 줄 알고 이러나요?\""
+						},
+						{
+							"text": "당신은 유리의 손에서 붉은 결재 펜을 빼앗아 제어함 전원 슬롯에 꽂아 동결시켰다.",
+							"speaker": "narrator"
+						},
+						{
+							"speaker": "lin",
+							"text": "\"강제로 과장 서명을 받아내려던 안내원의 시도를 저지했어요.\""
+						}
+					],
+					"effects": {
+						"echo": 10,
+						"reason": -15
+					},
+					"mbti": "IJ",
+					"flag": {
+						"boss_text": "안내원 유리의 결재 펜을 봉인해 둔 덕분에 거짓 이력서의 유입이 차단된다.",
+						"key": "pen_freeze",
+						"label": "결재 봉인"
+					},
+					"reward": [
+						"shield"
+					],
+					"text": "서명 요구를 거부하고 유리의 붉은 결재 펜을 빼앗아 제어함에 꽂아 동결시킨다."
+				},
+				{
+					"text": "자유로운 분위기를 이용해 지원자들을 선동하여 과장 서명 강요를 집단 거부하게 만든다.",
+					"result": [
+						{
+							"speaker": "yuri",
+							"text": "\"갑자기 지원자들이 단체로 서명을 거부하다니... 당신 대체 무슨 짓을 한 거죠?\""
+						},
+						{
+							"speaker": "narrator",
+							"text": "당신이 서명 거부를 선언하자 주변 지원자들이 일제히 과장 서류를 거두었다."
+						},
+						{
+							"speaker": "lin",
+							"text": "\"당신의 거침없는 태도에 고무된 사람들이 거짓 서명 요구를 함께 거부했어요.\""
+						}
+					],
+					"flag": {
+						"key": "applicant_rebellion",
+						"label": "지원자 거부",
+						"boss_text": "지원자들이 통제에서 벗어나 과장 서류 제출을 거부하면서 공간의 압박이 줄어든다."
+					},
+					"mbti": "ET",
+					"effects": {
+						"reason": 20,
+						"fighting": 15
+					},
+					"reward": [
+						"cooldown_reset"
+					],
+					"path": "stat"
+				},
+				{
+					"path": "gold",
+					"result": [
+						{
+							"text": "\"100골드라니... 골드 입금이 확인되었으니 대기표 전산 열람 권한을 드릴게요.\"",
+							"speaker": "yuri"
+						},
+						{
+							"text": "당신은 유리에게 100골드를 지불하고 거짓 서명 없이 대기표 열람권을 획득했다.",
+							"speaker": "narrator"
+						},
+						{
+							"text": "\"돈으로 절차를 bypass해서 강제 서명 압박에서 벗어났어요.\"",
+							"speaker": "lin"
+						}
+					],
+					"mbti": "IF",
+					"effects": {
+						"echo": 10,
+						"gold": -100
+					},
+					"reward": [
+						"intelligence_up"
+					],
+					"text": "유리에게 100골드를 내주고 과장 서명 대신 정식 대기표 전산 열람권을 구매한다."
+				}
+			],
+			"slot": "B",
+			"kind": "rep",
+			"rep_dir": "reason+"
+		}
+	],
+	"errors": [],
+	"prompt_hash": "2498d8620b8b69a6075b356d8176558c72a6556a"
+}

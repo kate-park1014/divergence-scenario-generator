@@ -1,0 +1,191 @@
+{
+	"id": "card_01_tommy_overload_save",
+	"kind": "rep",
+	"title": {
+		"korean": "감전 위기의 해커"
+	},
+	"intensity": "calm",
+	"after_story": 3,
+	"before_story": 5,
+	"condition": {
+		"leaning": "fighting+",
+		"among": [
+			"fighting-",
+			"fighting+",
+			"community-",
+			"community+",
+			"reason-",
+			"reason+"
+		],
+		"min": 20
+	},
+	"urgency": 8,
+	"leaning": "fighting+",
+	"background_tags": [
+		"server_rack",
+		"day",
+		"bright",
+		"sparse",
+		"dangerous"
+	],
+	"dialogue": [
+		{
+			"speaker": "tommy",
+			"content": {
+				"korean": "어려움에 처한 사람을 그냥 못 지나친다면서요? 제발 저 좀 도와주세요!"
+			}
+		},
+		{
+			"speaker": "tommy",
+			"content": {
+				"korean": "데이터가 복구돼서 급하게 받고 있는데, 전류가 역류해서 손을 뗄 수가 없어요!"
+			}
+		},
+		{
+			"speaker": "echo",
+			"content": {
+				"korean": "저 단말기 터지기 직전이야! 잘못 건드리면 당신까지 다칠 텐데."
+			}
+		}
+	],
+	"choices": [
+		{
+			"text": {
+				"korean": "단말기를 대신 붙잡아 버틴다"
+			},
+			"path": "easy",
+			"mbti": "FJ",
+			"flag": "tommy_shock",
+			"effects": {
+				"fighting": 20
+			},
+			"reward": [
+				"shield"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "당신이 흐르는 전류를 이 악물고 버텨냈다."
+					}
+				},
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "토미가 무사히 데이터를 받고 고맙다며 방어막 장비를 건넸다."
+					}
+				}
+			]
+		},
+		{
+			"text": {
+				"korean": "강제로 케이블을 끊어버린다"
+			},
+			"path": "hard",
+			"mbti": "TJ",
+			"flag": "tommy_safe",
+			"effects": {
+				"fighting": -20,
+				"echo": 10
+			},
+			"reward": [
+				"hp_down"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "당신이 단말기 케이블을 발로 차 끊어버렸다."
+					}
+				},
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "폭발은 막았지만 다운로드가 실패해 토미가 주저앉았다."
+					}
+				}
+			]
+		},
+		{
+			"text": {
+				"korean": "사람들을 불러 모아 전력을 분산시킨다"
+			},
+			"path": "stat",
+			"mbti": "NF",
+			"require": {
+				"stat": "fighting",
+				"op": ">=",
+				"value": 40
+			},
+			"flag": "tommy_help",
+			"effects": {
+				"fighting": 30,
+				"community": 20
+			},
+			"reward": [
+				"defense_up"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "당신의 외침에 주변 사람들이 달려와 접지선을 하나씩 잡았다."
+					}
+				},
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "안전하게 다운로드가 끝났다."
+					}
+				}
+			]
+		}
+	],
+	"_side": {
+		"slot": "B",
+		"person": {
+			"id": "tommy",
+			"name": "토미",
+			"role": "초보 해커"
+		},
+		"wants": "과부하가 걸린 단말기에서 데이터를 마저 받을 수 있게 대신 버텨달라고 함",
+		"rule_link": "스크린 조각을 깨어 생긴 일시적 과부하 속에서 위험을 감수하고 데이터를 얻으려 함",
+		"rep": "fighting+",
+		"events": {},
+		"flags": {
+			"tommy_shock": {
+				"kind": "bad",
+				"boss_penalty": -1,
+				"label": {
+					"korean": "과부하의 흔적"
+				},
+				"boss_line": {
+					"korean": "몸에 남은 과부하 전류 때문에 보안관의 스캐너에 쉽게 발각된다."
+				}
+			},
+			"tommy_safe": {
+				"kind": "good",
+				"boss_penalty": 1,
+				"label": {
+					"korean": "끊어진 회로"
+				},
+				"boss_choice": {
+					"korean": "전력이 차단된 구역으로 유인해 보안관의 시야를 피한다."
+				}
+			},
+			"tommy_help": {
+				"kind": "good",
+				"boss_penalty": 2,
+				"label": {
+					"korean": "은혜를 갚는 사람들"
+				},
+				"boss_choice": {
+					"korean": "사람들의 도움을 받아 보안관의 포위망을 돌파한다."
+				}
+			}
+		}
+	}
+}

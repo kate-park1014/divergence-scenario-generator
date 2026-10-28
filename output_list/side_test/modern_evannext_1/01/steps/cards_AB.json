@@ -1,0 +1,782 @@
+{
+	"cards": [
+		{
+			"key": "hayeon_portfolio",
+			"person": {
+				"id": "hayeon",
+				"name": "하연",
+				"role": "4회차 면접 대기자"
+			},
+			"title": "네 번째 지원자의 청탁",
+			"dialogue": [
+				{
+					"speaker": "narrator",
+					"text": "손톱을 물어뜯던 대기자가 주인공에게 다가와 낡은 포트폴리오를 내민다."
+				},
+				{
+					"text": "네 번째 면접이에요. 한 줄만 그럴듯하게 채워 접수대에 올려주시면 안 될까요?",
+					"speaker": "hayeon"
+				},
+				{
+					"speaker": "lin",
+					"text": "저도 번호표를 못 받아 막막하지만, 남의 서류에 손을 대는 건 위험해요."
+				},
+				{
+					"text": "당장 순번만 오르면 접수대 뒤편 상황을 전부 알려드릴게요! 제발요!",
+					"speaker": "hayeon"
+				}
+			],
+			"no": 1,
+			"rule_link": "이력서의 경력 항목을 덧쓰면 접수 순번이 즉시 상승한다.",
+			"wants": "순번을 즉시 앞당겨 이번 면접 번호표를 받는 것",
+			"choices": [
+				{
+					"reward": [
+						"intelligence_up"
+					],
+					"text": "하연의 서류에 대형 기획사 무대 경력을 덧써서 접수함에 넣는다.",
+					"result": [
+						{
+							"text": "접수대 아래 서류함에 이전 합격자 명부 사본이 놓여 있어요. 제가 본 건 이게 다예요!",
+							"speaker": "hayeon"
+						},
+						{
+							"speaker": "lin",
+							"text": "저분 순번이 14번이나 껑충 뛰었어요. 우리 차례도 곧 올까요?"
+						}
+					],
+					"effects": {
+						"reason": -20,
+						"community": -15,
+						"echo": 10,
+						"gold": 60
+					},
+					"mbti": "EN",
+					"path": "easy"
+				},
+				{
+					"reward": [
+						"defense_up"
+					],
+					"path": "hard",
+					"mbti": "ST",
+					"result": [
+						{
+							"speaker": "hayeon",
+							"text": "세 번이나 떨어진 서류를 그대로 내라고요? 당신 말 믿었다가 또 탈락하겠네."
+						},
+						{
+							"speaker": "lin",
+							"text": "실망한 모양이지만 어쩌겠어요. 아직 제 지원서도 손도 못 댔는걸요."
+						}
+					],
+					"effects": {
+						"echo": -10,
+						"reason": 20,
+						"community": 10
+					},
+					"text": "하연의 손을 밀어내며 서류 원본 그대로 내라고 돌려준다."
+				},
+				{
+					"require_mbti": "TJ",
+					"result": [
+						{
+							"text": "{actor}이(가) 규정집 빈틈을 지적하며 하연의 연습생 기간을 실전 경력으로 정리해 제출했다.",
+							"speaker": "narrator"
+						},
+						{
+							"text": "이 정도면 정식 경력으로 인정되겠어요! 접수대 담당자가 3번 창구 쪽을 자주 비운다는 걸 알려드릴게요.",
+							"speaker": "hayeon"
+						}
+					],
+					"reward": [
+						"attack_up"
+					],
+					"path": "lock",
+					"mbti": "TJ",
+					"effects": {
+						"echo": 5,
+						"gold": 40,
+						"reason": -10,
+						"community": -10
+					},
+					"text": "{actor}이(가) 규정집 서식을 따져 하연의 경력을 재분류해 넘겨준다."
+				}
+			],
+			"background_tags": [
+				"waiting_hall",
+				"fluorescent_light",
+				"crowd",
+				"reception_desk",
+				"tense"
+			],
+			"slot": "A",
+			"kind": "plant"
+		},
+		{
+			"person": {
+				"id": "faint_man",
+				"role": "탈진 직전의 지원자",
+				"name": "지친 대기자"
+			},
+			"no": 2,
+			"background_tags": [
+				"waiting_hall",
+				"waiting_bench",
+				"exhausted_people",
+				"paper_scattered",
+				"restless"
+			],
+			"title": "지친 대기자의 거래",
+			"wants": "서류에 거짓 경력을 덧대어 대기 순번을 앞당기고 쉬러 가는 것",
+			"rule_link": "이력서에 이득을 주면 대기실 내의 휴식 권한을 양도받는다.",
+			"dialogue": [
+				{
+					"text": "이마에 식은땀을 흘리는 남자가 구겨진 지원서 세 장을 쥐고 다가왔다.",
+					"speaker": "narrator"
+				},
+				{
+					"speaker": "lin",
+					"text": "얼굴이 사색이시네요. 어디 몸이라도 안 좋으신 건가요?"
+				},
+				{
+					"text": "경력 한 칸만 보태주면 저쪽 소파 자리를 양보하겠소. 당장 쓰러질 것 같소.",
+					"speaker": "faint_man"
+				}
+			],
+			"key": "tired_applicant",
+			"choices": [
+				{
+					"result": [
+						{
+							"text": "대기자의 문서철에 현장 스태프 경력을 끼워 넣어 접수원 손에 쥐여주었다.",
+							"speaker": "narrator"
+						},
+						{
+							"speaker": "lin",
+							"text": "저 사람 번호표를 받았어요! 구석 소파 자리가 비었으니 잠시 앉아서 쉬어요."
+						}
+					],
+					"text": "대기자의 허위 경력 증빙을 접수원에 전달하고 쉴 곳을 얻는다.",
+					"effects": {
+						"gold": 80,
+						"community": -20,
+						"reason": -15,
+						"echo": 10
+					},
+					"event_intro": [
+						{
+							"speaker": "narrator",
+							"text": "소파에 앉아 가쁜 숨을 가다듬으며 접수대 틈을 살핀다."
+						},
+						{
+							"speaker": "lin",
+							"text": "잠시 숨 좀 돌려요. 제 서류를 어떻게 접수할지도 상의해야 하니까요."
+						}
+					],
+					"mbti": "FP",
+					"event": "campsite",
+					"event_reason": "대기홀 한구석 소파에서 숨을 돌리며 다음 행동을 의논한다.",
+					"path": "easy"
+				},
+				{
+					"mbti": "IS",
+					"result": [
+						{
+							"text": "손을 저으며 뒤통수를 긁적이는 대기자를 돌려보냈다.",
+							"speaker": "narrator"
+						},
+						{
+							"text": "매몰차 보였을 수도 있지만, 우리 서류도 아직 접수하지 못했잖아요.",
+							"speaker": "lin"
+						}
+					],
+					"effects": {
+						"echo": -10,
+						"community": 20,
+						"reason": 15
+					},
+					"path": "hard",
+					"reward": [
+						"shield"
+					],
+					"text": "부탁을 거절하고 각자의 차례를 조용히 기다리라고 이른다."
+				},
+				{
+					"reward": [
+						"heal"
+					],
+					"path": "gold",
+					"mbti": "ES",
+					"text": "80골드를 들여 매점에서 피로회복제를 사 대기자들에게 건넨다.",
+					"effects": {
+						"gold": -80,
+						"community": 10,
+						"reason": 10,
+						"echo": 10
+					},
+					"result": [
+						{
+							"text": "비상용 간식과 음료수를 사서 지친 대기자들에게 나누어주었다.",
+							"speaker": "narrator"
+						},
+						{
+							"text": "다들 조금 진정된 것 같네요. 우리도 곧 방도를 찾을 수 있을 거예요.",
+							"speaker": "lin"
+						}
+					]
+				}
+			],
+			"slot": "A",
+			"kind": "normal"
+		},
+		{
+			"choices": [
+				{
+					"effects": {
+						"community": -20,
+						"echo": 10,
+						"gold": 70,
+						"reason": -20
+					},
+					"text": "반려견 훈련소 출신이라는 거짓 문구를 적어 접수대에 던져 넣는다.",
+					"reward": [
+						"attack_up"
+					],
+					"result": [
+						{
+							"speaker": "narrator",
+							"text": "조련 경험을 지어내 적어 주자 순번 호출기에 불이 번쩍 들어왔다."
+						},
+						{
+							"speaker": "lin",
+							"text": "정말 번호표가 바로 나오네요. 그런데 저 보안 요원이 이쪽을 째려봐요."
+						}
+					],
+					"path": "easy",
+					"mbti": "ET"
+				},
+				{
+					"text": "거짓 서류 조작을 단호히 거절하고 지원서를 쓰레기통에 버린다.",
+					"effects": {
+						"community": 15,
+						"echo": -10,
+						"reason": 20
+					},
+					"result": [
+						{
+							"speaker": "narrator",
+							"text": "서류를 구겨 쓰레기통에 넣자 지원자가 악을 쓰며 바닥을 굴렀다."
+						},
+						{
+							"text": "원칙대로 한 건 맞지만, 주위 시선이 너무 따가워요. 얼른 자리를 피해요.",
+							"speaker": "lin"
+						}
+					],
+					"path": "hard",
+					"mbti": "IN",
+					"reward": [
+						"defense_up"
+					]
+				},
+				{
+					"mbti": "TP",
+					"event": "meet_stranger",
+					"event_options": {
+						"fight": {
+							"win": [
+								{
+									"text": "요원의 손목을 꺾어 바닥에 제압하고 길을 텄다.",
+									"speaker": "narrator"
+								}
+							],
+							"lose": [
+								{
+									"text": "요원의 진압봉에 어깨를 강타당하고 밀려났다.",
+									"speaker": "narrator"
+								}
+							],
+							"text": "{actor}이(가) 삼단봉을 든 보안 요원에 맞선다."
+						},
+						"avoid": {
+							"result": [
+								{
+									"text": "요원의 삼단봉을 쳐내며 린과 함께 인파 속으로 몸을 숨겼다.",
+									"speaker": "narrator"
+								}
+							],
+							"text": "재빠르게 몸을 낮춰 대기석 인파 속으로 파고든다."
+						}
+					},
+					"result": [
+						{
+							"text": "서류에 유명 마술사 조수 경력을 적고 번호표 대신 비둘기 인형을 뽑아냈다.",
+							"speaker": "narrator"
+						},
+						{
+							"text": "장난치실 때가 아니에요! 순찰 요원이 이쪽으로 오잖아요!",
+							"speaker": "lin"
+						}
+					],
+					"avoid_penalty": "defense_down",
+					"path": "fun",
+					"event_reason": "서류 위조 의혹으로 보안 요원의 표적이 되어 시비가 붙었다.",
+					"effects": {
+						"community": -10,
+						"reason": -25,
+						"echo": -5
+					},
+					"text": "서류에 마술 공연 이력을 적고 접수기 투입구에 마술 트릭을 건다.",
+					"event_intro": [
+						{
+							"text": "통로를 막아선 낯선 보안 요원이 삼단봉을 뽑아 들었다.",
+							"speaker": "narrator"
+						},
+						{
+							"speaker": "narrator",
+							"text": "“접수 서식을 건드린 녀석이 네놈이냐? 원칙대로 퇴장 처리하겠다.”"
+						}
+					]
+				}
+			],
+			"dialogue": [
+				{
+					"text": "한 지원자가 족보처럼 보이는 수상한 문서를 품에서 꺼내 보인다.",
+					"speaker": "narrator"
+				},
+				{
+					"text": "경비견 훈련 경력 세 줄만 적어주면 접수 번호가 한 자릿수로 바뀝니다!",
+					"speaker": "pet_trainer"
+				},
+				{
+					"speaker": "lin",
+					"text": "하지만 그렇게 없는 사실을 지어내면 보안 요원이 가만있지 않을 텐데요."
+				},
+				{
+					"speaker": "pet_trainer",
+					"text": "단속 돌기 전에 번호표만 받으면 장땡입니다! 얼른 써넣어 줘요!"
+				}
+			],
+			"key": "fake_credential",
+			"wants": "조작된 훈련사 경력으로 한 자릿수 순번을 받아내는 것",
+			"no": 3,
+			"person": {
+				"name": "다급한 지원자",
+				"id": "pet_trainer",
+				"role": "위조 경력을 노리는 대기자"
+			},
+			"title": "족보를 든 지원자",
+			"rule_link": "없는 자격을 서류에 채우면 순번 호출기가 즉각 반응한다.",
+			"forced": [
+				{
+					"result": [
+						{
+							"text": "{actor}이(가) 지원자의 눈물 어린 사연에 감복해 특기 사항에 온갖 무대 경력을 채워 넣었다.",
+							"speaker": "narrator"
+						},
+						{
+							"speaker": "lin",
+							"text": "잠깐, 그렇게 잔뜩 써버리면 나중에 감당할 수 있겠어요?"
+						}
+					],
+					"reward": [
+						"move_range_up"
+					],
+					"mbti": "NF",
+					"require_mbti": "NF",
+					"effects": {
+						"reason": -20,
+						"community": -25,
+						"echo": 5,
+						"gold": 90
+					},
+					"text": "{actor}이(가) 안타까운 사연을 듣고 서류에 즉흥 경력을 가득 적어 넣는다."
+				}
+			],
+			"background_tags": [
+				"waiting_hall",
+				"inspection_lane",
+				"harsh_light",
+				"security_guard",
+				"confrontation"
+			],
+			"slot": "A",
+			"kind": "normal"
+		},
+		{
+			"dialogue": [
+				{
+					"speaker": "narrator",
+					"text": "접수대 직원 진수가 도장 찍힌 린의 서류를 손에 쥔 채 싱긋 웃는다."
+				},
+				{
+					"speaker": "jinsu",
+					"text": "린 씨 서류는 순번 1번으로 처리됐습니다. 그런데 제 실적이 세 건 모자라네요."
+				},
+				{
+					"text": "제 순번이 오른 건 기쁘지만, 남은 실적을 왜 저희에게 말씀하시나요?",
+					"speaker": "lin"
+				},
+				{
+					"speaker": "jinsu",
+					"text": "과장 서류 서너 장만 더 채워주면, 대기홀 뒷문 통로를 열어 드리겠습니다."
+				}
+			],
+			"wants": "허위 과장 서류를 채워 오늘 접수 할당량을 마감하고 퇴근하는 것",
+			"rule_link": "과장 접수 서류를 늘리면 대기홀 관리자의 비공식 혜택을 받는다.",
+			"background_tags": [
+				"waiting_hall",
+				"reception_counter",
+				"stamped_paper",
+				"office_desk",
+				"hurried"
+			],
+			"choices": [
+				{
+					"effects": {
+						"echo": 10,
+						"gold": 100,
+						"reason": -15,
+						"community": -20
+					},
+					"text": "진수의 부탁대로 밀린 서류 다섯 장에 허위 직무를 써서 넘긴다.",
+					"reward": [
+						"intelligence_up"
+					],
+					"result": [
+						{
+							"speaker": "jinsu",
+							"text": "좋아요! 린 씨 서류는 우선 서랍에 빼두고, 이쪽 비상구 열쇠 위치를 찍어드리죠."
+						},
+						{
+							"speaker": "lin",
+							"text": "임시 합격 도장이 찍히자마자 일이 일사천리로 풀리네요! 뒷문이라니 다행이에요."
+						}
+					],
+					"mbti": "SF",
+					"path": "easy"
+				},
+				{
+					"effects": {
+						"reason": 20,
+						"echo": -10,
+						"community": 20
+					},
+					"text": "실적 채우기용 허위 서류를 거부하고 정식 처리를 요구한다.",
+					"reward": [
+						"defense_up"
+					],
+					"path": "hard",
+					"mbti": "NT",
+					"result": [
+						{
+							"speaker": "jinsu",
+							"text": "협조를 안 해주시겠다? 그럼 린 씨 서류도 대기줄 맨 끝으로 돌립니다."
+						},
+						{
+							"speaker": "lin",
+							"text": "순번이 다시 뒤로 밀려났어요. 그래도 부당한 거래는 안 하길 잘했어요."
+						}
+					]
+				},
+				{
+					"reward": [
+						"move_range_up"
+					],
+					"effects": {
+						"community": 10,
+						"echo": 5,
+						"gold": -60,
+						"reason": -20
+					},
+					"mbti": "EP",
+					"path": "fun",
+					"result": [
+						{
+							"speaker": "narrator",
+							"text": "진수의 책상 위 결재 도장을 낚아채 빈 서류 뭉치에 마구 찍어 흩뿌렸다."
+						},
+						{
+							"text": "으악, 내 결재 도장! 실적이고 뭐고 이게 무슨 난장판이야!",
+							"speaker": "jinsu"
+						},
+						{
+							"text": "도망쳐요! 임시 도장을 받은 지원서만 챙겨서 얼른 빠져나가야 해요!",
+							"speaker": "lin"
+						}
+					],
+					"text": "진수의 책상에 놓인 접수 완료 도장을 빼앗아 서류철에 난사한다."
+				}
+			],
+			"no": 4,
+			"title": "접수원의 실적 채우기",
+			"key": "jinsu_quota",
+			"person": {
+				"role": "접수대 직원",
+				"id": "jinsu",
+				"name": "진수"
+			},
+			"slot": "B",
+			"kind": "plant"
+		},
+		{
+			"no": 5,
+			"wants": "명패 기계의 조작 기능을 가동해 특수 명패 출력 실적을 내는 것",
+			"person": {
+				"name": "기계 관리원",
+				"id": "machine_tech",
+				"role": "명패 출력기 수리공"
+			},
+			"background_tags": [
+				"waiting_hall",
+				"nameplate_machine",
+				"clattering",
+				"stamped_paper",
+				"gamble"
+			],
+			"choices": [
+				{
+					"text": "명패 출력기의 인식기에 과장된 경력 칩을 밀어 넣는다.",
+					"reward": [
+						"attack_up"
+					],
+					"result": [
+						{
+							"text": "기계 틈새에 서류 조각을 덧대자 골드 명패와 접수 확인증이 굴러떨어졌다.",
+							"speaker": "narrator"
+						},
+						{
+							"speaker": "lin",
+							"text": "도장을 받으니 기계도 순순히 통과시켜 주네요. 정말 신기해요."
+						}
+					],
+					"effects": {
+						"reason": -15,
+						"community": -15,
+						"gold": 90,
+						"echo": 10
+					},
+					"mbti": "IP",
+					"path": "easy"
+				},
+				{
+					"reward": [
+						"defense_up"
+					],
+					"mbti": "FJ",
+					"path": "hard",
+					"result": [
+						{
+							"speaker": "narrator",
+							"text": "기계 전원을 내리고 순수 인적 사항만 기록된 일반 플라스틱 명패를 집었다."
+						},
+						{
+							"text": "반짝이는 명패는 아니지만, 본래 내역대로 처리되는 게 마음 편해요.",
+							"speaker": "lin"
+						}
+					],
+					"text": "조작 모듈을 끄고 표준 규격대로 명패를 인쇄한다.",
+					"effects": {
+						"echo": -10,
+						"reason": 15,
+						"community": 15
+					}
+				},
+				{
+					"result": [
+						{
+							"text": "70골드를 투입구에 넣고 슬롯 형태의 출력기 레버를 힘차게 당겼다.",
+							"speaker": "narrator"
+						},
+						{
+							"speaker": "lin",
+							"text": "톱니가 돌아가요! 같은 모양이 나오면 앞당겨진 순번을 굳힐 수 있어요!"
+						}
+					],
+					"effects": {
+						"community": 25,
+						"reason": -20,
+						"echo": 5,
+						"gold": -70
+					},
+					"event_reason": "명패 기계의 레버를 당겨 추가 순번 보너스 슬롯을 작동시킨다.",
+					"mbti": "SP",
+					"path": "gold",
+					"event_intro": [
+						{
+							"speaker": "narrator",
+							"text": "기술자가 레버를 당기자 세 개의 톱니바퀴가 맹렬히 회전하기 시작했다."
+						},
+						{
+							"speaker": "lin",
+							"text": "돈까지 걸고 이러다 고장이라도 나면 어쩌려고 그래요?"
+						}
+					],
+					"event": "minigame_slot",
+					"text": "70골드를 걸고 명패 출력기의 보너스 추첨 레버를 돌린다."
+				}
+			],
+			"key": "nameplate_gamble",
+			"dialogue": [
+				{
+					"text": "요란한 쇠소리를 내며 명패 출력기가 불꽃을 튀긴다.",
+					"speaker": "narrator"
+				},
+				{
+					"text": "과장 접수 도장을 찍으셨군요? 기계에 서류를 한 번 더 긁으면 대박 명패가 나옵니다!",
+					"speaker": "machine_tech"
+				},
+				{
+					"speaker": "lin",
+					"text": "임시 합격 도장이 번질까 봐 겁나요. 기계에 무리한 조작을 해도 될까요?"
+				},
+				{
+					"speaker": "machine_tech",
+					"text": "순번을 굳히려면 특수 금속 명패를 뽑아야죠. 한번 돌려보시겠습니까?"
+				}
+			],
+			"title": "덜컹거리는 명패 출력기",
+			"rule_link": "명패 출력기는 조작된 서류 기록을 바탕으로 특수 명패를 발급한다.",
+			"slot": "B",
+			"kind": "normal"
+		},
+		{
+			"title": "도장을 본 사람들",
+			"dialogue": [
+				{
+					"text": "린의 손에 찍힌 임시 합격 도장을 본 지원자들이 구름처럼 몰려들었다.",
+					"speaker": "narrator"
+				},
+				{
+					"speaker": "desperate_group",
+					"text": "어떻게 순번 1번을 받은 겁니까? 제 서류에도 같은 도장을 받게 해주십시오!"
+				},
+				{
+					"speaker": "lin",
+					"text": "저도 얼떨결에 받은 거라 말씀드리기 곤란해요. 다들 물러서 주세요!"
+				},
+				{
+					"text": "방법만 알려주면 뭐든 보답하겠소! 번호표 순번만 앞당겨 주시오!",
+					"speaker": "desperate_group"
+				}
+			],
+			"key": "stamp_envy",
+			"background_tags": [
+				"waiting_hall",
+				"bulletin_board",
+				"loudspeaker",
+				"stamped_paper",
+				"whispering"
+			],
+			"no": 6,
+			"rule_link": "임시 합격 도장의 선례를 본 대기자들이 과장 접수를 요구한다.",
+			"choices": [
+				{
+					"path": "easy",
+					"mbti": "EF",
+					"result": [
+						{
+							"text": "주최 측 찬조 경력을 적어 넣자 접수 창구의 등이 푸른색으로 바뀌었다.",
+							"speaker": "narrator"
+						},
+						{
+							"speaker": "lin",
+							"text": "벌써 임시 도장이 번쩍여요. 사람들이 우릴 부러운 눈으로 쳐다봐요."
+						}
+					],
+					"reward": [
+						"move_range_up"
+					],
+					"text": "협회장의 추천 문구를 지어내 대기자의 명부에 서명해 준다.",
+					"effects": {
+						"community": -20,
+						"gold": 80,
+						"echo": 10,
+						"reason": -20
+					}
+				},
+				{
+					"effects": {
+						"echo": -10,
+						"reason": 20,
+						"community": 20
+					},
+					"text": "몰려드는 대기자들의 서류를 뿌리치고 접수대 앞을 비켜선다.",
+					"result": [
+						{
+							"speaker": "narrator",
+							"text": "지원자들의 청탁 메모를 모두 모아 중앙 분쇄기에 밀어 넣었다."
+						},
+						{
+							"speaker": "lin",
+							"text": "원성이 자자하지만, 우리 서류 순번을 지키려면 엮이지 않는 게 맞아요."
+						}
+					],
+					"mbti": "IT",
+					"path": "hard",
+					"reward": [
+						"defense_up"
+					]
+				},
+				{
+					"require_mbti": "NT",
+					"path": "lock",
+					"mbti": "NT",
+					"text": "{actor}이(가) 규정 조항의 빈틈을 이용해 대기자들의 서류를 정식 분류한다.",
+					"result": [
+						{
+							"text": "{actor}이(가) 규정상 허용되는 유사 경력 인정 조항을 찾아내 합법적으로 순번을 조율했다.",
+							"speaker": "narrator"
+						},
+						{
+							"text": "{actor} 덕분에 허위 작성 없이도 몇 사람의 순번을 빠르게 통과시켰어요!",
+							"speaker": "lin"
+						}
+					],
+					"reward": [
+						"intelligence_up"
+					],
+					"effects": {
+						"gold": 50,
+						"echo": 5,
+						"community": -10,
+						"reason": -10
+					}
+				},
+				{
+					"reward": [
+						"shield"
+					],
+					"mbti": "SJ",
+					"path": "gold",
+					"result": [
+						{
+							"text": "90골드로 접수대 급행 수수료를 대신 내주자 서류 검토가 일괄 승인되었다.",
+							"speaker": "narrator"
+						},
+						{
+							"speaker": "lin",
+							"text": "비용이 꽤 들었지만, 불필요한 시비 없이 순번을 지켜냈네요."
+						}
+					],
+					"text": "90골드를 창구에 지불해 대기자들의 정식 서류 검토 수수료를 낸다.",
+					"effects": {
+						"gold": -90,
+						"echo": 5,
+						"reason": 10,
+						"community": 10
+					}
+				}
+			],
+			"person": {
+				"name": "몰려든 지원자들",
+				"id": "desperate_group",
+				"role": "임시 합격 도장을 목격한 대기자 무리"
+			},
+			"wants": "린처럼 순번이 맨 앞으로 오르는 임시 합격 도장을 받는 것",
+			"slot": "B",
+			"kind": "normal"
+		}
+	],
+	"errors": []
+}

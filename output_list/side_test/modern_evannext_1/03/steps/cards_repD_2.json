@@ -1,0 +1,308 @@
+{
+	"cards": [
+		{
+			"no": 1,
+			"title": "절박한 강제 인증",
+			"person": {
+				"role": "소리를 잃은 구직자",
+				"name": "민호",
+				"id": "minho"
+			},
+			"background_tags": [
+				"booth",
+				"interior",
+				"dim",
+				"crowded",
+				"tense"
+			],
+			"wants": "소리를 잃었어도 전자 인증 도장을 눌러 이력서 제출을 마무리하려 한다.",
+			"rule_link": "소리를 잃은 구직자가 과부하된 인증부스에서 무리하게 이력서 인증을 시도한다.",
+			"key": "booth_desperation",
+			"choices": [
+				{
+					"mbti": "TJ",
+					"effects": {
+						"gold": 100,
+						"community": -10
+					},
+					"reward": [],
+					"path": "easy",
+					"text": "민호의 손을 밀쳐내고 당신의 이력서만 부스에서 챙겨 빠져나온다.",
+					"flag": {
+						"key": "selfish_escape",
+						"boss_text": "과부하된 부스가 폭발하며 튄 전자 파편에 맞아 쓰러진다.",
+						"label": "자기 우선"
+					},
+					"result": [
+						{
+							"text": "당신은 민호의 손을 밀쳐내고 당신의 이력서만 부스에서 챙겨 빠져나왔다.",
+							"speaker": "narrator"
+						},
+						{
+							"text": "민호는 분통을 터뜨리며 바닥에 주저앉은 채 입만 벙긋거렸다.",
+							"speaker": "minho"
+						},
+						{
+							"text": "저 사람의 이력서는 파란 스파크에 타버렸어요... 그래도 우리 이력서는 무사하네요.",
+							"speaker": "kai"
+						}
+					]
+				},
+				{
+					"effects": {
+						"echo": 10,
+						"fighting": 10,
+						"community": 20
+					},
+					"mbti": "NF",
+					"reward": [
+						"shield"
+					],
+					"path": "hard",
+					"result": [
+						{
+							"text": "당신은 과부하된 전자 인증 도장을 억지로 빼앗아 민호의 무리한 승인을 저지했다.",
+							"speaker": "narrator"
+						},
+						{
+							"text": "민호는 주머니에서 비상 정지 키 카드를 꺼내 당신 손에 쥐여주며 고개를 숙였다.",
+							"speaker": "minho"
+						},
+						{
+							"speaker": "kai",
+							"text": "큰일 날 뻔했어요! 이 키 카드가 다음 방에서 유용하게 쓰일 것 같군요."
+						}
+					],
+					"flag": {
+						"label": "위험 저지",
+						"boss_text": "구해낸 민호가 고마움의 표시로 건넨 부스 비상 정지 키 카드를 사용한다.",
+						"key": "stop_minho"
+					},
+					"text": "민호의 손에서 전자 인증 도장을 빼앗아 무리한 인증 절차를 저지한다."
+				},
+				{
+					"text": "차가운 눈빛과 단호한 태도로 민호를 압도하여 부스 접근을 포기하게 만든다.",
+					"flag": {
+						"boss_text": "민호에게서 회수한 전자 인증 도장의 내부 회로를 보스 기계에 찔러 넣는다.",
+						"label": "단호한 제압",
+						"key": "overawe_minho"
+					},
+					"reward": [
+						"intelligence_up"
+					],
+					"path": "stat",
+					"effects": {
+						"community": -20,
+						"echo": -5,
+						"reason": 15
+					},
+					"result": [
+						{
+							"text": "당신이 차가운 눈빛으로 노려보며 제압하자, 민호는 질려버린 표정으로 부스에서 물러섰다.",
+							"speaker": "narrator"
+						},
+						{
+							"speaker": "minho",
+							"text": "민호는 겁에 질려 전자 인증 도장을 내던지고 뒤도 돌아보지 않고 도망쳤다."
+						},
+						{
+							"speaker": "kai",
+							"text": "당신의 단호한 태도 덕분에 과부하 기기가 완전히 파손되는 건 막았어요."
+						}
+					],
+					"mbti": "EP"
+				}
+			],
+			"dialogue": [
+				{
+					"text": "민호가 소리가 나오지 않는 입을 벙긋거리며, 스파크가 튀는 전자 인증 도장 위로 이력서를 바짝 밀어붙였다.",
+					"speaker": "narrator"
+				},
+				{
+					"speaker": "minho",
+					"text": "민호가 메모장에 글을 끄적여 당신 앞에 들이밀었다."
+				},
+				{
+					"speaker": "minho",
+					"text": "남이야 목소리를 잃든 말든 자기 이력서만 챙기던 당신이죠?"
+				},
+				{
+					"speaker": "minho",
+					"text": "제발 이 인증 도장 좀 눌러줘요!"
+				},
+				{
+					"text": "잠깐만요! 저 스파크를 보세요! 여기서 인증 절차를 강제로 진행하면 목소리가 영영 안 나올 수도 있어요!",
+					"speaker": "kai"
+				}
+			],
+			"slot": "D",
+			"kind": "rep",
+			"rep_dir": "community-"
+		},
+		{
+			"wants": "소리를 잃을 위험을 무릅쓰고 공용 인증부스에서 이력서 승인을 마치고 싶어 한다.",
+			"background_tags": [
+				"booth",
+				"interior",
+				"red_light",
+				"crowded",
+				"urgent"
+			],
+			"key": "booth_overload",
+			"no": 2,
+			"choices": [
+				{
+					"text": "소라의 이력서 위에 전자 인증 도장을 함께 눌러 빠르게 인증을 마쳐준다.",
+					"flag": {
+						"boss_text": "부스에서 뿜어져 나온 음성 흡수 전류가 당신의 발목을 잡아챈다.",
+						"label": "강제 승인",
+						"key": "force_auth"
+					},
+					"reward": [],
+					"path": "easy",
+					"effects": {
+						"community": 10,
+						"echo": -5,
+						"gold": 80
+					},
+					"result": [
+						{
+							"text": "당신은 소라의 이력서 위에 전자 인증 도장을 함께 세게 눌러 승인을 마쳤다.",
+							"speaker": "narrator"
+						},
+						{
+							"text": "소라는 안도하며 눈물을 흘렸지만, 입에서는 기계음 같은 마찰음만 새어나왔다.",
+							"speaker": "sora"
+						},
+						{
+							"speaker": "kai",
+							"text": "인증은 끝났지만... 소라 씨의 목소리가 완전히 묵음 처리되어 버렸어요."
+						}
+					],
+					"mbti": "SF"
+				},
+				{
+					"reward": [
+						"defense_up"
+					],
+					"mbti": "NT",
+					"effects": {
+						"community": 20,
+						"echo": 10,
+						"fighting": 15
+					},
+					"path": "hard",
+					"result": [
+						{
+							"speaker": "narrator",
+							"text": "당신은 소라를 밀쳐내고 전기가 흐르는 부스에 손을 넣어 비상 차단 스위치를 내렸다."
+						},
+						{
+							"text": "소라는 놀란 눈으로 당신을 바라보며 감사의 인사를 고개 숙여 전했다.",
+							"speaker": "sora"
+						},
+						{
+							"speaker": "kai",
+							"text": "손에 충격이 컸을 텐데 괜찮으세요? 부스 안에서 무사히 절연 장갑을 꺼냈어요!"
+						}
+					],
+					"text": "소라를 부스 밖으로 밀쳐내고 전기가 흐르는 비상 차단 스위치를 직접 내린다.",
+					"flag": {
+						"key": "shield_sora",
+						"boss_text": "차단 과정에서 확보한 인증부스 절연 장갑을 착용한다.",
+						"label": "신체 차단"
+					}
+				},
+				{
+					"reward": [
+						"heal"
+					],
+					"mbti": "FJ",
+					"flag": {
+						"key": "group_rescue",
+						"label": "군중 구출",
+						"boss_text": "구출된 대기자들이 보스의 방해 음성을 몸으로 막아선다."
+					},
+					"text": "대기실의 구직자들을 하나로 모아 소라를 인증부스에서 안전하게 끌어낸다.",
+					"result": [
+						{
+							"text": "당신의 신호에 뒤에 서 있던 대기자들이 일제히 달라붙어 소라를 부스에서 멀찍이 떼어냈다.",
+							"speaker": "narrator"
+						},
+						{
+							"speaker": "sora",
+							"text": "구직자들이 자신을 지켜주자 소라는 눈시울을 붉히며 그들의 손을 잡았다."
+						},
+						{
+							"text": "당신을 믿고 사람들이 한마음으로 움직였어요! 이제 더 이상 피해자는 나오지 않을 거예요.",
+							"speaker": "kai"
+						}
+					],
+					"path": "stat",
+					"effects": {
+						"community": 25,
+						"echo": 15,
+						"reason": 10
+					}
+				},
+				{
+					"mbti": "TP",
+					"result": [
+						{
+							"text": "당신은 소라의 이력서 대신 부스 슬롯에 대기실 안내 책자를 쑤셔 넣었다.",
+							"speaker": "narrator"
+						},
+						{
+							"text": "소라는 당황하여 멍하니 당신과 오작동하는 부스를 번갈아 바라보았다.",
+							"speaker": "sora"
+						},
+						{
+							"speaker": "kai",
+							"text": "안내 책자가 기계 안에서 씹히면서 부스가 굉음과 함께 멈춰 섰어요! 뜻밖의 보상금도 부스에서 쏟아졌네요."
+						}
+					],
+					"text": "소라의 이력서 대신 부스 슬롯에 대기실 안내 책자를 강제로 밀어 넣는다.",
+					"path": "fun",
+					"effects": {
+						"echo": 5,
+						"reason": -20,
+						"community": -10
+					},
+					"reward": [
+						"cooldown_reset"
+					]
+				}
+			],
+			"rule_link": "과부하된 공용 인증부스에 이력서를 밀어 넣으려는 대기자를 막거나 도와야 한다.",
+			"title": "위험한 무대 인증",
+			"dialogue": [
+				{
+					"speaker": "narrator",
+					"text": "대기자 소라가 붉은 경고등이 켜진 공용 인증부스 슬롯에 이력서를 구겨 넣고 있었다."
+				},
+				{
+					"text": "소라가 종이에 급히 써서 보여주었다. 위태로운 구직자들을 항상 감싸며 앞장서시던 분 맞죠?",
+					"speaker": "sora"
+				},
+				{
+					"speaker": "sora",
+					"text": "제 마지막 기회예요, 절 도와주세요!"
+				},
+				{
+					"speaker": "kai",
+					"text": "저 경고등을 보세요! 과부하된 부스에 이력서를 넣으면 목소리가 완전히 사라져 버릴 거예요!"
+				}
+			],
+			"person": {
+				"id": "sora",
+				"name": "소라",
+				"role": "이력서 인증을 기다리는 대기자"
+			},
+			"slot": "D",
+			"kind": "rep",
+			"rep_dir": "community+"
+		}
+	],
+	"errors": [],
+	"prompt_hash": "cc6e663472ef1120bd7f882bcc8d9df795e873a5"
+}

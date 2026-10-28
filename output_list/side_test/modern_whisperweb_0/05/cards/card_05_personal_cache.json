@@ -1,0 +1,259 @@
+{
+	"id": "card_05_personal_cache",
+	"kind": "rep",
+	"title": {
+		"korean": "내 몫부터 챙기자"
+	},
+	"intensity": "calm",
+	"after_story": 1,
+	"before_story": 3,
+	"condition": {
+		"leaning": "community-",
+		"among": [
+			"fighting-",
+			"fighting+",
+			"community-",
+			"community+",
+			"reason-",
+			"reason+"
+		],
+		"min": 20
+	},
+	"urgency": 8,
+	"leaning": "community-",
+	"background_tags": [
+		"control_room",
+		"night",
+		"green_monitor",
+		"sparse",
+		"wary"
+	],
+	"dialogue": [
+		{
+			"speaker": "cache_broker",
+			"content": {
+				"korean": "당신이 자기 몫부터 챙긴다는 그 사람이죠? 솔직한 게 오히려 마음에 들어요."
+			}
+		},
+		{
+			"speaker": "cache_broker",
+			"content": {
+				"korean": "여기 내 고객 명단 캐시가 있어요. 같이 빼내면 수익의 삼십 퍼센트를 드리죠."
+			}
+		},
+		{
+			"speaker": "echo",
+			"content": {
+				"korean": "삼십 퍼센트? 저 사람 명단에 내 정보도 있을 텐데, 왜 나한테는 말이 없지?"
+			}
+		},
+		{
+			"speaker": "narrator",
+			"content": {
+				"korean": "중개인의 손가락이 캐시 슬롯 위에서 멈춘 채 떨리고 있었다."
+			}
+		}
+	],
+	"choices": [
+		{
+			"text": {
+				"korean": "중개인의 캐시를 먼저 빼내고 수익을 챙긴다."
+			},
+			"path": "easy",
+			"mbti": "TP",
+			"flag": "cache_pulled",
+			"effects": {
+				"community": -15,
+				"reason": -10,
+				"echo": -10,
+				"gold": 120
+			},
+			"reward": [
+				"intelligence_up"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "cache_broker",
+					"content": {
+						"korean": "역시 대화가 통하는 사람이야. 이만큼은 약속대로 드릴게요."
+					}
+				},
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "캐시를 빼자 단말기 화면 한쪽이 깜빡이며 회색으로 꺼졌다."
+					}
+				},
+				{
+					"speaker": "echo",
+					"content": {
+						"korean": "내 정보 칸이 방금 회색으로 변했어. 이거 왜 이래."
+					}
+				}
+			]
+		},
+		{
+			"text": {
+				"korean": "캐시를 빼지 않고 명단을 제어실 단말기에 그대로 남긴다."
+			},
+			"path": "hard",
+			"mbti": "FJ",
+			"flag": "list_kept_open",
+			"effects": {
+				"community": 15,
+				"echo": 10
+			},
+			"reward": [
+				"shield"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "cache_broker",
+					"content": {
+						"korean": "미쳤어요? 이 명단이 공개되면 내 장사는 끝이라고요!"
+					}
+				},
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "단말기 창에 명단이 그대로 뜨자, 중개인이 손으로 화면을 가렸다."
+					}
+				},
+				{
+					"speaker": "echo",
+					"content": {
+						"korean": "잘했어. 내 정보도 그 안에 있었으니까."
+					}
+				}
+			]
+		},
+		{
+			"text": {
+				"korean": "중개인에게 캐시 대신 자기 몫의 부품을 사겠다고 값을 부른다."
+			},
+			"path": "stat",
+			"mbti": "TJ",
+			"require": {
+				"stat": "community",
+				"op": "<=",
+				"value": -40
+			},
+			"flag": "broker_parts",
+			"effects": {
+				"community": -10,
+				"reason": 20
+			},
+			"reward": [
+				"defense_up"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "cache_broker",
+					"content": {
+						"korean": "당신 같은 사람이 값을 부르면 못 이기죠. 부품은 제가 챙겨 둘게요."
+					}
+				},
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "중개인이 자기 몫으로 숨겨 둔 부품 상자를 발밑에 내려놓았다."
+					}
+				},
+				{
+					"speaker": "echo",
+					"content": {
+						"korean": "이 사람, 손해 볼 줄 알면서도 계산이 빠르네. 무서운데?"
+					}
+				}
+			]
+		},
+		{
+			"text": {
+				"korean": "중개인에게 금화 100닢을 주고 캐시를 사들인다."
+			},
+			"path": "gold",
+			"mbti": "EP",
+			"require": {
+				"stat": "gold",
+				"op": ">=",
+				"value": 100
+			},
+			"effects": {
+				"community": -10,
+				"echo": -5,
+				"gold": -100
+			},
+			"reward": [
+				"intelligence_up"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "cache_broker",
+					"content": {
+						"korean": "현금이라니, 좋아요. 캐시는 당신 거예요."
+					}
+				},
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "금화를 세던 중개인의 손이 캐시를 넘기면서 잠깐 멈췄다."
+					}
+				},
+				{
+					"speaker": "echo",
+					"content": {
+						"korean": "돈 주고 남의 명단을 샀어? 뭐, 내 정보는 지켜졌으니 됐다 치자."
+					}
+				}
+			]
+		}
+	],
+	"_side": {
+		"slot": "A",
+		"person": {
+			"id": "cache_broker",
+			"name": "정보 중개인",
+			"role": "제어실 데이터 중개인"
+		},
+		"wants": "데이터 엉킴 속에서 자기 고객 명단이 담긴 캐시를 먼저 빼내려 하며, 당신에게 그 거래를 함께 하자고 제안한다.",
+		"rule_link": "캐시가 데이터 스크린 조각과 같은 회선에 물려 있어, 캐시를 빼면 조각 데이터가 함께 흔들린다.",
+		"rep": "community-",
+		"events": {},
+		"flags": {
+			"cache_pulled": {
+				"kind": "bad",
+				"boss_penalty": -1,
+				"label": {
+					"korean": "빼낸 캐시"
+				},
+				"boss_line": {
+					"korean": "캐시를 뺀 자리에 남은 빈 회선이 조각을 잡아당긴다."
+				}
+			},
+			"list_kept_open": {
+				"kind": "good",
+				"boss_penalty": 1,
+				"label": {
+					"korean": "열린 명단"
+				},
+				"boss_choice": {
+					"korean": "열어 둔 명단에서 찾은 접속 정보로 조각 회선을 되돌린다."
+				}
+			},
+			"broker_parts": {
+				"kind": "good",
+				"boss_penalty": 2,
+				"label": {
+					"korean": "중개인의 부품"
+				},
+				"boss_choice": {
+					"korean": "중개인이 내어준 부품을 조각 틈에 밀어 넣는다."
+				}
+			}
+		}
+	}
+}

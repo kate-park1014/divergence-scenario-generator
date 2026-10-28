@@ -1,0 +1,164 @@
+{
+	"id": "card_02_resume_forgery_seeker",
+	"kind": "plant",
+	"title": {
+		"korean": "달콤한 자격증 한 줄"
+	},
+	"intensity": "calm",
+	"after_story": 1,
+	"before_story": 3,
+	"background_tags": [
+		"terminal_room",
+		"fluorescent_light",
+		"afternoon",
+		"crowded_queue",
+		"tense_silence"
+	],
+	"dialogue": [
+		{
+			"speaker": "narrator",
+			"content": {
+				"korean": "안내문을 보던 중 옆 단말기 앞에 선 남자가 당신의 소매를 붙잡았다."
+			}
+		},
+		{
+			"speaker": "seeker",
+			"content": {
+				"korean": "저기요, 이름 항목만 규격대로 맞추면 자격증란에 뭘 넣든 통과된다더군요."
+			}
+		},
+		{
+			"speaker": "seeker",
+			"content": {
+				"korean": "제 단말기 입력 창에 가짜 전산 1급 번호 하나만 대신 쳐주시면 안 됩니까?"
+			}
+		},
+		{
+			"speaker": "nia",
+			"content": {
+				"korean": "안내문에 적힌 규격 정리 방식을 악용해서 경력을 날조하려는 모양이에요."
+			}
+		}
+	],
+	"choices": [
+		{
+			"text": {
+				"korean": "구직자의 요구대로 단말기에 가짜 자격증을 추가해 준다."
+			},
+			"path": "easy",
+			"mbti": "TP",
+			"effects": {
+				"echo": -10,
+				"gold": 100,
+				"community": -20
+			},
+			"seed": "resume_forgery_seeker_easy",
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "단말기 키보드를 두드려 지원자의 이력서에 가짜 1급 전산 자격증을 등록했다."
+					}
+				},
+				{
+					"speaker": "seeker",
+					"content": {
+						"korean": "고마워요! 이건 제가 아껴둔 VIP 검색 단말기 1회 이용권이에요. 잘 써요!"
+					}
+				},
+				{
+					"speaker": "nia",
+					"content": {
+						"korean": "거짓으로 적어도 저렇게 멀쩡히 저장이 되네요. 찝찝하지만요."
+					}
+				}
+			]
+		},
+		{
+			"text": {
+				"korean": "거짓 등록을 거절하고 단말기 화면에서 손을 떼게 한다."
+			},
+			"path": "hard",
+			"mbti": "FJ",
+			"effects": {
+				"echo": 10,
+				"reason": 15,
+				"community": 20
+			},
+			"reward": [
+				"defense_up"
+			],
+			"seed": "resume_forgery_seeker_hard",
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "요구를 단호히 거절하자 구직자가 화면을 가로막고 삿대질을 했다."
+					}
+				},
+				{
+					"speaker": "seeker",
+					"content": {
+						"korean": "당신이 뭔데 남의 취업길을 막아? 내 이력서 내가 고치겠다는데!"
+					}
+				},
+				{
+					"speaker": "nia",
+					"content": {
+						"korean": "시비가 붙어서 시간을 너무 빼앗겼어요. 얼른 단말기를 비워달라고 해요."
+					}
+				}
+			]
+		},
+		{
+			"text": {
+				"korean": "{actor}이(가) 단말기 규정을 가리키며 허위 기재 적발 위험을 경고한다."
+			},
+			"path": "lock",
+			"mbti": "TJ",
+			"require": {
+				"mbti": "TJ"
+			},
+			"effects": {
+				"reason": 20,
+				"fighting": 15
+			},
+			"reward": [
+				"intelligence_up"
+			],
+			"seed": "resume_forgery_seeker_hard",
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "{actor}이(가) 게시판의 전산 규정집을 단말기 화면 옆에 탁 붙였다."
+					}
+				},
+				{
+					"speaker": "seeker",
+					"content": {
+						"korean": "으, 윽… 입력 로그가 단말기 관리실로 즉각 전송된다고요?"
+					}
+				},
+				{
+					"speaker": "nia",
+					"content": {
+						"korean": "규정을 들이대니 순식간에 꽁무니를 빼네요. 아주 깔끔했어요!"
+					}
+				}
+			]
+		}
+	],
+	"_side": {
+		"slot": "A",
+		"person": {
+			"id": "seeker",
+			"name": "초조한 구직자",
+			"role": "검색 단말기에서 허위 경력을 등록하려는 지원자"
+		},
+		"wants": "검색 단말기 이력서에 가짜 자격증 번호를 몰래 추가하기",
+		"rule_link": "이름 정리 규격을 악용해 거짓 자격증 데이터를 검색 단말기 이력서에 밀어넣으려 함",
+		"events": {},
+		"flags": {}
+	}
+}

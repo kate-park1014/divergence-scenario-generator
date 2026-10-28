@@ -1,0 +1,214 @@
+{
+	"id": "card_01_brock_bounty_data",
+	"kind": "rep",
+	"title": {
+		"korean": "독점한 수배망 데이터"
+	},
+	"intensity": "calm",
+	"after_story": 3,
+	"before_story": 5,
+	"condition": {
+		"leaning": "fighting-",
+		"among": [
+			"fighting-",
+			"fighting+",
+			"community-",
+			"community+",
+			"reason-",
+			"reason+"
+		],
+		"min": 20
+	},
+	"urgency": 8,
+	"leaning": "fighting-",
+	"background_tags": [
+		"server_rack",
+		"day",
+		"dim",
+		"crowded",
+		"tense"
+	],
+	"dialogue": [
+		{
+			"speaker": "brock",
+			"content": {
+				"korean": "어이, 앞길 막는 녀석들은 죄다 주먹으로 해결하고 다닌다는 게 당신인가?"
+			}
+		},
+		{
+			"speaker": "brock",
+			"content": {
+				"korean": "저기 찌질한 해커들이 복구된 현상금 데이터를 빼가려 하는데, 좀 치워주면 몫을 떼어주지."
+			}
+		},
+		{
+			"speaker": "echo",
+			"content": {
+				"korean": "저 사람들이 먼저 온 것 같은데, 억지로 쫓아내도 괜찮을까?"
+			}
+		}
+	],
+	"choices": [
+		{
+			"text": {
+				"korean": "해커들을 위협해 쫓아낸다"
+			},
+			"path": "easy",
+			"mbti": "ET",
+			"flag": "brock_enemy",
+			"effects": {
+				"fighting": -20,
+				"gold": 100
+			},
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "당신이 주먹을 쥐고 다가가자 해커들이 기겁하며 도망쳤다."
+					}
+				},
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "브록이 데이터를 챙기며 돈을 건넸다."
+					}
+				}
+			]
+		},
+		{
+			"text": {
+				"korean": "브록을 공격해 쫓아낸다"
+			},
+			"path": "hard",
+			"mbti": "IF",
+			"flag": "brock_ally",
+			"effects": {
+				"fighting": 20
+			},
+			"reward": [
+				"hp_down"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "당신이 브록의 멱살을 잡고 바닥에 내동댕이쳤다."
+					}
+				},
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "해커들이 고마워하며 당신에게 작은 장비를 주었다."
+					}
+				}
+			]
+		},
+		{
+			"text": {
+				"korean": "눈빛만으로 해커들을 물러나게 한다"
+			},
+			"path": "stat",
+			"mbti": "TJ",
+			"require": {
+				"stat": "fighting",
+				"op": "<=",
+				"value": -40
+			},
+			"flag": "fearful_look",
+			"effects": {
+				"echo": -10,
+				"fighting": -30
+			},
+			"reward": [
+				"attack_up"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "당신이 노려보자 해커들이 알아서 자리를 피했다."
+					}
+				},
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "피를 보지 않고 데이터를 독점했다."
+					}
+				}
+			]
+		},
+		{
+			"text": {
+				"korean": "해커들 틈에 끼어들어 같이 데이터를 캔다"
+			},
+			"path": "fun",
+			"mbti": "EP",
+			"effects": {
+				"gold": 50,
+				"community": -10
+			},
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "당신은 브록을 무시하고 해커들 옆에 앉아 타자를 치기 시작했다."
+					}
+				},
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "브록이 황당하다는 듯 쳐다보았다."
+					}
+				}
+			]
+		}
+	],
+	"_side": {
+		"slot": "B",
+		"person": {
+			"name": "��록",
+			"role": "현상금 사냥꾼",
+			"id": "brock"
+		},
+		"wants": "복구된 현상금 데이터베이스를 가로막는 다른 해커들을 힘으로 쫓아내달라고 함",
+		"rule_link": "데이터 스크린 조각을 깬 후 일시적으로 복구된 수배망 데이터를 독점하려 함",
+		"events": {},
+		"rep": "fighting-",
+		"flags": {
+			"brock_enemy": {
+				"kind": "bad",
+				"boss_penalty": -1,
+				"label": {
+					"korean": "해커들의 원한"
+				},
+				"boss_line": {
+					"korean": "쫓겨난 해커들이 보안관에게 당신의 위치를 밀고한다."
+				}
+			},
+			"brock_ally": {
+				"kind": "good",
+				"boss_penalty": 1,
+				"label": {
+					"korean": "해커들의 도움"
+				},
+				"boss_choice": {
+					"korean": "해커들이 준 통신 교란 장비로 보안관의 시야를 가린다."
+				}
+			},
+			"fearful_look": {
+				"kind": "good",
+				"boss_penalty": 2,
+				"label": {
+					"korean": "압도적인 위압감"
+				},
+				"boss_choice": {
+					"korean": "압도적인 위압감을 뿜어내 보안관을 주춤하게 만든다."
+				}
+			}
+		}
+	}
+}

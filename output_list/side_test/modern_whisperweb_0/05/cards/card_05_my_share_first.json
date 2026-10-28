@@ -1,0 +1,260 @@
+{
+	"id": "card_05_my_share_first",
+	"kind": "rep",
+	"title": {
+		"korean": "내 몫의 조각"
+	},
+	"intensity": "calm",
+	"after_story": 7,
+	"before_story": 10,
+	"condition": {
+		"leaning": "community-",
+		"among": [
+			"fighting-",
+			"fighting+",
+			"community-",
+			"community+",
+			"reason-",
+			"reason+"
+		],
+		"min": 20
+	},
+	"urgency": 8,
+	"leaning": "community-",
+	"background_tags": [
+		"control_room",
+		"night",
+		"dim_lamp",
+		"one_visitor",
+		"wary"
+	],
+	"dialogue": [
+		{
+			"speaker": "narrator",
+			"content": {
+				"korean": "부품 상인이 제어실 문가에 서서 조각을 눈으로 하나하나 세고 있었다."
+			}
+		},
+		{
+			"speaker": "salvage_broker",
+			"content": {
+				"korean": "당신이 자기 몫은 꼭 챙긴다는 사람이죠? 그럼 얘기가 빨라요."
+			}
+		},
+		{
+			"speaker": "salvage_broker",
+			"content": {
+				"korean": "조각 세 개에 200골드. 맞춰지기 전에만 나가는 값이야."
+			}
+		},
+		{
+			"speaker": "echo",
+			"content": {
+				"korean": "200골드면 내 계좌 정보 값보다 싸잖아! 근데 저 가방, 뭔가 수상한데."
+			}
+		}
+	],
+	"choices": [
+		{
+			"text": {
+				"korean": "부품 상인에게 조각 세 개를 넘기고 값을 받는다"
+			},
+			"path": "easy",
+			"mbti": "TP",
+			"flag": "broker_bought_shards",
+			"effects": {
+				"community": -20,
+				"reason": 10,
+				"gold": 200
+			},
+			"reward": [
+				"attack_up"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "상인이 조각을 가방 안쪽 천에 싸서 넣었다. 지폐가 손바닥에 얹혔다."
+					}
+				},
+				{
+					"speaker": "salvage_broker",
+					"content": {
+						"korean": "거래 성사. 이 조각들, 아마 오늘 밤에 두 배가 될 거야."
+					}
+				},
+				{
+					"speaker": "echo",
+					"content": {
+						"korean": "우리 계좌는 지켰는데 조각은 팔았어. 이게 맞는 건가?"
+					}
+				}
+			]
+		},
+		{
+			"text": {
+				"korean": "부품 상인의 가방을 붙잡고 조각을 도로 빼낸다"
+			},
+			"path": "hard",
+			"mbti": "FJ",
+			"flag": "shards_reclaimed",
+			"effects": {
+				"community": 20,
+				"reason": -15,
+				"echo": 10
+			},
+			"reward": [
+				"defense_up"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "가방 지퍼가 열리자 조각 세 개가 바닥으로 굴렀다. 상인이 뒷걸음질 쳤다."
+					}
+				},
+				{
+					"speaker": "salvage_broker",
+					"content": {
+						"korean": "이봐, 값을 부르고 가방까지 뒤지다니! 이런 짓은 처음이야."
+					}
+				},
+				{
+					"speaker": "echo",
+					"content": {
+						"korean": "좋아, 조각은 지켰어. 근데 저 상인, 이제 우리 이름을 다니면서 욕할걸."
+					}
+				}
+			]
+		},
+		{
+			"text": {
+				"korean": "부품 상인에게 조각 값 대신 다른 부품을 팔아 넘긴다"
+			},
+			"path": "stat",
+			"mbti": "EN",
+			"require": {
+				"stat": "community",
+				"op": "<=",
+				"value": -40
+			},
+			"flag": "broker_deal",
+			"effects": {
+				"community": -25,
+				"reason": 15,
+				"gold": 50
+			},
+			"reward": [
+				"intelligence_up"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "상인이 조각 대신 받은 부품을 손전등으로 비춰 봤다."
+					}
+				},
+				{
+					"speaker": "salvage_broker",
+					"content": {
+						"korean": "당신 이름값 하네. 이 부품이면 조각보다 남는 장사야."
+					}
+				},
+				{
+					"speaker": "echo",
+					"content": {
+						"korean": "조각은 그대로 두고 돈은 챙겼어. 이거 완전 우리 방식인데?"
+					}
+				}
+			]
+		},
+		{
+			"text": {
+				"korean": "부품 상인에게 120골드를 얹어 조각을 사 온다"
+			},
+			"path": "gold",
+			"mbti": "TJ",
+			"require": {
+				"stat": "gold",
+				"op": ">=",
+				"value": 120
+			},
+			"effects": {
+				"community": 10,
+				"reason": -10,
+				"gold": -120
+			},
+			"reward": [
+				"shield"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "상인이 지폐를 세어 넣고 조각을 조심스럽게 돌려줬다."
+					}
+				},
+				{
+					"speaker": "salvage_broker",
+					"content": {
+						"korean": "이 값을 얹는데 안 팔 수가 있나. 다음엔 더 부를 거야."
+					}
+				},
+				{
+					"speaker": "echo",
+					"content": {
+						"korean": "돈이 나갔지만 조각은 왔어. 손해는 아니지."
+					}
+				}
+			]
+		}
+	],
+	"_side": {
+		"slot": "D",
+		"person": {
+			"id": "salvage_broker",
+			"name": "부품 상인",
+			"role": "야간 부품 상인"
+		},
+		"wants": "맞춰지기 전의 조각을 시세보다 비싸게 사겠다며, 조각을 자기 가방에 넣고 나가려 한다.",
+		"rule_link": "데이터 스크린 조각은 아직 맞춰지지 않았을 때만 부품으로 팔 수 있어, 상인은 그 틈을 노리고 있다.",
+		"rep": "community-",
+		"events": {},
+		"flags": {
+			"broker_bought_shards": {
+				"kind": "bad",
+				"boss_penalty": -1,
+				"label": {
+					"korean": "상인의 가방"
+				},
+				"boss_line": {
+					"korean": "홀로그램이 조각을 뿜어낼 때 상인의 가방이 튕겨 나간 조각을 대신 맞는다."
+				}
+			},
+			"shards_reclaimed": {
+				"kind": "good",
+				"boss_penalty": 1,
+				"label": {
+					"korean": "되찾은 조각"
+				},
+				"boss_choice": {
+					"korean": "되찾은 조각을 홀로그램의 빈 홈에 밀어 넣어 출력을 흔든다."
+				}
+			},
+			"broker_deal": {
+				"kind": "good",
+				"boss_penalty": 2,
+				"label": {
+					"korean": "상인의 거래"
+				},
+				"boss_choice": {
+					"korean": "상인이 넘겨받은 부품으로 홀로그램 옆 회로를 막아 준다."
+				}
+			}
+		}
+	}
+}

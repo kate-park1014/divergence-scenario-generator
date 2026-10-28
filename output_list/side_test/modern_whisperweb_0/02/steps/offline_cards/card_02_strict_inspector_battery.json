@@ -1,0 +1,208 @@
+{
+	"id": "card_02_strict_inspector_battery",
+	"kind": "rep",
+	"title": {
+		"korean": "비상 배터리와 규정"
+	},
+	"intensity": "calm",
+	"after_story": 3,
+	"before_story": 5,
+	"condition": {
+		"leaning": "reason-",
+		"among": [
+			"fighting-",
+			"fighting+",
+			"community-",
+			"community+",
+			"reason-",
+			"reason+"
+		],
+		"min": 20
+	},
+	"urgency": 8,
+	"leaning": "reason-",
+	"background_tags": [
+		"power_room",
+		"manual",
+		"emergency_light",
+		"heavy_battery",
+		"strict"
+	],
+	"dialogue": [
+		{
+			"speaker": "facility_inspector",
+			"content": {
+				"korean": "언제나 정해진 절차대로만 움직인다는 답답한 분이군요."
+			}
+		},
+		{
+			"speaker": "facility_inspector",
+			"content": {
+				"korean": "비상 전원이 꺼졌으니 규정 제4조에 따라 이 임시 배터리를 연결해야 합니다. 배선 좀 잡아주시죠."
+			}
+		},
+		{
+			"speaker": "lin",
+			"content": {
+				"korean": "지금 전원을 다시 넣으면 표지판이 또 오작동할 텐데요!"
+			}
+		}
+	],
+	"choices": [
+		{
+			"text": {
+				"korean": "규정대로 배선을 잡아 배터리 연결을 돕는다."
+			},
+			"path": "easy",
+			"mbti": "TJ",
+			"flag": "strict_temp_power",
+			"effects": {
+				"reason": -20,
+				"gold": 50
+			},
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "휴고가 시계를 보며 정확한 타이밍에 배터리를 끼운다."
+					}
+				},
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "표지판 하나가 번쩍이며 다시 켜진다."
+					}
+				}
+			]
+		},
+		{
+			"text": {
+				"korean": "휴고의 배터리를 빼앗아 바닥에 던져 부순다."
+			},
+			"path": "hard",
+			"mbti": "FP",
+			"flag": "strict_broken_battery",
+			"effects": {
+				"echo": 10,
+				"reason": 20
+			},
+			"reward": [
+				"defense_up"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "배터리가 박살 나며 스파크가 튄다."
+					}
+				},
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "휴고는 규정 위반이라며 소리를 ���르고 도망간다."
+					}
+				}
+			]
+		},
+		{
+			"text": {
+				"korean": "매뉴얼의 예외 조항을 읊으며 연결을 금지시킨다."
+			},
+			"path": "stat",
+			"mbti": "FJ",
+			"require": {
+				"stat": "reason",
+				"op": "<=",
+				"value": -40
+			},
+			"flag": "strict_cite_rule",
+			"effects": {
+				"reason": -30
+			},
+			"reward": [
+				"shield"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "당신이 규정 제5조 예외 항목을 읊자 휴고는 입을 떡 벌리고 배터리를 내려놓는다."
+					}
+				}
+			]
+		},
+		{
+			"text": {
+				"korean": "임시 배터리의 플러스와 마이너스 극을 거꾸로 꽂아버린다."
+			},
+			"path": "fun",
+			"mbti": "TP",
+			"effects": {
+				"gold": 50,
+				"echo": -10
+			},
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "펑 소리와 함께 휴고의 머리가 새카맣게 그을린다."
+					}
+				},
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "그 틈에 휴고의 주머니에서 크레딧이 떨어진다."
+					}
+				}
+			]
+		}
+	],
+	"_side": {
+		"slot": "B",
+		"person": {
+			"role": "시설 감사관",
+			"name": "휴고",
+			"id": "facility_inspector"
+		},
+		"wants": "전원이 꺼진 비상 상황 매뉴얼에 따라, 시스템 강제 복구를 위한 임시 배터리를 연결하려 한다.",
+		"rule_link": "오작동하는 시스템 전원 코드를 뽑았으나, 매뉴얼대로 비상 전력을 공급하려는 감사관.",
+		"rep": "reason-",
+		"events": {},
+		"flags": {
+			"strict_temp_power": {
+				"kind": "bad",
+				"boss_penalty": -1,
+				"label": {
+					"korean": "임시 전력"
+				},
+				"boss_line": {
+					"korean": "임시 배터리 때문에 시스템이 켜져 경비원이 당신의 위치를 파악한다."
+				}
+			},
+			"strict_broken_battery": {
+				"kind": "good",
+				"boss_penalty": 1,
+				"label": {
+					"korean": "부서진 배터리"
+				},
+				"boss_choice": {
+					"korean": "부서진 배터리의 산성액을 밟고 미끄러진 경비원을 제압한다."
+				}
+			},
+			"strict_cite_rule": {
+				"kind": "good",
+				"boss_penalty": 2,
+				"label": {
+					"korean": "예외 조항"
+				},
+				"boss_choice": {
+					"korean": "정확한 규정 암송으로 경비원의 제압 시도를 논리적으로 늦춘다."
+				}
+			}
+		}
+	}
+}

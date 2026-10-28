@@ -1,0 +1,198 @@
+{
+	"id": "card_02_trapped_cleaner",
+	"title": {
+		"korean": "갇혀버린 청소부"
+	},
+	"intensity": "calm",
+	"after_story": 7,
+	"before_story": 10,
+	"condition": {
+		"leaning": "fighting+",
+		"among": [
+			"fighting-",
+			"fighting+",
+			"community-",
+			"community+",
+			"reason-",
+			"reason+"
+		],
+		"min": 20
+	},
+	"urgency": 8,
+	"leaning": "fighting+",
+	"background_tags": [
+		"ventilation_shaft",
+		"steam",
+		"overheated",
+		"dim_light",
+		"tense"
+	],
+	"dialogue": [
+		{
+			"speaker": "narrator",
+			"content": {
+				"korean": "멈춘 냉각 장치 때문에 환풍구에 갇힌 청소부가 열기에 괴로워하고 있었다."
+			}
+		},
+		{
+			"speaker": "nell",
+			"content": {
+				"korean": "당신이 그 남일에도 목숨 걸고 뛰어든다는 사람이죠? 제발 살려줘요!"
+			}
+		},
+		{
+			"speaker": "narrator",
+			"content": {
+				"korean": "그는 땀을 뻘뻘 흘리며 낡은 걸레를 부채처럼 흔들고 있었다."
+			}
+		},
+		{
+			"speaker": "lin",
+			"content": {
+				"korean": "안에 열기가 너무 심해요! 빨리 꺼내야 해요!"
+			}
+		}
+	],
+	"choices": [
+		{
+			"text": {
+				"korean": "뜨거운 환풍구 커버를 맨손으로 뜯어내 구출한다."
+			},
+			"path": "easy",
+			"mbti": "FJ",
+			"flag": "bare_hands_burn",
+			"effects": {
+				"echo": 10,
+				"fighting": 20
+			},
+			"reward": [
+				"heal"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "당신은 열기가 뿜어져 나오는 커버를 뜯어내다 손에 화상을 입었��."
+					}
+				},
+				{
+					"speaker": "nell",
+					"content": {
+						"korean": "아이고, 손이 다 까졌네! 정말 고마워요!"
+					}
+				}
+			]
+		},
+		{
+			"text": {
+				"korean": "청소부에게 알아서 기어나오라고 소리친다."
+			},
+			"path": "hard",
+			"mbti": "TJ",
+			"flag": "cold_judgment",
+			"effects": {
+				"fighting": -20,
+				"echo": -10
+			},
+			"reward": [
+				"cooldown_reset"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "당신이 소리치자 넬은 울상을 지으며 좁은 틈으로 기어나왔다."
+					}
+				},
+				{
+					"speaker": "lin",
+					"content": {
+						"korean": "너무 매정하게 구는 거 아니에요? 다칠 뻔했잖아요."
+					}
+				}
+			]
+		},
+		{
+			"text": {
+				"korean": "뜨거운 열기를 참고 환풍구 안으로 몸을 던져 청소부를 끌어낸다."
+			},
+			"path": "stat",
+			"mbti": "EF",
+			"require": {
+				"stat": "fighting",
+				"op": ">=",
+				"value": 40
+			},
+			"flag": "throw_body_heat",
+			"effects": {
+				"echo": 15,
+				"fighting": 30
+			},
+			"reward": [
+				"defense_up"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "당신은 뜨거운 열기를 참고 환풍구 안으로 몸을 던져 넬을 끌어냈다."
+					}
+				},
+				{
+					"speaker": "lin",
+					"content": {
+						"korean": "정말 대단해요! 불길 속으로 뛰어들다니요!"
+					}
+				}
+			]
+		}
+	],
+	"kind": "rep",
+	"_side": {
+		"slot": "D",
+		"person": {
+			"id": "nell",
+			"name": "넬",
+			"role": "청소부"
+		},
+		"wants": "",
+		"rule_link": "",
+		"rep": "fighting+",
+		"events": {},
+		"flags": {
+			"bare_hands_burn": {
+				"boss_penalty": -1,
+				"label": {
+					"korean": "데인 손"
+				},
+				"boss_line": {
+					"korean": "화상을 입은 손이 떨려 방어 타이밍을 놓친다."
+				},
+				"kind": "bad"
+			},
+			"cold_judgment": {
+				"boss_penalty": 1,
+				"label": {
+					"korean": "냉정한 판단"
+				},
+				"boss_choice": {
+					"korean": "경비원의 공격 패턴을 냉정하게 관찰하고 피한다."
+				},
+				"kind": "good"
+			},
+			"throw_body_heat": {
+				"boss_penalty": 2,
+				"label": {
+					"korean": "뜯어낸 커버"
+				},
+				"boss_choice": {
+					"korean": "환풍구에서 뜯어낸 커버를 방패 삼아 경비원을 밀쳐낸다."
+				},
+				"kind": "good"
+			}
+		}
+	}
+}

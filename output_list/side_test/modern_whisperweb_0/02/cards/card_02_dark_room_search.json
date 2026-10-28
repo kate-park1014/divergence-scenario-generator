@@ -1,0 +1,154 @@
+{
+	"id": "card_02_dark_room_search",
+	"title": {
+		"korean": "어둠 속의 수색"
+	},
+	"intensity": "calm",
+	"after_story": 3,
+	"before_story": 5,
+	"background_tags": [
+		"dark",
+		"scraps",
+		"dusty",
+		"oldroom",
+		"faint"
+	],
+	"dialogue": [
+		{
+			"speaker": "narrator",
+			"content": {
+				"korean": "전원이 꺼져 캄캄해진 구역에서 누군가 바닥을 더듬고 있다."
+			}
+		},
+		{
+			"speaker": "lost_scavenger",
+			"content": {
+				"korean": "불이 다 꺼져서 제 탐지기를 떨어뜨렸어요. 잔해 속에서 찾게 도와줄래요?"
+			}
+		},
+		{
+			"speaker": "lin",
+			"content": {
+				"korean": "저 안쪽은 무너질 것 같은데... 너무 위험하지 않을까요?"
+			}
+		}
+	],
+	"choices": [
+		{
+			"text": {
+				"korean": "잔해 속으로 들어가 무너지는 틈을 타 탐지기를 줍는다."
+			},
+			"path": "easy",
+			"mbti": "SP",
+			"effects": {
+				"reason": -10,
+				"fighting": 15
+			},
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "당신은 탐지기를 줍기 위해 불안정한 잔해 속으로 조심스럽게 발을 내디뎠다."
+					}
+				}
+			],
+			"event": "minigame_timing",
+			"event_intro": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "고철 더미가 흔들린다. 세 번의 아슬아슬한 틈을 노려야 한다."
+					}
+				}
+			]
+		},
+		{
+			"text": {
+				"korean": "위험하니 장비를 포기하고 밖으로 나가라고 단호히 말한다."
+			},
+			"path": "hard",
+			"mbti": "SJ",
+			"effects": {
+				"community": -10,
+				"reason": 15
+			},
+			"reward": [
+				"move_range_up"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "당신은 안전이 우선이라며 그를 밖으로 끌어냈다. 그는 아쉬워하면서도 목숨을 건졌다."
+					}
+				}
+			]
+		},
+		{
+			"text": {
+				"korean": "떠돌이 상인에게 돈을 주고 지지대를 사서 무너지지 않게 고정한다."
+			},
+			"path": "gold",
+			"mbti": "EN",
+			"require": {
+				"stat": "gold",
+				"op": ">=",
+				"value": 70
+			},
+			"effects": {
+				"gold": -70,
+				"reason": 15
+			},
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "당신이 설치한 지지대 덕분에 그는 안전하게 탐지기를 찾을 수 있었다."
+					}
+				}
+			]
+		},
+		{
+			"text": {
+				"korean": "{actor}이(가) 직관을 믿고 어둠 속을 더듬어 장비를 찾아낸다."
+			},
+			"path": "lock",
+			"mbti": "EN",
+			"require": {
+				"mbti": "EN"
+			},
+			"effects": {
+				"community": 20,
+				"reason": -10
+			},
+			"reward": [
+				"intelligence_up"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "{actor}이(가) 망설임 없이 손을 뻗어 탐지기를 건져 올렸다. 탐색꾼은 놀라며 박수를 쳤다."
+					}
+				}
+			]
+		}
+	],
+	"kind": "normal",
+	"_side": {
+		"slot": "B",
+		"person": {
+			"id": "lost_scavenger",
+			"name": "길 잃은 탐색꾼",
+			"role": "절박하게 도움을 요청하는 존댓말"
+		},
+		"wants": "",
+		"rule_link": "",
+		"events": {},
+		"flags": {}
+	}
+}

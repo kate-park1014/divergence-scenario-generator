@@ -1,0 +1,255 @@
+{
+	"id": "card_03_checklist_after_coolant",
+	"kind": "rep",
+	"title": {
+		"korean": "냉각수 이후 점검표"
+	},
+	"intensity": "calm",
+	"after_story": 3,
+	"before_story": 5,
+	"condition": {
+		"leaning": "reason-",
+		"among": [
+			"fighting-",
+			"fighting+",
+			"community-",
+			"community+",
+			"reason-",
+			"reason+"
+		],
+		"min": 20
+	},
+	"urgency": 8,
+	"leaning": "reason-",
+	"background_tags": [
+		"pipe_room",
+		"fluorescent_light",
+		"wet_floor",
+		"cold_air",
+		"tense"
+	],
+	"dialogue": [
+		{
+			"speaker": "narrator",
+			"content": {
+				"korean": "안전 점검관이 서류판을 두드리며 파이프실로 들어섰다."
+			}
+		},
+		{
+			"speaker": "safety_inspector",
+			"content": {
+				"korean": "당신이 절차대로 냉각수를 부었다는 사람이죠? 기록이 있어야겠습니다."
+			}
+		},
+		{
+			"speaker": "safety_inspector",
+			"content": {
+				"korean": "밸브 개방 시각, 유입량, 담당자 확인. 하나라도 비면 저는 서명 못 해요."
+			}
+		},
+		{
+			"speaker": "kai",
+			"content": {
+				"korean": "지금 그걸 다 어디서 확인해요. 담당자는 이미 나갔는데."
+			}
+		}
+	],
+	"choices": [
+		{
+			"text": {
+				"korean": "점검관의 서류판을 받아 항목을 하나씩 채워 서명을 받아낸다"
+			},
+			"path": "easy",
+			"mbti": "TJ",
+			"flag": "inspector_signed",
+			"effects": {
+				"reason": 15
+			},
+			"reward": [
+				"defense_up"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "점검관이 마지막 칸에 서명하고 서류판을 닫았다."
+					}
+				},
+				{
+					"speaker": "safety_inspector",
+					"content": {
+						"korean": "절차는 절차예요. 덕분에 일이 깔끔하게 끝났네요."
+					}
+				},
+				{
+					"speaker": "kai",
+					"content": {
+						"korean": "조각 오염 여부 칸은 비워 둔 채로요?"
+					}
+				}
+			]
+		},
+		{
+			"text": {
+				"korean": "점검관에게 서명을 미루고 조각 오염부터 함께 확인하자고 말한다"
+			},
+			"path": "hard",
+			"mbti": "FP",
+			"flag": "inspector_walks",
+			"effects": {
+				"reason": -15,
+				"community": 10
+			},
+			"reward": [
+				"heal"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "safety_inspector",
+					"content": {
+						"korean": "서명을 미루라고요? 그럼 저는 여기 못 있어요."
+					}
+				},
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "점검관은 서류판을 품에 넣고 돌아섰다. 주인공은 조각을 하나하나 들어 살폈다."
+					}
+				},
+				{
+					"speaker": "kai",
+					"content": {
+						"korean": "조각 가장자리가 물에 번져 있어요. 기록해 둬야겠네요."
+					}
+				}
+			]
+		},
+		{
+			"text": {
+				"korean": "점검관에게 당신이 밸브를 열 때의 순서를 그대로 불러 주고 서명을 요구한다"
+			},
+			"path": "stat",
+			"mbti": "EP",
+			"require": {
+				"stat": "reason",
+				"op": "<=",
+				"value": -40
+			},
+			"flag": "inspector_trusts",
+			"effects": {
+				"reason": -20,
+				"echo": 5
+			},
+			"reward": [
+				"intelligence_up"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "점검관이 고개를 끄덕이며 서류판에 시각을 적어 내려갔다."
+					}
+				},
+				{
+					"speaker": "safety_inspector",
+					"content": {
+						"korean": "순서가 정확하네요. 이 정도면 제가 서명하겠습니다."
+					}
+				},
+				{
+					"speaker": "kai",
+					"content": {
+						"korean": "역시 절차는 그 사람이 제일 잘 알더라고요."
+					}
+				}
+			]
+		},
+		{
+			"text": {
+				"korean": "점검관에게 과태료를 대신 내주고 서명을 받아 둔다"
+			},
+			"path": "gold",
+			"mbti": "SP",
+			"require": {
+				"stat": "gold",
+				"op": ">=",
+				"value": 120
+			},
+			"effects": {
+				"gold": -120,
+				"reason": 10
+			},
+			"reward": [
+				"shield"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "점검관이 영수증을 접어 주머니에 넣고 서류판에 도장을 찍었다."
+					}
+				},
+				{
+					"speaker": "safety_inspector",
+					"content": {
+						"korean": "과태료는 과태료고, 서명은 서명이죠. 깔끔합니다."
+					}
+				},
+				{
+					"speaker": "kai",
+					"content": {
+						"korean": "돈으로 서류를 산 건지, 시간을 산 건지 모르겠네요."
+					}
+				}
+			]
+		}
+	],
+	"_side": {
+		"slot": "B",
+		"person": {
+			"id": "safety_inspector",
+			"name": "안전 점검관",
+			"role": "설비 안전 담당"
+		},
+		"wants": "냉각수를 부은 뒤의 절차 기록을 요구하며, 규칙을 지키는 사람이라는 소문을 근거로 서류를 맞춰 오라고 압박한다.",
+		"rule_link": "점검표에 데이터 스크린 조각의 오염 여부를 적어야 하는데, 아직 아무도 확인하지 않았다.",
+		"rep": "reason-",
+		"events": {},
+		"flags": {
+			"inspector_signed": {
+				"kind": "bad",
+				"boss_penalty": -1,
+				"label": {
+					"korean": "점검관의 서명"
+				},
+				"boss_line": {
+					"korean": "점검관에게 서류판을 내밀어 통행을 허가받는다."
+				}
+			},
+			"inspector_walks": {
+				"kind": "good",
+				"boss_penalty": 1,
+				"label": {
+					"korean": "점검관의 퇴장"
+				},
+				"boss_choice": {
+					"korean": "점검관이 남긴 서류판 여백에 조각 오염 위치를 확인한다."
+				}
+			},
+			"inspector_trusts": {
+				"kind": "good",
+				"boss_penalty": 2,
+				"label": {
+					"korean": "점검관의 신뢰"
+				},
+				"boss_choice": {
+					"korean": "점검관이 서명한 서류판을 들어 보이며 길을 열어 준다."
+				}
+			}
+		}
+	}
+}

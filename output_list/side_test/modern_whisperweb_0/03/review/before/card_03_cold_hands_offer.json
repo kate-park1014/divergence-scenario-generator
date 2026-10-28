@@ -1,0 +1,257 @@
+{
+	"id": "card_03_cold_hands_offer",
+	"kind": "rep",
+	"title": {
+		"korean": "차가운 손을 내미는 남자"
+	},
+	"intensity": "calm",
+	"after_story": 3,
+	"before_story": 5,
+	"condition": {
+		"leaning": "fighting-",
+		"among": [
+			"fighting-",
+			"fighting+",
+			"community-",
+			"community+",
+			"reason-",
+			"reason+"
+		],
+		"min": 20
+	},
+	"urgency": 8,
+	"leaning": "fighting-",
+	"background_tags": [
+		"pipe_room",
+		"dim_light",
+		"wet_floor",
+		"cold_air",
+		"crowded"
+	],
+	"dialogue": [
+		{
+			"speaker": "narrator",
+			"content": {
+				"korean": "파이프실 안쪽, 하역 반장이 장갑을 벗고 손바닥을 문지르고 있었다."
+			}
+		},
+		{
+			"speaker": "dock_foreman",
+			"content": {
+				"korean": "당신이 그 밸브를 맨손으로 열어젖혔다던 사람이죠? 서버가 살아났다면서요."
+			}
+		},
+		{
+			"speaker": "kai",
+			"content": {
+				"korean": "저 사람, 아까부터 파이프 틈만 들여다보고 있어요."
+			}
+		},
+		{
+			"speaker": "dock_foreman",
+			"content": {
+				"korean": "안쪽 파이프가 얼어붙어서 반원들이 못 들어갑니다. 당신처럼 밀어붙이는 사람이면 뜯어낼 수 있겠죠."
+			}
+		},
+		{
+			"speaker": "kai",
+			"content": {
+				"korean": "그 틈에 스크린 조각이 끼어 있는데요. 뜯으면 조각이 깨질 텐데."
+			}
+		}
+	],
+	"choices": [
+		{
+			"text": {
+				"korean": "얼어붙은 파이프 묶음을 힘으로 뜯어내 반원들을 들여보낸다"
+			},
+			"path": "easy",
+			"mbti": "TJ",
+			"flag": "torn_pipe_bundle",
+			"effects": {
+				"fighting": 15,
+				"gold": 100
+			},
+			"reward": [
+				"attack_up"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "파이프 묶음이 삐걱 꺾이며 뜯겨 나갔다. 반원들이 몸을 숙이고 안쪽으로 들어갔다."
+					}
+				},
+				{
+					"speaker": "dock_foreman",
+					"content": {
+						"korean": "역시 소문난 사람이야. 수고비로 이만큼 챙겨."
+					}
+				},
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "끼어 있던 스크린 조각 하나가 틈에서 빠져 바닥에 떨어졌다. 반장은 그걸 밟고 지나갔다."
+					}
+				}
+			]
+		},
+		{
+			"text": {
+				"korean": "반장에게 뜯는 대신 반원들을 손상 없는 길로 돌리자고 말한다"
+			},
+			"path": "hard",
+			"mbti": "NF",
+			"flag": "foreman_owes",
+			"effects": {
+				"fighting": -15,
+				"community": 10
+			},
+			"reward": [
+				"shield"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "dock_foreman",
+					"content": {
+						"korean": "돌아가라고? 시간이 얼마나 걸릴 줄 알고."
+					}
+				},
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "반장은 혀를 찼지만 결국 반원들에게 손전등을 들려 돌아가는 길을 가리켰다."
+					}
+				},
+				{
+					"speaker": "kai",
+					"content": {
+						"korean": "조각은 안 깨졌어요. 대신 반장이 꽤 언짢아 보이는데요."
+					}
+				}
+			]
+		},
+		{
+			"text": {
+				"korean": "반장에게 당신이 연 밸브 이야기를 꺼내 반원들을 통제하게 한다"
+			},
+			"path": "stat",
+			"mbti": "EP",
+			"require": {
+				"stat": "fighting",
+				"op": "<=",
+				"value": -40
+			},
+			"flag": "foreman_obeys",
+			"effects": {
+				"fighting": -20,
+				"echo": 5
+			},
+			"reward": [
+				"intelligence_up"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "반장은 잠깐 주인공 얼굴을 살피더니 반원들에게 손을 들었다."
+					}
+				},
+				{
+					"speaker": "dock_foreman",
+					"content": {
+						"korean": "다들 멈춰! 이 사람 말 들으라고. 밸브 연 사람이야."
+					}
+				},
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "반원들이 물러서자 안쪽 파이프 사이로 스크린 조각들이 온전한 채 드러났다."
+					}
+				}
+			]
+		},
+		{
+			"text": {
+				"korean": "얼어붙은 파이프에 손바닥을 대고 반장과 누가 더 오래 버티는지 겨룬다"
+			},
+			"path": "fun",
+			"mbti": "FP",
+			"effects": {
+				"reason": 20,
+				"fighting": 10
+			},
+			"reward": [
+				"defense_up"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "반장이 손을 떼며 웃음을 터뜨렸다. 주인공 손바닥은 새빨개졌다."
+					}
+				},
+				{
+					"speaker": "dock_foreman",
+					"content": {
+						"korean": "내가 졌어. 대신 내 장갑 한 켤레 줄게. 근데 당신 손, 곧 얼얼할 거야."
+					}
+				},
+				{
+					"speaker": "kai",
+					"content": {
+						"korean": "이겼는데 손이 더 아파 보이는데요."
+					}
+				}
+			]
+		}
+	],
+	"_side": {
+		"slot": "B",
+		"person": {
+			"id": "dock_foreman",
+			"name": "하역 반장",
+			"role": "파이프실 하역 담당"
+		},
+		"wants": "자기 반원들이 얼어붙은 파이프에 손을 대다 다쳤다며, 주인공이 힘으로 밀어붙인 방식대로 파이프 묶음을 뜯어내 달라고 한다.",
+		"rule_link": "냉각수에 젖은 데이터 스크린 조각이 파이프 틈에 끼어 있어, 뜯어내면 조각이 더 부서진다.",
+		"rep": "fighting-",
+		"events": {},
+		"flags": {
+			"torn_pipe_bundle": {
+				"kind": "bad",
+				"boss_penalty": -1,
+				"label": {
+					"korean": "뜯어낸 파이프"
+				},
+				"boss_line": {
+					"korean": "반장이 뜯어낸 파이프 구간으로 길을 열어 준다."
+				}
+			},
+			"foreman_owes": {
+				"kind": "good",
+				"boss_penalty": 1,
+				"label": {
+					"korean": "반장의 빚"
+				},
+				"boss_choice": {
+					"korean": "반장이 손전등과 함께 반원들을 이끌고 길을 밝혀 준다."
+				}
+			},
+			"foreman_obeys": {
+				"kind": "good",
+				"boss_penalty": 2,
+				"label": {
+					"korean": "반장의 호응"
+				},
+				"boss_choice": {
+					"korean": "반장에게 신호를 보내 반원들을 한꺼번에 물린다."
+				}
+			}
+		}
+	}
+}

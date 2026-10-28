@@ -1,0 +1,216 @@
+{
+	"id": "card_03_no_permit_shortcut",
+	"kind": "rep",
+	"title": {
+		"korean": "허가 없는 지름길"
+	},
+	"intensity": "calm",
+	"after_story": 3,
+	"before_story": 5,
+	"condition": {
+		"leaning": "reason+",
+		"among": [
+			"fighting-",
+			"fighting+",
+			"community-",
+			"community+",
+			"reason-",
+			"reason+"
+		],
+		"min": 20
+	},
+	"urgency": 8,
+	"leaning": "reason+",
+	"background_tags": [
+		"pipe_room",
+		"dim_light",
+		"wet_floor",
+		"night_shift",
+		"cramped"
+	],
+	"dialogue": [
+		{
+			"speaker": "narrator",
+			"content": {
+				"korean": "야간 배달원이 배달 가방을 파이프 틈에 끼워 넣고 있었다."
+			}
+		},
+		{
+			"speaker": "night_courier",
+			"content": {
+				"korean": "당신이 규칙쯤은 발로 차버린다는 사람이죠? 딱 필요했어요."
+			}
+		},
+		{
+			"speaker": "night_courier",
+			"content": {
+				"korean": "이 지름길로 조각 몇 개만 빼돌리면 밖에서 값이 두 배예요. 허가는 필요 없고요."
+			}
+		},
+		{
+			"speaker": "kai",
+			"content": {
+				"korean": "그 조각, 물이 번져 있지 않아요? 밖에 내보내면 큰일인데."
+			}
+		}
+	],
+	"choices": [
+		{
+			"text": {
+				"korean": "배달원의 가방에 스크린 조각을 담아 지름길로 함께 빠져나간다"
+			},
+			"path": "easy",
+			"mbti": "EP",
+			"flag": "courier_smuggle",
+			"effects": {
+				"reason": 20,
+				"gold": 110
+			},
+			"reward": [
+				"move_range_up"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "배달원이 지름길 철문을 발로 차 열고 가방을 넘겼다."
+					}
+				},
+				{
+					"speaker": "night_courier",
+					"content": {
+						"korean": "값 잘 받았어요. 다음에도 불러요."
+					}
+				},
+				{
+					"speaker": "kai",
+					"content": {
+						"korean": "가방에서 물이 뚝뚝 떨어졌어요. 저 조각, 밖에 나간 거 맞죠?"
+					}
+				}
+			]
+		},
+		{
+			"text": {
+				"korean": "배달원을 붙잡아 조각을 도로 꺼내고 지름길 철문을 닫아 버린다"
+			},
+			"path": "hard",
+			"mbti": "TJ",
+			"flag": "courier_blocked",
+			"effects": {
+				"reason": -20,
+				"community": 10
+			},
+			"reward": [
+				"shield"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "night_courier",
+					"content": {
+						"korean": "이봐요, 내 값어치가 걸렸다고요!"
+					}
+				},
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "철문이 닫히자 배달원은 어깨를 으쓱하고 다른 길로 갔다."
+					}
+				},
+				{
+					"speaker": "kai",
+					"content": {
+						"korean": "조각은 돌아왔는데, 저 사람이 어디 가서 뭐라고 할지 모르겠어요."
+					}
+				}
+			]
+		},
+		{
+			"text": {
+				"korean": "배달원에게 당신이 지름길을 여는 대신 조각은 여기 두라고 명령한다"
+			},
+			"path": "stat",
+			"mbti": "FP",
+			"require": {
+				"stat": "reason",
+				"op": ">=",
+				"value": 40
+			},
+			"flag": "courier_open_path",
+			"effects": {
+				"reason": 25,
+				"echo": 5
+			},
+			"reward": [
+				"intelligence_up"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "배달원이 혀를 차면서도 가방을 내려놓았다."
+					}
+				},
+				{
+					"speaker": "night_courier",
+					"content": {
+						"korean": "당신이 그렇게 나오면 나도 어쩔 수 없죠. 지름길은 열어 둘게요."
+					}
+				},
+				{
+					"speaker": "kai",
+					"content": {
+						"korean": "조각은 여기 남았고, 길은 열렸네요."
+					}
+				}
+			]
+		}
+	],
+	"_side": {
+		"slot": "B",
+		"person": {
+			"id": "night_courier",
+			"name": "야간 배달원",
+			"role": "전산실 내부 배달"
+		},
+		"wants": "규칙을 무시하고 마음대로 다닌다는 소문을 듣고, 봉인된 밸브 옆 지름길로 데이터 스크린 조각을 빼돌리자고 제안한다.",
+		"rule_link": "조각을 지름길로 빼돌리면 오염된 조각이 파이프실 밖으로 퍼져 나간다.",
+		"rep": "reason+",
+		"events": {},
+		"flags": {
+			"courier_smuggle": {
+				"kind": "bad",
+				"boss_penalty": -1,
+				"label": {
+					"korean": "배달원의 지름길"
+				},
+				"boss_line": {
+					"korean": "배달원이 지름길 철문 열쇠를 던져 준다."
+				}
+			},
+			"courier_blocked": {
+				"kind": "good",
+				"boss_penalty": 1,
+				"label": {
+					"korean": "닫힌 철문"
+				},
+				"boss_choice": {
+					"korean": "배달원이 다른 지름길의 위치를 손가락으로 짚어 준다."
+				}
+			},
+			"courier_open_path": {
+				"kind": "good",
+				"boss_penalty": 2,
+				"label": {
+					"korean": "열린 지름길"
+				},
+				"boss_choice": {
+					"korean": "배달원이 열어 둔 지름길로 조각을 들고 통과한다."
+				}
+			}
+		}
+	}
+}

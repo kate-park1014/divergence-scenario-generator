@@ -1,0 +1,192 @@
+{
+	"cards": [
+		{
+			"card_id": "card_05_blocking_firewall",
+			"choices_read": [
+				{
+					"does": "피해 안전한 우회로를 찾는다.",
+					"path": "easy",
+					"reaction_assumes": "좁고 구불구불한 환풍구를 통해 방화벽을 돌아갔다.",
+					"target": "방화벽"
+				},
+				{
+					"target": "방화벽의 열기",
+					"reaction_assumes": "옷소매가 타들어 가는 것을 견디며 방화벽 내부의 제어 콘솔에 조각을 끼워 넣었다.",
+					"path": "hard",
+					"does": "도망치지 않고 뚫고 들어가 조각을 맞춘다."
+				},
+				{
+					"does": "패턴 스캐너를 사서 타이밍을 맞춘다.",
+					"path": "gold",
+					"reaction_assumes": "스캐너의 신호에 맞춰 세 번 연속으로 몸을 날려 방화벽을 무사히 통과했다.",
+					"target": "보안 관리자"
+				},
+				{
+					"target": "방화벽의 패턴",
+					"reaction_assumes": "레이저가 점멸하는 찰나의 순간을 노려 가볍게 굴러 방화벽을 통과했다.",
+					"path": "lock",
+					"does": "눈으로 좇아 빈틈으로 뛰어든다."
+				}
+			],
+			"checks": [
+				{
+					"item": "S1",
+					"pass": true
+				},
+				{
+					"item": "S2",
+					"pass": true
+				},
+				{
+					"pass": true,
+					"item": "S3"
+				},
+				{
+					"pass": true,
+					"item": "S4"
+				},
+				{
+					"item": "S5",
+					"pass": true
+				}
+			],
+			"asks": "방화벽이 우리를 적으로 인식하고 있으니 당장 도망치자고 한다."
+		},
+		{
+			"choices_read": [
+				{
+					"does": "도움을 받아 조각을 맞춘다.",
+					"path": "easy",
+					"reaction_assumes": "기계 팔이 섬세하게 조각들을 끼워 맞추자 데이터 배열이 안정적으로 연결되었다.",
+					"target": "기술자"
+				},
+				{
+					"target": "조각의 단면",
+					"reaction_assumes": "기계 팔을 물리고 단면의 코드를 일일이 확인하며 조각을 붙였다.",
+					"path": "hard",
+					"does": "기계 대신 직접 손으로 확인하며 맞춘다."
+				}
+			],
+			"asks": "기계로 데이터 조각 맞추는 것을 도와주겠다고 한다.",
+			"card_id": "card_05_helper_technician",
+			"checks": [
+				{
+					"pass": true,
+					"item": "S1"
+				},
+				{
+					"pass": true,
+					"item": "S2"
+				},
+				{
+					"item": "S3",
+					"pass": true
+				},
+				{
+					"problem": "C/D 카드는 조각을 깨뜨린 대가(나쁜 결과)를 겪어야 하는데, 단말기를 분해한 덕에 권한이 돌아왔다고 긍정적인 결과를 말하며 같은 인물의 다른 카드 사실(권한이 날아감)과 어긋납니다.",
+					"item": "S4",
+					"quote": "당신이 단말기를 분해한 덕에 내 권한이 일부 돌아왔어. 이 조각들 맞추는 거, 내가 기계로 도와줄게.",
+					"pass": false
+				},
+				{
+					"item": "S5",
+					"pass": true
+				}
+			]
+		},
+		{
+			"checks": [
+				{
+					"item": "S1",
+					"pass": true
+				},
+				{
+					"pass": true,
+					"item": "S2"
+				},
+				{
+					"pass": true,
+					"item": "S3"
+				},
+				{
+					"pass": false,
+					"item": "S4",
+					"quote": "전원 코드를 뽑길 잘했어요! 남은 예비 전력으로 조각을 한 번에 여러 개 융합할 수 있을 거예요.",
+					"problem": "C/D 카드는 조각을 깨뜨린 대가(나쁜 결과)를 겪어야 하는데, 전원 코드를 뽑길 잘했다고 칭찬하며 긍정적인 결과를 말해 같은 인물의 다른 카드 사실(문에 갇힘)과 어긋납니다."
+				},
+				{
+					"item": "S5",
+					"pass": true
+				}
+			],
+			"asks": "남은 예비 전력으로 조각을 한 번에 여러 개 융합하자고 한다.",
+			"card_id": "card_05_power_of_system",
+			"choices_read": [
+				{
+					"reaction_assumes": "강한 전류가 흐르며 조각들이 순식간에 하나로 엉겨 붙었다.",
+					"path": "easy",
+					"does": "단말기에 연결해 조각을 빠르게 융합한다.",
+					"target": "예비 전력"
+				},
+				{
+					"reaction_assumes": "배터리를 조각 주변에 둘러 보호막을 쳤다.",
+					"does": "직접 사용하지 않고 방어용 에너지 장벽으로 전환한다.",
+					"path": "hard",
+					"target": "전력"
+				}
+			]
+		},
+		{
+			"card_id": "card_05_temporary_assembly",
+			"checks": [
+				{
+					"item": "S1",
+					"pass": true
+				},
+				{
+					"item": "S2",
+					"pass": true
+				},
+				{
+					"pass": true,
+					"item": "S3"
+				},
+				{
+					"pass": true,
+					"item": "S4"
+				},
+				{
+					"item": "S5",
+					"pass": true
+				}
+			],
+			"choices_read": [
+				{
+					"path": "easy",
+					"does": "조각을 강제로 억누르게 둔다.",
+					"reaction_assumes": "억지로 눌린 조각들이 마찰을 일으키며 겨우 맞물렸다.",
+					"target": "관리자"
+				},
+				{
+					"does": "억누르지 않고 핀셋으로 하나씩 맞춰 배열한다.",
+					"path": "hard",
+					"reaction_assumes": "밀어내는 힘을 거슬러 가며 조각들을 올바른 방향으로 꼼꼼히 배열했다.",
+					"target": "조각의 극성"
+				},
+				{
+					"target": "관리자",
+					"reaction_assumes": "슬롯을 당겨 내기에 이기자, 접착제가 굳으며 조각이 완벽히 이어졌다.",
+					"does": "전도성 접착제를 사서 조각을 붙이는 내기를 한다.",
+					"path": "gold"
+				},
+				{
+					"does": "계산해 조각이 스스로 붙게 만든다.",
+					"path": "lock",
+					"reaction_assumes": "단말기의 전압을 조절해 극성을 반전시키자, 조각들이 자석처럼 서로 달라붙었다.",
+					"target": "단말기의 자기장 수치"
+				}
+			],
+			"asks": "조각들의 극성이 안 맞아서 튕겨 나가니 강제로라도 눌러서 고정해야 한다고 한다."
+		}
+	]
+}

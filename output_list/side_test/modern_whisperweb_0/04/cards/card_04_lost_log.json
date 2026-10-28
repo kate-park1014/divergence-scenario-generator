@@ -1,0 +1,159 @@
+{
+	"id": "card_04_lost_log",
+	"kind": "normal",
+	"title": {
+		"korean": "잃어버린 작업 일지"
+	},
+	"intensity": "calm",
+	"after_story": 1,
+	"before_story": 3,
+	"background_tags": [
+		"server_room",
+		"data_storm",
+		"flashing_lights",
+		"alone",
+		"urgent"
+	],
+	"dialogue": [
+		{
+			"speaker": "narrator",
+			"content": {
+				"korean": "유리가 어지럽게 흐르는 데이터 폭풍 앞에서 안절부절못하고 있다."
+			}
+		},
+		{
+			"speaker": "yuri",
+			"content": {
+				"korean": "제 작업 일지가 저출력 파이프 쪽으로 새어 나가고 있어요!"
+			}
+		},
+		{
+			"speaker": "yuri",
+			"content": {
+				"korean": "제가 직접 손을 뻗기엔 흐름이 너무 빨라요. 대신 좀 잡아줄래요?"
+			}
+		},
+		{
+			"speaker": "dax",
+			"content": {
+				"korean": "저렇게 빠른 속도라면 타이밍을 제대로 맞춰야 해!"
+			}
+		}
+	],
+	"choices": [
+		{
+			"text": {
+				"korean": "{actor}이(가) 데이터의 흐름을 계산해 일지만 정확히 낚아챈다."
+			},
+			"path": "lock",
+			"mbti": "ST",
+			"require": {
+				"mbti": "ST"
+			},
+			"effects": {
+				"reason": 10
+			},
+			"reward": [
+				"move_range_up"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "{actor}이(가) 눈앞의 데이터 궤적을 분석해 일지를 건져냈다."
+					}
+				},
+				{
+					"speaker": "yuri",
+					"content": {
+						"korean": "대단해요! 정말 감사합니다."
+					}
+				}
+			]
+		},
+		{
+			"text": {
+				"korean": "유출되는 데이터 속으로 손을 뻗어 일지가 지나가길 기다린다."
+			},
+			"path": "easy",
+			"mbti": "EP",
+			"effects": {
+				"fighting": 10
+			},
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "당신이 정확한 순간에 손을 뻗어 일지를 낚아챘다."
+					}
+				},
+				{
+					"speaker": "dax",
+					"content": {
+						"korean": "휴, 찰나의 순간이었어."
+					}
+				}
+			],
+			"event": "minigame_timing",
+			"event_intro": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "빠른 속도로 흐르는 데이터 스트림 속에서 일지 조각이 세 번 떠오른다."
+					}
+				},
+				{
+					"speaker": "yuri",
+					"content": {
+						"korean": "지금이에요! 놓치면 안 돼요!"
+					}
+				}
+			]
+		},
+		{
+			"text": {
+				"korean": "데이터 흐름에 손을 넣는 건 위험하다며 유리를 뒤로 물러나게 한다."
+			},
+			"path": "hard",
+			"mbti": "IJ",
+			"effects": {
+				"community": 10,
+				"reason": 15
+			},
+			"reward": [
+				"defense_up"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "당신이 유리를 안전한 곳으로 끌어당겼다."
+					}
+				},
+				{
+					"speaker": "yuri",
+					"content": {
+						"korean": "아깝지만, 다치는 것보단 낫겠죠."
+					}
+				}
+			]
+		}
+	],
+	"_side": {
+		"slot": "A",
+		"person": {
+			"name": "유리",
+			"id": "yuri",
+			"role": "데이터 복원업자"
+		},
+		"wants": "유출되는 데이터 속에서 자신의 잃어버린 작업 일지를 찾아달라고 한다.",
+		"rule_link": "혼란스러운 정보의 흐름 속에서 원하는 것만 골라잡으려는 위험한 시도.",
+		"events": {
+			"easy": "유리가 가리킨 일지를 건지려면 데이터가 지나가는 세 번의 찰나를 노려야 한다."
+		},
+		"flags": {}
+	}
+}

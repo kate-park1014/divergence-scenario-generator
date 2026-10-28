@@ -1,0 +1,155 @@
+{
+	"id": "card_01_jinsu_quota",
+	"kind": "plant",
+	"title": {
+		"korean": "접수원의 실적 채우기"
+	},
+	"intensity": "calm",
+	"after_story": 3,
+	"before_story": 5,
+	"background_tags": [
+		"waiting_hall",
+		"reception_counter",
+		"stamped_paper",
+		"office_desk",
+		"hurried"
+	],
+	"dialogue": [
+		{
+			"speaker": "narrator",
+			"content": {
+				"korean": "접수대 직원 진수가 도장 찍힌 린의 서류를 손에 쥔 채 싱긋 웃는다."
+			}
+		},
+		{
+			"speaker": "jinsu",
+			"content": {
+				"korean": "린 씨 서류는 순번 1번으로 처리됐습니다. 그런데 제 실적이 세 건 모자라네요."
+			}
+		},
+		{
+			"speaker": "lin",
+			"content": {
+				"korean": "제 순번이 오른 건 기쁘지만, 남은 실적을 왜 저희에게 말씀하시나요?"
+			}
+		},
+		{
+			"speaker": "jinsu",
+			"content": {
+				"korean": "과장 서류 서너 장만 더 채워주면, 대기홀 뒷문 통로를 열어 드리겠습니다."
+			}
+		}
+	],
+	"choices": [
+		{
+			"text": {
+				"korean": "진수의 부탁대로 밀린 서류 다섯 장에 허위 직무를 써서 넘긴다."
+			},
+			"path": "easy",
+			"mbti": "SF",
+			"effects": {
+				"echo": 10,
+				"gold": 100,
+				"reason": -15,
+				"community": -20
+			},
+			"reward": [
+				"intelligence_up"
+			],
+			"seed": "jinsu_quota_easy",
+			"result": [
+				{
+					"speaker": "jinsu",
+					"content": {
+						"korean": "좋아요! 린 씨 서류는 우선 서랍에 빼두고, 이쪽 비상구 열쇠 위치를 찍어드리죠."
+					}
+				},
+				{
+					"speaker": "lin",
+					"content": {
+						"korean": "임시 합격 도장이 찍히자마자 일이 일사천리로 풀리네요! 뒷문이라니 다행이에요."
+					}
+				}
+			]
+		},
+		{
+			"text": {
+				"korean": "실적 채우기용 허위 서류를 거부하고 정식 처리를 요구한다."
+			},
+			"path": "hard",
+			"mbti": "NT",
+			"effects": {
+				"reason": 20,
+				"echo": -10,
+				"community": 20
+			},
+			"reward": [
+				"defense_up"
+			],
+			"seed": "jinsu_quota_hard",
+			"result": [
+				{
+					"speaker": "jinsu",
+					"content": {
+						"korean": "협조를 안 해주시겠다? 그럼 린 씨 서류도 대기줄 맨 끝으로 돌립니다."
+					}
+				},
+				{
+					"speaker": "lin",
+					"content": {
+						"korean": "순번이 다시 뒤로 밀려났어요. 그래도 부당한 거래는 안 하길 잘했어요."
+					}
+				}
+			]
+		},
+		{
+			"text": {
+				"korean": "진수의 책상에 놓인 접수 완료 도장을 빼앗아 서류철에 난사한다."
+			},
+			"path": "fun",
+			"mbti": "EP",
+			"effects": {
+				"community": 10,
+				"echo": 5,
+				"gold": -60,
+				"reason": -20
+			},
+			"reward": [
+				"move_range_up"
+			],
+			"seed": "jinsu_quota_hard",
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "진수의 책상 위 결재 도장을 낚아채 빈 서류 뭉치에 마구 찍어 흩뿌렸다."
+					}
+				},
+				{
+					"speaker": "jinsu",
+					"content": {
+						"korean": "으악, 내 결재 도장! 실적이고 뭐고 이게 무슨 난장판이야!"
+					}
+				},
+				{
+					"speaker": "lin",
+					"content": {
+						"korean": "도망쳐요! 임시 도장을 받은 지원서만 챙겨서 얼른 빠져나가야 해요!"
+					}
+				}
+			]
+		}
+	],
+	"_side": {
+		"slot": "B",
+		"person": {
+			"role": "접수대 직원",
+			"id": "jinsu",
+			"name": "진수"
+		},
+		"wants": "허위 과장 서류를 채워 오늘 접수 할당량을 마감하고 퇴근하는 것",
+		"rule_link": "과장 접수 서류를 늘리면 대기홀 관리자의 비공식 혜택을 받는다.",
+		"events": {},
+		"flags": {}
+	}
+}

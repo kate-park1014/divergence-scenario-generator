@@ -1,0 +1,132 @@
+{
+	"id": "card_01_nora_error_log",
+	"kind": "normal",
+	"title": {
+		"korean": "쌓여가는 오류 로그"
+	},
+	"intensity": "calm",
+	"after_story": 3,
+	"before_story": 5,
+	"background_tags": [
+		"error_logs",
+		"red_screen",
+		"tired_worker",
+		"flashing_monitor",
+		"messy_desk"
+	],
+	"dialogue": [
+		{
+			"speaker": "narrator",
+			"content": {
+				"korean": "노라가 새빨간 오류 로그가 가득한 모니터를 보며 머리를 쥐어뜯고 있다."
+			}
+		},
+		{
+			"speaker": "nora",
+			"content": {
+				"korean": "스크린 조각 깨진 뒤로 이상한 에러가 계속 떠. 어차피 다 일시적인 거잖아?"
+			}
+		},
+		{
+			"speaker": "echo",
+			"content": {
+				"korean": "데이터를 마음대로 지웠다가 나중에 더 큰 문제가 생기면 어떡해."
+			}
+		},
+		{
+			"speaker": "nora",
+			"content": {
+				"korean": "그니까! 그냥 파편 힘으로 에러 로그 싹 다 날려버리자. 나 퇴근 좀 하게 내기 한 판 할래?"
+			}
+		}
+	],
+	"choices": [
+		{
+			"text": {
+				"korean": "파편을 가까이 대어 오류 로그를 덮어버리고 삭제를 돕는다."
+			},
+			"path": "easy",
+			"mbti": "FJ",
+			"effects": {
+				"echo": -10,
+				"gold": 100,
+				"reason": -15
+			},
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "모니터가 잠시 깜빡이더니 경고창이 모두 사라진다. 노라는 ���벼운 발걸음으로 전산실을 빠져나간다."
+					}
+				}
+			]
+		},
+		{
+			"text": {
+				"korean": "로그를 하나하나 백업하고 원인을 분석하도록 설득한다."
+			},
+			"path": "hard",
+			"mbti": "NT",
+			"effects": {
+				"reason": 20,
+				"echo": 10
+			},
+			"reward": [
+				"intelligence_up"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "노라가 울상을 지으며 자리에 주저앉아 키보드를 두드린다. 밤샘 작업이 확정된 그녀의 어깨가 축 처진다."
+					}
+				}
+			]
+		},
+		{
+			"text": {
+				"korean": "노라의 제안대로 오류 로그 삭제 여부를 걸고 동전 던지기 내기를 한다."
+			},
+			"path": "fun",
+			"mbti": "SP",
+			"effects": {
+				"fighting": -10,
+				"community": 10
+			},
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "동전이 허공을 가르며 빙글빙글 돈다. 노라가 긴장한 표정으로 떨어지는 동전을 쳐다본다."
+					}
+				}
+			],
+			"event": "minigame_slot",
+			"event_intro": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "노라가 주머니에서 동전을 꺼내며 앞면이 나오면 로그를 지우고 뒷면이 나오면 남기자고 내기를 제안한다."
+					}
+				}
+			]
+		}
+	],
+	"_side": {
+		"slot": "B",
+		"person": {
+			"id": "nora",
+			"name": "노라",
+			"role": "네트워크 순찰대원"
+		},
+		"wants": "갑자기 뜬 오류 로그들을 파편의 힘을 이용해 한 번에 삭제해버리고 퇴근하려 함",
+		"rule_link": "파편이 만든 일시적 복구 현상을 믿고 문제를 덮어버리려는 행동.",
+		"events": {
+			"fun": "노라가 책임을 회피하기 위해 운에 결과를 맡기려 한다."
+		},
+		"flags": {}
+	}
+}

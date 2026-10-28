@@ -1,0 +1,145 @@
+{
+	"id": "card_01_ryan_order_data",
+	"kind": "plant",
+	"title": {
+		"korean": "막혀버린 부품 주문"
+	},
+	"intensity": "calm",
+	"after_story": 1,
+	"before_story": 3,
+	"background_tags": [
+		"old_server_rack",
+		"blinking_lights",
+		"dusty_air",
+		"quiet_humming",
+		"dim_lighting"
+	],
+	"dialogue": [
+		{
+			"speaker": "narrator",
+			"content": {
+				"korean": "낡은 서버 랙 앞에서 정비공 라이언이 태블릿을 두드리며 한숨을 쉰다."
+			}
+		},
+		{
+			"speaker": "ryan",
+			"content": {
+				"korean": "메인보드 부품을 주문해야 하는데 데이터가 꽉 막혔어요."
+			}
+		},
+		{
+			"speaker": "ryan",
+			"content": {
+				"korean": "저 스피커 말대로 스크린 조각의 힘을 조금만 흉내 내면 바로 뚫릴 텐데."
+			}
+		},
+		{
+			"speaker": "echo",
+			"content": {
+				"korean": "아직 조각을 깬 것도 아닌데, 섣불리 그 힘을 흉내 내는 건 위험해 보여."
+			}
+		},
+		{
+			"speaker": "ryan",
+			"content": {
+				"korean": "당신들이 좀 도와줄 수 없나요? 딱 한 번만 강제로 신호를 덮어씌워 줘요."
+			}
+		}
+	],
+	"choices": [
+		{
+			"text": {
+				"korean": "조각의 힘을 흉내 내어 데이터를 강제로 덮어씌우고 당장 주문을 통과시킨다."
+			},
+			"path": "easy",
+			"mbti": "EN",
+			"effects": {
+				"reason": -20,
+				"gold": 100
+			},
+			"seed": "ryan_order_data_easy",
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "주문 승인 창이 곧바로 뜬다. 라이언이 기뻐하며 부품값의 일부를 수고비로 건넨다."
+					}
+				}
+			]
+		},
+		{
+			"text": {
+				"korean": "위험하다며 거절하고 정석대로 복잡한 수동 코딩을 돕는다."
+			},
+			"path": "hard",
+			"mbti": "IS",
+			"effects": {
+				"echo": -10,
+				"reason": 20
+			},
+			"seed": "ryan_order_data_hard",
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "수동으로 코드를 한 줄씩 고치자 라이언이 지루해하며 하품을 한다. 작업이 길어져 잠시 눈을 붙이기로 한다."
+					}
+				}
+			],
+			"event": "campsite",
+			"event_intro": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "서버 랙 사이의 빈 공간에 라이언이 종이 박스를 깔아주며 교대로 쉬자고 제안한다."
+					}
+				}
+			]
+		},
+		{
+			"text": {
+				"korean": "{actor}이(가) 시스템의 허점을 분석해 합법적인 우회로를 찾는다."
+			},
+			"path": "lock",
+			"mbti": "TJ",
+			"require": {
+				"mbti": "TJ"
+			},
+			"effects": {
+				"reason": 10
+			},
+			"reward": [
+				"intelligence_up"
+			],
+			"seed": "ryan_order_data_hard",
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "{actor}이(가) 몇 분 만에 합법적인 관리자 포트를 찾아내 주문을 넣는다."
+					}
+				},
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "라이언이 그 솜씨에 감탄하며 남는 부품을 챙겨준다."
+					}
+				}
+			]
+		}
+	],
+	"_side": {
+		"slot": "A",
+		"person": {
+			"id": "ryan",
+			"role": "낡은 서버 랙 정비공",
+			"name": "라이언"
+		},
+		"wants": "부품 주문 데이터를 빨리 고치기 위해 스크린 조각의 힘을 빌려달라고 함",
+		"rule_link": "아직 깨지지 않은 스크린 조각의 힘을 흉내 내어 규칙을 우회하려는 시도.",
+		"events": {
+			"hard": "복잡한 코딩 작업으로 시간이 오래 걸려 쉴 곳이 필요하다."
+		},
+		"flags": {}
+	}
+}

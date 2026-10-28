@@ -1,0 +1,294 @@
+{
+	"cards": [
+		{
+			"wants": "과장 이력서를 제출해 쉽게 통과하고 싶어 한다.",
+			"dialogue": [
+				{
+					"text": "대기실 구석의 이력서 수거함 주변으로 지원자들이 불안하게 몰려있다.",
+					"speaker": "narrator"
+				},
+				{
+					"speaker": "lin",
+					"text": "남은 과장 이력서들이 여전히 대기실을 통과하지 못하게 묶어두고 있어요."
+				},
+				{
+					"text": "당신이 경비들을 주먹으로 밀어붙이며 이곳까지 뚫고 들어온 그 사람이죠?",
+					"speaker": "minseok"
+				},
+				{
+					"text": "손에 땀이 차서 서류가 젖을 지경입니다. 억지로라도 제출함에 집어넣어야 해요!",
+					"speaker": "minseok"
+				}
+			],
+			"background_tags": [
+				"waiting_room",
+				"bright_light",
+				"paper_stacks",
+				"anxious_crowd",
+				"tense_atmosphere"
+			],
+			"person": {
+				"role": "과장 경력 지원자",
+				"id": "minseok",
+				"name": "민석"
+			},
+			"key": "resume_shred_force",
+			"choices": [
+				{
+					"result": [
+						{
+							"speaker": "narrator",
+							"text": "수거함이 깨지며 흩어진 서류를 민석이 비명을 지르며 주워 모았다."
+						},
+						{
+							"text": "비상 경보음이 울리기 시작했어요!",
+							"speaker": "lin"
+						}
+					],
+					"reward": [],
+					"path": "easy",
+					"effects": {
+						"echo": -5,
+						"fighting": -20,
+						"gold": 100
+					},
+					"mbti": "EP",
+					"text": "민석이 들고 있는 이력서 수거함을 발로 차서 바닥에 엎어버린다.",
+					"flag": {
+						"boss_text": "대기실 경보 장치가 작동해 출입구가 닫히며 10초간 움직임이 제한된다.",
+						"label": "경보 발동",
+						"key": "shred_alarm_trap"
+					}
+				},
+				{
+					"path": "hard",
+					"result": [
+						{
+							"speaker": "narrator",
+							"text": "찢어진 이력서 조각이 바닥에 떨어지자 대기실의 고압 전류가 줄어들었다."
+						},
+						{
+							"text": "내 생각이 틀렸군요. 제어반 스위치를 조작하겠습니다!",
+							"speaker": "minseok"
+						},
+						{
+							"speaker": "lin",
+							"text": "대기실 전류가 안정되고 있어요."
+						}
+					],
+					"reward": [
+						"defense_up"
+					],
+					"text": "민석의 손에서 과장 이력서를 빼앗아 직전 행동처럼 찢어버린다.",
+					"flag": {
+						"label": "민석의 협력",
+						"key": "minseok_breaker",
+						"boss_text": "민석이 제어반으로 달려가 장치의 동력 케이블을 잘라낸다."
+					},
+					"effects": {
+						"fighting": 20,
+						"echo": 10
+					},
+					"mbti": "TJ"
+				},
+				{
+					"reward": [
+						"shield"
+					],
+					"result": [
+						{
+							"speaker": "narrator",
+							"text": "당신의 서슬 퍼런 기세에 민석과 지원자들이 떨면서 이력서를 스스로 찢어 던졌다."
+						},
+						{
+							"speaker": "narrator",
+							"text": "수거함의 과장된 환영이 깨지며 면접장 정문이 열렸다."
+						},
+						{
+							"text": "모두가 당신의 기세에 압도당해 지시에 따르는군요!",
+							"speaker": "lin"
+						}
+					],
+					"path": "stat",
+					"effects": {
+						"echo": 15,
+						"fighting": -30
+					},
+					"mbti": "NF",
+					"flag": {
+						"boss_text": "겁먹은 지원자들이 밸브를 함께 내리쳐 장치의 작동을 멈춘다.",
+						"label": "지원자들의 제어",
+						"key": "crowd_leverage"
+					},
+					"text": "험악한 기세로 민석과 지원자들을 노려보며 이력서를 스스로 찢게 만든다."
+				}
+			],
+			"title": "강행 돌파의 대기실",
+			"no": 1,
+			"rule_link": "대기실 이력서 수거함의 과장 서류를 물리적으로 처리해 대기 상태를 해제해야 한다.",
+			"slot": "D",
+			"kind": "rep",
+			"rep_dir": "fighting-"
+		},
+		{
+			"title": "서명 서류의 갈림길",
+			"key": "resume_seal_trust",
+			"choices": [
+				{
+					"path": "easy",
+					"flag": {
+						"label": "거짓 서명 책임",
+						"boss_text": "허위 서명의 책임을 물어 무대 조명 아래로 징계 밧줄이 떨어져 죈다.",
+						"key": "false_signature_trap"
+					},
+					"result": [
+						{
+							"speaker": "narrator",
+							"text": "서명을 마치자 문이 열렸지만 서명판에서 금빛 사슬이 나와 당신의 손목을 감쌌다."
+						},
+						{
+							"speaker": "yuri",
+							"text": "대표 서명인이 있으니 전원 통과입니다. 고맙습니다."
+						},
+						{
+							"text": "과장 서명의 책임이 모두 당신에게 쏠렸어요!",
+							"speaker": "lin"
+						}
+					],
+					"reward": [],
+					"text": "유리가 내민 승인 서류판에 모두를 위해 서명한다.",
+					"effects": {
+						"community": 20,
+						"fighting": 20,
+						"gold": 80
+					},
+					"mbti": "FJ"
+				},
+				{
+					"effects": {
+						"community": -10,
+						"fighting": -20
+					},
+					"flag": {
+						"key": "yuri_registry_lock",
+						"label": "승인판 파괴",
+						"boss_text": "파괴된 서명판에서 빛이 분출되어 장치의 결계 한쪽을 파괴한다."
+					},
+					"result": [
+						{
+							"speaker": "narrator",
+							"text": "서류가 찢겨 나가며 서명판의 인쇄된 글자들이 검게 타올랐다."
+						},
+						{
+							"speaker": "yuri",
+							"text": "승인 서류를 찢어버리다니... 허위 절차가 무효가 되었군요."
+						},
+						{
+							"speaker": "lin",
+							"text": "대기실에 가득했던 거짓 기준이 사라졌어요."
+						}
+					],
+					"reward": [
+						"defense_up"
+					],
+					"text": "유리가 들고 있는 과장 승인 서류를 낚아채 반으로 찢는다.",
+					"mbti": "TP",
+					"path": "hard"
+				},
+				{
+					"flag": {
+						"key": "united_applicants",
+						"label": "지원자 연대",
+						"boss_text": "동료 지원자들이 무대 배선반을 일제히 당겨 전력을 차단한다."
+					},
+					"effects": {
+						"community": 30,
+						"fighting": 30
+					},
+					"text": "동료 지원자들과 함께 승인 서류의 과장 문구를 찢어내고 올바른 서류로 수정한다.",
+					"mbti": "EN",
+					"result": [
+						{
+							"speaker": "narrator",
+							"text": "지원자들이 힘을 모아 과장 항목을 찢어내자 서명판이 정직한 통과증으로 변했다."
+						},
+						{
+							"text": "대기실 전원이 합심하여 닫혀 있던 면접장 정문을 함께 밀어 열었다.",
+							"speaker": "narrator"
+						},
+						{
+							"text": "모두가 협력해서 정당한 길을 열었군요!",
+							"speaker": "lin"
+						}
+					],
+					"reward": [
+						"shield"
+					],
+					"path": "stat"
+				},
+				{
+					"mbti": "EP",
+					"result": [
+						{
+							"speaker": "narrator",
+							"text": "종이비행기가 환기구 팬 속으로 날아가 들어가며 기계를 멈췄다."
+						},
+						{
+							"speaker": "yuri",
+							"text": "서류를 비행기로 만들어서 환기구를 멈추다니..."
+						},
+						{
+							"text": "천장에서 시원한 바람이 불어오기 시작했어요!",
+							"speaker": "lin"
+						}
+					],
+					"reward": [],
+					"text": "유리의 서류판을 빼앗아 찢은 뒤 종이비행기로 접어 날려 버린다.",
+					"effects": {
+						"gold": 50,
+						"reason": 25
+					},
+					"path": "fun"
+				}
+			],
+			"person": {
+				"id": "yuri",
+				"name": "유리",
+				"role": "대기실 안내원"
+			},
+			"dialogue": [
+				{
+					"text": "안내원 유리가 과장된 승인 서류판을 든 채 당신 앞을 막아선다.",
+					"speaker": "narrator"
+				},
+				{
+					"text": "저 서명판에 서명하면 대기 상태를 모면할 수 있다고 쓰여 있어요.",
+					"speaker": "lin"
+				},
+				{
+					"speaker": "yuri",
+					"text": "다른 지원자의 짐까지 챙기며 길을 함께 열어왔다는 소문은 들었습니다."
+				},
+				{
+					"speaker": "yuri",
+					"text": "50명의 지원자를 대표해서 이 과장 승인 서류에 서명해 주면 모두 통과입니다."
+				}
+			],
+			"no": 2,
+			"background_tags": [
+				"waiting_room",
+				"dim_lighting",
+				"desk_counter",
+				"gathered_people",
+				"strict_atmosphere"
+			],
+			"wants": "지원자들에게 과장 서류 승인 서명을 받아내 대기실을 유지하려 한다.",
+			"rule_link": "과장 서명 서류를 찢어 허위 승인 절차를 무력화해야 한다.",
+			"slot": "D",
+			"kind": "rep",
+			"rep_dir": "fighting+"
+		}
+	],
+	"errors": [],
+	"prompt_hash": "e08024d8963c9f01e63b8292fe14f5c7d53a59bb"
+}

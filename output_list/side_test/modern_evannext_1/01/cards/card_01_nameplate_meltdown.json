@@ -1,0 +1,220 @@
+{
+	"id": "card_01_nameplate_meltdown",
+	"kind": "normal",
+	"title": {
+		"korean": "폭주하는 출력기"
+	},
+	"intensity": "calm",
+	"after_story": 7,
+	"before_story": 10,
+	"background_tags": [
+		"waiting_hall",
+		"broken_printer",
+		"flying_papers",
+		"pushing_crowd",
+		"urgent_mood"
+	],
+	"dialogue": [
+		{
+			"speaker": "narrator",
+			"content": {
+				"korean": "명패 출력기 옆에서 렌치를 든 수리공 오 씨가 덜컹거리는 기계를 두들긴다."
+			}
+		},
+		{
+			"speaker": "mechanic_oh",
+			"content": {
+				"korean": "과장된 이력서가 쏟아져 들어가니 출력기가 감당을 못 하고 지원자들 이름을 마구 뒤섞고 있소!"
+			}
+		},
+		{
+			"speaker": "lin",
+			"content": {
+				"korean": "제 이력서에도 가짜 경력이 적혀 있는데, 이대로 두면 제 이름도 기계 속으로 빨려 들어갈까요?"
+			}
+		},
+		{
+			"speaker": "mechanic_oh",
+			"content": {
+				"korean": "기계 규정판을 보시오! '이력서의 정보가 뒤섞이면 존재가 흐려진다'고 분명히 적혀 있단 말이오!"
+			}
+		}
+	],
+	"choices": [
+		{
+			"text": {
+				"korean": "린의 이력서 속 과장 경력을 그대로 둔 채 출력기를 강제 가동한다."
+			},
+			"path": "easy",
+			"mbti": "NT",
+			"effects": {
+				"fighting": 25,
+				"echo": -10,
+				"community": -15,
+				"gold": 70
+			},
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "당신은 린의 이력서에 적힌 화려한 허위 수상 내역을 그대로 둔 채 출력기를 발로 찼다."
+					}
+				},
+				{
+					"speaker": "lin",
+					"content": {
+						"korean": "제 번호표가 번쩍이며 앞 번호로 유지됐지만... 이름표 글자가 흐릿하게 번지기 시작해요."
+					}
+				},
+				{
+					"speaker": "mechanic_oh",
+					"content": {
+						"korean": "거짓 경력을 유지하면 명패는 유지될지 몰라도, 면접장에 들어가면 진짜 당신은 없을 거요!"
+					}
+				}
+			]
+		},
+		{
+			"text": {
+				"korean": "린의 서류에 덧붙여진 허위 경력 용지를 찢어내고 본래 이력서로 환원한다."
+			},
+			"path": "hard",
+			"mbti": "SF",
+			"effects": {
+				"community": 20,
+				"reason": -10,
+				"echo": 15
+			},
+			"reward": [
+				"attack_up"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "당신은 린의 서류에서 과장된 경력란을 손으로 뜯어내고 원래 지원서로 되돌렸다."
+					}
+				},
+				{
+					"speaker": "lin",
+					"content": {
+						"korean": "순번이 조금 뒤로 밀렸지만 상관없어요. 제 진짜 이름이 적힌 명패가 똑바로 인쇄됐습니다!"
+					}
+				},
+				{
+					"speaker": "mechanic_oh",
+					"content": {
+						"korean": "훌륭한 결단이오! 거짓 잉크를 털어내야 기계도 그 사람의 온전한 형태를 찍어내는 법이지."
+					}
+				}
+			]
+		},
+		{
+			"text": {
+				"korean": "{actor}이(가) 서로를 잊어가는 대기자들의 본래 이름을 일일이 불러주며 기록을 맞춘다."
+			},
+			"path": "lock",
+			"mbti": "NF",
+			"require": {
+				"mbti": "NF"
+			},
+			"effects": {
+				"community": 10,
+				"reason": 10
+			},
+			"reward": [
+				"move_range_up"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "{actor}이(가) 혼란에 빠진 대기자들을 다독이며 흩어진 원본 이력서 조각들을 바르게 맞추었다."
+					}
+				},
+				{
+					"speaker": "mechanic_oh",
+					"content": {
+						"korean": "사람들이 서로의 진짜 이름을 불러주니 출력기 롤러의 과열 경고등이 꺼졌소!"
+					}
+				},
+				{
+					"speaker": "lin",
+					"content": {
+						"korean": "주변 분들이 자기 이름을 되찾고 있어요. {actor} 덕분에 대기실이 안정을 찾았네요."
+					}
+				}
+			]
+		},
+		{
+			"text": {
+				"korean": "수리공에게 100골드를 건네고 뒤섞인 부품함 속에서 린의 원본 명패를 찾는다."
+			},
+			"path": "gold",
+			"mbti": "EN",
+			"require": {
+				"stat": "gold",
+				"op": ">=",
+				"value": 100
+			},
+			"effects": {
+				"echo": 10,
+				"gold": -100,
+				"community": 10
+			},
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "당신은 100골드를 건네고 통 속에 숨겨져 있던 린의 정품 금속 명패를 찾아냈다."
+					}
+				},
+				{
+					"speaker": "lin",
+					"content": {
+						"korean": "선명하게 제 이름이 음각된 명패예요! 돈을 썼지만 제 진짜 이름을 건졌어요."
+					}
+				},
+				{
+					"speaker": "mechanic_oh",
+					"content": {
+						"korean": "정밀하게 조율된 원래 명패요. 거짓 정보에 휩쓸리지 않게 품에 단단히 넣고 가시오."
+					}
+				}
+			],
+			"event": "minigame_cup",
+			"event_intro": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "수리공 오 씨가 뒤섞인 이름표가 든 세 개의 금속 보관함을 책상 위에 엎어놓는다."
+					}
+				},
+				{
+					"speaker": "mechanic_oh",
+					"content": {
+						"korean": "100골드를 냈으니 진짜 린의 원본 명패가 들어간 통을 하나 골라보시오!"
+					}
+				}
+			]
+		}
+	],
+	"_side": {
+		"slot": "D",
+		"person": {
+			"role": "명패 출력기 정비공",
+			"id": "mechanic_oh",
+			"name": "수리공 오 씨"
+		},
+		"wants": "과장된 이력서의 투입을 멈추고 출력기의 이름 뒤섞임 오류를 정상화하는 것",
+		"rule_link": "과장된 허위 이력서가 대량 투입되어 출력기가 폭주하고, 지원자들의 실재가 이름표와 함께 분열한다.",
+		"events": {
+			"gold": "수리공이 흩날린 명패들을 세 개의 금속 통에 숨겨두고 진짜 명패를 찾게 했기 때문"
+		},
+		"flags": {}
+	}
+}

@@ -1,0 +1,122 @@
+{
+	"id": "card_02_tech_novice_fire",
+	"title": {
+		"korean": "불타오르는 단말기"
+	},
+	"intensity": "high",
+	"after_story": 5,
+	"before_story": 7,
+	"callback": {
+		"seed": "terminal_power_easy",
+		"min_rooms_after": 2
+	},
+	"background_tags": [
+		"dark",
+		"smoke",
+		"flash",
+		"ruin",
+		"tense"
+	],
+	"dialogue": [
+		{
+			"speaker": "narrator",
+			"content": {
+				"korean": "쿨링팬이 멈춘 방, 신입 관리자가 불타는 단말기 앞에서 발을 구르고 있다."
+			}
+		},
+		{
+			"speaker": "tech_novice",
+			"content": {
+				"korean": "전원을 뽑았더니 냉각팬까지 꺼져서 불이 났어요! 제발 불 좀 꺼주세요!"
+			}
+		},
+		{
+			"speaker": "lin",
+			"content": {
+				"korean": "무작정 코드를 뽑은 게 화근이었네요. 당장 불길부터 잡아야겠어요."
+			}
+		}
+	],
+	"choices": [
+		{
+			"text": {
+				"korean": "주변의 천을 덮어 급하게 불을 끈다."
+			},
+			"path": "easy",
+			"mbti": "EP",
+			"flag": "smoke_room",
+			"effects": {
+				"gold": 100,
+				"community": -10,
+				"reason": -10
+			},
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "당신은 천을 덮어 불을 껐다. 방 안에 연기가 찼지만 관리자는 동전을 주며 고마워했다."
+					}
+				}
+			]
+		},
+		{
+			"text": {
+				"korean": "화상을 입을 각오로 소화기를 찾아 제대로 화재를 진압한다."
+			},
+			"path": "hard",
+			"mbti": "SJ",
+			"flag": "extinguisher_ready",
+			"effects": {
+				"community": 10,
+				"reason": 20
+			},
+			"reward": [
+				"hp_down"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "당신은 불길에 다가가 소화기를 뿌렸다. 손을 조금 데었지만 불은 확실히 꺼졌다."
+					}
+				}
+			]
+		}
+	],
+	"kind": "callback",
+	"_side": {
+		"slot": "C",
+		"person": {
+			"id": "tech_novice",
+			"name": "신입 관리자",
+			"role": "어쩔 줄 몰라하며 의지하는 존댓말"
+		},
+		"wants": "",
+		"rule_link": "",
+		"events": {},
+		"flags": {
+			"smoke_room": {
+				"boss_penalty": -1,
+				"label": {
+					"korean": "자욱한 연기"
+				},
+				"boss_line": {
+					"korean": "방 안에 매캐한 연기가 가득 차 시야를 가린다."
+				},
+				"kind": "bad"
+			},
+			"extinguisher_ready": {
+				"boss_penalty": 1,
+				"label": {
+					"korean": "소화기 확보"
+				},
+				"boss_choice": {
+					"korean": "확보한 소화기를 분사해 시야를 차단한다."
+				},
+				"kind": "good"
+			}
+		}
+	}
+}

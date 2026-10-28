@@ -1,0 +1,225 @@
+{
+	"id": "card_02_seeker_fake_resume",
+	"kind": "rep",
+	"title": {
+		"korean": "초조한 구직자의 거래"
+	},
+	"intensity": "calm",
+	"after_story": 1,
+	"before_story": 3,
+	"condition": {
+		"leaning": "fighting-",
+		"among": [
+			"fighting-",
+			"fighting+",
+			"community-",
+			"community+",
+			"reason-",
+			"reason+"
+		],
+		"min": 20
+	},
+	"urgency": 8,
+	"leaning": "fighting-",
+	"background_tags": [
+		"search_room",
+		"daylight",
+		"fluorescent",
+		"crowded",
+		"tense"
+	],
+	"dialogue": [
+		{
+			"speaker": "narrator",
+			"content": {
+				"korean": "공용 검색 단말기 화면에 다가가자, 옆에 서 있던 지원자가 어깨를 잡아챈다."
+			}
+		},
+		{
+			"speaker": "seeker",
+			"content": {
+				"korean": "당신이 방해되는 녀석들을 주먹으로 때려눕혔다는 그 무서운 지원자죠?"
+			}
+		},
+		{
+			"speaker": "seeker",
+			"content": {
+				"korean": "제 허위 이력서부터 단말기에 넣게 해 주면 100골드를 주겠소!"
+			}
+		},
+		{
+			"speaker": "nia",
+			"content": {
+				"korean": "이 사람은 자기 가짜 경력을 먼저 덮어씌우려고 순서를 빼앗는 거예요!"
+			}
+		},
+		{
+			"speaker": "seeker",
+			"content": {
+				"korean": "시끄러워! 내 경력증명서가 입력되지 않으면 난 오늘 여기서 끝장이야!"
+			}
+		}
+	],
+	"choices": [
+		{
+			"text": {
+				"korean": "구직자의 뇌물을 받고 허위 경력 데이터를 단말기 임시 폴더에 넣어 준다."
+			},
+			"path": "easy",
+			"mbti": "ET",
+			"flag": "seeker_fake_data",
+			"effects": {
+				"gold": 100,
+				"echo": -10,
+				"fighting": -20
+			},
+			"reward": [
+				"attack_up"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "당신은 지원자의 뇌물을 주머니에 넣고 허위 경력 데이터를 입력했다."
+					}
+				},
+				{
+					"speaker": "seeker",
+					"content": {
+						"korean": "고맙습니다! 이 경력만 올라가면 전 바로 최종 면접 통과입니다!"
+					}
+				},
+				{
+					"speaker": "nia",
+					"content": {
+						"korean": "남의 거짓 서류를 먼저 넣어주다니, 나중에 문제가 생기면 어쩌려고 그래요?"
+					}
+				}
+			]
+		},
+		{
+			"text": {
+				"korean": "구직자의 손을 내치고 허위 이력서 파일이 든 저장 장치를 바닥에 던진다."
+			},
+			"path": "hard",
+			"mbti": "NF",
+			"flag": "seeker_usb_destroyed",
+			"effects": {
+				"fighting": 20,
+				"community": 10,
+				"echo": 10
+			},
+			"reward": [
+				"shield"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "당신은 지원자의 손을 쳐내고 허위 데이터가 든 저장 장치를 내던졌다."
+					}
+				},
+				{
+					"speaker": "seeker",
+					"content": {
+						"korean": "내 10년 치 가짜 경력이! 감히 내 기회를 짓밟다니 두고 보자!"
+					}
+				},
+				{
+					"speaker": "nia",
+					"content": {
+						"korean": "잘하셨어요! 순서를 새치기해서 거짓 정보를 넣게 둘 수는 없죠."
+					}
+				}
+			]
+		},
+		{
+			"text": {
+				"korean": "살벌한 눈빛으로 구직자를 위협해 허위 서류를 스스로 찢게 만든다."
+			},
+			"path": "stat",
+			"mbti": "EJ",
+			"require": {
+				"stat": "fighting",
+				"op": "<=",
+				"value": -40
+			},
+			"flag": "seeker_cowered",
+			"effects": {
+				"fighting": -20,
+				"echo": 5,
+				"reason": 10
+			},
+			"reward": [
+				"intelligence_up"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "당신이 차가운 눈빛으로 노려보자 지원자는 떨리는 손으로 서류를 찢었다."
+					}
+				},
+				{
+					"speaker": "seeker",
+					"content": {
+						"korean": "히익, 찢을게요! 찢으면 되잖아요! 제발 때리지 마세요!"
+					}
+				},
+				{
+					"speaker": "nia",
+					"content": {
+						"korean": "소문대로 엄청난 기세네요. 덕분에 단말기 앞이 금방 조용해졌어요."
+					}
+				}
+			]
+		}
+	],
+	"_side": {
+		"slot": "A",
+		"person": {
+			"id": "seeker",
+			"role": "지원자",
+			"name": "초조한 구직자"
+		},
+		"wants": "자신의 허위 경력이 담긴 저장 장치를 공용 단말기에 먼저 입력해 이력서를 조작하려 한다.",
+		"rule_link": "공용 단말기에서 린의 이름 정리를 시작하기 전, 구직자가 허위 경력 데이터를 입력해달라며 거래를 제안한다.",
+		"rep": "fighting-",
+		"events": {},
+		"flags": {
+			"seeker_fake_data": {
+				"kind": "bad",
+				"boss_penalty": -1,
+				"label": {
+					"korean": "허위 데이터 등록"
+				},
+				"boss_line": {
+					"korean": "면접실 단말기 감시 시스템이 작동하여 당신의 이력서 열람이 10초간 제한된다."
+				}
+			},
+			"seeker_usb_destroyed": {
+				"kind": "good",
+				"boss_penalty": 1,
+				"label": {
+					"korean": "조작 데이터 파괴"
+				},
+				"boss_choice": {
+					"korean": "단말기 조작을 방지한 공로로 면접관이 보안 인증 혜택을 제공한다."
+				}
+			},
+			"seeker_cowered": {
+				"kind": "good",
+				"boss_penalty": 2,
+				"label": {
+					"korean": "지원자 제압"
+				},
+				"boss_choice": {
+					"korean": "위압당한 지원자가 면접장에서 당신의 지시를 순순히 따라 행동한다."
+				}
+			}
+		}
+	}
+}

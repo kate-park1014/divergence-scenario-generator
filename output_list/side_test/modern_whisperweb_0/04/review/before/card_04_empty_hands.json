@@ -1,0 +1,206 @@
+{
+	"id": "card_04_empty_hands",
+	"kind": "rep",
+	"title": {
+		"korean": "손 내미는 사람"
+	},
+	"intensity": "calm",
+	"after_story": 3,
+	"before_story": 5,
+	"condition": {
+		"leaning": "fighting+",
+		"among": [
+			"fighting-",
+			"fighting+",
+			"community-",
+			"community+",
+			"reason-",
+			"reason+"
+		],
+		"min": 20
+	},
+	"urgency": 8,
+	"leaning": "fighting+",
+	"background_tags": [
+		"data_waste_yard",
+		"late_shift",
+		"dusty",
+		"heated",
+		"dutiful"
+	],
+	"dialogue": [
+		{
+			"speaker": "mira",
+			"content": {
+				"korean": "기계를 맨손으로 끊었다더니, 사람도 그렇게 끌어올린다면서요? 저기 좀 봐 주세요."
+			}
+		},
+		{
+			"speaker": "dax",
+			"content": {
+				"korean": "저 사람 발목이 부품 더미에 깔렸네요. 나도 좀 도와야 하나?"
+			}
+		},
+		{
+			"speaker": "mira",
+			"content": {
+				"korean": "구조 요원인데 정작 제 동료를 못 꺼내고 있어요. 손이 하나 모자라요."
+			}
+		},
+		{
+			"speaker": "narrator",
+			"content": {
+				"korean": "부품 더미 아래에서 작업화 한 짝이 허우적거리고 있었다."
+			}
+		}
+	],
+	"choices": [
+		{
+			"text": {
+				"korean": "부품 더미를 들어 올려 깔린 동료를 꺼내 준다"
+			},
+			"path": "easy",
+			"mbti": "FJ",
+			"flag": "mira_stretcher",
+			"effects": {
+				"community": 20,
+				"echo": 10
+			},
+			"reward": [
+				"heal"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "mira",
+					"content": {
+						"korean": "됐어요! 정말 됐어요!"
+					}
+				},
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "동료가 기침하며 더미 밖으로 기어 나왔다. 그 밑에서 금 간 스크린 조각이 드러났다."
+					}
+				},
+				{
+					"speaker": "dax",
+					"content": {
+						"korean": "사람부터 꺼내는 거, 역시 소문이 틀리지 않았네요."
+					}
+				}
+			]
+		},
+		{
+			"text": {
+				"korean": "미라에게 부품 더미 옆 고정 핀 위치만 알려주고 손을 뗀다"
+			},
+			"path": "hard",
+			"mbti": "TP",
+			"flag": "mira_stretcher_b2",
+			"effects": {
+				"community": -15,
+				"reason": 10
+			},
+			"reward": [
+				"intelligence_up"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "mira",
+					"content": {
+						"korean": "…핀을 뽑으라고요? 그렇게는 안 해요, 사람이 다쳐요."
+					}
+				},
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "미라가 혼자 더미를 밀어내다 지쳐 앉았다. 동료는 그제야 빠져나왔다."
+					}
+				},
+				{
+					"speaker": "dax",
+					"content": {
+						"korean": "도울 땐 확실히 돕지, 반만 돕는 건 더 나빠요."
+					}
+				}
+			]
+		},
+		{
+			"text": {
+				"korean": "당신을 돕겠다는 처리장 사람들을 불러 동료를 함께 꺼낸다"
+			},
+			"path": "stat",
+			"mbti": "EF",
+			"require": {
+				"stat": "fighting",
+				"op": ">=",
+				"value": 40
+			},
+			"flag": "mira_stretcher_b2",
+			"effects": {
+				"community": 25,
+				"fighting": 10
+			},
+			"reward": [
+				"shield"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "mira",
+					"content": {
+						"korean": "당신 이름 걸고 부탁하니 다들 달려오네요. 무서운 사람이에요."
+					}
+				},
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "여섯 명이 더미를 들어 올리자 동료가 곧바로 끌려 나왔다."
+					}
+				},
+				{
+					"speaker": "dax",
+					"content": {
+						"korean": "이름 하나로 사람이 이렇게 모이다니, 나도 좀 써 볼까요?"
+					}
+				}
+			]
+		}
+	],
+	"_side": {
+		"slot": "B",
+		"person": {
+			"id": "mira",
+			"name": "미라",
+			"role": "처리장 응급 구조 요원"
+		},
+		"wants": "부품을 나르다 넘어진 동료를 일으켜 달라며, 당신이 사람을 돕는다는 소문을 믿고 찾아온다.",
+		"rule_link": "분해 직후 쏟아진 데이터 부품 더미에 동료가 깔려 있다 — 그 부품을 옮기면 스크린 조각이 드러난다.",
+		"rep": "fighting+",
+		"events": {},
+		"flags": {
+			"mira_stretcher": {
+				"kind": "bad",
+				"boss_penalty": -1,
+				"label": {
+					"korean": "구조대"
+				},
+				"boss_line": {
+					"korean": "미라가 들것을 끌고 와 부상한 동료를 옮기며 길을 비켜 준다."
+				}
+			},
+			"mira_stretcher_b2": {
+				"kind": "good",
+				"boss_penalty": 2,
+				"label": {
+					"korean": "구조대"
+				},
+				"boss_choice": {
+					"korean": "미라가 들것을 끌고 와 부상한 동료를 옮기며 길을 비켜 준다."
+				}
+			}
+		}
+	}
+}

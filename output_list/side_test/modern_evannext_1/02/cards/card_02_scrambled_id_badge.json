@@ -1,0 +1,213 @@
+{
+	"id": "card_02_scrambled_id_badge",
+	"kind": "normal",
+	"title": {
+		"korean": "뒤섞이는 출입 명찰"
+	},
+	"intensity": "calm",
+	"after_story": 5,
+	"before_story": 7,
+	"background_tags": [
+		"terminal_room",
+		"scattered_badges",
+		"flickering_monitors",
+		"anxious_clerk",
+		"sorting_desk"
+	],
+	"dialogue": [
+		{
+			"speaker": "narrator",
+			"content": {
+				"korean": "단말기 담당자가 수거 상자에 담긴 명찰들을 헤집으며 진땀을 흘리고 있다."
+			}
+		},
+		{
+			"speaker": "clerk",
+			"content": {
+				"korean": "단말기 모니터가 일그러지더니 명찰 상자 속 글자들까지 엉뚱하게 바뀌고 있어요!"
+			}
+		},
+		{
+			"speaker": "nia",
+			"content": {
+				"korean": "출입 명찰의 철자가 달라지면 검색실 밖으로 나갈 때 신원 불일치 판정을 받게 될 거예요."
+			}
+		}
+	],
+	"choices": [
+		{
+			"text": {
+				"korean": "표기가 뒤엉킨 명찰 중 글자가 가장 덜 뭉개진 명찰을 먼저 챙긴다."
+			},
+			"path": "easy",
+			"mbti": "IT",
+			"effects": {
+				"echo": -5,
+				"gold": 60,
+				"reason": -10
+			},
+			"reward": [
+				"move_range_up"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "수거함 구석에서 글자가 그나마 또렷하게 남아 있는 출입 명찰을 챙겼다."
+					}
+				},
+				{
+					"speaker": "clerk",
+					"content": {
+						"korean": "아, 그건 옆 지원자 것 같은데… 일단 그거라도 갖고 계세요."
+					}
+				},
+				{
+					"speaker": "nia",
+					"content": {
+						"korean": "남의 명찰을 가져왔지만, 지금은 이거라도 없으면 이동하기 어려워요."
+					}
+				}
+			]
+		},
+		{
+			"text": {
+				"korean": "담당자와 함께 뒤섞인 명찰들의 칩 코드를 대조해 본래 이름을 다듬는다."
+			},
+			"path": "hard",
+			"mbti": "SF",
+			"effects": {
+				"community": 15,
+				"echo": 10,
+				"reason": 15
+			},
+			"reward": [
+				"intelligence_up"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "담당자와 함께 명찰의 뒷면 칩셋 번호를 대조하며 뒤섞인 철자를 정돈했다."
+					}
+				},
+				{
+					"speaker": "clerk",
+					"content": {
+						"korean": "칩셋 번호로 이름을 맞추니 엉킨 명단이 조금씩 되돌아오는군요!"
+					}
+				},
+				{
+					"speaker": "nia",
+					"content": {
+						"korean": "하나씩 바르게 교정해 나가면 이름이 전부 지워지는 건 막을 수 있을 거예요."
+					}
+				}
+			]
+		},
+		{
+			"text": {
+				"korean": "{actor}이(가) 단말기 분류 법칙을 파악해 정돈된 명찰 상자 하나를 정확히 골라낸다."
+			},
+			"path": "lock",
+			"mbti": "TJ",
+			"require": {
+				"mbti": "TJ"
+			},
+			"effects": {
+				"community": 10,
+				"echo": 10,
+				"reason": 10
+			},
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "{actor}이(가) 단말기 분류 법칙을 파악해 정돈된 명찰 상자 하나를 가리켰다."
+					}
+				},
+				{
+					"speaker": "clerk",
+					"content": {
+						"korean": "이 상자 안에 든 명찰들만 이름 철자가 무사히 유지되어 있네요!"
+					}
+				},
+				{
+					"speaker": "nia",
+					"content": {
+						"korean": "정확한 규칙을 찾아낸 덕분에 혼란을 크게 줄였어요."
+					}
+				}
+			],
+			"event": "minigame_cup",
+			"event_intro": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "{actor}이(가) 똑같이 생긴 3개의 명찰 수거 상자를 검색대 위에 올려놓았다."
+					}
+				},
+				{
+					"speaker": "clerk",
+					"content": {
+						"korean": "{actor} 님, 이 중 단 하나에만 칩셋 데이터가 일그러지지 않은 명찰이 들어 있습니다!"
+					}
+				}
+			]
+		},
+		{
+			"text": {
+				"korean": "이름이 엉망으로 인쇄된 명찰을 가슴에 달고 모른 척 지나간다."
+			},
+			"path": "fun",
+			"mbti": "EP",
+			"effects": {
+				"fighting": 20,
+				"gold": 120,
+				"reason": -20,
+				"echo": -10
+			},
+			"reward": [
+				"attack_up"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "철자가 기호로 뭉개진 명찰을 가슴에 달고 능청스럽게 단말기 앞을 지나쳤다."
+					}
+				},
+				{
+					"speaker": "clerk",
+					"content": {
+						"korean": "자기 이름도 못 읽는 명찰을 달고 어디로 가시는 겁니까?"
+					}
+				},
+				{
+					"speaker": "nia",
+					"content": {
+						"korean": "이름이 이상하게 출력됐는데 당당히 행동하니까 오히려 직원이 당황하네요."
+					}
+				}
+			]
+		}
+	],
+	"_side": {
+		"slot": "C",
+		"person": {
+			"id": "clerk",
+			"name": "단말기 담당자",
+			"role": "정보 검색실의 출입증 및 출력 명단을 관리하는 직원"
+		},
+		"wants": "단말기 오류로 수거 상자 안 출입 명찰의 이름들이 섞이자 본래 주인을 찾아내기",
+		"rule_link": "과장된 이력서 정보가 전산망에 누적되며 물리적인 출입 명찰의 텍스트 표기까지 흐트러지고 있다.",
+		"events": {
+			"lock": "뒤섞인 상자들 중에서 올바른 칩셋 코드가 담긴 명찰 상자를 가려내야 한다."
+		},
+		"flags": {}
+	}
+}

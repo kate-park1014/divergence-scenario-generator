@@ -1,0 +1,152 @@
+{
+	"id": "card_01_hayeon_portfolio",
+	"kind": "plant",
+	"title": {
+		"korean": "네 번째 지원자의 청탁"
+	},
+	"intensity": "calm",
+	"after_story": 1,
+	"before_story": 3,
+	"background_tags": [
+		"waiting_hall",
+		"fluorescent_light",
+		"crowd",
+		"reception_desk",
+		"tense"
+	],
+	"dialogue": [
+		{
+			"speaker": "narrator",
+			"content": {
+				"korean": "손톱을 물어뜯던 대기자가 주인공에게 다가와 낡은 포트폴리오를 내민다."
+			}
+		},
+		{
+			"speaker": "hayeon",
+			"content": {
+				"korean": "네 번째 면접이에요. 한 줄만 그럴듯하게 채워 접수대에 올려주시면 안 될까요?"
+			}
+		},
+		{
+			"speaker": "lin",
+			"content": {
+				"korean": "저도 번호표를 못 받아 막막하지만, 남의 서류에 손을 대는 건 위험해요."
+			}
+		},
+		{
+			"speaker": "hayeon",
+			"content": {
+				"korean": "당장 순번만 오르면 접수대 뒤편 상황을 전부 알려드릴게요! 제발요!"
+			}
+		}
+	],
+	"choices": [
+		{
+			"text": {
+				"korean": "하연의 서류에 대형 기획사 무대 경력을 덧써서 접수함에 넣는다."
+			},
+			"path": "easy",
+			"mbti": "EN",
+			"effects": {
+				"reason": -20,
+				"community": -15,
+				"echo": 10,
+				"gold": 60
+			},
+			"reward": [
+				"intelligence_up"
+			],
+			"seed": "hayeon_portfolio_easy",
+			"result": [
+				{
+					"speaker": "hayeon",
+					"content": {
+						"korean": "접수대 아래 서류함에 이전 합격자 명부 사본이 놓여 있어요. 제가 본 건 이게 다예요!"
+					}
+				},
+				{
+					"speaker": "lin",
+					"content": {
+						"korean": "저분 순번이 14번이나 껑충 뛰었어요. 우리 차례도 곧 올까요?"
+					}
+				}
+			]
+		},
+		{
+			"text": {
+				"korean": "하연의 손을 밀어내며 서류 원본 그대로 내라고 돌려준다."
+			},
+			"path": "hard",
+			"mbti": "ST",
+			"effects": {
+				"echo": -10,
+				"reason": 20,
+				"community": 10
+			},
+			"reward": [
+				"defense_up"
+			],
+			"seed": "hayeon_portfolio_hard",
+			"result": [
+				{
+					"speaker": "hayeon",
+					"content": {
+						"korean": "세 번이나 떨어진 서류를 그대로 내라고요? 당신 말 믿었다가 또 탈락하겠네."
+					}
+				},
+				{
+					"speaker": "lin",
+					"content": {
+						"korean": "실망한 모양이지만 어쩌겠어요. 아직 제 지원서도 손도 못 댔는걸요."
+					}
+				}
+			]
+		},
+		{
+			"text": {
+				"korean": "{actor}이(가) 규정집 서식을 따져 하연의 경력을 재분류해 넘겨준다."
+			},
+			"path": "lock",
+			"mbti": "TJ",
+			"require": {
+				"mbti": "TJ"
+			},
+			"effects": {
+				"echo": 5,
+				"gold": 40,
+				"reason": -10,
+				"community": -10
+			},
+			"reward": [
+				"attack_up"
+			],
+			"seed": "hayeon_portfolio_hard",
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "{actor}이(가) 규정집 빈틈을 지적하며 하연의 연습생 기간을 실전 경력으로 정리해 제출했다."
+					}
+				},
+				{
+					"speaker": "hayeon",
+					"content": {
+						"korean": "이 정도면 정식 경력으로 인정되겠어요! 접수대 담당자가 3번 창구 쪽을 자주 비운다는 걸 알려드릴게요."
+					}
+				}
+			]
+		}
+	],
+	"_side": {
+		"slot": "A",
+		"person": {
+			"id": "hayeon",
+			"name": "하연",
+			"role": "4회차 면접 대기자"
+		},
+		"wants": "순번을 즉시 앞당겨 이번 면접 번호표를 받는 것",
+		"rule_link": "이력서의 경력 항목을 덧쓰면 접수 순번이 즉시 상승한다.",
+		"events": {},
+		"flags": {}
+	}
+}

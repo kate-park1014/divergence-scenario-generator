@@ -1,0 +1,221 @@
+{
+	"id": "card_02_shocked_technician",
+	"title": {
+		"korean": "감전 위기의 기술자"
+	},
+	"intensity": "calm",
+	"after_story": 7,
+	"before_story": 10,
+	"condition": {
+		"leaning": "community-",
+		"among": [
+			"fighting-",
+			"fighting+",
+			"community-",
+			"community+",
+			"reason-",
+			"reason+"
+		],
+		"min": 20
+	},
+	"urgency": 8,
+	"leaning": "community-",
+	"background_tags": [
+		"server_room",
+		"sparks",
+		"melted_wires",
+		"dim_light",
+		"tense"
+	],
+	"dialogue": [
+		{
+			"speaker": "narrator",
+			"content": {
+				"korean": "과열로 녹아내린 배선에 얽힌 사설 기술자가 감전될 위기에 처해 있었다."
+			}
+		},
+		{
+			"speaker": "jacques",
+			"content": {
+				"korean": "자기가 챙길 것만 쏙 빼먹고 빠진다는 게 당신이지? 나 좀 살려줘!"
+			}
+		},
+		{
+			"speaker": "narrator",
+			"content": {
+				"korean": "그는 온몸이 굳어가는 와중에도 주머니의 크레딧 칩을 만지작거렸다."
+			}
+		},
+		{
+			"speaker": "lin",
+			"content": {
+				"korean": "저러다 정말 큰일 나겠어요! 배선을 끊어줘야 해요!"
+			}
+		}
+	],
+	"choices": [
+		{
+			"text": {
+				"korean": "기술자의 가방에서 크레딧만 챙기고 무시한다."
+			},
+			"path": "easy",
+			"mbti": "TP",
+			"flag": "stolen_credits_heavy",
+			"effects": {
+				"gold": 150,
+				"echo": -10,
+				"community": -20
+			},
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "당신은 가방에서 크레딧만 챙기고 돌아섰다. 자크의 비명 소리가 뒤에서 들렸다."
+					}
+				},
+				{
+					"speaker": "lin",
+					"content": {
+						"korean": "어떻게 그럴 수가 있어요! 저 사람은 어쩌고요!"
+					}
+				}
+			]
+		},
+		{
+			"text": {
+				"korean": "감전 위험을 무릅쓰고 배선을 끊어 기술자를 돕는다."
+			},
+			"path": "hard",
+			"mbti": "FJ",
+			"flag": "cut_wires",
+			"effects": {
+				"echo": 10,
+				"community": 20
+			},
+			"reward": [
+				"shield"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "당신은 찌릿한 전류를 참아내며 엉킨 배선을 전부 끊어버렸다."
+					}
+				},
+				{
+					"speaker": "jacques",
+					"content": {
+						"korean": "휴, 살았다. 내 돈은 안 건드려서 다행이네."
+					}
+				}
+			]
+		},
+		{
+			"text": {
+				"korean": "기술자에게 구조 비용을 선불로 결제하라고 요구한다."
+			},
+			"path": "stat",
+			"mbti": "TJ",
+			"require": {
+				"stat": "community",
+				"op": "<=",
+				"value": -40
+			},
+			"flag": "advance_payment",
+			"effects": {
+				"echo": -5,
+				"gold": 100,
+				"community": -30
+			},
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "당신이 손을 내밀자 자크는 투덜거리며 크레딧을 넘겨주었다."
+					}
+				},
+				{
+					"speaker": "jacques",
+					"content": {
+						"korean": "진짜 피도 눈물도 없는 인간이네! 자, 여기 결제!"
+					}
+				}
+			]
+		},
+		{
+			"text": {
+				"korean": "기술자의 공구함에서 절연 장갑만 훔쳐 끼고 지나간다."
+			},
+			"path": "fun",
+			"mbti": "EP",
+			"effects": {
+				"echo": 5,
+				"gold": 50,
+				"reason": 10
+			},
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "당신은 공구함에서 절연 장갑만 챙겨 손에 끼고 유유히 지나갔다."
+					}
+				},
+				{
+					"speaker": "jacques",
+					"content": {
+						"korean": "야! 그거 내 장갑인데 어딜 가져가!"
+					}
+				}
+			]
+		}
+	],
+	"kind": "rep",
+	"_side": {
+		"slot": "D",
+		"person": {
+			"id": "jacques",
+			"name": "자크",
+			"role": "사설 기술자"
+		},
+		"wants": "",
+		"rule_link": "",
+		"rep": "community-",
+		"events": {},
+		"flags": {
+			"stolen_credits_heavy": {
+				"boss_penalty": -1,
+				"label": {
+					"korean": "무거운 주머니"
+				},
+				"boss_line": {
+					"korean": "주머니에 훔친 크레딧이 가득해 움직임이 둔해진다."
+				},
+				"kind": "bad"
+			},
+			"cut_wires": {
+				"boss_penalty": 1,
+				"label": {
+					"korean": "끊어낸 배선"
+				},
+				"boss_choice": {
+					"korean": "끊어둔 배선을 이용해 경비원의 발을 묶는다."
+				},
+				"kind": "good"
+			},
+			"advance_payment": {
+				"boss_penalty": 2,
+				"label": {
+					"korean": "선불 결제"
+				},
+				"boss_choice": {
+					"korean": "기술자에게 받은 수리 도구로 경비원의 무기를 고장낸다."
+				},
+				"kind": "good"
+			}
+		}
+	}
+}

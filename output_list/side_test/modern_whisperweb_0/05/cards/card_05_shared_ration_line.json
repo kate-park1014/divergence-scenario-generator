@@ -1,0 +1,223 @@
+{
+	"id": "card_05_shared_ration_line",
+	"kind": "rep",
+	"title": {
+		"korean": "나눠야 하는 배터리"
+	},
+	"intensity": "calm",
+	"after_story": 3,
+	"before_story": 5,
+	"condition": {
+		"leaning": "community+",
+		"among": [
+			"fighting-",
+			"fighting+",
+			"community-",
+			"community+",
+			"reason-",
+			"reason+"
+		],
+		"min": 20
+	},
+	"urgency": 8,
+	"leaning": "community+",
+	"background_tags": [
+		"control_room",
+		"queue",
+		"flashlights",
+		"cold_floor",
+		"quiet"
+	],
+	"dialogue": [
+		{
+			"speaker": "narrator",
+			"content": {
+				"korean": "교대 반장이 배터리 하나를 손바닥에 올리고 줄 선 사람들을 돌아봤다."
+			}
+		},
+		{
+			"speaker": "shift_lead",
+			"content": {
+				"korean": "당신이죠? 굶는 사람 몫을 자기 배급에서 떼어 준 사람. 그 얘기 다 들었어요."
+			}
+		},
+		{
+			"speaker": "shift_lead",
+			"content": {
+				"korean": "이 배터리 하나면 여기 열두 명이 라디오를 켤 수 있어요. 조각 맞추는 건 그다음이죠."
+			}
+		},
+		{
+			"speaker": "echo",
+			"content": {
+				"korean": "근데 그 배터리, 단말기에 물리면 내 정보망 복구에 딱 맞는 전력인데."
+			}
+		},
+		{
+			"speaker": "narrator",
+			"content": {
+				"korean": "줄 선 사람들의 손전등이 하나둘 꺼지고, 단말기 조각은 어두워진 채 홈에서 흔들렸다."
+			}
+		}
+	],
+	"choices": [
+		{
+			"text": {
+				"korean": "반장에게 배터리를 넘겨 열두 명에게 나눠 주게 한다"
+			},
+			"path": "easy",
+			"mbti": "FJ",
+			"flag": "rationed_power",
+			"effects": {
+				"community": 25,
+				"reason": -10,
+				"echo": -5
+			},
+			"reward": [
+				"heal"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "배터리가 돌자 줄 선 사람들의 손전등이 하나씩 켜졌다."
+					}
+				},
+				{
+					"speaker": "shift_lead",
+					"content": {
+						"korean": "고마워요. 이 사람들 오늘 밤은 견딜 거예요. 조각은 내일 다시 보죠."
+					}
+				},
+				{
+					"speaker": "echo",
+					"content": {
+						"korean": "사람들은 좋아하는데, 내 정보망은 또 어두워졌어. 내 몫은 언제 오는 거야."
+					}
+				}
+			]
+		},
+		{
+			"text": {
+				"korean": "반장에게 배터리를 단말기에 물리겠다고 말하고, 대신 손전등을 나눠 준다"
+			},
+			"path": "hard",
+			"mbti": "TJ",
+			"flag": "loaned_flashlights",
+			"effects": {
+				"community": -15,
+				"reason": 20
+			},
+			"reward": [
+				"intelligence_up"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "배터리가 단말기에 물리자 조각 홈이 밝아졌고, 당신은 손전등을 줄에 하나씩 돌렸다."
+					}
+				},
+				{
+					"speaker": "shift_lead",
+					"content": {
+						"korean": "손전등으로 버티라고요? …좋아요. 대신 내일 아침에 배터리 반납이에요."
+					}
+				},
+				{
+					"speaker": "echo",
+					"content": {
+						"korean": "정보망이 돌아왔어! 잠깐이지만 아주 선명했어. 이게 그 배터리 힘이야?"
+					}
+				}
+			]
+		},
+		{
+			"text": {
+				"korean": "반장에게 배터리를 맡기고 줄 선 사람들에게 순서를 정해 주게 한다"
+			},
+			"path": "stat",
+			"mbti": "EJ",
+			"require": {
+				"stat": "community",
+				"op": ">=",
+				"value": 40
+			},
+			"flag": "ordered_line",
+			"effects": {
+				"community": 20,
+				"fighting": 10
+			},
+			"reward": [
+				"shield"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "당신이 줄 앞에 서자, 사람들이 조용히 순서를 지켜 서로의 등을 밝혔다."
+					}
+				},
+				{
+					"speaker": "shift_lead",
+					"content": {
+						"korean": "당신이 서 있으면 다들 말을 들어요. 그럼 배터리는 제가 맡을게요. 조각은 당신 몫으로 남겨 두죠."
+					}
+				},
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "배터리는 반장 품에, 조각 홈은 당신 손끝에 남았다. 줄은 한 명씩 앞으로 나아갔다."
+					}
+				}
+			]
+		}
+	],
+	"_side": {
+		"slot": "B",
+		"person": {
+			"id": "shift_lead",
+			"name": "교대 반장",
+			"role": "제어실 교대 반장"
+		},
+		"wants": "남은 예비 배터리가 하나뿐이라며, 조각 맞추기를 미루고 전원을 모두에게 고르게 나눠 주자고 한다.",
+		"rule_link": "스크린 조각을 맞추려면 배터리 하나를 통째로 단말기에 물려야 하는데, 반장은 그 배터리를 사람들에게 나누려 한다.",
+		"rep": "community+",
+		"events": {},
+		"flags": {
+			"rationed_power": {
+				"kind": "bad",
+				"boss_penalty": -1,
+				"label": {
+					"korean": "나눈 전력"
+				},
+				"boss_line": {
+					"korean": "단말기 전력이 모자라 조각 홈이 어둡게 꺼져 있고, 당신의 손전등만 남아 있다."
+				}
+			},
+			"loaned_flashlights": {
+				"kind": "good",
+				"boss_penalty": 1,
+				"label": {
+					"korean": "빌려준 손전등"
+				},
+				"boss_choice": {
+					"korean": "당신은 반장이 돌려준 배터리를 단말기에 물리고 조각을 맞춘다."
+				}
+			},
+			"ordered_line": {
+				"kind": "good",
+				"boss_penalty": 2,
+				"label": {
+					"korean": "정돈된 줄"
+				},
+				"boss_choice": {
+					"korean": "당신은 반장이 남겨 준 배터리로 단말기를 켜고 스크린 조각을 맞춘다."
+				}
+			}
+		}
+	}
+}

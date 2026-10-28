@@ -1,0 +1,262 @@
+{
+	"id": "card_03_seal_procedure",
+	"kind": "rep",
+	"title": {
+		"korean": "봉인 절차서"
+	},
+	"intensity": "calm",
+	"after_story": 1,
+	"before_story": 3,
+	"condition": {
+		"leaning": "reason-",
+		"among": [
+			"fighting-",
+			"fighting+",
+			"community-",
+			"community+",
+			"reason-",
+			"reason+"
+		],
+		"min": 20
+	},
+	"urgency": 8,
+	"leaning": "reason-",
+	"background_tags": [
+		"pipe_room",
+		"afternoon",
+		"cold_lamp",
+		"one_worker",
+		"formal"
+	],
+	"dialogue": [
+		{
+			"speaker": "seal_inspector",
+			"content": {
+				"korean": "당신이죠, 절차서 없으면 손도 안 댄다는 사람."
+			}
+		},
+		{
+			"speaker": "narrator",
+			"content": {
+				"korean": "그는 봉인 테이프에 붙은 번호표를 손끝으로 하나하나 짚었다."
+			}
+		},
+		{
+			"speaker": "seal_inspector",
+			"content": {
+				"korean": "번호가 하나 어긋났어요. 누가 만졌는지 지금 적어야 해요."
+			}
+		},
+		{
+			"speaker": "kai",
+			"content": {
+				"korean": "번호표 끝이 살짝 들려 있어요. 누가 떼었다 붙인 것 같은데."
+			}
+		},
+		{
+			"speaker": "seal_inspector",
+			"content": {
+				"korean": "기록은 정확해야 해요. 서두르지 마요."
+			}
+		}
+	],
+	"choices": [
+		{
+			"text": {
+				"korean": "절차서대로 봉인 번호를 대조하고 어긋난 곳을 기록에 남긴다"
+			},
+			"path": "easy",
+			"mbti": "TJ",
+			"flag": "seal_log",
+			"effects": {
+				"reason": 20,
+				"echo": 5
+			},
+			"reward": [
+				"defense_up"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "절차서 여백에 번호와 시각이 또박또박 적혔다."
+					}
+				},
+				{
+					"speaker": "seal_inspector",
+					"content": {
+						"korean": "이 정도면 통과예요. 대신 이 기록은 제가 가져갑니다."
+					}
+				},
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "그는 절차서를 가슴에 끼고 밸브 옆에 섰다."
+					}
+				}
+			]
+		},
+		{
+			"text": {
+				"korean": "번호표를 떼어 원래 자리에 다시 붙이고 검사관에게 알린다"
+			},
+			"path": "hard",
+			"mbti": "FP",
+			"flag": "restuck_seal",
+			"effects": {
+				"reason": -15,
+				"community": 15
+			},
+			"reward": [
+				"shield"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "seal_inspector",
+					"content": {
+						"korean": "스스로 신고했으니 이번엔 넘어가죠. 다음엔 없어요."
+					}
+				},
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "그는 번호표를 다시 붙이고 수첩에 짧게 적었다."
+					}
+				},
+				{
+					"speaker": "kai",
+					"content": {
+						"korean": "번호가 맞으니 나중에 대조할 때 편하겠네요."
+					}
+				}
+			]
+		},
+		{
+			"text": {
+				"korean": "검사관에게 절차서 사본을 받아 밸브 옆에 붙여 둔다"
+			},
+			"path": "stat",
+			"mbti": "TP",
+			"require": {
+				"stat": "reason",
+				"op": "<=",
+				"value": -40
+			},
+			"flag": "posted_copy",
+			"effects": {
+				"reason": -25,
+				"echo": 5
+			},
+			"reward": [
+				"intelligence_up"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "seal_inspector",
+					"content": {
+						"korean": "당신 이름이 걸린 기록이라면야. 사본은 드리죠."
+					}
+				},
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "절차서 사본이 밸브 옆 벽에 나란히 붙었다."
+					}
+				},
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "지나가던 작업자가 그 앞에 잠깐 멈춰 서서 읽었다."
+					}
+				}
+			]
+		},
+		{
+			"text": {
+				"korean": "검사관에게 동전 120닢을 주고 어긋난 번호를 조용히 넘기게 한다"
+			},
+			"path": "gold",
+			"mbti": "EP",
+			"require": {
+				"stat": "gold",
+				"op": ">=",
+				"value": 120
+			},
+			"effects": {
+				"reason": -20,
+				"gold": -120
+			},
+			"reward": [
+				"cooldown_reset"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "seal_inspector",
+					"content": {
+						"korean": "...기록은 제가 맡을 테니 당신은 모르는 걸로 하죠."
+					}
+				},
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "그는 수첩에서 한 줄을 지우고 동전을 주머니에 넣었다."
+					}
+				},
+				{
+					"speaker": "kai",
+					"content": {
+						"korean": "지운 자국이 수첩에 그대로 남아 있는데요."
+					}
+				}
+			]
+		}
+	],
+	"_side": {
+		"slot": "A",
+		"person": {
+			"id": "seal_inspector",
+			"name": "봉인 검사관",
+			"role": "설비 규정 담당"
+		},
+		"wants": "밸브 봉인 번호를 대조하라며, 절차서에 없는 손길은 전부 기록에 남기겠다고 한다.",
+		"rule_link": "절차서대로 봉인을 확인하면 데이터 스크린 조각의 원본 대조표가 훼손되지 않는다.",
+		"rep": "reason-",
+		"events": {},
+		"flags": {
+			"seal_log": {
+				"kind": "bad",
+				"boss_penalty": -1,
+				"label": {
+					"korean": "봉인 대조 기록"
+				},
+				"boss_line": {
+					"korean": "봉인 대조 기록을 펼쳐 밸브 상태를 증명한다."
+				}
+			},
+			"restuck_seal": {
+				"kind": "good",
+				"boss_penalty": 1,
+				"label": {
+					"korean": "다시 붙인 번호표"
+				},
+				"boss_choice": {
+					"korean": "다시 붙인 번호표를 가리키며 봉인이 온전하다고 말한다."
+				}
+			},
+			"posted_copy": {
+				"kind": "good",
+				"boss_penalty": 2,
+				"label": {
+					"korean": "벽에 붙은 절차서"
+				},
+				"boss_choice": {
+					"korean": "벽에 붙은 절차서 사본을 가리켜 순서를 확인한다."
+				}
+			}
+		}
+	}
+}

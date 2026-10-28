@@ -1,0 +1,227 @@
+{
+	"id": "card_02_fake_career_bribe",
+	"kind": "rep",
+	"title": {
+		"korean": "개인을 위한 거래"
+	},
+	"intensity": "calm",
+	"after_story": 1,
+	"before_story": 3,
+	"condition": {
+		"leaning": "community-",
+		"among": [
+			"fighting-",
+			"fighting+",
+			"community-",
+			"community+",
+			"reason-",
+			"reason+"
+		],
+		"min": 20
+	},
+	"urgency": 8,
+	"leaning": "community-",
+	"background_tags": [
+		"information_room",
+		"afternoon",
+		"fluorescent_light",
+		"anxious_crowd",
+		"tense"
+	],
+	"dialogue": [
+		{
+			"speaker": "narrator",
+			"content": {
+				"korean": "공용 검색 단말기 옆에서 초조하게 서성이던 구직자가 당신에게 다가온다."
+			}
+		},
+		{
+			"speaker": "seeker",
+			"content": {
+				"korean": "\"당신이 남이야 어찌 되든 제 밥그릇부터 챙겨서 살아남았다는 그분이죠?\""
+			}
+		},
+		{
+			"speaker": "seeker",
+			"content": {
+				"korean": "\"내 탈락 경력을 다른 대기자 이력서에 슬쩍 넘겨주면 두둑이 챙겨주겠소.\""
+			}
+		},
+		{
+			"speaker": "nia",
+			"content": {
+				"korean": "\"남의 이력서 데이터를 함부로 바꾸는 건 위험한 일이에요.\""
+			}
+		}
+	],
+	"choices": [
+		{
+			"text": {
+				"korean": "구직자의 탈락 기록을 남의 명단으로 넘기는 조작을 돕고 보상금을 받는다."
+			},
+			"path": "easy",
+			"mbti": "TJ",
+			"flag": "seeker_bribe_done",
+			"effects": {
+				"community": -20,
+				"gold": 120,
+				"echo": -10
+			},
+			"seed": null,
+			"result": [
+				{
+					"speaker": "seeker",
+					"content": {
+						"korean": "\"고맙습니다! 약속대로 보상금 120골드를 단말기 밑으로 넣어두었습니다.\""
+					}
+				},
+				{
+					"speaker": "nia",
+					"content": {
+						"korean": "\"저렇게 다른 사람의 이력서에 손을 대면 나중에 큰 문제가 생길 텐데요...\""
+					}
+				}
+			]
+		},
+		{
+			"text": {
+				"korean": "이력서 조작 요구를 거절하고 단말기 담당자에게 알리겠다고 경고한다."
+			},
+			"path": "hard",
+			"mbti": "FP",
+			"flag": "seeker_denied",
+			"effects": {
+				"echo": 10,
+				"community": 20
+			},
+			"reward": [
+				"intelligence_up"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "seeker",
+					"content": {
+						"korean": "\"쯧, 소문과 달리 왜 이제 와서 정의로운 척입니까? 조용히 떠나죠.\""
+					}
+				},
+				{
+					"speaker": "nia",
+					"content": {
+						"korean": "\"잘하셨어요! 남의 이력서를 망가뜨리는 행동은 절대 받아주면 안 돼요.\""
+					}
+				}
+			]
+		},
+		{
+			"text": {
+				"korean": "손해 보는 거래는 안 한다는 철저한 태도로 구직자의 협박성 부탁을 꺾는다."
+			},
+			"path": "stat",
+			"mbti": "EN",
+			"require": {
+				"stat": "community",
+				"op": "<=",
+				"value": -40
+			},
+			"flag": "selfish_intimidation",
+			"effects": {
+				"community": -15,
+				"fighting": 20
+			},
+			"reward": [
+				"attack_up"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "seeker",
+					"content": {
+						"korean": "\"히익, 그렇게 무서운 눈으로 보지 마세요! 없던 일로 하겠습니다!\""
+					}
+				},
+				{
+					"speaker": "nia",
+					"content": {
+						"korean": "\"당신의 냉정한 대처 덕분에 사기꾼이 지레 겁을 먹고 달아났네요.\""
+					}
+				}
+			]
+		},
+		{
+			"text": {
+				"korean": "단말기 담당자에게 80골드를 지불하여 이력서 조작 시도를 정식 차단한다."
+			},
+			"path": "gold",
+			"mbti": "IS",
+			"require": {
+				"stat": "gold",
+				"op": ">=",
+				"value": 80
+			},
+			"effects": {
+				"gold": -80,
+				"reason": 15
+			},
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "담당자에게 80골드를 지불하자 공용 단말기 수정 권한이 안전하게 잠긴다."
+					}
+				},
+				{
+					"speaker": "nia",
+					"content": {
+						"korean": "\"돈을 써서 단말기 보안 조치를 확실히 해두니 마음이 한결 편해요.\""
+					}
+				}
+			]
+		}
+	],
+	"_side": {
+		"slot": "A",
+		"person": {
+			"id": "seeker",
+			"name": "구직자 박씨",
+			"role": "자격증을 위조하려는 지원자"
+		},
+		"wants": "자신의 탈락 기록을 남에게 넘기고 주인공에게 현금을 쥐여주려 함.",
+		"rule_link": "단말기의 이력서 정리 기능을 이용해 자신의 징계 기록을 타인의 데이터에 덮어씌우려 한다.",
+		"rep": "community-",
+		"events": {},
+		"flags": {
+			"seeker_bribe_done": {
+				"kind": "bad",
+				"boss_penalty": -1,
+				"label": {
+					"korean": "조작 협조"
+				},
+				"boss_line": {
+					"korean": "이전의 조작된 경력 데이터가 보스의 보안 감시망에 걸려 추가 공격을 받는다."
+				}
+			},
+			"seeker_denied": {
+				"kind": "good",
+				"boss_penalty": 1,
+				"label": {
+					"korean": "위조 거절"
+				},
+				"boss_choice": {
+					"korean": "위조 시도를 차단해 얻은 깨끗한 로그 덕분에 보스 방의 보안 시스템을 쉽게 해킹한다."
+				}
+			},
+			"selfish_intimidation": {
+				"kind": "good",
+				"boss_penalty": 2,
+				"label": {
+					"korean": "냉정한 위협"
+				},
+				"boss_choice": {
+					"korean": "이기적인 악명을 이용해 보스 방의 경비원들을 위협하여 퇴로를 확보한다."
+				}
+			}
+		}
+	}
+}

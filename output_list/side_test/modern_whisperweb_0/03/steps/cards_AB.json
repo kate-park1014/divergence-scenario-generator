@@ -1,0 +1,680 @@
+{
+	"cards": [
+		{
+			"person": {
+				"role": "파이프실 관리자",
+				"name": "배관 수리공",
+				"id": "piping_tech"
+			},
+			"choices": [
+				{
+					"reward": [],
+					"effects": {
+						"community": 10,
+						"gold": 50
+					},
+					"mbti": "SF",
+					"path": "easy",
+					"text": "요구대로 예비 부품을 넘겨준다.",
+					"result": [
+						{
+							"speaker": "narrator",
+							"text": "수리공이 재빨리 부품을 끼워 넣어 금이 간 곳을 막았다."
+						},
+						{
+							"text": "그는 감사의 표시로 주머니에 있던 약간의 돈을 건네주었다.",
+							"speaker": "narrator"
+						}
+					]
+				},
+				{
+					"mbti": "NT",
+					"result": [
+						{
+							"text": "수리공은 투덜거리며 자신의 테이프로 간신히 구멍을 칭칭 감았다.",
+							"speaker": "narrator"
+						},
+						{
+							"text": "부품을 아낀 덕분에 밸브를 조작할 때 더 수월하게 접근할 수 있게 되었다.",
+							"speaker": "narrator"
+						}
+					],
+					"text": "나중을 위해 부품을 주지 않는다.",
+					"reward": [
+						"defense_up"
+					],
+					"effects": {
+						"echo": -5,
+						"reason": 10
+					},
+					"path": "hard"
+				},
+				{
+					"path": "gold",
+					"text": "돈을 주고 고성능 밀봉제를 사서 직접 발라준다.",
+					"reward": [
+						"heal"
+					],
+					"effects": {
+						"gold": -50
+					},
+					"result": [
+						{
+							"text": "고급 밀봉제가 파이프의 금을 완벽하게 메웠다.",
+							"speaker": "narrator"
+						},
+						{
+							"text": "수리공이 놀라워하며 감사를 표했다.",
+							"speaker": "narrator"
+						}
+					],
+					"mbti": "ES"
+				},
+				{
+					"require_mbti": "TJ",
+					"reward": [],
+					"mbti": "TJ",
+					"effects": {
+						"reason": 10,
+						"gold": 30
+					},
+					"path": "lock",
+					"result": [
+						{
+							"text": "{actor}의 지시에 따라 밸브 틈새를 조절하자 파이프의 압력이 안정되었다.",
+							"speaker": "narrator"
+						},
+						{
+							"text": "부품을 아끼고 수리공의 신뢰도 얻었다.",
+							"speaker": "narrator"
+						}
+					],
+					"text": "{actor}이(가) 압력 계산을 통해 부품 없이 수리할 방법을 지시한다."
+				}
+			],
+			"background_tags": [
+				"pipe",
+				"heat",
+				"wrench",
+				"steam",
+				"sweat"
+			],
+			"kind": "plant",
+			"slot": "A",
+			"rule_link": "파이프의 압력을 조작하는 예행연습으로, 밸브 개방의 여파를 암시한다.",
+			"title": "금이 간 파이프",
+			"key": "pipe_repair",
+			"wants": "파이프 균열을 막기 위해 주변의 예비 부품을 요구한다.",
+			"dialogue": [
+				{
+					"text": "밸브 쪽 압력이 너무 높아서 파이프에 금이 갔어. 그쪽에 있는 예비 부품 좀 줘.",
+					"speaker": "piping_tech"
+				},
+				{
+					"text": "밸브 부품을 줘버리면 우리가 나중에 밸브를 열 때 문제가 생기지 않을까?",
+					"speaker": "kai"
+				},
+				{
+					"text": "지금 당장 터지는 걸 막으려면 어쩔 수 없잖아! 빨리 줘!",
+					"speaker": "piping_tech"
+				}
+			]
+		},
+		{
+			"title": "불안정한 밸브",
+			"choices": [
+				{
+					"mbti": "EP",
+					"reward": [],
+					"text": "밸브를 완전히 열어버려 압력을 단번에 뺀다.",
+					"result": [
+						{
+							"text": "밸브를 열자 소량의 냉각수가 쏟아지며 압력이 순식간에 정상으로 돌아왔다.",
+							"speaker": "narrator"
+						},
+						{
+							"text": "시원한 물줄기에 기분이 한결 나아졌다.",
+							"speaker": "narrator"
+						}
+					],
+					"effects": {
+						"gold": 50,
+						"reason": -15
+					},
+					"path": "easy"
+				},
+				{
+					"reward": [],
+					"path": "hard",
+					"event_reason": "밸브 내부 압력이 불안정하게 요동치고 있기 때문이다.",
+					"result": [
+						{
+							"speaker": "narrator",
+							"text": "압력이 치솟는 순간마다 정확히 렌치를 돌려 잠금장치를 고정했다."
+						},
+						{
+							"speaker": "narrator",
+							"text": "수리 도구가 조금 망가졌지만 밸브는 안전해졌다."
+						}
+					],
+					"event_intro": [
+						{
+							"speaker": "narrator",
+							"text": "밸브의 잠금장치가 세 번 연달아 튕겨져 나온다. 그 순간에 맞춰 렌치를 돌려야 한다."
+						}
+					],
+					"mbti": "IS",
+					"effects": {
+						"gold": -20,
+						"reason": 10
+					},
+					"event": "minigame_timing",
+					"text": "밸브의 잠금장치를 타이밍에 맞춰 다시 조인다."
+				},
+				{
+					"reward": [
+						"cooldown_reset"
+					],
+					"mbti": "EN",
+					"text": "고성능 자동 수리 키트를 부착하여 해결한다.",
+					"effects": {
+						"gold": -100
+					},
+					"result": [
+						{
+							"speaker": "narrator",
+							"text": "자동 수리 키트가 작동하며 밸브를 완벽하게 밀봉했다."
+						},
+						{
+							"speaker": "narrator",
+							"text": "힘을 들이지 않고 안전하게 상황을 넘겼다."
+						}
+					],
+					"path": "gold"
+				}
+			],
+			"wants": "잠겨 있는 밸브의 압력이 불안정하니 밸브를 조여달라고 한다.",
+			"person": {
+				"name": "밸브 감시원",
+				"id": "valve_monitor",
+				"role": "설비 관리자"
+			},
+			"kind": "normal",
+			"slot": "A",
+			"background_tags": [
+				"valve",
+				"alert",
+				"drop",
+				"cable",
+				"panel"
+			],
+			"rule_link": "강제로 밸브를 조작하여 냉각수를 빼는 행위는 서버에 직접 물을 붓는 결정의 축소판이다.",
+			"key": "unstable_valve",
+			"dialogue": [
+				{
+					"text": "이 비상 냉각수 밸브의 잠금장치가 헐거워졌어. 압력 때문에 튀어 오를 것 같아.",
+					"speaker": "valve_monitor"
+				},
+				{
+					"speaker": "kai",
+					"text": "밸브 틈새로 이미 물방울이 맺히고 있어. 바닥이 젖기 시작했는걸."
+				},
+				{
+					"speaker": "valve_monitor",
+					"text": "당장 조이지 않으면 터질 거야. 좀 도와줘!"
+				}
+			]
+		},
+		{
+			"choices": [
+				{
+					"result": [
+						{
+							"speaker": "narrator",
+							"text": "냉각팬의 바람을 맞은 케이블이 일시적으로 열기를 가라앉혔다."
+						},
+						{
+							"text": "작업자가 고맙다며 동전을 건넸다.",
+							"speaker": "narrator"
+						}
+					],
+					"mbti": "ES",
+					"effects": {
+						"gold": 50,
+						"community": 10
+					},
+					"path": "easy",
+					"reward": [],
+					"text": "냉각팬을 빌려주어 케이블 겉면을 빠르게 식힌다."
+				},
+				{
+					"path": "hard",
+					"effects": {
+						"reason": 10,
+						"echo": -5
+					},
+					"reward": [
+						"shield"
+					],
+					"text": "케이블을 끊고 안전하게 절연 테이프로 감는다.",
+					"result": [
+						{
+							"speaker": "narrator",
+							"text": "케이블을 끊어버리자 작업자가 당황하며 불평을 쏟아냈다."
+						},
+						{
+							"text": "하지만 화재 위험은 완전히 사라졌다.",
+							"speaker": "narrator"
+						}
+					],
+					"mbti": "TJ"
+				},
+				{
+					"mbti": "IN",
+					"reward": [
+						"move_range_up"
+					],
+					"text": "강력한 냉각 가스를 사서 뿌려 완전히 식힌다.",
+					"result": [
+						{
+							"text": "냉각 가스가 케이블의 열기를 단숨에 얼려버렸다.",
+							"speaker": "narrator"
+						},
+						{
+							"text": "더 이상 녹아내릴 걱정 없이 깔끔하게 해결되었다.",
+							"speaker": "narrator"
+						}
+					],
+					"effects": {
+						"gold": -50
+					},
+					"path": "gold"
+				}
+			],
+			"background_tags": [
+				"cable",
+				"smoke",
+				"fan",
+				"rack",
+				"dust"
+			],
+			"person": {
+				"id": "cable_worker",
+				"name": "케이블 작업자",
+				"role": "전산실 직원"
+			},
+			"rule_link": "열기로 인한 기계적 손상을 막기 위해 임시방편을 쓰는 상황이다.",
+			"forced": [
+				{
+					"require_mbti": "EP",
+					"text": "{actor}이(가) 냉각팬 대신 소화기를 집어들고 통째로 분사한다.",
+					"reward": [],
+					"result": [
+						{
+							"text": "{actor}의 거친 조치 덕에 열기는 잡혔지만, 하얀 가루가 주변을 엉망으로 만들었다.",
+							"speaker": "narrator"
+						},
+						{
+							"text": "케이블 작업자가 멍한 표정으로 쳐다보며 수고비를 건넸다.",
+							"speaker": "narrator"
+						}
+					],
+					"mbti": "EP",
+					"effects": {
+						"fighting": 15,
+						"gold": 50
+					}
+				}
+			],
+			"key": "melting_cable",
+			"kind": "normal",
+			"slot": "A",
+			"title": "녹아내리는 케이블",
+			"wants": "과열로 녹아내리는 케이블을 식히기 위해 휴대용 냉각팬을 빌려달라고 한다.",
+			"dialogue": [
+				{
+					"text": "이쪽 통신 케이블이 열을 못 버티고 녹아내리고 있어요. 휴대용 냉각팬 좀 빌려주세요!",
+					"speaker": "cable_worker"
+				},
+				{
+					"text": "저걸 식히지 않으면 주변 장비까지 불이 옮겨붙을지도 몰라.",
+					"speaker": "kai"
+				},
+				{
+					"text": "당장 겉면만 식혀도 10분은 버틸 수 있다고요!",
+					"speaker": "cable_worker"
+				}
+			]
+		},
+		{
+			"background_tags": [
+				"dew",
+				"pipe",
+				"cloth",
+				"puddle",
+				"chill"
+			],
+			"title": "파이프의 이슬",
+			"rule_link": "냉각수로 인해 발생한 이슬을 닦아내는 것은 훗날 스크린 부식을 막는 행동의 작은 버전이다.",
+			"dialogue": [
+				{
+					"text": "파이프 겉면에 이슬이 엄청나게 맺히기 시작했어요. 바닥이 미끄러우니 그쪽의 흡수성 천을 던져주세요.",
+					"speaker": "server_cleaner"
+				},
+				{
+					"speaker": "kai",
+					"text": "온도가 갑자기 내려가서 결로 현상이 생겼나 봐."
+				},
+				{
+					"text": "닦아내지 않으면 기계 틈새로 다 스며들 겁니다. 빨리요!",
+					"speaker": "server_cleaner"
+				}
+			],
+			"wants": "차가워진 파이프 표면의 이슬을 닦아낼 흡수성 천을 빌려달라고 한다.",
+			"person": {
+				"id": "server_cleaner",
+				"role": "청소 담당자",
+				"name": "서버 청소부"
+			},
+			"kind": "plant",
+			"slot": "B",
+			"key": "dewy_pipe",
+			"choices": [
+				{
+					"text": "천을 던져주어 청소가 빨리 끝나게 돕는다.",
+					"reward": [],
+					"path": "easy",
+					"result": [
+						{
+							"speaker": "narrator",
+							"text": "흡수성 천 덕분에 파이프의 이슬이 순식간에 닦였다."
+						},
+						{
+							"text": "청소부가 고맙다며 깨끗해진 천을 다시 돌려주었다.",
+							"speaker": "narrator"
+						}
+					],
+					"effects": {
+						"gold": 50,
+						"community": 15
+					},
+					"mbti": "FJ"
+				},
+				{
+					"mbti": "TP",
+					"result": [
+						{
+							"speaker": "narrator",
+							"text": "청소부는 투덜거리며 자신의 낡은 걸레로 느릿느릿 이슬을 닦아냈다."
+						},
+						{
+							"text": "천을 아낀 덕에 나중에 유용하게 쓸 수 있게 되었다.",
+							"speaker": "narrator"
+						}
+					],
+					"reward": [
+						"intelligence_up"
+					],
+					"text": "천을 주지 않고 청소부가 직접 손걸레로 닦게 둔다.",
+					"path": "hard",
+					"effects": {
+						"echo": -5,
+						"reason": 10
+					}
+				},
+				{
+					"path": "gold",
+					"event_intro": [
+						{
+							"text": "청소부가 고맙다며 보답으로 세 개의 공구함 중 하나에 물건을 숨기고 고르게 한다.",
+							"speaker": "narrator"
+						}
+					],
+					"event": "minigame_cup",
+					"text": "돈을 넉넉히 쥐여주며 꼼꼼히 닦아달라고 부탁한다.",
+					"effects": {
+						"gold": -50
+					},
+					"result": [
+						{
+							"speaker": "narrator",
+							"text": "팁을 받은 청소부는 콧노래를 부르며 바닥까지 완벽하게 건조시켰다."
+						},
+						{
+							"speaker": "narrator",
+							"text": "물기 하나 없는 쾌적한 환경이 되었다."
+						}
+					],
+					"event_reason": "넉넉한 팁을 받은 청소부가 기분이 좋아져 작은 게임을 제안했기 때문이다.",
+					"reward": [],
+					"mbti": "ES"
+				}
+			]
+		},
+		{
+			"rule_link": "냉각수에 섞인 이물질이 기계에 미치는 영향을 간접적으로 드러낸다.",
+			"choices": [
+				{
+					"reward": [],
+					"effects": {
+						"gold": -30
+					},
+					"path": "easy",
+					"event_intro": [
+						{
+							"text": "기술자가 동전을 꺼내며 칩을 무사히 건져낼지 내기를 제안한다.",
+							"speaker": "narrator"
+						}
+					],
+					"result": [
+						{
+							"text": "기술자가 손을 집어넣으려다 끈적이는 물의 촉감에 놀라 손을 뺐다.",
+							"speaker": "narrator"
+						},
+						{
+							"speaker": "narrator",
+							"text": "결국 칩을 건지지 못한 기술자가 투덜거렸다."
+						}
+					],
+					"mbti": "SP",
+					"event": "minigame_slot",
+					"event_reason": "기술자가 심심풀이로 내기를 걸어왔기 때문이다.",
+					"text": "기술자가 칩을 건질 수 없다에 돈을 걸어 내기에 응한다."
+				},
+				{
+					"path": "hard",
+					"reward": [],
+					"text": "내기를 무시하고 물웅덩이에 접근하지 못하게 막는다.",
+					"result": [
+						{
+							"speaker": "narrator",
+							"text": "강하게 제지하자 기술자는 입맛을 다시며 물러났다."
+						},
+						{
+							"speaker": "narrator",
+							"text": "정체불명의 물웅덩이를 피한 덕에 위험을 면했다."
+						}
+					],
+					"effects": {
+						"reason": 15,
+						"gold": 50
+					},
+					"mbti": "SJ"
+				},
+				{
+					"result": [
+						{
+							"text": "특수 집게를 사용해 끈적이는 물에 닿지 않고 칩을 건져냈다.",
+							"speaker": "narrator"
+						},
+						{
+							"speaker": "narrator",
+							"text": "칩의 데이터를 확인해 유용한 정보를 얻었다."
+						}
+					],
+					"effects": {
+						"gold": -60
+					},
+					"text": "특수 집게를 사서 웅덩이의 칩을 안전하게 건져낸다.",
+					"path": "gold",
+					"mbti": "NT",
+					"reward": [
+						"intelligence_up"
+					]
+				}
+			],
+			"background_tags": [
+				"puddle",
+				"chip",
+				"coin",
+				"shadow",
+				"floor"
+			],
+			"dialogue": [
+				{
+					"text": "저기 물웅덩이 보이죠? 저 안에 멀쩡한 메모리 칩이 빠졌는데, 제가 주울 수 있다에 걸어볼래요?",
+					"speaker": "curious_tech"
+				},
+				{
+					"speaker": "kai",
+					"text": "물이 평범해 보이지 않아. 뭔가 끈적거리는 이물질이 섞여 있는 것 같은데."
+				},
+				{
+					"speaker": "curious_tech",
+					"text": "에이, 그냥 물이라니까요. 돈 걸고 한 번 해보죠!"
+				}
+			],
+			"slot": "B",
+			"kind": "normal",
+			"title": "수상한 물웅덩이",
+			"person": {
+				"role": "설비 점검자",
+				"name": "호기심 많은 기술자",
+				"id": "curious_tech"
+			},
+			"key": "strange_puddle",
+			"wants": "물방울이 고인 곳에서 쓸만한 부품을 건지려 내기를 제안한다."
+		},
+		{
+			"person": {
+				"name": "지친 작업자",
+				"id": "tired_worker",
+				"role": "전산실 직원"
+			},
+			"key": "cool_breeze",
+			"title": "시원한 통풍구",
+			"rule_link": "냉각의 즉각적인 쾌적함에 취해 다가올 위협을 보지 못하는 상황이다.",
+			"wants": "온도가 내려가 쾌적해진 통풍구 앞에 자리를 잡고 쉬려 하며, 주인공에게도 권한다.",
+			"background_tags": [
+				"vent",
+				"breeze",
+				"rust",
+				"grating",
+				"worker"
+			],
+			"choices": [
+				{
+					"result": [
+						{
+							"speaker": "narrator",
+							"text": "쾌적한 바람을 맞으며 땀을 식히자 체력이 조금 회복되었다."
+						},
+						{
+							"text": "작업자가 옆에서 수다를 떨며 간식을 나눠주었다.",
+							"speaker": "narrator"
+						}
+					],
+					"mbti": "FP",
+					"reward": [],
+					"path": "easy",
+					"text": "통풍구 앞에 앉아 시원한 바람을 맞으며 쉰다.",
+					"effects": {
+						"community": 10,
+						"gold": 40
+					}
+				},
+				{
+					"reward": [
+						"move_range_up"
+					],
+					"mbti": "TJ",
+					"text": "바람의 냄새를 수상히 여겨 쉬지 않고 서둘러 이동한다.",
+					"effects": {
+						"echo": 5,
+						"reason": 15
+					},
+					"result": [
+						{
+							"speaker": "narrator",
+							"text": "달콤한 휴식을 포기하고 발걸음을 재촉했다."
+						},
+						{
+							"text": "쇠 냄새가 나는 바람을 피한 덕분에 머리가 맑아졌다.",
+							"speaker": "narrator"
+						}
+					],
+					"path": "hard"
+				},
+				{
+					"effects": {
+						"gold": -50
+					},
+					"path": "gold",
+					"text": "방독 마스크를 구매해 착용하고 쉰다.",
+					"reward": [
+						"heal"
+					],
+					"result": [
+						{
+							"text": "마스크를 쓰고 안전하게 통풍구 앞에서 휴식을 취했다.",
+							"speaker": "narrator"
+						},
+						{
+							"speaker": "narrator",
+							"text": "불쾌한 냄새 없이 체력을 완전히 회복했다."
+						}
+					],
+					"mbti": "IS"
+				},
+				{
+					"text": "{actor}이(가) 통풍구에서 나오는 바람의 성분을 조용히 분석하여 위험을 경고한다.",
+					"reward": [],
+					"require_mbti": "IN",
+					"path": "lock",
+					"mbti": "IN",
+					"effects": {
+						"reason": 20,
+						"gold": 50
+					},
+					"result": [
+						{
+							"text": "{actor}의 날카로운 분석을 듣고 작업자도 황급히 자리를 피했다.",
+							"speaker": "narrator"
+						},
+						{
+							"text": "보이지 않는 위협을 미연에 방지했다.",
+							"speaker": "narrator"
+						}
+					]
+				}
+			],
+			"dialogue": [
+				{
+					"speaker": "tired_worker",
+					"text": "아, 아까까진 찜통이었는데 이제 살 것 같네. 여기 통풍구 앞이 제일 시원해요. 같이 쉴래요?"
+				},
+				{
+					"text": "온도가 내려가서 다행이긴 하지만, 저 바람에서 미세하게 쇠 냄새가 나.",
+					"speaker": "kai"
+				},
+				{
+					"text": "냄새가 대수입니까? 당장 쓰러질 것 같은데 5분만 쉬다 가요.",
+					"speaker": "tired_worker"
+				}
+			],
+			"slot": "B",
+			"kind": "normal"
+		}
+	],
+	"errors": []
+}

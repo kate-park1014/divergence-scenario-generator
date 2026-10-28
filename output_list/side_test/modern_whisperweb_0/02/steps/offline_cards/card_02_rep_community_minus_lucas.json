@@ -1,0 +1,202 @@
+{
+	"id": "card_02_rep_community_minus_lucas",
+	"kind": "rep",
+	"title": {
+		"korean": "은밀한 거래"
+	},
+	"intensity": "calm",
+	"after_story": 1,
+	"before_story": 3,
+	"condition": {
+		"leaning": "community-",
+		"among": [
+			"fighting-",
+			"fighting+",
+			"community-",
+			"community+",
+			"reason-",
+			"reason+"
+		],
+		"min": 20
+	},
+	"urgency": 8,
+	"leaning": "community-",
+	"background_tags": [
+		"powerroom",
+		"shadow",
+		"quiet",
+		"machinery",
+		"tense"
+	],
+	"dialogue": [
+		{
+			"speaker": "bribe_officer",
+			"content": {
+				"korean": "네가 남들보다 네 몫부터 확실하게 챙긴다는 그 친구지?"
+			}
+		},
+		{
+			"speaker": "bribe_officer",
+			"content": {
+				"korean": "코드를 뽑을 때 내 기록도 좀 지워줘. 사례는 섭섭지 않게 할게."
+			}
+		},
+		{
+			"speaker": "lin",
+			"content": {
+				"korean": "지금 뇌물 받을 때가 아니에요! 시스템이 멈추기 전에 코드를 뽑아야 해요!"
+			}
+		}
+	],
+	"choices": [
+		{
+			"text": {
+				"korean": "돈을 받고 단말기 코드를 ��싸게 뽑는다."
+			},
+			"path": "easy",
+			"mbti": "ET",
+			"flag": "lucas_embezzle_data",
+			"effects": {
+				"gold": 150,
+				"community": -20
+			},
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "동전이 가득 든 주머니를 챙긴다. 단말기 화면이 까맣게 꺼진다."
+					}
+				}
+			],
+			"event": "minigame_timing",
+			"event_intro": [
+				{
+					"speaker": "bribe_officer",
+					"content": {
+						"korean": "내 기록이 화면에 뜰 때 딱 뽑아주면 돼."
+					}
+				}
+			]
+		},
+		{
+			"text": {
+				"korean": "뇌물을 거절하고 린을 위해 코드를 뽑는다."
+			},
+			"path": "hard",
+			"mbti": "IF",
+			"flag": "lucas_security_card",
+			"effects": {
+				"community": 20,
+				"echo": 10
+			},
+			"reward": [
+				"defense_up"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "루카스가 당황해 보안 카드를 흘리고 달아난다. 단말기가 정지한다."
+					}
+				}
+			]
+		},
+		{
+			"text": {
+				"korean": "루카스의 돈만 가로채고 횡령 기록은 남긴 채 코드를 뽑는다."
+			},
+			"path": "stat",
+			"mbti": "ST",
+			"require": {
+				"stat": "community",
+				"op": "<=",
+				"value": -40
+			},
+			"flag": "lucas_stolen_bribe",
+			"effects": {
+				"gold": 150,
+				"community": -30
+			},
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "루카스가 분통을 터뜨리며 도망간다. 주머니가 제법 묵직해졌다."
+					}
+				}
+			]
+		},
+		{
+			"text": {
+				"korean": "코드를 뽑는 척하며 루카스의 바지를 벗긴다."
+			},
+			"path": "fun",
+			"mbti": "EP",
+			"effects": {
+				"echo": 5,
+				"reason": 20
+			},
+			"reward": [
+				"cooldown_reset"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "루카스가 비명을 지르며 바지를 올리느라 정신이 없다."
+					}
+				}
+			]
+		}
+	],
+	"_side": {
+		"slot": "A",
+		"person": {
+			"name": "루카스",
+			"role": "하급 관리자",
+			"id": "bribe_officer"
+		},
+		"wants": "단말기 코드를 뽑아 에러를 낸 뒤 자신의 횡령 데이터를 지워주면 돈을 주겠다고 제안함.",
+		"rule_link": "돈을 대가로 오작동하는 단말기의 전원 코드를 뽑아 시스템 에러를 유도한다.",
+		"rep": "community-",
+		"events": {
+			"easy": "루카스의 데이터가 나타나는 순간 코드를 뽑아야 한다."
+		},
+		"flags": {
+			"lucas_embezzle_data": {
+				"kind": "bad",
+				"boss_penalty": -1,
+				"label": {
+					"korean": "횡령 데이터"
+				},
+				"boss_line": {
+					"korean": "루카스의 횡령 데이터가 엮여 시스템의 타겟이 된다."
+				}
+			},
+			"lucas_security_card": {
+				"kind": "good",
+				"boss_penalty": 1,
+				"label": {
+					"korean": "보안 카드"
+				},
+				"boss_choice": {
+					"korean": "루카스가 흘린 보안 카드로 잠긴 문을 강제로 연다."
+				}
+			},
+			"lucas_stolen_bribe": {
+				"kind": "good",
+				"boss_penalty": 2,
+				"label": {
+					"korean": "가로챈 뇌물"
+				},
+				"boss_choice": {
+					"korean": "가로챈 뇌물로 용병을 매수해 시선을 분산시킨다."
+				}
+			}
+		}
+	}
+}

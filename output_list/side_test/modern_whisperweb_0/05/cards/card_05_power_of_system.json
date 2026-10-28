@@ -1,0 +1,142 @@
+{
+	"id": "card_05_power_of_system",
+	"kind": "callback",
+	"title": {
+		"korean": "작은 동력의 확보"
+	},
+	"intensity": "high",
+	"after_story": 7,
+	"before_story": 10,
+	"callback": {
+		"seed": "loud_system_hard",
+		"min_rooms_after": 2
+	},
+	"background_tags": [
+		"room",
+		"server",
+		"spark",
+		"battery",
+		"hum"
+	],
+	"dialogue": [
+		{
+			"speaker": "narrator",
+			"content": {
+				"korean": "안정적으로 돌아가는 서버 랙 사이에서 수습 오퍼레이터가 예비 배터리를 들고 다가온다."
+			}
+		},
+		{
+			"speaker": "echo",
+			"content": {
+				"korean": "저기 예비 전력이 있잖아! 저걸 잘만 쓰면 조각 맞추는 속도를 확 끌어올릴 수 있겠어!"
+			}
+		},
+		{
+			"speaker": "apprentice",
+			"content": {
+				"korean": "전원 코드를 뽑길 잘했어요! 남은 예비 전력으로 조각을 한 번에 여러 개 융합할 수 있을 거예요."
+			}
+		},
+		{
+			"speaker": "narrator",
+			"content": {
+				"korean": "수습이 건넨 배터리 팩에서 푸른 스파크가 규칙적으로 튀고 있다."
+			}
+		}
+	],
+	"choices": [
+		{
+			"text": {
+				"korean": "예비 전력을 단말기에 연결해 조각을 빠르게 융합한다."
+			},
+			"path": "easy",
+			"mbti": "ST",
+			"flag": "fused_data",
+			"effects": {
+				"reason": 20,
+				"gold": 50
+			},
+			"reward": [
+				"move_range_up"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "강한 전류가 흐르며 조각들이 순식간에 하나로 엉겨 붙었다."
+					}
+				},
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "융합된 데이터 덩어리가 든든하게 손에 쥐어졌다."
+					}
+				}
+			]
+		},
+		{
+			"text": {
+				"korean": "전력을 직접 사용하지 않고 방어용 에너지 장벽으로 전환한다."
+			},
+			"path": "hard",
+			"mbti": "NF",
+			"flag": "energy_barrier",
+			"effects": {
+				"fighting": -10,
+				"community": 10
+			},
+			"reward": [
+				"defense_up"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "당신은 배터리를 조각 주변에 둘러 보호막을 쳤다."
+					}
+				},
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "조각을 맞추는 속도는 느렸지만, 외부의 어떤 충격도 닿지 않았다."
+					}
+				}
+			]
+		}
+	],
+	"_side": {
+		"slot": "D",
+		"person": {
+			"name": "수습",
+			"role": "수습 오퍼레이터",
+			"id": "apprentice"
+		},
+		"wants": "안전하게 유지된 시스템에서 뽑아낸 예비 전력을 사용해, 다가올 방해를 뚫고 갈 동력으로 쓰자고 한다.",
+		"rule_link": "온전한 시스템 덕분에 데이터 조각을 더 빠르고 강하게 맞출 수 있는 추진력을 얻는다.",
+		"events": {},
+		"flags": {
+			"fused_data": {
+				"kind": "good",
+				"boss_penalty": 1,
+				"label": {
+					"korean": "융합된 데이터"
+				},
+				"boss_choice": {
+					"korean": "당신이 쥔 융합 데이터가 눈부신 빛을 내며 홀로그램의 시야를 가린다."
+				}
+			},
+			"energy_barrier": {
+				"kind": "good",
+				"boss_penalty": 2,
+				"label": {
+					"korean": "에너지 장벽"
+				},
+				"boss_choice": {
+					"korean": "데이터 조각을 둘러싼 장벽이 사방에서 날아오는 파편들을 안전하게 튕겨낸다."
+				}
+			}
+		}
+	}
+}

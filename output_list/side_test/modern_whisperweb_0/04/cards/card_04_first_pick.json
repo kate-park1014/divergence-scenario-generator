@@ -1,0 +1,241 @@
+{
+	"id": "card_04_first_pick",
+	"kind": "rep",
+	"title": {
+		"korean": "먼저 챙기는 몫"
+	},
+	"intensity": "calm",
+	"after_story": 3,
+	"before_story": 5,
+	"condition": {
+		"leaning": "community-",
+		"among": [
+			"fighting-",
+			"fighting+",
+			"community-",
+			"community+",
+			"reason-",
+			"reason+"
+		],
+		"min": 20
+	},
+	"urgency": 8,
+	"leaning": "community-",
+	"background_tags": [
+		"data_waste_yard",
+		"late_shift",
+		"dim_glow",
+		"two_people",
+		"greedy"
+	],
+	"dialogue": [
+		{
+			"speaker": "sevik",
+			"content": {
+				"korean": "당신이 남의 몫도 앞서 챙긴다는 그 사람이죠? 그럼 얘기가 빠르겠네요."
+			}
+		},
+		{
+			"speaker": "dax",
+			"content": {
+				"korean": "이 사람 눈빛이 좀… 내 일기장 값 매기던 그 눈빛이에요."
+			}
+		},
+		{
+			"speaker": "sevik",
+			"content": {
+				"korean": "부품 더미 반반으로 가르죠. 대신 제가 먼저 고르게요. 손해는 안 보시잖아요."
+			}
+		},
+		{
+			"speaker": "narrator",
+			"content": {
+				"korean": "세빅이 낡은 저울을 꺼내 부품 하나하나 무게를 재기 시작했다."
+			}
+		}
+	],
+	"choices": [
+		{
+			"text": {
+				"korean": "세빅의 거래를 받고 가장 무거운 부품을 먼저 챙긴다"
+			},
+			"path": "easy",
+			"mbti": "TP",
+			"flag": "sevik_scale",
+			"effects": {
+				"community": -20,
+				"gold": 90
+			},
+			"reward": [
+				"attack_up"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "sevik",
+					"content": {
+						"korean": "역시 소문대로 계산이 빠르시네요."
+					}
+				},
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "당신이 고른 부품을 세빅이 90골드에 사 갔다. 그 안에서 금 간 조각이 툭 떨어졌다."
+					}
+				},
+				{
+					"speaker": "dax",
+					"content": {
+						"korean": "돈은 들어왔는데… 왜 내 몫이 줄어든 기분이지?"
+					}
+				}
+			]
+		},
+		{
+			"text": {
+				"korean": "부품을 균등하게 나누고 당신 몫을 세빅에게 넘긴다"
+			},
+			"path": "hard",
+			"mbti": "FJ",
+			"flag": "sevik_scale_b3",
+			"effects": {
+				"community": 25,
+				"echo": 10
+			},
+			"reward": [
+				"defense_up"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "sevik",
+					"content": {
+						"korean": "…이런 건 처음 봅니다. 그럼 저도 반은 남겨야겠네요."
+					}
+				},
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "세빅이 저울을 접고 부품 절반을 더미에 도로 놓았다."
+					}
+				},
+				{
+					"speaker": "dax",
+					"content": {
+						"korean": "저 사람이 손해 보는 거 처음 봤어요. 기분 좋네요."
+					}
+				}
+			]
+		},
+		{
+			"text": {
+				"korean": "당신이 먼저 챙긴다는 소문을 이용해 세빅에게서 웃돈을 받아낸다"
+			},
+			"path": "stat",
+			"mbti": "EJ",
+			"require": {
+				"stat": "community",
+				"op": "<=",
+				"value": -40
+			},
+			"flag": "sevik_scale_b3",
+			"effects": {
+				"community": -15,
+				"gold": 130
+			},
+			"reward": [
+				"intelligence_up"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "sevik",
+					"content": {
+						"korean": "이 정도면 저도 남는 장사네요. 거래 성립."
+					}
+				},
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "세빅이 지갑을 열어 130골드를 세었다. 부품 하나가 그의 손에서 굴러떨어졌다."
+					}
+				},
+				{
+					"speaker": "dax",
+					"content": {
+						"korean": "이름 팔아서 돈 버는 거, 나쁘진 않은데 좀 찜찜하네요."
+					}
+				}
+			]
+		},
+		{
+			"text": {
+				"korean": "세빅의 저울을 부품 위에 올려 저울부터 반으로 가른다"
+			},
+			"path": "fun",
+			"mbti": "EP",
+			"effects": {
+				"community": -25,
+				"echo": 10
+			},
+			"reward": [
+				"stun"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "sevik",
+					"content": {
+						"korean": "저, 저울이! 아버지가 쓰던 저울인데!"
+					}
+				},
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "부러진 저울 팔이 부품 더미를 휘저어 조각들이 사방으로 튀었다."
+					}
+				},
+				{
+					"speaker": "dax",
+					"content": {
+						"korean": "저울은 미안한데… 튄 조각 중에 반짝이는 게 있었어요."
+					}
+				}
+			]
+		}
+	],
+	"_side": {
+		"slot": "B",
+		"person": {
+			"id": "sevik",
+			"name": "세빅",
+			"role": "폐기물 중고 거래상"
+		},
+		"wants": "당신이 자기 몫부터 챙긴다는 소문을 듣고, 가장 값나가는 부품을 먼저 골라 나누자는 거래를 제안한다.",
+		"rule_link": "분해된 장치에서 나온 부품 중 값이 나가는 것을 먼저 고르는 일 — 고른 부품 안에 스크린 조각이 섞여 있다.",
+		"rep": "community-",
+		"events": {},
+		"flags": {
+			"sevik_scale": {
+				"kind": "bad",
+				"boss_penalty": -1,
+				"label": {
+					"korean": "세빅의 저울"
+				},
+				"boss_line": {
+					"korean": "세빅이 저울을 앞세워 부품 분배를 막아서며 자기 몫을 먼저 내놓으라고 한다."
+				}
+			},
+			"sevik_scale_b3": {
+				"kind": "good",
+				"boss_penalty": 2,
+				"label": {
+					"korean": "세빅의 저울"
+				},
+				"boss_choice": {
+					"korean": "세빅이 저울을 앞세워 부품 분배를 막아서며 자기 몫을 먼저 내놓으라고 한다."
+				}
+			}
+		}
+	}
+}

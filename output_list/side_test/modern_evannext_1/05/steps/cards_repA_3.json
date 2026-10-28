@@ -1,0 +1,331 @@
+{
+	"cards": [
+		{
+			"title": "원칙주의자의 서류 수속",
+			"background_tags": [
+				"waiting_room",
+				"dim_light",
+				"paper_stack",
+				"anxious_crowd",
+				"tense_atmosphere"
+			],
+			"dialogue": [
+				{
+					"text": "지원자 민석이 손끝을 떨며 도장이 찍히지 않은 양식을 쥐고 당신에게 다가왔다.",
+					"speaker": "narrator"
+				},
+				{
+					"speaker": "minseok",
+					"text": "당신이 지난번 검수장에서 서류 도장을 일일이 확인하며 수수료 표까지 맞춰보던 그 원칙주의자군요."
+				},
+				{
+					"text": "제 부실한 경력으로는 면접장에 못 들어갑니다. 서류에 과장된 관리자 서명을 대신 좀 적어주세요.",
+					"speaker": "minseok"
+				},
+				{
+					"speaker": "lin",
+					"text": "대기실 안내판에는 서류함에 과장된 이력서를 넣으면 일단 모면할 수 있다고 나와 있어요."
+				}
+			],
+			"rule_link": "원칙을 지키는 주인공에게 과장 이력서 수속을 부탁하여 면접장 진입을 시도함",
+			"key": "strict_rule_resume",
+			"wants": "부실한 경력을 과장 서명으로 메워 무대 면접장 진입 자격을 얻는 것",
+			"person": {
+				"id": "minseok",
+				"role": "자신의 부실한 경력을 과장해서 서류를 통과하고 싶어 하는 지원자",
+				"name": "민석"
+			},
+			"choices": [
+				{
+					"text": "규정 위반이라며 민석의 과장 이력서 대리 작성 요청을 거절한다.",
+					"reward": [
+						"attack_up"
+					],
+					"flag": {
+						"label": "이력서 과장 거부",
+						"key": "reject_fake_resume",
+						"boss_text": "과장 이력서를 거절당한 대기실 지원자들이 당신을 외면하며 길을 막아선다."
+					},
+					"path": "easy",
+					"result": [
+						{
+							"speaker": "narrator",
+							"text": "당신은 규정 위반이라며 대리 서명을 거부하고 민석의 양식을 불합격 수거함에 넣었다."
+						},
+						{
+							"text": "규칙을 지킨다더니 정말 한 치의 예외도 안 주는군요... 이제 전 진짜 쫓겨납니다.",
+							"speaker": "minseok"
+						},
+						{
+							"text": "원칙을 지키신 건 맞지만, 절망한 지원자들의 시선이 제법 차가워졌어요.",
+							"speaker": "lin"
+						}
+					],
+					"effects": {
+						"community": 15,
+						"reason": -20,
+						"echo": 10
+					},
+					"mbti": "TJ"
+				},
+				{
+					"text": "원칙을 뒤로하고 민석의 이력서에 과장된 성과를 대신 적어준다.",
+					"result": [
+						{
+							"text": "당신은 원칙을 깨고 민석의 이력서에 화려한 거짓 경력을 적어 제출함에 넣었다.",
+							"speaker": "narrator"
+						},
+						{
+							"text": "정말 고맙습니다! 깐깐한 줄만 알았는데 이렇게 숨통을 터 주시는군요.",
+							"speaker": "minseok"
+						},
+						{
+							"speaker": "lin",
+							"text": "규정을 어긴 건 마음에 걸리지만, 일단 민석 씨의 탈락은 면했네요."
+						}
+					],
+					"flag": {
+						"key": "accept_fake_resume",
+						"label": "과장 이력서 서명",
+						"boss_text": "민석이 대리 서명해 준 과장 이력서를 빌미로 당신의 조력자로 나선다."
+					},
+					"path": "hard",
+					"reward": [
+						"defense_up"
+					],
+					"mbti": "FP",
+					"effects": {
+						"community": -15,
+						"echo": -10,
+						"reason": 20
+					}
+				},
+				{
+					"effects": {
+						"community": 20,
+						"reason": -30,
+						"echo": 15
+					},
+					"flag": {
+						"label": "임시 제출증 발급",
+						"boss_text": "정당한 임시 제출증을 발급받은 민석이 면접장 열쇠를 건네준다.",
+						"key": "strict_temporary_pass"
+					},
+					"reward": [
+						"intelligence_up"
+					],
+					"text": "원칙주의자답게 관리 규정을 제시해 민석에게 과장 없는 임시 제출증을 끊어준다.",
+					"mbti": "ST",
+					"result": [
+						{
+							"text": "당신은 엄격한 절차 규정을 들어 안내원을 설득하고 민석에게 정당한 임시 제출증을 발급했다.",
+							"speaker": "narrator"
+						},
+						{
+							"speaker": "minseok",
+							"text": "거짓말 없이도 정식 수속을 밟을 방법이 있었군요! 정말 감사합니다."
+						},
+						{
+							"text": "철저한 절차 준수로 모두가 인정하는 깔끔한 해결책을 찾아내셨어요.",
+							"speaker": "lin"
+						}
+					],
+					"path": "stat"
+				},
+				{
+					"reward": [],
+					"effects": {
+						"fighting": 20,
+						"community": -10,
+						"gold": 50
+					},
+					"text": "민석의 이력서 여백에 대기실 질서 수칙 10가지를 빼곡히 적어 수거함에 넣는다.",
+					"mbti": "EN",
+					"result": [
+						{
+							"speaker": "narrator",
+							"text": "당신은 이력서 여백에 대기실 질서 수칙 10가지를 적어 수거함에 던져 넣었다."
+						},
+						{
+							"speaker": "minseok",
+							"text": "경력 대신 수칙을 적어서 제출하다니, 이런 서류는 처음 봅니다!"
+						},
+						{
+							"text": "황당한 서류지만 제출함 기계가 수칙 문구를 인식해서 승인 도장을 찍어버렸어요.",
+							"speaker": "lin"
+						}
+					],
+					"path": "fun"
+				}
+			],
+			"no": 1,
+			"slot": "A",
+			"kind": "rep",
+			"rep_dir": "reason-"
+		},
+		{
+			"key": "free_spirit_resume",
+			"dialogue": [
+				{
+					"speaker": "narrator",
+					"text": "안내원 유리가 타자기 소리를 요란하게 내며 과장 이력서 뭉치를 들고 다가왔다."
+				},
+				{
+					"speaker": "yuri",
+					"text": "당신이 규찰대의 통제선을 제멋대로 넘어 다니며 제재를 싹 무시하던 그 사람이죠?"
+				},
+				{
+					"speaker": "yuri",
+					"text": "통과 기준 건수를 맞추려면 서명이 필요해요. 이 과장 이력서 수거함 상자에 어서 서명하세요."
+				},
+				{
+					"speaker": "lin",
+					"text": "대기실 안내판에도 과장된 이력서를 내면 일단 위기를 넘길 수 있다고 쓰여 있긴 해요."
+				}
+			],
+			"title": "안내원의 서명 강요",
+			"person": {
+				"role": "통과 기준을 맞추기 위해 과장된 서명을 요구하는 대기실 안내원",
+				"id": "yuri",
+				"name": "유리"
+			},
+			"rule_link": "자유로운 주인공에게 과장 이력서 서명을 강요하여 대기실 통과 건수를 채우려 함",
+			"no": 2,
+			"choices": [
+				{
+					"flag": {
+						"boss_text": "유리가 과장 서류를 모은 실적으로 대기실 통제권을 강화해 당신을 압박한다.",
+						"label": "과장 서명 수용",
+						"key": "force_fake_signature"
+					},
+					"text": "유리가 내민 요구대로 과장 이력서 서명란에 이름을 적어준다.",
+					"result": [
+						{
+							"speaker": "narrator",
+							"text": "당신은 깊게 생각하지 않고 유리가 내밀어 준 과장 이력서에 빠르게 서명했다."
+						},
+						{
+							"text": "역시 제멋대로 하시는 분답게 망설임이 없으시네요. 통과 수량 1건 추가합니다.",
+							"speaker": "yuri"
+						},
+						{
+							"text": "이렇게 쉽게 과장 서류에 서명해 주셔도 괜찮을지 걱정되네요.",
+							"speaker": "lin"
+						}
+					],
+					"reward": [
+						"attack_up"
+					],
+					"mbti": "EP",
+					"effects": {
+						"community": -20,
+						"reason": 20,
+						"echo": -10
+					},
+					"path": "easy"
+				},
+				{
+					"flag": {
+						"key": "refuse_yuri_demand",
+						"label": "과장 서명 거부",
+						"boss_text": "유리의 서명 강요를 거부하여 대기실 비밀 열쇠를 확보한다."
+					},
+					"text": "내키지 않는다며 유리의 과장 서명 요구를 거부하고 서류 수속을 중단한다.",
+					"result": [
+						{
+							"text": "당신은 유리의 서명 요구를 단칼에 거절하며 서류를 수거함 옆에 내려놓았다.",
+							"speaker": "narrator"
+						},
+						{
+							"speaker": "yuri",
+							"text": "통과 수량을 맞춰야 하는데 이렇게 협조를 안 해주시면 어떡합니까?"
+						},
+						{
+							"speaker": "lin",
+							"text": "유리 씨의 압박에도 굴하지 않고 억지 서명을 잘 거절하셨어요."
+						}
+					],
+					"effects": {
+						"community": 15,
+						"echo": 10,
+						"reason": -20
+					},
+					"reward": [
+						"shield"
+					],
+					"mbti": "FJ",
+					"path": "hard"
+				},
+				{
+					"path": "stat",
+					"reward": [
+						"cooldown_reset"
+					],
+					"mbti": "NT",
+					"text": "자유로운 성향을 살려 규격 양식을 무시하고 대기실 실태를 자유 서식으로 적어 제출한다.",
+					"result": [
+						{
+							"text": "당신은 정해진 양식을 무시하고 대기실의 실태를 자유 서식으로 작성해 수거함에 던졌다.",
+							"speaker": "narrator"
+						},
+						{
+							"speaker": "yuri",
+							"text": "규격 양식도 아닌데 제출함 기계가 최고 점수로 승인 처리를 해버렸잖아요!"
+						},
+						{
+							"speaker": "lin",
+							"text": "틀에 얽매이지 않는 방식으로 대기실 사람들의 진짜 사정을 기록해내셨어요."
+						}
+					],
+					"effects": {
+						"community": 20,
+						"reason": 30,
+						"echo": 15
+					},
+					"flag": {
+						"label": "자유 서식 제출",
+						"boss_text": "자유 서식을 작성해 제출한 덕분에 대기실 인원들의 실태 증언을 확보한다.",
+						"key": "free_form_report"
+					}
+				},
+				{
+					"reward": [],
+					"text": "안내원 유리에게 수수료 100골드를 지불하고 과장 서명 의무를 면제받는다.",
+					"mbti": "NP",
+					"effects": {
+						"gold": -100,
+						"reason": 10
+					},
+					"path": "gold",
+					"result": [
+						{
+							"speaker": "narrator",
+							"text": "당신은 100골드를 수수료함에 넣고 과장 서명 절차를 수수료 납부로 대체했다."
+						},
+						{
+							"text": "수수료를 이렇게 두둑이 내시니 서명 없이도 수량에 포함해 드리죠.",
+							"speaker": "yuri"
+						},
+						{
+							"speaker": "lin",
+							"text": "돈으로 억지 서명 요구를 넘기셨군요. 금전 지출은 크지만 서명은 안 했어요."
+						}
+					]
+				}
+			],
+			"background_tags": [
+				"interview_hall",
+				"loud_typewriter",
+				"flickering_light",
+				"hurried_people",
+				"coercive_atmosphere"
+			],
+			"wants": "주인공의 과장 서명을 받아내 대기실 통과 실적 건수를 채우는 것",
+			"slot": "A",
+			"kind": "rep",
+			"rep_dir": "reason+"
+		}
+	],
+	"errors": [],
+	"prompt_hash": "2ce4c1ffdf7bd5d843e0f9e681179df552ac7096"
+}

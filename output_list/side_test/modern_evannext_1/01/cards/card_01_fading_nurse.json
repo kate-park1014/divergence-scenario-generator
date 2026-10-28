@@ -1,0 +1,217 @@
+{
+	"id": "card_01_fading_nurse",
+	"kind": "rep",
+	"title": {
+		"korean": "사라지는 간호사"
+	},
+	"intensity": "calm",
+	"after_story": 7,
+	"before_story": 10,
+	"condition": {
+		"leaning": "fighting+",
+		"among": [
+			"fighting-",
+			"fighting+",
+			"community-",
+			"community+",
+			"reason-",
+			"reason+"
+		],
+		"min": 20
+	},
+	"urgency": 8,
+	"leaning": "fighting+",
+	"background_tags": [
+		"waiting_hall",
+		"midday",
+		"dim_light",
+		"whispering_group",
+		"melancholy"
+	],
+	"dialogue": [
+		{
+			"speaker": "narrator",
+			"content": {
+				"korean": "간호사 복장을 한 여성이 바닥에 주저앉아 투명해지는 다리를 부여잡고 흐느낀다."
+			}
+		},
+		{
+			"speaker": "sukyeong",
+			"content": {
+				"korean": "뒤처진 사람들에게 번호표를 건네주며 먼저 손을 내밀던 분, 맞으시죠?"
+			}
+		},
+		{
+			"speaker": "sukyeong",
+			"content": {
+				"korean": "다친 대기자를 고치겠다고 수술 경력을 한 줄 덧댔더니, 제 존재가 지워져요."
+			}
+		},
+		{
+			"speaker": "lin",
+			"content": {
+				"korean": "저분의 무릎 아래가 비쳐 보여요. 이력서에 거짓을 적은 대가가 시작됐어요."
+			}
+		}
+	],
+	"choices": [
+		{
+			"text": {
+				"korean": "수경의 매달리는 손을 냉정하게 털어내고 지나친다"
+			},
+			"path": "easy",
+			"mbti": "ST",
+			"flag": "abandon_nurse",
+			"effects": {
+				"echo": -5,
+				"community": -20,
+				"gold": 70,
+				"fighting": 20
+			},
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "당신은 수경의 떨리는 손을 뿌리치고 바닥에 떨어진 지원 번호표를 챙겼다."
+					}
+				},
+				{
+					"speaker": "sukyeong",
+					"content": {
+						"korean": "남을 돕는다는 소문은 다 거짓이었나요? 제 이름이 완전히 사라지고 있어요."
+					}
+				},
+				{
+					"speaker": "lin",
+					"content": {
+						"korean": "수경 씨의 목소리가 점점 멀어져요. 이러면 저분은 시험을 볼 수 없어요."
+					}
+				}
+			]
+		},
+		{
+			"text": {
+				"korean": "주저앉은 수경을 부축해 흐려진 서류의 구겨진 부분을 함께 편다"
+			},
+			"path": "hard",
+			"mbti": "NF",
+			"flag": "nurse_ampoule",
+			"effects": {
+				"echo": 10,
+				"fighting": 25,
+				"community": 25
+			},
+			"reward": [
+				"heal"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "당신은 웅크린 수경을 일으켜 세우고, 엉켜버린 서류 모서리를 조심스레 펴냈다."
+					}
+				},
+				{
+					"speaker": "sukyeong",
+					"content": {
+						"korean": "고마워요. 손가락에 감각이 돌아왔어요. 가방에 남은 마지막 구급 앰플을 드릴게요."
+					}
+				},
+				{
+					"speaker": "lin",
+					"content": {
+						"korean": "사람을 구하니 서류의 먹선도 본래 형태를 되찾고 있어요!"
+					}
+				}
+			]
+		},
+		{
+			"text": {
+				"korean": "대기자들을 불러 모아 수경의 이름을 함께 부르며 지워짐을 막는다"
+			},
+			"path": "stat",
+			"mbti": "FJ",
+			"require": {
+				"stat": "fighting",
+				"op": ">=",
+				"value": 40
+			},
+			"flag": "care_alliance",
+			"effects": {
+				"echo": 15,
+				"fighting": 35,
+				"community": 30
+			},
+			"reward": [
+				"defense_up"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "당신의 따스한 부축에 주변 대기자 여럿이 모여들어 수경의 존재를 함께 외쳐주었다."
+					}
+				},
+				{
+					"speaker": "sukyeong",
+					"content": {
+						"korean": "모두가 제 이름을 불러주니 사라지지 않아요! 이 빚은 반드시 갚을게요!"
+					}
+				},
+				{
+					"speaker": "lin",
+					"content": {
+						"korean": "사람들의 연대가 이력서의 규정보다 더 강하게 이름을 붙잡아 주었어요!"
+					}
+				}
+			]
+		}
+	],
+	"_side": {
+		"slot": "D",
+		"person": {
+			"role": "존재가 사라져 가는 간호 보조원",
+			"id": "sukyeong",
+			"name": "수경"
+		},
+		"wants": "자신의 흐려진 서류를 바로잡아 지워져 가는 존재를 되찾는 것",
+		"rule_link": "거짓된 의료 경력을 덧대어 규정 위반으로 신체가 투명해지는 현상",
+		"rep": "fighting+",
+		"events": {},
+		"flags": {
+			"abandon_nurse": {
+				"kind": "bad",
+				"boss_penalty": -1,
+				"label": {
+					"korean": "버려진 원망"
+				},
+				"boss_line": {
+					"korean": "지쳐 쓰러진 수경을 외면한 탓에, 분노한 주변 대기자들이 당신의 등 뒤를 밀쳐 흩뜨린다."
+				}
+			},
+			"nurse_ampoule": {
+				"kind": "good",
+				"boss_penalty": 1,
+				"label": {
+					"korean": "간호사의 보은"
+				},
+				"boss_choice": {
+					"korean": "기운을 차린 수경이 건넨 상급 회복 앰플을 마셔 지친 호흡과 부상을 즉각 추스른다."
+				}
+			},
+			"care_alliance": {
+				"kind": "good",
+				"boss_penalty": 2,
+				"label": {
+					"korean": "돌봄의 연대"
+				},
+				"boss_choice": {
+					"korean": "수경과 연대 지원자들이 문지기의 출입 통제봉을 온몸으로 붙잡아 길을 터준다."
+				}
+			}
+		}
+	}
+}

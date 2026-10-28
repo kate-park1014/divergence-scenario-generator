@@ -1,0 +1,259 @@
+{
+	"id": "card_01_anarchic_graffiti",
+	"kind": "rep",
+	"title": {
+		"korean": "형광 펜을 든 방랑자"
+	},
+	"intensity": "calm",
+	"after_story": 3,
+	"before_story": 5,
+	"condition": {
+		"leaning": "reason+",
+		"among": [
+			"fighting-",
+			"fighting+",
+			"community-",
+			"community+",
+			"reason-",
+			"reason+"
+		],
+		"min": 20
+	},
+	"urgency": 8,
+	"leaning": "reason+",
+	"background_tags": [
+		"central_hall",
+		"afternoon",
+		"flickering_light",
+		"rowdy_lobby",
+		"chaotic"
+	],
+	"dialogue": [
+		{
+			"speaker": "narrator",
+			"content": {
+				"korean": "넥타이를 머리에 묶고 형광 펜을 빙글빙글 돌리는 괴짜 지원자가 히죽거리며 뛰어왔다."
+			}
+		},
+		{
+			"speaker": "free_spirit",
+			"content": {
+				"korean": "\"크하, 당신이 아까 면접 대기선 테이프를 찢어 발로 차버리며 규정을 비웃던 그 양반 맞지?\""
+			}
+		},
+		{
+			"speaker": "free_spirit",
+			"content": {
+				"korean": "\"딱딱한 경력 칸에 낙서나 한판 휘갈겨 줘!"
+			}
+		},
+		{
+			"speaker": "free_spirit",
+			"content": {
+				"korean": "서류 양식이 미쳐 날뛰어야 순번도 단숨에 1번으로 튈 거 아냐!\""
+			}
+		},
+		{
+			"speaker": "lin",
+			"content": {
+				"korean": "\"이력서에 형광 펜으로 해골 낙서를 하고 있어요... 저 사람 말을 진지하게 들어도 될까요?\""
+			}
+		}
+	],
+	"choices": [
+		{
+			"text": {
+				"korean": "이력서 경력란을 찢어내고 형광 잉크로 '우주 최강의 모험가'라 큼직하게 낙서해 던진다"
+			},
+			"path": "easy",
+			"mbti": "FP",
+			"flag": "graffiti_resume_drift",
+			"effects": {
+				"echo": 5,
+				"community": -10,
+				"reason": 20
+			},
+			"reward": [
+				"move_range_up"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "당신이 이력서 한복판에 별 모양과 화려한 날조 수식어를 휘갈기자 접수기 화면에 별점 5개가 찍혔다."
+					}
+				},
+				{
+					"speaker": "free_spirit",
+					"content": {
+						"korean": "\"캬하! 바로 이거지! 격식 따위 개나 주라 그래! 대기 순번이 맨 윗줄로 튀어 올랐잖아!\""
+					}
+				},
+				{
+					"speaker": "lin",
+					"content": {
+						"korean": "\"이력서에 형광 펜으로 그림을 그렸는데 접수가 되다니... 이 대기실 시스템은 제정신이 아니에요.\""
+					}
+				}
+			]
+		},
+		{
+			"text": {
+				"korean": "장난치지 말라며 잉크병을 빼앗고 규격 이력서 서식으로 정갈하게 되돌린다"
+			},
+			"path": "hard",
+			"mbti": "TJ",
+			"flag": "iron_discipline_focus",
+			"effects": {
+				"echo": -5,
+				"reason": -20
+			},
+			"reward": [
+				"defense_up"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "당신이 잉크병을 뺏어 뚜껑을 닫고 정중한 양식으로 되돌리자, 남자는 따분하다는 듯 하품을 했다."
+					}
+				},
+				{
+					"speaker": "free_spirit",
+					"content": {
+						"korean": "\"틀을 깨부수던 그 멋진 반항아는 어디 가고 꼰대 같은 짓을 한담? 재미 더럽게 없네.\""
+					}
+				},
+				{
+					"speaker": "lin",
+					"content": {
+						"korean": "\"조금 지루해졌을진 몰라도, 저런 장난질에 장단을 맞춰줄 필요는 없죠.\""
+					}
+				}
+			]
+		},
+		{
+			"text": {
+				"korean": "이력서를 접어 만든 종이비행기를 접수기 핵심 슬롯으로 정확히 날려 꽂는다"
+			},
+			"path": "stat",
+			"mbti": "EN",
+			"require": {
+				"stat": "reason",
+				"op": ">=",
+				"value": 40
+			},
+			"flag": "unhinged_showman_feint",
+			"effects": {
+				"echo": 10,
+				"reason": 30
+			},
+			"reward": [
+				"cooldown_reset"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "당신이 이력서를 접어 날린 종이비행기가 접수처 메인 전원 스위치에 꽂히며 전광판 순번이 춤을 추었다."
+					}
+				},
+				{
+					"speaker": "free_spirit",
+					"content": {
+						"korean": "\"푸하하하! 전광판 순번이 전부 뒤죽박죽으로 섞였어! 당신 진짜 미친 사람 맞구나! 최고야!\\\""
+					}
+				},
+				{
+					"speaker": "lin",
+					"content": {
+						"korean": "\"종이비행기 하나로 접수기를 해킹한 셈인가요? 장내가 완전히 뒤집어졌어요!\""
+					}
+				}
+			]
+		},
+		{
+			"text": {
+				"korean": "이력서를 마이크 삼아 쥐고 대기석 복도 한가운데서 합격 기원 노래를 열창한다"
+			},
+			"path": "fun",
+			"mbti": "IS",
+			"effects": {
+				"community": 20,
+				"reason": 25,
+				"echo": -10
+			},
+			"reward": [
+				"stun"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "당신이 이력서를 높이 들고 뮤지컬 배우처럼 노래를 부르자, 대기홀 전체가 떼창과 박수로 뒤덮였다."
+					}
+				},
+				{
+					"speaker": "free_spirit",
+					"content": {
+						"korean": "\"브라보! 인생은 무대지! 서류에 적힌 활자 따위보다 이 노래가 백만 배는 낫다!\""
+					}
+				},
+				{
+					"speaker": "lin",
+					"content": {
+						"korean": "\"사람들이 박자를 맞추며 춤추고 있어요... 창피하긴 한데, 이상하게 기분은 후련하네요!\""
+					}
+				}
+			]
+		}
+	],
+	"_side": {
+		"slot": "B",
+		"person": {
+			"role": "규범 파괴 지원자",
+			"name": "괴짜 방랑자",
+			"id": "free_spirit"
+		},
+		"wants": "이력서 서식을 파괴하는 기상천외한 낙서로 초특급 번호표를 따내는 것",
+		"rule_link": "이력서 서식을 파괴하는 황당무계한 낙서와 허풍으로 시스템의 허점을 찔러 순번을 도약시킨다.",
+		"rep": "reason+",
+		"events": {},
+		"flags": {
+			"graffiti_resume_drift": {
+				"kind": "bad",
+				"boss_penalty": -1,
+				"label": {
+					"korean": "낙서 이력서의 흩날림"
+				},
+				"boss_line": {
+					"korean": "마구잡이로 휘갈긴 낙서 서류가 바람에 날려, 면접관의 시야를 가리는 대신 발목을 묶는다."
+				}
+			},
+			"iron_discipline_focus": {
+				"kind": "good",
+				"boss_penalty": 1,
+				"label": {
+					"korean": "엄격한 정신 집중"
+				},
+				"boss_choice": {
+					"korean": "규율을 고집하며 억눌렀던 기억이 떠올라, 혼란스러운 면접장의 환각을 또렷하게 걷어낸다."
+				}
+			},
+			"unhinged_showman_feint": {
+				"kind": "good",
+				"boss_penalty": 2,
+				"label": {
+					"korean": "광대극의 혼란 조성"
+				},
+				"boss_choice": {
+					"korean": "대기실을 뒤흔든 파격적인 돌출 행동으로 면접관의 시선을 분산시켜 기습 공격의 틈을 연다."
+				}
+			}
+		}
+	}
+}

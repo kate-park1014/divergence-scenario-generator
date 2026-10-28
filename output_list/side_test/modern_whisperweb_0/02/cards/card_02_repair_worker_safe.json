@@ -1,0 +1,130 @@
+{
+	"id": "card_02_repair_worker_safe",
+	"title": {
+		"korean": "안전한 통로"
+	},
+	"intensity": "high",
+	"after_story": 7,
+	"before_story": 10,
+	"callback": {
+		"seed": "cable_repair_hard",
+		"min_rooms_after": 2
+	},
+	"background_tags": [
+		"safe",
+		"iron",
+		"dim",
+		"calm",
+		"path"
+	],
+	"dialogue": [
+		{
+			"speaker": "narrator",
+			"content": {
+				"korean": "불길이 번지지 않은 구역에서 수리공이 안도의 한숨을 쉬고 있다."
+			}
+		},
+		{
+			"speaker": "repair_worker",
+			"content": {
+				"korean": "수리를 미룬 덕에 살았소. 보답으로 안전한 길을 알려주겠소."
+			}
+		},
+		{
+			"speaker": "lin",
+			"content": {
+				"korean": "다행이네요. 불길도 피하고 다가오는 발소리도 피할 수 있겠어요."
+			}
+		}
+	],
+	"choices": [
+		{
+			"text": {
+				"korean": "수리공이 가리킨 철문들 중 안전한 곳을 골라 빠르게 지나가기로 한다."
+			},
+			"path": "easy",
+			"mbti": "IN",
+			"flag": "safe_route",
+			"effects": {
+				"reason": 10,
+				"community": 10
+			},
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "당신은 수리공이 안내한 철문들 앞으로 다가갔다. 그는 당신이 어느 곳을 고를지 흥미롭게 지켜보았다."
+					}
+				}
+			],
+			"event": "minigame_cup",
+			"event_intro": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "수리공이 세 개의 문을 가리킨다. 당신은 연기가 새어 나오지 않는 문을 신중하게 골라야 한다."
+					}
+				}
+			]
+		},
+		{
+			"text": {
+				"korean": "통로를 고르지 않고 불길이 번지는 곳의 밸브를 잠그고 간다."
+			},
+			"path": "hard",
+			"mbti": "TJ",
+			"flag": "locked_valve",
+			"effects": {
+				"community": 20,
+				"reason": 20
+			},
+			"reward": [
+				"move_range_down"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "당신은 위험을 감수하고 밸브를 잠갔다. 시간은 지체되었지만 추가 화재는 막았다."
+					}
+				}
+			]
+		}
+	],
+	"kind": "callback",
+	"_side": {
+		"slot": "D",
+		"person": {
+			"id": "repair_worker",
+			"name": "전력실 수리공",
+			"role": "'~오', '~시오' 체의 무뚝뚝한 말투"
+		},
+		"wants": "",
+		"rule_link": "",
+		"events": {},
+		"flags": {
+			"safe_route": {
+				"boss_penalty": 1,
+				"label": {
+					"korean": "안전한 통로"
+				},
+				"boss_choice": {
+					"korean": "미리 파악한 통로로 몸을 피해 공격을 흘려보낸다."
+				},
+				"kind": "good"
+			},
+			"locked_valve": {
+				"boss_penalty": 2,
+				"label": {
+					"korean": "잠긴 밸브"
+				},
+				"boss_choice": {
+					"korean": "잠가둔 밸브를 열어 뜨거운 증기를 뿜어낸다."
+				},
+				"kind": "good"
+			}
+		}
+	}
+}

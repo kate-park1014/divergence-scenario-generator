@@ -1,0 +1,328 @@
+{
+	"cards": [
+		{
+			"card_id": "card_05_burned_operator_hand",
+			"asks": "과열된 손잡이를 대신 잡아 돌려 달라(대신 자기 몫 커피를 주겠다).",
+			"choices_read": [
+				{
+					"path": "easy",
+					"target": "오퍼레이터의 손/손잡이",
+					"does": "오퍼레이터의 손을 감싸 쥐고 함께 손잡이를 돌린다",
+					"reaction_assumes": "두 사람 손이 겹쳐 손잡이가 돌아감"
+				},
+				{
+					"path": "hard",
+					"target": "오퍼레이터/손잡이",
+					"does": "오퍼레이터에게 손부터 챙기라 하고 냉각 팬을 돌려 손잡이를 식힌다",
+					"reaction_assumes": "냉각 팬을 돌려 손잡이가 식음"
+				},
+				{
+					"path": "stat",
+					"target": "오퍼레이터",
+					"does": "손을 내밀어 잡으라 하고 함께 손잡이를 감싼다",
+					"reaction_assumes": "오퍼레이터가 손을 얹고 함께 손잡이를 감쌈"
+				},
+				{
+					"path": "fun",
+					"target": "손잡이(오퍼레이터의 커피)",
+					"does": "오퍼레이터의 커피를 손잡이에 부어 식힌다",
+					"reaction_assumes": "커피가 손잡이를 타고 흘러 식음"
+				}
+			],
+			"checks": [
+				{
+					"item": "S1",
+					"pass": true
+				},
+				{
+					"item": "S2",
+					"pass": true
+				},
+				{
+					"item": "S3",
+					"pass": true
+				},
+				{
+					"item": "S4",
+					"pass": true
+				},
+				{
+					"item": "S5",
+					"pass": true
+				},
+				{
+					"item": "S6",
+					"pass": true
+				}
+			]
+		},
+		{
+			"card_id": "card_05_double_check_log",
+			"asks": "규정상 필요한 서명 세 개 중 마지막 하나를 채워 달라(없으면 조각 작업 중단).",
+			"choices_read": [
+				{
+					"path": "easy",
+					"target": "점검관의 서류판",
+					"does": "서류판에 서명을 채우고 절차대로 조각을 넘긴다",
+					"reaction_assumes": "세 번째 서명란이 채워짐"
+				},
+				{
+					"path": "hard",
+					"target": "점검관의 서류판/조각",
+					"does": "서류판을 치우고 서명 없이 조각을 건드린다",
+					"reaction_assumes": "서류판이 바닥에 미끄러지고 조각이 홈에 들어감"
+				},
+				{
+					"path": "stat",
+					"target": "점검관",
+					"does": "서명 없이도 된다고 말하고 조각을 맞추게 한다",
+					"reaction_assumes": "점검관이 손을 거두고 조각이 홈에 들어감"
+				},
+				{
+					"path": "fun",
+					"target": "점검관의 서류판 세 번째 칸",
+					"does": "자기 이름 대신 조각 그림을 그려 넣는다",
+					"reaction_assumes": "점검관이 조각 그림을 들여다봄"
+				}
+			],
+			"checks": [
+				{
+					"item": "S1",
+					"pass": true
+				},
+				{
+					"item": "S2",
+					"pass": true
+				},
+				{
+					"item": "S3",
+					"pass": true
+				},
+				{
+					"item": "S4",
+					"pass": true
+				},
+				{
+					"item": "S5",
+					"pass": true
+				},
+				{
+					"item": "S6",
+					"pass": true
+				}
+			]
+		},
+		{
+			"card_id": "card_05_sealed_credit_chip",
+			"asks": "조각 하나를 자기 몫으로 떼어 가는 조건으로 전력과 공구를 넘기겠다고 한다(조건을 받아 달라는 요구).",
+			"choices_read": [
+				{
+					"path": "easy",
+					"target": "거래상",
+					"does": "조건대로 조각 하나를 넘겨받고 전력과 공구를 챙긴다",
+					"reaction_assumes": "거래상이 조각을 품고 전력 케이블·공구함을 밀어냄"
+				},
+				{
+					"path": "hard",
+					"target": "거래상의 금고",
+					"does": "금고에서 조각을 빼내 돌려주고 칩은 되찾아 준다",
+					"reaction_assumes": "금고 문이 열리고 조각이 단말기로 돌아옴"
+				},
+				{
+					"path": "stat",
+					"target": "거래상",
+					"does": "조각을 내놓으라고 하고 손대지 않게 한다",
+					"reaction_assumes": "거래상이 칩을 챙겨 물러서고 조각을 내줌"
+				},
+				{
+					"path": "gold",
+					"target": "거래상",
+					"does": "금고 보관료 120골드를 내고 조각만 사 온다",
+					"reaction_assumes": "금화가 쌓이자 거래상이 조각을 밀어냄"
+				}
+			],
+			"checks": [
+				{
+					"item": "S1",
+					"pass": true
+				},
+				{
+					"item": "S2",
+					"pass": true
+				},
+				{
+					"item": "S3",
+					"pass": true
+				},
+				{
+					"item": "S4",
+					"pass": true
+				},
+				{
+					"item": "S5",
+					"pass": true
+				},
+				{
+					"item": "S6",
+					"pass": true
+				}
+			]
+		},
+		{
+			"card_id": "card_05_shared_ration_line",
+			"asks": "조각 맞추기를 미루고 예비 배터리를 모두에게 고르게 나눠 주자고 한다(그렇게 해 달라는 요구).",
+			"choices_read": [
+				{
+					"path": "easy",
+					"target": "반장",
+					"does": "배터리를 넘겨 열두 명에게 나눠 주게 한다",
+					"reaction_assumes": "배터리가 돌자 손전등이 켜짐"
+				},
+				{
+					"path": "hard",
+					"target": "반장/단말기",
+					"does": "배터리를 단말기에 물리겠다고 말하고 대신 손전등을 나눠 준다",
+					"reaction_assumes": "배터리가 단말기에 물려 조각 홈이 밝아지고 손전등이 돌아감"
+				},
+				{
+					"path": "stat",
+					"target": "반장",
+					"does": "배터리를 맡기고 줄 선 사람들에게 순서를 정해 주게 한다",
+					"reaction_assumes": "사람들이 순서를 지켜 서로의 등을 밝힘"
+				}
+			],
+			"checks": [
+				{
+					"item": "S1",
+					"pass": true
+				},
+				{
+					"item": "S2",
+					"pass": true
+				},
+				{
+					"item": "S3",
+					"pass": true
+				},
+				{
+					"item": "S4",
+					"pass": true
+				},
+				{
+					"item": "S5",
+					"pass": true
+				},
+				{
+					"item": "S6",
+					"pass": true
+				}
+			]
+		},
+		{
+			"card_id": "card_05_shorted_relay_bus",
+			"asks": "배전반을 부숴서라도 전력을 밀어 넣자고 한다(부수게 해 달라는 요구).",
+			"choices_read": [
+				{
+					"path": "easy",
+					"target": "관리인",
+					"does": "손도끼를 넘기고 배전반을 부수게 한다",
+					"reaction_assumes": "손도끼가 배전반을 내리치고 전력이 올라감"
+				},
+				{
+					"path": "hard",
+					"target": "관리인/배전반",
+					"does": "손도끼를 빼앗아 내려놓고 관리인을 배전반에서 떼어낸다",
+					"reaction_assumes": "관리인이 손도끼를 놓고 차단기를 내림"
+				},
+				{
+					"path": "stat",
+					"target": "관리인",
+					"does": "부수지 않겠다고 선언하고 배전반 옆을 지키게 한다",
+					"reaction_assumes": "관리인이 손도끼를 내림"
+				}
+			],
+			"checks": [
+				{
+					"item": "S1",
+					"pass": true
+				},
+				{
+					"item": "S2",
+					"pass": true
+				},
+				{
+					"item": "S3",
+					"pass": true
+				},
+				{
+					"item": "S4",
+					"pass": true
+				},
+				{
+					"item": "S5",
+					"pass": true
+				},
+				{
+					"item": "S6",
+					"pass": true
+				}
+			]
+		},
+		{
+			"card_id": "card_05_sold_manual_pages",
+			"asks": "값을 치르면 조각 맞추는 순서를 알려 주겠다고 한다(페이지를 사 달라는 요구).",
+			"choices_read": [
+				{
+					"path": "easy",
+					"target": "업자/설명서",
+					"does": "업자 몫으로 페이지를 챙기고 나머지 설명서를 빼앗는다",
+					"reaction_assumes": "설명서 뭉치를 낚아채자 업자가 허둥댐"
+				},
+				{
+					"path": "hard",
+					"target": "업자",
+					"does": "값을 다 치르고 설명서 뭉치를 통째로 사 온다",
+					"reaction_assumes": "금화를 받은 업자가 설명서를 건넴"
+				},
+				{
+					"path": "stat",
+					"target": "업자",
+					"does": "설명서를 내려놓게 하고 값을 직접 정하게 한다",
+					"reaction_assumes": "업자가 설명서를 조각 위에 내려놓음"
+				},
+				{
+					"path": "gold",
+					"target": "업자",
+					"does": "페이지 두 장 값 100골드를 치르고 순서를 묻는다",
+					"reaction_assumes": "금화를 받은 업자가 페이지 두 장을 찢어 건넴"
+				}
+			],
+			"checks": [
+				{
+					"item": "S1",
+					"pass": true
+				},
+				{
+					"item": "S2",
+					"pass": true
+				},
+				{
+					"item": "S3",
+					"pass": true
+				},
+				{
+					"item": "S4",
+					"pass": true
+				},
+				{
+					"item": "S5",
+					"pass": true
+				},
+				{
+					"item": "S6",
+					"pass": true
+				}
+			]
+		}
+	]
+}

@@ -1,0 +1,210 @@
+{
+	"id": "card_02_terminal_backup",
+	"kind": "normal",
+	"title": {
+		"korean": "백업 데이터 복원기"
+	},
+	"intensity": "calm",
+	"after_story": 3,
+	"before_story": 5,
+	"background_tags": [
+		"server_corner",
+		"morning",
+		"dim_fluorescent",
+		"sparse_staff",
+		"orderly"
+	],
+	"dialogue": [
+		{
+			"speaker": "narrator",
+			"content": {
+				"korean": "단말기 점검구를 열고 있던 정비원이 정리된 화면을 보며 공구를 내려놓는다."
+			}
+		},
+		{
+			"speaker": "technician",
+			"content": {
+				"korean": "단말기 화면이 이렇게 안정적으로 정렬된 건 오랜만이군요."
+			}
+		},
+		{
+			"speaker": "technician",
+			"content": {
+				"korean": "이 정리된 상태를 임시 백업 드라이브에 복사해 두면 점검 실적을 보고할 수 있습니다."
+			}
+		},
+		{
+			"speaker": "nia",
+			"content": {
+				"korean": "백업을 해 두면 나중에 문제가 생겼을 때 데이터를 되돌리는 데 도움이 될지도 몰라요."
+			}
+		}
+	],
+	"choices": [
+		{
+			"text": {
+				"korean": "정비원의 백업 드라이브에 단말기 데이터를 그대로 복제해 넘겨준다"
+			},
+			"path": "easy",
+			"mbti": "TP",
+			"effects": {
+				"echo": -5,
+				"reason": -15,
+				"community": 10
+			},
+			"reward": [
+				"attack_up"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "전송 케이블을 연결하자 화면 속 정렬된 이력서 정보가 백업 드라이브로 빠르게 복사된다."
+					}
+				},
+				{
+					"speaker": "technician",
+					"content": {
+						"korean": "고맙습니다! 검증 완료 보고서에 보조 작업자로 올려두고 공구 키트를 드리죠."
+					}
+				},
+				{
+					"speaker": "nia",
+					"content": {
+						"korean": "겉보기에는 완벽한 백업 파일인데, 아무 문제 없이 잘 보존되겠죠?"
+					}
+				}
+			]
+		},
+		{
+			"text": {
+				"korean": "개인정보 유출 방지를 위해 식별 코드를 하나씩 마스킹한 뒤 백업한다"
+			},
+			"path": "hard",
+			"mbti": "TJ",
+			"effects": {
+				"echo": 10,
+				"fighting": 10,
+				"reason": 20,
+				"community": 10
+			},
+			"reward": [
+				"heal"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "데이터 복제 전 단말기 보안 콘솔을 열어 지원자들의 식별 코드를 마스킹 처리한다."
+					}
+				},
+				{
+					"speaker": "technician",
+					"content": {
+						"korean": "규정대로 철저하게 하시는군요. 시간이 조금 더 걸리긴 했지만 안전하긴 합니다."
+					}
+				},
+				{
+					"speaker": "nia",
+					"content": {
+						"korean": "손이 많이 가는 작업이었지만 다른 사람의 신원 정보가 함부로 새어나가지 않게 지켰어요."
+					}
+				}
+			]
+		},
+		{
+			"text": {
+				"korean": "{actor}이(가) 백업 스크립트의 메모리 할당량을 조정해 처리 속도를 높인다"
+			},
+			"path": "lock",
+			"mbti": "NT",
+			"require": {
+				"mbti": "NT"
+			},
+			"effects": {
+				"reason": 10,
+				"community": 10,
+				"echo": 10
+			},
+			"reward": [
+				"cooldown_reset"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "{actor}이(가) 백업 명령어에 버퍼 확장 코드를 덧붙이자 단말기 연산 속도가 두 배로 치솟는다."
+					}
+				},
+				{
+					"speaker": "technician",
+					"content": {
+						"korean": "기본 단말기에서 이런 전송 속도가 나올 수 있다니 놀랍습니다!"
+					}
+				},
+				{
+					"speaker": "nia",
+					"content": {
+						"korean": "{actor} 덕분에 백업도 순식간에 끝나고 단말기 화면도 한층 더 매끄럽게 돌아가네요."
+					}
+				}
+			]
+		},
+		{
+			"text": {
+				"korean": "정비원에게 고성능 백업 저장 카트리지를 100골드에 사서 지급한다"
+			},
+			"path": "gold",
+			"mbti": "SF",
+			"require": {
+				"stat": "gold",
+				"op": ">=",
+				"value": 100
+			},
+			"effects": {
+				"echo": 10,
+				"gold": -100,
+				"reason": 15
+			},
+			"reward": [
+				"defense_up"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "정비 창구에 100골드를 지불하고 대용량 금도금 백업 카트리지를 건넨다."
+					}
+				},
+				{
+					"speaker": "technician",
+					"content": {
+						"korean": "이렇게 고급 카트리지에 담아주시다니 데이터 손실 걱정이 사라졌습니다!"
+					}
+				},
+				{
+					"speaker": "nia",
+					"content": {
+						"korean": "단말기 화면이 정말 단단하게 고정된 느낌이에요. 좋은 투자를 하셨어요."
+					}
+				}
+			]
+		}
+	],
+	"_side": {
+		"slot": "B",
+		"person": {
+			"id": "technician",
+			"name": "단말기 정비원",
+			"role": "검색실 보조 정비 기사"
+		},
+		"wants": "정리된 이력서 데이터를 임시 보관함에 복사해 점검 실적을 확보하려 한다.",
+		"rule_link": "단말기에서 정리된 이력서 데이터가 백업 칩에 기록되며 시스템이 겉보기에 안정적으로 유지된다.",
+		"events": {},
+		"flags": {}
+	}
+}

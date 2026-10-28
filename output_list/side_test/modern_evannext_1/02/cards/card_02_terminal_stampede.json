@@ -1,0 +1,219 @@
+{
+	"id": "card_02_terminal_stampede",
+	"kind": "rep",
+	"title": {
+		"korean": "쇄도하는 출력 창구"
+	},
+	"intensity": "calm",
+	"after_story": 7,
+	"before_story": 10,
+	"condition": {
+		"leaning": "community+",
+		"among": [
+			"fighting-",
+			"fighting+",
+			"community-",
+			"community+",
+			"reason-",
+			"reason+"
+		],
+		"min": 20
+	},
+	"urgency": 8,
+	"leaning": "community+",
+	"background_tags": [
+		"search_room",
+		"terminal_desk",
+		"torn_paper",
+		"alarm_buzz",
+		"chaotic"
+	],
+	"dialogue": [
+		{
+			"speaker": "clerk",
+			"content": {
+				"korean": "당신, 아까 검색실 입구에서 넘어진 사람들 일으켜 세우고 번호표 양보하던 분이죠?"
+			}
+		},
+		{
+			"speaker": "clerk",
+			"content": {
+				"korean": "방송에서 이름 대신 숫자를 부르자마자 이력서 출력구로 사람들이 쇄도하고 있어요!"
+			}
+		},
+		{
+			"speaker": "nia",
+			"content": {
+				"korean": "이력서들이 짓밟혀서 숫자가 더 뭉개지고 있어요. 저러다 관리자가 오면 전부 배제당해요!"
+			}
+		},
+		{
+			"speaker": "clerk",
+			"content": {
+				"korean": "제발 저 흥분한 사람들을 진정시키고 출력 순서 좀 잡아주세요!"
+			}
+		}
+	],
+	"choices": [
+		{
+			"text": {
+				"korean": "군중 앞에 서서 번호표를 든 사람들을 하나하나 호명하며 줄을 세운다."
+			},
+			"path": "easy",
+			"mbti": "FJ",
+			"flag": "crowd_delay",
+			"effects": {
+				"echo": 10,
+				"community": 20,
+				"gold": 70
+			},
+			"reward": [
+				"heal"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "clerk",
+					"content": {
+						"korean": "정말 감사합니다! 당신 덕분에 창구가 박살 나는 걸 막았어요. 이건 수고비예요."
+					}
+				},
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "사람들이 당신의 지시에 따라 한 줄로 섰지만 복도 끝에서 육중한 기계음이 가까워졌다."
+					}
+				},
+				{
+					"speaker": "nia",
+					"content": {
+						"korean": "사람들은 진정됐지만 시간이 너무 지체됐어요. 관리자가 복도 끝까지 왔어요!"
+					}
+				}
+			]
+		},
+		{
+			"text": {
+				"korean": "밀려드는 사람들을 뿌리치고 바닥에 짓밟히던 원본 이력서 뭉치만 품에 안고 빠져나온다."
+			},
+			"path": "hard",
+			"mbti": "NT",
+			"flag": "salvaged_dossier",
+			"effects": {
+				"echo": -10,
+				"community": -25,
+				"fighting": 15
+			},
+			"reward": [
+				"intelligence_up"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "clerk",
+					"content": {
+						"korean": "잠깐, 남의 이력서 뭉치를 들고 어디로 가는 겁니까! 거기 서요!"
+					}
+				},
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "당신은 바닥에 흩뿌려진 서류 뭉치를 낚아채 품에 품고 비상구 쪽으로 몸을 돌렸다."
+					}
+				},
+				{
+					"speaker": "nia",
+					"content": {
+						"korean": "담당자가 소리를 지르지만 이 원본 명단이 있으면 관리자의 추적을 흩뜨릴 수 있어요."
+					}
+				}
+			]
+		},
+		{
+			"text": {
+				"korean": "모두를 위해 헌신했던 명망으로 구직자들을 설득해 서로의 번호표를 대조하게 한다."
+			},
+			"path": "stat",
+			"mbti": "IF",
+			"require": {
+				"stat": "community",
+				"op": ">=",
+				"value": 40
+			},
+			"flag": "united_applicants",
+			"effects": {
+				"community": 25,
+				"echo": 10,
+				"reason": -10
+			},
+			"reward": [
+				"shield"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "당신이 손을 들어 올리자 웅성거리던 지원자들이 일제히 단말기 앞을 비우고 정숙했다."
+					}
+				},
+				{
+					"speaker": "clerk",
+					"content": {
+						"korean": "모두가 이분의 말에 따르다니… 여기, 지원자들이 직접 서명한 이름 대조표예요."
+					}
+				},
+				{
+					"speaker": "nia",
+					"content": {
+						"korean": "사람들이 서로의 번호를 확인해 주며 물러서고 있어요. 우리를 믿고 뭉친 거예요!"
+					}
+				}
+			]
+		}
+	],
+	"_side": {
+		"slot": "D",
+		"person": {
+			"id": "clerk",
+			"name": "정은하",
+			"role": "단말기 담당자"
+		},
+		"wants": "군중의 폭주를 막고 짓밟히는 이력서 데이터와 출력 장비를 보호하는 것",
+		"rule_link": "이름이 숫자로 지워지며 패닉에 빠진 군중이 이력서 출력구로 쇄도한다.",
+		"rep": "community+",
+		"events": {},
+		"flags": {
+			"crowd_delay": {
+				"kind": "bad",
+				"boss_penalty": -1,
+				"label": {
+					"korean": "군중 수습의 지체"
+				},
+				"boss_line": {
+					"korean": "대기자들을 수습하느라 지체된 사이 데이터 관리자가 통로를 완전히 차단한다."
+				}
+			},
+			"salvaged_dossier": {
+				"kind": "good",
+				"boss_penalty": 1,
+				"label": {
+					"korean": "회수한 원본 이력서 묶음"
+				},
+				"boss_choice": {
+					"korean": "온전하게 회수한 원본 이력서 뭉치를 펼쳐 데이터 관리자의 이름 검증 루틴을 교란한다."
+				}
+			},
+			"united_applicants": {
+				"kind": "good",
+				"boss_penalty": 2,
+				"label": {
+					"korean": "지원자들의 연대 탄원서"
+				},
+				"boss_choice": {
+					"korean": "합심한 지원자들의 탄원과 서명이 데이터 관리자의 배제 집행을 주저하게 만든다."
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,262 @@
+{
+	"id": "card_05_sealed_credit_chip",
+	"kind": "rep",
+	"title": {
+		"korean": "남은 신용 칩"
+	},
+	"intensity": "calm",
+	"after_story": 3,
+	"before_story": 5,
+	"condition": {
+		"leaning": "community-",
+		"among": [
+			"fighting-",
+			"fighting+",
+			"community-",
+			"community+",
+			"reason-",
+			"reason+"
+		],
+		"min": 20
+	},
+	"urgency": 8,
+	"leaning": "community-",
+	"background_tags": [
+		"control_room",
+		"afternoon",
+		"vault_light",
+		"coin_boxes",
+		"wary"
+	],
+	"dialogue": [
+		{
+			"speaker": "narrator",
+			"content": {
+				"korean": "거래상이 낡은 금고 위에 신용 칩을 세 개 늘어놓고 앉아 있었다."
+			}
+		},
+		{
+			"speaker": "chip_broker",
+			"content": {
+				"korean": "당신이죠? 남의 몫 먼저 챙겨서 창고 문을 열어 둔 사람. 그 얘기 들었어요."
+			}
+		},
+		{
+			"speaker": "chip_broker",
+			"content": {
+				"korean": "조각 하나만 내 몫으로 두면, 전력이랑 공구 전부 드려요. 안 그러면 이 칩들 다 어디로 갈지 몰라요."
+			}
+		},
+		{
+			"speaker": "echo",
+			"content": {
+				"korean": "저 칩 중에 내 정보망 열쇠가 섞여 있을지도 몰라. 저 사람 손에 있으면 불안한데."
+			}
+		},
+		{
+			"speaker": "narrator",
+			"content": {
+				"korean": "금고 틈으로 조각 하나가 걸려 있어, 거래상이 손으로 가리고 있었다."
+			}
+		}
+	],
+	"choices": [
+		{
+			"text": {
+				"korean": "거래상의 조건대로 조각 하나를 넘겨받고 전력과 공구를 챙긴다"
+			},
+			"path": "easy",
+			"mbti": "TP",
+			"flag": "traded_fragment",
+			"effects": {
+				"community": -20,
+				"gold": 120
+			},
+			"reward": [
+				"move_range_up"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "거래상이 조각을 품에 넣고, 대신 전력 케이블과 공구함을 밀어냈다."
+					}
+				},
+				{
+					"speaker": "chip_broker",
+					"content": {
+						"korean": "거래 성립. 이 조각은 제 보증금이에요. 나중에 찾으러 오면 값이 오를 거예요."
+					}
+				},
+				{
+					"speaker": "echo",
+					"content": {
+						"korean": "조각 하나가 빠졌어. 판에 구멍이 생겼는데, 저 사람은 그걸 보증금이라고 부르네."
+					}
+				}
+			]
+		},
+		{
+			"text": {
+				"korean": "거래상의 금고에서 조각을 빼내 돌려주고 칩은 되찾아 준다"
+			},
+			"path": "hard",
+			"mbti": "FJ",
+			"flag": "returned_chip",
+			"effects": {
+				"community": 20,
+				"echo": 15
+			},
+			"reward": [
+				"defense_up"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "당신이 금고 문을 열자 거래상이 뒷걸음질 쳤고, 조각은 단말기로 돌아왔다."
+					}
+				},
+				{
+					"speaker": "chip_broker",
+					"content": {
+						"korean": "이봐요! 내 보증금! …근데 칩은 왜 챙겨 주는 거죠? 그건 제가 잃을 뻔한 거였는데."
+					}
+				},
+				{
+					"speaker": "echo",
+					"content": {
+						"korean": "칩은 돌려줬고 조각은 찾았고. 나는 아직 내 열쇠가 어디 있는지 모르겠지만."
+					}
+				}
+			]
+		},
+		{
+			"text": {
+				"korean": "거래상에게 조각을 내놓으라고 하고 손대지 않게 한다"
+			},
+			"path": "stat",
+			"mbti": "TJ",
+			"require": {
+				"stat": "community",
+				"op": "<=",
+				"value": -40
+			},
+			"flag": "chip_squeezed",
+			"effects": {
+				"community": -20,
+				"reason": 15
+			},
+			"reward": [
+				"intelligence_up"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "당신이 금고 앞을 가리자, 거래상이 칩을 챙겨 뒤로 물러섰다."
+					}
+				},
+				{
+					"speaker": "chip_broker",
+					"content": {
+						"korean": "알겠어요, 알겠어요. 당신 이름값이 그래서 있는 거군요. 조각은 가져가요."
+					}
+				},
+				{
+					"speaker": "echo",
+					"content": {
+						"korean": "저 사람이 칩을 두 손으로 감쌌어. 조각보다 그게 더 아까운 모양이야."
+					}
+				}
+			]
+		},
+		{
+			"text": {
+				"korean": "거래상에게 금고 보관료 120골드를 내고 조각만 사 온다"
+			},
+			"path": "gold",
+			"mbti": "EP",
+			"require": {
+				"stat": "gold",
+				"op": ">=",
+				"value": 120
+			},
+			"effects": {
+				"gold": -120,
+				"community": -10
+			},
+			"reward": [
+				"cooldown_reset"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "금화가 금고 위에 쌓이자, 거래상이 조각을 아쉬운 얼굴로 밀어냈다."
+					}
+				},
+				{
+					"speaker": "chip_broker",
+					"content": {
+						"korean": "보관료까지 쳐 주시다니. 이건 제 장부에 남겨 둘게요. 다음에 또 오세요."
+					}
+				},
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "조각은 돌아왔지만 금고에는 칩 두 개만 남았다. 거래상은 그 둘을 계속 만지작거렸다."
+					}
+				}
+			]
+		}
+	],
+	"_side": {
+		"slot": "B",
+		"person": {
+			"id": "chip_broker",
+			"name": "신용 거래상",
+			"role": "제어실 암거래상"
+		},
+		"wants": "자기 신용 칩을 잃을 위기라며, 조각 하나를 자기 몫으로 떼어 가는 조건으로 전력과 공구를 넘기겠다고 한다.",
+		"rule_link": "조각이 하나라도 빠지면 맞춘 판이 다시 흩어지는데, 거래상은 그 조각을 자기 보증금으로 잡아두려 한다.",
+		"rep": "community-",
+		"events": {},
+		"flags": {
+			"traded_fragment": {
+				"kind": "bad",
+				"boss_penalty": -1,
+				"label": {
+					"korean": "빠진 조각"
+				},
+				"boss_line": {
+					"korean": "맞춘 판 한가운데가 비어 있어, 그 구멍으로 붉은 경고가 새어 나온다."
+				}
+			},
+			"returned_chip": {
+				"kind": "good",
+				"boss_penalty": 1,
+				"label": {
+					"korean": "돌려준 칩"
+				},
+				"boss_choice": {
+					"korean": "당신은 거래상에게 돌려받은 신용 칩을 단말기에 꽂아 잠긴 조각 홈을 연다."
+				}
+			},
+			"chip_squeezed": {
+				"kind": "good",
+				"boss_penalty": 2,
+				"label": {
+					"korean": "쥔 칩"
+				},
+				"boss_choice": {
+					"korean": "당신은 거래상이 쥐여 준 신용 칩을 단말기에 넣고 조각을 맞춘다."
+				}
+			}
+		}
+	}
+}

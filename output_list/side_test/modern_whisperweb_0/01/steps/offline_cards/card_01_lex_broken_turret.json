@@ -1,0 +1,191 @@
+{
+	"id": "card_01_lex_broken_turret",
+	"kind": "rep",
+	"title": {
+		"korean": "미쳐버린 보안 포탑"
+	},
+	"intensity": "calm",
+	"after_story": 7,
+	"before_story": 10,
+	"condition": {
+		"leaning": "fighting-",
+		"among": [
+			"fighting-",
+			"fighting+",
+			"community-",
+			"community+",
+			"reason-",
+			"reason+"
+		],
+		"min": 20
+	},
+	"urgency": 8,
+	"leaning": "fighting-",
+	"background_tags": [
+		"broken_turret",
+		"server_rack",
+		"dim_light",
+		"sparks",
+		"tense_atmosphere"
+	],
+	"dialogue": [
+		{
+			"speaker": "echo",
+			"content": {
+				"korean": "저 보안 포탑, 아까부터 아군 적군 안 가리고 마구 쏘고 있어!"
+			}
+		},
+		{
+			"speaker": "narrator",
+			"content": {
+				"korean": "오작동하는 포탑 뒤에서 험악한 인상의 용병이 고개를 내민다."
+			}
+		},
+		{
+			"speaker": "lex",
+			"content": {
+				"korean": "다짜고짜 다 때려부수고 다닌다는 게 당신인가 보군. 저 미쳐버린 포탑 좀 박살 내주지 않겠어?"
+			}
+		}
+	],
+	"choices": [
+		{
+			"text": {
+				"korean": "포탑을 강제로 부숴버린다."
+			},
+			"path": "easy",
+			"mbti": "ST",
+			"flag": "destroy_turret",
+			"effects": {
+				"fighting": -20,
+				"echo": -5
+			},
+			"reward": [
+				"attack_up"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "당신이 무기로 포탑을 내려치자 요란한 소리와 함께 박살 난다."
+					}
+				},
+				{
+					"speaker": "echo",
+					"content": {
+						"korean": "해결되긴 했는데, 부서진 잔해 때문에 금방 들키겠어."
+					}
+				}
+			]
+		},
+		{
+			"text": {
+				"korean": "포탑의 사각지대로 조용히 피한다."
+			},
+			"path": "hard",
+			"mbti": "IN",
+			"flag": "avoid_turret",
+			"effects": {
+				"fighting": 20,
+				"echo": 10
+			},
+			"reward": [
+				"hp_down"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "당신은 렉스의 말을 무시하고 포탑의 사각지대로 조용히 이동했다."
+					}
+				},
+				{
+					"speaker": "echo",
+					"content": {
+						"korean": "맞아, 굳이 힘을 빼서 체력을 낭비할 필요는 없지."
+					}
+				}
+			]
+		},
+		{
+			"text": {
+				"korean": "렉스를 협박해 ���탑 제어기를 빼앗는다."
+			},
+			"path": "stat",
+			"mbti": "ET",
+			"require": {
+				"stat": "fighting",
+				"op": "<=",
+				"value": -40
+			},
+			"flag": "turret_controller",
+			"effects": {
+				"fighting": -30
+			},
+			"reward": [
+				"move_range_up"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "당신이 무기를 들이밀며 압박하자 렉스가 투덜거리며 제어기를 넘긴다."
+					}
+				},
+				{
+					"speaker": "echo",
+					"content": {
+						"korean": "역시 말보다 행동이 빠르다니까. 제어기는 잘 챙겨둬."
+					}
+				}
+			]
+		}
+	],
+	"_side": {
+		"slot": "D",
+		"person": {
+			"name": "렉스",
+			"role": "용병",
+			"id": "lex"
+		},
+		"wants": "오작동하는 포탑을 힘으로 부숴달라고 함",
+		"rule_link": "데이터가 섞여 통제 불능이 된 보안 포탑 문제를 힘으로 해결할지 선택",
+		"rep": "fighting-",
+		"events": {},
+		"flags": {
+			"destroy_turret": {
+				"kind": "bad",
+				"boss_penalty": -1,
+				"label": {
+					"korean": "부서진 포탑"
+				},
+				"boss_line": {
+					"korean": "보안관이 부서진 포탑 잔해를 가리키며 분노한다."
+				}
+			},
+			"avoid_turret": {
+				"kind": "good",
+				"boss_penalty": 1,
+				"label": {
+					"korean": "보존된 체력"
+				},
+				"boss_choice": {
+					"korean": "아낀 기력으로 보안관의 공격을 단숨에 튕겨낸다."
+				}
+			},
+			"turret_controller": {
+				"kind": "good",
+				"boss_penalty": 2,
+				"label": {
+					"korean": "포탑 제어기"
+				},
+				"boss_choice": {
+					"korean": "포탑 제어기를 던져 보안관의 시야를 가린다."
+				}
+			}
+		}
+	}
+}

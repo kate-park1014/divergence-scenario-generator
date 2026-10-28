@@ -1,0 +1,157 @@
+{
+	"id": "card_02_clerk_safe_desk",
+	"kind": "callback",
+	"title": {
+		"korean": "보존된 명찰"
+	},
+	"intensity": "high",
+	"after_story": 7,
+	"before_story": 10,
+	"callback": {
+		"seed": "clerk_request_hard",
+		"min_rooms_after": 2
+	},
+	"background_tags": [
+		"search_room",
+		"indoor_fluorescent",
+		"terminal_desk",
+		"orderly_queue",
+		"tense_calm"
+	],
+	"dialogue": [
+		{
+			"speaker": "narrator",
+			"content": {
+				"korean": "검색실 안이 숫자로 술렁이는 가운데, 안내 데스크의 단말기 담당자가 명찰을 만지며 서 있다."
+			}
+		},
+		{
+			"speaker": "clerk",
+			"content": {
+				"korean": "아까 허위 서류들을 전부 반려해 주신 덕분에 제 이름은 숫자로 덮이지 않고 무사합니다."
+			}
+		},
+		{
+			"speaker": "clerk",
+			"content": {
+				"korean": "하지만 주변 단말기들은 온통 숫자로 뒤덮여 있습니다. 데이터 관리자가 오기 전에 손을 써야 합니다."
+			}
+		},
+		{
+			"speaker": "nia",
+			"content": {
+				"korean": "이쪽 데스크는 온전하네요. 하지만 방송에서 계속 숫자를 부르고 있어요."
+			}
+		}
+	],
+	"choices": [
+		{
+			"text": {
+				"korean": "담당자에게서 단말기 긴급 관리자 인증 칩을 건네받는다"
+			},
+			"path": "easy",
+			"mbti": "TP",
+			"flag": "clerk_code_override",
+			"effects": {
+				"fighting": 15,
+				"reason": 20,
+				"echo": 10
+			},
+			"reward": [
+				"attack_up"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "당신은 담당자가 건넨 긴급 관리자 인증 칩을 단말기에 꽂아 보안 권한을 넘겨받았다."
+					}
+				},
+				{
+					"speaker": "clerk",
+					"content": {
+						"korean": "이 코드로 단말기 제어권을 열면 서버실 보안문 앞에서도 도움이 될 겁니다."
+					}
+				},
+				{
+					"speaker": "nia",
+					"content": {
+						"korean": "이름을 온전히 지켜낸 직원이 남아 있어서 검색실 처리가 한결 수월하겠어요."
+					}
+				}
+			]
+		},
+		{
+			"text": {
+				"korean": "담당자와 함께 정상 반려된 서류들의 명찰을 지원자들에게 돌려준다"
+			},
+			"path": "hard",
+			"mbti": "FJ",
+			"flag": "applicants_shield",
+			"effects": {
+				"community": 20,
+				"gold": 60,
+				"echo": 10,
+				"reason": 10
+			},
+			"reward": [
+				"shield"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "당신은 담당자와 함께 단말기 대기열의 지원자들에게 원래 이름표를 차례대로 나누어 주었다."
+					}
+				},
+				{
+					"speaker": "clerk",
+					"content": {
+						"korean": "반려했던 이력서들을 정확히 분류해 둔 덕에 이 사람들의 이름도 무사했습니다."
+					}
+				},
+				{
+					"speaker": "nia",
+					"content": {
+						"korean": "숫자로 불리며 불안해하던 사람들이 제 이름을 되찾고 안도하고 있어요."
+					}
+				}
+			]
+		}
+	],
+	"_side": {
+		"slot": "D",
+		"person": {
+			"id": "clerk",
+			"role": "정보 검색실 단말기 관리 직원",
+			"name": "단말기 담당자"
+		},
+		"wants": "자신의 이름이 남아 있는 단말기 데스크를 지키며 숫자로 혼란해진 대기실을 수습하려 한다.",
+		"rule_link": "원칙대로 허위 이력서를 반려해 이름을 보존한 직원이 혼란 속에서 업무를 유지한다.",
+		"events": {},
+		"flags": {
+			"clerk_code_override": {
+				"kind": "good",
+				"boss_penalty": 1,
+				"label": {
+					"korean": "관리자 코드 확보"
+				},
+				"boss_choice": {
+					"korean": "정규 승인된 단말기 관리자 코드를 이용해 서버실 앞 방어막 출력을 일시적으로 낮춥니다."
+				}
+			},
+			"applicants_shield": {
+				"kind": "good",
+				"boss_penalty": 2,
+				"label": {
+					"korean": "지원자 대열 분산"
+				},
+				"boss_choice": {
+					"korean": "이름을 보존한 지원자 30명이 서버실 통로에서 관리자의 주의를 분산시킵니다."
+				}
+			}
+		}
+	}
+}

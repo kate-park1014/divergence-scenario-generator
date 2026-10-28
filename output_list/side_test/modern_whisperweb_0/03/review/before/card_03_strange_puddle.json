@@ -1,0 +1,146 @@
+{
+	"id": "card_03_strange_puddle",
+	"kind": "normal",
+	"title": {
+		"korean": "수상한 물웅덩이"
+	},
+	"intensity": "calm",
+	"after_story": 3,
+	"before_story": 5,
+	"background_tags": [
+		"puddle",
+		"chip",
+		"coin",
+		"shadow",
+		"floor"
+	],
+	"dialogue": [
+		{
+			"speaker": "curious_tech",
+			"content": {
+				"korean": "저기 물웅덩이 보이죠? 저 안에 멀쩡한 메모리 칩이 빠졌는데, 제가 주울 수 있다에 걸어볼래요?"
+			}
+		},
+		{
+			"speaker": "kai",
+			"content": {
+				"korean": "물이 평범해 보이지 않아. 뭔가 끈적거리는 이물질이 섞여 있는 것 같은데."
+			}
+		},
+		{
+			"speaker": "curious_tech",
+			"content": {
+				"korean": "에이, 그냥 물이라니까요. 돈 걸고 한 번 해보죠!"
+			}
+		}
+	],
+	"choices": [
+		{
+			"text": {
+				"korean": "기술자가 칩을 건질 수 없다에 돈을 걸어 내기에 응한다."
+			},
+			"path": "easy",
+			"mbti": "SP",
+			"effects": {
+				"gold": -30
+			},
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "기술자가 손을 집어넣으려다 끈적이는 물의 촉감에 놀라 손을 뺐다."
+					}
+				},
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "결국 칩을 건지지 못한 기술자가 투덜거렸다."
+					}
+				}
+			],
+			"event": "minigame_slot",
+			"event_intro": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "기술자가 동전을 꺼내며 칩을 무사히 건져낼지 내기를 제안한다."
+					}
+				}
+			]
+		},
+		{
+			"text": {
+				"korean": "내기를 무시하고 물웅덩이에 접근하지 못하게 막는다."
+			},
+			"path": "hard",
+			"mbti": "SJ",
+			"effects": {
+				"reason": 15,
+				"gold": 50
+			},
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "강하게 제지하자 기술자는 입맛을 다시며 물러났다."
+					}
+				},
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "정체불명의 물웅덩이를 피한 덕에 위험을 면했다."
+					}
+				}
+			]
+		},
+		{
+			"text": {
+				"korean": "특수 집게를 사서 웅덩이의 칩을 안전하게 건져낸다."
+			},
+			"path": "gold",
+			"mbti": "NT",
+			"require": {
+				"stat": "gold",
+				"op": ">=",
+				"value": 60
+			},
+			"effects": {
+				"gold": -60
+			},
+			"reward": [
+				"intelligence_up"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "특수 집게를 사용해 끈적이는 물에 닿지 않고 칩을 건져냈다."
+					}
+				},
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "칩의 데이터를 확인해 유용한 정보를 얻었다."
+					}
+				}
+			]
+		}
+	],
+	"_side": {
+		"slot": "B",
+		"person": {
+			"role": "설비 점검자",
+			"name": "호기심 많은 기술자",
+			"id": "curious_tech"
+		},
+		"wants": "물방울이 고인 곳에서 쓸만한 부품을 건지려 내기를 제안한다.",
+		"rule_link": "냉각수에 섞인 이물질이 기계에 미치는 영향을 간접적으로 드러낸다.",
+		"events": {
+			"easy": "기술자가 심심풀이로 내기를 걸어왔기 때문이다."
+		},
+		"flags": {}
+	}
+}

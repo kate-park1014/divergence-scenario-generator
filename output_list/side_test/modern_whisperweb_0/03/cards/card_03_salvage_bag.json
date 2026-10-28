@@ -1,0 +1,216 @@
+{
+	"id": "card_03_salvage_bag",
+	"kind": "rep",
+	"title": {
+		"korean": "남은 몫의 자루"
+	},
+	"intensity": "calm",
+	"after_story": 7,
+	"before_story": 10,
+	"condition": {
+		"leaning": "community-",
+		"among": [
+			"fighting-",
+			"fighting+",
+			"community-",
+			"community+",
+			"reason-",
+			"reason+"
+		],
+		"min": 20
+	},
+	"urgency": 8,
+	"leaning": "community-",
+	"background_tags": [
+		"pipe_room",
+		"dim",
+		"dust",
+		"crowd",
+		"tense"
+	],
+	"dialogue": [
+		{
+			"speaker": "narrator",
+			"content": {
+				"korean": "아이가 조각을 주워 자루에 넣고 있었다. 자루 밑이 조각 무게로 늘어져 있었다."
+			}
+		},
+		{
+			"speaker": "salvage_kid",
+			"content": {
+				"korean": "당신이 그 냉각수 부은 사람이죠? 이거, 값 나가는 것만 골라 봤어요."
+			}
+		},
+		{
+			"speaker": "kai",
+			"content": {
+				"korean": "저 자루, 벌써 반쯤 찼어. 우리 몫은 어디 있냐고 물어봐야 하는 거 아냐."
+			}
+		},
+		{
+			"speaker": "salvage_kid",
+			"content": {
+				"korean": "반으로 나눠요. 대신 제가 먼저 고를게요. 이건 제가 주운 거니까."
+			}
+		}
+	],
+	"choices": [
+		{
+			"text": {
+				"korean": "아이의 자루에서 절반을 덜어 내 몫을 챙긴다."
+			},
+			"path": "easy",
+			"mbti": "TP",
+			"flag": "took_kid_share",
+			"effects": {
+				"community": -15,
+				"reason": 10
+			},
+			"reward": [
+				"attack_up"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "salvage_kid",
+					"content": {
+						"korean": "야, 이건 제가 주운 거라니까요!"
+					}
+				},
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "자루에서 조각 절반이 당신 손으로 옮겨졌다. 아이는 남은 조각을 세며 입을 삐죽였다."
+					}
+				},
+				{
+					"speaker": "kai",
+					"content": {
+						"korean": "나눈 건 맞는데... 아이가 자루를 안고 벽 쪽으로 가 버렸어."
+					}
+				}
+			]
+		},
+		{
+			"text": {
+				"korean": "아이에게 자루를 통째로 넘기고 대신 조각에 찍힌 유출 경로를 외운다."
+			},
+			"path": "hard",
+			"mbti": "FJ",
+			"flag": "leak_route",
+			"effects": {
+				"community": 15,
+				"fighting": -10
+			},
+			"reward": [
+				"intelligence_up"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "salvage_kid",
+					"content": {
+						"korean": "다... 다 주는 거예요? 진짜요?"
+					}
+				},
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "아이가 자루를 끌어안고 달아났다. 당신 손에는 조각에서 읽어 낸 유출 경로 숫자만 남았다."
+					}
+				},
+				{
+					"speaker": "kai",
+					"content": {
+						"korean": "경로가 일곱 갈래야. 이거면 어디로 새는지 짚을 수 있겠네."
+					}
+				}
+			]
+		},
+		{
+			"text": {
+				"korean": "아이에게 당신 몫은 됐다며 자루를 지키고 복도 끝까지 따라오라고 한다."
+			},
+			"path": "stat",
+			"mbti": "EP",
+			"require": {
+				"stat": "community",
+				"op": "<=",
+				"value": -40
+			},
+			"flag": "kid_follows",
+			"effects": {
+				"community": -20,
+				"echo": 10
+			},
+			"reward": [
+				"move_range_up"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "salvage_kid",
+					"content": {
+						"korean": "정말요? 그럼 제가 뒤에서 자루 지킬게요!"
+					}
+				},
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "아이가 자루를 끌며 당신 뒤를 따랐다. 자루 밑이 바닥을 긁어 조각이 자꾸 흘렀다."
+					}
+				},
+				{
+					"speaker": "kai",
+					"content": {
+						"korean": "뒤에서 조각 흘리는 소리가 계속 들려. 근데 발은 빠르네."
+					}
+				}
+			]
+		}
+	],
+	"_side": {
+		"slot": "D",
+		"person": {
+			"id": "salvage_kid",
+			"name": "파편 줍는 아이",
+			"role": "전산실 심부름꾼"
+		},
+		"wants": "뒤섞인 조각 중 값 나가는 것을 골라 자기 자루에 채우고, 주인공에게도 한몫 챙기라고 손짓한다.",
+		"rule_link": "데이터 스크린 조각은 정보이자 값이 나가는 물건이라, 누가 얼마나 챙기느냐가 이 방의 몫을 가른다.",
+		"rep": "community-",
+		"events": {},
+		"flags": {
+			"took_kid_share": {
+				"kind": "bad",
+				"boss_penalty": -1,
+				"label": {
+					"korean": "덜어 낸 몫"
+				},
+				"boss_line": {
+					"korean": "파편 줍는 아이가 복도에서 당신을 보고 자루를 뒤로 숨긴다."
+				}
+			},
+			"leak_route": {
+				"kind": "good",
+				"boss_penalty": 1,
+				"label": {
+					"korean": "외운 유출 경로"
+				},
+				"boss_choice": {
+					"korean": "당신이 외운 유출 경로를 복도 벽의 배관도에 손으로 짚는다."
+				}
+			},
+			"kid_follows": {
+				"kind": "good",
+				"boss_penalty": 2,
+				"label": {
+					"korean": "따라오는 아이"
+				},
+				"boss_choice": {
+					"korean": "파편 줍는 아이가 자루를 끌고 당신 뒤에서 길을 가리킨다."
+				}
+			}
+		}
+	}
+}

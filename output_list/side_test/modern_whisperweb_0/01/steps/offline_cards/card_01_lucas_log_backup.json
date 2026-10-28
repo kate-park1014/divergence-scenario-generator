@@ -1,0 +1,189 @@
+{
+	"id": "card_01_lucas_log_backup",
+	"kind": "rep",
+	"title": {
+		"korean": "절차대로 백업된 로그"
+	},
+	"intensity": "calm",
+	"after_story": 3,
+	"before_story": 5,
+	"condition": {
+		"leaning": "reason-",
+		"among": [
+			"fighting-",
+			"fighting+",
+			"community-",
+			"community+",
+			"reason-",
+			"reason+"
+		],
+		"min": 20
+	},
+	"urgency": 8,
+	"leaning": "reason-",
+	"background_tags": [
+		"server_rack",
+		"day",
+		"bright",
+		"sparse",
+		"strict"
+	],
+	"dialogue": [
+		{
+			"speaker": "lucas",
+			"content": {
+				"korean": "어떤 혼란 속에서도 절차를 지키는 분이라고 들었습니다."
+			}
+		},
+		{
+			"speaker": "lucas",
+			"content": {
+				"korean": "일시적으로 복구된 이 로그들을 정식으로 백업할 때까지 아무도 못 오게 막아주십시오."
+			}
+		},
+		{
+			"speaker": "echo",
+			"content": {
+				"korean": "그냥 통째로 복사해서 가져가면 빠를 텐데, 굳이 저 복잡한 절차를 다 밟아야 해?"
+			}
+		}
+	],
+	"choices": [
+		{
+			"text": {
+				"korean": "루카스가 백업을 마칠 때까지 주변을 경계한다"
+			},
+			"path": "easy",
+			"mbti": "SJ",
+			"flag": "lucas_slow_backup",
+			"effects": {
+				"gold": 50,
+				"reason": -20
+			},
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "당신은 지루한 시간을 견디며 루카스의 곁을 지켰다."
+					}
+				},
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "백업이 끝나자 그가 수고비를 지급했다."
+					}
+				}
+			]
+		},
+		{
+			"text": {
+				"korean": "로그 데이터를 드라이브에 강제로 복사해 빼낸다"
+			},
+			"path": "hard",
+			"mbti": "NP",
+			"flag": "lucas_fast_data",
+			"effects": {
+				"echo": 10,
+				"reason": 20
+			},
+			"reward": [
+				"hp_down"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "당신이 선을 뽑고 강제로 데이터를 복사해버렸다."
+					}
+				},
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "루카스가 규정 위반이라며 길길이 날뛰었다."
+					}
+				}
+			]
+		},
+		{
+			"text": {
+				"korean": "감찰관의 권한을 이용해 백업 절차를 간소화시킨다"
+			},
+			"path": "stat",
+			"mbti": "TJ",
+			"require": {
+				"stat": "reason",
+				"op": "<=",
+				"value": -40
+			},
+			"flag": "lucas_bypass",
+			"effects": {
+				"reason": -30,
+				"community": 10
+			},
+			"reward": [
+				"cooldown_reset"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "당신이 규정의 빈틈을 짚어주자 루카스가 고개를 끄덕였다."
+					}
+				},
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "순식간에 합법적인 백업이 끝났다."
+					}
+				}
+			]
+		}
+	],
+	"_side": {
+		"slot": "B",
+		"person": {
+			"name": "루카스",
+			"role": "원칙주의 감찰관",
+			"id": "lucas"
+		},
+		"wants": "복구된 로그 데이터를 정식 절차대로 백업할 때까지 옆에서 보안을 서 달라고 함",
+		"rule_link": "조각이 깨져 강제 복구된 데이터 중 중요한 로그를 절차대로 보존하려 함",
+		"rep": "reason-",
+		"events": {},
+		"flags": {
+			"lucas_slow_backup": {
+				"kind": "bad",
+				"boss_penalty": -1,
+				"label": {
+					"korean": "느린 백업 절차"
+				},
+				"boss_line": {
+					"korean": "꼬여버린 백업 절차 탓에 보안관이 당신의 동선을 미리 파악한다."
+				}
+			},
+			"lucas_fast_data": {
+				"kind": "good",
+				"boss_penalty": 1,
+				"label": {
+					"korean": "빼돌린 로그"
+				},
+				"boss_choice": {
+					"korean": "빼돌린 로그 데이터를 이용해 보안관의 약점을 찾아낸다."
+				}
+			},
+			"lucas_bypass": {
+				"kind": "good",
+				"boss_penalty": 2,
+				"label": {
+					"korean": "간소화된 절차"
+				},
+				"boss_choice": {
+					"korean": "간소화된 절차를 이용해 보안관의 통제 구역을 합법적으로 통과한다."
+				}
+			}
+		}
+	}
+}

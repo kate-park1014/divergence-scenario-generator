@@ -1,0 +1,246 @@
+{
+	"id": "card_04_shared_ration",
+	"kind": "rep",
+	"title": {
+		"korean": "나눠야 하는 몫"
+	},
+	"intensity": "calm",
+	"after_story": 3,
+	"before_story": 5,
+	"condition": {
+		"leaning": "community+",
+		"among": [
+			"fighting-",
+			"fighting+",
+			"community-",
+			"community+",
+			"reason-",
+			"reason+"
+		],
+		"min": 20
+	},
+	"urgency": 8,
+	"leaning": "community+",
+	"background_tags": [
+		"data_waste_yard",
+		"late_shift",
+		"warehouse_glare",
+		"work_crew",
+		"hopeful"
+	],
+	"dialogue": [
+		{
+			"speaker": "bex",
+			"content": {
+				"korean": "당신이 처리장 사람들 일을 대신 맡아 준다는 그 사람이죠? 이번엔 저희 차례예요."
+			}
+		},
+		{
+			"speaker": "dax",
+			"content": {
+				"korean": "또 벡스 씨예요. 이번엔 승진 얘기 아니죠?"
+			}
+		},
+		{
+			"speaker": "bex",
+			"content": {
+				"korean": "부품 전부 공용 창고에 넣어 주세요. 그러면 아무도 저를 탓하지 않을 테니까요."
+			}
+		},
+		{
+			"speaker": "narrator",
+			"content": {
+				"korean": "벡스가 창고 열쇠를 두 손으로 감싼 채 당신 얼굴만 보고 있었다."
+			}
+		}
+	],
+	"choices": [
+		{
+			"text": {
+				"korean": "부품 전부를 공용 창고에 넣고 명단을 붙인다"
+			},
+			"path": "easy",
+			"mbti": "FJ",
+			"flag": "shared_store",
+			"effects": {
+				"community": 20,
+				"echo": 5
+			},
+			"reward": [
+				"shield"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "bex",
+					"content": {
+						"korean": "고맙습니다! 이제 아무도 제 탓을 못 하겠네요."
+					}
+				},
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "명단이 붙자 작업자들이 우르르 몰려와 부품을 하나씩 받아 갔다."
+					}
+				},
+				{
+					"speaker": "dax",
+					"content": {
+						"korean": "명단 맨 아래에 제 이름도 써 주시죠. 그럼 저도 한 몫."
+					}
+				}
+			]
+		},
+		{
+			"text": {
+				"korean": "부품을 당신이 직접 관리하고 벡스에게 창고 열쇠를 돌려받는다"
+			},
+			"path": "hard",
+			"mbti": "TP",
+			"flag": "shared_store_b4",
+			"effects": {
+				"community": -15,
+				"reason": 10
+			},
+			"reward": [
+				"intelligence_up"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "bex",
+					"content": {
+						"korean": "제 열쇠를… 그럼 저는 뭘 하나요?"
+					}
+				},
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "벡스가 열쇠를 내려놓고 뒤로 물러섰다. 창고 문은 닫힌 채였다."
+					}
+				},
+				{
+					"speaker": "dax",
+					"content": {
+						"korean": "열쇠는 받았는데, 이제 문 열 사람이 없네요."
+					}
+				}
+			]
+		},
+		{
+			"text": {
+				"korean": "당신을 따르는 작업자들을 불러 부품 분배를 맡긴다"
+			},
+			"path": "stat",
+			"mbti": "EF",
+			"require": {
+				"stat": "community",
+				"op": ">=",
+				"value": 40
+			},
+			"flag": "shared_store_b4",
+			"effects": {
+				"community": 25,
+				"echo": 10
+			},
+			"reward": [
+				"heal"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "bex",
+					"content": {
+						"korean": "다들 당신 말만 기다렸어요. 저는 명단 정리할게요."
+					}
+				},
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "작업자들이 스스로 줄을 서서 부품을 나눠 들었다."
+					}
+				},
+				{
+					"speaker": "dax",
+					"content": {
+						"korean": "사람들이 알아서 움직이니까 편하네요. 좀 무섭기도 하고."
+					}
+				}
+			]
+		},
+		{
+			"text": {
+				"korean": "벡스에게 100골드를 주고 부품 대신 공용 창고를 새로 잠근다"
+			},
+			"path": "gold",
+			"mbti": "SJ",
+			"require": {
+				"stat": "gold",
+				"op": ">=",
+				"value": 100
+			},
+			"effects": {
+				"gold": -100,
+				"community": 10
+			},
+			"reward": [
+				"defense_up"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "bex",
+					"content": {
+						"korean": "새 자물쇠라니… 이제 아무도 못 열겠네요. 좋아요, 좋아요."
+					}
+				},
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "벡스가 새 자물쇠를 만지작거리며 창고 앞을 서성였다."
+					}
+				},
+				{
+					"speaker": "dax",
+					"content": {
+						"korean": "잠그는 데 돈 쓰다니, 오늘 지갑이 자꾸 얇아지네요."
+					}
+				}
+			]
+		}
+	],
+	"_side": {
+		"slot": "B",
+		"person": {
+			"id": "bex",
+			"name": "벡스",
+			"role": "폐기물 분류 작업자"
+		},
+		"wants": "부품을 전부 처리장 공용으로 돌려달라며, 당신이 모두를 위해 나선다는 소문에 기대어 부탁한다.",
+		"rule_link": "깨끗한 데이터 부품을 공용으로 돌리는 결정 — 그 부품을 쓸 사람들이 스크린 조각을 먼저 손에 넣으려 한다.",
+		"rep": "community+",
+		"events": {},
+		"flags": {
+			"shared_store": {
+				"kind": "bad",
+				"boss_penalty": -1,
+				"label": {
+					"korean": "공용 창고"
+				},
+				"boss_line": {
+					"korean": "공용 창고 명단에 오른 작업자들이 앞을 막는 폐기물을 함께 치워 준다."
+				}
+			},
+			"shared_store_b4": {
+				"kind": "good",
+				"boss_penalty": 2,
+				"label": {
+					"korean": "공용 창고"
+				},
+				"boss_choice": {
+					"korean": "공용 창고 명단에 오른 작업자들이 앞을 막는 폐기물을 함께 치워 준다."
+				}
+			}
+		}
+	}
+}

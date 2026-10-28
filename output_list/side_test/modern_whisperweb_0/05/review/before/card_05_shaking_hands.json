@@ -1,0 +1,255 @@
+{
+	"id": "card_05_shaking_hands",
+	"kind": "rep",
+	"title": {
+		"korean": "떨리는 손을 잡는 일"
+	},
+	"intensity": "calm",
+	"after_story": 7,
+	"before_story": 10,
+	"condition": {
+		"leaning": "fighting+",
+		"among": [
+			"fighting-",
+			"fighting+",
+			"community-",
+			"community+",
+			"reason-",
+			"reason+"
+		],
+		"min": 20
+	},
+	"urgency": 8,
+	"leaning": "fighting+",
+	"background_tags": [
+		"control_room",
+		"fluorescent",
+		"cold_desk",
+		"two_people",
+		"awkward"
+	],
+	"dialogue": [
+		{
+			"speaker": "narrator",
+			"content": {
+				"korean": "단말기 옆에 앉은 신입 코더의 손가락이 조각 위에서 계속 미끄러졌다."
+			}
+		},
+		{
+			"speaker": "junior_coder",
+			"content": {
+				"korean": "저기, 남의 손 놓치지 않고 끝까지 붙잡아 준다는 사람이 바로 당신이죠?"
+			}
+		},
+		{
+			"speaker": "junior_coder",
+			"content": {
+				"korean": "제 손이 이래서요. 조각 하나만 잡아 주시면 보고서엔 제 이름으로 올릴게요."
+			}
+		},
+		{
+			"speaker": "echo",
+			"content": {
+				"korean": "보고서 이름이 뭐가 중요해! 근데 저 손, 진짜 심하게 떨리는데?"
+			}
+		}
+	],
+	"choices": [
+		{
+			"text": {
+				"korean": "신입 코더의 손을 잡아 조각을 홈에 얹게 돕는다"
+			},
+			"path": "easy",
+			"mbti": "FJ",
+			"flag": "steady_junior_hands",
+			"effects": {
+				"community": 20,
+				"fighting": -5,
+				"echo": 10
+			},
+			"reward": [
+				"heal"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "코더의 손등 위에 당신의 손이 겹쳤다. 조각이 홈에 조용히 내려앉았다."
+					}
+				},
+				{
+					"speaker": "junior_coder",
+					"content": {
+						"korean": "됐다, 됐어요! 이거 진짜 제가 한 거 맞죠? 보고서에 꼭 쓰세요!"
+					}
+				},
+				{
+					"speaker": "echo",
+					"content": {
+						"korean": "보고서 타령은 여전하네. 그래도 조각 하나가 살았어."
+					}
+				}
+			]
+		},
+		{
+			"text": {
+				"korean": "코더를 옆에 앉혀 두고 조각 맞추기 순서를 직접 확인한다"
+			},
+			"path": "hard",
+			"mbti": "TP",
+			"flag": "junior_notes",
+			"effects": {
+				"community": -15,
+				"reason": 15,
+				"echo": -5
+			},
+			"reward": [
+				"intelligence_up"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "코더가 자기 무릎 위에서 손을 비볐다. 당신은 조각의 홈 방향만 확인했다."
+					}
+				},
+				{
+					"speaker": "junior_coder",
+					"content": {
+						"korean": "저, 저도 뭔가 했어요. 메모는 제가 한 거예요."
+					}
+				},
+				{
+					"speaker": "echo",
+					"content": {
+						"korean": "혼자 다 하려니 힘들지? 그래도 순서는 확실하네."
+					}
+				}
+			]
+		},
+		{
+			"text": {
+				"korean": "신입 코더에게 조각 잡는 법을 알려 주고 손을 떼게 한다"
+			},
+			"path": "stat",
+			"mbti": "NF",
+			"require": {
+				"stat": "fighting",
+				"op": ">=",
+				"value": 40
+			},
+			"flag": "junior_deflects",
+			"effects": {
+				"community": 25,
+				"fighting": 10,
+				"echo": 5
+			},
+			"reward": [
+				"shield"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "코더가 혼자 조각을 홈에 얹었다. 손끝이 아직 떨렸지만 조각은 붙어 있었다."
+					}
+				},
+				{
+					"speaker": "junior_coder",
+					"content": {
+						"korean": "해냈어요! 당신이 옆에 있어 주니까 손이 안 떨려요."
+					}
+				},
+				{
+					"speaker": "echo",
+					"content": {
+						"korean": "사람 하나 붙잡아 두는 재주가 있네. 저 코더, 이제 안 떠날걸."
+					}
+				}
+			]
+		},
+		{
+			"text": {
+				"korean": "코더의 떨리는 손을 붙잡고 같이 박수 쳐서 손을 풀어준다"
+			},
+			"path": "fun",
+			"mbti": "EP",
+			"effects": {
+				"reason": 25,
+				"community": 10,
+				"echo": -10
+			},
+			"reward": [
+				"cooldown_reset"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "제어실에 어색한 박수 소리가 두 번 울렸다. 코더의 손가락이 멈췄다."
+					}
+				},
+				{
+					"speaker": "junior_coder",
+					"content": {
+						"korean": "이, 이게 뭐예요? 근데 신기하게 손이 안 떨려요!"
+					}
+				},
+				{
+					"speaker": "echo",
+					"content": {
+						"korean": "박수라니. 옆에서 보는데 나도 모르게 ���이 아팠어."
+					}
+				}
+			]
+		}
+	],
+	"_side": {
+		"slot": "D",
+		"person": {
+			"id": "junior_coder",
+			"name": "신입 코더",
+			"role": "야간 복구 조수"
+		},
+		"wants": "손이 떨려 조각을 만질 수 없으니 대신 잡아 달라며, 자기가 맞춘 척 보고서를 내게 해 달라고 한다.",
+		"rule_link": "데이터 스크린 조각은 손떨림이 조금만 있어도 홈에서 튕겨 나가는데, 신입 코더는 그 조각을 잡아 줄 사람을 찾고 있다.",
+		"rep": "fighting+",
+		"events": {},
+		"flags": {
+			"steady_junior_hands": {
+				"kind": "bad",
+				"boss_penalty": -1,
+				"label": {
+					"korean": "가라앉은 손떨림"
+				},
+				"boss_line": {
+					"korean": "손떨림이 가라앉은 신입 코더가 홀로그램 옆에서 조각을 대신 받쳐준다."
+				}
+			},
+			"junior_notes": {
+				"kind": "good",
+				"boss_penalty": 1,
+				"label": {
+					"korean": "코더의 순서 메모"
+				},
+				"boss_choice": {
+					"korean": "신입 코더가 적어 준 순서 메모대로 홀로그램의 회로 차단 지점을 찾아낸다."
+				}
+			},
+			"junior_deflects": {
+				"kind": "good",
+				"boss_penalty": 2,
+				"label": {
+					"korean": "코더의 방어"
+				},
+				"boss_choice": {
+					"korean": "신입 코더가 홀로그램에서 튀는 정보 파편을 몸으로 막아 준다."
+				}
+			}
+		}
+	}
+}

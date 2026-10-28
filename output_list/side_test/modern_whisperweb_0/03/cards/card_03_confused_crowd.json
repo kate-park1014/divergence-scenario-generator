@@ -1,0 +1,225 @@
+{
+	"id": "card_03_confused_crowd",
+	"kind": "normal",
+	"title": {
+		"korean": "혼란에 빠진 무리"
+	},
+	"intensity": "calm",
+	"after_story": 7,
+	"before_story": 10,
+	"background_tags": [
+		"crowd",
+		"sign",
+		"hall",
+		"blink",
+		"tense"
+	],
+	"dialogue": [
+		{
+			"speaker": "lost_technician",
+			"content": {
+				"korean": "바닥에 떨어진 스크린 조각들 때문에 길 안내 표시등이 전부 엉터리가 됐어요!"
+			}
+		},
+		{
+			"speaker": "kai",
+			"content": {
+				"korean": "정보가 완전히 뒤죽박죽 섞여버렸어. 저 사람들은 출구가 어딘지도 모르고 헤매고 있잖아."
+			}
+		},
+		{
+			"speaker": "lost_technician",
+			"content": {
+				"korean": "당신들은 길을 아는 것 같은데, 제발 우리 좀 출구 쪽으로 데려다주세요."
+			}
+		}
+	],
+	"choices": [
+		{
+			"text": {
+				"korean": "기술자 무리에게 대충 방향만 손가락으로 가리키고 갈 길을 간다."
+			},
+			"path": "easy",
+			"mbti": "TP",
+			"effects": {
+				"gold": 100,
+				"reason": -10,
+				"community": -20,
+				"echo": -10
+			},
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "기술자들은 반신반의하며 떠났고, 당신은 시간을 아꼈다."
+					}
+				},
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "가리킨 방향에 있던 비상 물품을 먼저 차지해 팔았다."
+					}
+				}
+			]
+		},
+		{
+			"text": {
+				"korean": "무리를 직접 이끌고 안전 구역까지 안내하려다 시비를 거는 자와 마주친다."
+			},
+			"path": "hard",
+			"mbti": "FJ",
+			"effects": {
+				"gold": 50,
+				"community": 20,
+				"fighting": 20,
+				"echo": 10
+			},
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "무리를 안전하게 대피시키느라 체력을 썼다."
+					}
+				},
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "기술자가 흘리고 간 동전을 주웠다."
+					}
+				}
+			],
+			"event": "meet_stranger",
+			"event_intro": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "“어딜 함부로 돌아다니는 거냐! 전원 제자리에 엎드려!”"
+					}
+				}
+			],
+			"event_options": {
+				"fight": {
+					"text": {
+						"korean": "{actor}이(가) 요원에게 맞선다."
+					},
+					"win": [
+						{
+							"speaker": "narrator",
+							"content": {
+								"korean": "요원을 가볍게 제압하고 무리를 무사히 대피시켰다."
+							}
+						}
+					],
+					"lose": [
+						{
+							"speaker": "narrator",
+							"content": {
+								"korean": "요원과 실랑이를 벌이다 찰과상을 입었다."
+							}
+						}
+					]
+				},
+				"avoid": {
+					"text": {
+						"korean": "요원을 피해 다른 복도로 무리를 이끈다."
+					},
+					"result": [
+						{
+							"speaker": "narrator",
+							"content": {
+								"korean": "돌아가는 바람에 무척 지쳤지만 충돌은 피했다."
+							}
+						}
+					],
+					"reward": [
+						"hp_down"
+					]
+				}
+			}
+		},
+		{
+			"text": {
+				"korean": "휴대용 길잡이 단말기를 구매해 기술자들에게 건네준다."
+			},
+			"path": "gold",
+			"mbti": "SJ",
+			"require": {
+				"stat": "gold",
+				"op": ">=",
+				"value": 80
+			},
+			"effects": {
+				"community": 20,
+				"reason": 10,
+				"gold": -80
+			},
+			"reward": [
+				"cooldown_reset"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "단말기의 정확한 안내 덕분에 기술자들이 무사히 빠져나갔다."
+					}
+				},
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "기술자들이 고맙다며 여분의 배터리를 주었다."
+					}
+				}
+			]
+		},
+		{
+			"text": {
+				"korean": "{actor}이(가) 패닉에 빠진 사람들을 다독이며 차분하게 바른 길을 설명한다."
+			},
+			"path": "lock",
+			"mbti": "NF",
+			"require": {
+				"mbti": "NF"
+			},
+			"effects": {
+				"reason": 10,
+				"echo": 10,
+				"community": 20
+			},
+			"reward": [
+				"shield"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "{actor}의 진심 어린 위로에 기술자들은 스스로 길을 찾아 나섰다."
+					}
+				},
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "감동한 기술자가 귀중한 칩을 남기고 갔다."
+					}
+				}
+			]
+		}
+	],
+	"_side": {
+		"slot": "D",
+		"person": {
+			"name": "길 잃은 기술자",
+			"id": "lost_technician",
+			"role": "전산실 직원"
+		},
+		"wants": "정보가 섞여 출구를 찾을 수 없다며 자신들을 안전한 곳으로 안내해 달라고 한다.",
+		"rule_link": "깨진 데이터 스크린 조각들로 인해 길 안내 정보가 뒤죽박죽이 되어 사람들이 길을 잃었다.",
+		"events": {
+			"hard": "길을 헤매다 예민해진 낯선 보안 요원이 무리의 이동을 통제하려 든다."
+		},
+		"flags": {}
+	}
+}

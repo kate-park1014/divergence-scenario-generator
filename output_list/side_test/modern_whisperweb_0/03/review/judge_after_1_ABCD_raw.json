@@ -1,0 +1,302 @@
+{
+	"cards": [
+		{
+			"asks": "통풍구 앞에서 5분만 같이 쉬다 가자고 한다.",
+			"card_id": "card_03_cool_breeze",
+			"choices_read": [
+				{
+					"reaction_assumes": "통풍구 앞에서 쉬었다.",
+					"target": "주인공 자신",
+					"path": "easy",
+					"does": "통풍구 앞에 앉아 시원한 바람을 맞으며 쉰다."
+				},
+				{
+					"path": "hard",
+					"does": "바람의 냄새를 수상히 여겨 쉬지 않고 서둘러 이동한다.",
+					"reaction_assumes": "쉬지 않고 이동했다.",
+					"target": "주인공 자신"
+				},
+				{
+					"reaction_assumes": "마스크를 쓰고 쉬었다.",
+					"target": "작업자",
+					"path": "gold",
+					"does": "작업자에게 돈을 주고 방독 마스크를 사서 착용하고 쉰다."
+				},
+				{
+					"path": "lock",
+					"does": "바람의 성분을 조용히 분석하여 위험을 경고한다.",
+					"reaction_assumes": "위험을 경고했다.",
+					"target": "작업자"
+				}
+			],
+			"checks": [
+				{
+					"quote": "작업자에게 돈을 주고 방독 마스크를 사서 착용하고 쉰다.",
+					"pass": false,
+					"problem": "같이 쉬자고 제안한 지친 작업자가 갑자기 방독 마스크를 판다는 것이 어색합니다.",
+					"item": "S1"
+				},
+				{
+					"item": "S2",
+					"pass": true
+				},
+				{
+					"item": "S3",
+					"pass": true
+				},
+				{
+					"item": "S4",
+					"pass": true
+				},
+				{
+					"pass": true,
+					"item": "S5"
+				}
+			]
+		},
+		{
+			"choices_read": [
+				{
+					"reaction_assumes": "냉각팬을 빌려주었다.",
+					"target": "케이블 작업자",
+					"path": "easy",
+					"does": "냉각팬을 빌려주어 케이블 겉면을 빠르게 식힌다."
+				},
+				{
+					"path": "hard",
+					"does": "케이블을 끊고 안전하게 절연 테이프로 감는다.",
+					"reaction_assumes": "케이블을 끊었다.",
+					"target": "케이블"
+				},
+				{
+					"path": "gold",
+					"target": "작업자",
+					"does": "작업자에게 돈을 주고 냉각 가스를 사서 뿌려 완전히 식힌다.",
+					"reaction_assumes": "냉각 가스를 뿌렸다."
+				},
+				{
+					"does": "냉각팬 대신 소화기를 집어들고 통째로 분사한다.",
+					"path": "forced",
+					"reaction_assumes": "소화기를 분사했다.",
+					"target": "케이블"
+				}
+			],
+			"card_id": "card_03_melting_cable",
+			"checks": [
+				{
+					"pass": false,
+					"quote": "작업자에게 돈을 주고 냉각 가스를 사서 뿌려 완전히 식힌다.",
+					"item": "S1",
+					"problem": "냉각팬을 빌려달라고 다급하게 요청하는 작업자가 냉각 가스를 팔고 있다는 것은 상황에 맞지 않습니다."
+				},
+				{
+					"pass": true,
+					"item": "S2"
+				},
+				{
+					"item": "S3",
+					"pass": true
+				},
+				{
+					"item": "S4",
+					"pass": true
+				},
+				{
+					"item": "S5",
+					"pass": true
+				}
+			],
+			"asks": "녹아내리는 케이블을 식히기 위해 휴대용 냉각팬을 빌려달라고 한다."
+		},
+		{
+			"checks": [
+				{
+					"item": "S1",
+					"pass": false,
+					"problem": "파이프를 고칠 부품이 없어 달라고 요구하는 수리공이 고성능 밀봉제를 팔고 있다는 것은 앞뒤가 맞지 않습니다.",
+					"quote": "수리공에게 돈을 주고 고성능 밀봉제를 사서 파이프에 발라준다."
+				},
+				{
+					"pass": true,
+					"item": "S2"
+				},
+				{
+					"pass": true,
+					"item": "S3"
+				},
+				{
+					"item": "S4",
+					"pass": true
+				},
+				{
+					"pass": true,
+					"item": "S5"
+				}
+			],
+			"asks": "파이프에 금이 간 것을 막기 위해 예비 부품을 달라고 한다.",
+			"choices_read": [
+				{
+					"path": "easy",
+					"does": "요구대로 예비 부품을 넘겨준다.",
+					"reaction_assumes": "예비 부품을 주었다.",
+					"target": "배관 수리공"
+				},
+				{
+					"target": "배관 수리공",
+					"reaction_assumes": "부품을 주지 않았다.",
+					"does": "나중을 위해 부품을 주지 않는다.",
+					"path": "hard"
+				},
+				{
+					"path": "gold",
+					"does": "수리공에게 돈을 주고 고성능 밀봉제를 사서 파이프에 발라준다.",
+					"reaction_assumes": "고성능 밀봉제를 발라주었다.",
+					"target": "수리공"
+				},
+				{
+					"target": "수리공",
+					"path": "lock",
+					"does": "압력 계산을 통해 부품 없이 수리할 방법을 지시한다.",
+					"reaction_assumes": "수리 방법을 지시했다."
+				}
+			],
+			"card_id": "card_03_pipe_repair"
+		},
+		{
+			"asks": "안전한 곳이니 여기서 숨 좀 고르고 가라고 한다.",
+			"choices_read": [
+				{
+					"reaction_assumes": "휴식을 취했다.",
+					"target": "주인공 자신",
+					"path": "easy",
+					"does": "수리공 옆에 앉아 안전한 구역에서 휴식을 취한다."
+				},
+				{
+					"path": "hard",
+					"does": "쉬지 않고 틈새 주변의 장치들을 한 번 더 점검한다.",
+					"reaction_assumes": "장치들을 점검했다.",
+					"target": "장치들"
+				}
+			],
+			"card_id": "card_03_safe_pressure",
+			"checks": [
+				{
+					"item": "S1",
+					"pass": true
+				},
+				{
+					"pass": true,
+					"item": "S2"
+				},
+				{
+					"pass": true,
+					"item": "S3"
+				},
+				{
+					"item": "S4",
+					"pass": true
+				},
+				{
+					"pass": true,
+					"item": "S5"
+				}
+			]
+		},
+		{
+			"choices_read": [
+				{
+					"reaction_assumes": "내기에 응했다.",
+					"target": "기술자",
+					"path": "easy",
+					"does": "기술자가 칩을 건질 수 없다에 돈을 걸어 내기에 응한다."
+				},
+				{
+					"path": "hard",
+					"does": "내기를 무시하고 물웅덩이에 접근하지 못하게 막는다.",
+					"reaction_assumes": "접근을 막았다.",
+					"target": "기술자"
+				},
+				{
+					"path": "gold",
+					"does": "기술자에게 돈을 내고 특수 집게를 사서 칩을 안전하게 건져낸다.",
+					"reaction_assumes": "특수 집게로 칩을 건져냈다.",
+					"target": "기술자"
+				}
+			],
+			"checks": [
+				{
+					"pass": false,
+					"quote": "기술자에게 돈을 내고 특수 집게를 사서 칩을 안전하게 건져낸다.",
+					"problem": "칩을 주울 수 있는지 내기를 제안한 기술자가 칩을 건질 수 있는 특수 집게를 판다는 것은 상황에 맞지 않습니다.",
+					"item": "S1"
+				},
+				{
+					"item": "S2",
+					"pass": true
+				},
+				{
+					"item": "S3",
+					"pass": true
+				},
+				{
+					"item": "S4",
+					"pass": true
+				},
+				{
+					"item": "S5",
+					"pass": true
+				}
+			],
+			"card_id": "card_03_strange_puddle",
+			"asks": "물웅덩이 안의 메모리 칩을 주울 수 있는지에 대해 돈을 걸고 내기를 하자고 한다."
+		},
+		{
+			"asks": "헐거워진 비상 냉각수 밸브의 잠금장치를 조여달라고 한다.",
+			"choices_read": [
+				{
+					"path": "easy",
+					"does": "밸브를 완전히 열어버려 압력을 단번에 뺀다.",
+					"reaction_assumes": "밸브를 열었다.",
+					"target": "밸브"
+				},
+				{
+					"does": "밸브의 잠금장치를 타이밍에 맞춰 다시 조인다.",
+					"path": "hard",
+					"reaction_assumes": "잠금장치를 조였다.",
+					"target": "밸브의 잠금장치"
+				},
+				{
+					"does": "감시원에게 돈을 주고 자동 수리 키트를 사서 밸브에 부착한다.",
+					"path": "gold",
+					"reaction_assumes": "자동 수리 키트를 부착했다.",
+					"target": "감시원"
+				}
+			],
+			"card_id": "card_03_unstable_valve",
+			"checks": [
+				{
+					"item": "S1",
+					"problem": "밸브를 조여달라고 도움을 요청하는 감시원이 밸브를 고칠 수 있는 자동 수리 키트를 팔고 있다는 것은 앞뒤가 맞지 않습니다.",
+					"quote": "감시원에게 돈을 주고 자동 수리 키트를 사서 밸브에 부착한다.",
+					"pass": false
+				},
+				{
+					"pass": true,
+					"item": "S2"
+				},
+				{
+					"item": "S3",
+					"pass": true
+				},
+				{
+					"item": "S4",
+					"pass": true
+				},
+				{
+					"item": "S5",
+					"pass": true
+				}
+			]
+		}
+	]
+}

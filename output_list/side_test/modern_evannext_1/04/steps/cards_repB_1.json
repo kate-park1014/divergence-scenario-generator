@@ -1,0 +1,285 @@
+{
+	"cards": [
+		{
+			"key": "resume_auto_exaggeration",
+			"no": 1,
+			"dialogue": [
+				{
+					"speaker": "lin",
+					"text": "\"앱 전달이 막 끝났는데 강사님이 뭔가 은밀하게 서류를 건네려 하네요.\""
+				},
+				{
+					"text": "\"당신이 걸림돌은 주먹부터 내질러 치워버린다는 그 유명한 개발자군요?\"",
+					"speaker": "instructor_han"
+				},
+				{
+					"speaker": "instructor_han",
+					"text": "\"이 수화 연습 노트 대신, 앱에서 이력서 수화 숙련도를 자동으로 상급이라 표기해 주십시오.\""
+				},
+				{
+					"speaker": "lin",
+					"text": "\"이력서 성적을 거짓으로 부풀려 앱에 연동하자는 건가요?\""
+				}
+			],
+			"choices": [
+				{
+					"reward": [
+						"attack_up"
+					],
+					"effects": {
+						"gold": 100,
+						"echo": -10,
+						"community": 10,
+						"fighting": -20
+					},
+					"path": "easy",
+					"text": "앱의 이력서 성적 자동 과장 옵션을 켜서 수강생 전원의 숙련도를 최고로 올린다.",
+					"flag": {
+						"boss_text": "연습실 사람들의 거짓 이력서 성적이 발각되어 면접관들의 정밀 검증이 시작된다.",
+						"key": "exaggerated_resume_flag",
+						"label": "조작된 이력서"
+					},
+					"result": [
+						{
+							"speaker": "instructor_han",
+							"text": "\"허허, 역시 말이 통하는군요! 당장 앱에 과장 옵션을 적용하겠습니다.\""
+						},
+						{
+							"text": "\"이력서 점수를 부풀렸으니 다들 좋아하겠지만, 나중에 문제가 될까 봐 걱정돼요.\"",
+							"speaker": "lin"
+						}
+					],
+					"mbti": "EP"
+				},
+				{
+					"path": "hard",
+					"text": "과장 기능을 거부하고 수화 연습 노트에 기록된 정직한 숙련도만 이력서에 남긴다.",
+					"effects": {
+						"fighting": 10,
+						"reason": 20,
+						"echo": 10
+					},
+					"flag": {
+						"boss_text": "수강생들의 정직한 평가 기록을 근거로 면접관들에게 정확한 실력을 입증한다.",
+						"key": "honest_record_flag",
+						"label": "정직한 연습 기록"
+					},
+					"reward": [
+						"defense_up"
+					],
+					"result": [
+						{
+							"text": "\"짹짹거리며 정의로운 척을 하시는군요. 어쩔 수 없이 정직하게 입력해야겠군요.\"",
+							"speaker": "instructor_han"
+						},
+						{
+							"text": "\"잘하셨어요! 수화 연습 노트에 적힌 진실한 기록이 결국 더 도움이 될 거예요.\"",
+							"speaker": "lin"
+						}
+					],
+					"mbti": "NF"
+				},
+				{
+					"flag": {
+						"label": "굴복시킨 강사",
+						"key": "intimidated_instructor_flag",
+						"boss_text": "강사 한을 압박하여 이력서 성적 연동 시스템을 원래 규정대로 정상 가동한다."
+					},
+					"effects": {
+						"reason": 10,
+						"fighting": -30,
+						"echo": 5
+					},
+					"path": "stat",
+					"text": "압도적인 태도로 강사를 위협해 거짓 성적 요구를 철회시키고 앱 연동을 마친다.",
+					"reward": [
+						"intelligence_up"
+					],
+					"mbti": "TJ",
+					"result": [
+						{
+							"text": "\"히익! 알겠습니다, 알겠어요! 노트를 그대로 앱에 연동할 테니 노여움을 거두십시오!\"",
+							"speaker": "instructor_han"
+						},
+						{
+							"speaker": "lin",
+							"text": "\"당신의 당당한 기세에 강사님이 꼼짝도 못 하네요. 연동 작업이 깔끔하게 끝났어요.\""
+						}
+					]
+				},
+				{
+					"path": "gold",
+					"text": "강사 한에게 100골드를 지불하고 이력서 점수 검수를 정식 외주로 위탁한다.",
+					"result": [
+						{
+							"speaker": "instructor_han",
+							"text": "\"오호, 검수 수수료를 넉넉히 주시니 제가 직접 노트를 꼼꼼히 점검해 올리죠.\""
+						},
+						{
+							"speaker": "lin",
+							"text": "\"돈으로 전문 검수를 맡겼으니 이력서 성적 표기 오류는 확실히 줄어들겠어요.\""
+						}
+					],
+					"reward": [],
+					"effects": {
+						"echo": 5,
+						"gold": -100,
+						"reason": 15
+					},
+					"mbti": "SF"
+				}
+			],
+			"title": "거친 개발자의 과장 기능",
+			"rule_link": "이력서의 수화 평가 항목을 앱과 연동하여 성적을 인위적으로 조작하려 함",
+			"person": {
+				"id": "instructor_han",
+				"name": "강사 한",
+				"role": "수화 연습실 총괄 강사"
+			},
+			"background_tags": [
+				"practice_room",
+				"daylight",
+				"bright",
+				"crowded",
+				"tense"
+			],
+			"wants": "수화 교육 앱의 성적 과장 옵션을 켜서 수강생들의 이력서 점수를 대폭 올리고 싶다.",
+			"slot": "B",
+			"kind": "rep",
+			"rep_dir": "fighting-"
+		},
+		{
+			"wants": "수화 교육 앱이 이력서 수화 숙련도를 자동으로 상향 보정해 주길 원한다.",
+			"choices": [
+				{
+					"flag": {
+						"boss_text": "과장된 이력서 성적으로 인해 수강생들의 인지 장애 증상이 더욱 심각하게 부각된다.",
+						"label": "부풀려진 성적",
+						"key": "boosted_scores_flag"
+					},
+					"result": [
+						{
+							"speaker": "student_min",
+							"text": "\"정말 감사합니다! 덕분에 저희 모두 꿈꿔왔던 이력서를 가질 수 있게 되었어요.\""
+						},
+						{
+							"text": "\"민 씨가 눈물을 글썽이며 기뻐하네요. 하지만 지나친 성적 보정이 독이 되지 않아야 할 텐데요.\"",
+							"speaker": "lin"
+						}
+					],
+					"reward": [
+						"heal"
+					],
+					"text": "민과 수강생들을 위해 수화 앱에 이력서 점수 자동 상향 보정 기능을 추가한다.",
+					"path": "easy",
+					"mbti": "FP",
+					"effects": {
+						"gold": 80,
+						"community": 20,
+						"fighting": 20,
+						"echo": 10
+					}
+				},
+				{
+					"mbti": "ST",
+					"text": "성적 보정 제안을 거부하고 기초 수화 단어 복습 모드만 앱에 탑재한다.",
+					"path": "hard",
+					"reward": [
+						"shield"
+					],
+					"result": [
+						{
+							"text": "\"성적을 올려주지 않으셔서 아쉽지만... 단어 복습 기능이라도 열심히 써볼게요.\"",
+							"speaker": "student_min"
+						},
+						{
+							"speaker": "lin",
+							"text": "\"원칙을 지킨 덕분에 다들 수화 단어를 차근차근 다시 익힐 수 있게 되었어요.\""
+						}
+					],
+					"effects": {
+						"reason": 20,
+						"fighting": -10,
+						"echo": 5
+					},
+					"flag": {
+						"key": "basic_drill_flag",
+						"boss_text": "기초 수화 단어 복습 모드를 활용해 수강생들의 일시적 기억 혼란을 빠르게 교정한다.",
+						"label": "기초 복습 모드"
+					}
+				},
+				{
+					"reward": [
+						"intelligence_up"
+					],
+					"flag": {
+						"boss_text": "민과 수강생들의 깊은 신뢰를 바탕으로 면접관들에게 진정성 있는 수화 태도를 피력한다.",
+						"label": "신뢰의 멘토링",
+						"key": "trusted_mentorship_flag"
+					},
+					"text": "평소의 깊은 신뢰를 바탕으로 민을 설득하여 정직한 수화 이력서를 쓰게 한다.",
+					"path": "stat",
+					"result": [
+						{
+							"speaker": "student_min",
+							"text": "\"개발자님의 따뜻한 말씀을 듣고 보니 깨달았어요. 정직한 실력으로 면접에 임하겠습니다!\""
+						},
+						{
+							"text": "\"당신의 진심 어린 조언에 민 씨가 고개를 숙이며 정직하게 노트를 기록하기 시작했어요.\"",
+							"speaker": "lin"
+						}
+					],
+					"effects": {
+						"community": 15,
+						"echo": 15,
+						"fighting": 30
+					},
+					"mbti": "FJ"
+				}
+			],
+			"key": "helping_hand_resume",
+			"no": 2,
+			"background_tags": [
+				"practice_room",
+				"daylight",
+				"bright",
+				"emotional",
+				"warm"
+			],
+			"dialogue": [
+				{
+					"text": "\"수강생 민 씨가 완성된 수화 앱을 만지작거리며 눈시울을 붉히고 있어요.\"",
+					"speaker": "lin"
+				},
+				{
+					"text": "\"당신이 늘 어려운 사람들을 돕고 따뜻한 손길을 내밀어 준 그 다정한 개발자분이시죠?\"",
+					"speaker": "student_min"
+				},
+				{
+					"speaker": "student_min",
+					"text": "\"이 수화 연습 노트의 낮고 서툰 점수 대신,"
+				},
+				{
+					"speaker": "student_min",
+					"text": "앱이 제 이력서 성적을 자동으로 높게 보정해 주면 안 될까요?\""
+				},
+				{
+					"speaker": "lin",
+					"text": "\"민 씨의 마음은 이해하지만 이력서를 인위적으로 수정하는 건 위험할 수 있어요.\""
+				}
+			],
+			"person": {
+				"name": "수강생 민",
+				"id": "student_min",
+				"role": "면접을 준비하는 연습실 수강생"
+			},
+			"title": "따뜻한 손길의 이력서",
+			"rule_link": "수화 교육 앱의 성적 보정이 수강생들의 이력서 점수와 수화 인지에 영향을 미침",
+			"slot": "B",
+			"kind": "rep",
+			"rep_dir": "fighting+"
+		}
+	],
+	"errors": [],
+	"prompt_hash": "5a0c54df111b5f5036e23d7f24bce070043e305f"
+}

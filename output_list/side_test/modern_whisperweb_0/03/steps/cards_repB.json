@@ -1,0 +1,923 @@
+{
+	"cards": [
+		{
+			"no": 1,
+			"key": "cold_hands_offer",
+			"title": "차가운 손을 내미는 남자",
+			"person": {
+				"id": "dock_foreman",
+				"name": "하역 반장",
+				"role": "파이프실 하역 담당"
+			},
+			"wants": "자기 반원들이 얼어붙은 파이프에 손을 대다 다쳤다며, 주인공이 힘으로 밀어붙인 방식대로 파이프 묶음을 뜯어내 달라고 한다.",
+			"rule_link": "냉각수에 젖은 데이터 스크린 조각이 파이프 틈에 끼어 있어, 뜯어내면 조각이 더 부서진다.",
+			"dialogue": [
+				{
+					"speaker": "narrator",
+					"text": "파이프실 안쪽, 하역 반장이 장갑을 벗고 손바닥을 문지르고 있었다."
+				},
+				{
+					"speaker": "dock_foreman",
+					"text": "당신이 그 밸브를 맨손으로 열어젖혔다던 사람이죠? 서버가 살아났다면서요."
+				},
+				{
+					"speaker": "kai",
+					"text": "저 사람, 아까부터 파이프 틈만 들여다보고 있어요."
+				},
+				{
+					"speaker": "dock_foreman",
+					"text": "안쪽 파이프가 얼어붙어서 반원들이 못 들어갑니다. 당신처럼 밀어붙이는 사람이면 뜯어낼 수 있겠죠."
+				},
+				{
+					"speaker": "kai",
+					"text": "그 틈에 스크린 조각이 끼어 있는데요. 뜯으면 조각이 깨질 텐데."
+				}
+			],
+			"choices": [
+				{
+					"path": "easy",
+					"text": "얼어붙은 파이프 묶음을 힘으로 뜯어내 반원들을 들여보낸다",
+					"mbti": "TJ",
+					"effects": {
+						"fighting": 15,
+						"gold": 100
+					},
+					"reward": [
+						"attack_up"
+					],
+					"result": [
+						{
+							"speaker": "narrator",
+							"text": "파이프 묶음이 삐걱 꺾이며 뜯겨 나갔다. 반원들이 몸을 숙이고 안쪽으로 들어갔다."
+						},
+						{
+							"speaker": "dock_foreman",
+							"text": "역시 소문난 사람이야. 수고비로 이만큼 챙겨."
+						},
+						{
+							"speaker": "narrator",
+							"text": "끼어 있던 스크린 조각 하나가 틈에서 빠져 바닥에 떨어졌다. 반장은 그걸 밟고 지나갔다."
+						}
+					],
+					"flag": {
+						"key": "torn_pipe_bundle",
+						"label": "뜯어낸 파이프",
+						"boss_text": "반장이 뜯어낸 파이프 구간으로 길을 열어 준다."
+					}
+				},
+				{
+					"path": "hard",
+					"text": "반장에게 뜯는 대신 반원들을 손상 없는 길로 돌리자고 말한다",
+					"mbti": "NF",
+					"effects": {
+						"fighting": -15,
+						"community": 10
+					},
+					"reward": [
+						"shield"
+					],
+					"result": [
+						{
+							"speaker": "dock_foreman",
+							"text": "돌아가라고? 시간이 얼마나 걸릴 줄 알고."
+						},
+						{
+							"speaker": "narrator",
+							"text": "반장은 혀를 찼지만 결국 반원들에게 손전등을 들려 돌아가는 길을 가리켰다."
+						},
+						{
+							"speaker": "kai",
+							"text": "조각은 안 깨졌어요. 대신 반장이 꽤 언짢아 보이는데요."
+						}
+					],
+					"flag": {
+						"key": "foreman_owes",
+						"label": "반장의 빚",
+						"boss_text": "반장이 손전등과 함께 반원들을 이끌고 길을 밝혀 준다."
+					}
+				},
+				{
+					"path": "stat",
+					"text": "반장에게 당신이 연 밸브 이야기를 꺼내 반원들을 통제하게 한다",
+					"mbti": "EP",
+					"effects": {
+						"fighting": -20,
+						"echo": 5
+					},
+					"reward": [
+						"intelligence_up"
+					],
+					"result": [
+						{
+							"speaker": "narrator",
+							"text": "반장은 잠깐 주인공 얼굴을 살피더니 반원들에게 손을 들었다."
+						},
+						{
+							"speaker": "dock_foreman",
+							"text": "다들 멈춰! 이 사람 말 들으라고. 밸브 연 사람이야."
+						},
+						{
+							"speaker": "narrator",
+							"text": "반원들이 물러서자 안쪽 파이프 사이로 스크린 조각들이 온전한 채 드러났다."
+						}
+					],
+					"flag": {
+						"key": "foreman_obeys",
+						"label": "반장의 호응",
+						"boss_text": "반장에게 신호를 보내 반원들을 한꺼번에 물린다."
+					}
+				},
+				{
+					"path": "fun",
+					"text": "얼어붙은 파이프에 손바닥을 대고 반장과 누가 더 오래 버티는지 겨룬다",
+					"mbti": "FP",
+					"effects": {
+						"reason": 20,
+						"fighting": 10
+					},
+					"reward": [
+						"defense_up"
+					],
+					"result": [
+						{
+							"speaker": "narrator",
+							"text": "반장이 손을 떼며 웃음을 터뜨렸다. 주인공 손바닥은 새빨개졌다."
+						},
+						{
+							"speaker": "dock_foreman",
+							"text": "내가 졌어. 대신 내 장갑 한 켤레 줄게. 근데 당신 손, 곧 얼얼할 거야."
+						},
+						{
+							"speaker": "kai",
+							"text": "이겼는데 손이 더 아파 보이는데요."
+						}
+					]
+				}
+			],
+			"background_tags": [
+				"pipe_room",
+				"dim_light",
+				"wet_floor",
+				"cold_air",
+				"crowded"
+			],
+			"slot": "B",
+			"kind": "rep",
+			"rep_dir": "fighting-"
+		},
+		{
+			"no": 2,
+			"key": "wet_glove_request",
+			"title": "젖은 장갑을 빌려달라는 부탁",
+			"person": {
+				"id": "young_apprentice",
+				"name": "어린 견습공",
+				"role": "설비 견습"
+			},
+			"wants": "차가운 파이프에 손을 대다 손을 데인 동료를 위해, 주인공이 남을 돕는 사람이라는 소문을 믿고 여분 장갑을 빌려달라고 한다.",
+			"rule_link": "장갑을 빌려주면 견습공이 젖은 데이터 스크린 조각을 파이프 틈에서 꺼내 줄 수 있다.",
+			"dialogue": [
+				{
+					"speaker": "narrator",
+					"text": "파이프실 입구에서 어린 견습공이 장갑을 움켜쥔 채 서 있었다."
+				},
+				{
+					"speaker": "young_apprentice",
+					"text": "저기, 아까 사람 살린다고 밸브 열었다는 분이죠? 소문 들었어요."
+				},
+				{
+					"speaker": "young_apprentice",
+					"text": "동�� 손이 얼음 파이프에 붙어서 벗겨졌어요. 여분 장갑 있으면 하나만요."
+				},
+				{
+					"speaker": "kai",
+					"text": "장갑을 빌려주면 저 애가 대신 들어가겠다는 건가요?"
+				}
+			],
+			"choices": [
+				{
+					"path": "easy",
+					"text": "여분 장갑을 벗어 견습공에게 건네고 동료를 살피게 한다",
+					"mbti": "FJ",
+					"effects": {
+						"community": 15,
+						"echo": 10
+					},
+					"reward": [
+						"heal"
+					],
+					"result": [
+						{
+							"speaker": "narrator",
+							"text": "견습공이 장갑을 끼고 얼음 파이프 사이로 손을 넣어 동료를 끌어냈다."
+						},
+						{
+							"speaker": "young_apprentice",
+							"text": "됐어요! 손은 다쳤지만 살았어요. 정말 고마워요."
+						},
+						{
+							"speaker": "kai",
+							"text": "장갑 하나로 사람 하나 살았네요."
+						}
+					],
+					"flag": {
+						"key": "apprentice_helps",
+						"label": "견습공의 손",
+						"boss_text": "견습공에게 손짓해 얼어붙은 파이프 틈을 함께 벌린다."
+					}
+				},
+				{
+					"path": "hard",
+					"text": "장갑 대신 견습공을 붙잡고 파이프를 만지지 말라고 단단히 일러둔다",
+					"mbti": "TP",
+					"effects": {
+						"community": -15,
+						"reason": 10
+					},
+					"reward": [
+						"defense_up"
+					],
+					"result": [
+						{
+							"speaker": "young_apprentice",
+							"text": "그럼 동료는요? 그냥 두라는 거예요?"
+						},
+						{
+							"speaker": "narrator",
+							"text": "견습공은 입을 다물고 물러섰다. 동료는 다른 사람이 부축해 나갔다."
+						},
+						{
+							"speaker": "kai",
+							"text": "맞는 말이긴 한데... 저 애 표정이 안 좋아요."
+						}
+					],
+					"flag": {
+						"key": "apprentice_wary",
+						"label": "견습공의 경계",
+						"boss_text": "견습공이 파이프 위치를 손끝으로 가리켜 준다."
+					}
+				},
+				{
+					"path": "stat",
+					"text": "견습공에게 당신이 냉각수를 부은 구역을 맡아 살피라고 지시한다",
+					"mbti": "EJ",
+					"effects": {
+						"community": 20,
+						"echo": 5,
+						"fighting": 10
+					},
+					"reward": [
+						"intelligence_up"
+					],
+					"result": [
+						{
+							"speaker": "narrator",
+							"text": "견습공이 고개를 크게 끄덕이고 파이프 사이를 뛰어다녔다."
+						},
+						{
+							"speaker": "young_apprentice",
+							"text": "여기 조각들 있어요! 젖어서 미끄러운데 다 건져왔어요."
+						},
+						{
+							"speaker": "kai",
+							"text": "저 애가 사람 하나 살린 걸로 끝이 아니었네요."
+						}
+					],
+					"flag": {
+						"key": "apprentice_scouts",
+						"label": "견습공의 눈",
+						"boss_text": "견습공이 파이프 사이에 깔린 데이터 조각의 자리를 알려 준다."
+					}
+				},
+				{
+					"path": "gold",
+					"text": "견습공에게 돈을 쥐여주고 근처 상점에서 두꺼운 방한 장갑을 사 오게 한다",
+					"mbti": "SP",
+					"effects": {
+						"gold": -100,
+						"community": 10
+					},
+					"reward": [
+						"defense_up"
+					],
+					"result": [
+						{
+							"speaker": "narrator",
+							"text": "견습공이 숨을 헐떡이며 장갑 보따리를 안고 돌아왔다."
+						},
+						{
+							"speaker": "young_apprentice",
+							"text": "다섯 켤레요! 이제 다들 손 안 다쳐요."
+						},
+						{
+							"speaker": "kai",
+							"text": "돈이 장갑이 되고 장갑이 손이 됐네요."
+						}
+					]
+				}
+			],
+			"background_tags": [
+				"pipe_room",
+				"dim_light",
+				"wet_floor",
+				"cold_air",
+				"quiet"
+			],
+			"slot": "B",
+			"kind": "rep",
+			"rep_dir": "fighting+"
+		},
+		{
+			"no": 3,
+			"key": "sealed_valve_split",
+			"title": "봉인된 밸브의 몫",
+			"person": {
+				"id": "coolant_broker",
+				"name": "냉각수 중개상",
+				"role": "파이프실 암거래꾼"
+			},
+			"wants": "비상 냉각수 밸브에서 소량을 빼내 팔아 나누자는 제안을 하며, 주인공이 자기 몫부터 챙기는 사람이라는 소문을 근거로 든다.",
+			"rule_link": "봉인 밸브에서 냉각수를 빼면 데이터 스크린 조각을 담아 두던 보관함의 온도가 흔들린다.",
+			"dialogue": [
+				{
+					"speaker": "narrator",
+					"text": "비상 냉각수 밸브 옆, 중개상이 봉인 테이프를 손톱으로 긁고 있었다."
+				},
+				{
+					"speaker": "coolant_broker",
+					"text": "당신이 남 먼저 자기 몫 챙긴다는 사람이죠? 딱 맞는 거래가 있어요."
+				},
+				{
+					"speaker": "coolant_broker",
+					"text": "이 밸브에서 조금만 빼면 냉각수 한 통에 큰돈이에요. 반씩 나눠요."
+				},
+				{
+					"speaker": "kai",
+					"text": "봉인 풀면 보관함 온도부터 흔들린다고 하던데요."
+				}
+			],
+			"choices": [
+				{
+					"path": "easy",
+					"text": "중개상의 통에 냉각수를 받아 몫을 챙기고 봉인은 그대로 둔다",
+					"mbti": "TP",
+					"effects": {
+						"community": -15,
+						"gold": 130
+					},
+					"reward": [
+						"attack_up"
+					],
+					"result": [
+						{
+							"speaker": "narrator",
+							"text": "중개상이 통을 채우고 지폐 뭉치를 주인공 손에 쥐여줬다."
+						},
+						{
+							"speaker": "coolant_broker",
+							"text": "좋은 거래였어요. 다음에 또 봐요."
+						},
+						{
+							"speaker": "kai",
+							"text": "보관함 쪽에서 삐 소리가 났어요. 뭔가 흔들린 것 같은데."
+						}
+					],
+					"flag": {
+						"key": "broker_cut",
+						"label": "중개상의 몫",
+						"boss_text": "중개상이 창고 문을 열어 준다."
+					}
+				},
+				{
+					"path": "hard",
+					"text": "중개상의 봉인 테이프를 다시 붙이고 통을 빼앗아 제자리에 돌려놓는다",
+					"mbti": "FJ",
+					"effects": {
+						"community": 20,
+						"reason": 10
+					},
+					"reward": [
+						"shield"
+					],
+					"result": [
+						{
+							"speaker": "coolant_broker",
+							"text": "이봐요! 내 돈이 걸렸다고요!"
+						},
+						{
+							"speaker": "narrator",
+							"text": "중개상은 욕을 하며 물러났다. 밸브 봉인은 다시 붙어 있었다."
+						},
+						{
+							"speaker": "kai",
+							"text": "냉각수는 지켰는데, 저 사람이 어디 가서 뭐라고 할지 모르겠네요."
+						}
+					],
+					"flag": {
+						"key": "broker_enemy",
+						"label": "중개상의 원한",
+						"boss_text": "중개상이 봉인된 밸브의 압력 수치를 알려 준다."
+					}
+				},
+				{
+					"path": "stat",
+					"text": "중개상에게 당신 몫을 먼저 챙기려면 봉인부터 다루라고 밸브 앞을 가로막는다",
+					"mbti": "EP",
+					"effects": {
+						"community": -20,
+						"gold": 80
+					},
+					"reward": [
+						"intelligence_up"
+					],
+					"result": [
+						{
+							"speaker": "narrator",
+							"text": "중개상이 손을 들며 뒤로 물러났다. 통은 주인공 발치에 남았다."
+						},
+						{
+							"speaker": "coolant_broker",
+							"text": "알겠어요, 알겠어. 당신 몫은 통째로 드릴게요."
+						},
+						{
+							"speaker": "kai",
+							"text": "이러면 저 사람은 빈손이네요."
+						}
+					],
+					"flag": {
+						"key": "broker_yields",
+						"label": "중개상의 굴복",
+						"boss_text": "중개상이 몸을 숙여 밸브 옆 통로를 비켜 준다."
+					}
+				}
+			],
+			"background_tags": [
+				"pipe_room",
+				"sealed_valve",
+				"wet_floor",
+				"cold_air",
+				"hushed"
+			],
+			"slot": "B",
+			"kind": "rep",
+			"rep_dir": "community-"
+		},
+		{
+			"no": 4,
+			"key": "frozen_cables_carry",
+			"title": "얼어붙은 케이블 나르기",
+			"person": {
+				"id": "shift_lead",
+				"name": "교대 조장",
+				"role": "전산실 교대 책임자"
+			},
+			"wants": "차가워진 파이프실에서 식은 케이블 다발을 빨리 옮겨야 한다며, 모두를 위해 나서는 사람이라는 소문을 믿고 짐을 나눠 들자고 청한다.",
+			"rule_link": "케이블 다발 아래에 눌린 데이터 스크린 조각을 옮기는 과정에서 꺼낼 수 있다.",
+			"dialogue": [
+				{
+					"speaker": "narrator",
+					"text": "교대 조장이 케이블 다발을 어깨에 걸치고 숨을 몰아쉬고 있었다."
+				},
+				{
+					"speaker": "shift_lead",
+					"text": "당신이 위험한 줄 알면서도 먼저 나섰다는 사람이죠. 그래서 찾아왔어요."
+				},
+				{
+					"speaker": "shift_lead",
+					"text": "이 케이블 다발, 열 식으니까 만질 만해졌어요. 같이 옮겨 줄래요?"
+				},
+				{
+					"speaker": "kai",
+					"text": "무거워 보이는데... 저 사람 혼자 다 들다가 허리 나가겠어요."
+				}
+			],
+			"choices": [
+				{
+					"path": "easy",
+					"text": "교대 조장과 함께 케이블 다발을 어깨에 걸고 옮긴다",
+					"mbti": "FJ",
+					"effects": {
+						"community": 20,
+						"echo": 5
+					},
+					"reward": [
+						"defense_up"
+					],
+					"result": [
+						{
+							"speaker": "narrator",
+							"text": "둘이 다발을 나눠 들자 발밑에서 눌려 있던 스크린 조각이 드러났다."
+						},
+						{
+							"speaker": "shift_lead",
+							"text": "이거 여기 있었네요. 옮기길 잘했어요."
+						},
+						{
+							"speaker": "kai",
+							"text": "조각 하나 건졌네요. 어깨는 좀 어떤가요?"
+						}
+					],
+					"flag": {
+						"key": "lead_carries",
+						"label": "조장의 어깨",
+						"boss_text": "교대 조장에게 케이블 다발을 함께 들어 통로를 연다."
+					}
+				},
+				{
+					"path": "hard",
+					"text": "짐은 두고 조장에게 케이블을 다시 감아 두라고만 말한다",
+					"mbti": "TP",
+					"effects": {
+						"community": -20,
+						"reason": 10
+					},
+					"reward": [
+						"attack_up"
+					],
+					"result": [
+						{
+							"speaker": "shift_lead",
+							"text": "네? 지금 그게 급한 게 아닌데."
+						},
+						{
+							"speaker": "narrator",
+							"text": "조장은 다��을 내려놓고 혼자 케이블을 감기 시작했다."
+						},
+						{
+							"speaker": "kai",
+							"text": "조각은 발밑에 그대로 있네요. 저 사람 등만 굽었고요."
+						}
+					],
+					"flag": {
+						"key": "lead_strained",
+						"label": "조장의 부상",
+						"boss_text": "교대 조장이 허리를 짚은 채 케이블 위치를 알려 준다."
+					}
+				},
+				{
+					"path": "stat",
+					"text": "교대 조장에게 당신 지시대로 다발을 나눠 들 사람을 부르게 한다",
+					"mbti": "EJ",
+					"effects": {
+						"community": 25,
+						"fighting": 5
+					},
+					"reward": [
+						"intelligence_up"
+					],
+					"result": [
+						{
+							"speaker": "narrator",
+							"text": "조장이 손짓하자 교대 인원 셋이 달려와 다발을 나눠 들었다."
+						},
+						{
+							"speaker": "shift_lead",
+							"text": "당신 말이면 다들 움직여요. 이 정도면 금방이에요."
+						},
+						{
+							"speaker": "kai",
+							"text": "사람이 모이니까 조각도 금방 나오네요."
+						}
+					],
+					"flag": {
+						"key": "lead_crew",
+						"label": "모인 인원",
+						"boss_text": "교대 조장이 불러 모은 인원에게 길을 열게 한다."
+					}
+				},
+				{
+					"path": "fun",
+					"text": "케이블 다발을 파이프 위에 얹어 눈썰매처럼 타고 미끄러진다",
+					"mbti": "FP",
+					"effects": {
+						"reason": 25,
+						"community": 10
+					},
+					"reward": [
+						"move_range_up"
+					],
+					"result": [
+						{
+							"speaker": "narrator",
+							"text": "다발이 젖은 파이프를 타고 미끄러져 벽에 쿵, 부딪혔다."
+						},
+						{
+							"speaker": "shift_lead",
+							"text": "야! 케이블이 다 풀렸잖아요! ...근데 조각은 다 나왔네."
+						},
+						{
+							"speaker": "kai",
+							"text": "다친 데는 없죠? 조장이 지금 웃어야 할지 울어야 할지 모르겠대요."
+						}
+					]
+				}
+			],
+			"background_tags": [
+				"pipe_room",
+				"dim_light",
+				"wet_floor",
+				"cold_air",
+				"busy"
+			],
+			"slot": "B",
+			"kind": "rep",
+			"rep_dir": "community+"
+		},
+		{
+			"no": 5,
+			"key": "checklist_after_coolant",
+			"title": "냉각수 이후 점검표",
+			"person": {
+				"id": "safety_inspector",
+				"name": "안전 점검관",
+				"role": "설비 안전 담당"
+			},
+			"wants": "냉각수를 부은 뒤의 절차 기록을 요구하며, 규칙을 지키는 사람이라는 소문을 근거로 서류를 맞춰 오라고 압박한다.",
+			"rule_link": "점검표에 데이터 스크린 조각의 오염 여부를 적어야 하는데, 아직 아무도 확인하지 않았다.",
+			"dialogue": [
+				{
+					"speaker": "narrator",
+					"text": "안전 점검관이 서류판을 두드리며 파이프실로 들어섰다."
+				},
+				{
+					"speaker": "safety_inspector",
+					"text": "당신이 절차대로 냉각수를 부었다는 사람이죠? 기록이 있어야겠습니다."
+				},
+				{
+					"speaker": "safety_inspector",
+					"text": "밸브 개방 시각, 유입량, 담당자 확인. 하나라도 비면 저는 서명 못 해요."
+				},
+				{
+					"speaker": "kai",
+					"text": "지금 그걸 다 어디서 확인해요. 담당자는 이미 나갔는데."
+				}
+			],
+			"choices": [
+				{
+					"path": "easy",
+					"text": "점검관의 서류판을 받아 항목을 하나씩 채워 서명을 받아낸다",
+					"mbti": "TJ",
+					"effects": {
+						"reason": 15
+					},
+					"reward": [
+						"defense_up"
+					],
+					"result": [
+						{
+							"speaker": "narrator",
+							"text": "점검관이 마지막 칸에 서명하고 서류판을 닫았다."
+						},
+						{
+							"speaker": "safety_inspector",
+							"text": "절차는 절차예요. 덕분에 일이 깔끔하게 끝났네요."
+						},
+						{
+							"speaker": "kai",
+							"text": "조각 오염 여부 칸은 비워 둔 채로요?"
+						}
+					],
+					"flag": {
+						"key": "inspector_signed",
+						"label": "점검관의 서명",
+						"boss_text": "점검관에게 서류판을 내밀어 통행을 허가받는다."
+					}
+				},
+				{
+					"path": "hard",
+					"text": "점검관에게 서명을 미루고 조각 오염부터 함께 확인하자고 말한다",
+					"mbti": "FP",
+					"effects": {
+						"reason": -15,
+						"community": 10
+					},
+					"reward": [
+						"heal"
+					],
+					"result": [
+						{
+							"speaker": "safety_inspector",
+							"text": "서명을 미루라고요? 그럼 저는 여기 못 있어요."
+						},
+						{
+							"speaker": "narrator",
+							"text": "점검관은 서류판을 품에 넣고 돌아섰다. 주인공은 조각을 하나하나 들어 살폈다."
+						},
+						{
+							"speaker": "kai",
+							"text": "조각 가장자리가 물에 번져 있어요. 기록해 둬야겠네요."
+						}
+					],
+					"flag": {
+						"key": "inspector_walks",
+						"label": "점검관의 퇴장",
+						"boss_text": "점검관이 남긴 서류판 여백에 조각 오염 위치를 확인한다."
+					}
+				},
+				{
+					"path": "stat",
+					"text": "점검관에게 당신이 밸브를 열 때의 순서를 그대로 불러 주고 서명을 요구한다",
+					"mbti": "EP",
+					"effects": {
+						"reason": -20,
+						"echo": 5
+					},
+					"reward": [
+						"intelligence_up"
+					],
+					"result": [
+						{
+							"speaker": "narrator",
+							"text": "점검관이 고개를 끄덕이며 서류판에 시각을 적어 내려갔다."
+						},
+						{
+							"speaker": "safety_inspector",
+							"text": "순서가 정확하네요. 이 정도면 제가 서명하겠습니다."
+						},
+						{
+							"speaker": "kai",
+							"text": "역시 절차는 그 사람이 제일 잘 알더라고요."
+						}
+					],
+					"flag": {
+						"key": "inspector_trusts",
+						"label": "점검관의 신뢰",
+						"boss_text": "점검관이 서명한 서류판을 들어 보이며 길을 열어 준다."
+					}
+				},
+				{
+					"path": "gold",
+					"text": "점검관에게 과태료를 대신 내주고 서명을 받아 둔다",
+					"mbti": "SP",
+					"effects": {
+						"gold": -120,
+						"reason": 10
+					},
+					"reward": [
+						"shield"
+					],
+					"result": [
+						{
+							"speaker": "narrator",
+							"text": "점검관이 영수증을 접어 주머니에 넣고 서류판에 도장을 찍었다."
+						},
+						{
+							"speaker": "safety_inspector",
+							"text": "과태료는 과태료고, 서명은 서명이죠. 깔끔합니다."
+						},
+						{
+							"speaker": "kai",
+							"text": "돈으로 서류를 산 건지, 시간을 산 건지 모르겠네요."
+						}
+					]
+				}
+			],
+			"background_tags": [
+				"pipe_room",
+				"fluorescent_light",
+				"wet_floor",
+				"cold_air",
+				"tense"
+			],
+			"slot": "B",
+			"kind": "rep",
+			"rep_dir": "reason-"
+		},
+		{
+			"no": 6,
+			"key": "no_permit_shortcut",
+			"title": "허가 없는 지름길",
+			"person": {
+				"id": "night_courier",
+				"name": "야간 배달원",
+				"role": "전산실 내부 배달"
+			},
+			"wants": "규칙을 무시하고 마음대로 다닌다는 소문을 듣고, 봉인된 밸브 옆 지름길로 데이터 스크린 조각을 빼돌리자고 제안한다.",
+			"rule_link": "조각을 지름길로 빼돌리면 오염된 조각이 파이프실 밖으로 퍼져 나간다.",
+			"dialogue": [
+				{
+					"speaker": "narrator",
+					"text": "야간 배달원이 배달 가방을 파이프 틈에 끼워 넣고 있었다."
+				},
+				{
+					"speaker": "night_courier",
+					"text": "당신이 규칙쯤은 발로 차버린다는 사람이죠? 딱 필요했어요."
+				},
+				{
+					"speaker": "night_courier",
+					"text": "이 지름길로 조각 몇 개만 빼돌리면 밖에서 값이 두 배예요. 허가는 필요 없고요."
+				},
+				{
+					"speaker": "kai",
+					"text": "그 조각, 물이 번져 있지 않아요? 밖에 내보내면 큰일인데."
+				}
+			],
+			"choices": [
+				{
+					"path": "easy",
+					"text": "배달원의 가방에 스크린 조각을 담아 지름길로 함께 빠져나간다",
+					"mbti": "EP",
+					"effects": {
+						"reason": 20,
+						"gold": 110
+					},
+					"reward": [
+						"move_range_up"
+					],
+					"result": [
+						{
+							"speaker": "narrator",
+							"text": "배달원이 지름길 철문을 발로 차 열고 가방을 넘겼다."
+						},
+						{
+							"speaker": "night_courier",
+							"text": "값 잘 받았어요. 다음에도 불러요."
+						},
+						{
+							"speaker": "kai",
+							"text": "가방에서 물이 뚝뚝 떨어졌어요. 저 조각, 밖에 나간 거 맞죠?"
+						}
+					],
+					"flag": {
+						"key": "courier_smuggle",
+						"label": "배달원의 지름길",
+						"boss_text": "배달원이 지름길 철문 열쇠를 던져 준다."
+					}
+				},
+				{
+					"path": "hard",
+					"text": "배달원을 붙잡아 조각을 도로 꺼내고 지름길 철문을 닫아 버린다",
+					"mbti": "TJ",
+					"effects": {
+						"reason": -20,
+						"community": 10
+					},
+					"reward": [
+						"shield"
+					],
+					"result": [
+						{
+							"speaker": "night_courier",
+							"text": "이봐요, 내 값어치가 걸렸다고요!"
+						},
+						{
+							"speaker": "narrator",
+							"text": "철문이 닫히자 배달원은 어깨를 으쓱하고 다른 길로 갔다."
+						},
+						{
+							"speaker": "kai",
+							"text": "조각은 돌아왔는데, 저 사람이 어디 가서 뭐라고 할지 모르겠어요."
+						}
+					],
+					"flag": {
+						"key": "courier_blocked",
+						"label": "닫힌 철문",
+						"boss_text": "배달원이 다른 지름길의 위치를 손가락으로 짚어 준다."
+					}
+				},
+				{
+					"path": "stat",
+					"text": "배달원에게 당신이 지름길을 여는 대신 조각은 여기 두라고 명령한다",
+					"mbti": "FP",
+					"effects": {
+						"reason": 25,
+						"echo": 5
+					},
+					"reward": [
+						"intelligence_up"
+					],
+					"result": [
+						{
+							"speaker": "narrator",
+							"text": "배달원이 혀를 차면서도 가방을 내려놓았다."
+						},
+						{
+							"speaker": "night_courier",
+							"text": "당신이 그렇게 나오면 나도 어쩔 수 없죠. 지름길은 열어 둘게요."
+						},
+						{
+							"speaker": "kai",
+							"text": "조각은 여기 남았고, 길은 열렸네요."
+						}
+					],
+					"flag": {
+						"key": "courier_open_path",
+						"label": "열린 지름길",
+						"boss_text": "배달원이 열어 둔 지름길로 조각을 들고 통과한다."
+					}
+				}
+			],
+			"background_tags": [
+				"pipe_room",
+				"dim_light",
+				"wet_floor",
+				"night_shift",
+				"cramped"
+			],
+			"slot": "B",
+			"kind": "rep",
+			"rep_dir": "reason+"
+		}
+	],
+	"errors": []
+}

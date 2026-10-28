@@ -1,0 +1,145 @@
+{
+	"id": "card_04_old_sorter",
+	"kind": "normal",
+	"title": {
+		"korean": "멈춰버린 분류기"
+	},
+	"intensity": "calm",
+	"after_story": 3,
+	"before_story": 5,
+	"background_tags": [
+		"server_room",
+		"blue_light",
+		"silent_machine",
+		"alone",
+		"calm"
+	],
+	"dialogue": [
+		{
+			"speaker": "narrator",
+			"content": {
+				"korean": "유출이 멈추자 한쪽 구석의 낡은 구형 분류기가 파란 불빛을 깜빡인다."
+			}
+		},
+		{
+			"speaker": "sorter",
+			"content": {
+				"korean": "위잉... 잔여 데이터 감지... 전체 포맷 승인 대기 중..."
+			}
+		},
+		{
+			"speaker": "dax",
+			"content": {
+				"korean": "저 녀석, 기계가 멈추니까 자기 속에 끼어 있던 쓰레기를 싹 비워내고 싶은가 봐."
+			}
+		},
+		{
+			"speaker": "dax",
+			"content": {
+				"korean": "승인 버튼만 누르면 싹 지워질 것 같은데?"
+			}
+		}
+	],
+	"choices": [
+		{
+			"text": {
+				"korean": "낡은 기계가 편해지도록 단말기의 전체 포맷 버튼을 눌러준다."
+			},
+			"path": "easy",
+			"mbti": "FJ",
+			"effects": {
+				"gold": 50,
+				"community": 10,
+				"reason": 10
+			},
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "당신이 승인 버튼을 누르자 기계가 상쾌한 기계음을 낸다."
+					}
+				},
+				{
+					"speaker": "sorter",
+					"content": {
+						"korean": "위잉... 포맷 완료... 쾌적한 환경 구성 완료..."
+					}
+				}
+			]
+		},
+		{
+			"text": {
+				"korean": "알 수 없는 데이터가 섞여 있을지 모르니 포맷을 취소하고 전원을 내린다."
+			},
+			"path": "hard",
+			"mbti": "TP",
+			"effects": {
+				"fighting": 10,
+				"reason": 15
+			},
+			"reward": [
+				"shield"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "당신이 전원을 내리자 기계가 덜컹거리며 멈춰 섰다."
+					}
+				},
+				{
+					"speaker": "dax",
+					"content": {
+						"korean": "좀 불쌍하긴 하지만, 혹시 모를 위험은 피하는 게 좋지."
+					}
+				}
+			]
+		},
+		{
+			"text": {
+				"korean": "부품 자판기에 크레딧을 결제해 새 메모리를 뽑아 기계에 교체해 준다."
+			},
+			"path": "gold",
+			"mbti": "IN",
+			"require": {
+				"stat": "gold",
+				"op": ">=",
+				"value": 80
+			},
+			"effects": {
+				"community": 10,
+				"gold": -80,
+				"reason": 15
+			},
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "당신이 새 메모리를 끼워주자 분류기가 안정적으로 가동된다."
+					}
+				},
+				{
+					"speaker": "dax",
+					"content": {
+						"korean": "역시 돈을 쓰니까 확실하고 안전하네."
+					}
+				}
+			]
+		}
+	],
+	"_side": {
+		"slot": "B",
+		"person": {
+			"role": "파쇄 기계",
+			"id": "sorter",
+			"name": "구형 분류기"
+		},
+		"wants": "유출이 멈춘 틈을 타 내부에 끼어 있던 잔여 데이터를 완전히 포맷해달라고 깜빡인다.",
+		"rule_link": "분해된 장치 덕에 안정을 찾은 기계가 자신의 묵은 찌꺼기를 털어내려는 본능.",
+		"events": {},
+		"flags": {}
+	}
+}

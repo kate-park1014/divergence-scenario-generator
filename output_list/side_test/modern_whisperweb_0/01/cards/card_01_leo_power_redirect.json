@@ -1,0 +1,125 @@
+{
+	"id": "card_01_leo_power_redirect",
+	"kind": "normal",
+	"title": {
+		"korean": "넘쳐흐르는 전력"
+	},
+	"intensity": "calm",
+	"after_story": 3,
+	"before_story": 5,
+	"background_tags": [
+		"overheated_server",
+		"thick_cables",
+		"spinning_disk",
+		"loud_noise",
+		"red_warning_light"
+	],
+	"dialogue": [
+		{
+			"speaker": "narrator",
+			"content": {
+				"korean": "레오가 과열되어 윙윙거리는 서버 랙에 굵은 전선을 꽂아두고 있다."
+			}
+		},
+		{
+			"speaker": "leo",
+			"content": {
+				"korean": "스크린 조각이 깨지더니 서버 전력이 남아도네! 이참에 내 창고에 있는 하드디스크 좀 싹 다 돌려야겠어."
+			}
+		},
+		{
+			"speaker": "echo",
+			"content": {
+				"korean": "일시적으로 복구된 전력을 함부로 끌어다 써도 서버가 버틸 수 있을까?"
+			}
+		},
+		{
+			"speaker": "leo",
+			"content": {
+				"korean": "그건 일시적인 거라니까. 전력이 넘칠 때 내 쪽으로 전송 스위치 좀 꽉 눌러줘. 혼자선 힘들어."
+			}
+		}
+	],
+	"choices": [
+		{
+			"text": {
+				"korean": "서버의 보조 전력을 레오의 하드디스크로 돌려준다."
+			},
+			"path": "easy",
+			"mbti": "ES",
+			"effects": {
+				"gold": 120,
+				"community": -15
+			},
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "레오의 하드디스크에서 요란한 회전음이 나며 데이터가 복원된다. 그는 만족하며 두둑한 수수료를 건넨다."
+					}
+				}
+			]
+		},
+		{
+			"text": {
+				"korean": "서버의 전력을 원래대로 유지하고 레오의 연결을 끊는다."
+			},
+			"path": "hard",
+			"mbti": "TJ",
+			"effects": {
+				"community": 15,
+				"fighting": 10
+			},
+			"reward": [
+				"defense_up"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "당신이 강제로 전선을 뽑자 레오가 항의하지만, 서버 랙의 과열 경고등이 꺼지며 안정을 찾는다."
+					}
+				}
+			]
+		},
+		{
+			"text": {
+				"korean": "{actor}이(가) 전력을 미세하게 조정해 서버와 하드디스크 모두에 공급되도록 나눈다."
+			},
+			"path": "lock",
+			"mbti": "TP",
+			"require": {
+				"mbti": "TP"
+			},
+			"effects": {
+				"reason": 10
+			},
+			"reward": [
+				"intelligence_up"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "{actor}이(가) 제어판을 조작해 전력을 분배한다. 서버도 안정되고 레오의 기계도 무사히 돌아간다."
+					}
+				}
+			]
+		}
+	],
+	"_side": {
+		"slot": "B",
+		"person": {
+			"name": "레오",
+			"role": "데이터 복원업자",
+			"id": "leo"
+		},
+		"wants": "일시적으로 돌아온 서버의 전력을 자신의 오래된 하드디스크에 끌어다 쓰고 싶어 함",
+		"rule_link": "조각 파편으로 인한 일시적인 과전력 현상을 사적으로 악용.",
+		"events": {},
+		"flags": {}
+	}
+}
