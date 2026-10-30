@@ -8,7 +8,7 @@ export const POST: RequestHandler = async ({ request }) => {
 	const apiUrl = 'https://generativelanguage.googleapis.com/v1beta/openai/chat/completions';
 
 	const body: Record<string, unknown> = {
-		model: model ?? 'gemini-2.5-flash',
+		model: model ?? 'gemini-3.6-flash',
 		messages: [{ role: 'user', content: message }]
 	};
 

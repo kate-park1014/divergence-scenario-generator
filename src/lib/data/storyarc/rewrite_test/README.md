@@ -46,7 +46,9 @@ id, level, theme, rising_count, final_boss 의 id·name·외형(appearance_npc/b
 |---|---|
 | `genre` | 배정된 장르 (id 로 고정, 같은 묶음 안에서는 겹치지 않음) |
 | `stage` | 무대: 보스가 있는 한 장소 |
-| `story_spine` | 화별 1~3문장 줄거리 요약 (5화에 결말). 화별 `protagonist_action`(그 화 행동), `lesson`(2~4화: 앞 화에서 배운 것), `hidden_link`(1~4화: 그 행동이 사실은 왜 wrong_action 과 같은 일인지, 5화에 드러남) |
+| `scenarioOutline[].line` | 화별 1~3문장 줄거리 요약 (5화에 결말). Gemini 는 `story_spine` 으로 먼저 쓰고, 저장할 때 화 항목 안으로 합침 |
+| `scenarioOutline[].protagonist_action` / `lesson` / `hidden_link` | 그 화 행동 / 2~4화: 앞 화에서 배운 것 / 1~4화: 그 행동이 사실은 왜 wrong_action 과 같은 일인지 (5화에 드러남). 예전 `story_spine` 의 화별 값 |
+| `scenarioOutline[].clues` | 그 화에 심는 복선 (`room`·`hint`·`reveal_order`·`reveal_room`·`reveal`). 예전 `global_foreshadowing`. Gemini 는 화 번호(`plant_order`/`reveal_order`)로 쓰고 저장할 때 심는 화 항목으로 옮김 |
 | `key_object` | 1~5화에 계속 나오는 핵심 물건 (누구나 아는 일상 물건) |
 | `world.how` | 왜 나쁜 결과가 생기는지: 핵심 물건이 어떻게 작동하는지 한 문장 |
 | `final_boss.want` | 보스가 이 일로 얻는 구체적인 이득 한 문장 |

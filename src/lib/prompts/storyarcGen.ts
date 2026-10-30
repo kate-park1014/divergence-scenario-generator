@@ -565,10 +565,11 @@ ${CLARITY_RULES}
 
 # 복선(global_foreshadowing) 규칙
 - 4개. 복선은 자연스럽게, 티 내지 말 것
+- plant_order 는 심는 화(1~4), reveal_order 는 밝혀지는 화(심는 화보다 늦은 화, 가능한 한 5화로 모은다)
+- hint 는 그 화(plant_order) summary 에 나오는 사람·물건·장소로만 쓴다 (아직 나오지 않은 화의 것을 쓰지 않는다)
 - 1~4화에 심는 복선은 주인공이 그 화 행동을 하기 **전**의 경고·이상 징후가 아니다 (그러면 주인공이 알고도 하는 사람이 된다). 행동 뒤에 보이는 일이거나, 행동과 상관없는 보스의 흔적으로 심는다
-- 4개 복선의 (plant_act, plant_room) 페어는 서로 모두 달라야 한다
-- 4개 복선의 (reveal_act, reveal_room) 페어도 서로 모두 달라야 한다
-- reveal_act 는 plant_act 보다 늦은 act. 가능한 한 climax_finale 로 모은다
+- 4개 복선의 (plant_order, plant_room) 페어는 서로 모두 달라야 한다
+- 4개 복선의 (reveal_order, reveal_room) 페어도 서로 모두 달라야 한다
 - plant_room·reveal_room 은 시나리오의 실제 방 번호 **1, 3, 5, 9, 15 중에서만** 고른다 (다른 숫자 금지). 여러 방으로 분산할 것
 - reveal_context 는 그 복선이 밝혀지는 장면에서 실제로 보이거나 들리는 일로 쓴다`;
 
@@ -890,5 +891,19 @@ export const storyarcRewriteTool = (() => {
 		'boss_trace'
 	];
 	params.properties.story_spine.items.required = ['order', 'line', 'protagonist_action', 'lesson', 'hidden_link'];
+	// 복선은 act 대신 화 번호로 받는다 (2~4화가 같은 act 라서 어느 화인지 모르는 문제). 저장할 때 심는 화 항목의 clues 로 들어간다
+	params.properties.global_foreshadowing.items = {
+		type: 'object',
+		properties: {
+			id: { type: 'string' },
+			hint: { type: 'string', description: '심는 화 summary 에 나오는 사람·물건·장소로 쓴 단서.' },
+			plant_order: { type: 'integer', description: '심는 화 번호 1~4.' },
+			plant_room: { type: 'integer', description: '1, 3, 5, 9, 15 중 하나.' },
+			reveal_order: { type: 'integer', description: '밝혀지는 화 번호. plant_order 보다 큼 (가능하면 5).' },
+			reveal_room: { type: 'integer', description: '1, 3, 5, 9, 15 중 하나.' },
+			reveal_context: { type: 'string' }
+		},
+		required: ['id', 'hint', 'plant_order', 'plant_room', 'reveal_order', 'reveal_room', 'reveal_context']
+	};
 	return tool;
 })();

@@ -14,7 +14,7 @@
 //   --orders=1,2          대상 시나리오 번호 (기본: 1~5)
 //   --concurrency=N       조합 동시 실행 수 (기본 4, 1~8)
 //   --portraits=<name>    얼굴 풀 (기본 modern_whisperweb_0)
-//   --model=<name>        Gemini 모델 (기본 gemini-2.5-flash)
+//   --model=<name>        Gemini 모델 (기본 gemini-3.6-flash)
 //   --base=URL            기본 http://localhost:5178
 //
 // 끝나면 webfront 에서: npx vitest run --project=unit "src/routes/(app)/test/adventure/data.test.ts"

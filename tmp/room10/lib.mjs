@@ -31,8 +31,9 @@ export function loadArc(id) {
 
 /** 그 화에 필요한 값만 모음 */
 export function episode(arc, order) {
-	const spine = arc.story_spine.find((s) => s.order === order) ?? {};
 	const out = arc.scenarioOutline.find((s) => s.order === order) ?? {};
+	// 화별 행동·배운 것은 scenarioOutline 항목 안 (예전 형식은 story_spine)
+	const spine = arc.story_spine ? (arc.story_spine.find((s) => s.order === order) ?? {}) : out;
 	const npc = arc.npc_roles?.[out.npc] ?? {};
 	const prev = order > 1 ? arc.scenarioOutline.find((s) => s.order === order - 1) : null;
 	return {

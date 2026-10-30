@@ -14,7 +14,7 @@
 //   --story=<id>          (필수) output_list/rewrite_test/<id>/ 의 스토리
 //   --orders=1,2          대상 시나리오 번호 (기본: 1~5)
 //   --portraits=<name>    얼굴 풀 (기본 modern_whisperweb_0)
-//   --model=<name>        Gemini 모델 (기본 gemini-2.5-flash)
+//   --model=<name>        Gemini 모델 (기본 gemini-3.6-flash)
 //   --base=URL            기본 http://localhost:5178
 //   --no-judge            저장 뒤 채점(cardJudge.ts) 건너뜀
 //   --fix                 설계표 그대로, 말투 문제 카드(코드 검사 + 채점 C10)만 대사 다시 쓰고 additions 새로 만든 뒤 채점

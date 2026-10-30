@@ -167,6 +167,7 @@ npm run gen:cards -- --story=modern_evannext_1 --combos=FIR --orders=1   # 스�
 - 보스는 1~5화 내내 틀린 쪽, 5화에 right_action 을 막다가 무너짐(코드 검사). 주인공은 속는 히어로: 1~4화 행동은 선한 이유로 하고 당장 효과를 본 뒤 대가가 드러남, 보스 흔적의 말은 친절한 해결책처럼, 1~4화에 경고는 warn 일반 보스만(NPC 는 하기 전에 안 말림). 1~4화 일반 보스의 편은 코드가 id 로 화마다 고정(`bossSidesForId` → `scenarioOutline[].random_boss_side`): `warn` 경고하는 쪽(wrong_action 을 막으며 경고, 경고는 맞지만 자기 사정처럼 보여 주인공이 안 믿음, 그 이유가 summary 에) / `ally` 최종보스 편(의심·전진을 막고 wrong_action 은 안 말림). 필드 없으면 ally. NPC 는 이유 장면이 있으면 편을 바꿔도 됨(아크당 1명, npc_roles 의 `turn_order`·`turn_scene`, 그 화 summary 에 NPC 이름 + turn_scene 핵심 낱말 2개 이상). wrong/right 행동은 반대 뜻이어야 함(비슷한 동사 묶음 `SIMILAR_VERBS` 검사, 채점 J12). 1~4화에 보스 단서·목적·정체 공개 허용
 - 속는 방식: 1~4화마다 코드가 id 로 고정(`deceiveModesForId` → `scenarioOutline[].deceive_mode`). 1화 direct, 2~4화는 verify / npc_acts(NPC 가 먼저 함) / avoid(흔적이 경고처럼 다른 길 권함) / pressure(급해서) 중 서로 다른 셋. 2화부터 주인공이 조심하는 모습이 보여야 함. lesson 은 "이번엔 어떻게 조심하는지". npc_acts 화 summary 에 주 NPC 이름(코드 검사), 채점 J18. chapterGenRewrite 도 그 화 방식대로 장면 지시
 - 프롬프트 예시는 소재 없는 틀(`[...]`)만 씀 — 구체 예시를 넣으면 Gemini 가 그대로 베낌(예: PixelGrim 이 "위스퍼 웹"이 됨)
+- 저장 형식: 화별 값은 모두 `scenarioOutline[]` 항목 안 — `line`·`protagonist_action`·`lesson`·`hidden_link`(예전 `story_spine`), `clues`(예전 `global_foreshadowing`, 심는 화 항목에 들어감, `reveal_order` 는 밝혀지는 화). Gemini 출력은 그대로 `story_spine` 을 먼저 쓰고(뼈대 먼저 쓰기) 복선은 화 번호(`plant_order`/`reveal_order`)로 받아, 저장할 때 `mergeArcEpisodes`([arcEpisode.ts](src/lib/prompts/arcEpisode.ts))로 합침. 읽을 때는 arcEpisode.ts 의 `lineOf`·`actionOf`·`lessonOf`·`hiddenLinkOf`·`cluesOf` (예전 형식 파일도 읽음). snowy·modern 등 옛 폴더와 chapterGen.ts·axis 파이프라인은 예전 형식 그대로
 - 출력: `src/lib/data/storyarc/rewrite_test/storyarc_<id>.ts` (index.ts 에 등록하지 않음 — id 가 원본과 같음)
 
 ```bash
@@ -208,4 +209,32 @@ rewrite_test 시나리오(`output_list/rewrite_test/<id>/scenario_0N.json`)마�
 npm run gen:cards-seq -- --story=modern_whisperweb_0 --orders=1
 npm run gen:cards-seq -- --story=modern_whisperweb_0 --judge-only   # 기존 카드 채점만
 npm run gen:cards-seq -- --story=modern_whisperweb_0 --fix          # 말투 문제 카드만 다시 + additions 새로
+```
+
+## 넷쇼트 스타일 5화 스토리 (재료 랜덤 → story.json)
+
+[netshort_test/story-prompt.md](src/lib/data/storyarc/netshort_test/story-prompt.md) 가 프롬프트 원본. netshortStory.ts 는 md 의 "## 시스템 프롬프트"·"### 입력 템플릿" 코드 블록을 `?raw` 로 읽어 `{{자리}}` 만 채움(값이 비면 그 줄 뺌). 프롬프트 문장은 md 에서만 고침. 프롬프트 [netshortStory.ts](src/lib/prompts/netshortStory.ts), 엔드포인트 `POST /api/storyarc/netshort`, 러너 `scripts/gen-netshort.mjs`.
+- 기획안 단계 없음 (예전 5줄 기획안·스토리아크 파일 입력은 제거). 재료는 [story-seeds.json](src/lib/data/storyarc/netshort_test/story-seeds.json) 에서 코드가 뽑음(`pickSeeds`): worlds·original_sins·twist_types·tones·motifs 하나씩, 장치는 `devices`(사람이 쓴 object·rule·effect·harm(넘기는 피해 = 1~4화 위험)·wrong_action·right_action, `worlds` 로 맞는 무대 지정) 중 그 무대에 맞는 것(`pickDevice`, 다시 쓸 때도 장치 문장은 지금 seeds 것으로 갱신), reason_types 는 1~4화마다(네 화 모두 같지 않게), random_words 2개(선택, `--no-words` 로 끔). 테마·NPC 풀은 seeds 의 `theme`, `theme_description` 을 프롬프트에
+- 한 번에 집필: 출력 맨 앞 `design`(device·how·visible_effect(뽑은 장치 문장 그대로, 코드가 덮어씀)·wrong/right_action·original_sin·boss_trace·boss_name·boss_look(보스 외모, 이미지용)·true_identity·twist)을 먼저 쓰고 본문(프롤로그, 이야기 방 1,3,5,8,10, 에필로그)을 맞춤. NPC 1~5화(5화=4화)·보스 흔적 화(1~4화 중 둘)는 코드가 뽑아 seeds.json 의 `npcs`·`trace_orders` 에 저장(`assignCast`), 2~4화 실제 피해자 = 앞 화 NPC(`victimNpcOf`). design 의 device·how·visible_effect·wrong/right_action, 화별 npc.name, 2~4화 actual_victim 은 코드가 덮어씀
+- `banned_cliches` 는 매번 "쓰지 말 것"에, `used_stories` 는 "겹치지 않게"에 넣음. 저장 뒤 used_stories 에 `{id,title,world,device,twist}` 추가(같은 id 는 바꿔 씀, 파일의 다른 부분 모양은 유지)
+- 출력 `src/lib/data/storyarc/netshort_test/<id>/` : `seeds.json`(뽑은 재료), `story.json`, `story.md`. id 는 `<world.key>_<시각>_<n>`. `--id=<id>` 면 그 seeds.json 재료로 다시 씀
+- 출력 NPC 는 `npc: { name: "lin", role: "인쇄공" }` (name = 풀 key, role = 직업, 같은 NPC 는 같은 role)
+- 코드 검사 → 걸리면 최대 2번 다시 요청: design 빈칸, 방 키, epilogue 5화만, "주인공" 금지, 방 문장 수, 서술 과거형 금지("있다" 제외), "이번엔 괜찮다" 금지, 한자 금지, design.boss_trace 가 trace_orders 화마다 등장, true_identity 마지막 낱말은 5화 8번 방 전 금지, device 는 20자 이하·여러 물건 이어 붙이기 금지(random_words 는 장면 소품으로만, 장치 이름과 겹치는 낱말은 안 뽑음), 1화 방 1~8 에 장치 이름(마지막 낱말) 등장, 1~4화 win 에 "뒤늦게" 경고 금지, design 문장(작동법·결과·true_identity) 14자 이상 그대로 옮기기 금지, 금액·"전가" 는 모든 방에서 금지, `design.deceptions`(1~4화 { believed 히어로들이 믿은 대상, actual_victim 실제 피해자 }): 둘이 다름·그 화 win 에 피해자(마지막 낱말)·그 화 win 에 believed 중심 낱말(장치 이름에 없는 마지막 낱말, 조사 뗌). 프롬프트 규칙: 1~4화 위험은 장치의 harm 이 히어로들에게 닥치는 것(다른 종류 피해를 장치로 넘기지 않음 — 남을 지키려고 장치를 쓰면 이야기가 안 이어져서), 장치로 피해를 넘기는 대상은 적(보스·부하)이 아님, 일반 보스는 전투로 이기고 남은 피해를 장치로 넘김, 작동법에 없는 부작용 금지
+
+```bash
+npm run dev &
+npm run gen:netshort                    # 새 이야기 1개
+npm run gen:netshort -- --count=3       # 3개
+npm run gen:netshort -- --id=<id>       # 저장된 재료로 다시 쓰기
+```
+
+## 넷쇼트 story.json → 시나리오 (시험용)
+
+netshort_test/<id>/story.json 의 화별 방(1,3,5,8,10)을 게임 시나리오 대사(방 1,3,5,9,15)로 옮김. 8→9, 10→15(before_battle·win·lose → dialogue·win_dialogue·lose_dialogue). 프롬프트 [chapterGenNetshort.ts](src/lib/prompts/chapterGenNetshort.ts), 엔드포인트 `POST /api/scenario/netshort`, 러너 `scripts/gen-netshort-scenarios.mjs`. 5화 동시 생성, 코드 검사 걸리면 최대 2번 다시 요청, Gemini 503·429 는 대기 후 재시도. 검토자·번역 없음.
+- 1~4화 일반 보스는 speaker `random_boss`(이름 금지, `boss.role` 에 story 의 boss 문구), 최종보스 이름은 1~4화 금지, 5화 `boss` 는 방 15 에서만, 정체 낱말은 5화 방 9 전 금지
+- 5화 `boss.pool_id` 는 null (netshort 보스는 pool 매핑 없음)
+- 출력 `src/lib/data/storyarc/netshort_test/<id>/scenario_0N.json`, `script_0N.md`, `script.md` (story.json 과 같은 폴더)
+
+```bash
+npm run gen:netshort-scenarios -- --id=arcade_20261030083249_3
 ```

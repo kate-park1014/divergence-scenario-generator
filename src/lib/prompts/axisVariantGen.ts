@@ -267,7 +267,7 @@ ${source.protagonist_goal}
 - twist: ${source.final_boss.twist}
 
 ### 복선
-${source.global_foreshadowing.map((f) => `- [${f.plant_act}] ${f.hint}`).join('\n')}
+${(source.global_foreshadowing ?? []).map((f) => `- [${f.plant_act}] ${f.hint}`).join('\n')}
 
 ### scenarioOutline
 #### order 1 (intro, 고정) — ${intro.title} / npc: ${intro.npc}

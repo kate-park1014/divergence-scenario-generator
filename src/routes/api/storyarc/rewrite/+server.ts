@@ -12,7 +12,7 @@ import {
 	type RewriteNpc,
 	type UsedMaterial
 } from '$lib/prompts/storyarcGen';
-import { verbStem } from '$lib/prompts/arcEpisode';
+import { mergeArcEpisodes, verbStem } from '$lib/prompts/arcEpisode';
 import { getStoryarc } from '$lib/data/storyarc';
 import { npc_by_theme } from '$lib/data/sample/npc_pool';
 import { getNpcPersona } from '$lib/data/sample/npc';
@@ -461,10 +461,14 @@ function checkStructure(gen: Gen, ctx: CheckCtx): string[] {
 		for (const field of ['plant_room', 'reveal_room'] as const) {
 			if (!ROOMS.includes(Number(f[field]))) errors.push(`${f.id} 의 ${field}=${f[field]} 는 방 번호(1, 3, 5, 9, 15)가 아닙니다.`);
 		}
-		const p = `${f.plant_act}/${f.plant_room}`;
-		const r = `${f.reveal_act}/${f.reveal_room}`;
-		if (plants.has(p)) errors.push(`(plant_act, plant_room) = ${p} 가 겹칩니다.`);
-		if (reveals.has(r)) errors.push(`(reveal_act, reveal_room) = ${r} 가 겹칩니다.`);
+		const po = Number(f.plant_order);
+		const ro = Number(f.reveal_order);
+		if (!(po >= 1 && po <= 4)) errors.push(`${f.id} 의 plant_order=${f.plant_order} 는 심는 화 번호(1~4)가 아닙니다.`);
+		if (!(ro > po && ro <= 5)) errors.push(`${f.id} 의 reveal_order=${f.reveal_order} 는 심는 화(${f.plant_order})보다 늦은 화(5화까지)여야 합니다.`);
+		const p = `${f.plant_order}화/${f.plant_room}`;
+		const r = `${f.reveal_order}화/${f.reveal_room}`;
+		if (plants.has(p)) errors.push(`(plant_order, plant_room) = ${p} 가 겹칩니다.`);
+		if (reveals.has(r)) errors.push(`(reveal_order, reveal_room) = ${r} 가 겹칩니다.`);
 		plants.add(p);
 		reveals.add(r);
 	}
@@ -639,7 +643,8 @@ export const POST: RequestHandler = async ({ request, fetch }) => {
 			Object.entries((gen.npc_roles ?? {}) as Record<string, unknown>).filter(([k]) => npcKeys.includes(k))
 		);
 
-		const arc = {
+		// story_spine·global_foreshadowing 은 화 항목(scenarioOutline) 안으로 합쳐 저장한다
+		const arc = mergeArcEpisodes({
 			id: source.id,
 			...(source.level !== undefined ? { level: source.level } : {}),
 			chapter_name: clampChapterName(gen.chapter_name),
@@ -672,7 +677,7 @@ export const POST: RequestHandler = async ({ request, fetch }) => {
 			npc_roles: roles,
 			scenarioOutline: outline,
 			act_summary: gen.act_summary
-		} as unknown as StoryArc;
+		} as unknown as StoryArc);
 
 		const file = join(outDir, `storyarc_${id}.ts`);
 		const content = `import type { StoryArc } from '$lib/types';\n\n// ${id} 재작업본 (원본: src/lib/data/storyarc 아래 같은 id). 원본과 비교용 — index.ts 에 등록하지 않음.\nexport const storyarc_${id}: StoryArc = ${JSON.stringify(arc, null, '\t')};\n`;

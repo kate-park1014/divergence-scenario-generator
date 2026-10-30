@@ -2,13 +2,13 @@ import { PLACEHOLDER_RULES, NPC_ENTER_EXIT_RULES, OUTPUT_RULES } from './chapter
 import { getNpcPersona } from '$lib/data/sample/npc';
 import { npc_by_theme } from '$lib/data/sample/npc_pool';
 import type { StoryArc } from '$lib/types';
-import { actionOf, hiddenLinkOf, lessonOf, traceOf } from './arcEpisode';
+import { actionOf, cluesOf, hiddenLinkOf, lessonOf, lineOf, lineOrders, traceOf } from './arcEpisode';
 
 export { scenarioTool, buildScenarioTool } from './scenarioTool';
 
 /**
  * 재작업된 storyarc(rewrite_test) 전용 시나리오 프롬프트.
- * - storyarc 의 새 필드(story_spine, key_object, wrong/right_action, stage, boss_trace …)는 "무슨 일이 일어나는지" 메모로 넘기고,
+ * - storyarc 의 새 필드(화별 line·protagonist_action, key_object, wrong/right_action, stage, boss_trace …)는 "무슨 일이 일어나는지" 메모로 넘기고,
  *   대사는 자연스러운 말로 쓰게 한다 (필드 문구를 대사에 그대로 옮기지 않게)
  * - 방 배치는 꼭 필요한 장면만 고정한다 (전부 고정하면 매화 같은 틀이 나온다)
  * - 게임 데이터 형식 규칙(placeholder, enter/exit, 출력)만 chapterRules.ts 에서 가져온다
@@ -34,7 +34,7 @@ export function buildScenarioRewritePrompt(
 	const trace = traceOf(arc, order) || '흔적';
 	const lesson = lessonOf(arc, order);
 	// 이어지는 이야기 형식(화별 lesson 있음)인지. 예전 storyarc 는 매화 같은 행동·같은 흔적
-	const continuous = !!arc.story_spine?.some((l) => l.lesson?.trim());
+	const continuous = [2, 3, 4].some((o) => lessonOf(arc, o));
 	const later = continuous && order >= 2 && !isFinale;
 	// 그 화 속는 방식 (예전 storyarc 에는 없음 → direct). 화마다 장면 흐름이 달라진다
 	const mode = scenario.deceive_mode ?? 'direct';
@@ -81,20 +81,15 @@ export function buildScenarioRewritePrompt(
 	const mainRole = arc.npc_roles?.[scenario.npc];
 
 	// 1~4화는 5화 결말을 숨긴다 (결말을 알면 앞 화 대사에 반전을 흘리기 쉽다)
-	const spine = (arc.story_spine ?? [])
-		.filter((l) => isFinale || l.order <= 4)
-		.map((l) => `- ${l.order}화${l.order === order ? ' ← 이번 화' : ''}: ${l.line}`)
+	const spine = lineOrders(arc)
+		.filter((o) => isFinale || o <= 4)
+		.map((o) => `- ${o}화${o === order ? ' ← 이번 화' : ''}: ${lineOf(arc, o)}`)
 		.join('\n');
 
-	// 단서: 2~4화(rising)는 같은 act 라서, 단서를 화마다 나눠 준다 (같은 단서가 세 화에 반복되지 않게)
-	const forThisOrder = <T>(items: T[]) =>
-		scenario.act === 'rising' ? items.filter((_, i) => i % 3 === order - 2) : items;
-	const plants = forThisOrder(
-		arc.global_foreshadowing.filter((f) => f.plant_act === scenario.act)
-	).map((f) => `- ${f.hint}`);
-	const reveals = forThisOrder(
-		arc.global_foreshadowing.filter((f) => f.reveal_act === scenario.act)
-	).map((f) => `- ${f.reveal_context}`);
+	// 단서: 심는 화·밝혀지는 화 번호로 고른다 (예전 act 단위 복선은 cluesOf 가 화 번호로 바꿔 읽음)
+	const clues = cluesOf(arc);
+	const plants = clues.filter((c) => c.plant_order === order).map((c) => `- ${c.hint}`);
+	const reveals = clues.filter((c) => c.reveal_order === order).map((c) => `- ${c.reveal}`);
 
 	const scenes = isFinale
 		? `- 방 1: 첫 줄은 narrator 가 지금 상황을 한 문장으로 알려 준다. 앞 화들의 나쁜 결과가 쌓인 모습이 보인다

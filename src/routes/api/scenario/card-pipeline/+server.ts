@@ -30,7 +30,7 @@ import type { RequestHandler } from './$types';
  *  - orders?: number[]        기본: 1~5. 조합 안에서는 차례대로 (앞 설계표의 제목·인물을 다음 프롬프트에 넘김)
  *  - concurrency?: number     조합 단위 동시 실행 수 (기본 4, 1~8)
  *  - portraits?: string       얼굴 풀 이름 (기본 modern_whisperweb_0 → <WEBFRONT_DATA_DIR>/portraits/<이름>.json)
- *  - model?: string           Gemini 모델 (기본: /api/gemini 의 기본값 gemini-2.5-flash)
+ *  - model?: string           Gemini 모델 (기본: /api/gemini 의 기본값 gemini-3.6-flash)
  *
  * 출력: <WEBFRONT_DATA_DIR>/cards/<storyId>/<combo>/<combo>_0N/card_*.json, additions/<storyId>/<combo>/<combo>_0N.json
  * 단계별 결과: output_list/cards/<storyId>/<combo>_0N/ (design.json, text_0.json, text_1.json, additions.json)

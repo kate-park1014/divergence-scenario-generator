@@ -27,8 +27,8 @@ export function buildScenarioPrompt(order: number, storyarc: StoryArc): string {
 		: { intro: storyarc.act_summary.intro, rising: storyarc.act_summary.rising };
 
 	const foreshadowingForPrompt = isFinale
-		? storyarc.global_foreshadowing
-		: storyarc.global_foreshadowing.map(({ reveal_context: _omit, ...rest }) => rest);
+		? (storyarc.global_foreshadowing ?? [])
+		: (storyarc.global_foreshadowing ?? []).map(({ reveal_context: _omit, ...rest }) => rest);
 
 	const outlineForPrompt = isFinale
 		? storyarc.scenarioOutline

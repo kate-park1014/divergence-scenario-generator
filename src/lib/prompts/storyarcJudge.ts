@@ -1,5 +1,6 @@
 import type { StoryArc } from '$lib/types';
 import { DECEIVE_MODE_LABEL } from './storyarcGen';
+import { actionOf, cluesOf, hiddenLinkOf, lessonOf, lineOf } from './arcEpisode';
 
 // 재작업된 storyarc 를 채점하는 프롬프트. 코드로 검사하지 못하는 "읽고 판단해야 하는" 항목만 본다.
 // 각 항목은 통과/불통과로 답하고, 불통과면 근거 문장을 원문 그대로 인용한다 (인용은 코드로 원문 대조).
@@ -8,7 +9,7 @@ export const JUDGE_ITEMS = [
 	{
 		id: 'J1',
 		name: '인물 편 유지',
-		rule: '보스는 1~5화 내내 틀린 쪽(1~4화 그 화 행동 권유, 5화 right_action 저지)이다. 1~4화 일반 보스는 그 화 random_boss_side 대로 행동한다: warn 이면 주인공의 그 화 행동(story_spine 의 protagonist_action)을 경고하며 막고, ally 면 최종보스 편으로 주인공의 의심·전진을 막으며 그 화 행동을 말리지 않는다. random_boss_side 가 없으면 ally 로 본다. (ally 일반 보스가 주인공의 전진·의심을 막아서는 것은 설계대로라 통과) NPC 는 마음을 바꿔도 되지만, 바꾸는 화의 summary 에 그 이유가 되는 장면(무엇을 보거나 겪고 바꾸는지)이 있어야 하고 바꾼 뒤에는 그 편을 유지한다. 보스가 편을 바꾸거나, NPC 가 이유 장면 없이 편을 바꾸면 불통과.'
+		rule: '보스는 1~5화 내내 틀린 쪽(1~4화 그 화 행동 권유, 5화 right_action 저지)이다. 1~4화 일반 보스는 그 화 random_boss_side 대로 행동한다: warn 이면 주인공의 그 화 행동(scenarioOutline 의 protagonist_action)을 경고하며 막고, ally 면 최종보스 편으로 주인공의 의심·전진을 막으며 그 화 행동을 말리지 않는다. random_boss_side 가 없으면 ally 로 본다. (ally 일반 보스가 주인공의 전진·의심을 막아서는 것은 설계대로라 통과) NPC 는 마음을 바꿔도 되지만, 바꾸는 화의 summary 에 그 이유가 되는 장면(무엇을 보거나 겪고 바꾸는지)이 있어야 하고 바꾼 뒤에는 그 편을 유지한다. 보스가 편을 바꾸거나, NPC 가 이유 장면 없이 편을 바꾸면 불통과.'
 	},
 	{
 		id: 'J2',
@@ -126,7 +127,6 @@ export function buildStoryarcJudgePrompt(arc: StoryArc): string {
 		genre: arc.genre,
 		stage: arc.stage,
 		world: arc.world,
-		story_spine: arc.story_spine,
 		key_object: arc.key_object,
 		wrong_action: arc.wrong_action,
 		right_action: arc.right_action,
@@ -140,18 +140,25 @@ export function buildStoryarcJudgePrompt(arc: StoryArc): string {
 			twist: arc.final_boss.twist
 		},
 		npc_roles: arc.npc_roles,
+		// 화별 값 (예전 형식 story_spine·global_foreshadowing 은 화 항목 안으로 합쳐 읽는다)
 		scenarioOutline: arc.scenarioOutline.map(({ order, npc, title, summary, random_boss_title, random_boss_side, deceive_mode, place, boss_trace }) => ({
 			order,
 			npc,
 			title,
 			place,
+			line: lineOf(arc, order),
+			summary,
+			protagonist_action: actionOf(arc, order),
+			lesson: lessonOf(arc, order),
+			hidden_link: hiddenLinkOf(arc, order),
 			boss_trace,
 			random_boss_title,
 			random_boss_side,
 			deceive_mode,
-			summary
+			clues: cluesOf(arc)
+				.filter((c) => c.plant_order === order)
+				.map(({ plant_order: _o, ...c }) => c)
 		})),
-		global_foreshadowing: arc.global_foreshadowing,
 		act_summary: arc.act_summary
 	};
 

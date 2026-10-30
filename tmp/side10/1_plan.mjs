@@ -8,7 +8,8 @@ const arc = loadArc();
 const names = await npcNames(arc.theme);
 const nm = (k) => names[k] ?? k;
 const outline = (o) => arc.scenarioOutline.find((x) => x.order === o) ?? {};
-const spine = (o) => arc.story_spine.find((x) => x.order === o) ?? {};
+// 화별 행동·배운 것은 scenarioOutline 항목 안 (예전 형식은 story_spine)
+const spine = (o) => (arc.story_spine ? (arc.story_spine.find((x) => x.order === o) ?? {}) : outline(o));
 const actOf = (o) => (o === 1 ? 'intro' : o === 5 ? 'climax_finale' : 'rising');
 
 // ── 복선 배정 (코드) ───────────────────────────────────────
@@ -29,6 +30,19 @@ function orderFor(act, text, i) {
 function assignForeshadowing() {
 	const list = [];
 	let ri = 0;
+	// 지금 형식: 심는 화 항목의 clues (화 번호가 이미 있음)
+	for (const s of arc.scenarioOutline) {
+		for (const c of s.clues ?? []) {
+			list.push({
+				id: c.id,
+				hint: c.hint,
+				reveal: c.reveal,
+				plant: { order: s.order, room: PLANT_AT[c.room] ?? 2 },
+				at: { order: c.reveal_order, room: REVEAL_AT[c.reveal_room] ?? 10 }
+			});
+		}
+	}
+	// 예전 형식: global_foreshadowing (act 단위)
 	for (const f of arc.global_foreshadowing ?? []) {
 		const plantOrder = orderFor(f.plant_act, f.reveal_context + f.hint, f.plant_act === 'rising' ? ri++ : 0);
 		const revealOrder = orderFor(f.reveal_act, f.reveal_context, 0);

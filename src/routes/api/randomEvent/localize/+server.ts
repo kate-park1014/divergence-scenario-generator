@@ -153,7 +153,7 @@ Texts to translate (key: ID, value: Korean text):
 ${JSON.stringify(textMap, null, 2)}`;
 
 	const body = {
-		model: 'gemini-2.5-flash',
+		model: 'gemini-3.6-flash',
 		messages: [{ role: 'user', content: prompt }],
 		tools: [translateTool],
 		tool_choice: { type: 'function', function: { name: 'provide_translations' } }

@@ -67,6 +67,7 @@ export type FinalBoss = {
 	zodiac_sign?: string;
 };
 
+/** (예전 형식) 아크 전체 복선 목록. 지금은 scenarioOutline[].clues 에 심는 화별로 들어간다 */
 export type Foreshadowing = {
 	id: string;
 	hint: string;
@@ -115,6 +116,22 @@ export type ScenarioOutlineItem = {
 		| 'gift';
 	place?: string; // 이 화의 장소: 무대 안의 한 구역 (화마다 다름)
 	boss_trace?: string; // 1~4화: 그 화에 최종보스가 얼굴 없이 드러나는 매체 (화마다 다름. 주인공은 같은 존재인 줄 모름)
+	// 아래는 예전 story_spine 의 화별 값 (지금은 화 항목 안에 함께 둔다)
+	line?: string; // 이 화의 뼈대 1~2문장 (5화는 결말 포함). summary 를 짧게 줄인 것
+	protagonist_action?: string; // 이 화 주인공의 행동 (1화=wrong_action, 2~4화=겉모습이 다른 행동, 5화=right_action)
+	lesson?: string; // 2~4화: 앞 화에서 배운 것과, 그래서 이번에 어떻게 조심하는지
+	hidden_link?: string; // 1~4화: 이 행동이 사실은 왜 wrong_action 과 같은 일인지 (5화에 드러남, 1~4화 대사에는 안 씀)
+	clues?: Clue[]; // 이 화에 심는 복선 (예전 global_foreshadowing)
+};
+
+/** 화에 심는 복선. 심는 화는 이 복선이 들어 있는 scenarioOutline 항목의 order */
+export type Clue = {
+	id: string;
+	room: number; // 심는 방 (1, 3, 5, 9, 15)
+	hint: string;
+	reveal_order: number; // 밝혀지는 화 (심는 화보다 늦음)
+	reveal_room: number; // 밝혀지는 방 (1, 3, 5, 9, 15)
+	reveal: string; // 밝혀지는 장면에서 보이거나 들리는 일
 };
 
 export type ActSummary = {
@@ -131,10 +148,7 @@ export type StoryArc = {
 	rising_count: number;
 	world: World;
 	protagonist_goal: string;
-	// 이야기 전체를 단순하게 줄인 뼈대 (5화 문장에 결말 포함)
-	// protagonist_action: 그 화 주인공의 행동 (1화=wrong_action, 2~4화=겉모습이 다른 행동, 5화=right_action)
-	// lesson: 2~4화. 주인공이 앞 화에서 배운 것과, 그래서 이번 행동이 안전해 보이는 이유
-	// hidden_link: 1~4화. 그 행동이 사실은 왜 wrong_action 과 같은 일인지 (5화에 드러남, 1~4화 대사에는 안 씀)
+	// (예전 형식) 지금은 scenarioOutline[] 의 line·protagonist_action·lesson·hidden_link 로 들어간다. 읽을 때는 arcEpisode.ts 를 쓸 것
 	story_spine?: { order: number; line: string; protagonist_action?: string; lesson?: string; hidden_link?: string }[];
 	stage?: string; // 이야기의 무대: 보스가 있는 한 장소
 	genre?: string; // 재작업 때 배정된 장르
@@ -151,7 +165,7 @@ export type StoryArc = {
 		climax_finale: ActTone;
 	};
 	final_boss: FinalBoss;
-	global_foreshadowing: Foreshadowing[];
+	global_foreshadowing?: Foreshadowing[]; // (예전 형식) 지금은 scenarioOutline[].clues. 읽을 때는 arcEpisode.ts 의 cluesOf
 	npc_roles?: Record<string, NpcArcItem>;
 	scenarioOutline: ScenarioOutlineItem[];
 	act_summary: ActSummary;
