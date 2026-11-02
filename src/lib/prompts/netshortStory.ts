@@ -50,7 +50,16 @@ export type NetshortDesign = {
 	boss_look: string;
 	true_identity: string;
 	twist: string;
-	deceptions: { order: number; believed: string; actual_victim: string }[];
+	/** 히어로들이 장치를 쓸 때마다 보스가 얻는 것 */
+	boss_want: string;
+	/** right_action 을 하면 왜 보스가 무너지는지 */
+	finale_logic: string;
+	/** caution: 2~4화만. 앞 화에서 배운 것 → 이번에 조심하는 방법 */
+	/** link: 피해가 그 사람에게 간 이유 (작동법대로) */
+	/** seen: 1~8번 방에서 believed 가 주인 없거나 받아도 되는 사람의 것처럼 보이는 장면 (그 물건 자체만, 새 물건·설정 없이) */
+	deceptions: { order: number; believed: string; actual_victim: string; link?: string; seen?: string; caution?: string }[];
+	/** 히어로들이 이곳에 온 이유 */
+	goal: string;
 };
 export type NetshortEpisode = {
 	order: number;
@@ -64,7 +73,8 @@ export type NetshortStory = { id: string; title: string; design: NetshortDesign;
 
 /* ── 재료 (story-seeds.json) ── */
 
-export type SeedItem = { key: string; name: string; hint?: string; examples?: string[] };
+/** props: 무대(worlds)에만 — 그 무대에 실제로 있을 소품. 소품 낱말은 여기서 뽑는다 */
+export type SeedItem = { key: string; name: string; hint?: string; examples?: string[]; props?: string[] };
 /** 사람이 문장으로 정한 핵심 장치. worlds 가 비면 아무 무대에나 */
 export type SeedDevice = {
 	key: string;
@@ -76,6 +86,8 @@ export type SeedDevice = {
 	wrong_action: string;
 	right_action: string;
 	worlds?: string[];
+	/** false 면 피해가 몸에 오지 않아(돈·누명 등) 매 화 전투와 안 맞음 → 뽑지 않는다 */
+	battle?: boolean;
 };
 export type UsedStory = { id?: string; title: string; world: string; device: string; twist: string };
 export type StorySeeds = {
@@ -86,9 +98,12 @@ export type StorySeeds = {
 	original_sins: SeedItem[];
 	twist_types: SeedItem[];
 	tones: string[];
-	motifs: SeedItem[];
-	reason_types: SeedItem[];
-	random_words: string[];
+	/** 예전 재료 (지금은 뽑지 않음): 모티프·화별 이유·소품 낱말이 뜬금없는 물건·설정을 끌어와서 뺌 */
+	motifs?: SeedItem[];
+	reason_types?: SeedItem[];
+	/** 2~4화 조심하는 방식 (앞 화 피해를 보고). 화마다 다르게 */
+	caution_types?: SeedItem[];
+	random_words?: string[];
 	banned_cliches: string[];
 	used_stories: UsedStory[];
 };
@@ -100,9 +115,11 @@ export type PickedSeeds = {
 	original_sin: SeedItem;
 	twist_type: SeedItem;
 	tone: string;
-	motif: SeedItem;
-	reasons: SeedItem[]; // 1~4화
-	random_words: string[]; // 비어 있으면 안 씀
+	cautions?: SeedItem[]; // 2~4화, 서로 다름
+	/** 예전 seeds.json 에만 있음 (지금은 프롬프트에 넣지 않음) */
+	motif?: SeedItem;
+	reasons?: SeedItem[];
+	random_words?: string[];
 	/** 1~5화 NPC id (5화 = 4화). NPC 풀이 있어야 해서 엔드포인트가 assignCast 로 채움 */
 	npcs?: string[];
 	/** 보스 흔적이 나올 화 (1~4화 중 둘) */
@@ -122,21 +139,12 @@ export const victimNpcOf = (npcs: string[], order: number) => (order >= 2 && ord
 
 const pick = <T>(list: T[], rand: () => number): T => list[Math.floor(rand() * list.length)];
 
-/** 카테고리마다 하나씩. reason_types 는 1~4화마다 하나씩, 네 화가 모두 같지 않게. random_words 는 words 면 두 개 */
-export function pickSeeds(seeds: StorySeeds, opts: { words?: boolean } = {}, rand: () => number = Math.random): PickedSeeds {
-	let reasons: SeedItem[];
-	do reasons = [0, 1, 2, 3].map(() => pick(seeds.reason_types, rand));
-	while (seeds.reason_types.length > 1 && reasons.every((r) => r.key === reasons[0].key));
-	const world = pick(seeds.worlds, rand);
+/** 카테고리마다 하나씩 (무대·장치·원죄·반전·톤, 2~4화 조심하는 방식) */
+export function pickSeeds(seeds: StorySeeds, rand: () => number = Math.random): PickedSeeds {
+	// 쓸 수 있는 장치가 있는 무대만
+	const worlds = seeds.worlds.filter((w) => usableDevices(seeds).some((d) => d.worlds?.includes(w.key)));
+	const world = pick(worlds.length ? worlds : seeds.worlds, rand);
 	const device = pickDevice(seeds, world.key, rand);
-	// 소품 낱말은 장치 이름과 겹치지 않는 것만
-	const wordPool = seeds.random_words.filter((w) => !device.object.includes(w));
-	const words: string[] = [];
-	if (opts.words && wordPool.length >= 2)
-		while (words.length < 2) {
-			const w = pick(wordPool, rand);
-			if (!words.includes(w)) words.push(w);
-		}
 	return {
 		theme: seeds.theme,
 		world,
@@ -144,15 +152,22 @@ export function pickSeeds(seeds: StorySeeds, opts: { words?: boolean } = {}, ran
 		original_sin: pick(seeds.original_sins, rand),
 		twist_type: pick(seeds.twist_types, rand),
 		tone: pick(seeds.tones, rand),
-		motif: pick(seeds.motifs, rand),
-		reasons,
-		random_words: words
+		cautions: pickCautions(seeds, rand)
 	};
 }
 
-/** 그 무대에 맞는 장치 중 하나. 맞는 게 없으면 무대 제한 없는 것, 그것도 없으면 전체에서 */
+/** 2~4화 조심하는 방식. 서로 다르게 3개 (종류가 3개보다 적으면 있는 만큼 돌려 씀) */
+export function pickCautions(seeds: StorySeeds, rand: () => number = Math.random): SeedItem[] {
+	const list = [...(seeds.caution_types ?? [])].sort(() => rand() - 0.5);
+	return list.length ? [0, 1, 2].map((i) => list[i % list.length]) : [];
+}
+
+/** 전투와 맞는 장치 (battle: false 가 아닌 것) */
+const usableDevices = (seeds: StorySeeds) => (seeds.devices ?? []).filter((d) => d.battle !== false);
+
+/** 그 무대에 맞는 장치 중 하나. 맞는 게 없으면 무대 제한 없는 것, 그것도 없으면 전체에서 (battle: false 는 빼고) */
 export function pickDevice(seeds: StorySeeds, worldKey: string, rand: () => number = Math.random): SeedDevice {
-	const list = seeds.devices ?? [];
+	const list = usableDevices(seeds).length ? usableDevices(seeds) : seeds.devices ?? [];
 	if (!list.length) throw new Error('story-seeds.json 에 devices 가 없습니다.');
 	const fit = list.filter((d) => d.worlds?.includes(worldKey));
 	const free = list.filter((d) => !d.worlds?.length);
@@ -177,7 +192,6 @@ export function buildNetshortPrompt(
 ): string {
 	const nameOf = new Map(ctx.npcPool.map((n) => [n.id, n.name]));
 	const npcLabel = (id: string) => `${nameOf.get(id) ?? id}(${id})`;
-	const motif = seeds.motif.examples?.length ? `${seeds.motif.name} (예: ${seeds.motif.examples.join(', ')})` : seeds.motif.name;
 	const input = fill(INPUT_TEMPLATE, {
 		id,
 		theme_description: ctx.themeDescription,
@@ -194,9 +208,7 @@ export function buildNetshortPrompt(
 		original_sin: withHint(seeds.original_sin),
 		twist_type: withHint(seeds.twist_type),
 		tone: seeds.tone,
-		motif,
-		random_words: seeds.random_words.join(', '),
-		reasons: seeds.reasons.map((r, i) => `- ${i + 1}화: ${withHint(r)}`).join('\n'),
+		cautions: (seeds.cautions ?? []).map((c, i) => `- ${i + 2}화: ${withHint(c)}`).join('\n'),
 		npc_pool: JSON.stringify(seeds.npcs?.length ? ctx.npcPool.filter((n) => seeds.npcs!.includes(n.id)) : ctx.npcPool, null, 2),
 		banned: ctx.banned.map((b) => `- ${b}`).join('\n'),
 		used_stories: ctx.used.map((u) => `  - ${u.title}: ${u.world} / ${u.device} / ${u.twist}`).join('\n')
@@ -226,6 +238,9 @@ export const netshortStoryTool = {
 						boss_trace: str('1~4화 보스 흔적 (본문에 그대로 쓸 짧은 명사구)'),
 						boss_name: str('최종 보스 이름'),
 						boss_look: str('최종 보스 외모 (옷차림·장신구·들고 있는 물건)'),
+						goal: str('히어로들이 이곳에 온 이유 한 문장 (누구를·무엇을 찾거나 막으러 왔는지)'),
+						boss_want: str('히어로들이 장치를 쓸 때마다 보스가 얻는 구체적인 이득 한 문장'),
+						finale_logic: str('right_action 을 하면 작동법 안에서 왜 보스가 무너지는지 한 문장'),
 						true_identity: str('최종 보스의 진짜 정체'),
 						twist: str('반전 (짧은 명사구)'),
 						deceptions: {
@@ -236,13 +251,16 @@ export const netshortStoryTool = {
 								properties: {
 									order: { type: 'integer' },
 									believed: str('히어로들이 피해가 갈 거라고 믿은 대상'),
-									actual_victim: str('실제로 피해를 받은 사람 (1화는 그 자리의 모르는 사람, 2~4화는 입력대로)')
+									actual_victim: str('실제로 피해를 받은 사람 (1화는 그 자리의 모르는 사람, 2~4화는 입력대로)'),
+									link: str('피해가 actual_victim 에게 간 이유 한 문장. 작동법 그대로 (히어로들이 고른 것이 사실은 그 사람의 것이었던 이유). win 에서 히어로들이 보는 증거를 함께'),
+									seen: str('몇 번 방(1·3·5·8)에서 believed 그 물건·이름이 왜 주인 없거나 받아도 되는 사람의 것처럼 보이는지 한 문장. 그 물건 자체만 (새 물건·새 설정 금지)'),
+									caution: str('2~4화만: 앞 화에서 누가 다친 것을 보고 배운 것 → 이번에 어떻게 조심하는지 한 문장 (1화는 빈 문자열)')
 								},
-								required: ['order', 'believed', 'actual_victim']
+								required: ['order', 'believed', 'actual_victim', 'link', 'seen']
 							}
 						}
 					},
-					required: ['deceptions', 'device', 'how', 'visible_effect', 'original_sin', 'boss_trace', 'boss_name', 'boss_look', 'true_identity', 'twist']
+					required: ['deceptions', 'device', 'how', 'visible_effect', 'original_sin', 'boss_trace', 'boss_name', 'boss_look', 'boss_want', 'finale_logic', 'goal', 'true_identity', 'twist']
 				},
 				prologue: str('프롤로그'),
 				episodes: {
@@ -290,6 +308,8 @@ export const netshortStoryTool = {
 
 /* ── 코드 검사 ── */
 
+/** 장치에 붙인 장식·부품 */
+const DEVICE_DECOR = /문양|새겨|각인|장착|부착|박혀|박힌|달려 있|달린 /;
 const sentences = (t: string) => (t.match(/[.!?…。](?=\s|"|”|$)/g) ?? []).length || (t.trim() ? 1 : 0);
 
 // 대사(큰따옴표 안)를 뺀 서술 문장
@@ -348,6 +368,33 @@ function copiedFrom(sources: string[]): (text: string) => string {
 	};
 }
 
+const INJURED_BEFORE = /(다친|다쳤던|쓰러진|쓰러졌던|상처\s?입은|상처를\s?입은|피\s?흘리는|피를\s?흘리던|붕대를\s?감은|절뚝이는|절뚝거리는|멍든)\s*$/;
+const INJURED_AFTER_NOUN = /^(의)?\s*(상처|붕대|멍|흉터|부상|피멍)/;
+const INJURED_AFTER_VERB = /(다쳤|다친\s|쓰러지|쓰러진다|쓰러졌|움켜쥐|피를\s?흘|피를\s?토|멍이\s?든|상처가\s?생|주저앉)/;
+
+/** 피해자 이름 뒤바뀜: 아직 다치지 않은 피해자가 다친 사람처럼 나오면 오류.
+ *  cast: 1~4화 실제 피해자 이름(마지막 낱말) 목록, allowed: 이 글 시점까지 다친 사람 */
+export function injuredNameErrors(text: string, where: string, cast: string[], allowed: string[]): string[] {
+	const out: string[] = [];
+	for (const n of new Set(cast.filter((x) => x.length >= 1 && !allowed.includes(x)))) {
+		for (let at = text.indexOf(n); at >= 0; at = text.indexOf(n, at + n.length)) {
+			const before = text.slice(Math.max(0, at - 12), at);
+			const after = text.slice(at + n.length);
+			// 낱말 경계: 앞은 한글이 아니고, 뒤는 조사·띄어쓰기·문장부호 (한 글자 이름 "렌"이 "렌즈"에 걸리지 않게)
+			if (/[가-힣]$/.test(before) || !/^($|[\s.,!?…'"”’]|이|가|은|는|을|를|의|에|와|과|도|만)/.test(after)) continue;
+			const sentence = after.split(/[.!?…]/)[0];
+			// 주어 뒤 동사. 동사 가까이에 다른 피해자·히어로들이 있으면 그 사람 이야기 ("니아가 다친 벡스를", "주저앉은 히어로들")
+			const verb = /^(이|가|은|는)\s/.test(sentence) ? sentence.slice(0, 32).match(INJURED_AFTER_VERB) : null;
+			const near = verb ? sentence.slice(0, (verb.index ?? 0) + verb[0].length + 8) : '';
+			if (INJURED_BEFORE.test(before) || INJURED_AFTER_NOUN.test(after) || (verb && !/히어로/.test(near) && !cast.some((c) => c !== n && near.includes(c)))) {
+				out.push(`${where}: "${n}" 은 이 시점에 아직 다치지 않았습니다 (지금까지 다친 사람: ${allowed.join(', ') || '없음'}). 피해자 이름을 바꿔 쓰지 말 것: "${text.slice(Math.max(0, at - 20), at + n.length + 20)}"`);
+				break;
+			}
+		}
+	}
+	return out;
+}
+
 /** traceOrders: 보스 흔적이 나와야 하는 화 (seeds.trace_orders) */
 export function checkNetshortStory(s: NetshortStory, traceOrders: number[] = []): string[] {
 	const errors: string[] = [];
@@ -368,13 +415,16 @@ export function checkNetshortStory(s: NetshortStory, traceOrders: number[] = [])
 		if (!b || !v) errors.push(`design.deceptions ${x?.order}화: believed·actual_victim 을 모두 쓸 것.`);
 		else if (b === v || b.includes(v) || v.includes(b)) errors.push(`design.deceptions ${x.order}화: 실제 피해자 "${v}" 가 히어로들이 믿은 대상 "${b}" 과 같습니다. 히어로들은 다른 대상에게 간다고 믿어야 함.`);
 		else {
+			if (!String(x?.link ?? '').trim()) errors.push(`design.deceptions ${x.order}화: link(피해가 그 사람에게 간 이유, 작동법대로)를 쓸 것.`);
+			if (x.order >= 2 && x.order <= 4 && !String(x?.caution ?? '').trim())
+				errors.push(`design.deceptions ${x.order}화: caution(앞 화에서 배운 것 → 이번에 조심하는 방법)을 쓸 것.`);
 			victimOf[x.order] = deviceHead(v);
 			const bw = believedWord(b, device);
 			if (bw) believedOf[x.order] = bw;
 		}
 	}
 	const epText: Record<number, string> = {};
-	for (const k of ['device', 'how', 'visible_effect', 'wrong_action', 'right_action', 'original_sin', 'boss_trace', 'boss_name', 'boss_look', 'true_identity', 'twist'] as const)
+	for (const k of ['device', 'how', 'visible_effect', 'wrong_action', 'right_action', 'original_sin', 'boss_trace', 'boss_name', 'boss_look', 'boss_want', 'finale_logic', 'goal', 'true_identity', 'twist'] as const)
 		if (!String(d[k] ?? '').trim()) errors.push(`design.${k} 가 비었습니다.`);
 	if (!s?.prologue?.trim()) errors.push('prologue 가 비었습니다.');
 	const eps = Array.isArray(s?.episodes) ? s.episodes : [];
@@ -417,11 +467,30 @@ export function checkNetshortStory(s: NetshortStory, traceOrders: number[] = [])
 		if (e.order <= 4 && trace && epTexts.some((t) => t.includes(trace))) traceEps.push(e.order);
 		const r10x = rooms['10'] && typeof rooms['10'] === 'object' ? (rooms['10'] as Record<string, string>) : {};
 		epText[e.order] = [...NETSHORT_ROOMS.map((k) => String(rooms[k] ?? '')), r10x.before_battle, r10x.win, r10x.lose].join(' ');
+		// 피해자 이름 뒤바뀜: 방 1~8·전투 전·패배는 앞 화까지 다친 사람만, win 은 이 화 피해자까지
+		const cast = Object.values(victimOf);
+		const hurtBefore = Object.entries(victimOf).filter(([o]) => Number(o) < e.order).map(([, v]) => v);
+		const hurtAfter = Object.entries(victimOf).filter(([o]) => Number(o) <= e.order).map(([, v]) => v);
+		for (const k of NETSHORT_ROOMS) errors.push(...injuredNameErrors(String(rooms[k] ?? ''), `${e.order}화 방 ${k}`, cast, hurtBefore));
+		errors.push(...injuredNameErrors(String(r10x.before_battle ?? ''), `${e.order}화 방 10 before_battle`, cast, hurtBefore));
+		errors.push(...injuredNameErrors(String(r10x.lose ?? ''), `${e.order}화 방 10 lose`, cast, hurtBefore));
+		errors.push(...injuredNameErrors(String(r10x.win ?? ''), `${e.order}화 방 10 win`, cast, hurtAfter));
 		const victim = victimOf[e.order];
 		if (victim && !String(r10x.win ?? '').includes(victim)) errors.push(`${e.order}화 방 10 win 에 실제 피해자 "${victim}" 가 나오지 않습니다. 피해가 그 사람에게 간 것을 결과 장면으로 보여줄 것.`);
+		// 2~4화: 앞 화 피해자를 1·3·5번 방에서 다시 보여주고 히어로들이 떠올린다 (같은 실수를 처음처럼 반복하지 않게)
+		const prevVictim = victimOf[e.order - 1];
+		if (e.order >= 2 && e.order <= 4 && prevVictim && !['1', '3', '5'].some((k) => String(rooms[k] ?? '').includes(prevVictim)))
+			errors.push(`${e.order}화 방 1·3·5 에 앞 화 피해자 "${prevVictim}" 가 나오지 않습니다. 앞 화에서 다친 그 사람의 지금 모습을 보여주고, 히어로들이 그 일을 떠올리게 할 것.`);
+		// 장치는 before_battle 에서 쓴다 → 무엇을 넣었는지(believed)는 before_battle 에
 		const believed = believedOf[e.order];
-		if (believed && !String(r10x.win ?? '').includes(believed))
-			errors.push(`${e.order}화 방 10 win 에 히어로들이 믿은 대상 "${believed}" 가 나오지 않습니다. 장치에 무엇을 넣었는지 그 낱말 그대로 쓸 것 ("남의 이름"처럼 뭉뚱그리지 않는다).`);
+		if (believed && !String(r10x.before_battle ?? '').includes(believed))
+			errors.push(`${e.order}화 방 10 before_battle 에 히어로들이 믿은 대상 "${believed}" 가 나오지 않습니다. 장치는 전투 전에 쓴다. 장치에 무엇을 넣었는지 그 낱말 그대로 쓸 것 ("남의 이름"처럼 뭉뚱그리지 않는다).`);
+		// 믿은 대상은 전투 전에 먼저 보여 준다 (before_battle 에서 갑자기 나오면 왜 믿었는지 모름)
+		if (believed && !NETSHORT_ROOMS.some((k) => String(rooms[k] ?? '').includes(believed)))
+			errors.push(`${e.order}화 방 1~8 에 히어로들이 믿은 대상 "${believed}" 가 나오지 않습니다. design.deceptions 의 seen 대로, 그 물건·이름이 왜 주인 없거나 받아도 되는 사람의 것처럼 보이는지 1~8번 방에 먼저 보여줄 것.`);
+		// win 은 전투 뒤 결과. 전투를 이어 가지 않는다
+		if (e.order <= 4 && /(날아든다|날아온다|쏟아진다|육박|반격)/.test(String(r10x.win ?? '')))
+			errors.push(`${e.order}화 방 10 win: win 은 전투가 끝난 뒤의 결과 장면이다. 공격이 다시 날아오는 장면을 쓰지 말고, 피해가 누구에게 갔는지만 쓸 것.`);
 		if (e.order === 1 && head && !NETSHORT_ROOMS.some((k) => String(rooms[k] ?? '').includes(head)))
 			errors.push(`1화 방 1~8 에 핵심 장치 "${head}" 가 나오지 않습니다. win 전에 장치와 작동법을 장면으로 먼저 보여줄 것.`);
 		const win = r10 && typeof r10 === 'object' ? String(r10.win ?? '') : '';
@@ -430,6 +499,13 @@ export function checkNetshortStory(s: NetshortStory, traceOrders: number[] = [])
 		if (e.order !== 5 && e.epilogue?.trim()) errors.push(`epilogue 는 5화에만 넣습니다. (${e.order}화에 있음)`);
 		if (e.order === 5 && e.epilogue) texts.push(['epilogue', e.epilogue, false]);
 	}
+	// 핵심 장치에 장식을 덧붙이지 않는다 (예: "주사위 문양이 새겨진 장치")
+	for (const [where, t] of texts)
+		for (const sen of t.split(/(?<=[.!?…])\s+/)) {
+			if (!sen.includes('장치') && !(head.length >= 2 && sen.includes(head))) continue;
+			const w = sen.match(DEVICE_DECOR)?.[0];
+			if (w) errors.push(`${where}: 핵심 장치에 "${w}" 를 덧붙였습니다. 장치는 작동법에 있는 모습만 쓸 것: "${sen.trim()}"`);
+		}
 	const missing = traceOrders.filter((o) => !traceEps.includes(o));
 	if (trace && missing.length) errors.push(`보스 흔적 "${trace}" 가 ${missing.join(',')}화에 나오지 않습니다. 입력의 [흔적이 나올 화]마다 글자 그대로 쓸 것.`);
 	for (const [where, t, hidden] of texts) {
@@ -463,8 +539,8 @@ export function netshortToMarkdown(s: NetshortStory, seeds?: PickedSeeds): strin
 			'',
 			`- 무대: ${seeds.world.name}`,
 			`- 장치: ${seeds.device?.object ?? ''} / 원죄: ${seeds.original_sin.name} / 반전: ${seeds.twist_type.name}`,
-			`- 톤: ${seeds.tone} / 모티프: ${seeds.motif.name}${seeds.random_words.length ? ` / 낱말: ${seeds.random_words.join(', ')}` : ''}`,
-			`- 화별 이유: ${seeds.reasons.map((r, i) => `${i + 1}화 ${r.name}`).join(' / ')}`,
+			`- 톤: ${seeds.tone}`,
+			...(seeds.cautions?.length ? [`- 조심하는 방식: ${seeds.cautions.map((c, i) => `${i + 2}화 ${c.name}`).join(' / ')}`] : []),
 			''
 		);
 	const d = s.design;
@@ -478,8 +554,11 @@ export function netshortToMarkdown(s: NetshortStory, seeds?: PickedSeeds): strin
 			`- 잘못된 행동: ${d.wrong_action} / 올바른 행동: ${d.right_action}`,
 			`- 원죄: ${d.original_sin}`,
 			`- 보스 흔적: ${d.boss_trace}`,
-			...(d.deceptions ?? []).map((x) => `- ${x.order}화 속는 방식: 믿은 대상 "${x.believed}" → 실제 피해자 "${x.actual_victim}"`),
+			...(d.deceptions ?? []).map((x) => `- ${x.order}화 속는 방식: 믿은 대상 "${x.believed}" → 실제 피해자 "${x.actual_victim}"${x.seen ? ` / 믿게 된 장면: ${x.seen}` : ''}${x.link ? ` / 이유: ${x.link}` : ''}${x.caution ? ` / 조심: ${x.caution}` : ''}`),
 			`- 최종 보스: ${d.boss_name} — ${d.true_identity} (${d.twist})`,
+			`- 히어로들이 온 이유: ${d.goal ?? ''}`,
+			`- 보스가 원하는 것: ${d.boss_want ?? ''}`,
+			`- 보스가 무너지는 이유: ${d.finale_logic ?? ''}`,
 			`- 보스 외모: ${d.boss_look ?? ''}`,
 			''
 		);

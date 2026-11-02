@@ -21,76 +21,77 @@
       "face_image_url": "https://imagedelivery.net/WTEqQNGFb-l-IHS6IGnzUQ/da48e2c2-6733-4f65-f8b6-f197af4ff700/public",
       "battle_sprite_url": "https://imagedelivery.net/WTEqQNGFb-l-IHS6IGnzUQ/e90605b9-372f-4bf1-cdec-56a2fdef0800/public",
       "role": {
-        "korean": "지하상가 환전상"
+        "korean": "상가 브로커"
       }
     }
   },
   "boss": {
     "pool_id": null,
     "name": {
-      "korean": "마태수"
+      "korean": "구마태"
     },
-    "appearance": "헐렁한 넥타이를 매고 피 묻은 가위와 탄 장부 조각을 손에 쥐고 있다. 시커멓게 탄 양복 옷자락 아래로 기괴한 흉터가 불길처럼 넘실거린다."
+    "appearance": "찌그러진 검은 정장에 타다 만 넥타이를 매고, 손에는 피에 젖은 장부와 둔기를 쥐고 있다."
   },
-  "prologue": {
+  "epilogue": {
     "korean": [
-      "어두운 지하상가 구석에서 기름 냄새와 타버린 종이 연기가 진동한다.",
-      "누군가의 비명이 울리는 와중에 피 묻은 장부를 품에 안고 스위치가 내려진다.",
-      "세월이 흐른 지금, 히어로들은 서늘한 묵음이 흐르는 지하상가 입구로 발걸음을 옮긴다."
+      "날이 밝아오자 지하상가 입구 오락실의 네온사인이 조용히 꺼진다.",
+      "흩어져 있던 구겨진 차용증과 영수증들이 청소부의 빗자루에 쓸려 나간다.",
+      "벡스와 닥스, 맥스는 마침내 얼굴의 멍 자국이 옅어진 채 맑은 공기를 마신다.",
+      "히어로들은 조용히 오락실 문을 열고 거리 밖으로 걸어 나간다."
     ]
   },
   "rooms": [
     {
       "dialogue": [
         {
+          "type": "speech",
+          "speaker": "narrator",
           "emotion": "base",
           "content": {
-            "korean": "태워진 장부 재가 휘날리는 지하상가 최심부에 발을 들인다."
-          },
-          "speaker": "narrator",
-          "type": "speech"
+            "korean": "화려하지만 비릿한 냄새가 진동하는 VIP룸 입구다."
+          }
         },
         {
-          "type": "direction",
-          "action": "enter",
-          "speaker": "echo",
-          "duration_ms": 500,
+          "type": "speech",
+          "speaker": "narrator",
+          "content": {
+            "korean": "문 앞에는 구겨진 차용증과 핏자국이 어지럽게 뒤얽혀 있다."
+          },
+          "emotion": "base"
+        },
+        {
           "spot": [
-            500,
-            200
-          ]
+            200,
+            300
+          ],
+          "type": "direction",
+          "duration_ms": 500,
+          "action": "enter",
+          "speaker": "echo"
         },
         {
-          "speaker": "echo",
-          "type": "speech",
-          "content": {
-            "korean": "구겨진 주차권을 꼭 쥔 채 끝까지 곁을 지키겠습니다."
-          },
-          "emotion": "sad"
-        },
-        {
-          "type": "speech",
-          "content": {
-            "korean": "어두운 기운이 사방에 가득하다."
-          },
-          "emotion": "sad",
-          "speaker": "character_1"
-        },
-        {
-          "speaker": "character_any",
           "type": "speech",
           "emotion": "base",
           "content": {
-            "korean": "더는 물러설 곳이 없다. 진실을 향해 끝까지 나아간다."
-          }
+            "korean": "여기가 그자가 숨어 있는 VIP룸이야. 더는 도망칠 곳도 없어."
+          },
+          "speaker": "echo"
         },
         {
           "type": "speech",
-          "speaker": "narrator",
           "emotion": "base",
           "content": {
-            "korean": "저 멀리 기이한 어둠 속에서 스산한 죄의 냄새가 풍겨온다."
-          }
+            "korean": "모든 비극의 고리를 끊어 내기 위해 안으로 들어서겠어."
+          },
+          "speaker": "character_any"
+        },
+        {
+          "speaker": "character_1",
+          "emotion": "base",
+          "content": {
+            "korean": "드디어 마지막 방이군."
+          },
+          "type": "speech"
         }
       ],
       "id": 1
@@ -98,54 +99,44 @@
     {
       "dialogue": [
         {
+          "type": "speech",
+          "content": {
+            "korean": "카펫에 번진 핏자국이 어둠 속으로 스며든다."
+          },
+          "emotion": "base",
+          "speaker": "narrator"
+        },
+        {
           "emotion": "base",
           "content": {
-            "korean": "열기가 식어가는 바닥에 오래전 사건을 기록한 노란 종이가 어지럽게 나뒹군다."
+            "korean": "히어로들이 정적을 깨며 카지노 중앙 홀을 지나간다."
           },
           "speaker": "narrator",
           "type": "speech"
         },
         {
-          "spot": [
-            500,
-            200
-          ],
-          "duration_ms": 500,
-          "action": "enter",
-          "speaker": "echo",
-          "type": "direction"
-        },
-        {
-          "speaker": "echo",
-          "type": "speech",
-          "emotion": "sad",
+          "speaker": "narrator",
           "content": {
-            "korean": "가슴이 조여옵니다. 더 이상 남에게 괴로움을 넘겨서는 안 됩니다."
-          }
-        },
-        {
-          "speaker": "character_1",
-          "content": {
-            "korean": "오래된 기록들이 펼쳐져 있군."
+            "korean": "벽에는 타다 만 편지들이 스산하게 붙어 있다."
           },
           "emotion": "base",
           "type": "speech"
         },
         {
           "type": "speech",
-          "speaker": "character_any",
+          "emotion": "base",
           "content": {
-            "korean": "타인의 희생으로 얻는 승리는 아무런 의미가 없다."
+            "korean": "과거의 죄악을 덮으려 했던 흔적이 사방에 널려 있군."
           },
-          "emotion": "base"
+          "speaker": "character_any"
         },
         {
+          "type": "speech",
           "content": {
-            "korean": "타버린 종이 조각 사이로 찬 바람이 불어온다."
+            "korean": "기괴한 분위기야."
           },
           "emotion": "base",
-          "type": "speech",
-          "speaker": "narrator"
+          "speaker": "character_1"
         }
       ],
       "id": 3
@@ -154,62 +145,54 @@
       "id": 5,
       "dialogue": [
         {
-          "type": "speech",
           "speaker": "narrator",
           "content": {
-            "korean": "조명이 가늘게 떨리자 벽면의 오락기 장치가 섬뜩한 붉은빛을 뿜어낸다."
+            "korean": "최정예 경호원들이 몽둥이를 들고 길을 막아선다."
           },
-          "emotion": "base"
+          "emotion": "base",
+          "type": "speech"
         },
         {
-          "speaker": "narrator",
-          "content": {
-            "korean": "남의 이름을 적으면 대가가 타인에게 간다는 경고문이 전방을 울린다."
-          },
-          "type": "speech",
-          "emotion": "base"
-        },
-        {
+          "duration_ms": 500,
           "speaker": "echo",
-          "type": "direction",
           "action": "enter",
           "spot": [
-            500,
-            200
+            200,
+            300
           ],
-          "duration_ms": 500
+          "type": "direction"
         },
         {
-          "type": "speech",
-          "speaker": "echo",
-          "content": {
-            "korean": "또다시 남에게 대가를 넘기라는 비겁한 유혹입니다."
-          },
-          "emotion": "angry"
-        },
-        {
-          "speaker": "character_1",
-          "content": {
-            "korean": "더 이상 편법에 속지 않는다."
-          },
-          "type": "speech",
-          "emotion": "angry"
-        },
-        {
-          "type": "speech",
-          "speaker": "character_any",
-          "content": {
-            "korean": "우리는 정면돌파한다. 그 무엇도 피하지 않겠다."
-          },
-          "emotion": "base"
-        },
-        {
-          "content": {
-            "korean": "히어로들은 불길한 장치를 뒤로하고 정면을 향해 나아간다."
-          },
           "type": "speech",
           "emotion": "base",
-          "speaker": "narrator"
+          "content": {
+            "korean": "여기는 내가 뒤를 지킬 테니 당신들은 계속 올라가!"
+          },
+          "speaker": "echo"
+        },
+        {
+          "content": {
+            "korean": "에코에게 뒤를 맡기고 적들을 하나씩 제압하자."
+          },
+          "emotion": "base",
+          "type": "speech",
+          "speaker": "character_any"
+        },
+        {
+          "type": "speech",
+          "emotion": "angry",
+          "content": {
+            "korean": "비켜라!"
+          },
+          "speaker": "character_1"
+        },
+        {
+          "type": "speech",
+          "content": {
+            "korean": "결연한 의지로 경호원들을 전부 무너뜨리겠어."
+          },
+          "emotion": "base",
+          "speaker": "character_any"
         }
       ]
     },
@@ -218,183 +201,164 @@
       "dialogue": [
         {
           "type": "speech",
+          "speaker": "narrator",
           "emotion": "base",
           "content": {
-            "korean": "압박감이 팽팽해지며 어둠 속에서 마태수가 모습을 드러낸다."
-          },
-          "speaker": "narrator"
+            "korean": "찌그러진 검은 정장에 타다 만 넥타이를 매고 피 젖은 장부를 든 구마태가 마침내 모습을 드러낸다."
+          }
         },
         {
           "speaker": "narrator",
-          "content": {
-            "korean": "시커멓게 탄 양복을 입은 그가 \"헛된 정의감에 취했구나\"라며 비웃음을 짓는다."
-          },
-          "emotion": "base",
-          "type": "speech"
-        },
-        {
-          "emotion": "base",
-          "content": {
-            "korean": "그가 품에서 꺼낸 타다 만 장부 조각에는 10년 전 사건을 덮고 동료를 모함했던 그의 날인과 필적이 또렷하게 새겨져 있다."
-          },
-          "speaker": "narrator",
-          "type": "speech"
-        },
-        {
           "type": "speech",
           "content": {
-            "korean": "모든 비극을 시작한 진짜 가해자로군."
-          },
-          "emotion": "angry",
-          "speaker": "character_1"
+            "korean": "구마태가 피 젖은 장부를 펼쳐 보인다. \"가죽점퍼 사내, 벡스, 닥스, 맥스. 전부 그날 밤 불타는 상가에 있던 놈들이지.\""
+          }
+        },
+        {
+          "speaker": "narrator",
+          "type": "speech",
+          "content": {
+            "korean": "\"닉네임도, 차용증도, 영수증도 내가 흘려 둔 거다. 너희가 2P 칸에 이름을 넣을 때마다 증인 입이 하나씩 막혔지.\""
+          }
         },
         {
           "speaker": "character_any",
           "type": "speech",
-          "emotion": "base",
           "content": {
-            "korean": "오락기 2P 칸을 비워둔다. 대가는 우리 스스로 짊어진다."
+            "korean": "우리가 이름을 넣을 때마다 그날 밤을 본 사람들을 대신 때린 거였어?"
           }
         },
         {
-          "emotion": "base",
+          "speaker": "character_1",
           "type": "speech",
           "content": {
-            "korean": "히어로들은 2P 칸을 바라보며 대가를 직접 받아낼 각오를 다진다."
-          },
-          "speaker": "narrator"
+            "korean": "핏빛 주차권도 전부 저놈 거였군."
+          }
         }
       ]
     },
     {
+      "id": 15,
       "dialogue": [
         {
           "content": {
-            "korean": "헐렁한 넥타이를 매고 피 묻은 가위와 탄 장부 조각을 쥔 마태수가 정면에 선다."
+            "korean": "구마태가 피 젖은 둔기와 거대한 주먹을 휘두르며 죽일 기세로 덤벼든다."
           },
-          "type": "speech",
           "emotion": "base",
-          "speaker": "narrator"
-        },
-        {
-          "content": {
-            "korean": "진실을 밝히겠다고? 내 죄와 주먹을 네놈들이 모두 받아내어라!"
-          },
-          "type": "speech",
-          "emotion": "angry",
-          "speaker": "boss"
-        },
-        {
-          "type": "speech",
-          "speaker": "character_1",
-          "content": {
-            "korean": "더 이상 고통을 남에게 미루지 않는다!"
-          },
-          "emotion": "angry"
-        },
-        {
-          "type": "speech",
-          "speaker": "character_any",
-          "emotion": "base",
-          "content": {
-            "korean": "네가 던진 주먹과 대가를 우리 스스로 모두 감당하겠다."
-          }
-        }
-      ],
-      "id": 15,
-      "lose_dialogue": [
-        {
-          "type": "speech",
-          "speaker": "narrator",
-          "content": {
-            "korean": "마태수의 가혹한 주먹에 히어로들이 무릎을 꿇는다."
-          },
-          "emotion": "base"
-        },
-        {
-          "duration_ms": 500,
-          "spot": [
-            500,
-            200
-          ],
-          "type": "direction",
-          "action": "enter",
-          "speaker": "echo"
-        },
-        {
-          "emotion": "sad",
-          "type": "speech",
-          "content": {
-            "korean": "아직 이 싸움은 끝나지 않았습니다, 다시 일어나 마태수에게 맞서십시오!"
-          },
-          "speaker": "echo"
-        },
-        {
-          "emotion": "angry",
-          "content": {
-            "korean": "결코 여기서 무너지지 않는다. 다시 일어선다."
-          },
-          "type": "speech",
-          "speaker": "character_1"
-        }
-      ],
-      "win_dialogue": [
-        {
-          "emotion": "base",
-          "content": {
-            "korean": "히어로들은 오락기 2P 칸을 비워 두고 주먹을 직접 맞는다."
-          },
           "speaker": "narrator",
           "type": "speech"
         },
         {
           "speaker": "boss",
-          "emotion": "angry",
           "type": "speech",
           "content": {
-            "korean": "크아악! 대가를 남에게 넘기지 않고 견뎌낸단 말이냐!"
+            "korean": "증인은 이제 하나 남았다. 에코 이름도 여기 있지. 2P 칸에 넣어라. 그럼 오늘 주먹은 너희를 피해 간다."
           }
         },
         {
-          "content": {
-            "korean": "마태수의 거친 주먹이 때릴 때마다 히어로들의 얼굴에 멍이 피어오르지만, 2P 화면에는 아무 이름도 뜨지 않는다."
-          },
-          "type": "speech",
-          "emotion": "base",
-          "speaker": "narrator"
-        },
-        {
-          "content": {
-            "korean": "온몸으로 견뎌내겠다!"
-          },
-          "emotion": "base",
-          "type": "speech",
-          "speaker": "character_1"
-        },
-        {
-          "type": "speech",
           "speaker": "character_any",
-          "emotion": "happy",
+          "type": "speech",
           "content": {
-            "korean": "타인의 희생 없이 마침내 이 비극을 끝낸다!"
+            "korean": "가죽점퍼 사내도, 벡스도, 닥스도, 맥스도 우리 대신 맞았어. 이번엔 안 넣어."
           }
         },
         {
-          "emotion": "base",
-          "content": {
-            "korean": "히어로들은 주먹을 온몸으로 견뎌내며 마태수를 마침내 쓰러뜨린다."
-          },
+          "speaker": "character_1",
           "type": "speech",
-          "speaker": "narrator"
+          "content": {
+            "korean": "우리가 직접 감당해야 해!"
+          }
+        },
+        {
+          "speaker": "character_any",
+          "type": "speech",
+          "content": {
+            "korean": "오락기 2P 칸을 비워 두고 주먹을 직접 받겠어!"
+          }
+        }
+      ],
+      "win_dialogue": [
+        {
+          "speaker": "narrator",
+          "type": "speech",
+          "content": {
+            "korean": "2P 칸이 비어 있으니 구마태의 주먹은 누구에게도 넘어가지 않고 히어로들의 몸에만 꽂힌다."
+          }
+        },
+        {
+          "speaker": "narrator",
+          "type": "speech",
+          "content": {
+            "korean": "피멍을 뒤집어쓴 채 끝까지 버틴 히어로들의 반격에 구마태가 무릎을 꿇는다."
+          }
+        },
+        {
+          "type": "direction",
+          "action": "enter",
+          "speaker": "echo",
+          "spot": [
+            700,
+            750
+          ],
+          "duration_ms": 500
+        },
+        {
+          "speaker": "echo",
+          "type": "speech",
+          "content": {
+            "korean": "이제 마지막 증인은 멀쩡해. 그날 밤 일, 내가 전부 말할 거야."
+          }
+        },
+        {
+          "speaker": "boss",
+          "type": "speech",
+          "content": {
+            "korean": "증인 입만 막으면 아무도 몰랐을 텐데!"
+          }
+        },
+        {
+          "speaker": "narrator",
+          "type": "speech",
+          "content": {
+            "korean": "장부를 놓친 구마태가 바닥으로 무너져 내린다."
+          }
+        }
+      ],
+      "lose_dialogue": [
+        {
+          "action": "enter",
+          "type": "direction",
+          "speaker": "echo",
+          "spot": [
+            200,
+            300
+          ],
+          "duration_ms": 500
+        },
+        {
+          "emotion": "sad",
+          "content": {
+            "korean": "여기서 무너지면 억울하게 다친 모두의 진실이 묻힌다!"
+          },
+          "speaker": "echo",
+          "type": "speech"
+        },
+        {
+          "speaker": "echo",
+          "content": {
+            "korean": "제발 다시 일어나라!"
+          },
+          "emotion": "angry",
+          "type": "speech"
         }
       ]
     }
   ],
-  "epilogue": {
+  "prologue": {
     "korean": [
-      "네온 불빛이 잦아든 레트로 오락실 입구로 히어로들이 천천히 걸어 나온다.",
-      "얼굴의 멍이 희미해진 관리인 벡스와 상인들이 타버린 종이 조각을 함께 치우며 이들을 맞이한다.",
-      "거짓으로 얼룩졌던 지하상가에 번뜩이는 네온 대신 온화한 햇살이 가만히 내려앉는다."
+      "비 내리는 밤, 지하상가 깊은 구석에서 비명 소리가 터져 나온다.",
+      "폭행 사건이 벌어지지만, 구겨진 차용증과 장부 속으로 진실을 숨겨 없던 일로 만든다.",
+      "거짓으로 물든 지하상가로 히어로들이 발걸음을 옮긴다."
     ]
   }
 }

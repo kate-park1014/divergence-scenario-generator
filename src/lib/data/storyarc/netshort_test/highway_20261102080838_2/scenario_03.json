@@ -1,0 +1,528 @@
+{
+  "scenario_id": "highway_20261102080838_2_03",
+  "order": 3,
+  "act": "rising",
+  "theme": "modern",
+  "actors": {
+    "zoe": {
+      "id": "mon_ad3762e0-13f3-44a1-9b84-4ff67136858e",
+      "name": {
+        "korean": "조이",
+        "english": "Zoe",
+        "japanese": "ゾーイ",
+        "chinese": "佐伊",
+        "french": "Zoé",
+        "spanish": "Zoe",
+        "vietnamese": "Zoe",
+        "thai": "โซอี้",
+        "hindi": "ज़ोई"
+      },
+      "description": "",
+      "face_image_url": "https://imagedelivery.net/WTEqQNGFb-l-IHS6IGnzUQ/75dcfb0c-33e3-4208-4205-fb09d4abb100/public",
+      "battle_sprite_url": "https://imagedelivery.net/WTEqQNGFb-l-IHS6IGnzUQ/a7d0ebe1-73dc-4683-1338-32be2f7fac00/public",
+      "role": {
+        "korean": "정보상"
+      }
+    },
+    "dax": {
+      "id": "mon_08d5b43e-f9ab-4469-9064-855e170b0cdc",
+      "name": {
+        "korean": "닥스",
+        "english": "Dax",
+        "japanese": "ダックス",
+        "chinese": "达克斯",
+        "french": "Dax",
+        "spanish": "Dax",
+        "vietnamese": "Dax",
+        "thai": "แด็กซ์",
+        "hindi": "डैक्स"
+      },
+      "description": "",
+      "face_image_url": "https://imagedelivery.net/WTEqQNGFb-l-IHS6IGnzUQ/84bb11db-6eb4-4500-d274-222e8b100100/public",
+      "battle_sprite_url": "https://imagedelivery.net/WTEqQNGFb-l-IHS6IGnzUQ/5d325a75-bd91-4758-7b3f-ad9a97e52700/public",
+      "role": {
+        "korean": "정비사"
+      }
+    },
+    "lin": {
+      "id": "mon_d036a884-3dde-472c-9fe7-c4807643860f",
+      "name": {
+        "korean": "린",
+        "english": "Lin",
+        "japanese": "リン",
+        "chinese": "琳",
+        "french": "Lin",
+        "spanish": "Lin",
+        "vietnamese": "Lin",
+        "thai": "ลิน",
+        "hindi": "लिन"
+      },
+      "description": "",
+      "face_image_url": "https://imagedelivery.net/WTEqQNGFb-l-IHS6IGnzUQ/a095dd66-1857-4f44-68b0-2ece83006d00/public",
+      "battle_sprite_url": "https://imagedelivery.net/WTEqQNGFb-l-IHS6IGnzUQ/05b02694-f1ed-4e4c-b7ca-fb5b74a48900/public",
+      "role": {
+        "korean": "전직 레이서"
+      }
+    }
+  },
+  "boss": {
+    "pool_id": "random_boss",
+    "role": {
+      "korean": "스파이크"
+    }
+  },
+  "prologue": {
+    "korean": [
+      "여러 갈래의 도로가 어지럽게 얽힌 분기점 위로 서늘한 바람이 불어온다.",
+      "타인의 상처를 대가로 승리를 탐하던 비열한 주술이 도로 바닥에 불길하게 남아있다.",
+      "동료의 상처를 목격한 히어로들이 비극의 굴레를 끊기 위해 분기점으로 들어선다."
+    ]
+  },
+  "rooms": [
+    {
+      "dialogue": [
+        {
+          "content": {
+            "korean": "여러 갈래의 도로가 어지럽게 얽힌 분기점에 거센 바람이 분다."
+          },
+          "speaker": "narrator",
+          "type": "speech"
+        },
+        {
+          "type": "direction",
+          "speaker": "zoe",
+          "duration_ms": 500,
+          "spot": [
+            50,
+            20
+          ],
+          "action": "enter"
+        },
+        {
+          "type": "speech",
+          "speaker": "zoe",
+          "emotion": "sad",
+          "content": {
+            "korean": "다들 무사히 여기까지 왔군. 하지만 닥스의 몸 상태를 봐."
+          }
+        },
+        {
+          "speaker": "character_any",
+          "emotion": "sad",
+          "type": "speech",
+          "content": {
+            "korean": "닥스, 옆구리 부상은 좀 괜찮아?"
+          }
+        },
+        {
+          "action": "enter",
+          "type": "direction",
+          "spot": [
+            40,
+            20
+          ],
+          "duration_ms": 500,
+          "speaker": "dax"
+        },
+        {
+          "speaker": "dax",
+          "emotion": "sad",
+          "type": "speech",
+          "content": {
+            "korean": "크윽, 아직도 쑤시지만 멈출 순 없지."
+          }
+        },
+        {
+          "speaker": "zoe",
+          "emotion": "base",
+          "content": {
+            "korean": "터널에서 남의 차에 번호판을 달았다가 닥스가 대신 상처를 입었지."
+          },
+          "type": "speech"
+        },
+        {
+          "content": {
+            "korean": "그 빌어먹을 주술 때문이야."
+          },
+          "speaker": "character_1",
+          "emotion": "angry",
+          "type": "speech"
+        },
+        {
+          "speaker": "character_any",
+          "emotion": "base",
+          "content": {
+            "korean": "이번엔 절대로 방심하지 않겠어."
+          },
+          "type": "speech"
+        },
+        {
+          "speaker": "narrator",
+          "content": {
+            "korean": "히어로들은 다친 닥스를 감싸며 분기점 안쪽으로 발걸음을 옮긴다."
+          },
+          "type": "speech"
+        }
+      ],
+      "id": 1
+    },
+    {
+      "dialogue": [
+        {
+          "type": "direction",
+          "action": "enter",
+          "speaker": "dax",
+          "spot": [
+            700,
+            750
+          ],
+          "duration_ms": 500
+        },
+        {
+          "speaker": "zoe",
+          "spot": [
+            50,
+            20
+          ],
+          "action": "enter",
+          "type": "direction",
+          "duration_ms": 500
+        },
+        {
+          "type": "speech",
+          "speaker": "narrator",
+          "content": {
+            "korean": "서킷 외곽 구석에 견인줄로 꽁꽁 묶인 압류된 차 한 대가 멈춰 있다."
+          }
+        },
+        {
+          "speaker": "character_any",
+          "emotion": "base",
+          "content": {
+            "korean": "이 차는 주인도 없이 묶여서 방치되어 있군."
+          },
+          "type": "speech"
+        },
+        {
+          "type": "speech",
+          "content": {
+            "korean": "과거에 누군가가 바로 이 번호판 주술로 타인의 공적과 자리를 가로챘지."
+          },
+          "speaker": "zoe",
+          "emotion": "base"
+        },
+        {
+          "content": {
+            "korean": "남의 자리를 빼앗고 상처까지 넘겼다니."
+          },
+          "speaker": "character_1",
+          "emotion": "sad",
+          "type": "speech"
+        },
+        {
+          "type": "speech",
+          "speaker": "narrator",
+          "emotion": "base",
+          "content": {
+            "korean": "차체 손잡이 근처에 기름 묻은 검은 가죽 장갑 자국이 뚜렷하게 남아 있다."
+          }
+        },
+        {
+          "type": "speech",
+          "content": {
+            "korean": "그놈의 흔적이야. 놈이 이 근처를 지나갔어."
+          },
+          "speaker": "character_any",
+          "emotion": "base"
+        },
+        {
+          "speaker": "zoe",
+          "emotion": "base",
+          "type": "speech",
+          "content": {
+            "korean": "저 압류된 차는 오랫동안 묶여 있었으니 주인도 없는 빈 껍데기일 거야."
+          }
+        },
+        {
+          "type": "speech",
+          "content": {
+            "korean": "저렇게 압류된 방치 차량이라면 장치를 써도 아무도 다치지 않겠지."
+          },
+          "speaker": "character_any",
+          "emotion": "happy"
+        }
+      ],
+      "id": 3
+    },
+    {
+      "id": 5,
+      "dialogue": [
+        {
+          "type": "direction",
+          "action": "enter",
+          "speaker": "dax",
+          "spot": [
+            700,
+            750
+          ],
+          "duration_ms": 500
+        },
+        {
+          "content": {
+            "korean": "식어가는 분기점 바닥으로 화염병 몇 개가 떨어지며 붉은 불길이 솟구친다."
+          },
+          "speaker": "narrator",
+          "type": "speech"
+        },
+        {
+          "type": "speech",
+          "speaker": "character_1",
+          "emotion": "angry",
+          "content": {
+            "korean": "부하 놈들의 기습이야!"
+          }
+        },
+        {
+          "speaker": "character_any",
+          "emotion": "base",
+          "content": {
+            "korean": "장치에 함부로 기대지 않기로 했어. 몸으로 견뎌내겠어!"
+          },
+          "type": "speech"
+        },
+        {
+          "speaker": "narrator",
+          "content": {
+            "korean": "히어로들은 불길이 옷깃을 스쳐도 번호판을 떼지 않고 솟구치는 열기를 그대로 버텨낸다."
+          },
+          "type": "speech"
+        },
+        {
+          "speaker": "character_2",
+          "emotion": "angry",
+          "content": {
+            "korean": "윽, 뜨겁지만 참을 수 있어!"
+          },
+          "type": "speech"
+        },
+        {
+          "type": "speech",
+          "speaker": "narrator",
+          "content": {
+            "korean": "거센 화염을 온몸으로 견뎌낸 히어로들이 불길을 뚫고 전진한다."
+          }
+        },
+        {
+          "type": "speech",
+          "content": {
+            "korean": "번호판을 건드리지 않아도 우리는 나아갈 수 있어."
+          },
+          "speaker": "character_any",
+          "emotion": "base"
+        }
+      ]
+    },
+    {
+      "id": 9,
+      "dialogue": [
+        {
+          "type": "direction",
+          "action": "enter",
+          "speaker": "dax",
+          "spot": [
+            700,
+            750
+          ],
+          "duration_ms": 500
+        },
+        {
+          "type": "speech",
+          "content": {
+            "korean": "달빛이 붉게 물든 분기점 바닥 위로 기계식 가시가 돋친 차가 길을 막아선다."
+          },
+          "speaker": "narrator"
+        },
+        {
+          "type": "speech",
+          "content": {
+            "korean": "차량 전면에 돋아난 가시가 너무 날카로워."
+          },
+          "speaker": "character_1",
+          "emotion": "sad"
+        },
+        {
+          "type": "speech",
+          "speaker": "narrator",
+          "emotion": "base",
+          "content": {
+            "korean": "날카로운 가시 사방으로 검은 가죽 장갑 조각 잔해가 흩어지며 어둠 속으로 사라진다."
+          }
+        },
+        {
+          "content": {
+            "korean": "이 폭압적인 공격을 맨몸으로 전부 맞으면 모두 죽고 말아."
+          },
+          "speaker": "character_any",
+          "emotion": "base",
+          "type": "speech"
+        },
+        {
+          "content": {
+            "korean": "아까 본 압류된 차에 번호판을 달자. 주인 없는 차니까 피해를 볼 사람도 없을 거야."
+          },
+          "speaker": "character_any",
+          "emotion": "base",
+          "type": "speech"
+        }
+      ]
+    },
+    {
+      "lose_dialogue": [
+        {
+          "type": "direction",
+          "speaker": "zoe",
+          "action": "enter",
+          "spot": [
+            50,
+            30
+          ],
+          "duration_ms": 500
+        },
+        {
+          "speaker": "zoe",
+          "emotion": "angry",
+          "content": {
+            "korean": "아직 고가도로의 끝이 아니야, 정신 바짝 차려!"
+          },
+          "type": "speech"
+        },
+        {
+          "speaker": "character_any",
+          "emotion": "base",
+          "type": "speech",
+          "content": {
+            "korean": "여기서 쓰러질 순 없어. 다시 무기를 잡아!"
+          }
+        }
+      ],
+      "win_dialogue": [
+        {
+          "speaker": "narrator",
+          "type": "speech",
+          "content": {
+            "korean": "사내의 철퇴가 무섭게 휘둘러졌지만 히어로들의 피부는 상처 하나 없이 멀쩡하다."
+          }
+        },
+        {
+          "action": "enter",
+          "speaker": "lin",
+          "duration_ms": 500,
+          "type": "direction",
+          "spot": [
+            30,
+            70
+          ]
+        },
+        {
+          "content": {
+            "korean": "서킷 외곽의 압류된 차 운전석에서 린이 히어로들이 맞았던 어깨 부위를 감싸 쥐며 비틀거린다."
+          },
+          "speaker": "narrator",
+          "type": "speech"
+        },
+        {
+          "content": {
+            "korean": "윽... 어깨가... 파열될 것 같아..."
+          },
+          "speaker": "lin",
+          "emotion": "sad",
+          "type": "speech"
+        },
+        {
+          "type": "speech",
+          "content": {
+            "korean": "린! 당신이 왜 저 압류된 차 안에서 나오는 거지?"
+          },
+          "speaker": "character_any",
+          "emotion": "sad"
+        },
+        {
+          "action": "enter",
+          "spot": [
+            70,
+            70
+          ],
+          "duration_ms": 500,
+          "type": "direction",
+          "speaker": "zoe"
+        },
+        {
+          "type": "speech",
+          "speaker": "zoe",
+          "emotion": "sad",
+          "content": {
+            "korean": "저 압류된 차의 열쇠고리 명찰에 린의 이름과 서명이 적혀 있어!"
+          }
+        },
+        {
+          "speaker": "narrator",
+          "content": {
+            "korean": "압류되기 전 차를 맡겼던 린의 서명이 차 키에 남아 있던 탓에 상처가 린에게 넘어간 것이다."
+          },
+          "type": "speech"
+        },
+        {
+          "speaker": "character_1",
+          "emotion": "angry",
+          "content": {
+            "korean": "말도 안 돼... 압류된 차의 실제 명의자가 린이었다니!"
+          },
+          "type": "speech"
+        }
+      ],
+      "dialogue": [
+        {
+          "type": "direction",
+          "action": "enter",
+          "speaker": "dax",
+          "spot": [
+            700,
+            750
+          ],
+          "duration_ms": 500
+        },
+        {
+          "speaker": "narrator",
+          "content": {
+            "korean": "거대한 철퇴를 든 사내가 차를 몰며 무자비하게 들이받을 태세를 갖춘다."
+          },
+          "type": "speech"
+        },
+        {
+          "type": "speech",
+          "content": {
+            "korean": "압류된 차는 오랫동안 묶여 있던 빈 차야. 그 차라면 아무도 상처를 입지 않아!"
+          },
+          "speaker": "character_any",
+          "emotion": "base"
+        },
+        {
+          "type": "speech",
+          "content": {
+            "korean": "히어로들은 싸움이 시작되기 전 차의 번호판을 떼어 외곽에 방치된 압류된 차에 단다."
+          },
+          "speaker": "narrator"
+        },
+        {
+          "type": "speech",
+          "speaker": "character_1",
+          "emotion": "angry",
+          "content": {
+            "korean": "싸움 준비는 끝났어! 와라!"
+          }
+        }
+      ],
+      "id": 15
+    }
+  ]
+}

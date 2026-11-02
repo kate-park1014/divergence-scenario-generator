@@ -214,27 +214,59 @@ npm run gen:cards-seq -- --story=modern_whisperweb_0 --fix          # 말투 문
 ## 넷쇼트 스타일 5화 스토리 (재료 랜덤 → story.json)
 
 [netshort_test/story-prompt.md](src/lib/data/storyarc/netshort_test/story-prompt.md) 가 프롬프트 원본. netshortStory.ts 는 md 의 "## 시스템 프롬프트"·"### 입력 템플릿" 코드 블록을 `?raw` 로 읽어 `{{자리}}` 만 채움(값이 비면 그 줄 뺌). 프롬프트 문장은 md 에서만 고침. 프롬프트 [netshortStory.ts](src/lib/prompts/netshortStory.ts), 엔드포인트 `POST /api/storyarc/netshort`, 러너 `scripts/gen-netshort.mjs`.
-- 기획안 단계 없음 (예전 5줄 기획안·스토리아크 파일 입력은 제거). 재료는 [story-seeds.json](src/lib/data/storyarc/netshort_test/story-seeds.json) 에서 코드가 뽑음(`pickSeeds`): worlds·original_sins·twist_types·tones·motifs 하나씩, 장치는 `devices`(사람이 쓴 object·rule·effect·harm(넘기는 피해 = 1~4화 위험)·wrong_action·right_action, `worlds` 로 맞는 무대 지정) 중 그 무대에 맞는 것(`pickDevice`, 다시 쓸 때도 장치 문장은 지금 seeds 것으로 갱신), reason_types 는 1~4화마다(네 화 모두 같지 않게), random_words 2개(선택, `--no-words` 로 끔). 테마·NPC 풀은 seeds 의 `theme`, `theme_description` 을 프롬프트에
-- 한 번에 집필: 출력 맨 앞 `design`(device·how·visible_effect(뽑은 장치 문장 그대로, 코드가 덮어씀)·wrong/right_action·original_sin·boss_trace·boss_name·boss_look(보스 외모, 이미지용)·true_identity·twist)을 먼저 쓰고 본문(프롤로그, 이야기 방 1,3,5,8,10, 에필로그)을 맞춤. NPC 1~5화(5화=4화)·보스 흔적 화(1~4화 중 둘)는 코드가 뽑아 seeds.json 의 `npcs`·`trace_orders` 에 저장(`assignCast`), 2~4화 실제 피해자 = 앞 화 NPC(`victimNpcOf`). design 의 device·how·visible_effect·wrong/right_action, 화별 npc.name, 2~4화 actual_victim 은 코드가 덮어씀
+- 기획안 단계 없음 (예전 5줄 기획안·스토리아크 파일 입력은 제거). 재료는 [story-seeds.json](src/lib/data/storyarc/netshort_test/story-seeds.json) 에서 코드가 뽑음(`pickSeeds`): worlds·original_sins·twist_types·tones 하나씩, 장치는 `devices`(사람이 쓴 object·rule·effect·harm(넘기는 피해 = 1~4화 위험)·wrong_action·right_action, `worlds` 로 맞는 무대 지정) 중 그 무대에 맞는 것(`pickDevice`, 다시 쓸 때도 장치 문장은 지금 seeds 것으로 갱신), caution_types 는 2~4화마다 서로 다르게(`pickCautions` → seeds.json `cautions`, 앞 화 피해를 보고 이번엔 어떻게 조심하는지: 확인하고 쓴다/안 쓰려고 버틴다/괜찮다는 대상에게 (한 번만 쓴다 limit 은 대상 고르는 방식이 안 바뀌어 뺌)). 모티프·화별 이유·소품 낱말(motifs·reason_types·random_words·props)은 뜬금없는 물건·설정을 끌어와서 뺌 (데이터만 남김). 장치 중 `battle: false`(칩·경매·마권·세탁기 — 피해가 몸에 오지 않아 전투와 안 맞음)는 안 뽑고, 맞는 장치가 없는 무대도 안 뽑음. 예전 seeds.json 을 다시 쓸 때 battle:false 장치는 다시 뽑고, 모티프·화별 이유·소품은 지움. 테마·NPC 풀은 seeds 의 `theme`, `theme_description` 을 프롬프트에
+- 한 번에 집필: 출력 맨 앞 `design`(device·how·visible_effect(뽑은 장치 문장 그대로, 코드가 덮어씀)·wrong/right_action·original_sin·boss_trace·boss_name·boss_look(보스 외모, 이미지용)·true_identity·twist)을 먼저 쓰고 본문(프롤로그, 이야기 방 1,3,5,8,10, 에필로그)을 맞춤. 장치는 before_battle 에서 쓰고 win 은 결과만(1~4화 win 에 공격이 다시 날아오는 낱말·before_battle 에 believed 없으면 코드 오류). NPC 1~5화(5화=4화)·보스 흔적 화(1~4화 중 둘)는 코드가 뽑아 seeds.json 의 `npcs`·`trace_orders` 에 저장(`assignCast`), 2~4화 실제 피해자 = 앞 화 NPC(`victimNpcOf`). design 의 device·how·visible_effect·wrong/right_action, 화별 npc.name, 2~4화 actual_victim 은 코드가 덮어씀
 - `banned_cliches` 는 매번 "쓰지 말 것"에, `used_stories` 는 "겹치지 않게"에 넣음. 저장 뒤 used_stories 에 `{id,title,world,device,twist}` 추가(같은 id 는 바꿔 씀, 파일의 다른 부분 모양은 유지)
 - 출력 `src/lib/data/storyarc/netshort_test/<id>/` : `seeds.json`(뽑은 재료), `story.json`, `story.md`. id 는 `<world.key>_<시각>_<n>`. `--id=<id>` 면 그 seeds.json 재료로 다시 씀
+- 억지 금지 규칙: design.`goal`(히어로들이 온 이유, 1화 방 1 에서 밝힘) 필수, 핵심 장치는 하나뿐(다른 기계를 장치처럼 말하지 않음), deceptions[].`link`(피해가 그 사람에게 간 이유, 작동법대로 — "옆에 있었다" 금지) 필수, 결과 문장 화마다 되풀이 금지, 소품은 각 2번 이하·prologue 금지(코드 검사)
+- design 에 `boss_want`(히어로들이 장치를 쓸 때마다 보스가 얻는 것)·`finale_logic`(right_action 이면 작동법 안에서 왜 보스가 무너지는지) 필수. 5화 8번 방 보스가 정체+원하는 것을 말함, before_battle 보스가 장치를 한 번 더 권하고 히어로들은 거절, win 은 finale_logic 대로(작동법에 없는 일 금지)
 - 출력 NPC 는 `npc: { name: "lin", role: "인쇄공" }` (name = 풀 key, role = 직업, 같은 NPC 는 같은 role)
-- 코드 검사 → 걸리면 최대 2번 다시 요청: design 빈칸, 방 키, epilogue 5화만, "주인공" 금지, 방 문장 수, 서술 과거형 금지("있다" 제외), "이번엔 괜찮다" 금지, 한자 금지, design.boss_trace 가 trace_orders 화마다 등장, true_identity 마지막 낱말은 5화 8번 방 전 금지, device 는 20자 이하·여러 물건 이어 붙이기 금지(random_words 는 장면 소품으로만, 장치 이름과 겹치는 낱말은 안 뽑음), 1화 방 1~8 에 장치 이름(마지막 낱말) 등장, 1~4화 win 에 "뒤늦게" 경고 금지, design 문장(작동법·결과·true_identity) 14자 이상 그대로 옮기기 금지, 금액·"전가" 는 모든 방에서 금지, `design.deceptions`(1~4화 { believed 히어로들이 믿은 대상, actual_victim 실제 피해자 }): 둘이 다름·그 화 win 에 피해자(마지막 낱말)·그 화 win 에 believed 중심 낱말(장치 이름에 없는 마지막 낱말, 조사 뗌). 프롬프트 규칙: 1~4화 위험은 장치의 harm 이 히어로들에게 닥치는 것(다른 종류 피해를 장치로 넘기지 않음 — 남을 지키려고 장치를 쓰면 이야기가 안 이어져서), 장치로 피해를 넘기는 대상은 적(보스·부하)이 아님, 일반 보스는 전투로 이기고 남은 피해를 장치로 넘김, 작동법에 없는 부작용 금지
+- 코드 검사 → 걸리면 최대 2번 다시 요청: design 빈칸, 방 키, epilogue 5화만, "주인공" 금지, 방 문장 수, 서술 과거형 금지("있다" 제외), "이번엔 괜찮다" 금지, 한자 금지, design.boss_trace 가 trace_orders 화마다 등장, true_identity 마지막 낱말은 5화 8번 방 전 금지, device 는 20자 이하·여러 물건 이어 붙이기 금지, 1화 방 1~8 에 장치 이름(마지막 낱말) 등장, 1~4화 win 에 "뒤늦게" 경고 금지, design 문장(작동법·결과·true_identity) 14자 이상 그대로 옮기기 금지, 금액·"전가" 는 모든 방에서 금지, `design.deceptions`(1~4화 { believed 히어로들이 믿은 대상, actual_victim 실제 피해자 }): 둘이 다름·2~4화 `caution`(앞 화에서 배운 것 → 이번 조심) 필수·2~4화 방 1·3·5 에 앞 화 피해자 등장·그 화 win 에 피해자(마지막 낱말)·그 화 before_battle 에 believed 중심 낱말(장치 이름에 없는 마지막 낱말, 조사 뗌). 프롬프트 규칙: 1~4화 위험은 장치의 harm 이 히어로들에게 닥치는 것(다른 종류 피해를 장치로 넘기지 않음 — 남을 지키려고 장치를 쓰면 이야기가 안 이어져서), 장치로 피해를 넘기는 대상은 적(보스·부하)이 아님, 장치는 전투 전에 쓰고 win 에서 피해가 누구에게 갔는지 드러남, 작동법에 없는 부작용 금지
 
 ```bash
 npm run dev &
 npm run gen:netshort                    # 새 이야기 1개
 npm run gen:netshort -- --count=3       # 3개
 npm run gen:netshort -- --id=<id>       # 저장된 재료로 다시 쓰기
+npm run gen:netshort -- --judge-only    # 폴더의 기존 이야기 모두 채점만 (--id=a,b 로 골라서)
 ```
+- 장치는 모두 "상처 옮기기" 한 틀: 장치를 쓰고 일반 보스와 싸우면 그 싸움에서 내가 입을 상처가 고른 물건 주인 몸에 생김 (공격 대상을 바꾸는 장치는 싸울 이유가 없어져 뺌). 틀에 안 맞는 장치는 `battle: false`
+- 채점(기본 켜짐, `--no-judge` 로 끔): 저장 뒤 [netshortJudge.ts](src/lib/prompts/netshortJudge.ts) 로 Gemini 1콜(temperature 0). N1 싸움과 장치가 이어짐 / N2 피해자가 작동법대로 / N3 속을 만한 이유 / N4 앞 화 기억·다르게 조심 / N5 장치 하나·작동법 밖 일 없음 / N6 5화 결말 이해 / N7 인물 헷갈림 없음. 결과 `<id>/judge.json` + story.md 끝, 러너가 이야기×항목 표와 항목별 통과율 출력. 다시 쓰기를 일으키지 않음(측정용)
+- 믿은 이유는 작동법에서 나옴 (주인 없는·받아도 되는 사람의 물건·이름이면 괜찮다고 믿음, 1~8번 방에서 왜 그렇게 보였는지 장면으로). 앞에 없던 물건·지식·작동법에 없는 설정을 근거로 끌어오지 않음. 예전 근거 칸 `evidence` 는 뜬금없는 근거를 지어내서 뺐고, 대신 `design.deceptions[].seen`(필수): 몇 번 방에서 그 물건·이름이 왜 주인 없거나 받아도 되는 사람의 것처럼 보이는지 (그 물건 자체만). 코드 검사: believed 중심 낱말이 방 1~8 에 나와야 함
+- 피해자 이름 뒤바뀜 코드 검사 `injuredNameErrors`(netshortStory.ts, 대본 단계도 사용): 방 1~8·전투 전·패배에는 앞 화까지 다친 사람만, win 에는 그 화 피해자까지 다친 사람으로 나올 수 있음 ("다친 린", "렌이 다쳤던", "니아의 상처", "렌이 … 쓰러진다" 꼴을 잡음). 기존 이야기 22개에서 실제 뒤바뀜 3건을 잡고 잘못 걸린 것 0건
+- 1~4화 win 에서 `link`(피해자가 왜 그 사람인지)를 눈에 보이는 증거로 보여줌 (고른 물건에서 피해자 것이라는 표시를 보거나 NPC 가 말함, N2 대응)
+- 고칠 때는 한 번에 하나만 바꾸고 `--count=3` 으로 통과율이 오르는지 본다 (이야기 1개만 보고 규칙을 더하지 않는다)
 
 ## 넷쇼트 story.json → 시나리오 (시험용)
 
 netshort_test/<id>/story.json 의 화별 방(1,3,5,8,10)을 게임 시나리오 대사(방 1,3,5,9,15)로 옮김. 8→9, 10→15(before_battle·win·lose → dialogue·win_dialogue·lose_dialogue). 프롬프트 [chapterGenNetshort.ts](src/lib/prompts/chapterGenNetshort.ts), 엔드포인트 `POST /api/scenario/netshort`, 러너 `scripts/gen-netshort-scenarios.mjs`. 5화 동시 생성, 코드 검사 걸리면 최대 2번 다시 요청, Gemini 503·429 는 대기 후 재시도. 검토자·번역 없음.
-- 1~4화 일반 보스는 speaker `random_boss`(이름 금지, `boss.role` 에 story 의 boss 문구), 최종보스 이름은 1~4화 금지, 5화 `boss` 는 방 15 에서만, 정체 낱말은 5화 방 9 전 금지
+- 1~4화 일반 보스는 speaker `random_boss`(이름 금지, `boss.role` 에 story 의 boss 문구). 대사·지문에 `{random_boss}` 자리표시도 금지(받침 몰라 조사 어긋남, "놈"으로) — 코드 검사, 최종보스 이름은 1~4화 금지, 5화 `boss` 는 방 15 에서만, 정체 낱말은 5화 방 9 전 금지
 - 5화 `boss.pool_id` 는 null (netshort 보스는 pool 매핑 없음)
+- 코드 검사 추가: 파티 줄(character_any·1~4) 세 줄 연달아 금지(새 소식은 narrator·NPC 가), narrator 1인칭("내 방")·따옴표 없는 인물 말 금지, 장치가 나오는 줄에 장식(문양·새겨·장착 등) 금지. 이야기 단계도 장치 문장에 장식 금지(모티프를 장치에 붙이지 않음)
+- 5화: 방 9 에서 보스가 원하는 것(boss_want)을 지문 속 따옴표로, 방 15 dialogue 에 speaker boss 필수(코드 검사), win 은 finale_logic 대로
+- 3·4화: 앞 화 피해자(N-2화 NPC)는 그 화 내내 함께 다님 → 코드가 방마다 dialogue 에 enter 를 넣음(`addCompanionEnters`, 방 1 은 narrator 첫 줄 뒤). 2화의 앞 화 피해자는 1화의 모르는 사람이라 없음
+- 줄거리가 "설명한다"처럼 내용 없이 적힌 곳은 NPC 대사·narrator 지문으로 내용을 채움(작동법·위협하는 무리·하려는 일). 파티는 NPC 에게 물을 수 있음. character_1~4 는 방마다 0~2줄, 분위기 감상 금지
+- 장치는 방 15 dialogue(전투 전) 끝에서 씀. win_dialogue 는 전투 뒤 결과(1~4화 피해자, 5화 보스 무너짐), 공격을 다시 날리거나 장치를 새로 쓰지 않음
+- 파티(character_any·1~4) 대사는 입말 반말. "~다"로 끝나는 글말은 narrator 만 (코드 검사, "~니다" 허용). 대사·지문을 감싼 따옴표는 normalize 가 뗌
+- 1~4화는 design.deceptions(믿은 대상·실제 피해자)를 프롬프트에 넣음: 장치 쓰기 전에 왜 그 이름이면 안전하다고 믿는지 대사로, 실제 피해자는 방 15 전에 먼저 등장(코드 검사), win 에서 다치고 파티가 알아챔(코드 검사), 둘이 왜 이어지는지 NPC·narrator 한 줄. 2~4화는 앞 화 피해자를 방 1~9 에서 떠올리고(코드 검사) caution 대로 조심하는 모습을 방 9 전에 보여줌
 - 출력 `src/lib/data/storyarc/netshort_test/<id>/scenario_0N.json`, `script_0N.md`, `script.md` (story.json 과 같은 폴더)
 
 ```bash
 npm run gen:netshort-scenarios -- --id=arcade_20261030083249_3
+```
+- 대사·지문에 게임 용어 "보스" 금지 (코드 검사)
+- 다듬기(기본 켜짐, `--no-polish` 로 끔, `--polish-only` 로 기존 대본만): 코드 검사 뒤 화마다 [netshortPolish.ts](src/lib/prompts/netshortPolish.ts) 로 Gemini 1콜(temperature 0.3). 뜻이 안 통하는 말 조합·앞뒤 줄과 어긋남·꼬인 문장만 찾아 그 줄만 고침(scenarioReview.ts 의 `listChapter`·`applyEdits`). 인용이 그 줄과 다르면 건너뛰고, 고친 뒤 코드 검사 오류가 새로 생기면 통째로 되돌림. 기록 `<id>/polish_0N.json`(전/후/이유)
+
+## 편안한 5화 이야기 (cozy_test, 시험용)
+
+넷쇼트의 "피해 떠넘기기" 대신 "오해가 풀리는" 구조. 1~4화: 히어로들이 겉모습만 보고 그 화 인물을 오해 → 방 10 에서 싸움 → win 에서 실제 사정이 증거로 드러남. 2~4화는 앞 화를 기억하고 다르게 조심하지만 또 오해. 5화: 싸우기 전에 사연을 묻고 화해로 끝남.
+- 기획안: [cozy_test/premises.json](src/lib/data/storyarc/cozy_test/premises.json) (사람이 쓴 5화 줄거리 4개: lostfound·market·festival·letters). 프롬프트 [cozyStory.ts](src/lib/prompts/cozyStory.ts), 엔드포인트 `POST /api/storyarc/cozy`, 러너 `scripts/gen-cozy.mjs`
+- 설계 칸은 최소한 (넷쇼트에서 칸이 많을수록 아무 내용으로 채우는 문제를 겪어서): misunderstandings(1~4화 who·looked_like·actual·reveal), final(name·look·actual·want). 코드 검사는 모양만
+- 거꾸로 꼬는 화: 기획안의 `reverse_order`(지금 모두 3화). 히어로들이 배운 대로 수상해 보이는 사람을 감싸고 믿음직해 보이는 사람을 믿는데, 믿은 사람이 그 화 상대(작은 잘못을 숨기려던 사람). 다음 화는 "좋든 나쁘든 겉모습 말고 증거부터" 조심 (1~4화가 같은 틀이라 결말이 뻔해서)
+- 주 NPC 한 명이 1~5화 함께 다님. 처음 만들 때 NPC 풀에서 뽑아 `<key>/cast.json` 에 저장 (이야기끼리 겹치지 않게)
+- 출력 `src/lib/data/storyarc/cozy_test/<key>/story.json`(넷쇼트와 같은 방 구조), `story.md`. 대본 단계는 아직 없음 (chapterGenNetshort 는 장치·피해자 전제라 그대로 못 씀)
+
+```bash
+npm run gen:cozy                     # 기획안 전부
+npm run gen:cozy -- --keys=market    # 하나만
 ```

@@ -5,7 +5,9 @@
 //   npm run dev &
 //   npm run gen:netshort-scenarios -- --id=arcade_20261030083249_3
 //   npm run gen:netshort-scenarios -- --id=<id> --orders=1,5
+//   npm run gen:netshort-scenarios -- --id=<id> --polish-only   # 기존 대본을 다듬기만
 // 옵션: --id=a,b (필수) / --orders / --out=DIR / --story-dir=DIR / --base=URL
+//       --no-polish (다듬기 끔) / --polish-only. 다듬기 기록은 <id>/polish_0N.json
 
 import http from 'node:http';
 
@@ -22,6 +24,8 @@ const body = { ids };
 if (args.orders) body.orders = String(args.orders).split(',').map(Number);
 if (args.out) body.outDir = args.out;
 if (args['story-dir']) body.storyDir = args['story-dir'];
+if (args['no-polish']) body.polish = false;
+if (args['polish-only']) body.polishOnly = true;
 
 function postJson(urlStr, payloadObj) {
 	return new Promise((resolve, reject) => {
@@ -58,7 +62,8 @@ for (const a of data.arcs) {
 	console.log(`\n${a.id} → ${a.dir}/script.md`);
 	for (const r of a.results) {
 		if (r.error) { bad++; console.log(`  ✗ ${r.order}화: ${r.error}`); continue; }
-		console.log(`  ✓ ${r.order}화${r.errors?.length ? ` (남은 오류 ${r.errors.length})` : ''}`);
+		const pol = r.polished === undefined ? '' : r.reverted ? ' · 다듬기 되돌림' : ` · 다듬은 줄 ${r.polished}`;
+		console.log(`  ✓ ${r.order}화${pol}${r.errors?.length ? ` (남은 오류 ${r.errors.length})` : ''}`);
 		for (const e of r.errors ?? []) console.log(`     - ${e}`);
 	}
 }

@@ -21,34 +21,34 @@
       "face_image_url": "https://imagedelivery.net/WTEqQNGFb-l-IHS6IGnzUQ/8bd7f351-400b-46f9-828f-aa2542734900/public",
       "battle_sprite_url": "https://imagedelivery.net/WTEqQNGFb-l-IHS6IGnzUQ/62971060-c904-4d96-afcd-d11f831b3e00/public",
       "role": {
-        "korean": "장부 관리인"
+        "korean": "기계 수리공"
       }
     },
-    "dax": {
-      "id": "mon_08d5b43e-f9ab-4469-9064-855e170b0cdc",
+    "bex": {
+      "id": "mon_74e24324-3f9a-4d44-9611-1da33b654ca1",
       "name": {
-        "korean": "닥스",
-        "english": "Dax",
-        "japanese": "ダックス",
-        "chinese": "达克斯",
-        "french": "Dax",
-        "spanish": "Dax",
-        "vietnamese": "Dax",
-        "thai": "แด็กซ์",
-        "hindi": "डैक्स"
+        "korean": "벡스",
+        "english": "Bex",
+        "japanese": "ベックス",
+        "chinese": "贝克斯",
+        "french": "Bex",
+        "spanish": "Bex",
+        "vietnamese": "Bex",
+        "thai": "เบ็กซ์",
+        "hindi": "बेक्स"
       },
       "description": "",
-      "face_image_url": "https://imagedelivery.net/WTEqQNGFb-l-IHS6IGnzUQ/84bb11db-6eb4-4500-d274-222e8b100100/public",
-      "battle_sprite_url": "https://imagedelivery.net/WTEqQNGFb-l-IHS6IGnzUQ/5d325a75-bd91-4758-7b3f-ad9a97e52700/public",
+      "face_image_url": "https://imagedelivery.net/WTEqQNGFb-l-IHS6IGnzUQ/09dae190-ff6b-4a9d-b656-e1a2b896aa00/public",
+      "battle_sprite_url": "https://imagedelivery.net/WTEqQNGFb-l-IHS6IGnzUQ/5cc3c77f-72e1-416e-b346-31889b3b9300/public",
       "role": {
-        "korean": "지하상가 정보상"
+        "korean": "오락실 관리인"
       }
     }
   },
   "boss": {
     "pool_id": "random_boss",
     "role": {
-      "korean": "망치 두한"
+      "korean": "칼날"
     }
   },
   "rooms": [
@@ -57,206 +57,189 @@
       "dialogue": [
         {
           "type": "speech",
+          "speaker": "narrator",
           "content": {
-            "korean": "타다 만 장부 종이가 서늘한 바람을 타고 어지럽게 흩날린다."
-          },
-          "speaker": "narrator"
-        },
-        {
-          "speaker": "character_any",
-          "type": "speech",
-          "content": {
-            "korean": "바닥 전체가 그을린 서류 조각으로 가득하다."
+            "korean": "눅눅하고 축축한 지하 통로 깊은 곳으로 서늘한 바람이 분다."
           }
         },
         {
-          "duration_ms": 500,
           "action": "enter",
           "speaker": "max",
-          "type": "direction",
           "spot": [
-            500,
-            200
-          ]
+            300,
+            700
+          ],
+          "type": "direction",
+          "duration_ms": 500
         },
         {
           "speaker": "max",
+          "type": "speech",
+          "emotion": "base",
+          "content": {
+            "korean": "연장이 낡아서 기계를 해체하기가 쉽지 않군."
+          }
+        },
+        {
+          "type": "direction",
+          "action": "enter",
+          "spot": [
+            200,
+            800
+          ],
+          "duration_ms": 500,
+          "speaker": "bex"
+        },
+        {
+          "speaker": "narrator",
+          "type": "speech",
+          "content": {
+            "korean": "통로 벽면에는 얼굴 전체가 피멍으로 얼룩진 벡스가 힘없이 기대어 있다."
+          }
+        },
+        {
+          "content": {
+            "korean": "벡스, 우리 때문에 네가 저번 싸움에서 피멍을 뒤집어썼어."
+          },
+          "type": "speech",
+          "speaker": "character_any",
+          "emotion": "sad"
+        },
+        {
+          "emotion": "base",
+          "speaker": "bex",
+          "content": {
+            "korean": "내 얼굴 걱정은 마라. 너희는 망설이지 말고 가라."
+          },
+          "type": "speech"
+        },
+        {
+          "content": {
+            "korean": "이번만큼은 기계를 절대 쓰지 않겠어. 오직 우리 주먹으로 버텨 내겠어."
+          },
+          "type": "speech",
+          "emotion": "angry",
+          "speaker": "character_any"
+        },
+        {
+          "speaker": "character_1",
           "emotion": "base",
           "type": "speech",
           "content": {
-            "korean": "때 묻은 넥타이를 풀어 헤치며 묵직한 한숨을 내쉰다."
+            "korean": "그래, 정면으로 부딪치는 수밖에 없어."
+          }
+        }
+      ]
+    },
+    {
+      "dialogue": [
+        {
+          "type": "direction",
+          "action": "enter",
+          "speaker": "bex",
+          "spot": [
+            700,
+            750
+          ],
+          "duration_ms": 500
+        },
+        {
+          "speaker": "narrator",
+          "type": "speech",
+          "content": {
+            "korean": "비릿한 냄새가 가라앉자 복잡한 배관이 얼키설키 얽힌 통로가 나타난다."
           }
         },
         {
           "type": "speech",
-          "speaker": "max",
           "content": {
-            "korean": "10년 전 지하상가를 집어삼킨 사건의 흔적이 이 장부 안에 숨겨져 있습니다."
+            "korean": "배관이 사방을 막고 있어서 앞이 잘 보이지 않는군."
           },
+          "speaker": "character_any",
           "emotion": "base"
         },
         {
+          "speaker": "narrator",
           "type": "speech",
           "content": {
-            "korean": "재투성이 장부실에서 매케한 냄새가 진동하는군."
-          },
-          "emotion": "sad",
-          "speaker": "character_1"
-        },
-        {
-          "speaker": "character_any",
-          "type": "speech",
-          "content": {
-            "korean": "장부를 살펴서 과거의 거래 기록을 찾아내야 한다."
+            "korean": "바닥 한구석에 피가 눌러붙은 핏빛 주차권 한 장이 널브러져 있다."
           }
         },
         {
+          "type": "speech",
           "content": {
-            "korean": "타지 않은 페이지에 진실이 남아 있을 겁니다."
+            "korean": "또 그 핏빛 주차권이야. 불길한 흔적이 계속 나오는군."
           },
-          "type": "speech",
-          "emotion": "base",
-          "speaker": "max"
-        }
-      ]
-    },
-    {
-      "id": 3,
-      "dialogue": [
-        {
-          "type": "speech",
-          "speaker": "narrator",
-          "content": {
-            "korean": "바람이 잦아들자 장부실 구석의 먼지 쌓인 오락기가 모습을 드러낸다."
-          }
-        },
-        {
           "speaker": "character_any",
-          "content": {
-            "korean": "스위치 밑에 무언가 찌그러져 껴 있다."
-          },
-          "type": "speech"
-        },
-        {
-          "content": {
-            "korean": "오락기 스위치 아래에서 피 묻은 구겨진 주차권 한 장을 발견한다."
-          },
-          "speaker": "narrator",
-          "type": "speech"
-        },
-        {
-          "speaker": "character_2",
-          "content": {
-            "korean": "주차권에 검붉은 피가 엉겨 붙어 있어."
-          },
-          "type": "speech",
           "emotion": "angry"
         },
         {
-          "content": {
-            "korean": "피비린내 나는 압박감이 방 전체를 짓눌러 온다."
-          },
-          "type": "speech",
-          "speaker": "character_any"
-        },
-        {
-          "duration_ms": 500,
-          "speaker": "max",
-          "spot": [
-            500,
-            200
-          ],
-          "type": "direction",
-          "action": "enter"
-        },
-        {
-          "speaker": "max",
-          "type": "speech",
+          "speaker": "character_2",
           "emotion": "base",
-          "content": {
-            "korean": "손때 탄 옛 기록들을 훑어보며 천천히 고개를 저어 보인다."
-          }
-        },
-        {
-          "speaker": "max",
           "type": "speech",
-          "emotion": "sad",
           "content": {
-            "korean": "장부꾼들의 거친 손길이 이 주차권에도 고스란히 남아 있군요."
+            "korean": "경계를 늦추지 말고 나아가자."
           }
         }
-      ]
+      ],
+      "id": 3
     },
     {
       "dialogue": [
         {
-          "type": "speech",
+          "action": "enter",
+          "speaker": "bex",
+          "spot": [
+            300,
+            700
+          ],
+          "type": "direction",
+          "duration_ms": 500
+        },
+        {
           "speaker": "narrator",
+          "type": "speech",
           "content": {
-            "korean": "벽면의 짙은 그림자 사이로 붉은 주의문 종이가 펄럭인다."
+            "korean": "환기 팬이 거세게 돌아가며 매캐한 연기를 통로 안으로 뿜어낸다."
+          }
+        },
+        {
+          "speaker": "narrator",
+          "type": "speech",
+          "content": {
+            "korean": "연기 너머로 무기를 든 사내들이 통로 양쪽을 막아선다."
           }
         },
         {
           "type": "speech",
           "content": {
-            "korean": "벽에 적힌 글씨를 읽어봐라."
+            "korean": "적들이 둘러쌌어. 당황하지 마!"
           },
+          "emotion": "angry",
           "speaker": "character_any"
         },
         {
+          "speaker": "narrator",
           "type": "speech",
           "content": {
-            "korean": "2P 칸에 남의 이름을 넣으면 내가 맞을 주먹이 타인의 얼굴에 멍으로 찍힌다는 내용이다."
-          },
-          "speaker": "narrator"
-        },
-        {
-          "content": {
-            "korean": "기괴하고 소름 끼치는 경고문이 적혀 있네."
-          },
-          "type": "speech",
-          "emotion": "sad",
-          "speaker": "character_3"
-        },
-        {
-          "type": "speech",
-          "speaker": "character_any",
-          "content": {
-            "korean": "장치를 쓰면 당장의 고통을 넘길 수 있는 건가."
+            "korean": "사내들이 일제히 덤벼들며 묵직한 주먹을 휘두른다."
           }
         },
         {
-          "action": "enter",
-          "duration_ms": 500,
-          "speaker": "max",
-          "type": "direction",
-          "spot": [
-            500,
-            200
-          ]
-        },
-        {
-          "speaker": "max",
+          "emotion": "angry",
+          "speaker": "character_any",
           "content": {
-            "korean": "경고문을 물끄러미 바라보며 목소리를 가다듬는다."
+            "korean": "기계 따위는 쓰지 않겠어. 맨몸으로 덤벼!"
           },
-          "emotion": "base",
           "type": "speech"
         },
         {
-          "content": {
-            "korean": "나 역시 이 장치가 실제로 어떤 결과를 가져올지는 확신할 수 없습니다."
-          },
           "emotion": "sad",
+          "speaker": "character_3",
           "type": "speech",
-          "speaker": "max"
-        },
-        {
           "content": {
-            "korean": "일단 장치의 작동 방식만큼은 똑똑히 기억해 두자."
-          },
-          "type": "speech",
-          "speaker": "character_any"
+            "korean": "윽, 타격이 매섭군!"
+          }
         }
       ],
       "id": 5
@@ -264,243 +247,194 @@
     {
       "dialogue": [
         {
-          "speaker": "narrator",
-          "type": "speech",
-          "content": {
-            "korean": "묵직한 발소리가 쿵쿵 울리며 거대한 무기를 든 {random_boss}가 들이닥친다."
-          }
-        },
-        {
-          "content": {
-            "korean": "육중한 무기가 바닥을 찍으며 매서운 압박감을 내뿜는다."
-          },
-          "type": "speech",
-          "speaker": "narrator"
-        },
-        {
-          "type": "speech",
-          "speaker": "character_any",
-          "content": {
-            "korean": "당장 머리 위로 무기가 떨어질 위기다."
-          }
-        },
-        {
-          "speaker": "character_4",
-          "content": {
-            "korean": "이대로 맞으면 무사하지 못해!"
-          },
-          "emotion": "angry",
-          "type": "speech"
-        },
-        {
-          "type": "speech",
-          "content": {
-            "korean": "오락기 2P 칸에 이름을 입력해서 위험을 피하자."
-          },
-          "speaker": "character_any"
-        },
-        {
-          "spot": [
-            500,
-            200
-          ],
           "type": "direction",
           "action": "enter",
-          "speaker": "max",
+          "speaker": "bex",
+          "spot": [
+            700,
+            750
+          ],
           "duration_ms": 500
         },
         {
-          "speaker": "max",
+          "type": "speech",
+          "speaker": "narrator",
+          "content": {
+            "korean": "계속되는 맹공에 숨이 턱 끝까지 차오른다."
+          }
+        },
+        {
+          "speaker": "narrator",
+          "content": {
+            "korean": "바닥에 버려진 핏빛 주차권이 시야에 들어오며 기계의 존재를 다시 일깨운다."
+          },
+          "type": "speech"
+        },
+        {
+          "speaker": "narrator",
           "type": "speech",
           "content": {
-            "korean": "떨리는 손으로 오래된 차용증을 꽉 쥔 채 조용히 입을 다문다."
+            "korean": "통로 멀리 어둠 속에서 상가 정보원 닥스가 걱정스러운 눈으로 바라보고 있다."
+          }
+        },
+        {
+          "type": "speech",
+          "content": {
+            "korean": "몸이 점점 무거워지고 있어. 한계야."
           },
+          "speaker": "character_any",
           "emotion": "sad"
         },
         {
-          "content": {
-            "korean": "차용증에 적힌 이름이라도 써서 위기를 넘겨야 한다."
-          },
+          "emotion": "sad",
+          "speaker": "character_4",
           "type": "speech",
-          "speaker": "character_any"
+          "content": {
+            "korean": "더 이상은 못 버티겠어..."
+          }
+        },
+        {
+          "type": "speech",
+          "content": {
+            "korean": "기계를 쓰면 안 돼. 참아야 해!"
+          },
+          "speaker": "character_any",
+          "emotion": "angry"
         }
       ],
       "id": 9
     },
     {
-      "dialogue": [
+      "lose_dialogue": [
         {
-          "content": {
-            "korean": "거대한 무기를 틀어쥐고 장부실 바닥을 내리친다."
-          },
+          "speaker": "narrator",
           "type": "speech",
-          "speaker": "narrator"
-        },
-        {
-          "type": "direction",
-          "duration_ms": 500,
-          "action": "shake",
-          "speaker": "narrator"
-        },
-        {
-          "emotion": "angry",
           "content": {
-            "korean": "과거를 파헤치려는 놈들은 전부 짓개겨 주마!"
-          },
-          "speaker": "random_boss",
-          "type": "speech"
-        },
-        {
-          "speaker": "character_1",
-          "type": "speech",
-          "emotion": "angry",
-          "content": {
-            "korean": "사방으로 파편이 튀어 오른다!"
+            "korean": "핏자국을 훔치는 히어로들의 몸이 바닥으로 무너져 내린다."
           }
         },
         {
-          "content": {
-            "korean": "장부를 지키기 위해 이 자를 눌러앉혀야 한다."
-          },
-          "speaker": "character_any",
-          "type": "speech"
+          "duration_ms": 500,
+          "spot": [
+            400,
+            600
+          ],
+          "action": "enter",
+          "speaker": "max",
+          "type": "direction"
         },
         {
-          "content": {
-            "korean": "다 타버린 장부와 함께 바닥에 묻어주겠다!"
-          },
-          "type": "speech",
           "emotion": "angry",
-          "speaker": "random_boss"
+          "speaker": "max",
+          "type": "speech",
+          "content": {
+            "korean": "여기서 주저앉으면 진실은 영원히 묻힌다! 다시 일어나라!"
+          }
         }
       ],
       "id": 15,
       "win_dialogue": [
         {
           "content": {
-            "korean": "위기를 넘기기 위해 차용증에 적힌 익명의 이름을 2P 칸에 넣고 스위치를 올린다."
+            "korean": "그 사내의 매서운 주먹이 가슴을 때리지만 아무런 통증이 느껴지지 않는다."
           },
-          "speaker": "character_any",
+          "type": "speech",
+          "speaker": "narrator"
+        },
+        {
+          "speaker": "narrator",
+          "content": {
+            "korean": "그 순간 통로 뒤쪽 어둠 속에서 닥스가 가슴을 쥐어뜯으며 쓰러진다."
+          },
           "type": "speech"
         },
         {
-          "type": "direction",
+          "type": "speech",
+          "content": {
+            "korean": "닥스의 얼굴과 목덜미에 끔찍한 피멍 자국이 한꺼번에 터져 나온다."
+          },
+          "speaker": "narrator"
+        },
+        {
+          "content": {
+            "korean": "닥스! 왜 네가 거기서 피멍을 입고 쓰러지는 거야?"
+          },
+          "type": "speech",
+          "emotion": "angry",
+          "speaker": "character_any"
+        },
+        {
+          "content": {
+            "korean": "급히 집어 든 영수증의 잘려 나간 밑바닥에는 닥스의 본명이 적혀 있었다."
+          },
           "speaker": "narrator",
-          "action": "shake",
+          "type": "speech"
+        }
+      ],
+      "dialogue": [
+        {
+          "type": "direction",
+          "action": "enter",
+          "speaker": "bex",
+          "spot": [
+            700,
+            750
+          ],
           "duration_ms": 500
         },
         {
           "content": {
-            "korean": "육중한 주먹이 퍼부어지지만 탐험대의 몸은 쓰라림 하나 없이 깨끗하다."
+            "korean": "통로 끝에서 쇠파이프와 단검을 든 사내가 모습을 드러낸다."
           },
           "speaker": "narrator",
           "type": "speech"
         },
         {
-          "speaker": "character_any",
           "type": "speech",
           "content": {
-            "korean": "내 피부는 멀쩡하다, 장치가 우리를 지켰다."
-          }
-        },
-        {
-          "action": "enter",
-          "speaker": "dax",
-          "spot": [
-            500,
-            200
-          ],
-          "duration_ms": 500,
-          "type": "direction"
-        },
-        {
-          "speaker": "narrator",
-          "content": {
-            "korean": "입구에 서 있던 닥스의 얼굴에 짙은 피멍이 솟아오른다."
-          },
-          "type": "speech"
-        },
-        {
-          "speaker": "dax",
-          "emotion": "sad",
-          "type": "speech",
-          "content": {
-            "korean": "얼굴을 감싸 쥐며 비틀거린다."
-          }
-        },
-        {
-          "speaker": "dax",
-          "content": {
-            "korean": "느닷없이 강렬한 고통이 뺨을 후려쳤다... 무슨 일이지?"
-          },
-          "type": "speech",
-          "emotion": "angry"
-        },
-        {
-          "speaker": "character_2",
-          "type": "speech",
-          "emotion": "sad",
-          "content": {
-            "korean": "입구에 있던 닥스의 얼굴에 멍 자국이 나 있어."
-          }
-        }
-      ],
-      "lose_dialogue": [
-        {
-          "duration_ms": 500,
-          "action": "shake",
-          "type": "direction",
-          "speaker": "narrator"
-        },
-        {
-          "type": "speech",
-          "content": {
-            "korean": "거대한 무기가 일으킨 충격파에 휩쓸려 바닥으로 무너져 내린다."
+            "korean": "그 사내가 휘두른 날카로운 단검에 동료가 피를 흘리며 쓰러지기 직전에 몰린다."
           },
           "speaker": "narrator"
         },
         {
-          "type": "speech",
-          "speaker": "character_3",
           "content": {
-            "korean": "충격이 온몸을 짓눌러서 움직일 수 없다..."
+            "korean": "위험해! 이대로 가면 당하고 말겠어!"
           },
-          "emotion": "sad"
-        },
-        {
-          "duration_ms": 500,
-          "speaker": "max",
-          "action": "enter",
-          "spot": [
-            500,
-            200
-          ],
-          "type": "direction"
-        },
-        {
-          "speaker": "max",
-          "type": "speech",
-          "content": {
-            "korean": "비틀거리는 탐험대의 어깨를 힘껏 잡아 일으켜 세운다."
-          },
-          "emotion": "base"
-        },
-        {
-          "content": {
-            "korean": "기회가 아직 남아 있습니다, 다시 일어나십시오!"
-          },
-          "type": "speech",
           "emotion": "angry",
-          "speaker": "max"
+          "type": "speech",
+          "speaker": "character_any"
+        },
+        {
+          "content": {
+            "korean": "극도의 공포 속에서 바닥에 구겨져 떨어진 영수증 한 장을 급히 집어 든다."
+          },
+          "type": "speech",
+          "speaker": "narrator"
+        },
+        {
+          "content": {
+            "korean": "이 영수증에 적힌 이름은 조직을 배신하고 달아난 자의 이름이야! 그자라면 다쳐도 상관없어!"
+          },
+          "speaker": "character_any",
+          "emotion": "angry",
+          "type": "speech"
+        },
+        {
+          "content": {
+            "korean": "영수증의 이름을 확인도 하지 않은 채 오락기 2P 칸에 쳐넣고 기계를 작동시킨다."
+          },
+          "speaker": "narrator",
+          "type": "speech"
         }
       ]
     }
   ],
   "prologue": {
     "korean": [
-      "타다 만 장부 종이가 검은 재가 되어 폐업 장부실 공기 중에 떠돈다.",
-      "10년 전 묻혀버린 거래의 궤적이 매케한 그을음 냄새와 함께 피어오른다.",
-      "탐험대는 차가운 서류 미로 깊숙한 곳으로 발걸음을 옮긴다."
+      "비 내리는 밤 지하상가 깊은 구석에서 비명이 터져 나온다.",
+      "구겨진 차용증과 장부 뒤로 사건의 진실이 빠르게 숨겨진다.",
+      "축축한 환기통 지하 통로로 히어로들이 걸음을 옮긴다.",
+      "거짓과 피멍으로 물든 어둠이 숨통을 조여 온다."
     ]
   }
 }
