@@ -11,6 +11,7 @@ import {
 import { applyEdits, listChapter } from '$lib/prompts/scenarioReview';
 import { injuredNameErrors } from '$lib/prompts/netshortStory';
 import { buildPolishPrompt, polishTool, type PolishFix } from '$lib/prompts/netshortPolish';
+import { bossCallText, getStyle, type StoryStyle } from '$lib/prompts/storyStyle';
 import type { RequestHandler } from './$types';
 
 /**
@@ -19,14 +20,16 @@ import type { RequestHandler } from './$types';
  * body:
  *  - ids: string[]          netshort_test/<id>/story.json
  *  - orders?: number[]      기본 1~5
- *  - storyDir?: string      기본 src/lib/data/storyarc/netshort_test
- *  - outDir?: string        기본 src/lib/data/storyarc/netshort_test (story.json 옆) → <outDir>/<id>/scenario_0N.json, script.md
+ *  - storyDir?: string      기본 src/lib/data/storyarc/styles/netshort_test
+ *  - outDir?: string        기본 src/lib/data/storyarc/styles/netshort_test (story.json 옆) → <outDir>/<id>/scenario_0N.json, script.md
  *  - polish?: boolean       코드 검사 뒤 화마다 다듬기 1콜 (기본 true): 뜻이 안 통하거나 앞뒤와 어긋나는 줄만 고침 (netshortPolish.ts).
  *                           고친 뒤 코드 검사 오류가 새로 생기면 되돌림. 기록 <id>/polish_0N.json
  *  - polishOnly?: boolean   기존 scenario_0N.json 을 다듬기만 (생성 없음)
+ *  - entersOnly?: boolean   기존 scenario_0N.json 에 빠진 NPC enter 만 넣고 actors·script 다시 씀 (Gemini 호출 없음)
+ *  - style?: string         스타일 파일 key (styles/<key>.md). 기본: seeds.json 의 style (이야기 단계에서 쓴 것), 없으면 netshort
  */
 
-const DEFAULT_STORY_DIR = 'src/lib/data/storyarc/netshort_test';
+const DEFAULT_STORY_DIR = 'src/lib/data/storyarc/styles/netshort_test';
 const DEFAULT_OUT_DIR = DEFAULT_STORY_DIR;
 const ROOM_IDS = [1, 3, 5, 9, 15];
 const SYSTEM_SPEAKERS = ['narrator', 'random_boss', 'boss', 'character_any', 'character_1', 'character_2', 'character_3', 'character_4'];
@@ -63,7 +66,7 @@ function normalize(out: Gen): Gen {
 	return out;
 }
 
-function checkScenario(out: Gen, order: number, story: NetshortStory, npcKeys: string[], npcNames: string[]): string[] {
+function checkScenario(out: Gen, order: number, story: NetshortStory, npcKeys: string[], npcNames: string[], calls: string): string[] {
 	const errors: string[] = [];
 	const rooms = (Array.isArray(out.rooms) ? out.rooms : []) as Gen[];
 	const ids = rooms.map((r) => Number(r.id));
@@ -103,7 +106,7 @@ function checkScenario(out: Gen, order: number, story: NetshortStory, npcKeys: s
 				if (order === 5 && rid < 9 && identityWord.length >= 2 && text.includes(identityWord))
 					errors.push(`${at}: 정체 낱말 "${identityWord}" 은 방 9 전에 쓰지 않습니다: "${text}"`);
 				if (/[一-鿿]/.test(text)) errors.push(`${at}: 한자를 쓰지 않습니다: "${text}"`);
-				if (/보스/.test(text)) errors.push(`${at}: 대사·지문에 게임 용어 "보스" 를 쓰지 않습니다. 이름·직업·"놈"으로 부를 것: "${text}"`);
+				if (/보스/.test(text)) errors.push(`${at}: 대사·지문에 게임 용어 "보스" 를 쓰지 않습니다. 이름·직업이나 ${calls}처럼 부를 것: "${text}"`);
 				if (text) errors.push(...injuredNameErrors(text, at, cast, hurtUntil(block === 'win_dialogue' ? order : order - 1)));
 				const decor = deviceHead && (text.includes('장치') || text.includes(deviceHead)) ? text.match(DEVICE_DECOR)?.[0] : undefined;
 				if (decor) errors.push(`${at}: 핵심 장치에 줄거리에 없는 "${decor}" 를 덧붙였습니다. 장치는 줄거리에 적힌 모습만: "${text}"`);
@@ -128,7 +131,7 @@ function checkScenario(out: Gen, order: number, story: NetshortStory, npcKeys: s
 						errors.push(`${at}: narrator 가 인물의 말·비명을 그대로 씁니다. 그 인물 speaker 로 쓰거나, 지문 안에 따옴표로 담을 것: "${text}"`);
 				}
 				if (text.includes('{random_boss}'))
-					errors.push(`${at}: {random_boss} 는 쓰지 않습니다 (이름의 받침을 몰라 조사가 어긋남). "놈", "그 사내"처럼 부를 것: "${text}"`);
+					errors.push(`${at}: {random_boss} 는 쓰지 않습니다 (이름의 받침을 몰라 조사가 어긋남). ${calls}처럼 부를 것: "${text}"`);
 				if (/^character_[1-4]$/.test(sp) && /[?？]/.test(text))
 					errors.push(`${at}: ${sp} 는 감정 반응 전용이라 질문하지 않습니다: "${text}"`);
 				if (order <= 4 && sp === 'boss') errors.push(`${at}: 1~4화에는 speaker 'boss' 를 쓰지 않습니다 (일반 보스는 random_boss)`);
@@ -182,6 +185,32 @@ function addCompanionEnters(out: Gen, key: string | undefined) {
 	}
 }
 
+/** NPC 가 말하거나 narrator 지문에 이름이 나오는데 그 블록에 enter 가 없으면 → 처음 나오는 줄 앞에 enter.
+ *  (게임 엔진은 말하는 NPC 만 자동으로 등장시키고, 지문에만 나오는 NPC 는 화면에 없음) 블록(dialogue·win·lose)마다 따로 본다. */
+function addNpcEnters(out: Gen, npcNames: Record<string, string>) {
+	for (const room of (Array.isArray(out.rooms) ? out.rooms : []) as Gen[])
+		for (const [, es] of blocksOf(room)) {
+			const entered = new Set<string>();
+			for (let i = 0; i < es.length; i++) {
+				const e = es[i];
+				if (e.type === 'direction' && e.action === 'enter' && e.speaker) {
+					entered.add(e.speaker);
+					continue;
+				}
+				if (e.type === 'direction') continue;
+				const text = String(e.content?.korean ?? '');
+				for (const [key, name] of Object.entries(npcNames)) {
+					if (entered.has(key)) continue;
+					const appears = e.speaker === key || (e.speaker === 'narrator' && name.length >= 2 && text.includes(name));
+					if (!appears) continue;
+					es.splice(i, 0, { type: 'direction', action: 'enter', speaker: key, spot: [700, 750], duration_ms: 500 } as Entry);
+					entered.add(key);
+					i++;
+				}
+			}
+		}
+}
+
 function toScript(order: number, ep: NetshortStory['episodes'][number], out: Gen, names: Record<string, string>): string {
 	const who = (sp: string) => (sp === 'random_boss' ? `일반 보스(${ep.boss})` : (names[sp] ?? sp));
 	const lines: string[] = [`## ${order}화 — ${ep.place ?? ''}`, ''];
@@ -208,6 +237,7 @@ export const POST: RequestHandler = async ({ request, fetch }) => {
 	const storyDir: string = body.storyDir ?? DEFAULT_STORY_DIR;
 	const outDir: string = body.outDir ?? DEFAULT_OUT_DIR;
 	const polishOnly = body.polishOnly === true;
+	const entersOnly = body.entersOnly === true;
 	const polishOn = polishOnly || body.polish !== false;
 
 	// Gemini 과부하(503·429)는 잠시 뒤 다시 (최대 5번)
@@ -270,7 +300,9 @@ export const POST: RequestHandler = async ({ request, fetch }) => {
 	async function runStory(id: string) {
 		const sdir = join(process.cwd(), storyDir, id);
 		const story = JSON.parse(await readFile(join(sdir, 'story.json'), 'utf-8')) as NetshortStory;
-		const seeds = JSON.parse(await readFile(join(sdir, 'seeds.json'), 'utf-8').catch(() => '{}')) as { theme?: string; tone?: string };
+		const seeds = JSON.parse(await readFile(join(sdir, 'seeds.json'), 'utf-8').catch(() => '{}')) as { theme?: string; tone?: string; style?: string };
+		const style: StoryStyle = getStyle(body.style ?? seeds.style ?? 'netshort');
+		const calls = bossCallText(style);
 		const theme = seeds.theme ?? 'modern';
 		const pool = (npc_by_theme[theme as keyof typeof npc_by_theme] ?? []) as readonly NpcSrc[];
 		const npcKeys = [...new Set(story.episodes.map((e) => e.npc.name))];
@@ -283,6 +315,26 @@ export const POST: RequestHandler = async ({ request, fetch }) => {
 			boss: `최종보스(${story.design.boss_name ?? ''})`,
 			...npcNames
 		};
+		// 대사·enter 에 나온 NPC → actors (직업은 role)
+		const actorsOf = (o: Gen, main: string) => {
+			const used = new Set<string>([main]);
+			for (const room of (o.rooms ?? []) as Gen[])
+				for (const [, es] of blocksOf(room)) for (const e of es) if (npcKeys.includes(String(e.speaker))) used.add(String(e.speaker));
+			const actors: Record<string, unknown> = {};
+			for (const k of used) {
+				const n = pool.find((p) => p.key === k);
+				if (!n) continue;
+				actors[k] = {
+					id: n.id,
+					name: { ...n.name },
+					description: n.description ?? '',
+					face_image_url: n.face_image_url,
+					battle_sprite_url: n.battle_sprite_url ?? n.base_image_url,
+					role: { korean: roleOf[k] }
+				};
+			}
+			return actors;
+		};
 		const dir = join(outDir, id);
 		await mkdir(join(process.cwd(), dir), { recursive: true });
 		const pad = (o: number) => String(o).padStart(2, '0');
@@ -292,30 +344,41 @@ export const POST: RequestHandler = async ({ request, fetch }) => {
 				const ep = story.episodes.find((e) => e.order === order);
 				if (!ep) return { order, error: `${order}화가 story.json 에 없습니다` };
 				try {
-					const check = (o: Gen) => checkScenario(o, order, story, npcKeys, Object.values(npcNames));
+					const check = (o: Gen) => checkScenario(o, order, story, npcKeys, Object.values(npcNames), calls);
 					const speakers = [...SYSTEM_SPEAKERS, ...npcKeys];
 					const doPolish = async (o: Gen) => {
 						const r = await polish(o, check, listChapter(order, o, names, ep.place ?? '', ep.boss ?? ''), speakers);
 						await writeFile(join(process.cwd(), dir, `polish_${pad(order)}.json`), JSON.stringify(r.log, null, 2), 'utf-8');
 						return r;
 					};
+					if (entersOnly) {
+						const file = join(dir, `scenario_${pad(order)}.json`);
+						const saved = JSON.parse(await readFile(join(process.cwd(), file), 'utf-8')) as Gen;
+						addNpcEnters(saved, npcNames);
+						saved.actors = actorsOf(saved, ep.npc.name);
+						await writeFile(join(process.cwd(), file), JSON.stringify(saved, null, 2), 'utf-8');
+						await writeFile(join(process.cwd(), dir, `script_${pad(order)}.md`), toScript(order, ep, saved, names), 'utf-8');
+						return { order, file, errors: check(saved) };
+					}
 					if (polishOnly) {
 						const file = join(dir, `scenario_${pad(order)}.json`);
 						const saved = JSON.parse(await readFile(join(process.cwd(), file), 'utf-8')) as Gen;
 						const { out: polished, log } = await doPolish(saved);
+						addNpcEnters(polished, npcNames);
+						polished.actors = actorsOf(polished, ep.npc.name);
 						await writeFile(join(process.cwd(), file), JSON.stringify(polished, null, 2), 'utf-8');
 						await writeFile(join(process.cwd(), dir, `script_${pad(order)}.md`), toScript(order, ep, polished, names), 'utf-8');
 						return { order, file, errors: check(polished), polished: log.applied.length, reverted: !!log.reverted };
 					}
-					const prompt = buildScenarioNetshortPrompt(story, order, npcNames, seeds.tone);
+					const prompt = buildScenarioNetshortPrompt(story, order, npcNames, seeds.tone, style);
 					let out = await gemini(prompt, order);
-					let errors = checkScenario(out, order, story, npcKeys, Object.values(npcNames));
+					let errors = checkScenario(out, order, story, npcKeys, Object.values(npcNames), calls);
 					for (let retry = 0; retry < 2 && errors.length; retry++) {
 						out = await gemini(
 							`${prompt}\n\n---\n\n## 이전 출력의 오류 — 오류 난 곳만 고치고 나머지는 그대로 다시 출력할 것\n${errors.map((e) => `- ${e}`).join('\n')}\n\n## 이전 출력\n\`\`\`json\n${JSON.stringify(out, null, 2)}\n\`\`\``,
 							order
 						);
-						errors = checkScenario(out, order, story, npcKeys, Object.values(npcNames));
+						errors = checkScenario(out, order, story, npcKeys, Object.values(npcNames), calls);
 					}
 
 					addCompanionEnters(out, companionOf(story, order));
@@ -331,23 +394,8 @@ export const POST: RequestHandler = async ({ request, fetch }) => {
 						}
 					}
 
-					// 대사에 나온 NPC → actors (직업은 role)
-					const used = new Set<string>([ep.npc.name]);
-					for (const room of (out.rooms ?? []) as Gen[])
-						for (const [, es] of blocksOf(room)) for (const e of es) if (npcKeys.includes(String(e.speaker))) used.add(String(e.speaker));
-					const actors: Record<string, unknown> = {};
-					for (const k of used) {
-						const n = pool.find((p) => p.key === k);
-						if (!n) continue;
-						actors[k] = {
-							id: n.id,
-							name: { ...n.name },
-							description: n.description ?? '',
-							face_image_url: n.face_image_url,
-							battle_sprite_url: n.battle_sprite_url ?? n.base_image_url,
-							role: { korean: roleOf[k] }
-						};
-					}
+					addNpcEnters(out, npcNames);
+					const actors = actorsOf(out, ep.npc.name);
 					const isFinale = order === 5;
 					const base = {
 						scenario_id: `${id}_${pad(order)}`,

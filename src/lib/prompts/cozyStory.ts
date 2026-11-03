@@ -3,6 +3,9 @@
 // reverse_order 화(거꾸로): 히어로들이 배운 대로 수상해 보이는 사람을 감싸고 믿음직해 보이는 사람을 믿는데, 믿은 사람이 그 화의 상대.
 // 5화: 싸우기 전에 먼저 이야기를 듣고, 싸움은 화해로 끝남.
 // 넷쇼트에서 배운 것: 재료·설계 칸이 많을수록 Gemini 가 칸을 아무 내용으로 채움 → 칸은 꼭 필요한 것만.
+// 작가 소개·문체·톤·테마는 스타일 파일(styles/<key>.md, 기본 cozy)에서.
+
+import { getStyle, type StoryStyle } from './storyStyle';
 
 export const COZY_ROOMS = ['1', '3', '5', '8'] as const;
 
@@ -28,17 +31,17 @@ export type CozyStory = {
 	}[];
 };
 
-export function buildCozyPrompt(id: string, p: CozyPremise, themeDescription: string, npc: CozyNpc): string {
+export function buildCozyPrompt(id: string, p: CozyPremise, themeDescription: string, npc: CozyNpc, style: StoryStyle = getStyle('cozy'), tone = ''): string {
 	const rev = p.reverse_order;
-	return `너는 4인 히어로 파티가 5화에 걸쳐 모험하는 게임의 스토리 작가다. 아래 기획안을 5화짜리 이야기로 풀어 쓴다.
+	return `너는 4인 히어로 파티가 5화에 걸쳐 모험하는 게임의 스토리 작가다. 아래 기획안을 5화짜리 이야기로 풀어 쓴다.${style.storyWriter ? `\n${style.storyWriter}` : ''}
 
 [테마]
-${themeDescription}
+${style.theme || themeDescription}
 
 [기획안]
 - 제목 힌트: ${p.title_hint}
 - 무대: ${p.world}
-- 히어로들이 이곳에 온 이유: ${p.goal}
+- 히어로들이 이곳에 온 이유: ${p.goal}${tone ? `\n- 감정 톤: ${tone}` : ''}
 ${p.episodes.map((e, i) => `- ${i + 1}화${i + 1 === rev ? ' (거꾸로)' : ''}: ${e}`).join('\n')}
 
 [함께 다니는 NPC] ${npc.name}(${npc.id}) — ${p.npc_role}. 1~5화 내내 히어로들과 함께 다닌다.${npc.persona ? `\n성격 참고: ${npc.persona}` : ''}
@@ -66,8 +69,8 @@ ${rev ? `- ${rev}화는 거꾸로 꼬는 화다. 히어로들은 앞 화에서 �
 
 [문체]
 - 각 방은 2~4문장, 대사는 큰따옴표로 1~2줄. 서술은 현재형("들어선다", "말한다").
-- 따뜻하고 가볍게. 무섭거나 잔인한 묘사를 쓰지 않는다. 한국어로 쓴다.
-- 문장은 쉽게. 어울리지 않는 꾸밈말을 겹쳐 쓰지 않는다.
+${style.storyWriting ? `${style.storyWriting}\n` : ''}- 문장은 쉽게. 어울리지 않는 꾸밈말을 겹쳐 쓰지 않는다.
+- 한국어로 쓴다.
 
 [출력]
 cozy_story 함수로 답한다. design 을 먼저 정하고 본문을 맞춘다.
@@ -178,8 +181,8 @@ export function checkCozyStory(s: CozyStory, npcId: string): string[] {
 }
 
 /** 사람이 읽는 md */
-export function cozyToMarkdown(s: CozyStory, p: CozyPremise, npc: CozyNpc): string {
-	const out = [`# ${s.title} (${s.id})`, '', `- 무대: ${p.world} / 함께 다니는 NPC: ${npc.name} (${p.npc_role})`, `- 온 이유: ${s.design?.goal ?? ''}`, ''];
+export function cozyToMarkdown(s: CozyStory, p: CozyPremise, npc: CozyNpc, style = 'cozy', tone = ''): string {
+	const out = [`# ${s.title} (${s.id})`, '', `- 무대: ${p.world} / 함께 다니는 NPC: ${npc.name} (${p.npc_role})`, `- 스타일: ${style}${tone ? ` / 톤: ${tone}` : ''}`, `- 온 이유: ${s.design?.goal ?? ''}`, ''];
 	out.push('## 설계', '');
 	for (const m of s.design?.misunderstandings ?? []) out.push(`- ${m.order}화${m.order === p.reverse_order ? ' (거꾸로)' : ''} ${m.who}: ${m.order === p.reverse_order ? '믿음' : '오해'} "${m.looked_like}" → 실제 "${m.actual}" (증거: ${m.reveal})`);
 	const f = s.design?.final;

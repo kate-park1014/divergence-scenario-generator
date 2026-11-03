@@ -1,0 +1,416 @@
+{
+  "scenario_id": "cozy_market_01",
+  "order": 1,
+  "act": "intro",
+  "theme": "modern",
+  "actors": {
+    "dax": {
+      "id": "mon_08d5b43e-f9ab-4469-9064-855e170b0cdc",
+      "name": {
+        "korean": "닥스",
+        "english": "Dax",
+        "japanese": "ダックス",
+        "chinese": "达克斯",
+        "french": "Dax",
+        "spanish": "Dax",
+        "vietnamese": "Dax",
+        "thai": "แด็กซ์",
+        "hindi": "डैक्स"
+      },
+      "description": "",
+      "face_image_url": "https://imagedelivery.net/WTEqQNGFb-l-IHS6IGnzUQ/84bb11db-6eb4-4500-d274-222e8b100100/public",
+      "battle_sprite_url": "https://imagedelivery.net/WTEqQNGFb-l-IHS6IGnzUQ/5d325a75-bd91-4758-7b3f-ad9a97e52700/public",
+      "role": {
+        "korean": "시장 상인회 막내"
+      }
+    }
+  },
+  "boss": {
+    "pool_id": "random_boss",
+    "role": {
+      "korean": "국숫집 사장의 아들"
+    }
+  },
+  "rooms": [
+    {
+      "id": 1,
+      "dialogue": [
+        {
+          "speaker": "narrator",
+          "type": "speech",
+          "content": {
+            "korean": "낡은 간판이 늘어선 시장 골목 입구에 히어로들이 들어선다."
+          }
+        },
+        {
+          "duration_ms": 500,
+          "speaker": "dax",
+          "spot": [
+            500,
+            200
+          ],
+          "action": "enter",
+          "type": "direction"
+        },
+        {
+          "type": "speech",
+          "emotion": "sad",
+          "speaker": "dax",
+          "content": {
+            "korean": "이 골목의 오래된 가게들이 문을 닫을 위기에 처했어요. 제발 도와주세요."
+          }
+        },
+        {
+          "emotion": "happy",
+          "speaker": "character_any",
+          "type": "speech",
+          "content": {
+            "korean": "우리가 온 이상 걱정 마. 전부 구해 주겠어!"
+          }
+        },
+        {
+          "content": {
+            "korean": "오래된 국숫집 앞에서 한 남자가 찾아온 손님들을 돌려보내고 있다."
+          },
+          "type": "speech",
+          "speaker": "narrator"
+        },
+        {
+          "emotion": "base",
+          "speaker": "character_1",
+          "content": {
+            "korean": "저기 봐! 국숫집 앞에 누군가 서 있어."
+          },
+          "type": "speech"
+        },
+        {
+          "content": {
+            "korean": "찾아온 손님을 그냥 돌려보내다니 사정이 이상한데."
+          },
+          "type": "speech",
+          "speaker": "character_any",
+          "emotion": "base"
+        }
+      ]
+    },
+    {
+      "dialogue": [
+        {
+          "duration_ms": 500,
+          "type": "direction",
+          "action": "enter",
+          "speaker": "dax",
+          "spot": [
+            500,
+            200
+          ]
+        },
+        {
+          "speaker": "narrator",
+          "type": "speech",
+          "content": {
+            "korean": "남자는 국숫집 문을 굳게 닫아걸고 찾아오는 손님마다 손사래를 치며 쫓아낸다."
+          }
+        },
+        {
+          "speaker": "dax",
+          "emotion": "sad",
+          "type": "speech",
+          "content": {
+            "korean": "손님들이 가게에 들어가지 못하고 그냥 발길을 돌리고 있네요."
+          }
+        },
+        {
+          "emotion": "angry",
+          "type": "speech",
+          "speaker": "character_any",
+          "content": {
+            "korean": "손님을 대놓고 쫓아내다니, 장사를 방해하고 있잖아."
+          }
+        },
+        {
+          "type": "speech",
+          "content": {
+            "korean": "남자가 \"오늘은 장사 안 하니까 다른 데로 가요!\" 하고 손님을 밀쳐낸다."
+          },
+          "speaker": "narrator"
+        },
+        {
+          "content": {
+            "korean": "작정하고 영업을 방해하는 모양이야."
+          },
+          "type": "speech",
+          "speaker": "character_2",
+          "emotion": "angry"
+        },
+        {
+          "speaker": "character_any",
+          "emotion": "angry",
+          "type": "speech",
+          "content": {
+            "korean": "가게를 망치려 들다니 그냥 둘 수 없어."
+          }
+        }
+      ],
+      "id": 3
+    },
+    {
+      "dialogue": [
+        {
+          "spot": [
+            500,
+            200
+          ],
+          "speaker": "dax",
+          "action": "enter",
+          "duration_ms": 500,
+          "type": "direction"
+        },
+        {
+          "content": {
+            "korean": "저 남자는 이 동네 상인도 아니고 근처에서 본 적도 없는 사람이에요."
+          },
+          "emotion": "sad",
+          "speaker": "dax",
+          "type": "speech"
+        },
+        {
+          "speaker": "character_any",
+          "emotion": "base",
+          "content": {
+            "korean": "이 근처 사람도 아니라고? 그럼 답은 나왔네."
+          },
+          "type": "speech"
+        },
+        {
+          "content": {
+            "korean": "분명 경쟁 가게에서 보낸 사람이 틀림없어!"
+          },
+          "emotion": "angry",
+          "type": "speech",
+          "speaker": "character_3"
+        },
+        {
+          "speaker": "narrator",
+          "type": "speech",
+          "content": {
+            "korean": "남자는 시장 골목을 두리번거리며 계속해서 가게 문을 지키고 서 있다."
+          }
+        },
+        {
+          "content": {
+            "korean": "시장 상권을 위협하는 경쟁 업체 직원인 게 확실해."
+          },
+          "type": "speech",
+          "emotion": "angry",
+          "speaker": "character_any"
+        }
+      ],
+      "id": 5
+    },
+    {
+      "id": 9,
+      "dialogue": [
+        {
+          "spot": [
+            500,
+            200
+          ],
+          "action": "enter",
+          "duration_ms": 500,
+          "type": "direction",
+          "speaker": "dax"
+        },
+        {
+          "speaker": "narrator",
+          "content": {
+            "korean": "히어로들이 닫힌 국숫집 문 앞을 가로막고 서 있는 남자에게 바짝 다가간다."
+          },
+          "type": "speech"
+        },
+        {
+          "content": {
+            "korean": "당장 그 문 앞에서 비켜! 더 이상 장사를 방해하게 둘 순 없어."
+          },
+          "emotion": "angry",
+          "type": "speech",
+          "speaker": "character_any"
+        },
+        {
+          "type": "speech",
+          "content": {
+            "korean": "남자는 경계하는 눈빛으로 히어로들을 노려보며 물러서지 않는다."
+          },
+          "speaker": "narrator"
+        },
+        {
+          "type": "speech",
+          "content": {
+            "korean": "끝까지 비킬 생각이 없나 보네."
+          },
+          "speaker": "character_4",
+          "emotion": "angry"
+        },
+        {
+          "content": {
+            "korean": "따끔하게 혼을 내서 더 이상 가게에 접근하지 못하게 만들어 주겠어!"
+          },
+          "speaker": "character_any",
+          "emotion": "angry",
+          "type": "speech"
+        }
+      ]
+    },
+    {
+      "dialogue": [
+        {
+          "content": {
+            "korean": "닫힌 국숫집 문 앞에서 남자가 히어로들을 향해 기세를 올린다."
+          },
+          "speaker": "narrator",
+          "type": "speech"
+        },
+        {
+          "content": {
+            "korean": "아무도 이 안에 들어올 수 없어! 당장 돌아가!"
+          },
+          "emotion": "angry",
+          "type": "speech",
+          "speaker": "random_boss"
+        },
+        {
+          "emotion": "angry",
+          "speaker": "character_any",
+          "content": {
+            "korean": "손님을 돌려보내다니, 당신 경쟁 가게에서 보낸 사람이지?"
+          },
+          "type": "speech"
+        },
+        {
+          "content": {
+            "korean": "동네 시장을 망치게 그냥 둘 순 없지!"
+          },
+          "emotion": "angry",
+          "type": "speech",
+          "speaker": "character_1"
+        },
+        {
+          "speaker": "narrator",
+          "type": "speech",
+          "content": {
+            "korean": "남자가 이를 악물며 히어로들 앞을 막아선다."
+          }
+        },
+        {
+          "type": "speech",
+          "speaker": "character_any",
+          "emotion": "angry",
+          "content": {
+            "korean": "실력으로 상대해 줄 테니 어디 한번 버텨봐!"
+          }
+        }
+      ],
+      "id": 15,
+      "lose_dialogue": [
+        {
+          "speaker": "narrator",
+          "content": {
+            "korean": "남자의 거센 반항에 밀려 히어로들이 바닥으로 넘어진다."
+          },
+          "type": "speech"
+        },
+        {
+          "spot": [
+            500,
+            200
+          ],
+          "action": "enter",
+          "duration_ms": 500,
+          "speaker": "dax",
+          "type": "direction"
+        },
+        {
+          "type": "speech",
+          "speaker": "dax",
+          "emotion": "sad",
+          "content": {
+            "korean": "괜찮으세요, 히어로님들? 다시 힘을 내서 저 사람을 물리쳐야 해요!"
+          }
+        }
+      ],
+      "win_dialogue": [
+        {
+          "content": {
+            "korean": "남자가 바닥에 쓰러지며 주머니에서 구겨진 종이 한 장이 떨어진다."
+          },
+          "speaker": "narrator",
+          "type": "speech"
+        },
+        {
+          "speaker": "narrator",
+          "type": "speech",
+          "content": {
+            "korean": "종이에는 국숫집 사장인 어머니의 처방전과 오늘 꼭 쉬어야 한다는 의사의 메모가 적혀 있다."
+          }
+        },
+        {
+          "emotion": "sad",
+          "type": "speech",
+          "speaker": "random_boss",
+          "content": {
+            "korean": "우리 엄마가 며칠 동안 쉬지도 못하고 무리하다 쓰러졌단 말이야... 하루라도 쉬게 하려 했을 뿐이라고!"
+          }
+        },
+        {
+          "speaker": "character_any",
+          "emotion": "base",
+          "type": "speech",
+          "content": {
+            "korean": "어라? 경쟁 가게 사람이 아니라 사장님 아들이었어?"
+          }
+        },
+        {
+          "content": {
+            "korean": "완전히 오해하고 있었잖아..."
+          },
+          "emotion": "sad",
+          "speaker": "character_2",
+          "type": "speech"
+        },
+        {
+          "duration_ms": 500,
+          "action": "enter",
+          "type": "direction",
+          "spot": [
+            500,
+            200
+          ],
+          "speaker": "dax"
+        },
+        {
+          "type": "speech",
+          "content": {
+            "korean": "사장님의 건강을 위해 손님들을 돌려보내신 거였군요..."
+          },
+          "emotion": "sad",
+          "speaker": "dax"
+        },
+        {
+          "content": {
+            "korean": "소란을 피워서 정말 미안하게 됐어. 진작 말해 줬으면 같이 도왔을 텐데!"
+          },
+          "emotion": "happy",
+          "type": "speech",
+          "speaker": "character_any"
+        }
+      ]
+    }
+  ],
+  "prologue": {
+    "korean": [
+      "재개발을 앞두고 정적만이 남은 오래된 시장 골목에 히어로들이 발을 내딛는다.",
+      "문 닫을 위기에 처한 가게들을 돕기 위해 상인회 막내 닥스가 그들을 반갑게 맞이한다.",
+      "히어로들은 따뜻한 정이 살아 숨 쉬는 이 시장을 구하기 위해 골목 안으로 들어선다."
+    ]
+  }
+}

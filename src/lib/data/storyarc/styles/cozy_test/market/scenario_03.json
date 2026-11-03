@@ -1,0 +1,467 @@
+{
+  "scenario_id": "cozy_market_03",
+  "order": 3,
+  "act": "rising",
+  "theme": "modern",
+  "actors": {
+    "dax": {
+      "id": "mon_08d5b43e-f9ab-4469-9064-855e170b0cdc",
+      "name": {
+        "korean": "닥스",
+        "english": "Dax",
+        "japanese": "ダックス",
+        "chinese": "达克斯",
+        "french": "Dax",
+        "spanish": "Dax",
+        "vietnamese": "Dax",
+        "thai": "แด็กซ์",
+        "hindi": "डैक्स"
+      },
+      "description": "",
+      "face_image_url": "https://imagedelivery.net/WTEqQNGFb-l-IHS6IGnzUQ/84bb11db-6eb4-4500-d274-222e8b100100/public",
+      "battle_sprite_url": "https://imagedelivery.net/WTEqQNGFb-l-IHS6IGnzUQ/5d325a75-bd91-4758-7b3f-ad9a97e52700/public",
+      "role": {
+        "korean": "시장 상인회 막내"
+      }
+    }
+  },
+  "boss": {
+    "pool_id": "random_boss",
+    "role": {
+      "korean": "헌책 수집상 트럭 주인"
+    }
+  },
+  "prologue": {
+    "korean": [
+      "재개발을 앞두고 정적만이 남은 오래된 시장 골목에 히어로들이 발을 내딛는다.",
+      "문 닫을 위기에 처한 가게들을 돕기 위해 상인회 막내 닥스가 그들을 안내한다.",
+      "비 들이치는 오래된 헌책방 앞에서 새로운 오해와 사건이 펼쳐진다."
+    ]
+  },
+  "rooms": [
+    {
+      "dialogue": [
+        {
+          "type": "speech",
+          "speaker": "narrator",
+          "content": {
+            "korean": "비가 부슬부슬 내리는 헌책방 앞에 닥스와 히어로들이 모인다."
+          }
+        },
+        {
+          "type": "direction",
+          "duration_ms": 500,
+          "spot": [
+            400,
+            700
+          ],
+          "action": "enter",
+          "speaker": "dax"
+        },
+        {
+          "type": "speech",
+          "speaker": "dax",
+          "emotion": "sad",
+          "content": {
+            "korean": "여기가 바로 비가 새서 큰일 난 오래된 헌책방이에요!"
+          }
+        },
+        {
+          "content": {
+            "korean": "지난번 떡집 때 겉모습만 보고 오해해서 고생했었지."
+          },
+          "speaker": "character_any",
+          "emotion": "base",
+          "type": "speech"
+        },
+        {
+          "type": "speech",
+          "speaker": "character_1",
+          "emotion": "base",
+          "content": {
+            "korean": "맞아, 소리 지른다고 무조건 나쁜 사람은 아니었어!"
+          }
+        },
+        {
+          "content": {
+            "korean": "맞아요! 이번엔 겉모습에 속지 말고 조심해서 관찰해야 해요."
+          },
+          "type": "speech",
+          "speaker": "dax",
+          "emotion": "base"
+        },
+        {
+          "type": "speech",
+          "speaker": "character_any",
+          "emotion": "happy",
+          "content": {
+            "korean": "그래, 이번엔 겉모습으로 판단하지 말고 상황을 신중하게 보자구."
+          }
+        }
+      ],
+      "id": 1
+    },
+    {
+      "id": 3,
+      "dialogue": [
+        {
+          "spot": [
+            400,
+            700
+          ],
+          "type": "direction",
+          "speaker": "dax",
+          "duration_ms": 500,
+          "action": "enter"
+        },
+        {
+          "type": "speech",
+          "content": {
+            "korean": "험상궂은 노인이 책을 옮기지 못하게 막아서고, 정갈한 차림의 트럭 주인은 비가 새어 책을 안전한 곳으로 옮기는 중이라며 환하게 웃는다."
+          },
+          "speaker": "narrator"
+        },
+        {
+          "type": "speech",
+          "speaker": "dax",
+          "emotion": "happy",
+          "content": {
+            "korean": "저 정갈한 차림의 트럭 아저씨가 책을 안전하게 옮겨 주시는군요!"
+          }
+        },
+        {
+          "content": {
+            "korean": "험상궂게 막아서는 할아버지가 또 오해를 부르는 사람이겠지?"
+          },
+          "speaker": "character_any",
+          "emotion": "base",
+          "type": "speech"
+        },
+        {
+          "speaker": "narrator",
+          "content": {
+            "korean": "노인이 이 짐은 건드리지 말라며 호통을 치고 짐을 막아선다."
+          },
+          "type": "speech"
+        },
+        {
+          "speaker": "character_1",
+          "emotion": "angry",
+          "content": {
+            "korean": "친절히 도와주는 분을 방해하면 안 되지!"
+          },
+          "type": "speech"
+        },
+        {
+          "content": {
+            "korean": "할아버지, 친절한 아저씨를 방해하지 말고 물러서 계세요!"
+          },
+          "speaker": "character_any",
+          "emotion": "angry",
+          "type": "speech"
+        },
+        {
+          "speaker": "dax",
+          "emotion": "happy",
+          "content": {
+            "korean": "우리가 힘을 보태서 책 상자를 같이 옮겨 드려요!"
+          },
+          "type": "speech"
+        }
+      ]
+    },
+    {
+      "dialogue": [
+        {
+          "type": "direction",
+          "spot": [
+            400,
+            700
+          ],
+          "action": "enter",
+          "speaker": "dax",
+          "duration_ms": 500
+        },
+        {
+          "speaker": "narrator",
+          "content": {
+            "korean": "히어로들이 힘을 모아 마지막 책 상자들을 트럭 짐칸으로 운반한다."
+          },
+          "type": "speech"
+        },
+        {
+          "type": "speech",
+          "content": {
+            "korean": "히어로님들 덕분에 책이 빗물에 젖지 않고 무사히 실리고 있어요!"
+          },
+          "speaker": "dax",
+          "emotion": "happy"
+        },
+        {
+          "content": {
+            "korean": "험상궂은 노인이 트럭 옆에서 안절부절못하며 동동 발을 굴린다."
+          },
+          "type": "speech",
+          "speaker": "narrator"
+        },
+        {
+          "type": "speech",
+          "speaker": "character_any",
+          "emotion": "happy",
+          "content": {
+            "korean": "이제 남은 상자도 몇 개 없어. 금방 끝나겠는데?"
+          }
+        },
+        {
+          "content": {
+            "korean": "트럭 주인이 정말 고맙다며 덕분에 살았다고 고개 숙여 인사한다."
+          },
+          "speaker": "narrator",
+          "type": "speech"
+        },
+        {
+          "type": "speech",
+          "speaker": "character_any",
+          "emotion": "happy",
+          "content": {
+            "korean": "친절한 분을 도와드려서 뿌듯하네. 마지막까지 확실하게 옮기자!"
+          }
+        }
+      ],
+      "id": 5
+    },
+    {
+      "id": 9,
+      "dialogue": [
+        {
+          "duration_ms": 500,
+          "action": "enter",
+          "speaker": "dax",
+          "spot": [
+            400,
+            700
+          ],
+          "type": "direction"
+        },
+        {
+          "type": "speech",
+          "speaker": "narrator",
+          "content": {
+            "korean": "책 상자를 모두 실은 트럭이 급하게 시동을 걸며 엔진 소리를 낸다."
+          }
+        },
+        {
+          "type": "speech",
+          "speaker": "dax",
+          "emotion": "angry",
+          "content": {
+            "korean": "이상해요! 방금 책방 사장님이 트럭을 부른 적이 없다고 하셨어요!"
+          }
+        },
+        {
+          "type": "speech",
+          "content": {
+            "korean": "뭐라고? 그럼 저 사람이 우리를 속이고 책을 전부 가져가는 거야?"
+          },
+          "speaker": "character_any",
+          "emotion": "angry"
+        },
+        {
+          "type": "speech",
+          "speaker": "narrator",
+          "content": {
+            "korean": "트럭 주인이 비가 오니 얼른 출발하겠다며 서둘러 차를 움직이려 한다."
+          }
+        },
+        {
+          "content": {
+            "korean": "친절한 모습에 완전히 속았잖아!"
+          },
+          "speaker": "character_1",
+          "emotion": "angry",
+          "type": "speech"
+        },
+        {
+          "type": "speech",
+          "content": {
+            "korean": "우리가 또 오해해서 나쁜 사람을 돕고 있었구나! 당장 쫓아가자!"
+          },
+          "speaker": "character_any",
+          "emotion": "angry"
+        }
+      ]
+    },
+    {
+      "id": 15,
+      "lose_dialogue": [
+        {
+          "spot": [
+            400,
+            700
+          ],
+          "duration_ms": 500,
+          "type": "direction",
+          "action": "enter",
+          "speaker": "dax"
+        },
+        {
+          "content": {
+            "korean": "트럭 주인의 거센 반격에 밀려 히어로들이 바닥에 넘어지고 만다."
+          },
+          "speaker": "narrator",
+          "type": "speech"
+        },
+        {
+          "type": "speech",
+          "content": {
+            "korean": "히어로님들, 괜찮으세요? 옷에 묻은 흙을 털어 드릴게요."
+          },
+          "speaker": "dax",
+          "emotion": "sad"
+        },
+        {
+          "content": {
+            "korean": "아직 끝나지 않았어요! 저 책들을 지키러 다시 가요!"
+          },
+          "speaker": "dax",
+          "emotion": "happy",
+          "type": "speech"
+        }
+      ],
+      "win_dialogue": [
+        {
+          "spot": [
+            400,
+            700
+          ],
+          "type": "direction",
+          "action": "enter",
+          "duration_ms": 500,
+          "speaker": "dax"
+        },
+        {
+          "type": "speech",
+          "speaker": "narrator",
+          "emotion": "base",
+          "content": {
+            "korean": "트럭 상자 밑바닥에서 먼지 쌓인 희귀 헌책들과 거기에 적힌 서명이 드러난다."
+          }
+        },
+        {
+          "speaker": "random_boss",
+          "emotion": "sad",
+          "content": {
+            "korean": "어릴 때 이 책방에서 읽던 희귀책이 탐나 몰래 짐에 섞었습니다..."
+          },
+          "type": "speech"
+        },
+        {
+          "type": "speech",
+          "content": {
+            "korean": "험상궂은 노인이 달려와 단골집 보물을 도둑맞을 뻔했다며 소리친다."
+          },
+          "speaker": "narrator"
+        },
+        {
+          "content": {
+            "korean": "할아버지는 책방 사장님의 희귀책을 지키려던 진짜 단골이셨군요!"
+          },
+          "speaker": "dax",
+          "emotion": "happy",
+          "type": "speech"
+        },
+        {
+          "speaker": "character_any",
+          "emotion": "sad",
+          "content": {
+            "korean": "친절해 보이는 차림만 믿고 진짜 단골 할아버지를 오해했네..."
+          },
+          "type": "speech"
+        },
+        {
+          "speaker": "dax",
+          "emotion": "sad",
+          "content": {
+            "korean": "제대로 확인도 안 하고 진짜 단골분을 방해해서 죄송해요."
+          },
+          "type": "speech"
+        },
+        {
+          "content": {
+            "korean": "미안해요, 할아버지! 제대로 알지도 못하고 말렸어요."
+          },
+          "speaker": "character_1",
+          "emotion": "sad",
+          "type": "speech"
+        },
+        {
+          "type": "speech",
+          "speaker": "character_any",
+          "emotion": "base",
+          "content": {
+            "korean": "앞으로는 겉모습이 친절하든 험상궂든 제대로 확인부터 해야겠어!"
+          }
+        }
+      ],
+      "dialogue": [
+        {
+          "speaker": "dax",
+          "duration_ms": 500,
+          "action": "enter",
+          "spot": [
+            400,
+            700
+          ],
+          "type": "direction"
+        },
+        {
+          "content": {
+            "korean": "히어로들이 좁은 시장 골목을 막아서며 트럭의 앞길을 차단한다."
+          },
+          "speaker": "narrator",
+          "type": "speech"
+        },
+        {
+          "type": "speech",
+          "speaker": "random_boss",
+          "emotion": "angry",
+          "content": {
+            "korean": "갑자기 길을 막고 왜 이러는 거요? 비를 피하려 서두르는 것뿐인데!"
+          }
+        },
+        {
+          "type": "speech",
+          "speaker": "character_any",
+          "emotion": "angry",
+          "content": {
+            "korean": "트럭을 시장 밖으로 빼낼 순 없어! 당장 차에서 내려!"
+          }
+        },
+        {
+          "speaker": "dax",
+          "emotion": "angry",
+          "content": {
+            "korean": "사장님이 맡기지도 않은 책 상자까지 왜 몰래 실은 거죠?"
+          },
+          "type": "speech"
+        },
+        {
+          "type": "speech",
+          "speaker": "random_boss",
+          "emotion": "angry",
+          "content": {
+            "korean": "쓸데없는 오해는 마시오, 내 길을 방해하면 그냥 넘어가지 않겠소!"
+          }
+        },
+        {
+          "type": "speech",
+          "speaker": "character_any",
+          "emotion": "angry",
+          "content": {
+            "korean": "겉모습에 속은 우리가 바보였지! 가볍게 제압해주겠어!"
+          }
+        }
+      ]
+    }
+  ]
+}

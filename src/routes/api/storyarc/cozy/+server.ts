@@ -4,6 +4,7 @@ import { join } from 'path';
 import { npc_by_theme } from '$lib/data/sample/npc_pool';
 import { getNpcPersona } from '$lib/data/sample/npc';
 import { buildCozyPrompt, checkCozyStory, cozyStoryTool, cozyToMarkdown, type CozyNpc, type CozyPremise, type CozyStory } from '$lib/prompts/cozyStory';
+import { getStyle, keepTone, type StoryStyle } from '$lib/prompts/storyStyle';
 import type { RequestHandler } from './$types';
 
 /**
@@ -11,12 +12,14 @@ import type { RequestHandler } from './$types';
  *
  * body:
  *  - keys?: string[]   만들 기획안 key (기본: 전부)
- *  - outDir?: string   기본 src/lib/data/storyarc/cozy_test → <outDir>/<key>/story.json, story.md, cast.json
+ *  - outDir?: string   기본 src/lib/data/storyarc/styles/cozy_test → <outDir>/<key>/story.json, story.md, cast.json
  *  - temperature?: number  기본 0.8
+ *  - style?: string        스타일 파일 key (styles/<key>.md). 기본: cast.json 의 style, 없으면 cozy
  * 코드 검사(모양만)에 걸리면 오류를 붙여 최대 2번 다시 요청. 주 NPC 는 처음 만들 때 뽑아 cast.json 에 저장, 다시 만들 때 그대로.
+ * 스타일·톤(스타일에 톤 목록이 있을 때)도 cast.json 에 저장해 대본 단계가 같은 것을 씀.
  */
 
-const DIR = 'src/lib/data/storyarc/cozy_test';
+const DIR = 'src/lib/data/storyarc/styles/cozy_test';
 type NpcSource = { key: string; name: { korean: string }; persona?: string };
 
 export const POST: RequestHandler = async ({ request, fetch }) => {
@@ -30,6 +33,12 @@ export const POST: RequestHandler = async ({ request, fetch }) => {
 		return persona ? { id: n.key, name: n.name.korean, persona } : { id: n.key, name: n.name.korean };
 	});
 	if (!pool.length) return json({ error: `테마 ${seeds.theme} 의 NPC 풀이 없습니다.` }, { status: 400 });
+	const styleOf = (key?: string): StoryStyle => getStyle(body.style ?? key ?? 'cozy');
+	try {
+		styleOf();
+	} catch (e) {
+		return json({ error: e instanceof Error ? e.message : String(e) }, { status: 400 });
+	}
 
 	async function gemini(message: string, busy = 0): Promise<CozyStory> {
 		const res = await fetch('/api/gemini', {
@@ -54,8 +63,9 @@ export const POST: RequestHandler = async ({ request, fetch }) => {
 		const dir = join(process.cwd(), outDir, key);
 		await mkdir(dir, { recursive: true });
 		let npc: CozyNpc | undefined;
+		let saved: { npc?: string; style?: string; tone?: string } = {};
 		try {
-			const saved = JSON.parse(await readFile(join(dir, 'cast.json'), 'utf-8')) as { npc: string };
+			saved = JSON.parse(await readFile(join(dir, 'cast.json'), 'utf-8'));
 			npc = pool.find((n) => n.id === saved.npc);
 		} catch {
 			/* 처음 */
@@ -64,10 +74,14 @@ export const POST: RequestHandler = async ({ request, fetch }) => {
 			const free = pool.filter((n) => !used.has(n.id));
 			npc = free[Math.floor(Math.random() * free.length)] ?? pool[0];
 			used.add(npc.id); // 동시에 도는 다른 이야기가 같은 NPC 를 뽑지 않게 바로 표시
-			await writeFile(join(dir, 'cast.json'), JSON.stringify({ npc: npc.id }, null, 2));
 		}
 		used.add(npc.id);
-		const prompt = buildCozyPrompt(key, p, seeds.theme_description, npc);
+		// 스타일: --style 이 있으면 그것, 없으면 저장된 것. 톤은 그 스타일 목록에 있으면 그대로, 아니면 다시 뽑음
+		const style = styleOf(saved.style);
+		const tone = keepTone(style, saved.tone);
+		const cast = { npc: npc.id, style: style.key, ...(tone ? { tone } : {}) };
+		if (JSON.stringify(cast) !== JSON.stringify(saved)) await writeFile(join(dir, 'cast.json'), JSON.stringify(cast, null, 2));
+		const prompt = buildCozyPrompt(key, p, seeds.theme_description, npc, style, tone);
 		let out = await gemini(prompt);
 		let errors = checkCozyStory(out, npc.id);
 		let tries = 1;
@@ -78,7 +92,7 @@ export const POST: RequestHandler = async ({ request, fetch }) => {
 		}
 		out.id = key;
 		await writeFile(join(dir, 'story.json'), JSON.stringify(out, null, 2));
-		await writeFile(join(dir, 'story.md'), cozyToMarkdown(out, p, npc));
+		await writeFile(join(dir, 'story.md'), cozyToMarkdown(out, p, npc, style.key, tone));
 		return { key, dir: join(outDir, key), title: out.title, npc: npc.name, errors, tries };
 	}
 

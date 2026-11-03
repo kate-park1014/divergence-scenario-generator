@@ -1,13 +1,15 @@
 #!/usr/bin/env node
-// 넷쇼트 story.json(src/lib/data/storyarc/netshort_test/<id>/) → 게임 시나리오 5화 (시험용). /api/scenario/netshort 호출.
-// 결과: src/lib/data/storyarc/netshort_test/<id>/ (story.json 옆) scenario_0N.json, script_0N.md, script.md
+// 넷쇼트 story.json(src/lib/data/storyarc/styles/netshort_test/<id>/) → 게임 시나리오 5화 (시험용). /api/scenario/netshort 호출.
+// 결과: src/lib/data/storyarc/styles/netshort_test/<id>/ (story.json 옆) scenario_0N.json, script_0N.md, script.md
 //
 //   npm run dev &
 //   npm run gen:netshort-scenarios -- --id=arcade_20261030083249_3
 //   npm run gen:netshort-scenarios -- --id=<id> --orders=1,5
 //   npm run gen:netshort-scenarios -- --id=<id> --polish-only   # 기존 대본을 다듬기만
+//   npm run gen:netshort-scenarios -- --id=<id> --enters-only   # 빠진 NPC enter 만 넣기 (Gemini 없음)
 // 옵션: --id=a,b (필수) / --orders / --out=DIR / --story-dir=DIR / --base=URL
 //       --no-polish (다듬기 끔) / --polish-only. 다듬기 기록은 <id>/polish_0N.json
+//       --style=이름 (기본: 이야기 단계가 seeds.json 에 저장한 것, 없으면 netshort. 스타일 파일 src/lib/data/storyarc/styles/<이름>.md)
 
 import http from 'node:http';
 
@@ -26,6 +28,8 @@ if (args.out) body.outDir = args.out;
 if (args['story-dir']) body.storyDir = args['story-dir'];
 if (args['no-polish']) body.polish = false;
 if (args['polish-only']) body.polishOnly = true;
+if (args['enters-only']) body.entersOnly = true;
+if (args.style) body.style = args.style;
 
 function postJson(urlStr, payloadObj) {
 	return new Promise((resolve, reject) => {

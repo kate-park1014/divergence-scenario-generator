@@ -1,11 +1,12 @@
 /**
- * 넷쇼트 스타일 5화 스토리 (src/lib/data/storyarc/netshort_test/story-prompt.md).
+ * 넷쇼트 스타일 5화 스토리 (src/lib/data/storyarc/styles/netshort_test/story-prompt.md).
  * 재료는 netshort_test/story-seeds.json 에서 코드가 카테고리마다 하나씩 뽑는다 (pickSeeds).
  * 그 재료로 한 번에 story.json (설계 design → 프롤로그·이야기 방 1,3,5,8,10·에필로그) 을 쓴다.
  * /api/gemini 는 user 메시지 하나만 받으므로 시스템 프롬프트를 앞에 붙여 보낸다.
  */
 
-import storyPromptMd from '../data/storyarc/netshort_test/story-prompt.md?raw';
+import storyPromptMd from '../data/storyarc/styles/netshort_test/story-prompt.md?raw';
+import { getStyle, pickTone, type StoryStyle } from './storyStyle';
 
 export const NETSHORT_ROOMS = ['1', '3', '5', '8'] as const;
 
@@ -20,7 +21,8 @@ function mdBlock(heading: string): string {
 	return m[1].trim();
 }
 
-export const NETSHORT_SYSTEM = mdBlock('## 시스템 프롬프트');
+/** {{style_writer}}·{{style_writing}} 자리는 스타일 파일(styles/<key>.md)로 채운다 */
+const SYSTEM_TEMPLATE = mdBlock('## 시스템 프롬프트');
 const INPUT_TEMPLATE = mdBlock('### 입력 템플릿');
 
 /** {{이름}} 을 값으로 바꾼다. 값이 빈 자리가 있는 줄은 통째로 뺀다 */
@@ -29,7 +31,7 @@ function fill(template: string, vars: Record<string, string>): string {
 		.split('\n')
 		.flatMap((line) => {
 			const names = [...line.matchAll(/\{\{(\w+)\}\}/g)].map((m) => m[1]);
-			for (const n of names) if (!(n in vars)) throw new Error(`story-prompt.md 입력 템플릿의 {{${n}}} 에 넣을 값이 없습니다.`);
+			for (const n of names) if (!(n in vars)) throw new Error(`story-prompt.md 의 {{${n}}} 에 넣을 값이 없습니다.`);
 			if (names.some((n) => !vars[n])) return [];
 			return [line.replace(/\{\{(\w+)\}\}/g, (_, n) => vars[n])];
 		})
@@ -97,7 +99,8 @@ export type StorySeeds = {
 	devices: SeedDevice[];
 	original_sins: SeedItem[];
 	twist_types: SeedItem[];
-	tones: string[];
+	/** 예전 재료 파일에만 있음. 톤은 스타일 파일(styles/<key>.md)에서 뽑는다 */
+	tones?: string[];
 	/** 예전 재료 (지금은 뽑지 않음): 모티프·화별 이유·소품 낱말이 뜬금없는 물건·설정을 끌어와서 뺌 */
 	motifs?: SeedItem[];
 	reason_types?: SeedItem[];
@@ -115,6 +118,8 @@ export type PickedSeeds = {
 	original_sin: SeedItem;
 	twist_type: SeedItem;
 	tone: string;
+	/** 스타일 파일 key (styles/<key>.md). 없으면 netshort */
+	style?: string;
 	cautions?: SeedItem[]; // 2~4화, 서로 다름
 	/** 예전 seeds.json 에만 있음 (지금은 프롬프트에 넣지 않음) */
 	motif?: SeedItem;
@@ -139,8 +144,8 @@ export const victimNpcOf = (npcs: string[], order: number) => (order >= 2 && ord
 
 const pick = <T>(list: T[], rand: () => number): T => list[Math.floor(rand() * list.length)];
 
-/** 카테고리마다 하나씩 (무대·장치·원죄·반전·톤, 2~4화 조심하는 방식) */
-export function pickSeeds(seeds: StorySeeds, rand: () => number = Math.random): PickedSeeds {
+/** 카테고리마다 하나씩 (무대·장치·원죄·반전·톤, 2~4화 조심하는 방식). 톤은 스타일에서 */
+export function pickSeeds(seeds: StorySeeds, style: StoryStyle, rand: () => number = Math.random): PickedSeeds {
 	// 쓸 수 있는 장치가 있는 무대만
 	const worlds = seeds.worlds.filter((w) => usableDevices(seeds).some((d) => d.worlds?.includes(w.key)));
 	const world = pick(worlds.length ? worlds : seeds.worlds, rand);
@@ -151,8 +156,9 @@ export function pickSeeds(seeds: StorySeeds, rand: () => number = Math.random): 
 		device,
 		original_sin: pick(seeds.original_sins, rand),
 		twist_type: pick(seeds.twist_types, rand),
-		tone: pick(seeds.tones, rand),
-		cautions: pickCautions(seeds, rand)
+		tone: pickTone(style, rand),
+		cautions: pickCautions(seeds, rand),
+		style: style.key
 	};
 }
 
@@ -188,13 +194,14 @@ const withHint = (x: SeedItem) => (x.hint ? `${x.name} — ${x.hint}` : x.name);
 export function buildNetshortPrompt(
 	id: string,
 	seeds: PickedSeeds,
-	ctx: { themeDescription: string; npcPool: NetshortNpc[]; banned: string[]; used: UsedStory[] }
+	ctx: { themeDescription: string; npcPool: NetshortNpc[]; banned: string[]; used: UsedStory[] },
+	style: StoryStyle = getStyle(seeds.style ?? 'netshort')
 ): string {
 	const nameOf = new Map(ctx.npcPool.map((n) => [n.id, n.name]));
 	const npcLabel = (id: string) => `${nameOf.get(id) ?? id}(${id})`;
 	const input = fill(INPUT_TEMPLATE, {
 		id,
-		theme_description: ctx.themeDescription,
+		theme_description: style.theme || ctx.themeDescription,
 		world: seeds.world.name,
 		device_object: seeds.device.object,
 		device_rule: seeds.device.rule,
@@ -213,7 +220,8 @@ export function buildNetshortPrompt(
 		banned: ctx.banned.map((b) => `- ${b}`).join('\n'),
 		used_stories: ctx.used.map((u) => `  - ${u.title}: ${u.world} / ${u.device} / ${u.twist}`).join('\n')
 	});
-	return `${NETSHORT_SYSTEM}\n\n---\n\n${input}`;
+	const system = fill(SYSTEM_TEMPLATE, { style_writer: style.storyWriter, style_writing: style.storyWriting });
+	return `${system}\n\n---\n\n${input}`;
 }
 
 const str = (description: string) => ({ type: 'string', description });
@@ -539,7 +547,7 @@ export function netshortToMarkdown(s: NetshortStory, seeds?: PickedSeeds): strin
 			'',
 			`- 무대: ${seeds.world.name}`,
 			`- 장치: ${seeds.device?.object ?? ''} / 원죄: ${seeds.original_sin.name} / 반전: ${seeds.twist_type.name}`,
-			`- 톤: ${seeds.tone}`,
+			`- 스타일: ${seeds.style ?? 'netshort'}${seeds.tone ? ` / 톤: ${seeds.tone}` : ''}`,
 			...(seeds.cautions?.length ? [`- 조심하는 방식: ${seeds.cautions.map((c, i) => `${i + 2}화 ${c.name}`).join(' / ')}`] : []),
 			''
 		);

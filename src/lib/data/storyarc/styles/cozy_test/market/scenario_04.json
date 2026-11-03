@@ -1,0 +1,427 @@
+{
+  "scenario_id": "cozy_market_04",
+  "order": 4,
+  "act": "rising",
+  "theme": "modern",
+  "actors": {
+    "dax": {
+      "id": "mon_08d5b43e-f9ab-4469-9064-855e170b0cdc",
+      "name": {
+        "korean": "닥스",
+        "english": "Dax",
+        "japanese": "ダックス",
+        "chinese": "达克斯",
+        "french": "Dax",
+        "spanish": "Dax",
+        "vietnamese": "Dax",
+        "thai": "แด็กซ์",
+        "hindi": "डैक्स"
+      },
+      "description": "",
+      "face_image_url": "https://imagedelivery.net/WTEqQNGFb-l-IHS6IGnzUQ/84bb11db-6eb4-4500-d274-222e8b100100/public",
+      "battle_sprite_url": "https://imagedelivery.net/WTEqQNGFb-l-IHS6IGnzUQ/5d325a75-bd91-4758-7b3f-ad9a97e52700/public",
+      "role": {
+        "korean": "시장 상인회 막내"
+      }
+    }
+  },
+  "boss": {
+    "pool_id": "random_boss",
+    "role": {
+      "korean": "철거 업체 반장"
+    }
+  },
+  "prologue": {
+    "korean": [
+      "재개발 소식이 감도는 오래된 시장 골목에 정적이 흐른다.",
+      "이번에 히어로들과 닥스가 향한 곳은 낡은 간판이 달린 오래된 사진관 앞이다.",
+      "사진관 셔터가 닫히는 소리를 듣고 그들은 급히 발걸음을 옮긴다."
+    ]
+  },
+  "rooms": [
+    {
+      "id": 1,
+      "dialogue": [
+        {
+          "content": {
+            "korean": "오래된 사진관 건물 앞으로 닫혀 가는 셔터 소리가 울려 퍼진다."
+          },
+          "type": "speech",
+          "speaker": "narrator"
+        },
+        {
+          "speaker": "dax",
+          "spot": [
+            500,
+            700
+          ],
+          "duration_ms": 500,
+          "type": "direction",
+          "action": "enter"
+        },
+        {
+          "type": "speech",
+          "speaker": "dax",
+          "content": {
+            "korean": "저기 오래된 사진관 셔터가 내려가고 있어요!"
+          },
+          "emotion": "base"
+        },
+        {
+          "speaker": "narrator",
+          "content": {
+            "korean": "굳게 닫혀 가는 사진관 셔터 아래로 한 남자의 구두발이 보인다."
+          },
+          "type": "speech"
+        },
+        {
+          "speaker": "character_any",
+          "content": {
+            "korean": "지난번 헌책방에선 웃는 얼굴만 믿었다가 속았잖아!"
+          },
+          "emotion": "angry",
+          "type": "speech"
+        },
+        {
+          "type": "speech",
+          "emotion": "angry",
+          "content": {
+            "korean": "이번엔 안 속아!"
+          },
+          "speaker": "character_1"
+        },
+        {
+          "type": "speech",
+          "speaker": "narrator",
+          "content": {
+            "korean": "히어로들이 단단히 마음을 먹고 사진관을 향해 달려간다."
+          }
+        },
+        {
+          "type": "speech",
+          "speaker": "character_any",
+          "emotion": "base",
+          "content": {
+            "korean": "맞아, 이제 겉모습은 믿지 말고 확실한 서류와 증거부터 확인하자!"
+          }
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "dialogue": [
+        {
+          "action": "enter",
+          "speaker": "dax",
+          "spot": [
+            500,
+            700
+          ],
+          "type": "direction",
+          "duration_ms": 500
+        },
+        {
+          "content": {
+            "korean": "철거 업체 반장이 묵묵히 사진관 셔터를 아래로 끌어내리고 있다."
+          },
+          "speaker": "narrator",
+          "type": "speech"
+        },
+        {
+          "speaker": "dax",
+          "type": "speech",
+          "content": {
+            "korean": "저기요, 아저씨! 지금 뭐 하시는 거예요?"
+          },
+          "emotion": "base"
+        },
+        {
+          "speaker": "character_any",
+          "type": "speech",
+          "content": {
+            "korean": "잠깐 멈춰! 다짜고짜 셔터를 내리기 전에 정식 작업 지시서부터 보여 줘!"
+          },
+          "emotion": "angry"
+        },
+        {
+          "content": {
+            "korean": "반장은 요구에도 말을 아낀 채 셔터 줄을 잡은 손에 힘을 준다."
+          },
+          "speaker": "narrator",
+          "type": "speech"
+        },
+        {
+          "type": "speech",
+          "emotion": "angry",
+          "content": {
+            "korean": "서류부터 확인해 줘!"
+          },
+          "speaker": "character_1"
+        },
+        {
+          "speaker": "character_any",
+          "type": "speech",
+          "emotion": "base",
+          "content": {
+            "korean": "아무 말도 없이 셔터를 내리려 하다니, 공식 허가 서류가 있는 건 맞아?"
+          }
+        }
+      ]
+    },
+    {
+      "dialogue": [
+        {
+          "action": "enter",
+          "speaker": "dax",
+          "duration_ms": 500,
+          "type": "direction",
+          "spot": [
+            500,
+            700
+          ]
+        },
+        {
+          "type": "speech",
+          "content": {
+            "korean": "철거 업체 반장이 서류 가방을 끌어안은 채 고개를 저으며 셔터를 계속 내린다."
+          },
+          "speaker": "narrator"
+        },
+        {
+          "content": {
+            "korean": "서류를 보여 달라는 말에 아무 대답도 없이 계속 작업만 하셔요."
+          },
+          "emotion": "sad",
+          "type": "speech",
+          "speaker": "dax"
+        },
+        {
+          "speaker": "character_any",
+          "type": "speech",
+          "content": {
+            "korean": "증거를 보여 달라는 요구를 딱 잘라 거절하고 셔터를 내려?"
+          },
+          "emotion": "angry"
+        },
+        {
+          "speaker": "narrator",
+          "type": "speech",
+          "content": {
+            "korean": "말없이 작업만 계속하는 그의 행동에 긴장감이 감돈다."
+          }
+        },
+        {
+          "emotion": "angry",
+          "content": {
+            "korean": "확실한 서류를 안 보여 주는 걸 보니 허가도 없이 무단 철거하려는 악덕 업자가 틀림없어!"
+          },
+          "speaker": "character_any",
+          "type": "speech"
+        },
+        {
+          "type": "speech",
+          "speaker": "character_1",
+          "emotion": "angry",
+          "content": {
+            "korean": "사진관 사장님이 없는 틈을 타다니!"
+          }
+        }
+      ],
+      "id": 5
+    },
+    {
+      "id": 9,
+      "dialogue": [
+        {
+          "type": "direction",
+          "duration_ms": 500,
+          "spot": [
+            500,
+            700
+          ],
+          "action": "enter",
+          "speaker": "dax"
+        },
+        {
+          "type": "speech",
+          "content": {
+            "korean": "히어로들이 내려오는 셔터 앞을 굳건히 가로막아 선다."
+          },
+          "speaker": "narrator"
+        },
+        {
+          "type": "speech",
+          "emotion": "angry",
+          "content": {
+            "korean": "당장 그 손 떼! 증거를 보여 주기 전엔 셔터를 한 치도 못 내려!"
+          },
+          "speaker": "character_any"
+        },
+        {
+          "type": "speech",
+          "content": {
+            "korean": "철거 업체 반장이 입을 꾹 다문 굳은 표정으로 히어로들을 노려본다."
+          },
+          "speaker": "narrator"
+        },
+        {
+          "content": {
+            "korean": "반장님 표정이 너무 차가워서 무서워요!"
+          },
+          "emotion": "sad",
+          "type": "speech",
+          "speaker": "dax"
+        },
+        {
+          "type": "speech",
+          "content": {
+            "korean": "말도 없이 억지로 셔터를 닫으려 하다니, 우리가 사진관을 지키겠어!"
+          },
+          "emotion": "angry",
+          "speaker": "character_any"
+        }
+      ]
+    },
+    {
+      "win_dialogue": [
+        {
+          "content": {
+            "korean": "반장의 서류 가방이 바닥에 떨어지며 빛바랜 사진 한 장이 삐져나온다."
+          },
+          "type": "speech",
+          "speaker": "narrator"
+        },
+        {
+          "type": "speech",
+          "speaker": "narrator",
+          "content": {
+            "korean": "사진관 사장과 어린 반장이 환하게 웃으며 함께 찍은 스승과 제자의 사진이다."
+          }
+        },
+        {
+          "speaker": "random_boss",
+          "content": {
+            "korean": "끝까지 막아서니 결국 시간이 지체되었구나. 나는 이 사진관 사장님의 옛 제자다."
+          },
+          "emotion": "base",
+          "type": "speech"
+        },
+        {
+          "content": {
+            "korean": "본격적인 철거 전에 스승님의 소중한 추억의 사진들이 훼손될까 봐 미리 챙겨 두려 셔터를 내린 거다."
+          },
+          "emotion": "base",
+          "type": "speech",
+          "speaker": "random_boss"
+        },
+        {
+          "spot": [
+            500,
+            700
+          ],
+          "speaker": "dax",
+          "action": "enter",
+          "type": "direction",
+          "duration_ms": 500
+        },
+        {
+          "type": "speech",
+          "speaker": "dax",
+          "emotion": "happy",
+          "content": {
+            "korean": "사장님의 제자분이셔서 추억이 담긴 사진을 지키려고 그러신 거였군요!"
+          }
+        },
+        {
+          "type": "speech",
+          "speaker": "character_any",
+          "emotion": "sad",
+          "content": {
+            "korean": "서류를 안 보여 주셔서 오해했어요. 추억을 지켜 주시려던 건데 정말 죄송해요!"
+          }
+        },
+        {
+          "type": "speech",
+          "emotion": "sad",
+          "content": {
+            "korean": "우리가 괜히 오해했네!"
+          },
+          "speaker": "character_1"
+        }
+      ],
+      "lose_dialogue": [
+        {
+          "spot": [
+            500,
+            700
+          ],
+          "action": "enter",
+          "speaker": "dax",
+          "duration_ms": 500,
+          "type": "direction"
+        },
+        {
+          "type": "speech",
+          "emotion": "sad",
+          "content": {
+            "korean": "힘내세요, 히어로님들! 다시 일어나서 사진관을 지켜요!"
+          },
+          "speaker": "dax"
+        },
+        {
+          "emotion": "angry",
+          "content": {
+            "korean": "으윽, 힘이 보통이 아니네... 다시 도전하자!"
+          },
+          "speaker": "character_any",
+          "type": "speech"
+        }
+      ],
+      "dialogue": [
+        {
+          "type": "direction",
+          "action": "enter",
+          "speaker": "dax",
+          "duration_ms": 500,
+          "spot": [
+            500,
+            700
+          ]
+        },
+        {
+          "emotion": "base",
+          "content": {
+            "korean": "철거 공사로 먼지가 흩날릴 터이니 다들 비켜서라."
+          },
+          "speaker": "random_boss",
+          "type": "speech"
+        },
+        {
+          "speaker": "character_any",
+          "content": {
+            "korean": "증거 서류도 안 보여 주고 마음대로 셔터를 내릴 순 없어!"
+          },
+          "emotion": "angry",
+          "type": "speech"
+        },
+        {
+          "emotion": "base",
+          "content": {
+            "korean": "더 늦기 전에 문을 닫아야 한다. 막아서지 마라."
+          },
+          "type": "speech",
+          "speaker": "random_boss"
+        },
+        {
+          "emotion": "angry",
+          "content": {
+            "korean": "말도 안 통하고 무단으로 철거하려는 악덕 업자라니, 당장 저지하자!"
+          },
+          "speaker": "character_any",
+          "type": "speech"
+        }
+      ],
+      "id": 15
+    }
+  ]
+}

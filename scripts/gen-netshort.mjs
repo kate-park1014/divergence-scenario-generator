@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 // 넷쇼트 스타일 5화 스토리 (netshort_test/story-prompt.md). /api/storyarc/netshort 호출.
 // 재료는 netshort_test/story-seeds.json 에서 코드가 랜덤으로 뽑는다.
-// 결과: src/lib/data/storyarc/netshort_test/<id>/seeds.json (뽑은 재료), story.json, story.md
+// 결과: src/lib/data/storyarc/styles/netshort_test/<id>/seeds.json (뽑은 재료), story.json, story.md
 // 저장한 이야기는 story-seeds.json 의 used_stories 에 추가된다.
 //
 // 사용법:
@@ -9,12 +9,13 @@
 //   npm run gen:netshort                       # 새 이야기 1개
 //   npm run gen:netshort -- --count=3          # 새 이야기 3개
 //   npm run gen:netshort -- --id=<id>          # 그 이야기의 seeds.json 재료로 다시 씀
+//   npm run gen:netshort -- --style=cozy       # 다른 스타일로 (스타일 파일 src/lib/data/storyarc/styles/<이름>.md)
 //   npm run gen:netshort -- --id=a,b --judge-only   # 기존 이야기를 채점만
 //   npm run gen:netshort -- --judge-only       # 폴더의 모든 이야기를 채점만
 //
 // 저장 뒤 채점(N1~N7, netshortJudge.ts)을 하고 통과율 표를 출력한다. --no-judge 로 끔.
 //
-// 옵션: --count (기본 1), --id=a,b, --seeds=FILE,
+// 옵션: --count (기본 1), --id=a,b, --seeds=FILE, --style=이름 (기본: 다시 쓸 때는 seeds.json 의 것, 새로 만들 때는 netshort),
 //       --concurrency=N (기본 2), --temperature (기본 0.8), --out=DIR, --base=URL (기본 http://localhost:5178)
 
 import http from 'node:http';
@@ -70,7 +71,7 @@ let ids = String(args.id ?? '')
 	.filter(Boolean);
 // --judge-only 에 id 가 없으면 폴더의 story.json 이 있는 이야기 모두
 if (args['judge-only'] && !ids.length) {
-	const dir = args.out ?? 'src/lib/data/storyarc/netshort_test';
+	const dir = args.out ?? 'src/lib/data/storyarc/styles/netshort_test';
 	ids = readdirSync(dir).filter((d) => existsSync(join(dir, d, 'story.json')) && existsSync(join(dir, d, 'seeds.json')));
 }
 const base = args.base ?? 'http://localhost:5178';
@@ -82,6 +83,7 @@ if (args.temperature) body.temperature = Number(args.temperature);
 if (args.out) body.outDir = args.out;
 if (args['judge-only']) body.judgeOnly = true;
 if (args['no-judge']) body.judge = false;
+if (args.style) body.style = args.style;
 
 console.log(`[netshort] ${body.judgeOnly ? `채점만: ${ids.length}개` : ids.length ? `다시 쓰기: ${ids.join(', ')}` : `새 이야기 ${body.count ?? 1}개`} → ${base}/api/storyarc/netshort`);
 const t0 = Date.now();

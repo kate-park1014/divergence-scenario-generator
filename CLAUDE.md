@@ -213,11 +213,11 @@ npm run gen:cards-seq -- --story=modern_whisperweb_0 --fix          # 말투 문
 
 ## 넷쇼트 스타일 5화 스토리 (재료 랜덤 → story.json)
 
-[netshort_test/story-prompt.md](src/lib/data/storyarc/netshort_test/story-prompt.md) 가 프롬프트 원본. netshortStory.ts 는 md 의 "## 시스템 프롬프트"·"### 입력 템플릿" 코드 블록을 `?raw` 로 읽어 `{{자리}}` 만 채움(값이 비면 그 줄 뺌). 프롬프트 문장은 md 에서만 고침. 프롬프트 [netshortStory.ts](src/lib/prompts/netshortStory.ts), 엔드포인트 `POST /api/storyarc/netshort`, 러너 `scripts/gen-netshort.mjs`.
-- 기획안 단계 없음 (예전 5줄 기획안·스토리아크 파일 입력은 제거). 재료는 [story-seeds.json](src/lib/data/storyarc/netshort_test/story-seeds.json) 에서 코드가 뽑음(`pickSeeds`): worlds·original_sins·twist_types·tones 하나씩, 장치는 `devices`(사람이 쓴 object·rule·effect·harm(넘기는 피해 = 1~4화 위험)·wrong_action·right_action, `worlds` 로 맞는 무대 지정) 중 그 무대에 맞는 것(`pickDevice`, 다시 쓸 때도 장치 문장은 지금 seeds 것으로 갱신), caution_types 는 2~4화마다 서로 다르게(`pickCautions` → seeds.json `cautions`, 앞 화 피해를 보고 이번엔 어떻게 조심하는지: 확인하고 쓴다/안 쓰려고 버틴다/괜찮다는 대상에게 (한 번만 쓴다 limit 은 대상 고르는 방식이 안 바뀌어 뺌)). 모티프·화별 이유·소품 낱말(motifs·reason_types·random_words·props)은 뜬금없는 물건·설정을 끌어와서 뺌 (데이터만 남김). 장치 중 `battle: false`(칩·경매·마권·세탁기 — 피해가 몸에 오지 않아 전투와 안 맞음)는 안 뽑고, 맞는 장치가 없는 무대도 안 뽑음. 예전 seeds.json 을 다시 쓸 때 battle:false 장치는 다시 뽑고, 모티프·화별 이유·소품은 지움. 테마·NPC 풀은 seeds 의 `theme`, `theme_description` 을 프롬프트에
+[netshort_test/story-prompt.md](src/lib/data/storyarc/styles/netshort_test/story-prompt.md) 가 프롬프트 원본. netshortStory.ts 는 md 의 "## 시스템 프롬프트"·"### 입력 템플릿" 코드 블록을 `?raw` 로 읽어 `{{자리}}` 만 채움(값이 비면 그 줄 뺌). 프롬프트 문장은 md 에서만 고침. 프롬프트 [netshortStory.ts](src/lib/prompts/netshortStory.ts), 엔드포인트 `POST /api/storyarc/netshort`, 러너 `scripts/gen-netshort.mjs`.
+- 기획안 단계 없음 (예전 5줄 기획안·스토리아크 파일 입력은 제거). 재료는 [story-seeds.json](src/lib/data/storyarc/styles/netshort_test/story-seeds.json) 에서 코드가 뽑음(`pickSeeds`): worlds·original_sins·twist_types 하나씩(톤은 스타일 파일에서), 장치는 `devices`(사람이 쓴 object·rule·effect·harm(넘기는 피해 = 1~4화 위험)·wrong_action·right_action, `worlds` 로 맞는 무대 지정) 중 그 무대에 맞는 것(`pickDevice`, 다시 쓸 때도 장치 문장은 지금 seeds 것으로 갱신), caution_types 는 2~4화마다 서로 다르게(`pickCautions` → seeds.json `cautions`, 앞 화 피해를 보고 이번엔 어떻게 조심하는지: 확인하고 쓴다/안 쓰려고 버틴다/괜찮다는 대상에게 (한 번만 쓴다 limit 은 대상 고르는 방식이 안 바뀌어 뺌)). 모티프·화별 이유·소품 낱말(motifs·reason_types·random_words·props)은 뜬금없는 물건·설정을 끌어와서 뺌 (데이터만 남김). 장치 중 `battle: false`(칩·경매·마권·세탁기 — 피해가 몸에 오지 않아 전투와 안 맞음)는 안 뽑고, 맞는 장치가 없는 무대도 안 뽑음. 예전 seeds.json 을 다시 쓸 때 battle:false 장치는 다시 뽑고, 모티프·화별 이유·소품은 지움. 테마·NPC 풀은 seeds 의 `theme`, `theme_description` 을 프롬프트에
 - 한 번에 집필: 출력 맨 앞 `design`(device·how·visible_effect(뽑은 장치 문장 그대로, 코드가 덮어씀)·wrong/right_action·original_sin·boss_trace·boss_name·boss_look(보스 외모, 이미지용)·true_identity·twist)을 먼저 쓰고 본문(프롤로그, 이야기 방 1,3,5,8,10, 에필로그)을 맞춤. 장치는 before_battle 에서 쓰고 win 은 결과만(1~4화 win 에 공격이 다시 날아오는 낱말·before_battle 에 believed 없으면 코드 오류). NPC 1~5화(5화=4화)·보스 흔적 화(1~4화 중 둘)는 코드가 뽑아 seeds.json 의 `npcs`·`trace_orders` 에 저장(`assignCast`), 2~4화 실제 피해자 = 앞 화 NPC(`victimNpcOf`). design 의 device·how·visible_effect·wrong/right_action, 화별 npc.name, 2~4화 actual_victim 은 코드가 덮어씀
 - `banned_cliches` 는 매번 "쓰지 말 것"에, `used_stories` 는 "겹치지 않게"에 넣음. 저장 뒤 used_stories 에 `{id,title,world,device,twist}` 추가(같은 id 는 바꿔 씀, 파일의 다른 부분 모양은 유지)
-- 출력 `src/lib/data/storyarc/netshort_test/<id>/` : `seeds.json`(뽑은 재료), `story.json`, `story.md`. id 는 `<world.key>_<시각>_<n>`. `--id=<id>` 면 그 seeds.json 재료로 다시 씀
+- 출력 `src/lib/data/storyarc/styles/netshort_test/<id>/` : `seeds.json`(뽑은 재료), `story.json`, `story.md`. id 는 `<world.key>_<시각>_<n>`. `--id=<id>` 면 그 seeds.json 재료로 다시 씀
 - 억지 금지 규칙: design.`goal`(히어로들이 온 이유, 1화 방 1 에서 밝힘) 필수, 핵심 장치는 하나뿐(다른 기계를 장치처럼 말하지 않음), deceptions[].`link`(피해가 그 사람에게 간 이유, 작동법대로 — "옆에 있었다" 금지) 필수, 결과 문장 화마다 되풀이 금지, 소품은 각 2번 이하·prologue 금지(코드 검사)
 - design 에 `boss_want`(히어로들이 장치를 쓸 때마다 보스가 얻는 것)·`finale_logic`(right_action 이면 작동법 안에서 왜 보스가 무너지는지) 필수. 5화 8번 방 보스가 정체+원하는 것을 말함, before_battle 보스가 장치를 한 번 더 권하고 히어로들은 거절, win 은 finale_logic 대로(작동법에 없는 일 금지)
 - 출력 NPC 는 `npc: { name: "lin", role: "인쇄공" }` (name = 풀 key, role = 직업, 같은 NPC 는 같은 role)
@@ -245,11 +245,12 @@ netshort_test/<id>/story.json 의 화별 방(1,3,5,8,10)을 게임 시나리오 
 - 코드 검사 추가: 파티 줄(character_any·1~4) 세 줄 연달아 금지(새 소식은 narrator·NPC 가), narrator 1인칭("내 방")·따옴표 없는 인물 말 금지, 장치가 나오는 줄에 장식(문양·새겨·장착 등) 금지. 이야기 단계도 장치 문장에 장식 금지(모티프를 장치에 붙이지 않음)
 - 5화: 방 9 에서 보스가 원하는 것(boss_want)을 지문 속 따옴표로, 방 15 dialogue 에 speaker boss 필수(코드 검사), win 은 finale_logic 대로
 - 3·4화: 앞 화 피해자(N-2화 NPC)는 그 화 내내 함께 다님 → 코드가 방마다 dialogue 에 enter 를 넣음(`addCompanionEnters`, 방 1 은 narrator 첫 줄 뒤). 2화의 앞 화 피해자는 1화의 모르는 사람이라 없음
+- NPC 가 말하거나 narrator 지문에 이름이 나오는데 그 블록(dialogue·win·lose)에 enter 가 없으면 코드가 처음 나오는 줄 앞에 enter 를 넣음(`addNpcEnters`, 다듬기 뒤). 게임 엔진은 말하는 NPC 만 자동 등장시켜서. 기존 대본은 `--enters-only`(Gemini 없음)
 - 줄거리가 "설명한다"처럼 내용 없이 적힌 곳은 NPC 대사·narrator 지문으로 내용을 채움(작동법·위협하는 무리·하려는 일). 파티는 NPC 에게 물을 수 있음. character_1~4 는 방마다 0~2줄, 분위기 감상 금지
 - 장치는 방 15 dialogue(전투 전) 끝에서 씀. win_dialogue 는 전투 뒤 결과(1~4화 피해자, 5화 보스 무너짐), 공격을 다시 날리거나 장치를 새로 쓰지 않음
 - 파티(character_any·1~4) 대사는 입말 반말. "~다"로 끝나는 글말은 narrator 만 (코드 검사, "~니다" 허용). 대사·지문을 감싼 따옴표는 normalize 가 뗌
 - 1~4화는 design.deceptions(믿은 대상·실제 피해자)를 프롬프트에 넣음: 장치 쓰기 전에 왜 그 이름이면 안전하다고 믿는지 대사로, 실제 피해자는 방 15 전에 먼저 등장(코드 검사), win 에서 다치고 파티가 알아챔(코드 검사), 둘이 왜 이어지는지 NPC·narrator 한 줄. 2~4화는 앞 화 피해자를 방 1~9 에서 떠올리고(코드 검사) caution 대로 조심하는 모습을 방 9 전에 보여줌
-- 출력 `src/lib/data/storyarc/netshort_test/<id>/scenario_0N.json`, `script_0N.md`, `script.md` (story.json 과 같은 폴더)
+- 출력 `src/lib/data/storyarc/styles/netshort_test/<id>/scenario_0N.json`, `script_0N.md`, `script.md` (story.json 과 같은 폴더)
 
 ```bash
 npm run gen:netshort-scenarios -- --id=arcade_20261030083249_3
@@ -260,13 +261,43 @@ npm run gen:netshort-scenarios -- --id=arcade_20261030083249_3
 ## 편안한 5화 이야기 (cozy_test, 시험용)
 
 넷쇼트의 "피해 떠넘기기" 대신 "오해가 풀리는" 구조. 1~4화: 히어로들이 겉모습만 보고 그 화 인물을 오해 → 방 10 에서 싸움 → win 에서 실제 사정이 증거로 드러남. 2~4화는 앞 화를 기억하고 다르게 조심하지만 또 오해. 5화: 싸우기 전에 사연을 묻고 화해로 끝남.
-- 기획안: [cozy_test/premises.json](src/lib/data/storyarc/cozy_test/premises.json) (사람이 쓴 5화 줄거리 4개: lostfound·market·festival·letters). 프롬프트 [cozyStory.ts](src/lib/prompts/cozyStory.ts), 엔드포인트 `POST /api/storyarc/cozy`, 러너 `scripts/gen-cozy.mjs`
+- 기획안: [cozy_test/premises.json](src/lib/data/storyarc/styles/cozy_test/premises.json) (사람이 쓴 5화 줄거리 4개: lostfound·market·festival·letters). 프롬프트 [cozyStory.ts](src/lib/prompts/cozyStory.ts), 엔드포인트 `POST /api/storyarc/cozy`, 러너 `scripts/gen-cozy.mjs`
 - 설계 칸은 최소한 (넷쇼트에서 칸이 많을수록 아무 내용으로 채우는 문제를 겪어서): misunderstandings(1~4화 who·looked_like·actual·reveal), final(name·look·actual·want). 코드 검사는 모양만
 - 거꾸로 꼬는 화: 기획안의 `reverse_order`(지금 모두 3화). 히어로들이 배운 대로 수상해 보이는 사람을 감싸고 믿음직해 보이는 사람을 믿는데, 믿은 사람이 그 화 상대(작은 잘못을 숨기려던 사람). 다음 화는 "좋든 나쁘든 겉모습 말고 증거부터" 조심 (1~4화가 같은 틀이라 결말이 뻔해서)
 - 주 NPC 한 명이 1~5화 함께 다님. 처음 만들 때 NPC 풀에서 뽑아 `<key>/cast.json` 에 저장 (이야기끼리 겹치지 않게)
-- 출력 `src/lib/data/storyarc/cozy_test/<key>/story.json`(넷쇼트와 같은 방 구조), `story.md`. 대본 단계는 아직 없음 (chapterGenNetshort 는 장치·피해자 전제라 그대로 못 씀)
+- 출력 `src/lib/data/storyarc/styles/cozy_test/<key>/story.json`(넷쇼트와 같은 방 구조), `story.md`
 
 ```bash
 npm run gen:cozy                     # 기획안 전부
 npm run gen:cozy -- --keys=market    # 하나만
+```
+
+### cozy story.json → 시나리오 (시험용)
+프롬프트 [chapterGenCozy.ts](src/lib/prompts/chapterGenCozy.ts), 엔드포인트 `POST /api/scenario/cozy`, 러너 `scripts/gen-cozy-scenarios.mjs`. 넷쇼트 대본 단계와 같은 흐름(방 8→9, 10→15, 5화 동시, 코드 검사 걸리면 최대 2번 다시, 다듬기 1콜 netshortPolish.ts). 장치·피해자 규칙 대신:
+- 1~4화: 방 1~9 에 오해를 부른 장면, 실제 사정은 방 15 win 에서 증거(narrator) → 상대가 사정을 말함 → 파티 사과. 2~4화는 앞 화 오해를 떠올리고 다르게 조심. reverse_order 화는 믿은 사람이 상대
+- 상대는 1~4화 speaker `random_boss`(`boss.role` = 그 화 boss 호칭, 고유 이름·체형 묘사 금지), 5화 `boss`(`pool_id` null). 둘 다 방 15 에서만 speaker, 그 전에는 narrator 지문 속 따옴표 (코드 검사). 방 15 dialogue·win 에 상대 대사 필수. 5화 인물 이름은 1~4화 금지
+- NPC 는 cast.json 의 주 NPC 한 명뿐. 방 1 이 enter 로 시작하면 코드가 narrator 첫 줄을 앞으로 옮김
+- 출력 `cozy_test/<key>/scenario_0N.json`, `script_0N.md`, `script.md`, `polish_0N.json`
+
+```bash
+npm run gen:cozy-scenarios                                   # 기획안 전부
+npm run gen:cozy-scenarios -- --keys=market --orders=1       # 스모크
+```
+
+## 이야기 스타일 (styles/)
+
+> 사람용 전체 흐름 설명: [styles/README.md](src/lib/data/storyarc/styles/README.md) — 넷쇼트·cozy 흐름이 바뀌면 함께 갱신할 것. 이야기 폴더 `netshort_test/`·`cozy_test/` 도 styles/ 안에 있음. README.md 는 스타일로 읽지 않음(storyStyle.ts 에서 뺌)
+
+넷쇼트·cozy 의 이야기·대본 프롬프트 4개에서 "어떻게 쓰는지"만 뺀 파일. 이야기 틀(넷쇼트 장치·피해자, cozy 오해·화해)은 각 프롬프트에 그대로 있다. 로더 [storyStyle.ts](src/lib/prompts/storyStyle.ts) (`getStyle`, `import.meta.glob` 이라 파일만 추가하면 됨).
+- 파일: `src/lib/data/storyarc/styles/<이름>.md` — [netshort.md](src/lib/data/storyarc/styles/netshort.md)(넷쇼트 기본), [cozy.md](src/lib/data/storyarc/styles/cozy.md)(cozy 기본). 새 스타일은 복사해서 만듦
+- 섹션(제목 고정, 각 섹션 첫 코드 블록이 값, 비면 그 줄 빠짐): `테마`(비면 재료 파일의 theme_description) / `톤`(한 줄에 하나, 이야기마다 하나 뽑음 — 넷쇼트 톤 목록은 story-seeds.json 에서 여기로 옮김) / `이야기 작가`(이야기 단계 첫 줄 다음) / `이야기 문체`([문체]에 더하는 줄) / `대본 작가`("당신은 ___입니다", 필수) / `대본 분위기`("- 분위기: ___", `{{tone}}` 자리, 필수) / `일반 보스 호칭`(1~4화 일반 보스 부르는 말, 필수. 대본 단계 코드 검사 오류 문구에도 씀)
+- 넷쇼트 story-prompt.md 시스템 프롬프트의 `{{style_writer}}`·`{{style_writing}}` 자리가 스타일 값
+- 고른 스타일·톤은 이야기 단계가 저장(넷쇼트 `seeds.json` 의 `style`·`tone`, cozy `cast.json` 의 `style`·`tone`)하고 대본 단계가 그대로 씀. `--style=` 로 바꾸면 저장된 톤이 새 스타일 목록에 없을 때 다시 뽑음
+- 기본 스타일 결과는 분리 전과 같음을 확인 (기존 이야기 전부로 만든 프롬프트 141개 중 137개 글자 단위로 같음, cozy 이야기 프롬프트 4개만 "한국어로 쓴다." 가 따로 한 줄로 나뉨)
+- 다른 틀에 스타일을 씌울 때(예: cozy 기획안 + netshort 스타일) 재료 파일의 theme_description 이 스타일과 어긋나면 스타일 파일의 `테마` 를 채운다
+
+```bash
+npm run gen:netshort -- --style=cozy                     # 넷쇼트 틀 + cozy 스타일
+npm run gen:cozy -- --keys=market --style=netshort       # cozy 틀 + 넷쇼트 스타일
+npm run gen:cozy-scenarios -- --keys=market              # 대본은 cast.json 의 스타일 그대로
 ```

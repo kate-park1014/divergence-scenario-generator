@@ -1,5 +1,6 @@
 import { PLACEHOLDER_RULES, NPC_ENTER_EXIT_RULES, OUTPUT_RULES } from './chapterRules';
 import { getNpcPersona } from '$lib/data/sample/npc';
+import { bossCallText, getStyle, scenarioMood, type StoryStyle } from './storyStyle';
 
 export { buildScenarioTool } from './scenarioTool';
 
@@ -8,6 +9,7 @@ export { buildScenarioTool } from './scenarioTool';
  * story.json 의 방 1,3,5,8,10 이 이미 줄거리라서, 사건은 그대로 두고 대사로 풀어 쓰게 한다.
  * 방 번호는 게임 형식에 맞춰 8→9, 10→15 로 옮긴다.
  * 출력 예시는 넣지 않는다 (예시를 베낀다). 형식은 출력 스키마(scenarioTool)가 강제한다.
+ * 작가 소개·분위기·일반 보스 호칭은 스타일 파일(styles/<key>.md, 기본 netshort)에서.
  */
 
 export type NetshortRoom10 = { before_battle?: string; win?: string; lose?: string };
@@ -79,7 +81,8 @@ export function buildScenarioNetshortPrompt(
 	story: NetshortStory,
 	order: number,
 	npcNames: Record<string, string>,
-	tone?: string
+	tone?: string,
+	style: StoryStyle = getStyle('netshort')
 ): string {
 	const ep = story.episodes.find((e) => e.order === order)!;
 	const isFinale = order === 5;
@@ -101,7 +104,7 @@ export function buildScenarioNetshortPrompt(
 		.map(([k, role]) => `- ${k} = ${npcNames[k] ?? k} (${role})`)
 		.join('\n');
 
-	const SYSTEM = `당신은 웹툰 작가입니다. 이미 완성된 5화짜리 이야기의 ${order}화를 게임 시나리오 대사(방 5개: 1, 3, 5, 9, 15)로 옮깁니다.
+	const SYSTEM = `당신은 ${style.scenarioWriter}입니다. 이미 완성된 5화짜리 이야기의 ${order}화를 게임 시나리오 대사(방 5개: 1, 3, 5, 9, 15)로 옮깁니다.
 
 # 쓰는 법
 - USER 의 "이번 화 줄거리"가 원본이다. 방마다 적힌 사건을 같은 방에, 같은 차례로 대사로 풀어 쓴다. 사건을 빼거나 큰 사건을 새로 만들지 않는다
@@ -123,7 +126,7 @@ export function buildScenarioNetshortPrompt(
 - 방 안에서 꺼낸 질문은 그 방 안에서 답한다
 - direction 의 focus 는 쓰지 않는다 (enter·exit 등 필요한 연출만)
 - prologue·epilogue 는 3인칭. "나는·내가·우리는" 같은 1인칭을 쓰지 않는다
-- 분위기: ${tone ?? '하드보일드'}. narrator 는 짧고 건조한 현재형 "~다"
+- 분위기: ${scenarioMood(style, tone)}
 - 대사·지문을 따옴표로 감싸지 않는다
 
 # 화자
@@ -139,7 +142,7 @@ ${
 	isFinale
 		? `- boss: 최종보스 ${boss}. speaker 'boss' 는 방 15 에서만 쓴다. 방 9 에서 처음 모습을 드러낼 때는 narrator 지문으로 그리고, 그의 말은 지문 안 따옴표로 담는다
 - 5화에는 random_boss 를 쓰지 않는다`
-		: `- random_boss: 이 화의 일반 보스. 줄거리의 "${ep.boss}" 이다. 이름은 런타임에 정해지므로 대사·지문에 "${ep.boss}" 같은 이름을 쓰지 않는다. {random_boss} 자리표시도 쓰지 않는다 (이름의 받침을 몰라 조사가 어긋남). 대사·지문에서는 "놈", "그 사내"처럼 부른다
+		: `- random_boss: 이 화의 일반 보스. 줄거리의 "${ep.boss}" 이다. 이름은 런타임에 정해지므로 대사·지문에 "${ep.boss}" 같은 이름을 쓰지 않는다. {random_boss} 자리표시도 쓰지 않는다 (이름의 받침을 몰라 조사가 어긋남). 대사·지문에서는 ${bossCallText(style)}처럼 부른다
   - 외형(체형·복장)을 묘사하지 않는다. 무기·말투로 성격만 드러낸다
 - boss 는 1~4화에 쓰지 않는다. 최종보스 "${boss}" 의 이름도 1~4화에는 어디에도 쓰지 않는다`
 }

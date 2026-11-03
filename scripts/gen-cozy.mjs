@@ -1,11 +1,12 @@
 #!/usr/bin/env node
 // 편안한 5화 이야기 (cozy_test/premises.json 의 기획안). /api/storyarc/cozy 호출.
-// 결과: src/lib/data/storyarc/cozy_test/<key>/story.json, story.md, cast.json(주 NPC)
+// 결과: src/lib/data/storyarc/styles/cozy_test/<key>/story.json, story.md, cast.json(주 NPC)
 //
 //   npm run dev &
 //   npm run gen:cozy                       # 기획안 전부
 //   npm run gen:cozy -- --keys=market      # 하나만
-// 옵션: --keys=a,b / --temperature / --out=DIR / --base=URL (기본 http://localhost:5178)
+//   npm run gen:cozy -- --keys=market --style=netshort   # 다른 스타일로 (스타일 파일 src/lib/data/storyarc/styles/<이름>.md)
+// 옵션: --keys=a,b / --style=이름 (기본: cast.json 에 저장된 것, 없으면 cozy) / --temperature / --out=DIR / --base=URL (기본 http://localhost:5178)
 
 import http from 'node:http';
 
@@ -17,6 +18,7 @@ const body = {};
 if (args.keys) body.keys = String(args.keys).split(',').map((s) => s.trim()).filter(Boolean);
 if (args.temperature) body.temperature = Number(args.temperature);
 if (args.out) body.outDir = args.out;
+if (args.style) body.style = args.style;
 
 function postJson(urlStr, payloadObj) {
 	return new Promise((resolve, reject) => {
@@ -41,7 +43,7 @@ function postJson(urlStr, payloadObj) {
 	});
 }
 
-console.log(`[cozy] ${body.keys ? body.keys.join(', ') : '기획안 전부'} → ${base}/api/storyarc/cozy`);
+console.log(`[cozy] ${body.keys ? body.keys.join(', ') : '기획안 전부'}${body.style ? ` (스타일 ${body.style})` : ''} → ${base}/api/storyarc/cozy`);
 const t0 = Date.now();
 const { status, data } = await postJson(`${base}/api/storyarc/cozy`, body);
 if (status !== 200) {

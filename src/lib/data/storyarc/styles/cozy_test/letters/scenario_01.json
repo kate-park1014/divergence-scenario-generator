@@ -1,0 +1,485 @@
+{
+  "scenario_id": "cozy_letters_01",
+  "order": 1,
+  "act": "intro",
+  "theme": "modern",
+  "actors": {
+    "bex": {
+      "id": "mon_74e24324-3f9a-4d44-9611-1da33b654ca1",
+      "name": {
+        "korean": "벡스",
+        "english": "Bex",
+        "japanese": "ベックス",
+        "chinese": "贝克斯",
+        "french": "Bex",
+        "spanish": "Bex",
+        "vietnamese": "Bex",
+        "thai": "เบ็กซ์",
+        "hindi": "बेक्स"
+      },
+      "description": "",
+      "face_image_url": "https://imagedelivery.net/WTEqQNGFb-l-IHS6IGnzUQ/09dae190-ff6b-4a9d-b656-e1a2b896aa00/public",
+      "battle_sprite_url": "https://imagedelivery.net/WTEqQNGFb-l-IHS6IGnzUQ/5cc3c77f-72e1-416e-b346-31889b3b9300/public",
+      "role": {
+        "korean": "마지막 집배원"
+      }
+    }
+  },
+  "boss": {
+    "pool_id": "random_boss",
+    "role": {
+      "korean": "받는 사람의 아들"
+    }
+  },
+  "prologue": {
+    "korean": [
+      "폐국을 앞둔 동네 우체국 정문 앞으로 네 명의 히어로가 발걸음을 옮긴다.",
+      "30년 동안 배달되지 못하고 먼지 쌓여 있던 편지들이 원래 주인을 기다린다.",
+      "마지막 집배원 벡스가 낡은 편지 가방을 든 채 히어로들과 함께 첫 배달길에 나선다."
+    ]
+  },
+  "rooms": [
+    {
+      "id": 1,
+      "dialogue": [
+        {
+          "type": "speech",
+          "speaker": "narrator",
+          "content": {
+            "korean": "폐국을 앞둔 동네 우체국 구석에 먼지 쌓인 상자가 놓여 있다."
+          }
+        },
+        {
+          "action": "enter",
+          "speaker": "bex",
+          "spot": [
+            50,
+            80
+          ],
+          "duration_ms": 500,
+          "type": "direction"
+        },
+        {
+          "type": "speech",
+          "emotion": "happy",
+          "content": {
+            "korean": "어서 오세요! 여기 상자 안을 좀 보세요."
+          },
+          "speaker": "bex"
+        },
+        {
+          "type": "speech",
+          "content": {
+            "korean": "벡스가 상자 속에서 오래된 편지 뭉치를 꺼내어 보인다."
+          },
+          "speaker": "narrator"
+        },
+        {
+          "type": "speech",
+          "emotion": "sad",
+          "content": {
+            "korean": "무려 30년 동안이나 배달되지 못하고 남겨진 편지들이에요."
+          },
+          "speaker": "bex"
+        },
+        {
+          "content": {
+            "korean": "30년이나 주인에게 가지 못했다니 너무 안타까워."
+          },
+          "emotion": "sad",
+          "speaker": "character_any",
+          "type": "speech"
+        },
+        {
+          "speaker": "character_1",
+          "content": {
+            "korean": "정말 먼지가 수북하게 쌓여 있네!"
+          },
+          "emotion": "base",
+          "type": "speech"
+        },
+        {
+          "speaker": "narrator",
+          "type": "speech",
+          "content": {
+            "korean": "벡스가 고개를 끄덕이며 편지 가방을 다잡아 멘다."
+          }
+        },
+        {
+          "speaker": "character_any",
+          "emotion": "happy",
+          "content": {
+            "korean": "우리가 이 편지들을 전부 주인에게 무사히 전해주자!"
+          },
+          "type": "speech"
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "dialogue": [
+        {
+          "spot": [
+            50,
+            80
+          ],
+          "type": "direction",
+          "action": "enter",
+          "speaker": "bex",
+          "duration_ms": 500
+        },
+        {
+          "type": "speech",
+          "speaker": "narrator",
+          "content": {
+            "korean": "첫 번째 편지에 적힌 조용한 주택 대문 앞에 다다른다."
+          }
+        },
+        {
+          "type": "speech",
+          "emotion": "base",
+          "content": {
+            "korean": "이곳이 첫 번째 편지의 수신인이 계신 주택이 맞아요."
+          },
+          "speaker": "bex"
+        },
+        {
+          "type": "speech",
+          "content": {
+            "korean": "드디어 첫 번째 편지를 전달할 수 있겠어!"
+          },
+          "emotion": "happy",
+          "speaker": "character_any"
+        },
+        {
+          "content": {
+            "korean": "찌푸린 얼굴의 남자가 대문 앞을 다급하게 가로막는다."
+          },
+          "speaker": "narrator",
+          "type": "speech"
+        },
+        {
+          "type": "speech",
+          "speaker": "narrator",
+          "content": {
+            "korean": "남자가 \"여기는 들여보낼 수 없으니 당장 돌아가시오!\"라며 거칠게 소리친다."
+          }
+        },
+        {
+          "content": {
+            "korean": "으악, 갑자기 엄청 크게 소리를 지르네!"
+          },
+          "emotion": "angry",
+          "speaker": "character_1",
+          "type": "speech"
+        },
+        {
+          "speaker": "character_any",
+          "emotion": "base",
+          "content": {
+            "korean": "이유도 말해주지 않고 다짜고짜 나가라니 당황스러워."
+          },
+          "type": "speech"
+        }
+      ]
+    },
+    {
+      "dialogue": [
+        {
+          "duration_ms": 500,
+          "action": "enter",
+          "speaker": "bex",
+          "spot": [
+            50,
+            80
+          ],
+          "type": "direction"
+        },
+        {
+          "speaker": "narrator",
+          "type": "speech",
+          "content": {
+            "korean": "남자가 히어로들이 들고 있는 편지 봉투를 날카로운 눈빛으로 노려본다."
+          }
+        },
+        {
+          "speaker": "character_any",
+          "emotion": "angry",
+          "content": {
+            "korean": "저 사람은 왜 자꾸 편지만 노려보는 거지?"
+          },
+          "type": "speech"
+        },
+        {
+          "speaker": "character_any",
+          "emotion": "angry",
+          "content": {
+            "korean": "편지를 뺏어서 찢어버리려는 속셈이 분명해!"
+          },
+          "type": "speech"
+        },
+        {
+          "type": "speech",
+          "speaker": "narrator",
+          "content": {
+            "korean": "벡스가 불안한 듯 편지를 가슴에 꼭 품어 안는다."
+          }
+        },
+        {
+          "type": "speech",
+          "speaker": "bex",
+          "emotion": "sad",
+          "content": {
+            "korean": "소중한 편지니 제발 찢어지지 않게 해 주세요!"
+          }
+        },
+        {
+          "type": "speech",
+          "speaker": "narrator",
+          "content": {
+            "korean": "남자가 벡스를 향해 다가가 거세게 밀쳐낸다."
+          }
+        },
+        {
+          "speaker": "character_1",
+          "content": {
+            "korean": "감히 벡스를 밀쳐내다니 참을 수 없어!"
+          },
+          "emotion": "angry",
+          "type": "speech"
+        },
+        {
+          "content": {
+            "korean": "더는 가만히 보고만 있을 순 없어!"
+          },
+          "emotion": "angry",
+          "speaker": "character_any",
+          "type": "speech"
+        }
+      ],
+      "id": 5
+    },
+    {
+      "id": 9,
+      "dialogue": [
+        {
+          "speaker": "bex",
+          "spot": [
+            50,
+            80
+          ],
+          "duration_ms": 500,
+          "type": "direction",
+          "action": "enter"
+        },
+        {
+          "content": {
+            "korean": "남자가 대문 빗장을 걸어 잠그며 온몸으로 입구를 막아선다."
+          },
+          "type": "speech",
+          "speaker": "narrator"
+        },
+        {
+          "speaker": "bex",
+          "type": "speech",
+          "content": {
+            "korean": "문을 완전히 걸어 잠가버리셨어요!"
+          },
+          "emotion": "sad"
+        },
+        {
+          "emotion": "angry",
+          "content": {
+            "korean": "편지를 노리는 사냥꾼임이 확실해졌어!"
+          },
+          "speaker": "character_any",
+          "type": "speech"
+        },
+        {
+          "speaker": "narrator",
+          "content": {
+            "korean": "남자가 차가운 눈빛으로 대문 앞을 단단히 지킨다."
+          },
+          "type": "speech"
+        },
+        {
+          "content": {
+            "korean": "저렇게 굳게 닫아버리니 정말 난감하네!"
+          },
+          "emotion": "sad",
+          "speaker": "character_1",
+          "type": "speech"
+        },
+        {
+          "content": {
+            "korean": "소중한 편지를 지키려면 어쩔 수 없이 맞서야겠어!"
+          },
+          "emotion": "angry",
+          "type": "speech",
+          "speaker": "character_any"
+        },
+        {
+          "type": "direction",
+          "action": "shake",
+          "duration_ms": 500,
+          "speaker": "narrator"
+        }
+      ]
+    },
+    {
+      "dialogue": [
+        {
+          "type": "speech",
+          "content": {
+            "korean": "대문을 막아선 남자가 기세를 올리며 히어로들을 노려본다."
+          },
+          "speaker": "narrator"
+        },
+        {
+          "type": "speech",
+          "content": {
+            "korean": "이 편지는 절대 넘겨줄 수 없다!"
+          },
+          "emotion": "angry",
+          "speaker": "random_boss"
+        },
+        {
+          "emotion": "angry",
+          "content": {
+            "korean": "소중한 편지를 빼앗기게 둘 수는 없어!"
+          },
+          "speaker": "character_any",
+          "type": "speech"
+        },
+        {
+          "speaker": "bex",
+          "action": "enter",
+          "spot": [
+            50,
+            80
+          ],
+          "type": "direction",
+          "duration_ms": 500
+        },
+        {
+          "type": "speech",
+          "speaker": "bex",
+          "emotion": "sad",
+          "content": {
+            "korean": "다들 조심하세요, 편지가 훼손되지 않게 가볍게 제압해요!"
+          }
+        },
+        {
+          "content": {
+            "korean": "우와, 드디어 싸움이 시작되는구나!"
+          },
+          "type": "speech",
+          "emotion": "happy",
+          "speaker": "character_1"
+        },
+        {
+          "speaker": "character_any",
+          "content": {
+            "korean": "준비되었으면 바로 나아가자!"
+          },
+          "emotion": "angry",
+          "type": "speech"
+        }
+      ],
+      "win_dialogue": [
+        {
+          "type": "speech",
+          "content": {
+            "korean": "실랑이 끝에 남자의 품에서 검은 상복용 띠가 바닥으로 떨어진다."
+          },
+          "speaker": "narrator"
+        },
+        {
+          "type": "speech",
+          "content": {
+            "korean": "열린 대문 안 마루 위에는 방금 차려진 어머니의 영정 사진이 피어오르는 향연기와 함께 보인다."
+          },
+          "speaker": "narrator"
+        },
+        {
+          "emotion": "sad",
+          "content": {
+            "korean": "사실 어머니께서 며칠 전 세상을 떠나셨소... 아직 슬픔이 커서 아무에게도 알리지 못했지."
+          },
+          "speaker": "random_boss",
+          "type": "speech"
+        },
+        {
+          "emotion": "sad",
+          "content": {
+            "korean": "편지를 보면 어머니 생각에 눈물이 터질 것 같아 차마 받아들일 수 없었소."
+          },
+          "type": "speech",
+          "speaker": "random_boss"
+        },
+        {
+          "type": "speech",
+          "speaker": "character_any",
+          "emotion": "sad",
+          "content": {
+            "korean": "어머니를 잃은 슬픔 때문에 문을 막아섰던 거였구나."
+          }
+        },
+        {
+          "type": "speech",
+          "speaker": "character_any",
+          "content": {
+            "korean": "사정을 전혀 모르고 오해해서 정말 미안해."
+          },
+          "emotion": "sad"
+        },
+        {
+          "type": "direction",
+          "speaker": "bex",
+          "duration_ms": 500,
+          "spot": [
+            50,
+            80
+          ],
+          "action": "enter"
+        },
+        {
+          "type": "speech",
+          "speaker": "bex",
+          "emotion": "sad",
+          "content": {
+            "korean": "가슴 아픈 사정이 있으셨군요. 진심으로 애도를 표합니다."
+          }
+        }
+      ],
+      "id": 15,
+      "lose_dialogue": [
+        {
+          "speaker": "narrator",
+          "content": {
+            "korean": "히어로들이 남자의 강한 기세에 밀려 바닥에 넘어지고 만다."
+          },
+          "type": "speech"
+        },
+        {
+          "action": "enter",
+          "spot": [
+            50,
+            80
+          ],
+          "type": "direction",
+          "speaker": "bex",
+          "duration_ms": 500
+        },
+        {
+          "speaker": "bex",
+          "emotion": "base",
+          "content": {
+            "korean": "낙담하지 마세요, 남자의 눈빛에 숨겨진 진심을 다시 확인해 봐요!"
+          },
+          "type": "speech"
+        }
+      ]
+    }
+  ]
+}

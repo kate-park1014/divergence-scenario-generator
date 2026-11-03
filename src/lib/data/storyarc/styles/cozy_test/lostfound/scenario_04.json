@@ -1,0 +1,401 @@
+{
+  "scenario_id": "cozy_lostfound_04",
+  "order": 4,
+  "act": "rising",
+  "theme": "modern",
+  "actors": {
+    "kai": {
+      "id": "mon_d7f29313-b8fb-49da-9a1a-01df5d13866e",
+      "name": {
+        "korean": "카이",
+        "english": "Kai",
+        "japanese": "カイ",
+        "chinese": "凯",
+        "french": "Kai",
+        "spanish": "Kai",
+        "vietnamese": "Kai",
+        "thai": "ไค",
+        "hindi": "काई"
+      },
+      "description": "",
+      "face_image_url": "https://imagedelivery.net/WTEqQNGFb-l-IHS6IGnzUQ/f10d9184-4155-4bb9-de2d-db61463f7c00/public",
+      "battle_sprite_url": "https://imagedelivery.net/WTEqQNGFb-l-IHS6IGnzUQ/e41f8e03-08c9-4a4f-6f72-fa9342876f00/public",
+      "role": {
+        "korean": "분실물 센터 직원"
+      }
+    }
+  },
+  "boss": {
+    "pool_id": "random_boss",
+    "role": {
+      "korean": "창고지기"
+    }
+  },
+  "rooms": [
+    {
+      "id": 1,
+      "dialogue": [
+        {
+          "content": {
+            "korean": "분실물 창고로 향하는 골목 입구에 히어로들이 모여 서 있다."
+          },
+          "speaker": "narrator",
+          "type": "speech"
+        },
+        {
+          "spot": [
+            400,
+            700
+          ],
+          "duration_ms": 500,
+          "type": "direction",
+          "action": "enter",
+          "speaker": "kai"
+        },
+        {
+          "type": "speech",
+          "emotion": "base",
+          "speaker": "character_any",
+          "content": {
+            "korean": "지난번처럼 남의 말만 믿다간 또 속을 수 있어."
+          }
+        },
+        {
+          "emotion": "angry",
+          "type": "speech",
+          "speaker": "character_1",
+          "content": {
+            "korean": "맞아, 이번엔 절대 안 속아!"
+          }
+        },
+        {
+          "emotion": "base",
+          "speaker": "kai",
+          "content": {
+            "korean": "골목 사람들의 모든 분실물이 모이는 창고가 이 골목 끝에 있어요."
+          },
+          "type": "speech"
+        },
+        {
+          "type": "speech",
+          "emotion": "base",
+          "content": {
+            "korean": "거기서 확실한 증거부터 직접 확인해보자."
+          },
+          "speaker": "character_any"
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "dialogue": [
+        {
+          "speaker": "kai",
+          "duration_ms": 500,
+          "spot": [
+            400,
+            700
+          ],
+          "action": "enter",
+          "type": "direction"
+        },
+        {
+          "type": "speech",
+          "speaker": "narrator",
+          "content": {
+            "korean": "창고 입구 목재 문에는 커다란 쇠 빗장이 굳게 걸려 있다."
+          }
+        },
+        {
+          "emotion": "base",
+          "type": "speech",
+          "speaker": "character_any",
+          "content": {
+            "korean": "문이 꽉 잠겨 있네. 증거를 보려면 내부를 조사해야겠어."
+          }
+        },
+        {
+          "content": {
+            "korean": "열쇠를 쥔 남자가 걸어 나와 \"여긴 아무나 들어오는 곳이 아니다\"라며 입구를 막아선다."
+          },
+          "type": "speech",
+          "speaker": "narrator"
+        },
+        {
+          "speaker": "kai",
+          "content": {
+            "korean": "창고를 관리하는 아저씨가 출입을 통제하고 계시네요."
+          },
+          "type": "speech",
+          "emotion": "base"
+        },
+        {
+          "type": "speech",
+          "content": {
+            "korean": "말만 들을 수는 없어. 안으로 들어가서 증거를 찾아내겠어!"
+          },
+          "speaker": "character_any",
+          "emotion": "angry"
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "dialogue": [
+        {
+          "speaker": "kai",
+          "duration_ms": 500,
+          "type": "direction",
+          "spot": [
+            400,
+            700
+          ],
+          "action": "enter"
+        },
+        {
+          "speaker": "character_any",
+          "content": {
+            "korean": "창고 안의 분실물 상태를 직접 확인하게 해줘!"
+          },
+          "type": "speech",
+          "emotion": "base"
+        },
+        {
+          "type": "speech",
+          "content": {
+            "korean": "창고지기가 고개를 저으며 \"절대 아무도 들어올 수 없다\"고 단호하게 문을 가로막는다."
+          },
+          "speaker": "narrator"
+        },
+        {
+          "content": {
+            "korean": "엄청 완고하시잖아!"
+          },
+          "speaker": "character_1",
+          "emotion": "sad",
+          "type": "speech"
+        },
+        {
+          "type": "speech",
+          "emotion": "sad",
+          "speaker": "kai",
+          "content": {
+            "korean": "대화로는 설득이 통하지 않을 것 같아요."
+          }
+        },
+        {
+          "emotion": "angry",
+          "speaker": "character_any",
+          "content": {
+            "korean": "뭔가 숨기려는 게 분명해! 싸워서라도 증거를 확인하겠어!"
+          },
+          "type": "speech"
+        }
+      ]
+    },
+    {
+      "id": 9,
+      "dialogue": [
+        {
+          "action": "enter",
+          "duration_ms": 500,
+          "type": "direction",
+          "speaker": "kai",
+          "spot": [
+            400,
+            700
+          ]
+        },
+        {
+          "type": "speech",
+          "content": {
+            "korean": "창고지기가 묵직한 열쇠 뭉치를 쥔 채 창고 문 앞을 가로막는다."
+          },
+          "speaker": "narrator"
+        },
+        {
+          "emotion": "angry",
+          "type": "speech",
+          "speaker": "kai",
+          "content": {
+            "korean": "증거를 보려면 창고지기를 설득해야 해요!"
+          }
+        },
+        {
+          "emotion": "base",
+          "type": "speech",
+          "speaker": "character_any",
+          "content": {
+            "korean": "우리는 오직 실체 있는 증거만 확인하겠어!"
+          }
+        },
+        {
+          "content": {
+            "korean": "창고지기가 단단한 태세로 히어로들을 노려보며 자세를 잡는다."
+          },
+          "speaker": "narrator",
+          "type": "speech"
+        },
+        {
+          "emotion": "angry",
+          "type": "speech",
+          "content": {
+            "korean": "물러서지 마, 창고 안을 반드시 조사하고 말겠어!"
+          },
+          "speaker": "character_any"
+        }
+      ]
+    },
+    {
+      "win_dialogue": [
+        {
+          "type": "direction",
+          "spot": [
+            400,
+            700
+          ],
+          "speaker": "kai",
+          "action": "enter",
+          "duration_ms": 500
+        },
+        {
+          "type": "speech",
+          "speaker": "narrator",
+          "content": {
+            "korean": "창고지기가 물러서고 굳게 닫혔던 창고 문이 열린다."
+          }
+        },
+        {
+          "speaker": "narrator",
+          "content": {
+            "korean": "창고 안 물건마다 주인을 찾으려 정성껏 적어 둔 메모가 붙어 있다."
+          },
+          "type": "speech"
+        },
+        {
+          "speaker": "random_boss",
+          "content": {
+            "korean": "물건들이 훼손될까 봐 아무나 못 들어오게 지킨 거다..."
+          },
+          "type": "speech",
+          "emotion": "sad"
+        },
+        {
+          "emotion": "happy",
+          "type": "speech",
+          "speaker": "character_any",
+          "content": {
+            "korean": "물건을 안전하게 보호하려고 강하게 막아서셨던 거구나!"
+          }
+        },
+        {
+          "emotion": "happy",
+          "type": "speech",
+          "content": {
+            "korean": "창고지기 아저씨는 분실물들을 철저히 보호하던 파수꾼이었어요!"
+          },
+          "speaker": "kai"
+        },
+        {
+          "emotion": "sad",
+          "speaker": "character_any",
+          "content": {
+            "korean": "우리가 또 의심부터 해서 오해했네, 정말 미안해!"
+          },
+          "type": "speech"
+        }
+      ],
+      "id": 15,
+      "lose_dialogue": [
+        {
+          "type": "direction",
+          "action": "enter",
+          "spot": [
+            400,
+            700
+          ],
+          "speaker": "kai",
+          "duration_ms": 500
+        },
+        {
+          "type": "speech",
+          "content": {
+            "korean": "창고지기의 강인한 방어에 히어로들이 뒤로 튕겨 나간다."
+          },
+          "speaker": "narrator"
+        },
+        {
+          "type": "speech",
+          "emotion": "sad",
+          "speaker": "kai",
+          "content": {
+            "korean": "다들 괜찮으세요? 다시 도전해서 창고 안 증거를 확인해요!"
+          }
+        },
+        {
+          "emotion": "angry",
+          "type": "speech",
+          "content": {
+            "korean": "으윽, 이번엔 반드시 들어가서 꼭 확인하겠어!"
+          },
+          "speaker": "character_any"
+        }
+      ],
+      "dialogue": [
+        {
+          "speaker": "narrator",
+          "content": {
+            "korean": "창고지기가 육중한 창고 문을 등지고 서서 무기를 쥐어잡는다."
+          },
+          "type": "speech"
+        },
+        {
+          "emotion": "angry",
+          "content": {
+            "korean": "창고 안으로는 손가락 하나 못 들여놓는다!"
+          },
+          "speaker": "random_boss",
+          "type": "speech"
+        },
+        {
+          "speaker": "character_any",
+          "content": {
+            "korean": "증거를 직접 확인하기 전까진 절대로 못 물러나!"
+          },
+          "emotion": "angry",
+          "type": "speech"
+        },
+        {
+          "type": "speech",
+          "content": {
+            "korean": "창고지기가 단단한 방어 자세로 기세를 더욱 올린다."
+          },
+          "speaker": "narrator"
+        },
+        {
+          "type": "speech",
+          "emotion": "angry",
+          "content": {
+            "korean": "진짜 증거를 보여 달라고!"
+          },
+          "speaker": "character_1"
+        },
+        {
+          "type": "speech",
+          "speaker": "character_any",
+          "content": {
+            "korean": "비켜, 들어가서 전부 확인할 거야!"
+          },
+          "emotion": "angry"
+        }
+      ]
+    }
+  ],
+  "prologue": {
+    "korean": [
+      "오래된 상가 골목 구석에 굳게 닫힌 분실물 창고가 정적 속에 서 있다.",
+      "지난번 말쑥한 남자의 겉모습에 속았던 히어로들은 오직 눈에 보이는 증거만을 믿기로 다짐한다.",
+      "골목의 잃어버린 물건들이 모여 있다는 창고를 향해 탐험대가 발걸음을 옮긴다."
+    ]
+  }
+}

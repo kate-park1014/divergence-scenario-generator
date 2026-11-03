@@ -20,6 +20,7 @@ import {
 	type StorySeeds,
 	type UsedStory
 } from '$lib/prompts/netshortStory';
+import { getStyle, keepTone, type StoryStyle } from '$lib/prompts/storyStyle';
 import { buildNetshortJudgePrompt, netshortJudgeMarkdown, netshortJudgeTool, readNetshortJudge, type NetshortJudgeResult } from '$lib/prompts/netshortJudge';
 import type { RequestHandler } from './$types';
 
@@ -30,18 +31,20 @@ import type { RequestHandler } from './$types';
  * body:
  *  - ids?: string[]         이미 만든 이야기 id. <outDir>/<id>/seeds.json 의 재료 그대로 다시 씀
  *  - count?: number         ids 가 없을 때 새로 만들 개수 (기본 1). id 는 <world.key>_<시각>_<n>
- *  - seedsFile?: string     기본 src/lib/data/storyarc/netshort_test/story-seeds.json
- *  - outDir?: string        기본 src/lib/data/storyarc/netshort_test → <outDir>/<id>/seeds.json, story.json, story.md
+ *  - seedsFile?: string     기본 src/lib/data/storyarc/styles/netshort_test/story-seeds.json
+ *  - outDir?: string        기본 src/lib/data/storyarc/styles/netshort_test → <outDir>/<id>/seeds.json, story.json, story.md
  *  - concurrency?: number   동시 실행 (기본 2)
  *  - temperature?: number   기본 0.8
  *  - judge?: boolean        저장 뒤 채점 (기본 true). 결과 <id>/judge.json + story.md 끝
  *  - judgeOnly?: boolean    ids 의 기존 story.json 을 채점만 (생성·used_stories 갱신 없음)
+ *  - style?: string         스타일 파일 key (styles/<key>.md). 기본: 다시 쓸 때는 seeds.json 의 style, 새로 만들 때는 netshort.
+ *                           seeds.json 에 저장되어 대본 단계도 같은 스타일을 씀
  * 코드 검사에 걸리면 오류를 붙여 최대 2번 다시 요청. 그래도 남으면 저장하고 errors 로 돌려줌.
  * 저장한 이야기는 seedsFile 의 used_stories 에 추가 (같은 id 면 바꿔 씀).
  */
 
-const DEFAULT_SEEDS = 'src/lib/data/storyarc/netshort_test/story-seeds.json';
-const DEFAULT_OUT_DIR = 'src/lib/data/storyarc/netshort_test';
+const DEFAULT_SEEDS = 'src/lib/data/storyarc/styles/netshort_test/story-seeds.json';
+const DEFAULT_OUT_DIR = 'src/lib/data/storyarc/styles/netshort_test';
 const MAX_RETRY = 2;
 
 type NpcSource = { key: string; name: { korean: string }; persona?: string };
@@ -56,6 +59,12 @@ export const POST: RequestHandler = async ({ request, fetch }) => {
 	const judgeOnly = body.judgeOnly === true;
 	const judgeOn = judgeOnly || body.judge !== false;
 	if (judgeOnly && !(Array.isArray(body.ids) && body.ids.length)) return json({ error: 'judgeOnly 는 ids 가 필요합니다.' }, { status: 400 });
+	const styleOf = (key?: string): StoryStyle => getStyle(body.style ?? key ?? 'netshort');
+	try {
+		styleOf();
+	} catch (e) {
+		return json({ error: e instanceof Error ? e.message : String(e) }, { status: 400 });
+	}
 
 	// 새로 만들 것: id → 재료. 다시 쓸 것: 저장된 seeds.json
 	const jobs: { id: string; picked?: PickedSeeds }[] = [];
@@ -65,7 +74,7 @@ export const POST: RequestHandler = async ({ request, fetch }) => {
 		const stamp = new Date().toISOString().replace(/\D/g, '').slice(0, 14);
 		const count = Math.max(1, Math.min(20, Number(body.count) || 1));
 		for (let i = 1; i <= count; i++) {
-			const picked = pickSeeds(seeds);
+			const picked = pickSeeds(seeds, styleOf());
 			jobs.push({ id: `${picked.world.key}_${stamp}_${i}`, picked });
 		}
 	}
@@ -137,6 +146,10 @@ export const POST: RequestHandler = async ({ request, fetch }) => {
 		const picked = given ?? (JSON.parse(await readFile(abs('seeds.json'), 'utf-8')) as PickedSeeds);
 		// 예전 seeds.json(장치 형태 device_form 만 있음)은 그 무대의 장치를 새로 뽑아 넣는다
 		const before = JSON.stringify(picked);
+		// 스타일: --style 이 있으면 그것, 없으면 저장된 것. 톤은 그 스타일 목록에 있으면 그대로, 아니면 다시 뽑음
+		const style = styleOf(picked.style);
+		picked.style = style.key;
+		picked.tone = keepTone(style, picked.tone);
 		if (!picked.device) picked.device = pickDevice(seeds, picked.world.key);
 		// 장치 문장(harm·wrong/right_action 포함)은 늘 지금 story-seeds.json 의 것으로
 		picked.device = seeds.devices.find((x) => x.key === picked.device.key) ?? picked.device;
@@ -145,7 +158,7 @@ export const POST: RequestHandler = async ({ request, fetch }) => {
 			const next = pickDevice(seeds, picked.world.key);
 			if (next.worlds?.includes(picked.world.key)) picked.device = next;
 			else {
-				const fresh = pickSeeds(seeds);
+				const fresh = pickSeeds(seeds, style);
 				Object.assign(picked, { world: fresh.world, device: fresh.device });
 			}
 		}
@@ -172,12 +185,17 @@ export const POST: RequestHandler = async ({ request, fetch }) => {
 			return o;
 		};
 
-		const prompt = buildNetshortPrompt(id, picked, {
-			themeDescription: seeds.theme_description,
-			npcPool: pool,
-			banned: seeds.banned_cliches ?? [],
-			used: (seeds.used_stories ?? []).filter((u) => u.id !== id)
-		});
+		const prompt = buildNetshortPrompt(
+			id,
+			picked,
+			{
+				themeDescription: seeds.theme_description,
+				npcPool: pool,
+				banned: seeds.banned_cliches ?? [],
+				used: (seeds.used_stories ?? []).filter((u) => u.id !== id)
+			},
+			style
+		);
 		// 오류가 있으면 오류와 이전 출력을 붙여 다시 요청
 		let out = fixDevice((await gemini(prompt, netshortStoryTool)) as NetshortStory);
 		let errors = checkNetshortStory(out, picked.trace_orders);
