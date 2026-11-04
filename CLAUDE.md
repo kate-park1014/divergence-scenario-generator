@@ -284,6 +284,17 @@ npm run gen:cozy-scenarios                                   # 기획안 전부
 npm run gen:cozy-scenarios -- --keys=market --orders=1       # 스모크
 ```
 
+## 로맨스 5화 이야기 (romance_test, 시험용)
+
+"가짜 연인 계약" 틀: NPC 둘의 가짜 연애를 히어로 넷이 작전팀으로 지켜 줌. 1~4화마다 들킬 위기 → 방 10 에서 막는 싸움 → win 에서 두 사람 마음이 한 걸음 진짜가 됨. 5화는 최종 인물에게 먼저 묻고 화해·첫 데이트 약속. 이야기 단계(Gemini) 없음 — story.json 은 사람이 씀.
+- 이야기: `src/lib/data/storyarc/styles/romance_test/<key>/story.md`(읽기용)·`story.json`(cozy 와 같은 방 구조 + `npcs` 둘, `design.contract`·`crises`(order·who·crisis·heart)·`final`, `style`·`tone`). 지금 `contract`(니아 nia·맥스 max, 5화 이안)
+- 대본: 프롬프트 [chapterGenRomance.ts](src/lib/prompts/chapterGenRomance.ts), 엔드포인트 `POST /api/scenario/romance`, 러너 `scripts/gen-romance-scenarios.mjs`. cozy 대본 단계와 같은 흐름·코드 검사(NPC 두 명 허용), 다듬기 1콜. 스타일 [romance.md](src/lib/data/storyarc/styles/romance.md)
+- 출력 `romance_test/<key>/scenario_0N.json`, `script_0N.md`, `script.md`, `polish_0N.json`
+
+```bash
+npm run gen:romance-scenarios -- --keys=contract              # --orders=1 로 한 화만
+```
+
 ## 이야기 스타일 (styles/)
 
 > 사람용 전체 흐름 설명: [styles/README.md](src/lib/data/storyarc/styles/README.md) — 넷쇼트·cozy 흐름이 바뀌면 함께 갱신할 것. 이야기 폴더 `netshort_test/`·`cozy_test/` 도 styles/ 안에 있음. README.md 는 스타일로 읽지 않음(storyStyle.ts 에서 뺌)
