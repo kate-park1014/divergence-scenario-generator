@@ -1,0 +1,392 @@
+{
+	"cards": [
+		{
+			"rule_link": "야간 경비의 의심스러운 행동만 보고 그를 피할지, 혹은 상황을 이해하려 노력할지 결정해야 합니다.",
+			"wants": "자신의 근무지 안전을 철저히 지키고 싶어 함",
+			"key": "patrol_flashlight",
+			"background_tags": [
+				"alley",
+				"night",
+				"streetlight",
+				"no_crowd",
+				"tense"
+			],
+			"title": "순찰 손전등",
+			"person": {
+				"role": "부두 정문 경비원",
+				"name": "야간 경비",
+				"id": "dock_guard"
+			},
+			"choices": [
+				{
+					"result": [
+						{
+							"text": "당신이 낸 소리에 경비가 다른 쪽을 향해 고개를 돌린다. 그 틈에 당신은 급히 몸을 숨긴다.",
+							"speaker": "narrator"
+						},
+						{
+							"speaker": "dax",
+							"text": "휴, 간신히 넘어갔네요. 하지만 왠지 불안해요."
+						}
+					],
+					"text": "경비의 시선을 돌리기 위해 다른 방향으로 소리를 낸다.",
+					"flag": {
+						"key": "alley_distraction",
+						"label": "골목 방해",
+						"boss_text": "야간 경비가 골목 안을 계속 주시하며 히어로들의 움직임을 방해한다."
+					},
+					"path": "easy",
+					"mbti": "TJ",
+					"effects": {
+						"reason": -10,
+						"echo": -5
+					},
+					"reward": [
+						"attack_up"
+					]
+				},
+				{
+					"result": [
+						{
+							"text": "경비는 당신의 설명을 듣고도 여전히 의심스러운 눈초리를 거두지 못한다.",
+							"speaker": "narrator"
+						},
+						{
+							"text": "수상한 자들이군... 계속 지켜보겠어.",
+							"speaker": "dock_guard"
+						},
+						{
+							"speaker": "dax",
+							"text": "경비 아저씨가 우리를 완전히 믿지는 않는 것 같아요."
+						}
+					],
+					"effects": {
+						"community": 10,
+						"fighting": -10
+					},
+					"mbti": "NF",
+					"path": "hard",
+					"flag": {
+						"label": "경비 의심",
+						"key": "guard_suspicion",
+						"boss_text": "야간 경비가 히어로들을 수상하게 여기고 골목 주변을 맴돈다."
+					},
+					"text": "경비에게 우리가 누구인지, 왜 여기에 있는지 조용히 설명한다.",
+					"reward": [
+						"defense_up"
+					]
+				}
+			],
+			"no": 1,
+			"dialogue": [
+				{
+					"speaker": "narrator",
+					"text": "골목 안쪽에서 불길이 솟구치는 와중에, 야간 경비의 손전등 불빛이 골목 입구를 훑는다."
+				},
+				{
+					"speaker": "dock_guard",
+					"text": "뭐지? 이 시간에 골목 안에서 인기척이? 수상한 낌새는 놓칠 수 없지!"
+				},
+				{
+					"text": "젠장, 저 경비 아저씨가 여기까지 와서 순찰을 하다니... 우리가 여기 있는 걸 들키면 안 되는데!",
+					"speaker": "dax"
+				},
+				{
+					"speaker": "narrator",
+					"text": "불빛이 골목 안을 샅샅이 비추며 히어로들이 숨어 있는 곳까지 다가온다."
+				}
+			],
+			"slot": "D",
+			"kind": "callback",
+			"returns": "easy"
+		},
+		{
+			"person": {
+				"role": "부두 정문 경비원",
+				"name": "야간 경비",
+				"id": "dock_guard"
+			},
+			"wants": "자신의 근무지 안전을 철저히 지키고 싶어 함",
+			"rule_link": "야간 경비의 도움을 믿고 그의 말을 따를지, 아니면 다른 방법을 찾아 골목에 진입할지 선택해야 합니다.",
+			"choices": [
+				{
+					"effects": {
+						"echo": 10
+					},
+					"mbti": "EP",
+					"text": "야간 경비에게 고맙다고 말하고 쪽문 열쇠를 받는다.",
+					"flag": {
+						"label": "쪽문 열쇠",
+						"boss_text": "쪽문 열쇠로 경리부장의 방에 몰래 침투할 수 있다.",
+						"key": "back_door_key"
+					},
+					"result": [
+						{
+							"speaker": "narrator",
+							"text": "당신은 경비에게 꾸벅 인사를 하고 열쇠를 받아든다."
+						},
+						{
+							"text": "경비 아저씨 덕분에 편하게 들어갈 수 있겠어요!",
+							"speaker": "dax"
+						}
+					],
+					"path": "easy",
+					"reward": [
+						"attack_up"
+					]
+				},
+				{
+					"result": [
+						{
+							"text": "경비는 당신의 질문에 ",
+							"speaker": "narrator"
+						},
+						{
+							"speaker": "dock_guard",
+							"text": "걱정 마십시오. 저만이 아는 길입니다."
+						},
+						{
+							"speaker": "narrator",
+							"text": "라며 확신에 찬 표정을 짓는다. 닥스는 그의 표정을 보고 안심한다."
+						}
+					],
+					"effects": {
+						"reason": 10,
+						"community": 5
+					},
+					"mbti": "IT",
+					"path": "hard",
+					"text": "경비에게 다시 한번 고맙다고 말하고, 쪽문이 안전한지 한 번 더 확인한다.",
+					"flag": {
+						"label": "안전한 쪽문",
+						"key": "secure_back_door",
+						"boss_text": "야간 경비가 알려준 쪽문은 보안이 철저하여 경리부장이 눈치채지 못한다."
+					},
+					"reward": [
+						"defense_up"
+					]
+				}
+			],
+			"key": "back_gate_key",
+			"no": 2,
+			"title": "뒷담 쪽문 열쇠",
+			"dialogue": [
+				{
+					"speaker": "narrator",
+					"text": "골목 안쪽에서 불길이 솟구치는 와중에, 야간 경비가 조심스럽게 골목 입구로 다가온다."
+				},
+				{
+					"text": "저번에 제가 너무 무례했습니다. 회장님 심부름이라는 걸 뒤늦게 알았습니다.",
+					"speaker": "dock_guard"
+				},
+				{
+					"text": "어? 경비 아저씨? 여기는 어쩐 일로...?",
+					"speaker": "dax"
+				},
+				{
+					"speaker": "dock_guard",
+					"text": "이 골목 뒷담에 쪽문이 하나 있습니다. 이 열쇠로 조용히 들어가십시오."
+				},
+				{
+					"speaker": "dock_guard",
+					"text": "안 그러면 경리부장에게 들킬 수도 있습니다."
+				},
+				{
+					"speaker": "narrator",
+					"text": "경비가 손에 쥔 낡은 열쇠를 당신에게 내민다."
+				}
+			],
+			"background_tags": [
+				"alley",
+				"night",
+				"streetlight",
+				"no_crowd",
+				"relieved"
+			],
+			"slot": "D",
+			"kind": "callback",
+			"returns": "hard"
+		},
+		{
+			"wants": "경리부장이 위험에 처하는 것을 막고 싶어 함",
+			"rule_link": "막내 경리의 간절한 호소만 듣고 부장을 동정할지, 아니면 그녀의 말을 의심하고 진실을 파헤칠지 결정해야 합니다.",
+			"no": 3,
+			"key": "junior_accountant_plea",
+			"person": {
+				"id": "junior_accountant",
+				"role": "경리부장의 부하",
+				"name": "막내 경리"
+			},
+			"choices": [
+				{
+					"reward": [
+						"move_range_up"
+					],
+					"effects": {
+						"fighting": 15,
+						"community": -10
+					},
+					"path": "easy",
+					"mbti": "ST",
+					"risk_bad": {
+						"gold": -50,
+						"result": [
+							{
+								"speaker": "narrator",
+								"text": "막내 경리가 당신의 옷자락을 붙잡고 매달린다. 실랑이 도중 손전등이 바닥에 떨어져 깨진다."
+							},
+							{
+								"text": "이런, 손전등이 없으면 앞이 안 보이는데!",
+								"speaker": "dax"
+							}
+						],
+						"reward": []
+					},
+					"result": [
+						{
+							"speaker": "narrator",
+							"text": "당신은 막내 경리를 밀치고 골목 안으로 들어선다. 닥스는 놀란 표정으로 당신을 따라붙는다."
+						},
+						{
+							"text": "막내 경리의 울음소리가 뒤에서 들려온다.",
+							"speaker": "narrator"
+						}
+					],
+					"text": "막내 경리를 밀치고 골목 안으로 진입한다."
+				},
+				{
+					"reward": [
+						"intelligence_up"
+					],
+					"text": "막내 경리의 말을 끝까지 들어주고, 부장의 사정을 묻는다.",
+					"mbti": "IS",
+					"path": "hard",
+					"result": [
+						{
+							"text": "당신은 막내 경리의 어깨를 토닥이며 부장의 사정을 묻는다.",
+							"speaker": "narrator"
+						},
+						{
+							"speaker": "narrator",
+							"text": "그녀는 흐느끼며 부장이 평소에도 소심하고, 최근 큰 압박을 받고 있었다고 털어놓는다."
+						},
+						{
+							"speaker": "dax",
+							"text": "경리부장님이 그렇게 힘든 상황이었다니..."
+						}
+					],
+					"risk_bad": {
+						"gold": -20,
+						"result": [
+							{
+								"speaker": "narrator",
+								"text": "막내 경리가 당신의 질문에 당황하며 "
+							},
+							{
+								"text": "말씀드릴 수 없어요!",
+								"speaker": "junior_accountant"
+							},
+							{
+								"text": "라고 소리친다. 그 소리에 골목 안쪽에서 인기척이 멈춘다.",
+								"speaker": "narrator"
+							}
+						],
+						"reward": []
+					},
+					"effects": {
+						"echo": 10,
+						"reason": 15
+					}
+				},
+				{
+					"text": "{actor}이(가) 막내 경리의 마음을 헤아리며 부장의 입장을 이해해 보려 한다.",
+					"mbti": "SF",
+					"result": [
+						{
+							"text": "{actor}이(가) 막내 경리의 불안한 마음을 진정시키자,",
+							"speaker": "narrator"
+						},
+						{
+							"text": "그녀는 부장이 억울하게 누명을 쓰고 있다고 호소한다.",
+							"speaker": "narrator"
+						},
+						{
+							"speaker": "dax",
+							"text": "{actor}님은 정말 사람 마음을 잘 헤아리시네요."
+						}
+					],
+					"path": "lock",
+					"require_mbti": "SF",
+					"effects": {
+						"echo": 5,
+						"community": 20
+					},
+					"reward": [
+						"defense_up"
+					]
+				},
+				{
+					"mbti": "NT",
+					"event_reason": "막내 경리가 중요한 정보를 숨기려다가 돈에 흔들려 게임을 제안합니다.",
+					"result": [
+						{
+							"text": "막내 경리는 당신이 건넨 돈을 보고 잠시 망설이더니, 눈을 굴리며 말한다.",
+							"speaker": "narrator"
+						}
+					],
+					"event_intro": [
+						{
+							"text": "제가 중요한 서류를 세 개의 상자 중 하나에 숨겨놨어요. 맞추시면 부장님의 진짜 사정을 말해드릴게요.",
+							"speaker": "junior_accountant"
+						},
+						{
+							"text": "그녀가 손에 든 작은 상자 세 개를 재빨리 섞기 시작한다.",
+							"speaker": "narrator"
+						}
+					],
+					"effects": {
+						"reason": -5,
+						"gold": -100
+					},
+					"text": "막내 경리에게 돈을 쥐여주며, 부장의 사정을 솔직하게 말해달라고 회유한다.",
+					"event": "minigame_cup",
+					"path": "gold"
+				}
+			],
+			"title": "막내 경리의 간청",
+			"dialogue": [
+				{
+					"text": "골목 어귀에 다다르자, 초조한 표정의 막내 경리가 당신 앞을 막아선다.",
+					"speaker": "narrator"
+				},
+				{
+					"text": "부장님은 그저 겁이 많으실 뿐이에요! 제발, 더 이상 골목 안으로 들어가지 말아 주세요!",
+					"speaker": "junior_accountant"
+				},
+				{
+					"text": "어? 막내 경리 아니야? 왜 여기서 이러고 있어?",
+					"speaker": "dax"
+				},
+				{
+					"speaker": "junior_accountant",
+					"text": "부장님은 나쁜 분이 아니에요. 그냥 조금... 소심하실 뿐이라고요!"
+				},
+				{
+					"text": "막내 경리는 눈물을 글썽이며 당신의 앞을 가로막는다.",
+					"speaker": "narrator"
+				}
+			],
+			"background_tags": [
+				"alley",
+				"night",
+				"streetlight",
+				"one_person",
+				"anxious"
+			],
+			"slot": "D",
+			"kind": "normal"
+		}
+	],
+	"errors": [],
+	"prompt_hash": "82c37b03d8a6fc24d3e4df18dfdeebe4f0a72e41"
+}

@@ -1,0 +1,234 @@
+{
+	"id": "card_01_old_docker_plea",
+	"title": {
+		"korean": "늙은 일꾼의 하소연"
+	},
+	"intensity": "calm",
+	"after_story": 1,
+	"before_story": 3,
+	"background_tags": [
+		"dock",
+		"daytime",
+		"foggy",
+		"sparse",
+		"gloomy"
+	],
+	"dialogue": [
+		{
+			"speaker": "narrator",
+			"content": {
+				"korean": "부두 사무실 앞 계단에서 늙은 부두 일꾼이 당신을 붙잡는다."
+			}
+		},
+		{
+			"speaker": "old_docker",
+			"content": {
+				"korean": "젊은 양반들, 회장님이 부른 외지인들이라면서?"
+			}
+		},
+		{
+			"speaker": "old_docker",
+			"content": {
+				"korean": "내 약값이 끊겨서 죽겠어. 누가 범인인지 이름만 대 줘!"
+			}
+		},
+		{
+			"speaker": "dax",
+			"content": {
+				"korean": "어르신, 저희도 아직 아무것도 모릅니다. 너무 조급해하지 마세요."
+			}
+		},
+		{
+			"speaker": "narrator",
+			"content": {
+				"korean": "일꾼의 눈빛에 간절함과 원망이 섞여 있다."
+			}
+		}
+	],
+	"choices": [
+		{
+			"text": {
+				"korean": "아무 간부나 수상하다고 맞장구쳐 일꾼을 달래 준다."
+			},
+			"path": "easy",
+			"mbti": "SF",
+			"effects": {
+				"echo": 10,
+				"community": 15
+			},
+			"reward": [
+				"attack_up"
+			],
+			"seed": "old_docker_plea_easy",
+			"result": [
+				{
+					"speaker": "old_docker",
+					"content": {
+						"korean": "고맙네, 젊은 양반! 덕분에 마음이 한결 편해졌어."
+					}
+				},
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "일꾼이 허리춤에서 낡은 건빵 봉지를 꺼내 당신에게 건넨다."
+					}
+				},
+				{
+					"speaker": "dax",
+					"content": {
+						"korean": "어르신이 조금이나마 위로를 받으신 것 같네요."
+					}
+				}
+			],
+			"risk": {
+				"chance": "mid",
+				"bad": {
+					"effects": {
+						"gold": -30
+					},
+					"reward": [],
+					"result": [
+						{
+							"speaker": "old_docker",
+							"content": {
+								"korean": "그려, 젊은 양반! 덕분에 속이 좀 후련하네."
+							}
+						},
+						{
+							"speaker": "narrator",
+							"content": {
+								"korean": "일꾼이 허리춤에서 낡은 건빵 봉지를 꺼내 건네지만, 옆에 있던 다른 일꾼이 낚아채 간다."
+							}
+						},
+						{
+							"speaker": "dax",
+							"content": {
+								"korean": "저런, 다른 분이 가져가 버렸네요..."
+							}
+						}
+					]
+				}
+			}
+		},
+		{
+			"text": {
+				"korean": "아직 모른다고 솔직히 말하고 약값 일부를 대신 내준다."
+			},
+			"path": "hard",
+			"mbti": "NF",
+			"effects": {
+				"echo": -5,
+				"community": 20,
+				"gold": -70
+			},
+			"reward": [
+				"attack_up"
+			],
+			"seed": "old_docker_plea_hard",
+			"result": [
+				{
+					"speaker": "old_docker",
+					"content": {
+						"korean": "아직 모른다고? 그럼 난 뭘 믿고 기다려야 하나!"
+					}
+				},
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "일꾼은 당신의 돈을 받으며 못마땅한 표정을 짓는다."
+					}
+				},
+				{
+					"speaker": "dax",
+					"content": {
+						"korean": "어르신이 서운해하시는 것 같지만, 그래도 잘하신 일입니다."
+					}
+				}
+			],
+			"risk": {
+				"chance": "high",
+				"bad": {
+					"effects": {
+						"gold": -20
+					},
+					"reward": [],
+					"result": [
+						{
+							"speaker": "old_docker",
+							"content": {
+								"korean": "흥, 모른다면서 돈은 왜 주는 건가! 이것도 나를 놀리는 건가!"
+							}
+						},
+						{
+							"speaker": "narrator",
+							"content": {
+								"korean": "일꾼은 당신의 돈을 뿌리치고 주변의 다른 일꾼들에게 큰 소리로 불평한다."
+							}
+						},
+						{
+							"speaker": "dax",
+							"content": {
+								"korean": "저런, 오히려 화를 돋운 것 같습니다..."
+							}
+						}
+					]
+				}
+			}
+		},
+		{
+			"text": {
+				"korean": "{actor}이(가) 노인에게 사라진 기금의 정확한 관리 절차를 물어본다."
+			},
+			"path": "lock",
+			"mbti": "TJ",
+			"require": {
+				"mbti": "TJ"
+			},
+			"effects": {
+				"echo": 5,
+				"reason": 10
+			},
+			"reward": [
+				"intelligence_up"
+			],
+			"seed": "old_docker_plea_hard",
+			"result": [
+				{
+					"speaker": "old_docker",
+					"content": {
+						"korean": "그럼! 기금은 경리부장이 직접 관리했지! 다른 사람은 못 건드려!"
+					}
+				},
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "노인의 말에서 경리부장이 돈을 만진다는 사실을 다시 확인한다."
+					}
+				},
+				{
+					"speaker": "dax",
+					"content": {
+						"korean": "역시 경리부장이 첫 용의자일까요?"
+					}
+				}
+			]
+		}
+	],
+	"tags": [
+		"old_docker",
+		"dax"
+	],
+	"_design": {
+		"slot": "A",
+		"kind": "plant",
+		"person": {
+			"id": "old_docker",
+			"name": "부두 일꾼",
+			"role": "늙은 부두 일꾼"
+		},
+		"wants": "기금이 끊겨 약을 못 샀다며, 범인 이름 하나만 대 주면 마음이 편하겠다고 매달린다.",
+		"rule_link": "늙은 부두 일꾼의 말만 듣고 용의자를 판단할지, 그의 사정을 먼저 들을지 결정한다.",
+		"events": {},
+		"flags": {}
+	}
+}

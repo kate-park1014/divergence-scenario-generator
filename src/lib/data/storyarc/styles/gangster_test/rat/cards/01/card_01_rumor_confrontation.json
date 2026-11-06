@@ -1,0 +1,156 @@
+{
+	"id": "card_01_rumor_confrontation",
+	"title": {
+		"korean": "소문에 휩싸인 간부의 부하"
+	},
+	"intensity": "high",
+	"after_story": 5,
+	"before_story": 7,
+	"callback": {
+		"seed": "old_docker_plea_easy",
+		"min_rooms_after": 2
+	},
+	"background_tags": [
+		"alley",
+		"night",
+		"dark_shadows",
+		"few_people",
+		"tense"
+	],
+	"dialogue": [
+		{
+			"speaker": "narrator",
+			"content": {
+				"korean": "골목 어귀에서 덩치 큰 사내가 나타나 당신 앞을 가로막는다."
+			}
+		},
+		{
+			"speaker": "executive_subordinate",
+			"content": {
+				"korean": "당신들, 우리 간부님을 수상하다고 하고 다닌다며?"
+			}
+		},
+		{
+			"speaker": "dax",
+			"content": {
+				"korean": "어르신, 저희는 그저..."
+			}
+		},
+		{
+			"speaker": "executive_subordinate",
+			"content": {
+				"korean": "시끄럽다! 헛소문 퍼뜨리고 다니지 마라!"
+			}
+		},
+		{
+			"speaker": "narrator",
+			"content": {
+				"korean": "사내의 표정에는 분노와 억울함이 뒤섞여 있다."
+			}
+		}
+	],
+	"choices": [
+		{
+			"text": {
+				"korean": "일단 상황을 피하기 위해 다른 골목으로 돌아간다."
+			},
+			"path": "easy",
+			"mbti": "SF",
+			"flag": "executive_subordinate_chase",
+			"effects": {
+				"gold": -20,
+				"reason": -15,
+				"community": -15
+			},
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "사내의 눈을 피해 재빨리 다른 골목으로 발걸음을 옮긴다."
+					}
+				},
+				{
+					"speaker": "dax",
+					"content": {
+						"korean": "이대로 피하는 게 능사는 아닐 텐데요..."
+					}
+				}
+			]
+		},
+		{
+			"text": {
+				"korean": "사내에게 다가가 오해를 풀기 위해 대화를 시도한다."
+			},
+			"path": "hard",
+			"mbti": "TJ",
+			"flag": "executive_subordinate_trust",
+			"effects": {
+				"fighting": -10,
+				"echo": 10
+			},
+			"reward": [
+				"defense_up"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "사내는 당신의 설명을 듣고 오해를 풀지만, 여전히 경계하는 눈치다."
+					}
+				},
+				{
+					"speaker": "executive_subordinate",
+					"content": {
+						"korean": "다음부터는 말조심해라."
+					}
+				},
+				{
+					"speaker": "dax",
+					"content": {
+						"korean": "직접 대화해서 오해를 푸는 것이 역시 최고네요."
+					}
+				}
+			]
+		}
+	],
+	"tags": [
+		"executive_subordinate",
+		"dax"
+	],
+	"_design": {
+		"slot": "C",
+		"kind": "callback",
+		"person": {
+			"name": "간부의 부하",
+			"role": "백상어파 간부의 부하",
+			"id": "executive_subordinate"
+		},
+		"wants": "자기 간부에 대한 헛소문의 진상을 밝히고 싶어 한다.",
+		"rule_link": "앞서 들은 소문을 사실처럼 받아들인 결과로, 소문의 당사자를 직접 만나 사정을 들을지 피할지 선택한다.",
+		"events": {},
+		"flags": {
+			"executive_subordinate_chase": {
+				"kind": "bad",
+				"boss_penalty": -1,
+				"label": {
+					"korean": "부하의 추격"
+				},
+				"boss_line": {
+					"korean": "간부의 부하가 보스 방까지 쫓아와 시비를 건다."
+				}
+			},
+			"executive_subordinate_trust": {
+				"kind": "good",
+				"boss_penalty": 1,
+				"label": {
+					"korean": "부하의 신뢰"
+				},
+				"boss_choice": {
+					"korean": "간부의 부하가 당신을 믿고 보스 방에서 작은 도움을 준다."
+				}
+			}
+		}
+	}
+}

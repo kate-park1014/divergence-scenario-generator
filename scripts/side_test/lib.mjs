@@ -71,6 +71,7 @@ function post(body) {
 	const data = Buffer.from(JSON.stringify(body));
 	return new Promise((resolve, reject) => {
 		const req = https.request(pv.url, { method: 'POST', headers: { 'Content-Type': 'application/json', 'Content-Length': data.length, Authorization: `Bearer ${KEY}` } }, (res) => {
+			res.setEncoding('utf8'); // 조각 경계에서 한글이 깨지지 않게 (Buffer 를 문자열로 바로 이으면 3바이트 글자가 잘림)
 			let d = '';
 			res.on('data', (c) => (d += c));
 			res.on('end', () => resolve({ status: res.statusCode, text: d }));

@@ -1,0 +1,324 @@
+{
+	"id": "card_01_alley_brawl",
+	"title": {
+		"korean": "포장마차 앞, 불똥 튀는 시비"
+	},
+	"intensity": "calm",
+	"after_story": 7,
+	"before_story": 9,
+	"condition": {
+		"leaning": "fighting-",
+		"among": [
+			"fighting-",
+			"fighting+",
+			"community-",
+			"community+",
+			"reason-",
+			"reason+"
+		],
+		"min": 20
+	},
+	"urgency": 8,
+	"leaning": "fighting-",
+	"background_tags": [
+		"alley",
+		"night",
+		"dim_light",
+		"street_vendor",
+		"tension"
+	],
+	"dialogue": [
+		{
+			"speaker": "narrator",
+			"content": {
+				"korean": "골목 어귀의 포장마차 앞에서 험악한 고성이 오간다. 술 취한 사내 둘이 포장마차 주인을 위협하고 있다."
+			}
+		},
+		{
+			"speaker": "pojangmacha_owner_park",
+			"content": {
+				"korean": "당신이 그 소문 자자한 '주먹 해결사' 아니오? 이런 골목 시비는 딱 당신 전문이겠구만!"
+			}
+		},
+		{
+			"speaker": "dax",
+			"content": {
+				"korean": "저런 싸움에 휘말리면 괜히 일만 커집니다."
+			}
+		},
+		{
+			"speaker": "pojangmacha_owner_park",
+			"content": {
+				"korean": "이놈들이 당장 돈 내놓으라며 난리라니, 얼른 처리해 줘요!"
+			}
+		},
+		{
+			"speaker": "narrator",
+			"content": {
+				"korean": "포장마차 주인은 당신을 보며 삿대질한다."
+			}
+		}
+	],
+	"choices": [
+		{
+			"text": {
+				"korean": "시비 거는 사내들의 멱살을 잡고 골목 밖으로 던져 버린다."
+			},
+			"path": "easy",
+			"mbti": "ET",
+			"flag": "quick_brawl",
+			"effects": {
+				"fighting": 20,
+				"echo": 5,
+				"gold": 50
+			},
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "당신의 완력에 사내들은 비명도 못 지르고 골목 밖으로 튕겨 나갔다."
+					}
+				},
+				{
+					"speaker": "pojangmacha_owner_park",
+					"content": {
+						"korean": "이야, 역시 소문대로군! 여기, 화끈한 해결비요!"
+					}
+				},
+				{
+					"speaker": "dax",
+					"content": {
+						"korean": "싸움이 너무 빨리 끝났네요. 그래도 잘 해결된 것 같아 다행입니다."
+					}
+				}
+			],
+			"risk": {
+				"chance": "mid",
+				"bad": {
+					"effects": {
+						"gold": -30
+					},
+					"reward": [
+						"hp_down"
+					],
+					"result": [
+						{
+							"speaker": "narrator",
+							"content": {
+								"korean": "당신의 완력에 사내들은 비명도 못 지르고 골목 밖으로 튕겨 나갔지만, 포장마차 한쪽이 부서졌다."
+							}
+						},
+						{
+							"speaker": "pojangmacha_owner_park",
+							"content": {
+								"korean": "어이쿠! 이럴 수가, 내 포장마차까지 부숴 버리면 어떡해!"
+							}
+						},
+						{
+							"speaker": "dax",
+							"content": {
+								"korean": "이런, 부장님을 만나기도 전에 괜히 주목만 받겠네요."
+							}
+						}
+					]
+				}
+			}
+		},
+		{
+			"text": {
+				"korean": "사내들의 어깨를 잡고 조용히 대화를 시도해 시비의 원인을 묻는다."
+			},
+			"path": "hard",
+			"mbti": "IS",
+			"flag": "calm_approach",
+			"effects": {
+				"echo": 10,
+				"reason": 10,
+				"fighting": -20
+			},
+			"reward": [
+				"defense_up"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "당신의 침착한 태도에 사내들은 잠시 당황하더니, 억울한 사정을 털어놓기 시작했다."
+					}
+				},
+				{
+					"speaker": "dax",
+					"content": {
+						"korean": "역시 강하다고 해서 무작정 휘두르진 않으시는군요."
+					}
+				},
+				{
+					"speaker": "pojangmacha_owner_park",
+					"content": {
+						"korean": "쳇, 굳이 저런 것들 말까지 들어줄 필요가 있나…"
+					}
+				}
+			],
+			"risk": {
+				"chance": "high",
+				"bad": {
+					"effects": {
+						"gold": -20
+					},
+					"reward": [],
+					"result": [
+						{
+							"speaker": "narrator",
+							"content": {
+								"korean": "당신의 침착한 태도에 사내들은 잠시 당황하더니, 갑자기 더 크게 욕설을 퍼붓기 시작했다."
+							}
+						},
+						{
+							"speaker": "dax",
+							"content": {
+								"korean": "아, 이러다가는 부장님에게까지 소리가 들릴 것 같아요!"
+							}
+						},
+						{
+							"speaker": "pojangmacha_owner_park",
+							"content": {
+								"korean": "쯧쯧, 괜히 어설프게 나대다가 망신만 당하는군!"
+							}
+						}
+					]
+				}
+			}
+		},
+		{
+			"text": {
+				"korean": "주먹으로 벽을 쳐 소문을 확인시켜 주고 사내들에게 물러나라고 경고한다."
+			},
+			"path": "stat",
+			"mbti": "TJ",
+			"require": {
+				"stat": "fighting",
+				"op": "<=",
+				"value": -40
+			},
+			"flag": "wall_punch_warning",
+			"effects": {
+				"echo": 10,
+				"community": -10,
+				"fighting": -30
+			},
+			"reward": [
+				"shield"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "벽이 부서지는 소리에 사내들은 혼비백산하며 도망쳤다. 포장마차 주인도 움찔한다."
+					}
+				},
+				{
+					"speaker": "pojangmacha_owner_park",
+					"content": {
+						"korean": "헐, 저렇게까지 할 줄이야. 역시 '주먹 해결사' 다워!"
+					}
+				},
+				{
+					"speaker": "dax",
+					"content": {
+						"korean": "과연 소문대로 대단하십니다만, 조용히 처리할 수도 있었을 텐데요."
+					}
+				}
+			]
+		},
+		{
+			"text": {
+				"korean": "포장마차 주인에게 돈을 쥐여주며 시비 거는 사내들을 달래서 보내달라고 부탁한다."
+			},
+			"path": "gold",
+			"mbti": "EN",
+			"require": {
+				"stat": "gold",
+				"op": ">=",
+				"value": 100
+			},
+			"effects": {
+				"echo": -5,
+				"gold": -100,
+				"community": 10
+			},
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "포장마차 주인은 당신의 돈을 받고 사내들에게 몇 푼 쥐여주며 돌려보냈다."
+					}
+				},
+				{
+					"speaker": "pojangmacha_owner_park",
+					"content": {
+						"korean": "에이, 진작 이렇게 할 것이지. 역시 돈이 최고여!"
+					}
+				},
+				{
+					"speaker": "dax",
+					"content": {
+						"korean": "어휴, 돈으로 해결하면 간단하긴 하지만 뭔가 찜찜하네요."
+					}
+				}
+			]
+		}
+	],
+	"tags": [
+		"pojangmacha_owner_park",
+		"dax"
+	],
+	"_design": {
+		"slot": "D",
+		"kind": "rep",
+		"person": {
+			"id": "pojangmacha_owner_park",
+			"name": "박 사장",
+			"role": "포장마차 주인"
+		},
+		"wants": "주먹부터 쓰고 맞서 싸우는 해결사라는 당신의 소문을 듣고 시비 해결을 부탁합니다.",
+		"rule_link": "당신의 소문은 현장을 먼저 파악하기보다 불필요한 충돌을 먼저 일으킬 수 있음을 암시합니다.",
+		"rep": "fighting-",
+		"events": {},
+		"flags": {
+			"quick_brawl": {
+				"kind": "bad",
+				"boss_penalty": -1,
+				"label": {
+					"korean": "빠른 난투"
+				},
+				"boss_line": {
+					"korean": "방 10 싸움 시작 시 당신은 한 대 맞고 시작한다."
+				}
+			},
+			"calm_approach": {
+				"kind": "good",
+				"boss_penalty": 1,
+				"label": {
+					"korean": "침착한 접근"
+				},
+				"boss_choice": {
+					"korean": "방 10 싸움에서 경리부장은 당신의 말에 귀를 기울인다."
+				}
+			},
+			"wall_punch_warning": {
+				"kind": "good",
+				"boss_penalty": 2,
+				"label": {
+					"korean": "벽 부수기 경고"
+				},
+				"boss_choice": {
+					"korean": "방 10 싸움에서 경리부장은 당신의 위세에 눌려 잠시 주춤한다."
+				}
+			}
+		}
+	}
+}

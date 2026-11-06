@@ -1,0 +1,414 @@
+{
+	"cards": [
+		{
+			"no": 1,
+			"dialogue": [
+				{
+					"speaker": "narrator",
+					"text": "골목 어귀에 다다르자 노점상 할머니가 당신을 발견하고 다가옵니다."
+				},
+				{
+					"speaker": "street_vendor",
+					"text": "아이고, 당신이 그 소문으로 듣던, 뭐든 원칙대로 처리한다는 해결사 양반들이구먼."
+				},
+				{
+					"speaker": "street_vendor",
+					"text": "우리 가게 복덩이 냄비가 사라졌는데, 저기 저 주정뱅이가 가져갔다고 하는구먼."
+				},
+				{
+					"text": "쟤는 내 말을 듣지도 않고, 난 저기로 들어갈 수도 없고...",
+					"speaker": "street_vendor"
+				},
+				{
+					"text": "냄비가 사라졌다니, 저 주정뱅이가 수상하긴 하네요.",
+					"speaker": "dax"
+				}
+			],
+			"key": "street_vendor_rules",
+			"rule_link": "수상한 상황과 남의 말을 듣고 즉시 판단하기보다, 규칙에 따라 차분히 상황을 파악하고 해결합니다.",
+			"background_tags": [
+				"alley",
+				"night",
+				"dim",
+				"few",
+				"tense"
+			],
+			"choices": [
+				{
+					"risk_bad": {
+						"reward": [],
+						"gold": -30,
+						"result": [
+							{
+								"text": "주정뱅이는 오히려 당신에게 성을 내며 냄비를 던지고 소리를 질러댑니다.",
+								"speaker": "narrator"
+							},
+							{
+								"speaker": "dax",
+								"text": "아이고, 일이 더 커졌네요! 저러다 경비들이 몰려오겠습니다!"
+							}
+						]
+					},
+					"reward": [
+						"attack_up"
+					],
+					"path": "easy",
+					"effects": {
+						"echo": 5,
+						"community": 10
+					},
+					"flag": {
+						"label": "노점상 소동",
+						"key": "vendor_commotion_easy",
+						"boss_text": "노점상 소동 때문에 적들이 경계 태세를 강화합니다."
+					},
+					"result": [
+						{
+							"speaker": "narrator",
+							"text": "당신이 차분한 태도로 규칙을 언급하며 냄비를 돌려달라 요구하자, 주정뱅이는 순순히 냄비를 내어줍니다."
+						},
+						{
+							"text": "아이고, 해결사 양반 덕분에 복덩이를 찾았네! 여기 이거라도 받아요.",
+							"speaker": "street_vendor"
+						},
+						{
+							"speaker": "dax",
+							"text": "소문대로시네요! 덕분에 일이 깔끔하게 해결됐습니다."
+						}
+					],
+					"text": "주정뱅이에게 다가가 규칙대로 물건을 돌려달라 요구한다.",
+					"mbti": "TJ"
+				},
+				{
+					"result": [
+						{
+							"text": "당신은 노점상 할머니의 부탁을 뒤로하고 목표를 향해 발걸음을 재촉합니다.",
+							"speaker": "narrator"
+						},
+						{
+							"speaker": "street_vendor",
+							"text": "쯧쯧, 소문만 요란했구먼. 내 부탁 하나 들어줄 생각도 없고..."
+						},
+						{
+							"text": "할머니가 실망하신 것 같습니다만, 저희 일이 먼저긴 하죠.",
+							"speaker": "dax"
+						}
+					],
+					"flag": {
+						"key": "vendor_avoid_hard",
+						"boss_text": "노점상 소동을 피한 덕분에 적들에게 들키지 않고 골목으로 진입합니다.",
+						"label": "노점상 회피"
+					},
+					"risk_bad": {
+						"result": [
+							{
+								"text": "노점상 할머니는 당신에게 대고 쉴 새 없이 욕설을 퍼부어댑니다.",
+								"speaker": "narrator"
+							},
+							{
+								"speaker": "narrator",
+								"text": "골목 전체에 할머니의 목소리가 울려 퍼집니다."
+							},
+							{
+								"text": "저러다 다 들키겠습니다! 빨리 움직이시죠!",
+								"speaker": "dax"
+							}
+						],
+						"gold": -20,
+						"reward": []
+					},
+					"mbti": "FP",
+					"text": "주정뱅이를 무시하고 골목 안으로 바로 들어간다.",
+					"effects": {
+						"reason": 10,
+						"echo": -5
+					},
+					"path": "hard",
+					"reward": [
+						"defense_up"
+					]
+				},
+				{
+					"reward": [
+						"intelligence_up"
+					],
+					"effects": {
+						"echo": 10,
+						"community": 15,
+						"reason": -20
+					},
+					"path": "stat",
+					"flag": {
+						"label": "노점상 중재",
+						"boss_text": "노점상 할머니의 조언으로 적들의 약점을 정확히 파악합니다.",
+						"key": "vendor_mediate_stat"
+					},
+					"result": [
+						{
+							"text": "당신은 주정뱅이와 노점상 할머니를 불러 세워 양쪽의 이야기를 듣습니다.",
+							"speaker": "narrator"
+						},
+						{
+							"text": "냄비는 주정뱅이가 잠시 빌려 간 것이었습니다.",
+							"speaker": "narrator"
+						},
+						{
+							"text": "아이고, 내가 너무 성급했네. 해결사 양반 덕분에 오해가 풀렸어. 여기 이거라도 받아요.",
+							"speaker": "street_vendor"
+						},
+						{
+							"speaker": "dax",
+							"text": "역시 소문대로시네요! 원칙대로 일을 해결하시면서도 모두를 만족시키셨습니다."
+						}
+					],
+					"text": "골목 안으로 들어가지 않고, 주정뱅이와 노점상 할머니를 불러 직접 자초지종을 듣고 중재한다.",
+					"mbti": "ET"
+				}
+			],
+			"wants": "우리 가게 복덩이 냄비가 사라졌어. 저기 저 주정뱅이가 가져갔다고 하는데, 내 말은 안 듣고...",
+			"title": "노점상과 사라진 냄비",
+			"person": {
+				"name": "포장마차 할머니",
+				"role": "골목 노점상",
+				"id": "street_vendor"
+			},
+			"slot": "D",
+			"kind": "rep",
+			"rep_dir": "reason-"
+		},
+		{
+			"wants": "저 주정뱅이가 자꾸 뭘 숨겨서 팔려고 하는구먼. 저거 팔면 골목이 시끄러워질 텐데...",
+			"background_tags": [
+				"alley",
+				"night",
+				"dim",
+				"few",
+				"lively"
+			],
+			"dialogue": [
+				{
+					"speaker": "narrator",
+					"text": "골목 어귀에 다다르자 노점상 할머니가 당신을 발견하고 다가옵니다."
+				},
+				{
+					"speaker": "street_vendor",
+					"text": "아이고, 당신이 그 소문으로 듣던, 뭐든 직감대로 시원하게 처리한다는 해결사 양반들이구먼."
+				},
+				{
+					"speaker": "street_vendor",
+					"text": "저 주정뱅이가 뭘 자꾸 숨겨서 팔려고 하는구먼."
+				},
+				{
+					"speaker": "street_vendor",
+					"text": "저거 팔면 이 골목이 시끄러워질 텐데. 내가 가서 말려봤자 소용없고..."
+				},
+				{
+					"text": "뭘 숨겨서 판다니, 저 주정뱅이가 수상하긴 하네요.",
+					"speaker": "dax"
+				}
+			],
+			"rule_link": "겉으로 드러난 상황이나 남의 말을 맹목적으로 믿기보다, 직감과 재치로 상황을 파악하고 해결합니다.",
+			"choices": [
+				{
+					"path": "easy",
+					"reward": [
+						"attack_up"
+					],
+					"mbti": "SP",
+					"result": [
+						{
+							"speaker": "narrator",
+							"text": "당신이 주정뱅이에게 다가가 숨겨둔 물건을 확인하자, 그는 놀라 허둥지둥 물건을 숨깁니다."
+						},
+						{
+							"speaker": "narrator",
+							"text": "낡은 폭죽 뭉치였습니다."
+						},
+						{
+							"speaker": "street_vendor",
+							"text": "옳지, 저거 팔다 터지면 골목 전체가 시끄러워질 텐데! 해결사 양반 덕분에 살았네! 여기 이거라도 받아요."
+						},
+						{
+							"text": "역시 시원시원하시네요! 덕분에 골목이 조용해졌습니다.",
+							"speaker": "dax"
+						}
+					],
+					"effects": {
+						"fighting": 10,
+						"echo": 5
+					},
+					"text": "주정뱅이에게 다가가 무엇을 파는지 직접 확인하고 막아선다.",
+					"flag": {
+						"key": "vendor_fireworks_easy",
+						"label": "노점상 폭죽",
+						"boss_text": "폭죽 소리 때문에 당신의 진입 경로가 적에게 노출됩니다."
+					},
+					"risk_bad": {
+						"result": [
+							{
+								"speaker": "narrator",
+								"text": "당신이 다가가자 주정뱅이는 놀라 손에 든 폭죽 뭉치를 놓쳤고, 폭죽이 연달아 터지며 요란한 소리를 냅니다."
+							},
+							{
+								"speaker": "dax",
+								"text": "아이고, 저러다 경비들이 다 몰려오겠습니다!"
+							}
+						],
+						"gold": -40,
+						"reward": []
+					}
+				},
+				{
+					"result": [
+						{
+							"text": "당신이 경찰에 신고하자 노점상 할머니는 의아해했지만, 이내 경찰이 도착해 주정뱅이를 조사하기 시작합니다.",
+							"speaker": "narrator"
+						},
+						{
+							"text": "아이고, 뭐 그렇게까지... 그냥 내가 가서 말려도 됐을 것을.",
+							"speaker": "street_vendor"
+						},
+						{
+							"speaker": "dax",
+							"text": "시간이 좀 걸리겠지만, 확실한 방법이긴 합니다."
+						}
+					],
+					"reward": [
+						"defense_up"
+					],
+					"risk_bad": {
+						"result": [
+							{
+								"text": "경찰은 한참 뒤에 도착했고, 이미 주정뱅이는 사라진 뒤였습니다.",
+								"speaker": "narrator"
+							},
+							{
+								"speaker": "narrator",
+								"text": "경찰은 한동안 골목을 수색하며 길을 막아섭니다."
+							},
+							{
+								"speaker": "dax",
+								"text": "이러다 저희까지 발이 묶이겠습니다! 괜히 신고했네요."
+							}
+						],
+						"reward": [],
+						"gold": -20
+					},
+					"flag": {
+						"boss_text": "경찰이 골목을 수색하느라 적들이 잠시 발이 묶입니다.",
+						"key": "vendor_police_hard",
+						"label": "노점상 경찰"
+					},
+					"text": "경찰에 신고하여 주정뱅이의 수상한 거래를 조사하게 한다.",
+					"effects": {
+						"echo": -5,
+						"reason": -10
+					},
+					"mbti": "TP",
+					"path": "hard"
+				},
+				{
+					"reward": [
+						"attack_up"
+					],
+					"result": [
+						{
+							"text": "당신은 주정뱅이에게 다가가 그의 물건을 모두 사들이거나 빼앗아 버립니다.",
+							"speaker": "narrator"
+						},
+						{
+							"text": "그는 망연자실한 표정으로 털썩 주저앉습니다.",
+							"speaker": "narrator"
+						},
+						{
+							"speaker": "street_vendor",
+							"text": "아이고, 저걸 그냥 확!"
+						},
+						{
+							"text": "저 밀주가 돌면 골목이 시끄러워질 텐데, 해결사 양반 덕분에 조용하겠네! 여기 이거라도 받아요.",
+							"speaker": "street_vendor"
+						},
+						{
+							"text": "역시 시원시원하게 해결하시네요! 덕분에 골목이 조용해졌습니다.",
+							"speaker": "dax"
+						}
+					],
+					"mbti": "EJ",
+					"path": "stat",
+					"effects": {
+						"fighting": 20,
+						"reason": 15,
+						"echo": 10
+					},
+					"text": "주정뱅이에게 접근하여 그의 물건을 즉흥적으로 사들이거나 빼앗아 골목에 유통되는 것을 막는다.",
+					"flag": {
+						"key": "vendor_bootleg_stat",
+						"label": "노점상 밀주",
+						"boss_text": "노점상 할머니가 건넨 밀주 덕분에 적들의 움직임이 둔해집니다."
+					}
+				},
+				{
+					"mbti": "IS",
+					"reward": [
+						"shield"
+					],
+					"result": [
+						{
+							"text": "당신이 술 한잔을 건네자 주정뱅이는 경계를 풀고 자신이 파는 것이",
+							"speaker": "narrator"
+						},
+						{
+							"speaker": "narrator",
+							"text": "직접 만든 '복덩이 부적'이라고 말합니다. 당신은 부적 하나를 사줍니다."
+						},
+						{
+							"text": "아이고, 겨우 부적 따위를 팔고 있었구먼. 쓸데없는 걱정만 했네.",
+							"speaker": "street_vendor"
+						},
+						{
+							"speaker": "dax",
+							"text": "역시 당신은 정말 독특하시네요! 덕분에 재미있는 구경을 했습니다."
+						}
+					],
+					"path": "fun",
+					"effects": {
+						"community": 10,
+						"gold": 50
+					},
+					"risk_bad": {
+						"reward": [],
+						"result": [
+							{
+								"text": "당신이 술 한잔을 건네자 주정뱅이는 경계를 풀고 자신이 파는 것이 불법 밀수품이라고 떠벌립니다.",
+								"speaker": "narrator"
+							},
+							{
+								"text": "그의 목소리가 골목에 울려 퍼집니다.",
+								"speaker": "narrator"
+							},
+							{
+								"text": "아이고, 저러다 경비들이 다 몰려오겠습니다! 그냥 지나칠 걸 그랬습니다!",
+								"speaker": "dax"
+							}
+						],
+						"gold": -50
+					},
+					"text": "주정뱅이 옆에 앉아 그가 파는 물건이 뭔지 묻고 함께 술 한잔을 청한다."
+				}
+			],
+			"key": "street_vendor_impulse",
+			"title": "주정뱅이의 수상한 거래",
+			"no": 2,
+			"person": {
+				"name": "포장마차 할머니",
+				"id": "street_vendor",
+				"role": "골목 노점상"
+			},
+			"slot": "D",
+			"kind": "rep",
+			"rep_dir": "reason+"
+		}
+	],
+	"errors": [],
+	"prompt_hash": "07b876f783ef6fe427337ca06156e910e9bd4378"
+}

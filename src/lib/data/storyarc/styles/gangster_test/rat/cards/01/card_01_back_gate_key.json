@@ -1,0 +1,163 @@
+{
+	"id": "card_01_back_gate_key",
+	"title": {
+		"korean": "뒷담 쪽문 열쇠"
+	},
+	"intensity": "high",
+	"after_story": 7,
+	"before_story": 9,
+	"callback": {
+		"seed": "dock_gate_guard_hard",
+		"min_rooms_after": 2
+	},
+	"background_tags": [
+		"alley",
+		"night",
+		"streetlight",
+		"no_crowd",
+		"relieved"
+	],
+	"dialogue": [
+		{
+			"speaker": "narrator",
+			"content": {
+				"korean": "골목 안쪽에서 불길이 솟구치는 와중에, 야간 경비가 조심스럽게 골목 입구로 다가온다."
+			}
+		},
+		{
+			"speaker": "dock_guard_d2",
+			"content": {
+				"korean": "저번에 제가 너무 무례했습니다. 회장님 심부름이라는 걸 뒤늦게 알았습니다."
+			}
+		},
+		{
+			"speaker": "dax",
+			"content": {
+				"korean": "어? 경비 아저씨? 여기는 어쩐 일로...?"
+			}
+		},
+		{
+			"speaker": "dock_guard_d2",
+			"content": {
+				"korean": "이 골목 뒷담에 쪽문이 하나 있습니다. 이 열쇠로 조용히 들어가십시오."
+			}
+		},
+		{
+			"speaker": "dock_guard_d2",
+			"content": {
+				"korean": "안 그러면 경리부장에게 들킬 수도 있습니다."
+			}
+		},
+		{
+			"speaker": "narrator",
+			"content": {
+				"korean": "경비가 손에 쥔 낡은 열쇠를 당신에게 내민다."
+			}
+		}
+	],
+	"choices": [
+		{
+			"text": {
+				"korean": "야간 경비에게 고맙다고 말하고 쪽문 열쇠를 받는다."
+			},
+			"path": "easy",
+			"mbti": "EP",
+			"flag": "back_door_key",
+			"effects": {
+				"echo": 10
+			},
+			"reward": [
+				"attack_up"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "당신은 경비에게 꾸벅 인사를 하고 열쇠를 받아든다."
+					}
+				},
+				{
+					"speaker": "dax",
+					"content": {
+						"korean": "경비 아저씨 덕분에 편하게 들어갈 수 있겠어요!"
+					}
+				}
+			]
+		},
+		{
+			"text": {
+				"korean": "경비에게 다시 한번 고맙다고 말하고, 쪽문이 안전한지 한 번 더 확인한다."
+			},
+			"path": "hard",
+			"mbti": "IT",
+			"flag": "secure_back_door",
+			"effects": {
+				"reason": 10,
+				"community": 5
+			},
+			"reward": [
+				"defense_up"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "경비는 당신의 질문에 "
+					}
+				},
+				{
+					"speaker": "dock_guard_d2",
+					"content": {
+						"korean": "걱정 마십시오. 저만이 아는 길입니다."
+					}
+				},
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "라며 확신에 찬 표정을 짓는다. 닥스는 그의 표정을 보고 안심한다."
+					}
+				}
+			]
+		}
+	],
+	"tags": [
+		"dock_guard_d2",
+		"dax"
+	],
+	"_design": {
+		"slot": "D",
+		"kind": "callback",
+		"person": {
+			"role": "부두 정문 경비원",
+			"name": "야간 경비",
+			"id": "dock_guard_d2"
+		},
+		"wants": "자신의 근무지 안전을 철저히 지키고 싶어 함",
+		"rule_link": "야간 경비의 도움을 믿고 그의 말을 따를지, 아니면 다른 방법을 찾아 골목에 진입할지 선택해야 합니다.",
+		"events": {},
+		"flags": {
+			"back_door_key": {
+				"kind": "good",
+				"boss_penalty": 1,
+				"label": {
+					"korean": "쪽문 열쇠"
+				},
+				"boss_choice": {
+					"korean": "쪽문 열쇠로 경리부장의 방에 몰래 침투할 수 있다."
+				}
+			},
+			"secure_back_door": {
+				"kind": "good",
+				"boss_penalty": 2,
+				"label": {
+					"korean": "안전한 쪽문"
+				},
+				"boss_choice": {
+					"korean": "야간 경비가 알려준 쪽문은 보안이 철저하여 경리부장이 눈치채지 못한다."
+				}
+			}
+		}
+	}
+}

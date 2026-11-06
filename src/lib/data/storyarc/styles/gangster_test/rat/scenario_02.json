@@ -1,0 +1,473 @@
+{
+  "scenario_id": "gangster_rat_02",
+  "order": 2,
+  "act": "rising",
+  "theme": "modern",
+  "actors": {
+    "dax": {
+      "id": "mon_08d5b43e-f9ab-4469-9064-855e170b0cdc",
+      "name": {
+        "korean": "닥스",
+        "english": "Dax",
+        "japanese": "ダックス",
+        "chinese": "达克斯",
+        "french": "Dax",
+        "spanish": "Dax",
+        "vietnamese": "Dax",
+        "thai": "แด็กซ์",
+        "hindi": "डैक्स"
+      },
+      "description": "",
+      "face_image_url": "https://imagedelivery.net/WTEqQNGFb-l-IHS6IGnzUQ/84bb11db-6eb4-4500-d274-222e8b100100/public",
+      "battle_sprite_url": "https://imagedelivery.net/WTEqQNGFb-l-IHS6IGnzUQ/5d325a75-bd91-4758-7b3f-ad9a97e52700/public",
+      "role": {
+        "korean": "백상어파 막내 운전기사"
+      }
+    }
+  },
+  "boss": {
+    "pool_id": "random_boss",
+    "role": {
+      "korean": "창고 담당 간부"
+    }
+  },
+  "prologue": {
+    "korean": [
+      "기금을 빼돌린 쥐를 찾기 위해 해결사들이 다시 움직인다.",
+      "첫 번째 용의자가 남긴 장부는 가짜였지만 반듯한 글씨가 새로운 단서로 남았다.",
+      "이번에 찾아갈 곳은 밤안개가 자욱하게 깔린 컨테이너 야적장이다.",
+      "금고 상자를 통째로 옮길 힘을 가진 두 번째 용의자가 그곳에 있다."
+    ]
+  },
+  "rooms": [
+    {
+      "dialogue": [
+        {
+          "content": {
+            "korean": "비서가 건넨 메모에는 두 번째 용의자인 창고 담당 간부의 야간 근무 일정이 적혀 있다."
+          },
+          "speaker": "narrator",
+          "type": "speech"
+        },
+        {
+          "speaker": "dax",
+          "type": "direction",
+          "action": "enter",
+          "spot": [
+            500,
+            800
+          ],
+          "duration_ms": 500
+        },
+        {
+          "emotion": "base",
+          "type": "speech",
+          "content": {
+            "korean": "비서님이 다음 용의자로 창고 담당 간부님을 짚어 주셨어요."
+          },
+          "speaker": "dax"
+        },
+        {
+          "type": "speech",
+          "speaker": "character_any",
+          "content": {
+            "korean": "금고 상자를 통째로 들고 나갈 만한 힘을 가진 건 그 간부뿐이라는 거군."
+          },
+          "emotion": "base"
+        },
+        {
+          "speaker": "character_1",
+          "content": {
+            "korean": "지난번 경리부장 때는 다짜고짜 덤볐다가 가짜 장부만 태울 뻔했잖아."
+          },
+          "type": "speech",
+          "emotion": "sad"
+        },
+        {
+          "type": "speech",
+          "content": {
+            "korean": "히어로들은 무작정 뛰어드는 대신 수상한 행동을 끝까지 지켜보기로 뜻을 모은다."
+          },
+          "speaker": "narrator"
+        },
+        {
+          "emotion": "base",
+          "type": "speech",
+          "content": {
+            "korean": "맞아. 이번엔 서두르지 말고 무슨 짓을 하는지 끝까지 지켜보자."
+          },
+          "speaker": "character_any"
+        }
+      ],
+      "id": 1
+    },
+    {
+      "id": 3,
+      "dialogue": [
+        {
+          "type": "direction",
+          "duration_ms": 500,
+          "action": "enter",
+          "spot": [
+            500,
+            800
+          ],
+          "speaker": "dax"
+        },
+        {
+          "speaker": "narrator",
+          "content": {
+            "korean": "차창 밖으로 안개 낀 컨테이너 야적장의 시계가 새벽 세 시를 가리킨다."
+          },
+          "type": "speech"
+        },
+        {
+          "emotion": "base",
+          "type": "speech",
+          "content": {
+            "korean": "다들 조용히 하세요. 부두 구석에서 누군가 걸어 나와요."
+          },
+          "speaker": "dax"
+        },
+        {
+          "type": "speech",
+          "speaker": "narrator",
+          "content": {
+            "korean": "덩치 큰 그림자가 주위를 두리번거리더니 파란 컨테이너의 자물쇠를 연다."
+          }
+        },
+        {
+          "emotion": "base",
+          "type": "speech",
+          "speaker": "character_2",
+          "content": {
+            "korean": "자물쇠 여는 손놀림이 장난 아닌데?"
+          }
+        },
+        {
+          "type": "speech",
+          "speaker": "character_any",
+          "emotion": "base",
+          "content": {
+            "korean": "쉿, 소리 내지 마. 멀리서 그림자만 보이니까 조용히 숨어 있자."
+          }
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "dialogue": [
+        {
+          "spot": [
+            500,
+            800
+          ],
+          "action": "enter",
+          "duration_ms": 500,
+          "speaker": "dax",
+          "type": "direction"
+        },
+        {
+          "type": "speech",
+          "content": {
+            "korean": "그림자가 수레에서 커다란 상자들을 내려 컨테이너 안으로 부지런히 나른다."
+          },
+          "speaker": "narrator"
+        },
+        {
+          "emotion": "base",
+          "type": "speech",
+          "speaker": "dax",
+          "content": {
+            "korean": "저 상자 크기, 사라진 기금 상자랑 너무 비슷해요!"
+          }
+        },
+        {
+          "content": {
+            "korean": "으으, 당장 덮치고 싶어서 손이 근질거리는데!"
+          },
+          "speaker": "character_3",
+          "type": "speech",
+          "emotion": "angry"
+        },
+        {
+          "content": {
+            "korean": "히어로들은 약속대로 숨을 죽인 채 자리를 지킨다."
+          },
+          "speaker": "narrator",
+          "type": "speech"
+        },
+        {
+          "speaker": "character_any",
+          "content": {
+            "korean": "참아. 이번엔 상자가 다 들어갈 때까지 꾹 참고 기다릴 거야."
+          },
+          "emotion": "base",
+          "type": "speech"
+        }
+      ]
+    },
+    {
+      "dialogue": [
+        {
+          "duration_ms": 500,
+          "spot": [
+            500,
+            800
+          ],
+          "speaker": "dax",
+          "action": "enter",
+          "type": "direction"
+        },
+        {
+          "content": {
+            "korean": "마지막 상자까지 들여놓은 그림자가 컨테이너 안으로 들어가 문을 닫는다."
+          },
+          "speaker": "narrator",
+          "type": "speech"
+        },
+        {
+          "emotion": "base",
+          "type": "speech",
+          "content": {
+            "korean": "문이 닫혔는데도 안에서 무슨 소리가 들리는데요?"
+          },
+          "speaker": "dax"
+        },
+        {
+          "type": "speech",
+          "content": {
+            "korean": "닫힌 쇠문 너머로 무언가 바스락거리는 소리와 조용한 콧노래가 새어 나온다."
+          },
+          "speaker": "narrator"
+        },
+        {
+          "type": "speech",
+          "emotion": "base",
+          "content": {
+            "korean": "상자 안에서 돈다발이라도 세고 있나 보지?"
+          },
+          "speaker": "character_4"
+        },
+        {
+          "emotion": "base",
+          "speaker": "character_any",
+          "content": {
+            "korean": "문이 닫혔으니 이제 천천히 접근해서 안을 확인하자."
+          },
+          "type": "speech"
+        }
+      ],
+      "id": 7
+    },
+    {
+      "id": 9,
+      "event": "campsite",
+      "before_event_dialogue": [
+        {
+          "type": "direction",
+          "duration_ms": 500,
+          "speaker": "dax",
+          "spot": [
+            500,
+            800
+          ],
+          "action": "enter"
+        },
+        {
+          "type": "speech",
+          "speaker": "narrator",
+          "content": {
+            "korean": "차 뒤편에 모인 히어로들이 따뜻한 컵라면을 나눠 먹으며 숨을 고른다."
+          }
+        },
+        {
+          "type": "speech",
+          "speaker": "dax",
+          "content": {
+            "korean": "창고 간부는 문을 통째로 밀어붙일 만큼 힘이 세니까 조심해야 해요."
+          },
+          "emotion": "base"
+        },
+        {
+          "speaker": "character_any",
+          "content": {
+            "korean": "끝까지 지켜봤으니 몸 좀 풀고 가도 늦지 않아."
+          },
+          "type": "speech",
+          "emotion": "base"
+        },
+        {
+          "emotion": "happy",
+          "content": {
+            "korean": "네, 컨테이너에 뛰어들기 전에 여기서 잠깐 쉬어요."
+          },
+          "speaker": "dax",
+          "type": "speech"
+        }
+      ],
+      "dialogue": [
+        {
+          "content": {
+            "korean": "잠시 숨을 고른 히어로들이 닫혀 있던 컨테이너 문을 열어젖힌다."
+          },
+          "speaker": "narrator",
+          "type": "speech"
+        },
+        {
+          "spot": [
+            500,
+            500
+          ],
+          "duration_ms": 500,
+          "speaker": "random_boss",
+          "action": "enter",
+          "type": "direction"
+        },
+        {
+          "speaker": "random_boss",
+          "content": {
+            "korean": "누구야! 여긴 아무도 못 들어와!"
+          },
+          "emotion": "angry",
+          "type": "speech"
+        },
+        {
+          "content": {
+            "korean": "창고 담당 간부가 화들짝 놀라며 상자 앞을 몸으로 가로막는다."
+          },
+          "speaker": "narrator",
+          "type": "speech"
+        },
+        {
+          "content": {
+            "korean": "내 컨테이너 안에서 일어나는 일은 순전히 내 일이야! 조직이고 회장님이고 아무 상관없다고!"
+          },
+          "speaker": "random_boss",
+          "type": "speech",
+          "emotion": "angry"
+        },
+        {
+          "speaker": "character_any",
+          "content": {
+            "korean": "소매까지 걷어붙이고 막아서는 걸 보니 수상한 게 확실하네."
+          },
+          "type": "speech",
+          "emotion": "base"
+        }
+      ]
+    },
+    {
+      "lose_dialogue": [
+        {
+          "type": "speech",
+          "speaker": "narrator",
+          "content": {
+            "korean": "창고 담당 간부가 거대한 컨테이너 문을 세게 밀쳐내자 히어로들이 바닥을 구른다."
+          }
+        },
+        {
+          "spot": [
+            500,
+            800
+          ],
+          "speaker": "dax",
+          "duration_ms": 500,
+          "type": "direction",
+          "action": "enter"
+        },
+        {
+          "type": "speech",
+          "emotion": "sad",
+          "speaker": "dax",
+          "content": {
+            "korean": "다들 정신 차리세요! 문틈으로 꽃향기가 나는 게 분명 안에 뭔가가 있어요!"
+          }
+        }
+      ],
+      "id": 10,
+      "dialogue": [
+        {
+          "content": {
+            "korean": "창고 담당 간부가 육중한 몸으로 컨테이너 입구를 굳건히 지킨다."
+          },
+          "speaker": "narrator",
+          "type": "speech"
+        },
+        {
+          "type": "speech",
+          "speaker": "character_any",
+          "content": {
+            "korean": "밤새 끝까지 지켜봤으니까 이제 그 상자 안에 뭐가 들었는지 직접 봐야겠어!"
+          },
+          "emotion": "base"
+        },
+        {
+          "type": "speech",
+          "content": {
+            "korean": "절대 못 지나간다! 한 발짝도 못 들여놓을 줄 알아라!"
+          },
+          "speaker": "random_boss",
+          "emotion": "angry"
+        }
+      ],
+      "win_dialogue": [
+        {
+          "content": {
+            "korean": "창고 담당 간부가 컨테이너 철벽에 등을 기대며 힘없이 주저앉는다."
+          },
+          "speaker": "narrator",
+          "type": "speech"
+        },
+        {
+          "type": "speech",
+          "speaker": "random_boss",
+          "content": {
+            "korean": "으윽... 조직원들이 알면 분명 날 놀릴 거란 말이다..."
+          },
+          "emotion": "sad"
+        },
+        {
+          "content": {
+            "korean": "상자마다 화사한 꽃들이 가득하고 벽에는 '부두 꽃꽂이 교실' 시간표가 붙어 있다."
+          },
+          "speaker": "narrator",
+          "type": "speech"
+        },
+        {
+          "emotion": "base",
+          "type": "speech",
+          "content": {
+            "korean": "돈 상자인 줄 알았더니 전부 꽃꽂이 재료였잖아?"
+          },
+          "speaker": "character_any"
+        },
+        {
+          "spot": [
+            500,
+            800
+          ],
+          "action": "enter",
+          "speaker": "dax",
+          "type": "direction",
+          "duration_ms": 500
+        },
+        {
+          "speaker": "narrator",
+          "content": {
+            "korean": "밖으로 나온 닥스가 흙바닥에 깊게 파인 바퀴 자국을 가리킨다."
+          },
+          "type": "speech"
+        },
+        {
+          "emotion": "base",
+          "speaker": "dax",
+          "content": {
+            "korean": "여기 보세요! 무거운 손수레 바퀴 자국이 회장실 방향으로 길게 이어져 있어요."
+          },
+          "type": "speech"
+        }
+      ]
+    }
+  ]
+}

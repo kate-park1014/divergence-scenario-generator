@@ -1,0 +1,413 @@
+{
+	"cards": [
+		{
+			"person": {
+				"name": "김복자",
+				"role": "포장마차 아주머니",
+				"id": "cart_auntie"
+			},
+			"dialogue": [
+				{
+					"speaker": "cart_auntie",
+					"text": "어이, 당신들! 소문이 자자하던데, 자기 몫은 확실히 챙긴다는 해결사들 아니우?"
+				},
+				{
+					"speaker": "cart_auntie",
+					"text": "마침 잘 됐어. 저기 저 이상한 놈팽이 좀 치워줘. 내 장사 다 망치고 있잖아!"
+				},
+				{
+					"speaker": "dax",
+					"text": "골목 안쪽에 누군가 있는 것 같네요. 경리부장님은 아닌 것 같은데..."
+				},
+				{
+					"speaker": "narrator",
+					"text": "포장마차 아주머니가 찢어진 전단지를 흔들며 불평했다."
+				}
+			],
+			"no": 1,
+			"wants": "자신의 장사를 방해하는 시끄러운 공연자를 쫓아내고 싶어 합니다.",
+			"key": "alley_performer_nuisance",
+			"rule_link": "수상한 소문만 듣고 공연하는 사람을 쫓아낼지, 아니면 그의 사정을 먼저 들을지 결정하는 일입니다.",
+			"background_tags": [
+				"alley",
+				"night",
+				"dimlight",
+				"fewpeople",
+				"suspicious"
+			],
+			"choices": [
+				{
+					"reward": [],
+					"risk_bad": {
+						"gold": -30,
+						"result": [
+							{
+								"speaker": "narrator",
+								"text": "당신이 공연자를 위협하자, 그는 겁먹기는커녕 주머니에서 낡은 호루라기를 꺼내 불었다."
+							},
+							{
+								"text": "이내 골목 구석에서 건장한 사내 둘이 뛰쳐나왔다.",
+								"speaker": "narrator"
+							},
+							{
+								"speaker": "dax",
+								"text": "이 사람, 보통이 아니었네요! 괜히 일을 키운 것 같습니다…"
+							},
+							{
+								"speaker": "narrator",
+								"text": "당신은 어쩔 수 없이 그들을 달래느라 진이 빠졌다."
+							}
+						],
+						"reward": [
+							"hp_down"
+						]
+					},
+					"result": [
+						{
+							"speaker": "narrator",
+							"text": "당신이 공연자를 위협적으로 다가가자, 그는 눈치를 보며 재빨리 짐을 챙겼다."
+						},
+						{
+							"text": "아주머니는 당신에게 고맙다며 주머니에서 지폐 몇 장을 건넸다.",
+							"speaker": "narrator"
+						},
+						{
+							"speaker": "dax",
+							"text": "덕분에 조용해졌네요. 역시 빠르십니다!"
+						}
+					],
+					"mbti": "ST",
+					"text": "시끄러운 공연자를 위협해 쫓아낸다.",
+					"effects": {
+						"gold": 80
+					},
+					"flag": {
+						"key": "performer_grudge",
+						"boss_text": "골목에서 쫓겨난 공연자가 복수를 위해 전투에 끼어들어 당신을 방해한다.",
+						"label": "공연자 원한"
+					},
+					"path": "easy"
+				},
+				{
+					"reward": [
+						"defense_up"
+					],
+					"text": "공연자에게 직접 가서 이야기를 들어본다.",
+					"path": "hard",
+					"flag": {
+						"label": "공연자 신뢰",
+						"key": "performer_trust",
+						"boss_text": "공연자가 당신을 신뢰하며 경리부장의 수상한 움직임에 대한 정보를 제공한다."
+					},
+					"result": [
+						{
+							"speaker": "narrator",
+							"text": "당신이 공연자에게 다가가 조용히 그의 사정을 듣자, 그는 의외라는 듯 눈을 깜빡였다."
+						},
+						{
+							"speaker": "narrator",
+							"text": "생활고로 이곳에서 잠시 공연할 수밖에 없었다고 털어놓았다."
+						},
+						{
+							"text": "이야길 들어보니 안타깝네요. 그래도 덕분에 오해를 풀었습니다.",
+							"speaker": "dax"
+						}
+					],
+					"risk_bad": {
+						"gold": -20,
+						"reward": [],
+						"result": [
+							{
+								"speaker": "narrator",
+								"text": "당신이 공연자에게 다가가 말을 걸자, 그는 경계하며 당신의 말을 무시했다."
+							},
+							{
+								"text": "포장마차 아주머니는 혀를 차며 당신의 등짝을 때렸다.",
+								"speaker": "narrator"
+							},
+							{
+								"text": "저렇게 경계심이 많아서야… 쉽지 않네요.",
+								"speaker": "dax"
+							}
+						]
+					},
+					"mbti": "NF",
+					"effects": {
+						"echo": 10,
+						"community": 15
+					}
+				},
+				{
+					"mbti": "TJ",
+					"flag": {
+						"label": "공연자 위축",
+						"key": "performer_intimidated",
+						"boss_text": "공연자가 당신에게 돈을 뜯긴 뒤, 골목에서 몸을 사리며 경리부장의 방해를 무시한다."
+					},
+					"path": "stat",
+					"result": [
+						{
+							"text": "당신이 공연자에게 아주머니에게 돈을 지불하라고 요구하자, 그는 마지못해 주머니를 뒤져 돈을 꺼냈다.",
+							"speaker": "narrator"
+						},
+						{
+							"text": "아주머니는 돈을 받아들고 만족스러운 미소를 지었다.",
+							"speaker": "narrator"
+						},
+						{
+							"speaker": "dax",
+							"text": "이야, 역시 돈으로 해결하는 게 가장 확실하네요!"
+						}
+					],
+					"reward": [],
+					"effects": {
+						"gold": 100,
+						"community": -20
+					},
+					"text": "포장마차 아주머니에게 공연자의 돈을 받아주겠다고 제안한다."
+				},
+				{
+					"mbti": "EP",
+					"risk_bad": {
+						"reward": [
+							"hp_down"
+						],
+						"result": [
+							{
+								"speaker": "narrator",
+								"text": "당신이 떡볶이를 건네자 공연자는 너무 놀란 나머지 떡볶이를 사레들렸다."
+							},
+							{
+								"text": "그는 콜록거리며 주변 사람들의 시선을 집중시켰다.",
+								"speaker": "narrator"
+							},
+							{
+								"text": "저… 저러다 큰일 나겠어요! 어서 자리를 피하죠.",
+								"speaker": "dax"
+							}
+						],
+						"gold": -30
+					},
+					"path": "fun",
+					"effects": {
+						"reason": -20,
+						"gold": 50
+					},
+					"reward": [],
+					"result": [
+						{
+							"text": "당신이 공연자에게 떡볶이를 잔뜩 안겨주자, 그는 당황한 표정으로 받아들었다.",
+							"speaker": "narrator"
+						},
+						{
+							"text": "아주머니는 덩달아 웃으며 당신에게 고맙다고 했다.",
+							"speaker": "narrator"
+						},
+						{
+							"text": "떡볶이로 평화를… 예상 밖의 방법입니다!",
+							"speaker": "dax"
+						}
+					],
+					"text": "공연자에게 아주머니의 음식을 강매한다."
+				}
+			],
+			"title": "시끄러운 공연과 아주머니의 불평",
+			"slot": "D",
+			"kind": "rep",
+			"rep_dir": "community-"
+		},
+		{
+			"rule_link": "수상한 소문만 듣고 공연하는 사람을 내칠지, 아니면 그가 곤경에 처한 사정을 먼저 들어줄지 결정하는 일입니다.",
+			"background_tags": [
+				"alley",
+				"night",
+				"dimlight",
+				"fewpeople",
+				"suspicious"
+			],
+			"no": 2,
+			"wants": "가난한 공연자가 이곳에서 계속 공연할 수 있도록 좋은 방법을 찾아주길 바랍니다.",
+			"choices": [
+				{
+					"reward": [
+						"attack_up"
+					],
+					"mbti": "IS",
+					"text": "공연자에게 다른 장소로 이동해달라고 설득한다.",
+					"flag": {
+						"label": "공연자 불만",
+						"boss_text": "공연자가 옮겨간 장소에서도 문제가 생겨 전투 중 당신을 방해한다.",
+						"key": "performer_annoyance"
+					},
+					"path": "easy",
+					"effects": {
+						"echo": 5,
+						"community": 10
+					},
+					"result": [
+						{
+							"text": "당신이 공연자에게 다가가 조용히 다른 골목을 추천해 주자, 그는 고개를 끄덕였다.",
+							"speaker": "narrator"
+						},
+						{
+							"speaker": "narrator",
+							"text": "아주머니는 당신의 배려심에 감탄하며 흐뭇하게 웃었다."
+						},
+						{
+							"text": "좋은 해결책입니다. 모두가 만족하겠네요!",
+							"speaker": "dax"
+						}
+					],
+					"risk_bad": {
+						"reward": [
+							"hp_down"
+						],
+						"result": [
+							{
+								"text": "당신이 공연자에게 다른 곳을 제안하자, 그는 강하게 반발하며 오히려 더 크게 소리 질렀다.",
+								"speaker": "narrator"
+							},
+							{
+								"text": "지나가던 사람들이 호기심에 모여들기 시작했다.",
+								"speaker": "narrator"
+							},
+							{
+								"text": "어… 어쩌죠? 더 시끄러워졌습니다!",
+								"speaker": "dax"
+							}
+						],
+						"gold": -20
+					}
+				},
+				{
+					"reward": [
+						"defense_up"
+					],
+					"text": "포장마차 아주머니와 공연자 사이를 중재해 상생 방안을 찾는다.",
+					"mbti": "EN",
+					"flag": {
+						"label": "공연자 협력",
+						"key": "performer_alliance",
+						"boss_text": "공연자와 아주머니가 당신에게 힘을 보태며 전투 중 유리한 효과를 제공한다."
+					},
+					"effects": {
+						"reason": 10,
+						"community": 20
+					},
+					"path": "hard",
+					"result": [
+						{
+							"text": "당신이 아주머니와 공연자를 불러 모아 대화를 시작했다. 당신의 중재로 둘은 서로의 입장을 이해하게 되었다.",
+							"speaker": "narrator"
+						},
+						{
+							"speaker": "dax",
+							"text": "와! 이런 식으로 해결하다니 정말 대단합니다!"
+						}
+					],
+					"risk_bad": {
+						"gold": -20,
+						"result": [
+							{
+								"text": "당신이 중재를 시도했지만, 아주머니와 공연자는 서로의 주장만 내세우며 언성을 높였다.",
+								"speaker": "narrator"
+							},
+							{
+								"text": "결국, 둘은 더 크게 싸우기 시작했다.",
+								"speaker": "narrator"
+							},
+							{
+								"speaker": "dax",
+								"text": "아… 오히려 더 틀어진 것 같습니다…"
+							}
+						],
+						"reward": []
+					}
+				},
+				{
+					"effects": {
+						"community": 30,
+						"echo": 15
+					},
+					"reward": [
+						"shield"
+					],
+					"text": "공연자를 위해 아주머니에게 자리를 양보해달라고 설득한다.",
+					"mbti": "FP",
+					"flag": {
+						"boss_text": "공연자가 당신에게 감사를 표하며 전투 중 아군에게 이로운 효과를 부여한다.",
+						"label": "공연자 보호",
+						"key": "performer_sanctuary"
+					},
+					"path": "stat",
+					"result": [
+						{
+							"text": "당신이 아주머니에게 공연자의 어려운 사정을 설명하며 자리를 양보해달라고 설득했다.",
+							"speaker": "narrator"
+						},
+						{
+							"speaker": "narrator",
+							"text": "아주머니는 잠시 망설이더니, 결국 고개를 끄덕였다."
+						},
+						{
+							"text": "아주머니께서 양보하시다니! 당신의 진심이 통했나 봅니다!",
+							"speaker": "dax"
+						}
+					]
+				},
+				{
+					"path": "gold",
+					"effects": {
+						"gold": -80
+					},
+					"mbti": "TJ",
+					"text": "공연자에게 돈을 주고 다른 곳으로 가라고 한다.",
+					"result": [
+						{
+							"text": "당신이 돈을 건네자 공연자는 조용히 짐을 챙겨 다른 골목으로 사라졌다.",
+							"speaker": "narrator"
+						},
+						{
+							"text": "아주머니는 아쉬운 듯 혀를 찼지만, 이내 만족스러운 표정을 지었다.",
+							"speaker": "narrator"
+						},
+						{
+							"text": "돈으로 해결하는 것도 나쁘지 않네요.",
+							"speaker": "dax"
+						}
+					]
+				}
+			],
+			"dialogue": [
+				{
+					"speaker": "cart_auntie",
+					"text": "어이, 당신들! 소문이 자자하던데, 이 동네 어려운 사람들한테 당신 소문이 자자해요."
+				},
+				{
+					"text": "저기 저 가난한 놈팽이 좀 도와줘. 돈 없는 주제에 고집만 세서 말도 안 들어!",
+					"speaker": "cart_auntie"
+				},
+				{
+					"speaker": "dax",
+					"text": "골목 안쪽에 누군가 있는 것 같네요. 경리부장님은 아닌 것 같은데..."
+				},
+				{
+					"text": "포장마차 아주머니가 찢어진 전단지를 보며 한숨을 쉬었다.",
+					"speaker": "narrator"
+				}
+			],
+			"title": "가난한 공연자와 아주머니의 걱정",
+			"person": {
+				"role": "포장마차 아주머니",
+				"id": "cart_auntie",
+				"name": "김복자"
+			},
+			"key": "alley_performer_struggle",
+			"slot": "D",
+			"kind": "rep",
+			"rep_dir": "community+"
+		}
+	],
+	"errors": [],
+	"prompt_hash": "8caab9c44bfdfe99eb91926c6f3688c1591f8cf6"
+}

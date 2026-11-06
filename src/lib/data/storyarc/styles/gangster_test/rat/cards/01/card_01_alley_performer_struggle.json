@@ -1,0 +1,310 @@
+{
+	"id": "card_01_alley_performer_struggle",
+	"title": {
+		"korean": "가난한 공연자와 아주머니의 걱정"
+	},
+	"intensity": "calm",
+	"after_story": 7,
+	"before_story": 9,
+	"condition": {
+		"leaning": "community+",
+		"among": [
+			"fighting-",
+			"fighting+",
+			"community-",
+			"community+",
+			"reason-",
+			"reason+"
+		],
+		"min": 20
+	},
+	"urgency": 8,
+	"leaning": "community+",
+	"background_tags": [
+		"alley",
+		"night",
+		"dimlight",
+		"fewpeople",
+		"suspicious"
+	],
+	"dialogue": [
+		{
+			"speaker": "cart_auntie",
+			"content": {
+				"korean": "어이, 당신들! 소문이 자자하던데, 이 동네 어려운 사람들한테 당신 소문이 자자해요."
+			}
+		},
+		{
+			"speaker": "cart_auntie",
+			"content": {
+				"korean": "저기 저 가난한 놈팽이 좀 도와줘. 돈 없는 주제에 고집만 세서 말도 안 들어!"
+			}
+		},
+		{
+			"speaker": "dax",
+			"content": {
+				"korean": "골목 안쪽에 누군가 있는 것 같네요. 경리부장님은 아닌 것 같은데..."
+			}
+		},
+		{
+			"speaker": "narrator",
+			"content": {
+				"korean": "포장마차 아주머니가 찢어진 전단지를 보며 한숨을 쉬었다."
+			}
+		}
+	],
+	"choices": [
+		{
+			"text": {
+				"korean": "공연자에게 다른 장소로 이동해달라고 설득한다."
+			},
+			"path": "easy",
+			"mbti": "IS",
+			"flag": "performer_annoyance",
+			"effects": {
+				"echo": 5,
+				"community": 10
+			},
+			"reward": [
+				"attack_up"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "당신이 공연자에게 다가가 조용히 다른 골목을 추천해 주자, 그는 고개를 끄덕였다."
+					}
+				},
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "아주머니는 당신의 배려심에 감탄하며 흐뭇하게 웃었다."
+					}
+				},
+				{
+					"speaker": "dax",
+					"content": {
+						"korean": "좋은 해결책입니다. 모두가 만족하겠네요!"
+					}
+				}
+			],
+			"risk": {
+				"chance": "mid",
+				"bad": {
+					"effects": {
+						"gold": -20
+					},
+					"reward": [
+						"hp_down"
+					],
+					"result": [
+						{
+							"speaker": "narrator",
+							"content": {
+								"korean": "당신이 공연자에게 다른 곳을 제안하자, 그는 강하게 반발하며 오히려 더 크게 소리 질렀다."
+							}
+						},
+						{
+							"speaker": "narrator",
+							"content": {
+								"korean": "지나가던 사람들이 호기심에 모여들기 시작했다."
+							}
+						},
+						{
+							"speaker": "dax",
+							"content": {
+								"korean": "어… 어쩌죠? 더 시끄러워졌습니다!"
+							}
+						}
+					]
+				}
+			}
+		},
+		{
+			"text": {
+				"korean": "포장마차 아주머니와 공연자 사이를 중재해 상생 방안을 찾는다."
+			},
+			"path": "hard",
+			"mbti": "EN",
+			"flag": "performer_alliance",
+			"effects": {
+				"reason": 10,
+				"community": 20
+			},
+			"reward": [
+				"defense_up"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "당신이 아주머니와 공연자를 불러 모아 대화를 시작했다. 당신의 중재로 둘은 서로의 입장을 이해하게 되었다."
+					}
+				},
+				{
+					"speaker": "dax",
+					"content": {
+						"korean": "와! 이런 식으로 해결하다니 정말 대단합니다!"
+					}
+				}
+			],
+			"risk": {
+				"chance": "high",
+				"bad": {
+					"effects": {
+						"gold": -20
+					},
+					"reward": [],
+					"result": [
+						{
+							"speaker": "narrator",
+							"content": {
+								"korean": "당신이 중재를 시도했지만, 아주머니와 공연자는 서로의 주장만 내세우며 언성을 높였다."
+							}
+						},
+						{
+							"speaker": "narrator",
+							"content": {
+								"korean": "결국, 둘은 더 크게 싸우기 시작했다."
+							}
+						},
+						{
+							"speaker": "dax",
+							"content": {
+								"korean": "아… 오히려 더 틀어진 것 같습니다…"
+							}
+						}
+					]
+				}
+			}
+		},
+		{
+			"text": {
+				"korean": "공연자를 위해 아주머니에게 자리를 양보해달라고 설득한다."
+			},
+			"path": "stat",
+			"mbti": "FP",
+			"require": {
+				"stat": "community",
+				"op": ">=",
+				"value": 40
+			},
+			"flag": "performer_sanctuary",
+			"effects": {
+				"community": 30,
+				"echo": 15
+			},
+			"reward": [
+				"shield"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "당신이 아주머니에게 공연자의 어려운 사정을 설명하며 자리를 양보해달라고 설득했다."
+					}
+				},
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "아주머니는 잠시 망설이더니, 결국 고개를 끄덕였다."
+					}
+				},
+				{
+					"speaker": "dax",
+					"content": {
+						"korean": "아주머니께서 양보하시다니! 당신의 진심이 통했나 봅니다!"
+					}
+				}
+			]
+		},
+		{
+			"text": {
+				"korean": "공연자에게 돈을 주고 다른 곳으로 가라고 한다."
+			},
+			"path": "gold",
+			"mbti": "TJ",
+			"require": {
+				"stat": "gold",
+				"op": ">=",
+				"value": 80
+			},
+			"effects": {
+				"gold": -80
+			},
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "당신이 돈을 건네자 공연자는 조용히 짐을 챙겨 다른 골목으로 사라졌다."
+					}
+				},
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "아주머니는 아쉬운 듯 혀를 찼지만, 이내 만족스러운 표정을 지었다."
+					}
+				},
+				{
+					"speaker": "dax",
+					"content": {
+						"korean": "돈으로 해결하는 것도 나쁘지 않네요."
+					}
+				}
+			]
+		}
+	],
+	"tags": [
+		"cart_auntie",
+		"dax"
+	],
+	"_design": {
+		"slot": "D",
+		"kind": "rep",
+		"person": {
+			"role": "포장마차 아주머니",
+			"id": "cart_auntie",
+			"name": "김복자"
+		},
+		"wants": "가난한 공연자가 이곳에서 계속 공연할 수 있도록 좋은 방법을 찾아주길 바랍니다.",
+		"rule_link": "수상한 소문만 듣고 공연하는 사람을 내칠지, 아니면 그가 곤경에 처한 사정을 먼저 들어줄지 결정하는 일입니다.",
+		"rep": "community+",
+		"events": {},
+		"flags": {
+			"performer_annoyance": {
+				"kind": "bad",
+				"boss_penalty": -1,
+				"label": {
+					"korean": "공연자 불만"
+				},
+				"boss_line": {
+					"korean": "공연자가 옮겨간 장소에서도 문제가 생겨 전투 중 당신을 방해한다."
+				}
+			},
+			"performer_alliance": {
+				"kind": "good",
+				"boss_penalty": 1,
+				"label": {
+					"korean": "공연자 협력"
+				},
+				"boss_choice": {
+					"korean": "공연자와 아주머니가 당신에게 힘을 보태며 전투 중 유리한 효과를 제공한다."
+				}
+			},
+			"performer_sanctuary": {
+				"kind": "good",
+				"boss_penalty": 2,
+				"label": {
+					"korean": "공연자 보호"
+				},
+				"boss_choice": {
+					"korean": "공연자가 당신에게 감사를 표하며 전투 중 아군에게 이로운 효과를 부여한다."
+				}
+			}
+		}
+	}
+}

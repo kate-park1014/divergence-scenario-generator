@@ -1,0 +1,161 @@
+{
+	"id": "card_01_grateful_worker_shortcut",
+	"title": {
+		"korean": "고마움을 표하는 일꾼"
+	},
+	"intensity": "high",
+	"after_story": 5,
+	"before_story": 7,
+	"callback": {
+		"seed": "old_docker_plea_hard",
+		"min_rooms_after": 2
+	},
+	"background_tags": [
+		"alley",
+		"smoke",
+		"twilight",
+		"few_people",
+		"grateful"
+	],
+	"dialogue": [
+		{
+			"speaker": "narrator",
+			"content": {
+				"korean": "연기가 자욱한 골목 안쪽에서 허둥지둥 뛰어오는 일꾼이 당신을 알아본다."
+			}
+		},
+		{
+			"speaker": "grateful_worker",
+			"content": {
+				"korean": "어르신! 여기서 뭘 하시는 겁니까?"
+			}
+		},
+		{
+			"speaker": "dax",
+			"content": {
+				"korean": "어르신, 괜찮으세요?"
+			}
+		},
+		{
+			"speaker": "grateful_worker",
+			"content": {
+				"korean": "저번에 약값 보태주신 덕분에 살았습니다! 제가 지름길을 알려 드리죠!"
+			}
+		},
+		{
+			"speaker": "narrator",
+			"content": {
+				"korean": "일꾼은 당신이 준 약 덕분에 기운을 차린 듯하다."
+			}
+		}
+	],
+	"choices": [
+		{
+			"text": {
+				"korean": "일꾼이 안내하는 지름길로 함께 이동한다."
+			},
+			"path": "easy",
+			"mbti": "EP",
+			"flag": "quick_path_to_boss",
+			"effects": {
+				"gold": 70,
+				"echo": 5
+			},
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "일꾼의 안내를 따라 좁고 복잡한 지름길을 빠르게 통과한다."
+					}
+				},
+				{
+					"speaker": "grateful_worker",
+					"content": {
+						"korean": "덕분에 빨리 가실 수 있을 겁니다!"
+					}
+				},
+				{
+					"speaker": "dax",
+					"content": {
+						"korean": "어르신 덕분에 시간을 아꼈네요."
+					}
+				}
+			]
+		},
+		{
+			"text": {
+				"korean": "일꾼에게 먼저 피신하라고 하고 원래 가던 길을 계속 간다."
+			},
+			"path": "hard",
+			"mbti": "IN",
+			"flag": "safe_passage_for_worker",
+			"effects": {
+				"community": 10,
+				"reason": 10
+			},
+			"reward": [
+				"defense_up"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "일꾼은 당신의 배려에 감동한 듯 고개를 숙이고 사라진다."
+					}
+				},
+				{
+					"speaker": "grateful_worker",
+					"content": {
+						"korean": "조심하십시오!"
+					}
+				},
+				{
+					"speaker": "dax",
+					"content": {
+						"korean": "어르신이 무사해서 다행입니다."
+					}
+				}
+			]
+		}
+	],
+	"tags": [
+		"grateful_worker",
+		"dax"
+	],
+	"_design": {
+		"slot": "C",
+		"kind": "callback",
+		"person": {
+			"name": "부두 일꾼",
+			"role": "약값을 받은 부두 일꾼",
+			"id": "grateful_worker"
+		},
+		"wants": "자신을 도와준 당신에게 보답하고 싶어 한다.",
+		"rule_link": "앞서 사정을 듣고 도와준 결과, 그 인물이 감사의 표시로 도움을 주려 할 때 그 도움을 받아들일지 선택한다.",
+		"events": {},
+		"flags": {
+			"quick_path_to_boss": {
+				"kind": "good",
+				"boss_penalty": 1,
+				"label": {
+					"korean": "빠른 길 안내"
+				},
+				"boss_choice": {
+					"korean": "보스 방에 빠르게 진입하여 경리부장의 허를 찌른다."
+				}
+			},
+			"safe_passage_for_worker": {
+				"kind": "good",
+				"boss_penalty": 2,
+				"label": {
+					"korean": "일꾼의 안전 확보"
+				},
+				"boss_choice": {
+					"korean": "일꾼이 당신의 의로운 행동을 소문내어 보스 방에서 백상어파 조직원들의 작은 지지를 얻는다."
+				}
+			}
+		}
+	}
+}

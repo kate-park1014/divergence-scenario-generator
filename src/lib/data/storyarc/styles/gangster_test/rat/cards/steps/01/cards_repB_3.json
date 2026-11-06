@@ -1,0 +1,390 @@
+{
+	"cards": [
+		{
+			"wants": "주인공의 규칙을 지키는 평판을 알고, 부두 규칙을 어기고 외상을 갚지 않는 얌체 손님을 처리해달라고 부탁합니다.",
+			"no": 1,
+			"background_tags": [
+				"pier",
+				"night",
+				"fog",
+				"sparse",
+				"tense"
+			],
+			"rule_link": "밤길에 벌어진 수상한 상황을 보고 바로 판단하기보다, 아주머니의 말을 먼저 듣고 규칙을 지켜 사건을 해결하려는 선택지를 제공합니다.",
+			"person": {
+				"id": "restaurant_owner",
+				"role": "컨테이너 식당 주인",
+				"name": "식당 아주머니"
+			},
+			"title": "규칙이 먼저 아닙니까",
+			"key": "rule_abiding_request",
+			"dialogue": [
+				{
+					"speaker": "restaurant_owner",
+					"text": "당신이 그 융통성 없이 원칙대로 일 처리한다는 분이시죠? 아주머니 좀 도와줘 봐요."
+				},
+				{
+					"speaker": "dax",
+					"text": "아주머니, 저희는 지금 좀 바쁜데..."
+				},
+				{
+					"speaker": "restaurant_owner",
+					"text": "아유, 잠시만요! 저기 저 양반 좀 봐요."
+				},
+				{
+					"speaker": "restaurant_owner",
+					"text": "매번 외상만 하고 돈은 절대 안 갚는 얌체 손님이에요. 부두 규칙도 다 무시하고!"
+				},
+				{
+					"speaker": "restaurant_owner",
+					"text": "당신이 가서 규칙대로 혼쭐 좀 내주면 좋겠는데..."
+				}
+			],
+			"choices": [
+				{
+					"result": [
+						{
+							"text": "당신이 살벌한 표정으로 장부를 내밀자 손님은 혼비백산하며 외상값을 갚았습니다.",
+							"speaker": "narrator"
+						},
+						{
+							"text": "아이구, 시원하다! 역시 당신 같은 분이 최고야!",
+							"speaker": "restaurant_owner"
+						},
+						{
+							"text": "하지만 소문이 벌써 안 좋게 돌 것 같은데요...",
+							"speaker": "dax"
+						}
+					],
+					"path": "easy",
+					"effects": {
+						"fighting": -10,
+						"gold": 50
+					},
+					"text": "외상 장부를 들고 가게로 들어가 외상값을 독촉한다.",
+					"flag": {
+						"boss_text": "상대에게 유리한 정보가 미리 전달되어 공격이 더 날카로워집니다.",
+						"key": "bad_reputation_spread",
+						"label": "나쁜 소문 확산"
+					},
+					"reward": [],
+					"mbti": "TJ",
+					"risk_bad": {
+						"gold": -20,
+						"result": [
+							{
+								"speaker": "narrator",
+								"text": "당신이 장부를 내밀자 손님은 오히려 적반하장으로 따지며 도망쳤습니다."
+							},
+							{
+								"speaker": "restaurant_owner",
+								"text": "아이고, 저걸 놓치다니! 괜히 불난 집에 부채질만 한 꼴이잖아!"
+							},
+							{
+								"text": "돈도 못 받고 아주머니 잔소리까지 듣게 됐네요...",
+								"speaker": "dax"
+							}
+						],
+						"reward": []
+					}
+				},
+				{
+					"result": [
+						{
+							"speaker": "narrator",
+							"text": "손님은 어려운 사정을 털어놓으며 곧 갚겠다고 약속했습니다."
+						},
+						{
+							"text": "아주머니는 좀 섭섭해하시겠지만, 그래도 잘 해결된 것 같아요!",
+							"speaker": "dax"
+						},
+						{
+							"speaker": "narrator",
+							"text": "당신은 아주머니에게 일부를 먼저 받아주고 나머지는 기다려달라고 설득했습니다."
+						}
+					],
+					"mbti": "NF",
+					"text": "외상 손님을 따로 불러 사정을 먼저 들어본다.",
+					"flag": {
+						"label": "이해를 통한 협상",
+						"boss_text": "상대의 허를 찌르는 질문으로 잠시 혼란스럽게 만듭니다.",
+						"key": "understanding_negotiation"
+					},
+					"path": "hard",
+					"risk_bad": {
+						"reward": [],
+						"result": [
+							{
+								"text": "당신이 손님에게 다가가자, 손님은 오히려 당신을 밀치며 소란을 피웠습니다.",
+								"speaker": "narrator"
+							},
+							{
+								"text": "아니, 저런 뻔뻔한! 일을 더 키우면 어떡해요!",
+								"speaker": "restaurant_owner"
+							},
+							{
+								"speaker": "dax",
+								"text": "이러다 괜히 우리만 더 곤란해질 것 같아요..."
+							}
+						],
+						"gold": -20
+					},
+					"effects": {
+						"gold": -50,
+						"community": 10
+					},
+					"reward": [
+						"intelligence_up"
+					]
+				},
+				{
+					"result": [
+						{
+							"text": "당신은 부두 규칙과 식당 규정을 정확히 설명하며 손님에게 당장 갚을 것을 요구했습니다.",
+							"speaker": "narrator"
+						},
+						{
+							"speaker": "restaurant_owner",
+							"text": "어머, 그렇게 간단하게 해결될 일이었나요? 역시 당신은 달라!"
+						},
+						{
+							"text": "부장님도 저렇게 주판 굴리시듯 정확하시네요!",
+							"speaker": "dax"
+						}
+					],
+					"text": "부두 규칙과 식당 외상 규정을 정확히 설명하며 중재한다.",
+					"flag": {
+						"key": "perfect_rule_interpretation",
+						"label": "완벽한 규칙 해석",
+						"boss_text": "완벽한 규칙 해석으로 상대를 주춤하게 만들어 방어력을 높입니다."
+					},
+					"effects": {
+						"gold": 100,
+						"echo": 10,
+						"reason": -10
+					},
+					"path": "stat",
+					"mbti": "SP",
+					"reward": [
+						"defense_up"
+					]
+				}
+			],
+			"slot": "B",
+			"kind": "rep",
+			"rep_dir": "reason-"
+		},
+		{
+			"background_tags": [
+				"pier",
+				"night",
+				"fog",
+				"sparse",
+				"mysterious"
+			],
+			"title": "사정보다 마음이 먼저",
+			"person": {
+				"id": "restaurant_owner",
+				"role": "컨테이너 식당 주인",
+				"name": "식당 아주머니"
+			},
+			"no": 2,
+			"wants": "주인공의 자유로운 평판을 알고, 융통성 없는 부두 규정 때문에 폐쇄 위기에 처한 영세 노점상을 도와달라고 부탁합니다.",
+			"choices": [
+				{
+					"flag": {
+						"label": "혼란스러운 은신처",
+						"key": "chaotic_hideout",
+						"boss_text": "불필요한 행동으로 시간을 지체하여 기습 공격에 취약해집니다."
+					},
+					"mbti": "EP",
+					"effects": {
+						"reason": 10,
+						"gold": 50
+					},
+					"text": "노점상 물건을 잠시 컨테이너 식당 안으로 옮겨 숨겨준다.",
+					"result": [
+						{
+							"speaker": "narrator",
+							"text": "당신은 노점상 물건을 식당 안으로 급히 옮겨주었습니다. 노점상은 고마워했습니다."
+						},
+						{
+							"speaker": "restaurant_owner",
+							"text": "고마워요! 역시 당신 같은 분이 최고야!"
+						},
+						{
+							"text": "그런데 식당 안이 너무 복잡해졌는데요...",
+							"speaker": "dax"
+						}
+					],
+					"risk_bad": {
+						"result": [
+							{
+								"speaker": "narrator",
+								"text": "물건을 옮기던 중 소동이 일어나 부두 관리인이 다가왔습니다. 노점상은 결국 쫓겨났습니다."
+							},
+							{
+								"text": "아이고, 도와주려다 더 큰일만 만들었네! 내가 못 살아!",
+								"speaker": "restaurant_owner"
+							},
+							{
+								"speaker": "dax",
+								"text": "오히려 상황만 더 나빠진 것 같아요..."
+							}
+						],
+						"reward": [],
+						"gold": -20
+					},
+					"path": "easy"
+				},
+				{
+					"path": "hard",
+					"effects": {
+						"fighting": 10,
+						"gold": -50
+					},
+					"text": "부두 규정을 따르도록 노점상에게 자진 폐쇄를 권고한다.",
+					"result": [
+						{
+							"text": "당신은 노점상에게 규정을 설명하고 자진 폐쇄를 권고했습니다. 노점상은 아쉬워하며 떠났습니다.",
+							"speaker": "narrator"
+						},
+						{
+							"text": "너무 매정하게 구는 거 아니에요? 내 마음이 다 아프네...",
+							"speaker": "restaurant_owner"
+						},
+						{
+							"text": "그래도 규칙은 지켜야죠. 어쩔 수 없는 일입니다.",
+							"speaker": "dax"
+						}
+					],
+					"reward": [
+						"attack_up"
+					],
+					"mbti": "ST",
+					"flag": {
+						"label": "엄격한 규칙 적용",
+						"boss_text": "냉정한 판단으로 상대의 약점을 정확히 파고들어 공격력을 높입니다.",
+						"key": "strict_rule_enforcement"
+					},
+					"risk_bad": {
+						"reward": [],
+						"result": [
+							{
+								"speaker": "narrator",
+								"text": "당신이 규정을 설명하자, 노점상은 억울함을 호소하며 큰 소리로 따지기 시작했습니다."
+							},
+							{
+								"text": "흐읍, 이렇게까지 매정하게 해야겠어요? 내 속이 다 타네!",
+								"speaker": "restaurant_owner"
+							},
+							{
+								"speaker": "dax",
+								"text": "괜히 시선만 집중되는 것 같은데요..."
+							}
+						],
+						"gold": -20
+					}
+				},
+				{
+					"text": "부두 관리인에게 노점상 운영 시간 연장을 건의하고 대안을 제시한다.",
+					"effects": {
+						"reason": 10,
+						"gold": 100,
+						"community": 10
+					},
+					"path": "stat",
+					"mbti": "NP",
+					"flag": {
+						"boss_text": "예측 불가능한 움직임으로 상대를 교란시켜 이동 범위를 넓힙니다.",
+						"key": "creative_solution",
+						"label": "창의적 해결책"
+					},
+					"result": [
+						{
+							"text": "당신은 부두 관리인과 협상하여 노점상이 운영 시간을 조정하는 조건으로 계속 장사할 수 있게 했습니다.",
+							"speaker": "narrator"
+						},
+						{
+							"speaker": "restaurant_owner",
+							"text": "아이고, 이런 방법이! 역시 당신은 달라! 센스가 아주 끝내주네!"
+						},
+						{
+							"speaker": "dax",
+							"text": "정말 기발한데요! 부장님도 이렇게 해결하시면 좋겠네요!"
+						}
+					],
+					"reward": [
+						"move_range_up"
+					]
+				},
+				{
+					"risk_bad": {
+						"reward": [],
+						"result": [
+							{
+								"text": "열심히 팔려던 물건이 그만 손에서 미끄러져 바닥에 떨어져 깨졌습니다.",
+								"speaker": "narrator"
+							},
+							{
+								"speaker": "restaurant_owner",
+								"text": "아이고, 내 눈물 나는 살림살이! 왜 일을 더 만들어요!"
+							},
+							{
+								"text": "도와주시려다가 오히려 손해만 보게 됐네요...",
+								"speaker": "dax"
+							}
+						],
+						"gold": -30
+					},
+					"effects": {
+						"gold": 30,
+						"echo": 10
+					},
+					"text": "노점상 물건을 들고 직접 팔아주며 상황을 모면하려 한다.",
+					"path": "fun",
+					"result": [
+						{
+							"text": "당신은 노점상 물건을 직접 팔겠다며 큰 소리로 홍보하기 시작했습니다.",
+							"speaker": "narrator"
+						},
+						{
+							"speaker": "dax",
+							"text": "어... 저렇게까지 하실 줄은 몰랐는데요..."
+						},
+						{
+							"speaker": "narrator",
+							"text": "지나가던 사람들이 당신의 엉뚱한 모습에 웃음을 터뜨렸지만, 물건은 팔리지 않았습니다."
+						}
+					],
+					"mbti": "IS"
+				}
+			],
+			"rule_link": "밤길에 벌어진 수상한 상황을 보고 바로 판단하기보다, 아주머니의 말을 먼저 듣고 감정적인 사정을 고려해 사건을 해결하려는 선택지를 제공합니다.",
+			"dialogue": [
+				{
+					"text": "당신이 그 얽매이지 않고 사람 사정 봐준다는 분이시죠? 저 좀 제발 도와주십시오.",
+					"speaker": "restaurant_owner"
+				},
+				{
+					"text": "아주머니, 저희는 지금 좀 바쁜데...",
+					"speaker": "dax"
+				},
+				{
+					"speaker": "restaurant_owner",
+					"text": "아유, 잠시만요! 저기 저 노점상 좀 봐요. 부두 규정 때문에 곧 쫓겨날 판인데 너무 딱하잖아."
+				},
+				{
+					"speaker": "restaurant_owner",
+					"text": "당신이 어떻게든 융통성을 발휘해서 저 양반 좀 살려주면 좋겠는데..."
+				}
+			],
+			"key": "heart_driven_plea",
+			"slot": "B",
+			"kind": "rep",
+			"rep_dir": "reason+"
+		}
+	],
+	"errors": [],
+	"prompt_hash": "82390dd93a26fef2e76fbc593feeed683a3b865d"
+}

@@ -1,0 +1,353 @@
+{
+	"id": "card_01_ajumma_debt",
+	"title": {
+		"korean": "외상값 해결사"
+	},
+	"intensity": "calm",
+	"after_story": 3,
+	"before_story": 5,
+	"condition": {
+		"leaning": "community-",
+		"among": [
+			"fighting-",
+			"fighting+",
+			"community-",
+			"community+",
+			"reason-",
+			"reason+"
+		],
+		"min": 20
+	},
+	"urgency": 8,
+	"leaning": "community-",
+	"background_tags": [
+		"night",
+		"port",
+		"foggy",
+		"sparse_crowd",
+		"tense"
+	],
+	"dialogue": [
+		{
+			"speaker": "narrator",
+			"content": {
+				"korean": "닥스의 차가 부두 정문 앞을 지나려는데, 컨테이너 식당 아주머니가 급히 달려와 차를 가로막는다."
+			}
+		},
+		{
+			"speaker": "dax",
+			"content": {
+				"korean": "어, 아주머니? 갑자기 왜 이러시는 거죠?"
+			}
+		},
+		{
+			"speaker": "ajumma_b3",
+			"content": {
+				"korean": "당신이 그 소문 자자한 해결사 양반이지? 딱 자기 몫만 챙겨서 확실하게 일 처리한다는 분!"
+			}
+		},
+		{
+			"speaker": "ajumma_b3",
+			"content": {
+				"korean": "내가 밤새 기다렸어! 저기 안쪽 컨테이너 수리하는 놈이 외상값을 한 달째 안 갚고 버티고 있어!"
+			}
+		},
+		{
+			"speaker": "ajumma_b3",
+			"content": {
+				"korean": "가서 그놈 배때지에 주먹이라도 한 방 먹여서 당장 돈 받아내 줘!"
+			}
+		}
+	],
+	"choices": [
+		{
+			"text": {
+				"korean": "외상값을 안 갚는 일꾼을 찾아가 돈을 받아낸다."
+			},
+			"path": "easy",
+			"mbti": "ST",
+			"flag": "ajumma_angry_worker",
+			"effects": {
+				"fighting": 15,
+				"gold": 50
+			},
+			"reward": [
+				"attack_up"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "당신은 아주머니의 말을 듣고 컨테이너 수리공을 찾아간다."
+					}
+				},
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "수리공은 잔뜩 겁에 질려 지갑을 꺼내 외상값을 치른다."
+					}
+				},
+				{
+					"speaker": "ajumma_b3",
+					"content": {
+						"korean": "역시 당신이 최고야! 자, 여기 약소하지만 내 성의야!"
+					}
+				}
+			],
+			"risk": {
+				"chance": "mid",
+				"bad": {
+					"effects": {
+						"gold": -30
+					},
+					"reward": [
+						"defense_down"
+					],
+					"result": [
+						{
+							"speaker": "narrator",
+							"content": {
+								"korean": "당신은 아주머니의 말을 듣고 컨테이너 수리공을 찾아가 돈을 받아내려 한다."
+							}
+						},
+						{
+							"speaker": "narrator",
+							"content": {
+								"korean": "수리공은 억울하다며 고래고래 소리를 지르고, 다른 일꾼들이 몰려와 당신을 에워싼다."
+							}
+						},
+						{
+							"speaker": "dax",
+							"content": {
+								"korean": "저, 저희가 괜히 시비에 휘말린 것 같은데요…"
+							}
+						}
+					]
+				}
+			}
+		},
+		{
+			"text": {
+				"korean": "외상값을 못 갚는 이유를 먼저 물어본다."
+			},
+			"path": "hard",
+			"mbti": "NF",
+			"flag": "ajumma_worker_info",
+			"effects": {
+				"community": 15,
+				"echo": 10
+			},
+			"reward": [
+				"defense_up"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "당신은 수리공에게 사정을 먼저 물어본다."
+					}
+				},
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "수리공은 갑자기 늘어난 작업량에 임금이 밀려 돈이 없어 돈을 못 갚는다고 말한다."
+					}
+				},
+				{
+					"speaker": "dax",
+					"content": {
+						"korean": "어쩐지, 아주머니 말씀만 듣고 판단할 뻔했네요."
+					}
+				}
+			],
+			"risk": {
+				"chance": "high",
+				"bad": {
+					"effects": {
+						"gold": -20
+					},
+					"reward": [],
+					"result": [
+						{
+							"speaker": "narrator",
+							"content": {
+								"korean": "당신이 수리공에게 사정을 먼저 물어보려 하자,"
+							}
+						},
+						{
+							"speaker": "narrator",
+							"content": {
+								"korean": "수리공은 횡설수설하며 오히려 당신에게 화를 낸다."
+							}
+						},
+						{
+							"speaker": "dax",
+							"content": {
+								"korean": "대화가 잘 안 통하는 것 같은데요…"
+							}
+						}
+					]
+				}
+			}
+		},
+		{
+			"text": {
+				"korean": "아주머니, 당신 몫의 외상값은 당신이 직접 챙겨야죠."
+			},
+			"path": "stat",
+			"mbti": "TJ",
+			"require": {
+				"stat": "community",
+				"op": "<=",
+				"value": -40
+			},
+			"flag": "ajumma_self_reliance",
+			"effects": {
+				"fighting": -10,
+				"community": -10,
+				"reason": 20
+			},
+			"reward": [
+				"intelligence_up"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "당신의 말에 아주머니는 잠시 멈칫하더니 고개를 끄덕인다."
+					}
+				},
+				{
+					"speaker": "ajumma_b3",
+					"content": {
+						"korean": "역시 프로는 다르구먼. 내 몫은 내가 챙겨야지!"
+					}
+				},
+				{
+					"speaker": "dax",
+					"content": {
+						"korean": "아주머니가 갑자기 기합을 넣고 수리공에게 달려가네요!"
+					}
+				}
+			]
+		},
+		{
+			"text": {
+				"korean": "아주머니에게 대신 차를 얻어타고 가면서 수리공의 외상값을 해결할 방법을 고민한다."
+			},
+			"path": "fun",
+			"mbti": "EP",
+			"effects": {
+				"echo": 5,
+				"reason": -15
+			},
+			"reward": [
+				"move_range_up"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "당신은 아주머니에게 차를 태워달라고 부탁한다."
+					}
+				},
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "아주머니는 황당해하면서도 당신을 차에 태워준다."
+					}
+				},
+				{
+					"speaker": "dax",
+					"content": {
+						"korean": "저, 저희는 사무실 뒤편으로 가야 하는데요…"
+					}
+				}
+			],
+			"risk": {
+				"chance": "low",
+				"bad": {
+					"effects": {
+						"gold": -20
+					},
+					"reward": [
+						"hp_down"
+					],
+					"result": [
+						{
+							"speaker": "narrator",
+							"content": {
+								"korean": "아주머니에게 차를 태워달라는 당신의 부탁에,"
+							}
+						},
+						{
+							"speaker": "narrator",
+							"content": {
+								"korean": "아주머니는 당신을 무시하고 직접 수리공에게 달려간다."
+							}
+						},
+						{
+							"speaker": "dax",
+							"content": {
+								"korean": "아주머니가 성질이 보통이 아니시네요…"
+							}
+						}
+					]
+				}
+			}
+		}
+	],
+	"tags": [
+		"ajumma_b3",
+		"dax"
+	],
+	"_design": {
+		"slot": "B",
+		"kind": "rep",
+		"person": {
+			"id": "ajumma_b3",
+			"role": "컨테이너 식당 아주머니",
+			"name": "김영숙"
+		},
+		"wants": "자기 몫부터 챙기는 해결사",
+		"rule_link": "자기 몫을 챙기려다 자칫 남의 사정은 덮을 수 있다.",
+		"rep": "community-",
+		"events": {},
+		"flags": {
+			"ajumma_angry_worker": {
+				"kind": "bad",
+				"boss_penalty": -1,
+				"label": {
+					"korean": "성난 일꾼"
+				},
+				"boss_line": {
+					"korean": "성난 일꾼들이 당신을 향해 달려든다."
+				}
+			},
+			"ajumma_worker_info": {
+				"kind": "good",
+				"boss_penalty": 1,
+				"label": {
+					"korean": "수리공 사정"
+				},
+				"boss_choice": {
+					"korean": "수리공의 밀린 임금 문제를 해결해 줄 방법을 찾는다."
+				}
+			},
+			"ajumma_self_reliance": {
+				"kind": "good",
+				"boss_penalty": 2,
+				"label": {
+					"korean": "아주머니의 자립"
+				},
+				"boss_choice": {
+					"korean": "아주머니가 혼자서 문제를 해결하려 한다."
+				}
+			}
+		}
+	}
+}

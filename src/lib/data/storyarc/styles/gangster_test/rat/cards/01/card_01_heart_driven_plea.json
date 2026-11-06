@@ -1,0 +1,337 @@
+{
+	"id": "card_01_heart_driven_plea",
+	"title": {
+		"korean": "사정보다 마음이 먼저"
+	},
+	"intensity": "calm",
+	"after_story": 3,
+	"before_story": 5,
+	"condition": {
+		"leaning": "reason+",
+		"among": [
+			"fighting-",
+			"fighting+",
+			"community-",
+			"community+",
+			"reason-",
+			"reason+"
+		],
+		"min": 20
+	},
+	"urgency": 8,
+	"leaning": "reason+",
+	"background_tags": [
+		"pier",
+		"night",
+		"fog",
+		"sparse",
+		"mysterious"
+	],
+	"dialogue": [
+		{
+			"speaker": "restaurant_owner",
+			"content": {
+				"korean": "당신이 그 얽매이지 않고 사람 사정 봐준다는 분이시죠? 저 좀 제발 도와주십시오."
+			}
+		},
+		{
+			"speaker": "dax",
+			"content": {
+				"korean": "아주머니, 저희는 지금 좀 바쁜데..."
+			}
+		},
+		{
+			"speaker": "restaurant_owner",
+			"content": {
+				"korean": "아유, 잠시만요! 저기 저 노점상 좀 봐요. 부두 규정 때문에 곧 쫓겨날 판인데 너무 딱하잖아."
+			}
+		},
+		{
+			"speaker": "restaurant_owner",
+			"content": {
+				"korean": "당신이 어떻게든 융통성을 발휘해서 저 양반 좀 살려주면 좋겠는데..."
+			}
+		}
+	],
+	"choices": [
+		{
+			"text": {
+				"korean": "노점상 물건을 잠시 컨테이너 식당 안으로 옮겨 숨겨준다."
+			},
+			"path": "easy",
+			"mbti": "EP",
+			"flag": "chaotic_hideout",
+			"effects": {
+				"reason": 10,
+				"gold": 50
+			},
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "당신은 노점상 물건을 식당 안으로 급히 옮겨주었습니다. 노점상은 고마워했습니다."
+					}
+				},
+				{
+					"speaker": "restaurant_owner",
+					"content": {
+						"korean": "고마워요! 역시 당신 같은 분이 최고야!"
+					}
+				},
+				{
+					"speaker": "dax",
+					"content": {
+						"korean": "그런데 식당 안이 너무 복잡해졌는데요..."
+					}
+				}
+			],
+			"risk": {
+				"chance": "mid",
+				"bad": {
+					"effects": {
+						"gold": -20
+					},
+					"reward": [],
+					"result": [
+						{
+							"speaker": "narrator",
+							"content": {
+								"korean": "물건을 옮기던 중 소동이 일어나 부두 관리인이 다가왔습니다. 노점상은 결국 쫓겨났습니다."
+							}
+						},
+						{
+							"speaker": "restaurant_owner",
+							"content": {
+								"korean": "아이고, 도와주려다 더 큰일만 만들었네! 내가 못 살아!"
+							}
+						},
+						{
+							"speaker": "dax",
+							"content": {
+								"korean": "오히려 상황만 더 나빠진 것 같아요..."
+							}
+						}
+					]
+				}
+			}
+		},
+		{
+			"text": {
+				"korean": "부두 규정을 따르도록 노점상에게 자진 폐쇄를 권고한다."
+			},
+			"path": "hard",
+			"mbti": "ST",
+			"flag": "strict_rule_enforcement",
+			"effects": {
+				"fighting": 10,
+				"gold": -50
+			},
+			"reward": [
+				"attack_up"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "당신은 노점상에게 규정을 설명하고 자진 폐쇄를 권고했습니다. 노점상은 아쉬워하며 떠났습니다."
+					}
+				},
+				{
+					"speaker": "restaurant_owner",
+					"content": {
+						"korean": "너무 매정하게 구는 거 아니에요? 내 마음이 다 아프네..."
+					}
+				},
+				{
+					"speaker": "dax",
+					"content": {
+						"korean": "그래도 규칙은 지켜야죠. 어쩔 수 없는 일입니다."
+					}
+				}
+			],
+			"risk": {
+				"chance": "high",
+				"bad": {
+					"effects": {
+						"gold": -20
+					},
+					"reward": [],
+					"result": [
+						{
+							"speaker": "narrator",
+							"content": {
+								"korean": "당신이 규정을 설명하자, 노점상은 억울함을 호소하며 큰 소리로 따지기 시작했습니다."
+							}
+						},
+						{
+							"speaker": "restaurant_owner",
+							"content": {
+								"korean": "흐읍, 이렇게까지 매정하게 해야겠어요? 내 속이 다 타네!"
+							}
+						},
+						{
+							"speaker": "dax",
+							"content": {
+								"korean": "괜히 시선만 집중되는 것 같은데요..."
+							}
+						}
+					]
+				}
+			}
+		},
+		{
+			"text": {
+				"korean": "부두 관리인에게 노점상 운영 시간 연장을 건의하고 대안을 제시한다."
+			},
+			"path": "stat",
+			"mbti": "NP",
+			"require": {
+				"stat": "reason",
+				"op": ">=",
+				"value": 40
+			},
+			"flag": "creative_solution",
+			"effects": {
+				"reason": 10,
+				"gold": 100,
+				"community": 10
+			},
+			"reward": [
+				"move_range_up"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "당신은 부두 관리인과 협상하여 노점상이 운영 시간을 조정하는 조건으로 계속 장사할 수 있게 했습니다."
+					}
+				},
+				{
+					"speaker": "restaurant_owner",
+					"content": {
+						"korean": "아이고, 이런 방법이! 역시 당신은 달라! 센스가 아주 끝내주네!"
+					}
+				},
+				{
+					"speaker": "dax",
+					"content": {
+						"korean": "정말 기발한데요! 부장님도 이렇게 해결하시면 좋겠네요!"
+					}
+				}
+			]
+		},
+		{
+			"text": {
+				"korean": "노점상 물건을 들고 직접 팔아주며 상황을 모면하려 한다."
+			},
+			"path": "fun",
+			"mbti": "IS",
+			"effects": {
+				"gold": 30,
+				"echo": 10
+			},
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "당신은 노점상 물건을 직접 팔겠다며 큰 소리로 홍보하기 시작했습니다."
+					}
+				},
+				{
+					"speaker": "dax",
+					"content": {
+						"korean": "어... 저렇게까지 하실 줄은 몰랐는데요..."
+					}
+				},
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "지나가던 사람들이 당신의 엉뚱한 모습에 웃음을 터뜨렸지만, 물건은 팔리지 않았습니다."
+					}
+				}
+			],
+			"risk": {
+				"chance": "low",
+				"bad": {
+					"effects": {
+						"gold": -30
+					},
+					"reward": [],
+					"result": [
+						{
+							"speaker": "narrator",
+							"content": {
+								"korean": "열심히 팔려던 물건이 그만 손에서 미끄러져 바닥에 떨어져 깨졌습니다."
+							}
+						},
+						{
+							"speaker": "restaurant_owner",
+							"content": {
+								"korean": "아이고, 내 눈물 나는 살림살이! 왜 일을 더 만들어요!"
+							}
+						},
+						{
+							"speaker": "dax",
+							"content": {
+								"korean": "도와주시려다가 오히려 손해만 보게 됐네요..."
+							}
+						}
+					]
+				}
+			}
+		}
+	],
+	"tags": [
+		"restaurant_owner",
+		"dax"
+	],
+	"_design": {
+		"slot": "B",
+		"kind": "rep",
+		"person": {
+			"id": "restaurant_owner",
+			"role": "컨테이너 식당 주인",
+			"name": "식당 아주머니"
+		},
+		"wants": "주인공의 자유로운 평판을 알고, 융통성 없는 부두 규정 때문에 폐쇄 위기에 처한 영세 노점상을 도와달라고 부탁합니다.",
+		"rule_link": "밤길에 벌어진 수상한 상황을 보고 바로 판단하기보다, 아주머니의 말을 먼저 듣고 감정적인 사정을 고려해 사건을 해결하려는 선택지를 제공합니다.",
+		"rep": "reason+",
+		"events": {},
+		"flags": {
+			"chaotic_hideout": {
+				"kind": "bad",
+				"boss_penalty": -1,
+				"label": {
+					"korean": "혼란스러운 은신처"
+				},
+				"boss_line": {
+					"korean": "불필요한 행동으로 시간을 지체하여 기습 공격에 취약해집니다."
+				}
+			},
+			"strict_rule_enforcement": {
+				"kind": "good",
+				"boss_penalty": 1,
+				"label": {
+					"korean": "엄격한 규칙 적용"
+				},
+				"boss_choice": {
+					"korean": "냉정한 판단으로 상대의 약점을 정확히 파고들어 공격력을 높입니다."
+				}
+			},
+			"creative_solution": {
+				"kind": "good",
+				"boss_penalty": 2,
+				"label": {
+					"korean": "창의적 해결책"
+				},
+				"boss_choice": {
+					"korean": "예측 불가능한 움직임으로 상대를 교란시켜 이동 범위를 넓힙니다."
+				}
+			}
+		}
+	}
+}

@@ -261,7 +261,7 @@ npm run gen:netshort-scenarios -- --id=arcade_20261030083249_3
 ## 편안한 5화 이야기 (cozy_test, 시험용)
 
 넷쇼트의 "피해 떠넘기기" 대신 "오해가 풀리는" 구조. 1~4화: 히어로들이 겉모습만 보고 그 화 인물을 오해 → 방 10 에서 싸움 → win 에서 실제 사정이 증거로 드러남. 2~4화는 앞 화를 기억하고 다르게 조심하지만 또 오해. 5화: 싸우기 전에 사연을 묻고 화해로 끝남.
-- 기획안: [cozy_test/premises.json](src/lib/data/storyarc/styles/cozy_test/premises.json) (사람이 쓴 5화 줄거리 4개: lostfound·market·festival·letters). 프롬프트 [cozyStory.ts](src/lib/prompts/cozyStory.ts), 엔드포인트 `POST /api/storyarc/cozy`, 러너 `scripts/gen-cozy.mjs`
+- 기획안: [cozy_test/premises.json](src/lib/data/storyarc/styles/cozy_test/premises.json) (사람이 쓴 5화 줄거리 5개: lostfound·market·festival·letters·gangster — gangster 는 `--style=gangster` 용). 프롬프트 [cozyStory.ts](src/lib/prompts/cozyStory.ts), 엔드포인트 `POST /api/storyarc/cozy`, 러너 `scripts/gen-cozy.mjs`
 - 설계 칸은 최소한 (넷쇼트에서 칸이 많을수록 아무 내용으로 채우는 문제를 겪어서): misunderstandings(1~4화 who·looked_like·actual·reveal), final(name·look·actual·want). 코드 검사는 모양만
 - 거꾸로 꼬는 화: 기획안의 `reverse_order`(지금 모두 3화). 히어로들이 배운 대로 수상해 보이는 사람을 감싸고 믿음직해 보이는 사람을 믿는데, 믿은 사람이 그 화 상대(작은 잘못을 숨기려던 사람). 다음 화는 "좋든 나쁘든 겉모습 말고 증거부터" 조심 (1~4화가 같은 틀이라 결말이 뻔해서)
 - 주 NPC 한 명이 1~5화 함께 다님. 처음 만들 때 NPC 풀에서 뽑아 `<key>/cast.json` 에 저장 (이야기끼리 겹치지 않게)
@@ -293,6 +293,22 @@ npm run gen:cozy-scenarios -- --keys=market --orders=1       # 스모크
 
 ```bash
 npm run gen:romance-scenarios -- --keys=contract              # --orders=1 로 한 화만
+```
+
+## 갱스터 5화 이야기 (gangster_test, 시험용)
+
+이야기 단계(Gemini) 없음 — `src/lib/data/storyarc/styles/gangster_test/<key>/story.json`(사람이 씀, 6개: bag·blackwolf·exam·fourblocks·onejob·rat, 목록 `summary.json`)을 바로 대본으로. 한 화는 "상대를 만나러 가는 여정".
+- 방 1,3,5,7,9,10 (story.json 방 번호 = 대본 방 번호, 옮겨 적지 않음). 방 1 떠나는 이유(화별 `why_go`, 1화는 design.goal 도) / 방 3·5·7 가는 길(상대는 안 만남, 소문·흔적만) / 방 9 상대를 처음 만나 이유를 직접 말함(화별 `foe_reason`. 1~4화는 겉 이유, 반전은 방 10 win. 5화는 final.actual·want 전부) / 방 10 싸움(before_battle·win·lose)
+- 대본: 프롬프트 [chapterGenGangster.ts](src/lib/prompts/chapterGenGangster.ts), 엔드포인트 `POST /api/scenario/gangster`, 러너 `scripts/gen-gangster-scenarios.mjs`. romance 대본 단계와 같은 흐름(5화 동시, 코드 검사 걸리면 최대 2번 다시, 다듬기 1콜). 스타일 기본 gangster.md
+- 코드 검사 추가: 방(블록)마다 대사(speech) 15줄 이하(`GANGSTER_MAX_LINES`), 상대(1~4 `random_boss`, 5 `boss`)는 방 9·10 에서만 speaker, 방 9 에서 두 줄 이상·방 10 dialogue·win 에서 말함. NPC·방 9 상대 enter 가 빠지면 코드가 넣음(`addEnters`). 공용 NPC 등장 규칙의 방 번호는 프롬프트에서 1,3,5,7,9,10 으로 바꿔 씀
+- webfront 엔진은 방 번호가 아니라 방 차례로 맞추고, 보스방 아닌 방에서 말하는 상대도 자동 등장시킴 (new-scenario-extension.ts)
+- 출력 `gangster_test/<key>/scenario_0N.json`(scenario_id `gangster_<key>_0N`), `script_0N.md`, `script.md`, `polish_0N.json`
+- 카드 칸 설계 (지금 rat 만): story.json `design.card_plan`(칸·장수·평판 카드 규칙) + 화별 `cards`(practice 이번 화 카드가 겪게 하는 것 / slots A~D: between·where·keep(다음 방이 깔고 가는 사실)·seed(심기 who·want·easy·hard)·recall(회수 from·easy·hard)·normal·reputation(평판 카드 인물·상황, 1화 A·모든 C 는 없음) / rest_echo 방 9 휴식 전 기억 대사). side_test 카드 룰을 따름 (칸 D = 방 7→9 휴식 전). 대본 단계는 아직 읽지 않고, 카드 생성 파이프라인도 아직 이 형식을 읽지 않음
+
+```bash
+npm run gen:gangster-scenarios                              # 이야기 전부
+npm run gen:gangster-scenarios -- --keys=rat --orders=1     # 스모크
+npm run gen:gangster-scenarios -- --keys=rat --dry-run      # 프롬프트만 (Gemini 안 부름, --print 로 전문)
 ```
 
 ## 이야기 스타일 (styles/)

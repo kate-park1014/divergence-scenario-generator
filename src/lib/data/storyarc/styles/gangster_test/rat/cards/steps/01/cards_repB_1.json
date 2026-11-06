@@ -1,0 +1,336 @@
+{
+	"cards": [
+		{
+			"key": "ajumma_debt_collector",
+			"dialogue": [
+				{
+					"speaker": "ajumma",
+					"text": "아니, 당신이 그… 말보다 주먹이 빠르다는 해결사 양반 아니우?"
+				},
+				{
+					"speaker": "ajumma",
+					"text": "정문 컨테이너 쪽에 앉아있는 저 버르장머리 없는 친구, 내가 외상값만 천만 원이 넘어요."
+				},
+				{
+					"speaker": "ajumma",
+					"text": "애초에 돈 떼먹으려는 놈들은 말로는 안 들어요. 시원하게 한 방 먹여주시오!"
+				},
+				{
+					"speaker": "dax",
+					"text": "아주머니, 저희는 지금 급한 일이 있어서..."
+				},
+				{
+					"speaker": "ajumma",
+					"text": "아이고, 잠깐이면 될 일을 가지고… 소문 듣고 특별히 부탁하는 건데!"
+				}
+			],
+			"choices": [
+				{
+					"mbti": "ET",
+					"risk_bad": {
+						"reward": [
+							"attack_down"
+						],
+						"result": [
+							{
+								"speaker": "narrator",
+								"text": "당신이 손님을 다그치자 손님은 오히려 배 째라며 큰 소리를 친다."
+							},
+							{
+								"text": "아이고, 저 사람 원래 저렇게 뻔뻔한 사람인데… 괜히 소문만 믿었네!",
+								"speaker": "ajumma"
+							}
+						],
+						"gold": -30
+					},
+					"result": [
+						{
+							"text": "당신이 다가가자 손님은 당신의 기세에 눌려 덜덜 떨며 지갑을 꺼낸다.",
+							"speaker": "narrator"
+						},
+						{
+							"speaker": "ajumma",
+							"text": "어이구, 역시 소문대로 시원하게 해결해주네! 여기 고생비 조금 받아가요!"
+						}
+					],
+					"effects": {
+						"fighting": -15,
+						"gold": 100
+					},
+					"path": "easy",
+					"text": "외상값을 떼먹은 손님을 찾아가 거칠게 다그친다.",
+					"flag": {
+						"boss_text": "컨테이너 식당 아주머니의 외상값을 받아줘 아주머니가 당신을 돕는다.",
+						"label": "외상값 해결",
+						"key": "ajumma_debt_resolved"
+					}
+				},
+				{
+					"risk_bad": {
+						"result": [
+							{
+								"speaker": "narrator",
+								"text": "손님의 말을 들어주자 아주머니는 답답해하며 당신이 오히려 손님 편을 든다고 오해한다."
+							},
+							{
+								"text": "아니, 내가 지금 싸움 말리러 왔지, 저 사람 사정 들어주러 온 줄 알아?",
+								"speaker": "ajumma"
+							}
+						],
+						"reward": [],
+						"gold": -20
+					},
+					"mbti": "IF",
+					"reward": [
+						"defense_up"
+					],
+					"effects": {
+						"echo": 10,
+						"fighting": 15
+					},
+					"result": [
+						{
+							"speaker": "narrator",
+							"text": "손님의 사정을 들어보니 형편이 어려워 당장 갚기 어렵다고 한다."
+						},
+						{
+							"speaker": "narrator",
+							"text": "당신은 아주머니와 손님 사이에서 중재안을 제시한다."
+						},
+						{
+							"text": "에휴, 당신 덕분에 외상값은 나중에라도 받을 수 있겠네. 고마워요.",
+							"speaker": "ajumma"
+						}
+					],
+					"path": "hard",
+					"text": "일단 손님에게 사정을 들어보고 타협점을 찾는다.",
+					"flag": {
+						"label": "외상값 중재",
+						"key": "ajumma_debt_mediated",
+						"boss_text": "컨테이너 식당 아주머니의 외상값을 중재해 아주머니가 당신에게 호의적이다."
+					}
+				},
+				{
+					"result": [
+						{
+							"speaker": "narrator",
+							"text": "당신은 부두에서 소문난 해결사임을 밝히며 이곳의 질서를 깨지 말라고 경고한다."
+						},
+						{
+							"text": "손님과 아주머니는 당신의 위엄에 눌려 서로 합의점을 찾기 위해 대화를 시작한다.",
+							"speaker": "narrator"
+						}
+					],
+					"text": "소문난 해결사임을 밝히며 부두의 질서를 지키라고 경고한다.",
+					"path": "stat",
+					"flag": {
+						"boss_text": "부두의 질서를 지키라고 경고하여 컨테이너 식당 아주머니가 당신을 믿고 따른다.",
+						"label": "부두 질서",
+						"key": "ajumma_debt_ordered"
+					},
+					"mbti": "TJ",
+					"reward": [
+						"intelligence_up"
+					],
+					"effects": {
+						"fighting": -20,
+						"reason": -10
+					}
+				},
+				{
+					"result": [
+						{
+							"text": "당신은 아주머니에게 외상값을 대신 내주고 손님에게는 다음부터 조심하라고 당부한다.",
+							"speaker": "narrator"
+						},
+						{
+							"text": "어휴, 이렇게까지 해주시다니… 정말 고마워요.",
+							"speaker": "ajumma"
+						}
+					],
+					"mbti": "EP",
+					"effects": {
+						"gold": -80
+					},
+					"path": "gold",
+					"text": "당신이 대신 외상값을 내주고 상황을 정리한다."
+				}
+			],
+			"no": 1,
+			"person": {
+				"role": "식당 주인",
+				"id": "ajumma",
+				"name": "컨테이너 식당 아주머니"
+			},
+			"title": "외상값 때문에",
+			"background_tags": [
+				"night",
+				"pier",
+				"foggy",
+				"quiet",
+				"restaurant"
+			],
+			"wants": "외상값 안 갚는 손님을 혼내 달라",
+			"rule_link": "밤길, 부두 정문 앞 컨테이너 식당 아주머니가 당신의 소문을 듣고 차를 세운다. 당신의 주먹이 먼저 나간다는 소문을 듣고 외상값 문제 해결을 부탁한다.",
+			"slot": "B",
+			"kind": "rep",
+			"rep_dir": "fighting-"
+		},
+		{
+			"choices": [
+				{
+					"path": "easy",
+					"flag": {
+						"label": "일꾼 중재",
+						"key": "ajumma_workers_mediated",
+						"boss_text": "일꾼들을 중재하는 사이 부두 경비가 당신 일행을 수상하게 여겨 감시한다."
+					},
+					"effects": {
+						"gold": 80,
+						"echo": 10,
+						"community": 10,
+						"fighting": 15
+					},
+					"result": [
+						{
+							"text": "당신은 싸우는 일꾼들 사이로 들어가 차분하게 그들의 이야기를 들어주고 중재한다.",
+							"speaker": "narrator"
+						},
+						{
+							"text": "일꾼들은 당신의 말에 수긍하고 서로 화해의 악수를 나눈다.",
+							"speaker": "narrator"
+						}
+					],
+					"risk_bad": {
+						"result": [
+							{
+								"text": "당신이 중재하려 했지만 흥분한 일꾼들은 당신의 말을 듣지 않고 싸움에 휘말린다.",
+								"speaker": "narrator"
+							},
+							{
+								"text": "당신은 뜻밖의 싸움에 휘말려 몸개그를 펼치며 겨우 빠져나온다.",
+								"speaker": "narrator"
+							}
+						],
+						"gold": -20,
+						"reward": []
+					},
+					"mbti": "NF",
+					"text": "싸우는 일꾼들 사이로 들어가 차분하게 중재한다."
+				},
+				{
+					"result": [
+						{
+							"text": "당신은 싸우는 일꾼들 사이로 뛰어들어 거친 주먹으로 그들을 제압한다.",
+							"speaker": "narrator"
+						},
+						{
+							"speaker": "narrator",
+							"text": "일꾼들은 당신의 주먹에 혼비백산하여 싸움을 멈추고 각자의 자리로 돌아간다."
+						}
+					],
+					"path": "hard",
+					"flag": {
+						"key": "ajumma_workers_subdued",
+						"label": "일꾼 제압",
+						"boss_text": "컨테이너 식당 아주머니의 일꾼들 싸움을 주먹으로 제압해 아주머니가 당신을 존경한다."
+					},
+					"reward": [
+						"attack_up"
+					],
+					"text": "싸움을 말리지 않고 오히려 주먹으로 기선을 제압한다.",
+					"mbti": "ST",
+					"effects": {
+						"echo": -10,
+						"fighting": -15
+					},
+					"risk_bad": {
+						"gold": -20,
+						"result": [
+							{
+								"speaker": "narrator",
+								"text": "당신이 힘으로 제압하려 하자 일꾼들은 오히려 당신에게 달려들며 다 같이 덤벼든다."
+							},
+							{
+								"text": "당신은 일꾼들과 엉켜 한바탕 소동을 벌인 뒤 겨우 싸움을 멈춘다.",
+								"speaker": "narrator"
+							}
+						],
+						"reward": []
+					}
+				},
+				{
+					"result": [
+						{
+							"speaker": "narrator",
+							"text": "당신은 부두에서 소문난 해결사임을 밝히며 이곳의 화합을 위해 싸움을 멈추라고 설득한다."
+						},
+						{
+							"speaker": "narrator",
+							"text": "일꾼들은 당신의 명성에 고개를 끄덕이고 서로의 오해를 풀기 위해 대화를 시작한다."
+						}
+					],
+					"reward": [
+						"heal"
+					],
+					"text": "소문난 해결사임을 밝히며 부두의 화합을 위해 싸움을 멈추라고 설득한다.",
+					"effects": {
+						"fighting": 20,
+						"reason": 10
+					},
+					"mbti": "EN",
+					"path": "stat",
+					"flag": {
+						"key": "ajumma_workers_harmonized",
+						"boss_text": "부두의 화합을 위해 일꾼들 싸움을 설득하여 컨테이너 식당 아주머니가 당신을 신뢰한다.",
+						"label": "부두 화합"
+					}
+				}
+			],
+			"rule_link": "밤길, 부두 정문 앞 컨테이너 식당 아주머니가 당신의 소문을 듣고 차를 세운다. 당신이 말로 문제를 해결한다는 소문을 듣고 싸우는 일꾼들 중재를 부탁한다.",
+			"title": "싸우는 일꾼들",
+			"key": "ajumma_worker_dispute",
+			"person": {
+				"id": "ajumma",
+				"role": "식당 주인",
+				"name": "컨테이너 식당 아주머니"
+			},
+			"wants": "싸우는 일꾼들을 말려 달라",
+			"dialogue": [
+				{
+					"speaker": "ajumma",
+					"text": "아이고, 당신이 그… 싸움은 말리고 흥정은 붙인다는 해결사 양반 아니우?"
+				},
+				{
+					"speaker": "ajumma",
+					"text": "저기 컨테이너 사이에서 일꾼 두 명이 외상값 가지고 싸우고 있는데… 이러다 큰일 나겠어요."
+				},
+				{
+					"text": "당신이라면 말로 좋게 해결해 줄 수 있을 것 같아서 그래요.",
+					"speaker": "ajumma"
+				},
+				{
+					"speaker": "dax",
+					"text": "아주머니, 저희는 지금 급한 일이 있어서..."
+				},
+				{
+					"speaker": "ajumma",
+					"text": "아이고, 잠깐이면 될 일을 가지고… 소문 듣고 특별히 부탁하는 건데!"
+				}
+			],
+			"background_tags": [
+				"night",
+				"pier",
+				"foggy",
+				"loud",
+				"restaurant"
+			],
+			"no": 2,
+			"slot": "B",
+			"kind": "rep",
+			"rep_dir": "fighting+"
+		}
+	],
+	"errors": [],
+	"prompt_hash": "c85d88c479aa402b4a5740d0fceead582585ce0b"
+}

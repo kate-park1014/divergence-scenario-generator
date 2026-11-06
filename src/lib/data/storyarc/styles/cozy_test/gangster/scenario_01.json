@@ -1,0 +1,445 @@
+{
+  "scenario_id": "cozy_gangster_01",
+  "order": 1,
+  "act": "intro",
+  "theme": "modern",
+  "actors": {
+    "ren": {
+      "id": "mon_ff398cb9-43e1-44ff-acbe-3d45a3bc6997",
+      "name": {
+        "korean": "렌",
+        "english": "Ren",
+        "japanese": "レン",
+        "chinese": "仁",
+        "french": "Ren",
+        "spanish": "Ren",
+        "vietnamese": "Ren",
+        "thai": "เร็น",
+        "hindi": "रेन"
+      },
+      "description": "",
+      "face_image_url": "https://imagedelivery.net/WTEqQNGFb-l-IHS6IGnzUQ/147a5f29-8f8d-4531-cc9b-f86c9f45f000/public",
+      "battle_sprite_url": "https://imagedelivery.net/WTEqQNGFb-l-IHS6IGnzUQ/d1d88aa7-877f-43e6-919b-ee77e6c58e00/public",
+      "role": {
+        "korean": "순대국집 사장"
+      }
+    }
+  },
+  "boss": {
+    "pool_id": "random_boss",
+    "role": {
+      "korean": "덩치"
+    }
+  },
+  "prologue": {
+    "korean": [
+      "짠 바다 냄새가 맴도는 항구 뒷골목 상가에 기묘한 소문이 감돌기 시작한다.",
+      "거대 조직이 상가를 노린다는 소문에 가게 사장님들은 불안에 떨며 밤을 지샌다.",
+      "얼마 전 이 상가에 순대국집을 연 렌의 요청을 받은 히어로들이 진상을 밝히기 위해 항구 골목에 들어선다."
+    ]
+  },
+  "rooms": [
+    {
+      "dialogue": [
+        {
+          "type": "speech",
+          "speaker": "narrator",
+          "emotion": "base",
+          "content": {
+            "korean": "짠 바다 냄새가 풍기는 항구 상가 골목에 다다른다."
+          }
+        },
+        {
+          "action": "enter",
+          "speaker": "ren",
+          "spot": [
+            500,
+            800
+          ],
+          "type": "direction",
+          "duration_ms": 500
+        },
+        {
+          "content": {
+            "korean": "가게를 연 지 한 달밖에 안 돼서 동네 사정은 잘 몰라요. 그런데 조직이 상가를 노린다는 소문이 돌고 있어요. 진상을 밝히고 상가를 지켜 주세요!"
+          },
+          "type": "speech",
+          "emotion": "sad",
+          "speaker": "ren"
+        },
+        {
+          "speaker": "character_any",
+          "emotion": "base",
+          "type": "speech",
+          "content": {
+            "korean": "우리가 왔으니 안심해, 상가는 반드시 지켜 낼 테니까!"
+          }
+        },
+        {
+          "speaker": "narrator",
+          "content": {
+            "korean": "렌이 불안한 표정으로 골목 안쪽을 손으로 가리킨다."
+          },
+          "type": "speech"
+        },
+        {
+          "speaker": "character_any",
+          "type": "speech",
+          "emotion": "base",
+          "content": {
+            "korean": "우선 골목 안쪽으로 들어가서 이상한 정황이 없는지 살펴보자."
+          }
+        },
+        {
+          "speaker": "character_1",
+          "emotion": "happy",
+          "content": {
+            "korean": "좋아, 가보자!"
+          },
+          "type": "speech"
+        }
+      ],
+      "id": 1
+    },
+    {
+      "dialogue": [
+        {
+          "type": "direction",
+          "spot": [
+            500,
+            800
+          ],
+          "action": "enter",
+          "speaker": "ren",
+          "duration_ms": 500
+        },
+        {
+          "type": "speech",
+          "speaker": "narrator",
+          "content": {
+            "korean": "검은 양복을 입은 커다란 덩치가 가게 문을 요란하게 두드린다."
+          }
+        },
+        {
+          "speaker": "character_any",
+          "emotion": "angry",
+          "type": "speech",
+          "content": {
+            "korean": "저 사내, 문을 다 부술 기세로 두드리고 있어!"
+          }
+        },
+        {
+          "type": "speech",
+          "speaker": "narrator",
+          "content": {
+            "korean": "가게 사장이 쭈뼛거리며 두툼한 봉투를 건네자, 덩치는 봉투를 주머니에 쑤셔 넣는다."
+          }
+        },
+        {
+          "emotion": "sad",
+          "speaker": "ren",
+          "content": {
+            "korean": "제가 이사 온 뒤로 밤마다 저렇게 봉투를 받아 가요."
+          },
+          "type": "speech"
+        },
+        {
+          "emotion": "angry",
+          "type": "speech",
+          "speaker": "character_any",
+          "content": {
+            "korean": "상인들에게 돈을 뜯어내는 전형적인 갈취 현장이 분명해!"
+          }
+        },
+        {
+          "type": "speech",
+          "content": {
+            "korean": "사장님 표정이 너무 불쌍해..."
+          },
+          "speaker": "character_1",
+          "emotion": "sad"
+        }
+      ],
+      "id": 3
+    },
+    {
+      "id": 5,
+      "dialogue": [
+        {
+          "duration_ms": 500,
+          "speaker": "ren",
+          "spot": [
+            500,
+            800
+          ],
+          "type": "direction",
+          "action": "enter"
+        },
+        {
+          "content": {
+            "korean": "험상궂은 인상을 쓴 덩치가 주머니를 툭툭 털며 다음 가게로 걸어간다."
+          },
+          "speaker": "narrator",
+          "type": "speech"
+        },
+        {
+          "speaker": "character_any",
+          "emotion": "angry",
+          "type": "speech",
+          "content": {
+            "korean": "인상까지 팍 쓰면서 다음 가게로 가고 있잖아!"
+          }
+        },
+        {
+          "emotion": "sad",
+          "type": "speech",
+          "speaker": "ren",
+          "content": {
+            "korean": "매일 밤마다 단 한 가게도 빼놓지 않고 봉투를 모으고 다닌답니다."
+          }
+        },
+        {
+          "content": {
+            "korean": "덩치는 매일 밤 가게마다 돌며 봉투를 수금하고 있다."
+          },
+          "speaker": "narrator",
+          "type": "speech"
+        },
+        {
+          "content": {
+            "korean": "대놓고 상가를 쥐어짜다니 정말 너무해!"
+          },
+          "speaker": "character_1",
+          "emotion": "angry",
+          "type": "speech"
+        },
+        {
+          "content": {
+            "korean": "더 두고 볼 수 없어, 직접 가서 막아서자!"
+          },
+          "type": "speech",
+          "emotion": "base",
+          "speaker": "character_any"
+        }
+      ]
+    },
+    {
+      "id": 9,
+      "dialogue": [
+        {
+          "action": "enter",
+          "spot": [
+            500,
+            800
+          ],
+          "type": "direction",
+          "duration_ms": 500,
+          "speaker": "ren"
+        },
+        {
+          "type": "speech",
+          "content": {
+            "korean": "봉투를 쥔 덩치 앞을 막아서며 그의 팔을 거칠게 낚아챈다."
+          },
+          "speaker": "narrator"
+        },
+        {
+          "emotion": "angry",
+          "speaker": "character_any",
+          "content": {
+            "korean": "가게들을 괴롭히며 뜯어낸 그 봉투를 당장 내려놔!"
+          },
+          "type": "speech"
+        },
+        {
+          "type": "speech",
+          "speaker": "narrator",
+          "content": {
+            "korean": "덩치가 억울하다는 듯 어깨를 들썩이며 \"남의 일에 상관 말고 비켜라!\" 하고 주먹을 쥔다."
+          }
+        },
+        {
+          "speaker": "character_1",
+          "type": "speech",
+          "emotion": "angry",
+          "content": {
+            "korean": "적반하장도 유분수지, 주먹까지 쥐다니!"
+          }
+        },
+        {
+          "content": {
+            "korean": "저렇게 주먹을 쥐는 걸 보니 순순히 물러설 생각이 없어 보여요."
+          },
+          "type": "speech",
+          "emotion": "sad",
+          "speaker": "ren"
+        },
+        {
+          "type": "speech",
+          "content": {
+            "korean": "말로 해서 안 들으면 실력으로 제압하는 수밖에 없겠어!"
+          },
+          "speaker": "character_any",
+          "emotion": "angry"
+        }
+      ]
+    },
+    {
+      "id": 15,
+      "dialogue": [
+        {
+          "speaker": "narrator",
+          "type": "speech",
+          "content": {
+            "korean": "덩치가 거대한 몸집으로 쿵쿵 소리를 내며 위협적으로 달려든다."
+          }
+        },
+        {
+          "action": "enter",
+          "speaker": "ren",
+          "spot": [
+            500,
+            800
+          ],
+          "type": "direction",
+          "duration_ms": 500
+        },
+        {
+          "speaker": "ren",
+          "emotion": "sad",
+          "type": "speech",
+          "content": {
+            "korean": "으악, 무서워라! 히어로님들 조심하세요!"
+          }
+        },
+        {
+          "action": "exit",
+          "direction": "down",
+          "speaker": "ren",
+          "type": "direction"
+        },
+        {
+          "content": {
+            "korean": "남의 경조사 챙기기도 바쁜데 너희는 뭐야? 비키지 못해!"
+          },
+          "emotion": "angry",
+          "type": "speech",
+          "speaker": "random_boss"
+        },
+        {
+          "content": {
+            "korean": "상인들을 괴롭히는 악당을 더는 봐줄 수 없어, 공격이야!"
+          },
+          "type": "speech",
+          "emotion": "angry",
+          "speaker": "character_any"
+        }
+      ],
+      "win_dialogue": [
+        {
+          "type": "direction",
+          "action": "shake",
+          "speaker": "narrator",
+          "duration_ms": 300
+        },
+        {
+          "content": {
+            "korean": "히어로들의 공격에 덩치가 어설프게 발이 꼬여 크게 넘어진다."
+          },
+          "type": "speech",
+          "speaker": "narrator"
+        },
+        {
+          "content": {
+            "korean": "품 안에서 떨어진 종이는 수금 장부가 아니라 상인회 경조사 장부다."
+          },
+          "type": "speech",
+          "speaker": "narrator"
+        },
+        {
+          "emotion": "angry",
+          "type": "speech",
+          "speaker": "random_boss",
+          "content": {
+            "korean": "상인회 총무라서 경조사비를 걷던 것뿐이야! 이번 달엔 사장님 댁 혼사가 줄줄이 몰려서 매일 밤 돌고 있다고!"
+          }
+        },
+        {
+          "action": "enter",
+          "speaker": "ren",
+          "duration_ms": 500,
+          "type": "direction",
+          "spot": [
+            500,
+            800
+          ]
+        },
+        {
+          "content": {
+            "korean": "알고 보니 상인회 총무로서 이웃들의 경조사를 챙겨 주시던 거였군요."
+          },
+          "speaker": "ren",
+          "type": "speech",
+          "emotion": "base"
+        },
+        {
+          "type": "speech",
+          "content": {
+            "korean": "상인들을 돕던 선량한 총무님을 오해했다니 정말 미안해!"
+          },
+          "speaker": "character_any",
+          "emotion": "sad"
+        },
+        {
+          "speaker": "character_1",
+          "emotion": "sad",
+          "content": {
+            "korean": "우리가 완전 착각하고 실수했네!"
+          },
+          "type": "speech"
+        }
+      ],
+      "lose_dialogue": [
+        {
+          "action": "shake",
+          "speaker": "narrator",
+          "type": "direction",
+          "duration_ms": 400
+        },
+        {
+          "content": {
+            "korean": "덩치가 휘두른 양팔에 히어로들이 엉켜 바닥에 굴러넘어진다."
+          },
+          "speaker": "narrator",
+          "type": "speech"
+        },
+        {
+          "action": "enter",
+          "spot": [
+            500,
+            800
+          ],
+          "type": "direction",
+          "duration_ms": 500,
+          "speaker": "ren"
+        },
+        {
+          "content": {
+            "korean": "어서 다시 일어나세요! 저 깡패를 막아야 합니다!"
+          },
+          "type": "speech",
+          "emotion": "sad",
+          "speaker": "ren"
+        },
+        {
+          "content": {
+            "korean": "으윽, 조금만 기다려 줘! 금방 다시 일어날 테니까!"
+          },
+          "type": "speech",
+          "emotion": "angry",
+          "speaker": "character_any"
+        }
+      ]
+    }
+  ]
+}

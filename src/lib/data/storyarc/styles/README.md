@@ -2,7 +2,7 @@
 
 이 폴더에는 두 가지가 있습니다.
 
-- **스타일 파일** `netshort.md`, `cozy.md`: "어떻게 쓰는지"(작가 소개·문체·톤·일반 보스 호칭)
+- **스타일 파일** `netshort.md`, `cozy.md`, `romance.md`, `gangster.md`(유쾌한 조폭 코미디): "어떻게 쓰는지"(작가 소개·문체·톤·일반 보스 호칭)
 - **이야기 폴더** `netshort_test/`, `cozy_test/`: 이야기 틀별 재료와 결과물
 
 이야기 틀과 스타일은 따로 고를 수 있습니다. 넷쇼트 틀에 cozy 문체를 입힐 수도 있습니다.
@@ -62,7 +62,7 @@ npm run gen:netshort-scenarios -- --id=<id> --enters-only   # 빠진 enter 만 (
 
 ## cozy (`cozy_test/`)
 
-1. **기획안** — `premises.json` 에 사람이 쓴 5화 줄거리 4개(lostfound·market·festival·letters)가 있습니다. 3화는 거꾸로 꼬는 화입니다(믿었던 사람이 상대).
+1. **기획안** — `premises.json` 에 사람이 쓴 5화 줄거리 5개(lostfound·market·festival·letters·gangster)가 있습니다. 3화는 거꾸로 꼬는 화입니다(믿었던 사람이 상대).
 2. **배역** — 처음 만들 때 함께 다닐 주 NPC 한 명과 스타일·톤을 뽑아 `<key>/cast.json` 에 저장합니다. 이야기끼리 NPC가 겹치지 않게 뽑습니다.
 3. **이야기** — 기획안 + 주 NPC + 스타일로 `story.json` 을 씁니다. 채점은 없습니다.
 4. **대본** — 1~4화 상대는 `random_boss`, 5화 상대는 `boss`. 둘 다 방 15 에서만 직접 말하고, 그 전에는 지문 속에서만 나옵니다.
@@ -72,6 +72,25 @@ npm run gen:cozy                                     # 기획안 전부
 npm run gen:cozy -- --keys=market                    # 하나만
 npm run gen:cozy-scenarios                           # 대본, 기획안 전부
 npm run gen:cozy-scenarios -- --keys=market --orders=1   # 스모크: 1화만
+```
+
+---
+
+## 갱스터 (`gangster_test/`)
+
+이야기 단계(Gemini)가 없습니다. 사람이 쓴 `story.json` 6개(bag·blackwolf·exam·fourblocks·onejob·rat)를 바로 대본으로 옮깁니다. 이야기 목록은 `summary.json` 에 있습니다.
+
+1. **이야기** — 한 화는 상대를 만나러 가는 여정입니다. 방 번호가 대본 방 번호와 같습니다.
+   - 방 1: 히어로들이 이번 화에 떠나는 이유 (화마다 `why_go`. 1화는 이 일을 맡은 이유도 함께)
+   - 방 3·5·7: 상대에게 가는 길. 상대는 아직 만나지 않고 소문·흔적으로만 나옵니다
+   - 방 9: 상대를 처음 만나고, 상대가 자기가 왜 이러는지 직접 말합니다 (화마다 `foe_reason`. 1~4화는 겉으로 내세우는 이유이고 진짜 사정은 방 10 이긴 뒤에, 5화는 실제 사정과 바라는 것을 모두)
+   - 방 10: 싸움 (싸움 전 / 이긴 뒤 / 진 뒤)
+2. **대본** — 방 1,3,5,7,9,10. 방(블록)마다 대사 15줄 이하 (코드 검사). 상대(`random_boss`, 5화 `boss`)는 방 9·10 에서만 말하고, 방 9 에서 두 줄 이상 말해야 합니다. 상대·NPC 의 enter 가 빠지면 코드가 넣습니다.
+
+```bash
+npm run gen:gangster-scenarios                              # 이야기 전부
+npm run gen:gangster-scenarios -- --keys=rat --orders=1     # 스모크: 1화만
+npm run gen:gangster-scenarios -- --keys=rat --dry-run      # 프롬프트만 (Gemini 안 부름)
 ```
 
 ---
@@ -111,4 +130,5 @@ npm run gen:cozy -- --keys=market --style=netshort   # cozy 틀 + 넷쇼트 문�
 | [chapterGenNetshort.ts](../../../prompts/chapterGenNetshort.ts) · [api/scenario/netshort](../../../../routes/api/scenario/netshort/+server.ts) · [gen-netshort-scenarios.mjs](../../../../../scripts/gen-netshort-scenarios.mjs) | 넷쇼트 대본 |
 | [cozyStory.ts](../../../prompts/cozyStory.ts) · [api/storyarc/cozy](../../../../routes/api/storyarc/cozy/+server.ts) · [gen-cozy.mjs](../../../../../scripts/gen-cozy.mjs) | cozy 이야기 |
 | [chapterGenCozy.ts](../../../prompts/chapterGenCozy.ts) · [api/scenario/cozy](../../../../routes/api/scenario/cozy/+server.ts) · [gen-cozy-scenarios.mjs](../../../../../scripts/gen-cozy-scenarios.mjs) | cozy 대본 |
-| [netshortPolish.ts](../../../prompts/netshortPolish.ts) | 대본 다듬기 (두 틀 공용) |
+| [chapterGenGangster.ts](../../../prompts/chapterGenGangster.ts) · [api/scenario/gangster](../../../../routes/api/scenario/gangster/+server.ts) · [gen-gangster-scenarios.mjs](../../../../../scripts/gen-gangster-scenarios.mjs) | 갱스터 대본 |
+| [netshortPolish.ts](../../../prompts/netshortPolish.ts) | 대본 다듬기 (넷쇼트·cozy·romance·갱스터 공용) |

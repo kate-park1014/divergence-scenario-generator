@@ -1,0 +1,152 @@
+{
+	"id": "card_01_patrol_flashlight",
+	"title": {
+		"korean": "순찰 손전등"
+	},
+	"intensity": "high",
+	"after_story": 7,
+	"before_story": 9,
+	"callback": {
+		"seed": "dock_gate_guard_easy",
+		"min_rooms_after": 2
+	},
+	"background_tags": [
+		"alley",
+		"night",
+		"streetlight",
+		"no_crowd",
+		"tense"
+	],
+	"dialogue": [
+		{
+			"speaker": "narrator",
+			"content": {
+				"korean": "골목 안쪽에서 불길이 솟구치는 와중에, 야간 경비의 손전등 불빛이 골목 입구를 훑는다."
+			}
+		},
+		{
+			"speaker": "dock_guard_d1",
+			"content": {
+				"korean": "뭐지? 이 시간에 골목 안에서 인기척이? 수상한 낌새는 놓칠 수 없지!"
+			}
+		},
+		{
+			"speaker": "dax",
+			"content": {
+				"korean": "젠장, 저 경비 아저씨가 여기까지 와서 순찰을 하다니... 우리가 여기 있는 걸 들키면 안 되는데!"
+			}
+		},
+		{
+			"speaker": "narrator",
+			"content": {
+				"korean": "불빛이 골목 안을 샅샅이 비추며 히어로들이 숨어 있는 곳까지 다가온다."
+			}
+		}
+	],
+	"choices": [
+		{
+			"text": {
+				"korean": "경비의 시선을 돌리기 위해 다른 방향으로 소리를 낸다."
+			},
+			"path": "easy",
+			"mbti": "TJ",
+			"flag": "alley_distraction",
+			"effects": {
+				"reason": -10,
+				"echo": -5
+			},
+			"reward": [
+				"attack_up"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "당신이 낸 소리에 경비가 다른 쪽을 향해 고개를 돌린다. 그 틈에 당신은 급히 몸을 숨긴다."
+					}
+				},
+				{
+					"speaker": "dax",
+					"content": {
+						"korean": "휴, 간신히 넘어갔네요. 하지만 왠지 불안해요."
+					}
+				}
+			]
+		},
+		{
+			"text": {
+				"korean": "경비에게 우리가 누구인지, 왜 여기에 있는지 조용히 설명한다."
+			},
+			"path": "hard",
+			"mbti": "NF",
+			"flag": "guard_suspicion",
+			"effects": {
+				"community": 10,
+				"fighting": -10
+			},
+			"reward": [
+				"defense_up"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "경비는 당신의 설명을 듣고도 여전히 의심스러운 눈초리를 거두지 못한다."
+					}
+				},
+				{
+					"speaker": "dock_guard_d1",
+					"content": {
+						"korean": "수상한 자들이군... 계속 지켜보겠어."
+					}
+				},
+				{
+					"speaker": "dax",
+					"content": {
+						"korean": "경비 아저씨가 우리를 완전히 믿지는 않는 것 같아요."
+					}
+				}
+			]
+		}
+	],
+	"tags": [
+		"dock_guard_d1",
+		"dax"
+	],
+	"_design": {
+		"slot": "D",
+		"kind": "callback",
+		"person": {
+			"role": "부두 정문 경비원",
+			"name": "야간 경비",
+			"id": "dock_guard_d1"
+		},
+		"wants": "자신의 근무지 안전을 철저히 지키고 싶어 함",
+		"rule_link": "야간 경비의 의심스러운 행동만 보고 그를 피할지, 혹은 상황을 이해하려 노력할지 결정해야 합니다.",
+		"events": {},
+		"flags": {
+			"alley_distraction": {
+				"kind": "bad",
+				"boss_penalty": -1,
+				"label": {
+					"korean": "골목 방해"
+				},
+				"boss_line": {
+					"korean": "야간 경비가 골목 안을 계속 주시하며 히어로들의 움직임을 방해한다."
+				}
+			},
+			"guard_suspicion": {
+				"kind": "good",
+				"boss_penalty": 1,
+				"label": {
+					"korean": "경비 의심"
+				},
+				"boss_choice": {
+					"korean": "야간 경비가 히어로들을 수상하게 여기고 골목 주변을 맴돈다."
+				}
+			}
+		}
+	}
+}
