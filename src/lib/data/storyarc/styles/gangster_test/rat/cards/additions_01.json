@@ -1,576 +1,530 @@
 {
 	"scenario_id": "gangster_rat_01",
 	"actors": {
-		"old_docker": {
+		"worker_old": {
 			"name": {
-				"korean": "부두 일꾼"
+				"korean": "늙은 일꾼"
 			},
 			"role": {
 				"korean": "늙은 부두 일꾼"
-			}
+			},
+			"base_image_url": "https://imagedelivery.net/WTEqQNGFb-l-IHS6IGnzUQ/d0b23c7a-3c7f-4eca-6a16-f25a80cf7f00/public",
+			"base_image_nobg_url": "https://imagedelivery.net/WTEqQNGFb-l-IHS6IGnzUQ/a69b9e93-302a-41c1-fc0e-33d30b987400/public"
 		},
-		"dock_guard": {
+		"guard_rookie": {
 			"name": {
-				"korean": "부두 경비원"
+				"korean": "신참 경비"
 			},
 			"role": {
-				"korean": "부두 경비원"
-			}
+				"korean": "백상어파 신참 경비"
+			},
+			"base_image_url": "https://imagedelivery.net/WTEqQNGFb-l-IHS6IGnzUQ/80a53ccc-f320-40c7-00b9-a12a8951e100/public",
+			"base_image_nobg_url": "https://imagedelivery.net/WTEqQNGFb-l-IHS6IGnzUQ/2fe8ee1f-db73-4171-b277-81dad4d95e00/public"
 		},
-		"dock_worker": {
+		"foreman_hasty": {
 			"name": {
-				"korean": "부두 잡부"
+				"korean": "성급한 반장"
 			},
 			"role": {
-				"korean": "부두 잡부"
-			}
+				"korean": "부두 작업 반장"
+			},
+			"base_image_url": "https://imagedelivery.net/WTEqQNGFb-l-IHS6IGnzUQ/68f3be27-d81e-49e5-d06f-8db318735a00/public",
+			"base_image_nobg_url": "https://imagedelivery.net/WTEqQNGFb-l-IHS6IGnzUQ/3566aeb7-581a-44fd-5e9c-80fdb03d7100/public"
 		},
-		"dock_guard_b1": {
+		"guard": {
 			"name": {
-				"korean": "야간 경비"
+				"korean": "경비원"
 			},
 			"role": {
-				"korean": "부두 정문 경비원"
-			}
+				"korean": "부두 야간 경비원"
+			},
+			"base_image_url": "https://imagedelivery.net/WTEqQNGFb-l-IHS6IGnzUQ/0c30fc75-2430-467c-fe6c-3f60398aae00/public",
+			"base_image_nobg_url": "https://imagedelivery.net/WTEqQNGFb-l-IHS6IGnzUQ/ffe8347c-a3c0-4032-b864-8f7b51dd5a00/public"
 		},
-		"shoelace_guy": {
+		"fisherman": {
 			"name": {
-				"korean": "신발 끈 남자"
+				"korean": "밤낚시꾼"
 			},
 			"role": {
-				"korean": "길 위의 행인"
-			}
+				"korean": "부두에서 밤낚시를 하는 의문의 남자"
+			},
+			"base_image_url": "https://imagedelivery.net/WTEqQNGFb-l-IHS6IGnzUQ/ffb158a5-a994-475b-9cea-f7eac8ba8900/public",
+			"base_image_nobg_url": "https://imagedelivery.net/WTEqQNGFb-l-IHS6IGnzUQ/160aab90-a4f7-40f1-b56b-76de3ecfdc00/public"
 		},
-		"old_man": {
+		"driver": {
 			"name": {
-				"korean": "노인"
+				"korean": "배달원"
 			},
 			"role": {
-				"korean": "짐수레 끄는 노인"
-			}
+				"korean": "밤늦게 배달 중인 오토바이 배달원"
+			},
+			"base_image_url": "https://imagedelivery.net/WTEqQNGFb-l-IHS6IGnzUQ/5e95afe9-43fe-48f1-bf2c-4826ae9d0400/public",
+			"base_image_nobg_url": "https://imagedelivery.net/WTEqQNGFb-l-IHS6IGnzUQ/bf49d03e-024d-4474-7756-1f93428a9800/public"
 		},
-		"executive_subordinate": {
+		"subordinate_executive": {
 			"name": {
 				"korean": "간부의 부하"
 			},
 			"role": {
 				"korean": "백상어파 간부의 부하"
-			}
-		},
-		"grateful_worker": {
-			"name": {
-				"korean": "부두 일꾼"
 			},
-			"role": {
-				"korean": "약값을 받은 부두 일꾼"
-			}
+			"base_image_url": "https://imagedelivery.net/WTEqQNGFb-l-IHS6IGnzUQ/a20f586a-5595-40ce-b178-2883f88ffd00/public",
+			"base_image_nobg_url": "https://imagedelivery.net/WTEqQNGFb-l-IHS6IGnzUQ/34293159-0d4f-4cad-ac49-af43cc5eed00/public"
 		},
-		"street_child": {
+		"child_picker": {
 			"name": {
 				"korean": "고물 줍는 아이"
 			},
 			"role": {
-				"korean": "골목을 떠도는 고물 줍는 아이"
-			}
-		},
-		"dock_guard_d1": {
-			"name": {
-				"korean": "야간 경비"
+				"korean": "고물을 줍는 아이"
 			},
-			"role": {
-				"korean": "부두 정문 경비원"
-			}
+			"base_image_url": "https://imagedelivery.net/WTEqQNGFb-l-IHS6IGnzUQ/a9c431c7-db05-46ea-146c-ec0d6fe2b200/public",
+			"base_image_nobg_url": "https://imagedelivery.net/WTEqQNGFb-l-IHS6IGnzUQ/f6061f0b-483d-4585-68cc-2bcd46a29e00/public"
 		},
-		"dock_guard_d2": {
-			"name": {
-				"korean": "야간 경비"
-			},
-			"role": {
-				"korean": "부두 정문 경비원"
-			}
-		},
-		"junior_accountant": {
+		"clerk": {
 			"name": {
 				"korean": "막내 경리"
 			},
 			"role": {
-				"korean": "경리부장의 부하"
-			}
+				"korean": "경리부장 밑의 막내 경리"
+			},
+			"base_image_url": "https://imagedelivery.net/WTEqQNGFb-l-IHS6IGnzUQ/bfeb4ebc-d3a7-4565-1b8e-cf2456806500/public",
+			"base_image_nobg_url": "https://imagedelivery.net/WTEqQNGFb-l-IHS6IGnzUQ/2fb3f1dc-bebc-467b-ba71-9b1a81b80800/public"
 		},
 		"ajumma": {
 			"name": {
 				"korean": "컨테이너 식당 아주머니"
 			},
 			"role": {
-				"korean": "식당 주인"
-			}
-		},
-		"ajumma_b3": {
-			"name": {
-				"korean": "김영숙"
+				"korean": "식당 사장"
 			},
-			"role": {
-				"korean": "컨테이너 식당 아주머니"
-			}
+			"base_image_url": "https://imagedelivery.net/WTEqQNGFb-l-IHS6IGnzUQ/655172f6-0a69-47ed-d046-481016940000/public",
+			"base_image_nobg_url": "https://imagedelivery.net/WTEqQNGFb-l-IHS6IGnzUQ/96e51793-006b-480a-47d0-67eed4d94b00/public"
 		},
-		"ajumma_b4": {
+		"pojangmacha_owner": {
 			"name": {
-				"korean": "김영숙"
-			},
-			"role": {
-				"korean": "컨테이너 식당 아주머니"
-			}
-		},
-		"restaurant_owner": {
-			"name": {
-				"korean": "식당 아주머니"
-			},
-			"role": {
-				"korean": "컨테이너 식당 주인"
-			}
-		},
-		"pojangmacha_owner_park": {
-			"name": {
-				"korean": "박 사장"
-			},
-			"role": {
-				"korean": "포장마차 주인"
-			}
-		},
-		"pojangmacha_owner_kim": {
-			"name": {
-				"korean": "김 사장"
-			},
-			"role": {
-				"korean": "포장마차 주인"
-			}
-		},
-		"cart_auntie": {
-			"name": {
-				"korean": "김복자"
-			},
-			"role": {
 				"korean": "포장마차 아주머니"
-			}
-		},
-		"street_vendor": {
-			"name": {
-				"korean": "포장마차 할머니"
 			},
 			"role": {
-				"korean": "골목 노점상"
-			}
+				"korean": "골목 포장마차 주인"
+			},
+			"base_image_url": "https://imagedelivery.net/WTEqQNGFb-l-IHS6IGnzUQ/6156c553-ce65-4367-fdda-923d066a0000/public",
+			"base_image_nobg_url": "https://imagedelivery.net/WTEqQNGFb-l-IHS6IGnzUQ/7d85982b-0160-4aeb-0c6b-3d8fc0864200/public"
+		},
+		"dax": {
+			"base_image_url": "https://imagedelivery.net/WTEqQNGFb-l-IHS6IGnzUQ/1d413079-c592-444d-31de-db59d7869200/public",
+			"base_image_nobg_url": "https://imagedelivery.net/WTEqQNGFb-l-IHS6IGnzUQ/0e7c3b1e-039d-459d-c349-5084e8c97400/public"
 		}
 	},
 	"seeds": {
-		"old_docker_plea_easy": {
-			"korean": "부두 일꾼: 아무 간부나 수상하다고 맞장구쳐 일꾼을 달래 준다."
+		"old_worker_plea_easy": {
+			"korean": "늙은 일꾼: \"그럼요, 경리부장이 제일 수상하죠!\" 하고 장단을 맞춰 일꾼을 달래 준다."
 		},
-		"old_docker_plea_hard": {
-			"korean": "부두 일꾼: 아직 모른다고 솔직히 말하고 약값 일부를 대신 내준다."
+		"old_worker_plea_hard": {
+			"korean": "늙은 일꾼: \"아직 누가 범인인지 모른다\"고 솔직히 말하고, 약값 일부를 대신 내준다."
 		},
-		"dock_gate_guard_easy": {
-			"korean": "야간 경비: 회장 이름을 대며 당장 차를 들여보내라고 말한다."
+		"pier_guard_suspicion_easy": {
+			"korean": "경비원: 회장님 이름을 대며 밀고 들어간다"
 		},
-		"dock_gate_guard_hard": {
-			"korean": "야간 경비: 순순히 트렁크를 열어 보이며 부두에 온 사정을 설명한다."
+		"pier_guard_suspicion_hard": {
+			"korean": "경비원: 트렁크를 순순히 열어 보이며 사정을 설명한다"
 		}
 	},
 	"flags": {
-		"executive_subordinate_chase": {
+		"easy_rumor_penalty": {
 			"label": {
-				"korean": "부하의 추격"
+				"korean": "소문 페널티"
 			},
 			"boss_penalty": -1,
 			"boss_line": {
-				"korean": "간부의 부하가 보스 방까지 쫓아와 시비를 건다."
+				"korean": "간부의 부하들이 당신의 앞을 막아선다."
 			}
 		},
-		"executive_subordinate_trust": {
+		"hard_subordinate_info": {
 			"label": {
-				"korean": "부하의 신뢰"
+				"korean": "부하 정보"
 			},
 			"boss_penalty": 1,
 			"boss_choice": {
-				"korean": "간부의 부하가 당신을 믿고 보스 방에서 작은 도움을 준다."
+				"korean": "간부의 부하들이 길을 비켜주며 간부의 숨겨진 장부를 흘린다."
 			}
 		},
-		"quick_path_to_boss": {
+		"easy_worker_shortcut": {
 			"label": {
-				"korean": "빠른 길 안내"
+				"korean": "일꾼 지름길"
 			},
 			"boss_penalty": 1,
 			"boss_choice": {
-				"korean": "보스 방에 빠르게 진입하여 경리부장의 허를 찌른다."
+				"korean": "늙은 일꾼이 알려준 지름길을 통해 경리부장의 뒤를 잡는다."
 			}
 		},
-		"safe_passage_for_worker": {
+		"hard_prudent_path": {
 			"label": {
-				"korean": "일꾼의 안전 확보"
+				"korean": "신중한 길"
 			},
 			"boss_penalty": 2,
 			"boss_choice": {
-				"korean": "일꾼이 당신의 의로운 행동을 소문내어 보스 방에서 백상어파 조직원들의 작은 지지를 얻는다."
+				"korean": "늙은 일꾼의 지름길 제안을 거절하고 신중하게 이동하여 경리부장의 함정을 피한다."
 			}
 		},
-		"alley_distraction": {
+		"guard_alert": {
 			"label": {
-				"korean": "골목 방해"
+				"korean": "경비원 경고"
 			},
 			"boss_penalty": -1,
 			"boss_line": {
-				"korean": "야간 경비가 골목 안을 계속 주시하며 히어로들의 움직임을 방해한다."
+				"korean": "경비원이 히어로들의 존재를 눈치채고 경리부장에게 소리친다."
 			}
 		},
-		"guard_suspicion": {
+		"guard_distraction": {
 			"label": {
-				"korean": "경비 의심"
+				"korean": "경비원 주의"
 			},
 			"boss_penalty": 1,
 			"boss_choice": {
-				"korean": "야간 경비가 히어로들을 수상하게 여기고 골목 주변을 맴돈다."
+				"korean": "경비원이 엉뚱한 곳에 신경을 팔아 경리부장이 잠시 혼란에 빠진다."
 			}
 		},
-		"back_door_key": {
+		"alley_shortcut": {
 			"label": {
-				"korean": "쪽문 열쇠"
+				"korean": "골목 쪽문"
 			},
 			"boss_penalty": 1,
 			"boss_choice": {
-				"korean": "쪽문 열쇠로 경리부장의 방에 몰래 침투할 수 있다."
+				"korean": "경비원이 건넨 쪽문 열쇠로 경리부장의 방에 몰래 침투한다."
 			}
 		},
-		"secure_back_door": {
+		"guard_guide": {
 			"label": {
-				"korean": "안전한 쪽문"
+				"korean": "경비원 안내"
 			},
 			"boss_penalty": 2,
 			"boss_choice": {
-				"korean": "야간 경비가 알려준 쪽문은 보안이 철저하여 경리부장이 눈치채지 못한다."
+				"korean": "경비원이 경리부장의 예상 경로를 알려줘 함정을 피할 수 있다."
 			}
 		},
-		"ajumma_debt_resolved": {
+		"ajumma_dog_scare": {
 			"label": {
-				"korean": "외상값 해결"
+				"korean": "강아지 놀람"
 			},
 			"boss_penalty": -1,
 			"boss_line": {
-				"korean": "컨테이너 식당 아주머니의 외상값을 받아줘 아주머니가 당신을 돕는다."
+				"korean": "아주머니 식당 강아지가 당신을 보고 짖어댄다."
 			}
 		},
-		"ajumma_debt_mediated": {
+		"ajumma_dog_find": {
+			"label": {
+				"korean": "강아지 구출"
+			},
+			"boss_penalty": 1,
+			"boss_choice": {
+				"korean": "아주머니 식당 강아지가 당신에게 꼬리를 흔든다."
+			}
+		},
+		"ajumma_dog_fear": {
+			"label": {
+				"korean": "강아지 도망"
+			},
+			"boss_penalty": 2,
+			"boss_choice": {
+				"korean": "아주머니 식당 강아지가 당신을 피해 도망친다."
+			}
+		},
+		"ajumma_chopstick_game": {
+			"label": {
+				"korean": "젓가락 게임"
+			},
+			"boss_penalty": -1,
+			"boss_line": {
+				"korean": "일꾼들이 당신을 보고 젓가락으로 바닥을 콕콕 찌른다."
+			}
+		},
+		"ajumma_chopstick_bet": {
+			"label": {
+				"korean": "젓가락 내기"
+			},
+			"boss_penalty": 1,
+			"boss_choice": {
+				"korean": "일꾼들이 당신에게 젓가락을 들고 승부를 겨루자고 한다."
+			}
+		},
+		"ajumma_chopstick_peace": {
+			"label": {
+				"korean": "젓가락 평화"
+			},
+			"boss_penalty": 2,
+			"boss_choice": {
+				"korean": "일꾼들이 당신에게 젓가락을 공손히 건넨다."
+			}
+		},
+		"ajumma_sauce_returned_easy": {
+			"label": {
+				"korean": "양념통 회수"
+			},
+			"boss_penalty": -1,
+			"boss_line": {
+				"korean": "닥스 발밑에 가지런히 놓인 양념 통이 보인다. 당신은 양념 통을 들어 올리며 기세등등하게 외친다."
+			}
+		},
+		"ajumma_sauce_returned_hard": {
+			"label": {
+				"korean": "대화로 양념 회수"
+			},
+			"boss_penalty": 1,
+			"boss_choice": {
+				"korean": "닥스 발밑에 가지런히 놓인 양념 통이 보인다. 당신은 양념 통을 들어 올리며 기세등등하게 외친다."
+			}
+		},
+		"ajumma_sauce_returned_stat": {
+			"label": {
+				"korean": "위엄으로 양념 회수"
+			},
+			"boss_penalty": 2,
+			"boss_choice": {
+				"korean": "닥스 발밑에 가지런히 놓인 양념 통이 보인다. 당신은 양념 통을 들어 올리며 기세등등하게 외친다."
+			}
+		},
+		"ajumma_cat_separated": {
+			"label": {
+				"korean": "고양이 싸움 중재"
+			},
+			"boss_penalty": -1,
+			"boss_line": {
+				"korean": "닥스 발밑에 평화롭게 앉아 있는 고양이 두 마리가 보인다. 당신은 고양이들을 쓰다듬으며 마음을 가다듬는다."
+			}
+		},
+		"ajumma_cat_ignored": {
+			"label": {
+				"korean": "고양이 싸움 무시"
+			},
+			"boss_penalty": 1,
+			"boss_choice": {
+				"korean": "닥스 발밑에 엉망으로 흩어진 고양이 사료가 보인다. 당신은 사료를 밟아 미끄러진다."
+			}
+		},
+		"ajumma_cat_peace_stat": {
+			"label": {
+				"korean": "평화로운 고양이"
+			},
+			"boss_penalty": 2,
+			"boss_choice": {
+				"korean": "닥스 발밑에 사이좋게 앉아 있는 고양이 두 마리가 보인다. 당신은 고양이들을 쓰다듬으며 마음을 가다듬는다."
+			}
+		},
+		"ajumma_debt_warning": {
+			"label": {
+				"korean": "외상값 소동"
+			},
+			"boss_penalty": -1,
+			"boss_line": {
+				"korean": "닥스에게 외상값 갚아라 소리가 들려온다."
+			}
+		},
+		"ajumma_debt_solved": {
 			"label": {
 				"korean": "외상값 중재"
 			},
 			"boss_penalty": 1,
 			"boss_choice": {
-				"korean": "컨테이너 식당 아주머니의 외상값을 중재해 아주머니가 당신에게 호의적이다."
+				"korean": "당신을 도우려는 건달들이 나타나 적들을 혼란에 빠뜨린다."
 			}
 		},
-		"ajumma_debt_ordered": {
+		"ajumma_debt_strict": {
 			"label": {
-				"korean": "부두 질서"
+				"korean": "정확한 장부"
 			},
 			"boss_penalty": 2,
 			"boss_choice": {
-				"korean": "부두의 질서를 지키라고 경고하여 컨테이너 식당 아주머니가 당신을 믿고 따른다."
+				"korean": "장부의 허점을 찾아내 적의 약점을 찌른다."
 			}
 		},
-		"ajumma_workers_mediated": {
+		"ajumma_chopstick_brawl": {
 			"label": {
-				"korean": "일꾼 중재"
+				"korean": "젓가락 소동"
 			},
 			"boss_penalty": -1,
 			"boss_line": {
-				"korean": "일꾼들을 중재하는 사이 부두 경비가 당신 일행을 수상하게 여겨 감시한다."
+				"korean": "닥스에게 젓가락을 휘두르지 마세요, 라는 잔소리가 들려온다."
 			}
 		},
-		"ajumma_workers_subdued": {
+		"ajumma_fight_mediate": {
 			"label": {
-				"korean": "일꾼 제압"
+				"korean": "싸움 중재"
 			},
 			"boss_penalty": 1,
 			"boss_choice": {
-				"korean": "컨테이너 식당 아주머니의 일꾼들 싸움을 주먹으로 제압해 아주머니가 당신을 존경한다."
+				"korean": "당신의 중재로 적들이 서로 싸우기 시작한다."
 			}
 		},
-		"ajumma_workers_harmonized": {
+		"ajumma_fight_joke": {
 			"label": {
-				"korean": "부두 화합"
+				"korean": "엉뚱한 농담"
 			},
 			"boss_penalty": 2,
 			"boss_choice": {
-				"korean": "부두의 화합을 위해 일꾼들 싸움을 설득하여 컨테이너 식당 아주머니가 당신을 신뢰한다."
+				"korean": "적들이 당신의 말에 웃음을 터뜨리며 방심한다."
 			}
 		},
-		"ajumma_angry_worker": {
+		"pojangmacha_hostile": {
 			"label": {
-				"korean": "성난 일꾼"
+				"korean": "포장마차 주인에게 불리"
 			},
 			"boss_penalty": -1,
 			"boss_line": {
-				"korean": "성난 일꾼들이 당신을 향해 달려든다."
+				"korean": "싸움 중에 포장마차 아주머니가 당신의 발목을 붙잡고 방해한다."
 			}
 		},
-		"ajumma_worker_info": {
+		"pojangmacha_neutral": {
 			"label": {
-				"korean": "수리공 사정"
+				"korean": "포장마차 주인에게 중립"
 			},
 			"boss_penalty": 1,
 			"boss_choice": {
-				"korean": "수리공의 밀린 임금 문제를 해결해 줄 방법을 찾는다."
+				"korean": "싸움 중 포장마차 아주머니가 당신에게 따뜻한 국물을 건넨다."
 			}
 		},
-		"ajumma_self_reliance": {
+		"pojangmacha_intimidated": {
 			"label": {
-				"korean": "아주머니의 자립"
+				"korean": "포장마차 주인 위협"
 			},
 			"boss_penalty": 2,
 			"boss_choice": {
-				"korean": "아주머니가 혼자서 문제를 해결하려 한다."
+				"korean": "싸움 중 포장마차 아주머니가 당신의 눈치를 보며 당신을 돕는다."
 			}
 		},
-		"ajumma_silenced_workers": {
+		"pojangmacha_grateful": {
 			"label": {
-				"korean": "침묵한 일꾼들"
+				"korean": "포장마차 주인에게 유리"
 			},
 			"boss_penalty": -1,
 			"boss_line": {
-				"korean": "일꾼들이 당신의 말에 잠시 멈칫한다."
+				"korean": "싸움 중 포장마차 아주머니가 당신에게 힘내라며 응원한다."
 			}
 		},
-		"ajumma_worker_conflict": {
+		"pojangmacha_skeptical": {
 			"label": {
-				"korean": "일꾼들 갈등"
+				"korean": "포장마차 주인에게 중립"
 			},
 			"boss_penalty": 1,
 			"boss_choice": {
-				"korean": "일꾼들의 갈등을 해결할 방법을 모색한다."
+				"korean": "싸움 중 포장마차 아주머니가 당신의 행동을 믿지 못하고 옆에서 투덜거린다."
 			}
 		},
-		"ajumma_community_peace": {
+		"pojangmacha_calmed": {
 			"label": {
-				"korean": "공동체 평화"
+				"korean": "포장마차 주인 안심"
 			},
 			"boss_penalty": 2,
 			"boss_choice": {
-				"korean": "주변 사람들이 당신을 도와 적을 혼란스럽게 한다."
+				"korean": "싸움 중 포장마차 아주머니가 당신에게 힘내라며 따뜻한 차를 건넨다."
 			}
 		},
-		"bad_reputation_spread": {
+		"alley_brawl_danger": {
 			"label": {
-				"korean": "나쁜 소문 확산"
+				"korean": "골목 싸움 조짐"
 			},
 			"boss_penalty": -1,
 			"boss_line": {
-				"korean": "상대에게 유리한 정보가 미리 전달되어 공격이 더 날카로워집니다."
+				"korean": "골목 싸움의 여파로 부두에 불량배 몇 명이 어슬렁거려 진입이 어려워진다."
 			}
 		},
-		"understanding_negotiation": {
+		"alley_gossip_network": {
 			"label": {
-				"korean": "이해를 통한 협상"
+				"korean": "포장마차 정보통"
 			},
 			"boss_penalty": 1,
 			"boss_choice": {
-				"korean": "상대의 허를 찌르는 질문으로 잠시 혼란스럽게 만듭니다."
+				"korean": "아주머니가 부두 내 간부들의 동선에 대한 귀한 정보를 흘려주어 경리부장에게 접근할 단서를 얻는다."
 			}
 		},
-		"perfect_rule_interpretation": {
+		"mercenary_reputation": {
 			"label": {
-				"korean": "완벽한 규칙 해석"
+				"korean": "용병의 명성"
 			},
 			"boss_penalty": 2,
 			"boss_choice": {
-				"korean": "완벽한 규칙 해석으로 상대를 주춤하게 만들어 방어력을 높입니다."
+				"korean": "당신의 악명 높은 명성 덕분에 경리부장이 당신에게 쉽게 덤비지 못하고 금고 비밀번호를 순순히 넘겨준다."
 			}
 		},
-		"chaotic_hideout": {
+		"youth_rebellion_threat": {
 			"label": {
-				"korean": "혼란스러운 은신처"
+				"korean": "젊은이들의 반발"
 			},
 			"boss_penalty": -1,
 			"boss_line": {
-				"korean": "불필요한 행동으로 시간을 지체하여 기습 공격에 취약해집니다."
+				"korean": "젊은이들이 경리부장의 편에 서서 당신의 길을 막아서며 방해한다."
 			}
 		},
-		"strict_rule_enforcement": {
+		"cold_shoulder_approach": {
 			"label": {
-				"korean": "엄격한 규칙 적용"
+				"korean": "냉정한 태도"
 			},
 			"boss_penalty": 1,
 			"boss_choice": {
-				"korean": "냉정한 판단으로 상대의 약점을 정확히 파고들어 공격력을 높입니다."
+				"korean": "당신의 냉정한 태도 덕분에 경리부장이 당신을 얕잡아 보고 방심하다가 빈틈을 보인다."
 			}
 		},
-		"creative_solution": {
+		"alley_guardian": {
 			"label": {
-				"korean": "창의적 해결책"
+				"korean": "골목의 수호자"
 			},
 			"boss_penalty": 2,
 			"boss_choice": {
-				"korean": "예측 불가능한 움직임으로 상대를 교란시켜 이동 범위를 넓힙니다."
+				"korean": "아주머니가 당신을 골목의 수호자로 칭하며 경리부장의 은신처를 정확히 알려준다."
 			}
 		},
-		"quick_brawl": {
+		"busker_loud_distraction": {
 			"label": {
-				"korean": "빠른 난투"
+				"korean": "버스커 소란"
 			},
 			"boss_penalty": -1,
 			"boss_line": {
-				"korean": "방 10 싸움 시작 시 당신은 한 대 맞고 시작한다."
+				"korean": "경리부장이 버스커들의 시끄러운 음악 소리를 이용해 당신의 목소리를 묻어버리고 도주할 시간을 번다."
 			}
 		},
-		"calm_approach": {
+		"busker_story_revealed": {
 			"label": {
-				"korean": "침착한 접근"
+				"korean": "버스커 사연"
 			},
 			"boss_penalty": 1,
 			"boss_choice": {
-				"korean": "방 10 싸움에서 경리부장은 당신의 말에 귀를 기울인다."
+				"korean": "경리부장이 거짓말로 동정심을 유발하려 하자, 버스커가 나타나 그의 거짓말을 폭로하며 당신에게 유리한 증언을 한다."
 			}
 		},
-		"wall_punch_warning": {
+		"rule_of_silence": {
 			"label": {
-				"korean": "벽 부수기 경고"
+				"korean": "침묵의 규칙"
 			},
 			"boss_penalty": 2,
 			"boss_choice": {
-				"korean": "방 10 싸움에서 경리부장은 당신의 위세에 눌려 잠시 주춤한다."
+				"korean": "경리부장이 시끄러운 소리로 당신을 방해하려 하지만, 당신의 눈빛에 압도되어 그의 계획이 실패한다."
 			}
 		},
-		"quick_payment": {
+		"kids_distraction_for_boss": {
 			"label": {
-				"korean": "성급한 지불"
+				"korean": "아이들 방해"
 			},
 			"boss_penalty": -1,
 			"boss_line": {
-				"korean": "방 10 싸움에서 경리부장은 당신의 호의를 이용하려 한다."
+				"korean": "경리부장이 아이들이 남긴 장난감으로 당신의 시선을 돌려 도주할 시간을 번다."
 			}
 		},
-		"thorough_listening": {
+		"play_with_kids_distraction": {
 			"label": {
-				"korean": "철저한 경청"
+				"korean": "아이들과 놀기"
 			},
 			"boss_penalty": 1,
 			"boss_choice": {
-				"korean": "방 10 싸움에서 당신은 경리부장의 진짜 속마음을 꿰뚫어 본다."
+				"korean": "경리부장이 도망치려던 길목에 아이들이 나타나 '나랑 같이 놀자'며 그를 붙잡아 당신에게 유리한 시간을 벌어준다."
 			}
 		},
-		"community_persuasion": {
+		"new_game_for_kids": {
 			"label": {
-				"korean": "공동체 설득"
+				"korean": "새로운 놀이"
 			},
 			"boss_penalty": 2,
 			"boss_choice": {
-				"korean": "방 10 싸움에서 경리부장은 주변의 시선을 의식하며 당신에게 협력한다."
-			}
-		},
-		"performer_grudge": {
-			"label": {
-				"korean": "공연자 원한"
-			},
-			"boss_penalty": -1,
-			"boss_line": {
-				"korean": "골목에서 쫓겨난 공연자가 복수를 위해 전투에 끼어들어 당신을 방해한다."
-			}
-		},
-		"performer_trust": {
-			"label": {
-				"korean": "공연자 신뢰"
-			},
-			"boss_penalty": 1,
-			"boss_choice": {
-				"korean": "공연자가 당신을 신뢰하며 경리부장의 수상한 움직임에 대한 정보를 제공한다."
-			}
-		},
-		"performer_intimidated": {
-			"label": {
-				"korean": "공연자 위축"
-			},
-			"boss_penalty": 2,
-			"boss_choice": {
-				"korean": "공연자가 당신에게 돈을 뜯긴 뒤, 골목에서 몸을 사리며 경리부장의 방해를 무시한다."
-			}
-		},
-		"performer_annoyance": {
-			"label": {
-				"korean": "공연자 불만"
-			},
-			"boss_penalty": -1,
-			"boss_line": {
-				"korean": "공연자가 옮겨간 장소에서도 문제가 생겨 전투 중 당신을 방해한다."
-			}
-		},
-		"performer_alliance": {
-			"label": {
-				"korean": "공연자 협력"
-			},
-			"boss_penalty": 1,
-			"boss_choice": {
-				"korean": "공연자와 아주머니가 당신에게 힘을 보태며 전투 중 유리한 효과를 제공한다."
-			}
-		},
-		"performer_sanctuary": {
-			"label": {
-				"korean": "공연자 보호"
-			},
-			"boss_penalty": 2,
-			"boss_choice": {
-				"korean": "공연자가 당신에게 감사를 표하며 전투 중 아군에게 이로운 효과를 부여한다."
-			}
-		},
-		"vendor_commotion_easy": {
-			"label": {
-				"korean": "노점상 소동"
-			},
-			"boss_penalty": -1,
-			"boss_line": {
-				"korean": "노점상 소동 때문에 적들이 경계 태세를 강화합니다."
-			}
-		},
-		"vendor_avoid_hard": {
-			"label": {
-				"korean": "노점상 회피"
-			},
-			"boss_penalty": 1,
-			"boss_choice": {
-				"korean": "노점상 소동을 피한 덕분에 적들에게 들키지 않고 골목으로 진입합니다."
-			}
-		},
-		"vendor_mediate_stat": {
-			"label": {
-				"korean": "노점상 중재"
-			},
-			"boss_penalty": 2,
-			"boss_choice": {
-				"korean": "노점상 할머니의 조언으로 적들의 약점을 정확히 파악합니다."
-			}
-		},
-		"vendor_fireworks_easy": {
-			"label": {
-				"korean": "노점상 폭죽"
-			},
-			"boss_penalty": -1,
-			"boss_line": {
-				"korean": "폭죽 소리 때문에 당신의 진입 경로가 적에게 노출됩니다."
-			}
-		},
-		"vendor_police_hard": {
-			"label": {
-				"korean": "노점상 경찰"
-			},
-			"boss_penalty": 1,
-			"boss_choice": {
-				"korean": "경찰이 골목을 수색하느라 적들이 잠시 발이 묶입니다."
-			}
-		},
-		"vendor_bootleg_stat": {
-			"label": {
-				"korean": "노점상 밀주"
-			},
-			"boss_penalty": 2,
-			"boss_choice": {
-				"korean": "노점상 할머니가 건넨 밀주 덕분에 적들의 움직임이 둔해집니다."
+				"korean": "경리부장이 아이들을 이용해 당신을 방해하려 하지만, 아이들이 당신이 알려준 새로운 놀이에 빠져 그를 무시한다."
 			}
 		}
 	},
@@ -584,10 +538,10 @@
 						"type": "speech",
 						"speaker": "character_any",
 						"if": {
-							"seed": "dock_gate_guard_easy"
+							"seed": "pier_guard_suspicion_easy"
 						},
 						"source": "llm",
-						"intent": "칸 B 에서 야간 경비에게 한 일을 쉬면서 떠올림",
+						"intent": "칸 B 에서 경비원에게 한 일을 쉬면서 떠올림",
 						"example": {
 							"korean": "정문 경비가 우리를 곱게 안 봤어. 들어가면 바로 들킬지도 몰라"
 						},
@@ -601,17 +555,33 @@
 						"type": "speech",
 						"speaker": "character_any",
 						"if": {
-							"seed": "dock_gate_guard_hard"
+							"seed": "pier_guard_suspicion_hard"
 						},
 						"source": "llm",
-						"intent": "칸 B 에서 야간 경비에게 한 일을 쉬면서 떠올림",
+						"intent": "칸 B 에서 경비원에게 한 일을 쉬면서 떠올림",
 						"example": {
 							"korean": "경비 아저씨가 준 쪽문 열쇠가 있으니 서두를 필요 없어"
 						},
 						"emotion": "base"
 					}
 				}
-			]
+			],
+			"background_image": "https://imagedelivery.net/WTEqQNGFb-l-IHS6IGnzUQ/e5cf8a94-46e2-4034-8e17-6b17d5583200/public"
+		},
+		"1": {
+			"background_image": "https://imagedelivery.net/WTEqQNGFb-l-IHS6IGnzUQ/fda7bddd-7d77-4216-8a6a-20427cbeda00/public"
+		},
+		"5": {
+			"background_image": "https://imagedelivery.net/WTEqQNGFb-l-IHS6IGnzUQ/fc35b217-59fb-4c7e-3c3a-d42beb2e2a00/public"
+		},
+		"7": {
+			"background_image": "https://imagedelivery.net/WTEqQNGFb-l-IHS6IGnzUQ/876f2a3a-97f1-45da-cd2e-7b5d41544d00/public"
+		},
+		"10": {
+			"background_image": "https://imagedelivery.net/WTEqQNGFb-l-IHS6IGnzUQ/b28162d5-035a-4d12-cfd2-7041d6eb1200/public"
+		},
+		"3": {
+			"background_image": "https://imagedelivery.net/WTEqQNGFb-l-IHS6IGnzUQ/02a37b27-cea4-4345-2ec0-f4187a021c00/public"
 		}
 	}
 }

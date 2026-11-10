@@ -311,6 +311,21 @@ npm run gen:gangster-scenarios -- --keys=rat --orders=1     # 스모크
 npm run gen:gangster-scenarios -- --keys=rat --dry-run      # 프롬프트만 (Gemini 안 부름, --print 로 전문)
 ```
 
+### 갱스터 카드
+[scripts/gangster/cards.mjs](scripts/gangster/cards.mjs): story.json 의 `episodes[].cards`(칸별 설계) + scenario_0N.json → 카드 24장(기본 12 + 평판) + additions. 출력 `gangster_test/<id>/cards/`. 통과한 묶음은 다시 안 부르고 걸린 묶음만 다시 (`--fresh` 면 전부).
+- 재미 규칙(프롬프트 "재미"): 인물 버릇·걸린 것, 장면 물건을 쓴 구체적 선택지, result 에 예상 밖 한 박자, 동행은 해설 대신 반응 — 동행 결과 줄의 해설 말(`COMP_SUMMARY`)은 코드 오류
+- 평판 카드 인물: 칸마다 6장이 한 사람. 1부(2장)를 먼저 만들고 그 인물(id·name·role)과 대사(첫 대사 빼고 — 넘기면 틀을 베껴 평판 방향이 뒤바뀜)를 2·3부에 넘김, 코드가 6장 person 을 덮어씀(`pinPerson`). 2·3부 첫 대사가 1부와 같은 틀이면 오류
+- 코드 오류 추가: 이번 화 상대(`ep.boss` 끝 낱말)가 서술·선택지에서 움직이거나 주인공이 상대에게 감(`FOE_RE`, 따옴표 인용·인물 대사 속 소문은 됨), 서술(narrator)에 상대 낱말 자체(상대의 기록·사진 등으로 반전을 앞질러 밝힘), 동행이 원문에서 다른 인물에게 쓴 호칭(예: "부장님,")으로 주인공을 부름(`compTitles`), 동행 대사가 "닥스가 ~" 서술 꼴, narrator 존댓말, "{actor}님", person.name 이 성+호칭("김 노인", `SURNAME_NAME`)
+- 코드 오류 추가 (2026-11-10): 끊긴 줄(`BROKEN_START`·`BROKEN_END`, 서술 사이에 대사를 끼운 꼴), 인물 대사 칸의 따옴표·서술, 돈 단위(`MONEY_WORD` 금화·골드·숫자), "~한다" 꼴이 아닌 선택지, 동행의 "돈이 최고". 프롬프트: gold 선택지는 받는 사람의 이유와 주인공이 얻는 것, 반전은 인물 대사·소문으로도 금지 (인물 대사 속 반전은 코드로 못 잡음)
+- rat 1~5화 카드 전부 webfront 에 있음 (1화 24장, 2~5화 36장). 5화는 설계대로 1~4화 간부들이 카드 인물로 나옴
+- **rat 카드는 손으로 고친 곳이 많음** (돈 선택지 21개, 4화 반전 누설, 끊긴 줄·대사 칸 서술 등 약 100곳, 두 저장소 모두). `cards/steps/` 의 Gemini 원본은 그대로라, `--fresh` 없이 cards.mjs 를 다시 돌리면 통과한 묶음을 steps 에서 다시 조립해 손 수정이 사라짐. rat 을 다시 만들 땐 `--fresh` 로 새로 만들고 다시 검토할 것
+- 이미지(배경·인물)는 character-maker-client 의 `scripts/gangster_rat_backgrounds.py`(장면 108개: 스토리 방 6 + 기본 카드 12 + 평판 칸마다 1장)·`scripts/gangster_rat_portraits.py`(카드 인물 59 + 닥스 전신)에 장면·외모를 직접 적어 ComfyUI 로 만듦. apply 가 webfront 와 이 저장소의 cards 사본 둘 다에 씀. 카드를 다시 만들면 카드 id·인물 key 가 바뀌니 두 스크립트의 SCENES·PORTRAITS 키도 맞춰야 함. 실내 장면은 `INDOOR` 목록에 넣어 `STYLE_INDOOR` 로 그림 (항구 화풍 문구가 실내를 바깥 컨테이너 사이로 끌고 가서). 글자 지우기(`NOTEXT`)는 글자만 표면으로 덮게 함 (netshort 문구는 창문·문까지 흰 판으로 바꿈)
+- webfront 반영: `cards/0N/*.json` → webfront `data/cards/gangster_<id>_0N/`(폴더 통째로 교체), `cards/additions_0N.json` → `data/additions/gangster_<id>_0N.json`, prettier 후 `data.test.ts`
+
+```bash
+node --no-warnings --experimental-strip-types --import ./scripts/side_test/ts-register.mjs scripts/gangster/cards.mjs --id=rat --order=1
+```
+
 ## 이야기 스타일 (styles/)
 
 > 사람용 전체 흐름 설명: [styles/README.md](src/lib/data/storyarc/styles/README.md) — 넷쇼트·cozy 흐름이 바뀌면 함께 갱신할 것. 이야기 폴더 `netshort_test/`·`cozy_test/` 도 styles/ 안에 있음. README.md 는 스타일로 읽지 않음(storyStyle.ts 에서 뺌)

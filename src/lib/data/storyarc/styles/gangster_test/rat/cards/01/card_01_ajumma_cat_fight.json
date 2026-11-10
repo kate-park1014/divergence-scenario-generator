@@ -1,0 +1,328 @@
+{
+	"id": "card_01_ajumma_cat_fight",
+	"title": {
+		"korean": "모두의 밥그릇"
+	},
+	"intensity": "calm",
+	"after_story": 3,
+	"before_story": 5,
+	"condition": {
+		"leaning": "community+",
+		"among": [
+			"fighting-",
+			"fighting+",
+			"community-",
+			"community+",
+			"reason-",
+			"reason+"
+		],
+		"min": 20
+	},
+	"urgency": 8,
+	"leaning": "community+",
+	"background_tags": [
+		"night",
+		"pier",
+		"foggy",
+		"cats",
+		"noisy"
+	],
+	"background_image": "https://imagedelivery.net/WTEqQNGFb-l-IHS6IGnzUQ/189eafd3-e726-498f-329d-1e1cb695e800/public",
+	"dialogue": [
+		{
+			"speaker": "dax",
+			"content": {
+				"korean": "서둘러 이동하는 게 좋겠습니다."
+			}
+		},
+		{
+			"speaker": "narrator",
+			"content": {
+				"korean": "닥스의 차가 부두 정문 앞을 지나려는데, 컨테이너 식당 아주머니가 불쑥 나타나 앞을 막아섰다."
+			}
+		},
+		{
+			"speaker": "ajumma",
+			"content": {
+				"korean": "어휴, 거기 차에 탄 양반! 당신이 그 소문 자자한 사람 맞지? 모두를 위해 발 벗고 나선다는."
+			}
+		},
+		{
+			"speaker": "ajumma",
+			"content": {
+				"korean": "저기 컨테이너 사이에서 고양이들이 자꾸 싸워서 시끄러워 죽겠어! 일꾼들이 잠을 못 잔다고!"
+			}
+		},
+		{
+			"speaker": "dax",
+			"content": {
+				"korean": "아주머니, 지금은 좀 바쁩니다만..."
+			}
+		},
+		{
+			"speaker": "ajumma",
+			"content": {
+				"korean": "어휴, 저러다 다치기라도 하면 어째! 확 그냥, 저것들 좀 말려줘요!"
+			}
+		}
+	],
+	"choices": [
+		{
+			"text": {
+				"korean": "싸우는 고양이들 사이에 뛰어들어 떼어놓는다."
+			},
+			"path": "easy",
+			"mbti": "SF",
+			"flag": "ajumma_cat_separated",
+			"effects": {
+				"community": 20,
+				"echo": 10
+			},
+			"reward": [
+				"heal"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "당신이 고양이들 사이에 뛰어들자, 놀란 고양이들이 흩어졌다. 다행히 다친 곳은 없었다."
+					}
+				},
+				{
+					"speaker": "ajumma",
+					"content": {
+						"korean": "휴, 살았다! 고맙습니다, 정말!"
+					}
+				},
+				{
+					"speaker": "dax",
+					"content": {
+						"korean": "그래도 다치지 않아서 다행입니다."
+					}
+				}
+			],
+			"risk": {
+				"chance": "mid",
+				"bad": {
+					"effects": {
+						"gold": -30
+					},
+					"reward": [],
+					"result": [
+						{
+							"speaker": "narrator",
+							"content": {
+								"korean": "당신이 고양이들 사이에 뛰어들자, 한 고양이가 당신의 팔을 할퀴고 도망쳤다."
+							}
+						},
+						{
+							"speaker": "ajumma",
+							"content": {
+								"korean": "어휴, 괜찮아요? 피 나잖아!"
+							}
+						},
+						{
+							"speaker": "dax",
+							"content": {
+								"korean": "저 고양이, 보통이 아닌데요..."
+							}
+						}
+					]
+				}
+			}
+		},
+		{
+			"text": {
+				"korean": "고양이 싸움을 무시하고 차에 탄 채 가던 길을 간다."
+			},
+			"path": "hard",
+			"mbti": "NT",
+			"flag": "ajumma_cat_ignored",
+			"effects": {
+				"reason": 20,
+				"echo": -10
+			},
+			"reward": [
+				"defense_up"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "당신이 고양이 싸움을 뒤로하고 떠나려 하자, 아주머니가 혀를 끌끌 차며 아쉽다는 듯 뒤돌아섰다."
+					}
+				},
+				{
+					"speaker": "ajumma",
+					"content": {
+						"korean": "쯧쯧, 바쁜가 보네. 뭐, 어쩔 수 없지."
+					}
+				},
+				{
+					"speaker": "dax",
+					"content": {
+						"korean": "저희 일이 더 중요하니까요."
+					}
+				}
+			],
+			"risk": {
+				"chance": "high",
+				"bad": {
+					"effects": {
+						"gold": -20
+					},
+					"reward": [],
+					"result": [
+						{
+							"speaker": "narrator",
+							"content": {
+								"korean": "당신이 고양이 싸움을 무시하고 지나가려 하자, 흥분한 고양이 한 마리가 차 보닛 위로 뛰어올랐다."
+							}
+						},
+						{
+							"speaker": "ajumma",
+							"content": {
+								"korean": "어휴, 저거 떼내야 하는데!"
+							}
+						},
+						{
+							"speaker": "dax",
+							"content": {
+								"korean": "고양이가 차에 스크래치를 내고 있어요!"
+							}
+						}
+					]
+				}
+			}
+		},
+		{
+			"text": {
+				"korean": "고양이들 사이에 서서 침착하게 '그만'이라고 말한다."
+			},
+			"path": "stat",
+			"mbti": "FJ",
+			"require": {
+				"stat": "community",
+				"op": ">=",
+				"value": 40
+			},
+			"flag": "ajumma_cat_peace_stat",
+			"effects": {
+				"echo": 15,
+				"community": 30
+			},
+			"reward": [
+				"shield"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "당신의 침착한 말 한마디에 고양이들이 싸움을 멈추고 서로를 경계하며 흩어졌다."
+					}
+				},
+				{
+					"speaker": "ajumma",
+					"content": {
+						"korean": "어휴, 역시 당신이야! 싸움도 말리네!"
+					}
+				},
+				{
+					"speaker": "dax",
+					"content": {
+						"korean": "고양이들도 말을 듣네요, 신기하다!"
+					}
+				}
+			]
+		},
+		{
+			"text": {
+				"korean": "아주머니에게 고양이 간식 값을 건네며 '이걸로 해결하세요'라고 말한다."
+			},
+			"path": "gold",
+			"mbti": "SP",
+			"require": {
+				"stat": "gold",
+				"op": ">=",
+				"value": 100
+			},
+			"effects": {
+				"echo": 5,
+				"gold": -100
+			},
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "당신이 건넨 돈에 아주머니는 어리둥절하면서도 고개를 끄덕였다. 고양이들은 간식을 먹고 잠시 조용해졌다."
+					}
+				},
+				{
+					"speaker": "ajumma",
+					"content": {
+						"korean": "어휴, 돈으로 해결할 줄은 몰랐네. 뭐, 잠시라도 조용해지면 됐지."
+					}
+				},
+				{
+					"speaker": "dax",
+					"content": {
+						"korean": "생각지도 못한 방법인데요, 효과는 있네요."
+					}
+				}
+			]
+		}
+	],
+	"tags": [
+		"ajumma",
+		"dax"
+	],
+	"_design": {
+		"slot": "B",
+		"kind": "rep",
+		"person": {
+			"id": "ajumma",
+			"name": "컨테이너 식당 아주머니",
+			"role": "식당 사장"
+		},
+		"wants": "싸우는 고양이들 때문에 일꾼들이 잠을 못 자요.",
+		"rule_link": "타인의 이득을 먼저 고려하며 상황을 판단하거나, 자신의 이득을 챙기기 위해 행동할지 선택합니다.",
+		"rep": "community+",
+		"events": {},
+		"flags": {
+			"ajumma_cat_separated": {
+				"kind": "bad",
+				"boss_penalty": -1,
+				"label": {
+					"korean": "고양이 싸움 중재"
+				},
+				"boss_line": {
+					"korean": "닥스 발밑에 평화롭게 앉아 있는 고양이 두 마리가 보인다. 당신은 고양이들을 쓰다듬으며 마음을 가다듬는다."
+				}
+			},
+			"ajumma_cat_ignored": {
+				"kind": "good",
+				"boss_penalty": 1,
+				"label": {
+					"korean": "고양이 싸움 무시"
+				},
+				"boss_choice": {
+					"korean": "닥스 발밑에 엉망으로 흩어진 고양이 사료가 보인다. 당신은 사료를 밟아 미끄러진다."
+				}
+			},
+			"ajumma_cat_peace_stat": {
+				"kind": "good",
+				"boss_penalty": 2,
+				"label": {
+					"korean": "평화로운 고양이"
+				},
+				"boss_choice": {
+					"korean": "닥스 발밑에 사이좋게 앉아 있는 고양이 두 마리가 보인다. 당신은 고양이들을 쓰다듬으며 마음을 가다듬는다."
+				}
+			}
+		}
+	}
+}

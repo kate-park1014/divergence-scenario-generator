@@ -1,0 +1,310 @@
+{
+	"id": "card_05_bluffing_manager_papers",
+	"title": {
+		"korean": "허세 부장의 서류 소동"
+	},
+	"intensity": "high",
+	"after_story": 1,
+	"before_story": 3,
+	"background_tags": [
+		"hallway",
+		"day",
+		"dim",
+		"sparse",
+		"tense"
+	],
+	"background_image": "https://imagedelivery.net/WTEqQNGFb-l-IHS6IGnzUQ/261a6e3f-6640-4071-a7cf-f76e71a18400/public",
+	"dialogue": [
+		{
+			"speaker": "bluffing_manager",
+			"content": {
+				"korean": "으잇차! 이 정도 서류쯤이야, 한 손으로도 거뜬하지!"
+			}
+		},
+		{
+			"speaker": "dax",
+			"content": {
+				"korean": "허세 부장님이 서류를 잔뜩 들고 지나가네요. 곧 넘어질 것 같은데…"
+			}
+		},
+		{
+			"speaker": "narrator",
+			"content": {
+				"korean": "허세 부장의 발이 꼬이며 서류가 와르르 쏟아진다."
+			}
+		},
+		{
+			"speaker": "bluffing_manager",
+			"content": {
+				"korean": "젠장! 아무도 날 도울 생각도 안 하겠지! 흥! 괜찮아! 혼자서도 다 할 수 있어!"
+			}
+		},
+		{
+			"speaker": "narrator",
+			"content": {
+				"korean": "허세 부장이 쏟아진 서류 더미 앞에서 안절부절못한다."
+			}
+		},
+		{
+			"speaker": "dax",
+			"content": {
+				"korean": "손수레 자국이 등대 문 앞에서 딱 끝나네요. 비서님도 저렇게 허둥대다가 서류를 떨어뜨렸을까요?"
+			}
+		}
+	],
+	"forced": [
+		{
+			"text": {
+				"korean": "{actor}이(가) 서류를 줍는 허세 부장을 보고 무조건 도와야 한다고 외치며 달려간다."
+			},
+			"path": "forced",
+			"mbti": "EF",
+			"require": {
+				"mbti": "EF"
+			},
+			"chance": 0.3,
+			"effects": {
+				"echo": 5,
+				"community": 10
+			},
+			"reward": [
+				"heal"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "{actor}이(가) 허세 부장에게 달려가 쏟아진 서류를 맹렬히 줍기 시작한다."
+					}
+				},
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "허세 부장은 당황하면서도 고마워하는 표정이다."
+					}
+				},
+				{
+					"speaker": "dax",
+					"content": {
+						"korean": "{actor}이(가) 또 먼저 나서네요!"
+					}
+				}
+			]
+		}
+	],
+	"choices": [
+		{
+			"text": {
+				"korean": "허세 부장이 도움을 요청하기 전에 먼저 서류 줍는 것을 돕는다."
+			},
+			"path": "easy",
+			"mbti": "IS",
+			"effects": {
+				"community": 15,
+				"gold": 60
+			},
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "허세 부장이 놀란 눈으로 당신을 바라본다. 그는 쑥스러워하며 당신에게 작은 금괴 하나를 건넨다."
+					}
+				},
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "\"고맙다는 뜻은 아니야! 그냥 네가 주운 거 가져!\""
+					}
+				},
+				{
+					"speaker": "dax",
+					"content": {
+						"korean": "츤데레인가요?"
+					}
+				}
+			],
+			"risk": {
+				"chance": "mid",
+				"bad": {
+					"effects": {
+						"gold": -30
+					},
+					"reward": [
+						"attack_down"
+					],
+					"result": [
+						{
+							"speaker": "narrator",
+							"content": {
+								"korean": "당신이 서류를 줍는 순간, 허세 부장이 \"내 일은 내가 한다!\"며 서류를 발로 차 버린다."
+							}
+						},
+						{
+							"speaker": "narrator",
+							"content": {
+								"korean": "서류들이 복도 끝까지 흩어진다."
+							}
+						},
+						{
+							"speaker": "dax",
+							"content": {
+								"korean": "으악, 더 엉망이 됐어요!"
+							}
+						}
+					]
+				}
+			}
+		},
+		{
+			"text": {
+				"korean": "허세 부장에게 괜찮은지 물어보고, 필요한 도움을 제안한다."
+			},
+			"path": "hard",
+			"mbti": "IT",
+			"effects": {
+				"echo": 5,
+				"reason": 10
+			},
+			"reward": [
+				"intelligence_up"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "허세 부장이 잠시 머뭇거리더니, 마지못해 \"아, 뭐…"
+					}
+				},
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "네가 굳이 돕겠다면야…\" 하고 중얼거린다. 그는 당신에게 중요한 서류 몇 장을 건넨다."
+					}
+				},
+				{
+					"speaker": "dax",
+					"content": {
+						"korean": "부장님, 속마음은 착하시네요!"
+					}
+				}
+			],
+			"risk": {
+				"chance": "high",
+				"bad": {
+					"effects": {
+						"gold": -20
+					},
+					"reward": [],
+					"result": [
+						{
+							"speaker": "narrator",
+							"content": {
+								"korean": "당신의 질문에 허세 부장이 갑자기 큰 소리로 웃는다. \"하하! 내가 괜찮냐고?"
+							}
+						},
+						{
+							"speaker": "narrator",
+							"content": {
+								"korean": "난 늘 괜찮다! 네 도움 따위 필요 없어!\" 그는 서류를 줍는 척하다가 넘어져 버린다."
+							}
+						},
+						{
+							"speaker": "dax",
+							"content": {
+								"korean": "혼자서도 잘 넘어지네요!"
+							}
+						}
+					]
+				}
+			}
+		},
+		{
+			"text": {
+				"korean": "허세 부장 옆에서 \"이 정도 서류쯤이야!\" 하며 함께 허세를 부리며 서류를 줍는 시늉을 한다."
+			},
+			"path": "fun",
+			"mbti": "EN",
+			"effects": {
+				"gold": 50,
+				"reason": -20,
+				"community": -10
+			},
+			"seed": null,
+			"result": [],
+			"event": "campsite",
+			"event_intro": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "허세 부장이 당신의 행동에 피식 웃었다."
+					}
+				},
+				{
+					"speaker": "bluffing_manager",
+					"content": {
+						"korean": "크크, 그래! 이 정도는 식은 죽 먹기지! 이왕 이렇게 된 거, 잠시 쉬었다 가지!"
+					}
+				},
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "허세 부장이 복도 한구석에 간이 의자와 차를 내어주며 잠시 쉬어가라고 한다."
+					}
+				}
+			],
+			"risk": {
+				"chance": "low",
+				"bad": {
+					"effects": {
+						"gold": -40
+					},
+					"reward": [
+						"move_range_down"
+					],
+					"result": [
+						{
+							"speaker": "narrator",
+							"content": {
+								"korean": "당신이 과도하게 허세를 부리며 서류를 줍는 척하다가, 옆에 있던 화분까지 쓰러뜨린다."
+							}
+						},
+						{
+							"speaker": "narrator",
+							"content": {
+								"korean": "화분 깨지는 소리에 복도 저편에서 누군가 고개를 내민다."
+							}
+						},
+						{
+							"speaker": "dax",
+							"content": {
+								"korean": "아이고, 저 소리에 다 들키겠어요!"
+							}
+						}
+					]
+				}
+			}
+		}
+	],
+	"tags": [
+		"bluffing_manager",
+		"dax"
+	],
+	"_design": {
+		"slot": "A",
+		"kind": "normal",
+		"person": {
+			"role": "부장",
+			"name": "허세 부장",
+			"id": "bluffing_manager"
+		},
+		"wants": "복도에서 서류를 쏟아버리고, 아무도 자신을 돕지 않을까 봐 걱정하지만 허세를 부린다.",
+		"rule_link": "허세 부장의 허세 뒤에 숨겨진 진짜 불안을 먼저 이해하고 돕는 계기가 된다.",
+		"events": {
+			"fun": "허세 부장이 당신의 허세에 동조하며 함께 쉬어가자고 제안한다."
+		},
+		"flags": {}
+	}
+}

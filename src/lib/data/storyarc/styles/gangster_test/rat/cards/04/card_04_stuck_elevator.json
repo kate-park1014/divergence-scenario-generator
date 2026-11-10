@@ -1,0 +1,313 @@
+{
+	"id": "card_04_stuck_elevator",
+	"title": {
+		"korean": "멈춘 엘리베이터"
+	},
+	"intensity": "calm",
+	"after_story": 5,
+	"before_story": 7,
+	"background_tags": [
+		"stairwell",
+		"day",
+		"fluorescent_light",
+		"alone",
+		"broken"
+	],
+	"background_image": "https://imagedelivery.net/WTEqQNGFb-l-IHS6IGnzUQ/f77fbb82-f5ef-464e-b004-2219b29d6a00/public",
+	"dialogue": [
+		{
+			"speaker": "narrator",
+			"content": {
+				"korean": "금고실로 향하는 계단 옆, 낡은 엘리베이터 문이 굳게 닫혀 있다."
+			}
+		},
+		{
+			"speaker": "narrator",
+			"content": {
+				"korean": "안에서 쿵, 쿵, 하는 소리가 들린다."
+			}
+		},
+		{
+			"speaker": "flower_delivery_person",
+			"content": {
+				"korean": "살려주세요! 꽃이 시들어요!"
+			}
+		},
+		{
+			"speaker": "dax",
+			"content": {
+				"korean": "갇힌 사람이 있나 봐요! 꽃 배달원인 것 같은데요?"
+			}
+		},
+		{
+			"speaker": "narrator",
+			"content": {
+				"korean": "엘리베이터 문 틈새로 시든 꽃잎 하나가 떨어진다."
+			}
+		}
+	],
+	"choices": [
+		{
+			"text": {
+				"korean": "엘리베이터 문을 열어 배달원을 구한다."
+			},
+			"path": "easy",
+			"mbti": "SF",
+			"effects": {
+				"community": 15,
+				"echo": 5
+			},
+			"reward": [
+				"attack_up"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "삐걱이며 엘리베이터 문이 열린다. 꽃 배달원이 시든 꽃다발을 안고 뛰쳐나온다."
+					}
+				},
+				{
+					"speaker": "dax",
+					"content": {
+						"korean": "세상에, 꽃 배달이 이렇게 위험한 일이었나요?"
+					}
+				}
+			],
+			"risk": {
+				"chance": "mid",
+				"bad": {
+					"effects": {
+						"gold": -30
+					},
+					"reward": [],
+					"result": [
+						{
+							"speaker": "narrator",
+							"content": {
+								"korean": "문을 열자마자 낡은 엘리베이터가 덜컹 내려앉는다. 꽃 배달원은 비명을 지르며 다시 갇힌다."
+							}
+						},
+						{
+							"speaker": "dax",
+							"content": {
+								"korean": "어휴, 멀쩡한 엘리베이터를 망가뜨렸네요!"
+							}
+						}
+					]
+				}
+			}
+		},
+		{
+			"text": {
+				"korean": "배달원의 상황을 듣고 구조 요청을 한다."
+			},
+			"path": "hard",
+			"mbti": "SJ",
+			"effects": {
+				"echo": 5,
+				"reason": 15
+			},
+			"reward": [
+				"defense_up"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "배달원은 울먹이며 중요한 배달이라고 말한다. 당신은 구조대에 연락해 상황을 설명한다."
+					}
+				},
+				{
+					"speaker": "dax",
+					"content": {
+						"korean": "이런, 꽃들이 시들기 전에 구조대가 와야 할 텐데요!"
+					}
+				}
+			],
+			"risk": {
+				"chance": "high",
+				"bad": {
+					"effects": {
+						"gold": -20
+					},
+					"reward": [],
+					"result": [
+						{
+							"speaker": "narrator",
+							"content": {
+								"korean": "구조대에 전화해 상황을 설명하지만, 너무 급박하게 말한 탓인지 장난 전화로 오해받는다."
+							}
+						},
+						{
+							"speaker": "narrator",
+							"content": {
+								"korean": "구조대원이 '꽃 배달은 직접 하시라'며 전화를 끊어 버린다."
+							}
+						}
+					]
+				}
+			}
+		},
+		{
+			"text": {
+				"korean": "{actor}이(가) 엘리베이터의 제어반을 살피며 고장 원인을 분석한다."
+			},
+			"path": "lock",
+			"mbti": "NT",
+			"require": {
+				"mbti": "NT"
+			},
+			"effects": {
+				"reason": 10
+			},
+			"reward": [
+				"intelligence_up"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "{actor}이(가) 낡은 제어반을 툭툭 친다. 엘리베이터가 덜컹거리더니 위로 두 층 올라간다."
+					}
+				},
+				{
+					"speaker": "dax",
+					"content": {
+						"korean": "와, 대단해요! 근데… 두 층이나 더 올라갔네요?"
+					}
+				}
+			]
+		},
+		{
+			"text": {
+				"korean": "엘리베이터 문에 귀를 대고 '꽃은 내가 배달하겠다!'고 외친다."
+			},
+			"path": "fun",
+			"mbti": "EP",
+			"effects": {
+				"fighting": 20,
+				"gold": 50
+			},
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "갇힌 배달원은 놀란 듯 잠시 침묵한다."
+					}
+				},
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "이내 '안 돼요!' 하고 울부짖는다. 당신은 시든 꽃다발을 들고 뛰어간다."
+					}
+				},
+				{
+					"speaker": "dax",
+					"content": {
+						"korean": "저 꽃들, 설마 누구에게 가는 걸까요? 궁금하네요!"
+					}
+				}
+			],
+			"event": "meet_stranger",
+			"event_intro": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "당신은 꽃다발을 들고 다음 층으로 향한다. 그때, 건장한 체격의 사내가 당신의 앞을 가로막는다."
+					}
+				},
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "낯선 사내는 당신을 보며 '내 꽃을 훔쳐 가는 거냐!'고 외친다."
+					}
+				}
+			],
+			"event_options": {
+				"fight": {
+					"text": {
+						"korean": "{actor}이(가) 꽃다발로 사내에게 맞선다."
+					},
+					"win": [
+						{
+							"speaker": "narrator",
+							"content": {
+								"korean": "당신은 꽃다발로 사내의 얼굴을 연타한다. 사내는 휘청거리다 쓰러진다."
+							}
+						}
+					],
+					"lose": [
+						{
+							"speaker": "narrator",
+							"content": {
+								"korean": "사내가 꽃다발을 뺏어 당신의 머리에 씌운다. 시든 꽃잎이 후두둑 떨어진다."
+							}
+						}
+					]
+				},
+				"avoid": {
+					"text": {
+						"korean": "꽃다발을 던지고 도망친다."
+					},
+					"result": [
+						{
+							"speaker": "narrator",
+							"content": {
+								"korean": "사내가 꽃다발을 잡으려다 넘어진다. 당신은 그 틈을 타 계단을 뛰어 내려간다."
+							}
+						}
+					],
+					"reward": [
+						"move_range_down"
+					]
+				}
+			},
+			"risk": {
+				"chance": "low",
+				"bad": {
+					"reward": [
+						"hp_down"
+					],
+					"result": [
+						{
+							"speaker": "narrator",
+							"content": {
+								"korean": "문을 열자마자 배달원이 당신의 멱살을 잡고 '내 꽃은 내가 배달한다!'고 소리친다."
+							}
+						},
+						{
+							"speaker": "narrator",
+							"content": {
+								"korean": "배달원의 발에 걸려 넘어지면서 꽃다발이 당신의 얼굴에 덮인다."
+							}
+						}
+					]
+				}
+			}
+		}
+	],
+	"tags": [
+		"flower_delivery_person",
+		"dax"
+	],
+	"_design": {
+		"slot": "C",
+		"kind": "normal",
+		"person": {
+			"id": "flower_delivery_person",
+			"name": "꽃 배달원",
+			"role": "꽃 배달원"
+		},
+		"wants": "엘리베이터에 갇혀 꽃을 배달하지 못하고 있다.",
+		"rule_link": "꽃 배달원이 엘리베이터에 갇힌 것을 숨기는 사람으로 볼지, 말 못 할 사정이 있다고 볼지 선택한다.",
+		"events": {
+			"fun": "배달원이 갇혀서 못 간 배달을 대신 하려다 엉뚱한 꽃 주인과 시비가 붙었다."
+		},
+		"flags": {}
+	}
+}

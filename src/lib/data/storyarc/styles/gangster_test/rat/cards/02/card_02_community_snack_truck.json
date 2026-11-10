@@ -1,0 +1,303 @@
+{
+	"id": "card_02_community_snack_truck",
+	"title": {
+		"korean": "야식트럭 사장의 걱정"
+	},
+	"intensity": "calm",
+	"after_story": 5,
+	"before_story": 7,
+	"condition": {
+		"leaning": "community+",
+		"among": [
+			"fighting-",
+			"fighting+",
+			"community-",
+			"community+",
+			"reason-",
+			"reason+"
+		],
+		"min": 20
+	},
+	"urgency": 8,
+	"leaning": "community+",
+	"background_tags": [
+		"port",
+		"night",
+		"streetlights",
+		"few",
+		"busy"
+	],
+	"background_image": "https://imagedelivery.net/WTEqQNGFb-l-IHS6IGnzUQ/ae1926db-9985-4622-5880-8e77e8439400/public",
+	"dialogue": [
+		{
+			"speaker": "yashik_sajang",
+			"content": {
+				"korean": "아니, 당신들이 그 동네 사람 위해서 발 벗고 나선다는 해결사들이오?"
+			}
+		},
+		{
+			"speaker": "yashik_sajang",
+			"content": {
+				"korean": "마침 잘 만났네! 이것 좀 같이 들어주면 안 되겠소?"
+			}
+		},
+		{
+			"speaker": "dax",
+			"content": {
+				"korean": "저희를 아시는 분인가 봐요. 뭘 도와달라고 하시는 걸까요?"
+			}
+		},
+		{
+			"speaker": "yashik_sajang",
+			"content": {
+				"korean": "트럭에 실린 채소 박스들이 좀 많아야지!"
+			}
+		},
+		{
+			"speaker": "yashik_sajang",
+			"content": {
+				"korean": "쯧쯧, 이것만 좀 도와주면 금방 갈 테니. 옆집 국밥집도 오늘따라 힘들어 보이던데…"
+			}
+		},
+		{
+			"speaker": "narrator",
+			"content": {
+				"korean": "야식트럭 사장이 무거운 채소 박스를 가리키며 옆 가게를 흘깃 본다."
+			}
+		}
+	],
+	"choices": [
+		{
+			"text": {
+				"korean": "\"도와드리겠다\"며 채소 박스들을 함께 옮긴다."
+			},
+			"path": "easy",
+			"mbti": "NF",
+			"flag": "snack_truck_help",
+			"effects": {
+				"echo": 10,
+				"community": 15
+			},
+			"reward": [
+				"attack_up"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "당신이 채소 박스를 능숙하게 옮기자, 사장이 감탄하며 고맙다고 인사한다."
+					}
+				},
+				{
+					"speaker": "yashik_sajang",
+					"content": {
+						"korean": "역시 동네 해결사들은 다르구만! 힘도 좋고 마음씨도 곱고!"
+					}
+				},
+				{
+					"speaker": "dax",
+					"content": {
+						"korean": "아저씨가 기분 좋으셔서 서비스로 만두를 주셨어요!"
+					}
+				}
+			],
+			"risk": {
+				"chance": "mid",
+				"bad": {
+					"effects": {
+						"gold": -20
+					},
+					"reward": [],
+					"result": [
+						{
+							"speaker": "narrator",
+							"content": {
+								"korean": "당신이 채소 박스를 옮기려다 삐끗하며 박스를 놓친다."
+							}
+						},
+						{
+							"speaker": "narrator",
+							"content": {
+								"korean": "박스 안의 배추들이 바닥에 굴러떨어지고, 사장은 한숨을 쉰다."
+							}
+						},
+						{
+							"speaker": "yashik_sajang",
+							"content": {
+								"korean": "아이고, 내 귀한 배추! 이 양반아, 내가 괜히 부탁했구만!"
+							}
+						},
+						{
+							"speaker": "dax",
+							"content": {
+								"korean": "배추가 다 굴러가 버렸어요! 아저씨가 잔소리를 하시는데요?"
+							}
+						}
+					]
+				}
+			}
+		},
+		{
+			"text": {
+				"korean": "\"지금은 바쁘다\"며 급한 일이 있다고 둘러댄다."
+			},
+			"path": "hard",
+			"mbti": "TP",
+			"flag": "snack_truck_busy",
+			"effects": {
+				"community": -20,
+				"fighting": 10
+			},
+			"reward": [
+				"defense_up"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "당신의 변명에 야식트럭 사장이 실망한 표정으로 고개를 젓는다."
+					}
+				},
+				{
+					"speaker": "yashik_sajang",
+					"content": {
+						"korean": "흥, 동네 사람 위한다는 소문도 다 헛소문인가. 바쁘면 나만 바쁜가!"
+					}
+				},
+				{
+					"speaker": "dax",
+					"content": {
+						"korean": "어휴, 아저씨가 계속 우리를 노려보시는데, 혹시 뭐라도 던지실까 봐 겁나네요."
+					}
+				}
+			],
+			"risk": {
+				"chance": "high",
+				"bad": {
+					"effects": {
+						"gold": -20
+					},
+					"reward": [],
+					"result": [
+						{
+							"speaker": "narrator",
+							"content": {
+								"korean": "당신이 바쁘다고 둘러대자, 야식트럭 사장이 \"바쁘면 이거라도 좀 봐주시오!\"라며 트럭 엔진룸을 열어 보인다."
+							}
+						},
+						{
+							"speaker": "narrator",
+							"content": {
+								"korean": "시꺼먼 연기가 뿜어져 나오며 당신의 옷을 더럽힌다."
+							}
+						},
+						{
+							"speaker": "yashik_sajang",
+							"content": {
+								"korean": "아이고, 내 트럭! 이거 고치려면 돈 많이 들 텐데!"
+							}
+						},
+						{
+							"speaker": "dax",
+							"content": {
+								"korean": "연기가 너무 심한데요? 아저씨가 계속 우리를 쳐다봐요!"
+							}
+						}
+					]
+				}
+			}
+		},
+		{
+			"text": {
+				"korean": "\"무슨 문제인지 자세히 말해달라\"며 상황을 파악하려 한다."
+			},
+			"path": "stat",
+			"mbti": "TJ",
+			"require": {
+				"stat": "community",
+				"op": ">=",
+				"value": 40
+			},
+			"flag": "snack_truck_listen",
+			"effects": {
+				"reason": 15,
+				"community": 20
+			},
+			"reward": [
+				"shield"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "당신의 침착한 태도에 사장이 안심하며 트럭의 문제와 옆집 국밥집의 사정까지 털어놓는다."
+					}
+				},
+				{
+					"speaker": "yashik_sajang",
+					"content": {
+						"korean": "역시 동네 해결사들은 다르구만! 내 사정을 이렇게 잘 들어주는 이가 없어!"
+					}
+				},
+				{
+					"speaker": "dax",
+					"content": {
+						"korean": "아이고, 아저씨! 이건 트럭 수리 상담이 아니라 인생 상담인데요?"
+					}
+				}
+			]
+		}
+	],
+	"tags": [
+		"yashik_sajang",
+		"dax"
+	],
+	"_design": {
+		"slot": "C",
+		"kind": "rep",
+		"person": {
+			"id": "yashik_sajang",
+			"name": "야식트럭 사장",
+			"role": "야식트럭 사장"
+		},
+		"wants": "주인공 일행이 주변 공동체를 위해 자신의 트럭 문제나 다른 상인의 문제를 해결해 주기를 원함.",
+		"rule_link": "전체의 이득을 위해 나서는 마음은 좋지만, 눈앞의 상황만으로 섣불리 판단하지 않도록 주의해야 합니다.",
+		"rep": "community+",
+		"events": {},
+		"flags": {
+			"snack_truck_help": {
+				"kind": "bad",
+				"boss_penalty": -1,
+				"label": {
+					"korean": "지나친 친절"
+				},
+				"boss_line": {
+					"korean": "상대방이 당신의 지나친 친절을 약점으로 삼으려 합니다."
+				}
+			},
+			"snack_truck_busy": {
+				"kind": "good",
+				"boss_penalty": 1,
+				"label": {
+					"korean": "냉정한 해결사"
+				},
+				"boss_choice": {
+					"korean": "상대방이 당신의 냉정함에 경계하며 신중하게 접근합니다."
+				}
+			},
+			"snack_truck_listen": {
+				"kind": "good",
+				"boss_penalty": 2,
+				"label": {
+					"korean": "경청하는 해결사"
+				},
+				"boss_choice": {
+					"korean": "상대방이 당신의 말을 잘 듣는 태도에 마음을 열고 정보를 제공합니다."
+				}
+			}
+		}
+	}
+}

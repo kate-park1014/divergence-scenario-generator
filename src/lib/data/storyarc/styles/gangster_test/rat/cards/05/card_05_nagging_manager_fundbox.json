@@ -1,0 +1,236 @@
+{
+	"id": "card_05_nagging_manager_fundbox",
+	"title": {
+		"korean": "잔소리꾼 부장의 모금함"
+	},
+	"intensity": "calm",
+	"after_story": 1,
+	"before_story": 3,
+	"background_tags": [
+		"hallway",
+		"day",
+		"dim",
+		"sparse",
+		"tense"
+	],
+	"background_image": "https://imagedelivery.net/WTEqQNGFb-l-IHS6IGnzUQ/d1ec5da8-272e-4d23-29f1-cd9a23ab3f00/public",
+	"dialogue": [
+		{
+			"speaker": "nagging_manager",
+			"content": {
+				"korean": "쯧쯧, 이놈의 모금함은 왜 여기 둬서 사람 불안하게 만들어!"
+			}
+		},
+		{
+			"speaker": "dax",
+			"content": {
+				"korean": "어르신 기금 모금함이네요. 잔소리꾼 부장님은 저걸 왜 자꾸 만지작거릴까요?"
+			}
+		},
+		{
+			"speaker": "nagging_manager",
+			"content": {
+				"korean": "저번에 내가 돈 아끼자고 했다가 얼마나 욕을 먹었는데! 이번엔 또 무슨 오해를 살지!"
+			}
+		},
+		{
+			"speaker": "narrator",
+			"content": {
+				"korean": "잔소리꾼 부장이 모금함을 어루만지며 초조해한다."
+			}
+		},
+		{
+			"speaker": "dax",
+			"content": {
+				"korean": "비서님은 안개 낀 밤이면 늘 부두 끝 등대로 가셨어요! 모금함도 비서님이 관리하시나?"
+			}
+		}
+	],
+	"choices": [
+		{
+			"text": {
+				"korean": "잔소리꾼 부장의 불안을 덜어주기 위해 모금함 옆에 함께 서서 지켜본다."
+			},
+			"path": "easy",
+			"mbti": "SF",
+			"effects": {
+				"gold": 80,
+				"community": 15
+			},
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "잔소리꾼 부장이 당신을 보더니 안심한 표정을 짓는다."
+					}
+				},
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "그는 당신에게 감사의 표시로 낡은 지폐 몇 장을 쥐여 준다."
+					}
+				},
+				{
+					"speaker": "dax",
+					"content": {
+						"korean": "부장님, 생각보다 마음이 따뜻하신 분이었네요!"
+					}
+				}
+			],
+			"risk": {
+				"chance": "mid",
+				"bad": {
+					"effects": {
+						"gold": -40
+					},
+					"reward": [
+						"hp_down"
+					],
+					"result": [
+						{
+							"speaker": "narrator",
+							"content": {
+								"korean": "당신이 모금함 옆에 서자, 잔소리꾼 부장이 당신을 경계하는 눈으로 본다."
+							}
+						},
+						{
+							"speaker": "narrator",
+							"content": {
+								"korean": "그는 당신이 기금을 노린다고 착각하고 모금함을 들고 도망치기 시작한다."
+							}
+						},
+						{
+							"speaker": "dax",
+							"content": {
+								"korean": "어? 왜 도망가시는 거죠?"
+							}
+						}
+					]
+				}
+			}
+		},
+		{
+			"text": {
+				"korean": "잔소리꾼 부장에게 왜 모금함 앞에서 불안해하는지 직접 묻는다."
+			},
+			"path": "hard",
+			"mbti": "NT",
+			"effects": {
+				"echo": 5,
+				"reason": 10
+			},
+			"reward": [
+				"shield"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "잔소리꾼 부장이 한참을 망설이다 작은 목소리로 털어놓는다."
+					}
+				},
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "그는 기금을 아끼려 했던 지난날의 오해가 다시 불거질까 봐 걱정했던 것이다."
+					}
+				},
+				{
+					"speaker": "dax",
+					"content": {
+						"korean": "아하! 부장님도 기금을 아끼려 했던 거였네요!"
+					}
+				}
+			],
+			"risk": {
+				"chance": "high",
+				"bad": {
+					"effects": {
+						"gold": -30
+					},
+					"reward": [],
+					"result": [
+						{
+							"speaker": "narrator",
+							"content": {
+								"korean": "당신의 질문에 잔소리꾼 부장이 화들짝 놀라며 당신을 밀친다."
+							}
+						},
+						{
+							"speaker": "narrator",
+							"content": {
+								"korean": "그는 \"내 일에 참견 마라!\"며 모금함을 끌어안고 복도 구석으로 숨는다."
+							}
+						},
+						{
+							"speaker": "dax",
+							"content": {
+								"korean": "아이고, 저렇게 숨어버리시네요!"
+							}
+						}
+					]
+				}
+			}
+		},
+		{
+			"text": {
+				"korean": "잔소리꾼 부장에게 지폐를 내밀며 모금함은 잠시 맡기고 쉬시라고 한다."
+			},
+			"path": "gold",
+			"mbti": "EP",
+			"require": {
+				"stat": "gold",
+				"op": ">=",
+				"value": 100
+			},
+			"effects": {
+				"gold": -100,
+				"echo": 10
+			},
+			"seed": null,
+			"result": [],
+			"event": "minigame_cup",
+			"event_intro": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "잔소리꾼 부장이 지폐를 보더니 눈을 빛냈다."
+					}
+				},
+				{
+					"speaker": "nagging_manager",
+					"content": {
+						"korean": "좋아, 그럼 내기로 하자고! 이 컵 세 개 중에 모금함 열쇠가 든 걸 맞히면 모금함은 자네가 지켜!"
+					}
+				},
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "잔소리꾼 부장이 컵 세 개를 휙휙 섞었다."
+					}
+				}
+			]
+		}
+	],
+	"tags": [
+		"nagging_manager",
+		"dax"
+	],
+	"_design": {
+		"slot": "A",
+		"kind": "normal",
+		"person": {
+			"name": "잔소리꾼 부장",
+			"role": "부장",
+			"id": "nagging_manager"
+		},
+		"wants": "비서실 앞 모금함을 자꾸 만지작거리며 사람들이 오해할까 봐 불안해한다.",
+		"rule_link": "모금함에 대한 부장의 행동을 오해하기 전에 그의 불안한 사정을 먼저 묻는 계기가 된다.",
+		"events": {
+			"gold": "잔소리꾼 부장이 돈을 걸고 모금함 관리를 떠넘기려 한다."
+		},
+		"flags": {}
+	}
+}

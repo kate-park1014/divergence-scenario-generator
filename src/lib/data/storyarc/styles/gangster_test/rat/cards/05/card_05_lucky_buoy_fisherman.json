@@ -1,0 +1,307 @@
+{
+	"id": "card_05_lucky_buoy_fisherman",
+	"title": {
+		"korean": "행운의 부표를 못 버리는 어부"
+	},
+	"intensity": "calm",
+	"after_story": 5,
+	"before_story": 7,
+	"condition": {
+		"leaning": "reason+",
+		"among": [
+			"fighting-",
+			"fighting+",
+			"community-",
+			"community+",
+			"reason-",
+			"reason+"
+		],
+		"min": 20
+	},
+	"urgency": 8,
+	"leaning": "reason+",
+	"background_tags": [
+		"lighthouse",
+		"foggy",
+		"night",
+		"quiet",
+		"mysterious"
+	],
+	"background_image": "https://imagedelivery.net/WTEqQNGFb-l-IHS6IGnzUQ/c6efa135-d8a8-4cff-3827-eaac6e50ab00/public",
+	"dialogue": [
+		{
+			"speaker": "narrator",
+			"content": {
+				"korean": "등대로 가는 길 위, 낡은 부표 하나가 손수레 바퀴에 걸려 움직이지 않는다."
+			}
+		},
+		{
+			"speaker": "fisherman_uncle",
+			"content": {
+				"korean": "당신이 그 융통성 있게 일 처리한다는 해결사라죠?"
+			}
+		},
+		{
+			"speaker": "fisherman_uncle",
+			"content": {
+				"korean": "이 낡은 부표가 길을 막고 있다오! 내 행운의 부표인데, 이걸 두고 갈 순 없지!"
+			}
+		},
+		{
+			"speaker": "dax",
+			"content": {
+				"korean": "아재, 길을 막고 있으면 어떡해요! 이 부표, 그렇게 중요한 거예요?"
+			}
+		}
+	],
+	"choices": [
+		{
+			"text": {
+				"korean": "어부 아재의 '행운의 부표'에 대한 마음을 이해하고, 부표가 손상되지 않도록 끈을 묶어 함께 길 옆으로 옮긴다."
+			},
+			"path": "easy",
+			"mbti": "NF",
+			"flag": "fisherman_buoy_move",
+			"effects": {
+				"gold": 50,
+				"community": 5,
+				"reason": 10
+			},
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "당신의 도움으로 행운의 부표가 무사히 길 옆으로 옮겨진다."
+					}
+				},
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "어부 아재는 고맙다며 등대 근처에서 발견한 작은 보석을 당신에게 건넨다."
+					}
+				},
+				{
+					"speaker": "dax",
+					"content": {
+						"korean": "아재는 부표 덕분에 보물을 찾은 걸까요?"
+					}
+				}
+			],
+			"risk": {
+				"chance": "mid",
+				"bad": {
+					"effects": {
+						"gold": -30
+					},
+					"reward": [],
+					"result": [
+						{
+							"speaker": "narrator",
+							"content": {
+								"korean": "당신이 부표를 옮기기 위해 끈을 묶는 순간, 끈이 낡아 끊어지며 부표가 손수레 바퀴에 다시 걸려버린다."
+							}
+						},
+						{
+							"speaker": "narrator",
+							"content": {
+								"korean": "어부 아재는 한숨을 쉬며 다시 부표를 빼내려 애쓰고, 당신은 길을 막고 있는 부표 때문에 시간을 낭비한다."
+							}
+						}
+					]
+				}
+			}
+		},
+		{
+			"text": {
+				"korean": "어부 아재에게 길을 막는 것은 불법임을 설명하고, 부표를 길 옆 숲에 버리도록 설득한다."
+			},
+			"path": "hard",
+			"mbti": "TJ",
+			"flag": "fisherman_buoy_abandon",
+			"effects": {
+				"reason": -10,
+				"gold": -50,
+				"fighting": -5
+			},
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "어부 아재는 당신의 말에 심란한 표정을 짓더니, 마지못해 부표를 숲으로 던져버린다."
+					}
+				},
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "아재는 등대 길을 열어주지만, 당신을 향한 실망감을 감추지 못한다."
+					}
+				},
+				{
+					"speaker": "dax",
+					"content": {
+						"korean": "아재가 억지로 부표를 버리다니, 마음이 안 좋네요."
+					}
+				}
+			],
+			"risk": {
+				"chance": "high",
+				"bad": {
+					"effects": {
+						"gold": -20
+					},
+					"reward": [],
+					"result": [
+						{
+							"speaker": "narrator",
+							"content": {
+								"korean": "당신이 어부 아재에게 부표를 버리라고 설득하자,"
+							}
+						},
+						{
+							"speaker": "narrator",
+							"content": {
+								"korean": "아재는 버럭 화를 내며 부표를 길 한가운데로 더 세게 밀어 넣는다."
+							}
+						},
+						{
+							"speaker": "narrator",
+							"content": {
+								"korean": "부표가 길 한가운데에서 꼼짝 않고 버티고, 어부 아재는 당신에게 등을 돌린다."
+							}
+						}
+					]
+				}
+			}
+		},
+		{
+			"text": {
+				"korean": "당신이 '마음 가는 대로 하는 해결사'임을 어필하며, 아재의 행운의 부표를 더 돋보이게 할 특별한 운반 방법을 제안한다."
+			},
+			"path": "stat",
+			"mbti": "EN",
+			"require": {
+				"stat": "reason",
+				"op": ">=",
+				"value": 40
+			},
+			"flag": "fisherman_buoy_magician",
+			"effects": {
+				"gold": 100,
+				"echo": 10,
+				"reason": 20
+			},
+			"reward": [
+				"intelligence_up"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "당신의 말에 어부 아재는 눈빛이 반짝인다."
+					}
+				},
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "아재는 당신을 '부표의 마법사'라며 칭찬하고, 직접 부표를 멋지게 꾸며 등대까지 옮겨준다."
+					}
+				},
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "아재는 등대 입구에 숨겨둔 작은 보물 지도를 건넨다."
+					}
+				}
+			]
+		},
+		{
+			"text": {
+				"korean": "어부 아재에게 돈을 쥐여주며, 새 부표를 사라고 권하고 길을 비켜달라고 부탁한다."
+			},
+			"path": "gold",
+			"mbti": "SP",
+			"require": {
+				"stat": "gold",
+				"op": ">=",
+				"value": 100
+			},
+			"effects": {
+				"echo": 5,
+				"gold": -100
+			},
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "당신이 돈을 건네자 어부 아재는 잠시 망설이더니, 돈을 받아들고 고개를 끄덕인다."
+					}
+				},
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "아재는 길을 비켜주며, 당신에게 새 부표를 사러 간다고 말한다."
+					}
+				},
+				{
+					"speaker": "dax",
+					"content": {
+						"korean": "아재가 돈을 받고 새 부표를 사러 간다니, 그래도 길은 열렸네요."
+					}
+				}
+			]
+		}
+	],
+	"tags": [
+		"fisherman_uncle",
+		"dax"
+	],
+	"_design": {
+		"slot": "C",
+		"kind": "rep",
+		"person": {
+			"id": "fisherman_uncle",
+			"name": "어부 아재",
+			"role": "어부"
+		},
+		"wants": "행운의 부표를 무사히 옮기고 싶어 한다",
+		"rule_link": "타인의 사정(어부의 부표 집착)을 먼저 묻고 해결하려 한다",
+		"rep": "reason+",
+		"events": {},
+		"flags": {
+			"fisherman_buoy_move": {
+				"kind": "bad",
+				"boss_penalty": -1,
+				"label": {
+					"korean": "부표 옮겨 길 확보"
+				},
+				"boss_line": {
+					"korean": "등대 주변의 지형을 이용해 적의 시야를 방해한다."
+				}
+			},
+			"fisherman_buoy_abandon": {
+				"kind": "good",
+				"boss_penalty": 1,
+				"label": {
+					"korean": "부표 포기"
+				},
+				"boss_choice": {
+					"korean": "싸움 중 적이 버려진 부표에 걸려 넘어진다."
+				}
+			},
+			"fisherman_buoy_magician": {
+				"kind": "good",
+				"boss_penalty": 2,
+				"label": {
+					"korean": "부표 마법사"
+				},
+				"boss_choice": {
+					"korean": "등대 입구에 숨겨진 보물 지도를 활용해 전투에 유리한 위치를 선점한다."
+				}
+			}
+		}
+	}
+}

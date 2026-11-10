@@ -1,0 +1,345 @@
+{
+	"id": "card_04_broken_lift",
+	"title": {
+		"korean": "망가진 놈은 움직이지 않는다"
+	},
+	"intensity": "calm",
+	"after_story": 3,
+	"before_story": 5,
+	"condition": {
+		"leaning": "fighting-",
+		"among": [
+			"fighting-",
+			"fighting+",
+			"community-",
+			"community+",
+			"reason-",
+			"reason+"
+		],
+		"min": 20
+	},
+	"urgency": 8,
+	"leaning": "fighting-",
+	"background_tags": [
+		"garage",
+		"night",
+		"dimlight",
+		"fewpeople",
+		"tense"
+	],
+	"background_image": "https://imagedelivery.net/WTEqQNGFb-l-IHS6IGnzUQ/2bd5c8a5-9661-4497-0742-a56043432400/public",
+	"dialogue": [
+		{
+			"speaker": "narrator",
+			"content": {
+				"korean": "낡은 차고 안, 차고 반장이 거대한 차량 리프트 앞에서 땀을 뻘뻘 흘리고 있다."
+			}
+		},
+		{
+			"speaker": "chago_banjang",
+			"content": {
+				"korean": "젠장, 이 망할 리프트가 또 말썽이네! 끙… 어?"
+			}
+		},
+		{
+			"speaker": "chago_banjang",
+			"content": {
+				"korean": "당신이 그, 뭐냐, 사람 좋게 일 도와주는 해결사 양반들 아니요? 소문은 익히 들었소만."
+			}
+		},
+		{
+			"speaker": "dax",
+			"content": {
+				"korean": "리프트가 망가져서 길이 막혔네요. 기록실로 가려면 저걸 치워야 하는데…"
+			}
+		},
+		{
+			"speaker": "chago_banjang",
+			"content": {
+				"korean": "반장이 렌치를 만지작거리며 한숨을 쉰다. 아, 이거 고치려는데 영…"
+			}
+		},
+		{
+			"speaker": "chago_banjang",
+			"content": {
+				"korean": "혼자 힘으로는 안 되겠고. 누가 좀 도와주면 좋겠는데 말이야."
+			}
+		}
+	],
+	"choices": [
+		{
+			"text": {
+				"korean": "함께 리프트를 수리한다"
+			},
+			"path": "easy",
+			"mbti": "FJ",
+			"flag": "hasty_cooperation",
+			"effects": {
+				"community": 20,
+				"echo": 10
+			},
+			"reward": [
+				"heal"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "당신이 반장과 함께 리프트의 고장 난 부품을 고친다. 이내 육중한 리프트가 삐걱이며 움직인다."
+					}
+				},
+				{
+					"speaker": "chago_banjang",
+					"content": {
+						"korean": "반장이 땀을 닦으며 기뻐한다. 이야, 역시 소문대로구먼! 덕분에 살았네. 이 은혜는 잊지 않으리다!"
+					}
+				},
+				{
+					"speaker": "dax",
+					"content": {
+						"korean": "덕분에 기록실로 가는 길이 열렸네요!"
+					}
+				}
+			],
+			"risk": {
+				"chance": "mid",
+				"bad": {
+					"reward": [
+						"attack_down"
+					],
+					"result": [
+						{
+							"speaker": "narrator",
+							"content": {
+								"korean": "당신이 반장과 함께 리프트를 수리하려 하지만, 엉뚱한 부품을 건드려 더 고장 내고 만다."
+							}
+						},
+						{
+							"speaker": "chago_banjang",
+							"content": {
+								"korean": "반장이 얼굴이 시뻘개져 소리친다. 이봐요! 고쳐달랬더니 아예 작살을 내놨구먼!"
+							}
+						},
+						{
+							"speaker": "dax",
+							"content": {
+								"korean": "으악, 더 망가졌어요!"
+							}
+						}
+					]
+				}
+			}
+		},
+		{
+			"text": {
+				"korean": "고장 난 리프트를 힘으로 밀어붙여 길을 만든다"
+			},
+			"path": "hard",
+			"mbti": "ET",
+			"flag": "pushed_lift",
+			"effects": {
+				"fighting": 20,
+				"reason": -10
+			},
+			"reward": [
+				"stun"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "당신이 끙 소리와 함께 리프트의 거대한 철골 구조를 있는 힘껏 밀어낸다."
+					}
+				},
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "굉음과 함께 리프트가 옆으로 비껴진다."
+					}
+				},
+				{
+					"speaker": "chago_banjang",
+					"content": {
+						"korean": "반장이 눈을 휘둥그레 뜨고 중얼거린다. 아니, 저걸 힘으로 밀어낸다고? 미친 거 아니야?!"
+					}
+				},
+				{
+					"speaker": "dax",
+					"content": {
+						"korean": "으아, 힘이 장사시네요!"
+					}
+				}
+			],
+			"risk": {
+				"chance": "high",
+				"bad": {
+					"effects": {
+						"gold": -20
+					},
+					"reward": [],
+					"result": [
+						{
+							"speaker": "narrator",
+							"content": {
+								"korean": "당신이 리프트를 힘으로 밀어내려 하지만, 발이 미끄러져 리프트 아래에 발이 끼고 만다."
+							}
+						},
+						{
+							"speaker": "chago_banjang",
+							"content": {
+								"korean": "반장이 혀를 차며 말한다. 쯧쯧쯧, 무식하게 힘만 쓰려니 저 꼴 나지!"
+							}
+						},
+						{
+							"speaker": "dax",
+							"content": {
+								"korean": "조심하세요, 발 다치겠어요!"
+							}
+						}
+					]
+				}
+			}
+		},
+		{
+			"text": {
+				"korean": "반장의 지시를 정확히 따라 리프트를 수리한다"
+			},
+			"path": "stat",
+			"mbti": "SP",
+			"require": {
+				"stat": "fighting",
+				"op": "<=",
+				"value": -40
+			},
+			"flag": "perfect_lift_fix",
+			"effects": {
+				"community": 30,
+				"fighting": -10,
+				"echo": 15
+			},
+			"reward": [
+				"defense_up"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "당신이 반장의 능숙한 지시에 따라 정확하게 움직여 리프트를 완벽하게 수리한다. 리프트는 부드럽게 작동한다."
+					}
+				},
+				{
+					"speaker": "chago_banjang",
+					"content": {
+						"korean": "반장이 만족스러운 듯 고개를 끄덕인다."
+					}
+				},
+				{
+					"speaker": "chago_banjang",
+					"content": {
+						"korean": "역시 소문대로, 손발이 척척 맞는구먼! 이 정도면 새 리프트나 다름없지!"
+					}
+				},
+				{
+					"speaker": "dax",
+					"content": {
+						"korean": "반장님이랑 환상의 호흡인데요!"
+					}
+				}
+			]
+		},
+		{
+			"text": {
+				"korean": "돈을 주고 차고 반장에게 리프트 수리를 맡긴다"
+			},
+			"path": "gold",
+			"mbti": "TP",
+			"require": {
+				"stat": "gold",
+				"op": ">=",
+				"value": 100
+			},
+			"effects": {
+				"gold": -100
+			},
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "차고 반장은 돈뭉치를 받아 들고 콧노래를 부르며 공구함을 챙겨 왔다."
+					}
+				},
+				{
+					"speaker": "chago_banjang",
+					"content": {
+						"korean": "헤헤, 걱정 마쇼! 후딱 고쳐 줄 테니!"
+					}
+				},
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "반장이 렌치를 한 번 돌리자 리프트가 끼익 소리를 내며 차를 천장 끝까지 올려 버렸다."
+					}
+				},
+				{
+					"speaker": "dax",
+					"content": {
+						"korean": "길은 열렸는데… 저 차 내려올 수는 있는 거죠?"
+					}
+				}
+			]
+		}
+	],
+	"tags": [
+		"chago_banjang",
+		"dax"
+	],
+	"_design": {
+		"slot": "B",
+		"kind": "rep",
+		"person": {
+			"id": "chago_banjang",
+			"name": "차고 반장",
+			"role": "차고 반장"
+		},
+		"wants": "차고 반장이 고장 난 리프트 때문에 난처해하고 있다.",
+		"rule_link": "말 못 하는 리프트의 고장을 '말 못 할 사정'으로 보고 도와줄 것인가, 아니면 '숨기는 문제'로 보고 다른 방법을 찾을 것인가.",
+		"rep": "fighting-",
+		"events": {},
+		"flags": {
+			"hasty_cooperation": {
+				"kind": "bad",
+				"boss_penalty": -1,
+				"label": {
+					"korean": "성급한 협력"
+				},
+				"boss_line": {
+					"korean": "성급한 협력으로 인해 아군의 방어 태세가 흐트러진다."
+				}
+			},
+			"pushed_lift": {
+				"kind": "good",
+				"boss_penalty": 1,
+				"label": {
+					"korean": "리프트 밀치기"
+				},
+				"boss_choice": {
+					"korean": "거대한 물건을 밀어낸 경험을 살려 적을 밀쳐낸다."
+				}
+			},
+			"perfect_lift_fix": {
+				"kind": "good",
+				"boss_penalty": 2,
+				"label": {
+					"korean": "리프트 완벽 수리"
+				},
+				"boss_choice": {
+					"korean": "정확한 지시 이행으로 완성된 협동 기술로 적을 제압한다."
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,412 @@
+{
+	"cards": [
+		{
+			"person": {
+				"id": "ibalsa_aje",
+				"name": "이발사 아재",
+				"role": "이발사"
+			},
+			"dialogue": [
+				{
+					"speaker": "ibalsa_aje",
+					"text": "당신이 그, 뭐든 규칙대로 딱딱 처리한다는 해결사죠? 마침 잘 오셨습니다."
+				},
+				{
+					"text": "이런, 이 바닥은 원래 깨끗해야 하는 건데...",
+					"speaker": "ibalsa_aje"
+				},
+				{
+					"text": "저 빗 좀 보십시오. 저건 제 것이 아닌데, 누가 저런 걸 아무 데나 흘리고 다닌단 말입니까?",
+					"speaker": "ibalsa_aje"
+				},
+				{
+					"speaker": "dax",
+					"text": "아재가 청결에 유독 예민하긴 한데... 저런 빗 하나에도 신경이 곤두서 있네요."
+				},
+				{
+					"speaker": "ibalsa_aje",
+					"text": "이 얼룩만 보면 속이 뒤집힙니다. 누가 이렇게 만들었는지..."
+				}
+			],
+			"wants": "이발사 아재는 계단에 떨어진 낯선 빗을 보며 조직의 질서가 흐트러진 것에 불안해한다. 당신에게 이 빗의 주인을 찾아주기를 원한다.",
+			"rule_link": "말 못 하는 증거물을 숨긴 사람이 누군지 찾아내어 질서를 회복하는 사건.",
+			"background_tags": [
+				"stairs",
+				"daytime",
+				"bright",
+				"few_people",
+				"tense"
+			],
+			"title": "사라진 빗",
+			"no": 1,
+			"key": "missing_comb",
+			"choices": [
+				{
+					"effects": {
+						"echo": 10,
+						"reason": 20
+					},
+					"result": [
+						{
+							"text": "당신이 빗을 들고 묻자, 이발사 아재는 고개를 끄덕이며 '역시 다르구만!' 하고 감탄한다.",
+							"speaker": "narrator"
+						},
+						{
+							"text": "하지만 아무도 빗의 주인을 자처하지 않아 시간만 지체된다.",
+							"speaker": "narrator"
+						},
+						{
+							"text": "빗이 아무리 소중해도 저렇게 티 나게 잃어버릴 리가... 누가 일부러 흘린 거 아닐까요?",
+							"speaker": "dax"
+						}
+					],
+					"text": "빗을 주워 들고 주변 사람들에게 주인과 분실 경위를 묻는다.",
+					"path": "easy",
+					"flag": {
+						"key": "misplaced_comb",
+						"boss_text": "금고실 문 앞에 떨어진 빗을 발견하고 주워 든다.",
+						"label": "잃어버린 빗"
+					},
+					"mbti": "TJ",
+					"reward": [
+						"intelligence_up"
+					],
+					"risk_bad": {
+						"result": [
+							{
+								"speaker": "narrator",
+								"text": "빗을 주워 들고 주변 사람들에게 주인과 분실 경위를 묻자,"
+							},
+							{
+								"speaker": "narrator",
+								"text": "이발사 아재가 빗을 낚아채며 '이건 내 빗이 아니야!' 하고 고함친다."
+							},
+							{
+								"text": "이발소에 있던 손님들이 불만을 쏟아내며 소란이 커진다.",
+								"speaker": "narrator"
+							}
+						],
+						"reward": [],
+						"gold": -30
+					}
+				},
+				{
+					"path": "hard",
+					"text": "빗을 아무도 보지 못하게 주머니에 넣고 조용히 사라진다.",
+					"risk_bad": {
+						"reward": [],
+						"gold": -20,
+						"result": [
+							{
+								"speaker": "narrator",
+								"text": "당신이 빗을 주머니에 넣는 순간, 빗이 미끄러져 계단 아래로 굴러떨어진다."
+							},
+							{
+								"speaker": "narrator",
+								"text": "이발사 아재가 '내 빗도 아닌데 왜 저렇게 아까워하지?' 하며 당신을 수상하게 쳐다본다."
+							}
+						]
+					},
+					"result": [
+						{
+							"text": "당신이 빗을 주머니에 넣자,",
+							"speaker": "narrator"
+						},
+						{
+							"speaker": "narrator",
+							"text": "이발사 아재는 눈을 부릅뜨고 '어딜 그렇게 급히 가십니까?' 하고 당신을 붙잡는다."
+						},
+						{
+							"text": "아재가 허리에 찬 날카로운 가위가 번뜩인다.",
+							"speaker": "narrator"
+						},
+						{
+							"text": "아재가 저렇게 매의 눈으로 보고 있는데... 괜히 들켰네요.",
+							"speaker": "dax"
+						}
+					],
+					"flag": {
+						"boss_text": "금고실 문 앞에서 수상한 빗을 발견하고 몰래 숨긴다.",
+						"label": "수상한 빗",
+						"key": "suspicious_comb"
+					},
+					"reward": [
+						"move_range_up"
+					],
+					"effects": {
+						"gold": -100,
+						"reason": -20
+					},
+					"mbti": "FP"
+				},
+				{
+					"result": [
+						{
+							"speaker": "narrator",
+							"text": "당신의 단호한 말에 이발사 아재는 잠시 망설이더니 고개를 끄덕인다."
+						},
+						{
+							"text": "옳은 말씀이십니다. 급한 불부터 끄는 게 인지상정이죠.",
+							"speaker": "ibalsa_aje"
+						},
+						{
+							"speaker": "narrator",
+							"text": "아재가 빗을 받아 들고 한숨을 쉰다."
+						},
+						{
+							"speaker": "dax",
+							"text": "역시 당신이 말하면 다들 따르는군요. 아재도 꼼짝 못 하네요."
+						}
+					],
+					"mbti": "ST",
+					"reward": [
+						"shield"
+					],
+					"effects": {
+						"fighting": 10,
+						"reason": -10
+					},
+					"flag": {
+						"boss_text": "금고실 문 앞에서 이발사 아재의 방해를 능숙하게 처리하고 들어간다.",
+						"key": "prioritize_urgent",
+						"label": "급한 일 우선"
+					},
+					"text": "빗을 이발사 아재에게 건네며 '질서를 유지하는 것도 중요하지만, 급한 일부터 처리하죠.'라고 말한다.",
+					"path": "stat"
+				}
+			],
+			"slot": "C",
+			"kind": "rep",
+			"rep_dir": "reason-"
+		},
+		{
+			"choices": [
+				{
+					"effects": {
+						"reason": -20,
+						"echo": 10
+					},
+					"mbti": "EN",
+					"reward": [
+						"intelligence_up"
+					],
+					"flag": {
+						"key": "wall_rats",
+						"boss_text": "금고실 문 앞에서 쥐 소리에 신경이 분산된다.",
+						"label": "벽 뒤의 쥐"
+					},
+					"risk_bad": {
+						"reward": [],
+						"result": [
+							{
+								"text": "소리가 나는 벽에 귀를 대고 자세히 듣자, 갑자기 쿵 하는 소리와 함께 벽 일부가 무너져 내린다.",
+								"speaker": "narrator"
+							},
+							{
+								"text": "이발사 아재의 비명과 함께 벽 너머에서 날카로운 금속음이 들린다.",
+								"speaker": "narrator"
+							}
+						],
+						"gold": -50
+					},
+					"result": [
+						{
+							"text": "당신이 벽에 귀를 대자, 이발사 아재는 눈을 감고 함께 집중한다.",
+							"speaker": "narrator"
+						},
+						{
+							"text": "잠시 후, '쥐새끼들이 또!' 하며 벽을 걷어찬다. 벽 뒤에서 쥐들이 바쁘게 움직이는 소리가 들린다.",
+							"speaker": "narrator"
+						},
+						{
+							"text": "쥐들이 금고실 근처까지 오다니... 저러다 큰일 나겠네요.",
+							"speaker": "dax"
+						}
+					],
+					"path": "easy",
+					"text": "소리가 나는 벽에 귀를 대고 자세히 들어본다."
+				},
+				{
+					"risk_bad": {
+						"gold": -20,
+						"result": [
+							{
+								"speaker": "narrator",
+								"text": "당신이 소리를 무시하고 계단을 오르자,"
+							},
+							{
+								"speaker": "narrator",
+								"text": "갑자기 벽 뒤에서 '쿵!' 하는 소리와 함께 이발사 아재의 소중한 면도칼이 굴러떨어진다."
+							},
+							{
+								"text": "아재가 '내 면도칼!' 하며 비명을 지른다.",
+								"speaker": "narrator"
+							}
+						],
+						"reward": []
+					},
+					"mbti": "IS",
+					"reward": [
+						"defense_up"
+					],
+					"flag": {
+						"key": "ignore_sound",
+						"boss_text": "금고실 문 앞 이발사 아재의 방해를 뿌리치고 들어간다.",
+						"label": "소리 무시"
+					},
+					"effects": {
+						"gold": -100,
+						"reason": 20
+					},
+					"path": "hard",
+					"text": "소리를 무시하고 금고실로 향하는 계단을 계속 올라간다.",
+					"result": [
+						{
+							"text": "당신이 소리를 무시하고 계단을 오르자, 이발사 아재는 당신의 옷자락을 붙잡는다.",
+							"speaker": "narrator"
+						},
+						{
+							"speaker": "ibalsa_aje",
+							"text": "아니, 저 소리가 계속 거슬리는데 그냥 가십니까?"
+						},
+						{
+							"speaker": "narrator",
+							"text": "아재의 눈빛에 실망감이 가득하다."
+						},
+						{
+							"text": "아재가 저렇게 실망한 표정은 처음 보네요. 아무래도 꽤 신경 쓰였나 봐요.",
+							"speaker": "dax"
+						}
+					]
+				},
+				{
+					"reward": [
+						"stun"
+					],
+					"mbti": "ES",
+					"result": [
+						{
+							"speaker": "narrator",
+							"text": "당신의 호통에 벽 뒤에서 움직이던 쥐들이 놀라 달아나는 소리가 들린다."
+						},
+						{
+							"speaker": "ibalsa_aje",
+							"text": "하하, 역시 시원하시구만!"
+						},
+						{
+							"speaker": "narrator",
+							"text": "아재가 만족스러운 미소를 짓는다."
+						},
+						{
+							"speaker": "dax",
+							"text": "역시 크게 한 방 먹여야 말을 듣는군요. 벽 뒤의 쥐들도 놀랐겠어요."
+						}
+					],
+					"effects": {
+						"reason": 10,
+						"fighting": 10
+					},
+					"flag": {
+						"label": "큰 소리",
+						"key": "loud_declaration",
+						"boss_text": "금고실 문 앞에서 숨어있던 적들을 크게 소리쳐 혼란에 빠뜨린다."
+					},
+					"text": "벽에 대고 '거기 누구 있냐? 나와서 말해라!' 하고 크게 소리친다.",
+					"path": "stat"
+				},
+				{
+					"text": "벽에 대고 '아무리 소중해도, 면도칼은 아니죠?'라고 속삭인다.",
+					"path": "fun",
+					"result": [
+						{
+							"speaker": "narrator",
+							"text": "당신의 속삭임에 이발사 아재는 깜짝 놀라 뒤로 넘어질 뻔한다."
+						},
+						{
+							"text": "아니, 그걸 어떻게... 혹시 귀신이라도 붙었습니까?",
+							"speaker": "ibalsa_aje"
+						},
+						{
+							"text": "아재의 얼굴이 새파랗게 질린다.",
+							"speaker": "narrator"
+						},
+						{
+							"speaker": "dax",
+							"text": "아재가 면도칼에 대한 집착이 엄청나네요. 저렇게 놀라는 건 또 처음 봐요."
+						}
+					],
+					"reward": [
+						"bleed"
+					],
+					"risk_bad": {
+						"reward": [
+							"hp_down"
+						],
+						"result": [
+							{
+								"speaker": "narrator",
+								"text": "벽에 대고 '아무리 소중해도, 면도칼은 아니죠?'라고 속삭이자,"
+							},
+							{
+								"text": "이발사 아재가 자신의 면도칼을 꺼내 들고 당신을 위협한다.",
+								"speaker": "narrator"
+							},
+							{
+								"text": "이 면도칼은 내 생명과도 같은데, 왜 자꾸 들먹이는 겁니까!",
+								"speaker": "ibalsa_aje"
+							}
+						]
+					},
+					"mbti": "IN",
+					"effects": {
+						"community": 20
+					}
+				}
+			],
+			"dialogue": [
+				{
+					"text": "당신이 그, 꽉 막힌 규칙보단 감으로 척척 해결한다는 분이죠? 이 소리 좀 들어보시오.",
+					"speaker": "ibalsa_aje"
+				},
+				{
+					"speaker": "ibalsa_aje",
+					"text": "제 소중한 면도칼이 감쪽같이 사라져서..."
+				},
+				{
+					"speaker": "ibalsa_aje",
+					"text": "이런, 이 면도칼은 제 손때가 묻은 건데... 이걸로 깎아야 제대로 깎이는데 말이죠."
+				},
+				{
+					"speaker": "narrator",
+					"text": "이발사 아재가 벽을 가리키자, 희미한 긁는 소리가 들려온다."
+				},
+				{
+					"text": "무슨 소리죠? 쥐 같은데요? 금고실 코앞에서 쥐라니...",
+					"speaker": "dax"
+				}
+			],
+			"title": "벽 뒤의 소리",
+			"background_tags": [
+				"stairs",
+				"nighttime",
+				"dim",
+				"empty",
+				"mysterious"
+			],
+			"no": 2,
+			"rule_link": "말 못 하는 소리 안에 숨겨진 사정을 알아내어 진짜 이유를 밝히는 사건.",
+			"person": {
+				"id": "ibalsa_aje",
+				"name": "이발사 아재",
+				"role": "이발사"
+			},
+			"key": "sound_behind_wall",
+			"wants": "이발사 아재는 계단 벽 뒤에서 들리는 수상한 소리에 신경이 곤두서 있다. 당신에게 그 소리의 정체를 밝혀주기를 원한다.",
+			"slot": "C",
+			"kind": "rep",
+			"rep_dir": "reason+"
+		}
+	],
+	"errors": [],
+	"prompt_hash": "a16e74a38a90fec96466e501fbbe25e089690f23"
+}

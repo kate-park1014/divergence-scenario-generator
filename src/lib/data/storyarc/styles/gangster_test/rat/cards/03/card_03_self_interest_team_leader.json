@@ -1,0 +1,304 @@
+{
+	"id": "card_03_self_interest_team_leader",
+	"title": {
+		"korean": "회계팀 팀장의 비자금 장부"
+	},
+	"intensity": "calm",
+	"after_story": 7,
+	"before_story": 9,
+	"condition": {
+		"leaning": "community-",
+		"among": [
+			"fighting-",
+			"fighting+",
+			"community-",
+			"community+",
+			"reason-",
+			"reason+"
+		],
+		"min": 20
+	},
+	"urgency": 8,
+	"leaning": "community-",
+	"background_tags": [
+		"corridor",
+		"night",
+		"dimlight",
+		"empty",
+		"tense"
+	],
+	"background_image": "https://imagedelivery.net/WTEqQNGFb-l-IHS6IGnzUQ/7f073e80-d30e-4f93-1b34-d402243d9000/public",
+	"dialogue": [
+		{
+			"speaker": "hoegye_teamjang",
+			"content": {
+				"korean": "당신이 그… 자기 밥그릇은 알아서 챙긴다는 해결사 맞죠?"
+			}
+		},
+		{
+			"speaker": "hoegye_teamjang",
+			"content": {
+				"korean": "방금 서버실 안에서 뭔가 툭, 하고 떨어지는 소리가 났습니다만... 제 착각일 수도 있고요."
+			}
+		},
+		{
+			"speaker": "hoegye_teamjang",
+			"content": {
+				"korean": "저야 야근 마치고 퇴근하는 길이라... 괜한 오지랖일까 싶어 망설였습니다만."
+			}
+		},
+		{
+			"speaker": "hoegye_teamjang",
+			"content": {
+				"korean": "그런데 이 복도 저편에서 자꾸 누가 저를 쳐다보는 것 같아서요. 분명히 사람이 있었는데 말이죠."
+			}
+		},
+		{
+			"speaker": "dax",
+			"content": {
+				"korean": "팀장님, 혹시 비자금 말고 다른 중요한 걸 본 건 아닐까요?"
+			}
+		}
+	],
+	"choices": [
+		{
+			"text": {
+				"korean": "팀장님의 비자금 파일을 우선적으로 보호한다."
+			},
+			"path": "easy",
+			"mbti": "ST",
+			"flag": "hoegye_teamjang_usb_path",
+			"effects": {
+				"community": -20,
+				"echo": 10
+			},
+			"reward": [
+				"intelligence_up"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "당신이 비자금 파일을 보호하겠다고 하자, 팀장이 안도하며 서버실 문 쪽으로 바싹 다가선다."
+					}
+				},
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "팀장은 당신에게 닥스 모르게 자신의 개인 외장하드를 건네며, '이게 제일 중요합니다!'라고 속삭인다."
+					}
+				},
+				{
+					"speaker": "dax",
+					"content": {
+						"korean": "아니, 여러분! 중요한 건 따로 있는데, 저분 비자금 파일을 먼저 챙겨준 거예요?"
+					}
+				}
+			],
+			"risk": {
+				"chance": "mid",
+				"bad": {
+					"effects": {
+						"gold": -30
+					},
+					"reward": [],
+					"result": [
+						{
+							"speaker": "narrator",
+							"content": {
+								"korean": "당신이 비자금 파일을 보호하겠다고 하자, 팀장이 감격하며 당신의 팔을 잡고 흔든다."
+							}
+						},
+						{
+							"speaker": "narrator",
+							"content": {
+								"korean": "그 바람에 당신의 주머니에서 중요한 단서 쪽지가 복도 바닥에 떨어지고,"
+							}
+						},
+						{
+							"speaker": "narrator",
+							"content": {
+								"korean": "바람에 휭 날려 서버실 문 아래로 사라진다."
+							}
+						},
+						{
+							"speaker": "dax",
+							"content": {
+								"korean": "어휴, 저러다 뭘 흘릴 것 같더니! 중요한 거였으면 어떡해요!"
+							}
+						}
+					]
+				}
+			}
+		},
+		{
+			"text": {
+				"korean": "서버실 전체의 보안을 먼저 확인하고 팀장님은 나중에 돕겠다고 한다."
+			},
+			"path": "hard",
+			"mbti": "NP",
+			"flag": "server_network_map",
+			"effects": {
+				"echo": -5,
+				"community": 15
+			},
+			"reward": [
+				"move_range_up"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "당신이 서버실 전체의 보안을 먼저 확인하겠다고 하자, 팀장은 실망한 표정으로 어깨를 축 늘어뜨린다."
+					}
+				},
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "이내 체념한 듯, 서버실 네트워크 구조도와 주요 데이터 저장 위치가 표시된 오래된 종이 지도를 건넨다."
+					}
+				},
+				{
+					"speaker": "dax",
+					"content": {
+						"korean": "팀장님이 실망하신 것 같긴 한데, 그래도 저게 더 중요한 정보 같긴 하네요!"
+					}
+				}
+			],
+			"risk": {
+				"chance": "high",
+				"bad": {
+					"effects": {
+						"gold": -20
+					},
+					"reward": [],
+					"result": [
+						{
+							"speaker": "narrator",
+							"content": {
+								"korean": "당신이 서버실 전체 보안을 먼저 확인하겠다고 하자,"
+							}
+						},
+						{
+							"speaker": "narrator",
+							"content": {
+								"korean": "팀장이 \"설마 저한테만 이런 일이 생기겠어요?\"라며 안심한다."
+							}
+						},
+						{
+							"speaker": "narrator",
+							"content": {
+								"korean": "그 순간 서버실 안에서 '삐빅' 하는 소리와 함께 팀장의 비상용 호출기가 울린다."
+							}
+						},
+						{
+							"speaker": "dax",
+							"content": {
+								"korean": "저분, 뭔가 또 당한 것 같은데요? 저 호출기, 설마…"
+							}
+						}
+					]
+				}
+			}
+		},
+		{
+			"text": {
+				"korean": "팀장님의 비자금 파일 위치를 정확히 파악하여 빠르게 조치한다."
+			},
+			"path": "stat",
+			"mbti": "TJ",
+			"require": {
+				"stat": "community",
+				"op": "<=",
+				"value": -40
+			},
+			"flag": "suspicious_file_list",
+			"effects": {
+				"echo": 10,
+				"community": -25,
+				"fighting": 10
+			},
+			"reward": [
+				"defense_up"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "당신이 팀장님의 비자금 파일 위치를 정확히 파악해 빠르게 조치하겠다고 하자,"
+					}
+				},
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "팀장은 눈물을 글썽이며 안도의 한숨을 쉰다."
+					}
+				},
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "당신은 팀장의 비자금 파일을 찾아내 백업하며, 동시에 서버실 내부의 다른 수상한 파일 목록을 확인한다."
+					}
+				},
+				{
+					"speaker": "dax",
+					"content": {
+						"korean": "역시 여러분이에요! 뭘 해야 할지 바로 아시네요!"
+					}
+				}
+			]
+		}
+	],
+	"tags": [
+		"hoegye_teamjang",
+		"dax"
+	],
+	"_design": {
+		"slot": "D",
+		"kind": "rep",
+		"person": {
+			"id": "hoegye_teamjang",
+			"name": "회계팀 팀장",
+			"role": "회계팀 팀장"
+		},
+		"wants": "자신의 비자금 장부 파일이 삭제되는 것을 막아 주기를 바란다.",
+		"rule_link": "눈앞의 '삭제음'이라는 증거가 정말 '팀장의 비자금 장부' 때문인지, 아니면 다른 더 큰 문제 때문인지 따져볼 기회.",
+		"rep": "community-",
+		"events": {},
+		"flags": {
+			"hoegye_teamjang_usb_path": {
+				"kind": "bad",
+				"boss_penalty": -1,
+				"label": {
+					"korean": "회계팀장 외장하드 경로"
+				},
+				"boss_line": {
+					"korean": "회계팀 팀장의 비자금 파일 백업이 서버실 시스템에 과부하를 일으켜 다른 데이터 접근을 방해한다."
+				}
+			},
+			"server_network_map": {
+				"kind": "good",
+				"boss_penalty": 1,
+				"label": {
+					"korean": "서버실 네트워크 지도"
+				},
+				"boss_choice": {
+					"korean": "해커 간부의 약점을 파악하여 서버실 전체의 네트워크 흐름을 읽고 공격한다."
+				}
+			},
+			"suspicious_file_list": {
+				"kind": "good",
+				"boss_penalty": 2,
+				"label": {
+					"korean": "수상한 파일 목록"
+				},
+				"boss_choice": {
+					"korean": "해커 간부가 삭제하려는 파일 목록 중에서 수상한 부분을 발견하고 먼저 방어한다."
+				}
+			}
+		}
+	}
+}

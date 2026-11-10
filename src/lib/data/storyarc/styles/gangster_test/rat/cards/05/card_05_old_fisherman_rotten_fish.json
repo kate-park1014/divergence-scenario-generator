@@ -1,0 +1,275 @@
+{
+	"id": "card_05_old_fisherman_rotten_fish",
+	"title": {
+		"korean": "복 명태를 지키는 어부"
+	},
+	"intensity": "calm",
+	"after_story": 5,
+	"before_story": 7,
+	"condition": {
+		"leaning": "fighting-",
+		"among": [
+			"fighting-",
+			"fighting+",
+			"community-",
+			"community+",
+			"reason-",
+			"reason+"
+		],
+		"min": 20
+	},
+	"urgency": 8,
+	"leaning": "fighting-",
+	"background_tags": [
+		"handcart_track",
+		"foggy",
+		"night",
+		"lone_person",
+		"mysterious"
+	],
+	"background_image": "https://imagedelivery.net/WTEqQNGFb-l-IHS6IGnzUQ/c6efa135-d8a8-4cff-3827-eaac6e50ab00/public",
+	"dialogue": [
+		{
+			"speaker": "fisherman_uncle",
+			"content": {
+				"korean": "어이, 젊은이들! 당신들이 그… 주먹부터 쓴다는 해결사들이라지? 여긴 못 지나가네!"
+			}
+		},
+		{
+			"speaker": "narrator",
+			"content": {
+				"korean": "어부 아재는 낡은 그물을 꼼꼼히 살피며 중얼거린다."
+			}
+		},
+		{
+			"speaker": "fisherman_uncle",
+			"content": {
+				"korean": "이 그물이 내 밥줄이라고! 함부로 밟고 지나갈 생각 마!"
+			}
+		}
+	],
+	"choices": [
+		{
+			"text": {
+				"korean": "길을 막는 어부 아재를 밀치고 지나간다."
+			},
+			"path": "easy",
+			"mbti": "TJ",
+			"flag": "old_fish_destroyed",
+			"effects": {
+				"fighting": -20,
+				"echo": -5
+			},
+			"reward": [
+				"attack_up"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "밀려 넘어지는 어부 아재의 그물 사이로 낡은 나무 상자가 굴러 나온다."
+					}
+				},
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "상자 안에는 삭은 명태 한 마리가 들어 있다."
+					}
+				},
+				{
+					"speaker": "dax",
+					"content": {
+						"korean": "어르신이 소중히 여기는 게 이거였어요? 냄새가…."
+					}
+				}
+			],
+			"risk": {
+				"chance": "mid",
+				"bad": {
+					"effects": {
+						"gold": -30
+					},
+					"reward": [
+						"hp_down"
+					],
+					"result": [
+						{
+							"speaker": "narrator",
+							"content": {
+								"korean": "어부 아재를 밀치려다 발이 그물에 걸려 넘어지고 만다."
+							}
+						},
+						{
+							"speaker": "narrator",
+							"content": {
+								"korean": "낡은 명태는 바닥에 부딪혀 산산조각 난다."
+							}
+						}
+					]
+				}
+			}
+		},
+		{
+			"text": {
+				"korean": "어부 아재에게 왜 길을 막는지 차분히 묻는다."
+			},
+			"path": "hard",
+			"mbti": "NF",
+			"flag": "old_fish_found",
+			"effects": {
+				"community": 10,
+				"fighting": 20
+			},
+			"reward": [
+				"intelligence_up"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "어부 아재는 마지못해 그물 아래에 숨겨 둔 낡은 나무 상자를 보여준다."
+					}
+				},
+				{
+					"speaker": "fisherman_uncle",
+					"content": {
+						"korean": "이게 우리 집안 대대로 내려오는 복 명태라네!"
+					}
+				},
+				{
+					"speaker": "dax",
+					"content": {
+						"korean": "복 명태요? 근데 냄새가 좀…."
+					}
+				}
+			],
+			"risk": {
+				"chance": "high",
+				"bad": {
+					"effects": {
+						"gold": -20
+					},
+					"reward": [],
+					"result": [
+						{
+							"speaker": "narrator",
+							"content": {
+								"korean": "당신이 묻자 어부 아재는 오히려 눈을 부라리며, 낡은 명태 상자를 꽉 끌어안는다."
+							}
+						},
+						{
+							"speaker": "fisherman_uncle",
+							"content": {
+								"korean": "이 귀한 복 명태를 노리는 거였나! 어림없다!"
+							}
+						},
+						{
+							"speaker": "narrator",
+							"content": {
+								"korean": "실랑이를 벌이다 지갑에서 돈이 빠져나가는 소리가 들린다."
+							}
+						}
+					]
+				}
+			}
+		},
+		{
+			"text": {
+				"korean": "어부 아재의 낡은 그물을 보고 어디가 찢어졌는지 알려준다."
+			},
+			"path": "stat",
+			"mbti": "EP",
+			"require": {
+				"stat": "fighting",
+				"op": "<=",
+				"value": -40
+			},
+			"flag": "fisherman_grateful",
+			"effects": {
+				"echo": 10,
+				"fighting": -30
+			},
+			"reward": [
+				"heal"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "어부 아재는 당신의 말에 놀라 그물을 살피더니 찢어진 곳을 찾아냈다."
+					}
+				},
+				{
+					"speaker": "fisherman_uncle",
+					"content": {
+						"korean": "아이고! 이 찢어진 곳을 못 봤네! 고맙네!"
+					}
+				},
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "어부 아재가 길을 비켜주자, 그 아래 낡은 명태 상자가 보였다."
+					}
+				},
+				{
+					"speaker": "dax",
+					"content": {
+						"korean": "어르신이 바로 길을 비켜주시네요!"
+					}
+				}
+			]
+		}
+	],
+	"tags": [
+		"fisherman_uncle",
+		"dax"
+	],
+	"_design": {
+		"slot": "C",
+		"kind": "rep",
+		"person": {
+			"id": "fisherman_uncle",
+			"name": "어부 아재",
+			"role": "어부"
+		},
+		"wants": "손수레 바퀴 자국 길을 막고 무언가를 지키고 있다.",
+		"rule_link": "소문과 다른 평판 때문에 오해받는 상황에서, 상대의 사정을 먼저 묻는 것이 중요하다.",
+		"rep": "fighting-",
+		"events": {},
+		"flags": {
+			"old_fish_destroyed": {
+				"kind": "bad",
+				"boss_penalty": -1,
+				"label": {
+					"korean": "썩은 명태 파괴"
+				},
+				"boss_line": {
+					"korean": "어부 아재의 소중한 명태를 파괴하여 주변 상인들의 분노를 산다."
+				}
+			},
+			"old_fish_found": {
+				"kind": "good",
+				"boss_penalty": 1,
+				"label": {
+					"korean": "썩은 명태 발견"
+				},
+				"boss_choice": {
+					"korean": "어부 아재에게서 복 명태에 대한 단서를 얻어 싸움 중 잠시 혼란을 준다."
+				}
+			},
+			"fisherman_grateful": {
+				"kind": "good",
+				"boss_penalty": 2,
+				"label": {
+					"korean": "어부 아재의 감사"
+				},
+				"boss_choice": {
+					"korean": "어부 아재의 도움으로 싸움 중 회복약을 얻는다."
+				}
+			}
+		}
+	}
+}

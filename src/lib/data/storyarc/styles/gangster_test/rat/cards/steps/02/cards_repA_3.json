@@ -1,0 +1,420 @@
+{
+	"cards": [
+		{
+			"key": "bizarre_rule",
+			"title": "엉뚱한 규칙",
+			"no": 1,
+			"dialogue": [
+				{
+					"speaker": "narrator",
+					"text": "안개 낀 야적장 한가운데, 지게차 아재가 낡은 드럼통들을 쌓고 있다."
+				},
+				{
+					"text": "켁, 켁! 당신이 그 소문 자자한, 칼같이 규칙을 지키는 해결사지?",
+					"speaker": "forklift_uncle"
+				},
+				{
+					"text": "이 드럼통 길은 내가 만든 규칙이니, 발이 땅에 닿으면 안 된다!",
+					"speaker": "forklift_uncle"
+				},
+				{
+					"text": "아재가 또 이상한 규칙을 만들었네요. 저렇게 가면 분명히 다쳐요!",
+					"speaker": "dax"
+				}
+			],
+			"background_tags": [
+				"container",
+				"foggy",
+				"dawn",
+				"lonely",
+				"crane"
+			],
+			"rule_link": "앞뒤 살피지 않고 자기 규칙만 고집하는 아재를 통해, 겉만 보고 판단하는 위험을 보여준다.",
+			"person": {
+				"id": "forklift_uncle",
+				"name": "지게차 아재",
+				"role": "지게차 기사"
+			},
+			"choices": [
+				{
+					"text": "아재의 엉뚱한 규칙을 지키며 드럼통 위를 조심스럽게 건넌다.",
+					"effects": {
+						"community": 10,
+						"echo": 10,
+						"reason": 10
+					},
+					"risk_bad": {
+						"gold": -30,
+						"result": [
+							{
+								"speaker": "narrator",
+								"text": "드럼통 위를 조심스럽게 건너다 발을 헛디뎌 균형을 잃는다."
+							},
+							{
+								"text": "드럼통들이 와르르 무너지며 요란한 소리를 낸다.",
+								"speaker": "narrator"
+							},
+							{
+								"text": "으악! 저 아재, 이제 길 막는다고 더 난리 칠 거예요!",
+								"speaker": "dax"
+							}
+						],
+						"reward": []
+					},
+					"path": "easy",
+					"mbti": "ST",
+					"reward": [
+						"attack_up"
+					],
+					"result": [
+						{
+							"speaker": "narrator",
+							"text": "당신은 아슬아슬하게 드럼통 위를 걸어 아재를 감탄하게 한다."
+						},
+						{
+							"text": "아재는 규칙을 잘 지켰다며 만족한 표정으로 길을 터준다.",
+							"speaker": "narrator"
+						},
+						{
+							"speaker": "dax",
+							"text": "저 아재, 자기가 만든 규칙에 자기가 넘어지겠네요! 당신은 대단해요!"
+						}
+					],
+					"flag": {
+						"key": "uncle_blocked_path",
+						"boss_text": "지게차 아재가 길을 막아서서 공격 기회를 놓친다.",
+						"label": "아재 길막"
+					}
+				},
+				{
+					"reward": [
+						"attack_up"
+					],
+					"flag": {
+						"key": "uncle_respect_rules",
+						"label": "아재 규칙 존중",
+						"boss_text": "지게차 아재가 당신에게 길을 비켜주며 싸움을 돕는다."
+					},
+					"effects": {
+						"fighting": 10,
+						"echo": -5,
+						"reason": -10
+					},
+					"result": [
+						{
+							"text": "당신의 단호한 태도에 아재는 켁켁거리며 드럼통을 치운다.",
+							"speaker": "narrator"
+						},
+						{
+							"text": "아재는 당신의 기세에 눌린 듯 혀를 내두른다.",
+							"speaker": "narrator"
+						},
+						{
+							"text": "아재가 저렇게 순순히 물러나는 건 처음 봐요! 역시 대단하세요!",
+							"speaker": "dax"
+						}
+					],
+					"path": "hard",
+					"mbti": "TJ",
+					"risk_bad": {
+						"result": [
+							{
+								"text": "아재에게 길을 비키라고 단호하게 말하자, 아재는 당신이 자신의 규칙을 무시한다며 버럭 소리친다.",
+								"speaker": "narrator"
+							},
+							{
+								"text": "아재는 지게차를 들어 길을 완전히 막아버린다.",
+								"speaker": "narrator"
+							},
+							{
+								"speaker": "dax",
+								"text": "으악! 아재가 지게차로 길을 막아버렸어요! 이제 어떻게 하죠?"
+							}
+						],
+						"reward": [],
+						"gold": -20
+					},
+					"text": "아재에게 규칙을 강요하지 말고 길을 비키라고 단호하게 말한다."
+				},
+				{
+					"path": "stat",
+					"mbti": "NT",
+					"effects": {
+						"community": 10,
+						"echo": 15,
+						"reason": -20
+					},
+					"result": [
+						{
+							"speaker": "narrator",
+							"text": "당신의 논리적인 설명에 아재는 고개를 갸웃거린다."
+						},
+						{
+							"text": "아재는 결국 규칙을 고집하는 대신 길을 터준다.",
+							"speaker": "narrator"
+						},
+						{
+							"speaker": "dax",
+							"text": "아재가 저렇게 납득하는 건 처음 봐요! 역시 당신은 최고예요!"
+						}
+					],
+					"text": "아재의 엉뚱한 규칙이 이치에 맞지 않음을 논리적으로 설명한다.",
+					"flag": {
+						"label": "아재 이성 감탄",
+						"boss_text": "지게차 아재가 당신에게 길을 비켜주며 싸움을 돕는다.",
+						"key": "uncle_admires_reason"
+					},
+					"reward": [
+						"intelligence_up"
+					]
+				},
+				{
+					"path": "fun",
+					"mbti": "EP",
+					"risk_bad": {
+						"result": [
+							{
+								"text": "드럼통 위에서 춤을 추다 넘어지며 드럼통을 넘어뜨린다.",
+								"speaker": "narrator"
+							},
+							{
+								"text": "넘어진 드럼통이 아재의 지게차를 긁고 지나간다.",
+								"speaker": "narrator"
+							},
+							{
+								"text": "으악! 아재의 지게차에 상처가 났어요! 아재가 화낼 거예요!",
+								"speaker": "dax"
+							}
+						],
+						"reward": [
+							"hp_down"
+						]
+					},
+					"text": "아재의 엉뚱한 규칙을 따라, 드럼통 위를 춤추듯이 지나간다.",
+					"effects": {
+						"gold": 50,
+						"reason": -20,
+						"echo": 15
+					},
+					"result": [
+						{
+							"speaker": "narrator",
+							"text": "당신의 춤사위에 아재는 눈이 휘둥그래진다."
+						},
+						{
+							"text": "아재는 박수를 치며 당신에게 길을 터주고, 덩달아 춤을 추기 시작한다.",
+							"speaker": "narrator"
+						},
+						{
+							"speaker": "dax",
+							"text": "아재가 춤을 다 추네요! 저런 모습은 처음 봐요!"
+						}
+					]
+				}
+			],
+			"wants": "지게차 아재가 만든 엉뚱한 규칙을 어기지 않고 길을 지나가고 싶어 한다.",
+			"slot": "A",
+			"kind": "rep",
+			"rep_dir": "reason-"
+		},
+		{
+			"dialogue": [
+				{
+					"text": "안개 낀 야적장 바닥에 찢어진 종이들이 흩어져 있다. 지게차 아재가 주저앉아 한숨을 쉬고 있다.",
+					"speaker": "narrator"
+				},
+				{
+					"text": "켁, 켁! 당신이 그 소문 자자한, 엉뚱한 방법으로 일을 해결한다는 해결사지?",
+					"speaker": "forklift_uncle"
+				},
+				{
+					"text": "내 중요한 규칙들이 다 섞여 버렸잖아! 이 난장판 좀 어떻게 안 될까?",
+					"speaker": "forklift_uncle"
+				},
+				{
+					"speaker": "dax",
+					"text": "아재가 또 뭘 잃어버렸나 봐요. 저러다 새벽 5시까지 정리 못 하면 어쩌죠?"
+				}
+			],
+			"wants": "흩어진 규칙 종이를 주워 정리하고, 야적장 출입 규칙을 지키고 싶어 한다.",
+			"person": {
+				"id": "forklift_uncle",
+				"name": "지게차 아재",
+				"role": "지게차 기사"
+			},
+			"choices": [
+				{
+					"reward": [
+						"stun"
+					],
+					"effects": {
+						"fighting": 10,
+						"echo": 10,
+						"reason": -10
+					},
+					"result": [
+						{
+							"text": "아재는 당신의 엉뚱한 지시에 망설이다 신이 난 듯 지게차로 드럼통을 밀어 종이를 모은다.",
+							"speaker": "narrator"
+						},
+						{
+							"text": "길은 금세 정리된다.",
+							"speaker": "narrator"
+						},
+						{
+							"text": "아재가 저렇게 자기 규칙을 깨는 건 처음 봐요! 어쩌면 아재도 가끔은 일탈하고 싶었나 봐요!",
+							"speaker": "dax"
+						}
+					],
+					"mbti": "EP",
+					"text": "아재에게 굴러다니는 드럼통을 지게차로 밀어 종이를 한 곳에 모으라고 시킨다.",
+					"flag": {
+						"label": "아재 파이프 파손",
+						"key": "uncle_pipe_burst",
+						"boss_text": "지게차 아재가 파이프를 박살 내 물웅덩이가 생겨 공격 기회를 놓친다."
+					},
+					"risk_bad": {
+						"gold": -30,
+						"result": [
+							{
+								"text": "아재는 지게차로 종이를 모으다 그만 옆에 있던 파이프를 박살 낸다.",
+								"speaker": "narrator"
+							},
+							{
+								"text": "파이프에서 물이 뿜어져 나오며 야적장을 흥건하게 적신다.",
+								"speaker": "narrator"
+							},
+							{
+								"speaker": "dax",
+								"text": "으악! 아재가 사고 쳤어요! 이제 부두 관리인이 올 텐데…!"
+							}
+						],
+						"reward": []
+					},
+					"path": "easy"
+				},
+				{
+					"effects": {
+						"reason": 10,
+						"echo": -5,
+						"community": 10
+					},
+					"mbti": "IN",
+					"risk_bad": {
+						"gold": -20,
+						"result": [
+							{
+								"text": "흩어진 종이들을 꼼꼼히 정리하려는데, 갑자기 바람이 불어 가장 중요한 서류가 멀리 날아가 버린다.",
+								"speaker": "narrator"
+							},
+							{
+								"speaker": "narrator",
+								"text": "아재는 눈물을 글썽이며 길을 막는다."
+							},
+							{
+								"text": "으악, 중요한 서류가 날아갔어요! 아재가 저러다 울겠어요!",
+								"speaker": "dax"
+							}
+						],
+						"reward": []
+					},
+					"flag": {
+						"label": "아재 질서 감사",
+						"boss_text": "지게차 아재가 당신의 도움에 감사하며 싸움을 돕는다.",
+						"key": "uncle_grateful_order"
+					},
+					"text": "흩어진 종이들을 직접 꼼꼼히 분류하여 아재에게 건넨다.",
+					"path": "hard",
+					"result": [
+						{
+							"text": "당신은 흩어진 종이들을 꼼꼼히 분류하여 아재에게 건넨다.",
+							"speaker": "narrator"
+						},
+						{
+							"speaker": "narrator",
+							"text": "아재는 감탄하며 길을 비켜준다."
+						},
+						{
+							"speaker": "dax",
+							"text": "와, 정말 빠르네요! 저렇게 빨리 분류하는 건 처음 봐요!"
+						}
+					],
+					"reward": [
+						"shield"
+					]
+				},
+				{
+					"reward": [
+						"attack_up"
+					],
+					"mbti": "ES",
+					"text": "아재에게 소리쳐, 종이는 나중에 줍고 길이나 비키라고 한다.",
+					"flag": {
+						"key": "uncle_respect_freedom",
+						"boss_text": "지게차 아재가 당신에게 길을 비켜주며 싸움을 돕는다.",
+						"label": "아재 자유 존중"
+					},
+					"effects": {
+						"echo": 15,
+						"reason": 20,
+						"fighting": 20
+					},
+					"result": [
+						{
+							"speaker": "narrator",
+							"text": "당신의 호통에 아재는 놀라 움츠러든다."
+						},
+						{
+							"text": "아재는 길을 비켜주며 마지못해 종이를 줍기 시작한다.",
+							"speaker": "narrator"
+						},
+						{
+							"speaker": "dax",
+							"text": "아재가 잔뜩 쫄았네요. 그렇게까지 할 필요는 없었는데…"
+						}
+					],
+					"path": "stat"
+				},
+				{
+					"result": [
+						{
+							"speaker": "narrator",
+							"text": "아재는 눈이 휘둥그래져 돈을 받는다."
+						},
+						{
+							"speaker": "narrator",
+							"text": "아재는 돈의 힘에 감탄하며 재빨리 종이를 줍고 길을 비켜준다."
+						},
+						{
+							"text": "아재가 돈에 약하네요. 그래도 덕분에 빨리 지나갈 수 있었어요!",
+							"speaker": "dax"
+						}
+					],
+					"effects": {
+						"echo": 5,
+						"gold": -80
+					},
+					"text": "흩어진 종이를 모두 줍는 대가로 아재에게 돈을 건넨다.",
+					"path": "gold",
+					"mbti": "SP"
+				}
+			],
+			"title": "흩어진 규칙",
+			"background_tags": [
+				"container",
+				"foggy",
+				"dawn",
+				"lonely",
+				"crane"
+			],
+			"key": "scattered_rules",
+			"no": 2,
+			"rule_link": "눈앞의 상황만 보고 섣불리 판단하는 아재를 통해, 끝까지 지켜보지 않고 판단하는 위험을 보여준다.",
+			"slot": "A",
+			"kind": "rep",
+			"rep_dir": "reason+"
+		}
+	],
+	"errors": [],
+	"prompt_hash": "abeedf832a2f85f26ef0327c457a303abdaae17d"
+}

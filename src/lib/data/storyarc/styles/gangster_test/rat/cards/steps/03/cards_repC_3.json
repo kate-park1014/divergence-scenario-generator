@@ -1,0 +1,366 @@
+{
+	"cards": [
+		{
+			"no": 1,
+			"person": {
+				"id": "driver",
+				"name": "운전기사",
+				"role": "운전기사"
+			},
+			"key": "orderly_stain",
+			"choices": [
+				{
+					"result": [
+						{
+							"speaker": "narrator",
+							"text": "잠시 후 당신이 가져온 약품으로 얼룩이 말끔히 지워졌다."
+						},
+						{
+							"speaker": "driver",
+							"text": "아이고! 살았습니다! 덕분에 회장님께 혼날 일은 없겠네요, 흐읍!"
+						},
+						{
+							"speaker": "narrator",
+							"text": "하지만 얼룩이 사라진 자리에 끈적한 이물감이 남아 있다."
+						}
+					],
+					"effects": {
+						"echo": 5,
+						"reason": 10
+					},
+					"mbti": "ET",
+					"path": "easy",
+					"flag": {
+						"boss_text": "서버실 문이 부식되어 부서져 있다.",
+						"label": "문 부식",
+						"key": "door_corrosion"
+					},
+					"text": "얼룩 제거에 특화된 약품을 찾아 온다",
+					"risk_bad": {
+						"gold": -20,
+						"result": [
+							{
+								"text": "약품이 문을 부식시켜 문짝에 구멍이 난다.",
+								"speaker": "narrator"
+							},
+							{
+								"text": "아이고! 회장님께서 아시면 저에게 불호령을 내리실 겁니다, 흐읍!",
+								"speaker": "driver"
+							},
+							{
+								"text": "어쩌죠? 닥스가 보기에도 이건 더 혼날 일 같아요.",
+								"speaker": "dax"
+							}
+						],
+						"reward": []
+					},
+					"reward": [
+						"attack_up"
+					]
+				},
+				{
+					"mbti": "IN",
+					"effects": {
+						"reason": -10,
+						"community": 10
+					},
+					"risk_bad": {
+						"reward": [],
+						"result": [
+							{
+								"speaker": "narrator",
+								"text": "얼룩을 분석하던 도중, 서버실 안에서 갑자기 경보음이 울린다."
+							},
+							{
+								"speaker": "driver",
+								"text": "아이고! 회장님께서 아시면 저에게 불호령을 내리실 겁니다, 끄윽!"
+							},
+							{
+								"speaker": "dax",
+								"text": "해커 간부님, 벌써 알아챈 걸까요?"
+							}
+						],
+						"gold": -20
+					},
+					"reward": [
+						"intelligence_up"
+					],
+					"text": "얼룩의 성분을 분석해 원인을 파악한다",
+					"result": [
+						{
+							"text": "당신이 얼룩의 성분을 분석하자, 누군가 일부러 남긴 신호임이 드러난다.",
+							"speaker": "narrator"
+						},
+						{
+							"speaker": "driver",
+							"text": "하지만 소문이 그렇게 파다해서… 회장님께 보고할 수밖에 없게 될 겁니다, 흐읍!"
+						},
+						{
+							"text": "역시 그냥 얼룩이 아니었네요! 닥스는 뭔가 찜찜했어요.",
+							"speaker": "dax"
+						}
+					],
+					"path": "hard",
+					"flag": {
+						"label": "얼룩 신호",
+						"boss_text": "서버실 문에 남은 수상한 얼룩 신호를 따라간다.",
+						"key": "stain_signal"
+					}
+				},
+				{
+					"result": [
+						{
+							"text": "당신의 단호한 지시에 운전기사가 망설이다 문고리 잠금장치를 풀어낸다.",
+							"speaker": "narrator"
+						},
+						{
+							"text": "아이고… 이런 방법이 있었다니… 끄윽! 저도 모르게 그만…",
+							"speaker": "driver"
+						},
+						{
+							"speaker": "dax",
+							"text": "운전기사님, 의외로 기술이 좋네요!"
+						}
+					],
+					"text": "운전기사에게 규칙대로 문고리 잠금장치를 풀라고 지시한다",
+					"reward": [
+						"move_range_up"
+					],
+					"path": "stat",
+					"flag": {
+						"key": "open_server_door",
+						"boss_text": "서버실 문이 열려 안으로 바로 진입한다.",
+						"label": "서버실 문 열림"
+					},
+					"mbti": "TJ",
+					"effects": {
+						"echo": 10,
+						"reason": -20
+					}
+				},
+				{
+					"result": [
+						{
+							"text": "당신이 돈을 쥐여주자 운전기사는 잠시 멍하니 당신을 바라본다.",
+							"speaker": "narrator"
+						},
+						{
+							"speaker": "driver",
+							"text": "회장님께 보고할 수밖에 없게 될 겁니다, 흐읍! 하지만… 감사합니다!"
+						},
+						{
+							"text": "운전기사님, 돈에 약한가 봐요.",
+							"speaker": "dax"
+						}
+					],
+					"effects": {
+						"gold": -100
+					},
+					"path": "gold",
+					"text": "얼룩을 지우다 망가뜨린 흔적을 감춰주겠다며 운전기사에게 돈을 쥐여 준다",
+					"mbti": "SP"
+				}
+			],
+			"title": "규칙적인 얼룩",
+			"wants": "운전기사는 주인공이 서버실 문에 생긴 정체불명의 얼룩을 규칙과 절차에 따라 해결해주기를 바랍니다.",
+			"rule_link": "운전기사는 서버실 문에 생긴 얼룩을 규칙대로 제거하려 합니다. 보이는 대로 얼룩을 지울지, 그 얼룩이 무엇을 증명하는지 따져볼지 선택해야 합니다.",
+			"dialogue": [
+				{
+					"speaker": "driver",
+					"text": "당신이 그… 모든 일은 순서대로, 절차에 맞춰서 처리한다는 해결사시죠?"
+				},
+				{
+					"speaker": "driver",
+					"text": "저 서버실 문에 묻은 이 정체불명의 얼룩 때문에 회장님께 불려갈까 봐 발을 동동 구르고 있습니다, 끄윽!"
+				},
+				{
+					"speaker": "dax",
+					"text": "누가 문에다 이런 걸 묻혀 놓은 거죠? 끈적끈적하네요."
+				}
+			],
+			"background_tags": [
+				"serverroom",
+				"night",
+				"dimlight",
+				"empty",
+				"anxious"
+			],
+			"slot": "C",
+			"kind": "rep",
+			"rep_dir": "reason-"
+		},
+		{
+			"choices": [
+				{
+					"mbti": "ES",
+					"path": "easy",
+					"text": "운전기사를 밀치고 문을 부술 준비를 한다",
+					"effects": {
+						"fighting": 10,
+						"reason": -10
+					},
+					"result": [
+						{
+							"text": "당신이 운전기사를 밀치자, 운전기사가 비명을 지르며 나자빠진다.",
+							"speaker": "narrator"
+						},
+						{
+							"text": "아이고! 회장님께서 아시면 저에게 불호령을 내리실 겁니다, 흐읍!",
+							"speaker": "driver"
+						},
+						{
+							"text": "문짝 옆에 놓인 회장님 차 열쇠가 눈에 들어온다.",
+							"speaker": "narrator"
+						}
+					],
+					"reward": [
+						"attack_up"
+					],
+					"flag": {
+						"boss_text": "쓰러진 운전기사 때문에 신경이 쓰여 공격이 빗나간다.",
+						"key": "driver_distraction",
+						"label": "운전기사 기절"
+					},
+					"risk_bad": {
+						"result": [
+							{
+								"speaker": "narrator",
+								"text": "운전기사가 넘어져 머리를 박고 기절한다. 그 바람에 경보가 울린다."
+							},
+							{
+								"text": "끄윽… 으윽…",
+								"speaker": "driver"
+							},
+							{
+								"text": "어쩌죠? 경보까지 울렸어요!",
+								"speaker": "dax"
+							}
+						],
+						"reward": [],
+						"gold": -30
+					}
+				},
+				{
+					"flag": {
+						"key": "driver_cooperation",
+						"boss_text": "운전기사가 서버실 우회로를 알려줘 바로 진입한다.",
+						"label": "운전기사 협력"
+					},
+					"risk_bad": {
+						"gold": -20,
+						"result": [
+							{
+								"text": "기다리는 동안 삭제음이 더 커지고, 중요한 데이터가 모두 삭제된다.",
+								"speaker": "narrator"
+							},
+							{
+								"text": "아아악! 닥스는 망했어요! 이제 어쩌죠?",
+								"speaker": "dax"
+							},
+							{
+								"speaker": "driver",
+								"text": "아이고! 회장님께서 아시면 저에게 불호령을 내리실 겁니다, 끄윽!"
+							}
+						],
+						"reward": []
+					},
+					"mbti": "IF",
+					"effects": {
+						"reason": 10,
+						"community": 10
+					},
+					"text": "운전기사의 말을 듣고, 잠긴 문을 부수지 않고 기다린다",
+					"result": [
+						{
+							"speaker": "narrator",
+							"text": "당신이 기다리자 운전기사는 눈을 동그랗게 뜨고 당신을 바라본다."
+						},
+						{
+							"speaker": "dax",
+							"text": "흐읍, 닥스는 이러다 다 지워질까 봐 불안해서 죽겠어요!"
+						},
+						{
+							"speaker": "narrator",
+							"text": "운전기사가 불안한 듯 문고리를 만지작거린다."
+						}
+					],
+					"reward": [
+						"defense_up"
+					],
+					"path": "hard"
+				},
+				{
+					"mbti": "EN",
+					"effects": {
+						"echo": 10,
+						"reason": 20
+					},
+					"text": "운전기사의 숨은 마음을 읽고, 문을 부수는 것을 돕게 한다",
+					"path": "stat",
+					"flag": {
+						"label": "운전기사 연장통",
+						"boss_text": "운전기사가 가져온 연장통으로 서버실 문을 부순다.",
+						"key": "driver_tool"
+					},
+					"reward": [
+						"attack_up"
+					],
+					"result": [
+						{
+							"speaker": "narrator",
+							"text": "당신의 설득에 운전기사는 망설이다가 연장통을 건넨다."
+						},
+						{
+							"text": "아이고! 회장님께서는 모르실 겁니다, 흐읍! 부디 빨리 해결해 주십시오!",
+							"speaker": "driver"
+						},
+						{
+							"text": "저분이 생각보다 힘이 세네요!",
+							"speaker": "dax"
+						}
+					]
+				}
+			],
+			"no": 2,
+			"background_tags": [
+				"serverroom",
+				"night",
+				"dimlight",
+				"empty",
+				"anxious"
+			],
+			"wants": "운전기사는 주인공이 서버실 문을 규칙 없이 부수는 것을 막거나, 자신의 곤경을 규칙 없이 해결해주기를 바랍니다.",
+			"rule_link": "운전기사는 당신이 규칙보다 마음 가는 대로 문을 부술까 봐 불안해합니다. 눈앞의 급박한 삭제음과 운전기사의 말을 두고 무엇을 믿을지 결정해야 합니다.",
+			"person": {
+				"id": "driver",
+				"name": "운전기사",
+				"role": "운전기사"
+			},
+			"dialogue": [
+				{
+					"speaker": "driver",
+					"text": "당신이 그… 규칙 따윈 안중에도 없고, 마음 가는 대로 일을 처리한다는 해결사죠?"
+				},
+				{
+					"text": "저 서버실 문을 부수시려는 건 아니시겠죠?",
+					"speaker": "driver"
+				},
+				{
+					"text": "혹시라도 소란이 생기면 회장님께서 저에게 불호령을 내리실 겁니다, 끄윽!",
+					"speaker": "driver"
+				},
+				{
+					"speaker": "dax",
+					"text": "하지만 안에서 삭제음이 계속 들리는데요… 이러다 다 지워져 버릴 거예요!"
+				}
+			],
+			"key": "impatient_security",
+			"title": "급한 성미의 경비",
+			"slot": "C",
+			"kind": "rep",
+			"rep_dir": "reason+"
+		}
+	],
+	"errors": [],
+	"prompt_hash": "78ab9befc3cc476b9d6610896a1fca4900312c6a"
+}

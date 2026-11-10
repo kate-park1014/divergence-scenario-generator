@@ -1,0 +1,290 @@
+{
+	"id": "card_04_blocked_door",
+	"title": {
+		"korean": "길을 막는 자, 그 벌을 받으리라"
+	},
+	"intensity": "calm",
+	"after_story": 3,
+	"before_story": 5,
+	"condition": {
+		"leaning": "fighting+",
+		"among": [
+			"fighting-",
+			"fighting+",
+			"community-",
+			"community+",
+			"reason-",
+			"reason+"
+		],
+		"min": 20
+	},
+	"urgency": 8,
+	"leaning": "fighting+",
+	"background_tags": [
+		"garage",
+		"night",
+		"dimlight",
+		"fewpeople",
+		"tense"
+	],
+	"background_image": "https://imagedelivery.net/WTEqQNGFb-l-IHS6IGnzUQ/2bd5c8a5-9661-4497-0742-a56043432400/public",
+	"dialogue": [
+		{
+			"speaker": "narrator",
+			"content": {
+				"korean": "당신이 차량 기록실 문으로 다가가자, 차고 반장이 팔짱을 끼고 앞을 가로막는다."
+			}
+		},
+		{
+			"speaker": "chago_banjang",
+			"content": {
+				"korean": "흠, 당신이 그… 주먹부터 나가는 해결사 양반이시죠? 소문은 익히 들었소만."
+			}
+		},
+		{
+			"speaker": "dax",
+			"content": {
+				"korean": "반장님, 저희 기록실 좀 봐야 하는데요."
+			}
+		},
+		{
+			"speaker": "chago_banjang",
+			"content": {
+				"korean": "반장이 렌치를 든 손으로 문을 가리키며 말한다. 이 문은…"
+			}
+		},
+		{
+			"speaker": "chago_banjang",
+			"content": {
+				"korean": "지금은 열어줄 수 없소. 중요한 서류들이 있어서 말이야."
+			}
+		}
+	],
+	"choices": [
+		{
+			"text": {
+				"korean": "차고 반장을 위협해 길을 비키게 한다"
+			},
+			"path": "easy",
+			"mbti": "ST",
+			"flag": "unnecessary_threat",
+			"effects": {
+				"fighting": 20,
+				"echo": -10
+			},
+			"reward": [
+				"attack_up"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "당신이 차고 반장의 멱살을 잡고 문에서 물러나라고 으르렁거린다. 반장은 겁에 질려 뒷걸음질 친다."
+					}
+				},
+				{
+					"speaker": "chago_banjang",
+					"content": {
+						"korean": "켁! 알았소, 알았어! 비켜줄 테니 놓으시오!"
+					}
+				},
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "닥스가 움찔하며 말한다."
+					}
+				},
+				{
+					"speaker": "dax",
+					"content": {
+						"korean": "으아, 무서워요…"
+					}
+				}
+			],
+			"risk": {
+				"chance": "mid",
+				"bad": {
+					"reward": [
+						"hp_down"
+					],
+					"result": [
+						{
+							"speaker": "narrator",
+							"content": {
+								"korean": "당신이 반장의 멱살을 잡지만, 반장이 숨겨둔 기름때 묻은 렌치로 당신의 손등을 때린다."
+							}
+						},
+						{
+							"speaker": "chago_banjang",
+							"content": {
+								"korean": "반장이 눈을 부라리며 소리친다. 함부로 손대지 마쇼!"
+							}
+						},
+						{
+							"speaker": "dax",
+							"content": {
+								"korean": "아야! 반장님도 만만치 않네요!"
+							}
+						}
+					]
+				}
+			}
+		},
+		{
+			"text": {
+				"korean": "차고 반장에게 기록실을 봐야 하는 이유를 설명한다"
+			},
+			"path": "hard",
+			"mbti": "NF",
+			"flag": "explained_reason",
+			"effects": {
+				"community": 20,
+				"reason": 10
+			},
+			"reward": [
+				"intelligence_up"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "당신이 차분하게 상황을 설명하자, 반장은 잠시 고민하더니 고개를 끄덕인다."
+					}
+				},
+				{
+					"speaker": "chago_banjang",
+					"content": {
+						"korean": "흠… 당신들 말도 일리가 있구먼. 그래, 빨리 보고 나가쇼. 중요한 건 건드리지 말고."
+					}
+				},
+				{
+					"speaker": "dax",
+					"content": {
+						"korean": "오, 설명이 통했네요!"
+					}
+				}
+			],
+			"risk": {
+				"chance": "high",
+				"bad": {
+					"effects": {
+						"gold": -20
+					},
+					"reward": [],
+					"result": [
+						{
+							"speaker": "narrator",
+							"content": {
+								"korean": "당신이 이유를 설명하려 하지만, 반장은 귀를 막고 들으려 하지 않는다. 오히려 경계심만 더 키운다."
+							}
+						},
+						{
+							"speaker": "chago_banjang",
+							"content": {
+								"korean": "반장이 손을 휘저으며 소리친다. 시끄럽소! 난 아무것도 들은 게 없어!"
+							}
+						},
+						{
+							"speaker": "dax",
+							"content": {
+								"korean": "으음, 잘 안 통하네요…"
+							}
+						}
+					]
+				}
+			}
+		},
+		{
+			"text": {
+				"korean": "차고 반장의 약점을 정확히 짚어내 길을 열게 한다"
+			},
+			"path": "stat",
+			"mbti": "ES",
+			"require": {
+				"stat": "fighting",
+				"op": ">=",
+				"value": 40
+			},
+			"flag": "exploit_weakness",
+			"effects": {
+				"echo": 15,
+				"fighting": 30
+			},
+			"reward": [
+				"stun"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "당신이 차고 반장의 가장 약한 부분을 정확히 찔러 말하자, 반장은 얼굴이 창백해지며 문에서 비켜선다."
+					}
+				},
+				{
+					"speaker": "chago_banjang",
+					"content": {
+						"korean": "읍… 어떻게 그걸… 알았지? 알았소, 비켜줄 테니… 제발 아무에게도 말하지 마시오!"
+					}
+				},
+				{
+					"speaker": "dax",
+					"content": {
+						"korean": "반장님이 저렇게 순순히 물러나다니!"
+					}
+				}
+			]
+		}
+	],
+	"tags": [
+		"chago_banjang",
+		"dax"
+	],
+	"_design": {
+		"slot": "B",
+		"kind": "rep",
+		"person": {
+			"id": "chago_banjang",
+			"name": "차고 반장",
+			"role": "차고 반장"
+		},
+		"wants": "차고 반장이 차량 기록실 문을 막아서고 있다.",
+		"rule_link": "차고 반장이 기록실 문을 막는 것을 '말 못 할 사정'으로 볼 것인가, 아니면 '숨기는 사람'으로 보고 강경하게 나설 것인가.",
+		"rep": "fighting+",
+		"events": {},
+		"flags": {
+			"unnecessary_threat": {
+				"kind": "bad",
+				"boss_penalty": -1,
+				"label": {
+					"korean": "불필요한 위협"
+				},
+				"boss_line": {
+					"korean": "불필요한 위협으로 적의 경계심을 높여 선제공격 기회를 잃는다."
+				}
+			},
+			"explained_reason": {
+				"kind": "good",
+				"boss_penalty": 1,
+				"label": {
+					"korean": "이유 설명"
+				},
+				"boss_choice": {
+					"korean": "논리적인 설명으로 적의 방어를 회피한다."
+				}
+			},
+			"exploit_weakness": {
+				"kind": "good",
+				"boss_penalty": 2,
+				"label": {
+					"korean": "약점 파고들기"
+				},
+				"boss_choice": {
+					"korean": "상대의 약점을 간파했던 경험으로 적의 방어를 무력화한다."
+				}
+			}
+		}
+	}
+}

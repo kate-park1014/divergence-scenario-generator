@@ -1,0 +1,354 @@
+{
+	"id": "card_05_foreman_distress_call",
+	"title": {
+		"korean": "도움을 청하는 반장"
+	},
+	"intensity": "calm",
+	"after_story": 3,
+	"before_story": 5,
+	"condition": {
+		"leaning": "fighting+",
+		"among": [
+			"fighting-",
+			"fighting+",
+			"community-",
+			"community+",
+			"reason-",
+			"reason+"
+		],
+		"min": 20
+	},
+	"urgency": 8,
+	"leaning": "fighting+",
+	"background_tags": [
+		"pier",
+		"night",
+		"foggy",
+		"fewpeople",
+		"eerie"
+	],
+	"background_image": "https://imagedelivery.net/WTEqQNGFb-l-IHS6IGnzUQ/34e34488-79fd-4c9b-6dc0-d4e9f13e8b00/public",
+	"dialogue": [
+		{
+			"speaker": "narrator",
+			"content": {
+				"korean": "닥스의 차가 짙은 안개를 뚫고 부두 도로를 달리다 멈춰 선다."
+			}
+		},
+		{
+			"speaker": "narrator",
+			"content": {
+				"korean": "안개 속에서 한 남자가 손을 흔들며 다가온다. 이마를 자꾸 문지른다."
+			}
+		},
+		{
+			"speaker": "banjang",
+			"content": {
+				"korean": "당신이 그… 어려운 사람 돕는다는 해결사 맞죠? 아이고, 이 안개 때문에 일이 더 꼬여서…"
+			}
+		},
+		{
+			"speaker": "banjang",
+			"content": {
+				"korean": "비서님이 등대 근처 폐창고에 뭘 숨겨둔 것 같은데, 저 혼자서는 도저히 못 들어가겠어서…"
+			}
+		},
+		{
+			"speaker": "dax",
+			"content": {
+				"korean": "비서님이요? 저희가 비서님을 찾아가는 길이었어요!"
+			}
+		}
+	],
+	"choices": [
+		{
+			"text": {
+				"korean": "반장과 함께 폐창고로 가서 비서의 짐을 찾아준다."
+			},
+			"path": "easy",
+			"mbti": "IS",
+			"flag": "foreman_gratitude",
+			"effects": {
+				"fighting": 20,
+				"gold": 50
+			},
+			"reward": [
+				"heal"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "당신이 반장과 함께 폐창고로 향한다. 반장이 숨겨진 상자를 가리킨다."
+					}
+				},
+				{
+					"speaker": "banjang",
+					"content": {
+						"korean": "흐읍, 고맙습니다! 이 은혜는 잊지 않겠습니다! 반장이 허리춤에서 지폐 몇 장을 꺼내 당신에게 건넨다."
+					}
+				},
+				{
+					"speaker": "dax",
+					"content": {
+						"korean": "와, 반장님도 비서님 일 때문에 마음고생이 심하셨나 봐요!"
+					}
+				}
+			],
+			"risk": {
+				"chance": "mid",
+				"bad": {
+					"effects": {
+						"gold": -40
+					},
+					"reward": [
+						"hp_down"
+					],
+					"result": [
+						{
+							"speaker": "narrator",
+							"content": {
+								"korean": "당신이 반장과 함께 폐창고로 들어가자, 바닥에 깔린 널빤지가 부러진다."
+							}
+						},
+						{
+							"speaker": "banjang",
+							"content": {
+								"korean": "아이고! 내 다리! 이 폐창고 바닥이 이렇게 약했다니!"
+							}
+						},
+						{
+							"speaker": "dax",
+							"content": {
+								"korean": "반장님, 괜찮으세요? 몰아붙이기 전에 좀 더 조심할 걸 그랬어요!"
+							}
+						}
+					]
+				}
+			}
+		},
+		{
+			"text": {
+				"korean": "반장을 안심시키고 비서의 물건을 직접 찾아오겠다고 한다."
+			},
+			"path": "hard",
+			"mbti": "NT",
+			"flag": "foreman_map",
+			"effects": {
+				"community": 10,
+				"fighting": -10
+			},
+			"reward": [
+				"move_range_up"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "당신이 반장에게 혼자 폐창고에 가겠다고 하자, 반장은 안도하며 길을 비킨다."
+					}
+				},
+				{
+					"speaker": "banjang",
+					"content": {
+						"korean": "위험한 곳이니 조심하십시오… 제가 폐창고 지도를 그려드리겠습니다!"
+					}
+				},
+				{
+					"speaker": "dax",
+					"content": {
+						"korean": "오, 덕분에 폐창고 안을 쉽게 찾을 수 있겠어요!"
+					}
+				}
+			],
+			"risk": {
+				"chance": "high",
+				"bad": {
+					"effects": {
+						"gold": -20
+					},
+					"reward": [],
+					"result": [
+						{
+							"speaker": "narrator",
+							"content": {
+								"korean": "당신이 반장에게 혼자 가겠다고 하자, 반장은 감격한 나머지 울먹인다."
+							}
+						},
+						{
+							"speaker": "banjang",
+							"content": {
+								"korean": "으흑… 이런 은혜가… 제가 보답할 길이 없을까요? 반장이 당신의 바짓가랑이를 잡고 늘어진다."
+							}
+						},
+						{
+							"speaker": "dax",
+							"content": {
+								"korean": "반장님! 저희가 괜찮다고 했잖아요! 얼른 가야 한다고요!"
+							}
+						}
+					]
+				}
+			}
+		},
+		{
+			"text": {
+				"korean": "폐창고에 들어가지 말고, 비서가 왜 물건을 숨겼을지 반장에게 묻는다."
+			},
+			"path": "stat",
+			"mbti": "SP",
+			"require": {
+				"stat": "fighting",
+				"op": ">=",
+				"value": 40
+			},
+			"flag": "foreman_rumor",
+			"effects": {
+				"reason": 10,
+				"fighting": 10,
+				"echo": 10
+			},
+			"reward": [
+				"intelligence_up"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "당신이 폐창고 대신 비서가 물건을 숨긴 이유를 묻자, 반장이 고개를 끄덕인다."
+					}
+				},
+				{
+					"speaker": "banjang",
+					"content": {
+						"korean": "비서님이 예전에 폐창고에서 개인적인 물건을 보관하셨다는 소문을 들었어요."
+					}
+				},
+				{
+					"speaker": "dax",
+					"content": {
+						"korean": "역시 몰아붙이기 전에 사정을 물어보는 게 맞았네요!"
+					}
+				}
+			]
+		},
+		{
+			"text": {
+				"korean": "안개 속에서 반장의 이마에 붙은 나뭇잎을 떼어준다."
+			},
+			"path": "fun",
+			"mbti": "EF",
+			"effects": {
+				"echo": 15,
+				"community": 20
+			},
+			"reward": [
+				"shield"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "당신이 반장의 이마에 붙은 나뭇잎을 떼어주자, 반장이 흠칫 놀란다."
+					}
+				},
+				{
+					"speaker": "banjang",
+					"content": {
+						"korean": "으음? 아, 고맙습니다. 이런 사소한 것까지 챙겨주시다니… 반장이 감격한 듯 당신을 바라본다."
+					}
+				},
+				{
+					"speaker": "dax",
+					"content": {
+						"korean": "왠지 반장님이 우리 편이 된 것 같은 기분인데요!"
+					}
+				}
+			],
+			"risk": {
+				"chance": "low",
+				"bad": {
+					"effects": {
+						"gold": -30
+					},
+					"reward": [
+						"attack_down"
+					],
+					"result": [
+						{
+							"speaker": "narrator",
+							"content": {
+								"korean": "당신이 반장의 이마에 손을 대자, 반장이 화들짝 놀라며 뒷걸음질 친다."
+							}
+						},
+						{
+							"speaker": "banjang",
+							"content": {
+								"korean": "으악! 뭐, 뭐하시는 겁니까! 반장이 화들짝 놀라 들고 있던 랜턴을 떨어뜨려 유리가 깨진다."
+							}
+						},
+						{
+							"speaker": "dax",
+							"content": {
+								"korean": "반장님! 으아, 랜턴이 깨졌잖아요! 몰아붙이기 전에 좀 더… 아, 아니 이건 몰아붙인 게 아닌가요?"
+							}
+						}
+					]
+				}
+			}
+		}
+	],
+	"tags": [
+		"banjang",
+		"dax"
+	],
+	"_design": {
+		"slot": "B",
+		"kind": "rep",
+		"person": {
+			"id": "banjang",
+			"name": "반장",
+			"role": "부두 일꾼 반장"
+		},
+		"wants": "남을 돕는 당신에게 비서가 숨겨둔 물건을 찾아달라고 부탁한다.",
+		"rule_link": "닥달하는 대신 먼저 묻는 것에 대한 이야기. 반장은 주인공의 소문을 듣고 직접 찾아와 부탁한다.",
+		"rep": "fighting+",
+		"events": {},
+		"flags": {
+			"foreman_gratitude": {
+				"kind": "bad",
+				"boss_penalty": -1,
+				"label": {
+					"korean": "반장의 은혜"
+				},
+				"boss_line": {
+					"korean": "반장이 당신을 위해 적의 시야를 가리는 연막탄을 던진다."
+				}
+			},
+			"foreman_map": {
+				"kind": "good",
+				"boss_penalty": 1,
+				"label": {
+					"korean": "반장의 지도"
+				},
+				"boss_choice": {
+					"korean": "반장이 건넨 폐창고 지도로 적의 이동 경로를 예측할 수 있다."
+				}
+			},
+			"foreman_rumor": {
+				"kind": "good",
+				"boss_penalty": 2,
+				"label": {
+					"korean": "반장의 소문"
+				},
+				"boss_choice": {
+					"korean": "반장이 들은 소문 덕분에 적의 약점을 간파할 수 있다."
+				}
+			}
+		}
+	}
+}

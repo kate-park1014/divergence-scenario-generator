@@ -1,0 +1,330 @@
+{
+	"id": "card_02_lunch_break_gamble",
+	"title": {
+		"korean": "점심시간의 도박"
+	},
+	"intensity": "high",
+	"after_story": 1,
+	"before_story": 3,
+	"background_tags": [
+		"container_yard",
+		"noon",
+		"bright",
+		"workers",
+		"lively"
+	],
+	"background_image": "https://imagedelivery.net/WTEqQNGFb-l-IHS6IGnzUQ/d82e2c4c-888c-417b-60dc-f6edb1567f00/public",
+	"dialogue": [
+		{
+			"speaker": "narrator",
+			"content": {
+				"korean": "점심시간, 한 무리의 일꾼들이 모여 앉아 동전 던지기 내기를 하고 있다."
+			}
+		},
+		{
+			"speaker": "dax",
+			"content": {
+				"korean": "저기서도 소문이 돌고 있나 봐요. 다들 우리를 힐끗힐끗 봐요."
+			}
+		},
+		{
+			"speaker": "yard_worker_b",
+			"content": {
+				"korean": "어이, 형씨! 심심한데 우리랑 한판 할래?"
+			}
+		},
+		{
+			"speaker": "dax",
+			"content": {
+				"korean": "내기 같은 건 위험하지 않을까요?"
+			}
+		}
+	],
+	"forced": [
+		{
+			"text": {
+				"korean": "{actor}이(가) 내기에 집중하지 못하고, 야적장 주변의 위험 요소를 분석하며 일꾼들을 주의시킨다"
+			},
+			"path": "forced",
+			"mbti": "TJ",
+			"require": {
+				"mbti": "TJ"
+			},
+			"chance": 0.3,
+			"effects": {
+				"reason": 10,
+				"community": 10
+			},
+			"reward": [
+				"defense_up"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "{actor}이(가) 내기에는 관심 없고,"
+					}
+				},
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "주변 컨테이너의 불안정한 적재 상태를 지적하며 일꾼들에게 주의를 준다."
+					}
+				},
+				{
+					"speaker": "yard_worker_b",
+					"content": {
+						"korean": "아, 좀! 재수 없게 무슨 소리야!"
+					}
+				},
+				{
+					"speaker": "dax",
+					"content": {
+						"korean": "덕분에 일꾼들이 주변을 다시 살피기 시작했어요."
+					}
+				}
+			]
+		}
+	],
+	"choices": [
+		{
+			"text": {
+				"korean": "일꾼의 내기 제안을 받아들이고, 가볍게 동전 던지기 내기에 참여한다"
+			},
+			"path": "easy",
+			"mbti": "ES",
+			"effects": {
+				"gold": 80,
+				"fighting": -10
+			},
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "당신의 운이 좋았는지, 동전이 당신이 고른 면으로 떨어진다."
+					}
+				},
+				{
+					"speaker": "yard_worker_b",
+					"content": {
+						"korean": "으악! 형씨, 운이 좋네! 여기, 약속한 돈이다!"
+					}
+				},
+				{
+					"speaker": "dax",
+					"content": {
+						"korean": "어머, 횡재했네요!"
+					}
+				}
+			],
+			"risk": {
+				"chance": "mid",
+				"bad": {
+					"effects": {
+						"gold": -40
+					},
+					"reward": [],
+					"result": [
+						{
+							"speaker": "narrator",
+							"content": {
+								"korean": "당신의 운이 나빴는지, 동전이 당신이 고른 반대 면으로 떨어진다."
+							}
+						},
+						{
+							"speaker": "yard_worker_b",
+							"content": {
+								"korean": "아쉽네! 다음 기회에!"
+							}
+						},
+						{
+							"speaker": "dax",
+							"content": {
+								"korean": "흑, 아깝네요."
+							}
+						}
+					]
+				}
+			}
+		},
+		{
+			"text": {
+				"korean": "내기는 거절하고, 대신 지난번 소동에 대해 아는 것이 있는지 캐묻는다"
+			},
+			"path": "hard",
+			"mbti": "IN",
+			"effects": {
+				"reason": 10,
+				"echo": -5
+			},
+			"reward": [
+				"defense_up"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "일꾼은 내기를 거절하자 실망한 듯 고개를 젓더니, 당신의 질문에 무심하게 답한다."
+					}
+				},
+				{
+					"speaker": "yard_worker_b",
+					"content": {
+						"korean": "아, 그 금고 사라진 거? 그거 금고 담당 간부 짓이라는 소문이 파다하잖아."
+					}
+				},
+				{
+					"speaker": "yard_worker_b",
+					"content": {
+						"korean": "밤마다 수상한 상자를 옮기는 걸 봤다는 사람도 있어."
+					}
+				},
+				{
+					"speaker": "dax",
+					"content": {
+						"korean": "수상한 상자요? 더 자세히 물어봐야겠어요!"
+					}
+				}
+			],
+			"risk": {
+				"chance": "high",
+				"bad": {
+					"effects": {
+						"gold": -20
+					},
+					"reward": [],
+					"result": [
+						{
+							"speaker": "narrator",
+							"content": {
+								"korean": "당신이 내기를 거절하자 일꾼은 실망한 듯 고개를 저으며 당신에게 꿍얼거린다."
+							}
+						},
+						{
+							"speaker": "yard_worker_b",
+							"content": {
+								"korean": "쳇, 치사하게 내기는 안 하고! 그 금고 사라진 거, 금고 담당 간부 짓이라는 소문이 파다해!"
+							}
+						},
+						{
+							"speaker": "yard_worker_b",
+							"content": {
+								"korean": "밤마다 수상한 상자를 옮기는 걸 봤다는 사람도 있다고!"
+							}
+						},
+						{
+							"speaker": "dax",
+							"content": {
+								"korean": "중요한 정보지만, 일꾼이 계속 우리를 향해 '치사하다'고 중얼거려요!"
+							}
+						}
+					]
+				}
+			}
+		},
+		{
+			"text": {
+				"korean": "일꾼이 던진 동전을 공중에서 가로채며, 사라진 기금에 대해 큰 소리로 외친다"
+			},
+			"path": "fun",
+			"mbti": "EP",
+			"effects": {
+				"fighting": 20,
+				"reason": -10
+			},
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "당신의 엉뚱한 행동에 일꾼들이 모두 놀라 내기를 멈추고 당신을 쳐다본다."
+					}
+				},
+				{
+					"speaker": "yard_worker_b",
+					"content": {
+						"korean": "으악! 뭐, 뭐 하는 거야 형씨!"
+					}
+				},
+				{
+					"speaker": "dax",
+					"content": {
+						"korean": "어, 어쩌죠? 모두 우리를 쳐다봐요!"
+					}
+				}
+			],
+			"event": "minigame_slot",
+			"event_intro": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "당신의 돌발 행동에 놀란 일꾼들이 \"내 돈 내놔!\" 하며 당신에게 달려든다."
+					}
+				},
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "그들은 당신에게 돈을 걸고 슬롯머신 내기를 하자고 제안한다."
+					}
+				}
+			],
+			"risk": {
+				"chance": "low",
+				"bad": {
+					"effects": {
+						"gold": -50
+					},
+					"reward": [],
+					"result": [
+						{
+							"speaker": "narrator",
+							"content": {
+								"korean": "당신이 던진 동전을 잡으려다 그만 손에서 미끄러져 공중으로 솟구친다."
+							}
+						},
+						{
+							"speaker": "narrator",
+							"content": {
+								"korean": "동전이 멀리 날아가 다른 일꾼의 점심 도시락에 떨어져 내용물을 엉망으로 만든다."
+							}
+						},
+						{
+							"speaker": "yard_worker_b",
+							"content": {
+								"korean": "으악! 내 도시락! 형씨, 물어내!"
+							}
+						},
+						{
+							"speaker": "dax",
+							"content": {
+								"korean": "어쩌죠? 일꾼들이 화가 나서 우리에게 돈을 요구해요!"
+							}
+						}
+					]
+				}
+			}
+		}
+	],
+	"tags": [
+		"yard_worker_b",
+		"dax"
+	],
+	"_design": {
+		"slot": "A",
+		"kind": "normal",
+		"person": {
+			"id": "yard_worker_b",
+			"name": "점심시간 일꾼",
+			"role": "컨테이너 야적장 일꾼"
+		},
+		"wants": "점심시간에 간단한 내기로 용돈을 벌고 싶어 함.",
+		"rule_link": "점심시간 일꾼의 단순한 내기를 무심코 판단하는 것과, 그 뒤에 숨겨진 의도를 아는 것은 다르다.",
+		"events": {
+			"fun": "당신의 엉뚱한 행동으로 인해 일꾼들이 놀라 돈을 걸고 내기를 제안했기 때문."
+		},
+		"flags": {}
+	}
+}

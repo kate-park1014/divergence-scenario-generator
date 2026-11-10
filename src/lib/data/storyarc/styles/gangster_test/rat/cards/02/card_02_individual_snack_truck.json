@@ -1,0 +1,323 @@
+{
+	"id": "card_02_individual_snack_truck",
+	"title": {
+		"korean": "야식트럭 사장의 불만"
+	},
+	"intensity": "calm",
+	"after_story": 5,
+	"before_story": 7,
+	"condition": {
+		"leaning": "community-",
+		"among": [
+			"fighting-",
+			"fighting+",
+			"community-",
+			"community+",
+			"reason-",
+			"reason+"
+		],
+		"min": 20
+	},
+	"urgency": 8,
+	"leaning": "community-",
+	"background_tags": [
+		"port",
+		"night",
+		"streetlights",
+		"few",
+		"tense"
+	],
+	"background_image": "https://imagedelivery.net/WTEqQNGFb-l-IHS6IGnzUQ/ae1926db-9985-4622-5880-8e77e8439400/public",
+	"dialogue": [
+		{
+			"speaker": "yashik_sajang",
+			"content": {
+				"korean": "아니, 당신들이 그 자기 몫만 챙긴다는 해결사들 아닌가? 왜 남의 장사 앞에서 이렇게 얼쩡거리고 그래?"
+			}
+		},
+		{
+			"speaker": "dax",
+			"content": {
+				"korean": "저희가 뭘 얼쩡거린다고 그래요? 그냥… 잠깐 쉬는 중인데."
+			}
+		},
+		{
+			"speaker": "yashik_sajang",
+			"content": {
+				"korean": "쉬긴 뭘 쉬어, 쯧쯧. 손님 다 떨어지게. 저기 저 박스들 좀 옮겨주면 빨리 좀 가줄랑가?"
+			}
+		},
+		{
+			"speaker": "narrator",
+			"content": {
+				"korean": "야식트럭 사장이 트럭 옆에 쌓인 음료수 상자들을 가리킨다."
+			}
+		}
+	],
+	"choices": [
+		{
+			"text": {
+				"korean": "\"돈 주면 옮겨주겠다\"며 상자 값으로 흥정한다."
+			},
+			"path": "easy",
+			"mbti": "EN",
+			"flag": "snack_truck_greed",
+			"effects": {
+				"gold": 100
+			},
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "당신이 상자 하나당 얼마를 요구하자, 사장이 못마땅한 표정으로 지갑을 꺼낸다."
+					}
+				},
+				{
+					"speaker": "yashik_sajang",
+					"content": {
+						"korean": "쯧쯧, 돈만 밝히는 건 여전하구만. 얼른 옮기고 가쇼!"
+					}
+				},
+				{
+					"speaker": "dax",
+					"content": {
+						"korean": "와, 저 아저씨 진짜 돈 줄 거라고는 생각 못 했어요!"
+					}
+				}
+			],
+			"risk": {
+				"chance": "mid",
+				"bad": {
+					"effects": {
+						"gold": -30
+					},
+					"reward": [],
+					"result": [
+						{
+							"speaker": "narrator",
+							"content": {
+								"korean": "당신이 상자 값 흥정을 하려 하자,"
+							}
+						},
+						{
+							"speaker": "narrator",
+							"content": {
+								"korean": "사장이 지갑 대신 손에 들고 있던 야식 전단지를 냅다 당신 얼굴에 던진다."
+							}
+						},
+						{
+							"speaker": "yashik_sajang",
+							"content": {
+								"korean": "이런 날강도 같은 소리 하고 있네! 내가 누군 줄 알고!"
+							}
+						},
+						{
+							"speaker": "dax",
+							"content": {
+								"korean": "아저씨가 갑자기 화를 내시는데요? 전단지가 눈에 들어갔어요!"
+							}
+						}
+					]
+				}
+			}
+		},
+		{
+			"text": {
+				"korean": "\"우리도 할 일이 있다\"며 단호하게 거절한다."
+			},
+			"path": "hard",
+			"mbti": "TJ",
+			"flag": "snack_truck_firm",
+			"effects": {
+				"echo": 10,
+				"community": 20
+			},
+			"reward": [
+				"defense_up"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "당신의 단호한 태도에 야식트럭 사장이 잠시 멈칫한다."
+					}
+				},
+				{
+					"speaker": "yashik_sajang",
+					"content": {
+						"korean": "흥, 그래봐야 자기 잇속만 챙기겠지. 두고 보쇼!"
+					}
+				},
+				{
+					"speaker": "dax",
+					"content": {
+						"korean": "아저씨가 꿍얼거리면서 장사 준비를 다시 시작했어요."
+					}
+				}
+			],
+			"risk": {
+				"chance": "high",
+				"bad": {
+					"effects": {
+						"gold": -20
+					},
+					"reward": [],
+					"result": [
+						{
+							"speaker": "narrator",
+							"content": {
+								"korean": "당신이 단호하게 거절하자, 야식트럭 사장이 홧김에 트럭에 실린 양파 망을 당신 쪽으로 던진다."
+							}
+						},
+						{
+							"speaker": "narrator",
+							"content": {
+								"korean": "양파가 굴러다니며 발밑을 위협한다."
+							}
+						},
+						{
+							"speaker": "yashik_sajang",
+							"content": {
+								"korean": "어디 두고 보자고! 내 장사를 망치려 들면 가만 안 있을 거여!"
+							}
+						},
+						{
+							"speaker": "dax",
+							"content": {
+								"korean": "양파 때문에 발밑이 미끄러운데요! 아저씨가 계속 우리를 노려봐요!"
+							}
+						}
+					]
+				}
+			}
+		},
+		{
+			"text": {
+				"korean": "\"당신 같은 장사치와는 엮이지 않는다\"며 무시한다."
+			},
+			"path": "stat",
+			"mbti": "SP",
+			"require": {
+				"stat": "community",
+				"op": "<=",
+				"value": -40
+			},
+			"flag": "snack_truck_arrogant",
+			"effects": {
+				"community": -20,
+				"fighting": 10
+			},
+			"reward": [
+				"shield"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "당신의 오만한 태도에 야식트럭 사장이 입술을 삐죽이며 혀를 찬다."
+					}
+				},
+				{
+					"speaker": "yashik_sajang",
+					"content": {
+						"korean": "쯧쯧, 자기만 잘난 줄 아는구만. 내가 괜히 말을 걸었어!"
+					}
+				},
+				{
+					"speaker": "dax",
+					"content": {
+						"korean": "아저씨가 씩씩거리면서도 더 이상 말을 걸지는 않네요."
+					}
+				}
+			]
+		},
+		{
+			"text": {
+				"korean": "\"장사 방해해서 미안하다\"며 자릿세를 건넨다."
+			},
+			"path": "gold",
+			"mbti": "IS",
+			"require": {
+				"stat": "gold",
+				"op": ">=",
+				"value": 100
+			},
+			"effects": {
+				"gold": -100
+			},
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "당신이 사장에게 돈을 쥐여주자, 사장이 눈을 휘둥그레 뜨고 돈을 세어본다."
+					}
+				},
+				{
+					"speaker": "yashik_sajang",
+					"content": {
+						"korean": "허허, 이보시오! 역시 돈 있는 양반들은 다르구만! 진작 이럴 것이지!"
+					}
+				},
+				{
+					"speaker": "dax",
+					"content": {
+						"korean": "아까는 빨리 가라더니, 이제는 더 있다 가래요."
+					}
+				}
+			]
+		}
+	],
+	"tags": [
+		"yashik_sajang",
+		"dax"
+	],
+	"_design": {
+		"slot": "C",
+		"kind": "rep",
+		"person": {
+			"id": "yashik_sajang",
+			"name": "야식트럭 사장",
+			"role": "야식트럭 사장"
+		},
+		"wants": "주인공 일행이 자신의 장사를 방해하지 않고 떠나거나, 최소한 자신의 이득에 도움이 되기를 원함.",
+		"rule_link": "눈앞의 이득에만 집중해 중요한 단서를 놓치지 않도록, 전체 상황을 끝까지 지켜봐야 합니다.",
+		"rep": "community-",
+		"events": {},
+		"flags": {
+			"snack_truck_greed": {
+				"kind": "bad",
+				"boss_penalty": -1,
+				"label": {
+					"korean": "돈 밝히는 해결사"
+				},
+				"boss_line": {
+					"korean": "상대방이 돈을 밝히는 해결사의 소문을 듣고 경계합니다."
+				}
+			},
+			"snack_truck_firm": {
+				"kind": "good",
+				"boss_penalty": 1,
+				"label": {
+					"korean": "단호한 해결사"
+				},
+				"boss_choice": {
+					"korean": "상대방이 당신의 단호함에 잠시 주춤합니다."
+				}
+			},
+			"snack_truck_arrogant": {
+				"kind": "good",
+				"boss_penalty": 2,
+				"label": {
+					"korean": "오만한 해결사"
+				},
+				"boss_choice": {
+					"korean": "상대방이 당신의 오만한 태도에 섣불리 다가서지 못합니다."
+				}
+			}
+		}
+	}
+}

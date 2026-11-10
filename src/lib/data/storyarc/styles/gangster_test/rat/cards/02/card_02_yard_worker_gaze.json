@@ -1,0 +1,279 @@
+{
+	"id": "card_02_yard_worker_gaze",
+	"title": {
+		"korean": "야적장의 시선"
+	},
+	"intensity": "calm",
+	"after_story": 1,
+	"before_story": 3,
+	"background_tags": [
+		"container_yard",
+		"day",
+		"cloudy",
+		"workers",
+		"suspicious"
+	],
+	"background_image": "https://imagedelivery.net/WTEqQNGFb-l-IHS6IGnzUQ/7bd6456b-a2bf-4def-e652-47e1a1627000/public",
+	"dialogue": [
+		{
+			"speaker": "narrator",
+			"content": {
+				"korean": "컨테이너 사이를 지나가던 야적장 일꾼이 당신을 흘끔거리며 지나친다."
+			}
+		},
+		{
+			"speaker": "dax",
+			"content": {
+				"korean": "저 사람, 아까부터 우리를 계속 쳐다보네요."
+			}
+		},
+		{
+			"speaker": "yard_worker_a",
+			"content": {
+				"korean": "지난번 그 소동이… 당신들 짓이오?"
+			}
+		},
+		{
+			"speaker": "dax",
+			"content": {
+				"korean": "어쩌죠? 벌써 소문이 퍼졌나 봐요."
+			}
+		}
+	],
+	"choices": [
+		{
+			"text": {
+				"korean": "일꾼의 시선을 애써 무시하고, 빠른 걸음으로 컨테이너 사이를 지나간다"
+			},
+			"path": "easy",
+			"mbti": "SP",
+			"effects": {
+				"gold": 50,
+				"reason": -10
+			},
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "당신이 자리를 피하자 야적장 일꾼은 더 의심스러운 눈빛으로 당신을 쳐다본다."
+					}
+				},
+				{
+					"speaker": "dax",
+					"content": {
+						"korean": "다행히 더 말을 걸진 않네요. 하지만 왠지 찝찝해요."
+					}
+				}
+			],
+			"risk": {
+				"chance": "mid",
+				"bad": {
+					"reward": [
+						"hp_down"
+					],
+					"result": [
+						{
+							"speaker": "narrator",
+							"content": {
+								"korean": "당신이 빠른 걸음으로 자리를 피하려 하자, 야적장 일꾼이 당신의 앞을 가로막는다."
+							}
+						},
+						{
+							"speaker": "yard_worker_a",
+							"content": {
+								"korean": "야! 거기 멈춰! 뭐가 그리 당당하다고 그냥 가!"
+							}
+						},
+						{
+							"speaker": "dax",
+							"content": {
+								"korean": "저 사람 왜 이렇게 끈질겨요? 그냥 가자고요!"
+							}
+						}
+					]
+				}
+			}
+		},
+		{
+			"text": {
+				"korean": "일꾼에게 다가가 지난번 소동에 대해 아는 것이 있는지 정중하게 묻는다"
+			},
+			"path": "hard",
+			"mbti": "SF",
+			"effects": {
+				"community": 10,
+				"echo": 5
+			},
+			"reward": [
+				"defense_up"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "당신의 질문에 일꾼은 잠시 망설이더니 작은 목소리로 답한다."
+					}
+				},
+				{
+					"speaker": "yard_worker_a",
+					"content": {
+						"korean": "금고가 비었다는 소문이 파다해요. 근데 금고 담당 간부만 아는 비밀통로가 있다는 소문도 돌아요."
+					}
+				},
+				{
+					"speaker": "dax",
+					"content": {
+						"korean": "비밀통로요? 중요한 정보네요!"
+					}
+				}
+			],
+			"risk": {
+				"chance": "high",
+				"bad": {
+					"effects": {
+						"gold": -20
+					},
+					"reward": [],
+					"result": [
+						{
+							"speaker": "narrator",
+							"content": {
+								"korean": "당신의 질문에 일꾼이 당황한 듯 주위를 두리번거리더니, 그만 큰 소리로 외치고 만다."
+							}
+						},
+						{
+							"speaker": "yard_worker_a",
+							"content": {
+								"korean": "금고가 비었다는 소문이 파다해요! 금고 담당 간부만 아는 비밀통로도 있다던데!"
+							}
+						},
+						{
+							"speaker": "narrator",
+							"content": {
+								"korean": "주변의 다른 일꾼들이 일제히 당신 쪽을 흘끔거린다."
+							}
+						},
+						{
+							"speaker": "dax",
+							"content": {
+								"korean": "저희 다 들켰어요! 어떡해요, 도망쳐야 하나요?"
+							}
+						}
+					]
+				}
+			}
+		},
+		{
+			"text": {
+				"korean": "일꾼에게 입막음용으로 돈을 쥐여주며, 이 일에 대해 함구해달라고 부탁한다"
+			},
+			"path": "gold",
+			"mbti": "NT",
+			"require": {
+				"stat": "gold",
+				"op": ">=",
+				"value": 100
+			},
+			"effects": {
+				"gold": -100,
+				"echo": -10
+			},
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "일꾼은 당신이 건넨 돈을 보더니 눈치를 살피며 주위를 둘러본다."
+					}
+				},
+				{
+					"speaker": "yard_worker_a",
+					"content": {
+						"korean": "알겠습니다. 저는 아무것도 못 봤습니다."
+					}
+				},
+				{
+					"speaker": "dax",
+					"content": {
+						"korean": "돈으로 해결하긴 했지만, 왠지 찜찜하네요."
+					}
+				}
+			],
+			"event": "meet_stranger",
+			"event_intro": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "돈을 받은 일꾼이 고개를 숙이며 자리를 피하려던 순간, 덩치 큰 사내가 나타나 길을 막아선다."
+					}
+				},
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "“야, 거기 서! 내 돈을 왜 네가 받어!” 낯선 사내가 당신을 보며 주먹을 꽉 쥔다."
+					}
+				}
+			],
+			"event_options": {
+				"fight": {
+					"text": {
+						"korean": "낯선 사내의 시비에 {actor}이(가) 맞선다"
+					},
+					"win": [
+						{
+							"speaker": "narrator",
+							"content": {
+								"korean": "{actor}이(가) 낯선 사내를 간단히 제압하자, 일꾼이 황급히 달아난다."
+							}
+						}
+					],
+					"lose": [
+						{
+							"speaker": "narrator",
+							"content": {
+								"korean": "{actor}이(가) 낯선 사내에게 한 방 맞고 휘청이자, 일꾼이 황급히 달아난다."
+							}
+						}
+					]
+				},
+				"avoid": {
+					"text": {
+						"korean": "낯선 사내와의 싸움을 피하고, 일꾼과 함께 자리를 피한다"
+					},
+					"result": [
+						{
+							"speaker": "narrator",
+							"content": {
+								"korean": "당신이 낯선 사내를 피해 도망치자, 일꾼도 덩달아 도망친다."
+							}
+						}
+					],
+					"reward": [
+						"defense_down"
+					]
+				}
+			}
+		}
+	],
+	"tags": [
+		"yard_worker_a",
+		"dax"
+	],
+	"_design": {
+		"slot": "A",
+		"kind": "normal",
+		"person": {
+			"role": "컨테이너 야적장 일꾼",
+			"id": "yard_worker_a",
+			"name": "야적장 일꾼"
+		},
+		"wants": "지난번 소동의 진실을 알고 싶어 하거나, 히어로들에게서 정보를 얻고 싶어 함.",
+		"rule_link": "일꾼의 흘끔거리는 시선만으로 그 의도를 판단하는 것과, 대화를 통해 진실을 아는 것은 다르다.",
+		"events": {
+			"gold": "일꾼에게 준 돈을 낯선 사내가 자신의 것이라고 주장하며 시비를 걸었기 때문."
+		},
+		"flags": {}
+	}
+}

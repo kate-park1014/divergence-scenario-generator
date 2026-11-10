@@ -1,0 +1,282 @@
+{
+	"id": "card_02_blocking_forklift",
+	"title": {
+		"korean": "길 막는 지게차 아재"
+	},
+	"intensity": "calm",
+	"after_story": 1,
+	"before_story": 3,
+	"condition": {
+		"leaning": "fighting-",
+		"among": [
+			"fighting-",
+			"fighting+",
+			"community-",
+			"community+",
+			"reason-",
+			"reason+"
+		],
+		"min": 20
+	},
+	"urgency": 8,
+	"leaning": "fighting-",
+	"background_tags": [
+		"container_yard",
+		"dawn",
+		"foggy",
+		"alone",
+		"tense"
+	],
+	"background_image": "https://imagedelivery.net/WTEqQNGFb-l-IHS6IGnzUQ/e4af4002-f4a2-402d-943d-ba2b16f88500/public",
+	"dialogue": [
+		{
+			"speaker": "narrator",
+			"content": {
+				"korean": "낡은 지게차 위에 앉아 꾸벅 졸던 지게차 아재가 당신을 발견하고 깜짝 놀라 벌떡 일어났다."
+			}
+		},
+		{
+			"speaker": "forklift_uncle",
+			"content": {
+				"korean": "으음?! 당신들이 그 소문 자자한, 야적장 안에서 주먹부터 휘두른다는 해결사들 아니오?"
+			}
+		},
+		{
+			"speaker": "forklift_uncle",
+			"content": {
+				"korean": "켁, 켁. 여기는 새벽 3시부터 5시까지 출입 금지라고! 내 규칙을 어기는 놈들은 내가 그냥 안 둔다!"
+			}
+		},
+		{
+			"speaker": "dax",
+			"content": {
+				"korean": "저 아재, 컨테이너 야적장 규칙에 엄청 집착해요."
+			}
+		}
+	],
+	"choices": [
+		{
+			"text": {
+				"korean": "덩치로 지게차 아재를 위협하며 길을 비키라고 으르렁거린다."
+			},
+			"path": "easy",
+			"mbti": "ST",
+			"flag": "forklift_uncle_threatened",
+			"effects": {
+				"echo": -5,
+				"fighting": -15
+			},
+			"reward": [
+				"attack_up"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "당신의 기세에 눌린 지게차 아재가 움찔하며 지게차를 뒤로 뺐다."
+					}
+				},
+				{
+					"speaker": "forklift_uncle",
+					"content": {
+						"korean": "으, 으음. 이번엔 봐주지만, 다음엔 내 규칙을 어기면 가만 안 둔다!"
+					}
+				},
+				{
+					"speaker": "dax",
+					"content": {
+						"korean": "어휴, 제가 다 무섭네요."
+					}
+				}
+			],
+			"risk": {
+				"chance": "mid",
+				"bad": {
+					"effects": {
+						"gold": -30
+					},
+					"reward": [
+						"hp_down"
+					],
+					"result": [
+						{
+							"speaker": "narrator",
+							"content": {
+								"korean": "당신의 위협에 지게차 아재가 얼굴이 새파래지며 지게차에서 굴러떨어졌다."
+							}
+						},
+						{
+							"speaker": "forklift_uncle",
+							"content": {
+								"korean": "으악! 당신들, 내 규칙을 어기면 가만 안 둔댔지!"
+							}
+						},
+						{
+							"speaker": "dax",
+							"content": {
+								"korean": "아재가 너무 놀라서 오줌까지 지렸는데요…"
+							}
+						}
+					]
+				}
+			}
+		},
+		{
+			"text": {
+				"korean": "지게차 아재의 규칙을 존중한다고 말하며, 급한 사정을 설명하고 통과를 부탁한다."
+			},
+			"path": "hard",
+			"mbti": "NF",
+			"flag": "forklift_uncle_respected",
+			"effects": {
+				"echo": 5,
+				"fighting": 15
+			},
+			"reward": [
+				"defense_up"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "당신의 정중한 태도에 지게차 아재가 의외라는 듯 고개를 갸웃거렸다."
+					}
+				},
+				{
+					"speaker": "forklift_uncle",
+					"content": {
+						"korean": "으음, 당신들 소문이랑은 좀 다르구먼. 그럼, 딱 5분만 봐주겠소!"
+					}
+				},
+				{
+					"speaker": "dax",
+					"content": {
+						"korean": "아재가 저렇게 순순히 물러서는 건 처음 봐요!"
+					}
+				}
+			],
+			"risk": {
+				"chance": "high",
+				"bad": {
+					"effects": {
+						"gold": -20
+					},
+					"reward": [],
+					"result": [
+						{
+							"speaker": "narrator",
+							"content": {
+								"korean": "당신의 부탁에도 지게차 아재는 꿈쩍 않고 시계를 쳐다봤다."
+							}
+						},
+						{
+							"speaker": "forklift_uncle",
+							"content": {
+								"korean": "켁, 켁. 규칙은 규칙이오! 5시까지는 절대 안 돼!"
+							}
+						},
+						{
+							"speaker": "dax",
+							"content": {
+								"korean": "아재가 규칙이라면 꼼짝도 안 하네요…"
+							}
+						}
+					]
+				}
+			}
+		},
+		{
+			"text": {
+				"korean": "지게차 아재의 규칙이 우습다는 듯 비웃고, 지게차를 맨손으로 밀어붙인다."
+			},
+			"path": "stat",
+			"mbti": "TP",
+			"require": {
+				"stat": "fighting",
+				"op": "<=",
+				"value": -40
+			},
+			"flag": "forklift_uncle_overpowered",
+			"effects": {
+				"fighting": -25,
+				"reason": 10,
+				"echo": -10
+			},
+			"reward": [
+				"attack_up"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "당신의 엄청난 힘에 지게차 아재가 지게차째로 밀려나며 비명을 질렀다."
+					}
+				},
+				{
+					"speaker": "forklift_uncle",
+					"content": {
+						"korean": "으악! 말도 안 돼! 내 지게차가 밀리다니!"
+					}
+				},
+				{
+					"speaker": "dax",
+					"content": {
+						"korean": "아재, 오늘 밤엔 잠 못 잘 것 같은데요!"
+					}
+				}
+			]
+		}
+	],
+	"tags": [
+		"forklift_uncle",
+		"dax"
+	],
+	"_design": {
+		"slot": "A",
+		"kind": "rep",
+		"person": {
+			"id": "forklift_uncle",
+			"name": "지게차 아재",
+			"role": "지게차 기사"
+		},
+		"wants": "야적장 출입을 막으려는 아재를 설득/협박하여 통과",
+		"rule_link": "당신들은 내가 정한 규칙을 무시하려 들지만, 나는 끝까지 지켜보겠소.",
+		"rep": "fighting-",
+		"events": {},
+		"flags": {
+			"forklift_uncle_threatened": {
+				"kind": "bad",
+				"boss_penalty": -1,
+				"label": {
+					"korean": "위협받은 아재"
+				},
+				"boss_line": {
+					"korean": "지게차 아재가 당신을 보고는 멀리 도망쳐 컨테이너 한쪽을 비워 준다."
+				}
+			},
+			"forklift_uncle_respected": {
+				"kind": "good",
+				"boss_penalty": 1,
+				"label": {
+					"korean": "존중받은 아재"
+				},
+				"boss_choice": {
+					"korean": "지게차 아재가 당신의 편의를 봐주겠다며 지게차로 길을 터 준다."
+				}
+			},
+			"forklift_uncle_overpowered": {
+				"kind": "good",
+				"boss_penalty": 2,
+				"label": {
+					"korean": "압도된 아재"
+				},
+				"boss_choice": {
+					"korean": "지게차 아재가 당신을 피해 도망치느라 컨테이너 구석에 지게차를 박아버린다."
+				}
+			}
+		}
+	}
+}

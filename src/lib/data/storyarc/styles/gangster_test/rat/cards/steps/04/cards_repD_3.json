@@ -1,0 +1,386 @@
+{
+	"cards": [
+		{
+			"background_tags": [
+				"corridor",
+				"indoors",
+				"night",
+				"dim_light",
+				"tense"
+			],
+			"no": 1,
+			"choices": [
+				{
+					"path": "easy",
+					"result": [
+						{
+							"speaker": "narrator",
+							"text": "당신의 단호한 태도에 막내는 한숨을 쉬며 길을 비켜 준다."
+						},
+						{
+							"speaker": "security_youngest",
+							"text": "어쨌든... 덕분에 임무는 지켰습니다. 하지만... 누님에게는 비밀로 해주십시오."
+						},
+						{
+							"text": "막내가 저렇게까지 말할 정도면... 누님이 안에 계신 게 맞나 봐요.",
+							"speaker": "dax"
+						}
+					],
+					"mbti": "TJ",
+					"effects": {
+						"gold": 100
+					},
+					"risk_bad": {
+						"reward": [],
+						"result": [
+							{
+								"speaker": "narrator",
+								"text": "당신이 규칙을 언급하자 막내는 안심한 듯 고개를 끄덕인다."
+							},
+							{
+								"speaker": "security_youngest",
+								"text": "역시... 원칙을 지키는 분은 다르네요. 하지만 누님께는... 읍!"
+							},
+							{
+								"text": "막내는 말을 잇지 못하고 뒤에서 나타난 경호원에게 입이 막힌다.",
+								"speaker": "narrator"
+							}
+						],
+						"gold": -30
+					},
+					"text": "경호팀 막내의 임무를 인정하며 규칙대로 행동한다.",
+					"flag": {
+						"label": "규율 인정",
+						"boss_text": "방 10 싸움에서 경호실장 누님은 당신이 막내에게서 얻은 정보를 이미 알고 있다.",
+						"key": "guard_duty_acknowledged"
+					}
+				},
+				{
+					"result": [
+						{
+							"speaker": "narrator",
+							"text": "막내는 망설이다가 당신의 말에 수긍하며 슬쩍 문을 열어 준다."
+						},
+						{
+							"text": "하지만... 제 임무를 어긴 겁니다. 누님에게는... 제가 막지 못했다고 말씀해 주십시오.",
+							"speaker": "security_youngest"
+						},
+						{
+							"speaker": "dax",
+							"text": "막내가 저렇게 솔직하게 말하다니... 누님이 무섭긴 한가 봐요."
+						}
+					],
+					"reward": [
+						"defense_up"
+					],
+					"path": "hard",
+					"mbti": "NF",
+					"risk_bad": {
+						"result": [
+							{
+								"text": "막내는 당신의 설득에 고개를 끄덕이며 전화를 건다.",
+								"speaker": "narrator"
+							},
+							{
+								"text": "저, 제가... 뭐라고 말해야 할지 모르겠습니다! 읍!",
+								"speaker": "security_youngest"
+							},
+							{
+								"speaker": "narrator",
+								"text": "막내는 말을 잇지 못하고 뒤에서 나타난 경호원에게 입이 막힌다."
+							}
+						],
+						"reward": [],
+						"gold": -20
+					},
+					"effects": {
+						"echo": 5,
+						"reason": 10
+					},
+					"text": "규칙보다 상황의 위급함을 설명하며 막내를 설득한다.",
+					"flag": {
+						"boss_text": "방 10 싸움에서 경호실장 누님은 당신의 융통성 있는 대처에 빈틈을 보인다.",
+						"label": "막내 설득",
+						"key": "guard_duty_overruled"
+					}
+				},
+				{
+					"mbti": "ST",
+					"path": "stat",
+					"flag": {
+						"label": "원칙 존중",
+						"boss_text": "방 10 싸움에서 경호실장 누님은 당신의 단단한 원칙에 혼란을 느낀다.",
+						"key": "guard_rules_respected"
+					},
+					"result": [
+						{
+							"speaker": "narrator",
+							"text": "막내는 당신의 단단한 태도에 감동한 듯 자세를 고쳐 잡는다."
+						},
+						{
+							"speaker": "security_youngest",
+							"text": "좋습니다! 저도 저의 임무를 다하겠습니다! 길을 비켜 드리겠습니다!"
+						},
+						{
+							"text": "막내가 저렇게 활기차게 움직이다니... 당신의 말이 약이 됐나 봐요.",
+							"speaker": "dax"
+						}
+					],
+					"reward": [
+						"defense_up"
+					],
+					"effects": {
+						"reason": -20,
+						"echo": 10
+					},
+					"text": "원칙대로 막내의 임무를 수행하도록 독려하며 길을 비켜 달라고 요구한다."
+				}
+			],
+			"key": "orderly_guard_post",
+			"person": {
+				"id": "security_youngest",
+				"name": "경호팀 막내",
+				"role": "security_guard"
+			},
+			"dialogue": [
+				{
+					"text": "침을 꿀꺽 삼키며 당신이... 그, 원칙을 중요시한다는... 해결사 맞으십니까? 소문이 자자하시던데...",
+					"speaker": "security_youngest"
+				},
+				{
+					"text": "경호팀 막내는 잔뜩 긴장한 얼굴로 금고실 문을 지키고 서 있다.",
+					"speaker": "narrator"
+				},
+				{
+					"text": "이 문은... 회장님 허락 없이는 누구도 통과할 수 없습니다. 제 임무입니다.",
+					"speaker": "security_youngest"
+				},
+				{
+					"speaker": "dax",
+					"text": "막내야, 우리가 지금 얼마나 급한 상황인데 이래요? 누님도 지금 안에 계시잖아요!"
+				}
+			],
+			"wants": "규율을 중시하는 당신에게 자신의 임무를 지킬 명분을 얻으려 한다.",
+			"rule_link": "말 못 하는 막내의 상황을 규칙 안에서 이해할지, 규칙을 넘어서는 사정으로 볼지.",
+			"title": "막내의 의무",
+			"slot": "D",
+			"kind": "rep",
+			"rep_dir": "reason-"
+		},
+		{
+			"key": "impulsive_guard_confrontation",
+			"background_tags": [
+				"corridor",
+				"indoors",
+				"night",
+				"dim_light",
+				"suspicious"
+			],
+			"title": "막내의 고민",
+			"rule_link": "말 못 하는 막내의 상황을 규칙 안에서 이해할지, 규칙을 넘어서는 사정으로 볼지.",
+			"person": {
+				"id": "security_youngest",
+				"name": "경호팀 막내",
+				"role": "security_guard"
+			},
+			"choices": [
+				{
+					"effects": {
+						"gold": 100
+					},
+					"text": "경호팀 막내에게 상황의 유연한 대처를 요구하며 길을 비켜 달라고 설득한다.",
+					"mbti": "EN",
+					"result": [
+						{
+							"text": "막내는 당신의 말에 혼란스러운 표정으로 문을 열어 준다.",
+							"speaker": "narrator"
+						},
+						{
+							"speaker": "security_youngest",
+							"text": "이게... 맞는 일일까요? 누님에게는... 제가 잠시 자리를 비웠다고 해주십시오."
+						},
+						{
+							"speaker": "dax",
+							"text": "막내가 저렇게 어리둥절한 표정이라니... 뭔가 숨기는 게 있나 봐요."
+						}
+					],
+					"flag": {
+						"key": "guard_situation_first",
+						"label": "상황 우선",
+						"boss_text": "방 10 싸움에서 경호실장 누님은 당신이 막내를 혼란스럽게 만든 일을 기억한다."
+					},
+					"risk_bad": {
+						"result": [
+							{
+								"text": "당신이 막내에게 상황에 맞춰 대처하라고 하자 막내는 더욱 당황한다.",
+								"speaker": "narrator"
+							},
+							{
+								"speaker": "security_youngest",
+								"text": "잠시만요! 그, 제 임무는... 으악!"
+							},
+							{
+								"text": "막내는 발을 헛디뎌 넘어지며 들고 있던 무전기를 놓친다.",
+								"speaker": "narrator"
+							},
+							{
+								"text": "무전기에서는 지직거리는 소리와 함께 누군가의 짧은 기침 소리가 흘러나온다.",
+								"speaker": "narrator"
+							}
+						],
+						"reward": [],
+						"gold": -30
+					},
+					"path": "easy"
+				},
+				{
+					"path": "hard",
+					"flag": {
+						"label": "규율 준수",
+						"boss_text": "방 10 싸움에서 경호실장 누님은 당신이 규칙을 중요시하는 사람임을 파악한다.",
+						"key": "guard_rules_upheld"
+					},
+					"result": [
+						{
+							"text": "막내는 당신의 단호한 말에 고개를 끄덕이며 문을 굳게 잠근다.",
+							"speaker": "narrator"
+						},
+						{
+							"speaker": "security_youngest",
+							"text": "알겠습니다! 제 임무를... 완수하겠습니다! 누님, 조금만 기다려 주십시오!"
+						},
+						{
+							"text": "막내가 저렇게까지 한다니... 우리가 너무 늦으면 안 되는데.",
+							"speaker": "dax"
+						}
+					],
+					"mbti": "IT",
+					"effects": {
+						"reason": -10,
+						"echo": 5
+					},
+					"risk_bad": {
+						"gold": -20,
+						"result": [
+							{
+								"speaker": "narrator",
+								"text": "막내는 당신의 말에 크게 감동한 듯 목소리를 높인다."
+							},
+							{
+								"text": "누구도 회장님 허락 없이는 통과할 수 없습니다! 이 문은... 절대 열리지 않습니다!",
+								"speaker": "security_youngest"
+							},
+							{
+								"speaker": "narrator",
+								"text": "막내의 외침에 복도 저편에서 인기척이 들려온다. 또 다른 경호원이 다가오는 소리다."
+							}
+						],
+						"reward": []
+					},
+					"reward": [
+						"defense_up"
+					],
+					"text": "규율을 어기는 것은 결국 모두에게 해가 될 것이라고 막내를 타이른다."
+				},
+				{
+					"mbti": "SP",
+					"effects": {
+						"reason": 20,
+						"echo": 10
+					},
+					"reward": [
+						"attack_up"
+					],
+					"text": "막내에게 길을 비킬 것을 명령하며 당신의 자유로운 판단을 믿으라고 한다.",
+					"path": "stat",
+					"result": [
+						{
+							"speaker": "narrator",
+							"text": "막내는 당신의 자신감 넘치는 태도에 압도된 듯 문을 활짝 열어 준다."
+						},
+						{
+							"speaker": "security_youngest",
+							"text": "네! 알겠습니다! 제 판단은... 그, 당신의 판단을 따르겠습니다!"
+						},
+						{
+							"text": "막내가 저렇게까지 한다니... 당신의 카리스마가 대단한가 봐요.",
+							"speaker": "dax"
+						}
+					],
+					"flag": {
+						"label": "판단 우선",
+						"key": "guard_judgment_followed",
+						"boss_text": "방 10 싸움에서 경호실장 누님은 당신의 예측 불가능한 행동에 대비하지 못한다."
+					}
+				},
+				{
+					"mbti": "FP",
+					"result": [
+						{
+							"text": "막내는 눈을 휘둥그레 뜨고 당신을 바라본다. 이내 얼굴이 새빨개진다.",
+							"speaker": "narrator"
+						},
+						{
+							"speaker": "security_youngest",
+							"text": "네...? 그, 그걸 제가 어떻게... 누님은... 제 친누나 같은 분이라..."
+						},
+						{
+							"text": "푸하하! 막내 표정 좀 봐요! 당신, 진짜 엉뚱하다니까!",
+							"speaker": "dax"
+						}
+					],
+					"text": "막내의 어깨를 두드리며 '누님께는 내가 잘 말해줄게'라고 속삭인다.",
+					"risk_bad": {
+						"result": [
+							{
+								"speaker": "narrator",
+								"text": "당신이 막내의 어깨를 두드리자 막내는 화들짝 놀라 움찔한다."
+							},
+							{
+								"text": "으악! 손대지 마십시오! 저는... 누님께 충성을 맹세했습니다!",
+								"speaker": "security_youngest"
+							},
+							{
+								"text": "막내는 비명을 지르며 당신에게 주먹을 날린다. 당신의 안면에 정확히 명중한다.",
+								"speaker": "narrator"
+							}
+						],
+						"reward": [
+							"hp_down"
+						]
+					},
+					"path": "fun",
+					"effects": {
+						"gold": 50,
+						"reason": 20
+					}
+				}
+			],
+			"dialogue": [
+				{
+					"text": "그... 융통성 있게 일 처리한다는... 해결사 맞으십니까? 소문이 자자하시던데...",
+					"speaker": "security_youngest"
+				},
+				{
+					"text": "경호팀 막내는 잔뜩 긴장한 얼굴로 금고실 문을 지키고 서 있다.",
+					"speaker": "narrator"
+				},
+				{
+					"text": "이 문은... 회장님 허락 없이는 누구도 통과할 수 없습니다. 하지만... 그, 혹시...",
+					"speaker": "security_youngest"
+				},
+				{
+					"text": "막내야, 누님이 안에 계신 건 아는데 왜 이래요? 우리가 지금 얼마나 급한 상황인데!",
+					"speaker": "dax"
+				}
+			],
+			"no": 2,
+			"wants": "유연한 사고를 가진 당신에게 규칙과 상황 사이에서 갈등하는 자신을 이해받으려 한다.",
+			"slot": "D",
+			"kind": "rep",
+			"rep_dir": "reason+"
+		}
+	],
+	"errors": [],
+	"prompt_hash": "0fd0f1946342368013bb7374942c264a89e10fac"
+}

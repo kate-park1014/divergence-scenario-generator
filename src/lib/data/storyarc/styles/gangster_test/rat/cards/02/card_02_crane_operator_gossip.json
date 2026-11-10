@@ -1,0 +1,165 @@
+{
+	"id": "card_02_crane_operator_gossip",
+	"title": {
+		"korean": "크레인 기사의 소문"
+	},
+	"intensity": "high",
+	"after_story": 5,
+	"before_story": 7,
+	"callback": {
+		"seed": "container_ghost_shadow_easy",
+		"min_rooms_after": 2
+	},
+	"background_tags": [
+		"port",
+		"night",
+		"dimlight",
+		"crowd",
+		"tense"
+	],
+	"background_image": "https://imagedelivery.net/WTEqQNGFb-l-IHS6IGnzUQ/a23d3536-a5ab-4ce4-0670-a5afdeb66e00/public",
+	"dialogue": [
+		{
+			"speaker": "narrator",
+			"content": {
+				"korean": "크레인 기사가 무전기를 들고 신이 난 목소리로 떠든다."
+			}
+		},
+		{
+			"speaker": "crane_operator",
+			"content": {
+				"korean": "야, 컨테이너 귀신 잡으러 간다! 다들 구경 와라!"
+			}
+		},
+		{
+			"speaker": "dax",
+			"content": {
+				"korean": "저 기사님, 너무 신나 보이는데요? 이러다 다 들키겠어요!"
+			}
+		},
+		{
+			"speaker": "crane_operator",
+			"content": {
+				"korean": "오늘 밤, 내가 이 구역의 영웅이다!"
+			}
+		},
+		{
+			"speaker": "narrator",
+			"content": {
+				"korean": "주변 일꾼들이 무전 소리를 듣고 슬금슬금 모여들기 시작한다."
+			}
+		}
+	],
+	"choices": [
+		{
+			"text": {
+				"korean": "기사의 허세에 맞춰 주변 일꾼들에게 더 큰 소리로 떠들며 시선을 끈다"
+			},
+			"path": "easy",
+			"mbti": "ES",
+			"flag": "crane_operator_distraction",
+			"effects": {
+				"echo": 10,
+				"community": 15
+			},
+			"reward": [
+				"attack_up"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "당신의 선동에 일꾼들이 더욱 흥분하며 크레인 기사에게 환호한다."
+					}
+				},
+				{
+					"speaker": "crane_operator",
+					"content": {
+						"korean": "봤지? 다들 내 편이라고! 기사가 우쭐대며 컨테이너 쪽을 손가락으로 가리킨다."
+					}
+				},
+				{
+					"speaker": "dax",
+					"content": {
+						"korean": "어휴, 저러다 다 들키겠어요!"
+					}
+				}
+			]
+		},
+		{
+			"text": {
+				"korean": "기사에게 다가가 어깨를 두드리며 조용히 일꾼들을 돌려보내자고 설득한다"
+			},
+			"path": "hard",
+			"mbti": "IT",
+			"flag": "crane_operator_quiet",
+			"effects": {
+				"reason": 20,
+				"echo": 5
+			},
+			"reward": [
+				"defense_up"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "당신의 설득에 크레인 기사가 잠시 머뭇거리더니, 헛기침하며 일꾼들을 해산시킨다."
+					}
+				},
+				{
+					"speaker": "crane_operator",
+					"content": {
+						"korean": "볼 거 없어! 다들 일이나 해!"
+					}
+				},
+				{
+					"speaker": "dax",
+					"content": {
+						"korean": "기사님이 화내니까 다들 도망가네요."
+					}
+				}
+			]
+		}
+	],
+	"tags": [
+		"crane_operator",
+		"dax"
+	],
+	"_design": {
+		"slot": "C",
+		"kind": "callback",
+		"person": {
+			"name": "야간 크레인 기사",
+			"id": "crane_operator",
+			"role": "컨테이너 야적장 야간 크레인 기사"
+		},
+		"wants": "'컨테이너 귀신'을 잡는 영웅으로 인정받고 싶어 함.",
+		"rule_link": "섣부른 판단으로 소문을 퍼뜨려 의도치 않게 상황을 복잡하게 만든다.",
+		"events": {},
+		"flags": {
+			"crane_operator_distraction": {
+				"kind": "bad",
+				"boss_penalty": -1,
+				"label": {
+					"korean": "기사 소동"
+				},
+				"boss_line": {
+					"korean": "야간 크레인 기사의 소동 때문에 컨테이너 주변을 경계하는 일꾼들이 늘어난다."
+				}
+			},
+			"crane_operator_quiet": {
+				"kind": "good",
+				"boss_penalty": 1,
+				"label": {
+					"korean": "기사 진정"
+				},
+				"boss_choice": {
+					"korean": "야간 크레인 기사가 일꾼들을 조용히 돌려보내 컨테이너 주변이 한산해진다."
+				}
+			}
+		}
+	}
+}

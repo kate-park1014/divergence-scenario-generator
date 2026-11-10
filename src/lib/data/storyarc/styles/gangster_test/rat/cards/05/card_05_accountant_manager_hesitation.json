@@ -1,0 +1,153 @@
+{
+	"id": "card_05_accountant_manager_hesitation",
+	"title": {
+		"korean": "경리부장의 망설이는 부탁"
+	},
+	"intensity": "high",
+	"after_story": 5,
+	"before_story": 7,
+	"callback": {
+		"seed": "accountant_request_hard",
+		"min_rooms_after": 2
+	},
+	"background_tags": [
+		"fog",
+		"lighthouse",
+		"cart_tracks",
+		"night",
+		"eerie"
+	],
+	"background_image": "https://imagedelivery.net/WTEqQNGFb-l-IHS6IGnzUQ/fb9e7684-9a0b-4d23-b79e-7ced61b1d200/public",
+	"dialogue": [
+		{
+			"speaker": "narrator",
+			"content": {
+				"korean": "등대로 향하는 길, 안개 속에서 누군가 당신의 차를 향해 손을 흔든다. 경리부장이다."
+			}
+		},
+		{
+			"speaker": "narrator",
+			"content": {
+				"korean": "경리부장이 마른침을 꿀꺽 삼키며 쭈뼛거린다."
+			}
+		},
+		{
+			"speaker": "accountant_manager",
+			"content": {
+				"korean": "비, 비서 녀석에게 직접 묻는 게 맞겠지… 으음, 하지만 내 체면이…"
+			}
+		},
+		{
+			"speaker": "dax",
+			"content": {
+				"korean": "경리부장님, 비서님한테 무슨 할 말이라도 있으세요?"
+			}
+		},
+		{
+			"speaker": "accountant_manager",
+			"content": {
+				"korean": "큭, 당신들이 대신… 비서 녀석한테 왜 그랬는지… 물어봐 줘! 내 대신!"
+			}
+		}
+	],
+	"choices": [
+		{
+			"text": {
+				"korean": "경리부장의 부탁을 받아들여 비서의 사정을 대신 물어본다."
+			},
+			"path": "easy",
+			"mbti": "ES",
+			"flag": "manager_trust_easy",
+			"effects": {
+				"echo": 10,
+				"community": 15
+			},
+			"reward": [
+				"attack_up"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "경리부장이 고개를 끄덕이며 당신의 어깨를 두드린다. 그는 당신에게 진실을 밝힐 기회를 준다며 뿌듯해한다."
+					}
+				},
+				{
+					"speaker": "dax",
+					"content": {
+						"korean": "경리부장님, 괜히 허세 부리다가 이제야 속이 시원하신가 봐요!"
+					}
+				}
+			]
+		},
+		{
+			"text": {
+				"korean": "경리부장에게 비서에게 직접 물어보라고 설득한다."
+			},
+			"path": "hard",
+			"mbti": "IN",
+			"flag": "manager_directness",
+			"effects": {
+				"echo": 5,
+				"reason": 20
+			},
+			"reward": [
+				"defense_up"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "경리부장이 잠시 망설이다가, \"크흠, 내가 직접 가야겠지!\"라며 등대 방향으로 먼저 걸어간다."
+					}
+				},
+				{
+					"speaker": "dax",
+					"content": {
+						"korean": "저러다 또 체면 때문에 쓰러지시는 건 아니겠죠?"
+					}
+				}
+			]
+		}
+	],
+	"tags": [
+		"accountant_manager",
+		"dax"
+	],
+	"_design": {
+		"slot": "C",
+		"kind": "callback",
+		"person": {
+			"id": "accountant_manager",
+			"name": "경리부장",
+			"role": "경리부장"
+		},
+		"wants": "비서에게 직접 사정을 묻고 싶지만, 체면 때문에 당신에게 비서의 이야기를 들어달라고 부탁한다.",
+		"rule_link": "비서의 사정을 직접 묻는 것이 옳다는 경리부장의 의견에 따라, 당신이 먼저 비서의 이야기를 들어야 한다.",
+		"events": {},
+		"flags": {
+			"manager_trust_easy": {
+				"kind": "good",
+				"boss_penalty": 1,
+				"label": {
+					"korean": "경리부장 중재"
+				},
+				"boss_choice": {
+					"korean": "경리부장이 비서에게 먼저 당신의 말을 듣고 판단하라고 한다."
+				}
+			},
+			"manager_directness": {
+				"kind": "good",
+				"boss_penalty": 2,
+				"label": {
+					"korean": "경리부장 직언"
+				},
+				"boss_choice": {
+					"korean": "경리부장이 직접 비서의 사정을 묻는다."
+				}
+			}
+		}
+	}
+}

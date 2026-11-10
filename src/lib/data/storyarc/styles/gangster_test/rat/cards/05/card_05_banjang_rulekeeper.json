@@ -1,0 +1,348 @@
+{
+	"id": "card_05_banjang_rulekeeper",
+	"title": {
+		"korean": "부두 반장의 규칙 준수 요청"
+	},
+	"intensity": "calm",
+	"after_story": 3,
+	"before_story": 5,
+	"condition": {
+		"leaning": "reason-",
+		"among": [
+			"fighting-",
+			"fighting+",
+			"community-",
+			"community+",
+			"reason-",
+			"reason+"
+		],
+		"min": 20
+	},
+	"urgency": 8,
+	"leaning": "reason-",
+	"background_tags": [
+		"port",
+		"foggy",
+		"night",
+		"deserted",
+		"suspenseful"
+	],
+	"background_image": "https://imagedelivery.net/WTEqQNGFb-l-IHS6IGnzUQ/34e34488-79fd-4c9b-6dc0-d4e9f13e8b00/public",
+	"dialogue": [
+		{
+			"speaker": "banjang",
+			"content": {
+				"korean": "당신이 그 어떤 사건이든 절차대로 해결해서 뒷말이 없다는 분이죠?"
+			}
+		},
+		{
+			"speaker": "banjang",
+			"content": {
+				"korean": "저기, 회장님 비서님이 요즘 좀 이상해요. 그 양반이 등대에 숨겨둔 게 있는데…"
+			}
+		},
+		{
+			"speaker": "dax",
+			"content": {
+				"korean": "혹시 부두 어르신 기금이랑 관련된 걸까요?"
+			}
+		},
+		{
+			"speaker": "banjang",
+			"content": {
+				"korean": "비서님이 등대 근처 폐창고에 뭘 숨겨둔 것 같은데, 저 혼자서는 도저히 못 들어가겠어서…"
+			}
+		},
+		{
+			"speaker": "dax",
+			"content": {
+				"korean": "안개가 너무 짙어서 다른 사람 눈엔 잘 안 띄겠네요."
+			}
+		}
+	],
+	"choices": [
+		{
+			"text": {
+				"korean": "반장에게 이 부두 출입 기록을 먼저 보여달라고 요구한다."
+			},
+			"path": "easy",
+			"mbti": "ST",
+			"flag": "no_entry_record",
+			"effects": {
+				"community": 10,
+				"reason": 15,
+				"echo": 5
+			},
+			"reward": [
+				"intelligence_up"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "반장은 당신의 말에 어깨를 축 늘어뜨린다."
+					}
+				},
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "당신이 고개를 갸웃하자, 반장이 마지못해 낡은 서류철을 내민다."
+					}
+				},
+				{
+					"speaker": "dax",
+					"content": {
+						"korean": "역시 뭐든 절차대로 하는 게 최고죠!"
+					}
+				}
+			],
+			"risk": {
+				"chance": "mid",
+				"bad": {
+					"effects": {
+						"gold": -30
+					},
+					"reward": [],
+					"result": [
+						{
+							"speaker": "narrator",
+							"content": {
+								"korean": "반장은 당신의 말에 실망한 듯 고개를 푹 숙인다."
+							}
+						},
+						{
+							"speaker": "narrator",
+							"content": {
+								"korean": "반장이 마지못해 낡은 서류철을 내밀려다 손에서 미끄러져 서류가 바닷바람에 날아간다."
+							}
+						},
+						{
+							"speaker": "dax",
+							"content": {
+								"korean": "저걸 언제 다 주워요…!"
+							}
+						}
+					]
+				}
+			}
+		},
+		{
+			"text": {
+				"korean": "반장의 말대로 폐창고로 바로 향해 비서의 물건을 찾는다."
+			},
+			"path": "hard",
+			"mbti": "FP",
+			"flag": "shortcut_to_warehouse",
+			"effects": {
+				"reason": -15,
+				"echo": -5,
+				"fighting": 10
+			},
+			"reward": [
+				"defense_up"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "반장은 당신의 말에 눈을 빛내며 앞장선다."
+					}
+				},
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "폐창고로 향하던 중, 멀리서 들려오는 순찰차 소리에 반장이 당신의 팔을 잡아끌고 숨는다."
+					}
+				},
+				{
+					"speaker": "dax",
+					"content": {
+						"korean": "괜히 따라나섰다가 우리까지 잡히겠어요!"
+					}
+				}
+			],
+			"risk": {
+				"chance": "high",
+				"bad": {
+					"effects": {
+						"gold": -20
+					},
+					"reward": [],
+					"result": [
+						{
+							"speaker": "narrator",
+							"content": {
+								"korean": "반장은 당신의 말에 신이 난 듯 앞장선다."
+							}
+						},
+						{
+							"speaker": "narrator",
+							"content": {
+								"korean": "폐창고로 향하던 중, 멀리서 들려오는 순찰차 소리에 반장이 혼자 살겠다고 엉뚱한 방향으로 도망쳐 버린다."
+							}
+						},
+						{
+							"speaker": "dax",
+							"content": {
+								"korean": "저 양반이 우릴 버리고 튀었네요!"
+							}
+						}
+					]
+				}
+			}
+		},
+		{
+			"text": {
+				"korean": "지금 당장 반장에게 폐창고 열쇠를 내놓으라고 명령한다."
+			},
+			"path": "stat",
+			"mbti": "TJ",
+			"require": {
+				"stat": "reason",
+				"op": "<=",
+				"value": -40
+			},
+			"flag": "banjang_obeys",
+			"effects": {
+				"reason": -20,
+				"echo": 10
+			},
+			"reward": [
+				"attack_up"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "반장은 당신의 단호한 말에 움찔하며 주머니에서 녹슨 열쇠를 꺼낸다."
+					}
+				},
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "당신의 카리스마에 눌린 반장이 고개를 조아린다."
+					}
+				},
+				{
+					"speaker": "dax",
+					"content": {
+						"korean": "역시 당신이 나서면 일이 착착 진행되네요!"
+					}
+				}
+			]
+		},
+		{
+			"text": {
+				"korean": "반장의 작업복 주머니에서 폐창고 열쇠를 슬쩍 꺼내 본다."
+			},
+			"path": "fun",
+			"mbti": "EN",
+			"effects": {
+				"reason": -20,
+				"gold": 100
+			},
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "당신이 손을 뻗자 반장이 화들짝 놀라며 주머니를 감싼다."
+					}
+				},
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "반장은 황급히 주머니에서 열쇠를 꺼내 당신에게 건네주며 애원하듯 말한다."
+					}
+				},
+				{
+					"speaker": "dax",
+					"content": {
+						"korean": "저렇게 겁먹은 반장은 처음 봐요!"
+					}
+				}
+			],
+			"risk": {
+				"chance": "low",
+				"bad": {
+					"effects": {
+						"gold": -40
+					},
+					"reward": [],
+					"result": [
+						{
+							"speaker": "narrator",
+							"content": {
+								"korean": "당신이 손을 뻗자 반장이 비명을 지르며 주머니를 감싼다."
+							}
+						},
+						{
+							"speaker": "narrator",
+							"content": {
+								"korean": "반장이 몸을 뒤트는 바람에 열쇠는 고사하고 그의 점심 도시락이 떨어져 바닥에 나뒹군다."
+							}
+						},
+						{
+							"speaker": "dax",
+							"content": {
+								"korean": "반장님 점심은 제가 사드릴게요…!"
+							}
+						}
+					]
+				}
+			}
+		}
+	],
+	"tags": [
+		"banjang",
+		"dax"
+	],
+	"_design": {
+		"slot": "B",
+		"kind": "rep",
+		"person": {
+			"id": "banjang",
+			"name": "반장",
+			"role": "부두 일꾼 반장"
+		},
+		"wants": "규칙을 지키는 당신에게 폐창고에 숨겨진 비서의 물건을 절차대로 찾아달라 부탁한다.",
+		"rule_link": "몰아붙이기 전에 먼저 사정을 묻는 것",
+		"rep": "reason-",
+		"events": {},
+		"flags": {
+			"no_entry_record": {
+				"kind": "bad",
+				"boss_penalty": -1,
+				"label": {
+					"korean": "출입 기록 없음"
+				},
+				"boss_line": {
+					"korean": "부두 출입 기록이 없어 비서의 정확한 움직임을 파악하기 어렵다."
+				}
+			},
+			"shortcut_to_warehouse": {
+				"kind": "good",
+				"boss_penalty": 1,
+				"label": {
+					"korean": "창고 지름길"
+				},
+				"boss_choice": {
+					"korean": "반장의 도움으로 폐창고로 향하는 지름길을 안다."
+				}
+			},
+			"banjang_obeys": {
+				"kind": "good",
+				"boss_penalty": 2,
+				"label": {
+					"korean": "반장의 복종"
+				},
+				"boss_choice": {
+					"korean": "반장이 당신의 명령에 복종하여 폐창고 열쇠를 내준다."
+				}
+			}
+		}
+	}
+}

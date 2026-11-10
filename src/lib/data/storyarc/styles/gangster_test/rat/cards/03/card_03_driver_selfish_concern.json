@@ -1,0 +1,291 @@
+{
+	"id": "card_03_driver_selfish_concern",
+	"title": {
+		"korean": "회장님 차가 저쪽에"
+	},
+	"intensity": "calm",
+	"after_story": 5,
+	"before_story": 7,
+	"condition": {
+		"leaning": "community-",
+		"among": [
+			"fighting-",
+			"fighting+",
+			"community-",
+			"community+",
+			"reason-",
+			"reason+"
+		],
+		"min": 20
+	},
+	"urgency": 8,
+	"leaning": "community-",
+	"background_tags": [
+		"serverroom",
+		"night",
+		"dim",
+		"empty",
+		"tense"
+	],
+	"background_image": "https://imagedelivery.net/WTEqQNGFb-l-IHS6IGnzUQ/9d4205ad-f614-4de6-d3dd-806a37d9e200/public",
+	"dialogue": [
+		{
+			"speaker": "driver",
+			"content": {
+				"korean": "당신이 자기 몫부터 챙겨서 빈틈없는 해결사라는 소문이 자자하던데,"
+			}
+		},
+		{
+			"speaker": "driver",
+			"content": {
+				"korean": "혹시 저 서버실 문을 부수시려는 건 아니시겠죠? 회장님 차가 저쪽에 서 있어서요."
+			}
+		},
+		{
+			"speaker": "dax",
+			"content": {
+				"korean": "어, 운전기사님! 저희는 그냥…!"
+			}
+		},
+		{
+			"speaker": "driver",
+			"content": {
+				"korean": "혹시라도 소란이 생기면 회장님께서 저에게 불호령을 내리실 겁니다, 끄윽!"
+			}
+		},
+		{
+			"speaker": "narrator",
+			"content": {
+				"korean": "운전기사가 서버실 문 앞에 바싹 붙어 버티고 선다."
+			}
+		},
+		{
+			"speaker": "driver",
+			"content": {
+				"korean": "하지만 소문이 그렇게 파다해서… 회장님께 보고할 수밖에 없게 될 겁니다, 흐읍!"
+			}
+		}
+	],
+	"choices": [
+		{
+			"text": {
+				"korean": "운전기사에게 회장님 차가 망가질 일 없다고 단호하게 말한다."
+			},
+			"path": "easy",
+			"mbti": "ST",
+			"flag": "driver_blocking_bad",
+			"effects": {
+				"fighting": 15,
+				"echo": -5
+			},
+			"reward": [
+				"attack_up"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "당신의 단호한 말에 운전기사가 움찔 놀라 뒷걸음친다."
+					}
+				},
+				{
+					"speaker": "driver",
+					"content": {
+						"korean": "끄윽… 차마 회장님 차에 흠집 하나 못 내게 해 주십시오, 흐읍!"
+					}
+				},
+				{
+					"speaker": "dax",
+					"content": {
+						"korean": "운전기사님이 더 겁먹으신 것 같은데요!"
+					}
+				}
+			],
+			"risk": {
+				"chance": "mid",
+				"bad": {
+					"reward": [
+						"attack_down"
+					],
+					"result": [
+						{
+							"speaker": "narrator",
+							"content": {
+								"korean": "당신의 말에 운전기사가 놀라 발을 헛디디며 서버실 문에 기대 주저앉는다."
+							}
+						},
+						{
+							"speaker": "driver",
+							"content": {
+								"korean": "으아악! 회장님께 보고할 수밖에 없게 될 겁니다, 흐읍!"
+							}
+						},
+						{
+							"speaker": "dax",
+							"content": {
+								"korean": "운전기사님이 문을 더 단단히 막으셨네요!"
+							}
+						}
+					]
+				}
+			}
+		},
+		{
+			"text": {
+				"korean": "운전기사를 안심시키고 다른 곳으로 유인한다."
+			},
+			"path": "hard",
+			"mbti": "NF",
+			"flag": "driver_clears_path",
+			"effects": {
+				"community": 15,
+				"echo": 10
+			},
+			"reward": [
+				"defense_up"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "당신의 설득에 운전기사가 안도하며 다른 곳으로 시선을 돌린다."
+					}
+				},
+				{
+					"speaker": "driver",
+					"content": {
+						"korean": "아, 아닙니다. 그럼 저쪽으로 가서 잠시…"
+					}
+				},
+				{
+					"speaker": "dax",
+					"content": {
+						"korean": "운전기사님이 금방 진정하셨네요!"
+					}
+				}
+			],
+			"risk": {
+				"chance": "high",
+				"bad": {
+					"effects": {
+						"gold": -20
+					},
+					"reward": [],
+					"result": [
+						{
+							"speaker": "narrator",
+							"content": {
+								"korean": "당신의 설득에 운전기사가 안심하는 듯했지만, 발을 헛디뎌 옆에 쌓인 폐상자를 넘어뜨린다."
+							}
+						},
+						{
+							"speaker": "driver",
+							"content": {
+								"korean": "흐읍! 으악, 회장님께서 아시면 또 불호령이…!"
+							}
+						},
+						{
+							"speaker": "dax",
+							"content": {
+								"korean": "운전기사님이 더 소란을 만드셨어요!"
+							}
+						}
+					]
+				}
+			}
+		},
+		{
+			"text": {
+				"korean": "운전기사에게 회장님 차에 흠집 하나 나지 않게 하겠다고 선언한다."
+			},
+			"path": "stat",
+			"mbti": "TJ",
+			"require": {
+				"stat": "community",
+				"op": "<=",
+				"value": -40
+			},
+			"flag": "driver_fears_you",
+			"effects": {
+				"fighting": 20,
+				"community": -10,
+				"reason": -10
+			},
+			"reward": [
+				"shield"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "당신의 결연한 태도에 운전기사는 더 이상 토를 달지 못하고 옆으로 물러난다."
+					}
+				},
+				{
+					"speaker": "driver",
+					"content": {
+						"korean": "알겠습니다… 부디… 제발 무사히…"
+					}
+				},
+				{
+					"speaker": "dax",
+					"content": {
+						"korean": "운전기사님이 바로 말을 들으시네요!"
+					}
+				}
+			]
+		}
+	],
+	"tags": [
+		"driver",
+		"dax"
+	],
+	"_design": {
+		"slot": "C",
+		"kind": "rep",
+		"person": {
+			"id": "driver",
+			"name": "운전기사",
+			"role": "운전기사"
+		},
+		"wants": "주인공이 회장님 차 근처에서 소란을 피우지 않기를. 자신의 안위를 최우선으로 생각.",
+		"rule_link": "서버실 문 앞 소란이 운전기사에게 무엇을 증명하는지(자신의 안위 위협) 따져 볼지, 보이는 대로(문을 부수는 행동) 믿을지.",
+		"rep": "community-",
+		"events": {},
+		"flags": {
+			"driver_blocking_bad": {
+				"kind": "bad",
+				"boss_penalty": -1,
+				"label": {
+					"korean": "운전기사의 방해"
+				},
+				"boss_line": {
+					"korean": "운전기사가 계속 문 앞을 가로막아 몸싸움이 일어난다."
+				}
+			},
+			"driver_clears_path": {
+				"kind": "good",
+				"boss_penalty": 1,
+				"label": {
+					"korean": "운전기사의 도움"
+				},
+				"boss_choice": {
+					"korean": "운전기사가 방해물을 치워 주어 싸움에 집중할 수 있다."
+				}
+			},
+			"driver_fears_you": {
+				"kind": "good",
+				"boss_penalty": 2,
+				"label": {
+					"korean": "운전기사의 공포"
+				},
+				"boss_choice": {
+					"korean": "운전기사가 당신을 두려워해 멀리 피한다."
+				}
+			}
+		}
+	}
+}

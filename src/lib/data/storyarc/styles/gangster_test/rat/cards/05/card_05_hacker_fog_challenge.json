@@ -1,0 +1,289 @@
+{
+	"id": "card_05_hacker_fog_challenge",
+	"title": {
+		"korean": "해커 간부의 안개 속 시험"
+	},
+	"intensity": "calm",
+	"after_story": 5,
+	"before_story": 7,
+	"background_tags": [
+		"fog",
+		"lighthouse",
+		"cart_tracks",
+		"night",
+		"eerie"
+	],
+	"background_image": "https://imagedelivery.net/WTEqQNGFb-l-IHS6IGnzUQ/a6ac05f1-6a51-4261-76bc-5c79487ce300/public",
+	"dialogue": [
+		{
+			"speaker": "narrator",
+			"content": {
+				"korean": "짙은 안개 속, 당신의 무전기에서 지직거리는 소리가 들린다."
+			}
+		},
+		{
+			"speaker": "narrator",
+			"content": {
+				"korean": "무전기 너머로 해커 간부의 음흉한 웃음소리가 들린다."
+			}
+		},
+		{
+			"speaker": "hacker_executive",
+			"content": {
+				"korean": "크크크… 등대로 가는 길? 이 안개 속에서 길을 아는 건 나뿐이지! 안내해 줄까? 대가는 물론 있지."
+			}
+		},
+		{
+			"speaker": "dax",
+			"content": {
+				"korean": "해커 간부님 목소리네요! 저 사람, 길 안내는 잘하지만 꿍꿍이가 있을 거예요!"
+			}
+		},
+		{
+			"speaker": "hacker_executive",
+			"content": {
+				"korean": "꿍꿍이라니? 난 그저… 심심해서 그래! 내기가 어때?"
+			}
+		}
+	],
+	"choices": [
+		{
+			"text": {
+				"korean": "해커 간부의 길 안내를 받으며 등대로 향한다."
+			},
+			"path": "easy",
+			"mbti": "EN",
+			"effects": {
+				"echo": 5,
+				"gold": 100
+			},
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "해커 간부가 무전으로 정확한 길을 알려줘 헤매지 않고 등대 근처까지 도착한다."
+					}
+				},
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "그는 당신에게 다음에도 자신을 찾으라고 말한다."
+					}
+				},
+				{
+					"speaker": "dax",
+					"content": {
+						"korean": "해커 간부님 덕분에 길은 찾았는데… 왠지 사기당한 기분이에요!"
+					}
+				}
+			],
+			"risk": {
+				"chance": "mid",
+				"bad": {
+					"reward": [
+						"hp_down"
+					],
+					"result": [
+						{
+							"speaker": "narrator",
+							"content": {
+								"korean": "해커 간부가 안개 속에서 엉뚱한 길을 알려줘, 당신의 차가 그만 웅덩이에 빠져 버린다."
+							}
+						},
+						{
+							"speaker": "dax",
+							"content": {
+								"korean": "이럴 줄 알았어요! 저 사람, 일부러 엉뚱한 길을 알려줬네요!"
+							}
+						}
+					]
+				}
+			}
+		},
+		{
+			"text": {
+				"korean": "해커 간부의 제안을 거절하고, 직접 길을 찾아 나선다."
+			},
+			"path": "hard",
+			"mbti": "IS",
+			"effects": {
+				"fighting": 10,
+				"reason": 10
+			},
+			"reward": [
+				"defense_up"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "해커 간부는 투덜거리며 무전을 끊는다. 당신은 안개 속에서 지도를 보며 길을 찾아 나선다."
+					}
+				},
+				{
+					"speaker": "dax",
+					"content": {
+						"korean": "후우… 해커 간부님 말 듣는 것보다 이게 더 마음 편해요!"
+					}
+				}
+			],
+			"risk": {
+				"chance": "high",
+				"bad": {
+					"effects": {
+						"gold": -20
+					},
+					"reward": [],
+					"result": [
+						{
+							"speaker": "narrator",
+							"content": {
+								"korean": "해커 간부의 무전을 끊자마자, 당신의 차 라디오에서 알 수 없는 기분 나쁜 노랫소리가 크게 들려온다."
+							}
+						},
+						{
+							"speaker": "dax",
+							"content": {
+								"korean": "으으, 저 노래 때문에 너무 어지러워요! 길에 집중할 수가 없어요!"
+							}
+						}
+					]
+				}
+			}
+		},
+		{
+			"text": {
+				"korean": "{actor}이(가) 해커 간부에게 내기에서 이길 확률을 먼저 물어본다."
+			},
+			"path": "lock",
+			"mbti": "NT",
+			"require": {
+				"mbti": "NT"
+			},
+			"effects": {
+				"reason": 10,
+				"echo": 5
+			},
+			"reward": [
+				"intelligence_up"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "{actor}이(가) 해커 간부에게 내기의 규칙과 확률을 정확히 따져 묻는다."
+					}
+				},
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "해커 간부는 예상치 못한 질문에 당황하며 버벅거린다."
+					}
+				},
+				{
+					"speaker": "dax",
+					"content": {
+						"korean": "저, 저렇게 따지고 드니 해커 간부님도 할 말이 없나 봐요!"
+					}
+				}
+			]
+		},
+		{
+			"text": {
+				"korean": "해커 간부에게 안개 속에서 등대 불빛을 찾는 내기를 제안한다."
+			},
+			"path": "fun",
+			"mbti": "EP",
+			"effects": {
+				"gold": -50,
+				"community": -10
+			},
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "해커 간부가 당신의 제안에 키득키득 웃으며 흥미로워한다."
+					}
+				},
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "그는 등대 불빛을 찾는 건 '운'이라며, 자신의 '운'을 시험해 보겠냐고 제안한다."
+					}
+				},
+				{
+					"speaker": "dax",
+					"content": {
+						"korean": "어르신, 저 사람한테 돈을 거는 건 너무 위험한데요!"
+					}
+				}
+			],
+			"event": "minigame_slot",
+			"event_intro": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "해커 간부가 번쩍이는 슬롯머신 손잡이를 당기며 씨익 웃는다."
+					}
+				},
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "등대 불빛 그림 세 개가 모두 맞춰지면, 당신이 이기는 내기다."
+					}
+				}
+			],
+			"risk": {
+				"chance": "low",
+				"bad": {
+					"reward": [
+						"defense_down"
+					],
+					"result": [
+						{
+							"speaker": "narrator",
+							"content": {
+								"korean": "해커 간부가 당신의 제안에 어처구니없다는 표정을 짓는다."
+							}
+						},
+						{
+							"speaker": "narrator",
+							"content": {
+								"korean": "그는 안개 속에서 등대 불빛을 찾는 건 무모한 행동이라며 당신을 비웃는다."
+							}
+						},
+						{
+							"speaker": "dax",
+							"content": {
+								"korean": "해커 간부님, 저희를 완전 바보로 보고 있어요!"
+							}
+						}
+					]
+				}
+			}
+		}
+	],
+	"tags": [
+		"hacker_executive",
+		"dax"
+	],
+	"_design": {
+		"slot": "C",
+		"kind": "normal",
+		"person": {
+			"role": "해커 간부",
+			"name": "해커 간부",
+			"id": "hacker_executive"
+		},
+		"wants": "안개 속 길을 무전으로 안내하며 자신의 실력을 과시하고, 그 대가로 내기 게임을 제안한다.",
+		"rule_link": "해커 간부가 안내하는 이유를 먼저 듣고, 그의 의도를 파악하여 상황을 몰아붙이지 않도록 해야 한다.",
+		"events": {
+			"fun": "해커 간부가 안개 속에서 길을 찾는 능력을 내기로 과시하고 싶어 한다."
+		},
+		"flags": {}
+	}
+}

@@ -1,0 +1,363 @@
+{
+	"id": "card_05_gang_uncle_cactus",
+	"title": {
+		"korean": "비서실 앞 선인장"
+	},
+	"intensity": "calm",
+	"after_story": 1,
+	"before_story": 3,
+	"condition": {
+		"leaning": "fighting+",
+		"among": [
+			"fighting-",
+			"fighting+",
+			"community-",
+			"community+",
+			"reason-",
+			"reason+"
+		],
+		"min": 20
+	},
+	"urgency": 8,
+	"leaning": "fighting+",
+	"background_tags": [
+		"corridor",
+		"fluorescent_light",
+		"few_people",
+		"calm_atmosphere",
+		"office"
+	],
+	"background_image": "https://imagedelivery.net/WTEqQNGFb-l-IHS6IGnzUQ/0021bc8b-a350-4a21-5a17-694249460400/public",
+	"dialogue": [
+		{
+			"speaker": "narrator",
+			"content": {
+				"korean": "복도 끝, 비서실 문 앞에 백상어파 아재가 서 있다. 넥타이를 매만지며 당신을 보며 쭈뼛거린다."
+			}
+		},
+		{
+			"speaker": "narrator",
+			"content": {
+				"korean": "아재가 헛기침을 하며 넥타이를 조심스럽게 고쳐 맨다."
+			}
+		},
+		{
+			"speaker": "gang_uncle",
+			"content": {
+				"korean": "당신이 그, '말로 해결하는' 해결사 양반 맞지? 비서실 쪽으로 가는 길에 잠시 나 좀 보지?"
+			}
+		},
+		{
+			"speaker": "dax",
+			"content": {
+				"korean": "아재가 뭔가 곤란한 일이 있는 것 같은데요?"
+			}
+		},
+		{
+			"speaker": "narrator",
+			"content": {
+				"korean": "아재가 다시 헛기침을 한다."
+			}
+		},
+		{
+			"speaker": "gang_uncle",
+			"content": {
+				"korean": "그게 말이지, 비서실 앞 화분에 내가 아끼는 꼬마 선인장이 말라 죽어가거든…"
+			}
+		},
+		{
+			"speaker": "gang_uncle",
+			"content": {
+				"korean": "누가 물 좀 줬으면 좋겠는데, 내가 직접 나섰다간 켁, 켁… 좀 그렇잖아."
+			}
+		}
+	],
+	"choices": [
+		{
+			"text": {
+				"korean": "선인장에 물을 주고 아재에게 '걱정 마시라'며 안심시킨다."
+			},
+			"path": "easy",
+			"mbti": "EN",
+			"flag": "cactus_watered",
+			"effects": {
+				"fighting": 15,
+				"echo": 5
+			},
+			"reward": [
+				"heal"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "당신이 화분에 물을 주자, 아재는 한숨을 쉬며 안도한다."
+					}
+				},
+				{
+					"speaker": "gang_uncle",
+					"content": {
+						"korean": "켁, 켁… 고맙네! 덕분에 살았어! 내일은 켁, 켁… 내가 비서님 화분에 물 주는 척 몰래 물 줄게!"
+					}
+				},
+				{
+					"speaker": "dax",
+					"content": {
+						"korean": "아재의 선인장 사랑은 아무도 모르게 지켜줘야죠!"
+					}
+				}
+			],
+			"risk": {
+				"chance": "mid",
+				"bad": {
+					"effects": {
+						"gold": -20
+					},
+					"reward": [],
+					"result": [
+						{
+							"speaker": "narrator",
+							"content": {
+								"korean": "당신이 화분에 물을 주려는 순간, 아재가 당신을 돕겠다고 나서다 주머니에서 지갑을 떨어뜨린다."
+							}
+						},
+						{
+							"speaker": "gang_uncle",
+							"content": {
+								"korean": "켁, 켁… 이런! 지갑이!"
+							}
+						},
+						{
+							"speaker": "dax",
+							"content": {
+								"korean": "아재가 지갑을 허둥지둥 숨기는데, 저거 혹시 비상금 아니에요? 켁켁거리는 게 더 수상하네요!"
+							}
+						}
+					]
+				}
+			}
+		},
+		{
+			"text": {
+				"korean": "쓸데없는 일에 시간을 낭비할 수 없다며 단호하게 거절한다."
+			},
+			"path": "hard",
+			"mbti": "TJ",
+			"flag": "gang_uncle_ignored",
+			"effects": {
+				"fighting": -20,
+				"echo": -10
+			},
+			"reward": [
+				"move_range_up"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "당신의 단호한 말에 아재는 넥타이를 쥔 손을 떨며 움츠러든다."
+					}
+				},
+				{
+					"speaker": "gang_uncle",
+					"content": {
+						"korean": "켁, 켁… 그, 그래. 바쁜데 미안했네."
+					}
+				},
+				{
+					"speaker": "dax",
+					"content": {
+						"korean": "아재가 좀 서운해하는 것 같은데요. 너무 매몰찼나요?"
+					}
+				}
+			],
+			"risk": {
+				"chance": "high",
+				"bad": {
+					"effects": {
+						"gold": -20
+					},
+					"reward": [],
+					"result": [
+						{
+							"speaker": "narrator",
+							"content": {
+								"korean": "당신의 단호한 말에 아재는 입술을 삐죽이며 시무룩해한다."
+							}
+						},
+						{
+							"speaker": "gang_uncle",
+							"content": {
+								"korean": "켁, 켁… 너무하네. 내가 괜히 붙잡았구만!"
+							}
+						},
+						{
+							"speaker": "dax",
+							"content": {
+								"korean": "아재가 우리 발밑에 자기 넥타이를 밟고 지나가라고 던져버렸어요! 이건 좀 유치한데요?"
+							}
+						}
+					]
+				}
+			}
+		},
+		{
+			"text": {
+				"korean": "아재의 마음을 읽고 '선인장도 아재도 휴식이 필요하다'며 함께 쉬자고 권한다."
+			},
+			"path": "stat",
+			"mbti": "IF",
+			"require": {
+				"stat": "fighting",
+				"op": ">=",
+				"value": 40
+			},
+			"flag": "gang_uncle_comforted",
+			"effects": {
+				"community": 15,
+				"echo": 10,
+				"fighting": 20
+			},
+			"reward": [
+				"cooldown_reset"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "당신의 따뜻한 말에 아재는 넥타이를 풀고 감격한 표정으로 당신을 본다."
+					}
+				},
+				{
+					"speaker": "gang_uncle",
+					"content": {
+						"korean": "켁, 켁… 당신은 진짜배기 해결사네! 내 마음을 어찌 그리 잘 아나! 고맙네, 고마워!"
+					}
+				},
+				{
+					"speaker": "dax",
+					"content": {
+						"korean": "아재 눈물 콧물 다 빼네요! 선인장이 부러워하겠어요!"
+					}
+				}
+			]
+		},
+		{
+			"text": {
+				"korean": "선인장을 뽑아 들고 아재에게 '이걸로 비서실 문을 부술까?'라고 묻는다."
+			},
+			"path": "fun",
+			"mbti": "EP",
+			"effects": {
+				"reason": 20,
+				"fighting": -10,
+				"echo": 5
+			},
+			"reward": [
+				"stun"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "당신이 선인장을 뽑아 들자 아재는 화들짝 놀라며 손사래를 친다."
+					}
+				},
+				{
+					"speaker": "gang_uncle",
+					"content": {
+						"korean": "켁, 켁… 안 돼! 비서님 화분인데! 켁! 그거 뽑지 마!"
+					}
+				},
+				{
+					"speaker": "dax",
+					"content": {
+						"korean": "아재가 기겁하네요! 선인장으로 싸우는 건 좀… 독특하네요!"
+					}
+				}
+			],
+			"risk": {
+				"chance": "low",
+				"bad": {
+					"effects": {
+						"gold": -10
+					},
+					"reward": [],
+					"result": [
+						{
+							"speaker": "narrator",
+							"content": {
+								"korean": "당신이 선인장을 뽑아 들다 실수로 손가락에 가시가 박힌다. 아재는 엉엉 울며 선인장을 도로 심는다."
+							}
+						},
+						{
+							"speaker": "gang_uncle",
+							"content": {
+								"korean": "켁, 켁… 내 선인장! 당신 손은 괜찮아?"
+							}
+						},
+						{
+							"speaker": "dax",
+							"content": {
+								"korean": "아야! 손가락에 가시가 박혔어요! 그래도 아재는 선인장이 더 걱정인가 봐요."
+							}
+						}
+					]
+				}
+			}
+		}
+	],
+	"tags": [
+		"gang_uncle",
+		"dax"
+	],
+	"_design": {
+		"slot": "A",
+		"kind": "rep",
+		"person": {
+			"id": "gang_uncle",
+			"name": "백상어파 아재",
+			"role": "조직원"
+		},
+		"wants": "비서실 앞 꼬마 선인장에 물을 주고 싶어 함. 체면 때문에 자신이 직접 나서지 못함.",
+		"rule_link": "남의 어려움을 지나치지 않고, 먼저 다가가 사정을 살피는 당신의 모습에 모두가 안심합니다.",
+		"rep": "fighting+",
+		"events": {},
+		"flags": {
+			"cactus_watered": {
+				"kind": "bad",
+				"boss_penalty": -1,
+				"label": {
+					"korean": "선인장 구원"
+				},
+				"boss_line": {
+					"korean": "백상어파 아재가 고마워하며 싸움에서 당신을 돕는다."
+				}
+			},
+			"gang_uncle_ignored": {
+				"kind": "good",
+				"boss_penalty": 1,
+				"label": {
+					"korean": "아재 실망"
+				},
+				"boss_choice": {
+					"korean": "백상어파 아재가 당신에게 실망하여 당신을 방해한다."
+				}
+			},
+			"gang_uncle_comforted": {
+				"kind": "good",
+				"boss_penalty": 2,
+				"label": {
+					"korean": "아재 위로"
+				},
+				"boss_choice": {
+					"korean": "백상어파 아재가 당신에게 깊이 감사하며 싸움에 큰 도움을 준다."
+				}
+			}
+		}
+	}
+}

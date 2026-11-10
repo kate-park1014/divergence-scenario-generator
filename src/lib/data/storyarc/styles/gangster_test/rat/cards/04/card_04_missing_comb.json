@@ -1,0 +1,291 @@
+{
+	"id": "card_04_missing_comb",
+	"title": {
+		"korean": "사라진 빗"
+	},
+	"intensity": "calm",
+	"after_story": 5,
+	"before_story": 7,
+	"condition": {
+		"leaning": "reason-",
+		"among": [
+			"fighting-",
+			"fighting+",
+			"community-",
+			"community+",
+			"reason-",
+			"reason+"
+		],
+		"min": 20
+	},
+	"urgency": 8,
+	"leaning": "reason-",
+	"background_tags": [
+		"stairs",
+		"daytime",
+		"bright",
+		"few_people",
+		"tense"
+	],
+	"background_image": "https://imagedelivery.net/WTEqQNGFb-l-IHS6IGnzUQ/0ae813bd-8183-437e-644c-6a15fd24b300/public",
+	"dialogue": [
+		{
+			"speaker": "ibalsa_aje",
+			"content": {
+				"korean": "당신이 그, 뭐든 규칙대로 딱딱 처리한다는 해결사죠? 마침 잘 오셨습니다."
+			}
+		},
+		{
+			"speaker": "ibalsa_aje",
+			"content": {
+				"korean": "이런, 이 바닥은 원래 깨끗해야 하는 건데..."
+			}
+		},
+		{
+			"speaker": "ibalsa_aje",
+			"content": {
+				"korean": "저 빗 좀 보십시오. 저건 제 것이 아닌데, 누가 저런 걸 아무 데나 흘리고 다닌단 말입니까?"
+			}
+		},
+		{
+			"speaker": "dax",
+			"content": {
+				"korean": "아재가 청결에 유독 예민하긴 한데... 저런 빗 하나에도 신경이 곤두서 있네요."
+			}
+		},
+		{
+			"speaker": "ibalsa_aje",
+			"content": {
+				"korean": "이 얼룩만 보면 속이 뒤집힙니다. 누가 이렇게 만들었는지..."
+			}
+		}
+	],
+	"choices": [
+		{
+			"text": {
+				"korean": "빗을 주워 들고 주변 사람들에게 주인과 분실 경위를 묻는다."
+			},
+			"path": "easy",
+			"mbti": "TJ",
+			"flag": "misplaced_comb",
+			"effects": {
+				"echo": 10,
+				"reason": 20
+			},
+			"reward": [
+				"intelligence_up"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "당신이 빗을 들고 묻자, 이발사 아재는 고개를 끄덕이며 '역시 다르구만!' 하고 감탄한다."
+					}
+				},
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "하지만 아무도 빗의 주인을 자처하지 않아 시간만 지체된다."
+					}
+				},
+				{
+					"speaker": "dax",
+					"content": {
+						"korean": "빗이 아무리 소중해도 저렇게 티 나게 잃어버릴 리가... 누가 일부러 흘린 거 아닐까요?"
+					}
+				}
+			],
+			"risk": {
+				"chance": "mid",
+				"bad": {
+					"effects": {
+						"gold": -30
+					},
+					"reward": [],
+					"result": [
+						{
+							"speaker": "narrator",
+							"content": {
+								"korean": "빗을 주워 들고 주변 사람들에게 주인과 분실 경위를 묻자,"
+							}
+						},
+						{
+							"speaker": "narrator",
+							"content": {
+								"korean": "이발사 아재가 빗을 낚아채며 '이건 내 빗이 아니야!' 하고 고함친다."
+							}
+						},
+						{
+							"speaker": "narrator",
+							"content": {
+								"korean": "이발소에 있던 손님들이 불만을 쏟아내며 소란이 커진다."
+							}
+						}
+					]
+				}
+			}
+		},
+		{
+			"text": {
+				"korean": "빗을 아무도 보지 못하게 주머니에 넣고 조용히 사라진다."
+			},
+			"path": "hard",
+			"mbti": "FP",
+			"flag": "suspicious_comb",
+			"effects": {
+				"gold": -100,
+				"reason": -20
+			},
+			"reward": [
+				"move_range_up"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "당신이 빗을 주머니에 넣자,"
+					}
+				},
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "이발사 아재는 눈을 부릅뜨고 '어딜 그렇게 급히 가십니까?' 하고 당신을 붙잡는다."
+					}
+				},
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "아재가 허리에 찬 날카로운 가위가 번뜩인다."
+					}
+				},
+				{
+					"speaker": "dax",
+					"content": {
+						"korean": "아재가 저렇게 매의 눈으로 보고 있는데... 괜히 들켰네요."
+					}
+				}
+			],
+			"risk": {
+				"chance": "high",
+				"bad": {
+					"effects": {
+						"gold": -20
+					},
+					"reward": [],
+					"result": [
+						{
+							"speaker": "narrator",
+							"content": {
+								"korean": "당신이 빗을 주머니에 넣는 순간, 빗이 미끄러져 계단 아래로 굴러떨어진다."
+							}
+						},
+						{
+							"speaker": "narrator",
+							"content": {
+								"korean": "이발사 아재가 '내 빗도 아닌데 왜 저렇게 아까워하지?' 하며 당신을 수상하게 쳐다본다."
+							}
+						}
+					]
+				}
+			}
+		},
+		{
+			"text": {
+				"korean": "빗을 이발사 아재에게 건네며 '질서를 유지하는 것도 중요하지만, 급한 일부터 처리하죠.'라고 말한다."
+			},
+			"path": "stat",
+			"mbti": "ST",
+			"require": {
+				"stat": "reason",
+				"op": "<=",
+				"value": -40
+			},
+			"flag": "prioritize_urgent",
+			"effects": {
+				"fighting": 10,
+				"reason": -10
+			},
+			"reward": [
+				"shield"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "당신의 단호한 말에 이발사 아재는 잠시 망설이더니 고개를 끄덕인다."
+					}
+				},
+				{
+					"speaker": "ibalsa_aje",
+					"content": {
+						"korean": "옳은 말씀이십니다. 급한 불부터 끄는 게 인지상정이죠."
+					}
+				},
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "아재가 빗을 받아 들고 한숨을 쉰다."
+					}
+				},
+				{
+					"speaker": "dax",
+					"content": {
+						"korean": "역시 당신이 말하면 다들 따르는군요. 아재도 꼼짝 못 하네요."
+					}
+				}
+			]
+		}
+	],
+	"tags": [
+		"ibalsa_aje",
+		"dax"
+	],
+	"_design": {
+		"slot": "C",
+		"kind": "rep",
+		"person": {
+			"id": "ibalsa_aje",
+			"name": "이발사 아재",
+			"role": "이발사"
+		},
+		"wants": "이발사 아재는 계단에 떨어진 낯선 빗을 보며 조직의 질서가 흐트러진 것에 불안해한다. 당신에게 이 빗의 주인을 찾아주기를 원한다.",
+		"rule_link": "말 못 하는 증거물을 숨긴 사람이 누군지 찾아내어 질서를 회복하는 사건.",
+		"rep": "reason-",
+		"events": {},
+		"flags": {
+			"misplaced_comb": {
+				"kind": "bad",
+				"boss_penalty": -1,
+				"label": {
+					"korean": "잃어버린 빗"
+				},
+				"boss_line": {
+					"korean": "금고실 문 앞에 떨어진 빗을 발견하고 주워 든다."
+				}
+			},
+			"suspicious_comb": {
+				"kind": "good",
+				"boss_penalty": 1,
+				"label": {
+					"korean": "수상한 빗"
+				},
+				"boss_choice": {
+					"korean": "금고실 문 앞에서 수상한 빗을 발견하고 몰래 숨긴다."
+				}
+			},
+			"prioritize_urgent": {
+				"kind": "good",
+				"boss_penalty": 2,
+				"label": {
+					"korean": "급한 일 우선"
+				},
+				"boss_choice": {
+					"korean": "금고실 문 앞에서 이발사 아재의 방해를 능숙하게 처리하고 들어간다."
+				}
+			}
+		}
+	}
+}

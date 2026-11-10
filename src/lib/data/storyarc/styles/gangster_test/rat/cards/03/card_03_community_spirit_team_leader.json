@@ -1,0 +1,395 @@
+{
+	"id": "card_03_community_spirit_team_leader",
+	"title": {
+		"korean": "부두 어르신 기금 장부의 행방"
+	},
+	"intensity": "calm",
+	"after_story": 7,
+	"before_story": 9,
+	"condition": {
+		"leaning": "community+",
+		"among": [
+			"fighting-",
+			"fighting+",
+			"community-",
+			"community+",
+			"reason-",
+			"reason+"
+		],
+		"min": 20
+	},
+	"urgency": 8,
+	"leaning": "community+",
+	"background_tags": [
+		"corridor",
+		"night",
+		"dimlight",
+		"empty",
+		"tense"
+	],
+	"background_image": "https://imagedelivery.net/WTEqQNGFb-l-IHS6IGnzUQ/7f073e80-d30e-4f93-1b34-d402243d9000/public",
+	"dialogue": [
+		{
+			"speaker": "hoegye_teamjang",
+			"content": {
+				"korean": "당신이 그… 어려운 이웃을 그냥 못 지나친다는 해결사 맞죠?"
+			}
+		},
+		{
+			"speaker": "hoegye_teamjang",
+			"content": {
+				"korean": "방금 서버실 안에서 뭔가 툭, 하고 떨어지는 소리가 났습니다만... 제 착각일 수도 있고요."
+			}
+		},
+		{
+			"speaker": "hoegye_teamjang",
+			"content": {
+				"korean": "저야 야근 마치고 퇴근하는 길이라... 괜한 오지랖일까 싶어 망설였습니다만."
+			}
+		},
+		{
+			"speaker": "hoegye_teamjang",
+			"content": {
+				"korean": "혹시 부두 어르신 기금 장부 데이터가 위험한 건 아닌지 걱정됩니다. 그 기금은 제가 직접 관리하고 있거든요."
+			}
+		},
+		{
+			"speaker": "dax",
+			"content": {
+				"korean": "팀장님, 어르신들 기금을 직접 관리하신다니, 정말 대단하시네요!"
+			}
+		}
+	],
+	"choices": [
+		{
+			"text": {
+				"korean": "부두 어르신 기금 장부 데이터가 안전한지 먼저 확인한다."
+			},
+			"path": "easy",
+			"mbti": "SF",
+			"flag": "hoegye_teamjang_secret_code",
+			"effects": {
+				"community": 20,
+				"echo": 10
+			},
+			"reward": [
+				"heal"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "당신이 어르신 기금 장부 데이터 확인을 우선하겠다고 하자, 팀장이 감격한 표정으로 당신의 손을 잡는다."
+					}
+				},
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "팀장은 당신에게 은밀히 서버실 관리자의 개인 금고 비밀번호를 알려주며,"
+					}
+				},
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "그곳에 기금 장부 백업본이 있다고 귀띔한다."
+					}
+				},
+				{
+					"speaker": "dax",
+					"content": {
+						"korean": "역시 여러분은 다르네요! 팀장님도 한시름 놓은 것 같고요!"
+					}
+				}
+			],
+			"risk": {
+				"chance": "mid",
+				"bad": {
+					"effects": {
+						"gold": -20
+					},
+					"reward": [],
+					"result": [
+						{
+							"speaker": "narrator",
+							"content": {
+								"korean": "당신이 어르신 기금 장부 데이터 확인을 우선하겠다고 하자,"
+							}
+						},
+						{
+							"speaker": "narrator",
+							"content": {
+								"korean": "팀장이 \"역시 믿음직한 분들이시네요!\"라며 큰 소리로 외친다."
+							}
+						},
+						{
+							"speaker": "narrator",
+							"content": {
+								"korean": "그 소리에 복도 저편에서 경비원 한 명이 고개를 빼꼼 내밀고, 당신들을 수상한 눈초리로 쳐다본다."
+							}
+						},
+						{
+							"speaker": "dax",
+							"content": {
+								"korean": "어휴, 팀장님! 그렇게 크게 말씀하시면 어떡해요!"
+							}
+						}
+					]
+				}
+			}
+		},
+		{
+			"text": {
+				"korean": "팀장님의 걱정은 나중에 듣고, 우선 서버실 전체의 보안을 살핀다."
+			},
+			"path": "hard",
+			"mbti": "NT",
+			"flag": "server_sensor_records",
+			"effects": {
+				"community": -15,
+				"echo": -5
+			},
+			"reward": [
+				"stun"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "당신이 서버실 전체의 보안을 먼저 살피겠다고 하자, 팀장은 잠시 풀이 죽은 듯 고개를 숙인다."
+					}
+				},
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "이내 고개를 들고, 당신에게 서버실에 설치된 감지 센서의 위치와 최근 점검 기록이 담긴 파일을 건넨다."
+					}
+				},
+				{
+					"speaker": "dax",
+					"content": {
+						"korean": "팀장님이 서운해하시는 것 같긴 한데, 그래도 저런 정보는 얻기 힘들죠!"
+					}
+				}
+			],
+			"risk": {
+				"chance": "high",
+				"bad": {
+					"effects": {
+						"gold": -20
+					},
+					"reward": [],
+					"result": [
+						{
+							"speaker": "narrator",
+							"content": {
+								"korean": "당신이 서버실 전체의 보안을 먼저 살피겠다고 하자,"
+							}
+						},
+						{
+							"speaker": "narrator",
+							"content": {
+								"korean": "팀장이 \"제가 괜한 걱정을 했나 봅니다…\"라며 머리를 긁적인다."
+							}
+						},
+						{
+							"speaker": "narrator",
+							"content": {
+								"korean": "그 순간,"
+							}
+						},
+						{
+							"speaker": "narrator",
+							"content": {
+								"korean": "서버실 안에서 '삐빅' 하는 소리와 함께 팀장의 휴대폰으로 '기금 장부 백업 삭제 완료' 알림이 뜬다."
+							}
+						},
+						{
+							"speaker": "dax",
+							"content": {
+								"korean": "팀장님 표정이 안 좋은데요? 저 메시지, 설마…"
+							}
+						}
+					]
+				}
+			}
+		},
+		{
+			"text": {
+				"korean": "팀장님의 증언과 서버실 상황을 종합해 가장 먼저 필요한 조치를 제안한다."
+			},
+			"path": "stat",
+			"mbti": "TJ",
+			"require": {
+				"stat": "community",
+				"op": ">=",
+				"value": 40
+			},
+			"flag": "data_server_lock",
+			"effects": {
+				"reason": 10,
+				"community": 25,
+				"echo": 10
+			},
+			"reward": [
+				"defense_up"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "당신이 팀장의 증언과 서버실 상황을 종합해 가장 먼저 필요한 조치를 제안하자,"
+					}
+				},
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "팀장은 당신의 냉철함에 감탄한다."
+					}
+				},
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "당신은 서버실의 핵심 데이터 서버를 우선적으로 잠금 처리하고,"
+					}
+				},
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "어르신 기금 장부 데이터의 무결성을 빠르게 확인한다."
+					}
+				},
+				{
+					"speaker": "dax",
+					"content": {
+						"korean": "역시 여러분이에요! 중요한 것부터 딱딱 집어내시네요!"
+					}
+				}
+			]
+		},
+		{
+			"text": {
+				"korean": "팀장님과 함께 서버실 앞에서 부두 어르신 기금의 중요성에 대해 열변을 토한다."
+			},
+			"path": "fun",
+			"mbti": "EP",
+			"effects": {
+				"gold": 50,
+				"reason": -10,
+				"community": 20
+			},
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "당신이 팀장님과 함께 부두 어르신 기금의 중요성에 대해 열변을 토하자,"
+					}
+				},
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "팀장이 눈물을 글썽이며 맞장구를 친다."
+					}
+				},
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "두 사람은 지나가는 직원들에게도 기금의 소중함을 호소하며, 복도에 훈훈한 분위기를 조성한다."
+					}
+				},
+				{
+					"speaker": "dax",
+					"content": {
+						"korean": "갑자기 분위기가 왜 이렇게 훈훈해지는 거죠? 그래도 시선은 끌었네요!"
+					}
+				}
+			],
+			"risk": {
+				"chance": "low",
+				"bad": {
+					"reward": [
+						"hp_down"
+					],
+					"result": [
+						{
+							"speaker": "narrator",
+							"content": {
+								"korean": "당신이 서버실 앞에서 부두 어르신 기금의 중요성을 목청껏 외치자,"
+							}
+						},
+						{
+							"speaker": "narrator",
+							"content": {
+								"korean": "팀장은 감격한 나머지 길고 긴 즉흥 연설을 시작하며 복도 한가운데서 주먹으로 허공을 휘두른다."
+							}
+						},
+						{
+							"speaker": "narrator",
+							"content": {
+								"korean": "그 소란에 복도 저편에서 경비원 한 명이 달려와 '무슨 소란입니까! 밤에!'라며 손전등을 비춘다."
+							}
+						},
+						{
+							"speaker": "dax",
+							"content": {
+								"korean": "아니, 팀장님! 그러다 경비원 아저씨가 진짜로 신고하겠어요!"
+							}
+						}
+					]
+				}
+			}
+		}
+	],
+	"tags": [
+		"hoegye_teamjang",
+		"dax"
+	],
+	"_design": {
+		"slot": "D",
+		"kind": "rep",
+		"person": {
+			"id": "hoegye_teamjang",
+			"name": "회계팀 팀장",
+			"role": "회계팀 팀장"
+		},
+		"wants": "부두 어르신 기금 장부 데이터가 안전한지 확인해 주기를 바란다.",
+		"rule_link": "눈앞의 '삭제음'이라는 증거가 정말 '부두 어르신 기금 장부' 때문인지, 아니면 다른 더 큰 문제 때문인지 따져볼 기회.",
+		"rep": "community+",
+		"events": {},
+		"flags": {
+			"hoegye_teamjang_secret_code": {
+				"kind": "bad",
+				"boss_penalty": -1,
+				"label": {
+					"korean": "회계팀장 비밀번호"
+				},
+				"boss_line": {
+					"korean": "해커 간부와 싸우는 도중, 회계팀 팀장이 알려준 비밀번호 때문에 예상치 못한 보안 시스템이 작동하여 방해를 받는다."
+				}
+			},
+			"server_sensor_records": {
+				"kind": "good",
+				"boss_penalty": 1,
+				"label": {
+					"korean": "서버 센서 기록"
+				},
+				"boss_choice": {
+					"korean": "해커 간부가 설치한 감지 센서의 허점을 파악하여 역으로 공격한다."
+				}
+			},
+			"data_server_lock": {
+				"kind": "good",
+				"boss_penalty": 2,
+				"label": {
+					"korean": "데이터 서버 잠금"
+				},
+				"boss_choice": {
+					"korean": "해커 간부가 주력으로 사용하는 데이터 서버를 먼저 잠금 처리하여 무력화한다."
+				}
+			}
+		}
+	}
+}

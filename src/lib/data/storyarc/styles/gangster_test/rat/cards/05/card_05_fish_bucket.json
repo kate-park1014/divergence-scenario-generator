@@ -1,0 +1,310 @@
+{
+	"id": "card_05_fish_bucket",
+	"title": {
+		"korean": "버킷 리스트"
+	},
+	"intensity": "calm",
+	"after_story": 1,
+	"before_story": 3,
+	"condition": {
+		"leaning": "community-",
+		"among": [
+			"fighting-",
+			"fighting+",
+			"community-",
+			"community+",
+			"reason-",
+			"reason+"
+		],
+		"min": 20
+	},
+	"urgency": 8,
+	"leaning": "community-",
+	"background_tags": [
+		"corridor",
+		"daytime",
+		"cloudy",
+		"sparse",
+		"tense"
+	],
+	"background_image": "https://imagedelivery.net/WTEqQNGFb-l-IHS6IGnzUQ/0021bc8b-a350-4a21-5a17-694249460400/public",
+	"dialogue": [
+		{
+			"speaker": "gang_uncle",
+			"content": {
+				"korean": "당신이 그, 자기 몫부터 챙긴다는 해결사 양반 맞지? 비서실 쪽으론 잠시 발길 멈추는 게 좋을 거야."
+			}
+		},
+		{
+			"speaker": "dax",
+			"content": {
+				"korean": "아재, 비서님한테 무슨 볼일 있으세요?"
+			}
+		},
+		{
+			"speaker": "gang_uncle",
+			"content": {
+				"korean": "켁. 볼일은 무슨. 그게, 비서실 앞 복도에 내가 아끼는 귀한 물고기가 있는데…"
+			}
+		},
+		{
+			"speaker": "gang_uncle",
+			"content": {
+				"korean": "당신이 괜히 시끄럽게 굴면 놀라 죽을까 봐서 말이지."
+			}
+		},
+		{
+			"speaker": "narrator",
+			"content": {
+				"korean": "아재의 발밑에 작은 양동이가 보인다. 희미하게 물고기 비늘이 반짝인다."
+			}
+		}
+	],
+	"choices": [
+		{
+			"text": {
+				"korean": "양동이의 물고기를 슬쩍 훔쳐간다."
+			},
+			"path": "easy",
+			"mbti": "ES",
+			"flag": "stolen_fish",
+			"effects": {
+				"gold": 70
+			},
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "당신은 아재의 눈을 피해 양동이 속 물고기를 주머니에 넣는다."
+					}
+				},
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "아재는 엉뚱한 곳을 흘긋거리다 헛기침한다."
+					}
+				},
+				{
+					"speaker": "dax",
+					"content": {
+						"korean": "아재, 물고기 비늘이 반짝거렸는데? 제가 잘못 봤나…?"
+					}
+				}
+			],
+			"risk": {
+				"chance": "mid",
+				"bad": {
+					"effects": {
+						"gold": -30
+					},
+					"reward": [],
+					"result": [
+						{
+							"speaker": "narrator",
+							"content": {
+								"korean": "당신이 물고기를 훔치려다 양동이를 걷어차고 만다."
+							}
+						},
+						{
+							"speaker": "narrator",
+							"content": {
+								"korean": "물고기는 복도 바닥을 데굴데굴 구르다 배수구로 사라진다."
+							}
+						},
+						{
+							"speaker": "dax",
+							"content": {
+								"korean": "저런, 아재의 귀한 물고기가…! 운이 나쁘네요!"
+							}
+						}
+					]
+				}
+			}
+		},
+		{
+			"text": {
+				"korean": "아재에게 물고기를 지켜 줄 방법을 묻는다."
+			},
+			"path": "hard",
+			"mbti": "IS",
+			"flag": "helped_fish",
+			"effects": {
+				"community": 20
+			},
+			"reward": [
+				"defense_up"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "당신은 아재에게 물고기를 안전하게 지킬 방법을 묻는다."
+					}
+				},
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "아재는 의외라는 듯 눈을 깜빡인다."
+					}
+				},
+				{
+					"speaker": "dax",
+					"content": {
+						"korean": "아재, 제가 물고기를 비서님께 맡겨 드려도 될까요?"
+					}
+				}
+			],
+			"risk": {
+				"chance": "high",
+				"bad": {
+					"effects": {
+						"gold": -20
+					},
+					"reward": [],
+					"result": [
+						{
+							"speaker": "narrator",
+							"content": {
+								"korean": "당신이 물고기를 지킬 방법을 묻자 아재는 도리어 당신을 의심한다."
+							}
+						},
+						{
+							"speaker": "gang_uncle",
+							"content": {
+								"korean": "켁, 내 물고기를 노리는 게냐?"
+							}
+						}
+					]
+				}
+			}
+		},
+		{
+			"text": {
+				"korean": "(자기 몫부터 챙기는 해결사 40+) 물고기는 당신이 챙길 테니, 비서실에서 손을 떼라 말한다."
+			},
+			"path": "stat",
+			"mbti": "TJ",
+			"require": {
+				"stat": "community",
+				"op": "<=",
+				"value": -40
+			},
+			"flag": "took_fish_authority",
+			"effects": {
+				"community": -20,
+				"fighting": 10
+			},
+			"reward": [
+				"attack_up"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "당신은 양동이를 낚아채 물고기를 대신 맡겠다고 말한다."
+					}
+				},
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "아재는 당신의 강한 기세에 꼬리를 내린다."
+					}
+				},
+				{
+					"speaker": "dax",
+					"content": {
+						"korean": "아재, 어쩌죠? 물고기는 이제 우리 몫이 됐네요…"
+					}
+				}
+			]
+		},
+		{
+			"text": {
+				"korean": "아재에게 물고기 값을 쥐여주고 길을 비켜 달라 한다."
+			},
+			"path": "gold",
+			"mbti": "NF",
+			"require": {
+				"stat": "gold",
+				"op": ">=",
+				"value": 100
+			},
+			"effects": {
+				"gold": -100
+			},
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "당신은 아재에게 돈을 쥐여주며 길을 비켜 달라고 한다."
+					}
+				},
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "아재는 돈을 세어보며 만족스러운 표정으로 비켜선다."
+					}
+				},
+				{
+					"speaker": "dax",
+					"content": {
+						"korean": "아재, 비서님에게 가는 길에 돈으로 해결할 줄은 몰랐네요!"
+					}
+				}
+			]
+		}
+	],
+	"tags": [
+		"gang_uncle",
+		"dax"
+	],
+	"_design": {
+		"slot": "A",
+		"kind": "rep",
+		"person": {
+			"id": "gang_uncle",
+			"name": "백상어파 아재",
+			"role": "조직원"
+		},
+		"wants": "비서실 앞 복도에 둔 귀한 물고기가 당신 때문에 놀라 죽지 않게 해주세요.",
+		"rule_link": "당신이 먼저 사정을 물어보면 아재가 귀한 물고기를 지키려는 속마음을 털어놓는다.",
+		"rep": "community-",
+		"events": {},
+		"flags": {
+			"stolen_fish": {
+				"kind": "bad",
+				"boss_penalty": -1,
+				"label": {
+					"korean": "훔친 물고기"
+				},
+				"boss_line": {
+					"korean": "훔친 물고기를 던져 상대를 교란한다."
+				}
+			},
+			"helped_fish": {
+				"kind": "good",
+				"boss_penalty": 1,
+				"label": {
+					"korean": "물고기 지킴이"
+				},
+				"boss_choice": {
+					"korean": "아재가 당신에게 비서의 습관을 알려준다."
+				}
+			},
+			"took_fish_authority": {
+				"kind": "good",
+				"boss_penalty": 2,
+				"label": {
+					"korean": "물고기 강탈"
+				},
+				"boss_choice": {
+					"korean": "아재가 당신을 두려워하며 비서실의 숨겨진 물건을 알려준다."
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,165 @@
+{
+	"id": "card_01_worker_shortcut",
+	"title": {
+		"korean": "숨 가쁜 일꾼의 지름길"
+	},
+	"intensity": "high",
+	"after_story": 5,
+	"before_story": 7,
+	"callback": {
+		"seed": "old_worker_plea_hard",
+		"min_rooms_after": 2
+	},
+	"background_tags": [
+		"alley",
+		"evening",
+		"dim",
+		"sparse",
+		"hurried"
+	],
+	"background_image": "https://imagedelivery.net/WTEqQNGFb-l-IHS6IGnzUQ/42d46d23-1825-4b7a-290b-99f783cabf00/public",
+	"dialogue": [
+		{
+			"speaker": "narrator",
+			"content": {
+				"korean": "골목으로 향하는데, 뒤에서 헐레벌떡 뛰어온 늙은 일꾼이 당신을 붙잡는다."
+			}
+		},
+		{
+			"speaker": "worker_old",
+			"content": {
+				"korean": "컥, 컥... 이보시오... 내가 고마워서..."
+			}
+		},
+		{
+			"speaker": "worker_old",
+			"content": {
+				"korean": "저기, 연기 나는 골목으로 가는 지름길을 아는데... 알려줄까?"
+			}
+		},
+		{
+			"speaker": "dax",
+			"content": {
+				"korean": "어르신, 여기까지 어떻게 오셨어요? 몸도 안 좋으신데..."
+			}
+		},
+		{
+			"speaker": "worker_old",
+			"content": {
+				"korean": "컥, 컥... 괜찮소... 얼른 가야 할 것 같아서..."
+			}
+		}
+	],
+	"choices": [
+		{
+			"text": {
+				"korean": "\"고맙다\"고 말하며 늙은 일꾼이 알려주는 지름길로 들어선다."
+			},
+			"path": "easy",
+			"mbti": "EN",
+			"flag": "easy_worker_shortcut",
+			"effects": {
+				"community": 10,
+				"echo": 10
+			},
+			"reward": [
+				"attack_up"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "늙은 일꾼은 흐뭇하게 웃으며 손가락으로 골목 안 좁은 틈을 가리킨다."
+					}
+				},
+				{
+					"speaker": "worker_old",
+					"content": {
+						"korean": "컥, 컥... 이리로 가면 빠를 거요... 조심하시오."
+					}
+				},
+				{
+					"speaker": "dax",
+					"content": {
+						"korean": "와, 어르신 덕분에 시간을 벌겠네요!"
+					}
+				}
+			]
+		},
+		{
+			"text": {
+				"korean": "\"괜찮다\"고 말하며 늙은 일꾼을 돌려보내고, 원래 가려던 길로 간다."
+			},
+			"path": "hard",
+			"mbti": "IT",
+			"flag": "hard_prudent_path",
+			"effects": {
+				"echo": 5,
+				"reason": 10
+			},
+			"reward": [
+				"defense_up"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "당신은 늙은 일꾼에게 무리하지 말라며 등을 토닥여 돌려보낸다."
+					}
+				},
+				{
+					"speaker": "dax",
+					"content": {
+						"korean": "어르신이 섭섭해하실 수도 있겠네요. 그래도 안전이 최고죠!"
+					}
+				},
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "당신은 연기가 나는 골목 안쪽으로 신중하게 발걸음을 옮긴다."
+					}
+				}
+			]
+		}
+	],
+	"tags": [
+		"worker_old",
+		"dax"
+	],
+	"_design": {
+		"slot": "C",
+		"kind": "callback",
+		"person": {
+			"name": "늙은 일꾼",
+			"id": "worker_old",
+			"role": "늙은 부두 일꾼"
+		},
+		"wants": "약값을 줘서 고마운 마음에 보답하고 싶어 함.",
+		"rule_link": "약값을 받아 신세 진 일꾼이 지름길을 알려줄 때, 그의 도움을 의심할지 아니면 믿고 따를지 판단해야 한다.",
+		"events": {},
+		"flags": {
+			"easy_worker_shortcut": {
+				"kind": "good",
+				"boss_penalty": 1,
+				"label": {
+					"korean": "일꾼 지름길"
+				},
+				"boss_choice": {
+					"korean": "늙은 일꾼이 알려준 지름길을 통해 경리부장의 뒤를 잡는다."
+				}
+			},
+			"hard_prudent_path": {
+				"kind": "good",
+				"boss_penalty": 2,
+				"label": {
+					"korean": "신중한 길"
+				},
+				"boss_choice": {
+					"korean": "늙은 일꾼의 지름길 제안을 거절하고 신중하게 이동하여 경리부장의 함정을 피한다."
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,286 @@
+{
+	"id": "card_04_lost_razor_barber",
+	"title": {
+		"korean": "사라진 면도칼"
+	},
+	"intensity": "calm",
+	"after_story": 5,
+	"before_story": 7,
+	"condition": {
+		"leaning": "fighting+",
+		"among": [
+			"fighting-",
+			"fighting+",
+			"community-",
+			"community+",
+			"reason-",
+			"reason+"
+		],
+		"min": 20
+	},
+	"urgency": 8,
+	"leaning": "fighting+",
+	"background_tags": [
+		"stairs",
+		"daytime",
+		"brightlight",
+		"alone",
+		"curious"
+	],
+	"background_image": "https://imagedelivery.net/WTEqQNGFb-l-IHS6IGnzUQ/0ae813bd-8183-437e-644c-6a15fd24b300/public",
+	"dialogue": [
+		{
+			"speaker": "ibalsa_aje",
+			"content": {
+				"korean": "아, 당신이 그 어려운 이웃들에게 먼저 손을 내민다는 해결사 양반이십니까?"
+			}
+		},
+		{
+			"speaker": "ibalsa_aje",
+			"content": {
+				"korean": "제 소중한 면도칼이 감쪽같이 사라져서..."
+			}
+		},
+		{
+			"speaker": "dax",
+			"content": {
+				"korean": "아재, 저희는 금고실로 가야 해요. 중요한 일이라서요."
+			}
+		},
+		{
+			"speaker": "ibalsa_aje",
+			"content": {
+				"korean": "이런, 이 면도칼은 제 손때가 묻은 건데... 이걸로 깎아야 제대로 깎이는데 말이죠."
+			}
+		},
+		{
+			"speaker": "ibalsa_aje",
+			"content": {
+				"korean": "혹시 누가 가져간 건지, 아니면 어디로 굴러떨어진 건지..."
+			}
+		}
+	],
+	"choices": [
+		{
+			"text": {
+				"korean": "이발사 아재의 짐을 뒤져 면도칼을 찾아준다."
+			},
+			"path": "easy",
+			"mbti": "NT",
+			"flag": "barber_razor_found_easy",
+			"effects": {
+				"reason": -10,
+				"gold": 50
+			},
+			"reward": [
+				"defense_down"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "당신은 아재의 허락도 없이 그의 작업 가방을 뒤진다. 아재는 당황하지만 딱히 막지는 못한다."
+					}
+				},
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "가방 깊숙한 곳에서 면도칼이 나온다. 아재는 '아, 여기 있었네!' 하며 머쓱하게 웃는다."
+					}
+				},
+				{
+					"speaker": "dax",
+					"content": {
+						"korean": "아재가 면도칼 하나에도 저렇게 허둥대는군요."
+					}
+				}
+			],
+			"risk": {
+				"chance": "mid",
+				"bad": {
+					"effects": {
+						"gold": -40
+					},
+					"reward": [],
+					"result": [
+						{
+							"speaker": "narrator",
+							"content": {
+								"korean": "당신은 아재의 허락도 없이 그의 작업 가방을 뒤진다. 아재는 불쾌한 표정을 숨기지 못한다."
+							}
+						},
+						{
+							"speaker": "narrator",
+							"content": {
+								"korean": "가방 안에서 면도칼 대신 아재의 비상금 봉투가 튀어나온다. 아재는 허둥지둥 봉투를 숨긴다."
+							}
+						},
+						{
+							"speaker": "dax",
+							"content": {
+								"korean": "괜히 아재의 사생활만 침해했네요."
+							}
+						}
+					]
+				}
+			}
+		},
+		{
+			"text": {
+				"korean": "계단 주변을 샅샅이 뒤져 면도칼을 찾아준다."
+			},
+			"path": "hard",
+			"mbti": "SJ",
+			"flag": "barber_razor_found_hard",
+			"effects": {
+				"community": 15,
+				"reason": 5
+			},
+			"reward": [
+				"intelligence_up"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "당신은 이발사 아재와 함께 계단 구석구석을 살핀다. 아재는 당신의 꼼꼼함에 감탄한다."
+					}
+				},
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "계단 난간 아래 틈새에서 면도칼이 발견된다. 아재는 기뻐하며 당신에게 고마워한다."
+					}
+				},
+				{
+					"speaker": "dax",
+					"content": {
+						"korean": "역시 함께 찾으니 금방 발견하네요."
+					}
+				}
+			],
+			"risk": {
+				"chance": "high",
+				"bad": {
+					"effects": {
+						"gold": -20
+					},
+					"reward": [],
+					"result": [
+						{
+							"speaker": "narrator",
+							"content": {
+								"korean": "당신은 이발사 아재와 함께 계단 구석구석을 살핀다. 하지만 면도칼은 보이지 않고, 먼지만 잔뜩 쌓여 있다."
+							}
+						},
+						{
+							"speaker": "narrator",
+							"content": {
+								"korean": "아재는 한숨을 쉬며 '에이, 오늘은 그냥 포기해야겠구먼.' 하고 고개를 젓는다."
+							}
+						},
+						{
+							"speaker": "dax",
+							"content": {
+								"korean": "아재가 아끼던 면도칼이라더니, 아쉽겠네요."
+							}
+						}
+					]
+				}
+			}
+		},
+		{
+			"text": {
+				"korean": "면도칼이 떨어졌을 만한 곳을 정확히 짚어 아재에게 알려준다."
+			},
+			"path": "stat",
+			"mbti": "NF",
+			"require": {
+				"stat": "fighting",
+				"op": ">=",
+				"value": 40
+			},
+			"flag": "barber_razor_insight",
+			"effects": {
+				"community": 20,
+				"echo": 10,
+				"fighting": 10
+			},
+			"reward": [
+				"shield"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "당신은 주변을 둘러보더니 면도칼이 굴러떨어졌을 만한 각도를 정확히 짚어준다."
+					}
+				},
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "아재는 그곳을 살펴보더니 '아니, 어떻게 그걸 알았지?' 하며 놀라 면도칼을 찾아낸다."
+					}
+				},
+				{
+					"speaker": "dax",
+					"content": {
+						"korean": "아재가 감탄하는 걸 보니, 역시 대단하시네요."
+					}
+				}
+			]
+		}
+	],
+	"tags": [
+		"ibalsa_aje",
+		"dax"
+	],
+	"_design": {
+		"slot": "C",
+		"kind": "rep",
+		"person": {
+			"id": "ibalsa_aje",
+			"name": "이발사 아재",
+			"role": "이발사"
+		},
+		"wants": "이발사 아재는 자신의 소중한 면도칼을 잃어버려 당황하고 있다. 당신에게 면도칼을 찾아주기를 원한다.",
+		"rule_link": "이발사 아재는 면도칼이 사라진 것을 말 못 할 사정으로 숨기지만, 당신이 면도칼을 숨긴 사람으로 볼지, 말 못 할 사정이 있다고 볼지 선택해야 한다.",
+		"rep": "fighting+",
+		"events": {},
+		"flags": {
+			"barber_razor_found_easy": {
+				"kind": "bad",
+				"boss_penalty": -1,
+				"label": {
+					"korean": "면도칼 발견(강압)"
+				},
+				"boss_line": {
+					"korean": "이발사 아재가 당신의 옷에 면도칼로 작은 구멍을 낸다."
+				}
+			},
+			"barber_razor_found_hard": {
+				"kind": "good",
+				"boss_penalty": 1,
+				"label": {
+					"korean": "면도칼 발견(협력)"
+				},
+				"boss_choice": {
+					"korean": "이발사 아재가 금고실 문 앞에서 당신에게 조용히 귀띔해준다."
+				}
+			},
+			"barber_razor_insight": {
+				"kind": "good",
+				"boss_penalty": 2,
+				"label": {
+					"korean": "면도칼 예측"
+				},
+				"boss_choice": {
+					"korean": "이발사 아재가 금고실 문 앞에서 당신이 필요로 할 물건을 건넨다."
+				}
+			}
+		}
+	}
+}

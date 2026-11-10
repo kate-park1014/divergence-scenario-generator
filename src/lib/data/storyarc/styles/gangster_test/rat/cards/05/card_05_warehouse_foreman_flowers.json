@@ -1,0 +1,256 @@
+{
+	"id": "card_05_warehouse_foreman_flowers",
+	"title": {
+		"korean": "회장님 꽃 배달"
+	},
+	"intensity": "calm",
+	"after_story": 3,
+	"before_story": 5,
+	"background_tags": [
+		"foggy_road",
+		"dock",
+		"night",
+		"sparse_crowd",
+		"tense"
+	],
+	"background_image": "https://imagedelivery.net/WTEqQNGFb-l-IHS6IGnzUQ/beeb3d65-bbc0-44d4-7cac-39f76868cd00/public",
+	"dialogue": [
+		{
+			"speaker": "narrator",
+			"content": {
+				"korean": "안개 낀 부두 도로 한가운데, 창고 간부가 꽃다발을 들고 서 있다."
+			}
+		},
+		{
+			"speaker": "janggojigi",
+			"content": {
+				"korean": "젠장, 차가 고장 났잖아! 이 꽃은 오늘 꼭 회장님께 가야 하는데."
+			}
+		},
+		{
+			"speaker": "dax",
+			"content": {
+				"korean": "창고 간부님! 여기서 뭐 하세요? 이 시간에 등대 쪽은 위험한데."
+			}
+		},
+		{
+			"speaker": "janggojigi",
+			"content": {
+				"korean": "닥스! 마침 잘 왔어. 이 꽃다발, 내가 회장님께 드리려고 밤새 직접 만든 거야."
+			}
+		},
+		{
+			"speaker": "janggojigi",
+			"content": {
+				"korean": "등대까지 좀 태워다 주게. 급해!"
+			}
+		}
+	],
+	"choices": [
+		{
+			"text": {
+				"korean": "급하다고 말하고 창고지기를 지나쳐 등대로 향한다."
+			},
+			"path": "easy",
+			"mbti": "EP",
+			"effects": {
+				"echo": -5,
+				"gold": 100
+			},
+			"seed": "warehouse_foreman_flowers_easy",
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "당신은 급하다고 소리치며 창고지기를 지나쳐 달린다."
+					}
+				},
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "백미러로 본 창고지기가 꽃다발을 든 채 망연자실 서 있다."
+					}
+				},
+				{
+					"speaker": "dax",
+					"content": {
+						"korean": "너무 급해서 어쩔 수 없었네요, 그렇죠?"
+					}
+				}
+			],
+			"risk": {
+				"chance": "mid",
+				"bad": {
+					"effects": {
+						"gold": -20
+					},
+					"reward": [],
+					"result": [
+						{
+							"speaker": "narrator",
+							"content": {
+								"korean": "당신은 창고지기를 지나치려 했으나, 그가 꽃다발을 흔들며 길을 막는다."
+							}
+						},
+						{
+							"speaker": "narrator",
+							"content": {
+								"korean": "꽃다발의 꽃잎들이 차 앞 유리창에 흩날려 시야를 가린다."
+							}
+						},
+						{
+							"speaker": "dax",
+							"content": {
+								"korean": "으악, 앞이 안 보여요!"
+							}
+						}
+					]
+				}
+			}
+		},
+		{
+			"text": {
+				"korean": "창고지기의 꽃다발을 싣고 함께 등대로 향한다."
+			},
+			"path": "hard",
+			"mbti": "IF",
+			"effects": {
+				"echo": 10,
+				"community": 10
+			},
+			"reward": [
+				"defense_up"
+			],
+			"seed": "warehouse_foreman_flowers_hard",
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "당신은 창고지기와 꽃다발을 차에 태운다."
+					}
+				},
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "차 안은 금세 진한 꽃 향기로 가득 찬다."
+					}
+				},
+				{
+					"speaker": "dax",
+					"content": {
+						"korean": "차 안이 꼭 꽃집 같네요!"
+					}
+				}
+			],
+			"risk": {
+				"chance": "high",
+				"bad": {
+					"effects": {
+						"gold": -20
+					},
+					"reward": [],
+					"result": [
+						{
+							"speaker": "narrator",
+							"content": {
+								"korean": "꽃다발을 싣는 도중, 꽃봉오리 하나가 차 문에 끼어 떨어진다."
+							}
+						},
+						{
+							"speaker": "narrator",
+							"content": {
+								"korean": "창고지기가 비명을 지르며 떨어진 꽃봉오리를 주워든다."
+							}
+						},
+						{
+							"speaker": "dax",
+							"content": {
+								"korean": "저 꽃, 간부님이 정말 아끼던 꽃인데..."
+							}
+						}
+					]
+				}
+			}
+		},
+		{
+			"text": {
+				"korean": "창고지기에게 꽃다발을 건네받아 직접 품에 안고 간다."
+			},
+			"path": "fun",
+			"mbti": "ET",
+			"effects": {
+				"echo": 10,
+				"reason": 20
+			},
+			"reward": [
+				"cooldown_reset"
+			],
+			"seed": "warehouse_foreman_flowers_hard",
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "당신은 창고지기에게 꽃다발을 건네받아 품에 안는다."
+					}
+				},
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "꽃잎이 당신의 옷에 잔뜩 묻어난다."
+					}
+				},
+				{
+					"speaker": "dax",
+					"content": {
+						"korean": "꽃다발이 생각보다 크네요! 운전하는 데 방해되지 않으세요?"
+					}
+				}
+			],
+			"risk": {
+				"chance": "low",
+				"bad": {
+					"reward": [
+						"hp_down"
+					],
+					"result": [
+						{
+							"speaker": "narrator",
+							"content": {
+								"korean": "꽃다발을 품에 안는 순간, 꽃다발 속 숨겨진 작은 벌레가 튀어나와 당신의 얼굴에 앉는다."
+							}
+						},
+						{
+							"speaker": "narrator",
+							"content": {
+								"korean": "당신은 깜짝 놀라 꽃다발을 떨어뜨릴 뻔한다."
+							}
+						},
+						{
+							"speaker": "dax",
+							"content": {
+								"korean": "으악! 저, 저건 뭐예요?!"
+							}
+						}
+					]
+				}
+			}
+		}
+	],
+	"tags": [
+		"janggojigi",
+		"dax"
+	],
+	"_design": {
+		"slot": "B",
+		"kind": "plant",
+		"person": {
+			"name": "창고 간부",
+			"role": "창고 간부",
+			"id": "janggojigi"
+		},
+		"wants": "회장님께 드릴 꽃다발을 등대까지 배달하고 싶어 한다.",
+		"rule_link": "급한 상황이라도 상대방의 특별한 사정을 먼저 물어볼지 선택한다.",
+		"events": {},
+		"flags": {}
+	}
+}

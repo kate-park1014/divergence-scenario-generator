@@ -1,0 +1,423 @@
+{
+	"cards": [
+		{
+			"rule_link": "팀장이 본 것이 정말 해커 간부의 소행인지, 아니면 다른 증거를 찾아야 할지 결정해야 한다.",
+			"choices": [
+				{
+					"effects": {
+						"echo": 10,
+						"community": 20
+					},
+					"risk_bad": {
+						"result": [
+							{
+								"text": "당신이 조심스럽게 묻자 팀장이 당황하며 손사래를 친다.",
+								"speaker": "narrator"
+							},
+							{
+								"speaker": "narrator",
+								"text": "팀장이 발밑에 떨어진 종이를 주우려다 비틀거리며 복도에 있던 물통을 엎지른다."
+							},
+							{
+								"text": "아이고, 저런! 물에 젖으면 안 될 서류였으면 큰일 날 뻔했네요!",
+								"speaker": "dax"
+							}
+						],
+						"gold": -30,
+						"reward": []
+					},
+					"path": "easy",
+					"result": [
+						{
+							"text": "당신이 조심스럽게 묻자 팀장이 안도하며 고개를 끄덕인다.",
+							"speaker": "narrator"
+						},
+						{
+							"text": "팀장이 서랍장 아래에 떨어진 서류 뭉치를 가리킨다.",
+							"speaker": "narrator"
+						},
+						{
+							"speaker": "dax",
+							"text": "저게 뭐죠? 간부님이 흘리신 건가요?"
+						}
+					],
+					"reward": [
+						"attack_down"
+					],
+					"flag": {
+						"key": "server_paper_clue",
+						"boss_text": "해커 간부가 흘린 서류 뭉치로 인해 주의가 산만해진다.",
+						"label": "서버실 서류"
+					},
+					"mbti": "EN",
+					"text": "팀장의 말을 믿고 서버실 문 안에서 들린 소리에 대해 조심스럽게 묻는다."
+				},
+				{
+					"flag": {
+						"label": "팀장 무시",
+						"key": "ignore_team_leader",
+						"boss_text": "팀장의 불평 소리가 계속 귓가에 맴돌아 집중하기 어렵다."
+					},
+					"effects": {
+						"echo": -5,
+						"fighting": -20
+					},
+					"path": "hard",
+					"result": [
+						{
+							"text": "당신이 문이 잠겨 있다고 말하자 팀장이 입술을 삐죽이며 툴툴거린다.",
+							"speaker": "narrator"
+						},
+						{
+							"text": "팀장은 당신을 뒤로하고 혼잣말로 중얼거리며 복도 끝으로 사라진다.",
+							"speaker": "narrator"
+						},
+						{
+							"text": "저러다 복도 끝에서 혼자 넘어지겠어요.",
+							"speaker": "dax"
+						}
+					],
+					"risk_bad": {
+						"result": [
+							{
+								"text": "당신이 문이 잠겨 있다고 말하자 팀장이 당신을 빤히 쳐다본다.",
+								"speaker": "narrator"
+							},
+							{
+								"speaker": "narrator",
+								"text": "팀장이 갑자기 큰 소리로 한숨을 쉬며 복도에 앉아 쉬던 다른 직원을 놀라게 한다."
+							},
+							{
+								"speaker": "dax",
+								"text": "저분 왜 저러시죠? 혹시 저희 때문에 화나신 건가요?"
+							}
+						],
+						"gold": -20,
+						"reward": []
+					},
+					"reward": [
+						"defense_up"
+					],
+					"text": "팀장의 말을 무시하고, 서버실 문이 잠겨 있으니 괜찮다고 말한다.",
+					"mbti": "ST"
+				},
+				{
+					"text": "팀장의 불안한 표정을 읽고, 그가 진정할 수 있도록 따뜻한 말을 건넨다.",
+					"mbti": "IF",
+					"reward": [
+						"intelligence_up"
+					],
+					"effects": {
+						"echo": 15,
+						"community": 30,
+						"fighting": -10
+					},
+					"result": [
+						{
+							"speaker": "narrator",
+							"text": "당신의 따뜻한 말에 팀장이 놀란 듯 눈을 깜빡인다."
+						},
+						{
+							"text": "팀장이 서버실 문을 열고 안으로 들어가 떨어진 작은 USB를 당신에게 건넨다.",
+							"speaker": "narrator"
+						},
+						{
+							"text": "와, 팀장님 덕분에 중요한 걸 찾았어요!",
+							"speaker": "dax"
+						}
+					],
+					"flag": {
+						"boss_text": "팀장이 찾아준 USB 덕분에 해커 간부의 약점을 미리 파악한다.",
+						"key": "team_leader_usb",
+						"label": "팀장의 USB"
+					},
+					"path": "stat"
+				},
+				{
+					"mbti": "EP",
+					"text": "팀장이 입고 있던 야근 조끼를 빼앗아 입고, 서버실 문을 지키는 척한다.",
+					"effects": {
+						"echo": 5,
+						"reason": -20
+					},
+					"reward": [
+						"stun"
+					],
+					"path": "fun",
+					"result": [
+						{
+							"speaker": "narrator",
+							"text": "당신이 갑자기 조끼를 빼앗자 팀장이 당황하며 뒷걸음질 친다."
+						},
+						{
+							"speaker": "narrator",
+							"text": "당신은 조끼를 입고 서버실 문 앞에서 엉덩이를 흔들며 경비 자세를 취한다."
+						},
+						{
+							"text": "어... 저게 경비 자세인가요? 팀장님 조끼가 잘 어울리시네요!",
+							"speaker": "dax"
+						}
+					],
+					"risk_bad": {
+						"gold": -50,
+						"result": [
+							{
+								"speaker": "narrator",
+								"text": "당신이 야근 조끼를 빼앗자 팀장이 놀라 주춤거린다."
+							},
+							{
+								"speaker": "narrator",
+								"text": "조끼 주머니에서 팀장의 점심으로 보이는 샌드위치가 튀어나와 복도 바닥에 떨어진다."
+							},
+							{
+								"speaker": "dax",
+								"text": "아이고, 팀장님 점심이... 배고프셨을 텐데!"
+							}
+						],
+						"reward": []
+					}
+				}
+			],
+			"person": {
+				"id": "hoegye_teamjang",
+				"name": "회계팀 팀장",
+				"role": "회계팀 팀장"
+			},
+			"dialogue": [
+				{
+					"text": "크흠... 저기, 당신이 그 어려운 이웃을 그냥 못 지나친다는 분이시죠?",
+					"speaker": "hoegye_teamjang"
+				},
+				{
+					"text": "팀장이 안경을 고쳐 쓰고 서버실 문을 흘깃 본다.",
+					"speaker": "narrator"
+				},
+				{
+					"speaker": "hoegye_teamjang",
+					"text": "방금 서버실 안에서 뭔가 툭, 하고 떨어지는 소리가 났습니다만... 제 착각일 수도 있고요."
+				},
+				{
+					"text": "네? 뭔가 떨어졌다고요?",
+					"speaker": "dax"
+				},
+				{
+					"speaker": "hoegye_teamjang",
+					"text": "저야 야근 마치고 퇴근하는 길이라... 괜한 오지랖일까 싶어 망설였습니다만."
+				}
+			],
+			"title": "긴급 보고서",
+			"wants": "서버실에서 수상한 활동을 목격하고, 협력적인 해결사인 당신이 이를 해결해주기를 바란다.",
+			"no": 1,
+			"key": "team_leader_server_trouble",
+			"background_tags": [
+				"corridor",
+				"night",
+				"dim_light",
+				"empty",
+				"tense"
+			],
+			"slot": "D",
+			"kind": "rep",
+			"rep_dir": "fighting-"
+		},
+		{
+			"wants": "서버실 주변에서 수상한 시선을 느끼고, 당신의 강한 평판을 이용해 상황을 해결하기를 바란다.",
+			"person": {
+				"id": "hoegye_teamjang",
+				"name": "회계팀 팀장",
+				"role": "회계팀 팀장"
+			},
+			"no": 2,
+			"key": "team_leader_server_rumor",
+			"rule_link": "팀장이 말하는 '수상한 시선'이 정말 위협적인지, 아니면 팀장의 착각인지 판단해야 한다.",
+			"dialogue": [
+				{
+					"text": "크흠... 저기, 당신이 그... 소문이 자자한 '주먹이 먼저 나가는' 해결사시죠?",
+					"speaker": "hoegye_teamjang"
+				},
+				{
+					"text": "팀장이 안경을 고쳐 쓰고 주변을 두리번거린다.",
+					"speaker": "narrator"
+				},
+				{
+					"text": "서버실 복도 저편에서 자꾸 누가 저를 쳐다보는 것 같아서요. 분명히 사람이 있었는데 말이죠.",
+					"speaker": "hoegye_teamjang"
+				},
+				{
+					"text": "누가요? 저는 아무도 못 봤는데...",
+					"speaker": "dax"
+				},
+				{
+					"speaker": "hoegye_teamjang",
+					"text": "저야 야근 마치고 퇴근하는 길이라... 괜한 일에 엮일까 싶어 망설였습니다만."
+				}
+			],
+			"choices": [
+				{
+					"text": "팀장의 말을 듣고 복도 저편을 쏘아보며, 누가 있었는지 큰 소리로 묻는다.",
+					"risk_bad": {
+						"gold": -40,
+						"result": [
+							{
+								"text": "당신이 큰 소리로 묻자 복도 저편에서 갑자기 경보음이 울린다.",
+								"speaker": "narrator"
+							},
+							{
+								"text": "팀장은 놀라서 허둥지둥 뛰어가다 넘어지며 들고 있던 서류를 바닥에 흩뿌린다.",
+								"speaker": "narrator"
+							},
+							{
+								"speaker": "dax",
+								"text": "팀장님! 괜찮으세요? 경보음은 왜 울리는 거죠?"
+							}
+						],
+						"reward": []
+					},
+					"mbti": "ET",
+					"reward": [
+						"attack_down"
+					],
+					"flag": {
+						"label": "고양이 소동",
+						"boss_text": "갑자기 나타난 고양이 때문에 해커 간부와의 대결에 집중하기 어렵다.",
+						"key": "cat_distraction"
+					},
+					"effects": {
+						"fighting": 20,
+						"echo": -10
+					},
+					"result": [
+						{
+							"text": "당신이 큰 소리로 묻자 복도 저편에서 작은 고양이 한 마리가 튀어나온다.",
+							"speaker": "narrator"
+						},
+						{
+							"text": "고양이는 당신의 발치에 앉아 꼬리를 흔들며 당신을 올려다본다.",
+							"speaker": "narrator"
+						},
+						{
+							"text": "팀장님, 고양이한테 겁먹으신 거예요? 푸핫!",
+							"speaker": "dax"
+						}
+					],
+					"path": "easy"
+				},
+				{
+					"mbti": "IS",
+					"text": "팀장의 착각이라고 말하며, 서버실 주변은 안전하다고 안심시킨다.",
+					"reward": [
+						"move_range_up"
+					],
+					"effects": {
+						"fighting": -20,
+						"echo": 5
+					},
+					"result": [
+						{
+							"text": "당신이 안심시키자 팀장은 여전히 불안한 표정으로 고개를 갸웃거린다.",
+							"speaker": "narrator"
+						},
+						{
+							"text": "팀장이 조심스럽게 복도 구석에 놓인 CCTV를 가리킨다.",
+							"speaker": "narrator"
+						},
+						{
+							"speaker": "dax",
+							"text": "아, 저 CCTV로 보면 누가 있었는지 알 수 있겠네요!"
+						}
+					],
+					"risk_bad": {
+						"result": [
+							{
+								"speaker": "narrator",
+								"text": "당신이 안심시키자 팀장은 당신의 말을 믿지 않는 듯 보인다."
+							},
+							{
+								"speaker": "narrator",
+								"text": "팀장이 갑자기 재채기를 하며 들고 있던 뜨거운 커피를 복도 바닥에 쏟는다."
+							},
+							{
+								"speaker": "dax",
+								"text": "팀장님, 괜찮으세요? 뜨거운 커피였는데!"
+							}
+						],
+						"gold": -20,
+						"reward": []
+					},
+					"path": "hard",
+					"flag": {
+						"key": "cctv_clue",
+						"label": "CCTV 확인",
+						"boss_text": "미리 CCTV를 확인하여 해커 간부의 움직임을 예상한다."
+					}
+				},
+				{
+					"reward": [
+						"shield"
+					],
+					"text": "팀장의 말을 듣고 복도 저편으로 성큼성큼 다가가 그림자 속에 숨은 것을 찾아낸다.",
+					"result": [
+						{
+							"text": "당신이 그림자 속에 다가가자 숨어 있던 청소 로봇이 불빛에 반사되어 번쩍인다.",
+							"speaker": "narrator"
+						},
+						{
+							"speaker": "narrator",
+							"text": "로봇은 당신의 발치에서 멈춰 서서 윙윙거리는 소리를 낸다."
+						},
+						{
+							"speaker": "dax",
+							"text": "팀장님을 쳐다본 건 저 청소 로봇이었네요! 깜짝 놀랐겠다."
+						}
+					],
+					"mbti": "IT",
+					"flag": {
+						"label": "청소 로봇",
+						"boss_text": "복도에 숨어 있던 청소 로봇을 미리 발견하여 시야 확보에 성공한다.",
+						"key": "robot_discovery"
+					},
+					"effects": {
+						"echo": -10,
+						"fighting": 30
+					},
+					"path": "stat"
+				},
+				{
+					"mbti": "FP",
+					"result": [
+						{
+							"speaker": "narrator",
+							"text": "당신이 돈을 쥐여 주자 팀장이 눈을 크게 뜨고 당신을 바라본다."
+						},
+						{
+							"speaker": "narrator",
+							"text": "팀장은 돈을 들고 어쩔 줄 몰라 하다가 서둘러 당신의 손에 다시 쥐여 준다."
+						},
+						{
+							"text": "팀장님, 괜찮아요! 저희는 괜찮아요!",
+							"speaker": "dax"
+						}
+					],
+					"text": "팀장에게 퇴근하고 맛있는 것을 사 먹으라며 소액의 돈을 쥐여 준다.",
+					"effects": {
+						"gold": -100
+					},
+					"path": "gold"
+				}
+			],
+			"background_tags": [
+				"corridor",
+				"night",
+				"dim_light",
+				"empty",
+				"suspicious"
+			],
+			"title": "수상한 시선",
+			"slot": "D",
+			"kind": "rep",
+			"rep_dir": "fighting+"
+		}
+	],
+	"errors": [],
+	"prompt_hash": "10fb49929eaab3b1baf6bf5fe48556581e9acf6f"
+}

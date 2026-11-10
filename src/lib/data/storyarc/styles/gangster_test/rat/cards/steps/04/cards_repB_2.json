@@ -1,0 +1,415 @@
+{
+	"cards": [
+		{
+			"title": "기름때 묻은 고민",
+			"no": 1,
+			"background_tags": [
+				"garage",
+				"night",
+				"dimlight",
+				"fewpeople",
+				"greasy"
+			],
+			"dialogue": [
+				{
+					"speaker": "chago_banjang",
+					"text": "당신이 그, 뭐냐, 자기 몫은 확실히 챙긴다는 해결사 양반들 아니요? 소문은 익히 들었소만."
+				},
+				{
+					"text": "반장이 렌치를 만지작거리며 한숨을 쉰다.",
+					"speaker": "narrator"
+				},
+				{
+					"text": "아, 이거 고치려는데 영… 혼자 힘으로는 안 되겠고. 누가 좀 도와주면 좋겠는데 말이야.",
+					"speaker": "chago_banjang"
+				},
+				{
+					"speaker": "dax",
+					"text": "반장님, 무슨 일 있으세요? 저희가 도와드릴 수 있는 일이 있을까요?"
+				}
+			],
+			"choices": [
+				{
+					"reward": [],
+					"risk_bad": {
+						"result": [
+							{
+								"text": "당신은 반장의 요청에 따라 리프트를 수리하려 했지만, 예상치 못한 부품 파손으로 더 고장이 난다.",
+								"speaker": "narrator"
+							},
+							{
+								"speaker": "chago_banjang",
+								"text": "이런! 돈은 돈대로 쓰고 일은 더 꼬였구만!"
+							},
+							{
+								"text": "이런! 어쩌죠? 일이 더 꼬였잖아!",
+								"speaker": "dax"
+							}
+						],
+						"gold": -50,
+						"reward": []
+					},
+					"effects": {
+						"community": -10,
+						"gold": 100
+					},
+					"result": [
+						{
+							"speaker": "narrator",
+							"text": "당신은 반장의 요청에 따라 능숙하게 리프트를 수리한다."
+						},
+						{
+							"speaker": "chago_banjang",
+							"text": "역시 소문대로구먼. 솜씨도 좋고, 돈값은 확실히 하네!"
+						},
+						{
+							"text": "와, 역시! 덕분에 저희도 빨리 다음 장소로 이동할 수 있겠어요.",
+							"speaker": "dax"
+						}
+					],
+					"text": "수리비로 넉넉한 보수를 받고 리프트를 고쳐준다.",
+					"mbti": "TJ",
+					"flag": {
+						"label": "보수 받은 리프트 수리",
+						"key": "lift_fixed_for_price",
+						"boss_text": "리프트 수리로 얻은 금화 때문에 상대가 방심한다."
+					},
+					"path": "easy"
+				},
+				{
+					"risk_bad": {
+						"result": [
+							{
+								"text": "당신은 대가 없이 반장의 리프트 수리를 돕다 실수로 중요한 공구를 망가뜨린다.",
+								"speaker": "narrator"
+							},
+							{
+								"speaker": "chago_banjang",
+								"text": "아이고, 저건 내가 아끼던 건데… 괜히 미안하구먼."
+							},
+							{
+								"text": "괜찮아요, 반장님. 저희는 괜찮아요. 하하…",
+								"speaker": "dax"
+							}
+						],
+						"gold": -20,
+						"reward": []
+					},
+					"effects": {
+						"community": 20,
+						"echo": 10
+					},
+					"text": "대가를 바라지 않고 반장의 리프트 수리를 도와준다.",
+					"mbti": "NF",
+					"result": [
+						{
+							"text": "당신은 대가 없이 반장의 리프트 수리를 돕고, 덕분에 작업이 빠르게 끝난다.",
+							"speaker": "narrator"
+						},
+						{
+							"speaker": "chago_banjang",
+							"text": "허허, 이런 좋은 분들을 봤나! 소문이랑은 영 다르구먼."
+						},
+						{
+							"text": "세상에! 반장님 얼굴이 활짝 피셨어요!",
+							"speaker": "dax"
+						}
+					],
+					"reward": [
+						"defense_up"
+					],
+					"path": "hard",
+					"flag": {
+						"key": "lift_fixed_for_free",
+						"boss_text": "리프트 수리 후 반장이 준 유용한 도구를 전투에 활용한다.",
+						"label": "대가를 바라지 않은 수리"
+					}
+				},
+				{
+					"mbti": "ET",
+					"text": "자기 몫을 챙겨야 한다며 수리할 가치가 없음을 단호히 말한다.",
+					"reward": [
+						"attack_up"
+					],
+					"effects": {
+						"community": -20,
+						"reason": -10
+					},
+					"path": "stat",
+					"flag": {
+						"label": "수리 거부",
+						"boss_text": "차고 반장이 당신의 단호함에 물러나, 다른 차고원들이 전투에 소극적으로 임한다.",
+						"key": "not_worth_fixing"
+					},
+					"result": [
+						{
+							"speaker": "narrator",
+							"text": "당신의 단호한 태도에 반장이 잠시 망설이더니, 결국 다른 방법을 찾아본다."
+						},
+						{
+							"speaker": "chago_banjang",
+							"text": "크흠… 그래, 자네들이 말하는 것도 일리는 있구먼. 억지로 시킬 수는 없지."
+						},
+						{
+							"speaker": "dax",
+							"text": "반장님이 금방 다른 사람을 찾아보시네요… 역시 대단하세요."
+						}
+					]
+				},
+				{
+					"risk_bad": {
+						"result": [
+							{
+								"speaker": "narrator",
+								"text": "당신이 리프트에게 말을 걸자, 리프트는 갑자기 굉음을 내며 오작동을 일으켜 주변 공구들이 튀어 오른다."
+							},
+							{
+								"text": "아이고! 망가진 놈을 더 망가뜨리네!",
+								"speaker": "chago_banjang"
+							},
+							{
+								"text": "으악! 저게 왜 저래요? 도망쳐요!",
+								"speaker": "dax"
+							}
+						],
+						"reward": [
+							"hp_down"
+						]
+					},
+					"mbti": "IN",
+					"reward": [
+						"stun"
+					],
+					"text": "리프트가 말을 못 해서 답답한 거라며 리프트에게 직접 말을 걸어 설득한다.",
+					"result": [
+						{
+							"speaker": "narrator",
+							"text": "당신은 리프트에게 다가가 속삭이듯 말을 걸자, 반장과 닥스는 어리둥절한 표정으로 쳐다본다."
+						},
+						{
+							"speaker": "chago_banjang",
+							"text": "저… 저 양반이 혹시… 피곤한가? 저거 기계인데…"
+						},
+						{
+							"speaker": "dax",
+							"text": "으음… 독특한 방법이네요. 과연 리프트가 말을 들을까요?"
+						}
+					],
+					"path": "fun",
+					"effects": {
+						"community": -15,
+						"reason": 10
+					}
+				}
+			],
+			"wants": "고장 난 리프트를 고쳐달라고 요청하거나, 리프트 때문에 막힌 일을 해결해달라고 한다.",
+			"rule_link": "말 못 하는 기계(리프트)를 해결하려는 반장의 숨겨진 사정을 어떻게 받아들일지 결정합니다.",
+			"key": "greasy_trouble",
+			"person": {
+				"id": "chago_banjang",
+				"name": "차고 반장",
+				"role": "차고 반장"
+			},
+			"slot": "B",
+			"kind": "rep",
+			"rep_dir": "community-"
+		},
+		{
+			"no": 2,
+			"dialogue": [
+				{
+					"speaker": "chago_banjang",
+					"text": "당신이 그, 뭐냐, 동네 사람들을 위해서라면 발 벗고 나선다는 해결사 양반들 아니요? 소문은 익히 들었소만."
+				},
+				{
+					"speaker": "narrator",
+					"text": "반장이 렌치를 든 손으로 문을 가리키며 말한다."
+				},
+				{
+					"text": "이 문은… 지금은 열어줄 수 없소. 중요한 서류들이 있어서 말이야.",
+					"speaker": "chago_banjang"
+				},
+				{
+					"speaker": "dax",
+					"text": "반장님, 저희가 급하게 확인해야 할 기록이 있어서요. 잠깐만이라도 안 될까요?"
+				}
+			],
+			"wants": "기록실에 들어가지 못하게 막거나, 기록실에 중요한 서류가 있다는 것을 강조한다.",
+			"rule_link": "기록실 문을 막는 반장의 숨겨진 사정을 어떻게 해석하고 모두를 위해 행동할지 결정합니다.",
+			"key": "closed_records_secret",
+			"title": "닫힌 기록실의 비밀",
+			"background_tags": [
+				"garage",
+				"night",
+				"dimlight",
+				"fewpeople",
+				"greasy"
+			],
+			"person": {
+				"id": "chago_banjang",
+				"name": "차고 반장",
+				"role": "차고 반장"
+			},
+			"choices": [
+				{
+					"risk_bad": {
+						"result": [
+							{
+								"text": "당신의 설득에도 반장은 굳건히 기록실 문을 막아서며, 오히려 더 경계하는 눈치다.",
+								"speaker": "narrator"
+							},
+							{
+								"speaker": "chago_banjang",
+								"text": "안 되오! 모두를 위한다는 핑계로 서류를 뒤지려는 건 좋지 않소."
+							},
+							{
+								"text": "으음… 반장님이 더 완고해지셨네요. 어쩌죠?",
+								"speaker": "dax"
+							}
+						],
+						"reward": [
+							"intelligence_down"
+						]
+					},
+					"result": [
+						{
+							"text": "당신의 설득에 반장이 잠시 고민하더니, 결국 기록실 문을 조금 열어준다.",
+							"speaker": "narrator"
+						},
+						{
+							"speaker": "chago_banjang",
+							"text": "하아… 어차피 다들 아는 일이라… 잠깐이라면 좋소."
+						},
+						{
+							"speaker": "dax",
+							"text": "휴! 반장님이 드디어! 역시 여러분이 최고예요!"
+						}
+					],
+					"reward": [
+						"intelligence_up"
+					],
+					"effects": {
+						"community": 15,
+						"echo": 5
+					},
+					"text": "우리 모두의 이익을 위해 기록 확인이 필요하다고 설득한다.",
+					"mbti": "ES",
+					"flag": {
+						"key": "records_room_opened",
+						"label": "기록실 접근 허가",
+						"boss_text": "기록실 접근으로 얻은 정보 때문에 상대가 방어에 소홀해진다."
+					},
+					"path": "easy"
+				},
+				{
+					"risk_bad": {
+						"reward": [],
+						"gold": -20,
+						"result": [
+							{
+								"speaker": "narrator",
+								"text": "당신이 문을 열라고 압박하자, 반장이 갑자기 소리를 지르며 주변의 다른 차고원들이 몰려온다."
+							},
+							{
+								"speaker": "chago_banjang",
+								"text": "이봐! 여기 무슨 일이오! 함부로 문을 열려고 하다니!"
+							},
+							{
+								"text": "이런! 일이 커졌어요! 싸움은 안 되는데…",
+								"speaker": "dax"
+							}
+						]
+					},
+					"mbti": "ST",
+					"text": "모두를 위해서라도 지금 당장 기록을 확인해야 한다며 문을 열라고 압박한다.",
+					"flag": {
+						"label": "강제 기록실 진입",
+						"boss_text": "기록실 진입 과정에서 얻은 예상치 못한 정보가 전투에 도움이 된다.",
+						"key": "forced_records_entry"
+					},
+					"path": "hard",
+					"reward": [
+						"attack_up"
+					],
+					"effects": {
+						"community": -10,
+						"fighting": 15
+					},
+					"result": [
+						{
+							"text": "당신의 강한 압박에 반장이 결국 문을 열지만, 불만스러운 표정을 감추지 못한다.",
+							"speaker": "narrator"
+						},
+						{
+							"text": "좋소! 들어는 가보시오! 대신 아무것도 손대지 마시오!",
+							"speaker": "chago_banjang"
+						},
+						{
+							"text": "반장님이 화나신 것 같지만… 일단 들어갈 수는 있네요.",
+							"speaker": "dax"
+						}
+					]
+				},
+				{
+					"effects": {
+						"echo": 10,
+						"community": 20
+					},
+					"flag": {
+						"key": "records_room_opened_heart",
+						"boss_text": "차고 반장이 당신의 공동체 정신에 감동하여, 기록실에서 중요한 단서를 찾아준다.",
+						"label": "진심으로 연 기록실"
+					},
+					"path": "stat",
+					"result": [
+						{
+							"speaker": "narrator",
+							"text": "당신의 진심 어린 부탁에 반장이 마음을 열고 기록실 문을 활짝 열어준다."
+						},
+						{
+							"speaker": "chago_banjang",
+							"text": "알겠소. 당신들이라면 믿을 수 있겠지. 부디 모두를 위해 좋은 결과를 가져다주시오."
+						},
+						{
+							"text": "와! 반장님이 이렇게 순순히 문을 열어주실 줄은 몰랐어요! 역시 여러분이에요!",
+							"speaker": "dax"
+						}
+					],
+					"reward": [
+						"cooldown_reset"
+					],
+					"text": "우리 모두를 위한 일이라며 기록실 문을 열어달라고 정중히 부탁한다.",
+					"mbti": "FP"
+				},
+				{
+					"result": [
+						{
+							"speaker": "narrator",
+							"text": "당신이 건넨 돈에 반장이 잠시 당황하더니, 이내 주머니에 넣고 기록실 문을 살짝 열어준다."
+						},
+						{
+							"speaker": "chago_banjang",
+							"text": "흐음… 뭐, 잠시 보시오. 대신 길게는 안 되오."
+						},
+						{
+							"speaker": "dax",
+							"text": "돈으로 해결하시네요! 덕분에 쉽게 들어갈 수 있겠어요!"
+						}
+					],
+					"mbti": "EN",
+					"text": "기록실 접근의 대가로 반장에게 약간의 돈을 쥐여준다.",
+					"effects": {
+						"community": -5,
+						"gold": -80
+					},
+					"path": "gold"
+				}
+			],
+			"slot": "B",
+			"kind": "rep",
+			"rep_dir": "community+"
+		}
+	],
+	"errors": [],
+	"prompt_hash": "52cbf559542acbd1aa008667e50bd8c8b4d259cb"
+}

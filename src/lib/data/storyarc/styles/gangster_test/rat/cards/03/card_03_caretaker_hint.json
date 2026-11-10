@@ -1,0 +1,165 @@
+{
+	"id": "card_03_caretaker_hint",
+	"title": {
+		"korean": "관리인이 건네는 비밀번호 힌트"
+	},
+	"intensity": "high",
+	"after_story": 5,
+	"before_story": 7,
+	"callback": {
+		"seed": "old_tapes_hard",
+		"min_rooms_after": 2
+	},
+	"background_tags": [
+		"server_room",
+		"night",
+		"blue_light",
+		"quiet",
+		"uncertain"
+	],
+	"background_image": "https://imagedelivery.net/WTEqQNGFb-l-IHS6IGnzUQ/5709b177-45ce-4dad-3061-acbf2614ec00/public",
+	"dialogue": [
+		{
+			"speaker": "narrator",
+			"content": {
+				"korean": "'삭제 완료' 안내음이 끊이지 않는 서버실 문 앞에서, 한숨을 쉬던 당신에게 늙은 관리인이 다가온다."
+			}
+		},
+		{
+			"speaker": "old_caretaker",
+			"content": {
+				"korean": "젊은 양반, 고마워서 그냥 갈 수가 있나. 서버실 비밀번호 말인데…"
+			}
+		},
+		{
+			"speaker": "old_caretaker",
+			"content": {
+				"korean": "옛날에 경비실에 종이쪽지로 붙어 있었던 것 같기도 하고…"
+			}
+		},
+		{
+			"speaker": "dax",
+			"content": {
+				"korean": "경비실이요? 닥스가 경비원님을 찾으러 갔는데!"
+			}
+		},
+		{
+			"speaker": "old_caretaker",
+			"content": {
+				"korean": "쉿! 혹시 그쪽에 뭐가 있을지도 모르니, 조용히 찾아보게나."
+			}
+		}
+	],
+	"choices": [
+		{
+			"text": {
+				"korean": "관리인의 힌트를 경비실로 찾아간 닥스에게 무전으로 알려준다."
+			},
+			"path": "easy",
+			"mbti": "SF",
+			"flag": "dax_informed_hint",
+			"effects": {
+				"community": 10,
+				"echo": 10
+			},
+			"reward": [
+				"cooldown_reset"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "당신이 닥스에게 무전으로 관리인의 힌트를 전달하자, 닥스는 흥분한 목소리로 '알겠습니다!'라고 외친다."
+					}
+				},
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "관리인은 당신의 행동에 만족한 듯 껄껄 웃으며 고개를 끄덕인다."
+					}
+				},
+				{
+					"speaker": "dax",
+					"content": {
+						"korean": "경비원님 찾기가 더 쉬워지겠네요! 고맙습니다!"
+					}
+				}
+			]
+		},
+		{
+			"text": {
+				"korean": "관리인에게 경비실에서 찾을 수 있는 비밀번호 쪽지의 특징을 더 자세히 물어본다."
+			},
+			"path": "hard",
+			"mbti": "NT",
+			"flag": "password_details_obtained",
+			"effects": {
+				"echo": 5,
+				"reason": 15
+			},
+			"reward": [
+				"intelligence_up"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "당신이 쪽지의 특징을 묻자 관리인은 잠시 눈을 감고 기억을 더듬는다."
+					}
+				},
+				{
+					"speaker": "old_caretaker",
+					"content": {
+						"korean": "음… '초록색 포스트잇'에 '숫자 네 자리'였던 것 같군. 확실하진 않지만…"
+					}
+				},
+				{
+					"speaker": "dax",
+					"content": {
+						"korean": "오, 구체적인 정보네요! 닥스가 경비실을 뒤지기 전에 알려줘야겠어요!"
+					}
+				}
+			]
+		}
+	],
+	"tags": [
+		"old_caretaker",
+		"dax"
+	],
+	"_design": {
+		"slot": "C",
+		"kind": "callback",
+		"person": {
+			"name": "늙은 관리인",
+			"id": "old_caretaker",
+			"role": "자료실 관리인"
+		},
+		"wants": "자신의 지식을 인정받고, 당신에게 도움을 주어 고마움을 표현하고 싶어 한다.",
+		"rule_link": "관리인의 힌트가 정말 서버실 비밀번호와 관련 있는지, 아니면 단순한 잡담인지 판단한다.",
+		"events": {},
+		"flags": {
+			"dax_informed_hint": {
+				"kind": "good",
+				"boss_penalty": 1,
+				"label": {
+					"korean": "닥스에게 힌트 전달"
+				},
+				"boss_choice": {
+					"korean": "닥스가 경비원을 찾는 데 결정적인 힌트를 얻었다."
+				}
+			},
+			"password_details_obtained": {
+				"kind": "good",
+				"boss_penalty": 2,
+				"label": {
+					"korean": "비밀번호 쪽지 정보"
+				},
+				"boss_choice": {
+					"korean": "서버실 비밀번호 쪽지의 구체적인 특징을 알게 된다."
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,297 @@
+{
+	"id": "card_03_colleague_gossip_rumor",
+	"title": {
+		"korean": "험담 속의 진실"
+	},
+	"intensity": "calm",
+	"after_story": 7,
+	"before_story": 9,
+	"background_tags": [
+		"corridor",
+		"night",
+		"dimlight",
+		"empty",
+		"gloomy"
+	],
+	"background_image": "https://imagedelivery.net/WTEqQNGFb-l-IHS6IGnzUQ/71c4390c-ee3b-4ab3-4106-e9c45c6fbe00/public",
+	"dialogue": [
+		{
+			"speaker": "narrator",
+			"content": {
+				"korean": "서버실 앞 복도 의자에 앉아 숨을 고르던 당신 옆으로, 한 직원이 터덜터덜 걸어와 앉는다."
+			}
+		},
+		{
+			"speaker": "colleague",
+			"content": {
+				"korean": "하아… 해커 간부님은 회식 때마다 놀림받는다고요. 불쌍해서 원."
+			}
+		},
+		{
+			"speaker": "dax",
+			"content": {
+				"korean": "네? 해커 간부님이요? 왜요?"
+			}
+		},
+		{
+			"speaker": "colleague",
+			"content": {
+				"korean": "그분, 성격이 좀 특이해서 남들하고 잘 못 어울리거든요. 늘 혼자 다니시고."
+			}
+		},
+		{
+			"speaker": "narrator",
+			"content": {
+				"korean": "직원이 한숨을 쉬며 벽에 기댄다."
+			}
+		}
+	],
+	"choices": [
+		{
+			"text": {
+				"korean": "동기 직원의 한숨에 공감하며, 직장 내 험담 문화의 문제점을 지적한다."
+			},
+			"path": "easy",
+			"mbti": "SF",
+			"effects": {
+				"echo": -5,
+				"community": -10
+			},
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "당신이 직장 내 험담에 대한 의견을 말하자, 지나가던 한 남자가 멈춰 선다."
+					}
+				},
+				{
+					"speaker": "colleague",
+					"content": {
+						"korean": "맞아요! 제가 정말 하고 싶던 말이에요!"
+					}
+				}
+			],
+			"event": "meet_stranger",
+			"event_intro": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "지나가던 남자가 당신의 말을 듣더니, 팔짱을 끼고 삐딱하게 선다."
+					}
+				},
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "낯선 남자: “험담이 문제라고? 그럼 지금 당신은 뭐 하는 건데?"
+					}
+				},
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "엉? 나랑 한판 붙자!” {actor}에게 대결을 건다."
+					}
+				}
+			],
+			"event_options": {
+				"fight": {
+					"text": {
+						"korean": "{actor}이(가) 불쑥 시비를 거는 남자에게 맞선다."
+					},
+					"win": [
+						{
+							"speaker": "narrator",
+							"content": {
+								"korean": "당신이 남자의 공격을 가볍게 피하고, 어깨를 툭 치자 남자는 휘청거리며 뒤로 넘어진다."
+							}
+						}
+					],
+					"lose": [
+						{
+							"speaker": "narrator",
+							"content": {
+								"korean": "남자의 기습적인 발차기에 당신은 중심을 잃고 엉덩방아를 찧는다."
+							}
+						}
+					]
+				},
+				"avoid": {
+					"text": {
+						"korean": "시비를 피하고, 다른 길로 조용히 사라진다."
+					},
+					"result": [
+						{
+							"speaker": "narrator",
+							"content": {
+								"korean": "당신이 조용히 자리를 피하자, 남자는 혀를 차며 사라진다."
+							}
+						}
+					],
+					"reward": [
+						"hp_down"
+					]
+				}
+			}
+		},
+		{
+			"text": {
+				"korean": "동기 직원에게 개인적인 소문보다 객관적인 사실에 집중하자고 제안한다."
+			},
+			"path": "hard",
+			"mbti": "NT",
+			"effects": {
+				"community": 5,
+				"reason": 10
+			},
+			"reward": [
+				"intelligence_up"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "당신의 말에 직원이 잠시 생각에 잠기더니, 고개를 갸웃거린다."
+					}
+				},
+				{
+					"speaker": "colleague",
+					"content": {
+						"korean": "글쎄요? 그렇게까지는 생각 안 해 봤는데… 하긴, 제가 너무 감정적으로만 생각했나."
+					}
+				},
+				{
+					"speaker": "dax",
+					"content": {
+						"korean": "오, 역시! 역시 여러분은 다르네요! 저렇게 냉철하게 판단하다니!"
+					}
+				}
+			],
+			"risk": {
+				"chance": "high",
+				"bad": {
+					"effects": {
+						"gold": -20
+					},
+					"reward": [],
+					"result": [
+						{
+							"speaker": "narrator",
+							"content": {
+								"korean": "당신의 말에 직원이 코웃음을 치더니, 혀를 찬다."
+							}
+						},
+						{
+							"speaker": "colleague",
+							"content": {
+								"korean": "에이, 다들 그렇게 말하지만 결국엔 다 똑같더라고요! 사람 속은 안 변해요!"
+							}
+						},
+						{
+							"speaker": "dax",
+							"content": {
+								"korean": "으윽, 고집불통이시네! 설득하기가 쉽지 않네요."
+							}
+						}
+					]
+				}
+			}
+		},
+		{
+			"text": {
+				"korean": "(ISTJ) {actor}이(가) '사적인 관계와 업무 평가는 별개'라고 명확히 선을 긋는다."
+			},
+			"path": "lock",
+			"mbti": "TJ",
+			"require": {
+				"mbti": "TJ"
+			},
+			"effects": {
+				"fighting": 5,
+				"reason": 5
+			},
+			"reward": [
+				"defense_up"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "당신의 단호한 말에 직원이 움찔하더니, 더 이상 말을 잇지 못한다."
+					}
+				},
+				{
+					"speaker": "colleague",
+					"content": {
+						"korean": "으음, 네… 뭐, 그런가요. 알겠습니다."
+					}
+				},
+				{
+					"speaker": "dax",
+					"content": {
+						"korean": "와, 역시! 저렇게 딱 잘라 말하면 아무도 못 당하겠어요!"
+					}
+				}
+			]
+		},
+		{
+			"text": {
+				"korean": "비싼 커피 쿠폰을 건네며, 해커 간부에 대한 더 구체적인 일화를 묻는다."
+			},
+			"path": "gold",
+			"mbti": "EN",
+			"require": {
+				"stat": "gold",
+				"op": ">=",
+				"value": 100
+			},
+			"effects": {
+				"gold": -100
+			},
+			"reward": [
+				"move_range_up"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "당신이 내민 쿠폰에 직원의 눈이 휘둥그레지더니, 슬쩍 주변을 살피며 귀띔한다."
+					}
+				},
+				{
+					"speaker": "colleague",
+					"content": {
+						"korean": "사실 그분, 회식 때마다 혼자 서버실에서 게임하는 버릇이 있어요. 지금도 아마…?"
+					}
+				},
+				{
+					"speaker": "dax",
+					"content": {
+						"korean": "어? 게임이요? 중요한 정보를 얻었네요! 설마 지금도 게임하고 있나?"
+					}
+				}
+			]
+		}
+	],
+	"tags": [
+		"colleague",
+		"dax"
+	],
+	"_design": {
+		"slot": "D",
+		"kind": "normal",
+		"person": {
+			"role": "해커 간부의 동기",
+			"id": "colleague",
+			"name": "동기 직원"
+		},
+		"wants": "해커 간부에 대한 자신의 불만을 털어놓고 공감을 얻고 싶어 함.",
+		"rule_link": "해커 간부에 대한 동기 직원의 험담이 실제 사실을 반영하는지, 아니면 개인적인 감정으로 부풀려진 것인지 따져 보아야 한다.",
+		"events": {
+			"easy": "직장 내 험담에 대한 당신의 발언이 지나가던 직원의 심기를 건드렸다."
+		},
+		"flags": {}
+	}
+}

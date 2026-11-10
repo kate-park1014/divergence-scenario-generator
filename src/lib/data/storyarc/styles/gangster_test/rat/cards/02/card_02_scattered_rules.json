@@ -1,0 +1,319 @@
+{
+	"id": "card_02_scattered_rules",
+	"title": {
+		"korean": "흩어진 규칙"
+	},
+	"intensity": "calm",
+	"after_story": 1,
+	"before_story": 3,
+	"condition": {
+		"leaning": "reason+",
+		"among": [
+			"fighting-",
+			"fighting+",
+			"community-",
+			"community+",
+			"reason-",
+			"reason+"
+		],
+		"min": 20
+	},
+	"urgency": 8,
+	"leaning": "reason+",
+	"background_tags": [
+		"container",
+		"foggy",
+		"dawn",
+		"lonely",
+		"crane"
+	],
+	"background_image": "https://imagedelivery.net/WTEqQNGFb-l-IHS6IGnzUQ/e4af4002-f4a2-402d-943d-ba2b16f88500/public",
+	"dialogue": [
+		{
+			"speaker": "narrator",
+			"content": {
+				"korean": "안개 낀 야적장 바닥에 찢어진 종이들이 흩어져 있다. 지게차 아재가 주저앉아 한숨을 쉬고 있다."
+			}
+		},
+		{
+			"speaker": "forklift_uncle",
+			"content": {
+				"korean": "켁, 켁! 당신이 그 소문 자자한, 엉뚱한 방법으로 일을 해결한다는 해결사지?"
+			}
+		},
+		{
+			"speaker": "forklift_uncle",
+			"content": {
+				"korean": "내 중요한 규칙들이 다 섞여 버렸잖아! 이 난장판 좀 어떻게 안 될까?"
+			}
+		},
+		{
+			"speaker": "dax",
+			"content": {
+				"korean": "아재가 또 뭘 잃어버렸나 봐요. 저러다 새벽 5시까지 정리 못 하면 어쩌죠?"
+			}
+		}
+	],
+	"choices": [
+		{
+			"text": {
+				"korean": "아재에게 굴러다니는 드럼통을 지게차로 밀어 종이를 한 곳에 모으라고 시킨다."
+			},
+			"path": "easy",
+			"mbti": "EP",
+			"flag": "uncle_pipe_burst",
+			"effects": {
+				"fighting": 10,
+				"echo": 10,
+				"reason": -10
+			},
+			"reward": [
+				"stun"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "아재는 당신의 엉뚱한 지시에 망설이다 신이 난 듯 지게차로 드럼통을 밀어 종이를 모은다."
+					}
+				},
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "길은 금세 정리된다."
+					}
+				},
+				{
+					"speaker": "dax",
+					"content": {
+						"korean": "아재가 저렇게 자기 규칙을 깨는 건 처음 봐요! 어쩌면 아재도 가끔은 일탈하고 싶었나 봐요!"
+					}
+				}
+			],
+			"risk": {
+				"chance": "mid",
+				"bad": {
+					"effects": {
+						"gold": -30
+					},
+					"reward": [],
+					"result": [
+						{
+							"speaker": "narrator",
+							"content": {
+								"korean": "아재는 지게차로 종이를 모으다 그만 옆에 있던 파이프를 박살 낸다."
+							}
+						},
+						{
+							"speaker": "narrator",
+							"content": {
+								"korean": "파이프에서 물이 뿜어져 나오며 야적장을 흥건하게 적신다."
+							}
+						},
+						{
+							"speaker": "dax",
+							"content": {
+								"korean": "으악! 아재가 사고 쳤어요! 이제 부두 관리인이 올 텐데…!"
+							}
+						}
+					]
+				}
+			}
+		},
+		{
+			"text": {
+				"korean": "흩어진 종이들을 직접 꼼꼼히 분류하여 아재에게 건넨다."
+			},
+			"path": "hard",
+			"mbti": "IN",
+			"flag": "uncle_grateful_order",
+			"effects": {
+				"reason": 10,
+				"echo": -5,
+				"community": 10
+			},
+			"reward": [
+				"shield"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "당신은 흩어진 종이들을 꼼꼼히 분류하여 아재에게 건넨다."
+					}
+				},
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "아재는 감탄하며 길을 비켜준다."
+					}
+				},
+				{
+					"speaker": "dax",
+					"content": {
+						"korean": "와, 정말 빠르네요! 저렇게 빨리 분류하는 건 처음 봐요!"
+					}
+				}
+			],
+			"risk": {
+				"chance": "high",
+				"bad": {
+					"effects": {
+						"gold": -20
+					},
+					"reward": [],
+					"result": [
+						{
+							"speaker": "narrator",
+							"content": {
+								"korean": "흩어진 종이들을 꼼꼼히 정리하려는데, 갑자기 바람이 불어 가장 중요한 서류가 멀리 날아가 버린다."
+							}
+						},
+						{
+							"speaker": "narrator",
+							"content": {
+								"korean": "아재는 눈물을 글썽이며 길을 막는다."
+							}
+						},
+						{
+							"speaker": "dax",
+							"content": {
+								"korean": "으악, 중요한 서류가 날아갔어요! 아재가 저러다 울겠어요!"
+							}
+						}
+					]
+				}
+			}
+		},
+		{
+			"text": {
+				"korean": "아재에게 소리쳐, 종이는 나중에 줍고 길이나 비키라고 한다."
+			},
+			"path": "stat",
+			"mbti": "ES",
+			"require": {
+				"stat": "reason",
+				"op": ">=",
+				"value": 40
+			},
+			"flag": "uncle_respect_freedom",
+			"effects": {
+				"echo": 15,
+				"reason": 20,
+				"fighting": 20
+			},
+			"reward": [
+				"attack_up"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "당신의 호통에 아재는 놀라 움츠러든다."
+					}
+				},
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "아재는 길을 비켜주며 마지못해 종이를 줍기 시작한다."
+					}
+				},
+				{
+					"speaker": "dax",
+					"content": {
+						"korean": "아재가 잔뜩 쫄았네요. 그렇게까지 할 필요는 없었는데…"
+					}
+				}
+			]
+		},
+		{
+			"text": {
+				"korean": "흩어진 종이를 모두 줍는 대가로 아재에게 돈을 건넨다."
+			},
+			"path": "gold",
+			"mbti": "SP",
+			"require": {
+				"stat": "gold",
+				"op": ">=",
+				"value": 80
+			},
+			"effects": {
+				"echo": 5,
+				"gold": -80
+			},
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "아재는 눈이 휘둥그래져 돈을 받는다."
+					}
+				},
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "아재는 돈의 힘에 감탄하며 재빨리 종이를 줍고 길을 비켜준다."
+					}
+				},
+				{
+					"speaker": "dax",
+					"content": {
+						"korean": "아재가 돈에 약하네요. 그래도 덕분에 빨리 지나갈 수 있었어요!"
+					}
+				}
+			]
+		}
+	],
+	"tags": [
+		"forklift_uncle",
+		"dax"
+	],
+	"_design": {
+		"slot": "A",
+		"kind": "rep",
+		"person": {
+			"id": "forklift_uncle",
+			"name": "지게차 아재",
+			"role": "지게차 기사"
+		},
+		"wants": "흩어진 규칙 종이를 주워 정리하고, 야적장 출입 규칙을 지키고 싶어 한다.",
+		"rule_link": "눈앞의 상황만 보고 섣불리 판단하는 아재를 통해, 끝까지 지켜보지 않고 판단하는 위험을 보여준다.",
+		"rep": "reason+",
+		"events": {},
+		"flags": {
+			"uncle_pipe_burst": {
+				"kind": "bad",
+				"boss_penalty": -1,
+				"label": {
+					"korean": "아재 파이프 파손"
+				},
+				"boss_line": {
+					"korean": "지게차 아재가 파이프를 박살 내 물웅덩이가 생겨 공격 기회를 놓친다."
+				}
+			},
+			"uncle_grateful_order": {
+				"kind": "good",
+				"boss_penalty": 1,
+				"label": {
+					"korean": "아재 질서 감사"
+				},
+				"boss_choice": {
+					"korean": "지게차 아재가 당신의 도움에 감사하며 싸움을 돕는다."
+				}
+			},
+			"uncle_respect_freedom": {
+				"kind": "good",
+				"boss_penalty": 2,
+				"label": {
+					"korean": "아재 자유 존중"
+				},
+				"boss_choice": {
+					"korean": "지게차 아재가 당신에게 길을 비켜주며 싸움을 돕는다."
+				}
+			}
+		}
+	}
+}

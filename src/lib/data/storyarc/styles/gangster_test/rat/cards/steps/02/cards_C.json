@@ -1,0 +1,431 @@
+{
+	"cards": [
+		{
+			"rule_link": "섣부른 판단으로 소문을 퍼뜨려 의도치 않게 상황을 복잡하게 만든다.",
+			"person": {
+				"name": "야간 크레인 기사",
+				"id": "crane_operator",
+				"role": "컨테이너 야적장 야간 크레인 기사"
+			},
+			"dialogue": [
+				{
+					"text": "크레인 기사가 무전기를 들고 신이 난 목소리로 떠든다.",
+					"speaker": "narrator"
+				},
+				{
+					"speaker": "crane_operator",
+					"text": "야, 컨테이너 귀신 잡으러 간다! 다들 구경 와라!"
+				},
+				{
+					"text": "저 기사님, 너무 신나 보이는데요? 이러다 다 들키겠어요!",
+					"speaker": "dax"
+				},
+				{
+					"text": "오늘 밤, 내가 이 구역의 영웅이다!",
+					"speaker": "crane_operator"
+				},
+				{
+					"speaker": "narrator",
+					"text": "주변 일꾼들이 무전 소리를 듣고 슬금슬금 모여들기 시작한다."
+				}
+			],
+			"no": 1,
+			"wants": "'컨테이너 귀신'을 잡는 영웅으로 인정받고 싶어 함.",
+			"key": "crane_operator_gossip",
+			"title": "크레인 기사의 소문",
+			"background_tags": [
+				"port",
+				"night",
+				"dimlight",
+				"crowd",
+				"tense"
+			],
+			"choices": [
+				{
+					"reward": [
+						"attack_up"
+					],
+					"path": "easy",
+					"mbti": "ES",
+					"text": "기사의 허세에 맞춰 주변 일꾼들에게 더 큰 소리로 떠들며 시선을 끈다",
+					"effects": {
+						"echo": 10,
+						"community": 15
+					},
+					"flag": {
+						"key": "crane_operator_distraction",
+						"label": "기사 소동",
+						"boss_text": "야간 크레인 기사의 소동 때문에 컨테이너 주변을 경계하는 일꾼들이 늘어난다."
+					},
+					"result": [
+						{
+							"speaker": "narrator",
+							"text": "당신의 선동에 일꾼들이 더욱 흥분하며 크레인 기사에게 환호한다."
+						},
+						{
+							"text": "봤지? 다들 내 편이라고! 기사가 우쭐대며 컨테이너 쪽을 손가락으로 가리킨다.",
+							"speaker": "crane_operator"
+						},
+						{
+							"speaker": "dax",
+							"text": "어휴, 저러다 다 들키겠어요!"
+						}
+					]
+				},
+				{
+					"reward": [
+						"defense_up"
+					],
+					"effects": {
+						"reason": 20,
+						"echo": 5
+					},
+					"path": "hard",
+					"text": "기사에게 다가가 어깨를 두드리며 조용히 일꾼들을 돌려보내자고 설득한다",
+					"mbti": "IT",
+					"result": [
+						{
+							"text": "당신의 설득에 크레인 기사가 잠시 머뭇거리더니, 헛기침하며 일꾼들을 해산시킨다.",
+							"speaker": "narrator"
+						},
+						{
+							"speaker": "crane_operator",
+							"text": "볼 거 없어! 다들 일이나 해!"
+						},
+						{
+							"text": "기사님이 화내니까 다들 도망가네요.",
+							"speaker": "dax"
+						}
+					],
+					"flag": {
+						"key": "crane_operator_quiet",
+						"label": "기사 진정",
+						"boss_text": "야간 크레인 기사가 일꾼들을 조용히 돌려보내 컨테이너 주변이 한산해진다."
+					}
+				}
+			],
+			"slot": "C",
+			"kind": "callback",
+			"returns": "easy"
+		},
+		{
+			"person": {
+				"role": "컨테이너 야적장 야간 크레인 기사",
+				"id": "crane_operator",
+				"name": "야간 크레인 기사"
+			},
+			"dialogue": [
+				{
+					"text": "크레인 기사가 당신에게 다가와 작은 목소리로 속삭인다.",
+					"speaker": "narrator"
+				},
+				{
+					"speaker": "crane_operator",
+					"text": "내가 컨테이너 쪽 불을 꺼줄게. 아무것도 안 보이는 게 좋잖아?"
+				},
+				{
+					"speaker": "dax",
+					"text": "어? 저 기사님, 저희를 도와주는 건가요?"
+				},
+				{
+					"speaker": "crane_operator",
+					"text": "흥, 지난번에 알려준 정보가 정확했는지 내가 확인해야지."
+				},
+				{
+					"text": "크레인 기사가 조종석으로 돌아가더니, 이내 컨테이너 주변의 불빛이 하나둘씩 꺼진다.",
+					"speaker": "narrator"
+				}
+			],
+			"rule_link": "이전에 얻은 정보를 바탕으로 신중하게 행동하여 상황 해결에 도움을 준다.",
+			"key": "crane_operator_darkness",
+			"background_tags": [
+				"port",
+				"night",
+				"darkness",
+				"solitude",
+				"calm"
+			],
+			"no": 2,
+			"choices": [
+				{
+					"effects": {
+						"fighting": 15,
+						"echo": 10
+					},
+					"reward": [
+						"attack_up"
+					],
+					"flag": {
+						"key": "crane_operator_dark_path",
+						"boss_text": "크레인 기사가 컨테이너 주변의 불을 꺼주어 어둠 속에서 접근하기 쉽다.",
+						"label": "기사 도움"
+					},
+					"text": "기사의 재치에 감탄하며 큰 소리로 칭찬한다",
+					"result": [
+						{
+							"text": "당신의 칭찬에 크레인 기사가 으쓱거리더니, 괜히 조종석 위에서 팔을 휘두른다.",
+							"speaker": "narrator"
+						},
+						{
+							"speaker": "crane_operator",
+							"text": "이 정도는 기본이지! 어둠 속에서 잘 찾아가라고!"
+						},
+						{
+							"text": "와, 정말 어두웠는데 도움이 돼요!",
+							"speaker": "dax"
+						}
+					],
+					"mbti": "EF",
+					"path": "easy"
+				},
+				{
+					"path": "hard",
+					"result": [
+						{
+							"speaker": "narrator",
+							"text": "당신의 진심 어린 감사에 크레인 기사가 고개를 끄덕이더니, 조용히 조종석으로 사라진다."
+						},
+						{
+							"text": "다음에 또 보자고.",
+							"speaker": "crane_operator"
+						},
+						{
+							"text": "역시 차분하게 대처하는 게 좋네요.",
+							"speaker": "dax"
+						}
+					],
+					"mbti": "IS",
+					"flag": {
+						"key": "crane_operator_stealth_mode",
+						"label": "기사 협조",
+						"boss_text": "크레인 기사가 컨테이너 주변의 불을 끈 후 조용히 자리를 지켜준다."
+					},
+					"effects": {
+						"reason": 10,
+						"echo": 10
+					},
+					"text": "기사의 도움에 감사하며, 이제 조용히 움직이겠다고 말한다",
+					"reward": [
+						"defense_up"
+					]
+				}
+			],
+			"wants": "자신이 제공한 정보와 도움이 인정받기를 원함.",
+			"title": "크레인 기사의 어둠",
+			"slot": "C",
+			"kind": "callback",
+			"returns": "hard"
+		},
+		{
+			"background_tags": [
+				"port",
+				"night",
+				"foggy",
+				"solitude",
+				"confused"
+			],
+			"dialogue": [
+				{
+					"text": "야식 배달 오토바이 한 대가 휘청거리며 당신의 차 옆에 멈춰 선다.",
+					"speaker": "narrator"
+				},
+				{
+					"speaker": "delivery_rider",
+					"text": "아, 여기가 어디야? 이 주소가 맞나? 배달원이 헤매며 휴대폰 지도를 들여다본다."
+				},
+				{
+					"speaker": "dax",
+					"text": "앗, 배달 오토바이인데요! 여기는 배달이 안 오는 곳 아니었나요?"
+				},
+				{
+					"text": "혹시, 여기 '백상어 횟집' 아시는 분 계세요?",
+					"speaker": "delivery_rider"
+				},
+				{
+					"speaker": "narrator",
+					"text": "배달원이 고개를 들고 당신들을 의심스러운 눈초리로 바라본다."
+				}
+			],
+			"choices": [
+				{
+					"path": "easy",
+					"effects": {
+						"community": 10,
+						"gold": 50
+					},
+					"risk_bad": {
+						"reward": [
+							"move_range_down"
+						],
+						"result": [
+							{
+								"text": "당신의 설명이 너무 자세했던 탓일까, 배달원이 길을 더 헷갈려 한다.",
+								"speaker": "narrator"
+							},
+							{
+								"text": "아니, 그래서 왼쪽이에요? 오른쪽이에요? 배달원이 오토바이 위에서 방방 뛴다.",
+								"speaker": "delivery_rider"
+							},
+							{
+								"text": "저 사람, 길치인가 봐요!",
+								"speaker": "dax"
+							}
+						]
+					},
+					"mbti": "ES",
+					"text": "배달원에게 길을 정확히 알려주고 빨리 떠나도록 유도한다",
+					"result": [
+						{
+							"text": "당신의 친절한 설명에 배달원이 고맙다고 연신 허리 숙여 인사한다.",
+							"speaker": "narrator"
+						},
+						{
+							"speaker": "delivery_rider",
+							"text": "고맙습니다! 덕분에 시간 안에 배달하겠네요! 배달원이 급하게 오토바이를 몰고 사라진다."
+						},
+						{
+							"text": "휴, 정말 놀랐어요!",
+							"speaker": "dax"
+						}
+					]
+				},
+				{
+					"reward": [
+						"defense_up"
+					],
+					"risk_bad": {
+						"result": [
+							{
+								"text": "당신의 은밀한 질문에 배달원이 갑자기 경계심을 드러내며 수상하게 여긴다.",
+								"speaker": "narrator"
+							},
+							{
+								"text": "갑자기 왜 그런 걸 물어봐요? 저, 바빠서 가봐야 하는데요.",
+								"speaker": "delivery_rider"
+							},
+							{
+								"text": "배달원님이 저희를 수상하게 봐요!",
+								"speaker": "dax"
+							}
+						],
+						"gold": -20,
+						"reward": []
+					},
+					"effects": {
+						"echo": 10,
+						"reason": 15
+					},
+					"path": "hard",
+					"text": "배달원에게 이 근처에 특이한 일이 없었는지 은근슬쩍 물어본다",
+					"mbti": "IN",
+					"result": [
+						{
+							"text": "당신의 질문에 배달원이 고개를 갸웃거리더니, 얼마 전 있었던 일을 떠올린다.",
+							"speaker": "narrator"
+						},
+						{
+							"speaker": "delivery_rider",
+							"text": "아, 얼마 전에 여기서 웬 그림자 같은 사람이 커다란 상자를 옮기는 걸 봤어요!"
+						},
+						{
+							"text": "그림자요? 혹시 우리 목표인가요?",
+							"speaker": "dax"
+						}
+					]
+				},
+				{
+					"result": [
+						{
+							"text": "{actor}이(가) 배달원의 휴대폰 지도를 넘겨받아 논리적으로 최적의 경로를 분석한다.",
+							"speaker": "narrator"
+						},
+						{
+							"text": "와! 뇌섹남이세요? 덕분에 길 찾았어요! 배달원이 감탄하며 감사의 표시로 잔돈을 건넨다.",
+							"speaker": "delivery_rider"
+						},
+						{
+							"speaker": "dax",
+							"text": "{actor} 덕분에 배달원도 살았네요."
+						}
+					],
+					"require_mbti": "NT",
+					"mbti": "NT",
+					"text": "{actor}이(가) 배달원의 휴대폰 지도를 넘겨받아 논리적으로 최적의 경로를 분석한다",
+					"effects": {
+						"reason": 10,
+						"gold": 30
+					},
+					"path": "lock"
+				},
+				{
+					"event_reason": "당신이 봉투를 함부로 흔들자 배달원이 화를 내며 야식을 맞혀보라며 내기를 건다.",
+					"effects": {
+						"fighting": 10,
+						"echo": -5
+					},
+					"result": [
+						{
+							"text": "당신이 야식 봉투를 이리저리 흔들자, 안에서 플라스틱 용기 부딪히는 소리가 난다.",
+							"speaker": "narrator"
+						},
+						{
+							"speaker": "delivery_rider",
+							"text": "뭐 하시는 거예요? 제발 그러지 마세요, 음식 다 망가져요! 배달원이 화들짝 놀라며 봉투를 보호한다."
+						},
+						{
+							"speaker": "dax",
+							"text": "으악, 들킬 뻔했어요!"
+						}
+					],
+					"risk_bad": {
+						"reward": [
+							"hp_down"
+						],
+						"result": [
+							{
+								"text": "당신이 야식 봉투를 세게 흔들자, 안에서 음식물이 터지는 소리가 들린다.",
+								"speaker": "narrator"
+							},
+							{
+								"text": "아, 안 돼! 제 야식! 배달원이 망가진 봉투를 보고 절규한다.",
+								"speaker": "delivery_rider"
+							},
+							{
+								"speaker": "dax",
+								"text": "저희 때문에 배달 사고가 났어요!"
+							}
+						]
+					},
+					"event": "minigame_cup",
+					"text": "배달원이 들고 있는 야식 봉투를 탐색하며 내용물을 추측한다",
+					"mbti": "SP",
+					"path": "fun",
+					"event_intro": [
+						{
+							"text": "배달원이 급하게 야식 봉투를 다른 빈 봉투 세 개와 섞어 당신에게 내민다.",
+							"speaker": "narrator"
+						},
+						{
+							"speaker": "delivery_rider",
+							"text": "어떤 게 제가 배달해야 할 진짜 야식인지 맞춰보세요!"
+						}
+					]
+				}
+			],
+			"no": 3,
+			"title": "길 잃은 배달원",
+			"person": {
+				"id": "delivery_rider",
+				"role": "야식 배달 오토바이 기사",
+				"name": "배달 오토바이 기사"
+			},
+			"key": "lost_delivery_rider",
+			"wants": "길을 찾아 야식을 제시간에 배달하고 싶어 함.",
+			"rule_link": "배달원의 눈에 보이는 상황과 히어로들의 실제 목표가 달라, 겉모습만으로 판단하는 것이 위험할 수 있음을 보여준다.",
+			"slot": "C",
+			"kind": "normal"
+		}
+	],
+	"errors": [],
+	"prompt_hash": "0436be4069df6ea33aa3c85e57b895b5493d643e"
+}

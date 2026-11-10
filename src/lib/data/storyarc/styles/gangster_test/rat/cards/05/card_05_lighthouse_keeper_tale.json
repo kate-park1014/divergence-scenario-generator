@@ -1,0 +1,237 @@
+{
+	"id": "card_05_lighthouse_keeper_tale",
+	"title": {
+		"korean": "등대지기 할아버지의 옛이야기"
+	},
+	"intensity": "calm",
+	"after_story": 7,
+	"before_story": 9,
+	"background_tags": [
+		"breakwater",
+		"night",
+		"misty",
+		"sparse",
+		"nostalgic"
+	],
+	"background_image": "https://imagedelivery.net/WTEqQNGFb-l-IHS6IGnzUQ/acb23a50-4b3a-4f30-e69f-f7dc38251e00/public",
+	"dialogue": [
+		{
+			"speaker": "narrator",
+			"content": {
+				"korean": "등대 앞 방파제 낡은 벤치에 허리가 굽은 등대지기 할아버지가 앉아 있다."
+			}
+		},
+		{
+			"speaker": "deungdaejigi",
+			"content": {
+				"korean": "허허, 젊은이들. 잠깐 쉬었다 가게. 쉼 없이 달리면 다친다네."
+			}
+		},
+		{
+			"speaker": "dax",
+			"content": {
+				"korean": "할아버지, 여기서 뭐 하세요? 저희는 잠시 숨 좀 고르는 중이에요."
+			}
+		},
+		{
+			"speaker": "deungdaejigi",
+			"content": {
+				"korean": "그 양복 청년 말이여, 매일 밤 여기서 회장 젊을 적 얘기를 듣고 갔지."
+			}
+		}
+	],
+	"choices": [
+		{
+			"text": {
+				"korean": "할아버지 옆에 앉아 잠시 이야기를 들어주며 숨을 고른다."
+			},
+			"path": "easy",
+			"mbti": "TJ",
+			"effects": {
+				"community": 5,
+				"echo": 10
+			},
+			"reward": [
+				"attack_up"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "당신은 할아버지 옆에 앉아 그의 옛이야기를 듣는다."
+					}
+				},
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "할아버지는 회장의 젊은 시절 이야기를 늘어놓으며 당신의 어깨를 두드린다."
+					}
+				},
+				{
+					"speaker": "dax",
+					"content": {
+						"korean": "할아버지가 당신을 마음에 들어 하시나 봐요!"
+					}
+				}
+			],
+			"risk": {
+				"chance": "mid",
+				"bad": {
+					"effects": {
+						"gold": -30
+					},
+					"reward": [],
+					"result": [
+						{
+							"speaker": "narrator",
+							"content": {
+								"korean": "당신은 할아버지 옆에 앉아 이야기를 들으려 하지만, 할아버지는 잠이 든다."
+							}
+						},
+						{
+							"speaker": "narrator",
+							"content": {
+								"korean": "할아버지의 코 고는 소리가 방파제에 울려 퍼진다."
+							}
+						},
+						{
+							"speaker": "dax",
+							"content": {
+								"korean": "할아버지, 저희 보고 너무 편안하신가 봐요!"
+							}
+						}
+					]
+				}
+			}
+		},
+		{
+			"text": {
+				"korean": "할아버지에게 \"그 양복 청년\"에 대해 더 자세히 물어본다."
+			},
+			"path": "hard",
+			"mbti": "NF",
+			"effects": {
+				"reason": 10,
+				"fighting": 5
+			},
+			"seed": null,
+			"result": [],
+			"event": "minigame_timing",
+			"event_intro": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "할아버지는 눈을 가늘게 뜨고 당신을 바라본다."
+					}
+				},
+				{
+					"speaker": "deungdaejigi",
+					"content": {
+						"korean": "궁금하면, 내 질문 세 개에 빠르게 대답해 보게."
+					}
+				},
+				{
+					"speaker": "dax",
+					"content": {
+						"korean": "어? 갑자기 퀴즈라니!"
+					}
+				}
+			]
+		},
+		{
+			"text": {
+				"korean": "{actor}이(가) 할아버지의 이야기 속 모순점을 찾아내 질문한다."
+			},
+			"path": "lock",
+			"mbti": "NT",
+			"require": {
+				"mbti": "NT"
+			},
+			"effects": {
+				"echo": 5,
+				"reason": 15
+			},
+			"reward": [
+				"intelligence_up"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "{actor}이(가) 할아버지의 이야기 속 앞뒤가 맞지 않는 부분을 짚어낸다."
+					}
+				},
+				{
+					"speaker": "deungdaejigi",
+					"content": {
+						"korean": "흐음, 날카롭구먼. 젊은 회장님은 원래 그렇게 복잡한 분이셨지."
+					}
+				},
+				{
+					"speaker": "dax",
+					"content": {
+						"korean": "와, 할아버지가 잠시 말을 잇지 못하시네요!"
+					}
+				}
+			]
+		},
+		{
+			"text": {
+				"korean": "할아버지에게 따뜻한 차값이라며 지폐를 건네고 \"양복 청년\"의 생김새를 묻는다."
+			},
+			"path": "gold",
+			"mbti": "SF",
+			"require": {
+				"stat": "gold",
+				"op": ">=",
+				"value": 100
+			},
+			"effects": {
+				"gold": -100,
+				"echo": 5
+			},
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "할아버지는 지폐를 보온병 옆에 곱게 접어 두었다."
+					}
+				},
+				{
+					"speaker": "deungdaejigi",
+					"content": {
+						"korean": "허허, 고맙네. 그 청년은 항상 단정한 양복에, 손에는 초록 잉크 만년필을 들고 다녔지."
+					}
+				},
+				{
+					"speaker": "dax",
+					"content": {
+						"korean": "초록 잉크 만년필이요? 비서님이 쓰시는 건데!"
+					}
+				}
+			]
+		}
+	],
+	"tags": [
+		"deungdaejigi",
+		"dax"
+	],
+	"_design": {
+		"slot": "D",
+		"kind": "normal",
+		"person": {
+			"name": "등대지기 할아버지",
+			"role": "등대지기",
+			"id": "deungdaejigi"
+		},
+		"wants": "자신의 이야기를 들어줄 사람을 원한다.",
+		"rule_link": "상대의 사연을 먼저 경청하고 숨겨진 의도를 파악한다.",
+		"events": {
+			"hard": "할아버지의 기억이 오락가락하여 빠르게 답해야만 핵심 정보를 얻을 수 있기 때문."
+		},
+		"flags": {}
+	}
+}

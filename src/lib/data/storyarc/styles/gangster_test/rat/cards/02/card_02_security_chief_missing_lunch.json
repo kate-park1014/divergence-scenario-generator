@@ -1,0 +1,313 @@
+{
+	"id": "card_02_security_chief_missing_lunch",
+	"title": {
+		"korean": "반장님의 사라진 점심"
+	},
+	"intensity": "calm",
+	"after_story": 3,
+	"before_story": 5,
+	"condition": {
+		"leaning": "community-",
+		"among": [
+			"fighting-",
+			"fighting+",
+			"community-",
+			"community+",
+			"reason-",
+			"reason+"
+		],
+		"min": 20
+	},
+	"urgency": 8,
+	"leaning": "community-",
+	"background_tags": [
+		"container_yard",
+		"early_dawn",
+		"foggy",
+		"lonely",
+		"tense"
+	],
+	"background_image": "https://imagedelivery.net/WTEqQNGFb-l-IHS6IGnzUQ/acdb543d-a0c2-4db1-0984-8d6309f92700/public",
+	"dialogue": [
+		{
+			"speaker": "narrator",
+			"content": {
+				"korean": "조용히 잠복 중인 당신의 차 창문을 누군가 톡톡 두드린다."
+			}
+		},
+		{
+			"speaker": "narrator",
+			"content": {
+				"korean": "경비 반장이 작게 헛기침하며 당신을 바라본다."
+			}
+		},
+		{
+			"speaker": "security_chief",
+			"content": {
+				"korean": "당신이 그… 자기 몫은 기가 막히게 챙긴다는 해결사죠?"
+			}
+		},
+		{
+			"speaker": "security_chief",
+			"content": {
+				"korean": "차 안에서 뭔가 기운이… 어휴, 제가 괜히 또 이런 부탁을 드리는 건지… 죄송합니다만…"
+			}
+		},
+		{
+			"speaker": "security_chief",
+			"content": {
+				"korean": "저기… 제 점심 도시락이 감쪽같이 사라졌는데, 제가 혼자 찾기엔 좀… 곤란해서요."
+			}
+		},
+		{
+			"speaker": "dax",
+			"content": {
+				"korean": "점심 도시락이요? 지금 이걸…?"
+			}
+		}
+	],
+	"choices": [
+		{
+			"text": {
+				"korean": "반장님의 점심을 찾아주는 대신, 사례금을 요구한다."
+			},
+			"path": "easy",
+			"mbti": "TJ",
+			"flag": "security_chief_hungry",
+			"effects": {
+				"gold": 100,
+				"fighting": 10
+			},
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "경비 반장은 마지못해 지갑을 열어 돈을 건넨다. 당신은 묵묵히 도시락을 찾아 나선다."
+					}
+				},
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "잠시 후, 주차된 트럭 바퀴 밑에서 찌그러진 도시락통이 발견된다."
+					}
+				},
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "반장은 한숨을 쉬며 간신히 내용물을 수습한다."
+					}
+				}
+			],
+			"risk": {
+				"chance": "mid",
+				"bad": {
+					"effects": {
+						"gold": -20
+					},
+					"reward": [
+						"hp_down"
+					],
+					"result": [
+						{
+							"speaker": "narrator",
+							"content": {
+								"korean": "당신은 경비 반장에게 사례금을 받고 도시락을 찾아 나선다."
+							}
+						},
+						{
+							"speaker": "narrator",
+							"content": {
+								"korean": "도시락을 찾던 중, 옆 차에 숨어있던 닥스가 크게 재채기를 한다."
+							}
+						},
+						{
+							"speaker": "narrator",
+							"content": {
+								"korean": "경비 반장은 당신을 의심스러운 눈초리로 쳐다본다."
+							}
+						}
+					]
+				}
+			}
+		},
+		{
+			"text": {
+				"korean": "경비 반장의 개인적인 부탁은 거절하고, 잠복에 집중한다."
+			},
+			"path": "hard",
+			"mbti": "IN",
+			"flag": "security_chief_disappointed",
+			"effects": {
+				"echo": -10,
+				"community": 20
+			},
+			"reward": [
+				"defense_up"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "경비 반장은 시무룩한 표정으로 터덜터덜 돌아선다. 당신은 다시 잠복에 집중한다."
+					}
+				},
+				{
+					"speaker": "dax",
+					"content": {
+						"korean": "반장님, 저렇게 서운해하는 건 처음 봐요… 점심 없으면 하루 종일 힘들어하시는데."
+					}
+				}
+			],
+			"risk": {
+				"chance": "high",
+				"bad": {
+					"effects": {
+						"gold": -20
+					},
+					"reward": [],
+					"result": [
+						{
+							"speaker": "narrator",
+							"content": {
+								"korean": "당신은 경비 반장의 개인적인 부탁을 거절하고 잠복에 집중한다."
+							}
+						},
+						{
+							"speaker": "narrator",
+							"content": {
+								"korean": "경비 반장이 돌아선 순간, 그의 발에 걸려 차의 문이 살짝 열린다. 닥스가 깜짝 놀라 문을 닫는다."
+							}
+						}
+					]
+				}
+			}
+		},
+		{
+			"text": {
+				"korean": "도시락을 찾아주는 대신, 경비 반장에게서 야적장의 중요한 정보를 얻어낸다."
+			},
+			"path": "stat",
+			"mbti": "ET",
+			"require": {
+				"stat": "community",
+				"op": "<=",
+				"value": -40
+			},
+			"flag": "security_chief_info",
+			"effects": {
+				"gold": 50,
+				"reason": -20,
+				"community": -10
+			},
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "당신은 도시락을 빌미로 야적장의 비밀 통로나 경비 교대 시간 같은 정보를 얻어낸다."
+					}
+				},
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "경비 반장은 도시락을 찾은 것에 만족하며 당신에게 감사 인사를 전한다."
+					}
+				},
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "그는 당신이 '역시 다르다'며 감탄한다."
+					}
+				}
+			]
+		},
+		{
+			"text": {
+				"korean": "경비 반장에게 새 도시락을 사 줄 돈을 쥐여주고 돌려보낸다."
+			},
+			"path": "gold",
+			"mbti": "ES",
+			"require": {
+				"stat": "gold",
+				"op": ">=",
+				"value": 80
+			},
+			"effects": {
+				"echo": 5,
+				"gold": -80
+			},
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "경비 반장은 눈을 휘둥그레 뜨고 돈을 받아 들었다."
+					}
+				},
+				{
+					"speaker": "security_chief",
+					"content": {
+						"korean": "이런 해결사님은 처음 봅니다… 사실 도시락은 제가 아침에 먹은 거였어요."
+					}
+				},
+				{
+					"speaker": "dax",
+					"content": {
+						"korean": "그럼 없어진 게 아니잖아요!"
+					}
+				}
+			]
+		}
+	],
+	"tags": [
+		"security_chief",
+		"dax"
+	],
+	"_design": {
+		"slot": "B",
+		"kind": "rep",
+		"person": {
+			"id": "security_chief",
+			"name": "경비 반장",
+			"role": "야적장 경비 반장"
+		},
+		"wants": "경비 반장이 차 안에 있는 히어로들을 알아보고, 자신의 사라진 점심 도시락을 찾아달라고 부탁한다. 그는 주인공이 자기 이득을 위해 행동한다는 소문을 듣고, 자신의 사적인 문제를 해결해 줄 것이라 기대한다.",
+		"rule_link": "야적장 전체의 큰 그림을 보지 않고, 눈앞의 작은 이득에만 집중하는 것은 배신자를 놓칠 수 있다.",
+		"rep": "community-",
+		"events": {},
+		"flags": {
+			"security_chief_hungry": {
+				"kind": "bad",
+				"boss_penalty": -1,
+				"label": {
+					"korean": "배고픈 반장"
+				},
+				"boss_line": {
+					"korean": "경비 반장이 배를 움켜쥐고 당신을 째려본다."
+				}
+			},
+			"security_chief_disappointed": {
+				"kind": "good",
+				"boss_penalty": 1,
+				"label": {
+					"korean": "실망한 반장"
+				},
+				"boss_choice": {
+					"korean": "경비 반장이 당신에게 싸늘한 시선을 보낸다."
+				}
+			},
+			"security_chief_info": {
+				"kind": "good",
+				"boss_penalty": 2,
+				"label": {
+					"korean": "반장의 정보"
+				},
+				"boss_choice": {
+					"korean": "경비 반장이 당신에게만 몰래 야적장의 지도를 건넨다."
+				}
+			}
+		}
+	}
+}

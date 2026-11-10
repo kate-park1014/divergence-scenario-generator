@@ -1,0 +1,332 @@
+{
+	"id": "card_05_reinforced_blockade",
+	"title": {
+		"korean": "강화된 봉쇄선"
+	},
+	"intensity": "calm",
+	"after_story": 7,
+	"before_story": 9,
+	"condition": {
+		"leaning": "reason+",
+		"among": [
+			"fighting-",
+			"fighting+",
+			"community-",
+			"community+",
+			"reason-",
+			"reason+"
+		],
+		"min": 20
+	},
+	"urgency": 8,
+	"leaning": "reason+",
+	"background_tags": [
+		"harbor",
+		"night",
+		"foggy",
+		"alone",
+		"strict"
+	],
+	"background_image": "https://imagedelivery.net/WTEqQNGFb-l-IHS6IGnzUQ/d67905ec-722f-4cee-80f4-0b19d0d93d00/public",
+	"dialogue": [
+		{
+			"speaker": "narrator",
+			"content": {
+				"korean": "등대 앞 방파제에서 우두커니 서 있던 경호팀장이 당신을 보자마자 자세를 바로잡는다."
+			}
+		},
+		{
+			"speaker": "security_team_leader",
+			"content": {
+				"korean": "당신이 그… 규정보다 마음 가는 대로 일을 처리한다는 분이시죠? 소문이 자자해서 제가 직접 확인했습니다."
+			}
+		},
+		{
+			"speaker": "security_team_leader",
+			"content": {
+				"korean": "등대 진입은 통제 구역입니다. 특별한 사유가 없다면, 그 어떤 분도 들여보낼 수 없습니다."
+			}
+		},
+		{
+			"speaker": "dax",
+			"content": {
+				"korean": "경호팀장님! 등대 안엔 비서님이 계실 거예요! 이대로 물러날 순 없어요!"
+			}
+		},
+		{
+			"speaker": "narrator",
+			"content": {
+				"korean": "경호팀장은 엄격한 표정으로 당신을 응시한다."
+			}
+		}
+	],
+	"choices": [
+		{
+			"text": {
+				"korean": "경호팀장의 규정 준수를 칭찬하며, 등대 안의 긴급한 사정을 설명하고 진입을 설득한다."
+			},
+			"path": "easy",
+			"mbti": "IN",
+			"flag": "security_team_leader_disadvantage_d6",
+			"effects": {
+				"echo": 5,
+				"reason": -10,
+				"community": 10
+			},
+			"reward": [
+				"attack_up"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "당신은 경호팀장의 규정 준수를 추켜세우며, 등대 안의 상황을 조심스럽게 설명했다."
+					}
+				},
+				{
+					"speaker": "security_team_leader",
+					"content": {
+						"korean": "음… 규정을 어기는 건 아니지만… 당신의 말이라면… 좋습니다! 들어가시죠."
+					}
+				},
+				{
+					"speaker": "dax",
+					"content": {
+						"korean": "팀장님이 저희 말을 들었어요! 등대 문이 열렸어요!"
+					}
+				}
+			],
+			"risk": {
+				"chance": "mid",
+				"bad": {
+					"effects": {
+						"gold": -20
+					},
+					"reward": [
+						"hp_down"
+					],
+					"result": [
+						{
+							"speaker": "narrator",
+							"content": {
+								"korean": "당신은 경호팀장의 규정을 존중하며, 등대 안의 긴급한 사정을 에둘러 말했다."
+							}
+						},
+						{
+							"speaker": "security_team_leader",
+							"content": {
+								"korean": "음… 규정을 어기는 건 아니지만… 잠시만요! 안에서 뭔가 튀어나오는데요?!"
+							}
+						},
+						{
+							"speaker": "dax",
+							"content": {
+								"korean": "앗, 등대 안에서 굴러 나온 건… 팀장님 점심 도시락이잖아요! 문이 도로 닫혔어요!"
+							}
+						}
+					]
+				}
+			}
+		},
+		{
+			"text": {
+				"korean": "규정을 어겨서라도 등대에 들어가야 한다며, 강하게 밀어붙여 길을 확보한다."
+			},
+			"path": "hard",
+			"mbti": "ET",
+			"flag": "security_team_leader_support_d6",
+			"effects": {
+				"fighting": 10,
+				"echo": -5,
+				"reason": 20
+			},
+			"reward": [
+				"defense_down"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "당신은 경호팀장에게 규정보다 중요한 것이 있다며, 당당하게 등대 진입을 요구했다."
+					}
+				},
+				{
+					"speaker": "security_team_leader",
+					"content": {
+						"korean": "크윽…! 이런 무례는 처음입니다만… 당신의 기세에 눌려 제가 어찌…."
+					}
+				},
+				{
+					"speaker": "dax",
+					"content": {
+						"korean": "팀장님이 완전히 당황하셨네요! 이 틈에 얼른 들어가요!"
+					}
+				}
+			],
+			"risk": {
+				"chance": "high",
+				"bad": {
+					"effects": {
+						"gold": -20
+					},
+					"reward": [],
+					"result": [
+						{
+							"speaker": "narrator",
+							"content": {
+								"korean": "당신은 경호팀장에게 규정보다 중한 것이 있다며, 힘껏 등대 진입을 요구했다."
+							}
+						},
+						{
+							"speaker": "security_team_leader",
+							"content": {
+								"korean": "크윽! 당당함은 좋으나… 제 심장에 무리가…! 콜록, 콜록!"
+							}
+						},
+						{
+							"speaker": "narrator",
+							"content": {
+								"korean": "경호팀장은 가슴을 부여잡고 쓰러지며 등대 문을 막았다."
+							}
+						},
+						{
+							"speaker": "dax",
+							"content": {
+								"korean": "팀장님이 갑자기 쓰러졌어요! 등대 문을 쓰러진 몸으로 막고 있어요!"
+							}
+						}
+					]
+				}
+			}
+		},
+		{
+			"text": {
+				"korean": "등대 진입 규정에 대한 예외 조항을 찾아내어, 경호팀장에게 제시한다."
+			},
+			"path": "stat",
+			"mbti": "ST",
+			"require": {
+				"stat": "reason",
+				"op": ">=",
+				"value": 40
+			},
+			"flag": "security_team_leader_confused_d6",
+			"effects": {
+				"echo": 15,
+				"reason": 30
+			},
+			"reward": [
+				"intelligence_down"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "당신은 경호팀장에게 '긴급 상황 발생 시 관계자 진입 허용' 조항을 정확히 짚어냈다."
+					}
+				},
+				{
+					"speaker": "security_team_leader",
+					"content": {
+						"korean": "으음… 이런 조항이 있었던가… 제 기억이… 으음…."
+					}
+				},
+				{
+					"speaker": "dax",
+					"content": {
+						"korean": "팀장님이 규정집을 뒤지고 있어요! 저희가 말한 조항을 찾나 봐요!"
+					}
+				}
+			]
+		},
+		{
+			"text": {
+				"korean": "경호팀장에게 '규정 위반 벌금'이라며 돈을 건넨다."
+			},
+			"path": "gold",
+			"mbti": "ES",
+			"require": {
+				"stat": "gold",
+				"op": ">=",
+				"value": 100
+			},
+			"effects": {
+				"reason": 10,
+				"gold": -100
+			},
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "당신은 '규정 위반 벌금'이라며 경호팀장에게 두툼한 돈 봉투를 내밀었다."
+					}
+				},
+				{
+					"speaker": "security_team_leader",
+					"content": {
+						"korean": "규… 규정 위반 벌금? 이런 규정은… 읍읍! 알겠습니다! 들어가시죠!"
+					}
+				},
+				{
+					"speaker": "dax",
+					"content": {
+						"korean": "벌금 내고 들어가는 등대는 처음이에요."
+					}
+				}
+			]
+		}
+	],
+	"tags": [
+		"security_team_leader",
+		"dax"
+	],
+	"_design": {
+		"slot": "D",
+		"kind": "rep",
+		"person": {
+			"id": "security_team_leader",
+			"name": "경호팀장",
+			"role": "경호팀장"
+		},
+		"wants": "등대 진입 규정을 철저히 지키면서도, 당신의 명성을 이용해 이 상황을 깔끔하게 정리하고 싶어 합니다.",
+		"rule_link": "경호팀장은 당신이 규칙을 지키는 사람이라는 소문을 듣고, 당신이 등대 안의 사정을 먼저 묻고 행동하기를 기대합니다.",
+		"rep": "reason+",
+		"events": {},
+		"flags": {
+			"security_team_leader_disadvantage_d6": {
+				"kind": "bad",
+				"boss_penalty": -1,
+				"label": {
+					"korean": "당황한 경호팀장"
+				},
+				"boss_line": {
+					"korean": "경호팀장은 당신의 기세에 눌려 제대로 대응하지 못한다. 당신의 공격력이 20% 증가한다."
+				}
+			},
+			"security_team_leader_support_d6": {
+				"kind": "good",
+				"boss_penalty": 1,
+				"label": {
+					"korean": "협력하는 경호팀장"
+				},
+				"boss_choice": {
+					"korean": "경호팀장이 등대 안으로 들어가 상황을 확인해 준다. 적의 방어력이 10% 감소한다."
+				}
+			},
+			"security_team_leader_confused_d6": {
+				"kind": "good",
+				"boss_penalty": 2,
+				"label": {
+					"korean": "혼란스러운 경호팀장"
+				},
+				"boss_choice": {
+					"korean": "경호팀장이 알 수 없는 주파수를 분석하느라 혼란에 빠져 있다. 적의 지능이 10% 감소한다."
+				}
+			}
+		}
+	}
+}

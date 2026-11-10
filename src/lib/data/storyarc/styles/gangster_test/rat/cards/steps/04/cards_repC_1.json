@@ -1,0 +1,385 @@
+{
+	"cards": [
+		{
+			"no": 1,
+			"dialogue": [
+				{
+					"text": "흐음, 당신이 그 험한 일은 주먹으로 정리한다는 해결사 양반이십니까? 이 지저분한 꼴을 어찌해야 할지...",
+					"speaker": "ibalsa_aje"
+				},
+				{
+					"text": "여긴 금고실로 가는 길이에요, 아재. 바쁜데 비켜주세요.",
+					"speaker": "dax"
+				},
+				{
+					"speaker": "ibalsa_aje",
+					"text": "이런, 이 바닥은 원래 깨끗해야 하는 건데..."
+				},
+				{
+					"text": "이 얼룩만 보면 속이 뒤집힙니다. 누가 이렇게 만들었는지...",
+					"speaker": "ibalsa_aje"
+				}
+			],
+			"choices": [
+				{
+					"mbti": "ET",
+					"result": [
+						{
+							"text": "당신은 이발사 아재에게 얼룩을 만든 사람을 물어본다. 아재는 엉겁결에 복도 청소부를 지목한다.",
+							"speaker": "narrator"
+						},
+						{
+							"speaker": "narrator",
+							"text": "당신이 청소부에게 다가가자, 그는 놀라 들고 있던 청소 도구를 떨어뜨리고 도망친다."
+						},
+						{
+							"speaker": "dax",
+							"text": "누가 이렇게까지 한다고 얼룩을 지울까요..."
+						}
+					],
+					"path": "easy",
+					"flag": {
+						"boss_text": "복도에서 청소부가 겁에 질려 도망친다.",
+						"key": "barber_mess_threat",
+						"label": "협박으로 해결"
+					},
+					"risk_bad": {
+						"reward": [
+							"hp_down"
+						],
+						"result": [
+							{
+								"text": "당신은 이발사 아재에게 얼룩을 만든 사람을 물어보며 험악하게 협박한다.",
+								"speaker": "narrator"
+							},
+							{
+								"speaker": "narrator",
+								"text": "아재는 겁에 질려 저 멀리 청소 도구를 들고 있는 사람을 지목한다."
+							},
+							{
+								"text": "당신이 청소부에게 다가가자, 그는 당신의 살벌한 기세에 놀라 들고 있던 도구를 휘두르다 당신을 넘어뜨린다.",
+								"speaker": "narrator"
+							},
+							{
+								"speaker": "dax",
+								"text": "오히려 우리가 봉변을 당했네요."
+							}
+						]
+					},
+					"effects": {
+						"fighting": 15,
+						"echo": -5
+					},
+					"reward": [
+						"attack_down"
+					],
+					"text": "얼룩을 만든 사람을 찾아내 협박한다."
+				},
+				{
+					"result": [
+						{
+							"speaker": "narrator",
+							"text": "당신은 아재의 손에서 수건을 빼앗아 벅벅 문지른다. 아재는 놀란 표정으로 당신을 바라본다."
+						},
+						{
+							"text": "오랜 시간 닦자 얼룩이 겨우 사라지고, 아재는 한결 편안한 표정으로 고개를 끄덕인다.",
+							"speaker": "narrator"
+						},
+						{
+							"text": "아재가 저렇게 순순히 수건을 내줄 줄이야...",
+							"speaker": "dax"
+						}
+					],
+					"mbti": "IS",
+					"path": "hard",
+					"flag": {
+						"label": "얼룩 제거",
+						"key": "barber_stain_clean",
+						"boss_text": "이발사 아재가 금고실 문 앞에서 길을 열어준다."
+					},
+					"reward": [
+						"move_range_up"
+					],
+					"risk_bad": {
+						"result": [
+							{
+								"text": "당신은 아재의 손에서 수건을 빼앗아 벅벅 문지른다.",
+								"speaker": "narrator"
+							},
+							{
+								"speaker": "narrator",
+								"text": "하지만 얼룩은 지워지지 않고, 오히려 당신의 손에 기름때가 묻는다."
+							},
+							{
+								"speaker": "narrator",
+								"text": "아재는 당신의 손을 보며 한숨을 쉬고, 당신은 끈적이는 손으로 움직여야 한다."
+							},
+							{
+								"speaker": "dax",
+								"text": "어설프게 도우려다 오히려 번거로워졌네요."
+							}
+						],
+						"gold": -30,
+						"reward": []
+					},
+					"effects": {
+						"community": 10,
+						"fighting": -15
+					},
+					"text": "이발사 아재의 손에 들린 수건을 빼앗아 직접 얼룩을 닦는다."
+				},
+				{
+					"result": [
+						{
+							"text": "당신의 험악한 기세에 이발사 아재는 움찔한다. 그는 재빨리 길을 비키며 고개를 숙인다.",
+							"speaker": "narrator"
+						},
+						{
+							"text": "당신은 굳게 닫힌 금고실 문으로 향한다. 아재는 계속 수건으로 손을 닦으며 당신의 뒷모습을 본다.",
+							"speaker": "narrator"
+						},
+						{
+							"speaker": "dax",
+							"text": "아재가 저렇게 순순히 비켜줄 줄은 몰랐네요. 소문이 맞았나 봐요."
+						}
+					],
+					"path": "stat",
+					"flag": {
+						"boss_text": "이발사 아재가 금고실 문 앞에서 당신에게 먼저 인사를 건넨다.",
+						"label": "이발사 위협",
+						"key": "barber_intimidated"
+					},
+					"mbti": "ST",
+					"reward": [
+						"intelligence_up"
+					],
+					"text": "험악한 표정으로 이발사 아재에게 길을 비키라 명한다.",
+					"effects": {
+						"echo": -10,
+						"fighting": -20
+					}
+				},
+				{
+					"result": [
+						{
+							"speaker": "narrator",
+							"text": "당신은 지갑에서 돈을 꺼내 이발사 아재에게 건넨다. 아재는 눈을 동그랗게 뜨고 돈과 당신을 번갈아 본다."
+						},
+						{
+							"speaker": "narrator",
+							"text": "아재는 돈을 받아들고는 신이 나서 '새 수건 사러 가야지!' 하며 계단 아래로 내려간다."
+						},
+						{
+							"text": "아재가 저렇게 쉽게 갈 줄은 몰랐네요. 수건에 진심이었나 봐요.",
+							"speaker": "dax"
+						}
+					],
+					"path": "gold",
+					"mbti": "EN",
+					"effects": {
+						"gold": -80,
+						"community": 5
+					},
+					"text": "새 수건을 사주겠다며 이발사 아재를 달랜다."
+				}
+			],
+			"background_tags": [
+				"stairs",
+				"daytime",
+				"dimlight",
+				"empty",
+				"tense"
+			],
+			"wants": "이발사 아재는 계단에 생긴 얼룩 때문에 신경이 곤두서 있다. 당신에게 이 얼룩을 해결해 주기를 원한다.",
+			"key": "noisy_barber_stairs",
+			"title": "시끄러운 이발사",
+			"person": {
+				"id": "ibalsa_aje",
+				"name": "이발사 아재",
+				"role": "이발사"
+			},
+			"rule_link": "이발사 아재는 바닥의 얼룩을 말 못 할 사정으로 보지만, 당신이 얼룩을 숨기려는 사람으로 볼지, 말 못 할 사정이 있다고 볼지 선택해야 한다.",
+			"slot": "C",
+			"kind": "rep",
+			"rep_dir": "fighting-"
+		},
+		{
+			"key": "lost_razor_barber",
+			"choices": [
+				{
+					"text": "이발사 아재의 짐을 뒤져 면도칼을 찾아준다.",
+					"reward": [
+						"defense_down"
+					],
+					"path": "easy",
+					"risk_bad": {
+						"gold": -40,
+						"result": [
+							{
+								"speaker": "narrator",
+								"text": "당신은 아재의 허락도 없이 그의 작업 가방을 뒤진다. 아재는 불쾌한 표정을 숨기지 못한다."
+							},
+							{
+								"text": "가방 안에서 면도칼 대신 아재의 비상금 봉투가 튀어나온다. 아재는 허둥지둥 봉투를 숨긴다.",
+								"speaker": "narrator"
+							},
+							{
+								"speaker": "dax",
+								"text": "괜히 아재의 사생활만 침해했네요."
+							}
+						],
+						"reward": []
+					},
+					"flag": {
+						"boss_text": "이발사 아재가 당신의 옷에 면도칼로 작은 구멍을 낸다.",
+						"label": "면도칼 발견(강압)",
+						"key": "barber_razor_found_easy"
+					},
+					"mbti": "NT",
+					"result": [
+						{
+							"speaker": "narrator",
+							"text": "당신은 아재의 허락도 없이 그의 작업 가방을 뒤진다. 아재는 당황하지만 딱히 막지는 못한다."
+						},
+						{
+							"speaker": "narrator",
+							"text": "가방 깊숙한 곳에서 면도칼이 나온다. 아재는 '아, 여기 있었네!' 하며 머쓱하게 웃는다."
+						},
+						{
+							"text": "아재가 면도칼 하나에도 저렇게 허둥대는군요.",
+							"speaker": "dax"
+						}
+					],
+					"effects": {
+						"reason": -10,
+						"gold": 50
+					}
+				},
+				{
+					"text": "계단 주변을 샅샅이 뒤져 면도칼을 찾아준다.",
+					"path": "hard",
+					"reward": [
+						"intelligence_up"
+					],
+					"mbti": "SJ",
+					"risk_bad": {
+						"result": [
+							{
+								"speaker": "narrator",
+								"text": "당신은 이발사 아재와 함께 계단 구석구석을 살핀다. 하지만 면도칼은 보이지 않고, 먼지만 잔뜩 쌓여 있다."
+							},
+							{
+								"text": "아재는 한숨을 쉬며 '에이, 오늘은 그냥 포기해야겠구먼.' 하고 고개를 젓는다.",
+								"speaker": "narrator"
+							},
+							{
+								"text": "아재가 아끼던 면도칼이라더니, 아쉽겠네요.",
+								"speaker": "dax"
+							}
+						],
+						"reward": [],
+						"gold": -20
+					},
+					"effects": {
+						"community": 15,
+						"reason": 5
+					},
+					"result": [
+						{
+							"speaker": "narrator",
+							"text": "당신은 이발사 아재와 함께 계단 구석구석을 살핀다. 아재는 당신의 꼼꼼함에 감탄한다."
+						},
+						{
+							"text": "계단 난간 아래 틈새에서 면도칼이 발견된다. 아재는 기뻐하며 당신에게 고마워한다.",
+							"speaker": "narrator"
+						},
+						{
+							"speaker": "dax",
+							"text": "역시 함께 찾으니 금방 발견하네요."
+						}
+					],
+					"flag": {
+						"label": "면도칼 발견(협력)",
+						"boss_text": "이발사 아재가 금고실 문 앞에서 당신에게 조용히 귀띔해준다.",
+						"key": "barber_razor_found_hard"
+					}
+				},
+				{
+					"result": [
+						{
+							"speaker": "narrator",
+							"text": "당신은 주변을 둘러보더니 면도칼이 굴러떨어졌을 만한 각도를 정확히 짚어준다."
+						},
+						{
+							"text": "아재는 그곳을 살펴보더니 '아니, 어떻게 그걸 알았지?' 하며 놀라 면도칼을 찾아낸다.",
+							"speaker": "narrator"
+						},
+						{
+							"speaker": "dax",
+							"text": "아재가 감탄하는 걸 보니, 역시 대단하시네요."
+						}
+					],
+					"mbti": "NF",
+					"flag": {
+						"label": "면도칼 예측",
+						"boss_text": "이발사 아재가 금고실 문 앞에서 당신이 필요로 할 물건을 건넨다.",
+						"key": "barber_razor_insight"
+					},
+					"text": "면도칼이 떨어졌을 만한 곳을 정확히 짚어 아재에게 알려준다.",
+					"reward": [
+						"shield"
+					],
+					"effects": {
+						"community": 20,
+						"echo": 10,
+						"fighting": 10
+					},
+					"path": "stat"
+				}
+			],
+			"no": 2,
+			"background_tags": [
+				"stairs",
+				"daytime",
+				"brightlight",
+				"alone",
+				"curious"
+			],
+			"rule_link": "이발사 아재는 면도칼이 사라진 것을 말 못 할 사정으로 숨기지만, 당신이 면도칼을 숨긴 사람으로 볼지, 말 못 할 사정이 있다고 볼지 선택해야 한다.",
+			"dialogue": [
+				{
+					"speaker": "ibalsa_aje",
+					"text": "아, 당신이 그 어려운 이웃들에게 먼저 손을 내민다는 해결사 양반이십니까?"
+				},
+				{
+					"speaker": "ibalsa_aje",
+					"text": "제 소중한 면도칼이 감쪽같이 사라져서..."
+				},
+				{
+					"text": "아재, 저희는 금고실로 가야 해요. 중요한 일이라서요.",
+					"speaker": "dax"
+				},
+				{
+					"speaker": "ibalsa_aje",
+					"text": "이런, 이 면도칼은 제 손때가 묻은 건데... 이걸로 깎아야 제대로 깎이는데 말이죠."
+				},
+				{
+					"speaker": "ibalsa_aje",
+					"text": "혹시 누가 가져간 건지, 아니면 어디로 굴러떨어진 건지..."
+				}
+			],
+			"wants": "이발사 아재는 자신의 소중한 면도칼을 잃어버려 당황하고 있다. 당신에게 면도칼을 찾아주기를 원한다.",
+			"person": {
+				"id": "ibalsa_aje",
+				"name": "이발사 아재",
+				"role": "이발사"
+			},
+			"title": "사라진 면도칼",
+			"slot": "C",
+			"kind": "rep",
+			"rep_dir": "fighting+"
+		}
+	],
+	"errors": [],
+	"prompt_hash": "89220ff61a847cdfcbcb3f3654d57055249a214b"
+}

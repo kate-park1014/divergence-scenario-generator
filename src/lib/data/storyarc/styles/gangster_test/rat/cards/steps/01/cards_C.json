@@ -1,400 +1,437 @@
 {
 	"cards": [
 		{
-			"background_tags": [
-				"alley",
-				"night",
-				"dark_shadows",
-				"few_people",
-				"tense"
-			],
-			"wants": "자기 간부에 대한 헛소문의 진상을 밝히고 싶어 한다.",
-			"key": "rumor_confrontation",
-			"dialogue": [
-				{
-					"text": "골목 어귀에서 덩치 큰 사내가 나타나 당신 앞을 가로막는다.",
-					"speaker": "narrator"
-				},
-				{
-					"text": "당신들, 우리 간부님을 수상하다고 하고 다닌다며?",
-					"speaker": "executive_subordinate"
-				},
-				{
-					"speaker": "dax",
-					"text": "어르신, 저희는 그저..."
-				},
-				{
-					"text": "시끄럽다! 헛소문 퍼뜨리고 다니지 마라!",
-					"speaker": "executive_subordinate"
-				},
-				{
-					"text": "사내의 표정에는 분노와 억울함이 뒤섞여 있다.",
-					"speaker": "narrator"
-				}
-			],
+			"no": 1,
 			"choices": [
 				{
-					"flag": {
-						"label": "부하의 추격",
-						"boss_text": "간부의 부하가 보스 방까지 쫓아와 시비를 건다.",
-						"key": "executive_subordinate_chase"
-					},
-					"mbti": "SF",
-					"path": "easy",
 					"result": [
 						{
-							"text": "사내의 눈을 피해 재빨리 다른 골목으로 발걸음을 옮긴다.",
+							"text": "당신의 말에 부하는 잠시 주춤하며 길을 비켜준다.",
 							"speaker": "narrator"
 						},
 						{
-							"speaker": "dax",
-							"text": "이대로 피하는 게 능사는 아닐 텐데요..."
+							"text": "흥, 이번만 넘어간다. 다음엔 소문 함부로 퍼트리지 마라!",
+							"speaker": "subordinate_executive"
+						},
+						{
+							"text": "휴, 그냥 지나가네요. 다행입니다!",
+							"speaker": "dax"
 						}
 					],
-					"effects": {
-						"gold": -20,
-						"reason": -15,
-						"community": -15
+					"flag": {
+						"boss_text": "간부의 부하들이 당신의 앞을 막아선다.",
+						"label": "소문 페널티",
+						"key": "easy_rumor_penalty"
 					},
-					"text": "일단 상황을 피하기 위해 다른 골목으로 돌아간다."
+					"path": "easy",
+					"reward": [
+						"attack_up"
+					],
+					"text": "\"소문은 소문일 뿐\"이라며 부하를 안심시키고, 조용히 옆으로 지나간다.",
+					"mbti": "SF",
+					"effects": {
+						"community": 10,
+						"echo": 5
+					}
 				},
 				{
-					"effects": {
-						"fighting": -10,
-						"echo": 10
-					},
-					"flag": {
-						"key": "executive_subordinate_trust",
-						"label": "부하의 신뢰",
-						"boss_text": "간부의 부하가 당신을 믿고 보스 방에서 작은 도움을 준다."
-					},
-					"path": "hard",
 					"mbti": "TJ",
-					"text": "사내에게 다가가 오해를 풀기 위해 대화를 시도한다.",
+					"text": "\"우린 진실을 찾을 뿐\"이라고 단호하게 말하고, 길을 막지 말라고 경고한다.",
 					"result": [
 						{
 							"speaker": "narrator",
-							"text": "사내는 당신의 설명을 듣고 오해를 풀지만, 여전히 경계하는 눈치다."
+							"text": "당신의 단호한 태도에 부하는 불만스러운 표정을 지으며 뒤로 물러선다."
 						},
 						{
-							"speaker": "executive_subordinate",
-							"text": "다음부터는 말조심해라."
+							"text": "쳇, 두고 보자고. 간부님은 절대 그런 분이 아니야!",
+							"speaker": "subordinate_executive"
 						},
 						{
-							"speaker": "dax",
-							"text": "직접 대화해서 오해를 푸는 것이 역시 최고네요."
+							"text": "이야, 부하가 쫄아서 도망가네요!",
+							"speaker": "dax"
 						}
 					],
+					"effects": {
+						"fighting": 10,
+						"echo": 5
+					},
+					"flag": {
+						"key": "hard_subordinate_info",
+						"label": "부하 정보",
+						"boss_text": "간부의 부하들이 길을 비켜주며 간부의 숨겨진 장부를 흘린다."
+					},
+					"path": "hard",
 					"reward": [
 						"defense_up"
 					]
 				}
 			],
-			"rule_link": "앞서 들은 소문을 사실처럼 받아들인 결과로, 소문의 당사자를 직접 만나 사정을 들을지 피할지 선택한다.",
-			"title": "소문에 휩싸인 간부의 부하",
-			"no": 1,
 			"person": {
-				"name": "간부의 부하",
+				"id": "subordinate_executive",
 				"role": "백상어파 간부의 부하",
-				"id": "executive_subordinate"
+				"name": "간부의 부하"
 			},
+			"wants": "자기 간부의 억울함을 풀고, 소문을 퍼트린 사람들을 막고 싶어 함.",
+			"dialogue": [
+				{
+					"speaker": "narrator",
+					"text": "골목 어귀로 들어서려는데, 덩치 큰 사내가 앞을 막아선다."
+				},
+				{
+					"speaker": "subordinate_executive",
+					"text": "어이, 거기! 우리 간부님을 이상하게 보고 다닌다며?"
+				},
+				{
+					"text": "누구 마음대로 간부님을 쥐라고 하는 거야! 멱살 잡고 따져야겠어!",
+					"speaker": "subordinate_executive"
+				},
+				{
+					"text": "으악, 소문이 이렇게 빨리 퍼진단 말이에요? 어쩌죠?",
+					"speaker": "dax"
+				},
+				{
+					"speaker": "subordinate_executive",
+					"text": "당신들 때문에 간부님 얼굴에 먹칠을 했으니, 이 골목은 못 지나가!"
+				}
+			],
+			"key": "subordinate_confrontation",
+			"background_tags": [
+				"alley",
+				"evening",
+				"dim",
+				"sparse",
+				"tense"
+			],
+			"title": "간부의 부하가 막아선다",
+			"rule_link": "이미 누군가를 수상하다고 단정했던 말 때문에 새로운 방해를 만났을 때, 그의 말을 들어줄지 아니면 무시하고 지나갈지 판단해야 한다.",
 			"slot": "C",
 			"kind": "callback",
 			"returns": "easy"
 		},
 		{
-			"background_tags": [
-				"alley",
-				"smoke",
-				"twilight",
-				"few_people",
-				"grateful"
-			],
-			"wants": "자신을 도와준 당신에게 보답하고 싶어 한다.",
-			"rule_link": "앞서 사정을 듣고 도와준 결과, 그 인물이 감사의 표시로 도움을 주려 할 때 그 도움을 받아들일지 선택한다.",
-			"no": 2,
-			"dialogue": [
-				{
-					"speaker": "narrator",
-					"text": "연기가 자욱한 골목 안쪽에서 허둥지둥 뛰어오는 일꾼이 당신을 알아본다."
-				},
-				{
-					"text": "어르신! 여기서 뭘 하시는 겁니까?",
-					"speaker": "grateful_worker"
-				},
-				{
-					"text": "어르신, 괜찮으세요?",
-					"speaker": "dax"
-				},
-				{
-					"speaker": "grateful_worker",
-					"text": "저번에 약값 보태주신 덕분에 살았습니다! 제가 지름길을 알려 드리죠!"
-				},
-				{
-					"text": "일꾼은 당신이 준 약 덕분에 기운을 차린 듯하다.",
-					"speaker": "narrator"
-				}
-			],
+			"title": "숨 가쁜 일꾼의 지름길",
+			"wants": "약값을 줘서 고마운 마음에 보답하고 싶어 함.",
 			"person": {
-				"name": "부두 일꾼",
-				"role": "약값을 받은 부두 일꾼",
-				"id": "grateful_worker"
+				"name": "늙은 일꾼",
+				"id": "worker_old",
+				"role": "늙은 부두 일꾼"
 			},
-			"key": "grateful_worker_shortcut",
+			"key": "worker_shortcut",
 			"choices": [
 				{
-					"text": "일꾼이 안내하는 지름길로 함께 이동한다.",
-					"effects": {
-						"gold": 70,
-						"echo": 5
-					},
 					"result": [
 						{
-							"text": "일꾼의 안내를 따라 좁고 복잡한 지름길을 빠르게 통과한다.",
+							"text": "늙은 일꾼은 흐뭇하게 웃으며 손가락으로 골목 안 좁은 틈을 가리킨다.",
 							"speaker": "narrator"
 						},
 						{
-							"speaker": "grateful_worker",
-							"text": "덕분에 빨리 가실 수 있을 겁니다!"
+							"speaker": "worker_old",
+							"text": "컥, 컥... 이리로 가면 빠를 거요... 조심하시오."
 						},
 						{
-							"speaker": "dax",
-							"text": "어르신 덕분에 시간을 아꼈네요."
-						}
-					],
-					"flag": {
-						"boss_text": "보스 방에 빠르게 진입하여 경리부장의 허를 찌른다.",
-						"label": "빠른 길 안내",
-						"key": "quick_path_to_boss"
-					},
-					"path": "easy",
-					"mbti": "EP"
-				},
-				{
-					"flag": {
-						"boss_text": "일꾼이 당신의 의로운 행동을 소문내어 보스 방에서 백상어파 조직원들의 작은 지지를 얻는다.",
-						"key": "safe_passage_for_worker",
-						"label": "일꾼의 안전 확보"
-					},
-					"path": "hard",
-					"mbti": "IN",
-					"effects": {
-						"community": 10,
-						"reason": 10
-					},
-					"text": "일꾼에게 먼저 피신하라고 하고 원래 가던 길을 계속 간다.",
-					"result": [
-						{
-							"speaker": "narrator",
-							"text": "일꾼은 당신의 배려에 감동한 듯 고개를 숙이고 사라진다."
-						},
-						{
-							"text": "조심하십시오!",
-							"speaker": "grateful_worker"
-						},
-						{
-							"text": "어르신이 무사해서 다행입니다.",
+							"text": "와, 어르신 덕분에 시간을 벌겠네요!",
 							"speaker": "dax"
 						}
 					],
+					"text": "\"고맙다\"고 말하며 늙은 일꾼이 알려주는 지름길로 들어선다.",
+					"mbti": "EN",
+					"flag": {
+						"key": "easy_worker_shortcut",
+						"boss_text": "늙은 일꾼이 알려준 지름길을 통해 경리부장의 뒤를 잡는다.",
+						"label": "일꾼 지름길"
+					},
+					"effects": {
+						"community": 10,
+						"echo": 10
+					},
+					"path": "easy",
+					"reward": [
+						"attack_up"
+					]
+				},
+				{
+					"path": "hard",
+					"result": [
+						{
+							"text": "당신은 늙은 일꾼에게 무리하지 말라며 등을 토닥여 돌려보낸다.",
+							"speaker": "narrator"
+						},
+						{
+							"speaker": "dax",
+							"text": "어르신이 섭섭해하실 수도 있겠네요. 그래도 안전이 최고죠!"
+						},
+						{
+							"speaker": "narrator",
+							"text": "당신은 연기가 나는 골목 안쪽으로 신중하게 발걸음을 옮긴다."
+						}
+					],
+					"mbti": "IT",
+					"flag": {
+						"key": "hard_prudent_path",
+						"boss_text": "늙은 일꾼의 지름길 제안을 거절하고 신중하게 이동하여 경리부장의 함정을 피한다.",
+						"label": "신중한 길"
+					},
+					"effects": {
+						"echo": 5,
+						"reason": 10
+					},
+					"text": "\"괜찮다\"고 말하며 늙은 일꾼을 돌려보내고, 원래 가려던 길로 간다.",
 					"reward": [
 						"defense_up"
 					]
 				}
 			],
-			"title": "고마움을 표하는 일꾼",
+			"dialogue": [
+				{
+					"speaker": "narrator",
+					"text": "골목으로 향하는데, 뒤에서 헐레벌떡 뛰어온 늙은 일꾼이 당신을 붙잡는다."
+				},
+				{
+					"speaker": "worker_old",
+					"text": "컥, 컥... 이보시오... 내가 고마워서..."
+				},
+				{
+					"text": "저기, 연기 나는 골목으로 가는 지름길을 아는데... 알려줄까?",
+					"speaker": "worker_old"
+				},
+				{
+					"speaker": "dax",
+					"text": "어르신, 여기까지 어떻게 오셨어요? 몸도 안 좋으신데..."
+				},
+				{
+					"text": "컥, 컥... 괜찮소... 얼른 가야 할 것 같아서...",
+					"speaker": "worker_old"
+				}
+			],
+			"rule_link": "약값을 받아 신세 진 일꾼이 지름길을 알려줄 때, 그의 도움을 의심할지 아니면 믿고 따를지 판단해야 한다.",
+			"background_tags": [
+				"alley",
+				"evening",
+				"dim",
+				"sparse",
+				"hurried"
+			],
+			"no": 2,
 			"slot": "C",
 			"kind": "callback",
 			"returns": "hard"
 		},
 		{
-			"title": "타다 만 종이를 든 아이",
-			"background_tags": [
-				"alley",
-				"smoke",
-				"child",
-				"junk",
-				"eerie"
-			],
-			"rule_link": "수상한 장소에서 아이가 타다 만 종이를 들고 있을 때, 아이의 말만 듣고 판단할지 혹은 사정을 확인해 볼지 선택한다.",
-			"key": "child_with_paper",
-			"wants": "타다 만 종이 조각들을 팔아 돈을 벌고 싶어 한다.",
+			"person": {
+				"id": "child_picker",
+				"name": "고물 줍는 아이",
+				"role": "고물을 줍는 아이"
+			},
+			"wants": "타다 남은 종이 조각을 주워서 팔고 싶어 함.",
+			"no": 3,
 			"dialogue": [
 				{
 					"speaker": "narrator",
-					"text": "연기 나는 골목 한구석, 작은 아이가 쪼그리고 앉아 타다 만 종이 조각들을 모으고 있다."
+					"text": "골목 어귀에 다다르자, 작고 마른 아이가 땅에 엎드려 타다 남은 종이 조각들을 줍고 있다."
 				},
 				{
-					"text": "아저씨, 이 종이 사실래요? 글씨가 쓰여 있는 건데...",
-					"speaker": "street_child"
+					"text": "아이가 종이 조각을 들고 혼잣말을 한다. \"이거 팔면 돈 좀 될까?\"",
+					"speaker": "narrator"
+				},
+				{
+					"speaker": "child_picker",
+					"text": "아저씨, 이 종이 살래요? 엄청 희귀한 건데!"
 				},
 				{
 					"speaker": "dax",
-					"text": "이런 곳에 아이가 혼자 있다니 위험하네요."
+					"text": "저 아이는 여기서 뭘 하는 걸까요? 종이를 줍고 있네요..."
 				},
 				{
-					"speaker": "narrator",
-					"text": "아이의 손에는 '기금'이라는 글자가 희미하게 보이는 종이 조각이 들려 있다."
-				},
-				{
-					"speaker": "street_child",
-					"text": "불 가까이 가면 더 잘 보여요!"
+					"speaker": "child_picker",
+					"text": "아저씨는 종이 안 필요해요?"
 				}
 			],
-			"person": {
-				"role": "골목을 떠도는 고물 줍는 아이",
-				"name": "고물 줍는 아이",
-				"id": "street_child"
-			},
 			"choices": [
 				{
 					"effects": {
-						"gold": -70,
-						"echo": 5
+						"community": 10,
+						"gold": -50
 					},
-					"path": "easy",
-					"text": "아이에게서 종이 조각을 모두 사 준다.",
-					"mbti": "ES",
 					"result": [
 						{
-							"text": "아이는 돈을 받고 기뻐하며 주머니에 종이 조각을 쑤셔 넣는다.",
-							"speaker": "narrator"
+							"speaker": "narrator",
+							"text": "당신이 종이를 사자 아이는 환하게 웃으며 품속에서 깨끗한 종이 한 장을 꺼내 건넨다."
 						},
 						{
-							"speaker": "street_child",
-							"text": "고맙습니다! 이걸로 맛있는 거 사 먹을래요!"
+							"speaker": "child_picker",
+							"text": "헤헤, 고마워요! 이건 특별히 주는 거예요!"
 						},
 						{
-							"text": "아이에게 좋은 일을 하셨네요.",
-							"speaker": "dax"
+							"speaker": "dax",
+							"text": "아이가 좋아하는 모습을 보니 기분이 좋네요."
 						}
 					],
 					"risk_bad": {
 						"result": [
 							{
-								"text": "아이는 종이 조각을 건네려다 실수로 불길에 떨어뜨린다.",
+								"text": "당신이 종이를 사자 아이는 고맙다며 종이를 건네려다 발을 헛디뎌 종이를 놓치고,",
 								"speaker": "narrator"
 							},
 							{
-								"text": "아, 안 돼!",
-								"speaker": "street_child"
+								"text": "바람에 날려 불 속으로 사라진다.",
+								"speaker": "narrator"
 							},
 							{
-								"text": "중요한 증거를 놓쳤네요...",
+								"text": "으악, 내 종이!",
+								"speaker": "child_picker"
+							},
+							{
+								"text": "으악, 아이가 종이를 놓쳐 버렸네요!",
 								"speaker": "dax"
 							}
 						],
-						"reward": [
-							"intelligence_down"
-						],
-						"gold": -30
-					}
+						"gold": -20,
+						"reward": []
+					},
+					"reward": [],
+					"path": "easy",
+					"text": "아이에게서 종이 조각을 몇 개 사준다.",
+					"mbti": "SF"
 				},
 				{
-					"event_reason": "아이가 실수로 종이를 불 가까이 가져가서 타버릴 위기에 처했다.",
-					"text": "아이에게서 종이 조각을 자세히 보여달라고 부탁한다.",
-					"mbti": "IS",
-					"effects": {
-						"community": 10,
-						"reason": 10
-					},
-					"event": "minigame_timing",
-					"event_intro": [
-						{
-							"text": "아이가 불길에 가까워지자 종이 조각이 타버릴 위험에 처한다.",
-							"speaker": "narrator"
-						}
-					],
+					"path": "hard",
+					"mbti": "NT",
 					"result": [
 						{
-							"text": "아이는 종이 조각을 보여주려다 불길에 너무 가까이 다가간다.",
+							"text": "당신의 질문에 아이는 잠시 망설이다가, 불이 나는 곳을 손가락으로 가리킨다.",
 							"speaker": "narrator"
 						},
 						{
-							"speaker": "street_child",
-							"text": "보세요, 글씨가... 앗 뜨거!"
+							"speaker": "child_picker",
+							"text": "저기... 저기서 아까부터 아줌마가 태우고 있었어요..."
 						},
 						{
 							"speaker": "dax",
-							"text": "조심해야 합니다, 어르신!"
+							"text": "아줌마요? 경리부장님이 아줌마였나요?"
 						}
 					],
-					"path": "hard"
-				},
-				{
-					"mbti": "NT",
-					"text": "{actor}이(가) 아이에게 그 종이 조각을 어디서 주웠는지 논리적으로 캐묻는다.",
-					"require_mbti": "NT",
-					"reward": [
-						"intelligence_up"
-					],
+					"risk_bad": {
+						"result": [
+							{
+								"speaker": "narrator",
+								"text": "당신의 질문에 아이는 눈을 동그랗게 뜨고 당신을 경계한다."
+							},
+							{
+								"text": "갑자기 왜 물어봐요? 나쁜 사람이야?",
+								"speaker": "child_picker"
+							},
+							{
+								"speaker": "dax",
+								"text": "으악, 아이가 우리를 경계하기 시작했어요!"
+							}
+						],
+						"gold": -20,
+						"reward": []
+					},
+					"text": "아이에게 \"누가 종이를 태우는지\" 조심스럽게 물어본다.",
 					"effects": {
 						"reason": 10,
 						"echo": 5
 					},
-					"path": "lock",
-					"result": [
-						{
-							"speaker": "narrator",
-							"text": "아이는 당신의 질문에 당황하며 손가락으로 골목 안쪽을 가리킨다."
-						},
-						{
-							"speaker": "street_child",
-							"text": "저, 저 안에서... 아저씨가 막 버렸어요!"
-						},
-						{
-							"speaker": "dax",
-							"text": "아이의 말을 들어보니 경리부장이 버린 게 확실하네요."
-						}
+					"reward": [
+						"intelligence_up"
 					]
 				},
 				{
 					"result": [
 						{
-							"speaker": "narrator",
-							"text": "아이는 그림자놀이에 신나서 깔깔 웃으며 종이 조각을 흔든다."
+							"text": "{actor}이(가) 종이 조각을 이리저리 돌려보며 글씨를 확인한다.",
+							"speaker": "narrator"
 						},
 						{
-							"text": "우와! 재밌다!",
-							"speaker": "street_child"
+							"text": "타다 남은 글씨 사이에서 '부두 어르신'이라는 단어가 희미하게 보인다.",
+							"speaker": "narrator"
 						},
 						{
-							"text": "이런 상황에서도 아이와 놀아주다니, 대단하시네요.",
+							"text": "와, {actor}! 저런 걸 찾아내다니, 저도 깜짝 놀랐네요!",
 							"speaker": "dax"
 						}
 					],
+					"effects": {
+						"reason": 10
+					},
+					"path": "lock",
+					"mbti": "TJ",
+					"text": "{actor}이(가) 주워진 종이 조각을 꼼꼼히 살펴본다.",
+					"require_mbti": "TJ",
+					"reward": [
+						"intelligence_up"
+					]
+				},
+				{
+					"mbti": "EP",
+					"result": [
+						{
+							"text": "당신의 엉뚱한 제안에 아이는 눈을 반짝이며 신이 난다.",
+							"speaker": "narrator"
+						},
+						{
+							"text": "좋아요! 누가 더 많이 불에 던져 넣는지 시합해요!",
+							"speaker": "child_picker"
+						},
+						{
+							"text": "와, 아이가 완전 신났는데요! 저도 끼고 싶어요!",
+							"speaker": "dax"
+						}
+					],
+					"event_reason": "아이와 어울리며 불이 나는 곳에 가까이 다가갈 기회가 생겼다.",
 					"path": "fun",
 					"effects": {
-						"gold": 50,
-						"community": 20
+						"community": 20,
+						"echo": 10
 					},
+					"text": "아이에게 \"종이 조각을 불에 던져 넣는 시합을 하자\"고 제안한다.",
 					"risk_bad": {
-						"gold": -40,
-						"reward": [],
+						"reward": [
+							"hp_down"
+						],
 						"result": [
 							{
-								"text": "아이가 종이를 너무 세게 흔들어 조각들이 바람에 흩날려 버린다.",
-								"speaker": "narrator"
+								"speaker": "narrator",
+								"text": "신나게 종이 조각을 던지던 아이가 너무 가까이 다가가면서 소매에 불이 옮겨붙을 뻔한다."
 							},
 							{
-								"text": "으앙! 종이가 다 날아갔어!",
-								"speaker": "street_child"
+								"speaker": "child_picker",
+								"text": "으악! 뜨거워!"
 							},
 							{
-								"text": "하필 중요한 단서들이...",
+								"text": "아이가 불에 너무 가까이 갔어요! 위험해요!",
 								"speaker": "dax"
 							}
 						]
 					},
-					"mbti": "NF",
-					"text": "아이에게 종이 조각을 이용한 그림자놀이를 제안한다."
+					"event_intro": [
+						{
+							"speaker": "narrator",
+							"text": "아이가 불길을 등지고 당신 앞에 선다."
+						},
+						{
+							"text": "자, 아저씨 먼저! 저 불꽃에 정확히 던져 넣어야 해요!",
+							"speaker": "child_picker"
+						}
+					],
+					"event": "minigame_timing"
 				}
 			],
-			"no": 3,
+			"title": "타다 만 종이를 줍는 아이",
+			"background_tags": [
+				"alley",
+				"evening",
+				"dim",
+				"urban",
+				"curious"
+			],
+			"key": "child_scrap_picker",
+			"rule_link": "연기가 나는 골목 입구에서 타다 남은 종이를 줍는 아이를 발견했을 때, 아이의 말을 믿고 종이를 살지 아니면 불에 대해 물어볼지 판단해야 한다.",
 			"slot": "C",
 			"kind": "normal"
 		}
 	],
 	"errors": [],
-	"prompt_hash": "e77cb1382cb9ecc26d917834a000b44615e8604b"
+	"prompt_hash": "d14aa7e184859991015ac67d04827457f0718d46"
 }

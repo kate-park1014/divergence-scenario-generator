@@ -1,0 +1,150 @@
+{
+	"id": "card_04_emergency_key",
+	"title": {
+		"korean": "비상문 열쇠"
+	},
+	"intensity": "high",
+	"after_story": 5,
+	"before_story": 7,
+	"callback": {
+		"seed": "janitor_rumor_hard",
+		"min_rooms_after": 2
+	},
+	"background_tags": [
+		"stairwell",
+		"night",
+		"dim_light",
+		"alone",
+		"tense"
+	],
+	"background_image": "https://imagedelivery.net/WTEqQNGFb-l-IHS6IGnzUQ/f27b79d3-ded9-4f5a-0122-3590389cda00/public",
+	"dialogue": [
+		{
+			"speaker": "narrator",
+			"content": {
+				"korean": "금고실 복도 비상문 앞에서 청소부 아저씨가 당신을 기다린다."
+			}
+		},
+		{
+			"speaker": "night_janitor",
+			"content": {
+				"korean": "이걸… 받으세요."
+			}
+		},
+		{
+			"speaker": "night_janitor",
+			"content": {
+				"korean": "조용히… 쓰시고… 돌려주세요."
+			}
+		},
+		{
+			"speaker": "narrator",
+			"content": {
+				"korean": "아저씨는 손에 땀을 쥐며 비상문 열쇠를 건넨다."
+			}
+		},
+		{
+			"speaker": "dax",
+			"content": {
+				"korean": "비상문 열쇠를 주네요? 역시 아저씨는 좋은 사람 같아요!"
+			}
+		}
+	],
+	"choices": [
+		{
+			"text": {
+				"korean": "열쇠를 받아 비상문으로 몰래 들어간다."
+			},
+			"path": "easy",
+			"mbti": "EN",
+			"flag": "open_emergency_door",
+			"effects": {
+				"gold": 100,
+				"fighting": 15
+			},
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "비상문이 스르륵 열린다. 당신은 조용히 금고실 복도 안으로 들어선다."
+					}
+				},
+				{
+					"speaker": "dax",
+					"content": {
+						"korean": "이걸로 더 빨리 움직일 수 있겠어요!"
+					}
+				}
+			]
+		},
+		{
+			"text": {
+				"korean": "열쇠를 돌려주며 정문으로 당당히 들어가겠다고 말한다."
+			},
+			"path": "hard",
+			"mbti": "IT",
+			"flag": "janitor_distraction",
+			"effects": {
+				"echo": 10,
+				"reason": 20
+			},
+			"reward": [
+				"defense_up"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "아저씨는 당황한 얼굴로 열쇠를 도로 받는다. 당신은 '정면 돌파'를 외치며 금고실 문 앞으로 향한다."
+					}
+				},
+				{
+					"speaker": "dax",
+					"content": {
+						"korean": "으음… 과감한데요?"
+					}
+				}
+			]
+		}
+	],
+	"tags": [
+		"night_janitor",
+		"dax"
+	],
+	"_design": {
+		"slot": "C",
+		"kind": "callback",
+		"person": {
+			"name": "청소부 아저씨",
+			"role": "야간 청소부",
+			"id": "night_janitor"
+		},
+		"wants": "야근한 게 들키면 잘릴까 봐 말을 못 하고 있다.",
+		"rule_link": "아저씨가 금고실 비상문 열쇠를 건네는 행동을 숨기는 사람으로 볼지, 사정이 있어 돕는다고 볼지 선택한다.",
+		"events": {},
+		"flags": {
+			"open_emergency_door": {
+				"kind": "good",
+				"boss_penalty": 1,
+				"label": {
+					"korean": "비상문 개방"
+				},
+				"boss_choice": {
+					"korean": "금고실 복도 비상문이 열려 있어 경호실장의 도주 경로를 차단한다."
+				}
+			},
+			"janitor_distraction": {
+				"kind": "good",
+				"boss_penalty": 2,
+				"label": {
+					"korean": "청소부 교란"
+				},
+				"boss_choice": {
+					"korean": "청소부 아저씨가 비상벨을 눌러 경호실장의 시선을 분산시킨다."
+				}
+			}
+		}
+	}
+}

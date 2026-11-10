@@ -1,0 +1,410 @@
+{
+	"cards": [
+		{
+			"no": 1,
+			"choices": [
+				{
+					"mbti": "ST",
+					"text": "운전기사에게 회장님 차가 망가질 일 없다고 단호하게 말한다.",
+					"effects": {
+						"fighting": 15,
+						"echo": -5
+					},
+					"risk_bad": {
+						"reward": [
+							"attack_down"
+						],
+						"result": [
+							{
+								"text": "당신의 말에 운전기사가 놀라 발을 헛디디며 서버실 문에 기대 주저앉는다.",
+								"speaker": "narrator"
+							},
+							{
+								"text": "으아악! 회장님께 보고할 수밖에 없게 될 겁니다, 흐읍!",
+								"speaker": "driver"
+							},
+							{
+								"speaker": "dax",
+								"text": "운전기사님이 문을 더 단단히 막으셨네요!"
+							}
+						]
+					},
+					"result": [
+						{
+							"text": "당신의 단호한 말에 운전기사가 움찔 놀라 뒷걸음친다.",
+							"speaker": "narrator"
+						},
+						{
+							"speaker": "driver",
+							"text": "끄윽… 차마 회장님 차에 흠집 하나 못 내게 해 주십시오, 흐읍!"
+						},
+						{
+							"text": "운전기사님이 더 겁먹으신 것 같은데요!",
+							"speaker": "dax"
+						}
+					],
+					"reward": [
+						"attack_up"
+					],
+					"flag": {
+						"label": "운전기사의 방해",
+						"key": "driver_blocking_bad",
+						"boss_text": "운전기사가 계속 문 앞을 가로막아 몸싸움이 일어난다."
+					},
+					"path": "easy"
+				},
+				{
+					"text": "운전기사를 안심시키고 다른 곳으로 유인한다.",
+					"path": "hard",
+					"flag": {
+						"label": "운전기사의 도움",
+						"boss_text": "운전기사가 방해물을 치워 주어 싸움에 집중할 수 있다.",
+						"key": "driver_clears_path"
+					},
+					"risk_bad": {
+						"result": [
+							{
+								"speaker": "narrator",
+								"text": "당신의 설득에 운전기사가 안심하는 듯했지만, 발을 헛디뎌 옆에 쌓인 폐상자를 넘어뜨린다."
+							},
+							{
+								"speaker": "driver",
+								"text": "흐읍! 으악, 회장님께서 아시면 또 불호령이…!"
+							},
+							{
+								"text": "운전기사님이 더 소란을 만드셨어요!",
+								"speaker": "dax"
+							}
+						],
+						"reward": [],
+						"gold": -20
+					},
+					"result": [
+						{
+							"text": "당신의 설득에 운전기사가 안도하며 다른 곳으로 시선을 돌린다.",
+							"speaker": "narrator"
+						},
+						{
+							"speaker": "driver",
+							"text": "아, 아닙니다. 그럼 저쪽으로 가서 잠시…"
+						},
+						{
+							"speaker": "dax",
+							"text": "운전기사님이 금방 진정하셨네요!"
+						}
+					],
+					"reward": [
+						"defense_up"
+					],
+					"mbti": "NF",
+					"effects": {
+						"community": 15,
+						"echo": 10
+					}
+				},
+				{
+					"result": [
+						{
+							"text": "당신의 결연한 태도에 운전기사는 더 이상 토를 달지 못하고 옆으로 물러난다.",
+							"speaker": "narrator"
+						},
+						{
+							"speaker": "driver",
+							"text": "알겠습니다… 부디… 제발 무사히…"
+						},
+						{
+							"text": "운전기사님이 바로 말을 들으시네요!",
+							"speaker": "dax"
+						}
+					],
+					"reward": [
+						"shield"
+					],
+					"text": "운전기사에게 회장님 차에 흠집 하나 나지 않게 하겠다고 선언한다.",
+					"flag": {
+						"key": "driver_fears_you",
+						"boss_text": "운전기사가 당신을 두려워해 멀리 피한다.",
+						"label": "운전기사의 공포"
+					},
+					"path": "stat",
+					"mbti": "TJ",
+					"effects": {
+						"fighting": 20,
+						"community": -10,
+						"reason": -10
+					}
+				}
+			],
+			"background_tags": [
+				"serverroom",
+				"night",
+				"dim",
+				"empty",
+				"tense"
+			],
+			"person": {
+				"id": "driver",
+				"name": "운전기사",
+				"role": "운전기사"
+			},
+			"dialogue": [
+				{
+					"text": "당신이 자기 몫부터 챙겨서 빈틈없는 해결사라는 소문이 자자하던데,",
+					"speaker": "driver"
+				},
+				{
+					"text": "혹시 저 서버실 문을 부수시려는 건 아니시겠죠? 회장님 차가 저쪽에 서 있어서요.",
+					"speaker": "driver"
+				},
+				{
+					"text": "어, 운전기사님! 저희는 그냥…!",
+					"speaker": "dax"
+				},
+				{
+					"speaker": "driver",
+					"text": "혹시라도 소란이 생기면 회장님께서 저에게 불호령을 내리실 겁니다, 끄윽!"
+				},
+				{
+					"text": "운전기사가 서버실 문 앞에 바싹 붙어 버티고 선다.",
+					"speaker": "narrator"
+				},
+				{
+					"text": "하지만 소문이 그렇게 파다해서… 회장님께 보고할 수밖에 없게 될 겁니다, 흐읍!",
+					"speaker": "driver"
+				}
+			],
+			"title": "회장님 차가 저쪽에",
+			"key": "driver_selfish_concern",
+			"wants": "주인공이 회장님 차 근처에서 소란을 피우지 않기를. 자신의 안위를 최우선으로 생각.",
+			"rule_link": "서버실 문 앞 소란이 운전기사에게 무엇을 증명하는지(자신의 안위 위협) 따져 볼지, 보이는 대로(문을 부수는 행동) 믿을지.",
+			"slot": "C",
+			"kind": "rep",
+			"rep_dir": "community-"
+		},
+		{
+			"no": 2,
+			"background_tags": [
+				"serverroom",
+				"night",
+				"dim",
+				"empty",
+				"tense"
+			],
+			"choices": [
+				{
+					"reward": [
+						"attack_up"
+					],
+					"result": [
+						{
+							"text": "당신의 말에 운전기사가 눈을 크게 뜨며 얼룩을 자세히 들여다본다.",
+							"speaker": "narrator"
+						},
+						{
+							"speaker": "driver",
+							"text": "아! 이게 끈적이는 스티커 자국이었군요!"
+						},
+						{
+							"speaker": "dax",
+							"text": "운전기사님, 얼룩이 뭔지도 몰랐나 봐요!"
+						}
+					],
+					"path": "easy",
+					"flag": {
+						"label": "얼룩의 정체",
+						"key": "driver_stain_info",
+						"boss_text": "운전기사가 얼룩의 정체를 알려주어 공격이 쉬워진다."
+					},
+					"text": "운전기사에게 얼룩을 지우는 방법을 알려 준다.",
+					"effects": {
+						"echo": 5,
+						"community": 15
+					},
+					"risk_bad": {
+						"reward": [
+							"hp_down"
+						],
+						"result": [
+							{
+								"text": "당신의 말에 운전기사가 얼룩을 지우려다 손에 묻은 반짝이 가루를 털어낸다.",
+								"speaker": "narrator"
+							},
+							{
+								"text": "으아악! 손에 반짝이 가루가 묻어서 더 번졌습니다, 흐읍!",
+								"speaker": "driver"
+							},
+							{
+								"text": "운전기사님 옷에도 반짝이가 묻었네요!",
+								"speaker": "dax"
+							}
+						]
+					},
+					"mbti": "SF"
+				},
+				{
+					"text": "운전기사의 부탁을 뒤로하고 서버실 문을 열 방법을 찾는다.",
+					"flag": {
+						"label": "운전기사의 불만",
+						"key": "driver_blocking_again",
+						"boss_text": "운전기사가 불만을 표하며 방해를 시도한다."
+					},
+					"path": "hard",
+					"risk_bad": {
+						"gold": -20,
+						"result": [
+							{
+								"speaker": "narrator",
+								"text": "당신이 운전기사를 무시하자, 운전기사가 당신의 앞을 가로막으며 억울한 표정으로 하소연한다."
+							},
+							{
+								"speaker": "driver",
+								"text": "흐읍… 회장님께 보고할 수밖에 없게 될 겁니다, 끄윽!"
+							},
+							{
+								"speaker": "dax",
+								"text": "운전기사님이 더 떼를 쓰는 것 같은데요!"
+							}
+						],
+						"reward": []
+					},
+					"reward": [
+						"defense_up"
+					],
+					"result": [
+						{
+							"text": "당신이 얼룩을 무시하자 운전기사는 실망한 표정으로 어깨를 축 늘어뜨린다.",
+							"speaker": "narrator"
+						},
+						{
+							"speaker": "driver",
+							"text": "흐읍… 저의 부탁은 들어주지 않으시는군요…"
+						},
+						{
+							"text": "운전기사님이 시무룩해졌네요…",
+							"speaker": "dax"
+						}
+					],
+					"mbti": "TJ",
+					"effects": {
+						"community": -10,
+						"fighting": 10,
+						"echo": -5
+					}
+				},
+				{
+					"result": [
+						{
+							"speaker": "narrator",
+							"text": "당신의 제안에 운전기사가 감격한 표정으로 고개를 끄덕이며 문에서 비켜선다."
+						},
+						{
+							"text": "정말 감사합니다! 당신이라면 믿을 수 있습니다!",
+							"speaker": "driver"
+						},
+						{
+							"text": "운전기사님이 바로 믿으시네요!",
+							"speaker": "dax"
+						}
+					],
+					"reward": [
+						"shield"
+					],
+					"path": "stat",
+					"flag": {
+						"boss_text": "운전기사가 당신을 믿고 방해하지 않는다.",
+						"key": "driver_trusts_you",
+						"label": "운전기사의 믿음"
+					},
+					"text": "운전기사의 얼룩 문제를 해결해 주겠다고 먼저 제안한다.",
+					"effects": {
+						"community": 20,
+						"echo": 10
+					},
+					"mbti": "EN"
+				},
+				{
+					"result": [
+						{
+							"text": "당신의 엉뚱한 말에 운전기사가 어리둥절한 표정으로 얼룩을 다시 본다.",
+							"speaker": "narrator"
+						},
+						{
+							"speaker": "driver",
+							"text": "정말요? 회장님께서 아시면 좋아하실까요?"
+						},
+						{
+							"text": "운전기사님이 홀린 듯이 얼룩을 보고 있어요!",
+							"speaker": "dax"
+						}
+					],
+					"effects": {
+						"echo": 10,
+						"gold": 50,
+						"reason": -15
+					},
+					"mbti": "EP",
+					"risk_bad": {
+						"result": [
+							{
+								"text": "당신의 말을 들은 운전기사가 얼룩을 조심스럽게 만지다 옆의 전선에 걸려 넘어지는 바람에,",
+								"speaker": "narrator"
+							},
+							{
+								"speaker": "driver",
+								"text": "으악! 회장님께서 아시면… 흐읍!"
+							},
+							{
+								"text": "운전기사님이 전선을 끊어 버렸어요!",
+								"speaker": "dax"
+							}
+						],
+						"reward": [],
+						"gold": -40
+					},
+					"path": "fun",
+					"text": "얼룩을 보고 감탄하며 운전기사에게 특별한 의미가 있다고 말한다."
+				}
+			],
+			"title": "문에 생긴 얼룩",
+			"key": "driver_community_request",
+			"rule_link": "서버실 문에 난 얼룩이 운전기사에게 무엇을 증명하는지(자신의 무능함) 따져 볼지, 보이는 대로(지워지지 않는 얼룩) 믿을지.",
+			"person": {
+				"id": "driver",
+				"name": "운전기사",
+				"role": "운전기사"
+			},
+			"wants": "서버실 문에 생긴 얼룩을 지워달라고 부탁.",
+			"dialogue": [
+				{
+					"text": "당신이 동네 사람 모두를 위해 발 벗고 나서는 해결사라는 소문이 자자하던데,",
+					"speaker": "driver"
+				},
+				{
+					"text": "제가 회장님 전용 운전기사인데, 이 문에 생긴 얼룩이 도저히 지워지질 않습니다, 끄윽!",
+					"speaker": "driver"
+				},
+				{
+					"speaker": "dax",
+					"text": "운전기사님, 지금은…!"
+				},
+				{
+					"speaker": "driver",
+					"text": "아닙니다! 회장님께서 아시면 저에게 불호령을 내리실 겁니다! 부디 저를 도와주십시오, 흐읍!"
+				},
+				{
+					"speaker": "narrator",
+					"text": "운전기사가 서버실 문에 묻은 정체 모를 얼룩을 손으로 가리킨다."
+				},
+				{
+					"speaker": "dax",
+					"text": "저게 얼룩인가요? 자세히 보니 반짝이는데요?"
+				}
+			],
+			"slot": "C",
+			"kind": "rep",
+			"rep_dir": "community+"
+		}
+	],
+	"errors": [],
+	"prompt_hash": "3fee410bb49a055e5edd2c3801b2b95ff23d47f9"
+}

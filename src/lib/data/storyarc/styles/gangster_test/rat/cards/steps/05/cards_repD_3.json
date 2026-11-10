@@ -1,0 +1,437 @@
+{
+	"cards": [
+		{
+			"key": "wobbly_guideline",
+			"title": "흔들리는 가이드라인",
+			"no": 1,
+			"dialogue": [
+				{
+					"text": "등대 앞 방파제에 쪼그리고 앉아 있던 경호팀장이 당신을 발견하고 깜짝 놀란다.",
+					"speaker": "narrator"
+				},
+				{
+					"speaker": "security_team_leader",
+					"text": "당신이 그… 어떤 상황에서도 규정을 준수한다는 해결사죠? 마침 잘 오셨습니다."
+				},
+				{
+					"text": "등대 진입은 절대 불가… 하지만 안에서 희미하게 들려오는 소리가… 부디 현명한 조언을….",
+					"speaker": "security_team_leader"
+				},
+				{
+					"speaker": "dax",
+					"text": "어, 경호팀장님도 저희를 알아보셨네요! 저번엔 규정만 따지시더니…."
+				},
+				{
+					"text": "경호팀장은 눈을 이리저리 굴리며 당신의 답을 기다린다.",
+					"speaker": "narrator"
+				}
+			],
+			"wants": "등대 진입 규정을 어기지 않으면서도, 안에서 들려오는 희미한 소리를 확인하고 싶어 합니다.",
+			"person": {
+				"id": "security_team_leader",
+				"name": "경호팀장",
+				"role": "경호팀장"
+			},
+			"rule_link": "경호팀장은 규정을 지키려는 마음과 등대 안의 사정을 알고 싶어 하는 마음 사이에서 고민하며, 당신에게 먼저 사정을 묻게 합니다.",
+			"choices": [
+				{
+					"mbti": "EP",
+					"text": "규정은 필요할 때만 쓰는 거라며, 경호팀장을 비켜 세우고 등대 문을 활짝 연다.",
+					"flag": {
+						"label": "당황한 경호팀장",
+						"key": "security_team_leader_disadvantage",
+						"boss_text": "경호팀장은 당신의 기세에 눌려 제대로 대응하지 못한다. 당신의 공격력이 20% 증가한다."
+					},
+					"reward": [
+						"attack_up"
+					],
+					"risk_bad": {
+						"gold": -50,
+						"result": [
+							{
+								"text": "당신은 경호팀장의 어깨를 툭 치며 규정 따위는 무시하고 등대 문을 열려 했다.",
+								"speaker": "narrator"
+							},
+							{
+								"text": "으악! 손잡이에 기름칠이! 미끄러워서 잡을 수가…!",
+								"speaker": "security_team_leader"
+							},
+							{
+								"speaker": "dax",
+								"text": "아이고, 팀장님 옷이 다 망가졌네요! 등대 문도 도로 닫혔어요!"
+							}
+						],
+						"reward": [
+							"hp_down"
+						]
+					},
+					"path": "easy",
+					"result": [
+						{
+							"text": "당신은 경호팀장의 어깨를 툭 치며 규정 따위는 무시하고 등대 문을 열었다.",
+							"speaker": "narrator"
+						},
+						{
+							"text": "에엣?! 그렇게 막무가내로…! 제가 뭘 할 수 있겠습니까….",
+							"speaker": "security_team_leader"
+						},
+						{
+							"speaker": "dax",
+							"text": "팀장님이 완전히 얼어붙으셨네요! 문이 열렸으니 어서 들어가요!"
+						}
+					],
+					"effects": {
+						"fighting": 10,
+						"echo": 5,
+						"reason": 20
+					}
+				},
+				{
+					"reward": [
+						"defense_down"
+					],
+					"mbti": "TJ",
+					"effects": {
+						"reason": -20,
+						"echo": 10,
+						"community": 10
+					},
+					"risk_bad": {
+						"result": [
+							{
+								"speaker": "narrator",
+								"text": "당신은 경호팀장에게 규정을 지키며 등대 내부를 살필 방법을 일러주었다."
+							},
+							{
+								"speaker": "security_team_leader",
+								"text": "좋습니다! 제가 먼저 안을 살펴보… 어어어?!"
+							},
+							{
+								"text": "팀장님, 등대 계단에 미역이 잔뜩…! 미끄러져서 못 들어가겠대요!",
+								"speaker": "dax"
+							}
+						],
+						"gold": -20,
+						"reward": []
+					},
+					"result": [
+						{
+							"text": "당신은 경호팀장에게 규정을 어기지 않고 상황을 파악할 방법을 제안했다.",
+							"speaker": "narrator"
+						},
+						{
+							"text": "오오! 역시 당신은 다르군요! 제가 안의 상황을 먼저 확인하겠습니다!",
+							"speaker": "security_team_leader"
+						},
+						{
+							"speaker": "dax",
+							"text": "팀장님이 저희 말을 들었어요! 안으로 들어가려는 건가 봐요!"
+						}
+					],
+					"text": "경호팀장의 규정을 존중하며, 등대 안의 사정을 먼저 확인해야 한다고 조언한다.",
+					"path": "hard",
+					"flag": {
+						"boss_text": "경호팀장이 등대 안으로 들어가 상황을 확인해 준다. 적의 방어력이 10% 감소한다.",
+						"label": "협력하는 경호팀장",
+						"key": "security_team_leader_support"
+					}
+				},
+				{
+					"effects": {
+						"reason": -30,
+						"echo": 15
+					},
+					"text": "경호팀장에게 즉흥적인 해결책을 제시하며, 따르도록 설득한다.",
+					"result": [
+						{
+							"text": "당신은 등대 안에서 들려오는 소리의 주파수를 분석하자며, 경호팀장에게 휴대폰을 건넸다.",
+							"speaker": "narrator"
+						},
+						{
+							"speaker": "security_team_leader",
+							"text": "주파수… 분석? 음… 제가 들고만 있겠습니다! 어찌 될지는…"
+						},
+						{
+							"speaker": "dax",
+							"text": "팀장님이 휴대폰으로 이상한 소리를 분석하고 있어요! 저러다 또 회장님께 혼나실라!"
+						}
+					],
+					"reward": [
+						"intelligence_down"
+					],
+					"mbti": "NF",
+					"flag": {
+						"key": "security_team_leader_confused",
+						"boss_text": "경호팀장이 알 수 없는 주파수를 분석하느라 혼란에 빠져 있다. 적의 지능이 10% 감소한다.",
+						"label": "혼란스러운 경호팀장"
+					},
+					"path": "stat"
+				},
+				{
+					"mbti": "IS",
+					"reward": [
+						"move_range_up"
+					],
+					"text": "경호팀장에게 안개 속에서 등대가 안 보인다며 눈을 가려준다.",
+					"result": [
+						{
+							"speaker": "narrator",
+							"text": "당신은 경호팀장의 눈을 가려주며, 안개 때문에 등대가 안 보인다고 말했다."
+						},
+						{
+							"text": "흐읍…! 안개가 짙은 건 맞지만… 제 눈을 가리시면 제가 어떻게…!",
+							"speaker": "security_team_leader"
+						},
+						{
+							"text": "팀장님이 눈 가리개 때문에 허둥지둥해요! 이 틈에 슬쩍 지나가요!",
+							"speaker": "dax"
+						}
+					],
+					"risk_bad": {
+						"result": [
+							{
+								"text": "당신은 경호팀장의 눈을 가려주려다 그의 소중한 망토를 건드리고 말았다.",
+								"speaker": "narrator"
+							},
+							{
+								"speaker": "security_team_leader",
+								"text": "크읍! 이… 이건 제가 아끼는 망토가 아니옵니까! 제 망토로 눈을 가리다니!"
+							},
+							{
+								"text": "팀장님이 아끼는 망토가 찢어졌나 봐요! 화가 나서 등대 문을 지팡이로 막고 있어요!",
+								"speaker": "dax"
+							}
+						],
+						"reward": [
+							"move_range_down"
+						]
+					},
+					"path": "fun",
+					"effects": {
+						"echo": -5,
+						"reason": 20
+					}
+				}
+			],
+			"background_tags": [
+				"harbor",
+				"night",
+				"foggy",
+				"alone",
+				"tense"
+			],
+			"slot": "D",
+			"kind": "rep",
+			"rep_dir": "reason-"
+		},
+		{
+			"no": 2,
+			"key": "reinforced_blockade",
+			"rule_link": "경호팀장은 당신이 규칙을 지키는 사람이라는 소문을 듣고, 당신이 등대 안의 사정을 먼저 묻고 행동하기를 기대합니다.",
+			"choices": [
+				{
+					"reward": [
+						"attack_up"
+					],
+					"risk_bad": {
+						"result": [
+							{
+								"text": "당신은 경호팀장의 규정을 존중하며, 등대 안의 긴급한 사정을 에둘러 말했다.",
+								"speaker": "narrator"
+							},
+							{
+								"text": "음… 규정을 어기는 건 아니지만… 잠시만요! 안에서 뭔가 튀어나오는데요?!",
+								"speaker": "security_team_leader"
+							},
+							{
+								"text": "앗, 등대 안에서 굴러 나온 건… 팀장님 점심 도시락이잖아요! 문이 도로 닫혔어요!",
+								"speaker": "dax"
+							}
+						],
+						"gold": -20,
+						"reward": [
+							"hp_down"
+						]
+					},
+					"text": "경호팀장의 규정 준수를 칭찬하며, 등대 안의 긴급한 사정을 설명하고 진입을 설득한다.",
+					"mbti": "IN",
+					"result": [
+						{
+							"speaker": "narrator",
+							"text": "당신은 경호팀장의 규정 준수를 추켜세우며, 등대 안의 상황을 조심스럽게 설명했다."
+						},
+						{
+							"speaker": "security_team_leader",
+							"text": "음… 규정을 어기는 건 아니지만… 당신의 말이라면… 좋습니다! 들어가시죠."
+						},
+						{
+							"text": "팀장님이 저희 말을 들었어요! 등대 문이 열렸어요!",
+							"speaker": "dax"
+						}
+					],
+					"effects": {
+						"echo": 5,
+						"reason": -10,
+						"community": 10
+					},
+					"path": "easy",
+					"flag": {
+						"key": "security_team_leader_disadvantage",
+						"boss_text": "경호팀장은 당신의 기세에 눌려 제대로 대응하지 못한다. 당신의 공격력이 20% 증가한다.",
+						"label": "당황한 경호팀장"
+					}
+				},
+				{
+					"path": "hard",
+					"reward": [
+						"defense_down"
+					],
+					"flag": {
+						"key": "security_team_leader_support",
+						"boss_text": "경호팀장이 등대 안으로 들어가 상황을 확인해 준다. 적의 방어력이 10% 감소한다.",
+						"label": "협력하는 경호팀장"
+					},
+					"effects": {
+						"fighting": 10,
+						"echo": -5,
+						"reason": 20
+					},
+					"result": [
+						{
+							"text": "당신은 경호팀장에게 규정보다 중요한 것이 있다며, 당당하게 등대 진입을 요구했다.",
+							"speaker": "narrator"
+						},
+						{
+							"text": "크윽…! 이런 무례는 처음입니다만… 당신의 기세에 눌려 제가 어찌….",
+							"speaker": "security_team_leader"
+						},
+						{
+							"speaker": "dax",
+							"text": "팀장님이 완전히 당황하셨네요! 이 틈에 얼른 들어가요!"
+						}
+					],
+					"mbti": "ET",
+					"risk_bad": {
+						"reward": [],
+						"result": [
+							{
+								"text": "당신은 경호팀장에게 규정보다 중한 것이 있다며, 힘껏 등대 진입을 요구했다.",
+								"speaker": "narrator"
+							},
+							{
+								"speaker": "security_team_leader",
+								"text": "크윽! 당당함은 좋으나… 제 심장에 무리가…! 콜록, 콜록!"
+							},
+							{
+								"speaker": "narrator",
+								"text": "경호팀장은 가슴을 부여잡고 쓰러지며 등대 문을 막았다."
+							},
+							{
+								"text": "팀장님이 갑자기 쓰러졌어요! 등대 문을 쓰러진 몸으로 막고 있어요!",
+								"speaker": "dax"
+							}
+						],
+						"gold": -20
+					},
+					"text": "규정을 어겨서라도 등대에 들어가야 한다며, 강하게 밀어붙여 길을 확보한다."
+				},
+				{
+					"result": [
+						{
+							"text": "당신은 경호팀장에게 '긴급 상황 발생 시 관계자 진입 허용' 조항을 정확히 짚어냈다.",
+							"speaker": "narrator"
+						},
+						{
+							"text": "으음… 이런 조항이 있었던가… 제 기억이… 으음….",
+							"speaker": "security_team_leader"
+						},
+						{
+							"speaker": "dax",
+							"text": "팀장님이 규정집을 뒤지고 있어요! 저희가 말한 조항을 찾나 봐요!"
+						}
+					],
+					"path": "stat",
+					"flag": {
+						"label": "혼란스러운 경호팀장",
+						"key": "security_team_leader_confused",
+						"boss_text": "경호팀장이 알 수 없는 주파수를 분석하느라 혼란에 빠져 있다. 적의 지능이 10% 감소한다."
+					},
+					"reward": [
+						"intelligence_down"
+					],
+					"effects": {
+						"echo": 15,
+						"reason": 30
+					},
+					"mbti": "ST",
+					"text": "등대 진입 규정에 대한 예외 조항을 찾아내어, 경호팀장에게 제시한다."
+				},
+				{
+					"text": "경호팀장에게 '규정 위반 벌금'이라며 돈을 건넨다.",
+					"reward": [],
+					"result": [
+						{
+							"text": "당신은 '규정 위반 벌금'이라며 경호팀장에게 두툼한 돈 봉투를 내밀었다.",
+							"speaker": "narrator"
+						},
+						{
+							"text": "규… 규정 위반 벌금? 이런 규정은… 읍읍! 알겠습니다! 들어가시죠!",
+							"speaker": "security_team_leader"
+						},
+						{
+							"speaker": "dax",
+							"text": "팀장님이 돈 봉투를 받자마자 길을 비켜줬어요! 역시 돈이 최고예요!"
+						}
+					],
+					"mbti": "ES",
+					"path": "gold",
+					"effects": {
+						"reason": 10,
+						"gold": -100
+					}
+				}
+			],
+			"dialogue": [
+				{
+					"speaker": "narrator",
+					"text": "등대 앞 방파제에서 우두커니 서 있던 경호팀장이 당신을 보자마자 자세를 바로잡는다."
+				},
+				{
+					"text": "당신이 그… 규정보다 마음 가는 대로 일을 처리한다는 분이시죠? 소문이 자자해서 제가 직접 확인했습니다.",
+					"speaker": "security_team_leader"
+				},
+				{
+					"speaker": "security_team_leader",
+					"text": "등대 진입은 통제 구역입니다. 특별한 사유가 없다면, 그 어떤 분도 들여보낼 수 없습니다."
+				},
+				{
+					"text": "경호팀장님! 등대 안엔 비서님이 계실 거예요! 이대로 물러날 순 없어요!",
+					"speaker": "dax"
+				},
+				{
+					"speaker": "narrator",
+					"text": "경호팀장은 엄격한 표정으로 당신을 응시한다."
+				}
+			],
+			"title": "강화된 봉쇄선",
+			"background_tags": [
+				"harbor",
+				"night",
+				"foggy",
+				"alone",
+				"strict"
+			],
+			"person": {
+				"id": "security_team_leader",
+				"name": "경호팀장",
+				"role": "경호팀장"
+			},
+			"wants": "등대 진입 규정을 철저히 지키면서도, 당신의 명성을 이용해 이 상황을 깔끔하게 정리하고 싶어 합니다.",
+			"slot": "D",
+			"kind": "rep",
+			"rep_dir": "reason+"
+		}
+	],
+	"errors": [],
+	"prompt_hash": "0745c2253a29709ec1f793fda0ba1fd07c61c2a0"
+}

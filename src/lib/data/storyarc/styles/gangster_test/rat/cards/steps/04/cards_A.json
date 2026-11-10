@@ -1,0 +1,494 @@
+{
+	"cards": [
+		{
+			"key": "janitor_rumor",
+			"choices": [
+				{
+					"result": [
+						{
+							"speaker": "narrator",
+							"text": "아저씨가 흠칫하며 급히 말을 잇는다. 어젯밤 내내 사무실 청소를 했다고 털어놓는다."
+						},
+						{
+							"speaker": "narrator",
+							"text": "숨죽인 아저씨의 어깨가 떨린다."
+						},
+						{
+							"text": "아저씨, 너무 심하게 몰아붙인 거 아니에요?",
+							"speaker": "dax"
+						}
+					],
+					"mbti": "TJ",
+					"reward": [
+						"attack_up"
+					],
+					"risk_bad": {
+						"gold": -30,
+						"reward": [],
+						"result": [
+							{
+								"text": "아저씨가 당신의 다그침에 겁을 먹고 손에 든 컵을 놓쳐 깨트린다.",
+								"speaker": "narrator"
+							},
+							{
+								"text": "놀란 아저씨가 어젯밤 내내 사무실 청소를 했다고 털어놓지만, 너무 겁에 질려 말을 더듬는다.",
+								"speaker": "narrator"
+							}
+						]
+					},
+					"path": "easy",
+					"text": "그날 밤 동선을 정확히 말해 달라고 다그친다.",
+					"effects": {
+						"echo": -5,
+						"fighting": -15
+					}
+				},
+				{
+					"result": [
+						{
+							"speaker": "narrator",
+							"text": "아저씨는 한참 망설이다 조용히 입을 연다. 어젯밤 사무실에 혼자 남아 특별 청소를 했다고 말한다."
+						},
+						{
+							"speaker": "narrator",
+							"text": "그러나 자세한 사정은 굳게 침묵한다."
+						},
+						{
+							"text": "별다른 수확은 없네요, 답답하다!",
+							"speaker": "dax"
+						}
+					],
+					"path": "hard",
+					"reward": [
+						"move_range_up"
+					],
+					"effects": {
+						"community": 20,
+						"echo": 10
+					},
+					"text": "말 못 할 사정이 있다면 비밀을 지켜 주겠다고 약속한다.",
+					"mbti": "NF",
+					"risk_bad": {
+						"gold": -20,
+						"reward": [],
+						"result": [
+							{
+								"speaker": "narrator",
+								"text": "아저씨는 당신의 약속에도 불구하고 잔뜩 경계하며 입을 꾹 다문다."
+							},
+							{
+								"text": "결국 아무 말도 하지 못한 채 고개만 푹 숙인다.",
+								"speaker": "narrator"
+							},
+							{
+								"speaker": "narrator",
+								"text": "아저씨의 눈빛에서 깊은 의심이 느껴진다."
+							}
+						]
+					}
+				},
+				{
+					"path": "lock",
+					"require_mbti": "ST",
+					"text": "{actor}이(가) '규칙대로 야간 근무 기록을 확인하면 될 일'이라고 단호하게 말한다.",
+					"reward": [
+						"intelligence_up"
+					],
+					"effects": {
+						"reason": 10,
+						"fighting": -5
+					},
+					"mbti": "ST",
+					"result": [
+						{
+							"text": "아저씨가 당신의 말에 고개를 끄덕인다. 야간 근무 기록에 없는 특별 청소였다며 난처한 표정을 짓는다.",
+							"speaker": "narrator"
+						},
+						{
+							"speaker": "narrator",
+							"text": "아저씨는 당신의 눈치를 보며 기록을 조작해 달라는 듯한 눈빛을 보낸다."
+						},
+						{
+							"text": "아저씨가 뭔가 부탁하는 눈치인데요?",
+							"speaker": "dax"
+						}
+					]
+				}
+			],
+			"no": 1,
+			"title": "말 못 할 야근",
+			"dialogue": [
+				{
+					"text": "탕비실 구석에서 컵을 닦던 청소부 아저씨가 당신을 본다.",
+					"speaker": "narrator"
+				},
+				{
+					"text": "큼큼, 별일 없으셨어요?",
+					"speaker": "night_janitor"
+				},
+				{
+					"speaker": "dax",
+					"text": "아저씨도 그날 밤 늦게까지 사무실에 계셨다고 들었는데요."
+				},
+				{
+					"speaker": "night_janitor",
+					"text": "아… 그, 그게…"
+				},
+				{
+					"text": "아저씨는 손에 든 컵을 더 세게 닦는다.",
+					"speaker": "narrator"
+				}
+			],
+			"rule_link": "야간 청소부 아저씨의 말 못 할 사정을 숨기는 것과 드러내는 것 중 무엇이 옳은지 선택한다.",
+			"person": {
+				"id": "night_janitor",
+				"role": "야간 청소부",
+				"name": "청소부 아저씨"
+			},
+			"wants": "야근한 게 들키면 잘릴까 봐 말을 못 하고 있다.",
+			"background_tags": [
+				"office",
+				"night",
+				"fluorescent_light",
+				"alone",
+				"quiet"
+			],
+			"slot": "A",
+			"kind": "plant"
+		},
+		{
+			"choices": [
+				{
+					"path": "easy",
+					"reward": [
+						"attack_up"
+					],
+					"text": "어떤 내용인지 더 자세히 말해 달라고 부추긴다.",
+					"effects": {
+						"community": -10,
+						"echo": -5
+					},
+					"result": [
+						{
+							"speaker": "narrator",
+							"text": "직원이 신이 나서 노래방 영상의 새로운 소문을 털어놓는다. 영상 속 인물의 어설픈 춤과 노래를 흉내 낸다."
+						},
+						{
+							"speaker": "narrator",
+							"text": "직원은 당신의 반응을 살피며 키득거린다."
+						},
+						{
+							"text": "별것도 아닌 소문이네요, 에휴.",
+							"speaker": "dax"
+						}
+					],
+					"risk_bad": {
+						"reward": [],
+						"gold": -20,
+						"result": [
+							{
+								"speaker": "narrator",
+								"text": "직원이 신이 나서 노래방 영상의 새로운 소문을 털어놓는다."
+							},
+							{
+								"text": "그러나 당신이 소문에 관심을 보이는 사이, 직원이 실수로 뜨거운 물을 당신에게 쏟아버린다.",
+								"speaker": "narrator"
+							},
+							{
+								"speaker": "narrator",
+								"text": "셔츠에 얼룩이 크게 번진다."
+							}
+						]
+					},
+					"mbti": "ES"
+				},
+				{
+					"event_intro": [
+						{
+							"speaker": "narrator",
+							"text": "직원이 당신의 행동에 당황하며 길을 막아선다."
+						},
+						{
+							"text": "탕비실 문이 닫히기 시작한다. 틈을 노려 빠르게 통과해야 한다.",
+							"speaker": "narrator"
+						}
+					],
+					"event_reason": "직원의 소문을 피하기 위해 빠르게 탕비실을 벗어나야 한다.",
+					"text": "소문에 관심 없다는 듯이 탕비실 문 쪽으로 몸을 돌린다.",
+					"path": "hard",
+					"mbti": "IN",
+					"effects": {
+						"echo": 5,
+						"community": 15
+					},
+					"event": "minigame_timing",
+					"result": [
+						{
+							"speaker": "narrator",
+							"text": "직원이 당신의 무관심한 태도에 어깨를 으쓱한다."
+						},
+						{
+							"speaker": "narrator",
+							"text": "당신은 탕비실 문을 향해 몸을 돌린다."
+						}
+					]
+				},
+				{
+					"effects": {
+						"reason": -10,
+						"gold": -100
+					},
+					"mbti": "ST",
+					"reward": [
+						"defense_up"
+					],
+					"result": [
+						{
+							"text": "직원이 눈을 휘둥그레 뜨며 당신의 손에 들린 돈을 본다. 재빨리 돈을 받아 주머니에 넣고 입을 다문다.",
+							"speaker": "narrator"
+						},
+						{
+							"speaker": "narrator",
+							"text": "직원은 만족한 표정으로 당신에게 꾸벅 인사한다."
+						},
+						{
+							"text": "돈으로 다 되는 건 아니에요, 여러분.",
+							"speaker": "dax"
+						}
+					],
+					"text": "직원의 입을 막기 위해 지갑에서 돈을 꺼내 조용히 건넨다.",
+					"path": "gold"
+				}
+			],
+			"background_tags": [
+				"office",
+				"daytime",
+				"fluorescent_light",
+				"few_people",
+				"gossipy"
+			],
+			"key": "gossip_spread",
+			"rule_link": "노래방 영상 소문을 퍼뜨리는 사무직 직원의 행동을 말 못 할 사정으로 볼지, 숨기는 사실로 볼지 판단한다.",
+			"title": "탕비실 소문",
+			"person": {
+				"id": "office_worker",
+				"name": "사무직 직원",
+				"role": "회사원"
+			},
+			"wants": "노래방 영상 소문을 퍼뜨려 동료를 곤란하게 만들고 싶어 한다.",
+			"dialogue": [
+				{
+					"speaker": "narrator",
+					"text": "탕비실에서 물을 마시던 사무직 직원이 당신을 흘긋 본다."
+				},
+				{
+					"text": "들었어요? 지난번 노래방 영상 말이에요.",
+					"speaker": "office_worker"
+				},
+				{
+					"speaker": "dax",
+					"text": "무슨 소문이 또 돌아요?"
+				},
+				{
+					"text": "글쎄, 그 영상이 사실은…",
+					"speaker": "office_worker"
+				},
+				{
+					"text": "직원은 당신의 반응을 살피며 입술을 비죽거린다.",
+					"speaker": "narrator"
+				}
+			],
+			"no": 2,
+			"slot": "A",
+			"kind": "normal"
+		},
+		{
+			"choices": [
+				{
+					"effects": {
+						"community": 15,
+						"echo": 5
+					},
+					"path": "easy",
+					"text": "반장님의 걱정거리가 무엇인지 물어본다.",
+					"reward": [
+						"attack_up"
+					],
+					"risk_bad": {
+						"result": [
+							{
+								"text": "반장이 당신의 관심에 감격하여 눈물을 글썽인다.",
+								"speaker": "narrator"
+							},
+							{
+								"speaker": "narrator",
+								"text": "그러나 너무 감정이 북받친 나머지, 노래방 영상 소문과 아무 상관 없는 옛날이야기를 길게 늘어놓기 시작한다."
+							}
+						],
+						"reward": [],
+						"gold": -30
+					},
+					"mbti": "SF",
+					"result": [
+						{
+							"text": "반장이 당신의 관심에 힘을 얻어 노래방 영상 소문 때문에 청소부들이 의기소침하다고 말한다.",
+							"speaker": "narrator"
+						},
+						{
+							"speaker": "narrator",
+							"text": "반장은 당신에게 소문이 더 퍼지지 않게 해 달라고 간청한다. 반장의 눈가에 주름이 깊게 패인다."
+						},
+						{
+							"speaker": "dax",
+							"text": "반장님이 속앓이가 많으시네요."
+						}
+					]
+				},
+				{
+					"event_reason": "반장이 업무에 집중하려는 당신에게 엉뚱한 내기를 걸어 주의를 돌리려 한다.",
+					"event_intro": [
+						{
+							"speaker": "narrator",
+							"text": "반장이 당신의 냉정한 태도에 당황한다."
+						},
+						{
+							"speaker": "narrator",
+							"text": "갑자기 당신에게 커피를 타주겠다며 컵 세 개를 들고 장난스럽게 섞는다."
+						},
+						{
+							"text": "반장은 당신의 손에 든 용의자 명단을 가리키며 '맞춰봐!'라고 말한다.",
+							"speaker": "narrator"
+						}
+					],
+					"path": "hard",
+					"effects": {
+						"fighting": -5,
+						"reason": 15
+					},
+					"text": "반장님의 걱정은 잠시 미뤄두고 용의자 동선 확인에 집중한다.",
+					"result": [
+						{
+							"text": "반장이 당신의 단호한 태도에 입술을 삐죽거린다.",
+							"speaker": "narrator"
+						},
+						{
+							"text": "그러나 이내 당신의 말에 수긍하는 듯 고개를 끄덕인다.",
+							"speaker": "narrator"
+						}
+					],
+					"mbti": "NT",
+					"event": "minigame_cup"
+				},
+				{
+					"text": "반장님의 기운을 북돋아 주기 위해 노래방 영상 속 춤을 어설프게 따라 춘다.",
+					"reward": [
+						"heal"
+					],
+					"path": "fun",
+					"risk_bad": {
+						"result": [
+							{
+								"text": "반장이 당신의 엉뚱한 행동에 깜짝 놀란다. 반장이 갑자기 배를 잡고 쓰러진다.",
+								"speaker": "narrator"
+							},
+							{
+								"speaker": "narrator",
+								"text": "너무 크게 웃는 바람에 옆구리 통증을 호소한다."
+							}
+						],
+						"reward": [],
+						"gold": -30
+					},
+					"effects": {
+						"community": 20,
+						"reason": -10,
+						"echo": 10
+					},
+					"result": [
+						{
+							"text": "반장이 당신의 엉뚱한 행동에 깜짝 놀란다. 이내 푸석했던 얼굴에 웃음꽃이 피어난다.",
+							"speaker": "narrator"
+						},
+						{
+							"speaker": "narrator",
+							"text": "반장은 당신의 춤을 보며 박장대소한다."
+						},
+						{
+							"text": "풉, 이건 또 무슨 상황이죠?",
+							"speaker": "dax"
+						}
+					],
+					"mbti": "EP"
+				}
+			],
+			"no": 3,
+			"background_tags": [
+				"office",
+				"daytime",
+				"fluorescent_light",
+				"few_people",
+				"gloomy"
+			],
+			"key": "janitor_leader_worry",
+			"forced": [
+				{
+					"reward": [
+						"attack_up"
+					],
+					"mbti": "FP",
+					"result": [
+						{
+							"text": "반장이 당신의 열정적인 모습에 감동한다. 그러나 주위에 있던 다른 직원들이 모두 당신을 쳐다본다.",
+							"speaker": "narrator"
+						},
+						{
+							"text": "탕비실이 순간 조용해진다.",
+							"speaker": "narrator"
+						}
+					],
+					"require_mbti": "FP",
+					"effects": {
+						"community": 10,
+						"echo": 10,
+						"fighting": 10
+					},
+					"text": "{actor}이(가) '반장님, 저희가 소문을 싹 다 조사해서 진실을 밝혀 드릴게요!'라며 큰 소리로 외친다."
+				}
+			],
+			"title": "반장님의 한숨",
+			"dialogue": [
+				{
+					"text": "탕비실 한쪽에 앉아 한숨 쉬는 청소 반장이 보인다.",
+					"speaker": "narrator"
+				},
+				{
+					"speaker": "janitor_leader",
+					"text": "쯧쯧, 젊은 친구들이 뭘 안다고…"
+				},
+				{
+					"text": "반장님, 무슨 걱정이라도 있으세요?",
+					"speaker": "dax"
+				},
+				{
+					"speaker": "janitor_leader",
+					"text": "아니, 그게… 요즘 애들이 그 노래방 영상 때문에 시끄러워서 말이야."
+				},
+				{
+					"speaker": "narrator",
+					"text": "반장은 마시던 커피잔을 내려놓으며 당신을 바라본다."
+				}
+			],
+			"wants": "노래방 영상 소문 때문에 청소부들의 사기가 저하될까 봐 걱정한다.",
+			"person": {
+				"name": "청소 반장",
+				"role": "청소 반장",
+				"id": "janitor_leader"
+			},
+			"rule_link": "노래방 영상 소문 때문에 속앓이하는 청소 반장의 말 못 할 사정을 어떻게 대할지 선택한다.",
+			"slot": "A",
+			"kind": "normal"
+		}
+	],
+	"errors": [],
+	"prompt_hash": "82ddd366c35d2fbd1bfbf6a2a636a33de349f0b3"
+}

@@ -1,0 +1,165 @@
+{
+	"id": "card_03_electrician_door_knocking",
+	"title": {
+		"korean": "서버실 문을 두드리는 소리"
+	},
+	"intensity": "high",
+	"after_story": 7,
+	"before_story": 9,
+	"callback": {
+		"seed": "electrician_suspicion_easy",
+		"min_rooms_after": 2
+	},
+	"background_tags": [
+		"corridor",
+		"night",
+		"dimlight",
+		"empty",
+		"tense"
+	],
+	"background_image": "https://imagedelivery.net/WTEqQNGFb-l-IHS6IGnzUQ/2c53bf15-9954-4c39-e8ca-6241ff620e00/public",
+	"dialogue": [
+		{
+			"speaker": "narrator",
+			"content": {
+				"korean": "서버실 문 저편에서 쿵, 쿵, 쿵, 문을 두드리는 소리가 들린다."
+			}
+		},
+		{
+			"speaker": "electrician",
+			"content": {
+				"korean": "저기요! 안에 계신 해커 간부님! 지금 뭐 하시는 거예요!"
+			}
+		},
+		{
+			"speaker": "dax",
+			"content": {
+				"korean": "어? 저 전기 기사님은… 아, 서버실 문을 두드리시네!"
+			}
+		},
+		{
+			"speaker": "electrician",
+			"content": {
+				"korean": "안에서 지우기 소리가 더 빨라지는데, 이러면 제가 곤란합니다!"
+			}
+		},
+		{
+			"speaker": "narrator",
+			"content": {
+				"korean": "문틈 사이로 들리던 기계음이 한층 더 빠르게 울린다."
+			}
+		}
+	],
+	"choices": [
+		{
+			"text": {
+				"korean": "전기 기사의 말에 동조하며, 안에서 나는 소리가 수상하다고 크게 말한다."
+			},
+			"path": "easy",
+			"mbti": "TJ",
+			"flag": "server_room_noise",
+			"effects": {
+				"echo": -5,
+				"fighting": -15
+			},
+			"reward": [
+				"attack_up"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "당신의 말에 전기 기사가 더욱 힘을 얻어 문을 두드린다."
+					}
+				},
+				{
+					"speaker": "electrician",
+					"content": {
+						"korean": "맞아요! 저 소리가 괜히 나는 게 아니라고요! 다들 들었죠?"
+					}
+				},
+				{
+					"speaker": "dax",
+					"content": {
+						"korean": "으윽, 저러다 해커 간부님이 우리까지 오해하면 어쩌죠?"
+					}
+				}
+			]
+		},
+		{
+			"text": {
+				"korean": "전기 기사에게 잠시 기다려 달라고 부탁하며, 닥스와 눈빛을 교환한다."
+			},
+			"path": "hard",
+			"mbti": "NF",
+			"flag": "server_room_calm",
+			"effects": {
+				"echo": 5,
+				"community": 15
+			},
+			"reward": [
+				"defense_up"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "당신의 침착한 부탁에 전기 기사가 잠시 멈칫하더니, 이내 한숨을 쉬며 문에서 물러선다."
+					}
+				},
+				{
+					"speaker": "electrician",
+					"content": {
+						"korean": "에휴, 괜히 일을 키우면 안 되지."
+					}
+				},
+				{
+					"speaker": "dax",
+					"content": {
+						"korean": "휴, 이제야 좀 숨통이 트이네요. 아까는 간부님이 화낼까 봐 조마조마했어요!"
+					}
+				}
+			]
+		}
+	],
+	"tags": [
+		"electrician",
+		"dax"
+	],
+	"_design": {
+		"slot": "D",
+		"kind": "callback",
+		"person": {
+			"role": "전기 기사",
+			"name": "전기 기사",
+			"id": "electrician"
+		},
+		"wants": "서버실 안의 수상한 일을 확인하고 싶어 함.",
+		"rule_link": "서버실 안의 소리가 증거처럼 들리지만, 그 증거가 무엇을 뜻하는지 따져볼 기회.",
+		"events": {},
+		"flags": {
+			"server_room_noise": {
+				"kind": "bad",
+				"boss_penalty": -1,
+				"label": {
+					"korean": "서버실 소동"
+				},
+				"boss_line": {
+					"korean": "서버실 문을 두드리던 소리가 멎고, 해커 간부가 더욱 경계 태세에 들어선다."
+				}
+			},
+			"server_room_calm": {
+				"kind": "good",
+				"boss_penalty": 1,
+				"label": {
+					"korean": "서버실 앞 진정"
+				},
+				"boss_choice": {
+					"korean": "닥스가 해커 간부에게 조용히 다가가 상황을 설명한다."
+				}
+			}
+		}
+	}
+}

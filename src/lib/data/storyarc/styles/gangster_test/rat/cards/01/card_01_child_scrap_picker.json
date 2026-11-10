@@ -1,0 +1,313 @@
+{
+	"id": "card_01_child_scrap_picker",
+	"title": {
+		"korean": "타다 만 종이를 줍는 아이"
+	},
+	"intensity": "calm",
+	"after_story": 5,
+	"before_story": 7,
+	"background_tags": [
+		"alley",
+		"evening",
+		"dim",
+		"urban",
+		"curious"
+	],
+	"background_image": "https://imagedelivery.net/WTEqQNGFb-l-IHS6IGnzUQ/21ee202a-b12c-4a73-25b4-803f8f62d600/public",
+	"dialogue": [
+		{
+			"speaker": "narrator",
+			"content": {
+				"korean": "골목 어귀에 다다르자, 작고 마른 아이가 땅에 엎드려 타다 남은 종이 조각들을 줍고 있다."
+			}
+		},
+		{
+			"speaker": "narrator",
+			"content": {
+				"korean": "아이가 종이 조각을 들고 혼잣말을 한다. \"이거 팔면 돈 좀 될까?\""
+			}
+		},
+		{
+			"speaker": "child_picker",
+			"content": {
+				"korean": "아저씨, 이 종이 살래요? 엄청 희귀한 건데!"
+			}
+		},
+		{
+			"speaker": "dax",
+			"content": {
+				"korean": "저 아이는 여기서 뭘 하는 걸까요? 종이를 줍고 있네요..."
+			}
+		},
+		{
+			"speaker": "child_picker",
+			"content": {
+				"korean": "아저씨는 종이 안 필요해요?"
+			}
+		}
+	],
+	"choices": [
+		{
+			"text": {
+				"korean": "아이에게서 종이 조각을 몇 개 사준다."
+			},
+			"path": "easy",
+			"mbti": "SF",
+			"effects": {
+				"community": 10,
+				"gold": -50
+			},
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "당신이 종이를 사자 아이는 환하게 웃으며 품속에서 깨끗한 종이 한 장을 꺼내 건넨다."
+					}
+				},
+				{
+					"speaker": "child_picker",
+					"content": {
+						"korean": "헤헤, 고마워요! 이건 특별히 주는 거예요!"
+					}
+				},
+				{
+					"speaker": "dax",
+					"content": {
+						"korean": "아이가 좋아하는 모습을 보니 기분이 좋네요."
+					}
+				}
+			],
+			"risk": {
+				"chance": "mid",
+				"bad": {
+					"effects": {
+						"gold": -20
+					},
+					"reward": [],
+					"result": [
+						{
+							"speaker": "narrator",
+							"content": {
+								"korean": "당신이 종이를 사자 아이는 고맙다며 종이를 건네려다 발을 헛디뎌 종이를 놓치고,"
+							}
+						},
+						{
+							"speaker": "narrator",
+							"content": {
+								"korean": "바람에 날려 불 속으로 사라진다."
+							}
+						},
+						{
+							"speaker": "child_picker",
+							"content": {
+								"korean": "으악, 내 종이!"
+							}
+						},
+						{
+							"speaker": "dax",
+							"content": {
+								"korean": "으악, 아이가 종이를 놓쳐 버렸네요!"
+							}
+						}
+					]
+				}
+			}
+		},
+		{
+			"text": {
+				"korean": "아이에게 \"누가 종이를 태우는지\" 조심스럽게 물어본다."
+			},
+			"path": "hard",
+			"mbti": "NT",
+			"effects": {
+				"reason": 10,
+				"echo": 5
+			},
+			"reward": [
+				"intelligence_up"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "당신의 질문에 아이는 잠시 망설이다가, 불이 나는 곳을 손가락으로 가리킨다."
+					}
+				},
+				{
+					"speaker": "child_picker",
+					"content": {
+						"korean": "저기... 저기서 아까부터 아줌마가 태우고 있었어요..."
+					}
+				},
+				{
+					"speaker": "dax",
+					"content": {
+						"korean": "아줌마요? 경리부장님이 아줌마였나요?"
+					}
+				}
+			],
+			"risk": {
+				"chance": "high",
+				"bad": {
+					"effects": {
+						"gold": -20
+					},
+					"reward": [],
+					"result": [
+						{
+							"speaker": "narrator",
+							"content": {
+								"korean": "당신의 질문에 아이는 눈을 동그랗게 뜨고 당신을 경계한다."
+							}
+						},
+						{
+							"speaker": "child_picker",
+							"content": {
+								"korean": "갑자기 왜 물어봐요? 나쁜 사람이야?"
+							}
+						},
+						{
+							"speaker": "dax",
+							"content": {
+								"korean": "으악, 아이가 우리를 경계하기 시작했어요!"
+							}
+						}
+					]
+				}
+			}
+		},
+		{
+			"text": {
+				"korean": "{actor}이(가) 주워진 종이 조각을 꼼꼼히 살펴본다."
+			},
+			"path": "lock",
+			"mbti": "TJ",
+			"require": {
+				"mbti": "TJ"
+			},
+			"effects": {
+				"reason": 10
+			},
+			"reward": [
+				"intelligence_up"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "{actor}이(가) 종이 조각을 이리저리 돌려보며 글씨를 확인한다."
+					}
+				},
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "타다 남은 글씨 사이에서 '부두 어르신'이라는 단어가 희미하게 보인다."
+					}
+				},
+				{
+					"speaker": "dax",
+					"content": {
+						"korean": "와, {actor}! 저런 걸 찾아내다니, 저도 깜짝 놀랐네요!"
+					}
+				}
+			]
+		},
+		{
+			"text": {
+				"korean": "아이에게 \"종이 조각을 불에 던져 넣는 시합을 하자\"고 제안한다."
+			},
+			"path": "fun",
+			"mbti": "EP",
+			"effects": {
+				"community": 20,
+				"echo": 10
+			},
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "당신의 엉뚱한 제안에 아이는 눈을 반짝이며 신이 난다."
+					}
+				},
+				{
+					"speaker": "child_picker",
+					"content": {
+						"korean": "좋아요! 누가 더 많이 불에 던져 넣는지 시합해요!"
+					}
+				},
+				{
+					"speaker": "dax",
+					"content": {
+						"korean": "와, 아이가 완전 신났는데요! 저도 끼고 싶어요!"
+					}
+				}
+			],
+			"event": "minigame_timing",
+			"event_intro": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "아이가 불길을 등지고 당신 앞에 선다."
+					}
+				},
+				{
+					"speaker": "child_picker",
+					"content": {
+						"korean": "자, 아저씨 먼저! 저 불꽃에 정확히 던져 넣어야 해요!"
+					}
+				}
+			],
+			"risk": {
+				"chance": "low",
+				"bad": {
+					"reward": [
+						"hp_down"
+					],
+					"result": [
+						{
+							"speaker": "narrator",
+							"content": {
+								"korean": "신나게 종이 조각을 던지던 아이가 너무 가까이 다가가면서 소매에 불이 옮겨붙을 뻔한다."
+							}
+						},
+						{
+							"speaker": "child_picker",
+							"content": {
+								"korean": "으악! 뜨거워!"
+							}
+						},
+						{
+							"speaker": "dax",
+							"content": {
+								"korean": "아이가 불에 너무 가까이 갔어요! 위험해요!"
+							}
+						}
+					]
+				}
+			}
+		}
+	],
+	"tags": [
+		"child_picker",
+		"dax"
+	],
+	"_design": {
+		"slot": "C",
+		"kind": "normal",
+		"person": {
+			"id": "child_picker",
+			"name": "고물 줍는 아이",
+			"role": "고물을 줍는 아이"
+		},
+		"wants": "타다 남은 종이 조각을 주워서 팔고 싶어 함.",
+		"rule_link": "연기가 나는 골목 입구에서 타다 남은 종이를 줍는 아이를 발견했을 때, 아이의 말을 믿고 종이를 살지 아니면 불에 대해 물어볼지 판단해야 한다.",
+		"events": {
+			"fun": "아이와 어울리며 불이 나는 곳에 가까이 다가갈 기회가 생겼다."
+		},
+		"flags": {}
+	}
+}

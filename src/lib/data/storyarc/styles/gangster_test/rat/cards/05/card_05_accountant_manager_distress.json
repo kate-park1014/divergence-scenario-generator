@@ -1,0 +1,165 @@
+{
+	"id": "card_05_accountant_manager_distress",
+	"title": {
+		"korean": "경리부장의 난처한 추격전"
+	},
+	"intensity": "high",
+	"after_story": 5,
+	"before_story": 7,
+	"callback": {
+		"seed": "accountant_request_easy",
+		"min_rooms_after": 2
+	},
+	"background_tags": [
+		"fog",
+		"lighthouse",
+		"cart_tracks",
+		"night",
+		"eerie"
+	],
+	"background_image": "https://imagedelivery.net/WTEqQNGFb-l-IHS6IGnzUQ/166d0e8d-a0a4-48a8-e883-0c0bf996da00/public",
+	"dialogue": [
+		{
+			"speaker": "narrator",
+			"content": {
+				"korean": "짙은 안개 속에서 누군가 당신의 차를 쫓아오는 소리가 들린다."
+			}
+		},
+		{
+			"speaker": "narrator",
+			"content": {
+				"korean": "경리부장이 숨을 헐떡이며 당신의 차를 향해 달려온다."
+			}
+		},
+		{
+			"speaker": "accountant_manager",
+			"content": {
+				"korean": "서, 서류 글씨가… 비서 녀석도 한통속이야! 당장 쫓아가서… 으읍!"
+			}
+		},
+		{
+			"speaker": "narrator",
+			"content": {
+				"korean": "경리부장이 갑자기 옆구리를 부여잡고 주저앉는다."
+			}
+		},
+		{
+			"speaker": "dax",
+			"content": {
+				"korean": "어르신, 괜찮으세요? 그렇게 무리하시다가는 병이 나겠어요!"
+			}
+		},
+		{
+			"speaker": "accountant_manager",
+			"content": {
+				"korean": "쳇, 젠장! 당신들이 대신… 비서 녀석한테 왜 그랬는지… 물어봐 줘!"
+			}
+		}
+	],
+	"choices": [
+		{
+			"text": {
+				"korean": "경리부장을 차에 태우고 등대로 향한다."
+			},
+			"path": "easy",
+			"mbti": "TJ",
+			"flag": "manager_anger",
+			"effects": {
+				"fighting": -15,
+				"echo": -10
+			},
+			"reward": [
+				"attack_up"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "당신의 차 조수석에 앉은 경리부장은 줄곧 비서를 욕하며 등대까지 가는 길 내내 잔소리를 퍼붓는다."
+					}
+				},
+				{
+					"speaker": "dax",
+					"content": {
+						"korean": "으으, 경리부장님 목소리 때문에 안개 속이 더 답답하게 느껴져요!"
+					}
+				}
+			]
+		},
+		{
+			"text": {
+				"korean": "경리부장을 부축해 근처 편의점에 앉히고 직접 등대로 향한다."
+			},
+			"path": "hard",
+			"mbti": "SF",
+			"flag": "manager_trust",
+			"effects": {
+				"echo": 10,
+				"community": 15
+			},
+			"reward": [
+				"defense_up"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "경리부장은 투덜거리면서도 당신이 내민 따뜻한 캔커피를 받아든다."
+					}
+				},
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "그는 당신에게 꼭 진실을 밝혀달라고 신신당부한다."
+					}
+				},
+				{
+					"speaker": "dax",
+					"content": {
+						"korean": "경리부장님, 툴툴대면서도 따뜻한 커피는 마시네요!"
+					}
+				}
+			]
+		}
+	],
+	"tags": [
+		"accountant_manager",
+		"dax"
+	],
+	"_design": {
+		"slot": "C",
+		"kind": "callback",
+		"person": {
+			"role": "경리부장",
+			"id": "accountant_manager",
+			"name": "경리부장"
+		},
+		"wants": "비서의 결재 서류 글씨가 자신의 가짜 장부와 똑같아 비서를 추궁하려 하지만, 갑작스러운 통증으로 발이 묶여 당신에게 도움을 요청한다.",
+		"rule_link": "비서에 대한 오해를 풀기 위해 경리부장의 이야기를 먼저 듣고 상황을 파악해야 한다.",
+		"events": {},
+		"flags": {
+			"manager_anger": {
+				"kind": "bad",
+				"boss_penalty": -1,
+				"label": {
+					"korean": "경리부장 분노"
+				},
+				"boss_line": {
+					"korean": "경리부장이 비서에게 화를 내 당신의 말을 듣지 않는다."
+				}
+			},
+			"manager_trust": {
+				"kind": "good",
+				"boss_penalty": 1,
+				"label": {
+					"korean": "경리부장 신뢰"
+				},
+				"boss_choice": {
+					"korean": "경리부장이 비서에게 당신의 말을 잘 들어달라고 부탁한다."
+				}
+			}
+		}
+	}
+}

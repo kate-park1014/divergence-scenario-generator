@@ -1,0 +1,445 @@
+{
+	"cards": [
+		{
+			"rule_link": "섣부른 판단 대신 증거를 끝까지 쫓는 것이 진실을 밝히는 길이다.",
+			"background_tags": [
+				"container_yard",
+				"early_morning",
+				"foggy",
+				"empty",
+				"tense"
+			],
+			"title": "수상한 수레 자국",
+			"wants": "경비 반장이 야적장 바닥에 남은 수상한 수레 자국을 조사해 달라고 부탁한다. 그는 '규칙과 절차를 지키는 해결사'인 주인공이 원칙대로 행동해 주길 바란다.",
+			"key": "suspicious_cart_tracks",
+			"person": {
+				"id": "security_chief",
+				"name": "경비 반장",
+				"role": "야적장 경비 반장"
+			},
+			"no": 1,
+			"choices": [
+				{
+					"risk_bad": {
+						"result": [
+							{
+								"speaker": "narrator",
+								"text": "당신은 수레 자국을 따라 야적장 끝까지 가다, 미끄러져 옆에 쌓인 컨테이너 박스를 와르르 무너뜨린다."
+							},
+							{
+								"speaker": "security_chief",
+								"text": "아이고, 저 컨테이너는 오늘 아침에 출고될 건데! 수리비 청구해야겠네요."
+							},
+							{
+								"text": "으악, 저 소리 때문에 우리가 들킨 거 아니에요?",
+								"speaker": "dax"
+							}
+						],
+						"reward": [],
+						"gold": -50
+					},
+					"effects": {
+						"gold": 100,
+						"reason": -20
+					},
+					"text": "바닥의 수레 자국을 따라가 흔적을 자세히 조사한다.",
+					"flag": {
+						"boss_text": "싸움 시작 전, 누군가 야적장 담벼락 아래서 주운 열쇠 꾸러미가 바닥에 떨어진다.",
+						"key": "found_key_in_yard",
+						"label": "열쇠 꾸러미"
+					},
+					"path": "easy",
+					"mbti": "IS",
+					"result": [
+						{
+							"speaker": "narrator",
+							"text": "당신은 수레 자국을 따라 야적장 끝까지 가더니,"
+						},
+						{
+							"speaker": "narrator",
+							"text": "엉뚱하게도 반대편 담벼락 밑에서 떨어진 열쇠꾸러미를 발견한다."
+						},
+						{
+							"speaker": "security_chief",
+							"text": "아이고, 이게 제가 며칠 전에 잃어버린 열쇠인데… 덕분에 찾았습니다! 여기, 성의입니다."
+						},
+						{
+							"speaker": "dax",
+							"text": "와, 반장님 지갑이 두둑한데요! 운도 좋으셔라!"
+						}
+					]
+				},
+				{
+					"result": [
+						{
+							"text": "당신은 경비 반장의 어깨를 두드리며 괜찮다고 안심시키자, 그는 멋쩍은 듯 웃으며 차에 올라탄다.",
+							"speaker": "narrator"
+						},
+						{
+							"speaker": "security_chief",
+							"text": "아무것도 아니었나… 괜히 제가 호들갑을 떨었군요."
+						},
+						{
+							"text": "휴, 큰일 날 뻔했어요! 반장님이 계속 옆에 있었으면 어쩔 뻔했어요?",
+							"speaker": "dax"
+						}
+					],
+					"text": "수레 자국은 중요하지 않으니, 일단 경비 반장을 돌려보낸다.",
+					"path": "hard",
+					"flag": {
+						"label": "경비 반장 안심",
+						"boss_text": "싸움 시작 전, 경비 반장이 히어로들의 편에 서서 적들의 시야를 가린다.",
+						"key": "calmed_security_chief"
+					},
+					"mbti": "NF",
+					"reward": [
+						"defense_up"
+					],
+					"risk_bad": {
+						"result": [
+							{
+								"text": "당신은 경비 반장을 돌려보냈지만, 그는 차에 타자마자 ",
+								"speaker": "narrator"
+							},
+							{
+								"text": "아차! 소리를 지르며 다시 내린다.",
+								"speaker": "security_chief"
+							},
+							{
+								"text": "저런, 아까 그 컨테이너 옆에 비닐봉투가 하나 떨어져 있었는데… 혹시 중요한 건가?",
+								"speaker": "security_chief"
+							},
+							{
+								"speaker": "dax",
+								"text": "반장님, 저러다가 우리 위치 들키겠어요!"
+							}
+						],
+						"reward": [],
+						"gold": -20
+					},
+					"effects": {
+						"reason": 20,
+						"echo": 10
+					}
+				},
+				{
+					"text": "경비 반장에게 지금은 잠복 중이라고 솔직히 말하고 도움을 요청한다.",
+					"path": "stat",
+					"flag": {
+						"boss_text": "싸움 시작 전, 경비 반장이 야적장 문을 걸어 잠가 적들의 퇴로를 차단한다.",
+						"label": "반장 협력",
+						"key": "security_chief_cooperation"
+					},
+					"mbti": "TJ",
+					"reward": [
+						"shield"
+					],
+					"effects": {
+						"community": 10,
+						"echo": 10,
+						"reason": -30
+					},
+					"result": [
+						{
+							"text": "당신의 말에 경비 반장은 놀라면서도 이내 고개를 끄덕이더니, 당신의 지시에 따라 야적장 순찰을 강화한다.",
+							"speaker": "narrator"
+						},
+						{
+							"text": "규칙을 지키는 분들이니 믿을 수 있지. 제가 쥐새끼들 못 도망가게 막아드리죠!",
+							"speaker": "security_chief"
+						},
+						{
+							"speaker": "dax",
+							"text": "와, 반장님까지 우리 편이 됐어요! 든든하다!"
+						}
+					]
+				},
+				{
+					"result": [
+						{
+							"speaker": "narrator",
+							"text": "당신의 춤사위에 경비 반장은 어리둥절한 표정을 짓더니, 이내 한숨을 쉬며 차 안으로 들어간다."
+						},
+						{
+							"text": "할 일이 없어서 저러는군… 나도 참, 늙어서 쓸데없는 생각만 했지.",
+							"speaker": "security_chief"
+						},
+						{
+							"speaker": "dax",
+							"text": "반장님, 저분… 괜찮으신 걸까요?"
+						}
+					],
+					"path": "fun",
+					"mbti": "EN",
+					"text": "경비 반장의 손전등을 뺏어 들고 수레 자국을 따라가며 춤을 춘다.",
+					"effects": {
+						"reason": -20,
+						"echo": 15
+					},
+					"reward": [
+						"cooldown_reset"
+					],
+					"risk_bad": {
+						"gold": -30,
+						"result": [
+							{
+								"speaker": "narrator",
+								"text": "당신이 신나게 춤을 추다 그만 수레 자국 위에 미끄러져 넘어진다."
+							},
+							{
+								"speaker": "narrator",
+								"text": "손전등은 저 멀리 날아가 컨테이너 벽에 부딪혀 깨진다."
+							},
+							{
+								"speaker": "security_chief",
+								"text": "내 손전등! 저거 비싼 건데!"
+							},
+							{
+								"text": "으악, 이젠 반장님 손전등까지… 어쩌죠?",
+								"speaker": "dax"
+							}
+						],
+						"reward": []
+					}
+				}
+			],
+			"dialogue": [
+				{
+					"text": "당신이 그… 뭐든 원칙대로 처리한다는 해결사시죠? 소문 자자합니다.",
+					"speaker": "security_chief"
+				},
+				{
+					"text": "저, 저분은 경비 반장님인데… 왜 갑자기 차를 세우는 거지?",
+					"speaker": "dax"
+				},
+				{
+					"speaker": "security_chief",
+					"text": "차 안에서 인기척이… 어휴, 제가 괜히 주책맞게… 죄송합니다만, 잠시 실례해도 될까요?"
+				},
+				{
+					"text": "저기… 야적장에 요즘 수상한 수레 자국이 자꾸 생기는데, 기록에는 없는 활동이라 말입니다.",
+					"speaker": "security_chief"
+				},
+				{
+					"text": "어떻게 좀… 파악해 주실 수 없을지…",
+					"speaker": "security_chief"
+				},
+				{
+					"speaker": "narrator",
+					"text": "경비 반장이 손전등으로 바닥의 묵직한 수레 자국을 가리킨다."
+				}
+			],
+			"slot": "B",
+			"kind": "rep",
+			"rep_dir": "reason-"
+		},
+		{
+			"key": "suspicious_smell_source",
+			"rule_link": "겉으로 보이는 것 너머에 숨겨진 진실을 밝히려면 감각을 믿고 행동해야 할 때도 있다.",
+			"no": 2,
+			"background_tags": [
+				"container_yard",
+				"early_morning",
+				"foggy",
+				"empty",
+				"mysterious"
+			],
+			"wants": "경비 반장이 야적장 구석에서 나는 수상한 냄새의 출처를 알아봐 달라고 부탁한다. 그는 '마음 가는 대로 행동하는 해결사'인 주인공이 대충 넘기지 않고 일을 처리해 주길 바란다.",
+			"title": "수상한 냄새의 출처",
+			"person": {
+				"id": "security_chief",
+				"name": "경비 반장",
+				"role": "야적장 경비 반장"
+			},
+			"dialogue": [
+				{
+					"speaker": "security_chief",
+					"text": "당신이 그… 뭐든 자기 마음대로 시원하게 해결한다는 소문난 분이시죠? 여기 계셨을 줄이야!"
+				},
+				{
+					"speaker": "dax",
+					"text": "반장님! 왜 갑자기 저희 차에 오시는 거예요?"
+				},
+				{
+					"speaker": "security_chief",
+					"text": "차 안에서 뭔가 기운이… 어휴, 제가 괜히 또 이런 부탁을 드리는 건지… 죄송합니다만…"
+				},
+				{
+					"speaker": "security_chief",
+					"text": "저기… 야적장 구석에서 요즘 이상한 냄새가 자꾸 나는데, 도무지 출처를 모르겠습니다."
+				},
+				{
+					"text": "제가 혼자 확인하기엔 좀… 찜찜해서 말입니다. 어떻게 좀… 시원하게 파악해 주실 수 없을지…",
+					"speaker": "security_chief"
+				},
+				{
+					"text": "경비 반장이 코를 킁킁거리며 야적장 한쪽을 가리킨다.",
+					"speaker": "narrator"
+				}
+			],
+			"choices": [
+				{
+					"reward": [
+						"attack_up"
+					],
+					"effects": {
+						"reason": 20,
+						"fighting": 10
+					},
+					"text": "냄새나는 곳으로 달려가 무엇이든 뒤져서 원인을 찾아낸다.",
+					"risk_bad": {
+						"result": [
+							{
+								"speaker": "narrator",
+								"text": "당신은 냄새나는 곳으로 달려가 쓰레기 더미를 발로 헤치다, 삐끗하며 넘어진다."
+							},
+							{
+								"speaker": "narrator",
+								"text": "하필 쓰레기 더미 위에 있던 썩은 생선이 당신의 얼굴에 찰싹 달라붙는다."
+							},
+							{
+								"speaker": "security_chief",
+								"text": "으악! 저 냄새! 어떡합니까!"
+							},
+							{
+								"text": "으으, 저 얼굴로 어떻게 싸우러 가요!",
+								"speaker": "dax"
+							}
+						],
+						"reward": [],
+						"gold": -20
+					},
+					"path": "easy",
+					"flag": {
+						"key": "found_stinky_lunch",
+						"boss_text": "싸움 시작 전, 누군가 냄새나는 도시락 가방을 던져 적들의 눈을 가린다.",
+						"label": "냄새나는 도시락"
+					},
+					"result": [
+						{
+							"speaker": "narrator",
+							"text": "당신은 냄새나는 곳으로 달려가더니, 쓰레기 더미를 발로 헤치고는 그 밑에 숨겨진 낡은 가방을 끄집어낸다."
+						},
+						{
+							"text": "아이고, 저 가방은 며칠 전에 잃어버린 제 점심 도시락 가방인데! 냄새가… 으으!",
+							"speaker": "security_chief"
+						},
+						{
+							"text": "와, 반장님 도시락에서 나는 냄새였어요? 대박!",
+							"speaker": "dax"
+						}
+					],
+					"mbti": "ES"
+				},
+				{
+					"risk_bad": {
+						"result": [
+							{
+								"text": "당신의 조언에 경비 반장은 심각한 표정으로 무전기를 들고 상부에 보고한다.",
+								"speaker": "narrator"
+							},
+							{
+								"speaker": "security_chief",
+								"text": "야적장 이상 냄새 건… 음… 문서 양식 3호에 맞춰서… 아, 이걸 이제야 말하다니!"
+							},
+							{
+								"speaker": "dax",
+								"text": "으악, 반장님 저러다 날 샐 때까지 보고만 하시겠어요!"
+							}
+						],
+						"gold": -20,
+						"reward": []
+					},
+					"effects": {
+						"community": -10,
+						"reason": -20
+					},
+					"result": [
+						{
+							"text": "당신의 말에 경비 반장은 난감한 표정을 짓더니, 이내 한숨을 쉬며 순찰차로 돌아간다.",
+							"speaker": "narrator"
+						},
+						{
+							"text": "아이고, 신고까지 할 정도는 아닌데… 괜히 일을 키웠구만.",
+							"speaker": "security_chief"
+						},
+						{
+							"text": "반장님, 저분… 너무 융통성이 없는 거 아니에요?",
+							"speaker": "dax"
+						}
+					],
+					"reward": [
+						"defense_up"
+					],
+					"mbti": "IT",
+					"path": "hard",
+					"flag": {
+						"label": "정식 보고 조언",
+						"key": "advised_formal_report",
+						"boss_text": "싸움 시작 전, 적들이 '정식 절차를 밟으라'는 말에 잠시 혼란스러워한다."
+					},
+					"text": "경비 반장에게 정식 절차를 밟아 신고하라고 조언한다."
+				},
+				{
+					"text": "냄새나는 곳을 향해 손가락을 튕기며 '저건 내가 알아서 처리할 테니 걱정 마라'고 큰소리친다.",
+					"mbti": "EP",
+					"flag": {
+						"label": "자신만만 선언",
+						"key": "confident_claim",
+						"boss_text": "싸움 시작 전, 적들이 당신의 기세에 눌려 잠시 주춤한다."
+					},
+					"path": "stat",
+					"reward": [
+						"shield"
+					],
+					"effects": {
+						"echo": 10,
+						"fighting": 10,
+						"reason": 30
+					},
+					"result": [
+						{
+							"text": "당신의 호언장담에 경비 반장은 안심한 듯 고개를 끄덕이더니, 당신에게 엄지손가락을 치켜세운다.",
+							"speaker": "narrator"
+						},
+						{
+							"speaker": "security_chief",
+							"text": "역시 소문대로 시원시원하십니다! 믿고 맡기겠습니다!"
+						},
+						{
+							"speaker": "dax",
+							"text": "와, 반장님이 우리 형님을 완전히 믿는 눈치인데요?"
+						}
+					]
+				},
+				{
+					"text": "경비 반장에게 돈을 쥐여주며 냄새나는 곳을 직접 치우라고 한다.",
+					"effects": {
+						"gold": -100
+					},
+					"path": "gold",
+					"result": [
+						{
+							"speaker": "narrator",
+							"text": "경비 반장은 당신이 건넨 돈을 보며 잠시 망설이더니, 이내 환하게 웃으며 삽을 들고 냄새나는 곳으로 향한다."
+						},
+						{
+							"text": "아이고, 이게 웬 떡입니까! 제가 알아서 깔끔하게 치워드리죠!",
+							"speaker": "security_chief"
+						},
+						{
+							"text": "반장님, 저분… 돈에 너무 약한 거 아니에요?",
+							"speaker": "dax"
+						}
+					],
+					"mbti": "SJ"
+				}
+			],
+			"slot": "B",
+			"kind": "rep",
+			"rep_dir": "reason+"
+		}
+	],
+	"errors": [],
+	"prompt_hash": "c08a7ddb01725e9083e67f7297c9756706a334da"
+}

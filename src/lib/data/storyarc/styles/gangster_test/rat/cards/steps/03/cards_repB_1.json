@@ -1,0 +1,430 @@
+{
+	"cards": [
+		{
+			"person": {
+				"id": "security_team_leader",
+				"name": "경비 팀장",
+				"role": "서버실 경비 팀장"
+			},
+			"choices": [
+				{
+					"text": "규정은 필요 없다. 당장 비키라고 경고한다.",
+					"flag": {
+						"label": "경비팀 출동",
+						"key": "alerted_security",
+						"boss_text": "보스 방에 들어가기 전 보안팀이 몰려와 당신의 움직임이 둔해진다."
+					},
+					"result": [
+						{
+							"speaker": "narrator",
+							"text": "당신의 경고에 경비 팀장이 움찔하며 한 발 물러선다."
+						},
+						{
+							"speaker": "narrator",
+							"text": "하지만 그는 안경을 고쳐 쓰며 탕비실 비상벨에 손을 얹는다."
+						},
+						{
+							"speaker": "dax",
+							"text": "저러다 보안팀을 다 부르면 어떡해요?"
+						}
+					],
+					"effects": {
+						"echo": -5,
+						"fighting": 15
+					},
+					"mbti": "ET",
+					"risk_bad": {
+						"reward": [],
+						"result": [
+							{
+								"text": "당신의 경고에 경비 팀장이 움찔했지만, 이내 허세를 부리며 앞을 막아선다.",
+								"speaker": "narrator"
+							},
+							{
+								"text": "“규정은 생명입니다! 물러나지 않습니다!” 그는 비상벨을 눌러버린다.",
+								"speaker": "narrator"
+							},
+							{
+								"speaker": "dax",
+								"text": "벌써 보안팀이 몰려오고 있어요!"
+							}
+						],
+						"gold": -30
+					},
+					"path": "easy",
+					"reward": [
+						"attack_up"
+					]
+				},
+				{
+					"result": [
+						{
+							"text": "당신의 설명을 들은 경비 팀장이 안경을 치켜쓰며 고개를 갸웃거린다.",
+							"speaker": "narrator"
+						},
+						{
+							"speaker": "narrator",
+							"text": "“음… 규정은 아니지만, 일단 지켜보겠습니다.” 그는 옆으로 비켜선다."
+						},
+						{
+							"text": "말이 통할 줄은 몰랐는데, 대단하네요!",
+							"speaker": "dax"
+						}
+					],
+					"risk_bad": {
+						"result": [
+							{
+								"speaker": "narrator",
+								"text": "당신의 설명을 들은 경비 팀장이 안경을 치켜쓰며 한숨을 쉰다."
+							},
+							{
+								"text": "“규정은 규정입니다! 사정은 알겠지만, 저는 제 일을 해야 합니다!” 그는 더욱 완강하게 막아선다.",
+								"speaker": "narrator"
+							},
+							{
+								"text": "아… 말이 안 통하네요.",
+								"speaker": "dax"
+							}
+						],
+						"gold": -20,
+						"reward": []
+					},
+					"path": "hard",
+					"mbti": "IN",
+					"text": "경비 팀장에게 상황을 설명하고 협조를 구한다.",
+					"reward": [
+						"defense_up"
+					],
+					"effects": {
+						"reason": 10,
+						"fighting": -15,
+						"echo": 10
+					},
+					"flag": {
+						"boss_text": "보스 방에 들어가기 전 경비 팀장이 서버실 문 비밀번호를 알려준다.",
+						"key": "security_team_cooperation",
+						"label": "경비팀 협조"
+					}
+				},
+				{
+					"text": "경비 팀장의 어깨를 툭 치며 협박에 가까운 경고를 한다.",
+					"result": [
+						{
+							"speaker": "narrator",
+							"text": "당신의 손길에 경비 팀장이 휘청이며 벽에 부딪힌다."
+						},
+						{
+							"text": "그는 겁먹은 얼굴로 안경을 다시 주워 쓰고 허둥지둥 길을 비켜준다.",
+							"speaker": "narrator"
+						},
+						{
+							"speaker": "dax",
+							"text": "이야, 역시 여러분은 통하는 게 다르네요!"
+						}
+					],
+					"flag": {
+						"key": "intimidated_security",
+						"label": "경비팀 위협",
+						"boss_text": "보스 방에 들어가기 전 경비 팀장이 해커 간부의 약점 정보를 흘린다."
+					},
+					"mbti": "SP",
+					"effects": {
+						"echo": -10,
+						"fighting": -20
+					},
+					"path": "stat",
+					"reward": [
+						"shield"
+					]
+				},
+				{
+					"reward": [
+						"cooldown_reset"
+					],
+					"risk_bad": {
+						"reward": [],
+						"gold": -50,
+						"result": [
+							{
+								"speaker": "narrator",
+								"text": "당신이 낚아챈 안경이 허공에서 미끄러져 복도 바닥에 떨어진다."
+							},
+							{
+								"speaker": "narrator",
+								"text": "“안 돼!” 경비 팀장이 소리치며 안경을 밟아버린다. 쨍그랑!"
+							},
+							{
+								"text": "저게 비상벨이었으면 큰일 날 뻔했어요!",
+								"speaker": "dax"
+							}
+						]
+					},
+					"path": "fun",
+					"mbti": "ES",
+					"effects": {
+						"reason": -10,
+						"fighting": 10,
+						"echo": 5
+					},
+					"result": [
+						{
+							"speaker": "narrator",
+							"text": "경비 팀장이 눈을 찡그리며 허공에 손을 휘젓는다."
+						},
+						{
+							"text": "“제… 제 안경! 규정상 제 안경은 제가 써야 합니다!” 그는 앞을 더듬으며 탕비실 안으로 뒷걸음친다.",
+							"speaker": "narrator"
+						},
+						{
+							"text": "저분은 안경 없으면 아무것도 못 할 거예요!",
+							"speaker": "dax"
+						}
+					],
+					"text": "경비 팀장의 안경을 낚아채서 높이 들어 올린다."
+				}
+			],
+			"background_tags": [
+				"corridor",
+				"night",
+				"darkness",
+				"alone",
+				"tense"
+			],
+			"title": "복도 끝 경비 팀장님",
+			"no": 1,
+			"dialogue": [
+				{
+					"text": "복도 끝 탕비실에서 경비 팀장이 안경을 치켜쓰며 당신 일행을 막아선다.",
+					"speaker": "narrator"
+				},
+				{
+					"text": "“거기, 거기! 당신들이 그… 주먹부터 내밀어 해결한다는 사람들이오?”",
+					"speaker": "security_team_leader"
+				},
+				{
+					"text": "“규정상 복도 끝은 출입 금지입니다! 지금 서버실에서 무슨 소리가 나는지 모르지만, 규정은 규정입니다!”",
+					"speaker": "security_team_leader"
+				},
+				{
+					"speaker": "dax",
+					"text": "팀장님, 안에 해커 간부님이 있어요!"
+				},
+				{
+					"text": "“그분도 규정을 어긴다면 저지해야 합니다! 안 돼요, 절대로 못 지나갑니다!”",
+					"speaker": "security_team_leader"
+				}
+			],
+			"rule_link": "규정과 눈앞의 소란 중 무엇이 더 신뢰할 만한 증거인지 선택한다.",
+			"wants": "규정상 복도 진입을 막으려 한다.",
+			"key": "corridor_security_standoff",
+			"slot": "B",
+			"kind": "rep",
+			"rep_dir": "fighting-"
+		},
+		{
+			"title": "규칙을 중시하는 경비 팀장",
+			"choices": [
+				{
+					"result": [
+						{
+							"speaker": "narrator",
+							"text": "당신이 귀 기울여 듣자 경비 팀장이 안경을 고쳐 쓰며 상황을 설명한다."
+						},
+						{
+							"text": "“사실 저도 안에 무슨 일이 벌어지는지 걱정됩니다. 하지만…” 그는 길을 살짝 비켜준다.",
+							"speaker": "narrator"
+						},
+						{
+							"speaker": "dax",
+							"text": "팀장님도 안이 수상하다고 생각하나 봐요!"
+						}
+					],
+					"flag": {
+						"label": "규정 설명으로 지연",
+						"key": "delayed_by_rules",
+						"boss_text": "보스 방에 들어가기 전 경비 팀장의 긴 설명 때문에 당신의 행동이 느려진다."
+					},
+					"risk_bad": {
+						"reward": [],
+						"result": [
+							{
+								"text": "당신이 귀 기울여 듣자 경비 팀장이 신이 나서 규정을 줄줄 외기 시작한다.",
+								"speaker": "narrator"
+							},
+							{
+								"text": "“규정 1조 1항! 복도에선 3분 이상 정지 금지! 2조 2항!” 그는 길을 막고 떠든다.",
+								"speaker": "narrator"
+							},
+							{
+								"text": "저러다 시간이 다 지나겠어요!",
+								"speaker": "dax"
+							}
+						],
+						"gold": -30
+					},
+					"mbti": "IS",
+					"text": "경비 팀장의 말을 듣고 상황 파악을 먼저 한다.",
+					"effects": {
+						"echo": 10,
+						"fighting": -15
+					},
+					"path": "easy",
+					"reward": [
+						"attack_up"
+					]
+				},
+				{
+					"flag": {
+						"key": "forced_entry",
+						"boss_text": "보스 방에 들어가기 전 경비 팀장이 알려준 해커 간부의 약점 정보를 듣는다.",
+						"label": "강제 진입"
+					},
+					"result": [
+						{
+							"text": "당신의 기세에 경비 팀장이 휘청이며 뒤로 넘어진다.",
+							"speaker": "narrator"
+						},
+						{
+							"speaker": "narrator",
+							"text": "그는 바닥에 주저앉아 안경을 부여잡고 억울한 표정으로 쳐다본다."
+						},
+						{
+							"speaker": "dax",
+							"text": "으악, 저러다 다치는 건 아니겠죠?"
+						}
+					],
+					"path": "hard",
+					"effects": {
+						"echo": -5,
+						"fighting": 15,
+						"reason": -10
+					},
+					"mbti": "TJ",
+					"text": "굳은 표정으로 경비 팀장을 밀쳐내고 복도로 진입한다.",
+					"risk_bad": {
+						"result": [
+							{
+								"speaker": "narrator",
+								"text": "당신이 경비 팀장을 밀치자 그가 균형을 잃고 탕비실 커피포트에 부딪힌다."
+							},
+							{
+								"speaker": "narrator",
+								"text": "뜨거운 물이 쏟아지며 팀장의 발에 튀고, 그는 비명을 지르며 바닥을 뒹군다."
+							},
+							{
+								"text": "으악! 뜨거워 보여요!",
+								"speaker": "dax"
+							}
+						],
+						"gold": -20,
+						"reward": []
+					},
+					"reward": [
+						"defense_up"
+					]
+				},
+				{
+					"flag": {
+						"key": "security_team_trust",
+						"boss_text": "보스 방에 들어가기 전 경비 팀장이 서버실 문 비밀번호를 알려준다.",
+						"label": "경비팀 신뢰"
+					},
+					"mbti": "NF",
+					"text": "경비 팀장에게 안심하라고 말하며 정중하게 길을 열어달라고 부탁한다.",
+					"result": [
+						{
+							"speaker": "narrator",
+							"text": "당신의 말에 경비 팀장이 안경을 고쳐 쓰며 헛기침을 한다."
+						},
+						{
+							"speaker": "narrator",
+							"text": "“음… 규정을 어기는 건 아니겠지요?” 그는 망설이다가 길을 활짝 열어준다."
+						},
+						{
+							"text": "와, 팀장님이 여러분 말을 믿어줬어요!",
+							"speaker": "dax"
+						}
+					],
+					"effects": {
+						"community": 10,
+						"fighting": 20,
+						"echo": 15
+					},
+					"path": "stat",
+					"reward": [
+						"shield"
+					]
+				},
+				{
+					"effects": {
+						"gold": -100,
+						"echo": 5
+					},
+					"result": [
+						{
+							"text": "경비 팀장이 눈을 휘둥그레 뜨며 돈 봉투를 받아든다.",
+							"speaker": "narrator"
+						},
+						{
+							"text": "그는 주위를 살피더니 얼른 품에 넣고는 못 본 척 고개를 돌린다.",
+							"speaker": "narrator"
+						},
+						{
+							"text": "돈 앞에는 장사 없네요!",
+							"speaker": "dax"
+						}
+					],
+					"text": "경비 팀장에게 수고비 명목으로 돈 봉투를 건넨다.",
+					"mbti": "EP",
+					"path": "gold",
+					"reward": [
+						"shield"
+					]
+				}
+			],
+			"key": "corridor_security_rules",
+			"rule_link": "규정과 눈앞의 소란 중 무엇이 더 신뢰할 만한 증거인지 선택한다.",
+			"person": {
+				"id": "security_team_leader",
+				"name": "경비 팀장",
+				"role": "서버실 경비 팀장"
+			},
+			"background_tags": [
+				"corridor",
+				"night",
+				"darkness",
+				"alone",
+				"tense"
+			],
+			"wants": "규정대로 질서 유지를 원한다.",
+			"dialogue": [
+				{
+					"speaker": "narrator",
+					"text": "복도 끝 탕비실에서 경비 팀장이 안경을 치켜쓰며 당신 일행을 막아선다."
+				},
+				{
+					"speaker": "security_team_leader",
+					"text": "“거기, 거기! 당신들이 그… 남을 돕고 말로 해결한다는 분들이오?”"
+				},
+				{
+					"text": "“규정상 복도 끝은 출입 금지입니다! 지금 서버실에서 무슨 소리가 나는지 모르지만, 규정은 규정입니다!”",
+					"speaker": "security_team_leader"
+				},
+				{
+					"speaker": "dax",
+					"text": "팀장님, 안에 해커 간부님이 있어요!"
+				},
+				{
+					"speaker": "security_team_leader",
+					"text": "“그분도 규정을 어긴다면 저지해야 합니다! 안 돼요, 절대로 못 지나갑니다!”"
+				}
+			],
+			"no": 2,
+			"slot": "B",
+			"kind": "rep",
+			"rep_dir": "fighting+"
+		}
+	],
+	"errors": [],
+	"prompt_hash": "ea57cd8deb1c6786d7df9ce2ddc6f7dbf4a001b6"
+}

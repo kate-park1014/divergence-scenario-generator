@@ -1,0 +1,429 @@
+{
+	"cards": [
+		{
+			"person": {
+				"id": "yashik_sajang",
+				"name": "야식트럭 사장",
+				"role": "야식트럭 사장"
+			},
+			"rule_link": "규칙과 절차만을 기준으로 삼는 태도가 이 상황을 끝까지 지켜보는 데 어떤 영향을 미치는지 보여준다.",
+			"wants": "야적장 운영 규칙을 지켜달라고 요구함.",
+			"choices": [
+				{
+					"result": [
+						{
+							"speaker": "narrator",
+							"text": "당신은 사장의 말대로 차를 폐창고 쪽으로 옮겼다."
+						},
+						{
+							"speaker": "narrator",
+							"text": "야식트럭 사장은 만족한 얼굴로 트럭에서 음료수 한 캔을 던져주었다."
+						},
+						{
+							"text": "사장이 주는 음료수는 고맙지만, 왠지 우리가 부려 먹힌 것 같은데요?",
+							"speaker": "dax"
+						}
+					],
+					"path": "easy",
+					"risk_bad": {
+						"reward": [],
+						"gold": -50,
+						"result": [
+							{
+								"speaker": "narrator",
+								"text": "당신이 사장의 요구대로 차를 폐창고 쪽으로 옮기던 중,"
+							},
+							{
+								"text": "고물 야식트럭 옆에 세워둔 쓰레기통을 건드려 모두 쏟아졌다.",
+								"speaker": "narrator"
+							},
+							{
+								"speaker": "dax",
+								"text": "악! 쓰레기가 다 쏟아졌어요! 사장님이 화낼 것 같은데요!"
+							}
+						]
+					},
+					"effects": {
+						"community": 15,
+						"echo": 10
+					},
+					"reward": [
+						"attack_up"
+					],
+					"flag": {
+						"key": "moved_car_away",
+						"label": "차 이동",
+						"boss_text": "낡은 야식트럭이 길을 막고 있어 컨테이너에 접근하기 어렵다."
+					},
+					"mbti": "TJ",
+					"text": "규칙을 지키겠다며 트럭 사장의 요구를 따른다"
+				},
+				{
+					"path": "hard",
+					"reward": [
+						"defense_up"
+					],
+					"risk_bad": {
+						"reward": [],
+						"result": [
+							{
+								"text": "당신이 차분하게 잠복 중임을 알리고 야식트럭 사장에게 양해를 구하자,",
+								"speaker": "narrator"
+							},
+							{
+								"speaker": "narrator",
+								"text": "사장은 버럭 화를 내며 트럭의 경적을 길게 울렸다."
+							},
+							{
+								"speaker": "dax",
+								"text": "저렇게 시끄럽게 하면 다 들키겠어요! 어서 조용히 시켜야 해요!"
+							}
+						],
+						"gold": -20
+					},
+					"result": [
+						{
+							"text": "당신은 차분하게 잠복 중임을 알리고 양해를 구했다.",
+							"speaker": "narrator"
+						},
+						{
+							"text": "야식트럭 사장은 코웃음 치며 자리를 떴지만, 잠시 후 어딘가에 전화를 거는 모습이 보였다.",
+							"speaker": "narrator"
+						},
+						{
+							"text": "사장이 어디에 전화하는 것 같던데요? 혹시 우리를 신고하는 건 아니겠죠?",
+							"speaker": "dax"
+						}
+					],
+					"flag": {
+						"boss_text": "야식트럭 사장에게 부두의 현황을 물어볼 수 있다.",
+						"label": "잠복 설명",
+						"key": "explained_stakeout"
+					},
+					"mbti": "NF",
+					"effects": {
+						"reason": 20,
+						"echo": -5
+					},
+					"text": "잠복 중인 상황을 설명하며 양해를 구한다"
+				},
+				{
+					"path": "stat",
+					"reward": [
+						"intelligence_up"
+					],
+					"flag": {
+						"label": "규칙 강조",
+						"boss_text": "야식트럭 사장이 잠시 자리를 비워 컨테이너에 접근하기 용이하다.",
+						"key": "cited_rules"
+					},
+					"result": [
+						{
+							"speaker": "narrator",
+							"text": "당신은 야적장 운영 규칙을 정확히 짚어주며 사장의 불법 영업을 지적했다."
+						},
+						{
+							"speaker": "narrator",
+							"text": "사장은 당황한 표정으로 잔소리 없이 트럭을 몰고 사라졌다."
+						},
+						{
+							"speaker": "dax",
+							"text": "와, 사장이 꼬리 내리고 도망갔어요! 역시 당신은 최고예요!"
+						}
+					],
+					"effects": {
+						"fighting": 10,
+						"reason": -20
+					},
+					"mbti": "SP",
+					"text": "야적장 운영 규칙에 따라 사장에게 영업 중단을 통보한다"
+				},
+				{
+					"text": "야식트럭 사장의 트럭을 대신 청소해 주겠다고 나선다",
+					"mbti": "EP",
+					"effects": {
+						"community": 20,
+						"echo": 5
+					},
+					"risk_bad": {
+						"gold": -50,
+						"result": [
+							{
+								"speaker": "narrator",
+								"text": "당신이 사장에게 걸레를 받아들고 트럭을 닦으려던 순간,"
+							},
+							{
+								"text": "그만 실수로 트럭 사이드미러를 부러뜨리고 말았다.",
+								"speaker": "narrator"
+							},
+							{
+								"text": "악! 사장님 얼굴이 일그러졌어요! 수리비를 물어내라고 할 것 같은데요!",
+								"speaker": "dax"
+							}
+						],
+						"reward": []
+					},
+					"result": [
+						{
+							"speaker": "narrator",
+							"text": "당신은 불평하는 사장에게 트럭 외관이 지저분하니 청소를 도와주겠다고 했다."
+						},
+						{
+							"text": "사장은 어이없는 표정으로 당신에게 걸레를 던져주었다.",
+							"speaker": "narrator"
+						},
+						{
+							"text": "엉뚱한 짓 하다가 진짜 청소하게 생겼어요! 왠지 사장님한테 놀림당하는 기분인데요?",
+							"speaker": "dax"
+						}
+					],
+					"path": "fun",
+					"reward": [
+						"cooldown_reset"
+					]
+				}
+			],
+			"no": 1,
+			"title": "야식트럭 사장, 규칙과 절차",
+			"background_tags": [
+				"port",
+				"night",
+				"dim",
+				"empty",
+				"tense"
+			],
+			"key": "night_snack_rules",
+			"dialogue": [
+				{
+					"speaker": "narrator",
+					"text": "야식트럭 사장이 트럭에서 내려 주인공들이 숨어 있는 차 쪽으로 다가왔다."
+				},
+				{
+					"text": "아니, 당신들이 그 소문난 해결사들이지?",
+					"speaker": "yashik_sajang"
+				},
+				{
+					"speaker": "yashik_sajang",
+					"text": "뭐든 규칙대로 딱딱 처리한다던데, 여기는 야적장 안에서 장사하는 구역은 아니잖아?"
+				},
+				{
+					"speaker": "dax",
+					"text": "으악, 들켰어요! 어쩌죠?"
+				},
+				{
+					"text": "쉬긴 뭘 쉬어, 쯧쯧. 손님 다 떨어지게.",
+					"speaker": "yashik_sajang"
+				},
+				{
+					"speaker": "yashik_sajang",
+					"text": "어차피 잠복이라면 우리 구역 말고 저쪽 폐창고 앞에서 하라고. 여기는 야식 파는 구역이라고!"
+				}
+			],
+			"slot": "C",
+			"kind": "rep",
+			"rep_dir": "reason-"
+		},
+		{
+			"person": {
+				"id": "yashik_sajang",
+				"name": "야식트럭 사장",
+				"role": "야식트럭 사장"
+			},
+			"background_tags": [
+				"port",
+				"night",
+				"dim",
+				"empty",
+				"urgent"
+			],
+			"choices": [
+				{
+					"path": "easy",
+					"flag": {
+						"key": "moved_illegal_car",
+						"boss_text": "컨테이너 앞 시야가 넓어져 안쪽 상황을 살피기 유리하다.",
+						"label": "불법 주차 해결"
+					},
+					"result": [
+						{
+							"speaker": "narrator",
+							"text": "당신은 사장의 말에 따라 불법 주차된 차를 직접 밀어 치웠다."
+						},
+						{
+							"text": "사장은 고맙다며 방금 튀긴 튀김 몇 개를 건네주었다.",
+							"speaker": "narrator"
+						},
+						{
+							"text": "이 튀김, 왠지 뇌물 같지 않아요? 사장님한테 놀아난 것 같은데요!",
+							"speaker": "dax"
+						}
+					],
+					"mbti": "EP",
+					"effects": {
+						"gold": 50,
+						"fighting": 15
+					},
+					"risk_bad": {
+						"reward": [],
+						"gold": -50,
+						"result": [
+							{
+								"speaker": "narrator",
+								"text": "당신이 사장의 말에 따라 불법 주차된 차를 직접 밀어 치우려던 순간,"
+							},
+							{
+								"speaker": "narrator",
+								"text": "그만 실수로 트럭의 문짝을 살짝 찌그러뜨리고 말았다."
+							},
+							{
+								"text": "악! 사장님이 화를 내고 있어요! 튀김도 못 먹겠네요!",
+								"speaker": "dax"
+							}
+						]
+					},
+					"text": "사장의 말에 동조하며 불법 주차된 차를 치워준다",
+					"reward": []
+				},
+				{
+					"result": [
+						{
+							"text": "당신은 사장의 요구를 단호하게 거절했다.",
+							"speaker": "narrator"
+						},
+						{
+							"text": "야식트럭 사장은 심통 난 얼굴로 투덜거리며 트럭을 몰고 사라졌다.",
+							"speaker": "narrator"
+						},
+						{
+							"speaker": "dax",
+							"text": "사장이 삐쳐서 가버렸어요! 왠지 우리가 손해 본 것 같은데요?"
+						}
+					],
+					"flag": {
+						"key": "refused_to_move_car",
+						"boss_text": "야식트럭 사장의 불만이 커져 컨테이너 접근 시 소란이 예상된다.",
+						"label": "거절"
+					},
+					"path": "hard",
+					"effects": {
+						"reason": -20,
+						"echo": -10
+					},
+					"reward": [
+						"defense_up"
+					],
+					"text": "불법 주차된 차는 건드릴 수 없다며 냉정하게 거절한다",
+					"mbti": "TJ",
+					"risk_bad": {
+						"gold": -20,
+						"reward": [],
+						"result": [
+							{
+								"speaker": "narrator",
+								"text": "당신이 사장의 요구를 단호하게 거절하자,"
+							},
+							{
+								"text": "야식트럭 사장은 버럭 화를 내며 트럭의 시동을 켜고 매연을 잔뜩 뿜어댔다.",
+								"speaker": "narrator"
+							},
+							{
+								"text": "콜록콜록! 매연 때문에 눈을 뜰 수가 없어요! 사장님이 작정하고 방해하네요!",
+								"speaker": "dax"
+							}
+						]
+					}
+				},
+				{
+					"path": "stat",
+					"reward": [
+						"defense_up"
+					],
+					"result": [
+						{
+							"text": "당신은 사장의 불만을 들어주며 곧바로 불법 주차 차량을 견인 조치했다.",
+							"speaker": "narrator"
+						},
+						{
+							"text": "사장은 기세등등하게 주변 상인들에게 이 사실을 알렸다.",
+							"speaker": "narrator"
+						},
+						{
+							"speaker": "dax",
+							"text": "사장이 신나서 동네방네 떠들고 있어요! 덕분에 우리가 주목받겠네요!"
+						}
+					],
+					"flag": {
+						"boss_text": "야식트럭 사장이 주변 상인들에게 자랑하느라 컨테이너 접근 시 경계를 늦춘다.",
+						"label": "차량 견인",
+						"key": "towed_car"
+					},
+					"mbti": "NF",
+					"text": "사장의 편을 들어 불법 주차 차량을 견인 조치한다",
+					"effects": {
+						"community": 20,
+						"reason": 20
+					}
+				},
+				{
+					"mbti": "SP",
+					"text": "사장의 영업 방해에 대한 보상금으로 100골드를 건넨다",
+					"path": "gold",
+					"effects": {
+						"echo": 10,
+						"gold": -100
+					},
+					"result": [
+						{
+							"speaker": "narrator",
+							"text": "당신은 사장의 영업 방해를 인정하며 보상금으로 100골드를 주었다."
+						},
+						{
+							"text": "사장은 돈을 받자마자 언제 그랬냐는 듯 넉살 좋게 웃으며 트럭을 몰고 사라졌다.",
+							"speaker": "narrator"
+						},
+						{
+							"speaker": "dax",
+							"text": "사장이 돈을 받으니 바로 조용해지네요! 돈이 최고인가 봐요!"
+						}
+					]
+				}
+			],
+			"wants": "불편한 상황을 해결하거나, 자기 편을 들어주기를 바람.",
+			"no": 2,
+			"key": "night_snack_heart",
+			"title": "야식트럭 사장, 마음 가는 대로",
+			"dialogue": [
+				{
+					"text": "야식트럭 사장이 트럭에서 내려 주인공들이 숨어 있는 차 쪽으로 다가왔다.",
+					"speaker": "narrator"
+				},
+				{
+					"speaker": "yashik_sajang",
+					"text": "어이, 당신들이 그 소문난 해결사들 아니야?"
+				},
+				{
+					"speaker": "yashik_sajang",
+					"text": "규칙 따윈 개나 줘 버리고 시원하게 해결한다던데, 내 이 답답한 사정 좀 들어보게!"
+				},
+				{
+					"speaker": "dax",
+					"text": "사장이 우리를 알아본 것 같아요! 왠지 불길한데요?"
+				},
+				{
+					"speaker": "yashik_sajang",
+					"text": "쯧쯧, 이것만 좀 도와주면 금방 갈 테니."
+				},
+				{
+					"speaker": "yashik_sajang",
+					"text": "저기, 저 컨테이너 앞에 불법 주차된 차 때문에 장사를 못 하겠어! 나 좀 도와줘!"
+				}
+			],
+			"rule_link": "마음이 이끄는 대로만 상황을 판단하는 태도가 이 상황을 끝까지 지켜보는 데 어떤 영향을 미치는지 보여준다.",
+			"slot": "C",
+			"kind": "rep",
+			"rep_dir": "reason+"
+		}
+	],
+	"errors": [],
+	"prompt_hash": "84bfbf6c92aee6ab8c3fd8dd749a8f1376eda6f4"
+}

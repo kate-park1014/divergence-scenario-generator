@@ -1,0 +1,356 @@
+{
+	"cards": [
+		{
+			"title": "명태 그물을 지키는 어부",
+			"dialogue": [
+				{
+					"speaker": "narrator",
+					"text": "등대로 가는 좁은 길 위로 늙은 어부 아재가 거대한 그물을 펼쳐 말리고 있다."
+				},
+				{
+					"speaker": "fisherman_uncle",
+					"text": "어이, 당신이 그 푼돈에 움직인다는 해결사 양반이지? 쯧쯧, 돈만 밝히는 자들이 뭘 알아!"
+				},
+				{
+					"speaker": "fisherman_uncle",
+					"text": "이 귀한 명태 그물이 글쎄, 저 안개 속에서 누가 훔쳐 갈까 봐 이렇게 지키고 있지. 길을 비켜줄 순 없어."
+				}
+			],
+			"wants": "등대로 가는 길을 막아서며 자신의 명태 그물을 지켜달라고 한다.",
+			"rule_link": "닥달하기 전에 먼저 사정을 물어야 합니다. 손해를 보더라도 어부의 사정부터 들어봅니다.",
+			"background_tags": [
+				"foggy",
+				"night",
+				"dim",
+				"none",
+				"tense"
+			],
+			"person": {
+				"id": "fisherman_uncle",
+				"name": "어부 아재",
+				"role": "어부"
+			},
+			"no": 1,
+			"key": "pollock_net_guard",
+			"choices": [
+				{
+					"result": [
+						{
+							"speaker": "narrator",
+							"text": "당신이 으름장을 놓자 어부 아재가 못 이기는 척 그물을 치운다."
+						},
+						{
+							"speaker": "narrator",
+							"text": "그 밑에 깔려 있던 작은 통발 몇 개가 보인다."
+						},
+						{
+							"speaker": "dax",
+							"text": "으휴, 저러다 큰일 나겠어요!"
+						}
+					],
+					"mbti": "TP",
+					"text": "급하니 그물을 걷으라고 으름장을 놓는다.",
+					"flag": {
+						"label": "어부의 그물",
+						"key": "fisherman_net_snag_unfavorable",
+						"boss_text": "어부 아재가 당신의 발을 묶으려 그물을 던진다."
+					},
+					"path": "easy",
+					"risk_bad": {
+						"reward": [
+							"move_range_down"
+						],
+						"gold": -20,
+						"result": [
+							{
+								"text": "당신이 으름장을 놓자 어부 아재가 당신의 다리를 자기 그물로 엉키게 한다.",
+								"speaker": "narrator"
+							},
+							{
+								"text": "그 틈에 아재는 통발을 들고 도망친다.",
+								"speaker": "narrator"
+							}
+						]
+					},
+					"effects": {
+						"echo": -5,
+						"fighting": 20
+					},
+					"reward": [
+						"attack_up"
+					]
+				},
+				{
+					"text": "그물을 함께 지켜주겠다고 제안한다.",
+					"result": [
+						{
+							"text": "당신이 그물을 지켜주겠다고 하자 어부 아재가 마지못해 고개를 끄덕인다.",
+							"speaker": "narrator"
+						},
+						{
+							"text": "아재는 그물을 걷고 작은 통발을 옆으로 치운다.",
+							"speaker": "narrator"
+						},
+						{
+							"speaker": "dax",
+							"text": "역시 여러분은 마음이 따뜻하시네요!"
+						}
+					],
+					"mbti": "FJ",
+					"risk_bad": {
+						"gold": -20,
+						"reward": [],
+						"result": [
+							{
+								"speaker": "narrator",
+								"text": "당신이 그물을 지켜주겠다고 나서자 어부 아재가 기다렸다는 듯 당신에게 자신의 낡은 그물을 넘긴다."
+							},
+							{
+								"speaker": "narrator",
+								"text": "당신은 안개 속에서 하염없이 그물을 지키게 된다."
+							}
+						]
+					},
+					"effects": {
+						"echo": 10,
+						"community": 20
+					},
+					"reward": [
+						"defense_up"
+					],
+					"flag": {
+						"boss_text": "어부 아재가 당신의 뒤에서 그물로 적의 시야를 가린다.",
+						"key": "fisherman_net_snag_favorable",
+						"label": "어부의 협력"
+					},
+					"path": "hard"
+				},
+				{
+					"effects": {
+						"echo": -5,
+						"fighting": 20,
+						"reason": -10,
+						"community": -10
+					},
+					"result": [
+						{
+							"text": "당신의 명성을 들은 어부 아재는 슬쩍 통발을 숨기고 길을 비켜준다.",
+							"speaker": "narrator"
+						},
+						{
+							"text": "'쳇, 푼돈만 밝히는 줄 알았더니 힘으로 밀어붙이는군.' 꿍얼거린다.",
+							"speaker": "narrator"
+						},
+						{
+							"speaker": "dax",
+							"text": "비서님이 놀라지 않게 얼른 가요!"
+						}
+					],
+					"text": "당신의 명성으로 어부의 어리석음을 깨우쳐준다.",
+					"mbti": "TJ",
+					"reward": [
+						"attack_up"
+					],
+					"path": "stat",
+					"flag": {
+						"boss_text": "어부 아재가 당신의 기세에 눌려 엉뚱한 곳으로 그물을 던진다.",
+						"key": "fisherman_net_snag_stat_favorable",
+						"label": "어부의 경계"
+					}
+				},
+				{
+					"path": "gold",
+					"result": [
+						{
+							"text": "당신이 돈을 쥐여주자 어부 아재가 눈을 휘둥그레 뜨며 돈을 받는다.",
+							"speaker": "narrator"
+						},
+						{
+							"text": "그물을 걷자 그 아래에서 작은 통발이 굴러 나온다.",
+							"speaker": "narrator"
+						},
+						{
+							"speaker": "dax",
+							"text": "역시 돈이 최고인가 봐요!"
+						}
+					],
+					"effects": {
+						"gold": -50,
+						"echo": 5
+					},
+					"mbti": "ST",
+					"text": "그물 값으로 돈 50을 쥐여주고 길을 비켜달라고 한다."
+				}
+			],
+			"slot": "C",
+			"kind": "rep",
+			"rep_dir": "community-"
+		},
+		{
+			"person": {
+				"id": "fisherman_uncle",
+				"name": "어부 아재",
+				"role": "어부"
+			},
+			"title": "엉망이 된 손수레를 숨기는 어부",
+			"rule_link": "닥달하기 전에 먼저 사정을 물어야 합니다. 손해를 보더라도 어부의 사정부터 들어봅니다.",
+			"choices": [
+				{
+					"text": "망가진 손수레를 고치는 것을 돕는다.",
+					"risk_bad": {
+						"result": [
+							{
+								"text": "당신이 손수레 바퀴를 고치려 힘주자, 낡은 바퀴가 완전히 부서지며 손수레가 한쪽으로 기울어진다.",
+								"speaker": "narrator"
+							},
+							{
+								"text": "아이고, 이거 큰일났네! 이제 비서님한테 뭐라고 변명하지!",
+								"speaker": "fisherman_uncle"
+							}
+						],
+						"gold": -30,
+						"reward": []
+					},
+					"reward": [
+						"intelligence_up"
+					],
+					"path": "easy",
+					"flag": {
+						"boss_text": "어부 아재가 당신의 발밑에 망가진 손수레 바퀴를 던진다.",
+						"label": "어부의 만년필",
+						"key": "fisherman_handcart_unfavorable"
+					},
+					"mbti": "NF",
+					"result": [
+						{
+							"text": "당신이 손수레 바퀴를 고치자 어부 아재가 고맙다며 안개 속을 가리킨다.",
+							"speaker": "narrator"
+						},
+						{
+							"text": "'여기, 비서님이 놓고 간 만년필이 떨어져 있네.'",
+							"speaker": "narrator"
+						},
+						{
+							"speaker": "dax",
+							"text": "비서님 만년필이 여기 왜 떨어져 있지?"
+						}
+					],
+					"effects": {
+						"community": 20,
+						"echo": 5
+					}
+				},
+				{
+					"effects": {
+						"fighting": 20,
+						"echo": -10
+					},
+					"text": "손수레를 치우라고 명령하고 등대로 향한다.",
+					"reward": [
+						"attack_up"
+					],
+					"risk_bad": {
+						"gold": -20,
+						"result": [
+							{
+								"text": "당신이 단호하게 명령하자 어부 아재가 손수레를 끌다 넘어져 바퀴가 완전히 부서진다.",
+								"speaker": "narrator"
+							},
+							{
+								"speaker": "narrator",
+								"text": "길은 손수레 파편으로 더욱 막힌다."
+							}
+						],
+						"reward": []
+					},
+					"flag": {
+						"key": "fisherman_handcart_favorable",
+						"label": "어부의 공포",
+						"boss_text": "어부 아재가 당신의 매서운 눈빛에 움찔하며 엉뚱한 적을 공격한다."
+					},
+					"mbti": "TJ",
+					"path": "hard",
+					"result": [
+						{
+							"text": "당신이 단호하게 명령하자 어부 아재가 울며 겨자 먹기로 손수레를 끌고 길을 비켜준다.",
+							"speaker": "narrator"
+						},
+						{
+							"text": "부서진 바퀴가 달그락거린다.",
+							"speaker": "narrator"
+						},
+						{
+							"text": "너무 무섭게 그러지 마세요!",
+							"speaker": "dax"
+						}
+					]
+				},
+				{
+					"result": [
+						{
+							"speaker": "narrator",
+							"text": "당신이 비서님을 돕던 마음을 알아주자 어부 아재가 감동한다."
+						},
+						{
+							"speaker": "narrator",
+							"text": "'기금 상자는 비서님이 등대 문 앞에 잘 뒀을 거야. 나는 상자만 옮겨줬을 뿐이야.'"
+						},
+						{
+							"text": "역시 비서님은 돈을 탐내지 않으셨군요!",
+							"speaker": "dax"
+						}
+					],
+					"path": "stat",
+					"effects": {
+						"reason": 10,
+						"echo": 10,
+						"community": 20
+					},
+					"flag": {
+						"label": "어부의 증언",
+						"boss_text": "어부 아재가 비서님의 결백을 주장하며 당신을 돕는다.",
+						"key": "fisherman_handcart_stat_favorable"
+					},
+					"mbti": "FP",
+					"reward": [
+						"heal"
+					],
+					"text": "어부 아재가 비서님을 돕던 마음을 헤아려준다."
+				}
+			],
+			"dialogue": [
+				{
+					"speaker": "narrator",
+					"text": "등대로 가는 좁은 길 위로 어부 아재가 낡은 손수레를 감싸 안듯 막고 서 있다."
+				},
+				{
+					"text": "어이, 당신이 그 어려운 이웃을 그냥 못 지나친다는 해결사 양반이지? 쯧쯧, 남의 일에 왜 그리 오지랖이야!",
+					"speaker": "fisherman_uncle"
+				},
+				{
+					"speaker": "fisherman_uncle",
+					"text": "이 손수레가 글쎄, 비서님 기금 상자를 옮기다가 그만 바퀴가 부서져 버렸지 뭐야!"
+				},
+				{
+					"speaker": "fisherman_uncle",
+					"text": "비서님한테 들키면 난 끝장이야."
+				}
+			],
+			"background_tags": [
+				"foggy",
+				"night",
+				"dim",
+				"none",
+				"mysterious"
+			],
+			"no": 2,
+			"wants": "등대로 가는 길을 막아서며 망가진 손수레를 숨기려 한다.",
+			"key": "broken_handcart_hide",
+			"slot": "C",
+			"kind": "rep",
+			"rep_dir": "community+"
+		}
+	],
+	"errors": [],
+	"prompt_hash": "5f1d22acd1aa7534e3dd3e52ca82c82ce07fa6fa"
+}

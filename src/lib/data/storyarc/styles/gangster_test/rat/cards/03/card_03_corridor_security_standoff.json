@@ -1,0 +1,351 @@
+{
+	"id": "card_03_corridor_security_standoff",
+	"title": {
+		"korean": "복도 끝 경비 팀장님"
+	},
+	"intensity": "calm",
+	"after_story": 3,
+	"before_story": 5,
+	"condition": {
+		"leaning": "fighting-",
+		"among": [
+			"fighting-",
+			"fighting+",
+			"community-",
+			"community+",
+			"reason-",
+			"reason+"
+		],
+		"min": 20
+	},
+	"urgency": 8,
+	"leaning": "fighting-",
+	"background_tags": [
+		"corridor",
+		"night",
+		"darkness",
+		"alone",
+		"tense"
+	],
+	"background_image": "https://imagedelivery.net/WTEqQNGFb-l-IHS6IGnzUQ/0432427d-875c-452f-b437-530f8a2f1100/public",
+	"dialogue": [
+		{
+			"speaker": "narrator",
+			"content": {
+				"korean": "복도 끝 탕비실에서 경비 팀장이 안경을 치켜쓰며 당신 일행을 막아선다."
+			}
+		},
+		{
+			"speaker": "security_team_leader",
+			"content": {
+				"korean": "거기, 거기! 당신들이 그… 주먹부터 내밀어 해결한다는 사람들이오?"
+			}
+		},
+		{
+			"speaker": "security_team_leader",
+			"content": {
+				"korean": "규정상 복도 끝은 출입 금지입니다! 지금 서버실에서 무슨 소리가 나는지 모르지만, 규정은 규정입니다!"
+			}
+		},
+		{
+			"speaker": "dax",
+			"content": {
+				"korean": "팀장님, 안에 해커 간부님이 있어요!"
+			}
+		},
+		{
+			"speaker": "security_team_leader",
+			"content": {
+				"korean": "그분도 규정을 어긴다면 저지해야 합니다! 안 돼요, 절대로 못 지나갑니다!"
+			}
+		}
+	],
+	"choices": [
+		{
+			"text": {
+				"korean": "규정은 필요 없다. 당장 비키라고 경고한다."
+			},
+			"path": "easy",
+			"mbti": "ET",
+			"flag": "alerted_security",
+			"effects": {
+				"echo": -5,
+				"fighting": 15
+			},
+			"reward": [
+				"attack_up"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "당신의 경고에 경비 팀장이 움찔하며 한 발 물러선다."
+					}
+				},
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "하지만 그는 안경을 고쳐 쓰며 탕비실 비상벨에 손을 얹는다."
+					}
+				},
+				{
+					"speaker": "dax",
+					"content": {
+						"korean": "저러다 보안팀을 다 부르면 어떡해요?"
+					}
+				}
+			],
+			"risk": {
+				"chance": "mid",
+				"bad": {
+					"effects": {
+						"gold": -30
+					},
+					"reward": [],
+					"result": [
+						{
+							"speaker": "narrator",
+							"content": {
+								"korean": "당신의 경고에 경비 팀장이 움찔했지만, 이내 허세를 부리며 앞을 막아선다."
+							}
+						},
+						{
+							"speaker": "narrator",
+							"content": {
+								"korean": "“규정은 생명입니다! 물러나지 않습니다!” 그는 비상벨을 눌러버린다."
+							}
+						},
+						{
+							"speaker": "dax",
+							"content": {
+								"korean": "벌써 보안팀이 몰려오고 있어요!"
+							}
+						}
+					]
+				}
+			}
+		},
+		{
+			"text": {
+				"korean": "경비 팀장에게 상황을 설명하고 협조를 구한다."
+			},
+			"path": "hard",
+			"mbti": "IN",
+			"flag": "security_team_cooperation",
+			"effects": {
+				"reason": 10,
+				"fighting": -15,
+				"echo": 10
+			},
+			"reward": [
+				"defense_up"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "당신의 설명을 들은 경비 팀장이 안경을 치켜쓰며 고개를 갸웃거린다."
+					}
+				},
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "“음… 규정은 아니지만, 일단 지켜보겠습니다.” 그는 옆으로 비켜선다."
+					}
+				},
+				{
+					"speaker": "dax",
+					"content": {
+						"korean": "말이 통할 줄은 몰랐는데, 대단하네요!"
+					}
+				}
+			],
+			"risk": {
+				"chance": "high",
+				"bad": {
+					"effects": {
+						"gold": -20
+					},
+					"reward": [],
+					"result": [
+						{
+							"speaker": "narrator",
+							"content": {
+								"korean": "당신의 설명을 들은 경비 팀장이 안경을 치켜쓰며 한숨을 쉰다."
+							}
+						},
+						{
+							"speaker": "narrator",
+							"content": {
+								"korean": "“규정은 규정입니다! 사정은 알겠지만, 저는 제 일을 해야 합니다!” 그는 더욱 완강하게 막아선다."
+							}
+						},
+						{
+							"speaker": "dax",
+							"content": {
+								"korean": "아… 말이 안 통하네요."
+							}
+						}
+					]
+				}
+			}
+		},
+		{
+			"text": {
+				"korean": "경비 팀장의 어깨를 툭 치며 협박에 가까운 경고를 한다."
+			},
+			"path": "stat",
+			"mbti": "SP",
+			"require": {
+				"stat": "fighting",
+				"op": "<=",
+				"value": -40
+			},
+			"flag": "intimidated_security",
+			"effects": {
+				"echo": -10,
+				"fighting": -20
+			},
+			"reward": [
+				"shield"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "당신의 손길에 경비 팀장이 휘청이며 벽에 부딪힌다."
+					}
+				},
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "그는 겁먹은 얼굴로 안경을 다시 주워 쓰고 허둥지둥 길을 비켜준다."
+					}
+				},
+				{
+					"speaker": "dax",
+					"content": {
+						"korean": "이야, 역시 여러분은 통하는 게 다르네요!"
+					}
+				}
+			]
+		},
+		{
+			"text": {
+				"korean": "경비 팀장의 안경을 낚아채서 높이 들어 올린다."
+			},
+			"path": "fun",
+			"mbti": "ES",
+			"effects": {
+				"reason": -10,
+				"fighting": 10,
+				"echo": 5
+			},
+			"reward": [
+				"cooldown_reset"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "경비 팀장이 눈을 찡그리며 허공에 손을 휘젓는다."
+					}
+				},
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "“제… 제 안경! 규정상 제 안경은 제가 써야 합니다!” 그는 앞을 더듬으며 탕비실 안으로 뒷걸음친다."
+					}
+				},
+				{
+					"speaker": "dax",
+					"content": {
+						"korean": "저분은 안경 없으면 아무것도 못 할 거예요!"
+					}
+				}
+			],
+			"risk": {
+				"chance": "low",
+				"bad": {
+					"effects": {
+						"gold": -50
+					},
+					"reward": [],
+					"result": [
+						{
+							"speaker": "narrator",
+							"content": {
+								"korean": "당신이 낚아챈 안경이 허공에서 미끄러져 복도 바닥에 떨어진다."
+							}
+						},
+						{
+							"speaker": "narrator",
+							"content": {
+								"korean": "“안 돼!” 경비 팀장이 소리치며 안경을 밟아버린다. 쨍그랑!"
+							}
+						},
+						{
+							"speaker": "dax",
+							"content": {
+								"korean": "저게 비상벨이었으면 큰일 날 뻔했어요!"
+							}
+						}
+					]
+				}
+			}
+		}
+	],
+	"tags": [
+		"security_team_leader",
+		"dax"
+	],
+	"_design": {
+		"slot": "B",
+		"kind": "rep",
+		"person": {
+			"id": "security_team_leader",
+			"name": "경비 팀장",
+			"role": "서버실 경비 팀장"
+		},
+		"wants": "규정상 복도 진입을 막으려 한다.",
+		"rule_link": "규정과 눈앞의 소란 중 무엇이 더 신뢰할 만한 증거인지 선택한다.",
+		"rep": "fighting-",
+		"events": {},
+		"flags": {
+			"alerted_security": {
+				"kind": "bad",
+				"boss_penalty": -1,
+				"label": {
+					"korean": "경비팀 출동"
+				},
+				"boss_line": {
+					"korean": "보스 방에 들어가기 전 보안팀이 몰려와 당신의 움직임이 둔해진다."
+				}
+			},
+			"security_team_cooperation": {
+				"kind": "good",
+				"boss_penalty": 1,
+				"label": {
+					"korean": "경비팀 협조"
+				},
+				"boss_choice": {
+					"korean": "보스 방에 들어가기 전 경비 팀장이 서버실 문 비밀번호를 알려준다."
+				}
+			},
+			"intimidated_security": {
+				"kind": "good",
+				"boss_penalty": 2,
+				"label": {
+					"korean": "경비팀 위협"
+				},
+				"boss_choice": {
+					"korean": "보스 방에 들어가기 전 경비 팀장이 해커 간부의 약점 정보를 흘린다."
+				}
+			}
+		}
+	}
+}

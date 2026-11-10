@@ -1,0 +1,330 @@
+{
+	"id": "card_03_uncleanable_stain",
+	"title": {
+		"korean": "닦을 수 없는 얼룩"
+	},
+	"intensity": "calm",
+	"after_story": 5,
+	"before_story": 7,
+	"condition": {
+		"leaning": "fighting+",
+		"among": [
+			"fighting-",
+			"fighting+",
+			"community-",
+			"community+",
+			"reason-",
+			"reason+"
+		],
+		"min": 20
+	},
+	"urgency": 8,
+	"leaning": "fighting+",
+	"background_tags": [
+		"warehouse",
+		"night",
+		"dimlight",
+		"alone",
+		"anxious"
+	],
+	"background_image": "https://imagedelivery.net/WTEqQNGFb-l-IHS6IGnzUQ/9d4205ad-f614-4de6-d3dd-806a37d9e200/public",
+	"dialogue": [
+		{
+			"speaker": "driver",
+			"content": {
+				"korean": "헉, 여러분이 그 남을 돕고 손을 내민다는 해결사 분들이십니까? 흐읍! 마침 잘 오셨습니다!"
+			}
+		},
+		{
+			"speaker": "driver",
+			"content": {
+				"korean": "제가 회장님 전용 운전기사인데, 이 문에 생긴 얼룩이 도저히 지워지질 않습니다, 끄윽!"
+			}
+		},
+		{
+			"speaker": "dax",
+			"content": {
+				"korean": "운전기사님, 그건 얼룩이 아니라…"
+			}
+		},
+		{
+			"speaker": "driver",
+			"content": {
+				"korean": "아닙니다! 회장님께서 아시면 저에게 불호령을 내리실 겁니다! 부디 저를 도와주십시오, 흐읍!"
+			}
+		}
+	],
+	"choices": [
+		{
+			"text": {
+				"korean": "운전기사를 돕겠다고 나서서 얼룩을 닦아본다."
+			},
+			"path": "easy",
+			"mbti": "TJ",
+			"flag": "stain_delay",
+			"effects": {
+				"fighting": 20,
+				"echo": 5
+			},
+			"reward": [
+				"attack_up"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "당신이 나서서 얼룩을 닦아 보지만, 얼룩은 전혀 지워지지 않는다."
+					}
+				},
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "그것은 문틈으로 깜빡이는 파란 불빛의 잔상이었다."
+					}
+				},
+				{
+					"speaker": "driver",
+					"content": {
+						"korean": "으으, 역시 안 되는군요… 회장님께는 어떻게 보고해야 할까요, 흑!"
+					}
+				},
+				{
+					"speaker": "dax",
+					"content": {
+						"korean": "운전기사님은 저런 걸 왜 얼룩이라고 하는 거죠?"
+					}
+				}
+			],
+			"risk": {
+				"chance": "mid",
+				"bad": {
+					"effects": {
+						"gold": -20
+					},
+					"reward": [
+						"hp_down"
+					],
+					"result": [
+						{
+							"speaker": "narrator",
+							"content": {
+								"korean": "당신이 얼룩을 닦는 척 문틈의 불빛을 만지자, 갑자기 서버실 안에서 요란한 경보음이 울린다."
+							}
+						},
+						{
+							"speaker": "driver",
+							"content": {
+								"korean": "끄악! 제가 회장님께 뭐라고 말씀드려야 할까요! 흐읍! 제발 멈춰요!"
+							}
+						},
+						{
+							"speaker": "dax",
+							"content": {
+								"korean": "안에서 해커 간부가 눈치챘을 것 같은데요!"
+							}
+						}
+					]
+				}
+			}
+		},
+		{
+			"text": {
+				"korean": "얼룩 따위 신경 쓸 때가 아니라고 일갈한다."
+			},
+			"path": "hard",
+			"mbti": "TP",
+			"flag": "clear_path_driver",
+			"effects": {
+				"echo": -5,
+				"fighting": -20
+			},
+			"reward": [
+				"attack_up"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "당신의 단호한 말에 운전기사는 순간 멍하니 당신을 바라본다."
+					}
+				},
+				{
+					"speaker": "driver",
+					"content": {
+						"korean": "앗… 그, 그렇군요! 제가 너무 한심했네요! 흐읍, 죄송합니다!"
+					}
+				},
+				{
+					"speaker": "dax",
+					"content": {
+						"korean": "저 사람, 이제야 제정신이 돌아왔네요!"
+					}
+				}
+			],
+			"risk": {
+				"chance": "high",
+				"bad": {
+					"effects": {
+						"gold": -20
+					},
+					"reward": [],
+					"result": [
+						{
+							"speaker": "narrator",
+							"content": {
+								"korean": "당신이 얼룩 따위 신경 쓸 때가 아니라고 일갈하자, 운전기사는 흠칫 놀라 어깨를 움츠린다."
+							}
+						},
+						{
+							"speaker": "narrator",
+							"content": {
+								"korean": "이내 서러운 표정으로 눈물을 뚝뚝 흘리기 시작한다."
+							}
+						},
+						{
+							"speaker": "driver",
+							"content": {
+								"korean": "흐읍, 훌쩍… 회장님께서 이 얼룩을 보시면 저를 가만두지 않으실 겁니다! 흑!"
+							}
+						},
+						{
+							"speaker": "dax",
+							"content": {
+								"korean": "저러다 저희가 운전기사님을 울렸다고 소문나겠어요!"
+							}
+						}
+					]
+				}
+			}
+		},
+		{
+			"text": {
+				"korean": "당신이 급한 일을 처리하는 중이니 방해하지 말라고 경고한다."
+			},
+			"path": "stat",
+			"mbti": "IJ",
+			"require": {
+				"stat": "fighting",
+				"op": ">=",
+				"value": 40
+			},
+			"flag": "driver_tool",
+			"effects": {
+				"fighting": 30,
+				"echo": -10
+			},
+			"reward": [
+				"stun"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "당신의 위협적인 경고에 운전기사는 기겁하며 들고 있던 청소 도구를 떨어뜨리고 도망친다."
+					}
+				},
+				{
+					"speaker": "driver",
+					"content": {
+						"korean": "끄아악! 죄송합니다! 저는 아무것도 못 봤습니다! 흐읍!"
+					}
+				},
+				{
+					"speaker": "dax",
+					"content": {
+						"korean": "운전기사님이 도망치다가 청소 도구를 떨어뜨리고 갔네요?"
+					}
+				}
+			]
+		},
+		{
+			"text": {
+				"korean": "운전기사에게 세척 전문가를 부르라며 돈을 쥐여 준다."
+			},
+			"path": "gold",
+			"mbti": "ES",
+			"require": {
+				"stat": "gold",
+				"op": ">=",
+				"value": 100
+			},
+			"effects": {
+				"gold": -100,
+				"echo": 10
+			},
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "당신이 쥐여 준 돈을 본 운전기사는 눈을 반짝이며 당신에게 꾸벅 인사한다."
+					}
+				},
+				{
+					"speaker": "driver",
+					"content": {
+						"korean": "헉! 감사합니다! 제가 바로 전문가를 불러서 이 얼룩을 해결하겠습니다! 흐읍!"
+					}
+				},
+				{
+					"speaker": "dax",
+					"content": {
+						"korean": "운전기사님이 신나서 전문가에게 전화하고 있네요."
+					}
+				}
+			]
+		}
+	],
+	"tags": [
+		"driver",
+		"dax"
+	],
+	"_design": {
+		"slot": "C",
+		"kind": "rep",
+		"person": {
+			"id": "driver",
+			"name": "운전기사",
+			"role": "운전기사"
+		},
+		"wants": "회장 전용 운전기사는 서버실 문에 생긴 얼룩을 지우지 못해 발을 동동 구른다.",
+		"rule_link": "소문만 믿고 섣부른 판단을 하는지, 아니면 실제 상황을 따져 볼지",
+		"rep": "fighting+",
+		"events": {},
+		"flags": {
+			"stain_delay": {
+				"kind": "bad",
+				"boss_penalty": -1,
+				"label": {
+					"korean": "얼룩 소동으로 인한 지연"
+				},
+				"boss_line": {
+					"korean": "운전기사의 얼룩 소동에 휘말려 서버실 진입이 지연된다."
+				}
+			},
+			"clear_path_driver": {
+				"kind": "good",
+				"boss_penalty": 1,
+				"label": {
+					"korean": "운전기사와의 단절"
+				},
+				"boss_choice": {
+					"korean": "운전기사가 당신에게서 멀어져 더 이상 방해하지 않는다."
+				}
+			},
+			"driver_tool": {
+				"kind": "good",
+				"boss_penalty": 2,
+				"label": {
+					"korean": "운전기사의 청소 도구"
+				},
+				"boss_choice": {
+					"korean": "운전기사가 떨어뜨린 극세사 걸레로 해커 간부의 시야를 가린다."
+				}
+			}
+		}
+	}
+}

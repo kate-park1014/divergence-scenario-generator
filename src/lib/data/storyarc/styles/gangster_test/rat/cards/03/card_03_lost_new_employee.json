@@ -1,0 +1,181 @@
+{
+	"id": "card_03_lost_new_employee",
+	"title": {
+		"korean": "길 잃은 신입의 질문"
+	},
+	"intensity": "calm",
+	"after_story": 3,
+	"before_story": 5,
+	"background_tags": [
+		"corridor",
+		"night",
+		"dark",
+		"lost",
+		"nervous"
+	],
+	"background_image": "https://imagedelivery.net/WTEqQNGFb-l-IHS6IGnzUQ/b382d87f-e9ad-4d0a-bfd2-d13fb1b22900/public",
+	"dialogue": [
+		{
+			"speaker": "narrator",
+			"content": {
+				"korean": "어두운 복도 저편에서 작은 손전등 불빛이 흔들리며 다가온다."
+			}
+		},
+		{
+			"speaker": "newbie",
+			"content": {
+				"korean": "저, 저기 죄송합니다! 혹시 서버실이 어디 있는지 아세요? 제가 오늘 첫 출근이라 길을 잃어서요."
+			}
+		},
+		{
+			"speaker": "dax",
+			"content": {
+				"korean": "이 시간에 첫 출근이라고? 이 복도가 이렇게 어두운데…"
+			}
+		}
+	],
+	"choices": [
+		{
+			"text": {
+				"korean": "서버실의 대략적인 방향을 손가락으로 가리켜 알려준다."
+			},
+			"path": "easy",
+			"mbti": "ES",
+			"effects": {
+				"gold": 80
+			},
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "당신이 대충 방향을 알려주자, 신입 직원은 고맙다며 허둥지둥 그쪽으로 사라진다."
+					}
+				},
+				{
+					"speaker": "newbie",
+					"content": {
+						"korean": "아, 감사합니다! 그럼 저는 이만 가보겠습니다!"
+					}
+				},
+				{
+					"speaker": "dax",
+					"content": {
+						"korean": "잘도 가네. 너무 쉽게 가는 거 아니에요?"
+					}
+				}
+			],
+			"risk": {
+				"chance": "mid",
+				"bad": {
+					"reward": [
+						"move_range_down"
+					],
+					"result": [
+						{
+							"speaker": "narrator",
+							"content": {
+								"korean": "당신이 대충 방향을 알려주자, 신입 직원은 고개를 갸웃거리며 잠시 망설인다."
+							}
+						},
+						{
+							"speaker": "newbie",
+							"content": {
+								"korean": "으음… 저기, 혹시 정확한 위치는… 제가 길치라서요."
+							}
+						},
+						{
+							"speaker": "dax",
+							"content": {
+								"korean": "길치라더니 정말 길치네! 저러다 또 헤매겠어요. 결국 우리가 따라가서 알려줘야 할 것 같아!"
+							}
+						}
+					]
+				}
+			}
+		},
+		{
+			"text": {
+				"korean": "서버실에 왜 가려는지 조심스럽게 물어본다."
+			},
+			"path": "hard",
+			"mbti": "IN",
+			"effects": {
+				"fighting": -10,
+				"reason": 15
+			},
+			"seed": null,
+			"result": [],
+			"event": "minigame_cup",
+			"event_intro": [
+				{
+					"speaker": "newbie",
+					"content": {
+						"korean": "으음… 사실 제가 좀 심부름을 왔는데, 중요한 거라서요. 혹시 제가 뭘 해야 할지 맞히시면 말씀드릴게요!"
+					}
+				},
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "신입 직원이 손에 쥔 종이컵 세 개를 바닥에 내려놓고 섞는다."
+					}
+				}
+			]
+		},
+		{
+			"text": {
+				"korean": "길을 알려주는 대신, 돈을 주며 알아서 찾아가거나 돌아가라고 말한다."
+			},
+			"path": "gold",
+			"mbti": "ET",
+			"require": {
+				"stat": "gold",
+				"op": ">=",
+				"value": 100
+			},
+			"effects": {
+				"gold": -100
+			},
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "당신이 돈을 건네자, 신입 직원은 눈을 반짝이며 돈을 낚아챈다."
+					}
+				},
+				{
+					"speaker": "newbie",
+					"content": {
+						"korean": "으악! 감사합니다! 이걸로… 택시 타고 집에 갈게요! 내일 다시 오면 되죠, 뭐!"
+					}
+				},
+				{
+					"speaker": "dax",
+					"content": {
+						"korean": "서버실 찾으러 왔다더니 집에 간대요! 푼돈에 너무 쉽게 포기하는 거 아니야?"
+					}
+				}
+			]
+		}
+	],
+	"tags": [
+		"newbie",
+		"dax"
+	],
+	"_design": {
+		"slot": "B",
+		"kind": "normal",
+		"person": {
+			"id": "newbie",
+			"name": "신입 직원",
+			"role": "신입 직원"
+		},
+		"wants": "서버실을 찾아야 함.",
+		"rule_link": "겉으로 보기엔 평범한 신입 직원의 질문이지만, 이 어두운 복도에서 그의 의도를 곧이들을지 아니면 의심의 여지를 둘지 결정해야 합니다.",
+		"events": {
+			"hard": "신입 직원이 자신의 목적을 직접 말하기를 꺼려 미니게임을 제안했습니다."
+		},
+		"flags": {}
+	}
+}

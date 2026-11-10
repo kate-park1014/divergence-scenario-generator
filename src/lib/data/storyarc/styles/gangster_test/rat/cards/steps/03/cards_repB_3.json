@@ -1,0 +1,373 @@
+{
+	"cards": [
+		{
+			"rule_link": "눈앞의 증거인 꺼진 카메라와 잠긴 문이 규칙 위반을 말하지만, 경비 팀장은 규정 준수를 요구하며 주인공의 판단을 시험한다.",
+			"dialogue": [
+				{
+					"speaker": "security_team_leader",
+					"text": "당신이 그, 규정이라면 껌뻑 죽는다는 해결사죠? 마침 잘 오셨습니다."
+				},
+				{
+					"text": "지금 서버실에서 수상한 소리가 나고 있습니다만, 규정상 복도 끝은 출입 금지입니다.",
+					"speaker": "security_team_leader"
+				},
+				{
+					"text": "저 안에 누가 있는지 알면 경비 팀장님도 규정 타령은 안 하실 텐데...",
+					"speaker": "dax"
+				},
+				{
+					"text": "안에서 무슨 일이 있든, 제가 지켜야 할 건 이 복도 끝의 질서입니다. 어떻게 하시겠습니까?",
+					"speaker": "security_team_leader"
+				}
+			],
+			"title": "규칙대로, 원칙대로",
+			"person": {
+				"id": "security_team_leader",
+				"name": "경비 팀장",
+				"role": "서버실 경비 팀장"
+			},
+			"choices": [
+				{
+					"mbti": "TJ",
+					"text": "팀장에게 지금 사태에 대한 정식 보고서를 작성하고 절차대로 진행하라고 요구한다.",
+					"effects": {
+						"gold": 100,
+						"reason": -15
+					},
+					"flag": {
+						"key": "security_team_leader_distracted",
+						"boss_text": "서버실 앞 경비 팀장이 서류 뭉치를 뒤적이며 잠시 한눈을 판다.",
+						"label": "팀장 주의 분산"
+					},
+					"path": "easy",
+					"result": [
+						{
+							"speaker": "narrator",
+							"text": "경비 팀장은 당신의 단호한 태도에 놀라며 보고서 양식을 찾기 시작한다."
+						},
+						{
+							"text": "당신은 그 틈을 타 서버실 문 앞으로 빠르게 이동한다.",
+							"speaker": "narrator"
+						},
+						{
+							"text": "히익, 팀장님이 종이 서류에 빠진 사이에 저희가 얼른 지나갔네요!",
+							"speaker": "dax"
+						}
+					],
+					"risk_bad": {
+						"gold": -30,
+						"reward": [],
+						"result": [
+							{
+								"text": "경비 팀장은 당신의 요구에 보고서를 찾았지만, 양식이 너무 많아 한참을 헤맨다.",
+								"speaker": "narrator"
+							},
+							{
+								"speaker": "narrator",
+								"text": "그 사이 서버실 문 너머에서 '삭제 완료' 안내음이 더 빠르게 들려온다."
+							},
+							{
+								"speaker": "dax",
+								"text": "아이고, 팀장님이 서류 찾다 날 새시겠어요! 저희는 언제 지나가죠?"
+							}
+						]
+					}
+				},
+				{
+					"mbti": "FP",
+					"text": "규정보다 상황의 위급함을 설명하며, 복도 진입을 허용하라고 강하게 주장한다.",
+					"flag": {
+						"boss_text": "경비 팀장이 당신의 이름을 중얼거리며 혀를 찬다.",
+						"label": "팀장 마지못해 허용",
+						"key": "security_team_leader_reluctant_pass"
+					},
+					"reward": [
+						"attack_up"
+					],
+					"risk_bad": {
+						"reward": [],
+						"gold": -20,
+						"result": [
+							{
+								"speaker": "narrator",
+								"text": "경비 팀장은 당신의 주장에 콧방귀를 뀌더니, 갑자기 호루라기를 꺼내 분다."
+							},
+							{
+								"speaker": "narrator",
+								"text": "복도 끝에서 다른 경비원들의 발소리가 점점 가까워진다."
+							},
+							{
+								"speaker": "dax",
+								"text": "팀장님, 설마 진짜 경비 부를 생각은 아니시죠? 저희는 나쁜 사람 아니에요!"
+							}
+						]
+					},
+					"path": "hard",
+					"result": [
+						{
+							"speaker": "narrator",
+							"text": "경비 팀장은 머뭇거리다 한숨을 쉬며 당신에게 길을 터준다."
+						},
+						{
+							"text": "그는 주머니에서 작은 수첩을 꺼내 당신의 이름을 적는 시늉을 한다.",
+							"speaker": "narrator"
+						},
+						{
+							"speaker": "dax",
+							"text": "저런, 저희 이름까지 적으시네요! 이거 나중에 회장님께 고자질하는 거 아니겠죠?"
+						}
+					],
+					"effects": {
+						"echo": 5,
+						"fighting": 10,
+						"reason": 20
+					}
+				},
+				{
+					"reward": [
+						"defense_up"
+					],
+					"effects": {
+						"echo": 10,
+						"community": 15,
+						"reason": -20
+					},
+					"path": "stat",
+					"mbti": "ST",
+					"text": "당신의 확고한 질서 평판을 내세워, 사태 해결을 위해 당신이 앞장서겠다고 말한다.",
+					"flag": {
+						"label": "팀장 존경",
+						"boss_text": "서버실 앞 경비 팀장이 당신에게 정중하게 길을 비켜준다.",
+						"key": "security_team_leader_respects_order"
+					},
+					"result": [
+						{
+							"text": "경비 팀장은 당신의 평판을 믿는지, 망설임 없이 복도 끝을 가로막던 몸을 비킨다.",
+							"speaker": "narrator"
+						},
+						{
+							"text": "그는 경례까지 붙이며 당신에게 서버실 문을 향해 가라고 손짓한다.",
+							"speaker": "narrator"
+						},
+						{
+							"text": "와, 팀장님이 저희를 정말 믿어주시네요! 저희, 팀장님께 실망시키지 말아요!",
+							"speaker": "dax"
+						}
+					]
+				},
+				{
+					"effects": {
+						"gold": -100,
+						"fighting": -5
+					},
+					"path": "gold",
+					"result": [
+						{
+							"speaker": "narrator",
+							"text": "경비 팀장은 봉투를 받아 들고는 주머니에 쑤셔 넣는다."
+						},
+						{
+							"text": "그는 복도 벽에 기대어 꾸벅꾸벅 졸기 시작한다.",
+							"speaker": "narrator"
+						},
+						{
+							"text": "팀장님이 갑자기 졸음이 쏟아지셨나 봐요! 저희가 들어가는 걸 못 보셨겠네요!",
+							"speaker": "dax"
+						}
+					],
+					"mbti": "NT",
+					"text": "팀장에게 봉투를 내밀며 '이건 규정 위반을 못 본 척한 대가'라고 말한다."
+				}
+			],
+			"no": 1,
+			"background_tags": [
+				"corridor",
+				"night",
+				"dimlight",
+				"empty",
+				"tense"
+			],
+			"key": "security_team_leader_rules",
+			"wants": "서버실 복도 출입 규정을 어기지 않고, 질서정연하게 사태를 해결하길 원한다.",
+			"slot": "B",
+			"kind": "rep",
+			"rep_dir": "reason-"
+		},
+		{
+			"title": "복도의 무법자",
+			"key": "security_team_leader_freedom",
+			"no": 2,
+			"dialogue": [
+				{
+					"text": "당신이 그, 규정 같은 건 개나 줘 버린다는 해결사죠? 젠장, 하필 당신이 여길 왔군.",
+					"speaker": "security_team_leader"
+				},
+				{
+					"speaker": "security_team_leader",
+					"text": "지금 서버실에서 수상한 소리가 나고 있습니다만, 그쪽이 들어갔다간 더 큰 소동만 벌어질 게 뻔합니다!"
+				},
+				{
+					"speaker": "dax",
+					"text": "팀장님, 저희가 괜히 시끄럽게 하는 건 아니에요! 저희가 해결사잖아요!"
+				},
+				{
+					"text": "규정상 복도 끝은 출입 금지입니다! 당신은 절대로 못 지나갑니다!",
+					"speaker": "security_team_leader"
+				}
+			],
+			"background_tags": [
+				"corridor",
+				"night",
+				"dimlight",
+				"empty",
+				"suspense"
+			],
+			"rule_link": "눈앞의 증거가 규칙 위반을 말하지만, 경비 팀장은 주인공의 자유로운 평판 때문에 더 큰 소동을 우려하며 규정을 내세워 막아선다.",
+			"choices": [
+				{
+					"flag": {
+						"label": "팀장 당황",
+						"boss_text": "서버실 앞 경비 팀장이 당신의 등장에 깜짝 놀라 주춤거린다.",
+						"key": "security_team_leader_shocked"
+					},
+					"mbti": "ES",
+					"text": "경비 팀장의 말을 무시하고, 서버실 문을 향해 빠르게 달려간다.",
+					"reward": [
+						"attack_up"
+					],
+					"path": "easy",
+					"effects": {
+						"reason": 15,
+						"fighting": 15
+					},
+					"result": [
+						{
+							"text": "경비 팀장은 당신의 돌발 행동에 당황하여 뒤로 넘어질 뻔한다.",
+							"speaker": "narrator"
+						},
+						{
+							"speaker": "narrator",
+							"text": "당신은 그 틈을 놓치지 않고 서버실 문 앞까지 도달한다."
+						},
+						{
+							"text": "팀장님이 너무 놀라셔서 엉덩방아를 찧을 뻔했어요! 저희가 너무 빨랐네요!",
+							"speaker": "dax"
+						}
+					],
+					"risk_bad": {
+						"result": [
+							{
+								"speaker": "narrator",
+								"text": "당신이 돌진하는 순간, 경비 팀장은 비상벨을 잡아당긴다."
+							},
+							{
+								"speaker": "narrator",
+								"text": "요란한 사이렌 소리와 함께 복도 전체의 조명이 번쩍이며 다른 경비원들이 몰려온다."
+							},
+							{
+								"speaker": "dax",
+								"text": "이런! 팀장님이 저렇게 빨리 비상벨을 누를 줄은 몰랐어요!"
+							}
+						],
+						"reward": [
+							"attack_down"
+						]
+					}
+				},
+				{
+					"effects": {
+						"echo": 5,
+						"community": 10,
+						"reason": -10
+					},
+					"result": [
+						{
+							"text": "경비 팀장은 당신의 진지한 표정에 잠시 고민하는 듯하다.",
+							"speaker": "narrator"
+						},
+						{
+							"text": "그는 마지못해 '빨리 끝내고 조용히 나가시오!'라며 길을 비켜준다.",
+							"speaker": "narrator"
+						},
+						{
+							"text": "팀장님이 저희 말을 들어주시다니! 역시 저희 진심이 통했나 봐요!",
+							"speaker": "dax"
+						}
+					],
+					"risk_bad": {
+						"result": [
+							{
+								"speaker": "narrator",
+								"text": "경비 팀장은 당신의 설득에 오히려 더 고집을 부린다."
+							},
+							{
+								"text": "그는 '이 복도를 지나가려면 나를 쓰러뜨리고 가시오!'라며 팔짱을 끼고 버틴다.",
+								"speaker": "narrator"
+							},
+							{
+								"text": "팀장님이 갑자기 고집쟁이가 되셨어요! 이럴 땐 어떻게 해야 하죠?",
+								"speaker": "dax"
+							}
+						],
+						"gold": -20,
+						"reward": []
+					},
+					"reward": [
+						"stun"
+					],
+					"path": "hard",
+					"flag": {
+						"label": "팀장 이해",
+						"key": "security_team_leader_understood",
+						"boss_text": "경비 팀장이 당신에게 불만스러운 표정으로 길을 열어준다."
+					},
+					"mbti": "IF",
+					"text": "팀장에게 지금 상황이 더 큰 혼란을 막기 위한 어쩔 수 없는 일임을 설득한다."
+				},
+				{
+					"result": [
+						{
+							"text": "경비 팀장은 당신의 자유로운 기세에 압도된 듯 어깨를 축 늘어뜨린다.",
+							"speaker": "narrator"
+						},
+						{
+							"text": "그는 '어차피 막아봤자 소용없겠지...'라며 길을 비켜준다.",
+							"speaker": "narrator"
+						},
+						{
+							"text": "와, 팀장님이 아예 손 놓으셨어요! 역시 저희가 한 성격 하죠?",
+							"speaker": "dax"
+						}
+					],
+					"effects": {
+						"fighting": 10,
+						"reason": 20,
+						"echo": 10
+					},
+					"flag": {
+						"key": "security_team_leader_resigned",
+						"label": "팀장 포기",
+						"boss_text": "서버실 앞 경비 팀장이 한숨을 쉬며 체념한 듯 길을 비켜준다."
+					},
+					"mbti": "EN",
+					"text": "당신의 예측 불가능한 자유 평판을 내세워, 팀장에게 당신의 방식이 통할 것이라고 선언한다.",
+					"path": "stat",
+					"reward": [
+						"move_range_up"
+					]
+				}
+			],
+			"person": {
+				"id": "security_team_leader",
+				"name": "경비 팀장",
+				"role": "서버실 경비 팀장"
+			},
+			"wants": "자유분방한 주인공이 서버실 복도에서 더 큰 소동을 벌이지 않고 물러나길 원한다.",
+			"slot": "B",
+			"kind": "rep",
+			"rep_dir": "reason+"
+		}
+	],
+	"errors": [],
+	"prompt_hash": "40fd2603b13f47b6090717eb3ef746df2d8303e9"
+}

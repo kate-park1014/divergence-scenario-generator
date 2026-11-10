@@ -1,0 +1,280 @@
+{
+	"id": "card_02_foreman_confrontation",
+	"title": {
+		"korean": "강골 반장의 시험"
+	},
+	"intensity": "calm",
+	"after_story": 7,
+	"before_story": 9,
+	"condition": {
+		"leaning": "fighting-",
+		"among": [
+			"fighting-",
+			"fighting+",
+			"community-",
+			"community+",
+			"reason-",
+			"reason+"
+		],
+		"min": 20
+	},
+	"urgency": 8,
+	"leaning": "fighting-",
+	"background_tags": [
+		"yard",
+		"night",
+		"dim",
+		"none",
+		"tense"
+	],
+	"background_image": "https://imagedelivery.net/WTEqQNGFb-l-IHS6IGnzUQ/92b9883a-8a79-4a7a-3661-8295816bd900/public",
+	"dialogue": [
+		{
+			"speaker": "narrator",
+			"content": {
+				"korean": "컨테이너 줄 사이, 담배 대신 큼직한 막대사탕을 문 하역 반장이 팔짱을 끼고 섰다."
+			}
+		},
+		{
+			"speaker": "foreman_d",
+			"content": {
+				"korean": "당신들이 그 주먹부터 나간다는 백상어파 해결사들 아니오? 여기서 뭐 쑤시고 다니는 게요?"
+			}
+		},
+		{
+			"speaker": "dax",
+			"content": {
+				"korean": "반장님, 저희는 그냥… 길을 좀 여쭤보려고요."
+			}
+		}
+	],
+	"choices": [
+		{
+			"text": {
+				"korean": "반장에게 다가가 어깨를 툭 치며 길을 비키라 말한다."
+			},
+			"path": "easy",
+			"mbti": "ST",
+			"flag": "foreman_annoyed",
+			"effects": {
+				"echo": -5,
+				"fighting": 20
+			},
+			"reward": [
+				"attack_up"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "반장이 움찔하더니 막대사탕을 씹던 입을 멈추고 옆으로 비켜섰다."
+					}
+				},
+				{
+					"speaker": "foreman_d",
+					"content": {
+						"korean": "쳇, 덩치만 믿고 까부는구먼. 여기 사탕이나 하나 물고 가쇼."
+					}
+				},
+				{
+					"speaker": "dax",
+					"content": {
+						"korean": "으아, 방금 큰일 날 뻔했어요… 사탕은 왜 주시는 거죠?"
+					}
+				}
+			],
+			"risk": {
+				"chance": "mid",
+				"bad": {
+					"effects": {
+						"gold": -30
+					},
+					"reward": [],
+					"result": [
+						{
+							"speaker": "narrator",
+							"content": {
+								"korean": "반장이 비키는 척하더니 당신의 발을 밟고 지나갔다."
+							}
+						},
+						{
+							"speaker": "foreman_d",
+							"content": {
+								"korean": "여긴 내가 접수한 구역이여. 까불지 마쇼."
+							}
+						},
+						{
+							"speaker": "dax",
+							"content": {
+								"korean": "발은 괜찮으세요? 좀 아파 보이는데요!"
+							}
+						}
+					]
+				}
+			}
+		},
+		{
+			"text": {
+				"korean": "반장에게 정중히 고개 숙여 인사하고 컨테이너 안의 소리를 묻는다."
+			},
+			"path": "hard",
+			"mbti": "NF",
+			"flag": "foreman_tip",
+			"effects": {
+				"fighting": -20,
+				"echo": 10
+			},
+			"reward": [
+				"defense_up"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "반장이 예상치 못한 당신의 태도에 사탕을 굴리다 멈칫했다."
+					}
+				},
+				{
+					"speaker": "foreman_d",
+					"content": {
+						"korean": "큭, 쥐뿔도 없는 것들이 젠틀한 척은… 쉿, 저 안에서 누가 노래를 부르나 보더구먼."
+					}
+				},
+				{
+					"speaker": "dax",
+					"content": {
+						"korean": "간부님은 무서운데, 반장님은 또 왜 저러실까요?"
+					}
+				}
+			],
+			"risk": {
+				"chance": "high",
+				"bad": {
+					"effects": {
+						"gold": -20
+					},
+					"reward": [],
+					"result": [
+						{
+							"speaker": "narrator",
+							"content": {
+								"korean": "당신의 공손한 태도에도 반장이 오히려 불쾌한 듯 코웃음을 쳤다."
+							}
+						},
+						{
+							"speaker": "foreman_d",
+							"content": {
+								"korean": "꼴에 젠틀한 척은. 콱 막혀서 컨테이너 안으로 들어가 보시지!"
+							}
+						},
+						{
+							"speaker": "dax",
+							"content": {
+								"korean": "어, 반장님이 갑자기 왜 저러시죠? 저희 길을 막고 계세요!"
+							}
+						}
+					]
+				}
+			}
+		},
+		{
+			"text": {
+				"korean": "반장의 눈을 똑바로 보고, 왜 길을 막고 있는지 이유를 묻는다."
+			},
+			"path": "stat",
+			"mbti": "TJ",
+			"require": {
+				"stat": "fighting",
+				"op": "<=",
+				"value": -40
+			},
+			"flag": "container_clue",
+			"effects": {
+				"reason": 10,
+				"fighting": -20,
+				"echo": 5
+			},
+			"reward": [
+				"shield"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "반장이 잠시 주춤하더니 당신의 눈을 피하며 사탕을 우물거렸다."
+					}
+				},
+				{
+					"speaker": "foreman_d",
+					"content": {
+						"korean": "아, 아니 뭐… 내가 여기 책임자니까 그냥 지켜보고 있는 거요."
+					}
+				},
+				{
+					"speaker": "foreman_d",
+					"content": {
+						"korean": "저기, 저 세 번째 컨테이너가 좀 수상하긴 하더구먼."
+					}
+				},
+				{
+					"speaker": "dax",
+					"content": {
+						"korean": "어? 저 컨테이너에 뭔가 있는 걸까요?"
+					}
+				}
+			]
+		}
+	],
+	"tags": [
+		"foreman_d",
+		"dax"
+	],
+	"_design": {
+		"slot": "D",
+		"kind": "rep",
+		"person": {
+			"id": "foreman_d",
+			"name": "하역 반장",
+			"role": "하역 반장"
+		},
+		"wants": "야적장 통로를 지나려는 히어로들을 막거나 이용하려 합니다.",
+		"rule_link": "소문으로만 듣고 판단하는 것과, 실제로 겪어보고 판단하는 것은 다릅니다. 반장은 히어로들의 소문만 듣고 그들을 대합니다.",
+		"rep": "fighting-",
+		"events": {},
+		"flags": {
+			"foreman_annoyed": {
+				"kind": "bad",
+				"boss_penalty": -1,
+				"label": {
+					"korean": "반장 방해"
+				},
+				"boss_line": {
+					"korean": "하역 반장이 당신이 지나온 길에 박스를 쌓아 올려 퇴로를 막는다."
+				}
+			},
+			"foreman_tip": {
+				"kind": "good",
+				"boss_penalty": 1,
+				"label": {
+					"korean": "반장 정보"
+				},
+				"boss_choice": {
+					"korean": "하역 반장이 당신에게 컨테이너의 특정 부분에 약점이 있다는 신호를 보낸다."
+				}
+			},
+			"container_clue": {
+				"kind": "good",
+				"boss_penalty": 2,
+				"label": {
+					"korean": "컨테이너 단서"
+				},
+				"boss_choice": {
+					"korean": "창고 간부가 있는 컨테이너 중 하나가 수상하다는 정보를 미리 얻는다."
+				}
+			}
+		}
+	}
+}

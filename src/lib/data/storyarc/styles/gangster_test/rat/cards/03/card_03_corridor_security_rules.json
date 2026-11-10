@@ -1,0 +1,327 @@
+{
+	"id": "card_03_corridor_security_rules",
+	"title": {
+		"korean": "규칙을 중시하는 경비 팀장"
+	},
+	"intensity": "calm",
+	"after_story": 3,
+	"before_story": 5,
+	"condition": {
+		"leaning": "fighting+",
+		"among": [
+			"fighting-",
+			"fighting+",
+			"community-",
+			"community+",
+			"reason-",
+			"reason+"
+		],
+		"min": 20
+	},
+	"urgency": 8,
+	"leaning": "fighting+",
+	"background_tags": [
+		"corridor",
+		"night",
+		"darkness",
+		"alone",
+		"tense"
+	],
+	"background_image": "https://imagedelivery.net/WTEqQNGFb-l-IHS6IGnzUQ/0432427d-875c-452f-b437-530f8a2f1100/public",
+	"dialogue": [
+		{
+			"speaker": "narrator",
+			"content": {
+				"korean": "복도 끝 탕비실에서 경비 팀장이 안경을 치켜쓰며 당신 일행을 막아선다."
+			}
+		},
+		{
+			"speaker": "security_team_leader",
+			"content": {
+				"korean": "거기, 거기! 당신들이 그… 남을 돕고 말로 해결한다는 분들이오?"
+			}
+		},
+		{
+			"speaker": "security_team_leader",
+			"content": {
+				"korean": "규정상 복도 끝은 출입 금지입니다! 지금 서버실에서 무슨 소리가 나는지 모르지만, 규정은 규정입니다!"
+			}
+		},
+		{
+			"speaker": "dax",
+			"content": {
+				"korean": "팀장님, 안에 해커 간부님이 있어요!"
+			}
+		},
+		{
+			"speaker": "security_team_leader",
+			"content": {
+				"korean": "그분도 규정을 어긴다면 저지해야 합니다! 안 돼요, 절대로 못 지나갑니다!"
+			}
+		}
+	],
+	"choices": [
+		{
+			"text": {
+				"korean": "경비 팀장의 말을 듣고 상황 파악을 먼저 한다."
+			},
+			"path": "easy",
+			"mbti": "IS",
+			"flag": "delayed_by_rules",
+			"effects": {
+				"echo": 10,
+				"fighting": -15
+			},
+			"reward": [
+				"attack_up"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "당신이 귀 기울여 듣자 경비 팀장이 안경을 고쳐 쓰며 상황을 설명한다."
+					}
+				},
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "“사실 저도 안에 무슨 일이 벌어지는지 걱정됩니다. 하지만…” 그는 길을 살짝 비켜준다."
+					}
+				},
+				{
+					"speaker": "dax",
+					"content": {
+						"korean": "팀장님도 안이 수상하다고 생각하나 봐요!"
+					}
+				}
+			],
+			"risk": {
+				"chance": "mid",
+				"bad": {
+					"effects": {
+						"gold": -30
+					},
+					"reward": [],
+					"result": [
+						{
+							"speaker": "narrator",
+							"content": {
+								"korean": "당신이 귀 기울여 듣자 경비 팀장이 신이 나서 규정을 줄줄 외기 시작한다."
+							}
+						},
+						{
+							"speaker": "narrator",
+							"content": {
+								"korean": "“규정 1조 1항! 복도에선 3분 이상 정지 금지! 2조 2항!” 그는 길을 막고 떠든다."
+							}
+						},
+						{
+							"speaker": "dax",
+							"content": {
+								"korean": "저러다 시간이 다 지나겠어요!"
+							}
+						}
+					]
+				}
+			}
+		},
+		{
+			"text": {
+				"korean": "굳은 표정으로 경비 팀장을 밀쳐내고 복도로 진입한다."
+			},
+			"path": "hard",
+			"mbti": "TJ",
+			"flag": "forced_entry",
+			"effects": {
+				"echo": -5,
+				"fighting": 15,
+				"reason": -10
+			},
+			"reward": [
+				"defense_up"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "당신의 기세에 경비 팀장이 휘청이며 뒤로 넘어진다."
+					}
+				},
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "그는 바닥에 주저앉아 안경을 부여잡고 억울한 표정으로 쳐다본다."
+					}
+				},
+				{
+					"speaker": "dax",
+					"content": {
+						"korean": "으악, 저러다 다치는 건 아니겠죠?"
+					}
+				}
+			],
+			"risk": {
+				"chance": "high",
+				"bad": {
+					"effects": {
+						"gold": -20
+					},
+					"reward": [],
+					"result": [
+						{
+							"speaker": "narrator",
+							"content": {
+								"korean": "당신이 경비 팀장을 밀치자 그가 균형을 잃고 탕비실 커피포트에 부딪힌다."
+							}
+						},
+						{
+							"speaker": "narrator",
+							"content": {
+								"korean": "뜨거운 물이 쏟아지며 팀장의 발에 튀고, 그는 비명을 지르며 바닥을 뒹군다."
+							}
+						},
+						{
+							"speaker": "dax",
+							"content": {
+								"korean": "으악! 뜨거워 보여요!"
+							}
+						}
+					]
+				}
+			}
+		},
+		{
+			"text": {
+				"korean": "경비 팀장에게 안심하라고 말하며 정중하게 길을 열어달라고 부탁한다."
+			},
+			"path": "stat",
+			"mbti": "NF",
+			"require": {
+				"stat": "fighting",
+				"op": ">=",
+				"value": 40
+			},
+			"flag": "security_team_trust",
+			"effects": {
+				"community": 10,
+				"fighting": 20,
+				"echo": 15
+			},
+			"reward": [
+				"shield"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "당신의 말에 경비 팀장이 안경을 고쳐 쓰며 헛기침을 한다."
+					}
+				},
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "“음… 규정을 어기는 건 아니겠지요?” 그는 망설이다가 길을 활짝 열어준다."
+					}
+				},
+				{
+					"speaker": "dax",
+					"content": {
+						"korean": "와, 팀장님이 여러분 말을 믿어줬어요!"
+					}
+				}
+			]
+		},
+		{
+			"text": {
+				"korean": "경비 팀장에게 수고비 명목으로 돈 봉투를 건넨다."
+			},
+			"path": "gold",
+			"mbti": "EP",
+			"require": {
+				"stat": "gold",
+				"op": ">=",
+				"value": 100
+			},
+			"effects": {
+				"gold": -100,
+				"echo": 5
+			},
+			"reward": [
+				"shield"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "경비 팀장이 눈을 휘둥그레 뜨며 돈 봉투를 받아든다."
+					}
+				},
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "그는 주위를 살피더니 얼른 품에 넣고는 못 본 척 고개를 돌린다."
+					}
+				},
+				{
+					"speaker": "dax",
+					"content": {
+						"korean": "규정은 규정이라더니, 봉투는 규정에 없나 봐요."
+					}
+				}
+			]
+		}
+	],
+	"tags": [
+		"security_team_leader",
+		"dax"
+	],
+	"_design": {
+		"slot": "B",
+		"kind": "rep",
+		"person": {
+			"id": "security_team_leader",
+			"name": "경비 팀장",
+			"role": "서버실 경비 팀장"
+		},
+		"wants": "규정대로 질서 유지를 원한다.",
+		"rule_link": "규정과 눈앞의 소란 중 무엇이 더 신뢰할 만한 증거인지 선택한다.",
+		"rep": "fighting+",
+		"events": {},
+		"flags": {
+			"delayed_by_rules": {
+				"kind": "bad",
+				"boss_penalty": -1,
+				"label": {
+					"korean": "규정 설명으로 지연"
+				},
+				"boss_line": {
+					"korean": "보스 방에 들어가기 전 경비 팀장의 긴 설명 때문에 당신의 행동이 느려진다."
+				}
+			},
+			"forced_entry": {
+				"kind": "good",
+				"boss_penalty": 1,
+				"label": {
+					"korean": "강제 진입"
+				},
+				"boss_choice": {
+					"korean": "보스 방에 들어가기 전 경비 팀장이 알려준 해커 간부의 약점 정보를 듣는다."
+				}
+			},
+			"security_team_trust": {
+				"kind": "good",
+				"boss_penalty": 2,
+				"label": {
+					"korean": "경비팀 신뢰"
+				},
+				"boss_choice": {
+					"korean": "보스 방에 들어가기 전 경비 팀장이 서버실 문 비밀번호를 알려준다."
+				}
+			}
+		}
+	}
+}

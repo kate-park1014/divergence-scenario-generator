@@ -1,0 +1,165 @@
+{
+	"id": "card_03_electrician_bright_lights",
+	"title": {
+		"korean": "복도를 밝히는 불빛"
+	},
+	"intensity": "high",
+	"after_story": 7,
+	"before_story": 9,
+	"callback": {
+		"seed": "electrician_suspicion_hard",
+		"min_rooms_after": 2
+	},
+	"background_tags": [
+		"corridor",
+		"night",
+		"brightlight",
+		"empty",
+		"calm"
+	],
+	"background_image": "https://imagedelivery.net/WTEqQNGFb-l-IHS6IGnzUQ/fe0435cd-1ceb-4074-58c9-d6dd1d0aa800/public",
+	"dialogue": [
+		{
+			"speaker": "narrator",
+			"content": {
+				"korean": "서버실 앞 복도의 불이 갑자기 환하게 켜진다."
+			}
+		},
+		{
+			"speaker": "electrician",
+			"content": {
+				"korean": "휴, 이 정도면 눈 감고 다녀도 안 부딪히겠네!"
+			}
+		},
+		{
+			"speaker": "dax",
+			"content": {
+				"korean": "어? 전기 기사님! 복도를 환하게 밝혀 주셨네요!"
+			}
+		},
+		{
+			"speaker": "electrician",
+			"content": {
+				"korean": "제가 원래 어두운 곳을 싫어해서요. 이 정도는 기본이죠!"
+			}
+		},
+		{
+			"speaker": "narrator",
+			"content": {
+				"korean": "전기 기사가 뿌듯한 표정으로 복도를 둘러본다."
+			}
+		}
+	],
+	"choices": [
+		{
+			"text": {
+				"korean": "밝아진 복도 덕분에 해커 간부의 움직임이 더 잘 보일 것이라고 추측한다."
+			},
+			"path": "easy",
+			"mbti": "EP",
+			"flag": "bright_corridor",
+			"effects": {
+				"reason": -15,
+				"echo": 5
+			},
+			"reward": [
+				"attack_up"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "당신의 말에 닥스가 고개를 끄덕이며 복도를 휘둘러본다."
+					}
+				},
+				{
+					"speaker": "dax",
+					"content": {
+						"korean": "맞아요! 불이 밝으면 간부님이 숨어 있어도 금방 찾을 수 있겠어요!"
+					}
+				},
+				{
+					"speaker": "electrician",
+					"content": {
+						"korean": "음, 그런가요? 전 그냥 밝은 게 좋아서…"
+					}
+				}
+			]
+		},
+		{
+			"text": {
+				"korean": "불이 밝아진 만큼 그림자가 더 짙게 드리울 곳을 예상하고 주의를 당부한다."
+			},
+			"path": "hard",
+			"mbti": "IT",
+			"flag": "dark_shadows",
+			"effects": {
+				"reason": 15,
+				"echo": 5
+			},
+			"reward": [
+				"defense_up"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "당신의 말에 닥스가 눈을 크게 뜨며 복도의 구석진 곳들을 살핀다."
+					}
+				},
+				{
+					"speaker": "dax",
+					"content": {
+						"korean": "와, 맞는 말씀이네요! 불이 밝아도 숨을 곳은 생기겠어요!"
+					}
+				},
+				{
+					"speaker": "electrician",
+					"content": {
+						"korean": "으음, 생각해보니 그렇네요! 제 실수가 될 뻔했네!"
+					}
+				}
+			]
+		}
+	],
+	"tags": [
+		"electrician",
+		"dax"
+	],
+	"_design": {
+		"slot": "D",
+		"kind": "callback",
+		"person": {
+			"role": "전기 기사",
+			"name": "전기 기사",
+			"id": "electrician"
+		},
+		"wants": "복도를 안전하고 밝게 유지하고 싶어 함.",
+		"rule_link": "복도가 밝아진 것이 좋은 증거인지, 아니면 다른 의미가 있는지 생각해 볼 기회.",
+		"events": {},
+		"flags": {
+			"bright_corridor": {
+				"kind": "good",
+				"boss_penalty": 1,
+				"label": {
+					"korean": "밝은 복도"
+				},
+				"boss_choice": {
+					"korean": "해커 간부가 밝아진 복도 때문에 잠시 당황한다."
+				}
+			},
+			"dark_shadows": {
+				"kind": "good",
+				"boss_penalty": 2,
+				"label": {
+					"korean": "짙은 그림자 대비"
+				},
+				"boss_choice": {
+					"korean": "닥스가 그림자 속에 숨은 해커 간부를 먼저 발견하고 경고한다."
+				}
+			}
+		}
+	}
+}

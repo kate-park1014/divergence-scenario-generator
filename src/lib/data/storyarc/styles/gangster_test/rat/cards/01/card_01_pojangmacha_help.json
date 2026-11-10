@@ -1,0 +1,281 @@
+{
+	"id": "card_01_pojangmacha_help",
+	"title": {
+		"korean": "걱정 가득한 아주머니"
+	},
+	"intensity": "calm",
+	"after_story": 7,
+	"before_story": 9,
+	"condition": {
+		"leaning": "fighting+",
+		"among": [
+			"fighting-",
+			"fighting+",
+			"community-",
+			"community+",
+			"reason-",
+			"reason+"
+		],
+		"min": 20
+	},
+	"urgency": 8,
+	"leaning": "fighting+",
+	"background_tags": [
+		"alley",
+		"night",
+		"dimlight",
+		"fewpeople",
+		"worried"
+	],
+	"background_image": "https://imagedelivery.net/WTEqQNGFb-l-IHS6IGnzUQ/be4294df-122b-432f-5727-1a427b1d8100/public",
+	"dialogue": [
+		{
+			"speaker": "narrator",
+			"content": {
+				"korean": "골목 어귀의 포장마차에서 아주머니가 행주로 테이블을 닦으며 당신을 부른다."
+			}
+		},
+		{
+			"speaker": "pojangmacha_owner",
+			"content": {
+				"korean": "아이고, 당신이 그 소문 자자한 해결사 양반 아니요? 남 돕는 일이라면 발 벗고 나선다는 그 분!"
+			}
+		},
+		{
+			"speaker": "pojangmacha_owner",
+			"content": {
+				"korean": "저 건너편 젊은이들 좀 도와줘요. 밤마다 와서 다치고, 내가 다 마음이 아파 죽겠네!"
+			}
+		},
+		{
+			"speaker": "dax",
+			"content": {
+				"korean": "경리부장님을 만나기 전에 다른 일에 엮이는 건 좀…"
+			}
+		}
+	],
+	"choices": [
+		{
+			"text": {
+				"korean": "포장마차 아주머니의 말을 듣고 골목 건너편으로 다가가 젊은이들을 돕는다."
+			},
+			"path": "easy",
+			"mbti": "SF",
+			"flag": "pojangmacha_grateful",
+			"effects": {
+				"fighting": 20,
+				"community": 10,
+				"echo": 5
+			},
+			"reward": [
+				"attack_up"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "당신이 다가가자 젊은이들이 고맙다며 당신에게 꾸벅 인사를 한다."
+					}
+				},
+				{
+					"speaker": "pojangmacha_owner",
+					"content": {
+						"korean": "아이고, 저것들 좀 봐! 역시 해결사 양반이 나서야 해결이 되네."
+					}
+				},
+				{
+					"speaker": "dax",
+					"content": {
+						"korean": "휴, 아주머니도 좋아하시니 다행입니다."
+					}
+				}
+			],
+			"risk": {
+				"chance": "mid",
+				"bad": {
+					"effects": {
+						"gold": -20
+					},
+					"reward": [],
+					"result": [
+						{
+							"speaker": "narrator",
+							"content": {
+								"korean": "당신이 다가가자 젊은이들이 오히려 당신을 경계하며 소리를 지른다."
+							}
+						},
+						{
+							"speaker": "pojangmacha_owner",
+							"content": {
+								"korean": "아이고, 또 괜히 시끄러워졌네! 저것들이 왜 저래!"
+							}
+						},
+						{
+							"speaker": "dax",
+							"content": {
+								"korean": "이런, 도와주려다 오히려 오해를 산 것 같은데요…"
+							}
+						}
+					]
+				}
+			}
+		},
+		{
+			"text": {
+				"korean": "성급히 돕지 않고 골목 건너편 상황을 먼저 지켜본다."
+			},
+			"path": "hard",
+			"mbti": "IN",
+			"flag": "pojangmacha_skeptical",
+			"effects": {
+				"reason": 10,
+				"fighting": -20,
+				"echo": -5
+			},
+			"reward": [
+				"defense_up"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "골목 건너편 젊은이들이 서로 장난치다 넘어진 것이었다. 특별히 위험한 상황은 아니었다."
+					}
+				},
+				{
+					"speaker": "dax",
+					"content": {
+						"korean": "휴, 별일 아니었네요. 괜히 나섰으면 민망할 뻔했습니다."
+					}
+				},
+				{
+					"speaker": "pojangmacha_owner",
+					"content": {
+						"korean": "아니, 저것들이 또 멀쩡한 척 수작을 부리네!"
+					}
+				}
+			],
+			"risk": {
+				"chance": "high",
+				"bad": {
+					"effects": {
+						"gold": -20
+					},
+					"reward": [],
+					"result": [
+						{
+							"speaker": "narrator",
+							"content": {
+								"korean": "당신이 지켜보는 사이, 젊은이 중 하나가 정말로 크게 넘어져 머리를 부딪힌다."
+							}
+						},
+						{
+							"speaker": "pojangmacha_owner",
+							"content": {
+								"korean": "아이고, 저것이 기어코 다치네! 왜 진작 안 도와줬어요!"
+							}
+						},
+						{
+							"speaker": "dax",
+							"content": {
+								"korean": "이런, 제가 너무 조심했나 봅니다…"
+							}
+						}
+					]
+				}
+			}
+		},
+		{
+			"text": {
+				"korean": "젊은이들에게 다가가 괜찮은지 부드럽게 말을 건넨다."
+			},
+			"path": "stat",
+			"mbti": "IS",
+			"require": {
+				"stat": "fighting",
+				"op": ">=",
+				"value": 40
+			},
+			"flag": "pojangmacha_calmed",
+			"effects": {
+				"fighting": 20,
+				"echo": 10
+			},
+			"reward": [
+				"shield"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "당신의 부드러운 말에 젊은이들이 편안하게 대화를 시작한다. 아주머니는 놀란 눈으로 당신을 바라본다."
+					}
+				},
+				{
+					"speaker": "pojangmacha_owner",
+					"content": {
+						"korean": "허어, 저 양반은 역시 다르네. 말 한마디로 사람을 편하게 하네!"
+					}
+				},
+				{
+					"speaker": "dax",
+					"content": {
+						"korean": "와, 말 한마디로 분위기가 달라지네요!"
+					}
+				}
+			]
+		}
+	],
+	"tags": [
+		"pojangmacha_owner",
+		"dax"
+	],
+	"_design": {
+		"slot": "D",
+		"kind": "rep",
+		"person": {
+			"id": "pojangmacha_owner",
+			"name": "포장마차 아주머니",
+			"role": "골목 포장마차 주인"
+		},
+		"wants": "골목 건너편에서 자꾸 다치는 젊은이들을 도와 달라",
+		"rule_link": "골목 건너편에서 들리는 소란 때문에 포장마차 아주머니의 말만 듣고 바로 상황을 판단할지, 사정을 먼저 들을지 선택합니다.",
+		"rep": "fighting+",
+		"events": {},
+		"flags": {
+			"pojangmacha_grateful": {
+				"kind": "bad",
+				"boss_penalty": -1,
+				"label": {
+					"korean": "포장마차 주인에게 유리"
+				},
+				"boss_line": {
+					"korean": "싸움 중 포장마차 아주머니가 당신에게 힘내라며 응원한다."
+				}
+			},
+			"pojangmacha_skeptical": {
+				"kind": "good",
+				"boss_penalty": 1,
+				"label": {
+					"korean": "포장마차 주인에게 중립"
+				},
+				"boss_choice": {
+					"korean": "싸움 중 포장마차 아주머니가 당신의 행동을 믿지 못하고 옆에서 투덜거린다."
+				}
+			},
+			"pojangmacha_calmed": {
+				"kind": "good",
+				"boss_penalty": 2,
+				"label": {
+					"korean": "포장마차 주인 안심"
+				},
+				"boss_choice": {
+					"korean": "싸움 중 포장마차 아주머니가 당신에게 힘내라며 따뜻한 차를 건넨다."
+				}
+			}
+		}
+	}
+}

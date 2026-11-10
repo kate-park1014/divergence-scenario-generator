@@ -1,0 +1,165 @@
+{
+	"id": "card_01_subordinate_confrontation",
+	"title": {
+		"korean": "간부의 부하가 막아선다"
+	},
+	"intensity": "high",
+	"after_story": 5,
+	"before_story": 7,
+	"callback": {
+		"seed": "old_worker_plea_easy",
+		"min_rooms_after": 2
+	},
+	"background_tags": [
+		"alley",
+		"evening",
+		"dim",
+		"sparse",
+		"tense"
+	],
+	"background_image": "https://imagedelivery.net/WTEqQNGFb-l-IHS6IGnzUQ/8e2ead79-43a8-4ab1-78bb-c1fd7f55b700/public",
+	"dialogue": [
+		{
+			"speaker": "narrator",
+			"content": {
+				"korean": "골목 어귀로 들어서려는데, 덩치 큰 사내가 앞을 막아선다."
+			}
+		},
+		{
+			"speaker": "subordinate_executive",
+			"content": {
+				"korean": "어이, 거기! 우리 간부님을 이상하게 보고 다닌다며?"
+			}
+		},
+		{
+			"speaker": "subordinate_executive",
+			"content": {
+				"korean": "누구 마음대로 간부님을 쥐라고 하는 거야! 멱살 잡고 따져야겠어!"
+			}
+		},
+		{
+			"speaker": "dax",
+			"content": {
+				"korean": "으악, 소문이 이렇게 빨리 퍼진단 말이에요? 어쩌죠?"
+			}
+		},
+		{
+			"speaker": "subordinate_executive",
+			"content": {
+				"korean": "당신들 때문에 간부님 얼굴에 먹칠을 했으니, 이 골목은 못 지나가!"
+			}
+		}
+	],
+	"choices": [
+		{
+			"text": {
+				"korean": "\"소문은 소문일 뿐\"이라며 부하를 안심시키고, 조용히 옆으로 지나간다."
+			},
+			"path": "easy",
+			"mbti": "SF",
+			"flag": "easy_rumor_penalty",
+			"effects": {
+				"community": 10,
+				"echo": 5
+			},
+			"reward": [
+				"attack_up"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "당신의 말에 부하는 잠시 주춤하며 길을 비켜준다."
+					}
+				},
+				{
+					"speaker": "subordinate_executive",
+					"content": {
+						"korean": "흥, 이번만 넘어간다. 다음엔 소문 함부로 퍼트리지 마라!"
+					}
+				},
+				{
+					"speaker": "dax",
+					"content": {
+						"korean": "휴, 그냥 지나가네요. 다행입니다!"
+					}
+				}
+			]
+		},
+		{
+			"text": {
+				"korean": "\"우린 진실을 찾을 뿐\"이라고 단호하게 말하고, 길을 막지 말라고 경고한다."
+			},
+			"path": "hard",
+			"mbti": "TJ",
+			"flag": "hard_subordinate_info",
+			"effects": {
+				"fighting": 10,
+				"echo": 5
+			},
+			"reward": [
+				"defense_up"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "당신의 단호한 태도에 부하는 불만스러운 표정을 지으며 뒤로 물러선다."
+					}
+				},
+				{
+					"speaker": "subordinate_executive",
+					"content": {
+						"korean": "쳇, 두고 보자고. 간부님은 절대 그런 분이 아니야!"
+					}
+				},
+				{
+					"speaker": "dax",
+					"content": {
+						"korean": "이야, 부하가 쫄아서 도망가네요!"
+					}
+				}
+			]
+		}
+	],
+	"tags": [
+		"subordinate_executive",
+		"dax"
+	],
+	"_design": {
+		"slot": "C",
+		"kind": "callback",
+		"person": {
+			"id": "subordinate_executive",
+			"role": "백상어파 간부의 부하",
+			"name": "간부의 부하"
+		},
+		"wants": "자기 간부의 억울함을 풀고, 소문을 퍼트린 사람들을 막고 싶어 함.",
+		"rule_link": "이미 누군가를 수상하다고 단정했던 말 때문에 새로운 방해를 만났을 때, 그의 말을 들어줄지 아니면 무시하고 지나갈지 판단해야 한다.",
+		"events": {},
+		"flags": {
+			"easy_rumor_penalty": {
+				"kind": "bad",
+				"boss_penalty": -1,
+				"label": {
+					"korean": "소문 페널티"
+				},
+				"boss_line": {
+					"korean": "간부의 부하들이 당신의 앞을 막아선다."
+				}
+			},
+			"hard_subordinate_info": {
+				"kind": "good",
+				"boss_penalty": 1,
+				"label": {
+					"korean": "부하 정보"
+				},
+				"boss_choice": {
+					"korean": "간부의 부하들이 길을 비켜주며 간부의 숨겨진 장부를 흘린다."
+				}
+			}
+		}
+	}
+}

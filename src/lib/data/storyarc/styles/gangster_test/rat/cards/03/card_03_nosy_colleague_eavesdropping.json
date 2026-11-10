@@ -1,0 +1,320 @@
+{
+	"id": "card_03_nosy_colleague_eavesdropping",
+	"title": {
+		"korean": "엿듣는 동료의 그림자"
+	},
+	"intensity": "high",
+	"after_story": 1,
+	"before_story": 3,
+	"background_tags": [
+		"basement",
+		"night",
+		"fluorescent",
+		"alone",
+		"secret"
+	],
+	"background_image": "https://imagedelivery.net/WTEqQNGFb-l-IHS6IGnzUQ/8bbd9540-142a-4a4c-57dd-e1e576146d00/public",
+	"dialogue": [
+		{
+			"speaker": "narrator",
+			"content": {
+				"korean": "당신과 닥스가 이야기를 나누는 동안, 한쪽 구석에서 야근 직원이 벽 뒤로 몸을 숨긴다."
+			}
+		},
+		{
+			"speaker": "dax",
+			"content": {
+				"korean": "저기요, 저 사람! 우리 이야기를 엿듣고 있는 것 같아요!"
+			}
+		},
+		{
+			"speaker": "narrator",
+			"content": {
+				"korean": "동료는 당신을 보고 몸을 움찔거린다."
+			}
+		},
+		{
+			"speaker": "nosy_colleague",
+			"content": {
+				"korean": "아, 아니에요! 그냥… 잠시 쉰 거예요. 너무 피곤해서…"
+			}
+		},
+		{
+			"speaker": "dax",
+			"content": {
+				"korean": "거짓말! 귀가 빨개진 거 다 보인다고요!"
+			}
+		},
+		{
+			"speaker": "narrator",
+			"content": {
+				"korean": "동료는 당신의 눈치를 보며 슬금슬금 물러나려 한다."
+			}
+		}
+	],
+	"forced": [
+		{
+			"text": {
+				"korean": "{actor}이(가) 엿듣는 동료에게 다가가 친근하게 말을 걸지만, 동료는 부담스러워한다."
+			},
+			"path": "forced",
+			"mbti": "SF",
+			"require": {
+				"mbti": "SF"
+			},
+			"chance": 0.3,
+			"effects": {
+				"community": -10,
+				"echo": -5
+			},
+			"reward": [
+				"move_range_down"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "{actor}이(가) 동료에게 다가가 환한 미소를 지으며 어깨에 손을 올린다."
+					}
+				},
+				{
+					"speaker": "nosy_colleague",
+					"content": {
+						"korean": "으악! 저, 저는 괜찮아요! 너무 친절해서 부담스러운데요?!"
+					}
+				},
+				{
+					"speaker": "dax",
+					"content": {
+						"korean": "으악, 저 사람 완전히 얼어붙었는데요? 너무 과했어요!"
+					}
+				}
+			]
+		}
+	],
+	"choices": [
+		{
+			"text": {
+				"korean": "아무것도 모른다는 듯 큰 소리로 엉뚱한 이야기를 지어내 흘린다."
+			},
+			"path": "easy",
+			"mbti": "IN",
+			"effects": {
+				"fighting": 10,
+				"echo": 5
+			},
+			"reward": [
+				"attack_up"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "당신이 갑자기 어젯밤 꿈 이야기를 큰 소리로 지어내자 동료는 혼란스러운 표정을 짓는다."
+					}
+				},
+				{
+					"speaker": "nosy_colleague",
+					"content": {
+						"korean": "으음… 그게 무슨… 꿈이요?"
+					}
+				},
+				{
+					"speaker": "dax",
+					"content": {
+						"korean": "푸흡! 저 사람 표정 좀 봐요! 완전히 얼어붙었네요!"
+					}
+				}
+			],
+			"risk": {
+				"chance": "mid",
+				"bad": {
+					"reward": [
+						"hp_down"
+					],
+					"result": [
+						{
+							"speaker": "narrator",
+							"content": {
+								"korean": "당신이 엉뚱한 이야기를 지어내자 동료는 오히려 당신이 뭔가 숨긴다고 의심의 눈초리를 보낸다."
+							}
+						},
+						{
+							"speaker": "nosy_colleague",
+							"content": {
+								"korean": "당신, 뭔가 숨기는 게 있군요? 왜 그렇게 이상한 말을 해요?"
+							}
+						},
+						{
+							"speaker": "dax",
+							"content": {
+								"korean": "아, 망했어요! 저 사람이 우리를 더 의심해요!"
+							}
+						}
+					]
+				}
+			}
+		},
+		{
+			"text": {
+				"korean": "동료에게 다가가 왜 엿듣고 있는지 직접적으로 질문한다."
+			},
+			"path": "hard",
+			"mbti": "IT",
+			"effects": {
+				"community": -10,
+				"fighting": 15
+			},
+			"reward": [
+				"defense_up"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "당신이 동료의 어깨를 툭 치며 왜 엿듣냐고 묻자 동료는 화들짝 놀란다."
+					}
+				},
+				{
+					"speaker": "nosy_colleague",
+					"content": {
+						"korean": "으악! 아무것도 안 들었어요! 그냥… 잠시 복도를 지나가던 중이었어요!"
+					}
+				},
+				{
+					"speaker": "dax",
+					"content": {
+						"korean": "쳇, 뻔한 변명이네요! 그래도 덕분에 꽁무니 빼고 도망가요!"
+					}
+				}
+			],
+			"risk": {
+				"chance": "high",
+				"bad": {
+					"effects": {
+						"gold": -40
+					},
+					"reward": [],
+					"result": [
+						{
+							"speaker": "narrator",
+							"content": {
+								"korean": "당신이 동료에게 다가가자 동료는 갑자기 비명을 지르며 자료실 문을 향해 도망친다."
+							}
+						},
+						{
+							"speaker": "nosy_colleague",
+							"content": {
+								"korean": "살려줘요! 저 사람들이 나를 해치려 해요!"
+							}
+						},
+						{
+							"speaker": "dax",
+							"content": {
+								"korean": "으악! 저 사람, 도망가면서 소문 다 내겠어요!"
+							}
+						}
+					]
+				}
+			}
+		},
+		{
+			"text": {
+				"korean": "갑자기 요란한 춤을 추며 동료에게 함께 춤출 것을 권유한다."
+			},
+			"path": "fun",
+			"mbti": "ES",
+			"effects": {
+				"echo": 10,
+				"reason": -20
+			},
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "당신이 갑자기 팔다리를 흔들며 요란한 춤을 추자 동료는 눈을 비비며 혼란스러운 표정을 짓는다."
+					}
+				},
+				{
+					"speaker": "nosy_colleague",
+					"content": {
+						"korean": "으음… 저기… 괜찮으세요? 저는… 먼저 가볼게요…"
+					}
+				},
+				{
+					"speaker": "dax",
+					"content": {
+						"korean": "와하하! 저 사람, 기겁하고 도망가네요! 역시 당신은 달라요!"
+					}
+				}
+			],
+			"event": "minigame_timing",
+			"event_intro": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "동료는 당신의 기묘한 행동에 당황하며 자료실 문으로 도망치려 한다."
+					}
+				},
+				{
+					"speaker": "dax",
+					"content": {
+						"korean": "저 사람이 도망가기 전에 저 문을 막아야 해요! 타이밍을 맞춰서 문을 닫아요!"
+					}
+				}
+			],
+			"risk": {
+				"chance": "low",
+				"bad": {
+					"effects": {
+						"gold": -50
+					},
+					"reward": [],
+					"result": [
+						{
+							"speaker": "narrator",
+							"content": {
+								"korean": "당신이 요란한 춤을 추자 동료는 당신의 춤을 비웃으며 손가락질한다."
+							}
+						},
+						{
+							"speaker": "nosy_colleague",
+							"content": {
+								"korean": "풉! 저 사람 좀 봐! 미쳤나 봐! 하하하!"
+							}
+						},
+						{
+							"speaker": "dax",
+							"content": {
+								"korean": "으악! 저 사람이 우리를 바보 취급해요! 창피해 죽겠어요!"
+							}
+						}
+					]
+				}
+			}
+		}
+	],
+	"tags": [
+		"nosy_colleague",
+		"dax"
+	],
+	"_design": {
+		"slot": "A",
+		"kind": "normal",
+		"person": {
+			"name": "엿듣는 동료",
+			"role": "야근 직원",
+			"id": "nosy_colleague"
+		},
+		"wants": "다른 사람들의 비밀을 알아내 자신의 불안감을 해소하고 싶어 한다.",
+		"rule_link": "보이는 현상 너머의 숨겨진 의도를 파악하고, 진실을 밝힐지 혹은 무시할지 결정해야 한다.",
+		"events": {
+			"fun": "동료가 당신의 기묘한 행동에 당황하며 눈치를 보다가 틈을 노린다."
+		},
+		"flags": {}
+	}
+}

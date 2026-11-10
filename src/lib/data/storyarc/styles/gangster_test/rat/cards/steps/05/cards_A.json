@@ -1,0 +1,526 @@
+{
+	"cards": [
+		{
+			"background_tags": [
+				"hallway",
+				"day",
+				"dim",
+				"sparse",
+				"tense"
+			],
+			"dialogue": [
+				{
+					"speaker": "accountant_manager",
+					"text": "거기 여러분! 비서 녀석 서류를 슬쩍 빼 올 수 있겠나? 내 가짜 장부 글씨랑 맞춰 봐야겠어."
+				},
+				{
+					"speaker": "dax",
+					"text": "어르신 기금 회계 장부는 제가 대신 처리했어요. 설마 저를 의심하는 건가요?"
+				},
+				{
+					"text": "닥스, 넌 빠져라! 이 서류가 비서의 글씨라면, 녀석도 한통속이란 증거가 될 거다!",
+					"speaker": "accountant_manager"
+				},
+				{
+					"speaker": "narrator",
+					"text": "경리부장이 당신을 노려본다."
+				},
+				{
+					"speaker": "dax",
+					"text": "비서님이 쓰던 만년필이 초록 잉크였죠… 혹시 서류에도 그 잉크 자국이 있을까요?"
+				}
+			],
+			"no": 1,
+			"wants": "비서의 결재 서류를 몰래 가져와 자신의 가짜 장부 글씨와 맞춰 보려 한다.",
+			"title": "경리부장의 수상한 부탁",
+			"rule_link": "비서의 물건을 몰래 가져가는 대신, 먼저 그 의도를 물어볼 기회가 생긴다.",
+			"person": {
+				"name": "경리부장",
+				"role": "경리부장",
+				"id": "accountant_manager"
+			},
+			"key": "accountant_request",
+			"choices": [
+				{
+					"mbti": "ES",
+					"result": [
+						{
+							"text": "당신이 서류 뭉치에서 겨우 빼 온 한 장을 경리부장이 불빛에 비춰 본다. 경리부장의 입술이 파르르 떨린다.",
+							"speaker": "narrator"
+						},
+						{
+							"speaker": "dax",
+							"text": "설마… 비서님 서류에서 이상한 점이라도 찾으신 건가요?"
+						}
+					],
+					"path": "easy",
+					"effects": {
+						"echo": 10,
+						"gold": 100
+					},
+					"risk_bad": {
+						"result": [
+							{
+								"text": "당신이 서류를 빼내다 발을 헛디뎌 서류 뭉치가 복도에 와르르 쏟아진다.",
+								"speaker": "narrator"
+							},
+							{
+								"text": "마침 지나가던 다른 간부가 놀라 돌아본다.",
+								"speaker": "narrator"
+							},
+							{
+								"text": "앗! 서류가 엉망이 됐어요!",
+								"speaker": "dax"
+							}
+						],
+						"reward": [
+							"move_range_down"
+						],
+						"gold": -30
+					},
+					"text": "경리부장의 지시대로 비서의 결재 서류를 몰래 가져온다."
+				},
+				{
+					"reward": [
+						"defense_up"
+					],
+					"text": "몰래 가져오는 대신, 경리부장에게 비서 책상으로 직접 가 보자고 제안한다.",
+					"effects": {
+						"echo": -5,
+						"community": 20
+					},
+					"mbti": "IN",
+					"path": "hard",
+					"result": [
+						{
+							"speaker": "narrator",
+							"text": "경리부장이 짜증 섞인 한숨을 푹 내쉰다. 그는 당신의 어깨를 붙잡고 비서실 방향으로 질질 끌고 간다."
+						},
+						{
+							"text": "경리부장님, 너무 티 나게 움직이시는 것 아니에요?",
+							"speaker": "dax"
+						}
+					],
+					"risk_bad": {
+						"gold": -20,
+						"result": [
+							{
+								"text": "경리부장이 \"이렇게 굼떠서 언제 잡겠냐!\"며 당신의 손목을 잡아 끈다.",
+								"speaker": "narrator"
+							},
+							{
+								"speaker": "narrator",
+								"text": "당신은 중심을 잃고 복도 구석의 쓰레기통을 넘어뜨린다."
+							},
+							{
+								"speaker": "dax",
+								"text": "으악, 들킬 뻔했어요!"
+							}
+						],
+						"reward": []
+					}
+				},
+				{
+					"result": [
+						{
+							"speaker": "narrator",
+							"text": "{actor}이(가) 경리부장의 흥분을 가라앉히며 논리적인 절차를 제시한다."
+						},
+						{
+							"text": "경리부장은 잠시 멈칫하더니 고개를 끄덕인다.",
+							"speaker": "narrator"
+						},
+						{
+							"text": "어르신, 저렇게 금방 수긍하시네요!",
+							"speaker": "dax"
+						}
+					],
+					"text": "{actor}이(가) 경리부장에게 초록 잉크 만년필이 있는지 먼저 확인해야 한다고 조언한다.",
+					"require_mbti": "TJ",
+					"path": "lock",
+					"reward": [
+						"intelligence_up"
+					],
+					"effects": {
+						"echo": 5,
+						"reason": 10
+					},
+					"mbti": "TJ"
+				}
+			],
+			"slot": "A",
+			"kind": "plant"
+		},
+		{
+			"choices": [
+				{
+					"result": [
+						{
+							"speaker": "narrator",
+							"text": "잔소리꾼 부장이 당신을 보더니 안심한 표정을 짓는다."
+						},
+						{
+							"speaker": "narrator",
+							"text": "그는 당신에게 감사의 표시로 낡은 지폐 몇 장을 쥐여 준다."
+						},
+						{
+							"text": "부장님, 생각보다 마음이 따뜻하신 분이었네요!",
+							"speaker": "dax"
+						}
+					],
+					"text": "잔소리꾼 부장의 불안을 덜어주기 위해 모금함 옆에 함께 서서 지켜본다.",
+					"mbti": "SF",
+					"risk_bad": {
+						"gold": -40,
+						"reward": [
+							"hp_down"
+						],
+						"result": [
+							{
+								"text": "당신이 모금함 옆에 서자, 잔소리꾼 부장이 당신을 경계하는 눈으로 본다.",
+								"speaker": "narrator"
+							},
+							{
+								"text": "그는 당신이 기금을 노린다고 착각하고 모금함을 들고 도망치기 시작한다.",
+								"speaker": "narrator"
+							},
+							{
+								"speaker": "dax",
+								"text": "어? 왜 도망가시는 거죠?"
+							}
+						]
+					},
+					"path": "easy",
+					"effects": {
+						"gold": 80,
+						"community": 15
+					}
+				},
+				{
+					"result": [
+						{
+							"speaker": "narrator",
+							"text": "잔소리꾼 부장이 한참을 망설이다 작은 목소리로 털어놓는다."
+						},
+						{
+							"speaker": "narrator",
+							"text": "그는 기금을 아끼려 했던 지난날의 오해가 다시 불거질까 봐 걱정했던 것이다."
+						},
+						{
+							"speaker": "dax",
+							"text": "아하! 부장님도 기금을 아끼려 했던 거였네요!"
+						}
+					],
+					"path": "hard",
+					"mbti": "NT",
+					"effects": {
+						"echo": 5,
+						"reason": 10
+					},
+					"text": "잔소리꾼 부장에게 왜 모금함 앞에서 불안해하는지 직접 묻는다.",
+					"risk_bad": {
+						"reward": [],
+						"result": [
+							{
+								"speaker": "narrator",
+								"text": "당신의 질문에 잔소리꾼 부장이 화들짝 놀라며 당신을 밀친다."
+							},
+							{
+								"text": "그는 \"내 일에 참견 마라!\"며 모금함을 끌어안고 복도 구석으로 숨는다.",
+								"speaker": "narrator"
+							},
+							{
+								"text": "아이고, 저렇게 숨어버리시네요!",
+								"speaker": "dax"
+							}
+						],
+						"gold": -30
+					},
+					"reward": [
+						"shield"
+					]
+				},
+				{
+					"event": "minigame_cup",
+					"result": [],
+					"text": "잔소리꾼 부장에게 금화 100닢을 주며, 모금함 관리 대신 다른 일을 제안한다.",
+					"effects": {
+						"gold": -100,
+						"echo": 10
+					},
+					"mbti": "EP",
+					"event_reason": "잔소리꾼 부장이 돈을 걸고 모금함 관리를 떠넘기려 한다.",
+					"event_intro": [
+						{
+							"text": "잔소리꾼 부장이 당신의 금화를 보더니 눈을 빛낸다. \"좋아, 그럼 이걸로 내기를 해보자!",
+							"speaker": "nagging_manager"
+						},
+						{
+							"text": "이 세 개의 컵 중에 기금 상자가 숨겨져 있지. 맞추면 네가 관리해라!\"",
+							"speaker": "nagging_manager"
+						},
+						{
+							"speaker": "narrator",
+							"text": "잔소리꾼 부장이 컵 세 개를 흔들며 당신에게 선택을 제안한다."
+						}
+					],
+					"path": "gold"
+				}
+			],
+			"key": "nagging_manager_fundbox",
+			"person": {
+				"name": "잔소리꾼 부장",
+				"role": "부장",
+				"id": "nagging_manager"
+			},
+			"rule_link": "모금함에 대한 부장의 행동을 오해하기 전에 그의 불안한 사정을 먼저 묻는 계기가 된다.",
+			"title": "잔소리꾼 부장의 모금함",
+			"no": 2,
+			"wants": "비서실 앞 모금함을 자꾸 만지작거리며 사람들이 오해할까 봐 불안해한다.",
+			"background_tags": [
+				"hallway",
+				"day",
+				"dim",
+				"sparse",
+				"tense"
+			],
+			"dialogue": [
+				{
+					"text": "쯧쯧, 이놈의 모금함은 왜 여기 둬서 사람 불안하게 만들어!",
+					"speaker": "nagging_manager"
+				},
+				{
+					"speaker": "dax",
+					"text": "어르신 기금 모금함이네요. 잔소리꾼 부장님은 저걸 왜 자꾸 만지작거릴까요?"
+				},
+				{
+					"text": "저번에 내가 돈 아끼자고 했다가 얼마나 욕을 먹었는데! 이번엔 또 무슨 오해를 살지!",
+					"speaker": "nagging_manager"
+				},
+				{
+					"speaker": "narrator",
+					"text": "잔소리꾼 부장이 모금함을 어루만지며 초조해한다."
+				},
+				{
+					"speaker": "dax",
+					"text": "비서님은 안개 낀 밤이면 늘 부두 끝 등대로 가셨어요! 모금함도 비서님이 관리하시나?"
+				}
+			],
+			"slot": "A",
+			"kind": "normal"
+		},
+		{
+			"key": "bluffing_manager_papers",
+			"no": 3,
+			"dialogue": [
+				{
+					"text": "으잇차! 이 정도 서류쯤이야, 한 손으로도 거뜬하지!",
+					"speaker": "bluffing_manager"
+				},
+				{
+					"speaker": "dax",
+					"text": "허세 부장님이 서류를 잔뜩 들고 지나가네요. 곧 넘어질 것 같은데…"
+				},
+				{
+					"text": "허세 부장의 발이 꼬이며 서류가 와르르 쏟아진다.",
+					"speaker": "narrator"
+				},
+				{
+					"text": "젠장! 아무도 날 도울 생각도 안 하겠지! 흥! 괜찮아! 혼자서도 다 할 수 있어!",
+					"speaker": "bluffing_manager"
+				},
+				{
+					"text": "허세 부장이 쏟아진 서류 더미 앞에서 안절부절못한다.",
+					"speaker": "narrator"
+				},
+				{
+					"speaker": "dax",
+					"text": "손수레 자국이 등대 문 앞에서 딱 끝나네요. 비서님도 저렇게 허둥대다가 서류를 떨어뜨렸을까요?"
+				}
+			],
+			"forced": [
+				{
+					"effects": {
+						"echo": 5,
+						"community": 10
+					},
+					"mbti": "EF",
+					"require_mbti": "EF",
+					"reward": [
+						"heal"
+					],
+					"result": [
+						{
+							"text": "{actor}이(가) 허세 부장에게 달려가 쏟아진 서류를 맹렬히 줍기 시작한다.",
+							"speaker": "narrator"
+						},
+						{
+							"text": "허세 부장은 당황하면서도 고마워하는 표정이다.",
+							"speaker": "narrator"
+						},
+						{
+							"text": "{actor}이(가) 또 먼저 나서네요!",
+							"speaker": "dax"
+						}
+					],
+					"text": "{actor}이(가) 서류를 줍는 허세 부장을 보고 무조건 도와야 한다고 외치며 달려간다."
+				}
+			],
+			"background_tags": [
+				"hallway",
+				"day",
+				"dim",
+				"sparse",
+				"tense"
+			],
+			"title": "허세 부장의 서류 소동",
+			"choices": [
+				{
+					"mbti": "IS",
+					"risk_bad": {
+						"gold": -30,
+						"reward": [
+							"attack_down"
+						],
+						"result": [
+							{
+								"speaker": "narrator",
+								"text": "당신이 서류를 줍는 순간, 허세 부장이 \"내 일은 내가 한다!\"며 서류를 발로 차 버린다."
+							},
+							{
+								"text": "서류들이 복도 끝까지 흩어진다.",
+								"speaker": "narrator"
+							},
+							{
+								"text": "으악, 더 엉망이 됐어요!",
+								"speaker": "dax"
+							}
+						]
+					},
+					"effects": {
+						"community": 15,
+						"gold": 60
+					},
+					"path": "easy",
+					"result": [
+						{
+							"text": "허세 부장이 놀란 눈으로 당신을 바라본다. 그는 쑥스러워하며 당신에게 작은 금괴 하나를 건넨다.",
+							"speaker": "narrator"
+						},
+						{
+							"text": "\"고맙다는 뜻은 아니야! 그냥 네가 주운 거 가져!\"",
+							"speaker": "narrator"
+						},
+						{
+							"speaker": "dax",
+							"text": "츤데레인가요?"
+						}
+					],
+					"text": "허세 부장이 도움을 요청하기 전에 먼저 서류 줍는 것을 돕는다."
+				},
+				{
+					"reward": [
+						"intelligence_up"
+					],
+					"risk_bad": {
+						"result": [
+							{
+								"speaker": "narrator",
+								"text": "당신의 질문에 허세 부장이 갑자기 큰 소리로 웃는다. \"하하! 내가 괜찮냐고?"
+							},
+							{
+								"text": "난 늘 괜찮다! 네 도움 따위 필요 없어!\" 그는 서류를 줍는 척하다가 넘어져 버린다.",
+								"speaker": "narrator"
+							},
+							{
+								"text": "혼자서도 잘 넘어지네요!",
+								"speaker": "dax"
+							}
+						],
+						"gold": -20,
+						"reward": []
+					},
+					"text": "허세 부장에게 괜찮은지 물어보고, 필요한 도움을 제안한다.",
+					"result": [
+						{
+							"text": "허세 부장이 잠시 머뭇거리더니, 마지못해 \"아, 뭐…",
+							"speaker": "narrator"
+						},
+						{
+							"speaker": "narrator",
+							"text": "네가 굳이 돕겠다면야…\" 하고 중얼거린다. 그는 당신에게 중요한 서류 몇 장을 건넨다."
+						},
+						{
+							"speaker": "dax",
+							"text": "부장님, 속마음은 착하시네요!"
+						}
+					],
+					"mbti": "IT",
+					"path": "hard",
+					"effects": {
+						"echo": 5,
+						"reason": 10
+					}
+				},
+				{
+					"event_reason": "허세 부장이 당신의 허세에 동조하며 함께 쉬어가자고 제안한다.",
+					"effects": {
+						"gold": 50,
+						"reason": -20,
+						"community": -10
+					},
+					"result": [],
+					"risk_bad": {
+						"result": [
+							{
+								"speaker": "narrator",
+								"text": "당신이 과도하게 허세를 부리며 서류를 줍는 척하다가, 옆에 있던 화분까지 쓰러뜨린다."
+							},
+							{
+								"text": "화분 깨지는 소리에 복도 저편에서 누군가 고개를 내민다.",
+								"speaker": "narrator"
+							},
+							{
+								"speaker": "dax",
+								"text": "아이고, 저 소리에 다 들키겠어요!"
+							}
+						],
+						"gold": -40,
+						"reward": [
+							"move_range_down"
+						]
+					},
+					"event": "campsite",
+					"text": "허세 부장 옆에서 \"이 정도 서류쯤이야!\" 하며 함께 허세를 부리며 서류를 줍는 시늉을 한다.",
+					"event_intro": [
+						{
+							"text": "허세 부장이 당신의 행동에 피식 웃더니, \"크크, 그래!",
+							"speaker": "bluffing_manager"
+						},
+						{
+							"text": "이 정도는 식은 죽 먹기지! 이왕 이렇게 된 거, 잠시 쉬었다 가지!\"",
+							"speaker": "bluffing_manager"
+						},
+						{
+							"speaker": "narrator",
+							"text": "허세 부장이 복도 한구석에 간이 의자와 차를 내어주며 잠시 쉬어가라고 한다."
+						}
+					],
+					"path": "fun",
+					"mbti": "EN"
+				}
+			],
+			"wants": "복도에서 서류를 쏟아버리고, 아무도 자신을 돕지 않을까 봐 걱정하지만 허세를 부린다.",
+			"person": {
+				"role": "부장",
+				"name": "허세 부장",
+				"id": "bluffing_manager"
+			},
+			"rule_link": "허세 부장의 허세 뒤에 숨겨진 진짜 불안을 먼저 이해하고 돕는 계기가 된다.",
+			"slot": "A",
+			"kind": "normal"
+		}
+	],
+	"errors": [],
+	"prompt_hash": "22ebd5dd517c0c9e659c6918290703ba9f344e91"
+}

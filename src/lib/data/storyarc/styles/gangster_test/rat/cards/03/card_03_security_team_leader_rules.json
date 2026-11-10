@@ -1,0 +1,315 @@
+{
+	"id": "card_03_security_team_leader_rules",
+	"title": {
+		"korean": "규칙대로, 원칙대로"
+	},
+	"intensity": "calm",
+	"after_story": 3,
+	"before_story": 5,
+	"condition": {
+		"leaning": "reason-",
+		"among": [
+			"fighting-",
+			"fighting+",
+			"community-",
+			"community+",
+			"reason-",
+			"reason+"
+		],
+		"min": 20
+	},
+	"urgency": 8,
+	"leaning": "reason-",
+	"background_tags": [
+		"corridor",
+		"night",
+		"dimlight",
+		"empty",
+		"tense"
+	],
+	"background_image": "https://imagedelivery.net/WTEqQNGFb-l-IHS6IGnzUQ/0432427d-875c-452f-b437-530f8a2f1100/public",
+	"dialogue": [
+		{
+			"speaker": "security_team_leader",
+			"content": {
+				"korean": "당신이 그, 규정이라면 껌뻑 죽는다는 해결사죠? 마침 잘 오셨습니다."
+			}
+		},
+		{
+			"speaker": "security_team_leader",
+			"content": {
+				"korean": "지금 서버실에서 수상한 소리가 나고 있습니다만, 규정상 복도 끝은 출입 금지입니다."
+			}
+		},
+		{
+			"speaker": "dax",
+			"content": {
+				"korean": "저 안에 누가 있는지 알면 경비 팀장님도 규정 타령은 안 하실 텐데..."
+			}
+		},
+		{
+			"speaker": "security_team_leader",
+			"content": {
+				"korean": "안에서 무슨 일이 있든, 제가 지켜야 할 건 이 복도 끝의 질서입니다. 어떻게 하시겠습니까?"
+			}
+		}
+	],
+	"choices": [
+		{
+			"text": {
+				"korean": "팀장에게 지금 사태에 대한 정식 보고서를 작성하고 절차대로 진행하라고 요구한다."
+			},
+			"path": "easy",
+			"mbti": "TJ",
+			"flag": "security_team_leader_distracted",
+			"effects": {
+				"gold": 100,
+				"reason": -15
+			},
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "경비 팀장은 당신의 단호한 태도에 놀라며 보고서 양식을 찾기 시작한다."
+					}
+				},
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "당신은 그 틈을 타 서버실 문 앞으로 빠르게 이동한다."
+					}
+				},
+				{
+					"speaker": "dax",
+					"content": {
+						"korean": "히익, 팀장님이 종이 서류에 빠진 사이에 저희가 얼른 지나갔네요!"
+					}
+				}
+			],
+			"risk": {
+				"chance": "mid",
+				"bad": {
+					"effects": {
+						"gold": -30
+					},
+					"reward": [],
+					"result": [
+						{
+							"speaker": "narrator",
+							"content": {
+								"korean": "경비 팀장은 당신의 요구에 보고서를 찾았지만, 양식이 너무 많아 한참을 헤맨다."
+							}
+						},
+						{
+							"speaker": "narrator",
+							"content": {
+								"korean": "그 사이 서버실 문 너머에서 '삭제 완료' 안내음이 더 빠르게 들려온다."
+							}
+						},
+						{
+							"speaker": "dax",
+							"content": {
+								"korean": "아이고, 팀장님이 서류 찾다 날 새시겠어요! 저희는 언제 지나가죠?"
+							}
+						}
+					]
+				}
+			}
+		},
+		{
+			"text": {
+				"korean": "규정보다 상황의 위급함을 설명하며, 복도 진입을 허용하라고 강하게 주장한다."
+			},
+			"path": "hard",
+			"mbti": "FP",
+			"flag": "security_team_leader_reluctant_pass",
+			"effects": {
+				"echo": 5,
+				"fighting": 10,
+				"reason": 20
+			},
+			"reward": [
+				"attack_up"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "경비 팀장은 머뭇거리다 한숨을 쉬며 당신에게 길을 터준다."
+					}
+				},
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "그는 주머니에서 작은 수첩을 꺼내 당신의 이름을 적는 시늉을 한다."
+					}
+				},
+				{
+					"speaker": "dax",
+					"content": {
+						"korean": "저런, 저희 이름까지 적으시네요! 이거 나중에 회장님께 고자질하는 거 아니겠죠?"
+					}
+				}
+			],
+			"risk": {
+				"chance": "high",
+				"bad": {
+					"effects": {
+						"gold": -20
+					},
+					"reward": [],
+					"result": [
+						{
+							"speaker": "narrator",
+							"content": {
+								"korean": "경비 팀장은 당신의 주장에 콧방귀를 뀌더니, 갑자기 호루라기를 꺼내 분다."
+							}
+						},
+						{
+							"speaker": "narrator",
+							"content": {
+								"korean": "복도 끝에서 다른 경비원들의 발소리가 점점 가까워진다."
+							}
+						},
+						{
+							"speaker": "dax",
+							"content": {
+								"korean": "팀장님, 설마 진짜 경비 부를 생각은 아니시죠? 저희는 나쁜 사람 아니에요!"
+							}
+						}
+					]
+				}
+			}
+		},
+		{
+			"text": {
+				"korean": "당신의 확고한 질서 평판을 내세워, 사태 해결을 위해 당신이 앞장서겠다고 말한다."
+			},
+			"path": "stat",
+			"mbti": "ST",
+			"require": {
+				"stat": "reason",
+				"op": "<=",
+				"value": -40
+			},
+			"flag": "security_team_leader_respects_order",
+			"effects": {
+				"echo": 10,
+				"community": 15,
+				"reason": -20
+			},
+			"reward": [
+				"defense_up"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "경비 팀장은 당신의 평판을 믿는지, 망설임 없이 복도 끝을 가로막던 몸을 비킨다."
+					}
+				},
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "그는 경례까지 붙이며 당신에게 서버실 문을 향해 가라고 손짓한다."
+					}
+				},
+				{
+					"speaker": "dax",
+					"content": {
+						"korean": "와, 팀장님이 저희를 정말 믿어주시네요! 저희, 팀장님께 실망시키지 말아요!"
+					}
+				}
+			]
+		},
+		{
+			"text": {
+				"korean": "팀장에게 봉투를 내밀며 '이건 규정 위반을 못 본 척한 대가'라고 말한다."
+			},
+			"path": "gold",
+			"mbti": "NT",
+			"require": {
+				"stat": "gold",
+				"op": ">=",
+				"value": 100
+			},
+			"effects": {
+				"gold": -100,
+				"fighting": -5
+			},
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "경비 팀장은 봉투를 받아 들고는 주머니에 쑤셔 넣는다."
+					}
+				},
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "그는 복도 벽에 기대어 꾸벅꾸벅 졸기 시작한다."
+					}
+				},
+				{
+					"speaker": "dax",
+					"content": {
+						"korean": "팀장님이 갑자기 졸음이 쏟아지셨나 봐요! 저희가 들어가는 걸 못 보셨겠네요!"
+					}
+				}
+			]
+		}
+	],
+	"tags": [
+		"security_team_leader",
+		"dax"
+	],
+	"_design": {
+		"slot": "B",
+		"kind": "rep",
+		"person": {
+			"id": "security_team_leader",
+			"name": "경비 팀장",
+			"role": "서버실 경비 팀장"
+		},
+		"wants": "서버실 복도 출입 규정을 어기지 않고, 질서정연하게 사태를 해결하길 원한다.",
+		"rule_link": "눈앞의 증거인 꺼진 카메라와 잠긴 문이 규칙 위반을 말하지만, 경비 팀장은 규정 준수를 요구하며 주인공의 판단을 시험한다.",
+		"rep": "reason-",
+		"events": {},
+		"flags": {
+			"security_team_leader_distracted": {
+				"kind": "bad",
+				"boss_penalty": -1,
+				"label": {
+					"korean": "팀장 주의 분산"
+				},
+				"boss_line": {
+					"korean": "서버실 앞 경비 팀장이 서류 뭉치를 뒤적이며 잠시 한눈을 판다."
+				}
+			},
+			"security_team_leader_reluctant_pass": {
+				"kind": "good",
+				"boss_penalty": 1,
+				"label": {
+					"korean": "팀장 마지못해 허용"
+				},
+				"boss_choice": {
+					"korean": "경비 팀장이 당신의 이름을 중얼거리며 혀를 찬다."
+				}
+			},
+			"security_team_leader_respects_order": {
+				"kind": "good",
+				"boss_penalty": 2,
+				"label": {
+					"korean": "팀장 존경"
+				},
+				"boss_choice": {
+					"korean": "서버실 앞 경비 팀장이 당신에게 정중하게 길을 비켜준다."
+				}
+			}
+		}
+	}
+}

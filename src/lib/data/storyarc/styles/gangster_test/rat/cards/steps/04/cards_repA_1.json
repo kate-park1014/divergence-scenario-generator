@@ -1,0 +1,433 @@
+{
+	"cards": [
+		{
+			"rule_link": "당신의 소문 때문에 비서 아가씨는 말 못 할 서류를 숨기려 하고, 당신은 그것이 경호실장 누님의 알리바이와 관련될지 판단해야 합니다.",
+			"wants": "회장님 지시로 간부님들 서류를 정리하는 중입니다만, 혹시 문제가 있다면 제가 다 책임져야 합니다.",
+			"no": 1,
+			"key": "nervous_secretary",
+			"person": {
+				"id": "secretary_young",
+				"name": "비서 아가씨",
+				"role": "비서실 직원"
+			},
+			"background_tags": [
+				"office",
+				"day",
+				"fluorescent",
+				"few",
+				"tense"
+			],
+			"dialogue": [
+				{
+					"speaker": "narrator",
+					"text": "탕비실 한구석에서 비서 아가씨가 서류 더미를 품에 안고 당신을 노려본다."
+				},
+				{
+					"speaker": "narrator",
+					"text": "그녀의 안경알이 빛에 반사되어 번쩍인다."
+				},
+				{
+					"text": "큼큼, 당신이 그… 주먹으로 모든 걸 해결한다는 해결사죠?",
+					"speaker": "secretary_young"
+				},
+				{
+					"text": "회장님께 보고할 서류들이니 함부로 들춰보시면 안 됩니다.",
+					"speaker": "secretary_young"
+				},
+				{
+					"text": "비서 아가씨, 다들 경호실장님 알리바이 때문에 정신없는데 여기서 뭘 숨기시는 거죠?",
+					"speaker": "dax"
+				},
+				{
+					"text": "비서 아가씨가 안경을 고쳐 쓴다.",
+					"speaker": "narrator"
+				},
+				{
+					"text": "숨기긴요! 그저 오래된 서류들을 정리하는 중입니다.",
+					"speaker": "secretary_young"
+				},
+				{
+					"speaker": "narrator",
+					"text": "비서 아가씨의 눈동자가 불안하게 흔들린다."
+				}
+			],
+			"choices": [
+				{
+					"risk_bad": {
+						"result": [
+							{
+								"text": "비서 아가씨가 서류 더미를 품에 더 깊이 파묻고 엉덩이로 당신의 발을 걸어 넘어뜨린다.",
+								"speaker": "narrator"
+							},
+							{
+								"text": "당신은 바닥에 나동그라진다.",
+								"speaker": "narrator"
+							},
+							{
+								"text": "함부로 남의 물건에 손대지 마세요! 제가 다 아는 사람인데!",
+								"speaker": "secretary_young"
+							},
+							{
+								"speaker": "dax",
+								"text": "으악, 당신 괜찮아요? 비서 아가씨 의외로 발기술이 좋네!"
+							}
+						],
+						"reward": [],
+						"gold": -30
+					},
+					"path": "easy",
+					"effects": {
+						"gold": 100,
+						"fighting": -20
+					},
+					"text": "숨기는 게 없으면 보여주면 되겠군. 어디, 그 서류들 다 내놔 봐.",
+					"result": [
+						{
+							"speaker": "narrator",
+							"text": "비서 아가씨가 질겁하며 서류 더미를 당신에게 떠민다. 종이들이 바닥에 흩뿌려진다."
+						},
+						{
+							"text": "으악! 조심하세요! 이건 정말 중요한 서류들이라고요!",
+							"speaker": "secretary_young"
+						},
+						{
+							"speaker": "dax",
+							"text": "우와, 다들 비서 아가씨한테는 꼼짝 못 하는데 당신은 다르네요!"
+						}
+					],
+					"mbti": "ET",
+					"flag": {
+						"boss_text": "비서 아가씨가 당신의 강압적인 태도에 경호실장 누님에게 거짓 정보를 흘려 혼란을 야기한다.",
+						"label": "비서 겁먹음",
+						"key": "secretary_young_scared"
+					}
+				},
+				{
+					"text": "진정해. 서류가 중요한 건 알겠는데, 회장님께 보고할 내용이라면 우리에게도 필요해.",
+					"effects": {
+						"fighting": 20
+					},
+					"mbti": "IN",
+					"risk_bad": {
+						"result": [
+							{
+								"speaker": "narrator",
+								"text": "비서 아가씨가 고개를 젓더니 갑자기 탕비실 문을 쾅 닫고 나가버린다. 서류는 그대로 품에 안고 있다."
+							},
+							{
+								"text": "더는 못 참겠어요!",
+								"speaker": "secretary_young"
+							},
+							{
+								"text": "앗, 비서 아가씨가 도망쳤어요! 이러면 정보는 어떻게 얻죠?",
+								"speaker": "dax"
+							}
+						],
+						"reward": [],
+						"gold": -20
+					},
+					"flag": {
+						"boss_text": "비서 아가씨가 준 서류에서 회장님 보고용 기록을 토대로 움직인다.",
+						"key": "secretary_young_clue",
+						"label": "비서의 단서"
+					},
+					"reward": [
+						"intelligence_up"
+					],
+					"result": [
+						{
+							"text": "비서 아가씨가 한숨을 쉬며 서류 뭉치 하나를 내민다. 서류 겉면에 '회장님 보고용'이라 적혀 있다.",
+							"speaker": "narrator"
+						},
+						{
+							"speaker": "secretary_young",
+							"text": "이 이상은… 정말 곤란합니다. 부디 이 정도에서 멈춰주세요."
+						},
+						{
+							"speaker": "dax",
+							"text": "흠, 중요한 서류 같긴 한데… 내용은 직접 확인해야겠네요."
+						}
+					],
+					"path": "hard"
+				},
+				{
+					"effects": {
+						"fighting": -30,
+						"echo": 10
+					},
+					"flag": {
+						"boss_text": "비서 아가씨가 겁에 질려 회장님 관련 핵심 정보를 모두 실토한다.",
+						"key": "secretary_young_fear_info",
+						"label": "비서의 공포 정보"
+					},
+					"mbti": "TJ",
+					"text": "소문이 괜히 나는 줄 알아? 내가 한 번만 더 말하게 할 셈이야?",
+					"result": [
+						{
+							"speaker": "narrator",
+							"text": "비서 아가씨가 당신의 살벌한 표정에 얼어붙어 서류 더미를 당신 앞에 쏟아낸다."
+						},
+						{
+							"speaker": "narrator",
+							"text": "그 안에서 '절대 개봉 금지'라고 적힌 봉투가 떨어진다."
+						},
+						{
+							"speaker": "secretary_young",
+							"text": "흐윽… 제발… 저도 시키는 대로 했을 뿐이에요…"
+						},
+						{
+							"text": "와, 당신 진짜 무섭네요! 비서 아가씨가 저렇게 겁먹은 건 처음 봐요.",
+							"speaker": "dax"
+						}
+					],
+					"reward": [
+						"attack_up"
+					],
+					"path": "stat"
+				},
+				{
+					"effects": {
+						"gold": -100
+					},
+					"path": "gold",
+					"mbti": "SP",
+					"text": "이걸 받으면, 서류는 내가 가져가도 되겠지?",
+					"result": [
+						{
+							"speaker": "narrator",
+							"text": "당신이 내민 돈뭉치를 비서 아가씨가 슬쩍 챙긴다."
+						},
+						{
+							"speaker": "narrator",
+							"text": "그녀는 주위를 살피더니 서류 뭉치 중 하나를 당신에게 건넨다."
+						},
+						{
+							"speaker": "narrator",
+							"text": "비서 아가씨가 목소리를 낮춘다."
+						},
+						{
+							"text": "이거 하나만… 나머지는 제가 책임질 수 없습니다.",
+							"speaker": "secretary_young"
+						},
+						{
+							"speaker": "dax",
+							"text": "헐, 돈으로 해결하는 방법도 있었네요! 근데 겨우 한 뭉치라니…"
+						}
+					]
+				}
+			],
+			"title": "탕비실의 수상한 서류",
+			"slot": "A",
+			"kind": "rep",
+			"rep_dir": "fighting-"
+		},
+		{
+			"person": {
+				"id": "secretary_young",
+				"name": "비서 아가씨",
+				"role": "비서실 직원"
+			},
+			"choices": [
+				{
+					"risk_bad": {
+						"reward": [],
+						"result": [
+							{
+								"speaker": "narrator",
+								"text": "비서 아가씨가 갑자기 주머니에서 손거울을 꺼내 당신의 얼굴에 들이민다."
+							},
+							{
+								"text": "거울 속 당신의 얼굴은 잔뜩 일그러져 있다.",
+								"speaker": "narrator"
+							},
+							{
+								"speaker": "secretary_young",
+								"text": "돕겠다고요? 돕는다는 말이 이렇게 무서운 말인 줄은 몰랐네요!"
+							},
+							{
+								"speaker": "dax",
+								"text": "으악, 당신의 얼굴에 뭐가 묻었나? 왜 저러죠?"
+							}
+						],
+						"gold": -30
+					},
+					"text": "무슨 사연인지 모르겠지만, 내가 도울 수 있다면 기꺼이 돕겠어.",
+					"flag": {
+						"boss_text": "비서 아가씨가 건넨 아기 사진 때문에 경호실장 누님이 감정적으로 격앙되어 대화가 불가능하다.",
+						"label": "비서의 아기 사진",
+						"key": "secretary_young_baby_photo"
+					},
+					"mbti": "SF",
+					"effects": {
+						"echo": 10,
+						"fighting": 20
+					},
+					"path": "easy",
+					"result": [
+						{
+							"speaker": "narrator",
+							"text": "비서 아가씨가 감동한 표정으로 서류 더미에서 작은 사진 한 장을 꺼내 당신에게 보여준다."
+						},
+						{
+							"speaker": "narrator",
+							"text": "사진 속에는 누군가 아기를 안고 환하게 웃고 있다."
+						},
+						{
+							"text": "비서 아가씨의 목소리가 떨린다.",
+							"speaker": "narrator"
+						},
+						{
+							"text": "이건… 제 개인적인 사연이지만… 그날 밤…",
+							"speaker": "secretary_young"
+						},
+						{
+							"text": "으아니, 아기 사진이라니! 비서 아가씨한테 이런 사연이 있었나요?",
+							"speaker": "dax"
+						}
+					],
+					"reward": [
+						"attack_up"
+					]
+				},
+				{
+					"path": "hard",
+					"risk_bad": {
+						"result": [
+							{
+								"speaker": "narrator",
+								"text": "비서 아가씨가 고개를 젓더니 갑자기 탕비실 문을 쾅 닫고 나가버린다. 서류는 그대로 품에 안고 있다."
+							},
+							{
+								"text": "더는 못 참겠어요!",
+								"speaker": "secretary_young"
+							},
+							{
+								"text": "앗, 비서 아가씨가 도망쳤어요! 이러면 정보는 어떻게 얻죠?",
+								"speaker": "dax"
+							}
+						],
+						"reward": [],
+						"gold": -20
+					},
+					"reward": [
+						"intelligence_up"
+					],
+					"result": [
+						{
+							"text": "비서 아가씨가 실망한 표정으로 서류 더미에서 회장 전용 금고실 CCTV 관리 기록을 꺼내 당신에게 건넨다.",
+							"speaker": "narrator"
+						},
+						{
+							"text": "비서 아가씨가 체념한 듯 말한다.",
+							"speaker": "narrator"
+						},
+						{
+							"text": "이런 걸 원하시는 거죠? 개인적인 사연 따위…",
+							"speaker": "secretary_young"
+						},
+						{
+							"text": "헐, CCTV 관리 기록이라니! 이거 중요한데요?",
+							"speaker": "dax"
+						}
+					],
+					"effects": {
+						"fighting": -20
+					},
+					"text": "개인적인 사연은 중요하지 않아. 지금은 사실이 중요해.",
+					"flag": {
+						"key": "secretary_young_cctv_log",
+						"label": "비서의 CCTV 기록",
+						"boss_text": "비서 아가씨가 준 CCTV 관리 기록을 토대로 경호실장 누님의 동선을 파악한다."
+					},
+					"mbti": "NT"
+				},
+				{
+					"effects": {
+						"echo": 10,
+						"fighting": 30
+					},
+					"path": "stat",
+					"result": [
+						{
+							"text": "비서 아가씨가 감격한 표정으로 서류 더미를 당신에게 건넨다.",
+							"speaker": "narrator"
+						},
+						{
+							"text": "그 안에는 병원에 입원한 가족을 돌보는 내용의 진단서가 들어있다.",
+							"speaker": "narrator"
+						},
+						{
+							"text": "비서 아가씨의 목소리가 흐느낀다.",
+							"speaker": "narrator"
+						},
+						{
+							"text": "흐윽… 믿어주셔서 감사합니다… 실은… 저의… 가족이…",
+							"speaker": "secretary_young"
+						},
+						{
+							"text": "와, 당신 진짜 사람 마음을 움직이네요! 비서 아가씨한테 이런 사정이 있었다니!",
+							"speaker": "dax"
+						}
+					],
+					"reward": [
+						"heal"
+					],
+					"text": "나는 당신의 말을 믿겠어. 어떤 이야기든 편하게 털어놔 봐.",
+					"mbti": "FJ",
+					"flag": {
+						"key": "secretary_young_family_secret",
+						"label": "비서의 가족 비밀",
+						"boss_text": "비서 아가씨가 털어놓은 개인적인 가족 비밀을 이용해 경호실장 누님을 설득한다."
+					}
+				}
+			],
+			"dialogue": [
+				{
+					"speaker": "narrator",
+					"text": "탕비실 한구석에서 비서 아가씨가 서류 더미를 품에 안고 당신을 힐끗거린다."
+				},
+				{
+					"text": "그녀의 안경알이 빛에 반사되어 번쩍인다.",
+					"speaker": "narrator"
+				},
+				{
+					"text": "큼큼, 당신이 그… 말로 잘 달래서 해결한다는 해결사죠? 실은 회장님께 보고할 서류를 정리하다가…",
+					"speaker": "secretary_young"
+				},
+				{
+					"speaker": "dax",
+					"text": "비서 아가씨, 다들 경호실장님 알리바이 때문에 정신없는데 여기서 뭘 끙끙 앓고 계시는 거죠?"
+				},
+				{
+					"text": "비서 아가씨가 안경을 고쳐 쓴다.",
+					"speaker": "narrator"
+				},
+				{
+					"text": "끙끙 앓긴요! 그저… 개인적인 사연이 섞여서…",
+					"speaker": "secretary_young"
+				},
+				{
+					"speaker": "narrator",
+					"text": "비서 아가씨의 눈동자가 불안하게 흔들린다."
+				}
+			],
+			"wants": "회장님께 보고할 서류를 정리해야 하는데, 이 안에 개인적인 사연이 섞여 있어서 어떻게 해야 할지 모르겠습니다.",
+			"no": 2,
+			"key": "nervous_secretary_help",
+			"title": "탕비실의 숨겨진 고민",
+			"background_tags": [
+				"office",
+				"day",
+				"fluorescent",
+				"few",
+				"tense"
+			],
+			"rule_link": "당신의 소문 때문에 비서 아가씨는 말 못 할 사연을 털어놓으려 하고, 당신은 그것이 경호실장 누님의 알리바이와 관련될지 판단해야 합니다.",
+			"slot": "A",
+			"kind": "rep",
+			"rep_dir": "fighting+"
+		}
+	],
+	"errors": [],
+	"prompt_hash": "ad27aad7bffb3ab89a7d08788f70aab552fbaf10"
+}

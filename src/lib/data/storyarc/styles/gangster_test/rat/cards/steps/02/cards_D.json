@@ -1,0 +1,378 @@
+{
+	"cards": [
+		{
+			"title": "컨테이너 문을 두드리는 그림자",
+			"person": {
+				"name": "백상어파 막내",
+				"id": "youngest_member",
+				"role": "조직원"
+			},
+			"wants": "자신을 쫓아낸 히어로들에게 앙갚음하고 싶음",
+			"rule_link": "막내를 쫓아냈다고 안심했지만, 그가 어디로 갔는지 끝까지 지켜보지 않아 벌어진 일입니다.",
+			"choices": [
+				{
+					"mbti": "TJ",
+					"reward": [
+						"attack_up"
+					],
+					"text": "막내의 경고를 모르는 척 내버려 둔다.",
+					"flag": {
+						"label": "컨테이너 잠금",
+						"key": "container_locked",
+						"boss_text": "컨테이너 문이 안에서 단단히 잠겨 있습니다. 억지로 열려면 시간이 필요합니다."
+					},
+					"path": "easy",
+					"effects": {
+						"fighting": -10,
+						"echo": -10
+					},
+					"result": [
+						{
+							"speaker": "narrator",
+							"text": "막내의 경고를 들은 간부가 컨테이너 문을 단단히 걸어 잠갔다."
+						},
+						{
+							"speaker": "dax",
+							"text": "어휴, 저 녀석 때문에 괜히 일이 복잡해졌네요."
+						}
+					]
+				},
+				{
+					"text": "막내에게 다가가, 간부에게 무슨 말을 했는지 조용히 묻는다.",
+					"reward": [
+						"defense_up"
+					],
+					"mbti": "NF",
+					"result": [
+						{
+							"text": "당신이 조용히 묻자, 막내는 잔뜩 겁먹은 표정으로 입을 꾹 다물었다.",
+							"speaker": "narrator"
+						},
+						{
+							"speaker": "youngest_member",
+							"text": "그, 그냥... 인사만 했습니다!"
+						},
+						{
+							"speaker": "narrator",
+							"text": "컨테이너 안에서는 여전히 콧노래 소리가 들려왔지만, 문이 잠기는 소리는 들리지 않았다."
+						},
+						{
+							"speaker": "dax",
+							"text": "하아, 저 녀석은 겁만 잔뜩 먹고 얼어붙었네요. 문은 안 잠겼으니 됐어요."
+						}
+					],
+					"effects": {
+						"echo": 10,
+						"community": 10
+					},
+					"path": "hard",
+					"flag": {
+						"boss_text": "창고 간부가 막내의 보고에 혼란스러워 문을 완전히 잠그지 못했습니다.",
+						"label": "문 잠금 실패",
+						"key": "container_not_fully_locked"
+					}
+				}
+			],
+			"background_tags": [
+				"yard",
+				"night",
+				"dark",
+				"empty",
+				"tension"
+			],
+			"dialogue": [
+				{
+					"speaker": "narrator",
+					"text": "파란 컨테이너 문틈으로 막내의 뒷모습이 보였다."
+				},
+				{
+					"speaker": "dax",
+					"text": "저 녀석이 왜 또 저기 있는 거죠? 아까는 도망가는 것 같았는데..."
+				},
+				{
+					"speaker": "youngest_member",
+					"text": "창고 간부님! 누가 간부님을 몰래 감시하는 것 같습니다!"
+				},
+				{
+					"text": "막내의 목소리가 컨테이너 안으로 울려 퍼지고, 이내 쇠문이 덜컥 잠겼다.",
+					"speaker": "narrator"
+				}
+			],
+			"key": "youngest_member_warning",
+			"no": 1,
+			"slot": "D",
+			"kind": "callback",
+			"returns": "easy"
+		},
+		{
+			"title": "야적장의 작은 밀고",
+			"dialogue": [
+				{
+					"text": "조심스러운 발걸음 소리에 돌아보니 막내가 당신을 향해 손짓하고 있었다.",
+					"speaker": "narrator"
+				},
+				{
+					"text": "어? 막내가 왜 저러죠? 설마 또 방해하려는 건 아니겠죠?",
+					"speaker": "dax"
+				},
+				{
+					"text": "선배님들! 저 컨테이너, 사실 뒷문이 허술합니다! 제가 봤습니다!",
+					"speaker": "youngest_member"
+				},
+				{
+					"speaker": "narrator",
+					"text": "막내는 파란 컨테이너 뒤편을 가리키며 씩씩하게 말했다."
+				}
+			],
+			"background_tags": [
+				"yard",
+				"night",
+				"dark",
+				"empty",
+				"whisper"
+			],
+			"rule_link": "겉모습만 보고 판단하지 않고 친절을 베푼 것이 뜻밖의 도움으로 돌아왔습니다.",
+			"key": "youngest_member_tip",
+			"choices": [
+				{
+					"flag": {
+						"label": "뒷문 정보",
+						"boss_text": "파란 컨테이너의 뒷문이 낡은 빗장으로 잠겨 있습니다. 쉽게 열 수 있을 것 같습니다.",
+						"key": "backdoor_known"
+					},
+					"result": [
+						{
+							"text": "막내가 알려준 대로 컨테이너 뒷문을 살피니, 낡은 빗장이 걸려 있었다.",
+							"speaker": "narrator"
+						},
+						{
+							"text": "오, 역시 막내가 준 정보가 맞았네요! 덕분에 쉽게 들어갈 수 있겠어요!",
+							"speaker": "dax"
+						}
+					],
+					"effects": {
+						"reason": 10,
+						"echo": 10
+					},
+					"mbti": "NT",
+					"path": "easy",
+					"text": "막내의 정보에 따라 컨테이너 뒷문으로 우회한다.",
+					"reward": [
+						"attack_up"
+					]
+				},
+				{
+					"text": "막내에게 고맙다고 말하고, 컨테이너 주변을 다시 한번 살핀다.",
+					"path": "hard",
+					"mbti": "SF",
+					"flag": {
+						"label": "컨테이너 약점",
+						"boss_text": "막내의 정보로 파란 컨테이너의 낡은 뒷문 빗장을 발견했습니다. 공격 지점으로 활용할 수 있습니다.",
+						"key": "container_weak_point"
+					},
+					"effects": {
+						"community": 10,
+						"echo": 15
+					},
+					"result": [
+						{
+							"text": "당신이 고맙다고 하자, 막내는 으쓱하며 더 자랑스럽게 뒷문을 가리켰다.",
+							"speaker": "narrator"
+						},
+						{
+							"speaker": "youngest_member",
+							"text": "별말씀을요! 제가 항상 선배님들 지켜보고 있습니다!"
+						},
+						{
+							"speaker": "dax",
+							"text": "막내가 꽤나 쓸모 있는 정보원이 되었네요? 다음에도 잘해줘야겠어요."
+						}
+					],
+					"reward": [
+						"defense_up"
+					]
+				}
+			],
+			"wants": "야식을 준 선배들에게 보답하고 싶음",
+			"no": 2,
+			"person": {
+				"name": "백상어파 막내",
+				"role": "조직원",
+				"id": "youngest_member"
+			},
+			"slot": "D",
+			"kind": "callback",
+			"returns": "hard"
+		},
+		{
+			"key": "cleaner_grandma_warning",
+			"dialogue": [
+				{
+					"speaker": "narrator",
+					"text": "낡은 빗자루를 든 할머니 한 분이 파란 컨테이너 앞을 쓸고 있었다."
+				},
+				{
+					"text": "저 할머니는 새벽부터 뭘 그렇게 열심히 청소하시는 거죠?",
+					"speaker": "dax"
+				},
+				{
+					"speaker": "cleaner_grandma",
+					"text": "쯧쯧, 젊은 것들이! 이 파란 컨테이너는 건드리지 마! 새벽마다 좋은 냄새 나는 데야!"
+				},
+				{
+					"text": "할머니는 당신을 힐끗 보더니 다시 콧노래를 흥얼거렸다.",
+					"speaker": "narrator"
+				}
+			],
+			"background_tags": [
+				"yard",
+				"morning",
+				"foggy",
+				"alone",
+				"calm"
+			],
+			"person": {
+				"role": "야적장 청소부",
+				"id": "cleaner_grandma",
+				"name": "청소부 할머니"
+			},
+			"choices": [
+				{
+					"text": "할머니의 말을 무시하고 컨테이너 문을 확인한다.",
+					"path": "easy",
+					"effects": {
+						"gold": 50,
+						"fighting": -10
+					},
+					"risk_bad": {
+						"result": [
+							{
+								"speaker": "narrator",
+								"text": "당신이 문을 확인하려는 순간, 할머니가 빗자루로 당신의 발을 걸었다."
+							},
+							{
+								"text": "아얏! 할머니, 왜 그러세요! 괜히 시간만 낭비했잖아요!",
+								"speaker": "dax"
+							}
+						],
+						"gold": -20,
+						"reward": []
+					},
+					"mbti": "TJ",
+					"result": [
+						{
+							"speaker": "narrator",
+							"text": "할머니는 당신을 노려봤지만, 이내 포기한 듯 다시 바닥을 쓸었다."
+						},
+						{
+							"text": "문이 단단히 잠겨 있네요. 억지로 열려면 시간이 좀 걸리겠어요.",
+							"speaker": "dax"
+						}
+					]
+				},
+				{
+					"text": "할머니에게 좋은 냄새가 무엇인지 조심스럽게 묻는다.",
+					"path": "hard",
+					"mbti": "NF",
+					"result": [
+						{
+							"text": "당신이 묻자, 할머니는 눈을 가늘게 뜨고 당신을 위아래로 훑어봤다.",
+							"speaker": "narrator"
+						},
+						{
+							"text": "그건... 여기 사는 사람들만 아는 비밀이야. 하지만 너희는 모르는 게 좋을 거야.",
+							"speaker": "cleaner_grandma"
+						},
+						{
+							"text": "할머니가 뭔가 알고 있는 것 같긴 한데, 쉽게 말해주진 않네요.",
+							"speaker": "dax"
+						}
+					],
+					"reward": [
+						"intelligence_up"
+					],
+					"effects": {
+						"community": 10,
+						"echo": 10
+					},
+					"risk_bad": {
+						"gold": -20,
+						"result": [
+							{
+								"text": "당신이 묻자, 할머니는 빗자루를 휘두르며 '시끄럽다!' 소리쳤다.",
+								"speaker": "narrator"
+							},
+							{
+								"text": "할머니가 갑자기 화를 내네요! 괜히 건드렸나 봐요.",
+								"speaker": "dax"
+							}
+						],
+						"reward": []
+					}
+				},
+				{
+					"require_mbti": "SF",
+					"event": "campsite",
+					"text": "{actor}이(가) 할머니의 노고를 위로하며 따뜻한 음료를 건넨다.",
+					"path": "lock",
+					"result": [
+						{
+							"speaker": "narrator",
+							"text": "{actor}이(가) 건넨 음료에 할머니는 잠시 빗자루질을 멈췄다."
+						},
+						{
+							"text": "허허, 이런 걸 다 주네. 고맙다. 너희는 여기서 좀 쉬었다 가거라.",
+							"speaker": "cleaner_grandma"
+						}
+					],
+					"event_reason": "할머니의 노고를 위로하며 잠시 쉬어갈 기회를 얻음",
+					"effects": {
+						"community": 10,
+						"echo": 5
+					},
+					"event_intro": [
+						{
+							"speaker": "narrator",
+							"text": "할머니의 따뜻한 말에 당신은 잠시 쉬어갈 곳을 찾았다."
+						}
+					],
+					"mbti": "SF"
+				},
+				{
+					"effects": {
+						"gold": -100,
+						"reason": -10
+					},
+					"text": "할머니에게 돈을 쥐여 주며 컨테이너 주변을 잠시 비켜달라고 부탁한다.",
+					"path": "gold",
+					"reward": [
+						"move_range_up"
+					],
+					"mbti": "EP",
+					"result": [
+						{
+							"speaker": "narrator",
+							"text": "당신이 돈을 쥐여 주자, 할머니는 눈을 반짝이며 주머니에 넣었다."
+						},
+						{
+							"text": "허허, 알겠어. 잠시 눈 감고 있을 테니, 알아서들 해. 대신 너무 시끄럽게는 말고.",
+							"speaker": "cleaner_grandma"
+						},
+						{
+							"speaker": "dax",
+							"text": "돈으로 해결하니 편하긴 한데, 괜히 할머니에게 뇌물 준 기분이네요."
+						}
+					]
+				}
+			],
+			"wants": "새벽마다 맡는 컨테이너의 좋은 냄새를 방해받고 싶지 않음",
+			"rule_link": "겉모습만 보고 할머니의 말을 흘려들을지, 그 안에 숨겨진 의미를 찾아낼지 선택해야 합니다.",
+			"title": "파란 컨테이너 앞의 수상한 청소",
+			"no": 3,
+			"slot": "D",
+			"kind": "normal"
+		}
+	],
+	"errors": [],
+	"prompt_hash": "cbbb03ac2b8c93c2bfb848f87d656ca639841a6d"
+}

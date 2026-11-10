@@ -1,0 +1,407 @@
+{
+	"cards": [
+		{
+			"no": 1,
+			"wants": "차고 반장이 새로운 보안 규정 때문에 차량 기록실 문을 열어줄 수 없어 난처해한다.",
+			"title": "기록실 봉쇄",
+			"key": "records_room_blockade",
+			"background_tags": [
+				"garage",
+				"night",
+				"dimlight",
+				"empty",
+				"tense"
+			],
+			"dialogue": [
+				{
+					"speaker": "chago_banjang",
+					"text": "당신이 그, 뭐냐, 서류 한 장도 절차대로 처리하는 해결사 양반들 아니요? 소문은 익히 들었소만."
+				},
+				{
+					"text": "차고 반장이 차량 기록실 문 앞에 놓인 서류 더미를 가리킨다.",
+					"speaker": "narrator"
+				},
+				{
+					"speaker": "chago_banjang",
+					"text": "며칠 전부터 보안 규정이 바뀌어서 말이야. 이 복잡한 서류를 다 채워야만 기록실 문을 열 수 있게 됐어."
+				},
+				{
+					"text": "혼자 힘으로는 안 되겠고. 누가 좀 도와주면 좋겠는데 말이야.",
+					"speaker": "chago_banjang"
+				},
+				{
+					"speaker": "dax",
+					"text": "흐음, 서류가 이렇게 많으면 오늘 안에는 못 끝낼 것 같은데요."
+				}
+			],
+			"choices": [
+				{
+					"effects": {
+						"echo": 10,
+						"gold": 50,
+						"community": 15
+					},
+					"path": "easy",
+					"text": "반장의 서류 작업을 돕고 필요한 서류를 꼼꼼히 채운다.",
+					"result": [
+						{
+							"speaker": "narrator",
+							"text": "당신이 반장과 함께 서류 더미를 파고들어 빈칸을 채워 나간다."
+						},
+						{
+							"speaker": "narrator",
+							"text": "다 채운 서류를 제출하자 기록실 문이 '철컥' 하고 열린다."
+						},
+						{
+							"speaker": "dax",
+							"text": "와, 이렇게 복잡한 걸 다 하시다니, 대단하네요!"
+						}
+					],
+					"reward": [],
+					"risk_bad": {
+						"reward": [],
+						"gold": -30,
+						"result": [
+							{
+								"text": "당신이 반장과 함께 서류 더미를 꼼꼼히 채워나가던 중, 반장이 휘청이며 커피를 쏟아버린다.",
+								"speaker": "narrator"
+							},
+							{
+								"text": "서류를 다 채웠는데, 마지막 서류에 반장이 실수로 커피를 쏟아 버린다.",
+								"speaker": "narrator"
+							},
+							{
+								"text": "아, 이런! 다시 해야 한다니 너무하네요!",
+								"speaker": "dax"
+							}
+						]
+					},
+					"flag": {
+						"boss_text": "금고실 주변에 서류 더미가 흩어져 있어 시야를 가린다.",
+						"label": "서류 작업",
+						"key": "messy_paperwork"
+					},
+					"mbti": "SJ"
+				},
+				{
+					"path": "hard",
+					"text": "새로운 규정의 허점을 찾아 기록실 문을 열 방법을 찾아본다.",
+					"reward": [
+						"defense_up"
+					],
+					"effects": {
+						"echo": -5,
+						"reason": 20
+					},
+					"flag": {
+						"key": "rule_loophole",
+						"boss_text": "금고실 보안 시스템에 작은 허점이 발견되어, 일부 기능이 무력화된다.",
+						"label": "규정의 허점"
+					},
+					"mbti": "NT",
+					"risk_bad": {
+						"reward": [],
+						"result": [
+							{
+								"text": "당신이 규정집을 훑어보다가 허점을 찾아내려 애쓴다.",
+								"speaker": "narrator"
+							},
+							{
+								"speaker": "narrator",
+								"text": "하지만 규정집은 빈틈없이 완벽하게 작성되어 있어 허점은 보이지 않는다."
+							},
+							{
+								"text": "으음… 딱히 다른 방법은 없어 보이는데 말이야.",
+								"speaker": "chago_banjang"
+							}
+						],
+						"gold": -20
+					},
+					"result": [
+						{
+							"text": "당신이 규정집을 훑어보다가 특정 상황에서는 서류 제출",
+							"speaker": "narrator"
+						},
+						{
+							"text": "없이 책임자의 허락으로 문을 열 수 있다는 조항을 찾아낸다.",
+							"speaker": "narrator"
+						},
+						{
+							"speaker": "chago_banjang",
+							"text": "오, 이런 조항이 있었나? 그럼 내가 책임지고 열어주지!"
+						},
+						{
+							"text": "대단해요, 이런 걸 찾아내다니!",
+							"speaker": "dax"
+						}
+					]
+				},
+				{
+					"mbti": "TJ",
+					"flag": {
+						"label": "평판의 권위",
+						"key": "reputation_authority",
+						"boss_text": "금고실 경비들이 당신의 평판을 존중하여 경계 태세를 잠시 늦춘다."
+					},
+					"result": [
+						{
+							"text": "당신이 그동안 규칙을 지켜온 사례들을 언급하며 반장의 신뢰를 얻는다.",
+							"speaker": "narrator"
+						},
+						{
+							"text": "당신이라면 믿을 만하지! 내가 책임지고 이 문을 열어주겠소!",
+							"speaker": "chago_banjang"
+						},
+						{
+							"text": "역시 평판이 최고네요!",
+							"speaker": "dax"
+						}
+					],
+					"path": "stat",
+					"text": "규칙을 철저히 지키는 당신의 평판을 내세워 반장을 설득한다.",
+					"effects": {
+						"echo": 10,
+						"reason": -20
+					},
+					"reward": [
+						"intelligence_up"
+					]
+				}
+			],
+			"person": {
+				"id": "chago_banjang",
+				"name": "차고 반장",
+				"role": "차고 반장"
+			},
+			"rule_link": "기록실 보안 규정을 지키려는 반장의 태도가, 말 못 할 사정으로 기록을 지운 누님을 숨기는 행동처럼 보이게 한다.",
+			"slot": "B",
+			"kind": "rep",
+			"rep_dir": "reason-"
+		},
+		{
+			"title": "수상한 그림자",
+			"background_tags": [
+				"garage",
+				"night",
+				"dimlight",
+				"empty",
+				"mysterious"
+			],
+			"wants": "차고 반장이 누군가를 숨기는 듯 수상하게 행동하며 기록실 접근을 막는다.",
+			"person": {
+				"id": "chago_banjang",
+				"name": "차고 반장",
+				"role": "차고 반장"
+			},
+			"dialogue": [
+				{
+					"text": "당신이 그, 뭐냐, 정해진 대로만 안 움직이는 해결사 양반들 아니요? 소문은 익히 들었소만.",
+					"speaker": "chago_banjang"
+				},
+				{
+					"text": "차고 반장이 차량 기록실 문을 몸으로 막아서며 헛기침을 한다.",
+					"speaker": "narrator"
+				},
+				{
+					"text": "이 문은… 지금은 열어줄 수 없소. 중요한 서류들이 있어서 말이야.",
+					"speaker": "chago_banjang"
+				},
+				{
+					"text": "저기요, 반장님. 아까 그 서류는 다 채웠는데요? 혹시 다른 중요한 게 있는 건가요?",
+					"speaker": "dax"
+				},
+				{
+					"text": "으음, 그게… 하필 지금 중요한 손님이 와 계셔서 말이야.",
+					"speaker": "chago_banjang"
+				}
+			],
+			"rule_link": "반장이 말 못 할 사정을 가진 누군가를 숨기려 하는 태도가, 기록을 지운 누님의 사정과 겹쳐 보여 플레이어에게 혼란을 준다.",
+			"key": "suspicious_shadow",
+			"no": 2,
+			"choices": [
+				{
+					"risk_bad": {
+						"reward": [
+							"hp_down"
+						],
+						"result": [
+							{
+								"speaker": "narrator",
+								"text": "당신이 반장을 밀치고 기록실 문을 열려 하자, 낡은 문이 '삐걱' 소리를 내며 흔들린다."
+							},
+							{
+								"text": "문이 낡아서 손잡이가 부러지고, 반장의 팔이 문에 끼어버린다.",
+								"speaker": "narrator"
+							},
+							{
+								"speaker": "dax",
+								"text": "아이고, 반장님! 괜찮으세요? 문도 부러지고 어떡해요!"
+							}
+						]
+					},
+					"result": [
+						{
+							"text": "당신이 반장을 옆으로 밀쳐내고 기록실 문을 거칠게 연다.",
+							"speaker": "narrator"
+						},
+						{
+							"speaker": "narrator",
+							"text": "안에는 쥐새끼 한 마리가 훔쳐온 과자를 먹다 놀라 도망친다."
+						},
+						{
+							"text": "에이, 그냥 쥐였네요! 반장님은 왜 이렇게 호들갑을…",
+							"speaker": "dax"
+						}
+					],
+					"mbti": "ES",
+					"effects": {
+						"fighting": 15,
+						"echo": -5
+					},
+					"flag": {
+						"boss_text": "금고실 문이 낡아 약해져 있어, 경비들이 문을 잠그는 데 애를 먹는다.",
+						"key": "broken_door",
+						"label": "부러진 문"
+					},
+					"reward": [
+						"attack_up"
+					],
+					"path": "easy",
+					"text": "반장의 변명에도 아랑곳 않고 기록실 문을 열고 들어가려 한다."
+				},
+				{
+					"path": "hard",
+					"text": "반장의 사정을 먼저 들어주고 문을 열어달라고 설득한다.",
+					"result": [
+						{
+							"speaker": "narrator",
+							"text": "당신이 반장의 어깨를 두드리며 무슨 사정인지 차분히 물어본다."
+						},
+						{
+							"text": "사실은… 내가 돌보던 길고양이가 안에서 새끼를 낳았지 뭐야! 시끄러울까 봐 잠시 숨겨뒀어.",
+							"speaker": "chago_banjang"
+						},
+						{
+							"text": "어머, 새끼 고양이라니! 귀엽네요.",
+							"speaker": "dax"
+						}
+					],
+					"effects": {
+						"community": 20,
+						"echo": 10
+					},
+					"risk_bad": {
+						"result": [
+							{
+								"text": "당신이 반장에게 다가가 어깨를 두드리며 말을 걸자, 반장이 화들짝 놀라며 몸을 움츠린다.",
+								"speaker": "narrator"
+							},
+							{
+								"speaker": "narrator",
+								"text": "반장은 당신의 말에 오히려 더 당황하며 횡설수설하다가 급하게 자리를 피한다."
+							},
+							{
+								"speaker": "dax",
+								"text": "어라, 반장님이 뭔가 숨기는 게 맞았나 봐요?"
+							}
+						],
+						"gold": -20,
+						"reward": []
+					},
+					"mbti": "IN",
+					"flag": {
+						"boss_text": "금고실 통로에 길고양이가 나타나 경비들의 주의를 분산시킨다.",
+						"key": "cat_distraction",
+						"label": "길고양이"
+					},
+					"reward": [
+						"defense_up"
+					]
+				},
+				{
+					"path": "stat",
+					"text": "규칙에 얽매이지 않는 당신의 평판으로 반장에게 자유로운 분위기를 조성한다.",
+					"reward": [
+						"move_range_up"
+					],
+					"effects": {
+						"echo": 10,
+						"reason": 20
+					},
+					"mbti": "FP",
+					"flag": {
+						"label": "자유로운 통행",
+						"key": "free_pass",
+						"boss_text": "금고실 경비들이 당신의 행동을 대수롭지 않게 여겨 감시를 소홀히 한다."
+					},
+					"result": [
+						{
+							"text": "당신이 반장에게 굳이 규칙에 얽매일 필요 없다고 가볍게 말하자, 반장이 한숨을 내쉰다.",
+							"speaker": "narrator"
+						},
+						{
+							"speaker": "chago_banjang",
+							"text": "하긴, 나도 이런 건 영 체질에 안 맞아! 어서 들어가 보시오!"
+						},
+						{
+							"text": "와, 역시! 반장님도 우리처럼 자유로운 영혼이셨네요!",
+							"speaker": "dax"
+						}
+					]
+				},
+				{
+					"mbti": "EP",
+					"effects": {
+						"gold": 100,
+						"echo": 15
+					},
+					"reward": [],
+					"risk_bad": {
+						"reward": [
+							"hp_down"
+						],
+						"result": [
+							{
+								"text": "당신이 목청껏 환영 노래를 부르자, 반장이 당황하며 기록실 문을 확 연다.",
+								"speaker": "narrator"
+							},
+							{
+								"speaker": "narrator",
+								"text": "안에서는 반장의 아내가 나와 렌치로 당신의 머리를 때린다."
+							},
+							{
+								"text": "으악! 반장님 아내분이 숨어 계셨네요! 저, 저건 진짜 아프겠어요!",
+								"speaker": "dax"
+							}
+						]
+					},
+					"result": [
+						{
+							"speaker": "narrator",
+							"text": "당신이 목청껏 환영 노래를 부르자, 반장이 당황하며 기록실 문을 확 열어버린다."
+						},
+						{
+							"text": "안에는 아무도 없고, 반장이 황급히 문을 닫는다.",
+							"speaker": "narrator"
+						},
+						{
+							"text": "으악! 시끄러워! 그냥 들어가! 내가 졌소!",
+							"speaker": "chago_banjang"
+						},
+						{
+							"speaker": "dax",
+							"text": "푸하하! 반장님 표정 좀 보세요!"
+						}
+					],
+					"path": "fun",
+					"text": "반장의 중요한 손님을 위해 환영 노래를 부르며 기록실 문을 두드린다."
+				}
+			],
+			"slot": "B",
+			"kind": "rep",
+			"rep_dir": "reason+"
+		}
+	],
+	"errors": [],
+	"prompt_hash": "a3370a15744a14754a93faf8fad0bcafeb5913c5"
+}

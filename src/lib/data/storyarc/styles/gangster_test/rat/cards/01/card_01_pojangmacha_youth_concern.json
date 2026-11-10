@@ -1,0 +1,326 @@
+{
+	"id": "card_01_pojangmacha_youth_concern",
+	"title": {
+		"korean": "걱정 가득한 아주머니"
+	},
+	"intensity": "calm",
+	"after_story": 7,
+	"before_story": 9,
+	"condition": {
+		"leaning": "community+",
+		"among": [
+			"fighting-",
+			"fighting+",
+			"community-",
+			"community+",
+			"reason-",
+			"reason+"
+		],
+		"min": 20
+	},
+	"urgency": 8,
+	"leaning": "community+",
+	"background_tags": [
+		"darkalley",
+		"lateevening",
+		"neonlights",
+		"fewpeople",
+		"melancholy"
+	],
+	"background_image": "https://imagedelivery.net/WTEqQNGFb-l-IHS6IGnzUQ/be4294df-122b-432f-5727-1a427b1d8100/public",
+	"dialogue": [
+		{
+			"speaker": "narrator",
+			"content": {
+				"korean": "골목 어귀 포장마차에서 마음씨 좋은 아주머니가 당신을 안타까운 눈빛으로 바라본다."
+			}
+		},
+		{
+			"speaker": "pojangmacha_owner",
+			"content": {
+				"korean": "아이고, 당신이 그, 동네 사람 모두를 위해 나선다는 해결사 맞지?"
+			}
+		},
+		{
+			"speaker": "pojangmacha_owner",
+			"content": {
+				"korean": "저 건너편 젊은이들 좀 도와줘요. 밤마다 와서 다치고, 내가 다 마음이 아파 죽겠네!"
+			}
+		},
+		{
+			"speaker": "dax",
+			"content": {
+				"korean": "골목 안에서 경리부장님이 부스럭거리고 있는데, 여기서 시간을 끌 수 있을까요?"
+			}
+		},
+		{
+			"speaker": "pojangmacha_owner",
+			"content": {
+				"korean": "이러다 큰일 날까 봐 내가 밤마다 잠을 못 자! 저 애들 어쩌면 좋누!"
+			}
+		}
+	],
+	"choices": [
+		{
+			"text": {
+				"korean": "아주머니에게 젊은이들을 안전하게 돌보겠다고 약속하고 다친 곳은 없는지 살핀다."
+			},
+			"path": "easy",
+			"mbti": "NF",
+			"flag": "youth_rebellion_threat",
+			"effects": {
+				"echo": 10,
+				"community": 10
+			},
+			"reward": [
+				"heal"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "당신이 젊은이들에게 다가가자,"
+					}
+				},
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "그들은 당신의 따뜻한 말에 경계를 풀고 춤 연습을 하다 다친다고 솔직하게 털어놓는다."
+					}
+				},
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "젊은이들은 당신의 도움에 고마워하며 앞으로 조심하겠다고 약속한다."
+					}
+				},
+				{
+					"speaker": "dax",
+					"content": {
+						"korean": "오, 젊은이들이 당신을 믿네요! 아주머니도 웃으시는 걸 보니 기분이 좋네요."
+					}
+				}
+			],
+			"risk": {
+				"chance": "mid",
+				"bad": {
+					"reward": [
+						"hp_down"
+					],
+					"result": [
+						{
+							"speaker": "narrator",
+							"content": {
+								"korean": "당신이 젊은이들에게 다가가자, 그들은 당신을 경계하며 오히려 더 격렬하게 춤을 추다 넘어져 다친다."
+							}
+						},
+						{
+							"speaker": "pojangmacha_owner",
+							"content": {
+								"korean": "아이고, 저것들이 더 격하게 움직이네! 내 속이 다 타들어 간다!"
+							}
+						},
+						{
+							"speaker": "dax",
+							"content": {
+								"korean": "오히려 젊은이들이 더 다친 것 같은데요? 아주머니 걱정이 더 커졌습니다."
+							}
+						}
+					]
+				}
+			}
+		},
+		{
+			"text": {
+				"korean": "아주머니에게 젊은이들이 다치는 것은 그들 자신의 책임이니 신경 쓰지 말라고 단호하게 말한다."
+			},
+			"path": "hard",
+			"mbti": "ST",
+			"flag": "cold_shoulder_approach",
+			"effects": {
+				"gold": 50,
+				"fighting": 10,
+				"echo": -5
+			},
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "당신의 단호한 말에 아주머니는 잠시 주춤하다, 이내 고개를 끄덕이며 한숨을 내쉰다."
+					}
+				},
+				{
+					"speaker": "pojangmacha_owner",
+					"content": {
+						"korean": "그래, 맞지. 내 코가 석 잔데 남의 자식 걱정할 때가 아니지..."
+					}
+				},
+				{
+					"speaker": "dax",
+					"content": {
+						"korean": "아주머니가 좀 서운해 보이시지만, 당신 말에도 일리가 있긴 합니다."
+					}
+				}
+			],
+			"risk": {
+				"chance": "high",
+				"bad": {
+					"effects": {
+						"gold": -20
+					},
+					"reward": [],
+					"result": [
+						{
+							"speaker": "narrator",
+							"content": {
+								"korean": "당신의 단호한 말에 아주머니는 오히려 당신에게 화를 내며 잔소리를 퍼붓는다."
+							}
+						},
+						{
+							"speaker": "pojangmacha_owner",
+							"content": {
+								"korean": "사람이라면 인정이라는 게 있어야지! 당신은 어째 그렇게 인정머리가 없어!"
+							}
+						},
+						{
+							"speaker": "dax",
+							"content": {
+								"korean": "아주머니 얼굴이 불만으로 가득하네요. 그래도 지갑은 안전합니다."
+							}
+						}
+					]
+				}
+			}
+		},
+		{
+			"text": {
+				"korean": "아주머니에게 이 골목의 안전을 책임지겠다고 말하며 젊은이들을 위한 해결책을 제시한다."
+			},
+			"path": "stat",
+			"mbti": "TJ",
+			"require": {
+				"stat": "community",
+				"op": ">=",
+				"value": 40
+			},
+			"flag": "alley_guardian",
+			"effects": {
+				"echo": 10,
+				"community": 20,
+				"reason": -10
+			},
+			"reward": [
+				"intelligence_up"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "당신이 골목 전체를 아우르는 해결책을 제시하자, 아주머니는 감탄하며 당신에게 고마움을 표한다."
+					}
+				},
+				{
+					"speaker": "pojangmacha_owner",
+					"content": {
+						"korean": "역시 동네를 아끼는 마음이 남다르구먼! 당신이라면 이 골목을 믿고 맡길 수 있겠어!"
+					}
+				},
+				{
+					"speaker": "dax",
+					"content": {
+						"korean": "와, 아주머니가 당신을 완전히 신뢰하는 눈치인데요? 역시 당신은 이 골목의 영웅입니다!"
+					}
+				}
+			]
+		},
+		{
+			"text": {
+				"korean": "아주머니에게 젊은이들 반창고와 약값으로 쓰라며 돈을 건넨다."
+			},
+			"path": "gold",
+			"mbti": "IN",
+			"require": {
+				"stat": "gold",
+				"op": ">=",
+				"value": 100
+			},
+			"effects": {
+				"echo": 5,
+				"gold": -100
+			},
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "아주머니는 돈을 받아 들고 포장마차 서랍에서 낡은 구급상자를 꺼냈다."
+					}
+				},
+				{
+					"speaker": "pojangmacha_owner",
+					"content": {
+						"korean": "이 돈이면 반창고를 한 상자는 사겠네! 얘들아, 다친 사람 이리 와서 줄 서!"
+					}
+				},
+				{
+					"speaker": "dax",
+					"content": {
+						"korean": "줄이 생각보다 긴데요… 저도 손가락 베였는데 서도 돼요?"
+					}
+				}
+			]
+		}
+	],
+	"tags": [
+		"pojangmacha_owner",
+		"dax"
+	],
+	"_design": {
+		"slot": "D",
+		"kind": "rep",
+		"person": {
+			"id": "pojangmacha_owner",
+			"name": "포장마차 아주머니",
+			"role": "골목 포장마차 주인"
+		},
+		"wants": "아주머니는 골목 건너편에서 젊은이들이 다치는 것을 보고 걱정하며 당신에게 도움을 청한다.",
+		"rule_link": "포장마차 아주머니의 걱정만 듣고 젊은이들을 무작정 도울지, 아니면 사정을 먼저 들어볼지 결정한다.",
+		"rep": "community+",
+		"events": {},
+		"flags": {
+			"youth_rebellion_threat": {
+				"kind": "bad",
+				"boss_penalty": -1,
+				"label": {
+					"korean": "젊은이들의 반발"
+				},
+				"boss_line": {
+					"korean": "젊은이들이 경리부장의 편에 서서 당신의 길을 막아서며 방해한다."
+				}
+			},
+			"cold_shoulder_approach": {
+				"kind": "good",
+				"boss_penalty": 1,
+				"label": {
+					"korean": "냉정한 태도"
+				},
+				"boss_choice": {
+					"korean": "당신의 냉정한 태도 덕분에 경리부장이 당신을 얕잡아 보고 방심하다가 빈틈을 보인다."
+				}
+			},
+			"alley_guardian": {
+				"kind": "good",
+				"boss_penalty": 2,
+				"label": {
+					"korean": "골목의 수호자"
+				},
+				"boss_choice": {
+					"korean": "아주머니가 당신을 골목의 수호자로 칭하며 경리부장의 은신처를 정확히 알려준다."
+				}
+			}
+		}
+	}
+}

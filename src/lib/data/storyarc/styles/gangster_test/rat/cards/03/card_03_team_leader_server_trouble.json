@@ -1,0 +1,350 @@
+{
+	"id": "card_03_team_leader_server_trouble",
+	"title": {
+		"korean": "긴급 보고서"
+	},
+	"intensity": "calm",
+	"after_story": 7,
+	"before_story": 9,
+	"condition": {
+		"leaning": "fighting-",
+		"among": [
+			"fighting-",
+			"fighting+",
+			"community-",
+			"community+",
+			"reason-",
+			"reason+"
+		],
+		"min": 20
+	},
+	"urgency": 8,
+	"leaning": "fighting-",
+	"background_tags": [
+		"corridor",
+		"night",
+		"dim_light",
+		"empty",
+		"tense"
+	],
+	"background_image": "https://imagedelivery.net/WTEqQNGFb-l-IHS6IGnzUQ/7f073e80-d30e-4f93-1b34-d402243d9000/public",
+	"dialogue": [
+		{
+			"speaker": "hoegye_teamjang",
+			"content": {
+				"korean": "크흠... 저기, 당신이 그 어려운 이웃을 그냥 못 지나친다는 분이시죠?"
+			}
+		},
+		{
+			"speaker": "narrator",
+			"content": {
+				"korean": "팀장이 안경을 고쳐 쓰고 서버실 문을 흘깃 본다."
+			}
+		},
+		{
+			"speaker": "hoegye_teamjang",
+			"content": {
+				"korean": "방금 서버실 안에서 뭔가 툭, 하고 떨어지는 소리가 났습니다만... 제 착각일 수도 있고요."
+			}
+		},
+		{
+			"speaker": "dax",
+			"content": {
+				"korean": "네? 뭔가 떨어졌다고요?"
+			}
+		},
+		{
+			"speaker": "hoegye_teamjang",
+			"content": {
+				"korean": "저야 야근 마치고 퇴근하는 길이라... 괜한 오지랖일까 싶어 망설였습니다만."
+			}
+		}
+	],
+	"choices": [
+		{
+			"text": {
+				"korean": "팀장의 말을 믿고 서버실 문 안에서 들린 소리에 대해 조심스럽게 묻는다."
+			},
+			"path": "easy",
+			"mbti": "EN",
+			"flag": "server_paper_clue",
+			"effects": {
+				"echo": 10,
+				"community": 20
+			},
+			"reward": [
+				"attack_down"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "당신이 조심스럽게 묻자 팀장이 안도하며 고개를 끄덕인다."
+					}
+				},
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "팀장이 서랍장 아래에 떨어진 서류 뭉치를 가리킨다."
+					}
+				},
+				{
+					"speaker": "dax",
+					"content": {
+						"korean": "저게 뭐죠? 간부님이 흘리신 건가요?"
+					}
+				}
+			],
+			"risk": {
+				"chance": "mid",
+				"bad": {
+					"effects": {
+						"gold": -30
+					},
+					"reward": [],
+					"result": [
+						{
+							"speaker": "narrator",
+							"content": {
+								"korean": "당신이 조심스럽게 묻자 팀장이 당황하며 손사래를 친다."
+							}
+						},
+						{
+							"speaker": "narrator",
+							"content": {
+								"korean": "팀장이 발밑에 떨어진 종이를 주우려다 비틀거리며 복도에 있던 물통을 엎지른다."
+							}
+						},
+						{
+							"speaker": "dax",
+							"content": {
+								"korean": "아이고, 저런! 물에 젖으면 안 될 서류였으면 큰일 날 뻔했네요!"
+							}
+						}
+					]
+				}
+			}
+		},
+		{
+			"text": {
+				"korean": "팀장의 말을 무시하고, 서버실 문이 잠겨 있으니 괜찮다고 말한다."
+			},
+			"path": "hard",
+			"mbti": "ST",
+			"flag": "ignore_team_leader",
+			"effects": {
+				"echo": -5,
+				"fighting": -20
+			},
+			"reward": [
+				"defense_up"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "당신이 문이 잠겨 있다고 말하자 팀장이 입술을 삐죽이며 툴툴거린다."
+					}
+				},
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "팀장은 당신을 뒤로하고 혼잣말로 중얼거리며 복도 끝으로 사라진다."
+					}
+				},
+				{
+					"speaker": "dax",
+					"content": {
+						"korean": "저러다 복도 끝에서 혼자 넘어지겠어요."
+					}
+				}
+			],
+			"risk": {
+				"chance": "high",
+				"bad": {
+					"effects": {
+						"gold": -20
+					},
+					"reward": [],
+					"result": [
+						{
+							"speaker": "narrator",
+							"content": {
+								"korean": "당신이 문이 잠겨 있다고 말하자 팀장이 당신을 빤히 쳐다본다."
+							}
+						},
+						{
+							"speaker": "narrator",
+							"content": {
+								"korean": "팀장이 갑자기 큰 소리로 한숨을 쉬며 복도에 앉아 쉬던 다른 직원을 놀라게 한다."
+							}
+						},
+						{
+							"speaker": "dax",
+							"content": {
+								"korean": "저분 왜 저러시죠? 혹시 저희 때문에 화나신 건가요?"
+							}
+						}
+					]
+				}
+			}
+		},
+		{
+			"text": {
+				"korean": "팀장의 불안한 표정을 읽고, 그가 진정할 수 있도록 따뜻한 말을 건넨다."
+			},
+			"path": "stat",
+			"mbti": "IF",
+			"require": {
+				"stat": "fighting",
+				"op": "<=",
+				"value": -40
+			},
+			"flag": "team_leader_usb",
+			"effects": {
+				"echo": 15,
+				"community": 30,
+				"fighting": -10
+			},
+			"reward": [
+				"intelligence_up"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "당신의 따뜻한 말에 팀장이 놀란 듯 눈을 깜빡인다."
+					}
+				},
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "팀장이 서버실 문을 열고 안으로 들어가 떨어진 작은 USB를 당신에게 건넨다."
+					}
+				},
+				{
+					"speaker": "dax",
+					"content": {
+						"korean": "와, 팀장님 덕분에 중요한 걸 찾았어요!"
+					}
+				}
+			]
+		},
+		{
+			"text": {
+				"korean": "팀장이 입고 있던 야근 조끼를 빼앗아 입고, 서버실 문을 지키는 척한다."
+			},
+			"path": "fun",
+			"mbti": "EP",
+			"effects": {
+				"echo": 5,
+				"reason": -20
+			},
+			"reward": [
+				"stun"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "당신이 갑자기 조끼를 빼앗자 팀장이 당황하며 뒷걸음질 친다."
+					}
+				},
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "당신은 조끼를 입고 서버실 문 앞에서 엉덩이를 흔들며 경비 자세를 취한다."
+					}
+				},
+				{
+					"speaker": "dax",
+					"content": {
+						"korean": "어... 저게 경비 자세인가요? 팀장님 조끼가 잘 어울리시네요!"
+					}
+				}
+			],
+			"risk": {
+				"chance": "low",
+				"bad": {
+					"effects": {
+						"gold": -50
+					},
+					"reward": [],
+					"result": [
+						{
+							"speaker": "narrator",
+							"content": {
+								"korean": "당신이 야근 조끼를 빼앗자 팀장이 놀라 주춤거린다."
+							}
+						},
+						{
+							"speaker": "narrator",
+							"content": {
+								"korean": "조끼 주머니에서 팀장의 점심으로 보이는 샌드위치가 튀어나와 복도 바닥에 떨어진다."
+							}
+						},
+						{
+							"speaker": "dax",
+							"content": {
+								"korean": "아이고, 팀장님 점심이... 배고프셨을 텐데!"
+							}
+						}
+					]
+				}
+			}
+		}
+	],
+	"tags": [
+		"hoegye_teamjang",
+		"dax"
+	],
+	"_design": {
+		"slot": "D",
+		"kind": "rep",
+		"person": {
+			"id": "hoegye_teamjang",
+			"name": "회계팀 팀장",
+			"role": "회계팀 팀장"
+		},
+		"wants": "서버실에서 수상한 활동을 목격하고, 협력적인 해결사인 당신이 이를 해결해주기를 바란다.",
+		"rule_link": "팀장이 본 것이 정말 해커 간부의 소행인지, 아니면 다른 증거를 찾아야 할지 결정해야 한다.",
+		"rep": "fighting-",
+		"events": {},
+		"flags": {
+			"server_paper_clue": {
+				"kind": "bad",
+				"boss_penalty": -1,
+				"label": {
+					"korean": "서버실 서류"
+				},
+				"boss_line": {
+					"korean": "해커 간부가 흘린 서류 뭉치로 인해 주의가 산만해진다."
+				}
+			},
+			"ignore_team_leader": {
+				"kind": "good",
+				"boss_penalty": 1,
+				"label": {
+					"korean": "팀장 무시"
+				},
+				"boss_choice": {
+					"korean": "팀장의 불평 소리가 계속 귓가에 맴돌아 집중하기 어렵다."
+				}
+			},
+			"team_leader_usb": {
+				"kind": "good",
+				"boss_penalty": 2,
+				"label": {
+					"korean": "팀장의 USB"
+				},
+				"boss_choice": {
+					"korean": "팀장이 찾아준 USB 덕분에 해커 간부의 약점을 미리 파악한다."
+				}
+			}
+		}
+	}
+}

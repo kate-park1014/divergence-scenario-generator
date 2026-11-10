@@ -1,0 +1,356 @@
+{
+	"id": "card_05_wavering_line",
+	"title": {
+		"korean": "흔들리는 경계선"
+	},
+	"intensity": "calm",
+	"after_story": 7,
+	"before_story": 9,
+	"condition": {
+		"leaning": "fighting+",
+		"among": [
+			"fighting-",
+			"fighting+",
+			"community-",
+			"community+",
+			"reason-",
+			"reason+"
+		],
+		"min": 20
+	},
+	"urgency": 8,
+	"leaning": "fighting+",
+	"background_tags": [
+		"breakwater",
+		"dawn",
+		"foggy",
+		"empty",
+		"anxious"
+	],
+	"background_image": "https://imagedelivery.net/WTEqQNGFb-l-IHS6IGnzUQ/d67905ec-722f-4cee-80f4-0b19d0d93d00/public",
+	"dialogue": [
+		{
+			"speaker": "narrator",
+			"content": {
+				"korean": "등대 앞 방파제에 선 경호팀장이 당신을 보자마자 자세를 흐트러뜨리며 쩔쩔맨다."
+			}
+		},
+		{
+			"speaker": "security_team_leader",
+			"content": {
+				"korean": "당신이 그… 어려운 사람을 외면하지 않는다는 해결사들이군요. 실은… 규정 문제로 고민이 있습니다."
+			}
+		},
+		{
+			"speaker": "dax",
+			"content": {
+				"korean": "규정이라면 칼 같던 분이 왜 저러지?"
+			}
+		},
+		{
+			"speaker": "security_team_leader",
+			"content": {
+				"korean": "등대 진입을 허가할 수도, 그렇다고 막을 수도 없는… 난처한 상황입니다. 부디 현명한 조언을…!"
+			}
+		}
+	],
+	"choices": [
+		{
+			"text": {
+				"korean": "경호팀장의 고민을 들어주고, 규정보다는 비서님의 안전이 우선이라 조언한다."
+			},
+			"path": "easy",
+			"mbti": "SF",
+			"flag": "security_relief",
+			"effects": {
+				"fighting": 20,
+				"echo": 5
+			},
+			"reward": [
+				"attack_up"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "당신의 조언에 경호팀장이 고개를 끄덕이며 안도의 한숨을 쉰다."
+					}
+				},
+				{
+					"speaker": "security_team_leader",
+					"content": {
+						"korean": "하아… 역시 당신은 현명하십니다. 이 조언대로… 처리하겠습니다."
+					}
+				},
+				{
+					"speaker": "dax",
+					"content": {
+						"korean": "너무 쉽게 믿는 거 아니에요? 뭔가 찜찜한데!"
+					}
+				}
+			],
+			"risk": {
+				"chance": "mid",
+				"bad": {
+					"effects": {
+						"gold": -40
+					},
+					"reward": [],
+					"result": [
+						{
+							"speaker": "narrator",
+							"content": {
+								"korean": "당신의 조언을 듣던 경호팀장이 갑자기 얼굴이 파래진다."
+							}
+						},
+						{
+							"speaker": "security_team_leader",
+							"content": {
+								"korean": "아뿔싸! 그 조언은… 제게 치명적인 규정 위반이 됩니다!"
+							}
+						},
+						{
+							"speaker": "dax",
+							"content": {
+								"korean": "아이고! 도와주려다 괜히 망했잖아요!"
+							}
+						}
+					]
+				}
+			}
+		},
+		{
+			"text": {
+				"korean": "경호팀장의 진짜 고민이 무엇인지, 무엇 때문에 규정을 어기려 하는지 캐묻는다."
+			},
+			"path": "hard",
+			"mbti": "TJ",
+			"flag": "security_secret",
+			"effects": {
+				"echo": -5,
+				"fighting": -15,
+				"reason": 10
+			},
+			"reward": [
+				"intelligence_up"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "당신의 날카로운 질문에 경호팀장이 등줄기에 식은땀을 흘린다."
+					}
+				},
+				{
+					"speaker": "security_team_leader",
+					"content": {
+						"korean": "실은… 4화 경호실장님의 지시로 등대 주변을 감시 중이었습니다."
+					}
+				},
+				{
+					"speaker": "security_team_leader",
+					"content": {
+						"korean": "비서님께 직접 들으셔야 할 이야기가 있습니다."
+					}
+				},
+				{
+					"speaker": "dax",
+					"content": {
+						"korean": "4화 경호실장님? 뭔가 숨기는 게 있었나 봐요!"
+					}
+				}
+			],
+			"risk": {
+				"chance": "high",
+				"bad": {
+					"effects": {
+						"gold": -20
+					},
+					"reward": [],
+					"result": [
+						{
+							"speaker": "narrator",
+							"content": {
+								"korean": "당신의 날카로운 질문에 경호팀장이 당황한 기색으로 뒷걸음질 친다."
+							}
+						},
+						{
+							"speaker": "security_team_leader",
+							"content": {
+								"korean": "으아악! 묻지 마십시오! 제 비밀은… 제 전용 빗으로 하루 세 번 머리를 빗는다는 겁니다!"
+							}
+						},
+						{
+							"speaker": "dax",
+							"content": {
+								"korean": "저런 엉뚱한 걸 불어버리다니! 쓸데없는 소리만 듣고 말았네!"
+							}
+						}
+					]
+				}
+			}
+		},
+		{
+			"text": {
+				"korean": "경호팀장의 어깨를 두드리며, 어떤 사정이든 함께 해결해 주겠다고 다독인다."
+			},
+			"path": "stat",
+			"mbti": "NF",
+			"require": {
+				"stat": "fighting",
+				"op": ">=",
+				"value": 40
+			},
+			"flag": "security_confession",
+			"effects": {
+				"echo": 10,
+				"community": 10,
+				"fighting": 25
+			},
+			"reward": [
+				"defense_up"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "당신의 온화한 태도에 경호팀장이 감격한 표정으로 입을 연다."
+					}
+				},
+				{
+					"speaker": "security_team_leader",
+					"content": {
+						"korean": "감사합니다! 실은 4화 경호실장님께서…"
+					}
+				},
+				{
+					"speaker": "security_team_leader",
+					"content": {
+						"korean": "등대에서 비서님을 몰래 지켜보라고 하셨습니다. 저도 이 상황이 영 불편합니다."
+					}
+				},
+				{
+					"speaker": "dax",
+					"content": {
+						"korean": "경호실장님이 비서님을 감시한다고요? 왜?"
+					}
+				}
+			]
+		},
+		{
+			"text": {
+				"korean": "규정 고민에 빠진 경호팀장의 흐트러진 머리를 직접 쓰다듬어 정리해 준다."
+			},
+			"path": "fun",
+			"mbti": "EP",
+			"effects": {
+				"echo": 15,
+				"reason": -20
+			},
+			"reward": [
+				"cooldown_reset"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "당신의 손길에 경호팀장이 얼어붙은 듯 굳어버린다. 그의 완벽하게 고정된 머리가 일순간 흐트러진다."
+					}
+				},
+				{
+					"speaker": "security_team_leader",
+					"content": {
+						"korean": "제, 제 머리는…! 이, 이런 불경한…!"
+					}
+				},
+				{
+					"speaker": "dax",
+					"content": {
+						"korean": "푸하하! 경호팀장님 완전 얼음 됐네! 저렇게 당황하는 거 처음 봐!"
+					}
+				}
+			],
+			"risk": {
+				"chance": "low",
+				"bad": {
+					"reward": [
+						"move_range_down"
+					],
+					"result": [
+						{
+							"speaker": "narrator",
+							"content": {
+								"korean": "당신이 경호팀장의 머리를 쓰다듬으려 하자, 그는 반사적으로 몸을 피한다."
+							}
+						},
+						{
+							"speaker": "security_team_leader",
+							"content": {
+								"korean": "으아악! 제 머리에 손대지 마십시오! 규정 위반입니다!"
+							}
+						},
+						{
+							"speaker": "dax",
+							"content": {
+								"korean": "너무 놀라서 도망가 버렸네! 어떡해요?"
+							}
+						}
+					]
+				}
+			}
+		}
+	],
+	"tags": [
+		"security_team_leader",
+		"dax"
+	],
+	"_design": {
+		"slot": "D",
+		"kind": "rep",
+		"person": {
+			"id": "security_team_leader",
+			"name": "경호팀장",
+			"role": "경호팀장"
+		},
+		"wants": "등대 진입 규정을 어기는 것에 대한 조언을 구한다.",
+		"rule_link": "등대 진입을 막는 인물의 부탁을 들어주기 전에 그의 진짜 사정을 묻는다.",
+		"rep": "fighting+",
+		"events": {},
+		"flags": {
+			"security_relief": {
+				"kind": "bad",
+				"boss_penalty": -1,
+				"label": {
+					"korean": "경호팀장 안도"
+				},
+				"boss_line": {
+					"korean": "경호팀장이 당신의 조언을 따르다 실수를 저질러, 방 10에서 불리한 상황이 발생합니다."
+				}
+			},
+			"security_secret": {
+				"kind": "good",
+				"boss_penalty": 1,
+				"label": {
+					"korean": "경호팀장 비밀"
+				},
+				"boss_choice": {
+					"korean": "경호팀장이 4화 경호실장의 비밀 지시를 폭로하여, 방 10에서 유리한 정보를 얻습니다."
+				}
+			},
+			"security_confession": {
+				"kind": "good",
+				"boss_penalty": 2,
+				"label": {
+					"korean": "경호팀장 고백"
+				},
+				"boss_choice": {
+					"korean": "경호팀장이 4화 경호실장의 감시 지시를 고백하여, 방 10에서 유리한 상황을 만듭니다."
+				}
+			}
+		}
+	}
+}

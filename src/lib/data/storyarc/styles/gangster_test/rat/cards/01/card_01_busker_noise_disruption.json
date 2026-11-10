@@ -1,0 +1,294 @@
+{
+	"id": "card_01_busker_noise_disruption",
+	"title": {
+		"korean": "골목 어귀의 소음"
+	},
+	"intensity": "calm",
+	"after_story": 7,
+	"before_story": 9,
+	"condition": {
+		"leaning": "reason-",
+		"among": [
+			"fighting-",
+			"fighting+",
+			"community-",
+			"community+",
+			"reason-",
+			"reason+"
+		],
+		"min": 20
+	},
+	"urgency": 8,
+	"leaning": "reason-",
+	"background_tags": [
+		"alley",
+		"night",
+		"streetlamp",
+		"buskers",
+		"noisy"
+	],
+	"background_image": "https://imagedelivery.net/WTEqQNGFb-l-IHS6IGnzUQ/be4294df-122b-432f-5727-1a427b1d8100/public",
+	"dialogue": [
+		{
+			"speaker": "narrator",
+			"content": {
+				"korean": "골목 어귀, 포장마차 아주머니가 인상을 찌푸린 채 귀를 막고 있다."
+			}
+		},
+		{
+			"speaker": "pojangmacha_owner",
+			"content": {
+				"korean": "당신이 그 소문 자자한, 골목의 질서를 바로잡는 해결사 맞죠?"
+			}
+		},
+		{
+			"speaker": "pojangmacha_owner",
+			"content": {
+				"korean": "저기 저 버스커 좀 어떻게 해 봐요. 밤마다 시끄럽게 노래 불러서 손님 다 도망가게 생겼어!"
+			}
+		},
+		{
+			"speaker": "dax",
+			"content": {
+				"korean": "으음, 밤늦게까지 노래 소리가 울려 퍼지면 좀 시끄럽긴 하겠네요."
+			}
+		},
+		{
+			"speaker": "pojangmacha_owner",
+			"content": {
+				"korean": "우리 골목은 원래 조용한 곳이었는데, 저 녀석들 때문에 장사가 안 돼!"
+			}
+		}
+	],
+	"choices": [
+		{
+			"text": {
+				"korean": "골목의 조용한 분위기를 해치지 말라며 버스커에게 떠나라고 경고한다"
+			},
+			"path": "easy",
+			"mbti": "TJ",
+			"flag": "busker_loud_distraction",
+			"effects": {
+				"reason": 15,
+				"gold": 100
+			},
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "당신은 버스커에게 골목의 조용한 분위기를 해치지 말라고 경고하자, 그들은 순순히 자리를 뜬다."
+					}
+				},
+				{
+					"speaker": "pojangmacha_owner",
+					"content": {
+						"korean": "아이고, 속이 다 시원하네! 역시 소문대로 깔끔하게 처리하는 분이야!"
+					}
+				},
+				{
+					"speaker": "dax",
+					"content": {
+						"korean": "당신의 단호함에 버스커들이 꼼짝도 못 하네요! 저도 저런 카리스마가 있었으면 좋겠습니다."
+					}
+				}
+			],
+			"risk": {
+				"chance": "mid",
+				"bad": {
+					"effects": {
+						"gold": -30
+					},
+					"reward": [],
+					"result": [
+						{
+							"speaker": "narrator",
+							"content": {
+								"korean": "당신은 버스커에게 떠나라고 경고했지만, 그들은 당신을 무시하고 더 큰 소리로 노래하기 시작한다."
+							}
+						},
+						{
+							"speaker": "narrator",
+							"content": {
+								"korean": "골목을 지나던 사람들까지 구경꾼으로 몰려들어 상황은 더욱 소란스러워진다."
+							}
+						},
+						{
+							"speaker": "pojangmacha_owner",
+							"content": {
+								"korean": "저런 배짱도 없는 녀석들이! 내 장사만 망쳤잖아!"
+							}
+						},
+						{
+							"speaker": "dax",
+							"content": {
+								"korean": "아이고, 괜히 시비만 붙었네요! 이럴 바엔 그냥 지나갈 걸 그랬습니다!"
+							}
+						}
+					]
+				}
+			}
+		},
+		{
+			"text": {
+				"korean": "버스커에게 다가가 그들이 밤늦게까지 노래하는 이유를 조용히 물어본다"
+			},
+			"path": "hard",
+			"mbti": "FP",
+			"flag": "busker_story_revealed",
+			"effects": {
+				"community": 10,
+				"reason": -15
+			},
+			"reward": [
+				"defense_up"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "당신은 버스커에게 다가가 그들의 사정을 묻자, 그들은 아픈 동생의 병원비를 벌기 위해 노래한다고 털어놓는다."
+					}
+				},
+				{
+					"speaker": "pojangmacha_owner",
+					"content": {
+						"korean": "세상에, 그런 딱한 사정이 있었구나! 괜히 오해했네!"
+					}
+				},
+				{
+					"speaker": "dax",
+					"content": {
+						"korean": "섣불리 판단하지 않아서 다행입니다! 저도 모르게 마음이 아파지네요."
+					}
+				}
+			],
+			"risk": {
+				"chance": "high",
+				"bad": {
+					"effects": {
+						"gold": -20
+					},
+					"reward": [],
+					"result": [
+						{
+							"speaker": "narrator",
+							"content": {
+								"korean": "당신은 버스커에게 다가가 말을 걸었지만, 그들은 당신을 경계하며 대꾸조차 하지 않는다."
+							}
+						},
+						{
+							"speaker": "narrator",
+							"content": {
+								"korean": "오히려 당신을 귀찮게 여기며 더 큰 소리로 음악을 틀어버린다."
+							}
+						},
+						{
+							"speaker": "pojangmacha_owner",
+							"content": {
+								"korean": "쯧쯧, 괜히 오지랖만 부리다니!"
+							}
+						},
+						{
+							"speaker": "dax",
+							"content": {
+								"korean": "아이고, 저 사람들 왜 저렇게 고집이 셀까요? 괜히 말 걸었다가 귀만 아파지네요!"
+							}
+						}
+					]
+				}
+			}
+		},
+		{
+			"text": {
+				"korean": "단호한 눈빛으로 버스커를 응시하며, 이 골목의 '규칙'을 어기지 말라고 무언의 압력을 보낸다"
+			},
+			"path": "stat",
+			"mbti": "ST",
+			"require": {
+				"stat": "reason",
+				"op": "<=",
+				"value": -40
+			},
+			"flag": "rule_of_silence",
+			"effects": {
+				"fighting": 15,
+				"reason": -10
+			},
+			"reward": [
+				"shield"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "당신은 단호한 눈빛으로 버스커를 응시하자, 그들은 당신의 평판을 알아보고 조용히 자리를 뜬다."
+					}
+				},
+				{
+					"speaker": "pojangmacha_owner",
+					"content": {
+						"korean": "역시 '규칙의 해결사'답게, 말 한마디로 상황을 정리하시네!"
+					}
+				},
+				{
+					"speaker": "dax",
+					"content": {
+						"korean": "당신의 명성이 이 골목에도 자자하네요! 역시 사람은 평소 행실이 중요한가 봅니다!"
+					}
+				}
+			]
+		}
+	],
+	"tags": [
+		"pojangmacha_owner",
+		"dax"
+	],
+	"_design": {
+		"slot": "D",
+		"kind": "rep",
+		"person": {
+			"id": "pojangmacha_owner",
+			"name": "포장마차 아주머니",
+			"role": "골목 포장마차 주인"
+		},
+		"wants": "골목 어귀에서 시끄러운 소리로 손님을 쫓는 버스커를 어떻게 해달라고 한다.",
+		"rule_link": "시끄러운 버스커를 골목 질서에 위배된다고 바로 쫓아낼지, 그들의 사정을 먼저 들어볼지 선택합니다.",
+		"rep": "reason-",
+		"events": {},
+		"flags": {
+			"busker_loud_distraction": {
+				"kind": "bad",
+				"boss_penalty": -1,
+				"label": {
+					"korean": "버스커 소란"
+				},
+				"boss_line": {
+					"korean": "경리부장이 버스커들의 시끄러운 음악 소리를 이용해 당신의 목소리를 묻어버리고 도주할 시간을 번다."
+				}
+			},
+			"busker_story_revealed": {
+				"kind": "good",
+				"boss_penalty": 1,
+				"label": {
+					"korean": "버스커 사연"
+				},
+				"boss_choice": {
+					"korean": "경리부장이 거짓말로 동정심을 유발하려 하자, 버스커가 나타나 그의 거짓말을 폭로하며 당신에게 유리한 증언을 한다."
+				}
+			},
+			"rule_of_silence": {
+				"kind": "good",
+				"boss_penalty": 2,
+				"label": {
+					"korean": "침묵의 규칙"
+				},
+				"boss_choice": {
+					"korean": "경리부장이 시끄러운 소리로 당신을 방해하려 하지만, 당신의 눈빛에 압도되어 그의 계획이 실패한다."
+				}
+			}
+		}
+	}
+}

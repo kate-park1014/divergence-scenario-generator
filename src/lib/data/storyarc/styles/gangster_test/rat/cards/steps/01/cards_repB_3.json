@@ -1,390 +1,399 @@
 {
 	"cards": [
 		{
-			"wants": "주인공의 규칙을 지키는 평판을 알고, 부두 규칙을 어기고 외상을 갚지 않는 얌체 손님을 처리해달라고 부탁합니다.",
+			"rule_link": "정확한 서류 확인 없이 남의 말만 듣고 판단했다간 되레 엉뚱한 사람을 다치게 할 수 있습니다.",
+			"key": "ajumma_debt_dispute",
 			"no": 1,
-			"background_tags": [
-				"pier",
-				"night",
-				"fog",
-				"sparse",
-				"tense"
-			],
-			"rule_link": "밤길에 벌어진 수상한 상황을 보고 바로 판단하기보다, 아주머니의 말을 먼저 듣고 규칙을 지켜 사건을 해결하려는 선택지를 제공합니다.",
-			"person": {
-				"id": "restaurant_owner",
-				"role": "컨테이너 식당 주인",
-				"name": "식당 아주머니"
-			},
-			"title": "규칙이 먼저 아닙니까",
-			"key": "rule_abiding_request",
-			"dialogue": [
-				{
-					"speaker": "restaurant_owner",
-					"text": "당신이 그 융통성 없이 원칙대로 일 처리한다는 분이시죠? 아주머니 좀 도와줘 봐요."
-				},
-				{
-					"speaker": "dax",
-					"text": "아주머니, 저희는 지금 좀 바쁜데..."
-				},
-				{
-					"speaker": "restaurant_owner",
-					"text": "아유, 잠시만요! 저기 저 양반 좀 봐요."
-				},
-				{
-					"speaker": "restaurant_owner",
-					"text": "매번 외상만 하고 돈은 절대 안 갚는 얌체 손님이에요. 부두 규칙도 다 무시하고!"
-				},
-				{
-					"speaker": "restaurant_owner",
-					"text": "당신이 가서 규칙대로 혼쭐 좀 내주면 좋겠는데..."
-				}
-			],
+			"title": "아주머니의 외상값 장부",
+			"wants": "외상값을 떼먹으려는 건달들을 혼내달라고 한다.",
 			"choices": [
 				{
 					"result": [
 						{
-							"text": "당신이 살벌한 표정으로 장부를 내밀자 손님은 혼비백산하며 외상값을 갚았습니다.",
+							"text": "당신이 외상 장부를 펼쳐 보이며 건달들에게 돈을 내라고 하자, 그들이 마지못해 지갑을 연다.",
 							"speaker": "narrator"
 						},
 						{
-							"text": "아이구, 시원하다! 역시 당신 같은 분이 최고야!",
-							"speaker": "restaurant_owner"
+							"text": "하지만 그들은 주변에 당신이 시비를 건 해결사라며 헛소문을 퍼뜨리기 시작한다.",
+							"speaker": "narrator"
 						},
 						{
-							"text": "하지만 소문이 벌써 안 좋게 돌 것 같은데요...",
+							"text": "저 자식들, 돈은 냈으면서 괜히 심술이 난 모양이네요.",
 							"speaker": "dax"
 						}
 					],
 					"path": "easy",
+					"text": "아주머니의 장부를 확인하고 건달들에게 지불을 요구한다.",
 					"effects": {
-						"fighting": -10,
-						"gold": 50
+						"gold": 100,
+						"community": -10
 					},
-					"text": "외상 장부를 들고 가게로 들어가 외상값을 독촉한다.",
+					"risk_bad": {
+						"reward": [],
+						"result": [
+							{
+								"text": "당신이 외상 장부를 펼쳐 보이며 건달들에게 돈을 내라고 하자,",
+								"speaker": "narrator"
+							},
+							{
+								"text": "그들이 돈을 내는 척하며 닥스의 뒷주머니를 슬쩍한다.",
+								"speaker": "narrator"
+							},
+							{
+								"text": "닥스는 뒤늦게 소매치기를 당했음을 알아챈다.",
+								"speaker": "narrator"
+							},
+							{
+								"text": "어? 제 지갑이 없어졌네요! 저 자식들이…!",
+								"speaker": "dax"
+							}
+						],
+						"gold": -30
+					},
+					"mbti": "ET",
 					"flag": {
-						"boss_text": "상대에게 유리한 정보가 미리 전달되어 공격이 더 날카로워집니다.",
-						"key": "bad_reputation_spread",
-						"label": "나쁜 소문 확산"
+						"boss_text": "닥스에게 외상값 갚아라 소리가 들려온다.",
+						"label": "외상값 소동",
+						"key": "ajumma_debt_warning"
+					}
+				},
+				{
+					"path": "hard",
+					"risk_bad": {
+						"gold": -20,
+						"reward": [],
+						"result": [
+							{
+								"text": "당신이 건달들에게 아주머니의 어려운 사정을 설명하며 설득하자, 그들이 마지못해 듣는 척한다.",
+								"speaker": "narrator"
+							},
+							{
+								"speaker": "narrator",
+								"text": "하지만 약속하고 돌아서는가 싶더니, 골목으로 달아나며 아주머니에게 야유를 퍼붓는다."
+							},
+							{
+								"text": "아주머니가 분통을 터뜨린다.",
+								"speaker": "narrator"
+							},
+							{
+								"speaker": "dax",
+								"text": "저런 얄팍한 수에 넘어가다니! 아주머니만 더 화나셨네요."
+							}
+						]
 					},
-					"reward": [],
-					"mbti": "TJ",
+					"reward": [
+						"defense_up"
+					],
+					"result": [
+						{
+							"speaker": "narrator",
+							"text": "당신이 건달들에게 아주머니의 어려운 사정을 설명하고 설득하자, 그들이 고개를 끄덕인다."
+						},
+						{
+							"speaker": "narrator",
+							"text": "건달들은 다음 주까지 외상값을 갚겠다고 약속하며, 아주머니는 어이없다는 듯 혀를 찬다."
+						},
+						{
+							"text": "와, 저런 녀석들이 말을 듣다니, 신기한데요!",
+							"speaker": "dax"
+						}
+					],
+					"text": "건달들에게 아주머니의 사정을 설명하고, 합의점을 찾도록 설득한다.",
+					"effects": {
+						"fighting": 10,
+						"community": 20
+					},
+					"mbti": "FJ",
+					"flag": {
+						"label": "외상값 중재",
+						"boss_text": "당신을 도우려는 건달들이 나타나 적들을 혼란에 빠뜨린다.",
+						"key": "ajumma_debt_solved"
+					}
+				},
+				{
+					"path": "stat",
+					"result": [
+						{
+							"speaker": "narrator",
+							"text": "당신이 장부의 모든 항목을 짚어가며 결제 기한을 정확히 따지자, 건달들이 질려 하며 주섬주섬 돈을 꺼낸다."
+						},
+						{
+							"speaker": "narrator",
+							"text": "아주머니는 그런 당신의 모습에 감탄하며, \"역시 소문대로!\"라고 중얼거린다."
+						},
+						{
+							"text": "부장님… 아니, 여러분이 저런 모습은 또 처음 보네요. 멋집니다!",
+							"speaker": "dax"
+						}
+					],
+					"text": "건달들의 정확한 외상 장부와 결제 기한을 따져 지불을 명한다.",
+					"reward": [
+						"intelligence_up"
+					],
+					"effects": {
+						"echo": 10,
+						"reason": -20
+					},
+					"flag": {
+						"label": "정확한 장부",
+						"boss_text": "장부의 허점을 찾아내 적의 약점을 찌른다.",
+						"key": "ajumma_debt_strict"
+					},
+					"mbti": "TJ"
+				}
+			],
+			"background_tags": [
+				"pier",
+				"night",
+				"dark",
+				"thugs",
+				"tense"
+			],
+			"dialogue": [
+				{
+					"text": "당신이 그… 뭐든 서류대로, 규칙대로 한다고 소문난 해결사죠? 저 건달들 좀 보소.",
+					"speaker": "ajumma"
+				},
+				{
+					"speaker": "ajumma",
+					"text": "저것들이 벌써 한 달째 외상값을 안 내고 있어요. 뻔뻔하게 여기 앉아서 국밥만 축내고!"
+				},
+				{
+					"text": "아주머니, 저희는 지금 급한 일이….",
+					"speaker": "dax"
+				},
+				{
+					"speaker": "ajumma",
+					"text": "급하긴 뭐가 급해요! 저것들 꼴 보기 싫어 죽겠는데! 얼른 가서 장부에 도장 찍어 오라고 해요!"
+				}
+			],
+			"person": {
+				"id": "ajumma",
+				"name": "컨테이너 식당 아주머니",
+				"role": "식당 사장"
+			},
+			"slot": "B",
+			"kind": "rep",
+			"rep_dir": "reason-"
+		},
+		{
+			"choices": [
+				{
+					"effects": {
+						"gold": 80,
+						"fighting": 10
+					},
+					"result": [
+						{
+							"speaker": "narrator",
+							"text": "당신이 냅다 뛰어들어 일꾼들의 젓가락을 빼앗자, 그들이 얼떨떨한 표정으로 싸움을 멈춘다."
+						},
+						{
+							"speaker": "narrator",
+							"text": "일꾼들은 당신에게 화가 났지만, 아주머니는 한시름 놓으며 작은 보답을 건넨다."
+						},
+						{
+							"speaker": "dax",
+							"text": "저 사람들은 이제 저희를 무서워하겠네요. 아주머니는 고맙다고 하시고."
+						}
+					],
+					"flag": {
+						"boss_text": "닥스에게 젓가락을 휘두르지 마세요, 라는 잔소리가 들려온다.",
+						"label": "젓가락 소동",
+						"key": "ajumma_chopstick_brawl"
+					},
+					"mbti": "EN",
+					"path": "easy",
+					"text": "싸우는 일꾼들 사이에 뛰어들어 냅다 젓가락을 빼앗는다.",
+					"risk_bad": {
+						"gold": -40,
+						"reward": [],
+						"result": [
+							{
+								"speaker": "narrator",
+								"text": "당신이 냅다 뛰어들어 일꾼들의 젓가락을 빼앗으려 하자, 그중 한 명이 젓가락을 놓치며 국물 그릇을 엎지른다."
+							},
+							{
+								"text": "아주머니가 비명을 지르며 달려온다.",
+								"speaker": "narrator"
+							},
+							{
+								"text": "아이고, 아주머니 화나셨겠네요! 국밥 값 물어줘야겠어요.",
+								"speaker": "dax"
+							}
+						]
+					}
+				},
+				{
+					"effects": {
+						"community": 10,
+						"reason": 20
+					},
+					"mbti": "IT",
+					"flag": {
+						"key": "ajumma_fight_mediate",
+						"boss_text": "당신의 중재로 적들이 서로 싸우기 시작한다.",
+						"label": "싸움 중재"
+					},
+					"path": "hard",
+					"result": [
+						{
+							"speaker": "narrator",
+							"text": "당신이 싸움의 이유를 차분히 묻자, 일꾼들이 투덜거리며 서로의 주장을 이야기한다."
+						},
+						{
+							"speaker": "narrator",
+							"text": "오해가 풀리자 일꾼들은 민망해하며 서로에게 사과한다. 아주머니는 의외의 광경에 놀란다."
+						},
+						{
+							"speaker": "dax",
+							"text": "우와, 말로 풀다니! 역시 대단하네요."
+						}
+					],
+					"text": "일꾼들에게 싸움의 이유를 차분히 묻고 이야기를 들어본다.",
+					"reward": [
+						"heal"
+					],
 					"risk_bad": {
 						"gold": -20,
 						"result": [
 							{
 								"speaker": "narrator",
-								"text": "당신이 장부를 내밀자 손님은 오히려 적반하장으로 따지며 도망쳤습니다."
+								"text": "당신이 싸움의 이유를 차분히 묻자, 일꾼들이 투덜거리며 서로 자기 말만 한다."
 							},
 							{
-								"speaker": "restaurant_owner",
-								"text": "아이고, 저걸 놓치다니! 괜히 불난 집에 부채질만 한 꼴이잖아!"
+								"text": "하지만 서로 자기 말이 맞다며 목소리를 높이더니, 당신을 향해 왜 한쪽 편을 드냐며 윽박지른다.",
+								"speaker": "narrator"
 							},
 							{
-								"text": "돈도 못 받고 아주머니 잔소리까지 듣게 됐네요...",
-								"speaker": "dax"
+								"text": "싸움이 더 커진다.",
+								"speaker": "narrator"
+							},
+							{
+								"speaker": "dax",
+								"text": "아이고, 괜히 끼어들었다가 봉변을 당하겠어요!"
 							}
 						],
 						"reward": []
 					}
 				},
 				{
-					"result": [
-						{
-							"speaker": "narrator",
-							"text": "손님은 어려운 사정을 털어놓으며 곧 갚겠다고 약속했습니다."
-						},
-						{
-							"text": "아주머니는 좀 섭섭해하시겠지만, 그래도 잘 해결된 것 같아요!",
-							"speaker": "dax"
-						},
-						{
-							"speaker": "narrator",
-							"text": "당신은 아주머니에게 일부를 먼저 받아주고 나머지는 기다려달라고 설득했습니다."
-						}
-					],
-					"mbti": "NF",
-					"text": "외상 손님을 따로 불러 사정을 먼저 들어본다.",
 					"flag": {
-						"label": "이해를 통한 협상",
-						"boss_text": "상대의 허를 찌르는 질문으로 잠시 혼란스럽게 만듭니다.",
-						"key": "understanding_negotiation"
+						"boss_text": "적들이 당신의 말에 웃음을 터뜨리며 방심한다.",
+						"key": "ajumma_fight_joke",
+						"label": "엉뚱한 농담"
 					},
-					"path": "hard",
-					"risk_bad": {
-						"reward": [],
-						"result": [
-							{
-								"text": "당신이 손님에게 다가가자, 손님은 오히려 당신을 밀치며 소란을 피웠습니다.",
-								"speaker": "narrator"
-							},
-							{
-								"text": "아니, 저런 뻔뻔한! 일을 더 키우면 어떡해요!",
-								"speaker": "restaurant_owner"
-							},
-							{
-								"speaker": "dax",
-								"text": "이러다 괜히 우리만 더 곤란해질 것 같아요..."
-							}
-						],
-						"gold": -20
-					},
+					"mbti": "ET",
 					"effects": {
-						"gold": -50,
-						"community": 10
+						"reason": 20,
+						"echo": 10
 					},
-					"reward": [
-						"intelligence_up"
-					]
-				},
-				{
 					"result": [
 						{
-							"text": "당신은 부두 규칙과 식당 규정을 정확히 설명하며 손님에게 당장 갚을 것을 요구했습니다.",
+							"speaker": "narrator",
+							"text": "당신이 뜬금없이 엉뚱한 농담을 던지자, 일꾼들이 싸움을 잊고 폭소를 터뜨린다."
+						},
+						{
+							"text": "아주머니는 어이없다는 듯 고개를 젓지만, 이내 따라 웃는다.",
 							"speaker": "narrator"
 						},
 						{
-							"speaker": "restaurant_owner",
-							"text": "어머, 그렇게 간단하게 해결될 일이었나요? 역시 당신은 달라!"
-						},
-						{
-							"text": "부장님도 저렇게 주판 굴리시듯 정확하시네요!",
+							"text": "하하, 저도 모르게 웃어버렸네요. 싸움이 이렇게 끝날 줄이야!",
 							"speaker": "dax"
 						}
 					],
-					"text": "부두 규칙과 식당 외상 규정을 정확히 설명하며 중재한다.",
-					"flag": {
-						"key": "perfect_rule_interpretation",
-						"label": "완벽한 규칙 해석",
-						"boss_text": "완벽한 규칙 해석으로 상대를 주춤하게 만들어 방어력을 높입니다."
-					},
-					"effects": {
-						"gold": 100,
-						"echo": 10,
-						"reason": -10
-					},
-					"path": "stat",
-					"mbti": "SP",
+					"text": "싸우는 일꾼들에게 엉뚱한 농담을 던져 긴장감을 풀어준다.",
 					"reward": [
-						"defense_up"
-					]
+						"move_range_up"
+					],
+					"path": "stat"
+				},
+				{
+					"risk_bad": {
+						"result": [
+							{
+								"text": "당신이 일꾼들의 젓가락을 빼앗아 아주머니 김치를 한 입씩 먹여주자,",
+								"speaker": "narrator"
+							},
+							{
+								"text": "그들이 콜록거리며 맛없다고 고개를 젓는다.",
+								"speaker": "narrator"
+							},
+							{
+								"speaker": "narrator",
+								"text": "일꾼들은 당신에게 화를 내며, 아주머니는 상한 김치를 내놨다며 당신에게 화를 낸다."
+							},
+							{
+								"speaker": "dax",
+								"text": "아이고, 아주머니 김치가 입맛에 안 맞았나 봐요. 제가 죄송합니다!"
+							}
+						],
+						"reward": [],
+						"gold": -30
+					},
+					"mbti": "SP",
+					"effects": {
+						"gold": 50,
+						"reason": -30
+					},
+					"result": [
+						{
+							"speaker": "narrator",
+							"text": "당신이 일꾼들의 젓가락을 빼앗아 아주머니 김치를 한 입씩 먹여주자, 그들이 싸움을 잊고 김치 맛에 감탄한다."
+						},
+						{
+							"text": "아주머니는 흐뭇한 표정으로 당신에게 \"맛있지?\"라며 국밥 한 그릇을 더 건넨다.",
+							"speaker": "narrator"
+						},
+						{
+							"text": "저 김치가 그렇게 맛있나요? 저도 한 입만…!",
+							"speaker": "dax"
+						}
+					],
+					"path": "fun",
+					"text": "싸우는 일꾼들의 젓가락을 빼앗아 아주머니가 담근 김치를 먹여본다."
 				}
 			],
-			"slot": "B",
-			"kind": "rep",
-			"rep_dir": "reason-"
-		},
-		{
+			"wants": "젓가락을 들고 싸우는 일꾼들을 말려달라고 한다.",
+			"title": "아주머니의 싸움 중재",
+			"key": "ajumma_fight_mediation",
 			"background_tags": [
 				"pier",
 				"night",
-				"fog",
-				"sparse",
-				"mysterious"
+				"dim",
+				"workers",
+				"chaos"
 			],
-			"title": "사정보다 마음이 먼저",
 			"person": {
-				"id": "restaurant_owner",
-				"role": "컨테이너 식당 주인",
-				"name": "식당 아주머니"
+				"id": "ajumma",
+				"name": "컨테이너 식당 아주머니",
+				"role": "식당 사장"
 			},
-			"no": 2,
-			"wants": "주인공의 자유로운 평판을 알고, 융통성 없는 부두 규정 때문에 폐쇄 위기에 처한 영세 노점상을 도와달라고 부탁합니다.",
-			"choices": [
-				{
-					"flag": {
-						"label": "혼란스러운 은신처",
-						"key": "chaotic_hideout",
-						"boss_text": "불필요한 행동으로 시간을 지체하여 기습 공격에 취약해집니다."
-					},
-					"mbti": "EP",
-					"effects": {
-						"reason": 10,
-						"gold": 50
-					},
-					"text": "노점상 물건을 잠시 컨테이너 식당 안으로 옮겨 숨겨준다.",
-					"result": [
-						{
-							"speaker": "narrator",
-							"text": "당신은 노점상 물건을 식당 안으로 급히 옮겨주었습니다. 노점상은 고마워했습니다."
-						},
-						{
-							"speaker": "restaurant_owner",
-							"text": "고마워요! 역시 당신 같은 분이 최고야!"
-						},
-						{
-							"text": "그런데 식당 안이 너무 복잡해졌는데요...",
-							"speaker": "dax"
-						}
-					],
-					"risk_bad": {
-						"result": [
-							{
-								"speaker": "narrator",
-								"text": "물건을 옮기던 중 소동이 일어나 부두 관리인이 다가왔습니다. 노점상은 결국 쫓겨났습니다."
-							},
-							{
-								"text": "아이고, 도와주려다 더 큰일만 만들었네! 내가 못 살아!",
-								"speaker": "restaurant_owner"
-							},
-							{
-								"speaker": "dax",
-								"text": "오히려 상황만 더 나빠진 것 같아요..."
-							}
-						],
-						"reward": [],
-						"gold": -20
-					},
-					"path": "easy"
-				},
-				{
-					"path": "hard",
-					"effects": {
-						"fighting": 10,
-						"gold": -50
-					},
-					"text": "부두 규정을 따르도록 노점상에게 자진 폐쇄를 권고한다.",
-					"result": [
-						{
-							"text": "당신은 노점상에게 규정을 설명하고 자진 폐쇄를 권고했습니다. 노점상은 아쉬워하며 떠났습니다.",
-							"speaker": "narrator"
-						},
-						{
-							"text": "너무 매정하게 구는 거 아니에요? 내 마음이 다 아프네...",
-							"speaker": "restaurant_owner"
-						},
-						{
-							"text": "그래도 규칙은 지켜야죠. 어쩔 수 없는 일입니다.",
-							"speaker": "dax"
-						}
-					],
-					"reward": [
-						"attack_up"
-					],
-					"mbti": "ST",
-					"flag": {
-						"label": "엄격한 규칙 적용",
-						"boss_text": "냉정한 판단으로 상대의 약점을 정확히 파고들어 공격력을 높입니다.",
-						"key": "strict_rule_enforcement"
-					},
-					"risk_bad": {
-						"reward": [],
-						"result": [
-							{
-								"speaker": "narrator",
-								"text": "당신이 규정을 설명하자, 노점상은 억울함을 호소하며 큰 소리로 따지기 시작했습니다."
-							},
-							{
-								"text": "흐읍, 이렇게까지 매정하게 해야겠어요? 내 속이 다 타네!",
-								"speaker": "restaurant_owner"
-							},
-							{
-								"speaker": "dax",
-								"text": "괜히 시선만 집중되는 것 같은데요..."
-							}
-						],
-						"gold": -20
-					}
-				},
-				{
-					"text": "부두 관리인에게 노점상 운영 시간 연장을 건의하고 대안을 제시한다.",
-					"effects": {
-						"reason": 10,
-						"gold": 100,
-						"community": 10
-					},
-					"path": "stat",
-					"mbti": "NP",
-					"flag": {
-						"boss_text": "예측 불가능한 움직임으로 상대를 교란시켜 이동 범위를 넓힙니다.",
-						"key": "creative_solution",
-						"label": "창의적 해결책"
-					},
-					"result": [
-						{
-							"text": "당신은 부두 관리인과 협상하여 노점상이 운영 시간을 조정하는 조건으로 계속 장사할 수 있게 했습니다.",
-							"speaker": "narrator"
-						},
-						{
-							"speaker": "restaurant_owner",
-							"text": "아이고, 이런 방법이! 역시 당신은 달라! 센스가 아주 끝내주네!"
-						},
-						{
-							"speaker": "dax",
-							"text": "정말 기발한데요! 부장님도 이렇게 해결하시면 좋겠네요!"
-						}
-					],
-					"reward": [
-						"move_range_up"
-					]
-				},
-				{
-					"risk_bad": {
-						"reward": [],
-						"result": [
-							{
-								"text": "열심히 팔려던 물건이 그만 손에서 미끄러져 바닥에 떨어져 깨졌습니다.",
-								"speaker": "narrator"
-							},
-							{
-								"speaker": "restaurant_owner",
-								"text": "아이고, 내 눈물 나는 살림살이! 왜 일을 더 만들어요!"
-							},
-							{
-								"text": "도와주시려다가 오히려 손해만 보게 됐네요...",
-								"speaker": "dax"
-							}
-						],
-						"gold": -30
-					},
-					"effects": {
-						"gold": 30,
-						"echo": 10
-					},
-					"text": "노점상 물건을 들고 직접 팔아주며 상황을 모면하려 한다.",
-					"path": "fun",
-					"result": [
-						{
-							"text": "당신은 노점상 물건을 직접 팔겠다며 큰 소리로 홍보하기 시작했습니다.",
-							"speaker": "narrator"
-						},
-						{
-							"speaker": "dax",
-							"text": "어... 저렇게까지 하실 줄은 몰랐는데요..."
-						},
-						{
-							"speaker": "narrator",
-							"text": "지나가던 사람들이 당신의 엉뚱한 모습에 웃음을 터뜨렸지만, 물건은 팔리지 않았습니다."
-						}
-					],
-					"mbti": "IS"
-				}
-			],
-			"rule_link": "밤길에 벌어진 수상한 상황을 보고 바로 판단하기보다, 아주머니의 말을 먼저 듣고 감정적인 사정을 고려해 사건을 해결하려는 선택지를 제공합니다.",
+			"rule_link": "남의 말만 듣고 섣불리 싸움을 말렸다간 되레 당신이 싸움에 휘말릴 수 있습니다.",
 			"dialogue": [
 				{
-					"text": "당신이 그 얽매이지 않고 사람 사정 봐준다는 분이시죠? 저 좀 제발 도와주십시오.",
-					"speaker": "restaurant_owner"
+					"text": "당신이 그… 정해진 틀 없이 시원하게 일 처리한다는 양반이구먼? 저 일꾼들 좀 봐요.",
+					"speaker": "ajumma"
 				},
 				{
-					"text": "아주머니, 저희는 지금 좀 바쁜데...",
-					"speaker": "dax"
+					"text": "저것들이 젓가락 들고 싸우다 국물이라도 엎으면 어째요! 저러다 가게 망하겠네!",
+					"speaker": "ajumma"
 				},
 				{
-					"speaker": "restaurant_owner",
-					"text": "아유, 잠시만요! 저기 저 노점상 좀 봐요. 부두 규정 때문에 곧 쫓겨날 판인데 너무 딱하잖아."
+					"speaker": "dax",
+					"text": "아주머니, 저희는 지금 급한 일이…."
 				},
 				{
-					"speaker": "restaurant_owner",
-					"text": "당신이 어떻게든 융통성을 발휘해서 저 양반 좀 살려주면 좋겠는데..."
+					"text": "급하긴 뭐가 급해요! 저것들 꼴 보기 싫어 죽겠는데! 얼른 가서 확 그냥!",
+					"speaker": "ajumma"
 				}
 			],
-			"key": "heart_driven_plea",
+			"no": 2,
 			"slot": "B",
 			"kind": "rep",
 			"rep_dir": "reason+"
 		}
 	],
 	"errors": [],
-	"prompt_hash": "82390dd93a26fef2e76fbc593feeed683a3b865d"
+	"prompt_hash": "8b69adc2fea35b0e2789f2c475e73251132b9b5e"
 }

@@ -1,0 +1,352 @@
+{
+	"id": "card_03_community_fund_struggle",
+	"title": {
+		"korean": "공동체 기금의 난관"
+	},
+	"intensity": "calm",
+	"after_story": 1,
+	"before_story": 3,
+	"condition": {
+		"leaning": "community+",
+		"among": [
+			"fighting-",
+			"fighting+",
+			"community-",
+			"community+",
+			"reason-",
+			"reason+"
+		],
+		"min": 20
+	},
+	"urgency": 8,
+	"leaning": "community+",
+	"background_tags": [
+		"office",
+		"night",
+		"bright",
+		"empty",
+		"struggling"
+	],
+	"background_image": "https://imagedelivery.net/WTEqQNGFb-l-IHS6IGnzUQ/19262ed2-d440-4ec4-8977-f580a3b06000/public",
+	"dialogue": [
+		{
+			"speaker": "narrator",
+			"content": {
+				"korean": "자료실 입구에서 야근 직원이 땀을 뻘뻘 흘리며 서류 뭉치와 씨름하고 있다."
+			}
+		},
+		{
+			"speaker": "night_accountant",
+			"content": {
+				"korean": "당신이 그… 동네 사람 일이라면 발 벗고 나선다는 해결사죠?"
+			}
+		},
+		{
+			"speaker": "night_accountant",
+			"content": {
+				"korean": "지금은 안 됩니다. 장부가… 장부가 비어 있어서…"
+			}
+		},
+		{
+			"speaker": "dax",
+			"content": {
+				"korean": "저 사람이 혼자서 뭘 저렇게 열심히 하는 걸까요?"
+			}
+		},
+		{
+			"speaker": "night_accountant",
+			"content": {
+				"korean": "이 계산이… 이 계산이 맞지 않습니다! 부두 어르신 기금 장부가 엉망이에요!"
+			}
+		},
+		{
+			"speaker": "narrator",
+			"content": {
+				"korean": "회계팀 야근 직원은 자료실 문을 붙잡은 채 바닥에 흩어진 서류를 가리키며 한숨을 쉰다."
+			}
+		}
+	],
+	"choices": [
+		{
+			"text": {
+				"korean": "공동체 기금 장부의 오류를 함께 해결하겠다고 나서, 당장 도움을 준다."
+			},
+			"path": "easy",
+			"mbti": "SJ",
+			"flag": "accountant_help_fail",
+			"effects": {
+				"echo": 10,
+				"gold": 50,
+				"community": 15
+			},
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "당신이 장부를 살펴보자 야근 직원의 얼굴에 희망이 돈다."
+					}
+				},
+				{
+					"speaker": "night_accountant",
+					"content": {
+						"korean": "오, 역시 당신이라면…! 고맙습니다!"
+					}
+				},
+				{
+					"speaker": "dax",
+					"content": {
+						"korean": "와, 저 사람이 웃어요! 당신 덕분이에요!"
+					}
+				}
+			],
+			"risk": {
+				"chance": "mid",
+				"bad": {
+					"effects": {
+						"gold": -20
+					},
+					"reward": [],
+					"result": [
+						{
+							"speaker": "narrator",
+							"content": {
+								"korean": "당신이 장부를 살펴보자 야근 직원이 너무 기뻐하다가 서류 뭉치를 쏟아버린다."
+							}
+						},
+						{
+							"speaker": "night_accountant",
+							"content": {
+								"korean": "으악! 다 섞여버렸습니다!"
+							}
+						},
+						{
+							"speaker": "dax",
+							"content": {
+								"korean": "으음… 더 엉망이 된 것 같은데요?"
+							}
+						}
+					]
+				}
+			}
+		},
+		{
+			"text": {
+				"korean": "공동체 기금 장부의 오류가 의도적일 수 있다며, 자료실 내부를 조사하겠다고 단호하게 말한다."
+			},
+			"path": "hard",
+			"mbti": "ET",
+			"flag": "accountant_fund_suspicion",
+			"effects": {
+				"fighting": 10,
+				"echo": -8,
+				"reason": 15
+			},
+			"reward": [
+				"defense_up"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "당신의 말에 야근 직원의 얼굴에서 웃음기가 사라진다. 그는 마지못해 문을 활짝 연다."
+					}
+				},
+				{
+					"speaker": "night_accountant",
+					"content": {
+						"korean": "그… 그렇게까지… 좋습니다, 보세요!"
+					}
+				},
+				{
+					"speaker": "dax",
+					"content": {
+						"korean": "어… 문은 열렸는데… 왠지 좀 찜찜한데요."
+					}
+				}
+			],
+			"risk": {
+				"chance": "high",
+				"bad": {
+					"effects": {
+						"gold": -30
+					},
+					"reward": [],
+					"result": [
+						{
+							"speaker": "narrator",
+							"content": {
+								"korean": "당신의 말에 야근 직원이 발끈하며 문을 더 굳게 막아선다."
+							}
+						},
+						{
+							"speaker": "night_accountant",
+							"content": {
+								"korean": "제가 감히 이런 짓을 할 리가 없지 않습니까!"
+							}
+						},
+						{
+							"speaker": "dax",
+							"content": {
+								"korean": "으악! 저 사람이 소리 질러요! 다른 직원들이 올지도 몰라요!"
+							}
+						}
+					]
+				}
+			}
+		},
+		{
+			"text": {
+				"korean": "공동체를 위하는 마음으로, 야근 직원이 처한 상황의 진실을 알아내겠다고 설득하며 자료실 문을 열라고 한다."
+			},
+			"path": "stat",
+			"mbti": "NF",
+			"require": {
+				"stat": "community",
+				"op": ">=",
+				"value": 40
+			},
+			"flag": "accountant_community_trust",
+			"effects": {
+				"reason": 10,
+				"community": 20,
+				"echo": 15
+			},
+			"reward": [
+				"shield"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "당신의 진심 어린 말에 야근 직원이 고개를 끄덕인다. 그는 자료실 문을 열고 당신을 들인다."
+					}
+				},
+				{
+					"speaker": "night_accountant",
+					"content": {
+						"korean": "저 혼자서는 안 됐을 겁니다."
+					}
+				},
+				{
+					"speaker": "dax",
+					"content": {
+						"korean": "저 아저씨, 방금 눈물 글썽거린 것 같지 않아요?"
+					}
+				}
+			]
+		},
+		{
+			"text": {
+				"korean": "장부 오류로 고생하는 야근 직원을 위해, 자료실 문 앞에 핫팩을 붙여주며 응원한다."
+			},
+			"path": "fun",
+			"mbti": "FP",
+			"effects": {
+				"gold": 30,
+				"echo": 12,
+				"community": 25
+			},
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "당신이 자료실 문에 핫팩을 붙여주자 야근 직원이 감동한 표정을 짓는다."
+					}
+				},
+				{
+					"speaker": "night_accountant",
+					"content": {
+						"korean": "핫팩은… 필요 없지만… 고맙습니다…!"
+					}
+				},
+				{
+					"speaker": "dax",
+					"content": {
+						"korean": "저 사람 얼굴이 좀 풀렸네요!"
+					}
+				}
+			],
+			"risk": {
+				"chance": "low",
+				"bad": {
+					"reward": [
+						"hp_down"
+					],
+					"result": [
+						{
+							"speaker": "narrator",
+							"content": {
+								"korean": "당신이 자료실 문에 핫팩을 붙여주자 야근 직원이 당황하며 핫팩을 떼어낸다."
+							}
+						},
+						{
+							"speaker": "night_accountant",
+							"content": {
+								"korean": "이러지 마세요! 중요한 서류들이 다 녹습니다!"
+							}
+						},
+						{
+							"speaker": "dax",
+							"content": {
+								"korean": "으악! 핫팩 때문에 서류에 얼룩이 생겼어요!"
+							}
+						}
+					]
+				}
+			}
+		}
+	],
+	"tags": [
+		"night_accountant",
+		"dax"
+	],
+	"_design": {
+		"slot": "A",
+		"kind": "rep",
+		"person": {
+			"id": "night_accountant",
+			"name": "회계팀 야근 직원",
+			"role": "회계팀 야근 직원"
+		},
+		"wants": "부두 어르신 기금 장부의 복잡한 오류를 해결할 자료를 찾고 싶어 한다.",
+		"rule_link": "눈앞의 직원이 공동체를 위해 노력하는 모습과 그의 계산 오류가 무엇을 증명하는지, 보이는 대로 믿을지 아니면 숨겨진 다른 의미를 따져볼지 고민하게 한다.",
+		"rep": "community+",
+		"events": {},
+		"flags": {
+			"accountant_help_fail": {
+				"kind": "bad",
+				"boss_penalty": -1,
+				"label": {
+					"korean": "회계사 돕기 실패"
+				},
+				"boss_line": {
+					"korean": "회계팀 직원이 장부 오류 때문에 서버실 문을 잠가버렸다."
+				}
+			},
+			"accountant_fund_suspicion": {
+				"kind": "good",
+				"boss_penalty": 1,
+				"label": {
+					"korean": "공동체 기금 의혹 제기"
+				},
+				"boss_choice": {
+					"korean": "회계팀 직원이 공동체 기금 장부 사본을 건네며 협조했다."
+				}
+			},
+			"accountant_community_trust": {
+				"kind": "good",
+				"boss_penalty": 2,
+				"label": {
+					"korean": "회계사 신뢰 획득"
+				},
+				"boss_choice": {
+					"korean": "회계팀 직원이 서버실 문이 열려 있는 정확한 시간을 알려줬다."
+				}
+			}
+		}
+	}
+}

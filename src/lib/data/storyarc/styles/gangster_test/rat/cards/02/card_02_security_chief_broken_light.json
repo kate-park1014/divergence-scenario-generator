@@ -1,0 +1,275 @@
+{
+	"id": "card_02_security_chief_broken_light",
+	"title": {
+		"korean": "어둠 속 가로등"
+	},
+	"intensity": "calm",
+	"after_story": 3,
+	"before_story": 5,
+	"condition": {
+		"leaning": "community+",
+		"among": [
+			"fighting-",
+			"fighting+",
+			"community-",
+			"community+",
+			"reason-",
+			"reason+"
+		],
+		"min": 20
+	},
+	"urgency": 8,
+	"leaning": "community+",
+	"background_tags": [
+		"container_yard",
+		"early_dawn",
+		"foggy",
+		"lonely",
+		"tense"
+	],
+	"background_image": "https://imagedelivery.net/WTEqQNGFb-l-IHS6IGnzUQ/acdb543d-a0c2-4db1-0984-8d6309f92700/public",
+	"dialogue": [
+		{
+			"speaker": "narrator",
+			"content": {
+				"korean": "조용히 잠복 중인 당신의 차 창문을 누군가 톡톡 두드린다."
+			}
+		},
+		{
+			"speaker": "narrator",
+			"content": {
+				"korean": "경비 반장이 안절부절못하며 당신을 바라본다."
+			}
+		},
+		{
+			"speaker": "security_chief",
+			"content": {
+				"korean": "당신이 그… 동네 사람 일이라면 발 벗고 나선다는 해결사시죠?"
+			}
+		},
+		{
+			"speaker": "security_chief",
+			"content": {
+				"korean": "차 안에서 뭔가 기운이… 어휴, 제가 괜히 또 이런 부탁을 드리는 건지… 죄송합니다만…"
+			}
+		},
+		{
+			"speaker": "security_chief",
+			"content": {
+				"korean": "저기… 야적장 외곽 가로등이 고장 나서 밤마다 너무 어둡습니다. 제가 혼자 고치기엔 좀… 곤란해서요."
+			}
+		},
+		{
+			"speaker": "dax",
+			"content": {
+				"korean": "가로등이요? 지금 이걸 고쳐달라는 건가요?"
+			}
+		}
+	],
+	"choices": [
+		{
+			"text": {
+				"korean": "야적장 전체의 안전을 위해 고장 난 가로등의 임시 조치 방법을 알려준다."
+			},
+			"path": "easy",
+			"mbti": "NF",
+			"flag": "security_chief_draws_attention",
+			"effects": {
+				"echo": 10,
+				"community": 20
+			},
+			"reward": [
+				"attack_up"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "당신은 차 안에서 가로등 구조를 잠시 살피더니, 경비 반장에게 임시 조치 방법을 알려준다."
+					}
+				},
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "경비 반장은 당신의 설명을 듣고 황급히 달려가 가로등을 건드린다."
+					}
+				},
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "잠시 후, 가로등에 깜빡이며 불이 들어온다."
+					}
+				}
+			],
+			"risk": {
+				"chance": "mid",
+				"bad": {
+					"effects": {
+						"gold": -20
+					},
+					"reward": [
+						"hp_down"
+					],
+					"result": [
+						{
+							"speaker": "narrator",
+							"content": {
+								"korean": "당신은 차 안에서 경비 반장에게 고장 난 가로등의 임시 조치 방법을 알려준다."
+							}
+						},
+						{
+							"speaker": "narrator",
+							"content": {
+								"korean": "경비 반장이 서툰 솜씨로 가로등을 건드리자, 갑자기 불꽃이 튀며 주변이 더 어두워진다."
+							}
+						},
+						{
+							"speaker": "dax",
+							"content": {
+								"korean": "저러다 다치겠어요!"
+							}
+						}
+					]
+				}
+			}
+		},
+		{
+			"text": {
+				"korean": "개인적인 임무를 우선하여 가로등 수리를 거절한다."
+			},
+			"path": "hard",
+			"mbti": "ST",
+			"flag": "security_chief_disappointed_b4",
+			"effects": {
+				"echo": -10,
+				"community": -20
+			},
+			"reward": [
+				"defense_up"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "경비 반장은 실망한 표정으로 고개를 떨군다. 당신은 다시 잠복에 집중한다."
+					}
+				},
+				{
+					"speaker": "dax",
+					"content": {
+						"korean": "저렇게 실망하시면… 야적장 다른 분들이 뭐라고 생각할까요?"
+					}
+				}
+			],
+			"risk": {
+				"chance": "high",
+				"bad": {
+					"effects": {
+						"gold": -20
+					},
+					"reward": [],
+					"result": [
+						{
+							"speaker": "narrator",
+							"content": {
+								"korean": "당신은 경비 반장의 개인적인 부탁을 거절하고 잠복에 집중한다."
+							}
+						},
+						{
+							"speaker": "narrator",
+							"content": {
+								"korean": "경비 반장이 돌아선 순간, 그의 발에 걸려 차의 문이 살짝 열린다. 닥스가 깜짝 놀라 문을 닫는다."
+							}
+						}
+					]
+				}
+			}
+		},
+		{
+			"text": {
+				"korean": "가로등 수리를 지시하며, 다른 경비원들에게 야적장 순찰 강화를 요구한다."
+			},
+			"path": "stat",
+			"mbti": "EN",
+			"require": {
+				"stat": "community",
+				"op": ">=",
+				"value": 40
+			},
+			"flag": "security_chief_obey",
+			"effects": {
+				"community": 30,
+				"fighting": 10
+			},
+			"reward": [
+				"shield"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "당신은 경비 반장에게 고장 난 가로등을 당장 고치게 하고, 순찰을 강화하라고 지시한다."
+					}
+				},
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "경비 반장은 당신의 단호한 지시에 놀라면서도, 이내 고개를 끄덕이며 다른 경비원들을 호출한다."
+					}
+				}
+			]
+		}
+	],
+	"tags": [
+		"security_chief",
+		"dax"
+	],
+	"_design": {
+		"slot": "B",
+		"kind": "rep",
+		"person": {
+			"id": "security_chief",
+			"name": "경비 반장",
+			"role": "야적장 경비 반장"
+		},
+		"wants": "경비 반장이 차 안에 있는 히어로들을 알아보고, 야적장 외곽의 고장 난 가로등을 고쳐달라고 부탁한다. 그는 주인공이 공동체를 위해 나선다는 소문을 듣고, 야적장 전체의 안전을 위해 도움을 청한다.",
+		"rule_link": "눈앞의 사건만 해결하려다 전체의 안전을 간과하는 것은 배신자가 활개 칠 공간을 만들어 줄 수 있다.",
+		"rep": "community+",
+		"events": {},
+		"flags": {
+			"security_chief_draws_attention": {
+				"kind": "bad",
+				"boss_penalty": -1,
+				"label": {
+					"korean": "관심 끄는 반장"
+				},
+				"boss_line": {
+					"korean": "경비 반장이 고쳐진 가로등 불빛 아래에서 당신을 향해 손을 흔든다."
+				}
+			},
+			"security_chief_disappointed_b4": {
+				"kind": "good",
+				"boss_penalty": 1,
+				"label": {
+					"korean": "실망한 반장"
+				},
+				"boss_choice": {
+					"korean": "경비 반장이 당신에게 싸늘한 시선을 보낸다."
+				}
+			},
+			"security_chief_obey": {
+				"kind": "good",
+				"boss_penalty": 2,
+				"label": {
+					"korean": "따르는 반장"
+				},
+				"boss_choice": {
+					"korean": "경비 반장이 당신의 지시대로 야적장 경비를 강화한다."
+				}
+			}
+		}
+	}
+}

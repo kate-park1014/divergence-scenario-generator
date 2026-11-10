@@ -1,0 +1,165 @@
+{
+	"id": "card_01_alley_guard_annoyance",
+	"title": {
+		"korean": "골목 안의 불청객"
+	},
+	"intensity": "high",
+	"after_story": 7,
+	"before_story": 9,
+	"callback": {
+		"seed": "pier_guard_suspicion_easy",
+		"min_rooms_after": 2
+	},
+	"background_tags": [
+		"alley_entrance",
+		"night",
+		"dim_light",
+		"sparse_crowd",
+		"tense_atmosphere"
+	],
+	"background_image": "https://imagedelivery.net/WTEqQNGFb-l-IHS6IGnzUQ/579019e1-8c5e-43fc-f6c1-9e605daeb900/public",
+	"dialogue": [
+		{
+			"speaker": "narrator",
+			"content": {
+				"korean": "어둠 속에서 손전등 불빛이 번쩍이며 당신이 숨어 있는 골목 안쪽을 훑었다."
+			}
+		},
+		{
+			"speaker": "guard",
+			"content": {
+				"korean": "으음, 요즘 왜 이렇게 수상한 놈들이 많아? 한밤중에 숨어 다니는 것들은 다 도둑놈이지!"
+			}
+		},
+		{
+			"speaker": "dax",
+			"content": {
+				"korean": "어르신, 저희를 알아보지 못하시는 것 같아요!"
+			}
+		},
+		{
+			"speaker": "guard",
+			"content": {
+				"korean": "어이, 거기! 다 들었어! 움직이지 마!"
+			}
+		},
+		{
+			"speaker": "narrator",
+			"content": {
+				"korean": "경비원의 날카로운 목소리가 골목 안을 흔들었다."
+			}
+		}
+	],
+	"choices": [
+		{
+			"text": {
+				"korean": "경비원에게 빨리 지나가라고 윽박지른다"
+			},
+			"path": "easy",
+			"mbti": "TJ",
+			"flag": "guard_alert",
+			"effects": {
+				"echo": -5,
+				"community": -15
+			},
+			"reward": [
+				"hp_down"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "당신이 버럭 소리치자 경비원은 잠시 움찔하더니 더 큰 소리로 골목 안을 향해 고함을 질렀다."
+					}
+				},
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "\"누구냐! 당장 나와!\""
+					}
+				},
+				{
+					"speaker": "dax",
+					"content": {
+						"korean": "으악, 어르신! 이렇게 큰 소리를 내면 어떡합니까!"
+					}
+				}
+			]
+		},
+		{
+			"text": {
+				"korean": "경비원에게 조용히 다가가 무슨 일인지 묻는다"
+			},
+			"path": "hard",
+			"mbti": "SF",
+			"flag": "guard_distraction",
+			"effects": {
+				"fighting": 15,
+				"echo": 5
+			},
+			"reward": [
+				"defense_up"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "당신이 조용히 다가가자 경비원은 깜짝 놀라 손전등을 떨어뜨렸다. \"아니, 당신은...?\""
+					}
+				},
+				{
+					"speaker": "guard",
+					"content": {
+						"korean": "그게, 골목에서 이상한 소리가 나서... 순찰을 돌던 참입니다!"
+					}
+				},
+				{
+					"speaker": "dax",
+					"content": {
+						"korean": "어휴, 저러다 손전등 깨지겠어요!"
+					}
+				}
+			]
+		}
+	],
+	"tags": [
+		"guard",
+		"dax"
+	],
+	"_design": {
+		"slot": "D",
+		"kind": "callback",
+		"person": {
+			"name": "경비원",
+			"role": "부두 야간 경비원",
+			"id": "guard"
+		},
+		"wants": "앙심을 품고 순찰을 핑계로 골목을 비추며 히어로들을 곤란하게 만들고 싶어 한다.",
+		"rule_link": "골목을 비추는 경비원의 행동을 수상하다고 판단해 밀어낼지, 그의 불평을 들어줄지 선택한다.",
+		"events": {},
+		"flags": {
+			"guard_alert": {
+				"kind": "bad",
+				"boss_penalty": -1,
+				"label": {
+					"korean": "경비원 경고"
+				},
+				"boss_line": {
+					"korean": "경비원이 히어로들의 존재를 눈치채고 경리부장에게 소리친다."
+				}
+			},
+			"guard_distraction": {
+				"kind": "good",
+				"boss_penalty": 1,
+				"label": {
+					"korean": "경비원 주의"
+				},
+				"boss_choice": {
+					"korean": "경비원이 엉뚱한 곳에 신경을 팔아 경리부장이 잠시 혼란에 빠진다."
+				}
+			}
+		}
+	}
+}

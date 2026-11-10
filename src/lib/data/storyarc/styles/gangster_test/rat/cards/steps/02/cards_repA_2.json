@@ -1,0 +1,375 @@
+{
+	"cards": [
+		{
+			"no": 1,
+			"background_tags": [
+				"harbor",
+				"night",
+				"foggy",
+				"sparse",
+				"eerie"
+			],
+			"dialogue": [
+				{
+					"speaker": "forklift_uncle",
+					"text": "켁, 켁. 당신이 소문으로 듣던, 자기 몫만 챙기는 해결사라죠?"
+				},
+				{
+					"speaker": "forklift_uncle",
+					"text": "여기는 새벽 3시부터 5시까지 출입 금지라고! 내 규칙을 어기는 놈들은 내가 그냥 안 둔다!"
+				},
+				{
+					"speaker": "dax",
+					"text": "저 아재, 1화에서 소문 들었나 봐요. 꽤 완고한데요?"
+				},
+				{
+					"text": "켁, 켁. 여기는 내 구역이다! 규칙을 어기고 싶으면 그만한 대가를 치러야 할 거다!",
+					"speaker": "forklift_uncle"
+				}
+			],
+			"key": "forklift_blockade",
+			"rule_link": "야적장 출입을 막는 아재의 말만 듣고 상황을 판단하기보다, 끝까지 지켜보며 진실을 확인해야 한다.",
+			"wants": "야적장 출입을 막아 자기 이득을 취하려 함.",
+			"choices": [
+				{
+					"mbti": "TJ",
+					"text": "지게차 아재의 호들갑을 무시하고, 강제로 길을 뚫고 지나간다.",
+					"effects": {
+						"echo": -5,
+						"fighting": 20
+					},
+					"reward": [
+						"attack_up"
+					],
+					"risk_bad": {
+						"result": [
+							{
+								"speaker": "narrator",
+								"text": "당신이 지게차를 뚫고 지나가려 하자, 지게차 아재가 켁켁거리며 길을 막는 동시에 당신의 발을 노린다."
+							},
+							{
+								"text": "결국 당신의 발이 지게차 바퀴에 걸려 넘어지며, 발목을 삐끗한다.",
+								"speaker": "narrator"
+							},
+							{
+								"speaker": "dax",
+								"text": "앗, 발목 잡혔어요! 아재가 노린 것 같은데요?"
+							}
+						],
+						"gold": -30,
+						"reward": [
+							"hp_down"
+						]
+					},
+					"path": "easy",
+					"flag": {
+						"label": "아재와 충돌",
+						"boss_text": "지게차 아재가 멀리서 당신을 노려보며, 크레인 바퀴에 돌멩이를 던져 방해한다.",
+						"key": "forklift_crash"
+					},
+					"result": [
+						{
+							"speaker": "narrator",
+							"text": "당신이 앞장서자, 지게차 아재가 켁켁거리며 지게차를 급하게 움직여 길을 막는다."
+						},
+						{
+							"text": "억지로 지나가려던 당신의 발이 지게차 바퀴에 걸려 넘어질 뻔하지만, 아슬아슬하게 피한다.",
+							"speaker": "narrator"
+						},
+						{
+							"speaker": "dax",
+							"text": "휴, 큰일 날 뻔했어요! 아슬아슬하게 피했네요."
+						}
+					]
+				},
+				{
+					"reward": [
+						"defense_up"
+					],
+					"risk_bad": {
+						"reward": [],
+						"gold": -20,
+						"result": [
+							{
+								"text": "당신이 빈틈을 노리려 하자, 아재는 당신의 눈치를 살피며 지게차를 천천히 움직여 길을 완전히 막는다.",
+								"speaker": "narrator"
+							},
+							{
+								"speaker": "narrator",
+								"text": "야적장으로 들어서려던 순간, 지게차 아재가 다시 지게차를 돌려 당신을 비웃는다."
+							},
+							{
+								"speaker": "dax",
+								"text": "젠장, 아재가 눈치챘어요! 우리를 비웃고 있어요."
+							}
+						]
+					},
+					"effects": {
+						"reason": -20,
+						"echo": 5
+					},
+					"text": "지게차 아재에게 규칙을 따르는 척하며, 빈틈을 노려 야적장으로 들어간다.",
+					"flag": {
+						"label": "아재 속이기",
+						"boss_text": "지게차 아재가 당신의 잔머리를 기억하며, 크레인 아래쪽으로 연결된 작은 통로를 열어둔다.",
+						"key": "forklift_sneaky"
+					},
+					"path": "hard",
+					"mbti": "IN",
+					"result": [
+						{
+							"text": "당신이 잠시 주춤하자, 아재는 으스대며 지게차를 움직여 크레인 아래를 지나간다.",
+							"speaker": "narrator"
+						},
+						{
+							"text": "아재가 지나간 틈을 타 야적장으로 들어선 당신의 뒤로 지게차 아재가 뒤늦게 켁켁거리며 쫓아온다.",
+							"speaker": "narrator"
+						},
+						{
+							"speaker": "dax",
+							"text": "휴, 들키는 줄 알았어요! 아재가 헛기침하며 가네요."
+						}
+					]
+				},
+				{
+					"result": [
+						{
+							"text": "당신이 날카롭게 묻자, 아재는 켁켁거리며 주머니에서 꼬깃꼬깃한 영수증을 꺼낸다.",
+							"speaker": "narrator"
+						},
+						{
+							"text": "야적장 문을 막으면 물건 운반비를 더 받을 수 있다는 말에 닥스가 어이없어한다.",
+							"speaker": "narrator"
+						},
+						{
+							"speaker": "dax",
+							"text": "정말 저 아재, 자기 몫만 챙기려 했네요! 딱 어울리는 해결책이에요!"
+						}
+					],
+					"reward": [],
+					"mbti": "TP",
+					"effects": {
+						"community": -20,
+						"echo": -5,
+						"gold": 100
+					},
+					"text": "지게차 아재에게 당신이 챙길 몫이 무엇인지 따져 묻는다.",
+					"path": "stat",
+					"flag": {
+						"key": "forklift_greed",
+						"label": "아재의 욕심",
+						"boss_text": "지게차 아재가 돈 이야기를 꺼내며, 당신이 아재의 허점을 노린다."
+					}
+				},
+				{
+					"path": "gold",
+					"effects": {
+						"echo": -5,
+						"gold": -100
+					},
+					"text": "지게차 아재에게 뇌물을 줘서 야적장으로 통과한다.",
+					"mbti": "NT",
+					"result": [
+						{
+							"speaker": "narrator",
+							"text": "당신이 돈을 건네자, 아재는 켁켁거리며 지게차를 슬그머니 옮긴다."
+						},
+						{
+							"speaker": "narrator",
+							"text": "아재는 돈을 세어보더니 흡족한 미소를 지으며 야적장으로 들어가는 당신을 흘깃 본다."
+						},
+						{
+							"text": "돈으로 해결하다니, 아재가 너무 쉽게 넘어가네요! 역시 돈이 최고인가 봐요.",
+							"speaker": "dax"
+						}
+					]
+				}
+			],
+			"person": {
+				"id": "forklift_uncle",
+				"name": "지게차 아재",
+				"role": "지게차 기사"
+			},
+			"title": "지게차 아재의 꼼수",
+			"slot": "A",
+			"kind": "rep",
+			"rep_dir": "community-"
+		},
+		{
+			"person": {
+				"id": "forklift_uncle",
+				"name": "지게차 아재",
+				"role": "지게차 기사"
+			},
+			"choices": [
+				{
+					"result": [
+						{
+							"text": "당신이 돕겠다고 나서자, 아재는 켁켁거리며 지게차를 조작해 컨테이너 몇 개를 정리한다.",
+							"speaker": "narrator"
+						},
+						{
+							"text": "순식간에 정리가 끝났지만, 닥스는 야적장 안쪽을 의미심장하게 바라본다.",
+							"speaker": "narrator"
+						},
+						{
+							"text": "저 안쪽까지는 못 봤어요. 아쉽네요.",
+							"speaker": "dax"
+						}
+					],
+					"risk_bad": {
+						"result": [
+							{
+								"speaker": "narrator",
+								"text": "당신이 아재를 도우려 하자, 아재는 켁켁거리며 지게차를 서투르게 조작해 컨테이너를 위험하게 흔든다."
+							},
+							{
+								"speaker": "narrator",
+								"text": "결국 컨테이너 몇 개가 쓰러지며, 당신의 발등을 찧을 뻔한다."
+							},
+							{
+								"text": "아이고, 발등 다칠 뻔했어요! 아재가 너무 서두르네요.",
+								"speaker": "dax"
+							}
+						],
+						"gold": -30,
+						"reward": [
+							"hp_down"
+						]
+					},
+					"reward": [
+						"attack_up"
+					],
+					"mbti": "ES",
+					"effects": {
+						"community": 20,
+						"echo": 10
+					},
+					"path": "easy",
+					"flag": {
+						"boss_text": "지게차 아재가 당신에게 도움받았던 것을 생색내며, 당신의 발밑에 지게차 바퀴를 굴린다.",
+						"label": "아재 돕기",
+						"key": "forklift_help"
+					},
+					"text": "지게차 아재의 부탁을 흔쾌히 수락하고, 컨테이너 정리 작업을 돕는다."
+				},
+				{
+					"risk_bad": {
+						"result": [
+							{
+								"text": "당신이 아재의 부탁을 무시하고 야적장으로 향하자, 아재는 켁켁거리며 지게차로 길을 완전히 막아버린다.",
+								"speaker": "narrator"
+							},
+							{
+								"speaker": "narrator",
+								"text": "결국 당신은 꼼짝없이 아재가 길을 비켜줄 때까지 한참을 기다려야 한다."
+							},
+							{
+								"speaker": "dax",
+								"text": "아재가 정말 단단히 삐졌어요! 우리를 방해하고 있어요."
+							}
+						],
+						"reward": [],
+						"gold": -20
+					},
+					"reward": [
+						"defense_up"
+					],
+					"text": "지게차 아재의 부탁을 거절하고, 급히 야적장으로 진입한다.",
+					"result": [
+						{
+							"text": "당신이 거절하고 야적장으로 들어가려 하자, 아재는 켁켁거리며 길을 막아선다.",
+							"speaker": "narrator"
+						},
+						{
+							"text": "아재는 삐진 표정으로 당신에게 등을 보이며, 못 들은 척 투덜거린다.",
+							"speaker": "narrator"
+						},
+						{
+							"speaker": "dax",
+							"text": "아재가 잔뜩 삐졌네요. 이러다간 더 늦겠어요."
+						}
+					],
+					"path": "hard",
+					"flag": {
+						"boss_text": "지게차 아재가 당신에게 도움받지 못했던 것에 불만을 품고, 당신이 지나갈 통로에 놓인 상자를 치워준다.",
+						"key": "forklift_ignore",
+						"label": "아재 무시"
+					},
+					"effects": {
+						"echo": -5,
+						"community": -20
+					},
+					"mbti": "IN"
+				},
+				{
+					"mbti": "FJ",
+					"result": [
+						{
+							"text": "당신이 공동체를 위한 해결책을 제시하자, 아재는 켁켁거리며 잠시 고민한다.",
+							"speaker": "narrator"
+						},
+						{
+							"speaker": "narrator",
+							"text": "아재는 잠시 야적장 출입을 허락하며, 닥스에게 빨리 끝내라고 재촉한다."
+						},
+						{
+							"text": "아재가 우리의 제안을 받아들였어요! 역시 모두를 위한 해결책이네요!",
+							"speaker": "dax"
+						}
+					],
+					"flag": {
+						"key": "forklift_bargain",
+						"boss_text": "지게차 아재가 당신과의 협상 내용을 기억하며, 크레인 조작을 잠시 늦춰 시간을 벌어준다.",
+						"label": "아재와 협상"
+					},
+					"path": "stat",
+					"text": "지게차 아재에게 벌금 대신 야적장 안쪽을 볼 시간을 달라고 제안한다.",
+					"effects": {
+						"reason": 10,
+						"echo": 10,
+						"community": 20
+					},
+					"reward": [
+						"shield"
+					]
+				}
+			],
+			"wants": "야적장 물건 정리 도움을 요청함.",
+			"key": "forklift_appeal",
+			"rule_link": "지게차 아재의 부탁을 끝까지 지켜보며 진의를 파악하기보다, 보이는 것만으로 판단하여 성급하게 나설 수 있다.",
+			"title": "지게차 아재의 호소",
+			"background_tags": [
+				"harbor",
+				"night",
+				"foggy",
+				"sparse",
+				"eerie"
+			],
+			"no": 2,
+			"dialogue": [
+				{
+					"speaker": "forklift_uncle",
+					"text": "켁, 켁. 당신이 그 소문으로 듣던, 동네 사람 모두를 위해 나서는 해결사라죠? 켁, 켁."
+				},
+				{
+					"speaker": "forklift_uncle",
+					"text": "내가 잠깐 잠든 사이에 저 컨테이너들이 엉망진창이 돼버렸네! 이거 5시까지 못 치우면 큰일인데…"
+				},
+				{
+					"text": "아재가 우리 소문을 들었나 봐요. 곤란한 상황인 것 같은데요?",
+					"speaker": "dax"
+				},
+				{
+					"speaker": "forklift_uncle",
+					"text": "켁, 켁. 5시까지 못 치우면 벌금을 맞게 생겼어! 제발 좀 도와주게나!"
+				}
+			],
+			"slot": "A",
+			"kind": "rep",
+			"rep_dir": "community+"
+		}
+	],
+	"errors": [],
+	"prompt_hash": "a2a483684b7f80b5e945e04c4365208e3c2270f8"
+}

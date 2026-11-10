@@ -1,0 +1,304 @@
+{
+	"id": "card_05_gang_uncle_block",
+	"title": {
+		"korean": "비서실 앞의 아재"
+	},
+	"intensity": "calm",
+	"after_story": 1,
+	"before_story": 3,
+	"condition": {
+		"leaning": "fighting-",
+		"among": [
+			"fighting-",
+			"fighting+",
+			"community-",
+			"community+",
+			"reason-",
+			"reason+"
+		],
+		"min": 20
+	},
+	"urgency": 8,
+	"leaning": "fighting-",
+	"background_tags": [
+		"corridor",
+		"fluorescent_light",
+		"few_people",
+		"tense_atmosphere",
+		"office"
+	],
+	"background_image": "https://imagedelivery.net/WTEqQNGFb-l-IHS6IGnzUQ/0021bc8b-a350-4a21-5a17-694249460400/public",
+	"dialogue": [
+		{
+			"speaker": "narrator",
+			"content": {
+				"korean": "복도 끝, 비서실 문 앞에 백상어파 아재가 서 있다. 넥타이를 매만지며 당신을 쳐다본다."
+			}
+		},
+		{
+			"speaker": "narrator",
+			"content": {
+				"korean": "아재가 헛기침을 하며 넥타이를 거칠게 고쳐 맨다."
+			}
+		},
+		{
+			"speaker": "gang_uncle",
+			"content": {
+				"korean": "당신이 그, 소문 자자한 '주먹부터 나가는' 해결사 양반 맞지?"
+			}
+		},
+		{
+			"speaker": "gang_uncle",
+			"content": {
+				"korean": "비서실 쪽으론 발길 끊는 게 좋을 거야."
+			}
+		},
+		{
+			"speaker": "narrator",
+			"content": {
+				"korean": "아재가 다시 헛기침을 한다."
+			}
+		},
+		{
+			"speaker": "gang_uncle",
+			"content": {
+				"korean": "비서님 일에 함부로 나섰다가 피 보는 놈들 한둘 본 게 아니거든. 당신도 괜히 나서서… 켁."
+			}
+		},
+		{
+			"speaker": "dax",
+			"content": {
+				"korean": "저 아재는 왜 저러는 거래요? 비서님 일에 나섰다가 피 본다니…"
+			}
+		}
+	],
+	"choices": [
+		{
+			"text": {
+				"korean": "비켜라. 방해하면 네가 피 본다며 위협한다."
+			},
+			"path": "easy",
+			"mbti": "TJ",
+			"flag": "gang_uncle_aggressed",
+			"effects": {
+				"echo": -5,
+				"fighting": -15
+			},
+			"reward": [
+				"attack_up"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "당신의 살벌한 눈빛에 아재가 흠칫 물러난다."
+					}
+				},
+				{
+					"speaker": "gang_uncle",
+					"content": {
+						"korean": "켁, 켁… 알았다, 알았어! 가던 길 가셔!"
+					}
+				},
+				{
+					"speaker": "dax",
+					"content": {
+						"korean": "와, 역시 당신이 최고예요! 저 아재, 바로 꼬리 내리네요!"
+					}
+				}
+			],
+			"risk": {
+				"chance": "mid",
+				"bad": {
+					"effects": {
+						"gold": -30
+					},
+					"reward": [],
+					"result": [
+						{
+							"speaker": "narrator",
+							"content": {
+								"korean": "당신의 위협에 아재가 놀라 뒷걸음질 치다, 품속에서 낡은 담배 케이스를 떨어뜨린다."
+							}
+						},
+						{
+							"speaker": "gang_uncle",
+							"content": {
+								"korean": "켁, 켁… 내 비상금! 아, 아냐, 아무것도 아니야!"
+							}
+						},
+						{
+							"speaker": "dax",
+							"content": {
+								"korean": "아재가 뭔가 소중한 걸 떨어뜨렸는데… 모른 척해야 할까요?"
+							}
+						}
+					]
+				}
+			}
+		},
+		{
+			"text": {
+				"korean": "사정부터 말해 봐라. 왜 비서님에게 가면 안 되는지 차분히 묻는다."
+			},
+			"path": "hard",
+			"mbti": "NF",
+			"flag": "gang_uncle_reasoned",
+			"effects": {
+				"echo": 10,
+				"fighting": 20
+			},
+			"reward": [
+				"intelligence_up"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "당신의 차분한 질문에 아재는 예상 밖이라는 듯 넥타이를 고쳐 맨다."
+					}
+				},
+				{
+					"speaker": "gang_uncle",
+					"content": {
+						"korean": "켁, 켁… 그게 말이지. 비서님은 원래 몸이 약하셔."
+					}
+				},
+				{
+					"speaker": "gang_uncle",
+					"content": {
+						"korean": "요즘은 더 안 좋으신데… 당신이 험하게 굴면 큰일 난다고."
+					}
+				},
+				{
+					"speaker": "dax",
+					"content": {
+						"korean": "아, 그래서 아재가 막으려고 한 거였네요!"
+					}
+				}
+			],
+			"risk": {
+				"chance": "high",
+				"bad": {
+					"effects": {
+						"gold": -20
+					},
+					"reward": [],
+					"result": [
+						{
+							"speaker": "narrator",
+							"content": {
+								"korean": "당신의 차분한 질문에도 아재는 더 불안해하며 넥타이를 비틀어 맨다."
+							}
+						},
+						{
+							"speaker": "gang_uncle",
+							"content": {
+								"korean": "켁, 켁… 자꾸 캐물으면 나도 곤란해! 괜히 오해받고 싶지 않다고!"
+							}
+						},
+						{
+							"speaker": "dax",
+							"content": {
+								"korean": "아재 땀 좀 봐요, 넥타이까지 축축하네요!"
+							}
+						}
+					]
+				}
+			}
+		},
+		{
+			"text": {
+				"korean": "비서실 문짝을 박살낼 듯 노려보며 아재에게 '너도 거기 서 있을래?'라고 묻는다."
+			},
+			"path": "stat",
+			"mbti": "ST",
+			"require": {
+				"stat": "fighting",
+				"op": "<=",
+				"value": -40
+			},
+			"flag": "gang_uncle_intimidated",
+			"effects": {
+				"fighting": -20,
+				"echo": 5,
+				"reason": -10
+			},
+			"reward": [
+				"stun"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "당신의 살기 어린 눈빛에 아재는 넥타이를 더듬다 그대로 주저앉는다."
+					}
+				},
+				{
+					"speaker": "gang_uncle",
+					"content": {
+						"korean": "켁, 켁… 난… 난 그냥 바람 쐴 뿐이야! 먼저 가시게!"
+					}
+				},
+				{
+					"speaker": "dax",
+					"content": {
+						"korean": "저 아재, 오줌 지릴 뻔했나 봐요! 당신 정말 무섭다!"
+					}
+				}
+			]
+		}
+	],
+	"tags": [
+		"gang_uncle",
+		"dax"
+	],
+	"_design": {
+		"slot": "A",
+		"kind": "rep",
+		"person": {
+			"id": "gang_uncle",
+			"name": "백상어파 아재",
+			"role": "조직원"
+		},
+		"wants": "비서실로 가는 당신을 막고 싶어 함. 당신이 비서에게 험하게 굴어 문제가 생길까 봐 걱정함.",
+		"rule_link": "당신이 먼저 나서서 일을 키우기보다, 잠시 멈춰 다른 이의 사정을 헤아려 봅니다.",
+		"rep": "fighting-",
+		"events": {},
+		"flags": {
+			"gang_uncle_aggressed": {
+				"kind": "bad",
+				"boss_penalty": -1,
+				"label": {
+					"korean": "아재 위협"
+				},
+				"boss_line": {
+					"korean": "백상어파 아재가 방해꾼으로 나타나 시비를 건다."
+				}
+			},
+			"gang_uncle_reasoned": {
+				"kind": "good",
+				"boss_penalty": 1,
+				"label": {
+					"korean": "아재 설득"
+				},
+				"boss_choice": {
+					"korean": "백상어파 아재가 당신을 돕겠다며 싸움에 끼어든다."
+				}
+			},
+			"gang_uncle_intimidated": {
+				"kind": "good",
+				"boss_penalty": 2,
+				"label": {
+					"korean": "아재 압도"
+				},
+				"boss_choice": {
+					"korean": "백상어파 아재가 당신에게 겁을 먹고 도망친다."
+				}
+			}
+		}
+	}
+}

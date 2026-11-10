@@ -1,0 +1,249 @@
+{
+	"id": "card_02_cleaner_grandma_warning",
+	"title": {
+		"korean": "파란 컨테이너 앞의 수상한 청소"
+	},
+	"intensity": "calm",
+	"after_story": 7,
+	"before_story": 9,
+	"background_tags": [
+		"yard",
+		"morning",
+		"foggy",
+		"alone",
+		"calm"
+	],
+	"background_image": "https://imagedelivery.net/WTEqQNGFb-l-IHS6IGnzUQ/d23295ae-3346-488a-b4f3-8373bbdb7600/public",
+	"dialogue": [
+		{
+			"speaker": "narrator",
+			"content": {
+				"korean": "낡은 빗자루를 든 할머니 한 분이 파란 컨테이너 앞을 쓸고 있었다."
+			}
+		},
+		{
+			"speaker": "dax",
+			"content": {
+				"korean": "저 할머니는 새벽부터 뭘 그렇게 열심히 청소하시는 거죠?"
+			}
+		},
+		{
+			"speaker": "cleaner_grandma",
+			"content": {
+				"korean": "쯧쯧, 젊은 것들이! 이 파란 컨테이너는 건드리지 마! 새벽마다 좋은 냄새 나는 데야!"
+			}
+		},
+		{
+			"speaker": "narrator",
+			"content": {
+				"korean": "할머니는 당신을 힐끗 보더니 다시 콧노래를 흥얼거렸다."
+			}
+		}
+	],
+	"choices": [
+		{
+			"text": {
+				"korean": "할머니의 말을 무시하고 컨테이너 문을 확인한다."
+			},
+			"path": "easy",
+			"mbti": "TJ",
+			"effects": {
+				"gold": 50,
+				"fighting": -10
+			},
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "할머니는 당신을 노려봤지만, 이내 포기한 듯 다시 바닥을 쓸었다."
+					}
+				},
+				{
+					"speaker": "dax",
+					"content": {
+						"korean": "문이 단단히 잠겨 있네요. 억지로 열려면 시간이 좀 걸리겠어요."
+					}
+				}
+			],
+			"risk": {
+				"chance": "mid",
+				"bad": {
+					"effects": {
+						"gold": -20
+					},
+					"reward": [],
+					"result": [
+						{
+							"speaker": "narrator",
+							"content": {
+								"korean": "당신이 문을 확인하려는 순간, 할머니가 빗자루로 당신의 발을 걸었다."
+							}
+						},
+						{
+							"speaker": "dax",
+							"content": {
+								"korean": "아얏! 할머니, 왜 그러세요! 괜히 시간만 낭비했잖아요!"
+							}
+						}
+					]
+				}
+			}
+		},
+		{
+			"text": {
+				"korean": "할머니에게 좋은 냄새가 무엇인지 조심스럽게 묻는다."
+			},
+			"path": "hard",
+			"mbti": "NF",
+			"effects": {
+				"community": 10,
+				"echo": 10
+			},
+			"reward": [
+				"intelligence_up"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "당신이 묻자, 할머니는 눈을 가늘게 뜨고 당신을 위아래로 훑어봤다."
+					}
+				},
+				{
+					"speaker": "cleaner_grandma",
+					"content": {
+						"korean": "그건... 여기 사는 사람들만 아는 비밀이야. 하지만 너희는 모르는 게 좋을 거야."
+					}
+				},
+				{
+					"speaker": "dax",
+					"content": {
+						"korean": "할머니가 뭔가 알고 있는 것 같긴 한데, 쉽게 말해주진 않네요."
+					}
+				}
+			],
+			"risk": {
+				"chance": "high",
+				"bad": {
+					"effects": {
+						"gold": -20
+					},
+					"reward": [],
+					"result": [
+						{
+							"speaker": "narrator",
+							"content": {
+								"korean": "당신이 묻자, 할머니는 빗자루를 휘두르며 '시끄럽다!' 소리쳤다."
+							}
+						},
+						{
+							"speaker": "dax",
+							"content": {
+								"korean": "할머니가 갑자기 화를 내네요! 괜히 건드렸나 봐요."
+							}
+						}
+					]
+				}
+			}
+		},
+		{
+			"text": {
+				"korean": "{actor}이(가) 할머니의 노고를 위로하며 따뜻한 음료를 건넨다."
+			},
+			"path": "lock",
+			"mbti": "SF",
+			"require": {
+				"mbti": "SF"
+			},
+			"effects": {
+				"community": 10,
+				"echo": 5
+			},
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "{actor}이(가) 건넨 음료에 할머니는 잠시 빗자루질을 멈췄다."
+					}
+				},
+				{
+					"speaker": "cleaner_grandma",
+					"content": {
+						"korean": "허허, 이런 걸 다 주네. 고맙다. 너희는 여기서 좀 쉬었다 가거라."
+					}
+				}
+			],
+			"event": "campsite",
+			"event_intro": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "할머니의 따뜻한 말에 당신은 잠시 쉬어갈 곳을 찾았다."
+					}
+				}
+			]
+		},
+		{
+			"text": {
+				"korean": "할머니에게 돈을 쥐여 주며 컨테이너 주변을 잠시 비켜달라고 부탁한다."
+			},
+			"path": "gold",
+			"mbti": "EP",
+			"require": {
+				"stat": "gold",
+				"op": ">=",
+				"value": 100
+			},
+			"effects": {
+				"gold": -100,
+				"reason": -10
+			},
+			"reward": [
+				"move_range_up"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "당신이 돈을 쥐여 주자, 할머니는 눈을 반짝이며 주머니에 넣었다."
+					}
+				},
+				{
+					"speaker": "cleaner_grandma",
+					"content": {
+						"korean": "허허, 알겠어. 잠시 눈 감고 있을 테니, 알아서들 해. 대신 너무 시끄럽게는 말고."
+					}
+				},
+				{
+					"speaker": "dax",
+					"content": {
+						"korean": "돈으로 해결하니 편하긴 한데, 괜히 할머니에게 뇌물 준 기분이네요."
+					}
+				}
+			]
+		}
+	],
+	"tags": [
+		"cleaner_grandma",
+		"dax"
+	],
+	"_design": {
+		"slot": "D",
+		"kind": "normal",
+		"person": {
+			"role": "야적장 청소부",
+			"id": "cleaner_grandma",
+			"name": "청소부 할머니"
+		},
+		"wants": "새벽마다 맡는 컨테이너의 좋은 냄새를 방해받고 싶지 않음",
+		"rule_link": "겉모습만 보고 할머니의 말을 흘려들을지, 그 안에 숨겨진 의미를 찾아낼지 선택해야 합니다.",
+		"events": {
+			"lock": "할머니의 노고를 위로하며 잠시 쉬어갈 기회를 얻음"
+		},
+		"flags": {}
+	}
+}

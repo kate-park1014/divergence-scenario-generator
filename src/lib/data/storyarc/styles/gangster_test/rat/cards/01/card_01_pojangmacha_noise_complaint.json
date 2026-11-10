@@ -1,0 +1,342 @@
+{
+	"id": "card_01_pojangmacha_noise_complaint",
+	"title": {
+		"korean": "시끄러운 포장마차"
+	},
+	"intensity": "calm",
+	"after_story": 7,
+	"before_story": 9,
+	"condition": {
+		"leaning": "community-",
+		"among": [
+			"fighting-",
+			"fighting+",
+			"community-",
+			"community+",
+			"reason-",
+			"reason+"
+		],
+		"min": 20
+	},
+	"urgency": 8,
+	"leaning": "community-",
+	"background_tags": [
+		"darkalley",
+		"lateevening",
+		"neonlights",
+		"fewpeople",
+		"tense"
+	],
+	"background_image": "https://imagedelivery.net/WTEqQNGFb-l-IHS6IGnzUQ/be4294df-122b-432f-5727-1a427b1d8100/public",
+	"dialogue": [
+		{
+			"speaker": "narrator",
+			"content": {
+				"korean": "골목 어귀 포장마차에서 억척스러운 아주머니가 당신을 불러 세운다."
+			}
+		},
+		{
+			"speaker": "pojangmacha_owner",
+			"content": {
+				"korean": "당신이 그, 자기 몫은 기똥차게 챙긴다는 해결사 맞지?"
+			}
+		},
+		{
+			"speaker": "pojangmacha_owner",
+			"content": {
+				"korean": "저 건너편 젊은이들 좀 혼내 줘요. 밤마다 와서 행패를 부리고, 내 장사를 다 망쳐 놓네!"
+			}
+		},
+		{
+			"speaker": "dax",
+			"content": {
+				"korean": "골목 안에서 경리부장님이 부스럭거리고 있는데, 여기서 시간을 끌 수 있을까요?"
+			}
+		},
+		{
+			"speaker": "pojangmacha_owner",
+			"content": {
+				"korean": "아이고, 내 팔자야! 저것들 때문에 손님 다 떨어지고 이게 무슨 일이람!"
+			}
+		}
+	],
+	"choices": [
+		{
+			"text": {
+				"korean": "아주머니에게 골목 건너편 젊은이들을 당장 쫓아내 주겠다고 장담한다."
+			},
+			"path": "easy",
+			"mbti": "ES",
+			"flag": "alley_brawl_danger",
+			"effects": {
+				"echo": -5,
+				"fighting": 10,
+				"gold": 100
+			},
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "당신이 소리를 버럭 지르며 젊은이들에게 다가가자, 그들은 혼비백산하며 줄행랑친다."
+					}
+				},
+				{
+					"speaker": "pojangmacha_owner",
+					"content": {
+						"korean": "옳지! 역시 돈 값 하는구먼! 여기 약소하지만, 장사 잘 되라고 주는 팁이야!"
+					}
+				},
+				{
+					"speaker": "dax",
+					"content": {
+						"korean": "와, 아주머니가 주머니에서 꼬깃꼬깃한 돈을 꺼내시네요! 저도 깜짝 놀랐습니다."
+					}
+				}
+			],
+			"risk": {
+				"chance": "mid",
+				"bad": {
+					"effects": {
+						"gold": -30
+					},
+					"reward": [
+						"defense_down"
+					],
+					"result": [
+						{
+							"speaker": "narrator",
+							"content": {
+								"korean": "당신이 소리를 지르며 다가가자, 젊은이들은 도망가기는커녕 오히려 당신에게 달려든다."
+							}
+						},
+						{
+							"speaker": "pojangmacha_owner",
+							"content": {
+								"korean": "아이고, 저것들이 눈에 뵈는 게 없나 봐! 내 장사만 더 망치네!"
+							}
+						},
+						{
+							"speaker": "dax",
+							"content": {
+								"korean": "어... 아주머니, 오히려 젊은이들이 더 씩씩해졌는데요? 괜히 시비만 붙었네요."
+							}
+						}
+					]
+				}
+			}
+		},
+		{
+			"text": {
+				"korean": "아주머니에게 젊은이들의 이야기를 먼저 들어보고 해결하겠다고 설득한다."
+			},
+			"path": "hard",
+			"mbti": "IT",
+			"flag": "alley_gossip_network",
+			"effects": {
+				"community": 10,
+				"gold": -50,
+				"echo": 10
+			},
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "당신이 아주머니를 진정시키고 젊은이들에게 다가가자, 그들은 밤마다 춤 연습을 하느라 시끄러웠다고 털어놓는다."
+					}
+				},
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "젊은이들은 죄송하다며 다음부터는 조용히 하겠다고 약속한다."
+					}
+				},
+				{
+					"speaker": "dax",
+					"content": {
+						"korean": "어휴, 저는 또 한바탕 시끄러워질까 봐 조마조마했습니다!"
+					}
+				}
+			],
+			"risk": {
+				"chance": "high",
+				"bad": {
+					"effects": {
+						"gold": -20
+					},
+					"reward": [],
+					"result": [
+						{
+							"speaker": "narrator",
+							"content": {
+								"korean": "당신이 아주머니를 설득하려 하자, 아주머니는 오히려 화를 내며 당신에게 푸념을 늘어놓는다."
+							}
+						},
+						{
+							"speaker": "pojangmacha_owner",
+							"content": {
+								"korean": "내 말을 못 믿겠으면 당신이 직접 가서 당해봐! 밤마다 잠을 못 잔다고!"
+							}
+						},
+						{
+							"speaker": "dax",
+							"content": {
+								"korean": "아주머니 화가 하늘을 찌르겠는데요? 젊은이들은 관심도 없어 보입니다."
+							}
+						}
+					]
+				}
+			}
+		},
+		{
+			"text": {
+				"korean": "아주머니에게 젊은이들을 혼내는 대가로 평소보다 세 배의 수고비를 요구한다."
+			},
+			"path": "stat",
+			"mbti": "TJ",
+			"require": {
+				"stat": "community",
+				"op": "<=",
+				"value": -40
+			},
+			"flag": "mercenary_reputation",
+			"effects": {
+				"gold": 150,
+				"community": -20,
+				"echo": 10
+			},
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "당신이 냉정한 얼굴로 수고비를 말하자, 아주머니는 망설이다 이내 지갑을 꺼내 돈을 건넨다."
+					}
+				},
+				{
+					"speaker": "pojangmacha_owner",
+					"content": {
+						"korean": "쳇, 얄밉지만 당신 실력은 인정해야지! 자, 여기 약속한 돈이다!"
+					}
+				},
+				{
+					"speaker": "dax",
+					"content": {
+						"korean": "와, 아주머니가 군소리 없이 돈을 내주시네요! 역시 당신의 명성은 대단합니다!"
+					}
+				}
+			]
+		},
+		{
+			"text": {
+				"korean": "아주머니에게 젊은이들 대신 당신이 직접 포장마차 앞에서 더 크게 소리를 질러준다고 한다."
+			},
+			"path": "fun",
+			"mbti": "EP",
+			"effects": {
+				"community": -20,
+				"echo": 5,
+				"gold": 50
+			},
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "당신이 포장마차 앞에 서서 목청껏 소리를 지르자, 젊은이들은 놀라 도망가고 아주머니는 어이없어 웃는다."
+					}
+				},
+				{
+					"speaker": "pojangmacha_owner",
+					"content": {
+						"korean": "푸하하! 아니, 저게 무슨 황당한 해결책이래? 그래도 조용해지긴 했네!"
+					}
+				},
+				{
+					"speaker": "dax",
+					"content": {
+						"korean": "어... 그래도 아주머니가 웃으시네요! 왠지 어깨가 으쓱해지는 기분입니다!"
+					}
+				}
+			],
+			"risk": {
+				"chance": "low",
+				"bad": {
+					"reward": [
+						"defense_down"
+					],
+					"result": [
+						{
+							"speaker": "narrator",
+							"content": {
+								"korean": "당신이 포장마차 앞에 서서 소리를 지르자, 젊은이들은 당신을 구경하러 몰려들고 아주머니는 기겁한다."
+							}
+						},
+						{
+							"speaker": "pojangmacha_owner",
+							"content": {
+								"korean": "아이고, 저것들이 공연하는 줄 알고 더 몰려오네! 내 장사 다 망치네!"
+							}
+						},
+						{
+							"speaker": "dax",
+							"content": {
+								"korean": "오히려 관객이 늘었는데요? 분위기가 더 시끌벅적해졌습니다!"
+							}
+						}
+					]
+				}
+			}
+		}
+	],
+	"tags": [
+		"pojangmacha_owner",
+		"dax"
+	],
+	"_design": {
+		"slot": "D",
+		"kind": "rep",
+		"person": {
+			"id": "pojangmacha_owner",
+			"name": "포장마차 아주머니",
+			"role": "골목 포장마차 주인"
+		},
+		"wants": "아주머니는 골목 건너편에서 소란을 피우는 젊은이들 때문에 장사를 망쳤다며 당신에게 해결을 요구한다.",
+		"rule_link": "포장마차 아주머니의 불평만 듣고 바로 젊은이들을 혼낼지, 아니면 상황을 좀 더 파악할지 결정한다.",
+		"rep": "community-",
+		"events": {},
+		"flags": {
+			"alley_brawl_danger": {
+				"kind": "bad",
+				"boss_penalty": -1,
+				"label": {
+					"korean": "골목 싸움 조짐"
+				},
+				"boss_line": {
+					"korean": "골목 싸움의 여파로 부두에 불량배 몇 명이 어슬렁거려 진입이 어려워진다."
+				}
+			},
+			"alley_gossip_network": {
+				"kind": "good",
+				"boss_penalty": 1,
+				"label": {
+					"korean": "포장마차 정보통"
+				},
+				"boss_choice": {
+					"korean": "아주머니가 부두 내 간부들의 동선에 대한 귀한 정보를 흘려주어 경리부장에게 접근할 단서를 얻는다."
+				}
+			},
+			"mercenary_reputation": {
+				"kind": "good",
+				"boss_penalty": 2,
+				"label": {
+					"korean": "용병의 명성"
+				},
+				"boss_choice": {
+					"korean": "당신의 악명 높은 명성 덕분에 경리부장이 당신에게 쉽게 덤비지 못하고 금고 비밀번호를 순순히 넘겨준다."
+				}
+			}
+		}
+	}
+}

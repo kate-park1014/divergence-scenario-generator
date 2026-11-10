@@ -1,0 +1,327 @@
+{
+	"id": "card_04_noisy_barber_stairs",
+	"title": {
+		"korean": "시끄러운 이발사"
+	},
+	"intensity": "calm",
+	"after_story": 5,
+	"before_story": 7,
+	"condition": {
+		"leaning": "fighting-",
+		"among": [
+			"fighting-",
+			"fighting+",
+			"community-",
+			"community+",
+			"reason-",
+			"reason+"
+		],
+		"min": 20
+	},
+	"urgency": 8,
+	"leaning": "fighting-",
+	"background_tags": [
+		"stairs",
+		"daytime",
+		"dimlight",
+		"empty",
+		"tense"
+	],
+	"background_image": "https://imagedelivery.net/WTEqQNGFb-l-IHS6IGnzUQ/0ae813bd-8183-437e-644c-6a15fd24b300/public",
+	"dialogue": [
+		{
+			"speaker": "ibalsa_aje",
+			"content": {
+				"korean": "흐음, 당신이 그 험한 일은 주먹으로 정리한다는 해결사 양반이십니까? 이 지저분한 꼴을 어찌해야 할지..."
+			}
+		},
+		{
+			"speaker": "dax",
+			"content": {
+				"korean": "여긴 금고실로 가는 길이에요, 아재. 바쁜데 비켜주세요."
+			}
+		},
+		{
+			"speaker": "ibalsa_aje",
+			"content": {
+				"korean": "이런, 이 바닥은 원래 깨끗해야 하는 건데..."
+			}
+		},
+		{
+			"speaker": "ibalsa_aje",
+			"content": {
+				"korean": "이 얼룩만 보면 속이 뒤집힙니다. 누가 이렇게 만들었는지..."
+			}
+		}
+	],
+	"choices": [
+		{
+			"text": {
+				"korean": "얼룩을 만든 사람을 찾아내 협박한다."
+			},
+			"path": "easy",
+			"mbti": "ET",
+			"flag": "barber_mess_threat",
+			"effects": {
+				"fighting": 15,
+				"echo": -5
+			},
+			"reward": [
+				"attack_down"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "당신은 이발사 아재에게 얼룩을 만든 사람을 물어본다. 아재는 엉겁결에 복도 청소부를 지목한다."
+					}
+				},
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "당신이 청소부에게 다가가자, 그는 놀라 들고 있던 청소 도구를 떨어뜨리고 도망친다."
+					}
+				},
+				{
+					"speaker": "dax",
+					"content": {
+						"korean": "누가 이렇게까지 한다고 얼룩을 지울까요..."
+					}
+				}
+			],
+			"risk": {
+				"chance": "mid",
+				"bad": {
+					"reward": [
+						"hp_down"
+					],
+					"result": [
+						{
+							"speaker": "narrator",
+							"content": {
+								"korean": "당신은 이발사 아재에게 얼룩을 만든 사람을 물어보며 험악하게 협박한다."
+							}
+						},
+						{
+							"speaker": "narrator",
+							"content": {
+								"korean": "아재는 겁에 질려 저 멀리 청소 도구를 들고 있는 사람을 지목한다."
+							}
+						},
+						{
+							"speaker": "narrator",
+							"content": {
+								"korean": "당신이 청소부에게 다가가자, 그는 당신의 살벌한 기세에 놀라 들고 있던 도구를 휘두르다 당신을 넘어뜨린다."
+							}
+						},
+						{
+							"speaker": "dax",
+							"content": {
+								"korean": "오히려 우리가 봉변을 당했네요."
+							}
+						}
+					]
+				}
+			}
+		},
+		{
+			"text": {
+				"korean": "이발사 아재의 손에 들린 수건을 빼앗아 직접 얼룩을 닦는다."
+			},
+			"path": "hard",
+			"mbti": "IS",
+			"flag": "barber_stain_clean",
+			"effects": {
+				"community": 10,
+				"fighting": -15
+			},
+			"reward": [
+				"move_range_up"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "당신은 아재의 손에서 수건을 빼앗아 벅벅 문지른다. 아재는 놀란 표정으로 당신을 바라본다."
+					}
+				},
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "오랜 시간 닦자 얼룩이 겨우 사라지고, 아재는 한결 편안한 표정으로 고개를 끄덕인다."
+					}
+				},
+				{
+					"speaker": "dax",
+					"content": {
+						"korean": "아재가 저렇게 순순히 수건을 내줄 줄이야..."
+					}
+				}
+			],
+			"risk": {
+				"chance": "high",
+				"bad": {
+					"effects": {
+						"gold": -30
+					},
+					"reward": [],
+					"result": [
+						{
+							"speaker": "narrator",
+							"content": {
+								"korean": "당신은 아재의 손에서 수건을 빼앗아 벅벅 문지른다."
+							}
+						},
+						{
+							"speaker": "narrator",
+							"content": {
+								"korean": "하지만 얼룩은 지워지지 않고, 오히려 당신의 손에 기름때가 묻는다."
+							}
+						},
+						{
+							"speaker": "narrator",
+							"content": {
+								"korean": "아재는 당신의 손을 보며 한숨을 쉬고, 당신은 끈적이는 손으로 움직여야 한다."
+							}
+						},
+						{
+							"speaker": "dax",
+							"content": {
+								"korean": "어설프게 도우려다 오히려 번거로워졌네요."
+							}
+						}
+					]
+				}
+			}
+		},
+		{
+			"text": {
+				"korean": "험악한 표정으로 이발사 아재에게 길을 비키라 명한다."
+			},
+			"path": "stat",
+			"mbti": "ST",
+			"require": {
+				"stat": "fighting",
+				"op": "<=",
+				"value": -40
+			},
+			"flag": "barber_intimidated",
+			"effects": {
+				"echo": -10,
+				"fighting": -20
+			},
+			"reward": [
+				"intelligence_up"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "당신의 험악한 기세에 이발사 아재는 움찔한다. 그는 재빨리 길을 비키며 고개를 숙인다."
+					}
+				},
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "당신은 굳게 닫힌 금고실 문으로 향한다. 아재는 계속 수건으로 손을 닦으며 당신의 뒷모습을 본다."
+					}
+				},
+				{
+					"speaker": "dax",
+					"content": {
+						"korean": "아재가 저렇게 순순히 비켜줄 줄은 몰랐네요. 소문이 맞았나 봐요."
+					}
+				}
+			]
+		},
+		{
+			"text": {
+				"korean": "새 수건을 사주겠다며 이발사 아재를 달랜다."
+			},
+			"path": "gold",
+			"mbti": "EN",
+			"require": {
+				"stat": "gold",
+				"op": ">=",
+				"value": 80
+			},
+			"effects": {
+				"gold": -80,
+				"community": 5
+			},
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "당신은 지갑에서 돈을 꺼내 이발사 아재에게 건넨다. 아재는 눈을 동그랗게 뜨고 돈과 당신을 번갈아 본다."
+					}
+				},
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "아재는 돈을 받아들고는 신이 나서 '새 수건 사러 가야지!' 하며 계단 아래로 내려간다."
+					}
+				},
+				{
+					"speaker": "dax",
+					"content": {
+						"korean": "아재가 저렇게 쉽게 갈 줄은 몰랐네요. 수건에 진심이었나 봐요."
+					}
+				}
+			]
+		}
+	],
+	"tags": [
+		"ibalsa_aje",
+		"dax"
+	],
+	"_design": {
+		"slot": "C",
+		"kind": "rep",
+		"person": {
+			"id": "ibalsa_aje",
+			"name": "이발사 아재",
+			"role": "이발사"
+		},
+		"wants": "이발사 아재는 계단에 생긴 얼룩 때문에 신경이 곤두서 있다. 당신에게 이 얼룩을 해결해 주기를 원한다.",
+		"rule_link": "이발사 아재는 바닥의 얼룩을 말 못 할 사정으로 보지만, 당신이 얼룩을 숨기려는 사람으로 볼지, 말 못 할 사정이 있다고 볼지 선택해야 한다.",
+		"rep": "fighting-",
+		"events": {},
+		"flags": {
+			"barber_mess_threat": {
+				"kind": "bad",
+				"boss_penalty": -1,
+				"label": {
+					"korean": "협박으로 해결"
+				},
+				"boss_line": {
+					"korean": "복도에서 청소부가 겁에 질려 도망친다."
+				}
+			},
+			"barber_stain_clean": {
+				"kind": "good",
+				"boss_penalty": 1,
+				"label": {
+					"korean": "얼룩 제거"
+				},
+				"boss_choice": {
+					"korean": "이발사 아재가 금고실 문 앞에서 길을 열어준다."
+				}
+			},
+			"barber_intimidated": {
+				"kind": "good",
+				"boss_penalty": 2,
+				"label": {
+					"korean": "이발사 위협"
+				},
+				"boss_choice": {
+					"korean": "이발사 아재가 금고실 문 앞에서 당신에게 먼저 인사를 건넨다."
+				}
+			}
+		}
+	}
+}

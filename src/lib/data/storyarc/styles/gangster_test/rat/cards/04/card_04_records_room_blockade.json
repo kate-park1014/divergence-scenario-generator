@@ -1,0 +1,289 @@
+{
+	"id": "card_04_records_room_blockade",
+	"title": {
+		"korean": "기록실 봉쇄"
+	},
+	"intensity": "calm",
+	"after_story": 3,
+	"before_story": 5,
+	"condition": {
+		"leaning": "reason-",
+		"among": [
+			"fighting-",
+			"fighting+",
+			"community-",
+			"community+",
+			"reason-",
+			"reason+"
+		],
+		"min": 20
+	},
+	"urgency": 8,
+	"leaning": "reason-",
+	"background_tags": [
+		"garage",
+		"night",
+		"dimlight",
+		"empty",
+		"tense"
+	],
+	"background_image": "https://imagedelivery.net/WTEqQNGFb-l-IHS6IGnzUQ/2bd5c8a5-9661-4497-0742-a56043432400/public",
+	"dialogue": [
+		{
+			"speaker": "chago_banjang",
+			"content": {
+				"korean": "당신이 그, 뭐냐, 서류 한 장도 절차대로 처리하는 해결사 양반들 아니요? 소문은 익히 들었소만."
+			}
+		},
+		{
+			"speaker": "narrator",
+			"content": {
+				"korean": "차고 반장이 차량 기록실 문 앞에 놓인 서류 더미를 가리킨다."
+			}
+		},
+		{
+			"speaker": "chago_banjang",
+			"content": {
+				"korean": "며칠 전부터 보안 규정이 바뀌어서 말이야. 이 복잡한 서류를 다 채워야만 기록실 문을 열 수 있게 됐어."
+			}
+		},
+		{
+			"speaker": "chago_banjang",
+			"content": {
+				"korean": "혼자 힘으로는 안 되겠고. 누가 좀 도와주면 좋겠는데 말이야."
+			}
+		},
+		{
+			"speaker": "dax",
+			"content": {
+				"korean": "흐음, 서류가 이렇게 많으면 오늘 안에는 못 끝낼 것 같은데요."
+			}
+		}
+	],
+	"choices": [
+		{
+			"text": {
+				"korean": "반장의 서류 작업을 돕고 필요한 서류를 꼼꼼히 채운다."
+			},
+			"path": "easy",
+			"mbti": "SJ",
+			"flag": "messy_paperwork",
+			"effects": {
+				"echo": 10,
+				"gold": 50,
+				"community": 15
+			},
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "당신이 반장과 함께 서류 더미를 파고들어 빈칸을 채워 나간다."
+					}
+				},
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "다 채운 서류를 제출하자 기록실 문이 '철컥' 하고 열린다."
+					}
+				},
+				{
+					"speaker": "dax",
+					"content": {
+						"korean": "와, 이렇게 복잡한 걸 다 하시다니, 대단하네요!"
+					}
+				}
+			],
+			"risk": {
+				"chance": "mid",
+				"bad": {
+					"effects": {
+						"gold": -30
+					},
+					"reward": [],
+					"result": [
+						{
+							"speaker": "narrator",
+							"content": {
+								"korean": "당신이 반장과 함께 서류 더미를 꼼꼼히 채워나가던 중, 반장이 휘청이며 커피를 쏟아버린다."
+							}
+						},
+						{
+							"speaker": "narrator",
+							"content": {
+								"korean": "서류를 다 채웠는데, 마지막 서류에 반장이 실수로 커피를 쏟아 버린다."
+							}
+						},
+						{
+							"speaker": "dax",
+							"content": {
+								"korean": "아, 이런! 다시 해야 한다니 너무하네요!"
+							}
+						}
+					]
+				}
+			}
+		},
+		{
+			"text": {
+				"korean": "새로운 규정의 허점을 찾아 기록실 문을 열 방법을 찾아본다."
+			},
+			"path": "hard",
+			"mbti": "NT",
+			"flag": "rule_loophole",
+			"effects": {
+				"echo": -5,
+				"reason": 20
+			},
+			"reward": [
+				"defense_up"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "당신이 규정집을 훑어보다가 특정 상황에서는 서류 제출"
+					}
+				},
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "없이 책임자의 허락으로 문을 열 수 있다는 조항을 찾아낸다."
+					}
+				},
+				{
+					"speaker": "chago_banjang",
+					"content": {
+						"korean": "오, 이런 조항이 있었나? 그럼 내가 책임지고 열어주지!"
+					}
+				},
+				{
+					"speaker": "dax",
+					"content": {
+						"korean": "대단해요, 이런 걸 찾아내다니!"
+					}
+				}
+			],
+			"risk": {
+				"chance": "high",
+				"bad": {
+					"effects": {
+						"gold": -20
+					},
+					"reward": [],
+					"result": [
+						{
+							"speaker": "narrator",
+							"content": {
+								"korean": "당신이 규정집을 훑어보다가 허점을 찾아내려 애쓴다."
+							}
+						},
+						{
+							"speaker": "narrator",
+							"content": {
+								"korean": "하지만 규정집은 빈틈없이 완벽하게 작성되어 있어 허점은 보이지 않는다."
+							}
+						},
+						{
+							"speaker": "chago_banjang",
+							"content": {
+								"korean": "으음… 딱히 다른 방법은 없어 보이는데 말이야."
+							}
+						}
+					]
+				}
+			}
+		},
+		{
+			"text": {
+				"korean": "규칙을 철저히 지키는 당신의 평판을 내세워 반장을 설득한다."
+			},
+			"path": "stat",
+			"mbti": "TJ",
+			"require": {
+				"stat": "reason",
+				"op": "<=",
+				"value": -40
+			},
+			"flag": "reputation_authority",
+			"effects": {
+				"echo": 10,
+				"reason": -20
+			},
+			"reward": [
+				"intelligence_up"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "당신이 그동안 규칙을 지켜온 사례들을 언급하며 반장의 신뢰를 얻는다."
+					}
+				},
+				{
+					"speaker": "chago_banjang",
+					"content": {
+						"korean": "당신이라면 믿을 만하지! 내가 책임지고 이 문을 열어주겠소!"
+					}
+				},
+				{
+					"speaker": "dax",
+					"content": {
+						"korean": "역시 평판이 최고네요!"
+					}
+				}
+			]
+		}
+	],
+	"tags": [
+		"chago_banjang",
+		"dax"
+	],
+	"_design": {
+		"slot": "B",
+		"kind": "rep",
+		"person": {
+			"id": "chago_banjang",
+			"name": "차고 반장",
+			"role": "차고 반장"
+		},
+		"wants": "차고 반장이 새로운 보안 규정 때문에 차량 기록실 문을 열어줄 수 없어 난처해한다.",
+		"rule_link": "기록실 보안 규정을 지키려는 반장의 태도가, 말 못 할 사정으로 기록을 지운 누님을 숨기는 행동처럼 보이게 한다.",
+		"rep": "reason-",
+		"events": {},
+		"flags": {
+			"messy_paperwork": {
+				"kind": "bad",
+				"boss_penalty": -1,
+				"label": {
+					"korean": "서류 작업"
+				},
+				"boss_line": {
+					"korean": "금고실 주변에 서류 더미가 흩어져 있어 시야를 가린다."
+				}
+			},
+			"rule_loophole": {
+				"kind": "good",
+				"boss_penalty": 1,
+				"label": {
+					"korean": "규정의 허점"
+				},
+				"boss_choice": {
+					"korean": "금고실 보안 시스템에 작은 허점이 발견되어, 일부 기능이 무력화된다."
+				}
+			},
+			"reputation_authority": {
+				"kind": "good",
+				"boss_penalty": 2,
+				"label": {
+					"korean": "평판의 권위"
+				},
+				"boss_choice": {
+					"korean": "금고실 경비들이 당신의 평판을 존중하여 경계 태세를 잠시 늦춘다."
+				}
+			}
+		}
+	}
+}

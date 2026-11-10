@@ -1,0 +1,240 @@
+{
+	"id": "card_01_old_worker_plea",
+	"title": {
+		"korean": "늙은 일꾼의 하소연"
+	},
+	"intensity": "calm",
+	"after_story": 1,
+	"before_story": 3,
+	"background_tags": [
+		"dock",
+		"night",
+		"foggy",
+		"alone",
+		"suspicious"
+	],
+	"background_image": "https://imagedelivery.net/WTEqQNGFb-l-IHS6IGnzUQ/009039fb-0c40-4212-e76a-ba15e72d7400/public",
+	"dialogue": [
+		{
+			"speaker": "narrator",
+			"content": {
+				"korean": "부두 사무실 앞 계단을 내려가려는데, 허름한 작업복을 입은 늙은 일꾼이 당신의 앞을 막아선다."
+			}
+		},
+		{
+			"speaker": "worker_old",
+			"content": {
+				"korean": "컥, 컥... 이보쇼, 당신들... 회장님이 부른 사람들이라며?"
+			}
+		},
+		{
+			"speaker": "dax",
+			"content": {
+				"korean": "어르신, 무슨 일이세요? 저희는 지금 바쁩니다."
+			}
+		},
+		{
+			"speaker": "worker_old",
+			"content": {
+				"korean": "컥, 컥... 내 약값, 내 약값 말이여... 갑자기 기금이 끊겨서 약을 못 샀단 말이여."
+			}
+		},
+		{
+			"speaker": "worker_old",
+			"content": {
+				"korean": "누가 그랬는지, 그놈 이름이라도 좀 알려줘요. 억울해서 잠을 못 자겠어!"
+			}
+		}
+	],
+	"choices": [
+		{
+			"text": {
+				"korean": "\"그럼요, 경리부장이 제일 수상하죠!\" 하고 장단을 맞춰 일꾼을 달래 준다."
+			},
+			"path": "easy",
+			"mbti": "EN",
+			"effects": {
+				"community": 15,
+				"echo": 10
+			},
+			"reward": [
+				"defense_up"
+			],
+			"seed": "old_worker_plea_easy",
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "당신의 말에 늙은 일꾼은 고개를 끄덕이며 작은 보따리에서 꼬깃꼬깃한 건빵 봉지를 꺼낸다."
+					}
+				},
+				{
+					"speaker": "worker_old",
+					"content": {
+						"korean": "흐읍, 흐읍... 고맙소. 이거라도 받으시오. 내가 아껴 둔 건데..."
+					}
+				},
+				{
+					"speaker": "dax",
+					"content": {
+						"korean": "윽, 저거 유통기한 한참 지난 거 아니에요? 그래도 어르신 마음이 고마우시네요."
+					}
+				}
+			],
+			"risk": {
+				"chance": "mid",
+				"bad": {
+					"reward": [
+						"hp_down"
+					],
+					"result": [
+						{
+							"speaker": "narrator",
+							"content": {
+								"korean": "당신의 말에 늙은 일꾼은 눈을 번뜩이며 당신의 멱살을 잡는다."
+							}
+						},
+						{
+							"speaker": "worker_old",
+							"content": {
+								"korean": "컥, 컥... 그 경리부장 놈이 그랬단 말이여? 내가 당장 가서 따져야겠어!"
+							}
+						},
+						{
+							"speaker": "dax",
+							"content": {
+								"korean": "어르신, 진정하세요! 저희는 아직 확실하게 모릅니다!"
+							}
+						}
+					]
+				}
+			}
+		},
+		{
+			"text": {
+				"korean": "\"아직 누가 범인인지 모른다\"고 솔직히 말하고, 약값 일부를 대신 내준다."
+			},
+			"path": "hard",
+			"mbti": "TJ",
+			"effects": {
+				"reason": 10,
+				"gold": -100,
+				"echo": 5
+			},
+			"reward": [
+				"shield"
+			],
+			"seed": "old_worker_plea_hard",
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "당신은 지갑에서 돈을 꺼내 늙은 일꾼에게 건넨다. 일꾼은 마지못해 돈을 받지만, 표정은 여전히 씁쓸하다."
+					}
+				},
+				{
+					"speaker": "worker_old",
+					"content": {
+						"korean": "컥, 컥... 그래도 범인 이름은 못 알려주는 거구먼... 고맙지만 맘이 영 편치 않네."
+					}
+				},
+				{
+					"speaker": "dax",
+					"content": {
+						"korean": "으음, 저희가 찾아서 꼭 돌려드릴게요. 지금은 돈을 쓰셨네요, 괜찮으세요?"
+					}
+				}
+			],
+			"risk": {
+				"chance": "high",
+				"bad": {
+					"effects": {
+						"gold": -20
+					},
+					"reward": [],
+					"result": [
+						{
+							"speaker": "narrator",
+							"content": {
+								"korean": "당신이 건넨 돈을 늙은 일꾼이 허공에 흩뿌린다. 돈은 바람에 날려 부두 바닥으로 굴러간다."
+							}
+						},
+						{
+							"speaker": "worker_old",
+							"content": {
+								"korean": "컥, 컥... 내 약값은 이게 전부가 아니여! 범인이나 잡아와!"
+							}
+						},
+						{
+							"speaker": "dax",
+							"content": {
+								"korean": "어르신, 돈이 날아가잖아요! 저희가 드린 성의인데..."
+							}
+						}
+					]
+				}
+			}
+		},
+		{
+			"text": {
+				"korean": "{actor}이(가) \"어르신, 저희가 꼭 범인을 찾아 돈을 돌려드릴게요!\" 하고 손을 잡고 위로한다."
+			},
+			"path": "lock",
+			"mbti": "SF",
+			"require": {
+				"mbti": "SF"
+			},
+			"effects": {
+				"community": 20,
+				"echo": 15
+			},
+			"reward": [
+				"attack_up"
+			],
+			"seed": "old_worker_plea_hard",
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "{actor}의 따뜻한 말과 손길에 늙은 일꾼의 눈가가 촉촉해진다."
+					}
+				},
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "일꾼은 말없이 당신의 손을 꼭 잡는다."
+					}
+				},
+				{
+					"speaker": "worker_old",
+					"content": {
+						"korean": "컥, 컥... 고맙소... 믿어 보겠소."
+					}
+				},
+				{
+					"speaker": "dax",
+					"content": {
+						"korean": "와, 어르신이 {actor}을 완전히 믿는 것 같은데요!"
+					}
+				}
+			]
+		}
+	],
+	"tags": [
+		"worker_old",
+		"dax"
+	],
+	"_design": {
+		"slot": "A",
+		"kind": "plant",
+		"person": {
+			"name": "늙은 일꾼",
+			"role": "늙은 부두 일꾼",
+			"id": "worker_old"
+		},
+		"wants": "약값을 다시 받고 싶어 함. 아니면 범인 이름이라도 듣고 싶어 함.",
+		"rule_link": "기금이 끊겨 약을 못 사는 늙은 일꾼의 하소연을 듣고, 섣불리 범인을 지목할지 아니면 사정을 먼저 들을지 판단해야 합니다.",
+		"events": {},
+		"flags": {}
+	}
+}

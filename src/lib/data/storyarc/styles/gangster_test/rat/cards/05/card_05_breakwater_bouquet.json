@@ -1,0 +1,171 @@
+{
+	"id": "card_05_breakwater_bouquet",
+	"title": {
+		"korean": "방파제의 꽃다발"
+	},
+	"intensity": "high",
+	"after_story": 7,
+	"before_story": 9,
+	"callback": {
+		"seed": "warehouse_foreman_flowers_hard",
+		"min_rooms_after": 2
+	},
+	"background_tags": [
+		"breakwater",
+		"night",
+		"misty",
+		"sparse",
+		"peaceful"
+	],
+	"background_image": "https://imagedelivery.net/WTEqQNGFb-l-IHS6IGnzUQ/aa54270d-331b-4a58-25fd-486f6e71da00/public",
+	"dialogue": [
+		{
+			"speaker": "narrator",
+			"content": {
+				"korean": "등대 앞 방파제에 앉아 거친 숨을 고르는데, 저 멀리 놓인 꽃다발이 보인다."
+			}
+		},
+		{
+			"speaker": "dax",
+			"content": {
+				"korean": "저거, 창고 간부님 꽃다발 아니에요? 어쩌다 저기까지..."
+			}
+		},
+		{
+			"speaker": "narrator",
+			"content": {
+				"korean": "근처 바위 뒤에서 창고 간부가 조용히 중얼거린다."
+			}
+		},
+		{
+			"speaker": "janggojigi",
+			"content": {
+				"korean": "큭, 내가 회장님께 드리려고 밤새 직접 만든 건데."
+			}
+		},
+		{
+			"speaker": "janggojigi",
+			"content": {
+				"korean": "싸우러 온 게 아니라는 뜻인데, 알아줄까?"
+			}
+		},
+		{
+			"speaker": "dax",
+			"content": {
+				"korean": "간부님이 저기 숨어 계셨네요!"
+			}
+		}
+	],
+	"choices": [
+		{
+			"text": {
+				"korean": "꽃다발을 들고 등대 안으로 들어가 \"이 꽃 받으세요!\"라고 외친다."
+			},
+			"path": "easy",
+			"mbti": "NT",
+			"flag": "bouquet_delivery",
+			"effects": {
+				"community": 10,
+				"echo": 5
+			},
+			"reward": [
+				"attack_up"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "당신은 꽃다발을 들고 등대 안으로 들어서며 크게 외친다. \"이 꽃 받으세요!\""
+					}
+				},
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "등대 안쪽에서 잠시 정적이 흐른다."
+					}
+				},
+				{
+					"speaker": "dax",
+					"content": {
+						"korean": "비서님이 꽃을 좋아하시려나 모르겠네요!"
+					}
+				}
+			]
+		},
+		{
+			"text": {
+				"korean": "꽃다발을 방파제 가장 잘 보이는 곳에 놓아두고 그 의미를 알린다."
+			},
+			"path": "hard",
+			"mbti": "SF",
+			"flag": "peace_bouquet",
+			"effects": {
+				"echo": 5,
+				"reason": 10
+			},
+			"reward": [
+				"defense_up"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "당신은 꽃다발을 방파제 가장 잘 보이는 곳에 조심스럽게 놓는다."
+					}
+				},
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "멀리서 숨어 지켜보던 창고 간부가 고개를 끄덕인다."
+					}
+				},
+				{
+					"speaker": "dax",
+					"content": {
+						"korean": "휴, 간부님 얼굴에 그제야 안심하는 표정이 보이네요!"
+					}
+				}
+			]
+		}
+	],
+	"tags": [
+		"janggojigi",
+		"dax"
+	],
+	"_design": {
+		"slot": "D",
+		"kind": "callback",
+		"person": {
+			"role": "창고 간부",
+			"name": "창고 간부",
+			"id": "janggojigi"
+		},
+		"wants": "자신이 회장님께 싸우러 온 것이 아님을 알리고 싶어 한다.",
+		"rule_link": "타인의 선의를 먼저 이해하고 존중한다.",
+		"events": {},
+		"flags": {
+			"bouquet_delivery": {
+				"kind": "good",
+				"boss_penalty": 1,
+				"label": {
+					"korean": "꽃다발 전달"
+				},
+				"boss_choice": {
+					"korean": "꽃다발이 등대 안으로 전달되어 긴장감이 완화된 기색이다."
+				}
+			},
+			"peace_bouquet": {
+				"kind": "good",
+				"boss_penalty": 2,
+				"label": {
+					"korean": "평화의 꽃다발"
+				},
+				"boss_choice": {
+					"korean": "방파제 위에 놓인 꽃다발 덕분에 등대 쪽 경계심이 줄어든다."
+				}
+			}
+		}
+	}
+}

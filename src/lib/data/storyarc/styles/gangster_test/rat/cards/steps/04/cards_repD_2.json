@@ -1,0 +1,428 @@
+{
+	"cards": [
+		{
+			"person": {
+				"id": "security_youngest",
+				"name": "경호팀 막내",
+				"role": "security_guard"
+			},
+			"background_tags": [
+				"waiting_room",
+				"night",
+				"dim_light",
+				"empty",
+				"tense"
+			],
+			"rule_link": "남의 은밀한 사정을 캐내어 이용하는 것이 옳은가, 모른 척 넘어가 주는 것이 옳은가?",
+			"dialogue": [
+				{
+					"speaker": "security_youngest",
+					"text": "침을 꿀꺽 삼키며 당신이... 그, 자기 몫부터 챙긴다는 해결사 맞으십니까?"
+				},
+				{
+					"text": "제게... 제게 뭘 원하십니까? 고개를 저으며 아닙니다! 저는 제 임무를 다할 뿐입니다.",
+					"speaker": "security_youngest"
+				},
+				{
+					"text": "막내 경호원이 숨기는 게 있는 것 같네요. 저러다 쓰러지겠어요.",
+					"speaker": "dax"
+				},
+				{
+					"speaker": "security_youngest",
+					"text": "이 문은... 회장님 허락 없이는 누구도 통과할 수 없습니다."
+				},
+				{
+					"text": "경호팀 막내가 등 뒤에 뭔가를 감추려 애쓰고 있다.",
+					"speaker": "narrator"
+				}
+			],
+			"wants": "막내가 숨긴 것을 모른 척 넘어가 주거나, 숨기는 일을 도와주길 바란다.",
+			"title": "손에 쥔 것은 무엇인가",
+			"no": 1,
+			"choices": [
+				{
+					"effects": {
+						"gold": 100,
+						"echo": -5
+					},
+					"flag": {
+						"key": "junior_guard_flustered",
+						"label": "막내 당황",
+						"boss_text": "금고실 앞 복도에 막내 경호원이 당황해서 우왕좌왕하고 있다."
+					},
+					"result": [
+						{
+							"text": "막내가 쥐고 있던 주머니를 떨어뜨리자, 그 안에서 단팥빵이 굴러나온다.",
+							"speaker": "narrator"
+						},
+						{
+							"text": "이건... 그, 비상식량입니다!",
+							"speaker": "security_youngest"
+						},
+						{
+							"speaker": "dax",
+							"text": "저런 걸 숨기고 있었다니, 귀엽네요."
+						}
+					],
+					"text": "막내가 숨긴 것을 알아내고, 길을 터 달라고 으름장을 놓는다.",
+					"risk_bad": {
+						"result": [
+							{
+								"speaker": "narrator",
+								"text": "막내가 쥐고 있던 주머니를 떨어뜨리자, 그 안에서 딱딱하게 굳은 빵이 굴러나온다."
+							},
+							{
+								"speaker": "security_youngest",
+								"text": "제가 밤새 먹으려고 아껴둔 건데..."
+							},
+							{
+								"text": "빵이 저렇게 딱딱해지도록 얼마나 숨겨둔 걸까요?",
+								"speaker": "dax"
+							}
+						],
+						"gold": -30,
+						"reward": []
+					},
+					"mbti": "ST",
+					"path": "easy"
+				},
+				{
+					"path": "hard",
+					"mbti": "TJ",
+					"text": "막내의 개인적인 일에 신경 끄고, 지금 당장 길을 열라고 명령한다.",
+					"effects": {
+						"fighting": 20,
+						"echo": -10
+					},
+					"reward": [
+						"attack_up"
+					],
+					"risk_bad": {
+						"result": [
+							{
+								"speaker": "narrator",
+								"text": "막내가 움찔하더니 굳은 얼굴로 길을 비켜주는가 싶었지만, 발이 꼬여 넘어지고 만다."
+							},
+							{
+								"speaker": "security_youngest",
+								"text": "으악! 제, 제가..."
+							},
+							{
+								"speaker": "dax",
+								"text": "괜히 발이 걸려 넘어진 것 같은데요?"
+							}
+						],
+						"gold": -20,
+						"reward": []
+					},
+					"result": [
+						{
+							"text": "막내가 움찔하더니 굳은 얼굴로 길을 비켜준다.",
+							"speaker": "narrator"
+						},
+						{
+							"speaker": "security_youngest",
+							"text": "알겠습니다! 회장님께 보고는..."
+						},
+						{
+							"text": "저러다 누님한테 혼나는 거 아니겠죠?",
+							"speaker": "dax"
+						}
+					],
+					"flag": {
+						"label": "막내 위축",
+						"boss_text": "금고실 앞 복도에서 막내 경호원이 잔뜩 위축되어 당신을 보자마자 길을 비켜준다.",
+						"key": "junior_guard_intimidated"
+					}
+				},
+				{
+					"text": "막내에게 자기 몫을 확실히 챙기는 모습을 보여주며 길을 열라고 요구한다.",
+					"path": "stat",
+					"mbti": "ES",
+					"reward": [
+						"move_range_up"
+					],
+					"effects": {
+						"reason": -10,
+						"community": -10,
+						"fighting": 10,
+						"echo": -5
+					},
+					"flag": {
+						"boss_text": "금고실 앞 복도에서 막내 경호원이 당신에게 겁먹고 도망친다.",
+						"label": "막내 겁먹음",
+						"key": "junior_guard_scared"
+					},
+					"result": [
+						{
+							"speaker": "narrator",
+							"text": "당신의 단호한 태도에 막내가 움찔하며 급히 길을 비켜준다."
+						},
+						{
+							"text": "제가 잘못했습니다! 부디 이번 일은...",
+							"speaker": "security_youngest"
+						},
+						{
+							"speaker": "dax",
+							"text": "막내가 뭘 잘못한 건지 모르겠네요."
+						}
+					]
+				},
+				{
+					"result": [
+						{
+							"speaker": "narrator",
+							"text": "당신이 막내의 뒤에 바싹 붙어 그의 등 뒤를 가려주자, 막내가 화들짝 놀라며 주춤거린다."
+						},
+						{
+							"text": "저, 저와 뭘 하시는 겁니까?",
+							"speaker": "security_youngest"
+						},
+						{
+							"text": "저러다 둘이 붙어버리겠어요!",
+							"speaker": "dax"
+						}
+					],
+					"effects": {
+						"echo": 10,
+						"reason": 20
+					},
+					"mbti": "NP",
+					"path": "fun",
+					"risk_bad": {
+						"result": [
+							{
+								"text": "당신이 막내의 뒤에 바싹 붙어 등 뒤를 가려주자, 막내가 화들짝 놀라며 당신의 발을 밟는다.",
+								"speaker": "narrator"
+							},
+							{
+								"text": "죄, 죄송합니다!",
+								"speaker": "security_youngest"
+							},
+							{
+								"speaker": "dax",
+								"text": "발이 아파 보이네요."
+							}
+						],
+						"reward": [
+							"hp_down"
+						]
+					},
+					"text": "막내의 등 뒤로 가서 그가 숨긴 것을 같이 감추는 시늉을 하며 지나간다.",
+					"reward": [
+						"heal"
+					]
+				}
+			],
+			"key": "hidden_snack",
+			"slot": "D",
+			"kind": "rep",
+			"rep_dir": "community-"
+		},
+		{
+			"dialogue": [
+				{
+					"speaker": "security_youngest",
+					"text": "그, 약한 사람에게 손을 내민다는... 해결사 맞으십니까? 소문이 자자하시던데..."
+				},
+				{
+					"text": "아닙니다! 그저... 한숨을 쉬며 제가... 드릴 말씀이 있습니다.",
+					"speaker": "security_youngest"
+				},
+				{
+					"text": "막내가 뭔가 털어놓으려는 것 같네요.",
+					"speaker": "dax"
+				},
+				{
+					"speaker": "security_youngest",
+					"text": "이 문은... 회장님 허락 없이는 누구도 통과할 수 없습니다."
+				},
+				{
+					"text": "경호팀 막내가 초조한 듯 손톱을 물어뜯고 있다.",
+					"speaker": "narrator"
+				}
+			],
+			"rule_link": "말 못 할 사정이 있는 사람을 무작정 의심하는 것이 옳은가, 그 사정을 헤아려 돕는 것이 옳은가?",
+			"wants": "막내는 말 못 할 사정이 있는 동료들의 억울함을 당신이 헤아려주길 바란다.",
+			"background_tags": [
+				"waiting_room",
+				"night",
+				"dim_light",
+				"empty",
+				"anxious"
+			],
+			"no": 2,
+			"title": "말 못 할 사정",
+			"person": {
+				"id": "security_youngest",
+				"name": "경호팀 막내",
+				"role": "security_guard"
+			},
+			"choices": [
+				{
+					"mbti": "NF",
+					"risk_bad": {
+						"gold": -20,
+						"result": [
+							{
+								"speaker": "narrator",
+								"text": "막내가 감격한 표정으로 고개를 끄덕이며 길을 비켜주려다, 발을 헛디뎌 넘어진다."
+							},
+							{
+								"speaker": "security_youngest",
+								"text": "죄, 죄송합니다!"
+							},
+							{
+								"text": "저러다 누님한테 혼나겠어요.",
+								"speaker": "dax"
+							}
+						],
+						"reward": []
+					},
+					"flag": {
+						"label": "막내의 지지",
+						"key": "junior_guard_support",
+						"boss_text": "금고실 앞 복도에 막내 경호원이 당신에게 감사하며 길을 열어준다."
+					},
+					"path": "easy",
+					"text": "막내의 사정을 듣고, 동료들을 돕겠다고 약속하며 안으로 들어간다.",
+					"result": [
+						{
+							"speaker": "narrator",
+							"text": "막내가 감격한 표정으로 고개를 끄덕이며 길을 비켜준다."
+						},
+						{
+							"text": "감사합니다! 꼭... 꼭 지켜주십시오.",
+							"speaker": "security_youngest"
+						},
+						{
+							"speaker": "dax",
+							"text": "막내가 당신을 믿는 눈치네요."
+						}
+					],
+					"effects": {
+						"echo": 10,
+						"community": 20
+					},
+					"reward": [
+						"attack_up"
+					]
+				},
+				{
+					"reward": [
+						"defense_up"
+					],
+					"effects": {
+						"fighting": 10,
+						"echo": -5,
+						"community": -10
+					},
+					"text": "막내의 부탁을 들어줄 여유가 없다고 단호하게 말하며, 문을 열라고 한다.",
+					"result": [
+						{
+							"text": "막내가 실망한 표정으로 잠시 망설이더니, 이내 문을 열어준다.",
+							"speaker": "narrator"
+						},
+						{
+							"speaker": "security_youngest",
+							"text": "알겠습니다..."
+						},
+						{
+							"speaker": "dax",
+							"text": "막내가 시무룩하네요."
+						}
+					],
+					"path": "hard",
+					"risk_bad": {
+						"result": [
+							{
+								"speaker": "narrator",
+								"text": "막내가 실망한 표정으로 잠시 망설이더니, 이내 문을 열어주려다 손잡이를 놓쳐 손을 다친다."
+							},
+							{
+								"speaker": "security_youngest",
+								"text": "으윽, 앗 뜨거!"
+							},
+							{
+								"speaker": "dax",
+								"text": "손잡이가 뜨거웠나 봐요."
+							}
+						],
+						"gold": -30,
+						"reward": []
+					},
+					"mbti": "TP",
+					"flag": {
+						"key": "junior_guard_disappointed",
+						"boss_text": "금고실 앞 복도에 막내 경호원이 당신에게 실망한 표정으로 길을 비켜준다.",
+						"label": "막내 실망"
+					}
+				},
+				{
+					"text": "막내의 진심을 헤아려주며, 동료들을 위한 그의 용기를 칭찬한다.",
+					"reward": [
+						"intelligence_up"
+					],
+					"flag": {
+						"label": "막내의 귀띔",
+						"boss_text": "금고실 앞 복도에서 막내 경호원이 당신에게 조용히 경호실장에 대한 정보를 흘려준다.",
+						"key": "junior_guard_confides"
+					},
+					"mbti": "IN",
+					"path": "stat",
+					"effects": {
+						"echo": 15,
+						"community": 20,
+						"reason": 10
+					},
+					"result": [
+						{
+							"speaker": "narrator",
+							"text": "막내가 눈물을 글썽이며 고개를 끄덕이고, 조심스럽게 문을 열어준다."
+						},
+						{
+							"speaker": "security_youngest",
+							"text": "감사합니다... 사실, 그날 밤 경호실장님도..."
+						},
+						{
+							"text": "막내가 뭔가 더 말하려던 것 같았는데!",
+							"speaker": "dax"
+						}
+					]
+				},
+				{
+					"text": "막내에게 돈을 쥐여주며, 동료들의 상황과 문을 열어달라고 부탁한다.",
+					"result": [
+						{
+							"speaker": "narrator",
+							"text": "막내가 눈을 휘둥그레 뜨더니, 돈을 받아들고 주변을 살피며 문을 열어준다."
+						},
+						{
+							"speaker": "security_youngest",
+							"text": "아, 아닙니다! 이런 걸 받을 수는..."
+						},
+						{
+							"text": "막내가 당황했지만 돈은 놓지 않네요.",
+							"speaker": "dax"
+						}
+					],
+					"reward": [
+						"stun"
+					],
+					"path": "gold",
+					"effects": {
+						"gold": -100,
+						"echo": 5
+					},
+					"mbti": "EP"
+				}
+			],
+			"key": "untold_story",
+			"slot": "D",
+			"kind": "rep",
+			"rep_dir": "community+"
+		}
+	],
+	"errors": [],
+	"prompt_hash": "c6b28c30c6964e77176477c4cd46b5eb38a5a3df"
+}

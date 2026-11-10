@@ -1,0 +1,255 @@
+{
+	"id": "card_03_gossip_rumors",
+	"title": {
+		"korean": "수다스러운 야근 직원들"
+	},
+	"intensity": "calm",
+	"after_story": 1,
+	"before_story": 3,
+	"background_tags": [
+		"basement",
+		"night",
+		"fluorescent",
+		"crowd",
+		"gossip"
+	],
+	"background_image": "https://imagedelivery.net/WTEqQNGFb-l-IHS6IGnzUQ/15bb6158-ea4d-4da1-aeb4-17d47c776900/public",
+	"dialogue": [
+		{
+			"speaker": "narrator",
+			"content": {
+				"korean": "자료실 한쪽에서 야근하던 직원들이 모여 웅성거린다."
+			}
+		},
+		{
+			"speaker": "gossip_monger",
+			"content": {
+				"korean": "지난번에 꽃꽂이 소동 말이야, 사실 해커 간부가 직접 했다는 소문이 파다하던데?"
+			}
+		},
+		{
+			"speaker": "dax",
+			"content": {
+				"korean": "으음, 또 소문이 돌고 있네요. 저런 이야기는 믿을 게 못 돼요."
+			}
+		},
+		{
+			"speaker": "gossip_monger",
+			"content": {
+				"korean": "에이, 설마요. 그날 밤 해커 간부가 혼자 서버실에 들어갔다는 이야기도 있던데…"
+			}
+		},
+		{
+			"speaker": "gossip_monger",
+			"content": {
+				"korean": "다들 쉬쉬하지만 아는 사람은 다 안다고!"
+			}
+		},
+		{
+			"speaker": "dax",
+			"content": {
+				"korean": "저 사람 너무 시끄러워요. 우리가 뭘 하러 왔는지 다 들리겠어요!"
+			}
+		}
+	],
+	"choices": [
+		{
+			"text": {
+				"korean": "더욱 자극적인 새 소문을 퍼뜨려 직원들의 시선을 다른 곳으로 돌린다."
+			},
+			"path": "easy",
+			"mbti": "EN",
+			"effects": {
+				"echo": 5,
+				"reason": -10
+			},
+			"reward": [
+				"stun"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "당신이 회장님 비서의 비밀 연애 소문을 지어내 퍼뜨리자 직원들의 귀가 쫑긋 세워진다."
+					}
+				},
+				{
+					"speaker": "gossip_monger",
+					"content": {
+						"korean": "헉, 정말요?! 그럼 해커 간부 얘기보다 그게 더 중요한데요?!"
+					}
+				},
+				{
+					"speaker": "dax",
+					"content": {
+						"korean": "푸하하! 저 사람들 표정 좀 봐요! 완전 혼란스러워하네요!"
+					}
+				}
+			],
+			"risk": {
+				"chance": "mid",
+				"bad": {
+					"reward": [
+						"intelligence_down"
+					],
+					"result": [
+						{
+							"speaker": "narrator",
+							"content": {
+								"korean": "당신이 황당한 소문을 퍼뜨리자 직원들은 어이없다는 듯 당신을 쳐다본다."
+							}
+						},
+						{
+							"speaker": "gossip_monger",
+							"content": {
+								"korean": "에이, 거짓말! 말도 안 되는 소리 하지 마세요!"
+							}
+						},
+						{
+							"speaker": "dax",
+							"content": {
+								"korean": "으악, 더 시끄러워졌어요! 저 사람들이 우리를 수상하게 봐요!"
+							}
+						}
+					]
+				}
+			}
+		},
+		{
+			"text": {
+				"korean": "직원들에게 정중하게 부탁하여 조용히 해달라고 말한다."
+			},
+			"path": "hard",
+			"mbti": "SF",
+			"effects": {
+				"echo": 5,
+				"community": 10
+			},
+			"reward": [
+				"shield"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "당신이 정중하게 부탁하자 직원들은 잠시 머뭇거리더니 작게 웅성거리기 시작한다."
+					}
+				},
+				{
+					"speaker": "gossip_monger",
+					"content": {
+						"korean": "쳇, 알았어요. 그럼 조용히 할게요. 대신 정말 해커 간부가 그랬는지 꼭 알아내 줘요!"
+					}
+				},
+				{
+					"speaker": "dax",
+					"content": {
+						"korean": "휴, 간 떨어지는 줄 알았어요! 그래도 먹히네요!"
+					}
+				}
+			],
+			"risk": {
+				"chance": "high",
+				"bad": {
+					"effects": {
+						"gold": -30
+					},
+					"reward": [],
+					"result": [
+						{
+							"speaker": "narrator",
+							"content": {
+								"korean": "당신이 조용히 해달라고 부탁하자 직원들은 오히려 더 큰 목소리로 당신을 비웃는다."
+							}
+						},
+						{
+							"speaker": "gossip_monger",
+							"content": {
+								"korean": "뭐야, 감히 우리한테 이래라저래라 하는 거야? 너나 조용히 해!"
+							}
+						},
+						{
+							"speaker": "dax",
+							"content": {
+								"korean": "저 사람들이 더 시끄러워졌어요! 빨리 다른 곳으로 가요!"
+							}
+						}
+					]
+				}
+			}
+		},
+		{
+			"text": {
+				"korean": "돈을 쥐여주며 서버실로 가는 길에 대한 정보를 요구한다."
+			},
+			"path": "gold",
+			"mbti": "ST",
+			"require": {
+				"stat": "gold",
+				"op": ">=",
+				"value": 100
+			},
+			"effects": {
+				"gold": -100,
+				"echo": 5
+			},
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "당신이 묵직한 돈뭉치를 내밀자 직원들의 눈이 휘둥그레진다."
+					}
+				},
+				{
+					"speaker": "gossip_monger",
+					"content": {
+						"korean": "큼큼, 뭐, 돈도 받았겠다… 서버실로 가는 지름길은 저기 보이는 창고 뒤편이에요. 아무도 안 쓰는 길이죠."
+					}
+				},
+				{
+					"speaker": "dax",
+					"content": {
+						"korean": "소문 좋아하는 사람이 길도 잘 아네요. 근데 창고 뒤편은 쥐 나오는 데예요…"
+					}
+				}
+			],
+			"event": "minigame_slot",
+			"event_intro": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "직원이 당신의 손에 든 돈을 보더니 흥미로운 표정으로 카드 게임을 제안한다."
+					}
+				},
+				{
+					"speaker": "gossip_monger",
+					"content": {
+						"korean": "마침 슬롯머신 미니게임 한판 할 사람 찾고 있었는데! 여기서 이기면 보너스 정보도 줄게요!"
+					}
+				}
+			]
+		}
+	],
+	"tags": [
+		"gossip_monger",
+		"dax"
+	],
+	"_design": {
+		"slot": "A",
+		"kind": "normal",
+		"person": {
+			"role": "야근 직원",
+			"id": "gossip_monger",
+			"name": "수다쟁이 직원"
+		},
+		"wants": "새로운 소문을 만들어 동료들에게 인정받고 싶어 한다.",
+		"rule_link": "확실하지 않은 소문과 소동을 보고 눈앞의 정보를 그대로 받아들일지, 본질을 파악할지 선택해야 한다.",
+		"events": {
+			"gold": "직원들이 내기를 제안하며 눈앞의 돈에 침을 삼킨다."
+		},
+		"flags": {}
+	}
+}

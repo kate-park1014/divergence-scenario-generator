@@ -1,0 +1,353 @@
+{
+	"id": "card_03_driver_community_request",
+	"title": {
+		"korean": "문에 생긴 얼룩"
+	},
+	"intensity": "calm",
+	"after_story": 5,
+	"before_story": 7,
+	"condition": {
+		"leaning": "community+",
+		"among": [
+			"fighting-",
+			"fighting+",
+			"community-",
+			"community+",
+			"reason-",
+			"reason+"
+		],
+		"min": 20
+	},
+	"urgency": 8,
+	"leaning": "community+",
+	"background_tags": [
+		"serverroom",
+		"night",
+		"dim",
+		"empty",
+		"tense"
+	],
+	"background_image": "https://imagedelivery.net/WTEqQNGFb-l-IHS6IGnzUQ/9d4205ad-f614-4de6-d3dd-806a37d9e200/public",
+	"dialogue": [
+		{
+			"speaker": "driver",
+			"content": {
+				"korean": "당신이 동네 사람 모두를 위해 발 벗고 나서는 해결사라는 소문이 자자하던데,"
+			}
+		},
+		{
+			"speaker": "driver",
+			"content": {
+				"korean": "제가 회장님 전용 운전기사인데, 이 문에 생긴 얼룩이 도저히 지워지질 않습니다, 끄윽!"
+			}
+		},
+		{
+			"speaker": "dax",
+			"content": {
+				"korean": "운전기사님, 지금은…!"
+			}
+		},
+		{
+			"speaker": "driver",
+			"content": {
+				"korean": "아닙니다! 회장님께서 아시면 저에게 불호령을 내리실 겁니다! 부디 저를 도와주십시오, 흐읍!"
+			}
+		},
+		{
+			"speaker": "narrator",
+			"content": {
+				"korean": "운전기사가 서버실 문에 묻은 정체 모를 얼룩을 손으로 가리킨다."
+			}
+		},
+		{
+			"speaker": "dax",
+			"content": {
+				"korean": "저게 얼룩인가요? 자세히 보니 반짝이는데요?"
+			}
+		}
+	],
+	"choices": [
+		{
+			"text": {
+				"korean": "운전기사에게 얼룩을 지우는 방법을 알려 준다."
+			},
+			"path": "easy",
+			"mbti": "SF",
+			"flag": "driver_stain_info",
+			"effects": {
+				"echo": 5,
+				"community": 15
+			},
+			"reward": [
+				"attack_up"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "당신의 말에 운전기사가 눈을 크게 뜨며 얼룩을 자세히 들여다본다."
+					}
+				},
+				{
+					"speaker": "driver",
+					"content": {
+						"korean": "아! 이게 끈적이는 스티커 자국이었군요!"
+					}
+				},
+				{
+					"speaker": "dax",
+					"content": {
+						"korean": "운전기사님, 얼룩이 뭔지도 몰랐나 봐요!"
+					}
+				}
+			],
+			"risk": {
+				"chance": "mid",
+				"bad": {
+					"reward": [
+						"hp_down"
+					],
+					"result": [
+						{
+							"speaker": "narrator",
+							"content": {
+								"korean": "당신의 말에 운전기사가 얼룩을 지우려다 손에 묻은 반짝이 가루를 털어낸다."
+							}
+						},
+						{
+							"speaker": "driver",
+							"content": {
+								"korean": "으아악! 손에 반짝이 가루가 묻어서 더 번졌습니다, 흐읍!"
+							}
+						},
+						{
+							"speaker": "dax",
+							"content": {
+								"korean": "운전기사님 옷에도 반짝이가 묻었네요!"
+							}
+						}
+					]
+				}
+			}
+		},
+		{
+			"text": {
+				"korean": "운전기사의 부탁을 뒤로하고 서버실 문을 열 방법을 찾는다."
+			},
+			"path": "hard",
+			"mbti": "TJ",
+			"flag": "driver_blocking_again",
+			"effects": {
+				"community": -10,
+				"fighting": 10,
+				"echo": -5
+			},
+			"reward": [
+				"defense_up"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "당신이 얼룩을 무시하자 운전기사는 실망한 표정으로 어깨를 축 늘어뜨린다."
+					}
+				},
+				{
+					"speaker": "driver",
+					"content": {
+						"korean": "흐읍… 저의 부탁은 들어주지 않으시는군요…"
+					}
+				},
+				{
+					"speaker": "dax",
+					"content": {
+						"korean": "운전기사님이 시무룩해졌네요…"
+					}
+				}
+			],
+			"risk": {
+				"chance": "high",
+				"bad": {
+					"effects": {
+						"gold": -20
+					},
+					"reward": [],
+					"result": [
+						{
+							"speaker": "narrator",
+							"content": {
+								"korean": "당신이 운전기사를 무시하자, 운전기사가 당신의 앞을 가로막으며 억울한 표정으로 하소연한다."
+							}
+						},
+						{
+							"speaker": "driver",
+							"content": {
+								"korean": "흐읍… 회장님께 보고할 수밖에 없게 될 겁니다, 끄윽!"
+							}
+						},
+						{
+							"speaker": "dax",
+							"content": {
+								"korean": "운전기사님이 더 떼를 쓰는 것 같은데요!"
+							}
+						}
+					]
+				}
+			}
+		},
+		{
+			"text": {
+				"korean": "운전기사의 얼룩 문제를 해결해 주겠다고 먼저 제안한다."
+			},
+			"path": "stat",
+			"mbti": "EN",
+			"require": {
+				"stat": "community",
+				"op": ">=",
+				"value": 40
+			},
+			"flag": "driver_trusts_you",
+			"effects": {
+				"community": 20,
+				"echo": 10
+			},
+			"reward": [
+				"shield"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "당신의 제안에 운전기사가 감격한 표정으로 고개를 끄덕이며 문에서 비켜선다."
+					}
+				},
+				{
+					"speaker": "driver",
+					"content": {
+						"korean": "정말 감사합니다! 당신이라면 믿을 수 있습니다!"
+					}
+				},
+				{
+					"speaker": "dax",
+					"content": {
+						"korean": "운전기사님이 바로 믿으시네요!"
+					}
+				}
+			]
+		},
+		{
+			"text": {
+				"korean": "얼룩을 보고 감탄하며 운전기사에게 특별한 의미가 있다고 말한다."
+			},
+			"path": "fun",
+			"mbti": "EP",
+			"effects": {
+				"echo": 10,
+				"gold": 50,
+				"reason": -15
+			},
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "당신의 엉뚱한 말에 운전기사가 어리둥절한 표정으로 얼룩을 다시 본다."
+					}
+				},
+				{
+					"speaker": "driver",
+					"content": {
+						"korean": "정말요? 회장님께서 아시면 좋아하실까요?"
+					}
+				},
+				{
+					"speaker": "dax",
+					"content": {
+						"korean": "운전기사님이 홀린 듯이 얼룩을 보고 있어요!"
+					}
+				}
+			],
+			"risk": {
+				"chance": "low",
+				"bad": {
+					"effects": {
+						"gold": -40
+					},
+					"reward": [],
+					"result": [
+						{
+							"speaker": "narrator",
+							"content": {
+								"korean": "당신의 말을 들은 운전기사가 얼룩을 조심스럽게 만지다 옆의 전선에 걸려 넘어지는 바람에,"
+							}
+						},
+						{
+							"speaker": "driver",
+							"content": {
+								"korean": "으악! 회장님께서 아시면… 흐읍!"
+							}
+						},
+						{
+							"speaker": "dax",
+							"content": {
+								"korean": "운전기사님이 전선을 끊어 버렸어요!"
+							}
+						}
+					]
+				}
+			}
+		}
+	],
+	"tags": [
+		"driver",
+		"dax"
+	],
+	"_design": {
+		"slot": "C",
+		"kind": "rep",
+		"person": {
+			"id": "driver",
+			"name": "운전기사",
+			"role": "운전기사"
+		},
+		"wants": "서버실 문에 생긴 얼룩을 지워달라고 부탁.",
+		"rule_link": "서버실 문에 난 얼룩이 운전기사에게 무엇을 증명하는지(자신의 무능함) 따져 볼지, 보이는 대로(지워지지 않는 얼룩) 믿을지.",
+		"rep": "community+",
+		"events": {},
+		"flags": {
+			"driver_stain_info": {
+				"kind": "bad",
+				"boss_penalty": -1,
+				"label": {
+					"korean": "얼룩의 정체"
+				},
+				"boss_line": {
+					"korean": "운전기사가 얼룩의 정체를 알려주어 공격이 쉬워진다."
+				}
+			},
+			"driver_blocking_again": {
+				"kind": "good",
+				"boss_penalty": 1,
+				"label": {
+					"korean": "운전기사의 불만"
+				},
+				"boss_choice": {
+					"korean": "운전기사가 불만을 표하며 방해를 시도한다."
+				}
+			},
+			"driver_trusts_you": {
+				"kind": "good",
+				"boss_penalty": 2,
+				"label": {
+					"korean": "운전기사의 믿음"
+				},
+				"boss_choice": {
+					"korean": "운전기사가 당신을 믿고 방해하지 않는다."
+				}
+			}
+		}
+	}
+}

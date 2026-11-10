@@ -1,0 +1,355 @@
+{
+	"id": "card_02_night_snack_rules",
+	"title": {
+		"korean": "야식트럭 사장, 규칙과 절차"
+	},
+	"intensity": "calm",
+	"after_story": 5,
+	"before_story": 7,
+	"condition": {
+		"leaning": "reason-",
+		"among": [
+			"fighting-",
+			"fighting+",
+			"community-",
+			"community+",
+			"reason-",
+			"reason+"
+		],
+		"min": 20
+	},
+	"urgency": 8,
+	"leaning": "reason-",
+	"background_tags": [
+		"port",
+		"night",
+		"dim",
+		"empty",
+		"tense"
+	],
+	"background_image": "https://imagedelivery.net/WTEqQNGFb-l-IHS6IGnzUQ/ae1926db-9985-4622-5880-8e77e8439400/public",
+	"dialogue": [
+		{
+			"speaker": "narrator",
+			"content": {
+				"korean": "야식트럭 사장이 트럭에서 내려 주인공들이 숨어 있는 차 쪽으로 다가왔다."
+			}
+		},
+		{
+			"speaker": "yashik_sajang",
+			"content": {
+				"korean": "아니, 당신들이 그 소문난 해결사들이지?"
+			}
+		},
+		{
+			"speaker": "yashik_sajang",
+			"content": {
+				"korean": "뭐든 규칙대로 딱딱 처리한다던데, 여기는 야적장 안에서 장사하는 구역은 아니잖아?"
+			}
+		},
+		{
+			"speaker": "dax",
+			"content": {
+				"korean": "으악, 들켰어요! 어쩌죠?"
+			}
+		},
+		{
+			"speaker": "yashik_sajang",
+			"content": {
+				"korean": "쉬긴 뭘 쉬어, 쯧쯧. 손님 다 떨어지게."
+			}
+		},
+		{
+			"speaker": "yashik_sajang",
+			"content": {
+				"korean": "어차피 잠복이라면 우리 구역 말고 저쪽 폐창고 앞에서 하라고. 여기는 야식 파는 구역이라고!"
+			}
+		}
+	],
+	"choices": [
+		{
+			"text": {
+				"korean": "규칙을 지키겠다며 트럭 사장의 요구를 따른다"
+			},
+			"path": "easy",
+			"mbti": "TJ",
+			"flag": "moved_car_away",
+			"effects": {
+				"community": 15,
+				"echo": 10
+			},
+			"reward": [
+				"attack_up"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "당신은 사장의 말대로 차를 폐창고 쪽으로 옮겼다."
+					}
+				},
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "야식트럭 사장은 만족한 얼굴로 트럭에서 음료수 한 캔을 던져주었다."
+					}
+				},
+				{
+					"speaker": "dax",
+					"content": {
+						"korean": "사장이 주는 음료수는 고맙지만, 왠지 우리가 부려 먹힌 것 같은데요?"
+					}
+				}
+			],
+			"risk": {
+				"chance": "mid",
+				"bad": {
+					"effects": {
+						"gold": -50
+					},
+					"reward": [],
+					"result": [
+						{
+							"speaker": "narrator",
+							"content": {
+								"korean": "당신이 사장의 요구대로 차를 폐창고 쪽으로 옮기던 중,"
+							}
+						},
+						{
+							"speaker": "narrator",
+							"content": {
+								"korean": "고물 야식트럭 옆에 세워둔 쓰레기통을 건드려 모두 쏟아졌다."
+							}
+						},
+						{
+							"speaker": "dax",
+							"content": {
+								"korean": "악! 쓰레기가 다 쏟아졌어요! 사장님이 화낼 것 같은데요!"
+							}
+						}
+					]
+				}
+			}
+		},
+		{
+			"text": {
+				"korean": "잠복 중인 상황을 설명하며 양해를 구한다"
+			},
+			"path": "hard",
+			"mbti": "NF",
+			"flag": "explained_stakeout",
+			"effects": {
+				"reason": 20,
+				"echo": -5
+			},
+			"reward": [
+				"defense_up"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "당신은 차분하게 잠복 중임을 알리고 양해를 구했다."
+					}
+				},
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "야식트럭 사장은 코웃음 치며 자리를 떴지만, 잠시 후 어딘가에 전화를 거는 모습이 보였다."
+					}
+				},
+				{
+					"speaker": "dax",
+					"content": {
+						"korean": "사장이 어디에 전화하는 것 같던데요? 혹시 우리를 신고하는 건 아니겠죠?"
+					}
+				}
+			],
+			"risk": {
+				"chance": "high",
+				"bad": {
+					"effects": {
+						"gold": -20
+					},
+					"reward": [],
+					"result": [
+						{
+							"speaker": "narrator",
+							"content": {
+								"korean": "당신이 차분하게 잠복 중임을 알리고 야식트럭 사장에게 양해를 구하자,"
+							}
+						},
+						{
+							"speaker": "narrator",
+							"content": {
+								"korean": "사장은 버럭 화를 내며 트럭의 경적을 길게 울렸다."
+							}
+						},
+						{
+							"speaker": "dax",
+							"content": {
+								"korean": "저렇게 시끄럽게 하면 다 들키겠어요! 어서 조용히 시켜야 해요!"
+							}
+						}
+					]
+				}
+			}
+		},
+		{
+			"text": {
+				"korean": "야적장 운영 규칙에 따라 사장에게 영업 중단을 통보한다"
+			},
+			"path": "stat",
+			"mbti": "SP",
+			"require": {
+				"stat": "reason",
+				"op": "<=",
+				"value": -40
+			},
+			"flag": "cited_rules",
+			"effects": {
+				"fighting": 10,
+				"reason": -20
+			},
+			"reward": [
+				"intelligence_up"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "당신은 야적장 운영 규칙을 정확히 짚어주며 사장의 불법 영업을 지적했다."
+					}
+				},
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "사장은 당황한 표정으로 잔소리 없이 트럭을 몰고 사라졌다."
+					}
+				},
+				{
+					"speaker": "dax",
+					"content": {
+						"korean": "와, 사장이 꼬리 내리고 도망갔어요! 역시 당신은 최고예요!"
+					}
+				}
+			]
+		},
+		{
+			"text": {
+				"korean": "야식트럭 사장의 트럭을 대신 청소해 주겠다고 나선다"
+			},
+			"path": "fun",
+			"mbti": "EP",
+			"effects": {
+				"community": 20,
+				"echo": 5
+			},
+			"reward": [
+				"cooldown_reset"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "당신은 불평하는 사장에게 트럭 외관이 지저분하니 청소를 도와주겠다고 했다."
+					}
+				},
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "사장은 어이없는 표정으로 당신에게 걸레를 던져주었다."
+					}
+				},
+				{
+					"speaker": "dax",
+					"content": {
+						"korean": "엉뚱한 짓 하다가 진짜 청소하게 생겼어요! 왠지 사장님한테 놀림당하는 기분인데요?"
+					}
+				}
+			],
+			"risk": {
+				"chance": "low",
+				"bad": {
+					"effects": {
+						"gold": -50
+					},
+					"reward": [],
+					"result": [
+						{
+							"speaker": "narrator",
+							"content": {
+								"korean": "당신이 사장에게 걸레를 받아들고 트럭을 닦으려던 순간,"
+							}
+						},
+						{
+							"speaker": "narrator",
+							"content": {
+								"korean": "그만 실수로 트럭 사이드미러를 부러뜨리고 말았다."
+							}
+						},
+						{
+							"speaker": "dax",
+							"content": {
+								"korean": "악! 사장님 얼굴이 일그러졌어요! 수리비를 물어내라고 할 것 같은데요!"
+							}
+						}
+					]
+				}
+			}
+		}
+	],
+	"tags": [
+		"yashik_sajang",
+		"dax"
+	],
+	"_design": {
+		"slot": "C",
+		"kind": "rep",
+		"person": {
+			"id": "yashik_sajang",
+			"name": "야식트럭 사장",
+			"role": "야식트럭 사장"
+		},
+		"wants": "야적장 운영 규칙을 지켜달라고 요구함.",
+		"rule_link": "규칙과 절차만을 기준으로 삼는 태도가 이 상황을 끝까지 지켜보는 데 어떤 영향을 미치는지 보여준다.",
+		"rep": "reason-",
+		"events": {},
+		"flags": {
+			"moved_car_away": {
+				"kind": "bad",
+				"boss_penalty": -1,
+				"label": {
+					"korean": "차 이동"
+				},
+				"boss_line": {
+					"korean": "낡은 야식트럭이 길을 막고 있어 컨테이너에 접근하기 어렵다."
+				}
+			},
+			"explained_stakeout": {
+				"kind": "good",
+				"boss_penalty": 1,
+				"label": {
+					"korean": "잠복 설명"
+				},
+				"boss_choice": {
+					"korean": "야식트럭 사장에게 부두의 현황을 물어볼 수 있다."
+				}
+			},
+			"cited_rules": {
+				"kind": "good",
+				"boss_penalty": 2,
+				"label": {
+					"korean": "규칙 강조"
+				},
+				"boss_choice": {
+					"korean": "야식트럭 사장이 잠시 자리를 비워 컨테이너에 접근하기 용이하다."
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,279 @@
+{
+	"id": "card_03_impatient_security",
+	"title": {
+		"korean": "급한 성미의 경비"
+	},
+	"intensity": "calm",
+	"after_story": 5,
+	"before_story": 7,
+	"condition": {
+		"leaning": "reason+",
+		"among": [
+			"fighting-",
+			"fighting+",
+			"community-",
+			"community+",
+			"reason-",
+			"reason+"
+		],
+		"min": 20
+	},
+	"urgency": 8,
+	"leaning": "reason+",
+	"background_tags": [
+		"serverroom",
+		"night",
+		"dimlight",
+		"empty",
+		"anxious"
+	],
+	"background_image": "https://imagedelivery.net/WTEqQNGFb-l-IHS6IGnzUQ/9d4205ad-f614-4de6-d3dd-806a37d9e200/public",
+	"dialogue": [
+		{
+			"speaker": "driver",
+			"content": {
+				"korean": "당신이 그… 규칙 따윈 안중에도 없고, 마음 가는 대로 일을 처리한다는 해결사죠?"
+			}
+		},
+		{
+			"speaker": "driver",
+			"content": {
+				"korean": "저 서버실 문을 부수시려는 건 아니시겠죠?"
+			}
+		},
+		{
+			"speaker": "driver",
+			"content": {
+				"korean": "혹시라도 소란이 생기면 회장님께서 저에게 불호령을 내리실 겁니다, 끄윽!"
+			}
+		},
+		{
+			"speaker": "dax",
+			"content": {
+				"korean": "하지만 안에서 삭제음이 계속 들리는데요… 이러다 다 지워져 버릴 거예요!"
+			}
+		}
+	],
+	"choices": [
+		{
+			"text": {
+				"korean": "운전기사를 밀치고 문을 부술 준비를 한다"
+			},
+			"path": "easy",
+			"mbti": "ES",
+			"flag": "driver_distraction",
+			"effects": {
+				"fighting": 10,
+				"reason": -10
+			},
+			"reward": [
+				"attack_up"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "당신이 운전기사를 밀치자, 운전기사가 비명을 지르며 나자빠진다."
+					}
+				},
+				{
+					"speaker": "driver",
+					"content": {
+						"korean": "아이고! 회장님께서 아시면 저에게 불호령을 내리실 겁니다, 흐읍!"
+					}
+				},
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "문짝 옆에 놓인 회장님 차 열쇠가 눈에 들어온다."
+					}
+				}
+			],
+			"risk": {
+				"chance": "mid",
+				"bad": {
+					"effects": {
+						"gold": -30
+					},
+					"reward": [],
+					"result": [
+						{
+							"speaker": "narrator",
+							"content": {
+								"korean": "운전기사가 넘어져 머리를 박고 기절한다. 그 바람에 경보가 울린다."
+							}
+						},
+						{
+							"speaker": "driver",
+							"content": {
+								"korean": "끄윽… 으윽…"
+							}
+						},
+						{
+							"speaker": "dax",
+							"content": {
+								"korean": "어쩌죠? 경보까지 울렸어요!"
+							}
+						}
+					]
+				}
+			}
+		},
+		{
+			"text": {
+				"korean": "운전기사의 말을 듣고, 잠긴 문을 부수지 않고 기다린다"
+			},
+			"path": "hard",
+			"mbti": "IF",
+			"flag": "driver_cooperation_c6",
+			"effects": {
+				"reason": 10,
+				"community": 10
+			},
+			"reward": [
+				"defense_up"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "당신이 기다리자 운전기사는 눈을 동그랗게 뜨고 당신을 바라본다."
+					}
+				},
+				{
+					"speaker": "dax",
+					"content": {
+						"korean": "흐읍, 닥스는 이러다 다 지워질까 봐 불안해서 죽겠어요!"
+					}
+				},
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "운전기사가 불안한 듯 문고리를 만지작거린다."
+					}
+				}
+			],
+			"risk": {
+				"chance": "high",
+				"bad": {
+					"effects": {
+						"gold": -20
+					},
+					"reward": [],
+					"result": [
+						{
+							"speaker": "narrator",
+							"content": {
+								"korean": "기다리는 동안 삭제음이 더 커지고, 중요한 데이터가 모두 삭제된다."
+							}
+						},
+						{
+							"speaker": "dax",
+							"content": {
+								"korean": "아아악! 닥스는 망했어요! 이제 어쩌죠?"
+							}
+						},
+						{
+							"speaker": "driver",
+							"content": {
+								"korean": "아이고! 회장님께서 아시면 저에게 불호령을 내리실 겁니다, 끄윽!"
+							}
+						}
+					]
+				}
+			}
+		},
+		{
+			"text": {
+				"korean": "운전기사의 숨은 마음을 읽고, 문을 부수는 것을 돕게 한다"
+			},
+			"path": "stat",
+			"mbti": "EN",
+			"require": {
+				"stat": "reason",
+				"op": ">=",
+				"value": 40
+			},
+			"flag": "driver_tool_c6",
+			"effects": {
+				"echo": 10,
+				"reason": 20
+			},
+			"reward": [
+				"attack_up"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "당신의 설득에 운전기사는 망설이다가 연장통을 건넨다."
+					}
+				},
+				{
+					"speaker": "driver",
+					"content": {
+						"korean": "아이고! 회장님께서는 모르실 겁니다, 흐읍! 부디 빨리 해결해 주십시오!"
+					}
+				},
+				{
+					"speaker": "dax",
+					"content": {
+						"korean": "저분이 생각보다 힘이 세네요!"
+					}
+				}
+			]
+		}
+	],
+	"tags": [
+		"driver",
+		"dax"
+	],
+	"_design": {
+		"slot": "C",
+		"kind": "rep",
+		"person": {
+			"id": "driver",
+			"name": "운전기사",
+			"role": "운전기사"
+		},
+		"wants": "운전기사는 주인공이 서버실 문을 규칙 없이 부수는 것을 막거나, 자신의 곤경을 규칙 없이 해결해주기를 바랍니다.",
+		"rule_link": "운전기사는 당신이 규칙보다 마음 가는 대로 문을 부술까 봐 불안해합니다. 눈앞의 급박한 삭제음과 운전기사의 말을 두고 무엇을 믿을지 결정해야 합니다.",
+		"rep": "reason+",
+		"events": {},
+		"flags": {
+			"driver_distraction": {
+				"kind": "bad",
+				"boss_penalty": -1,
+				"label": {
+					"korean": "운전기사 기절"
+				},
+				"boss_line": {
+					"korean": "쓰러진 운전기사 때문에 신경이 쓰여 공격이 빗나간다."
+				}
+			},
+			"driver_cooperation_c6": {
+				"kind": "good",
+				"boss_penalty": 1,
+				"label": {
+					"korean": "운전기사 협력"
+				},
+				"boss_choice": {
+					"korean": "운전기사가 서버실 우회로를 알려줘 바로 진입한다."
+				}
+			},
+			"driver_tool_c6": {
+				"kind": "good",
+				"boss_penalty": 2,
+				"label": {
+					"korean": "운전기사 연장통"
+				},
+				"boss_choice": {
+					"korean": "운전기사가 가져온 연장통으로 서버실 문을 부순다."
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,371 @@
+{
+	"id": "card_02_suspicious_cart_tracks",
+	"title": {
+		"korean": "수상한 수레 자국"
+	},
+	"intensity": "calm",
+	"after_story": 3,
+	"before_story": 5,
+	"condition": {
+		"leaning": "reason-",
+		"among": [
+			"fighting-",
+			"fighting+",
+			"community-",
+			"community+",
+			"reason-",
+			"reason+"
+		],
+		"min": 20
+	},
+	"urgency": 8,
+	"leaning": "reason-",
+	"background_tags": [
+		"container_yard",
+		"early_morning",
+		"foggy",
+		"empty",
+		"tense"
+	],
+	"background_image": "https://imagedelivery.net/WTEqQNGFb-l-IHS6IGnzUQ/acdb543d-a0c2-4db1-0984-8d6309f92700/public",
+	"dialogue": [
+		{
+			"speaker": "security_chief",
+			"content": {
+				"korean": "당신이 그… 뭐든 원칙대로 처리한다는 해결사시죠? 소문 자자합니다."
+			}
+		},
+		{
+			"speaker": "dax",
+			"content": {
+				"korean": "저, 저분은 경비 반장님인데… 왜 갑자기 차를 세우는 거지?"
+			}
+		},
+		{
+			"speaker": "security_chief",
+			"content": {
+				"korean": "차 안에서 인기척이… 어휴, 제가 괜히 주책맞게… 죄송합니다만, 잠시 실례해도 될까요?"
+			}
+		},
+		{
+			"speaker": "security_chief",
+			"content": {
+				"korean": "저기… 야적장에 요즘 수상한 수레 자국이 자꾸 생기는데, 기록에는 없는 활동이라 말입니다."
+			}
+		},
+		{
+			"speaker": "security_chief",
+			"content": {
+				"korean": "어떻게 좀… 파악해 주실 수 없을지…"
+			}
+		},
+		{
+			"speaker": "narrator",
+			"content": {
+				"korean": "경비 반장이 손전등으로 바닥의 묵직한 수레 자국을 가리킨다."
+			}
+		}
+	],
+	"choices": [
+		{
+			"text": {
+				"korean": "바닥의 수레 자국을 따라가 흔적을 자세히 조사한다."
+			},
+			"path": "easy",
+			"mbti": "IS",
+			"flag": "found_key_in_yard",
+			"effects": {
+				"gold": 100,
+				"reason": -20
+			},
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "당신은 수레 자국을 따라 야적장 끝까지 가더니,"
+					}
+				},
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "엉뚱하게도 반대편 담벼락 밑에서 떨어진 열쇠꾸러미를 발견한다."
+					}
+				},
+				{
+					"speaker": "security_chief",
+					"content": {
+						"korean": "아이고, 이게 제가 며칠 전에 잃어버린 열쇠인데… 덕분에 찾았습니다! 여기, 성의입니다."
+					}
+				},
+				{
+					"speaker": "dax",
+					"content": {
+						"korean": "와, 반장님 지갑이 두둑한데요! 운도 좋으셔라!"
+					}
+				}
+			],
+			"risk": {
+				"chance": "mid",
+				"bad": {
+					"effects": {
+						"gold": -50
+					},
+					"reward": [],
+					"result": [
+						{
+							"speaker": "narrator",
+							"content": {
+								"korean": "당신은 수레 자국을 따라 야적장 끝까지 가다, 미끄러져 옆에 쌓인 컨테이너 박스를 와르르 무너뜨린다."
+							}
+						},
+						{
+							"speaker": "security_chief",
+							"content": {
+								"korean": "아이고, 저 컨테이너는 오늘 아침에 출고될 건데! 수리비 청구해야겠네요."
+							}
+						},
+						{
+							"speaker": "dax",
+							"content": {
+								"korean": "으악, 저 소리 때문에 우리가 들킨 거 아니에요?"
+							}
+						}
+					]
+				}
+			}
+		},
+		{
+			"text": {
+				"korean": "수레 자국은 중요하지 않으니, 일단 경비 반장을 돌려보낸다."
+			},
+			"path": "hard",
+			"mbti": "NF",
+			"flag": "calmed_security_chief",
+			"effects": {
+				"reason": 20,
+				"echo": 10
+			},
+			"reward": [
+				"defense_up"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "당신은 경비 반장의 어깨를 두드리며 괜찮다고 안심시키자, 그는 멋쩍은 듯 웃으며 차에 올라탄다."
+					}
+				},
+				{
+					"speaker": "security_chief",
+					"content": {
+						"korean": "아무것도 아니었나… 괜히 제가 호들갑을 떨었군요."
+					}
+				},
+				{
+					"speaker": "dax",
+					"content": {
+						"korean": "휴, 큰일 날 뻔했어요! 반장님이 계속 옆에 있었으면 어쩔 뻔했어요?"
+					}
+				}
+			],
+			"risk": {
+				"chance": "high",
+				"bad": {
+					"effects": {
+						"gold": -20
+					},
+					"reward": [],
+					"result": [
+						{
+							"speaker": "narrator",
+							"content": {
+								"korean": "당신은 경비 반장을 돌려보냈지만, 그는 차에 타자마자 "
+							}
+						},
+						{
+							"speaker": "security_chief",
+							"content": {
+								"korean": "아차! 소리를 지르며 다시 내린다."
+							}
+						},
+						{
+							"speaker": "security_chief",
+							"content": {
+								"korean": "저런, 아까 그 컨테이너 옆에 비닐봉투가 하나 떨어져 있었는데… 혹시 중요한 건가?"
+							}
+						},
+						{
+							"speaker": "dax",
+							"content": {
+								"korean": "반장님, 저러다가 우리 위치 들키겠어요!"
+							}
+						}
+					]
+				}
+			}
+		},
+		{
+			"text": {
+				"korean": "경비 반장에게 지금은 잠복 중이라고 솔직히 말하고 도움을 요청한다."
+			},
+			"path": "stat",
+			"mbti": "TJ",
+			"require": {
+				"stat": "reason",
+				"op": "<=",
+				"value": -40
+			},
+			"flag": "security_chief_cooperation",
+			"effects": {
+				"community": 10,
+				"echo": 10,
+				"reason": -30
+			},
+			"reward": [
+				"shield"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "당신의 말에 경비 반장은 놀라면서도 이내 고개를 끄덕이더니, 당신의 지시에 따라 야적장 순찰을 강화한다."
+					}
+				},
+				{
+					"speaker": "security_chief",
+					"content": {
+						"korean": "규칙을 지키는 분들이니 믿을 수 있지. 제가 쥐새끼들 못 도망가게 막아드리죠!"
+					}
+				},
+				{
+					"speaker": "dax",
+					"content": {
+						"korean": "와, 반장님까지 우리 편이 됐어요! 든든하다!"
+					}
+				}
+			]
+		},
+		{
+			"text": {
+				"korean": "경비 반장의 손전등을 뺏어 들고 수레 자국을 따라가며 춤을 춘다."
+			},
+			"path": "fun",
+			"mbti": "EN",
+			"effects": {
+				"reason": -20,
+				"echo": 15
+			},
+			"reward": [
+				"cooldown_reset"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "당신의 춤사위에 경비 반장은 어리둥절한 표정을 짓더니, 이내 한숨을 쉬며 차 안으로 들어간다."
+					}
+				},
+				{
+					"speaker": "security_chief",
+					"content": {
+						"korean": "할 일이 없어서 저러는군… 나도 참, 늙어서 쓸데없는 생각만 했지."
+					}
+				},
+				{
+					"speaker": "dax",
+					"content": {
+						"korean": "반장님, 저분… 괜찮으신 걸까요?"
+					}
+				}
+			],
+			"risk": {
+				"chance": "low",
+				"bad": {
+					"effects": {
+						"gold": -30
+					},
+					"reward": [],
+					"result": [
+						{
+							"speaker": "narrator",
+							"content": {
+								"korean": "당신이 신나게 춤을 추다 그만 수레 자국 위에 미끄러져 넘어진다."
+							}
+						},
+						{
+							"speaker": "narrator",
+							"content": {
+								"korean": "손전등은 저 멀리 날아가 컨테이너 벽에 부딪혀 깨진다."
+							}
+						},
+						{
+							"speaker": "security_chief",
+							"content": {
+								"korean": "내 손전등! 저거 비싼 건데!"
+							}
+						},
+						{
+							"speaker": "dax",
+							"content": {
+								"korean": "으악, 이젠 반장님 손전등까지… 어쩌죠?"
+							}
+						}
+					]
+				}
+			}
+		}
+	],
+	"tags": [
+		"security_chief",
+		"dax"
+	],
+	"_design": {
+		"slot": "B",
+		"kind": "rep",
+		"person": {
+			"id": "security_chief",
+			"name": "경비 반장",
+			"role": "야적장 경비 반장"
+		},
+		"wants": "경비 반장이 야적장 바닥에 남은 수상한 수레 자국을 조사해 달라고 부탁한다. 그는 '규칙과 절차를 지키는 해결사'인 주인공이 원칙대로 행동해 주길 바란다.",
+		"rule_link": "섣부른 판단 대신 증거를 끝까지 쫓는 것이 진실을 밝히는 길이다.",
+		"rep": "reason-",
+		"events": {},
+		"flags": {
+			"found_key_in_yard": {
+				"kind": "bad",
+				"boss_penalty": -1,
+				"label": {
+					"korean": "열쇠 꾸러미"
+				},
+				"boss_line": {
+					"korean": "싸움 시작 전, 누군가 야적장 담벼락 아래서 주운 열쇠 꾸러미가 바닥에 떨어진다."
+				}
+			},
+			"calmed_security_chief": {
+				"kind": "good",
+				"boss_penalty": 1,
+				"label": {
+					"korean": "경비 반장 안심"
+				},
+				"boss_choice": {
+					"korean": "싸움 시작 전, 경비 반장이 히어로들의 편에 서서 적들의 시야를 가린다."
+				}
+			},
+			"security_chief_cooperation": {
+				"kind": "good",
+				"boss_penalty": 2,
+				"label": {
+					"korean": "반장 협력"
+				},
+				"boss_choice": {
+					"korean": "싸움 시작 전, 경비 반장이 야적장 문을 걸어 잠가 적들의 퇴로를 차단한다."
+				}
+			}
+		}
+	}
+}

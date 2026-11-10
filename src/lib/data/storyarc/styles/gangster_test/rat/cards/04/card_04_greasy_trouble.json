@@ -1,0 +1,339 @@
+{
+	"id": "card_04_greasy_trouble",
+	"title": {
+		"korean": "기름때 묻은 고민"
+	},
+	"intensity": "calm",
+	"after_story": 3,
+	"before_story": 5,
+	"condition": {
+		"leaning": "community-",
+		"among": [
+			"fighting-",
+			"fighting+",
+			"community-",
+			"community+",
+			"reason-",
+			"reason+"
+		],
+		"min": 20
+	},
+	"urgency": 8,
+	"leaning": "community-",
+	"background_tags": [
+		"garage",
+		"night",
+		"dimlight",
+		"fewpeople",
+		"greasy"
+	],
+	"background_image": "https://imagedelivery.net/WTEqQNGFb-l-IHS6IGnzUQ/2bd5c8a5-9661-4497-0742-a56043432400/public",
+	"dialogue": [
+		{
+			"speaker": "chago_banjang",
+			"content": {
+				"korean": "당신이 그, 뭐냐, 자기 몫은 확실히 챙긴다는 해결사 양반들 아니요? 소문은 익히 들었소만."
+			}
+		},
+		{
+			"speaker": "narrator",
+			"content": {
+				"korean": "반장이 렌치를 만지작거리며 한숨을 쉰다."
+			}
+		},
+		{
+			"speaker": "chago_banjang",
+			"content": {
+				"korean": "아, 이거 고치려는데 영… 혼자 힘으로는 안 되겠고. 누가 좀 도와주면 좋겠는데 말이야."
+			}
+		},
+		{
+			"speaker": "dax",
+			"content": {
+				"korean": "반장님, 무슨 일 있으세요? 저희가 도와드릴 수 있는 일이 있을까요?"
+			}
+		}
+	],
+	"choices": [
+		{
+			"text": {
+				"korean": "수리비로 넉넉한 보수를 받고 리프트를 고쳐준다."
+			},
+			"path": "easy",
+			"mbti": "TJ",
+			"flag": "lift_fixed_for_price",
+			"effects": {
+				"community": -10,
+				"gold": 100
+			},
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "당신은 반장의 요청에 따라 능숙하게 리프트를 수리한다."
+					}
+				},
+				{
+					"speaker": "chago_banjang",
+					"content": {
+						"korean": "역시 소문대로구먼. 솜씨도 좋고, 돈값은 확실히 하네!"
+					}
+				},
+				{
+					"speaker": "dax",
+					"content": {
+						"korean": "와, 역시! 덕분에 저희도 빨리 다음 장소로 이동할 수 있겠어요."
+					}
+				}
+			],
+			"risk": {
+				"chance": "mid",
+				"bad": {
+					"effects": {
+						"gold": -50
+					},
+					"reward": [],
+					"result": [
+						{
+							"speaker": "narrator",
+							"content": {
+								"korean": "당신은 반장의 요청에 따라 리프트를 수리하려 했지만, 예상치 못한 부품 파손으로 더 고장이 난다."
+							}
+						},
+						{
+							"speaker": "chago_banjang",
+							"content": {
+								"korean": "이런! 돈은 돈대로 쓰고 일은 더 꼬였구만!"
+							}
+						},
+						{
+							"speaker": "dax",
+							"content": {
+								"korean": "이런! 어쩌죠? 일이 더 꼬였잖아!"
+							}
+						}
+					]
+				}
+			}
+		},
+		{
+			"text": {
+				"korean": "대가를 바라지 않고 반장의 리프트 수리를 도와준다."
+			},
+			"path": "hard",
+			"mbti": "NF",
+			"flag": "lift_fixed_for_free",
+			"effects": {
+				"community": 20,
+				"echo": 10
+			},
+			"reward": [
+				"defense_up"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "당신은 대가 없이 반장의 리프트 수리를 돕고, 덕분에 작업이 빠르게 끝난다."
+					}
+				},
+				{
+					"speaker": "chago_banjang",
+					"content": {
+						"korean": "허허, 이런 좋은 분들을 봤나! 소문이랑은 영 다르구먼."
+					}
+				},
+				{
+					"speaker": "dax",
+					"content": {
+						"korean": "세상에! 반장님 얼굴이 활짝 피셨어요!"
+					}
+				}
+			],
+			"risk": {
+				"chance": "high",
+				"bad": {
+					"effects": {
+						"gold": -20
+					},
+					"reward": [],
+					"result": [
+						{
+							"speaker": "narrator",
+							"content": {
+								"korean": "당신은 대가 없이 반장의 리프트 수리를 돕다 실수로 중요한 공구를 망가뜨린다."
+							}
+						},
+						{
+							"speaker": "chago_banjang",
+							"content": {
+								"korean": "아이고, 저건 내가 아끼던 건데… 괜히 미안하구먼."
+							}
+						},
+						{
+							"speaker": "dax",
+							"content": {
+								"korean": "괜찮아요, 반장님. 저희는 괜찮아요. 하하…"
+							}
+						}
+					]
+				}
+			}
+		},
+		{
+			"text": {
+				"korean": "자기 몫을 챙겨야 한다며 수리할 가치가 없음을 단호히 말한다."
+			},
+			"path": "stat",
+			"mbti": "ET",
+			"require": {
+				"stat": "community",
+				"op": "<=",
+				"value": -40
+			},
+			"flag": "not_worth_fixing",
+			"effects": {
+				"community": -20,
+				"reason": -10
+			},
+			"reward": [
+				"attack_up"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "당신의 단호한 태도에 반장이 잠시 망설이더니, 결국 다른 방법을 찾아본다."
+					}
+				},
+				{
+					"speaker": "chago_banjang",
+					"content": {
+						"korean": "크흠… 그래, 자네들이 말하는 것도 일리는 있구먼. 억지로 시킬 수는 없지."
+					}
+				},
+				{
+					"speaker": "dax",
+					"content": {
+						"korean": "반장님이 금방 다른 사람을 찾아보시네요… 역시 대단하세요."
+					}
+				}
+			]
+		},
+		{
+			"text": {
+				"korean": "리프트가 말을 못 해서 답답한 거라며 리프트에게 직접 말을 걸어 설득한다."
+			},
+			"path": "fun",
+			"mbti": "IN",
+			"effects": {
+				"community": -15,
+				"reason": 10
+			},
+			"reward": [
+				"stun"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "당신은 리프트에게 다가가 속삭이듯 말을 걸자, 반장과 닥스는 어리둥절한 표정으로 쳐다본다."
+					}
+				},
+				{
+					"speaker": "chago_banjang",
+					"content": {
+						"korean": "저… 저 양반이 혹시… 피곤한가? 저거 기계인데…"
+					}
+				},
+				{
+					"speaker": "dax",
+					"content": {
+						"korean": "으음… 독특한 방법이네요. 과연 리프트가 말을 들을까요?"
+					}
+				}
+			],
+			"risk": {
+				"chance": "low",
+				"bad": {
+					"reward": [
+						"hp_down"
+					],
+					"result": [
+						{
+							"speaker": "narrator",
+							"content": {
+								"korean": "당신이 리프트에게 말을 걸자, 리프트는 갑자기 굉음을 내며 오작동을 일으켜 주변 공구들이 튀어 오른다."
+							}
+						},
+						{
+							"speaker": "chago_banjang",
+							"content": {
+								"korean": "아이고! 망가진 놈을 더 망가뜨리네!"
+							}
+						},
+						{
+							"speaker": "dax",
+							"content": {
+								"korean": "으악! 저게 왜 저래요? 도망쳐요!"
+							}
+						}
+					]
+				}
+			}
+		}
+	],
+	"tags": [
+		"chago_banjang",
+		"dax"
+	],
+	"_design": {
+		"slot": "B",
+		"kind": "rep",
+		"person": {
+			"id": "chago_banjang",
+			"name": "차고 반장",
+			"role": "차고 반장"
+		},
+		"wants": "고장 난 리프트를 고쳐달라고 요청하거나, 리프트 때문에 막힌 일을 해결해달라고 한다.",
+		"rule_link": "말 못 하는 기계(리프트)를 해결하려는 반장의 숨겨진 사정을 어떻게 받아들일지 결정합니다.",
+		"rep": "community-",
+		"events": {},
+		"flags": {
+			"lift_fixed_for_price": {
+				"kind": "bad",
+				"boss_penalty": -1,
+				"label": {
+					"korean": "보수 받은 리프트 수리"
+				},
+				"boss_line": {
+					"korean": "리프트 수리로 얻은 금화 때문에 상대가 방심한다."
+				}
+			},
+			"lift_fixed_for_free": {
+				"kind": "good",
+				"boss_penalty": 1,
+				"label": {
+					"korean": "대가를 바라지 않은 수리"
+				},
+				"boss_choice": {
+					"korean": "리프트 수리 후 반장이 준 유용한 도구를 전투에 활용한다."
+				}
+			},
+			"not_worth_fixing": {
+				"kind": "good",
+				"boss_penalty": 2,
+				"label": {
+					"korean": "수리 거부"
+				},
+				"boss_choice": {
+					"korean": "차고 반장이 당신의 단호함에 물러나, 다른 차고원들이 전투에 소극적으로 임한다."
+				}
+			}
+		}
+	}
+}

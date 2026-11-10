@@ -1,0 +1,278 @@
+{
+	"id": "card_05_community_guard",
+	"title": {
+		"korean": "모두를 위한 선택"
+	},
+	"intensity": "calm",
+	"after_story": 7,
+	"before_story": 9,
+	"condition": {
+		"leaning": "community+",
+		"among": [
+			"fighting-",
+			"fighting+",
+			"community-",
+			"community+",
+			"reason-",
+			"reason+"
+		],
+		"min": 20
+	},
+	"urgency": 8,
+	"leaning": "community+",
+	"background_tags": [
+		"breakwater",
+		"foggy",
+		"night",
+		"alone",
+		"peaceful"
+	],
+	"background_image": "https://imagedelivery.net/WTEqQNGFb-l-IHS6IGnzUQ/d67905ec-722f-4cee-80f4-0b19d0d93d00/public",
+	"dialogue": [
+		{
+			"speaker": "security_team_leader",
+			"content": {
+				"korean": "당신이 그… 어떤 분쟁이든 모두의 입장을 듣고 해결한다는 해결사죠?"
+			}
+		},
+		{
+			"speaker": "security_team_leader",
+			"content": {
+				"korean": "이 등대도 부두 어르신들이 아끼는 곳이라 규정 위반으로 소란이 생기면 모두가 힘들어집니다."
+			}
+		},
+		{
+			"speaker": "dax",
+			"content": {
+				"korean": "경호팀장님 말이 맞아요! 비서님도, 어르신들도 모두 소중해요!"
+			}
+		},
+		{
+			"speaker": "security_team_leader",
+			"content": {
+				"korean": "등대 진입을 허가할 수도, 그렇다고 막을 수도 없는… 난처한 상황입니다. 부디 모두에게 현명한 조언을…!"
+			}
+		}
+	],
+	"choices": [
+		{
+			"text": {
+				"korean": "경호팀장에게 모두에게 피해가 가지 않도록 비서님의 사정을 먼저 듣자고 설득한다."
+			},
+			"path": "easy",
+			"mbti": "EN",
+			"flag": "team_leader_wary",
+			"effects": {
+				"echo": 10,
+				"community": 20
+			},
+			"reward": [
+				"attack_up"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "경호팀장은 당신의 말에 깊이 공감했다."
+					}
+				},
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "그는 고개를 끄덕이며, '규정보다 모두의 평화가 먼저죠' 하고 등대 문을 열어줬다."
+					}
+				},
+				{
+					"speaker": "dax",
+					"content": {
+						"korean": "팀장님도 결국 좋은 분이었어요!"
+					}
+				}
+			],
+			"risk": {
+				"chance": "mid",
+				"bad": {
+					"reward": [
+						"move_range_down"
+					],
+					"result": [
+						{
+							"speaker": "narrator",
+							"content": {
+								"korean": "경호팀장은 당신의 말에 깊이 공감하며 등대 문을 열려 했다."
+							}
+						},
+						{
+							"speaker": "narrator",
+							"content": {
+								"korean": "그러나 그는 등대 문을 열려다 손잡이를 부러뜨렸고, 문이 열리지 않아 당신은 등대 뒷문으로 돌아가야 했다."
+							}
+						}
+					]
+				}
+			}
+		},
+		{
+			"text": {
+				"korean": "규정은 규정이니 비서님보다 등대 진입 규정을 우선해야 한다고 주장한다."
+			},
+			"path": "hard",
+			"mbti": "ST",
+			"flag": "team_leader_respect",
+			"effects": {
+				"community": -20,
+				"fighting": 10
+			},
+			"reward": [
+				"defense_up"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "경호팀장은 당신의 강경한 태도에 당황했다."
+					}
+				},
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "그는 '모두의 평화를 위해…' 하고 중얼거리며 당신의 앞에서 망설였다."
+					}
+				},
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "결국 그는 등대 문 앞에서 한 발 물러섰다."
+					}
+				},
+				{
+					"speaker": "dax",
+					"content": {
+						"korean": "팀장님은 착한 사람인데 왜 이렇게 곤란하게 만들어요!"
+					}
+				}
+			],
+			"risk": {
+				"chance": "high",
+				"bad": {
+					"effects": {
+						"gold": -20
+					},
+					"reward": [],
+					"result": [
+						{
+							"speaker": "narrator",
+							"content": {
+								"korean": "경호팀장은 당신의 강경한 태도에 당황하며 당신의 말을 오해했다."
+							}
+						},
+						{
+							"speaker": "narrator",
+							"content": {
+								"korean": "'규정대로 제가 비서님을 막겠습니다!' 외치며 등대 문을 걸어 잠갔고,"
+							}
+						},
+						{
+							"speaker": "narrator",
+							"content": {
+								"korean": "당신은 등대 문을 부수느라 힘을 빼야 했다."
+							}
+						}
+					]
+				}
+			}
+		},
+		{
+			"text": {
+				"korean": "경호팀장에게 모두가 납득할 만한 해결책으로 비서님과 대화할 기회를 만들자고 제안한다."
+			},
+			"path": "stat",
+			"mbti": "NF",
+			"require": {
+				"stat": "community",
+				"op": ">=",
+				"value": 40
+			},
+			"flag": "team_leader_grateful",
+			"effects": {
+				"echo": 15,
+				"community": 30
+			},
+			"reward": [
+				"shield"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "경호팀장은 당신의 말에 눈물을 글썽였다."
+					}
+				},
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "그는 '바로 이겁니다! 모두가 웃을 수 있는 방법!' 하며 등대 문을 활짝 열어줬다."
+					}
+				},
+				{
+					"speaker": "dax",
+					"content": {
+						"korean": "와, 팀장님이 이렇게 기뻐하는 건 처음 봐요!"
+					}
+				}
+			]
+		}
+	],
+	"tags": [
+		"security_team_leader",
+		"dax"
+	],
+	"_design": {
+		"slot": "D",
+		"kind": "rep",
+		"person": {
+			"id": "security_team_leader",
+			"name": "경호팀장",
+			"role": "경호팀장"
+		},
+		"wants": "등대 주변의 소란 없이 모두에게 평화로운 해결을 원한다.",
+		"rule_link": "모두의 입장을 헤아려 사정을 묻는 것",
+		"rep": "community+",
+		"events": {},
+		"flags": {
+			"team_leader_wary": {
+				"kind": "bad",
+				"boss_penalty": -1,
+				"label": {
+					"korean": "경호팀장 경계"
+				},
+				"boss_line": {
+					"korean": "경호팀장이 등대 안으로 들어가려는 당신을 의심스러운 눈으로 바라본다."
+				}
+			},
+			"team_leader_respect": {
+				"kind": "good",
+				"boss_penalty": 1,
+				"label": {
+					"korean": "경호팀장 존중"
+				},
+				"boss_choice": {
+					"korean": "경호팀장이 당신의 단호함에 감탄하며 작은 짐을 들어준다."
+				}
+			},
+			"team_leader_grateful": {
+				"kind": "good",
+				"boss_penalty": 2,
+				"label": {
+					"korean": "경호팀장 감사"
+				},
+				"boss_choice": {
+					"korean": "경호팀장이 당신에게 등대 안의 위험 요소를 미리 알려준다."
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,304 @@
+{
+	"id": "card_05_self_serving_guard",
+	"title": {
+		"korean": "내 몫은 확실하게"
+	},
+	"intensity": "calm",
+	"after_story": 7,
+	"before_story": 9,
+	"condition": {
+		"leaning": "community-",
+		"among": [
+			"fighting-",
+			"fighting+",
+			"community-",
+			"community+",
+			"reason-",
+			"reason+"
+		],
+		"min": 20
+	},
+	"urgency": 8,
+	"leaning": "community-",
+	"background_tags": [
+		"breakwater",
+		"foggy",
+		"night",
+		"alone",
+		"tense"
+	],
+	"background_image": "https://imagedelivery.net/WTEqQNGFb-l-IHS6IGnzUQ/d67905ec-722f-4cee-80f4-0b19d0d93d00/public",
+	"dialogue": [
+		{
+			"speaker": "security_team_leader",
+			"content": {
+				"korean": "당신이 그… 어떤 일이든 자기 몫부터 확실히 챙긴다는 해결사죠?"
+			}
+		},
+		{
+			"speaker": "security_team_leader",
+			"content": {
+				"korean": "등대도 제가 맡은 구역이라, 이 안에 규정 위반자가 있으면 제게도 불이익이 옵니다."
+			}
+		},
+		{
+			"speaker": "dax",
+			"content": {
+				"korean": "경호팀장님, 비서님은 나쁜 일 한 게 아닐 거예요!"
+			}
+		},
+		{
+			"speaker": "security_team_leader",
+			"content": {
+				"korean": "규정은 규정입니다. 이 등대 진입을 어떻게 처리해야 저에게 피해가 없을지… 조언을 좀 구하고 싶습니다."
+			}
+		}
+	],
+	"choices": [
+		{
+			"text": {
+				"korean": "경호팀장이 피해를 보지 않도록 규정 위반자를 잡는 데 돕는다."
+			},
+			"path": "easy",
+			"mbti": "ST",
+			"flag": "team_leader_hostile",
+			"effects": {
+				"community": -20,
+				"gold": 50
+			},
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "경호팀장은 당신의 조언대로 등대 안에 숨은 사람을 쫓아내려 했다."
+					}
+				},
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "그는 당신에게 미리 감사하며 낡은 지폐 몇 장을 건넸다."
+					}
+				},
+				{
+					"speaker": "dax",
+					"content": {
+						"korean": "팀장님이 이렇게까지 유연한 분인 줄 몰랐네요…"
+					}
+				}
+			],
+			"risk": {
+				"chance": "mid",
+				"bad": {
+					"effects": {
+						"gold": -50
+					},
+					"reward": [],
+					"result": [
+						{
+							"speaker": "narrator",
+							"content": {
+								"korean": "경호팀장은 당신의 조언을 듣고 등대 계단을 성급하게 오르려 했다."
+							}
+						},
+						{
+							"speaker": "narrator",
+							"content": {
+								"korean": "그러나 그는 발을 헛디뎌 등대 계단에서 굴러 떨어졌고, 당신은 그의 치료비 일부를 내주게 됐다."
+							}
+						}
+					]
+				}
+			}
+		},
+		{
+			"text": {
+				"korean": "경호팀장의 불이익보다 비서님의 사정을 먼저 살핀다고 말한다."
+			},
+			"path": "hard",
+			"mbti": "NF",
+			"flag": "team_leader_cooperation",
+			"effects": {
+				"community": 20,
+				"echo": 10
+			},
+			"reward": [
+				"defense_up"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "경호팀장은 당신의 말에 잠시 당황하더니, 한숨을 쉬며 고개를 저었다."
+					}
+				},
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "그는 규정보다 사람의 사정을 우선해야 한다는 당신의 뜻을 이해한 듯, 등대 문을 지키는 것을 포기했다."
+					}
+				},
+				{
+					"speaker": "dax",
+					"content": {
+						"korean": "저, 팀장님은 괜찮을까요? 그래도 비서님을 만날 수 있게 됐어요!"
+					}
+				}
+			],
+			"risk": {
+				"chance": "high",
+				"bad": {
+					"effects": {
+						"gold": -20
+					},
+					"reward": [],
+					"result": [
+						{
+							"speaker": "narrator",
+							"content": {
+								"korean": "경호팀장은 당신의 말에 고개를 갸웃거리다, 당신의 뜻을 오해하고 비서님을 잡으려 등대 안으로 뛰어들어갔다."
+							}
+						},
+						{
+							"speaker": "narrator",
+							"content": {
+								"korean": "그는 비서님과 실랑이를 벌이다 유리창을 깨뜨렸고, 당신은 파손된 등대 유리창 배상금을 내주게 됐다."
+							}
+						}
+					]
+				}
+			}
+		},
+		{
+			"text": {
+				"korean": "경호팀장에게 가장 이득이 되는 방향으로 등대 진입 방안을 제시한다."
+			},
+			"path": "stat",
+			"mbti": "TJ",
+			"require": {
+				"stat": "community",
+				"op": "<=",
+				"value": -40
+			},
+			"flag": "team_leader_bribed",
+			"effects": {
+				"community": -30,
+				"gold": 100
+			},
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "경호팀장은 당신의 말에 눈을 빛냈다."
+					}
+				},
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "그는 당신의 조언이 자신의 자리를 지키면서도 문제를 해결할 명분이라며 흡족해했다."
+					}
+				},
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "그는 당신에게 고마움을 표하며 넉넉한 현금을 건넸다."
+					}
+				},
+				{
+					"speaker": "dax",
+					"content": {
+						"korean": "팀장님이 이렇게 쉽게 마음을 바꾸다니, 당신은 정말 대단하네요!"
+					}
+				}
+			]
+		},
+		{
+			"text": {
+				"korean": "경호팀장의 불이익을 보전해 줄 뇌물을 건네며 등대를 비켜달라고 한다."
+			},
+			"path": "gold",
+			"mbti": "EN",
+			"require": {
+				"stat": "gold",
+				"op": ">=",
+				"value": 100
+			},
+			"effects": {
+				"gold": -100,
+				"reason": -10
+			},
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "경호팀장은 당신이 건넨 두툼한 봉투를 받고 눈을 굴렸다."
+					}
+				},
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "그는 봉투를 품에 넣으며 못 본 척 방파제 반대편으로 등을 돌렸다."
+					}
+				},
+				{
+					"speaker": "dax",
+					"content": {
+						"korean": "팀장님은 늘 규정만 따르던 분인데… 저걸 그냥 받네요."
+					}
+				}
+			]
+		}
+	],
+	"tags": [
+		"security_team_leader",
+		"dax"
+	],
+	"_design": {
+		"slot": "D",
+		"kind": "rep",
+		"person": {
+			"id": "security_team_leader",
+			"name": "경호팀장",
+			"role": "경호팀장"
+		},
+		"wants": "경호팀장 자신의 불이익을 피하고 싶어 한다.",
+		"rule_link": "개인의 이득을 먼저 따져 사정을 묻는 것",
+		"rep": "community-",
+		"events": {},
+		"flags": {
+			"team_leader_hostile": {
+				"kind": "bad",
+				"boss_penalty": -1,
+				"label": {
+					"korean": "경호팀장 경계"
+				},
+				"boss_line": {
+					"korean": "경호팀장이 등대 문 앞에서 당신을 막아서며 경계한다."
+				}
+			},
+			"team_leader_cooperation": {
+				"kind": "good",
+				"boss_penalty": 1,
+				"label": {
+					"korean": "경호팀장 협력"
+				},
+				"boss_choice": {
+					"korean": "경호팀장이 등대 싸움을 멀리서 지켜보며 응원한다."
+				}
+			},
+			"team_leader_bribed": {
+				"kind": "good",
+				"boss_penalty": 2,
+				"label": {
+					"korean": "경호팀장 매수"
+				},
+				"boss_choice": {
+					"korean": "경호팀장이 당신에게 등대 안쪽의 유용한 정보를 귀띔해준다."
+				}
+			}
+		}
+	}
+}

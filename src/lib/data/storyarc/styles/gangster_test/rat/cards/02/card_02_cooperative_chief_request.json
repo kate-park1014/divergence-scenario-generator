@@ -1,0 +1,272 @@
+{
+	"id": "card_02_cooperative_chief_request",
+	"title": {
+		"korean": "쥐새끼는 혼자 잡을 수 없습니다"
+	},
+	"intensity": "calm",
+	"after_story": 3,
+	"before_story": 5,
+	"condition": {
+		"leaning": "fighting-",
+		"among": [
+			"fighting-",
+			"fighting+",
+			"community-",
+			"community+",
+			"reason-",
+			"reason+"
+		],
+		"min": 20
+	},
+	"urgency": 8,
+	"leaning": "fighting-",
+	"background_tags": [
+		"container_yard",
+		"night",
+		"foggy",
+		"quiet",
+		"tense"
+	],
+	"background_image": "https://imagedelivery.net/WTEqQNGFb-l-IHS6IGnzUQ/acdb543d-a0c2-4db1-0984-8d6309f92700/public",
+	"dialogue": [
+		{
+			"speaker": "security_chief",
+			"content": {
+				"korean": "어… 저기, 혹시 그 소문 자자한 '돕는 해결사' 분들 아니십니까?"
+			}
+		},
+		{
+			"speaker": "security_chief",
+			"content": {
+				"korean": "차 안에서 인기척이… 어휴, 제가 괜히 주책맞게… 죄송합니다만, 잠시 실례해도 될까요?"
+			}
+		},
+		{
+			"speaker": "security_chief",
+			"content": {
+				"korean": "저기… 새로 들어온 컨테이너 하나가 영 수상쩍어서요."
+			}
+		},
+		{
+			"speaker": "security_chief",
+			"content": {
+				"korean": "제가 혼자 확인하기엔 좀… 벅차서 말입니다. 어쩌면 좋을지…"
+			}
+		},
+		{
+			"speaker": "dax",
+			"content": {
+				"korean": "경비 반장님이 직접 부탁하시다니, 저희가 정말 소문났나 봐요!"
+			}
+		}
+	],
+	"choices": [
+		{
+			"text": {
+				"korean": "지금은 잠복 중이라 곤란하다며 경비 반장을 설득해 돌려보낸다."
+			},
+			"path": "easy",
+			"mbti": "NF",
+			"flag": "chief_distracted_you",
+			"effects": {
+				"gold": 100
+			},
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "당신의 정중한 설명에 경비 반장은 고개를 끄덕이며 돌아갔다. 그는 당신의 협조적인 태도에 안심한 듯 보였다."
+					}
+				},
+				{
+					"speaker": "dax",
+					"content": {
+						"korean": "휴, 반장님이 겨우 물러났네요. 조마조마했어요!"
+					}
+				}
+			],
+			"risk": {
+				"chance": "mid",
+				"bad": {
+					"effects": {
+						"gold": -20
+					},
+					"reward": [
+						"hp_down"
+					],
+					"result": [
+						{
+							"speaker": "narrator",
+							"content": {
+								"korean": "당신이 차분히 설명했지만, 경비 반장은 초조해하며 자꾸만 몸을 비틀었다."
+							}
+						},
+						{
+							"speaker": "narrator",
+							"content": {
+								"korean": "결국 그가 손수건을 떨어뜨리려다 실수로 차 문고리를 건드려 소리가 났다."
+							}
+						},
+						{
+							"speaker": "dax",
+							"content": {
+								"korean": "아! 소리 나면 안 되는데…!"
+							}
+						}
+					]
+				}
+			}
+		},
+		{
+			"text": {
+				"korean": "경비 반장에게 지금은 중요한 작전 중이라며, 조용히 자리를 지키라고 경고한다."
+			},
+			"path": "hard",
+			"mbti": "TP",
+			"flag": "chief_feared_you",
+			"effects": {
+				"echo": -5,
+				"fighting": 15
+			},
+			"reward": [
+				"intelligence_up"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "당신의 강경한 경고에 경비 반장은 손수건을 쥔 채 얼어붙었다. 그는 황급히 고개를 숙이며 자리를 떴다."
+					}
+				},
+				{
+					"speaker": "dax",
+					"content": {
+						"korean": "반장님, 저희가 너무 무서웠나 봐요…"
+					}
+				}
+			],
+			"risk": {
+				"chance": "high",
+				"bad": {
+					"effects": {
+						"gold": -20
+					},
+					"reward": [],
+					"result": [
+						{
+							"speaker": "narrator",
+							"content": {
+								"korean": "당신의 경고에 경비 반장은 놀라서 뒷걸음질 쳤다."
+							}
+						},
+						{
+							"speaker": "narrator",
+							"content": {
+								"korean": "그러나 발을 헛디뎌 주변에 쌓인 고철 더미를 와장창 무너뜨리고 말았다."
+							}
+						},
+						{
+							"speaker": "dax",
+							"content": {
+								"korean": "맙소사! 저 소리에 다 들키겠어요!"
+							}
+						}
+					]
+				}
+			}
+		},
+		{
+			"text": {
+				"korean": "경비 반장의 부탁을 듣고, 나중에 처리해 줄 테니 일단 조용히 해 달라고 말한다."
+			},
+			"path": "stat",
+			"mbti": "IS",
+			"require": {
+				"stat": "fighting",
+				"op": "<=",
+				"value": -40
+			},
+			"flag": "chief_trusted_you",
+			"effects": {
+				"community": 20,
+				"echo": 10,
+				"fighting": -10
+			},
+			"reward": [
+				"defense_up"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "당신이 약속하자 경비 반장은 안도하며 연신 고개를 숙였다."
+					}
+				},
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "그는 당신의 협력적인 태도에 깊이 감명받은 듯 보였다."
+					}
+				},
+				{
+					"speaker": "dax",
+					"content": {
+						"korean": "와, 반장님 표정이 완전히 풀렸어요!"
+					}
+				}
+			]
+		}
+	],
+	"tags": [
+		"security_chief",
+		"dax"
+	],
+	"_design": {
+		"slot": "B",
+		"kind": "rep",
+		"person": {
+			"id": "security_chief",
+			"name": "경비 반장",
+			"role": "야적장 경비 반장"
+		},
+		"wants": "경비 반장이 야적장에 새로 들어온 수상한 컨테이너를 조사해 달라고 부탁한다. 그는 혼자 처리하기 힘든 일이라 '협력적인 해결사'인 주인공에게 도움을 청한다.",
+		"rule_link": "눈앞의 작은 부탁에 섣불리 개입하기보다, 큰 그림을 보고 기다리는 것이 더 큰 진실을 밝힐 수 있다.",
+		"rep": "fighting-",
+		"events": {},
+		"flags": {
+			"chief_distracted_you": {
+				"kind": "bad",
+				"boss_penalty": -1,
+				"label": {
+					"korean": "경비 반장 방해"
+				},
+				"boss_line": {
+					"korean": "경비 반장이 당신을 계속 불러세워 한 턴을 날린다."
+				}
+			},
+			"chief_feared_you": {
+				"kind": "good",
+				"boss_penalty": 1,
+				"label": {
+					"korean": "경비 반장 겁먹음"
+				},
+				"boss_choice": {
+					"korean": "경비 반장이 당신을 두려워해 방해꾼들을 막아준다."
+				}
+			},
+			"chief_trusted_you": {
+				"kind": "good",
+				"boss_penalty": 2,
+				"label": {
+					"korean": "경비 반장 신뢰"
+				},
+				"boss_choice": {
+					"korean": "경비 반장이 당신을 믿고 방해꾼들을 설득해준다."
+				}
+			}
+		}
+	}
+}

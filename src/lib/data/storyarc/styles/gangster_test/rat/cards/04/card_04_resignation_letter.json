@@ -1,0 +1,165 @@
+{
+	"id": "card_04_resignation_letter",
+	"title": {
+		"korean": "사직서와 컵 두 개"
+	},
+	"intensity": "high",
+	"after_story": 5,
+	"before_story": 7,
+	"callback": {
+		"seed": "janitor_rumor_easy",
+		"min_rooms_after": 2
+	},
+	"background_tags": [
+		"stairwell",
+		"night",
+		"dim_light",
+		"alone",
+		"anxious"
+	],
+	"background_image": "https://imagedelivery.net/WTEqQNGFb-l-IHS6IGnzUQ/540a75a5-17b9-4ef8-ecd9-e107f0c83a00/public",
+	"dialogue": [
+		{
+			"speaker": "narrator",
+			"content": {
+				"korean": "금고실로 향하는 계단 한편에 사직서 한 장이 놓여 있다."
+			}
+		},
+		{
+			"speaker": "dax",
+			"content": {
+				"korean": "어? 이거 청소부 아저씨 사직서 아니에요?"
+			}
+		},
+		{
+			"speaker": "narrator",
+			"content": {
+				"korean": "사직서 한 귀퉁이에 '죄송합니다.'라는 글씨가 삐뚤빼뚤하게 적혀 있다."
+			}
+		},
+		{
+			"speaker": "night_janitor",
+			"content": {
+				"korean": "흐읍… 죄송합니다… 제가… 제가 잘못했습니다…"
+			}
+		},
+		{
+			"speaker": "narrator",
+			"content": {
+				"korean": "아저씨는 사직서 위, 야근하며 닦던 컵 두 개를 말없이 바라본다."
+			}
+		}
+	],
+	"choices": [
+		{
+			"text": {
+				"korean": "사직서를 치워 아저씨가 야근한 흔적을 감춘다."
+			},
+			"path": "easy",
+			"mbti": "ES",
+			"flag": "janitor_blamed",
+			"effects": {
+				"echo": -5,
+				"community": -15
+			},
+			"reward": [
+				"attack_up"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "사직서가 감쪽같이 사라진다."
+					}
+				},
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "아저씨는 해고를 면하지만, 당신은 그의 불안한 눈빛을 떠올리며 씁쓸하게 고개를 젓는다."
+					}
+				},
+				{
+					"speaker": "dax",
+					"content": {
+						"korean": "휴, 아저씨는 또 이걸 어떻게 알았을까요?"
+					}
+				}
+			]
+		},
+		{
+			"text": {
+				"korean": "사직서를 접수해 아저씨의 상황을 보고한다."
+			},
+			"path": "hard",
+			"mbti": "IS",
+			"flag": "janitor_witness",
+			"effects": {
+				"reason": 15,
+				"echo": 5
+			},
+			"reward": [
+				"defense_up"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "사직서는 인사팀에 접수된다."
+					}
+				},
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "아저씨는 해고되지만, 그가 몰래 두고 간 쪽지에는 '감사합니다'라는 글이 적혀 있다."
+					}
+				},
+				{
+					"speaker": "dax",
+					"content": {
+						"korean": "아저씨가 안타깝네요… 뭘 숨기고 있었을까요?"
+					}
+				}
+			]
+		}
+	],
+	"tags": [
+		"night_janitor",
+		"dax"
+	],
+	"_design": {
+		"slot": "C",
+		"kind": "callback",
+		"person": {
+			"role": "야간 청소부",
+			"id": "night_janitor",
+			"name": "청소부 아저씨"
+		},
+		"wants": "야근한 게 들키면 잘릴까 봐 말을 못 하고 있다.",
+		"rule_link": "아저씨가 사표를 내고 도망친 이유를 숨기는 사람으로 볼지, 사표를 낼 수밖에 없는 사정이 있다고 볼지 선택한다.",
+		"events": {},
+		"flags": {
+			"janitor_blamed": {
+				"kind": "bad",
+				"boss_penalty": -1,
+				"label": {
+					"korean": "청소부 누명"
+				},
+				"boss_line": {
+					"korean": "금고실 복도에 떨어진 서류 뭉치 위로 청소부 아저씨의 지문이 선명하게 찍혀 있다."
+				}
+			},
+			"janitor_witness": {
+				"kind": "good",
+				"boss_penalty": 1,
+				"label": {
+					"korean": "청소부 목격자"
+				},
+				"boss_choice": {
+					"korean": "청소부 아저씨가 금고실 복도에서 검은 장갑을 낀 누군가를 보았다고 말한다."
+				}
+			}
+		}
+	}
+}

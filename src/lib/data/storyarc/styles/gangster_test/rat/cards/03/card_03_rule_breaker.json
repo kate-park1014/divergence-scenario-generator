@@ -1,0 +1,277 @@
+{
+	"id": "card_03_rule_breaker",
+	"title": {
+		"korean": "규칙의 수호자"
+	},
+	"intensity": "calm",
+	"after_story": 1,
+	"before_story": 3,
+	"condition": {
+		"leaning": "reason+",
+		"among": [
+			"fighting-",
+			"fighting+",
+			"community-",
+			"community+",
+			"reason-",
+			"reason+"
+		],
+		"min": 20
+	},
+	"urgency": 8,
+	"leaning": "reason+",
+	"background_tags": [
+		"office",
+		"night",
+		"dimlight",
+		"alone",
+		"nervous"
+	],
+	"background_image": "https://imagedelivery.net/WTEqQNGFb-l-IHS6IGnzUQ/19262ed2-d440-4ec4-8977-f580a3b06000/public",
+	"dialogue": [
+		{
+			"speaker": "night_accountant",
+			"content": {
+				"korean": "당신이 그… 규칙 따윈 신경 안 쓰고 대범하게 일을 처리한다는 해결사시죠? 소문 들었습니다."
+			}
+		},
+		{
+			"speaker": "night_accountant",
+			"content": {
+				"korean": "지금은 안 됩니다. 장부가… 장부가 비어 있어서… 이 계산이… 이 계산이 맞지 않습니다!"
+			}
+		},
+		{
+			"speaker": "dax",
+			"content": {
+				"korean": "야근 직원이 잔뜩 긴장한 것 같아요. 뭔가 숨기는 건가?"
+			}
+		},
+		{
+			"speaker": "night_accountant",
+			"content": {
+				"korean": "누구든 자료실에 들어가려면… 서류를 제대로 갖춰야 합니다. 이건 규칙이에요."
+			}
+		}
+	],
+	"choices": [
+		{
+			"text": {
+				"korean": "야근 직원의 시선을 돌려 자료실 문을 슬쩍 열고 들어간다."
+			},
+			"path": "easy",
+			"mbti": "EN",
+			"flag": "accountant_distracted",
+			"effects": {
+				"gold": 50,
+				"echo": -5,
+				"reason": 20
+			},
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "당신이 야근 직원의 시선을 끈 사이 자료실 문을 살짝 열었다."
+					}
+				},
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "야근 직원은 당신의 빠른 움직임에 눈만 깜빡인다."
+					}
+				},
+				{
+					"speaker": "dax",
+					"content": {
+						"korean": "우와, 눈 깜짝할 사이에!"
+					}
+				}
+			],
+			"risk": {
+				"chance": "mid",
+				"bad": {
+					"effects": {
+						"gold": -20
+					},
+					"reward": [],
+					"result": [
+						{
+							"speaker": "narrator",
+							"content": {
+								"korean": "당신이 시선을 돌리려 하자 야근 직원이 더 경계하며 몸을 가로막는다."
+							}
+						},
+						{
+							"speaker": "narrator",
+							"content": {
+								"korean": "야근 직원이 실수로 서류 더미를 쏟아 바닥이 미끄러워진다."
+							}
+						},
+						{
+							"speaker": "dax",
+							"content": {
+								"korean": "앗, 미끄러워요! 조심하세요!"
+							}
+						}
+					]
+				}
+			}
+		},
+		{
+			"text": {
+				"korean": "야근 직원을 설득해 정식 절차대로 자료실에 들어갈 방법을 찾는다."
+			},
+			"path": "hard",
+			"mbti": "SJ",
+			"flag": "accountant_surprised",
+			"effects": {
+				"reason": -20,
+				"community": 10
+			},
+			"reward": [
+				"defense_up"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "당신의 뜻밖의 협조에 야근 직원이 잠시 멍하니 당신을 본다."
+					}
+				},
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "야근 직원이 마지못해 자료실 출입 서류를 내민다."
+					}
+				},
+				{
+					"speaker": "dax",
+					"content": {
+						"korean": "어? 저렇게 순순히…?"
+					}
+				}
+			],
+			"risk": {
+				"chance": "high",
+				"bad": {
+					"effects": {
+						"gold": -20
+					},
+					"reward": [],
+					"result": [
+						{
+							"speaker": "narrator",
+							"content": {
+								"korean": "당신의 설득에 야근 직원이 오히려 더 의심의 눈초리를 보낸다."
+							}
+						},
+						{
+							"speaker": "narrator",
+							"content": {
+								"korean": "야근 직원이 자료실 출입 서류를 뒤로 감춰 버린다."
+							}
+						},
+						{
+							"speaker": "dax",
+							"content": {
+								"korean": "아이고, 저러다 서류에 파묻히겠어요!"
+							}
+						}
+					]
+				}
+			}
+		},
+		{
+			"text": {
+				"korean": "대범한 태도로 야근 직원을 압도해 자료실 문을 열게 한다."
+			},
+			"path": "stat",
+			"mbti": "SP",
+			"require": {
+				"stat": "reason",
+				"op": ">=",
+				"value": 40
+			},
+			"flag": "accountant_intimidated",
+			"effects": {
+				"reason": 20,
+				"fighting": 10
+			},
+			"reward": [
+				"attack_up"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "당신의 당당한 태도에 야근 직원이 움찔하며 뒷걸음친다."
+					}
+				},
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "야근 직원이 겁먹은 표정으로 자료실 문을 연다."
+					}
+				},
+				{
+					"speaker": "dax",
+					"content": {
+						"korean": "이야, 해결사님 기세에 다들 꼼짝 못 하네요!"
+					}
+				}
+			]
+		}
+	],
+	"tags": [
+		"night_accountant",
+		"dax"
+	],
+	"_design": {
+		"slot": "A",
+		"kind": "rep",
+		"person": {
+			"id": "night_accountant",
+			"name": "회계팀 야근 직원",
+			"role": "회계팀 야근 직원"
+		},
+		"wants": "규칙을 깨려는 당신의 접근을 막고 자료실 출입을 통제하려 한다.",
+		"rule_link": "눈앞의 규칙이라는 증거가 버티고 있을 때, 보이는 대로 따를지 나만의 방식으로 돌파할지 선택해야 한다.",
+		"rep": "reason+",
+		"events": {},
+		"flags": {
+			"accountant_distracted": {
+				"kind": "bad",
+				"boss_penalty": -1,
+				"label": {
+					"korean": "야근 직원의 방심"
+				},
+				"boss_line": {
+					"korean": "서버실의 잠금장치가 느슨해져 있어 쉽게 열린다."
+				}
+			},
+			"accountant_surprised": {
+				"kind": "good",
+				"boss_penalty": 1,
+				"label": {
+					"korean": "야근 직원의 당황"
+				},
+				"boss_choice": {
+					"korean": "회계팀 야근 직원이 서버실 자료 접근에 필요한 비밀번호 힌트를 흘린다."
+				}
+			},
+			"accountant_intimidated": {
+				"kind": "good",
+				"boss_penalty": 2,
+				"label": {
+					"korean": "회계 직원의 겁먹음"
+				},
+				"boss_choice": {
+					"korean": "회계팀 야근 직원이 서버실 보안 시스템 일부를 실수로 꺼트린다."
+				}
+			}
+		}
+	}
+}

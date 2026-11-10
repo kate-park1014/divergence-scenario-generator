@@ -41,6 +41,18 @@ const names = await npcNames(story.theme ?? 'modern');
 const compName = names[comp] ?? comp;
 const FINAL_NAME = story.design.final.name;
 const FINAL = ORDER === 5;
+// 이번 화 상대를 가리키는 낱말 (끝 낱말이 흔한 말이면 끝 두 낱말)
+const FOE_WORDS = (() => {
+	const w = String(ep.boss ?? '').trim().split(/\s+/).filter(Boolean);
+	if (!w.length) return [];
+	return [w.length >= 2 && ['간부', '사람', '남자', '여자'].includes(w.at(-1)) ? w.slice(-2).join(' ') : w.at(-1)];
+})();
+const FOE_RE = FOE_WORDS.length ? new RegExp(`(${FOE_WORDS.join('|')})(님)?(은|는|이(?! 있)|가(?! 있)|에게|한테|을|를|과|와)`) : null;
+const unquoted = (t) => String(t ?? '').replace(/“[^”]*”|"[^"]*"|'[^']*'|‘[^’]*’/g, '');
+// 평판 칸마다 1부 카드들의 인물 첫 대사 (2·3부가 같은 틀로 시작하지 않게)
+const REP_FIRST = {};
+const firstSpeech = (c) => (c.dialogue ?? []).find((l) => l.speaker === c.person?.id)?.text ?? '';
+const head = (t) => t.replace(/[^가-힣a-zA-Z0-9]/g, '').slice(0, 8);
 
 // 칸: 스토리 방 사이. D 뒤는 방 9 휴식 전 대화
 const SLOTS = [
@@ -137,6 +149,12 @@ ${next.map((t) => `  ${t}`).join('\n')}`;
 }
 const allBlocks = (r) => [REST_BLOCK, 'dialogue', 'win_dialogue', 'lose_dialogue'].flatMap((b) => r[b] ?? []);
 const storyLines = new Set(scen.rooms.flatMap((r) => allBlocks(r).map((l) => l.content?.korean).filter((t) => t && t.length >= 10)));
+// 원문에서 동행이 다른 인물을 부른 호칭 ("부장님, …") — 카드에서 주인공에게 쓰면 안 됨
+const compTitles = [
+	...new Set(
+		scen.rooms.flatMap((r) => allBlocks(r).filter((l) => l.speaker === comp).flatMap((l) => [...(l.content?.korean ?? '').matchAll(/(?:^|[,.!?]\s*)([가-힣]{1,6}님)\s*[,!?]/g)].map((m) => m[1])))
+	)
+].filter((t) => !['여러분'].includes(t));
 const compLines = [...new Set(scen.rooms.flatMap((r) => allBlocks(r).filter((l) => l.speaker === comp && l.content?.korean).map((l) => l.content.korean)))]
 	.slice(0, 12)
 	.map((t) => `  - ${t}`)
@@ -179,12 +197,13 @@ const COMMON = `# 이 이야기
 # 누구의 일인가
 - 선택하는 사람은 주인공 (서술에서는 "당신"). 사건은 주인공에게 닥치고 이득·손해도 주인공 쪽
 - 동행 \`${comp}\`(${compName}, ${story.npcs[0].role}): 곁에서 거듦 (알려 주기, 걱정·부추기기, 선택 뒤 반응). 카드 인물의 말에 반응. 자기를 이름 대신 1인칭으로. 사건의 당사자가 되거나 선택을 대신 정하지 않음
+- 동행은 주인공들을 호칭 없이 부르거나 "여러분"으로 부름.${compTitles.length ? ` 원문에서 다른 인물을 부른 호칭(${compTitles.join(', ')})을 주인공에게 쓰지 않음` : ''}
 - 동행 원문 대사 (말투 그대로, 이 문장들을 되풀이하지는 않음):
 ${compLines}
 
 # 지킬 것
 - 카드는 스토리 방 사이 길 위의 짧은 사건. 스토리 결과를 바꾸지 않고, "깨면 안 되는 사실"을 깨지 않음
-- 이번 화 상대("${FINAL ? FINAL_NAME : ep.boss}")는 카드에 나오지 않음. 상대의 진짜 사정·이번 화 반전을 카드가 먼저 밝히지 않음
+- 이번 화 상대("${FINAL ? FINAL_NAME : ep.boss}")는 카드에 나오지 않음. 상대의 진짜 사정·이번 화 반전을 카드가 먼저 밝히지 않음 (서술뿐 아니라 인물 대사·소문으로도. 상대가 그날 어디서 무엇을 했는지 짐작하는 말 금지)
 - "${FINAL_NAME}" 이름 금지. "보스" 낱말 금지
 - 새 인물은 됨. 동행 말고 다른 NPC 이름을 지어 붙이지 않음 (인물은 직업·별명으로)
 - 금지: 설명투(${META.join(', ')}), 선택지 깎아내리기(${BELITTLE.join(', ')}), 괄호 메모, 스토리 방 대사 베끼기, "밤새"·"다음 날" 같은 긴 시간
@@ -194,12 +213,24 @@ ${STYLE}
 - 한 줄 ${MAX_LEN}자 이내, 1~2문장. narrator 는 "~했다" 체, 주인공은 "당신". 인물 대사는 구어체
 - 선택지 text: 주인공 행동 "~한다" 꼴. 누구에게 무엇을 하는지 분명하게
 
-# 재미 (이건 게임이다)
-- 플레이어가 "오, 이건 어떻게 하지?" 하고 고르고 싶어지게. 평범한 부탁·잡일로 끝내지 않음
-- 인물마다 눈에 띄는 버릇·사정 하나 (말버릇, 집착하는 물건, 숨기는 것). 무서워 보이는데 알고 보면 짠한 사람이 이 장르의 맛
-- 사건에 구체적인 걸린 것: 돈, 시간 제한, 들키면 안 되는 사람, 망가지면 안 되는 물건
-- 결과에 작은 반전이나 웃음 하나. 고른 대가가 장면으로 보이게
-- 선택지끼리 성격이 확실히 다르게: 같은 행동을 말만 바꾼 선택지 금지`;
+# 재미 (이건 게임이다 — 가장 신경 쓸 것)
+플레이어가 "오, 이건 어떻게 하지?" 하고 고르고, 결과를 읽고 피식 웃게 만든다.
+
+## 인물
+- 카드 인물마다 눈에 띄는 버릇·사정 하나 (말버릇, 집착하는 물건, 숨기는 것, 괜한 허세). dialogue 첫 두 줄 안에 보이게
+- 무서워 보이는데 알고 보면 짠한 사람, 센 척하는데 허당인 사람이 이 장르의 맛
+- 사건마다 구체적인 걸린 것 하나: 돈 액수, 시간 제한, 들키면 안 되는 사람, 망가지면 안 되는 물건
+
+## 선택지 text
+- 그 장면에 나온 물건·말·인물의 버릇을 써서 구체적으로. 어느 카드에나 들어갈 문장 금지 ("솔직하게 설명한다", "무엇인지 물어본다", "못 본 척 지나간다", "돈을 쥐여 준다"만으로 끝나는 문장)
+- 선택지마다 태도가 확실히 다르게 (밀어붙이기 / 허세·속이기 / 맞춰 주기 / 엉뚱한 수). 같은 행동의 세기만 다른 선택지 금지
+- fun: 그 인물의 버릇이나 걸린 것을 건드리는 엉뚱한 행동. 읽자마자 웃기지만 그 장면에서 실제로 할 수 있는 일
+
+## result (가장 중요)
+- 첫 줄: 고른 행동이 실제로 어떻게 됐는지 장면으로
+- 그다음: 예상 밖 한 박자. 고른 대로 되긴 했는데 생각 못 한 곳에서 웃기거나 짠한 일이 생김 (인물의 버릇·걸린 것에서 나옴). 선택지 text 만 읽고 맞힐 수 있는 결과 금지
+- 동행 줄은 결과 해설 대신 반응: 놀림, 투덜거림, 괜한 허세, 겁먹음, 엉뚱한 딴소리. "~것 같네요", "잘하셨어요", "다행이네요", "넘어갔네요"처럼 결과를 정리하는 말 금지
+- 확률 나쁜 결과(risk_bad)도 "안 됐다"로 끝내지 않음. 같은 행동이 엉뚱한 쪽으로 번져 소동이 됨 (몸개그, 말실수, 엉뚱한 사람이 끼어듦). 손해가 장면으로 보이게`;
 
 function choiceRules(rep) {
 	return `# 선택지 (자리표의 path 만, 그 개수대로)
@@ -207,13 +238,13 @@ function choiceRules(rep) {
 | --- | --- | --- |
 | easy | ${rep ? '평판대로 행동해 당장 이득' : '당장 이득. 그럴듯한 이유가 보이게'} | reward 1개 또는 gold +50~150 |
 | hard | ${rep ? '평판과 다르게 행동해 지금 대가' : '지금 대가(echo 하락·디버프·시간) 대신 바르게'} | reward 1개 |
-| gold | 돈으로 해결. 누구에게 무엇에 돈을 쓰는지 text 에 | effects.gold -50~-150 |
+| gold | 돈으로 해결. 누구에게 무엇에 돈을 쓰는지 text 에. 그 사람이 돈을 받을 이유(그 사람의 사정·걸린 것)가 있고, 주인공이 그 돈으로 무엇을 얻는지 결과에 보이게. 주인공이 모르는 것을 아는 척하지 않음. 돈은 "돈·지폐·봉투" (금화·골드·숫자 금액 금지) | effects.gold -50~-150 |
 | fun | 엉뚱하지만 그 장면에서 말이 되는 행동. 예상 밖 결과 | 성향 한 축 ±20~30, reward 1개 또는 gold |
 ${rep ? '| stat | 평판이 아주 뚜렷할 때(그 방향 40 이상)만 보임. 그 평판 덕에 되는 해결 (사람들이 평판 때문에 따라 주거나 길을 비켜 줌) | 그 평판 방향으로 effects, reward 1개 |' : `| lock | MBTI 잠금. require_mbti 2글자 (파티 ${PARTY.join(', ')} 중 누군가 가진 조합, 예: TJ, NF, NT, SF, EF, IT), mbti 도 같은 글자. 그 성격의 히어로가 직접 하는 행동: text·result 에 {actor} ("{actor}이(가) …한다") | 축 ±10 이하, reward 1개 또는 gold |`}
 - effects: fighting(투쟁- ↔ 협력+), community(개인- ↔ 공동체+), reason(질서- ↔ 자유+) 중 1~2개 ±10~30, echo(동행 호감도) ±5~15, gold. 빈 effects 금지
 - reward: ${REWARDS.join(', ')} 중 1개
 - mbti: 서로 다른 축의 2글자 (예: TJ, NF, EP). 한 카드 안에서 모두 다르게
-- result: 2~3줄. 고른 행동에 대한 반응으로 시작. 주인공이 한 일과 결과, 인물·동행 반응. 돌아올 사람·물건이나 보스 방에서 쓰일 것은 장면으로 남김
+- result: 2~3줄. 고른 행동에 대한 반응으로 시작해 예상 밖 한 박자로 끝냄 (위 "재미 — result"). 돌아올 사람·물건이나 보스 방에서 쓰일 것은 장면으로 남김
 
 # 확률 결과 (risk_bad) — ${rep ? '평판 카드' : '심기·일반 카드'}의 easy·hard·fun 선택지에만 (gold·lock·stat·회수 카드·fun 이 아닌 이벤트 선택지에는 쓰지 않음)
 - 같은 선택을 했는데 운이 나빠 손해로 끝난 결과. result 는 2~3줄, 좋은 결과(result)와 같은 행동에서 출발해 다른 쪽으로 꼬임 (소동·반전·웃음)
@@ -287,7 +318,26 @@ ${OUTPUT(plan)}
 ${context ? `\n${context}\n` : ''}`;
 }
 
-function repPrompt(key, part) {
+/** 평판 카드 인물: 1부(첫 2장)가 정한 사람을 2·3부가 그대로 씀 */
+function repPersonBlock(person, firstCards) {
+	if (!person)
+		return `# 이 칸 평판 카드 인물 (이 칸 6장 모두 같은 사람 — 여기서 정함)
+- 설계의 그 한 사람 그대로. 다른 가게·직업·사람으로 바꾸지 않음
+- person.name 은 고유 이름 없이 호칭 하나 (예: 직업 + 사장/아주머니/아재 중 하나). ${DIRS.length}장 모두 같은 person (id·name·role)
+- 버릇 하나와 말투(존댓말·반말)를 정해 대사에 보이게`;
+	// 첫 대사(평판을 알아보는 말)는 넘기지 않음 — 넘기면 같은 틀을 베껴 평판 방향이 뒤바뀜
+	const sample = firstCards
+		.flatMap((c) => c.dialogue.filter((l) => l.speaker === person.id).slice(1).map((l) => `  - ${l.text}`))
+		.slice(0, 6)
+		.join('\n');
+	return `# 이 칸 평판 카드 인물 (이미 정해짐 — 그대로 씀)
+- person: { id: "${person.id}", name: "${person.name}", role: "${person.role}" } — 이 값 그대로, 다른 사람·다른 호칭 금지
+- 앞서 쓴 이 사람의 대사 (버릇·말투 그대로 이어감, 문장은 되풀이하지 않음):
+${sample}
+- 첫 대사(평판을 알아보는 말)는 카드마다 자리표의 평판 방향대로 새로 씀. 앞 카드의 문장 틀을 되풀이하지 않음
+- 앞서 쓴 카드의 사건 (겹치지 않게): ${firstCards.map((c) => `${c.title} — ${c.wants}`).join(' / ')}`;
+}
+function repPrompt(key, part, person = null, firstCards = []) {
 	const plan = repPart(key, part);
 	return `당신은 조폭 코미디 선택형 게임의 카드 작가입니다. ${ORDER}화 칸 ${key} 의 **평판(성향) 카드** ${plan.length}장을 대사까지 씁니다.
 
@@ -302,6 +352,8 @@ ${GAME}
 - ${plan.length}장은 서로 다른 종류의 사건 (같은 사건을 말만 바꾼 카드 금지). 그래도 이번 화 주제("${cd.practice}")와 이어진 사건
 
 ${slotBlock(key, true)}
+
+${repPersonBlock(person, firstCards)}
 
 ## 앞뒤 장면 (카드는 앞 방 끝을 이어받고, 다음 장면 첫 대사의 전제를 깨지 않음)
 ${gapsFor([key])}
@@ -385,7 +437,17 @@ const allLinesOf = (c) => [
 	...(c.choices ?? []).flatMap((ch) => [...(ch.result ?? []), ...(ch.risk_bad?.result ?? []), ...(ch.event_intro ?? []), ...(ch.event_options?.fight?.win ?? []), ...(ch.event_options?.fight?.lose ?? []), ...(ch.event_options?.avoid?.result ?? [])]),
 	...(c.forced ?? []).flatMap((f) => f.result ?? [])
 ];
+const COMP_SUMMARY = /것 같(네요|습니다|아요|군요|다)|잘하셨|잘했(어|네|다)|다행이(네|에|다|야)|넘어갔(네|어|다|습)|돈이 최고|돈의 힘|돈 앞에는/;
+// 돈 단위: 현대 부두라 '돈·지폐·봉투'로. 게임 용어·숫자 금액 금지
+const MONEY_WORD = /금화|골드|\d+\s*닢|돈 \d+/;
+// 서술 중간에 대사를 끼워 넣어 줄이 끊긴 꼴 ("어부 아재는 " / 대사 / "하며 …")
+const BROKEN_START = /^(며|라고|하며|고)\s/;
+const BROKEN_END = /(에게|에|가|이|을|를|은|는|와|과|의|로|며)\s*$/;
+// "김 노인", "박 사장" 꼴 (성 + 호칭)
+const SURNAME_NAME = /^[김이박최정강조윤장임한오서신권황안송류홍전고문양손배백허남심노하곽성차주우구민유나진]\s?(노인|씨|사장|반장|여사|할매|할배|영감|아재|아저씨|아줌마|형|군|양|선생|기사|부장|과장|대리|실장|팀장|비서|주임|계장|대장|형님|누님|언니|오빠)$/;
 const withActor = (t) => (t && !t.includes('{actor}') ? `{actor}이(가) ${t}` : t);
+// MBTI 글자를 축 차례(E/I, S/N, T/F, J/P)로 ("TE" → "ET")
+const mbtiOrder = (m) => (typeof m === 'string' ? [...m.toUpperCase()].sort((a, b) => 'EISNTFJP'.indexOf(a) - 'EISNTFJP'.indexOf(b)).join('') : m);
 const toKey = (s) => String(s).toLowerCase().trim().replace(/[^a-z0-9_]+/g, '_').replace(/^_+|_+$/g, '');
 
 function checkCard(c, row) {
@@ -400,6 +462,8 @@ function checkCard(c, row) {
 		if (eo?.fight) (eo.fight.win = splitLines(eo.fight.win)), (eo.fight.lose = splitLines(eo.fight.lose));
 		if (eo?.avoid) eo.avoid.result = splitLines(eo.avoid.result);
 		if (ch.event && ch.reward?.length) delete ch.reward;
+		ch.mbti = mbtiOrder(ch.mbti);
+		if (ch.require_mbti) ch.require_mbti = mbtiOrder(ch.require_mbti);
 		if (ch.path !== 'lock') delete ch.require_mbti;
 		if (ch.reward) ch.reward = ch.reward.filter((r) => REWARDS.includes(r));
 		if (!ch.reward?.length && !ch.effects?.gold && !ch.event) ch.reward = [FALLBACK_REWARD[ch.path] ?? 'defense_up'];
@@ -444,6 +508,7 @@ function checkCard(c, row) {
 	const ok = new Set(['narrator', comp, c.person?.id]);
 	if (!(c.dialogue ?? []).some((l) => l.speaker === c.person?.id)) e.push(`person(${c.person?.id})이 dialogue 에서 말해야 함`);
 	if (c.person?.id === comp) e.push(`person 은 동행(${comp})이 아닌 카드 인물`);
+	if (SURNAME_NAME.test(c.person?.name ?? '')) e.push(`person.name "${c.person.name}" — 성을 붙인 이름 금지, 직업·별명으로 (예: "늙은 일꾼")`);
 	for (const l of allLinesOf(c)) {
 		if (!ok.has(l.speaker)) e.push(`화자 "${l.speaker}" 는 쓸 수 없음 (narrator, ${comp}, ${c.person?.id})`);
 		if ((l.text ?? '').length > MAX_LEN) e.push(`${MAX_LEN}자 넘는 줄: "${l.text}"`);
@@ -451,7 +516,55 @@ function checkCard(c, row) {
 		if (storyLines.has(l.text)) e.push(`스토리 방 대사를 그대로 쓰지 않음: "${l.text}"`);
 		if (/보스/.test(l.text ?? '')) e.push(`"보스" 낱말 금지: "${l.text}"`);
 		if ((l.text ?? '').includes('\ufffd')) e.push(`깨진 글자가 있음 (다시 쓸 것): "${l.text}"`);
+		if (l.speaker === 'narrator' && /(니다|세요|어요|아요|해요|에요|예요)[.!?…]*$/.test(unquoted(l.text).trim())) e.push(`narrator 는 "~한다/~했다" 체 (존댓말 금지): "${l.text}"`);
+		if (/\{actor\}\s*님/.test(l.text ?? '')) e.push(`"{actor}님" 금지 ({actor} 는 이름 자리 — 부를 때는 호칭 없이): "${l.text}"`);
 	}
+
+	// 이번 화 상대는 카드에 직접 나오지 않음: 서술·선택지에서 상대가 움직이거나 상대에게 다가가면 오류 (인물 대사 속 소문·따옴표 인용은 됨)
+	if (FOE_RE && !FINAL) {
+		const acts = [
+			...allLinesOf(c).filter((l) => l.speaker === 'narrator').map((l) => l.text),
+			...(c.choices ?? []).map((ch) => ch.text),
+			...(c.forced ?? []).map((f) => f.text)
+		];
+		const foeNarr = allLinesOf(c).filter((l) => l.speaker === 'narrator' && FOE_WORDS.some((w) => unquoted(l.text).includes(w)));
+		for (const l of foeNarr) e.push(`서술(narrator)에 이번 화 상대(${ep.boss}) 이야기 금지 — 상대의 사정·물건·기록은 카드에 나오지 않음 (인물 대사 속 소문으로만): "${l.text}"`);
+		for (const t of acts)
+			if (FOE_RE.test(unquoted(t))) e.push(`이번 화 상대(${ep.boss})는 카드에 직접 나오지 않음 — 서술·선택지에서 상대가 움직이거나 주인공이 상대에게 가지 않음 (인물 대사 속 소문으로만): "${t}"`);
+	}
+	// 평판 2·3부: 1부 카드와 같은 첫 대사 틀 금지
+	if (row.kind === 'rep' && REP_FIRST[row.slot]) {
+		const h = head(firstSpeech(c));
+		if (h && REP_FIRST[row.slot].includes(h)) e.push(`인물 첫 대사가 앞 카드와 같은 틀 — 이 카드 평판 방향(${row.rep_dir}: ${DIR_NOTE[row.rep_dir]})에 맞게 새 문장으로: "${firstSpeech(c)}"`);
+	}
+
+	// 동행 대사가 자기 이름으로 서술하지 않음 ("닥스가 움찔한다")
+	for (const l of allLinesOf(c))
+		if (l.speaker === comp && new RegExp(`^${compName}(가|는|이|은)\\s`).test(l.text ?? '')) e.push(`동행(${comp}) 대사가 서술 꼴 — 몸짓은 narrator 줄로: "${l.text}"`);
+
+	// 동행이 원문에서 다른 인물에게 쓴 호칭으로 주인공을 부르지 않음
+	for (const l of allLinesOf(c))
+		if (l.speaker === comp)
+			for (const t of compTitles)
+				if (new RegExp(`(^|[,.!?]\\s*)${t}\\s*[,!?]|,\\s*${t}\\s*[.!?]*$`).test(l.text ?? '')) e.push(`동행(${comp})이 주인공을 "${t}"(으)로 부름 — 원문에서 다른 인물 호칭. 주인공은 호칭 없이 또는 "여러분": "${l.text}"`);
+
+	// 줄 형식: 끊긴 줄, 인물 대사 칸의 따옴표·서술, 돈 단위
+	for (const l of allLinesOf(c)) {
+		const t = l.text ?? '';
+		if (BROKEN_START.test(t) || BROKEN_END.test(t)) e.push(`문장이 중간에 끊김 — 서술 문장 사이에 대사를 끼우지 말고 서술 줄·대사 줄을 각각 완결된 문장으로: "${t}"`);
+		if (l.speaker !== 'narrator' && /["“”]/.test(t)) e.push(`인물 대사 칸에 따옴표·서술 금지 (몸짓은 narrator 줄로, 대사는 따옴표 없이): "${t}"`);
+		if (MONEY_WORD.test(t)) e.push(`돈은 "돈·지폐·봉투"로 (금화·골드·숫자 금액 금지): "${t}"`);
+	}
+	for (const ch of c.choices ?? []) {
+		const t = (ch.text ?? '').trim();
+		if (!/다\.?$/.test(t)) e.push(`${ch.path}: 선택지는 주인공 행동 "~한다" 꼴 (대사만 쓰지 않음, 대사는 "…"라며 ~한다): "${t}"`);
+		if (MONEY_WORD.test(t)) e.push(`${ch.path}: 돈은 "돈·지폐·봉투"로 (금화·골드·숫자 금액 금지): "${t}"`);
+	}
+
+	// 결과 줄의 동행 말은 해설·요약 대신 반응 (재미 규칙)
+	const resultLines = [...(c.choices ?? []).flatMap((ch) => [...(ch.result ?? []), ...(ch.risk_bad?.result ?? [])]), ...(c.forced ?? []).flatMap((f) => f.result ?? [])];
+	for (const l of resultLines)
+		if (l.speaker === comp && COMP_SUMMARY.test(l.text ?? '')) e.push(`동행(${comp}) 결과 줄이 결과를 해설함 (놀림·투덜·허세 같은 반응으로): "${l.text}"`);
 
 	const mb = new Set();
 	for (const ch of c.choices ?? []) {
@@ -530,12 +643,25 @@ function passedBefore(name, prompt) {
 	const d = readJson(f);
 	return d.prompt_hash === hashOf(prompt) && d.errors?.length === 0 ? d.cards : null;
 }
-async function writeCards(name, prompt, tool, plan, label) {
+/** 카드 인물을 한 사람으로 맞춤: person 이 없으면 첫 카드의 인물로. 화자 id 도 바꿈 */
+function pinPerson(cards, person) {
+	const p = person ?? cards[0]?.person;
+	if (!p?.id) return cards;
+	for (const c of cards) {
+		const from = c.person?.id;
+		if (from && from !== p.id) for (const l of allLinesOf(c)) if (l.speaker === from) l.speaker = p.id;
+		c.person = { id: p.id, name: p.name, role: p.role };
+	}
+	return cards;
+}
+
+async function writeCards(name, prompt, tool, plan, label, pin) {
+	const pinned = (cs) => (pin === undefined ? cs : pinPerson(cs, pin));
 	const reused = ARGV.fresh ? null : passedBefore(name, prompt);
 	save(path.join(STEP_DIR, `cards_${name}_prompt.md`), prompt);
 	let cards;
 	if (reused) (cards = reused), console.log(`${label}: 지난 결과 그대로 사용`);
-	else cards = (await gemini(prompt, tool, 0.8)).cards ?? [];
+	else cards = pinned((await gemini(prompt, tool, 0.8)).cards ?? []);
 	let errs = check(cards, plan);
 	console.log(`${label} 시도 1: 오류 ${errs.length}개`);
 	for (let t = 2; t <= 3 && errs.length; t++) {
@@ -550,6 +676,7 @@ ${errs.map((x) => `- 자리 ${x.no}: ${x.msg}`).join('\n')}
 ${JSON.stringify(cards.filter((c) => nos.includes(c.no)))}`;
 		const fixed = (await gemini(msg, tool, 0.8)).cards ?? [];
 		for (const f of fixed) if (nos.includes(f.no)) cards = [...cards.filter((c) => c.no !== f.no), f];
+		cards = pinned(cards);
 		errs = check(cards, plan);
 		console.log(`${label} 시도 ${t}: 오류 ${errs.length}개`);
 	}
@@ -576,9 +703,19 @@ const line2 = async (first, then) => {
 	const a = await base(first, '');
 	return [a, await base(then, contextOf(a))];
 };
-const rep = (k, part) =>
-	writeCards(`rep${k}_${part + 1}`, repPrompt(k, part), cardTool(true), repPart(k, part), `${ORDER}화 평판 칸 ${k} (${part + 1}/3)`).then((cs) => cs.map((c) => ({ ...c, no: c.no + REP_PARTS[part][0] })));
-const [ac, bd, ...reps] = await Promise.all([line2('A', 'C'), line2('B', 'D'), ...REP_SLOTS.flatMap((k) => REP_PARTS.map((_, i) => rep(k, i)))]);
+const rep = (k, part, person, firstCards) =>
+	writeCards(`rep${k}_${part + 1}`, repPrompt(k, part, person, firstCards), cardTool(true), repPart(k, part), `${ORDER}화 평판 칸 ${k} (${part + 1}/3)`, person).then((cs) =>
+		cs.map((c) => ({ ...c, no: c.no + REP_PARTS[part][0] }))
+	);
+// 평판 칸: 1부가 인물을 정하고(첫 카드 인물로 맞춤), 2·3부는 그 인물로
+const repSlot = async (k) => {
+	const first = await rep(k, 0, null, []);
+	const person = first[0].person;
+	REP_FIRST[k] = first.map((c) => head(firstSpeech(c))).filter(Boolean);
+	return [first, ...(await Promise.all(REP_PARTS.slice(1).map((_, i) => rep(k, i + 1, person, first))))];
+};
+const [ac, bd, ...repSlots] = await Promise.all([line2('A', 'C'), line2('B', 'D'), ...REP_SLOTS.map(repSlot)]);
+const reps = repSlots.flat();
 
 const all = [];
 const personName = {};
@@ -592,7 +729,8 @@ for (const c of [...ac[0], ...bd[0], ...ac[1], ...bd[1], ...reps.flat()]) {
 	if (seenKey.has(c.key)) c.key = `${c.key}_${c.slot.toLowerCase()}${c.no}`;
 	seenKey.add(c.key);
 	const pid = c.person.id;
-	if (personName[pid] && personName[pid] !== c.person.name) relabel(c, pid, `${pid}_${c.slot.toLowerCase()}${c.no}`);
+	// 다른 사람이 같은 id 를 쓰면 꼬리표 (평판 카드는 칸마다 한 사람이라 칸 꼬리표만)
+	if (personName[pid] && personName[pid] !== c.person.name) relabel(c, pid, `${pid}_${c.slot.toLowerCase()}${c.kind === 'rep' ? '' : c.no}`);
 	personName[c.person.id] = c.person.name;
 	for (const ch of c.choices)
 		if (ch.flag?.key) {

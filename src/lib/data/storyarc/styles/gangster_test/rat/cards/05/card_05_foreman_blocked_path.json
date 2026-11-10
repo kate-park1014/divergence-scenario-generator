@@ -1,0 +1,288 @@
+{
+	"id": "card_05_foreman_blocked_path",
+	"title": {
+		"korean": "길을 막는 반장"
+	},
+	"intensity": "calm",
+	"after_story": 3,
+	"before_story": 5,
+	"condition": {
+		"leaning": "fighting-",
+		"among": [
+			"fighting-",
+			"fighting+",
+			"community-",
+			"community+",
+			"reason-",
+			"reason+"
+		],
+		"min": 20
+	},
+	"urgency": 8,
+	"leaning": "fighting-",
+	"background_tags": [
+		"pier",
+		"night",
+		"foggy",
+		"fewpeople",
+		"tense"
+	],
+	"background_image": "https://imagedelivery.net/WTEqQNGFb-l-IHS6IGnzUQ/34e34488-79fd-4c9b-6dc0-d4e9f13e8b00/public",
+	"dialogue": [
+		{
+			"speaker": "narrator",
+			"content": {
+				"korean": "닥스의 차가 짙은 안개를 뚫고 부두 도로를 달리다 멈춰 선다."
+			}
+		},
+		{
+			"speaker": "narrator",
+			"content": {
+				"korean": "안개 속에서 한 남자가 손을 흔들며 다가온다. 이마를 자꾸 문지른다."
+			}
+		},
+		{
+			"speaker": "banjang",
+			"content": {
+				"korean": "당신이 그… 주먹부터 나간다는 해결사 맞죠? 아이고, 안개까지 껴서 큰일 났는데…"
+			}
+		},
+		{
+			"speaker": "banjang",
+			"content": {
+				"korean": "저기, 회장님 비서님이 요즘 좀 이상해요. 그 양반이 등대에 숨겨둔 게 있는데…"
+			}
+		},
+		{
+			"speaker": "dax",
+			"content": {
+				"korean": "비서님이요? 그분 일이라면 저희가 알아서 할게요."
+			}
+		}
+	],
+	"choices": [
+		{
+			"text": {
+				"korean": "반장을 밀어붙여 비서의 비밀을 캐낸다."
+			},
+			"path": "easy",
+			"mbti": "TJ",
+			"flag": "foreman_anger",
+			"effects": {
+				"echo": -5,
+				"fighting": -20
+			},
+			"reward": [
+				"attack_up"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "당신이 반장의 어깨를 쥐고 등대에 숨겨둔 것이 무엇인지 다그친다."
+					}
+				},
+				{
+					"speaker": "banjang",
+					"content": {
+						"korean": "으으, 알겠습니다! 비서님이 등대에 몰래 숨겨둔 건 회장님 건강검진 결과예요!"
+					}
+				},
+				{
+					"speaker": "dax",
+					"content": {
+						"korean": "저런, 그걸 그렇게 쉽게 불어버리다니… 역시 다그치는 게 최고인가요?"
+					}
+				}
+			],
+			"risk": {
+				"chance": "mid",
+				"bad": {
+					"effects": {
+						"gold": -30
+					},
+					"reward": [
+						"attack_down"
+					],
+					"result": [
+						{
+							"speaker": "narrator",
+							"content": {
+								"korean": "당신이 반장의 어깨를 쥐고 다그치자 반장이 휘청하며 손에 든 종이를 놓친다."
+							}
+						},
+						{
+							"speaker": "banjang",
+							"content": {
+								"korean": "아이고, 내 공사 일지! 젖으면 큰일인데!"
+							}
+						},
+						{
+							"speaker": "dax",
+							"content": {
+								"korean": "어휴, 저도 몰아붙이기 전에 좀 물어볼 걸 그랬네요. 다 젖었잖아요."
+							}
+						}
+					]
+				}
+			}
+		},
+		{
+			"text": {
+				"korean": "반장에게 부드럽게 말을 걸어 사정을 묻는다."
+			},
+			"path": "hard",
+			"mbti": "FP",
+			"flag": "foreman_trust",
+			"effects": {
+				"echo": 10,
+				"fighting": 10
+			},
+			"reward": [
+				"intelligence_up"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "당신이 반장에게 조심스럽게 왜 비서의 비밀을 궁금해하는지 묻는다."
+					}
+				},
+				{
+					"speaker": "banjang",
+					"content": {
+						"korean": "회장님 비서가 등대에 감춰둔 건 며칠 전 새로 들어온 고급 와인이라고요."
+					}
+				},
+				{
+					"speaker": "dax",
+					"content": {
+						"korean": "으음, 와인이라… 그냥 지나칠 뻔했네요!"
+					}
+				}
+			],
+			"risk": {
+				"chance": "high",
+				"bad": {
+					"effects": {
+						"gold": -20
+					},
+					"reward": [],
+					"result": [
+						{
+							"speaker": "narrator",
+							"content": {
+								"korean": "당신이 반장에게 부드럽게 말을 걸자, 반장은 긴장한 채 침만 꿀꺽 삼킨다."
+							}
+						},
+						{
+							"speaker": "banjang",
+							"content": {
+								"korean": "으음… 글쎄요… 제가 뭘 알겠습니까… 반장이 불안한 듯 이마를 문지르며 시선을 피한다."
+							}
+						},
+						{
+							"speaker": "dax",
+							"content": {
+								"korean": "반장님, 왜 말씀을 못 하세요! 저희가 그렇게 무서워요?"
+							}
+						}
+					]
+				}
+			}
+		},
+		{
+			"text": {
+				"korean": "비서의 비밀을 캐묻기보다 반장의 이마를 문지르는 습관을 지적한다."
+			},
+			"path": "stat",
+			"mbti": "EN",
+			"require": {
+				"stat": "fighting",
+				"op": "<=",
+				"value": -40
+			},
+			"flag": "foreman_distraction",
+			"effects": {
+				"community": -10,
+				"fighting": -10,
+				"reason": -10
+			},
+			"reward": [
+				"stun"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "당신이 반장에게 이마를 문지르는 버릇에 대해 묻자, 반장이 당황한다."
+					}
+				},
+				{
+					"speaker": "banjang",
+					"content": {
+						"korean": "으음, 이건… 제가 긴장하면 나오는 버릇입니다. 혹시… 제가 뭐 잘못했습니까?"
+					}
+				},
+				{
+					"speaker": "dax",
+					"content": {
+						"korean": "헉, 갑자기 분위기가 싸늘해졌어요! 반장님, 너무 놀라지 마세요!"
+					}
+				}
+			]
+		}
+	],
+	"tags": [
+		"banjang",
+		"dax"
+	],
+	"_design": {
+		"slot": "B",
+		"kind": "rep",
+		"person": {
+			"id": "banjang",
+			"name": "반장",
+			"role": "부두 일꾼 반장"
+		},
+		"wants": "주먹부터 쓰는 당신에게 비서의 비밀을 캐내달라고 부탁한다.",
+		"rule_link": "닥달하는 대신 먼저 묻는 것에 대한 이야기. 반장은 주인공의 소문을 듣고 직접 찾아와 부탁한다.",
+		"rep": "fighting-",
+		"events": {},
+		"flags": {
+			"foreman_anger": {
+				"kind": "bad",
+				"boss_penalty": -1,
+				"label": {
+					"korean": "반장의 원한"
+				},
+				"boss_line": {
+					"korean": "반장이 당신을 향해 고함을 지르며 달려들어 잠시 시야를 가린다."
+				}
+			},
+			"foreman_trust": {
+				"kind": "good",
+				"boss_penalty": 1,
+				"label": {
+					"korean": "반장의 신뢰"
+				},
+				"boss_choice": {
+					"korean": "반장이 당신의 지시를 따르며 적의 움직임을 방해한다."
+				}
+			},
+			"foreman_distraction": {
+				"kind": "good",
+				"boss_penalty": 2,
+				"label": {
+					"korean": "반장의 불안"
+				},
+				"boss_choice": {
+					"korean": "반장이 갑작스러운 불안감에 이마를 문지르며 잠시 주춤한다."
+				}
+			}
+		}
+	}
+}

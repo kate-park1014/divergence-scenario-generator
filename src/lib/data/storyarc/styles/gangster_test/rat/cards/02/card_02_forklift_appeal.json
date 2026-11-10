@@ -1,0 +1,282 @@
+{
+	"id": "card_02_forklift_appeal",
+	"title": {
+		"korean": "지게차 아재의 호소"
+	},
+	"intensity": "calm",
+	"after_story": 1,
+	"before_story": 3,
+	"condition": {
+		"leaning": "community+",
+		"among": [
+			"fighting-",
+			"fighting+",
+			"community-",
+			"community+",
+			"reason-",
+			"reason+"
+		],
+		"min": 20
+	},
+	"urgency": 8,
+	"leaning": "community+",
+	"background_tags": [
+		"harbor",
+		"night",
+		"foggy",
+		"sparse",
+		"eerie"
+	],
+	"background_image": "https://imagedelivery.net/WTEqQNGFb-l-IHS6IGnzUQ/e4af4002-f4a2-402d-943d-ba2b16f88500/public",
+	"dialogue": [
+		{
+			"speaker": "forklift_uncle",
+			"content": {
+				"korean": "켁, 켁. 당신이 그 소문으로 듣던, 동네 사람 모두를 위해 나서는 해결사라죠? 켁, 켁."
+			}
+		},
+		{
+			"speaker": "forklift_uncle",
+			"content": {
+				"korean": "내가 잠깐 잠든 사이에 저 컨테이너들이 엉망진창이 돼버렸네! 이거 5시까지 못 치우면 큰일인데…"
+			}
+		},
+		{
+			"speaker": "dax",
+			"content": {
+				"korean": "아재가 우리 소문을 들었나 봐요. 곤란한 상황인 것 같은데요?"
+			}
+		},
+		{
+			"speaker": "forklift_uncle",
+			"content": {
+				"korean": "켁, 켁. 5시까지 못 치우면 벌금을 맞게 생겼어! 제발 좀 도와주게나!"
+			}
+		}
+	],
+	"choices": [
+		{
+			"text": {
+				"korean": "지게차 아재의 부탁을 흔쾌히 수락하고, 컨테이너 정리 작업을 돕는다."
+			},
+			"path": "easy",
+			"mbti": "ES",
+			"flag": "forklift_help",
+			"effects": {
+				"community": 20,
+				"echo": 10
+			},
+			"reward": [
+				"attack_up"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "당신이 돕겠다고 나서자, 아재는 켁켁거리며 지게차를 조작해 컨테이너 몇 개를 정리한다."
+					}
+				},
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "순식간에 정리가 끝났지만, 닥스는 야적장 안쪽을 의미심장하게 바라본다."
+					}
+				},
+				{
+					"speaker": "dax",
+					"content": {
+						"korean": "저 안쪽까지는 못 봤어요. 아쉽네요."
+					}
+				}
+			],
+			"risk": {
+				"chance": "mid",
+				"bad": {
+					"effects": {
+						"gold": -30
+					},
+					"reward": [
+						"hp_down"
+					],
+					"result": [
+						{
+							"speaker": "narrator",
+							"content": {
+								"korean": "당신이 아재를 도우려 하자, 아재는 켁켁거리며 지게차를 서투르게 조작해 컨테이너를 위험하게 흔든다."
+							}
+						},
+						{
+							"speaker": "narrator",
+							"content": {
+								"korean": "결국 컨테이너 몇 개가 쓰러지며, 당신의 발등을 찧을 뻔한다."
+							}
+						},
+						{
+							"speaker": "dax",
+							"content": {
+								"korean": "아이고, 발등 다칠 뻔했어요! 아재가 너무 서두르네요."
+							}
+						}
+					]
+				}
+			}
+		},
+		{
+			"text": {
+				"korean": "지게차 아재의 부탁을 거절하고, 급히 야적장으로 진입한다."
+			},
+			"path": "hard",
+			"mbti": "IN",
+			"flag": "forklift_ignore",
+			"effects": {
+				"echo": -5,
+				"community": -20
+			},
+			"reward": [
+				"defense_up"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "당신이 거절하고 야적장으로 들어가려 하자, 아재는 켁켁거리며 길을 막아선다."
+					}
+				},
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "아재는 삐진 표정으로 당신에게 등을 보이며, 못 들은 척 투덜거린다."
+					}
+				},
+				{
+					"speaker": "dax",
+					"content": {
+						"korean": "아재가 잔뜩 삐졌네요. 이러다간 더 늦겠어요."
+					}
+				}
+			],
+			"risk": {
+				"chance": "high",
+				"bad": {
+					"effects": {
+						"gold": -20
+					},
+					"reward": [],
+					"result": [
+						{
+							"speaker": "narrator",
+							"content": {
+								"korean": "당신이 아재의 부탁을 무시하고 야적장으로 향하자, 아재는 켁켁거리며 지게차로 길을 완전히 막아버린다."
+							}
+						},
+						{
+							"speaker": "narrator",
+							"content": {
+								"korean": "결국 당신은 꼼짝없이 아재가 길을 비켜줄 때까지 한참을 기다려야 한다."
+							}
+						},
+						{
+							"speaker": "dax",
+							"content": {
+								"korean": "아재가 정말 단단히 삐졌어요! 우리를 방해하고 있어요."
+							}
+						}
+					]
+				}
+			}
+		},
+		{
+			"text": {
+				"korean": "지게차 아재에게 벌금 대신 야적장 안쪽을 볼 시간을 달라고 제안한다."
+			},
+			"path": "stat",
+			"mbti": "FJ",
+			"require": {
+				"stat": "community",
+				"op": ">=",
+				"value": 40
+			},
+			"flag": "forklift_bargain",
+			"effects": {
+				"reason": 10,
+				"echo": 10,
+				"community": 20
+			},
+			"reward": [
+				"shield"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "당신이 공동체를 위한 해결책을 제시하자, 아재는 켁켁거리며 잠시 고민한다."
+					}
+				},
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "아재는 잠시 야적장 출입을 허락하며, 닥스에게 빨리 끝내라고 재촉한다."
+					}
+				},
+				{
+					"speaker": "dax",
+					"content": {
+						"korean": "아재가 우리의 제안을 받아들였어요! 역시 모두를 위한 해결책이네요!"
+					}
+				}
+			]
+		}
+	],
+	"tags": [
+		"forklift_uncle",
+		"dax"
+	],
+	"_design": {
+		"slot": "A",
+		"kind": "rep",
+		"person": {
+			"id": "forklift_uncle",
+			"name": "지게차 아재",
+			"role": "지게차 기사"
+		},
+		"wants": "야적장 물건 정리 도움을 요청함.",
+		"rule_link": "지게차 아재의 부탁을 끝까지 지켜보며 진의를 파악하기보다, 보이는 것만으로 판단하여 성급하게 나설 수 있다.",
+		"rep": "community+",
+		"events": {},
+		"flags": {
+			"forklift_help": {
+				"kind": "bad",
+				"boss_penalty": -1,
+				"label": {
+					"korean": "아재 돕기"
+				},
+				"boss_line": {
+					"korean": "지게차 아재가 당신에게 도움받았던 것을 생색내며, 당신의 발밑에 지게차 바퀴를 굴린다."
+				}
+			},
+			"forklift_ignore": {
+				"kind": "good",
+				"boss_penalty": 1,
+				"label": {
+					"korean": "아재 무시"
+				},
+				"boss_choice": {
+					"korean": "지게차 아재가 당신에게 도움받지 못했던 것에 불만을 품고, 당신이 지나갈 통로에 놓인 상자를 치워준다."
+				}
+			},
+			"forklift_bargain": {
+				"kind": "good",
+				"boss_penalty": 2,
+				"label": {
+					"korean": "아재와 협상"
+				},
+				"boss_choice": {
+					"korean": "지게차 아재가 당신과의 협상 내용을 기억하며, 크레인 조작을 잠시 늦춰 시간을 벌어준다."
+				}
+			}
+		}
+	}
+}

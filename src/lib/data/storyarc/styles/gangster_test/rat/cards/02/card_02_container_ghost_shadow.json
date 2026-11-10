@@ -1,0 +1,237 @@
+{
+	"id": "card_02_container_ghost_shadow",
+	"title": {
+		"korean": "컨테이너 귀신의 그림자"
+	},
+	"intensity": "calm",
+	"after_story": 1,
+	"before_story": 3,
+	"background_tags": [
+		"container_yard",
+		"dawn",
+		"foggy",
+		"lone_figure",
+		"tense"
+	],
+	"background_image": "https://imagedelivery.net/WTEqQNGFb-l-IHS6IGnzUQ/5731b2d0-7f10-45e2-5cb5-0678cd253d00/public",
+	"dialogue": [
+		{
+			"speaker": "narrator",
+			"content": {
+				"korean": "야간 크레인 기사가 당신에게 캔커피를 건넨다."
+			}
+		},
+		{
+			"speaker": "crane_operator",
+			"content": {
+				"korean": "새벽마다 불 켜지는 컨테이너가 있다니까요? 거기 '컨테이너 귀신'이 산다니까."
+			}
+		},
+		{
+			"speaker": "dax",
+			"content": {
+				"korean": "귀신이 컨테이너에 살아요? 으스스하네요."
+			}
+		},
+		{
+			"speaker": "crane_operator",
+			"content": {
+				"korean": "안 믿는 눈치네? 같이 가서 잡아 주면 내가 아끼는 망원경 빌려줄게!"
+			}
+		}
+	],
+	"choices": [
+		{
+			"text": {
+				"korean": "기사의 말대로 컨테이너 안의 쥐가 사라진 기금을 훔쳤다고 동조한다"
+			},
+			"path": "easy",
+			"mbti": "SP",
+			"effects": {
+				"community": 10,
+				"gold": 100
+			},
+			"seed": "container_ghost_shadow_easy",
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "당신의 말에 야간 크레인 기사가 신이 나서 어깨를 으쓱거린다."
+					}
+				},
+				{
+					"speaker": "crane_operator",
+					"content": {
+						"korean": "그래! 역시 다들 그렇게 생각할 줄 알았어! 망원경 여기!"
+					}
+				},
+				{
+					"speaker": "dax",
+					"content": {
+						"korean": "망원경은 좋네요. 너무 쉽게 믿는 거 아니에요?"
+					}
+				}
+			],
+			"risk": {
+				"chance": "mid",
+				"bad": {
+					"effects": {
+						"gold": -30
+					},
+					"reward": [],
+					"result": [
+						{
+							"speaker": "narrator",
+							"content": {
+								"korean": "당신이 동조하자 야간 크레인 기사가 신이 나서 망원경을 높이 던진다."
+							}
+						},
+						{
+							"speaker": "narrator",
+							"content": {
+								"korean": "망원경이 바닥에 떨어지며 '쨍그랑' 소리와 함께 렌즈가 산산조각 난다."
+							}
+						},
+						{
+							"speaker": "dax",
+							"content": {
+								"korean": "어쩌죠? 기사님은 신나 보이는데 망원경은 망가졌어요!"
+							}
+						}
+					]
+				}
+			}
+		},
+		{
+			"text": {
+				"korean": "기사가 직접 본 것에 대해서만 묻고, 섣부른 추측은 하지 않는다"
+			},
+			"path": "hard",
+			"mbti": "IT",
+			"effects": {
+				"reason": 10,
+				"echo": -5
+			},
+			"reward": [
+				"defense_up"
+			],
+			"seed": "container_ghost_shadow_hard",
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "당신의 질문에 야간 크레인 기사가 삐친 듯 입술을 삐죽거린다."
+					}
+				},
+				{
+					"speaker": "crane_operator",
+					"content": {
+						"korean": "뭐, 뭐? 그럼 직접 본 게 뭔지 말해줄게. 항상 새벽 3시에 불이 켜지더라고."
+					}
+				},
+				{
+					"speaker": "dax",
+					"content": {
+						"korean": "그래도 정확한 정보를 얻었네요."
+					}
+				}
+			],
+			"risk": {
+				"chance": "high",
+				"bad": {
+					"effects": {
+						"gold": -20
+					},
+					"reward": [],
+					"result": [
+						{
+							"speaker": "narrator",
+							"content": {
+								"korean": "당신이 추측을 막아서자 야간 크레인 기사가 삐친 듯 입술을 삐죽거린다."
+							}
+						},
+						{
+							"speaker": "crane_operator",
+							"content": {
+								"korean": "흥! 그럼 직접 본 것만 말해줄게. 항상 새벽 3시에 불이 켜지더라고."
+							}
+						},
+						{
+							"speaker": "narrator",
+							"content": {
+								"korean": "기사는 당신의 옆구리를 계속 쿡쿡 찌르며 불평한다."
+							}
+						},
+						{
+							"speaker": "dax",
+							"content": {
+								"korean": "정확한 정보를 얻었지만, 기사님이 삐져서 계속 신경 쓰이네요."
+							}
+						}
+					]
+				}
+			}
+		},
+		{
+			"text": {
+				"korean": "{actor}이(가) 기사와 함께 컨테이너 귀신을 잡는 상상의 작전을 짜며 신나게 떠든다"
+			},
+			"path": "lock",
+			"mbti": "EN",
+			"require": {
+				"mbti": "EN"
+			},
+			"effects": {
+				"echo": 10,
+				"fighting": -10
+			},
+			"reward": [
+				"intelligence_up"
+			],
+			"seed": "container_ghost_shadow_hard",
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "{actor}이(가) 야간 크레인 기사와 함께 컨테이너 귀신을 잡는 기상천외한 작전을 세운다."
+					}
+				},
+				{
+					"speaker": "crane_operator",
+					"content": {
+						"korean": "이야! {actor} 말대로 하면 귀신도 홀딱 넘어오겠네!"
+					}
+				},
+				{
+					"speaker": "crane_operator",
+					"content": {
+						"korean": "내가 새벽 3시에 불 켜지는 컨테이너를 알려줄게!"
+					}
+				},
+				{
+					"speaker": "dax",
+					"content": {
+						"korean": "왠지 기사님도 {actor} 덕분에 신나 보이네요."
+					}
+				}
+			]
+		}
+	],
+	"tags": [
+		"crane_operator",
+		"dax"
+	],
+	"_design": {
+		"slot": "A",
+		"kind": "plant",
+		"person": {
+			"id": "crane_operator",
+			"role": "컨테이너 야적장 야간 크레인 기사",
+			"name": "야간 크레인 기사"
+		},
+		"wants": "새벽마다 나타나는 '컨테이너 귀신'의 정체를 밝히고, 망원경을 자랑하고 싶어 함.",
+		"rule_link": "야간 크레인 기사의 말만 듣고 '귀신'을 판단하는 것과, 직접 본 사실만으로 판단하는 것은 다르다.",
+		"events": {},
+		"flags": {}
+	}
+}

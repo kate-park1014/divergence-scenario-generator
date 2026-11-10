@@ -1,0 +1,579 @@
+{
+	"cards": [
+		{
+			"person": {
+				"id": "crane_operator",
+				"role": "컨테이너 야적장 야간 크레인 기사",
+				"name": "야간 크레인 기사"
+			},
+			"no": 1,
+			"rule_link": "야간 크레인 기사의 말만 듣고 '귀신'을 판단하는 것과, 직접 본 사실만으로 판단하는 것은 다르다.",
+			"key": "container_ghost_shadow",
+			"dialogue": [
+				{
+					"text": "야간 크레인 기사가 당신에게 캔커피를 건넨다.",
+					"speaker": "narrator"
+				},
+				{
+					"speaker": "crane_operator",
+					"text": "새벽마다 불 켜지는 컨테이너가 있다니까요? 거기 '컨테이너 귀신'이 산다니까."
+				},
+				{
+					"text": "귀신이 컨테이너에 살아요? 으스스하네요.",
+					"speaker": "dax"
+				},
+				{
+					"text": "안 믿는 눈치네? 같이 가서 잡아 주면 내가 아끼는 망원경 빌려줄게!",
+					"speaker": "crane_operator"
+				}
+			],
+			"choices": [
+				{
+					"effects": {
+						"community": 10,
+						"gold": 100
+					},
+					"path": "easy",
+					"result": [
+						{
+							"speaker": "narrator",
+							"text": "당신의 말에 야간 크레인 기사가 신이 나서 어깨를 으쓱거린다."
+						},
+						{
+							"text": "그래! 역시 다들 그렇게 생각할 줄 알았어! 망원경 여기!",
+							"speaker": "crane_operator"
+						},
+						{
+							"text": "망원경은 좋네요. 너무 쉽게 믿는 거 아니에요?",
+							"speaker": "dax"
+						}
+					],
+					"risk_bad": {
+						"result": [
+							{
+								"text": "당신이 동조하자 야간 크레인 기사가 신이 나서 망원경을 높이 던진다.",
+								"speaker": "narrator"
+							},
+							{
+								"speaker": "narrator",
+								"text": "망원경이 바닥에 떨어지며 '쨍그랑' 소리와 함께 렌즈가 산산조각 난다."
+							},
+							{
+								"speaker": "dax",
+								"text": "어쩌죠? 기사님은 신나 보이는데 망원경은 망가졌어요!"
+							}
+						],
+						"reward": [],
+						"gold": -30
+					},
+					"mbti": "SP",
+					"text": "기사의 말대로 컨테이너 안의 쥐가 사라진 기금을 훔쳤다고 동조한다"
+				},
+				{
+					"risk_bad": {
+						"reward": [],
+						"result": [
+							{
+								"speaker": "narrator",
+								"text": "당신이 추측을 막아서자 야간 크레인 기사가 삐친 듯 입술을 삐죽거린다."
+							},
+							{
+								"speaker": "crane_operator",
+								"text": "흥! 그럼 직접 본 것만 말해줄게. 항상 새벽 3시에 불이 켜지더라고."
+							},
+							{
+								"text": "기사는 당신의 옆구리를 계속 쿡쿡 찌르며 불평한다.",
+								"speaker": "narrator"
+							},
+							{
+								"speaker": "dax",
+								"text": "정확한 정보를 얻었지만, 기사님이 삐져서 계속 신경 쓰이네요."
+							}
+						],
+						"gold": -20
+					},
+					"result": [
+						{
+							"text": "당신의 질문에 야간 크레인 기사가 삐친 듯 입술을 삐죽거린다.",
+							"speaker": "narrator"
+						},
+						{
+							"text": "뭐, 뭐? 그럼 직접 본 게 뭔지 말해줄게. 항상 새벽 3시에 불이 켜지더라고.",
+							"speaker": "crane_operator"
+						},
+						{
+							"speaker": "dax",
+							"text": "그래도 정확한 정보를 얻었네요."
+						}
+					],
+					"effects": {
+						"reason": 10,
+						"echo": -5
+					},
+					"path": "hard",
+					"text": "기사가 직접 본 것에 대해서만 묻고, 섣부른 추측은 하지 않는다",
+					"mbti": "IT",
+					"reward": [
+						"defense_up"
+					]
+				},
+				{
+					"require_mbti": "EN",
+					"effects": {
+						"echo": 10,
+						"fighting": -10
+					},
+					"mbti": "EN",
+					"text": "{actor}이(가) 기사와 함께 컨테이너 귀신을 잡는 상상의 작전을 짜며 신나게 떠든다",
+					"result": [
+						{
+							"speaker": "narrator",
+							"text": "{actor}이(가) 야간 크레인 기사와 함께 컨테이너 귀신을 잡는 기상천외한 작전을 세운다."
+						},
+						{
+							"text": "이야! {actor} 말대로 하면 귀신도 홀딱 넘어오겠네!",
+							"speaker": "crane_operator"
+						},
+						{
+							"speaker": "crane_operator",
+							"text": "내가 새벽 3시에 불 켜지는 컨테이너를 알려줄게!"
+						},
+						{
+							"text": "왠지 기사님도 {actor} 덕분에 신나 보이네요.",
+							"speaker": "dax"
+						}
+					],
+					"path": "lock",
+					"reward": [
+						"intelligence_up"
+					]
+				}
+			],
+			"title": "컨테이너 귀신의 그림자",
+			"wants": "새벽마다 나타나는 '컨테이너 귀신'의 정체를 밝히고, 망원경을 자랑하고 싶어 함.",
+			"background_tags": [
+				"container_yard",
+				"dawn",
+				"foggy",
+				"lone_figure",
+				"tense"
+			],
+			"slot": "A",
+			"kind": "plant"
+		},
+		{
+			"background_tags": [
+				"container_yard",
+				"day",
+				"cloudy",
+				"workers",
+				"suspicious"
+			],
+			"key": "yard_worker_gaze",
+			"person": {
+				"role": "컨테이너 야적장 일꾼",
+				"id": "yard_worker_a",
+				"name": "야적장 일꾼"
+			},
+			"no": 2,
+			"rule_link": "일꾼의 흘끔거리는 시선만으로 그 의도를 판단하는 것과, 대화를 통해 진실을 아는 것은 다르다.",
+			"dialogue": [
+				{
+					"speaker": "narrator",
+					"text": "컨테이너 사이를 지나가던 야적장 일꾼이 당신을 흘끔거리며 지나친다."
+				},
+				{
+					"text": "저 사람, 아까부터 우리를 계속 쳐다보네요.",
+					"speaker": "dax"
+				},
+				{
+					"speaker": "yard_worker_a",
+					"text": "지난번 그 소동이… 당신들 짓이오?"
+				},
+				{
+					"speaker": "dax",
+					"text": "어쩌죠? 벌써 소문이 퍼졌나 봐요."
+				}
+			],
+			"choices": [
+				{
+					"text": "일꾼의 시선을 애써 무시하고, 빠른 걸음으로 컨테이너 사이를 지나간다",
+					"result": [
+						{
+							"text": "당신이 자리를 피하자 야적장 일꾼은 더 의심스러운 눈빛으로 당신을 쳐다본다.",
+							"speaker": "narrator"
+						},
+						{
+							"speaker": "dax",
+							"text": "다행히 더 말을 걸진 않네요. 하지만 왠지 찝찝해요."
+						}
+					],
+					"effects": {
+						"gold": 50,
+						"reason": -10
+					},
+					"mbti": "SP",
+					"risk_bad": {
+						"result": [
+							{
+								"text": "당신이 빠른 걸음으로 자리를 피하려 하자, 야적장 일꾼이 당신의 앞을 가로막는다.",
+								"speaker": "narrator"
+							},
+							{
+								"speaker": "yard_worker_a",
+								"text": "야! 거기 멈춰! 뭐가 그리 당당하다고 그냥 가!"
+							},
+							{
+								"speaker": "dax",
+								"text": "저 사람 왜 이렇게 끈질겨요? 그냥 가자고요!"
+							}
+						],
+						"reward": [
+							"hp_down"
+						]
+					},
+					"path": "easy"
+				},
+				{
+					"path": "hard",
+					"result": [
+						{
+							"speaker": "narrator",
+							"text": "당신의 질문에 일꾼은 잠시 망설이더니 작은 목소리로 답한다."
+						},
+						{
+							"text": "금고가 비었다는 소문이 파다해요. 근데 금고 담당 간부만 아는 비밀통로가 있다는 소문도 돌아요.",
+							"speaker": "yard_worker_a"
+						},
+						{
+							"speaker": "dax",
+							"text": "비밀통로요? 중요한 정보네요!"
+						}
+					],
+					"text": "일꾼에게 다가가 지난번 소동에 대해 아는 것이 있는지 정중하게 묻는다",
+					"effects": {
+						"community": 10,
+						"echo": 5
+					},
+					"mbti": "SF",
+					"risk_bad": {
+						"gold": -20,
+						"reward": [],
+						"result": [
+							{
+								"speaker": "narrator",
+								"text": "당신의 질문에 일꾼이 당황한 듯 주위를 두리번거리더니, 그만 큰 소리로 외치고 만다."
+							},
+							{
+								"speaker": "yard_worker_a",
+								"text": "금고가 비었다는 소문이 파다해요! 금고 담당 간부만 아는 비밀통로도 있다던데!"
+							},
+							{
+								"speaker": "narrator",
+								"text": "주변의 다른 일꾼들이 일제히 당신 쪽을 흘끔거린다."
+							},
+							{
+								"text": "저희 다 들켰어요! 어떡해요, 도망쳐야 하나요?",
+								"speaker": "dax"
+							}
+						]
+					},
+					"reward": [
+						"defense_up"
+					]
+				},
+				{
+					"event": "meet_stranger",
+					"result": [
+						{
+							"speaker": "narrator",
+							"text": "일꾼은 당신이 건넨 돈을 보더니 눈치를 살피며 주위를 둘러본다."
+						},
+						{
+							"text": "알겠습니다. 저는 아무것도 못 봤습니다.",
+							"speaker": "yard_worker_a"
+						},
+						{
+							"text": "돈으로 해결하긴 했지만, 왠지 찜찜하네요.",
+							"speaker": "dax"
+						}
+					],
+					"path": "gold",
+					"text": "일꾼에게 입막음용으로 돈을 쥐여주며, 이 일에 대해 함구해달라고 부탁한다",
+					"event_options": {
+						"fight": {
+							"lose": [
+								{
+									"speaker": "narrator",
+									"text": "{actor}이(가) 낯선 사내에게 한 방 맞고 휘청이자, 일꾼이 황급히 달아난다."
+								}
+							],
+							"win": [
+								{
+									"text": "{actor}이(가) 낯선 사내를 간단히 제압하자, 일꾼이 황급히 달아난다.",
+									"speaker": "narrator"
+								}
+							],
+							"text": "낯선 사내의 시비에 {actor}이(가) 맞선다"
+						},
+						"avoid": {
+							"result": [
+								{
+									"speaker": "narrator",
+									"text": "당신이 낯선 사내를 피해 도망치자, 일꾼도 덩달아 도망친다."
+								}
+							],
+							"text": "낯선 사내와의 싸움을 피하고, 일꾼과 함께 자리를 피한다"
+						}
+					},
+					"event_reason": "일꾼에게 준 돈을 낯선 사내가 자신의 것이라고 주장하며 시비를 걸었기 때문.",
+					"effects": {
+						"gold": -100,
+						"echo": -10
+					},
+					"event_intro": [
+						{
+							"text": "돈을 받은 일꾼이 고개를 숙이며 자리를 피하려던 순간, 덩치 큰 사내가 나타나 길을 막아선다.",
+							"speaker": "narrator"
+						},
+						{
+							"speaker": "narrator",
+							"text": "“야, 거기 서! 내 돈을 왜 네가 받어!” 낯선 사내가 당신을 보며 주먹을 꽉 쥔다."
+						}
+					],
+					"mbti": "NT",
+					"avoid_penalty": "defense_down"
+				}
+			],
+			"title": "야적장의 시선",
+			"wants": "지난번 소동의 진실을 알고 싶어 하거나, 히어로들에게서 정보를 얻고 싶어 함.",
+			"slot": "A",
+			"kind": "normal"
+		},
+		{
+			"key": "lunch_break_gamble",
+			"rule_link": "점심시간 일꾼의 단순한 내기를 무심코 판단하는 것과, 그 뒤에 숨겨진 의도를 아는 것은 다르다.",
+			"dialogue": [
+				{
+					"text": "점심시간, 한 무리의 일꾼들이 모여 앉아 동전 던지기 내기를 하고 있다.",
+					"speaker": "narrator"
+				},
+				{
+					"speaker": "dax",
+					"text": "저기서도 소문이 돌고 있나 봐요. 다들 우리를 힐끗힐끗 봐요."
+				},
+				{
+					"text": "어이, 형씨! 심심한데 우리랑 한판 할래?",
+					"speaker": "yard_worker_b"
+				},
+				{
+					"text": "내기 같은 건 위험하지 않을까요?",
+					"speaker": "dax"
+				}
+			],
+			"choices": [
+				{
+					"result": [
+						{
+							"text": "당신의 운이 좋았는지, 동전이 당신이 고른 면으로 떨어진다.",
+							"speaker": "narrator"
+						},
+						{
+							"text": "으악! 형씨, 운이 좋네! 여기, 약속한 돈이다!",
+							"speaker": "yard_worker_b"
+						},
+						{
+							"text": "어머, 횡재했네요!",
+							"speaker": "dax"
+						}
+					],
+					"text": "일꾼의 내기 제안을 받아들이고, 가볍게 동전 던지기 내기에 참여한다",
+					"mbti": "ES",
+					"risk_bad": {
+						"result": [
+							{
+								"speaker": "narrator",
+								"text": "당신의 운이 나빴는지, 동전이 당신이 고른 반대 면으로 떨어진다."
+							},
+							{
+								"speaker": "yard_worker_b",
+								"text": "아쉽네! 다음 기회에!"
+							},
+							{
+								"speaker": "dax",
+								"text": "흑, 아깝네요."
+							}
+						],
+						"reward": [],
+						"gold": -40
+					},
+					"effects": {
+						"gold": 80,
+						"fighting": -10
+					},
+					"path": "easy"
+				},
+				{
+					"effects": {
+						"reason": 10,
+						"echo": -5
+					},
+					"mbti": "IN",
+					"text": "내기는 거절하고, 대신 지난번 소동에 대해 아는 것이 있는지 캐묻는다",
+					"risk_bad": {
+						"reward": [],
+						"result": [
+							{
+								"speaker": "narrator",
+								"text": "당신이 내기를 거절하자 일꾼은 실망한 듯 고개를 저으며 당신에게 꿍얼거린다."
+							},
+							{
+								"speaker": "yard_worker_b",
+								"text": "쳇, 치사하게 내기는 안 하고! 그 금고 사라진 거, 금고 담당 간부 짓이라는 소문이 파다해!"
+							},
+							{
+								"text": "밤마다 수상한 상자를 옮기는 걸 봤다는 사람도 있다고!",
+								"speaker": "yard_worker_b"
+							},
+							{
+								"speaker": "dax",
+								"text": "중요한 정보지만, 일꾼이 계속 우리를 향해 '치사하다'고 중얼거려요!"
+							}
+						],
+						"gold": -20
+					},
+					"path": "hard",
+					"result": [
+						{
+							"speaker": "narrator",
+							"text": "일꾼은 내기를 거절하자 실망한 듯 고개를 젓더니, 당신의 질문에 무심하게 답한다."
+						},
+						{
+							"text": "아, 그 금고 사라진 거? 그거 금고 담당 간부 짓이라는 소문이 파다하잖아.",
+							"speaker": "yard_worker_b"
+						},
+						{
+							"speaker": "yard_worker_b",
+							"text": "밤마다 수상한 상자를 옮기는 걸 봤다는 사람도 있어."
+						},
+						{
+							"text": "수상한 상자요? 더 자세히 물어봐야겠어요!",
+							"speaker": "dax"
+						}
+					],
+					"reward": [
+						"defense_up"
+					]
+				},
+				{
+					"event_reason": "당신의 엉뚱한 행동으로 인해 일꾼들이 놀라 돈을 걸고 내기를 제안했기 때문.",
+					"text": "일꾼이 던진 동전을 공중에서 가로채며, 사라진 기금에 대해 큰 소리로 외친다",
+					"mbti": "EP",
+					"path": "fun",
+					"event": "minigame_slot",
+					"effects": {
+						"fighting": 20,
+						"reason": -10
+					},
+					"event_intro": [
+						{
+							"speaker": "narrator",
+							"text": "당신의 돌발 행동에 놀란 일꾼들이 \"내 돈 내놔!\" 하며 당신에게 달려든다."
+						},
+						{
+							"text": "그들은 당신에게 돈을 걸고 슬롯머신 내기를 하자고 제안한다.",
+							"speaker": "narrator"
+						}
+					],
+					"result": [
+						{
+							"text": "당신의 엉뚱한 행동에 일꾼들이 모두 놀라 내기를 멈추고 당신을 쳐다본다.",
+							"speaker": "narrator"
+						},
+						{
+							"text": "으악! 뭐, 뭐 하는 거야 형씨!",
+							"speaker": "yard_worker_b"
+						},
+						{
+							"speaker": "dax",
+							"text": "어, 어쩌죠? 모두 우리를 쳐다봐요!"
+						}
+					],
+					"risk_bad": {
+						"gold": -50,
+						"result": [
+							{
+								"speaker": "narrator",
+								"text": "당신이 던진 동전을 잡으려다 그만 손에서 미끄러져 공중으로 솟구친다."
+							},
+							{
+								"speaker": "narrator",
+								"text": "동전이 멀리 날아가 다른 일꾼의 점심 도시락에 떨어져 내용물을 엉망으로 만든다."
+							},
+							{
+								"text": "으악! 내 도시락! 형씨, 물어내!",
+								"speaker": "yard_worker_b"
+							},
+							{
+								"speaker": "dax",
+								"text": "어쩌죠? 일꾼들이 화가 나서 우리에게 돈을 요구해요!"
+							}
+						],
+						"reward": []
+					}
+				}
+			],
+			"person": {
+				"id": "yard_worker_b",
+				"name": "점심시간 일꾼",
+				"role": "컨테이너 야적장 일꾼"
+			},
+			"forced": [
+				{
+					"reward": [
+						"defense_up"
+					],
+					"text": "{actor}이(가) 내기에 집중하지 못하고, 야적장 주변의 위험 요소를 분석하며 일꾼들을 주의시킨다",
+					"mbti": "TJ",
+					"require_mbti": "TJ",
+					"result": [
+						{
+							"speaker": "narrator",
+							"text": "{actor}이(가) 내기에는 관심 없고,"
+						},
+						{
+							"speaker": "narrator",
+							"text": "주변 컨테이너의 불안정한 적재 상태를 지적하며 일꾼들에게 주의를 준다."
+						},
+						{
+							"text": "아, 좀! 재수 없게 무슨 소리야!",
+							"speaker": "yard_worker_b"
+						},
+						{
+							"text": "덕분에 일꾼들이 주변을 다시 살피기 시작했어요.",
+							"speaker": "dax"
+						}
+					],
+					"effects": {
+						"reason": 10,
+						"community": 10
+					}
+				}
+			],
+			"no": 3,
+			"background_tags": [
+				"container_yard",
+				"noon",
+				"bright",
+				"workers",
+				"lively"
+			],
+			"title": "점심시간의 도박",
+			"wants": "점심시간에 간단한 내기로 용돈을 벌고 싶어 함.",
+			"slot": "A",
+			"kind": "normal"
+		}
+	],
+	"errors": [],
+	"prompt_hash": "6ae62afefb13bc25dd8dde9c216a2e1638258fd4"
+}

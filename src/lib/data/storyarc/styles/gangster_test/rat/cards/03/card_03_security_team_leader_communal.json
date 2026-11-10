@@ -1,0 +1,355 @@
+{
+	"id": "card_03_security_team_leader_communal",
+	"title": {
+		"korean": "모두를 위한 규정"
+	},
+	"intensity": "calm",
+	"after_story": 3,
+	"before_story": 5,
+	"condition": {
+		"leaning": "community+",
+		"among": [
+			"fighting-",
+			"fighting+",
+			"community-",
+			"community+",
+			"reason-",
+			"reason+"
+		],
+		"min": 20
+	},
+	"urgency": 8,
+	"leaning": "community+",
+	"background_tags": [
+		"corridor",
+		"night",
+		"dimlight",
+		"empty",
+		"anxious"
+	],
+	"background_image": "https://imagedelivery.net/WTEqQNGFb-l-IHS6IGnzUQ/0432427d-875c-452f-b437-530f8a2f1100/public",
+	"dialogue": [
+		{
+			"speaker": "security_team_leader",
+			"content": {
+				"korean": "당신이 그… 동네 모두를 위해 발 벗고 나선다는 해결사 양반들이오?"
+			}
+		},
+		{
+			"speaker": "security_team_leader",
+			"content": {
+				"korean": "소문대로라면 이 규정을 존중해 줄 것 같아서 말이지."
+			}
+		},
+		{
+			"speaker": "dax",
+			"content": {
+				"korean": "팀장님, 지금 저 안에선 중요한 정보가 사라지고 있을지도 몰라요!"
+			}
+		},
+		{
+			"speaker": "security_team_leader",
+			"content": {
+				"korean": "하지만… 이 복도 끝엔 서버실 말고도 노인분들 건강 기록 서버도 있소."
+			}
+		},
+		{
+			"speaker": "security_team_leader",
+			"content": {
+				"korean": "규정상 출입이 엄격히 통제되어야 모두의 정보가 안전하지 않겠소?"
+			}
+		},
+		{
+			"speaker": "narrator",
+			"content": {
+				"korean": "경비 팀장의 얼굴에 진심으로 걱정하는 기색이 역력하다."
+			}
+		}
+	],
+	"choices": [
+		{
+			"text": {
+				"korean": "경비 팀장의 우려를 공감하며, 규정대로 행동하겠다고 안심시킨다."
+			},
+			"path": "easy",
+			"mbti": "FJ",
+			"flag": "reassure_security",
+			"effects": {
+				"echo": 5,
+				"community": 20
+			},
+			"reward": [
+				"attack_up"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "당신의 말에 경비 팀장이 안도하며 길을 비켜준다."
+					}
+				},
+				{
+					"speaker": "security_team_leader",
+					"content": {
+						"korean": "역시 소문대로군요! 당신이라면 믿을 수 있소. 조심해서 들어가시오."
+					}
+				},
+				{
+					"speaker": "dax",
+					"content": {
+						"korean": "팀장님, 갑자기 왜 이렇게 순해지셨어요? 뭔가 있는 것 같긴 한데…."
+					}
+				}
+			],
+			"risk": {
+				"chance": "mid",
+				"bad": {
+					"effects": {
+						"gold": -30
+					},
+					"reward": [],
+					"result": [
+						{
+							"speaker": "narrator",
+							"content": {
+								"korean": "당신의 안심에도 경비 팀장이 불안한 표정으로 땀을 닦는다."
+							}
+						},
+						{
+							"speaker": "security_team_leader",
+							"content": {
+								"korean": "흐음… 그래도 규정은 규정이지! 혹시 모르니 제가 감시해야겠소!"
+							}
+						},
+						{
+							"speaker": "dax",
+							"content": {
+								"korean": "아니, 안심했다면서 왜 더 경계하는 거죠? 이 팀장님은 알다가도 모르겠네!"
+							}
+						}
+					]
+				}
+			}
+		},
+		{
+			"text": {
+				"korean": "규정보다 더 중요한 모두의 돈이 걸렸음을 강조하며 길을 비키라고 요구한다."
+			},
+			"path": "hard",
+			"mbti": "ET",
+			"flag": "demand_path",
+			"effects": {
+				"fighting": 20,
+				"echo": -5
+			},
+			"reward": [
+				"defense_up"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "당신의 단호한 태도에 경비 팀장이 잠시 망설이더니, 어쩔 수 없다는 듯 길을 비킨다."
+					}
+				},
+				{
+					"speaker": "security_team_leader",
+					"content": {
+						"korean": "…모두의 돈이라면… 알겠습니다. 책임은 당신이 지시오!"
+					}
+				},
+				{
+					"speaker": "dax",
+					"content": {
+						"korean": "팀장님이 결국 물러섰네요! 역시 당신은 달라요!"
+					}
+				}
+			],
+			"risk": {
+				"chance": "high",
+				"bad": {
+					"effects": {
+						"gold": -20
+					},
+					"reward": [],
+					"result": [
+						{
+							"speaker": "narrator",
+							"content": {
+								"korean": "당신의 요구에 경비 팀장이 갑자기 규정집을 꺼내 복도에서 읽기 시작한다."
+							}
+						},
+						{
+							"speaker": "security_team_leader",
+							"content": {
+								"korean": "규정 제 12조 3항! '경비원은 중요한 문서를 항상 휴대하고 숙지한다'…."
+							}
+						},
+						{
+							"speaker": "dax",
+							"content": {
+								"korean": "팀장님, 지금 규정집을 읽을 때가 아니잖아요! 저러다 밤새도록 읽겠어요!"
+							}
+						}
+					]
+				}
+			}
+		},
+		{
+			"text": {
+				"korean": "노인분들 건강 기록 서버의 안전을 함께 확인하며 경비 팀장을 설득한다."
+			},
+			"path": "stat",
+			"mbti": "IF",
+			"require": {
+				"stat": "community",
+				"op": ">=",
+				"value": 40
+			},
+			"flag": "check_health_server",
+			"effects": {
+				"community": 10,
+				"reason": 20
+			},
+			"reward": [
+				"shield"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "당신의 진심 어린 모습에 경비 팀장이 감동하며, 서버실 복도의 다른 문을 열어준다."
+					}
+				},
+				{
+					"speaker": "security_team_leader",
+					"content": {
+						"korean": "당신이라면 믿을 수 있소! 이쪽으로 가면 잠시 안심할 수 있을 거요!"
+					}
+				},
+				{
+					"speaker": "dax",
+					"content": {
+						"korean": "와, 팀장님이 비상 통로를 열어줬어요! 역시 모두를 생각하는 마음은 통하는군요!"
+					}
+				}
+			]
+		},
+		{
+			"text": {
+				"korean": "경비 팀장에게 노인분들 건강 기록 서버가 위험하다며 엄살을 부려 그를 혼란스럽게 한다."
+			},
+			"path": "fun",
+			"mbti": "EP",
+			"effects": {
+				"echo": 10,
+				"reason": -20
+			},
+			"reward": [
+				"cooldown_reset"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "당신의 과장된 걱정에 경비 팀장이 혼란스러워하며 어쩔 줄 몰라한다."
+					}
+				},
+				{
+					"speaker": "security_team_leader",
+					"content": {
+						"korean": "뭐, 뭐라고요? 건강 기록이 위험하다고? 규정 위반! 큰일 났군!"
+					}
+				},
+				{
+					"speaker": "dax",
+					"content": {
+						"korean": "팀장님, 얼굴이 파랗게 질렸어요! 규정 찾는 건 잊으셨나 봐요?"
+					}
+				}
+			],
+			"risk": {
+				"chance": "low",
+				"bad": {
+					"effects": {
+						"gold": -100
+					},
+					"reward": [],
+					"result": [
+						{
+							"speaker": "narrator",
+							"content": {
+								"korean": "당신의 엄살에 경비 팀장이 갑자기 심각한 표정으로 무전기를 꺼내든다."
+							}
+						},
+						{
+							"speaker": "security_team_leader",
+							"content": {
+								"korean": "본부! 본부! 노인분들 건강 기록 서버에 비상 상황 발생! 즉시 지원 바란다!"
+							}
+						},
+						{
+							"speaker": "dax",
+							"content": {
+								"korean": "어? 팀장님, 진짜로 지원 요청했어요! 괜히 일을 키웠네요…!"
+							}
+						}
+					]
+				}
+			}
+		}
+	],
+	"tags": [
+		"security_team_leader",
+		"dax"
+	],
+	"_design": {
+		"slot": "B",
+		"kind": "rep",
+		"person": {
+			"id": "security_team_leader",
+			"name": "경비 팀장",
+			"role": "서버실 경비 팀장"
+		},
+		"wants": "경비 팀장이 서버실 복도 출입을 막아서며, 당신의 공동체적인 평판을 이용해 중요한 규정을 지켜달라고 호소한다.",
+		"rule_link": "눈앞의 '출입 금지' 규정이 정말 모두를 위한 것인지, 아니면 다른 의도가 숨겨져 있는지 따져 볼지, 보이는 대로 규정을 우선시할지 결정한다.",
+		"rep": "community+",
+		"events": {},
+		"flags": {
+			"reassure_security": {
+				"kind": "bad",
+				"boss_penalty": -1,
+				"label": {
+					"korean": "경비 팀장 안심"
+				},
+				"boss_line": {
+					"korean": "경비 팀장이 당신의 진심에 감동하지만, 규정을 어긴 자에 대한 경계를 강화하여 서버실 문이 열리는 데 시간이 지체된다."
+				}
+			},
+			"demand_path": {
+				"kind": "good",
+				"boss_penalty": 1,
+				"label": {
+					"korean": "길 비키라 요구"
+				},
+				"boss_choice": {
+					"korean": "경비 팀장이 당신의 결단에 존경심을 표하며, 서버실 문이 열리는 데 필요한 시간을 벌어준다."
+				}
+			},
+			"check_health_server": {
+				"kind": "good",
+				"boss_penalty": 2,
+				"label": {
+					"korean": "건강 기록 확인"
+				},
+				"boss_choice": {
+					"korean": "경비 팀장이 당신의 공동체적 정신에 감복하여, 서버실 문이 열리는 데 필요한 결정적인 단서를 제공한다."
+				}
+			}
+		}
+	}
+}

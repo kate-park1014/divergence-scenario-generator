@@ -1,0 +1,275 @@
+{
+	"id": "card_01_delivery_driver_rush",
+	"title": {
+		"korean": "급한 배달원의 재촉"
+	},
+	"intensity": "calm",
+	"after_story": 3,
+	"before_story": 5,
+	"background_tags": [
+		"night",
+		"alley",
+		"motorcycle",
+		"rush",
+		"tension"
+	],
+	"background_image": "https://imagedelivery.net/WTEqQNGFb-l-IHS6IGnzUQ/f53af312-b217-44a3-8e5a-3d2e9392a000/public",
+	"dialogue": [
+		{
+			"speaker": "narrator",
+			"content": {
+				"korean": "닥스의 차가 좁은 부두 골목으로 들어서자, 맞은편에서 오토바이 한 대가 나타났다."
+			}
+		},
+		{
+			"speaker": "dax",
+			"content": {
+				"korean": "저기, 골목이 너무 좁아서 차가 비켜줘야 할 것 같은데요..."
+			}
+		},
+		{
+			"speaker": "driver",
+			"content": {
+				"korean": "어이! 빨리 비켜줘요! 나 지금 엄청 중요한 배달 중이라고! 시간 없어요!"
+			}
+		},
+		{
+			"speaker": "narrator",
+			"content": {
+				"korean": "배달원은 헬멧 속에서 짜증 섞인 목소리로 당신을 재촉하며 연신 손목시계를 가리킨다."
+			}
+		}
+	],
+	"choices": [
+		{
+			"text": {
+				"korean": "배달원의 급한 사정을 이해하고 차를 최대한 옆으로 붙여 비켜준다"
+			},
+			"path": "easy",
+			"mbti": "EF",
+			"effects": {
+				"community": 15,
+				"echo": 5
+			},
+			"reward": [
+				"attack_up"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "당신이 차를 벽에 바싹 붙이자 배달원은 고맙다는 짧은 인사와 함께 쏜살같이 지나갔다."
+					}
+				},
+				{
+					"speaker": "driver",
+					"content": {
+						"korean": "고마워요! 덕분에 살았네!"
+					}
+				},
+				{
+					"speaker": "dax",
+					"content": {
+						"korean": "휴우, 저렇게 급하게 가다니! 다행히 금방 지나갔네요."
+					}
+				}
+			],
+			"risk": {
+				"chance": "mid",
+				"bad": {
+					"effects": {
+						"gold": -40
+					},
+					"reward": [],
+					"result": [
+						{
+							"speaker": "narrator",
+							"content": {
+								"korean": "당신이 차를 옆으로 붙이자 배달원은 비좁은 틈으로 억지로 지나가려다 오토바이 핸들이 차에 긁혔다."
+							}
+						},
+						{
+							"speaker": "driver",
+							"content": {
+								"korean": "아이고! 내 오토바이! 이거 물어내요!"
+							}
+						},
+						{
+							"speaker": "dax",
+							"content": {
+								"korean": "어쩌죠, 저 아저씨가 더 화난 것 같은데요..."
+							}
+						}
+					]
+				}
+			}
+		},
+		{
+			"text": {
+				"korean": "배달원의 태도가 수상하여 길을 비켜주지 않고 왜 그리 급한지 묻는다"
+			},
+			"path": "hard",
+			"mbti": "IT",
+			"effects": {
+				"reason": 20
+			},
+			"reward": [
+				"defense_up"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "당신이 길을 막아서며 묻자 배달원은 당황한 표정으로 어깨를 으쓱했다."
+					}
+				},
+				{
+					"speaker": "driver",
+					"content": {
+						"korean": "아니, 그냥... 배가 고프다고 해서... 라면 배달 가는 중이에요!"
+					}
+				},
+				{
+					"speaker": "dax",
+					"content": {
+						"korean": "라면 배달이 저렇게 급할 일인가요...?"
+					}
+				}
+			],
+			"risk": {
+				"chance": "high",
+				"bad": {
+					"effects": {
+						"gold": -20
+					},
+					"reward": [],
+					"result": [
+						{
+							"speaker": "narrator",
+							"content": {
+								"korean": "당신이 길을 막아서며 묻자 배달원은 더욱 짜증을 내며 오토바이 시동을 거칠게 켰다."
+							}
+						},
+						{
+							"speaker": "driver",
+							"content": {
+								"korean": "아니, 비키라고 했잖아요! 진짜 바쁜 사람 붙잡네!"
+							}
+						},
+						{
+							"speaker": "narrator",
+							"content": {
+								"korean": "배달원은 억지로 당신의 차 옆을 지나가려다 오토바이 핸들로 사이드미러를 '퍽' 하고 쳤다."
+							}
+						},
+						{
+							"speaker": "dax",
+							"content": {
+								"korean": "어휴, 저 아저씨 성질이 보통이 아니네요! 차 긁혔어요!"
+							}
+						}
+					]
+				}
+			}
+		},
+		{
+			"text": {
+				"korean": "{actor}이(가) 배달원의 오토바이를 면밀히 살펴보며 수상한 점이 없는지 확인한다"
+			},
+			"path": "lock",
+			"mbti": "TJ",
+			"require": {
+				"mbti": "TJ"
+			},
+			"effects": {
+				"fighting": 10,
+				"echo": 10
+			},
+			"reward": [
+				"intelligence_up"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "당신이 배달원의 오토바이 뒷좌석을 자세히 살피자, 배달 가방 틈으로 삐져나온 서류 뭉치가 보였다."
+					}
+				},
+				{
+					"speaker": "driver",
+					"content": {
+						"korean": "아니, 남의 물건을 왜 뒤져요!"
+					}
+				},
+				{
+					"speaker": "dax",
+					"content": {
+						"korean": "저, 저건 경리부장님 서류 같은데요...?"
+					}
+				}
+			]
+		},
+		{
+			"text": {
+				"korean": "배달원에게 기다리게 한 값이라며 지폐를 건네고, 닥스에게 차를 뒤로 빼라고 한다."
+			},
+			"path": "gold",
+			"mbti": "IN",
+			"require": {
+				"stat": "gold",
+				"op": ">=",
+				"value": 100
+			},
+			"effects": {
+				"gold": -100
+			},
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "닥스가 차를 뒤로 빼자 오토바이가 쌩 하고 지나가다 멈췄다."
+					}
+				},
+				{
+					"speaker": "driver",
+					"content": {
+						"korean": "돈까지 받았으니 이건 서비스요!"
+					}
+				},
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "배달원이 던지고 간 비닐봉지 안에 식은 군만두 두 개가 들어 있었다."
+					}
+				},
+				{
+					"speaker": "dax",
+					"content": {
+						"korean": "아무도 안 먹을 거면 제가 먹어도 돼요?"
+					}
+				}
+			]
+		}
+	],
+	"tags": [
+		"driver",
+		"dax"
+	],
+	"_design": {
+		"slot": "B",
+		"kind": "normal",
+		"person": {
+			"id": "driver",
+			"name": "배달원",
+			"role": "밤늦게 배달 중인 오토바이 배달원"
+		},
+		"wants": "밤늦게 급하게 배달을 가야 하는데, 좁은 골목길에서 당신의 차가 길을 막고 있어 비켜달라고 재촉한다.",
+		"rule_link": "좁은 부두 골목길에서 당신의 차를 가로막고 급하다고 재촉하는 배달원의 말을 듣고 바로 비켜줄지, 아니면 그의 수상한 태도를 의심할지 선택한다.",
+		"events": {},
+		"flags": {}
+	}
+}

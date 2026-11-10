@@ -1,0 +1,233 @@
+{
+	"id": "card_03_old_tapes",
+	"title": {
+		"korean": "낡은 테이프와 고장 난 기계"
+	},
+	"intensity": "calm",
+	"after_story": 1,
+	"before_story": 3,
+	"background_tags": [
+		"basement",
+		"night",
+		"dimlight",
+		"alone",
+		"dusty"
+	],
+	"background_image": "https://imagedelivery.net/WTEqQNGFb-l-IHS6IGnzUQ/f8078a58-f1f0-4b28-89b6-540b09ccb800/public",
+	"dialogue": [
+		{
+			"speaker": "narrator",
+			"content": {
+				"korean": "지하 자료실 깊숙한 곳, 낡은 비디오 기계와 씨름하는 늙은 관리인이 보인다."
+			}
+		},
+		{
+			"speaker": "old_caretaker",
+			"content": {
+				"korean": "쳇, 젠장! 이 놈의 기계는 왜 또 말썽이야! 옛날 테이프 좀 보려는데…"
+			}
+		},
+		{
+			"speaker": "dax",
+			"content": {
+				"korean": "저 분이 옛날 CCTV 테이프 보관함 열쇠를 가지고 있을 거예요. 항상 저기 계셨거든요."
+			}
+		},
+		{
+			"speaker": "old_caretaker",
+			"content": {
+				"korean": "젊은 양반들, 혹시 이 기계 좀 볼 줄 아나? 고쳐주면 저기 옛날 테이프들 보관함 열쇠라도 빌려줄 터인데…"
+			}
+		},
+		{
+			"speaker": "dax",
+			"content": {
+				"korean": "어르신, 저희가 영상을 좀 봐야 하는데…"
+			}
+		}
+	],
+	"choices": [
+		{
+			"text": {
+				"korean": "관리인이 기계를 보는 사이 슬쩍 열쇠만 챙겨 나온다."
+			},
+			"path": "easy",
+			"mbti": "EP",
+			"effects": {
+				"reason": -10,
+				"echo": -5
+			},
+			"reward": [
+				"attack_up"
+			],
+			"seed": "old_tapes_easy",
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "당신이 관리인의 손에서 살짝 열쇠를 빼내자 관리인은 아무것도 모른 채 고장 난 기계만 노려본다."
+					}
+				},
+				{
+					"speaker": "dax",
+					"content": {
+						"korean": "들킬 뻔했어요! 어서 도망쳐요!"
+					}
+				}
+			],
+			"risk": {
+				"chance": "mid",
+				"bad": {
+					"reward": [
+						"hp_down"
+					],
+					"result": [
+						{
+							"speaker": "narrator",
+							"content": {
+								"korean": "당신이 열쇠를 빼내는 순간, 관리인이 기계에서 손을 놓치며 기계가 덜컹거린다."
+							}
+						},
+						{
+							"speaker": "old_caretaker",
+							"content": {
+								"korean": "으악! 내 열쇠! 거기 서라, 이 도둑놈아!"
+							}
+						},
+						{
+							"speaker": "dax",
+							"content": {
+								"korean": "들켰어요! 어서 도망쳐요!"
+							}
+						}
+					]
+				}
+			}
+		},
+		{
+			"text": {
+				"korean": "고장 난 비디오 기계를 직접 고쳐 주고 열쇠를 정식으로 빌린다."
+			},
+			"path": "hard",
+			"mbti": "IJ",
+			"effects": {
+				"echo": 10,
+				"community": 10
+			},
+			"reward": [
+				"defense_up"
+			],
+			"seed": "old_tapes_hard",
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "당신이 드라이버를 꺼내 능숙하게 기계 부품을 만지자 잠시 후 기계가 윙윙 소리를 내며 작동한다."
+					}
+				},
+				{
+					"speaker": "old_caretaker",
+					"content": {
+						"korean": "오오, 젊은 양반 실력이 좋구먼! 자네 덕분에 옛날 테이프를 볼 수 있겠어. 열쇠 여기 있네."
+					}
+				},
+				{
+					"speaker": "dax",
+					"content": {
+						"korean": "와, 대단해요! 이렇게 고칠 줄 알았으면 진작 부탁할 걸!"
+					}
+				}
+			],
+			"risk": {
+				"chance": "high",
+				"bad": {
+					"effects": {
+						"gold": -20
+					},
+					"reward": [],
+					"result": [
+						{
+							"speaker": "narrator",
+							"content": {
+								"korean": "당신이 기계를 고치려 애쓰지만, 손에 든 드라이버가 미끄러지며 기계의 다른 부품까지 망가뜨린다."
+							}
+						},
+						{
+							"speaker": "old_caretaker",
+							"content": {
+								"korean": "으아악! 내 기계! 더 망가뜨리면 어떡해! 이 열쇠는 절대 못 줘!"
+							}
+						},
+						{
+							"speaker": "dax",
+							"content": {
+								"korean": "어르신이 엄청 화나셨어요. 어서 피해요!"
+							}
+						}
+					]
+				}
+			}
+		},
+		{
+			"text": {
+				"korean": "{actor}이(가) 기계의 설명서를 찾아 능숙하게 부품을 교체한다."
+			},
+			"path": "lock",
+			"mbti": "TJ",
+			"require": {
+				"mbti": "TJ"
+			},
+			"effects": {
+				"echo": 5,
+				"reason": 10
+			},
+			"reward": [
+				"move_range_up"
+			],
+			"seed": "old_tapes_hard",
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "{actor}이(가) 자료실 한편에서 기계 설명서를 찾아와 침착하게 고장 원인을 파악한다."
+					}
+				},
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "잠시 후 낡은 비디오 기계는 언제 그랬냐는 듯 부드럽게 돌아간다."
+					}
+				},
+				{
+					"speaker": "old_caretaker",
+					"content": {
+						"korean": "이야, 이런 걸 다 고칠 줄 아는군! 자, 약속대로 열쇠일세. 덕분에 살았어!"
+					}
+				},
+				{
+					"speaker": "dax",
+					"content": {
+						"korean": "우와, 역시 {actor}이에요! 제가 할 일도 없어졌네요!"
+					}
+				}
+			]
+		}
+	],
+	"tags": [
+		"old_caretaker",
+		"dax"
+	],
+	"_design": {
+		"slot": "A",
+		"kind": "plant",
+		"person": {
+			"name": "늙은 관리인",
+			"role": "자료실 관리인",
+			"id": "old_caretaker"
+		},
+		"wants": "고장 난 비디오 기계를 고쳐서 옛 CCTV 테이프를 보고 싶어 한다.",
+		"rule_link": "오래된 증거를 보기 위해 눈앞의 불편함을 감수할지, 쉬운 길을 택할지 선택해야 한다.",
+		"events": {},
+		"flags": {}
+	}
+}

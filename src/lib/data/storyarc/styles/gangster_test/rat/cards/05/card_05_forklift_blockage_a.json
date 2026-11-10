@@ -1,0 +1,256 @@
+{
+	"id": "card_05_forklift_blockage_a",
+	"title": {
+		"korean": "길 막은 지게차"
+	},
+	"intensity": "calm",
+	"after_story": 3,
+	"before_story": 5,
+	"background_tags": [
+		"foggy_road",
+		"dock",
+		"night",
+		"sparse_crowd",
+		"tense"
+	],
+	"background_image": "https://imagedelivery.net/WTEqQNGFb-l-IHS6IGnzUQ/0ec3184d-8b12-4cb7-bc2e-dab953552900/public",
+	"dialogue": [
+		{
+			"speaker": "narrator",
+			"content": {
+				"korean": "짙은 안개 속에서 낡은 지게차 한 대가 도로 한가운데를 가로막고 있다."
+			}
+		},
+		{
+			"speaker": "dax",
+			"content": {
+				"korean": "으아, 저건 또 뭐래요? 등대에 빨리 가야 하는데!"
+			}
+		},
+		{
+			"speaker": "narrator",
+			"content": {
+				"korean": "지게차 옆에는 기름때 묻은 작업복을 입은 항만 노동자가 연장을 들고 서 있다."
+			}
+		},
+		{
+			"speaker": "forklift_driver",
+			"content": {
+				"korean": "아이고, 이 놈의 지게차는 또 왜 이래! 하필 지금 고장 나서는..."
+			}
+		},
+		{
+			"speaker": "dax",
+			"content": {
+				"korean": "저 아저씨, 뭔가 바빠 보이는데... 우리가 도와줄까요?"
+			}
+		}
+	],
+	"choices": [
+		{
+			"text": {
+				"korean": "지게차 기사에게 빨리 비켜달라고 요청한다."
+			},
+			"path": "easy",
+			"mbti": "EJ",
+			"effects": {
+				"fighting": 10,
+				"echo": -5
+			},
+			"reward": [
+				"attack_up"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "당신은 지게차 기사에게 다가가 길을 비켜달라고 요청한다."
+					}
+				},
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "기사는 한숨을 쉬며 지게차를 겨우 한쪽으로 옮긴다."
+					}
+				},
+				{
+					"speaker": "dax",
+					"content": {
+						"korean": "간신히 지나갈 수 있겠네요!"
+					}
+				}
+			],
+			"risk": {
+				"chance": "mid",
+				"bad": {
+					"reward": [
+						"move_range_down"
+					],
+					"result": [
+						{
+							"speaker": "narrator",
+							"content": {
+								"korean": "당신의 요청에 지게차 기사가 짜증 섞인 표정으로 지게차를 옮긴다."
+							}
+						},
+						{
+							"speaker": "narrator",
+							"content": {
+								"korean": "지게차가 움직이면서 옆에 있던 기름통을 건드려 기름이 도로에 쏟아진다."
+							}
+						},
+						{
+							"speaker": "dax",
+							"content": {
+								"korean": "으악, 미끄러지겠어요!"
+							}
+						}
+					]
+				}
+			}
+		},
+		{
+			"text": {
+				"korean": "지게차 기사의 사정을 묻고 도울 방법을 찾아본다."
+			},
+			"path": "hard",
+			"mbti": "IJ",
+			"effects": {
+				"community": 10,
+				"reason": 10
+			},
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "당신이 지게차 기사에게 다가가 무슨 일이냐고 묻자, 기사가 당신을 경계하며 노려본다."
+					}
+				},
+				{
+					"speaker": "forklift_driver",
+					"content": {
+						"korean": "이봐요, 내가 바쁜데 왜 자꾸 시비를 걸어? 어디 백상어파 끄나풀들이 내 일에 참견이야!"
+					}
+				}
+			],
+			"event": "meet_stranger",
+			"event_intro": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "지게차 기사가 당신을 백상어파 끄나풀로 오해하고 화를 낸다."
+					}
+				},
+				{
+					"speaker": "forklift_driver",
+					"content": {
+						"korean": "감히 내 일에 참견하다니! 어디 한번 실력이나 볼까?"
+					}
+				},
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "지게차 기사가 당신에게 덤벼든다."
+					}
+				}
+			],
+			"event_options": {
+				"fight": {
+					"text": {
+						"korean": "{actor}이(가) 오해를 풀기 위해 지게차 기사와 맞선다."
+					},
+					"win": [
+						{
+							"speaker": "narrator",
+							"content": {
+								"korean": "당신은 지게차 기사를 가볍게 제압하고 오해를 푼다."
+							}
+						}
+					],
+					"lose": [
+						{
+							"speaker": "narrator",
+							"content": {
+								"korean": "당신은 지게차 기사의 공격을 피하지 못하고 잠시 휘청거린다."
+							}
+						}
+					]
+				},
+				"avoid": {
+					"text": {
+						"korean": "지게차 기사의 시비를 피하고 다른 길을 찾아본다."
+					},
+					"result": [
+						{
+							"speaker": "narrator",
+							"content": {
+								"korean": "당신은 지게차 기사를 피해 옆 골목으로 우회한다."
+							}
+						}
+					],
+					"reward": [
+						"defense_down"
+					]
+				}
+			}
+		},
+		{
+			"text": {
+				"korean": "지게차 기사에게 급한 사정을 설명하며 수고비를 건넨다."
+			},
+			"path": "gold",
+			"mbti": "EF",
+			"require": {
+				"stat": "gold",
+				"op": ">=",
+				"value": 100
+			},
+			"effects": {
+				"echo": 5,
+				"gold": -100
+			},
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "당신은 지게차 기사에게 돈을 건네며 급하다고 말한다."
+					}
+				},
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "기사는 돈을 받아들고 마지못해 지게차를 움직인다."
+					}
+				},
+				{
+					"speaker": "dax",
+					"content": {
+						"korean": "기사님, 고장 났다더니 돈 받으니까 시동이 한 번에 걸리네요?"
+					}
+				}
+			]
+		}
+	],
+	"tags": [
+		"forklift_driver",
+		"dax"
+	],
+	"_design": {
+		"slot": "B",
+		"kind": "normal",
+		"person": {
+			"name": "지게차 기사",
+			"role": "항만 노동자",
+			"id": "forklift_driver"
+		},
+		"wants": "고장 난 지게차를 고치고 싶어 한다.",
+		"rule_link": "길을 막은 장애물을 억지로 치우기보다 혹시 사정이 있는지 먼저 확인한다.",
+		"events": {
+			"hard": "당신이 지게차 기사를 도우려 하자, 기사가 오해하고 시비를 걸어온다."
+		},
+		"flags": {}
+	}
+}

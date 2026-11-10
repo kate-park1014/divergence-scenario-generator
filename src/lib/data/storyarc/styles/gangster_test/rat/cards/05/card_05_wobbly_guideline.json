@@ -1,0 +1,352 @@
+{
+	"id": "card_05_wobbly_guideline",
+	"title": {
+		"korean": "흔들리는 가이드라인"
+	},
+	"intensity": "calm",
+	"after_story": 7,
+	"before_story": 9,
+	"condition": {
+		"leaning": "reason-",
+		"among": [
+			"fighting-",
+			"fighting+",
+			"community-",
+			"community+",
+			"reason-",
+			"reason+"
+		],
+		"min": 20
+	},
+	"urgency": 8,
+	"leaning": "reason-",
+	"background_tags": [
+		"harbor",
+		"night",
+		"foggy",
+		"alone",
+		"tense"
+	],
+	"background_image": "https://imagedelivery.net/WTEqQNGFb-l-IHS6IGnzUQ/d67905ec-722f-4cee-80f4-0b19d0d93d00/public",
+	"dialogue": [
+		{
+			"speaker": "narrator",
+			"content": {
+				"korean": "등대 앞 방파제에 쪼그리고 앉아 있던 경호팀장이 당신을 발견하고 깜짝 놀란다."
+			}
+		},
+		{
+			"speaker": "security_team_leader",
+			"content": {
+				"korean": "당신이 그… 어떤 상황에서도 규정을 준수한다는 해결사죠? 마침 잘 오셨습니다."
+			}
+		},
+		{
+			"speaker": "security_team_leader",
+			"content": {
+				"korean": "등대 진입은 절대 불가… 하지만 안에서 희미하게 들려오는 소리가… 부디 현명한 조언을…."
+			}
+		},
+		{
+			"speaker": "dax",
+			"content": {
+				"korean": "어, 경호팀장님도 저희를 알아보셨네요! 저번엔 규정만 따지시더니…."
+			}
+		},
+		{
+			"speaker": "narrator",
+			"content": {
+				"korean": "경호팀장은 눈을 이리저리 굴리며 당신의 답을 기다린다."
+			}
+		}
+	],
+	"choices": [
+		{
+			"text": {
+				"korean": "규정은 필요할 때만 쓰는 거라며, 경호팀장을 비켜 세우고 등대 문을 활짝 연다."
+			},
+			"path": "easy",
+			"mbti": "EP",
+			"flag": "security_team_leader_disadvantage",
+			"effects": {
+				"fighting": 10,
+				"echo": 5,
+				"reason": 20
+			},
+			"reward": [
+				"attack_up"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "당신은 경호팀장의 어깨를 툭 치며 규정 따위는 무시하고 등대 문을 열었다."
+					}
+				},
+				{
+					"speaker": "security_team_leader",
+					"content": {
+						"korean": "에엣?! 그렇게 막무가내로…! 제가 뭘 할 수 있겠습니까…."
+					}
+				},
+				{
+					"speaker": "dax",
+					"content": {
+						"korean": "팀장님이 완전히 얼어붙으셨네요! 문이 열렸으니 어서 들어가요!"
+					}
+				}
+			],
+			"risk": {
+				"chance": "mid",
+				"bad": {
+					"effects": {
+						"gold": -50
+					},
+					"reward": [
+						"hp_down"
+					],
+					"result": [
+						{
+							"speaker": "narrator",
+							"content": {
+								"korean": "당신은 경호팀장의 어깨를 툭 치며 규정 따위는 무시하고 등대 문을 열려 했다."
+							}
+						},
+						{
+							"speaker": "security_team_leader",
+							"content": {
+								"korean": "으악! 손잡이에 기름칠이! 미끄러워서 잡을 수가…!"
+							}
+						},
+						{
+							"speaker": "dax",
+							"content": {
+								"korean": "아이고, 팀장님 옷이 다 망가졌네요! 등대 문도 도로 닫혔어요!"
+							}
+						}
+					]
+				}
+			}
+		},
+		{
+			"text": {
+				"korean": "경호팀장의 규정을 존중하며, 등대 안의 사정을 먼저 확인해야 한다고 조언한다."
+			},
+			"path": "hard",
+			"mbti": "TJ",
+			"flag": "security_team_leader_support",
+			"effects": {
+				"reason": -20,
+				"echo": 10,
+				"community": 10
+			},
+			"reward": [
+				"defense_down"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "당신은 경호팀장에게 규정을 어기지 않고 상황을 파악할 방법을 제안했다."
+					}
+				},
+				{
+					"speaker": "security_team_leader",
+					"content": {
+						"korean": "오오! 역시 당신은 다르군요! 제가 안의 상황을 먼저 확인하겠습니다!"
+					}
+				},
+				{
+					"speaker": "dax",
+					"content": {
+						"korean": "팀장님이 저희 말을 들었어요! 안으로 들어가려는 건가 봐요!"
+					}
+				}
+			],
+			"risk": {
+				"chance": "high",
+				"bad": {
+					"effects": {
+						"gold": -20
+					},
+					"reward": [],
+					"result": [
+						{
+							"speaker": "narrator",
+							"content": {
+								"korean": "당신은 경호팀장에게 규정을 지키며 등대 내부를 살필 방법을 일러주었다."
+							}
+						},
+						{
+							"speaker": "security_team_leader",
+							"content": {
+								"korean": "좋습니다! 제가 먼저 안을 살펴보… 어어어?!"
+							}
+						},
+						{
+							"speaker": "dax",
+							"content": {
+								"korean": "팀장님, 등대 계단에 미역이 잔뜩…! 미끄러져서 못 들어가겠대요!"
+							}
+						}
+					]
+				}
+			}
+		},
+		{
+			"text": {
+				"korean": "경호팀장에게 즉흥적인 해결책을 제시하며, 따르도록 설득한다."
+			},
+			"path": "stat",
+			"mbti": "NF",
+			"require": {
+				"stat": "reason",
+				"op": "<=",
+				"value": -40
+			},
+			"flag": "security_team_leader_confused",
+			"effects": {
+				"reason": -30,
+				"echo": 15
+			},
+			"reward": [
+				"intelligence_down"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "당신은 등대 안에서 들려오는 소리의 주파수를 분석하자며, 경호팀장에게 휴대폰을 건넸다."
+					}
+				},
+				{
+					"speaker": "security_team_leader",
+					"content": {
+						"korean": "주파수… 분석? 음… 제가 들고만 있겠습니다! 어찌 될지는…"
+					}
+				},
+				{
+					"speaker": "dax",
+					"content": {
+						"korean": "팀장님이 휴대폰으로 이상한 소리를 분석하고 있어요! 저러다 또 회장님께 혼나실라!"
+					}
+				}
+			]
+		},
+		{
+			"text": {
+				"korean": "경호팀장에게 안개 속에서 등대가 안 보인다며 눈을 가려준다."
+			},
+			"path": "fun",
+			"mbti": "IS",
+			"effects": {
+				"echo": -5,
+				"reason": 20
+			},
+			"reward": [
+				"move_range_up"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "당신은 경호팀장의 눈을 가려주며, 안개 때문에 등대가 안 보인다고 말했다."
+					}
+				},
+				{
+					"speaker": "security_team_leader",
+					"content": {
+						"korean": "흐읍…! 안개가 짙은 건 맞지만… 제 눈을 가리시면 제가 어떻게…!"
+					}
+				},
+				{
+					"speaker": "dax",
+					"content": {
+						"korean": "팀장님이 눈 가리개 때문에 허둥지둥해요! 이 틈에 슬쩍 지나가요!"
+					}
+				}
+			],
+			"risk": {
+				"chance": "low",
+				"bad": {
+					"reward": [
+						"move_range_down"
+					],
+					"result": [
+						{
+							"speaker": "narrator",
+							"content": {
+								"korean": "당신은 경호팀장의 눈을 가려주려다 그의 소중한 망토를 건드리고 말았다."
+							}
+						},
+						{
+							"speaker": "security_team_leader",
+							"content": {
+								"korean": "크읍! 이… 이건 제가 아끼는 망토가 아니옵니까! 제 망토로 눈을 가리다니!"
+							}
+						},
+						{
+							"speaker": "dax",
+							"content": {
+								"korean": "팀장님이 아끼는 망토가 찢어졌나 봐요! 화가 나서 등대 문을 지팡이로 막고 있어요!"
+							}
+						}
+					]
+				}
+			}
+		}
+	],
+	"tags": [
+		"security_team_leader",
+		"dax"
+	],
+	"_design": {
+		"slot": "D",
+		"kind": "rep",
+		"person": {
+			"id": "security_team_leader",
+			"name": "경호팀장",
+			"role": "경호팀장"
+		},
+		"wants": "등대 진입 규정을 어기지 않으면서도, 안에서 들려오는 희미한 소리를 확인하고 싶어 합니다.",
+		"rule_link": "경호팀장은 규정을 지키려는 마음과 등대 안의 사정을 알고 싶어 하는 마음 사이에서 고민하며, 당신에게 먼저 사정을 묻게 합니다.",
+		"rep": "reason-",
+		"events": {},
+		"flags": {
+			"security_team_leader_disadvantage": {
+				"kind": "bad",
+				"boss_penalty": -1,
+				"label": {
+					"korean": "당황한 경호팀장"
+				},
+				"boss_line": {
+					"korean": "경호팀장은 당신의 기세에 눌려 제대로 대응하지 못한다. 당신의 공격력이 20% 증가한다."
+				}
+			},
+			"security_team_leader_support": {
+				"kind": "good",
+				"boss_penalty": 1,
+				"label": {
+					"korean": "협력하는 경호팀장"
+				},
+				"boss_choice": {
+					"korean": "경호팀장이 등대 안으로 들어가 상황을 확인해 준다. 적의 방어력이 10% 감소한다."
+				}
+			},
+			"security_team_leader_confused": {
+				"kind": "good",
+				"boss_penalty": 2,
+				"label": {
+					"korean": "혼란스러운 경호팀장"
+				},
+				"boss_choice": {
+					"korean": "경호팀장이 알 수 없는 주파수를 분석하느라 혼란에 빠져 있다. 적의 지능이 10% 감소한다."
+				}
+			}
+		}
+	}
+}

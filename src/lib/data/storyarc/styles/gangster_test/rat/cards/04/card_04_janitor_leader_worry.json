@@ -1,0 +1,270 @@
+{
+	"id": "card_04_janitor_leader_worry",
+	"title": {
+		"korean": "반장님의 한숨"
+	},
+	"intensity": "high",
+	"after_story": 1,
+	"before_story": 3,
+	"background_tags": [
+		"office",
+		"daytime",
+		"fluorescent_light",
+		"few_people",
+		"gloomy"
+	],
+	"background_image": "https://imagedelivery.net/WTEqQNGFb-l-IHS6IGnzUQ/6ce0459a-ab94-4bbf-b451-341969a09600/public",
+	"dialogue": [
+		{
+			"speaker": "narrator",
+			"content": {
+				"korean": "탕비실 한쪽에 앉아 한숨 쉬는 청소 반장이 보인다."
+			}
+		},
+		{
+			"speaker": "janitor_leader",
+			"content": {
+				"korean": "쯧쯧, 젊은 친구들이 뭘 안다고…"
+			}
+		},
+		{
+			"speaker": "dax",
+			"content": {
+				"korean": "반장님, 무슨 걱정이라도 있으세요?"
+			}
+		},
+		{
+			"speaker": "janitor_leader",
+			"content": {
+				"korean": "아니, 그게… 요즘 애들이 그 노래방 영상 때문에 시끄러워서 말이야."
+			}
+		},
+		{
+			"speaker": "narrator",
+			"content": {
+				"korean": "반장은 마시던 커피잔을 내려놓으며 당신을 바라본다."
+			}
+		}
+	],
+	"forced": [
+		{
+			"text": {
+				"korean": "{actor}이(가) '반장님, 저희가 소문을 싹 다 조사해서 진실을 밝혀 드릴게요!'라며 큰 소리로 외친다."
+			},
+			"path": "forced",
+			"mbti": "FP",
+			"require": {
+				"mbti": "FP"
+			},
+			"chance": 0.3,
+			"effects": {
+				"community": 10,
+				"echo": 10,
+				"fighting": 10
+			},
+			"reward": [
+				"attack_up"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "반장이 당신의 열정적인 모습에 감동한다. 그러나 주위에 있던 다른 직원들이 모두 당신을 쳐다본다."
+					}
+				},
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "탕비실이 순간 조용해진다."
+					}
+				}
+			]
+		}
+	],
+	"choices": [
+		{
+			"text": {
+				"korean": "반장님의 걱정거리가 무엇인지 물어본다."
+			},
+			"path": "easy",
+			"mbti": "SF",
+			"effects": {
+				"community": 15,
+				"echo": 5
+			},
+			"reward": [
+				"attack_up"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "반장이 당신의 관심에 힘을 얻어 노래방 영상 소문 때문에 청소부들이 의기소침하다고 말한다."
+					}
+				},
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "반장은 당신에게 소문이 더 퍼지지 않게 해 달라고 간청한다. 반장의 눈가에 주름이 깊게 패인다."
+					}
+				},
+				{
+					"speaker": "dax",
+					"content": {
+						"korean": "반장님이 속앓이가 많으시네요."
+					}
+				}
+			],
+			"risk": {
+				"chance": "mid",
+				"bad": {
+					"effects": {
+						"gold": -30
+					},
+					"reward": [],
+					"result": [
+						{
+							"speaker": "narrator",
+							"content": {
+								"korean": "반장이 당신의 관심에 감격하여 눈물을 글썽인다."
+							}
+						},
+						{
+							"speaker": "narrator",
+							"content": {
+								"korean": "그러나 너무 감정이 북받친 나머지, 노래방 영상 소문과 아무 상관 없는 옛날이야기를 길게 늘어놓기 시작한다."
+							}
+						}
+					]
+				}
+			}
+		},
+		{
+			"text": {
+				"korean": "반장님의 걱정은 잠시 미뤄두고 용의자 동선 확인에 집중한다."
+			},
+			"path": "hard",
+			"mbti": "NT",
+			"effects": {
+				"fighting": -5,
+				"reason": 15
+			},
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "반장이 당신의 단호한 태도에 입술을 삐죽거린다."
+					}
+				},
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "그러나 이내 당신의 말에 수긍하는 듯 고개를 끄덕인다."
+					}
+				}
+			],
+			"event": "minigame_cup",
+			"event_intro": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "반장이 당신의 냉정한 태도에 당황한다."
+					}
+				},
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "갑자기 당신에게 커피를 타주겠다며 컵 세 개를 들고 장난스럽게 섞는다."
+					}
+				},
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "반장은 당신의 손에 든 용의자 명단을 가리키며 '맞춰봐!'라고 말한다."
+					}
+				}
+			]
+		},
+		{
+			"text": {
+				"korean": "반장님의 기운을 북돋아 주기 위해 노래방 영상 속 춤을 어설프게 따라 춘다."
+			},
+			"path": "fun",
+			"mbti": "EP",
+			"effects": {
+				"community": 20,
+				"reason": -10,
+				"echo": 10
+			},
+			"reward": [
+				"heal"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "반장이 당신의 엉뚱한 행동에 깜짝 놀란다. 이내 푸석했던 얼굴에 웃음꽃이 피어난다."
+					}
+				},
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "반장은 당신의 춤을 보며 박장대소한다."
+					}
+				},
+				{
+					"speaker": "dax",
+					"content": {
+						"korean": "풉, 이건 또 무슨 상황이죠?"
+					}
+				}
+			],
+			"risk": {
+				"chance": "low",
+				"bad": {
+					"effects": {
+						"gold": -30
+					},
+					"reward": [],
+					"result": [
+						{
+							"speaker": "narrator",
+							"content": {
+								"korean": "반장이 당신의 엉뚱한 행동에 깜짝 놀란다. 반장이 갑자기 배를 잡고 쓰러진다."
+							}
+						},
+						{
+							"speaker": "narrator",
+							"content": {
+								"korean": "너무 크게 웃는 바람에 옆구리 통증을 호소한다."
+							}
+						}
+					]
+				}
+			}
+		}
+	],
+	"tags": [
+		"janitor_leader",
+		"dax"
+	],
+	"_design": {
+		"slot": "A",
+		"kind": "normal",
+		"person": {
+			"name": "청소 반장",
+			"role": "청소 반장",
+			"id": "janitor_leader"
+		},
+		"wants": "노래방 영상 소문 때문에 청소부들의 사기가 저하될까 봐 걱정한다.",
+		"rule_link": "노래방 영상 소문 때문에 속앓이하는 청소 반장의 말 못 할 사정을 어떻게 대할지 선택한다.",
+		"events": {
+			"hard": "반장이 업무에 집중하려는 당신에게 엉뚱한 내기를 걸어 주의를 돌리려 한다."
+		},
+		"flags": {}
+	}
+}

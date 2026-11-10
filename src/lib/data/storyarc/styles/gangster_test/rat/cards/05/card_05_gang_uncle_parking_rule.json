@@ -1,0 +1,302 @@
+{
+	"id": "card_05_gang_uncle_parking_rule",
+	"title": {
+		"korean": "복도 주차 딱지"
+	},
+	"intensity": "calm",
+	"after_story": 1,
+	"before_story": 3,
+	"condition": {
+		"leaning": "reason-",
+		"among": [
+			"fighting-",
+			"fighting+",
+			"community-",
+			"community+",
+			"reason-",
+			"reason+"
+		],
+		"min": 20
+	},
+	"urgency": 8,
+	"leaning": "reason-",
+	"background_tags": [
+		"corridor",
+		"daytime",
+		"fluorescent_light",
+		"executives",
+		"tense"
+	],
+	"background_image": "https://imagedelivery.net/WTEqQNGFb-l-IHS6IGnzUQ/0021bc8b-a350-4a21-5a17-694249460400/public",
+	"dialogue": [
+		{
+			"speaker": "gang_uncle",
+			"content": {
+				"korean": "비서실 가는 길에 나 좀 보지? 당신이 그, 문서랑 규정대로 움직이는 양반이라는 소문 들었어."
+			}
+		},
+		{
+			"speaker": "narrator",
+			"content": {
+				"korean": "아재가 낡은 종이 뭉치를 흔든다."
+			}
+		},
+		{
+			"speaker": "gang_uncle",
+			"content": {
+				"korean": "새로 생긴 '복도 주차 금지' 규정이라고! 이 간부 놈들이 말을 안 들어서 내가 직접 딱지 붙이러 왔어."
+			}
+		},
+		{
+			"speaker": "dax",
+			"content": {
+				"korean": "복도에 차를 세우면 비상시에 큰일 날 수 있어요! 그런데 저 많은 차에 아재 혼자 딱지를 붙이긴…"
+			}
+		},
+		{
+			"speaker": "gang_uncle",
+			"content": {
+				"korean": "켁. 시끄러워! 이거 규정대로 안 하면 나만 또 회장님한테 잔소리 듣는다고."
+			}
+		}
+	],
+	"choices": [
+		{
+			"text": {
+				"korean": "다른 간부들에게 규정 위반으로 처리한다고 경고하며 쪽지를 붙인다."
+			},
+			"path": "easy",
+			"mbti": "ST",
+			"flag": "orderly_parking",
+			"effects": {
+				"gold": 100,
+				"reason": 20,
+				"echo": 5
+			},
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "당신이 간부들에게 경고하자 아재가 뿌듯하게 쪽지를 붙였다. 삐딱하게 서 있던 차들이 일렬로 정돈된다."
+					}
+				},
+				{
+					"speaker": "dax",
+					"content": {
+						"korean": "규정대로 하니 일이 술술 풀리네요!"
+					}
+				}
+			],
+			"risk": {
+				"chance": "mid",
+				"bad": {
+					"effects": {
+						"gold": -30
+					},
+					"reward": [],
+					"result": [
+						{
+							"speaker": "narrator",
+							"content": {
+								"korean": "당신의 경고에 간부들이 오히려 불쾌한 얼굴로 따진다. 아재는 결국 쪽지를 다 붙이지 못했다."
+							}
+						},
+						{
+							"speaker": "dax",
+							"content": {
+								"korean": "저분들 안 그래도 불만이 많았나 봐요…"
+							}
+						}
+					]
+				}
+			}
+		},
+		{
+			"text": {
+				"korean": "아재의 손에서 쪽지 뭉치를 빼앗아 직접 간부들의 차에 붙인다."
+			},
+			"path": "hard",
+			"mbti": "TJ",
+			"flag": "forced_parking",
+			"effects": {
+				"echo": -5,
+				"fighting": 20
+			},
+			"reward": [
+				"stun"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "당신이 거친 손길로 쪽지를 붙이자 간부들이 눈치를 살피며 차를 옮긴다. 아재가 당신을 보며 헛기침을 한다."
+					}
+				},
+				{
+					"speaker": "dax",
+					"content": {
+						"korean": "저분들, 당장은 피하는 것 같긴 한데 나중에 앙심 품는 거 아니에요?"
+					}
+				}
+			],
+			"risk": {
+				"chance": "high",
+				"bad": {
+					"effects": {
+						"gold": -20
+					},
+					"reward": [],
+					"result": [
+						{
+							"speaker": "narrator",
+							"content": {
+								"korean": "당신이 거친 손길로 쪽지를 붙이려다 실수로 간부의 차를 긁었다. 간부가 얼굴을 붉히며 다가온다."
+							}
+						},
+						{
+							"speaker": "dax",
+							"content": {
+								"korean": "아이고, 저 차가 비싼 차인데… 수리비가 꽤 나오겠어요!"
+							}
+						}
+					]
+				}
+			}
+		},
+		{
+			"text": {
+				"korean": "주차 금지 쪽지를 들고 서 있는 아재의 뒤에 서서 묵묵히 시선을 보낸다."
+			},
+			"path": "stat",
+			"mbti": "SF",
+			"require": {
+				"stat": "reason",
+				"op": "<=",
+				"value": -40
+			},
+			"flag": "silent_pressure",
+			"effects": {
+				"reason": -20,
+				"community": 10
+			},
+			"reward": [
+				"defense_up"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "당신의 묵직한 시선에 간부들이 움찔하며 차를 빼기 시작한다. 아재는 신이 나서 쪽지를 마구 뿌린다."
+					}
+				},
+				{
+					"speaker": "dax",
+					"content": {
+						"korean": "역시 당신이 함께하니 다른 간부들도 규정을 지키네요!"
+					}
+				}
+			]
+		},
+		{
+			"text": {
+				"korean": "비서실 문 앞에 선을 긋고 '비서님 전용 주차 공간'이라며 딱지를 붙여 준다."
+			},
+			"path": "fun",
+			"mbti": "EN",
+			"effects": {
+				"gold": 80,
+				"echo": 10,
+				"reason": -20
+			},
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "아재가 당황해서 당신이 붙인 딱지를 떼어낸다. 복도에 있던 간부들이 그 모습을 보고 키득거린다."
+					}
+				},
+				{
+					"speaker": "dax",
+					"content": {
+						"korean": "비서님은 차가 없으신데… 비서님 전용 주차 공간이라니, 재밌네요!"
+					}
+				}
+			],
+			"risk": {
+				"chance": "low",
+				"bad": {
+					"reward": [
+						"hp_down"
+					],
+					"result": [
+						{
+							"speaker": "narrator",
+							"content": {
+								"korean": "당신이 '비서님 전용' 딱지를 붙이자 아재가 얼굴을 붉힌다. 뒤에 있던 간부들이 비웃는 소리가 들린다."
+							}
+						},
+						{
+							"speaker": "dax",
+							"content": {
+								"korean": "아재가 많이 창피한가 봐요…"
+							}
+						}
+					]
+				}
+			}
+		}
+	],
+	"tags": [
+		"gang_uncle",
+		"dax"
+	],
+	"_design": {
+		"slot": "A",
+		"kind": "rep",
+		"person": {
+			"id": "gang_uncle",
+			"name": "백상어파 아재",
+			"role": "조직원"
+		},
+		"wants": "복도에 세워진 간부들 차에 '주차 금지' 쪽지를 붙이려 하는데 협조를 부탁함.",
+		"rule_link": "왜 굳이 복도까지 와서 주차 문제를 해결하려 하는지 그 사정을 먼저 물어봐야 한다.",
+		"rep": "reason-",
+		"events": {},
+		"flags": {
+			"orderly_parking": {
+				"kind": "bad",
+				"boss_penalty": -1,
+				"label": {
+					"korean": "질서 있는 주차"
+				},
+				"boss_line": {
+					"korean": "복도 주차 금지 규정으로 간부들이 혼란스러워한다."
+				}
+			},
+			"forced_parking": {
+				"kind": "good",
+				"boss_penalty": 1,
+				"label": {
+					"korean": "강제 주차 정리"
+				},
+				"boss_choice": {
+					"korean": "복도 주차 금지 규정을 무시하는 간부들을 위협해서 제압한다."
+				}
+			},
+			"silent_pressure": {
+				"kind": "good",
+				"boss_penalty": 2,
+				"label": {
+					"korean": "묵묵한 압박"
+				},
+				"boss_choice": {
+					"korean": "복도 주차 금지 규정에 반발하는 간부들을 침묵으로 압박하여 움직인다."
+				}
+			}
+		}
+	}
+}

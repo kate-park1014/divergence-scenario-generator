@@ -1,0 +1,153 @@
+{
+	"id": "card_02_youngest_member_tip",
+	"title": {
+		"korean": "야적장의 작은 밀고"
+	},
+	"intensity": "high",
+	"after_story": 7,
+	"before_story": 9,
+	"callback": {
+		"seed": "youngest_gang_member_stakeout_hard",
+		"min_rooms_after": 2
+	},
+	"background_tags": [
+		"yard",
+		"night",
+		"dark",
+		"empty",
+		"whisper"
+	],
+	"background_image": "https://imagedelivery.net/WTEqQNGFb-l-IHS6IGnzUQ/b4a4c598-fe8f-482e-7693-33a421a12700/public",
+	"dialogue": [
+		{
+			"speaker": "narrator",
+			"content": {
+				"korean": "조심스러운 발걸음 소리에 돌아보니 막내가 당신을 향해 손짓하고 있었다."
+			}
+		},
+		{
+			"speaker": "dax",
+			"content": {
+				"korean": "어? 막내가 왜 저러죠? 설마 또 방해하려는 건 아니겠죠?"
+			}
+		},
+		{
+			"speaker": "youngest_member",
+			"content": {
+				"korean": "선배님들! 저 컨테이너, 사실 뒷문이 허술합니다! 제가 봤습니다!"
+			}
+		},
+		{
+			"speaker": "narrator",
+			"content": {
+				"korean": "막내는 파란 컨테이너 뒤편을 가리키며 씩씩하게 말했다."
+			}
+		}
+	],
+	"choices": [
+		{
+			"text": {
+				"korean": "막내의 정보에 따라 컨테이너 뒷문으로 우회한다."
+			},
+			"path": "easy",
+			"mbti": "NT",
+			"flag": "backdoor_known",
+			"effects": {
+				"reason": 10,
+				"echo": 10
+			},
+			"reward": [
+				"attack_up"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "막내가 알려준 대로 컨테이너 뒷문을 살피니, 낡은 빗장이 걸려 있었다."
+					}
+				},
+				{
+					"speaker": "dax",
+					"content": {
+						"korean": "오, 역시 막내가 준 정보가 맞았네요! 덕분에 쉽게 들어갈 수 있겠어요!"
+					}
+				}
+			]
+		},
+		{
+			"text": {
+				"korean": "막내에게 고맙다고 말하고, 컨테이너 주변을 다시 한번 살핀다."
+			},
+			"path": "hard",
+			"mbti": "SF",
+			"flag": "container_weak_point",
+			"effects": {
+				"community": 10,
+				"echo": 15
+			},
+			"reward": [
+				"defense_up"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "당신이 고맙다고 하자, 막내는 으쓱하며 더 자랑스럽게 뒷문을 가리켰다."
+					}
+				},
+				{
+					"speaker": "youngest_member",
+					"content": {
+						"korean": "별말씀을요! 제가 항상 선배님들 지켜보고 있습니다!"
+					}
+				},
+				{
+					"speaker": "dax",
+					"content": {
+						"korean": "막내가 꽤나 쓸모 있는 정보원이 되었네요? 다음에도 잘해줘야겠어요."
+					}
+				}
+			]
+		}
+	],
+	"tags": [
+		"youngest_member",
+		"dax"
+	],
+	"_design": {
+		"slot": "D",
+		"kind": "callback",
+		"person": {
+			"name": "백상어파 막내",
+			"role": "조직원",
+			"id": "youngest_member"
+		},
+		"wants": "야식을 준 선배들에게 보답하고 싶음",
+		"rule_link": "겉모습만 보고 판단하지 않고 친절을 베푼 것이 뜻밖의 도움으로 돌아왔습니다.",
+		"events": {},
+		"flags": {
+			"backdoor_known": {
+				"kind": "good",
+				"boss_penalty": 1,
+				"label": {
+					"korean": "뒷문 정보"
+				},
+				"boss_choice": {
+					"korean": "파란 컨테이너의 뒷문이 낡은 빗장으로 잠겨 있습니다. 쉽게 열 수 있을 것 같습니다."
+				}
+			},
+			"container_weak_point": {
+				"kind": "good",
+				"boss_penalty": 2,
+				"label": {
+					"korean": "컨테이너 약점"
+				},
+				"boss_choice": {
+					"korean": "막내의 정보로 파란 컨테이너의 낡은 뒷문 빗장을 발견했습니다. 공격 지점으로 활용할 수 있습니다."
+				}
+			}
+		}
+	}
+}

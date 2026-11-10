@@ -1,0 +1,539 @@
+{
+	"cards": [
+		{
+			"background_tags": [
+				"foggy_road",
+				"dock",
+				"night",
+				"sparse_crowd",
+				"tense"
+			],
+			"rule_link": "급한 상황이라도 상대방의 특별한 사정을 먼저 물어볼지 선택한다.",
+			"person": {
+				"name": "창고지기",
+				"role": "창고 간부",
+				"id": "janggojigi"
+			},
+			"wants": "회장님께 드릴 꽃다발을 등대까지 배달하고 싶어 한다.",
+			"dialogue": [
+				{
+					"speaker": "narrator",
+					"text": "안개 낀 부두 도로 한가운데, 창고 간부가 꽃다발을 들고 서 있다."
+				},
+				{
+					"speaker": "janggojigi",
+					"text": "젠장, 차가 고장 났잖아! 이 꽃은 오늘 꼭 회장님께 가야 하는데."
+				},
+				{
+					"text": "창고 간부님! 여기서 뭐 하세요? 이 시간에 등대 쪽은 위험한데.",
+					"speaker": "dax"
+				},
+				{
+					"speaker": "janggojigi",
+					"text": "닥스! 마침 잘 왔어. 이 꽃다발, 내가 회장님께 드리려고 밤새 직접 만든 거야."
+				},
+				{
+					"speaker": "janggojigi",
+					"text": "등대까지 좀 태워다 주게. 급해!"
+				}
+			],
+			"title": "회장님 꽃 배달",
+			"no": 1,
+			"key": "warehouse_foreman_flowers",
+			"choices": [
+				{
+					"result": [
+						{
+							"speaker": "narrator",
+							"text": "당신은 급하다고 소리치며 창고지기를 지나쳐 달린다."
+						},
+						{
+							"text": "백미러로 본 창고지기가 꽃다발을 든 채 망연자실 서 있다.",
+							"speaker": "narrator"
+						},
+						{
+							"text": "너무 급해서 어쩔 수 없었네요, 그렇죠?",
+							"speaker": "dax"
+						}
+					],
+					"risk_bad": {
+						"result": [
+							{
+								"text": "당신은 창고지기를 지나치려 했으나, 그가 꽃다발을 흔들며 길을 막는다.",
+								"speaker": "narrator"
+							},
+							{
+								"speaker": "narrator",
+								"text": "꽃다발의 꽃잎들이 차 앞 유리창에 흩날려 시야를 가린다."
+							},
+							{
+								"text": "으악, 앞이 안 보여요!",
+								"speaker": "dax"
+							}
+						],
+						"gold": -20,
+						"reward": []
+					},
+					"text": "급하다고 말하고 창고지기를 지나쳐 등대로 향한다.",
+					"effects": {
+						"echo": -5,
+						"gold": 100
+					},
+					"path": "easy",
+					"mbti": "EP"
+				},
+				{
+					"path": "hard",
+					"mbti": "IF",
+					"risk_bad": {
+						"result": [
+							{
+								"speaker": "narrator",
+								"text": "꽃다발을 싣는 도중, 꽃봉오리 하나가 차 문에 끼어 떨어진다."
+							},
+							{
+								"text": "창고지기가 비명을 지르며 떨어진 꽃봉오리를 주워든다.",
+								"speaker": "narrator"
+							},
+							{
+								"text": "저 꽃, 간부님이 정말 아끼던 꽃인데...",
+								"speaker": "dax"
+							}
+						],
+						"gold": -20,
+						"reward": []
+					},
+					"reward": [
+						"defense_up"
+					],
+					"effects": {
+						"echo": 10,
+						"community": 10
+					},
+					"text": "창고지기의 꽃다발을 싣고 함께 등대로 향한다.",
+					"result": [
+						{
+							"text": "당신은 창고지기와 꽃다발을 차에 태운다.",
+							"speaker": "narrator"
+						},
+						{
+							"text": "차 안은 금세 진한 꽃 향기로 가득 찬다.",
+							"speaker": "narrator"
+						},
+						{
+							"text": "차 안이 꼭 꽃집 같네요!",
+							"speaker": "dax"
+						}
+					]
+				},
+				{
+					"risk_bad": {
+						"result": [
+							{
+								"speaker": "narrator",
+								"text": "꽃다발을 품에 안는 순간, 꽃다발 속 숨겨진 작은 벌레가 튀어나와 당신의 얼굴에 앉는다."
+							},
+							{
+								"text": "당신은 깜짝 놀라 꽃다발을 떨어뜨릴 뻔한다.",
+								"speaker": "narrator"
+							},
+							{
+								"speaker": "dax",
+								"text": "으악! 저, 저건 뭐예요?!"
+							}
+						],
+						"reward": [
+							"hp_down"
+						]
+					},
+					"reward": [
+						"cooldown_reset"
+					],
+					"mbti": "ET",
+					"result": [
+						{
+							"text": "당신은 창고지기에게 꽃다발을 건네받아 품에 안는다.",
+							"speaker": "narrator"
+						},
+						{
+							"speaker": "narrator",
+							"text": "꽃잎이 당신의 옷에 잔뜩 묻어난다."
+						},
+						{
+							"speaker": "dax",
+							"text": "꽃다발이 생각보다 크네요! 운전하는 데 방해되지 않으세요?"
+						}
+					],
+					"path": "fun",
+					"text": "창고지기에게 꽃다발을 건네받아 직접 품에 안고 간다.",
+					"effects": {
+						"echo": 10,
+						"reason": 20
+					}
+				}
+			],
+			"slot": "B",
+			"kind": "plant"
+		},
+		{
+			"choices": [
+				{
+					"mbti": "EJ",
+					"reward": [
+						"attack_up"
+					],
+					"path": "easy",
+					"result": [
+						{
+							"speaker": "narrator",
+							"text": "당신은 지게차 기사에게 다가가 길을 비켜달라고 요청한다."
+						},
+						{
+							"speaker": "narrator",
+							"text": "기사는 한숨을 쉬며 지게차를 겨우 한쪽으로 옮긴다."
+						},
+						{
+							"speaker": "dax",
+							"text": "간신히 지나갈 수 있겠네요!"
+						}
+					],
+					"risk_bad": {
+						"reward": [
+							"move_range_down"
+						],
+						"result": [
+							{
+								"text": "당신의 요청에 지게차 기사가 짜증 섞인 표정으로 지게차를 옮긴다.",
+								"speaker": "narrator"
+							},
+							{
+								"text": "지게차가 움직이면서 옆에 있던 기름통을 건드려 기름이 도로에 쏟아진다.",
+								"speaker": "narrator"
+							},
+							{
+								"speaker": "dax",
+								"text": "으악, 미끄러지겠어요!"
+							}
+						]
+					},
+					"text": "지게차 기사에게 빨리 비켜달라고 요청한다.",
+					"effects": {
+						"fighting": 10,
+						"echo": -5
+					}
+				},
+				{
+					"avoid_penalty": "defense_down",
+					"event_options": {
+						"avoid": {
+							"text": "지게차 기사의 시비를 피하고 다른 길을 찾아본다.",
+							"result": [
+								{
+									"speaker": "narrator",
+									"text": "당신은 지게차 기사를 피해 옆 골목으로 우회한다."
+								}
+							]
+						},
+						"fight": {
+							"win": [
+								{
+									"speaker": "narrator",
+									"text": "당신은 지게차 기사를 가볍게 제압하고 오해를 푼다."
+								}
+							],
+							"text": "{actor}이(가) 오해를 풀기 위해 지게차 기사와 맞선다.",
+							"lose": [
+								{
+									"speaker": "narrator",
+									"text": "당신은 지게차 기사의 공격을 피하지 못하고 잠시 휘청거린다."
+								}
+							]
+						}
+					},
+					"text": "지게차 기사의 사정을 묻고 도울 방법을 찾아본다.",
+					"path": "hard",
+					"mbti": "IJ",
+					"effects": {
+						"community": 10,
+						"reason": 10
+					},
+					"result": [
+						{
+							"speaker": "narrator",
+							"text": "당신이 지게차 기사에게 다가가 무슨 일이냐고 묻자, 기사가 당신을 경계하며 노려본다."
+						},
+						{
+							"text": "이봐요, 내가 바쁜데 왜 자꾸 시비를 걸어? 어디 백상어파 끄나풀들이 내 일에 참견이야!",
+							"speaker": "forklift_driver"
+						}
+					],
+					"event": "meet_stranger",
+					"event_reason": "당신이 지게차 기사를 도우려 하자, 기사가 오해하고 시비를 걸어온다.",
+					"event_intro": [
+						{
+							"speaker": "narrator",
+							"text": "지게차 기사가 당신을 백상어파 끄나풀로 오해하고 화를 낸다."
+						},
+						{
+							"text": "감히 내 일에 참견하다니! 어디 한번 실력이나 볼까?",
+							"speaker": "forklift_driver"
+						},
+						{
+							"text": "지게차 기사가 당신에게 덤벼든다.",
+							"speaker": "narrator"
+						}
+					]
+				},
+				{
+					"effects": {
+						"echo": 5,
+						"gold": -100
+					},
+					"text": "지게차 기사에게 급한 사정을 설명하며 수고비를 건넨다.",
+					"result": [
+						{
+							"text": "당신은 지게차 기사에게 돈을 건네며 급하다고 말한다.",
+							"speaker": "narrator"
+						},
+						{
+							"speaker": "narrator",
+							"text": "기사는 돈을 받아들고 마지못해 지게차를 움직인다."
+						},
+						{
+							"text": "역시 돈이 최고네요!",
+							"speaker": "dax"
+						}
+					],
+					"path": "gold",
+					"mbti": "EF"
+				}
+			],
+			"key": "forklift_blockage_a",
+			"no": 2,
+			"rule_link": "길을 막은 장애물을 억지로 치우기보다 혹시 사정이 있는지 먼저 확인한다.",
+			"dialogue": [
+				{
+					"text": "짙은 안개 속에서 낡은 지게차 한 대가 도로 한가운데를 가로막고 있다.",
+					"speaker": "narrator"
+				},
+				{
+					"text": "으아, 저건 또 뭐래요? 등대에 빨리 가야 하는데!",
+					"speaker": "dax"
+				},
+				{
+					"text": "지게차 옆에는 기름때 묻은 작업복을 입은 항만 노동자가 연장을 들고 서 있다.",
+					"speaker": "narrator"
+				},
+				{
+					"text": "아이고, 이 놈의 지게차는 또 왜 이래! 하필 지금 고장 나서는...",
+					"speaker": "forklift_driver"
+				},
+				{
+					"text": "저 아저씨, 뭔가 바빠 보이는데... 우리가 도와줄까요?",
+					"speaker": "dax"
+				}
+			],
+			"background_tags": [
+				"foggy_road",
+				"dock",
+				"night",
+				"sparse_crowd",
+				"tense"
+			],
+			"title": "길 막은 지게차",
+			"person": {
+				"name": "지게차 기사",
+				"role": "항만 노동자",
+				"id": "forklift_driver"
+			},
+			"wants": "고장 난 지게차를 고치고 싶어 한다.",
+			"slot": "B",
+			"kind": "normal"
+		},
+		{
+			"choices": [
+				{
+					"path": "easy",
+					"mbti": "IP",
+					"reward": [
+						"attack_up"
+					],
+					"risk_bad": {
+						"gold": -30,
+						"result": [
+							{
+								"speaker": "narrator",
+								"text": "당신의 재촉에 경비원이 당황하여 지게차를 급하게 움직인다."
+							},
+							{
+								"speaker": "narrator",
+								"text": "지게차에 실려 있던 낡은 상자 하나가 떨어져 바닥에 부딪히며 깨진다."
+							},
+							{
+								"text": "으악! 저건 뭐예요? 깨진 상자 안에서 낡은 해적 지도가 튀어나왔어요!",
+								"speaker": "dax"
+							}
+						],
+						"reward": []
+					},
+					"text": "경비원에게 급하다고 말하며 지게차를 빨리 치워달라고 요구한다.",
+					"result": [
+						{
+							"text": "당신은 경비원에게 급하다고 말하며 길을 비켜달라고 한다.",
+							"speaker": "narrator"
+						},
+						{
+							"speaker": "narrator",
+							"text": "경비원은 못마땅한 표정으로 지게차를 천천히 옮긴다."
+						},
+						{
+							"speaker": "dax",
+							"text": "겨우 지나가네요!"
+						}
+					],
+					"effects": {
+						"echo": -5,
+						"fighting": 10
+					}
+				},
+				{
+					"result": [
+						{
+							"speaker": "narrator",
+							"text": "당신이 경비원에게 무엇을 옮기는지 묻자, 경비원이 안도한 표정으로 답한다."
+						},
+						{
+							"text": "아, 이게 다 부두 창고 정리 작업이라서요. 곧 끝납니다!",
+							"speaker": "night_watchman"
+						},
+						{
+							"speaker": "dax",
+							"text": "오해였네요!"
+						}
+					],
+					"path": "hard",
+					"reward": [
+						"defense_up"
+					],
+					"mbti": "IF",
+					"risk_bad": {
+						"gold": -20,
+						"result": [
+							{
+								"speaker": "narrator",
+								"text": "당신이 경비원에게 묻자, 경비원이 당신을 의심스러운 눈초리로 바라본다."
+							},
+							{
+								"text": "당신들이 그걸 알아서 뭐하게? 수상한 자들 같으니!",
+								"speaker": "night_watchman"
+							},
+							{
+								"speaker": "dax",
+								"text": "어휴, 괜히 물어봤다가 더 의심만 샀네요."
+							}
+						],
+						"reward": []
+					},
+					"text": "경비원에게 지게차로 무엇을 옮기고 있는지 정중하게 묻는다.",
+					"effects": {
+						"echo": 10,
+						"community": 10
+					}
+				},
+				{
+					"reward": [
+						"intelligence_up"
+					],
+					"mbti": "TJ",
+					"require_mbti": "TJ",
+					"effects": {
+						"reason": 10,
+						"fighting": -10
+					},
+					"path": "lock",
+					"result": [
+						{
+							"text": "{actor}이(가) 경비원에게 부두 관리 규정을 정확히 설명한다.",
+							"speaker": "narrator"
+						},
+						{
+							"text": "경비원은 납득한 듯 고개를 끄덕이며 지게차를 길가로 옮긴다.",
+							"speaker": "narrator"
+						},
+						{
+							"text": "역시 논리적으로 설명하는 게 최고네요!",
+							"speaker": "dax"
+						}
+					],
+					"text": "{actor}이(가) 경비원에게 부두 관리 규정을 언급하며 지게차를 옮기도록 설득한다."
+				},
+				{
+					"effects": {
+						"gold": -80,
+						"echo": 5
+					},
+					"text": "경비원에게 빨리 지나가야 한다며 급행료를 건넨다.",
+					"result": [
+						{
+							"text": "당신은 경비원에게 급행료를 건넨다.",
+							"speaker": "narrator"
+						},
+						{
+							"text": "경비원은 눈치를 보며 돈을 받아들고 얼른 지게차를 치운다.",
+							"speaker": "narrator"
+						},
+						{
+							"speaker": "dax",
+							"text": "돈의 힘은 대단하네요!"
+						}
+					],
+					"mbti": "SP",
+					"path": "gold"
+				}
+			],
+			"person": {
+				"role": "부두 야간 경비원",
+				"name": "야간 경비원",
+				"id": "night_watchman"
+			},
+			"dialogue": [
+				{
+					"speaker": "narrator",
+					"text": "안개 낀 부두 도로에서, 지게차 한 대가 낡은 상자들을 싣고 길을 막고 있다."
+				},
+				{
+					"text": "저 지게차, 뭘 저렇게 옮기는 거죠? 안개 때문에 잘 보이지도 않는데.",
+					"speaker": "dax"
+				},
+				{
+					"text": "지게차 옆에는 야간 경비원이 손전등을 흔들며 주변을 살피고 있다.",
+					"speaker": "narrator"
+				},
+				{
+					"text": "뉘신지? 이 시간엔 출입 금지입니다!",
+					"speaker": "night_watchman"
+				},
+				{
+					"speaker": "dax",
+					"text": "어휴, 저 경비원 아저씨는 또 왜 저렇게 경계를 심하게 하는지..."
+				}
+			],
+			"no": 3,
+			"rule_link": "안개 속에서 길을 막는 수상한 지게차를 보고 무작정 행동하기보다 먼저 사정을 물어본다.",
+			"background_tags": [
+				"foggy_road",
+				"dock",
+				"night",
+				"sparse_crowd",
+				"tense"
+			],
+			"wants": "부두의 물건을 안전하게 옮기고 싶어 한다.",
+			"title": "수상한 지게차",
+			"key": "forklift_blockage_b",
+			"slot": "B",
+			"kind": "normal"
+		}
+	],
+	"errors": [],
+	"prompt_hash": "f3103ca2223c2608b436d08e39d31ba8cd8b1ae0"
+}

@@ -1,0 +1,302 @@
+{
+	"id": "card_05_pollock_net_guard",
+	"title": {
+		"korean": "명태 그물을 지키는 어부"
+	},
+	"intensity": "calm",
+	"after_story": 5,
+	"before_story": 7,
+	"condition": {
+		"leaning": "community-",
+		"among": [
+			"fighting-",
+			"fighting+",
+			"community-",
+			"community+",
+			"reason-",
+			"reason+"
+		],
+		"min": 20
+	},
+	"urgency": 8,
+	"leaning": "community-",
+	"background_tags": [
+		"foggy",
+		"night",
+		"dim",
+		"none",
+		"tense"
+	],
+	"background_image": "https://imagedelivery.net/WTEqQNGFb-l-IHS6IGnzUQ/c6efa135-d8a8-4cff-3827-eaac6e50ab00/public",
+	"dialogue": [
+		{
+			"speaker": "narrator",
+			"content": {
+				"korean": "등대로 가는 좁은 길 위로 늙은 어부 아재가 거대한 그물을 펼쳐 말리고 있다."
+			}
+		},
+		{
+			"speaker": "fisherman_uncle",
+			"content": {
+				"korean": "어이, 당신이 그 푼돈에 움직인다는 해결사 양반이지? 쯧쯧, 돈만 밝히는 자들이 뭘 알아!"
+			}
+		},
+		{
+			"speaker": "fisherman_uncle",
+			"content": {
+				"korean": "이 귀한 명태 그물이 글쎄, 저 안개 속에서 누가 훔쳐 갈까 봐 이렇게 지키고 있지. 길을 비켜줄 순 없어."
+			}
+		}
+	],
+	"choices": [
+		{
+			"text": {
+				"korean": "급하니 그물을 걷으라고 으름장을 놓는다."
+			},
+			"path": "easy",
+			"mbti": "TP",
+			"flag": "fisherman_net_snag_unfavorable",
+			"effects": {
+				"echo": -5,
+				"fighting": 20
+			},
+			"reward": [
+				"attack_up"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "당신이 으름장을 놓자 어부 아재가 못 이기는 척 그물을 치운다."
+					}
+				},
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "그 밑에 깔려 있던 작은 통발 몇 개가 보인다."
+					}
+				},
+				{
+					"speaker": "dax",
+					"content": {
+						"korean": "으휴, 저러다 큰일 나겠어요!"
+					}
+				}
+			],
+			"risk": {
+				"chance": "mid",
+				"bad": {
+					"effects": {
+						"gold": -20
+					},
+					"reward": [
+						"move_range_down"
+					],
+					"result": [
+						{
+							"speaker": "narrator",
+							"content": {
+								"korean": "당신이 으름장을 놓자 어부 아재가 당신의 다리를 자기 그물로 엉키게 한다."
+							}
+						},
+						{
+							"speaker": "narrator",
+							"content": {
+								"korean": "그 틈에 아재는 통발을 들고 도망친다."
+							}
+						}
+					]
+				}
+			}
+		},
+		{
+			"text": {
+				"korean": "그물을 함께 지켜주겠다고 제안한다."
+			},
+			"path": "hard",
+			"mbti": "FJ",
+			"flag": "fisherman_net_snag_favorable",
+			"effects": {
+				"echo": 10,
+				"community": 20
+			},
+			"reward": [
+				"defense_up"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "당신이 그물을 지켜주겠다고 하자 어부 아재가 마지못해 고개를 끄덕인다."
+					}
+				},
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "아재는 그물을 걷고 작은 통발을 옆으로 치운다."
+					}
+				},
+				{
+					"speaker": "dax",
+					"content": {
+						"korean": "역시 여러분은 마음이 따뜻하시네요!"
+					}
+				}
+			],
+			"risk": {
+				"chance": "high",
+				"bad": {
+					"effects": {
+						"gold": -20
+					},
+					"reward": [],
+					"result": [
+						{
+							"speaker": "narrator",
+							"content": {
+								"korean": "당신이 그물을 지켜주겠다고 나서자 어부 아재가 기다렸다는 듯 당신에게 자신의 낡은 그물을 넘긴다."
+							}
+						},
+						{
+							"speaker": "narrator",
+							"content": {
+								"korean": "당신은 안개 속에서 하염없이 그물을 지키게 된다."
+							}
+						}
+					]
+				}
+			}
+		},
+		{
+			"text": {
+				"korean": "당신의 명성으로 어부의 어리석음을 깨우쳐준다."
+			},
+			"path": "stat",
+			"mbti": "TJ",
+			"require": {
+				"stat": "community",
+				"op": "<=",
+				"value": -40
+			},
+			"flag": "fisherman_net_snag_stat_favorable",
+			"effects": {
+				"echo": -5,
+				"fighting": 20,
+				"reason": -10,
+				"community": -10
+			},
+			"reward": [
+				"attack_up"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "당신의 명성을 들은 어부 아재는 슬쩍 통발을 숨기고 길을 비켜준다."
+					}
+				},
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "'쳇, 푼돈만 밝히는 줄 알았더니 힘으로 밀어붙이는군.' 꿍얼거린다."
+					}
+				},
+				{
+					"speaker": "dax",
+					"content": {
+						"korean": "비서님이 놀라지 않게 얼른 가요!"
+					}
+				}
+			]
+		},
+		{
+			"text": {
+				"korean": "그물 값으로 지폐 몇 장을 쥐여 주고 길을 비켜 달라고 한다."
+			},
+			"path": "gold",
+			"mbti": "ST",
+			"require": {
+				"stat": "gold",
+				"op": ">=",
+				"value": 50
+			},
+			"effects": {
+				"gold": -50,
+				"echo": 5
+			},
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "어부 아재가 돈을 받아 들고 그물을 걷자, 그 아래에서 작은 통발 하나가 굴러 나왔다."
+					}
+				},
+				{
+					"speaker": "fisherman_uncle",
+					"content": {
+						"korean": "그, 그건 보지 마! 내 비상금 통이야!"
+					}
+				},
+				{
+					"speaker": "dax",
+					"content": {
+						"korean": "돈 밝히는 사람이 누구였더라…"
+					}
+				}
+			]
+		}
+	],
+	"tags": [
+		"fisherman_uncle",
+		"dax"
+	],
+	"_design": {
+		"slot": "C",
+		"kind": "rep",
+		"person": {
+			"id": "fisherman_uncle",
+			"name": "어부 아재",
+			"role": "어부"
+		},
+		"wants": "등대로 가는 길을 막아서며 자신의 명태 그물을 지켜달라고 한다.",
+		"rule_link": "닥달하기 전에 먼저 사정을 물어야 합니다. 손해를 보더라도 어부의 사정부터 들어봅니다.",
+		"rep": "community-",
+		"events": {},
+		"flags": {
+			"fisherman_net_snag_unfavorable": {
+				"kind": "bad",
+				"boss_penalty": -1,
+				"label": {
+					"korean": "어부의 그물"
+				},
+				"boss_line": {
+					"korean": "어부 아재가 당신의 발을 묶으려 그물을 던진다."
+				}
+			},
+			"fisherman_net_snag_favorable": {
+				"kind": "good",
+				"boss_penalty": 1,
+				"label": {
+					"korean": "어부의 협력"
+				},
+				"boss_choice": {
+					"korean": "어부 아재가 당신의 뒤에서 그물로 적의 시야를 가린다."
+				}
+			},
+			"fisherman_net_snag_stat_favorable": {
+				"kind": "good",
+				"boss_penalty": 2,
+				"label": {
+					"korean": "어부의 경계"
+				},
+				"boss_choice": {
+					"korean": "어부 아재가 당신의 기세에 눌려 엉뚱한 곳으로 그물을 던진다."
+				}
+			}
+		}
+	}
+}

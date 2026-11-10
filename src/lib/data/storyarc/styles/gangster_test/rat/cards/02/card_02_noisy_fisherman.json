@@ -1,0 +1,181 @@
+{
+	"id": "card_02_noisy_fisherman",
+	"title": {
+		"korean": "새벽 야적장의 고기 자랑"
+	},
+	"intensity": "calm",
+	"after_story": 3,
+	"before_story": 5,
+	"background_tags": [
+		"port",
+		"dawn",
+		"foggy",
+		"loud",
+		"nervous"
+	],
+	"background_image": "https://imagedelivery.net/WTEqQNGFb-l-IHS6IGnzUQ/b40e9344-184b-4e83-3238-1d8028ddb100/public",
+	"dialogue": [
+		{
+			"speaker": "narrator",
+			"content": {
+				"korean": "안개 낀 야적장 너머에서 '이만한 고기는 처음이야!' 하는 우렁찬 목소리가 들려왔다."
+			}
+		},
+		{
+			"speaker": "dax",
+			"content": {
+				"korean": "맙소사! 저 낚시꾼 아저씨, 매번 새벽마다 오는데 오늘은 왜 이렇게 시끄럽죠?"
+			}
+		},
+		{
+			"speaker": "fisherman",
+			"content": {
+				"korean": "어이 거기! 이봐, 이 월척 좀 보라고! 내 평생 이런 놈은 처음 잡아본다니까!"
+			}
+		}
+	],
+	"choices": [
+		{
+			"text": {
+				"korean": "낚시꾼에게 얼른 가서 조용히 하라고 손짓한다."
+			},
+			"path": "easy",
+			"mbti": "ST",
+			"effects": {
+				"fighting": 10,
+				"echo": 5
+			},
+			"reward": [
+				"attack_up"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "당신의 재빠른 손짓에 낚시꾼은 고개를 갸웃하며 조용히 자리를 떴다."
+					}
+				},
+				{
+					"speaker": "dax",
+					"content": {
+						"korean": "어휴, 아저씨 고래고래 소리 지르는 통에 간 떨어지는 줄 알았잖아요!"
+					}
+				}
+			],
+			"risk": {
+				"chance": "mid",
+				"bad": {
+					"reward": [
+						"defense_down"
+					],
+					"result": [
+						{
+							"speaker": "narrator",
+							"content": {
+								"korean": "당신의 손짓을 본 낚시꾼은 당신이 고기를 훔치려는 줄 알고 '이 도둑놈아!' 하고 더 크게 소리쳤다."
+							}
+						},
+						{
+							"speaker": "dax",
+							"content": {
+								"korean": "세상에! 오히려 도둑이라고 소리치니 어쩌죠!"
+							}
+						}
+					]
+				}
+			}
+		},
+		{
+			"text": {
+				"korean": "낚시꾼의 시선이 다른 곳으로 향할 때까지 숨을 죽이고 기다린다."
+			},
+			"path": "hard",
+			"mbti": "IS",
+			"effects": {
+				"reason": 15,
+				"echo": 5
+			},
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "당신은 낚시꾼의 움직임을 주시하며 최적의 순간을 기다렸다."
+					}
+				},
+				{
+					"speaker": "dax",
+					"content": {
+						"korean": "흐읍, 낚시꾼 시선이 잠시 다른 곳을 보네요! 이때다!"
+					}
+				}
+			],
+			"event": "minigame_timing",
+			"event_intro": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "낚시꾼의 시선이 잠시 다른 곳으로 향하는 찰나를 노려야 한다."
+					}
+				},
+				{
+					"speaker": "dax",
+					"content": {
+						"korean": "들키지 않고 움직일 기회를 잡아야 해요!"
+					}
+				}
+			]
+		},
+		{
+			"text": {
+				"korean": "낚시꾼에게 다가가 고기를 사주겠다며 조용히 해달라고 부탁한다."
+			},
+			"path": "gold",
+			"mbti": "EN",
+			"require": {
+				"stat": "gold",
+				"op": ">=",
+				"value": 100
+			},
+			"effects": {
+				"gold": -100,
+				"community": 10
+			},
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "낚시꾼은 고기를 사준다는 말에 눈을 반짝이며 조용히 고기를 싸주기 시작했다."
+					}
+				},
+				{
+					"speaker": "dax",
+					"content": {
+						"korean": "돈은 나갔지만, 낚시꾼 아저씨가 입을 다물었으니 이걸로 된 건가요?"
+					}
+				}
+			]
+		}
+	],
+	"tags": [
+		"fisherman",
+		"dax"
+	],
+	"_design": {
+		"slot": "B",
+		"kind": "normal",
+		"person": {
+			"name": "낚시꾼",
+			"id": "fisherman",
+			"role": "생활 낚시꾼"
+		},
+		"wants": "새벽에 잡은 월척을 자랑하고 싶은 마음",
+		"rule_link": "잡은 고기만 보고 월척이라 단정하기보다, 그 고기를 잡기까지의 과정을 끝까지 지켜봐야 진짜를 안다.",
+		"events": {
+			"hard": "들키지 않고 움직일 기회를 잡아야 해요."
+		},
+		"flags": {}
+	}
+}

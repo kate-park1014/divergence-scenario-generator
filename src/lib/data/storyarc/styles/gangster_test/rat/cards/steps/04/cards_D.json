@@ -1,0 +1,392 @@
+{
+	"cards": [
+		{
+			"wants": "자기를 무시하고 블랙박스를 훔친 당신에게 복수하고 싶다",
+			"dialogue": [
+				{
+					"text": "차고 정비공이 당신을 빤히 보며 입술을 삐죽거린다.",
+					"speaker": "narrator"
+				},
+				{
+					"speaker": "dax",
+					"text": "아저씨가 아직 그날 일로 화가 안 풀린 것 같아요."
+				},
+				{
+					"text": "그날 밤 누님 차에 손댄 사람, 내가 똑똑히 봤어!",
+					"speaker": "mechanic"
+				},
+				{
+					"speaker": "narrator",
+					"text": "차고 정비공이 씩 웃으며 당신에게 곁눈질한다."
+				}
+			],
+			"key": "mechanic_tip_off",
+			"person": {
+				"name": "차고 정비공",
+				"id": "mechanic",
+				"role": "차고 정비공"
+			},
+			"title": "정비공의 고자질",
+			"background_tags": [
+				"waiting_room",
+				"afternoon",
+				"dim",
+				"two_people",
+				"tension"
+			],
+			"choices": [
+				{
+					"flag": {
+						"label": "정비공의 고자질",
+						"key": "mechanic_easy_penalty",
+						"boss_text": "금고실 문 앞에 누님의 부하 경호원들이 삼엄하게 지키고 있다."
+					},
+					"effects": {
+						"fighting": -10,
+						"echo": -5
+					},
+					"mbti": "IS",
+					"text": "차고 정비공의 시선을 무시하고 대기실 의자에 앉아 숨을 고른다.",
+					"path": "easy",
+					"result": [
+						{
+							"text": "당신이 의자에 앉아 눈을 감자 차고 정비공이 콧방귀를 뀐다.",
+							"speaker": "narrator"
+						},
+						{
+							"speaker": "mechanic",
+							"text": "흥, 누님 귀는 밝으시지!"
+						},
+						{
+							"text": "으악, 아저씨가 누님에게 일러바칠 기세인데요!",
+							"speaker": "dax"
+						}
+					],
+					"reward": [
+						"attack_up"
+					]
+				},
+				{
+					"path": "hard",
+					"effects": {
+						"echo": 5,
+						"reason": 10,
+						"community": 10
+					},
+					"reward": [
+						"defense_up"
+					],
+					"result": [
+						{
+							"text": "당신이 누님 차 이야기를 꺼내자 차고 정비공이 흠칫 놀라며 주위를 살핀다.",
+							"speaker": "narrator"
+						},
+						{
+							"text": "그날 누님이 회장님 얘기만 나오면 약해지더라고.",
+							"speaker": "mechanic"
+						},
+						{
+							"text": "아저씨가 뭔가 아는 눈치인데요!",
+							"speaker": "dax"
+						}
+					],
+					"flag": {
+						"boss_text": "경호실장 누님은 회장님 이야기만 나오면 멈칫한다.",
+						"key": "mechanic_hard_tip",
+						"label": "정비공의 귀띔"
+					},
+					"mbti": "NF",
+					"text": "차고 정비공에게 누님 차에 대해 묻고, 혹시 다른 사정이 있었는지 떠본다."
+				}
+			],
+			"no": 1,
+			"rule_link": "블랙박스 메모리를 훔친 당신을 정비공이 누님에게 고자질했을 때, 그의 행동을 사적인 복수로 볼지, 누님을 향한 충성심으로 볼지",
+			"slot": "D",
+			"kind": "callback",
+			"returns": "easy"
+		},
+		{
+			"rule_link": "당신의 의리를 기억하는 정비공이 은밀한 조언을 해 줄 때, 그가 숨기는 의도를 의심할지, 그의 조언을 믿고 따를지",
+			"no": 2,
+			"key": "mechanic_loyalty_tip",
+			"dialogue": [
+				{
+					"speaker": "narrator",
+					"text": "차고 정비공이 당신에게 곁눈질하며 손짓한다."
+				},
+				{
+					"text": "아저씨가 우리한테 뭔가 말하려나 봐요.",
+					"speaker": "dax"
+				},
+				{
+					"text": "누님은 회장님 얘기만 나오면 한없이 약해져.",
+					"speaker": "mechanic"
+				},
+				{
+					"speaker": "narrator",
+					"text": "차고 정비공이 주위를 살피며 당신에게 바싹 다가온다."
+				}
+			],
+			"background_tags": [
+				"waiting_room",
+				"late_afternoon",
+				"low_light",
+				"few_people",
+				"suspicious"
+			],
+			"title": "정비공의 은밀한 조언",
+			"choices": [
+				{
+					"effects": {
+						"reason": 10,
+						"echo": 10
+					},
+					"path": "easy",
+					"result": [
+						{
+							"speaker": "narrator",
+							"text": "당신이 귀를 기울이자 차고 정비공이 주섬주섬 주머니를 뒤적인다."
+						},
+						{
+							"text": "이건 누님 개인 차 정비 기록이야. 참고해.",
+							"speaker": "mechanic"
+						},
+						{
+							"speaker": "dax",
+							"text": "아저씨가 감동해서 주머니까지 터네요!"
+						}
+					],
+					"reward": [
+						"attack_up"
+					],
+					"flag": {
+						"key": "mechanic_easy_help",
+						"label": "정비공의 쪽지",
+						"boss_text": "경호실장 누님은 회장님 이야기만 나오면 멈칫한다."
+					},
+					"mbti": "TJ",
+					"text": "차고 정비공의 조언에 귀 기울이며 더 자세한 정보를 요청한다."
+				},
+				{
+					"path": "hard",
+					"effects": {
+						"echo": 10,
+						"community": 15
+					},
+					"reward": [
+						"defense_up"
+					],
+					"result": [
+						{
+							"speaker": "narrator",
+							"text": "당신의 말에 차고 정비공의 얼굴에 감동한 표정이 스친다."
+						},
+						{
+							"text": "역시 의리 있는 사람들은 다르군! 누님은 회장님 앞에서는 한없이 약해지니까...",
+							"speaker": "mechanic"
+						},
+						{
+							"speaker": "dax",
+							"text": "아저씨가 우리에게 홀딱 반한 것 같은데요!"
+						}
+					],
+					"flag": {
+						"boss_text": "경호실장 누님은 회장님 이야기만 나오면 멈칫한다.",
+						"label": "정비공의 확신",
+						"key": "mechanic_hard_trust"
+					},
+					"mbti": "EF",
+					"text": "차고 정비공의 충고에 감사하며, 그의 의리를 존중한다고 말한다."
+				}
+			],
+			"wants": "당신의 의리를 알아봐 주고 누님에 대한 정보를 주고 싶다",
+			"person": {
+				"id": "mechanic",
+				"role": "차고 정비공",
+				"name": "차고 정비공"
+			},
+			"slot": "D",
+			"kind": "callback",
+			"returns": "hard"
+		},
+		{
+			"no": 3,
+			"key": "whispering_guards",
+			"rule_link": "경호원들이 누님의 힘든 사정을 수군거릴 때, 그들의 말을 엿들어 약점으로 삼을지, 그들의 사생활을 존중해 모른 척할지",
+			"title": "경호원들의 수군거림",
+			"background_tags": [
+				"waiting_room",
+				"evening",
+				"fluorescent",
+				"gossiping",
+				"tense"
+			],
+			"wants": "누님의 사적인 이야기를 숨기고 싶지만, 입이 근질거린다",
+			"choices": [
+				{
+					"path": "easy",
+					"result": [
+						{
+							"speaker": "narrator",
+							"text": "당신이 귀를 쫑긋 세우자 경호원들이 깜짝 놀라며 말을 멈춘다."
+						},
+						{
+							"speaker": "guard_a",
+							"text": "으악, 들었어? 누님이 알면 죽는다!"
+						},
+						{
+							"text": "쟤네들 얼굴이 파래졌어요!",
+							"speaker": "dax"
+						}
+					],
+					"reward": [
+						"attack_up"
+					],
+					"risk_bad": {
+						"result": [
+							{
+								"text": "당신이 귀를 쫑긋 세우자 경호원들이 당신의 행동을 오해한다.",
+								"speaker": "narrator"
+							},
+							{
+								"text": "저 사람, 설마 누님한테 우리를 고자질하려는 거 아니야?",
+								"speaker": "guard_a"
+							},
+							{
+								"text": "쟤네들이 우리를 째려보는데요!",
+								"speaker": "dax"
+							}
+						],
+						"gold": -20,
+						"reward": []
+					},
+					"text": "경호원들의 대화를 엿들어 누님의 사적인 약점을 찾아낸다.",
+					"effects": {
+						"fighting": 10,
+						"echo": -5
+					},
+					"mbti": "ST"
+				},
+				{
+					"path": "hard",
+					"risk_bad": {
+						"gold": -20,
+						"result": [
+							{
+								"text": "당신이 못 들은 척하자 경호원들이 더 큰 소리로 떠들기 시작한다.",
+								"speaker": "narrator"
+							},
+							{
+								"speaker": "guard_a",
+								"text": "저 사람, 우리가 하는 얘기 하나도 안 듣는 눈치인데?"
+							},
+							{
+								"speaker": "dax",
+								"text": "쟤네들이 더 신나서 떠들어요!"
+							}
+						],
+						"reward": []
+					},
+					"effects": {
+						"community": 10,
+						"echo": 5
+					},
+					"result": [
+						{
+							"speaker": "narrator",
+							"text": "당신이 눈길을 돌리자 경호원들이 안도한 듯 서로를 마주 본다."
+						},
+						{
+							"speaker": "guard_a",
+							"text": "휴, 못 들은 것 같지?"
+						},
+						{
+							"speaker": "dax",
+							"text": "쟤네들이 슬그머니 고개를 끄덕이네요!"
+						}
+					],
+					"reward": [
+						"defense_up"
+					],
+					"mbti": "IN",
+					"text": "경호원들의 대화를 못 들은 척하며, 그들의 사생활을 존중한다."
+				},
+				{
+					"text": "{actor}이(가) (INTP이/가) 경호원들에게 누님의 피로가 금고실 방어에 미칠 영향을 논리적으로 질문한다.",
+					"mbti": "NT",
+					"effects": {
+						"reason": 15,
+						"echo": 5
+					},
+					"require_mbti": "NT",
+					"path": "lock",
+					"reward": [
+						"intelligence_up"
+					],
+					"result": [
+						{
+							"speaker": "narrator",
+							"text": "당신의 질문에 경호원들이 당황한 듯 서로 눈치를 본다."
+						},
+						{
+							"text": "그... 그건 저희가 알 바가 아닙니다만...",
+							"speaker": "guard_a"
+						},
+						{
+							"speaker": "dax",
+							"text": "쟤네들, 질문에 대한 답을 못 찾아서 버벅거리네요!"
+						}
+					]
+				},
+				{
+					"result": [],
+					"event_reason": "경호원들이 당신의 제안에 넘어와 내기를 시작한다.",
+					"path": "gold",
+					"event": "minigame_slot",
+					"mbti": "ES",
+					"event_intro": [
+						{
+							"speaker": "narrator",
+							"text": "당신의 내기 제안에 경호원들이 눈을 반짝인다."
+						},
+						{
+							"speaker": "guard_a",
+							"text": "오, 재미있겠는데요? 좋아요, 한판 붙어 봅시다!"
+						}
+					],
+					"text": "경호원들에게 '누님의 피로도'를 주제로 내기를 제안하며 돈을 건다.",
+					"effects": {
+						"gold": -100
+					}
+				}
+			],
+			"dialogue": [
+				{
+					"speaker": "narrator",
+					"text": "대기실 한쪽에서 경호원 둘이 귓속말을 주고받는다."
+				},
+				{
+					"speaker": "dax",
+					"text": "쟤네들, 누님 얘기를 하는 것 같아요."
+				},
+				{
+					"text": "그날 밤 누님이 회장님 병실에서 밤새 안절부절못하셨다잖아.",
+					"speaker": "guard_a"
+				},
+				{
+					"text": "다른 경호원이 당신 쪽을 힐끗 보더니 고개를 젓는다.",
+					"speaker": "narrator"
+				}
+			],
+			"person": {
+				"id": "guard_a",
+				"name": "경호원 갑",
+				"role": "경호원"
+			},
+			"slot": "D",
+			"kind": "normal"
+		}
+	],
+	"errors": [],
+	"prompt_hash": "f136347b5df0ba442251569be4502fb2fbd05e30"
+}

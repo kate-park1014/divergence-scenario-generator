@@ -1,0 +1,304 @@
+{
+	"id": "card_02_lost_delivery_rider",
+	"title": {
+		"korean": "길 잃은 배달원"
+	},
+	"intensity": "calm",
+	"after_story": 5,
+	"before_story": 7,
+	"background_tags": [
+		"port",
+		"night",
+		"foggy",
+		"solitude",
+		"confused"
+	],
+	"background_image": "https://imagedelivery.net/WTEqQNGFb-l-IHS6IGnzUQ/5848644d-f706-456c-f473-2ebce7b3b300/public",
+	"dialogue": [
+		{
+			"speaker": "narrator",
+			"content": {
+				"korean": "야식 배달 오토바이 한 대가 휘청거리며 당신의 차 옆에 멈춰 선다."
+			}
+		},
+		{
+			"speaker": "delivery_rider",
+			"content": {
+				"korean": "아, 여기가 어디야? 이 주소가 맞나? 배달원이 헤매며 휴대폰 지도를 들여다본다."
+			}
+		},
+		{
+			"speaker": "dax",
+			"content": {
+				"korean": "앗, 배달 오토바이인데요! 여기는 배달이 안 오는 곳 아니었나요?"
+			}
+		},
+		{
+			"speaker": "delivery_rider",
+			"content": {
+				"korean": "혹시, 여기 '백상어 횟집' 아시는 분 계세요?"
+			}
+		},
+		{
+			"speaker": "narrator",
+			"content": {
+				"korean": "배달원이 고개를 들고 당신들을 의심스러운 눈초리로 바라본다."
+			}
+		}
+	],
+	"choices": [
+		{
+			"text": {
+				"korean": "배달원에게 길을 정확히 알려주고 빨리 떠나도록 유도한다"
+			},
+			"path": "easy",
+			"mbti": "ES",
+			"effects": {
+				"community": 10,
+				"gold": 50
+			},
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "당신의 친절한 설명에 배달원이 고맙다고 연신 허리 숙여 인사한다."
+					}
+				},
+				{
+					"speaker": "delivery_rider",
+					"content": {
+						"korean": "고맙습니다! 덕분에 시간 안에 배달하겠네요! 배달원이 급하게 오토바이를 몰고 사라진다."
+					}
+				},
+				{
+					"speaker": "dax",
+					"content": {
+						"korean": "휴, 정말 놀랐어요!"
+					}
+				}
+			],
+			"risk": {
+				"chance": "mid",
+				"bad": {
+					"reward": [
+						"move_range_down"
+					],
+					"result": [
+						{
+							"speaker": "narrator",
+							"content": {
+								"korean": "당신의 설명이 너무 자세했던 탓일까, 배달원이 길을 더 헷갈려 한다."
+							}
+						},
+						{
+							"speaker": "delivery_rider",
+							"content": {
+								"korean": "아니, 그래서 왼쪽이에요? 오른쪽이에요? 배달원이 오토바이 위에서 방방 뛴다."
+							}
+						},
+						{
+							"speaker": "dax",
+							"content": {
+								"korean": "저 사람, 길치인가 봐요!"
+							}
+						}
+					]
+				}
+			}
+		},
+		{
+			"text": {
+				"korean": "배달원에게 이 근처에 특이한 일이 없었는지 은근슬쩍 물어본다"
+			},
+			"path": "hard",
+			"mbti": "IN",
+			"effects": {
+				"echo": 10,
+				"reason": 15
+			},
+			"reward": [
+				"defense_up"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "당신의 질문에 배달원이 고개를 갸웃거리더니, 얼마 전 있었던 일을 떠올린다."
+					}
+				},
+				{
+					"speaker": "delivery_rider",
+					"content": {
+						"korean": "아, 얼마 전에 여기서 웬 그림자 같은 사람이 커다란 상자를 옮기는 걸 봤어요!"
+					}
+				},
+				{
+					"speaker": "dax",
+					"content": {
+						"korean": "그림자요? 혹시 우리 목표인가요?"
+					}
+				}
+			],
+			"risk": {
+				"chance": "high",
+				"bad": {
+					"effects": {
+						"gold": -20
+					},
+					"reward": [],
+					"result": [
+						{
+							"speaker": "narrator",
+							"content": {
+								"korean": "당신의 은밀한 질문에 배달원이 갑자기 경계심을 드러내며 수상하게 여긴다."
+							}
+						},
+						{
+							"speaker": "delivery_rider",
+							"content": {
+								"korean": "갑자기 왜 그런 걸 물어봐요? 저, 바빠서 가봐야 하는데요."
+							}
+						},
+						{
+							"speaker": "dax",
+							"content": {
+								"korean": "배달원님이 저희를 수상하게 봐요!"
+							}
+						}
+					]
+				}
+			}
+		},
+		{
+			"text": {
+				"korean": "{actor}이(가) 배달원의 휴대폰 지도를 넘겨받아 논리적으로 최적의 경로를 분석한다"
+			},
+			"path": "lock",
+			"mbti": "NT",
+			"require": {
+				"mbti": "NT"
+			},
+			"effects": {
+				"reason": 10,
+				"gold": 30
+			},
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "{actor}이(가) 배달원의 휴대폰 지도를 넘겨받아 논리적으로 최적의 경로를 분석한다."
+					}
+				},
+				{
+					"speaker": "delivery_rider",
+					"content": {
+						"korean": "와! 뇌섹남이세요? 덕분에 길 찾았어요! 배달원이 감탄하며 감사의 표시로 잔돈을 건넨다."
+					}
+				},
+				{
+					"speaker": "dax",
+					"content": {
+						"korean": "{actor} 덕분에 배달원도 살았네요."
+					}
+				}
+			]
+		},
+		{
+			"text": {
+				"korean": "배달원이 들고 있는 야식 봉투를 탐색하며 내용물을 추측한다"
+			},
+			"path": "fun",
+			"mbti": "SP",
+			"effects": {
+				"fighting": 10,
+				"echo": -5
+			},
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "당신이 야식 봉투를 이리저리 흔들자, 안에서 플라스틱 용기 부딪히는 소리가 난다."
+					}
+				},
+				{
+					"speaker": "delivery_rider",
+					"content": {
+						"korean": "뭐 하시는 거예요? 제발 그러지 마세요, 음식 다 망가져요! 배달원이 화들짝 놀라며 봉투를 보호한다."
+					}
+				},
+				{
+					"speaker": "dax",
+					"content": {
+						"korean": "으악, 들킬 뻔했어요!"
+					}
+				}
+			],
+			"event": "minigame_cup",
+			"event_intro": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "배달원이 급하게 야식 봉투를 다른 빈 봉투 세 개와 섞어 당신에게 내민다."
+					}
+				},
+				{
+					"speaker": "delivery_rider",
+					"content": {
+						"korean": "어떤 게 제가 배달해야 할 진짜 야식인지 맞춰보세요!"
+					}
+				}
+			],
+			"risk": {
+				"chance": "low",
+				"bad": {
+					"reward": [
+						"hp_down"
+					],
+					"result": [
+						{
+							"speaker": "narrator",
+							"content": {
+								"korean": "당신이 야식 봉투를 세게 흔들자, 안에서 음식물이 터지는 소리가 들린다."
+							}
+						},
+						{
+							"speaker": "delivery_rider",
+							"content": {
+								"korean": "아, 안 돼! 제 야식! 배달원이 망가진 봉투를 보고 절규한다."
+							}
+						},
+						{
+							"speaker": "dax",
+							"content": {
+								"korean": "저희 때문에 배달 사고가 났어요!"
+							}
+						}
+					]
+				}
+			}
+		}
+	],
+	"tags": [
+		"delivery_rider",
+		"dax"
+	],
+	"_design": {
+		"slot": "C",
+		"kind": "normal",
+		"person": {
+			"id": "delivery_rider",
+			"role": "야식 배달 오토바이 기사",
+			"name": "배달 오토바이 기사"
+		},
+		"wants": "길을 찾아 야식을 제시간에 배달하고 싶어 함.",
+		"rule_link": "배달원의 눈에 보이는 상황과 히어로들의 실제 목표가 달라, 겉모습만으로 판단하는 것이 위험할 수 있음을 보여준다.",
+		"events": {
+			"fun": "당신이 봉투를 함부로 흔들자 배달원이 화를 내며 야식을 맞혀보라며 내기를 건다."
+		},
+		"flags": {}
+	}
+}

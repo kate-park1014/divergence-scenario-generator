@@ -1,0 +1,405 @@
+{
+	"cards": [
+		{
+			"wants": "정해진 규칙을 어기고 지나가려는 당신을 막으려 한다.",
+			"no": 1,
+			"person": {
+				"id": "security_youngest",
+				"name": "경호팀 막내",
+				"role": "security_guard"
+			},
+			"dialogue": [
+				{
+					"text": "금고실 복도 앞 대기실에는 제복을 단정하게 차려입은 경호팀 막내가 문을 지키고 서 있다.",
+					"speaker": "narrator"
+				},
+				{
+					"text": "넥타이를 고쳐 매며 어서 오십시오. 저는 이 구역 경비를 맡은 막내입니다만...",
+					"speaker": "security_youngest"
+				},
+				{
+					"speaker": "dax",
+					"text": "이쪽은 저희 회장님께서 특별히 모신 분들이에요."
+				},
+				{
+					"speaker": "security_youngest",
+					"text": "침을 꿀꺽 삼키며 당신이... 그, 주먹이 말보다 먼저 나간다는..."
+				},
+				{
+					"text": "해결사 맞으십니까? 소문이 자자하시던데...",
+					"speaker": "security_youngest"
+				},
+				{
+					"speaker": "dax",
+					"text": "막내야, 너무 긴장하지 마. 해코지하려는 거 아니니까."
+				},
+				{
+					"text": "고개를 저으며 아닙니다! 저는 제 임무를 다할 뿐입니다.",
+					"speaker": "security_youngest"
+				},
+				{
+					"text": "이 문은... 회장님 허락 없이는 누구도 통과할 수 없습니다.",
+					"speaker": "security_youngest"
+				}
+			],
+			"rule_link": "규칙을 방패 삼아 말 못할 두려움을 숨기는 상대를 밀어붙일지, 아니면 그의 속사정을 파고들지.",
+			"background_tags": [
+				"waiting_room",
+				"night",
+				"dim_light",
+				"empty",
+				"tense"
+			],
+			"key": "vault_guard_brawl",
+			"choices": [
+				{
+					"mbti": "ST",
+					"result": [
+						{
+							"text": "당신이 문을 두드리자 경호팀 막내가 화들짝 놀라 어깨를 움츠린다.",
+							"speaker": "narrator"
+						},
+						{
+							"text": "흐읍! 잠시만요! 제가... 제가 열겠습니다! 소란 피우면 안 되니...",
+							"speaker": "security_youngest"
+						},
+						{
+							"text": "막내가 잔뜩 쫄았네요. 저렇게까지 할 필요는 없었는데...",
+							"speaker": "dax"
+						}
+					],
+					"effects": {
+						"fighting": -20,
+						"echo": -5
+					},
+					"reward": [
+						"attack_up"
+					],
+					"text": "굳게 잠긴 문을 주먹으로 두드려 위협하며 길을 열라고 지시한다.",
+					"path": "easy",
+					"flag": {
+						"label": "막내의 보고",
+						"key": "guard_brawl_bad",
+						"boss_text": "경호팀 막내가 당신의 무례함을 경호실장에게 일러바쳐 불리한 위치에서 싸움을 시작한다."
+					},
+					"risk_bad": {
+						"reward": [
+							"defense_down"
+						],
+						"result": [
+							{
+								"speaker": "narrator",
+								"text": "당신이 문을 두드리자 경호팀 막내가 겁에 질려 뒷걸음질 치다 넘어졌다."
+							},
+							{
+								"text": "그가 떨어뜨린 무전기에서 '삐빅' 소리가 들린다.",
+								"speaker": "narrator"
+							},
+							{
+								"speaker": "dax",
+								"text": "아, 이런! 막내가 실수로 경호실장님께 보고했네요!"
+							}
+						],
+						"gold": -30
+					}
+				},
+				{
+					"path": "hard",
+					"risk_bad": {
+						"gold": -20,
+						"result": [
+							{
+								"speaker": "narrator",
+								"text": "당신의 설명에도 경호팀 막내는 고개를 갸웃하며 이해하지 못한다."
+							},
+							{
+								"speaker": "security_youngest",
+								"text": "눈을 비비며 제가... 서류를 확인해야 하는데... 어디에 뒀는지..."
+							},
+							{
+								"speaker": "dax",
+								"text": "어휴, 이 친구는 서류 찾다 날 새겠어요!"
+							}
+						],
+						"reward": []
+					},
+					"text": "경호팀 막내에게 정중하게 회장님의 허락이 있음을 설명하고 문을 열어달라고 부탁한다.",
+					"reward": [
+						"intelligence_up"
+					],
+					"flag": {
+						"boss_text": "경호팀 막내가 당신의 배려에 감동하여 경호실장의 약점 정보를 귀띔해 준다.",
+						"key": "guard_brawl_good",
+						"label": "막내의 조언"
+					},
+					"mbti": "NF",
+					"effects": {
+						"fighting": 20,
+						"echo": 10
+					},
+					"result": [
+						{
+							"speaker": "narrator",
+							"text": "당신의 정중한 말에 경호팀 막내가 눈을 깜빡이며 잠시 망설인다."
+						},
+						{
+							"speaker": "security_youngest",
+							"text": "회장님의 허락이... 있으시다면..."
+						},
+						{
+							"speaker": "security_youngest",
+							"text": "주위를 두리번거리며 아무에게도 말하지 마십시오. 경호실장님께 들키면 저는..."
+						},
+						{
+							"speaker": "dax",
+							"text": "막내가 엉뚱한 걸 걱정하네. 그래도 덕분에 쉽게 들어갈 수 있겠어요."
+						}
+					]
+				},
+				{
+					"mbti": "EP",
+					"result": [
+						{
+							"text": "당신의 눈빛에 경호팀 막내가 얼어붙은 듯 굳어버린다.",
+							"speaker": "narrator"
+						},
+						{
+							"speaker": "security_youngest",
+							"text": "땀을 뻘뻘 흘리며 드... 들어가십시오! 제... 제가 못 본 걸로 하겠습니다!"
+						},
+						{
+							"speaker": "dax",
+							"text": "막내가 알아서 길을 터 주네요. 역시 소문이 무섭긴 한가 봐요."
+						}
+					],
+					"path": "stat",
+					"reward": [
+						"stun"
+					],
+					"text": "경호팀 막내의 어깨를 툭 치며, 소란 피우기 전에 문을 열라고 무언의 압력을 가한다.",
+					"effects": {
+						"fighting": -30,
+						"echo": 5
+					},
+					"flag": {
+						"label": "막내의 굴복",
+						"boss_text": "경호팀 막내가 당신의 강경함에 감복해 경호실장의 약점 정보를 알려준다.",
+						"key": "guard_brawl_stat"
+					}
+				},
+				{
+					"result": [
+						{
+							"text": "당신이 건넨 돈 봉투에 경호팀 막내의 눈이 휘둥그레진다.",
+							"speaker": "narrator"
+						},
+						{
+							"speaker": "narrator",
+							"text": "그는 재빨리 봉투를 숨기고 문을 연다."
+						},
+						{
+							"speaker": "dax",
+							"text": "돈으로 해결했네요. 막내, 저 친구는 나중에 뒤탈이 있을 것 같은데요?"
+						}
+					],
+					"text": "경호팀 막내의 주머니에 돈 봉투를 찔러 넣으며 못 본 척해달라고 부탁한다.",
+					"path": "gold",
+					"effects": {
+						"echo": -10,
+						"gold": -100
+					},
+					"mbti": "TJ",
+					"reward": []
+				}
+			],
+			"title": "길을 가로막는 신참",
+			"slot": "D",
+			"kind": "rep",
+			"rep_dir": "fighting-"
+		},
+		{
+			"dialogue": [
+				{
+					"text": "금고실 복도 앞 대기실에는 제복을 단정하게 차려입은 경호팀 막내가 문을 지키고 서 있다.",
+					"speaker": "narrator"
+				},
+				{
+					"text": "넥타이를 자꾸 만지작거리며 당신이...",
+					"speaker": "security_youngest"
+				},
+				{
+					"speaker": "security_youngest",
+					"text": "그, 약한 사람에게 손을 내민다는... 해결사 맞으십니까? 소문이 자자하시던데..."
+				},
+				{
+					"speaker": "dax",
+					"text": "막내야, 무슨 일 있어? 얼굴이 안 좋아 보여."
+				},
+				{
+					"text": "아닙니다! 그저... 한숨을 쉬며 제가...",
+					"speaker": "security_youngest"
+				},
+				{
+					"speaker": "security_youngest",
+					"text": "잠시 자리를 비운 사이에 중요한 서류가 없어졌습니다. 경호실장님께 들키면..."
+				}
+			],
+			"no": 2,
+			"background_tags": [
+				"waiting_room",
+				"night",
+				"dim_light",
+				"empty",
+				"tense"
+			],
+			"person": {
+				"id": "security_youngest",
+				"name": "경호팀 막내",
+				"role": "security_guard"
+			},
+			"wants": "사라진 서류 때문에 초조해하는 자신을 이해하고 도와주길 바란다.",
+			"rule_link": "말 못 할 사정이 있는 사람의 불안을 외면할지, 아니면 그의 어려움을 헤아려 도울지.",
+			"title": "초조한 막내의 부탁",
+			"key": "vault_guard_help",
+			"choices": [
+				{
+					"text": "경호팀 막내에게 서류를 함께 찾아주겠다고 제안하며 불안을 잠재운다.",
+					"reward": [
+						"heal"
+					],
+					"path": "easy",
+					"flag": {
+						"key": "guard_help_bad",
+						"label": "막내의 실수",
+						"boss_text": "경호팀 막내가 당신이 서류를 찾을 때 했던 사소한 실수를 경호실장에게 보고해 싸움을 시작할 때 불리한 상황에 처한다."
+					},
+					"effects": {
+						"community": 20,
+						"echo": 10
+					},
+					"mbti": "IN",
+					"risk_bad": {
+						"gold": -20,
+						"reward": [
+							"hp_down"
+						],
+						"result": [
+							{
+								"speaker": "narrator",
+								"text": "당신이 서류를 찾으려 허리를 숙이자 경호팀 막내가 당황한다."
+							},
+							{
+								"speaker": "narrator",
+								"text": "그가 다급히 당신의 옷깃을 잡았다."
+							},
+							{
+								"speaker": "dax",
+								"text": "막내, 저 친구는 괜히 오지랖 부리면 더 꼬이는 타입이네요."
+							}
+						]
+					},
+					"result": [
+						{
+							"speaker": "narrator",
+							"text": "당신의 제안에 경호팀 막내의 얼굴에 화색이 돈다."
+						},
+						{
+							"text": "정말이십니까? 감사합니다! 어... 저기 의자 밑에 떨어져 있던 것 같습니다!",
+							"speaker": "security_youngest"
+						},
+						{
+							"speaker": "dax",
+							"text": "막내가 금방 찾았네요. 역시 사람 돕는 일은 뿌듯하죠!"
+						}
+					]
+				},
+				{
+					"flag": {
+						"boss_text": "경호팀 막내가 당신의 냉정함에 오히려 감복해 경호실장의 약점 정보를 흘린다.",
+						"key": "guard_help_good",
+						"label": "막내의 냉정"
+					},
+					"text": "경호팀 막내의 불안을 무시하고, 용건만 말하라며 문을 열라고 재촉한다.",
+					"path": "hard",
+					"result": [
+						{
+							"speaker": "narrator",
+							"text": "당신의 차가운 말에 경호팀 막내가 움찔하며 입을 다문다."
+						},
+						{
+							"text": "어깨를 움츠리며 알겠습니다... 들어가십시오.",
+							"speaker": "security_youngest"
+						},
+						{
+							"text": "막내가 풀이 죽었네. 쯧쯧. 그래도 문은 열어주니 다행인가.",
+							"speaker": "dax"
+						}
+					],
+					"risk_bad": {
+						"result": [
+							{
+								"speaker": "narrator",
+								"text": "당신의 재촉에 경호팀 막내가 겁에 질린 표정으로 문을 더 굳게 잡는다."
+							},
+							{
+								"speaker": "security_youngest",
+								"text": "안 됩니다! 서류가 없으면... 저는 절대 이 문을 열 수 없습니다! 규칙입니다!"
+							},
+							{
+								"speaker": "dax",
+								"text": "어라, 막내가 오히려 고집을 부리네요! 일이 더 복잡해졌어요."
+							}
+						],
+						"gold": -20,
+						"reward": []
+					},
+					"reward": [
+						"move_range_up"
+					],
+					"effects": {
+						"echo": -10,
+						"community": -20
+					},
+					"mbti": "ET"
+				},
+				{
+					"flag": {
+						"boss_text": "경호팀 막내가 당신의 친절함에 감동하여 경호실장의 약점 정보를 알려준다.",
+						"label": "막내의 안도",
+						"key": "guard_help_stat"
+					},
+					"path": "stat",
+					"effects": {
+						"community": 30,
+						"fighting": 10,
+						"echo": 15
+					},
+					"result": [
+						{
+							"text": "당신의 말에 경호팀 막내가 눈을 비비며 주변을 둘러본다.",
+							"speaker": "narrator"
+						},
+						{
+							"text": "그는 당신의 발치에 떨어진 서류를 발견하고 안도한다.",
+							"speaker": "narrator"
+						},
+						{
+							"text": "막내가 감동해서 서류를 찾았다고 착각하네요. 역시 사람을 위하는 마음은 통하는 법인가 봐요!",
+							"speaker": "dax"
+						}
+					],
+					"text": "경호팀 막내에게 서류는 이미 찾았으니 걱정 말라고 다독이며 그의 불안을 해소한다.",
+					"reward": [
+						"cooldown_reset"
+					],
+					"mbti": "FP"
+				}
+			],
+			"slot": "D",
+			"kind": "rep",
+			"rep_dir": "fighting+"
+		}
+	],
+	"errors": [],
+	"prompt_hash": "0a989e55621ca46fe4dd2f85877f56e06411a056"
+}

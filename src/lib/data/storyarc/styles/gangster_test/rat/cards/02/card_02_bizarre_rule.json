@@ -1,0 +1,343 @@
+{
+	"id": "card_02_bizarre_rule",
+	"title": {
+		"korean": "엉뚱한 규칙"
+	},
+	"intensity": "calm",
+	"after_story": 1,
+	"before_story": 3,
+	"condition": {
+		"leaning": "reason-",
+		"among": [
+			"fighting-",
+			"fighting+",
+			"community-",
+			"community+",
+			"reason-",
+			"reason+"
+		],
+		"min": 20
+	},
+	"urgency": 8,
+	"leaning": "reason-",
+	"background_tags": [
+		"container",
+		"foggy",
+		"dawn",
+		"lonely",
+		"crane"
+	],
+	"background_image": "https://imagedelivery.net/WTEqQNGFb-l-IHS6IGnzUQ/e4af4002-f4a2-402d-943d-ba2b16f88500/public",
+	"dialogue": [
+		{
+			"speaker": "narrator",
+			"content": {
+				"korean": "안개 낀 야적장 한가운데, 지게차 아재가 낡은 드럼통들을 쌓고 있다."
+			}
+		},
+		{
+			"speaker": "forklift_uncle",
+			"content": {
+				"korean": "켁, 켁! 당신이 그 소문 자자한, 칼같이 규칙을 지키는 해결사지?"
+			}
+		},
+		{
+			"speaker": "forklift_uncle",
+			"content": {
+				"korean": "이 드럼통 길은 내가 만든 규칙이니, 발이 땅에 닿으면 안 된다!"
+			}
+		},
+		{
+			"speaker": "dax",
+			"content": {
+				"korean": "아재가 또 이상한 규칙을 만들었네요. 저렇게 가면 분명히 다쳐요!"
+			}
+		}
+	],
+	"choices": [
+		{
+			"text": {
+				"korean": "아재의 엉뚱한 규칙을 지키며 드럼통 위를 조심스럽게 건넌다."
+			},
+			"path": "easy",
+			"mbti": "ST",
+			"flag": "uncle_blocked_path",
+			"effects": {
+				"community": 10,
+				"echo": 10,
+				"reason": 10
+			},
+			"reward": [
+				"attack_up"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "당신은 아슬아슬하게 드럼통 위를 걸어 아재를 감탄하게 한다."
+					}
+				},
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "아재는 규칙을 잘 지켰다며 만족한 표정으로 길을 터준다."
+					}
+				},
+				{
+					"speaker": "dax",
+					"content": {
+						"korean": "저 아재, 자기가 만든 규칙에 자기가 넘어지겠네요! 당신은 대단해요!"
+					}
+				}
+			],
+			"risk": {
+				"chance": "mid",
+				"bad": {
+					"effects": {
+						"gold": -30
+					},
+					"reward": [],
+					"result": [
+						{
+							"speaker": "narrator",
+							"content": {
+								"korean": "드럼통 위를 조심스럽게 건너다 발을 헛디뎌 균형을 잃는다."
+							}
+						},
+						{
+							"speaker": "narrator",
+							"content": {
+								"korean": "드럼통들이 와르르 무너지며 요란한 소리를 낸다."
+							}
+						},
+						{
+							"speaker": "dax",
+							"content": {
+								"korean": "으악! 저 아재, 이제 길 막는다고 더 난리 칠 거예요!"
+							}
+						}
+					]
+				}
+			}
+		},
+		{
+			"text": {
+				"korean": "아재에게 규칙을 강요하지 말고 길을 비키라고 단호하게 말한다."
+			},
+			"path": "hard",
+			"mbti": "TJ",
+			"flag": "uncle_respect_rules",
+			"effects": {
+				"fighting": 10,
+				"echo": -5,
+				"reason": -10
+			},
+			"reward": [
+				"attack_up"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "당신의 단호한 태도에 아재는 켁켁거리며 드럼통을 치운다."
+					}
+				},
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "아재는 당신의 기세에 눌린 듯 혀를 내두른다."
+					}
+				},
+				{
+					"speaker": "dax",
+					"content": {
+						"korean": "아재가 저렇게 순순히 물러나는 건 처음 봐요! 역시 대단하세요!"
+					}
+				}
+			],
+			"risk": {
+				"chance": "high",
+				"bad": {
+					"effects": {
+						"gold": -20
+					},
+					"reward": [],
+					"result": [
+						{
+							"speaker": "narrator",
+							"content": {
+								"korean": "아재에게 길을 비키라고 단호하게 말하자, 아재는 당신이 자신의 규칙을 무시한다며 버럭 소리친다."
+							}
+						},
+						{
+							"speaker": "narrator",
+							"content": {
+								"korean": "아재는 지게차를 들어 길을 완전히 막아버린다."
+							}
+						},
+						{
+							"speaker": "dax",
+							"content": {
+								"korean": "으악! 아재가 지게차로 길을 막아버렸어요! 이제 어떻게 하죠?"
+							}
+						}
+					]
+				}
+			}
+		},
+		{
+			"text": {
+				"korean": "아재의 엉뚱한 규칙이 이치에 맞지 않음을 논리적으로 설명한다."
+			},
+			"path": "stat",
+			"mbti": "NT",
+			"require": {
+				"stat": "reason",
+				"op": "<=",
+				"value": -40
+			},
+			"flag": "uncle_admires_reason",
+			"effects": {
+				"community": 10,
+				"echo": 15,
+				"reason": -20
+			},
+			"reward": [
+				"intelligence_up"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "당신의 논리적인 설명에 아재는 고개를 갸웃거린다."
+					}
+				},
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "아재는 결국 규칙을 고집하는 대신 길을 터준다."
+					}
+				},
+				{
+					"speaker": "dax",
+					"content": {
+						"korean": "아재가 저렇게 납득하는 건 처음 봐요! 역시 당신은 최고예요!"
+					}
+				}
+			]
+		},
+		{
+			"text": {
+				"korean": "아재의 엉뚱한 규칙을 따라, 드럼통 위를 춤추듯이 지나간다."
+			},
+			"path": "fun",
+			"mbti": "EP",
+			"effects": {
+				"gold": 50,
+				"reason": -20,
+				"echo": 15
+			},
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "당신의 춤사위에 아재는 눈이 휘둥그래진다."
+					}
+				},
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "아재는 박수를 치며 당신에게 길을 터주고, 덩달아 춤을 추기 시작한다."
+					}
+				},
+				{
+					"speaker": "dax",
+					"content": {
+						"korean": "아재가 춤을 다 추네요! 저런 모습은 처음 봐요!"
+					}
+				}
+			],
+			"risk": {
+				"chance": "low",
+				"bad": {
+					"reward": [
+						"hp_down"
+					],
+					"result": [
+						{
+							"speaker": "narrator",
+							"content": {
+								"korean": "드럼통 위에서 춤을 추다 넘어지며 드럼통을 넘어뜨린다."
+							}
+						},
+						{
+							"speaker": "narrator",
+							"content": {
+								"korean": "넘어진 드럼통이 아재의 지게차를 긁고 지나간다."
+							}
+						},
+						{
+							"speaker": "dax",
+							"content": {
+								"korean": "으악! 아재의 지게차에 상처가 났어요! 아재가 화낼 거예요!"
+							}
+						}
+					]
+				}
+			}
+		}
+	],
+	"tags": [
+		"forklift_uncle",
+		"dax"
+	],
+	"_design": {
+		"slot": "A",
+		"kind": "rep",
+		"person": {
+			"id": "forklift_uncle",
+			"name": "지게차 아재",
+			"role": "지게차 기사"
+		},
+		"wants": "지게차 아재가 만든 엉뚱한 규칙을 어기지 않고 길을 지나가고 싶어 한다.",
+		"rule_link": "앞뒤 살피지 않고 자기 규칙만 고집하는 아재를 통해, 겉만 보고 판단하는 위험을 보여준다.",
+		"rep": "reason-",
+		"events": {},
+		"flags": {
+			"uncle_blocked_path": {
+				"kind": "bad",
+				"boss_penalty": -1,
+				"label": {
+					"korean": "아재 길막"
+				},
+				"boss_line": {
+					"korean": "지게차 아재가 길을 막아서서 공격 기회를 놓친다."
+				}
+			},
+			"uncle_respect_rules": {
+				"kind": "good",
+				"boss_penalty": 1,
+				"label": {
+					"korean": "아재 규칙 존중"
+				},
+				"boss_choice": {
+					"korean": "지게차 아재가 당신에게 길을 비켜주며 싸움을 돕는다."
+				}
+			},
+			"uncle_admires_reason": {
+				"kind": "good",
+				"boss_penalty": 2,
+				"label": {
+					"korean": "아재 이성 감탄"
+				},
+				"boss_choice": {
+					"korean": "지게차 아재가 당신에게 길을 비켜주며 싸움을 돕는다."
+				}
+			}
+		}
+	}
+}

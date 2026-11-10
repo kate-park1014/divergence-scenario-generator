@@ -1,0 +1,296 @@
+{
+	"id": "card_05_banjang_altruistic_plea",
+	"title": {
+		"korean": "부두 반장의 절박한 부탁"
+	},
+	"intensity": "calm",
+	"after_story": 3,
+	"before_story": 5,
+	"condition": {
+		"leaning": "community+",
+		"among": [
+			"fighting-",
+			"fighting+",
+			"community-",
+			"community+",
+			"reason-",
+			"reason+"
+		],
+		"min": 20
+	},
+	"urgency": 8,
+	"leaning": "community+",
+	"background_tags": [
+		"foggy",
+		"pier",
+		"night",
+		"fewpeople",
+		"tense"
+	],
+	"background_image": "https://imagedelivery.net/WTEqQNGFb-l-IHS6IGnzUQ/34e34488-79fd-4c9b-6dc0-d4e9f13e8b00/public",
+	"dialogue": [
+		{
+			"speaker": "narrator",
+			"content": {
+				"korean": "닥스의 차가 안개 속 부두 도로를 달리다 갑자기 멈춘다."
+			}
+		},
+		{
+			"speaker": "narrator",
+			"content": {
+				"korean": "낡은 작업복을 입은 부두 일꾼 반장이 길을 가로막고 서 있다."
+			}
+		},
+		{
+			"speaker": "banjang",
+			"content": {
+				"korean": "당신이 그, 동네 사람 일이라면 발 벗고 나선다는 해결사죠? 딱 제 일에 맞겠네요."
+			}
+		},
+		{
+			"speaker": "banjang",
+			"content": {
+				"korean": "저기, 회장님 비서님이 요즘 좀 이상해요."
+			}
+		},
+		{
+			"speaker": "banjang",
+			"content": {
+				"korean": "그 양반이 등대에 숨겨둔 게 있는데… 저 혼자서는 도저히 못 들어가겠어서…"
+			}
+		},
+		{
+			"speaker": "dax",
+			"content": {
+				"korean": "비서님이 등대에 뭘 숨겼다고요? 그럼 저희가 찾는 기금일 수도 있겠네요!"
+			}
+		},
+		{
+			"speaker": "banjang",
+			"content": {
+				"korean": "맞아요! 우리 부두 어르신들 기금일 수도 있단 말입니다!"
+			}
+		}
+	],
+	"choices": [
+		{
+			"text": {
+				"korean": "부두 사람들을 위해 비서의 물건을 찾아주겠다며 흔쾌히 돕겠다고 한다."
+			},
+			"path": "easy",
+			"mbti": "EN",
+			"flag": "banjang_community_hero",
+			"effects": {
+				"echo": 10,
+				"community": 20
+			},
+			"reward": [
+				"heal"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "반장이 당신의 말에 감격한다. 그의 눈에 눈물이 글썽인다."
+					}
+				},
+				{
+					"speaker": "banjang",
+					"content": {
+						"korean": "고맙습니다! 우리 부두 어르신들이 모두 당신을 기억할 겁니다!"
+					}
+				},
+				{
+					"speaker": "dax",
+					"content": {
+						"korean": "역시 비서님 물건은 좋은 일에 쓰여야죠!"
+					}
+				}
+			],
+			"risk": {
+				"chance": "mid",
+				"bad": {
+					"reward": [
+						"hp_down"
+					],
+					"result": [
+						{
+							"speaker": "narrator",
+							"content": {
+								"korean": "반장이 고마워하며 당신의 손을 잡는다. 그의 손에 들린 낡은 톱날이 당신의 손을 스친다."
+							}
+						},
+						{
+							"speaker": "banjang",
+							"content": {
+								"korean": "아이고! 제가 너무 기뻐서 그만! 괜찮으십니까?!"
+							}
+						},
+						{
+							"speaker": "dax",
+							"content": {
+								"korean": "반장님, 칼날은 좀 넣어두세요! 다치겠어요!"
+							}
+						}
+					]
+				}
+			}
+		},
+		{
+			"text": {
+				"korean": "부두 사람들을 돕기 전에 먼저 비서가 물건을 숨긴 이유를 물어본다."
+			},
+			"path": "hard",
+			"mbti": "IT",
+			"flag": "banjang_hesitant_reveal",
+			"effects": {
+				"community": -20,
+				"reason": 10
+			},
+			"reward": [
+				"defense_up"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "반장이 당신의 질문에 당황한다. 땀을 삐질 흘리며 말을 더듬는다."
+					}
+				},
+				{
+					"speaker": "banjang",
+					"content": {
+						"korean": "그게… 이유야 뭐… 그냥 숨겨둔 거지요! 중요한 물건이니까!"
+					}
+				},
+				{
+					"speaker": "dax",
+					"content": {
+						"korean": "반장님, 너무 티 나는데요?"
+					}
+				}
+			],
+			"risk": {
+				"chance": "high",
+				"bad": {
+					"effects": {
+						"gold": -20
+					},
+					"reward": [],
+					"result": [
+						{
+							"speaker": "narrator",
+							"content": {
+								"korean": "반장이 당신의 질문에 짜증을 낸다. 갑자기 차 앞에 드러누워 길을 막는다."
+							}
+						},
+						{
+							"speaker": "banjang",
+							"content": {
+								"korean": "묻지 마! 그냥 빨리 가서 찾아와! 안 그러면 한 발짝도 못 가!"
+							}
+						},
+						{
+							"speaker": "dax",
+							"content": {
+								"korean": "반장님! 이러다 경찰이라도 오면 큰일 나요!"
+							}
+						}
+					]
+				}
+			}
+		},
+		{
+			"text": {
+				"korean": "자신이 부두 사람들을 위해 이 일을 해결할 테니 반장에게 기다리라고 지시한다."
+			},
+			"path": "stat",
+			"mbti": "ES",
+			"require": {
+				"stat": "community",
+				"op": ">=",
+				"value": 40
+			},
+			"flag": "banjang_loyal_support",
+			"effects": {
+				"community": 30,
+				"echo": 15
+			},
+			"reward": [
+				"shield"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "반장이 당신의 단호한 말에 감동한다. 눈물을 훔치며 고개를 끄덕인다."
+					}
+				},
+				{
+					"speaker": "banjang",
+					"content": {
+						"korean": "네! 해결사님 말씀이라면 믿겠습니다! 제가 여기서 기다리고 있겠습니다!"
+					}
+				},
+				{
+					"speaker": "dax",
+					"content": {
+						"korean": "든든하네요! 반장님이 저렇게 순종적인 건 처음 봐요!"
+					}
+				}
+			]
+		}
+	],
+	"tags": [
+		"banjang",
+		"dax"
+	],
+	"_design": {
+		"slot": "B",
+		"kind": "rep",
+		"person": {
+			"id": "banjang",
+			"name": "반장",
+			"role": "부두 일꾼 반장"
+		},
+		"wants": "비서님이 등대에 숨겨둔, 부두 사람들을 위한 물건을 찾아달라고 부탁한다.",
+		"rule_link": "먼저 비서의 사정을 묻기 전에 부두 사람들을 돕기 위해 물건을 찾아주려는 행동이 사정을 묻기 전에 공동체의 이득을 우선하는 것과 이어진다.",
+		"rep": "community+",
+		"events": {},
+		"flags": {
+			"banjang_community_hero": {
+				"kind": "bad",
+				"boss_penalty": -1,
+				"label": {
+					"korean": "공동체의 영웅"
+				},
+				"boss_line": {
+					"korean": "부두 반장이 보스에게 당신을 공동체의 영웅이라 칭송하며 비서의 비밀을 지키려 한다."
+				}
+			},
+			"banjang_hesitant_reveal": {
+				"kind": "good",
+				"boss_penalty": 1,
+				"label": {
+					"korean": "주저하는 고백"
+				},
+				"boss_choice": {
+					"korean": "부두 반장이 비서의 비밀에 대해 주저하며 보스에게 혼란을 준다."
+				}
+			},
+			"banjang_loyal_support": {
+				"kind": "good",
+				"boss_penalty": 2,
+				"label": {
+					"korean": "반장의 충성"
+				},
+				"boss_choice": {
+					"korean": "부두 반장이 비서의 물건을 찾으려 보스에게 적극적으로 협력하며 중요한 정보를 제공한다."
+				}
+			}
+		}
+	}
+}

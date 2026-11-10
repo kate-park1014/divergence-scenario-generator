@@ -1,0 +1,312 @@
+{
+	"id": "card_03_ledger_mystery",
+	"title": {
+		"korean": "장부의 미궁"
+	},
+	"intensity": "calm",
+	"after_story": 1,
+	"before_story": 3,
+	"condition": {
+		"leaning": "reason-",
+		"among": [
+			"fighting-",
+			"fighting+",
+			"community-",
+			"community+",
+			"reason-",
+			"reason+"
+		],
+		"min": 20
+	},
+	"urgency": 8,
+	"leaning": "reason-",
+	"background_tags": [
+		"office",
+		"night",
+		"dimlight",
+		"alone",
+		"tense"
+	],
+	"background_image": "https://imagedelivery.net/WTEqQNGFb-l-IHS6IGnzUQ/19262ed2-d440-4ec4-8977-f580a3b06000/public",
+	"dialogue": [
+		{
+			"speaker": "night_accountant",
+			"content": {
+				"korean": "당신이 그… 모든 서류를 꼼꼼하게 처리한다는 해결사시죠? 소문 들었습니다."
+			}
+		},
+		{
+			"speaker": "night_accountant",
+			"content": {
+				"korean": "이 계산이… 이 계산이 맞지 않습니다! 장부가… 장부가 비어 있어서…"
+			}
+		},
+		{
+			"speaker": "dax",
+			"content": {
+				"korean": "으아, 벌써 야근에 찌든 얼굴이네요. 빨리 도와줘야 할 것 같아요!"
+			}
+		},
+		{
+			"speaker": "night_accountant",
+			"content": {
+				"korean": "이대로는… 자료실 안쪽의 예전 기록을 봐야 하는데, 절차가 너무 복잡해요. 제 힘으로는 도저히…"
+			}
+		}
+	],
+	"choices": [
+		{
+			"text": {
+				"korean": "장부 오류의 원인을 찾아 절차대로 해결해 준다."
+			},
+			"path": "easy",
+			"mbti": "ST",
+			"flag": "accountant_finds_clue",
+			"effects": {
+				"reason": -20,
+				"gold": 100
+			},
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "당신이 장부의 구멍을 찾아내자 야근 직원은 감탄한다."
+					}
+				},
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "회계팀 야근 직원이 잊고 있던 서류 한 묶음을 꺼내 준다."
+					}
+				},
+				{
+					"speaker": "dax",
+					"content": {
+						"korean": "와, 해결사님 덕분에 한숨 돌리겠네요!"
+					}
+				}
+			],
+			"risk": {
+				"chance": "mid",
+				"bad": {
+					"effects": {
+						"gold": -30
+					},
+					"reward": [],
+					"result": [
+						{
+							"speaker": "narrator",
+							"content": {
+								"korean": "당신이 오류를 찾으려 애쓰는 동안 야근 직원이 엉뚱한 장부를 가져온다."
+							}
+						},
+						{
+							"speaker": "narrator",
+							"content": {
+								"korean": "장부의 오류는 오히려 더 복잡하게 꼬여 버린다."
+							}
+						},
+						{
+							"speaker": "dax",
+							"content": {
+								"korean": "으악! 저러다 장부와 한 몸이 되겠어요!"
+							}
+						}
+					]
+				}
+			}
+		},
+		{
+			"text": {
+				"korean": "복잡한 절차를 무시하고 자료실 안으로 들어갈 방법을 찾는다."
+			},
+			"path": "hard",
+			"mbti": "NT",
+			"flag": "data_room_door_stuck",
+			"effects": {
+				"fighting": 10,
+				"reason": 20
+			},
+			"reward": [
+				"defense_up"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "야근 직원이 당황하는 틈을 타 당신이 자료실 문을 열었다."
+					}
+				},
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "하지만 야근 직원의 서류 더미가 문에 끼어 버린다."
+					}
+				},
+				{
+					"speaker": "dax",
+					"content": {
+						"korean": "어, 저거 중요한 서류 같은데… 괜찮을까요?"
+					}
+				}
+			],
+			"risk": {
+				"chance": "high",
+				"bad": {
+					"effects": {
+						"gold": -20
+					},
+					"reward": [],
+					"result": [
+						{
+							"speaker": "narrator",
+							"content": {
+								"korean": "당신이 자료실 문을 열려 하자 야근 직원이 필사적으로 막아선다."
+							}
+						},
+						{
+							"speaker": "narrator",
+							"content": {
+								"korean": "몸싸움 끝에 야근 직원의 안경이 바닥에 떨어져 깨진다."
+							}
+						},
+						{
+							"speaker": "dax",
+							"content": {
+								"korean": "아이고, 저 안경 비싸 보이는데!"
+							}
+						}
+					]
+				}
+			}
+		},
+		{
+			"text": {
+				"korean": "명확한 근거로 야근 직원을 설득해 자료실 사용 절차를 밟는다."
+			},
+			"path": "stat",
+			"mbti": "TJ",
+			"require": {
+				"stat": "reason",
+				"op": "<=",
+				"value": -40
+			},
+			"flag": "accountant_trusts_you",
+			"effects": {
+				"echo": 10,
+				"reason": -20
+			},
+			"reward": [
+				"intelligence_up"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "당신의 논리적인 설명에 야근 직원이 고개를 끄덕인다."
+					}
+				},
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "야근 직원이 자료실 문을 열고 안쪽을 가리킨다."
+					}
+				},
+				{
+					"speaker": "dax",
+					"content": {
+						"korean": "와, 해결사님 말이 마법 같네요!"
+					}
+				}
+			]
+		},
+		{
+			"text": {
+				"korean": "야근 직원에게 수고비를 쥐여 주고 자료실 문을 열어 달라고 한다."
+			},
+			"path": "gold",
+			"mbti": "ES",
+			"require": {
+				"stat": "gold",
+				"op": ">=",
+				"value": 100
+			},
+			"effects": {
+				"gold": -100
+			},
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "당신이 건넨 봉투에 야근 직원이 잠시 망설이더니 고개를 숙인다."
+					}
+				},
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "야근 직원이 조용히 자료실 문을 열어 준다."
+					}
+				},
+				{
+					"speaker": "dax",
+					"content": {
+						"korean": "절차가 복잡하다더니, 봉투 한 장에 절차가 끝났네요."
+					}
+				}
+			]
+		}
+	],
+	"tags": [
+		"night_accountant",
+		"dax"
+	],
+	"_design": {
+		"slot": "A",
+		"kind": "rep",
+		"person": {
+			"id": "night_accountant",
+			"name": "회계팀 야근 직원",
+			"role": "회계팀 야근 직원"
+		},
+		"wants": "복잡하게 꼬인 장부 문제를 해결해 자료실에 들어갈 절차를 찾으려 한다.",
+		"rule_link": "눈앞의 장부 증거가 모순될 때, 보이는 대로 믿을지 원칙대로 파고들지 선택해야 한다.",
+		"rep": "reason-",
+		"events": {},
+		"flags": {
+			"accountant_finds_clue": {
+				"kind": "bad",
+				"boss_penalty": -1,
+				"label": {
+					"korean": "야근 직원의 단서"
+				},
+				"boss_line": {
+					"korean": "회계팀 야근 직원이 어두운 서버실의 전선 회로도를 알려준다."
+				}
+			},
+			"data_room_door_stuck": {
+				"kind": "good",
+				"boss_penalty": 1,
+				"label": {
+					"korean": "자료실 문 걸쇠"
+				},
+				"boss_choice": {
+					"korean": "어두운 서버실 문이 열려 있는데, 안에서 '찰칵' 소리가 들린다."
+				}
+			},
+			"accountant_trusts_you": {
+				"kind": "good",
+				"boss_penalty": 2,
+				"label": {
+					"korean": "회계 직원의 신뢰"
+				},
+				"boss_choice": {
+					"korean": "회계팀 야근 직원이 서버실 자료 접근에 필요한 정보를 알려준다."
+				}
+			}
+		}
+	}
+}

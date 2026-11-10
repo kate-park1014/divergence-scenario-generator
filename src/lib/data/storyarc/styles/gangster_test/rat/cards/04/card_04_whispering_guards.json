@@ -1,0 +1,262 @@
+{
+	"id": "card_04_whispering_guards",
+	"title": {
+		"korean": "경호원들의 수군거림"
+	},
+	"intensity": "calm",
+	"after_story": 7,
+	"before_story": 9,
+	"background_tags": [
+		"waiting_room",
+		"evening",
+		"fluorescent",
+		"gossiping",
+		"tense"
+	],
+	"background_image": "https://imagedelivery.net/WTEqQNGFb-l-IHS6IGnzUQ/f31fe4a8-f7d1-4a8f-cc50-2369a0919900/public",
+	"dialogue": [
+		{
+			"speaker": "narrator",
+			"content": {
+				"korean": "대기실 한쪽에서 경호원 둘이 귓속말을 주고받는다."
+			}
+		},
+		{
+			"speaker": "dax",
+			"content": {
+				"korean": "쟤네들, 누님 얘기를 하는 것 같아요."
+			}
+		},
+		{
+			"speaker": "guard_a",
+			"content": {
+				"korean": "그날 밤 누님이 어디 계셨는지 아는 사람은 우리 둘뿐이라잖아."
+			}
+		},
+		{
+			"speaker": "narrator",
+			"content": {
+				"korean": "다른 경호원이 당신 쪽을 힐끗 보더니 고개를 젓는다."
+			}
+		}
+	],
+	"choices": [
+		{
+			"text": {
+				"korean": "경호원들의 대화를 엿들어 누님의 사적인 약점을 찾아낸다."
+			},
+			"path": "easy",
+			"mbti": "ST",
+			"effects": {
+				"fighting": 10,
+				"echo": -5
+			},
+			"reward": [
+				"attack_up"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "당신이 귀를 쫑긋 세우자 경호원들이 깜짝 놀라며 말을 멈춘다."
+					}
+				},
+				{
+					"speaker": "guard_a",
+					"content": {
+						"korean": "으악, 들었어? 누님이 알면 죽는다!"
+					}
+				},
+				{
+					"speaker": "dax",
+					"content": {
+						"korean": "쟤네들 얼굴이 파래졌어요!"
+					}
+				}
+			],
+			"risk": {
+				"chance": "mid",
+				"bad": {
+					"effects": {
+						"gold": -20
+					},
+					"reward": [],
+					"result": [
+						{
+							"speaker": "narrator",
+							"content": {
+								"korean": "당신이 귀를 쫑긋 세우자 경호원들이 당신의 행동을 오해한다."
+							}
+						},
+						{
+							"speaker": "guard_a",
+							"content": {
+								"korean": "저 사람, 설마 누님한테 우리를 고자질하려는 거 아니야?"
+							}
+						},
+						{
+							"speaker": "dax",
+							"content": {
+								"korean": "쟤네들이 우리를 째려보는데요!"
+							}
+						}
+					]
+				}
+			}
+		},
+		{
+			"text": {
+				"korean": "경호원들의 대화를 못 들은 척하며, 그들의 사생활을 존중한다."
+			},
+			"path": "hard",
+			"mbti": "IN",
+			"effects": {
+				"community": 10,
+				"echo": 5
+			},
+			"reward": [
+				"defense_up"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "당신이 눈길을 돌리자 경호원들이 안도한 듯 서로를 마주 본다."
+					}
+				},
+				{
+					"speaker": "guard_a",
+					"content": {
+						"korean": "휴, 못 들은 것 같지?"
+					}
+				},
+				{
+					"speaker": "dax",
+					"content": {
+						"korean": "쟤네들이 슬그머니 고개를 끄덕이네요!"
+					}
+				}
+			],
+			"risk": {
+				"chance": "high",
+				"bad": {
+					"effects": {
+						"gold": -20
+					},
+					"reward": [],
+					"result": [
+						{
+							"speaker": "narrator",
+							"content": {
+								"korean": "당신이 못 들은 척하자 경호원들이 더 큰 소리로 떠들기 시작한다."
+							}
+						},
+						{
+							"speaker": "guard_a",
+							"content": {
+								"korean": "저 사람, 우리가 하는 얘기 하나도 안 듣는 눈치인데?"
+							}
+						},
+						{
+							"speaker": "dax",
+							"content": {
+								"korean": "쟤네들이 더 신나서 떠들어요!"
+							}
+						}
+					]
+				}
+			}
+		},
+		{
+			"text": {
+				"korean": "{actor}이(가) 경호원들에게 누님이 피곤하면 금고실 방어가 어떻게 되는지 따지듯 묻는다."
+			},
+			"path": "lock",
+			"mbti": "NT",
+			"require": {
+				"mbti": "NT"
+			},
+			"effects": {
+				"reason": 15,
+				"echo": 5
+			},
+			"reward": [
+				"intelligence_up"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "당신의 질문에 경호원들이 당황한 듯 서로 눈치를 본다."
+					}
+				},
+				{
+					"speaker": "guard_a",
+					"content": {
+						"korean": "그... 그건 저희가 알 바가 아닙니다만..."
+					}
+				},
+				{
+					"speaker": "dax",
+					"content": {
+						"korean": "쟤네들, 질문에 대한 답을 못 찾아서 버벅거리네요!"
+					}
+				}
+			]
+		},
+		{
+			"text": {
+				"korean": "경호원들에게 지폐를 걸며 \"누님이 오늘 몇 시에 퇴근할지\" 내기를 하자고 한다."
+			},
+			"path": "gold",
+			"mbti": "ES",
+			"require": {
+				"stat": "gold",
+				"op": ">=",
+				"value": 100
+			},
+			"effects": {
+				"gold": -100
+			},
+			"seed": null,
+			"result": [],
+			"event": "minigame_slot",
+			"event_intro": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "당신의 내기 제안에 경호원들이 눈을 반짝인다."
+					}
+				},
+				{
+					"speaker": "guard_a",
+					"content": {
+						"korean": "오, 재미있겠는데요? 좋아요, 한판 붙어 봅시다!"
+					}
+				}
+			]
+		}
+	],
+	"tags": [
+		"guard_a",
+		"dax"
+	],
+	"_design": {
+		"slot": "D",
+		"kind": "normal",
+		"person": {
+			"id": "guard_a",
+			"name": "경호원 갑",
+			"role": "경호원"
+		},
+		"wants": "누님의 사적인 이야기를 숨기고 싶지만, 입이 근질거린다",
+		"rule_link": "경호원들이 누님의 힘든 사정을 수군거릴 때, 그들의 말을 엿들어 약점으로 삼을지, 그들의 사생활을 존중해 모른 척할지",
+		"events": {
+			"gold": "경호원들이 당신의 제안에 넘어와 내기를 시작한다."
+		},
+		"flags": {}
+	}
+}

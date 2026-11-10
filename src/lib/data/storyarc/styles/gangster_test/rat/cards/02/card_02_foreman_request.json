@@ -1,0 +1,347 @@
+{
+	"id": "card_02_foreman_request",
+	"title": {
+		"korean": "곤란한 반장의 부탁"
+	},
+	"intensity": "calm",
+	"after_story": 7,
+	"before_story": 9,
+	"condition": {
+		"leaning": "fighting+",
+		"among": [
+			"fighting-",
+			"fighting+",
+			"community-",
+			"community+",
+			"reason-",
+			"reason+"
+		],
+		"min": 20
+	},
+	"urgency": 8,
+	"leaning": "fighting+",
+	"background_tags": [
+		"yard",
+		"night",
+		"dim",
+		"none",
+		"tense"
+	],
+	"background_image": "https://imagedelivery.net/WTEqQNGFb-l-IHS6IGnzUQ/92b9883a-8a79-4a7a-3661-8295816bd900/public",
+	"dialogue": [
+		{
+			"speaker": "narrator",
+			"content": {
+				"korean": "야적장 통로를 걷던 당신 앞에 낡은 손수레를 끌고 낑낑거리는 하역 반장이 보였다."
+			}
+		},
+		{
+			"speaker": "foreman_d",
+			"content": {
+				"korean": "어이, 당신들이 그 어려운 사람 돕는다는 해결사들 아니오? 마침 잘 만났네, 이거 좀 거들어 줄 수 있나?"
+			}
+		},
+		{
+			"speaker": "dax",
+			"content": {
+				"korean": "반장님, 혹시 무슨 문제라도 있으세요?"
+			}
+		}
+	],
+	"choices": [
+		{
+			"text": {
+				"korean": "반장의 짐을 들어주며 자연스럽게 컨테이너 쪽으로 이동한다."
+			},
+			"path": "easy",
+			"mbti": "IS",
+			"flag": "foreman_tired",
+			"effects": {
+				"echo": 10,
+				"fighting": -20
+			},
+			"reward": [
+				"attack_up"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "당신이 손수레를 밀자 반장이 환하게 웃으며 길을 비켜주었다."
+					}
+				},
+				{
+					"speaker": "foreman_d",
+					"content": {
+						"korean": "아이고, 허리 나갈 뻔했네."
+					}
+				},
+				{
+					"speaker": "foreman_d",
+					"content": {
+						"korean": "밥이라도 한 끼 사주고 싶은데, 마침 점심시간이라 나도 밥 먹으러 가야 해서 말이야."
+					}
+				},
+				{
+					"speaker": "dax",
+					"content": {
+						"korean": "간부님 찾으러 가는 길에 점심시간이라니, 참 얄밉네요."
+					}
+				}
+			],
+			"risk": {
+				"chance": "mid",
+				"bad": {
+					"effects": {
+						"gold": -20
+					},
+					"reward": [],
+					"result": [
+						{
+							"speaker": "narrator",
+							"content": {
+								"korean": "당신이 손수레를 미는 동안 반장이 주머니에서 막대사탕을 꺼내 먹었다."
+							}
+						},
+						{
+							"speaker": "foreman_d",
+							"content": {
+								"korean": "아이고, 젊어서 좋구먼. 이 정도는 식은 죽 먹기지? 나는 이거나 먹고 있을 테니 어서 밀어 보쇼."
+							}
+						},
+						{
+							"speaker": "dax",
+							"content": {
+								"korean": "우리가 반장님 노예인가요? 좀 너무하시네요!"
+							}
+						}
+					]
+				}
+			}
+		},
+		{
+			"text": {
+				"korean": "지금은 바쁘다며 반장의 부탁을 거절하고 다른 길을 찾아본다."
+			},
+			"path": "hard",
+			"mbti": "ET",
+			"flag": "foreman_grudge_detour",
+			"effects": {
+				"echo": -5,
+				"fighting": 20
+			},
+			"reward": [
+				"defense_up"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "반장이 눈을 흘기며 입에 문 사탕을 툭 뱉어냈다."
+					}
+				},
+				{
+					"speaker": "foreman_d",
+					"content": {
+						"korean": "흥, 소문만 요란하구먼. 그럼 저 멀리 돌아가는 길로 가든가."
+					}
+				},
+				{
+					"speaker": "dax",
+					"content": {
+						"korean": "저 길은 너무 멀고 위험해 보여요…."
+					}
+				}
+			],
+			"risk": {
+				"chance": "high",
+				"bad": {
+					"effects": {
+						"gold": -20
+					},
+					"reward": [],
+					"result": [
+						{
+							"speaker": "narrator",
+							"content": {
+								"korean": "당신의 거절에 반장이 콧방귀를 뀌더니 손수레를 당신이 가려는 길 한가운데 놓았다."
+							}
+						},
+						{
+							"speaker": "foreman_d",
+							"content": {
+								"korean": "쳇, 바쁘다고? 그럼 더 바빠져 보시지 그래!"
+							}
+						},
+						{
+							"speaker": "dax",
+							"content": {
+								"korean": "아니, 저 반장님은 왜 굳이 길을 막으시는 거예요!"
+							}
+						}
+					]
+				}
+			}
+		},
+		{
+			"text": {
+				"korean": "반장의 손수레를 대신 밀어주며 컨테이너 안의 상황을 묻는다."
+			},
+			"path": "stat",
+			"mbti": "EN",
+			"require": {
+				"stat": "fighting",
+				"op": ">=",
+				"value": 40
+			},
+			"flag": "container_open_clue",
+			"effects": {
+				"echo": 5,
+				"fighting": 20,
+				"community": 10
+			},
+			"reward": [
+				"heal"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "당신의 도움에 반장이 감동한 듯 손수레를 놓더니 당신의 손을 잡았다."
+					}
+				},
+				{
+					"speaker": "foreman_d",
+					"content": {
+						"korean": "역시 소문대로 인정이 넘치는구먼!"
+					}
+				},
+				{
+					"speaker": "foreman_d",
+					"content": {
+						"korean": "근데 저 안에서 콧노래 소리가 계속 나는데, 컨테이너 문이 덜 닫힌 것 같더구먼."
+					}
+				},
+				{
+					"speaker": "dax",
+					"content": {
+						"korean": "어, 컨테이너 문이 덜 닫혔다는 건가요?"
+					}
+				}
+			]
+		},
+		{
+			"text": {
+				"korean": "반장이 문 사탕을 뺏어 먹으며 '반장님도 사탕 좋아하시네요?' 하고 농담을 건넨다."
+			},
+			"path": "fun",
+			"mbti": "EP",
+			"effects": {
+				"fighting": -10,
+				"echo": 15,
+				"gold": 50
+			},
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "반장이 당황한 표정을 짓더니 이내 박장대소하며 허벅지를 쳤다."
+					}
+				},
+				{
+					"speaker": "foreman_d",
+					"content": {
+						"korean": "하하하, 이 녀석 보게! 여기, 나 대신 이거나 먹고 떨어져!"
+					}
+				},
+				{
+					"speaker": "dax",
+					"content": {
+						"korean": "세상에, 반장님 사탕을 뺏어 먹다니…! 근데 돈은 왜 주시는 거죠?"
+					}
+				}
+			],
+			"risk": {
+				"chance": "low",
+				"bad": {
+					"reward": [
+						"attack_down"
+					],
+					"result": [
+						{
+							"speaker": "narrator",
+							"content": {
+								"korean": "반장이 당신의 손에서 사탕을 뺏더니 얼굴을 찡그렸다."
+							}
+						},
+						{
+							"speaker": "foreman_d",
+							"content": {
+								"korean": "흥, 남의 걸 함부로 뺏어 먹는 거 아니야! 딱 걸렸어, 이거나 받아라!"
+							}
+						},
+						{
+							"speaker": "dax",
+							"content": {
+								"korean": "반장님, 왜 그렇게 화를 내시는 거예요?"
+							}
+						}
+					]
+				}
+			}
+		}
+	],
+	"tags": [
+		"foreman_d",
+		"dax"
+	],
+	"_design": {
+		"slot": "D",
+		"kind": "rep",
+		"person": {
+			"id": "foreman_d",
+			"name": "하역 반장",
+			"role": "하역 반장"
+		},
+		"wants": "야적장 통로를 지나려는 히어로들을 막거나 이용하려 합니다.",
+		"rule_link": "소문으로만 듣고 판단하는 것과, 실제로 겪어보고 판단하는 것은 다릅니다. 반장은 히어로들의 소문만 듣고 그들을 대합니다.",
+		"rep": "fighting+",
+		"events": {},
+		"flags": {
+			"foreman_tired": {
+				"kind": "bad",
+				"boss_penalty": -1,
+				"label": {
+					"korean": "반장 지침"
+				},
+				"boss_line": {
+					"korean": "하역 반장이 당신이 지나온 길에 놓인 낡은 손수레를 치우지 못해 길을 막는다."
+				}
+			},
+			"foreman_grudge_detour": {
+				"kind": "good",
+				"boss_penalty": 1,
+				"label": {
+					"korean": "반장 우회로"
+				},
+				"boss_choice": {
+					"korean": "하역 반장이 당신에게 멀리 돌아가라며 다른 길을 알려주고, 그 길에서 창고 간부의 약점을 발견한다."
+				}
+			},
+			"container_open_clue": {
+				"kind": "good",
+				"boss_penalty": 2,
+				"label": {
+					"korean": "컨테이너 문"
+				},
+				"boss_choice": {
+					"korean": "창고 간부가 있는 컨테이너 문이 덜 닫혔다는 정보를 미리 얻는다."
+				}
+			}
+		}
+	}
+}

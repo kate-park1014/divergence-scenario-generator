@@ -1,0 +1,250 @@
+{
+	"id": "card_01_clerk_warning",
+	"title": {
+		"korean": "겁 많은 경리부장님"
+	},
+	"intensity": "calm",
+	"after_story": 7,
+	"before_story": 9,
+	"background_tags": [
+		"alley_entrance",
+		"night",
+		"dim_light",
+		"sparse_crowd",
+		"tense_atmosphere"
+	],
+	"background_image": "https://imagedelivery.net/WTEqQNGFb-l-IHS6IGnzUQ/c96d4b68-2418-4a7d-abb7-c97346c17300/public",
+	"dialogue": [
+		{
+			"speaker": "narrator",
+			"content": {
+				"korean": "골목 어귀에서 앳된 얼굴의 막내 경리가 당신 앞을 가로막았다."
+			}
+		},
+		{
+			"speaker": "clerk",
+			"content": {
+				"korean": "저, 저기! 부장님은 겁이 많으셔서... 놀라게 하면 안 돼요!"
+			}
+		},
+		{
+			"speaker": "dax",
+			"content": {
+				"korean": "경리부장님이 겁이 많다고요? 장부를 태우고 계신데도요?"
+			}
+		},
+		{
+			"speaker": "clerk",
+			"content": {
+				"korean": "네, 불 조심하시라고 잔소리 들으면 깜짝 놀라서 더 실수를 하시거든요!"
+			}
+		},
+		{
+			"speaker": "narrator",
+			"content": {
+				"korean": "막내 경리는 두 손을 모으고 간절한 눈빛으로 당신을 올려다보았다."
+			}
+		}
+	],
+	"choices": [
+		{
+			"text": {
+				"korean": "막내 경리의 말을 무시하고 골목 안으로 밀고 들어간다"
+			},
+			"path": "easy",
+			"mbti": "EP",
+			"effects": {
+				"community": -10,
+				"fighting": -10
+			},
+			"reward": [
+				"hp_down"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "당신이 막내 경리를 밀치고 들어가자 그녀는 휘청거리며 \"안 돼!\" 하고 비명을 질렀다."
+					}
+				},
+				{
+					"speaker": "dax",
+					"content": {
+						"korean": "으아, 막내 경리 비명 소리 때문에 경리부장님이 눈치채겠어요!"
+					}
+				}
+			],
+			"risk": {
+				"chance": "mid",
+				"bad": {
+					"effects": {
+						"gold": -20
+					},
+					"reward": [
+						"attack_down"
+					],
+					"result": [
+						{
+							"speaker": "narrator",
+							"content": {
+								"korean": "당신이 막내 경리를 밀치고 들어가려 하자 그녀는 당신의 발을 밟아버렸다. \"아얏!\""
+							}
+						},
+						{
+							"speaker": "dax",
+							"content": {
+								"korean": "으악, 발은 괜찮으세요? 저러다 경리부장님이 우리 소리를 듣겠어요!"
+							}
+						}
+					]
+				}
+			}
+		},
+		{
+			"text": {
+				"korean": "막내 경리에게 부장님이 놀라면 어떤 실수를 하는지 묻는다"
+			},
+			"path": "hard",
+			"mbti": "IN",
+			"effects": {
+				"reason": 15,
+				"echo": 5
+			},
+			"reward": [
+				"intelligence_up"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "당신이 조심스럽게 묻자 막내 경리는 잠시 망설이더니 작은 목소리로 속삭였다."
+					}
+				},
+				{
+					"speaker": "clerk",
+					"content": {
+						"korean": "부장님은 어두운 곳에 혼자 있으면 꼭 주판으로 혼잣말을 하시거든요."
+					}
+				},
+				{
+					"speaker": "dax",
+					"content": {
+						"korean": "주판으로 혼잣말이요? 특이한 버릇이네요..."
+					}
+				}
+			],
+			"risk": {
+				"chance": "high",
+				"bad": {
+					"effects": {
+						"gold": -20
+					},
+					"reward": [],
+					"result": [
+						{
+							"speaker": "narrator",
+							"content": {
+								"korean": "당신이 묻자 막내 경리는 너무 당황한 나머지 말을 더듬으며 엉뚱한 이야기를 시작했다."
+							}
+						},
+						{
+							"speaker": "narrator",
+							"content": {
+								"korean": "\"그, 그게... 부장님은 붕어빵을 좋아하세요...!\""
+							}
+						},
+						{
+							"speaker": "dax",
+							"content": {
+								"korean": "으음... 지금 붕어빵 이야기가 중요한 게 아닌데..."
+							}
+						}
+					]
+				}
+			}
+		},
+		{
+			"text": {
+				"korean": "{actor}이(가) '경리부장님께 중요한 서류를 전달하러 왔다'며 막내 경리를 속인다"
+			},
+			"path": "lock",
+			"mbti": "NT",
+			"require": {
+				"mbti": "NT"
+			},
+			"effects": {
+				"echo": 5,
+				"reason": -10,
+				"gold": 50
+			},
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "당신의 동료 중 한 명이 능청스럽게 말하자 막내 경리는 눈을 동그랗게 뜨고 당신을 바라보았다."
+					}
+				},
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "\"서류요? 혹시... 이 봉투인가요?\""
+					}
+				},
+				{
+					"speaker": "dax",
+					"content": {
+						"korean": "이, 이건 또 무슨 상황이죠? 설마 진짜 서류가 있을 줄이야!"
+					}
+				}
+			]
+		},
+		{
+			"text": {
+				"korean": "막내 경리에게 지폐 몇 장을 쥐여 주며 길을 비켜 달라고 한다."
+			},
+			"path": "gold",
+			"mbti": "ES",
+			"require": {
+				"stat": "gold",
+				"op": ">=",
+				"value": 100
+			},
+			"effects": {
+				"gold": -100
+			},
+			"seed": null,
+			"result": [],
+			"event": "minigame_cup",
+			"event_intro": [
+				{
+					"speaker": "clerk",
+					"content": {
+						"korean": "돈을 받긴 하겠지만... 부장님께 들키면 안 되니까 이 안에서 중요한 게 뭔지 맞춰주세요!"
+					}
+				}
+			]
+		}
+	],
+	"tags": [
+		"clerk",
+		"dax"
+	],
+	"_design": {
+		"slot": "D",
+		"kind": "normal",
+		"person": {
+			"name": "막내 경리",
+			"id": "clerk",
+			"role": "경리부장 밑의 막내 경리"
+		},
+		"wants": "겁이 많은 경리부장을 보호하고 싶어 히어로들이 골목 안으로 들어가지 못하게 막는다.",
+		"rule_link": "막내 경리의 말만 듣고 상황을 판단할지, 혹은 그녀의 말을 더 자세히 들어볼지 선택한다.",
+		"events": {
+			"gold": "막내 경리가 뇌물을 받고 세 개의 종이컵 중 하나에 중요한 쪽지를 숨겨 당신이 고르게 한다."
+		},
+		"flags": {}
+	}
+}

@@ -1,0 +1,398 @@
+{
+	"cards": [
+		{
+			"wants": "손수레 바퀴 자국 길을 막고 무언가를 지키고 있다.",
+			"choices": [
+				{
+					"text": "길을 막는 어부 아재를 밀치고 지나간다.",
+					"effects": {
+						"fighting": -20,
+						"echo": -5
+					},
+					"mbti": "TJ",
+					"reward": [
+						"attack_up"
+					],
+					"path": "easy",
+					"result": [
+						{
+							"text": "밀려 넘어지는 어부 아재의 그물 사이로 낡은 나무 상자가 굴러 나온다.",
+							"speaker": "narrator"
+						},
+						{
+							"speaker": "narrator",
+							"text": "상자 안에는 삭은 명태 한 마리가 들어 있다."
+						},
+						{
+							"speaker": "dax",
+							"text": "어르신이 소중히 여기는 게 이거였어요? 냄새가…."
+						}
+					],
+					"flag": {
+						"label": "썩은 명태 파괴",
+						"boss_text": "어부 아재의 소중한 명태를 파괴하여 주변 상인들의 분노를 산다.",
+						"key": "old_fish_destroyed"
+					},
+					"risk_bad": {
+						"gold": -30,
+						"reward": [
+							"hp_down"
+						],
+						"result": [
+							{
+								"text": "어부 아재를 밀치려다 발이 그물에 걸려 넘어지고 만다.",
+								"speaker": "narrator"
+							},
+							{
+								"speaker": "narrator",
+								"text": "낡은 명태는 바닥에 부딪혀 산산조각 난다."
+							}
+						]
+					}
+				},
+				{
+					"risk_bad": {
+						"result": [
+							{
+								"speaker": "narrator",
+								"text": "당신이 묻자 어부 아재는 오히려 눈을 부라리며, 낡은 명태 상자를 꽉 끌어안는다."
+							},
+							{
+								"text": "이 귀한 복 명태를 노리는 거였나! 어림없다!",
+								"speaker": "fisherman_uncle"
+							},
+							{
+								"text": "실랑이를 벌이다 지갑에서 돈이 빠져나가는 소리가 들린다.",
+								"speaker": "narrator"
+							}
+						],
+						"gold": -20,
+						"reward": []
+					},
+					"flag": {
+						"label": "썩은 명태 발견",
+						"boss_text": "어부 아재에게서 복 명태에 대한 단서를 얻어 싸움 중 잠시 혼란을 준다.",
+						"key": "old_fish_found"
+					},
+					"path": "hard",
+					"reward": [
+						"intelligence_up"
+					],
+					"mbti": "NF",
+					"effects": {
+						"community": 10,
+						"fighting": 20
+					},
+					"text": "어부 아재에게 왜 길을 막는지 차분히 묻는다.",
+					"result": [
+						{
+							"speaker": "narrator",
+							"text": "어부 아재는 마지못해 그물 아래에 숨겨 둔 낡은 나무 상자를 보여준다."
+						},
+						{
+							"speaker": "fisherman_uncle",
+							"text": "이게 우리 집안 대대로 내려오는 복 명태라네!"
+						},
+						{
+							"speaker": "dax",
+							"text": "복 명태요? 근데 냄새가 좀…."
+						}
+					]
+				},
+				{
+					"result": [
+						{
+							"text": "어부 아재는 당신의 말에 놀라 그물을 살피더니,",
+							"speaker": "narrator"
+						},
+						{
+							"text": "아이고! 이 찢어진 곳을 못 봤네! 고맙네!",
+							"speaker": "fisherman_uncle"
+						},
+						{
+							"text": "하며 길을 비켜준다. 그 아래 낡은 명태 상자도 보인다.",
+							"speaker": "narrator"
+						},
+						{
+							"text": "어르신이 바로 길을 비켜주시네요!",
+							"speaker": "dax"
+						}
+					],
+					"text": "어부 아재의 낡은 그물을 보고 어디가 찢어졌는지 알려준다.",
+					"effects": {
+						"echo": 10,
+						"fighting": -30
+					},
+					"mbti": "EP",
+					"reward": [
+						"heal"
+					],
+					"path": "stat",
+					"flag": {
+						"key": "fisherman_grateful",
+						"label": "어부 아재의 감사",
+						"boss_text": "어부 아재의 도움으로 싸움 중 회복약을 얻는다."
+					}
+				}
+			],
+			"key": "old_fisherman_rotten_fish",
+			"no": 1,
+			"dialogue": [
+				{
+					"speaker": "fisherman_uncle",
+					"text": "어이, 젊은이들! 당신들이 그… 주먹부터 쓴다는 해결사들이라지? 여긴 못 지나가네!"
+				},
+				{
+					"speaker": "narrator",
+					"text": "어부 아재는 낡은 그물을 꼼꼼히 살피며 중얼거린다."
+				},
+				{
+					"speaker": "fisherman_uncle",
+					"text": "이 그물이 내 밥줄이라고! 함부로 밟고 지나갈 생각 마!"
+				}
+			],
+			"person": {
+				"id": "fisherman_uncle",
+				"name": "어부 아재",
+				"role": "어부"
+			},
+			"rule_link": "소문과 다른 평판 때문에 오해받는 상황에서, 상대의 사정을 먼저 묻는 것이 중요하다.",
+			"background_tags": [
+				"handcart_track",
+				"foggy",
+				"night",
+				"lone_person",
+				"mysterious"
+			],
+			"title": "복 명태를 지키는 어부",
+			"slot": "C",
+			"kind": "rep",
+			"rep_dir": "fighting-"
+		},
+		{
+			"rule_link": "상대가 도움을 요청할 때, 무턱대고 거절하기보다 먼저 사정을 듣고 반응하는 것이 중요하다.",
+			"background_tags": [
+				"handcart_track",
+				"foggy",
+				"night",
+				"lone_person",
+				"frantic"
+			],
+			"wants": "손수레 바퀴에 엉킨 그물을 풀어달라고 부탁한다.",
+			"person": {
+				"id": "fisherman_uncle",
+				"name": "어부 아재",
+				"role": "어부"
+			},
+			"dialogue": [
+				{
+					"speaker": "fisherman_uncle",
+					"text": "젊은이들! 당신들이 그… 이웃 돕는다는 해결사들이라지? 딱 왔네, 딱 왔어!"
+				},
+				{
+					"text": "어부 아재는 엉킨 그물을 끙끙대며 잡아당기고 있다.",
+					"speaker": "narrator"
+				},
+				{
+					"speaker": "fisherman_uncle",
+					"text": "이 그물이 글쎄, 저 손수레 바퀴에 걸려 버렸지 뭐야! 좀 풀어 주게!"
+				}
+			],
+			"no": 2,
+			"choices": [
+				{
+					"result": [
+						{
+							"speaker": "narrator",
+							"text": "어부 아재의 그물을 풀어 주자, 그는 고맙다며 손에 들고 있던 삭은 오징어 한 마리를 내민다."
+						},
+						{
+							"speaker": "fisherman_uncle",
+							"text": "이거라도 먹고 힘내게!"
+						},
+						{
+							"speaker": "dax",
+							"text": "어르신이 주신 오징어는 좀…."
+						}
+					],
+					"path": "easy",
+					"mbti": "NF",
+					"risk_bad": {
+						"result": [
+							{
+								"text": "엉킨 그물을 풀다가 그물에 손이 걸려 넘어지고 만다.",
+								"speaker": "narrator"
+							},
+							{
+								"speaker": "narrator",
+								"text": "어부 아재는 "
+							},
+							{
+								"text": "아이쿠, 조심 좀 하지!",
+								"speaker": "fisherman_uncle"
+							},
+							{
+								"speaker": "narrator",
+								"text": "하며 잔소리를 쏟아낸다."
+							}
+						],
+						"gold": -20,
+						"reward": [
+							"hp_down"
+						]
+					},
+					"text": "엉킨 그물을 풀어 주는 것을 돕는다.",
+					"effects": {
+						"community": 10,
+						"fighting": 20
+					},
+					"flag": {
+						"boss_text": "삭은 오징어 냄새가 진동하여 싸움 중 당신의 집중력을 흐트러뜨린다.",
+						"key": "dried_squid_smell",
+						"label": "삭은 오징어 냄새"
+					},
+					"reward": [
+						"attack_up"
+					]
+				},
+				{
+					"effects": {
+						"fighting": -20,
+						"echo": -5
+					},
+					"reward": [
+						"attack_down"
+					],
+					"path": "hard",
+					"mbti": "TJ",
+					"text": "어부 아재의 그물을 무시하고 길을 비키라며 소리친다.",
+					"flag": {
+						"boss_text": "어부 아재의 분노로 인해 싸움 중 당신의 공격력이 감소한다.",
+						"key": "fisherman_angry",
+						"label": "어부 아재의 분노"
+					},
+					"risk_bad": {
+						"result": [
+							{
+								"speaker": "narrator",
+								"text": "어부 아재에게 소리치자, 그가 당신을 노려보며 낚싯대를 휘두른다."
+							},
+							{
+								"speaker": "narrator",
+								"text": "낚싯줄이 당신의 발목을 칭칭 감는다."
+							}
+						],
+						"reward": [],
+						"gold": -20
+					},
+					"result": [
+						{
+							"speaker": "narrator",
+							"text": "어부 아재는 당신의 고함에 놀라 잠시 멈칫하더니, "
+						},
+						{
+							"text": "뭐? 나더러 비키라고? 이 귀머거리 영감한테 소리 지르지 마!",
+							"speaker": "fisherman_uncle"
+						},
+						{
+							"text": "하며 더 크게 소리친다.",
+							"speaker": "narrator"
+						},
+						{
+							"text": "어르신이 더 시끄럽게 하시네요!",
+							"speaker": "dax"
+						}
+					]
+				},
+				{
+					"flag": {
+						"label": "그물 절단",
+						"boss_text": "그물 절단으로 길이 열려 싸움 시작 시 유리한 위치를 점한다.",
+						"key": "net_cut_path_open"
+					},
+					"text": "엉킨 그물을 단칼에 잘라 버리고 지나간다.",
+					"result": [
+						{
+							"speaker": "narrator",
+							"text": "당신이 그물을 단칼에 잘라 버리자 어부 아재는 잠시 멍하니 있다가 이내 "
+						},
+						{
+							"text": "아이고 내 그물!",
+							"speaker": "fisherman_uncle"
+						},
+						{
+							"speaker": "narrator",
+							"text": "하며 통곡한다. 길은 열렸다."
+						},
+						{
+							"text": "어르신이 슬퍼하시지만 길은 열렸네요!",
+							"speaker": "dax"
+						}
+					],
+					"effects": {
+						"echo": 10,
+						"fighting": 30
+					},
+					"mbti": "EP",
+					"reward": [
+						"move_range_up"
+					],
+					"path": "stat"
+				},
+				{
+					"effects": {
+						"echo": 10,
+						"reason": 20
+					},
+					"mbti": "IN",
+					"reward": [
+						"stun"
+					],
+					"path": "fun",
+					"result": [
+						{
+							"speaker": "narrator",
+							"text": "당신이 그물을 잡고 춤을 추자, 어부 아재는 "
+						},
+						{
+							"text": "저 젊은이가 왜 저래?",
+							"speaker": "fisherman_uncle"
+						},
+						{
+							"text": "하며 황당한 표정으로 길을 비켜준다. 그물은 더 엉켰다.",
+							"speaker": "narrator"
+						},
+						{
+							"speaker": "dax",
+							"text": "어르신이 어리둥절하시네요!"
+						}
+					],
+					"text": "어부 아재의 엉킨 그물을 잡고 춤을 추며 길을 연다.",
+					"risk_bad": {
+						"reward": [
+							"hp_down"
+						],
+						"result": [
+							{
+								"speaker": "narrator",
+								"text": "엉킨 그물을 잡고 춤을 추다 발이 꼬여 넘어지고 만다."
+							},
+							{
+								"speaker": "narrator",
+								"text": "그 과정에서 어부 아재의 낚싯대까지 부러뜨린다."
+							}
+						],
+						"gold": -50
+					}
+				}
+			],
+			"title": "엉킨 그물을 부탁하는 어부",
+			"key": "old_fisherman_tangled_net",
+			"slot": "C",
+			"kind": "rep",
+			"rep_dir": "fighting+"
+		}
+	],
+	"errors": [],
+	"prompt_hash": "5dcc81bbfcede19819ba9eee1ed32dfde4d79599"
+}

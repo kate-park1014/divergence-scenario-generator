@@ -1,0 +1,295 @@
+{
+	"id": "card_02_foreman_community_call",
+	"title": {
+		"korean": "반장의 다급한 도움 요청"
+	},
+	"intensity": "calm",
+	"after_story": 7,
+	"before_story": 9,
+	"condition": {
+		"leaning": "community+",
+		"among": [
+			"fighting-",
+			"fighting+",
+			"community-",
+			"community+",
+			"reason-",
+			"reason+"
+		],
+		"min": 20
+	},
+	"urgency": 8,
+	"leaning": "community+",
+	"background_tags": [
+		"port",
+		"day",
+		"overcast",
+		"workers",
+		"urgent"
+	],
+	"background_image": "https://imagedelivery.net/WTEqQNGFb-l-IHS6IGnzUQ/92b9883a-8a79-4a7a-3661-8295816bd900/public",
+	"dialogue": [
+		{
+			"speaker": "narrator",
+			"content": {
+				"korean": "컨테이너 줄 사이, 담배 대신 사탕을 문 하역 반장이 다급한 표정으로 당신에게 다가온다."
+			}
+		},
+		{
+			"speaker": "foreman_d",
+			"content": {
+				"korean": "이봐, 당신들! 당신들이 그… 동네 사람들 일이라면 발 벗고 나선다는 해결사라면서?"
+			}
+		},
+		{
+			"speaker": "dax",
+			"content": {
+				"korean": "네, 맞아요! 반장님, 무슨 일이신데요?"
+			}
+		},
+		{
+			"speaker": "foreman_d",
+			"content": {
+				"korean": "젠장, 노인회에 보낼 약품 컨테이너가 저기서 꼼짝을 안 해."
+			}
+		},
+		{
+			"speaker": "foreman_d",
+			"content": {
+				"korean": "자물쇠가 망가져서 열리질 않거든. 이대로 두면 큰일 나! 좀 도와줄 수 있겠어?"
+			}
+		}
+	],
+	"choices": [
+		{
+			"text": {
+				"korean": "노인회를 돕기 위해 컨테이너 자물쇠를 부숴 연다."
+			},
+			"path": "easy",
+			"mbti": "ES",
+			"flag": "wrong_container_opened",
+			"effects": {
+				"community": 15,
+				"echo": 5,
+				"fighting": 10
+			},
+			"reward": [
+				"attack_up"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "당신은 힘껏 자물쇠를 부수고 컨테이너 문을 열어젖힌다."
+					}
+				},
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "하지만 안에는 약품 대신 알록달록한 아이들 장난감으로 가득하다. 반장은 경악한다."
+					}
+				},
+				{
+					"speaker": "dax",
+					"content": {
+						"korean": "어? 약이 아니라 장난감인데요? 노인회에 이걸 보내려던 건 아니겠죠?"
+					}
+				}
+			],
+			"risk": {
+				"chance": "mid",
+				"bad": {
+					"effects": {
+						"gold": -20
+					},
+					"reward": [
+						"hp_down"
+					],
+					"result": [
+						{
+							"speaker": "narrator",
+							"content": {
+								"korean": "당신이 자물쇠를 부수고 컨테이너 문을 열자마자,"
+							}
+						},
+						{
+							"speaker": "narrator",
+							"content": {
+								"korean": "날카로운 경보음이 울려 퍼지며 야적장 전체의 이목을 끈다."
+							}
+						},
+						{
+							"speaker": "dax",
+							"content": {
+								"korean": "젠장! 보안 시스템이 연결되어 있었나 봐요! 빨리 도망쳐야겠어요!"
+							}
+						}
+					]
+				}
+			}
+		},
+		{
+			"text": {
+				"korean": "섣불리 나서지 않고 컨테이너 서류나 열쇠를 먼저 확인한다."
+			},
+			"path": "hard",
+			"mbti": "IN",
+			"flag": "foreman_mistake_averted",
+			"effects": {
+				"echo": 10,
+				"reason": 20,
+				"community": -10
+			},
+			"reward": [
+				"defense_up"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "당신은 반장에게 컨테이너의 서류를 보여달라고 요청한다."
+					}
+				},
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "반장은 당황하며 서류를 찾다가 '실은… 내가 급해서 다른 컨테이너를 착각한 것 같아'라고 고백한다."
+					}
+				},
+				{
+					"speaker": "dax",
+					"content": {
+						"korean": "휴, 하마터면 큰일 날 뻔했네요!"
+					}
+				}
+			],
+			"risk": {
+				"chance": "high",
+				"bad": {
+					"effects": {
+						"gold": -20
+					},
+					"reward": [],
+					"result": [
+						{
+							"speaker": "narrator",
+							"content": {
+								"korean": "당신이 서류를 요구하자 반장이 허둥지둥 서류를 찾다가,"
+							}
+						},
+						{
+							"speaker": "narrator",
+							"content": {
+								"korean": "손에 들고 있던 종이 뭉치를 놓쳐 강풍에 서류들이 야적장 곳곳으로 흩날린다."
+							}
+						},
+						{
+							"speaker": "dax",
+							"content": {
+								"korean": "아이고! 반장님 중요한 서류가 다 날아갔어요!"
+							}
+						}
+					]
+				}
+			}
+		},
+		{
+			"text": {
+				"korean": "다른 하역반원들을 불러 함께 컨테이너를 옮기자고 제안한다."
+			},
+			"path": "stat",
+			"mbti": "TJ",
+			"require": {
+				"stat": "community",
+				"op": ">=",
+				"value": 40
+			},
+			"flag": "community_mobilized",
+			"effects": {
+				"community": 25,
+				"fighting": 10
+			},
+			"reward": [
+				"shield"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "당신은 주위를 둘러보고 다른 하역반원들에게 도움을 요청한다."
+					}
+				},
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "반원들은 당신의 평판을 알고 기꺼이 달려와 자물쇠를 부수고 컨테이너를 함께 옮겨준다."
+					}
+				},
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "안에는 약품이 가득하다."
+					}
+				},
+				{
+					"speaker": "dax",
+					"content": {
+						"korean": "역시 여러분이 나서니 일이 착착 진행되네요!"
+					}
+				}
+			]
+		}
+	],
+	"tags": [
+		"foreman_d",
+		"dax"
+	],
+	"_design": {
+		"slot": "D",
+		"kind": "rep",
+		"person": {
+			"id": "foreman_d",
+			"name": "하역 반장",
+			"role": "하역 반장"
+		},
+		"wants": "히어로들이 노인회에 보낼 약품 컨테이너를 여는 것을 도와주길 원합니다.",
+		"rule_link": "모두를 위한 선의의 행동도 상황을 제대로 파악하지 않으면 엉뚱한 결과를 낳을 수 있습니다.",
+		"rep": "community+",
+		"events": {},
+		"flags": {
+			"wrong_container_opened": {
+				"kind": "bad",
+				"boss_penalty": -1,
+				"label": {
+					"korean": "잘못 연 컨테이너"
+				},
+				"boss_line": {
+					"korean": "창고 간부의 실수로 엉뚱한 컨테이너를 열어 소동이 일어난다."
+				}
+			},
+			"foreman_mistake_averted": {
+				"kind": "good",
+				"boss_penalty": 1,
+				"label": {
+					"korean": "반장의 착각 막음"
+				},
+				"boss_choice": {
+					"korean": "창고 간부가 중요한 서류를 잃어버리는 실수를 저지르지 않게 돕는다."
+				}
+			},
+			"community_mobilized": {
+				"kind": "good",
+				"boss_penalty": 2,
+				"label": {
+					"korean": "공동체 동원"
+				},
+				"boss_choice": {
+					"korean": "당신의 평판 덕분에 다른 하역반원들이 기꺼이 돕는다."
+				}
+			}
+		}
+	}
+}

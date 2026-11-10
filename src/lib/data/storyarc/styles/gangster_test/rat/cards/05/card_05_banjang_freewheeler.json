@@ -1,0 +1,324 @@
+{
+	"id": "card_05_banjang_freewheeler",
+	"title": {
+		"korean": "부두 반장의 비정규적인 부탁"
+	},
+	"intensity": "calm",
+	"after_story": 3,
+	"before_story": 5,
+	"condition": {
+		"leaning": "reason+",
+		"among": [
+			"fighting-",
+			"fighting+",
+			"community-",
+			"community+",
+			"reason-",
+			"reason+"
+		],
+		"min": 20
+	},
+	"urgency": 8,
+	"leaning": "reason+",
+	"background_tags": [
+		"harbor",
+		"late_night",
+		"misty",
+		"isolated",
+		"eerie"
+	],
+	"background_image": "https://imagedelivery.net/WTEqQNGFb-l-IHS6IGnzUQ/34e34488-79fd-4c9b-6dc0-d4e9f13e8b00/public",
+	"dialogue": [
+		{
+			"speaker": "banjang",
+			"content": {
+				"korean": "소문으로 들었어요, 당신이 그 꽉 막힌 규칙 따위는 무시하고 시원하게 해결한다는 분이라고!"
+			}
+		},
+		{
+			"speaker": "banjang",
+			"content": {
+				"korean": "저기, 회장님 비서님이 요즘 좀 이상해요. 그 양반이 등대에 숨겨둔 게 있는데…"
+			}
+		},
+		{
+			"speaker": "dax",
+			"content": {
+				"korean": "혹시 비서님이 위험한 일에 휘말리신 건 아닐까요?"
+			}
+		},
+		{
+			"speaker": "banjang",
+			"content": {
+				"korean": "비서님이 등대 근처 폐창고에 뭘 숨겨둔 것 같은데, 저 혼자서는 도저히 못 들어가겠어서…"
+			}
+		},
+		{
+			"speaker": "dax",
+			"content": {
+				"korean": "안개 때문에 아무도 없는 것 같긴 하네요."
+			}
+		}
+	],
+	"choices": [
+		{
+			"text": {
+				"korean": "반장의 말만 믿고 폐창고로 향해 비서의 물건을 찾아 나선다."
+			},
+			"path": "easy",
+			"mbti": "NF",
+			"flag": "break_in_warehouse",
+			"effects": {
+				"echo": 5,
+				"fighting": 10,
+				"reason": -15
+			},
+			"reward": [
+				"move_range_up"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "반장은 당신의 시원한 결정에 환호하며 앞장선다."
+					}
+				},
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "폐창고 입구에 도착하자 반장이 낡은 자물쇠를 발로 뻥 차 부순다."
+					}
+				},
+				{
+					"speaker": "dax",
+					"content": {
+						"korean": "저렇게 부수고 들어가면 안 걸릴 리가 없잖아요!"
+					}
+				}
+			],
+			"risk": {
+				"chance": "mid",
+				"bad": {
+					"effects": {
+						"gold": -30
+					},
+					"reward": [],
+					"result": [
+						{
+							"speaker": "narrator",
+							"content": {
+								"korean": "반장은 당신의 시원한 결정에 너무 들떠서 앞장선다."
+							}
+						},
+						{
+							"speaker": "narrator",
+							"content": {
+								"korean": "폐창고 입구에 도착하자 반장이 낡은 자물쇠를 발로 뻥 차 부수려다 발목을 삐끗하며 주저앉는다."
+							}
+						},
+						{
+							"speaker": "dax",
+							"content": {
+								"korean": "반장님, 괜찮으세요?!"
+							}
+						}
+					]
+				}
+			}
+		},
+		{
+			"text": {
+				"korean": "반장에게 폐창고에 대한 공식적인 출입 허가서를 보여달라고 요구한다."
+			},
+			"path": "hard",
+			"mbti": "SJ",
+			"flag": "no_warehouse_permit",
+			"effects": {
+				"reason": 15,
+				"community": -10,
+				"echo": -5
+			},
+			"reward": [
+				"shield"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "반장은 당신의 말에 당황하며 뒷걸음질 친다."
+					}
+				},
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "반장은 머뭇거리다 결국 출입 허가서 대신 낡은 종이 한 장을 꺼내든다."
+					}
+				},
+				{
+					"speaker": "dax",
+					"content": {
+						"korean": "저게 뭐예요? 그림일기인가요?"
+					}
+				}
+			],
+			"risk": {
+				"chance": "high",
+				"bad": {
+					"effects": {
+						"gold": -20
+					},
+					"reward": [],
+					"result": [
+						{
+							"speaker": "narrator",
+							"content": {
+								"korean": "반장은 당신의 말에 어쩔 줄 몰라 하며 뒷걸음질 친다."
+							}
+						},
+						{
+							"speaker": "narrator",
+							"content": {
+								"korean": "반장이 허둥대다 출입 허가서 대신 낡은 종이 한 장을 꺼내들다 그만 손에서 미끄러져 바닷물에 빠뜨린다."
+							}
+						},
+						{
+							"speaker": "dax",
+							"content": {
+								"korean": "저 종이, 비서님 그림일기였는데…!"
+							}
+						}
+					]
+				}
+			}
+		},
+		{
+			"text": {
+				"korean": "반장에게 폐창고 열쇠를 줄 때까지 길을 비키지 않겠다고 선언한다."
+			},
+			"path": "stat",
+			"mbti": "EP",
+			"require": {
+				"stat": "reason",
+				"op": ">=",
+				"value": 40
+			},
+			"flag": "banjang_steps_aside",
+			"effects": {
+				"reason": 20,
+				"echo": 10
+			},
+			"reward": [
+				"stun"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "반장은 당신의 대담한 선언에 움찔하며 열쇠를 내민다."
+					}
+				},
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "당신의 기세에 눌린 반장이 고개를 숙이며 길을 비킨다."
+					}
+				},
+				{
+					"speaker": "dax",
+					"content": {
+						"korean": "역시 우리 팀은 무대뽀 정신이 최고죠!"
+					}
+				}
+			]
+		},
+		{
+			"text": {
+				"korean": "반장에게 폐창고 열쇠를 빌리는 값으로 지폐 몇 장을 건넨다."
+			},
+			"path": "gold",
+			"mbti": "TP",
+			"require": {
+				"stat": "gold",
+				"op": ">=",
+				"value": 100
+			},
+			"effects": {
+				"echo": 10,
+				"gold": -100
+			},
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "반장은 지폐를 받자마자 허리춤에서 열쇠 꾸러미를 풀었다. 열쇠가 스무 개는 되어 보였다."
+					}
+				},
+				{
+					"speaker": "banjang",
+					"content": {
+						"korean": "그중 하나가 폐창고 거예요. 어느 건지는… 저도 몰라요."
+					}
+				},
+				{
+					"speaker": "dax",
+					"content": {
+						"korean": "등대 가는 길에 열쇠 스무 개를 다 꽂아 봐야 해요?"
+					}
+				}
+			]
+		}
+	],
+	"tags": [
+		"banjang",
+		"dax"
+	],
+	"_design": {
+		"slot": "B",
+		"kind": "rep",
+		"person": {
+			"id": "banjang",
+			"name": "반장",
+			"role": "부두 일꾼 반장"
+		},
+		"wants": "마음 가는 대로 행동하는 당신에게 폐창고에 숨겨진 비서의 물건을 자유롭게 찾아달라 부탁한다.",
+		"rule_link": "몰아붙이기 전에 먼저 사정을 묻는 것",
+		"rep": "reason+",
+		"events": {},
+		"flags": {
+			"break_in_warehouse": {
+				"kind": "bad",
+				"boss_penalty": -1,
+				"label": {
+					"korean": "창고 강제 진입"
+				},
+				"boss_line": {
+					"korean": "반장이 폐창고 자물쇠를 부수고 들어가 비서의 물건을 찾으려 한다."
+				}
+			},
+			"no_warehouse_permit": {
+				"kind": "good",
+				"boss_penalty": 1,
+				"label": {
+					"korean": "창고 출입 허가 없음"
+				},
+				"boss_choice": {
+					"korean": "반장이 폐창고 출입 허가서가 없어 내부로 진입할 수 없다."
+				}
+			},
+			"banjang_steps_aside": {
+				"kind": "good",
+				"boss_penalty": 2,
+				"label": {
+					"korean": "반장 길을 비킴"
+				},
+				"boss_choice": {
+					"korean": "반장이 당신의 기세에 눌려 폐창고로 가는 길을 비켜준다."
+				}
+			}
+		}
+	}
+}

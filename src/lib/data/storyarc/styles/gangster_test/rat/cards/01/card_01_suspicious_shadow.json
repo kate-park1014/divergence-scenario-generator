@@ -1,0 +1,233 @@
+{
+	"id": "card_01_suspicious_shadow",
+	"title": {
+		"korean": "창고 안의 그림자"
+	},
+	"intensity": "calm",
+	"after_story": 1,
+	"before_story": 3,
+	"background_tags": [
+		"dock",
+		"night",
+		"warehouse",
+		"shadow",
+		"uneasy"
+	],
+	"background_image": "https://imagedelivery.net/WTEqQNGFb-l-IHS6IGnzUQ/42b7338c-4141-4776-7f78-df455d196c00/public",
+	"dialogue": [
+		{
+			"speaker": "narrator",
+			"content": {
+				"korean": "부두 사무실 뒤편으로 가는 길, 낡은 창고에서 희미한 불빛과 함께 그림자가 흔들리는 것이 보인다."
+			}
+		},
+		{
+			"speaker": "dax",
+			"content": {
+				"korean": "저기... 저 창고는 평소에 잘 안 쓰는 곳인데... 누가 저기서 뭘 하는 걸까요?"
+			}
+		},
+		{
+			"speaker": "narrator",
+			"content": {
+				"korean": "창고 문틈으로 비치는 빛 사이로 한 남자의 그림자가 부산하게 움직인다."
+			}
+		},
+		{
+			"speaker": "guard_rookie",
+			"content": {
+				"korean": "젠장, 이거 빨리 치워야 하는데... 회장님이 보시면 큰일인데..."
+			}
+		},
+		{
+			"speaker": "dax",
+			"content": {
+				"korean": "뭔가 숨기는 것 같아요! 저기요!"
+			}
+		}
+	],
+	"choices": [
+		{
+			"text": {
+				"korean": "\"거기 누구야! 수상한 짓 하지 말고 당장 나와!\" 하고 소리친다."
+			},
+			"path": "easy",
+			"mbti": "ES",
+			"effects": {
+				"fighting": 10,
+				"echo": -5
+			},
+			"reward": [
+				"attack_up"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "당신의 고함에 그림자가 멈칫하더니, 엉거주춤한 자세로 신참 경비가 뛰쳐나온다."
+					}
+				},
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "그의 손에는 낡은 만화책이 들려 있다."
+					}
+				},
+				{
+					"speaker": "guard_rookie",
+					"content": {
+						"korean": "컥! 으아니, 이건 그, 그냥... 잠깐 쉬려고..."
+					}
+				},
+				{
+					"speaker": "dax",
+					"content": {
+						"korean": "만화책요? 이 야심한 밤에 창고에서 만화책을 보고 계셨어요?"
+					}
+				}
+			],
+			"risk": {
+				"chance": "mid",
+				"bad": {
+					"effects": {
+						"gold": -20
+					},
+					"reward": [],
+					"result": [
+						{
+							"speaker": "narrator",
+							"content": {
+								"korean": "당신의 고함에 그림자가 놀라 도망친다. 낡은 창고 문이 쿵 소리를 내며 닫힌다."
+							}
+						},
+						{
+							"speaker": "guard_rookie",
+							"content": {
+								"korean": "으악! 들켰다!"
+							}
+						},
+						{
+							"speaker": "dax",
+							"content": {
+								"korean": "어, 도망가는데요? 저러다 창고 문이 부서지겠어요!"
+							}
+						}
+					]
+				}
+			}
+		},
+		{
+			"text": {
+				"korean": "조용히 다가가 창고 안을 살핀 뒤, 무슨 일이냐고 묻는다."
+			},
+			"path": "hard",
+			"mbti": "IN",
+			"effects": {
+				"echo": 10,
+				"reason": 15
+			},
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "당신이 조용히 다가가자, 신참 경비는 낡은 만화책을 급히 숨기며 식은땀을 흘린다."
+					}
+				},
+				{
+					"speaker": "guard_rookie",
+					"content": {
+						"korean": "아, 아무것도 아닙니다! 그냥 순찰 중이었습니다!"
+					}
+				},
+				{
+					"speaker": "dax",
+					"content": {
+						"korean": "순찰이요? 만화책을 숨기면서요?"
+					}
+				}
+			],
+			"event": "campsite",
+			"event_intro": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "신참 경비는 당신에게 작은 쪽지를 건넨다. 쪽지에는 부두 구석에 있는 비밀 야영지 지도가 그려져 있다."
+					}
+				},
+				{
+					"speaker": "guard_rookie",
+					"content": {
+						"korean": "사실... 제가 쉬는 곳인데, 잠깐 쉬어가세요. 회장님께는 비밀입니다!"
+					}
+				},
+				{
+					"speaker": "dax",
+					"content": {
+						"korean": "비밀 야영지요? 저런 곳이 있었네요!"
+					}
+				}
+			]
+		},
+		{
+			"text": {
+				"korean": "창고 문틈에 지폐를 내밀며 \"야식값 줄 테니 나와서 얘기 좀 하자\"고 한다."
+			},
+			"path": "gold",
+			"mbti": "IT",
+			"require": {
+				"stat": "gold",
+				"op": ">=",
+				"value": 80
+			},
+			"effects": {
+				"gold": -80,
+				"echo": -10
+			},
+			"reward": [
+				"move_range_up"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "문틈으로 손 하나가 쑥 나와 지폐를 낚아챘다. 그 바람에 신참 경비 품에서 낡은 만화책이 툭 떨어졌다."
+					}
+				},
+				{
+					"speaker": "guard_rookie",
+					"content": {
+						"korean": "이, 이건 순찰 교본입니다! 회장님께는 비밀로…!"
+					}
+				},
+				{
+					"speaker": "dax",
+					"content": {
+						"korean": "교본에 말풍선이 왜 있어요?"
+					}
+				}
+			]
+		}
+	],
+	"tags": [
+		"guard_rookie",
+		"dax"
+	],
+	"_design": {
+		"slot": "A",
+		"kind": "normal",
+		"person": {
+			"role": "백상어파 신참 경비",
+			"id": "guard_rookie",
+			"name": "신참 경비"
+		},
+		"wants": "회장에게 잘 보여 인정받고 싶어 함.",
+		"rule_link": "부두 창고에서 수상한 그림자를 발견하고, 그 그림자의 정체를 섣불리 판단할지 아니면 사정을 먼저 들을지 선택해야 합니다.",
+		"events": {
+			"hard": "신참 경비가 당신에게 비밀 장소를 알려주며 잠시 쉬어가라고 합니다."
+		},
+		"flags": {}
+	}
+}

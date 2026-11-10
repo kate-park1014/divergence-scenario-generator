@@ -1,0 +1,350 @@
+{
+	"id": "card_04_ibalsa_package",
+	"title": {
+		"korean": "말 없는 짐"
+	},
+	"intensity": "calm",
+	"after_story": 5,
+	"before_story": 7,
+	"condition": {
+		"leaning": "community-",
+		"among": [
+			"fighting-",
+			"fighting+",
+			"community-",
+			"community+",
+			"reason-",
+			"reason+"
+		],
+		"min": 20
+	},
+	"urgency": 8,
+	"leaning": "community-",
+	"background_tags": [
+		"stairs",
+		"hallway",
+		"dim",
+		"empty",
+		"anxious"
+	],
+	"background_image": "https://imagedelivery.net/WTEqQNGFb-l-IHS6IGnzUQ/0ae813bd-8183-437e-644c-6a15fd24b300/public",
+	"dialogue": [
+		{
+			"speaker": "ibalsa_aje",
+			"content": {
+				"korean": "어이쿠, 당신이 그, 자기 앞가림은 기가 막히게 한다는 해결사 양반 맞죠?"
+			}
+		},
+		{
+			"speaker": "ibalsa_aje",
+			"content": {
+				"korean": "이런, 이 무거운 짐짝을 어찌해야 할지... '말 없는 손님' 거라는데 이걸 들고 올라가려니 죽을 맛이네요."
+			}
+		},
+		{
+			"speaker": "dax",
+			"content": {
+				"korean": "회장님 금고실로 가려면 여기밖에 없는데..."
+			}
+		},
+		{
+			"speaker": "ibalsa_aje",
+			"content": {
+				"korean": "내 손님은 또 저 위에서 기다리고 있고... 이대로 가다간 내 평판에 금이 가겠어요!"
+			}
+		}
+	],
+	"choices": [
+		{
+			"text": {
+				"korean": "짐짝을 발로 툭 차서 옆으로 밀어버리고 지나간다."
+			},
+			"path": "easy",
+			"mbti": "ST",
+			"flag": "ibalsa_slippery_stairs",
+			"effects": {
+				"gold": 50,
+				"reason": -10,
+				"fighting": 10
+			},
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "이발사 아재의 비명과 함께 짐짝이 계단 모퉁이로 굴러떨어진다."
+					}
+				},
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "덕분에 길은 시원하게 뚫렸지만, 짐짝에서 샴푸병들이 터져 계단이 미끄러워진다."
+					}
+				},
+				{
+					"speaker": "dax",
+					"content": {
+						"korean": "으악, 미끌미끌해요! 누군가 밟고 넘어지면 어떡하죠?"
+					}
+				}
+			],
+			"risk": {
+				"chance": "mid",
+				"bad": {
+					"effects": {
+						"gold": -30
+					},
+					"reward": [],
+					"result": [
+						{
+							"speaker": "narrator",
+							"content": {
+								"korean": "짐짝을 밀자마자 균형을 잃은 이발사 아재가 짐과 함께 계단을 구른다."
+							}
+						},
+						{
+							"speaker": "narrator",
+							"content": {
+								"korean": "짐짝은 터지고 샴푸 거품이 계단을 뒤덮어 당신의 발까지 젖게 만든다."
+							}
+						},
+						{
+							"speaker": "dax",
+							"content": {
+								"korean": "으악, 아저씨 괜찮으세요? 옷도 다 젖었잖아요!"
+							}
+						}
+					]
+				}
+			}
+		},
+		{
+			"text": {
+				"korean": "이발사 아재의 짐을 함께 들어 계단 위로 옮겨준다."
+			},
+			"path": "hard",
+			"mbti": "NF",
+			"flag": "ibalsa_hears_rumor",
+			"effects": {
+				"fighting": -10,
+				"echo": 10,
+				"community": 10
+			},
+			"reward": [
+				"intelligence_up"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "당신의 도움으로 이발사 아재는 짐을 무사히 옮기고 연신 고맙다고 인사한다."
+					}
+				},
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "그는 고마움에 젖은 목소리로 '회장님이 요즘 몸이 안 좋으시다'는 말을 흘린다."
+					}
+				},
+				{
+					"speaker": "dax",
+					"content": {
+						"korean": "이발사 아저씨 덕분에 회장님 소식을 들었네요."
+					}
+				}
+			],
+			"risk": {
+				"chance": "high",
+				"bad": {
+					"effects": {
+						"gold": -20
+					},
+					"reward": [],
+					"result": [
+						{
+							"speaker": "narrator",
+							"content": {
+								"korean": "짐을 옮기다 그만 균형을 잃은 당신이 이발사 아재와 함께 계단을 구른다."
+							}
+						},
+						{
+							"speaker": "narrator",
+							"content": {
+								"korean": "짐은 터지고 샴푸 거품이 계단을 뒤덮지만, 다행히 이발사 아재가 당신을 먼저 걱정한다."
+							}
+						},
+						{
+							"speaker": "dax",
+							"content": {
+								"korean": "아저씨도 착하시네요. 그래도 다치진 않으셨어요?"
+							}
+						}
+					]
+				}
+			}
+		},
+		{
+			"text": {
+				"korean": "'그 짐, 내 길을 막고 있군. 치워라.' 단호하게 명령한다."
+			},
+			"path": "stat",
+			"mbti": "TJ",
+			"require": {
+				"stat": "community",
+				"op": "<=",
+				"value": -40
+			},
+			"flag": "ibalsa_security_shampoo",
+			"effects": {
+				"fighting": 20,
+				"gold": 100,
+				"reason": -20,
+				"community": -10
+			},
+			"reward": [
+				"attack_up"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "당신의 압도적인 기세에 이발사 아재는 흠칫 놀라며 짐짝을 허둥지둥 옆으로 치운다."
+					}
+				},
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "짐짝 안에서 샴푸병 하나가 굴러 나오며 '경호실장 전용' 라벨이 보인다."
+					}
+				},
+				{
+					"speaker": "dax",
+					"content": {
+						"korean": "앗, 저거 경호실장 누님 거예요?"
+					}
+				}
+			]
+		},
+		{
+			"text": {
+				"korean": "짐짝의 냄새를 맡아보고 '말 없는 손님'이 누군지 추리해본다."
+			},
+			"path": "fun",
+			"mbti": "IP",
+			"effects": {
+				"echo": 5,
+				"reason": -20
+			},
+			"reward": [
+				"stun"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "짐짝에서 달콤한 복숭아 향이 진하게 풍겨 나온다."
+					}
+				},
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "이발사 아재는 당황하며 '그건 아무나 맡는 게 아닌데!'라고 소리친다."
+					}
+				},
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "당신의 코는 복숭아 향으로 마비되었고, 이발사 아재는 짐을 꼭 껴안고 계단을 뛰어 올라간다."
+					}
+				},
+				{
+					"speaker": "dax",
+					"content": {
+						"korean": "으음... 복숭아 향이 이렇게 진한 건 처음이네요."
+					}
+				}
+			],
+			"risk": {
+				"chance": "low",
+				"bad": {
+					"effects": {
+						"gold": -20
+					},
+					"reward": [],
+					"result": [
+						{
+							"speaker": "narrator",
+							"content": {
+								"korean": "짐짝의 냄새를 맡으려 고개를 숙인 순간, 샴푸 거품이 솟아오르며 당신의 얼굴을 뒤덮는다."
+							}
+						},
+						{
+							"speaker": "narrator",
+							"content": {
+								"korean": "앞이 보이지 않아 허우적거리자 이발사 아재는 짐짝을 버려두고 도망친다."
+							}
+						},
+						{
+							"speaker": "dax",
+							"content": {
+								"korean": "으악, 눈에 들어가면 안 돼요! 제가 닦아드릴게요!"
+							}
+						}
+					]
+				}
+			}
+		}
+	],
+	"tags": [
+		"ibalsa_aje",
+		"dax"
+	],
+	"_design": {
+		"slot": "C",
+		"kind": "rep",
+		"person": {
+			"id": "ibalsa_aje",
+			"name": "이발사 아재",
+			"role": "이발사"
+		},
+		"wants": "자기 몫을 챙겨서 빨리 지나가고 싶어 한다.",
+		"rule_link": "계단에 놓인 말 없는 짐을 자기 길을 막는 방해물로 볼지, 사연 있는 누군가의 물건으로 볼지 선택합니다.",
+		"rep": "community-",
+		"events": {},
+		"flags": {
+			"ibalsa_slippery_stairs": {
+				"kind": "bad",
+				"boss_penalty": -1,
+				"label": {
+					"korean": "미끄러운 계단"
+				},
+				"boss_line": {
+					"korean": "금고실 복도 계단이 샴푸 거품으로 미끄러워 발을 헛디딘다."
+				}
+			},
+			"ibalsa_hears_rumor": {
+				"kind": "good",
+				"boss_penalty": 1,
+				"label": {
+					"korean": "회장님 소식"
+				},
+				"boss_choice": {
+					"korean": "이발사에게 회장님의 건강 상태에 대한 정보를 얻는다."
+				}
+			},
+			"ibalsa_security_shampoo": {
+				"kind": "good",
+				"boss_penalty": 2,
+				"label": {
+					"korean": "경호실장 샴푸"
+				},
+				"boss_choice": {
+					"korean": "금고실 복도에서 경호실장 전용 샴푸를 발견해 그녀의 동선을 파악한다."
+				}
+			}
+		}
+	}
+}

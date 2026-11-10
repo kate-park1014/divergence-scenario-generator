@@ -1,0 +1,383 @@
+{
+	"id": "card_01_noisy_crates",
+	"title": {
+		"korean": "요란한 컨테이너 소리"
+	},
+	"intensity": "high",
+	"after_story": 1,
+	"before_story": 3,
+	"background_tags": [
+		"dock",
+		"night",
+		"containers",
+		"loud",
+		"frustrated"
+	],
+	"background_image": "https://imagedelivery.net/WTEqQNGFb-l-IHS6IGnzUQ/96037d02-d147-40a3-3db1-31d7634c4f00/public",
+	"dialogue": [
+		{
+			"speaker": "narrator",
+			"content": {
+				"korean": "부두 사무실로 향하는 길, 컨테이너들이 쌓인 곳에서 쿵, 쾅! 요란한 소리가 들려온다."
+			}
+		},
+		{
+			"speaker": "dax",
+			"content": {
+				"korean": "저건 또 무슨 소리죠? 컨테이너가 무너지는 건 아니겠죠?"
+			}
+		},
+		{
+			"speaker": "narrator",
+			"content": {
+				"korean": "컨테이너 사이에서 작업 반장이 얼굴을 찌푸린 채 무언가를 발로 차고 있다."
+			}
+		},
+		{
+			"speaker": "foreman_hasty",
+			"content": {
+				"korean": "젠장, 이놈의 컨테이너는 왜 자꾸 말썽이야! 빨리 끝내고 가야 하는데!"
+			}
+		},
+		{
+			"speaker": "dax",
+			"content": {
+				"korean": "반장님, 왜 컨테이너를 발로 차세요! 위험해요!"
+			}
+		}
+	],
+	"forced": [
+		{
+			"text": {
+				"korean": "{actor}이(가) \"이 컨테이너가 수상한데요!\" 하고 컨테이너 문을 억지로 열려고 시도한다."
+			},
+			"path": "forced",
+			"mbti": "IT",
+			"require": {
+				"mbti": "IT"
+			},
+			"chance": 0.3,
+			"effects": {
+				"reason": -15,
+				"echo": -10
+			},
+			"reward": [
+				"attack_down"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "{actor}이(가) 컨테이너 문을 억지로 열려 하지만, 문은 굳게 닫혀 꿈쩍도 하지 않는다."
+					}
+				},
+				{
+					"speaker": "foreman_hasty",
+					"content": {
+						"korean": "컥! 뭐 하는 짓이오! 그거 함부로 열면 안 되는 거요!"
+					}
+				},
+				{
+					"speaker": "dax",
+					"content": {
+						"korean": "으음, {actor}, 괜히 일을 키우지 마."
+					}
+				}
+			]
+		}
+	],
+	"choices": [
+		{
+			"text": {
+				"korean": "\"반장님! 위험하게 왜 그러세요!\" 하고 소리쳐서 그를 멈추게 한다."
+			},
+			"path": "easy",
+			"mbti": "EF",
+			"effects": {
+				"echo": 5,
+				"fighting": 10
+			},
+			"reward": [
+				"attack_up"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "당신의 목소리에 반장이 깜짝 놀라 발길질을 멈춘다. 그의 발아래에는 찌그러진 양동이가 놓여 있다."
+					}
+				},
+				{
+					"speaker": "foreman_hasty",
+					"content": {
+						"korean": "컥! 으아니, 당신들은 뭐야! 이것 좀 보시오, 이 찌그러진 양동이가 자꾸 걸려서..."
+					}
+				},
+				{
+					"speaker": "dax",
+					"content": {
+						"korean": "양동이 때문에 컨테이너를 발로 차셨던 거예요?"
+					}
+				}
+			],
+			"risk": {
+				"chance": "mid",
+				"bad": {
+					"effects": {
+						"gold": -30
+					},
+					"reward": [],
+					"result": [
+						{
+							"speaker": "narrator",
+							"content": {
+								"korean": "당신의 목소리에 반장은 더욱 화가 나 양동이를 강하게 걷어차고,"
+							}
+						},
+						{
+							"speaker": "narrator",
+							"content": {
+								"korean": "양동이는 컨테이너에 부딪혀 큰 소리를 낸다."
+							}
+						},
+						{
+							"speaker": "foreman_hasty",
+							"content": {
+								"korean": "시끄러워! 이거 하나도 제대로 안 되는구먼!"
+							}
+						},
+						{
+							"speaker": "dax",
+							"content": {
+								"korean": "윽, 더 시끄러워졌는데요?"
+							}
+						}
+					]
+				}
+			}
+		},
+		{
+			"text": {
+				"korean": "반장에게 다가가 \"무슨 문제라도 있으신가요?\" 하고 조심스럽게 묻는다."
+			},
+			"path": "hard",
+			"mbti": "NT",
+			"effects": {
+				"reason": 15,
+				"echo": 10
+			},
+			"reward": [
+				"stun"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "당신의 질문에 반장은 한숨을 쉬며 찌그러진 양동이를 보여준다."
+					}
+				},
+				{
+					"speaker": "foreman_hasty",
+					"content": {
+						"korean": "젠장, 이 양동이 때문에 작업이 늦어지고 있소! 다른 양동이는 어디 갔는지..."
+					}
+				},
+				{
+					"speaker": "dax",
+					"content": {
+						"korean": "아, 양동이가 문제였군요. 저희가 도와드릴까요?"
+					}
+				}
+			],
+			"risk": {
+				"chance": "high",
+				"bad": {
+					"effects": {
+						"gold": -20
+					},
+					"reward": [],
+					"result": [
+						{
+							"speaker": "narrator",
+							"content": {
+								"korean": "당신이 다가가자 반장은 당신을 의심스러운 눈초리로 쳐다본다."
+							}
+						},
+						{
+							"speaker": "foreman_hasty",
+							"content": {
+								"korean": "당신들이 여긴 왜 기웃거리는 거요? 괜한 참견 마시오!"
+							}
+						},
+						{
+							"speaker": "dax",
+							"content": {
+								"korean": "저희를 경계하는 반장님 표정이 심상치 않네요."
+							}
+						}
+					]
+				}
+			}
+		},
+		{
+			"text": {
+				"korean": "반장 옆에 놓인 다른 양동이를 발로 차서 \"저도 한번 해보겠습니다!\" 하고 외친다."
+			},
+			"path": "fun",
+			"mbti": "EP",
+			"effects": {
+				"echo": 20,
+				"fighting": 20
+			},
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "당신이 양동이를 발로 차자, 양동이는 굴러가더니 컨테이너 사이 좁은 틈에 끼어 버린다."
+					}
+				},
+				{
+					"speaker": "foreman_hasty",
+					"content": {
+						"korean": "컥! 으아니, 내 양동이가! 이제 저걸 어떻게 꺼낸담!"
+					}
+				},
+				{
+					"speaker": "dax",
+					"content": {
+						"korean": "으음, {actor}, 반장님을 더 난감하게 만들었네요."
+					}
+				}
+			],
+			"event": "meet_stranger",
+			"event_intro": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "요란한 소리에 다른 부두 일꾼 한 명이 달려온다. 그는 당신을 노려보며 주먹을 쥐어 보인다."
+					}
+				},
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "\"이봐, 당신! 지금 뭐 하는 짓이야? 내 양동이를 망가뜨려?\""
+					}
+				},
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "낯선 일꾼이 {actor}에게 대결을 걸어온다."
+					}
+				}
+			],
+			"event_options": {
+				"fight": {
+					"text": {
+						"korean": "{actor}이(가) \"내가 언제 그랬다고!\" 하고 덤벼드는 일꾼에게 맞선다."
+					},
+					"win": [
+						{
+							"speaker": "narrator",
+							"content": {
+								"korean": "당신의 재빠른 움직임에 일꾼은 휘청거리더니 엉덩방아를 찧고 주저앉는다."
+							}
+						},
+						{
+							"speaker": "dax",
+							"content": {
+								"korean": "역시 {actor}! 멋져요!"
+							}
+						}
+					],
+					"lose": [
+						{
+							"speaker": "narrator",
+							"content": {
+								"korean": "일꾼의 펀치가 당신의 옆구리에 정확히 명중한다. 당신은 잠시 숨을 멈춘다."
+							}
+						},
+						{
+							"speaker": "dax",
+							"content": {
+								"korean": "으악! {actor}, 괜찮아요?"
+							}
+						}
+					]
+				},
+				"avoid": {
+					"text": {
+						"korean": "\"죄송합니다!\" 하고 사과하며 싸움을 피한다."
+					},
+					"result": [
+						{
+							"speaker": "narrator",
+							"content": {
+								"korean": "당신의 사과에 낯선 일꾼은 씩씩거리며 돌아선다."
+							}
+						},
+						{
+							"speaker": "dax",
+							"content": {
+								"korean": "휴, 다행이에요. 싸움은 피하는 게 상책이죠."
+							}
+						}
+					],
+					"reward": [
+						"defense_down"
+					]
+				}
+			},
+			"risk": {
+				"chance": "low",
+				"bad": {
+					"reward": [
+						"hp_down"
+					],
+					"result": [
+						{
+							"speaker": "narrator",
+							"content": {
+								"korean": "당신이 양동이를 차려는 순간, 발을 헛디뎌 넘어진다. 양동이는 반장의 발등을 때린다."
+							}
+						},
+						{
+							"speaker": "foreman_hasty",
+							"content": {
+								"korean": "컥! 으아악! 내 발등! 당신 뭐야!"
+							}
+						},
+						{
+							"speaker": "dax",
+							"content": {
+								"korean": "으음, {actor}, 발목 조심해! 반장님도 많이 놀라셨겠어요."
+							}
+						}
+					]
+				}
+			}
+		}
+	],
+	"tags": [
+		"foreman_hasty",
+		"dax"
+	],
+	"_design": {
+		"slot": "A",
+		"kind": "normal",
+		"person": {
+			"name": "성급한 반장",
+			"id": "foreman_hasty",
+			"role": "부두 작업 반장"
+		},
+		"wants": "빨리 작업을 끝내고 퇴근하고 싶어 함.",
+		"rule_link": "부두 컨테이너에서 나는 요란한 소리를 듣고, 소리의 원인을 섣불리 판단할지 아니면 사정을 먼저 들을지 선택해야 합니다.",
+		"events": {
+			"fun": "당신의 엉뚱한 행동에 화가 난 다른 부두 일꾼이 당신에게 시비를 겁니다."
+		},
+		"flags": {}
+	}
+}

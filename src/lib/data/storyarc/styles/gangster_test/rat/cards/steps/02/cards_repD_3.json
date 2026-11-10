@@ -1,0 +1,451 @@
+{
+	"cards": [
+		{
+			"person": {
+				"id": "foreman",
+				"name": "하역 반장",
+				"role": "하역 반장"
+			},
+			"background_tags": [
+				"yard",
+				"container",
+				"passage",
+				"night",
+				"foggy"
+			],
+			"dialogue": [
+				{
+					"text": "빽빽이 쌓인 컨테이너 사이, 하역 반장이 손수레를 멈춰 세운다. 그의 작업복은 먼지 한 톨 없이 깨끗하다.",
+					"speaker": "narrator"
+				},
+				{
+					"speaker": "foreman",
+					"text": "당신들이 그 규정대로 움직인다는 해결사들이오? 마침 잘 만났소."
+				},
+				{
+					"speaker": "foreman",
+					"text": "이 길은 지금 출입 금지요. 저쪽 컨테이너 스무 개를 규격대로 다시 쌓는 중이거든."
+				},
+				{
+					"text": "어르신, 저희 지금 급한데… 살짝만 비켜 주시면 안 될까요?",
+					"speaker": "dax"
+				},
+				{
+					"text": "안 돼. 중요한 물건이라 규정대로 차곡차곡 옮겨야 해. 이 컨테이너는 오차 범위 1mm도 허용 안 하오.",
+					"speaker": "foreman"
+				}
+			],
+			"rule_link": "사소한 규칙 하나라도 끝까지 지켜보는 것과, 보이지 않는다고 판단해 버리는 것은 다르다.",
+			"title": "깐깐한 반장의 고집",
+			"choices": [
+				{
+					"mbti": "TJ",
+					"result": [
+						{
+							"text": "당신이 컨테이너를 정확한 위치에 놓자 반장은 만족스러운 표정을 짓는다.",
+							"speaker": "narrator"
+						},
+						{
+							"text": "역시 소문대로군. 당신들 덕에 일이 빨리 끝났어. 저 안쪽 통로는 바닥이 미끄러우니 조심하시오.",
+							"speaker": "foreman"
+						},
+						{
+							"text": "반장님, 저렇게 꼼꼼하게 하더니 결국 저희도 같이 일하게 만드네요!",
+							"speaker": "dax"
+						}
+					],
+					"reward": [
+						"attack_up"
+					],
+					"flag": {
+						"label": "미끄러운 바닥 경고",
+						"boss_text": "하역 반장의 경고대로 창고 안쪽 바닥이 미끄러워 히어로들의 움직임이 둔해진다.",
+						"key": "foreman_warns_slippery"
+					},
+					"risk_bad": {
+						"result": [
+							{
+								"speaker": "narrator",
+								"text": "당신이 컨테이너를 정확한 위치에 놓으려 했지만, 손에서 미끄러져 옆 컨테이너를 긁는다."
+							},
+							{
+								"text": "아이고! 내 정성 들여 쌓은 컨테이너가! 당신들, 책임지고 저 흠집을 없애시오!",
+								"speaker": "foreman"
+							},
+							{
+								"speaker": "dax",
+								"text": "으악, 반장님 화났어요! 저 상처는 어떻게 없애요!"
+							}
+						],
+						"gold": -50,
+						"reward": []
+					},
+					"effects": {
+						"echo": 10,
+						"reason": -20
+					},
+					"path": "easy",
+					"text": "반장의 말대로 컨테이너를 조심스레 옮기는 것을 돕는다."
+				},
+				{
+					"text": "급한 상황이라 설명하며 반장을 설득해 길을 터 달라고 한다.",
+					"effects": {
+						"echo": -5,
+						"fighting": 20
+					},
+					"path": "hard",
+					"risk_bad": {
+						"result": [
+							{
+								"text": "당신의 설명에도 반장은 완강하게 고개를 젓는다. 그때 뒤에서 누군가 \"반장님!\"하고 부른다.",
+								"speaker": "narrator"
+							},
+							{
+								"text": "젠장! 벌써 검사관이 온 건가! 당신들 때문에 일이 꼬였잖아!",
+								"speaker": "foreman"
+							},
+							{
+								"speaker": "dax",
+								"text": "저쪽에서 누가 오는데요! 우리 때문에 반장님 혼나는 거 아니에요?"
+							}
+						],
+						"gold": -20,
+						"reward": []
+					},
+					"reward": [
+						"attack_down"
+					],
+					"flag": {
+						"key": "foreman_grumbles_path",
+						"boss_text": "하역 반장이 길을 비켜주며 퍼부은 불평 때문에 히어로들의 집중력이 흐트러진다.",
+						"label": "불평하는 반장"
+					},
+					"result": [
+						{
+							"text": "당신의 간절한 설득에 반장은 한숨을 쉬며 길을 비켜 준다.",
+							"speaker": "narrator"
+						},
+						{
+							"text": "쳇, 당신들 같은 사람들은 규정을 가르쳐 줘도 듣지 않아.",
+							"speaker": "foreman"
+						},
+						{
+							"speaker": "foreman",
+							"text": "그냥 가시오! 대신 저기 쌓인 컨테이너가 무너져도 난 몰라!"
+						},
+						{
+							"text": "무너진다고요? 반장님 너무해요!",
+							"speaker": "dax"
+						}
+					],
+					"mbti": "NF"
+				},
+				{
+					"text": "규칙을 지키는 해결사임을 강조하며, 빨리 처리할 방법을 제안한다.",
+					"path": "stat",
+					"effects": {
+						"reason": -30,
+						"echo": 15,
+						"community": 10
+					},
+					"flag": {
+						"label": "반장의 지름길",
+						"boss_text": "하역 반장이 알려준 지름길로 파란 컨테이너에 먼저 진입해 창고 간부를 기습할 수 있다.",
+						"key": "foreman_shortcut_candy"
+					},
+					"mbti": "SJ",
+					"reward": [
+						"attack_up"
+					],
+					"result": [
+						{
+							"text": "당신의 명성에 반장은 믿음이 간다며 고개를 끄덕인다. 그는 컨테이너 한 귀퉁이를 가리킨다.",
+							"speaker": "narrator"
+						},
+						{
+							"speaker": "foreman",
+							"text": "소문대로군. 당신이라면 믿을 수 있지. 이쪽으로 가면 바로 파란 컨테이너 입구요."
+						},
+						{
+							"text": "대신 절대 저 사탕 상자에는 손대지 마시오.",
+							"speaker": "foreman"
+						},
+						{
+							"text": "우와, 반장님이 알려준 지름길이에요! 대박!",
+							"speaker": "dax"
+						}
+					]
+				},
+				{
+					"path": "fun",
+					"effects": {
+						"reason": 20,
+						"gold": 50
+					},
+					"result": [
+						{
+							"text": "반장은 당신의 손을 탁 쳐내고는, 잃어버린 줄 알았던 사탕을 찾은 듯 웃는다.",
+							"speaker": "narrator"
+						},
+						{
+							"text": "으하하! 이봐, 내 사탕에 손대지 마!… 쳇, 농담이야.",
+							"speaker": "foreman"
+						},
+						{
+							"speaker": "foreman",
+							"text": "그 정도 배짱이면 이 길 정도는 지나도 괜찮겠지. 어서 가!"
+						},
+						{
+							"speaker": "dax",
+							"text": "반장님 화내는 줄 알았는데! 엉뚱하게 웃으시네요!"
+						}
+					],
+					"text": "반장이 목에 건 사탕 목걸이 중 가장 반짝이는 것을 몰래 떼어낸다.",
+					"risk_bad": {
+						"result": [
+							{
+								"text": "당신이 사탕을 떼어내려는 순간, 반장이 목걸이를 꽉 붙잡는다. 사탕은 부서지고, 반장의 얼굴이 굳어진다.",
+								"speaker": "narrator"
+							},
+							{
+								"text": "이봐! 이건 내 아내가 준 마지막 사탕이었어! 당신들, 이거 물어내!",
+								"speaker": "foreman"
+							},
+							{
+								"speaker": "dax",
+								"text": "큰일 났어요! 반장님 제일 아끼던 사탕이었나 봐요!"
+							}
+						],
+						"reward": [
+							"hp_down"
+						]
+					},
+					"mbti": "EP"
+				}
+			],
+			"key": "foreman_meticulous",
+			"no": 1,
+			"wants": "컨테이너 재배치 규정을 지키지 않으면 절대 길을 터 줄 수 없소.",
+			"slot": "D",
+			"kind": "rep",
+			"rep_dir": "reason-"
+		},
+		{
+			"wants": "이 지루한 검사관 일은 질색이오. 당신들이 대신 처리해 주시오.",
+			"rule_link": "끝까지 지켜보는 것과, 사소한 일에 마음이 가버려 판단을 놓치는 것은 다르다.",
+			"title": "딴짓하는 반장의 푸념",
+			"no": 2,
+			"dialogue": [
+				{
+					"speaker": "narrator",
+					"text": "빽빽이 쌓인 컨테이너 사이, 하역 반장이 담배 대신 사탕을 물고 하품한다."
+				},
+				{
+					"text": "그의 작업복은 여기저기 구멍이 뚫려 있다.",
+					"speaker": "narrator"
+				},
+				{
+					"speaker": "foreman",
+					"text": "당신들이 그 융통성 있다는 해결사들이오? 마침 잘 만났소."
+				},
+				{
+					"speaker": "foreman",
+					"text": "이 길은 원래 출입 금지인데… 내가 잠시 자리를 비워도 모른 척해 주시오."
+				},
+				{
+					"text": "반장님, 저희가 지금 급해서 그러는데…",
+					"speaker": "dax"
+				},
+				{
+					"text": "아, 이따 깐깐한 검사관이 와서 이 컨테이너를 뒤질 건데, 미리 봐 줄 사람 없나.",
+					"speaker": "foreman"
+				},
+				{
+					"text": "이 안엔 고양이 사료뿐이라고!",
+					"speaker": "foreman"
+				}
+			],
+			"choices": [
+				{
+					"risk_bad": {
+						"reward": [
+							"intelligence_down"
+						],
+						"result": [
+							{
+								"speaker": "narrator",
+								"text": "당신이 컨테이너 앞에 서자 반장은 잽싸게 사라진다."
+							},
+							{
+								"speaker": "narrator",
+								"text": "곧 안경을 쓴 남자가 다가와 당신에게 두꺼운 서류 뭉치를 내민다."
+							},
+							{
+								"speaker": "narrator",
+								"text": "그는 안경을 고쳐 쓰며 말한다. 이 컨테이너의 모든 서류를 빈틈없이 확인해야 한다고."
+							},
+							{
+								"text": "서류가 엄청 많아요! 이거 언제 다 확인해요!",
+								"speaker": "dax"
+							}
+						]
+					},
+					"text": "반장의 부탁대로 검사관이 올 때까지 대신 자리를 지켜준다.",
+					"reward": [
+						"hp_down"
+					],
+					"path": "easy",
+					"result": [
+						{
+							"speaker": "narrator",
+							"text": "당신이 컨테이너 앞에 서자 반장은 홀가분한 듯 휘파람을 불며 사라진다."
+						},
+						{
+							"speaker": "narrator",
+							"text": "잠시 후, 안경을 쓴 남자가 다가와 컨테이너 주변을 꼼꼼히 살피더니, 코를 킁킁거린다."
+						},
+						{
+							"text": "어르신, 저 남자 뭘 자꾸 냄새 맡아요! 수상한데요!",
+							"speaker": "dax"
+						}
+					],
+					"flag": {
+						"key": "inspector_suspicious",
+						"label": "수상한 검사관",
+						"boss_text": "수상한 냄새를 맡는 검사관 때문에 히어로들의 위치가 발각되어 선제공격을 당한다."
+					},
+					"effects": {
+						"echo": 10,
+						"reason": 20
+					},
+					"mbti": "SP"
+				},
+				{
+					"effects": {
+						"fighting": -20,
+						"echo": -5
+					},
+					"reward": [
+						"defense_down"
+					],
+					"text": "규정대로 행동해야 한다며 반장에게 자리를 지키라고 강하게 요구한다.",
+					"result": [
+						{
+							"text": "당신의 단호한 말에 반장은 투덜거리며 다시 컨테이너 앞으로 돌아온다.",
+							"speaker": "narrator"
+						},
+						{
+							"speaker": "foreman",
+							"text": "쳇, 융통성 없는 사람들이라니! 당신들 때문에 내 간식 시간이 날아갔잖아!"
+						},
+						{
+							"text": "반장님 계속 투덜거려요! 이러다 검사관한테 다 들키겠어요!",
+							"speaker": "dax"
+						}
+					],
+					"path": "hard",
+					"flag": {
+						"label": "반장의 불평",
+						"boss_text": "하역 반장의 불평 때문에 검사관이 컨테이너 주변을 더욱 꼼꼼히 살피게 된다.",
+						"key": "foreman_grumbles_again"
+					},
+					"risk_bad": {
+						"gold": -20,
+						"result": [
+							{
+								"speaker": "narrator",
+								"text": "당신의 강한 요구에 반장은 인상을 찌푸린다. 그는 갑자기 손에 든 무전기를 켠다."
+							},
+							{
+								"speaker": "foreman",
+								"text": "이봐, 여기 수상한 놈들이 있어! 당장 와서 확인해 봐!"
+							},
+							{
+								"speaker": "dax",
+								"text": "으악, 반장님이 우리 신고했어요! 빨리 도망쳐요!"
+							}
+						],
+						"reward": []
+					},
+					"mbti": "TJ"
+				},
+				{
+					"mbti": "NF",
+					"effects": {
+						"reason": 30,
+						"community": 10,
+						"echo": 15
+					},
+					"result": [
+						{
+							"text": "당신의 제안에 반장은 눈을 반짝이며 컨테이너 문을 살짝 연다. 안에는 고양이 사료와 함께 작은 쪽지가 있다.",
+							"speaker": "narrator"
+						},
+						{
+							"text": "당신들 덕분에 살았네!",
+							"speaker": "foreman"
+						},
+						{
+							"speaker": "foreman",
+							"text": "이 컨테이너는 원래 고양이 사료 보관용인데, 이따 창고 간부가 중요한 물건을 여기에 숨긴다는군."
+						},
+						{
+							"speaker": "dax",
+							"text": "대박! 숨겨진 정보가 있었어요! 고양이 사료 컨테이너라니!"
+						}
+					],
+					"reward": [
+						"intelligence_up"
+					],
+					"flag": {
+						"label": "반장의 기밀 정보",
+						"key": "foreman_secret_info",
+						"boss_text": "하역 반장에게서 창고 간부가 중요한 물건을 숨긴 컨테이너 정보를 얻어 전투 중 간부의 약점을 파고들 수 있다."
+					},
+					"path": "stat",
+					"text": "반장의 고민을 들어주고, 융통성 있게 문제 해결을 돕겠다고 제안한다."
+				},
+				{
+					"effects": {
+						"gold": -100
+					},
+					"mbti": "ES",
+					"result": [
+						{
+							"speaker": "narrator",
+							"text": "당신이 뇌물을 건네자 반장은 눈을 한번 깜빡이더니 잽싸게 돈을 주머니에 넣는다."
+						},
+						{
+							"speaker": "foreman",
+							"text": "으음, 급한 일이라니 어쩔 수 없지. 자, 이 길은 내가 잠시 눈 감아 줄 테니 어서 가시오."
+						},
+						{
+							"text": "와, 반장님 돈 받으니까 바로 태도가 바뀌네요!",
+							"speaker": "dax"
+						}
+					],
+					"path": "gold",
+					"text": "반장에게 뇌물을 쥐여주며, 이 길을 잠시만 열어 달라고 부탁한다."
+				}
+			],
+			"person": {
+				"id": "foreman",
+				"name": "하역 반장",
+				"role": "하역 반장"
+			},
+			"key": "foreman_distracted",
+			"background_tags": [
+				"yard",
+				"container",
+				"passage",
+				"night",
+				"foggy"
+			],
+			"slot": "D",
+			"kind": "rep",
+			"rep_dir": "reason+"
+		}
+	],
+	"errors": [],
+	"prompt_hash": "556d027290543ee8f54ca3d02d5f2a369ebdf3de"
+}

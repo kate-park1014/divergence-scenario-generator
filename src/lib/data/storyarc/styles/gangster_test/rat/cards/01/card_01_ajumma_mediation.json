@@ -1,0 +1,288 @@
+{
+	"id": "card_01_ajumma_mediation",
+	"title": {
+		"korean": "컨테이너 식당 아주머니의 중재 요청"
+	},
+	"intensity": "calm",
+	"after_story": 3,
+	"before_story": 5,
+	"condition": {
+		"leaning": "fighting+",
+		"among": [
+			"fighting-",
+			"fighting+",
+			"community-",
+			"community+",
+			"reason-",
+			"reason+"
+		],
+		"min": 20
+	},
+	"urgency": 8,
+	"leaning": "fighting+",
+	"background_tags": [
+		"night",
+		"pier",
+		"foggy",
+		"busy",
+		"container"
+	],
+	"background_image": "https://imagedelivery.net/WTEqQNGFb-l-IHS6IGnzUQ/189eafd3-e726-498f-329d-1e1cb695e800/public",
+	"dialogue": [
+		{
+			"speaker": "narrator",
+			"content": {
+				"korean": "닥스의 차가 부두 정문에 다다랐다. 컨테이너 식당 아주머니가 앞치마를 만지작거리며 손짓한다."
+			}
+		},
+		{
+			"speaker": "ajumma",
+			"content": {
+				"korean": "아이고, 당신이 소문으로 듣던 그 말솜씨 좋은 해결사 양반 맞아요?"
+			}
+		},
+		{
+			"speaker": "ajumma",
+			"content": {
+				"korean": "어휴, 저기 일꾼 둘이 젓가락으로 싸워요. 저러다 국물이라도 엎으면 어째!"
+			}
+		},
+		{
+			"speaker": "ajumma",
+			"content": {
+				"korean": "아니, 그냥 가만히 두고 보자니 제 속이 다 터져 죽겠어요. 저거 좀 말려줘요!"
+			}
+		}
+	],
+	"choices": [
+		{
+			"text": {
+				"korean": "차에서 내려 일꾼들에게 다가가 싸움을 멈추라고 설득한다."
+			},
+			"path": "easy",
+			"mbti": "IF",
+			"flag": "ajumma_chopstick_game",
+			"effects": {
+				"echo": -5,
+				"fighting": 20
+			},
+			"reward": [
+				"attack_up"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "당신의 설득에 일꾼들은 싸움을 멈추고 멋쩍게 웃는다."
+					}
+				},
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "그들은 사실 젓가락으로 바닥에 떨어진 김 조각을 누가 먼저 줍나 내기 중이었다."
+					}
+				},
+				{
+					"speaker": "dax",
+					"content": {
+						"korean": "아이고, 괜히 오해했네요."
+					}
+				}
+			],
+			"risk": {
+				"chance": "mid",
+				"bad": {
+					"effects": {
+						"gold": -20
+					},
+					"reward": [
+						"defense_down"
+					],
+					"result": [
+						{
+							"speaker": "narrator",
+							"content": {
+								"korean": "당신의 설득에 일꾼들은 싸움을 멈추는 듯했으나,"
+							}
+						},
+						{
+							"speaker": "narrator",
+							"content": {
+								"korean": "한 명이 젓가락을 휘두르다 아주머니 식당의 김치 항아리에 부딪힌다."
+							}
+						},
+						{
+							"speaker": "narrator",
+							"content": {
+								"korean": "항아리가 크게 기우뚱하며 붉은 김치 국물이 바닥에 흥건해진다."
+							}
+						},
+						{
+							"speaker": "dax",
+							"content": {
+								"korean": "저러다 김치 다 쏟겠어요!"
+							}
+						}
+					]
+				}
+			}
+		},
+		{
+			"text": {
+				"korean": "아주머니에게 일꾼들이 왜 싸우고 있었는지 정확히 묻는다."
+			},
+			"path": "hard",
+			"mbti": "ET",
+			"flag": "ajumma_chopstick_bet",
+			"effects": {
+				"echo": 5,
+				"fighting": -20
+			},
+			"reward": [
+				"attack_up"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "아주머니는 일꾼들이 늘 별것도 아닌 일로 투닥거린다고 툴툴거린다."
+					}
+				},
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "일꾼들은 젓가락으로 바닥의 김 조각을 가리키며 누가 먼저 줍나 내기 중이었다고 말한다."
+					}
+				},
+				{
+					"speaker": "dax",
+					"content": {
+						"korean": "저런, 귀여운 싸움이었네요."
+					}
+				}
+			],
+			"risk": {
+				"chance": "high",
+				"bad": {
+					"effects": {
+						"gold": -20
+					},
+					"reward": [],
+					"result": [
+						{
+							"speaker": "narrator",
+							"content": {
+								"korean": "아주머니는 한숨을 쉬며 당신의 질문에 짜증을 낸다."
+							}
+						},
+						{
+							"speaker": "narrator",
+							"content": {
+								"korean": "일꾼들은 아주머니에게 대들며 자신들은 싸우지 않았고 그저 놀고 있었다고 주장한다."
+							}
+						},
+						{
+							"speaker": "dax",
+							"content": {
+								"korean": "오히려 아주머니랑 싸우기 시작하는 것 같은데요..."
+							}
+						}
+					]
+				}
+			}
+		},
+		{
+			"text": {
+				"korean": "소문난 해결사답게 온화한 미소로 일꾼들을 진정시킨다."
+			},
+			"path": "stat",
+			"mbti": "NJ",
+			"require": {
+				"stat": "fighting",
+				"op": ">=",
+				"value": 40
+			},
+			"flag": "ajumma_chopstick_peace",
+			"effects": {
+				"echo": 10,
+				"fighting": 10,
+				"community": 10
+			},
+			"reward": [
+				"shield"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "당신의 온화한 미소에 일꾼들은 즉시 싸움을 멈추고 멋쩍게 사과한다."
+					}
+				},
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "일꾼들은 서로 어깨를 두드리며 컨테이너 식당으로 들어갔다."
+					}
+				},
+				{
+					"speaker": "dax",
+					"content": {
+						"korean": "역시 여러분 말은 잘 듣네요!"
+					}
+				}
+			]
+		}
+	],
+	"tags": [
+		"ajumma",
+		"dax"
+	],
+	"_design": {
+		"slot": "B",
+		"kind": "rep",
+		"person": {
+			"id": "ajumma",
+			"name": "컨테이너 식당 아주머니",
+			"role": "식당 사장"
+		},
+		"wants": "싸우는 일꾼들을 말려달라고 한다.",
+		"rule_link": "소문만 듣고 주인공이 온화한 방식으로 문제를 해결할 것이라고 단정하여 부탁한다.",
+		"rep": "fighting+",
+		"events": {},
+		"flags": {
+			"ajumma_chopstick_game": {
+				"kind": "bad",
+				"boss_penalty": -1,
+				"label": {
+					"korean": "젓가락 게임"
+				},
+				"boss_line": {
+					"korean": "일꾼들이 당신을 보고 젓가락으로 바닥을 콕콕 찌른다."
+				}
+			},
+			"ajumma_chopstick_bet": {
+				"kind": "good",
+				"boss_penalty": 1,
+				"label": {
+					"korean": "젓가락 내기"
+				},
+				"boss_choice": {
+					"korean": "일꾼들이 당신에게 젓가락을 들고 승부를 겨루자고 한다."
+				}
+			},
+			"ajumma_chopstick_peace": {
+				"kind": "good",
+				"boss_penalty": 2,
+				"label": {
+					"korean": "젓가락 평화"
+				},
+				"boss_choice": {
+					"korean": "일꾼들이 당신에게 젓가락을 공손히 건넨다."
+				}
+			}
+		}
+	}
+}

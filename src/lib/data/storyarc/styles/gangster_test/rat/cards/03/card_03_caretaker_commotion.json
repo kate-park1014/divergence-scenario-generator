@@ -1,0 +1,164 @@
+{
+	"id": "card_03_caretaker_commotion",
+	"title": {
+		"korean": "관리인의 과장된 소란"
+	},
+	"intensity": "high",
+	"after_story": 5,
+	"before_story": 7,
+	"callback": {
+		"seed": "old_tapes_easy",
+		"min_rooms_after": 2
+	},
+	"background_tags": [
+		"server_room",
+		"night",
+		"blue_light",
+		"crowd",
+		"tense"
+	],
+	"background_image": "https://imagedelivery.net/WTEqQNGFb-l-IHS6IGnzUQ/40a68dec-51cb-45d4-9322-0f574798c300/public",
+	"dialogue": [
+		{
+			"speaker": "narrator",
+			"content": {
+				"korean": "서버실 문 앞에서 '삭제 완료' 안내음이 계속 들려오고, 복도 저편에서 요란한 소리가 들린다."
+			}
+		},
+		{
+			"speaker": "old_caretaker",
+			"content": {
+				"korean": "으아악! 내 자료실 열쇠가 없어졌어! 도둑이야! 감히 자료실 열쇠를 훔쳐가다니!"
+			}
+		},
+		{
+			"speaker": "dax",
+			"content": {
+				"korean": "맙소사, 저번에 우리가 슬쩍했던 그 열쇠인가 봐요! 사람들이 몰려오고 있어요!"
+			}
+		},
+		{
+			"speaker": "old_caretaker",
+			"content": {
+				"korean": "저기 저 수상한 놈들이 분명해! 어서 잡으라고!"
+			}
+		}
+	],
+	"choices": [
+		{
+			"text": {
+				"korean": "관리인이 소리 지르기 전에 재빨리 열쇠를 돌려주고 상황을 무마한다."
+			},
+			"path": "easy",
+			"mbti": "TJ",
+			"flag": "caretaker_accused",
+			"effects": {
+				"gold": -50
+			},
+			"reward": [
+				"attack_down"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "당신이 열쇠를 돌려주자 관리인은 잠시 멈칫하더니, 열쇠가 원래 제자리에 있었다며 당신을 도둑으로 몰아간다."
+					}
+				},
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "다른 직원들이 몰려와 당신을 의심스러운 눈초리로 바라본다."
+					}
+				},
+				{
+					"speaker": "dax",
+					"content": {
+						"korean": "으악, 더 이상해졌어요! 어쩌죠!"
+					}
+				}
+			]
+		},
+		{
+			"text": {
+				"korean": "관리인이 과장하는 것으로 보고, 열쇠는 원래부터 없었다고 잡아뗀다."
+			},
+			"path": "hard",
+			"mbti": "EP",
+			"flag": "caretaker_doubted",
+			"effects": {
+				"fighting": 15,
+				"reason": -10
+			},
+			"reward": [
+				"defense_up"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "당신의 당당한 태도에 관리인은 잠시 주춤한다."
+					}
+				},
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "관리인은 열쇠가 어디 있었는지 기억이 안 나는 듯 머리를 긁적인다."
+					}
+				},
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "사람들이 웅성거리며 관리인의 허술한 모습에 실망한다."
+					}
+				},
+				{
+					"speaker": "dax",
+					"content": {
+						"korean": "어르신이 자기 말을 헷갈리나 봐요! 휴, 큰일 날 뻔했네요!"
+					}
+				}
+			]
+		}
+	],
+	"tags": [
+		"old_caretaker",
+		"dax"
+	],
+	"_design": {
+		"slot": "C",
+		"kind": "callback",
+		"person": {
+			"role": "자료실 관리인",
+			"id": "old_caretaker",
+			"name": "늙은 관리인"
+		},
+		"wants": "잃어버린 자료실 열쇠를 찾아 자신의 관리 소홀을 감추고 싶어 한다.",
+		"rule_link": "'도둑이야'라는 눈앞의 소란이 정말 열쇠 도난 사건인지, 아니면 관리인의 오해인지 따져 본다.",
+		"events": {},
+		"flags": {
+			"caretaker_accused": {
+				"kind": "bad",
+				"boss_penalty": -1,
+				"label": {
+					"korean": "관리인에게 도둑으로 몰림"
+				},
+				"boss_line": {
+					"korean": "관리인이 당신을 도둑으로 몰아 다른 직원들이 경계한다."
+				}
+			},
+			"caretaker_doubted": {
+				"kind": "good",
+				"boss_penalty": 1,
+				"label": {
+					"korean": "관리인 증언 의심"
+				},
+				"boss_choice": {
+					"korean": "관리인의 주장이 믿을 만한지 의심하게 된다."
+				}
+			}
+		}
+	}
+}

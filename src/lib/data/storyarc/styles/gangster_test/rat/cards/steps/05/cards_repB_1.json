@@ -1,0 +1,408 @@
+{
+	"cards": [
+		{
+			"choices": [
+				{
+					"mbti": "TJ",
+					"effects": {
+						"echo": -5,
+						"fighting": -20
+					},
+					"text": "반장을 밀어붙여 비서의 비밀을 캐낸다.",
+					"path": "easy",
+					"result": [
+						{
+							"text": "당신이 반장의 어깨를 쥐고 등대에 숨겨둔 것이 무엇인지 다그친다.",
+							"speaker": "narrator"
+						},
+						{
+							"text": "으으, 알겠습니다! 비서님이 등대에 몰래 숨겨둔 건 회장님 건강검진 결과예요!",
+							"speaker": "banjang"
+						},
+						{
+							"speaker": "dax",
+							"text": "저런, 그걸 그렇게 쉽게 불어버리다니… 역시 다그치는 게 최고인가요?"
+						}
+					],
+					"flag": {
+						"key": "foreman_anger",
+						"boss_text": "반장이 당신을 향해 고함을 지르며 달려들어 잠시 시야를 가린다.",
+						"label": "반장의 원한"
+					},
+					"reward": [
+						"attack_up"
+					],
+					"risk_bad": {
+						"reward": [
+							"attack_down"
+						],
+						"gold": -30,
+						"result": [
+							{
+								"text": "당신이 반장의 어깨를 쥐고 다그치자 반장이 휘청하며 손에 든 종이를 놓친다.",
+								"speaker": "narrator"
+							},
+							{
+								"text": "아이고, 내 공사 일지! 젖으면 큰일인데!",
+								"speaker": "banjang"
+							},
+							{
+								"speaker": "dax",
+								"text": "어휴, 저도 몰아붙이기 전에 좀 물어볼 걸 그랬네요. 다 젖었잖아요."
+							}
+						]
+					}
+				},
+				{
+					"text": "반장에게 부드럽게 말을 걸어 사정을 묻는다.",
+					"mbti": "FP",
+					"reward": [
+						"intelligence_up"
+					],
+					"risk_bad": {
+						"result": [
+							{
+								"text": "당신이 반장에게 부드럽게 말을 걸자, 반장은 긴장한 채 침만 꿀꺽 삼킨다.",
+								"speaker": "narrator"
+							},
+							{
+								"speaker": "banjang",
+								"text": "으음… 글쎄요… 제가 뭘 알겠습니까… 반장이 불안한 듯 이마를 문지르며 시선을 피한다."
+							},
+							{
+								"text": "반장님, 왜 말씀을 못 하세요! 저희가 그렇게 무서워요?",
+								"speaker": "dax"
+							}
+						],
+						"gold": -20,
+						"reward": []
+					},
+					"flag": {
+						"boss_text": "반장이 당신의 지시를 따르며 적의 움직임을 방해한다.",
+						"key": "foreman_trust",
+						"label": "반장의 신뢰"
+					},
+					"result": [
+						{
+							"text": "당신이 반장에게 조심스럽게 왜 비서의 비밀을 궁금해하는지 묻는다.",
+							"speaker": "narrator"
+						},
+						{
+							"text": "회장님 비서가 등대에 감춰둔 건 며칠 전 새로 들어온 고급 와인이라고요.",
+							"speaker": "banjang"
+						},
+						{
+							"text": "으음, 와인이라… 그냥 지나칠 뻔했네요!",
+							"speaker": "dax"
+						}
+					],
+					"path": "hard",
+					"effects": {
+						"echo": 10,
+						"fighting": 10
+					}
+				},
+				{
+					"effects": {
+						"community": -10,
+						"fighting": -10,
+						"reason": -10
+					},
+					"mbti": "EN",
+					"result": [
+						{
+							"text": "당신이 반장에게 이마를 문지르는 버릇에 대해 묻자, 반장이 당황한다.",
+							"speaker": "narrator"
+						},
+						{
+							"speaker": "banjang",
+							"text": "으음, 이건… 제가 긴장하면 나오는 버릇입니다. 혹시… 제가 뭐 잘못했습니까?"
+						},
+						{
+							"speaker": "dax",
+							"text": "헉, 갑자기 분위기가 싸늘해졌어요! 반장님, 너무 놀라지 마세요!"
+						}
+					],
+					"reward": [
+						"stun"
+					],
+					"text": "비서의 비밀을 캐묻기보다 반장의 이마를 문지르는 습관을 지적한다.",
+					"path": "stat",
+					"flag": {
+						"boss_text": "반장이 갑작스러운 불안감에 이마를 문지르며 잠시 주춤한다.",
+						"key": "foreman_distraction",
+						"label": "반장의 불안"
+					}
+				}
+			],
+			"wants": "주먹부터 쓰는 당신에게 비서의 비밀을 캐내달라고 부탁한다.",
+			"background_tags": [
+				"pier",
+				"night",
+				"foggy",
+				"fewpeople",
+				"tense"
+			],
+			"no": 1,
+			"key": "foreman_blocked_path",
+			"rule_link": "닥달하는 대신 먼저 묻는 것에 대한 이야기. 반장은 주인공의 소문을 듣고 직접 찾아와 부탁한다.",
+			"dialogue": [
+				{
+					"speaker": "narrator",
+					"text": "닥스의 차가 짙은 안개를 뚫고 부두 도로를 달리다 멈춰 선다."
+				},
+				{
+					"text": "안개 속에서 한 남자가 손을 흔들며 다가온다. 이마를 자꾸 문지른다.",
+					"speaker": "narrator"
+				},
+				{
+					"text": "당신이 그… 주먹부터 나간다는 해결사 맞죠? 아이고, 안개까지 껴서 큰일 났는데…",
+					"speaker": "banjang"
+				},
+				{
+					"speaker": "banjang",
+					"text": "저기, 회장님 비서님이 요즘 좀 이상해요. 그 양반이 등대에 숨겨둔 게 있는데…"
+				},
+				{
+					"speaker": "dax",
+					"text": "비서님이요? 그분 일이라면 저희가 알아서 할게요."
+				}
+			],
+			"person": {
+				"id": "banjang",
+				"name": "반장",
+				"role": "부두 일꾼 반장"
+			},
+			"title": "길을 막는 반장",
+			"slot": "B",
+			"kind": "rep",
+			"rep_dir": "fighting-"
+		},
+		{
+			"dialogue": [
+				{
+					"speaker": "narrator",
+					"text": "닥스의 차가 짙은 안개를 뚫고 부두 도로를 달리다 멈춰 선다."
+				},
+				{
+					"speaker": "narrator",
+					"text": "안개 속에서 한 남자가 손을 흔들며 다가온다. 이마를 자꾸 문지른다."
+				},
+				{
+					"text": "당신이 그… 어려운 사람 돕는다는 해결사 맞죠? 아이고, 이 안개 때문에 일이 더 꼬여서…",
+					"speaker": "banjang"
+				},
+				{
+					"text": "비서님이 등대 근처 폐창고에 뭘 숨겨둔 것 같은데, 저 혼자서는 도저히 못 들어가겠어서…",
+					"speaker": "banjang"
+				},
+				{
+					"text": "비서님이요? 저희가 비서님을 찾아가는 길이었어요!",
+					"speaker": "dax"
+				}
+			],
+			"key": "foreman_distress_call",
+			"choices": [
+				{
+					"risk_bad": {
+						"gold": -40,
+						"reward": [
+							"hp_down"
+						],
+						"result": [
+							{
+								"text": "당신이 반장과 함께 폐창고로 들어가자, 바닥에 깔린 널빤지가 부러진다.",
+								"speaker": "narrator"
+							},
+							{
+								"text": "아이고! 내 다리! 이 폐창고 바닥이 이렇게 약했다니!",
+								"speaker": "banjang"
+							},
+							{
+								"speaker": "dax",
+								"text": "반장님, 괜찮으세요? 몰아붙이기 전에 좀 더 조심할 걸 그랬어요!"
+							}
+						]
+					},
+					"flag": {
+						"label": "반장의 은혜",
+						"key": "foreman_gratitude",
+						"boss_text": "반장이 당신을 위해 적의 시야를 가리는 연막탄을 던진다."
+					},
+					"path": "easy",
+					"text": "반장과 함께 폐창고로 가서 비서의 짐을 찾아준다.",
+					"reward": [
+						"heal"
+					],
+					"result": [
+						{
+							"text": "당신이 반장과 함께 폐창고로 향한다. 반장이 숨겨진 상자를 가리킨다.",
+							"speaker": "narrator"
+						},
+						{
+							"text": "흐읍, 고맙습니다! 이 은혜는 잊지 않겠습니다! 반장이 허리춤에서 지폐 몇 장을 꺼내 당신에게 건넨다.",
+							"speaker": "banjang"
+						},
+						{
+							"text": "와, 반장님도 비서님 일 때문에 마음고생이 심하셨나 봐요!",
+							"speaker": "dax"
+						}
+					],
+					"mbti": "IS",
+					"effects": {
+						"fighting": 20,
+						"gold": 50
+					}
+				},
+				{
+					"flag": {
+						"boss_text": "반장이 건넨 폐창고 지도로 적의 이동 경로를 예측할 수 있다.",
+						"label": "반장의 지도",
+						"key": "foreman_map"
+					},
+					"path": "hard",
+					"reward": [
+						"move_range_up"
+					],
+					"mbti": "NT",
+					"risk_bad": {
+						"result": [
+							{
+								"text": "당신이 반장에게 혼자 가겠다고 하자, 반장은 감격한 나머지 울먹인다.",
+								"speaker": "narrator"
+							},
+							{
+								"speaker": "banjang",
+								"text": "으흑… 이런 은혜가… 제가 보답할 길이 없을까요? 반장이 당신의 바짓가랑이를 잡고 늘어진다."
+							},
+							{
+								"speaker": "dax",
+								"text": "반장님! 저희가 괜찮다고 했잖아요! 얼른 가야 한다고요!"
+							}
+						],
+						"gold": -20,
+						"reward": []
+					},
+					"text": "반장을 안심시키고 비서의 물건을 직접 찾아오겠다고 한다.",
+					"result": [
+						{
+							"text": "당신이 반장에게 혼자 폐창고에 가겠다고 하자, 반장은 안도하며 길을 비킨다.",
+							"speaker": "narrator"
+						},
+						{
+							"speaker": "banjang",
+							"text": "위험한 곳이니 조심하십시오… 제가 폐창고 지도를 그려드리겠습니다!"
+						},
+						{
+							"speaker": "dax",
+							"text": "오, 덕분에 폐창고 안을 쉽게 찾을 수 있겠어요!"
+						}
+					],
+					"effects": {
+						"community": 10,
+						"fighting": -10
+					}
+				},
+				{
+					"path": "stat",
+					"flag": {
+						"key": "foreman_rumor",
+						"label": "반장의 소문",
+						"boss_text": "반장이 들은 소문 덕분에 적의 약점을 간파할 수 있다."
+					},
+					"result": [
+						{
+							"speaker": "narrator",
+							"text": "당신이 폐창고 대신 비서가 물건을 숨긴 이유를 묻자, 반장이 고개를 끄덕인다."
+						},
+						{
+							"text": "비서님이 예전에 폐창고에서 개인적인 물건을 보관하셨다는 소문을 들었어요.",
+							"speaker": "banjang"
+						},
+						{
+							"speaker": "dax",
+							"text": "역시 몰아붙이기 전에 사정을 물어보는 게 맞았네요!"
+						}
+					],
+					"mbti": "SP",
+					"effects": {
+						"reason": 10,
+						"fighting": 10,
+						"echo": 10
+					},
+					"reward": [
+						"intelligence_up"
+					],
+					"text": "폐창고에 들어가지 말고, 비서가 왜 물건을 숨겼을지 반장에게 묻는다."
+				},
+				{
+					"reward": [
+						"shield"
+					],
+					"mbti": "EF",
+					"text": "안개 속에서 반장의 이마에 붙은 나뭇잎을 떼어준다.",
+					"result": [
+						{
+							"speaker": "narrator",
+							"text": "당신이 반장의 이마에 붙은 나뭇잎을 떼어주자, 반장이 흠칫 놀란다."
+						},
+						{
+							"speaker": "banjang",
+							"text": "으음? 아, 고맙습니다. 이런 사소한 것까지 챙겨주시다니… 반장이 감격한 듯 당신을 바라본다."
+						},
+						{
+							"text": "왠지 반장님이 우리 편이 된 것 같은 기분인데요!",
+							"speaker": "dax"
+						}
+					],
+					"risk_bad": {
+						"reward": [
+							"attack_down"
+						],
+						"gold": -30,
+						"result": [
+							{
+								"text": "당신이 반장의 이마에 손을 대자, 반장이 화들짝 놀라며 뒷걸음질 친다.",
+								"speaker": "narrator"
+							},
+							{
+								"text": "으악! 뭐, 뭐하시는 겁니까! 반장이 화들짝 놀라 들고 있던 랜턴을 떨어뜨려 유리가 깨진다.",
+								"speaker": "banjang"
+							},
+							{
+								"text": "반장님! 으아, 랜턴이 깨졌잖아요! 몰아붙이기 전에 좀 더… 아, 아니 이건 몰아붙인 게 아닌가요?",
+								"speaker": "dax"
+							}
+						]
+					},
+					"effects": {
+						"echo": 15,
+						"community": 20
+					},
+					"path": "fun"
+				}
+			],
+			"rule_link": "닥달하는 대신 먼저 묻는 것에 대한 이야기. 반장은 주인공의 소문을 듣고 직접 찾아와 부탁한다.",
+			"title": "도움을 청하는 반장",
+			"no": 2,
+			"person": {
+				"id": "banjang",
+				"name": "반장",
+				"role": "부두 일꾼 반장"
+			},
+			"background_tags": [
+				"pier",
+				"night",
+				"foggy",
+				"fewpeople",
+				"eerie"
+			],
+			"wants": "남을 돕는 당신에게 비서가 숨겨둔 물건을 찾아달라고 부탁한다.",
+			"slot": "B",
+			"kind": "rep",
+			"rep_dir": "fighting+"
+		}
+	],
+	"errors": [],
+	"prompt_hash": "7bf3be6ba329054a2b814187cbbb7275d3bbda6d"
+}

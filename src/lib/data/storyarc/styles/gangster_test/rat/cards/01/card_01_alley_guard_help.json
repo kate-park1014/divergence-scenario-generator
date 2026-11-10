@@ -1,0 +1,159 @@
+{
+	"id": "card_01_alley_guard_help",
+	"title": {
+		"korean": "경비원의 쪽문 열쇠"
+	},
+	"intensity": "high",
+	"after_story": 7,
+	"before_story": 9,
+	"callback": {
+		"seed": "pier_guard_suspicion_hard",
+		"min_rooms_after": 2
+	},
+	"background_tags": [
+		"alley_entrance",
+		"night",
+		"dim_light",
+		"sparse_crowd",
+		"tense_atmosphere"
+	],
+	"background_image": "https://imagedelivery.net/WTEqQNGFb-l-IHS6IGnzUQ/67a3fd77-79b9-4e99-eabd-dfb144b64c00/public",
+	"dialogue": [
+		{
+			"speaker": "narrator",
+			"content": {
+				"korean": "경비원이 당신에게 조심스럽게 다가와 주머니에서 녹슨 열쇠 하나를 꺼냈다."
+			}
+		},
+		{
+			"speaker": "guard",
+			"content": {
+				"korean": "저, 저번에 죄송했습니다! 이거... 골목 뒷담에 있는 쪽문 열쇠입니다."
+			}
+		},
+		{
+			"speaker": "dax",
+			"content": {
+				"korean": "어르신, 갑자기 왜 이런 걸 주시는 거죠?"
+			}
+		},
+		{
+			"speaker": "guard",
+			"content": {
+				"korean": "이쪽으로 가시면 경리부장님께 들키지 않고 사무실 뒤편으로 갈 수 있을 겁니다!"
+			}
+		},
+		{
+			"speaker": "narrator",
+			"content": {
+				"korean": "경비원은 당신의 눈치를 살피며 열쇠를 건네주었다."
+			}
+		}
+	],
+	"choices": [
+		{
+			"text": {
+				"korean": "경비원에게 열쇠를 받아들고 고맙다고 말한다"
+			},
+			"path": "easy",
+			"mbti": "NF",
+			"flag": "alley_shortcut",
+			"effects": {
+				"community": 10,
+				"echo": 10
+			},
+			"reward": [
+				"move_range_up"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "당신이 열쇠를 받자 경비원은 안도하며 고개를 끄덕였다. \"조심해서 가십시오!\""
+					}
+				},
+				{
+					"speaker": "dax",
+					"content": {
+						"korean": "이야, 어르신이 이렇게 도와주시다니! 고맙습니다!"
+					}
+				}
+			]
+		},
+		{
+			"text": {
+				"korean": "경비원에게 열쇠를 돌려주며 직접 길을 안내해달라고 부탁한다"
+			},
+			"path": "hard",
+			"mbti": "ST",
+			"flag": "guard_guide",
+			"effects": {
+				"reason": 15,
+				"echo": 5
+			},
+			"reward": [
+				"intelligence_up"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "당신이 열쇠를 돌려주며 조심스럽게 부탁하자 경비원은 잠시 망설이더니 고개를 끄덕였다."
+					}
+				},
+				{
+					"speaker": "guard",
+					"content": {
+						"korean": "알겠습니다! 제가 아는 지름길로 안내해 드리겠습니다!"
+					}
+				},
+				{
+					"speaker": "dax",
+					"content": {
+						"korean": "어르신, 정말 친절하시네요! 덕분에 안전하게 갈 수 있겠어요!"
+					}
+				}
+			]
+		}
+	],
+	"tags": [
+		"guard",
+		"dax"
+	],
+	"_design": {
+		"slot": "D",
+		"kind": "callback",
+		"person": {
+			"id": "guard",
+			"name": "경비원",
+			"role": "부두 야간 경비원"
+		},
+		"wants": "지난번 오해를 미안해하며 히어로들에게 도움을 주고 싶어 한다.",
+		"rule_link": "경비원이 건넨 열쇠를 의심할지, 아니면 그의 호의를 믿고 새로운 길을 택할지 선택한다.",
+		"events": {},
+		"flags": {
+			"alley_shortcut": {
+				"kind": "good",
+				"boss_penalty": 1,
+				"label": {
+					"korean": "골목 쪽문"
+				},
+				"boss_choice": {
+					"korean": "경비원이 건넨 쪽문 열쇠로 경리부장의 방에 몰래 침투한다."
+				}
+			},
+			"guard_guide": {
+				"kind": "good",
+				"boss_penalty": 2,
+				"label": {
+					"korean": "경비원 안내"
+				},
+				"boss_choice": {
+					"korean": "경비원이 경리부장의 예상 경로를 알려줘 함정을 피할 수 있다."
+				}
+			}
+		}
+	}
+}

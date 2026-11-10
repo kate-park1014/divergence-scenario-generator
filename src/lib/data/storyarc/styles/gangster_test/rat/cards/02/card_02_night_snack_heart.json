@@ -1,0 +1,325 @@
+{
+	"id": "card_02_night_snack_heart",
+	"title": {
+		"korean": "야식트럭 사장, 마음 가는 대로"
+	},
+	"intensity": "calm",
+	"after_story": 5,
+	"before_story": 7,
+	"condition": {
+		"leaning": "reason+",
+		"among": [
+			"fighting-",
+			"fighting+",
+			"community-",
+			"community+",
+			"reason-",
+			"reason+"
+		],
+		"min": 20
+	},
+	"urgency": 8,
+	"leaning": "reason+",
+	"background_tags": [
+		"port",
+		"night",
+		"dim",
+		"empty",
+		"urgent"
+	],
+	"background_image": "https://imagedelivery.net/WTEqQNGFb-l-IHS6IGnzUQ/ae1926db-9985-4622-5880-8e77e8439400/public",
+	"dialogue": [
+		{
+			"speaker": "narrator",
+			"content": {
+				"korean": "야식트럭 사장이 트럭에서 내려 주인공들이 숨어 있는 차 쪽으로 다가왔다."
+			}
+		},
+		{
+			"speaker": "yashik_sajang",
+			"content": {
+				"korean": "어이, 당신들이 그 소문난 해결사들 아니야?"
+			}
+		},
+		{
+			"speaker": "yashik_sajang",
+			"content": {
+				"korean": "규칙 따윈 개나 줘 버리고 시원하게 해결한다던데, 내 이 답답한 사정 좀 들어보게!"
+			}
+		},
+		{
+			"speaker": "dax",
+			"content": {
+				"korean": "사장이 우리를 알아본 것 같아요! 왠지 불길한데요?"
+			}
+		},
+		{
+			"speaker": "yashik_sajang",
+			"content": {
+				"korean": "쯧쯧, 이것만 좀 도와주면 금방 갈 테니."
+			}
+		},
+		{
+			"speaker": "yashik_sajang",
+			"content": {
+				"korean": "저기, 저 컨테이너 앞에 불법 주차된 차 때문에 장사를 못 하겠어! 나 좀 도와줘!"
+			}
+		}
+	],
+	"choices": [
+		{
+			"text": {
+				"korean": "사장의 말에 동조하며 불법 주차된 차를 치워준다"
+			},
+			"path": "easy",
+			"mbti": "EP",
+			"flag": "moved_illegal_car",
+			"effects": {
+				"gold": 50,
+				"fighting": 15
+			},
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "당신은 사장의 말에 따라 불법 주차된 차를 직접 밀어 치웠다."
+					}
+				},
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "사장은 고맙다며 방금 튀긴 튀김 몇 개를 건네주었다."
+					}
+				},
+				{
+					"speaker": "dax",
+					"content": {
+						"korean": "이 튀김, 왠지 뇌물 같지 않아요? 사장님한테 놀아난 것 같은데요!"
+					}
+				}
+			],
+			"risk": {
+				"chance": "mid",
+				"bad": {
+					"effects": {
+						"gold": -50
+					},
+					"reward": [],
+					"result": [
+						{
+							"speaker": "narrator",
+							"content": {
+								"korean": "당신이 사장의 말에 따라 불법 주차된 차를 직접 밀어 치우려던 순간,"
+							}
+						},
+						{
+							"speaker": "narrator",
+							"content": {
+								"korean": "그만 실수로 트럭의 문짝을 살짝 찌그러뜨리고 말았다."
+							}
+						},
+						{
+							"speaker": "dax",
+							"content": {
+								"korean": "악! 사장님이 화를 내고 있어요! 튀김도 못 먹겠네요!"
+							}
+						}
+					]
+				}
+			}
+		},
+		{
+			"text": {
+				"korean": "불법 주차된 차는 건드릴 수 없다며 냉정하게 거절한다"
+			},
+			"path": "hard",
+			"mbti": "TJ",
+			"flag": "refused_to_move_car",
+			"effects": {
+				"reason": -20,
+				"echo": -10
+			},
+			"reward": [
+				"defense_up"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "당신은 사장의 요구를 단호하게 거절했다."
+					}
+				},
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "야식트럭 사장은 심통 난 얼굴로 투덜거리며 트럭을 몰고 사라졌다."
+					}
+				},
+				{
+					"speaker": "dax",
+					"content": {
+						"korean": "사장이 삐쳐서 가버렸어요! 왠지 우리가 손해 본 것 같은데요?"
+					}
+				}
+			],
+			"risk": {
+				"chance": "high",
+				"bad": {
+					"effects": {
+						"gold": -20
+					},
+					"reward": [],
+					"result": [
+						{
+							"speaker": "narrator",
+							"content": {
+								"korean": "당신이 사장의 요구를 단호하게 거절하자,"
+							}
+						},
+						{
+							"speaker": "narrator",
+							"content": {
+								"korean": "야식트럭 사장은 버럭 화를 내며 트럭의 시동을 켜고 매연을 잔뜩 뿜어댔다."
+							}
+						},
+						{
+							"speaker": "dax",
+							"content": {
+								"korean": "콜록콜록! 매연 때문에 눈을 뜰 수가 없어요! 사장님이 작정하고 방해하네요!"
+							}
+						}
+					]
+				}
+			}
+		},
+		{
+			"text": {
+				"korean": "사장의 편을 들어 불법 주차 차량을 견인 조치한다"
+			},
+			"path": "stat",
+			"mbti": "NF",
+			"require": {
+				"stat": "reason",
+				"op": ">=",
+				"value": 40
+			},
+			"flag": "towed_car",
+			"effects": {
+				"community": 20,
+				"reason": 20
+			},
+			"reward": [
+				"defense_up"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "당신은 사장의 불만을 들어주며 곧바로 불법 주차 차량을 견인 조치했다."
+					}
+				},
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "사장은 기세등등하게 주변 상인들에게 이 사실을 알렸다."
+					}
+				},
+				{
+					"speaker": "dax",
+					"content": {
+						"korean": "사장이 신나서 동네방네 떠들고 있어요! 덕분에 우리가 주목받겠네요!"
+					}
+				}
+			]
+		},
+		{
+			"text": {
+				"korean": "사장에게 오늘 장사 못 한 값이라며 돈을 건네고, 차 주인을 찾아 주겠다고 한다."
+			},
+			"path": "gold",
+			"mbti": "SP",
+			"require": {
+				"stat": "gold",
+				"op": ">=",
+				"value": 100
+			},
+			"effects": {
+				"echo": 10,
+				"gold": -100
+			},
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "사장은 돈을 세어 보더니 트럭 확성기를 집어 들었다."
+					}
+				},
+				{
+					"speaker": "yashik_sajang",
+					"content": {
+						"korean": "컨테이너 앞 차 주인! 여기 해결사 양반이 찾는다! 당장 나와!"
+					}
+				},
+				{
+					"speaker": "dax",
+					"content": {
+						"korean": "사장님… 저희 지금 숨어 있는 중이었는데요."
+					}
+				}
+			]
+		}
+	],
+	"tags": [
+		"yashik_sajang",
+		"dax"
+	],
+	"_design": {
+		"slot": "C",
+		"kind": "rep",
+		"person": {
+			"id": "yashik_sajang",
+			"name": "야식트럭 사장",
+			"role": "야식트럭 사장"
+		},
+		"wants": "불편한 상황을 해결하거나, 자기 편을 들어주기를 바람.",
+		"rule_link": "마음이 이끄는 대로만 상황을 판단하는 태도가 이 상황을 끝까지 지켜보는 데 어떤 영향을 미치는지 보여준다.",
+		"rep": "reason+",
+		"events": {},
+		"flags": {
+			"moved_illegal_car": {
+				"kind": "bad",
+				"boss_penalty": -1,
+				"label": {
+					"korean": "불법 주차 해결"
+				},
+				"boss_line": {
+					"korean": "컨테이너 앞 시야가 넓어져 안쪽 상황을 살피기 유리하다."
+				}
+			},
+			"refused_to_move_car": {
+				"kind": "good",
+				"boss_penalty": 1,
+				"label": {
+					"korean": "거절"
+				},
+				"boss_choice": {
+					"korean": "야식트럭 사장의 불만이 커져 컨테이너 접근 시 소란이 예상된다."
+				}
+			},
+			"towed_car": {
+				"kind": "good",
+				"boss_penalty": 2,
+				"label": {
+					"korean": "차량 견인"
+				},
+				"boss_choice": {
+					"korean": "야식트럭 사장이 주변 상인들에게 자랑하느라 컨테이너 접근 시 경계를 늦춘다."
+				}
+			}
+		}
+	}
+}

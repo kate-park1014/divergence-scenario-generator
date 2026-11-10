@@ -1,0 +1,378 @@
+{
+	"cards": [
+		{
+			"dialogue": [
+				{
+					"speaker": "gang_uncle",
+					"text": "비서실 가는 길에 나 좀 보지? 당신이 그, 문서랑 규정대로 움직이는 양반이라는 소문 들었어."
+				},
+				{
+					"text": "아재가 낡은 종이 뭉치를 흔든다.",
+					"speaker": "narrator"
+				},
+				{
+					"text": "새로 생긴 '복도 주차 금지' 규정이라고! 이 간부 놈들이 말을 안 들어서 내가 직접 딱지 붙이러 왔어.",
+					"speaker": "gang_uncle"
+				},
+				{
+					"text": "복도에 차를 세우면 비상시에 큰일 날 수 있어요! 그런데 저 많은 차에 아재 혼자 딱지를 붙이긴…",
+					"speaker": "dax"
+				},
+				{
+					"speaker": "gang_uncle",
+					"text": "켁. 시끄러워! 이거 규정대로 안 하면 나만 또 회장님한테 잔소리 듣는다고."
+				}
+			],
+			"title": "복도 주차 딱지",
+			"wants": "복도에 세워진 간부들 차에 '주차 금지' 쪽지를 붙이려 하는데 협조를 부탁함.",
+			"choices": [
+				{
+					"mbti": "ST",
+					"flag": {
+						"boss_text": "복도 주차 금지 규정으로 간부들이 혼란스러워한다.",
+						"label": "질서 있는 주차",
+						"key": "orderly_parking"
+					},
+					"result": [
+						{
+							"text": "당신이 간부들에게 경고하자 아재가 뿌듯하게 쪽지를 붙였다. 삐딱하게 서 있던 차들이 일렬로 정돈된다.",
+							"speaker": "narrator"
+						},
+						{
+							"speaker": "dax",
+							"text": "규정대로 하니 일이 술술 풀리네요!"
+						}
+					],
+					"effects": {
+						"gold": 100,
+						"reason": 20,
+						"echo": 5
+					},
+					"risk_bad": {
+						"reward": [],
+						"result": [
+							{
+								"speaker": "narrator",
+								"text": "당신의 경고에 간부들이 오히려 불쾌한 얼굴로 따진다. 아재는 결국 쪽지를 다 붙이지 못했다."
+							},
+							{
+								"text": "저분들 안 그래도 불만이 많았나 봐요…",
+								"speaker": "dax"
+							}
+						],
+						"gold": -30
+					},
+					"path": "easy",
+					"text": "다른 간부들에게 규정 위반으로 처리한다고 경고하며 쪽지를 붙인다."
+				},
+				{
+					"result": [
+						{
+							"text": "당신이 거친 손길로 쪽지를 붙이자 간부들이 눈치를 살피며 차를 옮긴다. 아재가 당신을 보며 헛기침을 한다.",
+							"speaker": "narrator"
+						},
+						{
+							"speaker": "dax",
+							"text": "저분들, 당장은 피하는 것 같긴 한데 나중에 앙심 품는 거 아니에요?"
+						}
+					],
+					"path": "hard",
+					"text": "아재의 손에서 쪽지 뭉치를 빼앗아 직접 간부들의 차에 붙인다.",
+					"mbti": "TJ",
+					"flag": {
+						"key": "forced_parking",
+						"label": "강제 주차 정리",
+						"boss_text": "복도 주차 금지 규정을 무시하는 간부들을 위협해서 제압한다."
+					},
+					"risk_bad": {
+						"gold": -20,
+						"reward": [],
+						"result": [
+							{
+								"text": "당신이 거친 손길로 쪽지를 붙이려다 실수로 간부의 차를 긁었다. 간부가 얼굴을 붉히며 다가온다.",
+								"speaker": "narrator"
+							},
+							{
+								"speaker": "dax",
+								"text": "아이고, 저 차가 비싼 차인데… 수리비가 꽤 나오겠어요!"
+							}
+						]
+					},
+					"effects": {
+						"echo": -5,
+						"fighting": 20
+					},
+					"reward": [
+						"stun"
+					]
+				},
+				{
+					"flag": {
+						"boss_text": "복도 주차 금지 규정에 반발하는 간부들을 침묵으로 압박하여 움직인다.",
+						"key": "silent_pressure",
+						"label": "묵묵한 압박"
+					},
+					"mbti": "SF",
+					"reward": [
+						"defense_up"
+					],
+					"effects": {
+						"reason": -20,
+						"community": 10
+					},
+					"path": "stat",
+					"text": "주차 금지 쪽지를 들고 서 있는 아재의 뒤에 서서 묵묵히 시선을 보낸다.",
+					"result": [
+						{
+							"text": "당신의 묵직한 시선에 간부들이 움찔하며 차를 빼기 시작한다. 아재는 신이 나서 쪽지를 마구 뿌린다.",
+							"speaker": "narrator"
+						},
+						{
+							"text": "역시 당신이 함께하니 다른 간부들도 규정을 지키네요!",
+							"speaker": "dax"
+						}
+					]
+				},
+				{
+					"result": [
+						{
+							"speaker": "narrator",
+							"text": "아재가 당황해서 당신이 붙인 딱지를 떼어낸다. 복도에 있던 간부들이 그 모습을 보고 키득거린다."
+						},
+						{
+							"speaker": "dax",
+							"text": "비서님은 차가 없으신데… 비서님 전용 주차 공간이라니, 재밌네요!"
+						}
+					],
+					"mbti": "EN",
+					"effects": {
+						"gold": 80,
+						"echo": 10,
+						"reason": -20
+					},
+					"risk_bad": {
+						"result": [
+							{
+								"speaker": "narrator",
+								"text": "당신이 '비서님 전용' 딱지를 붙이자 아재가 얼굴을 붉힌다. 뒤에 있던 간부들이 비웃는 소리가 들린다."
+							},
+							{
+								"speaker": "dax",
+								"text": "아재가 많이 창피한가 봐요…"
+							}
+						],
+						"reward": [
+							"hp_down"
+						]
+					},
+					"path": "fun",
+					"text": "비서실 문 앞에 선을 긋고 '비서님 전용 주차 공간'이라며 딱지를 붙여 준다."
+				}
+			],
+			"key": "gang_uncle_parking_rule",
+			"no": 1,
+			"background_tags": [
+				"corridor",
+				"daytime",
+				"fluorescent_light",
+				"executives",
+				"tense"
+			],
+			"person": {
+				"id": "gang_uncle",
+				"name": "백상어파 아재",
+				"role": "조직원"
+			},
+			"rule_link": "왜 굳이 복도까지 와서 주차 문제를 해결하려 하는지 그 사정을 먼저 물어봐야 한다.",
+			"slot": "A",
+			"kind": "rep",
+			"rep_dir": "reason-"
+		},
+		{
+			"key": "gang_uncle_stolen_coffee",
+			"dialogue": [
+				{
+					"speaker": "gang_uncle",
+					"text": "비서실 쪽으로 가는 발걸음이 예사롭지 않구만."
+				},
+				{
+					"text": "당신이 그, 소문 자자한 '마음 가는 대로 일 처리하는' 양반 맞지?",
+					"speaker": "gang_uncle"
+				},
+				{
+					"speaker": "narrator",
+					"text": "아재가 품속에 무언가를 숨기려 애쓴다. 그 뒤로 간부 한 명이 다가온다."
+				},
+				{
+					"speaker": "gang_uncle",
+					"text": "켁. 저, 저 망할 놈의 커피 원두가…"
+				},
+				{
+					"speaker": "gang_uncle",
+					"text": "비서님 드리려고 잠깐 가져온 건데, 저 간부 놈이 벌써 눈치챈 것 같아!"
+				},
+				{
+					"text": "비서님은 커피 대신 차를 드시는데… 아재가 왜 비서님 드리려고 커피를 가져왔을까요?",
+					"speaker": "dax"
+				},
+				{
+					"speaker": "gang_uncle",
+					"text": "시끄러워! 이거 걸리면 죽는다고! 빨리 좀 숨겨 줘!"
+				}
+			],
+			"person": {
+				"id": "gang_uncle",
+				"name": "백상어파 아재",
+				"role": "조직원"
+			},
+			"choices": [
+				{
+					"path": "easy",
+					"text": "아재를 간부에게 밀치고 커피 원두를 잽싸게 가로챈다.",
+					"effects": {
+						"echo": 5,
+						"gold": 100,
+						"reason": -20
+					},
+					"risk_bad": {
+						"reward": [
+							"attack_down"
+						],
+						"result": [
+							{
+								"speaker": "narrator",
+								"text": "당신이 아재를 밀쳤지만 간부가 몸을 피했다. 커피 원두가 바닥에 굴러떨어져 간부의 발치에 놓인다."
+							},
+							{
+								"text": "아재가 큰일 났네요…",
+								"speaker": "dax"
+							}
+						]
+					},
+					"result": [
+						{
+							"speaker": "narrator",
+							"text": "당신이 아재를 간부에게 밀치는 바람에 간부가 넘어진다. 그 틈에 당신이 커피 원두를 낚아채 숨긴다."
+						},
+						{
+							"speaker": "dax",
+							"text": "덕분에 아재가 무사히 커피 원두를 숨겼네요!"
+						}
+					],
+					"flag": {
+						"label": "숨겨진 커피 원두",
+						"key": "hidden_coffee_beans",
+						"boss_text": "아재가 숨긴 커피 원두를 간부가 찾지 못해 짜증을 낸다."
+					},
+					"mbti": "EP"
+				},
+				{
+					"result": [
+						{
+							"speaker": "narrator",
+							"text": "간부가 비서실 문에 그려진 그림을 보며 인상을 찌푸린다. 그 틈에 아재는 잽싸게 커피 원두를 품에 숨긴다."
+						},
+						{
+							"text": "비서실 문에 저런 낙서를 하다니… 비서님이 보시면 놀라실 거예요.",
+							"speaker": "dax"
+						}
+					],
+					"flag": {
+						"key": "graffiti_distraction",
+						"label": "낙서로 시선 끌기",
+						"boss_text": "비서실 문에 낙서가 발견되어 간부들이 범인을 찾으려 한다."
+					},
+					"mbti": "NF",
+					"risk_bad": {
+						"reward": [],
+						"gold": -20,
+						"result": [
+							{
+								"speaker": "narrator",
+								"text": "당신이 비서실 문에 낙서를 하자 간부가 기겁하며 청소부를 부른다. 아재가 허둥대다 커피 원두를 쏟는다."
+							},
+							{
+								"speaker": "dax",
+								"text": "비서실 문이 더러워졌다고 간부가 막 화를 내네요…"
+							}
+						]
+					},
+					"reward": [
+						"move_range_up"
+					],
+					"path": "hard",
+					"text": "간부의 시선을 끌기 위해 비서실 문에 낙서를 한다.",
+					"effects": {
+						"community": -20,
+						"echo": -5
+					}
+				},
+				{
+					"path": "stat",
+					"text": "커피 원두를 들고 있는 아재의 옆에 서서, 간부에게 '다음에 또 뵙겠습니다' 하고 인사를 건넨다.",
+					"result": [
+						{
+							"text": "당신의 자신감 넘치는 인사에 간부가 움찔하며 서둘러 자리를 피한다. 아재가 감탄한 듯 당신을 바라본다.",
+							"speaker": "narrator"
+						},
+						{
+							"speaker": "dax",
+							"text": "간부가 당신을 보고 도망가다니, 정말 대단해요!"
+						}
+					],
+					"effects": {
+						"community": 10,
+						"reason": 20
+					},
+					"flag": {
+						"key": "confident_farewell",
+						"boss_text": "간부가 당신의 자신감 넘치는 태도에 기가 죽어 전투 시작 시 주춤거린다.",
+						"label": "자신감 있는 작별"
+					},
+					"mbti": "IS",
+					"reward": [
+						"intelligence_up"
+					]
+				},
+				{
+					"path": "gold",
+					"text": "품속에서 금고 열쇠를 꺼내며 간부에게 '비서님께 드릴 말씀이 있다'며 길을 막는다.",
+					"result": [
+						{
+							"text": "간부가 당신의 금고 열쇠를 보고 눈빛이 흔들린다.",
+							"speaker": "narrator"
+						},
+						{
+							"text": "당신이 간부를 붙잡고 있는 동안 아재가 커피 원두를 숨긴다.",
+							"speaker": "narrator"
+						},
+						{
+							"speaker": "dax",
+							"text": "금고 열쇠를 보여주니 간부가 바로 겁을 먹네요! 비서님한테 드릴 말씀은… 없으시죠?"
+						}
+					],
+					"effects": {
+						"gold": -70
+					},
+					"mbti": "TP"
+				}
+			],
+			"no": 2,
+			"title": "아재의 보물",
+			"background_tags": [
+				"corridor",
+				"daytime",
+				"fluorescent_light",
+				"executives",
+				"hurried"
+			],
+			"rule_link": "왜 남의 커피 원두를 몰래 가져와 숨기려 하는지 그 사정을 먼저 물어봐야 한다.",
+			"wants": "간부의 고급 커피 원두를 몰래 가져와서 숨기려 하는데, 마침 그 간부가 다가오는 중이라 도움을 요청함.",
+			"slot": "A",
+			"kind": "rep",
+			"rep_dir": "reason+"
+		}
+	],
+	"errors": [],
+	"prompt_hash": "789321c23d085439218aa4af31d4e7456108b9d5"
+}

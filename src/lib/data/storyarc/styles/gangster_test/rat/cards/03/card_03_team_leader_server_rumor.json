@@ -1,0 +1,321 @@
+{
+	"id": "card_03_team_leader_server_rumor",
+	"title": {
+		"korean": "수상한 시선"
+	},
+	"intensity": "calm",
+	"after_story": 7,
+	"before_story": 9,
+	"condition": {
+		"leaning": "fighting+",
+		"among": [
+			"fighting-",
+			"fighting+",
+			"community-",
+			"community+",
+			"reason-",
+			"reason+"
+		],
+		"min": 20
+	},
+	"urgency": 8,
+	"leaning": "fighting+",
+	"background_tags": [
+		"corridor",
+		"night",
+		"dim_light",
+		"empty",
+		"suspicious"
+	],
+	"background_image": "https://imagedelivery.net/WTEqQNGFb-l-IHS6IGnzUQ/7f073e80-d30e-4f93-1b34-d402243d9000/public",
+	"dialogue": [
+		{
+			"speaker": "hoegye_teamjang",
+			"content": {
+				"korean": "크흠... 저기, 당신이 그... 소문이 자자한 '주먹이 먼저 나가는' 해결사시죠?"
+			}
+		},
+		{
+			"speaker": "narrator",
+			"content": {
+				"korean": "팀장이 안경을 고쳐 쓰고 주변을 두리번거린다."
+			}
+		},
+		{
+			"speaker": "hoegye_teamjang",
+			"content": {
+				"korean": "서버실 복도 저편에서 자꾸 누가 저를 쳐다보는 것 같아서요. 분명히 사람이 있었는데 말이죠."
+			}
+		},
+		{
+			"speaker": "dax",
+			"content": {
+				"korean": "누가요? 저는 아무도 못 봤는데..."
+			}
+		},
+		{
+			"speaker": "hoegye_teamjang",
+			"content": {
+				"korean": "저야 야근 마치고 퇴근하는 길이라... 괜한 일에 엮일까 싶어 망설였습니다만."
+			}
+		}
+	],
+	"choices": [
+		{
+			"text": {
+				"korean": "팀장의 말을 듣고 복도 저편을 쏘아보며, 누가 있었는지 큰 소리로 묻는다."
+			},
+			"path": "easy",
+			"mbti": "ET",
+			"flag": "cat_distraction",
+			"effects": {
+				"fighting": 20,
+				"echo": -10
+			},
+			"reward": [
+				"attack_down"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "당신이 큰 소리로 묻자 복도 저편에서 작은 고양이 한 마리가 튀어나온다."
+					}
+				},
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "고양이는 당신의 발치에 앉아 꼬리를 흔들며 당신을 올려다본다."
+					}
+				},
+				{
+					"speaker": "dax",
+					"content": {
+						"korean": "팀장님, 고양이한테 겁먹으신 거예요? 푸핫!"
+					}
+				}
+			],
+			"risk": {
+				"chance": "mid",
+				"bad": {
+					"effects": {
+						"gold": -40
+					},
+					"reward": [],
+					"result": [
+						{
+							"speaker": "narrator",
+							"content": {
+								"korean": "당신이 큰 소리로 묻자 복도 저편에서 갑자기 경보음이 울린다."
+							}
+						},
+						{
+							"speaker": "narrator",
+							"content": {
+								"korean": "팀장은 놀라서 허둥지둥 뛰어가다 넘어지며 들고 있던 서류를 바닥에 흩뿌린다."
+							}
+						},
+						{
+							"speaker": "dax",
+							"content": {
+								"korean": "팀장님! 괜찮으세요? 경보음은 왜 울리는 거죠?"
+							}
+						}
+					]
+				}
+			}
+		},
+		{
+			"text": {
+				"korean": "팀장의 착각이라고 말하며, 서버실 주변은 안전하다고 안심시킨다."
+			},
+			"path": "hard",
+			"mbti": "IS",
+			"flag": "cctv_clue",
+			"effects": {
+				"fighting": -20,
+				"echo": 5
+			},
+			"reward": [
+				"move_range_up"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "당신이 안심시키자 팀장은 여전히 불안한 표정으로 고개를 갸웃거린다."
+					}
+				},
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "팀장이 조심스럽게 복도 구석에 놓인 CCTV를 가리킨다."
+					}
+				},
+				{
+					"speaker": "dax",
+					"content": {
+						"korean": "아, 저 CCTV로 보면 누가 있었는지 알 수 있겠네요!"
+					}
+				}
+			],
+			"risk": {
+				"chance": "high",
+				"bad": {
+					"effects": {
+						"gold": -20
+					},
+					"reward": [],
+					"result": [
+						{
+							"speaker": "narrator",
+							"content": {
+								"korean": "당신이 안심시키자 팀장은 당신의 말을 믿지 않는 듯 보인다."
+							}
+						},
+						{
+							"speaker": "narrator",
+							"content": {
+								"korean": "팀장이 갑자기 재채기를 하며 들고 있던 뜨거운 커피를 복도 바닥에 쏟는다."
+							}
+						},
+						{
+							"speaker": "dax",
+							"content": {
+								"korean": "팀장님, 괜찮으세요? 뜨거운 커피였는데!"
+							}
+						}
+					]
+				}
+			}
+		},
+		{
+			"text": {
+				"korean": "팀장의 말을 듣고 복도 저편으로 성큼성큼 다가가 그림자 속에 숨은 것을 찾아낸다."
+			},
+			"path": "stat",
+			"mbti": "IT",
+			"require": {
+				"stat": "fighting",
+				"op": ">=",
+				"value": 40
+			},
+			"flag": "robot_discovery",
+			"effects": {
+				"echo": -10,
+				"fighting": 30
+			},
+			"reward": [
+				"shield"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "당신이 그림자 속에 다가가자 숨어 있던 청소 로봇이 불빛에 반사되어 번쩍인다."
+					}
+				},
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "로봇은 당신의 발치에서 멈춰 서서 윙윙거리는 소리를 낸다."
+					}
+				},
+				{
+					"speaker": "dax",
+					"content": {
+						"korean": "팀장님을 쳐다본 건 저 청소 로봇이었네요! 깜짝 놀랐겠다."
+					}
+				}
+			]
+		},
+		{
+			"text": {
+				"korean": "팀장에게 퇴근하고 맛있는 것을 사 먹으라며 소액의 돈을 쥐여 준다."
+			},
+			"path": "gold",
+			"mbti": "FP",
+			"require": {
+				"stat": "gold",
+				"op": ">=",
+				"value": 100
+			},
+			"effects": {
+				"gold": -100
+			},
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "당신이 돈을 쥐여 주자 팀장이 눈을 크게 뜨고 당신을 바라본다."
+					}
+				},
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "팀장은 돈을 들고 어쩔 줄 몰라 하다가 서둘러 당신의 손에 다시 쥐여 준다."
+					}
+				},
+				{
+					"speaker": "dax",
+					"content": {
+						"korean": "팀장님, 돈을 돌려주시는 분은 처음 봐요."
+					}
+				}
+			]
+		}
+	],
+	"tags": [
+		"hoegye_teamjang",
+		"dax"
+	],
+	"_design": {
+		"slot": "D",
+		"kind": "rep",
+		"person": {
+			"id": "hoegye_teamjang",
+			"name": "회계팀 팀장",
+			"role": "회계팀 팀장"
+		},
+		"wants": "서버실 주변에서 수상한 시선을 느끼고, 당신의 강한 평판을 이용해 상황을 해결하기를 바란다.",
+		"rule_link": "팀장이 말하는 '수상한 시선'이 정말 위협적인지, 아니면 팀장의 착각인지 판단해야 한다.",
+		"rep": "fighting+",
+		"events": {},
+		"flags": {
+			"cat_distraction": {
+				"kind": "bad",
+				"boss_penalty": -1,
+				"label": {
+					"korean": "고양이 소동"
+				},
+				"boss_line": {
+					"korean": "갑자기 나타난 고양이 때문에 해커 간부와의 대결에 집중하기 어렵다."
+				}
+			},
+			"cctv_clue": {
+				"kind": "good",
+				"boss_penalty": 1,
+				"label": {
+					"korean": "CCTV 확인"
+				},
+				"boss_choice": {
+					"korean": "미리 CCTV를 확인하여 해커 간부의 움직임을 예상한다."
+				}
+			},
+			"robot_discovery": {
+				"kind": "good",
+				"boss_penalty": 2,
+				"label": {
+					"korean": "청소 로봇"
+				},
+				"boss_choice": {
+					"korean": "복도에 숨어 있던 청소 로봇을 미리 발견하여 시야 확보에 성공한다."
+				}
+			}
+		}
+	}
+}

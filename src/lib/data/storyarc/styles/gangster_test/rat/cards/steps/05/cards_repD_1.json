@@ -1,0 +1,404 @@
+{
+	"cards": [
+		{
+			"choices": [
+				{
+					"risk_bad": {
+						"result": [
+							{
+								"speaker": "narrator",
+								"text": "당신이 경호팀장을 밀치려 하자, 그는 예상치 못하게 굳건히 버틴다."
+							},
+							{
+								"speaker": "security_team_leader",
+								"text": "규정 준수! 이 정도로는 어림없습니다!"
+							},
+							{
+								"text": "저렇게 뻣뻣하게 버틸 줄이야! 어떡해요?",
+								"speaker": "dax"
+							}
+						],
+						"reward": [],
+						"gold": -30
+					},
+					"mbti": "TP",
+					"path": "easy",
+					"reward": [
+						"attack_up"
+					],
+					"text": "규정 같은 건 상관없다며 경호팀장을 밀치고 나아간다.",
+					"flag": {
+						"label": "경호팀장 분노",
+						"key": "security_anger",
+						"boss_text": "경호팀장이 분노한 얼굴로 당신을 노려보며, 방 10에서 예상치 못한 방해를 합니다."
+					},
+					"result": [
+						{
+							"text": "당신이 경호팀장을 밀치자, 그는 자세가 흐트러지며 바닥에 엉덩방아를 찧는다.",
+							"speaker": "narrator"
+						},
+						{
+							"text": "크흠…! 무력 시위라니… 비신사적입니다!",
+							"speaker": "security_team_leader"
+						},
+						{
+							"text": "괜히 화만 돋우는 거 아니에요? 얼른 가봐요!",
+							"speaker": "dax"
+						}
+					],
+					"effects": {
+						"echo": -5,
+						"fighting": -20
+					}
+				},
+				{
+					"effects": {
+						"echo": 10,
+						"community": 10,
+						"fighting": 15
+					},
+					"text": "경호팀장에게 비서님의 사정을 설명하며 길을 열어달라고 설득한다.",
+					"risk_bad": {
+						"gold": -20,
+						"reward": [],
+						"result": [
+							{
+								"speaker": "narrator",
+								"text": "당신의 설득에 경호팀장이 잠시 귀를 기울이는 듯했지만, 이내 얼굴이 굳어진다."
+							},
+							{
+								"text": "감히 저의 직무에 감성을 불어넣으려 하다니! 규정 위반이자 저에 대한 모욕입니다!",
+								"speaker": "security_team_leader"
+							},
+							{
+								"speaker": "dax",
+								"text": "헉! 오히려 화를 냈네요! 어떡해요, 다시 싸워야 하나?"
+							}
+						]
+					},
+					"reward": [
+						"intelligence_up"
+					],
+					"mbti": "FJ",
+					"path": "hard",
+					"flag": {
+						"boss_text": "경호팀장이 당신의 편에 서서, 방 10에서 은밀한 도움을 줍니다.",
+						"key": "security_trust",
+						"label": "경호팀장 신뢰"
+					},
+					"result": [
+						{
+							"text": "당신의 진심 어린 설명에 경호팀장의 굳건하던 자세가 미묘하게 흔들린다.",
+							"speaker": "narrator"
+						},
+						{
+							"speaker": "security_team_leader",
+							"text": "비서님의 사정… 회장님께는 미처 보고되지 않은 사실입니다. 잠시… 제 판단에 맡겨 주십시오."
+						},
+						{
+							"text": "와, 경호팀장님이 흔들리는 건 처음 봐요!",
+							"speaker": "dax"
+						}
+					]
+				},
+				{
+					"text": "당신의 악명 높은 투쟁 평판을 언급하며 경호팀장에게 비키라고 경고한다.",
+					"mbti": "ST",
+					"path": "stat",
+					"result": [
+						{
+							"text": "당신의 살벌한 투쟁 평판을 상기시키자, 경호팀장은 목울대를 스윽 삼킨다.",
+							"speaker": "narrator"
+						},
+						{
+							"text": "흐읍…! 알겠습니다. 규정 위반의 책임은 제가 지겠습니다. 통과하십시오.",
+							"speaker": "security_team_leader"
+						},
+						{
+							"text": "역시 소문이 무섭긴 무섭네요! 대단해요!",
+							"speaker": "dax"
+						}
+					],
+					"effects": {
+						"fighting": -25,
+						"echo": -10
+					},
+					"flag": {
+						"label": "경호팀장 공포",
+						"key": "security_fear",
+						"boss_text": "경호팀장이 당신의 기세에 눌려, 방 10에서 당신을 방해하지 않습니다."
+					},
+					"reward": [
+						"attack_up"
+					]
+				}
+			],
+			"no": 1,
+			"title": "길목을 막는 그림자",
+			"person": {
+				"id": "security_team_leader",
+				"name": "경호팀장",
+				"role": "경호팀장"
+			},
+			"background_tags": [
+				"breakwater",
+				"dawn",
+				"foggy",
+				"empty",
+				"tense"
+			],
+			"key": "blocked_path",
+			"wants": "등대 가는 길을 막거나 지켜야 한다.",
+			"rule_link": "등대 가는 길을 막는 인물을 만나 몰아붙이기 전에 그의 사정을 묻는다.",
+			"dialogue": [
+				{
+					"speaker": "narrator",
+					"text": "등대 앞 방파제에 굳건히 선 경호팀장이 당신의 길을 막아선다."
+				},
+				{
+					"speaker": "security_team_leader",
+					"text": "당신이 그… 말보다 주먹이 먼저 나간다는 해결사들이군요. 회장님께 보고된 대로, 여기는 통과할 수 없습니다."
+				},
+				{
+					"text": "경호팀장님! 비서님을 만나러 가는 길이에요!",
+					"speaker": "dax"
+				},
+				{
+					"speaker": "security_team_leader",
+					"text": "닥스 군, 규정은 규정입니다. 등대 진입은 엄격히 통제되고 있습니다."
+				}
+			],
+			"slot": "D",
+			"kind": "rep",
+			"rep_dir": "fighting-"
+		},
+		{
+			"dialogue": [
+				{
+					"speaker": "narrator",
+					"text": "등대 앞 방파제에 선 경호팀장이 당신을 보자마자 자세를 흐트러뜨리며 쩔쩔맨다."
+				},
+				{
+					"speaker": "security_team_leader",
+					"text": "당신이 그… 어려운 사람을 외면하지 않는다는 해결사들이군요. 실은… 규정 문제로 고민이 있습니다."
+				},
+				{
+					"text": "규정이라면 칼 같던 분이 왜 저러지?",
+					"speaker": "dax"
+				},
+				{
+					"text": "등대 진입을 허가할 수도, 그렇다고 막을 수도 없는… 난처한 상황입니다. 부디 현명한 조언을…!",
+					"speaker": "security_team_leader"
+				}
+			],
+			"key": "wavering_line",
+			"no": 2,
+			"wants": "등대 진입 규정을 어기는 것에 대한 조언을 구한다.",
+			"choices": [
+				{
+					"result": [
+						{
+							"text": "당신의 조언에 경호팀장이 고개를 끄덕이며 안도의 한숨을 쉰다.",
+							"speaker": "narrator"
+						},
+						{
+							"text": "하아… 역시 당신은 현명하십니다. 이 조언대로… 처리하겠습니다.",
+							"speaker": "security_team_leader"
+						},
+						{
+							"speaker": "dax",
+							"text": "너무 쉽게 믿는 거 아니에요? 뭔가 찜찜한데!"
+						}
+					],
+					"flag": {
+						"boss_text": "경호팀장이 당신의 조언을 따르다 실수를 저질러, 방 10에서 불리한 상황이 발생합니다.",
+						"key": "security_relief",
+						"label": "경호팀장 안도"
+					},
+					"effects": {
+						"fighting": 20,
+						"echo": 5
+					},
+					"risk_bad": {
+						"result": [
+							{
+								"text": "당신의 조언을 듣던 경호팀장이 갑자기 얼굴이 파래진다.",
+								"speaker": "narrator"
+							},
+							{
+								"text": "아뿔싸! 그 조언은… 제게 치명적인 규정 위반이 됩니다!",
+								"speaker": "security_team_leader"
+							},
+							{
+								"text": "아이고! 도와주려다 괜히 망했잖아요!",
+								"speaker": "dax"
+							}
+						],
+						"reward": [],
+						"gold": -40
+					},
+					"path": "easy",
+					"reward": [
+						"attack_up"
+					],
+					"mbti": "SF",
+					"text": "경호팀장의 고민을 들어주고, 규정보다는 비서님의 안전이 우선이라 조언한다."
+				},
+				{
+					"reward": [
+						"intelligence_up"
+					],
+					"effects": {
+						"echo": -5,
+						"fighting": -15,
+						"reason": 10
+					},
+					"mbti": "TJ",
+					"path": "hard",
+					"risk_bad": {
+						"reward": [],
+						"result": [
+							{
+								"speaker": "narrator",
+								"text": "당신의 날카로운 질문에 경호팀장이 당황한 기색으로 뒷걸음질 친다."
+							},
+							{
+								"text": "으아악! 묻지 마십시오! 제 비밀은… 제 전용 빗으로 하루 세 번 머리를 빗는다는 겁니다!",
+								"speaker": "security_team_leader"
+							},
+							{
+								"text": "저런 엉뚱한 걸 불어버리다니! 쓸데없는 소리만 듣고 말았네!",
+								"speaker": "dax"
+							}
+						],
+						"gold": -20
+					},
+					"text": "경호팀장의 진짜 고민이 무엇인지, 무엇 때문에 규정을 어기려 하는지 캐묻는다.",
+					"flag": {
+						"key": "security_secret",
+						"label": "경호팀장 비밀",
+						"boss_text": "경호팀장이 4화 경호실장의 비밀 지시를 폭로하여, 방 10에서 유리한 정보를 얻습니다."
+					},
+					"result": [
+						{
+							"speaker": "narrator",
+							"text": "당신의 날카로운 질문에 경호팀장이 등줄기에 식은땀을 흘린다."
+						},
+						{
+							"speaker": "security_team_leader",
+							"text": "실은… 4화 경호실장님의 지시로 등대 주변을 감시 중이었습니다."
+						},
+						{
+							"text": "비서님께 직접 들으셔야 할 이야기가 있습니다.",
+							"speaker": "security_team_leader"
+						},
+						{
+							"text": "4화 경호실장님? 뭔가 숨기는 게 있었나 봐요!",
+							"speaker": "dax"
+						}
+					]
+				},
+				{
+					"flag": {
+						"label": "경호팀장 고백",
+						"key": "security_confession",
+						"boss_text": "경호팀장이 4화 경호실장의 감시 지시를 고백하여, 방 10에서 유리한 상황을 만듭니다."
+					},
+					"result": [
+						{
+							"speaker": "narrator",
+							"text": "당신의 온화한 태도에 경호팀장이 감격한 표정으로 입을 연다."
+						},
+						{
+							"speaker": "security_team_leader",
+							"text": "감사합니다! 실은 4화 경호실장님께서…"
+						},
+						{
+							"speaker": "security_team_leader",
+							"text": "등대에서 비서님을 몰래 지켜보라고 하셨습니다. 저도 이 상황이 영 불편합니다."
+						},
+						{
+							"text": "경호실장님이 비서님을 감시한다고요? 왜?",
+							"speaker": "dax"
+						}
+					],
+					"text": "경호팀장의 어깨를 두드리며, 어떤 사정이든 함께 해결해 주겠다고 다독인다.",
+					"effects": {
+						"echo": 10,
+						"community": 10,
+						"fighting": 25
+					},
+					"reward": [
+						"defense_up"
+					],
+					"mbti": "NF",
+					"path": "stat"
+				},
+				{
+					"result": [
+						{
+							"text": "당신의 손길에 경호팀장이 얼어붙은 듯 굳어버린다. 그의 완벽하게 고정된 머리가 일순간 흐트러진다.",
+							"speaker": "narrator"
+						},
+						{
+							"text": "제, 제 머리는…! 이, 이런 불경한…!",
+							"speaker": "security_team_leader"
+						},
+						{
+							"text": "푸하하! 경호팀장님 완전 얼음 됐네! 저렇게 당황하는 거 처음 봐!",
+							"speaker": "dax"
+						}
+					],
+					"text": "규정 고민에 빠진 경호팀장의 흐트러진 머리를 직접 쓰다듬어 정리해 준다.",
+					"risk_bad": {
+						"result": [
+							{
+								"speaker": "narrator",
+								"text": "당신이 경호팀장의 머리를 쓰다듬으려 하자, 그는 반사적으로 몸을 피한다."
+							},
+							{
+								"speaker": "security_team_leader",
+								"text": "으아악! 제 머리에 손대지 마십시오! 규정 위반입니다!"
+							},
+							{
+								"text": "너무 놀라서 도망가 버렸네! 어떡해요?",
+								"speaker": "dax"
+							}
+						],
+						"reward": [
+							"move_range_down"
+						]
+					},
+					"effects": {
+						"echo": 15,
+						"reason": -20
+					},
+					"reward": [
+						"cooldown_reset"
+					],
+					"mbti": "EP",
+					"path": "fun"
+				}
+			],
+			"rule_link": "등대 진입을 막는 인물의 부탁을 들어주기 전에 그의 진짜 사정을 묻는다.",
+			"person": {
+				"id": "security_team_leader",
+				"name": "경호팀장",
+				"role": "경호팀장"
+			},
+			"title": "흔들리는 경계선",
+			"background_tags": [
+				"breakwater",
+				"dawn",
+				"foggy",
+				"empty",
+				"anxious"
+			],
+			"slot": "D",
+			"kind": "rep",
+			"rep_dir": "fighting+"
+		}
+	],
+	"errors": [],
+	"prompt_hash": "413003334f78dd11e2e4d7591849c2d8892dd4b1"
+}

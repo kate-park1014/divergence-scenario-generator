@@ -1,0 +1,350 @@
+{
+	"id": "card_04_suspicious_shadow",
+	"title": {
+		"korean": "수상한 그림자"
+	},
+	"intensity": "calm",
+	"after_story": 3,
+	"before_story": 5,
+	"condition": {
+		"leaning": "reason+",
+		"among": [
+			"fighting-",
+			"fighting+",
+			"community-",
+			"community+",
+			"reason-",
+			"reason+"
+		],
+		"min": 20
+	},
+	"urgency": 8,
+	"leaning": "reason+",
+	"background_tags": [
+		"garage",
+		"night",
+		"dimlight",
+		"empty",
+		"mysterious"
+	],
+	"background_image": "https://imagedelivery.net/WTEqQNGFb-l-IHS6IGnzUQ/2bd5c8a5-9661-4497-0742-a56043432400/public",
+	"dialogue": [
+		{
+			"speaker": "chago_banjang",
+			"content": {
+				"korean": "당신이 그, 뭐냐, 정해진 대로만 안 움직이는 해결사 양반들 아니요? 소문은 익히 들었소만."
+			}
+		},
+		{
+			"speaker": "narrator",
+			"content": {
+				"korean": "차고 반장이 차량 기록실 문을 몸으로 막아서며 헛기침을 한다."
+			}
+		},
+		{
+			"speaker": "chago_banjang",
+			"content": {
+				"korean": "이 문은… 지금은 열어줄 수 없소. 중요한 서류들이 있어서 말이야."
+			}
+		},
+		{
+			"speaker": "dax",
+			"content": {
+				"korean": "저기요, 반장님. 아까 그 서류는 다 채웠는데요? 혹시 다른 중요한 게 있는 건가요?"
+			}
+		},
+		{
+			"speaker": "chago_banjang",
+			"content": {
+				"korean": "으음, 그게… 하필 지금 중요한 손님이 와 계셔서 말이야."
+			}
+		}
+	],
+	"choices": [
+		{
+			"text": {
+				"korean": "반장의 변명에도 아랑곳 않고 기록실 문을 열고 들어가려 한다."
+			},
+			"path": "easy",
+			"mbti": "ES",
+			"flag": "broken_door",
+			"effects": {
+				"fighting": 15,
+				"echo": -5
+			},
+			"reward": [
+				"attack_up"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "당신이 반장을 옆으로 밀쳐내고 기록실 문을 거칠게 연다."
+					}
+				},
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "안에는 쥐새끼 한 마리가 훔쳐온 과자를 먹다 놀라 도망친다."
+					}
+				},
+				{
+					"speaker": "dax",
+					"content": {
+						"korean": "에이, 그냥 쥐였네요! 반장님은 왜 이렇게 호들갑을…"
+					}
+				}
+			],
+			"risk": {
+				"chance": "mid",
+				"bad": {
+					"reward": [
+						"hp_down"
+					],
+					"result": [
+						{
+							"speaker": "narrator",
+							"content": {
+								"korean": "당신이 반장을 밀치고 기록실 문을 열려 하자, 낡은 문이 '삐걱' 소리를 내며 흔들린다."
+							}
+						},
+						{
+							"speaker": "narrator",
+							"content": {
+								"korean": "문이 낡아서 손잡이가 부러지고, 반장의 팔이 문에 끼어버린다."
+							}
+						},
+						{
+							"speaker": "dax",
+							"content": {
+								"korean": "아이고, 반장님! 괜찮으세요? 문도 부러지고 어떡해요!"
+							}
+						}
+					]
+				}
+			}
+		},
+		{
+			"text": {
+				"korean": "반장의 사정을 먼저 들어주고 문을 열어달라고 설득한다."
+			},
+			"path": "hard",
+			"mbti": "IN",
+			"flag": "cat_distraction",
+			"effects": {
+				"community": 20,
+				"echo": 10
+			},
+			"reward": [
+				"defense_up"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "당신이 반장의 어깨를 두드리며 무슨 사정인지 차분히 물어본다."
+					}
+				},
+				{
+					"speaker": "chago_banjang",
+					"content": {
+						"korean": "사실은… 내가 돌보던 길고양이가 안에서 새끼를 낳았지 뭐야! 시끄러울까 봐 잠시 숨겨뒀어."
+					}
+				},
+				{
+					"speaker": "dax",
+					"content": {
+						"korean": "어머, 새끼 고양이라니! 귀엽네요."
+					}
+				}
+			],
+			"risk": {
+				"chance": "high",
+				"bad": {
+					"effects": {
+						"gold": -20
+					},
+					"reward": [],
+					"result": [
+						{
+							"speaker": "narrator",
+							"content": {
+								"korean": "당신이 반장에게 다가가 어깨를 두드리며 말을 걸자, 반장이 화들짝 놀라며 몸을 움츠린다."
+							}
+						},
+						{
+							"speaker": "narrator",
+							"content": {
+								"korean": "반장은 당신의 말에 오히려 더 당황하며 횡설수설하다가 급하게 자리를 피한다."
+							}
+						},
+						{
+							"speaker": "dax",
+							"content": {
+								"korean": "어라, 반장님이 뭔가 숨기는 게 맞았나 봐요?"
+							}
+						}
+					]
+				}
+			}
+		},
+		{
+			"text": {
+				"korean": "규칙에 얽매이지 않는 당신의 평판으로 반장에게 자유로운 분위기를 조성한다."
+			},
+			"path": "stat",
+			"mbti": "FP",
+			"require": {
+				"stat": "reason",
+				"op": ">=",
+				"value": 40
+			},
+			"flag": "free_pass",
+			"effects": {
+				"echo": 10,
+				"reason": 20
+			},
+			"reward": [
+				"move_range_up"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "당신이 반장에게 굳이 규칙에 얽매일 필요 없다고 가볍게 말하자, 반장이 한숨을 내쉰다."
+					}
+				},
+				{
+					"speaker": "chago_banjang",
+					"content": {
+						"korean": "하긴, 나도 이런 건 영 체질에 안 맞아! 어서 들어가 보시오!"
+					}
+				},
+				{
+					"speaker": "dax",
+					"content": {
+						"korean": "와, 역시! 반장님도 우리처럼 자유로운 영혼이셨네요!"
+					}
+				}
+			]
+		},
+		{
+			"text": {
+				"korean": "반장의 중요한 손님을 위해 환영 노래를 부르며 기록실 문을 두드린다."
+			},
+			"path": "fun",
+			"mbti": "EP",
+			"effects": {
+				"gold": 100,
+				"echo": 15
+			},
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "당신이 목청껏 환영 노래를 부르자, 반장이 당황하며 기록실 문을 확 열어버린다."
+					}
+				},
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "안에는 아무도 없고, 반장이 황급히 문을 닫는다."
+					}
+				},
+				{
+					"speaker": "chago_banjang",
+					"content": {
+						"korean": "으악! 시끄러워! 그냥 들어가! 내가 졌소!"
+					}
+				},
+				{
+					"speaker": "dax",
+					"content": {
+						"korean": "푸하하! 반장님 표정 좀 보세요!"
+					}
+				}
+			],
+			"risk": {
+				"chance": "low",
+				"bad": {
+					"reward": [
+						"hp_down"
+					],
+					"result": [
+						{
+							"speaker": "narrator",
+							"content": {
+								"korean": "당신이 목청껏 환영 노래를 부르자, 반장이 당황하며 기록실 문을 확 연다."
+							}
+						},
+						{
+							"speaker": "narrator",
+							"content": {
+								"korean": "안에서는 반장의 아내가 나와 렌치로 당신의 머리를 때린다."
+							}
+						},
+						{
+							"speaker": "dax",
+							"content": {
+								"korean": "으악! 반장님 아내분이 숨어 계셨네요! 저, 저건 진짜 아프겠어요!"
+							}
+						}
+					]
+				}
+			}
+		}
+	],
+	"tags": [
+		"chago_banjang",
+		"dax"
+	],
+	"_design": {
+		"slot": "B",
+		"kind": "rep",
+		"person": {
+			"id": "chago_banjang",
+			"name": "차고 반장",
+			"role": "차고 반장"
+		},
+		"wants": "차고 반장이 누군가를 숨기는 듯 수상하게 행동하며 기록실 접근을 막는다.",
+		"rule_link": "반장이 말 못 할 사정을 가진 누군가를 숨기려 하는 태도가, 기록을 지운 누님의 사정과 겹쳐 보여 플레이어에게 혼란을 준다.",
+		"rep": "reason+",
+		"events": {},
+		"flags": {
+			"broken_door": {
+				"kind": "bad",
+				"boss_penalty": -1,
+				"label": {
+					"korean": "부러진 문"
+				},
+				"boss_line": {
+					"korean": "금고실 문이 낡아 약해져 있어, 경비들이 문을 잠그는 데 애를 먹는다."
+				}
+			},
+			"cat_distraction": {
+				"kind": "good",
+				"boss_penalty": 1,
+				"label": {
+					"korean": "길고양이"
+				},
+				"boss_choice": {
+					"korean": "금고실 통로에 길고양이가 나타나 경비들의 주의를 분산시킨다."
+				}
+			},
+			"free_pass": {
+				"kind": "good",
+				"boss_penalty": 2,
+				"label": {
+					"korean": "자유로운 통행"
+				},
+				"boss_choice": {
+					"korean": "금고실 경비들이 당신의 행동을 대수롭지 않게 여겨 감시를 소홀히 한다."
+				}
+			}
+		}
+	}
+}

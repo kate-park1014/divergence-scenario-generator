@@ -1,0 +1,300 @@
+{
+	"id": "card_05_gang_uncle_stolen_coffee",
+	"title": {
+		"korean": "아재의 보물"
+	},
+	"intensity": "calm",
+	"after_story": 1,
+	"before_story": 3,
+	"condition": {
+		"leaning": "reason+",
+		"among": [
+			"fighting-",
+			"fighting+",
+			"community-",
+			"community+",
+			"reason-",
+			"reason+"
+		],
+		"min": 20
+	},
+	"urgency": 8,
+	"leaning": "reason+",
+	"background_tags": [
+		"corridor",
+		"daytime",
+		"fluorescent_light",
+		"executives",
+		"hurried"
+	],
+	"background_image": "https://imagedelivery.net/WTEqQNGFb-l-IHS6IGnzUQ/0021bc8b-a350-4a21-5a17-694249460400/public",
+	"dialogue": [
+		{
+			"speaker": "gang_uncle",
+			"content": {
+				"korean": "비서실 쪽으로 가는 발걸음이 예사롭지 않구만."
+			}
+		},
+		{
+			"speaker": "gang_uncle",
+			"content": {
+				"korean": "당신이 그, 소문 자자한 '마음 가는 대로 일 처리하는' 양반 맞지?"
+			}
+		},
+		{
+			"speaker": "narrator",
+			"content": {
+				"korean": "아재가 품속에 무언가를 숨기려 애쓴다. 그 뒤로 간부 한 명이 다가온다."
+			}
+		},
+		{
+			"speaker": "gang_uncle",
+			"content": {
+				"korean": "켁. 저, 저 망할 놈의 커피 원두가…"
+			}
+		},
+		{
+			"speaker": "gang_uncle",
+			"content": {
+				"korean": "비서님 드리려고 잠깐 가져온 건데, 저 간부 놈이 벌써 눈치챈 것 같아!"
+			}
+		},
+		{
+			"speaker": "dax",
+			"content": {
+				"korean": "비서님은 커피 대신 차를 드시는데… 아재가 왜 비서님 드리려고 커피를 가져왔을까요?"
+			}
+		},
+		{
+			"speaker": "gang_uncle",
+			"content": {
+				"korean": "시끄러워! 이거 걸리면 죽는다고! 빨리 좀 숨겨 줘!"
+			}
+		}
+	],
+	"choices": [
+		{
+			"text": {
+				"korean": "아재를 간부에게 밀치고 커피 원두를 잽싸게 가로챈다."
+			},
+			"path": "easy",
+			"mbti": "EP",
+			"flag": "hidden_coffee_beans",
+			"effects": {
+				"echo": 5,
+				"gold": 100,
+				"reason": -20
+			},
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "당신이 아재를 간부에게 밀치는 바람에 간부가 넘어진다. 그 틈에 당신이 커피 원두를 낚아채 숨긴다."
+					}
+				},
+				{
+					"speaker": "dax",
+					"content": {
+						"korean": "덕분에 아재가 무사히 커피 원두를 숨겼네요!"
+					}
+				}
+			],
+			"risk": {
+				"chance": "mid",
+				"bad": {
+					"reward": [
+						"attack_down"
+					],
+					"result": [
+						{
+							"speaker": "narrator",
+							"content": {
+								"korean": "당신이 아재를 밀쳤지만 간부가 몸을 피했다. 커피 원두가 바닥에 굴러떨어져 간부의 발치에 놓인다."
+							}
+						},
+						{
+							"speaker": "dax",
+							"content": {
+								"korean": "아재가 큰일 났네요…"
+							}
+						}
+					]
+				}
+			}
+		},
+		{
+			"text": {
+				"korean": "간부의 시선을 끌기 위해 비서실 문에 낙서를 한다."
+			},
+			"path": "hard",
+			"mbti": "NF",
+			"flag": "graffiti_distraction",
+			"effects": {
+				"community": -20,
+				"echo": -5
+			},
+			"reward": [
+				"move_range_up"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "간부가 비서실 문에 그려진 그림을 보며 인상을 찌푸린다. 그 틈에 아재는 잽싸게 커피 원두를 품에 숨긴다."
+					}
+				},
+				{
+					"speaker": "dax",
+					"content": {
+						"korean": "비서실 문에 저런 낙서를 하다니… 비서님이 보시면 놀라실 거예요."
+					}
+				}
+			],
+			"risk": {
+				"chance": "high",
+				"bad": {
+					"effects": {
+						"gold": -20
+					},
+					"reward": [],
+					"result": [
+						{
+							"speaker": "narrator",
+							"content": {
+								"korean": "당신이 비서실 문에 낙서를 하자 간부가 기겁하며 청소부를 부른다. 아재가 허둥대다 커피 원두를 쏟는다."
+							}
+						},
+						{
+							"speaker": "dax",
+							"content": {
+								"korean": "비서실 문이 더러워졌다고 간부가 막 화를 내네요…"
+							}
+						}
+					]
+				}
+			}
+		},
+		{
+			"text": {
+				"korean": "커피 원두를 들고 있는 아재의 옆에 서서, 간부에게 '다음에 또 뵙겠습니다' 하고 인사를 건넨다."
+			},
+			"path": "stat",
+			"mbti": "IS",
+			"require": {
+				"stat": "reason",
+				"op": ">=",
+				"value": 40
+			},
+			"flag": "confident_farewell",
+			"effects": {
+				"community": 10,
+				"reason": 20
+			},
+			"reward": [
+				"intelligence_up"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "당신의 자신감 넘치는 인사에 간부가 움찔하며 서둘러 자리를 피한다. 아재가 감탄한 듯 당신을 바라본다."
+					}
+				},
+				{
+					"speaker": "dax",
+					"content": {
+						"korean": "간부가 당신을 보고 도망가다니, 정말 대단해요!"
+					}
+				}
+			]
+		},
+		{
+			"text": {
+				"korean": "다가오는 간부에게 커피값이라며 지폐를 내밀어 시선을 붙잡는다."
+			},
+			"path": "gold",
+			"mbti": "TP",
+			"require": {
+				"stat": "gold",
+				"op": ">=",
+				"value": 70
+			},
+			"effects": {
+				"gold": -70
+			},
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "간부가 영문도 모른 채 지폐를 받아 드는 사이, 아재가 원두 봉지를 화분 뒤에 밀어 넣었다."
+					}
+				},
+				{
+					"speaker": "gang_uncle",
+					"content": {
+						"korean": "켁, 살았다! 근데 저 간부 놈, 그 돈으로 원두 사러 가는 거 아냐?"
+					}
+				},
+				{
+					"speaker": "dax",
+					"content": {
+						"korean": "아재, 간부님이 진짜 커피 가게 쪽으로 걸어가요."
+					}
+				}
+			]
+		}
+	],
+	"tags": [
+		"gang_uncle",
+		"dax"
+	],
+	"_design": {
+		"slot": "A",
+		"kind": "rep",
+		"person": {
+			"id": "gang_uncle",
+			"name": "백상어파 아재",
+			"role": "조직원"
+		},
+		"wants": "간부의 고급 커피 원두를 몰래 가져와서 숨기려 하는데, 마침 그 간부가 다가오는 중이라 도움을 요청함.",
+		"rule_link": "왜 남의 커피 원두를 몰래 가져와 숨기려 하는지 그 사정을 먼저 물어봐야 한다.",
+		"rep": "reason+",
+		"events": {},
+		"flags": {
+			"hidden_coffee_beans": {
+				"kind": "bad",
+				"boss_penalty": -1,
+				"label": {
+					"korean": "숨겨진 커피 원두"
+				},
+				"boss_line": {
+					"korean": "아재가 숨긴 커피 원두를 간부가 찾지 못해 짜증을 낸다."
+				}
+			},
+			"graffiti_distraction": {
+				"kind": "good",
+				"boss_penalty": 1,
+				"label": {
+					"korean": "낙서로 시선 끌기"
+				},
+				"boss_choice": {
+					"korean": "비서실 문에 낙서가 발견되어 간부들이 범인을 찾으려 한다."
+				}
+			},
+			"confident_farewell": {
+				"kind": "good",
+				"boss_penalty": 2,
+				"label": {
+					"korean": "자신감 있는 작별"
+				},
+				"boss_choice": {
+					"korean": "간부가 당신의 자신감 넘치는 태도에 기가 죽어 전투 시작 시 주춤거린다."
+				}
+			}
+		}
+	}
+}

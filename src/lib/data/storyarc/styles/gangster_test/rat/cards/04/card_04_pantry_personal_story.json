@@ -1,0 +1,371 @@
+{
+	"id": "card_04_pantry_personal_story",
+	"title": {
+		"korean": "개인적인 사연"
+	},
+	"intensity": "calm",
+	"after_story": 1,
+	"before_story": 3,
+	"condition": {
+		"leaning": "reason+",
+		"among": [
+			"fighting-",
+			"fighting+",
+			"community-",
+			"community+",
+			"reason-",
+			"reason+"
+		],
+		"min": 20
+	},
+	"urgency": 8,
+	"leaning": "reason+",
+	"background_tags": [
+		"office",
+		"pantry",
+		"daylight",
+		"single_person",
+		"worried"
+	],
+	"background_image": "https://imagedelivery.net/WTEqQNGFb-l-IHS6IGnzUQ/075bcb01-c323-4740-73f8-50b1b147e900/public",
+	"dialogue": [
+		{
+			"speaker": "secretary_young",
+			"content": {
+				"korean": "당신이 그… 융통성 있게 사건을 해결한다는 분이시죠? 끙끙 앓긴요! 그저… 개인적인 사연이 섞여서…"
+			}
+		},
+		{
+			"speaker": "dax",
+			"content": {
+				"korean": "비서 아가씨, 얼굴이 안 좋아 보여요."
+			}
+		},
+		{
+			"speaker": "secretary_young",
+			"content": {
+				"korean": "회장님께 보고할 서류를 정리해야 하는데,"
+			}
+		},
+		{
+			"speaker": "secretary_young",
+			"content": {
+				"korean": "이 안에 개인적인 사연이 섞여 있어서 어떻게 해야 할지 모르겠습니다."
+			}
+		},
+		{
+			"speaker": "narrator",
+			"content": {
+				"korean": "비서 아가씨가 품에 안은 서류 뭉치를 꼭 쥔다."
+			}
+		}
+	],
+	"choices": [
+		{
+			"text": {
+				"korean": "개인적인 사연은 따로 빼서 숨겨주겠다고 말한다."
+			},
+			"path": "easy",
+			"mbti": "EN",
+			"flag": "secretary_personal_secret",
+			"effects": {
+				"echo": 10,
+				"reason": 20
+			},
+			"reward": [
+				"move_range_up"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "당신의 말에 비서 아가씨가 감동한 듯 눈물을 글썽인다."
+					}
+				},
+				{
+					"speaker": "secretary_young",
+					"content": {
+						"korean": "정말 감사합니다! 그럼 이 서류들은…"
+					}
+				},
+				{
+					"speaker": "secretary_young",
+					"content": {
+						"korean": "제가 따로 보관하고, 대신 회장님께서 평소에 자주 찾으시던 물건의 위치를 알려드릴게요."
+					}
+				},
+				{
+					"speaker": "dax",
+					"content": {
+						"korean": "역시, 이렇게 해야 사람 마음을 얻죠!"
+					}
+				}
+			],
+			"risk": {
+				"chance": "mid",
+				"bad": {
+					"reward": [
+						"move_range_down"
+					],
+					"result": [
+						{
+							"speaker": "narrator",
+							"content": {
+								"korean": "당신이 서류를 집어 드는 순간, 비서 아가씨가 비명을 지른다."
+							}
+						},
+						{
+							"speaker": "secretary_young",
+							"content": {
+								"korean": "안 돼요! 그건… 개인적인 사연이 담긴 중요한 서류입니다!"
+							}
+						},
+						{
+							"speaker": "dax",
+							"content": {
+								"korean": "어이쿠, 아가씨가 너무 민감하게 반응하는데요."
+							}
+						}
+					]
+				}
+			}
+		},
+		{
+			"text": {
+				"korean": "규칙대로 모든 서류를 분류해야 한다고 설명한다."
+			},
+			"path": "hard",
+			"mbti": "ST",
+			"flag": "secretary_rule_demand",
+			"effects": {
+				"echo": -5,
+				"reason": -20
+			},
+			"reward": [
+				"attack_up"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "당신의 단호한 말에 비서 아가씨가 당황한 얼굴로 서류를 움켜쥔다."
+					}
+				},
+				{
+					"speaker": "secretary_young",
+					"content": {
+						"korean": "그, 그렇지만… 이건… 회장님께 보고할 서류들이니 함부로 들춰보시면 안 됩니다!"
+					}
+				},
+				{
+					"speaker": "dax",
+					"content": {
+						"korean": "윽, 비서 아가씨가 갑자기 깐깐해졌어요."
+					}
+				}
+			],
+			"risk": {
+				"chance": "high",
+				"bad": {
+					"effects": {
+						"gold": -20
+					},
+					"reward": [],
+					"result": [
+						{
+							"speaker": "narrator",
+							"content": {
+								"korean": "당신의 말에 비서 아가씨가 서류를 찢어버리려 한다."
+							}
+						},
+						{
+							"speaker": "secretary_young",
+							"content": {
+								"korean": "차라리 제가 다 망쳐버릴 겁니다!"
+							}
+						},
+						{
+							"speaker": "dax",
+							"content": {
+								"korean": "저, 저러다 다 들키겠어요!"
+							}
+						}
+					]
+				}
+			}
+		},
+		{
+			"text": {
+				"korean": "비서 아가씨의 사연을 듣고 해결책을 찾아주겠다고 제안한다."
+			},
+			"path": "stat",
+			"mbti": "IF",
+			"require": {
+				"stat": "reason",
+				"op": ">=",
+				"value": 40
+			},
+			"flag": "secretary_personal_trust",
+			"effects": {
+				"echo": 15,
+				"community": 10,
+				"reason": 30
+			},
+			"reward": [
+				"heal"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "당신의 따뜻한 말에 비서 아가씨가 조심스럽게 속마음을 털어놓는다."
+					}
+				},
+				{
+					"speaker": "secretary_young",
+					"content": {
+						"korean": "실은 이 서류 안에… 회장님과 저의 어릴 적 추억이 담겨 있습니다. 이걸…"
+					}
+				},
+				{
+					"speaker": "secretary_young",
+					"content": {
+						"korean": "다른 서류들과 섞을 수는 없어요. 대신, 제가 경호실장님의 평소 습관을 알려드리겠습니다."
+					}
+				},
+				{
+					"speaker": "dax",
+					"content": {
+						"korean": "오, 아가씨도 마음의 짐을 덜었나 봐요."
+					}
+				}
+			]
+		},
+		{
+			"text": {
+				"korean": "서류 안의 개인적인 사연이 뭔지 큰 소리로 궁금해한다."
+			},
+			"path": "fun",
+			"mbti": "EP",
+			"effects": {
+				"reason": 25,
+				"fighting": 10,
+				"gold": 50
+			},
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "당신의 갑작스러운 외침에 비서 아가씨가 화들짝 놀라 서류를 놓친다."
+					}
+				},
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "흩어진 서류들 사이로 어릴 적 회장님의 장난스러운 낙서가 보인다."
+					}
+				},
+				{
+					"speaker": "secretary_young",
+					"content": {
+						"korean": "꺄악! 이건 회장님의… 비밀입니다!"
+					}
+				},
+				{
+					"speaker": "dax",
+					"content": {
+						"korean": "퓌식, 퓌식… 아가씨가 엄청 당황하네요!"
+					}
+				}
+			],
+			"risk": {
+				"chance": "low",
+				"bad": {
+					"effects": {
+						"gold": -50
+					},
+					"reward": [],
+					"result": [
+						{
+							"speaker": "narrator",
+							"content": {
+								"korean": "당신의 갑작스러운 외침에 비서 아가씨가 놀라 서류를 뒤집어 놓는다."
+							}
+						},
+						{
+							"speaker": "narrator",
+							"content": {
+								"korean": "그런데 엎어진 서류들 아래로 낡은 지폐 몇 장이 굴러 떨어진다."
+							}
+						},
+						{
+							"speaker": "secretary_young",
+							"content": {
+								"korean": "꺄악! 이건 제 비상금입니다!"
+							}
+						},
+						{
+							"speaker": "dax",
+							"content": {
+								"korean": "헙, 아가씨의 비상금까지 들켰네!"
+							}
+						}
+					]
+				}
+			}
+		}
+	],
+	"tags": [
+		"secretary_young",
+		"dax"
+	],
+	"_design": {
+		"slot": "A",
+		"kind": "rep",
+		"person": {
+			"id": "secretary_young",
+			"name": "비서 아가씨",
+			"role": "비서실 직원"
+		},
+		"wants": "비서 아가씨는 개인적인 사연이 담긴 서류를 숨기려 하며, 당신이 융통성 있게 도와주길 바란다.",
+		"rule_link": "융통성을 중요시하는 해결사에게, 개인적인 사연 때문에 규칙을 어긴 듯 보이는 사람을 어떻게 대할지 묻는다.",
+		"rep": "reason+",
+		"events": {},
+		"flags": {
+			"secretary_personal_secret": {
+				"kind": "bad",
+				"boss_penalty": -1,
+				"label": {
+					"korean": "비서실 사연 은폐"
+				},
+				"boss_line": {
+					"korean": "비서실 직원이 당신에게 개인적인 비밀을 맡긴다."
+				}
+			},
+			"secretary_rule_demand": {
+				"kind": "good",
+				"boss_penalty": 1,
+				"label": {
+					"korean": "비서실 규칙 요구"
+				},
+				"boss_choice": {
+					"korean": "비서실 직원이 규칙대로 서류를 처리해 회장님께 보고한다."
+				}
+			},
+			"secretary_personal_trust": {
+				"kind": "good",
+				"boss_penalty": 2,
+				"label": {
+					"korean": "비서실 신뢰"
+				},
+				"boss_choice": {
+					"korean": "비서실 직원이 경호실장님의 평소 습관을 알려준다."
+				}
+			}
+		}
+	}
+}

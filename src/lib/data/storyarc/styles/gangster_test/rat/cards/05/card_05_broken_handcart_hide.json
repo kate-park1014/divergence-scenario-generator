@@ -1,0 +1,268 @@
+{
+	"id": "card_05_broken_handcart_hide",
+	"title": {
+		"korean": "엉망이 된 손수레를 숨기는 어부"
+	},
+	"intensity": "calm",
+	"after_story": 5,
+	"before_story": 7,
+	"condition": {
+		"leaning": "community+",
+		"among": [
+			"fighting-",
+			"fighting+",
+			"community-",
+			"community+",
+			"reason-",
+			"reason+"
+		],
+		"min": 20
+	},
+	"urgency": 8,
+	"leaning": "community+",
+	"background_tags": [
+		"foggy",
+		"night",
+		"dim",
+		"none",
+		"mysterious"
+	],
+	"background_image": "https://imagedelivery.net/WTEqQNGFb-l-IHS6IGnzUQ/c6efa135-d8a8-4cff-3827-eaac6e50ab00/public",
+	"dialogue": [
+		{
+			"speaker": "narrator",
+			"content": {
+				"korean": "등대로 가는 좁은 길 위로 어부 아재가 낡은 손수레를 감싸 안듯 막고 서 있다."
+			}
+		},
+		{
+			"speaker": "fisherman_uncle",
+			"content": {
+				"korean": "어이, 당신이 그 어려운 이웃을 그냥 못 지나친다는 해결사 양반이지? 쯧쯧, 남의 일에 왜 그리 오지랖이야!"
+			}
+		},
+		{
+			"speaker": "fisherman_uncle",
+			"content": {
+				"korean": "이 손수레가 글쎄, 비서님 기금 상자를 옮기다가 그만 바퀴가 부서져 버렸지 뭐야!"
+			}
+		},
+		{
+			"speaker": "fisherman_uncle",
+			"content": {
+				"korean": "비서님한테 들키면 난 끝장이야."
+			}
+		}
+	],
+	"choices": [
+		{
+			"text": {
+				"korean": "망가진 손수레를 고치는 것을 돕는다."
+			},
+			"path": "easy",
+			"mbti": "NF",
+			"flag": "fisherman_handcart_unfavorable",
+			"effects": {
+				"community": 20,
+				"echo": 5
+			},
+			"reward": [
+				"intelligence_up"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "당신이 손수레 바퀴를 고치자 어부 아재가 고맙다며 안개 속을 가리킨다."
+					}
+				},
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "'여기, 비서님이 놓고 간 만년필이 떨어져 있네.'"
+					}
+				},
+				{
+					"speaker": "dax",
+					"content": {
+						"korean": "비서님 만년필이 여기 왜 떨어져 있지?"
+					}
+				}
+			],
+			"risk": {
+				"chance": "mid",
+				"bad": {
+					"effects": {
+						"gold": -30
+					},
+					"reward": [],
+					"result": [
+						{
+							"speaker": "narrator",
+							"content": {
+								"korean": "당신이 손수레 바퀴를 고치려 힘주자, 낡은 바퀴가 완전히 부서지며 손수레가 한쪽으로 기울어진다."
+							}
+						},
+						{
+							"speaker": "fisherman_uncle",
+							"content": {
+								"korean": "아이고, 이거 큰일났네! 이제 비서님한테 뭐라고 변명하지!"
+							}
+						}
+					]
+				}
+			}
+		},
+		{
+			"text": {
+				"korean": "손수레를 치우라고 명령하고 등대로 향한다."
+			},
+			"path": "hard",
+			"mbti": "TJ",
+			"flag": "fisherman_handcart_favorable",
+			"effects": {
+				"fighting": 20,
+				"echo": -10
+			},
+			"reward": [
+				"attack_up"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "당신이 단호하게 명령하자 어부 아재가 울며 겨자 먹기로 손수레를 끌고 길을 비켜준다."
+					}
+				},
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "부서진 바퀴가 달그락거린다."
+					}
+				},
+				{
+					"speaker": "dax",
+					"content": {
+						"korean": "너무 무섭게 그러지 마세요!"
+					}
+				}
+			],
+			"risk": {
+				"chance": "high",
+				"bad": {
+					"effects": {
+						"gold": -20
+					},
+					"reward": [],
+					"result": [
+						{
+							"speaker": "narrator",
+							"content": {
+								"korean": "당신이 단호하게 명령하자 어부 아재가 손수레를 끌다 넘어져 바퀴가 완전히 부서진다."
+							}
+						},
+						{
+							"speaker": "narrator",
+							"content": {
+								"korean": "길은 손수레 파편으로 더욱 막힌다."
+							}
+						}
+					]
+				}
+			}
+		},
+		{
+			"text": {
+				"korean": "어부 아재가 비서님을 돕던 마음을 헤아려준다."
+			},
+			"path": "stat",
+			"mbti": "FP",
+			"require": {
+				"stat": "community",
+				"op": ">=",
+				"value": 40
+			},
+			"flag": "fisherman_handcart_stat_favorable",
+			"effects": {
+				"reason": 10,
+				"echo": 10,
+				"community": 20
+			},
+			"reward": [
+				"heal"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "당신이 비서님을 돕던 마음을 알아주자 어부 아재가 감동한다."
+					}
+				},
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "'기금 상자는 비서님이 등대 문 앞에 잘 뒀을 거야. 나는 상자만 옮겨줬을 뿐이야.'"
+					}
+				},
+				{
+					"speaker": "dax",
+					"content": {
+						"korean": "역시 비서님은 돈을 탐내지 않으셨군요!"
+					}
+				}
+			]
+		}
+	],
+	"tags": [
+		"fisherman_uncle",
+		"dax"
+	],
+	"_design": {
+		"slot": "C",
+		"kind": "rep",
+		"person": {
+			"id": "fisherman_uncle",
+			"name": "어부 아재",
+			"role": "어부"
+		},
+		"wants": "등대로 가는 길을 막아서며 망가진 손수레를 숨기려 한다.",
+		"rule_link": "닥달하기 전에 먼저 사정을 물어야 합니다. 손해를 보더라도 어부의 사정부터 들어봅니다.",
+		"rep": "community+",
+		"events": {},
+		"flags": {
+			"fisherman_handcart_unfavorable": {
+				"kind": "bad",
+				"boss_penalty": -1,
+				"label": {
+					"korean": "어부의 만년필"
+				},
+				"boss_line": {
+					"korean": "어부 아재가 당신의 발밑에 망가진 손수레 바퀴를 던진다."
+				}
+			},
+			"fisherman_handcart_favorable": {
+				"kind": "good",
+				"boss_penalty": 1,
+				"label": {
+					"korean": "어부의 공포"
+				},
+				"boss_choice": {
+					"korean": "어부 아재가 당신의 매서운 눈빛에 움찔하며 엉뚱한 적을 공격한다."
+				}
+			},
+			"fisherman_handcart_stat_favorable": {
+				"kind": "good",
+				"boss_penalty": 2,
+				"label": {
+					"korean": "어부의 증언"
+				},
+				"boss_choice": {
+					"korean": "어부 아재가 비서님의 결백을 주장하며 당신을 돕는다."
+				}
+			}
+		}
+	}
+}

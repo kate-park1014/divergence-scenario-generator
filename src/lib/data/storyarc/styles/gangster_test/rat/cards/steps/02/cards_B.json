@@ -1,0 +1,449 @@
+{
+	"cards": [
+		{
+			"background_tags": [
+				"car",
+				"night",
+				"foggy",
+				"quiet",
+				"tense"
+			],
+			"no": 1,
+			"person": {
+				"role": "조직원",
+				"id": "youngest_member",
+				"name": "백상어파 막내"
+			},
+			"key": "youngest_gang_member_stakeout",
+			"dialogue": [
+				{
+					"speaker": "narrator",
+					"text": "차 창문을 두드리는 소리에 당신은 깜짝 놀랐다."
+				},
+				{
+					"text": "저, 저거 백상어파 막내 아니에요? 왜 하필 지금...",
+					"speaker": "dax"
+				},
+				{
+					"speaker": "youngest_member",
+					"text": "선배님! 밤새 고생 많으십니다! 저도 같이 잠복하고 싶습니다!"
+				},
+				{
+					"speaker": "dax",
+					"text": "쉿! 조용히 좀 해요!"
+				}
+			],
+			"rule_link": "섣부른 참여는 위험을 부르지만, 그 열정 뒤에 숨은 진심을 끝까지 지켜봐야 할 때도 있다.",
+			"wants": "선배님들 멋있는 잠복 작전, 저도 같이 하고 싶습니다!",
+			"choices": [
+				{
+					"risk_bad": {
+						"reward": [],
+						"result": [
+							{
+								"text": "막내는 회장님 이름에 잠시 멈칫하더니, 더 큰 소리로 '회장님 일이라면 더더욱 제가 나서야죠!' 외쳤다.",
+								"speaker": "narrator"
+							},
+							{
+								"text": "맙소사! 회장님 이름에 더 신나서 떠들면 어쩌자는 거예요!",
+								"speaker": "dax"
+							}
+						],
+						"gold": -20
+					},
+					"effects": {
+						"fighting": 15,
+						"echo": 5
+					},
+					"reward": [
+						"attack_up"
+					],
+					"path": "easy",
+					"text": "회장님께 이르면 큰일 난다고 겁을 줘서 쫓아 보낸다.",
+					"mbti": "ES",
+					"result": [
+						{
+							"text": "막내는 회장님 이름에 화들짝 놀라며 줄행랑쳤다.",
+							"speaker": "narrator"
+						},
+						{
+							"speaker": "dax",
+							"text": "하아, 저 녀석 말 한 번 시작하면 끝이 없어서요. 이제야 좀 조용하겠네요."
+						}
+					]
+				},
+				{
+					"risk_bad": {
+						"gold": -20,
+						"result": [
+							{
+								"text": "막내는 야식을 받아 들고는 갑자기 배가 아프다며 차 옆에서 끙끙거렸다.",
+								"speaker": "narrator"
+							},
+							{
+								"speaker": "dax",
+								"text": "끄응, 막내가 저렇게 끙끙 앓는 소리까지 들리면 어떡하죠!"
+							}
+						],
+						"reward": []
+					},
+					"reward": [],
+					"result": [
+						{
+							"text": "막내는 받은 야식을 복스럽게 먹으며 작전 이야기에 귀를 쫑긋 세웠다.",
+							"speaker": "narrator"
+						},
+						{
+							"text": "역시 선배님들 작전은 다르네요! 제가 본 건 비밀로 지키겠습니다!",
+							"speaker": "youngest_member"
+						},
+						{
+							"speaker": "dax",
+							"text": "야식을 주고 나니 배는 고프지만, 막내가 신나서 떠드는 통에 더 불안해지네요."
+						}
+					],
+					"path": "hard",
+					"effects": {
+						"community": 20,
+						"gold": -80
+					},
+					"mbti": "IN",
+					"text": "중요한 작전이니 입 다물어 달라고 부탁하며 야식을 나눠 준다."
+				},
+				{
+					"risk_bad": {
+						"result": [
+							{
+								"speaker": "narrator",
+								"text": "막내는 당신의 눈을 똑바로 응시하며 흔들림 없는 눈빛으로 오히려 당신을 압박했다."
+							},
+							{
+								"text": "저 막내, 눈빛이 왜 저렇게 강렬해요? 제가 다 숨이 막히네요!",
+								"speaker": "dax"
+							}
+						],
+						"reward": [],
+						"gold": -50
+					},
+					"effects": {
+						"echo": 10,
+						"reason": -20
+					},
+					"reward": [
+						"cooldown_reset"
+					],
+					"path": "fun",
+					"result": [
+						{
+							"speaker": "narrator",
+							"text": "당신의 엉뚱한 제안에 막내는 어리둥절한 표정으로 눈을 깜빡였다."
+						},
+						{
+							"speaker": "dax",
+							"text": "막내가 멍하니 있다가 가버렸네요? 으음, 생각지도 못한 방법인데요?"
+						}
+					],
+					"mbti": "FP",
+					"text": "막내에게 눈싸움을 신청해 집중력을 흐트러뜨린다."
+				}
+			],
+			"title": "차 창문을 두드리는 손",
+			"slot": "B",
+			"kind": "plant"
+		},
+		{
+			"title": "새벽 야적장의 고기 자랑",
+			"dialogue": [
+				{
+					"text": "안개 낀 야적장 너머에서 '이만한 고기는 처음이야!' 하는 우렁찬 목소리가 들려왔다.",
+					"speaker": "narrator"
+				},
+				{
+					"speaker": "dax",
+					"text": "맙소사! 저 낚시꾼 아저씨, 매번 새벽마다 오는데 오늘은 왜 이렇게 시끄럽죠?"
+				},
+				{
+					"speaker": "fisherman",
+					"text": "어이 거기! 이봐, 이 월척 좀 보라고! 내 평생 이런 놈은 처음 잡아본다니까!"
+				}
+			],
+			"person": {
+				"name": "낚시꾼",
+				"id": "fisherman",
+				"role": "생활 낚시꾼"
+			},
+			"wants": "새벽에 잡은 월척을 자랑하고 싶은 마음",
+			"rule_link": "잡은 고기만 보고 월척이라 단정하기보다, 그 고기를 잡기까지의 과정을 끝까지 지켜봐야 진짜를 안다.",
+			"no": 2,
+			"key": "noisy_fisherman",
+			"background_tags": [
+				"port",
+				"dawn",
+				"foggy",
+				"loud",
+				"nervous"
+			],
+			"choices": [
+				{
+					"reward": [
+						"attack_up"
+					],
+					"effects": {
+						"fighting": 10,
+						"echo": 5
+					},
+					"mbti": "ST",
+					"text": "낚시꾼에게 얼른 가서 조용히 하라고 손짓한다.",
+					"path": "easy",
+					"result": [
+						{
+							"text": "당신의 재빠른 손짓에 낚시꾼은 고개를 갸웃하며 조용히 자리를 떴다.",
+							"speaker": "narrator"
+						},
+						{
+							"text": "어휴, 아저씨 고래고래 소리 지르는 통에 간 떨어지는 줄 알았잖아요!",
+							"speaker": "dax"
+						}
+					],
+					"risk_bad": {
+						"reward": [
+							"defense_down"
+						],
+						"result": [
+							{
+								"text": "당신의 손짓을 본 낚시꾼은 당신이 고기를 훔치려는 줄 알고 '이 도둑놈아!' 하고 더 크게 소리쳤다.",
+								"speaker": "narrator"
+							},
+							{
+								"text": "세상에! 오히려 도둑이라고 소리치니 어쩌죠!",
+								"speaker": "dax"
+							}
+						]
+					}
+				},
+				{
+					"effects": {
+						"reason": 15,
+						"echo": 5
+					},
+					"result": [
+						{
+							"speaker": "narrator",
+							"text": "당신은 낚시꾼의 움직임을 주시하며 최적의 순간을 기다렸다."
+						},
+						{
+							"speaker": "dax",
+							"text": "흐읍, 낚시꾼 시선이 잠시 다른 곳을 보네요! 이때다!"
+						}
+					],
+					"path": "hard",
+					"mbti": "IS",
+					"text": "낚시꾼의 시선이 다른 곳으로 향할 때까지 숨을 죽이고 기다린다.",
+					"event_intro": [
+						{
+							"text": "낚시꾼의 시선이 잠시 다른 곳으로 향하는 찰나를 노려야 한다.",
+							"speaker": "narrator"
+						},
+						{
+							"speaker": "dax",
+							"text": "들키지 않고 움직일 기회를 잡아야 해요!"
+						}
+					],
+					"event": "minigame_timing",
+					"event_reason": "들키지 않고 움직일 기회를 잡아야 해요."
+				},
+				{
+					"path": "gold",
+					"text": "낚시꾼에게 다가가 고기를 사주겠다며 조용히 해달라고 부탁한다.",
+					"mbti": "EN",
+					"result": [
+						{
+							"text": "낚시꾼은 고기를 사준다는 말에 눈을 반짝이며 조용히 고기를 싸주기 시작했다.",
+							"speaker": "narrator"
+						},
+						{
+							"speaker": "dax",
+							"text": "돈은 나갔지만, 낚시꾼 아저씨가 입을 다물었으니 이걸로 된 건가요?"
+						}
+					],
+					"effects": {
+						"gold": -100,
+						"community": 10
+					}
+				}
+			],
+			"slot": "B",
+			"kind": "normal"
+		},
+		{
+			"background_tags": [
+				"warehouse",
+				"night",
+				"foggy",
+				"noisy",
+				"anxious"
+			],
+			"rule_link": "눈앞의 작은 불평만 듣고 판단하기보다, 그 불평 뒤에 숨겨진 더 큰 그림을 끝까지 지켜봐야 한다.",
+			"no": 3,
+			"dialogue": [
+				{
+					"speaker": "narrator",
+					"text": "폐창고 앞에서 큼지막한 목소리가 들려왔다."
+				},
+				{
+					"speaker": "dax",
+					"text": "저기요, 저 야간 작업반장님 목소리가 너무 큰데요? 우리 들킬 것 같아요!"
+				},
+				{
+					"speaker": "foreman",
+					"text": "아니, 야식이 이렇게 늦으면 일을 어떻게 하란 말이야! 다들 배고파 죽겠구만!"
+				},
+				{
+					"text": "으으, 저러다 컨테이너 쪽까지 들리겠어요!",
+					"speaker": "dax"
+				}
+			],
+			"person": {
+				"name": "야간 작업반장",
+				"role": "작업반장",
+				"id": "foreman"
+			},
+			"choices": [
+				{
+					"text": "야식 배달원에게 전화해서 빨리 오라고 재촉한다.",
+					"risk_bad": {
+						"reward": [
+							"attack_down"
+						],
+						"result": [
+							{
+								"text": "배달원은 전화를 받자마자 '지금 가고 있거든!' 하고 짜증을 내며 오히려 더 늦게 나타났다.",
+								"speaker": "narrator"
+							},
+							{
+								"speaker": "dax",
+								"text": "저런, 배달원까지 화를 내면 어쩌죠? 일이 더 꼬였네요!"
+							}
+						]
+					},
+					"result": [
+						{
+							"text": "당신의 전화를 받은 배달원은 번개같이 나타나 야식을 전달했다.",
+							"speaker": "narrator"
+						},
+						{
+							"speaker": "foreman",
+							"text": "오오! 야식이다! 고맙소!"
+						},
+						{
+							"speaker": "dax",
+							"text": "휴, 작업반장님이 드디어 조용해졌어요. 이제 좀 살겠네요!"
+						}
+					],
+					"reward": [
+						"attack_up"
+					],
+					"effects": {
+						"community": 10,
+						"echo": 5
+					},
+					"mbti": "ET",
+					"path": "easy"
+				},
+				{
+					"text": "작업반장에게 조용히 다가가 상황이 급하다고 속삭인다.",
+					"reward": [
+						"intelligence_up"
+					],
+					"result": [
+						{
+							"text": "당신의 말에 작업반장은 눈을 크게 뜨고 주변을 살폈다.",
+							"speaker": "narrator"
+						},
+						{
+							"speaker": "foreman",
+							"text": "흠, 알겠소. 조용히 하겠소."
+						},
+						{
+							"speaker": "dax",
+							"text": "작업반장님이 의심하는 눈치인데요?"
+						}
+					],
+					"mbti": "NF",
+					"effects": {
+						"reason": 10,
+						"echo": -5
+					},
+					"risk_bad": {
+						"gold": -20,
+						"result": [
+							{
+								"speaker": "narrator",
+								"text": "당신의 속삭임이 너무 작아 작업반장은 당신이 자기 험담을 하는 줄 알고 노려봤다."
+							},
+							{
+								"text": "이런! 작업반장님이 오히려 더 화를 내시는데요?",
+								"speaker": "dax"
+							}
+						],
+						"reward": []
+					},
+					"path": "hard"
+				},
+				{
+					"reward": [
+						"defense_up"
+					],
+					"mbti": "TJ",
+					"result": [
+						{
+							"text": "{actor}의 명확한 분석에 작업반장은 고개를 끄덕이며 납득했다.",
+							"speaker": "narrator"
+						},
+						{
+							"speaker": "foreman",
+							"text": "오, 자네 말이 맞네! 그렇게 하면 되겠구만!"
+						},
+						{
+							"speaker": "dax",
+							"text": "와, {actor}이(가) 말하니 작업반장님이 바로 고개를 끄덕이네요!"
+						}
+					],
+					"path": "lock",
+					"require_mbti": "TJ",
+					"text": "{actor}이(가) 작업반장의 불평을 논리적으로 분석하며 해결책을 제시한다.",
+					"effects": {
+						"reason": 20,
+						"echo": 10
+					}
+				},
+				{
+					"result": [
+						{
+							"text": "돈을 받은 작업반장은 얼굴에 화색이 돌며 고맙다고 인사했다.",
+							"speaker": "narrator"
+						},
+						{
+							"text": "돈은 들었지만, 작업반장님 얼굴이 금방 환해지는 걸 보니 효과는 확실하네요!",
+							"speaker": "dax"
+						}
+					],
+					"text": "작업반장에게 야식 값이라며 돈을 쥐여주고 조용히 해달라고 부탁한다.",
+					"effects": {
+						"gold": -120,
+						"community": 10
+					},
+					"path": "gold",
+					"mbti": "SF"
+				}
+			],
+			"key": "night_shift_foreman",
+			"title": "폐창고 앞의 불평",
+			"wants": "늦은 야식 배달에 대한 불평을 털어놓고 싶음",
+			"slot": "B",
+			"kind": "normal"
+		}
+	],
+	"errors": [],
+	"prompt_hash": "2c9a01cc21071618b38a54b34507d3c5aa105df4"
+}

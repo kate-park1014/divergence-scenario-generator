@@ -1,0 +1,384 @@
+{
+	"cards": [
+		{
+			"background_tags": [
+				"container_yard",
+				"night",
+				"dim_light",
+				"few_people",
+				"tense"
+			],
+			"person": {
+				"id": "yashik_sajang",
+				"name": "야식트럭 사장",
+				"role": "야식트럭 사장"
+			},
+			"choices": [
+				{
+					"result": [
+						{
+							"text": "당신의 살벌한 눈빛에 사장은 “아이고, 무서워서 장사 하겠나!” 하며 트럭으로 허둥지둥 돌아간다.",
+							"speaker": "narrator"
+						},
+						{
+							"text": "사장님, 저희가 뭐라도 좀 사 먹어주려고 했는데, 아깝네요!",
+							"speaker": "dax"
+						}
+					],
+					"text": "야식트럭 사장을 노려보며 으름장을 놓아 쫓아낸다",
+					"risk_bad": {
+						"result": [
+							{
+								"text": "당신의 으름장에 사장은 “뭐?",
+								"speaker": "narrator"
+							},
+							{
+								"text": "깡패가 따로 없구만!” 하고 소리치며 트럭에서 휴대폰을 꺼내 누군가에게 전화를 건다.",
+								"speaker": "narrator"
+							},
+							{
+								"text": "아이고, 사장님! 꼭 동네 아는 형님들한테 일러바치는 목소리네요!",
+								"speaker": "dax"
+							}
+						],
+						"reward": [
+							"attack_down"
+						],
+						"gold": -20
+					},
+					"mbti": "EN",
+					"effects": {
+						"gold": 50,
+						"fighting": -20,
+						"echo": -5
+					},
+					"path": "easy",
+					"flag": {
+						"boss_text": "야식트럭 사장이 당신이 컨테이너로 가는 것을 지켜보고 있다.",
+						"label": "사장에게 들킴",
+						"key": "noticed_by_sajang"
+					}
+				},
+				{
+					"mbti": "IS",
+					"result": [
+						{
+							"text": "당신의 진지한 설명에 사장은 고개를 갸웃거리다 “에휴, 알았소.",
+							"speaker": "narrator"
+						},
+						{
+							"text": "밤새 고생들 하쇼.” 하며 트럭으로 돌아간다.",
+							"speaker": "narrator"
+						},
+						{
+							"speaker": "dax",
+							"text": "사장님, 저희 때문에 기분 상했나 봐요. 저런..."
+						}
+					],
+					"path": "hard",
+					"flag": {
+						"key": "sajang_distraction_cleared",
+						"label": "사장 방해 제거",
+						"boss_text": "야식트럭 사장이 컨테이너 주변을 신경 쓰지 않아 당신이 접근하기 쉽다."
+					},
+					"text": "야식트럭 사장에게 정중하게 상황을 설명하며 양해를 구한다",
+					"effects": {
+						"echo": 10,
+						"fighting": 20
+					},
+					"reward": [
+						"intelligence_up"
+					],
+					"risk_bad": {
+						"result": [
+							{
+								"text": "당신의 정중한 설명에 사장은 눈을 가늘게 뜨더니,",
+								"speaker": "narrator"
+							},
+							{
+								"speaker": "narrator",
+								"text": "“설마 공짜로 먹고 튀려는 건 아니겠지?” 하며 괜히 트럭 주변을 맴돈다."
+							},
+							{
+								"text": "아이고, 사장님! 꼭 저희가 먹튀할까 봐 저렇게 쳐다보네요!",
+								"speaker": "dax"
+							}
+						],
+						"reward": [],
+						"gold": -20
+					}
+				},
+				{
+					"result": [
+						{
+							"text": "당신의 말에 사장은 움찔하더니, “아이고,",
+							"speaker": "narrator"
+						},
+						{
+							"text": "무서워서 말도 못 붙이겠네!” 하며 트럭 문을 닫고 안에서 당신들을 째려본다.",
+							"speaker": "narrator"
+						},
+						{
+							"text": "사장님, 저희 눈치 보느라 안에서 장사도 제대로 못 하겠네요!",
+							"speaker": "dax"
+						}
+					],
+					"text": "“소문대로 주먹이 먼저 나가는 해결사는 맞지.” 짧게 말하고 트럭으로 돌아가게 한다",
+					"path": "stat",
+					"flag": {
+						"label": "사장 위협",
+						"key": "sajang_intimidated",
+						"boss_text": "야식트럭 사장이 당신의 위협 때문에 컨테이너 주변을 어슬렁거리지 않는다."
+					},
+					"mbti": "TJ",
+					"reward": [
+						"defense_up"
+					],
+					"effects": {
+						"echo": -10,
+						"fighting": -30
+					}
+				}
+			],
+			"key": "yashik_sajang_confront",
+			"no": 1,
+			"rule_link": "상황을 끝까지 지켜보지 않고, 겉모습만 보고 판단하면 오해가 생기고 일을 그르칠 수 있다.",
+			"wants": "주인공들이 자기 장사 앞에서 얼쩡거리는 걸 그만두고 가거나, 최소한 방해하지 않기를 바란다.",
+			"dialogue": [
+				{
+					"speaker": "narrator",
+					"text": "야식 트럭 사장이 당신의 차를 힐끗 보더니, 손에 든 더러운 행주로 땀을 닦으며 다가온다."
+				},
+				{
+					"speaker": "yashik_sajang",
+					"text": "아이고, 참나... 당신들이 그 소문 자자한, 뭐든 주먹부터 들이미는 해결사 양반들 아니시오?"
+				},
+				{
+					"speaker": "yashik_sajang",
+					"text": "왜 남의 장사 앞에서 이렇게 얼쩡거리고 그래?"
+				},
+				{
+					"speaker": "dax",
+					"text": "사장님, 저희는 그냥 잠깐 쉬어가는 중이에요!"
+				},
+				{
+					"speaker": "yashik_sajang",
+					"text": "쉬긴 뭘 쉬어, 쯧쯧. 손님 다 떨어지게."
+				}
+			],
+			"title": "차 주변을 맴도는 야식트럭",
+			"slot": "C",
+			"kind": "rep",
+			"rep_dir": "fighting-"
+		},
+		{
+			"person": {
+				"id": "yashik_sajang",
+				"name": "야식트럭 사장",
+				"role": "야식트럭 사장"
+			},
+			"choices": [
+				{
+					"text": "무거운 짐을 옮기는 것을 빠르게 도와주고 자리를 정리한다",
+					"mbti": "FP",
+					"path": "easy",
+					"flag": {
+						"boss_text": "야식트럭 사장이 당신에게 고마워하며 컨테이너 주변에 신경 쓰지 않는다.",
+						"label": "사장에게 호의",
+						"key": "sajang_grateful"
+					},
+					"risk_bad": {
+						"reward": [
+							"hp_down"
+						],
+						"gold": -30,
+						"result": [
+							{
+								"speaker": "narrator",
+								"text": "짐을 옮기던 당신이 발을 헛디뎌 삐끗하는 바람에 짐이 바닥에 떨어지며 ‘쨍그랑!’ 소리가 난다."
+							},
+							{
+								"text": "아이고, 사장님! 뚝배기 깨진 것보다 국물 샌 게 더 아깝다고 소리치시네요!",
+								"speaker": "dax"
+							}
+						]
+					},
+					"result": [
+						{
+							"text": "당신이 번쩍 들어 올리자 사장은 “오, 힘 좋네!” 하며 감탄하고, 짐은 금세 트럭 안으로 들어간다.",
+							"speaker": "narrator"
+						},
+						{
+							"text": "사장님이 고맙다고 콜라 한 캔을 주셨어요!",
+							"speaker": "dax"
+						}
+					],
+					"effects": {
+						"community": 20,
+						"gold": 50,
+						"echo": 10
+					}
+				},
+				{
+					"reward": [
+						"move_range_up"
+					],
+					"risk_bad": {
+						"gold": -20,
+						"reward": [],
+						"result": [
+							{
+								"text": "당신의 단호한 거절에 사장은 울컥하더니 “흥!",
+								"speaker": "narrator"
+							},
+							{
+								"text": "그럼 내가 알아서 하지!” 하고는 갑자기 트럭에 실린 짐을 바닥에 내팽개친다.",
+								"speaker": "narrator"
+							},
+							{
+								"text": "아이고, 사장님! 저러다 컨테이너 소장님한테 들키겠어요!",
+								"speaker": "dax"
+							}
+						]
+					},
+					"text": "“우리는 바빠서 남의 짐 나를 시간이 없다”며 단호하게 거절한다",
+					"effects": {
+						"fighting": -10,
+						"echo": -10,
+						"community": -20
+					},
+					"result": [
+						{
+							"speaker": "narrator",
+							"text": "당신의 단호한 거절에 사장은 입술을 삐죽이더니, “치사해서 원."
+						},
+						{
+							"speaker": "narrator",
+							"text": "내가 어떻게든 하지 뭐!” 하며 혼자 끙끙댄다."
+						},
+						{
+							"text": "사장님, 저렇게 혼자 끙끙대다가 허리라도 삐끗하면 어쩌죠?",
+							"speaker": "dax"
+						}
+					],
+					"mbti": "ST",
+					"path": "hard",
+					"flag": {
+						"key": "sajang_ignored",
+						"boss_text": "야식트럭 사장이 당신에게 관심을 끄고 자기 일에만 집중한다.",
+						"label": "사장 무시"
+					}
+				},
+				{
+					"text": "“도움이 필요하면 부르고, 필요 없으면 방해하지 마쇼.” 사장에게 딱 잘라 말한다",
+					"reward": [
+						"stun"
+					],
+					"mbti": "TJ",
+					"path": "stat",
+					"flag": {
+						"boss_text": "야식트럭 사장이 당신에게 협조적으로 행동하여 주변 시야를 방해하지 않는다.",
+						"key": "sajang_cooperated",
+						"label": "사장 협조"
+					},
+					"result": [
+						{
+							"text": "당신의 말에 사장은 “아이고, 미안하오!",
+							"speaker": "narrator"
+						},
+						{
+							"text": "금방 정리하고 갈 테니 좀만 기다려 주시오!” 하며 서둘러 짐을 정리한다.",
+							"speaker": "narrator"
+						},
+						{
+							"text": "사장님이 저희 말을 잘 들어주네요!",
+							"speaker": "dax"
+						}
+					],
+					"effects": {
+						"community": 30,
+						"fighting": 10,
+						"echo": 15
+					}
+				},
+				{
+					"risk_bad": {
+						"result": [
+							{
+								"text": "당신의 과도한 홍보에 손님들은 “뭐야, 저 깡패들은?” 하며 오히려 트럭에서 멀어진다.",
+								"speaker": "narrator"
+							},
+							{
+								"text": "사장은 파리만 날리는 트럭을 보며 한숨 쉰다.",
+								"speaker": "narrator"
+							},
+							{
+								"text": "아이고, 사장님이 저희 때문에 망했다고 아주 울상이에요!",
+								"speaker": "dax"
+							}
+						],
+						"gold": -50,
+						"reward": []
+					},
+					"effects": {
+						"gold": 80,
+						"reason": 20,
+						"echo": 5
+					},
+					"mbti": "EP",
+					"result": [
+						{
+							"speaker": "narrator",
+							"text": "당신의 열정적인 홍보에 몇몇 부두 인부들이 야식 트럭으로 몰려든다. 사장은 어안이 벙벙한 채 돈을 받는다."
+						},
+						{
+							"speaker": "dax",
+							"text": "사장님, 오늘 대박 나겠는데요? 저희 덕분에!"
+						}
+					],
+					"path": "fun",
+					"text": "트럭 주변을 돌며 “여기가 맛집이다!” 외치며 손님을 모아준다"
+				}
+			],
+			"rule_link": "겉모습으로 판단하지 않고 끝까지 지켜보는 것이, 때로는 예상치 못한 진실을 마주하게 하고 도움이 될 수 있다.",
+			"dialogue": [
+				{
+					"text": "야식 트럭 사장이 당신의 차를 힐끗 보더니, 트럭 뒤편에서 끙끙대며 무언가를 옮기려 애쓰고 있다.",
+					"speaker": "narrator"
+				},
+				{
+					"speaker": "yashik_sajang",
+					"text": "아이고, 참나... 당신들이 그 소문 자자한, 남 돕는 일이라면 발 벗고 나선다는 해결사 양반들 아니시오?"
+				},
+				{
+					"speaker": "yashik_sajang",
+					"text": "이것 좀 같이 들어주면 안 되겠소?"
+				},
+				{
+					"text": "사장님, 저희 지금 중요한 일 중인데...",
+					"speaker": "dax"
+				},
+				{
+					"speaker": "yashik_sajang",
+					"text": "쯧쯧, 이것만 좀 도와주면 금방 갈 테니."
+				}
+			],
+			"no": 2,
+			"key": "yashik_sajang_help",
+			"wants": "트럭에 실린 무거운 물건을 옮기는 것을 도와주거나, 트럭의 고장을 해결해 주길 바란다.",
+			"title": "덜컹거리는 야식트럭",
+			"background_tags": [
+				"container_yard",
+				"night",
+				"dim_light",
+				"few_people",
+				"curious"
+			],
+			"slot": "C",
+			"kind": "rep",
+			"rep_dir": "fighting+"
+		}
+	],
+	"errors": [],
+	"prompt_hash": "a1db9b223364c3adea6a5abb35a45373cb4acddf"
+}

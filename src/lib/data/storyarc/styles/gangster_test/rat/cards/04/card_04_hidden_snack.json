@@ -1,0 +1,347 @@
+{
+	"id": "card_04_hidden_snack",
+	"title": {
+		"korean": "손에 쥔 것은 무엇인가"
+	},
+	"intensity": "calm",
+	"after_story": 7,
+	"before_story": 9,
+	"condition": {
+		"leaning": "community-",
+		"among": [
+			"fighting-",
+			"fighting+",
+			"community-",
+			"community+",
+			"reason-",
+			"reason+"
+		],
+		"min": 20
+	},
+	"urgency": 8,
+	"leaning": "community-",
+	"background_tags": [
+		"waiting_room",
+		"night",
+		"dim_light",
+		"empty",
+		"tense"
+	],
+	"background_image": "https://imagedelivery.net/WTEqQNGFb-l-IHS6IGnzUQ/0d982f11-7446-4684-f8a8-412094c08200/public",
+	"dialogue": [
+		{
+			"speaker": "security_youngest",
+			"content": {
+				"korean": "침을 꿀꺽 삼키며 당신이... 그, 자기 몫부터 챙긴다는 해결사 맞으십니까?"
+			}
+		},
+		{
+			"speaker": "security_youngest",
+			"content": {
+				"korean": "제게... 제게 뭘 원하십니까? 고개를 저으며 아닙니다! 저는 제 임무를 다할 뿐입니다."
+			}
+		},
+		{
+			"speaker": "dax",
+			"content": {
+				"korean": "막내 경호원이 숨기는 게 있는 것 같네요. 저러다 쓰러지겠어요."
+			}
+		},
+		{
+			"speaker": "security_youngest",
+			"content": {
+				"korean": "이 문은... 회장님 허락 없이는 누구도 통과할 수 없습니다."
+			}
+		},
+		{
+			"speaker": "narrator",
+			"content": {
+				"korean": "경호팀 막내가 등 뒤에 뭔가를 감추려 애쓰고 있다."
+			}
+		}
+	],
+	"choices": [
+		{
+			"text": {
+				"korean": "막내가 숨긴 것을 알아내고, 길을 터 달라고 으름장을 놓는다."
+			},
+			"path": "easy",
+			"mbti": "ST",
+			"flag": "junior_guard_flustered",
+			"effects": {
+				"gold": 100,
+				"echo": -5
+			},
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "막내가 쥐고 있던 주머니를 떨어뜨리자, 그 안에서 단팥빵이 굴러나온다."
+					}
+				},
+				{
+					"speaker": "security_youngest",
+					"content": {
+						"korean": "이건... 그, 비상식량입니다!"
+					}
+				},
+				{
+					"speaker": "dax",
+					"content": {
+						"korean": "저런 걸 숨기고 있었다니, 귀엽네요."
+					}
+				}
+			],
+			"risk": {
+				"chance": "mid",
+				"bad": {
+					"effects": {
+						"gold": -30
+					},
+					"reward": [],
+					"result": [
+						{
+							"speaker": "narrator",
+							"content": {
+								"korean": "막내가 쥐고 있던 주머니를 떨어뜨리자, 그 안에서 딱딱하게 굳은 빵이 굴러나온다."
+							}
+						},
+						{
+							"speaker": "security_youngest",
+							"content": {
+								"korean": "제가 밤새 먹으려고 아껴둔 건데..."
+							}
+						},
+						{
+							"speaker": "dax",
+							"content": {
+								"korean": "빵이 저렇게 딱딱해지도록 얼마나 숨겨둔 걸까요?"
+							}
+						}
+					]
+				}
+			}
+		},
+		{
+			"text": {
+				"korean": "막내의 개인적인 일에 신경 끄고, 지금 당장 길을 열라고 명령한다."
+			},
+			"path": "hard",
+			"mbti": "TJ",
+			"flag": "junior_guard_intimidated",
+			"effects": {
+				"fighting": 20,
+				"echo": -10
+			},
+			"reward": [
+				"attack_up"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "막내가 움찔하더니 굳은 얼굴로 길을 비켜준다."
+					}
+				},
+				{
+					"speaker": "security_youngest",
+					"content": {
+						"korean": "알겠습니다! 회장님께 보고는..."
+					}
+				},
+				{
+					"speaker": "dax",
+					"content": {
+						"korean": "저러다 누님한테 혼나는 거 아니겠죠?"
+					}
+				}
+			],
+			"risk": {
+				"chance": "high",
+				"bad": {
+					"effects": {
+						"gold": -20
+					},
+					"reward": [],
+					"result": [
+						{
+							"speaker": "narrator",
+							"content": {
+								"korean": "막내가 움찔하더니 굳은 얼굴로 길을 비켜주는가 싶었지만, 발이 꼬여 넘어지고 만다."
+							}
+						},
+						{
+							"speaker": "security_youngest",
+							"content": {
+								"korean": "으악! 제, 제가..."
+							}
+						},
+						{
+							"speaker": "dax",
+							"content": {
+								"korean": "괜히 발이 걸려 넘어진 것 같은데요?"
+							}
+						}
+					]
+				}
+			}
+		},
+		{
+			"text": {
+				"korean": "막내에게 자기 몫을 확실히 챙기는 모습을 보여주며 길을 열라고 요구한다."
+			},
+			"path": "stat",
+			"mbti": "ES",
+			"require": {
+				"stat": "community",
+				"op": "<=",
+				"value": -40
+			},
+			"flag": "junior_guard_scared",
+			"effects": {
+				"reason": -10,
+				"community": -10,
+				"fighting": 10,
+				"echo": -5
+			},
+			"reward": [
+				"move_range_up"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "당신의 단호한 태도에 막내가 움찔하며 급히 길을 비켜준다."
+					}
+				},
+				{
+					"speaker": "security_youngest",
+					"content": {
+						"korean": "제가 잘못했습니다! 부디 이번 일은..."
+					}
+				},
+				{
+					"speaker": "dax",
+					"content": {
+						"korean": "막내가 뭘 잘못한 건지 모르겠네요."
+					}
+				}
+			]
+		},
+		{
+			"text": {
+				"korean": "막내의 등 뒤로 가서 그가 숨긴 것을 같이 감추는 시늉을 하며 지나간다."
+			},
+			"path": "fun",
+			"mbti": "NP",
+			"effects": {
+				"echo": 10,
+				"reason": 20
+			},
+			"reward": [
+				"heal"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "당신이 막내의 뒤에 바싹 붙어 그의 등 뒤를 가려주자, 막내가 화들짝 놀라며 주춤거린다."
+					}
+				},
+				{
+					"speaker": "security_youngest",
+					"content": {
+						"korean": "저, 저와 뭘 하시는 겁니까?"
+					}
+				},
+				{
+					"speaker": "dax",
+					"content": {
+						"korean": "저러다 둘이 붙어버리겠어요!"
+					}
+				}
+			],
+			"risk": {
+				"chance": "low",
+				"bad": {
+					"reward": [
+						"hp_down"
+					],
+					"result": [
+						{
+							"speaker": "narrator",
+							"content": {
+								"korean": "당신이 막내의 뒤에 바싹 붙어 등 뒤를 가려주자, 막내가 화들짝 놀라며 당신의 발을 밟는다."
+							}
+						},
+						{
+							"speaker": "security_youngest",
+							"content": {
+								"korean": "죄, 죄송합니다!"
+							}
+						},
+						{
+							"speaker": "dax",
+							"content": {
+								"korean": "발이 아파 보이네요."
+							}
+						}
+					]
+				}
+			}
+		}
+	],
+	"tags": [
+		"security_youngest",
+		"dax"
+	],
+	"_design": {
+		"slot": "D",
+		"kind": "rep",
+		"person": {
+			"id": "security_youngest",
+			"name": "경호팀 막내",
+			"role": "security_guard"
+		},
+		"wants": "막내가 숨긴 것을 모른 척 넘어가 주거나, 숨기는 일을 도와주길 바란다.",
+		"rule_link": "남의 은밀한 사정을 캐내어 이용하는 것이 옳은가, 모른 척 넘어가 주는 것이 옳은가?",
+		"rep": "community-",
+		"events": {},
+		"flags": {
+			"junior_guard_flustered": {
+				"kind": "bad",
+				"boss_penalty": -1,
+				"label": {
+					"korean": "막내 당황"
+				},
+				"boss_line": {
+					"korean": "금고실 앞 복도에 막내 경호원이 당황해서 우왕좌왕하고 있다."
+				}
+			},
+			"junior_guard_intimidated": {
+				"kind": "good",
+				"boss_penalty": 1,
+				"label": {
+					"korean": "막내 위축"
+				},
+				"boss_choice": {
+					"korean": "금고실 앞 복도에서 막내 경호원이 잔뜩 위축되어 당신을 보자마자 길을 비켜준다."
+				}
+			},
+			"junior_guard_scared": {
+				"kind": "good",
+				"boss_penalty": 2,
+				"label": {
+					"korean": "막내 겁먹음"
+				},
+				"boss_choice": {
+					"korean": "금고실 앞 복도에서 막내 경호원이 당신에게 겁먹고 도망친다."
+				}
+			}
+		}
+	}
+}

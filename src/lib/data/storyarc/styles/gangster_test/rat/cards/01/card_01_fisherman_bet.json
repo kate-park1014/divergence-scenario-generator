@@ -1,0 +1,233 @@
+{
+	"id": "card_01_fisherman_bet",
+	"title": {
+		"korean": "밤낚시꾼의 제안"
+	},
+	"intensity": "calm",
+	"after_story": 3,
+	"before_story": 5,
+	"background_tags": [
+		"night",
+		"pier",
+		"roadside",
+		"fisherman",
+		"quiet"
+	],
+	"background_image": "https://imagedelivery.net/WTEqQNGFb-l-IHS6IGnzUQ/40b1284a-d4ee-41bb-e5d5-fe0cb4094d00/public",
+	"dialogue": [
+		{
+			"speaker": "narrator",
+			"content": {
+				"korean": "닥스의 차가 부두 도로를 달리던 중, 길가에 낚싯대를 드리운 그림자가 보였다."
+			}
+		},
+		{
+			"speaker": "dax",
+			"content": {
+				"korean": "저기, 저 아저씨는 매일 밤 저기서 낚시를 하시네요."
+			}
+		},
+		{
+			"speaker": "fisherman",
+			"content": {
+				"korean": "어이! 심심한데 나랑 내기 한판 할까? 금고에서 훔쳐온 돈 불려줄게!"
+			}
+		},
+		{
+			"speaker": "narrator",
+			"content": {
+				"korean": "밤낚시꾼은 손짓으로 당신의 차를 멈추게 하고, 수상한 미소를 지으며 말을 건넨다."
+			}
+		}
+	],
+	"choices": [
+		{
+			"text": {
+				"korean": "낚시꾼의 자신감에 이끌려 내기 제안을 받아들인다"
+			},
+			"path": "easy",
+			"mbti": "NF",
+			"effects": {
+				"gold": 70
+			},
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "당신이 내기를 받아들이자 낚시꾼은 신이 나서 주머니에서 주사위 세 개를 꺼냈다."
+					}
+				},
+				{
+					"speaker": "fisherman",
+					"content": {
+						"korean": "자, 간다! 앗싸, 내가 이겼네! 여기 상금!"
+					}
+				},
+				{
+					"speaker": "dax",
+					"content": {
+						"korean": "와, 운이 좋으셨네요!"
+					}
+				}
+			],
+			"risk": {
+				"chance": "mid",
+				"bad": {
+					"effects": {
+						"gold": -50
+					},
+					"reward": [],
+					"result": [
+						{
+							"speaker": "narrator",
+							"content": {
+								"korean": "당신이 내기를 받아들이자 낚시꾼은 눈을 번뜩이며 주사위를 던졌다."
+							}
+						},
+						{
+							"speaker": "fisherman",
+							"content": {
+								"korean": "어라, 이건 내가 졌네! 다음 기회에!"
+							}
+						},
+						{
+							"speaker": "dax",
+							"content": {
+								"korean": "에이, 아쉽네요..."
+							}
+						}
+					]
+				}
+			}
+		},
+		{
+			"text": {
+				"korean": "수상한 내기에 응하지 않고 차분히 거절한다"
+			},
+			"path": "hard",
+			"mbti": "ST",
+			"effects": {
+				"fighting": 10,
+				"echo": 5
+			},
+			"reward": [
+				"defense_up"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "당신이 내기를 거절하자 낚시꾼은 실망한 표정으로 낚싯대를 다시 잡았다."
+					}
+				},
+				{
+					"speaker": "fisherman",
+					"content": {
+						"korean": "쳇, 재미없게... 그럼 갈 길 가시게!"
+					}
+				},
+				{
+					"speaker": "dax",
+					"content": {
+						"korean": "휴, 저 아저씨 은근히 고집 센데 다행히 잘 넘어가셨네요."
+					}
+				}
+			],
+			"risk": {
+				"chance": "high",
+				"bad": {
+					"effects": {
+						"gold": -20
+					},
+					"reward": [],
+					"result": [
+						{
+							"speaker": "narrator",
+							"content": {
+								"korean": "당신이 내기를 거절하자 낚시꾼은 갑자기 낚싯대를 흔들며 불평했다."
+							}
+						},
+						{
+							"speaker": "fisherman",
+							"content": {
+								"korean": "뭐야! 내 말 무시하는 거야? 이 시간에 심심해 죽겠는데!"
+							}
+						},
+						{
+							"speaker": "dax",
+							"content": {
+								"korean": "어르신, 저희 그냥 지나가면 안 될까요?"
+							}
+						}
+					]
+				}
+			}
+		},
+		{
+			"text": {
+				"korean": "낚시꾼에게 미끼값을 쥐여 주며 내기 말고 그냥 보내 달라고 한다."
+			},
+			"path": "gold",
+			"mbti": "ES",
+			"require": {
+				"stat": "gold",
+				"op": ">=",
+				"value": 70
+			},
+			"effects": {
+				"gold": -70
+			},
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "낚시꾼은 지폐를 받자마자 주머니에서 반짝이는 동전 하나를 꺼냈다."
+					}
+				},
+				{
+					"speaker": "fisherman",
+					"content": {
+						"korean": "미끼값을 받았으니 공짜로 한 판 붙여 주지! 이건 거절하면 섭섭하네!"
+					}
+				}
+			],
+			"event": "minigame_slot",
+			"event_intro": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "낚시꾼은 '이건 특별 서비스라네!'라며 허름한 슬롯머신을 낚시 가방에서 꺼냈다."
+					}
+				},
+				{
+					"speaker": "fisherman",
+					"content": {
+						"korean": "자, 이 빛나는 동전으로 한 번 돌려보시게! 운 좋으면 한몫 잡을 거야!"
+					}
+				}
+			]
+		}
+	],
+	"tags": [
+		"fisherman",
+		"dax"
+	],
+	"_design": {
+		"slot": "B",
+		"kind": "normal",
+		"person": {
+			"id": "fisherman",
+			"name": "밤낚시꾼",
+			"role": "부두에서 밤낚시를 하는 의문의 남자"
+		},
+		"wants": "밤늦게까지 부두에서 낚시를 하며, 심심했는지 낯선 사람에게 내기를 걸고 싶어 한다.",
+		"rule_link": "부두 한쪽에서 수상하게 밤낚시를 하는 남자가 내기를 제안할 때, 그의 말을 그대로 믿고 내기를 할지, 아니면 거절할지 선택한다.",
+		"events": {
+			"gold": "낚시꾼이 고마워하며 특별히 한 번 더 기회를 준다."
+		},
+		"flags": {}
+	}
+}

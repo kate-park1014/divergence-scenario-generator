@@ -1,0 +1,286 @@
+{
+	"id": "card_03_security_team_leader_selfish",
+	"title": {
+		"korean": "규정 뒤에 숨겨진 거래"
+	},
+	"intensity": "calm",
+	"after_story": 3,
+	"before_story": 5,
+	"condition": {
+		"leaning": "community-",
+		"among": [
+			"fighting-",
+			"fighting+",
+			"community-",
+			"community+",
+			"reason-",
+			"reason+"
+		],
+		"min": 20
+	},
+	"urgency": 8,
+	"leaning": "community-",
+	"background_tags": [
+		"corridor",
+		"night",
+		"dimlight",
+		"empty",
+		"tense"
+	],
+	"background_image": "https://imagedelivery.net/WTEqQNGFb-l-IHS6IGnzUQ/0432427d-875c-452f-b437-530f8a2f1100/public",
+	"dialogue": [
+		{
+			"speaker": "security_team_leader",
+			"content": {
+				"korean": "당신이 그… 자기 몫만 정확히 챙긴다는 해결사 양반들이오?"
+			}
+		},
+		{
+			"speaker": "security_team_leader",
+			"content": {
+				"korean": "소문대로라면 내 부탁을 들어줄 것 같아서 말이지."
+			}
+		},
+		{
+			"speaker": "dax",
+			"content": {
+				"korean": "저 사람 또 무슨 꿍꿍이죠? 아까는 규정만 외치더니 갑자기…."
+			}
+		},
+		{
+			"speaker": "security_team_leader",
+			"content": {
+				"korean": "흐음, 저 안에서 무슨 일이 있든 내가 모른 척해 줄 테니, 내 주머니에 이것 좀 채워주시오."
+			}
+		},
+		{
+			"speaker": "security_team_leader",
+			"content": {
+				"korean": "쿨러 소리에 묻혀서 아무도 모를 거요."
+			}
+		},
+		{
+			"speaker": "narrator",
+			"content": {
+				"korean": "경비 팀장이 주머니를 톡톡 두드리며 당신에게 은밀한 눈짓을 보낸다."
+			}
+		}
+	],
+	"choices": [
+		{
+			"text": {
+				"korean": "경비 팀장에게 뇌물을 쥐여주고 길을 뚫는다."
+			},
+			"path": "easy",
+			"mbti": "ST",
+			"flag": "bribe_security",
+			"effects": {
+				"echo": -5,
+				"gold": 100
+			},
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "경비 팀장이 당신의 손에 쥐여진 돈을 확인하고 만족스럽게 고개를 끄덕인다."
+					}
+				},
+				{
+					"speaker": "security_team_leader",
+					"content": {
+						"korean": "좋아, 좋아. 덕분에 잠시 눈꺼풀이 무거워지는군. 어서 가시오!"
+					}
+				},
+				{
+					"speaker": "dax",
+					"content": {
+						"korean": "어? 방금 팀장님이 코를 골았어요! 잠든 척하는 건가?"
+					}
+				}
+			],
+			"risk": {
+				"chance": "mid",
+				"bad": {
+					"effects": {
+						"gold": -50
+					},
+					"reward": [],
+					"result": [
+						{
+							"speaker": "narrator",
+							"content": {
+								"korean": "경비 팀장이 돈을 받으려다 실수로 손에서 놓치고, 돈뭉치가 바닥에 떨어진다."
+							}
+						},
+						{
+							"speaker": "security_team_leader",
+							"content": {
+								"korean": "이런, 이런! 규정상 바닥에 떨어진 돈은 주울 수 없지! 안타깝지만 어쩔 수 없군."
+							}
+						},
+						{
+							"speaker": "dax",
+							"content": {
+								"korean": "팀장님, 저 돈을 주우면 안 되는 규정이 어딨어요? 혹시 저 사람, 연기하는 건가?"
+							}
+						}
+					]
+				}
+			}
+		},
+		{
+			"text": {
+				"korean": "뇌물을 거절하고 경비 팀장의 꿍꿍이를 캐묻는다."
+			},
+			"path": "hard",
+			"mbti": "NJ",
+			"flag": "question_security",
+			"effects": {
+				"community": 20,
+				"echo": 10
+			},
+			"reward": [
+				"defense_up"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "당신이 뇌물을 거절하자 경비 팀장의 얼굴에 당황한 기색이 스친다."
+					}
+				},
+				{
+					"speaker": "security_team_leader",
+					"content": {
+						"korean": "내가… 내가 뭘 숨긴다는 거요? 규정은 규정일 뿐인데…!"
+					}
+				},
+				{
+					"speaker": "dax",
+					"content": {
+						"korean": "팀장님 손에서 땀이 나고 있어요! 뭔가를 숨기는 게 틀림없어요!"
+					}
+				}
+			],
+			"risk": {
+				"chance": "high",
+				"bad": {
+					"effects": {
+						"gold": -20
+					},
+					"reward": [],
+					"result": [
+						{
+							"speaker": "narrator",
+							"content": {
+								"korean": "당신의 추궁에 경비 팀장이 갑자기 큰 소리로 기침을 하기 시작한다."
+							}
+						},
+						{
+							"speaker": "security_team_leader",
+							"content": {
+								"korean": "콜록콜록! 미세먼지 규정상 마스크를 써야 하는데… 콜록!"
+							}
+						},
+						{
+							"speaker": "dax",
+							"content": {
+								"korean": "팀장님, 복도는 실내인데 미세먼지가 어딨어요? 너무 티 나잖아요!"
+							}
+						}
+					]
+				}
+			}
+		},
+		{
+			"text": {
+				"korean": "경비 팀장의 뇌물 제안을 역으로 이용해 더 큰 이득을 요구한다."
+			},
+			"path": "stat",
+			"mbti": "TP",
+			"require": {
+				"stat": "community",
+				"op": "<=",
+				"value": -40
+			},
+			"flag": "extort_security",
+			"effects": {
+				"fighting": 20,
+				"gold": 150,
+				"community": -10
+			},
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "당신의 당당한 태도에 경비 팀장이 움찔하며, 주머니에서 추가 지폐를 꺼낸다."
+					}
+				},
+				{
+					"speaker": "security_team_leader",
+					"content": {
+						"korean": "크흠… 당신이라면 그럴 줄 알았지. 자, 이 정도면 충분하겠지?"
+					}
+				},
+				{
+					"speaker": "dax",
+					"content": {
+						"korean": "와, 팀장님이 순식간에 약해졌어요! 당신은 역시…!"
+					}
+				}
+			]
+		}
+	],
+	"tags": [
+		"security_team_leader",
+		"dax"
+	],
+	"_design": {
+		"slot": "B",
+		"kind": "rep",
+		"person": {
+			"id": "security_team_leader",
+			"name": "경비 팀장",
+			"role": "서버실 경비 팀장"
+		},
+		"wants": "경비 팀장이 서버실 복도 출입을 막아서며, 당신의 이기적인 평판을 이용해 개인적인 거래를 제안하려 한다.",
+		"rule_link": "눈앞의 '출입 금지' 규정 너머에 숨겨진 인물의 속셈을 파악하고 행동할지, 아니면 규정대로 보이는 상황을 그대로 받아들일지 결정한다.",
+		"rep": "community-",
+		"events": {},
+		"flags": {
+			"bribe_security": {
+				"kind": "bad",
+				"boss_penalty": -1,
+				"label": {
+					"korean": "경비 팀장 뇌물"
+				},
+				"boss_line": {
+					"korean": "경비 팀장이 당신의 행동을 눈감아주지만, 백상어파 간부에게 당신의 약점이 잡혔다."
+				}
+			},
+			"question_security": {
+				"kind": "good",
+				"boss_penalty": 1,
+				"label": {
+					"korean": "경비 팀장 추궁"
+				},
+				"boss_choice": {
+					"korean": "경비 팀장이 당신의 추궁에 주춤하며, 서버실 문이 열리는 시간을 조금 벌어준다."
+				}
+			},
+			"extort_security": {
+				"kind": "good",
+				"boss_penalty": 2,
+				"label": {
+					"korean": "경비 팀장 협박"
+				},
+				"boss_choice": {
+					"korean": "경비 팀장이 당신의 요구를 들어주며, 서버실 문이 열리는 데 필요한 시간을 벌어준다."
+				}
+			}
+		}
+	}
+}

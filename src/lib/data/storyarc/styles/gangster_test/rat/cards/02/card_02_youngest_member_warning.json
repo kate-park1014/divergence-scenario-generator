@@ -1,0 +1,159 @@
+{
+	"id": "card_02_youngest_member_warning",
+	"title": {
+		"korean": "컨테이너 문을 두드리는 그림자"
+	},
+	"intensity": "high",
+	"after_story": 7,
+	"before_story": 9,
+	"callback": {
+		"seed": "youngest_gang_member_stakeout_easy",
+		"min_rooms_after": 2
+	},
+	"background_tags": [
+		"yard",
+		"night",
+		"dark",
+		"empty",
+		"tension"
+	],
+	"background_image": "https://imagedelivery.net/WTEqQNGFb-l-IHS6IGnzUQ/86aabb84-8eaa-4513-c596-37f787a31800/public",
+	"dialogue": [
+		{
+			"speaker": "narrator",
+			"content": {
+				"korean": "파란 컨테이너 문틈으로 막내의 뒷모습이 보였다."
+			}
+		},
+		{
+			"speaker": "dax",
+			"content": {
+				"korean": "저 녀석이 왜 또 저기 있는 거죠? 아까는 도망가는 것 같았는데..."
+			}
+		},
+		{
+			"speaker": "youngest_member",
+			"content": {
+				"korean": "창고 간부님! 누가 간부님을 몰래 감시하는 것 같습니다!"
+			}
+		},
+		{
+			"speaker": "narrator",
+			"content": {
+				"korean": "막내의 목소리가 컨테이너 안으로 울려 퍼지고, 이내 쇠문이 덜컥 잠겼다."
+			}
+		}
+	],
+	"choices": [
+		{
+			"text": {
+				"korean": "막내의 경고를 모르는 척 내버려 둔다."
+			},
+			"path": "easy",
+			"mbti": "TJ",
+			"flag": "container_locked",
+			"effects": {
+				"fighting": -10,
+				"echo": -10
+			},
+			"reward": [
+				"attack_up"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "막내의 경고를 들은 간부가 컨테이너 문을 단단히 걸어 잠갔다."
+					}
+				},
+				{
+					"speaker": "dax",
+					"content": {
+						"korean": "어휴, 저 녀석 때문에 괜히 일이 복잡해졌네요."
+					}
+				}
+			]
+		},
+		{
+			"text": {
+				"korean": "막내에게 다가가, 간부에게 무슨 말을 했는지 조용히 묻는다."
+			},
+			"path": "hard",
+			"mbti": "NF",
+			"flag": "container_not_fully_locked",
+			"effects": {
+				"echo": 10,
+				"community": 10
+			},
+			"reward": [
+				"defense_up"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "당신이 조용히 묻자, 막내는 잔뜩 겁먹은 표정으로 입을 꾹 다물었다."
+					}
+				},
+				{
+					"speaker": "youngest_member",
+					"content": {
+						"korean": "그, 그냥... 인사만 했습니다!"
+					}
+				},
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "컨테이너 안에서는 여전히 콧노래 소리가 들려왔지만, 문이 잠기는 소리는 들리지 않았다."
+					}
+				},
+				{
+					"speaker": "dax",
+					"content": {
+						"korean": "하아, 저 녀석은 겁만 잔뜩 먹고 얼어붙었네요. 문은 안 잠겼으니 됐어요."
+					}
+				}
+			]
+		}
+	],
+	"tags": [
+		"youngest_member",
+		"dax"
+	],
+	"_design": {
+		"slot": "D",
+		"kind": "callback",
+		"person": {
+			"name": "백상어파 막내",
+			"id": "youngest_member",
+			"role": "조직원"
+		},
+		"wants": "자신을 쫓아낸 히어로들에게 앙갚음하고 싶음",
+		"rule_link": "막내를 쫓아냈다고 안심했지만, 그가 어디로 갔는지 끝까지 지켜보지 않아 벌어진 일입니다.",
+		"events": {},
+		"flags": {
+			"container_locked": {
+				"kind": "bad",
+				"boss_penalty": -1,
+				"label": {
+					"korean": "컨테이너 잠금"
+				},
+				"boss_line": {
+					"korean": "컨테이너 문이 안에서 단단히 잠겨 있습니다. 억지로 열려면 시간이 필요합니다."
+				}
+			},
+			"container_not_fully_locked": {
+				"kind": "good",
+				"boss_penalty": 1,
+				"label": {
+					"korean": "문 잠금 실패"
+				},
+				"boss_choice": {
+					"korean": "창고 간부가 막내의 보고에 혼란스러워 문을 완전히 잠그지 못했습니다."
+				}
+			}
+		}
+	}
+}

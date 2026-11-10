@@ -1,0 +1,462 @@
+{
+	"cards": [
+		{
+			"title": "탕비실의 개인 서류",
+			"person": {
+				"id": "secretary_young",
+				"name": "비서 아가씨",
+				"role": "비서실 직원"
+			},
+			"no": 1,
+			"key": "breakroom_personal_files",
+			"background_tags": [
+				"office",
+				"daytime",
+				"fluorescent",
+				"empty",
+				"tension"
+			],
+			"choices": [
+				{
+					"mbti": "ST",
+					"risk_bad": {
+						"gold": -30,
+						"reward": [
+							"intelligence_down"
+						],
+						"result": [
+							{
+								"speaker": "narrator",
+								"text": "당신은 서류 뭉치를 받아 품속에 감추려는데, 서류 틈에서 삐져나온 작은 사진이 바닥에 떨어진다."
+							},
+							{
+								"text": "비서 아가씨가 새파랗게 질린 얼굴로 바닥에 떨어진 사진을 허둥지둥 주워든다.",
+								"speaker": "secretary_young"
+							},
+							{
+								"text": "\"안 돼! 이건… 보면 안 됩니다!\"",
+								"speaker": "secretary_young"
+							},
+							{
+								"text": "어? 저 사진은… 경호실장 누님 어린 시절 사진 아니에요?",
+								"speaker": "dax"
+							}
+						]
+					},
+					"flag": {
+						"boss_text": "경호실장 누님의 개인 서류가 당신의 품에서 발견된다.",
+						"label": "개인 서류 은닉",
+						"key": "hidden_personal_file_disadvantage"
+					},
+					"text": "비서 아가씨의 개인 서류를 대신 숨겨주고 보상을 요구한다.",
+					"path": "easy",
+					"effects": {
+						"gold": 100,
+						"community": -20
+					},
+					"reward": [],
+					"result": [
+						{
+							"text": "당신은 서류 뭉치를 받아 품속에 감추고 비서 아가씨에게 손을 내민다.",
+							"speaker": "narrator"
+						},
+						{
+							"text": "비서 아가씨가 품에서 꼬깃한 돈 봉투를 꺼내 당신 손에 쥐여준다.",
+							"speaker": "secretary_young"
+						},
+						{
+							"text": "\"부디… 절 도와주셨다는 말은 아무에게도 하지 말아주세요.\"",
+							"speaker": "secretary_young"
+						},
+						{
+							"text": "어휴, 굳이 돈까지 받아야 했어요?",
+							"speaker": "dax"
+						}
+					]
+				},
+				{
+					"flag": {
+						"label": "비밀 폭로 위협",
+						"boss_text": "비서 아가씨가 경호실장 누님의 비밀 서류를 밝히는 데 협조한다.",
+						"key": "secret_disclosure_advantage"
+					},
+					"mbti": "TP",
+					"risk_bad": {
+						"reward": [],
+						"result": [
+							{
+								"text": "당신은 비서 아가씨의 팔을 붙잡고 서류를 빼앗으려는데, 그녀가 비명을 지르며 서류를 바닥에 흩뿌린다.",
+								"speaker": "narrator"
+							},
+							{
+								"text": "안 됩니다! 이건… 절대로!",
+								"speaker": "secretary_young"
+							},
+							{
+								"speaker": "dax",
+								"text": "앗, 서류가 다 엉망이 됐어요! 누가 보면 어쩌려고!"
+							}
+						],
+						"gold": -20
+					},
+					"effects": {
+						"fighting": 15,
+						"echo": -10
+					},
+					"reward": [
+						"defense_up"
+					],
+					"path": "hard",
+					"result": [
+						{
+							"text": "당신은 비서 아가씨의 팔을 붙잡고 서류가 무엇인지 묻는다. 그녀는 입술을 꽉 깨문다.",
+							"speaker": "narrator"
+						},
+						{
+							"speaker": "secretary_young",
+							"text": "이건… 그저 제 사생활입니다. 조직과는 아무 관련이 없어요!"
+						},
+						{
+							"text": "누님은 또 왜 이렇게 꽁꽁 숨기려고 하지?",
+							"speaker": "dax"
+						}
+					],
+					"text": "서류가 무엇인지 추궁하며, 필요하다면 간부들에게 알리겠다고 경고한다."
+				},
+				{
+					"flag": {
+						"label": "개인적 책임 요구",
+						"boss_text": "비서 아가씨가 경호실장 누님에게 자신의 개인적인 사정을 스스로 밝히도록 종용한다.",
+						"key": "personal_responsibility_advantage"
+					},
+					"mbti": "SJ",
+					"effects": {
+						"community": -25,
+						"gold": 50,
+						"echo": -5
+					},
+					"reward": [],
+					"result": [
+						{
+							"text": "당신은 “개인적인 일은 각자 알아서 할 일”이라며 서류를 돌려주고,",
+							"speaker": "narrator"
+						},
+						{
+							"speaker": "narrator",
+							"text": "비서 아가씨에게 당신에게 불똥이 튀지 않게 하라고 말한다."
+						},
+						{
+							"speaker": "secretary_young",
+							"text": "네… 네! 알겠습니다!"
+						},
+						{
+							"text": "그래도 너무 매정하게 구는 거 아니에요?",
+							"speaker": "dax"
+						}
+					],
+					"path": "stat",
+					"text": "“개인적인 일은 각자 알아서”라며, 비서 아가씨가 당신에게 불이익이 없도록 서류를 처리하게 한다."
+				},
+				{
+					"effects": {
+						"reason": 20,
+						"echo": 10
+					},
+					"result": [
+						{
+							"speaker": "narrator",
+							"text": "당신은 비서 아가씨의 서류 뭉치를 낚아채 “회장님 서류 정리!"
+						},
+						{
+							"text": "제가 도와드리죠!” 하며 쓰레기통 옆에 있는 재활용 상자에 넣어버린다.",
+							"speaker": "narrator"
+						},
+						{
+							"speaker": "secretary_young",
+							"text": "꺄아악! 안 돼요! 거긴…!"
+						},
+						{
+							"text": "저기… 저게 과연 회장님 서류와 어울리는 곳일까요?",
+							"speaker": "dax"
+						}
+					],
+					"reward": [
+						"cooldown_reset"
+					],
+					"path": "fun",
+					"text": "서류 뭉치를 뺏어 들고, '회장님께 보고할 서류 정리'를 대신 해준다며 엉뚱한 곳에 놓는다.",
+					"mbti": "EJ",
+					"risk_bad": {
+						"result": [
+							{
+								"text": "당신은 서류 뭉치를 뺏어 들고 ‘회장님 서류 정리’를 대신 해주겠다며",
+								"speaker": "narrator"
+							},
+							{
+								"speaker": "narrator",
+								"text": "허세롭게 재활용 상자에 넣으려다 발을 헛디뎌 서류를 쏟아버린다."
+							},
+							{
+								"speaker": "secretary_young",
+								"text": "비서 아가씨가 울먹이며 바닥에 흩뿌려진 서류들을 쓸어 모은다. \"제 개인적인… 사연이…\""
+							},
+							{
+								"speaker": "dax",
+								"text": "이런! 다 젖어서 글씨도 안 보여요!"
+							}
+						],
+						"reward": [
+							"hp_down"
+						],
+						"gold": -20
+					}
+				}
+			],
+			"rule_link": "말 못 하는 개인적인 사정이 담긴 서류를 숨기는 사람의 부탁을 들어주어, 그 사정을 덮어주는 행동으로 이어진다.",
+			"dialogue": [
+				{
+					"speaker": "narrator",
+					"text": "탕비실 구석, 비서 아가씨가 서류 뭉치를 품에 숨기듯 안고 당신을 노려본다."
+				},
+				{
+					"text": "당신이 그… 자기 몫은 기가 막히게 챙기는 해결사라는 분이죠?",
+					"speaker": "secretary_young"
+				},
+				{
+					"text": "저 서류들, 혹시 경호실장 누님 것 아니에요?",
+					"speaker": "dax"
+				},
+				{
+					"text": "아닙니다! 그저… 제 개인적인 서류일 뿐입니다.",
+					"speaker": "secretary_young"
+				},
+				{
+					"text": "회장님께 보고할 서류를 정리하다가 깜빡하고 같이 가져왔을 뿐인데…",
+					"speaker": "secretary_young"
+				},
+				{
+					"text": "이건 누구에게도 들키면 안 되는 아주 중요한 겁니다. 부탁드립니다.",
+					"speaker": "secretary_young"
+				}
+			],
+			"wants": "개인적인 비밀이 담긴 서류를 안전하게 보관하거나, 자신이 불이익을 받지 않도록 당신의 도움을 받으려 한다.",
+			"slot": "A",
+			"kind": "rep",
+			"rep_dir": "community-"
+		},
+		{
+			"key": "breakroom_community_secret",
+			"choices": [
+				{
+					"risk_bad": {
+						"gold": -30,
+						"reward": [
+							"hp_down"
+						],
+						"result": [
+							{
+								"text": "당신은 비서 아가씨를 안심시키고 서류 뭉치를 받아 안전한 곳에 숨기려다 실수로 서류를 바닥에 떨어뜨린다.",
+								"speaker": "narrator"
+							},
+							{
+								"text": "비서 아가씨가 울먹이며 바닥에 흩뿌려진 서류들을 쓸어 모은다. \"안 돼요! 이건… 조직원들의 신상 정보가…\"",
+								"speaker": "secretary_young"
+							},
+							{
+								"text": "으악! 이름이랑 주소가 다 보이잖아요!",
+								"speaker": "dax"
+							}
+						]
+					},
+					"result": [
+						{
+							"speaker": "narrator",
+							"text": "당신은 비서 아가씨를 안심시키고 서류 뭉치를 받아 안전한 곳에 숨겨준다. 그녀의 얼굴에 화색이 돈다."
+						},
+						{
+							"speaker": "secretary_young",
+							"text": "정말 감사합니다! 덕분에 모두가 안심할 수 있을 거예요."
+						},
+						{
+							"text": "어휴, 저 누님은 속앓이를 얼마나 했을까? 제가 다 속이 시원하네요.",
+							"speaker": "dax"
+						}
+					],
+					"path": "easy",
+					"text": "비서 아가씨를 안심시키고, 직원들의 사적인 서류를 안전하게 숨겨준다.",
+					"reward": [
+						"attack_up"
+					],
+					"effects": {
+						"echo": 10,
+						"community": 20
+					},
+					"flag": {
+						"key": "hidden_community_secrets_disadvantage",
+						"boss_text": "비서 아가씨가 숨긴 공동체의 비밀이 당신 때문에 발각된다.",
+						"label": "공동체 비밀 은닉"
+					},
+					"mbti": "NF"
+				},
+				{
+					"result": [
+						{
+							"speaker": "narrator",
+							"text": "당신은 비서 아가씨에게 서류를 내놓으라며, 조직에 해가 되는 내용은 보고할 것이라 말한다. 그녀는 망설인다."
+						},
+						{
+							"text": "하지만… 이건 모두의 사생활이에요.",
+							"speaker": "secretary_young"
+						},
+						{
+							"speaker": "dax",
+							"text": "너무 딱딱하게 구는 거 아니에요?"
+						}
+					],
+					"effects": {
+						"echo": -5,
+						"reason": 15
+					},
+					"reward": [
+						"defense_up"
+					],
+					"path": "hard",
+					"text": "직원들의 서류를 직접 확인하고, 조직에 해가 될 만한 내용은 회장님께 보고하겠다고 말한다.",
+					"flag": {
+						"key": "community_scrutiny_advantage",
+						"boss_text": "비서 아가씨가 경호실장 누님의 과거 행적 기록을 당신에게 제공한다.",
+						"label": "공동체 감시"
+					},
+					"mbti": "TJ",
+					"risk_bad": {
+						"gold": -20,
+						"reward": [],
+						"result": [
+							{
+								"speaker": "narrator",
+								"text": "당신은 비서 아가씨에게 서류를 내놓으라며 강경하게 말하지만,"
+							},
+							{
+								"text": "그녀는 오히려 당신을 경계하며 서류를 더욱 품에 숨긴다.",
+								"speaker": "narrator"
+							},
+							{
+								"text": "비서 아가씨가 떨리는 목소리로 서류를 더 품에 숨긴다. \"안 됩니다! 절대로…\"",
+								"speaker": "secretary_young"
+							},
+							{
+								"speaker": "dax",
+								"text": "저렇게까지 숨기는 걸 보니 진짜 뭔가 중요한가 본데요."
+							}
+						]
+					}
+				},
+				{
+					"mbti": "NJ",
+					"effects": {
+						"gold": 50,
+						"reason": 10,
+						"community": 25
+					},
+					"flag": {
+						"boss_text": "비서 아가씨가 경호실장 누님의 사정을 공동체에 투명하게 공개하도록 돕는다.",
+						"key": "transparent_community_advantage",
+						"label": "투명한 공동체"
+					},
+					"text": "“공동체를 위한 일”이라며, 비서 아가씨에게 조직원들의 동의를 얻어 서류를 투명하게 공개하게 한다.",
+					"path": "stat",
+					"reward": [],
+					"result": [
+						{
+							"text": "당신은 “공동체를 위한 일”이라며 비서 아가씨에게 직원들의",
+							"speaker": "narrator"
+						},
+						{
+							"speaker": "narrator",
+							"text": "동의를 얻어 서류 내용을 투명하게 공개하라고 지시한다."
+						},
+						{
+							"speaker": "secretary_young",
+							"text": "네… 알겠습니다. 모두를 위해 그렇게 하겠습니다!"
+						},
+						{
+							"speaker": "dax",
+							"text": "와! 역시! 다들 당신 말은 잘 듣는단 말이에요."
+						}
+					]
+				},
+				{
+					"reward": [],
+					"mbti": "ES",
+					"result": [
+						{
+							"speaker": "narrator",
+							"text": "당신은 비서 아가씨에게 두둑한 돈뭉치를 쥐여주며, 이 서류는 자신이 알아서 처리할 테니 걱정 말라고 한다."
+						},
+						{
+							"speaker": "secretary_young",
+							"text": "비서 아가씨가 눈물을 글썽이며 당신을 올려다본다. \"정말… 감사합니다. 제게는 너무 큰돈이에요…\""
+						},
+						{
+							"speaker": "dax",
+							"text": "와! 역시 돈은 최고라니까요!"
+						}
+					],
+					"effects": {
+						"echo": 5,
+						"gold": -100
+					},
+					"path": "gold",
+					"text": "비서 아가씨에게 돈을 쥐여주며, 이 서류는 자신이 책임지고 처리할 테니 걱정 말라고 한다."
+				}
+			],
+			"title": "탕비실의 공동체 비밀",
+			"person": {
+				"id": "secretary_young",
+				"name": "비서 아가씨",
+				"role": "비서실 직원"
+			},
+			"no": 2,
+			"background_tags": [
+				"office",
+				"daytime",
+				"fluorescent",
+				"empty",
+				"anxiety"
+			],
+			"dialogue": [
+				{
+					"speaker": "narrator",
+					"text": "탕비실 구석, 비서 아가씨가 서류 뭉치를 품에 숨기듯 안고 당신을 초조하게 바라본다."
+				},
+				{
+					"speaker": "secretary_young",
+					"text": "당신이 그… 동네 사람 모두를 위해 나서는 해결사라는 분이죠?"
+				},
+				{
+					"speaker": "dax",
+					"text": "저 서류들, 혹시 경호실장 누님 것 아니에요?"
+				},
+				{
+					"speaker": "secretary_young",
+					"text": "아닙니다! 이건… 저희 직원들의 개인적인 고충이 담긴 서류입니다."
+				},
+				{
+					"speaker": "secretary_young",
+					"text": "회장님께 보고할 서류를 정리하다가 실수로 같이 가져왔을 뿐인데…"
+				},
+				{
+					"text": "이대로 알려지면… 모두 곤란해집니다. 제발 도와주세요.",
+					"speaker": "secretary_young"
+				}
+			],
+			"rule_link": "말 못 하는 사람들의 사정이 담긴 서류를 숨기는 사람의 부탁을 들어주어, 공동체의 약점을 덮어주는 행동으로 이어진다.",
+			"wants": "조직원들의 사적인 비밀이 담긴 서류를 보호하거나, 그것이 외부로 알려지지 않도록 당신의 도움을 받으려 한다.",
+			"slot": "A",
+			"kind": "rep",
+			"rep_dir": "community+"
+		}
+	],
+	"errors": [],
+	"prompt_hash": "e9ea8233c210ddaadfd88231cdb6cdd495ae6eee"
+}

@@ -1,0 +1,353 @@
+{
+	"id": "card_02_aggressive_chief_warning",
+	"title": {
+		"korean": "냄새나는 짐은 알아서 치워야지"
+	},
+	"intensity": "calm",
+	"after_story": 3,
+	"before_story": 5,
+	"condition": {
+		"leaning": "fighting+",
+		"among": [
+			"fighting-",
+			"fighting+",
+			"community-",
+			"community+",
+			"reason-",
+			"reason+"
+		],
+		"min": 20
+	},
+	"urgency": 8,
+	"leaning": "fighting+",
+	"background_tags": [
+		"container_yard",
+		"night",
+		"foggy",
+		"quiet",
+		"tense"
+	],
+	"background_image": "https://imagedelivery.net/WTEqQNGFb-l-IHS6IGnzUQ/acdb543d-a0c2-4db1-0984-8d6309f92700/public",
+	"dialogue": [
+		{
+			"speaker": "security_chief",
+			"content": {
+				"korean": "흐읍… 혹시 그 '싸움꾼 해결사' 분들 아니십니까?"
+			}
+		},
+		{
+			"speaker": "security_chief",
+			"content": {
+				"korean": "차 안에서 뭔가 기운이… 어휴, 제가 괜히 또 이런 부탁을 드리는 건지… 죄송합니다만…"
+			}
+		},
+		{
+			"speaker": "security_chief",
+			"content": {
+				"korean": "저기… 야적장 구석에 냄새나는 쓰레기 더미가 있는데, 제가 치우기엔 좀…"
+			}
+		},
+		{
+			"speaker": "security_chief",
+			"content": {
+				"korean": "곤란해서요. 어떻게 좀… 해결해 주실 수 없을지…"
+			}
+		},
+		{
+			"speaker": "dax",
+			"content": {
+				"korean": "경비 반장님, 저번에 저희 보고 무섭다고 하더니, 이제 부탁까지 하네요?"
+			}
+		}
+	],
+	"choices": [
+		{
+			"text": {
+				"korean": "경비 반장의 부탁에 짜증을 내며, 당장 치우지 않으면 직접 치워버리겠다고 으름장을 놓는다."
+			},
+			"path": "easy",
+			"mbti": "TJ",
+			"flag": "chief_feared_you_trash",
+			"effects": {
+				"echo": -10,
+				"fighting": 20
+			},
+			"reward": [
+				"attack_up"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "당신의 으름장에 경비 반장은 얼굴이 새파래졌다."
+					}
+				},
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "그는 당장 사람을 불러 쓰레기 더미를 치우겠다고 맹세하며 자리를 피했다."
+					}
+				},
+				{
+					"speaker": "dax",
+					"content": {
+						"korean": "반장님, 이제 저희만 보면 도망가겠어요!"
+					}
+				}
+			],
+			"risk": {
+				"chance": "mid",
+				"bad": {
+					"effects": {
+						"gold": -40
+					},
+					"reward": [
+						"hp_down"
+					],
+					"result": [
+						{
+							"speaker": "narrator",
+							"content": {
+								"korean": "당신의 으름장에 경비 반장은 너무 놀라 발을 헛디뎠다."
+							}
+						},
+						{
+							"speaker": "narrator",
+							"content": {
+								"korean": "그는 쓰레기 더미를 향해 넘어지면서, 역겨운 냄새가 진동하는 오물을 차 안으로 튀기고 말았다."
+							}
+						},
+						{
+							"speaker": "dax",
+							"content": {
+								"korean": "으악! 냄새! 이 차에서 썩은 내가 나겠어요!"
+							}
+						}
+					]
+				}
+			}
+		},
+		{
+			"text": {
+				"korean": "경비 반장에게 지금은 잠복 중이니, 나중에 직접 해결하겠다고 안심시킨다."
+			},
+			"path": "hard",
+			"mbti": "FP",
+			"flag": "chief_confused_but_helped",
+			"effects": {
+				"community": 15,
+				"echo": 5
+			},
+			"reward": [
+				"heal"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "당신이 침착하게 설명하자 경비 반장은 의아한 표정을 지었다."
+					}
+				},
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "그는 당신의 뜻밖의 침착함에 당황한 듯했지만, 일단 물러났다."
+					}
+				},
+				{
+					"speaker": "dax",
+					"content": {
+						"korean": "반장님이 저희가 이렇게 점잖을 줄은 몰랐나 봐요!"
+					}
+				}
+			],
+			"risk": {
+				"chance": "high",
+				"bad": {
+					"effects": {
+						"gold": -20
+					},
+					"reward": [],
+					"result": [
+						{
+							"speaker": "narrator",
+							"content": {
+								"korean": "당신이 침착하게 설명하려는데, 경비 반장이 당신의 표정을 오해했다."
+							}
+						},
+						{
+							"speaker": "narrator",
+							"content": {
+								"korean": "그는 당신이 싸움을 걸려는 줄 알고 비명을 지르며 도망가 버렸다."
+							}
+						},
+						{
+							"speaker": "dax",
+							"content": {
+								"korean": "어… 설명도 못 했는데 그냥 도망가 버렸네요."
+							}
+						}
+					]
+				}
+			}
+		},
+		{
+			"text": {
+				"korean": "쓰레기 더미를 직접 가리키며, 저건 당신이 처리할 일이 아니니 당장 치우라고 명령한다."
+			},
+			"path": "stat",
+			"mbti": "SP",
+			"require": {
+				"stat": "fighting",
+				"op": ">=",
+				"value": 40
+			},
+			"flag": "chief_obeyed_you",
+			"effects": {
+				"fighting": 25,
+				"reason": -10
+			},
+			"reward": [
+				"attack_up"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "당신의 단호한 명령에 경비 반장은 반항할 엄두도 못 냈다."
+					}
+				},
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "그는 땀을 삐질삐질 흘리며 당장 쓰레기를 치우겠다고 약속했다."
+					}
+				},
+				{
+					"speaker": "dax",
+					"content": {
+						"korean": "역시 저희 리더님! 한마디로 해결하네요!"
+					}
+				}
+			]
+		},
+		{
+			"text": {
+				"korean": "경비 반장의 손수건을 뺏어 쓰레기 더미에 던져주며 직접 치우라고 한다."
+			},
+			"path": "fun",
+			"mbti": "ES",
+			"effects": {
+				"reason": 20,
+				"echo": -5
+			},
+			"reward": [
+				"cooldown_reset"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "당신이 경비 반장의 손수건을 낚아채 쓰레기 더미 한복판에 던져버렸다."
+					}
+				},
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "경비 반장은 경악한 표정으로 자신의 손수건을 바라보더니, 울상을 지으며 쓰레기 더미로 달려갔다."
+					}
+				},
+				{
+					"speaker": "dax",
+					"content": {
+						"korean": "저… 저건 좀 너무한 거 아니에요? 반장님 얼굴이 사색이 됐어요!"
+					}
+				}
+			],
+			"risk": {
+				"chance": "low",
+				"bad": {
+					"effects": {
+						"gold": -30
+					},
+					"reward": [
+						"hp_down"
+					],
+					"result": [
+						{
+							"speaker": "narrator",
+							"content": {
+								"korean": "당신이 경비 반장의 손수건을 뺏으려 하자, 경비 반장이 놀라 손을 휘둘렀다."
+							}
+						},
+						{
+							"speaker": "narrator",
+							"content": {
+								"korean": "손수건이 당신의 뺨을 스치고 날아가 차 안의 물건이 와르르 쏟아졌다."
+							}
+						},
+						{
+							"speaker": "dax",
+							"content": {
+								"korean": "아악! 반장님, 저희 다 들키겠어요!"
+							}
+						}
+					]
+				}
+			}
+		}
+	],
+	"tags": [
+		"security_chief",
+		"dax"
+	],
+	"_design": {
+		"slot": "B",
+		"kind": "rep",
+		"person": {
+			"id": "security_chief",
+			"name": "경비 반장",
+			"role": "야적장 경비 반장"
+		},
+		"wants": "경비 반장이 야적장 구석에 버려진 냄새나는 쓰레기 더미를 치워달라고 부탁한다. 그는 '주먹이 먼저 나가는 해결사'인 주인공이 귀찮은 일을 빨리 처리해 주길 바란다.",
+		"rule_link": "눈앞의 성가신 일을 힘으로 해결하려 들기보다, 상황의 본질을 파악하고 기다리는 것이 더 현명한 대처일 수 있다.",
+		"rep": "fighting+",
+		"events": {},
+		"flags": {
+			"chief_feared_you_trash": {
+				"kind": "bad",
+				"boss_penalty": -1,
+				"label": {
+					"korean": "경비 반장 겁먹음"
+				},
+				"boss_line": {
+					"korean": "경비 반장이 당신을 두려워해 방해꾼들을 막아준다."
+				}
+			},
+			"chief_confused_but_helped": {
+				"kind": "good",
+				"boss_penalty": 1,
+				"label": {
+					"korean": "경비 반장 혼란"
+				},
+				"boss_choice": {
+					"korean": "경비 반장이 당신의 의중을 알 수 없어 오히려 방해꾼들을 헷갈리게 한다."
+				}
+			},
+			"chief_obeyed_you": {
+				"kind": "good",
+				"boss_penalty": 2,
+				"label": {
+					"korean": "경비 반장 복종"
+				},
+				"boss_choice": {
+					"korean": "경비 반장이 당신의 명령에 따라 방해꾼들의 움직임을 막아준다."
+				}
+			}
+		}
+	}
+}

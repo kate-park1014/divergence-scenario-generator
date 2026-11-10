@@ -1,0 +1,246 @@
+{
+	"id": "card_02_night_shift_foreman",
+	"title": {
+		"korean": "폐창고 앞의 불평"
+	},
+	"intensity": "calm",
+	"after_story": 3,
+	"before_story": 5,
+	"background_tags": [
+		"warehouse",
+		"night",
+		"foggy",
+		"noisy",
+		"anxious"
+	],
+	"background_image": "https://imagedelivery.net/WTEqQNGFb-l-IHS6IGnzUQ/885f90e1-d546-46f8-80c8-434587443200/public",
+	"dialogue": [
+		{
+			"speaker": "narrator",
+			"content": {
+				"korean": "폐창고 앞에서 큼지막한 목소리가 들려왔다."
+			}
+		},
+		{
+			"speaker": "dax",
+			"content": {
+				"korean": "저기요, 저 야간 작업반장님 목소리가 너무 큰데요? 우리 들킬 것 같아요!"
+			}
+		},
+		{
+			"speaker": "foreman",
+			"content": {
+				"korean": "아니, 야식이 이렇게 늦으면 일을 어떻게 하란 말이야! 다들 배고파 죽겠구만!"
+			}
+		},
+		{
+			"speaker": "dax",
+			"content": {
+				"korean": "으으, 저러다 컨테이너 쪽까지 들리겠어요!"
+			}
+		}
+	],
+	"choices": [
+		{
+			"text": {
+				"korean": "야식 배달원에게 전화해서 빨리 오라고 재촉한다."
+			},
+			"path": "easy",
+			"mbti": "ET",
+			"effects": {
+				"community": 10,
+				"echo": 5
+			},
+			"reward": [
+				"attack_up"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "당신의 전화를 받은 배달원은 번개같이 나타나 야식을 전달했다."
+					}
+				},
+				{
+					"speaker": "foreman",
+					"content": {
+						"korean": "오오! 야식이다! 고맙소!"
+					}
+				},
+				{
+					"speaker": "dax",
+					"content": {
+						"korean": "휴, 작업반장님이 드디어 조용해졌어요. 이제 좀 살겠네요!"
+					}
+				}
+			],
+			"risk": {
+				"chance": "mid",
+				"bad": {
+					"reward": [
+						"attack_down"
+					],
+					"result": [
+						{
+							"speaker": "narrator",
+							"content": {
+								"korean": "배달원은 전화를 받자마자 '지금 가고 있거든!' 하고 짜증을 내며 오히려 더 늦게 나타났다."
+							}
+						},
+						{
+							"speaker": "dax",
+							"content": {
+								"korean": "저런, 배달원까지 화를 내면 어쩌죠? 일이 더 꼬였네요!"
+							}
+						}
+					]
+				}
+			}
+		},
+		{
+			"text": {
+				"korean": "작업반장에게 조용히 다가가 상황이 급하다고 속삭인다."
+			},
+			"path": "hard",
+			"mbti": "NF",
+			"effects": {
+				"reason": 10,
+				"echo": -5
+			},
+			"reward": [
+				"intelligence_up"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "당신의 말에 작업반장은 눈을 크게 뜨고 주변을 살폈다."
+					}
+				},
+				{
+					"speaker": "foreman",
+					"content": {
+						"korean": "흠, 알겠소. 조용히 하겠소."
+					}
+				},
+				{
+					"speaker": "dax",
+					"content": {
+						"korean": "작업반장님이 의심하는 눈치인데요?"
+					}
+				}
+			],
+			"risk": {
+				"chance": "high",
+				"bad": {
+					"effects": {
+						"gold": -20
+					},
+					"reward": [],
+					"result": [
+						{
+							"speaker": "narrator",
+							"content": {
+								"korean": "당신의 속삭임이 너무 작아 작업반장은 당신이 자기 험담을 하는 줄 알고 노려봤다."
+							}
+						},
+						{
+							"speaker": "dax",
+							"content": {
+								"korean": "이런! 작업반장님이 오히려 더 화를 내시는데요?"
+							}
+						}
+					]
+				}
+			}
+		},
+		{
+			"text": {
+				"korean": "{actor}이(가) 작업반장의 불평을 논리적으로 분석하며 해결책을 제시한다."
+			},
+			"path": "lock",
+			"mbti": "TJ",
+			"require": {
+				"mbti": "TJ"
+			},
+			"effects": {
+				"reason": 20,
+				"echo": 10
+			},
+			"reward": [
+				"defense_up"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "{actor}의 명확한 분석에 작업반장은 고개를 끄덕이며 납득했다."
+					}
+				},
+				{
+					"speaker": "foreman",
+					"content": {
+						"korean": "오, 자네 말이 맞네! 그렇게 하면 되겠구만!"
+					}
+				},
+				{
+					"speaker": "dax",
+					"content": {
+						"korean": "와, {actor}이(가) 말하니 작업반장님이 바로 고개를 끄덕이네요!"
+					}
+				}
+			]
+		},
+		{
+			"text": {
+				"korean": "작업반장에게 야식 값이라며 돈을 쥐여주고 조용히 해달라고 부탁한다."
+			},
+			"path": "gold",
+			"mbti": "SF",
+			"require": {
+				"stat": "gold",
+				"op": ">=",
+				"value": 120
+			},
+			"effects": {
+				"gold": -120,
+				"community": 10
+			},
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "돈을 받은 작업반장은 얼굴에 화색이 돌며 고맙다고 인사했다."
+					}
+				},
+				{
+					"speaker": "dax",
+					"content": {
+						"korean": "돈은 들었지만, 작업반장님 얼굴이 금방 환해지는 걸 보니 효과는 확실하네요!"
+					}
+				}
+			]
+		}
+	],
+	"tags": [
+		"foreman",
+		"dax"
+	],
+	"_design": {
+		"slot": "B",
+		"kind": "normal",
+		"person": {
+			"name": "야간 작업반장",
+			"role": "작업반장",
+			"id": "foreman"
+		},
+		"wants": "늦은 야식 배달에 대한 불평을 털어놓고 싶음",
+		"rule_link": "눈앞의 작은 불평만 듣고 판단하기보다, 그 불평 뒤에 숨겨진 더 큰 그림을 끝까지 지켜봐야 한다.",
+		"events": {},
+		"flags": {}
+	}
+}

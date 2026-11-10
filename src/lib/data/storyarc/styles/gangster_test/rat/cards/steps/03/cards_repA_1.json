@@ -1,0 +1,387 @@
+{
+	"cards": [
+		{
+			"wants": "장부의 빈칸을 채우느라 자료실 문을 지키고 있으며, 규칙에 어긋나는 어떤 출입도 허용할 수 없다고 버틴다.",
+			"title": "장부와 씨름하는 자",
+			"rule_link": "주먹이 앞서는 해결사라는 평판을 가진 당신이, 자신의 규칙에 집착하는 직원을 상대로 눈앞의 방해를 힘으로 밀어붙일 것인지, 아니면 다른 방법을 찾아볼지 선택해야 한다.",
+			"key": "ledger_block",
+			"no": 1,
+			"person": {
+				"id": "night_accountant",
+				"name": "회계팀 야근 직원",
+				"role": "회계팀 야근 직원"
+			},
+			"dialogue": [
+				{
+					"speaker": "narrator",
+					"text": "사무실 지하 자료실 입구에서 한 남자가 낡은 장부를 들고 중얼거린다. 두꺼운 안경을 연신 고쳐 쓴다."
+				},
+				{
+					"speaker": "night_accountant",
+					"text": "아, 어서 오십시오. 흐음… 당신이 그, 말보다 주먹이 먼저 나가는 해결사십니까?"
+				},
+				{
+					"speaker": "night_accountant",
+					"text": "지금은 안 됩니다. 장부가… 장부가 비어 있어서…"
+				},
+				{
+					"text": "저 사람이 길을 막고 있네요! 왜 저러는 거예요?",
+					"speaker": "dax"
+				}
+			],
+			"background_tags": [
+				"office_basement",
+				"night_shift",
+				"dim_light",
+				"no_crowd",
+				"tense_atmosphere"
+			],
+			"choices": [
+				{
+					"flag": {
+						"label": "회계팀 공포",
+						"key": "accountant_frightened_flag",
+						"boss_text": "회계팀 야근 직원이 공포에 질려 서버실 출입문 비밀번호를 제대로 누르지 못하고 허둥댄다."
+					},
+					"text": "장부를 든 직원의 팔을 잡고 길을 비키라고 한다.",
+					"effects": {
+						"fighting": -20,
+						"gold": 50,
+						"echo": -5
+					},
+					"reward": [
+						"attack_up"
+					],
+					"result": [
+						{
+							"text": "직원은 깜짝 놀라 장부를 떨어뜨리고 뒷걸음질 친다. 자료실 문이 활짝 열린다.",
+							"speaker": "narrator"
+						},
+						{
+							"text": "어휴, 저러다 장부도 찢어지겠어요!",
+							"speaker": "dax"
+						}
+					],
+					"risk_bad": {
+						"gold": -30,
+						"result": [
+							{
+								"speaker": "narrator",
+								"text": "직원이 엉겁결에 장부를 휘두르다 당신의 턱을 때린다. 직원은 놀라 비명을 지른다."
+							},
+							{
+								"speaker": "dax",
+								"text": "앗, 괜찮으세요? 직원이 경비실에 전화하려고 해요!"
+							}
+						],
+						"reward": []
+					},
+					"path": "easy",
+					"mbti": "TJ"
+				},
+				{
+					"effects": {
+						"echo": 10,
+						"fighting": 20,
+						"community": 10
+					},
+					"reward": [
+						"intelligence_up"
+					],
+					"path": "hard",
+					"mbti": "NF",
+					"flag": {
+						"label": "회계팀 설득",
+						"key": "accountant_reasoned_flag",
+						"boss_text": "회계팀 야근 직원이 설득되어 서버실 자료 보관함의 잠금장치를 풀어준다."
+					},
+					"text": "침착하게 자료실의 중요성과 긴급성을 설명한다.",
+					"risk_bad": {
+						"gold": -20,
+						"result": [
+							{
+								"speaker": "narrator",
+								"text": "직원은 당신이 장부를 노린다고 오해하며 비명을 지른다. 자료실 문을 닫고 안에서 잠가 버린다."
+							},
+							{
+								"text": "어쩌죠? 문을 잠가 버렸어요!",
+								"speaker": "dax"
+							}
+						],
+						"reward": []
+					},
+					"result": [
+						{
+							"speaker": "narrator",
+							"text": "직원은 당신의 차분한 설명에 잠시 당황하지만, 이내 장부를 끌어안고 횡설수설한다."
+						},
+						{
+							"text": "그러나 결국 당신에게 길을 비켜준다.",
+							"speaker": "narrator"
+						},
+						{
+							"speaker": "dax",
+							"text": "휴, 말로도 통하긴 하네요!"
+						}
+					]
+				},
+				{
+					"effects": {
+						"reason": -10,
+						"gold": 100,
+						"fighting": -30
+					},
+					"result": [
+						{
+							"text": "당신이 책상 위의 서류 더미를 날려 버리자 직원은 새된 비명을 지른다. 그는 울먹이며 자료실 문을 연다.",
+							"speaker": "narrator"
+						},
+						{
+							"speaker": "dax",
+							"text": "와, 정말 저렇게 하면 열어주네요!"
+						}
+					],
+					"mbti": "SP",
+					"path": "stat",
+					"text": "주변 집기를 부수며 자료실 문을 열라고 위협한다.",
+					"reward": [
+						"stun"
+					],
+					"flag": {
+						"boss_text": "회계팀 야근 직원이 경악하여 서버실 데이터 암호키가 숨겨진 곳을 알려준다.",
+						"label": "회계팀 경악",
+						"key": "accountant_terror_flag"
+					}
+				},
+				{
+					"result": [
+						{
+							"text": "직원은 당신이 장부를 고치자마자 억 소리를 내며 달려든다. 그는 자료실 문을 열어둔 채 당신을 쫓아온다.",
+							"speaker": "narrator"
+						},
+						{
+							"text": "저 사람이 장부에 진짜 목숨 걸었나 봐요!",
+							"speaker": "dax"
+						}
+					],
+					"path": "fun",
+					"mbti": "EP",
+					"effects": {
+						"gold": 70,
+						"echo": 5,
+						"reason": 20
+					},
+					"risk_bad": {
+						"result": [
+							{
+								"text": "당신이 장부를 고치자 직원은 망연자실한 표정으로 주저앉는다. 그는 울면서 경비실에 전화를 건다.",
+								"speaker": "narrator"
+							},
+							{
+								"speaker": "dax",
+								"text": "저, 저러다 울겠어요!"
+							}
+						],
+						"gold": -50,
+						"reward": []
+					},
+					"reward": [
+						"move_range_up"
+					],
+					"text": "직원의 장부를 빼앗아 중요한 숫자 하나를 볼펜으로 고친다."
+				}
+			],
+			"slot": "A",
+			"kind": "rep",
+			"rep_dir": "fighting-"
+		},
+		{
+			"rule_link": "다른 사람의 어려움을 돕는다는 평판을 가진 당신이, 자신의 일을 미루고 직원의 장부 문제를 해결해 줄 것인지, 아니면 당신의 본래 목표에 집중할 것인지 선택해야 한다.",
+			"background_tags": [
+				"office_basement",
+				"night_shift",
+				"dim_light",
+				"no_crowd",
+				"tense_atmosphere"
+			],
+			"key": "ledger_help",
+			"no": 2,
+			"dialogue": [
+				{
+					"text": "사무실 지하 자료실 입구에서 한 남자가 낡은 장부를 들고 끙끙거린다. 안경이 코끝까지 내려와 있다.",
+					"speaker": "narrator"
+				},
+				{
+					"speaker": "night_accountant",
+					"text": "흐읍… 아, 당신이 그, 남들 어려울 때 먼저 손 내민다는 해결사시죠?"
+				},
+				{
+					"speaker": "night_accountant",
+					"text": "이 계산이… 이 계산이 맞지 않습니다!"
+				},
+				{
+					"text": "저 사람이 뭔가 곤란해 보이네요.",
+					"speaker": "dax"
+				}
+			],
+			"title": "셈을 돕는 손",
+			"wants": "장부의 복잡한 계산 문제로 야근에 시달리고 있으며, 자료실 깊숙한 곳의 자료 없이는 해결할 수 없어 도움을 구한다.",
+			"person": {
+				"id": "night_accountant",
+				"name": "회계팀 야근 직원",
+				"role": "회계팀 야근 직원"
+			},
+			"choices": [
+				{
+					"reward": [
+						"defense_up"
+					],
+					"mbti": "IS",
+					"path": "easy",
+					"result": [
+						{
+							"speaker": "narrator",
+							"text": "당신이 계산을 돕자 직원은 감격한다."
+						},
+						{
+							"text": "그는 자료실 문을 활짝 열고 당신에게 가장 빠르게 서버실로 가는 길을 알려준다.",
+							"speaker": "narrator"
+						},
+						{
+							"speaker": "dax",
+							"text": "와, 저렇게 쉽게 열어주네요!"
+						}
+					],
+					"text": "직원의 장부를 받아 들고 함께 자료를 찾아 계산을 돕는다.",
+					"flag": {
+						"label": "회계팀 감사",
+						"boss_text": "회계팀 야근 직원이 감사의 의미로 서버실 전원 공급 장치를 과부하 상태로 만들어 작동을 방해한다.",
+						"key": "accountant_grateful_easy_flag"
+					},
+					"risk_bad": {
+						"gold": -20,
+						"result": [
+							{
+								"speaker": "narrator",
+								"text": "당신이 계산을 돕다 실수로 중요한 숫자를 헷갈린다. 직원은 경악하며 장부를 뺏어든다."
+							},
+							{
+								"speaker": "dax",
+								"text": "이런, 큰일 났네요! 숫자가 엉망이 됐어요!"
+							}
+						],
+						"reward": []
+					},
+					"effects": {
+						"community": 10,
+						"echo": 5,
+						"fighting": 20
+					}
+				},
+				{
+					"text": "도움을 거절하고 자료실 문을 열라고 단호하게 요구한다.",
+					"reward": [
+						"attack_up"
+					],
+					"risk_bad": {
+						"result": [
+							{
+								"speaker": "narrator",
+								"text": "직원은 당신의 거절에 화가 난 듯 장부를 꽉 쥐고 버틴다. 그는 문을 열어줄 수 없다고 고집한다."
+							},
+							{
+								"speaker": "dax",
+								"text": "으으, 더 고집을 부리네요!"
+							}
+						],
+						"gold": -20,
+						"reward": []
+					},
+					"flag": {
+						"key": "accountant_firm_flag",
+						"label": "회계팀 단호",
+						"boss_text": "회계팀 야근 직원이 당신의 단호함에 질려 서버실 복구 프로그램의 오류를 즉시 해결해준다."
+					},
+					"effects": {
+						"reason": -10,
+						"echo": -5,
+						"fighting": -20
+					},
+					"result": [
+						{
+							"text": "당신의 단호한 태도에 직원은 잠시 움찔한다. 그는 당신을 이해할 수 없다는 표정으로 자료실 문을 연다.",
+							"speaker": "narrator"
+						},
+						{
+							"text": "저 사람, 좀 서운해하는 것 같은데요?",
+							"speaker": "dax"
+						}
+					],
+					"mbti": "EN",
+					"path": "hard"
+				},
+				{
+					"reward": [
+						"heal"
+					],
+					"effects": {
+						"fighting": 30,
+						"echo": 15,
+						"community": 20
+					},
+					"mbti": "FJ",
+					"path": "stat",
+					"text": "직원의 장부와 씨름 대신, 아예 그의 보고서를 대신 작성해 준다.",
+					"result": [
+						{
+							"speaker": "narrator",
+							"text": "직원은 당신이 보고서를 대신 써주겠다고 하자 감격에 겨워 눈물을 글썽인다."
+						},
+						{
+							"text": "그는 자료실 문을 열어둔 채 당신에게 모든 자료를 넘긴다.",
+							"speaker": "narrator"
+						},
+						{
+							"text": "와, 저렇게까지요?",
+							"speaker": "dax"
+						}
+					],
+					"flag": {
+						"key": "accountant_overwhelmed_flag",
+						"label": "회계팀 감격",
+						"boss_text": "회계팀 야근 직원이 감격하여 서버실 보안 시스템을 임시로 해제하고 백도어를 열어준다."
+					}
+				},
+				{
+					"mbti": "TP",
+					"path": "gold",
+					"result": [
+						{
+							"speaker": "narrator",
+							"text": "직원은 당신이 건넨 돈을 보고 눈을 깜빡이다가 재빨리 주머니에 넣는다."
+						},
+						{
+							"speaker": "narrator",
+							"text": "그는 왠지 모르게 불안한 표정으로 자료실 문을 연다."
+						},
+						{
+							"text": "돈으로 해결하는 것도 방법이긴 하죠…",
+							"speaker": "dax"
+						}
+					],
+					"effects": {
+						"echo": -5,
+						"gold": -100,
+						"reason": 10
+					},
+					"text": "야근 수당이라며 돈을 건네고 자료실 문을 열어달라고 한다."
+				}
+			],
+			"slot": "A",
+			"kind": "rep",
+			"rep_dir": "fighting+"
+		}
+	],
+	"errors": [],
+	"prompt_hash": "1b136dc3b01ad198365e2eea1c0088a90ccb0a3a"
+}

@@ -1,0 +1,319 @@
+{
+	"id": "card_01_ajumma_threat",
+	"title": {
+		"korean": "컨테이너 식당 아주머니의 으름장"
+	},
+	"intensity": "calm",
+	"after_story": 3,
+	"before_story": 5,
+	"condition": {
+		"leaning": "fighting-",
+		"among": [
+			"fighting-",
+			"fighting+",
+			"community-",
+			"community+",
+			"reason-",
+			"reason+"
+		],
+		"min": 20
+	},
+	"urgency": 8,
+	"leaning": "fighting-",
+	"background_tags": [
+		"night",
+		"pier",
+		"foggy",
+		"quiet",
+		"container"
+	],
+	"background_image": "https://imagedelivery.net/WTEqQNGFb-l-IHS6IGnzUQ/189eafd3-e726-498f-329d-1e1cb695e800/public",
+	"dialogue": [
+		{
+			"speaker": "narrator",
+			"content": {
+				"korean": "닥스의 차가 부두 정문에 다다랐다. 컨테이너 식당 아주머니가 앞치마를 만지작거리며 손짓한다."
+			}
+		},
+		{
+			"speaker": "ajumma",
+			"content": {
+				"korean": "아이고, 당신이 소문으로 듣던 그 주먹 좋은 해결사 양반 맞아요?"
+			}
+		},
+		{
+			"speaker": "ajumma",
+			"content": {
+				"korean": "어휴, 저기 껄렁거리는 애들 좀 봐요. 며칠째 외상값도 안 내고 버티고 있어요."
+			}
+		},
+		{
+			"speaker": "ajumma",
+			"content": {
+				"korean": "아니, 그냥 가만히 두고 보자니 제 속이 다 터져 죽겠어요. 확 그냥!"
+			}
+		}
+	],
+	"choices": [
+		{
+			"text": {
+				"korean": "차에서 내려 식당 앞 건달들에게 삿대질하며 다가간다."
+			},
+			"path": "easy",
+			"mbti": "EN",
+			"flag": "ajumma_dog_scare",
+			"effects": {
+				"echo": -5,
+				"fighting": -20
+			},
+			"reward": [
+				"attack_up"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "당신이 위협적으로 다가가자 건달들은 잔뜩 쫄아 굳어 버린다."
+					}
+				},
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "그들이 식당 테이블 밑에서 굴러 나온 강아지를 주우려던 참이었다."
+					}
+				},
+				{
+					"speaker": "dax",
+					"content": {
+						"korean": "아이고, 아주머니 식당 강아지였네요. 놀랐겠어요."
+					}
+				}
+			],
+			"risk": {
+				"chance": "mid",
+				"bad": {
+					"effects": {
+						"gold": -30
+					},
+					"reward": [
+						"attack_down"
+					],
+					"result": [
+						{
+							"speaker": "narrator",
+							"content": {
+								"korean": "당신이 위협적으로 다가가자 건달 하나가 휘두르던 물건을 놓쳐 식당 간판에 부딪힌다."
+							}
+						},
+						{
+							"speaker": "narrator",
+							"content": {
+								"korean": "간판이 크게 흔들리더니 '정' 자가 바닥으로 떨어진다."
+							}
+						},
+						{
+							"speaker": "dax",
+							"content": {
+								"korean": "어휴, 아주머니 간판 떨어지겠어요!"
+							}
+						}
+					]
+				}
+			}
+		},
+		{
+			"text": {
+				"korean": "아주머니에게 건달들이 무엇을 하고 있었는지 자세히 묻는다."
+			},
+			"path": "hard",
+			"mbti": "IS",
+			"flag": "ajumma_dog_find",
+			"effects": {
+				"fighting": 20,
+				"echo": 5
+			},
+			"reward": [
+				"defense_up"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "아주머니는 툴툴거리면서도 건달들이 잃어버린 물건을 찾는 중이었다고 말한다."
+					}
+				},
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "건달들은 멋쩍게 웃으며 식당 테이블 밑의 강아지를 가리킨다."
+					}
+				},
+				{
+					"speaker": "dax",
+					"content": {
+						"korean": "하마터면 오해할 뻔했네요."
+					}
+				}
+			],
+			"risk": {
+				"chance": "high",
+				"bad": {
+					"effects": {
+						"gold": -20
+					},
+					"reward": [],
+					"result": [
+						{
+							"speaker": "narrator",
+							"content": {
+								"korean": "아주머니는 귀찮다는 듯 한숨을 쉬며 건달들이 잃어버린 물건을 찾고 있었다고 말한다."
+							}
+						},
+						{
+							"speaker": "narrator",
+							"content": {
+								"korean": "그 말을 들은 건달 하나가 테이블을 발로 툭 차며 불평하자 다른 건달도 덩달아 소란을 피운다."
+							}
+						},
+						{
+							"speaker": "dax",
+							"content": {
+								"korean": "분위기가 더 험악해지는 것 같은데요..."
+							}
+						}
+					]
+				}
+			}
+		},
+		{
+			"text": {
+				"korean": "소문난 해결사답게 무표정으로 건달들을 응시한다."
+			},
+			"path": "stat",
+			"mbti": "TP",
+			"require": {
+				"stat": "fighting",
+				"op": "<=",
+				"value": -40
+			},
+			"flag": "ajumma_dog_fear",
+			"effects": {
+				"fighting": -10,
+				"community": 10,
+				"echo": 10
+			},
+			"reward": [
+				"intelligence_up"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "당신의 싸늘한 시선에 건달들은 굳어 버리더니, 식당 밑에서 작은 강아지를 꺼낸다."
+					}
+				},
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "그들은 황급히 강아지를 안고 "
+					}
+				},
+				{
+					"speaker": "dax",
+					"content": {
+						"korean": "아이고, 강아지가 거기 있었네요!"
+					}
+				}
+			]
+		},
+		{
+			"text": {
+				"korean": "건달들 외상값을 대신 갚겠다며 아주머니에게 지폐를 내민다."
+			},
+			"path": "gold",
+			"mbti": "ST",
+			"require": {
+				"stat": "gold",
+				"op": ">=",
+				"value": 100
+			},
+			"effects": {
+				"echo": 5,
+				"gold": -100
+			},
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "아주머니는 지폐를 받아 들더니 건달들 쪽으로 성큼성큼 걸어갔다."
+					}
+				},
+				{
+					"speaker": "ajumma",
+					"content": {
+						"korean": "자, 들었지? 외상값은 이 양반이 갚았다! 이제 너희가 이 양반한테 빚진 거야!"
+					}
+				},
+				{
+					"speaker": "dax",
+					"content": {
+						"korean": "건달들이 우리한테 꾸벅 인사하는데요? 졸지에 빚쟁이가 생겼어요."
+					}
+				}
+			]
+		}
+	],
+	"tags": [
+		"ajumma",
+		"dax"
+	],
+	"_design": {
+		"slot": "B",
+		"kind": "rep",
+		"person": {
+			"id": "ajumma",
+			"name": "컨테이너 식당 아주머니",
+			"role": "식당 사장"
+		},
+		"wants": "외상값을 떼먹으려는 건달들을 혼내달라고 한다.",
+		"rule_link": "소문만 듣고 주인공이 폭력적인 방식으로 문제를 해결할 것이라고 단정하여 부탁한다.",
+		"rep": "fighting-",
+		"events": {},
+		"flags": {
+			"ajumma_dog_scare": {
+				"kind": "bad",
+				"boss_penalty": -1,
+				"label": {
+					"korean": "강아지 놀람"
+				},
+				"boss_line": {
+					"korean": "아주머니 식당 강아지가 당신을 보고 짖어댄다."
+				}
+			},
+			"ajumma_dog_find": {
+				"kind": "good",
+				"boss_penalty": 1,
+				"label": {
+					"korean": "강아지 구출"
+				},
+				"boss_choice": {
+					"korean": "아주머니 식당 강아지가 당신에게 꼬리를 흔든다."
+				}
+			},
+			"ajumma_dog_fear": {
+				"kind": "good",
+				"boss_penalty": 2,
+				"label": {
+					"korean": "강아지 도망"
+				},
+				"boss_choice": {
+					"korean": "아주머니 식당 강아지가 당신을 피해 도망친다."
+				}
+			}
+		}
+	}
+}

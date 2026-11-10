@@ -1,0 +1,374 @@
+{
+	"cards": [
+		{
+			"no": 1,
+			"wants": "경비 반장이 차 안에 있는 히어로들을 알아보고, 자신의 사라진 점심 도시락을 찾아달라고 부탁한다. 그는 주인공이 자기 이득을 위해 행동한다는 소문을 듣고, 자신의 사적인 문제를 해결해 줄 것이라 기대한다.",
+			"background_tags": [
+				"container_yard",
+				"early_dawn",
+				"foggy",
+				"lonely",
+				"tense"
+			],
+			"key": "security_chief_missing_lunch",
+			"person": {
+				"id": "security_chief",
+				"name": "경비 반장",
+				"role": "야적장 경비 반장"
+			},
+			"dialogue": [
+				{
+					"text": "조용히 잠복 중인 당신의 차 창문을 누군가 톡톡 두드린다.",
+					"speaker": "narrator"
+				},
+				{
+					"text": "경비 반장이 작게 헛기침하며 당신을 바라본다.",
+					"speaker": "narrator"
+				},
+				{
+					"text": "당신이 그… 자기 몫은 기가 막히게 챙긴다는 해결사죠?",
+					"speaker": "security_chief"
+				},
+				{
+					"text": "차 안에서 뭔가 기운이… 어휴, 제가 괜히 또 이런 부탁을 드리는 건지… 죄송합니다만…",
+					"speaker": "security_chief"
+				},
+				{
+					"speaker": "security_chief",
+					"text": "저기… 제 점심 도시락이 감쪽같이 사라졌는데, 제가 혼자 찾기엔 좀… 곤란해서요."
+				},
+				{
+					"text": "점심 도시락이요? 지금 이걸…?",
+					"speaker": "dax"
+				}
+			],
+			"choices": [
+				{
+					"mbti": "TJ",
+					"risk_bad": {
+						"gold": -20,
+						"result": [
+							{
+								"speaker": "narrator",
+								"text": "당신은 경비 반장에게 사례금을 받고 도시락을 찾아 나선다."
+							},
+							{
+								"speaker": "narrator",
+								"text": "도시락을 찾던 중, 옆 차에 숨어있던 닥스가 크게 재채기를 한다."
+							},
+							{
+								"speaker": "narrator",
+								"text": "경비 반장은 당신을 의심스러운 눈초리로 쳐다본다."
+							}
+						],
+						"reward": [
+							"hp_down"
+						]
+					},
+					"effects": {
+						"gold": 100,
+						"fighting": 10
+					},
+					"result": [
+						{
+							"text": "경비 반장은 마지못해 지갑을 열어 돈을 건넨다. 당신은 묵묵히 도시락을 찾아 나선다.",
+							"speaker": "narrator"
+						},
+						{
+							"text": "잠시 후, 주차된 트럭 바퀴 밑에서 찌그러진 도시락통이 발견된다.",
+							"speaker": "narrator"
+						},
+						{
+							"speaker": "narrator",
+							"text": "반장은 한숨을 쉬며 간신히 내용물을 수습한다."
+						}
+					],
+					"path": "easy",
+					"text": "반장님의 점심을 찾아주는 대신, 사례금을 요구한다.",
+					"flag": {
+						"key": "security_chief_hungry",
+						"label": "배고픈 반장",
+						"boss_text": "경비 반장이 배를 움켜쥐고 당신을 째려본다."
+					}
+				},
+				{
+					"flag": {
+						"boss_text": "경비 반장이 당신에게 싸늘한 시선을 보낸다.",
+						"key": "security_chief_disappointed",
+						"label": "실망한 반장"
+					},
+					"result": [
+						{
+							"text": "경비 반장은 시무룩한 표정으로 터덜터덜 돌아선다. 당신은 다시 잠복에 집중한다.",
+							"speaker": "narrator"
+						},
+						{
+							"speaker": "dax",
+							"text": "반장님, 저렇게 서운해하는 건 처음 봐요… 점심 없으면 하루 종일 힘들어하시는데."
+						}
+					],
+					"path": "hard",
+					"text": "경비 반장의 개인적인 부탁은 거절하고, 잠복에 집중한다.",
+					"effects": {
+						"echo": -10,
+						"community": 20
+					},
+					"risk_bad": {
+						"gold": -20,
+						"reward": [],
+						"result": [
+							{
+								"text": "당신은 경비 반장의 개인적인 부탁을 거절하고 잠복에 집중한다.",
+								"speaker": "narrator"
+							},
+							{
+								"text": "경비 반장이 돌아선 순간, 그의 발에 걸려 차의 문이 살짝 열린다. 닥스가 깜짝 놀라 문을 닫는다.",
+								"speaker": "narrator"
+							}
+						]
+					},
+					"reward": [
+						"defense_up"
+					],
+					"mbti": "IN"
+				},
+				{
+					"result": [
+						{
+							"text": "당신은 도시락을 빌미로 야적장의 비밀 통로나 경비 교대 시간 같은 정보를 얻어낸다.",
+							"speaker": "narrator"
+						},
+						{
+							"text": "경비 반장은 도시락을 찾은 것에 만족하며 당신에게 감사 인사를 전한다.",
+							"speaker": "narrator"
+						},
+						{
+							"text": "그는 당신이 '역시 다르다'며 감탄한다.",
+							"speaker": "narrator"
+						}
+					],
+					"mbti": "ET",
+					"effects": {
+						"gold": 50,
+						"reason": -20,
+						"community": -10
+					},
+					"text": "도시락을 찾아주는 대신, 경비 반장에게서 야적장의 중요한 정보를 얻어낸다.",
+					"path": "stat",
+					"flag": {
+						"boss_text": "경비 반장이 당신에게만 몰래 야적장의 지도를 건넨다.",
+						"key": "security_chief_info",
+						"label": "반장의 정보"
+					}
+				},
+				{
+					"mbti": "ES",
+					"result": [
+						{
+							"text": "경비 반장은 눈을 휘둥그래 뜨고 돈을 받아든다. 그는 ",
+							"speaker": "narrator"
+						},
+						{
+							"text": "이런 해결사님은 처음 본다.",
+							"speaker": "security_chief"
+						},
+						{
+							"text": "며 중얼거린다. 그는 당신의 차에서 멀어지면서도 계속 돈을 세어본다. 닥스가 ",
+							"speaker": "narrator"
+						},
+						{
+							"text": "저렇게 좋아할 줄은 몰랐네요.",
+							"speaker": "dax"
+						},
+						{
+							"text": "라고 말한다.",
+							"speaker": "narrator"
+						}
+					],
+					"effects": {
+						"echo": 5,
+						"gold": -80
+					},
+					"path": "gold",
+					"text": "경비 반장에게 새 도시락을 사 줄 돈을 쥐여주고 돌려보낸다."
+				}
+			],
+			"rule_link": "야적장 전체의 큰 그림을 보지 않고, 눈앞의 작은 이득에만 집중하는 것은 배신자를 놓칠 수 있다.",
+			"title": "반장님의 사라진 점심",
+			"slot": "B",
+			"kind": "rep",
+			"rep_dir": "community-"
+		},
+		{
+			"rule_link": "눈앞의 사건만 해결하려다 전체의 안전을 간과하는 것은 배신자가 활개 칠 공간을 만들어 줄 수 있다.",
+			"choices": [
+				{
+					"effects": {
+						"echo": 10,
+						"community": 20
+					},
+					"reward": [
+						"attack_up"
+					],
+					"text": "야적장 전체의 안전을 위해 고장 난 가로등의 임시 조치 방법을 알려준다.",
+					"path": "easy",
+					"flag": {
+						"label": "관심 끄는 반장",
+						"key": "security_chief_draws_attention",
+						"boss_text": "경비 반장이 고쳐진 가로등 불빛 아래에서 당신을 향해 손을 흔든다."
+					},
+					"result": [
+						{
+							"text": "당신은 차 안에서 가로등 구조를 잠시 살피더니, 경비 반장에게 임시 조치 방법을 알려준다.",
+							"speaker": "narrator"
+						},
+						{
+							"text": "경비 반장은 당신의 설명을 듣고 황급히 달려가 가로등을 건드린다.",
+							"speaker": "narrator"
+						},
+						{
+							"speaker": "narrator",
+							"text": "잠시 후, 가로등에 깜빡이며 불이 들어온다."
+						}
+					],
+					"mbti": "NF",
+					"risk_bad": {
+						"result": [
+							{
+								"speaker": "narrator",
+								"text": "당신은 차 안에서 경비 반장에게 고장 난 가로등의 임시 조치 방법을 알려준다."
+							},
+							{
+								"speaker": "narrator",
+								"text": "경비 반장이 서툰 솜씨로 가로등을 건드리자, 갑자기 불꽃이 튀며 주변이 더 어두워진다."
+							},
+							{
+								"speaker": "dax",
+								"text": "저러다 다치겠어요!"
+							}
+						],
+						"gold": -20,
+						"reward": [
+							"hp_down"
+						]
+					}
+				},
+				{
+					"flag": {
+						"key": "security_chief_disappointed",
+						"label": "실망한 반장",
+						"boss_text": "경비 반장이 당신에게 싸늘한 시선을 보낸다."
+					},
+					"effects": {
+						"echo": -10,
+						"community": -20
+					},
+					"text": "개인적인 임무를 우선하여 가로등 수리를 거절한다.",
+					"path": "hard",
+					"risk_bad": {
+						"gold": -20,
+						"reward": [],
+						"result": [
+							{
+								"text": "당신은 경비 반장의 개인적인 부탁을 거절하고 잠복에 집중한다.",
+								"speaker": "narrator"
+							},
+							{
+								"speaker": "narrator",
+								"text": "경비 반장이 돌아선 순간, 그의 발에 걸려 차의 문이 살짝 열린다. 닥스가 깜짝 놀라 문을 닫는다."
+							}
+						]
+					},
+					"reward": [
+						"defense_up"
+					],
+					"mbti": "ST",
+					"result": [
+						{
+							"text": "경비 반장은 실망한 표정으로 고개를 떨군다. 당신은 다시 잠복에 집중한다.",
+							"speaker": "narrator"
+						},
+						{
+							"speaker": "dax",
+							"text": "저렇게 실망하시면… 야적장 다른 분들이 뭐라고 생각할까요?"
+						}
+					]
+				},
+				{
+					"result": [
+						{
+							"speaker": "narrator",
+							"text": "당신은 경비 반장에게 고장 난 가로등을 당장 고치게 하고, 순찰을 강화하라고 지시한다."
+						},
+						{
+							"text": "경비 반장은 당신의 단호한 지시에 놀라면서도, 이내 고개를 끄덕이며 다른 경비원들을 호출한다.",
+							"speaker": "narrator"
+						}
+					],
+					"text": "가로등 수리를 지시하며, 다른 경비원들에게 야적장 순찰 강화를 요구한다.",
+					"path": "stat",
+					"flag": {
+						"boss_text": "경비 반장이 당신의 지시대로 야적장 경비를 강화한다.",
+						"label": "따르는 반장",
+						"key": "security_chief_obey"
+					},
+					"reward": [
+						"shield"
+					],
+					"mbti": "EN",
+					"effects": {
+						"community": 30,
+						"fighting": 10
+					}
+				}
+			],
+			"title": "어둠 속 가로등",
+			"dialogue": [
+				{
+					"text": "조용히 잠복 중인 당신의 차 창문을 누군가 톡톡 두드린다.",
+					"speaker": "narrator"
+				},
+				{
+					"text": "경비 반장이 안절부절못하며 당신을 바라본다.",
+					"speaker": "narrator"
+				},
+				{
+					"text": "당신이 그… 동네 사람 일이라면 발 벗고 나선다는 해결사시죠?",
+					"speaker": "security_chief"
+				},
+				{
+					"text": "차 안에서 뭔가 기운이… 어휴, 제가 괜히 또 이런 부탁을 드리는 건지… 죄송합니다만…",
+					"speaker": "security_chief"
+				},
+				{
+					"speaker": "security_chief",
+					"text": "저기… 야적장 외곽 가로등이 고장 나서 밤마다 너무 어둡습니다. 제가 혼자 고치기엔 좀… 곤란해서요."
+				},
+				{
+					"speaker": "dax",
+					"text": "가로등이요? 지금 이걸 고쳐달라는 건가요?"
+				}
+			],
+			"background_tags": [
+				"container_yard",
+				"early_dawn",
+				"foggy",
+				"lonely",
+				"tense"
+			],
+			"no": 2,
+			"person": {
+				"id": "security_chief",
+				"name": "경비 반장",
+				"role": "야적장 경비 반장"
+			},
+			"key": "security_chief_broken_light",
+			"wants": "경비 반장이 차 안에 있는 히어로들을 알아보고, 야적장 외곽의 고장 난 가로등을 고쳐달라고 부탁한다. 그는 주인공이 공동체를 위해 나선다는 소문을 듣고, 야적장 전체의 안전을 위해 도움을 청한다.",
+			"slot": "B",
+			"kind": "rep",
+			"rep_dir": "community+"
+		}
+	],
+	"errors": [],
+	"prompt_hash": "a4db8d9195fc14ef3e9953216b6ba7ad7610924a"
+}

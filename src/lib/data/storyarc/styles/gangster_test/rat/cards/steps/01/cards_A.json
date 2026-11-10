@@ -1,555 +1,592 @@
 {
 	"cards": [
 		{
-			"rule_link": "늙은 부두 일꾼의 말만 듣고 용의자를 판단할지, 그의 사정을 먼저 들을지 결정한다.",
-			"background_tags": [
-				"dock",
-				"daytime",
-				"foggy",
-				"sparse",
-				"gloomy"
-			],
-			"title": "늙은 일꾼의 하소연",
+			"person": {
+				"name": "늙은 일꾼",
+				"role": "늙은 부두 일꾼",
+				"id": "worker_old"
+			},
+			"rule_link": "기금이 끊겨 약을 못 사는 늙은 일꾼의 하소연을 듣고, 섣불리 범인을 지목할지 아니면 사정을 먼저 들을지 판단해야 합니다.",
 			"dialogue": [
 				{
-					"speaker": "narrator",
-					"text": "부두 사무실 앞 계단에서 늙은 부두 일꾼이 당신을 붙잡는다."
+					"text": "부두 사무실 앞 계단을 내려가려는데, 허름한 작업복을 입은 늙은 일꾼이 당신의 앞을 막아선다.",
+					"speaker": "narrator"
 				},
 				{
-					"speaker": "old_docker",
-					"text": "젊은 양반들, 회장님이 부른 외지인들이라면서?"
-				},
-				{
-					"text": "내 약값이 끊겨서 죽겠어. 누가 범인인지 이름만 대 줘!",
-					"speaker": "old_docker"
+					"text": "컥, 컥... 이보쇼, 당신들... 회장님이 부른 사람들이라며?",
+					"speaker": "worker_old"
 				},
 				{
 					"speaker": "dax",
-					"text": "어르신, 저희도 아직 아무것도 모릅니다. 너무 조급해하지 마세요."
+					"text": "어르신, 무슨 일이세요? 저희는 지금 바쁩니다."
 				},
 				{
-					"speaker": "narrator",
-					"text": "일꾼의 눈빛에 간절함과 원망이 섞여 있다."
+					"speaker": "worker_old",
+					"text": "컥, 컥... 내 약값, 내 약값 말이여... 갑자기 기금이 끊겨서 약을 못 샀단 말이여."
+				},
+				{
+					"speaker": "worker_old",
+					"text": "누가 그랬는지, 그놈 이름이라도 좀 알려줘요. 억울해서 잠을 못 자겠어!"
 				}
 			],
-			"no": 1,
-			"person": {
-				"id": "old_docker",
-				"name": "부두 일꾼",
-				"role": "늙은 부두 일꾼"
-			},
-			"wants": "기금이 끊겨 약을 못 샀다며, 범인 이름 하나만 대 주면 마음이 편하겠다고 매달린다.",
+			"background_tags": [
+				"dock",
+				"night",
+				"foggy",
+				"alone",
+				"suspicious"
+			],
+			"key": "old_worker_plea",
 			"choices": [
 				{
 					"result": [
 						{
-							"text": "고맙네, 젊은 양반! 덕분에 마음이 한결 편해졌어.",
-							"speaker": "old_docker"
-						},
-						{
-							"text": "일꾼이 허리춤에서 낡은 건빵 봉지를 꺼내 당신에게 건넨다.",
+							"text": "당신의 말에 늙은 일꾼은 고개를 끄덕이며 작은 보따리에서 꼬깃꼬깃한 건빵 봉지를 꺼낸다.",
 							"speaker": "narrator"
 						},
 						{
-							"speaker": "dax",
-							"text": "어르신이 조금이나마 위로를 받으신 것 같네요."
+							"speaker": "worker_old",
+							"text": "흐읍, 흐읍... 고맙소. 이거라도 받으시오. 내가 아껴 둔 건데..."
+						},
+						{
+							"text": "윽, 저거 유통기한 한참 지난 거 아니에요? 그래도 어르신 마음이 고마우시네요.",
+							"speaker": "dax"
 						}
 					],
-					"reward": [
-						"attack_up"
-					],
-					"effects": {
-						"echo": 10,
-						"community": 15
-					},
-					"path": "easy",
-					"mbti": "SF",
-					"text": "아무 간부나 수상하다고 맞장구쳐 일꾼을 달래 준다.",
 					"risk_bad": {
 						"result": [
 							{
-								"text": "그려, 젊은 양반! 덕분에 속이 좀 후련하네.",
-								"speaker": "old_docker"
-							},
-							{
 								"speaker": "narrator",
-								"text": "일꾼이 허리춤에서 낡은 건빵 봉지를 꺼내 건네지만, 옆에 있던 다른 일꾼이 낚아채 간다."
+								"text": "당신의 말에 늙은 일꾼은 눈을 번뜩이며 당신의 멱살을 잡는다."
 							},
 							{
-								"text": "저런, 다른 분이 가져가 버렸네요...",
-								"speaker": "dax"
+								"speaker": "worker_old",
+								"text": "컥, 컥... 그 경리부장 놈이 그랬단 말이여? 내가 당장 가서 따져야겠어!"
+							},
+							{
+								"speaker": "dax",
+								"text": "어르신, 진정하세요! 저희는 아직 확실하게 모릅니다!"
 							}
 						],
-						"reward": [],
-						"gold": -30
+						"reward": [
+							"hp_down"
+						]
+					},
+					"effects": {
+						"community": 15,
+						"echo": 10
+					},
+					"reward": [
+						"defense_up"
+					],
+					"path": "easy",
+					"mbti": "EN",
+					"text": "\"그럼요, 경리부장이 제일 수상하죠!\" 하고 장단을 맞춰 일꾼을 달래 준다."
+				},
+				{
+					"path": "hard",
+					"reward": [
+						"shield"
+					],
+					"risk_bad": {
+						"gold": -20,
+						"result": [
+							{
+								"text": "당신이 건넨 돈을 늙은 일꾼이 허공에 흩뿌린다. 돈은 바람에 날려 부두 바닥으로 굴러간다.",
+								"speaker": "narrator"
+							},
+							{
+								"text": "컥, 컥... 내 약값은 이게 전부가 아니여! 범인이나 잡아와!",
+								"speaker": "worker_old"
+							},
+							{
+								"speaker": "dax",
+								"text": "어르신, 돈이 날아가잖아요! 저희가 드린 성의인데..."
+							}
+						],
+						"reward": []
+					},
+					"mbti": "TJ",
+					"text": "\"아직 누가 범인인지 모른다\"고 솔직히 말하고, 약값 일부를 대신 내준다.",
+					"result": [
+						{
+							"text": "당신은 지갑에서 돈을 꺼내 늙은 일꾼에게 건넨다. 일꾼은 마지못해 돈을 받지만, 표정은 여전히 씁쓸하다.",
+							"speaker": "narrator"
+						},
+						{
+							"speaker": "worker_old",
+							"text": "컥, 컥... 그래도 범인 이름은 못 알려주는 거구먼... 고맙지만 맘이 영 편치 않네."
+						},
+						{
+							"speaker": "dax",
+							"text": "으음, 저희가 찾아서 꼭 돌려드릴게요. 지금은 돈을 쓰셨네요, 괜찮으세요?"
+						}
+					],
+					"effects": {
+						"reason": 10,
+						"gold": -100,
+						"echo": 5
 					}
 				},
 				{
 					"reward": [
 						"attack_up"
 					],
+					"effects": {
+						"community": 20,
+						"echo": 15
+					},
+					"mbti": "SF",
+					"text": "{actor}이(가) \"어르신, 저희가 꼭 범인을 찾아 돈을 돌려드릴게요!\" 하고 손을 잡고 위로한다.",
+					"path": "lock",
+					"require_mbti": "SF",
 					"result": [
 						{
-							"text": "아직 모른다고? 그럼 난 뭘 믿고 기다려야 하나!",
-							"speaker": "old_docker"
-						},
-						{
-							"text": "일꾼은 당신의 돈을 받으며 못마땅한 표정을 짓는다.",
+							"text": "{actor}의 따뜻한 말과 손길에 늙은 일꾼의 눈가가 촉촉해진다.",
 							"speaker": "narrator"
 						},
 						{
-							"speaker": "dax",
-							"text": "어르신이 서운해하시는 것 같지만, 그래도 잘하신 일입니다."
-						}
-					],
-					"path": "hard",
-					"effects": {
-						"echo": -5,
-						"community": 20,
-						"gold": -70
-					},
-					"risk_bad": {
-						"result": [
-							{
-								"text": "흥, 모른다면서 돈은 왜 주는 건가! 이것도 나를 놀리는 건가!",
-								"speaker": "old_docker"
-							},
-							{
-								"speaker": "narrator",
-								"text": "일꾼은 당신의 돈을 뿌리치고 주변의 다른 일꾼들에게 큰 소리로 불평한다."
-							},
-							{
-								"speaker": "dax",
-								"text": "저런, 오히려 화를 돋운 것 같습니다..."
-							}
-						],
-						"reward": [],
-						"gold": -20
-					},
-					"mbti": "NF",
-					"text": "아직 모른다고 솔직히 말하고 약값 일부를 대신 내준다."
-				},
-				{
-					"mbti": "TJ",
-					"require_mbti": "TJ",
-					"text": "{actor}이(가) 노인에게 사라진 기금의 정확한 관리 절차를 물어본다.",
-					"effects": {
-						"echo": 5,
-						"reason": 10
-					},
-					"reward": [
-						"intelligence_up"
-					],
-					"result": [
-						{
-							"text": "그럼! 기금은 경리부장이 직접 관리했지! 다른 사람은 못 건드려!",
-							"speaker": "old_docker"
+							"text": "일꾼은 말없이 당신의 손을 꼭 잡는다.",
+							"speaker": "narrator"
 						},
 						{
-							"speaker": "narrator",
-							"text": "노인의 말에서 경리부장이 돈을 만진다는 사실을 다시 확인한다."
+							"text": "컥, 컥... 고맙소... 믿어 보겠소.",
+							"speaker": "worker_old"
 						},
 						{
-							"text": "역시 경리부장이 첫 용의자일까요?",
+							"text": "와, 어르신이 {actor}을 완전히 믿는 것 같은데요!",
 							"speaker": "dax"
 						}
-					],
-					"path": "lock"
+					]
 				}
 			],
-			"key": "old_docker_plea",
+			"no": 1,
+			"wants": "약값을 다시 받고 싶어 함. 아니면 범인 이름이라도 듣고 싶어 함.",
+			"title": "늙은 일꾼의 하소연",
 			"slot": "A",
 			"kind": "plant"
 		},
 		{
-			"wants": "외지인이 부두에서 뭘 하는지 알아내려고 한다.",
-			"key": "guard_suspicion",
 			"choices": [
 				{
-					"result": [
-						{
-							"speaker": "narrator",
-							"text": "당신이 쉬는 곳을 묻자 경비원이 잠시 당신을 살핀다."
-						},
-						{
-							"speaker": "dax",
-							"text": "어르신이 저희를 도와주려는 걸까요?"
-						}
-					],
-					"event_reason": "부두 경비원이 주인공의 피곤한 기색을 보고 쉴 곳을 안내한다.",
-					"text": "경비원에게 슬쩍 다가가 피곤한데 쉴 곳이 없냐고 물어본다.",
-					"event": "campsite",
-					"mbti": "EN",
-					"path": "easy",
-					"effects": {
-						"echo": 5,
-						"community": 10
-					},
-					"event_intro": [
-						{
-							"speaker": "dock_guard",
-							"text": "이런 곳에 외지인이 웬일이시오? 잠시 피곤하면 저기 안쪽 간이 휴게소에서 쉬시오."
-						},
-						{
-							"text": "경비원이 손가락으로 골목 안쪽을 가리킨다.",
-							"speaker": "narrator"
-						}
-					]
-				},
-				{
-					"path": "hard",
-					"effects": {
-						"community": 10,
-						"reason": 10,
-						"echo": 10
-					},
-					"text": "경비원에게 우리가 온 이유를 솔직하게 설명한다.",
-					"mbti": "IT",
+					"text": "\"거기 누구야! 수상한 짓 하지 말고 당장 나와!\" 하고 소리친다.",
+					"mbti": "ES",
 					"risk_bad": {
+						"reward": [],
 						"result": [
 							{
-								"text": "회장님의 의뢰? 믿을 수 없군. 혹시 수상한 점을 발견하면 바로 신고하겠다.",
-								"speaker": "dock_guard"
+								"speaker": "narrator",
+								"text": "당신의 고함에 그림자가 놀라 도망친다. 낡은 창고 문이 쿵 소리를 내며 닫힌다."
 							},
 							{
-								"text": "경비원은 당신의 말을 믿지 않고 계속 경계한다.",
-								"speaker": "narrator"
+								"text": "으악! 들켰다!",
+								"speaker": "guard_rookie"
 							},
 							{
-								"text": "오히려 더 의심하게 된 것 같습니다.",
+								"text": "어, 도망가는데요? 저러다 창고 문이 부서지겠어요!",
 								"speaker": "dax"
 							}
 						],
-						"reward": [],
 						"gold": -20
 					},
-					"result": [
-						{
-							"text": "회장님의 의뢰라... 수상한 짓은 아니겠군. 너무 깊게 파고들진 마라.",
-							"speaker": "dock_guard"
-						},
-						{
-							"speaker": "narrator",
-							"text": "경비원이 잠시 당신을 노려보다 이내 시선을 거둔다."
-						},
-						{
-							"speaker": "dax",
-							"text": "경비원의 경계심이 풀린 것 같네요."
-						}
-					],
+					"path": "easy",
 					"reward": [
-						"defense_up"
-					]
-				},
-				{
-					"mbti": "ES",
-					"text": "경비원에게 음료수 값이라며 돈을 쥐여주고 정보를 얻어낸다.",
-					"path": "gold",
-					"effects": {
-						"gold": -100,
-						"echo": 5
-					},
-					"reward": [
-						"stun"
+						"attack_up"
 					],
 					"result": [
 						{
-							"speaker": "dock_guard",
-							"text": "흐음, 고맙군. 조용히 해줄 테니 얼른 볼일 보고 가라."
-						},
-						{
-							"text": "경비원이 당신의 돈을 받아들고 주변을 쓱 둘러본다.",
+							"text": "당신의 고함에 그림자가 멈칫하더니, 엉거주춤한 자세로 신참 경비가 뛰쳐나온다.",
 							"speaker": "narrator"
 						},
 						{
-							"speaker": "dax",
-							"text": "돈으로 해결하는 것도 나쁘지 않네요."
+							"text": "그의 손에는 낡은 만화책이 들려 있다.",
+							"speaker": "narrator"
+						},
+						{
+							"speaker": "guard_rookie",
+							"text": "컥! 으아니, 이건 그, 그냥... 잠깐 쉬려고..."
+						},
+						{
+							"text": "만화책요? 이 야심한 밤에 창고에서 만화책을 보고 계셨어요?",
+							"speaker": "dax"
 						}
-					]
-				}
-			],
-			"rule_link": "낯선 경비원의 경계심을 수상하게 판단할지, 그가 왜 그러는지 먼저 알아낼지 결정한다.",
-			"background_tags": [
-				"dock",
-				"night",
-				"streetlamp",
-				"few",
-				"tense"
-			],
-			"person": {
-				"role": "부두 경비원",
-				"name": "부두 경비원",
-				"id": "dock_guard"
-			},
-			"dialogue": [
-				{
-					"speaker": "narrator",
-					"text": "사무실 주변을 살피던 당신에게 부두 경비원이 다가온다."
+					],
+					"effects": {
+						"fighting": 10,
+						"echo": -5
+					}
 				},
 				{
-					"text": "이런 곳에 외지인이 웬일이시오? 수상한 짓은 하지 마라.",
-					"speaker": "dock_guard"
+					"event": "campsite",
+					"effects": {
+						"echo": 10,
+						"reason": 15
+					},
+					"event_reason": "신참 경비가 당신에게 비밀 장소를 알려주며 잠시 쉬어가라고 합니다.",
+					"text": "조용히 다가가 창고 안을 살핀 뒤, 무슨 일이냐고 묻는다.",
+					"result": [
+						{
+							"speaker": "narrator",
+							"text": "당신이 조용히 다가가자, 신참 경비는 낡은 만화책을 급히 숨기며 식은땀을 흘린다."
+						},
+						{
+							"speaker": "guard_rookie",
+							"text": "아, 아무것도 아닙니다! 그냥 순찰 중이었습니다!"
+						},
+						{
+							"speaker": "dax",
+							"text": "순찰이요? 만화책을 숨기면서요?"
+						}
+					],
+					"mbti": "IN",
+					"path": "hard",
+					"event_intro": [
+						{
+							"speaker": "narrator",
+							"text": "신참 경비는 당신에게 작은 쪽지를 건넨다. 쪽지에는 부두 구석에 있는 비밀 야영지 지도가 그려져 있다."
+						},
+						{
+							"speaker": "guard_rookie",
+							"text": "사실... 제가 쉬는 곳인데, 잠깐 쉬어가세요. 회장님께는 비밀입니다!"
+						},
+						{
+							"speaker": "dax",
+							"text": "비밀 야영지요? 저런 곳이 있었네요!"
+						}
+					]
+				},
+				{
+					"result": [
+						{
+							"speaker": "narrator",
+							"text": "당신이 돈을 건네자, 신참 경비는 눈을 휘둥그레 뜨고 돈을 받아든 뒤, 재빨리 창고 안으로 사라진다."
+						},
+						{
+							"text": "컥, 컥... 감사합니다! 못 본 척해 주셔서!",
+							"speaker": "guard_rookie"
+						},
+						{
+							"speaker": "dax",
+							"text": "돈으로 입막음을 하셨네요. 저 경비, 나중에 회장님께 혼날지도 모르겠어요."
+						}
+					],
+					"effects": {
+						"gold": -80,
+						"echo": -10
+					},
+					"mbti": "IT",
+					"reward": [
+						"move_range_up"
+					],
+					"text": "신참 경비에게 \"뭘 숨기는지 알지만 모른 척해 줄 테니 조용히 사라지라\"며 돈을 건넨다.",
+					"path": "gold"
+				}
+			],
+			"wants": "회장에게 잘 보여 인정받고 싶어 함.",
+			"title": "창고 안의 그림자",
+			"no": 2,
+			"rule_link": "부두 창고에서 수상한 그림자를 발견하고, 그 그림자의 정체를 섣불리 판단할지 아니면 사정을 먼저 들을지 선택해야 합니다.",
+			"dialogue": [
+				{
+					"text": "부두 사무실 뒤편으로 가는 길, 낡은 창고에서 희미한 불빛과 함께 그림자가 흔들리는 것이 보인다.",
+					"speaker": "narrator"
 				},
 				{
 					"speaker": "dax",
-					"text": "저 사람이 우리를 경계하는 것 같습니다. 어떻게 하시겠어요?"
+					"text": "저기... 저 창고는 평소에 잘 안 쓰는 곳인데... 누가 저기서 뭘 하는 걸까요?"
 				},
 				{
-					"text": "경비원의 시선이 당신의 움직임을 쫓는다.",
+					"text": "창고 문틈으로 비치는 빛 사이로 한 남자의 그림자가 부산하게 움직인다.",
 					"speaker": "narrator"
+				},
+				{
+					"speaker": "guard_rookie",
+					"text": "젠장, 이거 빨리 치워야 하는데... 회장님이 보시면 큰일인데..."
+				},
+				{
+					"speaker": "dax",
+					"text": "뭔가 숨기는 것 같아요! 저기요!"
 				}
 			],
-			"no": 2,
-			"title": "경비원의 의심",
+			"background_tags": [
+				"dock",
+				"night",
+				"warehouse",
+				"shadow",
+				"uneasy"
+			],
+			"person": {
+				"role": "백상어파 신참 경비",
+				"id": "guard_rookie",
+				"name": "신참 경비"
+			},
+			"key": "suspicious_shadow",
 			"slot": "A",
 			"kind": "normal"
 		},
 		{
-			"rule_link": "부두 잡부의 수상한 행동을 보고 바로 의심할지, 그 행동의 진짜 이유를 알아낼지 결정한다.",
-			"title": "잡부의 수상한 행동",
-			"person": {
-				"role": "부두 잡부",
-				"id": "dock_worker",
-				"name": "부두 잡부"
-			},
-			"dialogue": [
-				{
-					"speaker": "narrator",
-					"text": "낡은 컨테이너 옆에서 부두 잡부가 뭔가를 허둥지둥 숨기고 있다."
-				},
-				{
-					"text": "당신의 인기척에 잡부가 흠칫 놀라며 손으로 뭔가를 가린다.",
-					"speaker": "narrator"
-				},
-				{
-					"speaker": "dock_worker",
-					"text": "별거 아니야! 그냥 쓰레기야!"
-				},
-				{
-					"speaker": "dax",
-					"text": "잡부의 행동이 뭔가 수상합니다. 뭘 숨기는 걸까요?"
-				},
-				{
-					"speaker": "narrator",
-					"text": "잡부가 당신의 눈치를 살피며 손을 감춘다."
-				}
-			],
-			"forced": [
-				{
-					"require_mbti": "EF",
-					"result": [
-						{
-							"text": "잡부가 갑작스러운 행동에 당황하며 당신의 눈치를 살핀다.",
-							"speaker": "narrator"
-						},
-						{
-							"speaker": "dock_worker",
-							"text": "사실 요즘 부두에 수상한 사람들이 많아서... 뭘 숨기는지 모르겠어요."
-						},
-						{
-							"speaker": "narrator",
-							"text": "잡부는 한숨을 쉬며 최근 부두에 수상한 사람들이 많다고 털어놓는다."
-						}
-					],
-					"text": "{actor}이(가) 잡부에게 다가가 어깨동무를 하며 힘든 일이 있냐고 묻는다.",
-					"effects": {
-						"echo": 10,
-						"community": 20
-					},
-					"reward": [
-						"intelligence_up"
-					],
-					"mbti": "EF"
-				}
-			],
-			"key": "worker_hiding",
-			"background_tags": [
-				"container_yard",
-				"night",
-				"shadowy",
-				"few",
-				"suspicious"
-			],
-			"wants": "자신이 숨기는 것을 들키지 않으려 한다.",
 			"choices": [
 				{
+					"result": [
+						{
+							"speaker": "narrator",
+							"text": "당신의 목소리에 반장이 깜짝 놀라 발길질을 멈춘다. 그의 발아래에는 찌그러진 양동이가 놓여 있다."
+						},
+						{
+							"text": "컥! 으아니, 당신들은 뭐야! 이것 좀 보시오, 이 찌그러진 양동이가 자꾸 걸려서...",
+							"speaker": "foreman_hasty"
+						},
+						{
+							"text": "양동이 때문에 컨테이너를 발로 차셨던 거예요?",
+							"speaker": "dax"
+						}
+					],
+					"text": "\"반장님! 위험하게 왜 그러세요!\" 하고 소리쳐서 그를 멈추게 한다.",
 					"risk_bad": {
 						"result": [
 							{
-								"text": "당신이 지나가려 할 때, 잡부가 숨기려던 물건이 발에 걸려 넘어질 뻔한다.",
+								"text": "당신의 목소리에 반장은 더욱 화가 나 양동이를 강하게 걷어차고,",
 								"speaker": "narrator"
 							},
 							{
-								"speaker": "dax",
-								"text": "휴, 다칠 뻔했습니다."
+								"speaker": "narrator",
+								"text": "양동이는 컨테이너에 부딪혀 큰 소리를 낸다."
+							},
+							{
+								"speaker": "foreman_hasty",
+								"text": "시끄러워! 이거 하나도 제대로 안 되는구먼!"
+							},
+							{
+								"text": "윽, 더 시끄러워졌는데요?",
+								"speaker": "dax"
 							}
 						],
-						"reward": [
-							"hp_down"
-						]
+						"gold": -30,
+						"reward": []
 					},
-					"text": "잡부가 숨기는 것을 못 본 척 지나간다.",
-					"result": [
-						{
-							"text": "당신이 지나가자 잡부는 안도의 한숨을 쉬며 다시 일을 시작한다.",
-							"speaker": "narrator"
-						},
-						{
-							"speaker": "dax",
-							"text": "괜히 시비 붙지 않는 게 좋죠."
-						}
-					],
-					"mbti": "IS",
 					"reward": [
 						"attack_up"
 					],
-					"path": "easy",
-					"effects": {
-						"fighting": -10,
-						"echo": 5
-					}
-				},
-				{
 					"effects": {
 						"echo": 5,
-						"reason": 10,
-						"community": 10
+						"fighting": 10
 					},
-					"text": "잡부에게 무엇을 숨기는지 솔직하게 물어본다.",
-					"reward": [
-						"intelligence_up"
-					],
-					"mbti": "IN",
+					"mbti": "EF",
+					"path": "easy"
+				},
+				{
 					"risk_bad": {
+						"gold": -20,
 						"result": [
 							{
-								"speaker": "dock_worker",
-								"text": "자꾸 귀찮게 하면 신고할 거야! 이 부두는 백상어파 구역이라고!"
+								"speaker": "narrator",
+								"text": "당신이 다가가자 반장은 당신을 의심스러운 눈초리로 쳐다본다."
 							},
 							{
-								"speaker": "narrator",
-								"text": "잡부가 오히려 당신을 위협하며 소란을 피운다."
+								"speaker": "foreman_hasty",
+								"text": "당신들이 여긴 왜 기웃거리는 거요? 괜한 참견 마시오!"
 							},
 							{
 								"speaker": "dax",
-								"text": "오히려 저희가 경비원에게 들킬 뻔했습니다."
+								"text": "저희를 경계하는 반장님 표정이 심상치 않네요."
 							}
 						],
-						"gold": -20,
 						"reward": []
 					},
 					"result": [
 						{
-							"text": "아무것도 아니야! 그냥 부두에 떨어진 물건일 뿐이야!",
-							"speaker": "dock_worker"
-						},
-						{
-							"text": "잡부가 잔뜩 겁먹은 얼굴로 당신을 노려본다.",
+							"text": "당신의 질문에 반장은 한숨을 쉬며 찌그러진 양동이를 보여준다.",
 							"speaker": "narrator"
 						},
 						{
-							"text": "뭔가 숨기는 게 확실해 보이네요.",
-							"speaker": "dax"
+							"speaker": "foreman_hasty",
+							"text": "젠장, 이 양동이 때문에 작업이 늦어지고 있소! 다른 양동이는 어디 갔는지..."
+						},
+						{
+							"speaker": "dax",
+							"text": "아, 양동이가 문제였군요. 저희가 도와드릴까요?"
 						}
 					],
-					"path": "hard"
+					"path": "hard",
+					"effects": {
+						"reason": 15,
+						"echo": 10
+					},
+					"mbti": "NT",
+					"reward": [
+						"stun"
+					],
+					"text": "반장에게 다가가 \"무슨 문제라도 있으신가요?\" 하고 조심스럽게 묻는다."
 				},
 				{
+					"result": [
+						{
+							"speaker": "narrator",
+							"text": "당신이 양동이를 발로 차자, 양동이는 굴러가더니 컨테이너 사이 좁은 틈에 끼어 버린다."
+						},
+						{
+							"text": "컥! 으아니, 내 양동이가! 이제 저걸 어떻게 꺼낸담!",
+							"speaker": "foreman_hasty"
+						},
+						{
+							"speaker": "dax",
+							"text": "으음, {actor}, 반장님을 더 난감하게 만들었네요."
+						}
+					],
+					"path": "fun",
+					"text": "반장 옆에 놓인 다른 양동이를 발로 차서 \"저도 한번 해보겠습니다!\" 하고 외친다.",
+					"event": "meet_stranger",
+					"risk_bad": {
+						"result": [
+							{
+								"speaker": "narrator",
+								"text": "당신이 양동이를 차려는 순간, 발을 헛디뎌 넘어진다. 양동이는 반장의 발등을 때린다."
+							},
+							{
+								"text": "컥! 으아악! 내 발등! 당신 뭐야!",
+								"speaker": "foreman_hasty"
+							},
+							{
+								"speaker": "dax",
+								"text": "으음, {actor}, 발목 조심해! 반장님도 많이 놀라셨겠어요."
+							}
+						],
+						"reward": [
+							"hp_down"
+						]
+					},
+					"effects": {
+						"echo": 20,
+						"fighting": 20
+					},
 					"event_intro": [
 						{
 							"speaker": "narrator",
-							"text": "잡부의 물건을 건드리자, 그림자 속에서 덩치 큰 사내가 나타난다. 그가 {actor}에게 말한다."
+							"text": "요란한 소리에 다른 부두 일꾼 한 명이 달려온다. 그는 당신을 노려보며 주먹을 쥐어 보인다."
 						},
 						{
-							"text": "\"내 물건에 함부로 손대지 마라! 이봐, 너 말이야!\" 그는 싸움을 걸어온다.",
+							"text": "\"이봐, 당신! 지금 뭐 하는 짓이야? 내 양동이를 망가뜨려?\"",
 							"speaker": "narrator"
+						},
+						{
+							"speaker": "narrator",
+							"text": "낯선 일꾼이 {actor}에게 대결을 걸어온다."
 						}
 					],
+					"avoid_penalty": "defense_down",
+					"event_reason": "당신의 엉뚱한 행동에 화가 난 다른 부두 일꾼이 당신에게 시비를 겁니다.",
 					"event_options": {
 						"fight": {
-							"text": "{actor}이(가) 낯선 사내의 도발에 맞선다.",
-							"lose": [
-								{
-									"text": "사내의 주먹이 {actor}의 옆구리를 스친다.",
-									"speaker": "narrator"
-								},
-								{
-									"speaker": "narrator",
-									"text": "당신은 잠시 주춤하며 자세를 고쳐 잡는다."
-								}
-							],
 							"win": [
 								{
 									"speaker": "narrator",
-									"text": "사내가 비틀거리며 물러난다."
+									"text": "당신의 재빠른 움직임에 일꾼은 휘청거리더니 엉덩방아를 찧고 주저앉는다."
 								},
 								{
-									"speaker": "narrator",
-									"text": "당신은 사내의 어깨를 툭 치고 지나간다."
+									"speaker": "dax",
+									"text": "역시 {actor}! 멋져요!"
 								}
-							]
+							],
+							"lose": [
+								{
+									"speaker": "narrator",
+									"text": "일꾼의 펀치가 당신의 옆구리에 정확히 명중한다. 당신은 잠시 숨을 멈춘다."
+								},
+								{
+									"speaker": "dax",
+									"text": "으악! {actor}, 괜찮아요?"
+								}
+							],
+							"text": "{actor}이(가) \"내가 언제 그랬다고!\" 하고 덤벼드는 일꾼에게 맞선다."
 						},
 						"avoid": {
 							"result": [
 								{
-									"speaker": "narrator",
-									"text": "사내가 비웃으며 당신의 등 뒤에 침을 뱉는다."
+									"text": "당신의 사과에 낯선 일꾼은 씩씩거리며 돌아선다.",
+									"speaker": "narrator"
+								},
+								{
+									"speaker": "dax",
+									"text": "휴, 다행이에요. 싸움은 피하는 게 상책이죠."
 								}
 							],
-							"text": "쓸데없는 시비를 피하고 자리를 벗어난다."
+							"text": "\"죄송합니다!\" 하고 사과하며 싸움을 피한다."
 						}
 					},
-					"risk_bad": {
-						"reward": [
-							"hp_down"
-						],
-						"result": [
-							{
-								"speaker": "narrator",
-								"text": "물건을 차자 깨진 병 조각들이 튀어 당신의 신발에 작은 상처를 낸다."
-							},
-							{
-								"text": "쯧쯧, 조심 좀 하지!",
-								"speaker": "dock_worker"
-							},
-							{
-								"text": "괜히 발만 다치셨네요...",
-								"speaker": "dax"
-							}
-						]
-					},
-					"mbti": "EP",
-					"path": "fun",
-					"event_reason": "부두 잡부의 물건을 건드려 낯선 사내의 시비를 산다.",
-					"result": [
-						{
-							"speaker": "dock_worker",
-							"text": "어이쿠! 그걸 왜 발로 차!"
-						},
-						{
-							"text": "물건이 굴러가자 깨진 병 조각들이 드러난다.",
-							"speaker": "narrator"
-						},
-						{
-							"text": "병 조각이었네요... 다행히 별것 아니었습니다.",
-							"speaker": "dax"
-						}
-					],
-					"avoid_penalty": "defense_down",
-					"effects": {
-						"reason": -15,
-						"fighting": 10,
-						"echo": -5
-					},
-					"event": "meet_stranger",
-					"text": "잡부 옆에 있는 물건을 발로 툭 차서 무엇이 있는지 확인한다."
+					"mbti": "EP"
 				}
 			],
+			"key": "noisy_crates",
+			"dialogue": [
+				{
+					"speaker": "narrator",
+					"text": "부두 사무실로 향하는 길, 컨테이너들이 쌓인 곳에서 쿵, 쾅! 요란한 소리가 들려온다."
+				},
+				{
+					"speaker": "dax",
+					"text": "저건 또 무슨 소리죠? 컨테이너가 무너지는 건 아니겠죠?"
+				},
+				{
+					"text": "컨테이너 사이에서 작업 반장이 얼굴을 찌푸린 채 무언가를 발로 차고 있다.",
+					"speaker": "narrator"
+				},
+				{
+					"text": "젠장, 이놈의 컨테이너는 왜 자꾸 말썽이야! 빨리 끝내고 가야 하는데!",
+					"speaker": "foreman_hasty"
+				},
+				{
+					"speaker": "dax",
+					"text": "반장님, 왜 컨테이너를 발로 차세요! 위험해요!"
+				}
+			],
+			"background_tags": [
+				"dock",
+				"night",
+				"containers",
+				"loud",
+				"frustrated"
+			],
+			"forced": [
+				{
+					"result": [
+						{
+							"speaker": "narrator",
+							"text": "{actor}이(가) 컨테이너 문을 억지로 열려 하지만, 문은 굳게 닫혀 꿈쩍도 하지 않는다."
+						},
+						{
+							"text": "컥! 뭐 하는 짓이오! 그거 함부로 열면 안 되는 거요!",
+							"speaker": "foreman_hasty"
+						},
+						{
+							"speaker": "dax",
+							"text": "으음, {actor}, 괜히 일을 키우지 마."
+						}
+					],
+					"require_mbti": "IT",
+					"text": "{actor}이(가) \"이 컨테이너가 수상한데요!\" 하고 컨테이너 문을 억지로 열려고 시도한다.",
+					"mbti": "IT",
+					"effects": {
+						"reason": -15,
+						"echo": -10
+					},
+					"reward": [
+						"attack_down"
+					]
+				}
+			],
+			"person": {
+				"name": "성급한 반장",
+				"id": "foreman_hasty",
+				"role": "부두 작업 반장"
+			},
+			"wants": "빨리 작업을 끝내고 퇴근하고 싶어 함.",
+			"title": "요란한 컨테이너 소리",
+			"rule_link": "부두 컨테이너에서 나는 요란한 소리를 듣고, 소리의 원인을 섣불리 판단할지 아니면 사정을 먼저 들을지 선택해야 합니다.",
 			"no": 3,
 			"slot": "A",
 			"kind": "normal"
 		}
 	],
 	"errors": [],
-	"prompt_hash": "987ba523bf0096ee4075e8b031a5fca2876b3208"
+	"prompt_hash": "8a3c1a2587d36e4acfc8386d427d59dacbb712a1"
 }

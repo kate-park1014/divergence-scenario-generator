@@ -1,0 +1,331 @@
+{
+	"id": "card_02_yashik_sajang_help",
+	"title": {
+		"korean": "덜컹거리는 야식트럭"
+	},
+	"intensity": "calm",
+	"after_story": 5,
+	"before_story": 7,
+	"condition": {
+		"leaning": "fighting+",
+		"among": [
+			"fighting-",
+			"fighting+",
+			"community-",
+			"community+",
+			"reason-",
+			"reason+"
+		],
+		"min": 20
+	},
+	"urgency": 8,
+	"leaning": "fighting+",
+	"background_tags": [
+		"container_yard",
+		"night",
+		"dim_light",
+		"few_people",
+		"curious"
+	],
+	"background_image": "https://imagedelivery.net/WTEqQNGFb-l-IHS6IGnzUQ/ae1926db-9985-4622-5880-8e77e8439400/public",
+	"dialogue": [
+		{
+			"speaker": "narrator",
+			"content": {
+				"korean": "야식 트럭 사장이 당신의 차를 힐끗 보더니, 트럭 뒤편에서 끙끙대며 무언가를 옮기려 애쓰고 있다."
+			}
+		},
+		{
+			"speaker": "yashik_sajang",
+			"content": {
+				"korean": "아이고, 참나... 당신들이 그 소문 자자한, 남 돕는 일이라면 발 벗고 나선다는 해결사 양반들 아니시오?"
+			}
+		},
+		{
+			"speaker": "yashik_sajang",
+			"content": {
+				"korean": "이것 좀 같이 들어주면 안 되겠소?"
+			}
+		},
+		{
+			"speaker": "dax",
+			"content": {
+				"korean": "사장님, 저희 지금 중요한 일 중인데..."
+			}
+		},
+		{
+			"speaker": "yashik_sajang",
+			"content": {
+				"korean": "쯧쯧, 이것만 좀 도와주면 금방 갈 테니."
+			}
+		}
+	],
+	"choices": [
+		{
+			"text": {
+				"korean": "무거운 짐을 옮기는 것을 빠르게 도와주고 자리를 정리한다"
+			},
+			"path": "easy",
+			"mbti": "FP",
+			"flag": "sajang_grateful",
+			"effects": {
+				"community": 20,
+				"gold": 50,
+				"echo": 10
+			},
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "당신이 번쩍 들어 올리자 사장은 “오, 힘 좋네!” 하며 감탄하고, 짐은 금세 트럭 안으로 들어간다."
+					}
+				},
+				{
+					"speaker": "dax",
+					"content": {
+						"korean": "사장님이 고맙다고 콜라 한 캔을 주셨어요!"
+					}
+				}
+			],
+			"risk": {
+				"chance": "mid",
+				"bad": {
+					"effects": {
+						"gold": -30
+					},
+					"reward": [
+						"hp_down"
+					],
+					"result": [
+						{
+							"speaker": "narrator",
+							"content": {
+								"korean": "짐을 옮기던 당신이 발을 헛디뎌 삐끗하는 바람에 짐이 바닥에 떨어지며 ‘쨍그랑!’ 소리가 난다."
+							}
+						},
+						{
+							"speaker": "dax",
+							"content": {
+								"korean": "아이고, 사장님! 뚝배기 깨진 것보다 국물 샌 게 더 아깝다고 소리치시네요!"
+							}
+						}
+					]
+				}
+			}
+		},
+		{
+			"text": {
+				"korean": "“우리는 바빠서 남의 짐 나를 시간이 없다”며 단호하게 거절한다"
+			},
+			"path": "hard",
+			"mbti": "ST",
+			"flag": "sajang_ignored",
+			"effects": {
+				"fighting": -10,
+				"echo": -10,
+				"community": -20
+			},
+			"reward": [
+				"move_range_up"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "당신의 단호한 거절에 사장은 입술을 삐죽이더니, “치사해서 원."
+					}
+				},
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "내가 어떻게든 하지 뭐!” 하며 혼자 끙끙댄다."
+					}
+				},
+				{
+					"speaker": "dax",
+					"content": {
+						"korean": "사장님, 저렇게 혼자 끙끙대다가 허리라도 삐끗하면 어쩌죠?"
+					}
+				}
+			],
+			"risk": {
+				"chance": "high",
+				"bad": {
+					"effects": {
+						"gold": -20
+					},
+					"reward": [],
+					"result": [
+						{
+							"speaker": "narrator",
+							"content": {
+								"korean": "당신의 단호한 거절에 사장은 울컥하더니 “흥!"
+							}
+						},
+						{
+							"speaker": "narrator",
+							"content": {
+								"korean": "그럼 내가 알아서 하지!” 하고는 갑자기 트럭에 실린 짐을 바닥에 내팽개친다."
+							}
+						},
+						{
+							"speaker": "dax",
+							"content": {
+								"korean": "아이고, 사장님! 저러다 컨테이너 소장님한테 들키겠어요!"
+							}
+						}
+					]
+				}
+			}
+		},
+		{
+			"text": {
+				"korean": "“도움이 필요하면 부르고, 필요 없으면 방해하지 마쇼.” 사장에게 딱 잘라 말한다"
+			},
+			"path": "stat",
+			"mbti": "TJ",
+			"require": {
+				"stat": "fighting",
+				"op": ">=",
+				"value": 40
+			},
+			"flag": "sajang_cooperated",
+			"effects": {
+				"community": 30,
+				"fighting": 10,
+				"echo": 15
+			},
+			"reward": [
+				"stun"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "당신의 말에 사장은 “아이고, 미안하오!"
+					}
+				},
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "금방 정리하고 갈 테니 좀만 기다려 주시오!” 하며 서둘러 짐을 정리한다."
+					}
+				},
+				{
+					"speaker": "dax",
+					"content": {
+						"korean": "사장님이 저희 말을 잘 들어주네요!"
+					}
+				}
+			]
+		},
+		{
+			"text": {
+				"korean": "트럭 주변을 돌며 “여기가 맛집이다!” 외치며 손님을 모아준다"
+			},
+			"path": "fun",
+			"mbti": "EP",
+			"effects": {
+				"gold": 80,
+				"reason": 20,
+				"echo": 5
+			},
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "당신의 열정적인 홍보에 몇몇 부두 인부들이 야식 트럭으로 몰려든다. 사장은 어안이 벙벙한 채 돈을 받는다."
+					}
+				},
+				{
+					"speaker": "dax",
+					"content": {
+						"korean": "사장님, 오늘 대박 나겠는데요? 저희 덕분에!"
+					}
+				}
+			],
+			"risk": {
+				"chance": "low",
+				"bad": {
+					"effects": {
+						"gold": -50
+					},
+					"reward": [],
+					"result": [
+						{
+							"speaker": "narrator",
+							"content": {
+								"korean": "당신의 과도한 홍보에 손님들은 “뭐야, 저 깡패들은?” 하며 오히려 트럭에서 멀어진다."
+							}
+						},
+						{
+							"speaker": "narrator",
+							"content": {
+								"korean": "사장은 파리만 날리는 트럭을 보며 한숨 쉰다."
+							}
+						},
+						{
+							"speaker": "dax",
+							"content": {
+								"korean": "아이고, 사장님이 저희 때문에 망했다고 아주 울상이에요!"
+							}
+						}
+					]
+				}
+			}
+		}
+	],
+	"tags": [
+		"yashik_sajang",
+		"dax"
+	],
+	"_design": {
+		"slot": "C",
+		"kind": "rep",
+		"person": {
+			"id": "yashik_sajang",
+			"name": "야식트럭 사장",
+			"role": "야식트럭 사장"
+		},
+		"wants": "트럭에 실린 무거운 물건을 옮기는 것을 도와주거나, 트럭의 고장을 해결해 주길 바란다.",
+		"rule_link": "겉모습으로 판단하지 않고 끝까지 지켜보는 것이, 때로는 예상치 못한 진실을 마주하게 하고 도움이 될 수 있다.",
+		"rep": "fighting+",
+		"events": {},
+		"flags": {
+			"sajang_grateful": {
+				"kind": "bad",
+				"boss_penalty": -1,
+				"label": {
+					"korean": "사장에게 호의"
+				},
+				"boss_line": {
+					"korean": "야식트럭 사장이 당신에게 고마워하며 컨테이너 주변에 신경 쓰지 않는다."
+				}
+			},
+			"sajang_ignored": {
+				"kind": "good",
+				"boss_penalty": 1,
+				"label": {
+					"korean": "사장 무시"
+				},
+				"boss_choice": {
+					"korean": "야식트럭 사장이 당신에게 관심을 끄고 자기 일에만 집중한다."
+				}
+			},
+			"sajang_cooperated": {
+				"kind": "good",
+				"boss_penalty": 2,
+				"label": {
+					"korean": "사장 협조"
+				},
+				"boss_choice": {
+					"korean": "야식트럭 사장이 당신에게 협조적으로 행동하여 주변 시야를 방해하지 않는다."
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,221 @@
+{
+	"id": "card_05_accountant_request",
+	"title": {
+		"korean": "경리부장의 수상한 부탁"
+	},
+	"intensity": "calm",
+	"after_story": 1,
+	"before_story": 3,
+	"background_tags": [
+		"hallway",
+		"day",
+		"dim",
+		"sparse",
+		"tense"
+	],
+	"background_image": "https://imagedelivery.net/WTEqQNGFb-l-IHS6IGnzUQ/21fa8c1e-22e6-4343-d6cd-3ea6cd278b00/public",
+	"dialogue": [
+		{
+			"speaker": "accountant_manager",
+			"content": {
+				"korean": "거기 여러분! 비서 녀석 서류를 슬쩍 빼 올 수 있겠나? 내 가짜 장부 글씨랑 맞춰 봐야겠어."
+			}
+		},
+		{
+			"speaker": "dax",
+			"content": {
+				"korean": "어르신 기금 회계 장부는 제가 대신 처리했어요. 설마 저를 의심하는 건가요?"
+			}
+		},
+		{
+			"speaker": "accountant_manager",
+			"content": {
+				"korean": "닥스, 넌 빠져라! 이 서류가 비서의 글씨라면, 녀석도 한통속이란 증거가 될 거다!"
+			}
+		},
+		{
+			"speaker": "narrator",
+			"content": {
+				"korean": "경리부장이 당신을 노려본다."
+			}
+		},
+		{
+			"speaker": "dax",
+			"content": {
+				"korean": "비서님이 쓰던 만년필이 초록 잉크였죠… 혹시 서류에도 그 잉크 자국이 있을까요?"
+			}
+		}
+	],
+	"choices": [
+		{
+			"text": {
+				"korean": "경리부장의 지시대로 비서의 결재 서류를 몰래 가져온다."
+			},
+			"path": "easy",
+			"mbti": "ES",
+			"effects": {
+				"echo": 10,
+				"gold": 100
+			},
+			"seed": "accountant_request_easy",
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "당신이 서류 뭉치에서 겨우 빼 온 한 장을 경리부장이 불빛에 비춰 본다. 경리부장의 입술이 파르르 떨린다."
+					}
+				},
+				{
+					"speaker": "dax",
+					"content": {
+						"korean": "설마… 비서님 서류에서 이상한 점이라도 찾으신 건가요?"
+					}
+				}
+			],
+			"risk": {
+				"chance": "mid",
+				"bad": {
+					"effects": {
+						"gold": -30
+					},
+					"reward": [
+						"move_range_down"
+					],
+					"result": [
+						{
+							"speaker": "narrator",
+							"content": {
+								"korean": "당신이 서류를 빼내다 발을 헛디뎌 서류 뭉치가 복도에 와르르 쏟아진다."
+							}
+						},
+						{
+							"speaker": "narrator",
+							"content": {
+								"korean": "마침 지나가던 다른 간부가 놀라 돌아본다."
+							}
+						},
+						{
+							"speaker": "dax",
+							"content": {
+								"korean": "앗! 서류가 엉망이 됐어요!"
+							}
+						}
+					]
+				}
+			}
+		},
+		{
+			"text": {
+				"korean": "몰래 가져오는 대신, 경리부장에게 비서 책상으로 직접 가 보자고 제안한다."
+			},
+			"path": "hard",
+			"mbti": "IN",
+			"effects": {
+				"echo": -5,
+				"community": 20
+			},
+			"reward": [
+				"defense_up"
+			],
+			"seed": "accountant_request_hard",
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "경리부장이 짜증 섞인 한숨을 푹 내쉰다. 그는 당신의 어깨를 붙잡고 비서실 방향으로 질질 끌고 간다."
+					}
+				},
+				{
+					"speaker": "dax",
+					"content": {
+						"korean": "경리부장님, 너무 티 나게 움직이시는 것 아니에요?"
+					}
+				}
+			],
+			"risk": {
+				"chance": "high",
+				"bad": {
+					"effects": {
+						"gold": -20
+					},
+					"reward": [],
+					"result": [
+						{
+							"speaker": "narrator",
+							"content": {
+								"korean": "경리부장이 \"이렇게 굼떠서 언제 잡겠냐!\"며 당신의 손목을 잡아 끈다."
+							}
+						},
+						{
+							"speaker": "narrator",
+							"content": {
+								"korean": "당신은 중심을 잃고 복도 구석의 쓰레기통을 넘어뜨린다."
+							}
+						},
+						{
+							"speaker": "dax",
+							"content": {
+								"korean": "으악, 들킬 뻔했어요!"
+							}
+						}
+					]
+				}
+			}
+		},
+		{
+			"text": {
+				"korean": "{actor}이(가) 경리부장에게 초록 잉크 만년필이 있는지 먼저 확인해야 한다고 조언한다."
+			},
+			"path": "lock",
+			"mbti": "TJ",
+			"require": {
+				"mbti": "TJ"
+			},
+			"effects": {
+				"echo": 5,
+				"reason": 10
+			},
+			"reward": [
+				"intelligence_up"
+			],
+			"seed": "accountant_request_hard",
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "{actor}이(가) 경리부장의 흥분을 가라앉히며 논리적인 절차를 제시한다."
+					}
+				},
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "경리부장은 잠시 멈칫하더니 고개를 끄덕인다."
+					}
+				},
+				{
+					"speaker": "dax",
+					"content": {
+						"korean": "어르신, 저렇게 금방 수긍하시네요!"
+					}
+				}
+			]
+		}
+	],
+	"tags": [
+		"accountant_manager",
+		"dax"
+	],
+	"_design": {
+		"slot": "A",
+		"kind": "plant",
+		"person": {
+			"name": "경리부장",
+			"role": "경리부장",
+			"id": "accountant_manager"
+		},
+		"wants": "비서의 결재 서류를 몰래 가져와 자신의 가짜 장부 글씨와 맞춰 보려 한다.",
+		"rule_link": "비서의 물건을 몰래 가져가는 대신, 먼저 그 의도를 물어볼 기회가 생긴다.",
+		"events": {},
+		"flags": {}
+	}
+}

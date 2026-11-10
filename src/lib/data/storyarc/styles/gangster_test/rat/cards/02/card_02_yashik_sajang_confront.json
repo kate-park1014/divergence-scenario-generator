@@ -1,0 +1,279 @@
+{
+	"id": "card_02_yashik_sajang_confront",
+	"title": {
+		"korean": "차 주변을 맴도는 야식트럭"
+	},
+	"intensity": "calm",
+	"after_story": 5,
+	"before_story": 7,
+	"condition": {
+		"leaning": "fighting-",
+		"among": [
+			"fighting-",
+			"fighting+",
+			"community-",
+			"community+",
+			"reason-",
+			"reason+"
+		],
+		"min": 20
+	},
+	"urgency": 8,
+	"leaning": "fighting-",
+	"background_tags": [
+		"container_yard",
+		"night",
+		"dim_light",
+		"few_people",
+		"tense"
+	],
+	"background_image": "https://imagedelivery.net/WTEqQNGFb-l-IHS6IGnzUQ/ae1926db-9985-4622-5880-8e77e8439400/public",
+	"dialogue": [
+		{
+			"speaker": "narrator",
+			"content": {
+				"korean": "야식 트럭 사장이 당신의 차를 힐끗 보더니, 손에 든 더러운 행주로 땀을 닦으며 다가온다."
+			}
+		},
+		{
+			"speaker": "yashik_sajang",
+			"content": {
+				"korean": "아이고, 참나... 당신들이 그 소문 자자한, 뭐든 주먹부터 들이미는 해결사 양반들 아니시오?"
+			}
+		},
+		{
+			"speaker": "yashik_sajang",
+			"content": {
+				"korean": "왜 남의 장사 앞에서 이렇게 얼쩡거리고 그래?"
+			}
+		},
+		{
+			"speaker": "dax",
+			"content": {
+				"korean": "사장님, 저희는 그냥 잠깐 쉬어가는 중이에요!"
+			}
+		},
+		{
+			"speaker": "yashik_sajang",
+			"content": {
+				"korean": "쉬긴 뭘 쉬어, 쯧쯧. 손님 다 떨어지게."
+			}
+		}
+	],
+	"choices": [
+		{
+			"text": {
+				"korean": "야식트럭 사장을 노려보며 으름장을 놓아 쫓아낸다"
+			},
+			"path": "easy",
+			"mbti": "EN",
+			"flag": "noticed_by_sajang",
+			"effects": {
+				"gold": 50,
+				"fighting": -20,
+				"echo": -5
+			},
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "당신의 살벌한 눈빛에 사장은 “아이고, 무서워서 장사 하겠나!” 하며 트럭으로 허둥지둥 돌아간다."
+					}
+				},
+				{
+					"speaker": "dax",
+					"content": {
+						"korean": "사장님, 저희가 뭐라도 좀 사 먹어주려고 했는데, 아깝네요!"
+					}
+				}
+			],
+			"risk": {
+				"chance": "mid",
+				"bad": {
+					"effects": {
+						"gold": -20
+					},
+					"reward": [
+						"attack_down"
+					],
+					"result": [
+						{
+							"speaker": "narrator",
+							"content": {
+								"korean": "당신의 으름장에 사장은 “뭐?"
+							}
+						},
+						{
+							"speaker": "narrator",
+							"content": {
+								"korean": "깡패가 따로 없구만!” 하고 소리치며 트럭에서 휴대폰을 꺼내 누군가에게 전화를 건다."
+							}
+						},
+						{
+							"speaker": "dax",
+							"content": {
+								"korean": "아이고, 사장님! 꼭 동네 아는 형님들한테 일러바치는 목소리네요!"
+							}
+						}
+					]
+				}
+			}
+		},
+		{
+			"text": {
+				"korean": "야식트럭 사장에게 정중하게 상황을 설명하며 양해를 구한다"
+			},
+			"path": "hard",
+			"mbti": "IS",
+			"flag": "sajang_distraction_cleared",
+			"effects": {
+				"echo": 10,
+				"fighting": 20
+			},
+			"reward": [
+				"intelligence_up"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "당신의 진지한 설명에 사장은 고개를 갸웃거리다 “에휴, 알았소."
+					}
+				},
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "밤새 고생들 하쇼.” 하며 트럭으로 돌아간다."
+					}
+				},
+				{
+					"speaker": "dax",
+					"content": {
+						"korean": "사장님, 저희 때문에 기분 상했나 봐요. 저런..."
+					}
+				}
+			],
+			"risk": {
+				"chance": "high",
+				"bad": {
+					"effects": {
+						"gold": -20
+					},
+					"reward": [],
+					"result": [
+						{
+							"speaker": "narrator",
+							"content": {
+								"korean": "당신의 정중한 설명에 사장은 눈을 가늘게 뜨더니,"
+							}
+						},
+						{
+							"speaker": "narrator",
+							"content": {
+								"korean": "“설마 공짜로 먹고 튀려는 건 아니겠지?” 하며 괜히 트럭 주변을 맴돈다."
+							}
+						},
+						{
+							"speaker": "dax",
+							"content": {
+								"korean": "아이고, 사장님! 꼭 저희가 먹튀할까 봐 저렇게 쳐다보네요!"
+							}
+						}
+					]
+				}
+			}
+		},
+		{
+			"text": {
+				"korean": "“소문대로 주먹이 먼저 나가는 해결사는 맞지.” 짧게 말하고 트럭으로 돌아가게 한다"
+			},
+			"path": "stat",
+			"mbti": "TJ",
+			"require": {
+				"stat": "fighting",
+				"op": "<=",
+				"value": -40
+			},
+			"flag": "sajang_intimidated",
+			"effects": {
+				"echo": -10,
+				"fighting": -30
+			},
+			"reward": [
+				"defense_up"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "당신의 말에 사장은 움찔하더니, “아이고,"
+					}
+				},
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "무서워서 말도 못 붙이겠네!” 하며 트럭 문을 닫고 안에서 당신들을 째려본다."
+					}
+				},
+				{
+					"speaker": "dax",
+					"content": {
+						"korean": "사장님, 저희 눈치 보느라 안에서 장사도 제대로 못 하겠네요!"
+					}
+				}
+			]
+		}
+	],
+	"tags": [
+		"yashik_sajang",
+		"dax"
+	],
+	"_design": {
+		"slot": "C",
+		"kind": "rep",
+		"person": {
+			"id": "yashik_sajang",
+			"name": "야식트럭 사장",
+			"role": "야식트럭 사장"
+		},
+		"wants": "주인공들이 자기 장사 앞에서 얼쩡거리는 걸 그만두고 가거나, 최소한 방해하지 않기를 바란다.",
+		"rule_link": "상황을 끝까지 지켜보지 않고, 겉모습만 보고 판단하면 오해가 생기고 일을 그르칠 수 있다.",
+		"rep": "fighting-",
+		"events": {},
+		"flags": {
+			"noticed_by_sajang": {
+				"kind": "bad",
+				"boss_penalty": -1,
+				"label": {
+					"korean": "사장에게 들킴"
+				},
+				"boss_line": {
+					"korean": "야식트럭 사장이 당신이 컨테이너로 가는 것을 지켜보고 있다."
+				}
+			},
+			"sajang_distraction_cleared": {
+				"kind": "good",
+				"boss_penalty": 1,
+				"label": {
+					"korean": "사장 방해 제거"
+				},
+				"boss_choice": {
+					"korean": "야식트럭 사장이 컨테이너 주변을 신경 쓰지 않아 당신이 접근하기 쉽다."
+				}
+			},
+			"sajang_intimidated": {
+				"kind": "good",
+				"boss_penalty": 2,
+				"label": {
+					"korean": "사장 위협"
+				},
+				"boss_choice": {
+					"korean": "야식트럭 사장이 당신의 위협 때문에 컨테이너 주변을 어슬렁거리지 않는다."
+				}
+			}
+		}
+	}
+}

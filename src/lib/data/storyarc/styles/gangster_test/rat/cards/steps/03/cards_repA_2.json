@@ -1,0 +1,401 @@
+{
+	"cards": [
+		{
+			"background_tags": [
+				"office",
+				"night",
+				"dim",
+				"empty",
+				"tense"
+			],
+			"person": {
+				"id": "night_accountant",
+				"name": "회계팀 야근 직원",
+				"role": "회계팀 야근 직원"
+			},
+			"key": "hidden_ledger_deal",
+			"dialogue": [
+				{
+					"text": "자료실 입구에서 야근 직원이 손으로 복잡한 서류를 가리고 있다.",
+					"speaker": "narrator"
+				},
+				{
+					"text": "당신이 그… 자기 몫은 기가 막히게 챙긴다는 해결사죠? 지금은 안 됩니다. 장부가… 장부가 비어 있어서…",
+					"speaker": "night_accountant"
+				},
+				{
+					"text": "저 사람이 뭘 숨기는 것 같아요. 얼굴이 파래요!",
+					"speaker": "dax"
+				},
+				{
+					"speaker": "night_accountant",
+					"text": "이 계산이… 이 계산이 맞지 않습니다! 누가 보든 안 됩니다!"
+				},
+				{
+					"text": "회계팀 야근 직원은 자료실 문을 반쯤 가린 채 서류 뭉치를 품에 숨기듯 붙잡고 있다.",
+					"speaker": "narrator"
+				}
+			],
+			"choices": [
+				{
+					"effects": {
+						"gold": 80,
+						"echo": 8,
+						"reason": -10
+					},
+					"risk_bad": {
+						"gold": -30,
+						"result": [
+							{
+								"speaker": "narrator",
+								"text": "당신이 의미심장한 눈빛으로 장부를 가리자 야근 직원이 놀라 비명을 지른다."
+							},
+							{
+								"speaker": "night_accountant",
+								"text": "으악! 저… 저는 아무것도 모릅니다!"
+							},
+							{
+								"text": "쉿! 저 사람이 도망가버렸어요! 문을 잠그고 가버렸네요!",
+								"speaker": "dax"
+							}
+						],
+						"reward": []
+					},
+					"text": "개인적인 이득이 걸린 듯한 장부를 덮어주며 나중에 한몫 챙길 것을 암시한다.",
+					"result": [
+						{
+							"text": "당신이 의미심장한 눈빛으로 장부를 가리자 야근 직원이 흠칫한다.",
+							"speaker": "narrator"
+						},
+						{
+							"text": "아… 알겠습니다. 문은… 열어 드릴게요.",
+							"speaker": "night_accountant"
+						},
+						{
+							"speaker": "dax",
+							"text": "와, 저 사람이 그냥 문을 열어 주네요! 당신 진짜 대단해요!"
+						}
+					],
+					"mbti": "TP",
+					"flag": {
+						"label": "회계사 협박 실패",
+						"key": "accountant_blackmail_fail",
+						"boss_text": "회계팀 직원이 당신에게 앙심을 품고 서버실 전원을 차단했다."
+					},
+					"path": "easy"
+				},
+				{
+					"effects": {
+						"echo": -5,
+						"fighting": 15,
+						"community": 10
+					},
+					"path": "hard",
+					"flag": {
+						"label": "회계사 장부 확인",
+						"key": "accountant_ledger_revealed",
+						"boss_text": "회계팀 직원이 서버실 비밀번호를 알려주며 협조했다."
+					},
+					"risk_bad": {
+						"gold": -20,
+						"result": [
+							{
+								"speaker": "narrator",
+								"text": "당신이 단호하게 장부 확인을 요구하자 야근 직원이 오히려 큰소리친다."
+							},
+							{
+								"speaker": "night_accountant",
+								"text": "이 장부는 저의 목숨과 같습니다! 절대 못 줍니다!"
+							},
+							{
+								"text": "으악! 저 사람이 장부를 찢어버렸어요!",
+								"speaker": "dax"
+							}
+						],
+						"reward": []
+					},
+					"text": "야근 직원의 사정을 봐주지 않고 장부를 당장 확인하겠다며 자료실 문을 열라고 요구한다.",
+					"result": [
+						{
+							"speaker": "narrator",
+							"text": "당신이 단호하게 장부 확인을 요구하자 야근 직원이 울상을 짓는다."
+						},
+						{
+							"text": "어차피 들통날 거였겠죠. 자, 보세요!",
+							"speaker": "night_accountant"
+						},
+						{
+							"speaker": "dax",
+							"text": "으…음. 저 사람 표정이 안 좋은데요?"
+						}
+					],
+					"mbti": "TJ",
+					"reward": [
+						"defense_up"
+					]
+				},
+				{
+					"flag": {
+						"key": "accountant_secret_deal",
+						"boss_text": "회계팀 직원이 당신에게 서버실 문이 열려 있는 시간을 미리 알려줬다.",
+						"label": "회계사 비밀 거래"
+					},
+					"path": "stat",
+					"text": "야근 직원의 사적인 이득에 초점을 맞춰, 자신만이 그의 비밀을 지켜줄 수 있다고 설득한다.",
+					"result": [
+						{
+							"text": "당신의 말에 야근 직원의 눈빛이 흔들린다. 그는 결국 품속의 장부를 건넨다.",
+							"speaker": "narrator"
+						},
+						{
+							"text": "제… 제가 가진 건 이것뿐입니다.",
+							"speaker": "night_accountant"
+						},
+						{
+							"text": "저 사람이 당신한테만 뭔가를 보여주네요!",
+							"speaker": "dax"
+						}
+					],
+					"mbti": "NT",
+					"effects": {
+						"gold": 100,
+						"echo": 10,
+						"community": -20
+					}
+				}
+			],
+			"rule_link": "눈앞에 보이는 회계팀 직원의 은밀한 행동이 무엇을 의미하는지, 그의 개인적인 이득을 위한 것인지 아니면 더 큰 그림의 일부인지 따져 보게 한다.",
+			"title": "숨겨진 장부 거래",
+			"wants": "자신의 은밀한 거래 내역이 담긴 장부를 숨기려 한다.",
+			"no": 1,
+			"slot": "A",
+			"kind": "rep",
+			"rep_dir": "community-"
+		},
+		{
+			"title": "공동체 기금의 난관",
+			"rule_link": "눈앞의 직원이 공동체를 위해 노력하는 모습과 그의 계산 오류가 무엇을 증명하는지, 보이는 대로 믿을지 아니면 숨겨진 다른 의미를 따져볼지 고민하게 한다.",
+			"wants": "부두 어르신 기금 장부의 복잡한 오류를 해결할 자료를 찾고 싶어 한다.",
+			"person": {
+				"id": "night_accountant",
+				"name": "회계팀 야근 직원",
+				"role": "회계팀 야근 직원"
+			},
+			"choices": [
+				{
+					"mbti": "SJ",
+					"effects": {
+						"echo": 10,
+						"gold": 50,
+						"community": 15
+					},
+					"path": "easy",
+					"result": [
+						{
+							"text": "당신이 장부를 살펴보자 야근 직원의 얼굴에 희망이 돈다.",
+							"speaker": "narrator"
+						},
+						{
+							"speaker": "night_accountant",
+							"text": "오, 역시 당신이라면…! 고맙습니다!"
+						},
+						{
+							"text": "와, 저 사람이 웃어요! 당신 덕분이에요!",
+							"speaker": "dax"
+						}
+					],
+					"risk_bad": {
+						"result": [
+							{
+								"speaker": "narrator",
+								"text": "당신이 장부를 살펴보자 야근 직원이 너무 기뻐하다가 서류 뭉치를 쏟아버린다."
+							},
+							{
+								"speaker": "night_accountant",
+								"text": "으악! 다 섞여버렸습니다!"
+							},
+							{
+								"speaker": "dax",
+								"text": "으음… 더 엉망이 된 것 같은데요?"
+							}
+						],
+						"gold": -20,
+						"reward": []
+					},
+					"reward": [],
+					"text": "공동체 기금 장부의 오류를 함께 해결하겠다고 나서, 당장 도움을 준다.",
+					"flag": {
+						"key": "accountant_help_fail",
+						"label": "회계사 돕기 실패",
+						"boss_text": "회계팀 직원이 장부 오류 때문에 서버실 문을 잠가버렸다."
+					}
+				},
+				{
+					"path": "hard",
+					"mbti": "ET",
+					"reward": [
+						"defense_up"
+					],
+					"risk_bad": {
+						"reward": [],
+						"gold": -30,
+						"result": [
+							{
+								"text": "당신의 말에 야근 직원이 발끈하며 문을 더 굳게 막아선다.",
+								"speaker": "narrator"
+							},
+							{
+								"text": "제가 감히 이런 짓을 할 리가 없지 않습니까!",
+								"speaker": "night_accountant"
+							},
+							{
+								"text": "으악! 저 사람이 소리 질러요! 다른 직원들이 올지도 몰라요!",
+								"speaker": "dax"
+							}
+						]
+					},
+					"result": [
+						{
+							"speaker": "narrator",
+							"text": "당신의 말에 야근 직원의 얼굴에서 웃음기가 사라진다. 그는 마지못해 문을 활짝 연다."
+						},
+						{
+							"text": "그… 그렇게까지… 좋습니다, 보세요!",
+							"speaker": "night_accountant"
+						},
+						{
+							"text": "어… 문은 열렸는데… 왠지 좀 찜찜한데요.",
+							"speaker": "dax"
+						}
+					],
+					"flag": {
+						"label": "공동체 기금 의혹 제기",
+						"boss_text": "회계팀 직원이 공동체 기금 장부 사본을 건네며 협조했다.",
+						"key": "accountant_fund_suspicion"
+					},
+					"text": "공동체 기금 장부의 오류가 의도적일 수 있다며, 자료실 내부를 조사하겠다고 단호하게 말한다.",
+					"effects": {
+						"fighting": 10,
+						"echo": -8,
+						"reason": 15
+					}
+				},
+				{
+					"text": "공동체를 위하는 마음으로, 야근 직원이 처한 상황의 진실을 알아내겠다고 설득하며 자료실 문을 열라고 한다.",
+					"flag": {
+						"label": "회계사 신뢰 획득",
+						"boss_text": "회계팀 직원이 서버실 문이 열려 있는 정확한 시간을 알려줬다.",
+						"key": "accountant_community_trust"
+					},
+					"result": [
+						{
+							"text": "당신의 진심 어린 말에 야근 직원이 고개를 끄덕인다. 그는 자료실 문을 열고 당신을 들인다.",
+							"speaker": "narrator"
+						},
+						{
+							"speaker": "night_accountant",
+							"text": "저 혼자서는 안 됐을 겁니다."
+						},
+						{
+							"speaker": "dax",
+							"text": "저 아저씨, 방금 눈물 글썽거린 것 같지 않아요?"
+						}
+					],
+					"effects": {
+						"reason": 10,
+						"community": 20,
+						"echo": 15
+					},
+					"path": "stat",
+					"mbti": "NF",
+					"reward": [
+						"shield"
+					]
+				},
+				{
+					"text": "장부 오류로 고생하는 야근 직원을 위해, 자료실 문 앞에 핫팩을 붙여주며 응원한다.",
+					"risk_bad": {
+						"result": [
+							{
+								"text": "당신이 자료실 문에 핫팩을 붙여주자 야근 직원이 당황하며 핫팩을 떼어낸다.",
+								"speaker": "narrator"
+							},
+							{
+								"speaker": "night_accountant",
+								"text": "이러지 마세요! 중요한 서류들이 다 녹습니다!"
+							},
+							{
+								"text": "으악! 핫팩 때문에 서류에 얼룩이 생겼어요!",
+								"speaker": "dax"
+							}
+						],
+						"reward": [
+							"hp_down"
+						]
+					},
+					"result": [
+						{
+							"text": "당신이 자료실 문에 핫팩을 붙여주자 야근 직원이 감동한 표정을 짓는다.",
+							"speaker": "narrator"
+						},
+						{
+							"text": "핫팩은… 필요 없지만… 고맙습니다…!",
+							"speaker": "night_accountant"
+						},
+						{
+							"text": "저 사람 얼굴이 좀 풀렸네요!",
+							"speaker": "dax"
+						}
+					],
+					"path": "fun",
+					"effects": {
+						"gold": 30,
+						"echo": 12,
+						"community": 25
+					},
+					"mbti": "FP"
+				}
+			],
+			"key": "community_fund_struggle",
+			"no": 2,
+			"dialogue": [
+				{
+					"text": "자료실 입구에서 야근 직원이 땀을 뻘뻘 흘리며 서류 뭉치와 씨름하고 있다.",
+					"speaker": "narrator"
+				},
+				{
+					"text": "당신이 그… 동네 사람 일이라면 발 벗고 나선다는 해결사죠?",
+					"speaker": "night_accountant"
+				},
+				{
+					"text": "지금은 안 됩니다. 장부가… 장부가 비어 있어서…",
+					"speaker": "night_accountant"
+				},
+				{
+					"speaker": "dax",
+					"text": "저 사람이 혼자서 뭘 저렇게 열심히 하는 걸까요?"
+				},
+				{
+					"speaker": "night_accountant",
+					"text": "이 계산이… 이 계산이 맞지 않습니다! 부두 어르신 기금 장부가 엉망이에요!"
+				},
+				{
+					"text": "회계팀 야근 직원은 자료실 문을 붙잡은 채 바닥에 흩어진 서류를 가리키며 한숨을 쉰다.",
+					"speaker": "narrator"
+				}
+			],
+			"background_tags": [
+				"office",
+				"night",
+				"bright",
+				"empty",
+				"struggling"
+			],
+			"slot": "A",
+			"kind": "rep",
+			"rep_dir": "community+"
+		}
+	],
+	"errors": [],
+	"prompt_hash": "e559987b1ce67faade03df9e65ed5842f1efd000"
+}

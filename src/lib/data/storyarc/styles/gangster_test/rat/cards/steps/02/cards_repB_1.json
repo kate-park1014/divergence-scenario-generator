@@ -1,0 +1,395 @@
+{
+	"cards": [
+		{
+			"title": "쥐새끼는 혼자 잡을 수 없습니다",
+			"dialogue": [
+				{
+					"text": "어… 저기, 혹시 그 소문 자자한 '돕는 해결사' 분들 아니십니까?",
+					"speaker": "security_chief"
+				},
+				{
+					"speaker": "security_chief",
+					"text": "차 안에서 인기척이… 어휴, 제가 괜히 주책맞게… 죄송합니다만, 잠시 실례해도 될까요?"
+				},
+				{
+					"text": "저기… 새로 들어온 컨테이너 하나가 영 수상쩍어서요.",
+					"speaker": "security_chief"
+				},
+				{
+					"text": "제가 혼자 확인하기엔 좀… 벅차서 말입니다. 어쩌면 좋을지…",
+					"speaker": "security_chief"
+				},
+				{
+					"text": "경비 반장님이 직접 부탁하시다니, 저희가 정말 소문났나 봐요!",
+					"speaker": "dax"
+				}
+			],
+			"choices": [
+				{
+					"effects": {
+						"gold": 100
+					},
+					"mbti": "NF",
+					"text": "지금은 잠복 중이라 곤란하다며 경비 반장을 설득해 돌려보낸다.",
+					"path": "easy",
+					"risk_bad": {
+						"reward": [
+							"hp_down"
+						],
+						"result": [
+							{
+								"text": "당신이 차분히 설명했지만, 경비 반장은 초조해하며 자꾸만 몸을 비틀었다.",
+								"speaker": "narrator"
+							},
+							{
+								"speaker": "narrator",
+								"text": "결국 그가 손수건을 떨어뜨리려다 실수로 차 문고리를 건드려 소리가 났다."
+							},
+							{
+								"speaker": "dax",
+								"text": "아! 소리 나면 안 되는데…!"
+							}
+						],
+						"gold": -20
+					},
+					"result": [
+						{
+							"speaker": "narrator",
+							"text": "당신의 정중한 설명에 경비 반장은 고개를 끄덕이며 돌아갔다. 그는 당신의 협조적인 태도에 안심한 듯 보였다."
+						},
+						{
+							"speaker": "dax",
+							"text": "휴, 반장님이 겨우 물러났네요. 조마조마했어요!"
+						}
+					],
+					"flag": {
+						"key": "chief_distracted_you",
+						"label": "경비 반장 방해",
+						"boss_text": "경비 반장이 당신을 계속 불러세워 한 턴을 날린다."
+					}
+				},
+				{
+					"mbti": "TP",
+					"text": "경비 반장에게 지금은 중요한 작전 중이라며, 조용히 자리를 지키라고 경고한다.",
+					"risk_bad": {
+						"gold": -20,
+						"reward": [],
+						"result": [
+							{
+								"text": "당신의 경고에 경비 반장은 놀라서 뒷걸음질 쳤다.",
+								"speaker": "narrator"
+							},
+							{
+								"speaker": "narrator",
+								"text": "그러나 발을 헛디뎌 주변에 쌓인 고철 더미를 와장창 무너뜨리고 말았다."
+							},
+							{
+								"text": "맙소사! 저 소리에 다 들키겠어요!",
+								"speaker": "dax"
+							}
+						]
+					},
+					"path": "hard",
+					"effects": {
+						"echo": -5,
+						"fighting": 15
+					},
+					"result": [
+						{
+							"text": "당신의 강경한 경고에 경비 반장은 손수건을 쥔 채 얼어붙었다. 그는 황급히 고개를 숙이며 자리를 떴다.",
+							"speaker": "narrator"
+						},
+						{
+							"text": "반장님, 저희가 너무 무서웠나 봐요…",
+							"speaker": "dax"
+						}
+					],
+					"reward": [
+						"intelligence_up"
+					],
+					"flag": {
+						"key": "chief_feared_you",
+						"label": "경비 반장 겁먹음",
+						"boss_text": "경비 반장이 당신을 두려워해 방해꾼들을 막아준다."
+					}
+				},
+				{
+					"reward": [
+						"defense_up"
+					],
+					"result": [
+						{
+							"text": "당신이 약속하자 경비 반장은 안도하며 연신 고개를 숙였다.",
+							"speaker": "narrator"
+						},
+						{
+							"text": "그는 당신의 협력적인 태도에 깊이 감명받은 듯 보였다.",
+							"speaker": "narrator"
+						},
+						{
+							"text": "와, 반장님 표정이 완전히 풀렸어요!",
+							"speaker": "dax"
+						}
+					],
+					"path": "stat",
+					"flag": {
+						"label": "경비 반장 신뢰",
+						"key": "chief_trusted_you",
+						"boss_text": "경비 반장이 당신을 믿고 방해꾼들을 설득해준다."
+					},
+					"text": "경비 반장의 부탁을 듣고, 나중에 처리해 줄 테니 일단 조용히 해 달라고 말한다.",
+					"effects": {
+						"community": 20,
+						"echo": 10,
+						"fighting": -10
+					},
+					"mbti": "IS"
+				}
+			],
+			"key": "cooperative_chief_request",
+			"rule_link": "눈앞의 작은 부탁에 섣불리 개입하기보다, 큰 그림을 보고 기다리는 것이 더 큰 진실을 밝힐 수 있다.",
+			"background_tags": [
+				"container_yard",
+				"night",
+				"foggy",
+				"quiet",
+				"tense"
+			],
+			"no": 1,
+			"wants": "경비 반장이 야적장에 새로 들어온 수상한 컨테이너를 조사해 달라고 부탁한다. 그는 혼자 처리하기 힘든 일이라 '협력적인 해결사'인 주인공에게 도움을 청한다.",
+			"person": {
+				"id": "security_chief",
+				"name": "경비 반장",
+				"role": "야적장 경비 반장"
+			},
+			"slot": "B",
+			"kind": "rep",
+			"rep_dir": "fighting-"
+		},
+		{
+			"key": "aggressive_chief_warning",
+			"title": "냄새나는 짐은 알아서 치워야지",
+			"no": 2,
+			"person": {
+				"id": "security_chief",
+				"name": "경비 반장",
+				"role": "야적장 경비 반장"
+			},
+			"choices": [
+				{
+					"path": "easy",
+					"result": [
+						{
+							"text": "당신의 으름장에 경비 반장은 얼굴이 새파래졌다.",
+							"speaker": "narrator"
+						},
+						{
+							"speaker": "narrator",
+							"text": "그는 당장 사람을 불러 쓰레기 더미를 치우겠다고 맹세하며 자리를 피했다."
+						},
+						{
+							"text": "반장님, 이제 저희만 보면 도망가겠어요!",
+							"speaker": "dax"
+						}
+					],
+					"reward": [
+						"attack_up"
+					],
+					"flag": {
+						"boss_text": "경비 반장이 당신을 두려워해 방해꾼들을 막아준다.",
+						"label": "경비 반장 겁먹음",
+						"key": "chief_feared_you_trash"
+					},
+					"effects": {
+						"echo": -10,
+						"fighting": 20
+					},
+					"risk_bad": {
+						"result": [
+							{
+								"speaker": "narrator",
+								"text": "당신의 으름장에 경비 반장은 너무 놀라 발을 헛디뎠다."
+							},
+							{
+								"speaker": "narrator",
+								"text": "그는 쓰레기 더미를 향해 넘어지면서, 역겨운 냄새가 진동하는 오물을 차 안으로 튀기고 말았다."
+							},
+							{
+								"text": "으악! 냄새! 이 차에서 썩은 내가 나겠어요!",
+								"speaker": "dax"
+							}
+						],
+						"reward": [
+							"hp_down"
+						],
+						"gold": -40
+					},
+					"text": "경비 반장의 부탁에 짜증을 내며, 당장 치우지 않으면 직접 치워버리겠다고 으름장을 놓는다.",
+					"mbti": "TJ"
+				},
+				{
+					"text": "경비 반장에게 지금은 잠복 중이니, 나중에 직접 해결하겠다고 안심시킨다.",
+					"mbti": "FP",
+					"risk_bad": {
+						"gold": -20,
+						"reward": [],
+						"result": [
+							{
+								"text": "당신이 침착하게 설명하려는데, 경비 반장이 당신의 표정을 오해했다.",
+								"speaker": "narrator"
+							},
+							{
+								"speaker": "narrator",
+								"text": "그는 당신이 싸움을 걸려는 줄 알고 비명을 지르며 도망가 버렸다."
+							},
+							{
+								"text": "어… 설명도 못 했는데 그냥 도망가 버렸네요.",
+								"speaker": "dax"
+							}
+						]
+					},
+					"effects": {
+						"community": 15,
+						"echo": 5
+					},
+					"reward": [
+						"heal"
+					],
+					"result": [
+						{
+							"text": "당신이 침착하게 설명하자 경비 반장은 의아한 표정을 지었다.",
+							"speaker": "narrator"
+						},
+						{
+							"speaker": "narrator",
+							"text": "그는 당신의 뜻밖의 침착함에 당황한 듯했지만, 일단 물러났다."
+						},
+						{
+							"text": "반장님이 저희가 이렇게 점잖을 줄은 몰랐나 봐요!",
+							"speaker": "dax"
+						}
+					],
+					"path": "hard",
+					"flag": {
+						"boss_text": "경비 반장이 당신의 의중을 알 수 없어 오히려 방해꾼들을 헷갈리게 한다.",
+						"key": "chief_confused_but_helped",
+						"label": "경비 반장 혼란"
+					}
+				},
+				{
+					"path": "stat",
+					"flag": {
+						"label": "경비 반장 복종",
+						"key": "chief_obeyed_you",
+						"boss_text": "경비 반장이 당신의 명령에 따라 방해꾼들의 움직임을 막아준다."
+					},
+					"text": "쓰레기 더미를 직접 가리키며, 저건 당신이 처리할 일이 아니니 당장 치우라고 명령한다.",
+					"effects": {
+						"fighting": 25,
+						"reason": -10
+					},
+					"result": [
+						{
+							"text": "당신의 단호한 명령에 경비 반장은 반항할 엄두도 못 냈다.",
+							"speaker": "narrator"
+						},
+						{
+							"text": "그는 땀을 삐질삐질 흘리며 당장 쓰레기를 치우겠다고 약속했다.",
+							"speaker": "narrator"
+						},
+						{
+							"speaker": "dax",
+							"text": "역시 저희 리더님! 한마디로 해결하네요!"
+						}
+					],
+					"reward": [
+						"attack_up"
+					],
+					"mbti": "SP"
+				},
+				{
+					"path": "fun",
+					"result": [
+						{
+							"speaker": "narrator",
+							"text": "당신이 경비 반장의 손수건을 낚아채 쓰레기 더미 한복판에 던져버렸다."
+						},
+						{
+							"speaker": "narrator",
+							"text": "경비 반장은 경악한 표정으로 자신의 손수건을 바라보더니, 울상을 지으며 쓰레기 더미로 달려갔다."
+						},
+						{
+							"text": "저… 저건 좀 너무한 거 아니에요? 반장님 얼굴이 사색이 됐어요!",
+							"speaker": "dax"
+						}
+					],
+					"reward": [
+						"cooldown_reset"
+					],
+					"risk_bad": {
+						"reward": [
+							"hp_down"
+						],
+						"result": [
+							{
+								"speaker": "narrator",
+								"text": "당신이 경비 반장의 손수건을 뺏으려 하자, 경비 반장이 놀라 손을 휘둘렀다."
+							},
+							{
+								"speaker": "narrator",
+								"text": "손수건이 당신의 뺨을 스치고 날아가 차 안의 물건이 와르르 쏟아졌다."
+							},
+							{
+								"text": "아악! 반장님, 저희 다 들키겠어요!",
+								"speaker": "dax"
+							}
+						],
+						"gold": -30
+					},
+					"effects": {
+						"reason": 20,
+						"echo": -5
+					},
+					"mbti": "ES",
+					"text": "경비 반장의 손수건을 뺏어 쓰레기 더미에 던져주며 직접 치우라고 한다."
+				}
+			],
+			"rule_link": "눈앞의 성가신 일을 힘으로 해결하려 들기보다, 상황의 본질을 파악하고 기다리는 것이 더 현명한 대처일 수 있다.",
+			"background_tags": [
+				"container_yard",
+				"night",
+				"foggy",
+				"quiet",
+				"tense"
+			],
+			"wants": "경비 반장이 야적장 구석에 버려진 냄새나는 쓰레기 더미를 치워달라고 부탁한다. 그는 '주먹이 먼저 나가는 해결사'인 주인공이 귀찮은 일을 빨리 처리해 주길 바란다.",
+			"dialogue": [
+				{
+					"speaker": "security_chief",
+					"text": "흐읍… 혹시 그 '싸움꾼 해결사' 분들 아니십니까?"
+				},
+				{
+					"text": "차 안에서 뭔가 기운이… 어휴, 제가 괜히 또 이런 부탁을 드리는 건지… 죄송합니다만…",
+					"speaker": "security_chief"
+				},
+				{
+					"text": "저기… 야적장 구석에 냄새나는 쓰레기 더미가 있는데, 제가 치우기엔 좀…",
+					"speaker": "security_chief"
+				},
+				{
+					"text": "곤란해서요. 어떻게 좀… 해결해 주실 수 없을지…",
+					"speaker": "security_chief"
+				},
+				{
+					"text": "경비 반장님, 저번에 저희 보고 무섭다고 하더니, 이제 부탁까지 하네요?",
+					"speaker": "dax"
+				}
+			],
+			"slot": "B",
+			"kind": "rep",
+			"rep_dir": "fighting+"
+		}
+	],
+	"errors": [],
+	"prompt_hash": "b6885996a94376fb44331d4a141a9a84c1b15431"
+}

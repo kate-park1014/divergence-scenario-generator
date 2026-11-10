@@ -1,0 +1,271 @@
+{
+	"id": "card_05_forklift_blockage_b",
+	"title": {
+		"korean": "수상한 지게차"
+	},
+	"intensity": "calm",
+	"after_story": 3,
+	"before_story": 5,
+	"background_tags": [
+		"foggy_road",
+		"dock",
+		"night",
+		"sparse_crowd",
+		"tense"
+	],
+	"background_image": "https://imagedelivery.net/WTEqQNGFb-l-IHS6IGnzUQ/c862fd6d-ba3d-4511-c9c5-df6eb49a9300/public",
+	"dialogue": [
+		{
+			"speaker": "narrator",
+			"content": {
+				"korean": "안개 낀 부두 도로에서, 지게차 한 대가 낡은 상자들을 싣고 길을 막고 있다."
+			}
+		},
+		{
+			"speaker": "dax",
+			"content": {
+				"korean": "저 지게차, 뭘 저렇게 옮기는 거죠? 안개 때문에 잘 보이지도 않는데."
+			}
+		},
+		{
+			"speaker": "narrator",
+			"content": {
+				"korean": "지게차 옆에는 야간 경비원이 손전등을 흔들며 주변을 살피고 있다."
+			}
+		},
+		{
+			"speaker": "night_watchman",
+			"content": {
+				"korean": "뉘신지? 이 시간엔 출입 금지입니다!"
+			}
+		},
+		{
+			"speaker": "dax",
+			"content": {
+				"korean": "어휴, 저 경비원 아저씨는 또 왜 저렇게 경계를 심하게 하는지..."
+			}
+		}
+	],
+	"choices": [
+		{
+			"text": {
+				"korean": "경비원에게 급하다고 말하며 지게차를 빨리 치워달라고 요구한다."
+			},
+			"path": "easy",
+			"mbti": "IP",
+			"effects": {
+				"echo": -5,
+				"fighting": 10
+			},
+			"reward": [
+				"attack_up"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "당신은 경비원에게 급하다고 말하며 길을 비켜달라고 한다."
+					}
+				},
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "경비원은 못마땅한 표정으로 지게차를 천천히 옮긴다."
+					}
+				},
+				{
+					"speaker": "dax",
+					"content": {
+						"korean": "겨우 지나가네요!"
+					}
+				}
+			],
+			"risk": {
+				"chance": "mid",
+				"bad": {
+					"effects": {
+						"gold": -30
+					},
+					"reward": [],
+					"result": [
+						{
+							"speaker": "narrator",
+							"content": {
+								"korean": "당신의 재촉에 경비원이 당황하여 지게차를 급하게 움직인다."
+							}
+						},
+						{
+							"speaker": "narrator",
+							"content": {
+								"korean": "지게차에 실려 있던 낡은 상자 하나가 떨어져 바닥에 부딪히며 깨진다."
+							}
+						},
+						{
+							"speaker": "dax",
+							"content": {
+								"korean": "으악! 저건 뭐예요? 깨진 상자 안에서 낡은 해적 지도가 튀어나왔어요!"
+							}
+						}
+					]
+				}
+			}
+		},
+		{
+			"text": {
+				"korean": "경비원에게 지게차로 무엇을 옮기고 있는지 정중하게 묻는다."
+			},
+			"path": "hard",
+			"mbti": "IF",
+			"effects": {
+				"echo": 10,
+				"community": 10
+			},
+			"reward": [
+				"defense_up"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "당신이 경비원에게 무엇을 옮기는지 묻자, 경비원이 안도한 표정으로 답한다."
+					}
+				},
+				{
+					"speaker": "night_watchman",
+					"content": {
+						"korean": "아, 이게 다 부두 창고 정리 작업이라서요. 곧 끝납니다!"
+					}
+				},
+				{
+					"speaker": "dax",
+					"content": {
+						"korean": "오해였네요!"
+					}
+				}
+			],
+			"risk": {
+				"chance": "high",
+				"bad": {
+					"effects": {
+						"gold": -20
+					},
+					"reward": [],
+					"result": [
+						{
+							"speaker": "narrator",
+							"content": {
+								"korean": "당신이 경비원에게 묻자, 경비원이 당신을 의심스러운 눈초리로 바라본다."
+							}
+						},
+						{
+							"speaker": "night_watchman",
+							"content": {
+								"korean": "당신들이 그걸 알아서 뭐하게? 수상한 자들 같으니!"
+							}
+						},
+						{
+							"speaker": "dax",
+							"content": {
+								"korean": "어휴, 괜히 물어봤다가 더 의심만 샀네요."
+							}
+						}
+					]
+				}
+			}
+		},
+		{
+			"text": {
+				"korean": "{actor}이(가) 경비원에게 부두 관리 규정을 언급하며 지게차를 옮기도록 설득한다."
+			},
+			"path": "lock",
+			"mbti": "TJ",
+			"require": {
+				"mbti": "TJ"
+			},
+			"effects": {
+				"reason": 10,
+				"fighting": -10
+			},
+			"reward": [
+				"intelligence_up"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "{actor}이(가) 경비원에게 부두 관리 규정을 정확히 설명한다."
+					}
+				},
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "경비원은 납득한 듯 고개를 끄덕이며 지게차를 길가로 옮긴다."
+					}
+				},
+				{
+					"speaker": "dax",
+					"content": {
+						"korean": "역시 논리적으로 설명하는 게 최고네요!"
+					}
+				}
+			]
+		},
+		{
+			"text": {
+				"korean": "경비원에게 빨리 지나가야 한다며 급행료를 건넨다."
+			},
+			"path": "gold",
+			"mbti": "SP",
+			"require": {
+				"stat": "gold",
+				"op": ">=",
+				"value": 80
+			},
+			"effects": {
+				"gold": -80,
+				"echo": 5
+			},
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "당신은 경비원에게 급행료를 건넨다."
+					}
+				},
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "경비원은 눈치를 보며 돈을 받아들고 얼른 지게차를 치운다."
+					}
+				},
+				{
+					"speaker": "dax",
+					"content": {
+						"korean": "출입 금지라더니 지게차가 제일 빨리 비켜 주네요."
+					}
+				}
+			]
+		}
+	],
+	"tags": [
+		"night_watchman",
+		"dax"
+	],
+	"_design": {
+		"slot": "B",
+		"kind": "normal",
+		"person": {
+			"role": "부두 야간 경비원",
+			"name": "야간 경비원",
+			"id": "night_watchman"
+		},
+		"wants": "부두의 물건을 안전하게 옮기고 싶어 한다.",
+		"rule_link": "안개 속에서 길을 막는 수상한 지게차를 보고 무작정 행동하기보다 먼저 사정을 물어본다.",
+		"events": {},
+		"flags": {}
+	}
+}

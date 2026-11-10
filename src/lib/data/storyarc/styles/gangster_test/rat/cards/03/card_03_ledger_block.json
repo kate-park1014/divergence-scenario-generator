@@ -1,0 +1,311 @@
+{
+	"id": "card_03_ledger_block",
+	"title": {
+		"korean": "장부와 씨름하는 자"
+	},
+	"intensity": "calm",
+	"after_story": 1,
+	"before_story": 3,
+	"condition": {
+		"leaning": "fighting-",
+		"among": [
+			"fighting-",
+			"fighting+",
+			"community-",
+			"community+",
+			"reason-",
+			"reason+"
+		],
+		"min": 20
+	},
+	"urgency": 8,
+	"leaning": "fighting-",
+	"background_tags": [
+		"office_basement",
+		"night_shift",
+		"dim_light",
+		"no_crowd",
+		"tense_atmosphere"
+	],
+	"background_image": "https://imagedelivery.net/WTEqQNGFb-l-IHS6IGnzUQ/19262ed2-d440-4ec4-8977-f580a3b06000/public",
+	"dialogue": [
+		{
+			"speaker": "narrator",
+			"content": {
+				"korean": "사무실 지하 자료실 입구에서 한 남자가 낡은 장부를 들고 중얼거린다. 두꺼운 안경을 연신 고쳐 쓴다."
+			}
+		},
+		{
+			"speaker": "night_accountant",
+			"content": {
+				"korean": "아, 어서 오십시오. 흐음… 당신이 그, 말보다 주먹이 먼저 나가는 해결사십니까?"
+			}
+		},
+		{
+			"speaker": "night_accountant",
+			"content": {
+				"korean": "지금은 안 됩니다. 장부가… 장부가 비어 있어서…"
+			}
+		},
+		{
+			"speaker": "dax",
+			"content": {
+				"korean": "저 사람이 길을 막고 있네요! 왜 저러는 거예요?"
+			}
+		}
+	],
+	"choices": [
+		{
+			"text": {
+				"korean": "장부를 든 직원의 팔을 잡고 길을 비키라고 한다."
+			},
+			"path": "easy",
+			"mbti": "TJ",
+			"flag": "accountant_frightened_flag",
+			"effects": {
+				"fighting": -20,
+				"gold": 50,
+				"echo": -5
+			},
+			"reward": [
+				"attack_up"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "직원은 깜짝 놀라 장부를 떨어뜨리고 뒷걸음질 친다. 자료실 문이 활짝 열린다."
+					}
+				},
+				{
+					"speaker": "dax",
+					"content": {
+						"korean": "어휴, 저러다 장부도 찢어지겠어요!"
+					}
+				}
+			],
+			"risk": {
+				"chance": "mid",
+				"bad": {
+					"effects": {
+						"gold": -30
+					},
+					"reward": [],
+					"result": [
+						{
+							"speaker": "narrator",
+							"content": {
+								"korean": "직원이 엉겁결에 장부를 휘두르다 당신의 턱을 때린다. 직원은 놀라 비명을 지른다."
+							}
+						},
+						{
+							"speaker": "dax",
+							"content": {
+								"korean": "앗, 괜찮으세요? 직원이 경비실에 전화하려고 해요!"
+							}
+						}
+					]
+				}
+			}
+		},
+		{
+			"text": {
+				"korean": "침착하게 자료실의 중요성과 긴급성을 설명한다."
+			},
+			"path": "hard",
+			"mbti": "NF",
+			"flag": "accountant_reasoned_flag",
+			"effects": {
+				"echo": 10,
+				"fighting": 20,
+				"community": 10
+			},
+			"reward": [
+				"intelligence_up"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "직원은 당신의 차분한 설명에 잠시 당황하지만, 이내 장부를 끌어안고 횡설수설한다."
+					}
+				},
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "그러나 결국 당신에게 길을 비켜준다."
+					}
+				},
+				{
+					"speaker": "dax",
+					"content": {
+						"korean": "휴, 말로도 통하긴 하네요!"
+					}
+				}
+			],
+			"risk": {
+				"chance": "high",
+				"bad": {
+					"effects": {
+						"gold": -20
+					},
+					"reward": [],
+					"result": [
+						{
+							"speaker": "narrator",
+							"content": {
+								"korean": "직원은 당신이 장부를 노린다고 오해하며 비명을 지른다. 자료실 문을 닫고 안에서 잠가 버린다."
+							}
+						},
+						{
+							"speaker": "dax",
+							"content": {
+								"korean": "어쩌죠? 문을 잠가 버렸어요!"
+							}
+						}
+					]
+				}
+			}
+		},
+		{
+			"text": {
+				"korean": "주변 집기를 부수며 자료실 문을 열라고 위협한다."
+			},
+			"path": "stat",
+			"mbti": "SP",
+			"require": {
+				"stat": "fighting",
+				"op": "<=",
+				"value": -40
+			},
+			"flag": "accountant_terror_flag",
+			"effects": {
+				"reason": -10,
+				"gold": 100,
+				"fighting": -30
+			},
+			"reward": [
+				"stun"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "당신이 책상 위의 서류 더미를 날려 버리자 직원은 새된 비명을 지른다. 그는 울먹이며 자료실 문을 연다."
+					}
+				},
+				{
+					"speaker": "dax",
+					"content": {
+						"korean": "와, 정말 저렇게 하면 열어주네요!"
+					}
+				}
+			]
+		},
+		{
+			"text": {
+				"korean": "직원의 장부를 빼앗아 중요한 숫자 하나를 볼펜으로 고친다."
+			},
+			"path": "fun",
+			"mbti": "EP",
+			"effects": {
+				"gold": 70,
+				"echo": 5,
+				"reason": 20
+			},
+			"reward": [
+				"move_range_up"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "직원은 당신이 장부를 고치자마자 억 소리를 내며 달려든다. 그는 자료실 문을 열어둔 채 당신을 쫓아온다."
+					}
+				},
+				{
+					"speaker": "dax",
+					"content": {
+						"korean": "저 사람이 장부에 진짜 목숨 걸었나 봐요!"
+					}
+				}
+			],
+			"risk": {
+				"chance": "low",
+				"bad": {
+					"effects": {
+						"gold": -50
+					},
+					"reward": [],
+					"result": [
+						{
+							"speaker": "narrator",
+							"content": {
+								"korean": "당신이 장부를 고치자 직원은 망연자실한 표정으로 주저앉는다. 그는 울면서 경비실에 전화를 건다."
+							}
+						},
+						{
+							"speaker": "dax",
+							"content": {
+								"korean": "저, 저러다 울겠어요!"
+							}
+						}
+					]
+				}
+			}
+		}
+	],
+	"tags": [
+		"night_accountant",
+		"dax"
+	],
+	"_design": {
+		"slot": "A",
+		"kind": "rep",
+		"person": {
+			"id": "night_accountant",
+			"name": "회계팀 야근 직원",
+			"role": "회계팀 야근 직원"
+		},
+		"wants": "장부의 빈칸을 채우느라 자료실 문을 지키고 있으며, 규칙에 어긋나는 어떤 출입도 허용할 수 없다고 버틴다.",
+		"rule_link": "주먹이 앞서는 해결사라는 평판을 가진 당신이, 자신의 규칙에 집착하는 직원을 상대로 눈앞의 방해를 힘으로 밀어붙일 것인지, 아니면 다른 방법을 찾아볼지 선택해야 한다.",
+		"rep": "fighting-",
+		"events": {},
+		"flags": {
+			"accountant_frightened_flag": {
+				"kind": "bad",
+				"boss_penalty": -1,
+				"label": {
+					"korean": "회계팀 공포"
+				},
+				"boss_line": {
+					"korean": "회계팀 야근 직원이 공포에 질려 서버실 출입문 비밀번호를 제대로 누르지 못하고 허둥댄다."
+				}
+			},
+			"accountant_reasoned_flag": {
+				"kind": "good",
+				"boss_penalty": 1,
+				"label": {
+					"korean": "회계팀 설득"
+				},
+				"boss_choice": {
+					"korean": "회계팀 야근 직원이 설득되어 서버실 자료 보관함의 잠금장치를 풀어준다."
+				}
+			},
+			"accountant_terror_flag": {
+				"kind": "good",
+				"boss_penalty": 2,
+				"label": {
+					"korean": "회계팀 경악"
+				},
+				"boss_choice": {
+					"korean": "회계팀 야근 직원이 경악하여 서버실 데이터 암호키가 숨겨진 곳을 알려준다."
+				}
+			}
+		}
+	}
+}

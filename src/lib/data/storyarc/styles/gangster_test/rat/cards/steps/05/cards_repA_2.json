@@ -1,0 +1,364 @@
+{
+	"cards": [
+		{
+			"choices": [
+				{
+					"text": "양동이의 물고기를 슬쩍 훔쳐간다.",
+					"result": [
+						{
+							"speaker": "narrator",
+							"text": "당신은 아재의 눈을 피해 양동이 속 물고기를 주머니에 넣는다."
+						},
+						{
+							"text": "아재는 엉뚱한 곳을 흘긋거리다 헛기침한다.",
+							"speaker": "narrator"
+						},
+						{
+							"speaker": "dax",
+							"text": "아재, 물고기 비늘이 반짝거렸는데? 제가 잘못 봤나…?"
+						}
+					],
+					"flag": {
+						"label": "훔친 물고기",
+						"boss_text": "훔친 물고기를 던져 상대를 교란한다.",
+						"key": "stolen_fish"
+					},
+					"risk_bad": {
+						"result": [
+							{
+								"speaker": "narrator",
+								"text": "당신이 물고기를 훔치려다 양동이를 걷어차고 만다."
+							},
+							{
+								"text": "물고기는 복도 바닥을 데굴데굴 구르다 배수구로 사라진다.",
+								"speaker": "narrator"
+							},
+							{
+								"speaker": "dax",
+								"text": "저런, 아재의 귀한 물고기가…! 운이 나쁘네요!"
+							}
+						],
+						"gold": -30,
+						"reward": []
+					},
+					"effects": {
+						"gold": 70
+					},
+					"path": "easy",
+					"mbti": "ES"
+				},
+				{
+					"effects": {
+						"community": 20
+					},
+					"reward": [
+						"defense_up"
+					],
+					"path": "hard",
+					"mbti": "IS",
+					"result": [
+						{
+							"text": "당신은 아재에게 물고기를 안전하게 지킬 방법을 묻는다.",
+							"speaker": "narrator"
+						},
+						{
+							"text": "아재는 의외라는 듯 눈을 깜빡인다.",
+							"speaker": "narrator"
+						},
+						{
+							"speaker": "dax",
+							"text": "아재, 제가 물고기를 비서님께 맡겨 드려도 될까요?"
+						}
+					],
+					"text": "아재에게 물고기를 지켜 줄 방법을 묻는다.",
+					"flag": {
+						"key": "helped_fish",
+						"boss_text": "아재가 당신에게 비서의 습관을 알려준다.",
+						"label": "물고기 지킴이"
+					},
+					"risk_bad": {
+						"result": [
+							{
+								"speaker": "narrator",
+								"text": "당신이 물고기를 지킬 방법을 묻자 아재는 도리어 당신을 의심한다."
+							},
+							{
+								"text": "켁, 내 물고기를 노리는 게냐?",
+								"speaker": "gang_uncle"
+							}
+						],
+						"reward": [],
+						"gold": -20
+					}
+				},
+				{
+					"result": [
+						{
+							"text": "당신은 양동이를 낚아채 물고기를 대신 맡겠다고 말한다.",
+							"speaker": "narrator"
+						},
+						{
+							"text": "아재는 당신의 강한 기세에 꼬리를 내린다.",
+							"speaker": "narrator"
+						},
+						{
+							"speaker": "dax",
+							"text": "아재, 어쩌죠? 물고기는 이제 우리 몫이 됐네요…"
+						}
+					],
+					"mbti": "TJ",
+					"path": "stat",
+					"reward": [
+						"attack_up"
+					],
+					"effects": {
+						"community": -20,
+						"fighting": 10
+					},
+					"flag": {
+						"boss_text": "아재가 당신을 두려워하며 비서실의 숨겨진 물건을 알려준다.",
+						"key": "took_fish_authority",
+						"label": "물고기 강탈"
+					},
+					"text": "(자기 몫부터 챙기는 해결사 40+) 물고기는 당신이 챙길 테니, 비서실에서 손을 떼라 말한다."
+				},
+				{
+					"result": [
+						{
+							"speaker": "narrator",
+							"text": "당신은 아재에게 돈을 쥐여주며 길을 비켜 달라고 한다."
+						},
+						{
+							"text": "아재는 돈을 세어보며 만족스러운 표정으로 비켜선다.",
+							"speaker": "narrator"
+						},
+						{
+							"text": "아재, 비서님에게 가는 길에 돈으로 해결할 줄은 몰랐네요!",
+							"speaker": "dax"
+						}
+					],
+					"text": "아재에게 물고기 값을 쥐여주고 길을 비켜 달라 한다.",
+					"effects": {
+						"gold": -100
+					},
+					"path": "gold",
+					"mbti": "NF"
+				}
+			],
+			"background_tags": [
+				"corridor",
+				"daytime",
+				"cloudy",
+				"sparse",
+				"tense"
+			],
+			"dialogue": [
+				{
+					"speaker": "gang_uncle",
+					"text": "당신이 그, 자기 몫부터 챙긴다는 해결사 양반 맞지? 비서실 쪽으론 잠시 발길 멈추는 게 좋을 거야."
+				},
+				{
+					"text": "아재, 비서님한테 무슨 볼일 있으세요?",
+					"speaker": "dax"
+				},
+				{
+					"text": "켁. 볼일은 무슨. 그게, 비서실 앞 복도에 내가 아끼는 귀한 물고기가 있는데…",
+					"speaker": "gang_uncle"
+				},
+				{
+					"text": "당신이 괜히 시끄럽게 굴면 놀라 죽을까 봐서 말이지.",
+					"speaker": "gang_uncle"
+				},
+				{
+					"speaker": "narrator",
+					"text": "아재의 발밑에 작은 양동이가 보인다. 희미하게 물고기 비늘이 반짝인다."
+				}
+			],
+			"key": "fish_bucket",
+			"title": "버킷 리스트",
+			"wants": "비서실 앞 복도에 둔 귀한 물고기가 당신 때문에 놀라 죽지 않게 해주세요.",
+			"person": {
+				"id": "gang_uncle",
+				"name": "백상어파 아재",
+				"role": "조직원"
+			},
+			"no": 1,
+			"rule_link": "당신이 먼저 사정을 물어보면 아재가 귀한 물고기를 지키려는 속마음을 털어놓는다.",
+			"slot": "A",
+			"kind": "rep",
+			"rep_dir": "community-"
+		},
+		{
+			"dialogue": [
+				{
+					"text": "당신이 그, 동네 사람 모두를 위해 나선다는 해결사 양반 맞지?",
+					"speaker": "gang_uncle"
+				},
+				{
+					"text": "비서실 쪽으론 잠시 발길 멈추는 게 좋을 거야.",
+					"speaker": "gang_uncle"
+				},
+				{
+					"text": "아재, 비서님께 무슨 할 말 있으세요?",
+					"speaker": "dax"
+				},
+				{
+					"text": "켁. 할 말은 무슨. 그게, 비서실 앞 복도 구석에 내가 아끼던 동생 사진이 말라 죽어가거든…",
+					"speaker": "gang_uncle"
+				},
+				{
+					"text": "당신이 괜히 시끄럽게 굴면 그 자리가 더 잊힐까 봐서 말이지.",
+					"speaker": "gang_uncle"
+				},
+				{
+					"speaker": "narrator",
+					"text": "아재가 가리킨 구석에 작은 액자와 시든 꽃 한 송이가 보인다."
+				}
+			],
+			"rule_link": "당신이 먼저 사정을 물어보면 아재가 잊혀진 동생을 기리려는 속마음을 털어놓는다.",
+			"key": "secret_memorial",
+			"person": {
+				"id": "gang_uncle",
+				"name": "백상어파 아재",
+				"role": "조직원"
+			},
+			"no": 2,
+			"title": "잊혀진 자리",
+			"wants": "비서실 앞 복도에 있는 동생의 잊혀진 자리가 당신 때문에 더는 잊히지 않게 해주세요.",
+			"background_tags": [
+				"corridor",
+				"daytime",
+				"cloudy",
+				"sparse",
+				"tense"
+			],
+			"choices": [
+				{
+					"mbti": "EN",
+					"text": "아재 대신 시든 꽃에 물을 주며 자리를 정돈한다.",
+					"effects": {
+						"community": 20
+					},
+					"flag": {
+						"boss_text": "아재가 고마워하며 비서실의 비밀 통로를 알려준다.",
+						"label": "추모의 손길",
+						"key": "tended_memorial"
+					},
+					"result": [
+						{
+							"speaker": "narrator",
+							"text": "당신은 아재 대신 시든 꽃에 물을 주고 액자를 닦아준다."
+						},
+						{
+							"text": "아재는 쑥스러운 듯 헛기침하며 고개를 돌린다.",
+							"speaker": "narrator"
+						},
+						{
+							"text": "아재, 얼굴 빨개졌어요! 비서님께 가기 전에 이런 면도 있었네요!",
+							"speaker": "dax"
+						}
+					],
+					"risk_bad": {
+						"reward": [],
+						"gold": -20,
+						"result": [
+							{
+								"speaker": "narrator",
+								"text": "당신이 꽃에 물을 주려다 화분을 엎어 액자를 깨뜨리고 만다."
+							},
+							{
+								"speaker": "narrator",
+								"text": "아재는 당신의 손을 탁 쳐낸다."
+							}
+						]
+					},
+					"path": "easy",
+					"reward": [
+						"heal"
+					]
+				},
+				{
+					"result": [
+						{
+							"speaker": "narrator",
+							"text": "당신은 아재에게 동생에 대해 물으며 위로의 말을 건넨다."
+						},
+						{
+							"text": "아재는 잠시 눈시울을 붉히더니 흐느낀다.",
+							"speaker": "narrator"
+						},
+						{
+							"speaker": "dax",
+							"text": "아재, 괜찮으세요? 비서님께 가기 전에 아재의 마음을 얻었네요!"
+						}
+					],
+					"mbti": "IN",
+					"text": "아재에게 동생에 대해 물으며 위로한다.",
+					"flag": {
+						"label": "아재 위로",
+						"key": "consoled_uncle",
+						"boss_text": "아재가 비서실의 취약점을 당신에게 귀띔해준다."
+					},
+					"path": "hard",
+					"effects": {
+						"echo": 10,
+						"community": 20
+					},
+					"risk_bad": {
+						"gold": -20,
+						"result": [
+							{
+								"speaker": "narrator",
+								"text": "당신이 동생에 대해 묻자 아재는 격분한다."
+							},
+							{
+								"speaker": "gang_uncle",
+								"text": "쓸데없는 소리 지껄이지 마라! 내 동생은 네놈 따위가 함부로 입에 올릴 이름이 아니야!"
+							}
+						],
+						"reward": []
+					},
+					"reward": [
+						"shield"
+					]
+				},
+				{
+					"text": "(동네 사람 모두를 위해 나서는 해결사 40+) 동생의 자리를 잘 돌봐줄 사람을 부른다.",
+					"mbti": "TP",
+					"reward": [
+						"intelligence_up"
+					],
+					"flag": {
+						"boss_text": "닥스가 비서실의 경비원 배치도를 전달한다.",
+						"label": "돌봄 위임",
+						"key": "assigned_care"
+					},
+					"effects": {
+						"community": 30,
+						"echo": 10
+					},
+					"path": "stat",
+					"result": [
+						{
+							"text": "당신은 아재에게 동생의 자리를 계속 잘 돌봐줄 사람이 필요하다며 닥스를 부른다.",
+							"speaker": "narrator"
+						},
+						{
+							"speaker": "narrator",
+							"text": "닥스는 영문을 모르면서도 고개를 끄덕인다."
+						},
+						{
+							"speaker": "dax",
+							"text": "네, 제가 비서님께 가기 전에 아재를 도와드릴게요!"
+						}
+					]
+				}
+			],
+			"slot": "A",
+			"kind": "rep",
+			"rep_dir": "community+"
+		}
+	],
+	"errors": [],
+	"prompt_hash": "72af5575253887487f1c5f1693a98e8df4ae5055"
+}

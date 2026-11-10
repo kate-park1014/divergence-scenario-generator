@@ -1,0 +1,446 @@
+{
+	"cards": [
+		{
+			"dialogue": [
+				{
+					"text": "당신이 그… 자기 밥그릇은 알아서 챙긴다는 해결사 맞죠?",
+					"speaker": "hoegye_teamjang"
+				},
+				{
+					"text": "방금 서버실 안에서 뭔가 툭, 하고 떨어지는 소리가 났습니다만... 제 착각일 수도 있고요.",
+					"speaker": "hoegye_teamjang"
+				},
+				{
+					"text": "저야 야근 마치고 퇴근하는 길이라... 괜한 오지랖일까 싶어 망설였습니다만.",
+					"speaker": "hoegye_teamjang"
+				},
+				{
+					"text": "그런데 이 복도 저편에서 자꾸 누가 저를 쳐다보는 것 같아서요. 분명히 사람이 있었는데 말이죠.",
+					"speaker": "hoegye_teamjang"
+				},
+				{
+					"text": "팀장님, 혹시 비자금 말고 다른 중요한 걸 본 건 아닐까요?",
+					"speaker": "dax"
+				}
+			],
+			"choices": [
+				{
+					"risk_bad": {
+						"gold": -30,
+						"result": [
+							{
+								"speaker": "narrator",
+								"text": "당신이 비자금 파일을 보호하겠다고 하자, 팀장이 감격하며 당신의 팔을 잡고 흔든다."
+							},
+							{
+								"speaker": "narrator",
+								"text": "그 바람에 당신의 주머니에서 중요한 단서 쪽지가 복도 바닥에 떨어지고,"
+							},
+							{
+								"text": "바람에 휭 날려 서버실 문 아래로 사라진다.",
+								"speaker": "narrator"
+							},
+							{
+								"text": "어휴, 저러다 뭘 흘릴 것 같더니! 중요한 거였으면 어떡해요!",
+								"speaker": "dax"
+							}
+						],
+						"reward": []
+					},
+					"mbti": "ST",
+					"text": "팀장님의 비자금 파일을 우선적으로 보호한다.",
+					"result": [
+						{
+							"text": "당신이 비자금 파일을 보호하겠다고 하자, 팀장이 안도하며 서버실 문 쪽으로 바싹 다가선다.",
+							"speaker": "narrator"
+						},
+						{
+							"speaker": "narrator",
+							"text": "팀장은 당신에게 닥스 모르게 자신의 개인 외장하드를 건네며, '이게 제일 중요합니다!'라고 속삭인다."
+						},
+						{
+							"text": "아니, 여러분! 중요한 건 따로 있는데, 저분 비자금 파일을 먼저 챙겨준 거예요?",
+							"speaker": "dax"
+						}
+					],
+					"reward": [
+						"intelligence_up"
+					],
+					"flag": {
+						"key": "hoegye_teamjang_usb_path",
+						"boss_text": "회계팀 팀장의 비자금 파일 백업이 서버실 시스템에 과부하를 일으켜 다른 데이터 접근을 방해한다.",
+						"label": "회계팀장 외장하드 경로"
+					},
+					"effects": {
+						"community": -20,
+						"echo": 10
+					},
+					"path": "easy"
+				},
+				{
+					"text": "서버실 전체의 보안을 먼저 확인하고 팀장님은 나중에 돕겠다고 한다.",
+					"mbti": "NP",
+					"effects": {
+						"echo": -5,
+						"community": 15
+					},
+					"flag": {
+						"boss_text": "해커 간부의 약점을 파악하여 서버실 전체의 네트워크 흐름을 읽고 공격한다.",
+						"key": "server_network_map",
+						"label": "서버실 네트워크 지도"
+					},
+					"reward": [
+						"move_range_up"
+					],
+					"result": [
+						{
+							"speaker": "narrator",
+							"text": "당신이 서버실 전체의 보안을 먼저 확인하겠다고 하자, 팀장은 실망한 표정으로 어깨를 축 늘어뜨린다."
+						},
+						{
+							"speaker": "narrator",
+							"text": "이내 체념한 듯, 서버실 네트워크 구조도와 주요 데이터 저장 위치가 표시된 오래된 종이 지도를 건넨다."
+						},
+						{
+							"text": "팀장님이 실망하신 것 같긴 한데, 그래도 저게 더 중요한 정보 같긴 하네요!",
+							"speaker": "dax"
+						}
+					],
+					"path": "hard",
+					"risk_bad": {
+						"result": [
+							{
+								"speaker": "narrator",
+								"text": "당신이 서버실 전체 보안을 먼저 확인하겠다고 하자,"
+							},
+							{
+								"speaker": "narrator",
+								"text": "팀장이 \"설마 저한테만 이런 일이 생기겠어요?\"라며 안심한다."
+							},
+							{
+								"text": "그 순간 서버실 안에서 '삐빅' 하는 소리와 함께 팀장의 비상용 호출기가 울린다.",
+								"speaker": "narrator"
+							},
+							{
+								"text": "저분, 뭔가 또 당한 것 같은데요? 저 호출기, 설마…",
+								"speaker": "dax"
+							}
+						],
+						"reward": [],
+						"gold": -20
+					}
+				},
+				{
+					"mbti": "TJ",
+					"text": "팀장님의 비자금 파일 위치를 정확히 파악하여 빠르게 조치한다.",
+					"result": [
+						{
+							"text": "당신이 팀장님의 비자금 파일 위치를 정확히 파악해 빠르게 조치하겠다고 하자,",
+							"speaker": "narrator"
+						},
+						{
+							"text": "팀장은 눈물을 글썽이며 안도의 한숨을 쉰다.",
+							"speaker": "narrator"
+						},
+						{
+							"text": "당신은 팀장의 비자금 파일을 찾아내 백업하며, 동시에 서버실 내부의 다른 수상한 파일 목록을 확인한다.",
+							"speaker": "narrator"
+						},
+						{
+							"text": "역시 여러분이에요! 뭘 해야 할지 바로 아시네요!",
+							"speaker": "dax"
+						}
+					],
+					"reward": [
+						"defense_up"
+					],
+					"effects": {
+						"echo": 10,
+						"community": -25,
+						"fighting": 10
+					},
+					"flag": {
+						"key": "suspicious_file_list",
+						"label": "수상한 파일 목록",
+						"boss_text": "해커 간부가 삭제하려는 파일 목록 중에서 수상한 부분을 발견하고 먼저 방어한다."
+					},
+					"path": "stat"
+				}
+			],
+			"person": {
+				"id": "hoegye_teamjang",
+				"name": "회계팀 팀장",
+				"role": "회계팀 팀장"
+			},
+			"wants": "자신의 비자금 장부 파일이 삭제되는 것을 막아 주기를 바란다.",
+			"key": "self_interest_team_leader",
+			"title": "회계팀 팀장의 비자금 장부",
+			"background_tags": [
+				"corridor",
+				"night",
+				"dimlight",
+				"empty",
+				"tense"
+			],
+			"rule_link": "눈앞의 '삭제음'이라는 증거가 정말 '팀장의 비자금 장부' 때문인지, 아니면 다른 더 큰 문제 때문인지 따져볼 기회.",
+			"no": 1,
+			"slot": "D",
+			"kind": "rep",
+			"rep_dir": "community-"
+		},
+		{
+			"person": {
+				"id": "hoegye_teamjang",
+				"name": "회계팀 팀장",
+				"role": "회계팀 팀장"
+			},
+			"wants": "부두 어르신 기금 장부 데이터가 안전한지 확인해 주기를 바란다.",
+			"rule_link": "눈앞의 '삭제음'이라는 증거가 정말 '부두 어르신 기금 장부' 때문인지, 아니면 다른 더 큰 문제 때문인지 따져볼 기회.",
+			"title": "부두 어르신 기금 장부의 행방",
+			"background_tags": [
+				"corridor",
+				"night",
+				"dimlight",
+				"empty",
+				"tense"
+			],
+			"dialogue": [
+				{
+					"speaker": "hoegye_teamjang",
+					"text": "당신이 그… 어려운 이웃을 그냥 못 지나친다는 해결사 맞죠?"
+				},
+				{
+					"text": "방금 서버실 안에서 뭔가 툭, 하고 떨어지는 소리가 났습니다만... 제 착각일 수도 있고요.",
+					"speaker": "hoegye_teamjang"
+				},
+				{
+					"text": "저야 야근 마치고 퇴근하는 길이라... 괜한 오지랖일까 싶어 망설였습니다만.",
+					"speaker": "hoegye_teamjang"
+				},
+				{
+					"speaker": "hoegye_teamjang",
+					"text": "혹시 부두 어르신 기금 장부 데이터가 위험한 건 아닌지 걱정됩니다. 그 기금은 제가 직접 관리하고 있거든요."
+				},
+				{
+					"text": "팀장님, 어르신들 기금을 직접 관리하신다니, 정말 대단하시네요!",
+					"speaker": "dax"
+				}
+			],
+			"choices": [
+				{
+					"reward": [
+						"heal"
+					],
+					"mbti": "SF",
+					"risk_bad": {
+						"result": [
+							{
+								"speaker": "narrator",
+								"text": "당신이 어르신 기금 장부 데이터 확인을 우선하겠다고 하자,"
+							},
+							{
+								"speaker": "narrator",
+								"text": "팀장이 \"역시 믿음직한 분들이시네요!\"라며 큰 소리로 외친다."
+							},
+							{
+								"speaker": "narrator",
+								"text": "그 소리에 복도 저편에서 경비원 한 명이 고개를 빼꼼 내밀고, 당신들을 수상한 눈초리로 쳐다본다."
+							},
+							{
+								"speaker": "dax",
+								"text": "어휴, 팀장님! 그렇게 크게 말씀하시면 어떡해요!"
+							}
+						],
+						"reward": [],
+						"gold": -20
+					},
+					"flag": {
+						"key": "hoegye_teamjang_secret_code",
+						"boss_text": "해커 간부와 싸우는 도중, 회계팀 팀장이 알려준 비밀번호 때문에 예상치 못한 보안 시스템이 작동하여 방해를 받는다.",
+						"label": "회계팀장 비밀번호"
+					},
+					"path": "easy",
+					"result": [
+						{
+							"text": "당신이 어르신 기금 장부 데이터 확인을 우선하겠다고 하자, 팀장이 감격한 표정으로 당신의 손을 잡는다.",
+							"speaker": "narrator"
+						},
+						{
+							"text": "팀장은 당신에게 은밀히 서버실 관리자의 개인 금고 비밀번호를 알려주며,",
+							"speaker": "narrator"
+						},
+						{
+							"speaker": "narrator",
+							"text": "그곳에 기금 장부 백업본이 있다고 귀띔한다."
+						},
+						{
+							"speaker": "dax",
+							"text": "역시 여러분은 다르네요! 팀장님도 한시름 놓은 것 같고요!"
+						}
+					],
+					"text": "부두 어르신 기금 장부 데이터가 안전한지 먼저 확인한다.",
+					"effects": {
+						"community": 20,
+						"echo": 10
+					}
+				},
+				{
+					"mbti": "NT",
+					"result": [
+						{
+							"text": "당신이 서버실 전체의 보안을 먼저 살피겠다고 하자, 팀장은 잠시 풀이 죽은 듯 고개를 숙인다.",
+							"speaker": "narrator"
+						},
+						{
+							"text": "이내 고개를 들고, 당신에게 서버실에 설치된 감지 센서의 위치와 최근 점검 기록이 담긴 파일을 건넨다.",
+							"speaker": "narrator"
+						},
+						{
+							"speaker": "dax",
+							"text": "팀장님이 서운해하시는 것 같긴 한데, 그래도 저런 정보는 얻기 힘들죠!"
+						}
+					],
+					"risk_bad": {
+						"reward": [],
+						"result": [
+							{
+								"speaker": "narrator",
+								"text": "당신이 서버실 전체의 보안을 먼저 살피겠다고 하자,"
+							},
+							{
+								"text": "팀장이 \"제가 괜한 걱정을 했나 봅니다…\"라며 머리를 긁적인다.",
+								"speaker": "narrator"
+							},
+							{
+								"text": "그 순간,",
+								"speaker": "narrator"
+							},
+							{
+								"speaker": "narrator",
+								"text": "서버실 안에서 '삐빅' 하는 소리와 함께 팀장의 휴대폰으로 '기금 장부 백업 삭제 완료' 알림이 뜬다."
+							},
+							{
+								"text": "팀장님 표정이 안 좋은데요? 저 메시지, 설마…",
+								"speaker": "dax"
+							}
+						],
+						"gold": -20
+					},
+					"effects": {
+						"community": -15,
+						"echo": -5
+					},
+					"path": "hard",
+					"flag": {
+						"key": "server_sensor_records",
+						"boss_text": "해커 간부가 설치한 감지 센서의 허점을 파악하여 역으로 공격한다.",
+						"label": "서버 센서 기록"
+					},
+					"reward": [
+						"stun"
+					],
+					"text": "팀장님의 걱정은 나중에 듣고, 우선 서버실 전체의 보안을 살핀다."
+				},
+				{
+					"reward": [
+						"defense_up"
+					],
+					"mbti": "TJ",
+					"path": "stat",
+					"flag": {
+						"key": "data_server_lock",
+						"label": "데이터 서버 잠금",
+						"boss_text": "해커 간부가 주력으로 사용하는 데이터 서버를 먼저 잠금 처리하여 무력화한다."
+					},
+					"result": [
+						{
+							"text": "당신이 팀장의 증언과 서버실 상황을 종합해 가장 먼저 필요한 조치를 제안하자,",
+							"speaker": "narrator"
+						},
+						{
+							"speaker": "narrator",
+							"text": "팀장은 당신의 냉철함에 감탄한다."
+						},
+						{
+							"text": "당신은 서버실의 핵심 데이터 서버를 우선적으로 잠금 처리하고,",
+							"speaker": "narrator"
+						},
+						{
+							"text": "어르신 기금 장부 데이터의 무결성을 빠르게 확인한다.",
+							"speaker": "narrator"
+						},
+						{
+							"text": "역시 여러분이에요! 중요한 것부터 딱딱 집어내시네요!",
+							"speaker": "dax"
+						}
+					],
+					"text": "팀장님의 증언과 서버실 상황을 종합해 가장 먼저 필요한 조치를 제안한다.",
+					"effects": {
+						"reason": 10,
+						"community": 25,
+						"echo": 10
+					}
+				},
+				{
+					"mbti": "EP",
+					"reward": [],
+					"path": "fun",
+					"text": "팀장님과 함께 서버실 앞에서 부두 어르신 기금의 중요성에 대해 열변을 토한다.",
+					"risk_bad": {
+						"result": [
+							{
+								"speaker": "narrator",
+								"text": "당신이 서버실 앞에서 부두 어르신 기금의 중요성을 목청껏 외치자,"
+							},
+							{
+								"text": "팀장은 감격한 나머지 길고 긴 즉흥 연설을 시작하며 복도 한가운데서 주먹으로 허공을 휘두른다.",
+								"speaker": "narrator"
+							},
+							{
+								"text": "그 소란에 복도 저편에서 경비원 한 명이 달려와 '무슨 소란입니까! 밤에!'라며 손전등을 비춘다.",
+								"speaker": "narrator"
+							},
+							{
+								"speaker": "dax",
+								"text": "아니, 팀장님! 그러다 경비원 아저씨가 진짜로 신고하겠어요!"
+							}
+						],
+						"reward": [
+							"hp_down"
+						]
+					},
+					"effects": {
+						"gold": 50,
+						"reason": -10,
+						"community": 20
+					},
+					"result": [
+						{
+							"text": "당신이 팀장님과 함께 부두 어르신 기금의 중요성에 대해 열변을 토하자,",
+							"speaker": "narrator"
+						},
+						{
+							"text": "팀장이 눈물을 글썽이며 맞장구를 친다.",
+							"speaker": "narrator"
+						},
+						{
+							"speaker": "narrator",
+							"text": "두 사람은 지나가는 직원들에게도 기금의 소중함을 호소하며, 복도에 훈훈한 분위기를 조성한다."
+						},
+						{
+							"text": "갑자기 분위기가 왜 이렇게 훈훈해지는 거죠? 그래도 시선은 끌었네요!",
+							"speaker": "dax"
+						}
+					]
+				}
+			],
+			"key": "community_spirit_team_leader",
+			"no": 2,
+			"slot": "D",
+			"kind": "rep",
+			"rep_dir": "community+"
+		}
+	],
+	"errors": [],
+	"prompt_hash": "18f9d1b95d694b93a8a9fbb49aed8fa2c6b2f534"
+}

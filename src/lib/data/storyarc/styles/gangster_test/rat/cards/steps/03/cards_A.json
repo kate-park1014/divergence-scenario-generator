@@ -1,0 +1,559 @@
+{
+	"cards": [
+		{
+			"title": "낡은 테이프와 고장 난 기계",
+			"key": "old_tapes",
+			"choices": [
+				{
+					"mbti": "EP",
+					"reward": [
+						"attack_up"
+					],
+					"path": "easy",
+					"risk_bad": {
+						"reward": [
+							"hp_down"
+						],
+						"result": [
+							{
+								"text": "당신이 열쇠를 빼내는 순간, 관리인이 기계에서 손을 놓치며 기계가 덜컹거린다.",
+								"speaker": "narrator"
+							},
+							{
+								"speaker": "old_caretaker",
+								"text": "으악! 내 열쇠! 거기 서라, 이 도둑놈아!"
+							},
+							{
+								"speaker": "dax",
+								"text": "들켰어요! 어서 도망쳐요!"
+							}
+						]
+					},
+					"effects": {
+						"reason": -10,
+						"echo": -5
+					},
+					"result": [
+						{
+							"speaker": "narrator",
+							"text": "당신이 관리인의 손에서 살짝 열쇠를 빼내자 관리인은 아무것도 모른 채 고장 난 기계만 노려본다."
+						},
+						{
+							"speaker": "dax",
+							"text": "들킬 뻔했어요! 어서 도망쳐요!"
+						}
+					],
+					"text": "관리인이 기계를 보는 사이 슬쩍 열쇠만 챙겨 나온다."
+				},
+				{
+					"text": "고장 난 비디오 기계를 직접 고쳐 주고 열쇠를 정식으로 빌린다.",
+					"result": [
+						{
+							"text": "당신이 드라이버를 꺼내 능숙하게 기계 부품을 만지자 잠시 후 기계가 윙윙 소리를 내며 작동한다.",
+							"speaker": "narrator"
+						},
+						{
+							"speaker": "old_caretaker",
+							"text": "오오, 젊은 양반 실력이 좋구먼! 자네 덕분에 옛날 테이프를 볼 수 있겠어. 열쇠 여기 있네."
+						},
+						{
+							"speaker": "dax",
+							"text": "와, 대단해요! 이렇게 고칠 줄 알았으면 진작 부탁할 걸!"
+						}
+					],
+					"risk_bad": {
+						"reward": [],
+						"gold": -20,
+						"result": [
+							{
+								"text": "당신이 기계를 고치려 애쓰지만, 손에 든 드라이버가 미끄러지며 기계의 다른 부품까지 망가뜨린다.",
+								"speaker": "narrator"
+							},
+							{
+								"speaker": "old_caretaker",
+								"text": "으아악! 내 기계! 더 망가뜨리면 어떡해! 이 열쇠는 절대 못 줘!"
+							},
+							{
+								"text": "어르신이 엄청 화나셨어요. 어서 피해요!",
+								"speaker": "dax"
+							}
+						]
+					},
+					"effects": {
+						"echo": 10,
+						"community": 10
+					},
+					"reward": [
+						"defense_up"
+					],
+					"mbti": "IJ",
+					"path": "hard"
+				},
+				{
+					"reward": [
+						"move_range_up"
+					],
+					"path": "lock",
+					"mbti": "TJ",
+					"effects": {
+						"echo": 5,
+						"reason": 10
+					},
+					"text": "{actor}이(가) 기계의 설명서를 찾아 능숙하게 부품을 교체한다.",
+					"require_mbti": "TJ",
+					"result": [
+						{
+							"speaker": "narrator",
+							"text": "{actor}이(가) 자료실 한편에서 기계 설명서를 찾아와 침착하게 고장 원인을 파악한다."
+						},
+						{
+							"speaker": "narrator",
+							"text": "잠시 후 낡은 비디오 기계는 언제 그랬냐는 듯 부드럽게 돌아간다."
+						},
+						{
+							"text": "이야, 이런 걸 다 고칠 줄 아는군! 자, 약속대로 열쇠일세. 덕분에 살았어!",
+							"speaker": "old_caretaker"
+						},
+						{
+							"speaker": "dax",
+							"text": "우와, 역시 {actor}이에요! 제가 할 일도 없어졌네요!"
+						}
+					]
+				}
+			],
+			"background_tags": [
+				"basement",
+				"night",
+				"dimlight",
+				"alone",
+				"dusty"
+			],
+			"person": {
+				"name": "늙은 관리인",
+				"role": "자료실 관리인",
+				"id": "old_caretaker"
+			},
+			"wants": "고장 난 비디오 기계를 고쳐서 옛 CCTV 테이프를 보고 싶어 한다.",
+			"rule_link": "오래된 증거를 보기 위해 눈앞의 불편함을 감수할지, 쉬운 길을 택할지 선택해야 한다.",
+			"dialogue": [
+				{
+					"speaker": "narrator",
+					"text": "지하 자료실 깊숙한 곳, 낡은 비디오 기계와 씨름하는 늙은 관리인이 보인다."
+				},
+				{
+					"text": "쳇, 젠장! 이 놈의 기계는 왜 또 말썽이야! 옛날 테이프 좀 보려는데…",
+					"speaker": "old_caretaker"
+				},
+				{
+					"text": "저 분이 옛날 CCTV 테이프 보관함 열쇠를 가지고 있을 거예요. 항상 저기 계셨거든요.",
+					"speaker": "dax"
+				},
+				{
+					"text": "젊은 양반들, 혹시 이 기계 좀 볼 줄 아나? 고쳐주면 저기 옛날 테이프들 보관함 열쇠라도 빌려줄 터인데…",
+					"speaker": "old_caretaker"
+				},
+				{
+					"text": "어르신, 저희가 영상을 좀 봐야 하는데…",
+					"speaker": "dax"
+				}
+			],
+			"no": 1,
+			"slot": "A",
+			"kind": "plant"
+		},
+		{
+			"title": "수다스러운 야근 직원들",
+			"choices": [
+				{
+					"result": [
+						{
+							"text": "당신이 회장님 비서의 비밀 연애 소문을 지어내 퍼뜨리자 직원들의 귀가 쫑긋 세워진다.",
+							"speaker": "narrator"
+						},
+						{
+							"text": "헉, 정말요?! 그럼 해커 간부 얘기보다 그게 더 중요한데요?!",
+							"speaker": "gossip_monger"
+						},
+						{
+							"text": "푸하하! 저 사람들 표정 좀 봐요! 완전 혼란스러워하네요!",
+							"speaker": "dax"
+						}
+					],
+					"mbti": "EN",
+					"effects": {
+						"echo": 5,
+						"reason": -10
+					},
+					"reward": [
+						"stun"
+					],
+					"text": "더욱 자극적인 새 소문을 퍼뜨려 직원들의 시선을 다른 곳으로 돌린다.",
+					"path": "easy",
+					"risk_bad": {
+						"reward": [
+							"intelligence_down"
+						],
+						"result": [
+							{
+								"text": "당신이 황당한 소문을 퍼뜨리자 직원들은 어이없다는 듯 당신을 쳐다본다.",
+								"speaker": "narrator"
+							},
+							{
+								"speaker": "gossip_monger",
+								"text": "에이, 거짓말! 말도 안 되는 소리 하지 마세요!"
+							},
+							{
+								"text": "으악, 더 시끄러워졌어요! 저 사람들이 우리를 수상하게 봐요!",
+								"speaker": "dax"
+							}
+						]
+					}
+				},
+				{
+					"mbti": "SF",
+					"risk_bad": {
+						"reward": [],
+						"result": [
+							{
+								"speaker": "narrator",
+								"text": "당신이 조용히 해달라고 부탁하자 직원들은 오히려 더 큰 목소리로 당신을 비웃는다."
+							},
+							{
+								"text": "뭐야, 감히 우리한테 이래라저래라 하는 거야? 너나 조용히 해!",
+								"speaker": "gossip_monger"
+							},
+							{
+								"text": "저 사람들이 더 시끄러워졌어요! 빨리 다른 곳으로 가요!",
+								"speaker": "dax"
+							}
+						],
+						"gold": -30
+					},
+					"reward": [
+						"shield"
+					],
+					"text": "직원들에게 정중하게 부탁하여 조용히 해달라고 말한다.",
+					"result": [
+						{
+							"speaker": "narrator",
+							"text": "당신이 정중하게 부탁하자 직원들은 잠시 머뭇거리더니 작게 웅성거리기 시작한다."
+						},
+						{
+							"text": "쳇, 알았어요. 그럼 조용히 할게요. 대신 정말 해커 간부가 그랬는지 꼭 알아내 줘요!",
+							"speaker": "gossip_monger"
+						},
+						{
+							"text": "휴, 간 떨어지는 줄 알았어요! 그래도 먹히네요!",
+							"speaker": "dax"
+						}
+					],
+					"path": "hard",
+					"effects": {
+						"echo": 5,
+						"community": 10
+					}
+				},
+				{
+					"event_reason": "직원들이 내기를 제안하며 눈앞의 돈에 침을 삼킨다.",
+					"mbti": "ST",
+					"result": [
+						{
+							"text": "당신이 묵직한 돈뭉치를 내밀자 직원들의 눈이 휘둥그레진다.",
+							"speaker": "narrator"
+						},
+						{
+							"text": "큼큼, 뭐, 돈도 받았겠다… 서버실로 가는 지름길은 저기 보이는 창고 뒤편이에요. 아무도 안 쓰는 길이죠.",
+							"speaker": "gossip_monger"
+						},
+						{
+							"text": "역시 돈이 최고네요! 저 사람들 눈이 번쩍 뜨였어요!",
+							"speaker": "dax"
+						}
+					],
+					"effects": {
+						"gold": -100,
+						"echo": 5
+					},
+					"event": "minigame_slot",
+					"text": "돈을 쥐여주며 서버실로 가는 길에 대한 정보를 요구한다.",
+					"event_intro": [
+						{
+							"text": "직원이 당신의 손에 든 돈을 보더니 흥미로운 표정으로 카드 게임을 제안한다.",
+							"speaker": "narrator"
+						},
+						{
+							"speaker": "gossip_monger",
+							"text": "마침 슬롯머신 미니게임 한판 할 사람 찾고 있었는데! 여기서 이기면 보너스 정보도 줄게요!"
+						}
+					],
+					"path": "gold"
+				}
+			],
+			"key": "gossip_rumors",
+			"person": {
+				"role": "야근 직원",
+				"id": "gossip_monger",
+				"name": "수다쟁이 직원"
+			},
+			"rule_link": "확실하지 않은 소문과 소동을 보고 눈앞의 정보를 그대로 받아들일지, 본질을 파악할지 선택해야 한다.",
+			"wants": "새로운 소문을 만들어 동료들에게 인정받고 싶어 한다.",
+			"dialogue": [
+				{
+					"speaker": "narrator",
+					"text": "자료실 한쪽에서 야근하던 직원들이 모여 웅성거린다."
+				},
+				{
+					"text": "지난번에 꽃꽂이 소동 말이야, 사실 해커 간부가 직접 했다는 소문이 파다하던데?",
+					"speaker": "gossip_monger"
+				},
+				{
+					"speaker": "dax",
+					"text": "으음, 또 소문이 돌고 있네요. 저런 이야기는 믿을 게 못 돼요."
+				},
+				{
+					"speaker": "gossip_monger",
+					"text": "에이, 설마요. 그날 밤 해커 간부가 혼자 서버실에 들어갔다는 이야기도 있던데…"
+				},
+				{
+					"text": "다들 쉬쉬하지만 아는 사람은 다 안다고!",
+					"speaker": "gossip_monger"
+				},
+				{
+					"text": "저 사람 너무 시끄러워요. 우리가 뭘 하러 왔는지 다 들리겠어요!",
+					"speaker": "dax"
+				}
+			],
+			"background_tags": [
+				"basement",
+				"night",
+				"fluorescent",
+				"crowd",
+				"gossip"
+			],
+			"no": 2,
+			"slot": "A",
+			"kind": "normal"
+		},
+		{
+			"background_tags": [
+				"basement",
+				"night",
+				"fluorescent",
+				"alone",
+				"secret"
+			],
+			"forced": [
+				{
+					"effects": {
+						"community": -10,
+						"echo": -5
+					},
+					"reward": [
+						"move_range_down"
+					],
+					"mbti": "SF",
+					"require_mbti": "SF",
+					"text": "{actor}이(가) 엿듣는 동료에게 다가가 친근하게 말을 걸지만, 동료는 부담스러워한다.",
+					"result": [
+						{
+							"text": "{actor}이(가) 동료에게 다가가 환한 미소를 지으며 어깨에 손을 올린다.",
+							"speaker": "narrator"
+						},
+						{
+							"text": "으악! 저, 저는 괜찮아요! 너무 친절해서 부담스러운데요?!",
+							"speaker": "nosy_colleague"
+						},
+						{
+							"text": "으악, 저 사람 완전히 얼어붙었는데요? 너무 과했어요!",
+							"speaker": "dax"
+						}
+					]
+				}
+			],
+			"title": "엿듣는 동료의 그림자",
+			"key": "nosy_colleague_eavesdropping",
+			"choices": [
+				{
+					"effects": {
+						"fighting": 10,
+						"echo": 5
+					},
+					"result": [
+						{
+							"speaker": "narrator",
+							"text": "당신이 갑자기 어젯밤 꿈 이야기를 큰 소리로 지어내자 동료는 혼란스러운 표정을 짓는다."
+						},
+						{
+							"speaker": "nosy_colleague",
+							"text": "으음… 그게 무슨… 꿈이요?"
+						},
+						{
+							"text": "푸흡! 저 사람 표정 좀 봐요! 완전히 얼어붙었네요!",
+							"speaker": "dax"
+						}
+					],
+					"text": "아무것도 모른다는 듯 큰 소리로 엉뚱한 이야기를 지어내 흘린다.",
+					"risk_bad": {
+						"reward": [
+							"hp_down"
+						],
+						"result": [
+							{
+								"speaker": "narrator",
+								"text": "당신이 엉뚱한 이야기를 지어내자 동료는 오히려 당신이 뭔가 숨긴다고 의심의 눈초리를 보낸다."
+							},
+							{
+								"text": "당신, 뭔가 숨기는 게 있군요? 왜 그렇게 이상한 말을 해요?",
+								"speaker": "nosy_colleague"
+							},
+							{
+								"speaker": "dax",
+								"text": "아, 망했어요! 저 사람이 우리를 더 의심해요!"
+							}
+						]
+					},
+					"path": "easy",
+					"reward": [
+						"attack_up"
+					],
+					"mbti": "IN"
+				},
+				{
+					"mbti": "IT",
+					"path": "hard",
+					"risk_bad": {
+						"reward": [],
+						"result": [
+							{
+								"speaker": "narrator",
+								"text": "당신이 동료에게 다가가자 동료는 갑자기 비명을 지르며 자료실 문을 향해 도망친다."
+							},
+							{
+								"text": "살려줘요! 저 사람들이 나를 해치려 해요!",
+								"speaker": "nosy_colleague"
+							},
+							{
+								"speaker": "dax",
+								"text": "으악! 저 사람, 도망가면서 소문 다 내겠어요!"
+							}
+						],
+						"gold": -40
+					},
+					"effects": {
+						"community": -10,
+						"fighting": 15
+					},
+					"result": [
+						{
+							"speaker": "narrator",
+							"text": "당신이 동료의 어깨를 툭 치며 왜 엿듣냐고 묻자 동료는 화들짝 놀란다."
+						},
+						{
+							"text": "으악! 아무것도 안 들었어요! 그냥… 잠시 복도를 지나가던 중이었어요!",
+							"speaker": "nosy_colleague"
+						},
+						{
+							"speaker": "dax",
+							"text": "쳇, 뻔한 변명이네요! 그래도 덕분에 꽁무니 빼고 도망가요!"
+						}
+					],
+					"reward": [
+						"defense_up"
+					],
+					"text": "동료에게 다가가 왜 엿듣고 있는지 직접적으로 질문한다."
+				},
+				{
+					"result": [
+						{
+							"speaker": "narrator",
+							"text": "당신이 갑자기 팔다리를 흔들며 요란한 춤을 추자 동료는 눈을 비비며 혼란스러운 표정을 짓는다."
+						},
+						{
+							"speaker": "nosy_colleague",
+							"text": "으음… 저기… 괜찮으세요? 저는… 먼저 가볼게요…"
+						},
+						{
+							"text": "와하하! 저 사람, 기겁하고 도망가네요! 역시 당신은 달라요!",
+							"speaker": "dax"
+						}
+					],
+					"text": "갑자기 요란한 춤을 추며 동료에게 함께 춤출 것을 권유한다.",
+					"event_reason": "동료가 당신의 기묘한 행동에 당황하며 눈치를 보다가 틈을 노린다.",
+					"risk_bad": {
+						"result": [
+							{
+								"speaker": "narrator",
+								"text": "당신이 요란한 춤을 추자 동료는 당신의 춤을 비웃으며 손가락질한다."
+							},
+							{
+								"speaker": "nosy_colleague",
+								"text": "풉! 저 사람 좀 봐! 미쳤나 봐! 하하하!"
+							},
+							{
+								"speaker": "dax",
+								"text": "으악! 저 사람이 우리를 바보 취급해요! 창피해 죽겠어요!"
+							}
+						],
+						"gold": -50,
+						"reward": []
+					},
+					"event_intro": [
+						{
+							"speaker": "narrator",
+							"text": "동료는 당신의 기묘한 행동에 당황하며 자료실 문으로 도망치려 한다."
+						},
+						{
+							"speaker": "dax",
+							"text": "저 사람이 도망가기 전에 저 문을 막아야 해요! 타이밍을 맞춰서 문을 닫아요!"
+						}
+					],
+					"path": "fun",
+					"mbti": "ES",
+					"event": "minigame_timing",
+					"effects": {
+						"echo": 10,
+						"reason": -20
+					}
+				}
+			],
+			"wants": "다른 사람들의 비밀을 알아내 자신의 불안감을 해소하고 싶어 한다.",
+			"rule_link": "보이는 현상 너머의 숨겨진 의도를 파악하고, 진실을 밝힐지 혹은 무시할지 결정해야 한다.",
+			"dialogue": [
+				{
+					"speaker": "narrator",
+					"text": "당신과 닥스가 이야기를 나누는 동안, 한쪽 구석에서 야근 직원이 벽 뒤로 몸을 숨긴다."
+				},
+				{
+					"text": "저기요, 저 사람! 우리 이야기를 엿듣고 있는 것 같아요!",
+					"speaker": "dax"
+				},
+				{
+					"speaker": "narrator",
+					"text": "동료는 당신을 보고 몸을 움찔거린다."
+				},
+				{
+					"text": "아, 아니에요! 그냥… 잠시 쉰 거예요. 너무 피곤해서…",
+					"speaker": "nosy_colleague"
+				},
+				{
+					"text": "거짓말! 귀가 빨개진 거 다 보인다고요!",
+					"speaker": "dax"
+				},
+				{
+					"speaker": "narrator",
+					"text": "동료는 당신의 눈치를 보며 슬금슬금 물러나려 한다."
+				}
+			],
+			"no": 3,
+			"person": {
+				"name": "엿듣는 동료",
+				"role": "야근 직원",
+				"id": "nosy_colleague"
+			},
+			"slot": "A",
+			"kind": "normal"
+		}
+	],
+	"errors": [],
+	"prompt_hash": "f993145fce465dcf63a10cba3a9721bd4be8cba8"
+}

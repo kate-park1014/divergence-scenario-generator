@@ -1,0 +1,389 @@
+{
+	"cards": [
+		{
+			"wants": "히어로들이 자신의 비밀스러운 거래를 눈감아주길 원합니다.",
+			"person": {
+				"id": "foreman",
+				"name": "하역 반장",
+				"role": "하역 반장"
+			},
+			"dialogue": [
+				{
+					"text": "컨테이너 줄 사이, 담배 대신 사탕을 문 하역 반장이 불쑥 나타난다.",
+					"speaker": "narrator"
+				},
+				{
+					"text": "이봐, 당신들! 소문으로만 듣던 해결사 양반들 아니야? 자기 몫만 챙기는 데는 도가 텄다며?",
+					"speaker": "foreman"
+				},
+				{
+					"speaker": "dax",
+					"text": "젠장, 벌써 소문이 여기까지 퍼진 건가요? 큰일인데…"
+				},
+				{
+					"speaker": "foreman",
+					"text": "지금 내가 아주 중요한 걸 옮기는 중인데…"
+				},
+				{
+					"text": "못 본 척 넘어가 주면, 절대 후회 안 할 만큼 두둑이 챙겨주지. 어때?",
+					"speaker": "foreman"
+				}
+			],
+			"title": "반장의 은밀한 제안",
+			"choices": [
+				{
+					"effects": {
+						"gold": 120,
+						"echo": -5,
+						"community": -15
+					},
+					"risk_bad": {
+						"gold": -50,
+						"reward": [
+							"hp_down"
+						],
+						"result": [
+							{
+								"text": "당신은 반장에게서 돈뭉치를 받아 주머니에 넣으려는 순간,",
+								"speaker": "narrator"
+							},
+							{
+								"text": "마침 지나가던 세관 직원이 나타나 반장과 당신을 번갈아 쳐다본다.",
+								"speaker": "narrator"
+							},
+							{
+								"text": "젠장, 돈 받다가 딱 걸린 것 같은데요…?",
+								"speaker": "dax"
+							}
+						]
+					},
+					"flag": {
+						"boss_text": "창고 간부가 수상한 상자를 옮기는 모습을 보게 된다.",
+						"label": "의심스러운 거래",
+						"key": "suspicious_deal"
+					},
+					"text": "반장의 제안을 받아들여 돈을 챙긴다.",
+					"mbti": "EN",
+					"path": "easy",
+					"result": [
+						{
+							"speaker": "narrator",
+							"text": "당신은 반장에게서 돈뭉치를 받아 주머니에 넣는다."
+						},
+						{
+							"text": "반장은 만족스러운 표정으로 작은 상자를 가리키며 '이건 그냥 내 개인적인 짐이야'라고 말한다.",
+							"speaker": "narrator"
+						},
+						{
+							"text": "저거… 아무리 봐도 평범한 짐은 아닌 것 같은데요?",
+							"speaker": "dax"
+						}
+					]
+				},
+				{
+					"mbti": "IS",
+					"result": [
+						{
+							"text": "당신은 반장의 돈을 단호히 거절하고 상자에 다가간다.",
+							"speaker": "narrator"
+						},
+						{
+							"speaker": "narrator",
+							"text": "반장은 움찔하며 상자를 황급히 발로 가린다. '쓸데없는 참견은 하지 마!'"
+						},
+						{
+							"text": "와, 반장님 저렇게 당황하는 거 처음 봐요!",
+							"speaker": "dax"
+						}
+					],
+					"text": "돈을 거절하고 수상한 물건이 무엇인지 확인한다.",
+					"risk_bad": {
+						"result": [
+							{
+								"text": "당신이 돈을 거절하고 상자를 확인하려는 순간,",
+								"speaker": "narrator"
+							},
+							{
+								"speaker": "narrator",
+								"text": "반장이 밟고 있던 사탕 껍질에 미끄러져 상자와 함께 넘어진다."
+							},
+							{
+								"speaker": "narrator",
+								"text": "상자가 열리며 오리 인형 수십 마리가 쏟아진다."
+							},
+							{
+								"speaker": "dax",
+								"text": "저, 저게 뭔가요?! 오리 인형…?!"
+							}
+						],
+						"gold": -20,
+						"reward": []
+					},
+					"flag": {
+						"boss_text": "창고 간부가 허둥지둥 짐을 가리는 모습에 의심이 깊어진다.",
+						"label": "반장의 비밀",
+						"key": "foreman_hides_secret"
+					},
+					"effects": {
+						"echo": 10,
+						"community": 20,
+						"reason": 10
+					},
+					"path": "hard",
+					"reward": [
+						"defense_up"
+					]
+				},
+				{
+					"mbti": "TJ",
+					"flag": {
+						"key": "squeeze_foreman_hard",
+						"boss_text": "창고 간부가 당신의 탐욕을 기억하고 더욱 경계한다.",
+						"label": "반장 쥐어짜기"
+					},
+					"result": [
+						{
+							"text": "당신은 반장에게 턱짓하며 '그 정도로는 부족하다'고 말한다.",
+							"speaker": "narrator"
+						},
+						{
+							"speaker": "narrator",
+							"text": "반장은 침을 꿀꺽 삼키더니 지갑을 꺼내 돈을 더 얹어준다. '이 정도면 됐냐? 빨리 꺼져!'"
+						},
+						{
+							"speaker": "dax",
+							"text": "와… 역시 자기 몫 챙기는 데는 선수시네요!"
+						}
+					],
+					"text": "자기 몫을 더 챙겨야 한다며 반장을 압박한다.",
+					"path": "stat",
+					"effects": {
+						"community": -20,
+						"gold": 150
+					}
+				},
+				{
+					"path": "gold",
+					"text": "반장에게 돈을 쥐여주고 지나가게 해달라고 한다.",
+					"effects": {
+						"echo": 5,
+						"gold": -80
+					},
+					"result": [
+						{
+							"speaker": "narrator",
+							"text": "당신은 반장에게 돈을 건네며 조용히 지나가겠다고 말한다."
+						},
+						{
+							"speaker": "narrator",
+							"text": "반장은 돈을 세어보더니 고개를 끄덕인다. '좋아, 그럼. 갈 길 가시게.'라고 말한다."
+						},
+						{
+							"speaker": "dax",
+							"text": "휴, 이 정도면 조용히 넘어갈 수 있겠네요."
+						}
+					],
+					"mbti": "FP"
+				}
+			],
+			"background_tags": [
+				"port",
+				"night",
+				"foggy",
+				"empty",
+				"suspense"
+			],
+			"key": "greedy_foreman_deal",
+			"rule_link": "눈앞의 이득만 쫓는 판단은 결국 더 큰 그림을 놓치게 만듭니다.",
+			"no": 1,
+			"slot": "D",
+			"kind": "rep",
+			"rep_dir": "community-"
+		},
+		{
+			"title": "반장의 다급한 도움 요청",
+			"dialogue": [
+				{
+					"speaker": "narrator",
+					"text": "컨테이너 줄 사이, 담배 대신 사탕을 문 하역 반장이 다급한 표정으로 당신에게 다가온다."
+				},
+				{
+					"text": "이봐, 당신들! 당신들이 그… 동네 사람들 일이라면 발 벗고 나선다는 해결사라면서?",
+					"speaker": "foreman"
+				},
+				{
+					"text": "네, 맞아요! 반장님, 무슨 일이신데요?",
+					"speaker": "dax"
+				},
+				{
+					"speaker": "foreman",
+					"text": "젠장, 노인회에 보낼 약품 컨테이너가 저기서 꼼짝을 안 해."
+				},
+				{
+					"text": "자물쇠가 망가져서 열리질 않거든. 이대로 두면 큰일 나! 좀 도와줄 수 있겠어?",
+					"speaker": "foreman"
+				}
+			],
+			"rule_link": "모두를 위한 선의의 행동도 상황을 제대로 파악하지 않으면 엉뚱한 결과를 낳을 수 있습니다.",
+			"person": {
+				"id": "foreman",
+				"name": "하역 반장",
+				"role": "하역 반장"
+			},
+			"background_tags": [
+				"port",
+				"day",
+				"overcast",
+				"workers",
+				"urgent"
+			],
+			"key": "foreman_community_call",
+			"no": 2,
+			"wants": "히어로들이 노인회에 보낼 약품 컨테이너를 여는 것을 도와주길 원합니다.",
+			"choices": [
+				{
+					"mbti": "ES",
+					"result": [
+						{
+							"speaker": "narrator",
+							"text": "당신은 힘껏 자물쇠를 부수고 컨테이너 문을 열어젖힌다."
+						},
+						{
+							"speaker": "narrator",
+							"text": "하지만 안에는 약품 대신 알록달록한 아이들 장난감으로 가득하다. 반장은 경악한다."
+						},
+						{
+							"speaker": "dax",
+							"text": "어? 약이 아니라 장난감인데요? 노인회에 이걸 보내려던 건 아니겠죠?"
+						}
+					],
+					"text": "노인회를 돕기 위해 컨테이너 자물쇠를 부숴 연다.",
+					"flag": {
+						"boss_text": "창고 간부의 실수로 엉뚱한 컨테이너를 열어 소동이 일어난다.",
+						"label": "잘못 연 컨테이너",
+						"key": "wrong_container_opened"
+					},
+					"effects": {
+						"community": 15,
+						"echo": 5,
+						"fighting": 10
+					},
+					"reward": [
+						"attack_up"
+					],
+					"risk_bad": {
+						"result": [
+							{
+								"text": "당신이 자물쇠를 부수고 컨테이너 문을 열자마자,",
+								"speaker": "narrator"
+							},
+							{
+								"text": "날카로운 경보음이 울려 퍼지며 야적장 전체의 이목을 끈다.",
+								"speaker": "narrator"
+							},
+							{
+								"speaker": "dax",
+								"text": "젠장! 보안 시스템이 연결되어 있었나 봐요! 빨리 도망쳐야겠어요!"
+							}
+						],
+						"gold": -20,
+						"reward": [
+							"hp_down"
+						]
+					},
+					"path": "easy"
+				},
+				{
+					"text": "섣불리 나서지 않고 컨테이너 서류나 열쇠를 먼저 확인한다.",
+					"flag": {
+						"label": "반장의 착각 막음",
+						"key": "foreman_mistake_averted",
+						"boss_text": "창고 간부가 중요한 서류를 잃어버리는 실수를 저지르지 않게 돕는다."
+					},
+					"mbti": "IN",
+					"risk_bad": {
+						"result": [
+							{
+								"text": "당신이 서류를 요구하자 반장이 허둥지둥 서류를 찾다가,",
+								"speaker": "narrator"
+							},
+							{
+								"speaker": "narrator",
+								"text": "손에 들고 있던 종이 뭉치를 놓쳐 강풍에 서류들이 야적장 곳곳으로 흩날린다."
+							},
+							{
+								"speaker": "dax",
+								"text": "아이고! 반장님 중요한 서류가 다 날아갔어요!"
+							}
+						],
+						"gold": -20,
+						"reward": []
+					},
+					"reward": [
+						"defense_up"
+					],
+					"effects": {
+						"echo": 10,
+						"reason": 20,
+						"community": -10
+					},
+					"path": "hard",
+					"result": [
+						{
+							"speaker": "narrator",
+							"text": "당신은 반장에게 컨테이너의 서류를 보여달라고 요청한다."
+						},
+						{
+							"speaker": "narrator",
+							"text": "반장은 당황하며 서류를 찾다가 '실은… 내가 급해서 다른 컨테이너를 착각한 것 같아'라고 고백한다."
+						},
+						{
+							"text": "휴, 하마터면 큰일 날 뻔했네요!",
+							"speaker": "dax"
+						}
+					]
+				},
+				{
+					"flag": {
+						"label": "공동체 동원",
+						"boss_text": "당신의 평판 덕분에 다른 하역반원들이 기꺼이 돕는다.",
+						"key": "community_mobilized"
+					},
+					"text": "다른 하역반원들을 불러 함께 컨테이너를 옮기자고 제안한다.",
+					"effects": {
+						"community": 25,
+						"fighting": 10
+					},
+					"mbti": "TJ",
+					"result": [
+						{
+							"speaker": "narrator",
+							"text": "당신은 주위를 둘러보고 다른 하역반원들에게 도움을 요청한다."
+						},
+						{
+							"text": "반원들은 당신의 평판을 알고 기꺼이 달려와 자물쇠를 부수고 컨테이너를 함께 옮겨준다.",
+							"speaker": "narrator"
+						},
+						{
+							"speaker": "narrator",
+							"text": "안에는 약품이 가득하다."
+						},
+						{
+							"speaker": "dax",
+							"text": "역시 여러분이 나서니 일이 착착 진행되네요!"
+						}
+					],
+					"path": "stat",
+					"reward": [
+						"shield"
+					]
+				}
+			],
+			"slot": "D",
+			"kind": "rep",
+			"rep_dir": "community+"
+		}
+	],
+	"errors": [],
+	"prompt_hash": "f574231c7665512d9c04f689c935b1327c82a246"
+}

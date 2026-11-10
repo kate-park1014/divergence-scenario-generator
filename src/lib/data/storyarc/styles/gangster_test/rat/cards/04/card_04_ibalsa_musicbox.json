@@ -1,0 +1,322 @@
+{
+	"id": "card_04_ibalsa_musicbox",
+	"title": {
+		"korean": "멈춰버린 멜로디"
+	},
+	"intensity": "calm",
+	"after_story": 5,
+	"before_story": 7,
+	"condition": {
+		"leaning": "community+",
+		"among": [
+			"fighting-",
+			"fighting+",
+			"community-",
+			"community+",
+			"reason-",
+			"reason+"
+		],
+		"min": 20
+	},
+	"urgency": 8,
+	"leaning": "community+",
+	"background_tags": [
+		"stairs",
+		"hallway",
+		"dim",
+		"empty",
+		"anxious"
+	],
+	"background_image": "https://imagedelivery.net/WTEqQNGFb-l-IHS6IGnzUQ/0ae813bd-8183-437e-644c-6a15fd24b300/public",
+	"dialogue": [
+		{
+			"speaker": "ibalsa_aje",
+			"content": {
+				"korean": "이런, 당신이 그, 동네 사람 일이라면 발 벗고 나선다는 해결사 양반 아니오?"
+			}
+		},
+		{
+			"speaker": "ibalsa_aje",
+			"content": {
+				"korean": "이 낡은 오르골이 계단에 떨어져 있지 뭡니까? 멜로디도 끊기고... 누가 소중히 여기던 물건일 텐데."
+			}
+		},
+		{
+			"speaker": "dax",
+			"content": {
+				"korean": "오르골이라면 비싼 물건인데..."
+			}
+		},
+		{
+			"speaker": "ibalsa_aje",
+			"content": {
+				"korean": "이걸 누가 흘린 걸까? 누가 잃어버렸을지, 혹시 누가 싸우다 떨어뜨린 건 아닌지..."
+			}
+		},
+		{
+			"speaker": "ibalsa_aje",
+			"content": {
+				"korean": "걱정돼서 발이 안 떨어지네요."
+			}
+		}
+	],
+	"choices": [
+		{
+			"text": {
+				"korean": "오르골을 주워 들고 주인이 나타날 때까지 기다려본다."
+			},
+			"path": "easy",
+			"mbti": "IS",
+			"flag": "ibalsa_security_musicbox",
+			"effects": {
+				"community": 10,
+				"gold": 50,
+				"echo": 10
+			},
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "당신이 오르골을 들고 서 있자, 이발사 아재는 감동한 듯 '역시 소문대로군요!' 하며 칭찬한다."
+					}
+				},
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "그는 오르골을 조심스레 닦더니, '이건 경호실장님이 늘 가지고 다니던 것'이라고 알려준다."
+					}
+				},
+				{
+					"speaker": "dax",
+					"content": {
+						"korean": "누님이 이걸 왜 흘리고 갔을까요?"
+					}
+				}
+			],
+			"risk": {
+				"chance": "mid",
+				"bad": {
+					"effects": {
+						"gold": -30
+					},
+					"reward": [],
+					"result": [
+						{
+							"speaker": "narrator",
+							"content": {
+								"korean": "오르골을 주워 들자마자, 낡은 태엽이 끊어지며 작은 나사못들이 튀어나온다."
+							}
+						},
+						{
+							"speaker": "narrator",
+							"content": {
+								"korean": "이발사 아재는 '아이고, 더 망가졌잖아!' 하며 당신을 원망스럽게 쳐다본다."
+							}
+						},
+						{
+							"speaker": "dax",
+							"content": {
+								"korean": "으음... 도와주려다 망가뜨렸네요."
+							}
+						}
+					]
+				}
+			}
+		},
+		{
+			"text": {
+				"korean": "오르골을 원래 있던 자리에 두고 금고실로 향한다."
+			},
+			"path": "hard",
+			"mbti": "TJ",
+			"flag": "ibalsa_ignore_musicbox",
+			"effects": {
+				"community": -10,
+				"echo": -5,
+				"reason": 10
+			},
+			"reward": [
+				"move_range_up"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "당신의 차가운 태도에 이발사 아재는 실망한 표정을 짓지만, 당신은 꿋꿋이 발걸음을 옮긴다."
+					}
+				},
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "이발사 아재는 혼잣말로 '하긴, 자기 일 아니면 신경 안 쓰는 게 맞지...'라고 중얼거린다."
+					}
+				},
+				{
+					"speaker": "dax",
+					"content": {
+						"korean": "저 아저씨 좀 서운해하는 것 같은데요..."
+					}
+				}
+			],
+			"risk": {
+				"chance": "high",
+				"bad": {
+					"effects": {
+						"gold": -20
+					},
+					"reward": [],
+					"result": [
+						{
+							"speaker": "narrator",
+							"content": {
+								"korean": "오르골을 무시하고 지나치려는데, 이발사 아재가 '잠깐만요!' 하고 당신의 팔을 잡는다."
+							}
+						},
+						{
+							"speaker": "narrator",
+							"content": {
+								"korean": "그는 '이대로 가면 마음에 걸려 일을 못 한다'며 당신을 붙잡고 오르골 주인을 함께 찾아 달라고 한다."
+							}
+						},
+						{
+							"speaker": "dax",
+							"content": {
+								"korean": "으음, 이러면 더 늦어지는 거 아니에요?"
+							}
+						}
+					]
+				}
+			}
+		},
+		{
+			"text": {
+				"korean": "오르골을 들고 '주인 없는 물건은 모두의 것'이라며 주변에 외친다."
+			},
+			"path": "stat",
+			"mbti": "EN",
+			"require": {
+				"stat": "community",
+				"op": ">=",
+				"value": 40
+			},
+			"flag": "ibalsa_finds_owner",
+			"effects": {
+				"fighting": -20,
+				"echo": 15,
+				"community": 20
+			},
+			"reward": [
+				"defense_up"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "당신의 우렁찬 목소리에 이발사 아재는 감격하며 '역시 영웅은 다르다!'고 엄지손가락을 치켜세운다."
+					}
+				},
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "복도 구석에서 누군가 튀어나와 '내 오르골!'이라며 달려오지만, 이발사 아재가 먼저 붙잡고 심문을 시작한다."
+					}
+				},
+				{
+					"speaker": "dax",
+					"content": {
+						"korean": "으음... 저 아저씨가 더 신났네요."
+					}
+				}
+			]
+		},
+		{
+			"text": {
+				"korean": "이발사 아재에게 오르골 주인을 찾아 달라고 돈을 건넨다."
+			},
+			"path": "gold",
+			"mbti": "EP",
+			"require": {
+				"stat": "gold",
+				"op": ">=",
+				"value": 100
+			},
+			"effects": {
+				"echo": 5,
+				"gold": -100
+			},
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "이발사 아재는 눈을 빛내며 돈을 받아 든다. '맡겨만 주십시오! 동네 이발사의 정보망을 믿으십시오!'"
+					}
+				},
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "그는 오르골을 들고 콧노래를 부르며 계단을 내려간다. 금고실로 가는 길이 다시 조용해진다."
+					}
+				},
+				{
+					"speaker": "dax",
+					"content": {
+						"korean": "돈으로 해결하는 것도 나쁘지 않네요."
+					}
+				}
+			]
+		}
+	],
+	"tags": [
+		"ibalsa_aje",
+		"dax"
+	],
+	"_design": {
+		"slot": "C",
+		"kind": "rep",
+		"person": {
+			"id": "ibalsa_aje",
+			"name": "이발사 아재",
+			"role": "이발사"
+		},
+		"wants": "모두를 위해 물건의 주인을 찾아주거나 위험을 알리고 싶어 한다.",
+		"rule_link": "계단에 떨어진 말 없는 물건을 단순한 쓰레기로 볼지, 누군가의 사연이 담긴 단서로 볼지 선택합니다.",
+		"rep": "community+",
+		"events": {},
+		"flags": {
+			"ibalsa_security_musicbox": {
+				"kind": "bad",
+				"boss_penalty": -1,
+				"label": {
+					"korean": "경호실장 오르골"
+				},
+				"boss_line": {
+					"korean": "금고실 복도에서 경호실장의 오르골을 발견해 그녀의 동선을 파악한다."
+				}
+			},
+			"ibalsa_ignore_musicbox": {
+				"kind": "good",
+				"boss_penalty": 1,
+				"label": {
+					"korean": "오르골 무시"
+				},
+				"boss_choice": {
+					"korean": "금고실 복도에서 떨어진 오르골을 무시하고 지나간다."
+				}
+			},
+			"ibalsa_finds_owner": {
+				"kind": "good",
+				"boss_penalty": 2,
+				"label": {
+					"korean": "오르골 주인"
+				},
+				"boss_choice": {
+					"korean": "이발사 아재가 오르골 주인을 붙잡아 심문 중이다."
+				}
+			}
+		}
+	}
+}

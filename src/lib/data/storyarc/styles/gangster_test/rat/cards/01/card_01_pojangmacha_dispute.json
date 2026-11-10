@@ -1,0 +1,315 @@
+{
+	"id": "card_01_pojangmacha_dispute",
+	"title": {
+		"korean": "시끄러운 포장마차"
+	},
+	"intensity": "calm",
+	"after_story": 7,
+	"before_story": 9,
+	"condition": {
+		"leaning": "fighting-",
+		"among": [
+			"fighting-",
+			"fighting+",
+			"community-",
+			"community+",
+			"reason-",
+			"reason+"
+		],
+		"min": 20
+	},
+	"urgency": 8,
+	"leaning": "fighting-",
+	"background_tags": [
+		"alley",
+		"night",
+		"dimlight",
+		"fewpeople",
+		"tense"
+	],
+	"background_image": "https://imagedelivery.net/WTEqQNGFb-l-IHS6IGnzUQ/be4294df-122b-432f-5727-1a427b1d8100/public",
+	"dialogue": [
+		{
+			"speaker": "narrator",
+			"content": {
+				"korean": "골목 어귀의 포장마차에서 아주머니가 행주로 테이블을 닦으며 당신을 부른다."
+			}
+		},
+		{
+			"speaker": "pojangmacha_owner",
+			"content": {
+				"korean": "아이고, 당신이 그 소문 자자한 해결사 양반 아니요? 주먹이 먼저 나간다는 그 분!"
+			}
+		},
+		{
+			"speaker": "pojangmacha_owner",
+			"content": {
+				"korean": "저 건너편 젊은이들 좀 혼내 줘요. 밤마다 와서 행패를 부리고, 내 장사를 다 망쳐 놓네!"
+			}
+		},
+		{
+			"speaker": "dax",
+			"content": {
+				"korean": "경리부장님을 만나기 전에 다른 일에 엮이는 건 좀…"
+			}
+		}
+	],
+	"choices": [
+		{
+			"text": {
+				"korean": "포장마차 아주머니의 말을 듣고 골목 건너편으로 다가가 젊은이들을 위협한다."
+			},
+			"path": "easy",
+			"mbti": "ST",
+			"flag": "pojangmacha_hostile",
+			"effects": {
+				"gold": 100,
+				"fighting": -20,
+				"echo": -5
+			},
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "당신이 다가가자 젊은이들이 화들짝 놀라며 꽁무니를 뺀다."
+					}
+				},
+				{
+					"speaker": "pojangmacha_owner",
+					"content": {
+						"korean": "아이고, 고마워라! 덕분에 숨통이 트이네."
+					}
+				},
+				{
+					"speaker": "dax",
+					"content": {
+						"korean": "큰일 날 뻔했네요. 괜히 시선을 끈 건 아닌지 모르겠습니다."
+					}
+				}
+			],
+			"risk": {
+				"chance": "mid",
+				"bad": {
+					"effects": {
+						"gold": -30
+					},
+					"reward": [],
+					"result": [
+						{
+							"speaker": "narrator",
+							"content": {
+								"korean": "당신이 다가가자 젊은이들이 오히려 소리를 지르며 포장마차 아주머니에게 달려든다."
+							}
+						},
+						{
+							"speaker": "pojangmacha_owner",
+							"content": {
+								"korean": "아이고, 더 난리가 났네! 왜 더 부추겨요!"
+							}
+						},
+						{
+							"speaker": "dax",
+							"content": {
+								"korean": "이런, 상황이 더 안 좋게 번졌습니다…"
+							}
+						}
+					]
+				}
+			}
+		},
+		{
+			"text": {
+				"korean": "성급히 판단하지 않고 골목 건너편 상황을 먼저 살핀다."
+			},
+			"path": "hard",
+			"mbti": "NJ",
+			"flag": "pojangmacha_neutral",
+			"effects": {
+				"echo": 10,
+				"community": 10,
+				"fighting": 20
+			},
+			"reward": [
+				"defense_up"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "골목 건너편 젊은이들이 싸우는 것이 아니라, 넘어진 친구를 일으켜 세우고 있었다."
+					}
+				},
+				{
+					"speaker": "dax",
+					"content": {
+						"korean": "휴, 저들은 싸우는 게 아니었네요. 다행입니다."
+					}
+				},
+				{
+					"speaker": "pojangmacha_owner",
+					"content": {
+						"korean": "아니, 저것들이 또 수작을 부리네!"
+					}
+				}
+			],
+			"risk": {
+				"chance": "high",
+				"bad": {
+					"effects": {
+						"gold": -20
+					},
+					"reward": [],
+					"result": [
+						{
+							"speaker": "narrator",
+							"content": {
+								"korean": "당신이 살피는 동안, 젊은이들이 갑자기 포장마차 아주머니에게 달려들어 난동을 부린다."
+							}
+						},
+						{
+							"speaker": "pojangmacha_owner",
+							"content": {
+								"korean": "아이고, 저것들이 기어코 일을 내네!"
+							}
+						},
+						{
+							"speaker": "dax",
+							"content": {
+								"korean": "이런, 이러다 큰일 나겠습니다!"
+							}
+						}
+					]
+				}
+			}
+		},
+		{
+			"text": {
+				"korean": "주변에 있는 빈 소주병을 발로 차 벽에 부딪히게 해 주의를 끈다."
+			},
+			"path": "stat",
+			"mbti": "TP",
+			"require": {
+				"stat": "fighting",
+				"op": "<=",
+				"value": -40
+			},
+			"flag": "pojangmacha_intimidated",
+			"effects": {
+				"echo": 5,
+				"fighting": -20
+			},
+			"reward": [
+				"shield"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "소주병 깨지는 소리에 골목 안의 모두가 순간 멈칫한다. 아주머니는 놀란 눈으로 당신을 바라본다."
+					}
+				},
+				{
+					"speaker": "pojangmacha_owner",
+					"content": {
+						"korean": "허어, 저 양반은 역시 다르네. 소리 한 번으로 조용해졌네!"
+					}
+				},
+				{
+					"speaker": "dax",
+					"content": {
+						"korean": "와, 소리가 엄청 컸네요! 저까지 깜짝 놀랐습니다."
+					}
+				}
+			]
+		},
+		{
+			"text": {
+				"korean": "포장마차 아주머니에게 장사 방해받은 위로금이라며 돈을 건넨다."
+			},
+			"path": "gold",
+			"mbti": "EN",
+			"require": {
+				"stat": "gold",
+				"op": ">=",
+				"value": 100
+			},
+			"effects": {
+				"gold": -100,
+				"echo": 5
+			},
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "아주머니는 돈을 받더니 잔소리를 멈추고 어묵 국물을 한 그릇 따라 주었다."
+					}
+				},
+				{
+					"speaker": "pojangmacha_owner",
+					"content": {
+						"korean": "아이고, 마음은 고맙네. 근데 저 녀석들은 내일 또 올 거야!"
+					}
+				},
+				{
+					"speaker": "dax",
+					"content": {
+						"korean": "국물은 맛있는데요… 건너편에서 또 고함 소리가 나요."
+					}
+				}
+			]
+		}
+	],
+	"tags": [
+		"pojangmacha_owner",
+		"dax"
+	],
+	"_design": {
+		"slot": "D",
+		"kind": "rep",
+		"person": {
+			"id": "pojangmacha_owner",
+			"name": "포장마차 아주머니",
+			"role": "골목 포장마차 주인"
+		},
+		"wants": "골목 건너편에서 자꾸 행패 부리는 젊은이들을 혼내 달라",
+		"rule_link": "골목 건너편에서 들리는 소란 때문에 포장마차 아주머니의 말만 듣고 바로 상황을 판단할지, 먼저 지켜볼지 선택합니다.",
+		"rep": "fighting-",
+		"events": {},
+		"flags": {
+			"pojangmacha_hostile": {
+				"kind": "bad",
+				"boss_penalty": -1,
+				"label": {
+					"korean": "포장마차 주인에게 불리"
+				},
+				"boss_line": {
+					"korean": "싸움 중에 포장마차 아주머니가 당신의 발목을 붙잡고 방해한다."
+				}
+			},
+			"pojangmacha_neutral": {
+				"kind": "good",
+				"boss_penalty": 1,
+				"label": {
+					"korean": "포장마차 주인에게 중립"
+				},
+				"boss_choice": {
+					"korean": "싸움 중 포장마차 아주머니가 당신에게 따뜻한 국물을 건넨다."
+				}
+			},
+			"pojangmacha_intimidated": {
+				"kind": "good",
+				"boss_penalty": 2,
+				"label": {
+					"korean": "포장마차 주인 위협"
+				},
+				"boss_choice": {
+					"korean": "싸움 중 포장마차 아주머니가 당신의 눈치를 보며 당신을 돕는다."
+				}
+			}
+		}
+	}
+}

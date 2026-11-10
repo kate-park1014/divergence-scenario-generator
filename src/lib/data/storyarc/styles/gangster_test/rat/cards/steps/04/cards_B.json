@@ -1,0 +1,571 @@
+{
+	"cards": [
+		{
+			"key": "mechanic_pride",
+			"title": "정비공의 자존심",
+			"rule_link": "누님 차를 건드리는 것을 막는 정비공의 행동이 단순한 고집일지, 숨겨진 사정을 지키려는 의리일지 선택하게 합니다.",
+			"wants": "누님 차에 아무도 손대지 않기를",
+			"person": {
+				"id": "mechanic",
+				"name": "차고 정비공",
+				"role": "차고 정비공"
+			},
+			"no": 1,
+			"background_tags": [
+				"garage",
+				"daytime",
+				"bright",
+				"few_people",
+				"tense"
+			],
+			"choices": [
+				{
+					"effects": {
+						"reason": -10,
+						"echo": 10
+					},
+					"text": "차고 정비공이 한눈파는 틈에 누님 차 블랙박스 메모리 카드를 몰래 빼낸다.",
+					"risk_bad": {
+						"result": [
+							{
+								"text": "당신이 블랙박스 메모리 카드를 빼내려 하자, 차고 정비공이 뒤에서 불쑥 손을 뻗는다.",
+								"speaker": "narrator"
+							},
+							{
+								"text": "이놈! 감히 내 차에 손을 대?!",
+								"speaker": "mechanic"
+							},
+							{
+								"speaker": "narrator",
+								"text": "차고 정비공의 손에 들려 있던 렌치에 손등을 맞아 얼얼하다."
+							}
+						],
+						"gold": -50,
+						"reward": []
+					},
+					"reward": [
+						"attack_up"
+					],
+					"path": "easy",
+					"result": [
+						{
+							"speaker": "narrator",
+							"text": "당신이 블랙박스 메모리 카드를 빼내자 닥스가 휘파람을 분다."
+						},
+						{
+							"text": "어휴, 저러다 걸리면 손목이 아니라 팔목이 꺾일 텐데!",
+							"speaker": "dax"
+						},
+						{
+							"speaker": "narrator",
+							"text": "뒤늦게 돌아본 차고 정비공이 당신 손에 들린 메모리 카드를 보고 눈을 부릅뜬다."
+						}
+					],
+					"mbti": "EN"
+				},
+				{
+					"risk_bad": {
+						"gold": -20,
+						"result": [
+							{
+								"text": "당신이 차고 정비공에게서 한발 물러서려는데, 차고 정비공이 갑자기 당신 앞을 막아선다.",
+								"speaker": "narrator"
+							},
+							{
+								"text": "어디로 가는 거야? 감히 누님 차를 건드리려다가 도망치는 거냐!",
+								"speaker": "mechanic"
+							},
+							{
+								"text": "그의 손에 들린 렌치가 위협적으로 번뜩인다.",
+								"speaker": "narrator"
+							}
+						],
+						"reward": []
+					},
+					"effects": {
+						"echo": 10,
+						"community": 10
+					},
+					"text": "차고 정비공의 완고한 태도를 존중하고, 누님에게 직접 물어볼 기회를 기다린다.",
+					"reward": [
+						"defense_up"
+					],
+					"mbti": "TJ",
+					"result": [
+						{
+							"speaker": "narrator",
+							"text": "당신이 차고 정비공에게서 한발 물러서자 닥스가 안도하며 어깨를 토닥인다."
+						},
+						{
+							"text": "휴, 한숨 돌렸네요. 누님 일은 괜히 엮이면 피곤해요.",
+							"speaker": "dax"
+						},
+						{
+							"speaker": "narrator",
+							"text": "차고 정비공은 여전히 경계하는 눈빛으로 당신을 노려본다."
+						}
+					],
+					"path": "hard"
+				},
+				{
+					"effects": {
+						"fighting": -20,
+						"echo": 5
+					},
+					"reward": [
+						"cooldown_reset"
+					],
+					"text": "차고 정비공의 자랑스러운 차 관리 노하우를 칭찬하며 환심을 산다.",
+					"risk_bad": {
+						"result": [
+							{
+								"speaker": "narrator",
+								"text": "당신의 과장된 칭찬에 차고 정비공이 오히려 의심의 눈초리로 당신을 쳐다본다."
+							},
+							{
+								"speaker": "mechanic",
+								"text": "이봐, 뭘 숨기려고 그러는 거야? 솔직히 말해봐!"
+							},
+							{
+								"text": "아저씨가 칭찬에 약하네요…?",
+								"speaker": "dax"
+							},
+							{
+								"speaker": "narrator",
+								"text": "차고 정비공은 당신이 차에 손대려 한다며 더욱 경계 태세를 갖춘다."
+							}
+						],
+						"reward": [
+							"hp_down"
+						]
+					},
+					"result": [
+						{
+							"text": "당신의 과장된 칭찬에 차고 정비공의 어깨가 으쓱 올라간다.",
+							"speaker": "narrator"
+						},
+						{
+							"speaker": "mechanic",
+							"text": "허허, 이 정도는 기본이지! 내가 이 차를 얼마나 아끼는데."
+						},
+						{
+							"text": "아저씨 얼굴이 토마토처럼 빨개졌어요!",
+							"speaker": "dax"
+						},
+						{
+							"text": "차고 정비공은 당신에게 자기 정비 기술을 자랑하느라 정신이 없다.",
+							"speaker": "narrator"
+						}
+					],
+					"path": "fun",
+					"mbti": "SF"
+				}
+			],
+			"dialogue": [
+				{
+					"text": "차고 한쪽에서 정비공이 누군가의 차 보닛을 닦고 있다.",
+					"speaker": "narrator"
+				},
+				{
+					"text": "정비공 아저씨는 누님 차를 너무 아껴서 아무도 못 만지게 해요.",
+					"speaker": "dax"
+				},
+				{
+					"speaker": "mechanic",
+					"text": "이 차는 내가 책임진다! 감히 누가 손을 대?"
+				},
+				{
+					"speaker": "dax",
+					"text": "저번에 누가 누님 차 와이퍼를 건드렸다가 혼났대요."
+				}
+			],
+			"slot": "B",
+			"kind": "plant"
+		},
+		{
+			"dialogue": [
+				{
+					"text": "차고 구석 세차장에서 막내 조직원 둘이서 열심히 다른 차를 닦고 있다.",
+					"speaker": "narrator"
+				},
+				{
+					"text": "아, 누님 차도 좀 닦아드리고 싶은데…",
+					"speaker": "junior_gangster"
+				},
+				{
+					"speaker": "dax",
+					"text": "누님 차는 손대면 큰일 난다고 선배들이 엄포를 놓았대요."
+				},
+				{
+					"speaker": "junior_gangster",
+					"text": "그래도 저렇게 먼지 앉은 걸 보면 마음이 아프단 말이죠."
+				}
+			],
+			"rule_link": "누님 차를 건드리는 것을 주저하는 막내 조직원의 태도가 단순히 상사의 경고 때문인지, 아니면 더 깊은 이유가 있는지 궁금증을 유발합니다.",
+			"key": "carwash_secret",
+			"choices": [
+				{
+					"text": "막내 조직원에게 누님 차를 대신 세차해 주겠다고 제안한다.",
+					"mbti": "IT",
+					"path": "easy",
+					"effects": {
+						"community": 10,
+						"gold": 50
+					},
+					"result": [
+						{
+							"speaker": "narrator",
+							"text": "당신의 제안에 막내 조직원이 눈을 반짝이며 고마워한다."
+						},
+						{
+							"text": "정말요? 그럼 제가 보답으로 시원한 음료수라도!",
+							"speaker": "junior_gangster"
+						},
+						{
+							"text": "막내가 신이 나서 어쩔 줄 모르네요.",
+							"speaker": "dax"
+						},
+						{
+							"speaker": "narrator",
+							"text": "막내 조직원은 당신이 세차하는 동안 누님 차 주변을 맴돌며 이것저것 이야기해 준다."
+						}
+					],
+					"reward": [
+						"intelligence_up"
+					],
+					"risk_bad": {
+						"reward": [
+							"hp_down"
+						],
+						"result": [
+							{
+								"text": "당신이 세차를 하려는데, 갑자기 물줄기가 엉뚱한 방향으로 튀어 막내 조직원에게 쏟아진다.",
+								"speaker": "narrator"
+							},
+							{
+								"speaker": "junior_gangster",
+								"text": "으악! 제 옷이 다 젖었잖아요!"
+							},
+							{
+								"speaker": "dax",
+								"text": "아이고, 물벼락 맞았네요!"
+							},
+							{
+								"text": "막내 조직원은 당신이 일부러 그랬다며 삐쳐버린다.",
+								"speaker": "narrator"
+							}
+						]
+					}
+				},
+				{
+					"risk_bad": {
+						"gold": -20,
+						"result": [
+							{
+								"text": "당신의 설득에 막내 조직원이 당황하며 주변을 두리번거린다.",
+								"speaker": "narrator"
+							},
+							{
+								"text": "으, 어떡하지… 제가 말하면 선배들한테 혼날 텐데…",
+								"speaker": "junior_gangster"
+							},
+							{
+								"text": "아이고, 도망가 버리네요!",
+								"speaker": "dax"
+							},
+							{
+								"text": "막내 조직원은 겁에 질려 도망치듯 자리를 피한다.",
+								"speaker": "narrator"
+							}
+						],
+						"reward": []
+					},
+					"effects": {
+						"fighting": -10,
+						"reason": 10
+					},
+					"text": "막내 조직원에게 누님 차에 대해 아는 것을 솔직하게 이야기해 달라고 설득한다.",
+					"path": "hard",
+					"reward": [
+						"move_range_up"
+					],
+					"mbti": "EF",
+					"result": [
+						{
+							"speaker": "narrator",
+							"text": "당신의 진심 어린 설득에 막내 조직원이 잠시 망설인다."
+						},
+						{
+							"speaker": "junior_gangster",
+							"text": "사실… 제가 아는 건 없어요. 그냥 건드리면 안 된다고만 들었어요."
+						},
+						{
+							"speaker": "dax",
+							"text": "아이고, 녀석이 겁만 잔뜩 먹었네요."
+						},
+						{
+							"text": "막내 조직원은 아는 것이 없다는 말만 되풀이할 뿐이다.",
+							"speaker": "narrator"
+						}
+					]
+				},
+				{
+					"event_intro": [
+						{
+							"speaker": "narrator",
+							"text": "막내 조직원이 금화를 세며 당신의 이야기를 기다리고 있다."
+						},
+						{
+							"speaker": "narrator",
+							"text": "잠시 숨을 고르고 다음 행동을 준비할 좋은 기회다."
+						}
+					],
+					"mbti": "NT",
+					"path": "gold",
+					"event": "campsite",
+					"text": "막내 조직원에게 세차 대가로 금화를 주며 잠시 기다려 달라고 한다.",
+					"result": [
+						{
+							"text": "당신이 건넨 금화에 막내 조직원의 눈이 휘둥그레진다.",
+							"speaker": "narrator"
+						},
+						{
+							"text": "흐흐, 이런 거면 얼마든지 기다릴 수 있죠!",
+							"speaker": "junior_gangster"
+						},
+						{
+							"speaker": "dax",
+							"text": "금화 한 장에 저리 좋아하네요!"
+						},
+						{
+							"speaker": "narrator",
+							"text": "막내 조직원은 금화를 받아 들고 옆에 놓인 의자에 앉아 당신을 기다린다."
+						}
+					],
+					"event_reason": "돈을 주고 막내 조직원을 기다리게 하여 정보를 얻기 전 잠시 쉬어갈 여유를 만들었습니다.",
+					"effects": {
+						"gold": -100,
+						"echo": 5
+					}
+				}
+			],
+			"background_tags": [
+				"carwash",
+				"daytime",
+				"wet",
+				"few_people",
+				"casual"
+			],
+			"wants": "누님 차를 깨끗하게 하고 싶지만 혼날까 봐 두려워한다",
+			"no": 2,
+			"person": {
+				"id": "junior_gangster",
+				"name": "세차장 막내",
+				"role": "조직원"
+			},
+			"title": "세차장의 비밀",
+			"slot": "B",
+			"kind": "normal"
+		},
+		{
+			"choices": [
+				{
+					"result": [
+						{
+							"text": "당신이 서류 더미를 뒤지자 먼지가 풀풀 날린다.",
+							"speaker": "narrator"
+						},
+						{
+							"speaker": "dax",
+							"text": "아이고, 먼지가 너무 심해서 숨도 못 쉬겠어요!"
+						},
+						{
+							"text": "기록실 담당자가 기침 소리에 돌아보지만, 당신을 흘긋 보고는 다시 한숨을 쉰다.",
+							"speaker": "narrator"
+						}
+					],
+					"mbti": "EN",
+					"effects": {
+						"gold": 70,
+						"reason": -10
+					},
+					"reward": [],
+					"path": "easy",
+					"risk_bad": {
+						"reward": [
+							"defense_down"
+						],
+						"result": [
+							{
+								"speaker": "narrator",
+								"text": "당신이 서류 더미를 뒤지다 발을 헛디뎌 서류들이 와르르 무너진다."
+							},
+							{
+								"speaker": "record_keeper",
+								"text": "으악! 내가 힘들게 쌓아둔 서류를 누가 다 망가뜨렸어!"
+							},
+							{
+								"speaker": "dax",
+								"text": "으악, 아저씨 눈이 뒤집혔어요!"
+							},
+							{
+								"text": "기록실 담당자가 서류를 다시 쌓으라며 당신에게 잔소리를 퍼붓는다.",
+								"speaker": "narrator"
+							}
+						]
+					},
+					"text": "쌓인 서류 더미에서 누님 차 기록을 직접 찾아본다."
+				},
+				{
+					"mbti": "TJ",
+					"reward": [
+						"shield"
+					],
+					"risk_bad": {
+						"result": [
+							{
+								"text": "당신의 정식 요구에 기록실 담당자가 짜증을 내며 당신을 노려본다.",
+								"speaker": "narrator"
+							},
+							{
+								"speaker": "record_keeper",
+								"text": "뭐? 내가 너 때문에 이 많은 서류를 뒤져야 한다고? 싫어!"
+							},
+							{
+								"speaker": "dax",
+								"text": "아이고, 괜히 화만 돋웠네요!"
+							},
+							{
+								"text": "기록실 담당자는 당신에게 화를 내며 자리를 박차고 일어선다.",
+								"speaker": "narrator"
+							}
+						],
+						"reward": [],
+						"gold": -20
+					},
+					"result": [
+						{
+							"speaker": "narrator",
+							"text": "당신의 정식 요구에 기록실 담당자가 귀찮다는 듯이 고개를 젓는다."
+						},
+						{
+							"speaker": "record_keeper",
+							"text": "아, 귀찮게… 지금 찾을 시간 없는데. 나중에 와요!"
+						},
+						{
+							"speaker": "dax",
+							"text": "저 아저씨는 움직이는 걸 죽기보다 싫어하네요."
+						},
+						{
+							"speaker": "narrator",
+							"text": "기록실 담당자는 서류 더미에 얼굴을 파묻고 당신을 무시한다."
+						}
+					],
+					"path": "hard",
+					"effects": {
+						"fighting": -10,
+						"community": 10
+					},
+					"text": "기록실 담당자에게 누님 차 기록을 정식으로 요구한다."
+				},
+				{
+					"path": "lock",
+					"text": "{actor}이(가) 기록실 담당자에게 정리에 적극적으로 도움을 준다.",
+					"reward": [
+						"intelligence_up"
+					],
+					"mbti": "SF",
+					"effects": {
+						"echo": 5,
+						"community": 10
+					},
+					"result": [
+						{
+							"text": "{actor}이(가) 말끔하게 서류를 분류하자 기록실 담당자가 감탄한다.",
+							"speaker": "narrator"
+						},
+						{
+							"speaker": "record_keeper",
+							"text": "오, 이렇게 깔끔하게 정리하다니! 정말 대단하네!"
+						},
+						{
+							"text": "와, {actor}이(가) 정리의 달인이었네요!",
+							"speaker": "dax"
+						},
+						{
+							"text": "기록실 담당자는 고마움에 누님 차 기록이 있을 만한 곳을 알려준다.",
+							"speaker": "narrator"
+						}
+					],
+					"require_mbti": "SF"
+				},
+				{
+					"effects": {
+						"gold": -100,
+						"fighting": -10
+					},
+					"mbti": "NF",
+					"text": "기록실 담당자에게 금화를 주며 누님 차 기록을 찾아달라고 부탁한다.",
+					"path": "gold",
+					"result": [
+						{
+							"speaker": "narrator",
+							"text": "당신이 건넨 금화에 기록실 담당자의 눈이 번쩍 뜨인다."
+						},
+						{
+							"text": "흐흐, 이런 거라면 내가 기꺼이 찾아주지!",
+							"speaker": "record_keeper"
+						},
+						{
+							"text": "역시 돈이 최고네요!",
+							"speaker": "dax"
+						},
+						{
+							"text": "기록실 담당자는 금화를 주머니에 넣고 서둘러 서류 더미를 뒤지기 시작한다.",
+							"speaker": "narrator"
+						}
+					]
+				}
+			],
+			"background_tags": [
+				"recordsroom",
+				"nighttime",
+				"dim",
+				"empty",
+				"messy"
+			],
+			"person": {
+				"name": "기록실 담당자",
+				"id": "record_keeper",
+				"role": "조직원"
+			},
+			"no": 3,
+			"key": "records_junk",
+			"dialogue": [
+				{
+					"speaker": "narrator",
+					"text": "차량 기록실 안은 오래된 서류와 잡동사니로 가득하다."
+				},
+				{
+					"speaker": "dax",
+					"text": "여기 담당자가 정리하는 걸 너무 싫어해서 맨날 서류가 쌓여 있어요."
+				},
+				{
+					"speaker": "record_keeper",
+					"text": "아, 언제 저걸 다 정리하나… 머리 아파 죽겠네."
+				},
+				{
+					"speaker": "dax",
+					"text": "누님 차 기록도 저 어딘가에 있겠죠?"
+				}
+			],
+			"rule_link": "차량 기록실 담당자의 무관심한 태도가 단순히 귀찮음 때문인지, 아니면 특정 정보를 숨기려는 의도적인 행동인지 의심하게 합니다.",
+			"title": "차량 기록실의 잡동사니",
+			"wants": "쌓여 있는 서류 더미를 정리하고 싶지만 귀찮아한다",
+			"slot": "B",
+			"kind": "normal"
+		}
+	],
+	"errors": [],
+	"prompt_hash": "4ae9de803b8ca7ed0396680b0a6149755deafb85"
+}

@@ -1,0 +1,282 @@
+{
+	"id": "card_03_hidden_ledger_deal",
+	"title": {
+		"korean": "숨겨진 장부 거래"
+	},
+	"intensity": "calm",
+	"after_story": 1,
+	"before_story": 3,
+	"condition": {
+		"leaning": "community-",
+		"among": [
+			"fighting-",
+			"fighting+",
+			"community-",
+			"community+",
+			"reason-",
+			"reason+"
+		],
+		"min": 20
+	},
+	"urgency": 8,
+	"leaning": "community-",
+	"background_tags": [
+		"office",
+		"night",
+		"dim",
+		"empty",
+		"tense"
+	],
+	"background_image": "https://imagedelivery.net/WTEqQNGFb-l-IHS6IGnzUQ/19262ed2-d440-4ec4-8977-f580a3b06000/public",
+	"dialogue": [
+		{
+			"speaker": "narrator",
+			"content": {
+				"korean": "자료실 입구에서 야근 직원이 손으로 복잡한 서류를 가리고 있다."
+			}
+		},
+		{
+			"speaker": "night_accountant",
+			"content": {
+				"korean": "당신이 그… 자기 몫은 기가 막히게 챙긴다는 해결사죠? 지금은 안 됩니다. 장부가… 장부가 비어 있어서…"
+			}
+		},
+		{
+			"speaker": "dax",
+			"content": {
+				"korean": "저 사람이 뭘 숨기는 것 같아요. 얼굴이 파래요!"
+			}
+		},
+		{
+			"speaker": "night_accountant",
+			"content": {
+				"korean": "이 계산이… 이 계산이 맞지 않습니다! 누가 보든 안 됩니다!"
+			}
+		},
+		{
+			"speaker": "narrator",
+			"content": {
+				"korean": "회계팀 야근 직원은 자료실 문을 반쯤 가린 채 서류 뭉치를 품에 숨기듯 붙잡고 있다."
+			}
+		}
+	],
+	"choices": [
+		{
+			"text": {
+				"korean": "개인적인 이득이 걸린 듯한 장부를 덮어주며 나중에 한몫 챙길 것을 암시한다."
+			},
+			"path": "easy",
+			"mbti": "TP",
+			"flag": "accountant_blackmail_fail",
+			"effects": {
+				"gold": 80,
+				"echo": 8,
+				"reason": -10
+			},
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "당신이 의미심장한 눈빛으로 장부를 가리자 야근 직원이 흠칫한다."
+					}
+				},
+				{
+					"speaker": "night_accountant",
+					"content": {
+						"korean": "아… 알겠습니다. 문은… 열어 드릴게요."
+					}
+				},
+				{
+					"speaker": "dax",
+					"content": {
+						"korean": "와, 저 사람이 그냥 문을 열어 주네요! 당신 진짜 대단해요!"
+					}
+				}
+			],
+			"risk": {
+				"chance": "mid",
+				"bad": {
+					"effects": {
+						"gold": -30
+					},
+					"reward": [],
+					"result": [
+						{
+							"speaker": "narrator",
+							"content": {
+								"korean": "당신이 의미심장한 눈빛으로 장부를 가리자 야근 직원이 놀라 비명을 지른다."
+							}
+						},
+						{
+							"speaker": "night_accountant",
+							"content": {
+								"korean": "으악! 저… 저는 아무것도 모릅니다!"
+							}
+						},
+						{
+							"speaker": "dax",
+							"content": {
+								"korean": "쉿! 저 사람이 도망가버렸어요! 문을 잠그고 가버렸네요!"
+							}
+						}
+					]
+				}
+			}
+		},
+		{
+			"text": {
+				"korean": "야근 직원의 사정을 봐주지 않고 장부를 당장 확인하겠다며 자료실 문을 열라고 요구한다."
+			},
+			"path": "hard",
+			"mbti": "TJ",
+			"flag": "accountant_ledger_revealed",
+			"effects": {
+				"echo": -5,
+				"fighting": 15,
+				"community": 10
+			},
+			"reward": [
+				"defense_up"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "당신이 단호하게 장부 확인을 요구하자 야근 직원이 울상을 짓는다."
+					}
+				},
+				{
+					"speaker": "night_accountant",
+					"content": {
+						"korean": "어차피 들통날 거였겠죠. 자, 보세요!"
+					}
+				},
+				{
+					"speaker": "dax",
+					"content": {
+						"korean": "으…음. 저 사람 표정이 안 좋은데요?"
+					}
+				}
+			],
+			"risk": {
+				"chance": "high",
+				"bad": {
+					"effects": {
+						"gold": -20
+					},
+					"reward": [],
+					"result": [
+						{
+							"speaker": "narrator",
+							"content": {
+								"korean": "당신이 단호하게 장부 확인을 요구하자 야근 직원이 오히려 큰소리친다."
+							}
+						},
+						{
+							"speaker": "night_accountant",
+							"content": {
+								"korean": "이 장부는 저의 목숨과 같습니다! 절대 못 줍니다!"
+							}
+						},
+						{
+							"speaker": "dax",
+							"content": {
+								"korean": "으악! 저 사람이 장부를 찢어버렸어요!"
+							}
+						}
+					]
+				}
+			}
+		},
+		{
+			"text": {
+				"korean": "야근 직원의 사적인 이득에 초점을 맞춰, 자신만이 그의 비밀을 지켜줄 수 있다고 설득한다."
+			},
+			"path": "stat",
+			"mbti": "NT",
+			"require": {
+				"stat": "community",
+				"op": "<=",
+				"value": -40
+			},
+			"flag": "accountant_secret_deal",
+			"effects": {
+				"gold": 100,
+				"echo": 10,
+				"community": -20
+			},
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "당신의 말에 야근 직원의 눈빛이 흔들린다. 그는 결국 품속의 장부를 건넨다."
+					}
+				},
+				{
+					"speaker": "night_accountant",
+					"content": {
+						"korean": "제… 제가 가진 건 이것뿐입니다."
+					}
+				},
+				{
+					"speaker": "dax",
+					"content": {
+						"korean": "저 사람이 당신한테만 뭔가를 보여주네요!"
+					}
+				}
+			]
+		}
+	],
+	"tags": [
+		"night_accountant",
+		"dax"
+	],
+	"_design": {
+		"slot": "A",
+		"kind": "rep",
+		"person": {
+			"id": "night_accountant",
+			"name": "회계팀 야근 직원",
+			"role": "회계팀 야근 직원"
+		},
+		"wants": "자신의 은밀한 거래 내역이 담긴 장부를 숨기려 한다.",
+		"rule_link": "눈앞에 보이는 회계팀 직원의 은밀한 행동이 무엇을 의미하는지, 그의 개인적인 이득을 위한 것인지 아니면 더 큰 그림의 일부인지 따져 보게 한다.",
+		"rep": "community-",
+		"events": {},
+		"flags": {
+			"accountant_blackmail_fail": {
+				"kind": "bad",
+				"boss_penalty": -1,
+				"label": {
+					"korean": "회계사 협박 실패"
+				},
+				"boss_line": {
+					"korean": "회계팀 직원이 당신에게 앙심을 품고 서버실 전원을 차단했다."
+				}
+			},
+			"accountant_ledger_revealed": {
+				"kind": "good",
+				"boss_penalty": 1,
+				"label": {
+					"korean": "회계사 장부 확인"
+				},
+				"boss_choice": {
+					"korean": "회계팀 직원이 서버실 비밀번호를 알려주며 협조했다."
+				}
+			},
+			"accountant_secret_deal": {
+				"kind": "good",
+				"boss_penalty": 2,
+				"label": {
+					"korean": "회계사 비밀 거래"
+				},
+				"boss_choice": {
+					"korean": "회계팀 직원이 당신에게 서버실 문이 열려 있는 시간을 미리 알려줬다."
+				}
+			}
+		}
+	}
+}

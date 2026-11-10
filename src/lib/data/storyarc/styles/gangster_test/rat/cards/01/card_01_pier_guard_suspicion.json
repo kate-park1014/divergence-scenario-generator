@@ -1,0 +1,256 @@
+{
+	"id": "card_01_pier_guard_suspicion",
+	"title": {
+		"korean": "수상한 차는 안 됩니다"
+	},
+	"intensity": "calm",
+	"after_story": 3,
+	"before_story": 5,
+	"background_tags": [
+		"night",
+		"pier",
+		"foggy",
+		"guard",
+		"suspense"
+	],
+	"background_image": "https://imagedelivery.net/WTEqQNGFb-l-IHS6IGnzUQ/7e04b489-f2e8-4c2e-05f1-65c8812fd800/public",
+	"dialogue": [
+		{
+			"speaker": "narrator",
+			"content": {
+				"korean": "닥스의 차가 부두 정문 앞에 멈춰 서자, 어두운 경비 초소에서 경비원 한 명이 불쑥 튀어나왔다."
+			}
+		},
+		{
+			"speaker": "guard",
+			"content": {
+				"korean": "이 시간에 웬 차야? 부두는 통행 금지야! 트렁크 열어 봐!"
+			}
+		},
+		{
+			"speaker": "dax",
+			"content": {
+				"korean": "어르신, 저희는 백상어파 회장님 일로 왔습니다!"
+			}
+		},
+		{
+			"speaker": "guard",
+			"content": {
+				"korean": "회장님? 그 양반이 이 시간에 웬일이래? 더 수상하네!"
+			}
+		},
+		{
+			"speaker": "narrator",
+			"content": {
+				"korean": "경비원은 손전등으로 차 안을 훑으며 당신을 의심스러운 눈초리로 바라본다."
+			}
+		}
+	],
+	"choices": [
+		{
+			"text": {
+				"korean": "회장님 이름을 대며 밀고 들어간다"
+			},
+			"path": "easy",
+			"mbti": "TJ",
+			"effects": {
+				"gold": 100
+			},
+			"seed": "pier_guard_suspicion_easy",
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "당신이 회장님 이름을 크게 외치자 경비원은 흠칫 놀라더니 뒷걸음질 쳤다."
+					}
+				},
+				{
+					"speaker": "guard",
+					"content": {
+						"korean": "흐음, 알았어! 조심해서 가라고!"
+					}
+				},
+				{
+					"speaker": "dax",
+					"content": {
+						"korean": "이야, 역시 회장님 이름이 최고네요!"
+					}
+				}
+			],
+			"risk": {
+				"chance": "mid",
+				"bad": {
+					"effects": {
+						"gold": -30
+					},
+					"reward": [],
+					"result": [
+						{
+							"speaker": "narrator",
+							"content": {
+								"korean": "당신이 회장님 이름을 크게 외치자 경비원은 잠시 멈칫하더니 오히려 목소리를 높였다."
+							}
+						},
+						{
+							"speaker": "guard",
+							"content": {
+								"korean": "회장님 팔아서 사기 치는 놈들 한두 번 보니! 더 수상하네!"
+							}
+						},
+						{
+							"speaker": "dax",
+							"content": {
+								"korean": "아이고, 어르신이 깐깐하시네요..."
+							}
+						}
+					]
+				}
+			}
+		},
+		{
+			"text": {
+				"korean": "트렁크를 순순히 열어 보이며 사정을 설명한다"
+			},
+			"path": "hard",
+			"mbti": "SF",
+			"effects": {
+				"echo": 10,
+				"community": 20
+			},
+			"reward": [
+				"defense_up"
+			],
+			"seed": "pier_guard_suspicion_hard",
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "당신이 트렁크를 열어 보이자 경비원은 조심스럽게 안을 살폈다."
+					}
+				},
+				{
+					"speaker": "guard",
+					"content": {
+						"korean": "아니, 이런 심야에 죄송합니다! 일행이신 줄 몰랐네요."
+					}
+				},
+				{
+					"speaker": "dax",
+					"content": {
+						"korean": "시간은 좀 걸렸지만, 어르신이 마음을 푸셨네요!"
+					}
+				}
+			],
+			"risk": {
+				"chance": "high",
+				"bad": {
+					"effects": {
+						"gold": -20
+					},
+					"reward": [],
+					"result": [
+						{
+							"speaker": "narrator",
+							"content": {
+								"korean": "당신이 트렁크를 열어 보이자 경비원은 고개를 갸웃거리며 불빛을 들이밀었다."
+							}
+						},
+						{
+							"speaker": "guard",
+							"content": {
+								"korean": "이 시간에 수상한 물건이라도 싣고 가는 거 아니야? 더 꼼꼼히 봐야겠네!"
+							}
+						},
+						{
+							"speaker": "dax",
+							"content": {
+								"korean": "어르신, 저희 빨리 가야 하는데요..."
+							}
+						}
+					]
+				}
+			}
+		},
+		{
+			"text": {
+				"korean": "경비원의 손전등을 뺏어 들고 직접 차 안을 비춰 보인다"
+			},
+			"path": "fun",
+			"mbti": "EN",
+			"effects": {
+				"echo": -5,
+				"reason": -20
+			},
+			"reward": [
+				"cooldown_reset"
+			],
+			"seed": "pier_guard_suspicion_hard",
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "당신이 경비원의 손에서 손전등을 낚아채자, 경비원은 당황한 표정으로 뒤로 물러섰다."
+					}
+				},
+				{
+					"speaker": "guard",
+					"content": {
+						"korean": "아니, 이봐요! 내 손전등 돌려줘!"
+					}
+				},
+				{
+					"speaker": "dax",
+					"content": {
+						"korean": "저, 저러다 경비원 아저씨 쓰러지겠어요..."
+					}
+				}
+			],
+			"risk": {
+				"chance": "low",
+				"bad": {
+					"effects": {
+						"gold": -30
+					},
+					"reward": [],
+					"result": [
+						{
+							"speaker": "narrator",
+							"content": {
+								"korean": "당신이 경비원의 손전등을 뺏어 들려는 순간, 경비원이 손전등을 놓치며 불빛이 꺼졌다."
+							}
+						},
+						{
+							"speaker": "guard",
+							"content": {
+								"korean": "으악! 내 손전등!"
+							}
+						},
+						{
+							"speaker": "dax",
+							"content": {
+								"korean": "어두워서 아무것도 안 보여요!"
+							}
+						}
+					]
+				}
+			}
+		}
+	],
+	"tags": [
+		"guard",
+		"dax"
+	],
+	"_design": {
+		"slot": "B",
+		"kind": "plant",
+		"person": {
+			"name": "경비원",
+			"id": "guard",
+			"role": "부두 야간 경비원"
+		},
+		"wants": "늦은 시각에 수상한 차가 들어오는 것을 막고, 트렁크를 확인하고 싶어 한다.",
+		"rule_link": "밤늦게 부두에 들어서려는 주인공들을 겉모습만 보고 수상하게 여기는 경비원의 말을 듣고 바로 판단할지, 사정을 설명할지 선택한다.",
+		"events": {},
+		"flags": {}
+	}
+}

@@ -1,0 +1,349 @@
+{
+	"id": "card_02_forklift_uncle_favor",
+	"title": {
+		"korean": "지게차 아재의 부탁"
+	},
+	"intensity": "calm",
+	"after_story": 1,
+	"before_story": 3,
+	"condition": {
+		"leaning": "fighting+",
+		"among": [
+			"fighting-",
+			"fighting+",
+			"community-",
+			"community+",
+			"reason-",
+			"reason+"
+		],
+		"min": 20
+	},
+	"urgency": 8,
+	"leaning": "fighting+",
+	"background_tags": [
+		"container_yard",
+		"dawn",
+		"foggy",
+		"alone",
+		"tired"
+	],
+	"background_image": "https://imagedelivery.net/WTEqQNGFb-l-IHS6IGnzUQ/e4af4002-f4a2-402d-943d-ba2b16f88500/public",
+	"dialogue": [
+		{
+			"speaker": "narrator",
+			"content": {
+				"korean": "낡은 지게차 위에 앉아 꾸벅 졸던 지게차 아재가 당신을 발견하고 눈을 비비며 다가왔다."
+			}
+		},
+		{
+			"speaker": "forklift_uncle",
+			"content": {
+				"korean": "어어? 당신들이 그 소문 자자한, 남 돕는 데 앞장선다는 해결사들 아니오?"
+			}
+		},
+		{
+			"speaker": "forklift_uncle",
+			"content": {
+				"korean": "켁, 켁. 내가 잠깐 잠든 사이에 저 컨테이너들이 엉망진창이 돼버렸네! 이거 5시까지 못 치우면 큰일인데…"
+			}
+		},
+		{
+			"speaker": "dax",
+			"content": {
+				"korean": "컨테이너가 엉망이 되면 아재가 책임져야 한대요."
+			}
+		}
+	],
+	"choices": [
+		{
+			"text": {
+				"korean": "아재의 부탁을 흔쾌히 받아들이고, 컨테이너 정리를 돕는다."
+			},
+			"path": "easy",
+			"mbti": "ES",
+			"flag": "forklift_uncle_helped",
+			"effects": {
+				"fighting": 15,
+				"community": 10,
+				"echo": 5
+			},
+			"reward": [
+				"attack_up"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "당신의 도움으로 컨테이너들이 눈 깜짝할 새 정리됐다."
+					}
+				},
+				{
+					"speaker": "forklift_uncle",
+					"content": {
+						"korean": "으음, 역시 소문대로 착한 사람들이었구먼! 고맙소!"
+					}
+				},
+				{
+					"speaker": "dax",
+					"content": {
+						"korean": "저 아재, 엄청 감동받은 것 같은데요!"
+					}
+				}
+			],
+			"risk": {
+				"chance": "mid",
+				"bad": {
+					"effects": {
+						"gold": -20
+					},
+					"reward": [
+						"hp_down"
+					],
+					"result": [
+						{
+							"speaker": "narrator",
+							"content": {
+								"korean": "당신이 컨테이너를 정리하다가 실수로 지게차 아재의 간식 상자를 엎어버렸다."
+							}
+						},
+						{
+							"speaker": "forklift_uncle",
+							"content": {
+								"korean": "으악! 내 아침 간식! 이게 다 뭐요!"
+							}
+						},
+						{
+							"speaker": "dax",
+							"content": {
+								"korean": "아재가 아끼던 건데… 죄송해서 어쩌죠?"
+							}
+						}
+					]
+				}
+			}
+		},
+		{
+			"text": {
+				"korean": "귀찮다는 듯 고개를 젓고, 아재의 부탁을 무시하며 지나간다."
+			},
+			"path": "hard",
+			"mbti": "TJ",
+			"flag": "forklift_uncle_ignored",
+			"effects": {
+				"fighting": -15,
+				"community": -10,
+				"echo": -5
+			},
+			"reward": [
+				"defense_up"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "당신의 차가운 반응에 지게차 아재가 머쓱하게 뒷머리를 긁적였다."
+					}
+				},
+				{
+					"speaker": "forklift_uncle",
+					"content": {
+						"korean": "켁, 켁. 뭐, 바쁘다면 어쩔 수 없지."
+					}
+				},
+				{
+					"speaker": "dax",
+					"content": {
+						"korean": "아재가 괜히 주눅 들었는데요."
+					}
+				}
+			],
+			"risk": {
+				"chance": "high",
+				"bad": {
+					"effects": {
+						"gold": -20
+					},
+					"reward": [],
+					"result": [
+						{
+							"speaker": "narrator",
+							"content": {
+								"korean": "당신이 지나가려 하자 지게차 아재가 지게차로 당신의 길을 막아섰다."
+							}
+						},
+						{
+							"speaker": "forklift_uncle",
+							"content": {
+								"korean": "켁, 켁. 내 부탁을 거절하고 그냥 가겠다고? 여긴 내가 지키는 구역이오!"
+							}
+						},
+						{
+							"speaker": "dax",
+							"content": {
+								"korean": "아재가 갑자기 고집을 부리는데요!"
+							}
+						}
+					]
+				}
+			}
+		},
+		{
+			"text": {
+				"korean": "아재 대신 야적장 규칙이 엉망이 된 이유를 찾아내 바로잡아 준다."
+			},
+			"path": "stat",
+			"mbti": "IN",
+			"require": {
+				"stat": "fighting",
+				"op": ">=",
+				"value": 40
+			},
+			"flag": "forklift_uncle_rule_fixed",
+			"effects": {
+				"reason": -10,
+				"echo": 10,
+				"fighting": 25,
+				"community": 15
+			},
+			"reward": [
+				"intelligence_up"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "당신이 야적장의 허술한 규칙을 지적하자, 아재는 얼굴이 빨개졌다."
+					}
+				},
+				{
+					"speaker": "forklift_uncle",
+					"content": {
+						"korean": "으음, 이렇게 허술했었나? 역시 소문대로 똑똑하구먼!"
+					}
+				},
+				{
+					"speaker": "dax",
+					"content": {
+						"korean": "아재, 이제 자기 규칙을 꼼꼼히 챙기겠어요."
+					}
+				}
+			]
+		},
+		{
+			"text": {
+				"korean": "땀으로 절은 아재의 낡은 장갑을 새것으로 바꿔주며 그의 노고를 치하한다."
+			},
+			"path": "fun",
+			"mbti": "FP",
+			"effects": {
+				"echo": 15,
+				"community": 20
+			},
+			"reward": [
+				"cooldown_reset"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "당신이 건넨 새 장갑에 지게차 아재는 감동한 듯 장갑을 연신 비벼봤다."
+					}
+				},
+				{
+					"speaker": "forklift_uncle",
+					"content": {
+						"korean": "으음, 이 새 장갑은 너무 미끄러워서 일을 못 하겠구먼! 켁, 켁."
+					}
+				},
+				{
+					"speaker": "dax",
+					"content": {
+						"korean": "아재가 새 장갑이 어색한가 봐요!"
+					}
+				}
+			],
+			"risk": {
+				"chance": "low",
+				"bad": {
+					"effects": {
+						"gold": -50
+					},
+					"reward": [],
+					"result": [
+						{
+							"speaker": "narrator",
+							"content": {
+								"korean": "당신이 건넨 새 장갑이 아재의 손에 너무 커서 헐렁거렸다."
+							}
+						},
+						{
+							"speaker": "forklift_uncle",
+							"content": {
+								"korean": "으음, 이 장갑은 나한테 너무 크잖아! 이걸 끼고 어떻게 일을 해!"
+							}
+						},
+						{
+							"speaker": "dax",
+							"content": {
+								"korean": "아재가 주먹을 쥐었다 폈다 하며 투덜대네요…"
+							}
+						}
+					]
+				}
+			}
+		}
+	],
+	"tags": [
+		"forklift_uncle",
+		"dax"
+	],
+	"_design": {
+		"slot": "A",
+		"kind": "rep",
+		"person": {
+			"id": "forklift_uncle",
+			"name": "지게차 아재",
+			"role": "지게차 기사"
+		},
+		"wants": "야적장 물건 정리 도와달라는 부탁",
+		"rule_link": "당신들이 나를 도와주는 걸 끝까지 지켜보니, 소문처럼 착한 사람인 것 같소.",
+		"rep": "fighting+",
+		"events": {},
+		"flags": {
+			"forklift_uncle_helped": {
+				"kind": "bad",
+				"boss_penalty": -1,
+				"label": {
+					"korean": "도움받은 아재"
+				},
+				"boss_line": {
+					"korean": "지게차 아재가 당신의 은혜를 갚겠다며 야적장 입구를 활짝 열어 준다."
+				}
+			},
+			"forklift_uncle_ignored": {
+				"kind": "good",
+				"boss_penalty": 1,
+				"label": {
+					"korean": "무시당한 아재"
+				},
+				"boss_choice": {
+					"korean": "지게차 아재가 당신을 보고는 일부러 지게차로 길을 막아선다."
+				}
+			},
+			"forklift_uncle_rule_fixed": {
+				"kind": "good",
+				"boss_penalty": 2,
+				"label": {
+					"korean": "규칙 바로잡음"
+				},
+				"boss_choice": {
+					"korean": "지게차 아재가 당신 덕분에 야적장 규칙을 새로 만들었다며 당신에게 협력한다."
+				}
+			}
+		}
+	}
+}

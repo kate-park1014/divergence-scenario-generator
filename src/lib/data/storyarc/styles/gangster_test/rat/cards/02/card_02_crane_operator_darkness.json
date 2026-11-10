@@ -1,0 +1,165 @@
+{
+	"id": "card_02_crane_operator_darkness",
+	"title": {
+		"korean": "크레인 기사의 어둠"
+	},
+	"intensity": "high",
+	"after_story": 5,
+	"before_story": 7,
+	"callback": {
+		"seed": "container_ghost_shadow_hard",
+		"min_rooms_after": 2
+	},
+	"background_tags": [
+		"port",
+		"night",
+		"darkness",
+		"solitude",
+		"calm"
+	],
+	"background_image": "https://imagedelivery.net/WTEqQNGFb-l-IHS6IGnzUQ/5f7e6eac-9f47-4800-a10d-1ae6a5141a00/public",
+	"dialogue": [
+		{
+			"speaker": "narrator",
+			"content": {
+				"korean": "크레인 기사가 당신에게 다가와 작은 목소리로 속삭인다."
+			}
+		},
+		{
+			"speaker": "crane_operator",
+			"content": {
+				"korean": "내가 컨테이너 쪽 불을 꺼줄게. 아무것도 안 보이는 게 좋잖아?"
+			}
+		},
+		{
+			"speaker": "dax",
+			"content": {
+				"korean": "어? 저 기사님, 저희를 도와주는 건가요?"
+			}
+		},
+		{
+			"speaker": "crane_operator",
+			"content": {
+				"korean": "흥, 지난번에 알려준 정보가 정확했는지 내가 확인해야지."
+			}
+		},
+		{
+			"speaker": "narrator",
+			"content": {
+				"korean": "크레인 기사가 조종석으로 돌아가더니, 이내 컨테이너 주변의 불빛이 하나둘씩 꺼진다."
+			}
+		}
+	],
+	"choices": [
+		{
+			"text": {
+				"korean": "기사의 재치에 감탄하며 큰 소리로 칭찬한다"
+			},
+			"path": "easy",
+			"mbti": "EF",
+			"flag": "crane_operator_dark_path",
+			"effects": {
+				"fighting": 15,
+				"echo": 10
+			},
+			"reward": [
+				"attack_up"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "당신의 칭찬에 크레인 기사가 으쓱거리더니, 괜히 조종석 위에서 팔을 휘두른다."
+					}
+				},
+				{
+					"speaker": "crane_operator",
+					"content": {
+						"korean": "이 정도는 기본이지! 어둠 속에서 잘 찾아가라고!"
+					}
+				},
+				{
+					"speaker": "dax",
+					"content": {
+						"korean": "와, 정말 어두웠는데 도움이 돼요!"
+					}
+				}
+			]
+		},
+		{
+			"text": {
+				"korean": "기사의 도움에 감사하며, 이제 조용히 움직이겠다고 말한다"
+			},
+			"path": "hard",
+			"mbti": "IS",
+			"flag": "crane_operator_stealth_mode",
+			"effects": {
+				"reason": 10,
+				"echo": 10
+			},
+			"reward": [
+				"defense_up"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "당신의 진심 어린 감사에 크레인 기사가 고개를 끄덕이더니, 조용히 조종석으로 사라진다."
+					}
+				},
+				{
+					"speaker": "crane_operator",
+					"content": {
+						"korean": "다음에 또 보자고."
+					}
+				},
+				{
+					"speaker": "dax",
+					"content": {
+						"korean": "역시 차분하게 대처하는 게 좋네요."
+					}
+				}
+			]
+		}
+	],
+	"tags": [
+		"crane_operator",
+		"dax"
+	],
+	"_design": {
+		"slot": "C",
+		"kind": "callback",
+		"person": {
+			"role": "컨테이너 야적장 야간 크레인 기사",
+			"id": "crane_operator",
+			"name": "야간 크레인 기사"
+		},
+		"wants": "자신이 제공한 정보와 도움이 인정받기를 원함.",
+		"rule_link": "이전에 얻은 정보를 바탕으로 신중하게 행동하여 상황 해결에 도움을 준다.",
+		"events": {},
+		"flags": {
+			"crane_operator_dark_path": {
+				"kind": "good",
+				"boss_penalty": 1,
+				"label": {
+					"korean": "기사 도움"
+				},
+				"boss_choice": {
+					"korean": "크레인 기사가 컨테이너 주변의 불을 꺼주어 어둠 속에서 접근하기 쉽다."
+				}
+			},
+			"crane_operator_stealth_mode": {
+				"kind": "good",
+				"boss_penalty": 2,
+				"label": {
+					"korean": "기사 협조"
+				},
+				"boss_choice": {
+					"korean": "크레인 기사가 컨테이너 주변의 불을 끈 후 조용히 자리를 지켜준다."
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,281 @@
+{
+	"id": "card_03_suspicious_note",
+	"title": {
+		"korean": "수상한 쪽지"
+	},
+	"intensity": "calm",
+	"after_story": 7,
+	"before_story": 9,
+	"condition": {
+		"leaning": "reason+",
+		"among": [
+			"fighting-",
+			"fighting+",
+			"community-",
+			"community+",
+			"reason-",
+			"reason+"
+		],
+		"min": 20
+	},
+	"urgency": 8,
+	"leaning": "reason+",
+	"background_tags": [
+		"hallway",
+		"night",
+		"dim",
+		"empty",
+		"curious"
+	],
+	"background_image": "https://imagedelivery.net/WTEqQNGFb-l-IHS6IGnzUQ/7f073e80-d30e-4f93-1b34-d402243d9000/public",
+	"dialogue": [
+		{
+			"speaker": "hoegye_teamjang",
+			"content": {
+				"korean": "당신이 그 뭐랄까, 규칙에 얽매이지 않고 일을 착착 해결하는 분들이라고 들었습니다만. 맞나요?"
+			}
+		},
+		{
+			"speaker": "hoegye_teamjang",
+			"content": {
+				"korean": "방금 서버실 문 앞에 이런 쪽지가 떨어져 있었습니다만... 제 착각일 수도 있고요."
+			}
+		},
+		{
+			"speaker": "hoegye_teamjang",
+			"content": {
+				"korean": "내용이 좀... 개인적이고 이상해서요. 괜히 회사에 알려지면 골치 아파질까 싶어서요. 좀 봐주시겠어요?"
+			}
+		},
+		{
+			"speaker": "dax",
+			"content": {
+				"korean": "쪽지라니? 무슨 내용일까요? 혹시 중요한 단서일지도 몰라요!"
+			}
+		}
+	],
+	"choices": [
+		{
+			"text": {
+				"korean": "쪽지의 필체와 내용을 분석해 누가 어떤 의도로 남겼는지 추리한다."
+			},
+			"path": "easy",
+			"mbti": "NT",
+			"flag": "decipher_hacker_note",
+			"effects": {
+				"reason": 15,
+				"echo": 5
+			},
+			"reward": [
+				"attack_up"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "당신은 쪽지에 담긴, 겉으로는 보이지 않는 암호 같은 정보를 해독해낸다."
+					}
+				},
+				{
+					"speaker": "hoegye_teamjang",
+					"content": {
+						"korean": "세상에, 이렇게 빨리 알아내시다니! 역시 소문대로군요!"
+					}
+				},
+				{
+					"speaker": "dax",
+					"content": {
+						"korean": "와, 역시 당신은 천재예요! 해커 간부의 버릇까지 알아내다니!"
+					}
+				}
+			],
+			"risk": {
+				"chance": "mid",
+				"bad": {
+					"effects": {
+						"gold": -20
+					},
+					"reward": [
+						"intelligence_down"
+					],
+					"result": [
+						{
+							"speaker": "narrator",
+							"content": {
+								"korean": "당신의 추리는 엉뚱한 방향으로 흘러가고, 팀장은 더욱 혼란스러워한다."
+							}
+						},
+						{
+							"speaker": "hoegye_teamjang",
+							"content": {
+								"korean": "음... 제가 알던 내용과는 전혀 다른데요? 더 헷갈리기만 합니다."
+							}
+						},
+						{
+							"speaker": "dax",
+							"content": {
+								"korean": "아이고, 팀장님이 이제 더 모르겠대요! 어쩌면 좋지..."
+							}
+						}
+					]
+				}
+			}
+		},
+		{
+			"text": {
+				"korean": "쪽지를 들고 서버실 관리자에게 직접 찾아가 사실 확인을 요구한다."
+			},
+			"path": "hard",
+			"mbti": "SJ",
+			"flag": "confront_with_note",
+			"effects": {
+				"echo": 10,
+				"reason": -20
+			},
+			"reward": [
+				"stun"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "팀장은 당황하지만, 관리자는 쪽지를 보고 의미심장한 표정을 짓는다."
+					}
+				},
+				{
+					"speaker": "hoegye_teamjang",
+					"content": {
+						"korean": "아니, 그걸 관리자에게 바로 보여주다니! 큰일 나는 거 아닙니까?"
+					}
+				},
+				{
+					"speaker": "dax",
+					"content": {
+						"korean": "관리자 표정이 심상치 않아요! 혹시 뭔가를 아는 걸까요?"
+					}
+				}
+			],
+			"risk": {
+				"chance": "high",
+				"bad": {
+					"effects": {
+						"gold": -20
+					},
+					"reward": [],
+					"result": [
+						{
+							"speaker": "narrator",
+							"content": {
+								"korean": "관리자는 쪽지를 보고는 오히려 불쾌해하며, 당신을 무단 침입자로 몰아세운다."
+							}
+						},
+						{
+							"speaker": "hoegye_teamjang",
+							"content": {
+								"korean": "아니, 이걸 왜 관리자에게 보여줘서 일을 이렇게 만듭니까!"
+							}
+						},
+						{
+							"speaker": "dax",
+							"content": {
+								"korean": "관리자가 화났어요! 우리한테 불똥 튀는 거 아니에요?"
+							}
+						}
+					]
+				}
+			}
+		},
+		{
+			"text": {
+				"korean": "쪽지는 단순한 장난이라며, 팀장에게 걱정 말고 퇴근하라고 안심시킨다."
+			},
+			"path": "stat",
+			"mbti": "EP",
+			"require": {
+				"stat": "reason",
+				"op": ">=",
+				"value": 40
+			},
+			"flag": "dismiss_as_prank",
+			"effects": {
+				"reason": 25,
+				"fighting": -20
+			},
+			"reward": [
+				"move_range_up"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "팀장은 당신의 태연한 모습에 안심하고, 쪽지를 구겨 쓰레기통에 버린다."
+					}
+				},
+				{
+					"speaker": "hoegye_teamjang",
+					"content": {
+						"korean": "그런가요? 하긴 제가 괜한 걱정을 했군요. 감사합니다!"
+					}
+				},
+				{
+					"speaker": "dax",
+					"content": {
+						"korean": "팀장님이 안심하고 가버렸어요! 역시 당신은 분위기 메이커네요!"
+					}
+				}
+			]
+		}
+	],
+	"tags": [
+		"hoegye_teamjang",
+		"dax"
+	],
+	"_design": {
+		"slot": "D",
+		"kind": "rep",
+		"person": {
+			"id": "hoegye_teamjang",
+			"name": "회계팀 팀장",
+			"role": "회계팀 팀장"
+		},
+		"wants": "규칙에 얽매이지 않고 자유로운 방식으로 이 수상한 쪽지 문제를 해결해주길 바랍니다.",
+		"rule_link": "서버실 앞 수상한 쪽지를 보고, 그것이 정말 단순한 낙서인지 아니면 중요한 증거인지 자유로운 방식으로 판단하고 행동합니다.",
+		"rep": "reason+",
+		"events": {},
+		"flags": {
+			"decipher_hacker_note": {
+				"kind": "bad",
+				"boss_penalty": -1,
+				"label": {
+					"korean": "쪽지 해독"
+				},
+				"boss_line": {
+					"korean": "해커 간부가 숨긴 암호 같은 쪽지를 해독해 약점을 파악한다."
+				}
+			},
+			"confront_with_note": {
+				"kind": "good",
+				"boss_penalty": 1,
+				"label": {
+					"korean": "쪽지 제시"
+				},
+				"boss_choice": {
+					"korean": "해커 간부에게 쪽지를 제시해 심리적인 동요를 유발하고 빈틈을 만든다."
+				}
+			},
+			"dismiss_as_prank": {
+				"kind": "good",
+				"boss_penalty": 2,
+				"label": {
+					"korean": "장난으로 치부"
+				},
+				"boss_choice": {
+					"korean": "해커 간부의 사소한 도발을 장난으로 치부해 방심하게 만들고 기습한다."
+				}
+			}
+		}
+	}
+}

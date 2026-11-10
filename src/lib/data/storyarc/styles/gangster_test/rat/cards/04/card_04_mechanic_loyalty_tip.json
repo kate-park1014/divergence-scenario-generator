@@ -1,0 +1,159 @@
+{
+	"id": "card_04_mechanic_loyalty_tip",
+	"title": {
+		"korean": "정비공의 은밀한 조언"
+	},
+	"intensity": "high",
+	"after_story": 7,
+	"before_story": 9,
+	"callback": {
+		"seed": "mechanic_pride_hard",
+		"min_rooms_after": 2
+	},
+	"background_tags": [
+		"waiting_room",
+		"late_afternoon",
+		"low_light",
+		"few_people",
+		"suspicious"
+	],
+	"background_image": "https://imagedelivery.net/WTEqQNGFb-l-IHS6IGnzUQ/20e98664-518d-4111-abd7-60295ef29500/public",
+	"dialogue": [
+		{
+			"speaker": "narrator",
+			"content": {
+				"korean": "차고 정비공이 당신에게 곁눈질하며 손짓한다."
+			}
+		},
+		{
+			"speaker": "dax",
+			"content": {
+				"korean": "아저씨가 우리한테 뭔가 말하려나 봐요."
+			}
+		},
+		{
+			"speaker": "mechanic",
+			"content": {
+				"korean": "누님은 회장님 얘기만 나오면 한없이 약해져."
+			}
+		},
+		{
+			"speaker": "narrator",
+			"content": {
+				"korean": "차고 정비공이 주위를 살피며 당신에게 바싹 다가온다."
+			}
+		}
+	],
+	"choices": [
+		{
+			"text": {
+				"korean": "차고 정비공의 조언에 귀 기울이며 더 자세한 정보를 요청한다."
+			},
+			"path": "easy",
+			"mbti": "TJ",
+			"flag": "mechanic_easy_help",
+			"effects": {
+				"reason": 10,
+				"echo": 10
+			},
+			"reward": [
+				"attack_up"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "당신이 귀를 기울이자 차고 정비공이 주섬주섬 주머니를 뒤적인다."
+					}
+				},
+				{
+					"speaker": "mechanic",
+					"content": {
+						"korean": "이건 누님 개인 차 정비 기록이야. 참고해."
+					}
+				},
+				{
+					"speaker": "dax",
+					"content": {
+						"korean": "아저씨가 감동해서 주머니까지 터네요!"
+					}
+				}
+			]
+		},
+		{
+			"text": {
+				"korean": "차고 정비공의 충고에 감사하며, 그의 의리를 존중한다고 말한다."
+			},
+			"path": "hard",
+			"mbti": "EF",
+			"flag": "mechanic_hard_trust",
+			"effects": {
+				"echo": 10,
+				"community": 15
+			},
+			"reward": [
+				"defense_up"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "당신의 말에 차고 정비공의 얼굴에 감동한 표정이 스친다."
+					}
+				},
+				{
+					"speaker": "mechanic",
+					"content": {
+						"korean": "역시 의리 있는 사람들은 다르군! 누님은 회장님 앞에서는 한없이 약해지니까..."
+					}
+				},
+				{
+					"speaker": "dax",
+					"content": {
+						"korean": "아저씨가 우리에게 홀딱 반한 것 같은데요!"
+					}
+				}
+			]
+		}
+	],
+	"tags": [
+		"mechanic",
+		"dax"
+	],
+	"_design": {
+		"slot": "D",
+		"kind": "callback",
+		"person": {
+			"id": "mechanic",
+			"role": "차고 정비공",
+			"name": "차고 정비공"
+		},
+		"wants": "당신의 의리를 알아봐 주고 누님에 대한 정보를 주고 싶다",
+		"rule_link": "당신의 의리를 기억하는 정비공이 은밀한 조언을 해 줄 때, 그가 숨기는 의도를 의심할지, 그의 조언을 믿고 따를지",
+		"events": {},
+		"flags": {
+			"mechanic_easy_help": {
+				"kind": "good",
+				"boss_penalty": 1,
+				"label": {
+					"korean": "정비공의 쪽지"
+				},
+				"boss_choice": {
+					"korean": "경호실장 누님은 회장님 이야기만 나오면 멈칫한다."
+				}
+			},
+			"mechanic_hard_trust": {
+				"kind": "good",
+				"boss_penalty": 2,
+				"label": {
+					"korean": "정비공의 확신"
+				},
+				"boss_choice": {
+					"korean": "경호실장 누님은 회장님 이야기만 나오면 멈칫한다."
+				}
+			}
+		}
+	}
+}

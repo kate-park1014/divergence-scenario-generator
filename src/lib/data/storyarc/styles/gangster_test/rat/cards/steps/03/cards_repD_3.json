@@ -1,0 +1,375 @@
+{
+	"cards": [
+		{
+			"title": "사라진 출입 기록",
+			"choices": [
+				{
+					"risk_bad": {
+						"result": [
+							{
+								"text": "출입 기록 복구는 실패하고, 관리자는 오히려 당신에게 불법 침입 의혹을 제기한다.",
+								"speaker": "narrator"
+							},
+							{
+								"text": "이런! 괜히 일을 키운 것 같습니다. 제 불찰입니다, 정말 죄송합니다.",
+								"speaker": "hoegye_teamjang"
+							},
+							{
+								"speaker": "dax",
+								"text": "아이고, 닥스까지 의심받게 생겼네요! 이러다 큰일 나겠어요!"
+							}
+						],
+						"gold": -30,
+						"reward": [
+							"hp_down"
+						]
+					},
+					"flag": {
+						"key": "report_missing_log",
+						"label": "보고서",
+						"boss_text": "서버실 관리자가 뒤늦게 출입 기록을 확인하며 해커 간부의 작업을 방해한다."
+					},
+					"mbti": "TJ",
+					"reward": [
+						"attack_up"
+					],
+					"result": [
+						{
+							"speaker": "narrator",
+							"text": "회계팀 팀장은 당신의 절차적인 태도에 안심하며 고개를 끄덕인다."
+						},
+						{
+							"speaker": "hoegye_teamjang",
+							"text": "역시 믿을 만한 분들이군요. 이 보온병에 따뜻한 둥굴레차가 있습니다. 필요하면 마시세요."
+						},
+						{
+							"text": "따뜻한 차라니, 마음이 놓이네요. 저도 한 모금만 마셔도 될까요?",
+							"speaker": "dax"
+						}
+					],
+					"text": "출입 기록 복구를 요청하고 서버실 관리자에게 상황을 보고한다.",
+					"path": "easy",
+					"effects": {
+						"community": 15,
+						"echo": 5
+					}
+				},
+				{
+					"flag": {
+						"boss_text": "해커 간부가 숨긴 기록 너머의 단서를 찾아내 공격을 준비한다.",
+						"label": "기록 너머",
+						"key": "beyond_the_logs"
+					},
+					"mbti": "SP",
+					"effects": {
+						"reason": 20,
+						"echo": 10
+					},
+					"reward": [
+						"intelligence_up"
+					],
+					"result": [
+						{
+							"speaker": "narrator",
+							"text": "팀장은 당신의 단호한 말에 잠시 당황하지만, 이내 당신의 의지를 읽는다."
+						},
+						{
+							"text": "그렇군요... 어쩌면 기록 너머에 진실이 있을지도 모르겠습니다.",
+							"speaker": "hoegye_teamjang"
+						},
+						{
+							"text": "와, 팀장님이 당신의 말에 납득했어요! 역시 멋있네요!",
+							"speaker": "dax"
+						}
+					],
+					"risk_bad": {
+						"gold": -20,
+						"reward": [],
+						"result": [
+							{
+								"speaker": "narrator",
+								"text": "팀장은 당신의 단호한 말에 오히려 불쾌감을 드러내며 등을 돌린다."
+							},
+							{
+								"speaker": "hoegye_teamjang",
+								"text": "저야 야근 마치고 퇴근하는 길이라... 괜한 일에 엮일까 싶어 망설였습니다만."
+							},
+							{
+								"speaker": "dax",
+								"text": "아이고, 팀장님이 저렇게 등을 돌리면 어떡해요! 괜히 말 꺼냈나..."
+							}
+						]
+					},
+					"text": "회계팀 팀장의 눈을 똑바로 보며, 기록보다 중요한 것을 찾아야 한다고 말한다.",
+					"path": "hard"
+				},
+				{
+					"flag": {
+						"label": "관리자 소환",
+						"boss_text": "서버실 관리자를 소환해 해커 간부의 예상치 못한 방해를 유발한다.",
+						"key": "call_server_manager"
+					},
+					"mbti": "IS",
+					"result": [
+						{
+							"text": "팀장은 당신의 논리적인 지적에 고개를 끄덕이며, 관리자를 호출한다.",
+							"speaker": "narrator"
+						},
+						{
+							"speaker": "hoegye_teamjang",
+							"text": "맞습니다. 제 권한 밖의 일이었군요. 어서 관리자를 부르겠습니다."
+						},
+						{
+							"text": "오, 팀장님이 바로 움직이네요! 역시 당신의 말이 먹히는군요!",
+							"speaker": "dax"
+						}
+					],
+					"text": "회계팀 팀장에게 모든 기록은 서버실 관리자가 보관해야 함을 상기시킨다.",
+					"path": "stat",
+					"reward": [
+						"shield"
+					],
+					"effects": {
+						"community": 20,
+						"reason": -25
+					}
+				},
+				{
+					"effects": {
+						"echo": -5,
+						"gold": -120
+					},
+					"path": "gold",
+					"text": "팀장에게 야근 수당이라며 넉넉한 돈 봉투를 건네고 입단속을 부탁한다.",
+					"result": [
+						{
+							"speaker": "narrator",
+							"text": "팀장은 돈 봉투를 받아들지만, 여전히 찜찜한 표정으로 서버실을 쳐다본다."
+						},
+						{
+							"text": "감사합니다만... 이 돈으로 사라진 기록까지 덮을 수는 없을 겁니다.",
+							"speaker": "hoegye_teamjang"
+						},
+						{
+							"speaker": "dax",
+							"text": "돈을 줘도 저렇게 시무룩하면 어쩌죠? 괜히 준 것 같기도 하고..."
+						}
+					],
+					"mbti": "EN"
+				}
+			],
+			"rule_link": "서버실 출입 기록이 사라진 상황에서, 보이는 증거(기록 없음)가 정말 무단 침입을 의미하는지 따져볼지, 아니면 다른 이유를 찾을지 선택합니다.",
+			"key": "missing_access_log",
+			"person": {
+				"id": "hoegye_teamjang",
+				"name": "회계팀 팀장",
+				"role": "회계팀 팀장"
+			},
+			"no": 1,
+			"wants": "규칙과 절차를 지키는 당신이 서버실 출입 기록 문제를 해결해주길 바랍니다.",
+			"background_tags": [
+				"hallway",
+				"night",
+				"dim",
+				"empty",
+				"tense"
+			],
+			"dialogue": [
+				{
+					"speaker": "hoegye_teamjang",
+					"text": "당신이 그 어떤 사건이든 절차대로 깔끔하게 처리한다는 분들이죠? 소문이 자자하던데요."
+				},
+				{
+					"speaker": "hoegye_teamjang",
+					"text": "서버실 출입 기록이 어째서인지 사라졌더군요. 야근 중에 확인했습니다만."
+				},
+				{
+					"speaker": "hoegye_teamjang",
+					"text": "이런 중요한 시설의 기록이 없다는 건, 뭔가 규칙이 깨졌다는 증거 아닙니까? 찜찜해서 말이죠."
+				},
+				{
+					"speaker": "dax",
+					"text": "히익, 기록이 사라졌다니... 이건 분명 무슨 일이 벌어진 거예요!"
+				}
+			],
+			"slot": "D",
+			"kind": "rep",
+			"rep_dir": "reason-"
+		},
+		{
+			"choices": [
+				{
+					"reward": [
+						"attack_up"
+					],
+					"result": [
+						{
+							"text": "당신은 쪽지에 담긴, 겉으로는 보이지 않는 암호 같은 정보를 해독해낸다.",
+							"speaker": "narrator"
+						},
+						{
+							"speaker": "hoegye_teamjang",
+							"text": "세상에, 이렇게 빨리 알아내시다니! 역시 소문대로군요!"
+						},
+						{
+							"speaker": "dax",
+							"text": "와, 역시 당신은 천재예요! 해커 간부의 버릇까지 알아내다니!"
+						}
+					],
+					"flag": {
+						"boss_text": "해커 간부가 숨긴 암호 같은 쪽지를 해독해 약점을 파악한다.",
+						"label": "쪽지 해독",
+						"key": "decipher_hacker_note"
+					},
+					"risk_bad": {
+						"gold": -20,
+						"result": [
+							{
+								"speaker": "narrator",
+								"text": "당신의 추리는 엉뚱한 방향으로 흘러가고, 팀장은 더욱 혼란스러워한다."
+							},
+							{
+								"text": "음... 제가 알던 내용과는 전혀 다른데요? 더 헷갈리기만 합니다.",
+								"speaker": "hoegye_teamjang"
+							},
+							{
+								"text": "아이고, 팀장님이 이제 더 모르겠대요! 어쩌면 좋지...",
+								"speaker": "dax"
+							}
+						],
+						"reward": [
+							"intelligence_down"
+						]
+					},
+					"mbti": "NT",
+					"path": "easy",
+					"effects": {
+						"reason": 15,
+						"echo": 5
+					},
+					"text": "쪽지의 필체와 내용을 분석해 누가 어떤 의도로 남겼는지 추리한다."
+				},
+				{
+					"risk_bad": {
+						"result": [
+							{
+								"speaker": "narrator",
+								"text": "관리자는 쪽지를 보고는 오히려 불쾌해하며, 당신을 무단 침입자로 몰아세운다."
+							},
+							{
+								"speaker": "hoegye_teamjang",
+								"text": "아니, 이걸 왜 관리자에게 보여줘서 일을 이렇게 만듭니까!"
+							},
+							{
+								"text": "관리자가 화났어요! 우리한테 불똥 튀는 거 아니에요?",
+								"speaker": "dax"
+							}
+						],
+						"reward": [],
+						"gold": -20
+					},
+					"reward": [
+						"stun"
+					],
+					"effects": {
+						"echo": 10,
+						"reason": -20
+					},
+					"result": [
+						{
+							"speaker": "narrator",
+							"text": "팀장은 당황하지만, 관리자는 쪽지를 보고 의미심장한 표정을 짓는다."
+						},
+						{
+							"speaker": "hoegye_teamjang",
+							"text": "아니, 그걸 관리자에게 바로 보여주다니! 큰일 나는 거 아닙니까?"
+						},
+						{
+							"speaker": "dax",
+							"text": "관리자 표정이 심상치 않아요! 혹시 뭔가를 아는 걸까요?"
+						}
+					],
+					"mbti": "SJ",
+					"path": "hard",
+					"text": "쪽지를 들고 서버실 관리자에게 직접 찾아가 사실 확인을 요구한다.",
+					"flag": {
+						"label": "쪽지 제시",
+						"boss_text": "해커 간부에게 쪽지를 제시해 심리적인 동요를 유발하고 빈틈을 만든다.",
+						"key": "confront_with_note"
+					}
+				},
+				{
+					"reward": [
+						"move_range_up"
+					],
+					"effects": {
+						"reason": 25,
+						"fighting": -20
+					},
+					"result": [
+						{
+							"text": "팀장은 당신의 태연한 모습에 안심하고, 쪽지를 구겨 쓰레기통에 버린다.",
+							"speaker": "narrator"
+						},
+						{
+							"speaker": "hoegye_teamjang",
+							"text": "그런가요? 하긴 제가 괜한 걱정을 했군요. 감사합니다!"
+						},
+						{
+							"speaker": "dax",
+							"text": "팀장님이 안심하고 가버렸어요! 역시 당신은 분위기 메이커네요!"
+						}
+					],
+					"mbti": "EP",
+					"path": "stat",
+					"text": "쪽지는 단순한 장난이라며, 팀장에게 걱정 말고 퇴근하라고 안심시킨다.",
+					"flag": {
+						"key": "dismiss_as_prank",
+						"boss_text": "해커 간부의 사소한 도발을 장난으로 치부해 방심하게 만들고 기습한다.",
+						"label": "장난으로 치부"
+					}
+				}
+			],
+			"person": {
+				"id": "hoegye_teamjang",
+				"name": "회계팀 팀장",
+				"role": "회계팀 팀장"
+			},
+			"wants": "규칙에 얽매이지 않고 자유로운 방식으로 이 수상한 쪽지 문제를 해결해주길 바랍니다.",
+			"dialogue": [
+				{
+					"speaker": "hoegye_teamjang",
+					"text": "당신이 그 뭐랄까, 규칙에 얽매이지 않고 일을 착착 해결하는 분들이라고 들었습니다만. 맞나요?"
+				},
+				{
+					"speaker": "hoegye_teamjang",
+					"text": "방금 서버실 문 앞에 이런 쪽지가 떨어져 있었습니다만... 제 착각일 수도 있고요."
+				},
+				{
+					"speaker": "hoegye_teamjang",
+					"text": "내용이 좀... 개인적이고 이상해서요. 괜히 회사에 알려지면 골치 아파질까 싶어서요. 좀 봐주시겠어요?"
+				},
+				{
+					"speaker": "dax",
+					"text": "쪽지라니? 무슨 내용일까요? 혹시 중요한 단서일지도 몰라요!"
+				}
+			],
+			"title": "수상한 쪽지",
+			"background_tags": [
+				"hallway",
+				"night",
+				"dim",
+				"empty",
+				"curious"
+			],
+			"no": 2,
+			"key": "suspicious_note",
+			"rule_link": "서버실 앞 수상한 쪽지를 보고, 그것이 정말 단순한 낙서인지 아니면 중요한 증거인지 자유로운 방식으로 판단하고 행동합니다.",
+			"slot": "D",
+			"kind": "rep",
+			"rep_dir": "reason+"
+		}
+	],
+	"errors": [],
+	"prompt_hash": "d7ec56efe207e43b7b32a7c4f56911c7b624ea87"
+}

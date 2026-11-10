@@ -1,0 +1,397 @@
+{
+	"cards": [
+		{
+			"background_tags": [
+				"yard",
+				"night",
+				"dim",
+				"none",
+				"tense"
+			],
+			"rule_link": "소문으로만 듣고 판단하는 것과, 실제로 겪어보고 판단하는 것은 다릅니다. 반장은 히어로들의 소문만 듣고 그들을 대합니다.",
+			"key": "foreman_confrontation",
+			"no": 1,
+			"choices": [
+				{
+					"text": "반장에게 다가가 어깨를 툭 치며 길을 비키라 말한다.",
+					"mbti": "ST",
+					"result": [
+						{
+							"text": "반장이 움찔하더니 막대사탕을 씹던 입을 멈추고 옆으로 비켜섰다.",
+							"speaker": "narrator"
+						},
+						{
+							"speaker": "foreman",
+							"text": "쳇, 덩치만 믿고 까부는구먼. 여기 사탕이나 하나 물고 가쇼."
+						},
+						{
+							"text": "으아, 방금 큰일 날 뻔했어요… 사탕은 왜 주시는 거죠?",
+							"speaker": "dax"
+						}
+					],
+					"flag": {
+						"key": "foreman_annoyed",
+						"boss_text": "하역 반장이 당신이 지나온 길에 박스를 쌓아 올려 퇴로를 막는다.",
+						"label": "반장 방해"
+					},
+					"reward": [
+						"attack_up"
+					],
+					"path": "easy",
+					"effects": {
+						"echo": -5,
+						"fighting": 20
+					},
+					"risk_bad": {
+						"result": [
+							{
+								"speaker": "narrator",
+								"text": "반장이 비키는 척하더니 당신의 발을 밟고 지나갔다."
+							},
+							{
+								"text": "여긴 내가 접수한 구역이여. 까불지 마쇼.",
+								"speaker": "foreman"
+							},
+							{
+								"text": "발은 괜찮으세요? 좀 아파 보이는데요!",
+								"speaker": "dax"
+							}
+						],
+						"reward": [],
+						"gold": -30
+					}
+				},
+				{
+					"path": "hard",
+					"effects": {
+						"fighting": -20,
+						"echo": 10
+					},
+					"reward": [
+						"defense_up"
+					],
+					"risk_bad": {
+						"reward": [],
+						"result": [
+							{
+								"text": "당신의 공손한 태도에도 반장이 오히려 불쾌한 듯 코웃음을 쳤다.",
+								"speaker": "narrator"
+							},
+							{
+								"speaker": "foreman",
+								"text": "꼴에 젠틀한 척은. 콱 막혀서 컨테이너 안으로 들어가 보시지!"
+							},
+							{
+								"text": "어, 반장님이 갑자기 왜 저러시죠? 저희 길을 막고 계세요!",
+								"speaker": "dax"
+							}
+						],
+						"gold": -20
+					},
+					"text": "반장에게 정중히 고개 숙여 인사하고 컨테이너 안의 소리를 묻는다.",
+					"result": [
+						{
+							"speaker": "narrator",
+							"text": "반장이 예상치 못한 당신의 태도에 사탕을 굴리다 멈칫했다."
+						},
+						{
+							"text": "큭, 쥐뿔도 없는 것들이 젠틀한 척은… 쉿, 저 안에서 누가 노래를 부르나 보더구먼.",
+							"speaker": "foreman"
+						},
+						{
+							"text": "간부님은 무서운데, 반장님은 또 왜 저러실까요?",
+							"speaker": "dax"
+						}
+					],
+					"mbti": "NF",
+					"flag": {
+						"label": "반장 정보",
+						"key": "foreman_tip",
+						"boss_text": "하역 반장이 당신에게 컨테이너의 특정 부분에 약점이 있다는 신호를 보낸다."
+					}
+				},
+				{
+					"flag": {
+						"key": "container_clue",
+						"boss_text": "창고 간부가 있는 컨테이너 중 하나가 수상하다는 정보를 미리 얻는다.",
+						"label": "컨테이너 단서"
+					},
+					"mbti": "TJ",
+					"text": "반장의 눈을 똑바로 보고, 왜 길을 막고 있는지 이유를 묻는다.",
+					"reward": [
+						"shield"
+					],
+					"result": [
+						{
+							"speaker": "narrator",
+							"text": "반장이 잠시 주춤하더니 당신의 눈을 피하며 사탕을 우물거렸다."
+						},
+						{
+							"speaker": "foreman",
+							"text": "아, 아니 뭐… 내가 여기 책임자니까 그냥 지켜보고 있는 거요."
+						},
+						{
+							"text": "저기, 저 세 번째 컨테이너가 좀 수상하긴 하더구먼.",
+							"speaker": "foreman"
+						},
+						{
+							"speaker": "dax",
+							"text": "어? 저 컨테이너에 뭔가 있는 걸까요?"
+						}
+					],
+					"effects": {
+						"reason": 10,
+						"fighting": -20,
+						"echo": 5
+					},
+					"path": "stat"
+				}
+			],
+			"person": {
+				"id": "foreman",
+				"name": "하역 반장",
+				"role": "하역 반장"
+			},
+			"title": "강골 반장의 시험",
+			"wants": "야적장 통로를 지나려는 히어로들을 막거나 이용하려 합니다.",
+			"dialogue": [
+				{
+					"speaker": "narrator",
+					"text": "컨테이너 줄 사이, 담배 대신 큼직한 막대사탕을 문 하역 반장이 팔짱을 끼고 섰다."
+				},
+				{
+					"speaker": "foreman",
+					"text": "당신들이 그 주먹부터 나간다는 백상어파 해결사들 아니오? 여기서 뭐 쑤시고 다니는 게요?"
+				},
+				{
+					"text": "반장님, 저희는 그냥… 길을 좀 여쭤보려고요.",
+					"speaker": "dax"
+				}
+			],
+			"slot": "D",
+			"kind": "rep",
+			"rep_dir": "fighting-"
+		},
+		{
+			"background_tags": [
+				"yard",
+				"night",
+				"dim",
+				"none",
+				"tense"
+			],
+			"key": "foreman_request",
+			"title": "곤란한 반장의 부탁",
+			"no": 2,
+			"person": {
+				"id": "foreman",
+				"name": "하역 반장",
+				"role": "하역 반장"
+			},
+			"dialogue": [
+				{
+					"speaker": "narrator",
+					"text": "야적장 통로를 걷던 당신 앞에 낡은 손수레를 끌고 낑낑거리는 하역 반장이 보였다."
+				},
+				{
+					"text": "어이, 당신들이 그 어려운 사람 돕는다는 해결사들 아니오? 마침 잘 만났네, 이거 좀 거들어 줄 수 있나?",
+					"speaker": "foreman"
+				},
+				{
+					"speaker": "dax",
+					"text": "반장님, 혹시 무슨 문제라도 있으세요?"
+				}
+			],
+			"wants": "야적장 통로를 지나려는 히어로들을 막거나 이용하려 합니다.",
+			"choices": [
+				{
+					"flag": {
+						"key": "foreman_tired",
+						"label": "반장 지침",
+						"boss_text": "하역 반장이 당신이 지나온 길에 놓인 낡은 손수레를 치우지 못해 길을 막는다."
+					},
+					"risk_bad": {
+						"result": [
+							{
+								"speaker": "narrator",
+								"text": "당신이 손수레를 미는 동안 반장이 주머니에서 막대사탕을 꺼내 먹었다."
+							},
+							{
+								"speaker": "foreman",
+								"text": "아이고, 젊어서 좋구먼. 이 정도는 식은 죽 먹기지? 나는 이거나 먹고 있을 테니 어서 밀어 보쇼."
+							},
+							{
+								"text": "우리가 반장님 노예인가요? 좀 너무하시네요!",
+								"speaker": "dax"
+							}
+						],
+						"gold": -20,
+						"reward": []
+					},
+					"result": [
+						{
+							"text": "당신이 손수레를 밀자 반장이 환하게 웃으며 길을 비켜주었다.",
+							"speaker": "narrator"
+						},
+						{
+							"text": "아이고, 허리 나갈 뻔했네.",
+							"speaker": "foreman"
+						},
+						{
+							"text": "밥이라도 한 끼 사주고 싶은데, 마침 점심시간이라 나도 밥 먹으러 가야 해서 말이야.",
+							"speaker": "foreman"
+						},
+						{
+							"text": "간부님 찾으러 가는 길에 점심시간이라니, 참 얄밉네요.",
+							"speaker": "dax"
+						}
+					],
+					"reward": [
+						"attack_up"
+					],
+					"effects": {
+						"echo": 10,
+						"fighting": -20
+					},
+					"text": "반장의 짐을 들어주며 자연스럽게 컨테이너 쪽으로 이동한다.",
+					"path": "easy",
+					"mbti": "IS"
+				},
+				{
+					"risk_bad": {
+						"result": [
+							{
+								"text": "당신의 거절에 반장이 콧방귀를 뀌더니 손수레를 당신이 가려는 길 한가운데 놓았다.",
+								"speaker": "narrator"
+							},
+							{
+								"speaker": "foreman",
+								"text": "쳇, 바쁘다고? 그럼 더 바빠져 보시지 그래!"
+							},
+							{
+								"text": "아니, 저 반장님은 왜 굳이 길을 막으시는 거예요!",
+								"speaker": "dax"
+							}
+						],
+						"gold": -20,
+						"reward": []
+					},
+					"result": [
+						{
+							"speaker": "narrator",
+							"text": "반장이 눈을 흘기며 입에 문 사탕을 툭 뱉어냈다."
+						},
+						{
+							"text": "흥, 소문만 요란하구먼. 그럼 저 멀리 돌아가는 길로 가든가.",
+							"speaker": "foreman"
+						},
+						{
+							"text": "저 길은 너무 멀고 위험해 보여요….",
+							"speaker": "dax"
+						}
+					],
+					"flag": {
+						"boss_text": "하역 반장이 당신에게 멀리 돌아가라며 다른 길을 알려주고, 그 길에서 창고 간부의 약점을 발견한다.",
+						"key": "foreman_grudge_detour",
+						"label": "반장 우회로"
+					},
+					"mbti": "ET",
+					"path": "hard",
+					"reward": [
+						"defense_up"
+					],
+					"text": "지금은 바쁘다며 반장의 부탁을 거절하고 다른 길을 찾아본다.",
+					"effects": {
+						"echo": -5,
+						"fighting": 20
+					}
+				},
+				{
+					"text": "반장의 손수레를 대신 밀어주며 컨테이너 안의 상황을 묻는다.",
+					"mbti": "EN",
+					"path": "stat",
+					"reward": [
+						"heal"
+					],
+					"effects": {
+						"echo": 5,
+						"fighting": 20,
+						"community": 10
+					},
+					"result": [
+						{
+							"text": "당신의 도움에 반장이 감동한 듯 손수레를 놓더니 당신의 손을 잡았다.",
+							"speaker": "narrator"
+						},
+						{
+							"text": "역시 소문대로 인정이 넘치는구먼!",
+							"speaker": "foreman"
+						},
+						{
+							"speaker": "foreman",
+							"text": "근데 저 안에서 콧노래 소리가 계속 나는데, 컨테이너 문이 덜 닫힌 것 같더구먼."
+						},
+						{
+							"speaker": "dax",
+							"text": "어, 컨테이너 문이 덜 닫혔다는 건가요?"
+						}
+					],
+					"flag": {
+						"boss_text": "창고 간부가 있는 컨테이너 문이 덜 닫혔다는 정보를 미리 얻는다.",
+						"label": "컨테이너 문",
+						"key": "container_open_clue"
+					}
+				},
+				{
+					"effects": {
+						"fighting": -10,
+						"echo": 15,
+						"gold": 50
+					},
+					"path": "fun",
+					"mbti": "EP",
+					"text": "반장이 문 사탕을 뺏어 먹으며 '반장님도 사탕 좋아하시네요?' 하고 농담을 건넨다.",
+					"result": [
+						{
+							"text": "반장이 당황한 표정을 짓더니 이내 박장대소하며 허벅지를 쳤다.",
+							"speaker": "narrator"
+						},
+						{
+							"speaker": "foreman",
+							"text": "하하하, 이 녀석 보게! 여기, 나 대신 이거나 먹고 떨어져!"
+						},
+						{
+							"text": "세상에, 반장님 사탕을 뺏어 먹다니…! 근데 돈은 왜 주시는 거죠?",
+							"speaker": "dax"
+						}
+					],
+					"risk_bad": {
+						"result": [
+							{
+								"text": "반장이 당신의 손에서 사탕을 뺏더니 얼굴을 찡그렸다.",
+								"speaker": "narrator"
+							},
+							{
+								"text": "흥, 남의 걸 함부로 뺏어 먹는 거 아니야! 딱 걸렸어, 이거나 받아라!",
+								"speaker": "foreman"
+							},
+							{
+								"text": "반장님, 왜 그렇게 화를 내시는 거예요?",
+								"speaker": "dax"
+							}
+						],
+						"reward": [
+							"attack_down"
+						]
+					}
+				}
+			],
+			"rule_link": "소문으로만 듣고 판단하는 것과, 실제로 겪어보고 판단하는 것은 다릅니다. 반장은 히어로들의 소문만 듣고 그들을 대합니다.",
+			"slot": "D",
+			"kind": "rep",
+			"rep_dir": "fighting+"
+		}
+	],
+	"errors": [],
+	"prompt_hash": "8fc42d605cf8bb1ac064e0e21c634569e806d2f1"
+}

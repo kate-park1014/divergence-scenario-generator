@@ -1,0 +1,365 @@
+{
+	"cards": [
+		{
+			"person": {
+				"id": "night_accountant",
+				"name": "회계팀 야근 직원",
+				"role": "회계팀 야근 직원"
+			},
+			"background_tags": [
+				"office",
+				"night",
+				"dimlight",
+				"alone",
+				"tense"
+			],
+			"dialogue": [
+				{
+					"speaker": "night_accountant",
+					"text": "당신이 그… 모든 서류를 꼼꼼하게 처리한다는 해결사시죠? 소문 들었습니다."
+				},
+				{
+					"speaker": "night_accountant",
+					"text": "이 계산이… 이 계산이 맞지 않습니다! 장부가… 장부가 비어 있어서…"
+				},
+				{
+					"speaker": "dax",
+					"text": "으아, 벌써 야근에 찌든 얼굴이네요. 빨리 도와줘야 할 것 같아요!"
+				},
+				{
+					"speaker": "night_accountant",
+					"text": "이대로는… 자료실 안쪽의 예전 기록을 봐야 하는데, 절차가 너무 복잡해요. 제 힘으로는 도저히…"
+				}
+			],
+			"choices": [
+				{
+					"effects": {
+						"reason": -20,
+						"gold": 100
+					},
+					"path": "easy",
+					"text": "장부 오류의 원인을 찾아 절차대로 해결해 준다.",
+					"risk_bad": {
+						"gold": -30,
+						"result": [
+							{
+								"text": "당신이 오류를 찾으려 애쓰는 동안 야근 직원이 엉뚱한 장부를 가져온다.",
+								"speaker": "narrator"
+							},
+							{
+								"text": "장부의 오류는 오히려 더 복잡하게 꼬여 버린다.",
+								"speaker": "narrator"
+							},
+							{
+								"text": "으악! 저러다 장부와 한 몸이 되겠어요!",
+								"speaker": "dax"
+							}
+						],
+						"reward": []
+					},
+					"mbti": "ST",
+					"result": [
+						{
+							"speaker": "narrator",
+							"text": "당신이 장부의 구멍을 찾아내자 야근 직원은 감탄한다."
+						},
+						{
+							"speaker": "narrator",
+							"text": "회계팀 야근 직원이 잊고 있던 서류 한 묶음을 꺼내 준다."
+						},
+						{
+							"speaker": "dax",
+							"text": "와, 해결사님 덕분에 한숨 돌리겠네요!"
+						}
+					],
+					"flag": {
+						"boss_text": "회계팀 야근 직원이 어두운 서버실의 전선 회로도를 알려준다.",
+						"label": "야근 직원의 단서",
+						"key": "accountant_finds_clue"
+					}
+				},
+				{
+					"text": "복잡한 절차를 무시하고 자료실 안으로 들어갈 방법을 찾는다.",
+					"path": "hard",
+					"risk_bad": {
+						"result": [
+							{
+								"text": "당신이 자료실 문을 열려 하자 야근 직원이 필사적으로 막아선다.",
+								"speaker": "narrator"
+							},
+							{
+								"speaker": "narrator",
+								"text": "몸싸움 끝에 야근 직원의 안경이 바닥에 떨어져 깨진다."
+							},
+							{
+								"speaker": "dax",
+								"text": "아이고, 저 안경 비싸 보이는데!"
+							}
+						],
+						"reward": [],
+						"gold": -20
+					},
+					"effects": {
+						"fighting": 10,
+						"reason": 20
+					},
+					"flag": {
+						"key": "data_room_door_stuck",
+						"boss_text": "어두운 서버실 문이 열려 있는데, 안에서 '찰칵' 소리가 들린다.",
+						"label": "자료실 문 걸쇠"
+					},
+					"result": [
+						{
+							"speaker": "narrator",
+							"text": "야근 직원이 당황하는 틈을 타 당신이 자료실 문을 열었다."
+						},
+						{
+							"speaker": "narrator",
+							"text": "하지만 야근 직원의 서류 더미가 문에 끼어 버린다."
+						},
+						{
+							"speaker": "dax",
+							"text": "어, 저거 중요한 서류 같은데… 괜찮을까요?"
+						}
+					],
+					"reward": [
+						"defense_up"
+					],
+					"mbti": "NT"
+				},
+				{
+					"flag": {
+						"boss_text": "회계팀 야근 직원이 서버실 자료 접근에 필요한 정보를 알려준다.",
+						"key": "accountant_trusts_you",
+						"label": "회계 직원의 신뢰"
+					},
+					"reward": [
+						"intelligence_up"
+					],
+					"result": [
+						{
+							"speaker": "narrator",
+							"text": "당신의 논리적인 설명에 야근 직원이 고개를 끄덕인다."
+						},
+						{
+							"text": "야근 직원이 자료실 문을 열고 안쪽을 가리킨다.",
+							"speaker": "narrator"
+						},
+						{
+							"text": "와, 해결사님 말이 마법 같네요!",
+							"speaker": "dax"
+						}
+					],
+					"effects": {
+						"echo": 10,
+						"reason": -20
+					},
+					"mbti": "TJ",
+					"text": "명확한 근거로 야근 직원을 설득해 자료실 사용 절차를 밟는다.",
+					"path": "stat"
+				},
+				{
+					"mbti": "ES",
+					"text": "야근 직원에게 수고비를 쥐여 주고 자료실 문을 열어 달라고 한다.",
+					"result": [
+						{
+							"speaker": "narrator",
+							"text": "당신이 건넨 봉투에 야근 직원이 잠시 망설이더니 고개를 숙인다."
+						},
+						{
+							"text": "야근 직원이 조용히 자료실 문을 열어 준다.",
+							"speaker": "narrator"
+						},
+						{
+							"text": "오, 돈이 최고네요!",
+							"speaker": "dax"
+						}
+					],
+					"path": "gold",
+					"effects": {
+						"gold": -100
+					}
+				}
+			],
+			"title": "장부의 미궁",
+			"rule_link": "눈앞의 장부 증거가 모순될 때, 보이는 대로 믿을지 원칙대로 파고들지 선택해야 한다.",
+			"wants": "복잡하게 꼬인 장부 문제를 해결해 자료실에 들어갈 절차를 찾으려 한다.",
+			"key": "ledger_mystery",
+			"no": 1,
+			"slot": "A",
+			"kind": "rep",
+			"rep_dir": "reason-"
+		},
+		{
+			"title": "규칙의 수호자",
+			"person": {
+				"id": "night_accountant",
+				"name": "회계팀 야근 직원",
+				"role": "회계팀 야근 직원"
+			},
+			"dialogue": [
+				{
+					"speaker": "night_accountant",
+					"text": "당신이 그… 규칙 따윈 신경 안 쓰고 대범하게 일을 처리한다는 해결사시죠? 소문 들었습니다."
+				},
+				{
+					"speaker": "night_accountant",
+					"text": "지금은 안 됩니다. 장부가… 장부가 비어 있어서… 이 계산이… 이 계산이 맞지 않습니다!"
+				},
+				{
+					"text": "야근 직원이 잔뜩 긴장한 것 같아요. 뭔가 숨기는 건가?",
+					"speaker": "dax"
+				},
+				{
+					"text": "누구든 자료실에 들어가려면… 서류를 제대로 갖춰야 합니다. 이건 규칙이에요.",
+					"speaker": "night_accountant"
+				}
+			],
+			"key": "rule_breaker",
+			"rule_link": "눈앞의 규칙이라는 증거가 버티고 있을 때, 보이는 대로 따를지 나만의 방식으로 돌파할지 선택해야 한다.",
+			"background_tags": [
+				"office",
+				"night",
+				"dimlight",
+				"alone",
+				"nervous"
+			],
+			"wants": "규칙을 깨려는 당신의 접근을 막고 자료실 출입을 통제하려 한다.",
+			"choices": [
+				{
+					"text": "야근 직원의 시선을 돌려 자료실 문을 슬쩍 열고 들어간다.",
+					"effects": {
+						"gold": 50,
+						"echo": -5,
+						"reason": 20
+					},
+					"path": "easy",
+					"mbti": "EN",
+					"risk_bad": {
+						"gold": -20,
+						"result": [
+							{
+								"text": "당신이 시선을 돌리려 하자 야근 직원이 더 경계하며 몸을 가로막는다.",
+								"speaker": "narrator"
+							},
+							{
+								"text": "야근 직원이 실수로 서류 더미를 쏟아 바닥이 미끄러워진다.",
+								"speaker": "narrator"
+							},
+							{
+								"text": "앗, 미끄러워요! 조심하세요!",
+								"speaker": "dax"
+							}
+						],
+						"reward": []
+					},
+					"flag": {
+						"boss_text": "서버실의 잠금장치가 느슨해져 있어 쉽게 열린다.",
+						"key": "accountant_distracted",
+						"label": "야근 직원의 방심"
+					},
+					"result": [
+						{
+							"text": "당신이 야근 직원의 시선을 끈 사이 자료실 문을 살짝 열었다.",
+							"speaker": "narrator"
+						},
+						{
+							"text": "야근 직원은 당신의 빠른 움직임에 눈만 깜빡인다.",
+							"speaker": "narrator"
+						},
+						{
+							"text": "우와, 눈 깜짝할 사이에!",
+							"speaker": "dax"
+						}
+					]
+				},
+				{
+					"path": "hard",
+					"text": "야근 직원을 설득해 정식 절차대로 자료실에 들어갈 방법을 찾는다.",
+					"risk_bad": {
+						"result": [
+							{
+								"text": "당신의 설득에 야근 직원이 오히려 더 의심의 눈초리를 보낸다.",
+								"speaker": "narrator"
+							},
+							{
+								"text": "야근 직원이 자료실 출입 서류를 뒤로 감춰 버린다.",
+								"speaker": "narrator"
+							},
+							{
+								"speaker": "dax",
+								"text": "아이고, 저러다 서류에 파묻히겠어요!"
+							}
+						],
+						"reward": [],
+						"gold": -20
+					},
+					"reward": [
+						"defense_up"
+					],
+					"result": [
+						{
+							"text": "당신의 뜻밖의 협조에 야근 직원이 잠시 멍하니 당신을 본다.",
+							"speaker": "narrator"
+						},
+						{
+							"text": "야근 직원이 마지못해 자료실 출입 서류를 내민다.",
+							"speaker": "narrator"
+						},
+						{
+							"text": "어? 저렇게 순순히…?",
+							"speaker": "dax"
+						}
+					],
+					"mbti": "SJ",
+					"effects": {
+						"reason": -20,
+						"community": 10
+					},
+					"flag": {
+						"boss_text": "회계팀 야근 직원이 서버실 자료 접근에 필요한 비밀번호 힌트를 흘린다.",
+						"label": "야근 직원의 당황",
+						"key": "accountant_surprised"
+					}
+				},
+				{
+					"effects": {
+						"reason": 20,
+						"fighting": 10
+					},
+					"path": "stat",
+					"text": "대범한 태도로 야근 직원을 압도해 자료실 문을 열게 한다.",
+					"flag": {
+						"boss_text": "회계팀 야근 직원이 서버실 보안 시스템 일부를 실수로 꺼트린다.",
+						"key": "accountant_intimidated",
+						"label": "회계 직원의 겁먹음"
+					},
+					"reward": [
+						"attack_up"
+					],
+					"result": [
+						{
+							"text": "당신의 당당한 태도에 야근 직원이 움찔하며 뒷걸음친다.",
+							"speaker": "narrator"
+						},
+						{
+							"text": "야근 직원이 겁먹은 표정으로 자료실 문을 연다.",
+							"speaker": "narrator"
+						},
+						{
+							"text": "이야, 해결사님 기세에 다들 꼼짝 못 하네요!",
+							"speaker": "dax"
+						}
+					],
+					"mbti": "SP"
+				}
+			],
+			"no": 2,
+			"slot": "A",
+			"kind": "rep",
+			"rep_dir": "reason+"
+		}
+	],
+	"errors": [],
+	"prompt_hash": "bbbe9eea94a118ba73dddc5d2b9bb92e7a8dab8c"
+}

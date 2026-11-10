@@ -1,0 +1,359 @@
+{
+	"id": "card_04_sound_behind_wall",
+	"title": {
+		"korean": "벽 뒤의 소리"
+	},
+	"intensity": "calm",
+	"after_story": 5,
+	"before_story": 7,
+	"condition": {
+		"leaning": "reason+",
+		"among": [
+			"fighting-",
+			"fighting+",
+			"community-",
+			"community+",
+			"reason-",
+			"reason+"
+		],
+		"min": 20
+	},
+	"urgency": 8,
+	"leaning": "reason+",
+	"background_tags": [
+		"stairs",
+		"nighttime",
+		"dim",
+		"empty",
+		"mysterious"
+	],
+	"background_image": "https://imagedelivery.net/WTEqQNGFb-l-IHS6IGnzUQ/0ae813bd-8183-437e-644c-6a15fd24b300/public",
+	"dialogue": [
+		{
+			"speaker": "ibalsa_aje",
+			"content": {
+				"korean": "당신이 그, 꽉 막힌 규칙보단 감으로 척척 해결한다는 분이죠? 이 소리 좀 들어보시오."
+			}
+		},
+		{
+			"speaker": "ibalsa_aje",
+			"content": {
+				"korean": "제 소중한 면도칼이 감쪽같이 사라져서..."
+			}
+		},
+		{
+			"speaker": "ibalsa_aje",
+			"content": {
+				"korean": "이런, 이 면도칼은 제 손때가 묻은 건데... 이걸로 깎아야 제대로 깎이는데 말이죠."
+			}
+		},
+		{
+			"speaker": "narrator",
+			"content": {
+				"korean": "이발사 아재가 벽을 가리키자, 희미한 긁는 소리가 들려온다."
+			}
+		},
+		{
+			"speaker": "dax",
+			"content": {
+				"korean": "무슨 소리죠? 쥐 같은데요? 금고실 코앞에서 쥐라니..."
+			}
+		}
+	],
+	"choices": [
+		{
+			"text": {
+				"korean": "소리가 나는 벽에 귀를 대고 자세히 들어본다."
+			},
+			"path": "easy",
+			"mbti": "EN",
+			"flag": "wall_rats",
+			"effects": {
+				"reason": -20,
+				"echo": 10
+			},
+			"reward": [
+				"intelligence_up"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "당신이 벽에 귀를 대자, 이발사 아재는 눈을 감고 함께 집중한다."
+					}
+				},
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "잠시 후, '쥐새끼들이 또!' 하며 벽을 걷어찬다. 벽 뒤에서 쥐들이 바쁘게 움직이는 소리가 들린다."
+					}
+				},
+				{
+					"speaker": "dax",
+					"content": {
+						"korean": "쥐들이 금고실 근처까지 오다니... 저러다 큰일 나겠네요."
+					}
+				}
+			],
+			"risk": {
+				"chance": "mid",
+				"bad": {
+					"effects": {
+						"gold": -50
+					},
+					"reward": [],
+					"result": [
+						{
+							"speaker": "narrator",
+							"content": {
+								"korean": "소리가 나는 벽에 귀를 대고 자세히 듣자, 갑자기 쿵 하는 소리와 함께 벽 일부가 무너져 내린다."
+							}
+						},
+						{
+							"speaker": "narrator",
+							"content": {
+								"korean": "이발사 아재의 비명과 함께 벽 너머에서 날카로운 금속음이 들린다."
+							}
+						}
+					]
+				}
+			}
+		},
+		{
+			"text": {
+				"korean": "소리를 무시하고 금고실로 향하는 계단을 계속 올라간다."
+			},
+			"path": "hard",
+			"mbti": "IS",
+			"flag": "ignore_sound",
+			"effects": {
+				"gold": -100,
+				"reason": 20
+			},
+			"reward": [
+				"defense_up"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "당신이 소리를 무시하고 계단을 오르자, 이발사 아재는 당신의 옷자락을 붙잡는다."
+					}
+				},
+				{
+					"speaker": "ibalsa_aje",
+					"content": {
+						"korean": "아니, 저 소리가 계속 거슬리는데 그냥 가십니까?"
+					}
+				},
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "아재의 눈빛에 실망감이 가득하다."
+					}
+				},
+				{
+					"speaker": "dax",
+					"content": {
+						"korean": "아재가 저렇게 실망한 표정은 처음 보네요. 아무래도 꽤 신경 쓰였나 봐요."
+					}
+				}
+			],
+			"risk": {
+				"chance": "high",
+				"bad": {
+					"effects": {
+						"gold": -20
+					},
+					"reward": [],
+					"result": [
+						{
+							"speaker": "narrator",
+							"content": {
+								"korean": "당신이 소리를 무시하고 계단을 오르자,"
+							}
+						},
+						{
+							"speaker": "narrator",
+							"content": {
+								"korean": "갑자기 벽 뒤에서 '쿵!' 하는 소리와 함께 이발사 아재의 소중한 면도칼이 굴러떨어진다."
+							}
+						},
+						{
+							"speaker": "narrator",
+							"content": {
+								"korean": "아재가 '내 면도칼!' 하며 비명을 지른다."
+							}
+						}
+					]
+				}
+			}
+		},
+		{
+			"text": {
+				"korean": "벽에 대고 '거기 누구 있냐? 나와서 말해라!' 하고 크게 소리친다."
+			},
+			"path": "stat",
+			"mbti": "ES",
+			"require": {
+				"stat": "reason",
+				"op": ">=",
+				"value": 40
+			},
+			"flag": "loud_declaration",
+			"effects": {
+				"reason": 10,
+				"fighting": 10
+			},
+			"reward": [
+				"stun"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "당신의 호통에 벽 뒤에서 움직이던 쥐들이 놀라 달아나는 소리가 들린다."
+					}
+				},
+				{
+					"speaker": "ibalsa_aje",
+					"content": {
+						"korean": "하하, 역시 시원하시구만!"
+					}
+				},
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "아재가 만족스러운 미소를 짓는다."
+					}
+				},
+				{
+					"speaker": "dax",
+					"content": {
+						"korean": "역시 크게 한 방 먹여야 말을 듣는군요. 벽 뒤의 쥐들도 놀랐겠어요."
+					}
+				}
+			]
+		},
+		{
+			"text": {
+				"korean": "벽에 대고 '아무리 소중해도, 면도칼은 아니죠?'라고 속삭인다."
+			},
+			"path": "fun",
+			"mbti": "IN",
+			"effects": {
+				"community": 20
+			},
+			"reward": [
+				"bleed"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "당신의 속삭임에 이발사 아재는 깜짝 놀라 뒤로 넘어질 뻔한다."
+					}
+				},
+				{
+					"speaker": "ibalsa_aje",
+					"content": {
+						"korean": "아니, 그걸 어떻게... 혹시 귀신이라도 붙었습니까?"
+					}
+				},
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "아재의 얼굴이 새파랗게 질린다."
+					}
+				},
+				{
+					"speaker": "dax",
+					"content": {
+						"korean": "아재가 면도칼에 대한 집착이 엄청나네요. 저렇게 놀라는 건 또 처음 봐요."
+					}
+				}
+			],
+			"risk": {
+				"chance": "low",
+				"bad": {
+					"reward": [
+						"hp_down"
+					],
+					"result": [
+						{
+							"speaker": "narrator",
+							"content": {
+								"korean": "벽에 대고 '아무리 소중해도, 면도칼은 아니죠?'라고 속삭이자,"
+							}
+						},
+						{
+							"speaker": "narrator",
+							"content": {
+								"korean": "이발사 아재가 자신의 면도칼을 꺼내 들고 당신을 위협한다."
+							}
+						},
+						{
+							"speaker": "ibalsa_aje",
+							"content": {
+								"korean": "이 면도칼은 내 생명과도 같은데, 왜 자꾸 들먹이는 겁니까!"
+							}
+						}
+					]
+				}
+			}
+		}
+	],
+	"tags": [
+		"ibalsa_aje",
+		"dax"
+	],
+	"_design": {
+		"slot": "C",
+		"kind": "rep",
+		"person": {
+			"id": "ibalsa_aje",
+			"name": "이발사 아재",
+			"role": "이발사"
+		},
+		"wants": "이발사 아재는 계단 벽 뒤에서 들리는 수상한 소리에 신경이 곤두서 있다. 당신에게 그 소리의 정체를 밝혀주기를 원한다.",
+		"rule_link": "말 못 하는 소리 안에 숨겨진 사정을 알아내어 진짜 이유를 밝히는 사건.",
+		"rep": "reason+",
+		"events": {},
+		"flags": {
+			"wall_rats": {
+				"kind": "bad",
+				"boss_penalty": -1,
+				"label": {
+					"korean": "벽 뒤의 쥐"
+				},
+				"boss_line": {
+					"korean": "금고실 문 앞에서 쥐 소리에 신경이 분산된다."
+				}
+			},
+			"ignore_sound": {
+				"kind": "good",
+				"boss_penalty": 1,
+				"label": {
+					"korean": "소리 무시"
+				},
+				"boss_choice": {
+					"korean": "금고실 문 앞 이발사 아재의 방해를 뿌리치고 들어간다."
+				}
+			},
+			"loud_declaration": {
+				"kind": "good",
+				"boss_penalty": 2,
+				"label": {
+					"korean": "큰 소리"
+				},
+				"boss_choice": {
+					"korean": "금고실 문 앞에서 숨어있던 적들을 크게 소리쳐 혼란에 빠뜨린다."
+				}
+			}
+		}
+	}
+}

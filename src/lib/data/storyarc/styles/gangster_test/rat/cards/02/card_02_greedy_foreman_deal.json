@@ -1,0 +1,326 @@
+{
+	"id": "card_02_greedy_foreman_deal",
+	"title": {
+		"korean": "반장의 은밀한 제안"
+	},
+	"intensity": "calm",
+	"after_story": 7,
+	"before_story": 9,
+	"condition": {
+		"leaning": "community-",
+		"among": [
+			"fighting-",
+			"fighting+",
+			"community-",
+			"community+",
+			"reason-",
+			"reason+"
+		],
+		"min": 20
+	},
+	"urgency": 8,
+	"leaning": "community-",
+	"background_tags": [
+		"port",
+		"night",
+		"foggy",
+		"empty",
+		"suspense"
+	],
+	"background_image": "https://imagedelivery.net/WTEqQNGFb-l-IHS6IGnzUQ/92b9883a-8a79-4a7a-3661-8295816bd900/public",
+	"dialogue": [
+		{
+			"speaker": "narrator",
+			"content": {
+				"korean": "컨테이너 줄 사이, 담배 대신 사탕을 문 하역 반장이 불쑥 나타난다."
+			}
+		},
+		{
+			"speaker": "foreman_d",
+			"content": {
+				"korean": "이봐, 당신들! 소문으로만 듣던 해결사 양반들 아니야? 자기 몫만 챙기는 데는 도가 텄다며?"
+			}
+		},
+		{
+			"speaker": "dax",
+			"content": {
+				"korean": "젠장, 벌써 소문이 여기까지 퍼진 건가요? 큰일인데…"
+			}
+		},
+		{
+			"speaker": "foreman_d",
+			"content": {
+				"korean": "지금 내가 아주 중요한 걸 옮기는 중인데…"
+			}
+		},
+		{
+			"speaker": "foreman_d",
+			"content": {
+				"korean": "못 본 척 넘어가 주면, 절대 후회 안 할 만큼 두둑이 챙겨주지. 어때?"
+			}
+		}
+	],
+	"choices": [
+		{
+			"text": {
+				"korean": "반장의 제안을 받아들여 돈을 챙긴다."
+			},
+			"path": "easy",
+			"mbti": "EN",
+			"flag": "suspicious_deal",
+			"effects": {
+				"gold": 120,
+				"echo": -5,
+				"community": -15
+			},
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "당신은 반장에게서 돈뭉치를 받아 주머니에 넣는다."
+					}
+				},
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "반장은 만족스러운 표정으로 작은 상자를 가리키며 '이건 그냥 내 개인적인 짐이야'라고 말한다."
+					}
+				},
+				{
+					"speaker": "dax",
+					"content": {
+						"korean": "저거… 아무리 봐도 평범한 짐은 아닌 것 같은데요?"
+					}
+				}
+			],
+			"risk": {
+				"chance": "mid",
+				"bad": {
+					"effects": {
+						"gold": -50
+					},
+					"reward": [
+						"hp_down"
+					],
+					"result": [
+						{
+							"speaker": "narrator",
+							"content": {
+								"korean": "당신은 반장에게서 돈뭉치를 받아 주머니에 넣으려는 순간,"
+							}
+						},
+						{
+							"speaker": "narrator",
+							"content": {
+								"korean": "마침 지나가던 세관 직원이 나타나 반장과 당신을 번갈아 쳐다본다."
+							}
+						},
+						{
+							"speaker": "dax",
+							"content": {
+								"korean": "젠장, 돈 받다가 딱 걸린 것 같은데요…?"
+							}
+						}
+					]
+				}
+			}
+		},
+		{
+			"text": {
+				"korean": "돈을 거절하고 수상한 물건이 무엇인지 확인한다."
+			},
+			"path": "hard",
+			"mbti": "IS",
+			"flag": "foreman_hides_secret",
+			"effects": {
+				"echo": 10,
+				"community": 20,
+				"reason": 10
+			},
+			"reward": [
+				"defense_up"
+			],
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "당신은 반장의 돈을 단호히 거절하고 상자에 다가간다."
+					}
+				},
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "반장은 움찔하며 상자를 황급히 발로 가린다. '쓸데없는 참견은 하지 마!'"
+					}
+				},
+				{
+					"speaker": "dax",
+					"content": {
+						"korean": "와, 반장님 저렇게 당황하는 거 처음 봐요!"
+					}
+				}
+			],
+			"risk": {
+				"chance": "high",
+				"bad": {
+					"effects": {
+						"gold": -20
+					},
+					"reward": [],
+					"result": [
+						{
+							"speaker": "narrator",
+							"content": {
+								"korean": "당신이 돈을 거절하고 상자를 확인하려는 순간,"
+							}
+						},
+						{
+							"speaker": "narrator",
+							"content": {
+								"korean": "반장이 밟고 있던 사탕 껍질에 미끄러져 상자와 함께 넘어진다."
+							}
+						},
+						{
+							"speaker": "narrator",
+							"content": {
+								"korean": "상자가 열리며 오리 인형 수십 마리가 쏟아진다."
+							}
+						},
+						{
+							"speaker": "dax",
+							"content": {
+								"korean": "저, 저게 뭔가요?! 오리 인형…?!"
+							}
+						}
+					]
+				}
+			}
+		},
+		{
+			"text": {
+				"korean": "자기 몫을 더 챙겨야 한다며 반장을 압박한다."
+			},
+			"path": "stat",
+			"mbti": "TJ",
+			"require": {
+				"stat": "community",
+				"op": "<=",
+				"value": -40
+			},
+			"flag": "squeeze_foreman_hard",
+			"effects": {
+				"community": -20,
+				"gold": 150
+			},
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "당신은 반장에게 턱짓하며 '그 정도로는 부족하다'고 말한다."
+					}
+				},
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "반장은 침을 꿀꺽 삼키더니 지갑을 꺼내 돈을 더 얹어준다. '이 정도면 됐냐? 빨리 꺼져!'"
+					}
+				},
+				{
+					"speaker": "dax",
+					"content": {
+						"korean": "와… 역시 자기 몫 챙기는 데는 선수시네요!"
+					}
+				}
+			]
+		},
+		{
+			"text": {
+				"korean": "반장에게 돈을 쥐여주고 지나가게 해달라고 한다."
+			},
+			"path": "gold",
+			"mbti": "FP",
+			"require": {
+				"stat": "gold",
+				"op": ">=",
+				"value": 80
+			},
+			"effects": {
+				"echo": 5,
+				"gold": -80
+			},
+			"seed": null,
+			"result": [
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "당신은 반장에게 돈을 건네며 조용히 지나가겠다고 말한다."
+					}
+				},
+				{
+					"speaker": "narrator",
+					"content": {
+						"korean": "반장은 돈을 세어보더니 고개를 끄덕인다. '좋아, 그럼. 갈 길 가시게.'라고 말한다."
+					}
+				},
+				{
+					"speaker": "dax",
+					"content": {
+						"korean": "휴, 이 정도면 조용히 넘어갈 수 있겠네요."
+					}
+				}
+			]
+		}
+	],
+	"tags": [
+		"foreman_d",
+		"dax"
+	],
+	"_design": {
+		"slot": "D",
+		"kind": "rep",
+		"person": {
+			"id": "foreman_d",
+			"name": "하역 반장",
+			"role": "하역 반장"
+		},
+		"wants": "히어로들이 자신의 비밀스러운 거래를 눈감아주길 원합니다.",
+		"rule_link": "눈앞의 이득만 쫓는 판단은 결국 더 큰 그림을 놓치게 만듭니다.",
+		"rep": "community-",
+		"events": {},
+		"flags": {
+			"suspicious_deal": {
+				"kind": "bad",
+				"boss_penalty": -1,
+				"label": {
+					"korean": "의심스러운 거래"
+				},
+				"boss_line": {
+					"korean": "창고 간부가 수상한 상자를 옮기는 모습을 보게 된다."
+				}
+			},
+			"foreman_hides_secret": {
+				"kind": "good",
+				"boss_penalty": 1,
+				"label": {
+					"korean": "반장의 비밀"
+				},
+				"boss_choice": {
+					"korean": "창고 간부가 허둥지둥 짐을 가리는 모습에 의심이 깊어진다."
+				}
+			},
+			"squeeze_foreman_hard": {
+				"kind": "good",
+				"boss_penalty": 2,
+				"label": {
+					"korean": "반장 쥐어짜기"
+				},
+				"boss_choice": {
+					"korean": "창고 간부가 당신의 탐욕을 기억하고 더욱 경계한다."
+				}
+			}
+		}
+	}
+}
