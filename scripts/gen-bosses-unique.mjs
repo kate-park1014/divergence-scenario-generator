@@ -2,13 +2,14 @@
 // 이번 세션에서 새로 만든 이름까지 모두 회피해 "이름 겹치지 않게" 보장한다.
 // 충돌 시 회피목록에 넣고 재시도, 마지막엔 결정론적 접미사로 강제 유일화.
 // 실행: node --experimental-strip-types scripts/gen-bosses-unique.mjs --theme=snowy --count=10 --runs=3
+// --tone=코믹|고전|호러|비장 : 그 톤으로만 (기본은 순환, count=1 이면 늘 코믹)
 import fs from 'node:fs';
 import {
 	buildBossGen2Prompt,
 	bossGen2Tool,
 	BOSS_TONES,
 	WORLD_PRESETS
-} from '../src/lib/prompts/bossGen2.ts';
+} from '../src/lib/prompts/boss/bossGen2.ts';
 
 const args = Object.fromEntries(
 	process.argv.slice(2).map((a) => {
@@ -38,7 +39,8 @@ function loadLenient(p) {
 }
 const usedNames = new Set();
 const usedIds = new Set();
-for (const f of fs.readdirSync('boss_list').filter((f) => new RegExp(`^${theme}_.*\\.json$`).test(f))) {
+// <theme>.json(합친 파일) + <theme>_<시각>.json(아직 안 합친 파일)
+for (const f of fs.readdirSync('boss_list').filter((f) => new RegExp(`^${theme}(_.*)?\\.json$`).test(f))) {
 	for (const b of loadLenient('boss_list/' + f).bosses) {
 		usedNames.add(b.name.toLowerCase());
 		usedIds.add(b.id.toLowerCase());
@@ -87,7 +89,12 @@ for (let r = 0; r < runs; r++) {
 	console.log(`\n=== RUN ${r + 1}/${runs} ===`);
 	const cards = [];
 	for (let i = 0; i < count; i++) {
-		const tone = BOSS_TONES[i % BOSS_TONES.length];
+		// --tone=<label> 이면 그 톤만, 아니면 순환
+		const tone = args.tone ? BOSS_TONES.find((t) => t.label === args.tone) : BOSS_TONES[i % BOSS_TONES.length];
+		if (!tone) {
+			console.error(`톤 '${args.tone}' 없음. 가능: ${BOSS_TONES.map((t) => t.label).join(', ')}`);
+			process.exit(1);
+		}
 		const avoidList = [...usedNames]; // 누적된 모든 이름(소문자) 회피 힌트로 전달
 		let g, ok = false;
 		for (let attempt = 1; attempt <= MAX_RETRY; attempt++) {

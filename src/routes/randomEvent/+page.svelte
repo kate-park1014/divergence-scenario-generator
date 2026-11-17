@@ -6,7 +6,7 @@
 		buildRandomEventBatchTool,
 		type RandomEventTheme,
 		type ScenarioTypeOption
-	} from '$lib/prompts/randomEventGen';
+	} from '$lib/prompts/randomEvent/randomEventGen';
 	import type { RandomEvent, RandomEventScenarioType } from '$lib/types';
 
 	let selectedTheme = $state<RandomEventTheme | null>(null);

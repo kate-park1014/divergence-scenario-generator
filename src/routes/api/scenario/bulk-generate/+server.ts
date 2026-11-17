@@ -1,5 +1,5 @@
 import { json } from '@sveltejs/kit';
-import { buildScenarioPrompt, buildScenarioTool } from '$lib/prompts/chapterGen';
+import { buildScenarioPrompt, buildScenarioTool } from '$lib/prompts/chapter/chapterGen';
 import { buildScenarioBase } from '$lib/data/sample/scenarioBase';
 import { getStoryarc, storyarcRegistry } from '$lib/data/storyarc';
 import type { StoryArc } from '$lib/types';

@@ -2,13 +2,14 @@ import { json } from '@sveltejs/kit';
 import { readFile, writeFile } from 'fs/promises';
 import { join } from 'path';
 import { parseScenarioFile } from '$lib/server/parseScenarioFile';
+import { ensureNpcEnter } from '$lib/server/ensureNpcEnter';
 import { hell_bosses } from '$lib/data/sample/boss/hell_boss';
 import { modern_bosses } from '$lib/data/sample/boss/modern_boss';
-import { desert_npc_pool } from '$lib/data/sample/npc/desert_npc_pool';
-import { forest_npc_pool } from '$lib/data/sample/npc/forest_npc_pool';
-import { hell_npc_pool } from '$lib/data/sample/npc/hell_npc_pool';
-import { modern_npc_pool } from '$lib/data/sample/npc/modern_npc_pool';
-import { npc_2_pools } from '$lib/data/sample/npc/snowy_npc_pool';
+import { desert_npc_pool } from '$lib/data/npc/desert_npc_pool';
+import { forest_npc_pool } from '$lib/data/npc/forest_npc_pool';
+import { hell_npc_pool } from '$lib/data/npc/hell_npc_pool';
+import { modern_npc_pool } from '$lib/data/npc/modern_npc_pool';
+import { npc_2_pools } from '$lib/data/npc/snowy_npc_pool';
 import { storyarcRegistry } from '$lib/data/storyarc';
 import type { RequestHandler } from './$types';
 
@@ -167,16 +168,21 @@ export const POST: RequestHandler = async ({ request }) => {
 		);
 	}
 
-	if (added.length === 0) {
-		return json({ ok: true, added: [], message: '추가할 actor가 없습니다.' });
+	// LLM 이 빼먹은 NPC 등장(enter) 연출을 코드로 채운다
+	const isNpc = (speaker: string) => !isSystemSpeaker(speaker) && !bossLowerMap[speaker.toLowerCase()];
+	const enterInserted = ensureNpcEnter(rooms, isNpc);
+
+	if (added.length === 0 && enterInserted === 0) {
+		return json({ ok: true, added: [], enterInserted, message: '추가할 actor가 없습니다.' });
 	}
 
 	data.actors = actors;
+	data.rooms = rooms;
 
 	const varMatch = raw.match(/^export const (\w+) = /);
 	const varName = varMatch?.[1] ?? filename.replace('.ts', '');
 	const content = `export const ${varName} = ${JSON.stringify(data, null, '\t')} as const;\n`;
 	await writeFile(filepath, content, 'utf-8');
 
-	return json({ ok: true, added });
+	return json({ ok: true, added, enterInserted });
 };

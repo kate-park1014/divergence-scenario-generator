@@ -84,7 +84,7 @@ const THEME = args.theme ?? process.env.THEME ?? 'snowy';
 const BASE = args.base ?? process.env.BASE ?? 'http://localhost:5178';
 const CONCURRENCY = Math.max(1, Math.min(10, Number(args.concurrency ?? process.env.CONCURRENCY ?? 3)));
 const BATCH = Math.max(1, Number(args.batch ?? process.env.BATCH ?? 3));
-const TEMPERATURE = args.temperature ?? process.env.TEMPERATURE; // 미지정 시 엔드포인트 기본(1.2)
+const TEMPERATURE = args.temperature ?? process.env.TEMPERATURE; // 미지정 시 엔드포인트 기본(1.0, 이야기 단계)
 const DRY_RUN = Boolean(args['dry-run']);
 
 const SERIES = BOSS_POOL_MAP[THEME];

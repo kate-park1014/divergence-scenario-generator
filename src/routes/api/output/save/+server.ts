@@ -46,7 +46,7 @@ async function archiveGeneratedFiles(
 
 export const POST: RequestHandler = async ({ request }) => {
 	const body = await request.json();
-	const { chapterOrder, difficultyLevel, storyarcId, archiveSource } = body;
+	const { chapterOrder, difficultyLevel, storyarcId, archiveSource, boss } = body;
 	let { chapterName, scenarios } = body;
 
 	if (typeof chapterOrder !== 'number' || chapterOrder < 1) {
@@ -78,6 +78,17 @@ export const POST: RequestHandler = async ({ request }) => {
 			{ error: `${storyarcId}의 theme을 확인할 수 없습니다.` },
 			{ status: 400 }
 		);
+	}
+
+	// 피날레(random_boss 아닌 씬) boss 덮어쓰기: 빈 값은 무시
+	const poolId = typeof boss?.pool_id === 'string' ? boss.pool_id.trim() : '';
+	const monsterId = typeof boss?.monster_id === 'string' ? boss.monster_id.trim() : '';
+	if (poolId || monsterId) {
+		for (const sc of scenarios as Record<string, unknown>[]) {
+			const cur = (sc.boss as Record<string, unknown>) ?? {};
+			if (cur.pool_id === 'random_boss') continue;
+			sc.boss = { ...cur, ...(poolId && { pool_id: poolId }), ...(monsterId && { monster_id: monsterId }) };
+		}
 	}
 
 	const outputDir = join(process.cwd(), 'output_list');

@@ -1,7 +1,7 @@
 <script lang="ts">
 	import { untrack } from 'svelte';
 	import { goto } from '$app/navigation';
-	import { buildScenarioPrompt, buildScenarioTool } from '$lib/prompts/chapterGen';
+	import { buildScenarioPrompt, buildScenarioTool } from '$lib/prompts/chapter/chapterGen';
 	import { buildScenarioBase } from '$lib/data/sample/scenarioBase';
 	import { setScenario } from '$lib/stores/scenarioStore.svelte';
 	import { getStoryarc, storyarcRegistry } from '$lib/data/storyarc';

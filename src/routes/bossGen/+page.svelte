@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { buildBossPrompt, bossGenTool, type BossSourceInput } from '$lib/prompts/bossGen';
+	import { buildBossPrompt, bossGenTool, type BossSourceInput } from '$lib/prompts/boss/bossGen';
 
 	const THEMES = ['modern', 'forest', 'snowy', 'desert', 'hell'];
 

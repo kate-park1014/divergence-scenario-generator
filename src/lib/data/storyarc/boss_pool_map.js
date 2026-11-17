@@ -327,9 +327,7 @@ export const BOSS_POOL_MAP = {
 { key: 'arkhain', pool: 'pool_082' },
 { key: 'kirantej', pool: 'pool_242' },
 { key: 'memo', pool: 'pool_241' },
-{ key: 'doomthread', pool: 'pool_231' },
-{ key: 'noctis', pool: 'pool_080' },
-{ key: 'lumen', pool: 'pool_081' }
+{ key: 'doomthread', pool: 'pool_231' }
 	]
 };
 

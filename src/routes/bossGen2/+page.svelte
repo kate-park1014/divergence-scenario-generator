@@ -6,7 +6,7 @@
 		BOSS_TONES,
 		type BossCard2,
 		type BossTone
-	} from '$lib/prompts/bossGen2';
+	} from '$lib/prompts/boss/bossGen2';
 
 	// "전체" = 6개 톤을 하나씩 일괄 생성하는 특수 선택지
 	const ALL_TONE = { id: 'all', label: '전체 (톤별 6개)' };

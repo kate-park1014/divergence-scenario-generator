@@ -1,4 +1,4 @@
-import { npc_by_theme } from './npc_pool';
+import { npc_by_theme } from '../npc/npc_pool';
 import type { StoryArc } from '$lib/types';
 
 export function buildScenarioBase(order: number, storyarc: StoryArc) {
@@ -21,6 +21,10 @@ export function buildScenarioBase(order: number, storyarc: StoryArc) {
 	return {
 		scenario_id: `${storyarc.id}_${String(order).padStart(2, '0')}`,
 		order,
+		// 1~4화 일반 보스의 직업. korean 만 넣고 번역 단계가 나머지 언어를 채운다 (5화 최종보스는 없음)
+		...(item.boss === 'random_boss' && item.random_boss_title
+			? { random_boss_title: { korean: item.random_boss_title } }
+			: {}),
 		act: item.act,
 		theme: storyarc.theme,
 		actors,

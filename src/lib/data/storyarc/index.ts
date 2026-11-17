@@ -63,9 +63,7 @@ import { storyarc_hell_kirantej_27 } from './hell/storyarc_hell_kirantej_27';
 import { storyarc_hell_komorebi_4 } from './hell/storyarc_hell_komorebi_4';
 import { storyarc_hell_lacrimosa_2 } from './hell/storyarc_hell_lacrimosa_2';
 import { storyarc_hell_lordfluff_15 } from './hell/storyarc_hell_lordfluff_15';
-import { storyarc_hell_lumen_31 } from './hell/storyarc_hell_lumen_31';
 import { storyarc_hell_memo_28 } from './hell/storyarc_hell_memo_28';
-import { storyarc_hell_noctis_30 } from './hell/storyarc_hell_noctis_30';
 import { storyarc_hell_obscura_18 } from './hell/storyarc_hell_obscura_18';
 import { storyarc_hell_pactum_20 } from './hell/storyarc_hell_pactum_20';
 import { storyarc_hell_platella_21 } from './hell/storyarc_hell_platella_21';
@@ -354,6 +352,26 @@ import { storyarc_forest_nutcommander_53 } from './forest/storyarc_forest_nutcom
 import { storyarc_forest_silvanlament_54 } from './forest/storyarc_forest_silvanlament_54';
 import { storyarc_forest_thalassa_55 } from './forest/storyarc_forest_thalassa_55';
 import { storyarc_forest_conduit_56 } from './forest/storyarc_forest_conduit_56';
+import { storyarc_desert_scoop_40 } from './desert/storyarc_desert_scoop_40';
+import { storyarc_desert_aserah_41 } from './desert/storyarc_desert_aserah_41';
+import { storyarc_desert_carnivex_42 } from './desert/storyarc_desert_carnivex_42';
+import { storyarc_desert_opalis_43 } from './desert/storyarc_desert_opalis_43';
+import { storyarc_desert_kaelith_44 } from './desert/storyarc_desert_kaelith_44';
+import { storyarc_desert_vane_45 } from './desert/storyarc_desert_vane_45';
+import { storyarc_desert_vesperis_46 } from './desert/storyarc_desert_vesperis_46';
+import { storyarc_desert_sirocco_47 } from './desert/storyarc_desert_sirocco_47';
+import { storyarc_desert_zahrun_48 } from './desert/storyarc_desert_zahrun_48';
+import { storyarc_desert_encore_49 } from './desert/storyarc_desert_encore_49';
+import { storyarc_hell_stampy_30 } from './hell/storyarc_hell_stampy_30';
+import { storyarc_hell_soterion_31 } from './hell/storyarc_hell_soterion_31';
+import { storyarc_hell_cystis_32 } from './hell/storyarc_hell_cystis_32';
+import { storyarc_hell_pyralis_33 } from './hell/storyarc_hell_pyralis_33';
+import { storyarc_hell_razzle_34 } from './hell/storyarc_hell_razzle_34';
+import { storyarc_hell_vane_35 } from './hell/storyarc_hell_vane_35';
+import { storyarc_hell_porcellus_36 } from './hell/storyarc_hell_porcellus_36';
+import { storyarc_hell_solatrus_37 } from './hell/storyarc_hell_solatrus_37';
+import { storyarc_hell_amnion_38 } from './hell/storyarc_hell_amnion_38';
+import { storyarc_hell_philomel_39 } from './hell/storyarc_hell_philomel_39';
 import type { StoryArc } from '$lib/types';
 
 export const storyarcRegistry: StoryArc[] = [
@@ -660,9 +678,7 @@ export const storyarcRegistry: StoryArc[] = [
 	storyarc_hell_komorebi_4,
 	storyarc_hell_lacrimosa_2,
 	storyarc_hell_lordfluff_15,
-	storyarc_hell_lumen_31,
 	storyarc_hell_memo_28,
-	storyarc_hell_noctis_30,
 	storyarc_hell_obscura_18,
 	storyarc_hell_pactum_20,
 	storyarc_hell_platella_21,
@@ -702,6 +718,26 @@ export const storyarcRegistry: StoryArc[] = [
 
 	// forest (subdir, bulk 생성)
 
+	storyarc_desert_scoop_40,
+	storyarc_desert_aserah_41,
+	storyarc_desert_carnivex_42,
+	storyarc_desert_opalis_43,
+	storyarc_desert_kaelith_44,
+	storyarc_desert_vane_45,
+	storyarc_desert_vesperis_46,
+	storyarc_desert_sirocco_47,
+	storyarc_desert_zahrun_48,
+	storyarc_desert_encore_49,
+	storyarc_hell_stampy_30,
+	storyarc_hell_soterion_31,
+	storyarc_hell_cystis_32,
+	storyarc_hell_pyralis_33,
+	storyarc_hell_razzle_34,
+	storyarc_hell_vane_35,
+	storyarc_hell_porcellus_36,
+	storyarc_hell_solatrus_37,
+	storyarc_hell_amnion_38,
+	storyarc_hell_philomel_39,
 ];
 
 export function getStoryarc(id: string): StoryArc | undefined {

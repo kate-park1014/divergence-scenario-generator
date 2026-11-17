@@ -1,11 +1,19 @@
 import { json } from '@sveltejs/kit';
-import { buildScenarioPrompt, buildScenarioTool } from '$lib/prompts/chapterGen';
+import { buildScenarioPrompt, buildScenarioTool } from '$lib/prompts/chapter/chapterGen';
 import { buildScenarioBase } from '$lib/data/sample/scenarioBase';
 import { getStoryarc, storyarcRegistry } from '$lib/data/storyarc';
 import type { StoryArc } from '$lib/types';
 import type { RequestHandler } from './$types';
 
 type Failure = { id: string; step: string; order?: number; error: string };
+
+/** speech 인데 content.korean 이 비어 있는 대사 수 (LLM 이 가끔 content 를 통째로 빼먹는다) */
+function countEmptySpeech(result: { rooms?: Record<string, unknown>[] }): number {
+	return (result.rooms ?? [])
+		.flatMap((r) => ['dialogue', 'win_dialogue', 'lose_dialogue'].flatMap((b) => (r[b] as Record<string, unknown>[]) ?? []))
+		.filter((x) => x.type === 'speech' && !(x.content as { korean?: string } | undefined)?.korean).length;
+}
+const GENERATE_ATTEMPTS = 3;
 
 /**
  * snowy 풀 파이프라인 일괄 실행: 생성 → process-actors → translate(다국어) → output/save.
@@ -15,12 +23,14 @@ type Failure = { id: string; step: string; order?: number; error: string };
  *  - idPrefix?: string         id 접두사로 대상 선택
  *  - concurrency?: number      아크 단위 동시 실행 수 (기본 3, 1~10)
  *  - skipGenerate?: boolean    이미 생성된 .ts 재사용 (생성 단계 건너뜀)
+ *  - skipTranslate?: boolean   번역 단계 건너뜀 (output 저장 후 /api/output/translate 로 따로 번역)
+ *  - bosses?: Record<storyarcId, { pool_id?, monster_id? }>  피날레 boss 덮어쓰기 (output/save 로 전달)
  *
  * chapter_order = difficulty_level = (arc.level ?? 0) + 1.
  * 아크끼리는 병렬, 아크 내부는 단계 순차 + 단계 내 5씬 병렬.
  */
 export const POST: RequestHandler = async ({ request, fetch }) => {
-	const { storyarcIds, idPrefix, concurrency, skipGenerate } = await request.json();
+	const { storyarcIds, idPrefix, concurrency, skipGenerate, skipTranslate, bosses } = await request.json();
 
 	let arcs: StoryArc[];
 	if (Array.isArray(storyarcIds) && storyarcIds.length > 0) {
@@ -65,13 +75,24 @@ export const POST: RequestHandler = async ({ request, fetch }) => {
 					try {
 						const base = buildScenarioBase(order, arc);
 						const message = buildScenarioPrompt(order, arc);
-						const { res, data } = await postJson('/api/gemini', {
-							message,
-							tools: [buildScenarioTool(order)],
-							tool_choice: { type: 'function', function: { name: 'generate_scenario_content' } }
-						});
+						// 빈 대사가 있으면 다시 생성
+						let res: Response | undefined;
+						let data: { tool_result?: { rooms?: Record<string, unknown>[] }; error?: string } | undefined;
+						for (let attempt = 0; attempt < GENERATE_ATTEMPTS; attempt++) {
+							({ res, data } = await postJson('/api/gemini', {
+								message,
+								tools: [buildScenarioTool(order)],
+								tool_choice: { type: 'function', function: { name: 'generate_scenario_content' } }
+							}));
+							if (data?.tool_result && countEmptySpeech(data.tool_result) === 0) break;
+						}
 						if (!data?.tool_result) {
-							failed.push({ id: arc.id, step: 'generate', order, error: data?.error ?? `gemini ${res.status}` });
+							failed.push({ id: arc.id, step: 'generate', order, error: data?.error ?? `gemini ${res?.status}` });
+							return false;
+						}
+						const empty = countEmptySpeech(data.tool_result);
+						if (empty > 0) {
+							failed.push({ id: arc.id, step: 'generate', order, error: `content 가 빈 speech ${empty}개 (${GENERATE_ATTEMPTS}회 시도)` });
 							return false;
 						}
 						const merged = { ...base, ...data.tool_result };
@@ -106,7 +127,7 @@ export const POST: RequestHandler = async ({ request, fetch }) => {
 
 		// 3) translate (다국어, LLM)
 		const transRes = await Promise.all(
-			orders.map(async (order) => {
+			(skipTranslate ? [] : orders).map(async (order) => {
 				const { res, data } = await postJson('/api/translate', { filename: fileFor(arc.id, order) });
 				if (!res.ok) {
 					failed.push({ id: arc.id, step: 'translate', order, error: data?.error ?? res.statusText });
@@ -122,7 +143,8 @@ export const POST: RequestHandler = async ({ request, fetch }) => {
 			chapterOrder: chapterValue,
 			difficultyLevel: chapterValue,
 			storyarcId: arc.id,
-			archiveSource: true
+			archiveSource: true,
+			boss: bosses?.[arc.id]
 		});
 		if (!out.res.ok || !out.data?.ok) {
 			failed.push({ id: arc.id, step: 'output', error: out.data?.error ?? out.res.statusText });

@@ -59,7 +59,7 @@ export type FinalBoss = {
 	appearance?: string;
 	appearance_npc?: string;
 	appearance_boss?: string;
-	surface_identity: string;
+	surface_identity?: string; // 새 아크에는 저장하지 않는다 (챕터 생성이 안 읽음)
 	true_identity: string;
 	motivation: string;
 	want?: string; // 보스가 이 일로 얻는 구체적인 이득 한 문장 (재작업본)
@@ -67,14 +67,19 @@ export type FinalBoss = {
 	zodiac_sign?: string;
 };
 
-/** (예전 형식) 아크 전체 복선 목록. 지금은 scenarioOutline[].clues 에 심는 화별로 들어간다 */
+/**
+ * 아크 복선. 공개는 항상 5화.
+ * chapterGen: 1~4화엔 plant_order 가 그 화인 것만 (reveal_context 뺌), 5화엔 전부 넘긴다.
+ * plant_order 가 없는 예전 아크는 plant_act 로 화를 정할 수 없어 1~4화마다 전부 넘긴다.
+ */
 export type Foreshadowing = {
 	id: string;
 	hint: string;
-	plant_act: Act;
-	plant_room: number;
-	reveal_act: Act;
-	reveal_room: number;
+	plant_order?: number; // 심는 화 (1~4)
+	plant_act?: Act; // (예전 형식) rising 이면 2~4화 중 어느 화인지 정해지지 않음
+	plant_room: number; // 심는 방 (1, 3, 5, 9, 15)
+	reveal_act?: Act; // (예전 형식) 지금은 항상 5화
+	reveal_room: number; // 5화에서 밝히는 방
 	reveal_context: string;
 };
 
@@ -102,36 +107,8 @@ export type ScenarioOutlineItem = {
 	summary: string;
 	random_boss_title?: string; // 1~4화: 그 화 일반 보스의 직업 (화마다 다름)
 	random_boss_side?: 'warn' | 'ally'; // 1~4화: 일반 보스의 편. warn = 틀린 행동을 경고하며 막음 / ally = 최종보스 편. 없으면 ally
-	// 1~4화: 주인공이 속는 방식 (코드가 id 로 고정, 화마다 다름). 후보·설명은 storyarcGen.ts 의 DECEIVE_MODE_POOL / DECEIVE_MODE_LABEL
-	deceive_mode?:
-		| 'direct'
-		| 'verify'
-		| 'npc_acts'
-		| 'avoid'
-		| 'pressure'
-		| 'undo'
-		| 'tradeoff'
-		| 'bait'
-		| 'piecemeal'
-		| 'gift';
 	place?: string; // 이 화의 장소: 무대 안의 한 구역 (화마다 다름)
 	boss_trace?: string; // 1~4화: 그 화에 최종보스가 얼굴 없이 드러나는 매체 (화마다 다름. 주인공은 같은 존재인 줄 모름)
-	// 아래는 예전 story_spine 의 화별 값 (지금은 화 항목 안에 함께 둔다)
-	line?: string; // 이 화의 뼈대 1~2문장 (5화는 결말 포함). summary 를 짧게 줄인 것
-	protagonist_action?: string; // 이 화 주인공의 행동 (1화=wrong_action, 2~4화=겉모습이 다른 행동, 5화=right_action)
-	lesson?: string; // 2~4화: 앞 화에서 배운 것과, 그래서 이번에 어떻게 조심하는지
-	hidden_link?: string; // 1~4화: 이 행동이 사실은 왜 wrong_action 과 같은 일인지 (5화에 드러남, 1~4화 대사에는 안 씀)
-	clues?: Clue[]; // 이 화에 심는 복선 (예전 global_foreshadowing)
-};
-
-/** 화에 심는 복선. 심는 화는 이 복선이 들어 있는 scenarioOutline 항목의 order */
-export type Clue = {
-	id: string;
-	room: number; // 심는 방 (1, 3, 5, 9, 15)
-	hint: string;
-	reveal_order: number; // 밝혀지는 화 (심는 화보다 늦음)
-	reveal_room: number; // 밝혀지는 방 (1, 3, 5, 9, 15)
-	reveal: string; // 밝혀지는 장면에서 보이거나 들리는 일
 };
 
 export type ActSummary = {
@@ -145,27 +122,18 @@ export type StoryArc = {
 	level?: number; // 시리즈 레벨 (예: Haraldr boss index 1 → 11,21,...,91)
 	chapter_name: MultiLangText;
 	theme: Theme;
-	rising_count: number;
+	rising_count?: number; // 읽는 곳 없음. 새 아크에는 저장하지 않는다
 	world: World;
 	protagonist_goal: string;
-	// (예전 형식) 지금은 scenarioOutline[] 의 line·protagonist_action·lesson·hidden_link 로 들어간다. 읽을 때는 arcEpisode.ts 를 쓸 것
-	story_spine?: { order: number; line: string; protagonist_action?: string; lesson?: string; hidden_link?: string }[];
-	stage?: string; // 이야기의 무대: 보스가 있는 한 장소
-	genre?: string; // 재작업 때 배정된 장르
-	key_object?: string; // 1~5화에 계속 나오고 5화 결말에서 쓰이는 핵심 물건
-	wrong_action?: string; // 1~4화 행동이 사실은 모두 하는 일 (1화에는 그대로 한다). 핵심 물건에 대한 틀린 행동
-	right_action?: string; // 5화의 핵심 물건에 대한 정답 행동 (결말 행동)
-	random_boss_role?: string; // (예전 필드) 1~4화 일반 보스 집단 이름 — 지금은 scenarioOutline[].random_boss_title 을 쓴다
+	// story_spine·stage·key_object·wrong_action·right_action·최상위 boss_trace 는 생성 단계 뼈대라 저장하지 않는다 (storyarcGen.ts 툴 스키마 참고)
 	boss_name_korean?: string; // 최종보스 이름의 한국어 발음
-	boss_human_title?: string; // (예전 필드) 최종보스 호칭 — 지금은 쓰지 않음. 최종보스는 이름으로만 부른다
-	boss_trace?: string; // 1화에 최종보스가 얼굴 없이 드러나는 매체 (목소리·글자·물건). 2~4화는 scenarioOutline[].boss_trace
 	act_tone: {
 		intro: ActTone;
 		rising: ActTone;
 		climax_finale: ActTone;
 	};
 	final_boss: FinalBoss;
-	global_foreshadowing?: Foreshadowing[]; // (예전 형식) 지금은 scenarioOutline[].clues. 읽을 때는 arcEpisode.ts 의 cluesOf
+	global_foreshadowing?: Foreshadowing[];
 	npc_roles?: Record<string, NpcArcItem>;
 	scenarioOutline: ScenarioOutlineItem[];
 	act_summary: ActSummary;
