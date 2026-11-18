@@ -53,6 +53,16 @@ export function buildScenarioPrompt(order: number, storyarc: StoryArc): string {
 		})
 		.join('\n');
 
+	// 주 NPC 가 앞 화에 안 나왔으면 첫 등장 (첫 대사에서 소개). 앞 화의 주 NPC 였거나 앞 화 summary 에 이름이 나오면 이미 만난 것.
+	// 1화 summary 가 "주인공과 ○○는" 으로 함께 시작하면 원래 일행이라 소개하지 않는다
+	const npcName = themePool.find((n) => n.key === scenario.npc)?.name.korean;
+	const npcFirstAppearance =
+		!!scenario.npc &&
+		!(order === 1 && !!npcName && !!scenario.summary?.includes(`주인공과 ${npcName}`)) &&
+		!storyarc.scenarioOutline.some(
+			(s) => s.order < scenario.order && (s.npc === scenario.npc || (!!npcName && !!s.summary?.includes(npcName)))
+		);
+
 	// 이 화의 무대·일반 보스·최종보스 흔적 (1~4화) / 최종보스 정보 (5화)
 	const SIDE_LABEL = {
 		warn: 'warn — 최종보스 편이 아니다. 주인공의 이번 화 행동을 경고하며 막는다',
@@ -66,6 +76,8 @@ export function buildScenarioPrompt(order: number, storyarc: StoryArc): string {
 				storyarc.final_boss.appearance_boss && `appearance: ${storyarc.final_boss.appearance_boss}`,
 				`true_identity: ${storyarc.final_boss.true_identity}`,
 				`motivation: ${storyarc.final_boss.motivation}`,
+				storyarc.final_boss.motive_scene &&
+					`motive_scene: ${storyarc.final_boss.motive_scene} (win_dialogue 에서 보스가 계기를 말할 때 이 장면을 구체적으로 말한다)`,
 				storyarc.final_boss.want && `want: ${storyarc.final_boss.want}`,
 				`twist: ${storyarc.final_boss.twist}`
 			]
@@ -123,6 +135,7 @@ boss: ${scenario.boss}
 npc: ${scenario.npc}
 ${getNpcPersona(scenario.npc) ? `npc_persona: ${getNpcPersona(scenario.npc)}` : ''}
 ${storyarc.npc_roles?.[scenario.npc] ? `npc_role: ${storyarc.npc_roles[scenario.npc].role}\nnpc_arc: ${storyarc.npc_roles[scenario.npc].arc}` : ''}
+${npcFirstAppearance ? `npc_first_appearance: ${scenario.npc} 는 이 아크에서 이번 화에 처음 나온다` : ''}
 summary: ${scenario.summary}
 ${sceneDetailForPrompt}
 

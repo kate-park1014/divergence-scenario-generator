@@ -85,19 +85,24 @@ export function buildStoryPrompt(boss: BossInput, npcs: NpcInput[], theme: strin
 - 5화: 1화 시작, 2~4화 전개, 5화 결말
 - 1~4화에는 최종보스가 직접 나오지 않는다. 화마다 최종보스의 흔적(boss_trace: 물건·소리·자국 등) 하나가 나온다. 주인공은 아직 그게 누구 것인지 모른다
   - 보스 외형의 눈에 띄는 특징(흉터·무기·옷·장신구)을 흔적으로 써도 좋다
+  - twist 가 보스의 겉모습(surface_identity)을 뒤집는다면, 1~4화에서 독자가 그 겉모습을 믿게 만든다. 보스가 직접 나올 수 없으므로 다른 인물의 말(그에게 도움받은 이야기·칭찬)이나 그가 남긴 물건·쪽지로 보여준다. 한 번도 느껴보지 못한 겉모습은 뒤집혀도 놀랍지 않다
 - 1~4화마다 일반 보스가 한 명 있고, 그 화 안에서 주인공과 싸운다. 일반 보스는 최종보스가 아니고 NPC 목록의 인물도 아니다. 직업으로 부른다 (random_boss_title, 화마다 다름)
-  - 일반 보스의 직업은 최종보스의 정체(예: 최종보스가 연금술사면 연금술사)나 그 화 NPC 의 역할과 겹치지 않는다
+  - 일반 보스의 직업은 최종보스의 정체(예: 최종보스가 연금술사면 연금술사)나 그 화 NPC 의 역할과 겹치지 않는다. 주 NPC 의 역할도 최종보스의 겉모습(surface_identity)과 겹치지 않는다 (나쁜 예: 최종보스가 길잡이인데 NPC 도 길잡이)
   - random_boss_side: warn = 주인공의 그 화 행동이 위험하다고 경고하며 막는다 / ally = 최종보스 편이다. 진실을 덮거나 주인공을 엉뚱한 쪽으로 몬다
   - 싸움은 일반 보스가 주인공을 막거나 공격해서 일어난다. 왜 공격하는지 한마디를 쓴다. 주인공이 관심 없는 물건(예: 거절한 물건)을 지키려고 싸우지 않는다
+  - 그 이유는 일반 보스가 그 장소에서 지키거나 얻으려는 것 하나다 (warn: 주인공이 하려는 일이 무엇을 망치는지 / ally: 최종보스에게서 무엇을 받았는지). 말과 행동이 어긋나지 않는다 (나쁜 예: "저리 가라"면서 가려는 길을 막는다)
 - 화마다 주 NPC 가 한 명 있다 (NPC 목록의 key). 주 NPC 는 사건을 움직이는 행동을 하나 한다. 주인공 옆에 있기만 하지 않는다. 같은 NPC 가 여러 화에 나와도 된다. 1화와 5화에 같은 NPC 를 두면 좋다
+  - 주 NPC 를 처음 만나는 장면은 그 화 안에 쓴다. 이미 만난 상태로 화를 시작하지 않는다 (나쁜 예: "듄의 조언을 받아 골짜기로 들어선다")
 - 5화는 최종보스와 싸우는 화다. 실제로 싸우는 장면이 있고, 결말 행동(right_action)은 싸움 도중이나 이긴 직후에 한다
 
 # 이야기 규칙
 - logline 을 먼저 쓴다: "[주인공]이 [무대]에서 [무엇을 하다가] [보스의 진짜 정체]를 알게 되는 이야기" 한 문장. 다섯 화는 모두 이 문장에서 나온다
 - 톤은 보스 카드의 tone 을 따른다. 보스의 동기는 motivation 하나이고, 반전은 twist 를 따른다. 보스 설정을 바꾸거나 덧붙이지 않는다
+  - motive_scene: 보스 카드의 동기를 만든 사건을 누가 무엇을 했는지 한 장면으로 정한다 ("배신당했다"를 장면으로 보여주는 것이지 설정을 덧붙이는 게 아니다). 2~4화의 흔적·NPC 말에 그 일부가 나온다
 - key_object·wrong_action·right_action 은 보스의 motivation 에서 정한다. 보스가 원하는 것이나 화나는 이유에 직접 걸린 물건과 행동이다
   - 예: 등대 불이 꺼지는 것을 못 견디는 보스 → key_object=등불, wrong_action=등불을 끈다, right_action=등불을 다시 켠다
   - 1화에 주인공은 wrong_action 을 한다 (아직 아무것도 모르니까). 2~4화는 그 결과를 겪으며 의심하고 알아내는 과정이다. 5화에 right_action 을 한다
+  - right_action 이 무엇을 풀거나 멈추는지는 2~4화 중 한 화에서 NPC 의 말이나 물건으로 먼저 알려준다. 5화에 처음 나오는 해결법은 쓰지 않는다
   - 주인공은 위험하다고 알게 된 일을 다시 하지 않는다. 2~4화에 wrong_action 이 또 나온다면 주인공이 아직 모르는 상태이거나, 다른 인물이 하는 것이다
   - 1~4화에 핵심 물건이 어디서 나오는지 쓴다 (누가 왜 건넸는지, 어디에 있었는지). 최종보스가 직접 건네지 않는다
 - 사건 줄기는 하나다. 보스와 상관없는 곁가지 사건이나 장치 조작을 만들지 않는다
@@ -142,6 +147,10 @@ export const storyTool = [
 					wrong_action: { type: 'string' },
 					right_action: { type: 'string' },
 					stakes: { type: 'string', description: '주인공이 끝까지 쫓는 이유: 쫓지 않으면 잃는 것. 1화에서 생긴다. 한 문장.' },
+					motive_scene: {
+						type: 'string',
+						description: '보스의 동기를 만든 사건 한 장면. 누가 무엇을 했는지 1~2문장 (예: "검객들이 정령의 몸을 쪼개 여덟 자루 검을 만들어 나눠 가졌다"). "배신당했다" 같은 말로 끝내지 않는다.'
+					},
 					episodes: {
 						type: 'array',
 						description: '5개. order 1~5.',
@@ -162,7 +171,7 @@ export const storyTool = [
 						}
 					}
 				},
-				required: ['logline', 'boss_name_korean', 'key_object', 'wrong_action', 'right_action', 'stakes', 'episodes']
+				required: ['logline', 'boss_name_korean', 'key_object', 'wrong_action', 'right_action', 'stakes', 'motive_scene', 'episodes']
 			}
 		}
 	}
@@ -175,6 +184,7 @@ export type StoryResult = {
 	wrong_action: string;
 	right_action: string;
 	stakes: string;
+	motive_scene: string;
 	episodes: {
 		order: number;
 		title: string;
@@ -309,6 +319,7 @@ export function mergeStoryarc(boss: BossInput, story: StoryResult, fields: Recor
 			appearance_boss: fb.appearance_boss,
 			true_identity: boss.true_identity,
 			motivation: boss.motivation,
+			motive_scene: story.motive_scene,
 			want: fb.want,
 			twist: boss.twist
 		},

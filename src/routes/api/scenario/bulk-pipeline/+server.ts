@@ -7,11 +7,16 @@ import type { RequestHandler } from './$types';
 
 type Failure = { id: string; step: string; order?: number; error: string };
 
-/** speech 인데 content.korean 이 비어 있는 대사 수 (LLM 이 가끔 content 를 통째로 빼먹는다) */
+/** 다시 생성해야 하는 speech 수: content.korean 이 비었거나 (LLM 이 가끔 content 를 통째로 빼먹는다),
+ *  placeholder 글자(character_1 등)가 본문에 들어가 화면에 그대로 노출되는 대사 */
 function countEmptySpeech(result: { rooms?: Record<string, unknown>[] }): number {
 	return (result.rooms ?? [])
 		.flatMap((r) => ['dialogue', 'win_dialogue', 'lose_dialogue'].flatMap((b) => (r[b] as Record<string, unknown>[]) ?? []))
-		.filter((x) => x.type === 'speech' && !(x.content as { korean?: string } | undefined)?.korean).length;
+		.filter((x) => {
+			if (x.type !== 'speech') return false;
+			const text = (x.content as { korean?: string } | undefined)?.korean;
+			return !text || /character_(any|[1-4])/.test(text);
+		}).length;
 }
 const GENERATE_ATTEMPTS = 3;
 
@@ -92,7 +97,7 @@ export const POST: RequestHandler = async ({ request, fetch }) => {
 						}
 						const empty = countEmptySpeech(data.tool_result);
 						if (empty > 0) {
-							failed.push({ id: arc.id, step: 'generate', order, error: `content 가 빈 speech ${empty}개 (${GENERATE_ATTEMPTS}회 시도)` });
+							failed.push({ id: arc.id, step: 'generate', order, error: `content 가 비었거나 placeholder 글자가 든 speech ${empty}개 (${GENERATE_ATTEMPTS}회 시도)` });
 							return false;
 						}
 						const merged = { ...base, ...data.tool_result };

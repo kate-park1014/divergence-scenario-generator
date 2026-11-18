@@ -26,7 +26,7 @@ const dialogueEntry = {
 		},
 		action: {
 			type: 'string',
-			enum: ['enter', 'exit', 'move', 'shake', 'focus'],
+			enum: ['enter', 'exit'],
 			description: 'type이 direction일 때만 사용'
 		},
 		duration_ms: {
@@ -36,7 +36,13 @@ const dialogueEntry = {
 		spot: {
 			type: 'array',
 			items: { type: 'number' },
-			description: 'action이 enter/move일 때만 사용. 목표 좌표 [x, y]. exit 에는 쓰지 않는다'
+			description: 'action이 enter일 때만 사용. 목표 좌표 [x, y]. exit 에는 쓰지 않는다'
+		},
+		direction: {
+			type: 'string',
+			enum: ['up', 'down'],
+			description:
+				'action이 enter/exit일 때만 사용. enter: 들어오는 쪽 / exit: 나가는 쪽. up = 위쪽 출구(탐험대가 갈 방향), down = 아래쪽 입구(탐험대가 온 방향)'
 		}
 	},
 	required: ['type', 'speaker']

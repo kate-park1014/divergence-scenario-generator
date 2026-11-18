@@ -63,6 +63,7 @@ export type FinalBoss = {
 	true_identity: string;
 	motivation: string;
 	want?: string; // 보스가 이 일로 얻는 구체적인 이득 한 문장 (재작업본)
+	motive_scene?: string; // 동기를 만든 사건 한 장면 (누가 무엇을 했나). 스토리아크 1단계가 정하고 5화 대본이 보스 대사로 쓴다
 	twist: string;
 	zodiac_sign?: string;
 };
