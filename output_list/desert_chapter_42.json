@@ -172,7 +172,7 @@
 							"speaker": "amir",
 							"type": "direction",
 							"spot": [4, 3],
-							"duration_ms": 500
+							"duration_ms": 1000
 						},
 						{
 							"speaker": "amir",
@@ -225,7 +225,8 @@
 							"action": "exit",
 							"speaker": "random_boss",
 							"type": "direction",
-							"duration_ms": 500
+							"duration_ms": 500,
+							"direction": "up"
 						}
 					]
 				},
@@ -259,7 +260,8 @@
 							"speaker": "random_boss",
 							"type": "direction",
 							"spot": [4, 1],
-							"duration_ms": 500
+							"duration_ms": 500,
+							"direction": "up"
 						},
 						{
 							"speaker": "random_boss",
@@ -289,7 +291,8 @@
 							"action": "exit",
 							"speaker": "random_boss",
 							"type": "direction",
-							"duration_ms": 500
+							"duration_ms": 500,
+							"direction": "up"
 						}
 					],
 					"id": 9
@@ -435,14 +438,6 @@
 							"type": "speech"
 						},
 						{
-							"type": "speech",
-							"emotion": "base",
-							"content": {
-								"korean": "사막 한가운데 오아시스가 통째로 말라붙어 있네."
-							},
-							"speaker": "character_any"
-						},
-						{
 							"duration_ms": 500,
 							"action": "enter",
 							"spot": [4, 2],
@@ -452,10 +447,18 @@
 						{
 							"speaker": "kasai",
 							"content": {
-								"korean": "아미르의 저주를 풀 약초를 구하려 했는데... 샘이 완전히 말랐어."
+								"korean": "사막 길잡이 카사이야. 이 오아시스에 저주를 늦추는 약초가 자란다고 해서 데려왔어."
 							},
-							"emotion": "sad",
+							"emotion": "base",
 							"type": "speech"
+						},
+						{
+							"type": "speech",
+							"emotion": "sad",
+							"content": {
+								"korean": "그런데… 샘이 통째로 말라붙었잖아."
+							},
+							"speaker": "character_any"
 						},
 						{
 							"speaker": "character_1",
@@ -467,7 +470,7 @@
 						},
 						{
 							"content": {
-								"korean": "그래도 조심해서 안쪽으로 이동하자. 분명 단서가 남아 있을 거야."
+								"korean": "뿌리라도 남았을지 몰라. 안쪽까지 살펴보자."
 							},
 							"emotion": "base",
 							"speaker": "kasai",
@@ -746,6 +749,14 @@
 							"spot": [3, 2],
 							"duration_ms": 500,
 							"action": "enter"
+						},
+						{
+							"type": "speech",
+							"content": {
+								"korean": "난 이 골짜기 바람길을 아는 듄이라네. 저주받은 친구를 데리고 신전에 간다 들었지."
+							},
+							"emotion": "base",
+							"speaker": "dune"
 						},
 						{
 							"type": "speech",
@@ -1112,7 +1123,15 @@
 							"speaker": "ember",
 							"emotion": "base",
 							"content": {
-								"korean": "여기가 내가 말한 버려진 유적 신전이야. 내부 깊은 곳에 오래된 벽화가 있어."
+								"korean": "유적 안내인 앰버야. 저주를 풀 단서를 찾는다길래 이 버려진 신전으로 데려왔어."
+							}
+						},
+						{
+							"type": "speech",
+							"speaker": "ember",
+							"emotion": "base",
+							"content": {
+								"korean": "안쪽 깊은 곳에 오래된 벽화가 있어."
 							}
 						},
 						{
@@ -1587,7 +1606,15 @@
 							"speaker": "amir",
 							"emotion": "sad",
 							"content": {
-								"korean": "더 이상 발이 안 움직여... 날 두고 가서 정령에게 사죄해 줘."
+								"korean": "여기까지가 한계야… 처음 그 조각상을 부순 게 이 저주의 시작이었잖아."
+							}
+						},
+						{
+							"type": "speech",
+							"speaker": "amir",
+							"emotion": "sad",
+							"content": {
+								"korean": "거상 앞에서 그 일을 사죄해 줘. 그래야 풀릴 것 같아."
 							}
 						},
 						{
@@ -1595,7 +1622,7 @@
 							"type": "speech",
 							"emotion": "angry",
 							"content": {
-								"korean": "너를 두고 가진 않아. 알현실 문을 열고 저주를 풀겠다."
+								"korean": "같이 간다. 거상 앞에서 조각상을 부순 걸 사죄하고, 저주를 끝내겠어."
 							}
 						}
 					]
@@ -1630,20 +1657,60 @@
 							"type": "speech"
 						},
 						{
-							"content": {
-								"korean": "탐욕에 눈이 멀어 나를 이용하고 버린 검객들을 용서할 수 없다…"
-							},
-							"emotion": "sad",
 							"type": "speech",
-							"speaker": "boss"
+							"speaker": "boss",
+							"emotion": "sad",
+							"content": {
+								"korean": "나는 검객들이 흘리는 피가 싫어 이 사막으로 도망쳤다."
+							}
+						},
+						{
+							"type": "speech",
+							"speaker": "boss",
+							"emotion": "angry",
+							"content": {
+								"korean": "그런데 그들은 여기까지 쫓아와 내 힘을 빼앗고, 쓸모가 다하자 나를 버렸지."
+							}
+						},
+						{
+							"type": "speech",
+							"speaker": "boss",
+							"emotion": "sad",
+							"content": {
+								"korean": "그래서 검을 든 자는 모두 조각상으로 만들었다. 너희가 부순 것도 그중 하나였다."
+							}
 						},
 						{
 							"emotion": "sad",
 							"content": {
-								"korean": "우리가 휘둘렀던 탐욕의 검을 사죄합니다. 억울하게 갇힌 자들을 위해 검을 숙입니다."
+								"korean": "조각상을 부순 걸 사죄합니다. 억울하게 갇힌 자들을 위해 검을 숙입니다."
 							},
 							"type": "speech",
 							"speaker": "character_any"
+						},
+						{
+							"type": "speech",
+							"speaker": "narrator",
+							"emotion": "base",
+							"content": {
+								"korean": "탐험대가 하나둘 검을 내려놓았다."
+							}
+						},
+						{
+							"type": "speech",
+							"speaker": "boss",
+							"emotion": "sad",
+							"content": {
+								"korean": "…검을 내려놓는 검객은 처음 보는구나."
+							}
+						},
+						{
+							"type": "speech",
+							"speaker": "boss",
+							"emotion": "base",
+							"content": {
+								"korean": "이제야… 쉴 수 있겠다."
+							}
 						},
 						{
 							"duration_ms": 500,
@@ -1680,6 +1747,14 @@
 						},
 						{
 							"type": "speech",
+							"speaker": "boss",
+							"emotion": "angry",
+							"content": {
+								"korean": "또 검을 든 자들이구나. 내 조각상을 부수고 여기까지 왔느냐."
+							}
+						},
+						{
+							"type": "speech",
 							"content": {
 								"korean": "너희가 휘두른 검의 무게를 깨달아라! 네 검 역시 이 사막의 장식이 될 것이다!"
 							},
@@ -1689,7 +1764,7 @@
 						{
 							"speaker": "character_any",
 							"content": {
-								"korean": "벽화의 여덟 자루 유리가 저 대검이었어! 정면으로 맞아싸운다!"
+								"korean": "벽화의 여덟 자루 유리가 저 대검이었어! 정면으로 맞서 싸운다!"
 							},
 							"type": "speech",
 							"emotion": "angry"
@@ -1709,8 +1784,7 @@
 				"korean": [
 					"아세라의 유구한 신전 깊은 곳. 붉은 오팔빛 기운이 맴돈다.",
 					"아미르의 몸을 삼켜오는 보석 저주를 풀기 위한 마지막 기회.",
-					"복수심에 타락한 검의 정령 아세라가 유리의 대검을 쥐고 기다린다.",
-					"진심 어린 사죄만이 사막의 억울한 넋들과 동료를 구원할 수 있다."
+					"복수심에 타락한 검의 정령 아세라가 유리의 대검을 쥐고 기다린다."
 				]
 			}
 		}
