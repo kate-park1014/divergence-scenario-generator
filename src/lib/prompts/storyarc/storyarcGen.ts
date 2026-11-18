@@ -85,7 +85,8 @@ export function buildStoryPrompt(boss: BossInput, npcs: NpcInput[], theme: strin
 - 5화: 1화 시작, 2~4화 전개, 5화 결말
 - 1~4화에는 최종보스가 직접 나오지 않는다. 화마다 최종보스의 흔적(boss_trace: 물건·소리·자국 등) 하나가 나온다. 주인공은 아직 그게 누구 것인지 모른다
   - 보스 외형의 눈에 띄는 특징(흉터·무기·옷·장신구)을 흔적으로 써도 좋다
-  - twist 가 보스의 겉모습(surface_identity)을 뒤집는다면, 1~4화에서 독자가 그 겉모습을 믿게 만든다. 보스가 직접 나올 수 없으므로 다른 인물의 말(그에게 도움받은 이야기·칭찬)이나 그가 남긴 물건·쪽지로 보여준다. 한 번도 느껴보지 못한 겉모습은 뒤집혀도 놀랍지 않다
+  - twist 가 보스의 겉모습(surface_identity)을 뒤집는다면, 1~4화에서 독자가 그 겉모습을 믿게 만든다. 보스가 직접 나올 수 없으므로 다른 인물의 말(그를 겪은 이야기)이나 그가 남긴 물건·쪽지로 보여준다. 한 번도 느껴보지 못한 겉모습은 뒤집혀도 놀랍지 않다
+  - 겉모습은 surface_identity 에 적힌 그대로 보여준다. 착하게 바꾸거나 무섭게 바꾸지 않는다 (나쁜 예: "안 사면 협박하는 상인"을 "장신구를 나눠 주는 친절한 상인"으로 쓴다)
 - 1~4화마다 일반 보스가 한 명 있고, 그 화 안에서 주인공과 싸운다. 일반 보스는 최종보스가 아니고 NPC 목록의 인물도 아니다. 직업으로 부른다 (random_boss_title, 화마다 다름)
   - 일반 보스의 직업은 최종보스의 정체(예: 최종보스가 연금술사면 연금술사)나 그 화 NPC 의 역할과 겹치지 않는다. 주 NPC 의 역할도 최종보스의 겉모습(surface_identity)과 겹치지 않는다 (나쁜 예: 최종보스가 길잡이인데 NPC 도 길잡이)
   - random_boss_side: warn = 주인공의 그 화 행동이 위험하다고 경고하며 막는다 / ally = 최종보스 편이다. 진실을 덮거나 주인공을 엉뚱한 쪽으로 몬다
@@ -107,6 +108,7 @@ export function buildStoryPrompt(boss: BossInput, npcs: NpcInput[], theme: strin
   - 1~4화에 핵심 물건이 어디서 나오는지 쓴다 (누가 왜 건넸는지, 어디에 있었는지). 최종보스가 직접 건네지 않는다
 - 사건 줄기는 하나다. 보스와 상관없는 곁가지 사건이나 장치 조작을 만들지 않는다
 - 2~4화마다 주인공이 최종보스에 대해 새로 알게 되는 사실(new_fact)이 하나씩 있다. 같은 일을 반복하지 않고, 화가 지날수록 정체에 가까워진다
+  - true_identity·motivation 을 확정하는 것은 5화다. 2~4화의 new_fact 는 소문·의심·단서까지만 쓴다 (나쁜 예: 3화 "주인공은 상인이 사실 검객이라는 사실을 깨닫는다")
 - 주인공의 행동에는 이유가 있다: 무엇을 보고, 누구 말을 듣고 그렇게 하는지 쓴다
 - 주인공이 이 일을 끝까지 쫓는 이유(stakes)를 1화에서 만든다. 쫓지 않으면 주인공이나 동료가 잃는 것이 있어야 한다 (길이 막힌다, 동료가 다친다, 돌아갈 수 없다 등). 호기심만으로 쫓지 않는다
   - 2~4화의 첫 문장은 이 이유 때문에 다음 장소로 가는 것으로 시작한다. "소문을 따라 이동한다"처럼 이유 없이 옮겨 가지 않는다
@@ -214,6 +216,7 @@ export function buildFieldsPrompt(boss: BossInput, story: StoryResult): string {
 - final_boss.want: 보스가 얻고 싶은 것 한 문장
 - global_foreshadowing: 4개. 1~4화 이야기에 실제로 나오는 장면(boss_trace·new_fact)에서 고른다
   - hint 는 그 장면 그대로, 주인공이 직접 보거나 겪는 일. reveal_context 는 5화에서 그 흔적의 정체(누구의 것·무엇이었는지)가 밝혀지는 것. 보스의 속마음은 쓰지 않는다
+  - reveal_context 에 1~4화 장소 이름을 쓰지 않는다. 밝혀지는 곳은 늘 5화다 (나쁜 예: "바람의 골짜기에서 …임을 확인한다")
   - reveal_room 이 15 가 아니면 보스가 나오기 전이다. 그 방에서 눈으로 확인할 수 있는 것만 쓰고, 보스만 아는 사실(왜·어떻게 그렇게 됐는지)은 쓰지 않는다
   - plant_order 는 그 장면이 나오는 화 번호(1~4). 4개를 여러 화에 나눈다
   - plant_room 은 그 화에서 심는 방, reveal_room 은 5화에서 밝히는 방. 둘 다 1, 3, 5, 9, 15 중 하나. reveal_room 은 4개가 서로 다르다
@@ -317,6 +320,7 @@ export function mergeStoryarc(boss: BossInput, story: StoryResult, fields: Recor
 			id: boss.id,
 			name: boss.name,
 			appearance_boss: fb.appearance_boss,
+			surface_identity: boss.surface_identity,
 			true_identity: boss.true_identity,
 			motivation: boss.motivation,
 			motive_scene: story.motive_scene,

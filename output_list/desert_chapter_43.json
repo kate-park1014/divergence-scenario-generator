@@ -2,42 +2,42 @@
 	"chapter_order": 43,
 	"difficulty_level": 43,
 	"chapter_name": {
-		"french": "Os du désert",
-		"chinese": "沙漠之骨",
-		"vietnamese": "Xương sa mạc",
-		"english": "Desert Bones",
-		"spanish": "Huesos",
-		"korean": "사막의 뼈",
-		"japanese": "砂漠の骨",
-		"thai": "กระดูกทราย",
-		"hindi": "रेत की हड्डी"
+		"korean": "모래 길잡이",
+		"english": "Sand Guide",
+		"chinese": "沙漠向导",
+		"french": "Le Guide",
+		"spanish": "El Guía",
+		"thai": "คนนำทาง",
+		"japanese": "砂のガイド",
+		"hindi": "बालू गाइड",
+		"vietnamese": "Kẻ dẫn đường"
 	},
 	"scenarios": [
 		{
 			"scenario_id": "desert_carnivex_42_01",
 			"order": 1,
 			"random_boss_title": {
-				"korean": "모래 도굴꾼"
+				"korean": "약초꾼"
 			},
 			"act": "intro",
 			"theme": "desert",
 			"actors": {
-				"amir": {
-					"id": "mon_0096d602-52ab-4a9c-9cc8-4ff18ed3b655",
+				"khan": {
+					"id": "mon_77d18883-7711-4fc4-b04e-7b29652e0ab2",
 					"name": {
-						"korean": "아미르",
-						"english": "Amir",
-						"japanese": "アミール",
-						"chinese": "阿米尔",
-						"french": "Amir",
-						"spanish": "Amir",
-						"vietnamese": "Amir",
-						"thai": "อาเมียร์",
-						"hindi": "अमीर"
+						"korean": "칸",
+						"english": "Khan",
+						"japanese": "カーン",
+						"chinese": "可汗",
+						"french": "Khan",
+						"spanish": "Khan",
+						"vietnamese": "Khan",
+						"thai": "ข่าน",
+						"hindi": "खान"
 					},
 					"description": "",
-					"face_image_url": "https://imagedelivery.net/WTEqQNGFb-l-IHS6IGnzUQ/8cd60fb0-3699-44c4-6425-a3e97eec1800/public",
-					"battle_sprite_url": "https://imagedelivery.net/WTEqQNGFb-l-IHS6IGnzUQ/b644dc95-9c27-442e-6dc6-73e5550a0200/public"
+					"face_image_url": "https://imagedelivery.net/WTEqQNGFb-l-IHS6IGnzUQ/d2797cf2-a388-4974-97e4-54e6af8a0000/public",
+					"battle_sprite_url": "https://imagedelivery.net/WTEqQNGFb-l-IHS6IGnzUQ/9c40ef7d-3388-44dd-29b3-9ba716fe8b00/public"
 				}
 			},
 			"boss": {
@@ -45,432 +45,63 @@
 			},
 			"prologue": {
 				"korean": [
-					"뜨거운 태양이 내리쬐는 끝없는 사막 언덕.",
-					"오아시스를 찾아 헤매던 탐험대와 동료 아미르는 극한의 갈증에 시달린다.",
-					"그때, 모래 언덕 위에서 발견한 의문의 노란 물병.",
-					"그 구원의 물은, 잔혹한 비극의 시작이었다."
+					"끝없이 펼쳐진 메마른 사막, 뜨거운 바람이 피부를 찌른다.",
+					"오아시스를 찾지 못하면 사막 한가운데서 모두 목말라 죽는다.",
+					"그 사막 입구에서, 한 병의 호박색 물병이 탐험대의 손에 들어온다."
 				]
 			},
 			"rooms": [
 				{
-					"id": 1,
 					"dialogue": [
 						{
-							"type": "speech",
 							"speaker": "narrator",
 							"emotion": "base",
+							"type": "speech",
 							"content": {
-								"korean": "뜨거운 사막 언덕. 타는 듯한 갈증이 온몸을 조여온다."
+								"korean": "뜨거운 바람의 사막 입구. 메마른 모래먼지가 날린다."
 							}
 						},
 						{
-							"content": {
-								"korean": "물을 찾아야 해. 더 이상은 걸을 수 없어."
-							},
 							"type": "speech",
 							"speaker": "character_any",
-							"emotion": "base"
+							"emotion": "base",
+							"content": {
+								"korean": "물통은 벌써 바닥났어. 오아시스를 찾기 전에 쓰러지겠어."
+							}
 						},
 						{
-							"action": "enter",
+							"type": "direction",
+							"spot": [
+								3,
+								2
+							],
 							"duration_ms": 500,
-							"type": "direction",
-							"spot": [
-								2,
-								2
-							],
-							"speaker": "amir"
-						},
-						{
-							"emotion": "sad",
-							"speaker": "amir",
-							"type": "speech",
-							"content": {
-								"korean": "동료로서 같이 오아시스를 찾아 나섰지만… 나도 이제 한계야."
-							}
-						},
-						{
-							"speaker": "character_1",
-							"emotion": "sad",
-							"type": "speech",
-							"content": {
-								"korean": "목이 타들어 가는 것 같아."
-							}
-						},
-						{
-							"content": {
-								"korean": "어? 저기 모래 위에 물병이 하나 떨어져 있어!"
-							},
-							"type": "speech",
-							"emotion": "happy",
-							"speaker": "amir"
-						},
-						{
-							"emotion": "base",
-							"speaker": "character_any",
-							"content": {
-								"korean": "누군가 놓아둔 노란 진액이 담긴 물병이다."
-							},
-							"type": "speech"
-						}
-					]
-				},
-				{
-					"dialogue": [
-						{
-							"spot": [
-								2,
-								2
-							],
-							"action": "enter",
-							"speaker": "amir",
-							"type": "direction",
-							"duration_ms": 500
-						},
-						{
-							"content": {
-								"korean": "모래 길잡이가 버려두고 간 물병인가 봐! 살았다!"
-							},
-							"type": "speech",
-							"emotion": "happy",
-							"speaker": "amir"
-						},
-						{
-							"content": {
-								"korean": "잠깐, 물병 바닥에 끈적한 호박색 진액 자국이 희미하게 묻어있어."
-							},
-							"type": "speech",
-							"speaker": "character_any",
-							"emotion": "base"
-						},
-						{
-							"content": {
-								"korean": "코를 찌르는 이상한 냄새가 나."
-							},
-							"type": "speech",
-							"speaker": "character_2",
-							"emotion": "base"
-						},
-						{
-							"speaker": "amir",
-							"emotion": "happy",
-							"content": {
-								"korean": "찬밥 더운밥 가릴 때가 아니야! 일단 마실게!"
-							},
-							"type": "speech"
-						},
-						{
-							"content": {
-								"korean": "아미르가 덥석 노란 물을 마셔버렸다."
-							},
-							"type": "speech",
-							"speaker": "character_any",
-							"emotion": "base"
-						}
-					],
-					"id": 3
-				},
-				{
-					"dialogue": [
-						{
-							"type": "direction",
-							"speaker": "amir",
-							"spot": [
-								2,
-								2
-							],
-							"action": "enter",
-							"duration_ms": 400
-						},
-						{
-							"content": {
-								"korean": "어…? 갈증은 가셨는데, 다리가… 으윽!"
-							},
-							"type": "speech",
-							"speaker": "amir",
-							"emotion": "sad"
-						},
-						{
-							"speaker": "character_any",
-							"emotion": "base",
-							"content": {
-								"korean": "아미르의 몸이 휘청거리며 비틀거린다."
-							},
-							"type": "speech"
-						},
-						{
-							"content": {
-								"korean": "갑자기 왜 이래?! 무슨 일이야!"
-							},
-							"type": "speech",
-							"speaker": "character_3",
-							"emotion": "sad"
-						},
-						{
-							"speaker": "amir",
-							"emotion": "angry",
-							"type": "speech",
-							"content": {
-								"korean": "다리 속 뼈가 녹아내리는 것 같은 통증이…!"
-							}
-						},
-						{
-							"type": "speech",
-							"emotion": "angry",
-							"speaker": "character_any",
-							"content": {
-								"korean": "저 노란 물에 뼈를 녹이는 무서운 독이 들어있었던 거야!"
-							}
-						}
-					],
-					"id": 5
-				},
-				{
-					"dialogue": [
-						{
-							"type": "direction",
-							"spot": [
-								2,
-								2
-							],
-							"duration_ms": 400,
-							"speaker": "amir",
+							"speaker": "khan",
 							"action": "enter"
 						},
 						{
-							"content": {
-								"korean": "미안해… 다리에 힘이 안 들어간 채 뼈가 녹아내려… 더는 못 걸어…."
-							},
 							"type": "speech",
-							"emotion": "sad",
-							"speaker": "amir"
-						},
-						{
-							"content": {
-								"korean": "쓰러진 아미르 앞으로 몽둥이를 든 모래 도굴꾼이 막아서며 다가온다."
-							},
+							"speaker": "khan",
 							"emotion": "base",
-							"speaker": "character_any",
-							"type": "speech"
-						},
-						{
-							"speaker": "character_4",
-							"emotion": "angry",
 							"content": {
-								"korean": "이런 곳에서 멈출 순 없어!"
-							},
-							"type": "speech"
-						},
-						{
-							"type": "speech",
-							"content": {
-								"korean": "적을 제압하고 친구를 살릴 해독제를 찾아야 한다!"
-							},
-							"speaker": "character_any",
-							"emotion": "angry"
-						}
-					],
-					"id": 9
-				},
-				{
-					"dialogue": [
-						{
-							"speaker": "random_boss",
-							"emotion": "angry",
-							"content": {
-								"korean": "감히 그 위험한 노란 물을 마시다니! 몽둥이 맛을 봐라!"
-							},
-							"type": "speech"
-						},
-						{
-							"content": {
-								"korean": "노란 물 때문에 내 동료가 다리 뼈가 녹아 쓰러졌다!"
-							},
-							"emotion": "angry",
-							"speaker": "character_any",
-							"type": "speech"
-						},
-						{
-							"emotion": "angry",
-							"speaker": "random_boss",
-							"content": {
-								"korean": "어차피 독에 당했으니 여기서 끝이다! 죽어라!"
-							},
-							"type": "speech"
-						},
-						{
-							"content": {
-								"korean": "공격을 막아내고 아미르를 살릴 단서를 뚫어내겠다!"
-							},
-							"type": "speech",
-							"emotion": "angry",
-							"speaker": "character_any"
-						}
-					],
-					"win_dialogue": [
-						{
-							"type": "speech",
-							"speaker": "random_boss",
-							"emotion": "sad",
-							"content": {
-								"korean": "크윽… 노란 물을 마신 이상 독이 온몸에 돌아 뼈가 전부 녹고 말 것이다…."
+								"korean": "나는 용병 칸이다. 길 잃은 사람을 공짜로 오아시스까지 이끌어 준다는 친절한 모래 길잡이가, 너희 몫이라며 이 물병을 맡겼다."
 							}
 						},
 						{
-							"emotion": "base",
-							"speaker": "character_any",
-							"content": {
-								"korean": "모래 도굴꾼이 쓰러졌지만 아미르의 상태가 너무 심각하다."
-							},
-							"type": "speech"
-						},
-						{
-							"type": "direction",
-							"speaker": "amir",
-							"spot": [
-								3,
-								2
-							],
-							"action": "enter",
-							"duration_ms": 500
-						},
-						{
-							"type": "speech",
-							"content": {
-								"korean": "다리 뼈가 녹아내려… 발밑에 호박색 진액 자국이 희미하게 남아있어…."
-							},
-							"speaker": "amir",
-							"emotion": "sad"
-						},
-						{
-							"content": {
-								"korean": "바닥의 진액 자국이 사막 안쪽 폐허로 이어져 있어."
-							},
-							"emotion": "base",
-							"speaker": "character_any",
-							"type": "speech"
-						},
-						{
-							"content": {
-								"korean": "친구를 살릴 해독제를 찾아, 탐험대는 뜨거운 사막 깊은 곳으로 떠난다."
-							},
-							"speaker": "narrator",
-							"emotion": "base",
-							"type": "speech"
-						}
-					],
-					"lose_dialogue": [
-						{
-							"content": {
-								"korean": "사막의 금기를 어긴 자들의 비참한 말로다."
-							},
-							"type": "speech",
-							"speaker": "random_boss",
-							"emotion": "happy"
-						},
-						{
-							"emotion": "angry",
-							"speaker": "character_any",
-							"content": {
-								"korean": "아미르… 여기서 끝낼 순 없어! 다시 일어서야 해!"
-							},
-							"type": "speech"
-						}
-					],
-					"id": 15
-				}
-			]
-		},
-		{
-			"scenario_id": "desert_carnivex_42_02",
-			"order": 2,
-			"random_boss_title": {
-				"korean": "오아시스 파수꾼"
-			},
-			"act": "rising",
-			"theme": "desert",
-			"actors": {
-				"kasai": {
-					"id": "mon_8050c8ca-5715-4e7d-895e-5bc029d55fcf",
-					"name": {
-						"korean": "카사이",
-						"english": "Kasai",
-						"japanese": "カサイ",
-						"chinese": "卡赛",
-						"french": "Kasai",
-						"spanish": "Kasai",
-						"vietnamese": "Kasai",
-						"thai": "คาไซ",
-						"hindi": "कसाई"
-					},
-					"description": "",
-					"face_image_url": "https://imagedelivery.net/WTEqQNGFb-l-IHS6IGnzUQ/c9ddd314-36fb-4636-cbe6-35d8f6f98900/public",
-					"battle_sprite_url": "https://imagedelivery.net/WTEqQNGFb-l-IHS6IGnzUQ/a00fae8a-8a27-4895-d62c-a0c88456ff00/public"
-				}
-			},
-			"boss": {
-				"pool_id": "random_boss"
-			},
-			"prologue": {
-				"korean": [
-					"독에 중독된 친구 아미르의 다리 뼈가 녹아내리기 시작했다.",
-					"주인공은 해독제의 단서를 구하기 위해 잊힌 석조 폐허로 발걸음을 옮긴다.",
-					"그곳에서 만난 석조 폐허의 상인 카사이.",
-					"그러나 폐허 깊은 곳에서는 무서운 진실과 함께 파수꾼이 길을 막아서는데 —"
-				]
-			},
-			"rooms": [
-				{
-					"dialogue": [
-						{
-							"type": "speech",
-							"content": {
-								"korean": "무너진 석조 기둥 사이로 메마른 사막 바람이 불어온다."
-							},
-							"speaker": "narrator",
-							"emotion": "base"
-						},
-						{
-							"emotion": "base",
-							"speaker": "character_any",
-							"content": {
-								"korean": "아미르의 독을 풀려면 여기서 상인을 찾아야 해."
-							},
-							"type": "speech"
-						},
-						{
-							"speaker": "kasai",
-							"type": "direction",
-							"duration_ms": 500,
-							"action": "enter",
-							"spot": [
-								3,
-								2
-							]
-						},
-						{
-							"speaker": "kasai",
-							"emotion": "base",
-							"type": "speech",
-							"content": {
-								"korean": "누군가 했더니 탐험대인가? 난 이 폐허에서 물건을 파는 상인 카사이라네."
-							}
-						},
-						{
-							"content": {
-								"korean": "…뼛속까지 차가운 기운이 감돈다."
-							},
-							"type": "speech",
 							"speaker": "character_1",
-							"emotion": "base"
+							"emotion": "sad",
+							"type": "speech",
+							"content": {
+								"korean": "…바람조차 메말라 있네."
+							}
 						},
 						{
+							"type": "speech",
 							"content": {
-								"korean": "사막 독의 해독제를 찾는다면 폐허 안쪽 안뜰로 가보게나."
+								"korean": "그렇게 평판 좋은 길잡이가 남긴 물이라면 믿어도 되겠지."
 							},
-							"speaker": "kasai",
 							"emotion": "base",
-							"type": "speech"
+							"speaker": "character_any"
 						}
 					],
 					"id": 1
@@ -479,257 +110,228 @@
 					"id": 3,
 					"dialogue": [
 						{
-							"speaker": "kasai",
+							"emotion": "base",
+							"speaker": "narrator",
+							"type": "speech",
+							"content": {
+								"korean": "사막 열기가 심해지며 탐험대의 목마름이 극에 달한다."
+							}
+						},
+						{
 							"spot": [
-								3,
-								2
+								2,
+								3
 							],
-							"action": "enter",
+							"type": "direction",
+							"speaker": "khan",
 							"duration_ms": 500,
-							"type": "direction"
+							"action": "enter"
+						},
+						{
+							"emotion": "base",
+							"speaker": "khan",
+							"type": "speech",
+							"content": {
+								"korean": "길잡이 말로는 한 모금이면 사막 끝까지 버틴다더군."
+							}
 						},
 						{
 							"content": {
-								"korean": "바닥에 이상한 조각이 떨어져 있어."
+								"korean": "더는 못 참겠다. 한 모금씩 나눠 마시자."
 							},
 							"emotion": "base",
 							"speaker": "character_any",
 							"type": "speech"
 						},
 						{
-							"content": {
-								"korean": "어디 보게... 단단하고 희끄무레한 백골빛 껍질 조각이군."
-							},
-							"speaker": "kasai",
-							"emotion": "base",
-							"type": "speech"
-						},
-						{
-							"content": {
-								"korean": "섬뜩하고 기분 나쁜 촉감이야."
-							},
 							"emotion": "sad",
 							"speaker": "character_2",
-							"type": "speech"
-						},
-						{
-							"emotion": "base",
-							"speaker": "character_any",
+							"type": "speech",
 							"content": {
-								"korean": "이 백골빛 껍질 조각, 무언가의 허물일지도 몰라."
-							},
-							"type": "speech"
+								"korean": "…입술이 바싹 갈라진다."
+							}
 						}
 					]
 				},
 				{
+					"id": 5,
 					"dialogue": [
 						{
-							"type": "direction",
+							"type": "speech",
+							"speaker": "narrator",
+							"emotion": "base",
+							"content": {
+								"korean": "탐험대가 노란 물을 나눠 마시자, 멀리서 고함 소리가 들려온다."
+							}
+						},
+						{
+							"speaker": "khan",
 							"action": "enter",
 							"duration_ms": 500,
-							"speaker": "kasai",
+							"type": "direction",
 							"spot": [
 								3,
 								2
 							]
 						},
 						{
-							"speaker": "character_any",
-							"emotion": "base",
-							"content": {
-								"korean": "안뜰로 깊이 들어올수록 핏자국이 희미하게 남아있어."
-							},
-							"type": "speech"
-						},
-						{
-							"speaker": "kasai",
-							"emotion": "base",
 							"type": "speech",
+							"speaker": "khan",
+							"emotion": "angry",
 							"content": {
-								"korean": "이 폐허 깊은 곳은 오아시스 파수꾼이 길을 통제하고 있다네."
+								"korean": "약초꾼 하나가 물 냄새를 맡고 이쪽으로 달려오고 있다. 눈빛이 심상치 않군."
 							}
 						},
 						{
-							"content": {
-								"korean": "모래 길잡이의 노란 물을 신성한 영약이라 믿는 광신도들이지."
-							},
-							"emotion": "sad",
-							"speaker": "kasai",
-							"type": "speech"
-						},
-						{
 							"type": "speech",
-							"speaker": "character_any",
-							"emotion": "angry",
-							"content": {
-								"korean": "거짓 선동에 속아 사람들을 해치고 있군."
-							}
-						}
-					],
-					"id": 5
-				},
-				{
-					"dialogue": [
-						{
-							"type": "direction",
-							"speaker": "kasai",
-							"spot": [
-								3,
-								2
-							],
-							"duration_ms": 500,
-							"action": "enter"
-						},
-						{
-							"emotion": "angry",
-							"speaker": "kasai",
-							"content": {
-								"korean": "앞에서 파수꾼의 사악한 기운이 풍겨 오네. 조심하게!"
-							},
-							"type": "speech"
-						},
-						{
-							"content": {
-								"korean": "…손끝이 떨려오는군."
-							},
-							"type": "speech",
-							"emotion": "sad",
-							"speaker": "character_3"
-						},
-						{
-							"type": "speech",
-							"content": {
-								"korean": "어떤 거짓말로 막아서든 아미르를 위해 뚫고 지나가겠어."
-							},
-							"speaker": "character_any",
-							"emotion": "angry"
-						}
-					],
-					"id": 9
-				},
-				{
-					"dialogue": [
-						{
-							"content": {
-								"korean": "정체 모를 수호자가 기괴한 무기를 쥔 채 길을 막아선다."
-							},
-							"speaker": "narrator",
+							"speaker": "khan",
 							"emotion": "base",
-							"type": "speech"
-						},
-						{
 							"content": {
-								"korean": "멈춰라! 길잡이께서 내리신 노란 물은 구원의 신성한 영약이다!"
-							},
-							"type": "speech",
-							"emotion": "angry",
-							"speaker": "random_boss"
-						},
-						{
-							"emotion": "angry",
-							"speaker": "character_any",
-							"type": "speech",
-							"content": {
-								"korean": "거짓말 마라! 그 독물 때문에 내 동료의 다리 뼈가 녹아가고 있다!"
+								"korean": "…난 물병만 전하기로 했다. 남의 싸움엔 끼지 않겠다."
 							}
 						},
 						{
-							"content": {
-								"korean": "신성한 기적을 모독하는 자들에게는 오직 죽음뿐이다!"
-							},
-							"type": "speech",
-							"speaker": "random_boss",
-							"emotion": "angry"
-						}
-					],
-					"win_dialogue": [
-						{
-							"speaker": "narrator",
-							"emotion": "base",
-							"type": "speech",
-							"content": {
-								"korean": "오아시스 파수꾼이 비명을 지르며 바닥에 쓰러졌다."
-							}
-						},
-						{
-							"duration_ms": 500,
-							"spot": [
-								3,
-								2
-							],
-							"speaker": "kasai",
-							"action": "enter",
+							"duration_ms": 400,
+							"speaker": "khan",
+							"direction": "down",
+							"action": "exit",
 							"type": "direction"
 						},
 						{
 							"type": "speech",
-							"content": {
-								"korean": "카사이, 아까 발견한 백골빛 껍질 조각을 자세히 봐줘."
-							},
-							"emotion": "base",
-							"speaker": "character_any"
-						},
-						{
-							"type": "speech",
-							"content": {
-								"korean": "이 껍질... 이건 사람의 뼈를 삼키는 괴물이 남긴 허물일세!"
-							},
-							"emotion": "angry",
-							"speaker": "kasai"
-						},
-						{
-							"type": "speech",
-							"content": {
-								"korean": "길잡이가 준 노란 물은 영약이 아니라 뼈를 녹이는 무서운 독이야!"
-							},
-							"speaker": "kasai",
-							"emotion": "sad"
-						},
-						{
-							"type": "speech",
-							"emotion": "angry",
 							"speaker": "character_any",
+							"emotion": "angry",
 							"content": {
-								"korean": "역시 신성한 영약 따위가 아니었어. 근원을 쫓아야 한다."
+								"korean": "물을 마시자마자 덤벼든다고? 우리 물병을 노리는 거야."
 							}
 						},
 						{
-							"emotion": "base",
-							"speaker": "narrator",
 							"content": {
-								"korean": "상인 카사이의 진실을 뒤로한 채, 독의 원천을 찾아 협곡으로 향한다."
-							},
-							"type": "speech"
-						}
-					],
-					"id": 15,
-					"lose_dialogue": [
-						{
-							"content": {
-								"korean": "영약의 위대함을 알지도 못하는 우매한 자들 같으니!"
+								"korean": "…가슴이 쿵쾅거려."
 							},
 							"type": "speech",
-							"speaker": "random_boss",
-							"emotion": "angry"
+							"speaker": "character_3",
+							"emotion": "sad"
+						}
+					]
+				},
+				{
+					"id": 9,
+					"dialogue": [
+						{
+							"emotion": "base",
+							"speaker": "narrator",
+							"type": "speech",
+							"content": {
+								"korean": "약초꾼의 고함이 점점 가까워진다. 모래 언덕 바로 너머다."
+							}
 						},
 						{
 							"type": "speech",
+							"emotion": "angry",
+							"speaker": "character_any",
 							"content": {
-								"korean": "아미르를 살리기 전엔 결코 무릎 꿇지 않아!"
+								"korean": "피할 길이 없어. 오면 맞서는 수밖에."
+							}
+						},
+						{
+							"content": {
+								"korean": "…열기가 숨을 턱 막히게 해."
+							},
+							"type": "speech",
+							"speaker": "character_4",
+							"emotion": "sad"
+						}
+					]
+				},
+				{
+					"win_dialogue": [
+						{
+							"type": "speech",
+							"content": {
+								"korean": "멍청한 자들… 그 물이 무엇을 부르는지도 모르고…"
+							},
+							"speaker": "random_boss",
+							"emotion": "sad"
+						},
+						{
+							"content": {
+								"korean": "약초꾼이 쓰러진 자리에 녹슨 청동 껍질 조각이 떨어져 있어. 대체 무슨 물건이지?"
 							},
 							"speaker": "character_any",
+							"emotion": "base",
+							"type": "speech"
+						},
+						{
+							"type": "speech",
+							"speaker": "narrator",
+							"emotion": "base",
+							"content": {
+								"korean": "조각에는 짐승 비늘 같은 마디 무늬가 새겨져 있었다."
+							}
+						}
+					],
+					"lose_dialogue": [
+						{
+							"content": {
+								"korean": "그 물을 더 마시면 끝장이다! 돌아가라!"
+							},
+							"emotion": "angry",
+							"speaker": "random_boss",
+							"type": "speech"
+						},
+						{
+							"speaker": "character_any",
+							"emotion": "angry",
+							"type": "speech",
+							"content": {
+								"korean": "…쓰러질 순 없다. 다시 맞서겠다."
+							}
+						}
+					],
+					"id": 15,
+					"dialogue": [
+						{
+							"type": "speech",
+							"speaker": "narrator",
+							"emotion": "base",
+							"content": {
+								"korean": "분노한 기색의 약초꾼이 거친 숨을 내쉬며 길을 막아선다."
+							}
+						},
+						{
+							"emotion": "angry",
+							"speaker": "random_boss",
+							"type": "speech",
+							"content": {
+								"korean": "그 호박색 물병의 노란 물을 당장 내놓아라! 마시면 죽는다!"
+							}
+						},
+						{
+							"content": {
+								"korean": "이미 마셨지만 멀쩡하다. 겁주지 말고 비켜라!"
+							},
+							"type": "speech",
+							"speaker": "character_any",
 							"emotion": "angry"
+						},
+						{
+							"content": {
+								"korean": "…상대가 너무 험악해."
+							},
+							"type": "speech",
+							"speaker": "character_1",
+							"emotion": "sad"
 						}
 					]
 				}
 			]
 		},
 		{
-			"scenario_id": "desert_carnivex_42_03",
-			"order": 3,
+			"scenario_id": "desert_carnivex_42_02",
+			"order": 2,
 			"random_boss_title": {
-				"korean": "바람 현자"
+				"korean": "모래 도굴꾼"
 			},
 			"act": "rising",
 			"theme": "desert",
@@ -757,540 +359,158 @@
 			},
 			"prologue": {
 				"korean": [
-					"사막의 독에 녹아내리는 동료를 구해야 한다.",
-					"치료법을 안다는 주술사를 찾아 바위 협곡 동굴로 들어선다.",
-					"깊은 어둠 속, 숨겨진 뼈 칼날과 기이한 울림이 탐험대를 기다린다."
+					"메마른 사막 아래, 하얗게 바랜 뼈들이 흩뿌려진 골짜기.",
+					"노란 물을 마셨는데도 목은 더 타들어 간다. 오아시스로 가는 길은 이 뼈 골짜기 너머다.",
+					"그러나 하얀 뼈 그늘 아래에는 시체를 노리는 불길한 존재가 숨어 있었다."
 				]
 			},
 			"rooms": [
 				{
 					"dialogue": [
 						{
-							"content": {
-								"korean": "바위 협곡의 동굴 입구. 세찬 바람이 거칠게 귓가를 때린다."
-							},
 							"emotion": "base",
-							"type": "speech",
-							"speaker": "narrator"
+							"speaker": "narrator",
+							"content": {
+								"korean": "하얀 유골이 사방에 스산하게 흩어진 골짜기 입구다."
+							},
+							"type": "speech"
 						},
 						{
-							"speaker": "character_any",
+							"duration_ms": 500,
+							"action": "enter",
+							"speaker": "dune",
+							"spot": [
+								3,
+								2
+							],
+							"type": "direction"
+						},
+						{
+							"emotion": "base",
 							"type": "speech",
 							"content": {
-								"korean": "주술사가 정말 이 동굴 안에 있을까?"
+								"korean": "나는 탐사꾼 듄이다. 물을 찾아 이 뼈 골짜기까지 들어왔나?"
 							},
+							"speaker": "dune"
+						},
+						{
+							"content": {
+								"korean": "조심하게. 이 골짜기엔 시체를 먹는 위험한 존재가 있다는 소문이 돌고 있네."
+							},
+							"speaker": "dune",
+							"type": "speech",
+							"emotion": "sad"
+						},
+						{
+							"content": {
+								"korean": "위험해도 오아시스로 가려면 이 골짜기를 지나야 해."
+							},
+							"speaker": "character_any",
+							"type": "speech",
 							"emotion": "base"
 						},
 						{
-							"content": {
-								"korean": "바람 소리가 꼭 괴물 소리 같아… 소름 돋네."
-							},
-							"emotion": "base",
 							"speaker": "character_1",
-							"type": "speech"
-						},
-						{
-							"speaker": "character_any",
 							"content": {
-								"korean": "독 치료법을 찾지 못하면 늦어. 나아가자."
+								"korean": "…발 밑에서 자꾸 뼈 부러지는 소리가 나."
 							},
-							"emotion": "base",
-							"type": "speech"
+							"type": "speech",
+							"emotion": "sad"
 						}
 					],
 					"id": 1
 				},
 				{
-					"id": 3,
 					"dialogue": [
 						{
-							"duration_ms": 500,
-							"type": "direction",
-							"spot": [
-								3,
-								4
-							],
-							"speaker": "dune",
-							"action": "enter"
-						},
-						{
 							"emotion": "base",
-							"content": {
-								"korean": "멈춰라. 이 동굴 깊은 곳에 외부인이 발을 들이다니."
-							},
-							"speaker": "dune",
-							"type": "speech"
-						},
-						{
-							"speaker": "character_any",
+							"speaker": "narrator",
 							"type": "speech",
-							"emotion": "base",
 							"content": {
-								"korean": "당신은 누구지?"
+								"korean": "움푹 파인 모래 구덩이에 해골들이 무더기로 묻혀 있다."
 							}
 						},
 						{
+							"speaker": "character_any",
+							"type": "speech",
+							"content": {
+								"korean": "모래 구덩이 속에 부러진 칼날이 박힌 해골이 묻혀 있군."
+							},
+							"emotion": "base"
+						},
+						{
 							"speaker": "dune",
-							"type": "speech",
-							"content": {
-								"korean": "나는 듄. 바위 협곡 동굴에서 살아온 거주자다."
-							},
-							"emotion": "base"
-						},
-						{
-							"speaker": "character_2",
-							"content": {
-								"korean": "바위 그늘에서 갑자기 나타났어… 놀라라."
-							},
-							"emotion": "base",
-							"type": "speech"
-						},
-						{
-							"emotion": "sad",
-							"content": {
-								"korean": "동굴 깊은 곳은 이미 기이한 비명으로 가득하다. 돌아가라."
-							},
-							"type": "speech",
-							"speaker": "dune"
-						},
-						{
-							"type": "speech",
-							"speaker": "character_any",
-							"content": {
-								"korean": "목숨이 걸린 동료가 있어. 그냥 돌아갈 순 없다."
-							},
-							"emotion": "angry"
-						}
-					]
-				},
-				{
-					"dialogue": [
-						{
-							"speaker": "narrator",
-							"content": {
-								"korean": "동굴 구석, 음산하게 빛나는 금속 조각이 바닥에 나뒹군다."
-							},
-							"emotion": "base",
-							"type": "speech"
-						},
-						{
-							"speaker": "character_any",
-							"type": "speech",
-							"content": {
-								"korean": "바위에 무언가 떨어져 있어."
-							},
-							"emotion": "base"
-						},
-						{
-							"spot": [
-								3,
-								4
-							],
 							"duration_ms": 500,
+							"spot": [
+								2,
+								3
+							],
 							"action": "enter",
-							"speaker": "dune",
 							"type": "direction"
 						},
 						{
 							"type": "speech",
-							"speaker": "dune",
 							"emotion": "base",
 							"content": {
-								"korean": "그건… 부러진 청동 칼날이다. 옛 전사들의 무기지."
-							}
-						},
-						{
-							"emotion": "base",
-							"content": {
-								"korean": "날카롭던 쇠가 험하게 깨져 있네."
+								"korean": "오래전 싸움의 흔적이군. 이런 해골이 골짜기 곳곳에 묻혀 있네."
 							},
-							"speaker": "character_3",
-							"type": "speech"
-						},
-						{
-							"content": {
-								"korean": "전사들도 괴물의 소문을 듣고 찾아왔으나 끝내 돌아가지 못했다."
-							},
-							"emotion": "sad",
-							"speaker": "dune",
-							"type": "speech"
-						},
-						{
-							"type": "speech",
-							"speaker": "character_any",
-							"emotion": "base",
-							"content": {
-								"korean": "처참하게 파괴된 흔적이야. 거대한 힘에 꺾였어."
-							}
-						}
-					],
-					"id": 5
-				},
-				{
-					"id": 9,
-					"dialogue": [
-						{
-							"duration_ms": 500,
-							"type": "direction",
-							"speaker": "dune",
-							"spot": [
-								3,
-								4
-							],
-							"action": "enter"
-						},
-						{
-							"type": "speech",
-							"content": {
-								"korean": "전사들의 뼈는 모두 골수가 뽑힌 채 시들어 있었다."
-							},
-							"emotion": "sad",
-							"speaker": "dune"
-						},
-						{
-							"emotion": "base",
-							"content": {
-								"korean": "골수라니… 청동 칼날의 주인들도 그렇게 희생된 건가?"
-							},
-							"speaker": "character_any",
-							"type": "speech"
-						},
-						{
-							"type": "speech",
-							"content": {
-								"korean": "모래 길잡이라는 자의 정체는 곤충 괴물이다. 유골의 골수를 먹고 자라지."
-							},
-							"emotion": "angry",
 							"speaker": "dune"
 						},
 						{
 							"type": "speech",
-							"speaker": "character_4",
-							"emotion": "sad",
-							"content": {
-								"korean": "뼈를 녹여 골수를 먹는 곤충 괴물이라니… 뼛속까지 오싹해진다."
-							}
-						},
-						{
-							"type": "speech",
-							"speaker": "character_any",
-							"content": {
-								"korean": "노란 물을 마신 동료의 다리가 왜 녹았는지 이제 확실해졌다."
-							},
-							"emotion": "angry"
-						}
-					]
-				},
-				{
-					"win_dialogue": [
-						{
-							"content": {
-								"korean": "{random_boss}의 기도가 멈춘다… 섣부른 발걸음이 비극을 부를 것을…"
-							},
-							"emotion": "sad",
-							"speaker": "random_boss",
-							"type": "speech"
-						},
-						{
-							"type": "speech",
-							"speaker": "character_any",
-							"content": {
-								"korean": "장벽을 넘어섰다. 이제 괴물의 정체를 추적해야 해."
-							},
-							"emotion": "base"
-						},
-						{
-							"action": "enter",
-							"spot": [
-								3,
-								4
-							],
-							"speaker": "dune",
-							"type": "direction",
-							"duration_ms": 500
-						},
-						{
-							"type": "speech",
-							"speaker": "dune",
-							"emotion": "base",
-							"content": {
-								"korean": "괴물에게 다가가려면 붉은 모래 구덩이로 이동해야 한다."
-							}
-						},
-						{
-							"type": "speech",
-							"emotion": "angry",
-							"content": {
-								"korean": "골수를 탐하는 곤충 괴물을 찾아 뼈를 녹이는 독을 끝내겠어!"
-							},
-							"speaker": "character_any"
-						},
-						{
-							"emotion": "base",
-							"content": {
-								"korean": "탐험대는 붉은 모래 구덩이를 향해 발걸음을 재촉한다."
-							},
-							"type": "speech",
-							"speaker": "narrator"
-						}
-					],
-					"dialogue": [
-						{
-							"type": "speech",
-							"emotion": "base",
-							"content": {
-								"korean": "동굴 안쪽, 세찬 바람과 함께 기이한 기도가 울려 퍼진다."
-							},
-							"speaker": "narrator"
-						},
-						{
-							"emotion": "angry",
-							"content": {
-								"korean": "더 이상 나아가지 마라! 이곳은 괴물의 침식으로 더럽혀진 영역이다!"
-							},
-							"speaker": "random_boss",
-							"type": "speech"
-						},
-						{
-							"speaker": "character_any",
-							"content": {
-								"korean": "우린 독의 치료법을 찾아야 한다! 길을 비켜라!"
-							},
-							"emotion": "angry",
-							"type": "speech"
-						},
-						{
-							"type": "speech",
-							"emotion": "angry",
-							"content": {
-								"korean": "어리석은 자들이여, 너희를 구원하기 위해 여기서 베어주마!"
-							},
-							"speaker": "random_boss"
-						},
-						{
-							"content": {
-								"korean": "동료를 구하기 전까진 멈추지 않아. 정면 돌파다!"
-							},
-							"emotion": "angry",
-							"speaker": "character_any",
-							"type": "speech"
-						}
-					],
-					"id": 15,
-					"lose_dialogue": [
-						{
-							"type": "speech",
-							"content": {
-								"korean": "경고를 무시한 대가다. 세찬 바람 속에서 조용히 잠들라."
-							},
-							"emotion": "base",
-							"speaker": "random_boss"
-						},
-						{
-							"emotion": "angry",
-							"content": {
-								"korean": "여기서 쓰러질 수는 없어… 다시 일어서야 해."
-							},
-							"type": "speech",
-							"speaker": "character_any"
-						}
-					]
-				}
-			]
-		},
-		{
-			"scenario_id": "desert_carnivex_42_04",
-			"order": 4,
-			"random_boss_title": {
-				"korean": "모래 약탈자"
-			},
-			"act": "rising",
-			"theme": "desert",
-			"actors": {
-				"kemet": {
-					"id": "mon_2f8a1701-571b-40b5-92d9-69aa973cef18",
-					"name": {
-						"korean": "케메트",
-						"english": "Kemet",
-						"japanese": "ケメト",
-						"chinese": "凯麦特",
-						"french": "Kemet",
-						"spanish": "Kemet",
-						"vietnamese": "Kemet",
-						"thai": "เคเมต",
-						"hindi": "केमेट"
-					},
-					"description": "",
-					"face_image_url": "https://imagedelivery.net/WTEqQNGFb-l-IHS6IGnzUQ/fd9e93e0-2874-4647-0076-839718949500/public",
-					"battle_sprite_url": "https://imagedelivery.net/WTEqQNGFb-l-IHS6IGnzUQ/8c3f2690-e8a9-44f5-4527-d8f8d4ea2800/public"
-				}
-			},
-			"boss": {
-				"pool_id": "random_boss"
-			},
-			"rooms": [
-				{
-					"id": 1,
-					"dialogue": [
-						{
-							"emotion": "base",
-							"type": "speech",
-							"content": {
-								"korean": "붉은 모래바람이 눈앞을 가릴 만큼 거칠게 분다."
-							},
-							"speaker": "narrator"
-						},
-						{
-							"emotion": "sad",
-							"content": {
-								"korean": "…뼛속까지 모래가 씹히는 기분이야."
-							},
-							"speaker": "character_1",
-							"type": "speech"
-						},
-						{
-							"speaker": "kemet",
-							"action": "enter",
-							"type": "direction",
-							"spot": [
-								3,
-								3
-							],
-							"duration_ms": 500
-						},
-						{
-							"type": "speech",
-							"emotion": "base",
-							"content": {
-								"korean": "멈춰라. 나는 이 모래 구덩이의 파수꾼 케메트다. 해독 샘물을 찾아왔나?"
-							},
-							"speaker": "kemet"
-						},
-						{
-							"speaker": "character_any",
-							"content": {
-								"korean": "동료를 살리려면 구덩이 아래로 내려가야 한다."
-							},
-							"type": "speech",
-							"emotion": "base"
-						},
-						{
-							"emotion": "angry",
-							"type": "speech",
-							"speaker": "kemet",
-							"content": {
-								"korean": "길목을 모래 약탈자들이 막고 있으니 무기를 잡고 따라오라."
-							}
-						}
-					]
-				},
-				{
-					"id": 3,
-					"dialogue": [
-						{
-							"speaker": "narrator",
-							"content": {
-								"korean": "붉은 절벽 아래에서 기괴한 노랫소리가 울려 퍼진다."
-							},
-							"type": "speech",
-							"emotion": "base"
-						},
-						{
-							"content": {
-								"korean": "으... 듣기만 해도 소름이 돋아."
-							},
 							"speaker": "character_2",
-							"type": "speech",
+							"content": {
+								"korean": "…바람 소리가 짐승의 울음 같아."
+							},
 							"emotion": "sad"
-						},
-						{
-							"duration_ms": 500,
-							"speaker": "kemet",
-							"action": "enter",
-							"type": "direction",
-							"spot": [
-								3,
-								3
-							]
-						},
-						{
-							"type": "speech",
-							"speaker": "kemet",
-							"content": {
-								"korean": "약탈자들이 길잡이를 숭배하며 거짓 기쁨을 노래하는 소리다."
-							},
-							"emotion": "base"
-						},
-						{
-							"type": "speech",
-							"content": {
-								"korean": "약탈자를 제압해야 밑바닥으로 통하는 길을 뚫을 수 있다."
-							},
-							"speaker": "character_any",
-							"emotion": "angry"
-						},
-						{
-							"emotion": "angry",
-							"speaker": "kemet",
-							"content": {
-								"korean": "광신에 사로잡힌 놈들이니 망설이지 말고 공격하라."
-							},
-							"type": "speech"
 						}
-					]
+					],
+					"id": 3
 				},
 				{
 					"id": 5,
 					"dialogue": [
 						{
-							"content": {
-								"korean": "구덩이 안쪽으로 들어서자 역한 골수 냄새가 피어오른다."
-							},
-							"speaker": "narrator",
 							"type": "speech",
-							"emotion": "base"
-						},
-						{
-							"emotion": "sad",
-							"type": "speech",
+							"emotion": "base",
 							"content": {
-								"korean": "이 비린내, 숨이 턱 막힐 지경이야."
+								"korean": "바람이 강하게 불어오며 뼈가루가 모래와 함께 흩날린다."
 							},
-							"speaker": "character_3"
+							"speaker": "narrator"
 						},
 						{
 							"spot": [
 								3,
-								3
+								2
 							],
 							"action": "enter",
+							"type": "direction",
 							"duration_ms": 500,
-							"speaker": "kemet",
-							"type": "direction"
+							"speaker": "dune"
 						},
 						{
 							"type": "speech",
+							"emotion": "sad",
 							"content": {
-								"korean": "약탈자 무리의 두목이 바로 앞 광장에 진을 치고 있다."
+								"korean": "누군가 모래 위에 길 표시를 해 뒀네. 우리를 외딴 길로 끌어들이려는 것 같군."
 							},
-							"speaker": "kemet",
-							"emotion": "base"
+							"speaker": "dune"
 						},
 						{
 							"speaker": "character_any",
 							"content": {
-								"korean": "망설일 시간 없다. 정면으로 뚫고 나간다."
+								"korean": "다른 길은 모래에 묻혔어. 조심하며 따라가는 수밖에."
 							},
 							"type": "speech",
 							"emotion": "angry"
 						},
 						{
-							"type": "speech",
-							"speaker": "kemet",
+							"emotion": "sad",
 							"content": {
-								"korean": "좋다, 구덩이 깊은 곳까지 네 길을 열어주마."
+								"korean": "…기온이 계속 떨어지는 느낌이야."
 							},
-							"emotion": "base"
+							"speaker": "character_3",
+							"type": "speech"
 						}
 					]
 				},
@@ -1298,52 +518,26 @@
 					"dialogue": [
 						{
 							"emotion": "base",
+							"type": "speech",
 							"content": {
-								"korean": "바닥 암반 곳곳에 무언가 깊게 파고든 패인 흔적이 선명하다."
+								"korean": "하얀 뼈로 가득한 좁은 외딴 길 끝에서 모래를 밟는 발소리가 다가온다."
 							},
-							"speaker": "narrator",
-							"type": "speech"
+							"speaker": "narrator"
+						},
+						{
+							"emotion": "angry",
+							"content": {
+								"korean": "더 이상 물러설 곳이 없다. 정면으로 뚫고 나간다."
+							},
+							"type": "speech",
+							"speaker": "character_any"
 						},
 						{
 							"speaker": "character_4",
 							"content": {
-								"korean": "…돌바닥이 찢겨 나간 것 같아."
+								"korean": "…뼈 사이로 바람이 휘파람처럼 울려."
 							},
-							"type": "speech",
-							"emotion": "angry"
-						},
-						{
-							"action": "enter",
-							"spot": [
-								3,
-								3
-							],
-							"speaker": "kemet",
-							"type": "direction",
-							"duration_ms": 500
-						},
-						{
-							"content": {
-								"korean": "단단한 바위에 뼈마디가 긁힌 자국이 수없이 남아 있군."
-							},
-							"speaker": "kemet",
-							"type": "speech",
-							"emotion": "base"
-						},
-						{
-							"content": {
-								"korean": "약탈자들의 무기로는 이런 자국을 낼 수 없다."
-							},
-							"speaker": "character_any",
-							"emotion": "base",
-							"type": "speech"
-						},
-						{
-							"emotion": "angry",
-							"speaker": "kemet",
-							"content": {
-								"korean": "맞다. 길잡이라 불리는 곤충 괴물이 지나간 섬뜩한 발자국이다."
-							},
+							"emotion": "sad",
 							"type": "speech"
 						}
 					],
@@ -1352,147 +546,127 @@
 				{
 					"lose_dialogue": [
 						{
-							"emotion": "base",
+							"emotion": "angry",
 							"type": "speech",
-							"speaker": "narrator",
+							"speaker": "random_boss",
 							"content": {
-								"korean": "모래 약탈자의 거친 무기가 탐험대를 덮친다."
+								"korean": "성자 님의 뜻을 방해하는 자들에게 안식은 없다!"
 							}
 						},
 						{
+							"emotion": "angry",
 							"type": "speech",
 							"content": {
-								"korean": "길잡이님의 가호 아래 너희는 여기서 매장될 것이다!"
+								"korean": "…여기서 멈출 수는 없다. 다시 전열을 가다듬자."
 							},
-							"speaker": "random_boss",
-							"emotion": "happy"
-						},
-						{
-							"emotion": "angry",
-							"content": {
-								"korean": "…친구를 두고 여기서 쓰러질 순 없다! 다시 무기를 잡아라!"
-							},
-							"speaker": "character_any",
-							"type": "speech"
+							"speaker": "character_any"
 						}
 					],
+					"id": 15,
 					"win_dialogue": [
 						{
 							"emotion": "sad",
-							"type": "speech",
 							"speaker": "random_boss",
+							"type": "speech",
 							"content": {
-								"korean": "으아악! 길잡이님이... 우리를 구원해주실... 쿨럭!"
+								"korean": "길잡이 님의 은혜를… 알지도 못하면서…"
 							}
 						},
 						{
 							"content": {
-								"korean": "쓰러진 약탈자 밑으로 바닥의 긁힌 흔적이 드러난다."
+								"korean": "이 골짜기 뼈들, 그냥 싸움의 흔적이 아닌 것 같아."
 							},
-							"speaker": "narrator",
-							"type": "speech",
-							"emotion": "base"
+							"speaker": "character_any",
+							"emotion": "base",
+							"type": "speech"
 						},
 						{
 							"spot": [
-								3,
+								2,
 								3
 							],
-							"duration_ms": 500,
 							"type": "direction",
-							"speaker": "kemet",
-							"action": "enter"
+							"duration_ms": 500,
+							"action": "enter",
+							"speaker": "dune"
 						},
 						{
-							"speaker": "kemet",
+							"emotion": "base",
+							"speaker": "dune",
 							"content": {
-								"korean": "바닥에 뼈마디가 긁힌 자국을 잘 봐라. 괴물이 남긴 발자국이다."
+								"korean": "이 뼈들은 오래 전 전장에서 쓰러진 검객들의 유골이네."
 							},
+							"type": "speech"
+						},
+						{
+							"speaker": "dune",
 							"type": "speech",
-							"emotion": "base"
+							"content": {
+								"korean": "그리고… 그 친절한 길잡이가 처음 나타난 곳도 바로 그 전장이었지."
+							},
+							"emotion": "sad"
 						},
 						{
-							"content": {
-								"korean": "괴물이 왜 이런 자국을 남기며 지나간 건가?"
-							},
+							"emotion": "base",
 							"speaker": "character_any",
 							"type": "speech",
-							"emotion": "base"
-						},
-						{
-							"emotion": "sad",
-							"type": "speech",
 							"content": {
-								"korean": "놈은 뼈에서 골수를 뽑아내 자기 갑옷을 단단하게 다듬는다."
-							},
-							"speaker": "kemet"
-						},
-						{
-							"type": "speech",
-							"emotion": "angry",
-							"speaker": "character_any",
-							"content": {
-								"korean": "사람의 뼈를 녹여 골수를 훔치는 잔혹한 괴물이었군."
+								"korean": "검객들이 죽은 자리에서 나타난 길잡이라… 그냥 넘길 일이 아니야."
 							}
 						},
 						{
-							"type": "speech",
-							"emotion": "base",
+							"speaker": "narrator",
 							"content": {
-								"korean": "괴물의 진실에 다가서며, 탐험대는 더 깊은 지하 뼈 동굴로 향한다."
+								"korean": "탐험대는 의심을 품은 채 골짜기 너머 바위 오아시스로 향한다."
 							},
-							"speaker": "narrator"
+							"emotion": "base",
+							"type": "speech"
 						}
 					],
 					"dialogue": [
 						{
-							"type": "speech",
-							"speaker": "narrator",
 							"content": {
-								"korean": "붉은 모래 구덩이 한가운데, 가면을 쓴 모래 약탈자가 무기를 쳐든다."
+								"korean": "외딴 길 끝, 무기를 든 자가 길을 막아선다."
 							},
+							"speaker": "narrator",
+							"type": "speech",
 							"emotion": "base"
 						},
 						{
-							"emotion": "angry",
-							"type": "speech",
-							"content": {
-								"korean": "길을 비켜라. 우리는 해독 샘물로 향해야 한다."
-							},
-							"speaker": "character_any"
-						},
-						{
-							"emotion": "happy",
-							"type": "speech",
 							"speaker": "random_boss",
 							"content": {
-								"korean": "기뻐하라! 위대한 길잡이께서 너희의 뼈를 기다리신다!"
+								"korean": "뼈 따위 들추지 말고 길잡이 님을 따라가라! 그분은 사막 사람들을 오아시스로 이끄는 성자이시다!"
+							},
+							"emotion": "angry",
+							"type": "speech"
+						},
+						{
+							"emotion": "angry",
+							"type": "speech",
+							"speaker": "character_any",
+							"content": {
+								"korean": "우릴 외딴 길로 몰아온 게 너였군. 가는 길은 우리가 정한다!"
 							}
 						},
 						{
-							"emotion": "angry",
 							"type": "speech",
+							"emotion": "sad",
 							"content": {
-								"korean": "거짓된 숭배에 목숨을 버릴 셈인가. 전투를 시작한다!"
+								"korean": "…죽기 살기로 덤벼들고 있어!"
 							},
-							"speaker": "character_any"
+							"speaker": "character_1"
 						}
-					],
-					"id": 15
+					]
 				}
-			],
-			"prologue": {
-				"korean": [
-					"아미르의 다리뼈가 녹아내리는 동안, 탐험대는 해독 샘물을 찾아 붉은 모래 구덩이로 향한다.",
-					"붉은 모래는 핏빛처럼 불길하게 흩날리고, 구덩이 밑바닥에는 섬뜩한 기운이 드리워져 있다.",
-					"친구의 목숨을 건지기 위해 탐험대는 거친 모래바람을 뚫고 발을 내딛는다."
-				]
-			}
+			]
 		},
 		{
-			"scenario_id": "desert_carnivex_42_05",
-			"order": 5,
-			"act": "climax_finale",
+			"scenario_id": "desert_carnivex_42_03",
+			"order": 3,
+			"random_boss_title": {
+				"korean": "무기상인"
+			},
+			"act": "rising",
 			"theme": "desert",
 			"actors": {
 				"amir": {
@@ -1514,57 +688,313 @@
 				}
 			},
 			"boss": {
-				"pool_id": "pool_BoneScab_Carnivex_V1"
-			},
-			"prologue": {
-				"korean": [
-					"뼈로 가득 찬 사막 아래의 지하 동굴.",
-					"몸을 가까스로 추스른 아미르와 함께 마침내 깊은 곳으로 발을 내딛는다.",
-					"친절한 얼굴 뒤에 숨겨진 길잡이의 진짜 정체와 마주할 시간이다."
-				]
+				"pool_id": "random_boss"
 			},
 			"rooms": [
 				{
+					"id": 1,
 					"dialogue": [
 						{
+							"content": {
+								"korean": "메마른 바위 사이로 오아시스의 흔적이 보인다."
+							},
+							"emotion": "base",
+							"speaker": "narrator",
+							"type": "speech"
+						},
+						{
+							"speaker": "character_any",
+							"emotion": "base",
+							"type": "speech",
+							"content": {
+								"korean": "드디어 오아시스다. 여기서 물을 길으면 다들 살 수 있어."
+							}
+						},
+						{
+							"emotion": "sad",
+							"speaker": "character_1",
+							"content": {
+								"korean": "…바람 소리가 꼭 비명처럼 들려."
+							},
+							"type": "speech"
+						}
+					]
+				},
+				{
+					"id": 3,
+					"dialogue": [
+						{
+							"duration_ms": 500,
 							"spot": [
 								3,
 								2
 							],
-							"duration_ms": 500,
-							"speaker": "amir",
 							"action": "enter",
+							"speaker": "amir",
 							"type": "direction"
 						},
 						{
+							"content": {
+								"korean": "난 이 사막을 조사하던 사냥꾼 아미르다. 더 가면 죽는다!"
+							},
+							"type": "speech",
+							"speaker": "amir",
+							"emotion": "angry"
+						},
+						{
+							"content": {
+								"korean": "친절한 길잡이가 준 물을 마신 자들은 온몸이 말라붙어 뼈만 남은 채 죽었다."
+							},
+							"type": "speech",
+							"emotion": "sad",
+							"speaker": "amir"
+						},
+						{
+							"content": {
+								"korean": "그 물은 골수를 먹는 괴물이 검객들의 골수를 녹여 만든 거다. 마신 자의 골수까지 그 괴물에게 빨려 간다!"
+							},
+							"type": "speech",
+							"emotion": "angry",
+							"speaker": "amir"
+						},
+						{
+							"content": {
+								"korean": "우리도 그 물을 마셨어… 손끝이 저린 게 그 탓이었나."
+							},
+							"type": "speech",
+							"speaker": "character_any",
+							"emotion": "base"
+						},
+						{
+							"type": "speech",
 							"speaker": "amir",
 							"emotion": "sad",
 							"content": {
-								"korean": "몸은 겨우 추슬렀지만... 이 동굴의 기운은 소름 끼치도록 차가워."
+								"korean": "몸이 더 마르기 전에 놈을 찾아라. 놈 앞에서 물병을 쏟으면 그 먹이 줄이 끊긴다."
+							}
+						}
+					]
+				},
+				{
+					"id": 5,
+					"dialogue": [
+						{
+							"content": {
+								"korean": "메마른 바위 표면에 끈적한 호박색 진액 자국이 줄지어 있다."
+							},
+							"type": "speech",
+							"speaker": "narrator",
+							"emotion": "base"
+						},
+						{
+							"content": {
+								"korean": "바위에 묻은 이 호박색 진액, 색도 냄새도 물병의 물이랑 똑같아."
+							},
+							"type": "speech",
+							"speaker": "character_any",
+							"emotion": "base"
+						},
+						{
+							"content": {
+								"korean": "…손끝에 소름이 돋는다."
+							},
+							"type": "speech",
+							"emotion": "sad",
+							"speaker": "character_2"
+						}
+					]
+				},
+				{
+					"dialogue": [
+						{
+							"speaker": "narrator",
+							"emotion": "base",
+							"type": "speech",
+							"content": {
+								"korean": "오아시스로 들어가는 바위 틈이 점점 좁아진다."
+							}
+						},
+						{
+							"emotion": "base",
+							"speaker": "character_any",
+							"type": "speech",
+							"content": {
+								"korean": "진액 자국이 바위 틈 안쪽 깊은 곳으로 이어지고 있어."
+							}
+						},
+						{
+							"speaker": "character_3",
+							"emotion": "sad",
+							"type": "speech",
+							"content": {
+								"korean": "…불길한 기운이 몸을 감싸고 있어."
+							}
+						}
+					],
+					"id": 9
+				},
+				{
+					"dialogue": [
+						{
+							"content": {
+								"korean": "바위 틈을 막아선 무기상인이 칼을 꺼내 든다."
+							},
+							"type": "speech",
+							"speaker": "narrator",
+							"emotion": "base"
+						},
+						{
+							"emotion": "angry",
+							"speaker": "random_boss",
+							"type": "speech",
+							"content": {
+								"korean": "이 오아시스는 내 차지다! 물을 노리는 놈들은 살려둘 수 없다!"
+							}
+						},
+						{
+							"type": "speech",
+							"speaker": "character_any",
+							"emotion": "angry",
+							"content": {
+								"korean": "물을 혼자 차지하겠다고? 비켜라, 우리도 살아야 한다!"
+							}
+						},
+						{
+							"speaker": "character_4",
+							"emotion": "base",
+							"type": "speech",
+							"content": {
+								"korean": "…긴장을 늦출 수 없어."
+							}
+						}
+					],
+					"lose_dialogue": [
+						{
+							"type": "speech",
+							"speaker": "random_boss",
+							"emotion": "angry",
+							"content": {
+								"korean": "크하하! 메마른 바위 아래에 뼈나 묻어라!"
+							}
+						},
+						{
+							"type": "speech",
+							"content": {
+								"korean": "…여기서 물러설 수 없다. 다시 도전하자."
+							},
+							"speaker": "character_any",
+							"emotion": "angry"
+						}
+					],
+					"win_dialogue": [
+						{
+							"emotion": "sad",
+							"speaker": "random_boss",
+							"content": {
+								"korean": "윽… 오아시스에 들어가 봤자… 뼈만 남게 될 거다…"
 							},
 							"type": "speech"
 						},
 						{
 							"type": "speech",
 							"content": {
-								"korean": "바닥에 깔린 게 전부 사람의 뼈다."
+								"korean": "오아시스 물에도 같은 진액이 섞였어. 이 물로는 아무도 못 살려. 진액 자국을 따라가자."
 							},
-							"emotion": "base",
-							"speaker": "narrator"
+							"speaker": "character_any",
+							"emotion": "base"
 						},
 						{
-							"type": "speech",
-							"speaker": "character_any",
-							"emotion": "base",
 							"content": {
-								"korean": "친절했던 길잡이가 우리를 인도한 목적지가 바로 여기야."
+								"korean": "탐험대는 쓰러진 무기상인을 뒤로하고 진액 자국을 따라 사막 깊은 곳으로 향했다."
+							},
+							"type": "speech",
+							"speaker": "narrator",
+							"emotion": "base"
+						}
+					],
+					"id": 15
+				}
+			],
+			"prologue": {
+				"korean": [
+					"뼈 골짜기를 지나자 메마른 바위 오아시스가 나타난다.",
+					"오아시스로 가는 길목마다 말라붙은 시체가 누워 있다.",
+					"메마른 바위 사이로 비극의 흔적들이 모습을 드러낸다."
+				]
+			}
+		},
+		{
+			"scenario_id": "desert_carnivex_42_04",
+			"order": 4,
+			"random_boss_title": {
+				"korean": "현상수배범"
+			},
+			"act": "rising",
+			"theme": "desert",
+			"actors": {
+				"jasper": {
+					"id": "mon_f3aa9577-2fd6-4d65-80cd-6b654778b7f4",
+					"name": {
+						"korean": "재스퍼",
+						"english": "Jasper",
+						"japanese": "ジャスパー",
+						"chinese": "贾斯珀",
+						"french": "Jasper",
+						"spanish": "Jasper",
+						"vietnamese": "Jasper",
+						"thai": "แจสเปอร์",
+						"hindi": "जैस्पर"
+					},
+					"description": "",
+					"face_image_url": "https://imagedelivery.net/WTEqQNGFb-l-IHS6IGnzUQ/a1ee5a95-a611-4b33-7264-582262b68800/public",
+					"battle_sprite_url": "https://imagedelivery.net/WTEqQNGFb-l-IHS6IGnzUQ/bc87b1ce-d1eb-40ea-ccc4-3c4434d35800/public"
+				}
+			},
+			"boss": {
+				"pool_id": "random_boss"
+			},
+			"rooms": [
+				{
+					"dialogue": [
+						{
+							"emotion": "base",
+							"speaker": "narrator",
+							"content": {
+								"korean": "모래 아래에 묻혀 있던 지하 신전의 입구가 모습을 드러냈다."
+							},
+							"type": "speech"
+						},
+						{
+							"speaker": "jasper",
+							"type": "direction",
+							"duration_ms": 500,
+							"spot": [
+								2,
+								3
+							],
+							"action": "enter"
+						},
+						{
+							"speaker": "jasper",
+							"emotion": "base",
+							"type": "speech",
+							"content": {
+								"korean": "저는 학자 재스퍼입니다. 이 신전의 벽화를 읽으러 왔지요. 몸이 마른다고요? 비슷한 기록이 벽화에 있을지 모릅니다."
 							}
 						},
 						{
-							"speaker": "character_1",
-							"emotion": "sad",
 							"content": {
-								"korean": "뼛속까지 스며드는 퀴퀴한 냄새가 맴돈다."
+								"korean": "신전 안을 수색해 동료들을 살릴 단서를 찾아내야 한다."
+							},
+							"emotion": "base",
+							"speaker": "character_any",
+							"type": "speech"
+						},
+						{
+							"emotion": "sad",
+							"speaker": "character_1",
+							"content": {
+								"korean": "…공기가 먼지와 오랫동안 닫혀 있던 냄새로 가득하네."
 							},
 							"type": "speech"
 						}
@@ -1574,46 +1004,54 @@
 				{
 					"dialogue": [
 						{
-							"duration_ms": 500,
+							"type": "speech",
+							"content": {
+								"korean": "오래된 거대한 벽화가 신전 벽면을 빼곡하게 채우고 있다."
+							},
+							"speaker": "narrator",
+							"emotion": "base"
+						},
+						{
+							"speaker": "jasper",
+							"type": "direction",
 							"spot": [
 								3,
 								2
 							],
-							"speaker": "amir",
-							"type": "direction",
-							"action": "enter"
+							"action": "enter",
+							"duration_ms": 500
+						},
+						{
+							"content": {
+								"korean": "이 벽화를 보세요. 곤충 괴물이 사람의 골수를 먹고 껍질을 단단하게 키워왔다고 적혀 있습니다."
+							},
+							"speaker": "jasper",
+							"emotion": "angry",
+							"type": "speech"
 						},
 						{
 							"type": "speech",
 							"content": {
-								"korean": "뼈 마디마다 노란 호박색 진액이 들러붙어 있어."
+								"korean": "약초꾼이 쓰러진 자리에서 주운 이 청동 조각… 벽화 속 괴물 껍질과 무늬가 똑같아."
 							},
-							"emotion": "sad",
-							"speaker": "amir"
-						},
-						{
-							"type": "speech",
 							"speaker": "character_any",
-							"content": {
-								"korean": "카사이가 말했던 그 독물이야. 뼈를 녹여 사람을 쓰러뜨리는 진액."
-							},
 							"emotion": "base"
 						},
 						{
 							"type": "speech",
-							"speaker": "character_any",
-							"emotion": "angry",
+							"speaker": "jasper",
+							"emotion": "sad",
 							"content": {
-								"korean": "길잡이는 처음부터 우리 뼈를 노리고 영약이라 속여 마시게 한 거였어."
+								"korean": "그렇다면 그 괴물은 지금도 이 사막 어딘가에 살아 있다는 뜻입니다."
 							}
 						},
 						{
-							"type": "speech",
 							"content": {
-								"korean": "벽면 전체에 축축한 독기가 번져 있어."
+								"korean": "…등골이 오싹해지네."
 							},
-							"emotion": "base",
-							"speaker": "character_2"
+							"speaker": "character_2",
+							"emotion": "sad",
+							"type": "speech"
 						}
 					],
 					"id": 3
@@ -1622,236 +1060,550 @@
 					"id": 5,
 					"dialogue": [
 						{
+							"speaker": "jasper",
+							"type": "direction",
+							"action": "enter",
+							"duration_ms": 500,
+							"spot": [
+								2,
+								2
+							]
+						},
+						{
+							"emotion": "base",
+							"speaker": "jasper",
+							"type": "speech",
+							"content": {
+								"korean": "벽화의 기록대로라면, 중앙 안치소에 괴물의 전말이 더 자세히 남아 있을 겁니다."
+							}
+						},
+						{
+							"emotion": "base",
+							"speaker": "character_any",
+							"type": "speech",
+							"content": {
+								"korean": "안치소로 가자. 몸이 더 마르기 전에 답을 찾아야 해."
+							}
+						},
+						{
+							"content": {
+								"korean": "…어둠 속에서 무언가 지켜보는 기분이 들어."
+							},
+							"type": "speech",
+							"speaker": "character_3",
+							"emotion": "sad"
+						}
+					]
+				},
+				{
+					"id": 9,
+					"dialogue": [
+						{
+							"content": {
+								"korean": "신전 중앙으로 향하는 모래 바닥에 길고 흉측하게 그어진 자국이 남아 있다."
+							},
+							"type": "speech",
+							"emotion": "base",
+							"speaker": "narrator"
+						},
+						{
+							"speaker": "character_any",
+							"emotion": "angry",
+							"type": "speech",
+							"content": {
+								"korean": "이 자국, 사람 발자국이 아니야. 무언가 거대한 게 기어간 흔적이야."
+							}
+						},
+						{
+							"type": "direction",
+							"duration_ms": 500,
+							"speaker": "jasper",
 							"spot": [
 								3,
-								2
+								3
 							],
-							"duration_ms": 500,
-							"action": "enter",
-							"speaker": "amir",
-							"type": "direction"
+							"action": "enter"
 						},
 						{
-							"speaker": "amir",
-							"emotion": "sad",
-							"content": {
-								"korean": "동굴 구석에 백골빛 껍질 조각들이 널려 있어."
-							},
-							"type": "speech"
-						},
-						{
-							"speaker": "character_any",
-							"emotion": "base",
-							"content": {
-								"korean": "듄의 말대로 이건 사람의 껍질이 아니야. 곤충의 단단한 갑각이다."
-							},
-							"type": "speech"
-						},
-						{
-							"content": {
-								"korean": "놈은 사막 아래 숨어 전사들의 뼈를 파먹으며 거대해진 벌레 괴물이야."
-							},
+							"speaker": "jasper",
 							"emotion": "angry",
-							"speaker": "character_any",
+							"content": {
+								"korean": "이 자국은 거대한 마디 갑옷을 가진 존재가 지나간 흔적입니다!"
+							},
 							"type": "speech"
 						},
 						{
-							"speaker": "character_3",
+							"speaker": "character_4",
 							"emotion": "sad",
+							"type": "speech",
 							"content": {
-								"korean": "어둠 속에서 무언가 기어 다니는 서걱거림이 들린다."
-							},
-							"type": "speech"
+								"korean": "…발밑이 불안하게 흔들리는 것 같아."
+							}
 						}
 					]
 				},
 				{
 					"dialogue": [
 						{
-							"duration_ms": 500,
+							"speaker": "narrator",
+							"emotion": "base",
+							"type": "speech",
+							"content": {
+								"korean": "안치소 입구에서 무장을 한 정체 불명의 자가 칼을 뽑아 들며 길을 막아선다."
+							}
+						},
+						{
+							"emotion": "angry",
+							"speaker": "random_boss",
+							"type": "speech",
+							"content": {
+								"korean": "더 이상 벽화를 읽게 놔둘 수 없다! 길잡이 님께 받은 금화만큼은 일을 해야지!"
+							}
+						},
+						{
+							"type": "speech",
+							"speaker": "character_any",
+							"emotion": "angry",
+							"content": {
+								"korean": "길잡이가 돈으로 입을 막으려는 거군. 베어 넘기고 나아간다!"
+							}
+						},
+						{
+							"type": "speech",
+							"content": {
+								"korean": "…살기가 뼛속까지 와닿네."
+							},
+							"emotion": "angry",
+							"speaker": "character_1"
+						}
+					],
+					"win_dialogue": [
+						{
+							"content": {
+								"korean": "크윽… 이미 늦었다… 그 물을 마신 이상 네놈들 뼈는 길잡이 님 몫이다…"
+							},
+							"type": "speech",
+							"speaker": "random_boss",
+							"emotion": "sad"
+						},
+						{
+							"type": "speech",
+							"speaker": "character_any",
+							"emotion": "angry",
+							"content": {
+								"korean": "돈 몇 푼에 사람들이 말라 죽는 걸 모른 척했나."
+							}
+						},
+						{
 							"type": "direction",
+							"speaker": "jasper",
+							"duration_ms": 500,
 							"action": "enter",
 							"spot": [
 								3,
 								2
+							]
+						},
+						{
+							"emotion": "angry",
+							"speaker": "jasper",
+							"content": {
+								"korean": "벽화의 괴물과 바닥 자국이 일치합니다. 길잡이가 정말 사람이라면… 왜 늘 괴물 흔적 곁에 있었을까요?"
+							},
+							"type": "speech"
+						},
+						{
+							"content": {
+								"korean": "벽화 끝에는 모래 둥지로 이어지는 길이 그려져 있었다."
+							},
+							"type": "speech",
+							"speaker": "narrator",
+							"emotion": "base"
+						}
+					],
+					"id": 15,
+					"lose_dialogue": [
+						{
+							"content": {
+								"korean": "헛수고다! 오아시스의 진실은 절대 밝혀지지 않는다!"
+							},
+							"type": "speech",
+							"speaker": "random_boss",
+							"emotion": "angry"
+						},
+						{
+							"content": {
+								"korean": "…아직 쓰러질 수는 없다. 다시 전열을 가다듬자!"
+							},
+							"type": "speech",
+							"emotion": "angry",
+							"speaker": "character_any"
+						}
+					]
+				}
+			],
+			"prologue": {
+				"korean": [
+					"진액 자국이 끝난 곳, 모래 속에 묻힌 지하 신전이 입을 벌리고 있다.",
+					"물을 마신 동료들의 몸이 점점 말라 간다. 살릴 방법이 신전의 옛 기록에 있을지 모른다.",
+					"어둠을 뚫고 들어선 곳에서, 탐험대는 거대한 벽화와 마주한다."
+				]
+			}
+		},
+		{
+			"scenario_id": "desert_carnivex_42_05",
+			"order": 5,
+			"act": "climax_finale",
+			"theme": "desert",
+			"actors": {
+				"khan": {
+					"id": "mon_77d18883-7711-4fc4-b04e-7b29652e0ab2",
+					"name": {
+						"korean": "칸",
+						"english": "Khan",
+						"japanese": "カーン",
+						"chinese": "可汗",
+						"french": "Khan",
+						"spanish": "Khan",
+						"vietnamese": "Khan",
+						"thai": "ข่าน",
+						"hindi": "खान"
+					},
+					"description": "",
+					"face_image_url": "https://imagedelivery.net/WTEqQNGFb-l-IHS6IGnzUQ/d2797cf2-a388-4974-97e4-54e6af8a0000/public",
+					"battle_sprite_url": "https://imagedelivery.net/WTEqQNGFb-l-IHS6IGnzUQ/9c40ef7d-3388-44dd-29b3-9ba716fe8b00/public"
+				}
+			},
+			"boss": {
+				"pool_id": "pool_BoneScab_Carnivex_V1"
+			},
+			"prologue": {
+				"korean": [
+					"뼈와 모래로 뒤덮인 둥지 깊은 곳.",
+					"진액 자국도, 마디 자국도 모두 이 구덩이 속으로 이어진다.",
+					"동료들을 구하고 사막의 비극을 끝내기 위한 마지막 결전을 시작한다."
+				]
+			},
+			"epilogue": {
+				"korean": [
+					"카르니벡스가 사라진 모래 둥지에는 메마른 정적만이 남았다.",
+					"모래 속으로 스며든 호박색 진액과 함께 괴물의 굶주림도 멈추었다.",
+					"괴물이 사라지자, 말라 가던 탐험대의 손끝에도 다시 피가 돌았다.",
+					"진액이 걷힌 오아시스에서, 탐험대는 마침내 맑은 물을 길었다.",
+					"오랜 비극을 뒤로하고, 사막 너머에서 시원한 바람이 불어오기 시작했다."
+				]
+			},
+			"rooms": [
+				{
+					"dialogue": [
+						{
+							"content": {
+								"korean": "메마른 바람과 함께 뼈 썩는 냄새가 둥지 입구에 가득하다."
+							},
+							"emotion": "base",
+							"speaker": "narrator",
+							"type": "speech"
+						},
+						{
+							"action": "enter",
+							"speaker": "khan",
+							"duration_ms": 500,
+							"type": "direction",
+							"spot": [
+								2,
+								2
 							],
-							"speaker": "amir"
+							"direction": "up"
 						},
 						{
 							"type": "speech",
-							"speaker": "amir",
-							"emotion": "angry",
 							"content": {
-								"korean": "바위벽에 깊게 그어진 긁힌 자국... 케메트가 말했던 그 자국이야."
+								"korean": "내가 건넨 물병이 독이었다는 소문을 듣고 뒤쫓아 왔다. 진액 자국이 이 모래 구덩이에서 끝난다."
+							},
+							"emotion": "base",
+							"speaker": "khan"
+						},
+						{
+							"type": "speech",
+							"content": {
+								"korean": "여기서 끝내자. 우리 몸이 더 마르기 전에."
+							},
+							"emotion": "base",
+							"speaker": "character_any"
+						},
+						{
+							"speaker": "character_1",
+							"emotion": "sad",
+							"content": {
+								"korean": "…모래가 발목을 붙잡는 것 같아."
+							},
+							"type": "speech"
+						}
+					],
+					"id": 1
+				},
+				{
+					"dialogue": [
+						{
+							"emotion": "base",
+							"speaker": "narrator",
+							"content": {
+								"korean": "바닥의 모래 위로 깊게 파인 뼈마디 자국들이 뒤얽혀 있다."
+							},
+							"type": "speech"
+						},
+						{
+							"content": {
+								"korean": "벽화 속 괴물과 같은 마디 자국이야. 다리가 수십 개는 되겠어."
+							},
+							"speaker": "character_any",
+							"emotion": "angry",
+							"type": "speech"
+						},
+						{
+							"type": "speech",
+							"content": {
+								"korean": "…숨이 턱 막힐 정도로 어둡다."
+							},
+							"emotion": "sad",
+							"speaker": "character_2"
+						}
+					],
+					"id": 3
+				},
+				{
+					"dialogue": [
+						{
+							"type": "speech",
+							"content": {
+								"korean": "둥지 중앙, 바위벽마다 곤충의 허물이 매달려 있다."
+							},
+							"emotion": "base",
+							"speaker": "narrator"
+						},
+						{
+							"type": "direction",
+							"direction": "up",
+							"spot": [
+								3,
+								2
+							],
+							"action": "enter",
+							"duration_ms": 500,
+							"speaker": "khan"
+						},
+						{
+							"type": "speech",
+							"speaker": "khan",
+							"emotion": "base",
+							"content": {
+								"korean": "난 여기서 밧줄을 준비하겠다. 놈의 기습에 대비하며 먼저 들어가라!"
 							}
 						},
 						{
-							"speaker": "character_any",
-							"emotion": "base",
+							"duration_ms": 400,
+							"direction": "down",
+							"type": "direction",
+							"speaker": "khan",
+							"action": "exit"
+						},
+						{
 							"content": {
-								"korean": "괴물이 부러진 청동 칼날과 뼈마디로 벽을 긁으며 껍질을 다듬은 흔적이다."
+								"korean": "사막의 목마름을 낳은 원흉을 여기서 끊어내겠다."
 							},
+							"emotion": "base",
+							"speaker": "character_any",
 							"type": "speech"
 						},
 						{
-							"emotion": "angry",
 							"content": {
-								"korean": "이제 길잡이라는 가면을 벗겨낼 때다."
+								"korean": "…발 밑에서 자꾸 기분 나쁜 소리가 나."
 							},
-							"speaker": "character_any",
+							"speaker": "character_3",
+							"emotion": "sad",
+							"type": "speech"
+						}
+					],
+					"id": 5
+				},
+				{
+					"dialogue": [
+						{
+							"content": {
+								"korean": "둥지 가장 깊은 곳, 무거운 정적이 공기를 짓눌러 온다."
+							},
+							"emotion": "base",
+							"speaker": "narrator",
 							"type": "speech"
 						},
 						{
 							"type": "speech",
 							"content": {
-								"korean": "더 이상 뒤로 물러설 곳은 없다."
+								"korean": "놈이 이 안에 있다. 각오해."
 							},
-							"emotion": "base",
+							"speaker": "character_any",
+							"emotion": "angry"
+						},
+						{
+							"type": "speech",
+							"content": {
+								"korean": "…온몸의 털이 바짝 서는 것 같아."
+							},
+							"emotion": "sad",
 							"speaker": "character_4"
 						}
 					],
 					"id": 9
 				},
 				{
-					"lose_dialogue": [
-						{
-							"speaker": "boss",
-							"emotion": "happy",
-							"content": {
-								"korean": "큭큭, 약해 빠진 뼈다귀들이 감히 이 카르니벡스의 갑옷을 뚫을 수 있을 것 같았느냐!"
-							},
-							"type": "speech"
-						},
-						{
-							"type": "speech",
-							"speaker": "character_any",
-							"content": {
-								"korean": "뼈가 녹아내릴지언정 이대로 끝내진 않는다!"
-							},
-							"emotion": "angry"
-						}
-					],
 					"dialogue": [
 						{
-							"type": "speech",
 							"emotion": "base",
+							"speaker": "narrator",
 							"content": {
-								"korean": "어둠 속에서 백골빛 껍질과 청동 갑각을 이은 거대한 지네 카르니벡스가 솟구쳐 오른다."
+								"korean": "둥지 한가운데, 모래 길잡이가 웃으며 탐험대를 기다리고 있다."
 							},
-							"speaker": "narrator"
+							"type": "speech"
 						},
 						{
 							"type": "speech",
-							"content": {
-								"korean": "큭큭큭... 드디어 도착했구나. 친절한 길잡이를 끝까지 믿고 따라온 어리석은 놈들아!"
-							},
+							"speaker": "boss",
 							"emotion": "happy",
-							"speaker": "boss"
-						},
-						{
-							"speaker": "amir",
-							"duration_ms": 500,
-							"type": "direction",
-							"spot": [
-								3,
-								2
-							],
-							"action": "enter"
-						},
-						{
 							"content": {
-								"korean": "네놈이 바로 검객들의 뼈를 탐하던 괴물, 카르니벡스였군!"
-							},
-							"emotion": "angry",
-							"speaker": "amir",
-							"type": "speech"
-						},
-						{
-							"content": {
-								"korean": "너희가 마신 영약은 녹아내린 검객들의 골수였지! 이제 너희 뼈로 내 갑옷을 완성해 주마!"
-							},
-							"emotion": "angry",
-							"speaker": "boss",
-							"type": "speech"
-						},
-						{
-							"content": {
-								"korean": "더 이상 네 탐욕에 희생될 목숨은 없다!"
-							},
-							"emotion": "angry",
-							"speaker": "character_any",
-							"type": "speech"
-						}
-					],
-					"win_dialogue": [
-						{
-							"emotion": "angry",
-							"content": {
-								"korean": "크아아악! 내 청동 마디가... 백골 갑각이 부서지다니!"
-							},
-							"speaker": "boss",
-							"type": "speech"
-						},
-						{
-							"type": "speech",
-							"speaker": "boss",
-							"emotion": "sad",
-							"content": {
-								"korean": "나는 전장의 유골을 삼키며 자라났다... 네놈들의 단단한 뼈를 삼켜 가장 거대한 껍질을 만들어야 했는데!"
+								"korean": "여기까지 오시느라 목이 많이 마르셨지요? 남은 물도 마저 드세요."
 							}
 						},
 						{
 							"type": "speech",
-							"emotion": "angry",
+							"speaker": "narrator",
+							"emotion": "base",
 							"content": {
-								"korean": "탐험대가 바닥에 떨어진 노란 물병을 내리쳐 산산조각 냈다."
-							},
-							"speaker": "narrator"
+								"korean": "그 몸이 뒤틀리더니, 칼날 마디가 돋은 거대한 지네 괴물 카르니벡스로 변한다."
+							}
 						},
 						{
 							"type": "speech",
-							"speaker": "boss",
 							"content": {
-								"korean": "안 돼! 내 골수가... 내가 모아둔 소중한 독성 진액이...!"
+								"korean": "당신들이 마신 물은 녹아내린 검객들의 골수였답니다!"
 							},
+							"speaker": "boss",
 							"emotion": "angry"
 						},
 						{
-							"emotion": "base",
+							"type": "speech",
 							"content": {
-								"korean": "카르니벡스는 비명을 지르며 백골 더미 속으로 스러졌고, 독성 진액은 땅속으로 사라졌다."
+								"korean": "이제 당신들의 뼈도 내 갑옷으로 만들어 줄게요!"
 							},
-							"speaker": "narrator",
+							"speaker": "boss",
+							"emotion": "angry"
+						},
+						{
+							"type": "speech",
+							"speaker": "character_any",
+							"emotion": "angry",
+							"content": {
+								"korean": "동료들의 골수를 노린 기괴한 흉물아, 네 탐욕을 베어 넘겨주마!"
+							}
+						},
+						{
+							"speaker": "character_1",
+							"emotion": "sad",
+							"content": {
+								"korean": "…저 부러진 칼날 껍질이 너무 기괴해."
+							},
+							"type": "speech"
+						}
+					],
+					"lose_dialogue": [
+						{
+							"emotion": "angry",
+							"speaker": "boss",
+							"content": {
+								"korean": "그 물을 마신 순간부터 당신들은 내 먹이였어요!"
+							},
 							"type": "speech"
 						},
 						{
-							"speaker": "amir",
+							"type": "speech",
 							"content": {
-								"korean": "물병이 깨졌어... 다리를 녹이던 통증도 멈추고 있어!"
+								"korean": "…여기서 삼켜질 수는 없다. 다시 일어서라!"
 							},
-							"emotion": "happy",
+							"speaker": "character_any",
+							"emotion": "angry"
+						}
+					],
+					"win_dialogue": [
+						{
+							"type": "speech",
+							"content": {
+								"korean": "전장에 버려진 검객들의 뼈 속으로 기어들어 가 골수를 파먹고, 부러진 칼날을 껍질에 꽂으며 자랐지요!"
+							},
+							"speaker": "boss",
+							"emotion": "angry"
+						},
+						{
+							"type": "speech",
+							"content": {
+								"korean": "그 물을 마신 자의 골수는 모두 내게로 흘러든답니다!"
+							},
+							"speaker": "boss",
+							"emotion": "angry"
+						},
+						{
+							"content": {
+								"korean": "아미르 말대로, 이 물이 끊기면 넌 굶겠지. 모래에 모두 쏟아 주마!"
+							},
+							"emotion": "angry",
+							"speaker": "character_any",
 							"type": "speech"
+						},
+						{
+							"content": {
+								"korean": "크아악! 골수가 끊겨… 껍질이 말라붙어!"
+							},
+							"emotion": "sad",
+							"speaker": "boss",
+							"type": "speech"
+						},
+						{
+							"direction": "down",
+							"action": "enter",
+							"spot": [
+								3,
+								3
+							],
+							"speaker": "khan",
+							"type": "direction",
+							"duration_ms": 500
+						},
+						{
+							"type": "speech",
+							"emotion": "angry",
+							"speaker": "khan",
+							"content": {
+								"korean": "지금이다! 밧줄로 괴물의 발을 묶었다, 갑각 틈새를 베어라!"
+							}
 						},
 						{
 							"speaker": "character_any",
-							"emotion": "base",
+							"emotion": "angry",
 							"content": {
-								"korean": "마침내 친구를 옥죄던 독도, 사막의 비극도 끝났다."
+								"korean": "이걸로 끝이다!"
+							},
+							"type": "speech"
+						},
+						{
+							"emotion": "base",
+							"speaker": "narrator",
+							"content": {
+								"korean": "갑각 틈새를 꿰뚫자, 카르니벡스는 비명을 지르며 모래 아래로 붕괴해 소멸했다."
 							},
 							"type": "speech"
 						}
 					],
 					"id": 15
 				}
-			],
-			"epilogue": {
-				"korean": [
-					"카르니벡스의 백골빛 껍질이 허물어지자 지하 동굴을 채우던 퀴퀴한 독기가 옅어졌다.",
-					"바닥에 산산조각 난 노란 물병 조각만이 길잡이가 남긴 잔혹한 사기극을 증언하고 있었다.",
-					"아미르의 다리에도 마침내 독이 풀리며 온기가 되돌아왔다.",
-					"사막 깊은 곳에 묻혀 있던 옛 전사들의 유골이 비로소 안식을 찾았다."
-				]
-			}
+			]
 		}
 	]
 }

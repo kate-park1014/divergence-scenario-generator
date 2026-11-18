@@ -59,7 +59,7 @@ export type FinalBoss = {
 	appearance?: string;
 	appearance_npc?: string;
 	appearance_boss?: string;
-	surface_identity?: string; // 새 아크에는 저장하지 않는다 (챕터 생성이 안 읽음)
+	surface_identity?: string; // 겉모습. 챕터 생성이 1~4화 NPC 대사·5화 변신 전 모습에 쓴다 (boss_list 그대로)
 	true_identity: string;
 	motivation: string;
 	want?: string; // 보스가 이 일로 얻는 구체적인 이득 한 문장 (재작업본)

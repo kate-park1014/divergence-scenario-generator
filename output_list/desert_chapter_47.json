@@ -1,0 +1,1625 @@
+{
+	"chapter_order": 47,
+	"difficulty_level": 47,
+	"chapter_name": {
+		"spanish": "Arca Sellada",
+		"chinese": "封印圣柜",
+		"thai": "หีบศิลา",
+		"french": "L'Arche",
+		"japanese": "封印の聖櫃",
+		"vietnamese": "Hòm Phong Ấn",
+		"english": "Sealed Ark",
+		"korean": "봉인된 성궤",
+		"hindi": "गुप्त संदूक"
+	},
+	"scenarios": [
+		{
+			"scenario_id": "desert_vesperis_46_01",
+			"order": 1,
+			"random_boss_title": {
+				"korean": "약초꾼"
+			},
+			"act": "intro",
+			"theme": "desert",
+			"actors": {
+				"dune": {
+					"id": "mon_fc976b75-f009-4bf2-b660-a3053c95d668",
+					"name": {
+						"korean": "듄",
+						"english": "Dune",
+						"japanese": "デューン",
+						"chinese": "沙丘",
+						"french": "Dune",
+						"spanish": "Dune",
+						"vietnamese": "Dune",
+						"thai": "ดูน",
+						"hindi": "ड्यून"
+					},
+					"description": "",
+					"face_image_url": "https://imagedelivery.net/WTEqQNGFb-l-IHS6IGnzUQ/7568ec11-0329-44b4-740a-71b25ef62400/public",
+					"battle_sprite_url": "https://imagedelivery.net/WTEqQNGFb-l-IHS6IGnzUQ/ba7095b5-0d99-40bd-1155-b57701c00f00/public"
+				}
+			},
+			"boss": {
+				"pool_id": "random_boss"
+			},
+			"prologue": {
+				"korean": [
+					"거친 모래 폭풍을 피해 들어선 바위굴.",
+					"그곳에는 무적의 힘을 준다는 성물의 소문이 잠들어 있었다.",
+					"제단의 검을 손에 쥐는 순간, 사원의 문이 완전히 닫혔다.",
+					"이제 갇힌 길을 열기 위해 사원의 깊은 곳으로 향해야 한다."
+				]
+			},
+			"rooms": [
+				{
+					"id": 1,
+					"dialogue": [
+						{
+							"emotion": "base",
+							"speaker": "narrator",
+							"content": {
+								"korean": "모래 폭풍을 피해 들어온 바위굴 입구에 오래된 제단이 서 있다."
+							},
+							"type": "speech"
+						},
+						{
+							"duration_ms": 500,
+							"speaker": "dune",
+							"action": "enter",
+							"spot": [
+								3,
+								2
+							],
+							"type": "direction"
+						},
+						{
+							"content": {
+								"korean": "난 성물의 소문을 좇아 사막을 떠도는 안내자 듄이다. 이 사원 깊은 곳엔 수도승이 지키는 성궤가 있는데, 자격을 갖춘 자에게 무적의 힘과 가호를 내린다지."
+							},
+							"speaker": "dune",
+							"type": "speech",
+							"emotion": "base"
+						},
+						{
+							"content": {
+								"korean": "성궤가 있다는 사원 입구에 웬 검이 꽂혀 있지?"
+							},
+							"type": "speech",
+							"emotion": "base",
+							"speaker": "character_any"
+						},
+						{
+							"content": {
+								"korean": "입구 제단의 무기에 반짝이는 금빛 먼지가 자욱하게 묻어 있다."
+							},
+							"type": "speech",
+							"emotion": "base",
+							"speaker": "narrator"
+						},
+						{
+							"type": "speech",
+							"speaker": "character_any",
+							"emotion": "base",
+							"content": {
+								"korean": "금빛 먼지까지 묻은 걸 보니 예사 검이 아니야. 뽑아 보자."
+							}
+						},
+						{
+							"type": "speech",
+							"content": {
+								"korean": "검을 뽑아 들자 바닥이 흔들리며 입구의 거대한 돌문이 쿵 하고 닫혀 버렸다!"
+							},
+							"speaker": "narrator",
+							"emotion": "angry"
+						},
+						{
+							"speaker": "character_any",
+							"emotion": "base",
+							"type": "speech",
+							"content": {
+								"korean": "검을 뽑자마자 문이 닫혔어… 이 사원은 검을 뽑는 걸 용납하지 않는 건가."
+							}
+						},
+						{
+							"speaker": "character_1",
+							"emotion": "sad",
+							"content": {
+								"korean": "…갑자기 사원 전체가 울리다니."
+							},
+							"type": "speech"
+						}
+					]
+				},
+				{
+					"id": 3,
+					"dialogue": [
+						{
+							"content": {
+								"korean": "입구가 봉쇄되었으니 안쪽으로 나아갈 수밖에 없어."
+							},
+							"type": "speech",
+							"emotion": "base",
+							"speaker": "character_any"
+						},
+						{
+							"type": "direction",
+							"speaker": "dune",
+							"action": "enter",
+							"spot": [
+								3,
+								2
+							],
+							"duration_ms": 500
+						},
+						{
+							"emotion": "base",
+							"speaker": "dune",
+							"type": "speech",
+							"content": {
+								"korean": "문이 닫혀 버렸어… 나도 같이 갇힌 거야. 그런데 여기 벽에도 그 금빛 먼지가 묻어 있네."
+							}
+						},
+						{
+							"content": {
+								"korean": "이 먼지는 단순한 흙이 아니라 사원 특유의 기운 같군."
+							},
+							"emotion": "base",
+							"speaker": "character_any",
+							"type": "speech"
+						},
+						{
+							"speaker": "character_2",
+							"emotion": "sad",
+							"type": "speech",
+							"content": {
+								"korean": "…발밑에서 모래가 굳어가는 것 같아."
+							}
+						}
+					]
+				},
+				{
+					"id": 5,
+					"dialogue": [
+						{
+							"action": "enter",
+							"speaker": "dune",
+							"type": "direction",
+							"duration_ms": 500,
+							"spot": [
+								2,
+								3
+							]
+						},
+						{
+							"emotion": "sad",
+							"type": "speech",
+							"speaker": "dune",
+							"content": {
+								"korean": "이 앞은 사원의 통로다. 나는 성물의 기운이 무서워 더 이상 깊이 못 가겠어."
+							}
+						},
+						{
+							"content": {
+								"korean": "안내 고맙다. 탈출구는 우리가 직접 사원 중심부에서 찾아보지."
+							},
+							"type": "speech",
+							"emotion": "base",
+							"speaker": "character_any"
+						},
+						{
+							"speaker": "dune",
+							"duration_ms": 400,
+							"action": "exit",
+							"type": "direction",
+							"direction": "down"
+						},
+						{
+							"type": "speech",
+							"content": {
+								"korean": "…바람 소리가 기괴하게 바뀌었어."
+							},
+							"speaker": "character_3",
+							"emotion": "angry"
+						}
+					]
+				},
+				{
+					"id": 9,
+					"dialogue": [
+						{
+							"speaker": "narrator",
+							"emotion": "angry",
+							"type": "speech",
+							"content": {
+								"korean": "통로 끝에서 누군가 거칠게 숨을 몰아쉬며 다가오는 소리가 들린다."
+							}
+						},
+						{
+							"content": {
+								"korean": "앞에서 살기를 띤 자가 길을 막아서려고 기다리고 있다."
+							},
+							"type": "speech",
+							"speaker": "character_any",
+							"emotion": "angry"
+						},
+						{
+							"content": {
+								"korean": "…손잡이를 쥔 손에 힘이 들어간다."
+							},
+							"speaker": "character_4",
+							"type": "speech",
+							"emotion": "base"
+						}
+					]
+				},
+				{
+					"dialogue": [
+						{
+							"type": "speech",
+							"speaker": "narrator",
+							"emotion": "base",
+							"content": {
+								"korean": "통로 끝, 무기를 든 약초꾼이 길을 막아선다."
+							}
+						},
+						{
+							"content": {
+								"korean": "무모하게 제단의 검을 뽑아 사원의 분노를 부르다니! 네놈들 때문에 갇혔다!"
+							},
+							"type": "speech",
+							"emotion": "angry",
+							"speaker": "random_boss"
+						},
+						{
+							"content": {
+								"korean": "갇힌 길을 열고 나가기 위해 사원의 중심부로 갈 뿐이다. 막지 마라!"
+							},
+							"emotion": "angry",
+							"type": "speech",
+							"speaker": "character_any"
+						},
+						{
+							"content": {
+								"korean": "…어쩔 수 없지, 싸울 수밖에."
+							},
+							"type": "speech",
+							"emotion": "base",
+							"speaker": "character_1"
+						}
+					],
+					"lose_dialogue": [
+						{
+							"emotion": "angry",
+							"speaker": "random_boss",
+							"content": {
+								"korean": "사원의 분노에 짓눌려 여기서 끝날 셈이냐!"
+							},
+							"type": "speech"
+						},
+						{
+							"emotion": "angry",
+							"speaker": "character_any",
+							"type": "speech",
+							"content": {
+								"korean": "…아직 전열을 정비할 기회가 있다. 물러서지 않는다."
+							}
+						}
+					],
+					"win_dialogue": [
+						{
+							"content": {
+								"korean": "크윽… 검을 거두지 않는 한 사원은 닫힌 채 멈추지 않을 거다…"
+							},
+							"speaker": "random_boss",
+							"type": "speech",
+							"emotion": "sad"
+						},
+						{
+							"emotion": "base",
+							"speaker": "character_any",
+							"content": {
+								"korean": "닫힌 입구를 여는 단서는 사원 중심부에 있을 테니 계속 이동하자."
+							},
+							"type": "speech"
+						},
+						{
+							"content": {
+								"korean": "바위 통로는 사원 담장 안에 갇힌 메마른 오아시스로 이어져 있다."
+							},
+							"type": "speech",
+							"speaker": "narrator",
+							"emotion": "base"
+						}
+					],
+					"id": 15
+				}
+			]
+		},
+		{
+			"scenario_id": "desert_vesperis_46_02",
+			"order": 2,
+			"random_boss_title": {
+				"korean": "사냥꾼"
+			},
+			"act": "rising",
+			"theme": "desert",
+			"actors": {
+				"kasai": {
+					"id": "mon_8050c8ca-5715-4e7d-895e-5bc029d55fcf",
+					"name": {
+						"korean": "카사이",
+						"english": "Kasai",
+						"japanese": "カサイ",
+						"chinese": "卡赛",
+						"french": "Kasai",
+						"spanish": "Kasai",
+						"vietnamese": "Kasai",
+						"thai": "คาไซ",
+						"hindi": "कसाई"
+					},
+					"description": "",
+					"face_image_url": "https://imagedelivery.net/WTEqQNGFb-l-IHS6IGnzUQ/c9ddd314-36fb-4636-cbe6-35d8f6f98900/public",
+					"battle_sprite_url": "https://imagedelivery.net/WTEqQNGFb-l-IHS6IGnzUQ/a00fae8a-8a27-4895-d62c-a0c88456ff00/public"
+				}
+			},
+			"boss": {
+				"pool_id": "random_boss"
+			},
+			"prologue": {
+				"korean": [
+					"탈출구를 찾아 도달한 곳은 사원 담장 안, 물이 마른 오아시스였다.",
+					"붉은 사암 계곡 사이로 기묘한 정적이 감돈다.",
+					"사원에 갇힌 탐험대는 성궤에 얽힌 소문과 마주한다."
+				]
+			},
+			"rooms": [
+				{
+					"id": 1,
+					"dialogue": [
+						{
+							"speaker": "narrator",
+							"content": {
+								"korean": "말라버린 오아시스에 붉은 모래바람이 불어온다."
+							},
+							"emotion": "base",
+							"type": "speech"
+						},
+						{
+							"type": "direction",
+							"speaker": "kasai",
+							"spot": [
+								3,
+								2
+							],
+							"action": "enter",
+							"duration_ms": 500
+						},
+						{
+							"emotion": "base",
+							"content": {
+								"korean": "나는 이 오아시스의 정보상 카사이라고 해. 탈출구를 찾으러 왔나?"
+							},
+							"speaker": "kasai",
+							"type": "speech"
+						},
+						{
+							"emotion": "base",
+							"content": {
+								"korean": "사원의 닫힌 입구를 열 방법을 찾고 있다."
+							},
+							"type": "speech",
+							"speaker": "character_any"
+						},
+						{
+							"speaker": "character_1",
+							"content": {
+								"korean": "…목이 타들어가는 것 같아."
+							},
+							"emotion": "sad",
+							"type": "speech"
+						}
+					]
+				},
+				{
+					"dialogue": [
+						{
+							"speaker": "narrator",
+							"type": "speech",
+							"content": {
+								"korean": "오아시스 입구에 검 문양이 새겨진 사암이 서 있다."
+							},
+							"emotion": "base"
+						},
+						{
+							"duration_ms": 500,
+							"action": "enter",
+							"spot": [
+								2,
+								3
+							],
+							"speaker": "kasai",
+							"type": "direction"
+						},
+						{
+							"speaker": "kasai",
+							"content": {
+								"korean": "성궤를 지키는 수도승은 가호를 내리기 전에 방문자의 무기를 모두 바치게 한다더군."
+							},
+							"emotion": "base",
+							"type": "speech"
+						},
+						{
+							"type": "speech",
+							"emotion": "base",
+							"content": {
+								"korean": "무기를 바쳐야만 성궤의 가호를 받을 수 있다는 건가."
+							},
+							"speaker": "character_any"
+						},
+						{
+							"content": {
+								"korean": "…뭔가 수상한 조건이네."
+							},
+							"emotion": "sad",
+							"speaker": "character_2",
+							"type": "speech"
+						}
+					],
+					"id": 3
+				},
+				{
+					"id": 5,
+					"dialogue": [
+						{
+							"duration_ms": 500,
+							"type": "direction",
+							"speaker": "kasai",
+							"spot": [
+								3,
+								2
+							],
+							"action": "enter"
+						},
+						{
+							"speaker": "kasai",
+							"type": "speech",
+							"emotion": "base",
+							"content": {
+								"korean": "성궤는 무적의 힘을 준다지만, 무기를 바친 자들이 돌아왔다는 소문은 없어."
+							}
+						},
+						{
+							"type": "speech",
+							"speaker": "character_any",
+							"content": {
+								"korean": "성궤가 단순히 은혜를 내리는 성물이 아닐 수도 있겠어."
+							},
+							"emotion": "base"
+						},
+						{
+							"direction": "down",
+							"speaker": "kasai",
+							"duration_ms": 400,
+							"type": "direction",
+							"action": "exit"
+						},
+						{
+							"emotion": "base",
+							"content": {
+								"korean": "…조심해서 나쁠 건 없지."
+							},
+							"speaker": "character_3",
+							"type": "speech"
+						}
+					]
+				},
+				{
+					"dialogue": [
+						{
+							"type": "speech",
+							"speaker": "narrator",
+							"emotion": "base",
+							"content": {
+								"korean": "사암 계곡 틈에서 서늘한 쇠붙이 마찰음이 울려 퍼진다."
+							}
+						},
+						{
+							"type": "speech",
+							"speaker": "character_any",
+							"content": {
+								"korean": "누군가 우리의 무기를 노리고 다가오고 있다."
+							},
+							"emotion": "angry"
+						},
+						{
+							"speaker": "character_4",
+							"content": {
+								"korean": "…살기가 느껴져."
+							},
+							"emotion": "sad",
+							"type": "speech"
+						}
+					],
+					"id": 9
+				},
+				{
+					"dialogue": [
+						{
+							"speaker": "narrator",
+							"type": "speech",
+							"emotion": "base",
+							"content": {
+								"korean": "붉은 사암 위에서 무기를 든 사냥꾼이 길을 막아선다."
+							}
+						},
+						{
+							"type": "speech",
+							"emotion": "angry",
+							"content": {
+								"korean": "성궤의 가호를 받으려면 무기를 내놓아야 한다. 순순히 바쳐라!"
+							},
+							"speaker": "random_boss"
+						},
+						{
+							"type": "speech",
+							"emotion": "angry",
+							"content": {
+								"korean": "우리의 무기는 탈출을 위해 필요하다. 바칠 수 없다!"
+							},
+							"speaker": "character_any"
+						},
+						{
+							"speaker": "character_1",
+							"type": "speech",
+							"content": {
+								"korean": "…절대 순순히 넘겨줄 순 없어."
+							},
+							"emotion": "angry"
+						}
+					],
+					"win_dialogue": [
+						{
+							"emotion": "sad",
+							"content": {
+								"korean": "무기를 바치지 않는 자에게 성궤의 구원은 없다…"
+							},
+							"speaker": "random_boss",
+							"type": "speech"
+						},
+						{
+							"type": "speech",
+							"speaker": "character_any",
+							"emotion": "base",
+							"content": {
+								"korean": "가호를 주는 성물이 진짜 무적의 힘을 내리는 건 맞는지 의심스럽군."
+							}
+						},
+						{
+							"content": {
+								"korean": "…이 사원, 무언가 숨기고 있어."
+							},
+							"emotion": "sad",
+							"speaker": "character_2",
+							"type": "speech"
+						},
+						{
+							"type": "speech",
+							"speaker": "narrator",
+							"emotion": "base",
+							"content": {
+								"korean": "탐험대는 오아시스를 뒤로하고 비문이 새겨진 잿빛 유적 광장으로 향한다."
+							}
+						}
+					],
+					"lose_dialogue": [
+						{
+							"emotion": "angry",
+							"content": {
+								"korean": "무기를 빼앗기고 여기서 굶어 죽어라."
+							},
+							"speaker": "random_boss",
+							"type": "speech"
+						},
+						{
+							"speaker": "character_any",
+							"emotion": "angry",
+							"content": {
+								"korean": "…아직 무기를 빼앗길 순 없다. 다시 싸운다."
+							},
+							"type": "speech"
+						}
+					],
+					"id": 15
+				}
+			]
+		},
+		{
+			"scenario_id": "desert_vesperis_46_03",
+			"order": 3,
+			"random_boss_title": {
+				"korean": "상인"
+			},
+			"act": "rising",
+			"theme": "desert",
+			"actors": {
+				"ashur": {
+					"id": "mon_a07b6a77-ad2e-4adb-b4ed-56e7e10cd5c7",
+					"name": {
+						"korean": "아슈르",
+						"english": "Ashur",
+						"japanese": "アシュール",
+						"chinese": "阿舒尔",
+						"french": "Ashur",
+						"spanish": "Ashur",
+						"vietnamese": "Ashur",
+						"thai": "อาชูร์",
+						"hindi": "अशूर"
+					},
+					"description": "",
+					"face_image_url": "https://imagedelivery.net/WTEqQNGFb-l-IHS6IGnzUQ/eb36f4ec-7b0f-47d0-7073-647e4b01e700/public",
+					"battle_sprite_url": "https://imagedelivery.net/WTEqQNGFb-l-IHS6IGnzUQ/e0b84a6e-36fc-4ba2-5c1d-54fbb18adb00/public"
+				}
+			},
+			"boss": {
+				"pool_id": "random_boss"
+			},
+			"prologue": {
+				"korean": [
+					"오아시스를 지나 도달한 곳은 잿빛 유적 광장.",
+					"버려진 사원의 중심부로 향하는 길목마다 오래된 비문이 파묻혀 있다.",
+					"검을 거두지 않으면 사원의 재앙도 멈추지 않는다."
+				]
+			},
+			"rooms": [
+				{
+					"dialogue": [
+						{
+							"speaker": "narrator",
+							"emotion": "base",
+							"content": {
+								"korean": "잿빛 모래에 덮인 유적 광장 곳곳에 부서진 비석들이 서 있다."
+							},
+							"type": "speech"
+						},
+						{
+							"speaker": "ashur",
+							"type": "direction",
+							"duration_ms": 500,
+							"direction": "up",
+							"spot": [
+								3,
+								2
+							],
+							"action": "enter"
+						},
+						{
+							"type": "speech",
+							"emotion": "base",
+							"speaker": "ashur",
+							"content": {
+								"korean": "오아시스를 넘어온 탐험대군요. 저는 이 유적의 비문을 연구하는 학자 아슈르입니다."
+							}
+						},
+						{
+							"emotion": "base",
+							"speaker": "character_any",
+							"content": {
+								"korean": "탈출구를 찾으려면 중앙 사원으로 가야 해. 비문에는 뭐라고 적혀 있나?"
+							},
+							"type": "speech"
+						},
+						{
+							"type": "speech",
+							"speaker": "ashur",
+							"emotion": "base",
+							"content": {
+								"korean": "저쪽 비석에 성궤에 관한 기록이 남아 있습니다. 함께 보시죠."
+							}
+						},
+						{
+							"speaker": "character_1",
+							"emotion": "sad",
+							"content": {
+								"korean": "…바람 소리가 꼭 흐느끼는 것 같아."
+							},
+							"type": "speech"
+						}
+					],
+					"id": 1
+				},
+				{
+					"id": 3,
+					"dialogue": [
+						{
+							"speaker": "narrator",
+							"emotion": "base",
+							"type": "speech",
+							"content": {
+								"korean": "아슈르가 오래된 비석의 흙을 털어내며 빽빽하게 새겨진 문자를 읽어 내려간다."
+							}
+						},
+						{
+							"type": "direction",
+							"speaker": "ashur",
+							"action": "enter",
+							"spot": [
+								3,
+								2
+							],
+							"duration_ms": 500
+						},
+						{
+							"emotion": "base",
+							"speaker": "ashur",
+							"content": {
+								"korean": "비문에 중요한 기록이 있군요. 성궤 앞에서 검을 땅에 꽂고 손을 떼야만 비극이 멈춘다고 적혀 있습니다."
+							},
+							"type": "speech"
+						},
+						{
+							"speaker": "character_any",
+							"emotion": "base",
+							"type": "speech",
+							"content": {
+								"korean": "검을 뽑은 게 비극의 시작이었으니, 내려놓는 것이 정답이었군."
+							}
+						},
+						{
+							"type": "speech",
+							"speaker": "character_2",
+							"emotion": "base",
+							"content": {
+								"korean": "…그게 정말 사원의 문을 열어줄까."
+							}
+						}
+					]
+				},
+				{
+					"dialogue": [
+						{
+							"type": "speech",
+							"emotion": "base",
+							"speaker": "narrator",
+							"content": {
+								"korean": "광장 한구석, 푸른빛 돌 사이에 라피스라줄리로 단단하게 굳어버린 검이 꽂혀 있다."
+							}
+						},
+						{
+							"type": "speech",
+							"content": {
+								"korean": "검 전체가 라피스라줄리로 굳어 있군. 이 유적에 무슨 일이 있었던 거지."
+							},
+							"emotion": "base",
+							"speaker": "character_any"
+						},
+						{
+							"type": "direction",
+							"speaker": "ashur",
+							"action": "enter",
+							"spot": [
+								3,
+								2
+							],
+							"duration_ms": 500
+						},
+						{
+							"emotion": "base",
+							"speaker": "ashur",
+							"content": {
+								"korean": "성궤의 기운이 퍼지면서 유적의 모든 무기가 굳어버린 것 같습니다. 전 비문을 더 읽어보겠습니다."
+							},
+							"type": "speech"
+						},
+						{
+							"action": "exit",
+							"type": "direction",
+							"duration_ms": 400,
+							"direction": "up",
+							"speaker": "ashur"
+						},
+						{
+							"content": {
+								"korean": "…손잡이조차 잡을 수 없게 굳었어."
+							},
+							"type": "speech",
+							"emotion": "sad",
+							"speaker": "character_3"
+						}
+					],
+					"id": 5
+				},
+				{
+					"dialogue": [
+						{
+							"content": {
+								"korean": "중앙 사원으로 이어지는 거대한 회랑 입구에서 고함이 들려온다."
+							},
+							"type": "speech",
+							"emotion": "base",
+							"speaker": "narrator"
+						},
+						{
+							"emotion": "angry",
+							"speaker": "character_any",
+							"content": {
+								"korean": "누군가 길을 막아서고 있어. 무장을 한 상인의 기척이다."
+							},
+							"type": "speech"
+						},
+						{
+							"type": "speech",
+							"content": {
+								"korean": "…무겁고 긴장된 침묵이 흐르네."
+							},
+							"emotion": "sad",
+							"speaker": "character_4"
+						}
+					],
+					"id": 9
+				},
+				{
+					"win_dialogue": [
+						{
+							"content": {
+								"korean": "검을 내려놓는다고…? 그 각오가 진심이길 바란다…"
+							},
+							"emotion": "sad",
+							"speaker": "random_boss",
+							"type": "speech"
+						},
+						{
+							"emotion": "base",
+							"speaker": "character_any",
+							"type": "speech",
+							"content": {
+								"korean": "아슈르가 읽어준 비문대로 검을 내려놓는 법을 되새겨야겠어."
+							}
+						},
+						{
+							"content": {
+								"korean": "상인이 물러나자 중앙 사원으로 이어지는 통곡의 회랑이 모습을 드러낸다."
+							},
+							"type": "speech",
+							"speaker": "narrator",
+							"emotion": "base"
+						}
+					],
+					"id": 15,
+					"lose_dialogue": [
+						{
+							"type": "speech",
+							"content": {
+								"korean": "무기를 버리지 못하는 자에게 성궤로 가는 길은 없다!"
+							},
+							"emotion": "angry",
+							"speaker": "random_boss"
+						},
+						{
+							"type": "speech",
+							"speaker": "character_any",
+							"emotion": "angry",
+							"content": {
+								"korean": "…하지만 여기서 물러설 순 없어. 다시 돌파하자!"
+							}
+						}
+					],
+					"dialogue": [
+						{
+							"content": {
+								"korean": "유적 광장의 중앙 사원 입구, 상인이 길을 막아선다."
+							},
+							"type": "speech",
+							"speaker": "narrator",
+							"emotion": "base"
+						},
+						{
+							"content": {
+								"korean": "검을 쥐고 다니는 자는 모두 재앙을 부르는 법이다! 더 이상 사원으로 들어가지 못한다!"
+							},
+							"emotion": "angry",
+							"speaker": "random_boss",
+							"type": "speech"
+						},
+						{
+							"content": {
+								"korean": "우리는 재앙을 일으키려는 게 아니다! 성궤 앞에서 검을 내려놓기 위해 사원으로 간다!"
+							},
+							"type": "speech",
+							"emotion": "angry",
+							"speaker": "character_any"
+						},
+						{
+							"content": {
+								"korean": "…상인의 눈빛이 핏빛으로 굳어 있어."
+							},
+							"emotion": "sad",
+							"speaker": "character_1",
+							"type": "speech"
+						}
+					]
+				}
+			]
+		},
+		{
+			"scenario_id": "desert_vesperis_46_04",
+			"order": 4,
+			"random_boss_title": {
+				"korean": "문지기"
+			},
+			"act": "rising",
+			"theme": "desert",
+			"actors": {
+				"amir": {
+					"id": "mon_0096d602-52ab-4a9c-9cc8-4ff18ed3b655",
+					"name": {
+						"korean": "아미르",
+						"english": "Amir",
+						"japanese": "アミール",
+						"chinese": "阿米尔",
+						"french": "Amir",
+						"spanish": "Amir",
+						"vietnamese": "Amir",
+						"thai": "อาเมียร์",
+						"hindi": "अमीर"
+					},
+					"description": "",
+					"face_image_url": "https://imagedelivery.net/WTEqQNGFb-l-IHS6IGnzUQ/8cd60fb0-3699-44c4-6425-a3e97eec1800/public",
+					"battle_sprite_url": "https://imagedelivery.net/WTEqQNGFb-l-IHS6IGnzUQ/b644dc95-9c27-442e-6dc6-73e5550a0200/public"
+				}
+			},
+			"boss": {
+				"pool_id": "random_boss"
+			},
+			"prologue": {
+				"korean": [
+					"중앙 사원으로 향하는 길, 통곡의 회랑.",
+					"서늘한 바람 사이로 굳어버린 칼날 소리가 메아리친다.",
+					"이곳을 지키는 문지기와 성궤에 얽힌 전설이 탐험대를 기다린다."
+				]
+			},
+			"rooms": [
+				{
+					"dialogue": [
+						{
+							"type": "speech",
+							"content": {
+								"korean": "통로 벽면에 굳어진 검들이 빽빽하게 박혀 있다."
+							},
+							"speaker": "narrator",
+							"emotion": "base"
+						},
+						{
+							"action": "enter",
+							"spot": [
+								2,
+								3
+							],
+							"duration_ms": 500,
+							"speaker": "amir",
+							"type": "direction"
+						},
+						{
+							"content": {
+								"korean": "난 전설을 찾아 사막을 헤매는 용병 아미르다. 너희도 중앙 사원으로 향하는 길이냐?"
+							},
+							"type": "speech",
+							"emotion": "base",
+							"speaker": "amir"
+						},
+						{
+							"type": "speech",
+							"emotion": "base",
+							"speaker": "character_any",
+							"content": {
+								"korean": "사원의 닫힌 문을 열려면 이 회랑을 지나야만 한다."
+							}
+						},
+						{
+							"speaker": "character_1",
+							"emotion": "sad",
+							"type": "speech",
+							"content": {
+								"korean": "…벽에 박힌 검들이 꼭 울고 있는 것 같아."
+							}
+						}
+					],
+					"id": 1
+				},
+				{
+					"id": 3,
+					"dialogue": [
+						{
+							"speaker": "amir",
+							"action": "enter",
+							"type": "direction",
+							"duration_ms": 500,
+							"spot": [
+								2,
+								3
+							]
+						},
+						{
+							"content": {
+								"korean": "이 사원의 수도승에겐 오래된 전설이 있어. 과거 전쟁터를 누비던 최강의 검객이었다더군."
+							},
+							"type": "speech",
+							"speaker": "amir",
+							"emotion": "base"
+						},
+						{
+							"type": "speech",
+							"content": {
+								"korean": "최강의 검객이 왜 사원의 수도승이 되었단 말인가?"
+							},
+							"speaker": "character_any",
+							"emotion": "base"
+						},
+						{
+							"content": {
+								"korean": "끝없는 싸움에 절망해 스스로 사원에 들어갔다지. 무적의 힘을 준다는 성궤도 그자의 물건이고."
+							},
+							"emotion": "base",
+							"type": "speech",
+							"speaker": "amir"
+						},
+						{
+							"content": {
+								"korean": "…천장에서 모래가 조금씩 떨어진다."
+							},
+							"type": "speech",
+							"speaker": "character_2",
+							"emotion": "sad"
+						}
+					]
+				},
+				{
+					"dialogue": [
+						{
+							"speaker": "amir",
+							"action": "enter",
+							"type": "direction",
+							"duration_ms": 500,
+							"spot": [
+								3,
+								2
+							]
+						},
+						{
+							"emotion": "base",
+							"speaker": "amir",
+							"type": "speech",
+							"content": {
+								"korean": "저 앞이 중앙 사원 입구다. 성궤를 지키는 자들이 무기를 빼앗으려 할 테니 조심해라."
+							}
+						},
+						{
+							"content": {
+								"korean": "고맙다. 더 지체하지 않고 전진하겠다."
+							},
+							"type": "speech",
+							"emotion": "base",
+							"speaker": "character_any"
+						},
+						{
+							"type": "direction",
+							"direction": "down",
+							"action": "exit",
+							"speaker": "amir",
+							"duration_ms": 400
+						},
+						{
+							"type": "speech",
+							"content": {
+								"korean": "…공기가 점점 차가워져."
+							},
+							"speaker": "character_3",
+							"emotion": "sad"
+						}
+					],
+					"id": 5
+				},
+				{
+					"id": 9,
+					"dialogue": [
+						{
+							"type": "speech",
+							"content": {
+								"korean": "통로 한가운데 검자루가 단단히 굳어버린 묵주가 떨어져 있다."
+							},
+							"speaker": "narrator",
+							"emotion": "base"
+						},
+						{
+							"content": {
+								"korean": "수도승의 묵주에 검자루가 굳어 붙어 있어. 정말 수도승이 검을 쥐던 사람이었나."
+							},
+							"emotion": "base",
+							"speaker": "character_any",
+							"type": "speech"
+						},
+						{
+							"speaker": "character_4",
+							"emotion": "sad",
+							"type": "speech",
+							"content": {
+								"korean": "…발소리가 크게 울리네."
+							}
+						}
+					]
+				},
+				{
+					"win_dialogue": [
+						{
+							"content": {
+								"korean": "무기를 바치지 않는다면… 그분이 세상의 모든 칼날을 앗아갈 뿐이다…"
+							},
+							"emotion": "sad",
+							"type": "speech",
+							"speaker": "random_boss"
+						},
+						{
+							"content": {
+								"korean": "그분이라니… 아미르가 말한 그 검객인가? 정말 세상의 칼날을 모두 거두려는 거라면…"
+							},
+							"type": "speech",
+							"emotion": "base",
+							"speaker": "character_any"
+						},
+						{
+							"type": "speech",
+							"content": {
+								"korean": "그분의 통곡이… 이 사원을 삼킬 것이다…"
+							},
+							"speaker": "random_boss",
+							"emotion": "sad"
+						},
+						{
+							"content": {
+								"korean": "…손끝의 떨림이 멈추질 않아."
+							},
+							"type": "speech",
+							"emotion": "sad",
+							"speaker": "character_2"
+						},
+						{
+							"content": {
+								"korean": "쓰러진 문지기를 뒤로하고, 탐험대는 성궤의 제단이 있는 중앙 사원으로 발걸음을 옮긴다."
+							},
+							"emotion": "base",
+							"type": "speech",
+							"speaker": "narrator"
+						}
+					],
+					"id": 15,
+					"dialogue": [
+						{
+							"content": {
+								"korean": "회랑의 출구를 가로막으며 문지기가 무기를 다잡는다."
+							},
+							"speaker": "narrator",
+							"type": "speech",
+							"emotion": "base"
+						},
+						{
+							"emotion": "angry",
+							"speaker": "random_boss",
+							"type": "speech",
+							"content": {
+								"korean": "성궤를 보호하기 위해 너희의 무기를 내놓아라. 검을 쥔 자는 지날 수 없다."
+							}
+						},
+						{
+							"content": {
+								"korean": "사원을 탈출하기 전까진 무기를 내려놓을 수 없다. 길을 비켜라!"
+							},
+							"emotion": "angry",
+							"type": "speech",
+							"speaker": "character_any"
+						},
+						{
+							"emotion": "angry",
+							"type": "speech",
+							"speaker": "character_1",
+							"content": {
+								"korean": "…지독한 살기야."
+							}
+						}
+					],
+					"lose_dialogue": [
+						{
+							"type": "speech",
+							"content": {
+								"korean": "무기를 내놓지 않는 자, 회랑의 돌이 될 뿐이다."
+							},
+							"speaker": "random_boss",
+							"emotion": "angry"
+						},
+						{
+							"type": "speech",
+							"content": {
+								"korean": "…이대로 끝낼 수는 없다. 다시 도전하자."
+							},
+							"speaker": "character_any",
+							"emotion": "angry"
+						}
+					]
+				}
+			]
+		},
+		{
+			"scenario_id": "desert_vesperis_46_05",
+			"order": 5,
+			"act": "climax_finale",
+			"theme": "desert",
+			"actors": {
+				"dune": {
+					"id": "mon_fc976b75-f009-4bf2-b660-a3053c95d668",
+					"name": {
+						"korean": "듄",
+						"english": "Dune",
+						"japanese": "デューン",
+						"chinese": "沙丘",
+						"french": "Dune",
+						"spanish": "Dune",
+						"vietnamese": "Dune",
+						"thai": "ดูน",
+						"hindi": "ड्यून"
+					},
+					"description": "",
+					"face_image_url": "https://imagedelivery.net/WTEqQNGFb-l-IHS6IGnzUQ/7568ec11-0329-44b4-740a-71b25ef62400/public",
+					"battle_sprite_url": "https://imagedelivery.net/WTEqQNGFb-l-IHS6IGnzUQ/ba7095b5-0d99-40bd-1155-b57701c00f00/public"
+				}
+			},
+			"boss": {
+				"pool_id": "pool_GoldenReliquary_Vesperis_V1"
+			},
+			"epilogue": {
+				"korean": [
+					"성궤가 침묵을 되찾자 사원 사방을 조이던 둔탁한 진동도 비로소 멈추었다.",
+					"땅에 꽂힌 검 너머로 굳게 닫혔던 석문이 천천히 열리며 모래바람이 들어왔다.",
+					"사원에 갇혀 죽어가던 비극은 끝나고, 탐험대는 비로소 마른 사막으로 걸어 나갔다."
+				]
+			},
+			"rooms": [
+				{
+					"id": 1,
+					"dialogue": [
+						{
+							"emotion": "base",
+							"content": {
+								"korean": "사원 최심부의 제단 위에 거대한 사암 성궤가 놓여 있다."
+							},
+							"type": "speech",
+							"speaker": "narrator"
+						},
+						{
+							"action": "enter",
+							"spot": [
+								3,
+								2
+							],
+							"duration_ms": 500,
+							"speaker": "dune",
+							"type": "direction"
+						},
+						{
+							"content": {
+								"korean": "무서워서 남으려 했는데… 가호라도 받아야 여길 나갈 것 같아서 뒤쫓아왔어."
+							},
+							"emotion": "base",
+							"speaker": "dune",
+							"type": "speech"
+						},
+						{
+							"speaker": "character_any",
+							"type": "speech",
+							"emotion": "base",
+							"content": {
+								"korean": "듄, 조심해. 무기를 바친 자들은 아무도 돌아오지 않았다고 했어."
+							}
+						},
+						{
+							"speaker": "character_1",
+							"emotion": "sad",
+							"content": {
+								"korean": "…오싹할 정도로 정적만 흘러."
+							},
+							"type": "speech"
+						}
+					]
+				},
+				{
+					"id": 3,
+					"dialogue": [
+						{
+							"speaker": "narrator",
+							"emotion": "base",
+							"type": "speech",
+							"content": {
+								"korean": "사암 틈새로 금빛 잔상이 아른거리며 주변으로 퍼져나간다."
+							}
+						},
+						{
+							"emotion": "base",
+							"content": {
+								"korean": "입구 제단 검에 묻어 있던 금빛 먼지와 똑같아. 그 먼지도 이 성궤에서 흘러나온 거였어."
+							},
+							"speaker": "character_any",
+							"type": "speech"
+						},
+						{
+							"type": "speech",
+							"content": {
+								"korean": "…빛이 닿는 곳마다 사암이 굳어가는 것 같아."
+							},
+							"emotion": "sad",
+							"speaker": "character_2"
+						}
+					]
+				},
+				{
+					"id": 5,
+					"dialogue": [
+						{
+							"speaker": "narrator",
+							"content": {
+								"korean": "성궤 주변의 오래된 석판에 고대 문자가 기괴하게 새겨져 있다."
+							},
+							"emotion": "base",
+							"type": "speech"
+						},
+						{
+							"emotion": "base",
+							"content": {
+								"korean": "석판에도 아슈르가 읽은 비문과 같은 말이 있어. 무기를 바치는 게 아니라, 검을 땅에 꽂으라고."
+							},
+							"type": "speech",
+							"speaker": "character_any"
+						},
+						{
+							"action": "enter",
+							"spot": [
+								3,
+								2
+							],
+							"duration_ms": 500,
+							"speaker": "dune",
+							"type": "direction"
+						},
+						{
+							"type": "speech",
+							"speaker": "dune",
+							"emotion": "base",
+							"content": {
+								"korean": "난… 먼저 제단 앞으로 가 볼게. 가호만 받으면 여길 나갈 수 있을 거야."
+							}
+						},
+						{
+							"duration_ms": 400,
+							"action": "exit",
+							"type": "direction",
+							"direction": "up",
+							"speaker": "dune"
+						},
+						{
+							"emotion": "base",
+							"type": "speech",
+							"content": {
+								"korean": "…비문의 경고가 마음에 걸리는군."
+							},
+							"speaker": "character_3"
+						}
+					]
+				},
+				{
+					"dialogue": [
+						{
+							"type": "speech",
+							"emotion": "base",
+							"content": {
+								"korean": "성궤를 받치는 묵주 주변으로 단단한 라피스라줄리가 엉켜 있다."
+							},
+							"speaker": "narrator"
+						},
+						{
+							"emotion": "base",
+							"content": {
+								"korean": "회랑에서 본 검자루 묵주랑 똑같아. 이 성궤가 무기를 삼켜서 굳혀 온 거야."
+							},
+							"type": "speech",
+							"speaker": "character_any"
+						},
+						{
+							"speaker": "narrator",
+							"content": {
+								"korean": "제단 너머에서 거대한 검기가 공기를 찢는 기척이 느껴진다."
+							},
+							"type": "speech",
+							"emotion": "base"
+						},
+						{
+							"content": {
+								"korean": "…숨이 막힐 듯한 압박감이야."
+							},
+							"emotion": "angry",
+							"type": "speech",
+							"speaker": "character_4"
+						}
+					],
+					"id": 9
+				},
+				{
+					"win_dialogue": [
+						{
+							"type": "speech",
+							"speaker": "boss",
+							"content": {
+								"korean": "나 베스페리스는 한때 전쟁터에서 가장 많은 목을 벤 검객이었다. 검이 부르는 피를 더는 볼 수 없었다."
+							},
+							"emotion": "sad"
+						},
+						{
+							"speaker": "character_any",
+							"emotion": "base",
+							"content": {
+								"korean": "아미르가 말한 그 검객이 바로 당신이었군. 세상의 검을 모두 삼키려고 스스로 성궤가 된 거야."
+							},
+							"type": "speech"
+						},
+						{
+							"speaker": "narrator",
+							"emotion": "base",
+							"content": {
+								"korean": "탐험대가 검을 땅에 깊숙이 꽂고 칼자루에서 두 손을 뗀다."
+							},
+							"type": "speech"
+						},
+						{
+							"speaker": "character_any",
+							"type": "speech",
+							"content": {
+								"korean": "봐라, 손을 뗐다. 우리는 더 싸울 생각이 없어."
+							},
+							"emotion": "base"
+						},
+						{
+							"emotion": "sad",
+							"content": {
+								"korean": "…검을 스스로 내려놓는 자를 드디어 마주하는군."
+							},
+							"type": "speech",
+							"speaker": "boss"
+						},
+						{
+							"type": "speech",
+							"speaker": "narrator",
+							"emotion": "base",
+							"content": {
+								"korean": "검 파편 폭풍에 휩쓸렸던 듄이 모래 위에서 비틀거리며 몸을 일으킨다."
+							}
+						},
+						{
+							"type": "speech",
+							"speaker": "dune",
+							"emotion": "sad",
+							"content": {
+								"korean": "가호 같은 건… 처음부터 없었구나. 나도 검을 내려놓을게."
+							}
+						},
+						{
+							"speaker": "narrator",
+							"emotion": "base",
+							"type": "speech",
+							"content": {
+								"korean": "베스페리스의 비통한 검기가 스러지자 닫혔던 사원의 문이 천천히 열렸다."
+							}
+						}
+					],
+					"lose_dialogue": [
+						{
+							"speaker": "boss",
+							"content": {
+								"korean": "무기를 쥔 자는 결코 이 사원을 나가지 못한다!"
+							},
+							"emotion": "angry",
+							"type": "speech"
+						},
+						{
+							"speaker": "character_any",
+							"content": {
+								"korean": "…아직 쓰러질 수 없다. 다시 검을 다잡아라!"
+							},
+							"type": "speech",
+							"emotion": "angry"
+						}
+					],
+					"dialogue": [
+						{
+							"action": "enter",
+							"spot": [
+								3,
+								2
+							],
+							"duration_ms": 500,
+							"speaker": "dune",
+							"type": "direction"
+						},
+						{
+							"type": "speech",
+							"speaker": "narrator",
+							"emotion": "base",
+							"content": {
+								"korean": "성궤를 짊어진 수도승이 기도를 올리며 고개를 든다. 그 앞에 먼저 와 있던 듄이 숨죽이고 서 있다."
+							}
+						},
+						{
+							"content": {
+								"korean": "이 성궤는 자격을 갖춘 자에게 무적의 힘과 가호를 내리는 성물이다. 그대는 무엇을 바치러 왔느냐."
+							},
+							"emotion": "base",
+							"type": "speech",
+							"speaker": "boss"
+						},
+						{
+							"type": "speech",
+							"speaker": "dune",
+							"emotion": "sad",
+							"content": {
+								"korean": "수도승님, 제게 가호를 내려 주세요! 이 사원에서 나가게 해 주세요!"
+							}
+						},
+						{
+							"content": {
+								"korean": "듄이 가호를 얻으려 성궤로 다가서는 순간, 궤가 열리며 부서진 검 파편 폭풍이 뿜어져 나온다!"
+							},
+							"emotion": "base",
+							"type": "speech",
+							"speaker": "narrator"
+						},
+						{
+							"type": "speech",
+							"speaker": "narrator",
+							"emotion": "base",
+							"content": {
+								"korean": "검 파편 폭풍 속에 드러난 수도승의 몸은 이미 성궤와 하나로 굳어 있다. 그 손에는 낡은 검자루가 쥐여 있다."
+							}
+						},
+						{
+							"speaker": "boss",
+							"type": "speech",
+							"emotion": "angry",
+							"content": {
+								"korean": "네가 바라는 기적은 이곳에 없다. 네 칼 역시 이 궤에 묻혀 영원히 잠들 것이다!"
+							}
+						},
+						{
+							"emotion": "angry",
+							"content": {
+								"korean": "사원의 닫힌 입구를 열고 탈출하기 위해 네 분노를 넘어서겠다!"
+							},
+							"speaker": "character_any",
+							"type": "speech"
+						},
+						{
+							"emotion": "sad",
+							"content": {
+								"korean": "…쏟아지는 검기가 피를 말리는 것 같아."
+							},
+							"speaker": "character_1",
+							"type": "speech"
+						}
+					],
+					"id": 15
+				}
+			],
+			"prologue": {
+				"korean": [
+					"사원의 가장 깊은 제단, 성궤를 짊어진 수도승이 묵묵히 기도를 올리고 있었다.",
+					"오래전부터 수많은 검객이 무적의 가호를 얻으려 찾아왔지만, 돌아간 이는 없는 곳.",
+					"이제 사원에 갇힌 운명을 끝내고 밖으로 나갈 마지막 문을 열어야 한다."
+				]
+			}
+		}
+	]
+}

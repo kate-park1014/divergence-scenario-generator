@@ -67,7 +67,7 @@ boss_list 의 `tone`(bossGen2 `BOSS_TONES` id)이 이야기 톤을 정한다. bo
 
 ### 결정론적 주입 (LLM 출력 위에 orchestrator가 덮어씀)
 - `id=<theme>_<key>_<level>`, **`level=bossIndex`** (0~9), `theme`.
-- 챕터 생성이 안 읽는 필드는 저장하지 않음: `rising_count`, `final_boss.surface_identity/appearance_npc/zodiac_sign`, `npc_roles` 의 `title/turn_order/turn_scene`(role·arc 만 저장), 5화의 빈 `random_boss_title/boss_trace`. (툴 스키마에선 계속 생성 — summary 를 쓰는 재료)
+- 챕터 생성이 안 읽는 필드는 저장하지 않음: `rising_count`, `final_boss.appearance_npc/zodiac_sign`, `npc_roles` 의 `title/turn_order/turn_scene`(role·arc 만 저장), 5화의 빈 `random_boss_title/boss_trace`. (툴 스키마에선 계속 생성 — summary 를 쓰는 재료)
 - `final_boss.id/name` = boss_list 고정. (final_boss appearance 는 `appearance_npc`/`appearance_boss` 스키마.)
 - `scenarioOutline` order1~4 boss=`'random_boss'`, **order5 boss=보스 pool**, `act_tone.tension` intro/rising/climax=1/3/5.
 - 보스↔key↔pool 매핑은 `boss_pool_map.js` 의 `BOSS_POOL_MAP[theme]` 에 고정. boss_list 순서와 일치.
