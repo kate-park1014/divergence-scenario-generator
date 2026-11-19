@@ -43,12 +43,13 @@ curl -s -X POST localhost:5178/api/storyarc/bulk -H 'Content-Type: application/j
 node -e '
 const http=require("http");
 const ids=["hell_stampy_30"];                                   // 아크 id 들
-const bosses={hell_stampy_30:{pool_id:"pool_MysticStamp_Stampy_V1",monster_id:"mon_..."}};
+const bosses={hell_stampy_30:{pool_id:"pool_415",monster_id:"mon_..."}};
 const body=JSON.stringify({storyarcIds:ids,concurrency:5,skipGenerate:false,skipTranslate:true,bosses});
 const r=http.request({hostname:"localhost",port:5178,path:"/api/scenario/bulk-pipeline",method:"POST",headers:{"Content-Type":"application/json","Content-Length":Buffer.byteLength(body)},timeout:0},res=>{let b="";res.on("data",c=>b+=c);res.on("end",()=>console.log(res.statusCode,b))});
 r.end(body);'
 ```
-- pool_id = `pool_` + 보스 id, monster_id 는 boss_list 에 있으면 넣는다 (desert 묶음엔 없음)
+- pool_id 는 `boss_list/monster_pool_map.json` 에서 보스 이름 + theme 으로 찾는다 (같은 이름이 다른 테마에 있을 수 있음, 예: Vane). monster_id 는 boss_list 에 있으면 넣는다 (desert 묶음엔 없음)
+- `gen-arc-one.mjs` 도 같은 맵에서 pool 을 찾아 아크 5화 boss 에 넣는다
 - "content 가 비었거나 placeholder 글자가 든 speech" 로 실패하면 그 아크만 다시 돌리면 대개 통과한다 (실패 메시지에 걸린 대사 예시가 나온다)
 - 생성 직후 원본을 따로 복사해 두면 손 수정 전과 비교하기 좋다
 

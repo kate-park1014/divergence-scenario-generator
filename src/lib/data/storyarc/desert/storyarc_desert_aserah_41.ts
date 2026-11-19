@@ -154,7 +154,7 @@ export const storyarc_desert_aserah_41: StoryArc = {
 			"order": 5,
 			"act": "climax_finale",
 			"title": "검의 사죄",
-			"boss": "pool_GlassCalamity_Aserah_V1",
+			"boss": "pool_406",
 			"npc": "amir",
 			"summary": "신전 깊은 곳에서 거대한 칼날 거상 아세라가 분노를 터뜨리며 유리 대검을 휘둘러 격렬하게 싸운다. 전투 끝에 자애로운 가면이 깨지고 타락한 정령의 슬픈 목소리가 온 신전에 울려 퍼진다. 주인공은 억울하게 갇힌 이들을 기억하며 보석 조각상에 검을 숙여 사죄한다. 그러자 아세라의 복수심이 가라앉으며 아미르의 저주가 풀리고 사막에 평화가 찾아온다.",
 			"place": "아세라의 유구한 신전"

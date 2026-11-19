@@ -6,6 +6,7 @@
 //   npm run eval:arcs                      # 스토리아크부터 새로 (스토리아크·시나리오 프롬프트 둘 다 테스트)
 //   npm run eval:arcs -- --keep-arc        # 등록된 기존 아크로 시나리오만 (시나리오 프롬프트만 테스트)
 //   npm run eval:arcs -- --boss=carnivex   # 세트 중 일부만
+//   npm run eval:arcs -- --arc-only        # 시나리오 없이 아크만 (<key>.arc.ts + <key>.boss.json → eval/checklist_arc.md 로 평가)
 
 import { readFileSync, writeFileSync, mkdirSync, rmSync } from 'node:fs';
 import { join } from 'node:path';
@@ -17,13 +18,18 @@ import type { StoryArc } from '$lib/types';
 
 // 고정 테스트 세트. 바꾸면 이전 run 과 비교할 수 없으니 늘리기만 한다
 const EVAL_SET = [
-	{ bossList: 'boss_list/bulk/desert_20261116_114401.json', bossId: 'GlassCalamity_Aserah_V1', key: 'aserah', arcId: 'desert_aserah_41' }, // tragic: 사죄로 푸는 결말
-	{ bossList: 'boss_list/bulk/desert_20261116_114401.json', bossId: 'BoneScab_Carnivex_V1', key: 'carnivex', arcId: 'desert_carnivex_42' } // horror: 겉모습(길잡이) 반전
+	{ theme: 'desert', bossList: 'boss_list/bulk/desert_20261116_114401.json', bossId: 'GlassCalamity_Aserah_V1', key: 'aserah', arcId: 'desert_aserah_41' }, // tragic: 사죄로 푸는 결말
+	{ theme: 'desert', bossList: 'boss_list/bulk/desert_20261116_114401.json', bossId: 'BoneScab_Carnivex_V1', key: 'carnivex', arcId: 'desert_carnivex_42' }, // horror: 겉모습(길잡이) 반전
+	// 아래 3개: 1화 위기를 지어낸 장치로 만들던 보스 (서리 봉인·태엽 열쇠·봉인 주술)
+	{ theme: 'hell', bossList: 'eval/fixtures/hell_philomel_1118.json', bossId: 'MartyrCradle_Philomel_V1', key: 'philomel', arcId: 'hell_philomel_39' }, // 탐험대와 얽히는 이유가 없던 11/18 카드
+	{ theme: 'hell', bossList: 'boss_list/bulk/hell_20261116_164915.json', bossId: 'Jester_Razzle_V1', key: 'razzle', arcId: 'hell_razzle_34' },
+	{ theme: 'hell', bossList: 'boss_list/bulk/hell_20261116_164915.json', bossId: 'SoulBroker_Vane_V1', key: 'vane', arcId: 'hell_vane_35' }
 ];
 
 const BASE = process.env.BASE ?? 'http://localhost:5178';
 const args = process.argv.slice(2);
 const keepArc = args.includes('--keep-arc');
+const arcOnly = args.includes('--arc-only');
 const only = args.find((a) => a.startsWith('--boss='))?.slice('--boss='.length).split(',');
 const ROOT = process.cwd();
 const runDir = join(ROOT, 'eval/runs', new Date().toISOString().replace(/[:.]/g, '-').slice(0, 19));
@@ -44,14 +50,17 @@ const badSpeech = (rooms: Room[]) =>
 		.flatMap((r) => [...(r.dialogue ?? []), ...(r.win_dialogue ?? []), ...(r.lose_dialogue ?? [])])
 		.filter((x) => x.type === 'speech' && (!x.content?.korean || /character_(any|[1-4])/.test(x.content.korean))).length;
 
+const loadBoss = (item: (typeof EVAL_SET)[number]) =>
+	JSON.parse(readFileSync(join(ROOT, item.bossList), 'utf8')).bosses.find((b: { id: string }) => b.id === item.bossId);
+
 async function makeArc(item: (typeof EVAL_SET)[number]): Promise<StoryArc> {
 	if (keepArc) return getStoryarc(item.arcId)!;
-	const boss = JSON.parse(readFileSync(join(ROOT, item.bossList), 'utf8')).bosses.find((b: { id: string }) => b.id === item.bossId);
+	const boss = loadBoss(item);
 	const outDirName = `_eval_${item.key}`;
-	const r = await post('/api/storyarc/bulk', { theme: 'desert', bosses: [boss], mapping: [{ key: item.key, pool: `pool_${item.bossId}` }], outDirName, concurrency: 1 });
+	const r = await post('/api/storyarc/bulk', { theme: item.theme, bosses: [boss], mapping: [{ key: item.key, pool: `pool_${item.bossId}` }], outDirName, concurrency: 1 });
 	if (r.failedCount) throw new Error(JSON.stringify(r.failed));
 	const dir = join(ROOT, 'src/lib/data/storyarc', outDirName);
-	const file = join(dir, `storyarc_desert_${item.key}_0.ts`);
+	const file = join(dir, `storyarc_${item.theme}_${item.key}_0.ts`);
 	const text = readFileSync(file, 'utf8');
 	rmSync(dir, { recursive: true });
 	return JSON.parse(text.slice(text.indexOf('= {') + 2).trim().replace(/;$/, ''));
@@ -104,6 +113,13 @@ await Promise.all(
 	targets.map(async (item) => {
 		try {
 			const arc = await makeArc(item);
+			if (arcOnly) {
+				const { id, name, appearance, surface_identity, true_identity, motivation, twist, tone } = loadBoss(item);
+				writeFileSync(join(runDir, `${item.key}.arc.ts`), `export const arc = ${JSON.stringify(arc, null, '\t')};\n`);
+				writeFileSync(join(runDir, `${item.key}.boss.json`), JSON.stringify({ id, name, appearance, surface_identity, true_identity, motivation, twist, tone }, null, '\t'));
+				console.log('ok', item.key);
+				return;
+			}
 			const scenarios = await Promise.all([1, 2, 3, 4, 5].map((o) => makeScenario(arc, o)));
 			writeFileSync(join(runDir, `${item.key}.json`), JSON.stringify({ arc, scenarios }, null, '\t'));
 			writeFileSync(join(runDir, `${item.key}.md`), toMarkdown(arc, scenarios));

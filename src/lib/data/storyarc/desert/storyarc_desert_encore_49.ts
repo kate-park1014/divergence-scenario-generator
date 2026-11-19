@@ -156,7 +156,7 @@ export const storyarc_desert_encore_49: StoryArc = {
 			"order": 5,
 			"act": "climax_finale",
 			"title": "막이 내리는 결전",
-			"boss": "pool_MirageTroupe_Encore_V1",
+			"boss": "pool_414",
 			"npc": "dune",
 			"summary": "주인공은 듄과 함께 진홍빛 천막 무대에 올라가 최종보스 앙코르와 마주한다. 앙코르는 천막을 거두어 수많은 환상 관객을 보여주며 자신을 위해 진짜로 쓰러져 달라고 요청한다. 주인공은 앙코르의 엉성한 레이피어 공격을 피하고 대본을 덮어 환상 무대를 깨뜨린다.",
 			"place": "진홍빛 천막 무대"

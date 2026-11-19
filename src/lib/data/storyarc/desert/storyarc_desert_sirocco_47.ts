@@ -156,7 +156,7 @@ export const storyarc_desert_sirocco_47: StoryArc = {
 			"order": 5,
 			"act": "climax_finale",
 			"title": "끝나지 않은 결투",
-			"boss": "pool_SwordStorm_Sirocco_V1",
+			"boss": "pool_412",
 			"npc": "dune",
 			"summary": "주인공은 검기의 근원인 황토빛 모래 구덩이에 도달하고 뒤따라온 듄이 곁에 선다. 휘몰아치던 모래폭풍이 멈추더니 모래로 이루어진 거대 검객 시로코가 나타나 칼끝을 겨눈다. 치열한 전투 도중 주인공은 가지고 있던 결투의 깃발을 모래에 꽂아 시로코의 승부를 정식으로 받아들인다. 결투의 맹세가 이루어지자 시로코는 만족한 듯 모래가 되어 조용히 흩어진다.",
 			"place": "황토빛 모래 구덩이"

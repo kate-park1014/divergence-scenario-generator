@@ -100,18 +100,23 @@ export function buildStoryPrompt(boss: BossInput, npcs: NpcInput[], theme: strin
 - logline 을 먼저 쓴다: "[주인공]이 [무대]에서 [무엇을 하다가] [보스의 진짜 정체]를 알게 되는 이야기" 한 문장. 다섯 화는 모두 이 문장에서 나온다
 - 톤은 보스 카드의 tone 을 따른다. 보스의 동기는 motivation 하나이고, 반전은 twist 를 따른다. 보스 설정을 바꾸거나 덧붙이지 않는다
   - motive_scene: 보스 카드의 동기를 만든 사건을 누가 무엇을 했는지 한 장면으로 정한다 ("배신당했다"를 장면으로 보여주는 것이지 설정을 덧붙이는 게 아니다). 2~4화의 흔적·NPC 말에 그 일부가 나온다
-- key_object·wrong_action·right_action 은 보스의 motivation 에서 정한다. 보스가 원하는 것이나 화나는 이유에 직접 걸린 물건과 행동이다
-  - 예: 등대 불이 꺼지는 것을 못 견디는 보스 → key_object=등불, wrong_action=등불을 끈다, right_action=등불을 다시 켠다
-  - 1화에 주인공은 wrong_action 을 한다 (아직 아무것도 모르니까). 2~4화는 그 결과를 겪으며 의심하고 알아내는 과정이다. 5화에 right_action 을 한다
+- 1화 위기(crisis)는 보스 카드에서 나온다. 카드에 적힌 보스의 행동이나 상태가 탐험대에게 닿은 결과다. 카드의 어느 문장에서 나왔는지 crisis_source 에 그대로 옮겨 쓴다
+  - 주인공의 행동으로 위기가 생긴다면, 보스가 꾸민 일에 속아서 하는 행동이어야 한다 (예: 공짜라던 도장을 받는다). 우연한 실수나 착각으로 위기를 만들지 않는다
+  - 2~4화는 그 위기를 겪으며 의심하고 알아내는 과정이다. 5화에 right_action 을 한다
+- 보스 카드에 없는 장치(봉인·등불·결계·열쇠·명부·차단막 등)를 만들어 위기나 해결의 원인으로 쓰지 않는다
+- key_object·right_action 은 보스 카드에 나오는 것이나 그와 바로 이어진 것으로 정한다. key_object 가 어디서 왔는지와 왜 통하는지를 key_object_reason 에 한 문장으로 쓴다
+  - 예: 등대 불이 꺼지는 것을 못 견디는 보스 → key_object=등불, right_action=등불을 다시 켠다
   - right_action 이 무엇을 풀거나 멈추는지는 2~4화 중 한 화에서 NPC 의 말이나 물건으로 먼저 알려준다. 5화에 처음 나오는 해결법은 쓰지 않는다
-  - 주인공은 위험하다고 알게 된 일을 다시 하지 않는다. 2~4화에 wrong_action 이 또 나온다면 주인공이 아직 모르는 상태이거나, 다른 인물이 하는 것이다
+  - 주인공은 위험하다고 알게 된 일을 다시 하지 않는다
   - 1~4화에 핵심 물건이 어디서 나오는지 쓴다 (누가 왜 건넸는지, 어디에 있었는지). 최종보스가 직접 건네지 않는다
+  - 주인공이 핵심 물건을 손에 넣는 화의 story 에 key_object_reason(왜 통하는지)을 한 문장으로 그대로 쓴다. NPC 가 그걸 어떻게 아는지도 쓴다 (예: "등대지기였던 할머니는 불이 다시 켜지면 그가 잠든다고 말한다")
 - 사건 줄기는 하나다. 보스와 상관없는 곁가지 사건이나 장치 조작을 만들지 않는다
 - 2~4화마다 주인공이 최종보스에 대해 새로 알게 되는 사실(new_fact)이 하나씩 있다. 같은 일을 반복하지 않고, 화가 지날수록 정체에 가까워진다
   - true_identity·motivation 을 확정하는 것은 5화다. 2~4화의 new_fact 는 소문·의심·단서까지만 쓴다 (나쁜 예: 3화 "주인공은 상인이 사실 검객이라는 사실을 깨닫는다")
 - 주인공의 행동에는 이유가 있다: 무엇을 보고, 누구 말을 듣고 그렇게 하는지 쓴다
 - 주인공이 이 일을 끝까지 쫓는 이유(stakes)를 1화에서 만든다. 쫓지 않으면 주인공이나 동료가 잃는 것이 있어야 한다 (길이 막힌다, 동료가 다친다, 돌아갈 수 없다 등). 호기심만으로 쫓지 않는다
   - 2~4화의 첫 문장은 이 이유 때문에 다음 장소로 가는 것으로 시작한다. "소문을 따라 이동한다"처럼 이유 없이 옮겨 가지 않는다
+  - 1~4화의 마지막 문장은 다음 화 장소를 가리킨다 (누가 그곳을 알려 주거나, 흔적이 그쪽으로 이어진다). 다음 화 첫 문장은 그 단서를 따라간다. "탈출구를 찾으려고"처럼 어느 장소에나 붙는 이유만 쓰지 않는다
   - 이 사건의 원인을 보스에게 둘 때 억지 동기(예: 서운해서 길을 막는다)를 만들지 않는다. 사고나 보스의 평소 행동이 낳은 결과면 충분하다
 - 보스는 자기가 직접 보거나 겪은 일에만 반응한다. 보스가 없는 곳에서 일어난 일(예: 다른 사람이 건넨 물건을 주인공이 거절함)을 보스가 알고 화내게 하지 않는다
 - story 는 3~4문장. 문장마다 앞 문장의 결과로 이어진다. "그러자"·"그래서"로 시작하는 문장은 story 하나에 한 번까지
@@ -145,8 +150,10 @@ export const storyTool = [
 				properties: {
 					logline: { type: 'string' },
 					boss_name_korean: { type: 'string', description: '최종보스 이름의 한국어 발음. 이야기에서는 이 이름만 쓴다.' },
-					key_object: { type: 'string', description: '보스 motivation 에 걸린 핵심 물건. 10자 이내.' },
-					wrong_action: { type: 'string' },
+					crisis: { type: 'string', description: '1화 위기 한 문장. 보스 카드에 적힌 보스의 행동이나 상태가 탐험대에게 닿은 결과.' },
+					crisis_source: { type: 'string', description: 'crisis 가 나온 보스 카드 문장을 그대로 옮긴 것.' },
+					key_object: { type: 'string', description: '보스 카드에 나오거나 그와 바로 이어진 핵심 물건. 10자 이내.' },
+					key_object_reason: { type: 'string', description: 'key_object 가 어디서 왔는지와 왜 통하는지 한 문장.' },
 					right_action: { type: 'string' },
 					stakes: { type: 'string', description: '주인공이 끝까지 쫓는 이유: 쫓지 않으면 잃는 것. 1화에서 생긴다. 한 문장.' },
 					motive_scene: {
@@ -173,7 +180,7 @@ export const storyTool = [
 						}
 					}
 				},
-				required: ['logline', 'boss_name_korean', 'key_object', 'wrong_action', 'right_action', 'stakes', 'motive_scene', 'episodes']
+				required: ['logline', 'boss_name_korean', 'crisis', 'crisis_source', 'key_object', 'key_object_reason', 'right_action', 'stakes', 'motive_scene', 'episodes']
 			}
 		}
 	}
@@ -182,8 +189,10 @@ export const storyTool = [
 export type StoryResult = {
 	logline: string;
 	boss_name_korean: string;
+	crisis: string;
+	crisis_source: string;
 	key_object: string;
-	wrong_action: string;
+	key_object_reason: string;
 	right_action: string;
 	stakes: string;
 	motive_scene: string;
@@ -207,8 +216,8 @@ export function buildFieldsPrompt(boss: BossInput, story: StoryResult): string {
 - chapter_name: korean 제목을 먼저 정한다 (12자 이내, 콜론·대시 부제 없음). 나머지 8개 언어는 그 korean 제목을 같은 뜻으로 번역한다
   - 모든 언어가 12자(공백 포함) 이내여야 한다. 넘으면 기계적으로 잘려 뜻이 깨진다. 직역이 길면 핵심 단어만 남겨 짧게 옮긴다 (예: "사막의 검정령" → english "Sword Spirit")
 - world.setting: 무대를 한 문장으로 "[어디]에 있는 [무엇]"
-- world.rule: wrong_action 을 하면 무슨 일이 일어나는지 한 문장
-- world.how: 왜 그런 일이 일어나는지 한 문장
+- world.rule: 1화 위기(crisis)를 그대로 두면 무슨 일이 일어나는지 한 문장
+- world.how: 왜 그런 일이 일어나는지 한 문장. 보스 카드 설정(crisis_source)에서 이유를 가져온다
 - world.secret: 주인공이 5화에서 알게 되는 사실 1~2문장. 보스 카드 문장을 옮기지 말고 쉬운 말로
 - protagonist_goal: "[무엇을] 해야 한다. [하지 않으면 생기는 일] 때문이다" 꼴의 두 문장. 이야기의 stakes 를 쓴다
 - act_tone: intro(1화)·rising(2~4화)·climax_finale(5화)마다 mood(분위기 한 구), narrative_role(그 부분의 역할 한 구)

@@ -156,7 +156,7 @@ export const storyarc_hell_pyralis_33: StoryArc = {
 			"order": 5,
 			"act": "climax_finale",
 			"title": "불꽃 속의 눈물",
-			"boss": "pool_SoulCradle_Pyralis_V1",
+			"boss": "pool_418",
 			"npc": "cinder",
 			"summary": "주인공은 지상으로 돌아갈 길을 열기 위해 피랄리스가 기다리는 피랄리스의 절벽으로 올라간다. 신더가 먼저 도달해 피랄리스의 격렬한 공격을 함께 막아선다. 피랄리스는 사나운 짐승처럼 울부짖으며 덤벼들고, 싸움 끝에 가슴의 혼석에 금이 가며 어린아이의 영혼이 드러난다. 피랄리스가 아이 대신 벌을 받았으니 제발 데리고 나가 달라고 애원하자, 주인공은 영혼 혼석을 지상으로 데리고 나간다.",
 			"place": "피랄리스의 절벽"

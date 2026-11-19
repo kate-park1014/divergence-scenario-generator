@@ -156,7 +156,7 @@ export const storyarc_hell_amnion_38: StoryArc = {
 			"order": 5,
 			"act": "climax_finale",
 			"title": "붉은 고치의 정체",
-			"boss": "pool_SpiritCyst_Amnion_V1",
+			"boss": "pool_423",
 			"npc": "mara",
 			"summary": "주인공은 동료를 구하기 위해 마라와 함께 암니온이 떠 있는 용암 바다 한가운데에 도달한다. 거대한 고치가 가엾은 목소리로 껍질을 가라며 꾀어내자 주인공은 검을 뽑아 암니온과 격돌한다. 싸움 도중 검끝에 껍질이 갈라지자 성녀의 목소리가 아기들의 웃음소리로 바뀌며 기괴한 손들이 쏟아져 나온다. 주인공은 껍질이 더 벌어지기 전에 챙겨 온 주술 실로 껍질을 강하게 묶어 봉인한다.",
 			"place": "암니온의 주술 고치"

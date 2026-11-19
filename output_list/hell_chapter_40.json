@@ -2,22 +2,30 @@
 	"chapter_order": 40,
 	"difficulty_level": 40,
 	"chapter_name": {
-		"spanish": "Corazón",
-		"hindi": "नरक का दिल",
-		"thai": "หัวใจขุมนรก",
-		"english": "Hell Heart",
-		"korean": "지옥의 심장",
-		"japanese": "地獄の心臓",
-		"vietnamese": "Tim địa ngục",
-		"chinese": "地狱之心",
-		"french": "Cœur d'enfer"
+		"korean": "지옥의 집행자",
+		"english": "Hell Warden",
+		"french": "Bourreau",
+		"spanish": "Verdugo",
+		"japanese": "地獄の執行者",
+		"chinese": "地狱执行者",
+		"vietnamese": "Đao phủ",
+		"thai": "เพชฌฆาตนรก",
+		"hindi": "नरक जल्लाद"
 	},
 	"scenarios": [
 		{
 			"scenario_id": "hell_philomel_39_01",
 			"order": 1,
 			"random_boss_title": {
-				"korean": "지옥 사냥꾼"
+				"korean": "망령 파수꾼",
+				"english": "Wraith Sentinel",
+				"japanese": "亡霊の番人",
+				"chinese": "亡灵守卫",
+				"french": "Sentinelle spectrale",
+				"spanish": "Centinela espectral",
+				"vietnamese": "Kẻ Gác U Linh",
+				"thai": "ผู้พิทักษ์วิญญาณ",
+				"hindi": "प्रेत संतरी"
 			},
 			"act": "intro",
 			"theme": "hell",
@@ -43,48 +51,143 @@
 			"boss": {
 				"pool_id": "random_boss"
 			},
+			"prologue": {
+				"korean": [
+					"지옥의 붉은 입구. 바위 틈마다 핏빛 지옥불이 뿜어져 나온다.",
+					"이대로 두면 뜨거운 열기가 마법 대륙 전체를 삼킬 것이다.",
+					"번지는 불길의 근원을 찾아, 탐험대는 심연 안으로 발을 내딛는다."
+				],
+				"english": [
+					"The crimson entrance to Hell. Blood-red hellfire spews from every rock crevice.",
+					"Left unchecked, this scorching heat will consume the entire magical continent.",
+					"Seeking the source of the spreading flames, the expedition steps into the abyss."
+				],
+				"japanese": [
+					"地獄の赤い入口。岩の亀裂から血のような地獄の業火が噴き出している。",
+					"このまま放置すれば、凄まじい熱気が魔法大陸全土を呑み込むだろう。",
+					"広がる炎の根源を求め、探検隊は深淵の中へと足を踏み入れる。"
+				],
+				"chinese": [
+					"地狱的红色入口。岩石缝隙间喷涌出血红色的地狱之火。",
+					"任其发展下去，这股酷热将吞噬整座魔法大陆。",
+					"为了寻找蔓延火焰的源头，探险队踏入了深渊之中。"
+				],
+				"french": [
+					"L'entrée cramoisie de l'Enfer. Des flammes infernales sanglantes s'échappent de chaque fissure rocheuse.",
+					"Si rien n'est fait, cette chaleur brûlante engloutira tout le continent magique.",
+					"En quête de la source des flammes qui se propagent, l'expédition s'aventure dans l'abîme."
+				],
+				"spanish": [
+					"La entrada carmesí del Infierno. Un fuego infernal sanguinolento brota de cada grieta en la roca.",
+					"Si no se detiene, este calor abrasador engullirá todo el continente mágico.",
+					"En busca del origen de las llamas que se extienden, la expedición se adentra en el abismo."
+				],
+				"vietnamese": [
+					"Lối vào đỏ rực của Địa Ngục. Hỏa ngục màu máu phun ra từ từng kẽ đá.",
+					"Nếu cứ để thế này, sức nóng thiêu đốt sẽ nuốt chửng toàn bộ đại lục phép thuật.",
+					"Tìm kiếm nguồn gốc của ngọn lửa đang lan rộng, đội khám phá bước chân vào vực thẳm."
+				],
+				"thai": [
+					"ทางเข้าสีแดงฉานสู่ขุมนรก ไฟนรกสีเลือดพวยพุ่งออกมาจากทุกซอกหิน",
+					"หากปล่อยไว้เช่นนี้ ความร้อนแผดเผาจะกลืนกินทวีปเวทมนตร์ทั้งหมด",
+					"เพื่อตามหาต้นตอของเปลวเพลิงที่แพร่กระจาย คณะสำรวจจึงย่างก้าวเข้าสู่ห้วงลึก"
+				],
+				"hindi": [
+					"नर्क का लाल प्रवेश द्वार। चट्टानों की हर दरार से खून सा लाल नारकीय अनल उबल रहा है।",
+					"अगर इसे ऐसे ही छोड़ दिया गया, तो यह भीषण गर्मी पूरे जादुई महाद्वीप को निगल जाएगी।",
+					"फैलती लपटों के स्रोत की खोज में, खोजी दल अतल गहराई में कदम रखता है।"
+				]
+			},
 			"rooms": [
 				{
 					"id": 1,
 					"dialogue": [
 						{
+							"speaker": "narrator",
+							"emotion": "base",
 							"type": "speech",
 							"content": {
-								"korean": "절벽을 오르자 뜨거운 바위에 기이한 형광 빛깔 눈물 자국이 남아 있다."
-							},
-							"emotion": "base",
-							"speaker": "narrator"
+								"korean": "지옥 입구에 들어서자 바위 틈새로 붉은 불길이 뿜어져 나온다.",
+								"english": "Upon entering the Hellgate, red flames spew from the crevices of the rocks.",
+								"japanese": "地獄の入口に足を踏み入れると、岩の隙間から赤い炎が噴き出している。",
+								"chinese": "刚一踏入地狱入口，红色的火焰便从岩石缝隙中喷涌而出。",
+								"french": "En franchissant l'entrée de l'Enfer, des flammes rouges s'échappent des fissures de la roche.",
+								"spanish": "Al entrar en la puerta del Infierno, brotan llamas rojas de las grietas de las rocas.",
+								"vietnamese": "Khi bước vào lối vào Địa Ngục, những ngọn lửa đỏ rực phun ra từ kẽ đá.",
+								"thai": "เมื่อย่างก้าวเข้าสู่ทางเข้านรก เปลวไฟสีแดงก็พวยพุ่งออกมาจากซอกหิน",
+								"hindi": "नर्क के प्रवेश द्वार पर कदम रखते ही चट्टानों की दरारों से लाल लपटें निकलने लगती हैं।"
+							}
 						},
 						{
-							"action": "enter",
-							"duration_ms": 500,
 							"spot": [
-								2,
-								3
+								3,
+								2
 							],
 							"speaker": "ash",
-							"type": "direction"
+							"duration_ms": 500,
+							"type": "direction",
+							"action": "enter"
 						},
 						{
+							"type": "speech",
 							"speaker": "ash",
-							"emotion": "base",
 							"content": {
-								"korean": "안녕하세요! 저는 지옥불 위험을 연구하는 연구원 애쉬예요. 절벽의 이상 열기를 조사하러 왔어요."
+								"korean": "저는 애쉬예요. 붉은 불길이 퍼진다는 소식을 듣고 조사하러 왔어요.",
+								"english": "I'm Ash. I heard the red flames were spreading and came to investigate.",
+								"japanese": "私はアッシュです。赤い炎が広がっていると聞いて、調査に来ました。",
+								"chinese": "我是亚什。听说红色的火焰在蔓延，特意赶来调查。",
+								"french": "Je m'appelle Ash. J'ai entendu dire que des flammes rouges se propageaient et je suis venu enquêter.",
+								"spanish": "Soy Ash. Oí que las llamas rojas se estaban extendiendo y vine a investigar.",
+								"vietnamese": "Tôi là Ash. Tôi nghe tin ngọn lửa đỏ đang lan rộng nên đến đây điều tra.",
+								"thai": "ฉันชื่อแอช ได้ยินข่าวว่าเปลวไฟสีแดงกำลังแพร่กระจาย เลยมาตรวจสอบค่ะ",
+								"hindi": "मैं ऐश हूँ। मुझे लाल लपटों के फैलने की खबर मिली, इसलिए मैं जांच करने आया हूँ।"
 							},
-							"type": "speech"
+							"emotion": "base"
 						},
 						{
+							"speaker": "character_any",
+							"type": "speech",
 							"emotion": "base",
 							"content": {
-								"korean": "발밑 바위가 화상을 입을 정도로 달아올라 있어."
+								"korean": "바위 틈새에 검고 날카로운 조각이 박혀 있군요.",
+								"english": "There's a sharp black fragment embedded in the rock crevice.",
+								"japanese": "岩の隙間に黒く鋭い破片が突き刺さっていますね。",
+								"chinese": "岩石缝隙中嵌着一片锋利的黑色碎片。",
+								"french": "Un fragment noir et aiguisé est encastré dans la fissure de la roche.",
+								"spanish": "Hay un fragmento negro y afilado incrustado en la grieta de la roca.",
+								"vietnamese": "Có một mảnh sắc nhọn màu đen cắm trong kẽ đá.",
+								"thai": "มีชิ้นส่วนสีดำอันแหลมคมฝังอยู่ในซอกหินสินะ",
+								"hindi": "चट्टान की दरार में एक तीखा काला टुकड़ा फंसा हुआ है।"
+							}
+						},
+						{
+							"type": "speech",
+							"speaker": "ash",
+							"content": {
+								"korean": "이 금 간 흑요석 조각을 보세요. 지옥의 집행자 필로멜의 갑옷 조각이에요. 그 갑옷이 갈라진 틈에서 불이 새어 나와 여기까지 번지고 있어요.",
+								"english": "Look at this cracked obsidian shard. It's a piece of armor belonging to Philomel, the Executioner of Hell. Fire is leaking from the cracks in that armor and spreading all the way here.",
+								"japanese": "このひび割れた黒曜石の破片を見てください。地獄の執行者フィロメルの鎧の破片です。その鎧の裂け目から火が漏れ出し、ここまで広がっているのです。",
+								"chinese": "看看这块带有裂痕的黑曜石碎片。这是地狱执行者菲洛梅尔的铠甲碎片。火焰正从那具铠甲的裂缝中泄漏出来，一直蔓延到这里。",
+								"french": "Regardez ce fragment d'obsidienne fissuré. C'est un morceau de l'armure de Philomel, le bourreau de l'Enfer. Le feu s'échappe des fissures de cette armure et s'étend jusqu'ici.",
+								"spanish": "Mira este fragmento de obsidiana agrietado. Es un trozo de la armadura de Philomel, el ejecutor del Infierno. El fuego se filtra por las grietas de esa armadura y se está extendiendo hasta aquí.",
+								"vietnamese": "Hãy nhìn mảnh đá hắc diện thạch bị nứt này xem. Đây là mảnh giáp của Philomel, Kẻ Hành Quyết Địa Ngục. Lửa rò rỉ từ vết nứt trên bộ giáp đó và lan tận đến đây.",
+								"thai": "ดูชิ้นส่วนหินออบซิเดียนที่มีรอยร้าวนี้สิ นี่คือชิ้นส่วนเกราะของฟิโลเมล ผู้ลงอาญานรก ไฟรั่วไหลออกมาจากรอยร้าวของเกราะนั้นและลามมาถึงที่นี่",
+								"hindi": "इस दरार वाले ओब्सीडियन टुकड़े को देखिए। यह नर्क के जल्लाद फिलोमेल के कवच का टुकड़ा है। उस कवच की दरारों से आग रिसकर यहाँ तक फैल रही है।"
 							},
-							"speaker": "character_any",
-							"type": "speech"
+							"emotion": "sad"
 						},
 						{
 							"type": "speech",
 							"content": {
-								"korean": "…숨 쉴 때마다 목이 타는 것 같아."
+								"korean": "…숨이 턱 막히는 열기다.",
+								"english": "…This heat is suffocating.",
+								"japanese": "…息が詰まるような熱気だ。",
+								"chinese": "……真是令人窒息的酷热。",
+								"french": "…Cette chaleur est suffocante.",
+								"spanish": "…Es un calor sofocante.",
+								"vietnamese": "…Sức nóng ngột ngạt đến nghẹt thở.",
+								"thai": "…เป็นความร้อนที่ชวนให้อึดอัดแทบหายใจไม่ออก",
+								"hindi": "…यह तो दम घोंटने वाली गर्मी है।"
 							},
 							"emotion": "sad",
 							"speaker": "character_1"
@@ -94,414 +197,164 @@
 				{
 					"dialogue": [
 						{
-							"type": "speech",
 							"emotion": "base",
 							"content": {
-								"korean": "절벽 바위에 꽂힌 갑옷에서 차가운 서리 봉인을 발견했다. 손이 닿자 봉인이 툭 떨어져 나갔다."
+								"korean": "바닥에 솟구친 지옥불이 점점 더 넓게 번져 나가고 있다.",
+								"english": "The hellfire erupting from the floor is spreading wider and wider.",
+								"japanese": "床から湧き上がる地獄の業火が、次第に広く燃え広がっている。",
+								"chinese": "从地面喷涌出的地狱之火正在向四周不断蔓延。",
+								"french": "Le feu infernal jaillissant du sol se propage de plus en plus largement.",
+								"spanish": "El fuego infernal que brota del suelo se extiende cada vez más rápido.",
+								"vietnamese": "Hỏa ngục phun lên từ mặt đất đang ngày càng lan rộng ra.",
+								"thai": "ไฟนรกที่พวยพุ่งขึ้นมาจากพื้นกำลังแพร่กระจายเป็นวงกว้างขึ้นเรื่อยๆ",
+								"hindi": "जमीन से भड़क रही नारकीय आग और भी तेजी से फैलती जा रही है।"
 							},
+							"type": "speech",
 							"speaker": "narrator"
 						},
 						{
-							"speaker": "ash",
-							"duration_ms": 500,
+							"action": "enter",
 							"type": "direction",
 							"spot": [
-								3,
-								2
+								2,
+								3
 							],
-							"action": "enter"
+							"duration_ms": 500,
+							"speaker": "ash"
 						},
 						{
+							"type": "speech",
+							"content": {
+								"korean": "불길이 점차 입구 바깥까지 퍼지고 있어요. 불이 새어 나오는 통로를 찾아야 해요.",
+								"english": "The flames are gradually spreading outside the entrance. We need to find the passage where the fire is coming from.",
+								"japanese": "火の手が徐々に入口の外まで広がっています。火が漏れ出ている通路を探さなければなりません。",
+								"chinese": "火势正在逐渐蔓延到入口之外。我们必须找到火光漏出的通道。",
+								"french": "Les flammes s'étendent peu à peu au-delà de l'entrée. Nous devons trouver le passage d'où s'échappe le feu.",
+								"spanish": "Las llamas se están extendiendo gradualmente fuera de la entrada. Debemos encontrar el pasaje por donde se filtra el fuego.",
+								"vietnamese": "Ngọn lửa đang dần lan ra ngoài lối vào. Chúng ta phải tìm ra lối đi mà lửa đang thoát ra.",
+								"thai": "เปลวไฟกำลังค่อยๆ ลามออกไปนอกทางเข้า เราต้องหาช่องทางที่มีไฟลอดออกมา",
+								"hindi": "लपटें धीरे-धीरे प्रवेश द्वार के बाहर फैल रही हैं। हमें उस मार्ग को खोजना होगा जहाँ से आग बाहर निकल रही है।"
+							},
 							"emotion": "sad",
-							"content": {
-								"korean": "앗, 봉인이 떨어져 버렸어!"
-							},
-							"speaker": "character_any",
-							"type": "speech"
+							"speaker": "ash"
 						},
 						{
-							"emotion": "angry",
+							"type": "speech",
 							"content": {
-								"korean": "안 돼요! 그 서리 봉인이 지옥불의 폭주를 누르고 있었단 말이에요!"
+								"korean": "불길을 거슬러 가면 집행자가 있는 곳이 나오겠어.",
+								"english": "Tracing the flames back should lead us to where the Executioner is.",
+								"japanese": "火の手をさかのぼれば、執行者がいる場所に出るはずだ。",
+								"chinese": "逆着火势走，应该就能找到执行者所在的地方。",
+								"french": "En remontant les flammes, nous devrions trouver l'endroit où se trouve l'Exécuteur.",
+								"spanish": "Si seguimos las llamas en sentido contrario, llegaremos a donde está el Ejecutor.",
+								"vietnamese": "Đi ngược theo ngọn lửa sẽ dẫn đến nơi Hành Quyết Giả đang ở.",
+								"thai": "ถ้าเราเดินย้อนเปลวไฟไป คงจะถึงที่ที่ผู้ลงอาญาอยู่",
+								"hindi": "आग की विपरीत दिशा में जाने पर हम उस स्थान पर पहुँचेंगे जहाँ निष्पादक है।"
 							},
+							"emotion": "base",
+							"speaker": "character_any"
+						},
+						{
 							"speaker": "ash",
-							"type": "speech"
+							"emotion": "base",
+							"type": "speech",
+							"content": {
+								"korean": "저 위쪽 굴에서 가장 강한 불길이 새어 나오고 있어요. 그쪽 통로로 가시죠.",
+								"english": "The strongest flames are leaking out from that cave above. Let's head through that passage.",
+								"japanese": "あの上の洞窟から最も強い火の手が漏れ出ています。あちらの通路へ行きましょう。",
+								"chinese": "最强烈的火势正从上面的洞穴中冒出来。我们走那条通道吧。",
+								"french": "Les flammes les plus intenses s'échappent de cette grotte là-haut. Empruntons ce passage.",
+								"spanish": "Las llamas más intensas se filtran desde esa cueva de arriba. Vamos por ese pasaje.",
+								"vietnamese": "Ngọn lửa mạnh nhất đang thoát ra từ hang phía trên kia. Hãy đi theo lối đó.",
+								"thai": "เปลวไฟที่แรงที่สุดกำลังลอยออกมาจากถ้ำด้านบนนั้น เราไปทางช่องทางนั้นกันเถอะ",
+								"hindi": "ऊपर की उस गुफा से सबसे तेज लपटें निकल रही हैं। चलिए उस मार्ग से चलते हैं।"
+							}
 						},
 						{
 							"speaker": "character_2",
-							"emotion": "sad",
 							"content": {
-								"korean": "…바위 틈에서 불길이 터져 나오고 있어!"
+								"korean": "…발밑이 온통 잿더미야.",
+								"english": "...The ground beneath our feet is covered in ashes.",
+								"japanese": "…足元が一面の灰だ。",
+								"chinese": "……脚下全是一片灰烬。",
+								"french": "…Le sol sous nos pieds n'est que de la cendre.",
+								"spanish": "…Todo bajo nuestros pies son cenizas.",
+								"vietnamese": "...Dưới chân toàn là tro tàn.",
+								"thai": "...ใต้ฝ่าเท้ามีแต่เถ้าถ่าน",
+								"hindi": "...पैरों के नीचे हर तरफ राख ही राख है।"
 							},
-							"type": "speech"
+							"type": "speech",
+							"emotion": "sad"
 						}
 					],
 					"id": 3
 				},
 				{
-					"id": 5,
 					"dialogue": [
 						{
-							"emotion": "base",
-							"content": {
-								"korean": "봉인이 풀리자 지옥의 불길이 폭발하듯 솟구쳐 오른다."
-							},
-							"speaker": "narrator",
-							"type": "speech"
-						},
-						{
-							"action": "enter",
-							"speaker": "ash",
-							"spot": [
-								2,
-								3
-							],
-							"duration_ms": 500,
-							"type": "direction"
-						},
-						{
-							"type": "speech",
-							"speaker": "ash",
-							"content": {
-								"korean": "이대로면 지옥불이 마법 대륙 입구까지 터져 나올 거예요!"
-							},
-							"emotion": "angry"
-						},
-						{
-							"content": {
-								"korean": "우리가 건드렸으니 우리가 불길을 멈출 방법을 찾아야 한다."
-							},
-							"emotion": "base",
-							"speaker": "character_any",
-							"type": "speech"
-						},
-						{
-							"speaker": "ash",
-							"action": "exit",
-							"direction": "down",
-							"duration_ms": 400,
-							"type": "direction"
-						},
-						{
-							"emotion": "sad",
-							"content": {
-								"korean": "…공기가 불덩이처럼 뜨거워지고 있어."
-							},
-							"speaker": "character_3",
-							"type": "speech"
-						}
-					]
-				},
-				{
-					"dialogue": [
-						{
-							"type": "speech",
-							"speaker": "narrator",
-							"content": {
-								"korean": "치솟는 불길 너머에서 거친 발소리와 포효가 들려온다."
-							},
-							"emotion": "base"
-						},
-						{
-							"type": "speech",
-							"speaker": "character_any",
-							"emotion": "angry",
-							"content": {
-								"korean": "불길 너머로 누군가 무기를 들고 쫓아오고 있어!"
-							}
-						},
-						{
-							"content": {
-								"korean": "…등 뒤로 뜨거운 압박감이 밀려와."
-							},
-							"emotion": "sad",
-							"speaker": "character_4",
-							"type": "speech"
-						}
-					],
-					"id": 9
-				},
-				{
-					"id": 15,
-					"dialogue": [
-						{
-							"emotion": "base",
-							"content": {
-								"korean": "붉은 불길 속에서 지옥 사냥꾼이 무기를 거머쥐고 막아선다."
-							},
-							"speaker": "narrator",
-							"type": "speech"
-						},
-						{
-							"type": "speech",
-							"content": {
-								"korean": "감히 서리 봉인을 건드려 지옥의 생태를 망쳐 놓다니!"
-							},
-							"emotion": "angry",
-							"speaker": "random_boss"
-						},
-						{
-							"content": {
-								"korean": "실수였다! 터져 나오는 지옥불을 막기 위해 널 넘어가겠다!"
-							},
-							"emotion": "angry",
-							"type": "speech",
-							"speaker": "character_any"
-						},
-						{
-							"speaker": "character_1",
-							"emotion": "sad",
-							"content": {
-								"korean": "…바람조차 붉게 태우고 있어."
-							},
-							"type": "speech"
-						}
-					],
-					"win_dialogue": [
-						{
-							"type": "speech",
-							"speaker": "random_boss",
-							"emotion": "sad",
-							"content": {
-								"korean": "쿨럭… 불길은 이미 붉은 바위 골짜기 쪽으로 번지고 있다…"
-							}
-						},
-						{
-							"emotion": "angry",
-							"content": {
-								"korean": "봉인이 풀렸으니 지옥 깊은 곳의 거대한 집행자가 깨어날 거다. 불을 뿜으며 들어오는 자는 누구든 짓밟는 놈이지…"
-							},
-							"speaker": "random_boss",
-							"type": "speech"
-						},
-						{
-							"speaker": "character_any",
-							"type": "speech",
-							"content": {
-								"korean": "집행자든 뭐든, 우선 붉은 바위 골짜기로 가서 지옥불의 확산을 막아야 한다!"
-							},
-							"emotion": "angry"
-						},
-						{
-							"content": {
-								"korean": "사냥꾼이 물러나자, 불길이 붉은 바위 골짜기 방면으로 거세게 번져나갔다."
-							},
-							"emotion": "base",
-							"type": "speech",
-							"speaker": "narrator"
-						}
-					],
-					"lose_dialogue": [
-						{
-							"speaker": "random_boss",
-							"content": {
-								"korean": "지옥의 섭리를 어긴 자들에게 줄 자비는 없다!"
-							},
-							"emotion": "angry",
-							"type": "speech"
-						},
-						{
-							"type": "speech",
-							"emotion": "angry",
-							"content": {
-								"korean": "…지옥불을 이대로 방치할 순 없다. 다시 부딪치자!"
-							},
-							"speaker": "character_any"
-						}
-					]
-				}
-			],
-			"prologue": {
-				"korean": [
-					"마법 대륙 입구, 열기 충만한 지옥 입구 절벽.",
-					"오래된 서리 봉인이 지하 깊은 곳의 지옥불을 겨우 누르고 있다.",
-					"작은 실수 하나가 대륙 전체를 잿더미로 만들 수 있다."
-				]
-			}
-		},
-		{
-			"scenario_id": "hell_philomel_39_02",
-			"order": 2,
-			"random_boss_title": {
-				"korean": "불꽃 약탈자"
-			},
-			"act": "rising",
-			"theme": "hell",
-			"actors": {
-				"brim": {
-					"id": "mon_d7f57824-190d-40b9-93d1-66c658f0441f",
-					"name": {
-						"korean": "브림",
-						"english": "Brim",
-						"japanese": "ブリム",
-						"chinese": "布里姆",
-						"french": "Brim",
-						"spanish": "Brim",
-						"vietnamese": "Brim",
-						"thai": "บริม",
-						"hindi": "ब्रिम"
-					},
-					"description": "",
-					"face_image_url": "https://imagedelivery.net/WTEqQNGFb-l-IHS6IGnzUQ/08ad0e4d-214d-43b3-dc3e-ddfba9049300/public",
-					"battle_sprite_url": "https://imagedelivery.net/WTEqQNGFb-l-IHS6IGnzUQ/16f1def2-7c33-4558-4b21-9c3e87fa3e00/public"
-				}
-			},
-			"boss": {
-				"pool_id": "random_boss"
-			},
-			"rooms": [
-				{
-					"id": 1,
-					"dialogue": [
-						{
-							"speaker": "narrator",
-							"emotion": "base",
-							"type": "speech",
-							"content": {
-								"korean": "골짜기 전체가 붉은 열기에 휩싸여 불타오르고 있다."
-							}
-						},
-						{
-							"type": "direction",
-							"speaker": "brim",
-							"action": "enter",
-							"duration_ms": 500,
 							"spot": [
 								3,
 								2
-							]
-						},
-						{
-							"speaker": "brim",
-							"emotion": "base",
-							"content": {
-								"korean": "저는 붉은 바위 골짜기의 길잡이 브림입니다. 지옥불이 번지는 걸 감시하다 여러분을 보았습니다."
-							},
-							"type": "speech"
-						},
-						{
-							"type": "speech",
-							"content": {
-								"korean": "우리는 지옥불의 확산을 막으러 가는 중이다. 집행자가 어디로 갔는지 아는가?"
-							},
-							"speaker": "character_any",
-							"emotion": "base"
-						},
-						{
-							"type": "speech",
-							"speaker": "brim",
-							"emotion": "base",
-							"content": {
-								"korean": "그 집행자라면 골짜기 안쪽으로 지나갔습니다. 발자국이 아직도 뜨겁습니다."
-							}
-						},
-						{
-							"emotion": "sad",
-							"speaker": "character_1",
-							"type": "speech",
-							"content": {
-								"korean": "…숨이 턱턱 막히는 열기야."
-							}
-						}
-					]
-				},
-				{
-					"dialogue": [
-						{
-							"content": {
-								"korean": "바위 틈새에 선명한 색의 무언가가 매달려 있다."
-							},
-							"emotion": "base",
-							"type": "speech",
-							"speaker": "narrator"
-						},
-						{
-							"spot": [
-								2,
-								3
 							],
 							"duration_ms": 500,
-							"speaker": "brim",
+							"speaker": "ash",
 							"type": "direction",
 							"action": "enter"
 						},
 						{
 							"content": {
-								"korean": "저건 집행자가 지나가며 떨어뜨린 핫핑크빛 깃털입니다."
+								"korean": "이 앞은 수호 망령들의 기척이 강해요. 저는 여기서 입구 주변을 먼저 정리하고 있을게요.",
+								"english": "The presence of guardian specters is strong up ahead. I'll clear the area around the entrance first.",
+								"japanese": "この先は守護の亡霊たちの気配が強いです。私はここで、まず入口周辺を片付けておきます。",
+								"chinese": "前方守护亡灵的气息很强烈。我先在这里清理入口周围吧。",
+								"french": "La présence des spectres gardiens est forte plus loin. Je vais d'abord nettoyer les environs de l'entrée.",
+								"spanish": "La presencia de los espectros guardianes es muy fuerte más adelante. Me quedaré aquí limpiando los alrededores de la entrada primero.",
+								"vietnamese": "Phía trước linh khí của các tàn hồn bảo hộ rất mạnh. Tôi sẽ dọn dẹp quanh lối vào trước.",
+								"thai": "แถวนี้สัมผัสถึงพวกวิญญาณผู้พิทักษ์ได้แรงมาก ข้าจะคอยจัดการบริเวณรอบทางเข้าตรงนี้ก่อน",
+								"hindi": "आगे रक्षक प्रेतों की उपस्थिति बहुत मजबूत है। मैं पहले यहाँ प्रवेश द्वार के आसपास की सफाई करता हूँ।"
 							},
-							"speaker": "brim",
 							"emotion": "base",
-							"type": "speech"
+							"type": "speech",
+							"speaker": "ash"
 						},
 						{
 							"speaker": "character_any",
 							"emotion": "base",
 							"type": "speech",
 							"content": {
-								"korean": "불을 뿜으며 닥치는 대로 공격한다던 집행자가 왜 이런 아름다운 깃털을 남긴 거지?"
+								"korean": "좋다. 불길의 근원은 우리가 직접 확인하겠다.",
+								"english": "Good. We will investigate the source of the flames ourselves.",
+								"japanese": "よし。火の手の元は我々が直接確認する。",
+								"chinese": "好。火焰的源头由我们亲自去确认。",
+								"french": "Très bien. Nous irons vérifier nous-mêmes la source des flammes.",
+								"spanish": "Bien. Nosotros mismos verificaremos la fuente de las llamas.",
+								"vietnamese": "Được. Nguồn gốc ngọn lửa để tự chúng ta trực tiếp kiểm tra.",
+								"thai": "ดี พวกเราจะไปตรวจสอบต้นตอของเปลวไฟด้วยตัวเอง",
+								"hindi": "ठीक है। आग के स्रोत की जाँच हम खुद करेंगे।"
 							}
 						},
-						{
-							"emotion": "base",
-							"speaker": "character_any",
-							"type": "speech",
-							"content": {
-								"korean": "단서가 될 수도 있으니 깃털을 잘 챙겨두자."
-							}
-						},
-						{
-							"content": {
-								"korean": "…이 핫핑크빛, 지옥이랑은 안 어울려."
-							},
-							"emotion": "base",
-							"type": "speech",
-							"speaker": "character_2"
-						}
-					],
-					"id": 3
-				},
-				{
-					"dialogue": [
 						{
 							"type": "direction",
-							"speaker": "brim",
-							"action": "enter",
-							"duration_ms": 500,
-							"spot": [
-								3,
-								2
-							]
-						},
-						{
-							"type": "speech",
-							"content": {
-								"korean": "이 앞은 불길이 거세 길잡이인 저도 더는 갈 수 없습니다. 붉은 바위를 넘어가십시오."
-							},
-							"emotion": "sad",
-							"speaker": "brim"
-						},
-						{
-							"emotion": "base",
-							"type": "speech",
-							"speaker": "character_any",
-							"content": {
-								"korean": "안내해 줘서 고맙다. 여기서부터는 우리가 조사하겠다."
-							}
-						},
-						{
-							"action": "exit",
-							"type": "direction",
-							"speaker": "brim",
+							"speaker": "ash",
+							"direction": "down",
 							"duration_ms": 400,
-							"direction": "down"
+							"action": "exit"
 						},
 						{
+							"speaker": "character_3",
 							"type": "speech",
 							"content": {
-								"korean": "…발밑의 바위가 달아오르고 있어."
+								"korean": "…공기가 더 붉게 물들고 있어.",
+								"english": "...The air is turning even redder.",
+								"japanese": "…空気がいっそう赤く染まっていく。",
+								"chinese": "……空气被染得更加鲜红了。",
+								"french": "…L'air se teinte d'un rouge encore plus vif.",
+								"spanish": "…El aire se tiñe de un rojo más intenso.",
+								"vietnamese": "...Không khí đang nhuốm màu đỏ thẫm hơn.",
+								"thai": "...อากาศกำลังย้อมเป็นสีแดงเข้มขึ้น",
+								"hindi": "...हवा और भी लाल रंग में रंग रही है।"
 							},
-							"emotion": "sad",
-							"speaker": "character_3"
+							"emotion": "sad"
 						}
 					],
 					"id": 5
@@ -510,134 +363,255 @@
 					"id": 9,
 					"dialogue": [
 						{
-							"content": {
-								"korean": "골짜기 통로 건너편에서 험악한 불꽃의 기척이 타오른다."
-							},
-							"type": "speech",
 							"speaker": "narrator",
-							"emotion": "base"
+							"type": "speech",
+							"emotion": "base",
+							"content": {
+								"korean": "자욱한 잿가루 사이로 무거운 발소리가 울려 퍼진다.",
+								"english": "Heavy footsteps echo through the thick ash dust.",
+								"japanese": "立ち込める灰の中で、重々しい足音が響き渡る。",
+								"chinese": "沉重的脚步声在浓密的灰烬中回荡。",
+								"french": "Des pas lourds résonnent à travers une épaisse poussière de cendre.",
+								"spanish": "Pisadas pesadas resuenan a través de la densa ceniza.",
+								"vietnamese": "Tiếng bước chân nặng nề vang vọng qua làn bụi tro mù mạt.",
+								"thai": "เสียงฝีเท้าหนักๆ ดังกังวานผ่านหมอกเถ้าถ่านอันหนาทึบ",
+								"hindi": "राख के घने गुबार के बीच भारी कदमों की आवाज गूंज रही है।"
+							}
 						},
 						{
+							"emotion": "angry",
 							"content": {
-								"korean": "누군가 길목을 가로막고 통과를 저지하려 한다."
+								"korean": "무언가가 우리 길을 가로막으려 다가오고 있다.",
+								"english": "Something is approaching to block our path.",
+								"japanese": "何かが我々の道を阻もうと近づいている。",
+								"chinese": "有什么东西正试图挡住我们的去路。",
+								"french": "Quelque chose s'approche pour nous barrer la route.",
+								"spanish": "Algo se acerca para bloquear nuestro camino.",
+								"vietnamese": "Có thứ gì đó đang tiến lại gần để cản đường chúng ta.",
+								"thai": "บางสิ่งกำลังเข้ามาเพื่อขัดขวางเส้นทางของพวกเรา",
+								"hindi": "कोई चीज़ हमारा रास्ता रोकने के लिए आगे बढ़ रही है।"
 							},
-							"type": "speech",
 							"speaker": "character_any",
-							"emotion": "angry"
+							"type": "speech"
 						},
 						{
-							"type": "speech",
-							"content": {
-								"korean": "…귓가를 울리는 불꽃 소리가 불길해."
-							},
 							"speaker": "character_4",
-							"emotion": "sad"
+							"type": "speech",
+							"emotion": "sad",
+							"content": {
+								"korean": "…뼛속까지 소름 돋는 기운이다.",
+								"english": "...It's a chilling aura that penetrates to the bone.",
+								"japanese": "…骨の芯まで寒気が走るような気配だ。",
+								"chinese": "……这是令人毛骨悚然的气息。",
+								"french": "…C'est une aura glaçante jusqu'à la moelle.",
+								"spanish": "…Es un aura escalofriante hasta los huesos.",
+								"vietnamese": "...Một luồng khí rợn người đến tận xương tủy.",
+								"thai": "...เป็นบรรยากาศที่น่าขนลุกไปถึงขั้วหัวใจ",
+								"hindi": "...यह हड्डियों तक कँपकँपी पैदा कर देने वाली ऊर्जा है।"
+							}
 						}
 					]
 				},
 				{
 					"dialogue": [
 						{
+							"emotion": "base",
 							"content": {
-								"korean": "골짜기 통로 한가운데, 불꽃 약탈자가 앞을 막아서며 무기를 거칠게 쥐어잡는다."
+								"korean": "붉은 안개 속에서 지옥 입구를 지키는 망령이 앞을 막아선다.",
+								"english": "Out of the red fog, a wraith guarding the entrance to Hell steps out to block the path.",
+								"japanese": "赤い霧の中から地獄の入口を守る亡霊が立ちふさがる。",
+								"chinese": "红色迷雾中，守护地狱入口的亡灵挡住了去路。",
+								"french": "Dans le brouillard rouge, un spectre gardant l'entrée de l'Enfer se dresse sur le chemin.",
+								"spanish": "Desde la niebla roja, un espectro que custodia la entrada al Infierno se interpone en el camino.",
+								"vietnamese": "Từ trong làn sương đỏ, một vong hồn canh giữ cổng địa ngục bước ra chặn đường.",
+								"thai": "ท่ามกลางหมอกสีแดง วิญญาณผู้เฝ้าทางเข้าขุมนรกได้ปรากฏตัวขึ้นขวางทางไว้",
+								"hindi": "लाल कोहरे में से, नरक के प्रवेश द्वार की रक्षा करने वाला एक प्रेत रास्ता रोक लेता है।"
 							},
 							"type": "speech",
-							"speaker": "narrator",
-							"emotion": "base"
+							"speaker": "narrator"
 						},
 						{
-							"emotion": "angry",
 							"speaker": "random_boss",
 							"type": "speech",
 							"content": {
-								"korean": "집행자 님의 결정을 방해하게 두지 않겠다! 더 들어오면 목숨은 없다!"
-							}
+								"korean": "멈춰라! 산 자가 지옥 깊이 들어가면 불길이 더 거세질 뿐이다!",
+								"english": "Halt! If the living venture deep into Hell, the flames will only burn hotter!",
+								"japanese": "止まれ！生者が地獄の奥深くへ足を踏み入れれば、炎がより激しくなるだけだ！",
+								"chinese": "站住！活人若是深入地狱深处，只会让火势更加凶猛！",
+								"french": "Halte ! Si des vivants s'aventurent au plus profond de l'Enfer, les flammes ne feront que redoubler d'intensité !",
+								"spanish": "¡Deténganse! ¡Si los vivos se adentran en las profundidades del Infierno, las llamas solo se enfurecerán más!",
+								"vietnamese": "Dừng lại! Kẻ sống mà đi sâu vào địa ngục chỉ làm ngọn lửa thêm dữ dội mà thôi!",
+								"thai": "หยุดนะ! หากผู้มีชีวิตถลำลึกเข้าไปในขุมนรก มีแต่จะทำให้เปลวไฟโหมกระหน่ำยิ่งขึ้น!",
+								"hindi": "रुक जाओ! यदि कोई जीवित प्राणी नरक की गहराई में जाएगा, तो लपटें और भी प्रचंड हो जाएंगी!"
+							},
+							"emotion": "angry"
 						},
 						{
-							"emotion": "angry",
 							"speaker": "character_any",
 							"type": "speech",
 							"content": {
-								"korean": "우리는 지옥불이 대륙을 삼키는 걸 막아야 한다. 비켜라!"
-							}
+								"korean": "새어 나오는 지옥불을 막으러 왔다. 길을 비켜라!",
+								"english": "We came to stop the leaking hellfire. Move aside!",
+								"japanese": "漏れ出る地獄の火を止めるために来た。道をあけろ！",
+								"chinese": "我是来阻止渗漏的地狱之火的。让开！",
+								"french": "Nous sommes venus arrêter le feu infernal qui s'échappe. Cède le passage !",
+								"spanish": "Venimos a detener el fuego infernal que se filtra. ¡Apártate del camino!",
+								"vietnamese": "Ta đến để ngăn ngọn lửa địa ngục đang rò rỉ. Mau tránh đường!",
+								"thai": "ข้ามาเพื่อหยุดยั้งไฟนรกที่รั่วไหลออกมา ถอยไปซะ!",
+								"hindi": "हम रिसती हुई नरक की आग को रोकने आए हैं। रास्ता छोड़ो!"
+							},
+							"emotion": "angry"
 						},
 						{
-							"speaker": "character_1",
-							"type": "speech",
 							"emotion": "angry",
 							"content": {
-								"korean": "…더 이상 대화는 무의미하겠군."
-							}
+								"korean": "…달리 방법이 없어. 싸운다!",
+								"english": "...There's no other way. We fight!",
+								"japanese": "…他に道はない。戦うぞ！",
+								"chinese": "……别无选择。准备战斗！",
+								"french": "...Il n'y a pas d'autre moyen. Au combat !",
+								"spanish": "...No hay otra opción. ¡A luchar!",
+								"vietnamese": "...Không còn cách nào khác. Chiến thôi!",
+								"thai": "...ไม่มีทางอื่นแล้ว สู้!",
+								"hindi": "...और कोई रास्ता नहीं है। लड़ो!"
+							},
+							"speaker": "character_1",
+							"type": "speech"
+						}
+					],
+					"lose_dialogue": [
+						{
+							"speaker": "random_boss",
+							"type": "speech",
+							"content": {
+								"korean": "지옥의 열기에 굴복해라. 너희는 한 발짝도 더 나아가지 못한다!",
+								"english": "Succumb to the heat of Hell! You shall not advance another step!",
+								"japanese": "地獄の熱気に屈せよ。お前たちは一歩も先へ進めぬ！",
+								"chinese": "屈服于地狱的酷热吧。你们休想再前进一步！",
+								"french": "Succombez à la chaleur de l'Enfer. Vous ne ferez pas un pas de plus !",
+								"spanish": "¡Sucumban al calor del Infierno! ¡No darán ni un solo paso más!",
+								"vietnamese": "Hãy khuất phục trước sức nóng địa ngục. Các ngươi không thể tiến thêm dù chỉ một bước!",
+								"thai": "จงสยบต่อความร้อนแห่งนรกซะ พวกเจ้าจะไม่ได้ก้าวไปข้างหน้าอีกแม้อยกเดียว!",
+								"hindi": "नरक की गर्मी के आगे घुटने टेक दो। तुम एक कदम भी आगे नहीं बढ़ पाओगे!"
+							},
+							"emotion": "angry"
+						},
+						{
+							"emotion": "angry",
+							"content": {
+								"korean": "…여기서 물러설 수 없다. 다시 도전하겠다.",
+								"english": "...I cannot back down here. I will try again.",
+								"japanese": "…ここで引き下がるわけにはいかない。もう一度挑戦する。",
+								"chinese": "……我不能在这里退缩。我要再次挑战。",
+								"french": "... Je ne peux pas reculer ici. Je vais réessayer.",
+								"spanish": "... No puedo retroceder aquí. Volveré a intentarlo.",
+								"vietnamese": "... Tôi không thể lùi bước ở đây. Tôi sẽ thử lại.",
+								"thai": "...ฉันจะถอยตรงนี้ไม่ได้ จะขอท้าใหม่อีกครั้ง",
+								"hindi": "...मैं यहाँ पीछे नहीं हट सकता। मैं फिर से कोशिश करूँगा।"
+							},
+							"speaker": "character_any",
+							"type": "speech"
 						}
 					],
 					"win_dialogue": [
 						{
+							"emotion": "sad",
 							"content": {
-								"korean": "크윽… 하지만 방해해 봤자 소용없다… 불길은 멈추지 않는다…"
+								"korean": "크윽… 더 깊은 곳을 건드리면 지옥 전체가 타오를 것이다…",
+								"english": "Ugh... If you disturb what lies deeper, all of Hell will burn...",
+								"japanese": "くっ…これ以上奥を刺激すれば、地獄全体が燃え上がるぞ…",
+								"chinese": "呃……若是触碰更深处，整个地狱都会化为火海……",
+								"french": "Argh... Si vous touchez à ce qui se trouve plus bas, l'Enfer tout entier s'embrasera...",
+								"spanish": "Puag... Si alteran las profundidades, todo el Infierno se consumirá en llamas...",
+								"vietnamese": "Khự... Nếu động vào nơi sâu hơn, toàn bộ địa ngục sẽ bốc cháy...",
+								"thai": "อึก... หากแตะต้องส่วนที่ลึกกว่านี้ ขุมนรกทั้งหมดจะลุกเป็นไฟ...",
+								"hindi": "उफ़... यदि तुमने और गहराई में हस्तक्षेप किया, तो पूरा नरक जल उठेगा..."
 							},
-							"type": "speech",
 							"speaker": "random_boss",
-							"emotion": "sad"
+							"type": "speech"
 						},
 						{
 							"type": "speech",
-							"content": {
-								"korean": "이 깃털… 연기 냄새도 없이 따뜻해."
-							},
-							"speaker": "character_any",
-							"emotion": "base"
-						},
-						{
-							"speaker": "character_any",
 							"emotion": "base",
 							"content": {
-								"korean": "열기의 더 깊은 근원인 용암 동굴 쪽으로 흔적이 이어진다. 이동하자!"
+								"korean": "불길이 안쪽에서 새어 나오고 있다. 진짜 근원은 더 깊은 곳에 있어.",
+								"english": "Flames are leaking from inside. The true source lies further within.",
+								"japanese": "炎が内側から漏れ出している。本当の根源はさらに奥にある。",
+								"chinese": "火焰正在从内部渗出。真正的根源在更深处。",
+								"french": "Les flammes s'échappent de l'intérieur. La véritable source est plus en profondeur.",
+								"spanish": "Las llamas se escapan desde el interior. La verdadera fuente está más adentro.",
+								"vietnamese": "Ngọn lửa đang rò rỉ từ bên trong. Nguồn gốc thực sự nằm ở nơi sâu hơn.",
+								"thai": "เปลวไฟกำลังรั่วไหลออกมาจากด้านใน ต้นตอแท้จริงอยู่ลึกเข้าไปอีก",
+								"hindi": "लपटें अंदर से निकल रही हैं। असली स्रोत और भी गहराई में है।"
 							},
-							"type": "speech"
+							"speaker": "character_any"
 						},
 						{
-							"content": {
-								"korean": "탐험대는 깃털의 신비로운 온기를 품은 채 용암 동굴로 발걸음을 옮겼다."
-							},
-							"type": "speech",
-							"speaker": "narrator",
-							"emotion": "base"
-						}
-					],
-					"id": 15,
-					"lose_dialogue": [
-						{
-							"content": {
-								"korean": "어리석은 자들아, 지옥의 불꽃에 타버려라!"
-							},
-							"type": "speech",
-							"speaker": "random_boss",
-							"emotion": "happy"
-						},
-						{
-							"speaker": "character_any",
 							"emotion": "angry",
 							"content": {
-								"korean": "…아직 물러설 수는 없다. 다시 길을 뚫는다!"
+								"korean": "어차피 가봤자 소용없다… 용암 골짜기의 뜨거운 불길이 너희를 잿더미로 만들 테니…",
+								"english": "Going there is useless anyway... The blistering heat of the Lava Valley will reduce you to ashes...",
+								"japanese": "どうせ行ったところで無駄だ…溶岩谷の熾烈な炎が、お前たちを灰にしてしまうのだから…",
+								"chinese": "反正去了也是徒劳……熔岩峡谷的炽热烈火会将你们化为灰烬……",
+								"french": "De toute façon, y aller ne servira à rien... Les flammes brûlantes de la Vallée de lave vous réduiront en cendres...",
+								"spanish": "De todos modos será inútil... El feroz fuego del Valle de Lava los reducirá a cenizas...",
+								"vietnamese": "Có đến đó cũng vô ích... Ngọn lửa rực cháy của Thung lũng Nham thạch sẽ biến các ngươi thành tro bụi...",
+								"thai": "ไปถึงที่นั่นก็เปล่าประโยชน์... เปลวไฟอันร้อนแรงแห่งหุบเขาลาวาจะแผดเผาพวกเจ้าจนเป็นเถ้าถ่าน...",
+								"hindi": "वैसे भी वहाँ जाने का कोई फायदा नहीं है... लावा घाटी की भीषण लपटें तुम्हें राख बना देंगी..."
 							},
+							"speaker": "random_boss",
 							"type": "speech"
+						},
+						{
+							"content": {
+								"korean": "망령 파수꾼이 소멸하고 용암 흘러내리는 골짜기로 향하는 길이 열렸다.",
+								"english": "The wraith sentinel vanished, and the path to the lava-flowing valley opened.",
+								"japanese": "亡霊の番人が消滅し、溶岩が流れる谷へ向かう道が開かれた。",
+								"chinese": "亡灵看守消逝，通往熔岩奔流峡谷的道路敞开了。",
+								"french": "Le spectre gardien s'est dissipé, ouvrant la voie vers la vallée où coule la lave.",
+								"spanish": "El espectro centinela se desvaneció, abriendo el camino hacia el valle por donde fluye la lava.",
+								"vietnamese": "Vong hồn canh giữ đã tan biến, mở ra con đường dẫn đến thung lũng nham thạch chảy.",
+								"thai": "ผู้เฝ้าวิญญาณสลายไป และเส้นทางสู่หุบเขาที่มีลาวาไหลผ่านได้เปิดออก",
+								"hindi": "प्रेत पहरेदार नष्ट हो गया और बहते लावा वाली घाटी की ओर जाने वाला रास्ता खुल गया।"
+							},
+							"emotion": "base",
+							"speaker": "narrator",
+							"type": "speech"
+						},
+						{
+							"emotion": "base",
+							"type": "speech",
+							"content": {
+								"korean": "용암 골짜기로 가자. 집행자는 더 깊은 곳에 있어.",
+								"english": "Let's head to the Lava Valley. The Executioner is deeper inside.",
+								"japanese": "溶岩谷へ行こう。執行者はさらに奥にいる。",
+								"chinese": "我们去熔岩峡谷吧。执行者在更深处。",
+								"french": "Allons à la Vallée de lave. L'Exécuteur se trouve plus en profondeur.",
+								"spanish": "Vamos al Valle de Lava. El Ejecutor está más adentro.",
+								"vietnamese": "Hãy đến Thung lũng Nham thạch nào. Kẻ thi hành ở nơi sâu hơn.",
+								"thai": "ไปที่หุบเขาลาวากันเถอะ ผู้ลงอาญาอยู่ลึกเข้าไปอีก",
+								"hindi": "चलो लावा घाटी की ओर चलें। निष्पादक और भी गहराई में है।"
+							},
+							"speaker": "character_any"
 						}
-					]
+					],
+					"id": 15
 				}
-			],
-			"prologue": {
-				"korean": [
-					"치솟는 지옥불이 붉은 바위 골짜기까지 밀려왔다.",
-					"마법 대륙으로 확산하는 불길을 막아야 한다.",
-					"탐험대는 거대한 집행자가 남긴 흔적을 쫓아 골짜기 깊은 곳으로 향한다."
-				]
-			}
+			]
 		},
 		{
-			"scenario_id": "hell_philomel_39_03",
-			"order": 3,
+			"scenario_id": "hell_philomel_39_02",
+			"order": 2,
 			"random_boss_title": {
-				"korean": "용암 파수꾼"
+				"korean": "화염 약탈자",
+				"english": "Flame Marauder",
+				"japanese": "炎の掠奪者",
+				"chinese": "火焰掠夺者",
+				"french": "Pillard des flammes",
+				"spanish": "Saqueador de llamas",
+				"vietnamese": "Kẻ Cướp Bóc Hỏa Diệm",
+				"thai": "ผู้ปล้นสะดมแห่งเปลวเพลิง",
+				"hindi": "ज्वाला लुटेरा"
 			},
 			"act": "rising",
 			"theme": "hell",
@@ -663,368 +637,154 @@
 			"boss": {
 				"pool_id": "random_boss"
 			},
+			"prologue": {
+				"korean": [
+					"발밑으로 뜨거운 용암이 흘러내리는 용암 골짜기.",
+					"번지는 불길의 근원을 찾으려 탐험대는 위험 속으로 들어선다.",
+					"뜨거운 열기 한가운데에서 뜻밖의 에메랄드빛 자국이 기다리고 있다."
+				],
+				"english": [
+					"A lava valley where scorching lava flows beneath your feet.",
+					"Seeking the source of the spreading flames, the expedition steps into danger.",
+					"In the midst of the scorching heat, an unexpected emerald mark awaits."
+				],
+				"japanese": [
+					"足元を熱い溶岩が流れ落ちる溶岩の谷。",
+					"広がる火の手の源を探るため、調査隊は危険の中へと足を踏み入れる。",
+					"燃えるような熱気の中、思いがけないエメラルド色の痕跡が待ち受けている。"
+				],
+				"chinese": [
+					"滚烫熔岩在脚下流淌的熔岩山谷。",
+					"为了寻找蔓延火势的源头，探险队踏入了危险之中。",
+					"在炽热的高温之中，意想不到的翡翠色痕迹正等待着他们。"
+				],
+				"french": [
+					"Une vallée de lave où la lave brûlante coule sous vos pieds.",
+					"Cherchant la source des flammes qui se propagent, l'expédition s'aventure dans le danger.",
+					"Au cœur de la chaleur brûlante, une trace émeraude inattendue les attend."
+				],
+				"spanish": [
+					"Un valle de lava donde la lava ardiente fluye bajo los pies.",
+					"Para encontrar el origen de las llamas que se extienden, la expedición se adentra en el peligro.",
+					"En medio del calor abrasador, aguarda una inesperada marca de color esmeralda."
+				],
+				"vietnamese": [
+					"Thung lũng dung nham với dòng dung nham nóng rực chảy dưới chân.",
+					"Để tìm kiếm nguồn gốc của ngọn lửa đang lan rộng, thám hiểm đoàn bước vào nguy hiểm.",
+					"Giữa cái nóng rực lửa, một dấu vết màu ngọc lục bảo bất ngờ đang chờ đợi."
+				],
+				"thai": [
+					"หุบเขาลาวาที่มีลาวาร้อนระอุไหลผ่านอยู่ใต้เท้า",
+					"เพื่อค้นหาต้นตอของเพลิงที่กำลังแพร่กระจาย ทีมสำรวจจึงก้าวเข้าสู่ความอันตราย",
+					"ท่ามกลางความร้อนระอุ ร่องรอยสีมรกตที่ไม่คาดคิดกำลังรออยู่"
+				],
+				"hindi": [
+					"एक लावा घाटी जहां पैरों के नीचे गर्म लावा बहता है।",
+					"फैलती लपटों के स्रोत की तलाश में, खोजी दल खतरे में कदम रखता है।",
+					"भीषण गर्मी के बीच, एक अप्रत्याशित पन्ने जैसा निशान इंतज़ार कर रहा है।"
+				]
+			},
 			"rooms": [
 				{
-					"id": 1,
 					"dialogue": [
 						{
-							"emotion": "base",
 							"content": {
-								"korean": "용암 동굴 입구. 뿜어져 나오는 뜨거운 열기가 숨을 막히게 한다."
+								"korean": "발밑으로 끓어오르는 용암이 흘러내렸다. 사방이 뜨거운 열기로 가득했다.",
+								"english": "Boiling lava flowed beneath their feet. Scorching heat filled the air on all sides.",
+								"japanese": "足元を沸き立つ溶岩が流れ落ちていた。あたりは熱気で満ちていた。",
+								"chinese": "沸腾的熔岩在脚下流淌。四周弥漫着炽热的高温。",
+								"french": "De la lave en fusion coulait sous leurs pieds. Une chaleur suffocante régnait tout autour.",
+								"spanish": "Lava hirviente fluía bajo los pies. Un calor abrasador lo llenaba todo.",
+								"vietnamese": "Dung nham sôi sùng sục chảy dưới chân. Xung quanh ngập tràn không khí nóng rực.",
+								"thai": "ลาวาเดือดปุดๆ ไหลผ่านอยู่ใต้เท้า ทั่วทุกทิศอบอวลไปด้วยความร้อนระอุ",
+								"hindi": "पैरों के नीचे उबलता लावा बह रहा था। चारों ओर भीषण गर्मी भरी हुई थी।"
 							},
 							"type": "speech",
+							"emotion": "base",
 							"speaker": "narrator"
 						},
 						{
-							"duration_ms": 500,
-							"action": "enter",
-							"spot": [
-								3,
-								2
-							],
-							"speaker": "cinder",
-							"type": "direction"
-						},
-						{
-							"emotion": "base",
-							"content": {
-								"korean": "난 용암 동굴의 대장장이 신더다. 열기가 이상하게 치솟아 원인을 조사하러 왔다."
-							},
-							"speaker": "cinder",
-							"type": "speech"
-						},
-						{
-							"emotion": "base",
-							"content": {
-								"korean": "동굴 깊은 곳에 열기의 원인이 있을 거다. 함께 조사하자."
-							},
-							"type": "speech",
-							"speaker": "character_any"
-						},
-						{
-							"emotion": "sad",
-							"content": {
-								"korean": "…얼굴이 익어버릴 것 같아."
-							},
-							"speaker": "character_1",
-							"type": "speech"
-						}
-					]
-				},
-				{
-					"dialogue": [
-						{
-							"type": "speech",
-							"speaker": "narrator",
-							"content": {
-								"korean": "붉게 타오르는 용암천을 따라 암석지대가 이어진다."
-							},
-							"emotion": "base"
-						},
-						{
-							"speaker": "cinder",
-							"action": "enter",
-							"duration_ms": 500,
 							"type": "direction",
-							"spot": [
-								3,
-								2
-							]
-						},
-						{
-							"content": {
-								"korean": "용암이 원래 수로를 벗어나 동굴 전체를 삼키고 있군."
-							},
-							"emotion": "base",
-							"speaker": "cinder",
-							"type": "speech"
-						},
-						{
-							"content": {
-								"korean": "이 불길을 막지 못하면 마법 대륙 입구까지 위험해진다."
-							},
-							"emotion": "angry",
-							"speaker": "character_any",
-							"type": "speech"
-						},
-						{
-							"type": "speech",
-							"emotion": "sad",
-							"content": {
-								"korean": "…발밑이 부서질 것 같아."
-							},
-							"speaker": "character_2"
-						}
-					],
-					"id": 3
-				},
-				{
-					"dialogue": [
-						{
-							"emotion": "base",
-							"content": {
-								"korean": "동굴 바닥의 굳은 용암 사이로 묵직한 조각이 파묻혀 있다."
-							},
-							"speaker": "narrator",
-							"type": "speech"
-						},
-						{
-							"speaker": "cinder",
-							"duration_ms": 500,
-							"spot": [
-								3,
-								2
-							],
 							"action": "enter",
-							"type": "direction"
-						},
-						{
 							"speaker": "cinder",
-							"type": "speech",
-							"emotion": "base",
-							"content": {
-								"korean": "깨진 흑요석 투구 조각이군. 이렇게 큰 투구를 쓰는 건 지옥의 집행자뿐이다."
-							}
-						},
-						{
-							"content": {
-								"korean": "집행자가 여기까지 왔었다는 거군. 투구가 깨질 만큼 무슨 일이 있었던 거지?"
-							},
-							"emotion": "base",
-							"type": "speech",
-							"speaker": "character_any"
-						},
-						{
-							"type": "speech",
-							"speaker": "cinder",
-							"emotion": "base",
-							"content": {
-								"korean": "난 여기서 넘치는 용암을 막고 있겠다. 안쪽은 너희가 살펴봐라."
-							}
-						},
-						{
-							"speaker": "cinder",
-							"action": "exit",
-							"direction": "down",
-							"duration_ms": 400,
-							"type": "direction"
-						},
-						{
-							"speaker": "character_3",
-							"content": {
-								"korean": "…열기에 목이 바싹 타들어간다."
-							},
-							"emotion": "sad",
-							"type": "speech"
-						}
-					],
-					"id": 5
-				},
-				{
-					"dialogue": [
-						{
-							"speaker": "narrator",
-							"type": "speech",
-							"emotion": "base",
-							"content": {
-								"korean": "동굴 깊은 곳에서 거대한 불꽃의 일렁임과 묵직한 기척이 느껴진다."
-							}
-						},
-						{
-							"emotion": "angry",
-							"content": {
-								"korean": "길을 막아서는 강력한 존재가 바로 앞에 있다."
-							},
-							"speaker": "character_any",
-							"type": "speech"
-						},
-						{
-							"speaker": "character_4",
-							"emotion": "sad",
-							"type": "speech",
-							"content": {
-								"korean": "…공기가 뜨거워서 아른거려."
-							}
-						}
-					],
-					"id": 9
-				},
-				{
-					"win_dialogue": [
-						{
-							"speaker": "random_boss",
-							"type": "speech",
-							"emotion": "sad",
-							"content": {
-								"korean": "…지옥의 불길 앞에서도 꺾이지 않는 자들이라니."
-							}
-						},
-						{
-							"type": "speech",
-							"speaker": "character_any",
-							"content": {
-								"korean": "왜 우리를 굳이 막아선 거지?"
-							},
-							"emotion": "base"
-						},
-						{
-							"speaker": "random_boss",
-							"emotion": "base",
-							"content": {
-								"korean": "더 가면 집행자 님과 마주친다. 집행자 님에게 밀려난 사람들도 겨우 살아서 도망쳤지."
-							},
-							"type": "speech"
-						},
-						{
-							"type": "speech",
-							"speaker": "character_any",
-							"emotion": "base",
-							"content": {
-								"korean": "집행자에게 밀려난 사람들이… 살아서 도망쳤다고?"
-							}
-						},
-						{
-							"emotion": "base",
-							"content": {
-								"korean": "상대를 물리치자, 동굴 건너편 검은 제단으로 향하는 통로가 드러났다."
-							},
-							"speaker": "narrator",
-							"type": "speech"
-						},
-						{
-							"speaker": "cinder",
-							"action": "enter",
-							"type": "direction",
 							"spot": [
-								3,
+								2,
 								2
 							],
 							"duration_ms": 500
 						},
 						{
-							"emotion": "base",
-							"content": {
-								"korean": "검은 제단 쪽에서 더 강력한 불꽃 반응이 느껴진다. 그리로 가보자."
-							},
 							"speaker": "cinder",
-							"type": "speech"
-						}
-					],
-					"id": 15,
-					"dialogue": [
-						{
-							"emotion": "base",
+							"emotion": "happy",
 							"type": "speech",
 							"content": {
-								"korean": "용암 길목 한가운데, 불길을 두른 자가 일어서며 무기를 든다."
-							},
-							"speaker": "narrator"
-						},
-						{
-							"speaker": "random_boss",
-							"type": "speech",
-							"emotion": "angry",
-							"content": {
-								"korean": "더 이상 깊이 들어가지 마라! 더 가면 모두 불길에 태워질 뿐이다!"
+								"korean": "이런 뜨거운 골짜기까지 찾아오다니! 난 보물을 쫓아 여기까지 들어온 상인 신더라고 하오.",
+								"english": "To think you came all the way to such a scorching valley! I am Cinder, a merchant who came here pursuing treasure.",
+								"japanese": "こんな熱い谷まで訪れるとは！ わしは宝を追ってここまでやって来た商人シンダーと申す。",
+								"chinese": "竟然能来到这么热的山谷！我是追寻宝物来到这里的商人辛德。",
+								"french": "Venir jusqu'à une vallée aussi brûlante ! Je suis Cinder, un marchand venu ici en quête de trésors.",
+								"spanish": "¡Pensar que vendrían hasta un valle tan caliente! Soy Cinder, un comerciante que vino hasta aquí persiguiendo tesoros.",
+								"vietnamese": "Không ngờ các người lại đến tận thung lũng nóng bức này! Ta là Cinder, một thương nhân theo đuổi kho báu mà vào đến tận đây.",
+								"thai": "ไม่คิดเลยว่าจะมาถึงหุบเขาที่ร้อนขนาดนี้! ข้าคือซินเดอร์ พ่อค้าที่เข้ามาถึงที่นี่เพื่อตามหาสมบัติ",
+								"hindi": "इतनी गर्म घाटी तक आने की सोची! मैं सिंडर हूँ, एक व्यापारी जो खज़ाने की तलाश में यहाँ तक आया है।"
 							}
 						},
 						{
 							"content": {
-								"korean": "우리는 불길의 원인을 찾아 멈춰야 한다. 비켜라!"
+								"korean": "우리는 불을 흘리는 집행자 필로멜을 쫓고 있다.",
+								"english": "We are pursuing Philomel, the Enforcer who sheds fire.",
+								"japanese": "我々は火を散らす執行者フィロメルを追っている。",
+								"chinese": "我们正在追捕散播火焰的执行者菲洛梅尔。",
+								"french": "Nous traquons Philomel, l'exécuteur qui répand les flammes.",
+								"spanish": "Estamos persiguiendo a Philomel, la ejecutora que esparce fuego.",
+								"vietnamese": "Chúng tôi đang truy đuổi Philomel, Kẻ Hành Quyết vãi lửa.",
+								"thai": "พวกเรากำลังตามล่าฟิโลเมล ผู้ลงอาญาผู้หลั่งเพลิง",
+								"hindi": "हम आग फैलाने वाले निष्पादक फिलोमेल का पीछा कर रहे हैं।"
 							},
-							"emotion": "angry",
 							"speaker": "character_any",
-							"type": "speech"
+							"type": "speech",
+							"emotion": "base"
 						},
 						{
+							"emotion": "sad",
 							"speaker": "character_1",
-							"type": "speech",
 							"content": {
-								"korean": "…온몸에 땀이 솟구친다."
+								"korean": "…가뜩이나 뜨거운데 숨이 턱턱 막히네.",
+								"english": "...It's hot enough as it is, and now it's downright suffocating.",
+								"japanese": "…ただでさえ熱いのに、息が詰まりそうだ。",
+								"chinese": "……本来就够热了，现在简直让人喘不过气来。",
+								"french": "...Il fait déjà tellement chaud, c'est carrément étouffant.",
+								"spanish": "...Ya hace suficiente calor como para que encima no se pueda ni respirar.",
+								"vietnamese": "...Đã nóng rồi mà còn ngột ngạt đến nghẹt thở.",
+								"thai": "...ลำพังแค่ร้อนก็แย่พอแล้ว นี่ถึงกับหายใจไม่ออกเลย",
+								"hindi": "...पहले से ही इतनी गर्मी है, ऊपर से दम घुट रहा है।"
 							},
-							"emotion": "sad"
-						}
-					],
-					"lose_dialogue": [
-						{
-							"speaker": "random_boss",
-							"type": "speech",
-							"emotion": "angry",
-							"content": {
-								"korean": "불길 속으로 들어올 자격이 없다. 당장 돌아가라!"
-							}
-						},
-						{
-							"content": {
-								"korean": "…열기에 밀렸지만 이대로 포기할 순 없다."
-							},
-							"emotion": "angry",
-							"speaker": "character_any",
 							"type": "speech"
 						}
-					]
-				}
-			],
-			"prologue": {
-				"korean": [
-					"용암 동굴 깊은 곳, 타오르는 열기가 벽을 녹이고 있다.",
-					"치솟는 불길의 원인을 찾기 위해 탐험대는 지하 깊숙이 향한다.",
-					"그 끝에서 용암 길목을 지키는 누군가가 길을 막아선다."
-				]
-			}
-		},
-		{
-			"scenario_id": "hell_philomel_39_04",
-			"order": 4,
-			"random_boss_title": {
-				"korean": "악마 주술사"
-			},
-			"act": "rising",
-			"theme": "hell",
-			"actors": {
-				"ash": {
-					"id": "mon_b225f5fa-59a1-47bb-b4c5-e73bf9e7192a",
-					"name": {
-						"korean": "애쉬",
-						"english": "Ash",
-						"japanese": "アッシュ",
-						"chinese": "艾什",
-						"french": "Ash",
-						"spanish": "Ash",
-						"vietnamese": "Ash",
-						"thai": "แอช",
-						"hindi": "ऐश"
-					},
-					"description": "",
-					"face_image_url": "https://imagedelivery.net/WTEqQNGFb-l-IHS6IGnzUQ/d84413a8-9d6f-4a40-5d36-75e431fb9900/public",
-					"battle_sprite_url": "https://imagedelivery.net/WTEqQNGFb-l-IHS6IGnzUQ/78281fca-e4b8-45cc-68ef-7df3fef74200/public"
-				}
-			},
-			"boss": {
-				"pool_id": "random_boss"
-			},
-			"prologue": {
-				"korean": [
-					"대륙 입구까지 번지는 지옥불의 열기.",
-					"탐험대는 불길을 식히기 위해 검은 제단으로 향한다.",
-					"그곳에서 지옥불을 잠재울 물건을 전달받아야 한다."
-				]
-			},
-			"rooms": [
+					],
+					"id": 1
+				},
 				{
-					"id": 1,
 					"dialogue": [
 						{
-							"type": "speech",
 							"emotion": "base",
+							"type": "speech",
 							"speaker": "narrator",
 							"content": {
-								"korean": "검은 제단 입구는 뿜어져 나오는 열기로 검게 그을려 있었다."
+								"korean": "붉은 용암이 넘치는 바위 벽면에 에메랄드빛으로 번들거리는 흔적이 남아 있다.",
+								"english": "On the rocky wall overflowing with red lava, a gleaming emerald trail remains.",
+								"japanese": "赤い溶岩があふれる岩壁に、エメラルド色に光る痕跡が残っている。",
+								"chinese": "在涌动着红色熔岩的石壁上，留下了发着翡翠色光泽的痕迹。",
+								"french": "Sur la paroi rocheuse où déborde de la lave rouge, il reste une trace luisante vert émeraude.",
+								"spanish": "En la pared rocosa donde rebosa la lava roja, queda un rastro brillante de color esmeralda.",
+								"vietnamese": "Trên vách đá tràn ngập dung nham đỏ, còn lại dấu vết óng ánh màu ngọc lục bảo.",
+								"thai": "บนผาหินที่มีลาวาสีแดงไหลทะลัก มีร่องรอยเปล่งประกายสีมรกตหลงเหลืออยู่",
+								"hindi": "लाल लावे से भरी चट्टानी दीवार पर पन्ने के रंग की चमकदार लकीर बाकी है।"
 							}
 						},
 						{
-							"speaker": "ash",
 							"duration_ms": 500,
+							"speaker": "cinder",
 							"type": "direction",
 							"action": "enter",
 							"spot": [
@@ -1033,82 +793,68 @@
 							]
 						},
 						{
+							"emotion": "happy",
+							"speaker": "cinder",
 							"type": "speech",
 							"content": {
-								"korean": "절벽에서 헤어진 뒤 지옥불을 계속 연구하며 쫓아왔어요."
-							},
-							"emotion": "base",
-							"speaker": "ash"
-						},
-						{
-							"content": {
-								"korean": "이게 지옥불을 식힐 별빛 서리 수정이에요."
-							},
-							"type": "speech",
-							"speaker": "ash",
-							"emotion": "happy"
-						},
-						{
-							"speaker": "character_any",
-							"emotion": "base",
-							"content": {
-								"korean": "이 수정이 있다면 퍼지는 불길을 제어할 수 있겠군."
-							},
-							"type": "speech"
-						},
-						{
-							"content": {
-								"korean": "…숨만 쉬어도 목이 바짝 타들어 가."
-							},
-							"speaker": "character_1",
-							"emotion": "sad",
-							"type": "speech"
-						}
-					]
-				},
-				{
-					"dialogue": [
-						{
-							"content": {
-								"korean": "제단 안쪽으로 들어설수록 불길의 소용돌이가 거세진다."
-							},
-							"type": "speech",
-							"speaker": "narrator",
-							"emotion": "base"
-						},
-						{
-							"spot": [
-								2,
-								3
-							],
-							"duration_ms": 500,
-							"action": "enter",
-							"speaker": "ash",
-							"type": "direction"
-						},
-						{
-							"speaker": "ash",
-							"emotion": "base",
-							"type": "speech",
-							"content": {
-								"korean": "이 수정은 열기의 한가운데, 불꽃 코어에 넣어야 힘을 써요. 그런데 코어가 어디 있는지는 아직 몰라요."
+								"korean": "저길 좀 보시오! 집행자가 흘리고 간 에메랄드빛 액체 자국이 분명하오.",
+								"english": "Look over there! That is definitely the emerald liquid trail left behind by the Enforcer.",
+								"japanese": "あそこを見なされ！ 執行者が散らしていったエメラルド色の液体の痕跡に違いない。",
+								"chinese": "快看那边！那绝对是执行者落下的翡翠色液体痕迹。",
+								"french": "Regardez là-bas ! C'est à coup sûr la trace de liquide émeraude laissée par l'exécuteur.",
+								"spanish": "¡Miren allí! Sin duda es el rastro de líquido esmeralda que dejó la ejecutora.",
+								"vietnamese": "Nhìn đằng kia xem! Chắc chắn là dấu vết chất lỏng màu ngọc lục bảo do Kẻ Hành Quyết để lại.",
+								"thai": "ดูตรงนั้นสิ! ต้องเป็นร่องรอยของเหลวสีมรกตที่ผู้ลงอาญาทำตกไว้แน่ๆ",
+								"hindi": "उधर देखो! यह निश्चित रूप से निष्पादक द्वारा छोड़ा गया पन्ने जैसे द्रव का निशान है।"
 							}
 						},
 						{
 							"content": {
-								"korean": "그럼 먼저 불꽃 코어부터 찾아야겠구나."
+								"korean": "틀림없이 비싼 보석이 파묻혀 있을 거요! 어서 벽을 파보시오.",
+								"english": "There must be expensive gems buried in there! Hurry and dig into the wall.",
+								"japanese": "間違いなく高価な宝石が埋まっているはずだ！早く壁を掘ってみろ。",
+								"chinese": "肯定埋着昂贵的宝石！快把墙壁挖开。",
+								"french": "Des gemmes de valeur doivent être enfouies ici ! Vite, creusez le mur.",
+								"spanish": "¡Seguro que hay gemas valiosas enterradas aquí! ¡Rápido, cava en la pared!",
+								"vietnamese": "Chắc chắn có đá quý đắt tiền được chôn ở đây! Mau đào bức tường ra đi.",
+								"thai": "ต้องมีอัญมณีล้ำค่าฝังอยู่แน่ๆ! รีบขุดผนังดูเร็ว",
+								"hindi": "जरूर यहाँ कोई कीमती रत्न दफन होगा! जल्दी से दीवार को खोदो।"
 							},
+							"speaker": "cinder",
 							"type": "speech",
-							"speaker": "character_any",
-							"emotion": "base"
+							"emotion": "happy"
 						},
 						{
-							"type": "speech",
+							"speaker": "narrator",
+							"emotion": "base",
 							"content": {
-								"korean": "…열기가 너무 강해서 눈을 뜨기 힘들어."
+								"korean": "에메랄드빛 자국에 손을 대자 차가운 정령의 기운이 서늘하게 뿜어져 나온다.",
+								"english": "As you place your hand on the emerald mark, a chilly spirit energy bursts forth.",
+								"japanese": "エメラルド色の痕跡に手を触れると、冷たい精霊の気がひんやりと湧き出してくる。",
+								"chinese": "将手放在翡翠色的痕迹上，一股冰冷的精灵气息森然涌出。",
+								"french": "En posant la main sur la marque émeraude, une énergie spirituelle glaciale s'échappe avec fraîcheur.",
+								"spanish": "Al poner la mano sobre la marca esmeralda, emana una helada energía espiritual.",
+								"vietnamese": "Khi chạm tay vào vết dấu màu ngọc lục bảo, một luồng khí tinh linh lạnh lẽo tỏa ra.",
+								"thai": "เมื่อสัมผัสรอยสีมรกต พลังแห่งจิตวิญญาณอันเย็นเยือกก็พวยพุ่งออกมา",
+								"hindi": "पन्ने जैसी हरी छाप पर हाथ रखते ही, एक ठंडी आत्मिक ऊर्जा सनसनाती हुई बाहर निकलती है।"
 							},
-							"emotion": "sad",
-							"speaker": "character_2"
+							"type": "speech"
+						},
+						{
+							"content": {
+								"korean": "…이 열기 속에서 서리가 내릴 것 같아.",
+								"english": "...It feels as though frost might fall even amidst this heat.",
+								"japanese": "…この熱気の中で霜が降りそうだ。",
+								"chinese": "……在这般热气之中，竟然仿佛要下霜了一般。",
+								"french": "... On dirait que du givre pourrait tomber au milieu de cette chaleur.",
+								"spanish": "...Parece que vaya a caer escarcha en medio de este calor.",
+								"vietnamese": "...Trong sức nóng này mà cảm giác như sương giá sắp phủ xuống vậy.",
+								"thai": "...ท่ามกลางความร้อนนี้ เหมือนจะมีน้ำค้างแข็งตกลงมาเลย",
+								"hindi": "...इस गर्मी में तो लगता है जैसे पाला पड़ जाएगा।"
+							},
+							"type": "speech",
+							"speaker": "character_2",
+							"emotion": "base"
 						}
 					],
 					"id": 3
@@ -1116,45 +862,69 @@
 				{
 					"dialogue": [
 						{
-							"spot": [
-								3,
-								2
-							],
+							"type": "direction",
+							"speaker": "cinder",
 							"duration_ms": 500,
 							"action": "enter",
-							"speaker": "ash",
-							"type": "direction"
+							"spot": [
+								2,
+								3
+							]
 						},
 						{
-							"content": {
-								"korean": "저는 여기까지예요. 악마 주술사들이 제단을 지키고 있어요."
-							},
-							"type": "speech",
-							"speaker": "ash",
-							"emotion": "sad"
-						},
-						{
-							"content": {
-								"korean": "수정은 우리가 반드시 불꽃 코어까지 가져가겠다."
-							},
 							"emotion": "angry",
 							"type": "speech",
-							"speaker": "character_any"
-						},
-						{
-							"speaker": "ash",
-							"action": "exit",
-							"type": "direction",
-							"duration_ms": 400,
-							"direction": "down"
-						},
-						{
+							"speaker": "cinder",
 							"content": {
-								"korean": "…깊은 곳에서 기괴한 주문 소리가 들려와."
-							},
-							"type": "speech",
+								"korean": "보석이 아니라 정령의 기운이라니! 으, 돈이 안 되는 일엔 빠지겠소.",
+								"english": "Spirit energy instead of gems?! Ugh, count me out of business that yields no profit.",
+								"japanese": "宝石ではなく精霊の気だと！？うぅ、金にならないことからは手を引かせてもらうぞ。",
+								"chinese": "不是宝石而是精灵的气息？！哼，赚不到钱的事我可不上趟。",
+								"french": "C'est l'énergie d'un esprit et non des gemmes ?! Beurk, comptez sur moi pour m'écarter des affaires qui ne rapportent rien.",
+								"spanish": "¡¿Energía espiritual en lugar de gemas?! Ugh, no cuentes conmigo para asuntos que no dan dinero.",
+								"vietnamese": "Không phải đá quý mà là khí tinh linh sao?! Hừ, chuyện không hái ra tiền thì ta rút.",
+								"thai": "ไม่ใช่อัญมณีแต่เป็นพลังจิตวิญญาณเนี่ยนะ! ฮึ เรื่องไม่ได้เงินแบบนี้ขอบายล่ะ",
+								"hindi": "रत्नों के बजाय आत्मिक ऊर्जा?! उफ़, जिसमें पैसा न मिले, मैं उससे बाहर ही रहूँगा।"
+							}
+						},
+						{
+							"duration_ms": 400,
+							"action": "exit",
+							"direction": "down",
+							"type": "direction",
+							"speaker": "cinder"
+						},
+						{
 							"emotion": "base",
-							"speaker": "character_3"
+							"speaker": "character_any",
+							"type": "speech",
+							"content": {
+								"korean": "집행자가 지나간 자리에 왜 이런 서늘한 기운이 남아있는 걸까.",
+								"english": "Why does such a chilly aura remain in the place where the Executor passed?",
+								"japanese": "執行者が通り過ぎた場所に、なぜこんな冷たい気が残っているのだろう。",
+								"chinese": "执行者经过的地方，为什么会残留着如此冰冷的气息。",
+								"french": "Pourquoi une énergie si glaciale subsiste-t-elle là où l'Exécuteur est passé ?",
+								"spanish": "¿Por qué queda una energía tan fría en el lugar por donde pasó el Ejecutor?",
+								"vietnamese": "Tại sao ở nơi Chấp Hành Viên đi qua lại còn sót lại luồng khí lạnh lẽo thế này.",
+								"thai": "ทำไมในสถานที่ที่ผู้สำเร็จโทษผ่านไป ถึงยังมีพลังอันเย็นเยือกหลงเหลืออยู่กันนะ",
+								"hindi": "निष्पादक जिस जगह से गुजरा, वहाँ ऐसी ठंडी ऊर्जा क्यों बाकी रह गई है?"
+							}
+						},
+						{
+							"emotion": "sad",
+							"speaker": "character_3",
+							"type": "speech",
+							"content": {
+								"korean": "…위쪽에서 뜨거운 기척이 다가온다.",
+								"english": "...A fiery presence approaches from above.",
+								"japanese": "…上から熱い気配が近づいてくる。",
+								"chinese": "……上方有一股炽热的气息在靠近。",
+								"french": "... Une présence brûlante s'approche par le haut.",
+								"spanish": "...Una presencia abrasadora se aproxima desde arriba.",
+								"vietnamese": "...Có một luồng khí nóng rực đang tiến lại từ phía trên.",
+								"thai": "...มีร่องรอยอันร้อนแรงกำลังใกล้เข้ามาจากด้านบน",
+								"hindi": "...ऊपर से एक गर्म अहसास करीब आ रहा है।"
+							}
 						}
 					],
 					"id": 5
@@ -1164,128 +934,1316 @@
 					"dialogue": [
 						{
 							"content": {
-								"korean": "주문 소리가 울려 퍼지는 제단 중심부 길목."
+								"korean": "골짜기 깊은 곳에서 거친 화염 소리와 함께 거대한 무기가 부딪치는 소리가 울린다.",
+								"english": "Deep in the valley, the roar of harsh flames echoes alongside the clashing of massive weapons.",
+								"japanese": "谷の深部から、荒々しい炎の音と共に巨大な武器がぶつかり合う音が響き渡る。",
+								"chinese": "在山谷深处，狂暴的火焰声伴随着巨大武器交锋的轰鸣响彻四周。",
+								"french": "Dans les profondeurs de la vallée, le rugissement de flammes violentes résonne en même temps que le choc de gigantesques armes.",
+								"spanish": "En lo profundo del valle, el rugido de llamas feroces resuena junto al choque de armas gigantescas.",
+								"vietnamese": "Từ sâu trong thung lũng, tiếng lửa cháy dữ dội vang vọng cùng tiếng binh khí khổng lồ va vào nhau.",
+								"thai": "จากส่วนลึกของหุบเขา เสียงเปลวเพลิงอันบ้าคลั่งดังสะท้อนพร้อมกับเสียงอาวุธมหึมาปะทะกัน",
+								"hindi": "घाटी की गहराइयों में, भयंकर लपटों की आवाज के साथ विशाल हथियारों के टकराने की गूंज सुनाई दे रही है।"
 							},
+							"type": "speech",
 							"emotion": "base",
-							"speaker": "narrator",
+							"speaker": "narrator"
+						},
+						{
+							"emotion": "angry",
+							"speaker": "character_any",
+							"content": {
+								"korean": "누군가 용암 너머에서 강렬한 적의를 내뿜으며 가로막고 있다.",
+								"english": "Beyond the lava, someone stands blocking the way, radiating fierce hostility.",
+								"japanese": "溶岩の向こうで、誰かが激しい敵意を放ちながら立ちはだかっている。",
+								"chinese": "熔岩的另一端，有人正散发着强烈敌意挡住去路。",
+								"french": "Au-delà de la lave, quelqu'un dresse un barrage en émanant une intense hostilité.",
+								"spanish": "Más allá de la lava, alguien se interpone emitiendo una intensa hostilidad.",
+								"vietnamese": "Phía bên kia dòng dung nham, có kẻ đang tỏa ra sát khí mãnh liệt chắn đường.",
+								"thai": "อีกฟากหนึ่งของลาวา มีใครบางคนกำลังแผ่จิตสังหารอันรุนแรงและขวางทางอยู่",
+								"hindi": "लावा के उस पार, तीव्र दुश्मनी की भावना बिखेरते हुए कोई रास्ता रोके खड़ा है।"
+							},
 							"type": "speech"
 						},
 						{
+							"emotion": "sad",
 							"type": "speech",
-							"speaker": "character_any",
-							"emotion": "base",
-							"content": {
-								"korean": "바닥에 청록빛 수정 깃털이 떨어져 있군."
-							}
-						},
-						{
-							"type": "speech",
-							"content": {
-								"korean": "…불길 속에서도 깃털이 차가운 빛을 내고 있어."
-							},
 							"speaker": "character_4",
-							"emotion": "base"
+							"content": {
+								"korean": "…바람마저 불덩이처럼 뜨거워.",
+								"english": "...Even the wind feels scorching hot like a fireball.",
+								"japanese": "…風までもが火の玉のように熱い。",
+								"chinese": "……连吹过的风都像火球般炽热。",
+								"french": "... Même le vent est brûlant comme une boule de feu.",
+								"spanish": "...Hasta el viento quema como una bola de fuego.",
+								"vietnamese": "...Đến cả gió cũng nóng rực như quả cầu lửa.",
+								"thai": "...แม้แต่ลมก็ยังร้อนราวกับลูกไฟ",
+								"hindi": "...यहाँ तो हवा भी आग के गोले जैसी गर्म है।"
+							}
+						}
+					]
+				},
+				{
+					"id": 15,
+					"lose_dialogue": [
+						{
+							"speaker": "random_boss",
+							"emotion": "angry",
+							"type": "speech",
+							"content": {
+								"korean": "지옥불의 심판을 받아라! 감히 더 깊은 곳을 엿보지 마라!",
+								"english": "Suffer the judgment of hellfire! Don't you dare peer any deeper!",
+								"japanese": "地獄の炎の裁きを受けよ！これ以上奥を覗こうとするな！",
+								"chinese": "接受地狱之火的审判吧！竟敢窥探更深之处！",
+								"french": "Subissez le jugement du feu de l'enfer ! N'osez pas regarder plus loin !",
+								"spanish": "¡Reciban el juicio del fuego infernal! ¡No se atrevan a mirar más profundo!",
+								"vietnamese": "Hãy nhận lấy sự trừng phạt của lửa địa ngục! Đừng hòng dòm ngó vào nơi sâu hơn!",
+								"thai": "จงรับการพิพากษาจากไฟนรก! อย่าบังอาจแอบมองเข้าไปในที่ที่ลึกกว่านี้!",
+								"hindi": "नरक की अग्नि का न्याय सहो! और गहराई में झांकने की हिम्मत मत करो!"
+							}
 						},
 						{
 							"speaker": "character_any",
 							"emotion": "angry",
 							"type": "speech",
 							"content": {
-								"korean": "주문 소리가 바로 앞이다. 제단을 막아선 적이 있다."
+								"korean": "…여기서 무너질 순 없다. 다시 전열을 가다듬자.",
+								"english": "...We can't fall here. Let's regroup.",
+								"japanese": "…ここで倒れるわけにはいかない。もう一度態勢を整えよう。",
+								"chinese": "…不能在这里倒下。重新整顿阵型吧。",
+								"french": "...On ne peut pas s'effondrer ici. Regroupons-nous.",
+								"spanish": "...No podemos caer aquí. Reorganicemos nuestras filas.",
+								"vietnamese": "...Không thể gục ngã ở đây được. Hãy chấn chỉnh lại đội hình nào.",
+								"thai": "...จะมาล้มลงที่นี่ไม่ได้ ต้องจัดขบวนทัพใหม่",
+								"hindi": "...हम यहाँ हार नहीं मान सकते। चलो अपनी पंक्तियों को फिर से व्यवस्थित करें।"
 							}
+						}
+					],
+					"win_dialogue": [
+						{
+							"content": {
+								"korean": "크윽… 짓밟히고 싶지 않다면… 당장 골짜기 밖으로 돌아가라…",
+								"english": "Urgh... If you don't want to be trampled... get out of the valley right now...",
+								"japanese": "くっ…踏みにじられたくなければ…今すぐ谷の外へ戻れ…",
+								"chinese": "呃…如果不想要被蹂躏…就立刻回到谷外去吧…",
+								"french": "Argh... Si vous ne voulez pas être piétinés... retournez immédiatement hors de la vallée...",
+								"spanish": "Puag... Si no quieren ser pisoteados... vuelvan fuera del valle ahora mismo...",
+								"vietnamese": "Hự... Nếu không muốn bị đè bẹp... hãy mau quay lại bên ngoài thung lũng...",
+								"thai": "อึก... ถ้าไม่อยากถูกเหยียบย่ำ... จงกลับไปนอกหุบเขาเดี๋ยวนี้...",
+								"hindi": "उफ़... अगर कुचले नहीं जाना चाहते... तो अभी घाटी के बाहर लौट जाओ..."
+							},
+							"type": "speech",
+							"speaker": "random_boss",
+							"emotion": "angry"
+						},
+						{
+							"content": {
+								"korean": "적이 쓰러지자 에메랄드빛 차가운 기운이 불탄 암석 제단 방면으로 강하게 흘러갔다.",
+								"english": "As the enemy fell, a cold emerald energy surged strongly toward the scorched rock altar.",
+								"japanese": "敵が倒れると、エメラルド色の冷たい気が焼け焦げた岩石の祭壇の方向へ強く流れていった。",
+								"chinese": "随着敌人倒下，一股冰冷的翡翠色气息强烈地涌向焦黑的岩石祭坛方向。",
+								"french": "Lorsque l'ennemi s'effondra, une énergie froide et émeraude s'écoula fortement vers l'autel de roche brûlé.",
+								"spanish": "Al caer el enemigo, una fría energía de color esmeralda fluyó con fuerza hacia el altar de roca quemada.",
+								"vietnamese": "Khi kẻ thù gục xuống, một luồng khí lạnh màu ngọc lục bảo cuồn cuộn chảy về phía bàn thờ đá bị thiêu rụi.",
+								"thai": "เมื่อศัตรูล้มลง พลังเย็นสีมรกตก็พุ่งเป็นสายไปยังแท่นบูชาหินที่ถูกเผาไหม้",
+								"hindi": "जैसे ही दुश्मन गिरा, मरकत रंग की एक ठंडी ऊर्जा जलती हुई चट्टानी वेदी की दिशा में तेज़ी से बह निकली।"
+							},
+							"type": "speech",
+							"emotion": "base",
+							"speaker": "narrator"
+						},
+						{
+							"content": {
+								"korean": "이 차가운 기운을 따라가 보자.",
+								"english": "Let's follow this cold energy.",
+								"japanese": "この冷たい気をたどってみよう。",
+								"chinese": "我们沿着这股冰冷的气息跟过去看看吧。",
+								"french": "Suivons cette énergie froide.",
+								"spanish": "Sigamos esta fría energía.",
+								"vietnamese": "Hãy đi theo luồng khí lạnh này xem sao.",
+								"thai": "ตามพลังเย็นนี้ไปกันเถอะ",
+								"hindi": "चलो इस ठंडी ऊर्जा का पीछा करते हैं।"
+							},
+							"speaker": "character_any",
+							"emotion": "base",
+							"type": "speech"
+						}
+					],
+					"dialogue": [
+						{
+							"type": "speech",
+							"emotion": "angry",
+							"speaker": "random_boss",
+							"content": {
+								"korean": "내 구역에 들어온 침입자냐! 집행자 님을 방해하는 자는 여기서 처단하겠다!",
+								"english": "An intruder entering my territory?! Anyone who interferes with the Executor shall be struck down here!",
+								"japanese": "俺の縄張りに立ち入った侵入者か！執行者様を邪魔する者は、ここで成敗してやる！",
+								"chinese": "竟敢擅闯我的地盘！任何企图妨碍执行者大人的人，都将在此被处决！",
+								"french": "Tu es un intrus entré sur mon territoire ?! Quiconque gêne l'Exécuteur sera exécuté ici même !",
+								"spanish": "¡¿Un intruso en mi territorio?! ¡Cualquiera que interfiera con el Ejecutor será ajusticiado aquí mismo!",
+								"vietnamese": "Kẻ xâm nhập vào lãnh địa của ta sao?! Kẻ nào ngáng đường Ngài Chấp Hành Viên sẽ bị trừng phạt tại đây!",
+								"thai": "ผู้บุกรุกที่เข้ามาในถิ่นของข้าเรอะ! ใครที่ขัดขวางท่านผู้สำเร็จโทษ จะถูกกำจัด ณ ที่แห่งนี้!",
+								"hindi": "मेरे इलाके में घुसने वाले घुसपैठिए?! जो कोई भी निष्पादक महोदय के काम में बाधा डालेगा, उसे यहीं खत्म कर दिया जाएगा!"
+							}
+						},
+						{
+							"content": {
+								"korean": "우리는 번지는 불길을 막으러 왔다. 길을 비켜라!",
+								"english": "We came to stop the spreading flames. Out of our way!",
+								"japanese": "私たちは広がる火災を止めに来た。道を開けろ！",
+								"chinese": "我们是来阻止蔓延的火势的。让开！",
+								"french": "Nous sommes venus arrêter l'incendie qui se propage. Écartez-vous !",
+								"spanish": "¡Venimos a contener las llamas que se extienden! ¡Abran paso!",
+								"vietnamese": "Chúng ta đến đây để dập tắt ngọn lửa đang lan rộng. Tránh đường!",
+								"thai": "พวกเรามาเพื่อหยุดยั้งเปลวเพลิงที่กำลังแพร่กระจาย หลีกทางไป!",
+								"hindi": "हम फैलती आग को रोकने आए हैं। रास्ते से हट जाओ!"
+							},
+							"emotion": "angry",
+							"type": "speech",
+							"speaker": "character_any"
+						},
+						{
+							"type": "speech",
+							"content": {
+								"korean": "…무기를 잡은 손이 타들어 갈 것 같아.",
+								"english": "...The hand holding my weapon feels like it's burning up.",
+								"japanese": "…武器を握る手が焼け落ちそうだ。",
+								"chinese": "…握着武器的手感觉要烧起来了。",
+								"french": "...J'ai l'impression que ma main tenant l'arme est en train de brûler.",
+								"spanish": "...Siento que la mano con la que sostengo el arma se me quema.",
+								"vietnamese": "...Tay cầm vũ khí dường như sắp bị thiêu rụi.",
+								"thai": "...มือที่กุมอาวุธอยู่เหมือนกำลังจะถูกแผดเผา",
+								"hindi": "...हथियार पकड़ी हुई मेरी हथेली जैसे जली जा रही है।"
+							},
+							"speaker": "character_1",
+							"emotion": "base"
+						}
+					]
+				}
+			]
+		},
+		{
+			"scenario_id": "hell_philomel_39_03",
+			"order": 3,
+			"random_boss_title": {
+				"korean": "검은 바위 거인",
+				"english": "Black Rock Giant",
+				"japanese": "黒岩の巨人",
+				"chinese": "黑岩巨人",
+				"french": "Géant de roche noire",
+				"spanish": "Gigante de roca negra",
+				"vietnamese": "Gã Khổng Lồ Đá Đen",
+				"thai": "ยักษ์หินดำ",
+				"hindi": "काला चट्टानी दानव"
+			},
+			"act": "rising",
+			"theme": "hell",
+			"actors": {
+				"mara": {
+					"id": "mon_94e5bffe-d3cd-4e5e-a174-633174784043",
+					"name": {
+						"korean": "마라",
+						"english": "Mara",
+						"japanese": "マーラ",
+						"chinese": "玛拉",
+						"french": "Mara",
+						"spanish": "Mara",
+						"vietnamese": "Mara",
+						"thai": "มารา",
+						"hindi": "मारा"
+					},
+					"description": "",
+					"face_image_url": "https://imagedelivery.net/WTEqQNGFb-l-IHS6IGnzUQ/801457b4-3ecc-41f5-e450-73d6ce8eb200/public",
+					"battle_sprite_url": "https://imagedelivery.net/WTEqQNGFb-l-IHS6IGnzUQ/9bfac7d4-6bfd-49b0-5ba4-a25419c71400/public"
+				}
+			},
+			"boss": {
+				"pool_id": "random_boss"
+			},
+			"prologue": {
+				"korean": [
+					"불탄 암석 제단 위로 검붉은 열기가 솟구친다.",
+					"지옥의 불길이 입구를 넘어 마법 대륙까지 번지기 직전인 상황.",
+					"골짜기에서 흘러온 차가운 기운을 따라 탐험대는 제단 안으로 들어선다."
+				],
+				"english": [
+					"Dark red heat surges above the scorched stone altar.",
+					"Hellfire is on the verge of spreading past the entrance to the magic continent.",
+					"Following the cold air flowing from the valley, the expedition steps into the altar."
+				],
+				"japanese": [
+					"焦げた岩石の祭壇の上に黒赤い熱気が湧き上がる。",
+					"地獄の炎が入口を超えて魔法大陸へ広がる直前の状況。",
+					"谷から流れてくる冷気に導かれ、探検隊は祭壇の中へと進む。"
+				],
+				"chinese": [
+					"焦黑的岩石祭坛上涌起暗红色的热浪。",
+					"地狱之火即将跨越入口，蔓延至魔法大陆。",
+					"探险队循着山谷吹来的凉气，踏入了祭坛内部。"
+				],
+				"french": [
+					"Une chaleur rouge sombre s'élève au-dessus de l'autel de roche brûlée.",
+					"Les flammes de l'enfer sont sur le point de franchir l'entrée et de se propager au continent magique.",
+					"Guidée par l'air froid venu de la vallée, l'expédition pénètre dans l'autel."
+				],
+				"spanish": [
+					"Un calor rojo oscuro se eleva sobre el altar de roca abrasada.",
+					"Las llamas del infierno están a punto de cruzar la entrada y extenderse por el continente mágico.",
+					"Siguiendo el aire frío que fluye desde el valle, la expedición se adentra en el altar."
+				],
+				"vietnamese": [
+					"Hơi nóng màu đỏ thẫm bốc lên trên tế đàn đá cháy xém.",
+					"Ngọn lửa địa ngục sắp sửa vượt qua lối vào và lan sang lục địa phép thuật.",
+					"Theo luồng khí lạnh từ thung lũng thổi đến, đoàn thám hiểm bước vào bên trong tế đàn."
+				],
+				"thai": [
+					"ไอความร้อนสีแดงเข้มพวยพุ่งขึ้นเหนือแท่นบูชาหินที่ไหม้เกรียม",
+					"ไฟนรกกำลังจะลุกลามผ่านทางเข้าออกไปสู่ทวีปเวทมนตร์",
+					"คณะสำรวจเดินเข้าสู่แท่นบูชาตามกระแสลมเย็นที่พัดมาจากหุบเขา"
+				],
+				"hindi": [
+					"झुलसी हुई चट्टानी वेदी के ऊपर गहरा लाल ताप उमड़ रहा है।",
+					"नर्क की लपटें प्रवेश द्वार को पार करके जादुई महाद्वीप तक फैलने ही वाली हैं।",
+					"घाटी से आती ठंडी हवा का पीछा करते हुए, खोजकर्ता दल वेदी के भीतर प्रवेश करता है।"
+				]
+			},
+			"rooms": [
+				{
+					"dialogue": [
+						{
+							"speaker": "narrator",
+							"type": "speech",
+							"emotion": "base",
+							"content": {
+								"korean": "불타는 제단 바닥 곳곳에서 검은 연기와 열기가 피어오른다.",
+								"english": "Black smoke and heat rise from all across the burning altar floor.",
+								"japanese": "燃える祭壇の床の至るところから黒い煙と熱気が立ち上る。",
+								"chinese": "燃烧的祭坛地面各处冒出阵阵黑烟与热浪。",
+								"french": "De la fumée noire et de la chaleur s'élèvent de plusieurs endroits du sol de l'autel en flammes.",
+								"spanish": "Humo negro y calor emanan de varios puntos del suelo del altar en llamas.",
+								"vietnamese": "Khói đen và hơi nóng bốc lên từ khắp nơi trên mặt sàn tế đàn đang bốc cháy.",
+								"thai": "ควันดำและไอความร้อนพวยพุ่งขึ้นมาจากทั่วทุกแห่งบนพื้นแท่นบูชาที่กำลังลุกไหม้",
+								"hindi": "जलती हुई वेदी के फर्श पर हर तरफ से काला धुआं और गरमी उठ रही है।"
+							}
+						},
+						{
+							"speaker": "mara",
+							"duration_ms": 500,
+							"action": "enter",
+							"spot": [
+								3,
+								2
+							],
+							"type": "direction"
+						},
+						{
+							"type": "speech",
+							"speaker": "mara",
+							"emotion": "base",
+							"content": {
+								"korean": "저는 열기를 봉인할 방법을 연구하는 학자 마라예요. 제단의 불길이 심상치 않아 조사하러 왔죠.",
+								"english": "I am Mara, a scholar researching ways to seal heat. I came to investigate because the altar's flames seem unusual.",
+								"japanese": "私は熱気を封印する方法を研究している学者マーラです。祭壇の炎が異常なので調査に来ました。",
+								"chinese": "我是研究如何封印热浪的学者玛拉。因为祭坛的火势很不寻常，所以我来调查一番。",
+								"french": "Je suis Mara, une érudite qui étudie les moyens de sceller la chaleur. Je suis venue enquêter car les flammes de l'autel semblent inhabituelles.",
+								"spanish": "Soy Mara, una erudita que investiga cómo sellar el calor. Vine a investigar porque las llamas del altar parecen fuera de lo normal.",
+								"vietnamese": "Tôi là Mara, một nhà nghiên cứu phương pháp phong ấn hơi nóng. Tôi đến điều tra vì ngọn lửa trên tế đàn có vẻ bất thường.",
+								"thai": "ฉันคือมารา นักวิชาการที่ศึกษาหาวิธีผนึกไอความร้อน ฉันมาสืบดูเพราะไฟบนแท่นบูชามันดูไม่ธรรมดา",
+								"hindi": "मैं मारा हूँ, एक विद्वान जो ताप को सील करने के तरीकों पर शोध कर रही हूँ। मैं जाँच करने आई हूँ क्योंकि वेदी की लपटें असामान्य लग रही हैं।"
+							}
+						},
+						{
+							"emotion": "base",
+							"content": {
+								"korean": "불길이 입구를 넘기 전에 막아야 합니다. 봉인할 방법이 있습니까?",
+								"english": "We must stop the flames before they cross the entrance. Is there a way to seal them?",
+								"japanese": "炎が入口を超える前に止めなければなりません。封印する方法はありますか？",
+								"chinese": "我们必须在火焰跨越入口之前阻止它。有封印的方法吗？",
+								"french": "Nous devons stopper les flammes avant qu'elles ne franchissent l'entrée. Y a-t-il un moyen de les sceller ?",
+								"spanish": "Debemos detener las llamas antes de que crucen la entrada. ¿Hay alguna forma de sellarlas?",
+								"vietnamese": "Chúng ta phải ngăn ngọn lửa lại trước khi nó vượt qua lối vào. Có cách nào phong ấn không?",
+								"thai": "เราต้องหยุดไฟนี้ก่อนที่มันจะลามผ่านทางเข้าออกไป มีวิธีผนึกมันไหม?",
+								"hindi": "हमें लपटों को प्रवेश द्वार पार करने से पहले रोकना होगा। क्या इन्हें सील करने का कोई तरीका है?"
+							},
+							"speaker": "character_any",
+							"type": "speech"
+						},
+						{
+							"speaker": "character_1",
+							"content": {
+								"korean": "…숨을 쉴 때마다 목이 타 들어가는 것 같아.",
+								"english": "...Every time I breathe, it feels like my throat is burning up.",
+								"japanese": "…息をするたびに喉が焼けるようだ。",
+								"chinese": "……每次呼吸，喉咙都像是要烧起来一样。",
+								"french": "...À chaque respiration, j'ai l'impression que ma gorge brûle.",
+								"spanish": "...Cada vez que respiro, siento que se me quema la garganta.",
+								"vietnamese": "...Mỗi lần hít thở, cổ họng tôi như đang bốc cháy.",
+								"thai": "...ทุกครั้งที่หายใจ รู้สึกเหมือนคอจะไหม้เลย",
+								"hindi": "...हर बार सांस लेने पर लगता है जैसे गला जल रहा हो।"
+							},
+							"emotion": "sad",
+							"type": "speech"
+						}
+					],
+					"id": 1
+				},
+				{
+					"id": 3,
+					"dialogue": [
+						{
+							"type": "direction",
+							"spot": [
+								2,
+								3
+							],
+							"speaker": "mara",
+							"duration_ms": 500,
+							"action": "enter"
+						},
+						{
+							"speaker": "mara",
+							"type": "speech",
+							"emotion": "base",
+							"content": {
+								"korean": "이 수정은 집행자가 처음 이 제단에 왔을 때 떨어뜨리고 간 거예요. 불 속에서도 차갑게 빛나요. 집행자 몸에서 나온 거니까, 집행자 몸 안의 불도 식힐 수 있을 거예요.",
+								"english": "This crystal was dropped by the Enforcer when they first came to this altar. It glows brightly and cold even amidst the flames. Since it came from the Enforcer's body, it should be able to cool the fire inside them as well.",
+								"japanese": "この水晶は執行者が初めてこの祭壇に来たときに落としていったものです。炎の中でも冷たく輝いています。執行者の体から出たものなので、執行者の体内の火も冷ますことができるはずです。",
+								"chinese": "这颗水晶是执行者第一次来到这个祭坛时掉落的。即使在火中，它也散发着冰冷的光芒。既然是从执行者身上掉落的，应该也能冷却执行者体内的火焰。",
+								"french": "Ce cristal est ce que l'Exécuteur a laissé tomber lorsqu'il est venu sur cet autel pour la première fois. Il brille d'une lueur froide même dans les flammes. Comme il provient du corps de l'Exécuteur, il devrait pouvoir refroidir le feu en lui.",
+								"spanish": "Este cristal lo dejó caer el Ejecutor la primera vez que vino a este altar. Brilla con frío incluso entre las llamas. Como proviene del cuerpo del Ejecutor, también debería poder enfriar el fuego de su interior.",
+								"vietnamese": "Viên tinh thể này là thứ mà Kẻ Hành Quyết đã đánh rơi khi lần đầu tiên đến tế đàn này. Nó vẫn tỏa sáng lạnh lẽo ngay cả trong ngọn lửa. Vì nó đến từ cơ thể của Kẻ Hành Quyết, nên chắc chắn nó cũng có thể làm dịu ngọn lửa bên trong hắn.",
+								"thai": "คริสตัลนี้คือสิ่งที่ผู้บังคับโทษทำตกไว้ตอนมาที่แท่นบูชานี้ครั้งแรก มันเปล่งประกายความเย็นออกมาแม้จะอยู่ท่ามกลางเปลวไฟ เพราะมันมาจากร่างกายของผู้บังคับโทษ มันก็น่าจะช่วยทำให้ไฟในตัวผู้บังคับโทษเย็นลงได้",
+								"hindi": "यह क्रिस्टल वह चीज़ है जो निष्पादक ने पहली बार इस वेदी पर आने पर गिरा दी थी। यह आग के बीच भी ठंडक के साथ चमकता है। चूँकि यह निष्पादक के शरीर से आया है, इसलिए यह उसके शरीर के भीतर की आग को भी शांत कर सकता है।"
+							}
+						},
+						{
+							"type": "speech",
+							"speaker": "mara",
+							"emotion": "sad",
+							"content": {
+								"korean": "저는 더 깊이 들어갈 수 없어요. 이걸 가져가서 집행자의 화염 코어에 꽂아 주세요.",
+								"english": "I cannot go any deeper. Take this and plunge it into the Enforcer's flame core.",
+								"japanese": "私はこれ以上奥へ進めません。これを持って行き、執行者の火炎コアに突き刺してください。",
+								"chinese": "我无法再深入了。请拿着这个，将它插入执行者的火焰核心。",
+								"french": "Je ne peux pas aller plus loin. Prenez ceci et enfoncez-le dans le cœur de flammes de l'Exécuteur.",
+								"spanish": "No puedo ir más adentro. Toma esto e insértalo en el núcleo de llama del Ejecutor.",
+								"vietnamese": "Tôi không thể đi sâu hơn nữa. Hãy cầm lấy thứ này và cắm vào lõi lửa của Kẻ Hành Quyết.",
+								"thai": "ฉันไม่สามารถเข้าไปลึกกว่านี้ได้แล้ว โปรดนำสิ่งนี้ไปเสียบเข้ากับแกนเปลวไฟของผู้บังคับโทษที",
+								"hindi": "मैं और गहरे नहीं जा सकती। इसे ले जाइए और निष्पादक के ज्वाला कोर में धंसा दीजिए।"
+							}
+						},
+						{
+							"speaker": "character_any",
+							"emotion": "base",
+							"type": "speech",
+							"content": {
+								"korean": "받아 두겠습니다. 집행자를 찾아 반드시 꽂겠어요.",
+								"english": "I'll take this. I will find the Executor and be sure to plunge it into them.",
+								"japanese": "受け取っておきます。執行者を見つけ出し、必ず突き刺してみせます。",
+								"chinese": "我收下了。我一定会找到执行者，把它刺进去。",
+								"french": "Je le prends. Je trouverai l'Exécuteur et je lui planterai dedans sans faute.",
+								"spanish": "Lo acepto. Encontraré al Ejecutor y se lo clavaré sin falta.",
+								"vietnamese": "Tôi sẽ nhận lấy. Tôi nhất định sẽ tìm ra Kẻ Hành Quyết và cắm nó vào hắn.",
+								"thai": "ฉันจะรับไว้เอง จะต้องหาตัวผู้สำเร็จโทษแล้วแทงมันลงไปให้ได้",
+								"hindi": "मैं इसे रख लेता हूँ। मैं निष्पादक को ढूँढकर इसे उसमें ज़रूर घोंपूंगा।"
+							}
+						},
+						{
+							"speaker": "character_2",
+							"type": "speech",
+							"content": {
+								"korean": "…손에 쥔 수정에서 차가운 기운이 흘러나와.",
+								"english": "...Cold energy flows from the crystal in my hand.",
+								"japanese": "…手に握った水晶から冷たい気が流れ出ている。",
+								"chinese": "…手中握着的水晶流淌着一丝寒气。",
+								"french": "…Une énergie glaciale s'échappe du cristal dans ma main.",
+								"spanish": "…Una energía fría emana del cristal que tengo en la mano.",
+								"vietnamese": "...Năng lượng lạnh giá tỏa ra từ viên pha lê trong tay.",
+								"thai": "...ไอเย็นไหลทะลักออกมาจากคริสตัลในมือ",
+								"hindi": "...हाथ में थमे स्फटिक से ठंडी ऊर्जा बह रही है।"
+							},
+							"emotion": "base"
+						}
+					]
+				},
+				{
+					"id": 5,
+					"dialogue": [
+						{
+							"speaker": "mara",
+							"type": "direction",
+							"spot": [
+								3,
+								2
+							],
+							"duration_ms": 500,
+							"action": "enter"
+						},
+						{
+							"speaker": "mara",
+							"type": "speech",
+							"content": {
+								"korean": "제단 바닥에서 집행자가 떨어뜨린 핫핑크빛 깃털을 발견했어요. 지옥의 집행자에게서 이렇게 고운 빛깔의 깃털이 떨어지다니 이상하죠?",
+								"english": "I found a hot pink feather dropped by the Executor on the altar floor. Strange that an Executor of Hell would drop a feather of such a pretty color, isn't it?",
+								"japanese": "祭壇の床で執行者が落としたホットピンクの羽を見つけました。地獄の執行者からこんなに綺麗な色の羽が落ちるなんて、おかしいですよね？",
+								"chinese": "我在祭坛地面上发现了执行者掉落的玫粉色羽毛。地狱的执行者身上竟会掉落颜色这么漂亮的羽毛，真奇怪吧？",
+								"french": "J'ai trouvé sur le sol de l'autel une plume rose vif tombée de l'Exécuteur. C'est étrange qu'une plume d'une si jolie couleur soit tombée d'un Exécuteur des enfers, n'est-ce pas ?",
+								"spanish": "Encontré en el suelo del altar una pluma rosa fucsia que se le cayó al Ejecutor. Es raro que a un Ejecutor del infierno se le caiga una pluma de un color tan bonito, ¿verdad?",
+								"vietnamese": "Tôi đã tìm thấy một chiếc lông vũ màu hồng rực rỡ do Kẻ Hành Quyết đánh rơi trên sàn bàn thờ. Thật kỳ lạ khi một Kẻ Hành Quyết của địa ngục lại đánh rơi một chiếc lông vũ có màu sắc đẹp đẽ như vậy nhỉ?",
+								"thai": "ฉันพบขนนกสีชมพูสดที่ผู้สำเร็จโทษทำตกไว้บนพื้นแท่นบูชา แปลกเนอะที่ขนนกสีสวยขนาดนี้จะตกมาจากผู้สำเร็จโทษแห่งขุมนรก?",
+								"hindi": "मैंने वेदी के फर्श पर निष्पादक का गिरा हुआ एक चमकीला गुलाबी पंख पाया। नरक के निष्पादक से इतने सुंदर रंग का पंख गिरना अजीब है ना?"
+							},
+							"emotion": "base"
+						},
+						{
+							"type": "speech",
+							"speaker": "character_any",
+							"emotion": "base",
+							"content": {
+								"korean": "핫핑크빛 깃털이라니, 집행자에게 숨겨진 비밀이 있는 건가.",
+								"english": "A hot pink feather... Could the Executor have a hidden secret?",
+								"japanese": "ホットピンクの羽とはな。執行者には隠された秘密があるのだろうか。",
+								"chinese": "玫粉色的羽毛吗……难道执行者隐藏着什么秘密？",
+								"french": "Une plume rose vif… L'Exécuteur cacherait-il un secret ?",
+								"spanish": "¿Una pluma rosa fucsia? ¿Acaso el Ejecutor oculta algún secreto?",
+								"vietnamese": "Lông vũ màu hồng rực rỡ sao... Phải chăng Kẻ Hành Quyết đang che giấu bí mật nào đó?",
+								"thai": "ขนนกสีชมพูสดอย่างนั้นหรือ... หรือว่าผู้สำเร็จโทษจะมีความลับซ่อนอยู่?",
+								"hindi": "चमकीला गुलाबी पंख... क्या निष्पादक का कोई छिपा हुआ रहस्य है?"
+							}
+						},
+						{
+							"content": {
+								"korean": "그리고 이상하게도 집행자는 사람들을 죽이기보다 밖으로 몰아내려고만 하는 것 같아요.",
+								"english": "And strangely enough, the Executor seems to be trying to drive people out rather than kill them.",
+								"japanese": "それに妙ですね。執行者は人を殺すというより、外へ追い出そうとしているように見えます。",
+								"chinese": "而且奇怪的是，执行者似乎比起杀人，更像是想把人们驱赶出去。",
+								"french": "Et curieusement, il semble que l'Exécuteur cherche plutôt à chasser les gens qu'à les tuer.",
+								"spanish": "Y curiosamente, parece que el Ejecutor intenta expulsar a la gente en lugar de matarla.",
+								"vietnamese": "Và lạ thay, dường như Kẻ Hành Quyết đang cố xua đuổi mọi người ra ngoài thay vì diệt trừ họ.",
+								"thai": "และแปลกมากที่ผู้สำเร็จโทษดูเหมือนจะพยายามขับไล่ผู้คนออกไปข้างนอกมากกว่าจะฆ่าฟัน",
+								"hindi": "और अजीब बात यह है कि निष्पादक लोगों को मारने के बजाय बाहर खदेड़ने की कोशिश कर रहा है।"
+							},
+							"emotion": "base",
+							"type": "speech",
+							"speaker": "mara"
+						},
+						{
+							"speaker": "character_any",
+							"type": "speech",
+							"emotion": "base",
+							"content": {
+								"korean": "사람을 해치지 않는 집행자라… 기억해 두겠습니다.",
+								"english": "An Executor who doesn't harm people... I'll keep that in mind.",
+								"japanese": "人を害さない執行者か… 覚えておこう。",
+								"chinese": "不伤人的执行者吗……我会记下的。",
+								"french": "Un Exécuteur qui ne fait pas de mal aux gens… Je le garderai à l'esprit.",
+								"spanish": "Un Ejecutor que no daña a las personas… Lo tendré en cuenta.",
+								"vietnamese": "Một Kẻ Hành Quyết không làm hại con người sao... Tôi sẽ ghi nhớ điều này.",
+								"thai": "ผู้สำเร็จโทษที่ไม่ทำร้ายคนอย่างนั้นหรือ... จะจำไว้ก็แล้วกัน",
+								"hindi": "लोगों को नुकसान न पहुँचाने वाला निष्पादक... मैं इसे याद रखूँगा।"
+							}
+						},
+						{
+							"action": "exit",
+							"duration_ms": 400,
+							"direction": "down",
+							"speaker": "mara",
+							"type": "direction"
+						},
+						{
+							"type": "speech",
+							"emotion": "sad",
+							"content": {
+								"korean": "…발밑의 바위가 무겁게 뒤흔들리고 있어.",
+								"english": "...The rock beneath my feet is shaking violently.",
+								"japanese": "…足元の岩が重く揺れている。",
+								"chinese": "…脚下的岩石正沉重地剧烈晃动。",
+								"french": "…Le rocher sous mes pieds tremble lourdement.",
+								"spanish": "…La roca bajo mis pies retumba fuertemente.",
+								"vietnamese": "...Tảng đá dưới chân đang rung chuyển dữ dội.",
+								"thai": "...หินใต้ฝ่าเท้ากำลังสั่นสะเทือนอย่างหนัก",
+								"hindi": "...पैरों के नीचे की चट्टान भारी आवाज़ के साथ हिल रही है।"
+							},
+							"speaker": "character_3"
+						}
+					]
+				},
+				{
+					"id": 9,
+					"dialogue": [
+						{
+							"type": "speech",
+							"content": {
+								"korean": "제단 깊은 곳에서 바위가 부딪히는 둔탁한 소리와 함께 거대한 기척이 다가온다.",
+								"english": "From deep within the altar, a massive presence approaches alongside the dull thud of colliding rocks.",
+								"japanese": "祭壇の奥深くから、岩がぶつかる鈍い音と共に巨大な気配が近づいてくる。",
+								"chinese": "从祭坛深处，伴随着岩石撞击的沉闷响声，一道庞大的气息正逐渐逼近。",
+								"french": "Depuis les profondeurs de l'autel, une présence colossale s'approche dans un choc sourd de rochers.",
+								"spanish": "Desde lo profundo del altar, una presencia enorme se aproxima junto al sonido sordo de rocas chocando.",
+								"vietnamese": "Từ sâu trong bàn thờ, cùng với tiếng va chạm trầm đục của những tảng đá, một hiện thân khổng lồ đang tiến lại gần.",
+								"thai": "จากส่วนลึกของแท่นบูชา สัมผัสได้ถึงมวลพลังมหาศาลที่กำลังคืบคลานเข้ามา พร้อมเสียงทึบของหินที่กระแทกกัน",
+								"hindi": "वेदी की गहराई से, चट्टानों के टकराने की भारी आवाज़ के साथ एक विशाल उपस्थिति पास आ रही है।"
+							},
+							"emotion": "base",
+							"speaker": "narrator"
+						},
+						{
+							"speaker": "character_any",
+							"emotion": "angry",
+							"type": "speech",
+							"content": {
+								"korean": "길을 가로막는 진동이다. 정체 모를 거대한 존재가 앞을 막아서고 있다.",
+								"english": "A vibration blocks the path. An unidentified massive entity stands before us.",
+								"japanese": "道を阻む振動だ。正体不明の巨大な存在が立ちふさがっている。",
+								"chinese": "这是挡住去路的震动。一个身份不明的庞大存在正屹立在前方。",
+								"french": "Une vibration bloque le chemin. Une entité colossale et inconnue se dresse sur le passage.",
+								"spanish": "Es una vibración que bloquea el camino. Una enorme entidad desconocida se interpone en el paso.",
+								"vietnamese": "Rung chuyển chặn đứng lối đi. Một sự hiện diện khổng lồ không rõ danh tính đang ngáng đường phía trước.",
+								"thai": "การสั่นสะเทือนสกัดกั้นเส้นทางไว้ ตัวตนมหึมาไม่ทราบฝ่ายกำลังยืนขวางทางอยู่ข้างหน้า",
+								"hindi": "रास्ते को रोक देने वाला कंपन है। एक अज्ञात विशाल जीव आगे का रास्ता रोके खड़ा है।"
+							}
+						},
+						{
+							"speaker": "character_4",
+							"type": "speech",
+							"emotion": "sad",
+							"content": {
+								"korean": "…열기에 피부가 데일 것 같아.",
+								"english": "...The heat feels like it's going to scorch my skin.",
+								"japanese": "…熱気で肌が焼けそうだ。",
+								"chinese": "…散发的热气仿佛要把皮肤烫伤。",
+								"french": "…La chaleur est telle qu'elle me brûle la peau.",
+								"spanish": "…El calor da la sensación de que me va a quemar la piel.",
+								"vietnamese": "...Hơi nóng như muốn thiêu đốt làn da.",
+								"thai": "...ความร้อนทำท่าเหมือนจะเผาผิวหนังจนพอง",
+								"hindi": "...गर्मी से ऐसा लग रहा है जैसे त्वचा जल जाएगी।"
+							}
+						}
+					]
+				},
+				{
+					"win_dialogue": [
+						{
+							"speaker": "random_boss",
+							"content": {
+								"korean": "어리석은 자들… 더 들어간다면 열기에 재조차 남지 않을 터…",
+								"english": "Fools... If you go any further, not even your ashes will remain in this heat...",
+								"japanese": "愚か者め…これ以上進めば、熱気で灰すら残らぬぞ…",
+								"chinese": "愚蠢的人们……再深入的话，在这酷热中连灰烬都不复存在……",
+								"french": "Insensés... Si vous allez plus loin, la chaleur ne laissera même pas de cendres...",
+								"spanish": "Insensatos... Si seguís avanzando, el calor no dejará ni vuestras cenizas...",
+								"vietnamese": "Những kẻ ngu ngốc... Nếu đi xa hơn nữa, sức nóng sẽ chẳng để lại dù chỉ là tro tàn...",
+								"thai": "พวกโง่เขลา... ถ้าเข้าไปลึกกว่านี้ ความร้อนจะไม่เหลือแม้แต่เถ้าถ่าน...",
+								"hindi": "मूर्खों... अगर तुम और आगे गए, तो इस गर्मी में तुम्हारी राख भी नहीं बचेगी..."
+							},
+							"emotion": "sad",
+							"type": "speech"
+						},
+						{
+							"emotion": "base",
+							"content": {
+								"korean": "거인을 넘어섰다. 마라 씨의 말처럼 집행자가 왜 사람들을 밖으로 몰아내기만 했는지 밝혀내야 한다.",
+								"english": "We have overcome the giant. As Mara said, we must find out why the Executor was only driving people outside.",
+								"japanese": "巨人を越えた。マラさんの言葉通り、執行者がなぜ人々を外へ追い出すだけだったのかを突き止めねばならない。",
+								"chinese": "我们战胜了巨人。正如玛拉所说，我们必须弄清楚执行者为何只是把人们赶到外面。",
+								"french": "Nous avons vaincu le géant. Comme l'a dit Mara, nous devons découvrir pourquoi l'Exécuteur se contentait de chasser les gens à l'extérieur.",
+								"spanish": "Hemos derrotado al gigante. Como dijo Mara, debemos averiguar por qué el Ejecutor solo expulsaba a la gente al exterior.",
+								"vietnamese": "Đã vượt qua tên khổng lồ. Đúng như lời Mara nói, chúng ta phải làm rõ tại sao Kẻ Hành Quyết lại chỉ đánh đuổi mọi người ra ngoài.",
+								"thai": "เอาชนะเจ้ายักษ์ได้แล้ว ต้องสืบหาความจริงตามที่ Mara บอกให้ได้ว่า ทำไมผู้ลงอาญาถึงได้แค่ต้อนคนให้ออกไปข้างนอก",
+								"hindi": "हमने दानव को हरा दिया है। मारा की बात के अनुसार, हमें यह पता लगाना होगा कि निष्पादक केवल लोगों को बाहर क्यों खदेड़ रहा था।"
+							},
+							"type": "speech",
+							"speaker": "character_any"
+						},
+						{
+							"speaker": "narrator",
+							"emotion": "base",
+							"content": {
+								"korean": "제단 너머 흑요석 미로 방향으로 불길의 흔적이 가늘게 이어져 있다.",
+								"english": "Beyond the altar, a faint trail of flames stretches toward the Obsidian Labyrinth.",
+								"japanese": "祭壇の向こう、黒曜石の迷宮へ向かって炎の跡がかすかに続いている。",
+								"chinese": "祭坛彼方，火苗的痕迹隐约延伸向黑曜石迷宫的方向。",
+								"french": "Au-delà de l'autel, une mince traînée de flammes s'étire en direction du Labyrinthe d'Obsidienne.",
+								"spanish": "Más allá del altar, un tenue rastro de llamas se extiende en dirección al Laberinto de Obsidiana.",
+								"vietnamese": "Phía bên kia bàn thờ, vết tích của ngọn lửa kéo dài mờ nhạt về phía Mê cung Đá hắc diện.",
+								"thai": "เหนือแท่นบูชาออกไป ร่องรอยของเปลวไฟทอดยาวเป็นสายบางๆ ไปทางเขาวงกตหินออบซิเดียน",
+								"hindi": "वेदी के पार, ऑब्सीडियन भूलभुलैया की दिशा में आग के धुंधले निशान फैले हुए हैं।"
+							},
+							"type": "speech"
+						}
+					],
+					"lose_dialogue": [
+						{
+							"emotion": "angry",
+							"content": {
+								"korean": "돌아가라. 뜨거운 제단은 너희의 무덤이 될 뿐이다.",
+								"english": "Turn back. This scorching altar will only become your grave.",
+								"japanese": "引き返せ。熱き祭壇はお前たちの墓場となるだけだ。",
+								"chinese": "返回吧。炽热的祭坛只会成为你们的坟墓。",
+								"french": "Rebroussez chemin. Cet autel brûlant ne sera que votre tombe.",
+								"spanish": "Daos la vuelta. Este ardiente altar solo se convertirá en vuestra tumba.",
+								"vietnamese": "Quay về đi. Bàn thờ rực lửa này sẽ chỉ là nấm mồ cho các ngươi mà thôi.",
+								"thai": "จงถอยกลับไป แท่นบูชาอันรุ่มร้อนนี้ทำได้แค่เป็นสุสานของพวกเจ้าเท่านั้น",
+								"hindi": "वापस लौट जाओ। यह दहकती हुई वेदी केवल तुम्हारी कब्र बनेगी।"
+							},
+							"type": "speech",
+							"speaker": "random_boss"
+						},
+						{
+							"type": "speech",
+							"content": {
+								"korean": "…여기서 멈출 순 없다. 다시 도전하겠다.",
+								"english": "...We can't stop here. I will try again.",
+								"japanese": "…ここで止まるわけにはいかない。もう一度挑戦する。",
+								"chinese": "……绝不能在此停下。我要再次挑战。",
+								"french": "...On ne peut pas s'arrêter là. Je vais essayer à nouveau.",
+								"spanish": "...No podemos detenernos aquí. Volveré a intentarlo.",
+								"vietnamese": "...Không thể dừng lại ở đây được. Ta sẽ thử lại.",
+								"thai": "...จะมาหยุดอยู่ตรงนี้ไม่ได้ ฉันจะท้าทายใหม่อีกครั้ง",
+								"hindi": "...हम यहाँ नहीं रुक सकते। मैं फिर से प्रयास करूँगा।"
+							},
+							"emotion": "angry",
+							"speaker": "character_any"
+						}
+					],
+					"id": 15,
+					"dialogue": [
+						{
+							"type": "speech",
+							"speaker": "narrator",
+							"content": {
+								"korean": "불길이 치솟는 제단 중앙, 검은 바위 형상의 거체가 단단히 버티고 서 있다.",
+								"english": "In the center of the soaring altar flames, a massive black rock figure stands firm.",
+								"japanese": "炎が燃え上がる祭壇の中央、黒い岩のような巨体がどっしりと立ちはだかっている。",
+								"chinese": "烈焰冲天的祭坛中央，一座黑岩般的巨躯屹立不倒。",
+								"french": "Au centre de l'autel embrasé, une silhouette colossale en roche noire se tient fermement.",
+								"spanish": "En el centro del altar envuelto en llamas, se yergue una colosal figura de roca negra.",
+								"vietnamese": "Ở giữa bàn thờ rực lửa, một tảng đá đen khổng lồ đang sừng sững đứng vững.",
+								"thai": "แท่นบูชาที่ไฟลุกโชน มีร่างยักษ์ทรงหินสีดำยืนตระหง่านอย่างมั่นคง",
+								"hindi": "भड़कती लपटों वाले वेदी के केंद्र में, काले पत्थर जैसी एक विशाल आकृति मजबूती से डटी हुई है।"
+							},
+							"emotion": "base"
+						},
+						{
+							"type": "speech",
+							"speaker": "random_boss",
+							"emotion": "angry",
+							"content": {
+								"korean": "더 깊이 들어가지 마라! 여기서 돌아가지 않으면 모두가 태워질 것이다!",
+								"english": "Do not go any deeper! If you don't turn back now, everyone will be burned!",
+								"japanese": "これ以上奥へ進むな！ここで引き返さねば、全員焼き尽くされるぞ！",
+								"chinese": "不要再深入了！如果不从这里返回，所有人都会被烧成灰烬！",
+								"french": "N'allez pas plus loin ! Si vous ne rebroussez pas chemin maintenant, vous serez tous brûlés !",
+								"spanish": "¡No avances más! ¡Si no os volvéis ahora, todos seréis reducidos a cenizas!",
+								"vietnamese": "Đừng đi sâu hơn nữa! Nếu không quay lại ngay bây giờ, tất cả sẽ bị thiêu rụi!",
+								"thai": "อย่าเข้าไปลึกกว่านี้! ถ้าไม่ถอยกลับไปตอนนี้ ทุกคนจะถูกเผาผลาญจนหมด!",
+								"hindi": "और गहराई में मत जाओ! अगर तुम यहाँ से वापस नहीं लौटे, तो सब जलकर राख हो जाओगे!"
+							}
+						},
+						{
+							"emotion": "angry",
+							"content": {
+								"korean": "지옥불이 대륙으로 번지는 것을 두고 볼 수는 없다. 길을 비켜라!",
+								"english": "We cannot stand by and watch hellfire spread across the continent. Move aside!",
+								"japanese": "地獄の炎が大陸へ広がるのを黙って見ているわけにはいかない。道をあけろ！",
+								"chinese": "我等不能坐视地狱之火蔓延至整个大陆。让开！",
+								"french": "Nous ne pouvons pas regarder le feu de l'enfer se propager sur le continent. Pousse-toi de là !",
+								"spanish": "¡No podemos quedarnos de brazos cruzados mientras el fuego del infierno se propaga por el continente! ¡Abre paso!",
+								"vietnamese": "Chúng ta không thể khoanh tay đứng nhìn ngọn lửa địa ngục lan ra khắp đại lục. Mau tránh đường!",
+								"thai": "เราจะยอมปล่อยให้ไฟนรกแพร่กระจายไปทั่วทวีปไม่ได้ ถอยไปซะ!",
+								"hindi": "हम नरक की आग को महाद्वीप में फैलते हुए चुपचाप नहीं देख सकते। रास्ता छोड़ो!"
+							},
+							"type": "speech",
+							"speaker": "character_any"
+						},
+						{
+							"speaker": "character_1",
+							"type": "speech",
+							"content": {
+								"korean": "…더는 물러설 곳이 없어.",
+								"english": "...There's nowhere left to retreat.",
+								"japanese": "…もう退く場所はない。",
+								"chinese": "……已经没有退路了。",
+								"french": "...Il n'y a plus aucun endroit où reculer.",
+								"spanish": "...Ya no hay lugar adonde retroceder.",
+								"vietnamese": "...Không còn đường lùi nữa rồi.",
+								"thai": "...ไม่มีที่ให้ถอยอีกแล้ว",
+								"hindi": "...अब पीछे हटने की कोई जगह नहीं बची है।"
+							},
+							"emotion": "sad"
+						}
+					]
+				}
+			]
+		},
+		{
+			"scenario_id": "hell_philomel_39_04",
+			"order": 4,
+			"random_boss_title": {
+				"korean": "지옥 지휘관",
+				"english": "Hell Commander",
+				"japanese": "地獄の指揮官",
+				"chinese": "地狱指挥官",
+				"french": "Commandant de l'enfer",
+				"spanish": "Comandante del Infierno",
+				"vietnamese": "Chỉ Huy Địa Ngục",
+				"thai": "ผู้บัญชาการแห่งขุมนรก",
+				"hindi": "नर्क का कमांडर"
+			},
+			"act": "rising",
+			"theme": "hell",
+			"actors": {
+				"drox": {
+					"id": "mon_2fc30621-a15f-4371-9e37-295cdcb5675d",
+					"name": {
+						"korean": "드록스",
+						"english": "Drox",
+						"japanese": "ドロックス",
+						"chinese": "德罗克斯",
+						"french": "Drox",
+						"spanish": "Drox",
+						"vietnamese": "Đrốc",
+						"thai": "ดรอกซ์",
+						"hindi": "ड्रॉक्स"
+					},
+					"description": "",
+					"face_image_url": "https://imagedelivery.net/WTEqQNGFb-l-IHS6IGnzUQ/509c0376-2230-4669-d022-7e5336293200/public",
+					"battle_sprite_url": "https://imagedelivery.net/WTEqQNGFb-l-IHS6IGnzUQ/916b4cfa-f792-4f4a-5346-681095481e00/public"
+				}
+			},
+			"boss": {
+				"pool_id": "random_boss"
+			},
+			"rooms": [
+				{
+					"dialogue": [
+						{
+							"emotion": "base",
+							"type": "speech",
+							"content": {
+								"korean": "빛조차 들지 않는 흑요석 벽이 미로처럼 얽혀 있다.",
+								"english": "Obsidian walls through which even light cannot pass are intertwined like a maze.",
+								"japanese": "光すら届かない黒曜石の壁が迷宮のように入り組んでいる。",
+								"chinese": "连光线都无法穿透的黑曜石墙壁如迷宫般错综复杂。",
+								"french": "Des murs d'obsidienne impénétrables à la lumière s'entremêlent comme un labyrinthe.",
+								"spanish": "Paredes de obsidiana que ni la luz puede traspasar se entrelazan como un laberinto.",
+								"vietnamese": "Những bức tường đá hắc diện không mảy may ánh sáng đan xen vào nhau như một mê cung.",
+								"thai": "กำแพงหินออบซิเดียนที่แม้แต่แสงก็ส่องไม่ถึงซับซ้อนสับสนราวกับเขาวงกต",
+								"hindi": "प्रकाश भी न पहुंचने वाली ओब्सीडियन की दीवारें भूलभुलैया की तरह उलझी हुई हैं।"
+							},
+							"speaker": "narrator"
+						},
+						{
+							"spot": [
+								2,
+								2
+							],
+							"duration_ms": 500,
+							"speaker": "drox",
+							"type": "direction",
+							"action": "enter"
+						},
+						{
+							"emotion": "base",
+							"type": "speech",
+							"speaker": "drox",
+							"content": {
+								"korean": "길을 잃은 모양이군. 나는 이 미로를 잘 아는 길잡이 드록스다.",
+								"english": "Looks like you're lost. I am Drox, a guide who knows this maze well.",
+								"japanese": "道に迷ったようだな。俺はこの迷宮を熟知している案内人のドロックスだ。",
+								"chinese": "看来你们迷路了。我是德洛克斯，一个熟悉这座迷宫的向导。",
+								"french": "Vous me semblez perdus. Je suis Drox, un guide qui connaît bien ce labyrinthe.",
+								"spanish": "Parece que os habéis perdido. Soy Drox, un guía que conoce bien este laberinto.",
+								"vietnamese": "Có vẻ như các người đã lạc đường. Ta là Drox, người dẫn đường rất thông thuộc mê cung này.",
+								"thai": "ดูเหมือนจะหลงทางสินะ ข้าคือดรอกซ์ คนนำทางที่รู้จักเขาวงกตนี้เป็นอย่างดี",
+								"hindi": "लगता है तुम रास्ता भटक गए हो। मैं ड्रॉक्स हूँ, एक मार्गदर्शक जो इस भूलभुलैया को अच्छी तरह जानता है।"
+							}
+						},
+						{
+							"type": "speech",
+							"speaker": "character_any",
+							"content": {
+								"korean": "우리는 집행자를 찾고 있다. 길을 아나?",
+								"english": "We are looking for the Enforcer. Do you know the way?",
+								"japanese": "私たちは執行者を探している。道を知っているか？",
+								"chinese": "我们正在寻找裁决者。你知道怎么走吗？",
+								"french": "Nous cherchons l'Exécuteur. Connaissez-vous le chemin ?",
+								"spanish": "Buscamos al Ejecutor. ¿Conoces el camino?",
+								"vietnamese": "Chúng tôi đang tìm Kẻ Hành Quyết. Ngươi có biết đường không?",
+								"thai": "พวกเรากำลังตามหาผู้พิพากษา รู้ทางหรือเปล่า?",
+								"hindi": "हम निष्पादक की तलाश कर रहे हैं। क्या तुम रास्ता जानते हो?"
+							},
+							"emotion": "base"
+						},
+						{
+							"emotion": "base",
+							"content": {
+								"korean": "집행자를 찾는다면 내가 미로 안쪽으로 길을 안내하겠다.",
+								"english": "If you seek the Enforcer, I will guide you into the depths of the maze.",
+								"japanese": "執行者を探しているのなら、迷宮の奥へ案内しよう。",
+								"chinese": "如果你们要找裁决者，我可以带你们前往迷宫深处。",
+								"french": "Si vous cherchez l'Exécuteur, je vous guiderai vers l'intérieur du labyrinthe.",
+								"spanish": "Si buscáis al Ejecutor, os guiaré hacia el interior del laberinto.",
+								"vietnamese": "Nếu tìm Kẻ Hành Quyết, ta sẽ dẫn đường cho các người vào sâu trong mê cung.",
+								"thai": "หากตามหาผู้พิพากษาอยู่ ข้าจะนำทางเข้าไปข้างในเขาวงกตเอง",
+								"hindi": "यदि तुम निष्पादक की तलाश कर रहे हो, तो मैं तुम्हें भूलभुलैया के भीतर का रास्ता दिखाऊंगा।"
+							},
+							"speaker": "drox",
+							"type": "speech"
+						},
+						{
+							"speaker": "character_1",
+							"content": {
+								"korean": "…벽 너머에서 뿜어지는 열기에 살갗이 따가워.",
+								"english": "...The heat radiating from beyond the wall stings my skin.",
+								"japanese": "…壁の向こうから噴き出す熱気で、肌がヒリヒリする。",
+								"chinese": "……墙壁另一侧涌出的热浪刺痛着皮肤。",
+								"french": "…La chaleur qui s'échappe de l'autre côté du mur me brûle la peau.",
+								"spanish": "...El calor que emana del otro lado de la pared me escuece en la piel.",
+								"vietnamese": "...Hơi nóng tỏa ra từ sau bức tường làm da tôi rát quá.",
+								"thai": "...ความร้อนที่พวยพุ่งออกมาจากอีกฝั่งของกำแพงแสบผิวไปหมด",
+								"hindi": "...दीवार के पार से आ रही गर्मी से त्वचा जल रही है।"
+							},
+							"emotion": "sad",
+							"type": "speech"
+						}
+					],
+					"id": 1
+				},
+				{
+					"id": 3,
+					"dialogue": [
+						{
+							"emotion": "base",
+							"content": {
+								"korean": "흑요석 벽면에 붉은 화염 자국이 길게 파여 있다.",
+								"english": "Long red flame marks are carved deep into the obsidian wall.",
+								"japanese": "黒曜石の壁面に、赤い火炎の痕が長く刻まれている。",
+								"chinese": "黑曜石墙面上刻着一道长长的红色火焰痕迹。",
+								"french": "De longues traces de flammes rouges sont gravées sur le mur d'obsidienne.",
+								"spanish": "Largas marcas de llamas rojas están grabadas en la pared de obsidiana.",
+								"vietnamese": "Trên bề mặt tường đá hắc diện có vết ngọn lửa đỏ khắc sâu thành một đường dài.",
+								"thai": "มีรอยเปลวไฟสีแดงเป็นทางยาวลึกลงไปบนกำแพงหินออบซิเดียน",
+								"hindi": "ओब्सीडियन दीवार पर लाल आग के लंबे निशान उकेरे गए हैं।"
+							},
+							"speaker": "narrator",
+							"type": "speech"
+						},
+						{
+							"duration_ms": 500,
+							"type": "direction",
+							"spot": [
+								3,
+								2
+							],
+							"speaker": "drox",
+							"action": "enter"
+						},
+						{
+							"emotion": "base",
+							"speaker": "drox",
+							"content": {
+								"korean": "벽에 남은 붉은 화염 자국을 봐라. 집행자가 지나간 자국이다.",
+								"english": "Look at the red flame marks left on the wall. That's the trail the Executioner left behind.",
+								"japanese": "壁に残る赤い火炎の跡を見ろ。執行者が通り過ぎた痕跡だ。",
+								"chinese": "看墙上留下的红色火焰痕迹。那是执行者经过的痕迹。",
+								"french": "Regarde ces traces de flammes rouges sur le mur. C'est là que l'Exécuteur est passé.",
+								"spanish": "Mira las marcas de llamas rojas en la pared. Es el rastro que dejó el Ejecutor.",
+								"vietnamese": "Nhìn những vết lửa đỏ còn sót lại trên tường xem. Đó là vết tích do Kẻ Hành Quyết để lại.",
+								"thai": "ดูรอยเพลิงสีแดงบนกำแพงนั่นสิ นั่นคือรอยที่ผู้สำเร็จโทษผ่านไป",
+								"hindi": "दीवार पर बने लाल आग के निशानों को देखो। यह निष्पादक के गुजरने का निशान है।"
+							},
+							"type": "speech"
+						},
+						{
+							"type": "speech",
+							"speaker": "character_any",
+							"content": {
+								"korean": "자국이 점점 깊어지고 있어.",
+								"english": "The marks are getting deeper and deeper.",
+								"japanese": "痕跡がどんどん深くなっている。",
+								"chinese": "痕迹越来越深了。",
+								"french": "Les traces deviennent de plus en plus profondes.",
+								"spanish": "Las marcas se vuelven cada vez más profundas.",
+								"vietnamese": "Vết tích đang ngày càng sâu hơn.",
+								"thai": "รอยมันเริ่มลึกขึ้นเรื่อยๆ แล้ว",
+								"hindi": "निशान गहरे होते जा रहे हैं।"
+							},
+							"emotion": "base"
+						},
+						{
+							"emotion": "base",
+							"type": "speech",
+							"content": {
+								"korean": "이 자국을 따라 계속 직진하면 집행자의 구역에 도달할 거다.",
+								"english": "If we keep going straight along these marks, we'll reach the Executioner's domain.",
+								"japanese": "この痕跡に沿ってまっすぐ進めば、執行者の領域にたどり着くはずだ。",
+								"chinese": "沿着这些痕迹一直往前走，就能到达执行者的领地。",
+								"french": "Si nous continuons tout droit en suivant ces traces, nous atteindrons le domaine de l'Exécuteur.",
+								"spanish": "Si seguimos recto tras estas marcas, llegaremos al dominio del Ejecutor.",
+								"vietnamese": "Nếu tiếp tục đi thẳng theo những vết tích này, chúng ta sẽ đến được lãnh địa của Kẻ Hành Quyết.",
+								"thai": "ถ้าเดินตรงไปตามรอยนี้เรื่อยๆ เราจะไปถึงเขตของผู้สำเร็จโทษ",
+								"hindi": "अगर हम इन निशानों का पीछा करते हुए सीधे चलते रहे, तो हम निष्पादक के क्षेत्र में पहुँच जाएँगे।"
+							},
+							"speaker": "drox"
+						},
+						{
+							"emotion": "sad",
+							"type": "speech",
+							"speaker": "character_2",
+							"content": {
+								"korean": "…숨이 턱턱 막히는 기분이야.",
+								"english": "...I feel like I can barely breathe.",
+								"japanese": "…息が詰まるような感じだ。",
+								"chinese": "……感觉快要喘不过气来了。",
+								"french": "… J'ai l'impression de suffocuer.",
+								"spanish": "... Siento que me falta el aire.",
+								"vietnamese": "... Cảm giác thật ngột ngạt.",
+								"thai": "...รู้สึกอึดอัดจนหายใจไม่ออกเลย",
+								"hindi": "...मेरा दम घुट रहा है।"
+							}
+						}
+					]
+				},
+				{
+					"id": 5,
+					"dialogue": [
+						{
+							"duration_ms": 500,
+							"type": "direction",
+							"action": "enter",
+							"spot": [
+								2,
+								3
+							],
+							"speaker": "drox"
+						},
+						{
+							"type": "speech",
+							"emotion": "sad",
+							"content": {
+								"korean": "이 앞은 집행자의 충복이 지키는 길이다. 나는 더는 못 간다.",
+								"english": "Ahead lies the path guarded by the Executioner's loyal servant. I can go no further.",
+								"japanese": "この先は執行者の忠仆が守る道だ。俺はこれ以上進めない。",
+								"chinese": "前方是由执行者的忠臣守卫的道路。我不能再往前走了。",
+								"french": "La voie à venir est gardée par le fidèle serviteur de l'Exécuteur. Je ne peux pas aller plus loin.",
+								"spanish": "Más adelante está el camino custodiado por el leal siervo del Ejecutor. No puedo seguir más allá.",
+								"vietnamese": "Phía trước là con đường do tay sai trung thành của Kẻ Hành Quyết canh giữ. Tôi không thể đi tiếp được nữa.",
+								"thai": "ข้างหน้าคือเส้นทางที่ข้าทาสผู้ซื่อสัตย์ของผู้สำเร็จโทษเฝ้าอยู่ ข้าไปต่อไม่ได้แล้ว",
+								"hindi": "आगे का रास्ता निष्पादक के वफादार सेवक के पहरे में है। मैं और आगे नहीं जा सकता।"
+							},
+							"speaker": "drox"
+						},
+						{
+							"type": "speech",
+							"speaker": "character_any",
+							"content": {
+								"korean": "길을 알려줘서 고맙다. 나머지는 우리가 직접 확인하지.",
+								"english": "Thank you for showing us the way. We'll check out the rest ourselves.",
+								"japanese": "道を教えてくれてありがとう。残りは自分たちで確かめる。",
+								"chinese": "谢谢你指路。剩下的就由我们自己去确认吧。",
+								"french": "Merci de nous avoir montré le chemin. Nous irons vérifier le reste nous-mêmes.",
+								"spanish": "Gracias por mostrarnos el camino. Nosotros nos encargaremos del resto.",
+								"vietnamese": "Cảm ơn đã chỉ đường. Phần còn lại chúng tôi sẽ tự mình kiểm tra.",
+								"thai": "ขอบใจที่บอกทาง ที่เหลือพวกเราจะไปดูเอง",
+								"hindi": "रास्ता दिखाने के लिए धन्यवाद। बाकी की जाँच हम खुद कर लेंगे।"
+							},
+							"emotion": "base"
+						},
+						{
+							"direction": "down",
+							"speaker": "drox",
+							"action": "exit",
+							"type": "direction",
+							"duration_ms": 400
+						},
+						{
+							"type": "speech",
+							"speaker": "character_3",
+							"content": {
+								"korean": "…조용해서 오히려 더 두려워.",
+								"english": "...The silence makes it even more terrifying.",
+								"japanese": "…静かすぎて、かえって恐ろしい。",
+								"chinese": "……太安静了，反而让人更加害怕。",
+								"french": "… C'est tellement calme que ça en devient terrifiant.",
+								"spanish": "... Es tan silencioso que resulta más aterrador.",
+								"vietnamese": "... Yên tĩnh thế này lại càng đáng sợ hơn.",
+								"thai": "...เงียบแบบนี้ ยิ่งน่ากลัวเข้าไปใหญ่",
+								"hindi": "...यह शांति मुझे और भी डरा रही है।"
+							},
+							"emotion": "sad"
+						}
+					]
+				},
+				{
+					"id": 9,
+					"dialogue": [
+						{
+							"type": "speech",
+							"content": {
+								"korean": "미로 바닥에 깨진 갑옷 조각들이 부서져 흩어져 있다.",
+								"english": "Shattered pieces of armor lie scattered across the floor of the maze.",
+								"japanese": "迷宮の床に、割れた鎧の破片が散らばっている。",
+								"chinese": "迷宫的地面上散落着碎裂的铠甲碎片。",
+								"french": "Des morceaux d'armure brisés sont dispersés sur le sol du labyrinthe.",
+								"spanish": "Fragmentos de armadura rota yacen esparcidos por el suelo del laberinto.",
+								"vietnamese": "Những mảnh giáp vỡ nát nằm rải rác trên sàn mê cung.",
+								"thai": "เศษชิ้นส่วนเกราะที่แตกหักกระจัดกระจายอยู่บนพื้นเขาวงกต",
+								"hindi": "भूलभुलैया के फर्श पर टूटे हुए कवच के टुकड़े बिखरे पड़े हैं।"
+							},
+							"speaker": "narrator",
+							"emotion": "base"
+						},
+						{
+							"emotion": "base",
+							"type": "speech",
+							"content": {
+								"korean": "갑옷 겉면에는 공격당한 흔적이 없는데 안쪽 조각이 깨져 있군.",
+								"english": "There are no signs of attack on the outside of the armor, yet the inner pieces are shattered.",
+								"japanese": "鎧の外側には攻撃された痕跡がないのに、内側の破片が割れているな。",
+								"chinese": "铠甲表面没有受击的痕迹，但内侧的碎片却破碎了。",
+								"french": "Il n'y a aucune trace d'attaque sur l'extérieur de l'armure, mais les pièces à l'intérieur sont brisées.",
+								"spanish": "No hay marcas de ataque en el exterior de la armadura, pero los fragmentos del interior están rotos.",
+								"vietnamese": "Mặt ngoài áo giáp không có vết bị tấn công, nhưng các mảnh bên trong lại bị vỡ.",
+								"thai": "ภายนอกของชุดเกราะไม่มีร่องรอยการถูกโจมตี แต่ชิ้นส่วนด้านในกลับแตกหัก",
+								"hindi": "कवच के बाहरी हिस्से पर हमले का कोई निशान नहीं है, फिर भी अंदर के टुकड़े टूटे हुए हैं।"
+							},
+							"speaker": "character_any"
+						},
+						{
+							"content": {
+								"korean": "…어디선가 묵직한 발소리가 울려.",
+								"english": "...Heavy footsteps are echoing from somewhere.",
+								"japanese": "…どこかで重々しい足音が響いている。",
+								"chinese": "……不知何处响起了沉重的脚步声。",
+								"french": "… De lourds pas résonnent quelque part.",
+								"spanish": "... Se escuchan pisadas pesadas resonando en alguna parte.",
+								"vietnamese": "... Vang vọng tiếng bước chân nặng trề từ đâu đó.",
+								"thai": "...มีเสียงฝีเท้าหนักๆ ดังก้องมาจากที่ไหนสักแห่ง",
+								"hindi": "...कहीं से भारी कदमों की आवाज़ गूँज रही है।"
+							},
+							"type": "speech",
+							"speaker": "character_4",
+							"emotion": "sad"
 						}
 					]
 				},
 				{
 					"dialogue": [
 						{
-							"content": {
-								"korean": "검은 제단 중앙, 불길을 두른 악마 주술사가 막아선다."
-							},
-							"type": "speech",
+							"emotion": "base",
 							"speaker": "narrator",
-							"emotion": "base"
-						},
-						{
-							"speaker": "random_boss",
-							"emotion": "angry",
 							"content": {
-								"korean": "집행자 님의 고통을 가로채지 마라! 이 불길은 멈추지 않는다!"
+								"korean": "미로의 중앙 광장에 위협적인 기척이 길을 가로막는다.",
+								"english": "A threatening presence blocks the path in the labyrinth's central plaza.",
+								"japanese": "迷宮の中央広場で、脅威的な気配が立ちふさがる。",
+								"chinese": "迷宫的中央广场上，股威胁性的气息挡住了去路。",
+								"french": "Sur la place centrale du labyrinthe, une présence menaçante bloque le passage.",
+								"spanish": "En la plaza central del laberinto, una presencia amenazante bloquea el camino.",
+								"vietnamese": "Một khí thế đe dọa đang chặn đường tại quảng trường trung tâm của mê cung.",
+								"thai": "มีเค้าลางคุกคามขวางทางอยู่ ณ ลานกว้างใจกลางเขาวงกต",
+								"hindi": "भूलभुलैया के केंद्रीय चौक में एक डरावनी आहट रास्ता रोकती है।"
 							},
 							"type": "speech"
 						},
 						{
-							"type": "speech",
-							"speaker": "character_any",
-							"emotion": "angry",
+							"speaker": "random_boss",
 							"content": {
-								"korean": "대륙으로 번지는 지옥불을 더는 방관할 수 없다!"
-							}
-						},
-						{
-							"content": {
-								"korean": "…주문 소리에 고막이 찢어질 것 같아."
+								"korean": "더는 나아가지 마라! 집행자 필로멜 님의 충복으로서, 그분의 안식을 방해하게 두지 않겠다!",
+								"english": "Advance no further! As a loyal servant of Executor Philomel, I will not let you disturb their rest!",
+								"japanese": "これ以上進むな！執行者フィロメル様の忠僕として、あの方の安息を邪魔させはせん！",
+								"chinese": "不准再靠近！作为执行者菲洛梅尔大人的忠仆，我绝不允许你们打扰大人的安息！",
+								"french": "N'avancez pas plus loin ! En tant que fidèle serviteur de l'Exécuteur Philomel, je ne vous laisserai pas troubler son repos !",
+								"spanish": "¡No avances más! Como leal sirviente del Ejecutor Philomel, ¡no dejaré que perturbes su descanso!",
+								"vietnamese": "Không được tiến thêm nữa! Là trung thần của Chấp Hành Viên Philomel, ta sẽ không để ngươi làm phiền giấc ngủ của ngài!",
+								"thai": "อย่าได้ก้าวไปไกลกว่านี้! ในฐานะข้ารับใช้ผู้ซื่อสัตย์ของท่านผู้สำเร็จโทษ ฟิโลเมล ข้าจะไม่ยอมให้ใครมารบกวนการพักผ่อนของท่าน!",
+								"hindi": "अब आगे मत बढ़ो! निष्पादक पिलोमेल का वफादार सेवक होने के नाते, मैं तुम्हें उनके विश्राम में बाधा नहीं डालने दूँगा!"
 							},
 							"type": "speech",
+							"emotion": "angry"
+						},
+						{
+							"emotion": "angry",
+							"content": {
+								"korean": "우리는 지옥불을 봉인하러 왔다. 길을 비켜라!",
+								"english": "We are here to seal the hellfire. Out of our way!",
+								"japanese": "我らは地獄の火を封印しに来た。道をあけろ！",
+								"chinese": "我们是来封印地狱火的。识相的就让开！",
+								"french": "Nous sommes venus sceller le feu de l'enfer. Écarte-toi !",
+								"spanish": "Hemos venido a sellar el fuego infernal. ¡Apártate del camino!",
+								"vietnamese": "Chúng ta đến để phong ấn hỏa ngục. Mau tránh đường!",
+								"thai": "พวกเรามาเพื่อผนึกไฟนรก ถอยไปซะ!",
+								"hindi": "हम नरक की आग को सील करने आए हैं। रास्ते से हट जाओ!"
+							},
+							"type": "speech",
+							"speaker": "character_any"
+						},
+						{
 							"speaker": "character_1",
-							"emotion": "sad"
+							"content": {
+								"korean": "…적의 기세가 엄청나.",
+								"english": "...The enemy's presence is overwhelming.",
+								"japanese": "…敵の気勢が凄まじい。",
+								"chinese": "……敌人的气势非同小可。",
+								"french": "...La puissance de l'ennemi est impressionnante.",
+								"spanish": "...La presencia del enemigo es abrumadora.",
+								"vietnamese": "...Khí thế của kẻ địch thật đáng sợ.",
+								"thai": "...พลังข่มขวัญของศัตรูรุนแรงมาก",
+								"hindi": "...दुश्मन का दबाव बहुत ज़बरदस्त है।"
+							},
+							"emotion": "angry",
+							"type": "speech"
 						}
 					],
 					"id": 15,
-					"win_dialogue": [
+					"lose_dialogue": [
 						{
+							"emotion": "angry",
+							"type": "speech",
 							"content": {
-								"korean": "크윽… 지옥불은… 집행자 님이 짊어진 짐이다…"
+								"korean": "약한 자들아, 내 무력 앞에 굴복하라!",
+								"english": "Weaklings, submit before my strength!",
+								"japanese": "弱き者共よ、我が武力の前にひれ伏すのだ！",
+								"chinese": "弱者们，在我的武力面前屈服吧！",
+								"french": "Faibles que vous êtes, soumettez-vous à ma puissance !",
+								"spanish": "¡Débiles, sométanse ante mi poder!",
+								"vietnamese": "Kẻ yếu kia, hãy quỳ gối trước sức mạnh của ta!",
+								"thai": "พวกคนอ่อนแอ จงสยบต่อกำลังของข้าซะ!",
+								"hindi": "कमज़ोरो, मेरी ताकत के आगे झुक जाओ!"
+							},
+							"speaker": "random_boss"
+						},
+						{
+							"speaker": "character_any",
+							"content": {
+								"korean": "…여기서 물러설 수 없다. 다시 전열을 다듬자.",
+								"english": "...We cannot retreat here. Let's regroup.",
+								"japanese": "…ここで引き下がるわけにはいかない。体制を整え直そう。",
+								"chinese": "……不能在这里退缩。重新整顿阵型吧。",
+								"french": "...Nous ne pouvons pas reculer ici. Regroupons-nous.",
+								"spanish": "...No podemos retroceder aquí. Reorganizaremos nuestras líneas.",
+								"vietnamese": "...Không thể lùi bước ở đây. Hãy chỉnh đốn lại đội hình.",
+								"thai": "...จะถอยตรงนี้ไม่ได้ รีบตั้งหลักใหม่กันเถอะ",
+								"hindi": "...हम यहाँ से पीछे नहीं हट सकते। अपनी सेना को फिर से संगठित करते हैं।"
 							},
 							"type": "speech",
+							"emotion": "angry"
+						}
+					],
+					"win_dialogue": [
+						{
+							"type": "speech",
 							"speaker": "random_boss",
+							"content": {
+								"korean": "크윽… 필로멜 님을… 방해하게 놔두지 않겠다 했는데…",
+								"english": "Ugh... I said I wouldn't let you... disturb Executor Philomel...",
+								"japanese": "くっ…フィロメル様を…邪魔させはしないと言ったのに…",
+								"chinese": "咕呜……明明说了……绝不让人打扰菲洛梅尔大人……",
+								"french": "Argh... J'avais dit que je ne vous laisserais pas... troubler l'Exécuteur Philomel...",
+								"spanish": "Puaj... Dije que no permitiría... que perturbaras al Ejecutor Philomel...",
+								"vietnamese": "Hự... Ta đã nói là... không để các ngươi làm phiền ngài Philomel rồi mà...",
+								"thai": "อั่ก... ทั้งที่บอกว่า... จะไม่ยอมให้ใครมารบกวนท่านฟิโลเมลแท้ๆ...",
+								"hindi": "उफ़... मैंने कहा था कि... निष्पादक पिलोमेल को बाधित नहीं होने दूँगा..."
+							},
 							"emotion": "sad"
 						},
 						{
-							"speaker": "character_any",
-							"emotion": "base",
 							"type": "speech",
+							"emotion": "base",
+							"speaker": "character_any",
 							"content": {
-								"korean": "집행자가 짊어진 짐… 그럼 집행자의 불꽃 코어에 수정을 넣어야 열기가 잠들겠군!"
+								"korean": "아까 본 갑옷 조각을 떠올려 봐. 집행자의 갑옷은 밖에서 맞아서가 아니라 안에서 터지는 불길 때문에 깨지고 있어.",
+								"english": "Think back to the armor fragments we saw earlier. The Executor's armor isn't breaking from external hits, but from flames bursting from within.",
+								"japanese": "さっき見た鎧の破片を思い出してくれ。執行者の鎧は外からの攻撃ではなく、中から噴き出す炎によって砕けているんだ。",
+								"chinese": "想想刚才看到的铠甲碎片。执行者的铠甲并不是因为受到外部打击而破碎，而是因为内部喷涌出的火焰而破裂的。",
+								"french": "Rappelle-toi les fragments d'armure qu'on a vus plus tôt. L'armure de l'Exécuteur ne se brise pas sous les coups extérieurs, mais à cause des flammes qui explosent de l'intérieur.",
+								"spanish": "Recuerda los fragmentos de armadura que vimos antes. La armadura del Ejecutor no se destruye por golpes externos, sino por las llamas que estallan desde dentro.",
+								"vietnamese": "Hãy nhớ lại những mảnh giáp chúng ta thấy lúc nãy. Giáp của Chấp Hành Viên vỡ ra không phải do đòn đánh từ bên ngoài, mà là do ngọn lửa bùng phát từ bên trong.",
+								"thai": "นึกถึงเศษเกราะที่เห็นเมื่อครู่นี้สิ เกราะของผู้สำเร็จโทษไม่ได้แตกเพราะถูกโจมตีจากภายนอก แต่เป็นเพราะเปลวไฟที่ระเบิดออกมาจากข้างในต่างหาก",
+								"hindi": "पहले देखे गए कवच के टुकड़ों को याद करो। निष्पादक का कवच बाहर के हमलों से नहीं, बल्कि अंदर से भड़कती लपटों के कारण टूट रहा है।"
 							}
 						},
 						{
+							"speaker": "random_boss",
 							"content": {
-								"korean": "코어에 다가가려면… 집행자 님과 맞서야 한다. 그분은 아무도 가까이 오게 두지 않아…"
+								"korean": "나를 넘어섰을지라도… 지옥 심연의 심장부에서는 감당하지 못하리라…",
+								"english": "Even if you have overcome me... you will not withstand the heart of the Hell Abyss...",
+								"japanese": "私を倒したとて…地獄の深淵の心臓部では耐えられまい…",
+								"chinese": "就算你们击败了我……也绝无法在地狱深渊的心脏地带幸存……",
+								"french": "Même si vous m'avez vaincu... vous ne tiendrez pas au cœur de l'abîme infernal...",
+								"spanish": "Aunque me hayas superado... no podrás resistir en el corazón del abismo infernal...",
+								"vietnamese": "Dù các ngươi có vượt qua được ta... thì ở trái tim của vực thẳm hỏa ngục, các ngươi cũng không thể chịu đựng nổi đâu...",
+								"thai": "แม้พวกเจ้าจะเอาชนะข้าได้... แต่หัวใจแห่งหุบเหวนรก ข้าว่าพวกเจ้าคงรับไม่ไหวหรอก...",
+								"hindi": "भले ही तुमने मुझे हरा दिया हो... पर नरक की खड्ड के केंद्र में तुम टिक नहीं पाओगे..."
 							},
 							"type": "speech",
-							"emotion": "sad",
-							"speaker": "random_boss"
+							"emotion": "angry"
 						},
 						{
-							"content": {
-								"korean": "탐험대는 수정을 안고, 열기가 폭발하는 지옥 심장부로 향했다."
-							},
-							"type": "speech",
 							"speaker": "narrator",
-							"emotion": "base"
-						}
-					],
-					"lose_dialogue": [
-						{
 							"content": {
-								"korean": "집행자 님의 뜻을 방해하는 자들에게 안식은 없다!"
+								"korean": "붉은 화염 자국은 미로를 벗어나 지옥 심연의 심장부로 이어지고 있었다.",
+								"english": "The red flame trails led out of the labyrinth and straight into the heart of the Hell Abyss.",
+								"japanese": "赤い炎の痕跡は迷宮を抜け、地獄の深淵の心臓部へと続いていた。",
+								"chinese": "红色的火焰痕迹穿过迷宫，一直延伸到地狱深渊的心脏地带。",
+								"french": "Les traces de flammes rouges s'échappaient du labyrinthe pour mener tout droit au cœur de l'abîme infernal.",
+								"spanish": "Las huellas de fuego rojo salían del laberinto e iban a parar al corazón del abismo infernal.",
+								"vietnamese": "Dấu vết lửa đỏ dẫn ra khỏi mê cung và hướng thẳng đến trái tim của vực thẳm hỏa ngục.",
+								"thai": "ร่องรอยเปลวไฟสีแดงนำทางออกจากเขาวงกต มุ่งตรงไปยังใจกลางหุบเหวนรก",
+								"hindi": "लाल आग के निशान भूलभुलैया से बाहर निकलकर नरक की खड्ड के केंद्र की ओर जा रहे थे।"
 							},
 							"type": "speech",
-							"emotion": "angry",
-							"speaker": "random_boss"
-						},
-						{
-							"content": {
-								"korean": "…여기서 무너질 순 없다. 다시 불꽃 코어로 향한다."
-							},
-							"speaker": "character_any",
-							"emotion": "angry",
-							"type": "speech"
+							"emotion": "base"
 						}
 					]
 				}
-			]
+			],
+			"prologue": {
+				"korean": [
+					"빛을 흡수하는 흑요석 미로 속, 지옥의 열기가 벽 너머에서 뿜어져 나온다.",
+					"암석 제단에서 얻은 별빛 수정을 들고 탐험대는 미로 깊은 곳으로 향한다.",
+					"그러나 집행자의 구역으로 가는 길목을 강력한 충복이 가로막는다."
+				],
+				"english": [
+					"Inside the light-absorbing obsidian maze, hellish heat radiates from beyond the walls.",
+					"Holding the starlight crystal obtained from the stone altar, the expedition heads deep into the maze.",
+					"However, a powerful servant blocks the path leading to the Enforcer's domain."
+				],
+				"japanese": [
+					"光を吸収する黒曜石の迷宮の中、壁の向こうから地獄の熱気が吹き出している。",
+					"岩石の祭壇で手に入れた星光の水晶を手に、探検隊は迷宮の奥深くへと向かう。",
+					"しかし、執行者の領域へと続く道を強力な従者が阻む。"
+				],
+				"chinese": [
+					"在吸收光线的黑曜石迷宫中，地狱的热浪从墙壁另一侧涌出。",
+					"探险队拿着从岩石祭坛获得的星光水晶，前往迷宫深处。",
+					"然而，前往裁决者区域的要道被一名强大的仆从挡住。"
+				],
+				"french": [
+					"Au cœur du labyrinthe d'obsidienne qui absorbe la lumière, une chaleur infernale émane de l'autre côté des murs.",
+					"Munie du cristal stellaire obtenu sur l'autel de pierre, l'expédition s'enfonce dans les profondeurs du labyrinthe.",
+					"Cependant, un puissant serviteur bloque le passage menant au domaine de l'Exécuteur."
+				],
+				"spanish": [
+					"Dentro del laberinto de obsidiana que absorbe la luz, un calor infernal emana desde el otro lado de las paredes.",
+					"Con el cristal estelar obtenido en el altar de piedra, la expedición se adentra en las profundidades del laberinto.",
+					"Sin embargo, un poderoso sirviente bloquea el camino hacia el dominio del Ejecutor."
+				],
+				"vietnamese": [
+					"Trong mê cung đá hắc diện hấp thụ ánh sáng, hơi nóng địa ngục tỏa ra từ sau những bức tường.",
+					"Cầm trên tay tinh thể ánh sao thu được từ bàn thờ đá, đoàn thám hiểm tiến sâu vào lòng mê cung.",
+					"Tuy nhiên, một tay sai hùng mạnh đang chặn đường đến khu vực của Kẻ Hành Quyết."
+				],
+				"thai": [
+					"ภายในเขาวงกตหินออบซิเดียนที่ดูดกลืนแสง ความร้อนแห่งขุมนรกพวยพุ่งออกมาจากอีกฝั่งของกำแพง",
+					"ด้วยคริสตัลแสงดาวที่ได้รับมาจากแท่นบูชาหิน ทีมสำรวจมุ่งหน้าสู่ส่วนลึกของเขาวงกต",
+					"ทว่า ข้ารับใช้ที่แข็งแกร่งกลับขวางเส้นทางที่จะไปยังเขตของผู้พิพากษา"
+				],
+				"hindi": [
+					"प्रकाश को सोखने वाली ओब्सीडियन भूलभुलैया के भीतर, दीवारों के पार से नरक की गर्मी निकल रही है।",
+					"चट्टानी वेदी से प्राप्त स्टारलाइट क्रिस्टल को लेकर, खोजी दल भूलभुलैया की गहराइयों की ओर बढ़ता है।",
+					"हालांकि, निष्पादक के क्षेत्र में जाने वाले रास्ते को एक शक्तिशाली सेवक रोकता है।"
+				]
+			}
 		},
 		{
 			"scenario_id": "hell_philomel_39_05",
@@ -1312,106 +2270,179 @@
 				}
 			},
 			"boss": {
-				"pool_id": "pool_MartyrCradle_Philomel_V1",
+				"pool_id": "pool_424",
 				"monster_id": "mon_80135ed0-ef1a-4b58-aceb-e93105cd8b84"
-			},
-			"epilogue": {
-				"korean": [
-					"지옥 심장부를 채우던 흉흉한 불길이 서리 수정을 만나 차갑게 진정되었다.",
-					"실수로 봉인을 떼어내며 시작됐던 지옥불의 폭발 위기와 열기는 마침내 사그라들었다.",
-					"마법 대륙을 온몸으로 지켜낸 작은 별빛 정령은 무거운 갑옷을 벗어 던지고 평온을 찾았다."
-				]
 			},
 			"rooms": [
 				{
 					"id": 1,
 					"dialogue": [
 						{
-							"type": "speech",
+							"speaker": "narrator",
 							"emotion": "base",
 							"content": {
-								"korean": "지옥 심장부 바닥 곳곳에 형광 빛깔 자국이 눌러붙어 있다."
+								"korean": "지옥 심연의 심장부, 사방에서 뿜어져 나오는 열기로 숨이 막힌다.",
+								"english": "The heart of the Infernal Abyss; the heat spewing from all directions is suffocating.",
+								"japanese": "地獄の深淵の心臓部、四方から噴き出す熱気で息が詰まる。",
+								"chinese": "地狱深渊的心脏地带，从四面八方喷涌而出的热气让人窒息。",
+								"french": "Au cœur de l'abîme infernal, la chaleur émanant de toutes parts est suffocante.",
+								"spanish": "En el corazón del abismo infernal, el calor que emana de todas partes resulta sofocante.",
+								"vietnamese": "Trái tim của vực thẳm địa ngục, hơi nóng tỏa ra từ bốn phía khiến người ta ngột ngạt.",
+								"thai": "ใจกลางห้วงอเวจี ไอร้อนที่พุ่งออกมาจากทุกทิศทางทำให้อึดอัดจนแทบหายใจไม่ออก",
+								"hindi": "नरक के अतल की गहराई, चारों तरफ से उठती गर्मी दम घोटने वाली है।"
 							},
-							"speaker": "narrator"
+							"type": "speech"
 						},
 						{
-							"duration_ms": 500,
-							"speaker": "ash",
 							"action": "enter",
+							"speaker": "ash",
 							"spot": [
 								3,
 								2
 							],
-							"type": "direction"
+							"type": "direction",
+							"duration_ms": 500
 						},
 						{
+							"speaker": "ash",
 							"type": "speech",
 							"emotion": "base",
 							"content": {
-								"korean": "주술사들이 물러나서 저도 뒤따라왔어요. 보세요, 절벽에서 봤던 형광 빛깔 눈물 자국이 여기까지 이어져 있어요."
+								"korean": "다들 무사했군요! 불길이 더 번지기 전에 뒤쫓아 왔어요.",
+								"english": "Everyone is safe! I chased after you before the flames could spread any further.",
+								"japanese": "みんなご無事でしたね！火の手が広がる前に追いかけてきました。",
+								"chinese": "大家都没事真是太好了！我在火势蔓延开之前赶过来了。",
+								"french": "Vous êtes tous sains et saufs ! Je vous ai suivis avant que les flammes ne se propagent davantage.",
+								"spanish": "¡Todos están a salvo! Los perseguí antes de que las llamas se extendieran más.",
+								"vietnamese": "Mọi người đều an toàn rồi! Tôi đã đuổi theo trước khi ngọn lửa lan rộng hơn.",
+								"thai": "ทุกคนปลอดภัยดีสินะคะ! ฉันรีบตามมาเร็วก่อนที่ไฟจะลุกลามไปมากกว่านี้",
+								"hindi": "सब सुरक्षित हैं! आग और फैलने से पहले मैं आपके पीछे आ गया।"
+							}
+						},
+						{
+							"type": "speech",
+							"speaker": "ash",
+							"content": {
+								"korean": "바닥에 떨어진 이 조각… 지옥의 붉은 입구에서 보았던 금 간 흑요석 조각이에요.",
+								"english": "This fragment on the floor... it's the cracked obsidian fragment we saw at Hell's red entrance.",
+								"japanese": "床に落ちているこの欠片…地獄の赤い入り口で見かけた、ひび割れた黒曜石の欠片です。",
+								"chinese": "掉落在地上的这个碎片……就是我们在地狱赤红入口处看到的破裂黑曜石碎片。",
+								"french": "Ce morceau tombé au sol... c'est le fragment d'obsidienne fissuré qu'on a vu à l'entrée rouge de l'enfer.",
+								"spanish": "Este fragmento caído en el suelo... es el fragmento de obsidiana agrietado que vimos en la entrada roja del infierno.",
+								"vietnamese": "Mảnh vỡ rơi trên sàn này… chính là mảnh đá hắc diện thạch rạn nứt mà chúng ta đã thấy ở lối vào đỏ của địa ngục.",
+								"thai": "ชิ้นส่วนที่ตกอยู่บนพื้นนี้… คือชิ้นส่วนหินออบซิเดียนแตกร้าวที่เคยเห็นตรงทางเข้าสีแดงของอเวจีค่ะ",
+								"hindi": "जमीन पर गिरा यह टुकड़ा... यह वही फटा हुआ ओब्सीडियन का टुकड़ा है जो हमने नरक के लाल प्रवेश द्वार पर देखा था।"
 							},
-							"speaker": "ash"
+							"emotion": "base"
 						},
 						{
 							"emotion": "base",
 							"content": {
-								"korean": "눈물 자국에 지옥의 불길 대신 차가운 기운이 서려 있어."
+								"korean": "입구에서부터 이 조각이 이어졌어. 집행자의 갑옷이 계속 깨지고 있는 거야.",
+								"english": "These fragments stretch all the way from the entrance. The Executioner's armor keeps breaking.",
+								"japanese": "入り口からこの欠片が続いている。処刑人の鎧が壊れ続けているんだ。",
+								"chinese": "从入口起这一路都有这种碎片。处刑者的铠甲一直在不断碎裂。",
+								"french": "Ces fragments s'étendent depuis l'entrée. L'armure de l'Exécuteur continue de se briser.",
+								"spanish": "Estos fragmentos se extienden desde la entrada. La armadura del Ejecutor se sigue rompiendo.",
+								"vietnamese": "Những mảnh vỡ này nối dài từ lối vào. Bộ giáp của Kẻ Hành Quyết đang tiếp tục vỡ vụn.",
+								"thai": "ชิ้นส่วนพวกนี้ร่วงต่อกันมาตั้งแต่ทางเข้าเลย ชุดเกราะของเพชฌฆาตกำลังแตกหักเรื่อยๆ สินะ",
+								"hindi": "प्रवेश द्वार से ही ये टुकड़े फैले हुए हैं। जल्लाद का कवच लगातार टूट रहा है।"
 							},
-							"speaker": "character_any",
-							"type": "speech"
+							"type": "speech",
+							"speaker": "character_any"
 						},
 						{
 							"speaker": "character_1",
 							"content": {
-								"korean": "…발밑에서 지옥불의 열기가 솟구쳐."
+								"korean": "…뜨거운 바람이 온몸을 때리네.",
+								"english": "...The hot wind beats against my entire body.",
+								"japanese": "…熱い風が全身を打ちつけるな。",
+								"chinese": "……炽热的风打在身上。",
+								"french": "... Le vent brûlant me fouette le corps.",
+								"spanish": "...Un viento caliente me azota todo el cuerpo.",
+								"vietnamese": "...Gió nóng đập vào khắp cơ thể.",
+								"thai": "...ลมร้อนปะทะไปทั่วร่าง",
+								"hindi": "...एक गर्म हवा मेरे पूरे शरीर पर थपेड़े मार रही है।"
 							},
-							"type": "speech",
-							"emotion": "sad"
+							"emotion": "sad",
+							"type": "speech"
 						}
 					]
 				},
 				{
 					"dialogue": [
 						{
-							"emotion": "base",
-							"type": "speech",
 							"speaker": "narrator",
 							"content": {
-								"korean": "공기 중에서 핫핑크빛 깃털 파편이 흩날린다."
-							}
+								"korean": "붉은 용암 사이로 에메랄드빛 자국이 길게 번져 있다.",
+								"english": "A long emerald streak spreads across the red lava.",
+								"japanese": "赤い溶岩の間に、エメラルド色の痕跡が長く広がっている。",
+								"chinese": "红色熔岩之间漫开一道长长的翡翠色痕迹。",
+								"french": "Une longue traînée émeraude s'étend à travers la lave rouge.",
+								"spanish": "Una larga marca de color esmeralda se extiende entre la lava roja.",
+								"vietnamese": "Giữa dòng dung nham đỏ rực, một vệt màu ngọc lục bảo kéo dài lan rộng.",
+								"thai": "มีร่องรอยสีมรกตเป็นสายยาวแผ่อยู่ระหว่างลาวาสีแดง",
+								"hindi": "लाल लावा के बीच पन्ने के रंग का एक लंबा निशान फैला हुआ है।"
+							},
+							"emotion": "base",
+							"type": "speech"
 						},
 						{
-							"duration_ms": 500,
-							"type": "direction",
 							"spot": [
 								2,
 								3
 							],
+							"duration_ms": 500,
+							"type": "direction",
 							"action": "enter",
 							"speaker": "ash"
 						},
 						{
-							"emotion": "base",
-							"type": "speech",
-							"content": {
-								"korean": "붉은 바위 골짜기에서 주운 핫핑크빛 깃털이랑 똑같아!"
-							},
-							"speaker": "character_any"
-						},
-						{
 							"speaker": "ash",
 							"content": {
-								"korean": "깃털에 지옥의 열 대신 따뜻한 별빛 온기가 남아 있어요."
+								"korean": "이 에메랄드빛 자국… 골짜기에서 보셨다던 그 자국인가요?",
+								"english": "This emerald mark... is it the same mark you saw in the valley?",
+								"japanese": "このエメラルド色の痕跡…谷で見られたというあの痕跡ですか？",
+								"chinese": "这翡翠色的痕迹……就是您在山谷里看到的那个痕迹吗？",
+								"french": "Cette trace émeraude... Est-ce celle que vous aviez vue dans la vallée ?",
+								"spanish": "Esta marca esmeralda... ¿es la misma que vio en el valle?",
+								"vietnamese": "Vệt màu ngọc lục bảo này... Có phải vệt mà ngài đã thấy ở thung lũng không?",
+								"thai": "ร่องรอยสีมรกตนี้... คือร่องรอยเดียวกับที่เคยเห็นในหุบเขาหรือเปล่าครับ?",
+								"hindi": "पन्ने के रंग का यह निशान... क्या यह वही निशान है जो आपने घाटी में देखा था?"
 							},
+							"emotion": "base",
+							"type": "speech"
+						},
+						{
+							"speaker": "character_any",
 							"type": "speech",
+							"content": {
+								"korean": "맞아, 골짜기의 그 자국이야. 불길 한가운데 이런 차가운 기운이라니… 집행자 안에 뭐가 있는 거지?",
+								"english": "Right, that's the mark from the valley. Such a cold aura in the middle of flames... What could be inside the Executor?",
+								"japanese": "そうだ、谷にあったあの痕跡だ。炎の真ん中にこんな冷たい気が漂っているなんて…執行者の中に何があるんだ？",
+								"chinese": "没错，就是山谷里的那个痕迹。烈焰之中竟有如此寒凉之气……执行者体内究竟有什么？",
+								"french": "C'est bien ça, la trace de la vallée. Une aura si froide au milieu des flammes... Qu'est-ce qui se trouve dans l'Exécuteur ?",
+								"spanish": "Así es, esa misma marca del valle. Una energía tan fría en medio de las llamas... ¿Qué habrá dentro del Ejecutor?",
+								"vietnamese": "Đúng vậy, là vệt ở thung lũng đấy. Giữa biển lửa lại có luồng khí lạnh thế này... Bên trong Kẻ Thực Thi rốt cuộc có gì chứ?",
+								"thai": "ใช่แล้ว ร่องรอยในหุบเขานั่นแหละ พลังเย็นยะเยือกแบบนี้ท่ามกลางเปลวเพลิง... ข้างในตัวผู้ลงอาญามีอะไรกันแน่?",
+								"hindi": "हाँ, घाटी वाला वही निशान है। लपटों के बीच इतनी ठंडी ऊर्जा... निष्पादक के अंदर आखिर क्या है?"
+							},
 							"emotion": "base"
 						},
 						{
-							"emotion": "sad",
 							"type": "speech",
 							"speaker": "character_2",
+							"emotion": "base",
 							"content": {
-								"korean": "…숨이 턱턱 막히는 열기야."
+								"korean": "…불꽃 아래 서늘한 기운이 맴돌아.",
+								"english": "...A chill lingers beneath the flames.",
+								"japanese": "…炎の下に冷ややかな気が漂っている。",
+								"chinese": "……烈焰之下萦绕着一丝凉意。",
+								"french": "... Une fraîcheur plane sous les flammes.",
+								"spanish": "...Se siente un aire fresco bajo las llamas.",
+								"vietnamese": "...Luồng khí lạnh lẽo luẩn quẩn bên dưới ngọn lửa.",
+								"thai": "...มีความไอเย็นวนเวียนอยู่ใต้เปลวเพลิง",
+								"hindi": "...लपटों के नीचे एक ठंडी हवा मंडरा रही है।"
 							}
 						}
 					],
@@ -1420,53 +2451,101 @@
 				{
 					"dialogue": [
 						{
-							"type": "speech",
-							"content": {
-								"korean": "심장부 입구 바닥에 검게 탄 흑요석 투구 조각들이 떨어져 있다."
-							},
 							"speaker": "narrator",
+							"content": {
+								"korean": "흑요석 기둥 아래, 핫핑크빛 깃털 하나가 불길 속에서 흔들린다.",
+								"english": "Beneath the obsidian pillar, a hot pink feather sways amid the flames.",
+								"japanese": "黒曜石の柱の下、ショッキングピンクの羽が一つ、炎の中で揺れている。",
+								"chinese": "黑曜石柱下，一片亮粉色的羽毛在火焰中摇曳。",
+								"french": "Sous le pilier d'obsidienne, une plume rose vif vacille dans les flammes.",
+								"spanish": "Bajo el pilar de obsidiana, una pluma de color rosa fucsia ondea entre las llamas.",
+								"vietnamese": "Dưới cột đá hắc diện, một chiếc lông vũ màu hồng rực rỡ đung đưa trong ngọn lửa.",
+								"thai": "ใต้เสาหินออบซิเดียน ขนนกสีชมพูสดใสเส้นหนึ่งพลิ้วไหวอยู่ท่ามกลางเปลวเพลิง",
+								"hindi": "ओब्सीडियन खंभे के नीचे, आग की लपटों के बीच एक गहरा गुलाबी पंख हिल रहा है।"
+							},
+							"type": "speech",
 							"emotion": "base"
 						},
 						{
+							"speaker": "ash",
+							"action": "enter",
+							"duration_ms": 500,
+							"type": "direction",
 							"spot": [
 								3,
 								2
-							],
-							"type": "direction",
-							"action": "enter",
-							"duration_ms": 500,
-							"speaker": "ash"
+							]
 						},
 						{
-							"emotion": "base",
 							"type": "speech",
-							"content": {
-								"korean": "용암 동굴에서 신더와 본 깨진 흑요석 투구 조각이랑 같아."
-							},
-							"speaker": "character_any"
-						},
-						{
-							"content": {
-								"korean": "투구 안쪽에 무거운 봉인 흔적이 남아 있어요. 누가 집행자를 갑옷 속에 묶어 둔 걸까요?"
-							},
 							"speaker": "ash",
+							"emotion": "base",
+							"content": {
+								"korean": "제단에서 마라가 보여줬다는 그 핫핑크빛 깃털이 여기에도 있어요!",
+								"english": "The hot pink feather Mara showed us at the altar is here too!",
+								"japanese": "祭壇でマラが見せてくれたという、あのショッキングピンクの羽がここにもあります！",
+								"chinese": "玛拉在祭坛上展示给我们的那片亮粉色羽毛，这里也有！",
+								"french": "La plume rose vif que Mara a montrée sur l'autel est là aussi !",
+								"spanish": "¡La pluma rosa fucsia que Mara mostró en el altar también está aquí!",
+								"vietnamese": "Chiếc lông vũ màu hồng rực rỡ mà Mara đã cho xem ở bàn thờ cũng có ở đây!",
+								"thai": "ขนนกสีชมพูสดใสที่มาราเคยให้ดูที่แท่นบูชาก็อยู่ที่นี่ด้วยครับ!",
+								"hindi": "वेदी पर मारा ने जो गहरा गुलाबी पंख दिखाया था, वह यहाँ भी है!"
+							}
+						},
+						{
 							"type": "speech",
+							"speaker": "character_any",
+							"content": {
+								"korean": "깃털이 심장부 쪽으로 이어져 있어. 집행자가 바로 저 안에 있다.",
+								"english": "The feather leads toward the core. The Executor is right inside there.",
+								"japanese": "羽が心臓部の方へとつながっている。執行者はまさにあの中にいる。",
+								"chinese": "羽毛一路延伸向核心区域。执行者就在里面。",
+								"french": "Les plumes mènent au cœur. L'Exécuteur est juste là-dedans.",
+								"spanish": "Las plumas se extienden hacia el núcleo. El Ejecutor está ahí dentro.",
+								"vietnamese": "Những chiếc lông vũ dẫn về phía trung tâm. Kẻ Thực Thi ở ngay bên trong đó.",
+								"thai": "ขนนกทอดยาวไปทางส่วนแกนกลาง ผู้ลงอาญาอยู่ข้างในนั้นแน่นอน",
+								"hindi": "पंख कोर की ओर जा रहे हैं। निष्पादक ठीक उसी के अंदर है।"
+							},
 							"emotion": "base"
 						},
 						{
-							"type": "direction",
-							"action": "exit",
-							"direction": "down",
-							"duration_ms": 400,
-							"speaker": "ash"
+							"type": "speech",
+							"speaker": "ash",
+							"emotion": "sad",
+							"content": {
+								"korean": "저는 여기서 불이 밖으로 번지지 않게 막고 있을게요. 꼭 돌아오세요!",
+								"english": "I'll stay here to keep the fire from spreading outside. Please make sure to come back!",
+								"japanese": "私はここで火が外に広がらないよう食い止めておきます。必ず戻ってきてください！",
+								"chinese": "我留在这里阻止火势向外蔓延。您一定要平安回来！",
+								"french": "Je vais rester ici pour empêcher le feu de se propager à l'extérieur. Revenez sans faute !",
+								"spanish": "Me quedaré aquí para evitar que el fuego se extienda al exterior. ¡Por favor, vuelva sano y salvo!",
+								"vietnamese": "Tôi sẽ ở đây ngăn ngọn lửa không lan ra ngoài. Nhất định phải quay về đấy nhé!",
+								"thai": "ฉันจะคอยกันไม่ให้ไฟลามออกไปข้างนอกที่นี่เองครับ คุณต้องกลับมาให้ได้นะ!",
+								"hindi": "मैं यहाँ आग को बाहर फैलने से रोकूँगा। आप वापस जरूर आइएगा!"
+							}
 						},
 						{
-							"emotion": "sad",
+							"duration_ms": 400,
+							"speaker": "ash",
+							"action": "exit",
+							"direction": "down",
+							"type": "direction"
+						},
+						{
+							"speaker": "character_3",
 							"type": "speech",
+							"emotion": "sad",
 							"content": {
-								"korean": "…불꽃 코어가 바로 앞에서 요동치고 있어."
-							},
-							"speaker": "character_3"
+								"korean": "…심장부의 열기가 바로 앞까지 밀려와.",
+								"english": "...The heat from the core surges right up to me.",
+								"japanese": "…心臓部の熱気が目と鼻の先まで押し寄せてくる。",
+								"chinese": "……核心区域的热浪直扑眼前。",
+								"french": "... La chaleur du cœur déferle juste devant moi.",
+								"spanish": "...El calor del núcleo avanza hasta quedar justo delante.",
+								"vietnamese": "...Sức nóng từ trung tâm đang phả vào ngay trước mắt.",
+								"thai": "...ความร้อนจากส่วนแกนกลางซัดเข้ามาถึงตรงหน้า",
+								"hindi": "...कोर की गर्मी ठीक सामने तक आ रही है।"
+							}
 						}
 					],
 					"id": 5
@@ -1476,176 +2555,348 @@
 					"dialogue": [
 						{
 							"emotion": "base",
-							"content": {
-								"korean": "거대한 지옥불 기둥이 솟구치며 심장부 전체가 좌우로 흔들린다."
-							},
-							"speaker": "narrator",
-							"type": "speech"
-						},
-						{
-							"speaker": "character_any",
-							"content": {
-								"korean": "집행자가 다가온다. 불길 폭발을 막으려면 멈춰 세워야 해."
-							},
-							"emotion": "angry",
-							"type": "speech"
-						},
-						{
 							"type": "speech",
-							"emotion": "sad",
 							"content": {
-								"korean": "…심장 소리가 귓가를 찢을 것 같아."
+								"korean": "거대한 심연의 문 너머로 굉음과 함께 붉은 폭풍이 몰아친다.",
+								"english": "Beyond the giant Abyssal Gate, a red storm rages with a deafening roar.",
+								"japanese": "巨大な深淵の門の向こうから、轟音とともに赤い嵐が吹き荒れている。",
+								"chinese": "巨型深渊之门外，伴随着轰鸣声，一阵赤红风暴正席卷而来。",
+								"french": "Au-delà de la porte gigantesque de l'abîme, une tempête rouge se déchaîne dans un rugissement retentissant.",
+								"spanish": "Más allá de la enorme Puerta del Abismo, una tormenta roja se desata con un rugido ensordecedor.",
+								"vietnamese": "Băng qua cánh cổng vực thẳm khổng lồ, một cơn bão đỏ cuộn dâng cùng tiếng gầm vang dội.",
+								"thai": "พายุสีแดงพัดกระหน่ำพร้อมเสียงคำรามดังกึกก้องจากอีกฟากของประตูหุบเหวลึกขนาดใหญ่",
+								"hindi": "विशाल अथाह द्वार के पार से, एक गूंजती गर्जना के साथ लाल तूफान उठ रहा है।"
 							},
-							"speaker": "character_4"
+							"speaker": "narrator"
+						},
+						{
+							"emotion": "base",
+							"content": {
+								"korean": "문 안쪽에서 사방으로 뿜어져 나오는 지옥불이 밀려오고 있다.",
+								"english": "Hellfire spewing out from inside the gate in all directions comes surging forward.",
+								"japanese": "門の内側から四方八方に噴き出す地獄の火が押し寄せてくる。",
+								"chinese": "地狱之火从门内向四周喷涌而出，正滚滚而来。",
+								"french": "L'enfer enflammé jaillissant de tous côtés depuis l'intérieur de la porte déferle sur vous.",
+								"spanish": "El fuego infernal que brota desde el interior de la puerta hacia todas direcciones se abalanza.",
+								"vietnamese": "Lửa địa ngục phun ra khắp mọi hướng từ bên trong cánh cổng đang cuồn cuộn lao tới.",
+								"thai": "ไฟนรกที่พวยพุ่งออกมาทุกทิศทางจากด้านในประตูกำลังทะลักเข้ามา",
+								"hindi": "द्वार के भीतर से चारों ओर भड़कती हुई नरक की अग्नि उमड़ कर आ रही है।"
+							},
+							"type": "speech",
+							"speaker": "character_any"
+						},
+						{
+							"speaker": "character_4",
+							"type": "speech",
+							"content": {
+								"korean": "…더 발을 딛기가 무서워.",
+								"english": "...I'm scared to step any further.",
+								"japanese": "…これ以上、足を踏み出すのが恐ろしい。",
+								"chinese": "……我不敢再往前迈步了。",
+								"french": "… J'ai peur de faire un pas de plus.",
+								"spanish": "... Tengo miedo de dar otro paso.",
+								"vietnamese": "...Tôi sợ không dám bước tiếp nữa.",
+								"thai": "...ฉันกลัวจนไม่กล้าก้าวไปข้างหน้าอีกแล้ว",
+								"hindi": "...मुझे आगे कदम बढ़ाने से डर लग रहा है।"
+							},
+							"emotion": "sad"
 						}
 					]
 				},
 				{
-					"lose_dialogue": [
-						{
-							"type": "speech",
-							"emotion": "sad",
-							"content": {
-								"korean": "제발… 제 안의 지옥불이 터지기 전에 이곳을 떠나세요!"
-							},
-							"speaker": "boss"
-						},
-						{
-							"emotion": "angry",
-							"type": "speech",
-							"content": {
-								"korean": "…별빛 서리 수정을 밀어 넣을 때까지 포기하지 않는다!"
-							},
-							"speaker": "character_any"
-						}
-					],
 					"win_dialogue": [
 						{
-							"content": {
-								"korean": "저는 마법 대륙으로 번지는 지옥불을 삼키고, 무거운 갑옷 속에 제 자신을 가두었어요."
-							},
-							"speaker": "boss",
-							"type": "speech",
-							"emotion": "sad"
-						},
-						{
-							"content": {
-								"korean": "제 몸 안의 불이 사람들에게 번질까 봐, 일부러 사납게 굴어 쫓아내려 했던 거예요…"
-							},
-							"speaker": "boss",
-							"type": "speech",
-							"emotion": "sad"
-						},
-						{
-							"content": {
-								"korean": "더는 혼자 참지 마! 별빛 서리 수정을 불꽃 코어에 집어넣어 열기를 식히겠다!"
-							},
-							"speaker": "character_any",
-							"type": "speech",
-							"emotion": "angry"
-						},
-						{
-							"content": {
-								"korean": "서리 수정의 차가운 기운이 요동치던 불꽃 코어를 부드럽게 감싸 안는다."
-							},
 							"speaker": "narrator",
-							"type": "speech",
-							"emotion": "base"
-						},
-						{
-							"type": "speech",
-							"emotion": "sad",
-							"content": {
-								"korean": "…지옥불이 식어가요. 오랫동안 저를 태우던 고통이 마침내 멈췄어요."
-							},
-							"speaker": "boss"
-						},
-						{
 							"emotion": "base",
 							"type": "speech",
-							"speaker": "narrator",
 							"content": {
-								"korean": "별빛 정령이 눈물을 거두자 지옥 심장부의 불길 폭발이 차분히 진정된다."
+								"korean": "집행자가 스스로 투구를 벗어 던졌다. 갑옷 속은 텅 비어 있고, 그 안에서 작은 별빛 정령이 불꽃 코어를 끌어안고 떨고 있다.",
+								"english": "The Enforcer cast off their helmet. Inside the empty armor, a small starlight spirit trembles, clutching the flame core.",
+								"japanese": "執行者が自ら兜を脱ぎ捨てた。鎧の中は空っぽで、その中で小さな星光の精霊が火炎コアを抱きしめて震えている。",
+								"chinese": "执行者自行摘下头盔扔在一旁。铠甲内部空无一物，只有一只微小的星光精灵紧抱着用以燃烧的火焰核心，瑟瑟发抖。",
+								"french": "L'exécuteur a retiré et jeté son casque lui-même. L'intérieur de l'armure est vide, et un petit esprit d'étoiles y tremble en serrant le cœur enflammé.",
+								"spanish": "El ejecutor se quitó el casco y lo arrojó. El interior de la armadura está vacío, y dentro, un pequeño espíritu de luz estelar tiembla abrazando el núcleo de fuego.",
+								"vietnamese": "Chấp hành viên tự tay cởi nón giáp ném đi. Bên trong bộ giáp trống rỗng, một tinh linh ánh sao nhỏ bé đang run rẩy ôm lấy lõi lửa.",
+								"thai": "ผู้บังคับการถอดหมวกเกราะโยนทิ้งด้วยตัวเอง ด้านในชุดเกราะว่างเปล่า มีเพียงจิตวิญญาณแสงดาวตัวน้อยกำลังกอดคอร์เปลวเพลิงและตัวสั่นอยู่ข้างใน",
+								"hindi": "निष्पादक ने खुद ही अपना टोप उतारकर फेंक दिया। कवच के भीतर का हिस्सा खाली है, और उसके अंदर एक छोटा स्टारलाइट स्पिरिट फ्लेम कोर को गले लगाए कांप रहा है।"
 							}
 						},
 						{
-							"duration_ms": 500,
-							"spot": [
-								3,
-								2
-							],
-							"type": "direction",
-							"action": "enter",
-							"speaker": "ash",
-							"direction": "down"
+							"content": {
+								"korean": "제발 더 가까이 오지 마세요! 제 안의 불이 새어 나오면 당신들까지 재가 돼요. 어서 도망치세요!",
+								"english": "Please don't come any closer! If the fire inside me leaks out, you'll be turned to ashes too. Hurry and run!",
+								"japanese": "お願いです、これ以上近づかないでください！私の中の火が漏れ出したら、あなたたちまで灰になってしまいます。早く逃げて！",
+								"chinese": "请求你们，不要再靠近了！如果我体内的火焰泄漏出来，连你们都会化为灰烬的。快逃吧！",
+								"french": "S'il vous plaît, ne vous approchez pas plus ! Si le feu en moi s'échappe, vous aussi serez réduits en cendres. Fuyez vite !",
+								"spanish": "¡Por favor, no se acerquen más! Si el fuego en mi interior se escapa, incluso ustedes se convertirán en cenizas. ¡Huyan rápido!",
+								"vietnamese": "Xin đừng lại gần hơn nữa! Nếu ngọn lửa bên trong tôi rò rỉ ra ngoài, cả các người cũng sẽ thành tro bụi mất. Mau chạy đi!",
+								"thai": "ได้โปรดอย่าเข้ามาใกล้กว่านี้เลยนะ! ถ้าไฟในตัวฉันรั่วไหลออกมา พวกคุณก็จะกลายเป็นเถ้าถ่านไปด้วย รีบหนีไปเร็ว!",
+								"hindi": "कृपया और पास मत आइए! अगर मेरे अंदर की आग बाहर निकल गई, तो आप लोग भी राख बन जाएंगे। जल्दी भागिए!"
+							},
+							"emotion": "sad",
+							"type": "speech",
+							"speaker": "boss"
 						},
 						{
-							"emotion": "happy",
+							"emotion": "sad",
 							"content": {
-								"korean": "지옥불 폭발이 멈췄어요! 대륙도, 저 작은 정령도 구해낸 거예요!"
+								"korean": "마법 대륙으로 불길이 번지는 걸 막으려 불을 삼키고 이 무거운 갑옷에 저를 가두었어요!",
+								"english": "To stop the flames from spreading to the magical continent, I swallowed the fire and locked myself inside this heavy armor!",
+								"japanese": "魔法の大陸へ火の手が広がるのを防ぐため、火を呑み込んでこの重い鎧に自分を閉じ込めたのです！",
+								"chinese": "为了防止火焰蔓延到魔法大陆，我吞下了火焰，并将自己禁锢在这具沉重的铠甲之中！",
+								"french": "Pour empêcher les flammes de se propager jusqu'au continent magique, j'ai avalé le feu et je me suis enfermé dans cette lourde armure !",
+								"spanish": "¡Para evitar que las llamas se extendieran al continente mágico, me tragué el fuego y me encerré en esta pesada armadura!",
+								"vietnamese": "Để ngăn ngọn lửa lan sang đại lục phép thuật, tôi đã nuốt lấy ngọn lửa và tự nhốt mình trong bộ giáp nặng nề này!",
+								"thai": "เพื่อไม่ให้เปลวเพลิงลุกลามไปยังทวีปเวทมนตร์ ฉันจึงกลืนไฟเข้าไปและขังตัวเองไว้ในชุดเกราะอันหนักอึ้งนี้!",
+								"hindi": "जादुई महाद्वीप में लपटें फैलने से रोकने के लिए मैंने आग को निगल लिया और खुद को इस भारी कवच में कैद कर लिया!"
 							},
-							"speaker": "ash",
+							"speaker": "boss",
 							"type": "speech"
+						},
+						{
+							"content": {
+								"korean": "혼자 버티지 않아도 돼. 이 별빛 수정이 불을 잠재워 줄 거야!",
+								"english": "You don't have to endure this alone. This Starlight Crystal will quell the flames!",
+								"japanese": "一人で耐えなくてもいい。この星光の水晶が炎を鎮めてくれる！",
+								"chinese": "你不必一个人硬撑。这颗星光水晶会平息火焰的！",
+								"french": "Tu n'as pas à endurer ça tout seul. Ce cristal de lumière stellaire apaisera le feu !",
+								"spanish": "¡No tienes que soportarlo a solas! ¡Este cristal de luz estelar calmará el fuego!",
+								"vietnamese": "Bạn không cần phải chịu đựng một mình. Viên pha lê ánh sao này sẽ dập tắt ngọn lửa!",
+								"thai": "คุณไม่ต้องอดทนอยู่คนเดียว ผลึกแสงดาวนี้จะช่วยทำให้ไฟสงบลงเอง!",
+								"hindi": "तुम्हें अकेले यह सब सहने की ज़रूरत नहीं है। यह स्टारलाइट क्रिस्टल आग को शांत कर देगा!"
+							},
+							"type": "speech",
+							"emotion": "base",
+							"speaker": "character_any"
+						},
+						{
+							"content": {
+								"korean": "필로멜의 몸에서 떨어졌던 수정이 화염 코어에 닿자, 뿜어져 나오던 지옥불이 조용히 잠들었다.",
+								"english": "As the crystal that had fallen from Philomel's body touched the Flame Core, the spewing hellfire quietly subsided.",
+								"japanese": "フィロメルの体から落ちた水晶が火炎コアに触れると、噴き出していた地獄の火が静かに鎮まった。",
+								"chinese": "从菲洛梅尔身上掉落的水晶触碰到火焰核心时，喷涌而出的地狱火渐渐平息了。",
+								"french": "Lorsque le cristal tombé du corps de Philomel toucha le Noyau de Flamme, le feu infernal qui jaillissait s'apaisa silencieusement.",
+								"spanish": "Cuando el cristal que había caído del cuerpo de Philomel tocó el Núcleo de Llama, el fuego infernal que brotaba se apaciguó en silencio.",
+								"vietnamese": "Khi viên pha lê rơi ra từ cơ thể Philomel chạm vào Lõi Lửa, ngọn lửa địa ngục đang phun trào lặng lẽ dịu đi.",
+								"thai": "เมื่อผลึกที่หลุดออกมาจากร่างกายของฟิโลเมลสัมผัสกับแกนเปลวไฟ เปลวไฟนรกที่พุ่งออกมาก็สงบลงอย่างเงียบเชียบ",
+								"hindi": "जैसे ही फिलोमेल के शरीर से गिरा क्रिस्टल फ्लेम कोर से टकराया, उफनती नर्क की आग खामोशी से शांत हो गई।"
+							},
+							"emotion": "base",
+							"type": "speech",
+							"speaker": "narrator"
+						},
+						{
+							"speaker": "boss",
+							"type": "speech",
+							"emotion": "sad",
+							"content": {
+								"korean": "…별빛이… 제 안의 불을 잠재우고 있어요.",
+								"english": "...The starlight... is quelling the fire inside me.",
+								"japanese": "…星光が…私の中の火を鎮めています。",
+								"chinese": "……星光……正在平息我体内的火焰。",
+								"french": "...La lumière stellaire... apaise le feu en moi.",
+								"spanish": "...La luz estelar... está calmando el fuego dentro de mí.",
+								"vietnamese": "...Ánh sao... đang dập tắt ngọn lửa bên trong tôi.",
+								"thai": "...แสงดาว... กำลังทำให้ไฟในตัวฉันสงบลง",
+								"hindi": "...तारों की रोशनी... मेरे अंदर की आग को शांत कर रही है।"
+							}
 						}
 					],
 					"dialogue": [
 						{
 							"emotion": "base",
-							"type": "speech",
 							"content": {
-								"korean": "거대한 갑옷을 두른 집행자 필로멜이 핫핑크빛 날개를 펼치며 거친 불길을 뿜어낸다."
+								"korean": "칠흑 같은 갑주를 두르고 자홍빛 날개를 펼친 거대한 집행자 필로멜이 길을 막아선다.",
+								"english": "Philomel, a giant enforcer clad in pitch-black armor with spread magenta wings, stands blocking the path.",
+								"japanese": "漆黒の鎧を纏い、紫紅色の翼を広げた巨大な執行者フィロメルが立ち塞がる。",
+								"chinese": "身披漆黑铠甲、展开紫红色双翼的巨型执行者菲洛梅尔挡住了去路。",
+								"french": "Le gigantesque exécuteur Philomel, vêtu d'une armure d'un noir d'encre et déployant des ailes magenta, se dresse sur le chemin.",
+								"spanish": "Philomel, un enorme ejecutor cubierto por una armadura azabache y con alas magenta desplegadas, bloquea el camino.",
+								"vietnamese": "Philomel, chấp hành viên khổng lồ khoác giáp đen tuyền và dang rộng đôi cánh màu tía, đang đứng chắn đường.",
+								"thai": "ฟิโลเมล ผู้บังคับการขนาดยักษ์ในชุดเกราะสีดำสนิทพร้อมปีกสีม่วงแดงที่กางออก กำลังยืนขวางทางอยู่",
+								"hindi": "गहरा काला कवच पहने और मैजेंटा पंख फैलाए विशाल निष्पादक पिलोमेल रास्ता रोककर खड़ा है।"
 							},
-							"speaker": "narrator"
+							"speaker": "narrator",
+							"type": "speech"
 						},
 						{
 							"type": "speech",
 							"content": {
-								"korean": "지옥의 불길에 잿더미가 되고 싶지 않다면 당장 이곳에서 떠나라!"
+								"korean": "지옥에 발을 들인 침입자들아, 불꽃에 삼켜지기 전에 당장 떠나라!",
+								"english": "Intruders who have set foot in hell, leave this instant before you are consumed by the flames!",
+								"japanese": "地獄に足を踏み入れた侵入者どもよ、炎に呑み込まれる前に今すぐ立ち去れ！",
+								"chinese": "踏入地狱的入侵者们，在被烈焰吞噬之前立刻离开！",
+								"french": "Intrus qui avez posé le pied en enfer, partez immédiatement avant d'être engloutis par les flammes !",
+								"spanish": "¡Intrusos que han puesto un pie en el infierno, márchense de inmediato antes de ser consumidos por las llamas!",
+								"vietnamese": "Này những kẻ xâm nhập đã bước chân vào địa ngục, hãy rời đi ngay trước khi bị thiêu rụi bởi ngọn lửa!",
+								"thai": "พวกผู้บุกรุกที่เหยียบย่างเข้าสู่นรก จงออกไปทันทีก่อนที่จะถูกเปลวเพลิงกลืนกิน!",
+								"hindi": "नरक में कदम रखने वाले घुसपैठियों, लपटों में समाने से पहले अभी तुरंत चले जाओ!"
 							},
-							"speaker": "boss",
+							"emotion": "angry",
+							"speaker": "boss"
+						},
+						{
+							"speaker": "character_any",
+							"content": {
+								"korean": "마라에게 받은 별빛 수정을 집행자의 화염 코어에 꽂아 지옥불을 봉인하겠다!",
+								"english": "I'll plunge the Starlight Crystal given by Mara into the Enforcer's flame core to seal the hellfire!",
+								"japanese": "マーラから授かった星光の水晶を執行者の火炎コアに突き刺し、地獄の火を封印する！",
+								"chinese": "我要将从玛拉那里获得的星光水晶刺入执行者的火焰核心，以此封印地狱之火！",
+								"french": "Je vais enfoncer le cristal d'étoiles reçu de Mara dans le cœur enflammé de l'exécuteur pour sceller le feu de l'enfer !",
+								"spanish": "¡Clavaré el cristal de luz estelar recibido de Mara en el núcleo de fuego del ejecutor para sellar el fuego infernal!",
+								"vietnamese": "Tôi sẽ cắm tinh thể ánh sao nhận được từ Mara vào lõi lửa của Chấp Hành Viên để phong ấn lửa địa ngục!",
+								"thai": "ฉันจะเสียบคริสตัลแสงดาวที่ได้รับจากมาราลงในคอร์เปลวเพลิงของผู้บังคับการเพื่อผนึกไฟนรก!",
+								"hindi": "मैं मारा से मिले स्टारलाइट क्रिस्टल को निष्पादक के फ्लेम कोर में धंसाकर नरक की अग्नि को सील कर दूंगा!"
+							},
+							"type": "speech",
 							"emotion": "angry"
 						},
 						{
-							"content": {
-								"korean": "불꽃 코어의 폭발을 막기 전까진 물러서지 않는다!"
-							},
-							"speaker": "character_any",
-							"emotion": "angry",
-							"type": "speech"
-						},
-						{
 							"speaker": "narrator",
-							"content": {
-								"korean": "탐험대가 가까이 다가가자 갑옷 틈으로 불이 새어 나온다. 집행자가 투구를 벗어 던지자, 텅 빈 갑옷 속에서 불꽃 코어를 끌어안은 작은 별빛 정령이 떨고 있다."
-							},
 							"emotion": "base",
-							"type": "speech"
-						},
-						{
 							"type": "speech",
 							"content": {
-								"korean": "제발 더 가까이 오지 마세요. 제 안의 불이 새어 나오면 당신들까지 재가 돼요. 어서 도망치세요!"
-							},
+								"korean": "갑옷 틈으로 불길이 미친 듯이 터져 나온다.",
+								"english": "Flames burst out wildly through the gaps in the armor.",
+								"japanese": "鎧の隙間から炎が猛烈に噴き出している。",
+								"chinese": "烈焰从铠甲的缝隙中狂乱地喷涌而出。",
+								"french": "Les flammes jaillissent follement à travers les interstices de l'armure.",
+								"spanish": "Las llamas brotan descontroladamente a través de las grietas de la armadura.",
+								"vietnamese": "Ngọn lửa bùng lên dữ dội từ các kẽ hở của bộ giáp.",
+								"thai": "เปลวเพลิงพวยพุ่งออกมาอย่างบ้าคลั่งจากรอยต่อของชุดเกราะ",
+								"hindi": "कवच की दरारों से लपटें पागलों की तरह बाहर निकल रही हैं।"
+							}
+						}
+					],
+					"lose_dialogue": [
+						{
 							"speaker": "boss",
-							"emotion": "sad"
+							"emotion": "angry",
+							"type": "speech",
+							"content": {
+								"korean": "도망치라고 했을 텐데… 몸 안의 불이 전부 삼켜버릴 것이다!",
+								"english": "I told you to run... The fire inside me will consume everything!",
+								"japanese": "逃げろと言ったはずだ…体の中の火が全てを呑み込んでしまう！",
+								"chinese": "我说过让你逃跑的……我体内的火焰会吞噬一切的！",
+								"french": "Je t'avais dit de fuir... Le feu en moi va tout engloutir !",
+								"spanish": "Te dije que huyeras... ¡El fuego dentro de mí lo consumirá todo!",
+								"vietnamese": "Ta đã bảo ngươi chạy đi mà... Ngọn lửa trong cơ thể ta sẽ nuốt chửng tất cả!",
+								"thai": "ฉันบอกให้หนีไปแล้วแท้ๆ... ไฟในร่างกายนี้จะกลืนกินทุกอย่าง!",
+								"hindi": "मैंने तुमसे भागने को कहा था... मेरे शरीर की आग सब कुछ निगल जाएगी!"
+							}
 						},
 						{
-							"type": "speech",
-							"emotion": "base",
 							"content": {
-								"korean": "정령의 몸에 청록빛 수정 깃털이 돋아 있어… 검은 제단에서 본 그 깃털이야!"
+								"korean": "여기서 멈출 수 없다. 다시 일어나 봉인을 완수해야 한다.",
+								"english": "I cannot stop here. I must rise again and complete the seal.",
+								"japanese": "ここで立ち止まるわけにはいかない。もう一度立ち上がり、封印を完遂しなければ。",
+								"chinese": "不能在这里停下。必须重新站起来，完成封印。",
+								"french": "Je ne peux pas m'arrêter là. Je dois me relever et achever le scellement.",
+								"spanish": "No puedo detenderme aquí. Debo levantarme de nuevo y completar el sello.",
+								"vietnamese": "Không thể dừng lại ở đây. Phải đứng dậy lần nữa và hoàn thành phong ấn.",
+								"thai": "จะมาหยุดอยู่ตรงนี้ไม่ได้ ต้องลุกขึ้นมาอีกครั้งและทำผนึกให้เสร็จสิ้น",
+								"hindi": "मैं यहाँ रुक नहीं सकता। मुझे फिर से उठना होगा और सील को पूरा करना होगा।"
 							},
-							"speaker": "character_any"
+							"emotion": "angry",
+							"speaker": "character_any",
+							"type": "speech"
 						}
 					],
 					"id": 15
 				}
 			],
+			"epilogue": {
+				"korean": [
+					"별빛 수정이 뿜어낸 차가운 빛이 심연의 붉은 불길을 조용히 침묵시켰다.",
+					"마법 대륙으로 번지려던 지옥불은 봉인되었고, 필로멜은 마침내 무거운 갑옷에서 해방되었다.",
+					"타오르던 열기가 식어간 지옥 심연에 오랫동안 잊힌 별빛이 머물렀다."
+				],
+				"english": [
+					"The cold light emitted by the Starlight Crystal quietly silenced the abyss's red flames.",
+					"The hellfire threatening to spread to the Magic Continent was sealed, and Philomel was finally freed from the heavy armor.",
+					"In the Infernal Abyss where the burning heat cooled away, a long-forgotten starlight lingered."
+				],
+				"japanese": [
+					"星光の水晶が放つ冷たい光が、深淵の紅蓮の炎を静かに鎮めた。",
+					"魔法大陸へ広がりかけていた地獄の火は封印され、フィロメルはついに重い鎧から解放された。",
+					"燃えさかる熱気が冷めていった地獄の深淵に、長く忘れられていた星の光が留まった。"
+				],
+				"chinese": [
+					"星光水晶散发出的冷冽光芒，静静地平息了深渊的赤红火焰。",
+					"试图蔓延至魔法大陆的地狱之火被封印，菲洛梅尔终于从沉重的铠甲中解脱出来。",
+					"在炽热逐渐冷却的地狱深渊中，停驻着久被遗忘的星光。"
+				],
+				"french": [
+					"La lumière froide émanant du cristal de lumière stellaire a silencieusement apaisé les flammes rouges de l'abîme.",
+					"Le feu infernal qui menaçait de se propager au continent de la magie a été scellé, et Philomèle a enfin été libéré de sa lourde armure.",
+					"Dans l'abîme infernal où la chaleur brûlante s'apaisait, la lumière stellaire depuis longtemps oubliée s'est posée."
+				],
+				"spanish": [
+					"La fría luz emanada por el cristal de luz estelar silenció pacíficamente las llamas rojas del abismo.",
+					"El fuego infernal que amenazaba con extenderse al continente mágico fue sellado, y Philomel finalmente fue liberado de su pesada armadura.",
+					"En el abismo infernal donde el calor abrasador se enfriaba, permaneció una luz estelar olvidada hace mucho tiempo."
+				],
+				"vietnamese": [
+					"Ánh sáng lạnh lẽo phát ra từ tinh thể ánh sao đã lặng lẽ dập tắt ngọn lửa đỏ của vực thẳm.",
+					"Ngọn lửa địa ngục định lan sang lục địa phép thuật đã bị phong ấn, và Philomel cuối cùng đã được giải thoát khỏi bộ giáp nặng nề.",
+					"Tại vực thẳm địa ngục nơi sức nóng rực cháy đã dịu đi, ánh sao từ lâu bị lãng quên đã dừng chân."
+				],
+				"thai": [
+					"แสงอันเย็นเยือกที่แผ่ออกมาจากคริสตัลแสงดาวได้สยบเพลิงแดงฉานแห่งห้วงอเวจีลงอย่างเงียบสงบ",
+					"ไฟอเวจีที่เกือบจะแผ่ขยายไปยังทวีปเวทมนตร์ถูกผนึกไว้ แล้วฟิโลเมลก็ได้รับการปลดปล่อยจากชุดเกราะอันหนักอึ้งในที่สุด",
+					"ในห้วงอเวจีที่ความร้อนอันลุกโชนเริ่มเย็นลง แสงดาวที่ถูกลืมเลือนไปนานแสนนานได้เข้ามารอบล้อม"
+				],
+				"hindi": [
+					"तारा-प्रकाश क्रिस्टल से निकली ठंडी रोशनी ने अतल की लाल लपटों को शांति से शांत कर दिया।",
+					"जादू के महाद्वीप में फैलने वाली नरक की आग को सील कर दिया गया, और फ़िलोमेल आखिरकार भारी कवच से मुक्त हो गया।",
+					"जलती हुई गर्मी के ठंडे होने पर नरक के अतल में लंबे समय से भूला हुआ तारा-प्रकाश ठहर गया।"
+				]
+			},
 			"prologue": {
 				"korean": [
-					"지옥 심장부. 마법 대륙 전체를 삼키려는 지옥불이 요동친다.",
-					"폭발이 일어나기 직전, 붉은 용암 열기 속에서 거대한 집행자가 서 있다.",
-					"탐험대는 애쉬에게 전달받은 별빛 서리 수정을 쥔 채 마지막 전장으로 나아간다."
+					"지옥 심연의 심장부, 붉은 불길이 폭포처럼 쏟아져 내린다.",
+					"집행자의 금 간 갑옷에서 새어 나온 지옥불이 마법 대륙까지 위협하고 있다.",
+					"암석 제단에서 받은 별빛 수정을 들고 마지막 결전을 위해 심연으로 향한다."
+				],
+				"english": [
+					"At the heart of the Infernal Abyss, red flames cascade down like a waterfall.",
+					"Hellfire leaking from the Executioner's cracked armor threatens even the Magic Continent.",
+					"Holding the Starlight Crystal received from the stone altar, head into the abyss for the final battle."
+				],
+				"japanese": [
+					"地獄の深淵の心臓部、紅蓮の炎が滝のように降り注ぐ。",
+					"処刑人のひび割れた鎧から漏れ出た地獄の火が、魔法大陸をも脅かしている。",
+					"岩石の祭壇から授かった星光の水晶を手に、最後の決戦のため深淵へと向かう。"
+				],
+				"chinese": [
+					"在地狱深渊的心脏地带，赤红的火焰如瀑布般倾泻而下。",
+					"从处刑者破裂铠甲中漏出的地狱之火，正威胁着魔法大陆。",
+					"手持从岩石祭坛获得的星光水晶，迈向深渊迎战最终决战。"
+				],
+				"french": [
+					"Au cœur de l'abîme infernal, des flammes rouges s'abattent comme une cascade.",
+					"Le feu infernal s'échappant de l'armure fissurée de l'Exécuteur menace jusqu'au continent de la magie.",
+					"Tenant le cristal de lumière stellaire reçu sur l'autel de pierre, cap sur l'abîme pour l'ultime combat."
+				],
+				"spanish": [
+					"En el corazón del abismo infernal, llamas rojas caen a borbotones como una cascada.",
+					"El fuego infernal que se filtra de la armadura agrietada del Ejecutor amenaza incluso al continente mágico.",
+					"Con el cristal de luz estelar recibido en el altar de piedra, pongo rumbo al abismo para la batalla final."
+				],
+				"vietnamese": [
+					"Tại trái tim của vực thẳm địa ngục, những ngọn lửa đỏ rực đổ xuống như thác nước.",
+					"Ngọn lửa địa ngục rò rỉ từ bộ giáp rạn nứt của Kẻ Hành Quyết đang đe dọa cả lục địa phép thuật.",
+					"Cầm trên tay tinh thể ánh sao nhận được từ bàn thờ đá, hướng về vực thẳm cho trận quyết chiến cuối cùng."
+				],
+				"thai": [
+					"ณ ใจกลางห้วงอเวจี สายธารเพลิงแดงฉานพวยพุ่งลงมาดั่งน้ำตก",
+					"ไฟอเวจีที่รั่วไหลออกจากเกราะแตกร้าวของเพชฌฆาตกำลังคุกคามไปถึงทวีปเวทมนตร์",
+					"มุ่งหน้าสู่ห้วงอเวจีเพื่อศึกตัดสินครั้งสุดท้าย พร้อมคริสตัลแสงดาวที่ได้รับจากแท่นบูชาหิน"
+				],
+				"hindi": [
+					"नरक के अतल की गहराई में, लाल लपटें झरने की तरह नीचे गिर रही हैं।",
+					"जल्लाद के फटे हुए कवच से रिसती नरक की आग जादू के महाद्वीप को भी खतरे में डाल रही है।",
+					"चट्टानी वेदी से मिले तारा-प्रकाश क्रिस्टल को लेकर, अंतिम युद्ध के लिए अतल की ओर बढ़ते हैं।"
 				]
 			}
 		}

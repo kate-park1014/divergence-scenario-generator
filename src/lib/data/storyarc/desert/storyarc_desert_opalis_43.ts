@@ -155,7 +155,7 @@ export const storyarc_desert_opalis_43: StoryArc = {
 			"order": 5,
 			"act": "climax_finale",
 			"title": "마지막 신기루",
-			"boss": "pool_GlassMirage_Opalis_V1",
+			"boss": "pool_408",
 			"npc": "ashur",
 			"summary": "주인공은 의식을 잃은 아슈르를 업고 오팔리스의 오아시스 중앙 신전에 도달한다. 겉껍데기가 깨져 녹슨 톱니바퀴를 드러낸 오팔리스는 주인을 살려야 한다며 울부짖고 주인공에게 덤벼든다. 치열한 전투 끝에 오팔리스를 제압한 주인공은 핵심 장치인 생기 구슬을 깨뜨려 생기를 되돌려준다. 구슬이 깨지며 갇혀 있던 생기가 사막으로 퍼져나가고 아슈르가 무사히 눈을 뜬다.",
 			"place": "오팔리스의 오아시스"

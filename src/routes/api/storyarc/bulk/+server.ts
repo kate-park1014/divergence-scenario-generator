@@ -43,9 +43,11 @@ type Failure = { boss: string; step: string; error: string };
 const STORYARC_ROOT = 'src/lib/data/storyarc';
 // UI 벌크 탭이 select 로 보여주는 boss_list 폴더
 const BULK_BOSS_LIST_DIR = 'boss_list/bulk';
+// 보스 이름+theme → 실제 pool_id. UI 가 pool 기본값으로 쓴다
+const POOL_MAP_FILE = 'boss_list/monster_pool_map.json';
 
 /**
- * GET           → BULK_BOSS_LIST_DIR 의 boss_list 목록 [{file, theme, count}]
+ * GET           → BULK_BOSS_LIST_DIR 의 boss_list 목록 [{file, theme, count}] + poolMap(POOL_MAP_FILE)
  * GET ?file=x   → 그 파일의 JSON 원문
  */
 export const GET: RequestHandler = async ({ url }) => {
@@ -67,7 +69,8 @@ export const GET: RequestHandler = async ({ url }) => {
 				}
 			})
 		);
-		return json({ dir: BULK_BOSS_LIST_DIR, files });
+		const poolMap = JSON.parse(await readFile(join(process.cwd(), POOL_MAP_FILE), 'utf-8').catch(() => '[]'));
+		return json({ dir: BULK_BOSS_LIST_DIR, files, poolMap });
 	} catch (e) {
 		return json({ error: e instanceof Error ? e.message : String(e) }, { status: 500 });
 	}

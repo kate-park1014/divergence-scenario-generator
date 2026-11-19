@@ -156,7 +156,7 @@ export const storyarc_hell_cystis_32: StoryArc = {
 			"order": 5,
 			"act": "climax_finale",
 			"title": "옥빛 연꽃의 제단",
-			"boss": "pool_NeonParasite_Cystis_V1",
+			"boss": "pool_417",
 			"npc": "ash",
 			"summary": "주인공은 애쉬와 함께 마침내 구원자 시스티스가 있는 연꽃 웅덩이에 도착한다. 시스티스는 옥빛 상반신 뒤로 눈알과 이빨 구멍을 드러내며 튼튼한 둥지가 완성되었다고 비웃는다. 주인공은 덤벼드는 시스티스에 맞서 싸우며 가지고 있던 연꽃 약병을 불길에 던져 태운다. 약병이 태워지자 배 속 기생충들이 비명을 지르며 잿더미로 변한다.",
 			"place": "지옥 연꽃 웅덩이"

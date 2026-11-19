@@ -19,6 +19,7 @@
 
 	let folderDir = $state('boss_list/bulk');
 	let folderFiles = $state<{ file: string; theme: string; count: number; invalid?: boolean }[]>([]);
+	let poolMap = $state<{ pool_id: string; boss_name: string; theme: string }[]>([]);
 	let selectedFile = $state('');
 	let fileName = $state('');
 	let theme = $state<Theme>('desert');
@@ -68,6 +69,7 @@
 			if (!res.ok) throw new Error(data?.error ?? `HTTP ${res.status}`);
 			folderDir = data.dir;
 			folderFiles = data.files;
+			poolMap = data.poolMap ?? [];
 		} catch (err) {
 			error = `boss_list 폴더 조회 실패: ${err instanceof Error ? err.message : String(err)}`;
 		}
@@ -116,8 +118,9 @@
 				let key = toKey(boss.name) || `boss${i}`;
 				while (seen.has(key)) key += i;
 				seen.add(key);
-				// pool 미정 → pool_<보스id> placeholder (hell 매핑과 같은 관례). 표에서 수정 가능.
-				return { boss, key, pool: `pool_${boss.id}`, status: 'idle', error: '' };
+				// pool 은 monster_pool_map(이름+theme). 없으면 pool_<보스id> placeholder. 표에서 수정 가능.
+				const mapped = poolMap.find((p) => p.theme === theme && p.boss_name.toLowerCase() === boss.name.toLowerCase());
+				return { boss, key, pool: mapped?.pool_id ?? `pool_${boss.id}`, status: 'idle', error: '' };
 			});
 		} catch (err) {
 			rows = [];
@@ -281,7 +284,7 @@
 				</tbody>
 			</table>
 			<p class="hint-text">
-				주황색 pool 은 placeholder(<span class="mono">pool_&lt;보스id&gt;</span>)입니다. 실제 pool 번호가 있으면 바꿔 넣으세요.
+				pool 은 <span class="mono">boss_list/monster_pool_map.json</span> 에서 보스 이름+테마로 채웁니다. 주황색은 맵에 없어 넣은 placeholder(<span class="mono">pool_&lt;보스id&gt;</span>)이니 실제 pool 번호로 바꿔 넣으세요.
 				파일명: <span class="mono">storyarc_{theme}_&lt;key&gt;_&lt;lv&gt;.ts</span> (같은 폴더에 있으면 덮어씀)
 			</p>
 		</section>

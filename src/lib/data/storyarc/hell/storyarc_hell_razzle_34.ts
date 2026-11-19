@@ -156,7 +156,7 @@ export const storyarc_hell_razzle_34: StoryArc = {
 			"order": 5,
 			"act": "climax_finale",
 			"title": "핏빛 서커스의 종말",
-			"boss": "pool_Jester_Razzle_V1",
+			"boss": "pool_419",
 			"npc": "ash",
 			"summary": "서커스 무대 중앙에서 라즐이 다가오더니 상자 뚜껑을 열고 무서운 가시 톱니를 드러낸다. 라즐은 톱니로 몸을 갈아야만 천국에 간다며 비명을 지르는 애쉬와 주인공을 상자 안으로 밀어 넣으려 한다. 주인공은 기괴하게 덤벼드는 라즐의 촉수를 피하며 마술 상자 앞으로 뛰어든다. 상자에 꽂혀 있던 풍금 태엽 열쇠를 뽑아 톱니를 멈추고 라즐을 쓰러뜨린다.",
 			"place": "핏빛 서커스 무대"

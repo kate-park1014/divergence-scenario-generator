@@ -156,7 +156,7 @@ export const storyarc_hell_porcellus_36: StoryArc = {
 			"order": 5,
 			"act": "climax_finale",
 			"title": "최종 내기판",
-			"boss": "pool_SoulVault_Porcellus_V1",
+			"boss": "pool_421",
 			"npc": "ash",
 			"summary": "주인공이 지옥 도박판 중앙에 도달하자 포르셀루스가 나타나 양면이 돼지 얼굴인 동전을 튕기며 영혼을 건 내기를 신청한다. 포르셀루스가 이겼다며 깔깔대고 영혼을 빼앗으려 하자 주인공은 칼을 뽑아 치열한 전투를 시작한다. 보스를 제압한 직후 주인공은 저금통 바닥의 마개를 열어 영혼 동전을 빼낸다. 영혼 동전이 쏟아져 나오자 잠겼던 지옥 문이 마침내 열리고, 주인공은 애쉬와 함께 지옥을 탈출한다.",
 			"place": "지옥 도박판 중앙"

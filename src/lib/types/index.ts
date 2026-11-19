@@ -126,7 +126,7 @@ export type StoryArc = {
 	rising_count?: number; // 읽는 곳 없음. 새 아크에는 저장하지 않는다
 	world: World;
 	protagonist_goal: string;
-	// story_spine·stage·key_object·wrong_action·right_action·최상위 boss_trace 는 생성 단계 뼈대라 저장하지 않는다 (storyarcGen.ts 툴 스키마 참고)
+	// story_spine·stage·crisis·key_object·right_action·최상위 boss_trace 는 생성 단계 뼈대라 저장하지 않는다 (storyarcGen.ts 툴 스키마 참고)
 	boss_name_korean?: string; // 최종보스 이름의 한국어 발음
 	act_tone: {
 		intro: ActTone;

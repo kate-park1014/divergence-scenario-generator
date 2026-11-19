@@ -156,7 +156,7 @@ export const storyarc_desert_vesperis_46: StoryArc = {
 			"order": 5,
 			"act": "climax_finale",
 			"title": "영원의 봉인",
-			"boss": "pool_GoldenReliquary_Vesperis_V1",
+			"boss": "pool_411",
 			"npc": "dune",
 			"summary": "제단에 다다르자 따라온 듄이 성궤를 향해 가호를 청하고 성궤가 열리며 수천 자루의 검 파편이 폭풍처럼 뿜어져 나온다. 성궤와 한몸이 된 검객 베스페리스가 비통한 눈빛으로 무기를 탐내는 주인공을 향해 사납게 검기를 쏟아낸다. 주인공은 치열한 격투 끝에 검을 땅에 꽂고 손을 뗀다. 베스페리스의 분노가 가라앉고 굳게 닫혔던 사원의 문이 천천히 열린다.",
 			"place": "성궤의 제단"

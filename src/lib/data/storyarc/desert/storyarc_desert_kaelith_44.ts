@@ -152,7 +152,7 @@ export const storyarc_desert_kaelith_44: StoryArc = {
 			"order": 5,
 			"act": "climax_finale",
 			"title": "최후의 제단",
-			"boss": "pool_MoltenGlass_Kaelith_V1",
+			"boss": "pool_409",
 			"npc": "amir",
 			"summary": "제단 끝에 도달하자 아미르가 사막 상인의 모습을 한 카엘리스를 가리킨다. 카엘리스는 갑자기 자신의 머리를 때려 껍질을 부수더니 유리 괴수로 뒤틀려 피를 빼앗으려 덤벼든다. 주인공은 카엘리스의 맹렬한 공격을 막아내며 유리 장신구를 찬물에 헹궈 피를 털어낸다. 열기를 잃은 카엘리스의 몸이 비명을 지르며 산산이 깨져 내린다.",
 			"place": "용융된 태양의 제단"

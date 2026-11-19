@@ -119,7 +119,7 @@
 			if (data.error) {
 				error = data.error;
 			} else {
-				saveSuccess = `저장 완료: boss_list/${data.filename} (${data.count}개)`;
+				saveSuccess = `저장 완료: boss_list/bulk/${data.filename} (${data.count}개)`;
 			}
 		} catch (e) {
 			error = String(e);

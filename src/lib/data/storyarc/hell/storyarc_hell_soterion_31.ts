@@ -152,7 +152,7 @@ export const storyarc_hell_soterion_31: StoryArc = {
 			"order": 5,
 			"act": "climax_finale",
 			"title": "깨어진 크리스털",
-			"boss": "pool_Scapegoat_Soterion_V1",
+			"boss": "pool_416",
 			"npc": "ash",
 			"summary": "애쉬와 함께 지옥 심연의 옥좌에 도달한 주인공은 마침내 소테리온과 맞선다. 소테리온은 거대한 날개를 펼치며 일부러 사납게 공격을 퍼부어 주인공의 검을 유도한다. 주인공은 애쉬가 일러준 대로 검에 힘을 실어 소테리온의 가슴의 크리스털을 검으로 베어 깨뜨린다. 가슴속에서 신들의 죄악이 터져 나오며 닫혔던 지옥 문이 열리고 갇혔던 동료들이 무사히 구출된다.",
 			"place": "지옥 심연의 옥좌"

@@ -156,7 +156,7 @@ export const storyarc_hell_solatrus_37: StoryArc = {
 			"order": 5,
 			"act": "climax_finale",
 			"title": "최후의 심판소",
-			"boss": "pool_HolyAtonement_Solatrus_V1",
+			"boss": "pool_422",
 			"npc": "ash",
 			"summary": "주인공은 잡혀 있는 동료와 애쉬가 기다리는 솔라트루스의 심판소로 들어선다. 웅장한 신성염을 두른 솔라트루스가 나타나 명부에 적힌 이름을 가리키며 죄인을 태우겠다고 선언한다. 주인공은 맹렬히 들이닥치는 대검을 막아내며 싸우는 도중 죄인의 명부를 파괴한다. 가면이 깨진 솔라트루스는 루비빛 눈물을 흘리며 울부짖고 지옥의 불길 속으로 소멸한다.",
 			"place": "솔라트루스의 심판소"

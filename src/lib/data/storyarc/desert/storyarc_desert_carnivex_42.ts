@@ -155,7 +155,7 @@ export const storyarc_desert_carnivex_42: StoryArc = {
 			"order": 5,
 			"act": "climax_finale",
 			"title": "모래 둥지의 결전",
-			"boss": "pool_BoneScab_Carnivex_V1",
+			"boss": "pool_407",
 			"npc": "khan",
 			"summary": "마침내 도착한 모래 둥지에서 길잡이가 기괴한 지네 괴물 카르니벡스로 변신하여 마디마다 돋은 칼날을 곤두세운다. 카르니벡스는 마신 노란 물이 녹아내린 검객들의 골수라며 동료들의 뼈도 빼앗겠다고 울부짖는다. 위기에 처하자 칸이 밧줄을 던져 괴물의 발을 묶는다. 주인공은 호박색 물병의 물을 쏟아 버려 괴물의 굶주림을 멈추고 거대한 갑각 틈새를 베어 넘긴다.",
 			"place": "카르니벡스의 모래 둥지"

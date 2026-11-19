@@ -156,7 +156,7 @@ export const storyarc_hell_stampy_30: StoryArc = {
 			"order": 5,
 			"act": "climax_finale",
 			"title": "최종 청구서",
-			"boss": "pool_MysticStamp_Stampy_V1",
+			"boss": "pool_415",
 			"npc": "ash",
 			"summary": "주인공은 영혼을 찾고 이승으로 복귀하기 위해 지옥 통행 관문으로 진입한다. 애쉬가 달려와 안내 정령이 드디어 본색을 드러냈다고 소리친다. 거대한 고무 도장 형상의 스탬피가 나타나 무료인 줄 알았냐며 수수료 청구서를 뿌리고 덤벼든다. 주인공은 스탬피와 치열하게 싸운 끝에 통행 도장 계약서를 찢는다.",
 			"place": "지옥 통행 관문"

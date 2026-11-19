@@ -156,7 +156,7 @@ export const storyarc_desert_zahrun_48: StoryArc = {
 			"order": 5,
 			"act": "climax_finale",
 			"title": "별빛 모래 언덕",
-			"boss": "pool_CaravanUndertaker_Zahrun_V1",
+			"boss": "pool_413",
 			"npc": "dune",
 			"summary": "주인공은 별빛 모래 언덕에서 다시 만난 듄과 함께 거대한 장의사의 모습으로 드러난 자룬과 마주한다. 자룬은 낙타 행렬을 모래로 무너뜨리고 수백 자루의 검을 깃발처럼 세운 채 주인공을 향해 무기를 휘두른다. 치열한 싸움 끝에 주인공은 카사이의 조언대로 품고 있던 녹슨 검을 사막 모래 깊숙이 묻어준다. 그러자 슬프게 울던 검들이 안식을 찾고 자룬은 나지막한 한숨을 쉬며 사막 너머로 길을 열어준다.",
 			"place": "별빛 모래 언덕"

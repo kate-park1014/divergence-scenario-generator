@@ -10,7 +10,8 @@ export const POST: RequestHandler = async ({ request }) => {
 		return json({ error: '유효하지 않은 데이터입니다.' }, { status: 400 });
 	}
 
-	const outputDir = join(process.cwd(), 'boss_list');
+	// storyarcGen 벌크 탭 select 가 이 폴더를 읽는다 (api/storyarc/bulk BULK_BOSS_LIST_DIR)
+	const outputDir = join(process.cwd(), 'boss_list', 'bulk');
 	await mkdir(outputDir, { recursive: true });
 
 	const now = new Date();
