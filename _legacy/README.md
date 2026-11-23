@@ -24,6 +24,7 @@
 | 2026-11-16 | `src/lib/prompts/{netshortStory,netshortJudge,cozyStory,chapterGenNetshort,chapterGenCozy,chapterGenRomance,chapterGenGangster,netshortPolish,scriptEdit,storyStyle}.ts` | UI 에서 안 쓰는 프롬프트 (러너는 위 줄에서 옮김) |
 | 2026-11-16 | `src/routes/api/storyarc/{netshort,cozy}/`, `src/routes/api/scenario/{netshort,cozy,romance,gangster}/` | 위 프롬프트를 쓰는 엔드포인트 (같이 안 옮기면 빌드가 깨짐) |
 | 2026-11-17 | `src/lib/data/storyarc/hell/storyarc_hell_{noctis_30,lumen_31}.ts` | openrpg 게임 hell 챕터(1~30 = level 0~29)에 없는 아크. 새 hell 보스(level 30~39, 챕터 31~40)와 level 이 겹쳐서 뺌. `BOSS_POOL_MAP.hell` 의 noctis·lumen 항목도 지움 (`boss_list/hell.json` 의 보스 데이터는 그대로) |
+| 2026-11-23 | `src/routes/bossGen/`, `src/lib/prompts/boss/bossGen.ts` | 보스 생성기 v1(기존 몬스터 프로필 → 보스). bossGen2(세계관·톤만으로 전부 생성)만 씀. 홈 버튼도 뺌 |
 
 ### 원래 자리에 남기거나 떼어 낸 것
 - `scenarioReview.ts` 의 `listChapter`·`applyEdits` → `src/lib/prompts/scriptEdit.ts` (넷쇼트·cozy·romance·gangster 대본 다듬기가 씀 — 이것도 지금은 `_legacy/src/lib/prompts/scriptEdit.ts`)

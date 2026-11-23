@@ -1,5 +1,5 @@
 // bossGen2: 입력 없이 world_view + theme 만으로 AI가 보스를 통째로 창작한다.
-// 기존 bossGen.ts(프로필 기반)와 달리 id·name·외형·서사 전부를 생성한다.
+// 예전 bossGen.ts(프로필 기반, _legacy 로 옮김)와 달리 id·name·외형·서사 전부를 생성한다.
 
 export type WorldPreset = {
 	world_view: string;

@@ -5,18 +5,7 @@
 
 <h1>Divergence Scenario Generator</h1>
 
-<p class="subtitle">스토리아크를 선택해 시나리오를 생성하세요.</p>
-
 <ul class="arc-list">
-	{#each storyarcRegistry as arc}
-		<li>
-			<button class="arc-item" onclick={() => goto(`/geminiTest?storyarc=${arc.id}`)}>
-				<span class="arc-name">{arc.chapter_name.korean}</span>
-				<span class="arc-id">{arc.id}</span>
-				<span class="arrow">→</span>
-			</button>
-		</li>
-	{/each}
 	<li>
 		<button class="arc-item special" onclick={() => goto('/randomEvent')}>
 			<span class="arc-name">무작위 이벤트</span>
@@ -32,29 +21,43 @@
 		</button>
 	</li>
 	<li>
-		<button class="arc-item boss" onclick={() => goto('/bossGen')}>
-			<span class="arc-name">Boss 생성기</span>
-			<span class="arc-id">bossGen</span>
-			<span class="arrow">→</span>
-		</button>
-	</li>
-	<li>
 		<button class="arc-item boss" onclick={() => goto('/bossGen2')}>
-			<span class="arc-name">Boss 생성기 v2</span>
+			<span class="arc-name">Boss 생성기</span>
 			<span class="arc-id">bossGen2</span>
 			<span class="arrow">→</span>
 		</button>
 	</li>
 </ul>
 
+<details class="arc-toggle">
+	<summary>스토리아크 단건 생성 ({storyarcRegistry.length})</summary>
+	<ul class="arc-list">
+		{#each storyarcRegistry as arc}
+			<li>
+				<button class="arc-item" onclick={() => goto(`/geminiTest?storyarc=${arc.id}`)}>
+					<span class="arc-name">{arc.chapter_name.korean}</span>
+					<span class="arc-id">{arc.id}</span>
+					<span class="arrow">→</span>
+				</button>
+			</li>
+		{/each}
+	</ul>
+</details>
+
 <style>
 	h1 {
-		margin-bottom: 0.25rem;
+		margin-bottom: 2rem;
 	}
 
-	.subtitle {
+	.arc-toggle {
+		margin-top: 2rem;
+		max-width: 480px;
+	}
+
+	.arc-toggle summary {
+		cursor: pointer;
 		color: #888;
-		margin-bottom: 2rem;
+		margin-bottom: 0.75rem;
 	}
 
 	.arc-list {
