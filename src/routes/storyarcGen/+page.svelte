@@ -1,4 +1,5 @@
 <script lang="ts">
+	import { onMount } from 'svelte';
 	import { npc_by_theme } from '$lib/data/npc/npc_pool';
 	import {
 		buildStoryPrompt,
@@ -9,14 +10,22 @@
 		type BossInput,
 		type StoryResult
 	} from '$lib/prompts/storyarc/storyarcGen';
-	import BulkTab from './BulkTab.svelte';
+	import BossTab from './BossTab.svelte';
+	import BulkTab, { RESTORE_KEY } from './BulkTab.svelte';
 	import ScenarioBulkTab from './ScenarioBulkTab.svelte';
 
 	type Theme = keyof typeof npc_by_theme;
 
 	const THEMES = Object.keys(npc_by_theme) as Theme[];
 
-	let tab = $state<'new' | 'bulk' | 'scenario'>('new');
+	// 흐름: 보스 생성 → 벌크(boss_list → 스토리아크) → 시나리오 벌크. 신규 생성은 아크 1개 수동 입력.
+	// 벌크 등록 직후 Vite 리로드되면 벌크 탭으로 돌아가 결과를 복원한다.
+	let tab = $state<'boss' | 'bulk' | 'scenario' | 'new'>('boss');
+	onMount(() => {
+		if (sessionStorage.getItem(RESTORE_KEY)) tab = 'bulk';
+	});
+	// 보스 탭 '다음' → 벌크 탭에서 열 boss_list 파일
+	let bossListFile = $state('');
 	// 벌크 탭 '다음' → 시나리오 탭에 미리 체크할 storyarc id
 	let scenarioIds = $state<string[]>([]);
 
@@ -210,17 +219,17 @@
 </script>
 
 <div class="page">
-	<h1>StoryArc 생성기</h1>
-	<p class="subtitle">보스 정보와 NPC 풀을 입력하면 완성된 StoryArc를 생성합니다.</p>
+	<h1>생성기</h1>
+	<p class="subtitle">보스 → 스토리아크 → 시나리오 순서로 탭을 넘어가며 생성합니다.</p>
 
 	<!-- 탭 -->
 	<div class="tab-bar">
 		<button
 			class="tab"
-			class:active={tab === 'new'}
-			onclick={() => (tab = 'new')}
+			class:active={tab === 'boss'}
+			onclick={() => (tab = 'boss')}
 		>
-			신규 생성
+			보스 생성
 		</button>
 		<button
 			class="tab"
@@ -236,10 +245,25 @@
 		>
 			시나리오 벌크
 		</button>
+		<button
+			class="tab"
+			class:active={tab === 'new'}
+			onclick={() => (tab = 'new')}
+		>
+			신규 생성
+		</button>
 	</div>
 
-	{#if tab === 'bulk'}
+	{#if tab === 'boss'}
+	<BossTab
+		onnext={(file) => {
+			bossListFile = file;
+			tab = 'bulk';
+		}}
+	/>
+	{:else if tab === 'bulk'}
 	<BulkTab
+		initialFile={bossListFile}
 		onnext={(ids) => {
 			scenarioIds = ids;
 			tab = 'scenario';

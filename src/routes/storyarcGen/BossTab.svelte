@@ -8,6 +8,9 @@
 		type BossTone
 	} from '$lib/prompts/boss/bossGen2';
 
+	// 저장 후 '다음' → 벌크 탭에서 이 boss_list 파일(boss_list/bulk/ 기준 파일명)을 연다
+	let { onnext }: { onnext?: (file: string) => void } = $props();
+
 	// "전체" = 6개 톤을 하나씩 일괄 생성하는 특수 선택지
 	const ALL_TONE = { id: 'all', label: '전체 (톤별 6개)' };
 
@@ -27,12 +30,14 @@
 
 	let saving = $state(false);
 	let saveSuccess = $state('');
+	let savedFile = $state('');
 
 	const selected = $derived(WORLD_PRESETS[selectedIndex]);
 
 	async function generate() {
 		error = '';
 		saveSuccess = '';
+		savedFile = '';
 		results = [];
 
 		const { world_view, theme } = selected;
@@ -120,6 +125,7 @@
 				error = data.error;
 			} else {
 				saveSuccess = `저장 완료: boss_list/bulk/${data.filename} (${data.count}개)`;
+				savedFile = data.filename;
 			}
 		} catch (e) {
 			error = String(e);
@@ -134,11 +140,8 @@
 	}
 </script>
 
-<div class="page">
-	<h1>Boss 생성기 v2</h1>
-	<p class="subtitle">
-		세계관과 테마만 선택하면 AI가 보스를 처음부터 끝까지 창작합니다. (입력 데이터 불필요)
-	</p>
+<div class="boss-tab">
+	<p class="hint">세계관과 테마만 선택하면 AI가 보스를 처음부터 끝까지 창작합니다. (입력 데이터 불필요)</p>
 
 	<div class="layout">
 		<div class="input-panel">
@@ -203,6 +206,11 @@
 			{/if}
 			{#if saveSuccess}
 				<p class="save-success">{saveSuccess}</p>
+				{#if onnext && savedFile}
+					<button class="next-btn" onclick={() => onnext(savedFile)}>
+						다음 → 스토리아크 생성 ({results.length}개 보스)
+					</button>
+				{/if}
 			{/if}
 			{#if error}
 				<p class="error">{error}</p>
@@ -238,19 +246,10 @@
 </div>
 
 <style>
-	.page {
-		max-width: 1400px;
-		margin: 0 auto;
-		padding: 2rem;
-	}
-
-	h1 {
-		margin-bottom: 0.25rem;
-	}
-
-	.subtitle {
+	.hint {
 		color: #888;
-		margin-bottom: 2rem;
+		font-size: 0.85rem;
+		margin-bottom: 1.5rem;
 	}
 
 	.layout {
@@ -414,6 +413,23 @@
 		color: #4caf50;
 		font-size: 0.85rem;
 		margin-top: 0.5rem;
+	}
+
+	.next-btn {
+		width: 100%;
+		margin-top: 0.75rem;
+		padding: 0.75rem;
+		background: #4caf50;
+		color: #000;
+		border: none;
+		border-radius: 6px;
+		font-size: 1rem;
+		font-weight: 700;
+		cursor: pointer;
+	}
+
+	.next-btn:hover {
+		background: #66bb6a;
 	}
 
 	.error {

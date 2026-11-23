@@ -1,3 +1,8 @@
+<script lang="ts" module>
+	// 등록 후 Vite 리로드 때 결과를 넘기는 sessionStorage 키 (+page 가 이 키로 벌크 탭을 다시 연다)
+	export const RESTORE_KEY = 'storyarcBulk:lastRun';
+</script>
+
 <script lang="ts">
 	import { onMount } from 'svelte';
 	import { npc_by_theme } from '$lib/data/npc/npc_pool';
@@ -11,11 +16,11 @@
 	type Status = 'idle' | 'running' | 'ok' | 'failed';
 	type Row = { boss: BossInput; key: string; pool: string; status: Status; error: string };
 
-	// 다음 단계(시나리오 벌크)로 넘길 storyarc id 목록
-	let { onnext }: { onnext?: (ids: string[]) => void } = $props();
+	// onnext: 다음 단계(시나리오 벌크)로 넘길 storyarc id 목록
+	// initialFile: 보스 탭에서 방금 저장한 boss_list 파일 → 열자마자 선택
+	let { onnext, initialFile = '' }: { onnext?: (ids: string[]) => void; initialFile?: string } = $props();
 
 	const THEMES = Object.keys(npc_by_theme) as Theme[];
-	const RESTORE_KEY = 'storyarcBulk:lastRun';
 
 	let folderDir = $state('boss_list/bulk');
 	let folderFiles = $state<{ file: string; theme: string; count: number; invalid?: boolean }[]>([]);
@@ -45,7 +50,13 @@
 	const toKey = (name: string) => name.toLowerCase().replace(/[^a-z0-9]/g, '');
 
 	onMount(() => {
-		loadFolder();
+		// poolMap 이 있어야 pool 기본값을 채우므로 목록 조회 후 선택
+		loadFolder().then(() => {
+			if (initialFile && !rows.length) {
+				selectedFile = initialFile;
+				onSelect();
+			}
+		});
 		// 등록 직후 Vite 리로드로 사라진 결과 복원
 		try {
 			const saved = sessionStorage.getItem(RESTORE_KEY);

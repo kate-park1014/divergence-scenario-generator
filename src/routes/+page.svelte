@@ -15,15 +15,8 @@
 	</li>
 	<li>
 		<button class="arc-item generator" onclick={() => goto('/storyarcGen')}>
-			<span class="arc-name">StoryArc 생성기</span>
-			<span class="arc-id">storyarcGen</span>
-			<span class="arrow">→</span>
-		</button>
-	</li>
-	<li>
-		<button class="arc-item boss" onclick={() => goto('/bossGen2')}>
-			<span class="arc-name">Boss 생성기</span>
-			<span class="arc-id">bossGen2</span>
+			<span class="arc-name">생성기</span>
+			<span class="arc-id">보스 → 스토리아크 → 시나리오</span>
 			<span class="arrow">→</span>
 		</button>
 	</li>
@@ -129,18 +122,5 @@
 
 	.arc-item.generator .arc-name {
 		color: #c8a85a;
-	}
-
-	.arc-item.boss {
-		border-color: #2a1818;
-	}
-
-	.arc-item.boss:hover {
-		border-color: #e06c75;
-		background: #1f0d0d;
-	}
-
-	.arc-item.boss .arc-name {
-		color: #e06c75;
 	}
 </style>
